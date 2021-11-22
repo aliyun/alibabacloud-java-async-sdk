@@ -1,0 +1,6 @@
+2021-11-22 Version: 1.0.0-beta
+- Add API GetServiceProvisions.
+- Add API GetTemplateParameterConstraints.
+- Add API GetFeatureDetails.
+- CreateChangeSet supports Parallelism.
+
