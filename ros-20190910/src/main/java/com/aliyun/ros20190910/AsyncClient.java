@@ -31,6 +31,8 @@ public interface AsyncClient {
 
     CompletableFuture<CreateTemplateResponse> createTemplate(CreateTemplateRequest request);
 
+    CompletableFuture<CreateTemplateScratchResponse> createTemplateScratch(CreateTemplateScratchRequest request);
+
     CompletableFuture<DeleteChangeSetResponse> deleteChangeSet(DeleteChangeSetRequest request);
 
     CompletableFuture<DeleteStackResponse> deleteStack(DeleteStackRequest request);
@@ -41,6 +43,8 @@ public interface AsyncClient {
 
     CompletableFuture<DeleteTemplateResponse> deleteTemplate(DeleteTemplateRequest request);
 
+    CompletableFuture<DeleteTemplateScratchResponse> deleteTemplateScratch(DeleteTemplateScratchRequest request);
+
     CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request);
 
     CompletableFuture<DetectStackDriftResponse> detectStackDrift(DetectStackDriftRequest request);
@@ -50,6 +54,8 @@ public interface AsyncClient {
     CompletableFuture<DetectStackResourceDriftResponse> detectStackResourceDrift(DetectStackResourceDriftRequest request);
 
     CompletableFuture<ExecuteChangeSetResponse> executeChangeSet(ExecuteChangeSetRequest request);
+
+    CompletableFuture<GenerateTemplateByScratchResponse> generateTemplateByScratch(GenerateTemplateByScratchRequest request);
 
     CompletableFuture<GenerateTemplatePolicyResponse> generateTemplatePolicy(GenerateTemplatePolicyRequest request);
 
@@ -83,6 +89,8 @@ public interface AsyncClient {
 
     CompletableFuture<GetTemplateParameterConstraintsResponse> getTemplateParameterConstraints(GetTemplateParameterConstraintsRequest request);
 
+    CompletableFuture<GetTemplateScratchResponse> getTemplateScratch(GetTemplateScratchRequest request);
+
     CompletableFuture<GetTemplateSummaryResponse> getTemplateSummary(GetTemplateSummaryRequest request);
 
     CompletableFuture<ListChangeSetsResponse> listChangeSets(ListChangeSetsRequest request);
@@ -112,6 +120,8 @@ public interface AsyncClient {
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
 
     CompletableFuture<ListTagValuesResponse> listTagValues(ListTagValuesRequest request);
+
+    CompletableFuture<ListTemplateScratchesResponse> listTemplateScratches(ListTemplateScratchesRequest request);
 
     CompletableFuture<ListTemplateVersionsResponse> listTemplateVersions(ListTemplateVersionsRequest request);
 
@@ -144,6 +154,8 @@ public interface AsyncClient {
     CompletableFuture<UpdateStackTemplateByResourcesResponse> updateStackTemplateByResources(UpdateStackTemplateByResourcesRequest request);
 
     CompletableFuture<UpdateTemplateResponse> updateTemplate(UpdateTemplateRequest request);
+
+    CompletableFuture<UpdateTemplateScratchResponse> updateTemplateScratch(UpdateTemplateScratchRequest request);
 
     CompletableFuture<ValidateTemplateResponse> validateTemplate(ValidateTemplateRequest request);
 
