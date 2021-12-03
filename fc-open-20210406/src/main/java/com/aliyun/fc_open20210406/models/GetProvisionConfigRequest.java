@@ -19,10 +19,6 @@ public class GetProvisionConfigRequest extends Request {
     @NameInMap("functionName")
     private String functionName;
 
-    @Body
-    @NameInMap("target")
-    private Long target;
-
     @Query
     @NameInMap("qualifier")
     private String qualifier;
@@ -32,7 +28,6 @@ public class GetProvisionConfigRequest extends Request {
         super(builder);
         this.serviceName = builder.serviceName;
         this.functionName = builder.functionName;
-        this.target = builder.target;
         this.qualifier = builder.qualifier;
     }
 
@@ -59,13 +54,6 @@ public class GetProvisionConfigRequest extends Request {
     }
 
     /**
-     * @return target
-     */
-    public Long getTarget() {
-        return this.target;
-    }
-
-    /**
      * @return qualifier
      */
     public String getQualifier() {
@@ -75,7 +63,6 @@ public class GetProvisionConfigRequest extends Request {
     public static final class Builder extends Request.Builder {
         private String serviceName; 
         private String functionName; 
-        private Long target; 
         private String qualifier; 
 
         /**
@@ -93,15 +80,6 @@ public class GetProvisionConfigRequest extends Request {
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
             this.functionName = functionName;
-            return this;
-        }
-
-        /**
-         * <p>预留的目标资源个数</p>
-         */
-        public Builder target(Long target) {
-            this.putBodyParameter("target", target);
-            this.target = target;
             return this;
         }
 
