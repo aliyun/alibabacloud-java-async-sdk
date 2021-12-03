@@ -1,0 +1,211 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.fc_open20210406.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+
+/**
+ * {@link InvokeFunctionRequest} extends {@link RequestModel}
+ *
+ * <p>InvokeFunctionRequest</p>
+ */
+public class InvokeFunctionRequest extends Request {
+    @Path
+    @NameInMap("serviceName")
+    private String serviceName;
+
+    @Path
+    @NameInMap("functionName")
+    private String functionName;
+
+    @Header
+    @NameInMap("X-Fc-Account-Id")
+    private String xFcAccountId;
+
+    @Body
+    @NameInMap("body")
+    private byte[] body;
+
+    @Query
+    @NameInMap("qualifier")
+    private String qualifier;
+
+    @Header
+    @NameInMap("x-fc-invocation-type")
+    private String xFcInvocationType;
+
+    @Header
+    @NameInMap("x-fc-log-type")
+    private String xFcLogType;
+
+    @Header
+    @NameInMap("x-fc-stateful-async-invocation-id")
+    private String xFcStatefulAsyncInvocationId;
+
+
+    private InvokeFunctionRequest(Builder builder) {
+        super(builder);
+        this.serviceName = builder.serviceName;
+        this.functionName = builder.functionName;
+        this.xFcAccountId = builder.xFcAccountId;
+        this.body = builder.body;
+        this.qualifier = builder.qualifier;
+        this.xFcInvocationType = builder.xFcInvocationType;
+        this.xFcLogType = builder.xFcLogType;
+        this.xFcStatefulAsyncInvocationId = builder.xFcStatefulAsyncInvocationId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static InvokeFunctionRequest create() {
+        return builder().build();
+    }
+
+    /**
+     * @return serviceName
+     */
+    public String getServiceName() {
+        return this.serviceName;
+    }
+
+    /**
+     * @return functionName
+     */
+    public String getFunctionName() {
+        return this.functionName;
+    }
+
+    /**
+     * @return xFcAccountId
+     */
+    public String getXFcAccountId() {
+        return this.xFcAccountId;
+    }
+
+    /**
+     * @return body
+     */
+    public byte[] getBody() {
+        return this.body;
+    }
+
+    /**
+     * @return qualifier
+     */
+    public String getQualifier() {
+        return this.qualifier;
+    }
+
+    /**
+     * @return xFcInvocationType
+     */
+    public String getXFcInvocationType() {
+        return this.xFcInvocationType;
+    }
+
+    /**
+     * @return xFcLogType
+     */
+    public String getXFcLogType() {
+        return this.xFcLogType;
+    }
+
+    /**
+     * @return xFcStatefulAsyncInvocationId
+     */
+    public String getXFcStatefulAsyncInvocationId() {
+        return this.xFcStatefulAsyncInvocationId;
+    }
+
+    public static final class Builder extends Request.Builder {
+        private String serviceName; 
+        private String functionName; 
+        private String xFcAccountId; 
+        private byte[] body; 
+        private String qualifier; 
+        private String xFcInvocationType; 
+        private String xFcLogType; 
+        private String xFcStatefulAsyncInvocationId; 
+
+        /**
+         * <p>service名称</p>
+         */
+        public Builder serviceName(String serviceName) {
+            this.putPathParameter("serviceName", serviceName);
+            this.serviceName = serviceName;
+            return this;
+        }
+
+        /**
+         * <p>function名称</p>
+         */
+        public Builder functionName(String functionName) {
+            this.putPathParameter("functionName", functionName);
+            this.functionName = functionName;
+            return this;
+        }
+
+        /**
+         * <p>X-Fc-Account-Id.</p>
+         */
+        public Builder xFcAccountId(String xFcAccountId) {
+            this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
+            this.xFcAccountId = xFcAccountId;
+            return this;
+        }
+
+        /**
+         * <p>事件（event），binary type。函数计算服务将event传递给用户function来处理</p>
+         */
+        public Builder body(byte[] body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
+            return this;
+        }
+
+        /**
+         * <p>service版本, 可以是versionId或者aliasName</p>
+         */
+        public Builder qualifier(String qualifier) {
+            this.putQueryParameter("qualifier", qualifier);
+            this.qualifier = qualifier;
+            return this;
+        }
+
+        /**
+         * <p>调用方式:Sync或者Async，默认值：Sync</p>
+         */
+        public Builder xFcInvocationType(String xFcInvocationType) {
+            this.putHeaderParameter("x-fc-invocation-type", xFcInvocationType);
+            this.xFcInvocationType = xFcInvocationType;
+            return this;
+        }
+
+        /**
+         * <p>请求返回日志类型, Tail 为返回函数日志最后 4KB 数据，None 或空值则返回不带有日志，默认为 None</p>
+         */
+        public Builder xFcLogType(String xFcLogType) {
+            this.putHeaderParameter("x-fc-log-type", xFcLogType);
+            this.xFcLogType = xFcLogType;
+            return this;
+        }
+
+        /**
+         * <p>x-fc-stateful-async-invocation-id.</p>
+         */
+        public Builder xFcStatefulAsyncInvocationId(String xFcStatefulAsyncInvocationId) {
+            this.putHeaderParameter("x-fc-stateful-async-invocation-id", xFcStatefulAsyncInvocationId);
+            this.xFcStatefulAsyncInvocationId = xFcStatefulAsyncInvocationId;
+            return this;
+        }
+
+        public InvokeFunctionRequest build() {
+            return new InvokeFunctionRequest(this);
+        } 
+
+    } 
+
+}
