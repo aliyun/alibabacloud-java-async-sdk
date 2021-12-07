@@ -26,6 +26,9 @@ public class GetStackResponseBody extends TeaModel {
     @NameInMap("DriftDetectionTime")
     private String driftDetectionTime;
 
+    @NameInMap("Log")
+    private Log log;
+
     @NameInMap("NotificationURLs")
     private java.util.List < String > notificationURLs;
 
@@ -93,6 +96,7 @@ public class GetStackResponseBody extends TeaModel {
         this.description = builder.description;
         this.disableRollback = builder.disableRollback;
         this.driftDetectionTime = builder.driftDetectionTime;
+        this.log = builder.log;
         this.notificationURLs = builder.notificationURLs;
         this.outputs = builder.outputs;
         this.parameters = builder.parameters;
@@ -156,6 +160,13 @@ public class GetStackResponseBody extends TeaModel {
      */
     public String getDriftDetectionTime() {
         return this.driftDetectionTime;
+    }
+
+    /**
+     * @return log
+     */
+    public Log getLog() {
+        return this.log;
     }
 
     /**
@@ -304,6 +315,7 @@ public class GetStackResponseBody extends TeaModel {
         private String description; 
         private Boolean disableRollback; 
         private String driftDetectionTime; 
+        private Log log; 
         private java.util.List < String > notificationURLs; 
         private java.util.List < java.util.Map<String, ?>> outputs; 
         private java.util.List < Parameters> parameters; 
@@ -362,6 +374,14 @@ public class GetStackResponseBody extends TeaModel {
          */
         public Builder driftDetectionTime(String driftDetectionTime) {
             this.driftDetectionTime = driftDetectionTime;
+            return this;
+        }
+
+        /**
+         * <p>Log.</p>
+         */
+        public Builder log(Log log) {
+            this.log = log;
             return this;
         }
 
@@ -531,6 +551,130 @@ public class GetStackResponseBody extends TeaModel {
 
     } 
 
+    public static class TerraformLogs extends TeaModel {
+        @NameInMap("Command")
+        private String command;
+
+        @NameInMap("Content")
+        private String content;
+
+        @NameInMap("Stream")
+        private String stream;
+
+
+        private TerraformLogs(Builder builder) {
+            this.command = builder.command;
+            this.content = builder.content;
+            this.stream = builder.stream;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TerraformLogs create() {
+            return builder().build();
+        }
+
+        /**
+         * @return command
+         */
+        public String getCommand() {
+            return this.command;
+        }
+
+        /**
+         * @return content
+         */
+        public String getContent() {
+            return this.content;
+        }
+
+        /**
+         * @return stream
+         */
+        public String getStream() {
+            return this.stream;
+        }
+
+        public static final class Builder {
+            private String command; 
+            private String content; 
+            private String stream; 
+
+            /**
+             * <p>Command.</p>
+             */
+            public Builder command(String command) {
+                this.command = command;
+                return this;
+            }
+
+            /**
+             * <p>Content.</p>
+             */
+            public Builder content(String content) {
+                this.content = content;
+                return this;
+            }
+
+            /**
+             * <p>Stream.</p>
+             */
+            public Builder stream(String stream) {
+                this.stream = stream;
+                return this;
+            }
+
+            public TerraformLogs build() {
+                return new TerraformLogs(this);
+            } 
+
+        } 
+
+    }
+    public static class Log extends TeaModel {
+        @NameInMap("TerraformLogs")
+        private java.util.List < TerraformLogs> terraformLogs;
+
+
+        private Log(Builder builder) {
+            this.terraformLogs = builder.terraformLogs;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Log create() {
+            return builder().build();
+        }
+
+        /**
+         * @return terraformLogs
+         */
+        public java.util.List < TerraformLogs> getTerraformLogs() {
+            return this.terraformLogs;
+        }
+
+        public static final class Builder {
+            private java.util.List < TerraformLogs> terraformLogs; 
+
+            /**
+             * <p>TerraformLogs.</p>
+             */
+            public Builder terraformLogs(java.util.List < TerraformLogs> terraformLogs) {
+                this.terraformLogs = terraformLogs;
+                return this;
+            }
+
+            public Log build() {
+                return new Log(this);
+            } 
+
+        } 
+
+    }
     public static class Parameters extends TeaModel {
         @NameInMap("ParameterKey")
         private String parameterKey;
