@@ -11,6 +11,30 @@ import darabonba.core.TeaModel;
  * <p>UntagResourceRequest</p>
  */
 public class UntagResourceRequest extends Request {
+    @Header
+    @NameInMap("X-Fc-Account-Id")
+    private String xFcAccountId;
+
+    @Header
+    @NameInMap("X-Fc-Code-Checksum")
+    private String xFcCodeChecksum;
+
+    @Header
+    @NameInMap("X-Fc-Date")
+    private String xFcDate;
+
+    @Header
+    @NameInMap("X-Fc-Invocation-Type")
+    private String xFcInvocationType;
+
+    @Header
+    @NameInMap("X-Fc-Log-Type")
+    private String xFcLogType;
+
+    @Header
+    @NameInMap("X-Fc-Trace-Id")
+    private String xFcTraceId;
+
     @Body
     @NameInMap("all")
     private Boolean all;
@@ -26,6 +50,12 @@ public class UntagResourceRequest extends Request {
 
     private UntagResourceRequest(Builder builder) {
         super(builder);
+        this.xFcAccountId = builder.xFcAccountId;
+        this.xFcCodeChecksum = builder.xFcCodeChecksum;
+        this.xFcDate = builder.xFcDate;
+        this.xFcInvocationType = builder.xFcInvocationType;
+        this.xFcLogType = builder.xFcLogType;
+        this.xFcTraceId = builder.xFcTraceId;
         this.all = builder.all;
         this.resourceArn = builder.resourceArn;
         this.tagKeys = builder.tagKeys;
@@ -37,6 +67,48 @@ public class UntagResourceRequest extends Request {
 
     public static UntagResourceRequest create() {
         return builder().build();
+    }
+
+    /**
+     * @return xFcAccountId
+     */
+    public String getXFcAccountId() {
+        return this.xFcAccountId;
+    }
+
+    /**
+     * @return xFcCodeChecksum
+     */
+    public String getXFcCodeChecksum() {
+        return this.xFcCodeChecksum;
+    }
+
+    /**
+     * @return xFcDate
+     */
+    public String getXFcDate() {
+        return this.xFcDate;
+    }
+
+    /**
+     * @return xFcInvocationType
+     */
+    public String getXFcInvocationType() {
+        return this.xFcInvocationType;
+    }
+
+    /**
+     * @return xFcLogType
+     */
+    public String getXFcLogType() {
+        return this.xFcLogType;
+    }
+
+    /**
+     * @return xFcTraceId
+     */
+    public String getXFcTraceId() {
+        return this.xFcTraceId;
     }
 
     /**
@@ -61,9 +133,69 @@ public class UntagResourceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder {
+        private String xFcAccountId; 
+        private String xFcCodeChecksum; 
+        private String xFcDate; 
+        private String xFcInvocationType; 
+        private String xFcLogType; 
+        private String xFcTraceId; 
         private Boolean all; 
         private String resourceArn; 
         private java.util.List < String > tagKeys; 
+
+        /**
+         * <p>X-Fc-Account-Id.</p>
+         */
+        public Builder xFcAccountId(String xFcAccountId) {
+            this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
+            this.xFcAccountId = xFcAccountId;
+            return this;
+        }
+
+        /**
+         * <p>X-Fc-Code-Checksum.</p>
+         */
+        public Builder xFcCodeChecksum(String xFcCodeChecksum) {
+            this.putHeaderParameter("X-Fc-Code-Checksum", xFcCodeChecksum);
+            this.xFcCodeChecksum = xFcCodeChecksum;
+            return this;
+        }
+
+        /**
+         * <p>X-Fc-Date.</p>
+         */
+        public Builder xFcDate(String xFcDate) {
+            this.putHeaderParameter("X-Fc-Date", xFcDate);
+            this.xFcDate = xFcDate;
+            return this;
+        }
+
+        /**
+         * <p>X-Fc-Invocation-Type.</p>
+         */
+        public Builder xFcInvocationType(String xFcInvocationType) {
+            this.putHeaderParameter("X-Fc-Invocation-Type", xFcInvocationType);
+            this.xFcInvocationType = xFcInvocationType;
+            return this;
+        }
+
+        /**
+         * <p>X-Fc-Log-Type.</p>
+         */
+        public Builder xFcLogType(String xFcLogType) {
+            this.putHeaderParameter("X-Fc-Log-Type", xFcLogType);
+            this.xFcLogType = xFcLogType;
+            return this;
+        }
+
+        /**
+         * <p>X-Fc-Trace-Id.</p>
+         */
+        public Builder xFcTraceId(String xFcTraceId) {
+            this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);
+            this.xFcTraceId = xFcTraceId;
+            return this;
+        }
 
         /**
          * <p>删除所有 tag，默认值为 false</p>

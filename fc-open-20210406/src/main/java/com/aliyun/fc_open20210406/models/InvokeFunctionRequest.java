@@ -23,6 +23,30 @@ public class InvokeFunctionRequest extends Request {
     @NameInMap("X-Fc-Account-Id")
     private String xFcAccountId;
 
+    @Header
+    @NameInMap("X-Fc-Code-Checksum")
+    private String xFcCodeChecksum;
+
+    @Header
+    @NameInMap("X-Fc-Date")
+    private String xFcDate;
+
+    @Header
+    @NameInMap("X-Fc-Invocation-Type")
+    private String xFcInvocationType;
+
+    @Header
+    @NameInMap("X-Fc-Log-Type")
+    private String xFcLogType;
+
+    @Header
+    @NameInMap("X-Fc-Stateful-Async-Invocation-Id")
+    private String xFcStatefulAsyncInvocationId;
+
+    @Header
+    @NameInMap("X-Fc-Trace-Id")
+    private String xFcTraceId;
+
     @Body
     @NameInMap("body")
     private byte[] body;
@@ -31,29 +55,20 @@ public class InvokeFunctionRequest extends Request {
     @NameInMap("qualifier")
     private String qualifier;
 
-    @Header
-    @NameInMap("x-fc-invocation-type")
-    private String xFcInvocationType;
-
-    @Header
-    @NameInMap("x-fc-log-type")
-    private String xFcLogType;
-
-    @Header
-    @NameInMap("x-fc-stateful-async-invocation-id")
-    private String xFcStatefulAsyncInvocationId;
-
 
     private InvokeFunctionRequest(Builder builder) {
         super(builder);
         this.serviceName = builder.serviceName;
         this.functionName = builder.functionName;
         this.xFcAccountId = builder.xFcAccountId;
-        this.body = builder.body;
-        this.qualifier = builder.qualifier;
+        this.xFcCodeChecksum = builder.xFcCodeChecksum;
+        this.xFcDate = builder.xFcDate;
         this.xFcInvocationType = builder.xFcInvocationType;
         this.xFcLogType = builder.xFcLogType;
         this.xFcStatefulAsyncInvocationId = builder.xFcStatefulAsyncInvocationId;
+        this.xFcTraceId = builder.xFcTraceId;
+        this.body = builder.body;
+        this.qualifier = builder.qualifier;
     }
 
     public static Builder builder() {
@@ -86,17 +101,17 @@ public class InvokeFunctionRequest extends Request {
     }
 
     /**
-     * @return body
+     * @return xFcCodeChecksum
      */
-    public byte[] getBody() {
-        return this.body;
+    public String getXFcCodeChecksum() {
+        return this.xFcCodeChecksum;
     }
 
     /**
-     * @return qualifier
+     * @return xFcDate
      */
-    public String getQualifier() {
-        return this.qualifier;
+    public String getXFcDate() {
+        return this.xFcDate;
     }
 
     /**
@@ -120,15 +135,39 @@ public class InvokeFunctionRequest extends Request {
         return this.xFcStatefulAsyncInvocationId;
     }
 
+    /**
+     * @return xFcTraceId
+     */
+    public String getXFcTraceId() {
+        return this.xFcTraceId;
+    }
+
+    /**
+     * @return body
+     */
+    public byte[] getBody() {
+        return this.body;
+    }
+
+    /**
+     * @return qualifier
+     */
+    public String getQualifier() {
+        return this.qualifier;
+    }
+
     public static final class Builder extends Request.Builder {
         private String serviceName; 
         private String functionName; 
         private String xFcAccountId; 
-        private byte[] body; 
-        private String qualifier; 
+        private String xFcCodeChecksum; 
+        private String xFcDate; 
         private String xFcInvocationType; 
         private String xFcLogType; 
         private String xFcStatefulAsyncInvocationId; 
+        private String xFcTraceId; 
+        private byte[] body; 
+        private String qualifier; 
 
         /**
          * <p>service名称</p>
@@ -158,6 +197,60 @@ public class InvokeFunctionRequest extends Request {
         }
 
         /**
+         * <p>X-Fc-Code-Checksum.</p>
+         */
+        public Builder xFcCodeChecksum(String xFcCodeChecksum) {
+            this.putHeaderParameter("X-Fc-Code-Checksum", xFcCodeChecksum);
+            this.xFcCodeChecksum = xFcCodeChecksum;
+            return this;
+        }
+
+        /**
+         * <p>X-Fc-Date.</p>
+         */
+        public Builder xFcDate(String xFcDate) {
+            this.putHeaderParameter("X-Fc-Date", xFcDate);
+            this.xFcDate = xFcDate;
+            return this;
+        }
+
+        /**
+         * <p>调用方式:Sync或者Async，默认值：Sync</p>
+         */
+        public Builder xFcInvocationType(String xFcInvocationType) {
+            this.putHeaderParameter("X-Fc-Invocation-Type", xFcInvocationType);
+            this.xFcInvocationType = xFcInvocationType;
+            return this;
+        }
+
+        /**
+         * <p>请求返回日志类型, Tail 为返回函数日志最后 4KB 数据，None 或空值则返回不带有日志，默认为 None</p>
+         */
+        public Builder xFcLogType(String xFcLogType) {
+            this.putHeaderParameter("X-Fc-Log-Type", xFcLogType);
+            this.xFcLogType = xFcLogType;
+            return this;
+        }
+
+        /**
+         * <p>X-Fc-Stateful-Async-Invocation-Id.</p>
+         */
+        public Builder xFcStatefulAsyncInvocationId(String xFcStatefulAsyncInvocationId) {
+            this.putHeaderParameter("X-Fc-Stateful-Async-Invocation-Id", xFcStatefulAsyncInvocationId);
+            this.xFcStatefulAsyncInvocationId = xFcStatefulAsyncInvocationId;
+            return this;
+        }
+
+        /**
+         * <p>X-Fc-Trace-Id.</p>
+         */
+        public Builder xFcTraceId(String xFcTraceId) {
+            this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);
+            this.xFcTraceId = xFcTraceId;
+            return this;
+        }
+
+        /**
          * <p>事件（event），binary type。函数计算服务将event传递给用户function来处理</p>
          */
         public Builder body(byte[] body) {
@@ -172,33 +265,6 @@ public class InvokeFunctionRequest extends Request {
         public Builder qualifier(String qualifier) {
             this.putQueryParameter("qualifier", qualifier);
             this.qualifier = qualifier;
-            return this;
-        }
-
-        /**
-         * <p>调用方式:Sync或者Async，默认值：Sync</p>
-         */
-        public Builder xFcInvocationType(String xFcInvocationType) {
-            this.putHeaderParameter("x-fc-invocation-type", xFcInvocationType);
-            this.xFcInvocationType = xFcInvocationType;
-            return this;
-        }
-
-        /**
-         * <p>请求返回日志类型, Tail 为返回函数日志最后 4KB 数据，None 或空值则返回不带有日志，默认为 None</p>
-         */
-        public Builder xFcLogType(String xFcLogType) {
-            this.putHeaderParameter("x-fc-log-type", xFcLogType);
-            this.xFcLogType = xFcLogType;
-            return this;
-        }
-
-        /**
-         * <p>x-fc-stateful-async-invocation-id.</p>
-         */
-        public Builder xFcStatefulAsyncInvocationId(String xFcStatefulAsyncInvocationId) {
-            this.putHeaderParameter("x-fc-stateful-async-invocation-id", xFcStatefulAsyncInvocationId);
-            this.xFcStatefulAsyncInvocationId = xFcStatefulAsyncInvocationId;
             return this;
         }
 

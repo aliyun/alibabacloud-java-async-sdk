@@ -27,6 +27,26 @@ public class UpdateFunctionRequest extends Request {
     @NameInMap("X-Fc-Account-Id")
     private String xFcAccountId;
 
+    @Header
+    @NameInMap("X-Fc-Code-Checksum")
+    private String xFcCodeChecksum;
+
+    @Header
+    @NameInMap("X-Fc-Date")
+    private String xFcDate;
+
+    @Header
+    @NameInMap("X-Fc-Invocation-Type")
+    private String xFcInvocationType;
+
+    @Header
+    @NameInMap("X-Fc-Log-Type")
+    private String xFcLogType;
+
+    @Header
+    @NameInMap("X-Fc-Trace-Id")
+    private String xFcTraceId;
+
     @Body
     @NameInMap("InstanceConcurrency")
     private Integer instanceConcurrency;
@@ -95,10 +115,6 @@ public class UpdateFunctionRequest extends Request {
     @NameInMap("timeout")
     private Integer timeout;
 
-    @Header
-    @NameInMap("x-fc-code-checksum")
-    private String xFcCodeChecksum;
-
 
     private UpdateFunctionRequest(Builder builder) {
         super(builder);
@@ -106,6 +122,11 @@ public class UpdateFunctionRequest extends Request {
         this.functionName = builder.functionName;
         this.ifMatch = builder.ifMatch;
         this.xFcAccountId = builder.xFcAccountId;
+        this.xFcCodeChecksum = builder.xFcCodeChecksum;
+        this.xFcDate = builder.xFcDate;
+        this.xFcInvocationType = builder.xFcInvocationType;
+        this.xFcLogType = builder.xFcLogType;
+        this.xFcTraceId = builder.xFcTraceId;
         this.instanceConcurrency = builder.instanceConcurrency;
         this.caPort = builder.caPort;
         this.code = builder.code;
@@ -123,7 +144,6 @@ public class UpdateFunctionRequest extends Request {
         this.memorySize = builder.memorySize;
         this.runtime = builder.runtime;
         this.timeout = builder.timeout;
-        this.xFcCodeChecksum = builder.xFcCodeChecksum;
     }
 
     public static Builder builder() {
@@ -160,6 +180,41 @@ public class UpdateFunctionRequest extends Request {
      */
     public String getXFcAccountId() {
         return this.xFcAccountId;
+    }
+
+    /**
+     * @return xFcCodeChecksum
+     */
+    public String getXFcCodeChecksum() {
+        return this.xFcCodeChecksum;
+    }
+
+    /**
+     * @return xFcDate
+     */
+    public String getXFcDate() {
+        return this.xFcDate;
+    }
+
+    /**
+     * @return xFcInvocationType
+     */
+    public String getXFcInvocationType() {
+        return this.xFcInvocationType;
+    }
+
+    /**
+     * @return xFcLogType
+     */
+    public String getXFcLogType() {
+        return this.xFcLogType;
+    }
+
+    /**
+     * @return xFcTraceId
+     */
+    public String getXFcTraceId() {
+        return this.xFcTraceId;
     }
 
     /**
@@ -281,18 +336,16 @@ public class UpdateFunctionRequest extends Request {
         return this.timeout;
     }
 
-    /**
-     * @return xFcCodeChecksum
-     */
-    public String getXFcCodeChecksum() {
-        return this.xFcCodeChecksum;
-    }
-
     public static final class Builder extends Request.Builder {
         private String serviceName; 
         private String functionName; 
         private String ifMatch; 
         private String xFcAccountId; 
+        private String xFcCodeChecksum; 
+        private String xFcDate; 
+        private String xFcInvocationType; 
+        private String xFcLogType; 
+        private String xFcTraceId; 
         private Integer instanceConcurrency; 
         private Integer caPort; 
         private Code code; 
@@ -310,7 +363,6 @@ public class UpdateFunctionRequest extends Request {
         private Integer memorySize; 
         private String runtime; 
         private Integer timeout; 
-        private String xFcCodeChecksum; 
 
         /**
          * <p>service名称</p>
@@ -345,6 +397,51 @@ public class UpdateFunctionRequest extends Request {
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
             this.xFcAccountId = xFcAccountId;
+            return this;
+        }
+
+        /**
+         * <p>X-Fc-Code-Checksum.</p>
+         */
+        public Builder xFcCodeChecksum(String xFcCodeChecksum) {
+            this.putHeaderParameter("X-Fc-Code-Checksum", xFcCodeChecksum);
+            this.xFcCodeChecksum = xFcCodeChecksum;
+            return this;
+        }
+
+        /**
+         * <p>X-Fc-Date.</p>
+         */
+        public Builder xFcDate(String xFcDate) {
+            this.putHeaderParameter("X-Fc-Date", xFcDate);
+            this.xFcDate = xFcDate;
+            return this;
+        }
+
+        /**
+         * <p>X-Fc-Invocation-Type.</p>
+         */
+        public Builder xFcInvocationType(String xFcInvocationType) {
+            this.putHeaderParameter("X-Fc-Invocation-Type", xFcInvocationType);
+            this.xFcInvocationType = xFcInvocationType;
+            return this;
+        }
+
+        /**
+         * <p>X-Fc-Log-Type.</p>
+         */
+        public Builder xFcLogType(String xFcLogType) {
+            this.putHeaderParameter("X-Fc-Log-Type", xFcLogType);
+            this.xFcLogType = xFcLogType;
+            return this;
+        }
+
+        /**
+         * <p>X-Fc-Trace-Id.</p>
+         */
+        public Builder xFcTraceId(String xFcTraceId) {
+            this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);
+            this.xFcTraceId = xFcTraceId;
             return this;
         }
 
@@ -498,15 +595,6 @@ public class UpdateFunctionRequest extends Request {
         public Builder timeout(Integer timeout) {
             this.putBodyParameter("timeout", timeout);
             this.timeout = timeout;
-            return this;
-        }
-
-        /**
-         * <p>代码校验</p>
-         */
-        public Builder xFcCodeChecksum(String xFcCodeChecksum) {
-            this.putHeaderParameter("x-fc-code-checksum", xFcCodeChecksum);
-            this.xFcCodeChecksum = xFcCodeChecksum;
             return this;
         }
 
