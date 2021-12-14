@@ -52,6 +52,10 @@ public class PreviewStackRequest extends Request {
     private String templateId;
 
     @Query
+    @NameInMap("TemplateScratchId")
+    private String templateScratchId;
+
+    @Query
     @NameInMap("TemplateURL")
     private String templateURL;
 
@@ -76,6 +80,7 @@ public class PreviewStackRequest extends Request {
         this.stackPolicyURL = builder.stackPolicyURL;
         this.templateBody = builder.templateBody;
         this.templateId = builder.templateId;
+        this.templateScratchId = builder.templateScratchId;
         this.templateURL = builder.templateURL;
         this.templateVersion = builder.templateVersion;
         this.timeoutInMinutes = builder.timeoutInMinutes;
@@ -160,6 +165,13 @@ public class PreviewStackRequest extends Request {
     }
 
     /**
+     * @return templateScratchId
+     */
+    public String getTemplateScratchId() {
+        return this.templateScratchId;
+    }
+
+    /**
      * @return templateURL
      */
     public String getTemplateURL() {
@@ -191,6 +203,7 @@ public class PreviewStackRequest extends Request {
         private String stackPolicyURL; 
         private String templateBody; 
         private String templateId; 
+        private String templateScratchId; 
         private String templateURL; 
         private String templateVersion; 
         private Long timeoutInMinutes; 
@@ -282,6 +295,15 @@ public class PreviewStackRequest extends Request {
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
             this.templateId = templateId;
+            return this;
+        }
+
+        /**
+         * <p>TemplateScratchId.</p>
+         */
+        public Builder templateScratchId(String templateScratchId) {
+            this.putQueryParameter("TemplateScratchId", templateScratchId);
+            this.templateScratchId = templateScratchId;
             return this;
         }
 

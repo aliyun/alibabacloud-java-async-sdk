@@ -26,6 +26,9 @@ public class GetResourceTypeResponseBody extends TeaModel {
     @NameInMap("SupportDriftDetection")
     private Boolean supportDriftDetection;
 
+    @NameInMap("SupportScratchDetection")
+    private Boolean supportScratchDetection;
+
 
     private GetResourceTypeResponseBody(Builder builder) {
         this.attributes = builder.attributes;
@@ -33,6 +36,7 @@ public class GetResourceTypeResponseBody extends TeaModel {
         this.requestId = builder.requestId;
         this.resourceType = builder.resourceType;
         this.supportDriftDetection = builder.supportDriftDetection;
+        this.supportScratchDetection = builder.supportScratchDetection;
     }
 
     public static Builder builder() {
@@ -78,12 +82,20 @@ public class GetResourceTypeResponseBody extends TeaModel {
         return this.supportDriftDetection;
     }
 
+    /**
+     * @return supportScratchDetection
+     */
+    public Boolean getSupportScratchDetection() {
+        return this.supportScratchDetection;
+    }
+
     public static final class Builder {
         private java.util.Map < String, ? > attributes; 
         private java.util.Map < String, ? > properties; 
         private String requestId; 
         private String resourceType; 
         private Boolean supportDriftDetection; 
+        private Boolean supportScratchDetection; 
 
         /**
          * <p>Attributes.</p>
@@ -122,6 +134,14 @@ public class GetResourceTypeResponseBody extends TeaModel {
          */
         public Builder supportDriftDetection(Boolean supportDriftDetection) {
             this.supportDriftDetection = supportDriftDetection;
+            return this;
+        }
+
+        /**
+         * <p>SupportScratchDetection.</p>
+         */
+        public Builder supportScratchDetection(Boolean supportScratchDetection) {
+            this.supportScratchDetection = supportScratchDetection;
             return this;
         }
 

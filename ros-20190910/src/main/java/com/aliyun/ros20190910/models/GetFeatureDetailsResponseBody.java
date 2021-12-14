@@ -78,6 +78,9 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         @NameInMap("EstimateCost")
         private java.util.List < String > estimateCost;
 
+        @NameInMap("ResourceGroup")
+        private java.util.List < String > resourceGroup;
+
         @NameInMap("SystemTag")
         private java.util.List < String > systemTag;
 
@@ -85,6 +88,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         private SupportedResourceTypes(Builder builder) {
             this.customTag = builder.customTag;
             this.estimateCost = builder.estimateCost;
+            this.resourceGroup = builder.resourceGroup;
             this.systemTag = builder.systemTag;
         }
 
@@ -111,6 +115,13 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroup
+         */
+        public java.util.List < String > getResourceGroup() {
+            return this.resourceGroup;
+        }
+
+        /**
          * @return systemTag
          */
         public java.util.List < String > getSystemTag() {
@@ -120,6 +131,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List < String > customTag; 
             private java.util.List < String > estimateCost; 
+            private java.util.List < String > resourceGroup; 
             private java.util.List < String > systemTag; 
 
             /**
@@ -135,6 +147,14 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
              */
             public Builder estimateCost(java.util.List < String > estimateCost) {
                 this.estimateCost = estimateCost;
+                return this;
+            }
+
+            /**
+             * <p>ResourceGroup.</p>
+             */
+            public Builder resourceGroup(java.util.List < String > resourceGroup) {
+                this.resourceGroup = resourceGroup;
                 return this;
             }
 
