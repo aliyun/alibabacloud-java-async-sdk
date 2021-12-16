@@ -11,29 +11,29 @@ import darabonba.core.TeaModel;
  * <p>PutObjectAclRequest</p>
  */
 public class PutObjectAclRequest extends Request {
-    @Host
-    @NameInMap("bucket")
-    private String bucket;
-
     @Path
     @NameInMap("key")
     private String key;
 
-    @Header
-    @NameInMap("x-oss-object-acl")
-    private ObjectACL acl;
+    @Host
+    @NameInMap("bucket")
+    private String bucket;
 
     @Query
     @NameInMap("versionId")
     private String versionId;
 
+    @Header
+    @NameInMap("x-oss-object-acl")
+    private ObjectACL acl;
+
 
     private PutObjectAclRequest(Builder builder) {
         super(builder);
-        this.bucket = builder.bucket;
         this.key = builder.key;
-        this.acl = builder.acl;
+        this.bucket = builder.bucket;
         this.versionId = builder.versionId;
+        this.acl = builder.acl;
     }
 
     public static Builder builder() {
@@ -45,47 +45,38 @@ public class PutObjectAclRequest extends Request {
     }
 
     /**
-     * @return bucket
-     */
-    public String bucket() {
-        return this.bucket;
-    }
-
-    /**
      * @return key
      */
-    public String key() {
+    public String getKey() {
         return this.key;
     }
 
     /**
-     * @return acl
+     * @return bucket
      */
-    public ObjectACL acl() {
-        return this.acl;
+    public String getBucket() {
+        return this.bucket;
     }
 
     /**
      * @return versionId
      */
-    public String versionId() {
+    public String getVersionId() {
         return this.versionId;
     }
 
-    public static final class Builder extends Request.Builder<PutObjectAclRequest.Builder> {
-        private String bucket; 
-        private String key; 
-        private ObjectACL acl; 
-        private String versionId; 
+    /**
+     * @return acl
+     */
+    public ObjectACL getAcl() {
+        return this.acl;
+    }
 
-        /**
-         * <p>bucket.</p>
-         */
-        public Builder bucket(String bucket) {
-            this.putHostParameter("bucket", bucket);
-            this.bucket = bucket;
-            return this;
-        }
+    public static final class Builder extends Request.Builder<Builder> {
+        private String key; 
+        private String bucket; 
+        private String versionId; 
+        private ObjectACL acl; 
 
         /**
          * <p>key.</p>
@@ -97,11 +88,11 @@ public class PutObjectAclRequest extends Request {
         }
 
         /**
-         * <p>x-oss-object-acl.</p>
+         * <p>bucket.</p>
          */
-        public Builder acl(ObjectACL acl) {
-            this.putHeaderParameter("x-oss-object-acl", acl);
-            this.acl = acl;
+        public Builder bucket(String bucket) {
+            this.putHostParameter("bucket", bucket);
+            this.bucket = bucket;
             return this;
         }
 
@@ -111,6 +102,15 @@ public class PutObjectAclRequest extends Request {
         public Builder versionId(String versionId) {
             this.putQueryParameter("versionId", versionId);
             this.versionId = versionId;
+            return this;
+        }
+
+        /**
+         * <p>x-oss-object-acl.</p>
+         */
+        public Builder acl(ObjectACL acl) {
+            this.putHeaderParameter("x-oss-object-acl", acl);
+            this.acl = acl;
             return this;
         }
 

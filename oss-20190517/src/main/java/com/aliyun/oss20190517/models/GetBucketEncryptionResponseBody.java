@@ -31,7 +31,7 @@ public class GetBucketEncryptionResponseBody extends TeaModel {
     /**
      * @return applyServerSideEncryptionByDefault
      */
-    public ApplyServerSideEncryptionByDefault applyServerSideEncryptionByDefault() {
+    public ApplyServerSideEncryptionByDefault getApplyServerSideEncryptionByDefault() {
         return this.applyServerSideEncryptionByDefault;
     }
 

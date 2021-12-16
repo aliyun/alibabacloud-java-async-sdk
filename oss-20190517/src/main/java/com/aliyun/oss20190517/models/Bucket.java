@@ -54,49 +54,49 @@ public class Bucket extends TeaModel {
     /**
      * @return creationDate
      */
-    public String creationDate() {
+    public String getCreationDate() {
         return this.creationDate;
     }
 
     /**
      * @return extranetEndpoint
      */
-    public String extranetEndpoint() {
+    public String getExtranetEndpoint() {
         return this.extranetEndpoint;
     }
 
     /**
      * @return intranetEndpoint
      */
-    public String intranetEndpoint() {
+    public String getIntranetEndpoint() {
         return this.intranetEndpoint;
     }
 
     /**
      * @return location
      */
-    public String location() {
+    public String getLocation() {
         return this.location;
     }
 
     /**
      * @return name
      */
-    public String name() {
+    public String getName() {
         return this.name;
     }
 
     /**
      * @return region
      */
-    public String region() {
+    public String getRegion() {
         return this.region;
     }
 
     /**
      * @return storageClass
      */
-    public StorageClass storageClass() {
+    public StorageClass getStorageClass() {
         return this.storageClass;
     }
 

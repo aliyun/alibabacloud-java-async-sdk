@@ -12,17 +12,17 @@ import darabonba.core.TeaModel;
  */
 public class PutLiveChannelResponseBody extends TeaModel {
     @ParentIgnore("CreateLiveChannelResult")
-    @NameInMap("PublishUrls")
-    private LiveChannelPublishUrls publishUrls;
-
-    @ParentIgnore("CreateLiveChannelResult")
     @NameInMap("PlayUrls")
     private LiveChannelPlayUrls playUrls;
 
+    @ParentIgnore("CreateLiveChannelResult")
+    @NameInMap("PublishUrls")
+    private LiveChannelPublishUrls publishUrls;
+
 
     private PutLiveChannelResponseBody(Builder builder) {
-        this.publishUrls = builder.publishUrls;
         this.playUrls = builder.playUrls;
+        this.publishUrls = builder.publishUrls;
     }
 
     public static Builder builder() {
@@ -34,36 +34,36 @@ public class PutLiveChannelResponseBody extends TeaModel {
     }
 
     /**
-     * @return publishUrls
-     */
-    public LiveChannelPublishUrls publishUrls() {
-        return this.publishUrls;
-    }
-
-    /**
      * @return playUrls
      */
-    public LiveChannelPlayUrls playUrls() {
+    public LiveChannelPlayUrls getPlayUrls() {
         return this.playUrls;
     }
 
-    public static final class Builder {
-        private LiveChannelPublishUrls publishUrls; 
-        private LiveChannelPlayUrls playUrls; 
+    /**
+     * @return publishUrls
+     */
+    public LiveChannelPublishUrls getPublishUrls() {
+        return this.publishUrls;
+    }
 
-        /**
-         * <p>PublishUrls.</p>
-         */
-        public Builder publishUrls(LiveChannelPublishUrls publishUrls) {
-            this.publishUrls = publishUrls;
-            return this;
-        }
+    public static final class Builder {
+        private LiveChannelPlayUrls playUrls; 
+        private LiveChannelPublishUrls publishUrls; 
 
         /**
          * <p>PlayUrls.</p>
          */
         public Builder playUrls(LiveChannelPlayUrls playUrls) {
             this.playUrls = playUrls;
+            return this;
+        }
+
+        /**
+         * <p>PublishUrls.</p>
+         */
+        public Builder publishUrls(LiveChannelPublishUrls publishUrls) {
+            this.publishUrls = publishUrls;
             return this;
         }
 

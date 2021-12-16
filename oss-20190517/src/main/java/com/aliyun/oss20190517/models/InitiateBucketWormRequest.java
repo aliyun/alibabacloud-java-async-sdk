@@ -11,19 +11,19 @@ import darabonba.core.TeaModel;
  * <p>InitiateBucketWormRequest</p>
  */
 public class InitiateBucketWormRequest extends Request {
+    @Body
+    @NameInMap("InitiateWormConfiguration")
+    private InitiateWormConfiguration initiateWormConfiguration;
+
     @Host
     @NameInMap("bucket")
     private String bucket;
 
-    @Body
-    @NameInMap("initiateWormConfiguration")
-    private InitiateWormConfiguration initiateWormConfiguration;
-
 
     private InitiateBucketWormRequest(Builder builder) {
         super(builder);
-        this.bucket = builder.bucket;
         this.initiateWormConfiguration = builder.initiateWormConfiguration;
+        this.bucket = builder.bucket;
     }
 
     public static Builder builder() {
@@ -35,22 +35,31 @@ public class InitiateBucketWormRequest extends Request {
     }
 
     /**
-     * @return bucket
-     */
-    public String bucket() {
-        return this.bucket;
-    }
-
-    /**
      * @return initiateWormConfiguration
      */
-    public InitiateWormConfiguration initiateWormConfiguration() {
+    public InitiateWormConfiguration getInitiateWormConfiguration() {
         return this.initiateWormConfiguration;
     }
 
-    public static final class Builder extends Request.Builder<InitiateBucketWormRequest.Builder> {
-        private String bucket; 
+    /**
+     * @return bucket
+     */
+    public String getBucket() {
+        return this.bucket;
+    }
+
+    public static final class Builder extends Request.Builder<Builder> {
         private InitiateWormConfiguration initiateWormConfiguration; 
+        private String bucket; 
+
+        /**
+         * <p>InitiateWormConfiguration.</p>
+         */
+        public Builder initiateWormConfiguration(InitiateWormConfiguration initiateWormConfiguration) {
+            this.putBodyParameter("InitiateWormConfiguration", initiateWormConfiguration);
+            this.initiateWormConfiguration = initiateWormConfiguration;
+            return this;
+        }
 
         /**
          * <p>bucket.</p>
@@ -58,15 +67,6 @@ public class InitiateBucketWormRequest extends Request {
         public Builder bucket(String bucket) {
             this.putHostParameter("bucket", bucket);
             this.bucket = bucket;
-            return this;
-        }
-
-        /**
-         * <p>initiateWormConfiguration.</p>
-         */
-        public Builder initiateWormConfiguration(InitiateWormConfiguration initiateWormConfiguration) {
-            this.putBodyParameter("initiateWormConfiguration", initiateWormConfiguration);
-            this.initiateWormConfiguration = initiateWormConfiguration;
             return this;
         }
 

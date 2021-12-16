@@ -36,14 +36,14 @@ public class CopyObjectResponseBody extends TeaModel {
     /**
      * @return ETag
      */
-    public String ETag() {
+    public String getETag() {
         return this.ETag;
     }
 
     /**
      * @return lastModified
      */
-    public String lastModified() {
+    public String getLastModified() {
         return this.lastModified;
     }
 

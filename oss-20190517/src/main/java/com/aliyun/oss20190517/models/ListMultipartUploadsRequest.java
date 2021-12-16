@@ -11,17 +11,25 @@ import darabonba.core.TeaModel;
  * <p>ListMultipartUploadsRequest</p>
  */
 public class ListMultipartUploadsRequest extends Request {
+    @Host
+    @NameInMap("bucket")
+    private String bucket;
+
     @Query
     @NameInMap("delimiter")
     private String delimiter;
 
     @Query
-    @NameInMap("max-uploads")
-    private String maxUploads;
+    @NameInMap("encoding-type")
+    private String encodingType;
 
     @Query
     @NameInMap("key-marker")
     private String keyMarker;
+
+    @Query
+    @NameInMap("max-uploads")
+    private String maxUploads;
 
     @Query
     @NameInMap("prefix")
@@ -31,19 +39,16 @@ public class ListMultipartUploadsRequest extends Request {
     @NameInMap("upload-id-marker")
     private String uploadIdMarker;
 
-    @Query
-    @NameInMap("encoding-type")
-    private String encodingType;
-
 
     private ListMultipartUploadsRequest(Builder builder) {
         super(builder);
+        this.bucket = builder.bucket;
         this.delimiter = builder.delimiter;
-        this.maxUploads = builder.maxUploads;
+        this.encodingType = builder.encodingType;
         this.keyMarker = builder.keyMarker;
+        this.maxUploads = builder.maxUploads;
         this.prefix = builder.prefix;
         this.uploadIdMarker = builder.uploadIdMarker;
-        this.encodingType = builder.encodingType;
     }
 
     public static Builder builder() {
@@ -55,54 +60,71 @@ public class ListMultipartUploadsRequest extends Request {
     }
 
     /**
+     * @return bucket
+     */
+    public String getBucket() {
+        return this.bucket;
+    }
+
+    /**
      * @return delimiter
      */
-    public String delimiter() {
+    public String getDelimiter() {
         return this.delimiter;
     }
 
     /**
-     * @return maxUploads
+     * @return encodingType
      */
-    public String maxUploads() {
-        return this.maxUploads;
+    public String getEncodingType() {
+        return this.encodingType;
     }
 
     /**
      * @return keyMarker
      */
-    public String keyMarker() {
+    public String getKeyMarker() {
         return this.keyMarker;
+    }
+
+    /**
+     * @return maxUploads
+     */
+    public String getMaxUploads() {
+        return this.maxUploads;
     }
 
     /**
      * @return prefix
      */
-    public String prefix() {
+    public String getPrefix() {
         return this.prefix;
     }
 
     /**
      * @return uploadIdMarker
      */
-    public String uploadIdMarker() {
+    public String getUploadIdMarker() {
         return this.uploadIdMarker;
     }
 
-    /**
-     * @return encodingType
-     */
-    public String encodingType() {
-        return this.encodingType;
-    }
-
-    public static final class Builder extends Request.Builder<ListMultipartUploadsRequest.Builder> {
+    public static final class Builder extends Request.Builder<Builder> {
+        private String bucket; 
         private String delimiter; 
-        private String maxUploads; 
+        private String encodingType; 
         private String keyMarker; 
+        private String maxUploads; 
         private String prefix; 
         private String uploadIdMarker; 
-        private String encodingType; 
+
+        /**
+         * <p>bucket.</p>
+         */
+        public Builder bucket(String bucket) {
+            this.putHostParameter("bucket", bucket);
+            this.bucket = bucket;
+            return this;
+        }
 
         /**
          * <p>delimiter.</p>
@@ -114,11 +136,11 @@ public class ListMultipartUploadsRequest extends Request {
         }
 
         /**
-         * <p>max-uploads.</p>
+         * <p>encoding-type.</p>
          */
-        public Builder maxUploads(String maxUploads) {
-            this.putQueryParameter("max-uploads", maxUploads);
-            this.maxUploads = maxUploads;
+        public Builder encodingType(String encodingType) {
+            this.putQueryParameter("encoding-type", encodingType);
+            this.encodingType = encodingType;
             return this;
         }
 
@@ -128,6 +150,15 @@ public class ListMultipartUploadsRequest extends Request {
         public Builder keyMarker(String keyMarker) {
             this.putQueryParameter("key-marker", keyMarker);
             this.keyMarker = keyMarker;
+            return this;
+        }
+
+        /**
+         * <p>max-uploads.</p>
+         */
+        public Builder maxUploads(String maxUploads) {
+            this.putQueryParameter("max-uploads", maxUploads);
+            this.maxUploads = maxUploads;
             return this;
         }
 
@@ -146,15 +177,6 @@ public class ListMultipartUploadsRequest extends Request {
         public Builder uploadIdMarker(String uploadIdMarker) {
             this.putQueryParameter("upload-id-marker", uploadIdMarker);
             this.uploadIdMarker = uploadIdMarker;
-            return this;
-        }
-
-        /**
-         * <p>encoding-type.</p>
-         */
-        public Builder encodingType(String encodingType) {
-            this.putQueryParameter("encoding-type", encodingType);
-            this.encodingType = encodingType;
             return this;
         }
 

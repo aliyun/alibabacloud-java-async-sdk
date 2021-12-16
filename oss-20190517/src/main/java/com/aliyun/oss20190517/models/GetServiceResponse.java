@@ -41,14 +41,14 @@ public class GetServiceResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > headers() {
+    public java.util.Map < String, String > getHeaders() {
         return this.headers;
     }
 
     /**
      * @return body
      */
-    public GetServiceResponseBody body() {
+    public GetServiceResponseBody getBody() {
         return this.body;
     }
 

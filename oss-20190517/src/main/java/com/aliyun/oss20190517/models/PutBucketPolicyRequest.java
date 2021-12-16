@@ -11,19 +11,19 @@ import darabonba.core.TeaModel;
  * <p>PutBucketPolicyRequest</p>
  */
 public class PutBucketPolicyRequest extends Request {
-    @Host
-    @NameInMap("bucket")
-    private String bucket;
-
     @Body
     @NameInMap("body")
     private String policy;
 
+    @Host
+    @NameInMap("bucket")
+    private String bucket;
+
 
     private PutBucketPolicyRequest(Builder builder) {
         super(builder);
-        this.bucket = builder.bucket;
         this.policy = builder.policy;
+        this.bucket = builder.bucket;
     }
 
     public static Builder builder() {
@@ -35,31 +35,22 @@ public class PutBucketPolicyRequest extends Request {
     }
 
     /**
-     * @return bucket
-     */
-    public String bucket() {
-        return this.bucket;
-    }
-
-    /**
      * @return policy
      */
-    public String policy() {
+    public String getPolicy() {
         return this.policy;
     }
 
-    public static final class Builder extends Request.Builder<PutBucketPolicyRequest.Builder> {
-        private String bucket; 
-        private String policy; 
+    /**
+     * @return bucket
+     */
+    public String getBucket() {
+        return this.bucket;
+    }
 
-        /**
-         * <p>bucket.</p>
-         */
-        public Builder bucket(String bucket) {
-            this.putHostParameter("bucket", bucket);
-            this.bucket = bucket;
-            return this;
-        }
+    public static final class Builder extends Request.Builder<Builder> {
+        private String policy; 
+        private String bucket; 
 
         /**
          * <p>body.</p>
@@ -67,6 +58,15 @@ public class PutBucketPolicyRequest extends Request {
         public Builder policy(String policy) {
             this.putBodyParameter("body", policy);
             this.policy = policy;
+            return this;
+        }
+
+        /**
+         * <p>bucket.</p>
+         */
+        public Builder bucket(String bucket) {
+            this.putHostParameter("bucket", bucket);
+            this.bucket = bucket;
             return this;
         }
 

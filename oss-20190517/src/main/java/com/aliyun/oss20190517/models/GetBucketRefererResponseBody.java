@@ -36,14 +36,14 @@ public class GetBucketRefererResponseBody extends TeaModel {
     /**
      * @return allowEmptyReferer
      */
-    public Boolean allowEmptyReferer() {
+    public Boolean getAllowEmptyReferer() {
         return this.allowEmptyReferer;
     }
 
     /**
      * @return refererList
      */
-    public RefererList refererList() {
+    public RefererList getRefererList() {
         return this.refererList;
     }
 
@@ -93,7 +93,7 @@ public class GetBucketRefererResponseBody extends TeaModel {
         /**
          * @return referer
          */
-        public java.util.List < String > referer() {
+        public java.util.List < String > getReferer() {
             return this.referer;
         }
 

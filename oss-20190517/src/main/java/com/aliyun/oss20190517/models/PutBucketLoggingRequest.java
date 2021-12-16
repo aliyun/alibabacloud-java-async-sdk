@@ -11,19 +11,19 @@ import darabonba.core.TeaModel;
  * <p>PutBucketLoggingRequest</p>
  */
 public class PutBucketLoggingRequest extends Request {
+    @Body
+    @NameInMap("BucketLoggingStatus")
+    private BucketLoggingStatus bucketLoggingStatus;
+
     @Host
     @NameInMap("bucket")
     private String bucket;
 
-    @Body
-    @NameInMap("bucketLoggingStatus")
-    private BucketLoggingStatus bucketLoggingStatus;
-
 
     private PutBucketLoggingRequest(Builder builder) {
         super(builder);
-        this.bucket = builder.bucket;
         this.bucketLoggingStatus = builder.bucketLoggingStatus;
+        this.bucket = builder.bucket;
     }
 
     public static Builder builder() {
@@ -35,22 +35,31 @@ public class PutBucketLoggingRequest extends Request {
     }
 
     /**
-     * @return bucket
-     */
-    public String bucket() {
-        return this.bucket;
-    }
-
-    /**
      * @return bucketLoggingStatus
      */
-    public BucketLoggingStatus bucketLoggingStatus() {
+    public BucketLoggingStatus getBucketLoggingStatus() {
         return this.bucketLoggingStatus;
     }
 
-    public static final class Builder extends Request.Builder<PutBucketLoggingRequest.Builder> {
-        private String bucket; 
+    /**
+     * @return bucket
+     */
+    public String getBucket() {
+        return this.bucket;
+    }
+
+    public static final class Builder extends Request.Builder<Builder> {
         private BucketLoggingStatus bucketLoggingStatus; 
+        private String bucket; 
+
+        /**
+         * <p>BucketLoggingStatus.</p>
+         */
+        public Builder bucketLoggingStatus(BucketLoggingStatus bucketLoggingStatus) {
+            this.putBodyParameter("BucketLoggingStatus", bucketLoggingStatus);
+            this.bucketLoggingStatus = bucketLoggingStatus;
+            return this;
+        }
 
         /**
          * <p>bucket.</p>
@@ -58,15 +67,6 @@ public class PutBucketLoggingRequest extends Request {
         public Builder bucket(String bucket) {
             this.putHostParameter("bucket", bucket);
             this.bucket = bucket;
-            return this;
-        }
-
-        /**
-         * <p>bucketLoggingStatus.</p>
-         */
-        public Builder bucketLoggingStatus(BucketLoggingStatus bucketLoggingStatus) {
-            this.putBodyParameter("bucketLoggingStatus", bucketLoggingStatus);
-            this.bucketLoggingStatus = bucketLoggingStatus;
             return this;
         }
 

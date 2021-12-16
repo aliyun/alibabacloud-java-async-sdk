@@ -36,7 +36,7 @@ public class DeleteBucketLoggingResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > headers() {
+    public java.util.Map < String, String > getHeaders() {
         return this.headers;
     }
 

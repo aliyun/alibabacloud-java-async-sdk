@@ -11,40 +11,44 @@ import darabonba.core.TeaModel;
  * <p>ReplicationRule</p>
  */
 public class ReplicationRule extends TeaModel {
-    @NameInMap("ID")
-    private String ID;
-
-    @NameInMap("PrefixSet")
-    private ReplicationPrefixSet prefixSet;
-
     @NameInMap("Action")
     private String action;
 
     @NameInMap("Destination")
     private ReplicationDestination destination;
 
+    @NameInMap("EncryptionConfiguration")
+    private EncryptionConfiguration encryptionConfiguration;
+
     @NameInMap("HistoricalObjectReplication")
     private String historicalObjectReplication;
 
-    @NameInMap("SyncRole")
-    private String syncRole;
+    @NameInMap("ID")
+    private String ID;
+
+    @NameInMap("PrefixSet")
+    private ReplicationPrefixSet prefixSet;
 
     @NameInMap("SourceSelectionCriteria")
     private ReplicationSourceSelectionCriteria sourceSelectionCriteria;
 
-    @NameInMap("EncryptionConfiguration")
-    private EncryptionConfiguration encryptionConfiguration;
+    @NameInMap("Status")
+    private String status;
+
+    @NameInMap("SyncRole")
+    private String syncRole;
 
 
     private ReplicationRule(Builder builder) {
-        this.ID = builder.ID;
-        this.prefixSet = builder.prefixSet;
         this.action = builder.action;
         this.destination = builder.destination;
-        this.historicalObjectReplication = builder.historicalObjectReplication;
-        this.syncRole = builder.syncRole;
-        this.sourceSelectionCriteria = builder.sourceSelectionCriteria;
         this.encryptionConfiguration = builder.encryptionConfiguration;
+        this.historicalObjectReplication = builder.historicalObjectReplication;
+        this.ID = builder.ID;
+        this.prefixSet = builder.prefixSet;
+        this.sourceSelectionCriteria = builder.sourceSelectionCriteria;
+        this.status = builder.status;
+        this.syncRole = builder.syncRole;
     }
 
     public static Builder builder() {
@@ -56,86 +60,78 @@ public class ReplicationRule extends TeaModel {
     }
 
     /**
-     * @return ID
-     */
-    public String ID() {
-        return this.ID;
-    }
-
-    /**
-     * @return prefixSet
-     */
-    public ReplicationPrefixSet prefixSet() {
-        return this.prefixSet;
-    }
-
-    /**
      * @return action
      */
-    public String action() {
+    public String getAction() {
         return this.action;
     }
 
     /**
      * @return destination
      */
-    public ReplicationDestination destination() {
+    public ReplicationDestination getDestination() {
         return this.destination;
-    }
-
-    /**
-     * @return historicalObjectReplication
-     */
-    public String historicalObjectReplication() {
-        return this.historicalObjectReplication;
-    }
-
-    /**
-     * @return syncRole
-     */
-    public String syncRole() {
-        return this.syncRole;
-    }
-
-    /**
-     * @return sourceSelectionCriteria
-     */
-    public ReplicationSourceSelectionCriteria sourceSelectionCriteria() {
-        return this.sourceSelectionCriteria;
     }
 
     /**
      * @return encryptionConfiguration
      */
-    public EncryptionConfiguration encryptionConfiguration() {
+    public EncryptionConfiguration getEncryptionConfiguration() {
         return this.encryptionConfiguration;
     }
 
+    /**
+     * @return historicalObjectReplication
+     */
+    public String getHistoricalObjectReplication() {
+        return this.historicalObjectReplication;
+    }
+
+    /**
+     * @return ID
+     */
+    public String getID() {
+        return this.ID;
+    }
+
+    /**
+     * @return prefixSet
+     */
+    public ReplicationPrefixSet getPrefixSet() {
+        return this.prefixSet;
+    }
+
+    /**
+     * @return sourceSelectionCriteria
+     */
+    public ReplicationSourceSelectionCriteria getSourceSelectionCriteria() {
+        return this.sourceSelectionCriteria;
+    }
+
+    /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
+    /**
+     * @return syncRole
+     */
+    public String getSyncRole() {
+        return this.syncRole;
+    }
+
     public static final class Builder {
-        private String ID; 
-        private ReplicationPrefixSet prefixSet; 
         private String action; 
         private ReplicationDestination destination; 
-        private String historicalObjectReplication; 
-        private String syncRole; 
-        private ReplicationSourceSelectionCriteria sourceSelectionCriteria; 
         private EncryptionConfiguration encryptionConfiguration; 
-
-        /**
-         * <p>rule id</p>
-         */
-        public Builder ID(String ID) {
-            this.ID = ID;
-            return this;
-        }
-
-        /**
-         * <p>PrefixSet.</p>
-         */
-        public Builder prefixSet(ReplicationPrefixSet prefixSet) {
-            this.prefixSet = prefixSet;
-            return this;
-        }
+        private String historicalObjectReplication; 
+        private String ID; 
+        private ReplicationPrefixSet prefixSet; 
+        private ReplicationSourceSelectionCriteria sourceSelectionCriteria; 
+        private String status; 
+        private String syncRole; 
 
         /**
          * <p>A short description of action</p>
@@ -154,6 +150,14 @@ public class ReplicationRule extends TeaModel {
         }
 
         /**
+         * <p>A short description of EncryptionConfiguration</p>
+         */
+        public Builder encryptionConfiguration(EncryptionConfiguration encryptionConfiguration) {
+            this.encryptionConfiguration = encryptionConfiguration;
+            return this;
+        }
+
+        /**
          * <p>A short description of HistoricalObjectReplication</p>
          */
         public Builder historicalObjectReplication(String historicalObjectReplication) {
@@ -162,10 +166,18 @@ public class ReplicationRule extends TeaModel {
         }
 
         /**
-         * <p>A short description of SyncRole</p>
+         * <p>rule id</p>
          */
-        public Builder syncRole(String syncRole) {
-            this.syncRole = syncRole;
+        public Builder ID(String ID) {
+            this.ID = ID;
+            return this;
+        }
+
+        /**
+         * <p>PrefixSet.</p>
+         */
+        public Builder prefixSet(ReplicationPrefixSet prefixSet) {
+            this.prefixSet = prefixSet;
             return this;
         }
 
@@ -178,10 +190,18 @@ public class ReplicationRule extends TeaModel {
         }
 
         /**
-         * <p>A short description of EncryptionConfiguration</p>
+         * <p>A short description of action</p>
          */
-        public Builder encryptionConfiguration(EncryptionConfiguration encryptionConfiguration) {
-            this.encryptionConfiguration = encryptionConfiguration;
+        public Builder status(String status) {
+            this.status = status;
+            return this;
+        }
+
+        /**
+         * <p>A short description of SyncRole</p>
+         */
+        public Builder syncRole(String syncRole) {
+            this.syncRole = syncRole;
             return this;
         }
 
@@ -211,7 +231,7 @@ public class ReplicationRule extends TeaModel {
         /**
          * @return replicaKmsKeyID
          */
-        public String replicaKmsKeyID() {
+        public String getReplicaKmsKeyID() {
             return this.replicaKmsKeyID;
         }
 

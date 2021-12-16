@@ -41,14 +41,14 @@ public class GetVodPlaylistResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > headers() {
+    public java.util.Map < String, String > getHeaders() {
         return this.headers;
     }
 
     /**
      * @return body
      */
-    public java.io.InputStream body() {
+    public java.io.InputStream getBody() {
         return this.body;
     }
 

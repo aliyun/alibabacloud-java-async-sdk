@@ -11,6 +11,10 @@ import darabonba.core.TeaModel;
  * <p>PutBucketRequest</p>
  */
 public class PutBucketRequest extends Request {
+    @Body
+    @NameInMap("CreateBucketConfiguration")
+    private CreateBucketConfiguration createBucketConfiguration;
+
     @Host
     @NameInMap("bucket")
     private String bucket;
@@ -19,16 +23,12 @@ public class PutBucketRequest extends Request {
     @NameInMap("x-oss-acl")
     private BucketACL acl;
 
-    @Body
-    @NameInMap("createBucketConfiguration")
-    private CreateBucketConfiguration createBucketConfiguration;
-
 
     private PutBucketRequest(Builder builder) {
         super(builder);
+        this.createBucketConfiguration = builder.createBucketConfiguration;
         this.bucket = builder.bucket;
         this.acl = builder.acl;
-        this.createBucketConfiguration = builder.createBucketConfiguration;
     }
 
     public static Builder builder() {
@@ -40,30 +40,39 @@ public class PutBucketRequest extends Request {
     }
 
     /**
+     * @return createBucketConfiguration
+     */
+    public CreateBucketConfiguration getCreateBucketConfiguration() {
+        return this.createBucketConfiguration;
+    }
+
+    /**
      * @return bucket
      */
-    public String bucket() {
+    public String getBucket() {
         return this.bucket;
     }
 
     /**
      * @return acl
      */
-    public BucketACL acl() {
+    public BucketACL getAcl() {
         return this.acl;
     }
 
-    /**
-     * @return createBucketConfiguration
-     */
-    public CreateBucketConfiguration createBucketConfiguration() {
-        return this.createBucketConfiguration;
-    }
-
-    public static final class Builder extends Request.Builder<PutBucketRequest.Builder> {
+    public static final class Builder extends Request.Builder<Builder> {
+        private CreateBucketConfiguration createBucketConfiguration; 
         private String bucket; 
         private BucketACL acl; 
-        private CreateBucketConfiguration createBucketConfiguration; 
+
+        /**
+         * <p>CreateBucketConfiguration.</p>
+         */
+        public Builder createBucketConfiguration(CreateBucketConfiguration createBucketConfiguration) {
+            this.putBodyParameter("CreateBucketConfiguration", createBucketConfiguration);
+            this.createBucketConfiguration = createBucketConfiguration;
+            return this;
+        }
 
         /**
          * <p>bucket.</p>
@@ -80,15 +89,6 @@ public class PutBucketRequest extends Request {
         public Builder acl(BucketACL acl) {
             this.putHeaderParameter("x-oss-acl", acl);
             this.acl = acl;
-            return this;
-        }
-
-        /**
-         * <p>createBucketConfiguration.</p>
-         */
-        public Builder createBucketConfiguration(CreateBucketConfiguration createBucketConfiguration) {
-            this.putBodyParameter("createBucketConfiguration", createBucketConfiguration);
-            this.createBucketConfiguration = createBucketConfiguration;
             return this;
         }
 

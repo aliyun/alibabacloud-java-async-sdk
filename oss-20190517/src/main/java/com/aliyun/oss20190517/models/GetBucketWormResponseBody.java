@@ -12,27 +12,27 @@ import darabonba.core.TeaModel;
  */
 public class GetBucketWormResponseBody extends TeaModel {
     @ParentIgnore("WormConfiguration")
-    @NameInMap("WormId")
-    private String wormId;
-
-    @ParentIgnore("WormConfiguration")
-    @NameInMap("State")
-    private BucketWormState state;
+    @NameInMap("CreationDate")
+    private String creationDate;
 
     @ParentIgnore("WormConfiguration")
     @NameInMap("RetentionPeriodInDays")
     private Long retentionPeriodInDays;
 
     @ParentIgnore("WormConfiguration")
-    @NameInMap("CreationDate")
-    private String creationDate;
+    @NameInMap("State")
+    private BucketWormState state;
+
+    @ParentIgnore("WormConfiguration")
+    @NameInMap("WormId")
+    private String wormId;
 
 
     private GetBucketWormResponseBody(Builder builder) {
-        this.wormId = builder.wormId;
-        this.state = builder.state;
-        this.retentionPeriodInDays = builder.retentionPeriodInDays;
         this.creationDate = builder.creationDate;
+        this.retentionPeriodInDays = builder.retentionPeriodInDays;
+        this.state = builder.state;
+        this.wormId = builder.wormId;
     }
 
     public static Builder builder() {
@@ -44,52 +44,44 @@ public class GetBucketWormResponseBody extends TeaModel {
     }
 
     /**
-     * @return wormId
+     * @return creationDate
      */
-    public String wormId() {
-        return this.wormId;
-    }
-
-    /**
-     * @return state
-     */
-    public BucketWormState state() {
-        return this.state;
+    public String getCreationDate() {
+        return this.creationDate;
     }
 
     /**
      * @return retentionPeriodInDays
      */
-    public Long retentionPeriodInDays() {
+    public Long getRetentionPeriodInDays() {
         return this.retentionPeriodInDays;
     }
 
     /**
-     * @return creationDate
+     * @return state
      */
-    public String creationDate() {
-        return this.creationDate;
+    public BucketWormState getState() {
+        return this.state;
+    }
+
+    /**
+     * @return wormId
+     */
+    public String getWormId() {
+        return this.wormId;
     }
 
     public static final class Builder {
-        private String wormId; 
-        private BucketWormState state; 
-        private Long retentionPeriodInDays; 
         private String creationDate; 
+        private Long retentionPeriodInDays; 
+        private BucketWormState state; 
+        private String wormId; 
 
         /**
-         * <p>WormId.</p>
+         * <p>CreationDate.</p>
          */
-        public Builder wormId(String wormId) {
-            this.wormId = wormId;
-            return this;
-        }
-
-        /**
-         * <p>State.</p>
-         */
-        public Builder state(BucketWormState state) {
-            this.state = state;
+        public Builder creationDate(String creationDate) {
+            this.creationDate = creationDate;
             return this;
         }
 
@@ -102,10 +94,18 @@ public class GetBucketWormResponseBody extends TeaModel {
         }
 
         /**
-         * <p>CreationDate.</p>
+         * <p>State.</p>
          */
-        public Builder creationDate(String creationDate) {
-            this.creationDate = creationDate;
+        public Builder state(BucketWormState state) {
+            this.state = state;
+            return this;
+        }
+
+        /**
+         * <p>WormId.</p>
+         */
+        public Builder wormId(String wormId) {
+            this.wormId = wormId;
             return this;
         }
 

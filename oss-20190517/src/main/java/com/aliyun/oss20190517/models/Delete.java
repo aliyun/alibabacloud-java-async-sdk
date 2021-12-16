@@ -11,16 +11,16 @@ import darabonba.core.TeaModel;
  * <p>Delete</p>
  */
 public class Delete extends TeaModel {
-    @NameInMap("Quiet")
-    private Boolean quiet;
-
     @NameInMap("Object")
     private java.util.List < ObjectIdentifier > objects;
 
+    @NameInMap("Quiet")
+    private Boolean quiet;
+
 
     private Delete(Builder builder) {
-        this.quiet = builder.quiet;
         this.objects = builder.objects;
+        this.quiet = builder.quiet;
     }
 
     public static Builder builder() {
@@ -32,36 +32,36 @@ public class Delete extends TeaModel {
     }
 
     /**
-     * @return quiet
-     */
-    public Boolean quiet() {
-        return this.quiet;
-    }
-
-    /**
      * @return objects
      */
-    public java.util.List < ObjectIdentifier > objects() {
+    public java.util.List < ObjectIdentifier > getObjects() {
         return this.objects;
     }
 
-    public static final class Builder {
-        private Boolean quiet; 
-        private java.util.List < ObjectIdentifier > objects; 
+    /**
+     * @return quiet
+     */
+    public Boolean getQuiet() {
+        return this.quiet;
+    }
 
-        /**
-         * <p>description</p>
-         */
-        public Builder quiet(Boolean quiet) {
-            this.quiet = quiet;
-            return this;
-        }
+    public static final class Builder {
+        private java.util.List < ObjectIdentifier > objects; 
+        private Boolean quiet; 
 
         /**
          * <p>description</p>
          */
         public Builder objects(java.util.List < ObjectIdentifier > objects) {
             this.objects = objects;
+            return this;
+        }
+
+        /**
+         * <p>description</p>
+         */
+        public Builder quiet(Boolean quiet) {
+            this.quiet = quiet;
             return this;
         }
 

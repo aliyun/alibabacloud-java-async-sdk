@@ -30,7 +30,7 @@ public class InventorySchedule extends TeaModel {
     /**
      * @return frequency
      */
-    public InventoryFrequency frequency() {
+    public InventoryFrequency getFrequency() {
         return this.frequency;
     }
 

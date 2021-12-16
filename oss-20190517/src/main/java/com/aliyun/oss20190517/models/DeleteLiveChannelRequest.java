@@ -11,19 +11,19 @@ import darabonba.core.TeaModel;
  * <p>DeleteLiveChannelRequest</p>
  */
 public class DeleteLiveChannelRequest extends Request {
-    @Host
-    @NameInMap("bucket")
-    private String bucket;
-
     @Path
     @NameInMap("channel")
     private String channel;
 
+    @Host
+    @NameInMap("bucket")
+    private String bucket;
+
 
     private DeleteLiveChannelRequest(Builder builder) {
         super(builder);
-        this.bucket = builder.bucket;
         this.channel = builder.channel;
+        this.bucket = builder.bucket;
     }
 
     public static Builder builder() {
@@ -35,31 +35,22 @@ public class DeleteLiveChannelRequest extends Request {
     }
 
     /**
-     * @return bucket
-     */
-    public String bucket() {
-        return this.bucket;
-    }
-
-    /**
      * @return channel
      */
-    public String channel() {
+    public String getChannel() {
         return this.channel;
     }
 
-    public static final class Builder extends Request.Builder<DeleteLiveChannelRequest.Builder> {
-        private String bucket; 
-        private String channel; 
+    /**
+     * @return bucket
+     */
+    public String getBucket() {
+        return this.bucket;
+    }
 
-        /**
-         * <p>bucket.</p>
-         */
-        public Builder bucket(String bucket) {
-            this.putHostParameter("bucket", bucket);
-            this.bucket = bucket;
-            return this;
-        }
+    public static final class Builder extends Request.Builder<Builder> {
+        private String channel; 
+        private String bucket; 
 
         /**
          * <p>channel.</p>
@@ -67,6 +58,15 @@ public class DeleteLiveChannelRequest extends Request {
         public Builder channel(String channel) {
             this.putPathParameter("channel", channel);
             this.channel = channel;
+            return this;
+        }
+
+        /**
+         * <p>bucket.</p>
+         */
+        public Builder bucket(String bucket) {
+            this.putHostParameter("bucket", bucket);
+            this.bucket = bucket;
             return this;
         }
 

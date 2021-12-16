@@ -11,33 +11,41 @@ import darabonba.core.TeaModel;
  * <p>PutObjectRequest</p>
  */
 public class PutObjectRequest extends Request {
-    @Host
-    @NameInMap("bucket")
-    private String bucket;
-
     @Path
     @NameInMap("key")
     private String key;
+
+    @Body
+    @NameInMap("body")
+    private java.io.InputStream body;
+
+    @Host
+    @NameInMap("bucket")
+    private String bucket;
 
     @Header
     @NameInMap("x-oss-forbid-overwrite")
     private Boolean forbidOverwrite;
 
     @Header
-    @NameInMap("x-oss-server-side-encryption")
-    private String sse;
+    @NameInMap("x-oss-meta-*")
+    private java.util.Map < String, String > metaData;
+
+    @Header
+    @NameInMap("x-oss-object-acl")
+    private ObjectACL acl;
 
     @Header
     @NameInMap("x-oss-server-side-data-encryption")
     private String sseDataEncryption;
 
     @Header
-    @NameInMap("x-oss-server-side-encryption-key-id")
-    private String sseKeyId;
+    @NameInMap("x-oss-server-side-encryption")
+    private String serverSideEncryption;
 
     @Header
-    @NameInMap("x-oss-object-acl")
-    private ObjectACL acl;
+    @NameInMap("x-oss-server-side-encryption-key-id")
+    private String sseKeyId;
 
     @Header
     @NameInMap("x-oss-storage-class")
@@ -47,28 +55,20 @@ public class PutObjectRequest extends Request {
     @NameInMap("x-oss-tagging")
     private String tagging;
 
-    @Header
-    @NameInMap("x-oss-meta-*")
-    private java.util.Map < String, String > userMetadata;
-
-    @Body
-    @NameInMap("body")
-    private java.io.InputStream body;
-
 
     private PutObjectRequest(Builder builder) {
         super(builder);
-        this.bucket = builder.bucket;
         this.key = builder.key;
+        this.body = builder.body;
+        this.bucket = builder.bucket;
         this.forbidOverwrite = builder.forbidOverwrite;
-        this.sse = builder.sse;
-        this.sseDataEncryption = builder.sseDataEncryption;
-        this.sseKeyId = builder.sseKeyId;
+        this.metaData = builder.metaData;
         this.acl = builder.acl;
+        this.sseDataEncryption = builder.sseDataEncryption;
+        this.serverSideEncryption = builder.serverSideEncryption;
+        this.sseKeyId = builder.sseKeyId;
         this.storageClass = builder.storageClass;
         this.tagging = builder.tagging;
-        this.userMetadata = builder.userMetadata;
-        this.body = builder.body;
     }
 
     public static Builder builder() {
@@ -80,103 +80,94 @@ public class PutObjectRequest extends Request {
     }
 
     /**
-     * @return bucket
+     * @return key
      */
-    public String bucket() {
-        return this.bucket;
+    public String getKey() {
+        return this.key;
     }
 
     /**
-     * @return key
+     * @return body
      */
-    public String key() {
-        return this.key;
+    public java.io.InputStream getBody() {
+        return this.body;
+    }
+
+    /**
+     * @return bucket
+     */
+    public String getBucket() {
+        return this.bucket;
     }
 
     /**
      * @return forbidOverwrite
      */
-    public Boolean forbidOverwrite() {
+    public Boolean getForbidOverwrite() {
         return this.forbidOverwrite;
     }
 
     /**
-     * @return sse
+     * @return metaData
      */
-    public String sse() {
-        return this.sse;
-    }
-
-    /**
-     * @return sseDataEncryption
-     */
-    public String sseDataEncryption() {
-        return this.sseDataEncryption;
-    }
-
-    /**
-     * @return sseKeyId
-     */
-    public String sseKeyId() {
-        return this.sseKeyId;
+    public java.util.Map < String, String > getMetaData() {
+        return this.metaData;
     }
 
     /**
      * @return acl
      */
-    public ObjectACL acl() {
+    public ObjectACL getAcl() {
         return this.acl;
+    }
+
+    /**
+     * @return sseDataEncryption
+     */
+    public String getSseDataEncryption() {
+        return this.sseDataEncryption;
+    }
+
+    /**
+     * @return serverSideEncryption
+     */
+    public String getServerSideEncryption() {
+        return this.serverSideEncryption;
+    }
+
+    /**
+     * @return sseKeyId
+     */
+    public String getSseKeyId() {
+        return this.sseKeyId;
     }
 
     /**
      * @return storageClass
      */
-    public StorageClass storageClass() {
+    public StorageClass getStorageClass() {
         return this.storageClass;
     }
 
     /**
      * @return tagging
      */
-    public String tagging() {
+    public String getTagging() {
         return this.tagging;
     }
 
-    /**
-     * @return userMetadata
-     */
-    public java.util.Map < String, String > userMetadata() {
-        return this.userMetadata;
-    }
-
-    /**
-     * @return body
-     */
-    public java.io.InputStream body() {
-        return this.body;
-    }
-
-    public static final class Builder extends Request.Builder<PutObjectRequest.Builder> {
-        private String bucket; 
+    public static final class Builder extends Request.Builder<Builder> {
         private String key; 
+        private java.io.InputStream body; 
+        private String bucket; 
         private Boolean forbidOverwrite; 
-        private String sse; 
-        private String sseDataEncryption; 
-        private String sseKeyId; 
+        private java.util.Map < String, String > metaData; 
         private ObjectACL acl; 
+        private String sseDataEncryption; 
+        private String serverSideEncryption; 
+        private String sseKeyId; 
         private StorageClass storageClass; 
         private String tagging; 
-        private java.util.Map < String, String > userMetadata; 
-        private java.io.InputStream body; 
-
-        /**
-         * <p>bucket.</p>
-         */
-        public Builder bucket(String bucket) {
-            this.putHostParameter("bucket", bucket);
-            this.bucket = bucket;
-            return this;
-        }
 
         /**
          * <p>key.</p>
@@ -184,6 +175,24 @@ public class PutObjectRequest extends Request {
         public Builder key(String key) {
             this.putPathParameter("key", key);
             this.key = key;
+            return this;
+        }
+
+        /**
+         * <p>body.</p>
+         */
+        public Builder body(java.io.InputStream body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
+            return this;
+        }
+
+        /**
+         * <p>bucket.</p>
+         */
+        public Builder bucket(String bucket) {
+            this.putHostParameter("bucket", bucket);
+            this.bucket = bucket;
             return this;
         }
 
@@ -197,11 +206,20 @@ public class PutObjectRequest extends Request {
         }
 
         /**
-         * <p>x-oss-server-side-encryption.</p>
+         * <p>x-oss-meta-*.</p>
          */
-        public Builder sse(String sse) {
-            this.putHeaderParameter("x-oss-server-side-encryption", sse);
-            this.sse = sse;
+        public Builder metaData(java.util.Map < String, String > metaData) {
+            this.putHeaderParameter("x-oss-meta-*", metaData);
+            this.metaData = metaData;
+            return this;
+        }
+
+        /**
+         * <p>x-oss-object-acl.</p>
+         */
+        public Builder acl(ObjectACL acl) {
+            this.putHeaderParameter("x-oss-object-acl", acl);
+            this.acl = acl;
             return this;
         }
 
@@ -215,20 +233,20 @@ public class PutObjectRequest extends Request {
         }
 
         /**
+         * <p>x-oss-server-side-encryption.</p>
+         */
+        public Builder serverSideEncryption(String serverSideEncryption) {
+            this.putHeaderParameter("x-oss-server-side-encryption", serverSideEncryption);
+            this.serverSideEncryption = serverSideEncryption;
+            return this;
+        }
+
+        /**
          * <p>x-oss-server-side-encryption-key-id.</p>
          */
         public Builder sseKeyId(String sseKeyId) {
             this.putHeaderParameter("x-oss-server-side-encryption-key-id", sseKeyId);
             this.sseKeyId = sseKeyId;
-            return this;
-        }
-
-        /**
-         * <p>x-oss-object-acl.</p>
-         */
-        public Builder acl(ObjectACL acl) {
-            this.putHeaderParameter("x-oss-object-acl", acl);
-            this.acl = acl;
             return this;
         }
 
@@ -247,24 +265,6 @@ public class PutObjectRequest extends Request {
         public Builder tagging(String tagging) {
             this.putHeaderParameter("x-oss-tagging", tagging);
             this.tagging = tagging;
-            return this;
-        }
-
-        /**
-         * <p>x-oss-meta-*.</p>
-         */
-        public Builder userMetadata(java.util.Map < String, String > userMetadata) {
-            this.putHeaderParameter("x-oss-meta-*", userMetadata);
-            this.userMetadata = userMetadata;
-            return this;
-        }
-
-        /**
-         * <p>body.</p>
-         */
-        public Builder body(java.io.InputStream body) {
-            this.putBodyParameter("body", body);
-            this.body = body;
             return this;
         }
 

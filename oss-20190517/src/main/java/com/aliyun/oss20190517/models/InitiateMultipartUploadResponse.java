@@ -41,14 +41,14 @@ public class InitiateMultipartUploadResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > headers() {
+    public java.util.Map < String, String > getHeaders() {
         return this.headers;
     }
 
     /**
      * @return body
      */
-    public InitiateMultipartUploadResponseBody body() {
+    public InitiateMultipartUploadResponseBody getBody() {
         return this.body;
     }
 

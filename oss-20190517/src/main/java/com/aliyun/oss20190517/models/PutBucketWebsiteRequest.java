@@ -11,19 +11,19 @@ import darabonba.core.TeaModel;
  * <p>PutBucketWebsiteRequest</p>
  */
 public class PutBucketWebsiteRequest extends Request {
+    @Body
+    @NameInMap("WebsiteConfiguration")
+    private WebsiteConfiguration websiteConfiguration;
+
     @Host
     @NameInMap("bucket")
     private String bucket;
 
-    @Body
-    @NameInMap("websiteConfiguration")
-    private WebsiteConfiguration websiteConfiguration;
-
 
     private PutBucketWebsiteRequest(Builder builder) {
         super(builder);
-        this.bucket = builder.bucket;
         this.websiteConfiguration = builder.websiteConfiguration;
+        this.bucket = builder.bucket;
     }
 
     public static Builder builder() {
@@ -35,22 +35,31 @@ public class PutBucketWebsiteRequest extends Request {
     }
 
     /**
-     * @return bucket
-     */
-    public String bucket() {
-        return this.bucket;
-    }
-
-    /**
      * @return websiteConfiguration
      */
-    public WebsiteConfiguration websiteConfiguration() {
+    public WebsiteConfiguration getWebsiteConfiguration() {
         return this.websiteConfiguration;
     }
 
-    public static final class Builder extends Request.Builder<PutBucketWebsiteRequest.Builder> {
-        private String bucket; 
+    /**
+     * @return bucket
+     */
+    public String getBucket() {
+        return this.bucket;
+    }
+
+    public static final class Builder extends Request.Builder<Builder> {
         private WebsiteConfiguration websiteConfiguration; 
+        private String bucket; 
+
+        /**
+         * <p>WebsiteConfiguration.</p>
+         */
+        public Builder websiteConfiguration(WebsiteConfiguration websiteConfiguration) {
+            this.putBodyParameter("WebsiteConfiguration", websiteConfiguration);
+            this.websiteConfiguration = websiteConfiguration;
+            return this;
+        }
 
         /**
          * <p>bucket.</p>
@@ -58,15 +67,6 @@ public class PutBucketWebsiteRequest extends Request {
         public Builder bucket(String bucket) {
             this.putHostParameter("bucket", bucket);
             this.bucket = bucket;
-            return this;
-        }
-
-        /**
-         * <p>websiteConfiguration.</p>
-         */
-        public Builder websiteConfiguration(WebsiteConfiguration websiteConfiguration) {
-            this.putBodyParameter("websiteConfiguration", websiteConfiguration);
-            this.websiteConfiguration = websiteConfiguration;
             return this;
         }
 

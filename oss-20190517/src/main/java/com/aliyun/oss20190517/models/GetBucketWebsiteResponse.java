@@ -41,14 +41,14 @@ public class GetBucketWebsiteResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > headers() {
+    public java.util.Map < String, String > getHeaders() {
         return this.headers;
     }
 
     /**
      * @return body
      */
-    public GetBucketWebsiteResponseBody body() {
+    public GetBucketWebsiteResponseBody getBody() {
         return this.body;
     }
 

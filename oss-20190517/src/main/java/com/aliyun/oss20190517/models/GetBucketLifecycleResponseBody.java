@@ -31,7 +31,7 @@ public class GetBucketLifecycleResponseBody extends TeaModel {
     /**
      * @return rule
      */
-    public LifecycleRule rule() {
+    public LifecycleRule getRule() {
         return this.rule;
     }
 

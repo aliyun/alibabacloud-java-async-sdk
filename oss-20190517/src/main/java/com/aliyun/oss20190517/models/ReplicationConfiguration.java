@@ -30,7 +30,7 @@ public class ReplicationConfiguration extends TeaModel {
     /**
      * @return rule
      */
-    public ReplicationRule rule() {
+    public ReplicationRule getRule() {
         return this.rule;
     }
 

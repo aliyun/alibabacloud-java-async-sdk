@@ -1,7 +1,9 @@
+// This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.oss20190517;
 
 import com.aliyun.oss20190517.models.*;
-import darabonba.core.internal.async.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -21,13 +23,15 @@ public interface AsyncClient {
 
     CompletableFuture<AppendObjectResponse> appendObject(AppendObjectRequest request);
 
-    CompletableFuture<AppendObjectResponse> appendObjectWithRequestBody(AppendObjectRequest request, AsyncRequestBody requestBody);
+    CompletableFuture<AppendObjectResponse> appendObjectWithRequestBody(AppendObjectRequest request, RequestBody requestBody);
 
     CompletableFuture<CompleteBucketWormResponse> completeBucketWorm(CompleteBucketWormRequest request);
 
     CompletableFuture<CompleteMultipartUploadResponse> completeMultipartUpload(CompleteMultipartUploadRequest request);
 
     CompletableFuture<CopyObjectResponse> copyObject(CopyObjectRequest request);
+
+    CompletableFuture<CopyObjectResponse> copyObjectWithRequestBody(CopyObjectRequest request, RequestBody requestBody);
 
     CompletableFuture<DeleteBucketResponse> deleteBucket(DeleteBucketRequest request);
 
@@ -54,6 +58,8 @@ public interface AsyncClient {
     CompletableFuture<DeleteMultipleObjectsResponse> deleteMultipleObjects(DeleteMultipleObjectsRequest request);
 
     CompletableFuture<DeleteObjectResponse> deleteObject(DeleteObjectRequest request);
+
+    CompletableFuture<DeleteObjectResponse> deleteObjectWithRequestBody(DeleteObjectRequest request, RequestBody requestBody);
 
     CompletableFuture<DeleteObjectTaggingResponse> deleteObjectTagging(DeleteObjectTaggingRequest request);
 
@@ -111,6 +117,8 @@ public interface AsyncClient {
 
     CompletableFuture<GetObjectMetaResponse> getObjectMeta(GetObjectMetaRequest request);
 
+    CompletableFuture<GetObjectMetaResponse> getObjectMetaWithRequestBody(GetObjectMetaRequest request, RequestBody requestBody);
+
     CompletableFuture<GetObjectTaggingResponse> getObjectTagging(GetObjectTaggingRequest request);
 
     CompletableFuture<GetServiceResponse> getService(GetServiceRequest request);
@@ -133,11 +141,11 @@ public interface AsyncClient {
 
     CompletableFuture<ListMultipartUploadsResponse> listMultipartUploads(ListMultipartUploadsRequest request);
 
+    CompletableFuture<ListObjectVersionsResponse> listObjectVersions(ListObjectVersionsRequest request);
+
     CompletableFuture<ListObjectsResponse> listObjects(ListObjectsRequest request);
 
     CompletableFuture<ListObjectsV2Response> listObjectsV2(ListObjectsV2Request request);
-
-    CompletableFuture<ListObjectVersionsResponse> listObjectVersions(ListObjectVersionsRequest request);
 
     CompletableFuture<ListPartsResponse> listParts(ListPartsRequest request);
 
@@ -183,7 +191,7 @@ public interface AsyncClient {
 
     CompletableFuture<PutObjectResponse> putObject(PutObjectRequest request);
 
-    CompletableFuture<PutObjectResponse> putObjectWithRequestBody(PutObjectRequest request, AsyncRequestBody requestBody);
+    CompletableFuture<PutObjectResponse> putObjectWithRequestBody(PutObjectRequest request, RequestBody requestBody);
 
     CompletableFuture<PutObjectAclResponse> putObjectAcl(PutObjectAclRequest request);
 
@@ -196,6 +204,8 @@ public interface AsyncClient {
     CompletableFuture<SelectObjectResponse> selectObject(SelectObjectRequest request);
 
     CompletableFuture<UploadPartResponse> uploadPart(UploadPartRequest request);
+
+    CompletableFuture<UploadPartResponse> uploadPartWithRequestBody(UploadPartRequest request, RequestBody requestBody);
 
     CompletableFuture<UploadPartCopyResponse> uploadPartCopy(UploadPartCopyRequest request);
 

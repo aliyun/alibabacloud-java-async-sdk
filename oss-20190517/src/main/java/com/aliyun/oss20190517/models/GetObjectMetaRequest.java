@@ -11,19 +11,24 @@ import darabonba.core.TeaModel;
  * <p>GetObjectMetaRequest</p>
  */
 public class GetObjectMetaRequest extends Request {
-    @Host
-    @NameInMap("bucket")
-    private String bucket;
-
     @Path
     @NameInMap("key")
     private String key;
 
+    @Host
+    @NameInMap("bucket")
+    private String bucket;
+
+    @Query
+    @NameInMap("versionId")
+    private String versionId;
+
 
     private GetObjectMetaRequest(Builder builder) {
         super(builder);
-        this.bucket = builder.bucket;
         this.key = builder.key;
+        this.bucket = builder.bucket;
+        this.versionId = builder.versionId;
     }
 
     public static Builder builder() {
@@ -35,22 +40,39 @@ public class GetObjectMetaRequest extends Request {
     }
 
     /**
+     * @return key
+     */
+    public String getKey() {
+        return this.key;
+    }
+
+    /**
      * @return bucket
      */
-    public String bucket() {
+    public String getBucket() {
         return this.bucket;
     }
 
     /**
-     * @return key
+     * @return versionId
      */
-    public String key() {
-        return this.key;
+    public String getVersionId() {
+        return this.versionId;
     }
 
-    public static final class Builder extends Request.Builder<GetObjectMetaRequest.Builder> {
-        private String bucket; 
+    public static final class Builder extends Request.Builder<Builder> {
         private String key; 
+        private String bucket; 
+        private String versionId; 
+
+        /**
+         * <p>key.</p>
+         */
+        public Builder key(String key) {
+            this.putPathParameter("key", key);
+            this.key = key;
+            return this;
+        }
 
         /**
          * <p>bucket.</p>
@@ -62,11 +84,11 @@ public class GetObjectMetaRequest extends Request {
         }
 
         /**
-         * <p>key.</p>
+         * <p>versionId.</p>
          */
-        public Builder key(String key) {
-            this.putPathParameter("key", key);
-            this.key = key;
+        public Builder versionId(String versionId) {
+            this.putQueryParameter("versionId", versionId);
+            this.versionId = versionId;
             return this;
         }
 

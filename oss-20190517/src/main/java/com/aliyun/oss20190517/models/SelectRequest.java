@@ -31,11 +31,11 @@ public class SelectRequest extends Request {
     /**
      * @return expression
      */
-    public String expression() {
+    public String getExpression() {
         return this.expression;
     }
 
-    public static final class Builder extends Request.Builder<SelectRequest.Builder> {
+    public static final class Builder extends Request.Builder<Builder> {
         private String expression; 
 
         /**

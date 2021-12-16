@@ -11,6 +11,10 @@ import darabonba.core.TeaModel;
  * <p>PutBucketInventoryRequest</p>
  */
 public class PutBucketInventoryRequest extends Request {
+    @Body
+    @NameInMap("InventoryConfiguration")
+    private InventoryConfiguration inventoryConfiguration;
+
     @Host
     @NameInMap("bucket")
     private String bucket;
@@ -19,16 +23,12 @@ public class PutBucketInventoryRequest extends Request {
     @NameInMap("inventoryId")
     private String inventoryId;
 
-    @Body
-    @NameInMap("inventoryConfiguration")
-    private InventoryConfiguration inventoryConfiguration;
-
 
     private PutBucketInventoryRequest(Builder builder) {
         super(builder);
+        this.inventoryConfiguration = builder.inventoryConfiguration;
         this.bucket = builder.bucket;
         this.inventoryId = builder.inventoryId;
-        this.inventoryConfiguration = builder.inventoryConfiguration;
     }
 
     public static Builder builder() {
@@ -40,30 +40,39 @@ public class PutBucketInventoryRequest extends Request {
     }
 
     /**
+     * @return inventoryConfiguration
+     */
+    public InventoryConfiguration getInventoryConfiguration() {
+        return this.inventoryConfiguration;
+    }
+
+    /**
      * @return bucket
      */
-    public String bucket() {
+    public String getBucket() {
         return this.bucket;
     }
 
     /**
      * @return inventoryId
      */
-    public String inventoryId() {
+    public String getInventoryId() {
         return this.inventoryId;
     }
 
-    /**
-     * @return inventoryConfiguration
-     */
-    public InventoryConfiguration inventoryConfiguration() {
-        return this.inventoryConfiguration;
-    }
-
-    public static final class Builder extends Request.Builder<PutBucketInventoryRequest.Builder> {
+    public static final class Builder extends Request.Builder<Builder> {
+        private InventoryConfiguration inventoryConfiguration; 
         private String bucket; 
         private String inventoryId; 
-        private InventoryConfiguration inventoryConfiguration; 
+
+        /**
+         * <p>InventoryConfiguration.</p>
+         */
+        public Builder inventoryConfiguration(InventoryConfiguration inventoryConfiguration) {
+            this.putBodyParameter("InventoryConfiguration", inventoryConfiguration);
+            this.inventoryConfiguration = inventoryConfiguration;
+            return this;
+        }
 
         /**
          * <p>bucket.</p>
@@ -80,15 +89,6 @@ public class PutBucketInventoryRequest extends Request {
         public Builder inventoryId(String inventoryId) {
             this.putQueryParameter("inventoryId", inventoryId);
             this.inventoryId = inventoryId;
-            return this;
-        }
-
-        /**
-         * <p>inventoryConfiguration.</p>
-         */
-        public Builder inventoryConfiguration(InventoryConfiguration inventoryConfiguration) {
-            this.putBodyParameter("inventoryConfiguration", inventoryConfiguration);
-            this.inventoryConfiguration = inventoryConfiguration;
             return this;
         }
 

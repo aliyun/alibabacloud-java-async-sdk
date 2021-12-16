@@ -14,21 +14,21 @@ public class Part extends TeaModel {
     @NameInMap("ETag")
     private String ETag;
 
+    @NameInMap("LastModified")
+    private String lastModified;
+
     @NameInMap("PartNumber")
     private Long partNumber;
 
     @NameInMap("Size")
     private Long size;
 
-    @NameInMap("LastModified")
-    private String lastModified;
-
 
     private Part(Builder builder) {
         this.ETag = builder.ETag;
+        this.lastModified = builder.lastModified;
         this.partNumber = builder.partNumber;
         this.size = builder.size;
-        this.lastModified = builder.lastModified;
     }
 
     public static Builder builder() {
@@ -42,42 +42,50 @@ public class Part extends TeaModel {
     /**
      * @return ETag
      */
-    public String ETag() {
+    public String getETag() {
         return this.ETag;
+    }
+
+    /**
+     * @return lastModified
+     */
+    public String getLastModified() {
+        return this.lastModified;
     }
 
     /**
      * @return partNumber
      */
-    public Long partNumber() {
+    public Long getPartNumber() {
         return this.partNumber;
     }
 
     /**
      * @return size
      */
-    public Long size() {
+    public Long getSize() {
         return this.size;
-    }
-
-    /**
-     * @return lastModified
-     */
-    public String lastModified() {
-        return this.lastModified;
     }
 
     public static final class Builder {
         private String ETag; 
+        private String lastModified; 
         private Long partNumber; 
         private Long size; 
-        private String lastModified; 
 
         /**
          * <p>description</p>
          */
         public Builder ETag(String ETag) {
             this.ETag = ETag;
+            return this;
+        }
+
+        /**
+         * <p>description</p>
+         */
+        public Builder lastModified(String lastModified) {
+            this.lastModified = lastModified;
             return this;
         }
 
@@ -94,14 +102,6 @@ public class Part extends TeaModel {
          */
         public Builder size(Long size) {
             this.size = size;
-            return this;
-        }
-
-        /**
-         * <p>description</p>
-         */
-        public Builder lastModified(String lastModified) {
-            this.lastModified = lastModified;
             return this;
         }
 

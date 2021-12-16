@@ -11,36 +11,48 @@ import darabonba.core.TeaModel;
  * <p>ListPartsResponseBody</p>
  */
 public class ListPartsResponseBody extends TeaModel {
+    @ParentIgnore("ListPartsResult")
     @NameInMap("Bucket")
     private String bucket;
 
-    @NameInMap("Key")
-    private String key;
-
-    @NameInMap("UploadId")
-    private String uploadId;
-
-    @NameInMap("NextPartNumberMarker")
-    private Long nextPartNumberMarker;
-
-    @NameInMap("MaxParts")
-    private Long maxParts;
-
+    @ParentIgnore("ListPartsResult")
     @NameInMap("IsTruncated")
     private Boolean isTruncated;
 
+    @ParentIgnore("ListPartsResult")
+    @NameInMap("Key")
+    private String key;
+
+    @ParentIgnore("ListPartsResult")
+    @NameInMap("MaxParts")
+    private Long maxParts;
+
+    @ParentIgnore("ListPartsResult")
+    @NameInMap("NextPartNumberMarker")
+    private Long nextPartNumberMarker;
+
+    @ParentIgnore("ListPartsResult")
     @NameInMap("Part")
     private java.util.List < Part > part;
+
+    @ParentIgnore("ListPartsResult")
+    @NameInMap("PartNumberMarker")
+    private Long partNumberMarker;
+
+    @ParentIgnore("ListPartsResult")
+    @NameInMap("UploadId")
+    private String uploadId;
 
 
     private ListPartsResponseBody(Builder builder) {
         this.bucket = builder.bucket;
-        this.key = builder.key;
-        this.uploadId = builder.uploadId;
-        this.nextPartNumberMarker = builder.nextPartNumberMarker;
-        this.maxParts = builder.maxParts;
         this.isTruncated = builder.isTruncated;
+        this.key = builder.key;
+        this.maxParts = builder.maxParts;
+        this.nextPartNumberMarker = builder.nextPartNumberMarker;
         this.part = builder.part;
+        this.partNumberMarker = builder.partNumberMarker;
+        this.uploadId = builder.uploadId;
     }
 
     public static Builder builder() {
@@ -54,98 +66,74 @@ public class ListPartsResponseBody extends TeaModel {
     /**
      * @return bucket
      */
-    public String bucket() {
+    public String getBucket() {
         return this.bucket;
-    }
-
-    /**
-     * @return key
-     */
-    public String key() {
-        return this.key;
-    }
-
-    /**
-     * @return uploadId
-     */
-    public String uploadId() {
-        return this.uploadId;
-    }
-
-    /**
-     * @return nextPartNumberMarker
-     */
-    public Long nextPartNumberMarker() {
-        return this.nextPartNumberMarker;
-    }
-
-    /**
-     * @return maxParts
-     */
-    public Long maxParts() {
-        return this.maxParts;
     }
 
     /**
      * @return isTruncated
      */
-    public Boolean isTruncated() {
+    public Boolean getIsTruncated() {
         return this.isTruncated;
+    }
+
+    /**
+     * @return key
+     */
+    public String getKey() {
+        return this.key;
+    }
+
+    /**
+     * @return maxParts
+     */
+    public Long getMaxParts() {
+        return this.maxParts;
+    }
+
+    /**
+     * @return nextPartNumberMarker
+     */
+    public Long getNextPartNumberMarker() {
+        return this.nextPartNumberMarker;
     }
 
     /**
      * @return part
      */
-    public java.util.List < Part > part() {
+    public java.util.List < Part > getPart() {
         return this.part;
+    }
+
+    /**
+     * @return partNumberMarker
+     */
+    public Long getPartNumberMarker() {
+        return this.partNumberMarker;
+    }
+
+    /**
+     * @return uploadId
+     */
+    public String getUploadId() {
+        return this.uploadId;
     }
 
     public static final class Builder {
         private String bucket; 
-        private String key; 
-        private String uploadId; 
-        private Long nextPartNumberMarker; 
-        private Long maxParts; 
         private Boolean isTruncated; 
+        private String key; 
+        private Long maxParts; 
+        private Long nextPartNumberMarker; 
         private java.util.List < Part > part; 
+        private Long partNumberMarker; 
+        private String uploadId; 
 
         /**
          * <p>Bucket.</p>
          */
         public Builder bucket(String bucket) {
             this.bucket = bucket;
-            return this;
-        }
-
-        /**
-         * <p>Key.</p>
-         */
-        public Builder key(String key) {
-            this.key = key;
-            return this;
-        }
-
-        /**
-         * <p>UploadId.</p>
-         */
-        public Builder uploadId(String uploadId) {
-            this.uploadId = uploadId;
-            return this;
-        }
-
-        /**
-         * <p>NextPartNumberMarker.</p>
-         */
-        public Builder nextPartNumberMarker(Long nextPartNumberMarker) {
-            this.nextPartNumberMarker = nextPartNumberMarker;
-            return this;
-        }
-
-        /**
-         * <p>MaxParts.</p>
-         */
-        public Builder maxParts(Long maxParts) {
-            this.maxParts = maxParts;
             return this;
         }
 
@@ -158,10 +146,50 @@ public class ListPartsResponseBody extends TeaModel {
         }
 
         /**
+         * <p>Key.</p>
+         */
+        public Builder key(String key) {
+            this.key = key;
+            return this;
+        }
+
+        /**
+         * <p>MaxParts.</p>
+         */
+        public Builder maxParts(Long maxParts) {
+            this.maxParts = maxParts;
+            return this;
+        }
+
+        /**
+         * <p>NextPartNumberMarker.</p>
+         */
+        public Builder nextPartNumberMarker(Long nextPartNumberMarker) {
+            this.nextPartNumberMarker = nextPartNumberMarker;
+            return this;
+        }
+
+        /**
          * <p>Part.</p>
          */
         public Builder part(java.util.List < Part > part) {
             this.part = part;
+            return this;
+        }
+
+        /**
+         * <p>PartNumberMarker.</p>
+         */
+        public Builder partNumberMarker(Long partNumberMarker) {
+            this.partNumberMarker = partNumberMarker;
+            return this;
+        }
+
+        /**
+         * <p>UploadId.</p>
+         */
+        public Builder uploadId(String uploadId) {
+            this.uploadId = uploadId;
             return this;
         }
 

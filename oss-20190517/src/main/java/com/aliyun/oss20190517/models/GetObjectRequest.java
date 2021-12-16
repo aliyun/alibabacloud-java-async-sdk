@@ -11,25 +11,37 @@ import darabonba.core.TeaModel;
  * <p>GetObjectRequest</p>
  */
 public class GetObjectRequest extends Request {
-    @Host
-    @NameInMap("bucket")
-    private String bucket;
-
     @Path
     @NameInMap("key")
     private String key;
 
-    @Query
-    @NameInMap("response-content-type")
-    private String responseContentType;
+    @Header
+    @NameInMap("Accept-Encoding")
+    private String acceptEncoding;
 
-    @Query
-    @NameInMap("response-content-language")
-    private String responseContentLanguage;
+    @Header
+    @NameInMap("If-Match")
+    private String ifMatch;
 
-    @Query
-    @NameInMap("response-expires")
-    private String responseExpires;
+    @Header
+    @NameInMap("If-Modified-Since")
+    private String ifModifiedSince;
+
+    @Header
+    @NameInMap("If-None-Match")
+    private String ifNoneMatch;
+
+    @Header
+    @NameInMap("If-Unmodified-Since")
+    private String ifUnmodifiedSince;
+
+    @Header
+    @NameInMap("Range")
+    private String range;
+
+    @Host
+    @NameInMap("bucket")
+    private String bucket;
 
     @Query
     @NameInMap("response-cache-control")
@@ -43,47 +55,35 @@ public class GetObjectRequest extends Request {
     @NameInMap("response-content-encoding")
     private String responseContentEncoding;
 
-    @Header
-    @NameInMap("Range")
-    private String range;
+    @Query
+    @NameInMap("response-content-language")
+    private String responseContentLanguage;
 
-    @Header
-    @NameInMap("If-Modified-Since")
-    private String ifModifiedSince;
+    @Query
+    @NameInMap("response-content-type")
+    private String responseContentType;
 
-    @Header
-    @NameInMap("If-Unmodified-Since")
-    private String ifUnmodifiedSince;
-
-    @Header
-    @NameInMap("If-Match")
-    private String ifMatch;
-
-    @Header
-    @NameInMap("If-None-Match")
-    private String ifNoneMatch;
-
-    @Header
-    @NameInMap("Accept-Encoding")
-    private String acceptEncoding;
+    @Query
+    @NameInMap("response-expires")
+    private String responseExpires;
 
 
     private GetObjectRequest(Builder builder) {
         super(builder);
-        this.bucket = builder.bucket;
         this.key = builder.key;
-        this.responseContentType = builder.responseContentType;
-        this.responseContentLanguage = builder.responseContentLanguage;
-        this.responseExpires = builder.responseExpires;
+        this.acceptEncoding = builder.acceptEncoding;
+        this.ifMatch = builder.ifMatch;
+        this.ifModifiedSince = builder.ifModifiedSince;
+        this.ifNoneMatch = builder.ifNoneMatch;
+        this.ifUnmodifiedSince = builder.ifUnmodifiedSince;
+        this.range = builder.range;
+        this.bucket = builder.bucket;
         this.responseCacheControl = builder.responseCacheControl;
         this.responseContentDisposition = builder.responseContentDisposition;
         this.responseContentEncoding = builder.responseContentEncoding;
-        this.range = builder.range;
-        this.ifModifiedSince = builder.ifModifiedSince;
-        this.ifUnmodifiedSince = builder.ifUnmodifiedSince;
-        this.ifMatch = builder.ifMatch;
-        this.ifNoneMatch = builder.ifNoneMatch;
-        this.acceptEncoding = builder.acceptEncoding;
+        this.responseContentLanguage = builder.responseContentLanguage;
+        this.responseContentType = builder.responseContentType;
+        this.responseExpires = builder.responseExpires;
     }
 
     public static Builder builder() {
@@ -95,127 +95,118 @@ public class GetObjectRequest extends Request {
     }
 
     /**
-     * @return bucket
-     */
-    public String bucket() {
-        return this.bucket;
-    }
-
-    /**
      * @return key
      */
-    public String key() {
+    public String getKey() {
         return this.key;
     }
 
     /**
-     * @return responseContentType
+     * @return acceptEncoding
      */
-    public String responseContentType() {
-        return this.responseContentType;
+    public String getAcceptEncoding() {
+        return this.acceptEncoding;
     }
 
     /**
-     * @return responseContentLanguage
+     * @return ifMatch
      */
-    public String responseContentLanguage() {
-        return this.responseContentLanguage;
+    public String getIfMatch() {
+        return this.ifMatch;
     }
 
     /**
-     * @return responseExpires
+     * @return ifModifiedSince
      */
-    public String responseExpires() {
-        return this.responseExpires;
+    public String getIfModifiedSince() {
+        return this.ifModifiedSince;
+    }
+
+    /**
+     * @return ifNoneMatch
+     */
+    public String getIfNoneMatch() {
+        return this.ifNoneMatch;
+    }
+
+    /**
+     * @return ifUnmodifiedSince
+     */
+    public String getIfUnmodifiedSince() {
+        return this.ifUnmodifiedSince;
+    }
+
+    /**
+     * @return range
+     */
+    public String getRange() {
+        return this.range;
+    }
+
+    /**
+     * @return bucket
+     */
+    public String getBucket() {
+        return this.bucket;
     }
 
     /**
      * @return responseCacheControl
      */
-    public String responseCacheControl() {
+    public String getResponseCacheControl() {
         return this.responseCacheControl;
     }
 
     /**
      * @return responseContentDisposition
      */
-    public String responseContentDisposition() {
+    public String getResponseContentDisposition() {
         return this.responseContentDisposition;
     }
 
     /**
      * @return responseContentEncoding
      */
-    public String responseContentEncoding() {
+    public String getResponseContentEncoding() {
         return this.responseContentEncoding;
     }
 
     /**
-     * @return range
+     * @return responseContentLanguage
      */
-    public String range() {
-        return this.range;
+    public String getResponseContentLanguage() {
+        return this.responseContentLanguage;
     }
 
     /**
-     * @return ifModifiedSince
+     * @return responseContentType
      */
-    public String ifModifiedSince() {
-        return this.ifModifiedSince;
+    public String getResponseContentType() {
+        return this.responseContentType;
     }
 
     /**
-     * @return ifUnmodifiedSince
+     * @return responseExpires
      */
-    public String ifUnmodifiedSince() {
-        return this.ifUnmodifiedSince;
+    public String getResponseExpires() {
+        return this.responseExpires;
     }
 
-    /**
-     * @return ifMatch
-     */
-    public String ifMatch() {
-        return this.ifMatch;
-    }
-
-    /**
-     * @return ifNoneMatch
-     */
-    public String ifNoneMatch() {
-        return this.ifNoneMatch;
-    }
-
-    /**
-     * @return acceptEncoding
-     */
-    public String acceptEncoding() {
-        return this.acceptEncoding;
-    }
-
-    public static final class Builder extends Request.Builder<GetObjectRequest.Builder> {
-        private String bucket; 
+    public static final class Builder extends Request.Builder<Builder> {
         private String key; 
-        private String responseContentType; 
-        private String responseContentLanguage; 
-        private String responseExpires; 
+        private String acceptEncoding; 
+        private String ifMatch; 
+        private String ifModifiedSince; 
+        private String ifNoneMatch; 
+        private String ifUnmodifiedSince; 
+        private String range; 
+        private String bucket; 
         private String responseCacheControl; 
         private String responseContentDisposition; 
         private String responseContentEncoding; 
-        private String range; 
-        private String ifModifiedSince; 
-        private String ifUnmodifiedSince; 
-        private String ifMatch; 
-        private String ifNoneMatch; 
-        private String acceptEncoding; 
-
-        /**
-         * <p>bucket.</p>
-         */
-        public Builder bucket(String bucket) {
-            this.putHostParameter("bucket", bucket);
-            this.bucket = bucket;
-            return this;
-        }
+        private String responseContentLanguage; 
+        private String responseContentType; 
+        private String responseExpires; 
 
         /**
          * <p>key.</p>
@@ -227,29 +218,65 @@ public class GetObjectRequest extends Request {
         }
 
         /**
-         * <p>response-content-type.</p>
+         * <p>Accept-Encoding.</p>
          */
-        public Builder responseContentType(String responseContentType) {
-            this.putQueryParameter("response-content-type", responseContentType);
-            this.responseContentType = responseContentType;
+        public Builder acceptEncoding(String acceptEncoding) {
+            this.putHeaderParameter("Accept-Encoding", acceptEncoding);
+            this.acceptEncoding = acceptEncoding;
             return this;
         }
 
         /**
-         * <p>response-content-language.</p>
+         * <p>If-Match.</p>
          */
-        public Builder responseContentLanguage(String responseContentLanguage) {
-            this.putQueryParameter("response-content-language", responseContentLanguage);
-            this.responseContentLanguage = responseContentLanguage;
+        public Builder ifMatch(String ifMatch) {
+            this.putHeaderParameter("If-Match", ifMatch);
+            this.ifMatch = ifMatch;
             return this;
         }
 
         /**
-         * <p>response-expires.</p>
+         * <p>If-Modified-Since.</p>
          */
-        public Builder responseExpires(String responseExpires) {
-            this.putQueryParameter("response-expires", responseExpires);
-            this.responseExpires = responseExpires;
+        public Builder ifModifiedSince(String ifModifiedSince) {
+            this.putHeaderParameter("If-Modified-Since", ifModifiedSince);
+            this.ifModifiedSince = ifModifiedSince;
+            return this;
+        }
+
+        /**
+         * <p>If-None-Match.</p>
+         */
+        public Builder ifNoneMatch(String ifNoneMatch) {
+            this.putHeaderParameter("If-None-Match", ifNoneMatch);
+            this.ifNoneMatch = ifNoneMatch;
+            return this;
+        }
+
+        /**
+         * <p>If-Unmodified-Since.</p>
+         */
+        public Builder ifUnmodifiedSince(String ifUnmodifiedSince) {
+            this.putHeaderParameter("If-Unmodified-Since", ifUnmodifiedSince);
+            this.ifUnmodifiedSince = ifUnmodifiedSince;
+            return this;
+        }
+
+        /**
+         * <p>Range.</p>
+         */
+        public Builder range(String range) {
+            this.putHeaderParameter("Range", range);
+            this.range = range;
+            return this;
+        }
+
+        /**
+         * <p>bucket.</p>
+         */
+        public Builder bucket(String bucket) {
+            this.putHostParameter("bucket", bucket);
+            this.bucket = bucket;
             return this;
         }
 
@@ -281,56 +308,29 @@ public class GetObjectRequest extends Request {
         }
 
         /**
-         * <p>Range.</p>
+         * <p>response-content-language.</p>
          */
-        public Builder range(String range) {
-            this.putHeaderParameter("Range", range);
-            this.range = range;
+        public Builder responseContentLanguage(String responseContentLanguage) {
+            this.putQueryParameter("response-content-language", responseContentLanguage);
+            this.responseContentLanguage = responseContentLanguage;
             return this;
         }
 
         /**
-         * <p>If-Modified-Since.</p>
+         * <p>response-content-type.</p>
          */
-        public Builder ifModifiedSince(String ifModifiedSince) {
-            this.putHeaderParameter("If-Modified-Since", ifModifiedSince);
-            this.ifModifiedSince = ifModifiedSince;
+        public Builder responseContentType(String responseContentType) {
+            this.putQueryParameter("response-content-type", responseContentType);
+            this.responseContentType = responseContentType;
             return this;
         }
 
         /**
-         * <p>If-Unmodified-Since.</p>
+         * <p>response-expires.</p>
          */
-        public Builder ifUnmodifiedSince(String ifUnmodifiedSince) {
-            this.putHeaderParameter("If-Unmodified-Since", ifUnmodifiedSince);
-            this.ifUnmodifiedSince = ifUnmodifiedSince;
-            return this;
-        }
-
-        /**
-         * <p>If-Match.</p>
-         */
-        public Builder ifMatch(String ifMatch) {
-            this.putHeaderParameter("If-Match", ifMatch);
-            this.ifMatch = ifMatch;
-            return this;
-        }
-
-        /**
-         * <p>If-None-Match.</p>
-         */
-        public Builder ifNoneMatch(String ifNoneMatch) {
-            this.putHeaderParameter("If-None-Match", ifNoneMatch);
-            this.ifNoneMatch = ifNoneMatch;
-            return this;
-        }
-
-        /**
-         * <p>Accept-Encoding.</p>
-         */
-        public Builder acceptEncoding(String acceptEncoding) {
-            this.putHeaderParameter("Accept-Encoding", acceptEncoding);
-            this.acceptEncoding = acceptEncoding;
+        public Builder responseExpires(String responseExpires) {
+            this.putQueryParameter("response-expires", responseExpires);
+            this.responseExpires = responseExpires;
             return this;
         }
 

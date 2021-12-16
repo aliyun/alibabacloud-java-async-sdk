@@ -11,17 +11,21 @@ import darabonba.core.TeaModel;
  * <p>UploadPartRequest</p>
  */
 public class UploadPartRequest extends Request {
-    @Host
-    @NameInMap("bucket")
-    private String bucket;
-
     @Path
     @NameInMap("key")
     private String key;
 
+    @Body
+    @NameInMap("body")
+    private java.io.InputStream body;
+
+    @Host
+    @NameInMap("bucket")
+    private String bucket;
+
     @Query
     @NameInMap("partNumber")
-    private String partNumber;
+    private Long partNumber;
 
     @Query
     @NameInMap("uploadId")
@@ -30,8 +34,9 @@ public class UploadPartRequest extends Request {
 
     private UploadPartRequest(Builder builder) {
         super(builder);
-        this.bucket = builder.bucket;
         this.key = builder.key;
+        this.body = builder.body;
+        this.bucket = builder.bucket;
         this.partNumber = builder.partNumber;
         this.uploadId = builder.uploadId;
     }
@@ -45,47 +50,46 @@ public class UploadPartRequest extends Request {
     }
 
     /**
-     * @return bucket
+     * @return key
      */
-    public String bucket() {
-        return this.bucket;
+    public String getKey() {
+        return this.key;
     }
 
     /**
-     * @return key
+     * @return body
      */
-    public String key() {
-        return this.key;
+    public java.io.InputStream getBody() {
+        return this.body;
+    }
+
+    /**
+     * @return bucket
+     */
+    public String getBucket() {
+        return this.bucket;
     }
 
     /**
      * @return partNumber
      */
-    public String partNumber() {
+    public Long getPartNumber() {
         return this.partNumber;
     }
 
     /**
      * @return uploadId
      */
-    public String uploadId() {
+    public String getUploadId() {
         return this.uploadId;
     }
 
-    public static final class Builder extends Request.Builder<UploadPartRequest.Builder> {
-        private String bucket; 
+    public static final class Builder extends Request.Builder<Builder> {
         private String key; 
-        private String partNumber; 
+        private java.io.InputStream body; 
+        private String bucket; 
+        private Long partNumber; 
         private String uploadId; 
-
-        /**
-         * <p>bucket.</p>
-         */
-        public Builder bucket(String bucket) {
-            this.putHostParameter("bucket", bucket);
-            this.bucket = bucket;
-            return this;
-        }
 
         /**
          * <p>key.</p>
@@ -97,9 +101,27 @@ public class UploadPartRequest extends Request {
         }
 
         /**
+         * <p>body.</p>
+         */
+        public Builder body(java.io.InputStream body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
+            return this;
+        }
+
+        /**
+         * <p>bucket.</p>
+         */
+        public Builder bucket(String bucket) {
+            this.putHostParameter("bucket", bucket);
+            this.bucket = bucket;
+            return this;
+        }
+
+        /**
          * <p>partNumber.</p>
          */
-        public Builder partNumber(String partNumber) {
+        public Builder partNumber(Long partNumber) {
             this.putQueryParameter("partNumber", partNumber);
             this.partNumber = partNumber;
             return this;

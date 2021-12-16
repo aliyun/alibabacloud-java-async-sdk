@@ -11,19 +11,19 @@ import darabonba.core.TeaModel;
  * <p>PutBucketTagsRequest</p>
  */
 public class PutBucketTagsRequest extends Request {
-    @Host
-    @NameInMap("bucket")
-    private String bucket;
-
     @Body
     @NameInMap("Tagging")
     private Tagging tagging;
 
+    @Host
+    @NameInMap("bucket")
+    private String bucket;
+
 
     private PutBucketTagsRequest(Builder builder) {
         super(builder);
-        this.bucket = builder.bucket;
         this.tagging = builder.tagging;
+        this.bucket = builder.bucket;
     }
 
     public static Builder builder() {
@@ -35,31 +35,22 @@ public class PutBucketTagsRequest extends Request {
     }
 
     /**
-     * @return bucket
-     */
-    public String bucket() {
-        return this.bucket;
-    }
-
-    /**
      * @return tagging
      */
-    public Tagging tagging() {
+    public Tagging getTagging() {
         return this.tagging;
     }
 
-    public static final class Builder extends Request.Builder<PutBucketTagsRequest.Builder> {
-        private String bucket; 
-        private Tagging tagging; 
+    /**
+     * @return bucket
+     */
+    public String getBucket() {
+        return this.bucket;
+    }
 
-        /**
-         * <p>bucket.</p>
-         */
-        public Builder bucket(String bucket) {
-            this.putHostParameter("bucket", bucket);
-            this.bucket = bucket;
-            return this;
-        }
+    public static final class Builder extends Request.Builder<Builder> {
+        private Tagging tagging; 
+        private String bucket; 
 
         /**
          * <p>Tagging.</p>
@@ -67,6 +58,15 @@ public class PutBucketTagsRequest extends Request {
         public Builder tagging(Tagging tagging) {
             this.putBodyParameter("Tagging", tagging);
             this.tagging = tagging;
+            return this;
+        }
+
+        /**
+         * <p>bucket.</p>
+         */
+        public Builder bucket(String bucket) {
+            this.putHostParameter("bucket", bucket);
+            this.bucket = bucket;
             return this;
         }
 

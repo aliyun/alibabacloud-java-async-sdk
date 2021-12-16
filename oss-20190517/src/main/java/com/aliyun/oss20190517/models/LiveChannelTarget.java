@@ -11,20 +11,24 @@ import darabonba.core.TeaModel;
  * <p>LiveChannelTarget</p>
  */
 public class LiveChannelTarget extends TeaModel {
-    @NameInMap("Type")
-    private String type;
+    @NameInMap("FragCount")
+    private Long fragCount;
 
     @NameInMap("FragDuration")
     private Long fragDuration;
 
-    @NameInMap("FragCount")
-    private Long fragCount;
+    @NameInMap("PlaylistName")
+    private String playlistName;
+
+    @NameInMap("Type")
+    private String type;
 
 
     private LiveChannelTarget(Builder builder) {
-        this.type = builder.type;
-        this.fragDuration = builder.fragDuration;
         this.fragCount = builder.fragCount;
+        this.fragDuration = builder.fragDuration;
+        this.playlistName = builder.playlistName;
+        this.type = builder.type;
     }
 
     public static Builder builder() {
@@ -36,36 +40,44 @@ public class LiveChannelTarget extends TeaModel {
     }
 
     /**
-     * @return type
+     * @return fragCount
      */
-    public String type() {
-        return this.type;
+    public Long getFragCount() {
+        return this.fragCount;
     }
 
     /**
      * @return fragDuration
      */
-    public Long fragDuration() {
+    public Long getFragDuration() {
         return this.fragDuration;
     }
 
     /**
-     * @return fragCount
+     * @return playlistName
      */
-    public Long fragCount() {
-        return this.fragCount;
+    public String getPlaylistName() {
+        return this.playlistName;
+    }
+
+    /**
+     * @return type
+     */
+    public String getType() {
+        return this.type;
     }
 
     public static final class Builder {
-        private String type; 
-        private Long fragDuration; 
         private Long fragCount; 
+        private Long fragDuration; 
+        private String playlistName; 
+        private String type; 
 
         /**
          * <p>description</p>
          */
-        public Builder type(String type) {
-            this.type = type;
+        public Builder fragCount(Long fragCount) {
+            this.fragCount = fragCount;
             return this;
         }
 
@@ -80,8 +92,16 @@ public class LiveChannelTarget extends TeaModel {
         /**
          * <p>description</p>
          */
-        public Builder fragCount(Long fragCount) {
-            this.fragCount = fragCount;
+        public Builder playlistName(String playlistName) {
+            this.playlistName = playlistName;
+            return this;
+        }
+
+        /**
+         * <p>description</p>
+         */
+        public Builder type(String type) {
+            this.type = type;
             return this;
         }
 

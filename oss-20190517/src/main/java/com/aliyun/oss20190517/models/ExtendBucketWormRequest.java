@@ -15,20 +15,20 @@ public class ExtendBucketWormRequest extends Request {
     @NameInMap("bucket")
     private String bucket;
 
-    @Query
-    @NameInMap("wormId")
-    private String wormId;
-
     @Body
     @NameInMap("extendWormConfiguration")
     private ExtendWormConfiguration extendWormConfiguration;
+
+    @Query
+    @NameInMap("wormId")
+    private String wormId;
 
 
     private ExtendBucketWormRequest(Builder builder) {
         super(builder);
         this.bucket = builder.bucket;
-        this.wormId = builder.wormId;
         this.extendWormConfiguration = builder.extendWormConfiguration;
+        this.wormId = builder.wormId;
     }
 
     public static Builder builder() {
@@ -42,28 +42,28 @@ public class ExtendBucketWormRequest extends Request {
     /**
      * @return bucket
      */
-    public String bucket() {
+    public String getBucket() {
         return this.bucket;
-    }
-
-    /**
-     * @return wormId
-     */
-    public String wormId() {
-        return this.wormId;
     }
 
     /**
      * @return extendWormConfiguration
      */
-    public ExtendWormConfiguration extendWormConfiguration() {
+    public ExtendWormConfiguration getExtendWormConfiguration() {
         return this.extendWormConfiguration;
     }
 
-    public static final class Builder extends Request.Builder<ExtendBucketWormRequest.Builder> {
+    /**
+     * @return wormId
+     */
+    public String getWormId() {
+        return this.wormId;
+    }
+
+    public static final class Builder extends Request.Builder<Builder> {
         private String bucket; 
-        private String wormId; 
         private ExtendWormConfiguration extendWormConfiguration; 
+        private String wormId; 
 
         /**
          * <p>bucket.</p>
@@ -75,20 +75,20 @@ public class ExtendBucketWormRequest extends Request {
         }
 
         /**
-         * <p>wormId.</p>
-         */
-        public Builder wormId(String wormId) {
-            this.putQueryParameter("wormId", wormId);
-            this.wormId = wormId;
-            return this;
-        }
-
-        /**
          * <p>extendWormConfiguration.</p>
          */
         public Builder extendWormConfiguration(ExtendWormConfiguration extendWormConfiguration) {
             this.putBodyParameter("extendWormConfiguration", extendWormConfiguration);
             this.extendWormConfiguration = extendWormConfiguration;
+            return this;
+        }
+
+        /**
+         * <p>wormId.</p>
+         */
+        public Builder wormId(String wormId) {
+            this.putQueryParameter("wormId", wormId);
+            this.wormId = wormId;
             return this;
         }
 

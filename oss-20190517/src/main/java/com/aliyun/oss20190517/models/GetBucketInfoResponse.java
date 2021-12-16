@@ -41,14 +41,14 @@ public class GetBucketInfoResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > headers() {
+    public java.util.Map < String, String > getHeaders() {
         return this.headers;
     }
 
     /**
      * @return body
      */
-    public GetBucketInfoResponseBody body() {
+    public GetBucketInfoResponseBody getBody() {
         return this.body;
     }
 

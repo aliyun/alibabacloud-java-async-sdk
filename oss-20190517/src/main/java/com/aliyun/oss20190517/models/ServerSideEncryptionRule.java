@@ -30,7 +30,7 @@ public class ServerSideEncryptionRule extends TeaModel {
     /**
      * @return applyServerSideEncryptionByDefault
      */
-    public ApplyServerSideEncryptionByDefault applyServerSideEncryptionByDefault() {
+    public ApplyServerSideEncryptionByDefault getApplyServerSideEncryptionByDefault() {
         return this.applyServerSideEncryptionByDefault;
     }
 

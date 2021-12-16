@@ -12,17 +12,17 @@ import darabonba.core.TeaModel;
  */
 public class GetBucketAclResponseBody extends TeaModel {
     @ParentIgnore("AccessControlPolicy")
-    @NameInMap("Owner")
-    private Owner owner;
-
-    @ParentIgnore("AccessControlPolicy")
     @NameInMap("AccessControlList")
     private AccessControlList accessControlList;
 
+    @ParentIgnore("AccessControlPolicy")
+    @NameInMap("Owner")
+    private Owner owner;
+
 
     private GetBucketAclResponseBody(Builder builder) {
-        this.owner = builder.owner;
         this.accessControlList = builder.accessControlList;
+        this.owner = builder.owner;
     }
 
     public static Builder builder() {
@@ -34,36 +34,36 @@ public class GetBucketAclResponseBody extends TeaModel {
     }
 
     /**
-     * @return owner
-     */
-    public Owner owner() {
-        return this.owner;
-    }
-
-    /**
      * @return accessControlList
      */
-    public AccessControlList accessControlList() {
+    public AccessControlList getAccessControlList() {
         return this.accessControlList;
     }
 
-    public static final class Builder {
-        private Owner owner; 
-        private AccessControlList accessControlList; 
+    /**
+     * @return owner
+     */
+    public Owner getOwner() {
+        return this.owner;
+    }
 
-        /**
-         * <p>Owner.</p>
-         */
-        public Builder owner(Owner owner) {
-            this.owner = owner;
-            return this;
-        }
+    public static final class Builder {
+        private AccessControlList accessControlList; 
+        private Owner owner; 
 
         /**
          * <p>AccessControlList.</p>
          */
         public Builder accessControlList(AccessControlList accessControlList) {
             this.accessControlList = accessControlList;
+            return this;
+        }
+
+        /**
+         * <p>Owner.</p>
+         */
+        public Builder owner(Owner owner) {
+            this.owner = owner;
             return this;
         }
 
@@ -93,7 +93,7 @@ public class GetBucketAclResponseBody extends TeaModel {
         /**
          * @return grant
          */
-        public BucketACL grant() {
+        public BucketACL getGrant() {
             return this.grant;
         }
 

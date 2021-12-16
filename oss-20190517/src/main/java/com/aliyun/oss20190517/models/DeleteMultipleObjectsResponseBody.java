@@ -31,7 +31,7 @@ public class DeleteMultipleObjectsResponseBody extends TeaModel {
     /**
      * @return deleted
      */
-    public java.util.List < DeletedObject > deleted() {
+    public java.util.List < DeletedObject > getDeleted() {
         return this.deleted;
     }
 

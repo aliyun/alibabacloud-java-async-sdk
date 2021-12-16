@@ -11,19 +11,19 @@ import darabonba.core.TeaModel;
  * <p>PutBucketRequestPaymentRequest</p>
  */
 public class PutBucketRequestPaymentRequest extends Request {
+    @Body
+    @NameInMap("RequestPaymentConfiguration")
+    private RequestPaymentConfiguration requestPaymentConfiguration;
+
     @Host
     @NameInMap("bucket")
     private String bucket;
 
-    @Body
-    @NameInMap("requestPaymentConfiguration")
-    private RequestPaymentConfiguration requestPaymentConfiguration;
-
 
     private PutBucketRequestPaymentRequest(Builder builder) {
         super(builder);
-        this.bucket = builder.bucket;
         this.requestPaymentConfiguration = builder.requestPaymentConfiguration;
+        this.bucket = builder.bucket;
     }
 
     public static Builder builder() {
@@ -35,22 +35,31 @@ public class PutBucketRequestPaymentRequest extends Request {
     }
 
     /**
-     * @return bucket
-     */
-    public String bucket() {
-        return this.bucket;
-    }
-
-    /**
      * @return requestPaymentConfiguration
      */
-    public RequestPaymentConfiguration requestPaymentConfiguration() {
+    public RequestPaymentConfiguration getRequestPaymentConfiguration() {
         return this.requestPaymentConfiguration;
     }
 
-    public static final class Builder extends Request.Builder<PutBucketRequestPaymentRequest.Builder> {
-        private String bucket; 
+    /**
+     * @return bucket
+     */
+    public String getBucket() {
+        return this.bucket;
+    }
+
+    public static final class Builder extends Request.Builder<Builder> {
         private RequestPaymentConfiguration requestPaymentConfiguration; 
+        private String bucket; 
+
+        /**
+         * <p>RequestPaymentConfiguration.</p>
+         */
+        public Builder requestPaymentConfiguration(RequestPaymentConfiguration requestPaymentConfiguration) {
+            this.putBodyParameter("RequestPaymentConfiguration", requestPaymentConfiguration);
+            this.requestPaymentConfiguration = requestPaymentConfiguration;
+            return this;
+        }
 
         /**
          * <p>bucket.</p>
@@ -58,15 +67,6 @@ public class PutBucketRequestPaymentRequest extends Request {
         public Builder bucket(String bucket) {
             this.putHostParameter("bucket", bucket);
             this.bucket = bucket;
-            return this;
-        }
-
-        /**
-         * <p>requestPaymentConfiguration.</p>
-         */
-        public Builder requestPaymentConfiguration(RequestPaymentConfiguration requestPaymentConfiguration) {
-            this.putBodyParameter("requestPaymentConfiguration", requestPaymentConfiguration);
-            this.requestPaymentConfiguration = requestPaymentConfiguration;
             return this;
         }
 

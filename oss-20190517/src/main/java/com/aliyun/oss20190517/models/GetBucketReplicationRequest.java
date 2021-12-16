@@ -32,11 +32,11 @@ public class GetBucketReplicationRequest extends Request {
     /**
      * @return bucket
      */
-    public String bucket() {
+    public String getBucket() {
         return this.bucket;
     }
 
-    public static final class Builder extends Request.Builder<GetBucketReplicationRequest.Builder> {
+    public static final class Builder extends Request.Builder<Builder> {
         private String bucket; 
 
         /**

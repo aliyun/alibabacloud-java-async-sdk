@@ -34,14 +34,14 @@ public class LoggingEnabled extends TeaModel {
     /**
      * @return targetBucket
      */
-    public String targetBucket() {
+    public String getTargetBucket() {
         return this.targetBucket;
     }
 
     /**
      * @return targetPrefix
      */
-    public String targetPrefix() {
+    public String getTargetPrefix() {
         return this.targetPrefix;
     }
 

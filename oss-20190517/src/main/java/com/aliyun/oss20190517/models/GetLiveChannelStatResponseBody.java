@@ -12,8 +12,8 @@ import darabonba.core.TeaModel;
  */
 public class GetLiveChannelStatResponseBody extends TeaModel {
     @ParentIgnore("LiveChannelStat")
-    @NameInMap("Status")
-    private String status;
+    @NameInMap("Audio")
+    private LiveChannelAudio audio;
 
     @ParentIgnore("LiveChannelStat")
     @NameInMap("ConnectedTime")
@@ -24,20 +24,20 @@ public class GetLiveChannelStatResponseBody extends TeaModel {
     private String remoteAddr;
 
     @ParentIgnore("LiveChannelStat")
+    @NameInMap("Status")
+    private String status;
+
+    @ParentIgnore("LiveChannelStat")
     @NameInMap("Video")
     private LiveChannelVideo video;
 
-    @ParentIgnore("LiveChannelStat")
-    @NameInMap("Audio")
-    private LiveChannelAudio audio;
-
 
     private GetLiveChannelStatResponseBody(Builder builder) {
-        this.status = builder.status;
+        this.audio = builder.audio;
         this.connectedTime = builder.connectedTime;
         this.remoteAddr = builder.remoteAddr;
+        this.status = builder.status;
         this.video = builder.video;
-        this.audio = builder.audio;
     }
 
     public static Builder builder() {
@@ -49,52 +49,52 @@ public class GetLiveChannelStatResponseBody extends TeaModel {
     }
 
     /**
-     * @return status
+     * @return audio
      */
-    public String status() {
-        return this.status;
+    public LiveChannelAudio getAudio() {
+        return this.audio;
     }
 
     /**
      * @return connectedTime
      */
-    public String connectedTime() {
+    public String getConnectedTime() {
         return this.connectedTime;
     }
 
     /**
      * @return remoteAddr
      */
-    public String remoteAddr() {
+    public String getRemoteAddr() {
         return this.remoteAddr;
+    }
+
+    /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
     }
 
     /**
      * @return video
      */
-    public LiveChannelVideo video() {
+    public LiveChannelVideo getVideo() {
         return this.video;
     }
 
-    /**
-     * @return audio
-     */
-    public LiveChannelAudio audio() {
-        return this.audio;
-    }
-
     public static final class Builder {
-        private String status; 
+        private LiveChannelAudio audio; 
         private String connectedTime; 
         private String remoteAddr; 
+        private String status; 
         private LiveChannelVideo video; 
-        private LiveChannelAudio audio; 
 
         /**
-         * <p>Status.</p>
+         * <p>Audio.</p>
          */
-        public Builder status(String status) {
-            this.status = status;
+        public Builder audio(LiveChannelAudio audio) {
+            this.audio = audio;
             return this;
         }
 
@@ -115,18 +115,18 @@ public class GetLiveChannelStatResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Video.</p>
+         * <p>Status.</p>
          */
-        public Builder video(LiveChannelVideo video) {
-            this.video = video;
+        public Builder status(String status) {
+            this.status = status;
             return this;
         }
 
         /**
-         * <p>Audio.</p>
+         * <p>Video.</p>
          */
-        public Builder audio(LiveChannelAudio audio) {
-            this.audio = audio;
+        public Builder video(LiveChannelVideo video) {
+            this.video = video;
             return this;
         }
 

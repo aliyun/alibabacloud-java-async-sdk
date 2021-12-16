@@ -41,14 +41,14 @@ public class GetBucketLocationResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > headers() {
+    public java.util.Map < String, String > getHeaders() {
         return this.headers;
     }
 
     /**
      * @return body
      */
-    public GetBucketLocationResponseBody body() {
+    public GetBucketLocationResponseBody getBody() {
         return this.body;
     }
 

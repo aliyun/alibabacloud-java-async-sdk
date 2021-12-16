@@ -11,19 +11,19 @@ import darabonba.core.TeaModel;
  * <p>PutBucketVersioningRequest</p>
  */
 public class PutBucketVersioningRequest extends Request {
+    @Body
+    @NameInMap("VersioningConfiguration")
+    private VersioningConfiguration versioningConfiguration;
+
     @Host
     @NameInMap("bucket")
     private String bucket;
 
-    @Body
-    @NameInMap("versioningConfiguration")
-    private VersioningConfiguration versioningConfiguration;
-
 
     private PutBucketVersioningRequest(Builder builder) {
         super(builder);
-        this.bucket = builder.bucket;
         this.versioningConfiguration = builder.versioningConfiguration;
+        this.bucket = builder.bucket;
     }
 
     public static Builder builder() {
@@ -35,22 +35,31 @@ public class PutBucketVersioningRequest extends Request {
     }
 
     /**
-     * @return bucket
-     */
-    public String bucket() {
-        return this.bucket;
-    }
-
-    /**
      * @return versioningConfiguration
      */
-    public VersioningConfiguration versioningConfiguration() {
+    public VersioningConfiguration getVersioningConfiguration() {
         return this.versioningConfiguration;
     }
 
-    public static final class Builder extends Request.Builder<PutBucketVersioningRequest.Builder> {
-        private String bucket; 
+    /**
+     * @return bucket
+     */
+    public String getBucket() {
+        return this.bucket;
+    }
+
+    public static final class Builder extends Request.Builder<Builder> {
         private VersioningConfiguration versioningConfiguration; 
+        private String bucket; 
+
+        /**
+         * <p>VersioningConfiguration.</p>
+         */
+        public Builder versioningConfiguration(VersioningConfiguration versioningConfiguration) {
+            this.putBodyParameter("VersioningConfiguration", versioningConfiguration);
+            this.versioningConfiguration = versioningConfiguration;
+            return this;
+        }
 
         /**
          * <p>bucket.</p>
@@ -58,15 +67,6 @@ public class PutBucketVersioningRequest extends Request {
         public Builder bucket(String bucket) {
             this.putHostParameter("bucket", bucket);
             this.bucket = bucket;
-            return this;
-        }
-
-        /**
-         * <p>versioningConfiguration.</p>
-         */
-        public Builder versioningConfiguration(VersioningConfiguration versioningConfiguration) {
-            this.putBodyParameter("versioningConfiguration", versioningConfiguration);
-            this.versioningConfiguration = versioningConfiguration;
             return this;
         }
 

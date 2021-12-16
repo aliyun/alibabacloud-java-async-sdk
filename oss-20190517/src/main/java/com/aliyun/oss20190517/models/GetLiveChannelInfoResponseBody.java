@@ -41,21 +41,21 @@ public class GetLiveChannelInfoResponseBody extends TeaModel {
     /**
      * @return description
      */
-    public String description() {
+    public String getDescription() {
         return this.description;
     }
 
     /**
      * @return status
      */
-    public String status() {
+    public String getStatus() {
         return this.status;
     }
 
     /**
      * @return target
      */
-    public LiveChannelTarget target() {
+    public LiveChannelTarget getTarget() {
         return this.target;
     }
 

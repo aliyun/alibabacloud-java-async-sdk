@@ -38,21 +38,21 @@ public class ReplicationDestination extends TeaModel {
     /**
      * @return bucket
      */
-    public String bucket() {
+    public String getBucket() {
         return this.bucket;
     }
 
     /**
      * @return location
      */
-    public String location() {
+    public String getLocation() {
         return this.location;
     }
 
     /**
      * @return transferType
      */
-    public String transferType() {
+    public String getTransferType() {
         return this.transferType;
     }
 

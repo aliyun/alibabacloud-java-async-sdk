@@ -41,14 +41,14 @@ public class GetBucketCorsResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > headers() {
+    public java.util.Map < String, String > getHeaders() {
         return this.headers;
     }
 
     /**
      * @return body
      */
-    public GetBucketCorsResponseBody body() {
+    public GetBucketCorsResponseBody getBody() {
         return this.body;
     }
 

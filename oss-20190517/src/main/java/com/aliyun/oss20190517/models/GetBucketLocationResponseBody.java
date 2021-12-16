@@ -11,7 +11,6 @@ import darabonba.core.TeaModel;
  * <p>GetBucketLocationResponseBody</p>
  */
 public class GetBucketLocationResponseBody extends TeaModel {
-    @ParentIgnore("LocationConstraint")
     @NameInMap("LocationConstraint")
     private String locationConstraint;
 
@@ -31,7 +30,7 @@ public class GetBucketLocationResponseBody extends TeaModel {
     /**
      * @return locationConstraint
      */
-    public String locationConstraint() {
+    public String getLocationConstraint() {
         return this.locationConstraint;
     }
 

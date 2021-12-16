@@ -31,7 +31,7 @@ public class GetBucketTransferAccelerationResponseBody extends TeaModel {
     /**
      * @return enabled
      */
-    public Boolean enabled() {
+    public Boolean getEnabled() {
         return this.enabled;
     }
 

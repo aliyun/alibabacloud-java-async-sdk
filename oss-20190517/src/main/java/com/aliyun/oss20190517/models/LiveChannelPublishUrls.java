@@ -30,7 +30,7 @@ public class LiveChannelPublishUrls extends TeaModel {
     /**
      * @return url
      */
-    public String url() {
+    public String getUrl() {
         return this.url;
     }
 

@@ -11,18 +11,18 @@ import darabonba.core.TeaModel;
  * <p>GetObjectAclResponseBody</p>
  */
 public class GetObjectAclResponseBody extends TeaModel {
-    @ParentIgnore("AccessControlPolicy")
-    @NameInMap("Owner")
-    private Owner owner;
-
     @ParentIgnore("AccessControlPolicy,AccessControlList")
     @NameInMap("Grant")
     private ObjectACL ACL;
 
+    @ParentIgnore("AccessControlPolicy")
+    @NameInMap("Owner")
+    private Owner owner;
+
 
     private GetObjectAclResponseBody(Builder builder) {
-        this.owner = builder.owner;
         this.ACL = builder.ACL;
+        this.owner = builder.owner;
     }
 
     public static Builder builder() {
@@ -34,36 +34,36 @@ public class GetObjectAclResponseBody extends TeaModel {
     }
 
     /**
-     * @return owner
-     */
-    public Owner owner() {
-        return this.owner;
-    }
-
-    /**
      * @return ACL
      */
-    public ObjectACL ACL() {
+    public ObjectACL getACL() {
         return this.ACL;
     }
 
-    public static final class Builder {
-        private Owner owner; 
-        private ObjectACL ACL; 
+    /**
+     * @return owner
+     */
+    public Owner getOwner() {
+        return this.owner;
+    }
 
-        /**
-         * <p>Owner.</p>
-         */
-        public Builder owner(Owner owner) {
-            this.owner = owner;
-            return this;
-        }
+    public static final class Builder {
+        private ObjectACL ACL; 
+        private Owner owner; 
 
         /**
          * <p>Grant.</p>
          */
         public Builder ACL(ObjectACL ACL) {
             this.ACL = ACL;
+            return this;
+        }
+
+        /**
+         * <p>Owner.</p>
+         */
+        public Builder owner(Owner owner) {
+            this.owner = owner;
             return this;
         }
 

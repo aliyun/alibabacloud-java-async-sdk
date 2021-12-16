@@ -41,14 +41,14 @@ public class DeleteMultipleObjectsResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > headers() {
+    public java.util.Map < String, String > getHeaders() {
         return this.headers;
     }
 
     /**
      * @return body
      */
-    public DeleteMultipleObjectsResponseBody body() {
+    public DeleteMultipleObjectsResponseBody getBody() {
         return this.body;
     }
 

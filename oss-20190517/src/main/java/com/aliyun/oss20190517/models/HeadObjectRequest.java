@@ -11,39 +11,44 @@ import darabonba.core.TeaModel;
  * <p>HeadObjectRequest</p>
  */
 public class HeadObjectRequest extends Request {
-    @Host
-    @NameInMap("bucket")
-    private String bucket;
-
     @Path
     @NameInMap("key")
     private String key;
-
-    @Header
-    @NameInMap("If-Modified-Since")
-    private String ifModifiedSince;
-
-    @Header
-    @NameInMap("If-Unmodified-Since")
-    private String ifUnmodifiedSince;
 
     @Header
     @NameInMap("If-Match")
     private String ifMatch;
 
     @Header
+    @NameInMap("If-Modified-Since")
+    private String ifModifiedSince;
+
+    @Header
     @NameInMap("If-None-Match")
     private String ifNoneMatch;
+
+    @Header
+    @NameInMap("If-Unmodified-Since")
+    private String ifUnmodifiedSince;
+
+    @Host
+    @NameInMap("bucket")
+    private String bucket;
+
+    @Query
+    @NameInMap("versionId")
+    private String versionId;
 
 
     private HeadObjectRequest(Builder builder) {
         super(builder);
-        this.bucket = builder.bucket;
         this.key = builder.key;
-        this.ifModifiedSince = builder.ifModifiedSince;
-        this.ifUnmodifiedSince = builder.ifUnmodifiedSince;
         this.ifMatch = builder.ifMatch;
+        this.ifModifiedSince = builder.ifModifiedSince;
         this.ifNoneMatch = builder.ifNoneMatch;
+        this.ifUnmodifiedSince = builder.ifUnmodifiedSince;
+        this.bucket = builder.bucket;
+        this.versionId = builder.versionId;
     }
 
     public static Builder builder() {
@@ -55,63 +60,62 @@ public class HeadObjectRequest extends Request {
     }
 
     /**
-     * @return bucket
-     */
-    public String bucket() {
-        return this.bucket;
-    }
-
-    /**
      * @return key
      */
-    public String key() {
+    public String getKey() {
         return this.key;
-    }
-
-    /**
-     * @return ifModifiedSince
-     */
-    public String ifModifiedSince() {
-        return this.ifModifiedSince;
-    }
-
-    /**
-     * @return ifUnmodifiedSince
-     */
-    public String ifUnmodifiedSince() {
-        return this.ifUnmodifiedSince;
     }
 
     /**
      * @return ifMatch
      */
-    public String ifMatch() {
+    public String getIfMatch() {
         return this.ifMatch;
+    }
+
+    /**
+     * @return ifModifiedSince
+     */
+    public String getIfModifiedSince() {
+        return this.ifModifiedSince;
     }
 
     /**
      * @return ifNoneMatch
      */
-    public String ifNoneMatch() {
+    public String getIfNoneMatch() {
         return this.ifNoneMatch;
     }
 
-    public static final class Builder extends Request.Builder<HeadObjectRequest.Builder> {
-        private String bucket; 
-        private String key; 
-        private String ifModifiedSince; 
-        private String ifUnmodifiedSince; 
-        private String ifMatch; 
-        private String ifNoneMatch; 
+    /**
+     * @return ifUnmodifiedSince
+     */
+    public String getIfUnmodifiedSince() {
+        return this.ifUnmodifiedSince;
+    }
 
-        /**
-         * <p>bucket.</p>
-         */
-        public Builder bucket(String bucket) {
-            this.putHostParameter("bucket", bucket);
-            this.bucket = bucket;
-            return this;
-        }
+    /**
+     * @return bucket
+     */
+    public String getBucket() {
+        return this.bucket;
+    }
+
+    /**
+     * @return versionId
+     */
+    public String getVersionId() {
+        return this.versionId;
+    }
+
+    public static final class Builder extends Request.Builder<Builder> {
+        private String key; 
+        private String ifMatch; 
+        private String ifModifiedSince; 
+        private String ifNoneMatch; 
+        private String ifUnmodifiedSince; 
+        private String bucket; 
+        private String versionId; 
 
         /**
          * <p>key.</p>
@@ -119,24 +123,6 @@ public class HeadObjectRequest extends Request {
         public Builder key(String key) {
             this.putPathParameter("key", key);
             this.key = key;
-            return this;
-        }
-
-        /**
-         * <p>If-Modified-Since.</p>
-         */
-        public Builder ifModifiedSince(String ifModifiedSince) {
-            this.putHeaderParameter("If-Modified-Since", ifModifiedSince);
-            this.ifModifiedSince = ifModifiedSince;
-            return this;
-        }
-
-        /**
-         * <p>If-Unmodified-Since.</p>
-         */
-        public Builder ifUnmodifiedSince(String ifUnmodifiedSince) {
-            this.putHeaderParameter("If-Unmodified-Since", ifUnmodifiedSince);
-            this.ifUnmodifiedSince = ifUnmodifiedSince;
             return this;
         }
 
@@ -150,11 +136,47 @@ public class HeadObjectRequest extends Request {
         }
 
         /**
+         * <p>If-Modified-Since.</p>
+         */
+        public Builder ifModifiedSince(String ifModifiedSince) {
+            this.putHeaderParameter("If-Modified-Since", ifModifiedSince);
+            this.ifModifiedSince = ifModifiedSince;
+            return this;
+        }
+
+        /**
          * <p>If-None-Match.</p>
          */
         public Builder ifNoneMatch(String ifNoneMatch) {
             this.putHeaderParameter("If-None-Match", ifNoneMatch);
             this.ifNoneMatch = ifNoneMatch;
+            return this;
+        }
+
+        /**
+         * <p>If-Unmodified-Since.</p>
+         */
+        public Builder ifUnmodifiedSince(String ifUnmodifiedSince) {
+            this.putHeaderParameter("If-Unmodified-Since", ifUnmodifiedSince);
+            this.ifUnmodifiedSince = ifUnmodifiedSince;
+            return this;
+        }
+
+        /**
+         * <p>bucket.</p>
+         */
+        public Builder bucket(String bucket) {
+            this.putHostParameter("bucket", bucket);
+            this.bucket = bucket;
+            return this;
+        }
+
+        /**
+         * <p>versionId.</p>
+         */
+        public Builder versionId(String versionId) {
+            this.putQueryParameter("versionId", versionId);
+            this.versionId = versionId;
             return this;
         }
 

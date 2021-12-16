@@ -11,16 +11,18 @@ import darabonba.core.TeaModel;
  * <p>UploadPartCopyResponseBody</p>
  */
 public class UploadPartCopyResponseBody extends TeaModel {
-    @NameInMap("LastModified")
-    private String lastModified;
-
+    @ParentIgnore("CopyPartResult")
     @NameInMap("ETag")
     private String ETag;
 
+    @ParentIgnore("CopyPartResult")
+    @NameInMap("LastModified")
+    private String lastModified;
+
 
     private UploadPartCopyResponseBody(Builder builder) {
-        this.lastModified = builder.lastModified;
         this.ETag = builder.ETag;
+        this.lastModified = builder.lastModified;
     }
 
     public static Builder builder() {
@@ -32,36 +34,36 @@ public class UploadPartCopyResponseBody extends TeaModel {
     }
 
     /**
-     * @return lastModified
-     */
-    public String lastModified() {
-        return this.lastModified;
-    }
-
-    /**
      * @return ETag
      */
-    public String ETag() {
+    public String getETag() {
         return this.ETag;
     }
 
-    public static final class Builder {
-        private String lastModified; 
-        private String ETag; 
+    /**
+     * @return lastModified
+     */
+    public String getLastModified() {
+        return this.lastModified;
+    }
 
-        /**
-         * <p>LastModified.</p>
-         */
-        public Builder lastModified(String lastModified) {
-            this.lastModified = lastModified;
-            return this;
-        }
+    public static final class Builder {
+        private String ETag; 
+        private String lastModified; 
 
         /**
          * <p>ETag.</p>
          */
         public Builder ETag(String ETag) {
             this.ETag = ETag;
+            return this;
+        }
+
+        /**
+         * <p>LastModified.</p>
+         */
+        public Builder lastModified(String lastModified) {
+            this.lastModified = lastModified;
             return this;
         }
 

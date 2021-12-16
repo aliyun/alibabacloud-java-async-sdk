@@ -41,14 +41,14 @@ public class GetObjectTaggingResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > headers() {
+    public java.util.Map < String, String > getHeaders() {
         return this.headers;
     }
 
     /**
      * @return body
      */
-    public GetObjectTaggingResponseBody body() {
+    public GetObjectTaggingResponseBody getBody() {
         return this.body;
     }
 

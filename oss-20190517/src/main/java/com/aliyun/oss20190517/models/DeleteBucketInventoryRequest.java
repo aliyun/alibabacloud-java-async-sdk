@@ -37,18 +37,18 @@ public class DeleteBucketInventoryRequest extends Request {
     /**
      * @return bucket
      */
-    public String bucket() {
+    public String getBucket() {
         return this.bucket;
     }
 
     /**
      * @return inventoryId
      */
-    public String inventoryId() {
+    public String getInventoryId() {
         return this.inventoryId;
     }
 
-    public static final class Builder extends Request.Builder<DeleteBucketInventoryRequest.Builder> {
+    public static final class Builder extends Request.Builder<Builder> {
         private String bucket; 
         private String inventoryId; 
 

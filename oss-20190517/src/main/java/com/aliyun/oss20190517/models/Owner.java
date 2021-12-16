@@ -11,16 +11,16 @@ import darabonba.core.TeaModel;
  * <p>Owner</p>
  */
 public class Owner extends TeaModel {
-    @NameInMap("ID")
-    private String ID;
-
     @NameInMap("DisplayName")
     private String displayName;
 
+    @NameInMap("ID")
+    private String ID;
+
 
     private Owner(Builder builder) {
-        this.ID = builder.ID;
         this.displayName = builder.displayName;
+        this.ID = builder.ID;
     }
 
     public static Builder builder() {
@@ -32,36 +32,36 @@ public class Owner extends TeaModel {
     }
 
     /**
-     * @return ID
-     */
-    public String ID() {
-        return this.ID;
-    }
-
-    /**
      * @return displayName
      */
-    public String displayName() {
+    public String getDisplayName() {
         return this.displayName;
     }
 
-    public static final class Builder {
-        private String ID; 
-        private String displayName; 
+    /**
+     * @return ID
+     */
+    public String getID() {
+        return this.ID;
+    }
 
-        /**
-         * <p>The ID of the owner</p>
-         */
-        public Builder ID(String ID) {
-            this.ID = ID;
-            return this;
-        }
+    public static final class Builder {
+        private String displayName; 
+        private String ID; 
 
         /**
          * <p>The display name of the owner</p>
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the owner</p>
+         */
+        public Builder ID(String ID) {
+            this.ID = ID;
             return this;
         }
 

@@ -30,7 +30,7 @@ public class CompleteMultipartUpload extends TeaModel {
     /**
      * @return part
      */
-    public java.util.List < Part > part() {
+    public java.util.List < Part > getPart() {
         return this.part;
     }
 

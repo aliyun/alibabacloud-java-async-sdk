@@ -11,24 +11,24 @@ import darabonba.core.TeaModel;
  * <p>LiveChannelSnapshot</p>
  */
 public class LiveChannelSnapshot extends TeaModel {
-    @NameInMap("RoleName")
-    private String roleName;
-
     @NameInMap("DestBucket")
     private String destBucket;
-
-    @NameInMap("NotifyTopic")
-    private String notifyTopic;
 
     @NameInMap("Interval")
     private Long interval;
 
+    @NameInMap("NotifyTopic")
+    private String notifyTopic;
+
+    @NameInMap("RoleName")
+    private String roleName;
+
 
     private LiveChannelSnapshot(Builder builder) {
-        this.roleName = builder.roleName;
         this.destBucket = builder.destBucket;
-        this.notifyTopic = builder.notifyTopic;
         this.interval = builder.interval;
+        this.notifyTopic = builder.notifyTopic;
+        this.roleName = builder.roleName;
     }
 
     public static Builder builder() {
@@ -40,52 +40,52 @@ public class LiveChannelSnapshot extends TeaModel {
     }
 
     /**
-     * @return roleName
-     */
-    public String roleName() {
-        return this.roleName;
-    }
-
-    /**
      * @return destBucket
      */
-    public String destBucket() {
+    public String getDestBucket() {
         return this.destBucket;
-    }
-
-    /**
-     * @return notifyTopic
-     */
-    public String notifyTopic() {
-        return this.notifyTopic;
     }
 
     /**
      * @return interval
      */
-    public Long interval() {
+    public Long getInterval() {
         return this.interval;
     }
 
-    public static final class Builder {
-        private String roleName; 
-        private String destBucket; 
-        private String notifyTopic; 
-        private Long interval; 
+    /**
+     * @return notifyTopic
+     */
+    public String getNotifyTopic() {
+        return this.notifyTopic;
+    }
 
-        /**
-         * <p>description</p>
-         */
-        public Builder roleName(String roleName) {
-            this.roleName = roleName;
-            return this;
-        }
+    /**
+     * @return roleName
+     */
+    public String getRoleName() {
+        return this.roleName;
+    }
+
+    public static final class Builder {
+        private String destBucket; 
+        private Long interval; 
+        private String notifyTopic; 
+        private String roleName; 
 
         /**
          * <p>description</p>
          */
         public Builder destBucket(String destBucket) {
             this.destBucket = destBucket;
+            return this;
+        }
+
+        /**
+         * <p>description</p>
+         */
+        public Builder interval(Long interval) {
+            this.interval = interval;
             return this;
         }
 
@@ -100,8 +100,8 @@ public class LiveChannelSnapshot extends TeaModel {
         /**
          * <p>description</p>
          */
-        public Builder interval(Long interval) {
-            this.interval = interval;
+        public Builder roleName(String roleName) {
+            this.roleName = roleName;
             return this;
         }
 

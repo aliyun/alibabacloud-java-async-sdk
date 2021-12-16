@@ -31,7 +31,7 @@ public class GetObjectTaggingResponseBody extends TeaModel {
     /**
      * @return tagSet
      */
-    public TagSet tagSet() {
+    public TagSet getTagSet() {
         return this.tagSet;
     }
 
@@ -52,46 +52,4 @@ public class GetObjectTaggingResponseBody extends TeaModel {
 
     } 
 
-    public static class TagSet extends TeaModel {
-        @NameInMap("Tag")
-        private java.util.List < Tag > tag;
-
-
-        private TagSet(Builder builder) {
-            this.tag = builder.tag;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static TagSet create() {
-            return builder().build();
-        }
-
-        /**
-         * @return tag
-         */
-        public java.util.List < Tag > tag() {
-            return this.tag;
-        }
-
-        public static final class Builder {
-            private java.util.List < Tag > tag; 
-
-            /**
-             * <p>Tag.</p>
-             */
-            public Builder tag(java.util.List < Tag > tag) {
-                this.tag = tag;
-                return this;
-            }
-
-            public TagSet build() {
-                return new TagSet(this);
-            } 
-
-        } 
-
-    }
 }

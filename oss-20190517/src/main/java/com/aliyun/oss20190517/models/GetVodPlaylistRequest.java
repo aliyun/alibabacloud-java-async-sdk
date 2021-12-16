@@ -11,13 +11,13 @@ import darabonba.core.TeaModel;
  * <p>GetVodPlaylistRequest</p>
  */
 public class GetVodPlaylistRequest extends Request {
-    @Host
-    @NameInMap("bucket")
-    private String bucket;
-
     @Path
     @NameInMap("channel")
     private String channel;
+
+    @Host
+    @NameInMap("bucket")
+    private String bucket;
 
     @Query
     @NameInMap("endTime")
@@ -30,8 +30,8 @@ public class GetVodPlaylistRequest extends Request {
 
     private GetVodPlaylistRequest(Builder builder) {
         super(builder);
-        this.bucket = builder.bucket;
         this.channel = builder.channel;
+        this.bucket = builder.bucket;
         this.endTime = builder.endTime;
         this.startTime = builder.startTime;
     }
@@ -45,47 +45,38 @@ public class GetVodPlaylistRequest extends Request {
     }
 
     /**
-     * @return bucket
+     * @return channel
      */
-    public String bucket() {
-        return this.bucket;
+    public String getChannel() {
+        return this.channel;
     }
 
     /**
-     * @return channel
+     * @return bucket
      */
-    public String channel() {
-        return this.channel;
+    public String getBucket() {
+        return this.bucket;
     }
 
     /**
      * @return endTime
      */
-    public String endTime() {
+    public String getEndTime() {
         return this.endTime;
     }
 
     /**
      * @return startTime
      */
-    public String startTime() {
+    public String getStartTime() {
         return this.startTime;
     }
 
-    public static final class Builder extends Request.Builder<GetVodPlaylistRequest.Builder> {
-        private String bucket; 
+    public static final class Builder extends Request.Builder<Builder> {
         private String channel; 
+        private String bucket; 
         private String endTime; 
         private String startTime; 
-
-        /**
-         * <p>bucket.</p>
-         */
-        public Builder bucket(String bucket) {
-            this.putHostParameter("bucket", bucket);
-            this.bucket = bucket;
-            return this;
-        }
 
         /**
          * <p>channel.</p>
@@ -93,6 +84,15 @@ public class GetVodPlaylistRequest extends Request {
         public Builder channel(String channel) {
             this.putPathParameter("channel", channel);
             this.channel = channel;
+            return this;
+        }
+
+        /**
+         * <p>bucket.</p>
+         */
+        public Builder bucket(String bucket) {
+            this.putHostParameter("bucket", bucket);
+            this.bucket = bucket;
             return this;
         }
 

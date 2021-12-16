@@ -16,16 +16,12 @@ public class ListObjectsV2Request extends Request {
     private String bucket;
 
     @Query
+    @NameInMap("continuation-token")
+    private String continuationToken;
+
+    @Query
     @NameInMap("delimiter")
     private String delimiter;
-
-    @Query
-    @NameInMap("max-keys")
-    private Long maxKeys;
-
-    @Query
-    @NameInMap("prefix")
-    private String prefix;
 
     @Query
     @NameInMap("encoding-type")
@@ -36,24 +32,28 @@ public class ListObjectsV2Request extends Request {
     private Boolean fetchOwner;
 
     @Query
-    @NameInMap("start-after")
-    private String startAfter;
+    @NameInMap("max-keys")
+    private Long maxKeys;
 
     @Query
-    @NameInMap("continuation-token")
-    private String continuationToken;
+    @NameInMap("prefix")
+    private String prefix;
+
+    @Query
+    @NameInMap("start-after")
+    private String startAfter;
 
 
     private ListObjectsV2Request(Builder builder) {
         super(builder);
         this.bucket = builder.bucket;
+        this.continuationToken = builder.continuationToken;
         this.delimiter = builder.delimiter;
-        this.maxKeys = builder.maxKeys;
-        this.prefix = builder.prefix;
         this.encodingType = builder.encodingType;
         this.fetchOwner = builder.fetchOwner;
+        this.maxKeys = builder.maxKeys;
+        this.prefix = builder.prefix;
         this.startAfter = builder.startAfter;
-        this.continuationToken = builder.continuationToken;
     }
 
     public static Builder builder() {
@@ -67,68 +67,68 @@ public class ListObjectsV2Request extends Request {
     /**
      * @return bucket
      */
-    public String bucket() {
+    public String getBucket() {
         return this.bucket;
+    }
+
+    /**
+     * @return continuationToken
+     */
+    public String getContinuationToken() {
+        return this.continuationToken;
     }
 
     /**
      * @return delimiter
      */
-    public String delimiter() {
+    public String getDelimiter() {
         return this.delimiter;
-    }
-
-    /**
-     * @return maxKeys
-     */
-    public Long maxKeys() {
-        return this.maxKeys;
-    }
-
-    /**
-     * @return prefix
-     */
-    public String prefix() {
-        return this.prefix;
     }
 
     /**
      * @return encodingType
      */
-    public EncodeType encodingType() {
+    public EncodeType getEncodingType() {
         return this.encodingType;
     }
 
     /**
      * @return fetchOwner
      */
-    public Boolean fetchOwner() {
+    public Boolean getFetchOwner() {
         return this.fetchOwner;
+    }
+
+    /**
+     * @return maxKeys
+     */
+    public Long getMaxKeys() {
+        return this.maxKeys;
+    }
+
+    /**
+     * @return prefix
+     */
+    public String getPrefix() {
+        return this.prefix;
     }
 
     /**
      * @return startAfter
      */
-    public String startAfter() {
+    public String getStartAfter() {
         return this.startAfter;
     }
 
-    /**
-     * @return continuationToken
-     */
-    public String continuationToken() {
-        return this.continuationToken;
-    }
-
-    public static final class Builder extends Request.Builder<ListObjectsV2Request.Builder> {
+    public static final class Builder extends Request.Builder<Builder> {
         private String bucket; 
+        private String continuationToken; 
         private String delimiter; 
-        private Long maxKeys; 
-        private String prefix; 
         private EncodeType encodingType; 
         private Boolean fetchOwner; 
+        private Long maxKeys; 
+        private String prefix; 
         private String startAfter; 
-        private String continuationToken; 
 
         /**
          * <p>bucket.</p>
@@ -140,29 +140,20 @@ public class ListObjectsV2Request extends Request {
         }
 
         /**
+         * <p>continuation-token.</p>
+         */
+        public Builder continuationToken(String continuationToken) {
+            this.putQueryParameter("continuation-token", continuationToken);
+            this.continuationToken = continuationToken;
+            return this;
+        }
+
+        /**
          * <p>The character used to group objects by name</p>
          */
         public Builder delimiter(String delimiter) {
             this.putQueryParameter("delimiter", delimiter);
             this.delimiter = delimiter;
-            return this;
-        }
-
-        /**
-         * <p>The maximum number of objects to return</p>
-         */
-        public Builder maxKeys(Long maxKeys) {
-            this.putQueryParameter("max-keys", maxKeys);
-            this.maxKeys = maxKeys;
-            return this;
-        }
-
-        /**
-         * <p>The prefix that the returned object names must contain</p>
-         */
-        public Builder prefix(String prefix) {
-            this.putQueryParameter("prefix", prefix);
-            this.prefix = prefix;
             return this;
         }
 
@@ -185,20 +176,29 @@ public class ListObjectsV2Request extends Request {
         }
 
         /**
+         * <p>The maximum number of objects to return</p>
+         */
+        public Builder maxKeys(Long maxKeys) {
+            this.putQueryParameter("max-keys", maxKeys);
+            this.maxKeys = maxKeys;
+            return this;
+        }
+
+        /**
+         * <p>The prefix that the returned object names must contain</p>
+         */
+        public Builder prefix(String prefix) {
+            this.putQueryParameter("prefix", prefix);
+            this.prefix = prefix;
+            return this;
+        }
+
+        /**
          * <p>start-after.</p>
          */
         public Builder startAfter(String startAfter) {
             this.putQueryParameter("start-after", startAfter);
             this.startAfter = startAfter;
-            return this;
-        }
-
-        /**
-         * <p>continuation-token.</p>
-         */
-        public Builder continuationToken(String continuationToken) {
-            this.putQueryParameter("continuation-token", continuationToken);
-            this.continuationToken = continuationToken;
             return this;
         }
 

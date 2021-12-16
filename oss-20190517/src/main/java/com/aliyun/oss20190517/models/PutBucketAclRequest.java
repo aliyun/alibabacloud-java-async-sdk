@@ -37,18 +37,18 @@ public class PutBucketAclRequest extends Request {
     /**
      * @return bucket
      */
-    public String bucket() {
+    public String getBucket() {
         return this.bucket;
     }
 
     /**
      * @return acl
      */
-    public BucketACL acl() {
+    public BucketACL getAcl() {
         return this.acl;
     }
 
-    public static final class Builder extends Request.Builder<PutBucketAclRequest.Builder> {
+    public static final class Builder extends Request.Builder<Builder> {
         private String bucket; 
         private BucketACL acl; 
 

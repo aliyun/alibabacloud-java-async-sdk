@@ -12,20 +12,24 @@ import darabonba.core.TeaModel;
  */
 public class ListObjectsV2ResponseBody extends TeaModel {
     @ParentIgnore("ListBucketResult")
-    @NameInMap("Name")
-    private String name;
+    @NameInMap("CommonPrefixes")
+    private java.util.List < CommonPrefix > commonPrefixes;
 
     @ParentIgnore("ListBucketResult")
-    @NameInMap("Prefix")
-    private String prefix;
+    @NameInMap("Contents")
+    private java.util.List < ObjectSummary > contents;
 
     @ParentIgnore("ListBucketResult")
-    @NameInMap("StartAfter")
-    private String startAfter;
+    @NameInMap("ContinuationToken")
+    private String continuationToken;
 
     @ParentIgnore("ListBucketResult")
-    @NameInMap("MaxKeys")
-    private Integer maxKeys;
+    @NameInMap("Delimiter")
+    private String delimiter;
+
+    @ParentIgnore("ListBucketResult")
+    @NameInMap("EncodingType")
+    private String encodingType;
 
     @ParentIgnore("ListBucketResult")
     @NameInMap("IsTruncated")
@@ -36,38 +40,39 @@ public class ListObjectsV2ResponseBody extends TeaModel {
     private Integer keyCount;
 
     @ParentIgnore("ListBucketResult")
-    @NameInMap("EncodingType")
-    private String encodingType;
+    @NameInMap("MaxKeys")
+    private Integer maxKeys;
 
     @ParentIgnore("ListBucketResult")
-    @NameInMap("ContinuationToken")
-    private String continuationToken;
+    @NameInMap("Name")
+    private String name;
 
     @ParentIgnore("ListBucketResult")
     @NameInMap("NextContinuationToken")
     private String nextContinuationToken;
 
     @ParentIgnore("ListBucketResult")
-    @NameInMap("Contents")
-    private java.util.List < ObjectSummary > versions;
+    @NameInMap("Prefix")
+    private String prefix;
 
     @ParentIgnore("ListBucketResult")
-    @NameInMap("CommonPrefixes")
-    private java.util.List < CommonPrefix > commonPrefixes;
+    @NameInMap("StartAfter")
+    private String startAfter;
 
 
     private ListObjectsV2ResponseBody(Builder builder) {
-        this.name = builder.name;
-        this.prefix = builder.prefix;
-        this.startAfter = builder.startAfter;
-        this.maxKeys = builder.maxKeys;
+        this.commonPrefixes = builder.commonPrefixes;
+        this.contents = builder.contents;
+        this.continuationToken = builder.continuationToken;
+        this.delimiter = builder.delimiter;
+        this.encodingType = builder.encodingType;
         this.isTruncated = builder.isTruncated;
         this.keyCount = builder.keyCount;
-        this.encodingType = builder.encodingType;
-        this.continuationToken = builder.continuationToken;
+        this.maxKeys = builder.maxKeys;
+        this.name = builder.name;
         this.nextContinuationToken = builder.nextContinuationToken;
-        this.versions = builder.versions;
-        this.commonPrefixes = builder.commonPrefixes;
+        this.prefix = builder.prefix;
+        this.startAfter = builder.startAfter;
     }
 
     public static Builder builder() {
@@ -79,124 +84,140 @@ public class ListObjectsV2ResponseBody extends TeaModel {
     }
 
     /**
-     * @return name
+     * @return commonPrefixes
      */
-    public String name() {
-        return this.name;
+    public java.util.List < CommonPrefix > getCommonPrefixes() {
+        return this.commonPrefixes;
     }
 
     /**
-     * @return prefix
+     * @return contents
      */
-    public String prefix() {
-        return this.prefix;
+    public java.util.List < ObjectSummary > getContents() {
+        return this.contents;
     }
 
     /**
-     * @return startAfter
+     * @return continuationToken
      */
-    public String startAfter() {
-        return this.startAfter;
+    public String getContinuationToken() {
+        return this.continuationToken;
     }
 
     /**
-     * @return maxKeys
+     * @return delimiter
      */
-    public Integer maxKeys() {
-        return this.maxKeys;
+    public String getDelimiter() {
+        return this.delimiter;
+    }
+
+    /**
+     * @return encodingType
+     */
+    public String getEncodingType() {
+        return this.encodingType;
     }
 
     /**
      * @return isTruncated
      */
-    public Boolean isTruncated() {
+    public Boolean getIsTruncated() {
         return this.isTruncated;
     }
 
     /**
      * @return keyCount
      */
-    public Integer keyCount() {
+    public Integer getKeyCount() {
         return this.keyCount;
     }
 
     /**
-     * @return encodingType
+     * @return maxKeys
      */
-    public String encodingType() {
-        return this.encodingType;
+    public Integer getMaxKeys() {
+        return this.maxKeys;
     }
 
     /**
-     * @return continuationToken
+     * @return name
      */
-    public String continuationToken() {
-        return this.continuationToken;
+    public String getName() {
+        return this.name;
     }
 
     /**
      * @return nextContinuationToken
      */
-    public String nextContinuationToken() {
+    public String getNextContinuationToken() {
         return this.nextContinuationToken;
     }
 
     /**
-     * @return versions
+     * @return prefix
      */
-    public java.util.List < ObjectSummary > versions() {
-        return this.versions;
+    public String getPrefix() {
+        return this.prefix;
     }
 
     /**
-     * @return commonPrefixes
+     * @return startAfter
      */
-    public java.util.List < CommonPrefix > commonPrefixes() {
-        return this.commonPrefixes;
+    public String getStartAfter() {
+        return this.startAfter;
     }
 
     public static final class Builder {
-        private String name; 
-        private String prefix; 
-        private String startAfter; 
-        private Integer maxKeys; 
+        private java.util.List < CommonPrefix > commonPrefixes; 
+        private java.util.List < ObjectSummary > contents; 
+        private String continuationToken; 
+        private String delimiter; 
+        private String encodingType; 
         private Boolean isTruncated; 
         private Integer keyCount; 
-        private String encodingType; 
-        private String continuationToken; 
+        private Integer maxKeys; 
+        private String name; 
         private String nextContinuationToken; 
-        private java.util.List < ObjectSummary > versions; 
-        private java.util.List < CommonPrefix > commonPrefixes; 
+        private String prefix; 
+        private String startAfter; 
 
         /**
-         * <p>The bucket name</p>
+         * <p>Objects whose names contain the same string that ranges from the prefix to the next occurrence of the delimiter are grouped as a single result element</p>
          */
-        public Builder name(String name) {
-            this.name = name;
+        public Builder commonPrefixes(java.util.List < CommonPrefix > commonPrefixes) {
+            this.commonPrefixes = commonPrefixes;
             return this;
         }
 
         /**
-         * <p>The prefix that the names of returned objects must contain</p>
+         * <p>The container that stores the versions of objects except for delete markers</p>
          */
-        public Builder prefix(String prefix) {
-            this.prefix = prefix;
+        public Builder contents(java.util.List < ObjectSummary > contents) {
+            this.contents = contents;
             return this;
         }
 
         /**
-         * <p>StartAfter.</p>
+         * <p>ContinuationToken.</p>
          */
-        public Builder startAfter(String startAfter) {
-            this.startAfter = startAfter;
+        public Builder continuationToken(String continuationToken) {
+            this.continuationToken = continuationToken;
             return this;
         }
 
         /**
-         * <p>The maximum number of returned objects in the response</p>
+         * <p>Delimiter.</p>
          */
-        public Builder maxKeys(Integer maxKeys) {
-            this.maxKeys = maxKeys;
+        public Builder delimiter(String delimiter) {
+            this.delimiter = delimiter;
+            return this;
+        }
+
+        /**
+         * <p>EncodingType.</p>
+         */
+        public Builder encodingType(String encodingType) {
+            this.encodingType = encodingType;
             return this;
         }
 
@@ -217,18 +238,18 @@ public class ListObjectsV2ResponseBody extends TeaModel {
         }
 
         /**
-         * <p>EncodingType.</p>
+         * <p>The maximum number of returned objects in the response</p>
          */
-        public Builder encodingType(String encodingType) {
-            this.encodingType = encodingType;
+        public Builder maxKeys(Integer maxKeys) {
+            this.maxKeys = maxKeys;
             return this;
         }
 
         /**
-         * <p>ContinuationToken.</p>
+         * <p>The bucket name</p>
          */
-        public Builder continuationToken(String continuationToken) {
-            this.continuationToken = continuationToken;
+        public Builder name(String name) {
+            this.name = name;
             return this;
         }
 
@@ -241,18 +262,18 @@ public class ListObjectsV2ResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The container that stores the versions of objects except for delete markers</p>
+         * <p>The prefix that the names of returned objects must contain</p>
          */
-        public Builder versions(java.util.List < ObjectSummary > versions) {
-            this.versions = versions;
+        public Builder prefix(String prefix) {
+            this.prefix = prefix;
             return this;
         }
 
         /**
-         * <p>Objects whose names contain the same string that ranges from the prefix to the next occurrence of the delimiter are grouped as a single result element</p>
+         * <p>StartAfter.</p>
          */
-        public Builder commonPrefixes(java.util.List < CommonPrefix > commonPrefixes) {
-            this.commonPrefixes = commonPrefixes;
+        public Builder startAfter(String startAfter) {
+            this.startAfter = startAfter;
             return this;
         }
 

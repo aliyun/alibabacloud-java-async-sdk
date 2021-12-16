@@ -11,20 +11,20 @@ import darabonba.core.TeaModel;
  * <p>ApplyServerSideEncryptionByDefault</p>
  */
 public class ApplyServerSideEncryptionByDefault extends TeaModel {
-    @NameInMap("SSEAlgorithm")
-    private String SSEAlgorithm;
+    @NameInMap("KMSDataEncryption")
+    private String KMSDataEncryption;
 
     @NameInMap("KMSMasterKeyID")
     private String KMSMasterKeyID;
 
-    @NameInMap("KMSDataEncryption")
-    private String KMSDataEncryption;
+    @NameInMap("SSEAlgorithm")
+    private String SSEAlgorithm;
 
 
     private ApplyServerSideEncryptionByDefault(Builder builder) {
-        this.SSEAlgorithm = builder.SSEAlgorithm;
-        this.KMSMasterKeyID = builder.KMSMasterKeyID;
         this.KMSDataEncryption = builder.KMSDataEncryption;
+        this.KMSMasterKeyID = builder.KMSMasterKeyID;
+        this.SSEAlgorithm = builder.SSEAlgorithm;
     }
 
     public static Builder builder() {
@@ -36,36 +36,36 @@ public class ApplyServerSideEncryptionByDefault extends TeaModel {
     }
 
     /**
-     * @return SSEAlgorithm
+     * @return KMSDataEncryption
      */
-    public String SSEAlgorithm() {
-        return this.SSEAlgorithm;
+    public String getKMSDataEncryption() {
+        return this.KMSDataEncryption;
     }
 
     /**
      * @return KMSMasterKeyID
      */
-    public String KMSMasterKeyID() {
+    public String getKMSMasterKeyID() {
         return this.KMSMasterKeyID;
     }
 
     /**
-     * @return KMSDataEncryption
+     * @return SSEAlgorithm
      */
-    public String KMSDataEncryption() {
-        return this.KMSDataEncryption;
+    public String getSSEAlgorithm() {
+        return this.SSEAlgorithm;
     }
 
     public static final class Builder {
-        private String SSEAlgorithm; 
-        private String KMSMasterKeyID; 
         private String KMSDataEncryption; 
+        private String KMSMasterKeyID; 
+        private String SSEAlgorithm; 
 
         /**
          * <p>description</p>
          */
-        public Builder SSEAlgorithm(String SSEAlgorithm) {
-            this.SSEAlgorithm = SSEAlgorithm;
+        public Builder KMSDataEncryption(String KMSDataEncryption) {
+            this.KMSDataEncryption = KMSDataEncryption;
             return this;
         }
 
@@ -80,8 +80,8 @@ public class ApplyServerSideEncryptionByDefault extends TeaModel {
         /**
          * <p>description</p>
          */
-        public Builder KMSDataEncryption(String KMSDataEncryption) {
-            this.KMSDataEncryption = KMSDataEncryption;
+        public Builder SSEAlgorithm(String SSEAlgorithm) {
+            this.SSEAlgorithm = SSEAlgorithm;
             return this;
         }
 

@@ -13,11 +13,11 @@ import darabonba.core.TeaModel;
 public class GetBucketReplicationResponseBody extends TeaModel {
     @ParentIgnore("ReplicationConfiguration")
     @NameInMap("Rule")
-    private java.util.List < ReplicationRule > rule;
+    private java.util.List < ReplicationRule > rules;
 
 
     private GetBucketReplicationResponseBody(Builder builder) {
-        this.rule = builder.rule;
+        this.rules = builder.rules;
     }
 
     public static Builder builder() {
@@ -29,20 +29,20 @@ public class GetBucketReplicationResponseBody extends TeaModel {
     }
 
     /**
-     * @return rule
+     * @return rules
      */
-    public java.util.List < ReplicationRule > rule() {
-        return this.rule;
+    public java.util.List < ReplicationRule > getRules() {
+        return this.rules;
     }
 
     public static final class Builder {
-        private java.util.List < ReplicationRule > rule; 
+        private java.util.List < ReplicationRule > rules; 
 
         /**
          * <p>Rule.</p>
          */
-        public Builder rule(java.util.List < ReplicationRule > rule) {
-            this.rule = rule;
+        public Builder rules(java.util.List < ReplicationRule > rules) {
+            this.rules = rules;
             return this;
         }
 

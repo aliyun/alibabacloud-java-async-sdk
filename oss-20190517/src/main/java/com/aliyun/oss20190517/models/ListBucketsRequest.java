@@ -12,10 +12,6 @@ import darabonba.core.TeaModel;
  */
 public class ListBucketsRequest extends Request {
     @Query
-    @NameInMap("prefix")
-    private String prefix;
-
-    @Query
     @NameInMap("marker")
     private String marker;
 
@@ -23,12 +19,16 @@ public class ListBucketsRequest extends Request {
     @NameInMap("max-keys")
     private Long maxKeys;
 
+    @Query
+    @NameInMap("prefix")
+    private String prefix;
+
 
     private ListBucketsRequest(Builder builder) {
         super(builder);
-        this.prefix = builder.prefix;
         this.marker = builder.marker;
         this.maxKeys = builder.maxKeys;
+        this.prefix = builder.prefix;
     }
 
     public static Builder builder() {
@@ -40,39 +40,30 @@ public class ListBucketsRequest extends Request {
     }
 
     /**
-     * @return prefix
-     */
-    public String prefix() {
-        return this.prefix;
-    }
-
-    /**
      * @return marker
      */
-    public String marker() {
+    public String getMarker() {
         return this.marker;
     }
 
     /**
      * @return maxKeys
      */
-    public Long maxKeys() {
+    public Long getMaxKeys() {
         return this.maxKeys;
     }
 
-    public static final class Builder extends Request.Builder<ListBucketsRequest.Builder> {
-        private String prefix; 
+    /**
+     * @return prefix
+     */
+    public String getPrefix() {
+        return this.prefix;
+    }
+
+    public static final class Builder extends Request.Builder<Builder> {
         private String marker; 
         private Long maxKeys; 
-
-        /**
-         * <p>prefix.</p>
-         */
-        public Builder prefix(String prefix) {
-            this.putQueryParameter("prefix", prefix);
-            this.prefix = prefix;
-            return this;
-        }
+        private String prefix; 
 
         /**
          * <p>marker.</p>
@@ -89,6 +80,15 @@ public class ListBucketsRequest extends Request {
         public Builder maxKeys(Long maxKeys) {
             this.putQueryParameter("max-keys", maxKeys);
             this.maxKeys = maxKeys;
+            return this;
+        }
+
+        /**
+         * <p>prefix.</p>
+         */
+        public Builder prefix(String prefix) {
+            this.putQueryParameter("prefix", prefix);
+            this.prefix = prefix;
             return this;
         }
 
