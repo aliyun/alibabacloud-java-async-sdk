@@ -11,14 +11,14 @@ import darabonba.core.TeaModel;
  * <p>CORSRule</p>
  */
 public class CORSRule extends TeaModel {
-    @NameInMap("AllowedOrigin")
-    private java.util.List < String > allowedOrigin;
+    @NameInMap("AllowedHeader")
+    private String allowedHeader;
 
     @NameInMap("AllowedMethod")
     private java.util.List < String > allowedMethod;
 
-    @NameInMap("AllowedHeader")
-    private String allowedHeader;
+    @NameInMap("AllowedOrigin")
+    private java.util.List < String > allowedOrigin;
 
     @NameInMap("ExposeHeader")
     private java.util.List < String > exposeHeader;
@@ -28,9 +28,9 @@ public class CORSRule extends TeaModel {
 
 
     private CORSRule(Builder builder) {
-        this.allowedOrigin = builder.allowedOrigin;
-        this.allowedMethod = builder.allowedMethod;
         this.allowedHeader = builder.allowedHeader;
+        this.allowedMethod = builder.allowedMethod;
+        this.allowedOrigin = builder.allowedOrigin;
         this.exposeHeader = builder.exposeHeader;
         this.maxAgeSeconds = builder.maxAgeSeconds;
     }
@@ -44,52 +44,52 @@ public class CORSRule extends TeaModel {
     }
 
     /**
-     * @return allowedOrigin
+     * @return allowedHeader
      */
-    public java.util.List < String > allowedOrigin() {
-        return this.allowedOrigin;
+    public String getAllowedHeader() {
+        return this.allowedHeader;
     }
 
     /**
      * @return allowedMethod
      */
-    public java.util.List < String > allowedMethod() {
+    public java.util.List < String > getAllowedMethod() {
         return this.allowedMethod;
     }
 
     /**
-     * @return allowedHeader
+     * @return allowedOrigin
      */
-    public String allowedHeader() {
-        return this.allowedHeader;
+    public java.util.List < String > getAllowedOrigin() {
+        return this.allowedOrigin;
     }
 
     /**
      * @return exposeHeader
      */
-    public java.util.List < String > exposeHeader() {
+    public java.util.List < String > getExposeHeader() {
         return this.exposeHeader;
     }
 
     /**
      * @return maxAgeSeconds
      */
-    public Long maxAgeSeconds() {
+    public Long getMaxAgeSeconds() {
         return this.maxAgeSeconds;
     }
 
     public static final class Builder {
-        private java.util.List < String > allowedOrigin; 
-        private java.util.List < String > allowedMethod; 
         private String allowedHeader; 
+        private java.util.List < String > allowedMethod; 
+        private java.util.List < String > allowedOrigin; 
         private java.util.List < String > exposeHeader; 
         private Long maxAgeSeconds; 
 
         /**
          * <p>description</p>
          */
-        public Builder allowedOrigin(java.util.List < String > allowedOrigin) {
-            this.allowedOrigin = allowedOrigin;
+        public Builder allowedHeader(String allowedHeader) {
+            this.allowedHeader = allowedHeader;
             return this;
         }
 
@@ -104,8 +104,8 @@ public class CORSRule extends TeaModel {
         /**
          * <p>description</p>
          */
-        public Builder allowedHeader(String allowedHeader) {
-            this.allowedHeader = allowedHeader;
+        public Builder allowedOrigin(java.util.List < String > allowedOrigin) {
+            this.allowedOrigin = allowedOrigin;
             return this;
         }
 

@@ -13,7 +13,7 @@ import darabonba.core.TeaModel;
 public class GetBucketReplicationProgressResponseBody extends TeaModel {
     @ParentIgnore("ReplicationProgress")
     @NameInMap("Rule")
-    private ReplicationRuleProgress rule;
+    private ReplicationProgressRule rule;
 
 
     private GetBucketReplicationProgressResponseBody(Builder builder) {
@@ -31,17 +31,17 @@ public class GetBucketReplicationProgressResponseBody extends TeaModel {
     /**
      * @return rule
      */
-    public ReplicationRuleProgress rule() {
+    public ReplicationProgressRule getRule() {
         return this.rule;
     }
 
     public static final class Builder {
-        private ReplicationRuleProgress rule; 
+        private ReplicationProgressRule rule; 
 
         /**
          * <p>Rule.</p>
          */
-        public Builder rule(ReplicationRuleProgress rule) {
+        public Builder rule(ReplicationProgressRule rule) {
             this.rule = rule;
             return this;
         }

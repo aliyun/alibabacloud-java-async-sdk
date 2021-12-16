@@ -30,7 +30,7 @@ public class ReplicationPrefixSet extends TeaModel {
     /**
      * @return prefixs
      */
-    public java.util.List < String > prefixs() {
+    public java.util.List < String > getPrefixs() {
         return this.prefixs;
     }
 

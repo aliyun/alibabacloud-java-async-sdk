@@ -11,17 +11,17 @@ import darabonba.core.TeaModel;
  * <p>ObjectSummary</p>
  */
 public class ObjectSummary extends TeaModel {
+    @NameInMap("ETag")
+    private String ETag;
+
     @NameInMap("Key")
     private String key;
 
     @NameInMap("LastModified")
     private String lastModified;
 
-    @NameInMap("ETag")
-    private String ETag;
-
-    @NameInMap("Type")
-    private String type;
+    @NameInMap("Owner")
+    private Owner owner;
 
     @NameInMap("Size")
     private Long size;
@@ -29,18 +29,18 @@ public class ObjectSummary extends TeaModel {
     @NameInMap("StorageClass")
     private StorageClass storageClass;
 
-    @NameInMap("Owner")
-    private Owner owner;
+    @NameInMap("Type")
+    private String type;
 
 
     private ObjectSummary(Builder builder) {
+        this.ETag = builder.ETag;
         this.key = builder.key;
         this.lastModified = builder.lastModified;
-        this.ETag = builder.ETag;
-        this.type = builder.type;
+        this.owner = builder.owner;
         this.size = builder.size;
         this.storageClass = builder.storageClass;
-        this.owner = builder.owner;
+        this.type = builder.type;
     }
 
     public static Builder builder() {
@@ -52,62 +52,70 @@ public class ObjectSummary extends TeaModel {
     }
 
     /**
+     * @return ETag
+     */
+    public String getETag() {
+        return this.ETag;
+    }
+
+    /**
      * @return key
      */
-    public String key() {
+    public String getKey() {
         return this.key;
     }
 
     /**
      * @return lastModified
      */
-    public String lastModified() {
+    public String getLastModified() {
         return this.lastModified;
     }
 
     /**
-     * @return ETag
+     * @return owner
      */
-    public String ETag() {
-        return this.ETag;
-    }
-
-    /**
-     * @return type
-     */
-    public String type() {
-        return this.type;
+    public Owner getOwner() {
+        return this.owner;
     }
 
     /**
      * @return size
      */
-    public Long size() {
+    public Long getSize() {
         return this.size;
     }
 
     /**
      * @return storageClass
      */
-    public StorageClass storageClass() {
+    public StorageClass getStorageClass() {
         return this.storageClass;
     }
 
     /**
-     * @return owner
+     * @return type
      */
-    public Owner owner() {
-        return this.owner;
+    public String getType() {
+        return this.type;
     }
 
     public static final class Builder {
+        private String ETag; 
         private String key; 
         private String lastModified; 
-        private String ETag; 
-        private String type; 
+        private Owner owner; 
         private Long size; 
         private StorageClass storageClass; 
-        private Owner owner; 
+        private String type; 
+
+        /**
+         * <p>The entity tag is a hash of the object.</p>
+         */
+        public Builder ETag(String ETag) {
+            this.ETag = ETag;
+            return this;
+        }
 
         /**
          * <p>The name of the object.</p>
@@ -126,18 +134,10 @@ public class ObjectSummary extends TeaModel {
         }
 
         /**
-         * <p>The entity tag is a hash of the object.</p>
+         * <p>Owner.</p>
          */
-        public Builder ETag(String ETag) {
-            this.ETag = ETag;
-            return this;
-        }
-
-        /**
-         * <p>The type of the object.</p>
-         */
-        public Builder type(String type) {
-            this.type = type;
+        public Builder owner(Owner owner) {
+            this.owner = owner;
             return this;
         }
 
@@ -158,10 +158,10 @@ public class ObjectSummary extends TeaModel {
         }
 
         /**
-         * <p>Owner.</p>
+         * <p>The type of the object.</p>
          */
-        public Builder owner(Owner owner) {
-            this.owner = owner;
+        public Builder type(String type) {
+            this.type = type;
             return this;
         }
 

@@ -12,8 +12,12 @@ import darabonba.core.TeaModel;
  */
 public class ListLiveChannelResponseBody extends TeaModel {
     @ParentIgnore("ListLiveChannelResult")
-    @NameInMap("Prefix")
-    private String prefix;
+    @NameInMap("IsTruncated")
+    private Boolean isTruncated;
+
+    @ParentIgnore("ListLiveChannelResult")
+    @NameInMap("LiveChannel")
+    private java.util.List < LiveChannel > liveChannels;
 
     @ParentIgnore("ListLiveChannelResult")
     @NameInMap("Marker")
@@ -24,25 +28,21 @@ public class ListLiveChannelResponseBody extends TeaModel {
     private Long maxKeys;
 
     @ParentIgnore("ListLiveChannelResult")
-    @NameInMap("IsTruncated")
-    private Boolean isTruncated;
-
-    @ParentIgnore("ListLiveChannelResult")
     @NameInMap("NextMarker")
     private String nextMarker;
 
     @ParentIgnore("ListLiveChannelResult")
-    @NameInMap("LiveChannel")
-    private java.util.List < LiveChannel > liveChannels;
+    @NameInMap("Prefix")
+    private String prefix;
 
 
     private ListLiveChannelResponseBody(Builder builder) {
-        this.prefix = builder.prefix;
+        this.isTruncated = builder.isTruncated;
+        this.liveChannels = builder.liveChannels;
         this.marker = builder.marker;
         this.maxKeys = builder.maxKeys;
-        this.isTruncated = builder.isTruncated;
         this.nextMarker = builder.nextMarker;
-        this.liveChannels = builder.liveChannels;
+        this.prefix = builder.prefix;
     }
 
     public static Builder builder() {
@@ -54,60 +54,68 @@ public class ListLiveChannelResponseBody extends TeaModel {
     }
 
     /**
-     * @return prefix
+     * @return isTruncated
      */
-    public String prefix() {
-        return this.prefix;
+    public Boolean getIsTruncated() {
+        return this.isTruncated;
+    }
+
+    /**
+     * @return liveChannels
+     */
+    public java.util.List < LiveChannel > getLiveChannels() {
+        return this.liveChannels;
     }
 
     /**
      * @return marker
      */
-    public String marker() {
+    public String getMarker() {
         return this.marker;
     }
 
     /**
      * @return maxKeys
      */
-    public Long maxKeys() {
+    public Long getMaxKeys() {
         return this.maxKeys;
-    }
-
-    /**
-     * @return isTruncated
-     */
-    public Boolean isTruncated() {
-        return this.isTruncated;
     }
 
     /**
      * @return nextMarker
      */
-    public String nextMarker() {
+    public String getNextMarker() {
         return this.nextMarker;
     }
 
     /**
-     * @return liveChannels
+     * @return prefix
      */
-    public java.util.List < LiveChannel > liveChannels() {
-        return this.liveChannels;
+    public String getPrefix() {
+        return this.prefix;
     }
 
     public static final class Builder {
-        private String prefix; 
+        private Boolean isTruncated; 
+        private java.util.List < LiveChannel > liveChannels; 
         private String marker; 
         private Long maxKeys; 
-        private Boolean isTruncated; 
         private String nextMarker; 
-        private java.util.List < LiveChannel > liveChannels; 
+        private String prefix; 
 
         /**
-         * <p>Prefix.</p>
+         * <p>IsTruncated.</p>
          */
-        public Builder prefix(String prefix) {
-            this.prefix = prefix;
+        public Builder isTruncated(Boolean isTruncated) {
+            this.isTruncated = isTruncated;
+            return this;
+        }
+
+        /**
+         * <p>LiveChannel.</p>
+         */
+        public Builder liveChannels(java.util.List < LiveChannel > liveChannels) {
+            this.liveChannels = liveChannels;
             return this;
         }
 
@@ -128,14 +136,6 @@ public class ListLiveChannelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>IsTruncated.</p>
-         */
-        public Builder isTruncated(Boolean isTruncated) {
-            this.isTruncated = isTruncated;
-            return this;
-        }
-
-        /**
          * <p>NextMarker.</p>
          */
         public Builder nextMarker(String nextMarker) {
@@ -144,10 +144,10 @@ public class ListLiveChannelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>LiveChannel.</p>
+         * <p>Prefix.</p>
          */
-        public Builder liveChannels(java.util.List < LiveChannel > liveChannels) {
-            this.liveChannels = liveChannels;
+        public Builder prefix(String prefix) {
+            this.prefix = prefix;
             return this;
         }
 

@@ -17,11 +17,14 @@ public class ListMultipartUploadsResponseBody extends TeaModel {
     @NameInMap("EncodingType")
     private String encodingType;
 
+    @NameInMap("IsTruncated")
+    private Boolean isTruncated;
+
     @NameInMap("KeyMarker")
     private String keyMarker;
 
-    @NameInMap("UploadIdMarker")
-    private String uploadIdMarker;
+    @NameInMap("MaxUploads")
+    private Long maxUploads;
 
     @NameInMap("NextKeyMarker")
     private String nextKeyMarker;
@@ -29,26 +32,23 @@ public class ListMultipartUploadsResponseBody extends TeaModel {
     @NameInMap("NextUploadMarker")
     private String nextUploadMarker;
 
-    @NameInMap("MaxUploads")
-    private Long maxUploads;
-
-    @NameInMap("IsTruncated")
-    private Boolean isTruncated;
-
     @NameInMap("Upload")
-    private java.util.List < Upload > upload;
+    private java.util.List < Upload > uploads;
+
+    @NameInMap("UploadIdMarker")
+    private String uploadIdMarker;
 
 
     private ListMultipartUploadsResponseBody(Builder builder) {
         this.bucket = builder.bucket;
         this.encodingType = builder.encodingType;
+        this.isTruncated = builder.isTruncated;
         this.keyMarker = builder.keyMarker;
-        this.uploadIdMarker = builder.uploadIdMarker;
+        this.maxUploads = builder.maxUploads;
         this.nextKeyMarker = builder.nextKeyMarker;
         this.nextUploadMarker = builder.nextUploadMarker;
-        this.maxUploads = builder.maxUploads;
-        this.isTruncated = builder.isTruncated;
-        this.upload = builder.upload;
+        this.uploads = builder.uploads;
+        this.uploadIdMarker = builder.uploadIdMarker;
     }
 
     public static Builder builder() {
@@ -62,76 +62,76 @@ public class ListMultipartUploadsResponseBody extends TeaModel {
     /**
      * @return bucket
      */
-    public String bucket() {
+    public String getBucket() {
         return this.bucket;
     }
 
     /**
      * @return encodingType
      */
-    public String encodingType() {
+    public String getEncodingType() {
         return this.encodingType;
+    }
+
+    /**
+     * @return isTruncated
+     */
+    public Boolean getIsTruncated() {
+        return this.isTruncated;
     }
 
     /**
      * @return keyMarker
      */
-    public String keyMarker() {
+    public String getKeyMarker() {
         return this.keyMarker;
     }
 
     /**
-     * @return uploadIdMarker
+     * @return maxUploads
      */
-    public String uploadIdMarker() {
-        return this.uploadIdMarker;
+    public Long getMaxUploads() {
+        return this.maxUploads;
     }
 
     /**
      * @return nextKeyMarker
      */
-    public String nextKeyMarker() {
+    public String getNextKeyMarker() {
         return this.nextKeyMarker;
     }
 
     /**
      * @return nextUploadMarker
      */
-    public String nextUploadMarker() {
+    public String getNextUploadMarker() {
         return this.nextUploadMarker;
     }
 
     /**
-     * @return maxUploads
+     * @return uploads
      */
-    public Long maxUploads() {
-        return this.maxUploads;
+    public java.util.List < Upload > getUploads() {
+        return this.uploads;
     }
 
     /**
-     * @return isTruncated
+     * @return uploadIdMarker
      */
-    public Boolean isTruncated() {
-        return this.isTruncated;
-    }
-
-    /**
-     * @return upload
-     */
-    public java.util.List < Upload > upload() {
-        return this.upload;
+    public String getUploadIdMarker() {
+        return this.uploadIdMarker;
     }
 
     public static final class Builder {
         private String bucket; 
         private String encodingType; 
+        private Boolean isTruncated; 
         private String keyMarker; 
-        private String uploadIdMarker; 
+        private Long maxUploads; 
         private String nextKeyMarker; 
         private String nextUploadMarker; 
-        private Long maxUploads; 
-        private Boolean isTruncated; 
-        private java.util.List < Upload > upload; 
+        private java.util.List < Upload > uploads; 
+        private String uploadIdMarker; 
 
         /**
          * <p>Bucket.</p>
@@ -150,6 +150,14 @@ public class ListMultipartUploadsResponseBody extends TeaModel {
         }
 
         /**
+         * <p>IsTruncated.</p>
+         */
+        public Builder isTruncated(Boolean isTruncated) {
+            this.isTruncated = isTruncated;
+            return this;
+        }
+
+        /**
          * <p>KeyMarker.</p>
          */
         public Builder keyMarker(String keyMarker) {
@@ -158,10 +166,10 @@ public class ListMultipartUploadsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>UploadIdMarker.</p>
+         * <p>MaxUploads.</p>
          */
-        public Builder uploadIdMarker(String uploadIdMarker) {
-            this.uploadIdMarker = uploadIdMarker;
+        public Builder maxUploads(Long maxUploads) {
+            this.maxUploads = maxUploads;
             return this;
         }
 
@@ -182,26 +190,18 @@ public class ListMultipartUploadsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>MaxUploads.</p>
-         */
-        public Builder maxUploads(Long maxUploads) {
-            this.maxUploads = maxUploads;
-            return this;
-        }
-
-        /**
-         * <p>IsTruncated.</p>
-         */
-        public Builder isTruncated(Boolean isTruncated) {
-            this.isTruncated = isTruncated;
-            return this;
-        }
-
-        /**
          * <p>Upload.</p>
          */
-        public Builder upload(java.util.List < Upload > upload) {
-            this.upload = upload;
+        public Builder uploads(java.util.List < Upload > uploads) {
+            this.uploads = uploads;
+            return this;
+        }
+
+        /**
+         * <p>UploadIdMarker.</p>
+         */
+        public Builder uploadIdMarker(String uploadIdMarker) {
+            this.uploadIdMarker = uploadIdMarker;
             return this;
         }
 

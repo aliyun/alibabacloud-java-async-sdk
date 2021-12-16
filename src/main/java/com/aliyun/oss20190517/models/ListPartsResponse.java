@@ -41,14 +41,14 @@ public class ListPartsResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > headers() {
+    public java.util.Map < String, String > getHeaders() {
         return this.headers;
     }
 
     /**
      * @return body
      */
-    public ListPartsResponseBody body() {
+    public ListPartsResponseBody getBody() {
         return this.body;
     }
 

@@ -11,20 +11,20 @@ import darabonba.core.TeaModel;
  * <p>Upload</p>
  */
 public class Upload extends TeaModel {
+    @NameInMap("Initiated")
+    private String initiated;
+
     @NameInMap("Key")
     private String key;
 
     @NameInMap("UploadId")
     private String uploadId;
 
-    @NameInMap("Initiated")
-    private String initiated;
-
 
     private Upload(Builder builder) {
+        this.initiated = builder.initiated;
         this.key = builder.key;
         this.uploadId = builder.uploadId;
-        this.initiated = builder.initiated;
     }
 
     public static Builder builder() {
@@ -36,30 +36,38 @@ public class Upload extends TeaModel {
     }
 
     /**
+     * @return initiated
+     */
+    public String getInitiated() {
+        return this.initiated;
+    }
+
+    /**
      * @return key
      */
-    public String key() {
+    public String getKey() {
         return this.key;
     }
 
     /**
      * @return uploadId
      */
-    public String uploadId() {
+    public String getUploadId() {
         return this.uploadId;
     }
 
-    /**
-     * @return initiated
-     */
-    public String initiated() {
-        return this.initiated;
-    }
-
     public static final class Builder {
+        private String initiated; 
         private String key; 
         private String uploadId; 
-        private String initiated; 
+
+        /**
+         * <p>description</p>
+         */
+        public Builder initiated(String initiated) {
+            this.initiated = initiated;
+            return this;
+        }
 
         /**
          * <p>description</p>
@@ -74,14 +82,6 @@ public class Upload extends TeaModel {
          */
         public Builder uploadId(String uploadId) {
             this.uploadId = uploadId;
-            return this;
-        }
-
-        /**
-         * <p>description</p>
-         */
-        public Builder initiated(String initiated) {
-            this.initiated = initiated;
             return this;
         }
 

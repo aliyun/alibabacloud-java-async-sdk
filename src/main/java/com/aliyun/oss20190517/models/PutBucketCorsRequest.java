@@ -11,19 +11,19 @@ import darabonba.core.TeaModel;
  * <p>PutBucketCorsRequest</p>
  */
 public class PutBucketCorsRequest extends Request {
-    @Host
-    @NameInMap("bucket")
-    private String bucket;
-
     @Body
     @NameInMap("CORSConfiguration")
     private CORSConfiguration cORSConfiguration;
 
+    @Host
+    @NameInMap("bucket")
+    private String bucket;
+
 
     private PutBucketCorsRequest(Builder builder) {
         super(builder);
-        this.bucket = builder.bucket;
         this.cORSConfiguration = builder.cORSConfiguration;
+        this.bucket = builder.bucket;
     }
 
     public static Builder builder() {
@@ -35,31 +35,22 @@ public class PutBucketCorsRequest extends Request {
     }
 
     /**
-     * @return bucket
-     */
-    public String bucket() {
-        return this.bucket;
-    }
-
-    /**
      * @return cORSConfiguration
      */
-    public CORSConfiguration cORSConfiguration() {
+    public CORSConfiguration getCORSConfiguration() {
         return this.cORSConfiguration;
     }
 
-    public static final class Builder extends Request.Builder<PutBucketCorsRequest.Builder> {
-        private String bucket; 
-        private CORSConfiguration cORSConfiguration; 
+    /**
+     * @return bucket
+     */
+    public String getBucket() {
+        return this.bucket;
+    }
 
-        /**
-         * <p>bucket.</p>
-         */
-        public Builder bucket(String bucket) {
-            this.putHostParameter("bucket", bucket);
-            this.bucket = bucket;
-            return this;
-        }
+    public static final class Builder extends Request.Builder<Builder> {
+        private CORSConfiguration cORSConfiguration; 
+        private String bucket; 
 
         /**
          * <p>CORSConfiguration.</p>
@@ -67,6 +58,15 @@ public class PutBucketCorsRequest extends Request {
         public Builder cORSConfiguration(CORSConfiguration cORSConfiguration) {
             this.putBodyParameter("CORSConfiguration", cORSConfiguration);
             this.cORSConfiguration = cORSConfiguration;
+            return this;
+        }
+
+        /**
+         * <p>bucket.</p>
+         */
+        public Builder bucket(String bucket) {
+            this.putHostParameter("bucket", bucket);
+            this.bucket = bucket;
             return this;
         }
 

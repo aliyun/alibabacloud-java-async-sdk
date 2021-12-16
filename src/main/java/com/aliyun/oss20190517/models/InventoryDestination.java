@@ -30,7 +30,7 @@ public class InventoryDestination extends TeaModel {
     /**
      * @return OSSBucketDestination
      */
-    public InventoryOSSBucketDestination OSSBucketDestination() {
+    public InventoryOSSBucketDestination getOSSBucketDestination() {
         return this.OSSBucketDestination;
     }
 

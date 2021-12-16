@@ -31,7 +31,7 @@ public class GetLiveChannelHistoryResponseBody extends TeaModel {
     /**
      * @return liveRecords
      */
-    public java.util.List < LiveRecord > liveRecords() {
+    public java.util.List < LiveRecord > getLiveRecords() {
         return this.liveRecords;
     }
 

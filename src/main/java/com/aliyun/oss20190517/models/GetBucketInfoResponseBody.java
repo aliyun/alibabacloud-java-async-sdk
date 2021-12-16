@@ -11,6 +11,7 @@ import darabonba.core.TeaModel;
  * <p>GetBucketInfoResponseBody</p>
  */
 public class GetBucketInfoResponseBody extends TeaModel {
+    @ParentIgnore("BucketInfo")
     @NameInMap("Bucket")
     private BucketInfo bucketInfo;
 
@@ -30,7 +31,7 @@ public class GetBucketInfoResponseBody extends TeaModel {
     /**
      * @return bucketInfo
      */
-    public BucketInfo bucketInfo() {
+    public BucketInfo getBucketInfo() {
         return this.bucketInfo;
     }
 
@@ -53,7 +54,7 @@ public class GetBucketInfoResponseBody extends TeaModel {
 
     public static class AccessControlList extends TeaModel {
         @NameInMap("Grant")
-        private String grant;
+        private BucketACL grant;
 
 
         private AccessControlList(Builder builder) {
@@ -71,17 +72,17 @@ public class GetBucketInfoResponseBody extends TeaModel {
         /**
          * @return grant
          */
-        public String grant() {
+        public BucketACL getGrant() {
             return this.grant;
         }
 
         public static final class Builder {
-            private String grant; 
+            private BucketACL grant; 
 
             /**
              * <p>Grant.</p>
              */
-            public Builder grant(String grant) {
+            public Builder grant(BucketACL grant) {
                 this.grant = grant;
                 return this;
             }
@@ -94,8 +95,17 @@ public class GetBucketInfoResponseBody extends TeaModel {
 
     }
     public static class BucketInfo extends TeaModel {
+        @NameInMap("AccessControlList")
+        private AccessControlList accessControlList;
+
+        @NameInMap("Comment")
+        private String comment;
+
         @NameInMap("CreationDate")
         private String creationDate;
+
+        @NameInMap("CrossRegionReplication")
+        private String crossRegionReplication;
 
         @NameInMap("ExtranetEndpoint")
         private String extranetEndpoint;
@@ -106,40 +116,31 @@ public class GetBucketInfoResponseBody extends TeaModel {
         @NameInMap("Location")
         private String location;
 
-        @NameInMap("StorageClass")
-        private StorageClass storageClass;
-
-        @NameInMap("TransferAcceleration")
-        private String transferAcceleration;
-
-        @NameInMap("CrossRegionReplication")
-        private String crossRegionReplication;
-
         @NameInMap("Name")
         private String name;
 
         @NameInMap("Owner")
         private Owner owner;
 
-        @NameInMap("AccessControlList")
-        private AccessControlList accessControlList;
+        @NameInMap("StorageClass")
+        private StorageClass storageClass;
 
-        @NameInMap("Comment")
-        private String comment;
+        @NameInMap("TransferAcceleration")
+        private String transferAcceleration;
 
 
         private BucketInfo(Builder builder) {
+            this.accessControlList = builder.accessControlList;
+            this.comment = builder.comment;
             this.creationDate = builder.creationDate;
+            this.crossRegionReplication = builder.crossRegionReplication;
             this.extranetEndpoint = builder.extranetEndpoint;
             this.intranetEndpoint = builder.intranetEndpoint;
             this.location = builder.location;
-            this.storageClass = builder.storageClass;
-            this.transferAcceleration = builder.transferAcceleration;
-            this.crossRegionReplication = builder.crossRegionReplication;
             this.name = builder.name;
             this.owner = builder.owner;
-            this.accessControlList = builder.accessControlList;
-            this.comment = builder.comment;
+            this.storageClass = builder.storageClass;
+            this.transferAcceleration = builder.transferAcceleration;
         }
 
         public static Builder builder() {
@@ -151,100 +152,124 @@ public class GetBucketInfoResponseBody extends TeaModel {
         }
 
         /**
-         * @return creationDate
-         */
-        public String creationDate() {
-            return this.creationDate;
-        }
-
-        /**
-         * @return extranetEndpoint
-         */
-        public String extranetEndpoint() {
-            return this.extranetEndpoint;
-        }
-
-        /**
-         * @return intranetEndpoint
-         */
-        public String intranetEndpoint() {
-            return this.intranetEndpoint;
-        }
-
-        /**
-         * @return location
-         */
-        public String location() {
-            return this.location;
-        }
-
-        /**
-         * @return storageClass
-         */
-        public StorageClass storageClass() {
-            return this.storageClass;
-        }
-
-        /**
-         * @return transferAcceleration
-         */
-        public String transferAcceleration() {
-            return this.transferAcceleration;
-        }
-
-        /**
-         * @return crossRegionReplication
-         */
-        public String crossRegionReplication() {
-            return this.crossRegionReplication;
-        }
-
-        /**
-         * @return name
-         */
-        public String name() {
-            return this.name;
-        }
-
-        /**
-         * @return owner
-         */
-        public Owner owner() {
-            return this.owner;
-        }
-
-        /**
          * @return accessControlList
          */
-        public AccessControlList accessControlList() {
+        public AccessControlList getAccessControlList() {
             return this.accessControlList;
         }
 
         /**
          * @return comment
          */
-        public String comment() {
+        public String getComment() {
             return this.comment;
         }
 
+        /**
+         * @return creationDate
+         */
+        public String getCreationDate() {
+            return this.creationDate;
+        }
+
+        /**
+         * @return crossRegionReplication
+         */
+        public String getCrossRegionReplication() {
+            return this.crossRegionReplication;
+        }
+
+        /**
+         * @return extranetEndpoint
+         */
+        public String getExtranetEndpoint() {
+            return this.extranetEndpoint;
+        }
+
+        /**
+         * @return intranetEndpoint
+         */
+        public String getIntranetEndpoint() {
+            return this.intranetEndpoint;
+        }
+
+        /**
+         * @return location
+         */
+        public String getLocation() {
+            return this.location;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return owner
+         */
+        public Owner getOwner() {
+            return this.owner;
+        }
+
+        /**
+         * @return storageClass
+         */
+        public StorageClass getStorageClass() {
+            return this.storageClass;
+        }
+
+        /**
+         * @return transferAcceleration
+         */
+        public String getTransferAcceleration() {
+            return this.transferAcceleration;
+        }
+
         public static final class Builder {
+            private AccessControlList accessControlList; 
+            private String comment; 
             private String creationDate; 
+            private String crossRegionReplication; 
             private String extranetEndpoint; 
             private String intranetEndpoint; 
             private String location; 
-            private StorageClass storageClass; 
-            private String transferAcceleration; 
-            private String crossRegionReplication; 
             private String name; 
             private Owner owner; 
-            private AccessControlList accessControlList; 
-            private String comment; 
+            private StorageClass storageClass; 
+            private String transferAcceleration; 
+
+            /**
+             * <p>AccessControlList.</p>
+             */
+            public Builder accessControlList(AccessControlList accessControlList) {
+                this.accessControlList = accessControlList;
+                return this;
+            }
+
+            /**
+             * <p>Comment.</p>
+             */
+            public Builder comment(String comment) {
+                this.comment = comment;
+                return this;
+            }
 
             /**
              * <p>CreationDate.</p>
              */
             public Builder creationDate(String creationDate) {
                 this.creationDate = creationDate;
+                return this;
+            }
+
+            /**
+             * <p>CrossRegionReplication.</p>
+             */
+            public Builder crossRegionReplication(String crossRegionReplication) {
+                this.crossRegionReplication = crossRegionReplication;
                 return this;
             }
 
@@ -273,30 +298,6 @@ public class GetBucketInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>StorageClass.</p>
-             */
-            public Builder storageClass(StorageClass storageClass) {
-                this.storageClass = storageClass;
-                return this;
-            }
-
-            /**
-             * <p>TransferAcceleration.</p>
-             */
-            public Builder transferAcceleration(String transferAcceleration) {
-                this.transferAcceleration = transferAcceleration;
-                return this;
-            }
-
-            /**
-             * <p>CrossRegionReplication.</p>
-             */
-            public Builder crossRegionReplication(String crossRegionReplication) {
-                this.crossRegionReplication = crossRegionReplication;
-                return this;
-            }
-
-            /**
              * <p>Name.</p>
              */
             public Builder name(String name) {
@@ -313,18 +314,18 @@ public class GetBucketInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>AccessControlList.</p>
+             * <p>StorageClass.</p>
              */
-            public Builder accessControlList(AccessControlList accessControlList) {
-                this.accessControlList = accessControlList;
+            public Builder storageClass(StorageClass storageClass) {
+                this.storageClass = storageClass;
                 return this;
             }
 
             /**
-             * <p>Comment.</p>
+             * <p>TransferAcceleration.</p>
              */
-            public Builder comment(String comment) {
-                this.comment = comment;
+            public Builder transferAcceleration(String transferAcceleration) {
+                this.transferAcceleration = transferAcceleration;
                 return this;
             }
 

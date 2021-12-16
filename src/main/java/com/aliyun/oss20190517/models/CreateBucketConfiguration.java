@@ -11,16 +11,16 @@ import darabonba.core.TeaModel;
  * <p>CreateBucketConfiguration</p>
  */
 public class CreateBucketConfiguration extends TeaModel {
-    @NameInMap("StorageClass")
-    private StorageClass storageClass;
-
     @NameInMap("DataRedundancyType")
     private DataRedundancyType dataRedundancyType;
 
+    @NameInMap("StorageClass")
+    private StorageClass storageClass;
+
 
     private CreateBucketConfiguration(Builder builder) {
-        this.storageClass = builder.storageClass;
         this.dataRedundancyType = builder.dataRedundancyType;
+        this.storageClass = builder.storageClass;
     }
 
     public static Builder builder() {
@@ -32,36 +32,36 @@ public class CreateBucketConfiguration extends TeaModel {
     }
 
     /**
-     * @return storageClass
-     */
-    public StorageClass storageClass() {
-        return this.storageClass;
-    }
-
-    /**
      * @return dataRedundancyType
      */
-    public DataRedundancyType dataRedundancyType() {
+    public DataRedundancyType getDataRedundancyType() {
         return this.dataRedundancyType;
     }
 
-    public static final class Builder {
-        private StorageClass storageClass; 
-        private DataRedundancyType dataRedundancyType; 
+    /**
+     * @return storageClass
+     */
+    public StorageClass getStorageClass() {
+        return this.storageClass;
+    }
 
-        /**
-         * <p>StorageClass.</p>
-         */
-        public Builder storageClass(StorageClass storageClass) {
-            this.storageClass = storageClass;
-            return this;
-        }
+    public static final class Builder {
+        private DataRedundancyType dataRedundancyType; 
+        private StorageClass storageClass; 
 
         /**
          * <p>DataRedundancyType.</p>
          */
         public Builder dataRedundancyType(DataRedundancyType dataRedundancyType) {
             this.dataRedundancyType = dataRedundancyType;
+            return this;
+        }
+
+        /**
+         * <p>StorageClass.</p>
+         */
+        public Builder storageClass(StorageClass storageClass) {
+            this.storageClass = storageClass;
             return this;
         }
 

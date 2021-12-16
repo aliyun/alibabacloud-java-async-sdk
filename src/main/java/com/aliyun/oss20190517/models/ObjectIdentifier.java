@@ -34,14 +34,14 @@ public class ObjectIdentifier extends TeaModel {
     /**
      * @return key
      */
-    public String key() {
+    public String getKey() {
         return this.key;
     }
 
     /**
      * @return versionId
      */
-    public String versionId() {
+    public String getVersionId() {
         return this.versionId;
     }
 

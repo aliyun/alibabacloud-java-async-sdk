@@ -11,13 +11,13 @@ import darabonba.core.TeaModel;
  * <p>PutLiveChannelStatusRequest</p>
  */
 public class PutLiveChannelStatusRequest extends Request {
-    @Host
-    @NameInMap("bucket")
-    private String bucket;
-
     @Path
     @NameInMap("channel")
     private String channel;
+
+    @Host
+    @NameInMap("bucket")
+    private String bucket;
 
     @Query
     @NameInMap("status")
@@ -26,8 +26,8 @@ public class PutLiveChannelStatusRequest extends Request {
 
     private PutLiveChannelStatusRequest(Builder builder) {
         super(builder);
-        this.bucket = builder.bucket;
         this.channel = builder.channel;
+        this.bucket = builder.bucket;
         this.status = builder.status;
     }
 
@@ -40,39 +40,30 @@ public class PutLiveChannelStatusRequest extends Request {
     }
 
     /**
-     * @return bucket
+     * @return channel
      */
-    public String bucket() {
-        return this.bucket;
+    public String getChannel() {
+        return this.channel;
     }
 
     /**
-     * @return channel
+     * @return bucket
      */
-    public String channel() {
-        return this.channel;
+    public String getBucket() {
+        return this.bucket;
     }
 
     /**
      * @return status
      */
-    public String status() {
+    public String getStatus() {
         return this.status;
     }
 
-    public static final class Builder extends Request.Builder<PutLiveChannelStatusRequest.Builder> {
-        private String bucket; 
+    public static final class Builder extends Request.Builder<Builder> {
         private String channel; 
+        private String bucket; 
         private String status; 
-
-        /**
-         * <p>bucket.</p>
-         */
-        public Builder bucket(String bucket) {
-            this.putHostParameter("bucket", bucket);
-            this.bucket = bucket;
-            return this;
-        }
 
         /**
          * <p>channel.</p>
@@ -80,6 +71,15 @@ public class PutLiveChannelStatusRequest extends Request {
         public Builder channel(String channel) {
             this.putPathParameter("channel", channel);
             this.channel = channel;
+            return this;
+        }
+
+        /**
+         * <p>bucket.</p>
+         */
+        public Builder bucket(String bucket) {
+            this.putHostParameter("bucket", bucket);
+            this.bucket = bucket;
             return this;
         }
 

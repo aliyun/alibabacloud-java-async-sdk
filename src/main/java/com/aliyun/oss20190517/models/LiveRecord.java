@@ -11,20 +11,20 @@ import darabonba.core.TeaModel;
  * <p>LiveRecord</p>
  */
 public class LiveRecord extends TeaModel {
-    @NameInMap("StartTime")
-    private String startTime;
-
     @NameInMap("EndTime")
     private String endTime;
 
     @NameInMap("RemoteAddr")
     private String remoteAddr;
 
+    @NameInMap("StartTime")
+    private String startTime;
+
 
     private LiveRecord(Builder builder) {
-        this.startTime = builder.startTime;
         this.endTime = builder.endTime;
         this.remoteAddr = builder.remoteAddr;
+        this.startTime = builder.startTime;
     }
 
     public static Builder builder() {
@@ -36,38 +36,30 @@ public class LiveRecord extends TeaModel {
     }
 
     /**
-     * @return startTime
-     */
-    public String startTime() {
-        return this.startTime;
-    }
-
-    /**
      * @return endTime
      */
-    public String endTime() {
+    public String getEndTime() {
         return this.endTime;
     }
 
     /**
      * @return remoteAddr
      */
-    public String remoteAddr() {
+    public String getRemoteAddr() {
         return this.remoteAddr;
     }
 
+    /**
+     * @return startTime
+     */
+    public String getStartTime() {
+        return this.startTime;
+    }
+
     public static final class Builder {
-        private String startTime; 
         private String endTime; 
         private String remoteAddr; 
-
-        /**
-         * <p>description</p>
-         */
-        public Builder startTime(String startTime) {
-            this.startTime = startTime;
-            return this;
-        }
+        private String startTime; 
 
         /**
          * <p>description</p>
@@ -82,6 +74,14 @@ public class LiveRecord extends TeaModel {
          */
         public Builder remoteAddr(String remoteAddr) {
             this.remoteAddr = remoteAddr;
+            return this;
+        }
+
+        /**
+         * <p>description</p>
+         */
+        public Builder startTime(String startTime) {
+            this.startTime = startTime;
             return this;
         }
 

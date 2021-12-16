@@ -41,14 +41,14 @@ public class UploadPartCopyResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > headers() {
+    public java.util.Map < String, String > getHeaders() {
         return this.headers;
     }
 
     /**
      * @return body
      */
-    public UploadPartCopyResponseBody body() {
+    public UploadPartCopyResponseBody getBody() {
         return this.body;
     }
 

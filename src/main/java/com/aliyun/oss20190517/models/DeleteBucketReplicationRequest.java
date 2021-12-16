@@ -11,6 +11,10 @@ import darabonba.core.TeaModel;
  * <p>DeleteBucketReplicationRequest</p>
  */
 public class DeleteBucketReplicationRequest extends Request {
+    @Body
+    @NameInMap("body")
+    private ReplicationRules body;
+
     @Host
     @NameInMap("bucket")
     private String bucket;
@@ -18,6 +22,7 @@ public class DeleteBucketReplicationRequest extends Request {
 
     private DeleteBucketReplicationRequest(Builder builder) {
         super(builder);
+        this.body = builder.body;
         this.bucket = builder.bucket;
     }
 
@@ -30,14 +35,31 @@ public class DeleteBucketReplicationRequest extends Request {
     }
 
     /**
+     * @return body
+     */
+    public ReplicationRules getBody() {
+        return this.body;
+    }
+
+    /**
      * @return bucket
      */
-    public String bucket() {
+    public String getBucket() {
         return this.bucket;
     }
 
-    public static final class Builder extends Request.Builder<DeleteBucketReplicationRequest.Builder> {
+    public static final class Builder extends Request.Builder<Builder> {
+        private ReplicationRules body; 
         private String bucket; 
+
+        /**
+         * <p>body.</p>
+         */
+        public Builder body(ReplicationRules body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
+            return this;
+        }
 
         /**
          * <p>bucket.</p>

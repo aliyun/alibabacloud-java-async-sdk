@@ -30,7 +30,7 @@ public class ReplicationSourceSelectionCriteria extends TeaModel {
     /**
      * @return sseKmsEncryptedObjects
      */
-    public SseKmsEncryptedObjects sseKmsEncryptedObjects() {
+    public SseKmsEncryptedObjects getSseKmsEncryptedObjects() {
         return this.sseKmsEncryptedObjects;
     }
 
@@ -71,7 +71,7 @@ public class ReplicationSourceSelectionCriteria extends TeaModel {
         /**
          * @return status
          */
-        public String status() {
+        public String getStatus() {
             return this.status;
         }
 

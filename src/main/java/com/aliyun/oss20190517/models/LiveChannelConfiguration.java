@@ -14,21 +14,21 @@ public class LiveChannelConfiguration extends TeaModel {
     @NameInMap("Description")
     private String description;
 
+    @NameInMap("Snapshot")
+    private LiveChannelSnapshot snapshot;
+
     @NameInMap("Status")
     private String status;
 
     @NameInMap("Target")
     private LiveChannelTarget target;
 
-    @NameInMap("Snapshot")
-    private LiveChannelSnapshot snapshot;
-
 
     private LiveChannelConfiguration(Builder builder) {
         this.description = builder.description;
+        this.snapshot = builder.snapshot;
         this.status = builder.status;
         this.target = builder.target;
-        this.snapshot = builder.snapshot;
     }
 
     public static Builder builder() {
@@ -42,42 +42,50 @@ public class LiveChannelConfiguration extends TeaModel {
     /**
      * @return description
      */
-    public String description() {
+    public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return snapshot
+     */
+    public LiveChannelSnapshot getSnapshot() {
+        return this.snapshot;
     }
 
     /**
      * @return status
      */
-    public String status() {
+    public String getStatus() {
         return this.status;
     }
 
     /**
      * @return target
      */
-    public LiveChannelTarget target() {
+    public LiveChannelTarget getTarget() {
         return this.target;
-    }
-
-    /**
-     * @return snapshot
-     */
-    public LiveChannelSnapshot snapshot() {
-        return this.snapshot;
     }
 
     public static final class Builder {
         private String description; 
+        private LiveChannelSnapshot snapshot; 
         private String status; 
         private LiveChannelTarget target; 
-        private LiveChannelSnapshot snapshot; 
 
         /**
          * <p>description</p>
          */
         public Builder description(String description) {
             this.description = description;
+            return this;
+        }
+
+        /**
+         * <p>Snapshot.</p>
+         */
+        public Builder snapshot(LiveChannelSnapshot snapshot) {
+            this.snapshot = snapshot;
             return this;
         }
 
@@ -94,14 +102,6 @@ public class LiveChannelConfiguration extends TeaModel {
          */
         public Builder target(LiveChannelTarget target) {
             this.target = target;
-            return this;
-        }
-
-        /**
-         * <p>Snapshot.</p>
-         */
-        public Builder snapshot(LiveChannelSnapshot snapshot) {
-            this.snapshot = snapshot;
             return this;
         }
 

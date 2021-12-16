@@ -37,18 +37,18 @@ public class ListBucketInventoryRequest extends Request {
     /**
      * @return bucket
      */
-    public String bucket() {
+    public String getBucket() {
         return this.bucket;
     }
 
     /**
      * @return continuationToken
      */
-    public String continuationToken() {
+    public String getContinuationToken() {
         return this.continuationToken;
     }
 
-    public static final class Builder extends Request.Builder<ListBucketInventoryRequest.Builder> {
+    public static final class Builder extends Request.Builder<Builder> {
         private String bucket; 
         private String continuationToken; 
 

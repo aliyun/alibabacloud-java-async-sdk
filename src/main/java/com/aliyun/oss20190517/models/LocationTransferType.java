@@ -34,14 +34,14 @@ public class LocationTransferType extends TeaModel {
     /**
      * @return location
      */
-    public String location() {
+    public String getLocation() {
         return this.location;
     }
 
     /**
      * @return transferTypes
      */
-    public TransferTypes transferTypes() {
+    public TransferTypes getTransferTypes() {
         return this.transferTypes;
     }
 
@@ -91,7 +91,7 @@ public class LocationTransferType extends TeaModel {
         /**
          * @return type
          */
-        public String type() {
+        public String getType() {
             return this.type;
         }
 

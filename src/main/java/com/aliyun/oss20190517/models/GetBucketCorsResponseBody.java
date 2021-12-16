@@ -36,14 +36,14 @@ public class GetBucketCorsResponseBody extends TeaModel {
     /**
      * @return CORSRule
      */
-    public java.util.List < CORSRule > CORSRule() {
+    public java.util.List < CORSRule > getCORSRule() {
         return this.CORSRule;
     }
 
     /**
      * @return responseVary
      */
-    public Boolean responseVary() {
+    public Boolean getResponseVary() {
         return this.responseVary;
     }
 

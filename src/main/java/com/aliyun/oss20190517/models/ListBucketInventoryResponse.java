@@ -41,14 +41,14 @@ public class ListBucketInventoryResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > headers() {
+    public java.util.Map < String, String > getHeaders() {
         return this.headers;
     }
 
     /**
      * @return body
      */
-    public ListBucketInventoryResponseBody body() {
+    public ListBucketInventoryResponseBody getBody() {
         return this.body;
     }
 

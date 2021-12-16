@@ -11,36 +11,36 @@ import darabonba.core.TeaModel;
  * <p>InventoryConfiguration</p>
  */
 public class InventoryConfiguration extends TeaModel {
-    @NameInMap("Id")
-    private String id;
-
-    @NameInMap("IsEnabled")
-    private Boolean isEnabled;
-
     @NameInMap("Destination")
     private InventoryDestination destination;
-
-    @NameInMap("Schedule")
-    private InventorySchedule schedule;
 
     @NameInMap("Filter")
     private InventoryFilter filter;
 
+    @NameInMap("Id")
+    private String id;
+
     @NameInMap("IncludedObjectVersions")
     private InventoryIncludedObjectVersions includedObjectVersions;
 
+    @NameInMap("IsEnabled")
+    private Boolean isEnabled;
+
     @NameInMap("OptionalFields")
-    private java.util.List < InventoryOptionalField > optionalFields;
+    private OptionalFields optionalFields;
+
+    @NameInMap("Schedule")
+    private InventorySchedule schedule;
 
 
     private InventoryConfiguration(Builder builder) {
-        this.id = builder.id;
-        this.isEnabled = builder.isEnabled;
         this.destination = builder.destination;
-        this.schedule = builder.schedule;
         this.filter = builder.filter;
+        this.id = builder.id;
         this.includedObjectVersions = builder.includedObjectVersions;
+        this.isEnabled = builder.isEnabled;
         this.optionalFields = builder.optionalFields;
+        this.schedule = builder.schedule;
     }
 
     public static Builder builder() {
@@ -52,92 +52,68 @@ public class InventoryConfiguration extends TeaModel {
     }
 
     /**
-     * @return id
-     */
-    public String id() {
-        return this.id;
-    }
-
-    /**
-     * @return isEnabled
-     */
-    public Boolean isEnabled() {
-        return this.isEnabled;
-    }
-
-    /**
      * @return destination
      */
-    public InventoryDestination destination() {
+    public InventoryDestination getDestination() {
         return this.destination;
-    }
-
-    /**
-     * @return schedule
-     */
-    public InventorySchedule schedule() {
-        return this.schedule;
     }
 
     /**
      * @return filter
      */
-    public InventoryFilter filter() {
+    public InventoryFilter getFilter() {
         return this.filter;
+    }
+
+    /**
+     * @return id
+     */
+    public String getId() {
+        return this.id;
     }
 
     /**
      * @return includedObjectVersions
      */
-    public InventoryIncludedObjectVersions includedObjectVersions() {
+    public InventoryIncludedObjectVersions getIncludedObjectVersions() {
         return this.includedObjectVersions;
+    }
+
+    /**
+     * @return isEnabled
+     */
+    public Boolean getIsEnabled() {
+        return this.isEnabled;
     }
 
     /**
      * @return optionalFields
      */
-    public java.util.List < InventoryOptionalField > optionalFields() {
+    public OptionalFields getOptionalFields() {
         return this.optionalFields;
     }
 
+    /**
+     * @return schedule
+     */
+    public InventorySchedule getSchedule() {
+        return this.schedule;
+    }
+
     public static final class Builder {
-        private String id; 
-        private Boolean isEnabled; 
         private InventoryDestination destination; 
-        private InventorySchedule schedule; 
         private InventoryFilter filter; 
+        private String id; 
         private InventoryIncludedObjectVersions includedObjectVersions; 
-        private java.util.List < InventoryOptionalField > optionalFields; 
-
-        /**
-         * <p>The specified inventory list name, which must be globally unique in the bucket</p>
-         */
-        public Builder id(String id) {
-            this.id = id;
-            return this;
-        }
-
-        /**
-         * <p>Indicates whether the inventory function is enabled</p>
-         */
-        public Builder isEnabled(Boolean isEnabled) {
-            this.isEnabled = isEnabled;
-            return this;
-        }
+        private Boolean isEnabled; 
+        private OptionalFields optionalFields; 
+        private InventorySchedule schedule; 
 
         /**
          * <p>Destination.</p>
          */
         public Builder destination(InventoryDestination destination) {
             this.destination = destination;
-            return this;
-        }
-
-        /**
-         * <p>Schedule.</p>
-         */
-        public Builder schedule(InventorySchedule schedule) {
-            this.schedule = schedule;
             return this;
         }
 
@@ -150,6 +126,14 @@ public class InventoryConfiguration extends TeaModel {
         }
 
         /**
+         * <p>The specified inventory list name, which must be globally unique in the bucket</p>
+         */
+        public Builder id(String id) {
+            this.id = id;
+            return this;
+        }
+
+        /**
          * <p>IncludedObjectVersions.</p>
          */
         public Builder includedObjectVersions(InventoryIncludedObjectVersions includedObjectVersions) {
@@ -158,10 +142,26 @@ public class InventoryConfiguration extends TeaModel {
         }
 
         /**
+         * <p>Indicates whether the inventory function is enabled</p>
+         */
+        public Builder isEnabled(Boolean isEnabled) {
+            this.isEnabled = isEnabled;
+            return this;
+        }
+
+        /**
          * <p>The container that stores the configuration fields included in the inventory list</p>
          */
-        public Builder optionalFields(java.util.List < InventoryOptionalField > optionalFields) {
+        public Builder optionalFields(OptionalFields optionalFields) {
             this.optionalFields = optionalFields;
+            return this;
+        }
+
+        /**
+         * <p>Schedule.</p>
+         */
+        public Builder schedule(InventorySchedule schedule) {
+            this.schedule = schedule;
             return this;
         }
 
@@ -171,4 +171,46 @@ public class InventoryConfiguration extends TeaModel {
 
     } 
 
+    public static class OptionalFields extends TeaModel {
+        @NameInMap("Field")
+        private java.util.List < InventoryOptionalField > fields;
+
+
+        private OptionalFields(Builder builder) {
+            this.fields = builder.fields;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OptionalFields create() {
+            return builder().build();
+        }
+
+        /**
+         * @return fields
+         */
+        public java.util.List < InventoryOptionalField > getFields() {
+            return this.fields;
+        }
+
+        public static final class Builder {
+            private java.util.List < InventoryOptionalField > fields; 
+
+            /**
+             * <p>field list</p>
+             */
+            public Builder fields(java.util.List < InventoryOptionalField > fields) {
+                this.fields = fields;
+                return this;
+            }
+
+            public OptionalFields build() {
+                return new OptionalFields(this);
+            } 
+
+        } 
+
+    }
 }

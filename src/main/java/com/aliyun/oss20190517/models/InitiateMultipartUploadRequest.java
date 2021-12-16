@@ -11,54 +11,74 @@ import darabonba.core.TeaModel;
  * <p>InitiateMultipartUploadRequest</p>
  */
 public class InitiateMultipartUploadRequest extends Request {
-    @Host
-    @NameInMap("bucket")
-    private String bucket;
-
     @Path
     @NameInMap("key")
     private String key;
 
+    @Header
+    @NameInMap("Cache-Control")
+    private String cacheControl;
+
+    @Header
+    @NameInMap("Content-Disposition")
+    private String contentDisposition;
+
+    @Header
+    @NameInMap("Content-Encoding")
+    private String contentEncoding;
+
+    @Header
+    @NameInMap("Expires")
+    private String expires;
+
+    @Host
+    @NameInMap("bucket")
+    private String bucket;
+
     @Query
     @NameInMap("encoding-type")
-    private String encodingType;
+    private EncodeType encodingType;
 
     @Header
     @NameInMap("x-oss-forbid-overwrite")
-    private String xOssForbidOverwrite;
-
-    @Header
-    @NameInMap("x-oss-storage-class")
-    private String xOssStorageClass;
-
-    @Header
-    @NameInMap("x-oss-tagging")
-    private String xOssTagging;
-
-    @Header
-    @NameInMap("x-oss-server-side-encryption")
-    private String xOssServerSideEncryption;
+    private String forbidOverwrite;
 
     @Header
     @NameInMap("x-oss-server-side-data-encryption")
-    private String xOssServerSideDataEncryption;
+    private String sseDataEncryption;
+
+    @Header
+    @NameInMap("x-oss-server-side-encryption")
+    private String serverSideEncryption;
 
     @Header
     @NameInMap("x-oss-server-side-encryption-key-id")
-    private String xOssServerSideEncryptionKeyId;
+    private String sseKeyId;
+
+    @Header
+    @NameInMap("x-oss-storage-class")
+    private StorageClass storageClass;
+
+    @Header
+    @NameInMap("x-oss-tagging")
+    private String tagging;
 
 
     private InitiateMultipartUploadRequest(Builder builder) {
         super(builder);
-        this.bucket = builder.bucket;
         this.key = builder.key;
+        this.cacheControl = builder.cacheControl;
+        this.contentDisposition = builder.contentDisposition;
+        this.contentEncoding = builder.contentEncoding;
+        this.expires = builder.expires;
+        this.bucket = builder.bucket;
         this.encodingType = builder.encodingType;
-        this.xOssForbidOverwrite = builder.xOssForbidOverwrite;
-        this.xOssStorageClass = builder.xOssStorageClass;
-        this.xOssTagging = builder.xOssTagging;
-        this.xOssServerSideEncryption = builder.xOssServerSideEncryption;
-        this.xOssServerSideDataEncryption = builder.xOssServerSideDataEncryption;
-        this.xOssServerSideEncryptionKeyId = builder.xOssServerSideEncryptionKeyId;
+        this.forbidOverwrite = builder.forbidOverwrite;
+        this.sseDataEncryption = builder.sseDataEncryption;
+        this.serverSideEncryption = builder.serverSideEncryption;
+        this.sseKeyId = builder.sseKeyId;
+        this.storageClass = builder.storageClass;
+        this.tagging = builder.tagging;
     }
 
     public static Builder builder() {
@@ -70,87 +90,110 @@ public class InitiateMultipartUploadRequest extends Request {
     }
 
     /**
-     * @return bucket
+     * @return key
      */
-    public String bucket() {
-        return this.bucket;
+    public String getKey() {
+        return this.key;
     }
 
     /**
-     * @return key
+     * @return cacheControl
      */
-    public String key() {
-        return this.key;
+    public String getCacheControl() {
+        return this.cacheControl;
+    }
+
+    /**
+     * @return contentDisposition
+     */
+    public String getContentDisposition() {
+        return this.contentDisposition;
+    }
+
+    /**
+     * @return contentEncoding
+     */
+    public String getContentEncoding() {
+        return this.contentEncoding;
+    }
+
+    /**
+     * @return expires
+     */
+    public String getExpires() {
+        return this.expires;
+    }
+
+    /**
+     * @return bucket
+     */
+    public String getBucket() {
+        return this.bucket;
     }
 
     /**
      * @return encodingType
      */
-    public String encodingType() {
+    public EncodeType getEncodingType() {
         return this.encodingType;
     }
 
     /**
-     * @return xOssForbidOverwrite
+     * @return forbidOverwrite
      */
-    public String xOssForbidOverwrite() {
-        return this.xOssForbidOverwrite;
+    public String getForbidOverwrite() {
+        return this.forbidOverwrite;
     }
 
     /**
-     * @return xOssStorageClass
+     * @return sseDataEncryption
      */
-    public String xOssStorageClass() {
-        return this.xOssStorageClass;
+    public String getSseDataEncryption() {
+        return this.sseDataEncryption;
     }
 
     /**
-     * @return xOssTagging
+     * @return serverSideEncryption
      */
-    public String xOssTagging() {
-        return this.xOssTagging;
+    public String getServerSideEncryption() {
+        return this.serverSideEncryption;
     }
 
     /**
-     * @return xOssServerSideEncryption
+     * @return sseKeyId
      */
-    public String xOssServerSideEncryption() {
-        return this.xOssServerSideEncryption;
+    public String getSseKeyId() {
+        return this.sseKeyId;
     }
 
     /**
-     * @return xOssServerSideDataEncryption
+     * @return storageClass
      */
-    public String xOssServerSideDataEncryption() {
-        return this.xOssServerSideDataEncryption;
+    public StorageClass getStorageClass() {
+        return this.storageClass;
     }
 
     /**
-     * @return xOssServerSideEncryptionKeyId
+     * @return tagging
      */
-    public String xOssServerSideEncryptionKeyId() {
-        return this.xOssServerSideEncryptionKeyId;
+    public String getTagging() {
+        return this.tagging;
     }
 
-    public static final class Builder extends Request.Builder<InitiateMultipartUploadRequest.Builder> {
-        private String bucket; 
+    public static final class Builder extends Request.Builder<Builder> {
         private String key; 
-        private String encodingType; 
-        private String xOssForbidOverwrite; 
-        private String xOssStorageClass; 
-        private String xOssTagging; 
-        private String xOssServerSideEncryption; 
-        private String xOssServerSideDataEncryption; 
-        private String xOssServerSideEncryptionKeyId; 
-
-        /**
-         * <p>bucket.</p>
-         */
-        public Builder bucket(String bucket) {
-            this.putHostParameter("bucket", bucket);
-            this.bucket = bucket;
-            return this;
-        }
+        private String cacheControl; 
+        private String contentDisposition; 
+        private String contentEncoding; 
+        private String expires; 
+        private String bucket; 
+        private EncodeType encodingType; 
+        private String forbidOverwrite; 
+        private String sseDataEncryption; 
+        private String serverSideEncryption; 
+        private String sseKeyId; 
+        private StorageClass storageClass; 
+        private String tagging; 
 
         /**
          * <p>key.</p>
@@ -162,9 +205,54 @@ public class InitiateMultipartUploadRequest extends Request {
         }
 
         /**
+         * <p>Cache-Control.</p>
+         */
+        public Builder cacheControl(String cacheControl) {
+            this.putHeaderParameter("Cache-Control", cacheControl);
+            this.cacheControl = cacheControl;
+            return this;
+        }
+
+        /**
+         * <p>Content-Disposition.</p>
+         */
+        public Builder contentDisposition(String contentDisposition) {
+            this.putHeaderParameter("Content-Disposition", contentDisposition);
+            this.contentDisposition = contentDisposition;
+            return this;
+        }
+
+        /**
+         * <p>Content-Encoding.</p>
+         */
+        public Builder contentEncoding(String contentEncoding) {
+            this.putHeaderParameter("Content-Encoding", contentEncoding);
+            this.contentEncoding = contentEncoding;
+            return this;
+        }
+
+        /**
+         * <p>Expires.</p>
+         */
+        public Builder expires(String expires) {
+            this.putHeaderParameter("Expires", expires);
+            this.expires = expires;
+            return this;
+        }
+
+        /**
+         * <p>bucket.</p>
+         */
+        public Builder bucket(String bucket) {
+            this.putHostParameter("bucket", bucket);
+            this.bucket = bucket;
+            return this;
+        }
+
+        /**
          * <p>encoding-type.</p>
          */
-        public Builder encodingType(String encodingType) {
+        public Builder encodingType(EncodeType encodingType) {
             this.putQueryParameter("encoding-type", encodingType);
             this.encodingType = encodingType;
             return this;
@@ -173,54 +261,54 @@ public class InitiateMultipartUploadRequest extends Request {
         /**
          * <p>x-oss-forbid-overwrite.</p>
          */
-        public Builder xOssForbidOverwrite(String xOssForbidOverwrite) {
-            this.putHeaderParameter("x-oss-forbid-overwrite", xOssForbidOverwrite);
-            this.xOssForbidOverwrite = xOssForbidOverwrite;
-            return this;
-        }
-
-        /**
-         * <p>x-oss-storage-class.</p>
-         */
-        public Builder xOssStorageClass(String xOssStorageClass) {
-            this.putHeaderParameter("x-oss-storage-class", xOssStorageClass);
-            this.xOssStorageClass = xOssStorageClass;
-            return this;
-        }
-
-        /**
-         * <p>x-oss-tagging.</p>
-         */
-        public Builder xOssTagging(String xOssTagging) {
-            this.putHeaderParameter("x-oss-tagging", xOssTagging);
-            this.xOssTagging = xOssTagging;
-            return this;
-        }
-
-        /**
-         * <p>x-oss-server-side-encryption.</p>
-         */
-        public Builder xOssServerSideEncryption(String xOssServerSideEncryption) {
-            this.putHeaderParameter("x-oss-server-side-encryption", xOssServerSideEncryption);
-            this.xOssServerSideEncryption = xOssServerSideEncryption;
+        public Builder forbidOverwrite(String forbidOverwrite) {
+            this.putHeaderParameter("x-oss-forbid-overwrite", forbidOverwrite);
+            this.forbidOverwrite = forbidOverwrite;
             return this;
         }
 
         /**
          * <p>x-oss-server-side-data-encryption.</p>
          */
-        public Builder xOssServerSideDataEncryption(String xOssServerSideDataEncryption) {
-            this.putHeaderParameter("x-oss-server-side-data-encryption", xOssServerSideDataEncryption);
-            this.xOssServerSideDataEncryption = xOssServerSideDataEncryption;
+        public Builder sseDataEncryption(String sseDataEncryption) {
+            this.putHeaderParameter("x-oss-server-side-data-encryption", sseDataEncryption);
+            this.sseDataEncryption = sseDataEncryption;
+            return this;
+        }
+
+        /**
+         * <p>x-oss-server-side-encryption.</p>
+         */
+        public Builder serverSideEncryption(String serverSideEncryption) {
+            this.putHeaderParameter("x-oss-server-side-encryption", serverSideEncryption);
+            this.serverSideEncryption = serverSideEncryption;
             return this;
         }
 
         /**
          * <p>x-oss-server-side-encryption-key-id.</p>
          */
-        public Builder xOssServerSideEncryptionKeyId(String xOssServerSideEncryptionKeyId) {
-            this.putHeaderParameter("x-oss-server-side-encryption-key-id", xOssServerSideEncryptionKeyId);
-            this.xOssServerSideEncryptionKeyId = xOssServerSideEncryptionKeyId;
+        public Builder sseKeyId(String sseKeyId) {
+            this.putHeaderParameter("x-oss-server-side-encryption-key-id", sseKeyId);
+            this.sseKeyId = sseKeyId;
+            return this;
+        }
+
+        /**
+         * <p>x-oss-storage-class.</p>
+         */
+        public Builder storageClass(StorageClass storageClass) {
+            this.putHeaderParameter("x-oss-storage-class", storageClass);
+            this.storageClass = storageClass;
+            return this;
+        }
+
+        /**
+         * <p>x-oss-tagging.</p>
+         */
+        public Builder tagging(String tagging) {
+            this.putHeaderParameter("x-oss-tagging", tagging);
+            this.tagging = tagging;
             return this;
         }
 

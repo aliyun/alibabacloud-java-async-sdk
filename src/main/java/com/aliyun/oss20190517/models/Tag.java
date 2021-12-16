@@ -34,14 +34,14 @@ public class Tag extends TeaModel {
     /**
      * @return key
      */
-    public String key() {
+    public String getKey() {
         return this.key;
     }
 
     /**
      * @return value
      */
-    public String value() {
+    public String getValue() {
         return this.value;
     }
 

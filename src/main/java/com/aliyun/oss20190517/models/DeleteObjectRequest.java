@@ -11,13 +11,13 @@ import darabonba.core.TeaModel;
  * <p>DeleteObjectRequest</p>
  */
 public class DeleteObjectRequest extends Request {
-    @Host
-    @NameInMap("bucket")
-    private String bucket;
-
     @Path
     @NameInMap("key")
     private String key;
+
+    @Host
+    @NameInMap("bucket")
+    private String bucket;
 
     @Query
     @NameInMap("versionId")
@@ -26,8 +26,8 @@ public class DeleteObjectRequest extends Request {
 
     private DeleteObjectRequest(Builder builder) {
         super(builder);
-        this.bucket = builder.bucket;
         this.key = builder.key;
+        this.bucket = builder.bucket;
         this.versionId = builder.versionId;
     }
 
@@ -40,39 +40,30 @@ public class DeleteObjectRequest extends Request {
     }
 
     /**
-     * @return bucket
+     * @return key
      */
-    public String bucket() {
-        return this.bucket;
+    public String getKey() {
+        return this.key;
     }
 
     /**
-     * @return key
+     * @return bucket
      */
-    public String key() {
-        return this.key;
+    public String getBucket() {
+        return this.bucket;
     }
 
     /**
      * @return versionId
      */
-    public String versionId() {
+    public String getVersionId() {
         return this.versionId;
     }
 
-    public static final class Builder extends Request.Builder<DeleteObjectRequest.Builder> {
-        private String bucket; 
+    public static final class Builder extends Request.Builder<Builder> {
         private String key; 
+        private String bucket; 
         private String versionId; 
-
-        /**
-         * <p>bucket.</p>
-         */
-        public Builder bucket(String bucket) {
-            this.putHostParameter("bucket", bucket);
-            this.bucket = bucket;
-            return this;
-        }
 
         /**
          * <p>key.</p>
@@ -80,6 +71,15 @@ public class DeleteObjectRequest extends Request {
         public Builder key(String key) {
             this.putPathParameter("key", key);
             this.key = key;
+            return this;
+        }
+
+        /**
+         * <p>bucket.</p>
+         */
+        public Builder bucket(String bucket) {
+            this.putHostParameter("bucket", bucket);
+            this.bucket = bucket;
             return this;
         }
 

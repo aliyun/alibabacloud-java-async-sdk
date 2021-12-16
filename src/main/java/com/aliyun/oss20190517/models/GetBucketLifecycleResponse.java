@@ -41,14 +41,14 @@ public class GetBucketLifecycleResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > headers() {
+    public java.util.Map < String, String > getHeaders() {
         return this.headers;
     }
 
     /**
      * @return body
      */
-    public GetBucketLifecycleResponseBody body() {
+    public GetBucketLifecycleResponseBody getBody() {
         return this.body;
     }
 

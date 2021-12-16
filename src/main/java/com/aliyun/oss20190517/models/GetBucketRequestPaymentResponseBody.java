@@ -31,7 +31,7 @@ public class GetBucketRequestPaymentResponseBody extends TeaModel {
     /**
      * @return payer
      */
-    public String payer() {
+    public String getPayer() {
         return this.payer;
     }
 

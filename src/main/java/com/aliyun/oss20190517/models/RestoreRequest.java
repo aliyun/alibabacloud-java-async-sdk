@@ -35,18 +35,18 @@ public class RestoreRequest extends Request {
     /**
      * @return days
      */
-    public Long days() {
+    public Long getDays() {
         return this.days;
     }
 
     /**
      * @return jobParameters
      */
-    public JobParameters jobParameters() {
+    public JobParameters getJobParameters() {
         return this.jobParameters;
     }
 
-    public static final class Builder extends Request.Builder<RestoreRequest.Builder> {
+    public static final class Builder extends Request.Builder<Builder> {
         private Long days; 
         private JobParameters jobParameters; 
 
@@ -92,11 +92,11 @@ public class RestoreRequest extends Request {
         /**
          * @return tier
          */
-        public String tier() {
+        public String getTier() {
             return this.tier;
         }
 
-        public static final class Builder extends Request.Builder<JobParameters.Builder> {
+        public static final class Builder {
             private String tier; 
 
             /**

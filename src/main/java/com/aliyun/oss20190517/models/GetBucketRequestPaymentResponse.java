@@ -41,14 +41,14 @@ public class GetBucketRequestPaymentResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > headers() {
+    public java.util.Map < String, String > getHeaders() {
         return this.headers;
     }
 
     /**
      * @return body
      */
-    public GetBucketRequestPaymentResponseBody body() {
+    public GetBucketRequestPaymentResponseBody getBody() {
         return this.body;
     }
 

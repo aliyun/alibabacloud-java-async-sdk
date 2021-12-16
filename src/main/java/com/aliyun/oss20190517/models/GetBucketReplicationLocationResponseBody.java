@@ -36,14 +36,14 @@ public class GetBucketReplicationLocationResponseBody extends TeaModel {
     /**
      * @return locations
      */
-    public java.util.List < String > locations() {
+    public java.util.List < String > getLocations() {
         return this.locations;
     }
 
     /**
      * @return locationTransferTypeConstraint
      */
-    public LocationTransferTypeConstraint locationTransferTypeConstraint() {
+    public LocationTransferTypeConstraint getLocationTransferTypeConstraint() {
         return this.locationTransferTypeConstraint;
     }
 
@@ -93,7 +93,7 @@ public class GetBucketReplicationLocationResponseBody extends TeaModel {
         /**
          * @return locationTransferTypes
          */
-        public java.util.List < LocationTransferType > locationTransferTypes() {
+        public java.util.List < LocationTransferType > getLocationTransferTypes() {
             return this.locationTransferTypes;
         }
 

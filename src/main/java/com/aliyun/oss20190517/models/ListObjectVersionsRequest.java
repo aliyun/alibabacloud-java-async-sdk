@@ -20,12 +20,12 @@ public class ListObjectVersionsRequest extends Request {
     private String delimiter;
 
     @Query
-    @NameInMap("key-marker")
-    private String keyMarker;
+    @NameInMap("encoding-type")
+    private EncodeType encodingType;
 
     @Query
-    @NameInMap("version-id-marker")
-    private String versionIdMarker;
+    @NameInMap("key-marker")
+    private String keyMarker;
 
     @Query
     @NameInMap("max-keys")
@@ -36,19 +36,19 @@ public class ListObjectVersionsRequest extends Request {
     private String prefix;
 
     @Query
-    @NameInMap("encoding-type")
-    private EncodeType encodingType;
+    @NameInMap("version-id-marker")
+    private String versionIdMarker;
 
 
     private ListObjectVersionsRequest(Builder builder) {
         super(builder);
         this.bucket = builder.bucket;
         this.delimiter = builder.delimiter;
+        this.encodingType = builder.encodingType;
         this.keyMarker = builder.keyMarker;
-        this.versionIdMarker = builder.versionIdMarker;
         this.maxKeys = builder.maxKeys;
         this.prefix = builder.prefix;
-        this.encodingType = builder.encodingType;
+        this.versionIdMarker = builder.versionIdMarker;
     }
 
     public static Builder builder() {
@@ -62,60 +62,60 @@ public class ListObjectVersionsRequest extends Request {
     /**
      * @return bucket
      */
-    public String bucket() {
+    public String getBucket() {
         return this.bucket;
     }
 
     /**
      * @return delimiter
      */
-    public String delimiter() {
+    public String getDelimiter() {
         return this.delimiter;
+    }
+
+    /**
+     * @return encodingType
+     */
+    public EncodeType getEncodingType() {
+        return this.encodingType;
     }
 
     /**
      * @return keyMarker
      */
-    public String keyMarker() {
+    public String getKeyMarker() {
         return this.keyMarker;
-    }
-
-    /**
-     * @return versionIdMarker
-     */
-    public String versionIdMarker() {
-        return this.versionIdMarker;
     }
 
     /**
      * @return maxKeys
      */
-    public Long maxKeys() {
+    public Long getMaxKeys() {
         return this.maxKeys;
     }
 
     /**
      * @return prefix
      */
-    public String prefix() {
+    public String getPrefix() {
         return this.prefix;
     }
 
     /**
-     * @return encodingType
+     * @return versionIdMarker
      */
-    public EncodeType encodingType() {
-        return this.encodingType;
+    public String getVersionIdMarker() {
+        return this.versionIdMarker;
     }
 
-    public static final class Builder extends Request.Builder<ListObjectVersionsRequest.Builder> {
+    public static final class Builder extends Request.Builder<Builder> {
         private String bucket; 
         private String delimiter; 
+        private EncodeType encodingType; 
         private String keyMarker; 
-        private String versionIdMarker; 
         private Long maxKeys; 
         private String prefix; 
-        private EncodeType encodingType; 
+        private String versionIdMarker; 
 
         /**
          * <p>bucket.</p>
@@ -136,20 +136,20 @@ public class ListObjectVersionsRequest extends Request {
         }
 
         /**
+         * <p>The encoding type of the object name in the response</p>
+         */
+        public Builder encodingType(EncodeType encodingType) {
+            this.putQueryParameter("encoding-type", encodingType);
+            this.encodingType = encodingType;
+            return this;
+        }
+
+        /**
          * <p>The name of the object from which the list operation begins</p>
          */
         public Builder keyMarker(String keyMarker) {
             this.putQueryParameter("key-marker", keyMarker);
             this.keyMarker = keyMarker;
-            return this;
-        }
-
-        /**
-         * <p>The version id of the object from which the list operation begins</p>
-         */
-        public Builder versionIdMarker(String versionIdMarker) {
-            this.putQueryParameter("version-id-marker", versionIdMarker);
-            this.versionIdMarker = versionIdMarker;
             return this;
         }
 
@@ -172,11 +172,11 @@ public class ListObjectVersionsRequest extends Request {
         }
 
         /**
-         * <p>The encoding type of the object name in the response</p>
+         * <p>The version id of the object from which the list operation begins</p>
          */
-        public Builder encodingType(EncodeType encodingType) {
-            this.putQueryParameter("encoding-type", encodingType);
-            this.encodingType = encodingType;
+        public Builder versionIdMarker(String versionIdMarker) {
+            this.putQueryParameter("version-id-marker", versionIdMarker);
+            this.versionIdMarker = versionIdMarker;
             return this;
         }
 

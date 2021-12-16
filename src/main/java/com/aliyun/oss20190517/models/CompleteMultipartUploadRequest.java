@@ -11,17 +11,13 @@ import darabonba.core.TeaModel;
  * <p>CompleteMultipartUploadRequest</p>
  */
 public class CompleteMultipartUploadRequest extends Request {
-    @Host
-    @NameInMap("bucket")
-    private String bucket;
-
     @Path
     @NameInMap("key")
     private String key;
 
-    @Query
-    @NameInMap("uploadId")
-    private String uploadId;
+    @Host
+    @NameInMap("bucket")
+    private String bucket;
 
     @Body
     @NameInMap("completeMultipartUpload")
@@ -29,26 +25,30 @@ public class CompleteMultipartUploadRequest extends Request {
 
     @Query
     @NameInMap("encoding-type")
-    private String encodingType;
+    private EncodeType encodingType;
 
-    @Header
-    @NameInMap("x-oss-forbid-overwrite")
-    private String xOssForbidOverwrite;
+    @Query
+    @NameInMap("uploadId")
+    private String uploadId;
 
     @Header
     @NameInMap("x-oss-complete-all")
-    private String xOssCompleteAll;
+    private String completeAll;
+
+    @Header
+    @NameInMap("x-oss-forbid-overwrite")
+    private String forbidOverwrite;
 
 
     private CompleteMultipartUploadRequest(Builder builder) {
         super(builder);
-        this.bucket = builder.bucket;
         this.key = builder.key;
-        this.uploadId = builder.uploadId;
+        this.bucket = builder.bucket;
         this.completeMultipartUpload = builder.completeMultipartUpload;
         this.encodingType = builder.encodingType;
-        this.xOssForbidOverwrite = builder.xOssForbidOverwrite;
-        this.xOssCompleteAll = builder.xOssCompleteAll;
+        this.uploadId = builder.uploadId;
+        this.completeAll = builder.completeAll;
+        this.forbidOverwrite = builder.forbidOverwrite;
     }
 
     public static Builder builder() {
@@ -60,71 +60,62 @@ public class CompleteMultipartUploadRequest extends Request {
     }
 
     /**
-     * @return bucket
-     */
-    public String bucket() {
-        return this.bucket;
-    }
-
-    /**
      * @return key
      */
-    public String key() {
+    public String getKey() {
         return this.key;
     }
 
     /**
-     * @return uploadId
+     * @return bucket
      */
-    public String uploadId() {
-        return this.uploadId;
+    public String getBucket() {
+        return this.bucket;
     }
 
     /**
      * @return completeMultipartUpload
      */
-    public CompleteMultipartUpload completeMultipartUpload() {
+    public CompleteMultipartUpload getCompleteMultipartUpload() {
         return this.completeMultipartUpload;
     }
 
     /**
      * @return encodingType
      */
-    public String encodingType() {
+    public EncodeType getEncodingType() {
         return this.encodingType;
     }
 
     /**
-     * @return xOssForbidOverwrite
+     * @return uploadId
      */
-    public String xOssForbidOverwrite() {
-        return this.xOssForbidOverwrite;
+    public String getUploadId() {
+        return this.uploadId;
     }
 
     /**
-     * @return xOssCompleteAll
+     * @return completeAll
      */
-    public String xOssCompleteAll() {
-        return this.xOssCompleteAll;
+    public String getCompleteAll() {
+        return this.completeAll;
     }
 
-    public static final class Builder extends Request.Builder<CompleteMultipartUploadRequest.Builder> {
-        private String bucket; 
-        private String key; 
-        private String uploadId; 
-        private CompleteMultipartUpload completeMultipartUpload; 
-        private String encodingType; 
-        private String xOssForbidOverwrite; 
-        private String xOssCompleteAll; 
+    /**
+     * @return forbidOverwrite
+     */
+    public String getForbidOverwrite() {
+        return this.forbidOverwrite;
+    }
 
-        /**
-         * <p>bucket.</p>
-         */
-        public Builder bucket(String bucket) {
-            this.putHostParameter("bucket", bucket);
-            this.bucket = bucket;
-            return this;
-        }
+    public static final class Builder extends Request.Builder<Builder> {
+        private String key; 
+        private String bucket; 
+        private CompleteMultipartUpload completeMultipartUpload; 
+        private EncodeType encodingType; 
+        private String uploadId; 
+        private String completeAll; 
+        private String forbidOverwrite; 
 
         /**
          * <p>key.</p>
@@ -136,11 +127,11 @@ public class CompleteMultipartUploadRequest extends Request {
         }
 
         /**
-         * <p>uploadId.</p>
+         * <p>bucket.</p>
          */
-        public Builder uploadId(String uploadId) {
-            this.putQueryParameter("uploadId", uploadId);
-            this.uploadId = uploadId;
+        public Builder bucket(String bucket) {
+            this.putHostParameter("bucket", bucket);
+            this.bucket = bucket;
             return this;
         }
 
@@ -156,27 +147,36 @@ public class CompleteMultipartUploadRequest extends Request {
         /**
          * <p>encoding-type.</p>
          */
-        public Builder encodingType(String encodingType) {
+        public Builder encodingType(EncodeType encodingType) {
             this.putQueryParameter("encoding-type", encodingType);
             this.encodingType = encodingType;
             return this;
         }
 
         /**
-         * <p>x-oss-forbid-overwrite.</p>
+         * <p>uploadId.</p>
          */
-        public Builder xOssForbidOverwrite(String xOssForbidOverwrite) {
-            this.putHeaderParameter("x-oss-forbid-overwrite", xOssForbidOverwrite);
-            this.xOssForbidOverwrite = xOssForbidOverwrite;
+        public Builder uploadId(String uploadId) {
+            this.putQueryParameter("uploadId", uploadId);
+            this.uploadId = uploadId;
             return this;
         }
 
         /**
          * <p>x-oss-complete-all.</p>
          */
-        public Builder xOssCompleteAll(String xOssCompleteAll) {
-            this.putHeaderParameter("x-oss-complete-all", xOssCompleteAll);
-            this.xOssCompleteAll = xOssCompleteAll;
+        public Builder completeAll(String completeAll) {
+            this.putHeaderParameter("x-oss-complete-all", completeAll);
+            this.completeAll = completeAll;
+            return this;
+        }
+
+        /**
+         * <p>x-oss-forbid-overwrite.</p>
+         */
+        public Builder forbidOverwrite(String forbidOverwrite) {
+            this.putHeaderParameter("x-oss-forbid-overwrite", forbidOverwrite);
+            this.forbidOverwrite = forbidOverwrite;
             return this;
         }
 

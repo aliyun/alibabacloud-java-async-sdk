@@ -31,7 +31,7 @@ public class GetBucketLoggingResponseBody extends TeaModel {
     /**
      * @return loggingEnabled
      */
-    public LoggingEnabled loggingEnabled() {
+    public LoggingEnabled getLoggingEnabled() {
         return this.loggingEnabled;
     }
 

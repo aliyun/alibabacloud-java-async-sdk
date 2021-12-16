@@ -31,7 +31,7 @@ public class GetBucketVersioningResponseBody extends TeaModel {
     /**
      * @return status
      */
-    public BucketVersioningStatus status() {
+    public BucketVersioningStatus getStatus() {
         return this.status;
     }
 

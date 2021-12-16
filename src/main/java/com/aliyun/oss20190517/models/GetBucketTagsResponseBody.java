@@ -13,7 +13,7 @@ import darabonba.core.TeaModel;
 public class GetBucketTagsResponseBody extends TeaModel {
     @ParentIgnore("Tagging")
     @NameInMap("TagSet")
-    private java.util.List < Tag > tagSet;
+    private TagSet tagSet;
 
 
     private GetBucketTagsResponseBody(Builder builder) {
@@ -31,17 +31,17 @@ public class GetBucketTagsResponseBody extends TeaModel {
     /**
      * @return tagSet
      */
-    public java.util.List < Tag > tagSet() {
+    public TagSet getTagSet() {
         return this.tagSet;
     }
 
     public static final class Builder {
-        private java.util.List < Tag > tagSet; 
+        private TagSet tagSet; 
 
         /**
          * <p>TagSet.</p>
          */
-        public Builder tagSet(java.util.List < Tag > tagSet) {
+        public Builder tagSet(TagSet tagSet) {
             this.tagSet = tagSet;
             return this;
         }

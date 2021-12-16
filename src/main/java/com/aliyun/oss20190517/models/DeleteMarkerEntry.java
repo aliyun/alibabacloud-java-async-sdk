@@ -11,14 +11,11 @@ import darabonba.core.TeaModel;
  * <p>DeleteMarkerEntry</p>
  */
 public class DeleteMarkerEntry extends TeaModel {
-    @NameInMap("Key")
-    private String key;
-
-    @NameInMap("VersionId")
-    private String versionId;
-
     @NameInMap("IsLatest")
     private Boolean isLatest;
+
+    @NameInMap("Key")
+    private String key;
 
     @NameInMap("LastModified")
     private String lastModified;
@@ -26,13 +23,16 @@ public class DeleteMarkerEntry extends TeaModel {
     @NameInMap("Owner")
     private Owner owner;
 
+    @NameInMap("VersionId")
+    private String versionId;
+
 
     private DeleteMarkerEntry(Builder builder) {
-        this.key = builder.key;
-        this.versionId = builder.versionId;
         this.isLatest = builder.isLatest;
+        this.key = builder.key;
         this.lastModified = builder.lastModified;
         this.owner = builder.owner;
+        this.versionId = builder.versionId;
     }
 
     public static Builder builder() {
@@ -44,68 +44,60 @@ public class DeleteMarkerEntry extends TeaModel {
     }
 
     /**
-     * @return key
-     */
-    public String key() {
-        return this.key;
-    }
-
-    /**
-     * @return versionId
-     */
-    public String versionId() {
-        return this.versionId;
-    }
-
-    /**
      * @return isLatest
      */
-    public Boolean isLatest() {
+    public Boolean getIsLatest() {
         return this.isLatest;
+    }
+
+    /**
+     * @return key
+     */
+    public String getKey() {
+        return this.key;
     }
 
     /**
      * @return lastModified
      */
-    public String lastModified() {
+    public String getLastModified() {
         return this.lastModified;
     }
 
     /**
      * @return owner
      */
-    public Owner owner() {
+    public Owner getOwner() {
         return this.owner;
     }
 
+    /**
+     * @return versionId
+     */
+    public String getVersionId() {
+        return this.versionId;
+    }
+
     public static final class Builder {
-        private String key; 
-        private String versionId; 
         private Boolean isLatest; 
+        private String key; 
         private String lastModified; 
         private Owner owner; 
-
-        /**
-         * <p>The name of the object</p>
-         */
-        public Builder key(String key) {
-            this.key = key;
-            return this;
-        }
-
-        /**
-         * <p>The version ID of the object</p>
-         */
-        public Builder versionId(String versionId) {
-            this.versionId = versionId;
-            return this;
-        }
+        private String versionId; 
 
         /**
          * <p>Indicates whether the version is the current version</p>
          */
         public Builder isLatest(Boolean isLatest) {
             this.isLatest = isLatest;
+            return this;
+        }
+
+        /**
+         * <p>The name of the object</p>
+         */
+        public Builder key(String key) {
+            this.key = key;
             return this;
         }
 
@@ -122,6 +114,14 @@ public class DeleteMarkerEntry extends TeaModel {
          */
         public Builder owner(Owner owner) {
             this.owner = owner;
+            return this;
+        }
+
+        /**
+         * <p>The version ID of the object</p>
+         */
+        public Builder versionId(String versionId) {
+            this.versionId = versionId;
             return this;
         }
 

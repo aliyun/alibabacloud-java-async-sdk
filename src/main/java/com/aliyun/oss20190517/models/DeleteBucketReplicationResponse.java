@@ -15,15 +15,10 @@ public class DeleteBucketReplicationResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
-    @NameInMap("body")
-    @Validation(required = true)
-    private DeleteBucketReplicationResponseBody body;
-
 
     private DeleteBucketReplicationResponse(Builder builder) {
         super(builder);
         this.headers = builder.headers;
-        this.body = builder.body;
     }
 
     public static Builder builder() {
@@ -41,20 +36,12 @@ public class DeleteBucketReplicationResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > headers() {
+    public java.util.Map < String, String > getHeaders() {
         return this.headers;
-    }
-
-    /**
-     * @return body
-     */
-    public DeleteBucketReplicationResponseBody body() {
-        return this.body;
     }
 
     public static final class Builder extends Response.Builder {
         private java.util.Map < String, String > headers; 
-        private DeleteBucketReplicationResponseBody body; 
 
         private Builder() {
             super();
@@ -63,7 +50,6 @@ public class DeleteBucketReplicationResponse extends Response {
         private Builder(DeleteBucketReplicationResponse response) {
             super(response);
             this.headers = response.headers;
-            this.body = response.body;
         } 
 
         /**
@@ -71,14 +57,6 @@ public class DeleteBucketReplicationResponse extends Response {
          */
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
-            return this;
-        }
-
-        /**
-         * <p>body.</p>
-         */
-        public Builder body(DeleteBucketReplicationResponseBody body) {
-            this.body = body;
             return this;
         }
 

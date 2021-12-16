@@ -11,24 +11,24 @@ import darabonba.core.TeaModel;
  * <p>PutLiveChannelRequest</p>
  */
 public class PutLiveChannelRequest extends Request {
-    @Host
-    @NameInMap("bucket")
-    private String bucket;
-
     @Path
     @NameInMap("channel")
     private String channel;
 
     @Body
-    @NameInMap("liveChannelConfiguration")
+    @NameInMap("LiveChannelConfiguration")
     private LiveChannelConfiguration liveChannelConfiguration;
+
+    @Host
+    @NameInMap("bucket")
+    private String bucket;
 
 
     private PutLiveChannelRequest(Builder builder) {
         super(builder);
-        this.bucket = builder.bucket;
         this.channel = builder.channel;
         this.liveChannelConfiguration = builder.liveChannelConfiguration;
+        this.bucket = builder.bucket;
     }
 
     public static Builder builder() {
@@ -40,39 +40,30 @@ public class PutLiveChannelRequest extends Request {
     }
 
     /**
-     * @return bucket
-     */
-    public String bucket() {
-        return this.bucket;
-    }
-
-    /**
      * @return channel
      */
-    public String channel() {
+    public String getChannel() {
         return this.channel;
     }
 
     /**
      * @return liveChannelConfiguration
      */
-    public LiveChannelConfiguration liveChannelConfiguration() {
+    public LiveChannelConfiguration getLiveChannelConfiguration() {
         return this.liveChannelConfiguration;
     }
 
-    public static final class Builder extends Request.Builder<PutLiveChannelRequest.Builder> {
-        private String bucket; 
+    /**
+     * @return bucket
+     */
+    public String getBucket() {
+        return this.bucket;
+    }
+
+    public static final class Builder extends Request.Builder<Builder> {
         private String channel; 
         private LiveChannelConfiguration liveChannelConfiguration; 
-
-        /**
-         * <p>bucket.</p>
-         */
-        public Builder bucket(String bucket) {
-            this.putHostParameter("bucket", bucket);
-            this.bucket = bucket;
-            return this;
-        }
+        private String bucket; 
 
         /**
          * <p>channel.</p>
@@ -84,11 +75,20 @@ public class PutLiveChannelRequest extends Request {
         }
 
         /**
-         * <p>liveChannelConfiguration.</p>
+         * <p>LiveChannelConfiguration.</p>
          */
         public Builder liveChannelConfiguration(LiveChannelConfiguration liveChannelConfiguration) {
-            this.putBodyParameter("liveChannelConfiguration", liveChannelConfiguration);
+            this.putBodyParameter("LiveChannelConfiguration", liveChannelConfiguration);
             this.liveChannelConfiguration = liveChannelConfiguration;
+            return this;
+        }
+
+        /**
+         * <p>bucket.</p>
+         */
+        public Builder bucket(String bucket) {
+            this.putHostParameter("bucket", bucket);
+            this.bucket = bucket;
             return this;
         }
 

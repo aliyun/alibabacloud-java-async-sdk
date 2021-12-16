@@ -30,7 +30,7 @@ public class LifecycleConfiguration extends TeaModel {
     /**
      * @return rule
      */
-    public java.util.List < LifecycleRule > rule() {
+    public java.util.List < LifecycleRule > getRule() {
         return this.rule;
     }
 

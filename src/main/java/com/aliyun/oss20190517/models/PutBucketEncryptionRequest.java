@@ -11,19 +11,19 @@ import darabonba.core.TeaModel;
  * <p>PutBucketEncryptionRequest</p>
  */
 public class PutBucketEncryptionRequest extends Request {
+    @Body
+    @NameInMap("ServerSideEncryptionRule")
+    private ServerSideEncryptionRule serverSideEncryptionRule;
+
     @Host
     @NameInMap("bucket")
     private String bucket;
 
-    @Body
-    @NameInMap("serverSideEncryptionRule")
-    private ServerSideEncryptionRule serverSideEncryptionRule;
-
 
     private PutBucketEncryptionRequest(Builder builder) {
         super(builder);
-        this.bucket = builder.bucket;
         this.serverSideEncryptionRule = builder.serverSideEncryptionRule;
+        this.bucket = builder.bucket;
     }
 
     public static Builder builder() {
@@ -35,22 +35,31 @@ public class PutBucketEncryptionRequest extends Request {
     }
 
     /**
-     * @return bucket
-     */
-    public String bucket() {
-        return this.bucket;
-    }
-
-    /**
      * @return serverSideEncryptionRule
      */
-    public ServerSideEncryptionRule serverSideEncryptionRule() {
+    public ServerSideEncryptionRule getServerSideEncryptionRule() {
         return this.serverSideEncryptionRule;
     }
 
-    public static final class Builder extends Request.Builder<PutBucketEncryptionRequest.Builder> {
-        private String bucket; 
+    /**
+     * @return bucket
+     */
+    public String getBucket() {
+        return this.bucket;
+    }
+
+    public static final class Builder extends Request.Builder<Builder> {
         private ServerSideEncryptionRule serverSideEncryptionRule; 
+        private String bucket; 
+
+        /**
+         * <p>ServerSideEncryptionRule.</p>
+         */
+        public Builder serverSideEncryptionRule(ServerSideEncryptionRule serverSideEncryptionRule) {
+            this.putBodyParameter("ServerSideEncryptionRule", serverSideEncryptionRule);
+            this.serverSideEncryptionRule = serverSideEncryptionRule;
+            return this;
+        }
 
         /**
          * <p>bucket.</p>
@@ -58,15 +67,6 @@ public class PutBucketEncryptionRequest extends Request {
         public Builder bucket(String bucket) {
             this.putHostParameter("bucket", bucket);
             this.bucket = bucket;
-            return this;
-        }
-
-        /**
-         * <p>serverSideEncryptionRule.</p>
-         */
-        public Builder serverSideEncryptionRule(ServerSideEncryptionRule serverSideEncryptionRule) {
-            this.putBodyParameter("serverSideEncryptionRule", serverSideEncryptionRule);
-            this.serverSideEncryptionRule = serverSideEncryptionRule;
             return this;
         }
 

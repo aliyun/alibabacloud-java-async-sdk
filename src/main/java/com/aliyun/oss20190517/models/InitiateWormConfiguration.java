@@ -30,7 +30,7 @@ public class InitiateWormConfiguration extends TeaModel {
     /**
      * @return retentionPeriodInDays
      */
-    public Integer retentionPeriodInDays() {
+    public Integer getRetentionPeriodInDays() {
         return this.retentionPeriodInDays;
     }
 

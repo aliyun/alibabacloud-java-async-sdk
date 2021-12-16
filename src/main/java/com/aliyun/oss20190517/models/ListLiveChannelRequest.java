@@ -47,32 +47,32 @@ public class ListLiveChannelRequest extends Request {
     /**
      * @return bucket
      */
-    public String bucket() {
+    public String getBucket() {
         return this.bucket;
     }
 
     /**
      * @return marker
      */
-    public String marker() {
+    public String getMarker() {
         return this.marker;
     }
 
     /**
      * @return maxKeys
      */
-    public Long maxKeys() {
+    public Long getMaxKeys() {
         return this.maxKeys;
     }
 
     /**
      * @return prefix
      */
-    public String prefix() {
+    public String getPrefix() {
         return this.prefix;
     }
 
-    public static final class Builder extends Request.Builder<ListLiveChannelRequest.Builder> {
+    public static final class Builder extends Request.Builder<Builder> {
         private String bucket; 
         private String marker; 
         private Long maxKeys; 

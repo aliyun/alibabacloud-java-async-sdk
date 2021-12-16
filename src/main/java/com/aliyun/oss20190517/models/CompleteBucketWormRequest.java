@@ -37,18 +37,18 @@ public class CompleteBucketWormRequest extends Request {
     /**
      * @return bucket
      */
-    public String bucket() {
+    public String getBucket() {
         return this.bucket;
     }
 
     /**
      * @return wormId
      */
-    public String wormId() {
+    public String getWormId() {
         return this.wormId;
     }
 
-    public static final class Builder extends Request.Builder<CompleteBucketWormRequest.Builder> {
+    public static final class Builder extends Request.Builder<Builder> {
         private String bucket; 
         private String wormId; 
 

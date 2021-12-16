@@ -11,34 +11,39 @@ import darabonba.core.TeaModel;
  * <p>PutSymlinkRequest</p>
  */
 public class PutSymlinkRequest extends Request {
+    @Path
+    @NameInMap("key")
+    private String key;
+
     @Host
     @NameInMap("bucket")
     private String bucket;
 
-    @Path
-    @NameInMap("key")
-    private String key;
+    @Header
+    @NameInMap("x-oss-forbid-overwrite")
+    private String forbidOverwrite;
+
+    @Header
+    @NameInMap("x-oss-object-acl")
+    private ObjectACL acl;
+
+    @Header
+    @NameInMap("x-oss-storage-class")
+    private StorageClass storageClass;
 
     @Header
     @NameInMap("x-oss-symlink-target")
     private String symlinkTargetKey;
 
-    @Header
-    @NameInMap("x-oss-object-acl")
-    private String acl;
-
-    @Header
-    @NameInMap("x-oss-storage-class")
-    private String storageClass;
-
 
     private PutSymlinkRequest(Builder builder) {
         super(builder);
-        this.bucket = builder.bucket;
         this.key = builder.key;
-        this.symlinkTargetKey = builder.symlinkTargetKey;
+        this.bucket = builder.bucket;
+        this.forbidOverwrite = builder.forbidOverwrite;
         this.acl = builder.acl;
         this.storageClass = builder.storageClass;
+        this.symlinkTargetKey = builder.symlinkTargetKey;
     }
 
     public static Builder builder() {
@@ -50,55 +55,54 @@ public class PutSymlinkRequest extends Request {
     }
 
     /**
-     * @return bucket
-     */
-    public String bucket() {
-        return this.bucket;
-    }
-
-    /**
      * @return key
      */
-    public String key() {
+    public String getKey() {
         return this.key;
     }
 
     /**
-     * @return symlinkTargetKey
+     * @return bucket
      */
-    public String symlinkTargetKey() {
-        return this.symlinkTargetKey;
+    public String getBucket() {
+        return this.bucket;
+    }
+
+    /**
+     * @return forbidOverwrite
+     */
+    public String getForbidOverwrite() {
+        return this.forbidOverwrite;
     }
 
     /**
      * @return acl
      */
-    public String acl() {
+    public ObjectACL getAcl() {
         return this.acl;
     }
 
     /**
      * @return storageClass
      */
-    public String storageClass() {
+    public StorageClass getStorageClass() {
         return this.storageClass;
     }
 
-    public static final class Builder extends Request.Builder<PutSymlinkRequest.Builder> {
-        private String bucket; 
-        private String key; 
-        private String symlinkTargetKey; 
-        private String acl; 
-        private String storageClass; 
+    /**
+     * @return symlinkTargetKey
+     */
+    public String getSymlinkTargetKey() {
+        return this.symlinkTargetKey;
+    }
 
-        /**
-         * <p>bucket.</p>
-         */
-        public Builder bucket(String bucket) {
-            this.putHostParameter("bucket", bucket);
-            this.bucket = bucket;
-            return this;
-        }
+    public static final class Builder extends Request.Builder<Builder> {
+        private String key; 
+        private String bucket; 
+        private String forbidOverwrite; 
+        private ObjectACL acl; 
+        private StorageClass storageClass; 
+        private String symlinkTargetKey; 
 
         /**
          * <p>key.</p>
@@ -110,18 +114,27 @@ public class PutSymlinkRequest extends Request {
         }
 
         /**
-         * <p>x-oss-symlink-target.</p>
+         * <p>bucket.</p>
          */
-        public Builder symlinkTargetKey(String symlinkTargetKey) {
-            this.putHeaderParameter("x-oss-symlink-target", symlinkTargetKey);
-            this.symlinkTargetKey = symlinkTargetKey;
+        public Builder bucket(String bucket) {
+            this.putHostParameter("bucket", bucket);
+            this.bucket = bucket;
+            return this;
+        }
+
+        /**
+         * <p>x-oss-forbid-overwrite.</p>
+         */
+        public Builder forbidOverwrite(String forbidOverwrite) {
+            this.putHeaderParameter("x-oss-forbid-overwrite", forbidOverwrite);
+            this.forbidOverwrite = forbidOverwrite;
             return this;
         }
 
         /**
          * <p>x-oss-object-acl.</p>
          */
-        public Builder acl(String acl) {
+        public Builder acl(ObjectACL acl) {
             this.putHeaderParameter("x-oss-object-acl", acl);
             this.acl = acl;
             return this;
@@ -130,9 +143,18 @@ public class PutSymlinkRequest extends Request {
         /**
          * <p>x-oss-storage-class.</p>
          */
-        public Builder storageClass(String storageClass) {
+        public Builder storageClass(StorageClass storageClass) {
             this.putHeaderParameter("x-oss-storage-class", storageClass);
             this.storageClass = storageClass;
+            return this;
+        }
+
+        /**
+         * <p>x-oss-symlink-target.</p>
+         */
+        public Builder symlinkTargetKey(String symlinkTargetKey) {
+            this.putHeaderParameter("x-oss-symlink-target", symlinkTargetKey);
+            this.symlinkTargetKey = symlinkTargetKey;
             return this;
         }
 

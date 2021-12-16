@@ -11,24 +11,29 @@ import darabonba.core.TeaModel;
  * <p>RestoreObjectRequest</p>
  */
 public class RestoreObjectRequest extends Request {
-    @Host
-    @NameInMap("bucket")
-    private String bucket;
-
     @Path
     @NameInMap("key")
     private String key;
 
     @Body
-    @NameInMap("restoreRequest")
-    private RestoreRequest restoreRequest;
+    @NameInMap("body")
+    private RestoreRequest body;
+
+    @Host
+    @NameInMap("bucket")
+    private String bucket;
+
+    @Query
+    @NameInMap("versionId")
+    private String versionId;
 
 
     private RestoreObjectRequest(Builder builder) {
         super(builder);
-        this.bucket = builder.bucket;
         this.key = builder.key;
-        this.restoreRequest = builder.restoreRequest;
+        this.body = builder.body;
+        this.bucket = builder.bucket;
+        this.versionId = builder.versionId;
     }
 
     public static Builder builder() {
@@ -40,39 +45,38 @@ public class RestoreObjectRequest extends Request {
     }
 
     /**
-     * @return bucket
-     */
-    public String bucket() {
-        return this.bucket;
-    }
-
-    /**
      * @return key
      */
-    public String key() {
+    public String getKey() {
         return this.key;
     }
 
     /**
-     * @return restoreRequest
+     * @return body
      */
-    public RestoreRequest restoreRequest() {
-        return this.restoreRequest;
+    public RestoreRequest getBody() {
+        return this.body;
     }
 
-    public static final class Builder extends Request.Builder<RestoreObjectRequest.Builder> {
-        private String bucket; 
-        private String key; 
-        private RestoreRequest restoreRequest; 
+    /**
+     * @return bucket
+     */
+    public String getBucket() {
+        return this.bucket;
+    }
 
-        /**
-         * <p>bucket.</p>
-         */
-        public Builder bucket(String bucket) {
-            this.putHostParameter("bucket", bucket);
-            this.bucket = bucket;
-            return this;
-        }
+    /**
+     * @return versionId
+     */
+    public String getVersionId() {
+        return this.versionId;
+    }
+
+    public static final class Builder extends Request.Builder<Builder> {
+        private String key; 
+        private RestoreRequest body; 
+        private String bucket; 
+        private String versionId; 
 
         /**
          * <p>key.</p>
@@ -84,11 +88,29 @@ public class RestoreObjectRequest extends Request {
         }
 
         /**
-         * <p>restoreRequest.</p>
+         * <p>body.</p>
          */
-        public Builder restoreRequest(RestoreRequest restoreRequest) {
-            this.putBodyParameter("restoreRequest", restoreRequest);
-            this.restoreRequest = restoreRequest;
+        public Builder body(RestoreRequest body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
+            return this;
+        }
+
+        /**
+         * <p>bucket.</p>
+         */
+        public Builder bucket(String bucket) {
+            this.putHostParameter("bucket", bucket);
+            this.bucket = bucket;
+            return this;
+        }
+
+        /**
+         * <p>versionId.</p>
+         */
+        public Builder versionId(String versionId) {
+            this.putQueryParameter("versionId", versionId);
+            this.versionId = versionId;
             return this;
         }
 

@@ -11,20 +11,20 @@ import darabonba.core.TeaModel;
  * <p>ObjectVersion</p>
  */
 public class ObjectVersion extends TeaModel {
-    @NameInMap("Key")
-    private String key;
-
-    @NameInMap("VersionId")
-    private String versionId;
+    @NameInMap("ETag")
+    private String ETag;
 
     @NameInMap("IsLatest")
     private Boolean isLatest;
 
+    @NameInMap("Key")
+    private String key;
+
     @NameInMap("LastModified")
     private String lastModified;
 
-    @NameInMap("ETag")
-    private String ETag;
+    @NameInMap("Owner")
+    private Owner owner;
 
     @NameInMap("Size")
     private Long size;
@@ -32,19 +32,19 @@ public class ObjectVersion extends TeaModel {
     @NameInMap("StorageClass")
     private StorageClass storageClass;
 
-    @NameInMap("Owner")
-    private Owner owner;
+    @NameInMap("VersionId")
+    private String versionId;
 
 
     private ObjectVersion(Builder builder) {
-        this.key = builder.key;
-        this.versionId = builder.versionId;
-        this.isLatest = builder.isLatest;
-        this.lastModified = builder.lastModified;
         this.ETag = builder.ETag;
+        this.isLatest = builder.isLatest;
+        this.key = builder.key;
+        this.lastModified = builder.lastModified;
+        this.owner = builder.owner;
         this.size = builder.size;
         this.storageClass = builder.storageClass;
-        this.owner = builder.owner;
+        this.versionId = builder.versionId;
     }
 
     public static Builder builder() {
@@ -56,84 +56,76 @@ public class ObjectVersion extends TeaModel {
     }
 
     /**
-     * @return key
+     * @return ETag
      */
-    public String key() {
-        return this.key;
-    }
-
-    /**
-     * @return versionId
-     */
-    public String versionId() {
-        return this.versionId;
+    public String getETag() {
+        return this.ETag;
     }
 
     /**
      * @return isLatest
      */
-    public Boolean isLatest() {
+    public Boolean getIsLatest() {
         return this.isLatest;
+    }
+
+    /**
+     * @return key
+     */
+    public String getKey() {
+        return this.key;
     }
 
     /**
      * @return lastModified
      */
-    public String lastModified() {
+    public String getLastModified() {
         return this.lastModified;
     }
 
     /**
-     * @return ETag
+     * @return owner
      */
-    public String ETag() {
-        return this.ETag;
+    public Owner getOwner() {
+        return this.owner;
     }
 
     /**
      * @return size
      */
-    public Long size() {
+    public Long getSize() {
         return this.size;
     }
 
     /**
      * @return storageClass
      */
-    public StorageClass storageClass() {
+    public StorageClass getStorageClass() {
         return this.storageClass;
     }
 
     /**
-     * @return owner
+     * @return versionId
      */
-    public Owner owner() {
-        return this.owner;
+    public String getVersionId() {
+        return this.versionId;
     }
 
     public static final class Builder {
-        private String key; 
-        private String versionId; 
-        private Boolean isLatest; 
-        private String lastModified; 
         private String ETag; 
+        private Boolean isLatest; 
+        private String key; 
+        private String lastModified; 
+        private Owner owner; 
         private Long size; 
         private StorageClass storageClass; 
-        private Owner owner; 
+        private String versionId; 
 
         /**
-         * <p>The name of the object</p>
+         * <p>The entity tag</p>
          */
-        public Builder key(String key) {
-            this.key = key;
-            return this;
-        }
-
-        /**
-         * <p>The version ID of the object</p>
-         */
-        public Builder versionId(String versionId) {
-            this.versionId = versionId;
+        public Builder ETag(String ETag) {
+            this.ETag = ETag;
             return this;
         }
 
@@ -146,6 +138,14 @@ public class ObjectVersion extends TeaModel {
         }
 
         /**
+         * <p>The name of the object</p>
+         */
+        public Builder key(String key) {
+            this.key = key;
+            return this;
+        }
+
+        /**
          * <p>The last modified time of the object</p>
          */
         public Builder lastModified(String lastModified) {
@@ -154,10 +154,10 @@ public class ObjectVersion extends TeaModel {
         }
 
         /**
-         * <p>The entity tag</p>
+         * <p>The information about the bucket owner</p>
          */
-        public Builder ETag(String ETag) {
-            this.ETag = ETag;
+        public Builder owner(Owner owner) {
+            this.owner = owner;
             return this;
         }
 
@@ -178,10 +178,10 @@ public class ObjectVersion extends TeaModel {
         }
 
         /**
-         * <p>The information about the bucket owner</p>
+         * <p>The version ID of the object</p>
          */
-        public Builder owner(Owner owner) {
-            this.owner = owner;
+        public Builder versionId(String versionId) {
+            this.versionId = versionId;
             return this;
         }
 

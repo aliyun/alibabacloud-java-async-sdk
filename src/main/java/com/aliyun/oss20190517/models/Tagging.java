@@ -12,7 +12,7 @@ import darabonba.core.TeaModel;
  */
 public class Tagging extends TeaModel {
     @NameInMap("TagSet")
-    private java.util.List < Tag > tagSet;
+    private TagSet tagSet;
 
 
     private Tagging(Builder builder) {
@@ -30,17 +30,17 @@ public class Tagging extends TeaModel {
     /**
      * @return tagSet
      */
-    public java.util.List < Tag > tagSet() {
+    public TagSet getTagSet() {
         return this.tagSet;
     }
 
     public static final class Builder {
-        private java.util.List < Tag > tagSet; 
+        private TagSet tagSet; 
 
         /**
-         * <p>Tag 的容器</p>
+         * <p>the container of tags</p>
          */
-        public Builder tagSet(java.util.List < Tag > tagSet) {
+        public Builder tagSet(TagSet tagSet) {
             this.tagSet = tagSet;
             return this;
         }

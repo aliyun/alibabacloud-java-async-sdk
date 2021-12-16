@@ -41,21 +41,21 @@ public class ListBucketInventoryResponseBody extends TeaModel {
     /**
      * @return inventoryConfigurations
      */
-    public java.util.List < InventoryConfiguration > inventoryConfigurations() {
+    public java.util.List < InventoryConfiguration > getInventoryConfigurations() {
         return this.inventoryConfigurations;
     }
 
     /**
      * @return isTruncated
      */
-    public Boolean isTruncated() {
+    public Boolean getIsTruncated() {
         return this.isTruncated;
     }
 
     /**
      * @return nextContinuationToken
      */
-    public String nextContinuationToken() {
+    public String getNextContinuationToken() {
         return this.nextContinuationToken;
     }
 

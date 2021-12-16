@@ -11,17 +11,17 @@ import darabonba.core.TeaModel;
  * <p>ListPartsRequest</p>
  */
 public class ListPartsRequest extends Request {
-    @Host
-    @NameInMap("bucket")
-    private String bucket;
-
     @Path
     @NameInMap("key")
     private String key;
 
+    @Host
+    @NameInMap("bucket")
+    private String bucket;
+
     @Query
-    @NameInMap("UploadId")
-    private String uploadId;
+    @NameInMap("encoding-type")
+    private EncodeType encodingType;
 
     @Query
     @NameInMap("max-parts")
@@ -32,18 +32,18 @@ public class ListPartsRequest extends Request {
     private Long partNumberMarker;
 
     @Query
-    @NameInMap("encoding-type")
-    private String encodingType;
+    @NameInMap("uploadId")
+    private String uploadId;
 
 
     private ListPartsRequest(Builder builder) {
         super(builder);
-        this.bucket = builder.bucket;
         this.key = builder.key;
-        this.uploadId = builder.uploadId;
+        this.bucket = builder.bucket;
+        this.encodingType = builder.encodingType;
         this.maxParts = builder.maxParts;
         this.partNumberMarker = builder.partNumberMarker;
-        this.encodingType = builder.encodingType;
+        this.uploadId = builder.uploadId;
     }
 
     public static Builder builder() {
@@ -55,63 +55,54 @@ public class ListPartsRequest extends Request {
     }
 
     /**
-     * @return bucket
-     */
-    public String bucket() {
-        return this.bucket;
-    }
-
-    /**
      * @return key
      */
-    public String key() {
+    public String getKey() {
         return this.key;
     }
 
     /**
-     * @return uploadId
+     * @return bucket
      */
-    public String uploadId() {
-        return this.uploadId;
+    public String getBucket() {
+        return this.bucket;
+    }
+
+    /**
+     * @return encodingType
+     */
+    public EncodeType getEncodingType() {
+        return this.encodingType;
     }
 
     /**
      * @return maxParts
      */
-    public Long maxParts() {
+    public Long getMaxParts() {
         return this.maxParts;
     }
 
     /**
      * @return partNumberMarker
      */
-    public Long partNumberMarker() {
+    public Long getPartNumberMarker() {
         return this.partNumberMarker;
     }
 
     /**
-     * @return encodingType
+     * @return uploadId
      */
-    public String encodingType() {
-        return this.encodingType;
+    public String getUploadId() {
+        return this.uploadId;
     }
 
-    public static final class Builder extends Request.Builder<ListPartsRequest.Builder> {
-        private String bucket; 
+    public static final class Builder extends Request.Builder<Builder> {
         private String key; 
-        private String uploadId; 
+        private String bucket; 
+        private EncodeType encodingType; 
         private Long maxParts; 
         private Long partNumberMarker; 
-        private String encodingType; 
-
-        /**
-         * <p>bucket.</p>
-         */
-        public Builder bucket(String bucket) {
-            this.putHostParameter("bucket", bucket);
-            this.bucket = bucket;
-            return this;
-        }
+        private String uploadId; 
 
         /**
          * <p>key.</p>
@@ -123,11 +114,20 @@ public class ListPartsRequest extends Request {
         }
 
         /**
-         * <p>UploadId.</p>
+         * <p>bucket.</p>
          */
-        public Builder uploadId(String uploadId) {
-            this.putQueryParameter("UploadId", uploadId);
-            this.uploadId = uploadId;
+        public Builder bucket(String bucket) {
+            this.putHostParameter("bucket", bucket);
+            this.bucket = bucket;
+            return this;
+        }
+
+        /**
+         * <p>encoding-type.</p>
+         */
+        public Builder encodingType(EncodeType encodingType) {
+            this.putQueryParameter("encoding-type", encodingType);
+            this.encodingType = encodingType;
             return this;
         }
 
@@ -150,11 +150,11 @@ public class ListPartsRequest extends Request {
         }
 
         /**
-         * <p>encoding-type.</p>
+         * <p>uploadId.</p>
          */
-        public Builder encodingType(String encodingType) {
-            this.putQueryParameter("encoding-type", encodingType);
-            this.encodingType = encodingType;
+        public Builder uploadId(String uploadId) {
+            this.putQueryParameter("uploadId", uploadId);
+            this.uploadId = uploadId;
             return this;
         }
 

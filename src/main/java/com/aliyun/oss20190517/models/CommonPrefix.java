@@ -30,7 +30,7 @@ public class CommonPrefix extends TeaModel {
     /**
      * @return prefix
      */
-    public String prefix() {
+    public String getPrefix() {
         return this.prefix;
     }
 

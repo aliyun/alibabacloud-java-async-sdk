@@ -11,19 +11,19 @@ import darabonba.core.TeaModel;
  * <p>PutBucketLifecycleRequest</p>
  */
 public class PutBucketLifecycleRequest extends Request {
-    @Host
-    @NameInMap("bucket")
-    private String bucket;
-
     @Body
     @NameInMap("LifecycleConfiguration")
     private LifecycleConfiguration lifecycleConfiguration;
 
+    @Host
+    @NameInMap("bucket")
+    private String bucket;
+
 
     private PutBucketLifecycleRequest(Builder builder) {
         super(builder);
-        this.bucket = builder.bucket;
         this.lifecycleConfiguration = builder.lifecycleConfiguration;
+        this.bucket = builder.bucket;
     }
 
     public static Builder builder() {
@@ -35,31 +35,22 @@ public class PutBucketLifecycleRequest extends Request {
     }
 
     /**
-     * @return bucket
-     */
-    public String bucket() {
-        return this.bucket;
-    }
-
-    /**
      * @return lifecycleConfiguration
      */
-    public LifecycleConfiguration lifecycleConfiguration() {
+    public LifecycleConfiguration getLifecycleConfiguration() {
         return this.lifecycleConfiguration;
     }
 
-    public static final class Builder extends Request.Builder<PutBucketLifecycleRequest.Builder> {
-        private String bucket; 
-        private LifecycleConfiguration lifecycleConfiguration; 
+    /**
+     * @return bucket
+     */
+    public String getBucket() {
+        return this.bucket;
+    }
 
-        /**
-         * <p>bucket.</p>
-         */
-        public Builder bucket(String bucket) {
-            this.putHostParameter("bucket", bucket);
-            this.bucket = bucket;
-            return this;
-        }
+    public static final class Builder extends Request.Builder<Builder> {
+        private LifecycleConfiguration lifecycleConfiguration; 
+        private String bucket; 
 
         /**
          * <p>LifecycleConfiguration.</p>
@@ -67,6 +58,15 @@ public class PutBucketLifecycleRequest extends Request {
         public Builder lifecycleConfiguration(LifecycleConfiguration lifecycleConfiguration) {
             this.putBodyParameter("LifecycleConfiguration", lifecycleConfiguration);
             this.lifecycleConfiguration = lifecycleConfiguration;
+            return this;
+        }
+
+        /**
+         * <p>bucket.</p>
+         */
+        public Builder bucket(String bucket) {
+            this.putHostParameter("bucket", bucket);
+            this.bucket = bucket;
             return this;
         }
 

@@ -41,14 +41,14 @@ public class GetBucketVersioningResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > headers() {
+    public java.util.Map < String, String > getHeaders() {
         return this.headers;
     }
 
     /**
      * @return body
      */
-    public GetBucketVersioningResponseBody body() {
+    public GetBucketVersioningResponseBody getBody() {
         return this.body;
     }
 

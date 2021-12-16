@@ -11,18 +11,18 @@ import darabonba.core.TeaModel;
  * <p>ListBucketsResponseBody</p>
  */
 public class ListBucketsResponseBody extends TeaModel {
-    @ParentIgnore("ListAllMyBucketsResult")
-    @NameInMap("Owner")
-    private Owner owner;
-
     @ParentIgnore("ListAllMyBucketsResult,Buckets")
     @NameInMap("Bucket")
     private java.util.List < Bucket > buckets;
 
+    @ParentIgnore("ListAllMyBucketsResult")
+    @NameInMap("Owner")
+    private Owner owner;
+
 
     private ListBucketsResponseBody(Builder builder) {
-        this.owner = builder.owner;
         this.buckets = builder.buckets;
+        this.owner = builder.owner;
     }
 
     public static Builder builder() {
@@ -34,36 +34,36 @@ public class ListBucketsResponseBody extends TeaModel {
     }
 
     /**
-     * @return owner
-     */
-    public Owner owner() {
-        return this.owner;
-    }
-
-    /**
      * @return buckets
      */
-    public java.util.List < Bucket > buckets() {
+    public java.util.List < Bucket > getBuckets() {
         return this.buckets;
     }
 
-    public static final class Builder {
-        private Owner owner; 
-        private java.util.List < Bucket > buckets; 
+    /**
+     * @return owner
+     */
+    public Owner getOwner() {
+        return this.owner;
+    }
 
-        /**
-         * <p>Owner.</p>
-         */
-        public Builder owner(Owner owner) {
-            this.owner = owner;
-            return this;
-        }
+    public static final class Builder {
+        private java.util.List < Bucket > buckets; 
+        private Owner owner; 
 
         /**
          * <p>Bucket.</p>
          */
         public Builder buckets(java.util.List < Bucket > buckets) {
             this.buckets = buckets;
+            return this;
+        }
+
+        /**
+         * <p>Owner.</p>
+         */
+        public Builder owner(Owner owner) {
+            this.owner = owner;
             return this;
         }
 

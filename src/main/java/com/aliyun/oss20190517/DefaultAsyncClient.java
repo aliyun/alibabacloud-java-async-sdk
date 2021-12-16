@@ -4,8 +4,10 @@ package com.aliyun.oss20190517;
 import com.aliyun.core.http.*;
 import com.aliyun.oss20190517.models.*;
 import darabonba.core.utils.*;
+import com.aliyun.oss.*;
 import darabonba.core.*;
-import darabonba.core.internal.async.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
 import darabonba.core.client.*;
 
 import java.util.concurrent.CompletableFuture;
@@ -64,7 +66,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<AppendObjectResponse> appendObject(AppendObjectRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("AppendObject").setMethod(HttpMethod.POST).setPathRegex("/{key}?append").setBodyType(BodyType.XML).setBodyIsForm(true).setReqBodyType(BodyType.BINARY).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("AppendObject").setMethod(HttpMethod.POST).setPathRegex("/{key}?append").setBodyType(BodyType.XML).setBodyIsForm(false).setReqBodyType(BodyType.BINARY).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AppendObjectResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -75,11 +77,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
-    public CompletableFuture<AppendObjectResponse> appendObjectWithRequestBody(AppendObjectRequest request, AsyncRequestBody requestBody) {
+    public CompletableFuture<AppendObjectResponse> appendObjectWithRequestBody(AppendObjectRequest request, RequestBody requestBody) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("AppendObject").setMethod(HttpMethod.POST).setPathRegex("/{key}?append").setBodyType(BodyType.XML).setBodyIsForm(true).setReqBodyType(BodyType.BINARY).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AppendObjectResponse.create());
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("AppendObject").setMethod(HttpMethod.POST).setPathRegex("/{key}?append").setBodyType(BodyType.XML).setBodyIsForm(false).setReqBodyType(BodyType.BINARY).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withRequestBody(requestBody).withOutput(AppendObjectResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<AppendObjectResponse> future = new CompletableFuture<>();
@@ -122,6 +124,20 @@ public final class DefaultAsyncClient implements AsyncClient {
             this.handler.validateRequestModel(request);
             TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CopyObject").setMethod(HttpMethod.PUT).setPathRegex("/{key}").setBodyType(BodyType.XML).setBodyIsForm(false).setReqBodyType(BodyType.BINARY).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CopyObjectResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CopyObjectResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<CopyObjectResponse> copyObjectWithRequestBody(CopyObjectRequest request, RequestBody requestBody) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CopyObject").setMethod(HttpMethod.PUT).setPathRegex("/{key}").setBodyType(BodyType.XML).setBodyIsForm(false).setReqBodyType(BodyType.BINARY).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withRequestBody(requestBody).withOutput(CopyObjectResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CopyObjectResponse> future = new CompletableFuture<>();
@@ -313,6 +329,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<DeleteObjectResponse> deleteObjectWithRequestBody(DeleteObjectRequest request, RequestBody requestBody) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteObject").setMethod(HttpMethod.DELETE).setPathRegex("/{key}").setBodyType(BodyType.BINARY).setBodyIsForm(false).setReqBodyType(BodyType.BINARY).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withRequestBody(requestBody).withOutput(DeleteObjectResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteObjectResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
     public CompletableFuture<DeleteObjectTaggingResponse> deleteObjectTagging(DeleteObjectTaggingRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -428,7 +458,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<GetBucketLifecycleResponse> getBucketLifecycle(GetBucketLifecycleRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetBucketLifecycle").setMethod(HttpMethod.GET).setPathRegex("/?lifecycle ").setBodyType(BodyType.XML).setBodyIsForm(false).setReqBodyType(BodyType.XML).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetBucketLifecycle").setMethod(HttpMethod.GET).setPathRegex("/?lifecycle").setBodyType(BodyType.XML).setBodyIsForm(false).setReqBodyType(BodyType.XML).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetBucketLifecycleResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -568,7 +598,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<GetBucketTransferAccelerationResponse> getBucketTransferAcceleration(GetBucketTransferAccelerationRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetBucketTransferAcceleration").setMethod(HttpMethod.GET).setPathRegex("/?transferAcceleration ").setBodyType(BodyType.XML).setBodyIsForm(false).setReqBodyType(BodyType.XML).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetBucketTransferAcceleration").setMethod(HttpMethod.GET).setPathRegex("/?transferAcceleration").setBodyType(BodyType.XML).setBodyIsForm(false).setReqBodyType(BodyType.XML).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetBucketTransferAccelerationResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -596,7 +626,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<GetBucketWebsiteResponse> getBucketWebsite(GetBucketWebsiteRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetBucketWebsite").setMethod(HttpMethod.POST).setPathRegex("/?website").setBodyType(BodyType.XML).setBodyIsForm(false).setReqBodyType(BodyType.XML).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetBucketWebsite").setMethod(HttpMethod.GET).setPathRegex("/?website").setBodyType(BodyType.XML).setBodyIsForm(false).setReqBodyType(BodyType.XML).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetBucketWebsiteResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -666,7 +696,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<GetObjectResponse> getObject(GetObjectRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetObject").setMethod(HttpMethod.GET).setPathRegex("/{key}").setBodyType(BodyType.BINARY).setBodyIsForm(false).setReqBodyType(BodyType.BINARY).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetObject").setMethod(HttpMethod.GET).setPathRegex("/{key}").setBodyType(BodyType.BINARY).setBodyIsForm(false).setReqBodyType(BodyType.XML).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetObjectResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -705,6 +735,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<GetObjectMetaResponse> getObjectMetaWithRequestBody(GetObjectMetaRequest request, RequestBody requestBody) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetObjectMeta").setMethod(HttpMethod.HEAD).setPathRegex("/{key}?objectMeta").setBodyType(BodyType.XML).setBodyIsForm(false).setReqBodyType(BodyType.BINARY).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withRequestBody(requestBody).withOutput(GetObjectMetaResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetObjectMetaResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
     public CompletableFuture<GetObjectTaggingResponse> getObjectTagging(GetObjectTaggingRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -722,7 +766,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<GetServiceResponse> getService(GetServiceRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetService").setMethod(HttpMethod.GET).setPathRegex("/ ").setBodyType(BodyType.XML).setBodyIsForm(false).setReqBodyType(BodyType.XML).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetService").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.XML).setBodyIsForm(false).setReqBodyType(BodyType.XML).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetServiceResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -778,7 +822,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<InitiateBucketWormResponse> initiateBucketWorm(InitiateBucketWormRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("InitiateBucketWorm").setMethod(HttpMethod.POST).setPathRegex("/?worm").setBodyType(BodyType.XML).setBodyIsForm(true).setReqBodyType(BodyType.XML).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("InitiateBucketWorm").setMethod(HttpMethod.POST).setPathRegex("/?worm").setBodyType(BodyType.XML).setBodyIsForm(false).setReqBodyType(BodyType.XML).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(InitiateBucketWormResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -820,7 +864,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<ListBucketsResponse> listBuckets(ListBucketsRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListBuckets").setMethod(HttpMethod.GET).setPathRegex("/ ").setBodyType(BodyType.XML).setBodyIsForm(false).setReqBodyType(BodyType.XML).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListBuckets").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.XML).setBodyIsForm(false).setReqBodyType(BodyType.XML).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListBucketsResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -859,6 +903,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<ListObjectVersionsResponse> listObjectVersions(ListObjectVersionsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListObjectVersions").setMethod(HttpMethod.GET).setPathRegex("/?versions").setBodyType(BodyType.XML).setBodyIsForm(false).setReqBodyType(BodyType.XML).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListObjectVersionsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListObjectVersionsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
     public CompletableFuture<ListObjectsResponse> listObjects(ListObjectsRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -881,20 +939,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListObjectsV2Response> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<ListObjectVersionsResponse> listObjectVersions(ListObjectVersionsRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListObjectVersions").setMethod(HttpMethod.GET).setPathRegex("/?versions").setBodyType(BodyType.XML).setBodyIsForm(false).setReqBodyType(BodyType.XML).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListObjectVersionsResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<ListObjectVersionsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -960,7 +1004,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<PutBucketResponse> putBucket(PutBucketRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("PutBucket").setMethod(HttpMethod.PUT).setPathRegex("/").setBodyType(BodyType.XML).setBodyIsForm(true).setReqBodyType(BodyType.XML).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("PutBucket").setMethod(HttpMethod.PUT).setPathRegex("/").setBodyType(BodyType.XML).setBodyIsForm(false).setReqBodyType(BodyType.XML).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PutBucketResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -1002,7 +1046,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<PutBucketEncryptionResponse> putBucketEncryption(PutBucketEncryptionRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("PutBucketEncryption").setMethod(HttpMethod.PUT).setPathRegex("/?encryption").setBodyType(BodyType.XML).setBodyIsForm(true).setReqBodyType(BodyType.XML).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("PutBucketEncryption").setMethod(HttpMethod.PUT).setPathRegex("/?encryption").setBodyType(BodyType.XML).setBodyIsForm(false).setReqBodyType(BodyType.XML).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PutBucketEncryptionResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -1016,7 +1060,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<PutBucketInventoryResponse> putBucketInventory(PutBucketInventoryRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("PutBucketInventory").setMethod(HttpMethod.PUT).setPathRegex("/?inventory").setBodyType(BodyType.XML).setBodyIsForm(true).setReqBodyType(BodyType.XML).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("PutBucketInventory").setMethod(HttpMethod.PUT).setPathRegex("/?inventory").setBodyType(BodyType.XML).setBodyIsForm(false).setReqBodyType(BodyType.XML).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PutBucketInventoryResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -1030,7 +1074,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<PutBucketLifecycleResponse> putBucketLifecycle(PutBucketLifecycleRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("PutBucketLifecycle").setMethod(HttpMethod.PUT).setPathRegex("/?lifecycle ").setBodyType(BodyType.XML).setBodyIsForm(true).setReqBodyType(BodyType.XML).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("PutBucketLifecycle").setMethod(HttpMethod.PUT).setPathRegex("/?lifecycle").setBodyType(BodyType.XML).setBodyIsForm(false).setReqBodyType(BodyType.XML).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PutBucketLifecycleResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -1044,7 +1088,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<PutBucketLoggingResponse> putBucketLogging(PutBucketLoggingRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("PutBucketLogging").setMethod(HttpMethod.PUT).setPathRegex("/?logging").setBodyType(BodyType.XML).setBodyIsForm(true).setReqBodyType(BodyType.XML).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("PutBucketLogging").setMethod(HttpMethod.PUT).setPathRegex("/?logging").setBodyType(BodyType.XML).setBodyIsForm(false).setReqBodyType(BodyType.XML).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PutBucketLoggingResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -1072,7 +1116,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<PutBucketRefererResponse> putBucketReferer(PutBucketRefererRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("PutBucketReferer").setMethod(HttpMethod.PUT).setPathRegex("/?referer").setBodyType(BodyType.XML).setBodyIsForm(true).setReqBodyType(BodyType.XML).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("PutBucketReferer").setMethod(HttpMethod.PUT).setPathRegex("/?referer").setBodyType(BodyType.XML).setBodyIsForm(false).setReqBodyType(BodyType.XML).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PutBucketRefererResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -1086,7 +1130,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<PutBucketReplicationResponse> putBucketReplication(PutBucketReplicationRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("PutBucketReplication").setMethod(HttpMethod.POST).setPathRegex("/?replication&comp=add").setBodyType(BodyType.XML).setBodyIsForm(true).setReqBodyType(BodyType.XML).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("PutBucketReplication").setMethod(HttpMethod.POST).setPathRegex("/?replication&comp=add").setBodyType(BodyType.XML).setBodyIsForm(false).setReqBodyType(BodyType.XML).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PutBucketReplicationResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -1100,7 +1144,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<PutBucketRequestPaymentResponse> putBucketRequestPayment(PutBucketRequestPaymentRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("PutBucketRequestPayment").setMethod(HttpMethod.PUT).setPathRegex("/?requestPayment").setBodyType(BodyType.XML).setBodyIsForm(true).setReqBodyType(BodyType.XML).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("PutBucketRequestPayment").setMethod(HttpMethod.PUT).setPathRegex("/?requestPayment").setBodyType(BodyType.XML).setBodyIsForm(false).setReqBodyType(BodyType.XML).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PutBucketRequestPaymentResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -1114,7 +1158,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<PutBucketTagsResponse> putBucketTags(PutBucketTagsRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("PutBucketTags").setMethod(HttpMethod.PUT).setPathRegex("/?tagging").setBodyType(BodyType.XML).setBodyIsForm(true).setReqBodyType(BodyType.XML).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("PutBucketTags").setMethod(HttpMethod.PUT).setPathRegex("/?tagging").setBodyType(BodyType.XML).setBodyIsForm(false).setReqBodyType(BodyType.XML).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PutBucketTagsResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -1128,7 +1172,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<PutBucketTransferAccelerationResponse> putBucketTransferAcceleration(PutBucketTransferAccelerationRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("PutBucketTransferAcceleration").setMethod(HttpMethod.PUT).setPathRegex("/?transferAcceleration ").setBodyType(BodyType.XML).setBodyIsForm(true).setReqBodyType(BodyType.XML).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("PutBucketTransferAcceleration").setMethod(HttpMethod.PUT).setPathRegex("/?transferAcceleration").setBodyType(BodyType.XML).setBodyIsForm(false).setReqBodyType(BodyType.XML).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PutBucketTransferAccelerationResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -1142,7 +1186,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<PutBucketVersioningResponse> putBucketVersioning(PutBucketVersioningRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("PutBucketVersioning").setMethod(HttpMethod.PUT).setPathRegex("/?versioning").setBodyType(BodyType.XML).setBodyIsForm(true).setReqBodyType(BodyType.XML).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("PutBucketVersioning").setMethod(HttpMethod.PUT).setPathRegex("/?versioning").setBodyType(BodyType.XML).setBodyIsForm(false).setReqBodyType(BodyType.XML).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PutBucketVersioningResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -1156,7 +1200,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<PutBucketWebsiteResponse> putBucketWebsite(PutBucketWebsiteRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("PutBucketWebsite").setMethod(HttpMethod.PUT).setPathRegex("/?website").setBodyType(BodyType.XML).setBodyIsForm(true).setReqBodyType(BodyType.XML).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("PutBucketWebsite").setMethod(HttpMethod.PUT).setPathRegex("/?website").setBodyType(BodyType.XML).setBodyIsForm(false).setReqBodyType(BodyType.XML).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PutBucketWebsiteResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -1170,7 +1214,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<PutLiveChannelResponse> putLiveChannel(PutLiveChannelRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("PutLiveChannel").setMethod(HttpMethod.PUT).setPathRegex("/{channel}?live").setBodyType(BodyType.XML).setBodyIsForm(true).setReqBodyType(BodyType.XML).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("PutLiveChannel").setMethod(HttpMethod.PUT).setPathRegex("/{channel}?live").setBodyType(BodyType.XML).setBodyIsForm(false).setReqBodyType(BodyType.XML).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PutLiveChannelResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -1209,11 +1253,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
-    public CompletableFuture<PutObjectResponse> putObjectWithRequestBody(PutObjectRequest request, AsyncRequestBody requestBody) {
+    public CompletableFuture<PutObjectResponse> putObjectWithRequestBody(PutObjectRequest request, RequestBody requestBody) {
         try {
             this.handler.validateRequestModel(request);
             TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("PutObject").setMethod(HttpMethod.PUT).setPathRegex("/{key}").setBodyType(BodyType.BINARY).setBodyIsForm(false).setReqBodyType(BodyType.BINARY).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PutObjectResponse.create());
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withRequestBody(requestBody).withOutput(PutObjectResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<PutObjectResponse> future = new CompletableFuture<>();
@@ -1226,7 +1270,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<PutObjectAclResponse> putObjectAcl(PutObjectAclRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("PutObjectAcl").setMethod(HttpMethod.PUT).setPathRegex("/{key}?acl").setBodyType(BodyType.XML).setBodyIsForm(false).setReqBodyType(BodyType.NONE).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("PutObjectAcl").setMethod(HttpMethod.PUT).setPathRegex("/{key}?acl").setBodyType(BodyType.XML).setBodyIsForm(false).setReqBodyType(BodyType.XML).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PutObjectAclResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -1240,7 +1284,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<PutObjectTaggingResponse> putObjectTagging(PutObjectTaggingRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("PutObjectTagging").setMethod(HttpMethod.PUT).setPathRegex("/{key}?tagging").setBodyType(BodyType.XML).setBodyIsForm(true).setReqBodyType(BodyType.XML).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("PutObjectTagging").setMethod(HttpMethod.PUT).setPathRegex("/{key}?tagging").setBodyType(BodyType.XML).setBodyIsForm(false).setReqBodyType(BodyType.XML).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PutObjectTaggingResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -1268,7 +1312,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<RestoreObjectResponse> restoreObject(RestoreObjectRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RestoreObject").setMethod(HttpMethod.POST).setPathRegex("/{key}?restore").setBodyType(BodyType.XML).setBodyIsForm(true).setReqBodyType(BodyType.XML).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RestoreObject").setMethod(HttpMethod.POST).setPathRegex("/{key}?restore").setBodyType(BodyType.XML).setBodyIsForm(false).setReqBodyType(BodyType.XML).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RestoreObjectResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -1282,7 +1326,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<SelectObjectResponse> selectObject(SelectObjectRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("SelectObject").setMethod(HttpMethod.POST).setPathRegex("/{key}").setBodyType(BodyType.BINARY).setBodyIsForm(true).setReqBodyType(BodyType.XML).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("SelectObject").setMethod(HttpMethod.POST).setPathRegex("/{key}").setBodyType(BodyType.BINARY).setBodyIsForm(false).setReqBodyType(BodyType.XML).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SelectObjectResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -1307,10 +1351,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<UploadPartResponse> uploadPartWithRequestBody(UploadPartRequest request, RequestBody requestBody) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UploadPart").setMethod(HttpMethod.PUT).setPathRegex("/{key}").setBodyType(BodyType.XML).setBodyIsForm(false).setReqBodyType(BodyType.BINARY).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withRequestBody(requestBody).withOutput(UploadPartResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UploadPartResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
     public CompletableFuture<UploadPartCopyResponse> uploadPartCopy(UploadPartCopyRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UploadPartCopy").setMethod(HttpMethod.PUT).setPathRegex("/{key}").setBodyType(BodyType.XML).setBodyIsForm(false).setReqBodyType(BodyType.BINARY).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UploadPartCopy").setMethod(HttpMethod.PUT).setPathRegex("/{key}").setBodyType(BodyType.XML).setBodyIsForm(false).setReqBodyType(BodyType.XML).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UploadPartCopyResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {

@@ -12,6 +12,10 @@ import darabonba.core.TeaModel;
  */
 public class DeleteMultipleObjectsRequest extends Request {
     @Body
+    @NameInMap("body")
+    private Delete body;
+
+    @Body
     @NameInMap("delete")
     private Delete delete;
 
@@ -22,6 +26,7 @@ public class DeleteMultipleObjectsRequest extends Request {
 
     private DeleteMultipleObjectsRequest(Builder builder) {
         super(builder);
+        this.body = builder.body;
         this.delete = builder.delete;
         this.encodingType = builder.encodingType;
     }
@@ -35,22 +40,39 @@ public class DeleteMultipleObjectsRequest extends Request {
     }
 
     /**
+     * @return body
+     */
+    public Delete getBody() {
+        return this.body;
+    }
+
+    /**
      * @return delete
      */
-    public Delete delete() {
+    public Delete getDelete() {
         return this.delete;
     }
 
     /**
      * @return encodingType
      */
-    public String encodingType() {
+    public String getEncodingType() {
         return this.encodingType;
     }
 
-    public static final class Builder extends Request.Builder<DeleteMultipleObjectsRequest.Builder> {
+    public static final class Builder extends Request.Builder<Builder> {
+        private Delete body; 
         private Delete delete; 
         private String encodingType; 
+
+        /**
+         * <p>body.</p>
+         */
+        public Builder body(Delete body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
+            return this;
+        }
 
         /**
          * <p>delete.</p>

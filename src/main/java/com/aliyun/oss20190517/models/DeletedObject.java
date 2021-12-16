@@ -11,24 +11,24 @@ import darabonba.core.TeaModel;
  * <p>DeletedObject</p>
  */
 public class DeletedObject extends TeaModel {
-    @NameInMap("Key")
-    private String key;
-
-    @NameInMap("VersionId")
-    private String versionId;
-
     @NameInMap("DeleteMarker")
     private Boolean deleteMarker;
 
     @NameInMap("DeleteMarkerVersionId")
     private String deleteMarkerVersionId;
 
+    @NameInMap("Key")
+    private String key;
+
+    @NameInMap("VersionId")
+    private String versionId;
+
 
     private DeletedObject(Builder builder) {
-        this.key = builder.key;
-        this.versionId = builder.versionId;
         this.deleteMarker = builder.deleteMarker;
         this.deleteMarkerVersionId = builder.deleteMarkerVersionId;
+        this.key = builder.key;
+        this.versionId = builder.versionId;
     }
 
     public static Builder builder() {
@@ -40,54 +40,38 @@ public class DeletedObject extends TeaModel {
     }
 
     /**
-     * @return key
-     */
-    public String key() {
-        return this.key;
-    }
-
-    /**
-     * @return versionId
-     */
-    public String versionId() {
-        return this.versionId;
-    }
-
-    /**
      * @return deleteMarker
      */
-    public Boolean deleteMarker() {
+    public Boolean getDeleteMarker() {
         return this.deleteMarker;
     }
 
     /**
      * @return deleteMarkerVersionId
      */
-    public String deleteMarkerVersionId() {
+    public String getDeleteMarkerVersionId() {
         return this.deleteMarkerVersionId;
     }
 
+    /**
+     * @return key
+     */
+    public String getKey() {
+        return this.key;
+    }
+
+    /**
+     * @return versionId
+     */
+    public String getVersionId() {
+        return this.versionId;
+    }
+
     public static final class Builder {
-        private String key; 
-        private String versionId; 
         private Boolean deleteMarker; 
         private String deleteMarkerVersionId; 
-
-        /**
-         * <p>description</p>
-         */
-        public Builder key(String key) {
-            this.key = key;
-            return this;
-        }
-
-        /**
-         * <p>description</p>
-         */
-        public Builder versionId(String versionId) {
-            this.versionId = versionId;
-            return this;
-        }
+        private String key; 
+        private String versionId; 
 
         /**
          * <p>description</p>
@@ -102,6 +86,22 @@ public class DeletedObject extends TeaModel {
          */
         public Builder deleteMarkerVersionId(String deleteMarkerVersionId) {
             this.deleteMarkerVersionId = deleteMarkerVersionId;
+            return this;
+        }
+
+        /**
+         * <p>description</p>
+         */
+        public Builder key(String key) {
+            this.key = key;
+            return this;
+        }
+
+        /**
+         * <p>description</p>
+         */
+        public Builder versionId(String versionId) {
+            this.versionId = versionId;
             return this;
         }
 

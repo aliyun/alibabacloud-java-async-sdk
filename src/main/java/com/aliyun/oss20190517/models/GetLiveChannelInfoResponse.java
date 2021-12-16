@@ -41,14 +41,14 @@ public class GetLiveChannelInfoResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > headers() {
+    public java.util.Map < String, String > getHeaders() {
         return this.headers;
     }
 
     /**
      * @return body
      */
-    public GetLiveChannelInfoResponseBody body() {
+    public GetLiveChannelInfoResponseBody getBody() {
         return this.body;
     }
 

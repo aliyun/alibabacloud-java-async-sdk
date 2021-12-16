@@ -11,28 +11,28 @@ import darabonba.core.TeaModel;
  * <p>LiveChannelVideo</p>
  */
 public class LiveChannelVideo extends TeaModel {
-    @NameInMap("Width")
-    private Long width;
-
-    @NameInMap("Height")
-    private Long height;
-
-    @NameInMap("FrameRate")
-    private Long frameRate;
-
     @NameInMap("Bandwidth")
     private Long bandwidth;
 
     @NameInMap("Codec")
     private String codec;
 
+    @NameInMap("FrameRate")
+    private Long frameRate;
+
+    @NameInMap("Height")
+    private Long height;
+
+    @NameInMap("Width")
+    private Long width;
+
 
     private LiveChannelVideo(Builder builder) {
-        this.width = builder.width;
-        this.height = builder.height;
-        this.frameRate = builder.frameRate;
         this.bandwidth = builder.bandwidth;
         this.codec = builder.codec;
+        this.frameRate = builder.frameRate;
+        this.height = builder.height;
+        this.width = builder.width;
     }
 
     public static Builder builder() {
@@ -44,70 +44,46 @@ public class LiveChannelVideo extends TeaModel {
     }
 
     /**
-     * @return width
-     */
-    public Long width() {
-        return this.width;
-    }
-
-    /**
-     * @return height
-     */
-    public Long height() {
-        return this.height;
-    }
-
-    /**
-     * @return frameRate
-     */
-    public Long frameRate() {
-        return this.frameRate;
-    }
-
-    /**
      * @return bandwidth
      */
-    public Long bandwidth() {
+    public Long getBandwidth() {
         return this.bandwidth;
     }
 
     /**
      * @return codec
      */
-    public String codec() {
+    public String getCodec() {
         return this.codec;
     }
 
+    /**
+     * @return frameRate
+     */
+    public Long getFrameRate() {
+        return this.frameRate;
+    }
+
+    /**
+     * @return height
+     */
+    public Long getHeight() {
+        return this.height;
+    }
+
+    /**
+     * @return width
+     */
+    public Long getWidth() {
+        return this.width;
+    }
+
     public static final class Builder {
-        private Long width; 
-        private Long height; 
-        private Long frameRate; 
         private Long bandwidth; 
         private String codec; 
-
-        /**
-         * <p>description</p>
-         */
-        public Builder width(Long width) {
-            this.width = width;
-            return this;
-        }
-
-        /**
-         * <p>description</p>
-         */
-        public Builder height(Long height) {
-            this.height = height;
-            return this;
-        }
-
-        /**
-         * <p>description</p>
-         */
-        public Builder frameRate(Long frameRate) {
-            this.frameRate = frameRate;
-            return this;
-        }
+        private Long frameRate; 
+        private Long height; 
+        private Long width; 
 
         /**
          * <p>description</p>
@@ -122,6 +98,30 @@ public class LiveChannelVideo extends TeaModel {
          */
         public Builder codec(String codec) {
             this.codec = codec;
+            return this;
+        }
+
+        /**
+         * <p>description</p>
+         */
+        public Builder frameRate(Long frameRate) {
+            this.frameRate = frameRate;
+            return this;
+        }
+
+        /**
+         * <p>description</p>
+         */
+        public Builder height(Long height) {
+            this.height = height;
+            return this;
+        }
+
+        /**
+         * <p>description</p>
+         */
+        public Builder width(Long width) {
+            this.width = width;
             return this;
         }
 

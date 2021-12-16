@@ -37,18 +37,18 @@ public class GetBucketReplicationProgressRequest extends Request {
     /**
      * @return bucket
      */
-    public String bucket() {
+    public String getBucket() {
         return this.bucket;
     }
 
     /**
      * @return ruleId
      */
-    public String ruleId() {
+    public String getRuleId() {
         return this.ruleId;
     }
 
-    public static final class Builder extends Request.Builder<GetBucketReplicationProgressRequest.Builder> {
+    public static final class Builder extends Request.Builder<Builder> {
         private String bucket; 
         private String ruleId; 
 

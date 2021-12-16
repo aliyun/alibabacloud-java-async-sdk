@@ -20,6 +20,10 @@ public class GetBucketRequest extends Request {
     private String delimiter;
 
     @Query
+    @NameInMap("encoding-type")
+    private EncodeType encodingType;
+
+    @Query
     @NameInMap("marker")
     private String marker;
 
@@ -31,19 +35,15 @@ public class GetBucketRequest extends Request {
     @NameInMap("prefix")
     private String prefix;
 
-    @Query
-    @NameInMap("encoding-type")
-    private EncodeType encodingType;
-
 
     private GetBucketRequest(Builder builder) {
         super(builder);
         this.bucket = builder.bucket;
         this.delimiter = builder.delimiter;
+        this.encodingType = builder.encodingType;
         this.marker = builder.marker;
         this.maxKeys = builder.maxKeys;
         this.prefix = builder.prefix;
-        this.encodingType = builder.encodingType;
     }
 
     public static Builder builder() {
@@ -57,52 +57,52 @@ public class GetBucketRequest extends Request {
     /**
      * @return bucket
      */
-    public String bucket() {
+    public String getBucket() {
         return this.bucket;
     }
 
     /**
      * @return delimiter
      */
-    public String delimiter() {
+    public String getDelimiter() {
         return this.delimiter;
+    }
+
+    /**
+     * @return encodingType
+     */
+    public EncodeType getEncodingType() {
+        return this.encodingType;
     }
 
     /**
      * @return marker
      */
-    public String marker() {
+    public String getMarker() {
         return this.marker;
     }
 
     /**
      * @return maxKeys
      */
-    public Long maxKeys() {
+    public Long getMaxKeys() {
         return this.maxKeys;
     }
 
     /**
      * @return prefix
      */
-    public String prefix() {
+    public String getPrefix() {
         return this.prefix;
     }
 
-    /**
-     * @return encodingType
-     */
-    public EncodeType encodingType() {
-        return this.encodingType;
-    }
-
-    public static final class Builder extends Request.Builder<GetBucketRequest.Builder> {
+    public static final class Builder extends Request.Builder<Builder> {
         private String bucket; 
         private String delimiter; 
+        private EncodeType encodingType; 
         private String marker; 
         private Long maxKeys; 
         private String prefix; 
-        private EncodeType encodingType; 
 
         /**
          * <p>bucket.</p>
@@ -119,6 +119,15 @@ public class GetBucketRequest extends Request {
         public Builder delimiter(String delimiter) {
             this.putQueryParameter("delimiter", delimiter);
             this.delimiter = delimiter;
+            return this;
+        }
+
+        /**
+         * <p>encoding-type.</p>
+         */
+        public Builder encodingType(EncodeType encodingType) {
+            this.putQueryParameter("encoding-type", encodingType);
+            this.encodingType = encodingType;
             return this;
         }
 
@@ -146,15 +155,6 @@ public class GetBucketRequest extends Request {
         public Builder prefix(String prefix) {
             this.putQueryParameter("prefix", prefix);
             this.prefix = prefix;
-            return this;
-        }
-
-        /**
-         * <p>encoding-type.</p>
-         */
-        public Builder encodingType(EncodeType encodingType) {
-            this.putQueryParameter("encoding-type", encodingType);
-            this.encodingType = encodingType;
             return this;
         }
 

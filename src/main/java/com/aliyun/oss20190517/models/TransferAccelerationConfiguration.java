@@ -30,7 +30,7 @@ public class TransferAccelerationConfiguration extends TeaModel {
     /**
      * @return enabled
      */
-    public Boolean enabled() {
+    public Boolean getEnabled() {
         return this.enabled;
     }
 

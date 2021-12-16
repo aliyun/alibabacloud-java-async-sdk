@@ -11,24 +11,24 @@ import darabonba.core.TeaModel;
  * <p>SelectObjectRequest</p>
  */
 public class SelectObjectRequest extends Request {
-    @Host
-    @NameInMap("bucket")
-    private String bucket;
-
     @Path
     @NameInMap("key")
     private String key;
 
     @Body
-    @NameInMap("selectRequest")
+    @NameInMap("SelectRequest")
     private SelectRequest selectRequest;
+
+    @Host
+    @NameInMap("bucket")
+    private String bucket;
 
 
     private SelectObjectRequest(Builder builder) {
         super(builder);
-        this.bucket = builder.bucket;
         this.key = builder.key;
         this.selectRequest = builder.selectRequest;
+        this.bucket = builder.bucket;
     }
 
     public static Builder builder() {
@@ -40,39 +40,30 @@ public class SelectObjectRequest extends Request {
     }
 
     /**
-     * @return bucket
-     */
-    public String bucket() {
-        return this.bucket;
-    }
-
-    /**
      * @return key
      */
-    public String key() {
+    public String getKey() {
         return this.key;
     }
 
     /**
      * @return selectRequest
      */
-    public SelectRequest selectRequest() {
+    public SelectRequest getSelectRequest() {
         return this.selectRequest;
     }
 
-    public static final class Builder extends Request.Builder<SelectObjectRequest.Builder> {
-        private String bucket; 
+    /**
+     * @return bucket
+     */
+    public String getBucket() {
+        return this.bucket;
+    }
+
+    public static final class Builder extends Request.Builder<Builder> {
         private String key; 
         private SelectRequest selectRequest; 
-
-        /**
-         * <p>bucket.</p>
-         */
-        public Builder bucket(String bucket) {
-            this.putHostParameter("bucket", bucket);
-            this.bucket = bucket;
-            return this;
-        }
+        private String bucket; 
 
         /**
          * <p>key.</p>
@@ -84,11 +75,20 @@ public class SelectObjectRequest extends Request {
         }
 
         /**
-         * <p>selectRequest.</p>
+         * <p>SelectRequest.</p>
          */
         public Builder selectRequest(SelectRequest selectRequest) {
-            this.putBodyParameter("selectRequest", selectRequest);
+            this.putBodyParameter("SelectRequest", selectRequest);
             this.selectRequest = selectRequest;
+            return this;
+        }
+
+        /**
+         * <p>bucket.</p>
+         */
+        public Builder bucket(String bucket) {
+            this.putHostParameter("bucket", bucket);
+            this.bucket = bucket;
             return this;
         }
 

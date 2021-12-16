@@ -11,32 +11,32 @@ import darabonba.core.TeaModel;
  * <p>LiveChannel</p>
  */
 public class LiveChannel extends TeaModel {
-    @NameInMap("Name")
-    private String name;
-
     @NameInMap("Description")
     private String description;
-
-    @NameInMap("Status")
-    private String status;
 
     @NameInMap("LastModified")
     private String lastModified;
 
-    @NameInMap("PublishUrls")
-    private LiveChannelPublishUrls publishUrls;
+    @NameInMap("Name")
+    private String name;
 
     @NameInMap("PlayUrls")
     private LiveChannelPlayUrls playUrls;
 
+    @NameInMap("PublishUrls")
+    private LiveChannelPublishUrls publishUrls;
+
+    @NameInMap("Status")
+    private String status;
+
 
     private LiveChannel(Builder builder) {
-        this.name = builder.name;
         this.description = builder.description;
-        this.status = builder.status;
         this.lastModified = builder.lastModified;
-        this.publishUrls = builder.publishUrls;
+        this.name = builder.name;
         this.playUrls = builder.playUrls;
+        this.publishUrls = builder.publishUrls;
+        this.status = builder.status;
     }
 
     public static Builder builder() {
@@ -48,62 +48,54 @@ public class LiveChannel extends TeaModel {
     }
 
     /**
-     * @return name
-     */
-    public String name() {
-        return this.name;
-    }
-
-    /**
      * @return description
      */
-    public String description() {
+    public String getDescription() {
         return this.description;
-    }
-
-    /**
-     * @return status
-     */
-    public String status() {
-        return this.status;
     }
 
     /**
      * @return lastModified
      */
-    public String lastModified() {
+    public String getLastModified() {
         return this.lastModified;
     }
 
     /**
-     * @return publishUrls
+     * @return name
      */
-    public LiveChannelPublishUrls publishUrls() {
-        return this.publishUrls;
+    public String getName() {
+        return this.name;
     }
 
     /**
      * @return playUrls
      */
-    public LiveChannelPlayUrls playUrls() {
+    public LiveChannelPlayUrls getPlayUrls() {
         return this.playUrls;
     }
 
-    public static final class Builder {
-        private String name; 
-        private String description; 
-        private String status; 
-        private String lastModified; 
-        private LiveChannelPublishUrls publishUrls; 
-        private LiveChannelPlayUrls playUrls; 
+    /**
+     * @return publishUrls
+     */
+    public LiveChannelPublishUrls getPublishUrls() {
+        return this.publishUrls;
+    }
 
-        /**
-         * <p>description</p>
-         */
-        public Builder name(String name) {
-            this.name = name;
-            return this;
-        }
+    /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
+    public static final class Builder {
+        private String description; 
+        private String lastModified; 
+        private String name; 
+        private LiveChannelPlayUrls playUrls; 
+        private LiveChannelPublishUrls publishUrls; 
+        private String status; 
 
         /**
          * <p>description</p>
@@ -116,16 +108,24 @@ public class LiveChannel extends TeaModel {
         /**
          * <p>description</p>
          */
-        public Builder status(String status) {
-            this.status = status;
+        public Builder lastModified(String lastModified) {
+            this.lastModified = lastModified;
             return this;
         }
 
         /**
          * <p>description</p>
          */
-        public Builder lastModified(String lastModified) {
-            this.lastModified = lastModified;
+        public Builder name(String name) {
+            this.name = name;
+            return this;
+        }
+
+        /**
+         * <p>PlayUrls.</p>
+         */
+        public Builder playUrls(LiveChannelPlayUrls playUrls) {
+            this.playUrls = playUrls;
             return this;
         }
 
@@ -138,10 +138,10 @@ public class LiveChannel extends TeaModel {
         }
 
         /**
-         * <p>PlayUrls.</p>
+         * <p>description</p>
          */
-        public Builder playUrls(LiveChannelPlayUrls playUrls) {
-            this.playUrls = playUrls;
+        public Builder status(String status) {
+            this.status = status;
             return this;
         }
 

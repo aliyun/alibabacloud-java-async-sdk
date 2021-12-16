@@ -41,14 +41,14 @@ public class GetBucketRefererResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > headers() {
+    public java.util.Map < String, String > getHeaders() {
         return this.headers;
     }
 
     /**
      * @return body
      */
-    public GetBucketRefererResponseBody body() {
+    public GetBucketRefererResponseBody getBody() {
         return this.body;
     }
 

@@ -16,6 +16,10 @@ public class InitiateMultipartUploadResponseBody extends TeaModel {
     private String bucket;
 
     @ParentIgnore("InitiateMultipartUploadResult")
+    @NameInMap("EncodingType")
+    private String encodingType;
+
+    @ParentIgnore("InitiateMultipartUploadResult")
     @NameInMap("Key")
     private String key;
 
@@ -23,16 +27,12 @@ public class InitiateMultipartUploadResponseBody extends TeaModel {
     @NameInMap("UploadId")
     private String uploadId;
 
-    @ParentIgnore("InitiateMultipartUploadResult")
-    @NameInMap("EncodingType")
-    private String encodingType;
-
 
     private InitiateMultipartUploadResponseBody(Builder builder) {
         this.bucket = builder.bucket;
+        this.encodingType = builder.encodingType;
         this.key = builder.key;
         this.uploadId = builder.uploadId;
-        this.encodingType = builder.encodingType;
     }
 
     public static Builder builder() {
@@ -46,42 +46,50 @@ public class InitiateMultipartUploadResponseBody extends TeaModel {
     /**
      * @return bucket
      */
-    public String bucket() {
+    public String getBucket() {
         return this.bucket;
+    }
+
+    /**
+     * @return encodingType
+     */
+    public String getEncodingType() {
+        return this.encodingType;
     }
 
     /**
      * @return key
      */
-    public String key() {
+    public String getKey() {
         return this.key;
     }
 
     /**
      * @return uploadId
      */
-    public String uploadId() {
+    public String getUploadId() {
         return this.uploadId;
-    }
-
-    /**
-     * @return encodingType
-     */
-    public String encodingType() {
-        return this.encodingType;
     }
 
     public static final class Builder {
         private String bucket; 
+        private String encodingType; 
         private String key; 
         private String uploadId; 
-        private String encodingType; 
 
         /**
          * <p>Bucket.</p>
          */
         public Builder bucket(String bucket) {
             this.bucket = bucket;
+            return this;
+        }
+
+        /**
+         * <p>EncodingType.</p>
+         */
+        public Builder encodingType(String encodingType) {
+            this.encodingType = encodingType;
             return this;
         }
 
@@ -98,14 +106,6 @@ public class InitiateMultipartUploadResponseBody extends TeaModel {
          */
         public Builder uploadId(String uploadId) {
             this.uploadId = uploadId;
-            return this;
-        }
-
-        /**
-         * <p>EncodingType.</p>
-         */
-        public Builder encodingType(String encodingType) {
-            this.encodingType = encodingType;
             return this;
         }
 

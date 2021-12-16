@@ -11,21 +11,13 @@ import darabonba.core.TeaModel;
  * <p>UploadPartCopyRequest</p>
  */
 public class UploadPartCopyRequest extends Request {
-    @Host
-    @NameInMap("bucket")
-    private String bucket;
-
     @Path
     @NameInMap("key")
     private String key;
 
-    @Header
-    @NameInMap("source-bucket")
-    private String sourceBucket;
-
-    @Header
-    @NameInMap("source-key")
-    private String sourceKey;
+    @Host
+    @NameInMap("bucket")
+    private String bucket;
 
     @Query
     @NameInMap("partNumber")
@@ -36,39 +28,42 @@ public class UploadPartCopyRequest extends Request {
     private String uploadId;
 
     @Header
-    @NameInMap("x-oss-copy-source-range")
-    private String xOssCopySourceRange;
+    @NameInMap("x-oss-copy-source")
+    private String copySource;
 
     @Header
     @NameInMap("x-oss-copy-source-if-match")
-    private String xOssCopySourceIfMatch;
-
-    @Header
-    @NameInMap("x-oss-copy-source-if-none-match")
-    private String xOssCopySourceIfNoneMatch;
-
-    @Header
-    @NameInMap("x-oss-copy-source-if-unmodified-since")
-    private String xOssCopySourceIfUnmodifiedSince;
+    private String copySourceIfMatch;
 
     @Header
     @NameInMap("x-oss-copy-source-if-modified-since")
-    private String xOssCopySourceIfModifiedSince;
+    private String copySourceIfModifiedSince;
+
+    @Header
+    @NameInMap("x-oss-copy-source-if-none-match")
+    private String copySourceIfNoneMatch;
+
+    @Header
+    @NameInMap("x-oss-copy-source-if-unmodified-since")
+    private String copySourceIfUnmodifiedSince;
+
+    @Header
+    @NameInMap("x-oss-copy-source-range")
+    private String copySourceRange;
 
 
     private UploadPartCopyRequest(Builder builder) {
         super(builder);
-        this.bucket = builder.bucket;
         this.key = builder.key;
-        this.sourceBucket = builder.sourceBucket;
-        this.sourceKey = builder.sourceKey;
+        this.bucket = builder.bucket;
         this.partNumber = builder.partNumber;
         this.uploadId = builder.uploadId;
-        this.xOssCopySourceRange = builder.xOssCopySourceRange;
-        this.xOssCopySourceIfMatch = builder.xOssCopySourceIfMatch;
-        this.xOssCopySourceIfNoneMatch = builder.xOssCopySourceIfNoneMatch;
-        this.xOssCopySourceIfUnmodifiedSince = builder.xOssCopySourceIfUnmodifiedSince;
-        this.xOssCopySourceIfModifiedSince = builder.xOssCopySourceIfModifiedSince;
+        this.copySource = builder.copySource;
+        this.copySourceIfMatch = builder.copySourceIfMatch;
+        this.copySourceIfModifiedSince = builder.copySourceIfModifiedSince;
+        this.copySourceIfNoneMatch = builder.copySourceIfNoneMatch;
+        this.copySourceIfUnmodifiedSince = builder.copySourceIfUnmodifiedSince;
+        this.copySourceRange = builder.copySourceRange;
     }
 
     public static Builder builder() {
@@ -80,103 +75,86 @@ public class UploadPartCopyRequest extends Request {
     }
 
     /**
-     * @return bucket
-     */
-    public String bucket() {
-        return this.bucket;
-    }
-
-    /**
      * @return key
      */
-    public String key() {
+    public String getKey() {
         return this.key;
     }
 
     /**
-     * @return sourceBucket
+     * @return bucket
      */
-    public String sourceBucket() {
-        return this.sourceBucket;
-    }
-
-    /**
-     * @return sourceKey
-     */
-    public String sourceKey() {
-        return this.sourceKey;
+    public String getBucket() {
+        return this.bucket;
     }
 
     /**
      * @return partNumber
      */
-    public String partNumber() {
+    public String getPartNumber() {
         return this.partNumber;
     }
 
     /**
      * @return uploadId
      */
-    public String uploadId() {
+    public String getUploadId() {
         return this.uploadId;
     }
 
     /**
-     * @return xOssCopySourceRange
+     * @return copySource
      */
-    public String xOssCopySourceRange() {
-        return this.xOssCopySourceRange;
+    public String getCopySource() {
+        return this.copySource;
     }
 
     /**
-     * @return xOssCopySourceIfMatch
+     * @return copySourceIfMatch
      */
-    public String xOssCopySourceIfMatch() {
-        return this.xOssCopySourceIfMatch;
+    public String getCopySourceIfMatch() {
+        return this.copySourceIfMatch;
     }
 
     /**
-     * @return xOssCopySourceIfNoneMatch
+     * @return copySourceIfModifiedSince
      */
-    public String xOssCopySourceIfNoneMatch() {
-        return this.xOssCopySourceIfNoneMatch;
+    public String getCopySourceIfModifiedSince() {
+        return this.copySourceIfModifiedSince;
     }
 
     /**
-     * @return xOssCopySourceIfUnmodifiedSince
+     * @return copySourceIfNoneMatch
      */
-    public String xOssCopySourceIfUnmodifiedSince() {
-        return this.xOssCopySourceIfUnmodifiedSince;
+    public String getCopySourceIfNoneMatch() {
+        return this.copySourceIfNoneMatch;
     }
 
     /**
-     * @return xOssCopySourceIfModifiedSince
+     * @return copySourceIfUnmodifiedSince
      */
-    public String xOssCopySourceIfModifiedSince() {
-        return this.xOssCopySourceIfModifiedSince;
+    public String getCopySourceIfUnmodifiedSince() {
+        return this.copySourceIfUnmodifiedSince;
     }
 
-    public static final class Builder extends Request.Builder<UploadPartCopyRequest.Builder> {
-        private String bucket; 
+    /**
+     * @return copySourceRange
+     */
+    public String getCopySourceRange() {
+        return this.copySourceRange;
+    }
+
+    public static final class Builder extends Request.Builder<Builder> {
         private String key; 
-        private String sourceBucket; 
-        private String sourceKey; 
+        private String bucket; 
         private String partNumber; 
         private String uploadId; 
-        private String xOssCopySourceRange; 
-        private String xOssCopySourceIfMatch; 
-        private String xOssCopySourceIfNoneMatch; 
-        private String xOssCopySourceIfUnmodifiedSince; 
-        private String xOssCopySourceIfModifiedSince; 
-
-        /**
-         * <p>bucket.</p>
-         */
-        public Builder bucket(String bucket) {
-            this.putHostParameter("bucket", bucket);
-            this.bucket = bucket;
-            return this;
-        }
+        private String copySource; 
+        private String copySourceIfMatch; 
+        private String copySourceIfModifiedSince; 
+        private String copySourceIfNoneMatch; 
+        private String copySourceIfUnmodifiedSince; 
+        private String copySourceRange; 
 
         /**
          * <p>key.</p>
@@ -188,20 +166,11 @@ public class UploadPartCopyRequest extends Request {
         }
 
         /**
-         * <p>source-bucket.</p>
+         * <p>bucket.</p>
          */
-        public Builder sourceBucket(String sourceBucket) {
-            this.putHeaderParameter("source-bucket", sourceBucket);
-            this.sourceBucket = sourceBucket;
-            return this;
-        }
-
-        /**
-         * <p>source-key.</p>
-         */
-        public Builder sourceKey(String sourceKey) {
-            this.putHeaderParameter("source-key", sourceKey);
-            this.sourceKey = sourceKey;
+        public Builder bucket(String bucket) {
+            this.putHostParameter("bucket", bucket);
+            this.bucket = bucket;
             return this;
         }
 
@@ -224,47 +193,56 @@ public class UploadPartCopyRequest extends Request {
         }
 
         /**
-         * <p>x-oss-copy-source-range.</p>
+         * <p>x-oss-copy-source.</p>
          */
-        public Builder xOssCopySourceRange(String xOssCopySourceRange) {
-            this.putHeaderParameter("x-oss-copy-source-range", xOssCopySourceRange);
-            this.xOssCopySourceRange = xOssCopySourceRange;
+        public Builder copySource(String copySource) {
+            this.putHeaderParameter("x-oss-copy-source", copySource);
+            this.copySource = copySource;
             return this;
         }
 
         /**
          * <p>x-oss-copy-source-if-match.</p>
          */
-        public Builder xOssCopySourceIfMatch(String xOssCopySourceIfMatch) {
-            this.putHeaderParameter("x-oss-copy-source-if-match", xOssCopySourceIfMatch);
-            this.xOssCopySourceIfMatch = xOssCopySourceIfMatch;
-            return this;
-        }
-
-        /**
-         * <p>x-oss-copy-source-if-none-match.</p>
-         */
-        public Builder xOssCopySourceIfNoneMatch(String xOssCopySourceIfNoneMatch) {
-            this.putHeaderParameter("x-oss-copy-source-if-none-match", xOssCopySourceIfNoneMatch);
-            this.xOssCopySourceIfNoneMatch = xOssCopySourceIfNoneMatch;
-            return this;
-        }
-
-        /**
-         * <p>x-oss-copy-source-if-unmodified-since.</p>
-         */
-        public Builder xOssCopySourceIfUnmodifiedSince(String xOssCopySourceIfUnmodifiedSince) {
-            this.putHeaderParameter("x-oss-copy-source-if-unmodified-since", xOssCopySourceIfUnmodifiedSince);
-            this.xOssCopySourceIfUnmodifiedSince = xOssCopySourceIfUnmodifiedSince;
+        public Builder copySourceIfMatch(String copySourceIfMatch) {
+            this.putHeaderParameter("x-oss-copy-source-if-match", copySourceIfMatch);
+            this.copySourceIfMatch = copySourceIfMatch;
             return this;
         }
 
         /**
          * <p>x-oss-copy-source-if-modified-since.</p>
          */
-        public Builder xOssCopySourceIfModifiedSince(String xOssCopySourceIfModifiedSince) {
-            this.putHeaderParameter("x-oss-copy-source-if-modified-since", xOssCopySourceIfModifiedSince);
-            this.xOssCopySourceIfModifiedSince = xOssCopySourceIfModifiedSince;
+        public Builder copySourceIfModifiedSince(String copySourceIfModifiedSince) {
+            this.putHeaderParameter("x-oss-copy-source-if-modified-since", copySourceIfModifiedSince);
+            this.copySourceIfModifiedSince = copySourceIfModifiedSince;
+            return this;
+        }
+
+        /**
+         * <p>x-oss-copy-source-if-none-match.</p>
+         */
+        public Builder copySourceIfNoneMatch(String copySourceIfNoneMatch) {
+            this.putHeaderParameter("x-oss-copy-source-if-none-match", copySourceIfNoneMatch);
+            this.copySourceIfNoneMatch = copySourceIfNoneMatch;
+            return this;
+        }
+
+        /**
+         * <p>x-oss-copy-source-if-unmodified-since.</p>
+         */
+        public Builder copySourceIfUnmodifiedSince(String copySourceIfUnmodifiedSince) {
+            this.putHeaderParameter("x-oss-copy-source-if-unmodified-since", copySourceIfUnmodifiedSince);
+            this.copySourceIfUnmodifiedSince = copySourceIfUnmodifiedSince;
+            return this;
+        }
+
+        /**
+         * <p>x-oss-copy-source-range.</p>
+         */
+        public Builder copySourceRange(String copySourceRange) {
+            this.putHeaderParameter("x-oss-copy-source-range", copySourceRange);
+            this.copySourceRange = copySourceRange;
             return this;
         }
 

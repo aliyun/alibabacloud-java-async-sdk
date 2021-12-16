@@ -14,17 +14,17 @@ public class LiveChannelAudio extends TeaModel {
     @NameInMap("Bandwidth")
     private Long bandwidth;
 
-    @NameInMap("SampleRate")
-    private Long sampleRate;
-
     @NameInMap("Codec")
     private String codec;
+
+    @NameInMap("SampleRate")
+    private Long sampleRate;
 
 
     private LiveChannelAudio(Builder builder) {
         this.bandwidth = builder.bandwidth;
-        this.sampleRate = builder.sampleRate;
         this.codec = builder.codec;
+        this.sampleRate = builder.sampleRate;
     }
 
     public static Builder builder() {
@@ -38,28 +38,28 @@ public class LiveChannelAudio extends TeaModel {
     /**
      * @return bandwidth
      */
-    public Long bandwidth() {
+    public Long getBandwidth() {
         return this.bandwidth;
-    }
-
-    /**
-     * @return sampleRate
-     */
-    public Long sampleRate() {
-        return this.sampleRate;
     }
 
     /**
      * @return codec
      */
-    public String codec() {
+    public String getCodec() {
         return this.codec;
+    }
+
+    /**
+     * @return sampleRate
+     */
+    public Long getSampleRate() {
+        return this.sampleRate;
     }
 
     public static final class Builder {
         private Long bandwidth; 
-        private Long sampleRate; 
         private String codec; 
+        private Long sampleRate; 
 
         /**
          * <p>description</p>
@@ -72,16 +72,16 @@ public class LiveChannelAudio extends TeaModel {
         /**
          * <p>description</p>
          */
-        public Builder sampleRate(Long sampleRate) {
-            this.sampleRate = sampleRate;
+        public Builder codec(String codec) {
+            this.codec = codec;
             return this;
         }
 
         /**
          * <p>description</p>
          */
-        public Builder codec(String codec) {
-            this.codec = codec;
+        public Builder sampleRate(Long sampleRate) {
+            this.sampleRate = sampleRate;
             return this;
         }
 
