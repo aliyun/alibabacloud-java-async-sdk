@@ -36,7 +36,7 @@ public class DeleteTemplateRequest extends Request {
         return this.templateId;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String templateId; 
 
         /**

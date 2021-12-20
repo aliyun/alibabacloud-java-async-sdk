@@ -378,6 +378,9 @@ public class GetTemplateResponseBody extends TeaModel {
         @NameInMap("ShareOption")
         private String shareOption;
 
+        @NameInMap("ShareSource")
+        private String shareSource;
+
         @NameInMap("TemplateVersion")
         private String templateVersion;
 
@@ -388,6 +391,7 @@ public class GetTemplateResponseBody extends TeaModel {
         private Permissions(Builder builder) {
             this.accountId = builder.accountId;
             this.shareOption = builder.shareOption;
+            this.shareSource = builder.shareSource;
             this.templateVersion = builder.templateVersion;
             this.versionOption = builder.versionOption;
         }
@@ -415,6 +419,13 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
+         * @return shareSource
+         */
+        public String getShareSource() {
+            return this.shareSource;
+        }
+
+        /**
          * @return templateVersion
          */
         public String getTemplateVersion() {
@@ -431,6 +442,7 @@ public class GetTemplateResponseBody extends TeaModel {
         public static final class Builder {
             private String accountId; 
             private String shareOption; 
+            private String shareSource; 
             private String templateVersion; 
             private String versionOption; 
 
@@ -447,6 +459,14 @@ public class GetTemplateResponseBody extends TeaModel {
              */
             public Builder shareOption(String shareOption) {
                 this.shareOption = shareOption;
+                return this;
+            }
+
+            /**
+             * <p>ShareSource.</p>
+             */
+            public Builder shareSource(String shareSource) {
+                this.shareSource = shareSource;
                 return this;
             }
 

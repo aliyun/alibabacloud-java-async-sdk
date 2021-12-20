@@ -84,7 +84,7 @@ public class GetStackRequest extends Request {
         return this.stackId;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String clientToken; 
         private String outputOption; 
         private String regionId; 

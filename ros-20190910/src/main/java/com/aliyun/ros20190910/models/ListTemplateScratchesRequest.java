@@ -96,7 +96,7 @@ public class ListTemplateScratchesRequest extends Request {
         return this.templateScratchType;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String regionId; 

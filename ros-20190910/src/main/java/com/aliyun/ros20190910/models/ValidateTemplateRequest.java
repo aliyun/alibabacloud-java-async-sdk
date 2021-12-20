@@ -84,7 +84,7 @@ public class ValidateTemplateRequest extends Request {
         return this.validationOption;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String clientToken; 
         private String regionId; 
         private String templateBody; 

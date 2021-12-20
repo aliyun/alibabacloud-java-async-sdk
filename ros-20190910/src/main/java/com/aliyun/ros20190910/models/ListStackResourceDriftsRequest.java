@@ -84,7 +84,7 @@ public class ListStackResourceDriftsRequest extends Request {
         return this.stackId;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private Long maxResults; 
         private String nextToken; 
         private String regionId; 

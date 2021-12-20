@@ -72,7 +72,7 @@ public class ListTagValuesRequest extends Request {
         return this.resourceType;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String key; 
         private String nextToken; 
         private String regionId; 

@@ -72,7 +72,7 @@ public class DetectStackDriftRequest extends Request {
         return this.stackId;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String clientToken; 
         private java.util.List < String > logicalResourceId; 
         private String regionId; 

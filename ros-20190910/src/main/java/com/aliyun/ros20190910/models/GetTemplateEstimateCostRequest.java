@@ -36,6 +36,10 @@ public class GetTemplateEstimateCostRequest extends Request {
     private String templateScratchId;
 
     @Query
+    @NameInMap("TemplateScratchRegionId")
+    private String templateScratchRegionId;
+
+    @Query
     @NameInMap("TemplateURL")
     private String templateURL;
 
@@ -52,6 +56,7 @@ public class GetTemplateEstimateCostRequest extends Request {
         this.templateBody = builder.templateBody;
         this.templateId = builder.templateId;
         this.templateScratchId = builder.templateScratchId;
+        this.templateScratchRegionId = builder.templateScratchRegionId;
         this.templateURL = builder.templateURL;
         this.templateVersion = builder.templateVersion;
     }
@@ -107,6 +112,13 @@ public class GetTemplateEstimateCostRequest extends Request {
     }
 
     /**
+     * @return templateScratchRegionId
+     */
+    public String getTemplateScratchRegionId() {
+        return this.templateScratchRegionId;
+    }
+
+    /**
      * @return templateURL
      */
     public String getTemplateURL() {
@@ -120,13 +132,14 @@ public class GetTemplateEstimateCostRequest extends Request {
         return this.templateVersion;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String clientToken; 
         private java.util.List < Parameters> parameters; 
         private String regionId; 
         private String templateBody; 
         private String templateId; 
         private String templateScratchId; 
+        private String templateScratchRegionId; 
         private String templateURL; 
         private String templateVersion; 
 
@@ -181,6 +194,15 @@ public class GetTemplateEstimateCostRequest extends Request {
         public Builder templateScratchId(String templateScratchId) {
             this.putQueryParameter("TemplateScratchId", templateScratchId);
             this.templateScratchId = templateScratchId;
+            return this;
+        }
+
+        /**
+         * <p>TemplateScratchRegionId.</p>
+         */
+        public Builder templateScratchRegionId(String templateScratchRegionId) {
+            this.putQueryParameter("TemplateScratchRegionId", templateScratchRegionId);
+            this.templateScratchRegionId = templateScratchRegionId;
             return this;
         }
 

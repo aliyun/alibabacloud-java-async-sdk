@@ -108,7 +108,7 @@ public class ListStackEventsRequest extends Request {
         return this.status;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private java.util.List < String > logicalResourceId; 
         private Long pageNumber; 
         private Long pageSize; 

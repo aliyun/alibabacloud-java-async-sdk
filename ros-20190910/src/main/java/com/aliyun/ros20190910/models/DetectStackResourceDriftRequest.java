@@ -72,7 +72,7 @@ public class DetectStackResourceDriftRequest extends Request {
         return this.stackId;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String clientToken; 
         private String logicalResourceId; 
         private String regionId; 

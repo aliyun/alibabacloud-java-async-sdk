@@ -72,7 +72,7 @@ public class ListStackGroupOperationResultsRequest extends Request {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String operationId; 
         private Long pageNumber; 
         private Long pageSize; 

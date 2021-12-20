@@ -36,7 +36,7 @@ public class GetResourceTypeRequest extends Request {
         return this.resourceType;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String resourceType; 
 
         /**

@@ -48,7 +48,7 @@ public class DeleteStackGroupRequest extends Request {
         return this.stackGroupName;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String regionId; 
         private String stackGroupName; 
 

@@ -60,7 +60,7 @@ public class ExecuteChangeSetRequest extends Request {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String changeSetId; 
         private String clientToken; 
         private String regionId; 

@@ -84,7 +84,7 @@ public class SetTemplatePermissionRequest extends Request {
         return this.versionOption;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private java.util.List < String > accountIds; 
         private String shareOption; 
         private String templateId; 

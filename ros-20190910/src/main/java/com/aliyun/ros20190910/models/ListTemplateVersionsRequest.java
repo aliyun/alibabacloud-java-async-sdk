@@ -60,7 +60,7 @@ public class ListTemplateVersionsRequest extends Request {
         return this.templateId;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private Long maxResults; 
         private String nextToken; 
         private String templateId; 

@@ -324,7 +324,7 @@ public class CreateChangeSetRequest extends Request {
         return this.usePreviousParameters;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String changeSetName; 
         private String changeSetType; 
         private String clientToken; 

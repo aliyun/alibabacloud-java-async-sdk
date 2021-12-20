@@ -192,7 +192,7 @@ public class CreateStackGroupRequest extends Request {
         return this.templateVersion;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String administrationRoleName; 
         private AutoDeployment autoDeployment; 
         private String clientToken; 

@@ -72,7 +72,7 @@ public class SetStackPolicyRequest extends Request {
         return this.stackPolicyURL;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String regionId; 
         private String stackId; 
         private String stackPolicyBody; 

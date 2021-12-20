@@ -144,7 +144,7 @@ public class UpdateStackInstancesRequest extends Request {
         return this.timeoutInMinutes;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private java.util.List < String > accountIds; 
         private String clientToken; 
         private DeploymentTargets deploymentTargets; 

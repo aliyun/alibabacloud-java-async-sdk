@@ -96,7 +96,7 @@ public class ListTemplatesRequest extends Request {
         return this.templateName;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private Long pageNumber; 
         private Long pageSize; 
         private String resourceGroupId; 

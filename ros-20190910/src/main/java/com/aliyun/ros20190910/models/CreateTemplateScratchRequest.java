@@ -144,7 +144,7 @@ public class CreateTemplateScratchRequest extends Request {
         return this.templateScratchType;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String clientToken; 
         private String description; 
         private String executionMode; 

@@ -108,7 +108,7 @@ public class GetServiceProvisionsRequest extends Request {
         return this.templateVersion;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private java.util.List < Parameters> parameters; 
         private String regionId; 
         private java.util.List < Services> services; 

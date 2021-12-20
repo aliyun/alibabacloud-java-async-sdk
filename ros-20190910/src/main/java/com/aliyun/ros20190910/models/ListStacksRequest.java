@@ -156,7 +156,7 @@ public class ListStacksRequest extends Request {
         return this.tag;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private Long pageNumber; 
         private Long pageSize; 
         private String parentStackId; 

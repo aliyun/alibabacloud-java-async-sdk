@@ -84,7 +84,7 @@ public class DeleteStackRequest extends Request {
         return this.stackId;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String ramRoleName; 
         private String regionId; 
         private Boolean retainAllResources; 

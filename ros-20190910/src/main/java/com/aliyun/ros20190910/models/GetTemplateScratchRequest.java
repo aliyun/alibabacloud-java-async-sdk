@@ -60,7 +60,7 @@ public class GetTemplateScratchRequest extends Request {
         return this.templateScratchId;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String regionId; 
         private String showDataOption; 
         private String templateScratchId; 

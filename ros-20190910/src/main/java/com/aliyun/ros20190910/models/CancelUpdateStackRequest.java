@@ -60,7 +60,7 @@ public class CancelUpdateStackRequest extends Request {
         return this.stackId;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String cancelType; 
         private String regionId; 
         private String stackId; 

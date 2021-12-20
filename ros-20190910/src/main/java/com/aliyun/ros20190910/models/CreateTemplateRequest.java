@@ -84,7 +84,7 @@ public class CreateTemplateRequest extends Request {
         return this.templateURL;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String description; 
         private String resourceGroupId; 
         private String templateBody; 

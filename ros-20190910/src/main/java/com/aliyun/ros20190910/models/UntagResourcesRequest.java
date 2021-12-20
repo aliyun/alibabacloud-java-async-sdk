@@ -84,7 +84,7 @@ public class UntagResourcesRequest extends Request {
         return this.tagKey;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private Boolean all; 
         private String regionId; 
         private java.util.List < String > resourceId; 

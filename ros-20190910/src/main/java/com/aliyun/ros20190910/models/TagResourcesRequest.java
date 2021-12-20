@@ -72,7 +72,7 @@ public class TagResourcesRequest extends Request {
         return this.tag;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String regionId; 
         private java.util.List < String > resourceId; 
         private String resourceType; 

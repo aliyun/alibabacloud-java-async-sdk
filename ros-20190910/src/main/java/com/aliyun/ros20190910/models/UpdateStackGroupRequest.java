@@ -240,7 +240,7 @@ public class UpdateStackGroupRequest extends Request {
         return this.templateVersion;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private java.util.List < String > accountIds; 
         private String administrationRoleName; 
         private AutoDeployment autoDeployment; 

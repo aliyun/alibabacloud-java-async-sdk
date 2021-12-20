@@ -96,7 +96,7 @@ public class UpdateStackTemplateByResourcesRequest extends Request {
         return this.templateFormat;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String clientToken; 
         private Boolean dryRun; 
         private java.util.List < String > logicalResourceId; 

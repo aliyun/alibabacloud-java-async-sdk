@@ -252,7 +252,7 @@ public class UpdateStackRequest extends Request {
         return this.usePreviousParameters;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String clientToken; 
         private Boolean disableRollback; 
         private Long parallelism; 

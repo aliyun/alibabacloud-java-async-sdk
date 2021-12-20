@@ -84,7 +84,7 @@ public class ListTagResourcesRequest extends Request {
         return this.tag;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String nextToken; 
         private String regionId; 
         private java.util.List < String > resourceId; 

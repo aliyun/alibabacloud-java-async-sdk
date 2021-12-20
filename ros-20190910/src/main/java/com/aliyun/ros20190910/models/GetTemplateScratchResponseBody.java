@@ -319,6 +319,68 @@ public class GetTemplateScratchResponseBody extends TeaModel {
         } 
 
     }
+    public static class StackProvision extends TeaModel {
+        @NameInMap("Creatable")
+        private Boolean creatable;
+
+        @NameInMap("Importable")
+        private Boolean importable;
+
+
+        private StackProvision(Builder builder) {
+            this.creatable = builder.creatable;
+            this.importable = builder.importable;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static StackProvision create() {
+            return builder().build();
+        }
+
+        /**
+         * @return creatable
+         */
+        public Boolean getCreatable() {
+            return this.creatable;
+        }
+
+        /**
+         * @return importable
+         */
+        public Boolean getImportable() {
+            return this.importable;
+        }
+
+        public static final class Builder {
+            private Boolean creatable; 
+            private Boolean importable; 
+
+            /**
+             * <p>Creatable.</p>
+             */
+            public Builder creatable(Boolean creatable) {
+                this.creatable = creatable;
+                return this;
+            }
+
+            /**
+             * <p>Importable.</p>
+             */
+            public Builder importable(Boolean importable) {
+                this.importable = importable;
+                return this;
+            }
+
+            public StackProvision build() {
+                return new StackProvision(this);
+            } 
+
+        } 
+
+    }
     public static class Stacks extends TeaModel {
         @NameInMap("RegionId")
         private String regionId;
@@ -326,10 +388,14 @@ public class GetTemplateScratchResponseBody extends TeaModel {
         @NameInMap("StackId")
         private String stackId;
 
+        @NameInMap("UsageType")
+        private String usageType;
+
 
         private Stacks(Builder builder) {
             this.regionId = builder.regionId;
             this.stackId = builder.stackId;
+            this.usageType = builder.usageType;
         }
 
         public static Builder builder() {
@@ -354,9 +420,17 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             return this.stackId;
         }
 
+        /**
+         * @return usageType
+         */
+        public String getUsageType() {
+            return this.usageType;
+        }
+
         public static final class Builder {
             private String regionId; 
             private String stackId; 
+            private String usageType; 
 
             /**
              * <p>RegionId.</p>
@@ -371,6 +445,14 @@ public class GetTemplateScratchResponseBody extends TeaModel {
              */
             public Builder stackId(String stackId) {
                 this.stackId = stackId;
+                return this;
+            }
+
+            /**
+             * <p>UsageType.</p>
+             */
+            public Builder usageType(String usageType) {
+                this.usageType = usageType;
                 return this;
             }
 
@@ -406,6 +488,9 @@ public class GetTemplateScratchResponseBody extends TeaModel {
         @NameInMap("SourceTag")
         private SourceTag sourceTag;
 
+        @NameInMap("StackProvision")
+        private StackProvision stackProvision;
+
         @NameInMap("Stacks")
         private java.util.List < Stacks> stacks;
 
@@ -437,6 +522,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             this.sourceResourceGroup = builder.sourceResourceGroup;
             this.sourceResources = builder.sourceResources;
             this.sourceTag = builder.sourceTag;
+            this.stackProvision = builder.stackProvision;
             this.stacks = builder.stacks;
             this.status = builder.status;
             this.statusReason = builder.statusReason;
@@ -511,6 +597,13 @@ public class GetTemplateScratchResponseBody extends TeaModel {
         }
 
         /**
+         * @return stackProvision
+         */
+        public StackProvision getStackProvision() {
+            return this.stackProvision;
+        }
+
+        /**
          * @return stacks
          */
         public java.util.List < Stacks> getStacks() {
@@ -568,6 +661,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             private SourceResourceGroup sourceResourceGroup; 
             private java.util.List < SourceResources> sourceResources; 
             private SourceTag sourceTag; 
+            private StackProvision stackProvision; 
             private java.util.List < Stacks> stacks; 
             private String status; 
             private String statusReason; 
@@ -637,6 +731,14 @@ public class GetTemplateScratchResponseBody extends TeaModel {
              */
             public Builder sourceTag(SourceTag sourceTag) {
                 this.sourceTag = sourceTag;
+                return this;
+            }
+
+            /**
+             * <p>StackProvision.</p>
+             */
+            public Builder stackProvision(StackProvision stackProvision) {
+                this.stackProvision = stackProvision;
                 return this;
             }
 

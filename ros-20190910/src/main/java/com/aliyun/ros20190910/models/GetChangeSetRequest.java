@@ -60,7 +60,7 @@ public class GetChangeSetRequest extends Request {
         return this.showTemplate;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String changeSetId; 
         private String regionId; 
         private Boolean showTemplate; 

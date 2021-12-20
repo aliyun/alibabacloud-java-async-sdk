@@ -48,7 +48,7 @@ public class GetFeatureDetailsRequest extends Request {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String feature; 
         private String regionId; 
 

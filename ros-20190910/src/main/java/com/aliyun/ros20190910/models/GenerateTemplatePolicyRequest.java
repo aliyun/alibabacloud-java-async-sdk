@@ -72,7 +72,7 @@ public class GenerateTemplatePolicyRequest extends Request {
         return this.templateVersion;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String templateBody; 
         private String templateId; 
         private String templateURL; 

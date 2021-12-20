@@ -120,7 +120,7 @@ public class GetTemplateParameterConstraintsRequest extends Request {
         return this.templateVersion;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String clientToken; 
         private java.util.List < Parameters> parameters; 
         private java.util.List < String > parametersKeyFilter; 
