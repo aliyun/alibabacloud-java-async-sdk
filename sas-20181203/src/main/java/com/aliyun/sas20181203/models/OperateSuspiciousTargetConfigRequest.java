@@ -84,7 +84,7 @@ public class OperateSuspiciousTargetConfigRequest extends Request {
         return this.type;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String lang; 
         private String sourceIp; 
         private String targetOperations; 

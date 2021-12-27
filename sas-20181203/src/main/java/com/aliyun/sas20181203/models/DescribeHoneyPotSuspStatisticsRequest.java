@@ -60,7 +60,7 @@ public class DescribeHoneyPotSuspStatisticsRequest extends Request {
         return this.statisticsKeyType;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String from; 
         private Integer statisticsDays; 
         private String statisticsKeyType; 

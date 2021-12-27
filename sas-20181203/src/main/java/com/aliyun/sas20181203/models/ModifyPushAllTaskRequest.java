@@ -60,7 +60,7 @@ public class ModifyPushAllTaskRequest extends Request {
         return this.uuids;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String sourceIp; 
         private String tasks; 
         private String uuids; 

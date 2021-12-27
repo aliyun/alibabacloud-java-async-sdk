@@ -96,7 +96,7 @@ public class HandleSimilarSecurityEventsRequest extends Request {
         return this.taskId;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String markMissParam; 
         private String operationCode; 
         private String operationParams; 

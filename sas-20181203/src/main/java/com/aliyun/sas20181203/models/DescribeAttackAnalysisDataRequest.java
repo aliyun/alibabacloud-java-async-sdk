@@ -120,7 +120,7 @@ public class DescribeAttackAnalysisDataRequest extends Request {
         return this.type;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String base64; 
         private Integer currentPage; 
         private String data; 

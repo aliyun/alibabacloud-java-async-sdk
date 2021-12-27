@@ -24,7 +24,7 @@ public class DescribeSupportRegionRequest extends Request {
         return builder().build();
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
 
         public DescribeSupportRegionRequest build() {
             return new DescribeSupportRegionRequest(this);

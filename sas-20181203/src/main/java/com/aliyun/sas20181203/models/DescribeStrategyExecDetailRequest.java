@@ -72,7 +72,7 @@ public class DescribeStrategyExecDetailRequest extends Request {
         return this.strategyId;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private Integer currentPage; 
         private Integer pageSize; 
         private String sourceIp; 

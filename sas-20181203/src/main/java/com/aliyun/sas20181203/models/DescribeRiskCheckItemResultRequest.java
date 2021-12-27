@@ -96,7 +96,7 @@ public class DescribeRiskCheckItemResultRequest extends Request {
         return this.sourceIp;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private Integer currentPage; 
         private Long itemId; 
         private String lang; 

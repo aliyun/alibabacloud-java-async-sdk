@@ -48,7 +48,7 @@ public class DeleteTagWithUuidRequest extends Request {
         return this.uuidList;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String tagName; 
         private String uuidList; 
 

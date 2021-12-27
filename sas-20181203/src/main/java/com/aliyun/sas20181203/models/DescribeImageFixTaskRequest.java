@@ -84,7 +84,7 @@ public class DescribeImageFixTaskRequest extends Request {
         return this.status;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private Integer currentPage; 
         private Long endTime; 
         private Integer pageSize; 

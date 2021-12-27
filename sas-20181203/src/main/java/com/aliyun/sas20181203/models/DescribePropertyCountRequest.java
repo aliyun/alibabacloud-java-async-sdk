@@ -48,7 +48,7 @@ public class DescribePropertyCountRequest extends Request {
         return this.uuidList;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String type; 
         private String uuidList; 
 

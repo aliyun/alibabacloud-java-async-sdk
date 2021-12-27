@@ -206,26 +206,11 @@ public class DescribeAlarmEventListResponseBody extends TeaModel {
         @NameInMap("AlarmUniqueInfo")
         private String alarmUniqueInfo;
 
-        @NameInMap("AppName")
-        private String appName;
-
         @NameInMap("CanBeDealOnLine")
         private Boolean canBeDealOnLine;
 
         @NameInMap("CanCancelFault")
         private Boolean canCancelFault;
-
-        @NameInMap("ContainHwMode")
-        private Boolean containHwMode;
-
-        @NameInMap("ContainerId")
-        private String containerId;
-
-        @NameInMap("ContainerImageId")
-        private String containerImageId;
-
-        @NameInMap("ContainerImageName")
-        private String containerImageName;
 
         @NameInMap("DataSource")
         private String dataSource;
@@ -256,24 +241,6 @@ public class DescribeAlarmEventListResponseBody extends TeaModel {
 
         @NameInMap("IntranetIp")
         private String intranetIp;
-
-        @NameInMap("K8sClusterId")
-        private String k8sClusterId;
-
-        @NameInMap("K8sClusterName")
-        private String k8sClusterName;
-
-        @NameInMap("K8sNamespace")
-        private String k8sNamespace;
-
-        @NameInMap("K8sNodeId")
-        private String k8sNodeId;
-
-        @NameInMap("K8sNodeName")
-        private String k8sNodeName;
-
-        @NameInMap("K8sPodName")
-        private String k8sPodName;
 
         @NameInMap("Level")
         private String level;
@@ -311,13 +278,8 @@ public class DescribeAlarmEventListResponseBody extends TeaModel {
             this.alarmEventNameOriginal = builder.alarmEventNameOriginal;
             this.alarmEventType = builder.alarmEventType;
             this.alarmUniqueInfo = builder.alarmUniqueInfo;
-            this.appName = builder.appName;
             this.canBeDealOnLine = builder.canBeDealOnLine;
             this.canCancelFault = builder.canCancelFault;
-            this.containHwMode = builder.containHwMode;
-            this.containerId = builder.containerId;
-            this.containerImageId = builder.containerImageId;
-            this.containerImageName = builder.containerImageName;
             this.dataSource = builder.dataSource;
             this.dealed = builder.dealed;
             this.description = builder.description;
@@ -328,12 +290,6 @@ public class DescribeAlarmEventListResponseBody extends TeaModel {
             this.instanceName = builder.instanceName;
             this.internetIp = builder.internetIp;
             this.intranetIp = builder.intranetIp;
-            this.k8sClusterId = builder.k8sClusterId;
-            this.k8sClusterName = builder.k8sClusterName;
-            this.k8sNamespace = builder.k8sNamespace;
-            this.k8sNodeId = builder.k8sNodeId;
-            this.k8sNodeName = builder.k8sNodeName;
-            this.k8sPodName = builder.k8sPodName;
             this.level = builder.level;
             this.operateErrorCode = builder.operateErrorCode;
             this.operateTime = builder.operateTime;
@@ -383,13 +339,6 @@ public class DescribeAlarmEventListResponseBody extends TeaModel {
         }
 
         /**
-         * @return appName
-         */
-        public String getAppName() {
-            return this.appName;
-        }
-
-        /**
          * @return canBeDealOnLine
          */
         public Boolean getCanBeDealOnLine() {
@@ -401,34 +350,6 @@ public class DescribeAlarmEventListResponseBody extends TeaModel {
          */
         public Boolean getCanCancelFault() {
             return this.canCancelFault;
-        }
-
-        /**
-         * @return containHwMode
-         */
-        public Boolean getContainHwMode() {
-            return this.containHwMode;
-        }
-
-        /**
-         * @return containerId
-         */
-        public String getContainerId() {
-            return this.containerId;
-        }
-
-        /**
-         * @return containerImageId
-         */
-        public String getContainerImageId() {
-            return this.containerImageId;
-        }
-
-        /**
-         * @return containerImageName
-         */
-        public String getContainerImageName() {
-            return this.containerImageName;
         }
 
         /**
@@ -499,48 +420,6 @@ public class DescribeAlarmEventListResponseBody extends TeaModel {
          */
         public String getIntranetIp() {
             return this.intranetIp;
-        }
-
-        /**
-         * @return k8sClusterId
-         */
-        public String getK8sClusterId() {
-            return this.k8sClusterId;
-        }
-
-        /**
-         * @return k8sClusterName
-         */
-        public String getK8sClusterName() {
-            return this.k8sClusterName;
-        }
-
-        /**
-         * @return k8sNamespace
-         */
-        public String getK8sNamespace() {
-            return this.k8sNamespace;
-        }
-
-        /**
-         * @return k8sNodeId
-         */
-        public String getK8sNodeId() {
-            return this.k8sNodeId;
-        }
-
-        /**
-         * @return k8sNodeName
-         */
-        public String getK8sNodeName() {
-            return this.k8sNodeName;
-        }
-
-        /**
-         * @return k8sPodName
-         */
-        public String getK8sPodName() {
-            return this.k8sPodName;
         }
 
         /**
@@ -618,13 +497,8 @@ public class DescribeAlarmEventListResponseBody extends TeaModel {
             private String alarmEventNameOriginal; 
             private String alarmEventType; 
             private String alarmUniqueInfo; 
-            private String appName; 
             private Boolean canBeDealOnLine; 
             private Boolean canCancelFault; 
-            private Boolean containHwMode; 
-            private String containerId; 
-            private String containerImageId; 
-            private String containerImageName; 
             private String dataSource; 
             private Boolean dealed; 
             private String description; 
@@ -635,12 +509,6 @@ public class DescribeAlarmEventListResponseBody extends TeaModel {
             private String instanceName; 
             private String internetIp; 
             private String intranetIp; 
-            private String k8sClusterId; 
-            private String k8sClusterName; 
-            private String k8sNamespace; 
-            private String k8sNodeId; 
-            private String k8sNodeName; 
-            private String k8sPodName; 
             private String level; 
             private String operateErrorCode; 
             private Long operateTime; 
@@ -685,14 +553,6 @@ public class DescribeAlarmEventListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>AppName.</p>
-             */
-            public Builder appName(String appName) {
-                this.appName = appName;
-                return this;
-            }
-
-            /**
              * <p>CanBeDealOnLine.</p>
              */
             public Builder canBeDealOnLine(Boolean canBeDealOnLine) {
@@ -705,38 +565,6 @@ public class DescribeAlarmEventListResponseBody extends TeaModel {
              */
             public Builder canCancelFault(Boolean canCancelFault) {
                 this.canCancelFault = canCancelFault;
-                return this;
-            }
-
-            /**
-             * <p>ContainHwMode.</p>
-             */
-            public Builder containHwMode(Boolean containHwMode) {
-                this.containHwMode = containHwMode;
-                return this;
-            }
-
-            /**
-             * <p>ContainerId.</p>
-             */
-            public Builder containerId(String containerId) {
-                this.containerId = containerId;
-                return this;
-            }
-
-            /**
-             * <p>ContainerImageId.</p>
-             */
-            public Builder containerImageId(String containerImageId) {
-                this.containerImageId = containerImageId;
-                return this;
-            }
-
-            /**
-             * <p>ContainerImageName.</p>
-             */
-            public Builder containerImageName(String containerImageName) {
-                this.containerImageName = containerImageName;
                 return this;
             }
 
@@ -817,54 +645,6 @@ public class DescribeAlarmEventListResponseBody extends TeaModel {
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
-                return this;
-            }
-
-            /**
-             * <p>K8sClusterId.</p>
-             */
-            public Builder k8sClusterId(String k8sClusterId) {
-                this.k8sClusterId = k8sClusterId;
-                return this;
-            }
-
-            /**
-             * <p>K8sClusterName.</p>
-             */
-            public Builder k8sClusterName(String k8sClusterName) {
-                this.k8sClusterName = k8sClusterName;
-                return this;
-            }
-
-            /**
-             * <p>K8sNamespace.</p>
-             */
-            public Builder k8sNamespace(String k8sNamespace) {
-                this.k8sNamespace = k8sNamespace;
-                return this;
-            }
-
-            /**
-             * <p>K8sNodeId.</p>
-             */
-            public Builder k8sNodeId(String k8sNodeId) {
-                this.k8sNodeId = k8sNodeId;
-                return this;
-            }
-
-            /**
-             * <p>K8sNodeName.</p>
-             */
-            public Builder k8sNodeName(String k8sNodeName) {
-                this.k8sNodeName = k8sNodeName;
-                return this;
-            }
-
-            /**
-             * <p>K8sPodName.</p>
-             */
-            public Builder k8sPodName(String k8sPodName) {
-                this.k8sPodName = k8sPodName;
                 return this;
             }
 

@@ -144,7 +144,7 @@ public class DescribeExposedInstanceListRequest extends Request {
         return this.vulStatus;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private Integer currentPage; 
         private String exposureComponent; 
         private String exposureIp; 

@@ -72,7 +72,7 @@ public class ModifyWebLockStatusRequest extends Request {
         return this.uuid;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String lang; 
         private String sourceIp; 
         private String status; 

@@ -60,7 +60,7 @@ public class DescribeSummaryInfoRequest extends Request {
         return this.sourceIp;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String lang; 
         private String resourceDirectoryAccountId; 
         private String sourceIp; 

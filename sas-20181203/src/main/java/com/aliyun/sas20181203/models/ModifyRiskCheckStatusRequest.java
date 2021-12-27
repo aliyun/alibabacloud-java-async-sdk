@@ -96,7 +96,7 @@ public class ModifyRiskCheckStatusRequest extends Request {
         return this.taskId;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private Long itemId; 
         private String lang; 
         private Long resourceOwnerId; 

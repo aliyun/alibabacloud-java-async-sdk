@@ -36,7 +36,7 @@ public class DescribePropertyUsageNewestRequest extends Request {
         return this.type;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String type; 
 
         /**

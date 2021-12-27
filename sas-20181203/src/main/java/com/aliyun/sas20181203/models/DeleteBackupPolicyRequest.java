@@ -48,7 +48,7 @@ public class DeleteBackupPolicyRequest extends Request {
         return this.policyVersion;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private Long id; 
         private String policyVersion; 
 

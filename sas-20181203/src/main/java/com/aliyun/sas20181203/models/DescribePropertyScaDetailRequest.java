@@ -168,7 +168,7 @@ public class DescribePropertyScaDetailRequest extends Request {
         return this.uuid;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String bizType; 
         private Integer currentPage; 
         private String lang; 

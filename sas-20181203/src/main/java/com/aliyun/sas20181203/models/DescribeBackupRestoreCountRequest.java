@@ -24,7 +24,7 @@ public class DescribeBackupRestoreCountRequest extends Request {
         return builder().build();
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
 
         public DescribeBackupRestoreCountRequest build() {
             return new DescribeBackupRestoreCountRequest(this);

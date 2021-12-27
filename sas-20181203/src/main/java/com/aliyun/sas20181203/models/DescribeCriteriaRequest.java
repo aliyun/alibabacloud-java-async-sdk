@@ -60,7 +60,7 @@ public class DescribeCriteriaRequest extends Request {
         return this.value;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String machineTypes; 
         private Boolean supportAutoTag; 
         private String value; 

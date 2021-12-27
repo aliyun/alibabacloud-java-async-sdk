@@ -84,7 +84,7 @@ public class DescribeUniBackupPoliciesRequest extends Request {
         return this.sourceIp;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private Integer currentPage; 
         private Integer pageSize; 
         private String policyName; 

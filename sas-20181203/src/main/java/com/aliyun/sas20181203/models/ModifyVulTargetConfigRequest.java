@@ -72,7 +72,7 @@ public class ModifyVulTargetConfigRequest extends Request {
         return this.uuid;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String config; 
         private String sourceIp; 
         private String type; 

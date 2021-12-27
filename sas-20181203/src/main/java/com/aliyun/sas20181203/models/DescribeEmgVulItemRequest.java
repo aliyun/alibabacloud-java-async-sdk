@@ -96,7 +96,7 @@ public class DescribeEmgVulItemRequest extends Request {
         return this.vulName;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private Integer currentPage; 
         private String lang; 
         private Integer pageSize; 

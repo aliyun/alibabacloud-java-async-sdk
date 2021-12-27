@@ -28,10 +28,6 @@ public class HandleSecurityEventsRequest extends Request {
     private String operationParams;
 
     @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
-
-    @Query
     @NameInMap("SecurityEventIds")
     private java.util.List < String > securityEventIds;
 
@@ -46,7 +42,6 @@ public class HandleSecurityEventsRequest extends Request {
         this.markMissParam = builder.markMissParam;
         this.operationCode = builder.operationCode;
         this.operationParams = builder.operationParams;
-        this.resourceOwnerId = builder.resourceOwnerId;
         this.securityEventIds = builder.securityEventIds;
         this.sourceIp = builder.sourceIp;
     }
@@ -88,13 +83,6 @@ public class HandleSecurityEventsRequest extends Request {
     }
 
     /**
-     * @return resourceOwnerId
-     */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    /**
      * @return securityEventIds
      */
     public java.util.List < String > getSecurityEventIds() {
@@ -108,12 +96,11 @@ public class HandleSecurityEventsRequest extends Request {
         return this.sourceIp;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String markBatch; 
         private String markMissParam; 
         private String operationCode; 
         private String operationParams; 
-        private Long resourceOwnerId; 
         private java.util.List < String > securityEventIds; 
         private String sourceIp; 
 
@@ -150,15 +137,6 @@ public class HandleSecurityEventsRequest extends Request {
         public Builder operationParams(String operationParams) {
             this.putQueryParameter("OperationParams", operationParams);
             this.operationParams = operationParams;
-            return this;
-        }
-
-        /**
-         * <p>ResourceOwnerId.</p>
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
             return this;
         }
 

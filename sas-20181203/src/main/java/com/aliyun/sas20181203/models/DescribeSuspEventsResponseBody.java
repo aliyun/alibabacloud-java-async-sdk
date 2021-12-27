@@ -152,12 +152,6 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
     } 
 
     public static class Details extends TeaModel {
-        @NameInMap("InfoType")
-        private String infoType;
-
-        @NameInMap("Name")
-        private String name;
-
         @NameInMap("NameDisplay")
         private String nameDisplay;
 
@@ -172,8 +166,6 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
 
 
         private Details(Builder builder) {
-            this.infoType = builder.infoType;
-            this.name = builder.name;
             this.nameDisplay = builder.nameDisplay;
             this.type = builder.type;
             this.value = builder.value;
@@ -186,20 +178,6 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
 
         public static Details create() {
             return builder().build();
-        }
-
-        /**
-         * @return infoType
-         */
-        public String getInfoType() {
-            return this.infoType;
-        }
-
-        /**
-         * @return name
-         */
-        public String getName() {
-            return this.name;
         }
 
         /**
@@ -231,28 +209,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private String infoType; 
-            private String name; 
             private String nameDisplay; 
             private String type; 
             private String value; 
             private String valueDisplay; 
-
-            /**
-             * <p>InfoType.</p>
-             */
-            public Builder infoType(String infoType) {
-                this.infoType = infoType;
-                return this;
-            }
-
-            /**
-             * <p>Name.</p>
-             */
-            public Builder name(String name) {
-                this.name = name;
-                return this;
-            }
 
             /**
              * <p>NameDisplay.</p>

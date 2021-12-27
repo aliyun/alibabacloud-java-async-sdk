@@ -72,7 +72,7 @@ public class ModifyInstanceAntiBruteForceRuleRequest extends Request {
         return this.uuid;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private Long newRuleId; 
         private Long resourceOwnerId; 
         private String sourceIp; 

@@ -72,7 +72,7 @@ public class DescribeSecurityEventOperationStatusRequest extends Request {
         return this.taskId;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private Long resourceOwnerId; 
         private java.util.List < String > securityEventIds; 
         private String sourceIp; 

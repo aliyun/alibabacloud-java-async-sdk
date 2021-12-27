@@ -144,7 +144,7 @@ public class ExportVulRequest extends Request {
         return this.vpcInstanceIds;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String aliasName; 
         private String attachTypes; 
         private String dealed; 

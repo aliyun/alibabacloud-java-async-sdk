@@ -98,14 +98,8 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
         @NameInMap("FieldAliasName")
         private String fieldAliasName;
 
-        @NameInMap("FieldId")
-        private Long fieldId;
-
         @NameInMap("GroupFlag")
         private Integer groupFlag;
-
-        @NameInMap("GroupPath")
-        private java.util.List < String > groupPath;
 
         @NameInMap("InstanceCount")
         private String instanceCount;
@@ -120,9 +114,7 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
         private Instances(Builder builder) {
             this.asapVulInstanceCount = builder.asapVulInstanceCount;
             this.fieldAliasName = builder.fieldAliasName;
-            this.fieldId = builder.fieldId;
             this.groupFlag = builder.groupFlag;
-            this.groupPath = builder.groupPath;
             this.instanceCount = builder.instanceCount;
             this.riskInstanceCount = builder.riskInstanceCount;
             this.unProtectedInstanceCount = builder.unProtectedInstanceCount;
@@ -151,24 +143,10 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * @return fieldId
-         */
-        public Long getFieldId() {
-            return this.fieldId;
-        }
-
-        /**
          * @return groupFlag
          */
         public Integer getGroupFlag() {
             return this.groupFlag;
-        }
-
-        /**
-         * @return groupPath
-         */
-        public java.util.List < String > getGroupPath() {
-            return this.groupPath;
         }
 
         /**
@@ -195,9 +173,7 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private Long asapVulInstanceCount; 
             private String fieldAliasName; 
-            private Long fieldId; 
             private Integer groupFlag; 
-            private java.util.List < String > groupPath; 
             private String instanceCount; 
             private String riskInstanceCount; 
             private String unProtectedInstanceCount; 
@@ -219,26 +195,10 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>FieldId.</p>
-             */
-            public Builder fieldId(Long fieldId) {
-                this.fieldId = fieldId;
-                return this;
-            }
-
-            /**
              * <p>GroupFlag.</p>
              */
             public Builder groupFlag(Integer groupFlag) {
                 this.groupFlag = groupFlag;
-                return this;
-            }
-
-            /**
-             * <p>GroupPath.</p>
-             */
-            public Builder groupPath(java.util.List < String > groupPath) {
-                this.groupPath = groupPath;
                 return this;
             }
 

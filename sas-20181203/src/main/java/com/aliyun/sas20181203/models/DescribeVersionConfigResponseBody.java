@@ -23,18 +23,6 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     @NameInMap("AssetLevel")
     private Integer assetLevel;
 
-    @NameInMap("AvdsFlag")
-    private Integer avdsFlag;
-
-    @NameInMap("CreateTime")
-    private Long createTime;
-
-    @NameInMap("Flag")
-    private Integer flag;
-
-    @NameInMap("GmtCreate")
-    private Long gmtCreate;
-
     @NameInMap("HighestVersion")
     private Integer highestVersion;
 
@@ -50,26 +38,11 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     @NameInMap("IsOverBalance")
     private Boolean isOverBalance;
 
-    @NameInMap("IsPaidUser")
-    private Boolean isPaidUser;
-
-    @NameInMap("IsSasOpening")
-    private Boolean isSasOpening;
-
     @NameInMap("IsTrialVersion")
     private Integer isTrialVersion;
 
-    @NameInMap("LastInstanceReleaseTime")
-    private Long lastInstanceReleaseTime;
-
     @NameInMap("LastTrailEndTime")
     private Long lastTrailEndTime;
-
-    @NameInMap("LogCapacity")
-    private Integer logCapacity;
-
-    @NameInMap("LogTime")
-    private Integer logTime;
 
     @NameInMap("MVAuthCount")
     private Integer MVAuthCount;
@@ -113,22 +86,13 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         this.appWhiteList = builder.appWhiteList;
         this.appWhiteListAuthCount = builder.appWhiteListAuthCount;
         this.assetLevel = builder.assetLevel;
-        this.avdsFlag = builder.avdsFlag;
-        this.createTime = builder.createTime;
-        this.flag = builder.flag;
-        this.gmtCreate = builder.gmtCreate;
         this.highestVersion = builder.highestVersion;
         this.honeypotCapacity = builder.honeypotCapacity;
         this.imageScanCapacity = builder.imageScanCapacity;
         this.instanceId = builder.instanceId;
         this.isOverBalance = builder.isOverBalance;
-        this.isPaidUser = builder.isPaidUser;
-        this.isSasOpening = builder.isSasOpening;
         this.isTrialVersion = builder.isTrialVersion;
-        this.lastInstanceReleaseTime = builder.lastInstanceReleaseTime;
         this.lastTrailEndTime = builder.lastTrailEndTime;
-        this.logCapacity = builder.logCapacity;
-        this.logTime = builder.logTime;
         this.MVAuthCount = builder.MVAuthCount;
         this.MVUnusedAuthCount = builder.MVUnusedAuthCount;
         this.releaseTime = builder.releaseTime;
@@ -180,34 +144,6 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     }
 
     /**
-     * @return avdsFlag
-     */
-    public Integer getAvdsFlag() {
-        return this.avdsFlag;
-    }
-
-    /**
-     * @return createTime
-     */
-    public Long getCreateTime() {
-        return this.createTime;
-    }
-
-    /**
-     * @return flag
-     */
-    public Integer getFlag() {
-        return this.flag;
-    }
-
-    /**
-     * @return gmtCreate
-     */
-    public Long getGmtCreate() {
-        return this.gmtCreate;
-    }
-
-    /**
      * @return highestVersion
      */
     public Integer getHighestVersion() {
@@ -243,20 +179,6 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     }
 
     /**
-     * @return isPaidUser
-     */
-    public Boolean getIsPaidUser() {
-        return this.isPaidUser;
-    }
-
-    /**
-     * @return isSasOpening
-     */
-    public Boolean getIsSasOpening() {
-        return this.isSasOpening;
-    }
-
-    /**
      * @return isTrialVersion
      */
     public Integer getIsTrialVersion() {
@@ -264,31 +186,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     }
 
     /**
-     * @return lastInstanceReleaseTime
-     */
-    public Long getLastInstanceReleaseTime() {
-        return this.lastInstanceReleaseTime;
-    }
-
-    /**
      * @return lastTrailEndTime
      */
     public Long getLastTrailEndTime() {
         return this.lastTrailEndTime;
-    }
-
-    /**
-     * @return logCapacity
-     */
-    public Integer getLogCapacity() {
-        return this.logCapacity;
-    }
-
-    /**
-     * @return logTime
-     */
-    public Integer getLogTime() {
-        return this.logTime;
     }
 
     /**
@@ -380,22 +281,13 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         private Integer appWhiteList; 
         private Long appWhiteListAuthCount; 
         private Integer assetLevel; 
-        private Integer avdsFlag; 
-        private Long createTime; 
-        private Integer flag; 
-        private Long gmtCreate; 
         private Integer highestVersion; 
         private Long honeypotCapacity; 
         private Long imageScanCapacity; 
         private String instanceId; 
         private Boolean isOverBalance; 
-        private Boolean isPaidUser; 
-        private Boolean isSasOpening; 
         private Integer isTrialVersion; 
-        private Long lastInstanceReleaseTime; 
         private Long lastTrailEndTime; 
-        private Integer logCapacity; 
-        private Integer logTime; 
         private Integer MVAuthCount; 
         private Integer MVUnusedAuthCount; 
         private Long releaseTime; 
@@ -442,38 +334,6 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>AvdsFlag.</p>
-         */
-        public Builder avdsFlag(Integer avdsFlag) {
-            this.avdsFlag = avdsFlag;
-            return this;
-        }
-
-        /**
-         * <p>CreateTime.</p>
-         */
-        public Builder createTime(Long createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-
-        /**
-         * <p>Flag.</p>
-         */
-        public Builder flag(Integer flag) {
-            this.flag = flag;
-            return this;
-        }
-
-        /**
-         * <p>GmtCreate.</p>
-         */
-        public Builder gmtCreate(Long gmtCreate) {
-            this.gmtCreate = gmtCreate;
-            return this;
-        }
-
-        /**
          * <p>HighestVersion.</p>
          */
         public Builder highestVersion(Integer highestVersion) {
@@ -514,22 +374,6 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>IsPaidUser.</p>
-         */
-        public Builder isPaidUser(Boolean isPaidUser) {
-            this.isPaidUser = isPaidUser;
-            return this;
-        }
-
-        /**
-         * <p>IsSasOpening.</p>
-         */
-        public Builder isSasOpening(Boolean isSasOpening) {
-            this.isSasOpening = isSasOpening;
-            return this;
-        }
-
-        /**
          * <p>IsTrialVersion.</p>
          */
         public Builder isTrialVersion(Integer isTrialVersion) {
@@ -538,34 +382,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>LastInstanceReleaseTime.</p>
-         */
-        public Builder lastInstanceReleaseTime(Long lastInstanceReleaseTime) {
-            this.lastInstanceReleaseTime = lastInstanceReleaseTime;
-            return this;
-        }
-
-        /**
          * <p>LastTrailEndTime.</p>
          */
         public Builder lastTrailEndTime(Long lastTrailEndTime) {
             this.lastTrailEndTime = lastTrailEndTime;
-            return this;
-        }
-
-        /**
-         * <p>LogCapacity.</p>
-         */
-        public Builder logCapacity(Integer logCapacity) {
-            this.logCapacity = logCapacity;
-            return this;
-        }
-
-        /**
-         * <p>LogTime.</p>
-         */
-        public Builder logTime(Integer logTime) {
-            this.logTime = logTime;
             return this;
         }
 

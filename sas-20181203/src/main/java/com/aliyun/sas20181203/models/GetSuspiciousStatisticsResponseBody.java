@@ -23,9 +23,6 @@ public class GetSuspiciousStatisticsResponseBody extends TeaModel {
     @NameInMap("SuspiciousCount")
     private Integer suspiciousCount;
 
-    @NameInMap("TemindCount")
-    private Integer temindCount;
-
     @NameInMap("TotalCount")
     private Integer totalCount;
 
@@ -35,7 +32,6 @@ public class GetSuspiciousStatisticsResponseBody extends TeaModel {
         this.requestId = builder.requestId;
         this.seriousCount = builder.seriousCount;
         this.suspiciousCount = builder.suspiciousCount;
-        this.temindCount = builder.temindCount;
         this.totalCount = builder.totalCount;
     }
 
@@ -76,13 +72,6 @@ public class GetSuspiciousStatisticsResponseBody extends TeaModel {
     }
 
     /**
-     * @return temindCount
-     */
-    public Integer getTemindCount() {
-        return this.temindCount;
-    }
-
-    /**
      * @return totalCount
      */
     public Integer getTotalCount() {
@@ -94,7 +83,6 @@ public class GetSuspiciousStatisticsResponseBody extends TeaModel {
         private String requestId; 
         private Integer seriousCount; 
         private Integer suspiciousCount; 
-        private Integer temindCount; 
         private Integer totalCount; 
 
         /**
@@ -126,14 +114,6 @@ public class GetSuspiciousStatisticsResponseBody extends TeaModel {
          */
         public Builder suspiciousCount(Integer suspiciousCount) {
             this.suspiciousCount = suspiciousCount;
-            return this;
-        }
-
-        /**
-         * <p>TemindCount.</p>
-         */
-        public Builder temindCount(Integer temindCount) {
-            this.temindCount = temindCount;
             return this;
         }
 

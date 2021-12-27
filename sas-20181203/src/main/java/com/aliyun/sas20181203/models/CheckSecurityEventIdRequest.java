@@ -48,7 +48,7 @@ public class CheckSecurityEventIdRequest extends Request {
         return this.uuid;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private java.util.List < String > securityEventIds; 
         private String uuid; 
 

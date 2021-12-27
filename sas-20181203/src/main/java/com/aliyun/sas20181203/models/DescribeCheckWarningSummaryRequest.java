@@ -144,7 +144,7 @@ public class DescribeCheckWarningSummaryRequest extends Request {
         return this.uuids;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private Integer currentPage; 
         private String lang; 
         private Integer pageSize; 

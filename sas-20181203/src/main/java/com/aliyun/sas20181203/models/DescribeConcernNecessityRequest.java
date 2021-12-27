@@ -36,7 +36,7 @@ public class DescribeConcernNecessityRequest extends Request {
         return this.lang;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String lang; 
 
         /**

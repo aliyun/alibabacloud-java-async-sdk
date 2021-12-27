@@ -84,7 +84,7 @@ public class StartBaselineSecurityCheckRequest extends Request {
         return this.type;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private java.util.List < Long > itemIds; 
         private String lang; 
         private Long resourceOwnerId; 

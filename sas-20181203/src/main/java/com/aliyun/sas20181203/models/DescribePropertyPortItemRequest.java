@@ -72,7 +72,7 @@ public class DescribePropertyPortItemRequest extends Request {
         return this.port;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private Integer currentPage; 
         private Boolean forceFlush; 
         private Integer pageSize; 

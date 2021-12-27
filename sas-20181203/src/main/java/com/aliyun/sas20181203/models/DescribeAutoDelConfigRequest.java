@@ -24,7 +24,7 @@ public class DescribeAutoDelConfigRequest extends Request {
         return builder().build();
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
 
         public DescribeAutoDelConfigRequest build() {
             return new DescribeAutoDelConfigRequest(this);

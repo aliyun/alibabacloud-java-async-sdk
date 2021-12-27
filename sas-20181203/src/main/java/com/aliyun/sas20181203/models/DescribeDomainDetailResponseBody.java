@@ -167,9 +167,6 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         @NameInMap("IntranetIp")
         private String intranetIp;
 
-        @NameInMap("MachineIp")
-        private String machineIp;
-
         @NameInMap("Uuid")
         private String uuid;
 
@@ -180,7 +177,6 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             this.instanceName = builder.instanceName;
             this.internetIp = builder.internetIp;
             this.intranetIp = builder.intranetIp;
-            this.machineIp = builder.machineIp;
             this.uuid = builder.uuid;
         }
 
@@ -228,13 +224,6 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * @return machineIp
-         */
-        public String getMachineIp() {
-            return this.machineIp;
-        }
-
-        /**
          * @return uuid
          */
         public String getUuid() {
@@ -247,7 +236,6 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             private String instanceName; 
             private String internetIp; 
             private String intranetIp; 
-            private String machineIp; 
             private String uuid; 
 
             /**
@@ -287,14 +275,6 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
-                return this;
-            }
-
-            /**
-             * <p>MachineIp.</p>
-             */
-            public Builder machineIp(String machineIp) {
-                this.machineIp = machineIp;
                 return this;
             }
 

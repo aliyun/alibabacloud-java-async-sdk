@@ -48,7 +48,7 @@ public class DescribeIpInfoRequest extends Request {
         return this.ip;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String field; 
         private String ip; 
 

@@ -108,7 +108,7 @@ public class DescribePropertySoftwareDetailRequest extends Request {
         return this.uuid;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private Integer currentPage; 
         private String name; 
         private Integer pageSize; 

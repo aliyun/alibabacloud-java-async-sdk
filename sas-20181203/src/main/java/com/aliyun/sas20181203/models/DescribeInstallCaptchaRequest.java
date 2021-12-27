@@ -60,7 +60,7 @@ public class DescribeInstallCaptchaRequest extends Request {
         return this.sourceIp;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String deadline; 
         private String lang; 
         private String sourceIp; 

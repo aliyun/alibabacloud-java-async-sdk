@@ -60,7 +60,7 @@ public class ExportRecordRequest extends Request {
         return this.params;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String exportType; 
         private String lang; 
         private String params; 

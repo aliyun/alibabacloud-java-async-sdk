@@ -108,7 +108,7 @@ public class DescribeCloudCenterInstancesRequest extends Request {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String criteria; 
         private Integer currentPage; 
         private Integer importance; 

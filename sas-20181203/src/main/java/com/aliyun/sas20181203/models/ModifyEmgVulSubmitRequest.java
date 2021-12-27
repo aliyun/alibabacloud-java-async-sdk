@@ -60,7 +60,7 @@ public class ModifyEmgVulSubmitRequest extends Request {
         return this.userAgreement;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String lang; 
         private String name; 
         private String userAgreement; 

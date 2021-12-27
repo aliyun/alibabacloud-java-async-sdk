@@ -96,7 +96,7 @@ public class DescribeSimilarSecurityEventsRequest extends Request {
         return this.taskId;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private Integer currentPage; 
         private String lang; 
         private Integer pageSize; 

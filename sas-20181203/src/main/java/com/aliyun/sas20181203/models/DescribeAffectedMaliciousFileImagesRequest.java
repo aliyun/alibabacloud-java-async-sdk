@@ -168,7 +168,7 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         return this.repoRegionId;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private Integer currentPage; 
         private String imageDigest; 
         private String imageLayer; 

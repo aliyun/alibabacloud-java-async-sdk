@@ -36,7 +36,7 @@ public class ModifyOpenLogShipperRequest extends Request {
         return this.from;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String from; 
 
         /**

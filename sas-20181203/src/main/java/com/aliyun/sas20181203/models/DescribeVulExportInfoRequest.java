@@ -36,7 +36,7 @@ public class DescribeVulExportInfoRequest extends Request {
         return this.exportId;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private Long exportId; 
 
         /**

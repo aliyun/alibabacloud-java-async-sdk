@@ -72,7 +72,7 @@ public class ModifyWebLockDeleteConfigRequest extends Request {
         return this.uuid;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private Integer id; 
         private String lang; 
         private String sourceIp; 

@@ -168,7 +168,7 @@ public class ModifyWebLockCreateConfigRequest extends Request {
         return this.uuid;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String defenceMode; 
         private String dir; 
         private String exclusiveDir; 

@@ -87,6 +87,9 @@ public class DescribeAssetDetailByUuidResponseBody extends TeaModel {
         @NameInMap("ClientStatus")
         private String clientStatus;
 
+        @NameInMap("ClientVersion")
+        private String clientVersion;
+
         @NameInMap("Cpu")
         private Integer cpu;
 
@@ -99,6 +102,9 @@ public class DescribeAssetDetailByUuidResponseBody extends TeaModel {
         @NameInMap("DiskInfoList")
         private java.util.List < String > diskInfoList;
 
+        @NameInMap("Flag")
+        private Integer flag;
+
         @NameInMap("GroupTrace")
         private String groupTrace;
 
@@ -110,9 +116,6 @@ public class DescribeAssetDetailByUuidResponseBody extends TeaModel {
 
         @NameInMap("InstanceName")
         private String instanceName;
-
-        @NameInMap("InstanceStatus")
-        private String instanceStatus;
 
         @NameInMap("InternetIp")
         private String internetIp;
@@ -134,6 +137,9 @@ public class DescribeAssetDetailByUuidResponseBody extends TeaModel {
 
         @NameInMap("Mem")
         private Integer mem;
+
+        @NameInMap("Memory")
+        private Long memory;
 
         @NameInMap("Os")
         private String os;
@@ -172,15 +178,16 @@ public class DescribeAssetDetailByUuidResponseBody extends TeaModel {
             this.authVersion = builder.authVersion;
             this.bind = builder.bind;
             this.clientStatus = builder.clientStatus;
+            this.clientVersion = builder.clientVersion;
             this.cpu = builder.cpu;
             this.cpuInfo = builder.cpuInfo;
             this.createTime = builder.createTime;
             this.diskInfoList = builder.diskInfoList;
+            this.flag = builder.flag;
             this.groupTrace = builder.groupTrace;
             this.hostName = builder.hostName;
             this.instanceId = builder.instanceId;
             this.instanceName = builder.instanceName;
-            this.instanceStatus = builder.instanceStatus;
             this.internetIp = builder.internetIp;
             this.intranetIp = builder.intranetIp;
             this.ip = builder.ip;
@@ -188,6 +195,7 @@ public class DescribeAssetDetailByUuidResponseBody extends TeaModel {
             this.kernel = builder.kernel;
             this.macList = builder.macList;
             this.mem = builder.mem;
+            this.memory = builder.memory;
             this.os = builder.os;
             this.osDetail = builder.osDetail;
             this.osName = builder.osName;
@@ -244,6 +252,13 @@ public class DescribeAssetDetailByUuidResponseBody extends TeaModel {
         }
 
         /**
+         * @return clientVersion
+         */
+        public String getClientVersion() {
+            return this.clientVersion;
+        }
+
+        /**
          * @return cpu
          */
         public Integer getCpu() {
@@ -272,6 +287,13 @@ public class DescribeAssetDetailByUuidResponseBody extends TeaModel {
         }
 
         /**
+         * @return flag
+         */
+        public Integer getFlag() {
+            return this.flag;
+        }
+
+        /**
          * @return groupTrace
          */
         public String getGroupTrace() {
@@ -297,13 +319,6 @@ public class DescribeAssetDetailByUuidResponseBody extends TeaModel {
          */
         public String getInstanceName() {
             return this.instanceName;
-        }
-
-        /**
-         * @return instanceStatus
-         */
-        public String getInstanceStatus() {
-            return this.instanceStatus;
         }
 
         /**
@@ -353,6 +368,13 @@ public class DescribeAssetDetailByUuidResponseBody extends TeaModel {
          */
         public Integer getMem() {
             return this.mem;
+        }
+
+        /**
+         * @return memory
+         */
+        public Long getMemory() {
+            return this.memory;
         }
 
         /**
@@ -431,15 +453,16 @@ public class DescribeAssetDetailByUuidResponseBody extends TeaModel {
             private Integer authVersion; 
             private Boolean bind; 
             private String clientStatus; 
+            private String clientVersion; 
             private Integer cpu; 
             private String cpuInfo; 
             private Long createTime; 
             private java.util.List < String > diskInfoList; 
+            private Integer flag; 
             private String groupTrace; 
             private String hostName; 
             private String instanceId; 
             private String instanceName; 
-            private String instanceStatus; 
             private String internetIp; 
             private String intranetIp; 
             private String ip; 
@@ -447,6 +470,7 @@ public class DescribeAssetDetailByUuidResponseBody extends TeaModel {
             private String kernel; 
             private java.util.List < String > macList; 
             private Integer mem; 
+            private Long memory; 
             private String os; 
             private String osDetail; 
             private String osName; 
@@ -499,6 +523,14 @@ public class DescribeAssetDetailByUuidResponseBody extends TeaModel {
             }
 
             /**
+             * <p>ClientVersion.</p>
+             */
+            public Builder clientVersion(String clientVersion) {
+                this.clientVersion = clientVersion;
+                return this;
+            }
+
+            /**
              * <p>Cpu.</p>
              */
             public Builder cpu(Integer cpu) {
@@ -531,6 +563,14 @@ public class DescribeAssetDetailByUuidResponseBody extends TeaModel {
             }
 
             /**
+             * <p>Flag.</p>
+             */
+            public Builder flag(Integer flag) {
+                this.flag = flag;
+                return this;
+            }
+
+            /**
              * <p>GroupTrace.</p>
              */
             public Builder groupTrace(String groupTrace) {
@@ -559,14 +599,6 @@ public class DescribeAssetDetailByUuidResponseBody extends TeaModel {
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
-                return this;
-            }
-
-            /**
-             * <p>InstanceStatus.</p>
-             */
-            public Builder instanceStatus(String instanceStatus) {
-                this.instanceStatus = instanceStatus;
                 return this;
             }
 
@@ -623,6 +655,14 @@ public class DescribeAssetDetailByUuidResponseBody extends TeaModel {
              */
             public Builder mem(Integer mem) {
                 this.mem = mem;
+                return this;
+            }
+
+            /**
+             * <p>Memory.</p>
+             */
+            public Builder memory(Long memory) {
+                this.memory = memory;
                 return this;
             }
 

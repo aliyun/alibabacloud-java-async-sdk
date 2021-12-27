@@ -24,6 +24,10 @@ public class DescribeSuspEventQuaraFilesRequest extends Request {
     private String groupId;
 
     @Query
+    @NameInMap("GroupingId")
+    private Long groupingId;
+
+    @Query
     @NameInMap("PageSize")
     private String pageSize;
 
@@ -45,6 +49,7 @@ public class DescribeSuspEventQuaraFilesRequest extends Request {
         this.currentPage = builder.currentPage;
         this.from = builder.from;
         this.groupId = builder.groupId;
+        this.groupingId = builder.groupingId;
         this.pageSize = builder.pageSize;
         this.quaraTag = builder.quaraTag;
         this.sourceIp = builder.sourceIp;
@@ -81,6 +86,13 @@ public class DescribeSuspEventQuaraFilesRequest extends Request {
     }
 
     /**
+     * @return groupingId
+     */
+    public Long getGroupingId() {
+        return this.groupingId;
+    }
+
+    /**
      * @return pageSize
      */
     public String getPageSize() {
@@ -108,10 +120,11 @@ public class DescribeSuspEventQuaraFilesRequest extends Request {
         return this.status;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String currentPage; 
         private String from; 
         private String groupId; 
+        private Long groupingId; 
         private String pageSize; 
         private String quaraTag; 
         private String sourceIp; 
@@ -141,6 +154,15 @@ public class DescribeSuspEventQuaraFilesRequest extends Request {
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
             this.groupId = groupId;
+            return this;
+        }
+
+        /**
+         * <p>GroupingId.</p>
+         */
+        public Builder groupingId(Long groupingId) {
+            this.putQueryParameter("GroupingId", groupingId);
+            this.groupingId = groupingId;
             return this;
         }
 

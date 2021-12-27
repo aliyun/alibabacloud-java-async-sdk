@@ -135,9 +135,6 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
         @NameInMap("AliasName")
         private String aliasName;
 
-        @NameInMap("Description")
-        private String description;
-
         @NameInMap("GmtLastCheck")
         private Long gmtLastCheck;
 
@@ -162,7 +159,6 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
 
         private GroupedVulItems(Builder builder) {
             this.aliasName = builder.aliasName;
-            this.description = builder.description;
             this.gmtLastCheck = builder.gmtLastCheck;
             this.gmtPublish = builder.gmtPublish;
             this.name = builder.name;
@@ -185,13 +181,6 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
          */
         public String getAliasName() {
             return this.aliasName;
-        }
-
-        /**
-         * @return description
-         */
-        public String getDescription() {
-            return this.description;
         }
 
         /**
@@ -245,7 +234,6 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
 
         public static final class Builder {
             private String aliasName; 
-            private String description; 
             private Long gmtLastCheck; 
             private Long gmtPublish; 
             private String name; 
@@ -259,14 +247,6 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
              */
             public Builder aliasName(String aliasName) {
                 this.aliasName = aliasName;
-                return this;
-            }
-
-            /**
-             * <p>Description.</p>
-             */
-            public Builder description(String description) {
-                this.description = description;
                 return this;
             }
 

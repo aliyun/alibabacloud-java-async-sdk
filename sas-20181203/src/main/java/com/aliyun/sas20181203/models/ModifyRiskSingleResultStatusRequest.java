@@ -96,7 +96,7 @@ public class ModifyRiskSingleResultStatusRequest extends Request {
         return this.taskId;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private java.util.List < String > ids; 
         private String lang; 
         private Long resourceOwnerId; 

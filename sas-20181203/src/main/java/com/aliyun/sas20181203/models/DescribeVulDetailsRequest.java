@@ -72,7 +72,7 @@ public class DescribeVulDetailsRequest extends Request {
         return this.type;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String aliasName; 
         private String lang; 
         private String name; 

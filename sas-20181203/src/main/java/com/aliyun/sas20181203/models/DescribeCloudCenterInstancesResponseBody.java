@@ -155,7 +155,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         private Integer flag;
 
         @NameInMap("GroupId")
-        private String groupId;
+        private Long groupId;
 
         @NameInMap("GroupTrace")
         private String groupTrace;
@@ -413,7 +413,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         /**
          * @return groupId
          */
-        public String getGroupId() {
+        public Long getGroupId() {
             return this.groupId;
         }
 
@@ -656,7 +656,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             private Long createdTime; 
             private Integer exposedStatus; 
             private Integer flag; 
-            private String groupId; 
+            private Long groupId; 
             private String groupTrace; 
             private String hcStatus; 
             private Integer healthCheckCount; 
@@ -805,7 +805,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             /**
              * <p>GroupId.</p>
              */
-            public Builder groupId(String groupId) {
+            public Builder groupId(Long groupId) {
                 this.groupId = groupId;
                 return this;
             }

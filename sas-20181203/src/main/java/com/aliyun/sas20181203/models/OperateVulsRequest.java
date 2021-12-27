@@ -72,7 +72,7 @@ public class OperateVulsRequest extends Request {
         return this.vulNames;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String operateType; 
         private String type; 
         private java.util.List < String > uuids; 

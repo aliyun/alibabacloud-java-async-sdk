@@ -24,7 +24,7 @@ public class DescribeVpcListRequest extends Request {
         return builder().build();
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
 
         public DescribeVpcListRequest build() {
             return new DescribeVpcListRequest(this);

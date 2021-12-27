@@ -173,7 +173,7 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
 
     public static class RiskItemResources extends TeaModel {
         @NameInMap("ContentResource")
-        private java.util.Map < String, ? > contentResource;
+        private String contentResource;
 
         @NameInMap("ResourceName")
         private String resourceName;
@@ -195,7 +195,7 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
         /**
          * @return contentResource
          */
-        public java.util.Map < String, ? > getContentResource() {
+        public String getContentResource() {
             return this.contentResource;
         }
 
@@ -207,13 +207,13 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > contentResource; 
+            private String contentResource; 
             private String resourceName; 
 
             /**
              * <p>ContentResource.</p>
              */
-            public Builder contentResource(java.util.Map < String, ? > contentResource) {
+            public Builder contentResource(String contentResource) {
                 this.contentResource = contentResource;
                 return this;
             }

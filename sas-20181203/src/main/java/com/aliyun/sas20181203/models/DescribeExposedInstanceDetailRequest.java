@@ -36,7 +36,7 @@ public class DescribeExposedInstanceDetailRequest extends Request {
         return this.uuid;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String uuid; 
 
         /**

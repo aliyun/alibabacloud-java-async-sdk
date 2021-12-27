@@ -180,7 +180,7 @@ public class DescribeGroupedMaliciousFilesRequest extends Request {
         return this.repoRegionId;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private Integer currentPage; 
         private String fuzzyMaliciousName; 
         private String imageDigest; 

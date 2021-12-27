@@ -168,7 +168,7 @@ public class DescribeRiskCheckResultRequest extends Request {
         return this.status;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String assetType; 
         private Integer currentPage; 
         private Long groupId; 

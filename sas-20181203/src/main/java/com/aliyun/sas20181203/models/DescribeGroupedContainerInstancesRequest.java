@@ -96,7 +96,7 @@ public class DescribeGroupedContainerInstancesRequest extends Request {
         return this.pageSize;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String criteria; 
         private Integer currentPage; 
         private String fieldValue; 

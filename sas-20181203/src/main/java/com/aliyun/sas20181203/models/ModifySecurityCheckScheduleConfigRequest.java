@@ -96,7 +96,7 @@ public class ModifySecurityCheckScheduleConfigRequest extends Request {
         return this.startTime;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String daysOfWeek; 
         private Integer endTime; 
         private String lang; 

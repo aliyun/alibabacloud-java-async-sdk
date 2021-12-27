@@ -24,7 +24,7 @@ public class DescribeInstallCodesRequest extends Request {
         return builder().build();
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
 
         public DescribeInstallCodesRequest build() {
             return new DescribeInstallCodesRequest(this);

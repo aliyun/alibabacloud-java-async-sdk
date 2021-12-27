@@ -36,7 +36,7 @@ public class StartVirusScanTaskRequest extends Request {
         return this.targetInfo;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String targetInfo; 
 
         /**

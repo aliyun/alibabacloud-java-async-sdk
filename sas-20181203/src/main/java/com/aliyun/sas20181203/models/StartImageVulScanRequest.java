@@ -144,7 +144,7 @@ public class StartImageVulScanRequest extends Request {
         return this.repoRegionId;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String imageDigest; 
         private String imageLayer; 
         private String imageTag; 

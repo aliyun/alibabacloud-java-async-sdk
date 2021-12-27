@@ -154,9 +154,6 @@ public class DescribeStrategyResponseBody extends TeaModel {
 
     }
     public static class Strategies extends TeaModel {
-        @NameInMap("AuthVersionList")
-        private String authVersionList;
-
         @NameInMap("ConfigTargets")
         private java.util.List < ConfigTargets> configTargets;
 
@@ -195,7 +192,6 @@ public class DescribeStrategyResponseBody extends TeaModel {
 
 
         private Strategies(Builder builder) {
-            this.authVersionList = builder.authVersionList;
             this.configTargets = builder.configTargets;
             this.customType = builder.customType;
             this.cycleDays = builder.cycleDays;
@@ -216,13 +212,6 @@ public class DescribeStrategyResponseBody extends TeaModel {
 
         public static Strategies create() {
             return builder().build();
-        }
-
-        /**
-         * @return authVersionList
-         */
-        public String getAuthVersionList() {
-            return this.authVersionList;
         }
 
         /**
@@ -310,7 +299,6 @@ public class DescribeStrategyResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private String authVersionList; 
             private java.util.List < ConfigTargets> configTargets; 
             private String customType; 
             private Integer cycleDays; 
@@ -323,14 +311,6 @@ public class DescribeStrategyResponseBody extends TeaModel {
             private Integer processRate; 
             private Integer riskCount; 
             private Integer type; 
-
-            /**
-             * <p>AuthVersionList.</p>
-             */
-            public Builder authVersionList(String authVersionList) {
-                this.authVersionList = authVersionList;
-                return this;
-            }
 
             /**
              * <p>ConfigTargets.</p>

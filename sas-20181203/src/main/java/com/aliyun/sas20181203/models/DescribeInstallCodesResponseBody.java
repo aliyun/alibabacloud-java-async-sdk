@@ -90,12 +90,6 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
         @NameInMap("Os")
         private String os;
 
-        @NameInMap("Tag")
-        private String tag;
-
-        @NameInMap("Vendor")
-        private Integer vendor;
-
         @NameInMap("VendorName")
         private String vendorName;
 
@@ -107,8 +101,6 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
             this.groupName = builder.groupName;
             this.onlyImage = builder.onlyImage;
             this.os = builder.os;
-            this.tag = builder.tag;
-            this.vendor = builder.vendor;
             this.vendorName = builder.vendorName;
         }
 
@@ -163,20 +155,6 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
         }
 
         /**
-         * @return tag
-         */
-        public String getTag() {
-            return this.tag;
-        }
-
-        /**
-         * @return vendor
-         */
-        public Integer getVendor() {
-            return this.vendor;
-        }
-
-        /**
          * @return vendorName
          */
         public String getVendorName() {
@@ -190,8 +168,6 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
             private String groupName; 
             private Boolean onlyImage; 
             private String os; 
-            private String tag; 
-            private Integer vendor; 
             private String vendorName; 
 
             /**
@@ -239,22 +215,6 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
              */
             public Builder os(String os) {
                 this.os = os;
-                return this;
-            }
-
-            /**
-             * <p>Tag.</p>
-             */
-            public Builder tag(String tag) {
-                this.tag = tag;
-                return this;
-            }
-
-            /**
-             * <p>Vendor.</p>
-             */
-            public Builder vendor(Integer vendor) {
-                this.vendor = vendor;
                 return this;
             }
 

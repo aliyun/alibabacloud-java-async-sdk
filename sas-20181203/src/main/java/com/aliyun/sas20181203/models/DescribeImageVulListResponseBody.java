@@ -417,9 +417,6 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         @NameInMap("Layers")
         private java.util.List < String > layers;
 
-        @NameInMap("Level")
-        private String level;
-
         @NameInMap("ModifyTs")
         private Long modifyTs;
 
@@ -431,9 +428,6 @@ public class DescribeImageVulListResponseBody extends TeaModel {
 
         @NameInMap("PrimaryId")
         private Long primaryId;
-
-        @NameInMap("Progress")
-        private Integer progress;
 
         @NameInMap("Related")
         private String related;
@@ -465,12 +459,10 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             this.imageDigest = builder.imageDigest;
             this.lastTs = builder.lastTs;
             this.layers = builder.layers;
-            this.level = builder.level;
             this.modifyTs = builder.modifyTs;
             this.name = builder.name;
             this.necessity = builder.necessity;
             this.primaryId = builder.primaryId;
-            this.progress = builder.progress;
             this.related = builder.related;
             this.repoName = builder.repoName;
             this.repoNamespace = builder.repoNamespace;
@@ -538,13 +530,6 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         }
 
         /**
-         * @return level
-         */
-        public String getLevel() {
-            return this.level;
-        }
-
-        /**
          * @return modifyTs
          */
         public Long getModifyTs() {
@@ -570,13 +555,6 @@ public class DescribeImageVulListResponseBody extends TeaModel {
          */
         public Long getPrimaryId() {
             return this.primaryId;
-        }
-
-        /**
-         * @return progress
-         */
-        public Integer getProgress() {
-            return this.progress;
         }
 
         /**
@@ -636,12 +614,10 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             private String imageDigest; 
             private Long lastTs; 
             private java.util.List < String > layers; 
-            private String level; 
             private Long modifyTs; 
             private String name; 
             private String necessity; 
             private Long primaryId; 
-            private Integer progress; 
             private String related; 
             private String repoName; 
             private String repoNamespace; 
@@ -707,14 +683,6 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Level.</p>
-             */
-            public Builder level(String level) {
-                this.level = level;
-                return this;
-            }
-
-            /**
              * <p>ModifyTs.</p>
              */
             public Builder modifyTs(Long modifyTs) {
@@ -743,14 +711,6 @@ public class DescribeImageVulListResponseBody extends TeaModel {
              */
             public Builder primaryId(Long primaryId) {
                 this.primaryId = primaryId;
-                return this;
-            }
-
-            /**
-             * <p>Progress.</p>
-             */
-            public Builder progress(Integer progress) {
-                this.progress = progress;
                 return this;
             }
 

@@ -60,7 +60,7 @@ public class ModifyCreateVulWhitelistRequest extends Request {
         return this.whitelist;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String reason; 
         private String targetInfo; 
         private String whitelist; 

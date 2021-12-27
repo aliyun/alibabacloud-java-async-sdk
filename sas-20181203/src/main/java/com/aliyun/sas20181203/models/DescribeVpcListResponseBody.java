@@ -104,14 +104,8 @@ public class DescribeVpcListResponseBody extends TeaModel {
         @NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("MiddleStatus")
-        private Integer middleStatus;
-
         @NameInMap("RegionId")
         private String regionId;
-
-        @NameInMap("Status")
-        private Integer status;
 
 
         private VpcList(Builder builder) {
@@ -119,9 +113,7 @@ public class DescribeVpcListResponseBody extends TeaModel {
             this.instanceDesc = builder.instanceDesc;
             this.instanceId = builder.instanceId;
             this.instanceName = builder.instanceName;
-            this.middleStatus = builder.middleStatus;
             this.regionId = builder.regionId;
-            this.status = builder.status;
         }
 
         public static Builder builder() {
@@ -161,24 +153,10 @@ public class DescribeVpcListResponseBody extends TeaModel {
         }
 
         /**
-         * @return middleStatus
-         */
-        public Integer getMiddleStatus() {
-            return this.middleStatus;
-        }
-
-        /**
          * @return regionId
          */
         public String getRegionId() {
             return this.regionId;
-        }
-
-        /**
-         * @return status
-         */
-        public Integer getStatus() {
-            return this.status;
         }
 
         public static final class Builder {
@@ -186,9 +164,7 @@ public class DescribeVpcListResponseBody extends TeaModel {
             private String instanceDesc; 
             private String instanceId; 
             private String instanceName; 
-            private Integer middleStatus; 
             private String regionId; 
-            private Integer status; 
 
             /**
              * <p>EcsCount.</p>
@@ -223,26 +199,10 @@ public class DescribeVpcListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>MiddleStatus.</p>
-             */
-            public Builder middleStatus(Integer middleStatus) {
-                this.middleStatus = middleStatus;
-                return this;
-            }
-
-            /**
              * <p>RegionId.</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
-                return this;
-            }
-
-            /**
-             * <p>Status.</p>
-             */
-            public Builder status(Integer status) {
-                this.status = status;
                 return this;
             }
 

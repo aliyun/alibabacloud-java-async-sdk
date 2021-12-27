@@ -36,7 +36,7 @@ public class ModifyGroupPropertyRequest extends Request {
         return this.data;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String data; 
 
         /**

@@ -72,7 +72,7 @@ public class DescribePropertySoftwareItemRequest extends Request {
         return this.pageSize;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private Integer currentPage; 
         private Boolean forceFlush; 
         private String name; 

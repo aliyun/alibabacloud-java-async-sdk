@@ -48,7 +48,7 @@ public class ModifyLoginSwitchConfigRequest extends Request {
         return this.status;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String item; 
         private Integer status; 
 

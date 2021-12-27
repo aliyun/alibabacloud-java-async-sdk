@@ -36,7 +36,7 @@ public class RefreshAssetsRequest extends Request {
         return this.assetType;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String assetType; 
 
         /**

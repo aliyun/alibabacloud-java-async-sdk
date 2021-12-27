@@ -60,7 +60,7 @@ public class GetVulStatisticsRequest extends Request {
         return this.typeList;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String groupIdList; 
         private String sourceIp; 
         private String typeList; 

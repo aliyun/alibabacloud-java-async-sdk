@@ -60,7 +60,7 @@ public class DescribeInstanceAntiBruteForceRulesRequest extends Request {
         return this.uuidList;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private Long resourceOwnerId; 
         private String sourceIp; 
         private java.util.List < String > uuidList; 

@@ -36,7 +36,7 @@ public class DescribeContainerStatisticsRequest extends Request {
         return this.clusterId;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String clusterId; 
 
         /**

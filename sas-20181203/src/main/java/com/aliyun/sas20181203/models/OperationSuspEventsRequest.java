@@ -96,7 +96,7 @@ public class OperationSuspEventsRequest extends Request {
         return this.warnType;
     }
 
-    public static final class Builder extends Request.Builder {
+    public static final class Builder extends Request.Builder<Builder> {
         private String from; 
         private String operation; 
         private String sourceIp; 
