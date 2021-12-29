@@ -35,6 +35,8 @@ public interface AsyncClient {
 
     CompletableFuture<GetProjectResponse> getProject(GetProjectRequest request);
 
+    CompletableFuture<GetSavedSearchResponse> getSavedSearch(GetSavedSearchRequest request);
+
     CompletableFuture<ListConsumerGroupResponse> listConsumerGroup(ListConsumerGroupRequest request);
 
     CompletableFuture<ListLogStoresResponse> listLogStores(ListLogStoresRequest request);

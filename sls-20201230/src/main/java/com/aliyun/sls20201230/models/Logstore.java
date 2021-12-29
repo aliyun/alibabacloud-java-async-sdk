@@ -14,17 +14,17 @@ public class Logstore extends TeaModel {
     @NameInMap("appendMeta")
     private Boolean appendMeta;
 
-    @NameInMap("archiveSeconds")
-    private Integer archiveSeconds;
-
     @NameInMap("autoSplit")
     private Boolean autoSplit;
 
     @NameInMap("createTime")
     private Integer createTime;
 
-    @NameInMap("enableTracking")
+    @NameInMap("enable_tracking")
     private Boolean enableTracking;
+
+    @NameInMap("encrypt_conf")
+    private EncryptConf encryptConf;
 
     @NameInMap("lastModifyTime")
     private Integer lastModifyTime;
@@ -47,10 +47,10 @@ public class Logstore extends TeaModel {
 
     private Logstore(Builder builder) {
         this.appendMeta = builder.appendMeta;
-        this.archiveSeconds = builder.archiveSeconds;
         this.autoSplit = builder.autoSplit;
         this.createTime = builder.createTime;
         this.enableTracking = builder.enableTracking;
+        this.encryptConf = builder.encryptConf;
         this.lastModifyTime = builder.lastModifyTime;
         this.logstoreName = builder.logstoreName;
         this.maxSplitShard = builder.maxSplitShard;
@@ -75,13 +75,6 @@ public class Logstore extends TeaModel {
     }
 
     /**
-     * @return archiveSeconds
-     */
-    public Integer getArchiveSeconds() {
-        return this.archiveSeconds;
-    }
-
-    /**
      * @return autoSplit
      */
     public Boolean getAutoSplit() {
@@ -100,6 +93,13 @@ public class Logstore extends TeaModel {
      */
     public Boolean getEnableTracking() {
         return this.enableTracking;
+    }
+
+    /**
+     * @return encryptConf
+     */
+    public EncryptConf getEncryptConf() {
+        return this.encryptConf;
     }
 
     /**
@@ -146,10 +146,10 @@ public class Logstore extends TeaModel {
 
     public static final class Builder {
         private Boolean appendMeta; 
-        private Integer archiveSeconds; 
         private Boolean autoSplit; 
         private Integer createTime; 
         private Boolean enableTracking; 
+        private EncryptConf encryptConf; 
         private Integer lastModifyTime; 
         private String logstoreName; 
         private Integer maxSplitShard; 
@@ -162,14 +162,6 @@ public class Logstore extends TeaModel {
          */
         public Builder appendMeta(Boolean appendMeta) {
             this.appendMeta = appendMeta;
-            return this;
-        }
-
-        /**
-         * <p>archiveSeconds</p>
-         */
-        public Builder archiveSeconds(Integer archiveSeconds) {
-            this.archiveSeconds = archiveSeconds;
             return this;
         }
 
@@ -194,6 +186,14 @@ public class Logstore extends TeaModel {
          */
         public Builder enableTracking(Boolean enableTracking) {
             this.enableTracking = enableTracking;
+            return this;
+        }
+
+        /**
+         * <p>Encrypt configuration</p>
+         */
+        public Builder encryptConf(EncryptConf encryptConf) {
+            this.encryptConf = encryptConf;
             return this;
         }
 

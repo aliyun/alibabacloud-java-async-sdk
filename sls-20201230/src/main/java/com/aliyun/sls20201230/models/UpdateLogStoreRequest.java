@@ -28,6 +28,10 @@ public class UpdateLogStoreRequest extends Request {
     private Boolean enableTracking;
 
     @Body
+    @NameInMap("encrypt_conf")
+    private EncryptConf encryptConf;
+
+    @Body
     @NameInMap("logstoreName")
     private String logstoreName;
 
@@ -54,6 +58,7 @@ public class UpdateLogStoreRequest extends Request {
         this.appendMeta = builder.appendMeta;
         this.autoSplit = builder.autoSplit;
         this.enableTracking = builder.enableTracking;
+        this.encryptConf = builder.encryptConf;
         this.logstoreName = builder.logstoreName;
         this.maxSplitShard = builder.maxSplitShard;
         this.project = builder.project;
@@ -98,6 +103,13 @@ public class UpdateLogStoreRequest extends Request {
     }
 
     /**
+     * @return encryptConf
+     */
+    public EncryptConf getEncryptConf() {
+        return this.encryptConf;
+    }
+
+    /**
      * @return logstoreName
      */
     public String getLogstoreName() {
@@ -137,6 +149,7 @@ public class UpdateLogStoreRequest extends Request {
         private Boolean appendMeta; 
         private Boolean autoSplit; 
         private Boolean enableTracking; 
+        private EncryptConf encryptConf; 
         private String logstoreName; 
         private Integer maxSplitShard; 
         private String project; 
@@ -176,6 +189,15 @@ public class UpdateLogStoreRequest extends Request {
         public Builder enableTracking(Boolean enableTracking) {
             this.putBodyParameter("enable_tracking", enableTracking);
             this.enableTracking = enableTracking;
+            return this;
+        }
+
+        /**
+         * <p>encrypt_conf.</p>
+         */
+        public Builder encryptConf(EncryptConf encryptConf) {
+            this.putBodyParameter("encrypt_conf", encryptConf);
+            this.encryptConf = encryptConf;
             return this;
         }
 
