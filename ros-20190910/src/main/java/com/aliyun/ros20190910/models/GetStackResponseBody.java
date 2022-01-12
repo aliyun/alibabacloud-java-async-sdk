@@ -83,6 +83,18 @@ public class GetStackResponseBody extends TeaModel {
     @NameInMap("TemplateDescription")
     private String templateDescription;
 
+    @NameInMap("TemplateId")
+    private String templateId;
+
+    @NameInMap("TemplateScratchId")
+    private String templateScratchId;
+
+    @NameInMap("TemplateURL")
+    private String templateURL;
+
+    @NameInMap("TemplateVersion")
+    private String templateVersion;
+
     @NameInMap("TimeoutInMinutes")
     private Integer timeoutInMinutes;
 
@@ -115,6 +127,10 @@ public class GetStackResponseBody extends TeaModel {
         this.statusReason = builder.statusReason;
         this.tags = builder.tags;
         this.templateDescription = builder.templateDescription;
+        this.templateId = builder.templateId;
+        this.templateScratchId = builder.templateScratchId;
+        this.templateURL = builder.templateURL;
+        this.templateVersion = builder.templateVersion;
         this.timeoutInMinutes = builder.timeoutInMinutes;
         this.updateTime = builder.updateTime;
     }
@@ -296,6 +312,34 @@ public class GetStackResponseBody extends TeaModel {
     }
 
     /**
+     * @return templateId
+     */
+    public String getTemplateId() {
+        return this.templateId;
+    }
+
+    /**
+     * @return templateScratchId
+     */
+    public String getTemplateScratchId() {
+        return this.templateScratchId;
+    }
+
+    /**
+     * @return templateURL
+     */
+    public String getTemplateURL() {
+        return this.templateURL;
+    }
+
+    /**
+     * @return templateVersion
+     */
+    public String getTemplateVersion() {
+        return this.templateVersion;
+    }
+
+    /**
      * @return timeoutInMinutes
      */
     public Integer getTimeoutInMinutes() {
@@ -334,6 +378,10 @@ public class GetStackResponseBody extends TeaModel {
         private String statusReason; 
         private java.util.List < Tags> tags; 
         private String templateDescription; 
+        private String templateId; 
+        private String templateScratchId; 
+        private String templateURL; 
+        private String templateVersion; 
         private Integer timeoutInMinutes; 
         private String updateTime; 
 
@@ -526,6 +574,38 @@ public class GetStackResponseBody extends TeaModel {
          */
         public Builder templateDescription(String templateDescription) {
             this.templateDescription = templateDescription;
+            return this;
+        }
+
+        /**
+         * <p>TemplateId.</p>
+         */
+        public Builder templateId(String templateId) {
+            this.templateId = templateId;
+            return this;
+        }
+
+        /**
+         * <p>TemplateScratchId.</p>
+         */
+        public Builder templateScratchId(String templateScratchId) {
+            this.templateScratchId = templateScratchId;
+            return this;
+        }
+
+        /**
+         * <p>TemplateURL.</p>
+         */
+        public Builder templateURL(String templateURL) {
+            this.templateURL = templateURL;
+            return this;
+        }
+
+        /**
+         * <p>TemplateVersion.</p>
+         */
+        public Builder templateVersion(String templateVersion) {
+            this.templateVersion = templateVersion;
             return this;
         }
 

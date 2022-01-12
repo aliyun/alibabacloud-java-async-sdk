@@ -245,11 +245,15 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         @NameInMap("Transform")
         private String transform;
 
+        @NameInMap("UpdateAllowedTransforms")
+        private java.util.List < String > updateAllowedTransforms;
+
 
         private SupportedVersions(Builder builder) {
             this.providerVersions = builder.providerVersions;
             this.terraformVersion = builder.terraformVersion;
             this.transform = builder.transform;
+            this.updateAllowedTransforms = builder.updateAllowedTransforms;
         }
 
         public static Builder builder() {
@@ -281,10 +285,18 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             return this.transform;
         }
 
+        /**
+         * @return updateAllowedTransforms
+         */
+        public java.util.List < String > getUpdateAllowedTransforms() {
+            return this.updateAllowedTransforms;
+        }
+
         public static final class Builder {
             private java.util.List < ProviderVersions> providerVersions; 
             private String terraformVersion; 
             private String transform; 
+            private java.util.List < String > updateAllowedTransforms; 
 
             /**
              * <p>ProviderVersions.</p>
@@ -307,6 +319,14 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
              */
             public Builder transform(String transform) {
                 this.transform = transform;
+                return this;
+            }
+
+            /**
+             * <p>UpdateAllowedTransforms.</p>
+             */
+            public Builder updateAllowedTransforms(java.util.List < String > updateAllowedTransforms) {
+                this.updateAllowedTransforms = updateAllowedTransforms;
                 return this;
             }
 
