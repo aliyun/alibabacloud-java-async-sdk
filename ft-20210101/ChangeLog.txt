@@ -1,3 +1,6 @@
+2022-01-14 Version: 1.0.5-beta
+- Generated java-async 2021-01-01 for Ft.
+
 2022-01-14 Version: 1.0.4-beta
 - Generated java-async 2021-01-01 for Ft.
 
