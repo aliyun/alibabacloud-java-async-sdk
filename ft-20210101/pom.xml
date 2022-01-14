@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-ft20210101-async</artifactId>
-  <version>1.0.0-beta</version>
+  <version>1.0.1-beta</version>
   <packaging>jar</packaging>
   <name>alibabacloud-ft20210101-async</name>
   <description>Alibaba Cloud Ft (20210101) Async SDK for Java
