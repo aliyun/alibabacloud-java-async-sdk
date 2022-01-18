@@ -11,9 +11,14 @@ import darabonba.core.TeaModel;
  * <p>ListResourceTypesRequest</p>
  */
 public class ListResourceTypesRequest extends Request {
+    @Query
+    @NameInMap("EntityType")
+    private String entityType;
+
 
     private ListResourceTypesRequest(Builder builder) {
         super(builder);
+        this.entityType = builder.entityType;
     }
 
     public static Builder builder() {
@@ -24,7 +29,24 @@ public class ListResourceTypesRequest extends Request {
         return builder().build();
     }
 
+    /**
+     * @return entityType
+     */
+    public String getEntityType() {
+        return this.entityType;
+    }
+
     public static final class Builder extends Request.Builder<Builder> {
+        private String entityType; 
+
+        /**
+         * <p>EntityType.</p>
+         */
+        public Builder entityType(String entityType) {
+            this.putQueryParameter("EntityType", entityType);
+            this.entityType = entityType;
+            return this;
+        }
 
         public ListResourceTypesRequest build() {
             return new ListResourceTypesRequest(this);

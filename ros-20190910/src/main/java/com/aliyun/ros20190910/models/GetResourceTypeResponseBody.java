@@ -14,6 +14,9 @@ public class GetResourceTypeResponseBody extends TeaModel {
     @NameInMap("Attributes")
     private java.util.Map < String, ? > attributes;
 
+    @NameInMap("EntityType")
+    private String entityType;
+
     @NameInMap("Properties")
     private java.util.Map < String, ? > properties;
 
@@ -32,6 +35,7 @@ public class GetResourceTypeResponseBody extends TeaModel {
 
     private GetResourceTypeResponseBody(Builder builder) {
         this.attributes = builder.attributes;
+        this.entityType = builder.entityType;
         this.properties = builder.properties;
         this.requestId = builder.requestId;
         this.resourceType = builder.resourceType;
@@ -52,6 +56,13 @@ public class GetResourceTypeResponseBody extends TeaModel {
      */
     public java.util.Map < String, ? > getAttributes() {
         return this.attributes;
+    }
+
+    /**
+     * @return entityType
+     */
+    public String getEntityType() {
+        return this.entityType;
     }
 
     /**
@@ -91,6 +102,7 @@ public class GetResourceTypeResponseBody extends TeaModel {
 
     public static final class Builder {
         private java.util.Map < String, ? > attributes; 
+        private String entityType; 
         private java.util.Map < String, ? > properties; 
         private String requestId; 
         private String resourceType; 
@@ -102,6 +114,14 @@ public class GetResourceTypeResponseBody extends TeaModel {
          */
         public Builder attributes(java.util.Map < String, ? > attributes) {
             this.attributes = attributes;
+            return this;
+        }
+
+        /**
+         * <p>EntityType.</p>
+         */
+        public Builder entityType(String entityType) {
+            this.entityType = entityType;
             return this;
         }
 
