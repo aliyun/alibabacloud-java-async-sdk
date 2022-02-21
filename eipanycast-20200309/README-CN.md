@@ -9,7 +9,7 @@
 ```xml
 <dependency>
    <groupId>com.aliyun</groupId>
-   <artifactId>alibabacloud-eipanycast20200309-async</artifactId>
+   <artifactId>alibabacloud-eipanycast20200309</artifactId>
    <version>使用maven标签所示版本</version>
 </dependency>
 ```
