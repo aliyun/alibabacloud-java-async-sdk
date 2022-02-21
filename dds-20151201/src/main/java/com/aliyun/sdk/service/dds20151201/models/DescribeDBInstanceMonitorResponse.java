@@ -1,0 +1,104 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.dds20151201.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link DescribeDBInstanceMonitorResponse} extends {@link TeaModel}
+ *
+ * <p>DescribeDBInstanceMonitorResponse</p>
+ */
+public class DescribeDBInstanceMonitorResponse extends Response {
+    @NameInMap("headers")
+    @Validation(required = true)
+    private java.util.Map < String, String > headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    private DescribeDBInstanceMonitorResponseBody body;
+
+    private DescribeDBInstanceMonitorResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.body = builder.body;
+    }
+
+    public static DescribeDBInstanceMonitorResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return body
+     */
+    public DescribeDBInstanceMonitorResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<DescribeDBInstanceMonitorResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder body(DescribeDBInstanceMonitorResponseBody body);
+
+        @Override
+        DescribeDBInstanceMonitorResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<DescribeDBInstanceMonitorResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private DescribeDBInstanceMonitorResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(DescribeDBInstanceMonitorResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(DescribeDBInstanceMonitorResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public DescribeDBInstanceMonitorResponse build() {
+            return new DescribeDBInstanceMonitorResponse(this);
+        } 
+
+    } 
+
+}
