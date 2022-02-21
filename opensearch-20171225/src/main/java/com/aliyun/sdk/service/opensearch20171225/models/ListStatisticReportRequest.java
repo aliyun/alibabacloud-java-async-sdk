@@ -1,0 +1,239 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.opensearch20171225.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link ListStatisticReportRequest} extends {@link RequestModel}
+ *
+ * <p>ListStatisticReportRequest</p>
+ */
+public class ListStatisticReportRequest extends Request {
+    @Path
+    @NameInMap("appGroupIdentity")
+    @Validation(required = true)
+    private String appGroupIdentity;
+
+    @Path
+    @NameInMap("moduleName")
+    @Validation(required = true)
+    private String moduleName;
+
+    @Query
+    @NameInMap("columns")
+    private String columns;
+
+    @Query
+    @NameInMap("endTime")
+    @Validation(maximum = 9999999999D)
+    private Integer endTime;
+
+    @Query
+    @NameInMap("pageNumber")
+    @Validation(maximum = 100, minimum = 1)
+    private Integer pageNumber;
+
+    @Query
+    @NameInMap("pageSize")
+    @Validation(maximum = 10000, minimum = 1)
+    private Integer pageSize;
+
+    @Query
+    @NameInMap("query")
+    private String query;
+
+    @Query
+    @NameInMap("startTime")
+    @Validation(maximum = 9999999999D)
+    private Integer startTime;
+
+    private ListStatisticReportRequest(Builder builder) {
+        super(builder);
+        this.appGroupIdentity = builder.appGroupIdentity;
+        this.moduleName = builder.moduleName;
+        this.columns = builder.columns;
+        this.endTime = builder.endTime;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
+        this.query = builder.query;
+        this.startTime = builder.startTime;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static ListStatisticReportRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return appGroupIdentity
+     */
+    public String getAppGroupIdentity() {
+        return this.appGroupIdentity;
+    }
+
+    /**
+     * @return moduleName
+     */
+    public String getModuleName() {
+        return this.moduleName;
+    }
+
+    /**
+     * @return columns
+     */
+    public String getColumns() {
+        return this.columns;
+    }
+
+    /**
+     * @return endTime
+     */
+    public Integer getEndTime() {
+        return this.endTime;
+    }
+
+    /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
+     * @return query
+     */
+    public String getQuery() {
+        return this.query;
+    }
+
+    /**
+     * @return startTime
+     */
+    public Integer getStartTime() {
+        return this.startTime;
+    }
+
+    public static final class Builder extends Request.Builder<ListStatisticReportRequest, Builder> {
+        private String appGroupIdentity; 
+        private String moduleName; 
+        private String columns; 
+        private Integer endTime; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
+        private String query; 
+        private Integer startTime; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(ListStatisticReportRequest response) {
+            super(response);
+            this.appGroupIdentity = response.appGroupIdentity;
+            this.moduleName = response.moduleName;
+            this.columns = response.columns;
+            this.endTime = response.endTime;
+            this.pageNumber = response.pageNumber;
+            this.pageSize = response.pageSize;
+            this.query = response.query;
+            this.startTime = response.startTime;
+        } 
+
+        /**
+         * appGroupIdentity.
+         */
+        public Builder appGroupIdentity(String appGroupIdentity) {
+            this.putPathParameter("appGroupIdentity", appGroupIdentity);
+            this.appGroupIdentity = appGroupIdentity;
+            return this;
+        }
+
+        /**
+         * moduleName.
+         */
+        public Builder moduleName(String moduleName) {
+            this.putPathParameter("moduleName", moduleName);
+            this.moduleName = moduleName;
+            return this;
+        }
+
+        /**
+         * columns.
+         */
+        public Builder columns(String columns) {
+            this.putQueryParameter("columns", columns);
+            this.columns = columns;
+            return this;
+        }
+
+        /**
+         * endTime.
+         */
+        public Builder endTime(Integer endTime) {
+            this.putQueryParameter("endTime", endTime);
+            this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * pageNumber.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("pageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * pageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("pageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * query.
+         */
+        public Builder query(String query) {
+            this.putQueryParameter("query", query);
+            this.query = query;
+            return this;
+        }
+
+        /**
+         * startTime.
+         */
+        public Builder startTime(Integer startTime) {
+            this.putQueryParameter("startTime", startTime);
+            this.startTime = startTime;
+            return this;
+        }
+
+        @Override
+        public ListStatisticReportRequest build() {
+            return new ListStatisticReportRequest(this);
+        } 
+
+    } 
+
+}
