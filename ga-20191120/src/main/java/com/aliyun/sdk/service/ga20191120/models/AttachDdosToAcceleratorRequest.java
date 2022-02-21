@@ -1,0 +1,144 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.ga20191120.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link AttachDdosToAcceleratorRequest} extends {@link RequestModel}
+ *
+ * <p>AttachDdosToAcceleratorRequest</p>
+ */
+public class AttachDdosToAcceleratorRequest extends Request {
+    @Query
+    @NameInMap("AcceleratorId")
+    @Validation(required = true)
+    private String acceleratorId;
+
+    @Query
+    @NameInMap("DdosId")
+    @Validation(required = true)
+    private String ddosId;
+
+    @Query
+    @NameInMap("DdosRegionId")
+    @Validation(required = true)
+    private String ddosRegionId;
+
+    @Query
+    @NameInMap("RegionId")
+    private String regionId;
+
+    private AttachDdosToAcceleratorRequest(Builder builder) {
+        super(builder);
+        this.acceleratorId = builder.acceleratorId;
+        this.ddosId = builder.ddosId;
+        this.ddosRegionId = builder.ddosRegionId;
+        this.regionId = builder.regionId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static AttachDdosToAcceleratorRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return acceleratorId
+     */
+    public String getAcceleratorId() {
+        return this.acceleratorId;
+    }
+
+    /**
+     * @return ddosId
+     */
+    public String getDdosId() {
+        return this.ddosId;
+    }
+
+    /**
+     * @return ddosRegionId
+     */
+    public String getDdosRegionId() {
+        return this.ddosRegionId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public static final class Builder extends Request.Builder<AttachDdosToAcceleratorRequest, Builder> {
+        private String acceleratorId; 
+        private String ddosId; 
+        private String ddosRegionId; 
+        private String regionId; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(AttachDdosToAcceleratorRequest response) {
+            super(response);
+            this.acceleratorId = response.acceleratorId;
+            this.ddosId = response.ddosId;
+            this.ddosRegionId = response.ddosRegionId;
+            this.regionId = response.regionId;
+        } 
+
+        /**
+         * AcceleratorId.
+         */
+        public Builder acceleratorId(String acceleratorId) {
+            this.putQueryParameter("AcceleratorId", acceleratorId);
+            this.acceleratorId = acceleratorId;
+            return this;
+        }
+
+        /**
+         * DdosId.
+         */
+        public Builder ddosId(String ddosId) {
+            this.putQueryParameter("DdosId", ddosId);
+            this.ddosId = ddosId;
+            return this;
+        }
+
+        /**
+         * DdosRegionId.
+         */
+        public Builder ddosRegionId(String ddosRegionId) {
+            this.putQueryParameter("DdosRegionId", ddosRegionId);
+            this.ddosRegionId = ddosRegionId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        @Override
+        public AttachDdosToAcceleratorRequest build() {
+            return new AttachDdosToAcceleratorRequest(this);
+        } 
+
+    } 
+
+}

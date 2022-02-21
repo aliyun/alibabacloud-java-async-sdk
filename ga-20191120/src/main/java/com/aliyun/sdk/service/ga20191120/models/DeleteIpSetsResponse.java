@@ -1,0 +1,104 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.ga20191120.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link DeleteIpSetsResponse} extends {@link TeaModel}
+ *
+ * <p>DeleteIpSetsResponse</p>
+ */
+public class DeleteIpSetsResponse extends Response {
+    @NameInMap("headers")
+    @Validation(required = true)
+    private java.util.Map < String, String > headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    private DeleteIpSetsResponseBody body;
+
+    private DeleteIpSetsResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.body = builder.body;
+    }
+
+    public static DeleteIpSetsResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return body
+     */
+    public DeleteIpSetsResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<DeleteIpSetsResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder body(DeleteIpSetsResponseBody body);
+
+        @Override
+        DeleteIpSetsResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<DeleteIpSetsResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private DeleteIpSetsResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(DeleteIpSetsResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(DeleteIpSetsResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public DeleteIpSetsResponse build() {
+            return new DeleteIpSetsResponse(this);
+        } 
+
+    } 
+
+}
