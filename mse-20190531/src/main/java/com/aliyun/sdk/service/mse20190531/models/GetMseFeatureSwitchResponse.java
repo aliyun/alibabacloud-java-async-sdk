@@ -1,0 +1,104 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.mse20190531.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link GetMseFeatureSwitchResponse} extends {@link TeaModel}
+ *
+ * <p>GetMseFeatureSwitchResponse</p>
+ */
+public class GetMseFeatureSwitchResponse extends Response {
+    @NameInMap("headers")
+    @Validation(required = true)
+    private java.util.Map < String, String > headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    private GetMseFeatureSwitchResponseBody body;
+
+    private GetMseFeatureSwitchResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.body = builder.body;
+    }
+
+    public static GetMseFeatureSwitchResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return body
+     */
+    public GetMseFeatureSwitchResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<GetMseFeatureSwitchResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder body(GetMseFeatureSwitchResponseBody body);
+
+        @Override
+        GetMseFeatureSwitchResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<GetMseFeatureSwitchResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private GetMseFeatureSwitchResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(GetMseFeatureSwitchResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(GetMseFeatureSwitchResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public GetMseFeatureSwitchResponse build() {
+            return new GetMseFeatureSwitchResponse(this);
+        } 
+
+    } 
+
+}

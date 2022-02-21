@@ -1,0 +1,104 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.mse20190531.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link QueryGatewayRegionResponse} extends {@link TeaModel}
+ *
+ * <p>QueryGatewayRegionResponse</p>
+ */
+public class QueryGatewayRegionResponse extends Response {
+    @NameInMap("headers")
+    @Validation(required = true)
+    private java.util.Map < String, String > headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    private QueryGatewayRegionResponseBody body;
+
+    private QueryGatewayRegionResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.body = builder.body;
+    }
+
+    public static QueryGatewayRegionResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return body
+     */
+    public QueryGatewayRegionResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<QueryGatewayRegionResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder body(QueryGatewayRegionResponseBody body);
+
+        @Override
+        QueryGatewayRegionResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<QueryGatewayRegionResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private QueryGatewayRegionResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(QueryGatewayRegionResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(QueryGatewayRegionResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public QueryGatewayRegionResponse build() {
+            return new QueryGatewayRegionResponse(this);
+        } 
+
+    } 
+
+}

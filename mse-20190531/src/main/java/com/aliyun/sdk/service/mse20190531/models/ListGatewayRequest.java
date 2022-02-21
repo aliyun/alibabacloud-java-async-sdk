@@ -1,0 +1,308 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.mse20190531.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link ListGatewayRequest} extends {@link RequestModel}
+ *
+ * <p>ListGatewayRequest</p>
+ */
+public class ListGatewayRequest extends Request {
+    @Query
+    @NameInMap("AcceptLanguage")
+    private String acceptLanguage;
+
+    @Query
+    @NameInMap("DescSort")
+    private Boolean descSort;
+
+    @Query
+    @NameInMap("FilterParams")
+    private FilterParams filterParams;
+
+    @Query
+    @NameInMap("OrderItem")
+    private String orderItem;
+
+    @Query
+    @NameInMap("PageNumber")
+    private Integer pageNumber;
+
+    @Query
+    @NameInMap("PageSize")
+    private Integer pageSize;
+
+    private ListGatewayRequest(Builder builder) {
+        super(builder);
+        this.acceptLanguage = builder.acceptLanguage;
+        this.descSort = builder.descSort;
+        this.filterParams = builder.filterParams;
+        this.orderItem = builder.orderItem;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static ListGatewayRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return acceptLanguage
+     */
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
+    }
+
+    /**
+     * @return descSort
+     */
+    public Boolean getDescSort() {
+        return this.descSort;
+    }
+
+    /**
+     * @return filterParams
+     */
+    public FilterParams getFilterParams() {
+        return this.filterParams;
+    }
+
+    /**
+     * @return orderItem
+     */
+    public String getOrderItem() {
+        return this.orderItem;
+    }
+
+    /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public static final class Builder extends Request.Builder<ListGatewayRequest, Builder> {
+        private String acceptLanguage; 
+        private Boolean descSort; 
+        private FilterParams filterParams; 
+        private String orderItem; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(ListGatewayRequest response) {
+            super(response);
+            this.acceptLanguage = response.acceptLanguage;
+            this.descSort = response.descSort;
+            this.filterParams = response.filterParams;
+            this.orderItem = response.orderItem;
+            this.pageNumber = response.pageNumber;
+            this.pageSize = response.pageSize;
+        } 
+
+        /**
+         * AcceptLanguage.
+         */
+        public Builder acceptLanguage(String acceptLanguage) {
+            this.putQueryParameter("AcceptLanguage", acceptLanguage);
+            this.acceptLanguage = acceptLanguage;
+            return this;
+        }
+
+        /**
+         * DescSort.
+         */
+        public Builder descSort(Boolean descSort) {
+            this.putQueryParameter("DescSort", descSort);
+            this.descSort = descSort;
+            return this;
+        }
+
+        /**
+         * FilterParams.
+         */
+        public Builder filterParams(FilterParams filterParams) {
+            this.putQueryParameter("FilterParams", filterParams);
+            this.filterParams = filterParams;
+            return this;
+        }
+
+        /**
+         * OrderItem.
+         */
+        public Builder orderItem(String orderItem) {
+            this.putQueryParameter("OrderItem", orderItem);
+            this.orderItem = orderItem;
+            return this;
+        }
+
+        /**
+         * PageNumber.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        @Override
+        public ListGatewayRequest build() {
+            return new ListGatewayRequest(this);
+        } 
+
+    } 
+
+    public static class FilterParams extends TeaModel {
+        @NameInMap("GatewayType")
+        private String gatewayType;
+
+        @NameInMap("GatewayUniqueId")
+        private String gatewayUniqueId;
+
+        @NameInMap("InstanceId")
+        private String instanceId;
+
+        @NameInMap("Name")
+        private String name;
+
+        @NameInMap("Vpc")
+        private String vpc;
+
+        private FilterParams(Builder builder) {
+            this.gatewayType = builder.gatewayType;
+            this.gatewayUniqueId = builder.gatewayUniqueId;
+            this.instanceId = builder.instanceId;
+            this.name = builder.name;
+            this.vpc = builder.vpc;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static FilterParams create() {
+            return builder().build();
+        }
+
+        /**
+         * @return gatewayType
+         */
+        public String getGatewayType() {
+            return this.gatewayType;
+        }
+
+        /**
+         * @return gatewayUniqueId
+         */
+        public String getGatewayUniqueId() {
+            return this.gatewayUniqueId;
+        }
+
+        /**
+         * @return instanceId
+         */
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return vpc
+         */
+        public String getVpc() {
+            return this.vpc;
+        }
+
+        public static final class Builder {
+            private String gatewayType; 
+            private String gatewayUniqueId; 
+            private String instanceId; 
+            private String name; 
+            private String vpc; 
+
+            /**
+             * GatewayType.
+             */
+            public Builder gatewayType(String gatewayType) {
+                this.gatewayType = gatewayType;
+                return this;
+            }
+
+            /**
+             * GatewayUniqueId.
+             */
+            public Builder gatewayUniqueId(String gatewayUniqueId) {
+                this.gatewayUniqueId = gatewayUniqueId;
+                return this;
+            }
+
+            /**
+             * InstanceId.
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Vpc.
+             */
+            public Builder vpc(String vpc) {
+                this.vpc = vpc;
+                return this;
+            }
+
+            public FilterParams build() {
+                return new FilterParams(this);
+            } 
+
+        } 
+
+    }
+}
