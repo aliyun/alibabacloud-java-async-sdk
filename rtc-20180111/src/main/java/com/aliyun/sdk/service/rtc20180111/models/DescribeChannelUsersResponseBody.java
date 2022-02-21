@@ -1,0 +1,234 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.rtc20180111.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link DescribeChannelUsersResponseBody} extends {@link TeaModel}
+ *
+ * <p>DescribeChannelUsersResponseBody</p>
+ */
+public class DescribeChannelUsersResponseBody extends TeaModel {
+    @NameInMap("ChannelProfile")
+    private Integer channelProfile;
+
+    @NameInMap("CommTotalNum")
+    private Integer commTotalNum;
+
+    @NameInMap("InteractiveUserList")
+    private java.util.List < String > interactiveUserList;
+
+    @NameInMap("InteractiveUserNum")
+    private Integer interactiveUserNum;
+
+    @NameInMap("IsChannelExist")
+    private Boolean isChannelExist;
+
+    @NameInMap("LiveUserList")
+    private java.util.List < String > liveUserList;
+
+    @NameInMap("LiveUserNum")
+    private Integer liveUserNum;
+
+    @NameInMap("RequestId")
+    private String requestId;
+
+    @NameInMap("Timestamp")
+    private Integer timestamp;
+
+    @NameInMap("UserList")
+    private java.util.List < String > userList;
+
+    private DescribeChannelUsersResponseBody(Builder builder) {
+        this.channelProfile = builder.channelProfile;
+        this.commTotalNum = builder.commTotalNum;
+        this.interactiveUserList = builder.interactiveUserList;
+        this.interactiveUserNum = builder.interactiveUserNum;
+        this.isChannelExist = builder.isChannelExist;
+        this.liveUserList = builder.liveUserList;
+        this.liveUserNum = builder.liveUserNum;
+        this.requestId = builder.requestId;
+        this.timestamp = builder.timestamp;
+        this.userList = builder.userList;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static DescribeChannelUsersResponseBody create() {
+        return builder().build();
+    }
+
+    /**
+     * @return channelProfile
+     */
+    public Integer getChannelProfile() {
+        return this.channelProfile;
+    }
+
+    /**
+     * @return commTotalNum
+     */
+    public Integer getCommTotalNum() {
+        return this.commTotalNum;
+    }
+
+    /**
+     * @return interactiveUserList
+     */
+    public java.util.List < String > getInteractiveUserList() {
+        return this.interactiveUserList;
+    }
+
+    /**
+     * @return interactiveUserNum
+     */
+    public Integer getInteractiveUserNum() {
+        return this.interactiveUserNum;
+    }
+
+    /**
+     * @return isChannelExist
+     */
+    public Boolean getIsChannelExist() {
+        return this.isChannelExist;
+    }
+
+    /**
+     * @return liveUserList
+     */
+    public java.util.List < String > getLiveUserList() {
+        return this.liveUserList;
+    }
+
+    /**
+     * @return liveUserNum
+     */
+    public Integer getLiveUserNum() {
+        return this.liveUserNum;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
+     * @return timestamp
+     */
+    public Integer getTimestamp() {
+        return this.timestamp;
+    }
+
+    /**
+     * @return userList
+     */
+    public java.util.List < String > getUserList() {
+        return this.userList;
+    }
+
+    public static final class Builder {
+        private Integer channelProfile; 
+        private Integer commTotalNum; 
+        private java.util.List < String > interactiveUserList; 
+        private Integer interactiveUserNum; 
+        private Boolean isChannelExist; 
+        private java.util.List < String > liveUserList; 
+        private Integer liveUserNum; 
+        private String requestId; 
+        private Integer timestamp; 
+        private java.util.List < String > userList; 
+
+        /**
+         * ChannelProfile.
+         */
+        public Builder channelProfile(Integer channelProfile) {
+            this.channelProfile = channelProfile;
+            return this;
+        }
+
+        /**
+         * CommTotalNum.
+         */
+        public Builder commTotalNum(Integer commTotalNum) {
+            this.commTotalNum = commTotalNum;
+            return this;
+        }
+
+        /**
+         * InteractiveUserList.
+         */
+        public Builder interactiveUserList(java.util.List < String > interactiveUserList) {
+            this.interactiveUserList = interactiveUserList;
+            return this;
+        }
+
+        /**
+         * InteractiveUserNum.
+         */
+        public Builder interactiveUserNum(Integer interactiveUserNum) {
+            this.interactiveUserNum = interactiveUserNum;
+            return this;
+        }
+
+        /**
+         * IsChannelExist.
+         */
+        public Builder isChannelExist(Boolean isChannelExist) {
+            this.isChannelExist = isChannelExist;
+            return this;
+        }
+
+        /**
+         * LiveUserList.
+         */
+        public Builder liveUserList(java.util.List < String > liveUserList) {
+            this.liveUserList = liveUserList;
+            return this;
+        }
+
+        /**
+         * LiveUserNum.
+         */
+        public Builder liveUserNum(Integer liveUserNum) {
+            this.liveUserNum = liveUserNum;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * Timestamp.
+         */
+        public Builder timestamp(Integer timestamp) {
+            this.timestamp = timestamp;
+            return this;
+        }
+
+        /**
+         * UserList.
+         */
+        public Builder userList(java.util.List < String > userList) {
+            this.userList = userList;
+            return this;
+        }
+
+        public DescribeChannelUsersResponseBody build() {
+            return new DescribeChannelUsersResponseBody(this);
+        } 
+
+    } 
+
+}
