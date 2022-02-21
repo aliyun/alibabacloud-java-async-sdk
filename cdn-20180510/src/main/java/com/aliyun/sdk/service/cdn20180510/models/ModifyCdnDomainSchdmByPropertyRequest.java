@@ -1,0 +1,120 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.cdn20180510.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link ModifyCdnDomainSchdmByPropertyRequest} extends {@link RequestModel}
+ *
+ * <p>ModifyCdnDomainSchdmByPropertyRequest</p>
+ */
+public class ModifyCdnDomainSchdmByPropertyRequest extends Request {
+    @Query
+    @NameInMap("DomainName")
+    @Validation(required = true)
+    private String domainName;
+
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
+
+    @Query
+    @NameInMap("Property")
+    @Validation(required = true)
+    private String property;
+
+    private ModifyCdnDomainSchdmByPropertyRequest(Builder builder) {
+        super(builder);
+        this.domainName = builder.domainName;
+        this.ownerId = builder.ownerId;
+        this.property = builder.property;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static ModifyCdnDomainSchdmByPropertyRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return domainName
+     */
+    public String getDomainName() {
+        return this.domainName;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
+     * @return property
+     */
+    public String getProperty() {
+        return this.property;
+    }
+
+    public static final class Builder extends Request.Builder<ModifyCdnDomainSchdmByPropertyRequest, Builder> {
+        private String domainName; 
+        private Long ownerId; 
+        private String property; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(ModifyCdnDomainSchdmByPropertyRequest response) {
+            super(response);
+            this.domainName = response.domainName;
+            this.ownerId = response.ownerId;
+            this.property = response.property;
+        } 
+
+        /**
+         * DomainName.
+         */
+        public Builder domainName(String domainName) {
+            this.putQueryParameter("DomainName", domainName);
+            this.domainName = domainName;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * Property.
+         */
+        public Builder property(String property) {
+            this.putQueryParameter("Property", property);
+            this.property = property;
+            return this;
+        }
+
+        @Override
+        public ModifyCdnDomainSchdmByPropertyRequest build() {
+            return new ModifyCdnDomainSchdmByPropertyRequest(this);
+        } 
+
+    } 
+
+}

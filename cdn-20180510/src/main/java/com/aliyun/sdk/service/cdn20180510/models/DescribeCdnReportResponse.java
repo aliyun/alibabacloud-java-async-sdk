@@ -1,0 +1,104 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.cdn20180510.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link DescribeCdnReportResponse} extends {@link TeaModel}
+ *
+ * <p>DescribeCdnReportResponse</p>
+ */
+public class DescribeCdnReportResponse extends Response {
+    @NameInMap("headers")
+    @Validation(required = true)
+    private java.util.Map < String, String > headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    private DescribeCdnReportResponseBody body;
+
+    private DescribeCdnReportResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.body = builder.body;
+    }
+
+    public static DescribeCdnReportResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return body
+     */
+    public DescribeCdnReportResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<DescribeCdnReportResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder body(DescribeCdnReportResponseBody body);
+
+        @Override
+        DescribeCdnReportResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<DescribeCdnReportResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private DescribeCdnReportResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(DescribeCdnReportResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(DescribeCdnReportResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public DescribeCdnReportResponse build() {
+            return new DescribeCdnReportResponse(this);
+        } 
+
+    } 
+
+}
