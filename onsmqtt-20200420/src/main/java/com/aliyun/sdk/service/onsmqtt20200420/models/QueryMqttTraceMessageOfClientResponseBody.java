@@ -1,0 +1,275 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.onsmqtt20200420.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link QueryMqttTraceMessageOfClientResponseBody} extends {@link TeaModel}
+ *
+ * <p>QueryMqttTraceMessageOfClientResponseBody</p>
+ */
+public class QueryMqttTraceMessageOfClientResponseBody extends TeaModel {
+    @NameInMap("CurrentPage")
+    private Integer currentPage;
+
+    @NameInMap("MessageOfClientList")
+    private java.util.List < MessageOfClientList> messageOfClientList;
+
+    @NameInMap("PageSize")
+    private Integer pageSize;
+
+    @NameInMap("RequestId")
+    private String requestId;
+
+    @NameInMap("Total")
+    private Long total;
+
+    private QueryMqttTraceMessageOfClientResponseBody(Builder builder) {
+        this.currentPage = builder.currentPage;
+        this.messageOfClientList = builder.messageOfClientList;
+        this.pageSize = builder.pageSize;
+        this.requestId = builder.requestId;
+        this.total = builder.total;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static QueryMqttTraceMessageOfClientResponseBody create() {
+        return builder().build();
+    }
+
+    /**
+     * @return currentPage
+     */
+    public Integer getCurrentPage() {
+        return this.currentPage;
+    }
+
+    /**
+     * @return messageOfClientList
+     */
+    public java.util.List < MessageOfClientList> getMessageOfClientList() {
+        return this.messageOfClientList;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
+     * @return total
+     */
+    public Long getTotal() {
+        return this.total;
+    }
+
+    public static final class Builder {
+        private Integer currentPage; 
+        private java.util.List < MessageOfClientList> messageOfClientList; 
+        private Integer pageSize; 
+        private String requestId; 
+        private Long total; 
+
+        /**
+         * CurrentPage.
+         */
+        public Builder currentPage(Integer currentPage) {
+            this.currentPage = currentPage;
+            return this;
+        }
+
+        /**
+         * MessageOfClientList.
+         */
+        public Builder messageOfClientList(java.util.List < MessageOfClientList> messageOfClientList) {
+            this.messageOfClientList = messageOfClientList;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * Total.
+         */
+        public Builder total(Long total) {
+            this.total = total;
+            return this;
+        }
+
+        public QueryMqttTraceMessageOfClientResponseBody build() {
+            return new QueryMqttTraceMessageOfClientResponseBody(this);
+        } 
+
+    } 
+
+    public static class MessageOfClientList extends TeaModel {
+        @NameInMap("Action")
+        private String action;
+
+        @NameInMap("ActionCode")
+        private String actionCode;
+
+        @NameInMap("ActionInfo")
+        private String actionInfo;
+
+        @NameInMap("ClientId")
+        private String clientId;
+
+        @NameInMap("MsgId")
+        private String msgId;
+
+        @NameInMap("Time")
+        private String time;
+
+        private MessageOfClientList(Builder builder) {
+            this.action = builder.action;
+            this.actionCode = builder.actionCode;
+            this.actionInfo = builder.actionInfo;
+            this.clientId = builder.clientId;
+            this.msgId = builder.msgId;
+            this.time = builder.time;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MessageOfClientList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return action
+         */
+        public String getAction() {
+            return this.action;
+        }
+
+        /**
+         * @return actionCode
+         */
+        public String getActionCode() {
+            return this.actionCode;
+        }
+
+        /**
+         * @return actionInfo
+         */
+        public String getActionInfo() {
+            return this.actionInfo;
+        }
+
+        /**
+         * @return clientId
+         */
+        public String getClientId() {
+            return this.clientId;
+        }
+
+        /**
+         * @return msgId
+         */
+        public String getMsgId() {
+            return this.msgId;
+        }
+
+        /**
+         * @return time
+         */
+        public String getTime() {
+            return this.time;
+        }
+
+        public static final class Builder {
+            private String action; 
+            private String actionCode; 
+            private String actionInfo; 
+            private String clientId; 
+            private String msgId; 
+            private String time; 
+
+            /**
+             * Action.
+             */
+            public Builder action(String action) {
+                this.action = action;
+                return this;
+            }
+
+            /**
+             * ActionCode.
+             */
+            public Builder actionCode(String actionCode) {
+                this.actionCode = actionCode;
+                return this;
+            }
+
+            /**
+             * ActionInfo.
+             */
+            public Builder actionInfo(String actionInfo) {
+                this.actionInfo = actionInfo;
+                return this;
+            }
+
+            /**
+             * ClientId.
+             */
+            public Builder clientId(String clientId) {
+                this.clientId = clientId;
+                return this;
+            }
+
+            /**
+             * MsgId.
+             */
+            public Builder msgId(String msgId) {
+                this.msgId = msgId;
+                return this;
+            }
+
+            /**
+             * Time.
+             */
+            public Builder time(String time) {
+                this.time = time;
+                return this;
+            }
+
+            public MessageOfClientList build() {
+                return new MessageOfClientList(this);
+            } 
+
+        } 
+
+    }
+}
