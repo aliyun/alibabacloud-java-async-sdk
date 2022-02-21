@@ -1,0 +1,104 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.cloudapi20160714.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link SetTrafficControlApisResponse} extends {@link TeaModel}
+ *
+ * <p>SetTrafficControlApisResponse</p>
+ */
+public class SetTrafficControlApisResponse extends Response {
+    @NameInMap("headers")
+    @Validation(required = true)
+    private java.util.Map < String, String > headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    private SetTrafficControlApisResponseBody body;
+
+    private SetTrafficControlApisResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.body = builder.body;
+    }
+
+    public static SetTrafficControlApisResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return body
+     */
+    public SetTrafficControlApisResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<SetTrafficControlApisResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder body(SetTrafficControlApisResponseBody body);
+
+        @Override
+        SetTrafficControlApisResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<SetTrafficControlApisResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private SetTrafficControlApisResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(SetTrafficControlApisResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(SetTrafficControlApisResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public SetTrafficControlApisResponse build() {
+            return new SetTrafficControlApisResponse(this);
+        } 
+
+    } 
+
+}
