@@ -1,0 +1,104 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.domain20180129.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link QueryTransferInByInstanceIdResponse} extends {@link TeaModel}
+ *
+ * <p>QueryTransferInByInstanceIdResponse</p>
+ */
+public class QueryTransferInByInstanceIdResponse extends Response {
+    @NameInMap("headers")
+    @Validation(required = true)
+    private java.util.Map < String, String > headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    private QueryTransferInByInstanceIdResponseBody body;
+
+    private QueryTransferInByInstanceIdResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.body = builder.body;
+    }
+
+    public static QueryTransferInByInstanceIdResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return body
+     */
+    public QueryTransferInByInstanceIdResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<QueryTransferInByInstanceIdResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder body(QueryTransferInByInstanceIdResponseBody body);
+
+        @Override
+        QueryTransferInByInstanceIdResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<QueryTransferInByInstanceIdResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private QueryTransferInByInstanceIdResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(QueryTransferInByInstanceIdResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(QueryTransferInByInstanceIdResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public QueryTransferInByInstanceIdResponse build() {
+            return new QueryTransferInByInstanceIdResponse(this);
+        } 
+
+    } 
+
+}

@@ -1,0 +1,104 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.domain20180129.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link PollTaskResultResponse} extends {@link TeaModel}
+ *
+ * <p>PollTaskResultResponse</p>
+ */
+public class PollTaskResultResponse extends Response {
+    @NameInMap("headers")
+    @Validation(required = true)
+    private java.util.Map < String, String > headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    private PollTaskResultResponseBody body;
+
+    private PollTaskResultResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.body = builder.body;
+    }
+
+    public static PollTaskResultResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return body
+     */
+    public PollTaskResultResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<PollTaskResultResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder body(PollTaskResultResponseBody body);
+
+        @Override
+        PollTaskResultResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<PollTaskResultResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private PollTaskResultResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(PollTaskResultResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(PollTaskResultResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public PollTaskResultResponse build() {
+            return new PollTaskResultResponse(this);
+        } 
+
+    } 
+
+}
