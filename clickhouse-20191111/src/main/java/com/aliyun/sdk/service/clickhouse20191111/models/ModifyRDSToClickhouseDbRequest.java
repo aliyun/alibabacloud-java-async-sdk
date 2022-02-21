@@ -1,0 +1,449 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.clickhouse20191111.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link ModifyRDSToClickhouseDbRequest} extends {@link RequestModel}
+ *
+ * <p>ModifyRDSToClickhouseDbRequest</p>
+ */
+public class ModifyRDSToClickhouseDbRequest extends Request {
+    @Query
+    @NameInMap("CkPassword")
+    @Validation(required = true)
+    private String ckPassword;
+
+    @Query
+    @NameInMap("CkUserName")
+    @Validation(required = true)
+    private String ckUserName;
+
+    @Query
+    @NameInMap("ClickhousePort")
+    private Long clickhousePort;
+
+    @Query
+    @NameInMap("DbClusterId")
+    @Validation(required = true)
+    private String dbClusterId;
+
+    @Query
+    @NameInMap("LimitUpper")
+    private Long limitUpper;
+
+    @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
+
+    @Query
+    @NameInMap("RdsId")
+    @Validation(required = true)
+    private String rdsId;
+
+    @Query
+    @NameInMap("RdsPassword")
+    @Validation(required = true)
+    private String rdsPassword;
+
+    @Query
+    @NameInMap("RdsPort")
+    private Long rdsPort;
+
+    @Query
+    @NameInMap("RdsSynDb")
+    @Validation(required = true)
+    private String rdsSynDb;
+
+    @Query
+    @NameInMap("RdsSynTables")
+    @Validation(required = true)
+    private String rdsSynTables;
+
+    @Query
+    @NameInMap("RdsUserName")
+    @Validation(required = true)
+    private String rdsUserName;
+
+    @Query
+    @NameInMap("RdsVpcId")
+    private String rdsVpcId;
+
+    @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Query
+    @NameInMap("SkipUnsupported")
+    @Validation(required = true)
+    private Boolean skipUnsupported;
+
+    private ModifyRDSToClickhouseDbRequest(Builder builder) {
+        super(builder);
+        this.ckPassword = builder.ckPassword;
+        this.ckUserName = builder.ckUserName;
+        this.clickhousePort = builder.clickhousePort;
+        this.dbClusterId = builder.dbClusterId;
+        this.limitUpper = builder.limitUpper;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
+        this.rdsId = builder.rdsId;
+        this.rdsPassword = builder.rdsPassword;
+        this.rdsPort = builder.rdsPort;
+        this.rdsSynDb = builder.rdsSynDb;
+        this.rdsSynTables = builder.rdsSynTables;
+        this.rdsUserName = builder.rdsUserName;
+        this.rdsVpcId = builder.rdsVpcId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.skipUnsupported = builder.skipUnsupported;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static ModifyRDSToClickhouseDbRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return ckPassword
+     */
+    public String getCkPassword() {
+        return this.ckPassword;
+    }
+
+    /**
+     * @return ckUserName
+     */
+    public String getCkUserName() {
+        return this.ckUserName;
+    }
+
+    /**
+     * @return clickhousePort
+     */
+    public Long getClickhousePort() {
+        return this.clickhousePort;
+    }
+
+    /**
+     * @return dbClusterId
+     */
+    public String getDbClusterId() {
+        return this.dbClusterId;
+    }
+
+    /**
+     * @return limitUpper
+     */
+    public Long getLimitUpper() {
+        return this.limitUpper;
+    }
+
+    /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
+     * @return rdsId
+     */
+    public String getRdsId() {
+        return this.rdsId;
+    }
+
+    /**
+     * @return rdsPassword
+     */
+    public String getRdsPassword() {
+        return this.rdsPassword;
+    }
+
+    /**
+     * @return rdsPort
+     */
+    public Long getRdsPort() {
+        return this.rdsPort;
+    }
+
+    /**
+     * @return rdsSynDb
+     */
+    public String getRdsSynDb() {
+        return this.rdsSynDb;
+    }
+
+    /**
+     * @return rdsSynTables
+     */
+    public String getRdsSynTables() {
+        return this.rdsSynTables;
+    }
+
+    /**
+     * @return rdsUserName
+     */
+    public String getRdsUserName() {
+        return this.rdsUserName;
+    }
+
+    /**
+     * @return rdsVpcId
+     */
+    public String getRdsVpcId() {
+        return this.rdsVpcId;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    /**
+     * @return skipUnsupported
+     */
+    public Boolean getSkipUnsupported() {
+        return this.skipUnsupported;
+    }
+
+    public static final class Builder extends Request.Builder<ModifyRDSToClickhouseDbRequest, Builder> {
+        private String ckPassword; 
+        private String ckUserName; 
+        private Long clickhousePort; 
+        private String dbClusterId; 
+        private Long limitUpper; 
+        private String ownerAccount; 
+        private Long ownerId; 
+        private String rdsId; 
+        private String rdsPassword; 
+        private Long rdsPort; 
+        private String rdsSynDb; 
+        private String rdsSynTables; 
+        private String rdsUserName; 
+        private String rdsVpcId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private Boolean skipUnsupported; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(ModifyRDSToClickhouseDbRequest response) {
+            super(response);
+            this.ckPassword = response.ckPassword;
+            this.ckUserName = response.ckUserName;
+            this.clickhousePort = response.clickhousePort;
+            this.dbClusterId = response.dbClusterId;
+            this.limitUpper = response.limitUpper;
+            this.ownerAccount = response.ownerAccount;
+            this.ownerId = response.ownerId;
+            this.rdsId = response.rdsId;
+            this.rdsPassword = response.rdsPassword;
+            this.rdsPort = response.rdsPort;
+            this.rdsSynDb = response.rdsSynDb;
+            this.rdsSynTables = response.rdsSynTables;
+            this.rdsUserName = response.rdsUserName;
+            this.rdsVpcId = response.rdsVpcId;
+            this.resourceOwnerAccount = response.resourceOwnerAccount;
+            this.resourceOwnerId = response.resourceOwnerId;
+            this.skipUnsupported = response.skipUnsupported;
+        } 
+
+        /**
+         * CkPassword.
+         */
+        public Builder ckPassword(String ckPassword) {
+            this.putQueryParameter("CkPassword", ckPassword);
+            this.ckPassword = ckPassword;
+            return this;
+        }
+
+        /**
+         * CkUserName.
+         */
+        public Builder ckUserName(String ckUserName) {
+            this.putQueryParameter("CkUserName", ckUserName);
+            this.ckUserName = ckUserName;
+            return this;
+        }
+
+        /**
+         * ClickhousePort.
+         */
+        public Builder clickhousePort(Long clickhousePort) {
+            this.putQueryParameter("ClickhousePort", clickhousePort);
+            this.clickhousePort = clickhousePort;
+            return this;
+        }
+
+        /**
+         * DbClusterId.
+         */
+        public Builder dbClusterId(String dbClusterId) {
+            this.putQueryParameter("DbClusterId", dbClusterId);
+            this.dbClusterId = dbClusterId;
+            return this;
+        }
+
+        /**
+         * LimitUpper.
+         */
+        public Builder limitUpper(Long limitUpper) {
+            this.putQueryParameter("LimitUpper", limitUpper);
+            this.limitUpper = limitUpper;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RdsId.
+         */
+        public Builder rdsId(String rdsId) {
+            this.putQueryParameter("RdsId", rdsId);
+            this.rdsId = rdsId;
+            return this;
+        }
+
+        /**
+         * RdsPassword.
+         */
+        public Builder rdsPassword(String rdsPassword) {
+            this.putQueryParameter("RdsPassword", rdsPassword);
+            this.rdsPassword = rdsPassword;
+            return this;
+        }
+
+        /**
+         * RdsPort.
+         */
+        public Builder rdsPort(Long rdsPort) {
+            this.putQueryParameter("RdsPort", rdsPort);
+            this.rdsPort = rdsPort;
+            return this;
+        }
+
+        /**
+         * RdsSynDb.
+         */
+        public Builder rdsSynDb(String rdsSynDb) {
+            this.putQueryParameter("RdsSynDb", rdsSynDb);
+            this.rdsSynDb = rdsSynDb;
+            return this;
+        }
+
+        /**
+         * RdsSynTables.
+         */
+        public Builder rdsSynTables(String rdsSynTables) {
+            this.putQueryParameter("RdsSynTables", rdsSynTables);
+            this.rdsSynTables = rdsSynTables;
+            return this;
+        }
+
+        /**
+         * RdsUserName.
+         */
+        public Builder rdsUserName(String rdsUserName) {
+            this.putQueryParameter("RdsUserName", rdsUserName);
+            this.rdsUserName = rdsUserName;
+            return this;
+        }
+
+        /**
+         * RdsVpcId.
+         */
+        public Builder rdsVpcId(String rdsVpcId) {
+            this.putQueryParameter("RdsVpcId", rdsVpcId);
+            this.rdsVpcId = rdsVpcId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * SkipUnsupported.
+         */
+        public Builder skipUnsupported(Boolean skipUnsupported) {
+            this.putQueryParameter("SkipUnsupported", skipUnsupported);
+            this.skipUnsupported = skipUnsupported;
+            return this;
+        }
+
+        @Override
+        public ModifyRDSToClickhouseDbRequest build() {
+            return new ModifyRDSToClickhouseDbRequest(this);
+        } 
+
+    } 
+
+}
