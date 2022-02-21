@@ -1,0 +1,104 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.sas20181203.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link DescribeAccesskeyLeakListResponse} extends {@link TeaModel}
+ *
+ * <p>DescribeAccesskeyLeakListResponse</p>
+ */
+public class DescribeAccesskeyLeakListResponse extends Response {
+    @NameInMap("headers")
+    @Validation(required = true)
+    private java.util.Map < String, String > headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    private DescribeAccesskeyLeakListResponseBody body;
+
+    private DescribeAccesskeyLeakListResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.body = builder.body;
+    }
+
+    public static DescribeAccesskeyLeakListResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return body
+     */
+    public DescribeAccesskeyLeakListResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<DescribeAccesskeyLeakListResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder body(DescribeAccesskeyLeakListResponseBody body);
+
+        @Override
+        DescribeAccesskeyLeakListResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<DescribeAccesskeyLeakListResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private DescribeAccesskeyLeakListResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(DescribeAccesskeyLeakListResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(DescribeAccesskeyLeakListResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public DescribeAccesskeyLeakListResponse build() {
+            return new DescribeAccesskeyLeakListResponse(this);
+        } 
+
+    } 
+
+}
