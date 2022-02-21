@@ -1,0 +1,104 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.ecs20140526.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link CreateLaunchTemplateVersionResponse} extends {@link TeaModel}
+ *
+ * <p>CreateLaunchTemplateVersionResponse</p>
+ */
+public class CreateLaunchTemplateVersionResponse extends Response {
+    @NameInMap("headers")
+    @Validation(required = true)
+    private java.util.Map < String, String > headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    private CreateLaunchTemplateVersionResponseBody body;
+
+    private CreateLaunchTemplateVersionResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.body = builder.body;
+    }
+
+    public static CreateLaunchTemplateVersionResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return body
+     */
+    public CreateLaunchTemplateVersionResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<CreateLaunchTemplateVersionResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder body(CreateLaunchTemplateVersionResponseBody body);
+
+        @Override
+        CreateLaunchTemplateVersionResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<CreateLaunchTemplateVersionResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private CreateLaunchTemplateVersionResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(CreateLaunchTemplateVersionResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(CreateLaunchTemplateVersionResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public CreateLaunchTemplateVersionResponse build() {
+            return new CreateLaunchTemplateVersionResponse(this);
+        } 
+
+    } 
+
+}

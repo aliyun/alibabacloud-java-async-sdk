@@ -1,0 +1,104 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.ecs20140526.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link ModifyReservedInstancesResponse} extends {@link TeaModel}
+ *
+ * <p>ModifyReservedInstancesResponse</p>
+ */
+public class ModifyReservedInstancesResponse extends Response {
+    @NameInMap("headers")
+    @Validation(required = true)
+    private java.util.Map < String, String > headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    private ModifyReservedInstancesResponseBody body;
+
+    private ModifyReservedInstancesResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.body = builder.body;
+    }
+
+    public static ModifyReservedInstancesResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return body
+     */
+    public ModifyReservedInstancesResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<ModifyReservedInstancesResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder body(ModifyReservedInstancesResponseBody body);
+
+        @Override
+        ModifyReservedInstancesResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<ModifyReservedInstancesResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private ModifyReservedInstancesResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(ModifyReservedInstancesResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(ModifyReservedInstancesResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public ModifyReservedInstancesResponse build() {
+            return new ModifyReservedInstancesResponse(this);
+        } 
+
+    } 
+
+}
