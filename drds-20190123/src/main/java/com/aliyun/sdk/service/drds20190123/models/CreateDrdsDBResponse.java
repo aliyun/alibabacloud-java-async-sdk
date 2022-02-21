@@ -1,0 +1,104 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.drds20190123.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link CreateDrdsDBResponse} extends {@link TeaModel}
+ *
+ * <p>CreateDrdsDBResponse</p>
+ */
+public class CreateDrdsDBResponse extends Response {
+    @NameInMap("headers")
+    @Validation(required = true)
+    private java.util.Map < String, String > headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    private CreateDrdsDBResponseBody body;
+
+    private CreateDrdsDBResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.body = builder.body;
+    }
+
+    public static CreateDrdsDBResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return body
+     */
+    public CreateDrdsDBResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<CreateDrdsDBResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder body(CreateDrdsDBResponseBody body);
+
+        @Override
+        CreateDrdsDBResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<CreateDrdsDBResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private CreateDrdsDBResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(CreateDrdsDBResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(CreateDrdsDBResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public CreateDrdsDBResponse build() {
+            return new CreateDrdsDBResponse(this);
+        } 
+
+    } 
+
+}
