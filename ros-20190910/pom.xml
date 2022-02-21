@@ -2,10 +2,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
-  <artifactId>alibabacloud-ros20190910-async</artifactId>
-  <version>1.1.0-beta</version>
+  <artifactId>alibabacloud-ros20190910</artifactId>
+  <version>1.1.1</version>
   <packaging>jar</packaging>
-  <name>alibabacloud-ros20190910-async</name>
+  <name>alibabacloud-ros20190910</name>
   <description>Alibaba Cloud ROS (20190910) Async SDK for Java
     </description>
   <url>https://github.com/aliyun/alibabacloud-java-async-sdk</url>
