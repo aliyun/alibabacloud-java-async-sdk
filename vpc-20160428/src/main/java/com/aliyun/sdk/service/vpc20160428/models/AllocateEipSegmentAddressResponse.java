@@ -1,0 +1,104 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.vpc20160428.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link AllocateEipSegmentAddressResponse} extends {@link TeaModel}
+ *
+ * <p>AllocateEipSegmentAddressResponse</p>
+ */
+public class AllocateEipSegmentAddressResponse extends Response {
+    @NameInMap("headers")
+    @Validation(required = true)
+    private java.util.Map < String, String > headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    private AllocateEipSegmentAddressResponseBody body;
+
+    private AllocateEipSegmentAddressResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.body = builder.body;
+    }
+
+    public static AllocateEipSegmentAddressResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return body
+     */
+    public AllocateEipSegmentAddressResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<AllocateEipSegmentAddressResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder body(AllocateEipSegmentAddressResponseBody body);
+
+        @Override
+        AllocateEipSegmentAddressResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<AllocateEipSegmentAddressResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private AllocateEipSegmentAddressResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(AllocateEipSegmentAddressResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(AllocateEipSegmentAddressResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public AllocateEipSegmentAddressResponse build() {
+            return new AllocateEipSegmentAddressResponse(this);
+        } 
+
+    } 
+
+}

@@ -1,0 +1,94 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.vpc20160428.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link CreateNatIpResponseBody} extends {@link TeaModel}
+ *
+ * <p>CreateNatIpResponseBody</p>
+ */
+public class CreateNatIpResponseBody extends TeaModel {
+    @NameInMap("NatIp")
+    private String natIp;
+
+    @NameInMap("NatIpId")
+    private String natIpId;
+
+    @NameInMap("RequestId")
+    private String requestId;
+
+    private CreateNatIpResponseBody(Builder builder) {
+        this.natIp = builder.natIp;
+        this.natIpId = builder.natIpId;
+        this.requestId = builder.requestId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static CreateNatIpResponseBody create() {
+        return builder().build();
+    }
+
+    /**
+     * @return natIp
+     */
+    public String getNatIp() {
+        return this.natIp;
+    }
+
+    /**
+     * @return natIpId
+     */
+    public String getNatIpId() {
+        return this.natIpId;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public static final class Builder {
+        private String natIp; 
+        private String natIpId; 
+        private String requestId; 
+
+        /**
+         * NatIp.
+         */
+        public Builder natIp(String natIp) {
+            this.natIp = natIp;
+            return this;
+        }
+
+        /**
+         * NatIpId.
+         */
+        public Builder natIpId(String natIpId) {
+            this.natIpId = natIpId;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        public CreateNatIpResponseBody build() {
+            return new CreateNatIpResponseBody(this);
+        } 
+
+    } 
+
+}

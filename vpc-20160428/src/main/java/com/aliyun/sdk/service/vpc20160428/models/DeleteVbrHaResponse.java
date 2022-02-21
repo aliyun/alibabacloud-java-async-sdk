@@ -1,0 +1,104 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.vpc20160428.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link DeleteVbrHaResponse} extends {@link TeaModel}
+ *
+ * <p>DeleteVbrHaResponse</p>
+ */
+public class DeleteVbrHaResponse extends Response {
+    @NameInMap("headers")
+    @Validation(required = true)
+    private java.util.Map < String, String > headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    private DeleteVbrHaResponseBody body;
+
+    private DeleteVbrHaResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.body = builder.body;
+    }
+
+    public static DeleteVbrHaResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return body
+     */
+    public DeleteVbrHaResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<DeleteVbrHaResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder body(DeleteVbrHaResponseBody body);
+
+        @Override
+        DeleteVbrHaResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<DeleteVbrHaResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private DeleteVbrHaResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(DeleteVbrHaResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(DeleteVbrHaResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public DeleteVbrHaResponse build() {
+            return new DeleteVbrHaResponse(this);
+        } 
+
+    } 
+
+}
