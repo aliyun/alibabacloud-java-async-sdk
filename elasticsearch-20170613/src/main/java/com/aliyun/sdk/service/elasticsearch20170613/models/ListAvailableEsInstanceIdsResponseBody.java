@@ -1,0 +1,175 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.elasticsearch20170613.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link ListAvailableEsInstanceIdsResponseBody} extends {@link TeaModel}
+ *
+ * <p>ListAvailableEsInstanceIdsResponseBody</p>
+ */
+public class ListAvailableEsInstanceIdsResponseBody extends TeaModel {
+    @NameInMap("RequestId")
+    private String requestId;
+
+    @NameInMap("Result")
+    private java.util.List < Result> result;
+
+    private ListAvailableEsInstanceIdsResponseBody(Builder builder) {
+        this.requestId = builder.requestId;
+        this.result = builder.result;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static ListAvailableEsInstanceIdsResponseBody create() {
+        return builder().build();
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
+     * @return result
+     */
+    public java.util.List < Result> getResult() {
+        return this.result;
+    }
+
+    public static final class Builder {
+        private String requestId; 
+        private java.util.List < Result> result; 
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * Result.
+         */
+        public Builder result(java.util.List < Result> result) {
+            this.result = result;
+            return this;
+        }
+
+        public ListAvailableEsInstanceIdsResponseBody build() {
+            return new ListAvailableEsInstanceIdsResponseBody(this);
+        } 
+
+    } 
+
+    public static class Result extends TeaModel {
+        @NameInMap("description")
+        private String description;
+
+        @NameInMap("endpoint")
+        private String endpoint;
+
+        @NameInMap("esInstanceId")
+        private String esInstanceId;
+
+        @NameInMap("kibanaEndpoint")
+        private String kibanaEndpoint;
+
+        private Result(Builder builder) {
+            this.description = builder.description;
+            this.endpoint = builder.endpoint;
+            this.esInstanceId = builder.esInstanceId;
+            this.kibanaEndpoint = builder.kibanaEndpoint;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Result create() {
+            return builder().build();
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return endpoint
+         */
+        public String getEndpoint() {
+            return this.endpoint;
+        }
+
+        /**
+         * @return esInstanceId
+         */
+        public String getEsInstanceId() {
+            return this.esInstanceId;
+        }
+
+        /**
+         * @return kibanaEndpoint
+         */
+        public String getKibanaEndpoint() {
+            return this.kibanaEndpoint;
+        }
+
+        public static final class Builder {
+            private String description; 
+            private String endpoint; 
+            private String esInstanceId; 
+            private String kibanaEndpoint; 
+
+            /**
+             * description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * endpoint.
+             */
+            public Builder endpoint(String endpoint) {
+                this.endpoint = endpoint;
+                return this;
+            }
+
+            /**
+             * esInstanceId.
+             */
+            public Builder esInstanceId(String esInstanceId) {
+                this.esInstanceId = esInstanceId;
+                return this;
+            }
+
+            /**
+             * kibanaEndpoint.
+             */
+            public Builder kibanaEndpoint(String kibanaEndpoint) {
+                this.kibanaEndpoint = kibanaEndpoint;
+                return this;
+            }
+
+            public Result build() {
+                return new Result(this);
+            } 
+
+        } 
+
+    }
+}
