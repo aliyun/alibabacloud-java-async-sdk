@@ -1,0 +1,169 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.hbase20190101.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link ModifyBackupPlanConfigRequest} extends {@link RequestModel}
+ *
+ * <p>ModifyBackupPlanConfigRequest</p>
+ */
+public class ModifyBackupPlanConfigRequest extends Request {
+    @Query
+    @NameInMap("ClusterId")
+    @Validation(required = true)
+    private String clusterId;
+
+    @Query
+    @NameInMap("FullBackupCycle")
+    @Validation(required = true)
+    private String fullBackupCycle;
+
+    @Query
+    @NameInMap("MinHFileBackupCount")
+    @Validation(required = true)
+    private String minHFileBackupCount;
+
+    @Query
+    @NameInMap("NextFullBackupDate")
+    @Validation(required = true)
+    private String nextFullBackupDate;
+
+    @Query
+    @NameInMap("Tables")
+    @Validation(required = true)
+    private String tables;
+
+    private ModifyBackupPlanConfigRequest(Builder builder) {
+        super(builder);
+        this.clusterId = builder.clusterId;
+        this.fullBackupCycle = builder.fullBackupCycle;
+        this.minHFileBackupCount = builder.minHFileBackupCount;
+        this.nextFullBackupDate = builder.nextFullBackupDate;
+        this.tables = builder.tables;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static ModifyBackupPlanConfigRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return clusterId
+     */
+    public String getClusterId() {
+        return this.clusterId;
+    }
+
+    /**
+     * @return fullBackupCycle
+     */
+    public String getFullBackupCycle() {
+        return this.fullBackupCycle;
+    }
+
+    /**
+     * @return minHFileBackupCount
+     */
+    public String getMinHFileBackupCount() {
+        return this.minHFileBackupCount;
+    }
+
+    /**
+     * @return nextFullBackupDate
+     */
+    public String getNextFullBackupDate() {
+        return this.nextFullBackupDate;
+    }
+
+    /**
+     * @return tables
+     */
+    public String getTables() {
+        return this.tables;
+    }
+
+    public static final class Builder extends Request.Builder<ModifyBackupPlanConfigRequest, Builder> {
+        private String clusterId; 
+        private String fullBackupCycle; 
+        private String minHFileBackupCount; 
+        private String nextFullBackupDate; 
+        private String tables; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(ModifyBackupPlanConfigRequest response) {
+            super(response);
+            this.clusterId = response.clusterId;
+            this.fullBackupCycle = response.fullBackupCycle;
+            this.minHFileBackupCount = response.minHFileBackupCount;
+            this.nextFullBackupDate = response.nextFullBackupDate;
+            this.tables = response.tables;
+        } 
+
+        /**
+         * ClusterId.
+         */
+        public Builder clusterId(String clusterId) {
+            this.putQueryParameter("ClusterId", clusterId);
+            this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * FullBackupCycle.
+         */
+        public Builder fullBackupCycle(String fullBackupCycle) {
+            this.putQueryParameter("FullBackupCycle", fullBackupCycle);
+            this.fullBackupCycle = fullBackupCycle;
+            return this;
+        }
+
+        /**
+         * MinHFileBackupCount.
+         */
+        public Builder minHFileBackupCount(String minHFileBackupCount) {
+            this.putQueryParameter("MinHFileBackupCount", minHFileBackupCount);
+            this.minHFileBackupCount = minHFileBackupCount;
+            return this;
+        }
+
+        /**
+         * NextFullBackupDate.
+         */
+        public Builder nextFullBackupDate(String nextFullBackupDate) {
+            this.putQueryParameter("NextFullBackupDate", nextFullBackupDate);
+            this.nextFullBackupDate = nextFullBackupDate;
+            return this;
+        }
+
+        /**
+         * Tables.
+         */
+        public Builder tables(String tables) {
+            this.putQueryParameter("Tables", tables);
+            this.tables = tables;
+            return this;
+        }
+
+        @Override
+        public ModifyBackupPlanConfigRequest build() {
+            return new ModifyBackupPlanConfigRequest(this);
+        } 
+
+    } 
+
+}
