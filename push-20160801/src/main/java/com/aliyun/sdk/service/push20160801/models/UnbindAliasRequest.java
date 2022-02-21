@@ -1,0 +1,143 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.push20160801.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link UnbindAliasRequest} extends {@link RequestModel}
+ *
+ * <p>UnbindAliasRequest</p>
+ */
+public class UnbindAliasRequest extends Request {
+    @Query
+    @NameInMap("AliasName")
+    private String aliasName;
+
+    @Query
+    @NameInMap("AppKey")
+    @Validation(required = true)
+    private Long appKey;
+
+    @Query
+    @NameInMap("DeviceId")
+    @Validation(required = true)
+    private String deviceId;
+
+    @Query
+    @NameInMap("UnbindAll")
+    private Boolean unbindAll;
+
+    private UnbindAliasRequest(Builder builder) {
+        super(builder);
+        this.aliasName = builder.aliasName;
+        this.appKey = builder.appKey;
+        this.deviceId = builder.deviceId;
+        this.unbindAll = builder.unbindAll;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static UnbindAliasRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return aliasName
+     */
+    public String getAliasName() {
+        return this.aliasName;
+    }
+
+    /**
+     * @return appKey
+     */
+    public Long getAppKey() {
+        return this.appKey;
+    }
+
+    /**
+     * @return deviceId
+     */
+    public String getDeviceId() {
+        return this.deviceId;
+    }
+
+    /**
+     * @return unbindAll
+     */
+    public Boolean getUnbindAll() {
+        return this.unbindAll;
+    }
+
+    public static final class Builder extends Request.Builder<UnbindAliasRequest, Builder> {
+        private String aliasName; 
+        private Long appKey; 
+        private String deviceId; 
+        private Boolean unbindAll; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(UnbindAliasRequest response) {
+            super(response);
+            this.aliasName = response.aliasName;
+            this.appKey = response.appKey;
+            this.deviceId = response.deviceId;
+            this.unbindAll = response.unbindAll;
+        } 
+
+        /**
+         * AliasName.
+         */
+        public Builder aliasName(String aliasName) {
+            this.putQueryParameter("AliasName", aliasName);
+            this.aliasName = aliasName;
+            return this;
+        }
+
+        /**
+         * AppKey.
+         */
+        public Builder appKey(Long appKey) {
+            this.putQueryParameter("AppKey", appKey);
+            this.appKey = appKey;
+            return this;
+        }
+
+        /**
+         * DeviceId.
+         */
+        public Builder deviceId(String deviceId) {
+            this.putQueryParameter("DeviceId", deviceId);
+            this.deviceId = deviceId;
+            return this;
+        }
+
+        /**
+         * UnbindAll.
+         */
+        public Builder unbindAll(Boolean unbindAll) {
+            this.putQueryParameter("UnbindAll", unbindAll);
+            this.unbindAll = unbindAll;
+            return this;
+        }
+
+        @Override
+        public UnbindAliasRequest build() {
+            return new UnbindAliasRequest(this);
+        } 
+
+    } 
+
+}

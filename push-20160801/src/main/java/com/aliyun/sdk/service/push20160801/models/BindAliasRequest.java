@@ -1,0 +1,121 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.push20160801.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link BindAliasRequest} extends {@link RequestModel}
+ *
+ * <p>BindAliasRequest</p>
+ */
+public class BindAliasRequest extends Request {
+    @Query
+    @NameInMap("AliasName")
+    @Validation(required = true)
+    private String aliasName;
+
+    @Query
+    @NameInMap("AppKey")
+    @Validation(required = true)
+    private Long appKey;
+
+    @Query
+    @NameInMap("DeviceId")
+    @Validation(required = true)
+    private String deviceId;
+
+    private BindAliasRequest(Builder builder) {
+        super(builder);
+        this.aliasName = builder.aliasName;
+        this.appKey = builder.appKey;
+        this.deviceId = builder.deviceId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static BindAliasRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return aliasName
+     */
+    public String getAliasName() {
+        return this.aliasName;
+    }
+
+    /**
+     * @return appKey
+     */
+    public Long getAppKey() {
+        return this.appKey;
+    }
+
+    /**
+     * @return deviceId
+     */
+    public String getDeviceId() {
+        return this.deviceId;
+    }
+
+    public static final class Builder extends Request.Builder<BindAliasRequest, Builder> {
+        private String aliasName; 
+        private Long appKey; 
+        private String deviceId; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(BindAliasRequest response) {
+            super(response);
+            this.aliasName = response.aliasName;
+            this.appKey = response.appKey;
+            this.deviceId = response.deviceId;
+        } 
+
+        /**
+         * AliasName.
+         */
+        public Builder aliasName(String aliasName) {
+            this.putQueryParameter("AliasName", aliasName);
+            this.aliasName = aliasName;
+            return this;
+        }
+
+        /**
+         * AppKey.
+         */
+        public Builder appKey(Long appKey) {
+            this.putQueryParameter("AppKey", appKey);
+            this.appKey = appKey;
+            return this;
+        }
+
+        /**
+         * DeviceId.
+         */
+        public Builder deviceId(String deviceId) {
+            this.putQueryParameter("DeviceId", deviceId);
+            this.deviceId = deviceId;
+            return this;
+        }
+
+        @Override
+        public BindAliasRequest build() {
+            return new BindAliasRequest(this);
+        } 
+
+    } 
+
+}

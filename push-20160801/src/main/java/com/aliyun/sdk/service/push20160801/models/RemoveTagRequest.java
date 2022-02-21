@@ -1,0 +1,97 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.push20160801.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link RemoveTagRequest} extends {@link RequestModel}
+ *
+ * <p>RemoveTagRequest</p>
+ */
+public class RemoveTagRequest extends Request {
+    @Query
+    @NameInMap("AppKey")
+    @Validation(required = true)
+    private Long appKey;
+
+    @Query
+    @NameInMap("TagName")
+    @Validation(required = true)
+    private String tagName;
+
+    private RemoveTagRequest(Builder builder) {
+        super(builder);
+        this.appKey = builder.appKey;
+        this.tagName = builder.tagName;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static RemoveTagRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return appKey
+     */
+    public Long getAppKey() {
+        return this.appKey;
+    }
+
+    /**
+     * @return tagName
+     */
+    public String getTagName() {
+        return this.tagName;
+    }
+
+    public static final class Builder extends Request.Builder<RemoveTagRequest, Builder> {
+        private Long appKey; 
+        private String tagName; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(RemoveTagRequest response) {
+            super(response);
+            this.appKey = response.appKey;
+            this.tagName = response.tagName;
+        } 
+
+        /**
+         * AppKey.
+         */
+        public Builder appKey(Long appKey) {
+            this.putQueryParameter("AppKey", appKey);
+            this.appKey = appKey;
+            return this;
+        }
+
+        /**
+         * TagName.
+         */
+        public Builder tagName(String tagName) {
+            this.putQueryParameter("TagName", tagName);
+            this.tagName = tagName;
+            return this;
+        }
+
+        @Override
+        public RemoveTagRequest build() {
+            return new RemoveTagRequest(this);
+        } 
+
+    } 
+
+}
