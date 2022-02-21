@@ -1,0 +1,104 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.ddoscoo20200101.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link DescribeL7RsPolicyResponse} extends {@link TeaModel}
+ *
+ * <p>DescribeL7RsPolicyResponse</p>
+ */
+public class DescribeL7RsPolicyResponse extends Response {
+    @NameInMap("headers")
+    @Validation(required = true)
+    private java.util.Map < String, String > headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    private DescribeL7RsPolicyResponseBody body;
+
+    private DescribeL7RsPolicyResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.body = builder.body;
+    }
+
+    public static DescribeL7RsPolicyResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return body
+     */
+    public DescribeL7RsPolicyResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<DescribeL7RsPolicyResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder body(DescribeL7RsPolicyResponseBody body);
+
+        @Override
+        DescribeL7RsPolicyResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<DescribeL7RsPolicyResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private DescribeL7RsPolicyResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(DescribeL7RsPolicyResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(DescribeL7RsPolicyResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public DescribeL7RsPolicyResponse build() {
+            return new DescribeL7RsPolicyResponse(this);
+        } 
+
+    } 
+
+}
