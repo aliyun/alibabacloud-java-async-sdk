@@ -1,0 +1,134 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.rds20140815.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link ActivateMigrationTargetInstanceResponseBody} extends {@link TeaModel}
+ *
+ * <p>ActivateMigrationTargetInstanceResponseBody</p>
+ */
+public class ActivateMigrationTargetInstanceResponseBody extends TeaModel {
+    @NameInMap("DBInstanceName")
+    private String DBInstanceName;
+
+    @NameInMap("RequestId")
+    private String requestId;
+
+    @NameInMap("SourceIpAddress")
+    private String sourceIpAddress;
+
+    @NameInMap("SourcePort")
+    private Long sourcePort;
+
+    @NameInMap("TaskId")
+    private Long taskId;
+
+    private ActivateMigrationTargetInstanceResponseBody(Builder builder) {
+        this.DBInstanceName = builder.DBInstanceName;
+        this.requestId = builder.requestId;
+        this.sourceIpAddress = builder.sourceIpAddress;
+        this.sourcePort = builder.sourcePort;
+        this.taskId = builder.taskId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static ActivateMigrationTargetInstanceResponseBody create() {
+        return builder().build();
+    }
+
+    /**
+     * @return DBInstanceName
+     */
+    public String getDBInstanceName() {
+        return this.DBInstanceName;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
+     * @return sourceIpAddress
+     */
+    public String getSourceIpAddress() {
+        return this.sourceIpAddress;
+    }
+
+    /**
+     * @return sourcePort
+     */
+    public Long getSourcePort() {
+        return this.sourcePort;
+    }
+
+    /**
+     * @return taskId
+     */
+    public Long getTaskId() {
+        return this.taskId;
+    }
+
+    public static final class Builder {
+        private String DBInstanceName; 
+        private String requestId; 
+        private String sourceIpAddress; 
+        private Long sourcePort; 
+        private Long taskId; 
+
+        /**
+         * DBInstanceName.
+         */
+        public Builder DBInstanceName(String DBInstanceName) {
+            this.DBInstanceName = DBInstanceName;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * SourceIpAddress.
+         */
+        public Builder sourceIpAddress(String sourceIpAddress) {
+            this.sourceIpAddress = sourceIpAddress;
+            return this;
+        }
+
+        /**
+         * SourcePort.
+         */
+        public Builder sourcePort(Long sourcePort) {
+            this.sourcePort = sourcePort;
+            return this;
+        }
+
+        /**
+         * TaskId.
+         */
+        public Builder taskId(Long taskId) {
+            this.taskId = taskId;
+            return this;
+        }
+
+        public ActivateMigrationTargetInstanceResponseBody build() {
+            return new ActivateMigrationTargetInstanceResponseBody(this);
+        } 
+
+    } 
+
+}
