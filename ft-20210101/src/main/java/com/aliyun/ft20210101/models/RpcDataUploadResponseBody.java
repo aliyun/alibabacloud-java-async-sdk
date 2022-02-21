@@ -4,6 +4,7 @@ package com.aliyun.ft20210101.models;
 import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * {@link RpcDataUploadResponseBody} extends {@link TeaModel}
@@ -31,7 +32,6 @@ public class RpcDataUploadResponseBody extends TeaModel {
 
     @NameInMap("url")
     private String url;
-
 
     private RpcDataUploadResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -110,7 +110,7 @@ public class RpcDataUploadResponseBody extends TeaModel {
         private String url; 
 
         /**
-         * <p>Id of the request</p>
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class RpcDataUploadResponseBody extends TeaModel {
         }
 
         /**
-         * <p>headers.</p>
+         * headers.
          */
         public Builder headers(java.util.Map < String, ? > headers) {
             this.headers = headers;
@@ -126,7 +126,7 @@ public class RpcDataUploadResponseBody extends TeaModel {
         }
 
         /**
-         * <p>params.</p>
+         * params.
          */
         public Builder params(java.util.Map < String, ? > params) {
             this.params = params;
@@ -134,7 +134,7 @@ public class RpcDataUploadResponseBody extends TeaModel {
         }
 
         /**
-         * <p>speed.</p>
+         * speed.
          */
         public Builder speed(String speed) {
             this.speed = speed;
@@ -142,7 +142,7 @@ public class RpcDataUploadResponseBody extends TeaModel {
         }
 
         /**
-         * <p>totalBytes.</p>
+         * totalBytes.
          */
         public Builder totalBytes(Long totalBytes) {
             this.totalBytes = totalBytes;
@@ -150,7 +150,7 @@ public class RpcDataUploadResponseBody extends TeaModel {
         }
 
         /**
-         * <p>totalTime.</p>
+         * totalTime.
          */
         public Builder totalTime(Long totalTime) {
             this.totalTime = totalTime;
@@ -158,7 +158,7 @@ public class RpcDataUploadResponseBody extends TeaModel {
         }
 
         /**
-         * <p>url.</p>
+         * url.
          */
         public Builder url(String url) {
             this.url = url;

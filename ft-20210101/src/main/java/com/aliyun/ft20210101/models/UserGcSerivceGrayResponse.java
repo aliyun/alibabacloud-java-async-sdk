@@ -4,6 +4,7 @@ package com.aliyun.ft20210101.models;
 import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * {@link UserGcSerivceGrayResponse} extends {@link TeaModel}
@@ -19,23 +20,19 @@ public class UserGcSerivceGrayResponse extends Response {
     @Validation(required = true)
     private UserGcSerivceGrayResponseBody body;
 
-
-    private UserGcSerivceGrayResponse(Builder builder) {
+    private UserGcSerivceGrayResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static Builder builder() {
-        return new Builder();
-    }
-
     public static UserGcSerivceGrayResponse create() {
-        return builder().build();
+        return new BuilderImpl().build();
     }
 
+    @Override
     public Builder toBuilder() {
-        return new Builder(this);
+        return new BuilderImpl(this);
     }
 
     /**
@@ -52,36 +49,52 @@ public class UserGcSerivceGrayResponse extends Response {
         return this.body;
     }
 
-    public static final class Builder extends Response.Builder {
+    public interface Builder extends Response.Builder<UserGcSerivceGrayResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder body(UserGcSerivceGrayResponseBody body);
+
+        @Override
+        UserGcSerivceGrayResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<UserGcSerivceGrayResponse, Builder>
+            implements Builder {
         private java.util.Map < String, String > headers; 
         private UserGcSerivceGrayResponseBody body; 
 
-        private Builder() {
+        private BuilderImpl() {
             super();
         } 
 
-        private Builder(UserGcSerivceGrayResponse response) {
+        private BuilderImpl(UserGcSerivceGrayResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
         } 
 
         /**
-         * <p>headers.</p>
+         * headers.
          */
+        @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
             return this;
         }
 
         /**
-         * <p>body.</p>
+         * body.
          */
+        @Override
         public Builder body(UserGcSerivceGrayResponseBody body) {
             this.body = body;
             return this;
         }
 
+        @Override
         public UserGcSerivceGrayResponse build() {
             return new UserGcSerivceGrayResponse(this);
         } 

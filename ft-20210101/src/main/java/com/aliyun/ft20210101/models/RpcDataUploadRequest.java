@@ -4,6 +4,7 @@ package com.aliyun.ft20210101.models;
 import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * {@link RpcDataUploadRequest} extends {@link RequestModel}
@@ -27,7 +28,6 @@ public class RpcDataUploadRequest extends Request {
     @NameInMap("query2")
     private Long query2;
 
-
     private RpcDataUploadRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -42,6 +42,11 @@ public class RpcDataUploadRequest extends Request {
 
     public static RpcDataUploadRequest create() {
         return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -72,14 +77,26 @@ public class RpcDataUploadRequest extends Request {
         return this.query2;
     }
 
-    public static final class Builder extends Request.Builder<Builder> {
+    public static final class Builder extends Request.Builder<RpcDataUploadRequest, Builder> {
         private String regionId; 
         private String largeParam; 
         private String query1; 
         private Long query2; 
 
+        private Builder() {
+            super();
+        } 
+
+        private Builder(RpcDataUploadRequest response) {
+            super(response);
+            this.regionId = response.regionId;
+            this.largeParam = response.largeParam;
+            this.query1 = response.query1;
+            this.query2 = response.query2;
+        } 
+
         /**
-         * <p>RegionId.</p>
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -88,7 +105,7 @@ public class RpcDataUploadRequest extends Request {
         }
 
         /**
-         * <p>largeParam.</p>
+         * largeParam.
          */
         public Builder largeParam(String largeParam) {
             this.putBodyParameter("largeParam", largeParam);
@@ -97,7 +114,7 @@ public class RpcDataUploadRequest extends Request {
         }
 
         /**
-         * <p>query1.</p>
+         * query1.
          */
         public Builder query1(String query1) {
             this.putQueryParameter("query1", query1);
@@ -106,7 +123,7 @@ public class RpcDataUploadRequest extends Request {
         }
 
         /**
-         * <p>query2.</p>
+         * query2.
          */
         public Builder query2(Long query2) {
             this.putQueryParameter("query2", query2);
@@ -114,6 +131,7 @@ public class RpcDataUploadRequest extends Request {
             return this;
         }
 
+        @Override
         public RpcDataUploadRequest build() {
             return new RpcDataUploadRequest(this);
         } 

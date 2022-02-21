@@ -4,6 +4,7 @@ package com.aliyun.ft20210101.models;
 import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * {@link CreateRPCPathTestResponseBody} extends {@link TeaModel}
@@ -13,7 +14,6 @@ import darabonba.core.TeaModel;
 public class CreateRPCPathTestResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
-
 
     private CreateRPCPathTestResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -38,7 +38,7 @@ public class CreateRPCPathTestResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>Id of the request</p>
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

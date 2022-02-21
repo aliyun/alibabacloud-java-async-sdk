@@ -4,6 +4,7 @@ package com.aliyun.ft20210101.models;
 import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * {@link NormalRpcHttpApiRequest} extends {@link RequestModel}
@@ -11,7 +12,6 @@ import darabonba.core.TeaModel;
  * <p>NormalRpcHttpApiRequest</p>
  */
 public class NormalRpcHttpApiRequest extends Request {
-
     private NormalRpcHttpApiRequest(Builder builder) {
         super(builder);
     }
@@ -24,8 +24,22 @@ public class NormalRpcHttpApiRequest extends Request {
         return builder().build();
     }
 
-    public static final class Builder extends Request.Builder<Builder> {
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
 
+    public static final class Builder extends Request.Builder<NormalRpcHttpApiRequest, Builder> {
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(NormalRpcHttpApiRequest response) {
+            super(response);
+        } 
+
+        @Override
         public NormalRpcHttpApiRequest build() {
             return new NormalRpcHttpApiRequest(this);
         } 

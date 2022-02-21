@@ -4,6 +4,7 @@ package com.aliyun.ft20210101.models;
 import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * {@link UserGcFetchResponseBody} extends {@link TeaModel}
@@ -19,7 +20,6 @@ public class UserGcFetchResponseBody extends TeaModel {
 
     @NameInMap("RequestURL")
     private String requestURL;
-
 
     private UserGcFetchResponseBody(Builder builder) {
         this.body = builder.body;
@@ -62,7 +62,7 @@ public class UserGcFetchResponseBody extends TeaModel {
         private String requestURL; 
 
         /**
-         * <p>Body</p>
+         * Body
          */
         public Builder body(String body) {
             this.body = body;
@@ -70,7 +70,7 @@ public class UserGcFetchResponseBody extends TeaModel {
         }
 
         /**
-         * <p>RequestId</p>
+         * RequestId
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class UserGcFetchResponseBody extends TeaModel {
         }
 
         /**
-         * <p>RequestURL</p>
+         * RequestURL
          */
         public Builder requestURL(String requestURL) {
             this.requestURL = requestURL;

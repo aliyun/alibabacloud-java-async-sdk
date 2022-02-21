@@ -1,13 +1,13 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.ft20210101;
 
-import com.aliyun.pop.BaseClientBuilder;
+import com.aliyun.sdk.gateway.pop.BaseClientBuilder;
 
 public final class DefaultAsyncClientBuilder extends BaseClientBuilder<DefaultAsyncClientBuilder, AsyncClient> {
 
     @Override
     protected String serviceName() {
-        return "ft";
+        return "ft20210101";
     }
 
     @Override

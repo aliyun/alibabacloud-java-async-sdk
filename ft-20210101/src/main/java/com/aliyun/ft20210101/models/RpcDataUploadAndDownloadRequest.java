@@ -4,6 +4,7 @@ package com.aliyun.ft20210101.models;
 import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * {@link RpcDataUploadAndDownloadRequest} extends {@link RequestModel}
@@ -19,7 +20,6 @@ public class RpcDataUploadAndDownloadRequest extends Request {
     @NameInMap("query1")
     private String query1;
 
-
     private RpcDataUploadAndDownloadRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -32,6 +32,11 @@ public class RpcDataUploadAndDownloadRequest extends Request {
 
     public static RpcDataUploadAndDownloadRequest create() {
         return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -48,12 +53,22 @@ public class RpcDataUploadAndDownloadRequest extends Request {
         return this.query1;
     }
 
-    public static final class Builder extends Request.Builder<Builder> {
+    public static final class Builder extends Request.Builder<RpcDataUploadAndDownloadRequest, Builder> {
         private String regionId; 
         private String query1; 
 
+        private Builder() {
+            super();
+        } 
+
+        private Builder(RpcDataUploadAndDownloadRequest response) {
+            super(response);
+            this.regionId = response.regionId;
+            this.query1 = response.query1;
+        } 
+
         /**
-         * <p>RegionId.</p>
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -62,7 +77,7 @@ public class RpcDataUploadAndDownloadRequest extends Request {
         }
 
         /**
-         * <p>query1.</p>
+         * query1.
          */
         public Builder query1(String query1) {
             this.putQueryParameter("query1", query1);
@@ -70,6 +85,7 @@ public class RpcDataUploadAndDownloadRequest extends Request {
             return this;
         }
 
+        @Override
         public RpcDataUploadAndDownloadRequest build() {
             return new RpcDataUploadAndDownloadRequest(this);
         } 

@@ -8,7 +8,7 @@ English | [简体中文](README-CN.md)
 ```xml
 <dependency>
    <groupId>com.aliyun</groupId>
-   <artifactId>alibabacloud-ft20210101-async</artifactId>
+   <artifactId>alibabacloud-ft20210101</artifactId>
    <version>Use the version shown in the maven badge</version>
 </dependency>
 ```

@@ -4,6 +4,7 @@ package com.aliyun.ft20210101.models;
 import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * {@link UserGcSerivceGrayResponseBody} extends {@link TeaModel}
@@ -16,7 +17,6 @@ public class UserGcSerivceGrayResponseBody extends TeaModel {
 
     @NameInMap("RequestId")
     private String requestId;
-
 
     private UserGcSerivceGrayResponseBody(Builder builder) {
         this.body = builder.body;
@@ -50,7 +50,7 @@ public class UserGcSerivceGrayResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>Body.</p>
+         * Body.
          */
         public Builder body(String body) {
             this.body = body;
@@ -58,7 +58,7 @@ public class UserGcSerivceGrayResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

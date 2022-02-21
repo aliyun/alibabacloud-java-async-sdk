@@ -4,6 +4,7 @@ package com.aliyun.ft20210101.models;
 import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * {@link NormalRpcHsfApiResponse} extends {@link TeaModel}
@@ -19,23 +20,19 @@ public class NormalRpcHsfApiResponse extends Response {
     @Validation(required = true)
     private NormalRpcHsfApiResponseBody body;
 
-
-    private NormalRpcHsfApiResponse(Builder builder) {
+    private NormalRpcHsfApiResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static Builder builder() {
-        return new Builder();
-    }
-
     public static NormalRpcHsfApiResponse create() {
-        return builder().build();
+        return new BuilderImpl().build();
     }
 
+    @Override
     public Builder toBuilder() {
-        return new Builder(this);
+        return new BuilderImpl(this);
     }
 
     /**
@@ -52,36 +49,52 @@ public class NormalRpcHsfApiResponse extends Response {
         return this.body;
     }
 
-    public static final class Builder extends Response.Builder {
+    public interface Builder extends Response.Builder<NormalRpcHsfApiResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder body(NormalRpcHsfApiResponseBody body);
+
+        @Override
+        NormalRpcHsfApiResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<NormalRpcHsfApiResponse, Builder>
+            implements Builder {
         private java.util.Map < String, String > headers; 
         private NormalRpcHsfApiResponseBody body; 
 
-        private Builder() {
+        private BuilderImpl() {
             super();
         } 
 
-        private Builder(NormalRpcHsfApiResponse response) {
+        private BuilderImpl(NormalRpcHsfApiResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
         } 
 
         /**
-         * <p>headers.</p>
+         * headers.
          */
+        @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
             return this;
         }
 
         /**
-         * <p>body.</p>
+         * body.
          */
+        @Override
         public Builder body(NormalRpcHsfApiResponseBody body) {
             this.body = body;
             return this;
         }
 
+        @Override
         public NormalRpcHsfApiResponse build() {
             return new NormalRpcHsfApiResponse(this);
         } 

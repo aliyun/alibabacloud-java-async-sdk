@@ -4,6 +4,7 @@ package com.aliyun.ft20210101.models;
 import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * {@link CreateRamTestResponseBody} extends {@link TeaModel}
@@ -16,7 +17,6 @@ public class CreateRamTestResponseBody extends TeaModel {
 
     @NameInMap("TraceId")
     private String traceId;
-
 
     private CreateRamTestResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -50,7 +50,7 @@ public class CreateRamTestResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * <p>Id of the request</p>
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class CreateRamTestResponseBody extends TeaModel {
         }
 
         /**
-         * <p>TraceId.</p>
+         * TraceId.
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;

@@ -4,6 +4,7 @@ package com.aliyun.ft20210101.models;
 import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * {@link RpcUploadDemoRequest} extends {@link RequestModel}
@@ -23,7 +24,6 @@ public class RpcUploadDemoRequest extends Request {
     @NameInMap("privateData")
     private java.util.Map < String, String > privateData;
 
-
     private RpcUploadDemoRequest(Builder builder) {
         super(builder);
         this.cardData = builder.cardData;
@@ -37,6 +37,11 @@ public class RpcUploadDemoRequest extends Request {
 
     public static RpcUploadDemoRequest create() {
         return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -60,13 +65,24 @@ public class RpcUploadDemoRequest extends Request {
         return this.privateData;
     }
 
-    public static final class Builder extends Request.Builder<Builder> {
+    public static final class Builder extends Request.Builder<RpcUploadDemoRequest, Builder> {
         private CardData cardData; 
         private String outTrackId; 
         private java.util.Map < String, String > privateData; 
 
+        private Builder() {
+            super();
+        } 
+
+        private Builder(RpcUploadDemoRequest response) {
+            super(response);
+            this.cardData = response.cardData;
+            this.outTrackId = response.outTrackId;
+            this.privateData = response.privateData;
+        } 
+
         /**
-         * <p>cardData.</p>
+         * cardData.
          */
         public Builder cardData(CardData cardData) {
             this.putBodyParameter("cardData", cardData);
@@ -75,7 +91,7 @@ public class RpcUploadDemoRequest extends Request {
         }
 
         /**
-         * <p>outTrackId.</p>
+         * outTrackId.
          */
         public Builder outTrackId(String outTrackId) {
             this.putBodyParameter("outTrackId", outTrackId);
@@ -84,7 +100,7 @@ public class RpcUploadDemoRequest extends Request {
         }
 
         /**
-         * <p>privateData.</p>
+         * privateData.
          */
         public Builder privateData(java.util.Map < String, String > privateData) {
             this.putBodyParameter("privateData", privateData);
@@ -92,6 +108,7 @@ public class RpcUploadDemoRequest extends Request {
             return this;
         }
 
+        @Override
         public RpcUploadDemoRequest build() {
             return new RpcUploadDemoRequest(this);
         } 
@@ -104,7 +121,6 @@ public class RpcUploadDemoRequest extends Request {
 
         @NameInMap("cardParamMap")
         private java.util.Map < String, String > cardParamMap;
-
 
         private CardData(Builder builder) {
             this.cardMediaIdParamMap = builder.cardMediaIdParamMap;
@@ -138,7 +154,7 @@ public class RpcUploadDemoRequest extends Request {
             private java.util.Map < String, String > cardParamMap; 
 
             /**
-             * <p>cardMediaIdParamMap.</p>
+             * cardMediaIdParamMap.
              */
             public Builder cardMediaIdParamMap(java.util.Map < String, String > cardMediaIdParamMap) {
                 this.cardMediaIdParamMap = cardMediaIdParamMap;
@@ -146,7 +162,7 @@ public class RpcUploadDemoRequest extends Request {
             }
 
             /**
-             * <p>cardParamMap.</p>
+             * cardParamMap.
              */
             public Builder cardParamMap(java.util.Map < String, String > cardParamMap) {
                 this.cardParamMap = cardParamMap;

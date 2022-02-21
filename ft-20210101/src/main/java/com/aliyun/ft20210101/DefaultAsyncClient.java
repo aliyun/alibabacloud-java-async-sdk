@@ -4,7 +4,7 @@ package com.aliyun.ft20210101;
 import com.aliyun.core.http.*;
 import com.aliyun.ft20210101.models.*;
 import darabonba.core.utils.*;
-import com.aliyun.pop.*;
+import com.aliyun.sdk.gateway.pop.*;
 import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
