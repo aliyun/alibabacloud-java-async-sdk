@@ -1,0 +1,104 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.dypnsapi20170525.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link GetSmsAuthTokensResponse} extends {@link TeaModel}
+ *
+ * <p>GetSmsAuthTokensResponse</p>
+ */
+public class GetSmsAuthTokensResponse extends Response {
+    @NameInMap("headers")
+    @Validation(required = true)
+    private java.util.Map < String, String > headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    private GetSmsAuthTokensResponseBody body;
+
+    private GetSmsAuthTokensResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.body = builder.body;
+    }
+
+    public static GetSmsAuthTokensResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return body
+     */
+    public GetSmsAuthTokensResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<GetSmsAuthTokensResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder body(GetSmsAuthTokensResponseBody body);
+
+        @Override
+        GetSmsAuthTokensResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<GetSmsAuthTokensResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private GetSmsAuthTokensResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(GetSmsAuthTokensResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(GetSmsAuthTokensResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public GetSmsAuthTokensResponse build() {
+            return new GetSmsAuthTokensResponse(this);
+        } 
+
+    } 
+
+}
