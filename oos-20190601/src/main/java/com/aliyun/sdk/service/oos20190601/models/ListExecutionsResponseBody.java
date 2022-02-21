@@ -1,0 +1,836 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.oos20190601.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link ListExecutionsResponseBody} extends {@link TeaModel}
+ *
+ * <p>ListExecutionsResponseBody</p>
+ */
+public class ListExecutionsResponseBody extends TeaModel {
+    @NameInMap("Executions")
+    private java.util.List < Executions> executions;
+
+    @NameInMap("MaxResults")
+    private Integer maxResults;
+
+    @NameInMap("NextToken")
+    private String nextToken;
+
+    @NameInMap("RequestId")
+    private String requestId;
+
+    private ListExecutionsResponseBody(Builder builder) {
+        this.executions = builder.executions;
+        this.maxResults = builder.maxResults;
+        this.nextToken = builder.nextToken;
+        this.requestId = builder.requestId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static ListExecutionsResponseBody create() {
+        return builder().build();
+    }
+
+    /**
+     * @return executions
+     */
+    public java.util.List < Executions> getExecutions() {
+        return this.executions;
+    }
+
+    /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public static final class Builder {
+        private java.util.List < Executions> executions; 
+        private Integer maxResults; 
+        private String nextToken; 
+        private String requestId; 
+
+        /**
+         * Executions.
+         */
+        public Builder executions(java.util.List < Executions> executions) {
+            this.executions = executions;
+            return this;
+        }
+
+        /**
+         * MaxResults.
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        public ListExecutionsResponseBody build() {
+            return new ListExecutionsResponseBody(this);
+        } 
+
+    } 
+
+    public static class CurrentTasks extends TeaModel {
+        @NameInMap("TaskAction")
+        private String taskAction;
+
+        @NameInMap("TaskExecutionId")
+        private String taskExecutionId;
+
+        @NameInMap("TaskName")
+        private String taskName;
+
+        private CurrentTasks(Builder builder) {
+            this.taskAction = builder.taskAction;
+            this.taskExecutionId = builder.taskExecutionId;
+            this.taskName = builder.taskName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CurrentTasks create() {
+            return builder().build();
+        }
+
+        /**
+         * @return taskAction
+         */
+        public String getTaskAction() {
+            return this.taskAction;
+        }
+
+        /**
+         * @return taskExecutionId
+         */
+        public String getTaskExecutionId() {
+            return this.taskExecutionId;
+        }
+
+        /**
+         * @return taskName
+         */
+        public String getTaskName() {
+            return this.taskName;
+        }
+
+        public static final class Builder {
+            private String taskAction; 
+            private String taskExecutionId; 
+            private String taskName; 
+
+            /**
+             * TaskAction.
+             */
+            public Builder taskAction(String taskAction) {
+                this.taskAction = taskAction;
+                return this;
+            }
+
+            /**
+             * TaskExecutionId.
+             */
+            public Builder taskExecutionId(String taskExecutionId) {
+                this.taskExecutionId = taskExecutionId;
+                return this;
+            }
+
+            /**
+             * TaskName.
+             */
+            public Builder taskName(String taskName) {
+                this.taskName = taskName;
+                return this;
+            }
+
+            public CurrentTasks build() {
+                return new CurrentTasks(this);
+            } 
+
+        } 
+
+    }
+    public static class Executions extends TeaModel {
+        @NameInMap("Category")
+        private String category;
+
+        @NameInMap("Counters")
+        private java.util.Map < String, ? > counters;
+
+        @NameInMap("CreateDate")
+        private String createDate;
+
+        @NameInMap("CurrentTasks")
+        private java.util.List < CurrentTasks> currentTasks;
+
+        @NameInMap("Description")
+        private String description;
+
+        @NameInMap("EndDate")
+        private String endDate;
+
+        @NameInMap("ExecutedBy")
+        private String executedBy;
+
+        @NameInMap("ExecutionId")
+        private String executionId;
+
+        @NameInMap("IsParent")
+        private Boolean isParent;
+
+        @NameInMap("LastSuccessfulTriggerTime")
+        private String lastSuccessfulTriggerTime;
+
+        @NameInMap("LastTriggerStatus")
+        private String lastTriggerStatus;
+
+        @NameInMap("LastTriggerTime")
+        private String lastTriggerTime;
+
+        @NameInMap("Mode")
+        private String mode;
+
+        @NameInMap("Outputs")
+        private String outputs;
+
+        @NameInMap("Parameters")
+        private java.util.Map < String, ? > parameters;
+
+        @NameInMap("ParentExecutionId")
+        private String parentExecutionId;
+
+        @NameInMap("RamRole")
+        private String ramRole;
+
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
+        @NameInMap("ResourceStatus")
+        private String resourceStatus;
+
+        @NameInMap("SafetyCheck")
+        private String safetyCheck;
+
+        @NameInMap("StartDate")
+        private String startDate;
+
+        @NameInMap("Status")
+        private String status;
+
+        @NameInMap("StatusMessage")
+        private String statusMessage;
+
+        @NameInMap("StatusReason")
+        private String statusReason;
+
+        @NameInMap("Tags")
+        private java.util.Map < String, ? > tags;
+
+        @NameInMap("Targets")
+        private String targets;
+
+        @NameInMap("TemplateId")
+        private String templateId;
+
+        @NameInMap("TemplateName")
+        private String templateName;
+
+        @NameInMap("TemplateVersion")
+        private String templateVersion;
+
+        @NameInMap("UpdateDate")
+        private String updateDate;
+
+        @NameInMap("WaitingStatus")
+        private String waitingStatus;
+
+        private Executions(Builder builder) {
+            this.category = builder.category;
+            this.counters = builder.counters;
+            this.createDate = builder.createDate;
+            this.currentTasks = builder.currentTasks;
+            this.description = builder.description;
+            this.endDate = builder.endDate;
+            this.executedBy = builder.executedBy;
+            this.executionId = builder.executionId;
+            this.isParent = builder.isParent;
+            this.lastSuccessfulTriggerTime = builder.lastSuccessfulTriggerTime;
+            this.lastTriggerStatus = builder.lastTriggerStatus;
+            this.lastTriggerTime = builder.lastTriggerTime;
+            this.mode = builder.mode;
+            this.outputs = builder.outputs;
+            this.parameters = builder.parameters;
+            this.parentExecutionId = builder.parentExecutionId;
+            this.ramRole = builder.ramRole;
+            this.resourceGroupId = builder.resourceGroupId;
+            this.resourceStatus = builder.resourceStatus;
+            this.safetyCheck = builder.safetyCheck;
+            this.startDate = builder.startDate;
+            this.status = builder.status;
+            this.statusMessage = builder.statusMessage;
+            this.statusReason = builder.statusReason;
+            this.tags = builder.tags;
+            this.targets = builder.targets;
+            this.templateId = builder.templateId;
+            this.templateName = builder.templateName;
+            this.templateVersion = builder.templateVersion;
+            this.updateDate = builder.updateDate;
+            this.waitingStatus = builder.waitingStatus;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Executions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return category
+         */
+        public String getCategory() {
+            return this.category;
+        }
+
+        /**
+         * @return counters
+         */
+        public java.util.Map < String, ? > getCounters() {
+            return this.counters;
+        }
+
+        /**
+         * @return createDate
+         */
+        public String getCreateDate() {
+            return this.createDate;
+        }
+
+        /**
+         * @return currentTasks
+         */
+        public java.util.List < CurrentTasks> getCurrentTasks() {
+            return this.currentTasks;
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return endDate
+         */
+        public String getEndDate() {
+            return this.endDate;
+        }
+
+        /**
+         * @return executedBy
+         */
+        public String getExecutedBy() {
+            return this.executedBy;
+        }
+
+        /**
+         * @return executionId
+         */
+        public String getExecutionId() {
+            return this.executionId;
+        }
+
+        /**
+         * @return isParent
+         */
+        public Boolean getIsParent() {
+            return this.isParent;
+        }
+
+        /**
+         * @return lastSuccessfulTriggerTime
+         */
+        public String getLastSuccessfulTriggerTime() {
+            return this.lastSuccessfulTriggerTime;
+        }
+
+        /**
+         * @return lastTriggerStatus
+         */
+        public String getLastTriggerStatus() {
+            return this.lastTriggerStatus;
+        }
+
+        /**
+         * @return lastTriggerTime
+         */
+        public String getLastTriggerTime() {
+            return this.lastTriggerTime;
+        }
+
+        /**
+         * @return mode
+         */
+        public String getMode() {
+            return this.mode;
+        }
+
+        /**
+         * @return outputs
+         */
+        public String getOutputs() {
+            return this.outputs;
+        }
+
+        /**
+         * @return parameters
+         */
+        public java.util.Map < String, ? > getParameters() {
+            return this.parameters;
+        }
+
+        /**
+         * @return parentExecutionId
+         */
+        public String getParentExecutionId() {
+            return this.parentExecutionId;
+        }
+
+        /**
+         * @return ramRole
+         */
+        public String getRamRole() {
+            return this.ramRole;
+        }
+
+        /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
+         * @return resourceStatus
+         */
+        public String getResourceStatus() {
+            return this.resourceStatus;
+        }
+
+        /**
+         * @return safetyCheck
+         */
+        public String getSafetyCheck() {
+            return this.safetyCheck;
+        }
+
+        /**
+         * @return startDate
+         */
+        public String getStartDate() {
+            return this.startDate;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return statusMessage
+         */
+        public String getStatusMessage() {
+            return this.statusMessage;
+        }
+
+        /**
+         * @return statusReason
+         */
+        public String getStatusReason() {
+            return this.statusReason;
+        }
+
+        /**
+         * @return tags
+         */
+        public java.util.Map < String, ? > getTags() {
+            return this.tags;
+        }
+
+        /**
+         * @return targets
+         */
+        public String getTargets() {
+            return this.targets;
+        }
+
+        /**
+         * @return templateId
+         */
+        public String getTemplateId() {
+            return this.templateId;
+        }
+
+        /**
+         * @return templateName
+         */
+        public String getTemplateName() {
+            return this.templateName;
+        }
+
+        /**
+         * @return templateVersion
+         */
+        public String getTemplateVersion() {
+            return this.templateVersion;
+        }
+
+        /**
+         * @return updateDate
+         */
+        public String getUpdateDate() {
+            return this.updateDate;
+        }
+
+        /**
+         * @return waitingStatus
+         */
+        public String getWaitingStatus() {
+            return this.waitingStatus;
+        }
+
+        public static final class Builder {
+            private String category; 
+            private java.util.Map < String, ? > counters; 
+            private String createDate; 
+            private java.util.List < CurrentTasks> currentTasks; 
+            private String description; 
+            private String endDate; 
+            private String executedBy; 
+            private String executionId; 
+            private Boolean isParent; 
+            private String lastSuccessfulTriggerTime; 
+            private String lastTriggerStatus; 
+            private String lastTriggerTime; 
+            private String mode; 
+            private String outputs; 
+            private java.util.Map < String, ? > parameters; 
+            private String parentExecutionId; 
+            private String ramRole; 
+            private String resourceGroupId; 
+            private String resourceStatus; 
+            private String safetyCheck; 
+            private String startDate; 
+            private String status; 
+            private String statusMessage; 
+            private String statusReason; 
+            private java.util.Map < String, ? > tags; 
+            private String targets; 
+            private String templateId; 
+            private String templateName; 
+            private String templateVersion; 
+            private String updateDate; 
+            private String waitingStatus; 
+
+            /**
+             * Category.
+             */
+            public Builder category(String category) {
+                this.category = category;
+                return this;
+            }
+
+            /**
+             * Counters.
+             */
+            public Builder counters(java.util.Map < String, ? > counters) {
+                this.counters = counters;
+                return this;
+            }
+
+            /**
+             * CreateDate.
+             */
+            public Builder createDate(String createDate) {
+                this.createDate = createDate;
+                return this;
+            }
+
+            /**
+             * CurrentTasks.
+             */
+            public Builder currentTasks(java.util.List < CurrentTasks> currentTasks) {
+                this.currentTasks = currentTasks;
+                return this;
+            }
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * EndDate.
+             */
+            public Builder endDate(String endDate) {
+                this.endDate = endDate;
+                return this;
+            }
+
+            /**
+             * ExecutedBy.
+             */
+            public Builder executedBy(String executedBy) {
+                this.executedBy = executedBy;
+                return this;
+            }
+
+            /**
+             * ExecutionId.
+             */
+            public Builder executionId(String executionId) {
+                this.executionId = executionId;
+                return this;
+            }
+
+            /**
+             * IsParent.
+             */
+            public Builder isParent(Boolean isParent) {
+                this.isParent = isParent;
+                return this;
+            }
+
+            /**
+             * LastSuccessfulTriggerTime.
+             */
+            public Builder lastSuccessfulTriggerTime(String lastSuccessfulTriggerTime) {
+                this.lastSuccessfulTriggerTime = lastSuccessfulTriggerTime;
+                return this;
+            }
+
+            /**
+             * LastTriggerStatus.
+             */
+            public Builder lastTriggerStatus(String lastTriggerStatus) {
+                this.lastTriggerStatus = lastTriggerStatus;
+                return this;
+            }
+
+            /**
+             * LastTriggerTime.
+             */
+            public Builder lastTriggerTime(String lastTriggerTime) {
+                this.lastTriggerTime = lastTriggerTime;
+                return this;
+            }
+
+            /**
+             * Mode.
+             */
+            public Builder mode(String mode) {
+                this.mode = mode;
+                return this;
+            }
+
+            /**
+             * Outputs.
+             */
+            public Builder outputs(String outputs) {
+                this.outputs = outputs;
+                return this;
+            }
+
+            /**
+             * Parameters.
+             */
+            public Builder parameters(java.util.Map < String, ? > parameters) {
+                this.parameters = parameters;
+                return this;
+            }
+
+            /**
+             * ParentExecutionId.
+             */
+            public Builder parentExecutionId(String parentExecutionId) {
+                this.parentExecutionId = parentExecutionId;
+                return this;
+            }
+
+            /**
+             * RamRole.
+             */
+            public Builder ramRole(String ramRole) {
+                this.ramRole = ramRole;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * ResourceStatus.
+             */
+            public Builder resourceStatus(String resourceStatus) {
+                this.resourceStatus = resourceStatus;
+                return this;
+            }
+
+            /**
+             * SafetyCheck.
+             */
+            public Builder safetyCheck(String safetyCheck) {
+                this.safetyCheck = safetyCheck;
+                return this;
+            }
+
+            /**
+             * StartDate.
+             */
+            public Builder startDate(String startDate) {
+                this.startDate = startDate;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * StatusMessage.
+             */
+            public Builder statusMessage(String statusMessage) {
+                this.statusMessage = statusMessage;
+                return this;
+            }
+
+            /**
+             * StatusReason.
+             */
+            public Builder statusReason(String statusReason) {
+                this.statusReason = statusReason;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.Map < String, ? > tags) {
+                this.tags = tags;
+                return this;
+            }
+
+            /**
+             * Targets.
+             */
+            public Builder targets(String targets) {
+                this.targets = targets;
+                return this;
+            }
+
+            /**
+             * TemplateId.
+             */
+            public Builder templateId(String templateId) {
+                this.templateId = templateId;
+                return this;
+            }
+
+            /**
+             * TemplateName.
+             */
+            public Builder templateName(String templateName) {
+                this.templateName = templateName;
+                return this;
+            }
+
+            /**
+             * TemplateVersion.
+             */
+            public Builder templateVersion(String templateVersion) {
+                this.templateVersion = templateVersion;
+                return this;
+            }
+
+            /**
+             * UpdateDate.
+             */
+            public Builder updateDate(String updateDate) {
+                this.updateDate = updateDate;
+                return this;
+            }
+
+            /**
+             * WaitingStatus.
+             */
+            public Builder waitingStatus(String waitingStatus) {
+                this.waitingStatus = waitingStatus;
+                return this;
+            }
+
+            public Executions build() {
+                return new Executions(this);
+            } 
+
+        } 
+
+    }
+}
