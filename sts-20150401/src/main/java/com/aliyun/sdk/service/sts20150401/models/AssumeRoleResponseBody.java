@@ -1,5 +1,5 @@
 // This file is auto-generated, don't edit it. Thanks.
-package com.aliyun.sts20150401.models;
+package com.aliyun.sdk.service.sts20150401.models;
 
 import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
@@ -12,19 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AssumeRoleResponseBody</p>
  */
 public class AssumeRoleResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    private String requestId;
-
     @NameInMap("AssumedRoleUser")
     private AssumedRoleUser assumedRoleUser;
 
     @NameInMap("Credentials")
     private Credentials credentials;
 
+    @NameInMap("RequestId")
+    private String requestId;
+
     private AssumeRoleResponseBody(Builder builder) {
-        this.requestId = builder.requestId;
         this.assumedRoleUser = builder.assumedRoleUser;
         this.credentials = builder.credentials;
+        this.requestId = builder.requestId;
     }
 
     public static Builder builder() {
@@ -33,13 +33,6 @@ public class AssumeRoleResponseBody extends TeaModel {
 
     public static AssumeRoleResponseBody create() {
         return builder().build();
-    }
-
-    /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
     }
 
     /**
@@ -56,21 +49,20 @@ public class AssumeRoleResponseBody extends TeaModel {
         return this.credentials;
     }
 
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static final class Builder {
-        private String requestId; 
         private AssumedRoleUser assumedRoleUser; 
         private Credentials credentials; 
+        private String requestId; 
 
         /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The temporary identity of the role.
+         * AssumedRoleUser.
          */
         public Builder assumedRoleUser(AssumedRoleUser assumedRoleUser) {
             this.assumedRoleUser = assumedRoleUser;
@@ -78,12 +70,18 @@ public class AssumeRoleResponseBody extends TeaModel {
         }
 
         /**
-         * The access credential.
-         * <p>
-         * 
+         * Credentials.
          */
         public Builder credentials(Credentials credentials) {
             this.credentials = credentials;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
@@ -94,15 +92,15 @@ public class AssumeRoleResponseBody extends TeaModel {
     } 
 
     public static class AssumedRoleUser extends TeaModel {
-        @NameInMap("AssumedRoleId")
-        private String assumedRoleId;
-
         @NameInMap("Arn")
         private String arn;
 
+        @NameInMap("AssumedRoleId")
+        private String assumedRoleId;
+
         private AssumedRoleUser(Builder builder) {
-            this.assumedRoleId = builder.assumedRoleId;
             this.arn = builder.arn;
+            this.assumedRoleId = builder.assumedRoleId;
         }
 
         public static Builder builder() {
@@ -114,36 +112,36 @@ public class AssumeRoleResponseBody extends TeaModel {
         }
 
         /**
-         * @return assumedRoleId
-         */
-        public String getAssumedRoleId() {
-            return this.assumedRoleId;
-        }
-
-        /**
          * @return arn
          */
         public String getArn() {
             return this.arn;
         }
 
+        /**
+         * @return assumedRoleId
+         */
+        public String getAssumedRoleId() {
+            return this.assumedRoleId;
+        }
+
         public static final class Builder {
-            private String assumedRoleId; 
             private String arn; 
+            private String assumedRoleId; 
 
             /**
-             * The ID of the temporary identity.
+             * Arn.
              */
-            public Builder assumedRoleId(String assumedRoleId) {
-                this.assumedRoleId = assumedRoleId;
+            public Builder arn(String arn) {
+                this.arn = arn;
                 return this;
             }
 
             /**
-             * The ARN of the temporary identity.
+             * AssumedRoleId.
              */
-            public Builder arn(String arn) {
-                this.arn = arn;
+            public Builder assumedRoleId(String assumedRoleId) {
+                this.assumedRoleId = assumedRoleId;
                 return this;
             }
 
@@ -155,23 +153,23 @@ public class AssumeRoleResponseBody extends TeaModel {
 
     }
     public static class Credentials extends TeaModel {
-        @NameInMap("SecurityToken")
-        private String securityToken;
-
-        @NameInMap("Expiration")
-        private String expiration;
+        @NameInMap("AccessKeyId")
+        private String accessKeyId;
 
         @NameInMap("AccessKeySecret")
         private String accessKeySecret;
 
-        @NameInMap("AccessKeyId")
-        private String accessKeyId;
+        @NameInMap("Expiration")
+        private String expiration;
+
+        @NameInMap("SecurityToken")
+        private String securityToken;
 
         private Credentials(Builder builder) {
-            this.securityToken = builder.securityToken;
-            this.expiration = builder.expiration;
-            this.accessKeySecret = builder.accessKeySecret;
             this.accessKeyId = builder.accessKeyId;
+            this.accessKeySecret = builder.accessKeySecret;
+            this.expiration = builder.expiration;
+            this.securityToken = builder.securityToken;
         }
 
         public static Builder builder() {
@@ -183,17 +181,10 @@ public class AssumeRoleResponseBody extends TeaModel {
         }
 
         /**
-         * @return securityToken
+         * @return accessKeyId
          */
-        public String getSecurityToken() {
-            return this.securityToken;
-        }
-
-        /**
-         * @return expiration
-         */
-        public String getExpiration() {
-            return this.expiration;
+        public String getAccessKeyId() {
+            return this.accessKeyId;
         }
 
         /**
@@ -204,36 +195,35 @@ public class AssumeRoleResponseBody extends TeaModel {
         }
 
         /**
-         * @return accessKeyId
+         * @return expiration
          */
-        public String getAccessKeyId() {
-            return this.accessKeyId;
+        public String getExpiration() {
+            return this.expiration;
+        }
+
+        /**
+         * @return securityToken
+         */
+        public String getSecurityToken() {
+            return this.securityToken;
         }
 
         public static final class Builder {
-            private String securityToken; 
-            private String expiration; 
-            private String accessKeySecret; 
             private String accessKeyId; 
+            private String accessKeySecret; 
+            private String expiration; 
+            private String securityToken; 
 
             /**
-             * The security token.
+             * AccessKeyId.
              */
-            public Builder securityToken(String securityToken) {
-                this.securityToken = securityToken;
+            public Builder accessKeyId(String accessKeyId) {
+                this.accessKeyId = accessKeyId;
                 return this;
             }
 
             /**
-             * The expiration time of the authorization.
-             */
-            public Builder expiration(String expiration) {
-                this.expiration = expiration;
-                return this;
-            }
-
-            /**
-             * The accesskey pair.
+             * AccessKeySecret.
              */
             public Builder accessKeySecret(String accessKeySecret) {
                 this.accessKeySecret = accessKeySecret;
@@ -241,10 +231,18 @@ public class AssumeRoleResponseBody extends TeaModel {
             }
 
             /**
-             * The accesskey ID.
+             * Expiration.
              */
-            public Builder accessKeyId(String accessKeyId) {
-                this.accessKeyId = accessKeyId;
+            public Builder expiration(String expiration) {
+                this.expiration = expiration;
+                return this;
+            }
+
+            /**
+             * SecurityToken.
+             */
+            public Builder securityToken(String securityToken) {
+                this.securityToken = securityToken;
                 return this;
             }
 

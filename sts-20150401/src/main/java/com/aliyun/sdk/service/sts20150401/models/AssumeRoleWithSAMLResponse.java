@@ -1,5 +1,5 @@
 // This file is auto-generated, don't edit it. Thanks.
-package com.aliyun.sts20150401.models;
+package com.aliyun.sdk.service.sts20150401.models;
 
 import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link AssumeRoleWithOIDCResponse} extends {@link TeaModel}
+ * {@link AssumeRoleWithSAMLResponse} extends {@link TeaModel}
  *
- * <p>AssumeRoleWithOIDCResponse</p>
+ * <p>AssumeRoleWithSAMLResponse</p>
  */
-public class AssumeRoleWithOIDCResponse extends Response {
+public class AssumeRoleWithSAMLResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private AssumeRoleWithOIDCResponseBody body;
+    private AssumeRoleWithSAMLResponseBody body;
 
-    private AssumeRoleWithOIDCResponse(BuilderImpl builder) {
+    private AssumeRoleWithSAMLResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static AssumeRoleWithOIDCResponse create() {
+    public static AssumeRoleWithSAMLResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class AssumeRoleWithOIDCResponse extends Response {
     /**
      * @return body
      */
-    public AssumeRoleWithOIDCResponseBody getBody() {
+    public AssumeRoleWithSAMLResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<AssumeRoleWithOIDCResponse, Builder> {
+    public interface Builder extends Response.Builder<AssumeRoleWithSAMLResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(AssumeRoleWithOIDCResponseBody body);
+        Builder body(AssumeRoleWithSAMLResponseBody body);
 
         @Override
-        AssumeRoleWithOIDCResponse build();
+        AssumeRoleWithSAMLResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<AssumeRoleWithOIDCResponse, Builder>
+            extends Response.BuilderImpl<AssumeRoleWithSAMLResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private AssumeRoleWithOIDCResponseBody body; 
+        private AssumeRoleWithSAMLResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(AssumeRoleWithOIDCResponse response) {
+        private BuilderImpl(AssumeRoleWithSAMLResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class AssumeRoleWithOIDCResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(AssumeRoleWithOIDCResponseBody body) {
+        public Builder body(AssumeRoleWithSAMLResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public AssumeRoleWithOIDCResponse build() {
-            return new AssumeRoleWithOIDCResponse(this);
+        public AssumeRoleWithSAMLResponse build() {
+            return new AssumeRoleWithSAMLResponse(this);
         } 
 
     } 

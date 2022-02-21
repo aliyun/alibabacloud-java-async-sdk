@@ -1,5 +1,5 @@
 // This file is auto-generated, don't edit it. Thanks.
-package com.aliyun.sts20150401;
+package com.aliyun.sdk.service.sts20150401;
 
 import com.aliyun.sdk.gateway.pop.BaseClientBuilder;
 

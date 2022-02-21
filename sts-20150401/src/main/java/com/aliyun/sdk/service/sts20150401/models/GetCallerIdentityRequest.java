@@ -1,5 +1,5 @@
 // This file is auto-generated, don't edit it. Thanks.
-package com.aliyun.sts20150401.models;
+package com.aliyun.sdk.service.sts20150401.models;
 
 import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
