@@ -1,0 +1,134 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.datalake20200710.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link BatchCreateTablesResponseBody} extends {@link TeaModel}
+ *
+ * <p>BatchCreateTablesResponseBody</p>
+ */
+public class BatchCreateTablesResponseBody extends TeaModel {
+    @NameInMap("Code")
+    private String code;
+
+    @NameInMap("Message")
+    private String message;
+
+    @NameInMap("RequestId")
+    private String requestId;
+
+    @NameInMap("Success")
+    private Boolean success;
+
+    @NameInMap("TableErrors")
+    private java.util.List < TableError > tableErrors;
+
+    private BatchCreateTablesResponseBody(Builder builder) {
+        this.code = builder.code;
+        this.message = builder.message;
+        this.requestId = builder.requestId;
+        this.success = builder.success;
+        this.tableErrors = builder.tableErrors;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static BatchCreateTablesResponseBody create() {
+        return builder().build();
+    }
+
+    /**
+     * @return code
+     */
+    public String getCode() {
+        return this.code;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
+     * @return success
+     */
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    /**
+     * @return tableErrors
+     */
+    public java.util.List < TableError > getTableErrors() {
+        return this.tableErrors;
+    }
+
+    public static final class Builder {
+        private String code; 
+        private String message; 
+        private String requestId; 
+        private Boolean success; 
+        private java.util.List < TableError > tableErrors; 
+
+        /**
+         * 响应代码
+         */
+        public Builder code(String code) {
+            this.code = code;
+            return this;
+        }
+
+        /**
+         * 响应消息
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
+
+        /**
+         * 请求ID
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * 是否成功
+         */
+        public Builder success(Boolean success) {
+            this.success = success;
+            return this;
+        }
+
+        /**
+         * 表出错信息
+         */
+        public Builder tableErrors(java.util.List < TableError > tableErrors) {
+            this.tableErrors = tableErrors;
+            return this;
+        }
+
+        public BatchCreateTablesResponseBody build() {
+            return new BatchCreateTablesResponseBody(this);
+        } 
+
+    } 
+
+}
