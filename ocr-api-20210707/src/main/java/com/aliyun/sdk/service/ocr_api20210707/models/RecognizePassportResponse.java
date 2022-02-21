@@ -1,0 +1,104 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.ocr_api20210707.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link RecognizePassportResponse} extends {@link TeaModel}
+ *
+ * <p>RecognizePassportResponse</p>
+ */
+public class RecognizePassportResponse extends Response {
+    @NameInMap("headers")
+    @Validation(required = true)
+    private java.util.Map < String, String > headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    private RecognizePassportResponseBody body;
+
+    private RecognizePassportResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.body = builder.body;
+    }
+
+    public static RecognizePassportResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return body
+     */
+    public RecognizePassportResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<RecognizePassportResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder body(RecognizePassportResponseBody body);
+
+        @Override
+        RecognizePassportResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<RecognizePassportResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private RecognizePassportResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(RecognizePassportResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(RecognizePassportResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public RecognizePassportResponse build() {
+            return new RecognizePassportResponse(this);
+        } 
+
+    } 
+
+}
