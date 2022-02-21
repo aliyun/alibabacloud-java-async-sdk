@@ -1,0 +1,104 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.nas20170626.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link ListRecycledDirectoriesAndFilesResponse} extends {@link TeaModel}
+ *
+ * <p>ListRecycledDirectoriesAndFilesResponse</p>
+ */
+public class ListRecycledDirectoriesAndFilesResponse extends Response {
+    @NameInMap("headers")
+    @Validation(required = true)
+    private java.util.Map < String, String > headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    private ListRecycledDirectoriesAndFilesResponseBody body;
+
+    private ListRecycledDirectoriesAndFilesResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.body = builder.body;
+    }
+
+    public static ListRecycledDirectoriesAndFilesResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return body
+     */
+    public ListRecycledDirectoriesAndFilesResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<ListRecycledDirectoriesAndFilesResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder body(ListRecycledDirectoriesAndFilesResponseBody body);
+
+        @Override
+        ListRecycledDirectoriesAndFilesResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<ListRecycledDirectoriesAndFilesResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private ListRecycledDirectoriesAndFilesResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(ListRecycledDirectoriesAndFilesResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(ListRecycledDirectoriesAndFilesResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public ListRecycledDirectoriesAndFilesResponse build() {
+            return new ListRecycledDirectoriesAndFilesResponse(this);
+        } 
+
+    } 
+
+}

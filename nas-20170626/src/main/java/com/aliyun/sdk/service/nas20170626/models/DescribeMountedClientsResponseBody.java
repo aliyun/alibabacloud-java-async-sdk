@@ -1,0 +1,216 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.nas20170626.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link DescribeMountedClientsResponseBody} extends {@link TeaModel}
+ *
+ * <p>DescribeMountedClientsResponseBody</p>
+ */
+public class DescribeMountedClientsResponseBody extends TeaModel {
+    @NameInMap("Clients")
+    private Clients clients;
+
+    @NameInMap("PageNumber")
+    private Integer pageNumber;
+
+    @NameInMap("PageSize")
+    private Integer pageSize;
+
+    @NameInMap("RequestId")
+    private String requestId;
+
+    @NameInMap("TotalCount")
+    private Integer totalCount;
+
+    private DescribeMountedClientsResponseBody(Builder builder) {
+        this.clients = builder.clients;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
+        this.requestId = builder.requestId;
+        this.totalCount = builder.totalCount;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static DescribeMountedClientsResponseBody create() {
+        return builder().build();
+    }
+
+    /**
+     * @return clients
+     */
+    public Clients getClients() {
+        return this.clients;
+    }
+
+    /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
+     * @return totalCount
+     */
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public static final class Builder {
+        private Clients clients; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
+        private String requestId; 
+        private Integer totalCount; 
+
+        /**
+         * Clients.
+         */
+        public Builder clients(Clients clients) {
+            this.clients = clients;
+            return this;
+        }
+
+        /**
+         * PageNumber.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+
+        public DescribeMountedClientsResponseBody build() {
+            return new DescribeMountedClientsResponseBody(this);
+        } 
+
+    } 
+
+    public static class Client extends TeaModel {
+        @NameInMap("ClientIP")
+        private String clientIP;
+
+        private Client(Builder builder) {
+            this.clientIP = builder.clientIP;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Client create() {
+            return builder().build();
+        }
+
+        /**
+         * @return clientIP
+         */
+        public String getClientIP() {
+            return this.clientIP;
+        }
+
+        public static final class Builder {
+            private String clientIP; 
+
+            /**
+             * ClientIP.
+             */
+            public Builder clientIP(String clientIP) {
+                this.clientIP = clientIP;
+                return this;
+            }
+
+            public Client build() {
+                return new Client(this);
+            } 
+
+        } 
+
+    }
+    public static class Clients extends TeaModel {
+        @NameInMap("Client")
+        private java.util.List < Client> client;
+
+        private Clients(Builder builder) {
+            this.client = builder.client;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Clients create() {
+            return builder().build();
+        }
+
+        /**
+         * @return client
+         */
+        public java.util.List < Client> getClient() {
+            return this.client;
+        }
+
+        public static final class Builder {
+            private java.util.List < Client> client; 
+
+            /**
+             * Client.
+             */
+            public Builder client(java.util.List < Client> client) {
+                this.client = client;
+                return this;
+            }
+
+            public Clients build() {
+                return new Clients(this);
+            } 
+
+        } 
+
+    }
+}
