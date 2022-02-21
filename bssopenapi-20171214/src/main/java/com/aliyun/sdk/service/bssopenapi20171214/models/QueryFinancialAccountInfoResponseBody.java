@@ -1,0 +1,275 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.bssopenapi20171214.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link QueryFinancialAccountInfoResponseBody} extends {@link TeaModel}
+ *
+ * <p>QueryFinancialAccountInfoResponseBody</p>
+ */
+public class QueryFinancialAccountInfoResponseBody extends TeaModel {
+    @NameInMap("Code")
+    private String code;
+
+    @NameInMap("Data")
+    private Data data;
+
+    @NameInMap("Message")
+    private String message;
+
+    @NameInMap("RequestId")
+    private String requestId;
+
+    @NameInMap("Success")
+    private Boolean success;
+
+    private QueryFinancialAccountInfoResponseBody(Builder builder) {
+        this.code = builder.code;
+        this.data = builder.data;
+        this.message = builder.message;
+        this.requestId = builder.requestId;
+        this.success = builder.success;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static QueryFinancialAccountInfoResponseBody create() {
+        return builder().build();
+    }
+
+    /**
+     * @return code
+     */
+    public String getCode() {
+        return this.code;
+    }
+
+    /**
+     * @return data
+     */
+    public Data getData() {
+        return this.data;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
+     * @return success
+     */
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public static final class Builder {
+        private String code; 
+        private Data data; 
+        private String message; 
+        private String requestId; 
+        private Boolean success; 
+
+        /**
+         * Code.
+         */
+        public Builder code(String code) {
+            this.code = code;
+            return this;
+        }
+
+        /**
+         * Data.
+         */
+        public Builder data(Data data) {
+            this.data = data;
+            return this;
+        }
+
+        /**
+         * Message.
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * Success.
+         */
+        public Builder success(Boolean success) {
+            this.success = success;
+            return this;
+        }
+
+        public QueryFinancialAccountInfoResponseBody build() {
+            return new QueryFinancialAccountInfoResponseBody(this);
+        } 
+
+    } 
+
+    public static class Data extends TeaModel {
+        @NameInMap("AccountType")
+        private String accountType;
+
+        @NameInMap("IsFinancialAccount")
+        private Boolean isFinancialAccount;
+
+        @NameInMap("MemberGroupId")
+        private Long memberGroupId;
+
+        @NameInMap("MemberGroupName")
+        private String memberGroupName;
+
+        @NameInMap("MemberNickName")
+        private String memberNickName;
+
+        @NameInMap("UserName")
+        private String userName;
+
+        private Data(Builder builder) {
+            this.accountType = builder.accountType;
+            this.isFinancialAccount = builder.isFinancialAccount;
+            this.memberGroupId = builder.memberGroupId;
+            this.memberGroupName = builder.memberGroupName;
+            this.memberNickName = builder.memberNickName;
+            this.userName = builder.userName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Data create() {
+            return builder().build();
+        }
+
+        /**
+         * @return accountType
+         */
+        public String getAccountType() {
+            return this.accountType;
+        }
+
+        /**
+         * @return isFinancialAccount
+         */
+        public Boolean getIsFinancialAccount() {
+            return this.isFinancialAccount;
+        }
+
+        /**
+         * @return memberGroupId
+         */
+        public Long getMemberGroupId() {
+            return this.memberGroupId;
+        }
+
+        /**
+         * @return memberGroupName
+         */
+        public String getMemberGroupName() {
+            return this.memberGroupName;
+        }
+
+        /**
+         * @return memberNickName
+         */
+        public String getMemberNickName() {
+            return this.memberNickName;
+        }
+
+        /**
+         * @return userName
+         */
+        public String getUserName() {
+            return this.userName;
+        }
+
+        public static final class Builder {
+            private String accountType; 
+            private Boolean isFinancialAccount; 
+            private Long memberGroupId; 
+            private String memberGroupName; 
+            private String memberNickName; 
+            private String userName; 
+
+            /**
+             * AccountType.
+             */
+            public Builder accountType(String accountType) {
+                this.accountType = accountType;
+                return this;
+            }
+
+            /**
+             * IsFinancialAccount.
+             */
+            public Builder isFinancialAccount(Boolean isFinancialAccount) {
+                this.isFinancialAccount = isFinancialAccount;
+                return this;
+            }
+
+            /**
+             * MemberGroupId.
+             */
+            public Builder memberGroupId(Long memberGroupId) {
+                this.memberGroupId = memberGroupId;
+                return this;
+            }
+
+            /**
+             * MemberGroupName.
+             */
+            public Builder memberGroupName(String memberGroupName) {
+                this.memberGroupName = memberGroupName;
+                return this;
+            }
+
+            /**
+             * MemberNickName.
+             */
+            public Builder memberNickName(String memberNickName) {
+                this.memberNickName = memberNickName;
+                return this;
+            }
+
+            /**
+             * UserName.
+             */
+            public Builder userName(String userName) {
+                this.userName = userName;
+                return this;
+            }
+
+            public Data build() {
+                return new Data(this);
+            } 
+
+        } 
+
+    }
+}

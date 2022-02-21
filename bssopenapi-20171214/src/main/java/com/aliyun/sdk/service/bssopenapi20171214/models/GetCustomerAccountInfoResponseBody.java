@@ -1,0 +1,275 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.bssopenapi20171214.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link GetCustomerAccountInfoResponseBody} extends {@link TeaModel}
+ *
+ * <p>GetCustomerAccountInfoResponseBody</p>
+ */
+public class GetCustomerAccountInfoResponseBody extends TeaModel {
+    @NameInMap("Code")
+    private String code;
+
+    @NameInMap("Data")
+    private Data data;
+
+    @NameInMap("Message")
+    private String message;
+
+    @NameInMap("RequestId")
+    private String requestId;
+
+    @NameInMap("Success")
+    private Boolean success;
+
+    private GetCustomerAccountInfoResponseBody(Builder builder) {
+        this.code = builder.code;
+        this.data = builder.data;
+        this.message = builder.message;
+        this.requestId = builder.requestId;
+        this.success = builder.success;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static GetCustomerAccountInfoResponseBody create() {
+        return builder().build();
+    }
+
+    /**
+     * @return code
+     */
+    public String getCode() {
+        return this.code;
+    }
+
+    /**
+     * @return data
+     */
+    public Data getData() {
+        return this.data;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
+     * @return success
+     */
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public static final class Builder {
+        private String code; 
+        private Data data; 
+        private String message; 
+        private String requestId; 
+        private Boolean success; 
+
+        /**
+         * Code.
+         */
+        public Builder code(String code) {
+            this.code = code;
+            return this;
+        }
+
+        /**
+         * Data.
+         */
+        public Builder data(Data data) {
+            this.data = data;
+            return this;
+        }
+
+        /**
+         * Message.
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * Success.
+         */
+        public Builder success(Boolean success) {
+            this.success = success;
+            return this;
+        }
+
+        public GetCustomerAccountInfoResponseBody build() {
+            return new GetCustomerAccountInfoResponseBody(this);
+        } 
+
+    } 
+
+    public static class Data extends TeaModel {
+        @NameInMap("AccountType")
+        private String accountType;
+
+        @NameInMap("CreditLimitStatus")
+        private String creditLimitStatus;
+
+        @NameInMap("HostingStatus")
+        private String hostingStatus;
+
+        @NameInMap("IsCertified")
+        private Boolean isCertified;
+
+        @NameInMap("LoginEmail")
+        private String loginEmail;
+
+        @NameInMap("Mpk")
+        private Long mpk;
+
+        private Data(Builder builder) {
+            this.accountType = builder.accountType;
+            this.creditLimitStatus = builder.creditLimitStatus;
+            this.hostingStatus = builder.hostingStatus;
+            this.isCertified = builder.isCertified;
+            this.loginEmail = builder.loginEmail;
+            this.mpk = builder.mpk;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Data create() {
+            return builder().build();
+        }
+
+        /**
+         * @return accountType
+         */
+        public String getAccountType() {
+            return this.accountType;
+        }
+
+        /**
+         * @return creditLimitStatus
+         */
+        public String getCreditLimitStatus() {
+            return this.creditLimitStatus;
+        }
+
+        /**
+         * @return hostingStatus
+         */
+        public String getHostingStatus() {
+            return this.hostingStatus;
+        }
+
+        /**
+         * @return isCertified
+         */
+        public Boolean getIsCertified() {
+            return this.isCertified;
+        }
+
+        /**
+         * @return loginEmail
+         */
+        public String getLoginEmail() {
+            return this.loginEmail;
+        }
+
+        /**
+         * @return mpk
+         */
+        public Long getMpk() {
+            return this.mpk;
+        }
+
+        public static final class Builder {
+            private String accountType; 
+            private String creditLimitStatus; 
+            private String hostingStatus; 
+            private Boolean isCertified; 
+            private String loginEmail; 
+            private Long mpk; 
+
+            /**
+             * AccountType.
+             */
+            public Builder accountType(String accountType) {
+                this.accountType = accountType;
+                return this;
+            }
+
+            /**
+             * CreditLimitStatus.
+             */
+            public Builder creditLimitStatus(String creditLimitStatus) {
+                this.creditLimitStatus = creditLimitStatus;
+                return this;
+            }
+
+            /**
+             * HostingStatus.
+             */
+            public Builder hostingStatus(String hostingStatus) {
+                this.hostingStatus = hostingStatus;
+                return this;
+            }
+
+            /**
+             * IsCertified.
+             */
+            public Builder isCertified(Boolean isCertified) {
+                this.isCertified = isCertified;
+                return this;
+            }
+
+            /**
+             * LoginEmail.
+             */
+            public Builder loginEmail(String loginEmail) {
+                this.loginEmail = loginEmail;
+                return this;
+            }
+
+            /**
+             * Mpk.
+             */
+            public Builder mpk(Long mpk) {
+                this.mpk = mpk;
+                return this;
+            }
+
+            public Data build() {
+                return new Data(this);
+            } 
+
+        } 
+
+    }
+}

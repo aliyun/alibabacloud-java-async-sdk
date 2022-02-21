@@ -1,0 +1,104 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.bssopenapi20171214.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link QueryRelationListResponse} extends {@link TeaModel}
+ *
+ * <p>QueryRelationListResponse</p>
+ */
+public class QueryRelationListResponse extends Response {
+    @NameInMap("headers")
+    @Validation(required = true)
+    private java.util.Map < String, String > headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    private QueryRelationListResponseBody body;
+
+    private QueryRelationListResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.body = builder.body;
+    }
+
+    public static QueryRelationListResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return body
+     */
+    public QueryRelationListResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<QueryRelationListResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder body(QueryRelationListResponseBody body);
+
+        @Override
+        QueryRelationListResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<QueryRelationListResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private QueryRelationListResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(QueryRelationListResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(QueryRelationListResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public QueryRelationListResponse build() {
+            return new QueryRelationListResponse(this);
+        } 
+
+    } 
+
+}
