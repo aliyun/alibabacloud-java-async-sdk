@@ -1,0 +1,120 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.ens20171110.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link AssociateEnsEipAddressRequest} extends {@link RequestModel}
+ *
+ * <p>AssociateEnsEipAddressRequest</p>
+ */
+public class AssociateEnsEipAddressRequest extends Request {
+    @Query
+    @NameInMap("AllocationId")
+    @Validation(required = true)
+    private String allocationId;
+
+    @Query
+    @NameInMap("InstanceId")
+    @Validation(required = true)
+    private String instanceId;
+
+    @Query
+    @NameInMap("InstanceType")
+    private String instanceType;
+
+    private AssociateEnsEipAddressRequest(Builder builder) {
+        super(builder);
+        this.allocationId = builder.allocationId;
+        this.instanceId = builder.instanceId;
+        this.instanceType = builder.instanceType;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static AssociateEnsEipAddressRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return allocationId
+     */
+    public String getAllocationId() {
+        return this.allocationId;
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    /**
+     * @return instanceType
+     */
+    public String getInstanceType() {
+        return this.instanceType;
+    }
+
+    public static final class Builder extends Request.Builder<AssociateEnsEipAddressRequest, Builder> {
+        private String allocationId; 
+        private String instanceId; 
+        private String instanceType; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(AssociateEnsEipAddressRequest response) {
+            super(response);
+            this.allocationId = response.allocationId;
+            this.instanceId = response.instanceId;
+            this.instanceType = response.instanceType;
+        } 
+
+        /**
+         * AllocationId.
+         */
+        public Builder allocationId(String allocationId) {
+            this.putQueryParameter("AllocationId", allocationId);
+            this.allocationId = allocationId;
+            return this;
+        }
+
+        /**
+         * InstanceId.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * InstanceType.
+         */
+        public Builder instanceType(String instanceType) {
+            this.putQueryParameter("InstanceType", instanceType);
+            this.instanceType = instanceType;
+            return this;
+        }
+
+        @Override
+        public AssociateEnsEipAddressRequest build() {
+            return new AssociateEnsEipAddressRequest(this);
+        } 
+
+    } 
+
+}
