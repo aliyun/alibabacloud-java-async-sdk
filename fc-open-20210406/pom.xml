@@ -2,10 +2,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
-  <artifactId>alibabacloud-fc_open20210406-async</artifactId>
-  <version>1.0.2-beta</version>
+  <artifactId>alibabacloud-fc_open20210406</artifactId>
+  <version>1.0.3</version>
   <packaging>jar</packaging>
-  <name>alibabacloud-fc_open20210406-async</name>
+  <name>alibabacloud-fc_open20210406</name>
   <description>Alibaba Cloud FC-Open (20210406) Async SDK for Java
     </description>
   <url>https://github.com/aliyun/alibabacloud-java-async-sdk</url>

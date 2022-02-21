@@ -1,0 +1,104 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.fc_open20210406.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link ListFunctionAsyncInvokeConfigsResponse} extends {@link TeaModel}
+ *
+ * <p>ListFunctionAsyncInvokeConfigsResponse</p>
+ */
+public class ListFunctionAsyncInvokeConfigsResponse extends Response {
+    @NameInMap("headers")
+    @Validation(required = true)
+    private java.util.Map < String, String > headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    private ListFunctionAsyncInvokeConfigsResponseBody body;
+
+    private ListFunctionAsyncInvokeConfigsResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.body = builder.body;
+    }
+
+    public static ListFunctionAsyncInvokeConfigsResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return body
+     */
+    public ListFunctionAsyncInvokeConfigsResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<ListFunctionAsyncInvokeConfigsResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder body(ListFunctionAsyncInvokeConfigsResponseBody body);
+
+        @Override
+        ListFunctionAsyncInvokeConfigsResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<ListFunctionAsyncInvokeConfigsResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private ListFunctionAsyncInvokeConfigsResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(ListFunctionAsyncInvokeConfigsResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(ListFunctionAsyncInvokeConfigsResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public ListFunctionAsyncInvokeConfigsResponse build() {
+            return new ListFunctionAsyncInvokeConfigsResponse(this);
+        } 
+
+    } 
+
+}
