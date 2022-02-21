@@ -1,0 +1,104 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.gpdb20160503.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link DescribeSQLLogCountResponse} extends {@link TeaModel}
+ *
+ * <p>DescribeSQLLogCountResponse</p>
+ */
+public class DescribeSQLLogCountResponse extends Response {
+    @NameInMap("headers")
+    @Validation(required = true)
+    private java.util.Map < String, String > headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    private DescribeSQLLogCountResponseBody body;
+
+    private DescribeSQLLogCountResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.body = builder.body;
+    }
+
+    public static DescribeSQLLogCountResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return body
+     */
+    public DescribeSQLLogCountResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<DescribeSQLLogCountResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder body(DescribeSQLLogCountResponseBody body);
+
+        @Override
+        DescribeSQLLogCountResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<DescribeSQLLogCountResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private DescribeSQLLogCountResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(DescribeSQLLogCountResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(DescribeSQLLogCountResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public DescribeSQLLogCountResponse build() {
+            return new DescribeSQLLogCountResponse(this);
+        } 
+
+    } 
+
+}
