@@ -1,0 +1,104 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.cr20181201.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link DeleteRepoBuildRuleResponse} extends {@link TeaModel}
+ *
+ * <p>DeleteRepoBuildRuleResponse</p>
+ */
+public class DeleteRepoBuildRuleResponse extends Response {
+    @NameInMap("headers")
+    @Validation(required = true)
+    private java.util.Map < String, String > headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    private DeleteRepoBuildRuleResponseBody body;
+
+    private DeleteRepoBuildRuleResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.body = builder.body;
+    }
+
+    public static DeleteRepoBuildRuleResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return body
+     */
+    public DeleteRepoBuildRuleResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<DeleteRepoBuildRuleResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder body(DeleteRepoBuildRuleResponseBody body);
+
+        @Override
+        DeleteRepoBuildRuleResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<DeleteRepoBuildRuleResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private DeleteRepoBuildRuleResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(DeleteRepoBuildRuleResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(DeleteRepoBuildRuleResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public DeleteRepoBuildRuleResponse build() {
+            return new DeleteRepoBuildRuleResponse(this);
+        } 
+
+    } 
+
+}
