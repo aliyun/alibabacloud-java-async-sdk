@@ -1,0 +1,73 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.sae20190506.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link DescribePipelineRequest} extends {@link RequestModel}
+ *
+ * <p>DescribePipelineRequest</p>
+ */
+public class DescribePipelineRequest extends Request {
+    @Query
+    @NameInMap("PipelineId")
+    @Validation(required = true)
+    private String pipelineId;
+
+    private DescribePipelineRequest(Builder builder) {
+        super(builder);
+        this.pipelineId = builder.pipelineId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static DescribePipelineRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return pipelineId
+     */
+    public String getPipelineId() {
+        return this.pipelineId;
+    }
+
+    public static final class Builder extends Request.Builder<DescribePipelineRequest, Builder> {
+        private String pipelineId; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(DescribePipelineRequest response) {
+            super(response);
+            this.pipelineId = response.pipelineId;
+        } 
+
+        /**
+         * PipelineId.
+         */
+        public Builder pipelineId(String pipelineId) {
+            this.putQueryParameter("PipelineId", pipelineId);
+            this.pipelineId = pipelineId;
+            return this;
+        }
+
+        @Override
+        public DescribePipelineRequest build() {
+            return new DescribePipelineRequest(this);
+        } 
+
+    } 
+
+}
