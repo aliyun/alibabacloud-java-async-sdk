@@ -17,7 +17,7 @@ public class UpdateConsumerGroupRequest extends Request {
     @Validation(required = true)
     private String logstore;
 
-    @Body
+    @Path
     @NameInMap("consumerGroup")
     private String consumerGroup;
 
@@ -124,7 +124,7 @@ public class UpdateConsumerGroupRequest extends Request {
          * consumerGroup.
          */
         public Builder consumerGroup(String consumerGroup) {
-            this.putBodyParameter("consumerGroup", consumerGroup);
+            this.putPathParameter("consumerGroup", consumerGroup);
             this.consumerGroup = consumerGroup;
             return this;
         }
