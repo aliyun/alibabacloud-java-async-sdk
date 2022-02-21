@@ -1,0 +1,104 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.arms20190808.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link QueryPromInstallStatusResponse} extends {@link TeaModel}
+ *
+ * <p>QueryPromInstallStatusResponse</p>
+ */
+public class QueryPromInstallStatusResponse extends Response {
+    @NameInMap("headers")
+    @Validation(required = true)
+    private java.util.Map < String, String > headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    private QueryPromInstallStatusResponseBody body;
+
+    private QueryPromInstallStatusResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.body = builder.body;
+    }
+
+    public static QueryPromInstallStatusResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return body
+     */
+    public QueryPromInstallStatusResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<QueryPromInstallStatusResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder body(QueryPromInstallStatusResponseBody body);
+
+        @Override
+        QueryPromInstallStatusResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<QueryPromInstallStatusResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private QueryPromInstallStatusResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(QueryPromInstallStatusResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(QueryPromInstallStatusResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public QueryPromInstallStatusResponse build() {
+            return new QueryPromInstallStatusResponse(this);
+        } 
+
+    } 
+
+}

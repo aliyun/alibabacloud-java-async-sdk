@@ -1,0 +1,104 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.arms20190808.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link CreateOrUpdateWebhookContactResponse} extends {@link TeaModel}
+ *
+ * <p>CreateOrUpdateWebhookContactResponse</p>
+ */
+public class CreateOrUpdateWebhookContactResponse extends Response {
+    @NameInMap("headers")
+    @Validation(required = true)
+    private java.util.Map < String, String > headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    private CreateOrUpdateWebhookContactResponseBody body;
+
+    private CreateOrUpdateWebhookContactResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.body = builder.body;
+    }
+
+    public static CreateOrUpdateWebhookContactResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return body
+     */
+    public CreateOrUpdateWebhookContactResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<CreateOrUpdateWebhookContactResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder body(CreateOrUpdateWebhookContactResponseBody body);
+
+        @Override
+        CreateOrUpdateWebhookContactResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<CreateOrUpdateWebhookContactResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private CreateOrUpdateWebhookContactResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(CreateOrUpdateWebhookContactResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(CreateOrUpdateWebhookContactResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public CreateOrUpdateWebhookContactResponse build() {
+            return new CreateOrUpdateWebhookContactResponse(this);
+        } 
+
+    } 
+
+}
