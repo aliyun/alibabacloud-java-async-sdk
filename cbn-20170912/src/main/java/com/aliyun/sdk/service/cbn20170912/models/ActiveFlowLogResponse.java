@@ -1,0 +1,104 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.cbn20170912.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link ActiveFlowLogResponse} extends {@link TeaModel}
+ *
+ * <p>ActiveFlowLogResponse</p>
+ */
+public class ActiveFlowLogResponse extends Response {
+    @NameInMap("headers")
+    @Validation(required = true)
+    private java.util.Map < String, String > headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    private ActiveFlowLogResponseBody body;
+
+    private ActiveFlowLogResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.body = builder.body;
+    }
+
+    public static ActiveFlowLogResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return body
+     */
+    public ActiveFlowLogResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<ActiveFlowLogResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder body(ActiveFlowLogResponseBody body);
+
+        @Override
+        ActiveFlowLogResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<ActiveFlowLogResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private ActiveFlowLogResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(ActiveFlowLogResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(ActiveFlowLogResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public ActiveFlowLogResponse build() {
+            return new ActiveFlowLogResponse(this);
+        } 
+
+    } 
+
+}

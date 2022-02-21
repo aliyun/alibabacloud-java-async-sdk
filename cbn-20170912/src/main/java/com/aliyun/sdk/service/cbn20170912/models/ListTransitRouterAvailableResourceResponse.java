@@ -1,0 +1,104 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.cbn20170912.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link ListTransitRouterAvailableResourceResponse} extends {@link TeaModel}
+ *
+ * <p>ListTransitRouterAvailableResourceResponse</p>
+ */
+public class ListTransitRouterAvailableResourceResponse extends Response {
+    @NameInMap("headers")
+    @Validation(required = true)
+    private java.util.Map < String, String > headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    private ListTransitRouterAvailableResourceResponseBody body;
+
+    private ListTransitRouterAvailableResourceResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.body = builder.body;
+    }
+
+    public static ListTransitRouterAvailableResourceResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return body
+     */
+    public ListTransitRouterAvailableResourceResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<ListTransitRouterAvailableResourceResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder body(ListTransitRouterAvailableResourceResponseBody body);
+
+        @Override
+        ListTransitRouterAvailableResourceResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<ListTransitRouterAvailableResourceResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private ListTransitRouterAvailableResourceResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(ListTransitRouterAvailableResourceResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(ListTransitRouterAvailableResourceResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public ListTransitRouterAvailableResourceResponse build() {
+            return new ListTransitRouterAvailableResourceResponse(this);
+        } 
+
+    } 
+
+}

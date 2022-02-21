@@ -1,0 +1,104 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.cbn20170912.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link DeleteTransitRouterVbrAttachmentResponse} extends {@link TeaModel}
+ *
+ * <p>DeleteTransitRouterVbrAttachmentResponse</p>
+ */
+public class DeleteTransitRouterVbrAttachmentResponse extends Response {
+    @NameInMap("headers")
+    @Validation(required = true)
+    private java.util.Map < String, String > headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    private DeleteTransitRouterVbrAttachmentResponseBody body;
+
+    private DeleteTransitRouterVbrAttachmentResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.body = builder.body;
+    }
+
+    public static DeleteTransitRouterVbrAttachmentResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return body
+     */
+    public DeleteTransitRouterVbrAttachmentResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<DeleteTransitRouterVbrAttachmentResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder body(DeleteTransitRouterVbrAttachmentResponseBody body);
+
+        @Override
+        DeleteTransitRouterVbrAttachmentResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<DeleteTransitRouterVbrAttachmentResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private DeleteTransitRouterVbrAttachmentResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(DeleteTransitRouterVbrAttachmentResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(DeleteTransitRouterVbrAttachmentResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public DeleteTransitRouterVbrAttachmentResponse build() {
+            return new DeleteTransitRouterVbrAttachmentResponse(this);
+        } 
+
+    } 
+
+}
