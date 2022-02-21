@@ -1,0 +1,104 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.devops20210625.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link DeleteVariableGroupResponse} extends {@link TeaModel}
+ *
+ * <p>DeleteVariableGroupResponse</p>
+ */
+public class DeleteVariableGroupResponse extends Response {
+    @NameInMap("headers")
+    @Validation(required = true)
+    private java.util.Map < String, String > headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    private DeleteVariableGroupResponseBody body;
+
+    private DeleteVariableGroupResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.body = builder.body;
+    }
+
+    public static DeleteVariableGroupResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return body
+     */
+    public DeleteVariableGroupResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<DeleteVariableGroupResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder body(DeleteVariableGroupResponseBody body);
+
+        @Override
+        DeleteVariableGroupResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<DeleteVariableGroupResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private DeleteVariableGroupResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(DeleteVariableGroupResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(DeleteVariableGroupResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public DeleteVariableGroupResponse build() {
+            return new DeleteVariableGroupResponse(this);
+        } 
+
+    } 
+
+}
