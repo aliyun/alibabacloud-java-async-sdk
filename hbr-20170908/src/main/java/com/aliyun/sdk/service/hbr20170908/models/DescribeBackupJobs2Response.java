@@ -1,0 +1,104 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.hbr20170908.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link DescribeBackupJobs2Response} extends {@link TeaModel}
+ *
+ * <p>DescribeBackupJobs2Response</p>
+ */
+public class DescribeBackupJobs2Response extends Response {
+    @NameInMap("headers")
+    @Validation(required = true)
+    private java.util.Map < String, String > headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    private DescribeBackupJobs2ResponseBody body;
+
+    private DescribeBackupJobs2Response(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.body = builder.body;
+    }
+
+    public static DescribeBackupJobs2Response create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return body
+     */
+    public DescribeBackupJobs2ResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<DescribeBackupJobs2Response, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder body(DescribeBackupJobs2ResponseBody body);
+
+        @Override
+        DescribeBackupJobs2Response build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<DescribeBackupJobs2Response, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private DescribeBackupJobs2ResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(DescribeBackupJobs2Response response) {
+            super(response);
+            this.headers = response.headers;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(DescribeBackupJobs2ResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public DescribeBackupJobs2Response build() {
+            return new DescribeBackupJobs2Response(this);
+        } 
+
+    } 
+
+}
