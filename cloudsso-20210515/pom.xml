@@ -2,10 +2,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
-  <artifactId>alibabacloud-cloudsso20210515-async</artifactId>
-  <version>1.0.0-beta</version>
+  <artifactId>alibabacloud-cloudsso20210515</artifactId>
+  <version>1.0.1</version>
   <packaging>jar</packaging>
-  <name>alibabacloud-cloudsso20210515-async</name>
+  <name>alibabacloud-cloudsso20210515</name>
   <description>Alibaba Cloud cloudsso (20210515) Async SDK for Java
     </description>
   <url>https://github.com/aliyun/alibabacloud-java-async-sdk</url>
