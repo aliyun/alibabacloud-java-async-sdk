@@ -13,19 +13,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetAsyncErrorRequestStatResultRequest extends Request {
     @Query
-    @NameInMap("ConsoleContext")
-    private String consoleContext;
-
-    @Query
     @NameInMap("DbName")
     private String dbName;
 
     @Query
     @NameInMap("End")
-    private String end;
+    private Long end;
 
     @Query
     @NameInMap("InstanceId")
+    @Validation(required = true)
     private String instanceId;
 
     @Query
@@ -33,25 +30,19 @@ public class GetAsyncErrorRequestStatResultRequest extends Request {
     private String nodeId;
 
     @Query
-    @NameInMap("Role")
-    private String role;
-
-    @Query
     @NameInMap("SqlIdList")
     private String sqlIdList;
 
     @Query
     @NameInMap("Start")
-    private String start;
+    private Long start;
 
     private GetAsyncErrorRequestStatResultRequest(Builder builder) {
         super(builder);
-        this.consoleContext = builder.consoleContext;
         this.dbName = builder.dbName;
         this.end = builder.end;
         this.instanceId = builder.instanceId;
         this.nodeId = builder.nodeId;
-        this.role = builder.role;
         this.sqlIdList = builder.sqlIdList;
         this.start = builder.start;
     }
@@ -70,13 +61,6 @@ public class GetAsyncErrorRequestStatResultRequest extends Request {
     }
 
     /**
-     * @return consoleContext
-     */
-    public String getConsoleContext() {
-        return this.consoleContext;
-    }
-
-    /**
      * @return dbName
      */
     public String getDbName() {
@@ -86,7 +70,7 @@ public class GetAsyncErrorRequestStatResultRequest extends Request {
     /**
      * @return end
      */
-    public String getEnd() {
+    public Long getEnd() {
         return this.end;
     }
 
@@ -105,13 +89,6 @@ public class GetAsyncErrorRequestStatResultRequest extends Request {
     }
 
     /**
-     * @return role
-     */
-    public String getRole() {
-        return this.role;
-    }
-
-    /**
      * @return sqlIdList
      */
     public String getSqlIdList() {
@@ -121,19 +98,17 @@ public class GetAsyncErrorRequestStatResultRequest extends Request {
     /**
      * @return start
      */
-    public String getStart() {
+    public Long getStart() {
         return this.start;
     }
 
     public static final class Builder extends Request.Builder<GetAsyncErrorRequestStatResultRequest, Builder> {
-        private String consoleContext; 
         private String dbName; 
-        private String end; 
+        private Long end; 
         private String instanceId; 
         private String nodeId; 
-        private String role; 
         private String sqlIdList; 
-        private String start; 
+        private Long start; 
 
         private Builder() {
             super();
@@ -141,24 +116,13 @@ public class GetAsyncErrorRequestStatResultRequest extends Request {
 
         private Builder(GetAsyncErrorRequestStatResultRequest response) {
             super(response);
-            this.consoleContext = response.consoleContext;
             this.dbName = response.dbName;
             this.end = response.end;
             this.instanceId = response.instanceId;
             this.nodeId = response.nodeId;
-            this.role = response.role;
             this.sqlIdList = response.sqlIdList;
             this.start = response.start;
         } 
-
-        /**
-         * ConsoleContext.
-         */
-        public Builder consoleContext(String consoleContext) {
-            this.putQueryParameter("ConsoleContext", consoleContext);
-            this.consoleContext = consoleContext;
-            return this;
-        }
 
         /**
          * DbName.
@@ -172,7 +136,7 @@ public class GetAsyncErrorRequestStatResultRequest extends Request {
         /**
          * End.
          */
-        public Builder end(String end) {
+        public Builder end(Long end) {
             this.putQueryParameter("End", end);
             this.end = end;
             return this;
@@ -197,15 +161,6 @@ public class GetAsyncErrorRequestStatResultRequest extends Request {
         }
 
         /**
-         * Role.
-         */
-        public Builder role(String role) {
-            this.putQueryParameter("Role", role);
-            this.role = role;
-            return this;
-        }
-
-        /**
          * SqlIdList.
          */
         public Builder sqlIdList(String sqlIdList) {
@@ -217,7 +172,7 @@ public class GetAsyncErrorRequestStatResultRequest extends Request {
         /**
          * Start.
          */
-        public Builder start(String start) {
+        public Builder start(Long start) {
             this.putQueryParameter("Start", start);
             this.start = start;
             return this;

@@ -13,12 +13,8 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetAsyncErrorRequestListByCodeRequest extends Request {
     @Query
-    @NameInMap("ConsoleContext")
-    private String consoleContext;
-
-    @Query
     @NameInMap("End")
-    private String end;
+    private Long end;
 
     @Query
     @NameInMap("ErrorCode")
@@ -26,6 +22,7 @@ public class GetAsyncErrorRequestListByCodeRequest extends Request {
 
     @Query
     @NameInMap("InstanceId")
+    @Validation(required = true)
     private String instanceId;
 
     @Query
@@ -34,11 +31,10 @@ public class GetAsyncErrorRequestListByCodeRequest extends Request {
 
     @Query
     @NameInMap("Start")
-    private String start;
+    private Long start;
 
     private GetAsyncErrorRequestListByCodeRequest(Builder builder) {
         super(builder);
-        this.consoleContext = builder.consoleContext;
         this.end = builder.end;
         this.errorCode = builder.errorCode;
         this.instanceId = builder.instanceId;
@@ -60,16 +56,9 @@ public class GetAsyncErrorRequestListByCodeRequest extends Request {
     }
 
     /**
-     * @return consoleContext
-     */
-    public String getConsoleContext() {
-        return this.consoleContext;
-    }
-
-    /**
      * @return end
      */
-    public String getEnd() {
+    public Long getEnd() {
         return this.end;
     }
 
@@ -97,17 +86,16 @@ public class GetAsyncErrorRequestListByCodeRequest extends Request {
     /**
      * @return start
      */
-    public String getStart() {
+    public Long getStart() {
         return this.start;
     }
 
     public static final class Builder extends Request.Builder<GetAsyncErrorRequestListByCodeRequest, Builder> {
-        private String consoleContext; 
-        private String end; 
+        private Long end; 
         private String errorCode; 
         private String instanceId; 
         private String nodeId; 
-        private String start; 
+        private Long start; 
 
         private Builder() {
             super();
@@ -115,7 +103,6 @@ public class GetAsyncErrorRequestListByCodeRequest extends Request {
 
         private Builder(GetAsyncErrorRequestListByCodeRequest response) {
             super(response);
-            this.consoleContext = response.consoleContext;
             this.end = response.end;
             this.errorCode = response.errorCode;
             this.instanceId = response.instanceId;
@@ -124,18 +111,9 @@ public class GetAsyncErrorRequestListByCodeRequest extends Request {
         } 
 
         /**
-         * ConsoleContext.
-         */
-        public Builder consoleContext(String consoleContext) {
-            this.putQueryParameter("ConsoleContext", consoleContext);
-            this.consoleContext = consoleContext;
-            return this;
-        }
-
-        /**
          * End.
          */
-        public Builder end(String end) {
+        public Builder end(Long end) {
             this.putQueryParameter("End", end);
             this.end = end;
             return this;
@@ -171,7 +149,7 @@ public class GetAsyncErrorRequestListByCodeRequest extends Request {
         /**
          * Start.
          */
-        public Builder start(String start) {
+        public Builder start(Long start) {
             this.putQueryParameter("Start", start);
             this.start = start;
             return this;

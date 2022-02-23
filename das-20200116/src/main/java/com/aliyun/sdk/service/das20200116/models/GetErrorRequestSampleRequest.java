@@ -13,19 +13,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetErrorRequestSampleRequest extends Request {
     @Query
-    @NameInMap("ConsoleContext")
-    private String consoleContext;
-
-    @Query
     @NameInMap("DbName")
     private String dbName;
 
     @Query
     @NameInMap("End")
-    private String end;
+    private Long end;
 
     @Query
     @NameInMap("InstanceId")
+    @Validation(required = true)
     private String instanceId;
 
     @Query
@@ -33,25 +30,19 @@ public class GetErrorRequestSampleRequest extends Request {
     private String nodeId;
 
     @Query
-    @NameInMap("Role")
-    private String role;
-
-    @Query
     @NameInMap("SqlId")
     private String sqlId;
 
     @Query
     @NameInMap("Start")
-    private String start;
+    private Long start;
 
     private GetErrorRequestSampleRequest(Builder builder) {
         super(builder);
-        this.consoleContext = builder.consoleContext;
         this.dbName = builder.dbName;
         this.end = builder.end;
         this.instanceId = builder.instanceId;
         this.nodeId = builder.nodeId;
-        this.role = builder.role;
         this.sqlId = builder.sqlId;
         this.start = builder.start;
     }
@@ -70,13 +61,6 @@ public class GetErrorRequestSampleRequest extends Request {
     }
 
     /**
-     * @return consoleContext
-     */
-    public String getConsoleContext() {
-        return this.consoleContext;
-    }
-
-    /**
      * @return dbName
      */
     public String getDbName() {
@@ -86,7 +70,7 @@ public class GetErrorRequestSampleRequest extends Request {
     /**
      * @return end
      */
-    public String getEnd() {
+    public Long getEnd() {
         return this.end;
     }
 
@@ -105,13 +89,6 @@ public class GetErrorRequestSampleRequest extends Request {
     }
 
     /**
-     * @return role
-     */
-    public String getRole() {
-        return this.role;
-    }
-
-    /**
      * @return sqlId
      */
     public String getSqlId() {
@@ -121,19 +98,17 @@ public class GetErrorRequestSampleRequest extends Request {
     /**
      * @return start
      */
-    public String getStart() {
+    public Long getStart() {
         return this.start;
     }
 
     public static final class Builder extends Request.Builder<GetErrorRequestSampleRequest, Builder> {
-        private String consoleContext; 
         private String dbName; 
-        private String end; 
+        private Long end; 
         private String instanceId; 
         private String nodeId; 
-        private String role; 
         private String sqlId; 
-        private String start; 
+        private Long start; 
 
         private Builder() {
             super();
@@ -141,24 +116,13 @@ public class GetErrorRequestSampleRequest extends Request {
 
         private Builder(GetErrorRequestSampleRequest response) {
             super(response);
-            this.consoleContext = response.consoleContext;
             this.dbName = response.dbName;
             this.end = response.end;
             this.instanceId = response.instanceId;
             this.nodeId = response.nodeId;
-            this.role = response.role;
             this.sqlId = response.sqlId;
             this.start = response.start;
         } 
-
-        /**
-         * ConsoleContext.
-         */
-        public Builder consoleContext(String consoleContext) {
-            this.putQueryParameter("ConsoleContext", consoleContext);
-            this.consoleContext = consoleContext;
-            return this;
-        }
 
         /**
          * DbName.
@@ -172,7 +136,7 @@ public class GetErrorRequestSampleRequest extends Request {
         /**
          * End.
          */
-        public Builder end(String end) {
+        public Builder end(Long end) {
             this.putQueryParameter("End", end);
             this.end = end;
             return this;
@@ -197,15 +161,6 @@ public class GetErrorRequestSampleRequest extends Request {
         }
 
         /**
-         * Role.
-         */
-        public Builder role(String role) {
-            this.putQueryParameter("Role", role);
-            this.role = role;
-            return this;
-        }
-
-        /**
          * SqlId.
          */
         public Builder sqlId(String sqlId) {
@@ -217,7 +172,7 @@ public class GetErrorRequestSampleRequest extends Request {
         /**
          * Start.
          */
-        public Builder start(String start) {
+        public Builder start(Long start) {
             this.putQueryParameter("Start", start);
             this.start = start;
             return this;
