@@ -26,6 +26,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateBackupPolicyResponse> createBackupPolicy(CreateBackupPolicyRequest request);
 
+    CompletableFuture<CreateJenkinsImageRegistryResponse> createJenkinsImageRegistry(CreateJenkinsImageRegistryRequest request);
+
+    CompletableFuture<CreateJenkinsImageScanTaskResponse> createJenkinsImageScanTask(CreateJenkinsImageScanTaskRequest request);
+
     CompletableFuture<CreateOrUpdateAssetGroupResponse> createOrUpdateAssetGroup(CreateOrUpdateAssetGroupRequest request);
 
     CompletableFuture<CreateServiceLinkedRoleResponse> createServiceLinkedRole(CreateServiceLinkedRoleRequest request);
@@ -292,6 +296,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<InstallBackupClientResponse> installBackupClient(InstallBackupClientRequest request);
 
+    CompletableFuture<ListImageAnalysisRuleProjectResponse> listImageAnalysisRuleProject(ListImageAnalysisRuleProjectRequest request);
+
     CompletableFuture<ModifyAntiBruteForceRuleResponse> modifyAntiBruteForceRule(ModifyAntiBruteForceRuleRequest request);
 
     CompletableFuture<ModifyAssetGroupResponse> modifyAssetGroup(ModifyAssetGroupRequest request);
@@ -350,9 +356,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<OperationSuspEventsResponse> operationSuspEvents(OperationSuspEventsRequest request);
 
+    CompletableFuture<PageImageRegistryResponse> pageImageRegistry(PageImageRegistryRequest request);
+
     CompletableFuture<PauseClientResponse> pauseClient(PauseClientRequest request);
 
     CompletableFuture<QueryGroupIdByGroupNameResponse> queryGroupIdByGroupName(QueryGroupIdByGroupNameRequest request);
+
+    CompletableFuture<QueryJenkinsImageRegistryPersistenceDayResponse> queryJenkinsImageRegistryPersistenceDay(QueryJenkinsImageRegistryPersistenceDayRequest request);
 
     CompletableFuture<RefreshAssetsResponse> refreshAssets(RefreshAssetsRequest request);
 
@@ -368,9 +378,19 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<StartVirusScanTaskResponse> startVirusScanTask(StartVirusScanTaskRequest request);
 
+    CompletableFuture<SubmitImageAnalysisOutputResponse> submitImageAnalysisOutput(SubmitImageAnalysisOutputRequest request);
+
     CompletableFuture<UnbindAegisResponse> unbindAegis(UnbindAegisRequest request);
 
     CompletableFuture<UninstallBackupClientResponse> uninstallBackupClient(UninstallBackupClientRequest request);
+
+    CompletableFuture<UpdateJenkinsImageRegistryNameResponse> updateJenkinsImageRegistryName(UpdateJenkinsImageRegistryNameRequest request);
+
+    CompletableFuture<UpdateJenkinsImageRegistryPersistenceDayResponse> updateJenkinsImageRegistryPersistenceDay(UpdateJenkinsImageRegistryPersistenceDayRequest request);
+
+    CompletableFuture<UpdateJenkinsImageScanTaskStatusResponse> updateJenkinsImageScanTaskStatus(UpdateJenkinsImageScanTaskStatusRequest request);
+
+    CompletableFuture<UploadAnalyzerRuntimeLogResponse> uploadAnalyzerRuntimeLog(UploadAnalyzerRuntimeLogRequest request);
 
     CompletableFuture<ValidateHcWarningsResponse> validateHcWarnings(ValidateHcWarningsRequest request);
 
