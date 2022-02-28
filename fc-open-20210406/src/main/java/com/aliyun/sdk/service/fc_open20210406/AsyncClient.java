@@ -70,8 +70,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetLayerVersionResponse> getLayerVersion(GetLayerVersionRequest request);
 
-    CompletableFuture<GetLayerVersionByArnResponse> getLayerVersionByArn(GetLayerVersionByArnRequest request);
-
     CompletableFuture<GetProvisionConfigResponse> getProvisionConfig(GetProvisionConfigRequest request);
 
     CompletableFuture<GetResourceTagsResponse> getResourceTags(GetResourceTagsRequest request);
@@ -94,8 +92,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListFunctionsResponse> listFunctions(ListFunctionsRequest request);
 
-    CompletableFuture<ListInstancesResponse> listInstances(ListInstancesRequest request);
-
     CompletableFuture<ListLayerVersionsResponse> listLayerVersions(ListLayerVersionsRequest request);
 
     CompletableFuture<ListLayersResponse> listLayers(ListLayersRequest request);
@@ -117,10 +113,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListTriggersResponse> listTriggers(ListTriggersRequest request);
 
     CompletableFuture<ListVpcBindingsResponse> listVpcBindings(ListVpcBindingsRequest request);
-
-    CompletableFuture<PermanentDeleteLayerVersionResponse> permanentDeleteLayerVersion(PermanentDeleteLayerVersionRequest request);
-
-    CompletableFuture<PublishLayerAsPublicResponse> publishLayerAsPublic(PublishLayerAsPublicRequest request);
 
     CompletableFuture<PublishServiceVersionResponse> publishServiceVersion(PublishServiceVersionRequest request);
 

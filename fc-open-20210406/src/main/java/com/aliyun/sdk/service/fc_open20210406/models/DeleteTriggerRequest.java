@@ -27,10 +27,6 @@ public class DeleteTriggerRequest extends Request {
     @Validation(required = true)
     private String triggerName;
 
-    @Host
-    @NameInMap("AccountID")
-    private String accountID;
-
     @Header
     @NameInMap("If-Match")
     private String ifMatch;
@@ -40,20 +36,8 @@ public class DeleteTriggerRequest extends Request {
     private String xFcAccountId;
 
     @Header
-    @NameInMap("X-Fc-Code-Checksum")
-    private String xFcCodeChecksum;
-
-    @Header
     @NameInMap("X-Fc-Date")
     private String xFcDate;
-
-    @Header
-    @NameInMap("X-Fc-Invocation-Type")
-    private String xFcInvocationType;
-
-    @Header
-    @NameInMap("X-Fc-Log-Type")
-    private String xFcLogType;
 
     @Header
     @NameInMap("X-Fc-Trace-Id")
@@ -64,13 +48,9 @@ public class DeleteTriggerRequest extends Request {
         this.serviceName = builder.serviceName;
         this.functionName = builder.functionName;
         this.triggerName = builder.triggerName;
-        this.accountID = builder.accountID;
         this.ifMatch = builder.ifMatch;
         this.xFcAccountId = builder.xFcAccountId;
-        this.xFcCodeChecksum = builder.xFcCodeChecksum;
         this.xFcDate = builder.xFcDate;
-        this.xFcInvocationType = builder.xFcInvocationType;
-        this.xFcLogType = builder.xFcLogType;
         this.xFcTraceId = builder.xFcTraceId;
     }
 
@@ -109,13 +89,6 @@ public class DeleteTriggerRequest extends Request {
     }
 
     /**
-     * @return accountID
-     */
-    public String getAccountID() {
-        return this.accountID;
-    }
-
-    /**
      * @return ifMatch
      */
     public String getIfMatch() {
@@ -130,31 +103,10 @@ public class DeleteTriggerRequest extends Request {
     }
 
     /**
-     * @return xFcCodeChecksum
-     */
-    public String getXFcCodeChecksum() {
-        return this.xFcCodeChecksum;
-    }
-
-    /**
      * @return xFcDate
      */
     public String getXFcDate() {
         return this.xFcDate;
-    }
-
-    /**
-     * @return xFcInvocationType
-     */
-    public String getXFcInvocationType() {
-        return this.xFcInvocationType;
-    }
-
-    /**
-     * @return xFcLogType
-     */
-    public String getXFcLogType() {
-        return this.xFcLogType;
     }
 
     /**
@@ -168,13 +120,9 @@ public class DeleteTriggerRequest extends Request {
         private String serviceName; 
         private String functionName; 
         private String triggerName; 
-        private String accountID; 
         private String ifMatch; 
         private String xFcAccountId; 
-        private String xFcCodeChecksum; 
         private String xFcDate; 
-        private String xFcInvocationType; 
-        private String xFcLogType; 
         private String xFcTraceId; 
 
         private Builder() {
@@ -186,13 +134,9 @@ public class DeleteTriggerRequest extends Request {
             this.serviceName = response.serviceName;
             this.functionName = response.functionName;
             this.triggerName = response.triggerName;
-            this.accountID = response.accountID;
             this.ifMatch = response.ifMatch;
             this.xFcAccountId = response.xFcAccountId;
-            this.xFcCodeChecksum = response.xFcCodeChecksum;
             this.xFcDate = response.xFcDate;
-            this.xFcInvocationType = response.xFcInvocationType;
-            this.xFcLogType = response.xFcLogType;
             this.xFcTraceId = response.xFcTraceId;
         } 
 
@@ -224,15 +168,6 @@ public class DeleteTriggerRequest extends Request {
         }
 
         /**
-         * AccountID.
-         */
-        public Builder accountID(String accountID) {
-            this.putHostParameter("AccountID", accountID);
-            this.accountID = accountID;
-            return this;
-        }
-
-        /**
          * 用于确保实际更改的资源和期望更改的资源是一致的，该值来自Create，Get和Update API的响应
          */
         public Builder ifMatch(String ifMatch) {
@@ -251,38 +186,11 @@ public class DeleteTriggerRequest extends Request {
         }
 
         /**
-         * X-Fc-Code-Checksum.
-         */
-        public Builder xFcCodeChecksum(String xFcCodeChecksum) {
-            this.putHeaderParameter("X-Fc-Code-Checksum", xFcCodeChecksum);
-            this.xFcCodeChecksum = xFcCodeChecksum;
-            return this;
-        }
-
-        /**
          * X-Fc-Date.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
             this.xFcDate = xFcDate;
-            return this;
-        }
-
-        /**
-         * X-Fc-Invocation-Type.
-         */
-        public Builder xFcInvocationType(String xFcInvocationType) {
-            this.putHeaderParameter("X-Fc-Invocation-Type", xFcInvocationType);
-            this.xFcInvocationType = xFcInvocationType;
-            return this;
-        }
-
-        /**
-         * X-Fc-Log-Type.
-         */
-        public Builder xFcLogType(String xFcLogType) {
-            this.putHeaderParameter("X-Fc-Log-Type", xFcLogType);
-            this.xFcLogType = xFcLogType;
             return this;
         }
 

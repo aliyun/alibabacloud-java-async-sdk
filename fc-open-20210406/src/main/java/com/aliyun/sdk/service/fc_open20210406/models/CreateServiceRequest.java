@@ -12,29 +12,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateServiceRequest</p>
  */
 public class CreateServiceRequest extends Request {
-    @Host
-    @NameInMap("AccountID")
-    private String accountID;
-
     @Header
     @NameInMap("X-Fc-Account-Id")
     private String xFcAccountId;
 
     @Header
-    @NameInMap("X-Fc-Code-Checksum")
-    private String xFcCodeChecksum;
-
-    @Header
     @NameInMap("X-Fc-Date")
     private String xFcDate;
-
-    @Header
-    @NameInMap("X-Fc-Invocation-Type")
-    private String xFcInvocationType;
-
-    @Header
-    @NameInMap("X-Fc-Log-Type")
-    private String xFcLogType;
 
     @Header
     @NameInMap("X-Fc-Trace-Id")
@@ -75,12 +59,8 @@ public class CreateServiceRequest extends Request {
 
     private CreateServiceRequest(Builder builder) {
         super(builder);
-        this.accountID = builder.accountID;
         this.xFcAccountId = builder.xFcAccountId;
-        this.xFcCodeChecksum = builder.xFcCodeChecksum;
         this.xFcDate = builder.xFcDate;
-        this.xFcInvocationType = builder.xFcInvocationType;
-        this.xFcLogType = builder.xFcLogType;
         this.xFcTraceId = builder.xFcTraceId;
         this.description = builder.description;
         this.internetAccess = builder.internetAccess;
@@ -106,13 +86,6 @@ public class CreateServiceRequest extends Request {
     }
 
     /**
-     * @return accountID
-     */
-    public String getAccountID() {
-        return this.accountID;
-    }
-
-    /**
      * @return xFcAccountId
      */
     public String getXFcAccountId() {
@@ -120,31 +93,10 @@ public class CreateServiceRequest extends Request {
     }
 
     /**
-     * @return xFcCodeChecksum
-     */
-    public String getXFcCodeChecksum() {
-        return this.xFcCodeChecksum;
-    }
-
-    /**
      * @return xFcDate
      */
     public String getXFcDate() {
         return this.xFcDate;
-    }
-
-    /**
-     * @return xFcInvocationType
-     */
-    public String getXFcInvocationType() {
-        return this.xFcInvocationType;
-    }
-
-    /**
-     * @return xFcLogType
-     */
-    public String getXFcLogType() {
-        return this.xFcLogType;
     }
 
     /**
@@ -211,12 +163,8 @@ public class CreateServiceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateServiceRequest, Builder> {
-        private String accountID; 
         private String xFcAccountId; 
-        private String xFcCodeChecksum; 
         private String xFcDate; 
-        private String xFcInvocationType; 
-        private String xFcLogType; 
         private String xFcTraceId; 
         private String description; 
         private Boolean internetAccess; 
@@ -233,12 +181,8 @@ public class CreateServiceRequest extends Request {
 
         private Builder(CreateServiceRequest response) {
             super(response);
-            this.accountID = response.accountID;
             this.xFcAccountId = response.xFcAccountId;
-            this.xFcCodeChecksum = response.xFcCodeChecksum;
             this.xFcDate = response.xFcDate;
-            this.xFcInvocationType = response.xFcInvocationType;
-            this.xFcLogType = response.xFcLogType;
             this.xFcTraceId = response.xFcTraceId;
             this.description = response.description;
             this.internetAccess = response.internetAccess;
@@ -251,15 +195,6 @@ public class CreateServiceRequest extends Request {
         } 
 
         /**
-         * AccountID.
-         */
-        public Builder accountID(String accountID) {
-            this.putHostParameter("AccountID", accountID);
-            this.accountID = accountID;
-            return this;
-        }
-
-        /**
          * X-Fc-Account-Id.
          */
         public Builder xFcAccountId(String xFcAccountId) {
@@ -269,38 +204,11 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * X-Fc-Code-Checksum.
-         */
-        public Builder xFcCodeChecksum(String xFcCodeChecksum) {
-            this.putHeaderParameter("X-Fc-Code-Checksum", xFcCodeChecksum);
-            this.xFcCodeChecksum = xFcCodeChecksum;
-            return this;
-        }
-
-        /**
          * X-Fc-Date.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
             this.xFcDate = xFcDate;
-            return this;
-        }
-
-        /**
-         * X-Fc-Invocation-Type.
-         */
-        public Builder xFcInvocationType(String xFcInvocationType) {
-            this.putHeaderParameter("X-Fc-Invocation-Type", xFcInvocationType);
-            this.xFcInvocationType = xFcInvocationType;
-            return this;
-        }
-
-        /**
-         * X-Fc-Log-Type.
-         */
-        public Builder xFcLogType(String xFcLogType) {
-            this.putHeaderParameter("X-Fc-Log-Type", xFcLogType);
-            this.xFcLogType = xFcLogType;
             return this;
         }
 
