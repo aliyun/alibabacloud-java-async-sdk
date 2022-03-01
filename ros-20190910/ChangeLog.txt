@@ -1,3 +1,6 @@
+2022-03-01 Version: 1.2.2
+- Generated java-async 2019-09-10 for ROS.
+
 2022-02-28 Version: 1.2.1
 - The response of GetServiceProvisions adds DependentServiceNames.
 
