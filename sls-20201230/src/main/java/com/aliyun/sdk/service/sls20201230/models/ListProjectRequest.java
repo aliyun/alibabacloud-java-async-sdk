@@ -74,11 +74,11 @@ public class ListProjectRequest extends Request {
             super();
         } 
 
-        private Builder(ListProjectRequest response) {
-            super(response);
-            this.offset = response.offset;
-            this.projectName = response.projectName;
-            this.size = response.size;
+        private Builder(ListProjectRequest request) {
+            super(request);
+            this.offset = request.offset;
+            this.projectName = request.projectName;
+            this.size = request.size;
         } 
 
         /**

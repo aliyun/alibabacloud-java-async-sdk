@@ -61,10 +61,10 @@ public class GetSavedSearchRequest extends Request {
             super();
         } 
 
-        private Builder(GetSavedSearchRequest response) {
-            super(response);
-            this.savedsearchName = response.savedsearchName;
-            this.project = response.project;
+        private Builder(GetSavedSearchRequest request) {
+            super(request);
+            this.savedsearchName = request.savedsearchName;
+            this.project = request.project;
         } 
 
         /**

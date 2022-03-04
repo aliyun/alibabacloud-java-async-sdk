@@ -63,10 +63,10 @@ public class GetLogStoreRequest extends Request {
             super();
         } 
 
-        private Builder(GetLogStoreRequest response) {
-            super(response);
-            this.logstore = response.logstore;
-            this.project = response.project;
+        private Builder(GetLogStoreRequest request) {
+            super(request);
+            this.logstore = request.logstore;
+            this.project = request.project;
         } 
 
         /**

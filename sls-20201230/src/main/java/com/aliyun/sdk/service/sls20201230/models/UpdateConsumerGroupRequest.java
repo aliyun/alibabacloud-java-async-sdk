@@ -102,13 +102,13 @@ public class UpdateConsumerGroupRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateConsumerGroupRequest response) {
-            super(response);
-            this.logstore = response.logstore;
-            this.consumerGroup = response.consumerGroup;
-            this.order = response.order;
-            this.timeout = response.timeout;
-            this.project = response.project;
+        private Builder(UpdateConsumerGroupRequest request) {
+            super(request);
+            this.logstore = request.logstore;
+            this.consumerGroup = request.consumerGroup;
+            this.order = request.order;
+            this.timeout = request.timeout;
+            this.project = request.project;
         } 
 
         /**

@@ -63,10 +63,10 @@ public class CreateProjectRequest extends Request {
             super();
         } 
 
-        private Builder(CreateProjectRequest response) {
-            super(response);
-            this.description = response.description;
-            this.projectName = response.projectName;
+        private Builder(CreateProjectRequest request) {
+            super(request);
+            this.description = request.description;
+            this.projectName = request.projectName;
         } 
 
         /**

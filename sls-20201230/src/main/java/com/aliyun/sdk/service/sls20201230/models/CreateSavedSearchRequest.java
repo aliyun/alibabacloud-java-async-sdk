@@ -104,13 +104,13 @@ public class CreateSavedSearchRequest extends Request {
             super();
         } 
 
-        private Builder(CreateSavedSearchRequest response) {
-            super(response);
-            this.displayName = response.displayName;
-            this.logstore = response.logstore;
-            this.savedsearchName = response.savedsearchName;
-            this.searchQuery = response.searchQuery;
-            this.topic = response.topic;
+        private Builder(CreateSavedSearchRequest request) {
+            super(request);
+            this.displayName = request.displayName;
+            this.logstore = request.logstore;
+            this.savedsearchName = request.savedsearchName;
+            this.searchQuery = request.searchQuery;
+            this.topic = request.topic;
         } 
 
         /**

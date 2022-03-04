@@ -61,10 +61,10 @@ public class DeleteSavedSearchRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteSavedSearchRequest response) {
-            super(response);
-            this.savedsearchName = response.savedsearchName;
-            this.project = response.project;
+        private Builder(DeleteSavedSearchRequest request) {
+            super(request);
+            this.savedsearchName = request.savedsearchName;
+            this.project = request.project;
         } 
 
         /**

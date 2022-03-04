@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.sls.models.*;
  * <p>UpdateLogStoreRequest</p>
  */
 public class UpdateLogStoreRequest extends Request {
+    @Path
+    @NameInMap("logstore")
+    @Validation(required = true)
+    private String logstore;
+
     @Body
     @NameInMap("appendMeta")
     private Boolean appendMeta;
@@ -29,11 +34,8 @@ public class UpdateLogStoreRequest extends Request {
     private EncryptConf encryptConf;
 
     @Body
-    @NameInMap("logstore")
-    private String logstore;
-
-    @Body
     @NameInMap("logstoreName")
+    @Validation(required = true)
     private String logstoreName;
 
     @Body
@@ -42,10 +44,12 @@ public class UpdateLogStoreRequest extends Request {
 
     @Body
     @NameInMap("shardCount")
+    @Validation(required = true)
     private Integer shardCount;
 
     @Body
     @NameInMap("ttl")
+    @Validation(required = true)
     private Integer ttl;
 
     @Host
@@ -55,11 +59,11 @@ public class UpdateLogStoreRequest extends Request {
 
     private UpdateLogStoreRequest(Builder builder) {
         super(builder);
+        this.logstore = builder.logstore;
         this.appendMeta = builder.appendMeta;
         this.autoSplit = builder.autoSplit;
         this.enableTracking = builder.enableTracking;
         this.encryptConf = builder.encryptConf;
-        this.logstore = builder.logstore;
         this.logstoreName = builder.logstoreName;
         this.maxSplitShard = builder.maxSplitShard;
         this.shardCount = builder.shardCount;
@@ -78,6 +82,13 @@ public class UpdateLogStoreRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return logstore
+     */
+    public String getLogstore() {
+        return this.logstore;
     }
 
     /**
@@ -106,13 +117,6 @@ public class UpdateLogStoreRequest extends Request {
      */
     public EncryptConf getEncryptConf() {
         return this.encryptConf;
-    }
-
-    /**
-     * @return logstore
-     */
-    public String getLogstore() {
-        return this.logstore;
     }
 
     /**
@@ -151,11 +155,11 @@ public class UpdateLogStoreRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateLogStoreRequest, Builder> {
+        private String logstore; 
         private Boolean appendMeta; 
         private Boolean autoSplit; 
         private Boolean enableTracking; 
         private EncryptConf encryptConf; 
-        private String logstore; 
         private String logstoreName; 
         private Integer maxSplitShard; 
         private Integer shardCount; 
@@ -166,19 +170,28 @@ public class UpdateLogStoreRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateLogStoreRequest response) {
-            super(response);
-            this.appendMeta = response.appendMeta;
-            this.autoSplit = response.autoSplit;
-            this.enableTracking = response.enableTracking;
-            this.encryptConf = response.encryptConf;
-            this.logstore = response.logstore;
-            this.logstoreName = response.logstoreName;
-            this.maxSplitShard = response.maxSplitShard;
-            this.shardCount = response.shardCount;
-            this.ttl = response.ttl;
-            this.project = response.project;
+        private Builder(UpdateLogStoreRequest request) {
+            super(request);
+            this.logstore = request.logstore;
+            this.appendMeta = request.appendMeta;
+            this.autoSplit = request.autoSplit;
+            this.enableTracking = request.enableTracking;
+            this.encryptConf = request.encryptConf;
+            this.logstoreName = request.logstoreName;
+            this.maxSplitShard = request.maxSplitShard;
+            this.shardCount = request.shardCount;
+            this.ttl = request.ttl;
+            this.project = request.project;
         } 
+
+        /**
+         * logstore.
+         */
+        public Builder logstore(String logstore) {
+            this.putPathParameter("logstore", logstore);
+            this.logstore = logstore;
+            return this;
+        }
 
         /**
          * appendMeta.
@@ -213,15 +226,6 @@ public class UpdateLogStoreRequest extends Request {
         public Builder encryptConf(EncryptConf encryptConf) {
             this.putBodyParameter("encrypt_conf", encryptConf);
             this.encryptConf = encryptConf;
-            return this;
-        }
-
-        /**
-         * logstore.
-         */
-        public Builder logstore(String logstore) {
-            this.putBodyParameter("logstore", logstore);
-            this.logstore = logstore;
             return this;
         }
 

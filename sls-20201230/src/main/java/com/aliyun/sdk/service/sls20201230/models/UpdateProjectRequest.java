@@ -61,10 +61,10 @@ public class UpdateProjectRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateProjectRequest response) {
-            super(response);
-            this.description = response.description;
-            this.project = response.project;
+        private Builder(UpdateProjectRequest request) {
+            super(request);
+            this.description = request.description;
+            this.project = request.project;
         } 
 
         /**

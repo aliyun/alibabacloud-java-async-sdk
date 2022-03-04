@@ -49,9 +49,9 @@ public class DeleteProjectRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteProjectRequest response) {
-            super(response);
-            this.project = response.project;
+        private Builder(DeleteProjectRequest request) {
+            super(request);
+            this.project = request.project;
         } 
 
         /**

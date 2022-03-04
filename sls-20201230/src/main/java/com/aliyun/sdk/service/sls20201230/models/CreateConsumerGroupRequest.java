@@ -19,14 +19,17 @@ public class CreateConsumerGroupRequest extends Request {
 
     @Body
     @NameInMap("consumerGroup")
+    @Validation(required = true)
     private String consumerGroup;
 
     @Body
     @NameInMap("order")
+    @Validation(required = true)
     private Boolean order;
 
     @Body
     @NameInMap("timeout")
+    @Validation(required = true)
     private Integer timeout;
 
     @Host
@@ -102,13 +105,13 @@ public class CreateConsumerGroupRequest extends Request {
             super();
         } 
 
-        private Builder(CreateConsumerGroupRequest response) {
-            super(response);
-            this.logstore = response.logstore;
-            this.consumerGroup = response.consumerGroup;
-            this.order = response.order;
-            this.timeout = response.timeout;
-            this.project = response.project;
+        private Builder(CreateConsumerGroupRequest request) {
+            super(request);
+            this.logstore = request.logstore;
+            this.consumerGroup = request.consumerGroup;
+            this.order = request.order;
+            this.timeout = request.timeout;
+            this.project = request.project;
         } 
 
         /**

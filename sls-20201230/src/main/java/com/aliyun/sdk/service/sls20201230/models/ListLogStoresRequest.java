@@ -101,13 +101,13 @@ public class ListLogStoresRequest extends Request {
             super();
         } 
 
-        private Builder(ListLogStoresRequest response) {
-            super(response);
-            this.logstoreName = response.logstoreName;
-            this.offset = response.offset;
-            this.project = response.project;
-            this.size = response.size;
-            this.telemetryType = response.telemetryType;
+        private Builder(ListLogStoresRequest request) {
+            super(request);
+            this.logstoreName = request.logstoreName;
+            this.offset = request.offset;
+            this.project = request.project;
+            this.size = request.size;
+            this.telemetryType = request.telemetryType;
         } 
 
         /**

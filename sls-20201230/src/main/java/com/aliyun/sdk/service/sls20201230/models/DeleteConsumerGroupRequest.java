@@ -77,11 +77,11 @@ public class DeleteConsumerGroupRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteConsumerGroupRequest response) {
-            super(response);
-            this.logstore = response.logstore;
-            this.consumerGroup = response.consumerGroup;
-            this.project = response.project;
+        private Builder(DeleteConsumerGroupRequest request) {
+            super(request);
+            this.logstore = request.logstore;
+            this.consumerGroup = request.consumerGroup;
+            this.project = request.project;
         } 
 
         /**

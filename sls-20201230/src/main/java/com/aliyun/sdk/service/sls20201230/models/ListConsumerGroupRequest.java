@@ -63,10 +63,10 @@ public class ListConsumerGroupRequest extends Request {
             super();
         } 
 
-        private Builder(ListConsumerGroupRequest response) {
-            super(response);
-            this.logstore = response.logstore;
-            this.project = response.project;
+        private Builder(ListConsumerGroupRequest request) {
+            super(request);
+            this.logstore = request.logstore;
+            this.project = request.project;
         } 
 
         /**

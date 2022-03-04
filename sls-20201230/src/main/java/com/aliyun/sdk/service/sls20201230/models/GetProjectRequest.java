@@ -49,9 +49,9 @@ public class GetProjectRequest extends Request {
             super();
         } 
 
-        private Builder(GetProjectRequest response) {
-            super(response);
-            this.project = response.project;
+        private Builder(GetProjectRequest request) {
+            super(request);
+            this.project = request.project;
         } 
 
         /**

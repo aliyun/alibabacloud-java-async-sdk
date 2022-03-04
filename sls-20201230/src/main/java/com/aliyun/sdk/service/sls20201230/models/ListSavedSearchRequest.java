@@ -75,11 +75,11 @@ public class ListSavedSearchRequest extends Request {
             super();
         } 
 
-        private Builder(ListSavedSearchRequest response) {
-            super(response);
-            this.offset = response.offset;
-            this.project = response.project;
-            this.size = response.size;
+        private Builder(ListSavedSearchRequest request) {
+            super(request);
+            this.offset = request.offset;
+            this.project = request.project;
+            this.size = request.size;
         } 
 
         /**

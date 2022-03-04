@@ -30,6 +30,7 @@ public class CreateLogStoreRequest extends Request {
 
     @Body
     @NameInMap("logstoreName")
+    @Validation(required = true)
     private String logstoreName;
 
     @Body
@@ -38,10 +39,12 @@ public class CreateLogStoreRequest extends Request {
 
     @Body
     @NameInMap("shardCount")
+    @Validation(required = true)
     private Integer shardCount;
 
     @Body
     @NameInMap("ttl")
+    @Validation(required = true)
     private Integer ttl;
 
     @Host
@@ -153,17 +156,17 @@ public class CreateLogStoreRequest extends Request {
             super();
         } 
 
-        private Builder(CreateLogStoreRequest response) {
-            super(response);
-            this.appendMeta = response.appendMeta;
-            this.autoSplit = response.autoSplit;
-            this.enableTracking = response.enableTracking;
-            this.encryptConf = response.encryptConf;
-            this.logstoreName = response.logstoreName;
-            this.maxSplitShard = response.maxSplitShard;
-            this.shardCount = response.shardCount;
-            this.ttl = response.ttl;
-            this.project = response.project;
+        private Builder(CreateLogStoreRequest request) {
+            super(request);
+            this.appendMeta = request.appendMeta;
+            this.autoSplit = request.autoSplit;
+            this.enableTracking = request.enableTracking;
+            this.encryptConf = request.encryptConf;
+            this.logstoreName = request.logstoreName;
+            this.maxSplitShard = request.maxSplitShard;
+            this.shardCount = request.shardCount;
+            this.ttl = request.ttl;
+            this.project = request.project;
         } 
 
         /**
