@@ -1,0 +1,104 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.ecs20140526.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link ModifyImageAttributeResponse} extends {@link TeaModel}
+ *
+ * <p>ModifyImageAttributeResponse</p>
+ */
+public class ModifyImageAttributeResponse extends Response {
+    @NameInMap("headers")
+    @Validation(required = true)
+    private java.util.Map < String, String > headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    private ModifyImageAttributeResponseBody body;
+
+    private ModifyImageAttributeResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.body = builder.body;
+    }
+
+    public static ModifyImageAttributeResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return body
+     */
+    public ModifyImageAttributeResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<ModifyImageAttributeResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder body(ModifyImageAttributeResponseBody body);
+
+        @Override
+        ModifyImageAttributeResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<ModifyImageAttributeResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private ModifyImageAttributeResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(ModifyImageAttributeResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(ModifyImageAttributeResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public ModifyImageAttributeResponse build() {
+            return new ModifyImageAttributeResponse(this);
+        } 
+
+    } 
+
+}
