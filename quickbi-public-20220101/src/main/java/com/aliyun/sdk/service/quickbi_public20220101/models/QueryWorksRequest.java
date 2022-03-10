@@ -1,0 +1,73 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.quickbi_public20220101.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link QueryWorksRequest} extends {@link RequestModel}
+ *
+ * <p>QueryWorksRequest</p>
+ */
+public class QueryWorksRequest extends Request {
+    @Query
+    @NameInMap("WorksId")
+    @Validation(required = true)
+    private String worksId;
+
+    private QueryWorksRequest(Builder builder) {
+        super(builder);
+        this.worksId = builder.worksId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static QueryWorksRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return worksId
+     */
+    public String getWorksId() {
+        return this.worksId;
+    }
+
+    public static final class Builder extends Request.Builder<QueryWorksRequest, Builder> {
+        private String worksId; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(QueryWorksRequest request) {
+            super(request);
+            this.worksId = request.worksId;
+        } 
+
+        /**
+         * 报表ID
+         */
+        public Builder worksId(String worksId) {
+            this.putQueryParameter("WorksId", worksId);
+            this.worksId = worksId;
+            return this;
+        }
+
+        @Override
+        public QueryWorksRequest build() {
+            return new QueryWorksRequest(this);
+        } 
+
+    } 
+
+}

@@ -1,0 +1,121 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.quickbi_public20220101.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link AddWorkspaceUsersRequest} extends {@link RequestModel}
+ *
+ * <p>AddWorkspaceUsersRequest</p>
+ */
+public class AddWorkspaceUsersRequest extends Request {
+    @Query
+    @NameInMap("RoleId")
+    @Validation(required = true, maximum = 30, minimum = 25)
+    private Long roleId;
+
+    @Query
+    @NameInMap("UserIds")
+    @Validation(required = true)
+    private String userIds;
+
+    @Query
+    @NameInMap("WorkspaceId")
+    @Validation(required = true)
+    private String workspaceId;
+
+    private AddWorkspaceUsersRequest(Builder builder) {
+        super(builder);
+        this.roleId = builder.roleId;
+        this.userIds = builder.userIds;
+        this.workspaceId = builder.workspaceId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static AddWorkspaceUsersRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return roleId
+     */
+    public Long getRoleId() {
+        return this.roleId;
+    }
+
+    /**
+     * @return userIds
+     */
+    public String getUserIds() {
+        return this.userIds;
+    }
+
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
+    public static final class Builder extends Request.Builder<AddWorkspaceUsersRequest, Builder> {
+        private Long roleId; 
+        private String userIds; 
+        private String workspaceId; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(AddWorkspaceUsersRequest request) {
+            super(request);
+            this.roleId = request.roleId;
+            this.userIds = request.userIds;
+            this.workspaceId = request.workspaceId;
+        } 
+
+        /**
+         * RoleId.
+         */
+        public Builder roleId(Long roleId) {
+            this.putQueryParameter("RoleId", roleId);
+            this.roleId = roleId;
+            return this;
+        }
+
+        /**
+         * UserIds.
+         */
+        public Builder userIds(String userIds) {
+            this.putQueryParameter("UserIds", userIds);
+            this.userIds = userIds;
+            return this;
+        }
+
+        /**
+         * WorkspaceId.
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.putQueryParameter("WorkspaceId", workspaceId);
+            this.workspaceId = workspaceId;
+            return this;
+        }
+
+        @Override
+        public AddWorkspaceUsersRequest build() {
+            return new AddWorkspaceUsersRequest(this);
+        } 
+
+    } 
+
+}
