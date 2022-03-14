@@ -104,13 +104,13 @@ public class CreateBackupPolicyRequest extends Request {
             super();
         } 
 
-        private Builder(CreateBackupPolicyRequest response) {
-            super(response);
-            this.name = response.name;
-            this.policy = response.policy;
-            this.policyRegionId = response.policyRegionId;
-            this.policyVersion = response.policyVersion;
-            this.uuidList = response.uuidList;
+        private Builder(CreateBackupPolicyRequest request) {
+            super(request);
+            this.name = request.name;
+            this.policy = request.policy;
+            this.policyRegionId = request.policyRegionId;
+            this.policyVersion = request.policyVersion;
+            this.uuidList = request.uuidList;
         } 
 
         /**

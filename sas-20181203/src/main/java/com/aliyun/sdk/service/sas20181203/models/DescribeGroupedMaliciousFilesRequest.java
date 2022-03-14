@@ -206,21 +206,21 @@ public class DescribeGroupedMaliciousFilesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeGroupedMaliciousFilesRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.fuzzyMaliciousName = response.fuzzyMaliciousName;
-            this.imageDigest = response.imageDigest;
-            this.imageLayer = response.imageLayer;
-            this.imageTag = response.imageTag;
-            this.lang = response.lang;
-            this.levels = response.levels;
-            this.pageSize = response.pageSize;
-            this.repoId = response.repoId;
-            this.repoInstanceId = response.repoInstanceId;
-            this.repoName = response.repoName;
-            this.repoNamespace = response.repoNamespace;
-            this.repoRegionId = response.repoRegionId;
+        private Builder(DescribeGroupedMaliciousFilesRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.fuzzyMaliciousName = request.fuzzyMaliciousName;
+            this.imageDigest = request.imageDigest;
+            this.imageLayer = request.imageLayer;
+            this.imageTag = request.imageTag;
+            this.lang = request.lang;
+            this.levels = request.levels;
+            this.pageSize = request.pageSize;
+            this.repoId = request.repoId;
+            this.repoInstanceId = request.repoInstanceId;
+            this.repoName = request.repoName;
+            this.repoNamespace = request.repoNamespace;
+            this.repoRegionId = request.repoRegionId;
         } 
 
         /**

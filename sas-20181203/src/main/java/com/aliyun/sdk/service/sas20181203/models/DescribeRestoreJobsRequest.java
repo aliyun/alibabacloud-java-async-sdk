@@ -89,12 +89,12 @@ public class DescribeRestoreJobsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeRestoreJobsRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.machineRemark = response.machineRemark;
-            this.pageSize = response.pageSize;
-            this.status = response.status;
+        private Builder(DescribeRestoreJobsRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.machineRemark = request.machineRemark;
+            this.pageSize = request.pageSize;
+            this.status = request.status;
         } 
 
         /**

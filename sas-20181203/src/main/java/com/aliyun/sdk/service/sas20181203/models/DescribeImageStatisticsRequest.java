@@ -35,8 +35,8 @@ public class DescribeImageStatisticsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeImageStatisticsRequest response) {
-            super(response);
+        private Builder(DescribeImageStatisticsRequest request) {
+            super(request);
         } 
 
         @Override

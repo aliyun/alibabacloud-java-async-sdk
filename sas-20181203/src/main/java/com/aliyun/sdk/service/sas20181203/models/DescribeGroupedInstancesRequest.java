@@ -127,15 +127,15 @@ public class DescribeGroupedInstancesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeGroupedInstancesRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.fieldValue = response.fieldValue;
-            this.groupField = response.groupField;
-            this.lang = response.lang;
-            this.machineTypes = response.machineTypes;
-            this.noPage = response.noPage;
-            this.pageSize = response.pageSize;
+        private Builder(DescribeGroupedInstancesRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.fieldValue = request.fieldValue;
+            this.groupField = request.groupField;
+            this.lang = request.lang;
+            this.machineTypes = request.machineTypes;
+            this.noPage = request.noPage;
+            this.pageSize = request.pageSize;
         } 
 
         /**

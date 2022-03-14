@@ -114,14 +114,14 @@ public class DescribeRiskCheckItemResultRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeRiskCheckItemResultRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.itemId = response.itemId;
-            this.lang = response.lang;
-            this.pageSize = response.pageSize;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sourceIp = response.sourceIp;
+        private Builder(DescribeRiskCheckItemResultRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.itemId = request.itemId;
+            this.lang = request.lang;
+            this.pageSize = request.pageSize;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceIp = request.sourceIp;
         } 
 
         /**

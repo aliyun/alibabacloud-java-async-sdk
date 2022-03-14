@@ -139,16 +139,16 @@ public class DescribeCloudCenterInstancesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeCloudCenterInstancesRequest response) {
-            super(response);
-            this.criteria = response.criteria;
-            this.currentPage = response.currentPage;
-            this.importance = response.importance;
-            this.logicalExp = response.logicalExp;
-            this.machineTypes = response.machineTypes;
-            this.noGroupTrace = response.noGroupTrace;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
+        private Builder(DescribeCloudCenterInstancesRequest request) {
+            super(request);
+            this.criteria = request.criteria;
+            this.currentPage = request.currentPage;
+            this.importance = request.importance;
+            this.logicalExp = request.logicalExp;
+            this.machineTypes = request.machineTypes;
+            this.noGroupTrace = request.noGroupTrace;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
         } 
 
         /**

@@ -48,9 +48,9 @@ public class DescribeCheckEcsWarningsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeCheckEcsWarningsRequest response) {
-            super(response);
-            this.sourceIp = response.sourceIp;
+        private Builder(DescribeCheckEcsWarningsRequest request) {
+            super(request);
+            this.sourceIp = request.sourceIp;
         } 
 
         /**

@@ -61,10 +61,10 @@ public class DescribeFieldStatisticsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeFieldStatisticsRequest response) {
-            super(response);
-            this.machineTypes = response.machineTypes;
-            this.regionId = response.regionId;
+        private Builder(DescribeFieldStatisticsRequest request) {
+            super(request);
+            this.machineTypes = request.machineTypes;
+            this.regionId = request.regionId;
         } 
 
         /**

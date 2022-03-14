@@ -62,10 +62,10 @@ public class DescribeDomainDetailRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDomainDetailRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.sourceIp = response.sourceIp;
+        private Builder(DescribeDomainDetailRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.sourceIp = request.sourceIp;
         } 
 
         /**

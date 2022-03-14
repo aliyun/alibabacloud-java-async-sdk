@@ -114,14 +114,14 @@ public class DescribeGroupedContainerInstancesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeGroupedContainerInstancesRequest response) {
-            super(response);
-            this.criteria = response.criteria;
-            this.currentPage = response.currentPage;
-            this.fieldValue = response.fieldValue;
-            this.groupField = response.groupField;
-            this.logicalExp = response.logicalExp;
-            this.pageSize = response.pageSize;
+        private Builder(DescribeGroupedContainerInstancesRequest request) {
+            super(request);
+            this.criteria = request.criteria;
+            this.currentPage = request.currentPage;
+            this.fieldValue = request.fieldValue;
+            this.groupField = request.groupField;
+            this.logicalExp = request.logicalExp;
+            this.pageSize = request.pageSize;
         } 
 
         /**

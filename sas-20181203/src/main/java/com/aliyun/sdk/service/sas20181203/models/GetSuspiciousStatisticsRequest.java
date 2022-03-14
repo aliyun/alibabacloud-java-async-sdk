@@ -62,10 +62,10 @@ public class GetSuspiciousStatisticsRequest extends Request {
             super();
         } 
 
-        private Builder(GetSuspiciousStatisticsRequest response) {
-            super(response);
-            this.groupIdList = response.groupIdList;
-            this.sourceIp = response.sourceIp;
+        private Builder(GetSuspiciousStatisticsRequest request) {
+            super(request);
+            this.groupIdList = request.groupIdList;
+            this.sourceIp = request.sourceIp;
         } 
 
         /**

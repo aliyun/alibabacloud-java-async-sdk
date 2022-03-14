@@ -61,10 +61,10 @@ public class DescribePropertyCountRequest extends Request {
             super();
         } 
 
-        private Builder(DescribePropertyCountRequest response) {
-            super(response);
-            this.type = response.type;
-            this.uuidList = response.uuidList;
+        private Builder(DescribePropertyCountRequest request) {
+            super(request);
+            this.type = request.type;
+            this.uuidList = request.uuidList;
         } 
 
         /**

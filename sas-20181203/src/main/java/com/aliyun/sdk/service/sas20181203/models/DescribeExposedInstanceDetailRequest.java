@@ -48,9 +48,9 @@ public class DescribeExposedInstanceDetailRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeExposedInstanceDetailRequest response) {
-            super(response);
-            this.uuid = response.uuid;
+        private Builder(DescribeExposedInstanceDetailRequest request) {
+            super(request);
+            this.uuid = request.uuid;
         } 
 
         /**

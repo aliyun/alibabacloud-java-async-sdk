@@ -61,10 +61,10 @@ public class DescribeVolDingdingMessageRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeVolDingdingMessageRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.sourceIp = response.sourceIp;
+        private Builder(DescribeVolDingdingMessageRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.sourceIp = request.sourceIp;
         } 
 
         /**

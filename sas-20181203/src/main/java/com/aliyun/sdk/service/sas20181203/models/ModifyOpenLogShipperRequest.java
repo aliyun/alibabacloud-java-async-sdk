@@ -48,9 +48,9 @@ public class ModifyOpenLogShipperRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyOpenLogShipperRequest response) {
-            super(response);
-            this.from = response.from;
+        private Builder(ModifyOpenLogShipperRequest request) {
+            super(request);
+            this.from = request.from;
         } 
 
         /**

@@ -74,11 +74,11 @@ public class DescribeCriteriaRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeCriteriaRequest response) {
-            super(response);
-            this.machineTypes = response.machineTypes;
-            this.supportAutoTag = response.supportAutoTag;
-            this.value = response.value;
+        private Builder(DescribeCriteriaRequest request) {
+            super(request);
+            this.machineTypes = request.machineTypes;
+            this.supportAutoTag = request.supportAutoTag;
+            this.value = request.value;
         } 
 
         /**

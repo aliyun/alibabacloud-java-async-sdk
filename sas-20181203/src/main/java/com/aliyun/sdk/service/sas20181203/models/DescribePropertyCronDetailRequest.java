@@ -113,14 +113,14 @@ public class DescribePropertyCronDetailRequest extends Request {
             super();
         } 
 
-        private Builder(DescribePropertyCronDetailRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.pageSize = response.pageSize;
-            this.remark = response.remark;
-            this.source = response.source;
-            this.user = response.user;
-            this.uuid = response.uuid;
+        private Builder(DescribePropertyCronDetailRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.pageSize = request.pageSize;
+            this.remark = request.remark;
+            this.source = request.source;
+            this.user = request.user;
+            this.uuid = request.uuid;
         } 
 
         /**

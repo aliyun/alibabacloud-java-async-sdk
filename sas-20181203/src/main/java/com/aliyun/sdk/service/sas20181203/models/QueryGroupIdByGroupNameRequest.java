@@ -62,10 +62,10 @@ public class QueryGroupIdByGroupNameRequest extends Request {
             super();
         } 
 
-        private Builder(QueryGroupIdByGroupNameRequest response) {
-            super(response);
-            this.groupName = response.groupName;
-            this.sourceIp = response.sourceIp;
+        private Builder(QueryGroupIdByGroupNameRequest request) {
+            super(request);
+            this.groupName = request.groupName;
+            this.sourceIp = request.sourceIp;
         } 
 
         /**

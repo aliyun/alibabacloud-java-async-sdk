@@ -113,14 +113,14 @@ public class DescribeImageBaselineCheckSummaryRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeImageBaselineCheckSummaryRequest response) {
-            super(response);
-            this.criteria = response.criteria;
-            this.criteriaType = response.criteriaType;
-            this.currentPage = response.currentPage;
-            this.lang = response.lang;
-            this.pageSize = response.pageSize;
-            this.riskLevel = response.riskLevel;
+        private Builder(DescribeImageBaselineCheckSummaryRequest request) {
+            super(request);
+            this.criteria = request.criteria;
+            this.criteriaType = request.criteriaType;
+            this.currentPage = request.currentPage;
+            this.lang = request.lang;
+            this.pageSize = request.pageSize;
+            this.riskLevel = request.riskLevel;
         } 
 
         /**

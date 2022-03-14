@@ -35,8 +35,8 @@ public class DescribeAutoDelConfigRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAutoDelConfigRequest response) {
-            super(response);
+        private Builder(DescribeAutoDelConfigRequest request) {
+            super(request);
         } 
 
         @Override

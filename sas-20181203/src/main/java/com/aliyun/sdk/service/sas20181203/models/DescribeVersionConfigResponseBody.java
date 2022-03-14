@@ -46,10 +46,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     private Long lastTrailEndTime;
 
     @NameInMap("MVAuthCount")
-    private Integer mVAuthCount;
+    private Integer MVAuthCount;
 
     @NameInMap("MVUnusedAuthCount")
-    private Integer mVUnusedAuthCount;
+    private Integer MVUnusedAuthCount;
 
     @NameInMap("ReleaseTime")
     private Long releaseTime;
@@ -93,8 +93,8 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         this.isOverBalance = builder.isOverBalance;
         this.isTrialVersion = builder.isTrialVersion;
         this.lastTrailEndTime = builder.lastTrailEndTime;
-        this.mVAuthCount = builder.mVAuthCount;
-        this.mVUnusedAuthCount = builder.mVUnusedAuthCount;
+        this.MVAuthCount = builder.MVAuthCount;
+        this.MVUnusedAuthCount = builder.MVUnusedAuthCount;
         this.releaseTime = builder.releaseTime;
         this.requestId = builder.requestId;
         this.sasLog = builder.sasLog;
@@ -193,17 +193,17 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     }
 
     /**
-     * @return mVAuthCount
+     * @return MVAuthCount
      */
     public Integer getMVAuthCount() {
-        return this.mVAuthCount;
+        return this.MVAuthCount;
     }
 
     /**
-     * @return mVUnusedAuthCount
+     * @return MVUnusedAuthCount
      */
     public Integer getMVUnusedAuthCount() {
-        return this.mVUnusedAuthCount;
+        return this.MVUnusedAuthCount;
     }
 
     /**
@@ -288,8 +288,8 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         private Boolean isOverBalance; 
         private Integer isTrialVersion; 
         private Long lastTrailEndTime; 
-        private Integer mVAuthCount; 
-        private Integer mVUnusedAuthCount; 
+        private Integer MVAuthCount; 
+        private Integer MVUnusedAuthCount; 
         private Long releaseTime; 
         private String requestId; 
         private Integer sasLog; 
@@ -392,16 +392,16 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         /**
          * MVAuthCount.
          */
-        public Builder mVAuthCount(Integer mVAuthCount) {
-            this.mVAuthCount = mVAuthCount;
+        public Builder MVAuthCount(Integer MVAuthCount) {
+            this.MVAuthCount = MVAuthCount;
             return this;
         }
 
         /**
          * MVUnusedAuthCount.
          */
-        public Builder mVUnusedAuthCount(Integer mVUnusedAuthCount) {
-            this.mVUnusedAuthCount = mVUnusedAuthCount;
+        public Builder MVUnusedAuthCount(Integer MVUnusedAuthCount) {
+            this.MVUnusedAuthCount = MVUnusedAuthCount;
             return this;
         }
 

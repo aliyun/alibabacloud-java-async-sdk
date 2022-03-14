@@ -75,11 +75,11 @@ public class UninstallBackupClientRequest extends Request {
             super();
         } 
 
-        private Builder(UninstallBackupClientRequest response) {
-            super(response);
-            this.policyVersion = response.policyVersion;
-            this.uuid = response.uuid;
-            this.uuidList = response.uuidList;
+        private Builder(UninstallBackupClientRequest request) {
+            super(request);
+            this.policyVersion = request.policyVersion;
+            this.uuid = request.uuid;
+            this.uuidList = request.uuidList;
         } 
 
         /**

@@ -18,6 +18,7 @@ public class DescribeVulDetailsRequest extends Request {
 
     @Query
     @NameInMap("Lang")
+    @Validation(required = true)
     private String lang;
 
     @Query
@@ -89,12 +90,12 @@ public class DescribeVulDetailsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeVulDetailsRequest response) {
-            super(response);
-            this.aliasName = response.aliasName;
-            this.lang = response.lang;
-            this.name = response.name;
-            this.type = response.type;
+        private Builder(DescribeVulDetailsRequest request) {
+            super(request);
+            this.aliasName = request.aliasName;
+            this.lang = request.lang;
+            this.name = request.name;
+            this.type = request.type;
         } 
 
         /**

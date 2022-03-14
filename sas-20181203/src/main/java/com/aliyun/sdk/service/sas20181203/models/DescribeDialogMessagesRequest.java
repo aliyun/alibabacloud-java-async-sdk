@@ -48,9 +48,9 @@ public class DescribeDialogMessagesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDialogMessagesRequest response) {
-            super(response);
-            this.sourceIp = response.sourceIp;
+        private Builder(DescribeDialogMessagesRequest request) {
+            super(request);
+            this.sourceIp = request.sourceIp;
         } 
 
         /**

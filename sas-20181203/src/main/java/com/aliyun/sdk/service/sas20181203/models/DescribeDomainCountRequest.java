@@ -48,9 +48,9 @@ public class DescribeDomainCountRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDomainCountRequest response) {
-            super(response);
-            this.sourceIp = response.sourceIp;
+        private Builder(DescribeDomainCountRequest request) {
+            super(request);
+            this.sourceIp = request.sourceIp;
         } 
 
         /**

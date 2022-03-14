@@ -62,10 +62,10 @@ public class DeleteGroupRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteGroupRequest response) {
-            super(response);
-            this.groupId = response.groupId;
-            this.sourceIp = response.sourceIp;
+        private Builder(DeleteGroupRequest request) {
+            super(request);
+            this.groupId = request.groupId;
+            this.sourceIp = request.sourceIp;
         } 
 
         /**

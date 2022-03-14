@@ -113,14 +113,14 @@ public class HandleSecurityEventsRequest extends Request {
             super();
         } 
 
-        private Builder(HandleSecurityEventsRequest response) {
-            super(response);
-            this.markBatch = response.markBatch;
-            this.markMissParam = response.markMissParam;
-            this.operationCode = response.operationCode;
-            this.operationParams = response.operationParams;
-            this.securityEventIds = response.securityEventIds;
-            this.sourceIp = response.sourceIp;
+        private Builder(HandleSecurityEventsRequest request) {
+            super(request);
+            this.markBatch = request.markBatch;
+            this.markMissParam = request.markMissParam;
+            this.operationCode = request.operationCode;
+            this.operationParams = request.operationParams;
+            this.securityEventIds = request.securityEventIds;
+            this.sourceIp = request.sourceIp;
         } 
 
         /**

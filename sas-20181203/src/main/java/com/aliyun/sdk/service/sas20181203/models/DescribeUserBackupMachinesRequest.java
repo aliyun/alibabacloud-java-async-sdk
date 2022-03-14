@@ -35,8 +35,8 @@ public class DescribeUserBackupMachinesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeUserBackupMachinesRequest response) {
-            super(response);
+        private Builder(DescribeUserBackupMachinesRequest request) {
+            super(request);
         } 
 
         @Override

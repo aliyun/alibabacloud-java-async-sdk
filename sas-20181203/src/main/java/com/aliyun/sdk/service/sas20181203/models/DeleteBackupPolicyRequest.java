@@ -63,10 +63,10 @@ public class DeleteBackupPolicyRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteBackupPolicyRequest response) {
-            super(response);
-            this.id = response.id;
-            this.policyVersion = response.policyVersion;
+        private Builder(DeleteBackupPolicyRequest request) {
+            super(request);
+            this.id = request.id;
+            this.policyVersion = request.policyVersion;
         } 
 
         /**

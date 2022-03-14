@@ -61,10 +61,10 @@ public class DescribeBruteForceSummaryRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeBruteForceSummaryRequest response) {
-            super(response);
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sourceIp = response.sourceIp;
+        private Builder(DescribeBruteForceSummaryRequest request) {
+            super(request);
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceIp = request.sourceIp;
         } 
 
         /**

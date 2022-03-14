@@ -74,11 +74,11 @@ public class DescribeSummaryInfoRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeSummaryInfoRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.resourceDirectoryAccountId = response.resourceDirectoryAccountId;
-            this.sourceIp = response.sourceIp;
+        private Builder(DescribeSummaryInfoRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
+            this.sourceIp = request.sourceIp;
         } 
 
         /**

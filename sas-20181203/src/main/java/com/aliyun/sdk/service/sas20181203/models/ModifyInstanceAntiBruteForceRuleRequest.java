@@ -87,12 +87,12 @@ public class ModifyInstanceAntiBruteForceRuleRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyInstanceAntiBruteForceRuleRequest response) {
-            super(response);
-            this.newRuleId = response.newRuleId;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sourceIp = response.sourceIp;
-            this.uuid = response.uuid;
+        private Builder(ModifyInstanceAntiBruteForceRuleRequest request) {
+            super(request);
+            this.newRuleId = request.newRuleId;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceIp = request.sourceIp;
+            this.uuid = request.uuid;
         } 
 
         /**

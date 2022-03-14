@@ -113,14 +113,14 @@ public class DescribeSimilarSecurityEventsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeSimilarSecurityEventsRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.lang = response.lang;
-            this.pageSize = response.pageSize;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sourceIp = response.sourceIp;
-            this.taskId = response.taskId;
+        private Builder(DescribeSimilarSecurityEventsRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.lang = request.lang;
+            this.pageSize = request.pageSize;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceIp = request.sourceIp;
+            this.taskId = request.taskId;
         } 
 
         /**

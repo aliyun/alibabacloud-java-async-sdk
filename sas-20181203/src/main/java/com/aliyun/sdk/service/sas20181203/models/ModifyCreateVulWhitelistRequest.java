@@ -74,11 +74,11 @@ public class ModifyCreateVulWhitelistRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyCreateVulWhitelistRequest response) {
-            super(response);
-            this.reason = response.reason;
-            this.targetInfo = response.targetInfo;
-            this.whitelist = response.whitelist;
+        private Builder(ModifyCreateVulWhitelistRequest request) {
+            super(request);
+            this.reason = request.reason;
+            this.targetInfo = request.targetInfo;
+            this.whitelist = request.whitelist;
         } 
 
         /**

@@ -74,11 +74,11 @@ public class DescribeDingTalkRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDingTalkRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.pageSize = response.pageSize;
-            this.ruleActionName = response.ruleActionName;
+        private Builder(DescribeDingTalkRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.pageSize = request.pageSize;
+            this.ruleActionName = request.ruleActionName;
         } 
 
         /**

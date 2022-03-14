@@ -152,17 +152,17 @@ public class DescribePropertySoftwareDetailRequest extends Request {
             super();
         } 
 
-        private Builder(DescribePropertySoftwareDetailRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.installTimeEnd = response.installTimeEnd;
-            this.installTimeStart = response.installTimeStart;
-            this.name = response.name;
-            this.pageSize = response.pageSize;
-            this.path = response.path;
-            this.remark = response.remark;
-            this.softwareVersion = response.softwareVersion;
-            this.uuid = response.uuid;
+        private Builder(DescribePropertySoftwareDetailRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.installTimeEnd = request.installTimeEnd;
+            this.installTimeStart = request.installTimeStart;
+            this.name = request.name;
+            this.pageSize = request.pageSize;
+            this.path = request.path;
+            this.remark = request.remark;
+            this.softwareVersion = request.softwareVersion;
+            this.uuid = request.uuid;
         } 
 
         /**

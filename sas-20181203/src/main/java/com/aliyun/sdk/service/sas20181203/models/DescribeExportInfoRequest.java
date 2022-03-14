@@ -49,9 +49,9 @@ public class DescribeExportInfoRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeExportInfoRequest response) {
-            super(response);
-            this.exportId = response.exportId;
+        private Builder(DescribeExportInfoRequest request) {
+            super(request);
+            this.exportId = request.exportId;
         } 
 
         /**

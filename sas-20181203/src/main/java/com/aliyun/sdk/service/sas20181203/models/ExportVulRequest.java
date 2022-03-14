@@ -165,18 +165,18 @@ public class ExportVulRequest extends Request {
             super();
         } 
 
-        private Builder(ExportVulRequest response) {
-            super(response);
-            this.aliasName = response.aliasName;
-            this.attachTypes = response.attachTypes;
-            this.dealed = response.dealed;
-            this.groupId = response.groupId;
-            this.lang = response.lang;
-            this.necessity = response.necessity;
-            this.searchTags = response.searchTags;
-            this.type = response.type;
-            this.uuids = response.uuids;
-            this.vpcInstanceIds = response.vpcInstanceIds;
+        private Builder(ExportVulRequest request) {
+            super(request);
+            this.aliasName = request.aliasName;
+            this.attachTypes = request.attachTypes;
+            this.dealed = request.dealed;
+            this.groupId = request.groupId;
+            this.lang = request.lang;
+            this.necessity = request.necessity;
+            this.searchTags = request.searchTags;
+            this.type = request.type;
+            this.uuids = request.uuids;
+            this.vpcInstanceIds = request.vpcInstanceIds;
         } 
 
         /**

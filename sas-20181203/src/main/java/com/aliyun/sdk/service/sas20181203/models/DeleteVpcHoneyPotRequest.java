@@ -49,9 +49,9 @@ public class DeleteVpcHoneyPotRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteVpcHoneyPotRequest response) {
-            super(response);
-            this.vpcId = response.vpcId;
+        private Builder(DeleteVpcHoneyPotRequest request) {
+            super(request);
+            this.vpcId = request.vpcId;
         } 
 
         /**

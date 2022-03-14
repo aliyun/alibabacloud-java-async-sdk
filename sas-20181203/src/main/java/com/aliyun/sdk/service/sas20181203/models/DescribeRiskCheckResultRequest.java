@@ -191,20 +191,20 @@ public class DescribeRiskCheckResultRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeRiskCheckResultRequest response) {
-            super(response);
-            this.assetType = response.assetType;
-            this.currentPage = response.currentPage;
-            this.groupId = response.groupId;
-            this.itemIds = response.itemIds;
-            this.lang = response.lang;
-            this.name = response.name;
-            this.pageSize = response.pageSize;
-            this.queryFlag = response.queryFlag;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.riskLevel = response.riskLevel;
-            this.sourceIp = response.sourceIp;
-            this.status = response.status;
+        private Builder(DescribeRiskCheckResultRequest request) {
+            super(request);
+            this.assetType = request.assetType;
+            this.currentPage = request.currentPage;
+            this.groupId = request.groupId;
+            this.itemIds = request.itemIds;
+            this.lang = request.lang;
+            this.name = request.name;
+            this.pageSize = request.pageSize;
+            this.queryFlag = request.queryFlag;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.riskLevel = request.riskLevel;
+            this.sourceIp = request.sourceIp;
+            this.status = request.status;
         } 
 
         /**

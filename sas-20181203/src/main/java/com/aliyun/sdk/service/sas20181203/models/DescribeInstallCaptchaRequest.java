@@ -74,11 +74,11 @@ public class DescribeInstallCaptchaRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeInstallCaptchaRequest response) {
-            super(response);
-            this.deadline = response.deadline;
-            this.lang = response.lang;
-            this.sourceIp = response.sourceIp;
+        private Builder(DescribeInstallCaptchaRequest request) {
+            super(request);
+            this.deadline = request.deadline;
+            this.lang = request.lang;
+            this.sourceIp = request.sourceIp;
         } 
 
         /**

@@ -103,13 +103,13 @@ public class OperateSuspiciousTargetConfigRequest extends Request {
             super();
         } 
 
-        private Builder(OperateSuspiciousTargetConfigRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.sourceIp = response.sourceIp;
-            this.targetOperations = response.targetOperations;
-            this.targetType = response.targetType;
-            this.type = response.type;
+        private Builder(OperateSuspiciousTargetConfigRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.sourceIp = request.sourceIp;
+            this.targetOperations = request.targetOperations;
+            this.targetType = request.targetType;
+            this.type = request.type;
         } 
 
         /**

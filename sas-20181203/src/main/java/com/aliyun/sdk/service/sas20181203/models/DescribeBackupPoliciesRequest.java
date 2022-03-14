@@ -102,13 +102,13 @@ public class DescribeBackupPoliciesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeBackupPoliciesRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.machineRemark = response.machineRemark;
-            this.name = response.name;
-            this.pageSize = response.pageSize;
-            this.status = response.status;
+        private Builder(DescribeBackupPoliciesRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.machineRemark = request.machineRemark;
+            this.name = request.name;
+            this.pageSize = request.pageSize;
+            this.status = request.status;
         } 
 
         /**

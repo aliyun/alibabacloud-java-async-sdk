@@ -76,11 +76,11 @@ public class GetVulStatisticsRequest extends Request {
             super();
         } 
 
-        private Builder(GetVulStatisticsRequest response) {
-            super(response);
-            this.groupIdList = response.groupIdList;
-            this.sourceIp = response.sourceIp;
-            this.typeList = response.typeList;
+        private Builder(GetVulStatisticsRequest request) {
+            super(request);
+            this.groupIdList = request.groupIdList;
+            this.sourceIp = request.sourceIp;
+            this.typeList = request.typeList;
         } 
 
         /**

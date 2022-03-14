@@ -35,8 +35,8 @@ public class DescribeModuleConfigRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeModuleConfigRequest response) {
-            super(response);
+        private Builder(DescribeModuleConfigRequest request) {
+            super(request);
         } 
 
         @Override

@@ -113,14 +113,14 @@ public class DescribeWebLockBindListRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeWebLockBindListRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.lang = response.lang;
-            this.pageSize = response.pageSize;
-            this.remark = response.remark;
-            this.sourceIp = response.sourceIp;
-            this.status = response.status;
+        private Builder(DescribeWebLockBindListRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.lang = request.lang;
+            this.pageSize = request.pageSize;
+            this.remark = request.remark;
+            this.sourceIp = request.sourceIp;
+            this.status = request.status;
         } 
 
         /**

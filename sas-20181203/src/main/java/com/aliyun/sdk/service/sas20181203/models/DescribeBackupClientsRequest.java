@@ -49,9 +49,9 @@ public class DescribeBackupClientsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeBackupClientsRequest response) {
-            super(response);
-            this.supportRegionId = response.supportRegionId;
+        private Builder(DescribeBackupClientsRequest request) {
+            super(request);
+            this.supportRegionId = request.supportRegionId;
         } 
 
         /**

@@ -113,14 +113,14 @@ public class DescribeEmgVulItemRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeEmgVulItemRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.lang = response.lang;
-            this.pageSize = response.pageSize;
-            this.riskStatus = response.riskStatus;
-            this.scanType = response.scanType;
-            this.vulName = response.vulName;
+        private Builder(DescribeEmgVulItemRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.lang = request.lang;
+            this.pageSize = request.pageSize;
+            this.riskStatus = request.riskStatus;
+            this.scanType = request.scanType;
+            this.vulName = request.vulName;
         } 
 
         /**

@@ -49,9 +49,9 @@ public class ModifyGroupPropertyRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyGroupPropertyRequest response) {
-            super(response);
-            this.data = response.data;
+        private Builder(ModifyGroupPropertyRequest request) {
+            super(request);
+            this.data = request.data;
         } 
 
         /**

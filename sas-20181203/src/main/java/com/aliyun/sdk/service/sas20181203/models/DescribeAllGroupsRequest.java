@@ -48,9 +48,9 @@ public class DescribeAllGroupsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAllGroupsRequest response) {
-            super(response);
-            this.lang = response.lang;
+        private Builder(DescribeAllGroupsRequest request) {
+            super(request);
+            this.lang = request.lang;
         } 
 
         /**

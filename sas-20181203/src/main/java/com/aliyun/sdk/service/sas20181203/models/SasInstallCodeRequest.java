@@ -48,9 +48,9 @@ public class SasInstallCodeRequest extends Request {
             super();
         } 
 
-        private Builder(SasInstallCodeRequest response) {
-            super(response);
-            this.sourceIp = response.sourceIp;
+        private Builder(SasInstallCodeRequest request) {
+            super(request);
+            this.sourceIp = request.sourceIp;
         } 
 
         /**

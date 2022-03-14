@@ -87,12 +87,12 @@ public class DescribeSecurityEventOperationsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeSecurityEventOperationsRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.securityEventId = response.securityEventId;
-            this.sourceIp = response.sourceIp;
+        private Builder(DescribeSecurityEventOperationsRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.securityEventId = request.securityEventId;
+            this.sourceIp = request.sourceIp;
         } 
 
         /**

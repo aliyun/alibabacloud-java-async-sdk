@@ -165,18 +165,18 @@ public class DescribeCheckWarningSummaryRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeCheckWarningSummaryRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.lang = response.lang;
-            this.pageSize = response.pageSize;
-            this.riskName = response.riskName;
-            this.riskStatus = response.riskStatus;
-            this.sourceIp = response.sourceIp;
-            this.status = response.status;
-            this.strategyId = response.strategyId;
-            this.typeName = response.typeName;
-            this.uuids = response.uuids;
+        private Builder(DescribeCheckWarningSummaryRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.lang = request.lang;
+            this.pageSize = request.pageSize;
+            this.riskName = request.riskName;
+            this.riskStatus = request.riskStatus;
+            this.sourceIp = request.sourceIp;
+            this.status = request.status;
+            this.strategyId = request.strategyId;
+            this.typeName = request.typeName;
+            this.uuids = request.uuids;
         } 
 
         /**

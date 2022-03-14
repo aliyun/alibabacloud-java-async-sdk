@@ -77,11 +77,11 @@ public class DescribeHoneyPotSuspStatisticsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeHoneyPotSuspStatisticsRequest response) {
-            super(response);
-            this.from = response.from;
-            this.statisticsDays = response.statisticsDays;
-            this.statisticsKeyType = response.statisticsKeyType;
+        private Builder(DescribeHoneyPotSuspStatisticsRequest request) {
+            super(request);
+            this.from = request.from;
+            this.statisticsDays = request.statisticsDays;
+            this.statisticsKeyType = request.statisticsKeyType;
         } 
 
         /**

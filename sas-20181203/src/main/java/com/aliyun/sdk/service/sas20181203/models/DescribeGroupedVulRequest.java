@@ -165,18 +165,18 @@ public class DescribeGroupedVulRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeGroupedVulRequest response) {
-            super(response);
-            this.aliasName = response.aliasName;
-            this.currentPage = response.currentPage;
-            this.dealed = response.dealed;
-            this.groupId = response.groupId;
-            this.lang = response.lang;
-            this.necessity = response.necessity;
-            this.pageSize = response.pageSize;
-            this.searchTags = response.searchTags;
-            this.type = response.type;
-            this.uuids = response.uuids;
+        private Builder(DescribeGroupedVulRequest request) {
+            super(request);
+            this.aliasName = request.aliasName;
+            this.currentPage = request.currentPage;
+            this.dealed = request.dealed;
+            this.groupId = request.groupId;
+            this.lang = request.lang;
+            this.necessity = request.necessity;
+            this.pageSize = request.pageSize;
+            this.searchTags = request.searchTags;
+            this.type = request.type;
+            this.uuids = request.uuids;
         } 
 
         /**

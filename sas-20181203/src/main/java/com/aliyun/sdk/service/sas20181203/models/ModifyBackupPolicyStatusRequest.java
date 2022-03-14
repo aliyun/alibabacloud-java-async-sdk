@@ -77,11 +77,11 @@ public class ModifyBackupPolicyStatusRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyBackupPolicyStatusRequest response) {
-            super(response);
-            this.id = response.id;
-            this.policyVersion = response.policyVersion;
-            this.status = response.status;
+        private Builder(ModifyBackupPolicyStatusRequest request) {
+            super(request);
+            this.id = request.id;
+            this.policyVersion = request.policyVersion;
+            this.status = request.status;
         } 
 
         /**

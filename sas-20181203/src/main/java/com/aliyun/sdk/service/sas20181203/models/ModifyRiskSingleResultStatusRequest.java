@@ -114,14 +114,14 @@ public class ModifyRiskSingleResultStatusRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyRiskSingleResultStatusRequest response) {
-            super(response);
-            this.ids = response.ids;
-            this.lang = response.lang;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sourceIp = response.sourceIp;
-            this.status = response.status;
-            this.taskId = response.taskId;
+        private Builder(ModifyRiskSingleResultStatusRequest request) {
+            super(request);
+            this.ids = request.ids;
+            this.lang = request.lang;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceIp = request.sourceIp;
+            this.status = request.status;
+            this.taskId = request.taskId;
         } 
 
         /**

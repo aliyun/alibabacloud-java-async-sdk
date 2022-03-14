@@ -213,7 +213,7 @@ public class DescribeStrategyExecDetailResponseBody extends TeaModel {
 
     public static class FailedEcsList extends TeaModel {
         @NameInMap("IP")
-        private String IP;
+        private String ip;
 
         @NameInMap("InstanceName")
         private String instanceName;
@@ -228,7 +228,7 @@ public class DescribeStrategyExecDetailResponseBody extends TeaModel {
         private String reason;
 
         private FailedEcsList(Builder builder) {
-            this.IP = builder.IP;
+            this.ip = builder.ip;
             this.instanceName = builder.instanceName;
             this.internetIp = builder.internetIp;
             this.intranetIp = builder.intranetIp;
@@ -244,10 +244,10 @@ public class DescribeStrategyExecDetailResponseBody extends TeaModel {
         }
 
         /**
-         * @return IP
+         * @return ip
          */
-        public String getIP() {
-            return this.IP;
+        public String getIp() {
+            return this.ip;
         }
 
         /**
@@ -279,7 +279,7 @@ public class DescribeStrategyExecDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private String IP; 
+            private String ip; 
             private String instanceName; 
             private String internetIp; 
             private String intranetIp; 
@@ -288,8 +288,8 @@ public class DescribeStrategyExecDetailResponseBody extends TeaModel {
             /**
              * IP.
              */
-            public Builder IP(String IP) {
-                this.IP = IP;
+            public Builder ip(String ip) {
+                this.ip = ip;
                 return this;
             }
 

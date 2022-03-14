@@ -88,12 +88,12 @@ public class DescribeSuspEventDetailRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeSuspEventDetailRequest response) {
-            super(response);
-            this.from = response.from;
-            this.lang = response.lang;
-            this.sourceIp = response.sourceIp;
-            this.suspiciousEventId = response.suspiciousEventId;
+        private Builder(DescribeSuspEventDetailRequest request) {
+            super(request);
+            this.from = request.from;
+            this.lang = request.lang;
+            this.sourceIp = request.sourceIp;
+            this.suspiciousEventId = request.suspiciousEventId;
         } 
 
         /**

@@ -61,10 +61,10 @@ public class DescribeVulWhitelistRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeVulWhitelistRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.pageSize = response.pageSize;
+        private Builder(DescribeVulWhitelistRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.pageSize = request.pageSize;
         } 
 
         /**

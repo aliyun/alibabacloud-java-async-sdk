@@ -102,13 +102,13 @@ public class DescribeImageFixTaskRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeImageFixTaskRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.endTime = response.endTime;
-            this.pageSize = response.pageSize;
-            this.startTime = response.startTime;
-            this.status = response.status;
+        private Builder(DescribeImageFixTaskRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.endTime = request.endTime;
+            this.pageSize = request.pageSize;
+            this.startTime = request.startTime;
+            this.status = request.status;
         } 
 
         /**

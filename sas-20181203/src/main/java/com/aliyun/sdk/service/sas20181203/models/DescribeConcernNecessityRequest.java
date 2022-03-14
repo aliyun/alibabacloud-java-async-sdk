@@ -48,9 +48,9 @@ public class DescribeConcernNecessityRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeConcernNecessityRequest response) {
-            super(response);
-            this.lang = response.lang;
+        private Builder(DescribeConcernNecessityRequest request) {
+            super(request);
+            this.lang = request.lang;
         } 
 
         /**

@@ -77,11 +77,11 @@ public class ModifyLoginBaseConfigRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyLoginBaseConfigRequest response) {
-            super(response);
-            this.config = response.config;
-            this.target = response.target;
-            this.type = response.type;
+        private Builder(ModifyLoginBaseConfigRequest request) {
+            super(request);
+            this.config = request.config;
+            this.target = request.target;
+            this.type = request.type;
         } 
 
         /**

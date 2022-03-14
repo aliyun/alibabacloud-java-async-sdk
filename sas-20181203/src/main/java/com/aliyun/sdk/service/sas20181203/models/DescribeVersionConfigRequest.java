@@ -61,10 +61,10 @@ public class DescribeVersionConfigRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeVersionConfigRequest response) {
-            super(response);
-            this.resourceDirectoryAccountId = response.resourceDirectoryAccountId;
-            this.sourceIp = response.sourceIp;
+        private Builder(DescribeVersionConfigRequest request) {
+            super(request);
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
+            this.sourceIp = request.sourceIp;
         } 
 
         /**

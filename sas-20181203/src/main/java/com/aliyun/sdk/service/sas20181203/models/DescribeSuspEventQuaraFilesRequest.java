@@ -139,16 +139,16 @@ public class DescribeSuspEventQuaraFilesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeSuspEventQuaraFilesRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.from = response.from;
-            this.groupId = response.groupId;
-            this.groupingId = response.groupingId;
-            this.pageSize = response.pageSize;
-            this.quaraTag = response.quaraTag;
-            this.sourceIp = response.sourceIp;
-            this.status = response.status;
+        private Builder(DescribeSuspEventQuaraFilesRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.from = request.from;
+            this.groupId = request.groupId;
+            this.groupingId = request.groupingId;
+            this.pageSize = request.pageSize;
+            this.quaraTag = request.quaraTag;
+            this.sourceIp = request.sourceIp;
+            this.status = request.status;
         } 
 
         /**

@@ -88,12 +88,12 @@ public class ModifyTagWithUuidRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyTagWithUuidRequest response) {
-            super(response);
-            this.machineTypes = response.machineTypes;
-            this.tagId = response.tagId;
-            this.tagList = response.tagList;
-            this.uuidList = response.uuidList;
+        private Builder(ModifyTagWithUuidRequest request) {
+            super(request);
+            this.machineTypes = request.machineTypes;
+            this.tagId = request.tagId;
+            this.tagList = request.tagList;
+            this.uuidList = request.uuidList;
         } 
 
         /**

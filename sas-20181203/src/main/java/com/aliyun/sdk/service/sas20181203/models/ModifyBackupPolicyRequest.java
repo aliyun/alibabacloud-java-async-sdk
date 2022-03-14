@@ -117,14 +117,14 @@ public class ModifyBackupPolicyRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyBackupPolicyRequest response) {
-            super(response);
-            this.id = response.id;
-            this.name = response.name;
-            this.policy = response.policy;
-            this.policyRegionId = response.policyRegionId;
-            this.policyVersion = response.policyVersion;
-            this.uuidList = response.uuidList;
+        private Builder(ModifyBackupPolicyRequest request) {
+            super(request);
+            this.id = request.id;
+            this.name = request.name;
+            this.policy = request.policy;
+            this.policyRegionId = request.policyRegionId;
+            this.policyVersion = request.policyVersion;
+            this.uuidList = request.uuidList;
         } 
 
         /**

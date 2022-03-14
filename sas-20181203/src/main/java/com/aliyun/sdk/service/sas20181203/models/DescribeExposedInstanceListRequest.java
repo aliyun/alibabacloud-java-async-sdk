@@ -165,18 +165,18 @@ public class DescribeExposedInstanceListRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeExposedInstanceListRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.exposureComponent = response.exposureComponent;
-            this.exposureIp = response.exposureIp;
-            this.exposurePort = response.exposurePort;
-            this.groupId = response.groupId;
-            this.healthStatus = response.healthStatus;
-            this.instanceId = response.instanceId;
-            this.instanceName = response.instanceName;
-            this.pageSize = response.pageSize;
-            this.vulStatus = response.vulStatus;
+        private Builder(DescribeExposedInstanceListRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.exposureComponent = request.exposureComponent;
+            this.exposureIp = request.exposureIp;
+            this.exposurePort = request.exposurePort;
+            this.groupId = request.groupId;
+            this.healthStatus = request.healthStatus;
+            this.instanceId = request.instanceId;
+            this.instanceName = request.instanceName;
+            this.pageSize = request.pageSize;
+            this.vulStatus = request.vulStatus;
         } 
 
         /**

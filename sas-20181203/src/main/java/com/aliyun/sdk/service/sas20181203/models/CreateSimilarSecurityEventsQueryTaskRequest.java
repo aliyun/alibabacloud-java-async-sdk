@@ -87,12 +87,12 @@ public class CreateSimilarSecurityEventsQueryTaskRequest extends Request {
             super();
         } 
 
-        private Builder(CreateSimilarSecurityEventsQueryTaskRequest response) {
-            super(response);
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.securityEventId = response.securityEventId;
-            this.similarEventScenarioCode = response.similarEventScenarioCode;
-            this.sourceIp = response.sourceIp;
+        private Builder(CreateSimilarSecurityEventsQueryTaskRequest request) {
+            super(request);
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.securityEventId = request.securityEventId;
+            this.similarEventScenarioCode = request.similarEventScenarioCode;
+            this.sourceIp = request.sourceIp;
         } 
 
         /**

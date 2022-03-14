@@ -75,11 +75,11 @@ public class InstallBackupClientRequest extends Request {
             super();
         } 
 
-        private Builder(InstallBackupClientRequest response) {
-            super(response);
-            this.policyVersion = response.policyVersion;
-            this.uuid = response.uuid;
-            this.uuidList = response.uuidList;
+        private Builder(InstallBackupClientRequest request) {
+            super(request);
+            this.policyVersion = request.policyVersion;
+            this.uuid = request.uuid;
+            this.uuidList = request.uuidList;
         } 
 
         /**

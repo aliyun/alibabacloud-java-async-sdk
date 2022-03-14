@@ -113,14 +113,14 @@ public class DescribeRiskListCheckResultRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeRiskListCheckResultRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.instanceIds = response.instanceIds;
-            this.lang = response.lang;
-            this.pageSize = response.pageSize;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sourceIp = response.sourceIp;
+        private Builder(DescribeRiskListCheckResultRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.instanceIds = request.instanceIds;
+            this.lang = request.lang;
+            this.pageSize = request.pageSize;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceIp = request.sourceIp;
         } 
 
         /**

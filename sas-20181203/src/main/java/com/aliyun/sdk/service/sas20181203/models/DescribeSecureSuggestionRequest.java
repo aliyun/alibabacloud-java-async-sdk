@@ -61,10 +61,10 @@ public class DescribeSecureSuggestionRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeSecureSuggestionRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.sourceIp = response.sourceIp;
+        private Builder(DescribeSecureSuggestionRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.sourceIp = request.sourceIp;
         } 
 
         /**

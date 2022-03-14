@@ -48,9 +48,9 @@ public class DescribeNoticeConfigRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeNoticeConfigRequest response) {
-            super(response);
-            this.sourceIp = response.sourceIp;
+        private Builder(DescribeNoticeConfigRequest request) {
+            super(request);
+            this.sourceIp = request.sourceIp;
         } 
 
         /**

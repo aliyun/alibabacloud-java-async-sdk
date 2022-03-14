@@ -49,9 +49,9 @@ public class DescribeScanTaskProgressRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeScanTaskProgressRequest response) {
-            super(response);
-            this.taskId = response.taskId;
+        private Builder(DescribeScanTaskProgressRequest request) {
+            super(request);
+            this.taskId = request.taskId;
         } 
 
         /**

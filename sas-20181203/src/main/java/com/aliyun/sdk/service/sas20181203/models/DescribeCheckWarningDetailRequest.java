@@ -75,11 +75,11 @@ public class DescribeCheckWarningDetailRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeCheckWarningDetailRequest response) {
-            super(response);
-            this.checkWarningId = response.checkWarningId;
-            this.lang = response.lang;
-            this.sourceIp = response.sourceIp;
+        private Builder(DescribeCheckWarningDetailRequest request) {
+            super(request);
+            this.checkWarningId = request.checkWarningId;
+            this.lang = request.lang;
+            this.sourceIp = request.sourceIp;
         } 
 
         /**

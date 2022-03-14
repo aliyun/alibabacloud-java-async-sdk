@@ -96,14 +96,14 @@ public class DescribeDialogMessagesResponseBody extends TeaModel {
         private String dialogKey;
 
         @NameInMap("ID")
-        private Long ID;
+        private Long id;
 
         @NameInMap("Params")
         private String params;
 
         private DialogList(Builder builder) {
             this.dialogKey = builder.dialogKey;
-            this.ID = builder.ID;
+            this.id = builder.id;
             this.params = builder.params;
         }
 
@@ -123,10 +123,10 @@ public class DescribeDialogMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * @return ID
+         * @return id
          */
-        public Long getID() {
-            return this.ID;
+        public Long getId() {
+            return this.id;
         }
 
         /**
@@ -138,7 +138,7 @@ public class DescribeDialogMessagesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String dialogKey; 
-            private Long ID; 
+            private Long id; 
             private String params; 
 
             /**
@@ -152,8 +152,8 @@ public class DescribeDialogMessagesResponseBody extends TeaModel {
             /**
              * ID.
              */
-            public Builder ID(Long ID) {
-                this.ID = ID;
+            public Builder id(Long id) {
+                this.id = id;
                 return this;
             }
 

@@ -35,8 +35,8 @@ public class GetBackupStorageCountRequest extends Request {
             super();
         } 
 
-        private Builder(GetBackupStorageCountRequest response) {
-            super(response);
+        private Builder(GetBackupStorageCountRequest request) {
+            super(request);
         } 
 
         @Override

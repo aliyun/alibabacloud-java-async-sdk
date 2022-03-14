@@ -63,10 +63,10 @@ public class ModifyLoginSwitchConfigRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyLoginSwitchConfigRequest response) {
-            super(response);
-            this.item = response.item;
-            this.status = response.status;
+        private Builder(ModifyLoginSwitchConfigRequest request) {
+            super(request);
+            this.item = request.item;
+            this.status = request.status;
         } 
 
         /**

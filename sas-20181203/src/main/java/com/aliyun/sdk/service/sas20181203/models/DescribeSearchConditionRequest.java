@@ -74,11 +74,11 @@ public class DescribeSearchConditionRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeSearchConditionRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.sourceIp = response.sourceIp;
-            this.type = response.type;
+        private Builder(DescribeSearchConditionRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.sourceIp = request.sourceIp;
+            this.type = request.type;
         } 
 
         /**

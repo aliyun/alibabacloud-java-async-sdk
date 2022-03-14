@@ -74,11 +74,11 @@ public class DeleteStrategyRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteStrategyRequest response) {
-            super(response);
-            this.id = response.id;
-            this.lang = response.lang;
-            this.sourceIp = response.sourceIp;
+        private Builder(DeleteStrategyRequest request) {
+            super(request);
+            this.id = request.id;
+            this.lang = request.lang;
+            this.sourceIp = request.sourceIp;
         } 
 
         /**

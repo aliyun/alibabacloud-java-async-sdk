@@ -61,10 +61,10 @@ public class DescribeAntiBruteForceRulesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAntiBruteForceRulesRequest response) {
-            super(response);
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sourceIp = response.sourceIp;
+        private Builder(DescribeAntiBruteForceRulesRequest request) {
+            super(request);
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceIp = request.sourceIp;
         } 
 
         /**

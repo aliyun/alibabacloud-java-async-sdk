@@ -101,13 +101,13 @@ public class DescribeExposedStatisticsDetailRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeExposedStatisticsDetailRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.pageSize = response.pageSize;
-            this.statisticsType = response.statisticsType;
-            this.statisticsTypeGatewayType = response.statisticsTypeGatewayType;
-            this.statisticsTypeInstanceValue = response.statisticsTypeInstanceValue;
+        private Builder(DescribeExposedStatisticsDetailRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.pageSize = request.pageSize;
+            this.statisticsType = request.statisticsType;
+            this.statisticsTypeGatewayType = request.statisticsTypeGatewayType;
+            this.statisticsTypeInstanceValue = request.statisticsTypeInstanceValue;
         } 
 
         /**

@@ -49,9 +49,9 @@ public class StartVirusScanTaskRequest extends Request {
             super();
         } 
 
-        private Builder(StartVirusScanTaskRequest response) {
-            super(response);
-            this.targetInfo = response.targetInfo;
+        private Builder(StartVirusScanTaskRequest request) {
+            super(request);
+            this.targetInfo = request.targetInfo;
         } 
 
         /**

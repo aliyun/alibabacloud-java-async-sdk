@@ -113,14 +113,14 @@ public class OperationSuspEventsRequest extends Request {
             super();
         } 
 
-        private Builder(OperationSuspEventsRequest response) {
-            super(response);
-            this.from = response.from;
-            this.operation = response.operation;
-            this.sourceIp = response.sourceIp;
-            this.subOperation = response.subOperation;
-            this.suspiciousEventIds = response.suspiciousEventIds;
-            this.warnType = response.warnType;
+        private Builder(OperationSuspEventsRequest request) {
+            super(request);
+            this.from = request.from;
+            this.operation = request.operation;
+            this.sourceIp = request.sourceIp;
+            this.subOperation = request.subOperation;
+            this.suspiciousEventIds = request.suspiciousEventIds;
+            this.warnType = request.warnType;
         } 
 
         /**

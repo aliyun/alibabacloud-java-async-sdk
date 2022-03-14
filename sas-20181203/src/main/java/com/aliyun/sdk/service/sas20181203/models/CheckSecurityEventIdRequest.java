@@ -62,10 +62,10 @@ public class CheckSecurityEventIdRequest extends Request {
             super();
         } 
 
-        private Builder(CheckSecurityEventIdRequest response) {
-            super(response);
-            this.securityEventIds = response.securityEventIds;
-            this.uuid = response.uuid;
+        private Builder(CheckSecurityEventIdRequest request) {
+            super(request);
+            this.securityEventIds = request.securityEventIds;
+            this.uuid = request.uuid;
         } 
 
         /**

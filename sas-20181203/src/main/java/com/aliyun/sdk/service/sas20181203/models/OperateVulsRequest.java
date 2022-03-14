@@ -91,12 +91,12 @@ public class OperateVulsRequest extends Request {
             super();
         } 
 
-        private Builder(OperateVulsRequest response) {
-            super(response);
-            this.operateType = response.operateType;
-            this.type = response.type;
-            this.uuids = response.uuids;
-            this.vulNames = response.vulNames;
+        private Builder(OperateVulsRequest request) {
+            super(request);
+            this.operateType = request.operateType;
+            this.type = request.type;
+            this.uuids = request.uuids;
+            this.vulNames = request.vulNames;
         } 
 
         /**

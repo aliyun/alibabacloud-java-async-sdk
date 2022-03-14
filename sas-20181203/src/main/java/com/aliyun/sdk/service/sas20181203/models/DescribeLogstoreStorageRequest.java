@@ -61,10 +61,10 @@ public class DescribeLogstoreStorageRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeLogstoreStorageRequest response) {
-            super(response);
-            this.from = response.from;
-            this.lang = response.lang;
+        private Builder(DescribeLogstoreStorageRequest request) {
+            super(request);
+            this.from = request.from;
+            this.lang = request.lang;
         } 
 
         /**

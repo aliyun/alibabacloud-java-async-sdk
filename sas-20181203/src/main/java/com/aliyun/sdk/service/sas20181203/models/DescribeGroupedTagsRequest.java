@@ -48,9 +48,9 @@ public class DescribeGroupedTagsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeGroupedTagsRequest response) {
-            super(response);
-            this.machineTypes = response.machineTypes;
+        private Builder(DescribeGroupedTagsRequest request) {
+            super(request);
+            this.machineTypes = request.machineTypes;
         } 
 
         /**

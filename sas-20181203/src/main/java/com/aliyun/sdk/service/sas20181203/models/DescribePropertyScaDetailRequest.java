@@ -295,28 +295,28 @@ public class DescribePropertyScaDetailRequest extends Request {
             super();
         } 
 
-        private Builder(DescribePropertyScaDetailRequest response) {
-            super(response);
-            this.biz = response.biz;
-            this.bizType = response.bizType;
-            this.currentPage = response.currentPage;
-            this.lang = response.lang;
-            this.name = response.name;
-            this.pageSize = response.pageSize;
-            this.pid = response.pid;
-            this.port = response.port;
-            this.processStartedEnd = response.processStartedEnd;
-            this.processStartedStart = response.processStartedStart;
-            this.remark = response.remark;
-            this.scaName = response.scaName;
-            this.scaNamePattern = response.scaNamePattern;
-            this.scaVersion = response.scaVersion;
-            this.searchInfo = response.searchInfo;
-            this.searchInfoSub = response.searchInfoSub;
-            this.searchItem = response.searchItem;
-            this.searchItemSub = response.searchItemSub;
-            this.user = response.user;
-            this.uuid = response.uuid;
+        private Builder(DescribePropertyScaDetailRequest request) {
+            super(request);
+            this.biz = request.biz;
+            this.bizType = request.bizType;
+            this.currentPage = request.currentPage;
+            this.lang = request.lang;
+            this.name = request.name;
+            this.pageSize = request.pageSize;
+            this.pid = request.pid;
+            this.port = request.port;
+            this.processStartedEnd = request.processStartedEnd;
+            this.processStartedStart = request.processStartedStart;
+            this.remark = request.remark;
+            this.scaName = request.scaName;
+            this.scaNamePattern = request.scaNamePattern;
+            this.scaVersion = request.scaVersion;
+            this.searchInfo = request.searchInfo;
+            this.searchInfoSub = request.searchInfoSub;
+            this.searchItem = request.searchItem;
+            this.searchItemSub = request.searchItemSub;
+            this.user = request.user;
+            this.uuid = request.uuid;
         } 
 
         /**

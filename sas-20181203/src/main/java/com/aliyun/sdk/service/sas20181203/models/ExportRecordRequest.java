@@ -75,11 +75,11 @@ public class ExportRecordRequest extends Request {
             super();
         } 
 
-        private Builder(ExportRecordRequest response) {
-            super(response);
-            this.exportType = response.exportType;
-            this.lang = response.lang;
-            this.params = response.params;
+        private Builder(ExportRecordRequest request) {
+            super(request);
+            this.exportType = request.exportType;
+            this.lang = request.lang;
+            this.params = request.params;
         } 
 
         /**

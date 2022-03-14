@@ -35,8 +35,8 @@ public class DescribeVpcHoneyPotCriteriaRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeVpcHoneyPotCriteriaRequest response) {
-            super(response);
+        private Builder(DescribeVpcHoneyPotCriteriaRequest request) {
+            super(request);
         } 
 
         @Override

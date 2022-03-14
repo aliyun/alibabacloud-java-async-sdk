@@ -193,20 +193,20 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAffectedMaliciousFileImagesRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.imageDigest = response.imageDigest;
-            this.imageLayer = response.imageLayer;
-            this.imageTag = response.imageTag;
-            this.lang = response.lang;
-            this.maliciousMd5 = response.maliciousMd5;
-            this.pageSize = response.pageSize;
-            this.repoId = response.repoId;
-            this.repoInstanceId = response.repoInstanceId;
-            this.repoName = response.repoName;
-            this.repoNamespace = response.repoNamespace;
-            this.repoRegionId = response.repoRegionId;
+        private Builder(DescribeAffectedMaliciousFileImagesRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.imageDigest = request.imageDigest;
+            this.imageLayer = request.imageLayer;
+            this.imageTag = request.imageTag;
+            this.lang = request.lang;
+            this.maliciousMd5 = request.maliciousMd5;
+            this.pageSize = request.pageSize;
+            this.repoId = request.repoId;
+            this.repoInstanceId = request.repoInstanceId;
+            this.repoName = request.repoName;
+            this.repoNamespace = request.repoNamespace;
+            this.repoRegionId = request.repoRegionId;
         } 
 
         /**

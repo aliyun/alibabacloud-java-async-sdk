@@ -103,13 +103,13 @@ public class FixCheckWarningsRequest extends Request {
             super();
         } 
 
-        private Builder(FixCheckWarningsRequest response) {
-            super(response);
-            this.checkParams = response.checkParams;
-            this.lang = response.lang;
-            this.riskId = response.riskId;
-            this.sourceIp = response.sourceIp;
-            this.uuids = response.uuids;
+        private Builder(FixCheckWarningsRequest request) {
+            super(request);
+            this.checkParams = request.checkParams;
+            this.lang = request.lang;
+            this.riskId = request.riskId;
+            this.sourceIp = request.sourceIp;
+            this.uuids = request.uuids;
         } 
 
         /**

@@ -76,11 +76,11 @@ public class ValidateHcWarningsRequest extends Request {
             super();
         } 
 
-        private Builder(ValidateHcWarningsRequest response) {
-            super(response);
-            this.riskIds = response.riskIds;
-            this.sourceIp = response.sourceIp;
-            this.uuids = response.uuids;
+        private Builder(ValidateHcWarningsRequest request) {
+            super(request);
+            this.riskIds = request.riskIds;
+            this.sourceIp = request.sourceIp;
+            this.uuids = request.uuids;
         } 
 
         /**

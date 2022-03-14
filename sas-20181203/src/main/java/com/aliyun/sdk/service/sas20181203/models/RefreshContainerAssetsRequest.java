@@ -49,9 +49,9 @@ public class RefreshContainerAssetsRequest extends Request {
             super();
         } 
 
-        private Builder(RefreshContainerAssetsRequest response) {
-            super(response);
-            this.assetType = response.assetType;
+        private Builder(RefreshContainerAssetsRequest request) {
+            super(request);
+            this.assetType = request.assetType;
         } 
 
         /**

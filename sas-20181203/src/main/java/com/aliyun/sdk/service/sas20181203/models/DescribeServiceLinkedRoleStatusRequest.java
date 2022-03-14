@@ -35,8 +35,8 @@ public class DescribeServiceLinkedRoleStatusRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeServiceLinkedRoleStatusRequest response) {
-            super(response);
+        private Builder(DescribeServiceLinkedRoleStatusRequest request) {
+            super(request);
         } 
 
         @Override

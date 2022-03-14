@@ -104,13 +104,13 @@ public class DescribeBackupFilesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeBackupFilesRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.pageSize = response.pageSize;
-            this.path = response.path;
-            this.snapshotHash = response.snapshotHash;
-            this.uuid = response.uuid;
+        private Builder(DescribeBackupFilesRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.pageSize = request.pageSize;
+            this.path = request.path;
+            this.snapshotHash = request.snapshotHash;
+            this.uuid = request.uuid;
         } 
 
         /**

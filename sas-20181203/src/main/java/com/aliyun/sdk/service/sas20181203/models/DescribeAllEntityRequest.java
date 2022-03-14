@@ -35,8 +35,8 @@ public class DescribeAllEntityRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAllEntityRequest response) {
-            super(response);
+        private Builder(DescribeAllEntityRequest request) {
+            super(request);
         } 
 
         @Override

@@ -295,28 +295,28 @@ public class DescribeImageGroupedVulListRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeImageGroupedVulListRequest response) {
-            super(response);
-            this.aliasName = response.aliasName;
-            this.currentPage = response.currentPage;
-            this.cveId = response.cveId;
-            this.groupId = response.groupId;
-            this.imageDigest = response.imageDigest;
-            this.imageLayer = response.imageLayer;
-            this.imageTag = response.imageTag;
-            this.isLatest = response.isLatest;
-            this.lang = response.lang;
-            this.name = response.name;
-            this.necessity = response.necessity;
-            this.pageSize = response.pageSize;
-            this.patchId = response.patchId;
-            this.repoId = response.repoId;
-            this.repoInstanceId = response.repoInstanceId;
-            this.repoName = response.repoName;
-            this.repoNamespace = response.repoNamespace;
-            this.repoRegionId = response.repoRegionId;
-            this.type = response.type;
-            this.uuids = response.uuids;
+        private Builder(DescribeImageGroupedVulListRequest request) {
+            super(request);
+            this.aliasName = request.aliasName;
+            this.currentPage = request.currentPage;
+            this.cveId = request.cveId;
+            this.groupId = request.groupId;
+            this.imageDigest = request.imageDigest;
+            this.imageLayer = request.imageLayer;
+            this.imageTag = request.imageTag;
+            this.isLatest = request.isLatest;
+            this.lang = request.lang;
+            this.name = request.name;
+            this.necessity = request.necessity;
+            this.pageSize = request.pageSize;
+            this.patchId = request.patchId;
+            this.repoId = request.repoId;
+            this.repoInstanceId = request.repoInstanceId;
+            this.repoName = request.repoName;
+            this.repoNamespace = request.repoNamespace;
+            this.repoRegionId = request.repoRegionId;
+            this.type = request.type;
+            this.uuids = request.uuids;
         } 
 
         /**

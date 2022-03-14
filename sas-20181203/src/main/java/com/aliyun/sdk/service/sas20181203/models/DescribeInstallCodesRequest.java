@@ -35,8 +35,8 @@ public class DescribeInstallCodesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeInstallCodesRequest response) {
-            super(response);
+        private Builder(DescribeInstallCodesRequest request) {
+            super(request);
         } 
 
         @Override

@@ -35,8 +35,8 @@ public class CreateServiceLinkedRoleRequest extends Request {
             super();
         } 
 
-        private Builder(CreateServiceLinkedRoleRequest response) {
-            super(response);
+        private Builder(CreateServiceLinkedRoleRequest request) {
+            super(request);
         } 
 
         @Override

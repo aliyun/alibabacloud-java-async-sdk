@@ -35,8 +35,8 @@ public class DescribeImageScanAuthCountRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeImageScanAuthCountRequest response) {
-            super(response);
+        private Builder(DescribeImageScanAuthCountRequest request) {
+            super(request);
         } 
 
         @Override

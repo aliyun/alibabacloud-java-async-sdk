@@ -113,14 +113,14 @@ public class ModifySecurityCheckScheduleConfigRequest extends Request {
             super();
         } 
 
-        private Builder(ModifySecurityCheckScheduleConfigRequest response) {
-            super(response);
-            this.daysOfWeek = response.daysOfWeek;
-            this.endTime = response.endTime;
-            this.lang = response.lang;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sourceIp = response.sourceIp;
-            this.startTime = response.startTime;
+        private Builder(ModifySecurityCheckScheduleConfigRequest request) {
+            super(request);
+            this.daysOfWeek = request.daysOfWeek;
+            this.endTime = request.endTime;
+            this.lang = request.lang;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceIp = request.sourceIp;
+            this.startTime = request.startTime;
         } 
 
         /**

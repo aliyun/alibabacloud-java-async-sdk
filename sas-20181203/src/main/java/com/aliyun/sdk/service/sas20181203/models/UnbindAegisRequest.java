@@ -49,9 +49,9 @@ public class UnbindAegisRequest extends Request {
             super();
         } 
 
-        private Builder(UnbindAegisRequest response) {
-            super(response);
-            this.uuids = response.uuids;
+        private Builder(UnbindAegisRequest request) {
+            super(request);
+            this.uuids = request.uuids;
         } 
 
         /**

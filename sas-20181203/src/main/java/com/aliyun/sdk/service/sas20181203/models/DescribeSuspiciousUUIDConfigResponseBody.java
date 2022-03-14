@@ -19,12 +19,12 @@ public class DescribeSuspiciousUUIDConfigResponseBody extends TeaModel {
     private String requestId;
 
     @NameInMap("UUIDList")
-    private java.util.List < String > uUIDList;
+    private java.util.List < String > UUIDList;
 
     private DescribeSuspiciousUUIDConfigResponseBody(Builder builder) {
         this.count = builder.count;
         this.requestId = builder.requestId;
-        this.uUIDList = builder.uUIDList;
+        this.UUIDList = builder.UUIDList;
     }
 
     public static Builder builder() {
@@ -50,16 +50,16 @@ public class DescribeSuspiciousUUIDConfigResponseBody extends TeaModel {
     }
 
     /**
-     * @return uUIDList
+     * @return UUIDList
      */
     public java.util.List < String > getUUIDList() {
-        return this.uUIDList;
+        return this.UUIDList;
     }
 
     public static final class Builder {
         private Integer count; 
         private String requestId; 
-        private java.util.List < String > uUIDList; 
+        private java.util.List < String > UUIDList; 
 
         /**
          * Count.
@@ -80,8 +80,8 @@ public class DescribeSuspiciousUUIDConfigResponseBody extends TeaModel {
         /**
          * UUIDList.
          */
-        public Builder uUIDList(java.util.List < String > uUIDList) {
-            this.uUIDList = uUIDList;
+        public Builder UUIDList(java.util.List < String > UUIDList) {
+            this.UUIDList = UUIDList;
             return this;
         }
 

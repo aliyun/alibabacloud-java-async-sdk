@@ -102,13 +102,13 @@ public class DescribeAccesskeyLeakListRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAccesskeyLeakListRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.pageSize = response.pageSize;
-            this.query = response.query;
-            this.startTs = response.startTs;
-            this.status = response.status;
+        private Builder(DescribeAccesskeyLeakListRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.pageSize = request.pageSize;
+            this.query = request.query;
+            this.startTs = request.startTs;
+            this.status = request.status;
         } 
 
         /**

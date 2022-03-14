@@ -316,6 +316,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ModifyOperateVulResponse> modifyOperateVul(ModifyOperateVulRequest request);
 
+    CompletableFuture<ModifyPropertyScheduleConfigResponse> modifyPropertyScheduleConfig(ModifyPropertyScheduleConfigRequest request);
+
     CompletableFuture<ModifyPushAllTaskResponse> modifyPushAllTask(ModifyPushAllTaskRequest request);
 
     CompletableFuture<ModifyRiskCheckStatusResponse> modifyRiskCheckStatus(ModifyRiskCheckStatusRequest request);

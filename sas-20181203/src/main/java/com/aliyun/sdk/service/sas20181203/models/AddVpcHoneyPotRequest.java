@@ -63,10 +63,10 @@ public class AddVpcHoneyPotRequest extends Request {
             super();
         } 
 
-        private Builder(AddVpcHoneyPotRequest response) {
-            super(response);
-            this.vpcId = response.vpcId;
-            this.vpcSwitchId = response.vpcSwitchId;
+        private Builder(AddVpcHoneyPotRequest request) {
+            super(request);
+            this.vpcId = request.vpcId;
+            this.vpcSwitchId = request.vpcSwitchId;
         } 
 
         /**

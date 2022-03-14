@@ -166,18 +166,18 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeImageListWithBaselineNameRequest response) {
-            super(response);
-            this.baselineNameKey = response.baselineNameKey;
-            this.criteria = response.criteria;
-            this.criteriaType = response.criteriaType;
-            this.currentPage = response.currentPage;
-            this.imageDigest = response.imageDigest;
-            this.lang = response.lang;
-            this.pageSize = response.pageSize;
-            this.repoInstanceId = response.repoInstanceId;
-            this.repoName = response.repoName;
-            this.repoNamespace = response.repoNamespace;
+        private Builder(DescribeImageListWithBaselineNameRequest request) {
+            super(request);
+            this.baselineNameKey = request.baselineNameKey;
+            this.criteria = request.criteria;
+            this.criteriaType = request.criteriaType;
+            this.currentPage = request.currentPage;
+            this.imageDigest = request.imageDigest;
+            this.lang = request.lang;
+            this.pageSize = request.pageSize;
+            this.repoInstanceId = request.repoInstanceId;
+            this.repoName = request.repoName;
+            this.repoNamespace = request.repoNamespace;
         } 
 
         /**

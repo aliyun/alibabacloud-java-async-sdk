@@ -35,8 +35,8 @@ public class DescribeExposedStatisticsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeExposedStatisticsRequest response) {
-            super(response);
+        private Builder(DescribeExposedStatisticsRequest request) {
+            super(request);
         } 
 
         @Override

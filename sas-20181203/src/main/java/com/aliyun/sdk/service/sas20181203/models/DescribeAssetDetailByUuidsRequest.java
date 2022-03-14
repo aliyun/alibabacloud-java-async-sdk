@@ -49,9 +49,9 @@ public class DescribeAssetDetailByUuidsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAssetDetailByUuidsRequest response) {
-            super(response);
-            this.uuids = response.uuids;
+        private Builder(DescribeAssetDetailByUuidsRequest request) {
+            super(request);
+            this.uuids = request.uuids;
         } 
 
         /**

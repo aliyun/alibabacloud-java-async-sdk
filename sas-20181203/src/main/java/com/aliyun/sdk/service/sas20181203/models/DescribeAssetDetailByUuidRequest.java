@@ -75,11 +75,11 @@ public class DescribeAssetDetailByUuidRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAssetDetailByUuidRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.sourceIp = response.sourceIp;
-            this.uuid = response.uuid;
+        private Builder(DescribeAssetDetailByUuidRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.sourceIp = request.sourceIp;
+            this.uuid = request.uuid;
         } 
 
         /**

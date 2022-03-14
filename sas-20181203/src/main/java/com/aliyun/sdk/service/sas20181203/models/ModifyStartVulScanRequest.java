@@ -61,10 +61,10 @@ public class ModifyStartVulScanRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyStartVulScanRequest response) {
-            super(response);
-            this.types = response.types;
-            this.uuids = response.uuids;
+        private Builder(ModifyStartVulScanRequest request) {
+            super(request);
+            this.types = request.types;
+            this.uuids = request.uuids;
         } 
 
         /**

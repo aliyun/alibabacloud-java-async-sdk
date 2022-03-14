@@ -89,12 +89,12 @@ public class DescribeInstanceStatisticsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeInstanceStatisticsRequest response) {
-            super(response);
-            this.from = response.from;
-            this.lang = response.lang;
-            this.sourceIp = response.sourceIp;
-            this.uuid = response.uuid;
+        private Builder(DescribeInstanceStatisticsRequest request) {
+            super(request);
+            this.from = request.from;
+            this.lang = request.lang;
+            this.sourceIp = request.sourceIp;
+            this.uuid = request.uuid;
         } 
 
         /**

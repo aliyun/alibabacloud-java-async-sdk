@@ -152,17 +152,17 @@ public class ModifyAntiBruteForceRuleRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyAntiBruteForceRuleRequest response) {
-            super(response);
-            this.defaultRule = response.defaultRule;
-            this.failCount = response.failCount;
-            this.forbiddenTime = response.forbiddenTime;
-            this.id = response.id;
-            this.name = response.name;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sourceIp = response.sourceIp;
-            this.span = response.span;
-            this.uuidList = response.uuidList;
+        private Builder(ModifyAntiBruteForceRuleRequest request) {
+            super(request);
+            this.defaultRule = request.defaultRule;
+            this.failCount = request.failCount;
+            this.forbiddenTime = request.forbiddenTime;
+            this.id = request.id;
+            this.name = request.name;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceIp = request.sourceIp;
+            this.span = request.span;
+            this.uuidList = request.uuidList;
         } 
 
         /**

@@ -74,11 +74,11 @@ public class DescribeUserBaselineAuthorizationRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeUserBaselineAuthorizationRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sourceIp = response.sourceIp;
+        private Builder(DescribeUserBaselineAuthorizationRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceIp = request.sourceIp;
         } 
 
         /**

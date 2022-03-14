@@ -62,10 +62,10 @@ public class DeleteTagWithUuidRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteTagWithUuidRequest response) {
-            super(response);
-            this.tagName = response.tagName;
-            this.uuidList = response.uuidList;
+        private Builder(DeleteTagWithUuidRequest request) {
+            super(request);
+            this.tagName = request.tagName;
+            this.uuidList = request.uuidList;
         } 
 
         /**

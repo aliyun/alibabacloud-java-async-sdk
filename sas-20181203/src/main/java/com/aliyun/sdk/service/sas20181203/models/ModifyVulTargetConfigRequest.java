@@ -87,12 +87,12 @@ public class ModifyVulTargetConfigRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyVulTargetConfigRequest response) {
-            super(response);
-            this.config = response.config;
-            this.sourceIp = response.sourceIp;
-            this.type = response.type;
-            this.uuid = response.uuid;
+        private Builder(ModifyVulTargetConfigRequest request) {
+            super(request);
+            this.config = request.config;
+            this.sourceIp = request.sourceIp;
+            this.type = request.type;
+            this.uuid = request.uuid;
         } 
 
         /**

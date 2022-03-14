@@ -74,11 +74,11 @@ public class RollbackSuspEventQuaraFileRequest extends Request {
             super();
         } 
 
-        private Builder(RollbackSuspEventQuaraFileRequest response) {
-            super(response);
-            this.from = response.from;
-            this.quaraFileId = response.quaraFileId;
-            this.sourceIp = response.sourceIp;
+        private Builder(RollbackSuspEventQuaraFileRequest request) {
+            super(request);
+            this.from = request.from;
+            this.quaraFileId = request.quaraFileId;
+            this.sourceIp = request.sourceIp;
         } 
 
         /**

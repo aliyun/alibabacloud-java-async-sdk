@@ -204,21 +204,21 @@ public class ModifyWebLockUpdateConfigRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyWebLockUpdateConfigRequest response) {
-            super(response);
-            this.defenceMode = response.defenceMode;
-            this.dir = response.dir;
-            this.exclusiveDir = response.exclusiveDir;
-            this.exclusiveFile = response.exclusiveFile;
-            this.exclusiveFileType = response.exclusiveFileType;
-            this.id = response.id;
-            this.inclusiveFile = response.inclusiveFile;
-            this.inclusiveFileType = response.inclusiveFileType;
-            this.lang = response.lang;
-            this.localBackupDir = response.localBackupDir;
-            this.mode = response.mode;
-            this.sourceIp = response.sourceIp;
-            this.uuid = response.uuid;
+        private Builder(ModifyWebLockUpdateConfigRequest request) {
+            super(request);
+            this.defenceMode = request.defenceMode;
+            this.dir = request.dir;
+            this.exclusiveDir = request.exclusiveDir;
+            this.exclusiveFile = request.exclusiveFile;
+            this.exclusiveFileType = request.exclusiveFileType;
+            this.id = request.id;
+            this.inclusiveFile = request.inclusiveFile;
+            this.inclusiveFileType = request.inclusiveFileType;
+            this.lang = request.lang;
+            this.localBackupDir = request.localBackupDir;
+            this.mode = request.mode;
+            this.sourceIp = request.sourceIp;
+            this.uuid = request.uuid;
         } 
 
         /**

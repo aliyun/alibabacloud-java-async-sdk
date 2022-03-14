@@ -113,14 +113,14 @@ public class DescribeVpcHoneyPotListRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeVpcHoneyPotListRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.honeyPotExistence = response.honeyPotExistence;
-            this.pageSize = response.pageSize;
-            this.vpcId = response.vpcId;
-            this.vpcName = response.vpcName;
-            this.vpcRegionId = response.vpcRegionId;
+        private Builder(DescribeVpcHoneyPotListRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.honeyPotExistence = request.honeyPotExistence;
+            this.pageSize = request.pageSize;
+            this.vpcId = request.vpcId;
+            this.vpcName = request.vpcName;
+            this.vpcRegionId = request.vpcRegionId;
         } 
 
         /**

@@ -139,16 +139,16 @@ public class CreateAntiBruteForceRuleRequest extends Request {
             super();
         } 
 
-        private Builder(CreateAntiBruteForceRuleRequest response) {
-            super(response);
-            this.defaultRule = response.defaultRule;
-            this.failCount = response.failCount;
-            this.forbiddenTime = response.forbiddenTime;
-            this.name = response.name;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sourceIp = response.sourceIp;
-            this.span = response.span;
-            this.uuidList = response.uuidList;
+        private Builder(CreateAntiBruteForceRuleRequest request) {
+            super(request);
+            this.defaultRule = request.defaultRule;
+            this.failCount = request.failCount;
+            this.forbiddenTime = request.forbiddenTime;
+            this.name = request.name;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceIp = request.sourceIp;
+            this.span = request.span;
+            this.uuidList = request.uuidList;
         } 
 
         /**

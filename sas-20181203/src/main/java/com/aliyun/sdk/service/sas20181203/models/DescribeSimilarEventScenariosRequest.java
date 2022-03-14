@@ -74,11 +74,11 @@ public class DescribeSimilarEventScenariosRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeSimilarEventScenariosRequest response) {
-            super(response);
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.securityEventId = response.securityEventId;
-            this.sourceIp = response.sourceIp;
+        private Builder(DescribeSimilarEventScenariosRequest request) {
+            super(request);
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.securityEventId = request.securityEventId;
+            this.sourceIp = request.sourceIp;
         } 
 
         /**

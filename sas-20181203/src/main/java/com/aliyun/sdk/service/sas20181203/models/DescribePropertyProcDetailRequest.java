@@ -152,17 +152,17 @@ public class DescribePropertyProcDetailRequest extends Request {
             super();
         } 
 
-        private Builder(DescribePropertyProcDetailRequest response) {
-            super(response);
-            this.cmdline = response.cmdline;
-            this.currentPage = response.currentPage;
-            this.name = response.name;
-            this.pageSize = response.pageSize;
-            this.procTimeEnd = response.procTimeEnd;
-            this.procTimeStart = response.procTimeStart;
-            this.remark = response.remark;
-            this.user = response.user;
-            this.uuid = response.uuid;
+        private Builder(DescribePropertyProcDetailRequest request) {
+            super(request);
+            this.cmdline = request.cmdline;
+            this.currentPage = request.currentPage;
+            this.name = request.name;
+            this.pageSize = request.pageSize;
+            this.procTimeEnd = request.procTimeEnd;
+            this.procTimeStart = request.procTimeStart;
+            this.remark = request.remark;
+            this.user = request.user;
+            this.uuid = request.uuid;
         } 
 
         /**

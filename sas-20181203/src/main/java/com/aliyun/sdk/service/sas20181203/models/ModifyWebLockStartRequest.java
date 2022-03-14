@@ -152,17 +152,17 @@ public class ModifyWebLockStartRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyWebLockStartRequest response) {
-            super(response);
-            this.defenceMode = response.defenceMode;
-            this.dir = response.dir;
-            this.exclusiveDir = response.exclusiveDir;
-            this.exclusiveFile = response.exclusiveFile;
-            this.exclusiveFileType = response.exclusiveFileType;
-            this.inclusiveFileType = response.inclusiveFileType;
-            this.localBackupDir = response.localBackupDir;
-            this.mode = response.mode;
-            this.uuid = response.uuid;
+        private Builder(ModifyWebLockStartRequest request) {
+            super(request);
+            this.defenceMode = request.defenceMode;
+            this.dir = request.dir;
+            this.exclusiveDir = request.exclusiveDir;
+            this.exclusiveFile = request.exclusiveFile;
+            this.exclusiveFileType = request.exclusiveFileType;
+            this.inclusiveFileType = request.inclusiveFileType;
+            this.localBackupDir = request.localBackupDir;
+            this.mode = request.mode;
+            this.uuid = request.uuid;
         } 
 
         /**

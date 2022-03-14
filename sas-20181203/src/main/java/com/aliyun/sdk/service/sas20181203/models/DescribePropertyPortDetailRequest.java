@@ -126,15 +126,15 @@ public class DescribePropertyPortDetailRequest extends Request {
             super();
         } 
 
-        private Builder(DescribePropertyPortDetailRequest response) {
-            super(response);
-            this.bindIp = response.bindIp;
-            this.currentPage = response.currentPage;
-            this.pageSize = response.pageSize;
-            this.port = response.port;
-            this.procName = response.procName;
-            this.remark = response.remark;
-            this.uuid = response.uuid;
+        private Builder(DescribePropertyPortDetailRequest request) {
+            super(request);
+            this.bindIp = request.bindIp;
+            this.currentPage = request.currentPage;
+            this.pageSize = request.pageSize;
+            this.port = request.port;
+            this.procName = request.procName;
+            this.remark = request.remark;
+            this.uuid = request.uuid;
         } 
 
         /**

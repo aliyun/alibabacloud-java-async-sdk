@@ -61,10 +61,10 @@ public class OperateAgentClientInstallRequest extends Request {
             super();
         } 
 
-        private Builder(OperateAgentClientInstallRequest response) {
-            super(response);
-            this.instanceIds = response.instanceIds;
-            this.uuids = response.uuids;
+        private Builder(OperateAgentClientInstallRequest request) {
+            super(request);
+            this.instanceIds = request.instanceIds;
+            this.uuids = request.uuids;
         } 
 
         /**

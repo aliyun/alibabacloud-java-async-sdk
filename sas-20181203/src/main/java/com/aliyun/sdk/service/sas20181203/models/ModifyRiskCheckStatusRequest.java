@@ -116,14 +116,14 @@ public class ModifyRiskCheckStatusRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyRiskCheckStatusRequest response) {
-            super(response);
-            this.itemId = response.itemId;
-            this.lang = response.lang;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sourceIp = response.sourceIp;
-            this.status = response.status;
-            this.taskId = response.taskId;
+        private Builder(ModifyRiskCheckStatusRequest request) {
+            super(request);
+            this.itemId = request.itemId;
+            this.lang = request.lang;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceIp = request.sourceIp;
+            this.status = request.status;
+            this.taskId = request.taskId;
         } 
 
         /**

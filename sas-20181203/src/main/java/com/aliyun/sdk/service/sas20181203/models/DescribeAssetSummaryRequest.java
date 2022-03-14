@@ -35,8 +35,8 @@ public class DescribeAssetSummaryRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAssetSummaryRequest response) {
-            super(response);
+        private Builder(DescribeAssetSummaryRequest request) {
+            super(request);
         } 
 
         @Override

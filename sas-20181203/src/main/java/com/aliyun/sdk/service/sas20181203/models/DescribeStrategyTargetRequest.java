@@ -75,11 +75,11 @@ public class DescribeStrategyTargetRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeStrategyTargetRequest response) {
-            super(response);
-            this.config = response.config;
-            this.sourceIp = response.sourceIp;
-            this.type = response.type;
+        private Builder(DescribeStrategyTargetRequest request) {
+            super(request);
+            this.config = request.config;
+            this.sourceIp = request.sourceIp;
+            this.type = request.type;
         } 
 
         /**

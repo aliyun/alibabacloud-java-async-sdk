@@ -49,9 +49,9 @@ public class DescribeContainerStatisticsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeContainerStatisticsRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
+        private Builder(DescribeContainerStatisticsRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
         } 
 
         /**

@@ -334,31 +334,31 @@ public class DescribeSuspEventsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeSuspEventsRequest response) {
-            super(response);
-            this.alarmUniqueInfo = response.alarmUniqueInfo;
-            this.clusterId = response.clusterId;
-            this.containerFieldName = response.containerFieldName;
-            this.containerFieldValue = response.containerFieldValue;
-            this.currentPage = response.currentPage;
-            this.dealed = response.dealed;
-            this.eventNames = response.eventNames;
-            this.from = response.from;
-            this.groupId = response.groupId;
-            this.lang = response.lang;
-            this.levels = response.levels;
-            this.name = response.name;
-            this.operateErrorCodeList = response.operateErrorCodeList;
-            this.pageSize = response.pageSize;
-            this.parentEventTypes = response.parentEventTypes;
-            this.remark = response.remark;
-            this.source = response.source;
-            this.sourceIp = response.sourceIp;
-            this.status = response.status;
-            this.tacticId = response.tacticId;
-            this.targetType = response.targetType;
-            this.uniqueInfo = response.uniqueInfo;
-            this.uuids = response.uuids;
+        private Builder(DescribeSuspEventsRequest request) {
+            super(request);
+            this.alarmUniqueInfo = request.alarmUniqueInfo;
+            this.clusterId = request.clusterId;
+            this.containerFieldName = request.containerFieldName;
+            this.containerFieldValue = request.containerFieldValue;
+            this.currentPage = request.currentPage;
+            this.dealed = request.dealed;
+            this.eventNames = request.eventNames;
+            this.from = request.from;
+            this.groupId = request.groupId;
+            this.lang = request.lang;
+            this.levels = request.levels;
+            this.name = request.name;
+            this.operateErrorCodeList = request.operateErrorCodeList;
+            this.pageSize = request.pageSize;
+            this.parentEventTypes = request.parentEventTypes;
+            this.remark = request.remark;
+            this.source = request.source;
+            this.sourceIp = request.sourceIp;
+            this.status = request.status;
+            this.tacticId = request.tacticId;
+            this.targetType = request.targetType;
+            this.uniqueInfo = request.uniqueInfo;
+            this.uuids = request.uuids;
         } 
 
         /**

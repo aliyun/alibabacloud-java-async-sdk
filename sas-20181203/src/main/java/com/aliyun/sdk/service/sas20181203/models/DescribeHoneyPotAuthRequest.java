@@ -35,8 +35,8 @@ public class DescribeHoneyPotAuthRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeHoneyPotAuthRequest response) {
-            super(response);
+        private Builder(DescribeHoneyPotAuthRequest request) {
+            super(request);
         } 
 
         @Override

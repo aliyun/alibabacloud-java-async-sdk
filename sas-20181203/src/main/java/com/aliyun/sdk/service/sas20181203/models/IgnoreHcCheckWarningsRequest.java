@@ -115,14 +115,14 @@ public class IgnoreHcCheckWarningsRequest extends Request {
             super();
         } 
 
-        private Builder(IgnoreHcCheckWarningsRequest response) {
-            super(response);
-            this.checkIds = response.checkIds;
-            this.checkWarningIds = response.checkWarningIds;
-            this.reason = response.reason;
-            this.riskId = response.riskId;
-            this.sourceIp = response.sourceIp;
-            this.type = response.type;
+        private Builder(IgnoreHcCheckWarningsRequest request) {
+            super(request);
+            this.checkIds = request.checkIds;
+            this.checkWarningIds = request.checkWarningIds;
+            this.reason = request.reason;
+            this.riskId = request.riskId;
+            this.sourceIp = request.sourceIp;
+            this.type = request.type;
         } 
 
         /**

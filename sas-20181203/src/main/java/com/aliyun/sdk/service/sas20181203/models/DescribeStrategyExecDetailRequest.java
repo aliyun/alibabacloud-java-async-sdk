@@ -88,12 +88,12 @@ public class DescribeStrategyExecDetailRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeStrategyExecDetailRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.pageSize = response.pageSize;
-            this.sourceIp = response.sourceIp;
-            this.strategyId = response.strategyId;
+        private Builder(DescribeStrategyExecDetailRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.pageSize = request.pageSize;
+            this.sourceIp = request.sourceIp;
+            this.strategyId = request.strategyId;
         } 
 
         /**

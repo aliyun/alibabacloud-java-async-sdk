@@ -74,11 +74,11 @@ public class ModifyPushAllTaskRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyPushAllTaskRequest response) {
-            super(response);
-            this.sourceIp = response.sourceIp;
-            this.tasks = response.tasks;
-            this.uuids = response.uuids;
+        private Builder(ModifyPushAllTaskRequest request) {
+            super(request);
+            this.sourceIp = request.sourceIp;
+            this.tasks = request.tasks;
+            this.uuids = request.uuids;
         } 
 
         /**

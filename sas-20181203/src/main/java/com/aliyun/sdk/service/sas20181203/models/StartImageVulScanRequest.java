@@ -165,18 +165,18 @@ public class StartImageVulScanRequest extends Request {
             super();
         } 
 
-        private Builder(StartImageVulScanRequest response) {
-            super(response);
-            this.imageDigest = response.imageDigest;
-            this.imageLayer = response.imageLayer;
-            this.imageTag = response.imageTag;
-            this.lang = response.lang;
-            this.registryTypes = response.registryTypes;
-            this.repName = response.repName;
-            this.repoId = response.repoId;
-            this.repoInstanceId = response.repoInstanceId;
-            this.repoNamespace = response.repoNamespace;
-            this.repoRegionId = response.repoRegionId;
+        private Builder(StartImageVulScanRequest request) {
+            super(request);
+            this.imageDigest = request.imageDigest;
+            this.imageLayer = request.imageLayer;
+            this.imageTag = request.imageTag;
+            this.lang = request.lang;
+            this.registryTypes = request.registryTypes;
+            this.repName = request.repName;
+            this.repoId = request.repoId;
+            this.repoInstanceId = request.repoInstanceId;
+            this.repoNamespace = request.repoNamespace;
+            this.repoRegionId = request.repoRegionId;
         } 
 
         /**

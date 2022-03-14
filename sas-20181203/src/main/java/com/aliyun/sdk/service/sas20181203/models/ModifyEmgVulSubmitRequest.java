@@ -76,11 +76,11 @@ public class ModifyEmgVulSubmitRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyEmgVulSubmitRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.name = response.name;
-            this.userAgreement = response.userAgreement;
+        private Builder(ModifyEmgVulSubmitRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.name = request.name;
+            this.userAgreement = request.userAgreement;
         } 
 
         /**

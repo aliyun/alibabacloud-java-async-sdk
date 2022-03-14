@@ -63,10 +63,10 @@ public class PauseClientRequest extends Request {
             super();
         } 
 
-        private Builder(PauseClientRequest response) {
-            super(response);
-            this.uuids = response.uuids;
-            this.value = response.value;
+        private Builder(PauseClientRequest request) {
+            super(request);
+            this.uuids = request.uuids;
+            this.value = request.value;
         } 
 
         /**

@@ -87,12 +87,12 @@ public class ModifyWebLockDeleteConfigRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyWebLockDeleteConfigRequest response) {
-            super(response);
-            this.id = response.id;
-            this.lang = response.lang;
-            this.sourceIp = response.sourceIp;
-            this.uuid = response.uuid;
+        private Builder(ModifyWebLockDeleteConfigRequest request) {
+            super(request);
+            this.id = request.id;
+            this.lang = request.lang;
+            this.sourceIp = request.sourceIp;
+            this.uuid = request.uuid;
         } 
 
         /**

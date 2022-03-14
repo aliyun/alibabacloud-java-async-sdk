@@ -74,11 +74,11 @@ public class CreateOrUpdateAssetGroupRequest extends Request {
             super();
         } 
 
-        private Builder(CreateOrUpdateAssetGroupRequest response) {
-            super(response);
-            this.groupId = response.groupId;
-            this.groupName = response.groupName;
-            this.uuids = response.uuids;
+        private Builder(CreateOrUpdateAssetGroupRequest request) {
+            super(request);
+            this.groupId = request.groupId;
+            this.groupName = request.groupName;
+            this.uuids = request.uuids;
         } 
 
         /**

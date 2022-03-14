@@ -87,12 +87,12 @@ public class DescribePropertySoftwareItemRequest extends Request {
             super();
         } 
 
-        private Builder(DescribePropertySoftwareItemRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.forceFlush = response.forceFlush;
-            this.name = response.name;
-            this.pageSize = response.pageSize;
+        private Builder(DescribePropertySoftwareItemRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.forceFlush = request.forceFlush;
+            this.name = request.name;
+            this.pageSize = request.pageSize;
         } 
 
         /**

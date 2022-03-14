@@ -35,8 +35,8 @@ public class DescribeCloudProductFieldStatisticsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeCloudProductFieldStatisticsRequest response) {
-            super(response);
+        private Builder(DescribeCloudProductFieldStatisticsRequest request) {
+            super(request);
         } 
 
         @Override

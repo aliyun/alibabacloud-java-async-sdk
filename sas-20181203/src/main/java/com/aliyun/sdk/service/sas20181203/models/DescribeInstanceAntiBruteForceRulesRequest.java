@@ -74,11 +74,11 @@ public class DescribeInstanceAntiBruteForceRulesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeInstanceAntiBruteForceRulesRequest response) {
-            super(response);
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sourceIp = response.sourceIp;
-            this.uuidList = response.uuidList;
+        private Builder(DescribeInstanceAntiBruteForceRulesRequest request) {
+            super(request);
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceIp = request.sourceIp;
+            this.uuidList = request.uuidList;
         } 
 
         /**

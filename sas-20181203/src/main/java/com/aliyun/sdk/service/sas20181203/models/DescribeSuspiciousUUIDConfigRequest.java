@@ -49,9 +49,9 @@ public class DescribeSuspiciousUUIDConfigRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeSuspiciousUUIDConfigRequest response) {
-            super(response);
-            this.type = response.type;
+        private Builder(DescribeSuspiciousUUIDConfigRequest request) {
+            super(request);
+            this.type = request.type;
         } 
 
         /**

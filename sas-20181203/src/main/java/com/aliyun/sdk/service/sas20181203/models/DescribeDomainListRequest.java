@@ -100,13 +100,13 @@ public class DescribeDomainListRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDomainListRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.domainType = response.domainType;
-            this.fuzzyDomain = response.fuzzyDomain;
-            this.pageSize = response.pageSize;
-            this.sourceIp = response.sourceIp;
+        private Builder(DescribeDomainListRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.domainType = request.domainType;
+            this.fuzzyDomain = request.fuzzyDomain;
+            this.pageSize = request.pageSize;
+            this.sourceIp = request.sourceIp;
         } 
 
         /**

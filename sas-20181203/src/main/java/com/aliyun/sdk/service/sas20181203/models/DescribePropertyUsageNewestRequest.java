@@ -48,9 +48,9 @@ public class DescribePropertyUsageNewestRequest extends Request {
             super();
         } 
 
-        private Builder(DescribePropertyUsageNewestRequest response) {
-            super(response);
-            this.type = response.type;
+        private Builder(DescribePropertyUsageNewestRequest request) {
+            super(request);
+            this.type = request.type;
         } 
 
         /**

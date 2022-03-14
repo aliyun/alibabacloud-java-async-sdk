@@ -74,11 +74,11 @@ public class DescribeWebLockConfigListRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeWebLockConfigListRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.sourceIp = response.sourceIp;
-            this.uuid = response.uuid;
+        private Builder(DescribeWebLockConfigListRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.sourceIp = request.sourceIp;
+            this.uuid = request.uuid;
         } 
 
         /**

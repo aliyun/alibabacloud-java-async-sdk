@@ -87,12 +87,12 @@ public class DescribeStrategyRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeStrategyRequest response) {
-            super(response);
-            this.customType = response.customType;
-            this.lang = response.lang;
-            this.sourceIp = response.sourceIp;
-            this.strategyIds = response.strategyIds;
+        private Builder(DescribeStrategyRequest request) {
+            super(request);
+            this.customType = request.customType;
+            this.lang = request.lang;
+            this.sourceIp = request.sourceIp;
+            this.strategyIds = request.strategyIds;
         } 
 
         /**

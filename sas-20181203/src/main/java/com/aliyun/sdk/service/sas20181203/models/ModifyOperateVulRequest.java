@@ -90,12 +90,12 @@ public class ModifyOperateVulRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyOperateVulRequest response) {
-            super(response);
-            this.info = response.info;
-            this.operateType = response.operateType;
-            this.reason = response.reason;
-            this.type = response.type;
+        private Builder(ModifyOperateVulRequest request) {
+            super(request);
+            this.info = request.info;
+            this.operateType = request.operateType;
+            this.reason = request.reason;
+            this.type = request.type;
         } 
 
         /**

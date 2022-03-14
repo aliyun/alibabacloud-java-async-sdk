@@ -283,27 +283,27 @@ public class DescribeImageVulListRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeImageVulListRequest response) {
-            super(response);
-            this.aliasName = response.aliasName;
-            this.currentPage = response.currentPage;
-            this.dealed = response.dealed;
-            this.digest = response.digest;
-            this.instanceId = response.instanceId;
-            this.lang = response.lang;
-            this.name = response.name;
-            this.necessity = response.necessity;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.repoId = response.repoId;
-            this.repoInstanceId = response.repoInstanceId;
-            this.repoName = response.repoName;
-            this.repoNamespace = response.repoNamespace;
-            this.repoRegionId = response.repoRegionId;
-            this.statusList = response.statusList;
-            this.tag = response.tag;
-            this.type = response.type;
-            this.uuids = response.uuids;
+        private Builder(DescribeImageVulListRequest request) {
+            super(request);
+            this.aliasName = request.aliasName;
+            this.currentPage = request.currentPage;
+            this.dealed = request.dealed;
+            this.digest = request.digest;
+            this.instanceId = request.instanceId;
+            this.lang = request.lang;
+            this.name = request.name;
+            this.necessity = request.necessity;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.repoId = request.repoId;
+            this.repoInstanceId = request.repoInstanceId;
+            this.repoName = request.repoName;
+            this.repoNamespace = request.repoNamespace;
+            this.repoRegionId = request.repoRegionId;
+            this.statusList = request.statusList;
+            this.tag = request.tag;
+            this.type = request.type;
+            this.uuids = request.uuids;
         } 
 
         /**

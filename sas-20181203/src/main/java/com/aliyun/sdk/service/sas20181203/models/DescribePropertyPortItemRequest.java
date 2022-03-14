@@ -87,12 +87,12 @@ public class DescribePropertyPortItemRequest extends Request {
             super();
         } 
 
-        private Builder(DescribePropertyPortItemRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.forceFlush = response.forceFlush;
-            this.pageSize = response.pageSize;
-            this.port = response.port;
+        private Builder(DescribePropertyPortItemRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.forceFlush = request.forceFlush;
+            this.pageSize = request.pageSize;
+            this.port = request.port;
         } 
 
         /**

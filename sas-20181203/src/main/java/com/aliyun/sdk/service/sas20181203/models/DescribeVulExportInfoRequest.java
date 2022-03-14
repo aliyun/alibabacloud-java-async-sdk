@@ -48,9 +48,9 @@ public class DescribeVulExportInfoRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeVulExportInfoRequest response) {
-            super(response);
-            this.exportId = response.exportId;
+        private Builder(DescribeVulExportInfoRequest request) {
+            super(request);
+            this.exportId = request.exportId;
         } 
 
         /**

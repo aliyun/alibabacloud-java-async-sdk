@@ -192,20 +192,20 @@ public class DescribeVulListRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeVulListRequest response) {
-            super(response);
-            this.aliasName = response.aliasName;
-            this.attachTypes = response.attachTypes;
-            this.currentPage = response.currentPage;
-            this.dealed = response.dealed;
-            this.groupId = response.groupId;
-            this.lang = response.lang;
-            this.necessity = response.necessity;
-            this.pageSize = response.pageSize;
-            this.remark = response.remark;
-            this.type = response.type;
-            this.uuids = response.uuids;
-            this.vpcInstanceIds = response.vpcInstanceIds;
+        private Builder(DescribeVulListRequest request) {
+            super(request);
+            this.aliasName = request.aliasName;
+            this.attachTypes = request.attachTypes;
+            this.currentPage = request.currentPage;
+            this.dealed = request.dealed;
+            this.groupId = request.groupId;
+            this.lang = request.lang;
+            this.necessity = request.necessity;
+            this.pageSize = request.pageSize;
+            this.remark = request.remark;
+            this.type = request.type;
+            this.uuids = request.uuids;
+            this.vpcInstanceIds = request.vpcInstanceIds;
         } 
 
         /**

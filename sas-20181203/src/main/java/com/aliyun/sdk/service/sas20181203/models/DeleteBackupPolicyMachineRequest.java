@@ -89,12 +89,12 @@ public class DeleteBackupPolicyMachineRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteBackupPolicyMachineRequest response) {
-            super(response);
-            this.policyId = response.policyId;
-            this.policyVersion = response.policyVersion;
-            this.uuid = response.uuid;
-            this.uuidList = response.uuidList;
+        private Builder(DeleteBackupPolicyMachineRequest request) {
+            super(request);
+            this.policyId = request.policyId;
+            this.policyVersion = request.policyVersion;
+            this.uuid = request.uuid;
+            this.uuidList = request.uuidList;
         } 
 
         /**

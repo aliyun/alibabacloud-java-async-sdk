@@ -128,15 +128,15 @@ public class DescribeCheckWarningsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeCheckWarningsRequest response) {
-            super(response);
-            this.checkId = response.checkId;
-            this.currentPage = response.currentPage;
-            this.lang = response.lang;
-            this.pageSize = response.pageSize;
-            this.riskId = response.riskId;
-            this.sourceIp = response.sourceIp;
-            this.uuid = response.uuid;
+        private Builder(DescribeCheckWarningsRequest request) {
+            super(request);
+            this.checkId = request.checkId;
+            this.currentPage = request.currentPage;
+            this.lang = request.lang;
+            this.pageSize = request.pageSize;
+            this.riskId = request.riskId;
+            this.sourceIp = request.sourceIp;
+            this.uuid = request.uuid;
         } 
 
         /**

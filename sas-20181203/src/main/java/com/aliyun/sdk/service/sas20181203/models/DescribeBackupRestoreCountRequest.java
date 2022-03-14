@@ -35,8 +35,8 @@ public class DescribeBackupRestoreCountRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeBackupRestoreCountRequest response) {
-            super(response);
+        private Builder(DescribeBackupRestoreCountRequest request) {
+            super(request);
         } 
 
         @Override

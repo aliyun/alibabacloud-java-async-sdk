@@ -113,14 +113,14 @@ public class HandleSimilarSecurityEventsRequest extends Request {
             super();
         } 
 
-        private Builder(HandleSimilarSecurityEventsRequest response) {
-            super(response);
-            this.markMissParam = response.markMissParam;
-            this.operationCode = response.operationCode;
-            this.operationParams = response.operationParams;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sourceIp = response.sourceIp;
-            this.taskId = response.taskId;
+        private Builder(HandleSimilarSecurityEventsRequest request) {
+            super(request);
+            this.markMissParam = request.markMissParam;
+            this.operationCode = request.operationCode;
+            this.operationParams = request.operationParams;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceIp = request.sourceIp;
+            this.taskId = request.taskId;
         } 
 
         /**

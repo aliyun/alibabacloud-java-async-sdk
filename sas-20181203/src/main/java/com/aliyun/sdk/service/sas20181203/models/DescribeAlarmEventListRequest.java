@@ -207,21 +207,21 @@ public class DescribeAlarmEventListRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAlarmEventListRequest response) {
-            super(response);
-            this.alarmEventName = response.alarmEventName;
-            this.alarmEventType = response.alarmEventType;
-            this.currentPage = response.currentPage;
-            this.dealed = response.dealed;
-            this.from = response.from;
-            this.groupId = response.groupId;
-            this.lang = response.lang;
-            this.levels = response.levels;
-            this.operateErrorCodeList = response.operateErrorCodeList;
-            this.pageSize = response.pageSize;
-            this.remark = response.remark;
-            this.sourceIp = response.sourceIp;
-            this.tacticId = response.tacticId;
+        private Builder(DescribeAlarmEventListRequest request) {
+            super(request);
+            this.alarmEventName = request.alarmEventName;
+            this.alarmEventType = request.alarmEventType;
+            this.currentPage = request.currentPage;
+            this.dealed = request.dealed;
+            this.from = request.from;
+            this.groupId = request.groupId;
+            this.lang = request.lang;
+            this.levels = request.levels;
+            this.operateErrorCodeList = request.operateErrorCodeList;
+            this.pageSize = request.pageSize;
+            this.remark = request.remark;
+            this.sourceIp = request.sourceIp;
+            this.tacticId = request.tacticId;
         } 
 
         /**

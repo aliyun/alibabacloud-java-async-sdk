@@ -139,16 +139,16 @@ public class DescribePropertyUserDetailRequest extends Request {
             super();
         } 
 
-        private Builder(DescribePropertyUserDetailRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.isRoot = response.isRoot;
-            this.lastLoginTimeEnd = response.lastLoginTimeEnd;
-            this.lastLoginTimeStart = response.lastLoginTimeStart;
-            this.pageSize = response.pageSize;
-            this.remark = response.remark;
-            this.user = response.user;
-            this.uuid = response.uuid;
+        private Builder(DescribePropertyUserDetailRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.isRoot = request.isRoot;
+            this.lastLoginTimeEnd = request.lastLoginTimeEnd;
+            this.lastLoginTimeStart = request.lastLoginTimeStart;
+            this.pageSize = request.pageSize;
+            this.remark = request.remark;
+            this.user = request.user;
+            this.uuid = request.uuid;
         } 
 
         /**

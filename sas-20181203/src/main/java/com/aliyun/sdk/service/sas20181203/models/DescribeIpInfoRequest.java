@@ -62,10 +62,10 @@ public class DescribeIpInfoRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeIpInfoRequest response) {
-            super(response);
-            this.field = response.field;
-            this.ip = response.ip;
+        private Builder(DescribeIpInfoRequest request) {
+            super(request);
+            this.field = request.field;
+            this.ip = request.ip;
         } 
 
         /**

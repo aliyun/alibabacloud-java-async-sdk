@@ -48,9 +48,9 @@ public class DescribeExposedInstanceCriteriaRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeExposedInstanceCriteriaRequest response) {
-            super(response);
-            this.value = response.value;
+        private Builder(DescribeExposedInstanceCriteriaRequest request) {
+            super(request);
+            this.value = request.value;
         } 
 
         /**

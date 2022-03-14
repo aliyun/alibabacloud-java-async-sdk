@@ -140,16 +140,16 @@ public class DescribeWarningMachinesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeWarningMachinesRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.lang = response.lang;
-            this.machineName = response.machineName;
-            this.pageSize = response.pageSize;
-            this.riskId = response.riskId;
-            this.sourceIp = response.sourceIp;
-            this.strategyId = response.strategyId;
-            this.uuids = response.uuids;
+        private Builder(DescribeWarningMachinesRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.lang = request.lang;
+            this.machineName = request.machineName;
+            this.pageSize = request.pageSize;
+            this.riskId = request.riskId;
+            this.sourceIp = request.sourceIp;
+            this.strategyId = request.strategyId;
+            this.uuids = request.uuids;
         } 
 
         /**

@@ -35,8 +35,8 @@ public class DescribeVpcListRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeVpcListRequest response) {
-            super(response);
+        private Builder(DescribeVpcListRequest request) {
+            super(request);
         } 
 
         @Override

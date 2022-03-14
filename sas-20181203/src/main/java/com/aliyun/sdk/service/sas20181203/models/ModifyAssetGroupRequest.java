@@ -76,11 +76,11 @@ public class ModifyAssetGroupRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyAssetGroupRequest response) {
-            super(response);
-            this.groupId = response.groupId;
-            this.sourceIp = response.sourceIp;
-            this.uuids = response.uuids;
+        private Builder(ModifyAssetGroupRequest request) {
+            super(request);
+            this.groupId = request.groupId;
+            this.sourceIp = request.sourceIp;
+            this.uuids = request.uuids;
         } 
 
         /**

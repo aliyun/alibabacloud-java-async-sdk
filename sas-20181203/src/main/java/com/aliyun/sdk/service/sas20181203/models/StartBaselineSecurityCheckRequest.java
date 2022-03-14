@@ -101,13 +101,13 @@ public class StartBaselineSecurityCheckRequest extends Request {
             super();
         } 
 
-        private Builder(StartBaselineSecurityCheckRequest response) {
-            super(response);
-            this.itemIds = response.itemIds;
-            this.lang = response.lang;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sourceIp = response.sourceIp;
-            this.type = response.type;
+        private Builder(StartBaselineSecurityCheckRequest request) {
+            super(request);
+            this.itemIds = request.itemIds;
+            this.lang = request.lang;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceIp = request.sourceIp;
+            this.type = request.type;
         } 
 
         /**

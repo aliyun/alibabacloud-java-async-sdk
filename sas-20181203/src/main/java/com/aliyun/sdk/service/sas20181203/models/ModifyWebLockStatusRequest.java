@@ -87,12 +87,12 @@ public class ModifyWebLockStatusRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyWebLockStatusRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.sourceIp = response.sourceIp;
-            this.status = response.status;
-            this.uuid = response.uuid;
+        private Builder(ModifyWebLockStatusRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.sourceIp = request.sourceIp;
+            this.status = request.status;
+            this.uuid = request.uuid;
         } 
 
         /**

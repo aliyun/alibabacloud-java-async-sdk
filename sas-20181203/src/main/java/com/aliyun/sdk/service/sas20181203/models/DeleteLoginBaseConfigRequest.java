@@ -76,11 +76,11 @@ public class DeleteLoginBaseConfigRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteLoginBaseConfigRequest response) {
-            super(response);
-            this.config = response.config;
-            this.target = response.target;
-            this.type = response.type;
+        private Builder(DeleteLoginBaseConfigRequest request) {
+            super(request);
+            this.config = request.config;
+            this.target = request.target;
+            this.type = request.type;
         } 
 
         /**

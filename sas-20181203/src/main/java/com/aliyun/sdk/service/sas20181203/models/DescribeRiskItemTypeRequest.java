@@ -74,11 +74,11 @@ public class DescribeRiskItemTypeRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeRiskItemTypeRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sourceIp = response.sourceIp;
+        private Builder(DescribeRiskItemTypeRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceIp = request.sourceIp;
         } 
 
         /**

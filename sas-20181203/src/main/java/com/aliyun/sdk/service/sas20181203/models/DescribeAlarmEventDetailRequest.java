@@ -89,12 +89,12 @@ public class DescribeAlarmEventDetailRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAlarmEventDetailRequest response) {
-            super(response);
-            this.alarmUniqueInfo = response.alarmUniqueInfo;
-            this.from = response.from;
-            this.lang = response.lang;
-            this.sourceIp = response.sourceIp;
+        private Builder(DescribeAlarmEventDetailRequest request) {
+            super(request);
+            this.alarmUniqueInfo = request.alarmUniqueInfo;
+            this.from = request.from;
+            this.lang = request.lang;
+            this.sourceIp = request.sourceIp;
         } 
 
         /**

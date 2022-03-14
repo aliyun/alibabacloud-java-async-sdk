@@ -87,12 +87,12 @@ public class DescribeRiskCheckSummaryRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeRiskCheckSummaryRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.resourceDirectoryAccountId = response.resourceDirectoryAccountId;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sourceIp = response.sourceIp;
+        private Builder(DescribeRiskCheckSummaryRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceIp = request.sourceIp;
         } 
 
         /**

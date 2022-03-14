@@ -142,16 +142,16 @@ public class DescribeAttackAnalysisDataRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAttackAnalysisDataRequest response) {
-            super(response);
-            this.base64 = response.base64;
-            this.currentPage = response.currentPage;
-            this.data = response.data;
-            this.endTime = response.endTime;
-            this.lang = response.lang;
-            this.pageSize = response.pageSize;
-            this.startTime = response.startTime;
-            this.type = response.type;
+        private Builder(DescribeAttackAnalysisDataRequest request) {
+            super(request);
+            this.base64 = request.base64;
+            this.currentPage = request.currentPage;
+            this.data = request.data;
+            this.endTime = request.endTime;
+            this.lang = request.lang;
+            this.pageSize = request.pageSize;
+            this.startTime = request.startTime;
+            this.type = request.type;
         } 
 
         /**
