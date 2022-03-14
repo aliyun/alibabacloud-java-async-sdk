@@ -144,6 +144,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<QueryWorkspaceUserListResponse> queryWorkspaceUserList(QueryWorkspaceUserListRequest request);
 
+    CompletableFuture<ResultCallbackResponse> resultCallback(ResultCallbackRequest request);
+
     CompletableFuture<SaveFavoritesResponse> saveFavorites(SaveFavoritesRequest request);
 
     CompletableFuture<SetDataLevelPermissionExtraConfigResponse> setDataLevelPermissionExtraConfig(SetDataLevelPermissionExtraConfigRequest request);
