@@ -105,13 +105,13 @@ public class ModifyBackupPlanConfigRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyBackupPlanConfigRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.fullBackupCycle = response.fullBackupCycle;
-            this.minHFileBackupCount = response.minHFileBackupCount;
-            this.nextFullBackupDate = response.nextFullBackupDate;
-            this.tables = response.tables;
+        private Builder(ModifyBackupPlanConfigRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.fullBackupCycle = request.fullBackupCycle;
+            this.minHFileBackupCount = request.minHFileBackupCount;
+            this.nextFullBackupDate = request.nextFullBackupDate;
+            this.tables = request.tables;
         } 
 
         /**

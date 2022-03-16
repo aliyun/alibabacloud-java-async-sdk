@@ -63,10 +63,10 @@ public class ModifyDiskWarningLineRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDiskWarningLineRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.warningLine = response.warningLine;
+        private Builder(ModifyDiskWarningLineRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.warningLine = request.warningLine;
         } 
 
         /**

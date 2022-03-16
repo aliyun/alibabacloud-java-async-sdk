@@ -76,11 +76,11 @@ public class AddUserHdfsInfoRequest extends Request {
             super();
         } 
 
-        private Builder(AddUserHdfsInfoRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.clusterId = response.clusterId;
-            this.extInfo = response.extInfo;
+        private Builder(AddUserHdfsInfoRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.clusterId = request.clusterId;
+            this.extInfo = request.extInfo;
         } 
 
         /**

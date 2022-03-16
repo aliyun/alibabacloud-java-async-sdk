@@ -62,10 +62,10 @@ public class DeleteInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteInstanceRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.immediateDeleteFlag = response.immediateDeleteFlag;
+        private Builder(DeleteInstanceRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.immediateDeleteFlag = request.immediateDeleteFlag;
         } 
 
         /**

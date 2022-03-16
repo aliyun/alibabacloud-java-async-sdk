@@ -49,9 +49,9 @@ public class DescribeBackupPlanConfigRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeBackupPlanConfigRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
+        private Builder(DescribeBackupPlanConfigRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
         } 
 
         /**

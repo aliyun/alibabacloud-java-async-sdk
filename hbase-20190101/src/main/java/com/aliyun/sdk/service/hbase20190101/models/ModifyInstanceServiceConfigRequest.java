@@ -101,13 +101,13 @@ public class ModifyInstanceServiceConfigRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyInstanceServiceConfigRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.configureName = response.configureName;
-            this.configureValue = response.configureValue;
-            this.parameters = response.parameters;
-            this.restart = response.restart;
+        private Builder(ModifyInstanceServiceConfigRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.configureName = request.configureName;
+            this.configureValue = request.configureValue;
+            this.parameters = request.parameters;
+            this.restart = request.restart;
         } 
 
         /**

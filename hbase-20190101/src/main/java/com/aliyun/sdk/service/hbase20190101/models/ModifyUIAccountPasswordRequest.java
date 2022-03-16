@@ -77,11 +77,11 @@ public class ModifyUIAccountPasswordRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyUIAccountPasswordRequest response) {
-            super(response);
-            this.accountName = response.accountName;
-            this.accountPassword = response.accountPassword;
-            this.clusterId = response.clusterId;
+        private Builder(ModifyUIAccountPasswordRequest request) {
+            super(request);
+            this.accountName = request.accountName;
+            this.accountPassword = request.accountPassword;
+            this.clusterId = request.clusterId;
         } 
 
         /**

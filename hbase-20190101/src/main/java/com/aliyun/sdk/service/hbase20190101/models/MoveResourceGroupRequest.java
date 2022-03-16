@@ -63,10 +63,10 @@ public class MoveResourceGroupRequest extends Request {
             super();
         } 
 
-        private Builder(MoveResourceGroupRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.newResourceGroupId = response.newResourceGroupId;
+        private Builder(MoveResourceGroupRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.newResourceGroupId = request.newResourceGroupId;
         } 
 
         /**

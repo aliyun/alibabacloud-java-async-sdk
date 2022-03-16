@@ -91,12 +91,12 @@ public class SwitchHbaseHaSlbRequest extends Request {
             super();
         } 
 
-        private Builder(SwitchHbaseHaSlbRequest response) {
-            super(response);
-            this.bdsId = response.bdsId;
-            this.haId = response.haId;
-            this.haTypes = response.haTypes;
-            this.hbaseType = response.hbaseType;
+        private Builder(SwitchHbaseHaSlbRequest request) {
+            super(request);
+            this.bdsId = request.bdsId;
+            this.haId = request.haId;
+            this.haTypes = request.haTypes;
+            this.hbaseType = request.hbaseType;
         } 
 
         /**

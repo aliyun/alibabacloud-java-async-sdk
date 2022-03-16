@@ -63,10 +63,10 @@ public class DescribeClusterConnectionRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeClusterConnectionRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.regionId = response.regionId;
+        private Builder(DescribeClusterConnectionRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.regionId = request.regionId;
         } 
 
         /**

@@ -144,16 +144,16 @@ public class ResizeMultiZoneClusterNodeCountRequest extends Request {
             super();
         } 
 
-        private Builder(ResizeMultiZoneClusterNodeCountRequest response) {
-            super(response);
-            this.arbiterVSwitchId = response.arbiterVSwitchId;
-            this.clusterId = response.clusterId;
-            this.coreNodeCount = response.coreNodeCount;
-            this.logNodeCount = response.logNodeCount;
-            this.primaryCoreNodeCount = response.primaryCoreNodeCount;
-            this.primaryVSwitchId = response.primaryVSwitchId;
-            this.standbyCoreNodeCount = response.standbyCoreNodeCount;
-            this.standbyVSwitchId = response.standbyVSwitchId;
+        private Builder(ResizeMultiZoneClusterNodeCountRequest request) {
+            super(request);
+            this.arbiterVSwitchId = request.arbiterVSwitchId;
+            this.clusterId = request.clusterId;
+            this.coreNodeCount = request.coreNodeCount;
+            this.logNodeCount = request.logNodeCount;
+            this.primaryCoreNodeCount = request.primaryCoreNodeCount;
+            this.primaryVSwitchId = request.primaryVSwitchId;
+            this.standbyCoreNodeCount = request.standbyCoreNodeCount;
+            this.standbyVSwitchId = request.standbyVSwitchId;
         } 
 
         /**

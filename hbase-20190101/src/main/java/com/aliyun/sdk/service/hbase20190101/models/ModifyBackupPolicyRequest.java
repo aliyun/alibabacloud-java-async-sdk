@@ -103,13 +103,13 @@ public class ModifyBackupPolicyRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyBackupPolicyRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.preferredBackupEndTimeUTC = response.preferredBackupEndTimeUTC;
-            this.preferredBackupPeriod = response.preferredBackupPeriod;
-            this.preferredBackupStartTimeUTC = response.preferredBackupStartTimeUTC;
-            this.preferredBackupTime = response.preferredBackupTime;
+        private Builder(ModifyBackupPolicyRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.preferredBackupEndTimeUTC = request.preferredBackupEndTimeUTC;
+            this.preferredBackupPeriod = request.preferredBackupPeriod;
+            this.preferredBackupStartTimeUTC = request.preferredBackupStartTimeUTC;
+            this.preferredBackupTime = request.preferredBackupTime;
         } 
 
         /**

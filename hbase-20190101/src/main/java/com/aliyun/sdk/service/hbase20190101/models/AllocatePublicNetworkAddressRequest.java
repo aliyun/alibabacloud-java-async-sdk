@@ -62,10 +62,10 @@ public class AllocatePublicNetworkAddressRequest extends Request {
             super();
         } 
 
-        private Builder(AllocatePublicNetworkAddressRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.clusterId = response.clusterId;
+        private Builder(AllocatePublicNetworkAddressRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.clusterId = request.clusterId;
         } 
 
         /**

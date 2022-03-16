@@ -48,9 +48,9 @@ public class DescribeInstanceTypeRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeInstanceTypeRequest response) {
-            super(response);
-            this.instanceType = response.instanceType;
+        private Builder(DescribeInstanceTypeRequest request) {
+            super(request);
+            this.instanceType = request.instanceType;
         } 
 
         /**

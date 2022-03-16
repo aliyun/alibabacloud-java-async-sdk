@@ -77,11 +77,11 @@ public class DeleteServerlessClusterRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteServerlessClusterRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.regionId = response.regionId;
-            this.zoneId = response.zoneId;
+        private Builder(DeleteServerlessClusterRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.regionId = request.regionId;
+            this.zoneId = request.zoneId;
         } 
 
         /**

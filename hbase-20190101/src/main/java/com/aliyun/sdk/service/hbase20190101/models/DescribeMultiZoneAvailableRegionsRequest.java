@@ -48,9 +48,9 @@ public class DescribeMultiZoneAvailableRegionsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeMultiZoneAvailableRegionsRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
+        private Builder(DescribeMultiZoneAvailableRegionsRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
         } 
 
         /**

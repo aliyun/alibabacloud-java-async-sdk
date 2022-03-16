@@ -63,10 +63,10 @@ public class DeleteHBaseSlbServerRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteHBaseSlbServerRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.slbServer = response.slbServer;
+        private Builder(DeleteHBaseSlbServerRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.slbServer = request.slbServer;
         } 
 
         /**

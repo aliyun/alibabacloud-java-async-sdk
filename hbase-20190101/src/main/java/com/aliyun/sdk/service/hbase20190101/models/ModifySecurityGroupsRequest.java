@@ -63,10 +63,10 @@ public class ModifySecurityGroupsRequest extends Request {
             super();
         } 
 
-        private Builder(ModifySecurityGroupsRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.securityGroupIds = response.securityGroupIds;
+        private Builder(ModifySecurityGroupsRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.securityGroupIds = request.securityGroupIds;
         } 
 
         /**

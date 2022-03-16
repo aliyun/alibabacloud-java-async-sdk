@@ -63,10 +63,10 @@ public class DescribeRestoreIncrDetailRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeRestoreIncrDetailRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.restoreRecordId = response.restoreRecordId;
+        private Builder(DescribeRestoreIncrDetailRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.restoreRecordId = request.restoreRecordId;
         } 
 
         /**

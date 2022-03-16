@@ -315,29 +315,29 @@ public class CreateClusterRequest extends Request {
             super();
         } 
 
-        private Builder(CreateClusterRequest response) {
-            super(response);
-            this.autoRenewPeriod = response.autoRenewPeriod;
-            this.clientToken = response.clientToken;
-            this.clusterName = response.clusterName;
-            this.coldStorageSize = response.coldStorageSize;
-            this.coreInstanceType = response.coreInstanceType;
-            this.diskSize = response.diskSize;
-            this.diskType = response.diskType;
-            this.encryptionKey = response.encryptionKey;
-            this.engine = response.engine;
-            this.engineVersion = response.engineVersion;
-            this.masterInstanceType = response.masterInstanceType;
-            this.nodeCount = response.nodeCount;
-            this.payType = response.payType;
-            this.period = response.period;
-            this.periodUnit = response.periodUnit;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.securityIPList = response.securityIPList;
-            this.vSwitchId = response.vSwitchId;
-            this.vpcId = response.vpcId;
-            this.zoneId = response.zoneId;
+        private Builder(CreateClusterRequest request) {
+            super(request);
+            this.autoRenewPeriod = request.autoRenewPeriod;
+            this.clientToken = request.clientToken;
+            this.clusterName = request.clusterName;
+            this.coldStorageSize = request.coldStorageSize;
+            this.coreInstanceType = request.coreInstanceType;
+            this.diskSize = request.diskSize;
+            this.diskType = request.diskType;
+            this.encryptionKey = request.encryptionKey;
+            this.engine = request.engine;
+            this.engineVersion = request.engineVersion;
+            this.masterInstanceType = request.masterInstanceType;
+            this.nodeCount = request.nodeCount;
+            this.payType = request.payType;
+            this.period = request.period;
+            this.periodUnit = request.periodUnit;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.securityIPList = request.securityIPList;
+            this.vSwitchId = request.vSwitchId;
+            this.vpcId = request.vpcId;
+            this.zoneId = request.zoneId;
         } 
 
         /**

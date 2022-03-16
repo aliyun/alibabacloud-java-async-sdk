@@ -76,11 +76,11 @@ public class DescribeMultiZoneAvailableResourceRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeMultiZoneAvailableResourceRequest response) {
-            super(response);
-            this.chargeType = response.chargeType;
-            this.regionId = response.regionId;
-            this.zoneCombination = response.zoneCombination;
+        private Builder(DescribeMultiZoneAvailableResourceRequest request) {
+            super(request);
+            this.chargeType = request.chargeType;
+            this.regionId = request.regionId;
+            this.zoneCombination = request.zoneCombination;
         } 
 
         /**

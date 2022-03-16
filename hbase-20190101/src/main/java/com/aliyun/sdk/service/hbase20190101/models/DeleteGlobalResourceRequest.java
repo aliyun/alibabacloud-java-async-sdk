@@ -77,11 +77,11 @@ public class DeleteGlobalResourceRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteGlobalResourceRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.resourceName = response.resourceName;
-            this.resourceType = response.resourceType;
+        private Builder(DeleteGlobalResourceRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.resourceName = request.resourceName;
+            this.resourceType = request.resourceType;
         } 
 
         /**

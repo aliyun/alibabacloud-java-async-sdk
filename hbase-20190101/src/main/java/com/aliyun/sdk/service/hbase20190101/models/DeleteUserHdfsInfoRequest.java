@@ -63,10 +63,10 @@ public class DeleteUserHdfsInfoRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteUserHdfsInfoRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.nameService = response.nameService;
+        private Builder(DeleteUserHdfsInfoRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.nameService = request.nameService;
         } 
 
         /**

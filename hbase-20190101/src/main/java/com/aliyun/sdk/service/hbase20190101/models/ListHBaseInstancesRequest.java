@@ -49,9 +49,9 @@ public class ListHBaseInstancesRequest extends Request {
             super();
         } 
 
-        private Builder(ListHBaseInstancesRequest response) {
-            super(response);
-            this.vpcId = response.vpcId;
+        private Builder(ListHBaseInstancesRequest request) {
+            super(request);
+            this.vpcId = request.vpcId;
         } 
 
         /**

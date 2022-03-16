@@ -77,11 +77,11 @@ public class RenewInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(RenewInstanceRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.duration = response.duration;
-            this.pricingCycle = response.pricingCycle;
+        private Builder(RenewInstanceRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.duration = request.duration;
+            this.pricingCycle = request.pricingCycle;
         } 
 
         /**

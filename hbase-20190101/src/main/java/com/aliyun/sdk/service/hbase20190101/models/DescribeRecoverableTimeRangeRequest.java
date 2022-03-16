@@ -49,9 +49,9 @@ public class DescribeRecoverableTimeRangeRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeRecoverableTimeRangeRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
+        private Builder(DescribeRecoverableTimeRangeRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
         } 
 
         /**

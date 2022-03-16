@@ -49,9 +49,9 @@ public class DescribeColdStorageRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeColdStorageRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
+        private Builder(DescribeColdStorageRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
         } 
 
         /**

@@ -278,26 +278,26 @@ public class EnableHBaseueModuleRequest extends Request {
             super();
         } 
 
-        private Builder(EnableHBaseueModuleRequest response) {
-            super(response);
-            this.autoRenewPeriod = response.autoRenewPeriod;
-            this.bdsId = response.bdsId;
-            this.clientToken = response.clientToken;
-            this.coreInstanceType = response.coreInstanceType;
-            this.diskSize = response.diskSize;
-            this.diskType = response.diskType;
-            this.hbaseueClusterId = response.hbaseueClusterId;
-            this.masterInstanceType = response.masterInstanceType;
-            this.moduleClusterName = response.moduleClusterName;
-            this.moduleTypeName = response.moduleTypeName;
-            this.nodeCount = response.nodeCount;
-            this.payType = response.payType;
-            this.period = response.period;
-            this.periodUnit = response.periodUnit;
-            this.regionId = response.regionId;
-            this.vpcId = response.vpcId;
-            this.vswitchId = response.vswitchId;
-            this.zoneId = response.zoneId;
+        private Builder(EnableHBaseueModuleRequest request) {
+            super(request);
+            this.autoRenewPeriod = request.autoRenewPeriod;
+            this.bdsId = request.bdsId;
+            this.clientToken = request.clientToken;
+            this.coreInstanceType = request.coreInstanceType;
+            this.diskSize = request.diskSize;
+            this.diskType = request.diskType;
+            this.hbaseueClusterId = request.hbaseueClusterId;
+            this.masterInstanceType = request.masterInstanceType;
+            this.moduleClusterName = request.moduleClusterName;
+            this.moduleTypeName = request.moduleTypeName;
+            this.nodeCount = request.nodeCount;
+            this.payType = request.payType;
+            this.period = request.period;
+            this.periodUnit = request.periodUnit;
+            this.regionId = request.regionId;
+            this.vpcId = request.vpcId;
+            this.vswitchId = request.vswitchId;
+            this.zoneId = request.zoneId;
         } 
 
         /**

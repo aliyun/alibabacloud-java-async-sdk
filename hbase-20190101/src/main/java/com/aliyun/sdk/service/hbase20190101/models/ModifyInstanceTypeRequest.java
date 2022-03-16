@@ -75,11 +75,11 @@ public class ModifyInstanceTypeRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyInstanceTypeRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.coreInstanceType = response.coreInstanceType;
-            this.masterInstanceType = response.masterInstanceType;
+        private Builder(ModifyInstanceTypeRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.coreInstanceType = request.coreInstanceType;
+            this.masterInstanceType = request.masterInstanceType;
         } 
 
         /**

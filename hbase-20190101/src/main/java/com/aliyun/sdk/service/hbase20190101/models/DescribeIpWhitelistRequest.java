@@ -49,9 +49,9 @@ public class DescribeIpWhitelistRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeIpWhitelistRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
+        private Builder(DescribeIpWhitelistRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
         } 
 
         /**

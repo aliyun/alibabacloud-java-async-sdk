@@ -89,12 +89,12 @@ public class DescribeBackupTablesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeBackupTablesRequest response) {
-            super(response);
-            this.backupRecordId = response.backupRecordId;
-            this.clusterId = response.clusterId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(DescribeBackupTablesRequest request) {
+            super(request);
+            this.backupRecordId = request.backupRecordId;
+            this.clusterId = request.clusterId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**

@@ -118,14 +118,14 @@ public class CreateRestorePlanRequest extends Request {
             super();
         } 
 
-        private Builder(CreateRestorePlanRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.restoreAllTable = response.restoreAllTable;
-            this.restoreByCopy = response.restoreByCopy;
-            this.restoreToDate = response.restoreToDate;
-            this.tables = response.tables;
-            this.targetClusterId = response.targetClusterId;
+        private Builder(CreateRestorePlanRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.restoreAllTable = request.restoreAllTable;
+            this.restoreByCopy = request.restoreByCopy;
+            this.restoreToDate = request.restoreToDate;
+            this.tables = request.tables;
+            this.targetClusterId = request.targetClusterId;
         } 
 
         /**

@@ -49,9 +49,9 @@ public class CloseBackupRequest extends Request {
             super();
         } 
 
-        private Builder(CloseBackupRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
+        private Builder(CloseBackupRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
         } 
 
         /**

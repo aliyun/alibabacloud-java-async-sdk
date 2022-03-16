@@ -62,10 +62,10 @@ public class DeleteMultiZoneClusterRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteMultiZoneClusterRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.immediateDeleteFlag = response.immediateDeleteFlag;
+        private Builder(DeleteMultiZoneClusterRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.immediateDeleteFlag = request.immediateDeleteFlag;
         } 
 
         /**

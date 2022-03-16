@@ -76,11 +76,11 @@ public class QueryXpackRelateDBRequest extends Request {
             super();
         } 
 
-        private Builder(QueryXpackRelateDBRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.hasSingleNode = response.hasSingleNode;
-            this.relateDbType = response.relateDbType;
+        private Builder(QueryXpackRelateDBRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.hasSingleNode = request.hasSingleNode;
+            this.relateDbType = request.relateDbType;
         } 
 
         /**

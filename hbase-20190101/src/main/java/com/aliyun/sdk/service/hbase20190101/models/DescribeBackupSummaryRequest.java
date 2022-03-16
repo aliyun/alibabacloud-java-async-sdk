@@ -75,11 +75,11 @@ public class DescribeBackupSummaryRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeBackupSummaryRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(DescribeBackupSummaryRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**

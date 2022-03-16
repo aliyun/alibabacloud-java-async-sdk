@@ -89,12 +89,12 @@ public class ResizeNodeCountRequest extends Request {
             super();
         } 
 
-        private Builder(ResizeNodeCountRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.nodeCount = response.nodeCount;
-            this.vSwitchId = response.vSwitchId;
-            this.zoneId = response.zoneId;
+        private Builder(ResizeNodeCountRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.nodeCount = request.nodeCount;
+            this.vSwitchId = request.vSwitchId;
+            this.zoneId = request.zoneId;
         } 
 
         /**

@@ -276,26 +276,26 @@ public class CreateServerlessClusterRequest extends Request {
             super();
         } 
 
-        private Builder(CreateServerlessClusterRequest response) {
-            super(response);
-            this.autoRenewPeriod = response.autoRenewPeriod;
-            this.clientToken = response.clientToken;
-            this.clientType = response.clientType;
-            this.clusterName = response.clusterName;
-            this.diskType = response.diskType;
-            this.engine = response.engine;
-            this.engineVersion = response.engineVersion;
-            this.payType = response.payType;
-            this.period = response.period;
-            this.periodUnit = response.periodUnit;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.serverlessCapability = response.serverlessCapability;
-            this.serverlessSpec = response.serverlessSpec;
-            this.serverlessStorage = response.serverlessStorage;
-            this.vSwitchId = response.vSwitchId;
-            this.vpcId = response.vpcId;
-            this.zoneId = response.zoneId;
+        private Builder(CreateServerlessClusterRequest request) {
+            super(request);
+            this.autoRenewPeriod = request.autoRenewPeriod;
+            this.clientToken = request.clientToken;
+            this.clientType = request.clientType;
+            this.clusterName = request.clusterName;
+            this.diskType = request.diskType;
+            this.engine = request.engine;
+            this.engineVersion = request.engineVersion;
+            this.payType = request.payType;
+            this.period = request.period;
+            this.periodUnit = request.periodUnit;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.serverlessCapability = request.serverlessCapability;
+            this.serverlessSpec = request.serverlessSpec;
+            this.serverlessStorage = request.serverlessStorage;
+            this.vSwitchId = request.vSwitchId;
+            this.vpcId = request.vpcId;
+            this.zoneId = request.zoneId;
         } 
 
         /**

@@ -90,12 +90,12 @@ public class ModifyIpWhitelistRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyIpWhitelistRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.groupName = response.groupName;
-            this.ipList = response.ipList;
-            this.ipVersion = response.ipVersion;
+        private Builder(ModifyIpWhitelistRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.groupName = request.groupName;
+            this.ipList = request.ipList;
+            this.ipVersion = request.ipVersion;
         } 
 
         /**

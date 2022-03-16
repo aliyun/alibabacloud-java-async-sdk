@@ -89,12 +89,12 @@ public class UnTagResourcesRequest extends Request {
             super();
         } 
 
-        private Builder(UnTagResourcesRequest response) {
-            super(response);
-            this.all = response.all;
-            this.regionId = response.regionId;
-            this.resourceId = response.resourceId;
-            this.tagKey = response.tagKey;
+        private Builder(UnTagResourcesRequest request) {
+            super(request);
+            this.all = request.all;
+            this.regionId = request.regionId;
+            this.resourceId = request.resourceId;
+            this.tagKey = request.tagKey;
         } 
 
         /**

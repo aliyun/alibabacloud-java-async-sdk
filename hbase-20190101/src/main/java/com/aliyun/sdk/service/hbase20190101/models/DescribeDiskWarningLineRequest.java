@@ -49,9 +49,9 @@ public class DescribeDiskWarningLineRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDiskWarningLineRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
+        private Builder(DescribeDiskWarningLineRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
         } 
 
         /**

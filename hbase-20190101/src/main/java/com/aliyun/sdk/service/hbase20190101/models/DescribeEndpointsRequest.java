@@ -49,9 +49,9 @@ public class DescribeEndpointsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeEndpointsRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
+        private Builder(DescribeEndpointsRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
         } 
 
         /**

@@ -89,12 +89,12 @@ public class EnableHBaseueBackupRequest extends Request {
             super();
         } 
 
-        private Builder(EnableHBaseueBackupRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.coldStorageSize = response.coldStorageSize;
-            this.hbaseueClusterId = response.hbaseueClusterId;
-            this.nodeCount = response.nodeCount;
+        private Builder(EnableHBaseueBackupRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.coldStorageSize = request.coldStorageSize;
+            this.hbaseueClusterId = request.hbaseueClusterId;
+            this.nodeCount = request.nodeCount;
         } 
 
         /**

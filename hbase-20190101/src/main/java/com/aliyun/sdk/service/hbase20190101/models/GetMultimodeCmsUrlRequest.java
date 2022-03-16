@@ -63,10 +63,10 @@ public class GetMultimodeCmsUrlRequest extends Request {
             super();
         } 
 
-        private Builder(GetMultimodeCmsUrlRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.regionId = response.regionId;
+        private Builder(GetMultimodeCmsUrlRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.regionId = request.regionId;
         } 
 
         /**

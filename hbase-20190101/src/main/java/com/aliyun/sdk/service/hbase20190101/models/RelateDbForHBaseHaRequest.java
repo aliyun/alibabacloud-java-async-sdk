@@ -316,29 +316,29 @@ public class RelateDbForHBaseHaRequest extends Request {
             super();
         } 
 
-        private Builder(RelateDbForHBaseHaRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.haActive = response.haActive;
-            this.haActiveClusterKey = response.haActiveClusterKey;
-            this.haActiveDBType = response.haActiveDBType;
-            this.haActiveHbaseFsDir = response.haActiveHbaseFsDir;
-            this.haActiveHdfsUri = response.haActiveHdfsUri;
-            this.haActivePassword = response.haActivePassword;
-            this.haActiveUser = response.haActiveUser;
-            this.haActiveVersion = response.haActiveVersion;
-            this.haMigrateType = response.haMigrateType;
-            this.haStandby = response.haStandby;
-            this.haStandbyClusterKey = response.haStandbyClusterKey;
-            this.haStandbyDBType = response.haStandbyDBType;
-            this.haStandbyHbaseFsDir = response.haStandbyHbaseFsDir;
-            this.haStandbyHdfsUri = response.haStandbyHdfsUri;
-            this.haStandbyPassword = response.haStandbyPassword;
-            this.haStandbyUser = response.haStandbyUser;
-            this.haStandbyVersion = response.haStandbyVersion;
-            this.haTables = response.haTables;
-            this.isActiveStandard = response.isActiveStandard;
-            this.isStandbyStandard = response.isStandbyStandard;
+        private Builder(RelateDbForHBaseHaRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.haActive = request.haActive;
+            this.haActiveClusterKey = request.haActiveClusterKey;
+            this.haActiveDBType = request.haActiveDBType;
+            this.haActiveHbaseFsDir = request.haActiveHbaseFsDir;
+            this.haActiveHdfsUri = request.haActiveHdfsUri;
+            this.haActivePassword = request.haActivePassword;
+            this.haActiveUser = request.haActiveUser;
+            this.haActiveVersion = request.haActiveVersion;
+            this.haMigrateType = request.haMigrateType;
+            this.haStandby = request.haStandby;
+            this.haStandbyClusterKey = request.haStandbyClusterKey;
+            this.haStandbyDBType = request.haStandbyDBType;
+            this.haStandbyHbaseFsDir = request.haStandbyHbaseFsDir;
+            this.haStandbyHdfsUri = request.haStandbyHdfsUri;
+            this.haStandbyPassword = request.haStandbyPassword;
+            this.haStandbyUser = request.haStandbyUser;
+            this.haStandbyVersion = request.haStandbyVersion;
+            this.haTables = request.haTables;
+            this.isActiveStandard = request.isActiveStandard;
+            this.isStandbyStandard = request.isStandbyStandard;
         } 
 
         /**

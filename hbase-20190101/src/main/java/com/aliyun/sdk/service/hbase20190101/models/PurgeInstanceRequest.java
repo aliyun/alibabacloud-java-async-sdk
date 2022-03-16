@@ -49,9 +49,9 @@ public class PurgeInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(PurgeInstanceRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
+        private Builder(PurgeInstanceRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
         } 
 
         /**

@@ -63,10 +63,10 @@ public class DescribeRestoreTablesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeRestoreTablesRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.restoreRecordId = response.restoreRecordId;
+        private Builder(DescribeRestoreTablesRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.restoreRecordId = request.restoreRecordId;
         } 
 
         /**

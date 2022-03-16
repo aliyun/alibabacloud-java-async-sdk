@@ -63,10 +63,10 @@ public class DeleteHBaseHaDBRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteHBaseHaDBRequest response) {
-            super(response);
-            this.bdsId = response.bdsId;
-            this.haId = response.haId;
+        private Builder(DeleteHBaseHaDBRequest request) {
+            super(request);
+            this.bdsId = request.bdsId;
+            this.haId = request.haId;
         } 
 
         /**

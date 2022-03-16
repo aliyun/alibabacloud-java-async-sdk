@@ -63,10 +63,10 @@ public class DescribeServerlessClusterRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeServerlessClusterRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.zoneId = response.zoneId;
+        private Builder(DescribeServerlessClusterRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.zoneId = request.zoneId;
         } 
 
         /**

@@ -63,10 +63,10 @@ public class ResizeColdStorageSizeRequest extends Request {
             super();
         } 
 
-        private Builder(ResizeColdStorageSizeRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.coldStorageSize = response.coldStorageSize;
+        private Builder(ResizeColdStorageSizeRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.coldStorageSize = request.coldStorageSize;
         } 
 
         /**

@@ -115,14 +115,14 @@ public class UpgradeMultiZoneClusterRequest extends Request {
             super();
         } 
 
-        private Builder(UpgradeMultiZoneClusterRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.components = response.components;
-            this.restartComponents = response.restartComponents;
-            this.runMode = response.runMode;
-            this.upgradeInsName = response.upgradeInsName;
-            this.versions = response.versions;
+        private Builder(UpgradeMultiZoneClusterRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.components = request.components;
+            this.restartComponents = request.restartComponents;
+            this.runMode = request.runMode;
+            this.upgradeInsName = request.upgradeInsName;
+            this.versions = request.versions;
         } 
 
         /**

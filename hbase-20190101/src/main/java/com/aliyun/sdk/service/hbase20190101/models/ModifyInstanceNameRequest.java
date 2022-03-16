@@ -103,13 +103,13 @@ public class ModifyInstanceNameRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyInstanceNameRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.clusterId = response.clusterId;
-            this.clusterName = response.clusterName;
-            this.regionId = response.regionId;
-            this.zoneId = response.zoneId;
+        private Builder(ModifyInstanceNameRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.clusterId = request.clusterId;
+            this.clusterName = request.clusterName;
+            this.regionId = request.regionId;
+            this.zoneId = request.zoneId;
         } 
 
         /**

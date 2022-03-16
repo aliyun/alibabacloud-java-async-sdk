@@ -77,11 +77,11 @@ public class ModifyInstanceMaintainTimeRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyInstanceMaintainTimeRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.maintainEndTime = response.maintainEndTime;
-            this.maintainStartTime = response.maintainStartTime;
+        private Builder(ModifyInstanceMaintainTimeRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.maintainEndTime = request.maintainEndTime;
+            this.maintainStartTime = request.maintainStartTime;
         } 
 
         /**

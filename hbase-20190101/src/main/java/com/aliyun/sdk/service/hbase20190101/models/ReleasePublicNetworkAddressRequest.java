@@ -49,9 +49,9 @@ public class ReleasePublicNetworkAddressRequest extends Request {
             super();
         } 
 
-        private Builder(ReleasePublicNetworkAddressRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
+        private Builder(ReleasePublicNetworkAddressRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
         } 
 
         /**

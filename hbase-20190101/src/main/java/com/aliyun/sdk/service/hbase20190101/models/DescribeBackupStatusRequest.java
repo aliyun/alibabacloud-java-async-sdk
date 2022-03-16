@@ -49,9 +49,9 @@ public class DescribeBackupStatusRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeBackupStatusRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
+        private Builder(DescribeBackupStatusRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
         } 
 
         /**

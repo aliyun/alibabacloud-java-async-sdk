@@ -62,10 +62,10 @@ public class UpgradeMinorVersionRequest extends Request {
             super();
         } 
 
-        private Builder(UpgradeMinorVersionRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.components = response.components;
+        private Builder(UpgradeMinorVersionRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.components = request.components;
         } 
 
         /**

@@ -33,6 +33,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
     @NameInMap("ColdStorageStatus")
     private String coldStorageStatus;
 
+    @NameInMap("ConfirmMaintainTime")
+    private String confirmMaintainTime;
+
     @NameInMap("CoreDiskCount")
     private String coreDiskCount;
 
@@ -150,6 +153,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
     @NameInMap("Tags")
     private Tags tags;
 
+    @NameInMap("TaskProgress")
+    private String taskProgress;
+
     @NameInMap("VpcId")
     private String vpcId;
 
@@ -167,6 +173,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         this.clusterType = builder.clusterType;
         this.coldStorageSize = builder.coldStorageSize;
         this.coldStorageStatus = builder.coldStorageStatus;
+        this.confirmMaintainTime = builder.confirmMaintainTime;
         this.coreDiskCount = builder.coreDiskCount;
         this.coreDiskSize = builder.coreDiskSize;
         this.coreDiskType = builder.coreDiskType;
@@ -206,6 +213,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         this.resourceGroupId = builder.resourceGroupId;
         this.status = builder.status;
         this.tags = builder.tags;
+        this.taskProgress = builder.taskProgress;
         this.vpcId = builder.vpcId;
         this.vswitchId = builder.vswitchId;
         this.zoneId = builder.zoneId;
@@ -266,6 +274,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
      */
     public String getColdStorageStatus() {
         return this.coldStorageStatus;
+    }
+
+    /**
+     * @return confirmMaintainTime
+     */
+    public String getConfirmMaintainTime() {
+        return this.confirmMaintainTime;
     }
 
     /**
@@ -542,6 +557,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
 
     /**
+     * @return taskProgress
+     */
+    public String getTaskProgress() {
+        return this.taskProgress;
+    }
+
+    /**
      * @return vpcId
      */
     public String getVpcId() {
@@ -570,6 +592,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         private String clusterType; 
         private Integer coldStorageSize; 
         private String coldStorageStatus; 
+        private String confirmMaintainTime; 
         private String coreDiskCount; 
         private Integer coreDiskSize; 
         private String coreDiskType; 
@@ -609,6 +632,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         private String resourceGroupId; 
         private String status; 
         private Tags tags; 
+        private String taskProgress; 
         private String vpcId; 
         private String vswitchId; 
         private String zoneId; 
@@ -666,6 +690,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
          */
         public Builder coldStorageStatus(String coldStorageStatus) {
             this.coldStorageStatus = coldStorageStatus;
+            return this;
+        }
+
+        /**
+         * ConfirmMaintainTime.
+         */
+        public Builder confirmMaintainTime(String confirmMaintainTime) {
+            this.confirmMaintainTime = confirmMaintainTime;
             return this;
         }
 
@@ -978,6 +1010,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
          */
         public Builder tags(Tags tags) {
             this.tags = tags;
+            return this;
+        }
+
+        /**
+         * TaskProgress.
+         */
+        public Builder taskProgress(String taskProgress) {
+            this.taskProgress = taskProgress;
             return this;
         }
 

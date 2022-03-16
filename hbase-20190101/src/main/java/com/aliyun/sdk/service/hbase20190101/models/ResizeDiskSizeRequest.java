@@ -63,10 +63,10 @@ public class ResizeDiskSizeRequest extends Request {
             super();
         } 
 
-        private Builder(ResizeDiskSizeRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.nodeDiskSize = response.nodeDiskSize;
+        private Builder(ResizeDiskSizeRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.nodeDiskSize = request.nodeDiskSize;
         } 
 
         /**

@@ -77,11 +77,11 @@ public class DeleteHbaseHaSlbRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteHbaseHaSlbRequest response) {
-            super(response);
-            this.bdsId = response.bdsId;
-            this.haId = response.haId;
-            this.haTypes = response.haTypes;
+        private Builder(DeleteHbaseHaSlbRequest request) {
+            super(request);
+            this.bdsId = request.bdsId;
+            this.haId = request.haId;
+            this.haTypes = request.haTypes;
         } 
 
         /**

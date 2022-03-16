@@ -89,12 +89,12 @@ public class DescribeRestoreSchemaDetailsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeRestoreSchemaDetailsRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.restoreRecordId = response.restoreRecordId;
+        private Builder(DescribeRestoreSchemaDetailsRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.restoreRecordId = request.restoreRecordId;
         } 
 
         /**

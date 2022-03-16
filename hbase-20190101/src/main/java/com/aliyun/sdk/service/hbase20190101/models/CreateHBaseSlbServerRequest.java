@@ -76,11 +76,11 @@ public class CreateHBaseSlbServerRequest extends Request {
             super();
         } 
 
-        private Builder(CreateHBaseSlbServerRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.clusterId = response.clusterId;
-            this.slbServer = response.slbServer;
+        private Builder(CreateHBaseSlbServerRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.clusterId = request.clusterId;
+            this.slbServer = request.slbServer;
         } 
 
         /**

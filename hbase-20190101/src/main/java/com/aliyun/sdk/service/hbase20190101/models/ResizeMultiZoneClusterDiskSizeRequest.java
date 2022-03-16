@@ -77,11 +77,11 @@ public class ResizeMultiZoneClusterDiskSizeRequest extends Request {
             super();
         } 
 
-        private Builder(ResizeMultiZoneClusterDiskSizeRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.coreDiskSize = response.coreDiskSize;
-            this.logDiskSize = response.logDiskSize;
+        private Builder(ResizeMultiZoneClusterDiskSizeRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.coreDiskSize = request.coreDiskSize;
+            this.logDiskSize = request.logDiskSize;
         } 
 
         /**

@@ -49,9 +49,9 @@ public class QueryHBaseHaDBRequest extends Request {
             super();
         } 
 
-        private Builder(QueryHBaseHaDBRequest response) {
-            super(response);
-            this.bdsId = response.bdsId;
+        private Builder(QueryHBaseHaDBRequest request) {
+            super(request);
+            this.bdsId = request.bdsId;
         } 
 
         /**

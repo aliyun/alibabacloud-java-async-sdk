@@ -90,12 +90,12 @@ public class CreateGlobalResourceRequest extends Request {
             super();
         } 
 
-        private Builder(CreateGlobalResourceRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.clusterId = response.clusterId;
-            this.resourceName = response.resourceName;
-            this.resourceType = response.resourceType;
+        private Builder(CreateGlobalResourceRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.clusterId = request.clusterId;
+            this.resourceName = request.resourceName;
+            this.resourceType = request.resourceType;
         } 
 
         /**

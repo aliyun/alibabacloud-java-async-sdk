@@ -63,10 +63,10 @@ public class ModifyClusterDeletionProtectionRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyClusterDeletionProtectionRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.protection = response.protection;
+        private Builder(ModifyClusterDeletionProtectionRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.protection = request.protection;
         } 
 
         /**

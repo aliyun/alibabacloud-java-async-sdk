@@ -139,16 +139,16 @@ public class DescribeInstancesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeInstancesRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.clusterName = response.clusterName;
-            this.dbType = response.dbType;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.tag = response.tag;
+        private Builder(DescribeInstancesRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.clusterName = request.clusterName;
+            this.dbType = request.dbType;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.tag = request.tag;
         } 
 
         /**

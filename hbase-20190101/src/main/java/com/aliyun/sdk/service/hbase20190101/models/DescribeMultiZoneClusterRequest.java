@@ -49,9 +49,9 @@ public class DescribeMultiZoneClusterRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeMultiZoneClusterRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
+        private Builder(DescribeMultiZoneClusterRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
         } 
 
         /**

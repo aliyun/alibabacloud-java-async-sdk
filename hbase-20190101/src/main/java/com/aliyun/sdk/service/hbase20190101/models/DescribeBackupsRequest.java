@@ -140,16 +140,16 @@ public class DescribeBackupsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeBackupsRequest response) {
-            super(response);
-            this.backupId = response.backupId;
-            this.clusterId = response.clusterId;
-            this.endTime = response.endTime;
-            this.endTimeUTC = response.endTimeUTC;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.startTime = response.startTime;
-            this.startTimeUTC = response.startTimeUTC;
+        private Builder(DescribeBackupsRequest request) {
+            super(request);
+            this.backupId = request.backupId;
+            this.clusterId = request.clusterId;
+            this.endTime = request.endTime;
+            this.endTimeUTC = request.endTimeUTC;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.startTime = request.startTime;
+            this.startTimeUTC = request.startTimeUTC;
         } 
 
         /**

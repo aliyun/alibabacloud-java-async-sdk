@@ -61,10 +61,10 @@ public class DescribeSubDomainRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeSubDomainRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.zoneId = response.zoneId;
+        private Builder(DescribeSubDomainRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.zoneId = request.zoneId;
         } 
 
         /**

@@ -88,12 +88,12 @@ public class ConvertInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(ConvertInstanceRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.duration = response.duration;
-            this.payType = response.payType;
-            this.pricingCycle = response.pricingCycle;
+        private Builder(ConvertInstanceRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.duration = request.duration;
+            this.payType = request.payType;
+            this.pricingCycle = request.pricingCycle;
         } 
 
         /**

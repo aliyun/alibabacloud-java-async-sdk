@@ -88,12 +88,12 @@ public class ModifyMultiZoneClusterNodeTypeRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyMultiZoneClusterNodeTypeRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.coreInstanceType = response.coreInstanceType;
-            this.logInstanceType = response.logInstanceType;
-            this.masterInstanceType = response.masterInstanceType;
+        private Builder(ModifyMultiZoneClusterNodeTypeRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.coreInstanceType = request.coreInstanceType;
+            this.logInstanceType = request.logInstanceType;
+            this.masterInstanceType = request.masterInstanceType;
         } 
 
         /**

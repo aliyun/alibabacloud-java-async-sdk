@@ -128,15 +128,15 @@ public class DescribeAvailableResourceRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAvailableResourceRequest response) {
-            super(response);
-            this.chargeType = response.chargeType;
-            this.coreInstanceType = response.coreInstanceType;
-            this.diskType = response.diskType;
-            this.engine = response.engine;
-            this.engineVersion = response.engineVersion;
-            this.regionId = response.regionId;
-            this.zoneId = response.zoneId;
+        private Builder(DescribeAvailableResourceRequest request) {
+            super(request);
+            this.chargeType = request.chargeType;
+            this.coreInstanceType = request.coreInstanceType;
+            this.diskType = request.diskType;
+            this.engine = request.engine;
+            this.engineVersion = request.engineVersion;
+            this.regionId = request.regionId;
+            this.zoneId = request.zoneId;
         } 
 
         /**

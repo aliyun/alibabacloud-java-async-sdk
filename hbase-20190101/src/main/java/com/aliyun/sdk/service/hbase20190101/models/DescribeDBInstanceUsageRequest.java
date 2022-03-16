@@ -49,9 +49,9 @@ public class DescribeDBInstanceUsageRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDBInstanceUsageRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
+        private Builder(DescribeDBInstanceUsageRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
         } 
 
         /**

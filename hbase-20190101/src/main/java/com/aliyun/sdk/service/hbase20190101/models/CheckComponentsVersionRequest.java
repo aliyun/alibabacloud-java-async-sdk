@@ -63,10 +63,10 @@ public class CheckComponentsVersionRequest extends Request {
             super();
         } 
 
-        private Builder(CheckComponentsVersionRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.components = response.components;
+        private Builder(CheckComponentsVersionRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.components = request.components;
         } 
 
         /**

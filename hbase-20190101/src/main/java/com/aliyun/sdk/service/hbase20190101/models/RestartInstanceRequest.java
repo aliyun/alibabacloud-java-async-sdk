@@ -62,10 +62,10 @@ public class RestartInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(RestartInstanceRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.components = response.components;
+        private Builder(RestartInstanceRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.components = request.components;
         } 
 
         /**

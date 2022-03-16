@@ -49,9 +49,9 @@ public class ListTagsRequest extends Request {
             super();
         } 
 
-        private Builder(ListTagsRequest response) {
-            super(response);
-            this.regionId = response.regionId;
+        private Builder(ListTagsRequest request) {
+            super(request);
+            this.regionId = request.regionId;
         } 
 
         /**

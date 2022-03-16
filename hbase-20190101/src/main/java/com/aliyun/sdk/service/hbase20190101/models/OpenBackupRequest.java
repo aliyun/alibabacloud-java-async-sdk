@@ -49,9 +49,9 @@ public class OpenBackupRequest extends Request {
             super();
         } 
 
-        private Builder(OpenBackupRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
+        private Builder(OpenBackupRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
         } 
 
         /**

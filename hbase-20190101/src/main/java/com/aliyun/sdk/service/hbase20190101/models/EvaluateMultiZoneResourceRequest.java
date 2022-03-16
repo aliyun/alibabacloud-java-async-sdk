@@ -421,36 +421,36 @@ public class EvaluateMultiZoneResourceRequest extends Request {
             super();
         } 
 
-        private Builder(EvaluateMultiZoneResourceRequest response) {
-            super(response);
-            this.arbiterVSwitchId = response.arbiterVSwitchId;
-            this.arbiterZoneId = response.arbiterZoneId;
-            this.archVersion = response.archVersion;
-            this.autoRenewPeriod = response.autoRenewPeriod;
-            this.clientToken = response.clientToken;
-            this.clusterName = response.clusterName;
-            this.coreDiskSize = response.coreDiskSize;
-            this.coreDiskType = response.coreDiskType;
-            this.coreInstanceType = response.coreInstanceType;
-            this.coreNodeCount = response.coreNodeCount;
-            this.engine = response.engine;
-            this.engineVersion = response.engineVersion;
-            this.logDiskSize = response.logDiskSize;
-            this.logDiskType = response.logDiskType;
-            this.logInstanceType = response.logInstanceType;
-            this.logNodeCount = response.logNodeCount;
-            this.masterInstanceType = response.masterInstanceType;
-            this.multiZoneCombination = response.multiZoneCombination;
-            this.payType = response.payType;
-            this.period = response.period;
-            this.periodUnit = response.periodUnit;
-            this.primaryVSwitchId = response.primaryVSwitchId;
-            this.primaryZoneId = response.primaryZoneId;
-            this.regionId = response.regionId;
-            this.securityIPList = response.securityIPList;
-            this.standbyVSwitchId = response.standbyVSwitchId;
-            this.standbyZoneId = response.standbyZoneId;
-            this.vpcId = response.vpcId;
+        private Builder(EvaluateMultiZoneResourceRequest request) {
+            super(request);
+            this.arbiterVSwitchId = request.arbiterVSwitchId;
+            this.arbiterZoneId = request.arbiterZoneId;
+            this.archVersion = request.archVersion;
+            this.autoRenewPeriod = request.autoRenewPeriod;
+            this.clientToken = request.clientToken;
+            this.clusterName = request.clusterName;
+            this.coreDiskSize = request.coreDiskSize;
+            this.coreDiskType = request.coreDiskType;
+            this.coreInstanceType = request.coreInstanceType;
+            this.coreNodeCount = request.coreNodeCount;
+            this.engine = request.engine;
+            this.engineVersion = request.engineVersion;
+            this.logDiskSize = request.logDiskSize;
+            this.logDiskType = request.logDiskType;
+            this.logInstanceType = request.logInstanceType;
+            this.logNodeCount = request.logNodeCount;
+            this.masterInstanceType = request.masterInstanceType;
+            this.multiZoneCombination = request.multiZoneCombination;
+            this.payType = request.payType;
+            this.period = request.period;
+            this.periodUnit = request.periodUnit;
+            this.primaryVSwitchId = request.primaryVSwitchId;
+            this.primaryZoneId = request.primaryZoneId;
+            this.regionId = request.regionId;
+            this.securityIPList = request.securityIPList;
+            this.standbyVSwitchId = request.standbyVSwitchId;
+            this.standbyZoneId = request.standbyZoneId;
+            this.vpcId = request.vpcId;
         } 
 
         /**

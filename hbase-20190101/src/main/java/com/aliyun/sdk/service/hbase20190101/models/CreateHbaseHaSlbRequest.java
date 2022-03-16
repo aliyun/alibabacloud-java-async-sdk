@@ -104,13 +104,13 @@ public class CreateHbaseHaSlbRequest extends Request {
             super();
         } 
 
-        private Builder(CreateHbaseHaSlbRequest response) {
-            super(response);
-            this.bdsId = response.bdsId;
-            this.clientToken = response.clientToken;
-            this.haId = response.haId;
-            this.haTypes = response.haTypes;
-            this.hbaseType = response.hbaseType;
+        private Builder(CreateHbaseHaSlbRequest request) {
+            super(request);
+            this.bdsId = request.bdsId;
+            this.clientToken = request.clientToken;
+            this.haId = request.haId;
+            this.haTypes = request.haTypes;
+            this.hbaseType = request.hbaseType;
         } 
 
         /**
