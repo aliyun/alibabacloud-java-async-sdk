@@ -142,7 +142,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         private String matchDetail;
 
         @NameInMap("MatchList")
-        private String matchList;
+        private java.util.List < String > matchList;
 
         @NameInMap("Name")
         private String name;
@@ -199,7 +199,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         /**
          * @return matchList
          */
-        public String getMatchList() {
+        public java.util.List < String > getMatchList() {
             return this.matchList;
         }
 
@@ -235,7 +235,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             private String fullVersion; 
             private String layer; 
             private String matchDetail; 
-            private String matchList; 
+            private java.util.List < String > matchList; 
             private String name; 
             private String path; 
             private String updateCmd; 
@@ -268,7 +268,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             /**
              * MatchList.
              */
-            public Builder matchList(String matchList) {
+            public Builder matchList(java.util.List < String > matchList) {
                 this.matchList = matchList;
                 return this;
             }

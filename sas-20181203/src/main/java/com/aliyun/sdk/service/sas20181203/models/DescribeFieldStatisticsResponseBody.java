@@ -75,6 +75,9 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         @NameInMap("AliYunInstanceCount")
         private Integer aliYunInstanceCount;
 
+        @NameInMap("AwsInstanceCount")
+        private Integer awsInstanceCount;
+
         @NameInMap("ExposedInstanceCount")
         private Integer exposedInstanceCount;
 
@@ -131,6 +134,7 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
 
         private GroupedFields(Builder builder) {
             this.aliYunInstanceCount = builder.aliYunInstanceCount;
+            this.awsInstanceCount = builder.awsInstanceCount;
             this.exposedInstanceCount = builder.exposedInstanceCount;
             this.generalAssetCount = builder.generalAssetCount;
             this.groupCount = builder.groupCount;
@@ -164,6 +168,13 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
          */
         public Integer getAliYunInstanceCount() {
             return this.aliYunInstanceCount;
+        }
+
+        /**
+         * @return awsInstanceCount
+         */
+        public Integer getAwsInstanceCount() {
+            return this.awsInstanceCount;
         }
 
         /**
@@ -294,6 +305,7 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer aliYunInstanceCount; 
+            private Integer awsInstanceCount; 
             private Integer exposedInstanceCount; 
             private Integer generalAssetCount; 
             private Integer groupCount; 
@@ -318,6 +330,14 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
              */
             public Builder aliYunInstanceCount(Integer aliYunInstanceCount) {
                 this.aliYunInstanceCount = aliYunInstanceCount;
+                return this;
+            }
+
+            /**
+             * AwsInstanceCount.
+             */
+            public Builder awsInstanceCount(Integer awsInstanceCount) {
+                this.awsInstanceCount = awsInstanceCount;
                 return this;
             }
 
