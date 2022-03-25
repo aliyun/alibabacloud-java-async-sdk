@@ -1,0 +1,104 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.eci20180808.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link CreateInstanceOpsTaskResponse} extends {@link TeaModel}
+ *
+ * <p>CreateInstanceOpsTaskResponse</p>
+ */
+public class CreateInstanceOpsTaskResponse extends Response {
+    @NameInMap("headers")
+    @Validation(required = true)
+    private java.util.Map < String, String > headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    private CreateInstanceOpsTaskResponseBody body;
+
+    private CreateInstanceOpsTaskResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.body = builder.body;
+    }
+
+    public static CreateInstanceOpsTaskResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return body
+     */
+    public CreateInstanceOpsTaskResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<CreateInstanceOpsTaskResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder body(CreateInstanceOpsTaskResponseBody body);
+
+        @Override
+        CreateInstanceOpsTaskResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<CreateInstanceOpsTaskResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private CreateInstanceOpsTaskResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(CreateInstanceOpsTaskResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(CreateInstanceOpsTaskResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public CreateInstanceOpsTaskResponse build() {
+            return new CreateInstanceOpsTaskResponse(this);
+        } 
+
+    } 
+
+}
