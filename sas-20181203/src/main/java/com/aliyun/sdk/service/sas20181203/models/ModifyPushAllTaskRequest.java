@@ -18,10 +18,12 @@ public class ModifyPushAllTaskRequest extends Request {
 
     @Query
     @NameInMap("Tasks")
+    @Validation(required = true)
     private String tasks;
 
     @Query
     @NameInMap("Uuids")
+    @Validation(required = true)
     private String uuids;
 
     private ModifyPushAllTaskRequest(Builder builder) {

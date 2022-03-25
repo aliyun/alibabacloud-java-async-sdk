@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DeleteStrategyRequest extends Request {
     @Query
     @NameInMap("Id")
+    @Validation(required = true)
     private String id;
 
     @Query

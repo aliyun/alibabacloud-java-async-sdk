@@ -18,6 +18,7 @@ public class DescribeSecurityEventOperationStatusRequest extends Request {
 
     @Query
     @NameInMap("SecurityEventIds")
+    @Validation(required = true)
     private java.util.List < String > securityEventIds;
 
     @Query
@@ -26,6 +27,7 @@ public class DescribeSecurityEventOperationStatusRequest extends Request {
 
     @Query
     @NameInMap("TaskId")
+    @Validation(required = true)
     private Long taskId;
 
     private DescribeSecurityEventOperationStatusRequest(Builder builder) {

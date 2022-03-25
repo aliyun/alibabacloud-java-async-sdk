@@ -18,6 +18,7 @@ public class DescribeSimilarEventScenariosRequest extends Request {
 
     @Query
     @NameInMap("SecurityEventId")
+    @Validation(required = true)
     private Long securityEventId;
 
     @Query

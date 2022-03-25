@@ -18,6 +18,7 @@ public class HandleSimilarSecurityEventsRequest extends Request {
 
     @Query
     @NameInMap("OperationCode")
+    @Validation(required = true)
     private String operationCode;
 
     @Query
@@ -34,6 +35,7 @@ public class HandleSimilarSecurityEventsRequest extends Request {
 
     @Query
     @NameInMap("TaskId")
+    @Validation(required = true)
     private Long taskId;
 
     private HandleSimilarSecurityEventsRequest(Builder builder) {

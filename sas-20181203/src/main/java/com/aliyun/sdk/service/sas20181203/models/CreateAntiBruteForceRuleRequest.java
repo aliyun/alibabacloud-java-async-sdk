@@ -18,14 +18,17 @@ public class CreateAntiBruteForceRuleRequest extends Request {
 
     @Query
     @NameInMap("FailCount")
+    @Validation(required = true)
     private Integer failCount;
 
     @Query
     @NameInMap("ForbiddenTime")
+    @Validation(required = true)
     private Integer forbiddenTime;
 
     @Query
     @NameInMap("Name")
+    @Validation(required = true)
     private String name;
 
     @Query
@@ -38,10 +41,12 @@ public class CreateAntiBruteForceRuleRequest extends Request {
 
     @Query
     @NameInMap("Span")
+    @Validation(required = true)
     private Integer span;
 
     @Query
     @NameInMap("UuidList")
+    @Validation(required = true)
     private java.util.List < String > uuidList;
 
     private CreateAntiBruteForceRuleRequest(Builder builder) {

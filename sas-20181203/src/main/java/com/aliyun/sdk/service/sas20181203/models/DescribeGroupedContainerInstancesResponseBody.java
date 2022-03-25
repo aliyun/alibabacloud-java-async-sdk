@@ -113,8 +113,29 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
         @NameInMap("CusterState")
         private String custerState;
 
+        @NameInMap("HcCount")
+        private Integer hcCount;
+
         @NameInMap("HostIp")
         private String hostIp;
+
+        @NameInMap("Image")
+        private String image;
+
+        @NameInMap("ImageDigest")
+        private String imageDigest;
+
+        @NameInMap("ImageRepoName")
+        private String imageRepoName;
+
+        @NameInMap("ImageRepoNamespace")
+        private String imageRepoNamespace;
+
+        @NameInMap("ImageRepoTag")
+        private String imageRepoTag;
+
+        @NameInMap("ImageUuid")
+        private String imageUuid;
 
         @NameInMap("InstanceCount")
         private Integer instanceCount;
@@ -154,7 +175,14 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             this.clusterType = builder.clusterType;
             this.createTime = builder.createTime;
             this.custerState = builder.custerState;
+            this.hcCount = builder.hcCount;
             this.hostIp = builder.hostIp;
+            this.image = builder.image;
+            this.imageDigest = builder.imageDigest;
+            this.imageRepoName = builder.imageRepoName;
+            this.imageRepoNamespace = builder.imageRepoNamespace;
+            this.imageRepoTag = builder.imageRepoTag;
+            this.imageUuid = builder.imageUuid;
             this.instanceCount = builder.instanceCount;
             this.instanceId = builder.instanceId;
             this.namespace = builder.namespace;
@@ -225,10 +253,59 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return hcCount
+         */
+        public Integer getHcCount() {
+            return this.hcCount;
+        }
+
+        /**
          * @return hostIp
          */
         public String getHostIp() {
             return this.hostIp;
+        }
+
+        /**
+         * @return image
+         */
+        public String getImage() {
+            return this.image;
+        }
+
+        /**
+         * @return imageDigest
+         */
+        public String getImageDigest() {
+            return this.imageDigest;
+        }
+
+        /**
+         * @return imageRepoName
+         */
+        public String getImageRepoName() {
+            return this.imageRepoName;
+        }
+
+        /**
+         * @return imageRepoNamespace
+         */
+        public String getImageRepoNamespace() {
+            return this.imageRepoNamespace;
+        }
+
+        /**
+         * @return imageRepoTag
+         */
+        public String getImageRepoTag() {
+            return this.imageRepoTag;
+        }
+
+        /**
+         * @return imageUuid
+         */
+        public String getImageUuid() {
+            return this.imageUuid;
         }
 
         /**
@@ -309,7 +386,14 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             private String clusterType; 
             private Long createTime; 
             private String custerState; 
+            private Integer hcCount; 
             private String hostIp; 
+            private String image; 
+            private String imageDigest; 
+            private String imageRepoName; 
+            private String imageRepoNamespace; 
+            private String imageRepoTag; 
+            private String imageUuid; 
             private Integer instanceCount; 
             private String instanceId; 
             private String namespace; 
@@ -378,10 +462,66 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
+             * HcCount.
+             */
+            public Builder hcCount(Integer hcCount) {
+                this.hcCount = hcCount;
+                return this;
+            }
+
+            /**
              * HostIp.
              */
             public Builder hostIp(String hostIp) {
                 this.hostIp = hostIp;
+                return this;
+            }
+
+            /**
+             * Image.
+             */
+            public Builder image(String image) {
+                this.image = image;
+                return this;
+            }
+
+            /**
+             * ImageDigest.
+             */
+            public Builder imageDigest(String imageDigest) {
+                this.imageDigest = imageDigest;
+                return this;
+            }
+
+            /**
+             * ImageRepoName.
+             */
+            public Builder imageRepoName(String imageRepoName) {
+                this.imageRepoName = imageRepoName;
+                return this;
+            }
+
+            /**
+             * ImageRepoNamespace.
+             */
+            public Builder imageRepoNamespace(String imageRepoNamespace) {
+                this.imageRepoNamespace = imageRepoNamespace;
+                return this;
+            }
+
+            /**
+             * ImageRepoTag.
+             */
+            public Builder imageRepoTag(String imageRepoTag) {
+                this.imageRepoTag = imageRepoTag;
+                return this;
+            }
+
+            /**
+             * ImageUuid.
+             */
+            public Builder imageUuid(String imageUuid) {
+                this.imageUuid = imageUuid;
                 return this;
             }
 

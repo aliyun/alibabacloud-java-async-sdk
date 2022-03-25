@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ModifyVulTargetConfigRequest extends Request {
     @Query
     @NameInMap("Config")
+    @Validation(required = true)
     private String config;
 
     @Query
@@ -26,6 +27,7 @@ public class ModifyVulTargetConfigRequest extends Request {
 
     @Query
     @NameInMap("Uuid")
+    @Validation(required = true)
     private String uuid;
 
     private ModifyVulTargetConfigRequest(Builder builder) {

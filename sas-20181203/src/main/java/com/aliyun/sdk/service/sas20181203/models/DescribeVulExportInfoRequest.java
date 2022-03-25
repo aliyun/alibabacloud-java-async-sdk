@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeVulExportInfoRequest extends Request {
     @Query
     @NameInMap("ExportId")
+    @Validation(required = true)
     private Long exportId;
 
     private DescribeVulExportInfoRequest(Builder builder) {

@@ -14,10 +14,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ModifySecurityCheckScheduleConfigRequest extends Request {
     @Query
     @NameInMap("DaysOfWeek")
+    @Validation(required = true)
     private String daysOfWeek;
 
     @Query
     @NameInMap("EndTime")
+    @Validation(required = true)
     private Integer endTime;
 
     @Query
@@ -34,6 +36,7 @@ public class ModifySecurityCheckScheduleConfigRequest extends Request {
 
     @Query
     @NameInMap("StartTime")
+    @Validation(required = true)
     private Integer startTime;
 
     private ModifySecurityCheckScheduleConfigRequest(Builder builder) {

@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ModifyInstanceAntiBruteForceRuleRequest extends Request {
     @Query
     @NameInMap("NewRuleId")
+    @Validation(required = true)
     private Long newRuleId;
 
     @Query
@@ -26,6 +27,7 @@ public class ModifyInstanceAntiBruteForceRuleRequest extends Request {
 
     @Query
     @NameInMap("Uuid")
+    @Validation(required = true)
     private String uuid;
 
     private ModifyInstanceAntiBruteForceRuleRequest(Builder builder) {
