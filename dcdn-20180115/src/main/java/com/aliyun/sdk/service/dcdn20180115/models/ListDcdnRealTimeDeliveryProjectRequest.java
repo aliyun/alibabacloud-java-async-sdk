@@ -100,13 +100,13 @@ public class ListDcdnRealTimeDeliveryProjectRequest extends Request {
             super();
         } 
 
-        private Builder(ListDcdnRealTimeDeliveryProjectRequest response) {
-            super(response);
-            this.businessType = response.businessType;
-            this.domainName = response.domainName;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(ListDcdnRealTimeDeliveryProjectRequest request) {
+            super(request);
+            this.businessType = request.businessType;
+            this.domainName = request.domainName;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**

@@ -61,10 +61,10 @@ public class DescribeDcdnRefreshQuotaRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDcdnRefreshQuotaRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
+        private Builder(DescribeDcdnRefreshQuotaRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
         } 
 
         /**

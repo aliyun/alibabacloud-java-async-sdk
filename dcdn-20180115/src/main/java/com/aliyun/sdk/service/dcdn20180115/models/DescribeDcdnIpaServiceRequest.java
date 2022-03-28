@@ -61,10 +61,10 @@ public class DescribeDcdnIpaServiceRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDcdnIpaServiceRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
+        private Builder(DescribeDcdnIpaServiceRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
         } 
 
         /**

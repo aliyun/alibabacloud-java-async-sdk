@@ -102,13 +102,13 @@ public class DescribeDcdnDomainConfigsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDcdnDomainConfigsRequest response) {
-            super(response);
-            this.configId = response.configId;
-            this.domainName = response.domainName;
-            this.functionNames = response.functionNames;
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
+        private Builder(DescribeDcdnDomainConfigsRequest request) {
+            super(request);
+            this.configId = request.configId;
+            this.domainName = request.domainName;
+            this.functionNames = request.functionNames;
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
         } 
 
         /**

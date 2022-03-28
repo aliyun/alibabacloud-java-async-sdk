@@ -61,10 +61,10 @@ public class DescribeDcdnReportListRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDcdnReportListRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.reportId = response.reportId;
+        private Builder(DescribeDcdnReportListRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.reportId = request.reportId;
         } 
 
         /**

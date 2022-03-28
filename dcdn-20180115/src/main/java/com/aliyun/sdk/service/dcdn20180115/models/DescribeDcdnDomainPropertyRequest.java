@@ -62,10 +62,10 @@ public class DescribeDcdnDomainPropertyRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDcdnDomainPropertyRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.ownerId = response.ownerId;
+        private Builder(DescribeDcdnDomainPropertyRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.ownerId = request.ownerId;
         } 
 
         /**

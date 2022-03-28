@@ -76,11 +76,11 @@ public class ModifyDCdnDomainSchdmByPropertyRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDCdnDomainSchdmByPropertyRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.ownerId = response.ownerId;
-            this.property = response.property;
+        private Builder(ModifyDCdnDomainSchdmByPropertyRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.ownerId = request.ownerId;
+            this.property = request.property;
         } 
 
         /**

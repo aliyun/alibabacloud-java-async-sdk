@@ -62,10 +62,10 @@ public class DescribeDcdnBlockedRegionsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDcdnBlockedRegionsRequest response) {
-            super(response);
-            this.language = response.language;
-            this.ownerId = response.ownerId;
+        private Builder(DescribeDcdnBlockedRegionsRequest request) {
+            super(request);
+            this.language = request.language;
+            this.ownerId = request.ownerId;
         } 
 
         /**

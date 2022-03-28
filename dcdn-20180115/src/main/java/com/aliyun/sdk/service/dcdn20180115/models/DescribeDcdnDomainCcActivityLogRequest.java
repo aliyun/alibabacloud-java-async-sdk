@@ -152,17 +152,17 @@ public class DescribeDcdnDomainCcActivityLogRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDcdnDomainCcActivityLogRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.endTime = response.endTime;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.ruleName = response.ruleName;
-            this.startTime = response.startTime;
-            this.triggerObject = response.triggerObject;
-            this.value = response.value;
+        private Builder(DescribeDcdnDomainCcActivityLogRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.endTime = request.endTime;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.ruleName = request.ruleName;
+            this.startTime = request.startTime;
+            this.triggerObject = request.triggerObject;
+            this.value = request.value;
         } 
 
         /**

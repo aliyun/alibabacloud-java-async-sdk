@@ -62,10 +62,10 @@ public class RollbackDcdnStagingConfigRequest extends Request {
             super();
         } 
 
-        private Builder(RollbackDcdnStagingConfigRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.ownerId = response.ownerId;
+        private Builder(RollbackDcdnStagingConfigRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.ownerId = request.ownerId;
         } 
 
         /**

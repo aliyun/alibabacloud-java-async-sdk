@@ -142,16 +142,16 @@ public class DescribeDcdnReportRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDcdnReportRequest response) {
-            super(response);
-            this.area = response.area;
-            this.domainName = response.domainName;
-            this.endTime = response.endTime;
-            this.httpCode = response.httpCode;
-            this.isOverseas = response.isOverseas;
-            this.ownerId = response.ownerId;
-            this.reportId = response.reportId;
-            this.startTime = response.startTime;
+        private Builder(DescribeDcdnReportRequest request) {
+            super(request);
+            this.area = request.area;
+            this.domainName = request.domainName;
+            this.endTime = request.endTime;
+            this.httpCode = request.httpCode;
+            this.isOverseas = request.isOverseas;
+            this.ownerId = request.ownerId;
+            this.reportId = request.reportId;
+            this.startTime = request.startTime;
         } 
 
         /**

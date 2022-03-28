@@ -87,12 +87,12 @@ public class DescribeDcdnDomainRegionDataRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDcdnDomainRegionDataRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.endTime = response.endTime;
-            this.ownerId = response.ownerId;
-            this.startTime = response.startTime;
+        private Builder(DescribeDcdnDomainRegionDataRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.endTime = request.endTime;
+            this.ownerId = request.ownerId;
+            this.startTime = request.startTime;
         } 
 
         /**

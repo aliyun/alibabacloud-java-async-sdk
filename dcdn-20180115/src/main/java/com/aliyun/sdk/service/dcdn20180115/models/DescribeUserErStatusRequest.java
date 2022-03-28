@@ -61,10 +61,10 @@ public class DescribeUserErStatusRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeUserErStatusRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
+        private Builder(DescribeUserErStatusRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
         } 
 
         /**

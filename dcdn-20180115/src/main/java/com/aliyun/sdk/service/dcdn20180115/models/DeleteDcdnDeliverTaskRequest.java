@@ -62,10 +62,10 @@ public class DeleteDcdnDeliverTaskRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteDcdnDeliverTaskRequest response) {
-            super(response);
-            this.deliverId = response.deliverId;
-            this.ownerId = response.ownerId;
+        private Builder(DeleteDcdnDeliverTaskRequest request) {
+            super(request);
+            this.deliverId = request.deliverId;
+            this.ownerId = request.ownerId;
         } 
 
         /**

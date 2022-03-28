@@ -117,14 +117,14 @@ public class CreateDcdnDeliverTaskRequest extends Request {
             super();
         } 
 
-        private Builder(CreateDcdnDeliverTaskRequest response) {
-            super(response);
-            this.deliver = response.deliver;
-            this.domainName = response.domainName;
-            this.name = response.name;
-            this.ownerId = response.ownerId;
-            this.reports = response.reports;
-            this.schedule = response.schedule;
+        private Builder(CreateDcdnDeliverTaskRequest request) {
+            super(request);
+            this.deliver = request.deliver;
+            this.domainName = request.domainName;
+            this.name = request.name;
+            this.ownerId = request.ownerId;
+            this.reports = request.reports;
+            this.schedule = request.schedule;
         } 
 
         /**

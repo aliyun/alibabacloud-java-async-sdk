@@ -75,11 +75,11 @@ public class DescribeDcdnSLSRealtimeLogDeliveryRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDcdnSLSRealtimeLogDeliveryRequest response) {
-            super(response);
-            this.businessType = response.businessType;
-            this.ownerId = response.ownerId;
-            this.projectName = response.projectName;
+        private Builder(DescribeDcdnSLSRealtimeLogDeliveryRequest request) {
+            super(request);
+            this.businessType = request.businessType;
+            this.ownerId = request.ownerId;
+            this.projectName = request.projectName;
         } 
 
         /**

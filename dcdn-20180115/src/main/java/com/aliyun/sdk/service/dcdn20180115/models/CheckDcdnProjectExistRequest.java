@@ -62,10 +62,10 @@ public class CheckDcdnProjectExistRequest extends Request {
             super();
         } 
 
-        private Builder(CheckDcdnProjectExistRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.projectName = response.projectName;
+        private Builder(CheckDcdnProjectExistRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.projectName = request.projectName;
         } 
 
         /**

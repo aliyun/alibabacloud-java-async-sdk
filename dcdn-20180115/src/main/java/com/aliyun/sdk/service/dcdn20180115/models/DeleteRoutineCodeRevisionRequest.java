@@ -76,11 +76,11 @@ public class DeleteRoutineCodeRevisionRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteRoutineCodeRevisionRequest response) {
-            super(response);
-            this.name = response.name;
-            this.ownerId = response.ownerId;
-            this.selectCodeRevision = response.selectCodeRevision;
+        private Builder(DeleteRoutineCodeRevisionRequest request) {
+            super(request);
+            this.name = request.name;
+            this.ownerId = request.ownerId;
+            this.selectCodeRevision = request.selectCodeRevision;
         } 
 
         /**

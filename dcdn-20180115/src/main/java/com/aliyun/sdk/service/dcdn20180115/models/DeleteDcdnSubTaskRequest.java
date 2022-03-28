@@ -48,9 +48,9 @@ public class DeleteDcdnSubTaskRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteDcdnSubTaskRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
+        private Builder(DeleteDcdnSubTaskRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
         } 
 
         /**

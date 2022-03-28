@@ -61,10 +61,10 @@ public class DescribeDcdnDeliverListRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDcdnDeliverListRequest response) {
-            super(response);
-            this.deliverId = response.deliverId;
-            this.ownerId = response.ownerId;
+        private Builder(DescribeDcdnDeliverListRequest request) {
+            super(request);
+            this.deliverId = request.deliverId;
+            this.ownerId = request.ownerId;
         } 
 
         /**

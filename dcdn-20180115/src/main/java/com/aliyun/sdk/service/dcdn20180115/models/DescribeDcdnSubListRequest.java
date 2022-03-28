@@ -48,9 +48,9 @@ public class DescribeDcdnSubListRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDcdnSubListRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
+        private Builder(DescribeDcdnSubListRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
         } 
 
         /**

@@ -76,11 +76,11 @@ public class CreateDcdnSubTaskRequest extends Request {
             super();
         } 
 
-        private Builder(CreateDcdnSubTaskRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.ownerId = response.ownerId;
-            this.reportIds = response.reportIds;
+        private Builder(CreateDcdnSubTaskRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.ownerId = request.ownerId;
+            this.reportIds = request.reportIds;
         } 
 
         /**

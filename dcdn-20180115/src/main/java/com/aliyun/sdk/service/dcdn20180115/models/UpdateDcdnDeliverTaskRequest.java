@@ -127,15 +127,15 @@ public class UpdateDcdnDeliverTaskRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateDcdnDeliverTaskRequest response) {
-            super(response);
-            this.deliver = response.deliver;
-            this.deliverId = response.deliverId;
-            this.domainName = response.domainName;
-            this.name = response.name;
-            this.ownerId = response.ownerId;
-            this.reports = response.reports;
-            this.schedule = response.schedule;
+        private Builder(UpdateDcdnDeliverTaskRequest request) {
+            super(request);
+            this.deliver = request.deliver;
+            this.deliverId = request.deliverId;
+            this.domainName = request.domainName;
+            this.name = request.name;
+            this.ownerId = request.ownerId;
+            this.reports = request.reports;
+            this.schedule = request.schedule;
         } 
 
         /**

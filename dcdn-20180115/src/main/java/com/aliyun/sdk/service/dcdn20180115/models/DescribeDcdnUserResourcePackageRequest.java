@@ -74,11 +74,11 @@ public class DescribeDcdnUserResourcePackageRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDcdnUserResourcePackageRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
-            this.status = response.status;
+        private Builder(DescribeDcdnUserResourcePackageRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
+            this.status = request.status;
         } 
 
         /**

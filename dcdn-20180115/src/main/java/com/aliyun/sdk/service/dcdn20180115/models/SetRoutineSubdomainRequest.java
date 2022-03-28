@@ -62,10 +62,10 @@ public class SetRoutineSubdomainRequest extends Request {
             super();
         } 
 
-        private Builder(SetRoutineSubdomainRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.subdomains = response.subdomains;
+        private Builder(SetRoutineSubdomainRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.subdomains = request.subdomains;
         } 
 
         /**

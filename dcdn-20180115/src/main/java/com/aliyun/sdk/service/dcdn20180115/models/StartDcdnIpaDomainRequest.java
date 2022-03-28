@@ -75,11 +75,11 @@ public class StartDcdnIpaDomainRequest extends Request {
             super();
         } 
 
-        private Builder(StartDcdnIpaDomainRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
+        private Builder(StartDcdnIpaDomainRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
         } 
 
         /**

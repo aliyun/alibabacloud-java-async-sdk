@@ -76,11 +76,11 @@ public class SetDcdnDomainCSRCertificateRequest extends Request {
             super();
         } 
 
-        private Builder(SetDcdnDomainCSRCertificateRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.ownerId = response.ownerId;
-            this.serverCertificate = response.serverCertificate;
+        private Builder(SetDcdnDomainCSRCertificateRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.ownerId = request.ownerId;
+            this.serverCertificate = request.serverCertificate;
         } 
 
         /**

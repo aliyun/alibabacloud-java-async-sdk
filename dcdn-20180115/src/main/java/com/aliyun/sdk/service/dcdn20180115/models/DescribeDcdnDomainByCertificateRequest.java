@@ -62,10 +62,10 @@ public class DescribeDcdnDomainByCertificateRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDcdnDomainByCertificateRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.SSLPub = response.SSLPub;
+        private Builder(DescribeDcdnDomainByCertificateRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.SSLPub = request.SSLPub;
         } 
 
         /**

@@ -75,11 +75,11 @@ public class DescribeDcdnSMCertificateDetailRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDcdnSMCertificateDetailRequest response) {
-            super(response);
-            this.certIdentifier = response.certIdentifier;
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
+        private Builder(DescribeDcdnSMCertificateDetailRequest request) {
+            super(request);
+            this.certIdentifier = request.certIdentifier;
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
         } 
 
         /**

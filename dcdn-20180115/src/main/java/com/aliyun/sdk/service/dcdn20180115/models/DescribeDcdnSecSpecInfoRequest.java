@@ -48,9 +48,9 @@ public class DescribeDcdnSecSpecInfoRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDcdnSecSpecInfoRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
+        private Builder(DescribeDcdnSecSpecInfoRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
         } 
 
         /**

@@ -90,12 +90,12 @@ public class PublishRoutineCodeRevisionRequest extends Request {
             super();
         } 
 
-        private Builder(PublishRoutineCodeRevisionRequest response) {
-            super(response);
-            this.envs = response.envs;
-            this.name = response.name;
-            this.ownerId = response.ownerId;
-            this.selectCodeRevision = response.selectCodeRevision;
+        private Builder(PublishRoutineCodeRevisionRequest request) {
+            super(request);
+            this.envs = request.envs;
+            this.name = request.name;
+            this.ownerId = request.ownerId;
+            this.selectCodeRevision = request.selectCodeRevision;
         } 
 
         /**

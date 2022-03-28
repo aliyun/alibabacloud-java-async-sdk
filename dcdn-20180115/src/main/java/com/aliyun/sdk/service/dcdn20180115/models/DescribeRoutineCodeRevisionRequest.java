@@ -76,11 +76,11 @@ public class DescribeRoutineCodeRevisionRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeRoutineCodeRevisionRequest response) {
-            super(response);
-            this.name = response.name;
-            this.ownerId = response.ownerId;
-            this.selectCodeRevision = response.selectCodeRevision;
+        private Builder(DescribeRoutineCodeRevisionRequest request) {
+            super(request);
+            this.name = request.name;
+            this.ownerId = request.ownerId;
+            this.selectCodeRevision = request.selectCodeRevision;
         } 
 
         /**

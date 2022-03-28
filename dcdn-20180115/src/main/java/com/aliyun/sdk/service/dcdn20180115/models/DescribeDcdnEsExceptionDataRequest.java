@@ -90,12 +90,12 @@ public class DescribeDcdnEsExceptionDataRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDcdnEsExceptionDataRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.ownerId = response.ownerId;
-            this.ruleId = response.ruleId;
-            this.startTime = response.startTime;
+        private Builder(DescribeDcdnEsExceptionDataRequest request) {
+            super(request);
+            this.endTime = request.endTime;
+            this.ownerId = request.ownerId;
+            this.ruleId = request.ruleId;
+            this.startTime = request.startTime;
         } 
 
         /**

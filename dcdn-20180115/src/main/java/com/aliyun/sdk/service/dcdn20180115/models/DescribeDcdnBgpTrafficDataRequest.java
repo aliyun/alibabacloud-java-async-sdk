@@ -100,13 +100,13 @@ public class DescribeDcdnBgpTrafficDataRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDcdnBgpTrafficDataRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.interval = response.interval;
-            this.isp = response.isp;
-            this.ownerId = response.ownerId;
-            this.startTime = response.startTime;
+        private Builder(DescribeDcdnBgpTrafficDataRequest request) {
+            super(request);
+            this.endTime = request.endTime;
+            this.interval = request.interval;
+            this.isp = request.isp;
+            this.ownerId = request.ownerId;
+            this.startTime = request.startTime;
         } 
 
         /**

@@ -114,14 +114,14 @@ public class DescribeDcdnDomainRealTimeHttpCodeDataRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDcdnDomainRealTimeHttpCodeDataRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.endTime = response.endTime;
-            this.ispNameEn = response.ispNameEn;
-            this.locationNameEn = response.locationNameEn;
-            this.ownerId = response.ownerId;
-            this.startTime = response.startTime;
+        private Builder(DescribeDcdnDomainRealTimeHttpCodeDataRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.endTime = request.endTime;
+            this.ispNameEn = request.ispNameEn;
+            this.locationNameEn = request.locationNameEn;
+            this.ownerId = request.ownerId;
+            this.startTime = request.startTime;
         } 
 
         /**

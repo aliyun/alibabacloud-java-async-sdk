@@ -152,17 +152,17 @@ public class DescribeDcdnDomainIpaBpsDataRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDcdnDomainIpaBpsDataRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.endTime = response.endTime;
-            this.fixTimeGap = response.fixTimeGap;
-            this.interval = response.interval;
-            this.ispNameEn = response.ispNameEn;
-            this.locationNameEn = response.locationNameEn;
-            this.ownerId = response.ownerId;
-            this.startTime = response.startTime;
-            this.timeMerge = response.timeMerge;
+        private Builder(DescribeDcdnDomainIpaBpsDataRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.endTime = request.endTime;
+            this.fixTimeGap = request.fixTimeGap;
+            this.interval = request.interval;
+            this.ispNameEn = request.ispNameEn;
+            this.locationNameEn = request.locationNameEn;
+            this.ownerId = request.ownerId;
+            this.startTime = request.startTime;
+            this.timeMerge = request.timeMerge;
         } 
 
         /**

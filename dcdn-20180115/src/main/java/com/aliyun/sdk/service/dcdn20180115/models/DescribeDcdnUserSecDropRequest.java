@@ -90,12 +90,12 @@ public class DescribeDcdnUserSecDropRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDcdnUserSecDropRequest response) {
-            super(response);
-            this.data = response.data;
-            this.metric = response.metric;
-            this.ownerId = response.ownerId;
-            this.secFunc = response.secFunc;
+        private Builder(DescribeDcdnUserSecDropRequest request) {
+            super(request);
+            this.data = request.data;
+            this.metric = request.metric;
+            this.ownerId = request.ownerId;
+            this.secFunc = request.secFunc;
         } 
 
         /**

@@ -156,17 +156,17 @@ public class DescribeDcdnDomainRealTimeDetailDataRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDcdnDomainRealTimeDetailDataRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.endTime = response.endTime;
-            this.field = response.field;
-            this.ispNameEn = response.ispNameEn;
-            this.locationNameEn = response.locationNameEn;
-            this.merge = response.merge;
-            this.mergeLocIsp = response.mergeLocIsp;
-            this.ownerId = response.ownerId;
-            this.startTime = response.startTime;
+        private Builder(DescribeDcdnDomainRealTimeDetailDataRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.endTime = request.endTime;
+            this.field = request.field;
+            this.ispNameEn = request.ispNameEn;
+            this.locationNameEn = request.locationNameEn;
+            this.merge = request.merge;
+            this.mergeLocIsp = request.mergeLocIsp;
+            this.ownerId = request.ownerId;
+            this.startTime = request.startTime;
         } 
 
         /**

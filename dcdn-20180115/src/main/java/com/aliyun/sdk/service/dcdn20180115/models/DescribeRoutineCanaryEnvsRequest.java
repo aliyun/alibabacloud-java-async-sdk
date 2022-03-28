@@ -48,9 +48,9 @@ public class DescribeRoutineCanaryEnvsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeRoutineCanaryEnvsRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
+        private Builder(DescribeRoutineCanaryEnvsRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
         } 
 
         /**

@@ -76,11 +76,11 @@ public class DescribeDcdnSecFuncInfoRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDcdnSecFuncInfoRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.ownerId = response.ownerId;
-            this.secFuncType = response.secFuncType;
+        private Builder(DescribeDcdnSecFuncInfoRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.ownerId = request.ownerId;
+            this.secFuncType = request.secFuncType;
         } 
 
         /**

@@ -153,17 +153,17 @@ public class CreateDcdnCertificateSigningRequestRequest extends Request {
             super();
         } 
 
-        private Builder(CreateDcdnCertificateSigningRequestRequest response) {
-            super(response);
-            this.city = response.city;
-            this.commonName = response.commonName;
-            this.country = response.country;
-            this.email = response.email;
-            this.organization = response.organization;
-            this.organizationUnit = response.organizationUnit;
-            this.ownerId = response.ownerId;
-            this.SANs = response.SANs;
-            this.state = response.state;
+        private Builder(CreateDcdnCertificateSigningRequestRequest request) {
+            super(request);
+            this.city = request.city;
+            this.commonName = request.commonName;
+            this.country = request.country;
+            this.email = request.email;
+            this.organization = request.organization;
+            this.organizationUnit = request.organizationUnit;
+            this.ownerId = request.ownerId;
+            this.SANs = request.SANs;
+            this.state = request.state;
         } 
 
         /**

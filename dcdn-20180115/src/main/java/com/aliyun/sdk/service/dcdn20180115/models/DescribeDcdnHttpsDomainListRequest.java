@@ -87,12 +87,12 @@ public class DescribeDcdnHttpsDomainListRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDcdnHttpsDomainListRequest response) {
-            super(response);
-            this.keyword = response.keyword;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(DescribeDcdnHttpsDomainListRequest request) {
+            super(request);
+            this.keyword = request.keyword;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**

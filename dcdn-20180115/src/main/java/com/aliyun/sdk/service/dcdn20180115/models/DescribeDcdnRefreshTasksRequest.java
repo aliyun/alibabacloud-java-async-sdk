@@ -180,19 +180,19 @@ public class DescribeDcdnRefreshTasksRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDcdnRefreshTasksRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.endTime = response.endTime;
-            this.objectPath = response.objectPath;
-            this.objectType = response.objectType;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.securityToken = response.securityToken;
-            this.startTime = response.startTime;
-            this.status = response.status;
-            this.taskId = response.taskId;
+        private Builder(DescribeDcdnRefreshTasksRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.endTime = request.endTime;
+            this.objectPath = request.objectPath;
+            this.objectType = request.objectType;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.securityToken = request.securityToken;
+            this.startTime = request.startTime;
+            this.status = request.status;
+            this.taskId = request.taskId;
         } 
 
         /**

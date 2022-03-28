@@ -17,6 +17,10 @@ public class PreloadDcdnObjectCachesRequest extends Request {
     private String area;
 
     @Query
+    @NameInMap("L2Preload")
+    private Boolean l2Preload;
+
+    @Query
     @NameInMap("ObjectPath")
     @Validation(required = true)
     private String objectPath;
@@ -32,6 +36,7 @@ public class PreloadDcdnObjectCachesRequest extends Request {
     private PreloadDcdnObjectCachesRequest(Builder builder) {
         super(builder);
         this.area = builder.area;
+        this.l2Preload = builder.l2Preload;
         this.objectPath = builder.objectPath;
         this.ownerId = builder.ownerId;
         this.securityToken = builder.securityToken;
@@ -58,6 +63,13 @@ public class PreloadDcdnObjectCachesRequest extends Request {
     }
 
     /**
+     * @return l2Preload
+     */
+    public Boolean getL2Preload() {
+        return this.l2Preload;
+    }
+
+    /**
      * @return objectPath
      */
     public String getObjectPath() {
@@ -80,6 +92,7 @@ public class PreloadDcdnObjectCachesRequest extends Request {
 
     public static final class Builder extends Request.Builder<PreloadDcdnObjectCachesRequest, Builder> {
         private String area; 
+        private Boolean l2Preload; 
         private String objectPath; 
         private Long ownerId; 
         private String securityToken; 
@@ -88,12 +101,13 @@ public class PreloadDcdnObjectCachesRequest extends Request {
             super();
         } 
 
-        private Builder(PreloadDcdnObjectCachesRequest response) {
-            super(response);
-            this.area = response.area;
-            this.objectPath = response.objectPath;
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
+        private Builder(PreloadDcdnObjectCachesRequest request) {
+            super(request);
+            this.area = request.area;
+            this.l2Preload = request.l2Preload;
+            this.objectPath = request.objectPath;
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
         } 
 
         /**
@@ -102,6 +116,15 @@ public class PreloadDcdnObjectCachesRequest extends Request {
         public Builder area(String area) {
             this.putQueryParameter("Area", area);
             this.area = area;
+            return this;
+        }
+
+        /**
+         * L2Preload.
+         */
+        public Builder l2Preload(Boolean l2Preload) {
+            this.putQueryParameter("L2Preload", l2Preload);
+            this.l2Preload = l2Preload;
             return this;
         }
 

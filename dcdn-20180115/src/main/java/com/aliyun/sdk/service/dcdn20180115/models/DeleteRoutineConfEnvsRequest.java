@@ -76,11 +76,11 @@ public class DeleteRoutineConfEnvsRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteRoutineConfEnvsRequest response) {
-            super(response);
-            this.envs = response.envs;
-            this.name = response.name;
-            this.ownerId = response.ownerId;
+        private Builder(DeleteRoutineConfEnvsRequest request) {
+            super(request);
+            this.envs = request.envs;
+            this.name = request.name;
+            this.ownerId = request.ownerId;
         } 
 
         /**

@@ -100,13 +100,13 @@ public class DescribeDcdnDomainHitRateDataRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDcdnDomainHitRateDataRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.endTime = response.endTime;
-            this.interval = response.interval;
-            this.ownerId = response.ownerId;
-            this.startTime = response.startTime;
+        private Builder(DescribeDcdnDomainHitRateDataRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.endTime = request.endTime;
+            this.interval = request.interval;
+            this.ownerId = request.ownerId;
+            this.startTime = request.startTime;
         } 
 
         /**

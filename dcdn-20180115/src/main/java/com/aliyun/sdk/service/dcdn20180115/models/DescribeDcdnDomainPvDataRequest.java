@@ -88,12 +88,12 @@ public class DescribeDcdnDomainPvDataRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDcdnDomainPvDataRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.endTime = response.endTime;
-            this.ownerId = response.ownerId;
-            this.startTime = response.startTime;
+        private Builder(DescribeDcdnDomainPvDataRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.endTime = request.endTime;
+            this.ownerId = request.ownerId;
+            this.startTime = request.startTime;
         } 
 
         /**

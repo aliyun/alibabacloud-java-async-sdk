@@ -62,10 +62,10 @@ public class DescribeDcdnRefreshTaskByIdRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDcdnRefreshTaskByIdRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.taskId = response.taskId;
+        private Builder(DescribeDcdnRefreshTaskByIdRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.taskId = request.taskId;
         } 
 
         /**

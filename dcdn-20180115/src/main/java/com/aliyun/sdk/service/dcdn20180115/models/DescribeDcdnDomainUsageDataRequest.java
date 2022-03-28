@@ -142,16 +142,16 @@ public class DescribeDcdnDomainUsageDataRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDcdnDomainUsageDataRequest response) {
-            super(response);
-            this.area = response.area;
-            this.dataProtocol = response.dataProtocol;
-            this.domainName = response.domainName;
-            this.endTime = response.endTime;
-            this.field = response.field;
-            this.interval = response.interval;
-            this.ownerId = response.ownerId;
-            this.startTime = response.startTime;
+        private Builder(DescribeDcdnDomainUsageDataRequest request) {
+            super(request);
+            this.area = request.area;
+            this.dataProtocol = request.dataProtocol;
+            this.domainName = request.domainName;
+            this.endTime = request.endTime;
+            this.field = request.field;
+            this.interval = request.interval;
+            this.ownerId = request.ownerId;
+            this.startTime = request.startTime;
         } 
 
         /**

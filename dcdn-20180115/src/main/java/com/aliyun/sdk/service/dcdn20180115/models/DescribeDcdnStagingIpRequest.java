@@ -48,9 +48,9 @@ public class DescribeDcdnStagingIpRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDcdnStagingIpRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
+        private Builder(DescribeDcdnStagingIpRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
         } 
 
         /**

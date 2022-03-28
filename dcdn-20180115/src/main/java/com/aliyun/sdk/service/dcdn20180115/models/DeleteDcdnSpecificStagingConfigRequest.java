@@ -89,12 +89,12 @@ public class DeleteDcdnSpecificStagingConfigRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteDcdnSpecificStagingConfigRequest response) {
-            super(response);
-            this.configId = response.configId;
-            this.domainName = response.domainName;
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
+        private Builder(DeleteDcdnSpecificStagingConfigRequest request) {
+            super(request);
+            this.configId = request.configId;
+            this.domainName = request.domainName;
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
         } 
 
         /**

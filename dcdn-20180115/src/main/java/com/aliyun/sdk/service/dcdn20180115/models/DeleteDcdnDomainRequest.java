@@ -88,12 +88,12 @@ public class DeleteDcdnDomainRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteDcdnDomainRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
+        private Builder(DeleteDcdnDomainRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
         } 
 
         /**

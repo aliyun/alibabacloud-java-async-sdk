@@ -88,12 +88,12 @@ public class CreateRoutineRequest extends Request {
             super();
         } 
 
-        private Builder(CreateRoutineRequest response) {
-            super(response);
-            this.description = response.description;
-            this.envConf = response.envConf;
-            this.name = response.name;
-            this.ownerId = response.ownerId;
+        private Builder(CreateRoutineRequest request) {
+            super(request);
+            this.description = request.description;
+            this.envConf = request.envConf;
+            this.name = request.name;
+            this.ownerId = request.ownerId;
         } 
 
         /**

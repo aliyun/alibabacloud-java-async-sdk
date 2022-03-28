@@ -89,12 +89,12 @@ public class OpenDcdnServiceRequest extends Request {
             super();
         } 
 
-        private Builder(OpenDcdnServiceRequest response) {
-            super(response);
-            this.billType = response.billType;
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
-            this.websocketBillType = response.websocketBillType;
+        private Builder(OpenDcdnServiceRequest request) {
+            super(request);
+            this.billType = request.billType;
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
+            this.websocketBillType = request.websocketBillType;
         } 
 
         /**

@@ -61,10 +61,10 @@ public class DescribeUserDcdnStatusRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeUserDcdnStatusRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
+        private Builder(DescribeUserDcdnStatusRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
         } 
 
         /**

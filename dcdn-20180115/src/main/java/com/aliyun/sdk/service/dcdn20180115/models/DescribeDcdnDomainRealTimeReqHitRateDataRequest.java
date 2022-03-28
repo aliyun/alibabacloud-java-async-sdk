@@ -88,12 +88,12 @@ public class DescribeDcdnDomainRealTimeReqHitRateDataRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDcdnDomainRealTimeReqHitRateDataRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.endTime = response.endTime;
-            this.ownerId = response.ownerId;
-            this.startTime = response.startTime;
+        private Builder(DescribeDcdnDomainRealTimeReqHitRateDataRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.endTime = request.endTime;
+            this.ownerId = request.ownerId;
+            this.startTime = request.startTime;
         } 
 
         /**

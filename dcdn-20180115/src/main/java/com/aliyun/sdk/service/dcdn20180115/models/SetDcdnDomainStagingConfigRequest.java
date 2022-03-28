@@ -76,11 +76,11 @@ public class SetDcdnDomainStagingConfigRequest extends Request {
             super();
         } 
 
-        private Builder(SetDcdnDomainStagingConfigRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.functions = response.functions;
-            this.ownerId = response.ownerId;
+        private Builder(SetDcdnDomainStagingConfigRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.functions = request.functions;
+            this.ownerId = request.ownerId;
         } 
 
         /**

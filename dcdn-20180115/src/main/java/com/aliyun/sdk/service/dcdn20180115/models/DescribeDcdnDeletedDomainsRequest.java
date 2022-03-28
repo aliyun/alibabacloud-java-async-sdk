@@ -76,11 +76,11 @@ public class DescribeDcdnDeletedDomainsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDcdnDeletedDomainsRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(DescribeDcdnDeletedDomainsRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**

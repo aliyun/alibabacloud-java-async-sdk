@@ -75,11 +75,11 @@ public class DeleteDcdnRealTimeLogProjectRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteDcdnRealTimeLogProjectRequest response) {
-            super(response);
-            this.businessType = response.businessType;
-            this.ownerId = response.ownerId;
-            this.projectName = response.projectName;
+        private Builder(DeleteDcdnRealTimeLogProjectRequest request) {
+            super(request);
+            this.businessType = request.businessType;
+            this.ownerId = request.ownerId;
+            this.projectName = request.projectName;
         } 
 
         /**

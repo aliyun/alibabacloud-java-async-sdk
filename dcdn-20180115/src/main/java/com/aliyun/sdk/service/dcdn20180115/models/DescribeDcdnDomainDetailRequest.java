@@ -75,11 +75,11 @@ public class DescribeDcdnDomainDetailRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDcdnDomainDetailRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
+        private Builder(DescribeDcdnDomainDetailRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
         } 
 
         /**

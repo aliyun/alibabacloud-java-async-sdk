@@ -192,20 +192,20 @@ public class DescribeDcdnIpaUserDomainsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDcdnIpaUserDomainsRequest response) {
-            super(response);
-            this.checkDomainShow = response.checkDomainShow;
-            this.domainName = response.domainName;
-            this.domainSearchType = response.domainSearchType;
-            this.domainStatus = response.domainStatus;
-            this.funcFilter = response.funcFilter;
-            this.funcId = response.funcId;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.resourceGroupId = response.resourceGroupId;
-            this.securityToken = response.securityToken;
-            this.tag = response.tag;
+        private Builder(DescribeDcdnIpaUserDomainsRequest request) {
+            super(request);
+            this.checkDomainShow = request.checkDomainShow;
+            this.domainName = request.domainName;
+            this.domainSearchType = request.domainSearchType;
+            this.domainStatus = request.domainStatus;
+            this.funcFilter = request.funcFilter;
+            this.funcId = request.funcId;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.resourceGroupId = request.resourceGroupId;
+            this.securityToken = request.securityToken;
+            this.tag = request.tag;
         } 
 
         /**

@@ -101,13 +101,13 @@ public class UpdateDcdnSubTaskRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateDcdnSubTaskRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.endTime = response.endTime;
-            this.ownerId = response.ownerId;
-            this.reportIds = response.reportIds;
-            this.startTime = response.startTime;
+        private Builder(UpdateDcdnSubTaskRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.endTime = request.endTime;
+            this.ownerId = request.ownerId;
+            this.reportIds = request.reportIds;
+            this.startTime = request.startTime;
         } 
 
         /**

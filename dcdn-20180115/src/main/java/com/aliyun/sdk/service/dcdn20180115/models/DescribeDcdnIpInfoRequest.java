@@ -15,7 +15,7 @@ public class DescribeDcdnIpInfoRequest extends Request {
     @Query
     @NameInMap("IP")
     @Validation(required = true)
-    private String IP;
+    private String ip;
 
     @Query
     @NameInMap("OwnerId")
@@ -27,7 +27,7 @@ public class DescribeDcdnIpInfoRequest extends Request {
 
     private DescribeDcdnIpInfoRequest(Builder builder) {
         super(builder);
-        this.IP = builder.IP;
+        this.ip = builder.ip;
         this.ownerId = builder.ownerId;
         this.securityToken = builder.securityToken;
     }
@@ -46,10 +46,10 @@ public class DescribeDcdnIpInfoRequest extends Request {
     }
 
     /**
-     * @return IP
+     * @return ip
      */
-    public String getIP() {
-        return this.IP;
+    public String getIp() {
+        return this.ip;
     }
 
     /**
@@ -67,7 +67,7 @@ public class DescribeDcdnIpInfoRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeDcdnIpInfoRequest, Builder> {
-        private String IP; 
+        private String ip; 
         private Long ownerId; 
         private String securityToken; 
 
@@ -75,19 +75,19 @@ public class DescribeDcdnIpInfoRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDcdnIpInfoRequest response) {
-            super(response);
-            this.IP = response.IP;
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
+        private Builder(DescribeDcdnIpInfoRequest request) {
+            super(request);
+            this.ip = request.ip;
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
         } 
 
         /**
          * IP.
          */
-        public Builder IP(String IP) {
-            this.putQueryParameter("IP", IP);
-            this.IP = IP;
+        public Builder ip(String ip) {
+            this.putQueryParameter("IP", ip);
+            this.ip = ip;
             return this;
         }
 

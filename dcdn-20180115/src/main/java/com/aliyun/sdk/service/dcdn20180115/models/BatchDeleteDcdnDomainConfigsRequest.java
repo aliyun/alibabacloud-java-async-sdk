@@ -102,13 +102,13 @@ public class BatchDeleteDcdnDomainConfigsRequest extends Request {
             super();
         } 
 
-        private Builder(BatchDeleteDcdnDomainConfigsRequest response) {
-            super(response);
-            this.domainNames = response.domainNames;
-            this.functionNames = response.functionNames;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
+        private Builder(BatchDeleteDcdnDomainConfigsRequest request) {
+            super(request);
+            this.domainNames = request.domainNames;
+            this.functionNames = request.functionNames;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
         } 
 
         /**

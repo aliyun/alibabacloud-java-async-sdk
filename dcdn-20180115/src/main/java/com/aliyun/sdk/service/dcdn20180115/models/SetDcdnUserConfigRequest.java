@@ -102,13 +102,13 @@ public class SetDcdnUserConfigRequest extends Request {
             super();
         } 
 
-        private Builder(SetDcdnUserConfigRequest response) {
-            super(response);
-            this.configs = response.configs;
-            this.functionId = response.functionId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
+        private Builder(SetDcdnUserConfigRequest request) {
+            super(request);
+            this.configs = request.configs;
+            this.functionId = request.functionId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
         } 
 
         /**

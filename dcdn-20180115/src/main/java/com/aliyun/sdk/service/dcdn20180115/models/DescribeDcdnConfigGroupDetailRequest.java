@@ -74,11 +74,11 @@ public class DescribeDcdnConfigGroupDetailRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDcdnConfigGroupDetailRequest response) {
-            super(response);
-            this.configGroupId = response.configGroupId;
-            this.configGroupName = response.configGroupName;
-            this.ownerId = response.ownerId;
+        private Builder(DescribeDcdnConfigGroupDetailRequest request) {
+            super(request);
+            this.configGroupId = request.configGroupId;
+            this.configGroupName = request.configGroupName;
+            this.ownerId = request.ownerId;
         } 
 
         /**

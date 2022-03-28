@@ -62,10 +62,10 @@ public class DescribeDcdnAclFieldsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDcdnAclFieldsRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.ownerId = response.ownerId;
+        private Builder(DescribeDcdnAclFieldsRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.ownerId = request.ownerId;
         } 
 
         /**

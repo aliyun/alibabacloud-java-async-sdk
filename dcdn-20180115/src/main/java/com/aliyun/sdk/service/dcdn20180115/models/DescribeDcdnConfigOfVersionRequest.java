@@ -114,14 +114,14 @@ public class DescribeDcdnConfigOfVersionRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDcdnConfigOfVersionRequest response) {
-            super(response);
-            this.functionId = response.functionId;
-            this.functionName = response.functionName;
-            this.groupId = response.groupId;
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
-            this.versionId = response.versionId;
+        private Builder(DescribeDcdnConfigOfVersionRequest request) {
+            super(request);
+            this.functionId = request.functionId;
+            this.functionName = request.functionName;
+            this.groupId = request.groupId;
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
+            this.versionId = request.versionId;
         } 
 
         /**

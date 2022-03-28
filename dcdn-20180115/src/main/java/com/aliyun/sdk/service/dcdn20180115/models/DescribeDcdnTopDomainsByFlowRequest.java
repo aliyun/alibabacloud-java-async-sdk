@@ -88,12 +88,12 @@ public class DescribeDcdnTopDomainsByFlowRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDcdnTopDomainsByFlowRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.limit = response.limit;
-            this.ownerId = response.ownerId;
-            this.startTime = response.startTime;
+        private Builder(DescribeDcdnTopDomainsByFlowRequest request) {
+            super(request);
+            this.endTime = request.endTime;
+            this.limit = request.limit;
+            this.ownerId = request.ownerId;
+            this.startTime = request.startTime;
         } 
 
         /**

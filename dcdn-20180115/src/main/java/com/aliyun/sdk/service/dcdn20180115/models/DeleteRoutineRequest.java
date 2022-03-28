@@ -62,10 +62,10 @@ public class DeleteRoutineRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteRoutineRequest response) {
-            super(response);
-            this.name = response.name;
-            this.ownerId = response.ownerId;
+        private Builder(DeleteRoutineRequest request) {
+            super(request);
+            this.name = request.name;
+            this.ownerId = request.ownerId;
         } 
 
         /**

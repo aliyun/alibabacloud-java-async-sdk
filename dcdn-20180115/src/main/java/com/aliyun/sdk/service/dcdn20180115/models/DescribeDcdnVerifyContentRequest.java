@@ -62,10 +62,10 @@ public class DescribeDcdnVerifyContentRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDcdnVerifyContentRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.ownerId = response.ownerId;
+        private Builder(DescribeDcdnVerifyContentRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.ownerId = request.ownerId;
         } 
 
         /**

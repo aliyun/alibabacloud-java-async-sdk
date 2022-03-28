@@ -88,12 +88,12 @@ public class DescribeDcdnDomainTopReferVisitRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDcdnDomainTopReferVisitRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.ownerId = response.ownerId;
-            this.sortBy = response.sortBy;
-            this.startTime = response.startTime;
+        private Builder(DescribeDcdnDomainTopReferVisitRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.ownerId = request.ownerId;
+            this.sortBy = request.sortBy;
+            this.startTime = request.startTime;
         } 
 
         /**

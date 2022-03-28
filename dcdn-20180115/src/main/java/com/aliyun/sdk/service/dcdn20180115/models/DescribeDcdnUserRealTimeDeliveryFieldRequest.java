@@ -61,10 +61,10 @@ public class DescribeDcdnUserRealTimeDeliveryFieldRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDcdnUserRealTimeDeliveryFieldRequest response) {
-            super(response);
-            this.businessType = response.businessType;
-            this.ownerId = response.ownerId;
+        private Builder(DescribeDcdnUserRealTimeDeliveryFieldRequest request) {
+            super(request);
+            this.businessType = request.businessType;
+            this.ownerId = request.ownerId;
         } 
 
         /**

@@ -87,12 +87,12 @@ public class DescribeDcdnDomainMultiUsageDataRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDcdnDomainMultiUsageDataRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.endTime = response.endTime;
-            this.ownerId = response.ownerId;
-            this.startTime = response.startTime;
+        private Builder(DescribeDcdnDomainMultiUsageDataRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.endTime = request.endTime;
+            this.ownerId = request.ownerId;
+            this.startTime = request.startTime;
         } 
 
         /**

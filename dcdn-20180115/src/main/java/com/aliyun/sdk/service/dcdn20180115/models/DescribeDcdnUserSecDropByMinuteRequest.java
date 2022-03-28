@@ -167,18 +167,18 @@ public class DescribeDcdnUserSecDropByMinuteRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDcdnUserSecDropByMinuteRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.endTime = response.endTime;
-            this.lang = response.lang;
-            this.object = response.object;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.ruleName = response.ruleName;
-            this.secFunc = response.secFunc;
-            this.startTime = response.startTime;
+        private Builder(DescribeDcdnUserSecDropByMinuteRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.endTime = request.endTime;
+            this.lang = request.lang;
+            this.object = request.object;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.ruleName = request.ruleName;
+            this.secFunc = request.secFunc;
+            this.startTime = request.startTime;
         } 
 
         /**

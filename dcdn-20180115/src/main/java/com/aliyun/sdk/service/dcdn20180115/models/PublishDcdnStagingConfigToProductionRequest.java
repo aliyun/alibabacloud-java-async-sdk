@@ -76,11 +76,11 @@ public class PublishDcdnStagingConfigToProductionRequest extends Request {
             super();
         } 
 
-        private Builder(PublishDcdnStagingConfigToProductionRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.functionName = response.functionName;
-            this.ownerId = response.ownerId;
+        private Builder(PublishDcdnStagingConfigToProductionRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.functionName = request.functionName;
+            this.ownerId = request.ownerId;
         } 
 
         /**

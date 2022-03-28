@@ -62,10 +62,10 @@ public class DescribeRoutineRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeRoutineRequest response) {
-            super(response);
-            this.name = response.name;
-            this.ownerId = response.ownerId;
+        private Builder(DescribeRoutineRequest request) {
+            super(request);
+            this.name = request.name;
+            this.ownerId = request.ownerId;
         } 
 
         /**

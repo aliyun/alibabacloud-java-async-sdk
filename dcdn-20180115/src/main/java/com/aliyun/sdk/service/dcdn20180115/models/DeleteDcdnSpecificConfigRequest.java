@@ -89,12 +89,12 @@ public class DeleteDcdnSpecificConfigRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteDcdnSpecificConfigRequest response) {
-            super(response);
-            this.configId = response.configId;
-            this.domainName = response.domainName;
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
+        private Builder(DeleteDcdnSpecificConfigRequest request) {
+            super(request);
+            this.configId = request.configId;
+            this.domainName = request.domainName;
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
         } 
 
         /**

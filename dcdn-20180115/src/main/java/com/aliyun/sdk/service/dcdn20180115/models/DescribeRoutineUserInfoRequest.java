@@ -48,9 +48,9 @@ public class DescribeRoutineUserInfoRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeRoutineUserInfoRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
+        private Builder(DescribeRoutineUserInfoRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
         } 
 
         /**

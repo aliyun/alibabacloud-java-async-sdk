@@ -154,17 +154,17 @@ public class BatchSetDcdnDomainCertificateRequest extends Request {
             super();
         } 
 
-        private Builder(BatchSetDcdnDomainCertificateRequest response) {
-            super(response);
-            this.certName = response.certName;
-            this.certType = response.certType;
-            this.domainName = response.domainName;
-            this.ownerId = response.ownerId;
-            this.region = response.region;
-            this.SSLPri = response.SSLPri;
-            this.SSLProtocol = response.SSLProtocol;
-            this.SSLPub = response.SSLPub;
-            this.securityToken = response.securityToken;
+        private Builder(BatchSetDcdnDomainCertificateRequest request) {
+            super(request);
+            this.certName = request.certName;
+            this.certType = request.certType;
+            this.domainName = request.domainName;
+            this.ownerId = request.ownerId;
+            this.region = request.region;
+            this.SSLPri = request.SSLPri;
+            this.SSLProtocol = request.SSLProtocol;
+            this.SSLPub = request.SSLPub;
+            this.securityToken = request.securityToken;
         } 
 
         /**

@@ -145,16 +145,16 @@ public class UpdateDcdnSLSRealtimeLogDeliveryRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateDcdnSLSRealtimeLogDeliveryRequest response) {
-            super(response);
-            this.dataCenter = response.dataCenter;
-            this.domainName = response.domainName;
-            this.ownerId = response.ownerId;
-            this.projectName = response.projectName;
-            this.SLSLogStore = response.SLSLogStore;
-            this.SLSProject = response.SLSProject;
-            this.SLSRegion = response.SLSRegion;
-            this.samplingRate = response.samplingRate;
+        private Builder(UpdateDcdnSLSRealtimeLogDeliveryRequest request) {
+            super(request);
+            this.dataCenter = request.dataCenter;
+            this.domainName = request.domainName;
+            this.ownerId = request.ownerId;
+            this.projectName = request.projectName;
+            this.SLSLogStore = request.SLSLogStore;
+            this.SLSProject = request.SLSProject;
+            this.SLSRegion = request.SLSRegion;
+            this.samplingRate = request.samplingRate;
         } 
 
         /**

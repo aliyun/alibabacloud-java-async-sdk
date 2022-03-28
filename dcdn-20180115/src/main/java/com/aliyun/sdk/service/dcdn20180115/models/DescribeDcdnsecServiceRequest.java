@@ -61,10 +61,10 @@ public class DescribeDcdnsecServiceRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDcdnsecServiceRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
+        private Builder(DescribeDcdnsecServiceRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
         } 
 
         /**

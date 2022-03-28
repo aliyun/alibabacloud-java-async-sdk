@@ -76,11 +76,11 @@ public class CommitStagingRoutineCodeRequest extends Request {
             super();
         } 
 
-        private Builder(CommitStagingRoutineCodeRequest response) {
-            super(response);
-            this.codeDescription = response.codeDescription;
-            this.name = response.name;
-            this.ownerId = response.ownerId;
+        private Builder(CommitStagingRoutineCodeRequest request) {
+            super(request);
+            this.codeDescription = request.codeDescription;
+            this.name = request.name;
+            this.ownerId = request.ownerId;
         } 
 
         /**

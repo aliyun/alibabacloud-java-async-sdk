@@ -48,9 +48,9 @@ public class DescribeDcdnUserTagsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDcdnUserTagsRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
+        private Builder(DescribeDcdnUserTagsRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
         } 
 
         /**

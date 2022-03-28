@@ -89,12 +89,12 @@ public class DescribeDcdnTagResourcesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDcdnTagResourcesRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.resourceId = response.resourceId;
-            this.resourceType = response.resourceType;
-            this.tag = response.tag;
+        private Builder(DescribeDcdnTagResourcesRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.resourceId = request.resourceId;
+            this.resourceType = request.resourceType;
+            this.tag = request.tag;
         } 
 
         /**

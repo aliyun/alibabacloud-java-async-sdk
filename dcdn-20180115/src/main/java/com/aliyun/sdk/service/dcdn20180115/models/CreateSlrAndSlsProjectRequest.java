@@ -62,10 +62,10 @@ public class CreateSlrAndSlsProjectRequest extends Request {
             super();
         } 
 
-        private Builder(CreateSlrAndSlsProjectRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.region = response.region;
+        private Builder(CreateSlrAndSlsProjectRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.region = request.region;
         } 
 
         /**

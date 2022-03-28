@@ -129,15 +129,15 @@ public class DescribeDcdnUserDomainsByFuncRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDcdnUserDomainsByFuncRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.funcFilter = response.funcFilter;
-            this.funcId = response.funcId;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.resourceGroupId = response.resourceGroupId;
+        private Builder(DescribeDcdnUserDomainsByFuncRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.funcFilter = request.funcFilter;
+            this.funcId = request.funcId;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**

@@ -154,17 +154,17 @@ public class BatchAddDcdnDomainRequest extends Request {
             super();
         } 
 
-        private Builder(BatchAddDcdnDomainRequest response) {
-            super(response);
-            this.checkUrl = response.checkUrl;
-            this.domainName = response.domainName;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.scope = response.scope;
-            this.securityToken = response.securityToken;
-            this.sources = response.sources;
-            this.topLevelDomain = response.topLevelDomain;
+        private Builder(BatchAddDcdnDomainRequest request) {
+            super(request);
+            this.checkUrl = request.checkUrl;
+            this.domainName = request.domainName;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.scope = request.scope;
+            this.securityToken = request.securityToken;
+            this.sources = request.sources;
+            this.topLevelDomain = request.topLevelDomain;
         } 
 
         /**

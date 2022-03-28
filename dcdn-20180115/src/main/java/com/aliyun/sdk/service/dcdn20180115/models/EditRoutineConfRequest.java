@@ -88,12 +88,12 @@ public class EditRoutineConfRequest extends Request {
             super();
         } 
 
-        private Builder(EditRoutineConfRequest response) {
-            super(response);
-            this.description = response.description;
-            this.envConf = response.envConf;
-            this.name = response.name;
-            this.ownerId = response.ownerId;
+        private Builder(EditRoutineConfRequest request) {
+            super(request);
+            this.description = request.description;
+            this.envConf = request.envConf;
+            this.name = request.name;
+            this.ownerId = request.ownerId;
         } 
 
         /**

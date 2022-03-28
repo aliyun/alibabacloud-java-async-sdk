@@ -76,11 +76,11 @@ public class UploadRoutineCodeRequest extends Request {
             super();
         } 
 
-        private Builder(UploadRoutineCodeRequest response) {
-            super(response);
-            this.codeDescription = response.codeDescription;
-            this.name = response.name;
-            this.ownerId = response.ownerId;
+        private Builder(UploadRoutineCodeRequest request) {
+            super(request);
+            this.codeDescription = request.codeDescription;
+            this.name = request.name;
+            this.ownerId = request.ownerId;
         } 
 
         /**

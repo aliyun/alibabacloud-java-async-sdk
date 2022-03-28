@@ -103,13 +103,13 @@ public class SetDcdnDomainSMCertificateRequest extends Request {
             super();
         } 
 
-        private Builder(SetDcdnDomainSMCertificateRequest response) {
-            super(response);
-            this.certIdentifier = response.certIdentifier;
-            this.domainName = response.domainName;
-            this.ownerId = response.ownerId;
-            this.SSLProtocol = response.SSLProtocol;
-            this.securityToken = response.securityToken;
+        private Builder(SetDcdnDomainSMCertificateRequest request) {
+            super(request);
+            this.certIdentifier = request.certIdentifier;
+            this.domainName = request.domainName;
+            this.ownerId = request.ownerId;
+            this.SSLProtocol = request.SSLProtocol;
+            this.securityToken = request.securityToken;
         } 
 
         /**

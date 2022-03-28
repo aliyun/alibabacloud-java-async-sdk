@@ -89,12 +89,12 @@ public class SetDcdnFullDomainsBlockIPRequest extends Request {
             super();
         } 
 
-        private Builder(SetDcdnFullDomainsBlockIPRequest response) {
-            super(response);
-            this.blockInterval = response.blockInterval;
-            this.IPList = response.IPList;
-            this.operationType = response.operationType;
-            this.ownerId = response.ownerId;
+        private Builder(SetDcdnFullDomainsBlockIPRequest request) {
+            super(request);
+            this.blockInterval = request.blockInterval;
+            this.IPList = request.IPList;
+            this.operationType = request.operationType;
+            this.ownerId = request.ownerId;
         } 
 
         /**

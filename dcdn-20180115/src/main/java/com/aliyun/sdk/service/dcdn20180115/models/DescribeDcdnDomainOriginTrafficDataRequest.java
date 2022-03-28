@@ -100,13 +100,13 @@ public class DescribeDcdnDomainOriginTrafficDataRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDcdnDomainOriginTrafficDataRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.endTime = response.endTime;
-            this.interval = response.interval;
-            this.ownerId = response.ownerId;
-            this.startTime = response.startTime;
+        private Builder(DescribeDcdnDomainOriginTrafficDataRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.endTime = request.endTime;
+            this.interval = request.interval;
+            this.ownerId = request.ownerId;
+            this.startTime = request.startTime;
         } 
 
         /**

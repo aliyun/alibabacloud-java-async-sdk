@@ -141,16 +141,16 @@ public class SetDcdnConfigOfVersionRequest extends Request {
             super();
         } 
 
-        private Builder(SetDcdnConfigOfVersionRequest response) {
-            super(response);
-            this.configId = response.configId;
-            this.functionArgs = response.functionArgs;
-            this.functionId = response.functionId;
-            this.functionName = response.functionName;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
-            this.versionId = response.versionId;
+        private Builder(SetDcdnConfigOfVersionRequest request) {
+            super(request);
+            this.configId = request.configId;
+            this.functionArgs = request.functionArgs;
+            this.functionId = request.functionId;
+            this.functionName = request.functionName;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
+            this.versionId = request.versionId;
         } 
 
         /**

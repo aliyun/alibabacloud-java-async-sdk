@@ -102,13 +102,13 @@ public class UntagDcdnResourcesRequest extends Request {
             super();
         } 
 
-        private Builder(UntagDcdnResourcesRequest response) {
-            super(response);
-            this.all = response.all;
-            this.ownerId = response.ownerId;
-            this.resourceId = response.resourceId;
-            this.resourceType = response.resourceType;
-            this.tagKey = response.tagKey;
+        private Builder(UntagDcdnResourcesRequest request) {
+            super(request);
+            this.all = request.all;
+            this.ownerId = request.ownerId;
+            this.resourceId = request.resourceId;
+            this.resourceType = request.resourceType;
+            this.tagKey = request.tagKey;
         } 
 
         /**
