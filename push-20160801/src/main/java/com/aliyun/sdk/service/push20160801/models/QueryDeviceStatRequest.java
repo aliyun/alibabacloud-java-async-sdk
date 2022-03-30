@@ -105,13 +105,13 @@ public class QueryDeviceStatRequest extends Request {
             super();
         } 
 
-        private Builder(QueryDeviceStatRequest response) {
-            super(response);
-            this.appKey = response.appKey;
-            this.deviceType = response.deviceType;
-            this.endTime = response.endTime;
-            this.queryType = response.queryType;
-            this.startTime = response.startTime;
+        private Builder(QueryDeviceStatRequest request) {
+            super(request);
+            this.appKey = request.appKey;
+            this.deviceType = request.deviceType;
+            this.endTime = request.endTime;
+            this.queryType = request.queryType;
+            this.startTime = request.startTime;
         } 
 
         /**

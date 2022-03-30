@@ -63,10 +63,10 @@ public class RemoveTagRequest extends Request {
             super();
         } 
 
-        private Builder(RemoveTagRequest response) {
-            super(response);
-            this.appKey = response.appKey;
-            this.tagName = response.tagName;
+        private Builder(RemoveTagRequest request) {
+            super(request);
+            this.appKey = request.appKey;
+            this.tagName = request.tagName;
         } 
 
         /**

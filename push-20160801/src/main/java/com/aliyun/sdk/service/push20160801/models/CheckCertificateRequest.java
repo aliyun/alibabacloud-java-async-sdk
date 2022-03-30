@@ -49,9 +49,9 @@ public class CheckCertificateRequest extends Request {
             super();
         } 
 
-        private Builder(CheckCertificateRequest response) {
-            super(response);
-            this.appKey = response.appKey;
+        private Builder(CheckCertificateRequest request) {
+            super(request);
+            this.appKey = request.appKey;
         } 
 
         /**

@@ -63,10 +63,10 @@ public class QueryAliasesRequest extends Request {
             super();
         } 
 
-        private Builder(QueryAliasesRequest response) {
-            super(response);
-            this.appKey = response.appKey;
-            this.deviceId = response.deviceId;
+        private Builder(QueryAliasesRequest request) {
+            super(request);
+            this.appKey = request.appKey;
+            this.deviceId = request.deviceId;
         } 
 
         /**

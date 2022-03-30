@@ -116,6 +116,10 @@ public class PushRequest extends Request {
     private Integer androidRenderStyle;
 
     @Query
+    @NameInMap("AndroidVivoPushMode")
+    private Integer androidVivoPushMode;
+
+    @Query
     @NameInMap("AndroidXiaoMiActivity")
     private String androidXiaoMiActivity;
 
@@ -215,6 +219,10 @@ public class PushRequest extends Request {
     private String title;
 
     @Query
+    @NameInMap("Trim")
+    private Boolean trim;
+
+    @Query
     @NameInMap("iOSApnsEnv")
     private String iOSApnsEnv;
 
@@ -229,6 +237,10 @@ public class PushRequest extends Request {
     @Query
     @NameInMap("iOSExtParameters")
     private String iOSExtParameters;
+
+    @Query
+    @NameInMap("iOSInterruptionLevel")
+    private String iOSInterruptionLevel;
 
     @Query
     @NameInMap("iOSMusic")
@@ -249,6 +261,10 @@ public class PushRequest extends Request {
     @Query
     @NameInMap("iOSNotificationThreadId")
     private String iOSNotificationThreadId;
+
+    @Query
+    @NameInMap("iOSRelevanceScore")
+    private Double iOSRelevanceScore;
 
     @Query
     @NameInMap("iOSRemind")
@@ -293,6 +309,7 @@ public class PushRequest extends Request {
         this.androidPopupTitle = builder.androidPopupTitle;
         this.androidRemind = builder.androidRemind;
         this.androidRenderStyle = builder.androidRenderStyle;
+        this.androidVivoPushMode = builder.androidVivoPushMode;
         this.androidXiaoMiActivity = builder.androidXiaoMiActivity;
         this.androidXiaoMiNotifyBody = builder.androidXiaoMiNotifyBody;
         this.androidXiaoMiNotifyTitle = builder.androidXiaoMiNotifyTitle;
@@ -316,15 +333,18 @@ public class PushRequest extends Request {
         this.target = builder.target;
         this.targetValue = builder.targetValue;
         this.title = builder.title;
+        this.trim = builder.trim;
         this.iOSApnsEnv = builder.iOSApnsEnv;
         this.iOSBadge = builder.iOSBadge;
         this.iOSBadgeAutoIncrement = builder.iOSBadgeAutoIncrement;
         this.iOSExtParameters = builder.iOSExtParameters;
+        this.iOSInterruptionLevel = builder.iOSInterruptionLevel;
         this.iOSMusic = builder.iOSMusic;
         this.iOSMutableContent = builder.iOSMutableContent;
         this.iOSNotificationCategory = builder.iOSNotificationCategory;
         this.iOSNotificationCollapseId = builder.iOSNotificationCollapseId;
         this.iOSNotificationThreadId = builder.iOSNotificationThreadId;
+        this.iOSRelevanceScore = builder.iOSRelevanceScore;
         this.iOSRemind = builder.iOSRemind;
         this.iOSRemindBody = builder.iOSRemindBody;
         this.iOSSilentNotification = builder.iOSSilentNotification;
@@ -520,6 +540,13 @@ public class PushRequest extends Request {
     }
 
     /**
+     * @return androidVivoPushMode
+     */
+    public Integer getAndroidVivoPushMode() {
+        return this.androidVivoPushMode;
+    }
+
+    /**
      * @return androidXiaoMiActivity
      */
     public String getAndroidXiaoMiActivity() {
@@ -681,6 +708,13 @@ public class PushRequest extends Request {
     }
 
     /**
+     * @return trim
+     */
+    public Boolean getTrim() {
+        return this.trim;
+    }
+
+    /**
      * @return iOSApnsEnv
      */
     public String getIOSApnsEnv() {
@@ -706,6 +740,13 @@ public class PushRequest extends Request {
      */
     public String getIOSExtParameters() {
         return this.iOSExtParameters;
+    }
+
+    /**
+     * @return iOSInterruptionLevel
+     */
+    public String getIOSInterruptionLevel() {
+        return this.iOSInterruptionLevel;
     }
 
     /**
@@ -741,6 +782,13 @@ public class PushRequest extends Request {
      */
     public String getIOSNotificationThreadId() {
         return this.iOSNotificationThreadId;
+    }
+
+    /**
+     * @return iOSRelevanceScore
+     */
+    public Double getIOSRelevanceScore() {
+        return this.iOSRelevanceScore;
     }
 
     /**
@@ -797,6 +845,7 @@ public class PushRequest extends Request {
         private String androidPopupTitle; 
         private Boolean androidRemind; 
         private Integer androidRenderStyle; 
+        private Integer androidVivoPushMode; 
         private String androidXiaoMiActivity; 
         private String androidXiaoMiNotifyBody; 
         private String androidXiaoMiNotifyTitle; 
@@ -820,15 +869,18 @@ public class PushRequest extends Request {
         private String target; 
         private String targetValue; 
         private String title; 
+        private Boolean trim; 
         private String iOSApnsEnv; 
         private Integer iOSBadge; 
         private Boolean iOSBadgeAutoIncrement; 
         private String iOSExtParameters; 
+        private String iOSInterruptionLevel; 
         private String iOSMusic; 
         private Boolean iOSMutableContent; 
         private String iOSNotificationCategory; 
         private String iOSNotificationCollapseId; 
         private String iOSNotificationThreadId; 
+        private Double iOSRelevanceScore; 
         private Boolean iOSRemind; 
         private String iOSRemindBody; 
         private Boolean iOSSilentNotification; 
@@ -838,69 +890,73 @@ public class PushRequest extends Request {
             super();
         } 
 
-        private Builder(PushRequest response) {
-            super(response);
-            this.androidActivity = response.androidActivity;
-            this.androidBigBody = response.androidBigBody;
-            this.androidBigPictureUrl = response.androidBigPictureUrl;
-            this.androidBigTitle = response.androidBigTitle;
-            this.androidExtParameters = response.androidExtParameters;
-            this.androidImageUrl = response.androidImageUrl;
-            this.androidInboxBody = response.androidInboxBody;
-            this.androidMessageHuaweiCategory = response.androidMessageHuaweiCategory;
-            this.androidMessageHuaweiUrgency = response.androidMessageHuaweiUrgency;
-            this.androidMusic = response.androidMusic;
-            this.androidNotificationBarPriority = response.androidNotificationBarPriority;
-            this.androidNotificationBarType = response.androidNotificationBarType;
-            this.androidNotificationChannel = response.androidNotificationChannel;
-            this.androidNotificationHuaweiChannel = response.androidNotificationHuaweiChannel;
-            this.androidNotificationNotifyId = response.androidNotificationNotifyId;
-            this.androidNotificationVivoChannel = response.androidNotificationVivoChannel;
-            this.androidNotificationXiaomiChannel = response.androidNotificationXiaomiChannel;
-            this.androidNotifyType = response.androidNotifyType;
-            this.androidOpenType = response.androidOpenType;
-            this.androidOpenUrl = response.androidOpenUrl;
-            this.androidPopupActivity = response.androidPopupActivity;
-            this.androidPopupBody = response.androidPopupBody;
-            this.androidPopupTitle = response.androidPopupTitle;
-            this.androidRemind = response.androidRemind;
-            this.androidRenderStyle = response.androidRenderStyle;
-            this.androidXiaoMiActivity = response.androidXiaoMiActivity;
-            this.androidXiaoMiNotifyBody = response.androidXiaoMiNotifyBody;
-            this.androidXiaoMiNotifyTitle = response.androidXiaoMiNotifyTitle;
-            this.androidXiaomiBigPictureUrl = response.androidXiaomiBigPictureUrl;
-            this.androidXiaomiImageUrl = response.androidXiaomiImageUrl;
-            this.appKey = response.appKey;
-            this.body = response.body;
-            this.deviceType = response.deviceType;
-            this.expireTime = response.expireTime;
-            this.jobKey = response.jobKey;
-            this.pushTime = response.pushTime;
-            this.pushType = response.pushType;
-            this.sendChannels = response.sendChannels;
-            this.sendSpeed = response.sendSpeed;
-            this.smsDelaySecs = response.smsDelaySecs;
-            this.smsParams = response.smsParams;
-            this.smsSendPolicy = response.smsSendPolicy;
-            this.smsSignName = response.smsSignName;
-            this.smsTemplateName = response.smsTemplateName;
-            this.storeOffline = response.storeOffline;
-            this.target = response.target;
-            this.targetValue = response.targetValue;
-            this.title = response.title;
-            this.iOSApnsEnv = response.iOSApnsEnv;
-            this.iOSBadge = response.iOSBadge;
-            this.iOSBadgeAutoIncrement = response.iOSBadgeAutoIncrement;
-            this.iOSExtParameters = response.iOSExtParameters;
-            this.iOSMusic = response.iOSMusic;
-            this.iOSMutableContent = response.iOSMutableContent;
-            this.iOSNotificationCategory = response.iOSNotificationCategory;
-            this.iOSNotificationCollapseId = response.iOSNotificationCollapseId;
-            this.iOSNotificationThreadId = response.iOSNotificationThreadId;
-            this.iOSRemind = response.iOSRemind;
-            this.iOSRemindBody = response.iOSRemindBody;
-            this.iOSSilentNotification = response.iOSSilentNotification;
-            this.iOSSubtitle = response.iOSSubtitle;
+        private Builder(PushRequest request) {
+            super(request);
+            this.androidActivity = request.androidActivity;
+            this.androidBigBody = request.androidBigBody;
+            this.androidBigPictureUrl = request.androidBigPictureUrl;
+            this.androidBigTitle = request.androidBigTitle;
+            this.androidExtParameters = request.androidExtParameters;
+            this.androidImageUrl = request.androidImageUrl;
+            this.androidInboxBody = request.androidInboxBody;
+            this.androidMessageHuaweiCategory = request.androidMessageHuaweiCategory;
+            this.androidMessageHuaweiUrgency = request.androidMessageHuaweiUrgency;
+            this.androidMusic = request.androidMusic;
+            this.androidNotificationBarPriority = request.androidNotificationBarPriority;
+            this.androidNotificationBarType = request.androidNotificationBarType;
+            this.androidNotificationChannel = request.androidNotificationChannel;
+            this.androidNotificationHuaweiChannel = request.androidNotificationHuaweiChannel;
+            this.androidNotificationNotifyId = request.androidNotificationNotifyId;
+            this.androidNotificationVivoChannel = request.androidNotificationVivoChannel;
+            this.androidNotificationXiaomiChannel = request.androidNotificationXiaomiChannel;
+            this.androidNotifyType = request.androidNotifyType;
+            this.androidOpenType = request.androidOpenType;
+            this.androidOpenUrl = request.androidOpenUrl;
+            this.androidPopupActivity = request.androidPopupActivity;
+            this.androidPopupBody = request.androidPopupBody;
+            this.androidPopupTitle = request.androidPopupTitle;
+            this.androidRemind = request.androidRemind;
+            this.androidRenderStyle = request.androidRenderStyle;
+            this.androidVivoPushMode = request.androidVivoPushMode;
+            this.androidXiaoMiActivity = request.androidXiaoMiActivity;
+            this.androidXiaoMiNotifyBody = request.androidXiaoMiNotifyBody;
+            this.androidXiaoMiNotifyTitle = request.androidXiaoMiNotifyTitle;
+            this.androidXiaomiBigPictureUrl = request.androidXiaomiBigPictureUrl;
+            this.androidXiaomiImageUrl = request.androidXiaomiImageUrl;
+            this.appKey = request.appKey;
+            this.body = request.body;
+            this.deviceType = request.deviceType;
+            this.expireTime = request.expireTime;
+            this.jobKey = request.jobKey;
+            this.pushTime = request.pushTime;
+            this.pushType = request.pushType;
+            this.sendChannels = request.sendChannels;
+            this.sendSpeed = request.sendSpeed;
+            this.smsDelaySecs = request.smsDelaySecs;
+            this.smsParams = request.smsParams;
+            this.smsSendPolicy = request.smsSendPolicy;
+            this.smsSignName = request.smsSignName;
+            this.smsTemplateName = request.smsTemplateName;
+            this.storeOffline = request.storeOffline;
+            this.target = request.target;
+            this.targetValue = request.targetValue;
+            this.title = request.title;
+            this.trim = request.trim;
+            this.iOSApnsEnv = request.iOSApnsEnv;
+            this.iOSBadge = request.iOSBadge;
+            this.iOSBadgeAutoIncrement = request.iOSBadgeAutoIncrement;
+            this.iOSExtParameters = request.iOSExtParameters;
+            this.iOSInterruptionLevel = request.iOSInterruptionLevel;
+            this.iOSMusic = request.iOSMusic;
+            this.iOSMutableContent = request.iOSMutableContent;
+            this.iOSNotificationCategory = request.iOSNotificationCategory;
+            this.iOSNotificationCollapseId = request.iOSNotificationCollapseId;
+            this.iOSNotificationThreadId = request.iOSNotificationThreadId;
+            this.iOSRelevanceScore = request.iOSRelevanceScore;
+            this.iOSRemind = request.iOSRemind;
+            this.iOSRemindBody = request.iOSRemindBody;
+            this.iOSSilentNotification = request.iOSSilentNotification;
+            this.iOSSubtitle = request.iOSSubtitle;
         } 
 
         /**
@@ -1129,6 +1185,15 @@ public class PushRequest extends Request {
         }
 
         /**
+         * AndroidVivoPushMode.
+         */
+        public Builder androidVivoPushMode(Integer androidVivoPushMode) {
+            this.putQueryParameter("AndroidVivoPushMode", androidVivoPushMode);
+            this.androidVivoPushMode = androidVivoPushMode;
+            return this;
+        }
+
+        /**
          * AndroidXiaoMiActivity.
          */
         public Builder androidXiaoMiActivity(String androidXiaoMiActivity) {
@@ -1336,6 +1401,15 @@ public class PushRequest extends Request {
         }
 
         /**
+         * Trim.
+         */
+        public Builder trim(Boolean trim) {
+            this.putQueryParameter("Trim", trim);
+            this.trim = trim;
+            return this;
+        }
+
+        /**
          * iOSApnsEnv.
          */
         public Builder iOSApnsEnv(String iOSApnsEnv) {
@@ -1368,6 +1442,15 @@ public class PushRequest extends Request {
         public Builder iOSExtParameters(String iOSExtParameters) {
             this.putQueryParameter("iOSExtParameters", iOSExtParameters);
             this.iOSExtParameters = iOSExtParameters;
+            return this;
+        }
+
+        /**
+         * iOSInterruptionLevel.
+         */
+        public Builder iOSInterruptionLevel(String iOSInterruptionLevel) {
+            this.putQueryParameter("iOSInterruptionLevel", iOSInterruptionLevel);
+            this.iOSInterruptionLevel = iOSInterruptionLevel;
             return this;
         }
 
@@ -1413,6 +1496,15 @@ public class PushRequest extends Request {
         public Builder iOSNotificationThreadId(String iOSNotificationThreadId) {
             this.putQueryParameter("iOSNotificationThreadId", iOSNotificationThreadId);
             this.iOSNotificationThreadId = iOSNotificationThreadId;
+            return this;
+        }
+
+        /**
+         * iOSRelevanceScore.
+         */
+        public Builder iOSRelevanceScore(Double iOSRelevanceScore) {
+            this.putQueryParameter("iOSRelevanceScore", iOSRelevanceScore);
+            this.iOSRelevanceScore = iOSRelevanceScore;
             return this;
         }
 

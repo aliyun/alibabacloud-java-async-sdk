@@ -63,10 +63,10 @@ public class MassPushRequest extends Request {
             super();
         } 
 
-        private Builder(MassPushRequest response) {
-            super(response);
-            this.appKey = response.appKey;
-            this.pushTask = response.pushTask;
+        private Builder(MassPushRequest request) {
+            super(request);
+            this.appKey = request.appKey;
+            this.pushTask = request.pushTask;
         } 
 
         /**
@@ -171,6 +171,9 @@ public class MassPushRequest extends Request {
         @NameInMap("AndroidRenderStyle")
         private String androidRenderStyle;
 
+        @NameInMap("AndroidVivoPushMode")
+        private Integer androidVivoPushMode;
+
         @NameInMap("AndroidXiaoMiActivity")
         private String androidXiaoMiActivity;
 
@@ -227,6 +230,9 @@ public class MassPushRequest extends Request {
         @NameInMap("Title")
         private String title;
 
+        @NameInMap("Trim")
+        private Boolean trim;
+
         @NameInMap("iOSApnsEnv")
         private String iOSApnsEnv;
 
@@ -238,6 +244,9 @@ public class MassPushRequest extends Request {
 
         @NameInMap("iOSExtParameters")
         private String iOSExtParameters;
+
+        @NameInMap("iOSInterruptionLevel")
+        private String iOSInterruptionLevel;
 
         @NameInMap("iOSMusic")
         private String iOSMusic;
@@ -253,6 +262,9 @@ public class MassPushRequest extends Request {
 
         @NameInMap("iOSNotificationThreadId")
         private String iOSNotificationThreadId;
+
+        @NameInMap("iOSRelevanceScore")
+        private Double iOSRelevanceScore;
 
         @NameInMap("iOSRemind")
         private Boolean iOSRemind;
@@ -292,6 +304,7 @@ public class MassPushRequest extends Request {
             this.androidPopupTitle = builder.androidPopupTitle;
             this.androidRemind = builder.androidRemind;
             this.androidRenderStyle = builder.androidRenderStyle;
+            this.androidVivoPushMode = builder.androidVivoPushMode;
             this.androidXiaoMiActivity = builder.androidXiaoMiActivity;
             this.androidXiaoMiNotifyBody = builder.androidXiaoMiNotifyBody;
             this.androidXiaoMiNotifyTitle = builder.androidXiaoMiNotifyTitle;
@@ -309,15 +322,18 @@ public class MassPushRequest extends Request {
             this.target = builder.target;
             this.targetValue = builder.targetValue;
             this.title = builder.title;
+            this.trim = builder.trim;
             this.iOSApnsEnv = builder.iOSApnsEnv;
             this.iOSBadge = builder.iOSBadge;
             this.iOSBadgeAutoIncrement = builder.iOSBadgeAutoIncrement;
             this.iOSExtParameters = builder.iOSExtParameters;
+            this.iOSInterruptionLevel = builder.iOSInterruptionLevel;
             this.iOSMusic = builder.iOSMusic;
             this.iOSMutableContent = builder.iOSMutableContent;
             this.iOSNotificationCategory = builder.iOSNotificationCategory;
             this.iOSNotificationCollapseId = builder.iOSNotificationCollapseId;
             this.iOSNotificationThreadId = builder.iOSNotificationThreadId;
+            this.iOSRelevanceScore = builder.iOSRelevanceScore;
             this.iOSRemind = builder.iOSRemind;
             this.iOSRemindBody = builder.iOSRemindBody;
             this.iOSSilentNotification = builder.iOSSilentNotification;
@@ -508,6 +524,13 @@ public class MassPushRequest extends Request {
         }
 
         /**
+         * @return androidVivoPushMode
+         */
+        public Integer getAndroidVivoPushMode() {
+            return this.androidVivoPushMode;
+        }
+
+        /**
          * @return androidXiaoMiActivity
          */
         public String getAndroidXiaoMiActivity() {
@@ -627,6 +650,13 @@ public class MassPushRequest extends Request {
         }
 
         /**
+         * @return trim
+         */
+        public Boolean getTrim() {
+            return this.trim;
+        }
+
+        /**
          * @return iOSApnsEnv
          */
         public String getIOSApnsEnv() {
@@ -652,6 +682,13 @@ public class MassPushRequest extends Request {
          */
         public String getIOSExtParameters() {
             return this.iOSExtParameters;
+        }
+
+        /**
+         * @return iOSInterruptionLevel
+         */
+        public String getIOSInterruptionLevel() {
+            return this.iOSInterruptionLevel;
         }
 
         /**
@@ -687,6 +724,13 @@ public class MassPushRequest extends Request {
          */
         public String getIOSNotificationThreadId() {
             return this.iOSNotificationThreadId;
+        }
+
+        /**
+         * @return iOSRelevanceScore
+         */
+        public Double getIOSRelevanceScore() {
+            return this.iOSRelevanceScore;
         }
 
         /**
@@ -743,6 +787,7 @@ public class MassPushRequest extends Request {
             private String androidPopupTitle; 
             private Boolean androidRemind; 
             private String androidRenderStyle; 
+            private Integer androidVivoPushMode; 
             private String androidXiaoMiActivity; 
             private String androidXiaoMiNotifyBody; 
             private String androidXiaoMiNotifyTitle; 
@@ -760,15 +805,18 @@ public class MassPushRequest extends Request {
             private String target; 
             private String targetValue; 
             private String title; 
+            private Boolean trim; 
             private String iOSApnsEnv; 
             private Integer iOSBadge; 
             private Boolean iOSBadgeAutoIncrement; 
             private String iOSExtParameters; 
+            private String iOSInterruptionLevel; 
             private String iOSMusic; 
             private Boolean iOSMutableContent; 
             private String iOSNotificationCategory; 
             private String iOSNotificationCollapseId; 
             private String iOSNotificationThreadId; 
+            private Double iOSRelevanceScore; 
             private Boolean iOSRemind; 
             private String iOSRemindBody; 
             private Boolean iOSSilentNotification; 
@@ -975,6 +1023,14 @@ public class MassPushRequest extends Request {
             }
 
             /**
+             * AndroidVivoPushMode.
+             */
+            public Builder androidVivoPushMode(Integer androidVivoPushMode) {
+                this.androidVivoPushMode = androidVivoPushMode;
+                return this;
+            }
+
+            /**
              * AndroidXiaoMiActivity.
              */
             public Builder androidXiaoMiActivity(String androidXiaoMiActivity) {
@@ -1111,6 +1167,14 @@ public class MassPushRequest extends Request {
             }
 
             /**
+             * Trim.
+             */
+            public Builder trim(Boolean trim) {
+                this.trim = trim;
+                return this;
+            }
+
+            /**
              * iOSApnsEnv.
              */
             public Builder iOSApnsEnv(String iOSApnsEnv) {
@@ -1139,6 +1203,14 @@ public class MassPushRequest extends Request {
              */
             public Builder iOSExtParameters(String iOSExtParameters) {
                 this.iOSExtParameters = iOSExtParameters;
+                return this;
+            }
+
+            /**
+             * iOSInterruptionLevel.
+             */
+            public Builder iOSInterruptionLevel(String iOSInterruptionLevel) {
+                this.iOSInterruptionLevel = iOSInterruptionLevel;
                 return this;
             }
 
@@ -1179,6 +1251,14 @@ public class MassPushRequest extends Request {
              */
             public Builder iOSNotificationThreadId(String iOSNotificationThreadId) {
                 this.iOSNotificationThreadId = iOSNotificationThreadId;
+                return this;
+            }
+
+            /**
+             * iOSRelevanceScore.
+             */
+            public Builder iOSRelevanceScore(Double iOSRelevanceScore) {
+                this.iOSRelevanceScore = iOSRelevanceScore;
                 return this;
             }
 

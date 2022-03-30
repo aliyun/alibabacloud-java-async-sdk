@@ -170,18 +170,18 @@ public class QueryPushRecordsRequest extends Request {
             super();
         } 
 
-        private Builder(QueryPushRecordsRequest response) {
-            super(response);
-            this.appKey = response.appKey;
-            this.endTime = response.endTime;
-            this.keyword = response.keyword;
-            this.nextToken = response.nextToken;
-            this.page = response.page;
-            this.pageSize = response.pageSize;
-            this.pushType = response.pushType;
-            this.source = response.source;
-            this.startTime = response.startTime;
-            this.target = response.target;
+        private Builder(QueryPushRecordsRequest request) {
+            super(request);
+            this.appKey = request.appKey;
+            this.endTime = request.endTime;
+            this.keyword = request.keyword;
+            this.nextToken = request.nextToken;
+            this.page = request.page;
+            this.pageSize = request.pageSize;
+            this.pushType = request.pushType;
+            this.source = request.source;
+            this.startTime = request.startTime;
+            this.target = request.target;
         } 
 
         /**

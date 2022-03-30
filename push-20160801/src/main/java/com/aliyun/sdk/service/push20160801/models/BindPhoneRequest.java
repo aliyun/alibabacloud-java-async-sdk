@@ -77,11 +77,11 @@ public class BindPhoneRequest extends Request {
             super();
         } 
 
-        private Builder(BindPhoneRequest response) {
-            super(response);
-            this.appKey = response.appKey;
-            this.deviceId = response.deviceId;
-            this.phoneNumber = response.phoneNumber;
+        private Builder(BindPhoneRequest request) {
+            super(request);
+            this.appKey = request.appKey;
+            this.deviceId = request.deviceId;
+            this.phoneNumber = request.phoneNumber;
         } 
 
         /**

@@ -118,14 +118,14 @@ public class PushMessageToiOSRequest extends Request {
             super();
         } 
 
-        private Builder(PushMessageToiOSRequest response) {
-            super(response);
-            this.appKey = response.appKey;
-            this.body = response.body;
-            this.jobKey = response.jobKey;
-            this.target = response.target;
-            this.targetValue = response.targetValue;
-            this.title = response.title;
+        private Builder(PushMessageToiOSRequest request) {
+            super(request);
+            this.appKey = request.appKey;
+            this.body = request.body;
+            this.jobKey = request.jobKey;
+            this.target = request.target;
+            this.targetValue = request.targetValue;
+            this.title = request.title;
         } 
 
         /**

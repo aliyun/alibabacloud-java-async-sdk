@@ -63,10 +63,10 @@ public class CompleteContinuouslyPushRequest extends Request {
             super();
         } 
 
-        private Builder(CompleteContinuouslyPushRequest response) {
-            super(response);
-            this.appKey = response.appKey;
-            this.messageId = response.messageId;
+        private Builder(CompleteContinuouslyPushRequest request) {
+            super(request);
+            this.appKey = request.appKey;
+            this.messageId = request.messageId;
         } 
 
         /**

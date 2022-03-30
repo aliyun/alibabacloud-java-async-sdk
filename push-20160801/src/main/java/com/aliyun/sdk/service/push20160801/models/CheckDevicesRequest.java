@@ -63,10 +63,10 @@ public class CheckDevicesRequest extends Request {
             super();
         } 
 
-        private Builder(CheckDevicesRequest response) {
-            super(response);
-            this.appKey = response.appKey;
-            this.deviceIds = response.deviceIds;
+        private Builder(CheckDevicesRequest request) {
+            super(request);
+            this.appKey = request.appKey;
+            this.deviceIds = request.deviceIds;
         } 
 
         /**

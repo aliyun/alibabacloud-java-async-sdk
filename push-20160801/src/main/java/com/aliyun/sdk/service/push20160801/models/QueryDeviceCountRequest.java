@@ -77,11 +77,11 @@ public class QueryDeviceCountRequest extends Request {
             super();
         } 
 
-        private Builder(QueryDeviceCountRequest response) {
-            super(response);
-            this.appKey = response.appKey;
-            this.target = response.target;
-            this.targetValue = response.targetValue;
+        private Builder(QueryDeviceCountRequest request) {
+            super(request);
+            this.appKey = request.appKey;
+            this.target = request.target;
+            this.targetValue = request.targetValue;
         } 
 
         /**

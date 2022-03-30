@@ -89,12 +89,12 @@ public class UnbindAliasRequest extends Request {
             super();
         } 
 
-        private Builder(UnbindAliasRequest response) {
-            super(response);
-            this.aliasName = response.aliasName;
-            this.appKey = response.appKey;
-            this.deviceId = response.deviceId;
-            this.unbindAll = response.unbindAll;
+        private Builder(UnbindAliasRequest request) {
+            super(request);
+            this.aliasName = request.aliasName;
+            this.appKey = request.appKey;
+            this.deviceId = request.deviceId;
+            this.unbindAll = request.unbindAll;
         } 
 
         /**

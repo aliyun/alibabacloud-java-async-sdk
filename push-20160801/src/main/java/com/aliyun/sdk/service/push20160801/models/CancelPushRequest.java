@@ -63,10 +63,10 @@ public class CancelPushRequest extends Request {
             super();
         } 
 
-        private Builder(CancelPushRequest response) {
-            super(response);
-            this.appKey = response.appKey;
-            this.messageId = response.messageId;
+        private Builder(CancelPushRequest request) {
+            super(request);
+            this.appKey = request.appKey;
+            this.messageId = request.messageId;
         } 
 
         /**

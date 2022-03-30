@@ -63,10 +63,10 @@ public class QueryDevicesByAliasRequest extends Request {
             super();
         } 
 
-        private Builder(QueryDevicesByAliasRequest response) {
-            super(response);
-            this.alias = response.alias;
-            this.appKey = response.appKey;
+        private Builder(QueryDevicesByAliasRequest request) {
+            super(request);
+            this.alias = request.alias;
+            this.appKey = request.appKey;
         } 
 
         /**

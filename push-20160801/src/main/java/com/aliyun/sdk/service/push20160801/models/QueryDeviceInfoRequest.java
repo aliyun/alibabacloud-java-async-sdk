@@ -63,10 +63,10 @@ public class QueryDeviceInfoRequest extends Request {
             super();
         } 
 
-        private Builder(QueryDeviceInfoRequest response) {
-            super(response);
-            this.appKey = response.appKey;
-            this.deviceId = response.deviceId;
+        private Builder(QueryDeviceInfoRequest request) {
+            super(request);
+            this.appKey = request.appKey;
+            this.deviceId = request.deviceId;
         } 
 
         /**

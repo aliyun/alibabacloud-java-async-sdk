@@ -91,12 +91,12 @@ public class BindTagRequest extends Request {
             super();
         } 
 
-        private Builder(BindTagRequest response) {
-            super(response);
-            this.appKey = response.appKey;
-            this.clientKey = response.clientKey;
-            this.keyType = response.keyType;
-            this.tagName = response.tagName;
+        private Builder(BindTagRequest request) {
+            super(request);
+            this.appKey = request.appKey;
+            this.clientKey = request.clientKey;
+            this.keyType = request.keyType;
+            this.tagName = request.tagName;
         } 
 
         /**

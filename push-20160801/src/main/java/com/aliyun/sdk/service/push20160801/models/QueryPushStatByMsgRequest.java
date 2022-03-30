@@ -63,10 +63,10 @@ public class QueryPushStatByMsgRequest extends Request {
             super();
         } 
 
-        private Builder(QueryPushStatByMsgRequest response) {
-            super(response);
-            this.appKey = response.appKey;
-            this.messageId = response.messageId;
+        private Builder(QueryPushStatByMsgRequest request) {
+            super(request);
+            this.appKey = request.appKey;
+            this.messageId = request.messageId;
         } 
 
         /**

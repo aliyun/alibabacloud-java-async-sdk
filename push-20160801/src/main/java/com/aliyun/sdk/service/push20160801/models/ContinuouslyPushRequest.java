@@ -91,12 +91,12 @@ public class ContinuouslyPushRequest extends Request {
             super();
         } 
 
-        private Builder(ContinuouslyPushRequest response) {
-            super(response);
-            this.appKey = response.appKey;
-            this.messageId = response.messageId;
-            this.target = response.target;
-            this.targetValue = response.targetValue;
+        private Builder(ContinuouslyPushRequest request) {
+            super(request);
+            this.appKey = request.appKey;
+            this.messageId = request.messageId;
+            this.target = request.target;
+            this.targetValue = request.targetValue;
         } 
 
         /**

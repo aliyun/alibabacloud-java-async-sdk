@@ -91,12 +91,12 @@ public class QueryUniqueDeviceStatRequest extends Request {
             super();
         } 
 
-        private Builder(QueryUniqueDeviceStatRequest response) {
-            super(response);
-            this.appKey = response.appKey;
-            this.endTime = response.endTime;
-            this.granularity = response.granularity;
-            this.startTime = response.startTime;
+        private Builder(QueryUniqueDeviceStatRequest request) {
+            super(request);
+            this.appKey = request.appKey;
+            this.endTime = request.endTime;
+            this.granularity = request.granularity;
+            this.startTime = request.startTime;
         } 
 
         /**

@@ -63,10 +63,10 @@ public class UnbindPhoneRequest extends Request {
             super();
         } 
 
-        private Builder(UnbindPhoneRequest response) {
-            super(response);
-            this.appKey = response.appKey;
-            this.deviceId = response.deviceId;
+        private Builder(UnbindPhoneRequest request) {
+            super(request);
+            this.appKey = request.appKey;
+            this.deviceId = request.deviceId;
         } 
 
         /**

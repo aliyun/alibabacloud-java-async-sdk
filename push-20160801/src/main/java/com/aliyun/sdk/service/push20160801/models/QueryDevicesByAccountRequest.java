@@ -63,10 +63,10 @@ public class QueryDevicesByAccountRequest extends Request {
             super();
         } 
 
-        private Builder(QueryDevicesByAccountRequest response) {
-            super(response);
-            this.account = response.account;
-            this.appKey = response.appKey;
+        private Builder(QueryDevicesByAccountRequest request) {
+            super(request);
+            this.account = request.account;
+            this.appKey = request.appKey;
         } 
 
         /**

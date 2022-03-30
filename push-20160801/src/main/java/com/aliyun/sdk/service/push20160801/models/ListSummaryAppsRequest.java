@@ -35,8 +35,8 @@ public class ListSummaryAppsRequest extends Request {
             super();
         } 
 
-        private Builder(ListSummaryAppsRequest response) {
-            super(response);
+        private Builder(ListSummaryAppsRequest request) {
+            super(request);
         } 
 
         @Override

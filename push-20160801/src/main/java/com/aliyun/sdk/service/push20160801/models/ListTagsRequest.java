@@ -49,9 +49,9 @@ public class ListTagsRequest extends Request {
             super();
         } 
 
-        private Builder(ListTagsRequest response) {
-            super(response);
-            this.appKey = response.appKey;
+        private Builder(ListTagsRequest request) {
+            super(request);
+            this.appKey = request.appKey;
         } 
 
         /**

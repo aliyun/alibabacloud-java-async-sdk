@@ -77,11 +77,11 @@ public class QueryTagsRequest extends Request {
             super();
         } 
 
-        private Builder(QueryTagsRequest response) {
-            super(response);
-            this.appKey = response.appKey;
-            this.clientKey = response.clientKey;
-            this.keyType = response.keyType;
+        private Builder(QueryTagsRequest request) {
+            super(request);
+            this.appKey = request.appKey;
+            this.clientKey = request.clientKey;
+            this.keyType = request.keyType;
         } 
 
         /**

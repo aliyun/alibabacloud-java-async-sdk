@@ -131,15 +131,15 @@ public class PushNoticeToAndroidRequest extends Request {
             super();
         } 
 
-        private Builder(PushNoticeToAndroidRequest response) {
-            super(response);
-            this.appKey = response.appKey;
-            this.body = response.body;
-            this.extParameters = response.extParameters;
-            this.jobKey = response.jobKey;
-            this.target = response.target;
-            this.targetValue = response.targetValue;
-            this.title = response.title;
+        private Builder(PushNoticeToAndroidRequest request) {
+            super(request);
+            this.appKey = request.appKey;
+            this.body = request.body;
+            this.extParameters = request.extParameters;
+            this.jobKey = request.jobKey;
+            this.target = request.target;
+            this.targetValue = request.targetValue;
+            this.title = request.title;
         } 
 
         /**

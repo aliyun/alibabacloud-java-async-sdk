@@ -77,11 +77,11 @@ public class BindAliasRequest extends Request {
             super();
         } 
 
-        private Builder(BindAliasRequest response) {
-            super(response);
-            this.aliasName = response.aliasName;
-            this.appKey = response.appKey;
-            this.deviceId = response.deviceId;
+        private Builder(BindAliasRequest request) {
+            super(request);
+            this.aliasName = request.aliasName;
+            this.appKey = request.appKey;
+            this.deviceId = request.deviceId;
         } 
 
         /**
