@@ -98,8 +98,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeCriteriaResponse> describeCriteria(DescribeCriteriaRequest request);
 
-    CompletableFuture<DescribeDialogMessagesResponse> describeDialogMessages(DescribeDialogMessagesRequest request);
-
     CompletableFuture<DescribeDingTalkResponse> describeDingTalk(DescribeDingTalkRequest request);
 
     CompletableFuture<DescribeDomainCountResponse> describeDomainCount(DescribeDomainCountRequest request);
@@ -159,6 +157,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeInstanceAntiBruteForceRulesResponse> describeInstanceAntiBruteForceRules(DescribeInstanceAntiBruteForceRulesRequest request);
 
     CompletableFuture<DescribeInstanceStatisticsResponse> describeInstanceStatistics(DescribeInstanceStatisticsRequest request);
+
+    CompletableFuture<DescribeLoginBaseConfigsResponse> describeLoginBaseConfigs(DescribeLoginBaseConfigsRequest request);
 
     CompletableFuture<DescribeLogstoreStorageResponse> describeLogstoreStorage(DescribeLogstoreStorageRequest request);
 

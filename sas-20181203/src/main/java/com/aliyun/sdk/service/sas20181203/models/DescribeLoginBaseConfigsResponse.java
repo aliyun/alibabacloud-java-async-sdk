@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeDialogMessagesResponse} extends {@link TeaModel}
+ * {@link DescribeLoginBaseConfigsResponse} extends {@link TeaModel}
  *
- * <p>DescribeDialogMessagesResponse</p>
+ * <p>DescribeLoginBaseConfigsResponse</p>
  */
-public class DescribeDialogMessagesResponse extends Response {
+public class DescribeLoginBaseConfigsResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private DescribeDialogMessagesResponseBody body;
+    private DescribeLoginBaseConfigsResponseBody body;
 
-    private DescribeDialogMessagesResponse(BuilderImpl builder) {
+    private DescribeLoginBaseConfigsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static DescribeDialogMessagesResponse create() {
+    public static DescribeLoginBaseConfigsResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class DescribeDialogMessagesResponse extends Response {
     /**
      * @return body
      */
-    public DescribeDialogMessagesResponseBody getBody() {
+    public DescribeLoginBaseConfigsResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribeDialogMessagesResponse, Builder> {
+    public interface Builder extends Response.Builder<DescribeLoginBaseConfigsResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(DescribeDialogMessagesResponseBody body);
+        Builder body(DescribeLoginBaseConfigsResponseBody body);
 
         @Override
-        DescribeDialogMessagesResponse build();
+        DescribeLoginBaseConfigsResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribeDialogMessagesResponse, Builder>
+            extends Response.BuilderImpl<DescribeLoginBaseConfigsResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private DescribeDialogMessagesResponseBody body; 
+        private DescribeLoginBaseConfigsResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribeDialogMessagesResponse response) {
+        private BuilderImpl(DescribeLoginBaseConfigsResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class DescribeDialogMessagesResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DescribeDialogMessagesResponseBody body) {
+        public Builder body(DescribeLoginBaseConfigsResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribeDialogMessagesResponse build() {
-            return new DescribeDialogMessagesResponse(this);
+        public DescribeLoginBaseConfigsResponse build() {
+            return new DescribeLoginBaseConfigsResponse(this);
         } 
 
     } 
