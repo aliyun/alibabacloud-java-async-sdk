@@ -72,6 +72,9 @@ public class ListProvisionConfigsResponseBody extends TeaModel {
     } 
 
     public static class ProvisionConfigs extends TeaModel {
+        @NameInMap("alwaysAllocateCPU")
+        private Boolean alwaysAllocateCPU;
+
         @NameInMap("current")
         private Long current;
 
@@ -91,6 +94,7 @@ public class ListProvisionConfigsResponseBody extends TeaModel {
         private java.util.List < TargetTrackingPolicies > targetTrackingPolicies;
 
         private ProvisionConfigs(Builder builder) {
+            this.alwaysAllocateCPU = builder.alwaysAllocateCPU;
             this.current = builder.current;
             this.currentError = builder.currentError;
             this.resource = builder.resource;
@@ -105,6 +109,13 @@ public class ListProvisionConfigsResponseBody extends TeaModel {
 
         public static ProvisionConfigs create() {
             return builder().build();
+        }
+
+        /**
+         * @return alwaysAllocateCPU
+         */
+        public Boolean getAlwaysAllocateCPU() {
+            return this.alwaysAllocateCPU;
         }
 
         /**
@@ -150,12 +161,21 @@ public class ListProvisionConfigsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean alwaysAllocateCPU; 
             private Long current; 
             private String currentError; 
             private String resource; 
             private java.util.List < ScheduledActions > scheduledActions; 
             private Long target; 
             private java.util.List < TargetTrackingPolicies > targetTrackingPolicies; 
+
+            /**
+             * 是否始终分配CPU给函数实例。
+             */
+            public Builder alwaysAllocateCPU(Boolean alwaysAllocateCPU) {
+                this.alwaysAllocateCPU = alwaysAllocateCPU;
+                return this;
+            }
 
             /**
              * 实际资源个数

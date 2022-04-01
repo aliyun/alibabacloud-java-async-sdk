@@ -35,6 +35,10 @@ public class PutProvisionConfigRequest extends Request {
     private String xFcTraceId;
 
     @Body
+    @NameInMap("alwaysAllocateCPU")
+    private Boolean alwaysAllocateCPU;
+
+    @Body
     @NameInMap("scheduledActions")
     private java.util.List < ScheduledActions > scheduledActions;
 
@@ -59,6 +63,7 @@ public class PutProvisionConfigRequest extends Request {
         this.xFcAccountId = builder.xFcAccountId;
         this.xFcDate = builder.xFcDate;
         this.xFcTraceId = builder.xFcTraceId;
+        this.alwaysAllocateCPU = builder.alwaysAllocateCPU;
         this.scheduledActions = builder.scheduledActions;
         this.target = builder.target;
         this.targetTrackingPolicies = builder.targetTrackingPolicies;
@@ -114,6 +119,13 @@ public class PutProvisionConfigRequest extends Request {
     }
 
     /**
+     * @return alwaysAllocateCPU
+     */
+    public Boolean getAlwaysAllocateCPU() {
+        return this.alwaysAllocateCPU;
+    }
+
+    /**
      * @return scheduledActions
      */
     public java.util.List < ScheduledActions > getScheduledActions() {
@@ -147,6 +159,7 @@ public class PutProvisionConfigRequest extends Request {
         private String xFcAccountId; 
         private String xFcDate; 
         private String xFcTraceId; 
+        private Boolean alwaysAllocateCPU; 
         private java.util.List < ScheduledActions > scheduledActions; 
         private Long target; 
         private java.util.List < TargetTrackingPolicies > targetTrackingPolicies; 
@@ -163,6 +176,7 @@ public class PutProvisionConfigRequest extends Request {
             this.xFcAccountId = request.xFcAccountId;
             this.xFcDate = request.xFcDate;
             this.xFcTraceId = request.xFcTraceId;
+            this.alwaysAllocateCPU = request.alwaysAllocateCPU;
             this.scheduledActions = request.scheduledActions;
             this.target = request.target;
             this.targetTrackingPolicies = request.targetTrackingPolicies;
@@ -211,6 +225,15 @@ public class PutProvisionConfigRequest extends Request {
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);
             this.xFcTraceId = xFcTraceId;
+            return this;
+        }
+
+        /**
+         * 当实例进入空闲状态时，是否继续分配CPU。
+         */
+        public Builder alwaysAllocateCPU(Boolean alwaysAllocateCPU) {
+            this.putBodyParameter("alwaysAllocateCPU", alwaysAllocateCPU);
+            this.alwaysAllocateCPU = alwaysAllocateCPU;
             return this;
         }
 

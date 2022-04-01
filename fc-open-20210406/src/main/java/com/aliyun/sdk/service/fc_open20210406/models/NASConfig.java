@@ -13,13 +13,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class NASConfig extends TeaModel {
     @NameInMap("groupId")
-    private String groupId;
+    private Integer groupId;
 
     @NameInMap("mountPoints")
     private java.util.List < MountPoints> mountPoints;
 
     @NameInMap("userId")
-    private String userId;
+    private Integer userId;
 
     private NASConfig(Builder builder) {
         this.groupId = builder.groupId;
@@ -38,7 +38,7 @@ public class NASConfig extends TeaModel {
     /**
      * @return groupId
      */
-    public String getGroupId() {
+    public Integer getGroupId() {
         return this.groupId;
     }
 
@@ -52,19 +52,19 @@ public class NASConfig extends TeaModel {
     /**
      * @return userId
      */
-    public String getUserId() {
+    public Integer getUserId() {
         return this.userId;
     }
 
     public static final class Builder {
-        private String groupId; 
+        private Integer groupId; 
         private java.util.List < MountPoints> mountPoints; 
-        private String userId; 
+        private Integer userId; 
 
         /**
          * groupID
          */
-        public Builder groupId(String groupId) {
+        public Builder groupId(Integer groupId) {
             this.groupId = groupId;
             return this;
         }
@@ -80,7 +80,7 @@ public class NASConfig extends TeaModel {
         /**
          * userID
          */
-        public Builder userId(String userId) {
+        public Builder userId(Integer userId) {
             this.userId = userId;
             return this;
         }

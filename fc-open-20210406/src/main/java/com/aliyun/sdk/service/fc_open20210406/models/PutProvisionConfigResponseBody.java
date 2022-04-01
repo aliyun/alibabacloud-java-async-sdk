@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PutProvisionConfigResponseBody</p>
  */
 public class PutProvisionConfigResponseBody extends TeaModel {
+    @NameInMap("alwaysAllocateCPU")
+    private Boolean alwaysAllocateCPU;
+
     @NameInMap("current")
     private Long current;
 
@@ -28,6 +31,7 @@ public class PutProvisionConfigResponseBody extends TeaModel {
     private java.util.List < TargetTrackingPolicies > targetTrackingPolicies;
 
     private PutProvisionConfigResponseBody(Builder builder) {
+        this.alwaysAllocateCPU = builder.alwaysAllocateCPU;
         this.current = builder.current;
         this.resource = builder.resource;
         this.scheduledActions = builder.scheduledActions;
@@ -41,6 +45,13 @@ public class PutProvisionConfigResponseBody extends TeaModel {
 
     public static PutProvisionConfigResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return alwaysAllocateCPU
+     */
+    public Boolean getAlwaysAllocateCPU() {
+        return this.alwaysAllocateCPU;
     }
 
     /**
@@ -79,11 +90,20 @@ public class PutProvisionConfigResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Boolean alwaysAllocateCPU; 
         private Long current; 
         private String resource; 
         private java.util.List < ScheduledActions > scheduledActions; 
         private Long target; 
         private java.util.List < TargetTrackingPolicies > targetTrackingPolicies; 
+
+        /**
+         * 是否始终分配CPU给函数实例。
+         */
+        public Builder alwaysAllocateCPU(Boolean alwaysAllocateCPU) {
+            this.alwaysAllocateCPU = alwaysAllocateCPU;
+            return this;
+        }
 
         /**
          * 实际资源个数
