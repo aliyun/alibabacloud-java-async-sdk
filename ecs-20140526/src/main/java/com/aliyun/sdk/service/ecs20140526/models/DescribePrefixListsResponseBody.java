@@ -15,16 +15,16 @@ public class DescribePrefixListsResponseBody extends TeaModel {
     @NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
-    private String requestId;
-
     @NameInMap("PrefixLists")
     private PrefixLists prefixLists;
 
+    @NameInMap("RequestId")
+    private String requestId;
+
     private DescribePrefixListsResponseBody(Builder builder) {
         this.nextToken = builder.nextToken;
-        this.requestId = builder.requestId;
         this.prefixLists = builder.prefixLists;
+        this.requestId = builder.requestId;
     }
 
     public static Builder builder() {
@@ -43,26 +43,26 @@ public class DescribePrefixListsResponseBody extends TeaModel {
     }
 
     /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    /**
      * @return prefixLists
      */
     public PrefixLists getPrefixLists() {
         return this.prefixLists;
     }
 
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static final class Builder {
         private String nextToken; 
-        private String requestId; 
         private PrefixLists prefixLists; 
+        private String requestId; 
 
         /**
-         * The Token returned by this call. If the returned value is null, no more data is returned.
+         * NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,18 +70,18 @@ public class DescribePrefixListsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * PrefixLists.
          */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
+        public Builder prefixLists(PrefixLists prefixLists) {
+            this.prefixLists = prefixLists;
             return this;
         }
 
         /**
-         * An array of prefix information.
+         * RequestId.
          */
-        public Builder prefixLists(PrefixLists prefixLists) {
-            this.prefixLists = prefixLists;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
@@ -92,35 +92,35 @@ public class DescribePrefixListsResponseBody extends TeaModel {
     } 
 
     public static class PrefixList extends TeaModel {
-        @NameInMap("CreationTime")
-        private String creationTime;
+        @NameInMap("AddressFamily")
+        private String addressFamily;
 
         @NameInMap("AssociationCount")
         private Integer associationCount;
 
-        @NameInMap("MaxEntries")
-        private Integer maxEntries;
+        @NameInMap("CreationTime")
+        private String creationTime;
 
         @NameInMap("Description")
         private String description;
 
-        @NameInMap("AddressFamily")
-        private String addressFamily;
-
-        @NameInMap("PrefixListName")
-        private String prefixListName;
+        @NameInMap("MaxEntries")
+        private Integer maxEntries;
 
         @NameInMap("PrefixListId")
         private String prefixListId;
 
+        @NameInMap("PrefixListName")
+        private String prefixListName;
+
         private PrefixList(Builder builder) {
-            this.creationTime = builder.creationTime;
-            this.associationCount = builder.associationCount;
-            this.maxEntries = builder.maxEntries;
-            this.description = builder.description;
             this.addressFamily = builder.addressFamily;
-            this.prefixListName = builder.prefixListName;
+            this.associationCount = builder.associationCount;
+            this.creationTime = builder.creationTime;
+            this.description = builder.description;
+            this.maxEntries = builder.maxEntries;
             this.prefixListId = builder.prefixListId;
+            this.prefixListName = builder.prefixListName;
         }
 
         public static Builder builder() {
@@ -132,10 +132,10 @@ public class DescribePrefixListsResponseBody extends TeaModel {
         }
 
         /**
-         * @return creationTime
+         * @return addressFamily
          */
-        public String getCreationTime() {
-            return this.creationTime;
+        public String getAddressFamily() {
+            return this.addressFamily;
         }
 
         /**
@@ -146,10 +146,10 @@ public class DescribePrefixListsResponseBody extends TeaModel {
         }
 
         /**
-         * @return maxEntries
+         * @return creationTime
          */
-        public Integer getMaxEntries() {
-            return this.maxEntries;
+        public String getCreationTime() {
+            return this.creationTime;
         }
 
         /**
@@ -160,17 +160,10 @@ public class DescribePrefixListsResponseBody extends TeaModel {
         }
 
         /**
-         * @return addressFamily
+         * @return maxEntries
          */
-        public String getAddressFamily() {
-            return this.addressFamily;
-        }
-
-        /**
-         * @return prefixListName
-         */
-        public String getPrefixListName() {
-            return this.prefixListName;
+        public Integer getMaxEntries() {
+            return this.maxEntries;
         }
 
         /**
@@ -180,53 +173,24 @@ public class DescribePrefixListsResponseBody extends TeaModel {
             return this.prefixListId;
         }
 
+        /**
+         * @return prefixListName
+         */
+        public String getPrefixListName() {
+            return this.prefixListName;
+        }
+
         public static final class Builder {
-            private String creationTime; 
-            private Integer associationCount; 
-            private Integer maxEntries; 
-            private String description; 
             private String addressFamily; 
-            private String prefixListName; 
+            private Integer associationCount; 
+            private String creationTime; 
+            private String description; 
+            private Integer maxEntries; 
             private String prefixListId; 
+            private String prefixListName; 
 
             /**
-             * The time when the prefix list was created.
-             */
-            public Builder creationTime(String creationTime) {
-                this.creationTime = creationTime;
-                return this;
-            }
-
-            /**
-             * The number of associated resources.
-             */
-            public Builder associationCount(Integer associationCount) {
-                this.associationCount = associationCount;
-                return this;
-            }
-
-            /**
-             * The maximum number of entries supported by the prefix list.
-             */
-            public Builder maxEntries(Integer maxEntries) {
-                this.maxEntries = maxEntries;
-                return this;
-            }
-
-            /**
-             * The description of the prefix list.
-             */
-            public Builder description(String description) {
-                this.description = description;
-                return this;
-            }
-
-            /**
-             * The address family of the prefix list. Possible values:
-             * <p>
-             * 
-             * -IPv4
-             * -IPv6
+             * AddressFamily.
              */
             public Builder addressFamily(String addressFamily) {
                 this.addressFamily = addressFamily;
@@ -234,18 +198,50 @@ public class DescribePrefixListsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the prefix list.
+             * AssociationCount.
              */
-            public Builder prefixListName(String prefixListName) {
-                this.prefixListName = prefixListName;
+            public Builder associationCount(Integer associationCount) {
+                this.associationCount = associationCount;
                 return this;
             }
 
             /**
-             * The ID of the prefix list.
+             * CreationTime.
+             */
+            public Builder creationTime(String creationTime) {
+                this.creationTime = creationTime;
+                return this;
+            }
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * MaxEntries.
+             */
+            public Builder maxEntries(Integer maxEntries) {
+                this.maxEntries = maxEntries;
+                return this;
+            }
+
+            /**
+             * PrefixListId.
              */
             public Builder prefixListId(String prefixListId) {
                 this.prefixListId = prefixListId;
+                return this;
+            }
+
+            /**
+             * PrefixListName.
+             */
+            public Builder prefixListName(String prefixListName) {
+                this.prefixListName = prefixListName;
                 return this;
             }
 

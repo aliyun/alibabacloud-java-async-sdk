@@ -12,27 +12,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DetachKeyPairResponseBody</p>
  */
 public class DetachKeyPairResponseBody extends TeaModel {
+    @NameInMap("FailCount")
+    private String failCount;
+
     @NameInMap("KeyPairName")
     private String keyPairName;
 
     @NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
-    private String totalCount;
-
-    @NameInMap("FailCount")
-    private String failCount;
-
     @NameInMap("Results")
     private Results results;
 
+    @NameInMap("TotalCount")
+    private String totalCount;
+
     private DetachKeyPairResponseBody(Builder builder) {
+        this.failCount = builder.failCount;
         this.keyPairName = builder.keyPairName;
         this.requestId = builder.requestId;
-        this.totalCount = builder.totalCount;
-        this.failCount = builder.failCount;
         this.results = builder.results;
+        this.totalCount = builder.totalCount;
     }
 
     public static Builder builder() {
@@ -41,6 +41,13 @@ public class DetachKeyPairResponseBody extends TeaModel {
 
     public static DetachKeyPairResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return failCount
+     */
+    public String getFailCount() {
+        return this.failCount;
     }
 
     /**
@@ -58,59 +65,28 @@ public class DetachKeyPairResponseBody extends TeaModel {
     }
 
     /**
-     * @return totalCount
-     */
-    public String getTotalCount() {
-        return this.totalCount;
-    }
-
-    /**
-     * @return failCount
-     */
-    public String getFailCount() {
-        return this.failCount;
-    }
-
-    /**
      * @return results
      */
     public Results getResults() {
         return this.results;
     }
 
+    /**
+     * @return totalCount
+     */
+    public String getTotalCount() {
+        return this.totalCount;
+    }
+
     public static final class Builder {
+        private String failCount; 
         private String keyPairName; 
         private String requestId; 
-        private String totalCount; 
-        private String failCount; 
         private Results results; 
+        private String totalCount; 
 
         /**
-         * The name of the key pair.
-         */
-        public Builder keyPairName(String keyPairName) {
-            this.keyPairName = keyPairName;
-            return this;
-        }
-
-        /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The total number of instances that unbind the key pair.
-         */
-        public Builder totalCount(String totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-
-        /**
-         * The number of instances that failed to unbind the key pair.
+         * FailCount.
          */
         public Builder failCount(String failCount) {
             this.failCount = failCount;
@@ -118,10 +94,34 @@ public class DetachKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * A collection of results that are successfully or failed to unbind a key pair.
+         * KeyPairName.
+         */
+        public Builder keyPairName(String keyPairName) {
+            this.keyPairName = keyPairName;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * Results.
          */
         public Builder results(Results results) {
             this.results = results;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(String totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
@@ -135,19 +135,19 @@ public class DetachKeyPairResponseBody extends TeaModel {
         @NameInMap("Code")
         private String code;
 
-        @NameInMap("Message")
-        private String message;
-
         @NameInMap("InstanceId")
         private String instanceId;
+
+        @NameInMap("Message")
+        private String message;
 
         @NameInMap("Success")
         private String success;
 
         private Result(Builder builder) {
             this.code = builder.code;
-            this.message = builder.message;
             this.instanceId = builder.instanceId;
+            this.message = builder.message;
             this.success = builder.success;
         }
 
@@ -167,17 +167,17 @@ public class DetachKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * @return message
-         */
-        public String getMessage() {
-            return this.message;
-        }
-
-        /**
          * @return instanceId
          */
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        /**
+         * @return message
+         */
+        public String getMessage() {
+            return this.message;
         }
 
         /**
@@ -189,12 +189,12 @@ public class DetachKeyPairResponseBody extends TeaModel {
 
         public static final class Builder {
             private String code; 
-            private String message; 
             private String instanceId; 
+            private String message; 
             private String success; 
 
             /**
-             * The operation status code. A value of 200 indicates that the operation is successful.
+             * Code.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -202,15 +202,7 @@ public class DetachKeyPairResponseBody extends TeaModel {
             }
 
             /**
-             * The operation information. For example, when "Code = 200", "Message" is "successful ".
-             */
-            public Builder message(String message) {
-                this.message = message;
-                return this;
-            }
-
-            /**
-             * The ID of the instance.
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -218,7 +210,15 @@ public class DetachKeyPairResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the operation is successful.
+             * Message.
+             */
+            public Builder message(String message) {
+                this.message = message;
+                return this;
+            }
+
+            /**
+             * Success.
              */
             public Builder success(String success) {
                 this.success = success;

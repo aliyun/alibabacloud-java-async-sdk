@@ -13,8 +13,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DeleteStorageSetRequest extends Request {
     @Query
+    @NameInMap("ClientToken")
+    private String clientToken;
+
+    @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @Query
     @NameInMap("OwnerId")
     private Long ownerId;
+
+    @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
 
     @Query
     @NameInMap("ResourceOwnerAccount")
@@ -25,32 +38,19 @@ public class DeleteStorageSetRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
-    @NameInMap("OwnerAccount")
-    private String ownerAccount;
-
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
-    @Query
     @NameInMap("StorageSetId")
     @Validation(required = true)
     private String storageSetId;
 
-    @Query
-    @NameInMap("ClientToken")
-    private String clientToken;
-
     private DeleteStorageSetRequest(Builder builder) {
         super(builder);
+        this.clientToken = builder.clientToken;
+        this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.ownerAccount = builder.ownerAccount;
-        this.regionId = builder.regionId;
         this.storageSetId = builder.storageSetId;
-        this.clientToken = builder.clientToken;
     }
 
     public static Builder builder() {
@@ -67,10 +67,31 @@ public class DeleteStorageSetRequest extends Request {
     }
 
     /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
      * @return ownerId
      */
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -88,41 +109,20 @@ public class DeleteStorageSetRequest extends Request {
     }
 
     /**
-     * @return ownerAccount
-     */
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return storageSetId
      */
     public String getStorageSetId() {
         return this.storageSetId;
     }
 
-    /**
-     * @return clientToken
-     */
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
     public static final class Builder extends Request.Builder<DeleteStorageSetRequest, Builder> {
+        private String clientToken; 
+        private String ownerAccount; 
         private Long ownerId; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String ownerAccount; 
-        private String regionId; 
         private String storageSetId; 
-        private String clientToken; 
 
         private Builder() {
             super();
@@ -130,14 +130,32 @@ public class DeleteStorageSetRequest extends Request {
 
         private Builder(DeleteStorageSetRequest request) {
             super(request);
+            this.clientToken = request.clientToken;
+            this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.ownerAccount = request.ownerAccount;
-            this.regionId = request.regionId;
             this.storageSetId = request.storageSetId;
-            this.clientToken = request.clientToken;
         } 
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
 
         /**
          * OwnerId.
@@ -145,6 +163,15 @@ public class DeleteStorageSetRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
@@ -167,38 +194,11 @@ public class DeleteStorageSetRequest extends Request {
         }
 
         /**
-         * OwnerAccount.
-         */
-        public Builder ownerAccount(String ownerAccount) {
-            this.putQueryParameter("OwnerAccount", ownerAccount);
-            this.ownerAccount = ownerAccount;
-            return this;
-        }
-
-        /**
-         * The region to which the bucket belongs. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The ID of the storage set.
+         * StorageSetId.
          */
         public Builder storageSetId(String storageSetId) {
             this.putQueryParameter("StorageSetId", storageSetId);
             this.storageSetId = storageSetId;
-            return this;
-        }
-
-        /**
-         * Ensure the idempotence of the request. Generate a parameter value from your client. Make sure that the value is unique among different requests. **ClientToken** supports only ASCII characters and cannot exceed 64 characters. For more information, see [how to ensure idempotence](~~ 25693 ~~).
-         */
-        public Builder clientToken(String clientToken) {
-            this.putQueryParameter("ClientToken", clientToken);
-            this.clientToken = clientToken;
             return this;
         }
 

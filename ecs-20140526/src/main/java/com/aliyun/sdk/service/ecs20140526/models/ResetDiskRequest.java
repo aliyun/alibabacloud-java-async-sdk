@@ -12,35 +12,50 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ResetDiskRequest</p>
  */
 public class ResetDiskRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
-    @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
-
     @Query
     @NameInMap("DiskId")
     @Validation(required = true)
     private String diskId;
 
     @Query
+    @NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
+
+    @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Query
     @NameInMap("SnapshotId")
     @Validation(required = true)
     private String snapshotId;
 
-    @Query
-    @NameInMap("DryRun")
-    private Boolean dryRun;
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     private ResetDiskRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
-        this.resourceOwnerId = builder.resourceOwnerId;
         this.diskId = builder.diskId;
-        this.snapshotId = builder.snapshotId;
         this.dryRun = builder.dryRun;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.snapshotId = builder.snapshotId;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -57,10 +72,38 @@ public class ResetDiskRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return diskId
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getDiskId() {
+        return this.diskId;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
     }
 
     /**
@@ -71,13 +114,6 @@ public class ResetDiskRequest extends Request {
     }
 
     /**
-     * @return diskId
-     */
-    public String getDiskId() {
-        return this.diskId;
-    }
-
-    /**
      * @return snapshotId
      */
     public String getSnapshotId() {
@@ -85,18 +121,21 @@ public class ResetDiskRequest extends Request {
     }
 
     /**
-     * @return dryRun
+     * @return sourceRegionId
      */
-    public Boolean getDryRun() {
-        return this.dryRun;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public static final class Builder extends Request.Builder<ResetDiskRequest, Builder> {
-        private String sourceRegionId; 
-        private Long resourceOwnerId; 
         private String diskId; 
-        private String snapshotId; 
         private Boolean dryRun; 
+        private String ownerAccount; 
+        private Long ownerId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String snapshotId; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -104,19 +143,58 @@ public class ResetDiskRequest extends Request {
 
         private Builder(ResetDiskRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
-            this.resourceOwnerId = request.resourceOwnerId;
             this.diskId = request.diskId;
-            this.snapshotId = request.snapshotId;
             this.dryRun = request.dryRun;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.snapshotId = request.snapshotId;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
-         * SourceRegionId.
+         * DiskId.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder diskId(String diskId) {
+            this.putQueryParameter("DiskId", diskId);
+            this.diskId = diskId;
+            return this;
+        }
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
             return this;
         }
 
@@ -130,16 +208,7 @@ public class ResetDiskRequest extends Request {
         }
 
         /**
-         * The ID of the cloud disk to be rolled back.
-         */
-        public Builder diskId(String diskId) {
-            this.putQueryParameter("DiskId", diskId);
-            this.diskId = diskId;
-            return this;
-        }
-
-        /**
-         * The ID of the snapshot to be restored to a cloud disk.
+         * SnapshotId.
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);
@@ -148,17 +217,11 @@ public class ResetDiskRequest extends Request {
         }
 
         /**
-         * Specifies whether to PreCheck the request. Valid values:
-         * <p>
-         * 
-         * -true: sends a check request and does not roll back the disk. Check items include required parameters, request format, and resource status restrictions. If the check fails, the corresponding error message is returned. If the check succeeds, the error code "DryRunOperation" is returned ".
-         * -false: a normal request is sent and the disk rollback operation is initiated after the check.
-         * 
-         * Default value: false
+         * SourceRegionId.
          */
-        public Builder dryRun(Boolean dryRun) {
-            this.putQueryParameter("DryRun", dryRun);
-            this.dryRun = dryRun;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

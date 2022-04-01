@@ -12,13 +12,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeImageFromFamilyRequest</p>
  */
 public class DescribeImageFromFamilyRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("ImageFamily")
+    @Validation(required = true)
+    private String imageFamily;
+
+    @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
 
     @Query
     @NameInMap("OwnerId")
     private Long ownerId;
+
+    @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
 
     @Query
     @NameInMap("ResourceOwnerAccount")
@@ -28,29 +38,19 @@ public class DescribeImageFromFamilyRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("OwnerAccount")
-    private String ownerAccount;
-
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
-    @Query
-    @NameInMap("ImageFamily")
-    @Validation(required = true)
-    private String imageFamily;
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     private DescribeImageFromFamilyRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
+        this.imageFamily = builder.imageFamily;
+        this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.ownerAccount = builder.ownerAccount;
-        this.regionId = builder.regionId;
-        this.imageFamily = builder.imageFamily;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -67,10 +67,17 @@ public class DescribeImageFromFamilyRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return imageFamily
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getImageFamily() {
+        return this.imageFamily;
+    }
+
+    /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     /**
@@ -78,6 +85,13 @@ public class DescribeImageFromFamilyRequest extends Request {
      */
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -95,34 +109,20 @@ public class DescribeImageFromFamilyRequest extends Request {
     }
 
     /**
-     * @return ownerAccount
+     * @return sourceRegionId
      */
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return imageFamily
-     */
-    public String getImageFamily() {
-        return this.imageFamily;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public static final class Builder extends Request.Builder<DescribeImageFromFamilyRequest, Builder> {
-        private String sourceRegionId; 
+        private String imageFamily; 
+        private String ownerAccount; 
         private Long ownerId; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String ownerAccount; 
-        private String regionId; 
-        private String imageFamily; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -130,21 +130,30 @@ public class DescribeImageFromFamilyRequest extends Request {
 
         private Builder(DescribeImageFromFamilyRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
+            this.imageFamily = request.imageFamily;
+            this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.ownerAccount = request.ownerAccount;
-            this.regionId = request.regionId;
-            this.imageFamily = request.imageFamily;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
-         * SourceRegionId.
+         * ImageFamily.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder imageFamily(String imageFamily) {
+            this.putQueryParameter("ImageFamily", imageFamily);
+            this.imageFamily = imageFamily;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
             return this;
         }
 
@@ -154,6 +163,15 @@ public class DescribeImageFromFamilyRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
@@ -176,29 +194,11 @@ public class DescribeImageFromFamilyRequest extends Request {
         }
 
         /**
-         * OwnerAccount.
+         * SourceRegionId.
          */
-        public Builder ownerAccount(String ownerAccount) {
-            this.putQueryParameter("OwnerAccount", ownerAccount);
-            this.ownerAccount = ownerAccount;
-            return this;
-        }
-
-        /**
-         * The region ID of the image. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The name of the Image family. The description must be 2 to 128 characters in length. It must start with a letter and cannot start with http://, https://, acs:, or aliyun. It can contain numbers, colons (:), underscores (_), and hyphens (-).
-         */
-        public Builder imageFamily(String imageFamily) {
-            this.putQueryParameter("ImageFamily", imageFamily);
-            this.imageFamily = imageFamily;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

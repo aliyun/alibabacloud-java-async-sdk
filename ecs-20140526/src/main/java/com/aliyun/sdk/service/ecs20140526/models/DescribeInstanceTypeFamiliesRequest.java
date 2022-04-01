@@ -12,13 +12,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceTypeFamiliesRequest</p>
  */
 public class DescribeInstanceTypeFamiliesRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("Generation")
+    private String generation;
+
+    @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
 
     @Query
     @NameInMap("OwnerId")
     private Long ownerId;
+
+    @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
 
     @Query
     @NameInMap("ResourceOwnerAccount")
@@ -28,28 +37,19 @@ public class DescribeInstanceTypeFamiliesRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("OwnerAccount")
-    private String ownerAccount;
-
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
-    @Query
-    @NameInMap("Generation")
-    private String generation;
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     private DescribeInstanceTypeFamiliesRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
+        this.generation = builder.generation;
+        this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.ownerAccount = builder.ownerAccount;
-        this.regionId = builder.regionId;
-        this.generation = builder.generation;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -66,10 +66,17 @@ public class DescribeInstanceTypeFamiliesRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return generation
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getGeneration() {
+        return this.generation;
+    }
+
+    /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     /**
@@ -77,6 +84,13 @@ public class DescribeInstanceTypeFamiliesRequest extends Request {
      */
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -94,34 +108,20 @@ public class DescribeInstanceTypeFamiliesRequest extends Request {
     }
 
     /**
-     * @return ownerAccount
+     * @return sourceRegionId
      */
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return generation
-     */
-    public String getGeneration() {
-        return this.generation;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public static final class Builder extends Request.Builder<DescribeInstanceTypeFamiliesRequest, Builder> {
-        private String sourceRegionId; 
+        private String generation; 
+        private String ownerAccount; 
         private Long ownerId; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String ownerAccount; 
-        private String regionId; 
-        private String generation; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -129,53 +129,26 @@ public class DescribeInstanceTypeFamiliesRequest extends Request {
 
         private Builder(DescribeInstanceTypeFamiliesRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
+            this.generation = request.generation;
+            this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.ownerAccount = request.ownerAccount;
-            this.regionId = request.regionId;
-            this.generation = request.generation;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
-         * SourceRegionId.
+         * Generation.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder generation(String generation) {
+            this.putQueryParameter("Generation", generation);
+            this.generation = generation;
             return this;
         }
 
         /**
-         * The ID of the RAM user.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * The account name of the resource master account.
-         */
-        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
-            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-            this.resourceOwnerAccount = resourceOwnerAccount;
-            return this;
-        }
-
-        /**
-         * The ID of the resource master account, that is, the UID.
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * The logon name of the RAM user.
+         * OwnerAccount.
          */
         public Builder ownerAccount(String ownerAccount) {
             this.putQueryParameter("OwnerAccount", ownerAccount);
@@ -184,7 +157,16 @@ public class DescribeInstanceTypeFamiliesRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -193,24 +175,29 @@ public class DescribeInstanceTypeFamiliesRequest extends Request {
         }
 
         /**
-         * The series information of the instance type family. For more information, see [instance type family](~~ 25378 ~~). Valid values:
-         * <p>
-         * 
-         * -ecs-1: the type of the series I instance. The instance is released earlier and cost-effective.
-         * 
-         * -ecs-2: The Second software and hardware upgrade of the instance type family of Series II improves the performance of the instance.
-         * 
-         * -ecs-3: the instance type family of Series III. The instance has excellent performance and can meet different business requirements.
-         * 
-         * -ecs-4: Series IV instance families, including common enterprise-level instance types (g5, c5, r5, etc.), ECS bare metal instance types (ebmc5s, ebmg5s, ebmr5s, etc.), Burstable instance types (t5), and so on. This family has strong scenario adaptability and can meet a large number of popular business requirements with lower latency.
-         * 
-         * -ecs-5: a series of V instance families, including common enterprise-level instance types (g6, c6, and r6), ECS bare metal instance types (ebmg6, ebmg6e, and ebmc6), and storage-enhanced instance types (g6e). These types provide faster response and better performance.
-         * 
-         * -ecs-6: the VI instance type family, including enterprise-level instance types (hfc7, hfg7, and hfr7) and ebmhfg7 instance types (ebmhfg7).
+         * ResourceOwnerAccount.
          */
-        public Builder generation(String generation) {
-            this.putQueryParameter("Generation", generation);
-            this.generation = generation;
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

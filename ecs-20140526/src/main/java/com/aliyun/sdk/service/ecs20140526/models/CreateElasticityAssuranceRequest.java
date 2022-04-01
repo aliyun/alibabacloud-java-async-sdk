@@ -17,28 +17,45 @@ public class CreateElasticityAssuranceRequest extends Request {
     private PrivatePoolOptions privatePoolOptions;
 
     @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @NameInMap("AssuranceTimes")
+    private String assuranceTimes;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
+    @NameInMap("ClientToken")
+    private String clientToken;
 
     @Query
-    @NameInMap("ResourceOwnerAccount")
-    private String resourceOwnerAccount;
+    @NameInMap("Description")
+    private String description;
 
     @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
+    @NameInMap("InstanceAmount")
+    private Integer instanceAmount;
+
+    @Query
+    @NameInMap("InstanceCpuCoreCount")
+    private Integer instanceCpuCoreCount;
+
+    @Query
+    @NameInMap("InstanceType")
+    @Validation(required = true)
+    private java.util.List < String > instanceType;
 
     @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
 
     @Query
-    @NameInMap("InstanceCpuCoreCount")
-    private Integer instanceCpuCoreCount;
+    @NameInMap("OwnerId")
+    private Long ownerId;
+
+    @Query
+    @NameInMap("Period")
+    private Integer period;
+
+    @Query
+    @NameInMap("PeriodUnit")
+    private String periodUnit;
 
     @Query
     @NameInMap("RegionId")
@@ -50,63 +67,46 @@ public class CreateElasticityAssuranceRequest extends Request {
     private String resourceGroupId;
 
     @Query
-    @NameInMap("ClientToken")
-    private String clientToken;
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
 
     @Query
-    @NameInMap("PeriodUnit")
-    private String periodUnit;
-
-    @Query
-    @NameInMap("Description")
-    private String description;
-
-    @Query
-    @NameInMap("AssuranceTimes")
-    private String assuranceTimes;
-
-    @Query
-    @NameInMap("InstanceAmount")
-    private Integer instanceAmount;
-
-    @Query
-    @NameInMap("ZoneId")
-    @Validation(required = true)
-    private java.util.List < String > zoneId;
-
-    @Query
-    @NameInMap("InstanceType")
-    @Validation(required = true)
-    private java.util.List < String > instanceType;
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
 
     @Query
     @NameInMap("StartTime")
     private String startTime;
 
     @Query
-    @NameInMap("Period")
-    private Integer period;
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
+    @Query
+    @NameInMap("ZoneId")
+    @Validation(required = true)
+    private java.util.List < String > zoneId;
 
     private CreateElasticityAssuranceRequest(Builder builder) {
         super(builder);
         this.privatePoolOptions = builder.privatePoolOptions;
-        this.tag = builder.tag;
-        this.ownerId = builder.ownerId;
-        this.resourceOwnerAccount = builder.resourceOwnerAccount;
-        this.resourceOwnerId = builder.resourceOwnerId;
-        this.ownerAccount = builder.ownerAccount;
+        this.assuranceTimes = builder.assuranceTimes;
+        this.clientToken = builder.clientToken;
+        this.description = builder.description;
+        this.instanceAmount = builder.instanceAmount;
         this.instanceCpuCoreCount = builder.instanceCpuCoreCount;
+        this.instanceType = builder.instanceType;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
+        this.period = builder.period;
+        this.periodUnit = builder.periodUnit;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
-        this.clientToken = builder.clientToken;
-        this.periodUnit = builder.periodUnit;
-        this.description = builder.description;
-        this.assuranceTimes = builder.assuranceTimes;
-        this.instanceAmount = builder.instanceAmount;
-        this.zoneId = builder.zoneId;
-        this.instanceType = builder.instanceType;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
         this.startTime = builder.startTime;
-        this.period = builder.period;
+        this.tag = builder.tag;
+        this.zoneId = builder.zoneId;
     }
 
     public static Builder builder() {
@@ -130,31 +130,45 @@ public class CreateElasticityAssuranceRequest extends Request {
     }
 
     /**
-     * @return tag
+     * @return assuranceTimes
      */
-    public java.util.List < Tag> getTag() {
-        return this.tag;
+    public String getAssuranceTimes() {
+        return this.assuranceTimes;
     }
 
     /**
-     * @return ownerId
+     * @return clientToken
      */
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
-     * @return resourceOwnerAccount
+     * @return description
      */
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
+    public String getDescription() {
+        return this.description;
     }
 
     /**
-     * @return resourceOwnerId
+     * @return instanceAmount
      */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public Integer getInstanceAmount() {
+        return this.instanceAmount;
+    }
+
+    /**
+     * @return instanceCpuCoreCount
+     */
+    public Integer getInstanceCpuCoreCount() {
+        return this.instanceCpuCoreCount;
+    }
+
+    /**
+     * @return instanceType
+     */
+    public java.util.List < String > getInstanceType() {
+        return this.instanceType;
     }
 
     /**
@@ -165,10 +179,24 @@ public class CreateElasticityAssuranceRequest extends Request {
     }
 
     /**
-     * @return instanceCpuCoreCount
+     * @return ownerId
      */
-    public Integer getInstanceCpuCoreCount() {
-        return this.instanceCpuCoreCount;
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
+     * @return period
+     */
+    public Integer getPeriod() {
+        return this.period;
+    }
+
+    /**
+     * @return periodUnit
+     */
+    public String getPeriodUnit() {
+        return this.periodUnit;
     }
 
     /**
@@ -186,52 +214,17 @@ public class CreateElasticityAssuranceRequest extends Request {
     }
 
     /**
-     * @return clientToken
+     * @return resourceOwnerAccount
      */
-    public String getClientToken() {
-        return this.clientToken;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
     }
 
     /**
-     * @return periodUnit
+     * @return resourceOwnerId
      */
-    public String getPeriodUnit() {
-        return this.periodUnit;
-    }
-
-    /**
-     * @return description
-     */
-    public String getDescription() {
-        return this.description;
-    }
-
-    /**
-     * @return assuranceTimes
-     */
-    public String getAssuranceTimes() {
-        return this.assuranceTimes;
-    }
-
-    /**
-     * @return instanceAmount
-     */
-    public Integer getInstanceAmount() {
-        return this.instanceAmount;
-    }
-
-    /**
-     * @return zoneId
-     */
-    public java.util.List < String > getZoneId() {
-        return this.zoneId;
-    }
-
-    /**
-     * @return instanceType
-     */
-    public java.util.List < String > getInstanceType() {
-        return this.instanceType;
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     /**
@@ -242,31 +235,38 @@ public class CreateElasticityAssuranceRequest extends Request {
     }
 
     /**
-     * @return period
+     * @return tag
      */
-    public Integer getPeriod() {
-        return this.period;
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
+     * @return zoneId
+     */
+    public java.util.List < String > getZoneId() {
+        return this.zoneId;
     }
 
     public static final class Builder extends Request.Builder<CreateElasticityAssuranceRequest, Builder> {
         private PrivatePoolOptions privatePoolOptions; 
-        private java.util.List < Tag> tag; 
-        private Long ownerId; 
-        private String resourceOwnerAccount; 
-        private Long resourceOwnerId; 
-        private String ownerAccount; 
+        private String assuranceTimes; 
+        private String clientToken; 
+        private String description; 
+        private Integer instanceAmount; 
         private Integer instanceCpuCoreCount; 
+        private java.util.List < String > instanceType; 
+        private String ownerAccount; 
+        private Long ownerId; 
+        private Integer period; 
+        private String periodUnit; 
         private String regionId; 
         private String resourceGroupId; 
-        private String clientToken; 
-        private String periodUnit; 
-        private String description; 
-        private String assuranceTimes; 
-        private Integer instanceAmount; 
-        private java.util.List < String > zoneId; 
-        private java.util.List < String > instanceType; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
         private String startTime; 
-        private Integer period; 
+        private java.util.List < Tag> tag; 
+        private java.util.List < String > zoneId; 
 
         private Builder() {
             super();
@@ -275,23 +275,23 @@ public class CreateElasticityAssuranceRequest extends Request {
         private Builder(CreateElasticityAssuranceRequest request) {
             super(request);
             this.privatePoolOptions = request.privatePoolOptions;
-            this.tag = request.tag;
-            this.ownerId = request.ownerId;
-            this.resourceOwnerAccount = request.resourceOwnerAccount;
-            this.resourceOwnerId = request.resourceOwnerId;
-            this.ownerAccount = request.ownerAccount;
+            this.assuranceTimes = request.assuranceTimes;
+            this.clientToken = request.clientToken;
+            this.description = request.description;
+            this.instanceAmount = request.instanceAmount;
             this.instanceCpuCoreCount = request.instanceCpuCoreCount;
+            this.instanceType = request.instanceType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.period = request.period;
+            this.periodUnit = request.periodUnit;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
-            this.clientToken = request.clientToken;
-            this.periodUnit = request.periodUnit;
-            this.description = request.description;
-            this.assuranceTimes = request.assuranceTimes;
-            this.instanceAmount = request.instanceAmount;
-            this.zoneId = request.zoneId;
-            this.instanceType = request.instanceType;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
             this.startTime = request.startTime;
-            this.period = request.period;
+            this.tag = request.tag;
+            this.zoneId = request.zoneId;
         } 
 
         /**
@@ -304,11 +304,65 @@ public class CreateElasticityAssuranceRequest extends Request {
         }
 
         /**
-         * Tag.
+         * AssuranceTimes.
          */
-        public Builder tag(java.util.List < Tag> tag) {
-            this.putQueryParameter("Tag", tag);
-            this.tag = tag;
+        public Builder assuranceTimes(String assuranceTimes) {
+            this.putQueryParameter("AssuranceTimes", assuranceTimes);
+            this.assuranceTimes = assuranceTimes;
+            return this;
+        }
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
+            return this;
+        }
+
+        /**
+         * InstanceAmount.
+         */
+        public Builder instanceAmount(Integer instanceAmount) {
+            this.putQueryParameter("InstanceAmount", instanceAmount);
+            this.instanceAmount = instanceAmount;
+            return this;
+        }
+
+        /**
+         * InstanceCpuCoreCount.
+         */
+        public Builder instanceCpuCoreCount(Integer instanceCpuCoreCount) {
+            this.putQueryParameter("InstanceCpuCoreCount", instanceCpuCoreCount);
+            this.instanceCpuCoreCount = instanceCpuCoreCount;
+            return this;
+        }
+
+        /**
+         * InstanceType.
+         */
+        public Builder instanceType(java.util.List < String > instanceType) {
+            this.putQueryParameter("InstanceType", instanceType);
+            this.instanceType = instanceType;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
             return this;
         }
 
@@ -318,6 +372,42 @@ public class CreateElasticityAssuranceRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * Period.
+         */
+        public Builder period(Integer period) {
+            this.putQueryParameter("Period", period);
+            this.period = period;
+            return this;
+        }
+
+        /**
+         * PeriodUnit.
+         */
+        public Builder periodUnit(String periodUnit) {
+            this.putQueryParameter("PeriodUnit", periodUnit);
+            this.periodUnit = periodUnit;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 
@@ -340,118 +430,7 @@ public class CreateElasticityAssuranceRequest extends Request {
         }
 
         /**
-         * OwnerAccount.
-         */
-        public Builder ownerAccount(String ownerAccount) {
-            this.putQueryParameter("OwnerAccount", ownerAccount);
-            this.ownerAccount = ownerAccount;
-            return this;
-        }
-
-        /**
-         * InstanceCpuCoreCount.
-         */
-        public Builder instanceCpuCoreCount(Integer instanceCpuCoreCount) {
-            this.putQueryParameter("InstanceCpuCoreCount", instanceCpuCoreCount);
-            this.instanceCpuCoreCount = instanceCpuCoreCount;
-            return this;
-        }
-
-        /**
-         * The ID of the region to which the elastic Protection Service belongs. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The ID of the resource group to which the elastic security service belongs.
-         */
-        public Builder resourceGroupId(String resourceGroupId) {
-            this.putQueryParameter("ResourceGroupId", resourceGroupId);
-            this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-
-        /**
-         * Ensure the idempotence of the request. Generate a parameter value from your client. Make sure that the value is unique among different requests. "ClientToken" only supports ASCII characters and cannot exceed 64 characters in length. For more information, see [how to ensure idempotence](~~ 25693 ~~).
-         */
-        public Builder clientToken(String clientToken) {
-            this.putQueryParameter("ClientToken", clientToken);
-            this.clientToken = clientToken;
-            return this;
-        }
-
-        /**
-         * The unit of the duration. Valid values:
-         * <p>
-         * 
-         * -Month: Month
-         * -Year: Year
-         * 
-         * Default value: Year
-         */
-        public Builder periodUnit(String periodUnit) {
-            this.putQueryParameter("PeriodUnit", periodUnit);
-            this.periodUnit = periodUnit;
-            return this;
-        }
-
-        /**
-         * The description of the elastic protection service. The description must be 2 to 256 characters in length and cannot start with "http:// "or "https.
-         * <p>
-         * 
-         * Default value: Null.
-         */
-        public Builder description(String description) {
-            this.putQueryParameter("Description", description);
-            this.description = description;
-            return this;
-        }
-
-        /**
-         * The total number of elastic guarantees. Set the value to Unlimited. Currently, the Unlimited mode is supported only when the service takes effect.
-         * <p>
-         * 
-         * Default value: Unlimited
-         */
-        public Builder assuranceTimes(String assuranceTimes) {
-            this.putQueryParameter("AssuranceTimes", assuranceTimes);
-            this.assuranceTimes = assuranceTimes;
-            return this;
-        }
-
-        /**
-         * The total number of instances to be reserved within an instance type.
-         */
-        public Builder instanceAmount(Integer instanceAmount) {
-            this.putQueryParameter("InstanceAmount", instanceAmount);
-            this.instanceAmount = instanceAmount;
-            return this;
-        }
-
-        /**
-         * The ID of the zone to which the elastic Protection Service belongs. Currently, you can create elastic protection services in only one zone.
-         */
-        public Builder zoneId(java.util.List < String > zoneId) {
-            this.putQueryParameter("ZoneId", zoneId);
-            this.zoneId = zoneId;
-            return this;
-        }
-
-        /**
-         * The instance type. Currently, you can set the auto guarantee service for only one instance type.
-         */
-        public Builder instanceType(java.util.List < String > instanceType) {
-            this.putQueryParameter("InstanceType", instanceType);
-            this.instanceType = instanceType;
-            return this;
-        }
-
-        /**
-         * The effective time of the elastic protection service. The time when the service is created. The time format is ISO 8601 and UTC +0 is required. The format is yyyy-MM-ddTHH:mm:ssZ ". For more information, see [ISO8601](~~ 25696 ~~).
+         * StartTime.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -460,17 +439,20 @@ public class CreateElasticityAssuranceRequest extends Request {
         }
 
         /**
-         * The duration of the subscription. The duration is determined by the "$dune" parameter. Valid values:
-         * <p>
-         * 
-         * -When the value of "Dune" is "Month", the value of this parameter is {"1", "2", "3", "4", "5", "6", "7", "8", "9"}.
-         * -When the value of "Dune" is "Year", the value of this parameter is {"1", "2", "3", "4", "5"}.
-         * 
-         * Default value: 1.
+         * Tag.
          */
-        public Builder period(Integer period) {
-            this.putQueryParameter("Period", period);
-            this.period = period;
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
+         * ZoneId.
+         */
+        public Builder zoneId(java.util.List < String > zoneId) {
+            this.putQueryParameter("ZoneId", zoneId);
+            this.zoneId = zoneId;
             return this;
         }
 
@@ -482,15 +464,15 @@ public class CreateElasticityAssuranceRequest extends Request {
     } 
 
     public static class PrivatePoolOptions extends TeaModel {
-        @NameInMap("Name")
-        private String name;
-
         @NameInMap("MatchCriteria")
         private String matchCriteria;
 
+        @NameInMap("Name")
+        private String name;
+
         private PrivatePoolOptions(Builder builder) {
-            this.name = builder.name;
             this.matchCriteria = builder.matchCriteria;
+            this.name = builder.name;
         }
 
         public static Builder builder() {
@@ -502,42 +484,36 @@ public class CreateElasticityAssuranceRequest extends Request {
         }
 
         /**
-         * @return name
-         */
-        public String getName() {
-            return this.name;
-        }
-
-        /**
          * @return matchCriteria
          */
         public String getMatchCriteria() {
             return this.matchCriteria;
         }
 
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
         public static final class Builder {
-            private String name; 
             private String matchCriteria; 
+            private String name; 
 
             /**
-             * The name of the elastic protection service. The description must be 2 to 128 characters in length. It must start with a letter and cannot start with "http:// "or "https. It can contain numbers, colons (:), underscores (_), and hyphens (-).
+             * MatchCriteria.
              */
-            public Builder name(String name) {
-                this.name = name;
+            public Builder matchCriteria(String matchCriteria) {
+                this.matchCriteria = matchCriteria;
                 return this;
             }
 
             /**
-             * The matching mode of the elastic protection service. Valid values:
-             * <p>
-             * 
-             * -Open: the elastic guarantee service in the Open mode.
-             * -Target: the elastic Protection Service of the specified mode.
-             * 
-             * Default value: Open
+             * Name.
              */
-            public Builder matchCriteria(String matchCriteria) {
-                this.matchCriteria = matchCriteria;
+            public Builder name(String name) {
+                this.name = name;
                 return this;
             }
 
@@ -587,7 +563,7 @@ public class CreateElasticityAssuranceRequest extends Request {
             private String value; 
 
             /**
-             * 弹性保障服务的标签键。N的取值范围：1~20。一旦传入该值，则不允许为空字符串。最多支持128个字符，不能以`aliyun`和`acs:`开头，不能包含`http://`或者`https://`。
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -595,7 +571,7 @@ public class CreateElasticityAssuranceRequest extends Request {
             }
 
             /**
-             * 弹性保障服务的标签值。N的取值范围：1~20。一旦传入该值，允许为空字符串。最多支持128个字符，不能以`acs:`开头，不能包含`http://`或者`https://`。
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

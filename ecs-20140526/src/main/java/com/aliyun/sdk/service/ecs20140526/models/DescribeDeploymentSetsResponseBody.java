@@ -12,11 +12,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDeploymentSetsResponseBody</p>
  */
 public class DescribeDeploymentSetsResponseBody extends TeaModel {
-    @NameInMap("PageSize")
-    private Integer pageSize;
+    @NameInMap("DeploymentSets")
+    private DeploymentSets deploymentSets;
 
     @NameInMap("PageNumber")
     private Integer pageNumber;
+
+    @NameInMap("PageSize")
+    private Integer pageSize;
+
+    @NameInMap("RegionId")
+    private String regionId;
 
     @NameInMap("RequestId")
     private String requestId;
@@ -24,19 +30,13 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("RegionId")
-    private String regionId;
-
-    @NameInMap("DeploymentSets")
-    private DeploymentSets deploymentSets;
-
     private DescribeDeploymentSetsResponseBody(Builder builder) {
-        this.pageSize = builder.pageSize;
+        this.deploymentSets = builder.deploymentSets;
         this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
+        this.regionId = builder.regionId;
         this.requestId = builder.requestId;
         this.totalCount = builder.totalCount;
-        this.regionId = builder.regionId;
-        this.deploymentSets = builder.deploymentSets;
     }
 
     public static Builder builder() {
@@ -48,10 +48,10 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
     }
 
     /**
-     * @return pageSize
+     * @return deploymentSets
      */
-    public Integer getPageSize() {
-        return this.pageSize;
+    public DeploymentSets getDeploymentSets() {
+        return this.deploymentSets;
     }
 
     /**
@@ -59,6 +59,20 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
      */
     public Integer getPageNumber() {
         return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -75,38 +89,24 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return deploymentSets
-     */
-    public DeploymentSets getDeploymentSets() {
-        return this.deploymentSets;
-    }
-
     public static final class Builder {
-        private Integer pageSize; 
+        private DeploymentSets deploymentSets; 
         private Integer pageNumber; 
+        private Integer pageSize; 
+        private String regionId; 
         private String requestId; 
         private Integer totalCount; 
-        private String regionId; 
-        private DeploymentSets deploymentSets; 
 
         /**
-         * The number of rows per page.
+         * DeploymentSets.
          */
-        public Builder pageSize(Integer pageSize) {
-            this.pageSize = pageSize;
+        public Builder deploymentSets(DeploymentSets deploymentSets) {
+            this.deploymentSets = deploymentSets;
             return this;
         }
 
         /**
-         * The number of pages in the deployment set list.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,23 +114,15 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * PageSize.
          */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
+        public Builder pageSize(Integer pageSize) {
+            this.pageSize = pageSize;
             return this;
         }
 
         /**
-         * The total number of queried deployment sets.
-         */
-        public Builder totalCount(Integer totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-
-        /**
-         * The region ID of the deployment set.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -138,10 +130,18 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
         }
 
         /**
-         * Returns the deployment set details in an array of DeploymentSet.
+         * RequestId.
          */
-        public Builder deploymentSets(DeploymentSets deploymentSets) {
-            this.deploymentSets = deploymentSets;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
@@ -151,61 +151,20 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
 
     } 
 
-    public static class InstanceIds extends TeaModel {
-        @NameInMap("InstanceId")
-        private java.util.List < String > instanceId;
-
-        private InstanceIds(Builder builder) {
-            this.instanceId = builder.instanceId;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static InstanceIds create() {
-            return builder().build();
-        }
-
-        /**
-         * @return instanceId
-         */
-        public java.util.List < String > getInstanceId() {
-            return this.instanceId;
-        }
-
-        public static final class Builder {
-            private java.util.List < String > instanceId; 
-
-            /**
-             * InstanceId.
-             */
-            public Builder instanceId(java.util.List < String > instanceId) {
-                this.instanceId = instanceId;
-                return this;
-            }
-
-            public InstanceIds build() {
-                return new InstanceIds(this);
-            } 
-
-        } 
-
-    }
     public static class Capacity extends TeaModel {
-        @NameInMap("ZoneId")
-        private String zoneId;
+        @NameInMap("AvailableAmount")
+        private Integer availableAmount;
 
         @NameInMap("UsedAmount")
         private Integer usedAmount;
 
-        @NameInMap("AvailableAmount")
-        private Integer availableAmount;
+        @NameInMap("ZoneId")
+        private String zoneId;
 
         private Capacity(Builder builder) {
-            this.zoneId = builder.zoneId;
-            this.usedAmount = builder.usedAmount;
             this.availableAmount = builder.availableAmount;
+            this.usedAmount = builder.usedAmount;
+            this.zoneId = builder.zoneId;
         }
 
         public static Builder builder() {
@@ -217,10 +176,10 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
         }
 
         /**
-         * @return zoneId
+         * @return availableAmount
          */
-        public String getZoneId() {
-            return this.zoneId;
+        public Integer getAvailableAmount() {
+            return this.availableAmount;
         }
 
         /**
@@ -231,27 +190,27 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
         }
 
         /**
-         * @return availableAmount
+         * @return zoneId
          */
-        public Integer getAvailableAmount() {
-            return this.availableAmount;
+        public String getZoneId() {
+            return this.zoneId;
         }
 
         public static final class Builder {
-            private String zoneId; 
-            private Integer usedAmount; 
             private Integer availableAmount; 
+            private Integer usedAmount; 
+            private String zoneId; 
 
             /**
-             * The ID of the zone. Only the zone ID of the ECS instance in the deployment set is returned.
+             * AvailableAmount.
              */
-            public Builder zoneId(String zoneId) {
-                this.zoneId = zoneId;
+            public Builder availableAmount(Integer availableAmount) {
+                this.availableAmount = availableAmount;
                 return this;
             }
 
             /**
-             * The number of ECS instances in the deployment set that belong to the zone.
+             * UsedAmount.
              */
             public Builder usedAmount(Integer usedAmount) {
                 this.usedAmount = usedAmount;
@@ -259,10 +218,10 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of ECS instances that can be added to the current deployment set in the zone.
+             * ZoneId.
              */
-            public Builder availableAmount(Integer availableAmount) {
-                this.availableAmount = availableAmount;
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
                 return this;
             }
 
@@ -314,33 +273,74 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
         } 
 
     }
+    public static class InstanceIds extends TeaModel {
+        @NameInMap("InstanceId")
+        private java.util.List < String > instanceId;
+
+        private InstanceIds(Builder builder) {
+            this.instanceId = builder.instanceId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static InstanceIds create() {
+            return builder().build();
+        }
+
+        /**
+         * @return instanceId
+         */
+        public java.util.List < String > getInstanceId() {
+            return this.instanceId;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > instanceId; 
+
+            /**
+             * InstanceId.
+             */
+            public Builder instanceId(java.util.List < String > instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            public InstanceIds build() {
+                return new InstanceIds(this);
+            } 
+
+        } 
+
+    }
     public static class DeploymentSet extends TeaModel {
+        @NameInMap("Capacities")
+        private Capacities capacities;
+
         @NameInMap("CreationTime")
         private String creationTime;
-
-        @NameInMap("Strategy")
-        private String strategy;
-
-        @NameInMap("DeploymentSetId")
-        private String deploymentSetId;
-
-        @NameInMap("DeploymentStrategy")
-        private String deploymentStrategy;
 
         @NameInMap("DeploymentSetDescription")
         private String deploymentSetDescription;
 
+        @NameInMap("DeploymentSetId")
+        private String deploymentSetId;
+
+        @NameInMap("DeploymentSetName")
+        private String deploymentSetName;
+
+        @NameInMap("DeploymentStrategy")
+        private String deploymentStrategy;
+
         @NameInMap("Domain")
         private String domain;
-
-        @NameInMap("GroupCount")
-        private Integer groupCount;
 
         @NameInMap("Granularity")
         private String granularity;
 
-        @NameInMap("DeploymentSetName")
-        private String deploymentSetName;
+        @NameInMap("GroupCount")
+        private Integer groupCount;
 
         @NameInMap("InstanceAmount")
         private Integer instanceAmount;
@@ -348,22 +348,22 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
         @NameInMap("InstanceIds")
         private InstanceIds instanceIds;
 
-        @NameInMap("Capacities")
-        private Capacities capacities;
+        @NameInMap("Strategy")
+        private String strategy;
 
         private DeploymentSet(Builder builder) {
+            this.capacities = builder.capacities;
             this.creationTime = builder.creationTime;
-            this.strategy = builder.strategy;
-            this.deploymentSetId = builder.deploymentSetId;
-            this.deploymentStrategy = builder.deploymentStrategy;
             this.deploymentSetDescription = builder.deploymentSetDescription;
-            this.domain = builder.domain;
-            this.groupCount = builder.groupCount;
-            this.granularity = builder.granularity;
+            this.deploymentSetId = builder.deploymentSetId;
             this.deploymentSetName = builder.deploymentSetName;
+            this.deploymentStrategy = builder.deploymentStrategy;
+            this.domain = builder.domain;
+            this.granularity = builder.granularity;
+            this.groupCount = builder.groupCount;
             this.instanceAmount = builder.instanceAmount;
             this.instanceIds = builder.instanceIds;
-            this.capacities = builder.capacities;
+            this.strategy = builder.strategy;
         }
 
         public static Builder builder() {
@@ -375,31 +375,17 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
         }
 
         /**
+         * @return capacities
+         */
+        public Capacities getCapacities() {
+            return this.capacities;
+        }
+
+        /**
          * @return creationTime
          */
         public String getCreationTime() {
             return this.creationTime;
-        }
-
-        /**
-         * @return strategy
-         */
-        public String getStrategy() {
-            return this.strategy;
-        }
-
-        /**
-         * @return deploymentSetId
-         */
-        public String getDeploymentSetId() {
-            return this.deploymentSetId;
-        }
-
-        /**
-         * @return deploymentStrategy
-         */
-        public String getDeploymentStrategy() {
-            return this.deploymentStrategy;
         }
 
         /**
@@ -410,17 +396,31 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
         }
 
         /**
+         * @return deploymentSetId
+         */
+        public String getDeploymentSetId() {
+            return this.deploymentSetId;
+        }
+
+        /**
+         * @return deploymentSetName
+         */
+        public String getDeploymentSetName() {
+            return this.deploymentSetName;
+        }
+
+        /**
+         * @return deploymentStrategy
+         */
+        public String getDeploymentStrategy() {
+            return this.deploymentStrategy;
+        }
+
+        /**
          * @return domain
          */
         public String getDomain() {
             return this.domain;
-        }
-
-        /**
-         * @return groupCount
-         */
-        public Integer getGroupCount() {
-            return this.groupCount;
         }
 
         /**
@@ -431,10 +431,10 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
         }
 
         /**
-         * @return deploymentSetName
+         * @return groupCount
          */
-        public String getDeploymentSetName() {
-            return this.deploymentSetName;
+        public Integer getGroupCount() {
+            return this.groupCount;
         }
 
         /**
@@ -452,28 +452,36 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
         }
 
         /**
-         * @return capacities
+         * @return strategy
          */
-        public Capacities getCapacities() {
-            return this.capacities;
+        public String getStrategy() {
+            return this.strategy;
         }
 
         public static final class Builder {
+            private Capacities capacities; 
             private String creationTime; 
-            private String strategy; 
-            private String deploymentSetId; 
-            private String deploymentStrategy; 
             private String deploymentSetDescription; 
-            private String domain; 
-            private Integer groupCount; 
-            private String granularity; 
+            private String deploymentSetId; 
             private String deploymentSetName; 
+            private String deploymentStrategy; 
+            private String domain; 
+            private String granularity; 
+            private Integer groupCount; 
             private Integer instanceAmount; 
             private InstanceIds instanceIds; 
-            private Capacities capacities; 
+            private String strategy; 
 
             /**
-             * The time when the deployment set was created.
+             * Capacities.
+             */
+            public Builder capacities(Capacities capacities) {
+                this.capacities = capacities;
+                return this;
+            }
+
+            /**
+             * CreationTime.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -481,31 +489,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The deployment policy.
-             */
-            public Builder strategy(String strategy) {
-                this.strategy = strategy;
-                return this;
-            }
-
-            /**
-             * The ID of the deployment set.
-             */
-            public Builder deploymentSetId(String deploymentSetId) {
-                this.deploymentSetId = deploymentSetId;
-                return this;
-            }
-
-            /**
-             * The deployment policy. The returned value corresponds to the value of the request parameter "stratege.
-             */
-            public Builder deploymentStrategy(String deploymentStrategy) {
-                this.deploymentStrategy = deploymentStrategy;
-                return this;
-            }
-
-            /**
-             * The description of the deployment set.
+             * DeploymentSetDescription.
              */
             public Builder deploymentSetDescription(String deploymentSetDescription) {
                 this.deploymentSetDescription = deploymentSetDescription;
@@ -513,34 +497,15 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The deployment domain.
+             * DeploymentSetId.
              */
-            public Builder domain(String domain) {
-                this.domain = domain;
+            public Builder deploymentSetId(String deploymentSetId) {
+                this.deploymentSetId = deploymentSetId;
                 return this;
             }
 
             /**
-             * The number of groups in the deployment set.
-             * <p>
-             * 
-             * > This value takes effect when the deployment set policy is set to AvailabilityGroup.
-             */
-            public Builder groupCount(Integer groupCount) {
-                this.groupCount = groupCount;
-                return this;
-            }
-
-            /**
-             * The deployment granularity.
-             */
-            public Builder granularity(String granularity) {
-                this.granularity = granularity;
-                return this;
-            }
-
-            /**
-             * The name of the deployment set.
+             * DeploymentSetName.
              */
             public Builder deploymentSetName(String deploymentSetName) {
                 this.deploymentSetName = deploymentSetName;
@@ -548,7 +513,39 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instances in the deployment set.
+             * DeploymentStrategy.
+             */
+            public Builder deploymentStrategy(String deploymentStrategy) {
+                this.deploymentStrategy = deploymentStrategy;
+                return this;
+            }
+
+            /**
+             * Domain.
+             */
+            public Builder domain(String domain) {
+                this.domain = domain;
+                return this;
+            }
+
+            /**
+             * Granularity.
+             */
+            public Builder granularity(String granularity) {
+                this.granularity = granularity;
+                return this;
+            }
+
+            /**
+             * GroupCount.
+             */
+            public Builder groupCount(Integer groupCount) {
+                this.groupCount = groupCount;
+                return this;
+            }
+
+            /**
+             * InstanceAmount.
              */
             public Builder instanceAmount(Integer instanceAmount) {
                 this.instanceAmount = instanceAmount;
@@ -564,10 +561,10 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
             }
 
             /**
-             * An array consisting of Capacity. The response is provided only when there are existing ECS instances in the deployment set. The response contains the capacity information of the deployment set zone dimension.
+             * Strategy.
              */
-            public Builder capacities(Capacities capacities) {
-                this.capacities = capacities;
+            public Builder strategy(String strategy) {
+                this.strategy = strategy;
                 return this;
             }
 

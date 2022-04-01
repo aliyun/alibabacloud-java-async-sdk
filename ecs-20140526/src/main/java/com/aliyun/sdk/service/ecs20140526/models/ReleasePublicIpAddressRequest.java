@@ -12,29 +12,44 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ReleasePublicIpAddressRequest</p>
  */
 public class ReleasePublicIpAddressRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
-    @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
-
     @Query
     @NameInMap("InstanceId")
     private String instanceId;
+
+    @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
 
     @Query
     @NameInMap("PublicIpAddress")
     @Validation(required = true)
     private String publicIpAddress;
 
+    @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     private ReleasePublicIpAddressRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
-        this.resourceOwnerId = builder.resourceOwnerId;
         this.instanceId = builder.instanceId;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
         this.publicIpAddress = builder.publicIpAddress;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -51,10 +66,38 @@ public class ReleasePublicIpAddressRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return instanceId
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
+     * @return publicIpAddress
+     */
+    public String getPublicIpAddress() {
+        return this.publicIpAddress;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
     }
 
     /**
@@ -65,24 +108,20 @@ public class ReleasePublicIpAddressRequest extends Request {
     }
 
     /**
-     * @return instanceId
+     * @return sourceRegionId
      */
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    /**
-     * @return publicIpAddress
-     */
-    public String getPublicIpAddress() {
-        return this.publicIpAddress;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public static final class Builder extends Request.Builder<ReleasePublicIpAddressRequest, Builder> {
-        private String sourceRegionId; 
-        private Long resourceOwnerId; 
         private String instanceId; 
+        private String ownerAccount; 
+        private Long ownerId; 
         private String publicIpAddress; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -90,32 +129,17 @@ public class ReleasePublicIpAddressRequest extends Request {
 
         private Builder(ReleasePublicIpAddressRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
-            this.resourceOwnerId = request.resourceOwnerId;
             this.instanceId = request.instanceId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
             this.publicIpAddress = request.publicIpAddress;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
-            return this;
-        }
-
-        /**
-         * The ID of the resource master account, that is, the UID.
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * The ID of the instance.
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -124,11 +148,56 @@ public class ReleasePublicIpAddressRequest extends Request {
         }
 
         /**
-         * The public IP address of the instance.
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * PublicIpAddress.
          */
         public Builder publicIpAddress(String publicIpAddress) {
             this.putQueryParameter("PublicIpAddress", publicIpAddress);
             this.publicIpAddress = publicIpAddress;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

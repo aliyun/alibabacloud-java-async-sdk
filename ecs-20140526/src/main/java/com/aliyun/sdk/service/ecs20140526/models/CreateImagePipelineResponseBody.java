@@ -50,7 +50,7 @@ public class CreateImagePipelineResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the image template.
+         * ImagePipelineId.
          */
         public Builder imagePipelineId(String imagePipelineId) {
             this.imagePipelineId = imagePipelineId;
@@ -58,7 +58,7 @@ public class CreateImagePipelineResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

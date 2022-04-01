@@ -12,27 +12,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCommandsResponseBody</p>
  */
 public class DescribeCommandsResponseBody extends TeaModel {
+    @NameInMap("Commands")
+    private Commands commands;
+
+    @NameInMap("PageNumber")
+    private Long pageNumber;
+
     @NameInMap("PageSize")
     private Long pageSize;
 
     @NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("PageNumber")
-    private Long pageNumber;
-
     @NameInMap("TotalCount")
     private Long totalCount;
 
-    @NameInMap("Commands")
-    private Commands commands;
-
     private DescribeCommandsResponseBody(Builder builder) {
+        this.commands = builder.commands;
+        this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
-        this.pageNumber = builder.pageNumber;
         this.totalCount = builder.totalCount;
-        this.commands = builder.commands;
     }
 
     public static Builder builder() {
@@ -41,6 +41,20 @@ public class DescribeCommandsResponseBody extends TeaModel {
 
     public static DescribeCommandsResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return commands
+     */
+    public Commands getCommands() {
+        return this.commands;
+    }
+
+    /**
+     * @return pageNumber
+     */
+    public Long getPageNumber() {
+        return this.pageNumber;
     }
 
     /**
@@ -58,51 +72,29 @@ public class DescribeCommandsResponseBody extends TeaModel {
     }
 
     /**
-     * @return pageNumber
-     */
-    public Long getPageNumber() {
-        return this.pageNumber;
-    }
-
-    /**
      * @return totalCount
      */
     public Long getTotalCount() {
         return this.totalCount;
     }
 
-    /**
-     * @return commands
-     */
-    public Commands getCommands() {
-        return this.commands;
-    }
-
     public static final class Builder {
+        private Commands commands; 
+        private Long pageNumber; 
         private Long pageSize; 
         private String requestId; 
-        private Long pageNumber; 
         private Long totalCount; 
-        private Commands commands; 
 
         /**
-         * The number of rows per page.
+         * Commands.
          */
-        public Builder pageSize(Long pageSize) {
-            this.pageSize = pageSize;
+        public Builder commands(Commands commands) {
+            this.commands = commands;
             return this;
         }
 
         /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The page number of the command list.
+         * PageNumber.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -110,18 +102,26 @@ public class DescribeCommandsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of commands.
+         * PageSize.
          */
-        public Builder totalCount(Long totalCount) {
-            this.totalCount = totalCount;
+        public Builder pageSize(Long pageSize) {
+            this.pageSize = pageSize;
             return this;
         }
 
         /**
-         * The type of the command dataset.
+         * RequestId.
          */
-        public Builder commands(Commands commands) {
-            this.commands = commands;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Long totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
@@ -173,38 +173,26 @@ public class DescribeCommandsResponseBody extends TeaModel {
 
     }
     public static class Command extends TeaModel {
-        @NameInMap("CreationTime")
-        private String creationTime;
-
-        @NameInMap("Type")
-        private String type;
-
-        @NameInMap("Timeout")
-        private Long timeout;
-
-        @NameInMap("InvokeTimes")
-        private Integer invokeTimes;
-
-        @NameInMap("CommandId")
-        private String commandId;
-
-        @NameInMap("WorkingDir")
-        private String workingDir;
-
-        @NameInMap("Description")
-        private String description;
-
-        @NameInMap("Version")
-        private Integer version;
-
-        @NameInMap("Provider")
-        private String provider;
+        @NameInMap("Category")
+        private String category;
 
         @NameInMap("CommandContent")
         private String commandContent;
 
-        @NameInMap("Category")
-        private String category;
+        @NameInMap("CommandId")
+        private String commandId;
+
+        @NameInMap("CreationTime")
+        private String creationTime;
+
+        @NameInMap("Description")
+        private String description;
+
+        @NameInMap("EnableParameter")
+        private Boolean enableParameter;
+
+        @NameInMap("InvokeTimes")
+        private Integer invokeTimes;
 
         @NameInMap("Latest")
         private Boolean latest;
@@ -212,28 +200,40 @@ public class DescribeCommandsResponseBody extends TeaModel {
         @NameInMap("Name")
         private String name;
 
-        @NameInMap("EnableParameter")
-        private Boolean enableParameter;
-
         @NameInMap("ParameterNames")
         private ParameterNames parameterNames;
 
+        @NameInMap("Provider")
+        private String provider;
+
+        @NameInMap("Timeout")
+        private Long timeout;
+
+        @NameInMap("Type")
+        private String type;
+
+        @NameInMap("Version")
+        private Integer version;
+
+        @NameInMap("WorkingDir")
+        private String workingDir;
+
         private Command(Builder builder) {
-            this.creationTime = builder.creationTime;
-            this.type = builder.type;
-            this.timeout = builder.timeout;
-            this.invokeTimes = builder.invokeTimes;
-            this.commandId = builder.commandId;
-            this.workingDir = builder.workingDir;
-            this.description = builder.description;
-            this.version = builder.version;
-            this.provider = builder.provider;
-            this.commandContent = builder.commandContent;
             this.category = builder.category;
+            this.commandContent = builder.commandContent;
+            this.commandId = builder.commandId;
+            this.creationTime = builder.creationTime;
+            this.description = builder.description;
+            this.enableParameter = builder.enableParameter;
+            this.invokeTimes = builder.invokeTimes;
             this.latest = builder.latest;
             this.name = builder.name;
-            this.enableParameter = builder.enableParameter;
             this.parameterNames = builder.parameterNames;
+            this.provider = builder.provider;
+            this.timeout = builder.timeout;
+            this.type = builder.type;
+            this.version = builder.version;
+            this.workingDir = builder.workingDir;
         }
 
         public static Builder builder() {
@@ -245,66 +245,10 @@ public class DescribeCommandsResponseBody extends TeaModel {
         }
 
         /**
-         * @return creationTime
+         * @return category
          */
-        public String getCreationTime() {
-            return this.creationTime;
-        }
-
-        /**
-         * @return type
-         */
-        public String getType() {
-            return this.type;
-        }
-
-        /**
-         * @return timeout
-         */
-        public Long getTimeout() {
-            return this.timeout;
-        }
-
-        /**
-         * @return invokeTimes
-         */
-        public Integer getInvokeTimes() {
-            return this.invokeTimes;
-        }
-
-        /**
-         * @return commandId
-         */
-        public String getCommandId() {
-            return this.commandId;
-        }
-
-        /**
-         * @return workingDir
-         */
-        public String getWorkingDir() {
-            return this.workingDir;
-        }
-
-        /**
-         * @return description
-         */
-        public String getDescription() {
-            return this.description;
-        }
-
-        /**
-         * @return version
-         */
-        public Integer getVersion() {
-            return this.version;
-        }
-
-        /**
-         * @return provider
-         */
-        public String getProvider() {
-            return this.provider;
+        public String getCategory() {
+            return this.category;
         }
 
         /**
@@ -315,10 +259,38 @@ public class DescribeCommandsResponseBody extends TeaModel {
         }
 
         /**
-         * @return category
+         * @return commandId
          */
-        public String getCategory() {
-            return this.category;
+        public String getCommandId() {
+            return this.commandId;
+        }
+
+        /**
+         * @return creationTime
+         */
+        public String getCreationTime() {
+            return this.creationTime;
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return enableParameter
+         */
+        public Boolean getEnableParameter() {
+            return this.enableParameter;
+        }
+
+        /**
+         * @return invokeTimes
+         */
+        public Integer getInvokeTimes() {
+            return this.invokeTimes;
         }
 
         /**
@@ -336,118 +308,66 @@ public class DescribeCommandsResponseBody extends TeaModel {
         }
 
         /**
-         * @return enableParameter
-         */
-        public Boolean getEnableParameter() {
-            return this.enableParameter;
-        }
-
-        /**
          * @return parameterNames
          */
         public ParameterNames getParameterNames() {
             return this.parameterNames;
         }
 
+        /**
+         * @return provider
+         */
+        public String getProvider() {
+            return this.provider;
+        }
+
+        /**
+         * @return timeout
+         */
+        public Long getTimeout() {
+            return this.timeout;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
+         * @return version
+         */
+        public Integer getVersion() {
+            return this.version;
+        }
+
+        /**
+         * @return workingDir
+         */
+        public String getWorkingDir() {
+            return this.workingDir;
+        }
+
         public static final class Builder {
-            private String creationTime; 
-            private String type; 
-            private Long timeout; 
-            private Integer invokeTimes; 
-            private String commandId; 
-            private String workingDir; 
-            private String description; 
-            private Integer version; 
-            private String provider; 
-            private String commandContent; 
             private String category; 
+            private String commandContent; 
+            private String commandId; 
+            private String creationTime; 
+            private String description; 
+            private Boolean enableParameter; 
+            private Integer invokeTimes; 
             private Boolean latest; 
             private String name; 
-            private Boolean enableParameter; 
             private ParameterNames parameterNames; 
+            private String provider; 
+            private Long timeout; 
+            private String type; 
+            private Integer version; 
+            private String workingDir; 
 
             /**
-             * The time when the command was created.
-             */
-            public Builder creationTime(String creationTime) {
-                this.creationTime = creationTime;
-                return this;
-            }
-
-            /**
-             * The type of the command.
-             */
-            public Builder type(String type) {
-                this.type = type;
-                return this;
-            }
-
-            /**
-             * The timeout period.
-             */
-            public Builder timeout(Long timeout) {
-                this.timeout = timeout;
-                return this;
-            }
-
-            /**
-             * The number of tasks created by using this command.
-             */
-            public Builder invokeTimes(Integer invokeTimes) {
-                this.invokeTimes = invokeTimes;
-                return this;
-            }
-
-            /**
-             * The ID of the command.
-             */
-            public Builder commandId(String commandId) {
-                this.commandId = commandId;
-                return this;
-            }
-
-            /**
-             * The execution path.
-             */
-            public Builder workingDir(String workingDir) {
-                this.workingDir = workingDir;
-                return this;
-            }
-
-            /**
-             * The description of the command.
-             */
-            public Builder description(String description) {
-                this.description = description;
-                return this;
-            }
-
-            /**
-             * The version of the common command. If multiple commands belong to the same "Provider" and have the same name and category, these commands belong to different versions of the same command. This value is not returned for manually created cloud assistant commands.
-             */
-            public Builder version(Integer version) {
-                this.version = version;
-                return this;
-            }
-
-            /**
-             * The provider of public commands.
-             */
-            public Builder provider(String provider) {
-                this.provider = provider;
-                return this;
-            }
-
-            /**
-             * The command content, which is Base64-encoded and then transmitted.
-             */
-            public Builder commandContent(String commandContent) {
-                this.commandContent = commandContent;
-                return this;
-            }
-
-            /**
-             * The category of the common command.
+             * Category.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -455,7 +375,55 @@ public class DescribeCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the public Command is the latest version. If multiple commands belong to the same "Provider" and have the same name and category, these commands belong to different versions of the same command. This value is not returned for manually created cloud assistant commands.
+             * CommandContent.
+             */
+            public Builder commandContent(String commandContent) {
+                this.commandContent = commandContent;
+                return this;
+            }
+
+            /**
+             * CommandId.
+             */
+            public Builder commandId(String commandId) {
+                this.commandId = commandId;
+                return this;
+            }
+
+            /**
+             * CreationTime.
+             */
+            public Builder creationTime(String creationTime) {
+                this.creationTime = creationTime;
+                return this;
+            }
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * EnableParameter.
+             */
+            public Builder enableParameter(Boolean enableParameter) {
+                this.enableParameter = enableParameter;
+                return this;
+            }
+
+            /**
+             * InvokeTimes.
+             */
+            public Builder invokeTimes(Integer invokeTimes) {
+                this.invokeTimes = invokeTimes;
+                return this;
+            }
+
+            /**
+             * Latest.
              */
             public Builder latest(Boolean latest) {
                 this.latest = latest;
@@ -463,20 +431,10 @@ public class DescribeCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the command.
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
-                return this;
-            }
-
-            /**
-             * Specifies whether to enable custom parameters.
-             * <p>
-             * 
-             */
-            public Builder enableParameter(Boolean enableParameter) {
-                this.enableParameter = enableParameter;
                 return this;
             }
 
@@ -485,6 +443,46 @@ public class DescribeCommandsResponseBody extends TeaModel {
              */
             public Builder parameterNames(ParameterNames parameterNames) {
                 this.parameterNames = parameterNames;
+                return this;
+            }
+
+            /**
+             * Provider.
+             */
+            public Builder provider(String provider) {
+                this.provider = provider;
+                return this;
+            }
+
+            /**
+             * Timeout.
+             */
+            public Builder timeout(Long timeout) {
+                this.timeout = timeout;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * Version.
+             */
+            public Builder version(Integer version) {
+                this.version = version;
+                return this;
+            }
+
+            /**
+             * WorkingDir.
+             */
+            public Builder workingDir(String workingDir) {
+                this.workingDir = workingDir;
                 return this;
             }
 

@@ -12,13 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeUserDataRequest</p>
  */
 public class DescribeUserDataRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
-    @NameInMap("ResourceOwnerAccount")
-    private String resourceOwnerAccount;
+    @NameInMap("InstanceId")
+    @Validation(required = true)
+    private String instanceId;
 
     @Query
     @NameInMap("OwnerId")
@@ -30,22 +27,25 @@ public class DescribeUserDataRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
-    private String instanceId;
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     private DescribeUserDataRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
-        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.instanceId = builder.instanceId;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.instanceId = builder.instanceId;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -62,17 +62,10 @@ public class DescribeUserDataRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return instanceId
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
-     * @return resourceOwnerAccount
-     */
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     /**
@@ -90,6 +83,13 @@ public class DescribeUserDataRequest extends Request {
     }
 
     /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
      * @return resourceOwnerId
      */
     public Long getResourceOwnerId() {
@@ -97,19 +97,19 @@ public class DescribeUserDataRequest extends Request {
     }
 
     /**
-     * @return instanceId
+     * @return sourceRegionId
      */
-    public String getInstanceId() {
-        return this.instanceId;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public static final class Builder extends Request.Builder<DescribeUserDataRequest, Builder> {
-        private String sourceRegionId; 
-        private String resourceOwnerAccount; 
+        private String instanceId; 
         private Long ownerId; 
         private String regionId; 
+        private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String instanceId; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -117,34 +117,25 @@ public class DescribeUserDataRequest extends Request {
 
         private Builder(DescribeUserDataRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
-            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.instanceId = request.instanceId;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.instanceId = request.instanceId;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
-         * SourceRegionId.
+         * InstanceId.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
             return this;
         }
 
         /**
-         * The account name of the resource master account.
-         */
-        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
-            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-            this.resourceOwnerAccount = resourceOwnerAccount;
-            return this;
-        }
-
-        /**
-         * The ID of the RAM user.
+         * OwnerId.
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -153,7 +144,7 @@ public class DescribeUserDataRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the instance belongs. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -162,7 +153,16 @@ public class DescribeUserDataRequest extends Request {
         }
 
         /**
-         * The ID of the resource master account, that is, the UID.
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
          */
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
@@ -171,11 +171,11 @@ public class DescribeUserDataRequest extends Request {
         }
 
         /**
-         * The ID of the instance to be queried.
+         * SourceRegionId.
          */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

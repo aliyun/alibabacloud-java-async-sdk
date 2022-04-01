@@ -12,13 +12,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeTasksRequest</p>
  */
 public class DescribeTasksRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("EndTime")
+    private String endTime;
 
     @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
 
     @Query
     @NameInMap("PageNumber")
@@ -35,37 +39,48 @@ public class DescribeTasksRequest extends Request {
     private String regionId;
 
     @Query
-    @NameInMap("TaskStatus")
-    private String taskStatus;
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     @Query
     @NameInMap("StartTime")
     private String startTime;
 
     @Query
-    @NameInMap("EndTime")
-    private String endTime;
+    @NameInMap("TaskAction")
+    private String taskAction;
 
     @Query
     @NameInMap("TaskIds")
     private String taskIds;
 
     @Query
-    @NameInMap("TaskAction")
-    private String taskAction;
+    @NameInMap("TaskStatus")
+    private String taskStatus;
 
     private DescribeTasksRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
-        this.resourceOwnerId = builder.resourceOwnerId;
+        this.endTime = builder.endTime;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
-        this.taskStatus = builder.taskStatus;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.sourceRegionId = builder.sourceRegionId;
         this.startTime = builder.startTime;
-        this.endTime = builder.endTime;
-        this.taskIds = builder.taskIds;
         this.taskAction = builder.taskAction;
+        this.taskIds = builder.taskIds;
+        this.taskStatus = builder.taskStatus;
     }
 
     public static Builder builder() {
@@ -82,17 +97,24 @@ public class DescribeTasksRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return endTime
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getEndTime() {
+        return this.endTime;
     }
 
     /**
-     * @return resourceOwnerId
+     * @return ownerAccount
      */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     /**
@@ -117,10 +139,24 @@ public class DescribeTasksRequest extends Request {
     }
 
     /**
-     * @return taskStatus
+     * @return resourceOwnerAccount
      */
-    public String getTaskStatus() {
-        return this.taskStatus;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -131,10 +167,10 @@ public class DescribeTasksRequest extends Request {
     }
 
     /**
-     * @return endTime
+     * @return taskAction
      */
-    public String getEndTime() {
-        return this.endTime;
+    public String getTaskAction() {
+        return this.taskAction;
     }
 
     /**
@@ -145,23 +181,26 @@ public class DescribeTasksRequest extends Request {
     }
 
     /**
-     * @return taskAction
+     * @return taskStatus
      */
-    public String getTaskAction() {
-        return this.taskAction;
+    public String getTaskStatus() {
+        return this.taskStatus;
     }
 
     public static final class Builder extends Request.Builder<DescribeTasksRequest, Builder> {
-        private String sourceRegionId; 
-        private Long resourceOwnerId; 
+        private String endTime; 
+        private String ownerAccount; 
+        private Long ownerId; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String regionId; 
-        private String taskStatus; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String sourceRegionId; 
         private String startTime; 
-        private String endTime; 
-        private String taskIds; 
         private String taskAction; 
+        private String taskIds; 
+        private String taskStatus; 
 
         private Builder() {
             super();
@@ -169,24 +208,81 @@ public class DescribeTasksRequest extends Request {
 
         private Builder(DescribeTasksRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
-            this.resourceOwnerId = request.resourceOwnerId;
+            this.endTime = request.endTime;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
-            this.taskStatus = request.taskStatus;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceRegionId = request.sourceRegionId;
             this.startTime = request.startTime;
-            this.endTime = request.endTime;
-            this.taskIds = request.taskIds;
             this.taskAction = request.taskAction;
+            this.taskIds = request.taskIds;
+            this.taskStatus = request.taskStatus;
         } 
 
         /**
-         * SourceRegionId.
+         * EndTime.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder endTime(String endTime) {
+            this.putQueryParameter("EndTime", endTime);
+            this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * PageNumber.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
             return this;
         }
 
@@ -200,62 +296,16 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * The page number of the query result.
-         * <p>
-         * 
-         * Start value: 1
-         * 
-         * Default value: 1.
+         * SourceRegionId.
          */
-        public Builder pageNumber(Integer pageNumber) {
-            this.putQueryParameter("PageNumber", pageNumber);
-            this.pageNumber = pageNumber;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
-         * 
-         * Maximum Value: 100
-         * 
-         * Default value: 10
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.putQueryParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * The ID of the region. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The status of the task. Valid values:
-         * <p>
-         * 
-         * -Finished: Completed
-         * -Processing: Running
-         * -Failed: Failed.
-         * 
-         * Default value: None
-         * 
-         * > only tasks in the Finished, Processing, and Failed status can be queried. If you enter other values, the query will not take effect.
-         */
-        public Builder taskStatus(String taskStatus) {
-            this.putQueryParameter("TaskStatus", taskStatus);
-            this.taskStatus = taskStatus;
-            return this;
-        }
-
-        /**
-         * The start point of the creation time interval. The time follows the [ISO 8601](~~ 25696 ~~) standard and uses UTC +0. The format is yyyy-MM-ddTHH:mm:ssZ.
+         * StartTime.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -264,16 +314,16 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * The end of the creation time range. The time follows the [ISO 8601](~~ 25696 ~~) standard and uses UTC +0. The format is yyyy-MM-ddTHH:mm:ssZ.
+         * TaskAction.
          */
-        public Builder endTime(String endTime) {
-            this.putQueryParameter("EndTime", endTime);
-            this.endTime = endTime;
+        public Builder taskAction(String taskAction) {
+            this.putQueryParameter("TaskAction", taskAction);
+            this.taskAction = taskAction;
             return this;
         }
 
         /**
-         * The ID of the task. You can specify a maximum of 100 ids at a time. Separate ids with commas (,).
+         * TaskIds.
          */
         public Builder taskIds(String taskIds) {
             this.putQueryParameter("TaskIds", taskIds);
@@ -282,17 +332,11 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Valid values:
-         * <p>
-         * 
-         * -ImportImage: import images
-         * -ExportImage: export images
-         * -RedeployInstance: redeploy the ECS instance
-         * -ModifyDiskSpec: change the disk type
+         * TaskStatus.
          */
-        public Builder taskAction(String taskAction) {
-            this.putQueryParameter("TaskAction", taskAction);
-            this.taskAction = taskAction;
+        public Builder taskStatus(String taskStatus) {
+            this.putQueryParameter("TaskStatus", taskStatus);
+            this.taskStatus = taskStatus;
             return this;
         }
 

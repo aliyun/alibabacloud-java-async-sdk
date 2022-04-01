@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CopySnapshotResponseBody</p>
  */
 public class CopySnapshotResponseBody extends TeaModel {
-    @NameInMap("SnapshotId")
-    private String snapshotId;
-
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("SnapshotId")
+    private String snapshotId;
+
     private CopySnapshotResponseBody(Builder builder) {
-        this.snapshotId = builder.snapshotId;
         this.requestId = builder.requestId;
+        this.snapshotId = builder.snapshotId;
     }
 
     public static Builder builder() {
@@ -32,36 +32,36 @@ public class CopySnapshotResponseBody extends TeaModel {
     }
 
     /**
-     * @return snapshotId
-     */
-    public String getSnapshotId() {
-        return this.snapshotId;
-    }
-
-    /**
      * @return requestId
      */
     public String getRequestId() {
         return this.requestId;
     }
 
+    /**
+     * @return snapshotId
+     */
+    public String getSnapshotId() {
+        return this.snapshotId;
+    }
+
     public static final class Builder {
-        private String snapshotId; 
         private String requestId; 
+        private String snapshotId; 
 
         /**
-         * The ID of the new snapshot.
+         * RequestId.
          */
-        public Builder snapshotId(String snapshotId) {
-            this.snapshotId = snapshotId;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * SnapshotId.
          */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
+        public Builder snapshotId(String snapshotId) {
+            this.snapshotId = snapshotId;
             return this;
         }
 

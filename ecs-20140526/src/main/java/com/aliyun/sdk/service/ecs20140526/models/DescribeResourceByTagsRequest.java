@@ -12,34 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeResourceByTagsRequest</p>
  */
 public class DescribeResourceByTagsRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("OwnerId")
     private Long ownerId;
-
-    @Query
-    @NameInMap("ResourceOwnerAccount")
-    private String resourceOwnerAccount;
-
-    @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
-
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
-
-    @Query
-    @NameInMap("ResourceType")
-    private String resourceType;
-
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
 
     @Query
     @NameInMap("PageNumber")
@@ -50,17 +25,42 @@ public class DescribeResourceByTagsRequest extends Request {
     @Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
+    @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
+    @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Query
+    @NameInMap("ResourceType")
+    private String resourceType;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
+    @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
     private DescribeResourceByTagsRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
         this.ownerId = builder.ownerId;
-        this.resourceOwnerAccount = builder.resourceOwnerAccount;
-        this.resourceOwnerId = builder.resourceOwnerId;
-        this.tag = builder.tag;
-        this.resourceType = builder.resourceType;
-        this.regionId = builder.regionId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.regionId = builder.regionId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.resourceType = builder.resourceType;
+        this.sourceRegionId = builder.sourceRegionId;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -77,17 +77,31 @@ public class DescribeResourceByTagsRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return ownerId
      */
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -105,13 +119,6 @@ public class DescribeResourceByTagsRequest extends Request {
     }
 
     /**
-     * @return tag
-     */
-    public java.util.List < Tag> getTag() {
-        return this.tag;
-    }
-
-    /**
      * @return resourceType
      */
     public String getResourceType() {
@@ -119,36 +126,29 @@ public class DescribeResourceByTagsRequest extends Request {
     }
 
     /**
-     * @return regionId
+     * @return sourceRegionId
      */
-    public String getRegionId() {
-        return this.regionId;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
-     * @return pageNumber
+     * @return tag
      */
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    /**
-     * @return pageSize
-     */
-    public Integer getPageSize() {
-        return this.pageSize;
+    public java.util.List < Tag> getTag() {
+        return this.tag;
     }
 
     public static final class Builder extends Request.Builder<DescribeResourceByTagsRequest, Builder> {
-        private String sourceRegionId; 
         private Long ownerId; 
-        private String resourceOwnerAccount; 
-        private Long resourceOwnerId; 
-        private java.util.List < Tag> tag; 
-        private String resourceType; 
-        private String regionId; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String regionId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String resourceType; 
+        private String sourceRegionId; 
+        private java.util.List < Tag> tag; 
 
         private Builder() {
             super();
@@ -156,25 +156,16 @@ public class DescribeResourceByTagsRequest extends Request {
 
         private Builder(DescribeResourceByTagsRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
             this.ownerId = request.ownerId;
-            this.resourceOwnerAccount = request.resourceOwnerAccount;
-            this.resourceOwnerId = request.resourceOwnerId;
-            this.tag = request.tag;
-            this.resourceType = request.resourceType;
-            this.regionId = request.regionId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.resourceType = request.resourceType;
+            this.sourceRegionId = request.sourceRegionId;
+            this.tag = request.tag;
         } 
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
-            return this;
-        }
 
         /**
          * OwnerId.
@@ -182,6 +173,33 @@ public class DescribeResourceByTagsRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * PageNumber.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
@@ -204,30 +222,7 @@ public class DescribeResourceByTagsRequest extends Request {
         }
 
         /**
-         * Tag.
-         */
-        public Builder tag(java.util.List < Tag> tag) {
-            this.putQueryParameter("Tag", tag);
-            this.tag = tag;
-            return this;
-        }
-
-        /**
-         * The type of the resource. Valid values:
-         * <p>
-         * 
-         * -instance:ECS instance
-         * -disk: disk
-         * -snapshot: snapshot
-         * -image: image
-         * -securitygroup: Security Group
-         * -volume: storage volume
-         * -eni: eni
-         * -ddh: Dedicated host
-         * -keypair:SSH key pair
-         * -launchtemplate: launch Template
-         * 
-         * The preceding values are all in lowercase.
+         * ResourceType.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -236,35 +231,20 @@ public class DescribeResourceByTagsRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the resource belongs. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
+         * SourceRegionId.
          */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 
         /**
-         * The page number of the query result. Start value: 1
-         * <p>
-         * 
-         * Default value: 1.
+         * Tag.
          */
-        public Builder pageNumber(Integer pageNumber) {
-            this.putQueryParameter("PageNumber", pageNumber);
-            this.pageNumber = pageNumber;
-            return this;
-        }
-
-        /**
-         * The number of entries per page displayed in the query results. Maximum Value: 100
-         * <p>
-         * 
-         * Default value: 50
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.putQueryParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
             return this;
         }
 
@@ -276,7 +256,7 @@ public class DescribeResourceByTagsRequest extends Request {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("key")
+        @NameInMap("Key")
         private String key;
 
         @NameInMap("Value")
@@ -314,10 +294,7 @@ public class DescribeResourceByTagsRequest extends Request {
             private String value; 
 
             /**
-             * 资源的标签键。
-             * <p>
-             * 
-             * >为提高兼容性，建议您尽量使用Tag.N.Key参数。
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -325,7 +302,7 @@ public class DescribeResourceByTagsRequest extends Request {
             }
 
             /**
-             * 资源的标签值。N的取值范围：1~20。一旦传入该值，允许为空字符串。最多支持128个字符。
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

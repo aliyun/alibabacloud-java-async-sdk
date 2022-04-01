@@ -13,28 +13,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDedicatedHostClustersRequest extends Request {
     @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
-
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @NameInMap("DedicatedHostClusterIds")
+    private String dedicatedHostClusterIds;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
-    @NameInMap("ResourceOwnerAccount")
-    private String resourceOwnerAccount;
-
-    @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
-
-    @Query
-    @NameInMap("Status")
-    private String status;
+    @NameInMap("DedicatedHostClusterName")
+    private String dedicatedHostClusterName;
 
     @Query
     @NameInMap("LockReason")
@@ -45,21 +29,8 @@ public class DescribeDedicatedHostClustersRequest extends Request {
     private String ownerAccount;
 
     @Query
-    @NameInMap("ResourceGroupId")
-    private String resourceGroupId;
-
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
-    @Query
-    @NameInMap("ZoneId")
-    private String zoneId;
-
-    @Query
-    @NameInMap("DedicatedHostClusterName")
-    private String dedicatedHostClusterName;
+    @NameInMap("OwnerId")
+    private Long ownerId;
 
     @Query
     @NameInMap("PageNumber")
@@ -71,26 +42,55 @@ public class DescribeDedicatedHostClustersRequest extends Request {
     private Integer pageSize;
 
     @Query
-    @NameInMap("DedicatedHostClusterIds")
-    private String dedicatedHostClusterIds;
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
+    @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
+    @Query
+    @NameInMap("Status")
+    private String status;
+
+    @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
+    @Query
+    @NameInMap("ZoneId")
+    private String zoneId;
 
     private DescribeDedicatedHostClustersRequest(Builder builder) {
         super(builder);
-        this.tag = builder.tag;
-        this.sourceRegionId = builder.sourceRegionId;
-        this.ownerId = builder.ownerId;
-        this.resourceOwnerAccount = builder.resourceOwnerAccount;
-        this.resourceOwnerId = builder.resourceOwnerId;
-        this.status = builder.status;
+        this.dedicatedHostClusterIds = builder.dedicatedHostClusterIds;
+        this.dedicatedHostClusterName = builder.dedicatedHostClusterName;
         this.lockReason = builder.lockReason;
         this.ownerAccount = builder.ownerAccount;
-        this.resourceGroupId = builder.resourceGroupId;
-        this.regionId = builder.regionId;
-        this.zoneId = builder.zoneId;
-        this.dedicatedHostClusterName = builder.dedicatedHostClusterName;
+        this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.dedicatedHostClusterIds = builder.dedicatedHostClusterIds;
+        this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.sourceRegionId = builder.sourceRegionId;
+        this.status = builder.status;
+        this.tag = builder.tag;
+        this.zoneId = builder.zoneId;
     }
 
     public static Builder builder() {
@@ -107,45 +107,17 @@ public class DescribeDedicatedHostClustersRequest extends Request {
     }
 
     /**
-     * @return tag
+     * @return dedicatedHostClusterIds
      */
-    public java.util.List < Tag> getTag() {
-        return this.tag;
+    public String getDedicatedHostClusterIds() {
+        return this.dedicatedHostClusterIds;
     }
 
     /**
-     * @return sourceRegionId
+     * @return dedicatedHostClusterName
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
-     * @return resourceOwnerAccount
-     */
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    /**
-     * @return resourceOwnerId
-     */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    /**
-     * @return status
-     */
-    public String getStatus() {
-        return this.status;
+    public String getDedicatedHostClusterName() {
+        return this.dedicatedHostClusterName;
     }
 
     /**
@@ -163,31 +135,10 @@ public class DescribeDedicatedHostClustersRequest extends Request {
     }
 
     /**
-     * @return resourceGroupId
+     * @return ownerId
      */
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return zoneId
-     */
-    public String getZoneId() {
-        return this.zoneId;
-    }
-
-    /**
-     * @return dedicatedHostClusterName
-     */
-    public String getDedicatedHostClusterName() {
-        return this.dedicatedHostClusterName;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     /**
@@ -205,28 +156,77 @@ public class DescribeDedicatedHostClustersRequest extends Request {
     }
 
     /**
-     * @return dedicatedHostClusterIds
+     * @return regionId
      */
-    public String getDedicatedHostClusterIds() {
-        return this.dedicatedHostClusterIds;
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
+    /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
+     * @return zoneId
+     */
+    public String getZoneId() {
+        return this.zoneId;
     }
 
     public static final class Builder extends Request.Builder<DescribeDedicatedHostClustersRequest, Builder> {
-        private java.util.List < Tag> tag; 
-        private String sourceRegionId; 
-        private Long ownerId; 
-        private String resourceOwnerAccount; 
-        private Long resourceOwnerId; 
-        private String status; 
+        private String dedicatedHostClusterIds; 
+        private String dedicatedHostClusterName; 
         private String lockReason; 
         private String ownerAccount; 
-        private String resourceGroupId; 
-        private String regionId; 
-        private String zoneId; 
-        private String dedicatedHostClusterName; 
+        private Long ownerId; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private String dedicatedHostClusterIds; 
+        private String regionId; 
+        private String resourceGroupId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String sourceRegionId; 
+        private String status; 
+        private java.util.List < Tag> tag; 
+        private String zoneId; 
 
         private Builder() {
             super();
@@ -234,74 +234,38 @@ public class DescribeDedicatedHostClustersRequest extends Request {
 
         private Builder(DescribeDedicatedHostClustersRequest request) {
             super(request);
-            this.tag = request.tag;
-            this.sourceRegionId = request.sourceRegionId;
-            this.ownerId = request.ownerId;
-            this.resourceOwnerAccount = request.resourceOwnerAccount;
-            this.resourceOwnerId = request.resourceOwnerId;
-            this.status = request.status;
+            this.dedicatedHostClusterIds = request.dedicatedHostClusterIds;
+            this.dedicatedHostClusterName = request.dedicatedHostClusterName;
             this.lockReason = request.lockReason;
             this.ownerAccount = request.ownerAccount;
-            this.resourceGroupId = request.resourceGroupId;
-            this.regionId = request.regionId;
-            this.zoneId = request.zoneId;
-            this.dedicatedHostClusterName = request.dedicatedHostClusterName;
+            this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
-            this.dedicatedHostClusterIds = request.dedicatedHostClusterIds;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceRegionId = request.sourceRegionId;
+            this.status = request.status;
+            this.tag = request.tag;
+            this.zoneId = request.zoneId;
         } 
 
         /**
-         * Tag.
+         * DedicatedHostClusterIds.
          */
-        public Builder tag(java.util.List < Tag> tag) {
-            this.putQueryParameter("Tag", tag);
-            this.tag = tag;
+        public Builder dedicatedHostClusterIds(String dedicatedHostClusterIds) {
+            this.putQueryParameter("DedicatedHostClusterIds", dedicatedHostClusterIds);
+            this.dedicatedHostClusterIds = dedicatedHostClusterIds;
             return this;
         }
 
         /**
-         * SourceRegionId.
+         * DedicatedHostClusterName.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
-            return this;
-        }
-
-        /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * ResourceOwnerAccount.
-         */
-        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
-            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-            this.resourceOwnerAccount = resourceOwnerAccount;
-            return this;
-        }
-
-        /**
-         * ResourceOwnerId.
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * Status.
-         */
-        public Builder status(String status) {
-            this.putQueryParameter("Status", status);
-            this.status = status;
+        public Builder dedicatedHostClusterName(String dedicatedHostClusterName) {
+            this.putQueryParameter("DedicatedHostClusterName", dedicatedHostClusterName);
+            this.dedicatedHostClusterName = dedicatedHostClusterName;
             return this;
         }
 
@@ -324,48 +288,16 @@ public class DescribeDedicatedHostClustersRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the DDH cluster belongs. When you use this parameter to filter resources, the number of resources cannot exceed 1,000.
+         * OwnerId.
          */
-        public Builder resourceGroupId(String resourceGroupId) {
-            this.putQueryParameter("ResourceGroupId", resourceGroupId);
-            this.resourceGroupId = resourceGroupId;
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
             return this;
         }
 
         /**
-         * The region ID of the DDH cluster. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The ID of the zone where the dedicated host cluster is located. You can call [DescribeZones](~~ 25610 ~~) to view the zones in the Alibaba Cloud region.
-         */
-        public Builder zoneId(String zoneId) {
-            this.putQueryParameter("ZoneId", zoneId);
-            this.zoneId = zoneId;
-            return this;
-        }
-
-        /**
-         * The name of the DDH cluster.
-         */
-        public Builder dedicatedHostClusterName(String dedicatedHostClusterName) {
-            this.putQueryParameter("DedicatedHostClusterName", dedicatedHostClusterName);
-            this.dedicatedHostClusterName = dedicatedHostClusterName;
-            return this;
-        }
-
-        /**
-         * The page number of the DDH cluster status list.
-         * <p>
-         * 
-         * Start value: 1
-         * 
-         * Default value: 1.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -374,12 +306,7 @@ public class DescribeDedicatedHostClustersRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
-         * 
-         * Maximum Value: 100
-         * 
-         * Default value: 10
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -388,11 +315,74 @@ public class DescribeDedicatedHostClustersRequest extends Request {
         }
 
         /**
-         * The ID of the DDH cluster. The value can be a JSON array composed of multiple ddh cluster ids in the format of "["dc-xxxxxxxxx", "dc-yyyyyyy",... "dc-zzzzzzzzz"]". You can specify a maximum of 100 IDs. Separate multiple IDs with commas (,).
+         * RegionId.
          */
-        public Builder dedicatedHostClusterIds(String dedicatedHostClusterIds) {
-            this.putQueryParameter("DedicatedHostClusterIds", dedicatedHostClusterIds);
-            this.dedicatedHostClusterIds = dedicatedHostClusterIds;
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
+
+        /**
+         * Status.
+         */
+        public Builder status(String status) {
+            this.putQueryParameter("Status", status);
+            this.status = status;
+            return this;
+        }
+
+        /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
+         * ZoneId.
+         */
+        public Builder zoneId(String zoneId) {
+            this.putQueryParameter("ZoneId", zoneId);
+            this.zoneId = zoneId;
             return this;
         }
 
@@ -442,10 +432,7 @@ public class DescribeDedicatedHostClustersRequest extends Request {
             private String value; 
 
             /**
-             * 专有宿主机集群的标签键。N的取值范围：1~20。一旦传入该值，则不允许为空字符串。最多支持64个字符，不能以`aliyun`和`acs:`开头，不能包含`http://`或`https://`。
-             * <p>
-             * 
-             * 使用一个标签过滤资源，查询到该标签下的资源数量不能超过1000个；使用多个标签过滤资源，查询到同时绑定了多个标签的资源数量不能超过1000个。如果资源数量超过1000个，请使用[ListTagResources](~~110425~~)接口进行查询。
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -453,7 +440,7 @@ public class DescribeDedicatedHostClustersRequest extends Request {
             }
 
             /**
-             * 专有宿主机集群的标签值。N的取值范围：1~20。一旦传入该值，则不允许为空字符串。最多支持64个字符，不能以`aliyun`和`acs:`开头，不能包含`http://`或`https://`。
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

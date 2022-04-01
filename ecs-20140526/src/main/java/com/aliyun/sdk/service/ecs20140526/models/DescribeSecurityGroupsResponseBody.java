@@ -12,35 +12,35 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSecurityGroupsResponseBody</p>
  */
 public class DescribeSecurityGroupsResponseBody extends TeaModel {
-    @NameInMap("PageSize")
-    private Integer pageSize;
+    @NameInMap("NextToken")
+    private String nextToken;
 
     @NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("RequestId")
-    private String requestId;
-
-    @NameInMap("TotalCount")
-    private Integer totalCount;
+    @NameInMap("PageSize")
+    private Integer pageSize;
 
     @NameInMap("RegionId")
     private String regionId;
 
+    @NameInMap("RequestId")
+    private String requestId;
+
     @NameInMap("SecurityGroups")
     private SecurityGroups securityGroups;
 
-    @NameInMap("NextToken")
-    private String nextToken;
+    @NameInMap("TotalCount")
+    private Integer totalCount;
 
     private DescribeSecurityGroupsResponseBody(Builder builder) {
-        this.pageSize = builder.pageSize;
-        this.pageNumber = builder.pageNumber;
-        this.requestId = builder.requestId;
-        this.totalCount = builder.totalCount;
-        this.regionId = builder.regionId;
-        this.securityGroups = builder.securityGroups;
         this.nextToken = builder.nextToken;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
+        this.regionId = builder.regionId;
+        this.requestId = builder.requestId;
+        this.securityGroups = builder.securityGroups;
+        this.totalCount = builder.totalCount;
     }
 
     public static Builder builder() {
@@ -52,10 +52,10 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
     }
 
     /**
-     * @return pageSize
+     * @return nextToken
      */
-    public Integer getPageSize() {
-        return this.pageSize;
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -66,17 +66,10 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
     }
 
     /**
-     * @return requestId
+     * @return pageSize
      */
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    /**
-     * @return totalCount
-     */
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     /**
@@ -87,6 +80,13 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
     }
 
     /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
      * @return securityGroups
      */
     public SecurityGroups getSecurityGroups() {
@@ -94,37 +94,31 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
     }
 
     /**
-     * @return nextToken
+     * @return totalCount
      */
-    public String getNextToken() {
-        return this.nextToken;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static final class Builder {
-        private Integer pageSize; 
-        private Integer pageNumber; 
-        private String requestId; 
-        private Integer totalCount; 
-        private String regionId; 
-        private SecurityGroups securityGroups; 
         private String nextToken; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
+        private String regionId; 
+        private String requestId; 
+        private SecurityGroups securityGroups; 
+        private Integer totalCount; 
 
         /**
-         * The number of rows per page.
-         * <p>
-         * 
-         * > This parameter is about to be offline. We recommend that you use the NextToken and MaxResults to complete the paging query.
+         * NextToken.
          */
-        public Builder pageSize(Integer pageSize) {
-            this.pageSize = pageSize;
+        public Builder nextToken(String nextToken) {
+            this.nextToken = nextToken;
             return this;
         }
 
         /**
-         * The current page number.
-         * <p>
-         * 
-         * > This parameter is about to be offline. We recommend that you use the NextToken and MaxResults to complete the paging query.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -132,23 +126,15 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * PageSize.
          */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
+        public Builder pageSize(Integer pageSize) {
+            this.pageSize = pageSize;
             return this;
         }
 
         /**
-         * The total number of security groups.
-         */
-        public Builder totalCount(Integer totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-
-        /**
-         * The ID of the region to which the security group belongs.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -156,7 +142,15 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The collection of security group information.
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * SecurityGroups.
          */
         public Builder securityGroups(SecurityGroups securityGroups) {
             this.securityGroups = securityGroups;
@@ -164,10 +158,10 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The Token returned by this call. If you use MaxResults or NextToken to query data by page and the return value is empty, no more data is returned.
+         * TotalCount.
          */
-        public Builder nextToken(String nextToken) {
-            this.nextToken = nextToken;
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
@@ -178,15 +172,15 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("TagValue")
-        private String tagValue;
-
         @NameInMap("TagKey")
         private String tagKey;
 
+        @NameInMap("TagValue")
+        private String tagValue;
+
         private Tag(Builder builder) {
-            this.tagValue = builder.tagValue;
             this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
         }
 
         public static Builder builder() {
@@ -198,36 +192,36 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * @return tagValue
-         */
-        public String getTagValue() {
-            return this.tagValue;
-        }
-
-        /**
          * @return tagKey
          */
         public String getTagKey() {
             return this.tagKey;
         }
 
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
         public static final class Builder {
-            private String tagValue; 
             private String tagKey; 
+            private String tagValue; 
 
             /**
-             * The tag value of the security group.
+             * TagKey.
              */
-            public Builder tagValue(String tagValue) {
-                this.tagValue = tagValue;
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
                 return this;
             }
 
             /**
-             * The tag key of the security group.
+             * TagValue.
              */
-            public Builder tagKey(String tagKey) {
-                this.tagKey = tagKey;
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
                 return this;
             }
 
@@ -280,55 +274,55 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
 
     }
     public static class SecurityGroup extends TeaModel {
+        @NameInMap("AvailableInstanceAmount")
+        private Integer availableInstanceAmount;
+
         @NameInMap("CreationTime")
         private String creationTime;
-
-        @NameInMap("VpcId")
-        private String vpcId;
-
-        @NameInMap("ServiceManaged")
-        private Boolean serviceManaged;
 
         @NameInMap("Description")
         private String description;
 
-        @NameInMap("SecurityGroupId")
-        private String securityGroupId;
+        @NameInMap("EcsCount")
+        private Integer ecsCount;
 
         @NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
+        @NameInMap("SecurityGroupId")
+        private String securityGroupId;
+
         @NameInMap("SecurityGroupName")
         private String securityGroupName;
-
-        @NameInMap("EcsCount")
-        private Integer ecsCount;
-
-        @NameInMap("ServiceID")
-        private Long serviceID;
 
         @NameInMap("SecurityGroupType")
         private String securityGroupType;
 
-        @NameInMap("AvailableInstanceAmount")
-        private Integer availableInstanceAmount;
+        @NameInMap("ServiceID")
+        private Long serviceID;
+
+        @NameInMap("ServiceManaged")
+        private Boolean serviceManaged;
 
         @NameInMap("Tags")
         private Tags tags;
 
+        @NameInMap("VpcId")
+        private String vpcId;
+
         private SecurityGroup(Builder builder) {
-            this.creationTime = builder.creationTime;
-            this.vpcId = builder.vpcId;
-            this.serviceManaged = builder.serviceManaged;
-            this.description = builder.description;
-            this.securityGroupId = builder.securityGroupId;
-            this.resourceGroupId = builder.resourceGroupId;
-            this.securityGroupName = builder.securityGroupName;
-            this.ecsCount = builder.ecsCount;
-            this.serviceID = builder.serviceID;
-            this.securityGroupType = builder.securityGroupType;
             this.availableInstanceAmount = builder.availableInstanceAmount;
+            this.creationTime = builder.creationTime;
+            this.description = builder.description;
+            this.ecsCount = builder.ecsCount;
+            this.resourceGroupId = builder.resourceGroupId;
+            this.securityGroupId = builder.securityGroupId;
+            this.securityGroupName = builder.securityGroupName;
+            this.securityGroupType = builder.securityGroupType;
+            this.serviceID = builder.serviceID;
+            this.serviceManaged = builder.serviceManaged;
             this.tags = builder.tags;
+            this.vpcId = builder.vpcId;
         }
 
         public static Builder builder() {
@@ -340,24 +334,17 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return availableInstanceAmount
+         */
+        public Integer getAvailableInstanceAmount() {
+            return this.availableInstanceAmount;
+        }
+
+        /**
          * @return creationTime
          */
         public String getCreationTime() {
             return this.creationTime;
-        }
-
-        /**
-         * @return vpcId
-         */
-        public String getVpcId() {
-            return this.vpcId;
-        }
-
-        /**
-         * @return serviceManaged
-         */
-        public Boolean getServiceManaged() {
-            return this.serviceManaged;
         }
 
         /**
@@ -368,10 +355,10 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * @return securityGroupId
+         * @return ecsCount
          */
-        public String getSecurityGroupId() {
-            return this.securityGroupId;
+        public Integer getEcsCount() {
+            return this.ecsCount;
         }
 
         /**
@@ -382,24 +369,17 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return securityGroupId
+         */
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        /**
          * @return securityGroupName
          */
         public String getSecurityGroupName() {
             return this.securityGroupName;
-        }
-
-        /**
-         * @return ecsCount
-         */
-        public Integer getEcsCount() {
-            return this.ecsCount;
-        }
-
-        /**
-         * @return serviceID
-         */
-        public Long getServiceID() {
-            return this.serviceID;
         }
 
         /**
@@ -410,10 +390,17 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * @return availableInstanceAmount
+         * @return serviceID
          */
-        public Integer getAvailableInstanceAmount() {
-            return this.availableInstanceAmount;
+        public Long getServiceID() {
+            return this.serviceID;
+        }
+
+        /**
+         * @return serviceManaged
+         */
+        public Boolean getServiceManaged() {
+            return this.serviceManaged;
         }
 
         /**
@@ -423,106 +410,29 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             return this.tags;
         }
 
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
         public static final class Builder {
-            private String creationTime; 
-            private String vpcId; 
-            private Boolean serviceManaged; 
-            private String description; 
-            private String securityGroupId; 
-            private String resourceGroupId; 
-            private String securityGroupName; 
-            private Integer ecsCount; 
-            private Long serviceID; 
-            private String securityGroupType; 
             private Integer availableInstanceAmount; 
+            private String creationTime; 
+            private String description; 
+            private Integer ecsCount; 
+            private String resourceGroupId; 
+            private String securityGroupId; 
+            private String securityGroupName; 
+            private String securityGroupType; 
+            private Long serviceID; 
+            private Boolean serviceManaged; 
             private Tags tags; 
+            private String vpcId; 
 
             /**
-             * The creation time. The time follows the [ISO8601](~~ 25696 ~~) standard and uses UTC time. The format is yyyy-MM-ddThh:mmZ.
-             */
-            public Builder creationTime(String creationTime) {
-                this.creationTime = creationTime;
-                return this;
-            }
-
-            /**
-             * The VPC to which the security group belongs.
-             */
-            public Builder vpcId(String vpcId) {
-                this.vpcId = vpcId;
-                return this;
-            }
-
-            /**
-             * Whether the owner of the security group is a cloud product or virtual business.
-             */
-            public Builder serviceManaged(Boolean serviceManaged) {
-                this.serviceManaged = serviceManaged;
-                return this;
-            }
-
-            /**
-             * The description of the security group.
-             */
-            public Builder description(String description) {
-                this.description = description;
-                return this;
-            }
-
-            /**
-             * The ID of the security group.
-             */
-            public Builder securityGroupId(String securityGroupId) {
-                this.securityGroupId = securityGroupId;
-                return this;
-            }
-
-            /**
-             * The ID of the resource group to which the security group belongs.
-             */
-            public Builder resourceGroupId(String resourceGroupId) {
-                this.resourceGroupId = resourceGroupId;
-                return this;
-            }
-
-            /**
-             * The name of the security group.
-             */
-            public Builder securityGroupName(String securityGroupName) {
-                this.securityGroupName = securityGroupName;
-                return this;
-            }
-
-            /**
-             * > This parameter is being invited for testing and is not currently available.
-             */
-            public Builder ecsCount(Integer ecsCount) {
-                this.ecsCount = ecsCount;
-                return this;
-            }
-
-            /**
-             * The ID of the virtual merchant corresponding to the security group.
-             */
-            public Builder serviceID(Long serviceID) {
-                this.serviceID = serviceID;
-                return this;
-            }
-
-            /**
-             * The type of the security group. Possible values:
-             * <p>
-             * 
-             * -normal: normal security group
-             * -enterprise: enterprise Security Group
-             */
-            public Builder securityGroupType(String securityGroupType) {
-                this.securityGroupType = securityGroupType;
-                return this;
-            }
-
-            /**
-             * > This parameter is being invited for testing and is not currently available.
+             * AvailableInstanceAmount.
              */
             public Builder availableInstanceAmount(Integer availableInstanceAmount) {
                 this.availableInstanceAmount = availableInstanceAmount;
@@ -530,10 +440,90 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag of the security group.
+             * CreationTime.
+             */
+            public Builder creationTime(String creationTime) {
+                this.creationTime = creationTime;
+                return this;
+            }
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * EcsCount.
+             */
+            public Builder ecsCount(Integer ecsCount) {
+                this.ecsCount = ecsCount;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * SecurityGroupId.
+             */
+            public Builder securityGroupId(String securityGroupId) {
+                this.securityGroupId = securityGroupId;
+                return this;
+            }
+
+            /**
+             * SecurityGroupName.
+             */
+            public Builder securityGroupName(String securityGroupName) {
+                this.securityGroupName = securityGroupName;
+                return this;
+            }
+
+            /**
+             * SecurityGroupType.
+             */
+            public Builder securityGroupType(String securityGroupType) {
+                this.securityGroupType = securityGroupType;
+                return this;
+            }
+
+            /**
+             * ServiceID.
+             */
+            public Builder serviceID(Long serviceID) {
+                this.serviceID = serviceID;
+                return this;
+            }
+
+            /**
+             * ServiceManaged.
+             */
+            public Builder serviceManaged(Boolean serviceManaged) {
+                this.serviceManaged = serviceManaged;
+                return this;
+            }
+
+            /**
+             * Tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
+                return this;
+            }
+
+            /**
+             * VpcId.
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
                 return this;
             }
 

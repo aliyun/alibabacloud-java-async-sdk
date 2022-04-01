@@ -12,13 +12,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyDedicatedHostClusterAttributeRequest</p>
  */
 public class ModifyDedicatedHostClusterAttributeRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("DedicatedHostClusterId")
+    @Validation(required = true)
+    private String dedicatedHostClusterId;
+
+    @Query
+    @NameInMap("DedicatedHostClusterName")
+    private String dedicatedHostClusterName;
+
+    @Query
+    @NameInMap("Description")
+    private String description;
+
+    @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
 
     @Query
     @NameInMap("OwnerId")
     private Long ownerId;
+
+    @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
 
     @Query
     @NameInMap("ResourceOwnerAccount")
@@ -28,39 +46,21 @@ public class ModifyDedicatedHostClusterAttributeRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("OwnerAccount")
-    private String ownerAccount;
-
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
-    @Query
-    @NameInMap("DedicatedHostClusterId")
-    @Validation(required = true)
-    private String dedicatedHostClusterId;
-
-    @Query
-    @NameInMap("Description")
-    private String description;
-
-    @Query
-    @NameInMap("DedicatedHostClusterName")
-    private String dedicatedHostClusterName;
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     private ModifyDedicatedHostClusterAttributeRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
+        this.dedicatedHostClusterId = builder.dedicatedHostClusterId;
+        this.dedicatedHostClusterName = builder.dedicatedHostClusterName;
+        this.description = builder.description;
+        this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.ownerAccount = builder.ownerAccount;
-        this.regionId = builder.regionId;
-        this.dedicatedHostClusterId = builder.dedicatedHostClusterId;
-        this.description = builder.description;
-        this.dedicatedHostClusterName = builder.dedicatedHostClusterName;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -77,10 +77,31 @@ public class ModifyDedicatedHostClusterAttributeRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return dedicatedHostClusterId
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getDedicatedHostClusterId() {
+        return this.dedicatedHostClusterId;
+    }
+
+    /**
+     * @return dedicatedHostClusterName
+     */
+    public String getDedicatedHostClusterName() {
+        return this.dedicatedHostClusterName;
+    }
+
+    /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     /**
@@ -88,6 +109,13 @@ public class ModifyDedicatedHostClusterAttributeRequest extends Request {
      */
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -105,50 +133,22 @@ public class ModifyDedicatedHostClusterAttributeRequest extends Request {
     }
 
     /**
-     * @return ownerAccount
+     * @return sourceRegionId
      */
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return dedicatedHostClusterId
-     */
-    public String getDedicatedHostClusterId() {
-        return this.dedicatedHostClusterId;
-    }
-
-    /**
-     * @return description
-     */
-    public String getDescription() {
-        return this.description;
-    }
-
-    /**
-     * @return dedicatedHostClusterName
-     */
-    public String getDedicatedHostClusterName() {
-        return this.dedicatedHostClusterName;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public static final class Builder extends Request.Builder<ModifyDedicatedHostClusterAttributeRequest, Builder> {
-        private String sourceRegionId; 
+        private String dedicatedHostClusterId; 
+        private String dedicatedHostClusterName; 
+        private String description; 
+        private String ownerAccount; 
         private Long ownerId; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String ownerAccount; 
-        private String regionId; 
-        private String dedicatedHostClusterId; 
-        private String description; 
-        private String dedicatedHostClusterName; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -156,23 +156,50 @@ public class ModifyDedicatedHostClusterAttributeRequest extends Request {
 
         private Builder(ModifyDedicatedHostClusterAttributeRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
+            this.dedicatedHostClusterId = request.dedicatedHostClusterId;
+            this.dedicatedHostClusterName = request.dedicatedHostClusterName;
+            this.description = request.description;
+            this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.ownerAccount = request.ownerAccount;
-            this.regionId = request.regionId;
-            this.dedicatedHostClusterId = request.dedicatedHostClusterId;
-            this.description = request.description;
-            this.dedicatedHostClusterName = request.dedicatedHostClusterName;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
-         * SourceRegionId.
+         * DedicatedHostClusterId.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder dedicatedHostClusterId(String dedicatedHostClusterId) {
+            this.putQueryParameter("DedicatedHostClusterId", dedicatedHostClusterId);
+            this.dedicatedHostClusterId = dedicatedHostClusterId;
+            return this;
+        }
+
+        /**
+         * DedicatedHostClusterName.
+         */
+        public Builder dedicatedHostClusterName(String dedicatedHostClusterName) {
+            this.putQueryParameter("DedicatedHostClusterName", dedicatedHostClusterName);
+            this.dedicatedHostClusterName = dedicatedHostClusterName;
+            return this;
+        }
+
+        /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
             return this;
         }
 
@@ -182,6 +209,15 @@ public class ModifyDedicatedHostClusterAttributeRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
@@ -204,47 +240,11 @@ public class ModifyDedicatedHostClusterAttributeRequest extends Request {
         }
 
         /**
-         * OwnerAccount.
+         * SourceRegionId.
          */
-        public Builder ownerAccount(String ownerAccount) {
-            this.putQueryParameter("OwnerAccount", ownerAccount);
-            this.ownerAccount = ownerAccount;
-            return this;
-        }
-
-        /**
-         * The region ID of the DDH cluster. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The ID of the DDH cluster.
-         */
-        public Builder dedicatedHostClusterId(String dedicatedHostClusterId) {
-            this.putQueryParameter("DedicatedHostClusterId", dedicatedHostClusterId);
-            this.dedicatedHostClusterId = dedicatedHostClusterId;
-            return this;
-        }
-
-        /**
-         * The description of the DDH cluster. The description must be 2 to 256 characters in length. It cannot start with "http:// "or "https.
-         */
-        public Builder description(String description) {
-            this.putQueryParameter("Description", description);
-            this.description = description;
-            return this;
-        }
-
-        /**
-         * The name of the DDH cluster. The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter. It cannot contain "http:// "or "https://".
-         */
-        public Builder dedicatedHostClusterName(String dedicatedHostClusterName) {
-            this.putQueryParameter("DedicatedHostClusterName", dedicatedHostClusterName);
-            this.dedicatedHostClusterName = dedicatedHostClusterName;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

@@ -12,19 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeEniMonitorDataResponseBody</p>
  */
 public class DescribeEniMonitorDataResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    private Integer totalCount;
+    @NameInMap("MonitorData")
+    private MonitorData monitorData;
 
     @NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("MonitorData")
-    private MonitorData monitorData;
+    @NameInMap("TotalCount")
+    private Integer totalCount;
 
     private DescribeEniMonitorDataResponseBody(Builder builder) {
-        this.totalCount = builder.totalCount;
-        this.requestId = builder.requestId;
         this.monitorData = builder.monitorData;
+        this.requestId = builder.requestId;
+        this.totalCount = builder.totalCount;
     }
 
     public static Builder builder() {
@@ -36,10 +36,10 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
     }
 
     /**
-     * @return totalCount
+     * @return monitorData
      */
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public MonitorData getMonitorData() {
+        return this.monitorData;
     }
 
     /**
@@ -50,27 +50,27 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
     }
 
     /**
-     * @return monitorData
+     * @return totalCount
      */
-    public MonitorData getMonitorData() {
-        return this.monitorData;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static final class Builder {
-        private Integer totalCount; 
-        private String requestId; 
         private MonitorData monitorData; 
+        private String requestId; 
+        private Integer totalCount; 
 
         /**
-         * The number of returned entries.
+         * MonitorData.
          */
-        public Builder totalCount(Integer totalCount) {
-            this.totalCount = totalCount;
+        public Builder monitorData(MonitorData monitorData) {
+            this.monitorData = monitorData;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,10 +78,10 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
         }
 
         /**
-         * A collection of monitoring data EniMonitorDataType of secondary Nic traffic.
+         * TotalCount.
          */
-        public Builder monitorData(MonitorData monitorData) {
-            this.monitorData = monitorData;
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
@@ -92,39 +92,39 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
     } 
 
     public static class EniMonitorData extends TeaModel {
-        @NameInMap("PacketRx")
-        private String packetRx;
-
-        @NameInMap("TimeStamp")
-        private String timeStamp;
-
         @NameInMap("DropPacketRx")
         private String dropPacketRx;
-
-        @NameInMap("EniId")
-        private String eniId;
 
         @NameInMap("DropPacketTx")
         private String dropPacketTx;
 
-        @NameInMap("PacketTx")
-        private String packetTx;
-
-        @NameInMap("IntranetTx")
-        private String intranetTx;
+        @NameInMap("EniId")
+        private String eniId;
 
         @NameInMap("IntranetRx")
         private String intranetRx;
 
+        @NameInMap("IntranetTx")
+        private String intranetTx;
+
+        @NameInMap("PacketRx")
+        private String packetRx;
+
+        @NameInMap("PacketTx")
+        private String packetTx;
+
+        @NameInMap("TimeStamp")
+        private String timeStamp;
+
         private EniMonitorData(Builder builder) {
-            this.packetRx = builder.packetRx;
-            this.timeStamp = builder.timeStamp;
             this.dropPacketRx = builder.dropPacketRx;
-            this.eniId = builder.eniId;
             this.dropPacketTx = builder.dropPacketTx;
-            this.packetTx = builder.packetTx;
-            this.intranetTx = builder.intranetTx;
+            this.eniId = builder.eniId;
             this.intranetRx = builder.intranetRx;
+            this.intranetTx = builder.intranetTx;
+            this.packetRx = builder.packetRx;
+            this.packetTx = builder.packetTx;
+            this.timeStamp = builder.timeStamp;
         }
 
         public static Builder builder() {
@@ -136,31 +136,10 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
         }
 
         /**
-         * @return packetRx
-         */
-        public String getPacketRx() {
-            return this.packetRx;
-        }
-
-        /**
-         * @return timeStamp
-         */
-        public String getTimeStamp() {
-            return this.timeStamp;
-        }
-
-        /**
          * @return dropPacketRx
          */
         public String getDropPacketRx() {
             return this.dropPacketRx;
-        }
-
-        /**
-         * @return eniId
-         */
-        public String getEniId() {
-            return this.eniId;
         }
 
         /**
@@ -171,10 +150,17 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
         }
 
         /**
-         * @return packetTx
+         * @return eniId
          */
-        public String getPacketTx() {
-            return this.packetTx;
+        public String getEniId() {
+            return this.eniId;
+        }
+
+        /**
+         * @return intranetRx
+         */
+        public String getIntranetRx() {
+            return this.intranetRx;
         }
 
         /**
@@ -185,40 +171,38 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
         }
 
         /**
-         * @return intranetRx
+         * @return packetRx
          */
-        public String getIntranetRx() {
-            return this.intranetRx;
+        public String getPacketRx() {
+            return this.packetRx;
+        }
+
+        /**
+         * @return packetTx
+         */
+        public String getPacketTx() {
+            return this.packetTx;
+        }
+
+        /**
+         * @return timeStamp
+         */
+        public String getTimeStamp() {
+            return this.timeStamp;
         }
 
         public static final class Builder {
-            private String packetRx; 
-            private String timeStamp; 
             private String dropPacketRx; 
-            private String eniId; 
             private String dropPacketTx; 
-            private String packetTx; 
-            private String intranetTx; 
+            private String eniId; 
             private String intranetRx; 
+            private String intranetTx; 
+            private String packetRx; 
+            private String packetTx; 
+            private String timeStamp; 
 
             /**
-             * The internal network packets received by the secondary Eni. Unit: packets.
-             */
-            public Builder packetRx(String packetRx) {
-                this.packetRx = packetRx;
-                return this;
-            }
-
-            /**
-             * The timestamp used to query monitoring information. The time follows the ISO 8601 standard and uses UTC +0. The format is yyyy-MM-ddTHH:mm:ssZ.
-             */
-            public Builder timeStamp(String timeStamp) {
-                this.timeStamp = timeStamp;
-                return this;
-            }
-
-            /**
-             * The secondary Eni receives discarded intranet packets. Unit: packets.
+             * DropPacketRx.
              */
             public Builder dropPacketRx(String dropPacketRx) {
                 this.dropPacketRx = dropPacketRx;
@@ -226,15 +210,7 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the secondary Eni.
-             */
-            public Builder eniId(String eniId) {
-                this.eniId = eniId;
-                return this;
-            }
-
-            /**
-             * The discarded intranet packets sent by the secondary Eni. Unit: packets.
+             * DropPacketTx.
              */
             public Builder dropPacketTx(String dropPacketTx) {
                 this.dropPacketTx = dropPacketTx;
@@ -242,15 +218,23 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The internal network packets sent by the secondary Eni. Unit: packets.
+             * EniId.
              */
-            public Builder packetTx(String packetTx) {
-                this.packetTx = packetTx;
+            public Builder eniId(String eniId) {
+                this.eniId = eniId;
                 return this;
             }
 
             /**
-             * The average rate of intranet data sent by the secondary Eni. Unit: kB/s.
+             * IntranetRx.
+             */
+            public Builder intranetRx(String intranetRx) {
+                this.intranetRx = intranetRx;
+                return this;
+            }
+
+            /**
+             * IntranetTx.
              */
             public Builder intranetTx(String intranetTx) {
                 this.intranetTx = intranetTx;
@@ -258,10 +242,26 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The average rate of intranet data received by the secondary Eni. Unit: kB/s.
+             * PacketRx.
              */
-            public Builder intranetRx(String intranetRx) {
-                this.intranetRx = intranetRx;
+            public Builder packetRx(String packetRx) {
+                this.packetRx = packetRx;
+                return this;
+            }
+
+            /**
+             * PacketTx.
+             */
+            public Builder packetTx(String packetTx) {
+                this.packetTx = packetTx;
+                return this;
+            }
+
+            /**
+             * TimeStamp.
+             */
+            public Builder timeStamp(String timeStamp) {
+                this.timeStamp = timeStamp;
                 return this;
             }
 

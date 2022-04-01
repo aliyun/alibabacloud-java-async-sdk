@@ -12,23 +12,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ImportImageResponseBody</p>
  */
 public class ImportImageResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    private String requestId;
-
     @NameInMap("ImageId")
     private String imageId;
-
-    @NameInMap("TaskId")
-    private String taskId;
 
     @NameInMap("RegionId")
     private String regionId;
 
+    @NameInMap("RequestId")
+    private String requestId;
+
+    @NameInMap("TaskId")
+    private String taskId;
+
     private ImportImageResponseBody(Builder builder) {
-        this.requestId = builder.requestId;
         this.imageId = builder.imageId;
-        this.taskId = builder.taskId;
         this.regionId = builder.regionId;
+        this.requestId = builder.requestId;
+        this.taskId = builder.taskId;
     }
 
     public static Builder builder() {
@@ -40,24 +40,10 @@ public class ImportImageResponseBody extends TeaModel {
     }
 
     /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    /**
      * @return imageId
      */
     public String getImageId() {
         return this.imageId;
-    }
-
-    /**
-     * @return taskId
-     */
-    public String getTaskId() {
-        return this.taskId;
     }
 
     /**
@@ -67,22 +53,28 @@ public class ImportImageResponseBody extends TeaModel {
         return this.regionId;
     }
 
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
+     * @return taskId
+     */
+    public String getTaskId() {
+        return this.taskId;
+    }
+
     public static final class Builder {
-        private String requestId; 
         private String imageId; 
-        private String taskId; 
         private String regionId; 
+        private String requestId; 
+        private String taskId; 
 
         /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The ID of the image.
+         * ImageId.
          */
         public Builder imageId(String imageId) {
             this.imageId = imageId;
@@ -90,18 +82,26 @@ public class ImportImageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the image import task.
+         * RegionId.
          */
-        public Builder taskId(String taskId) {
-            this.taskId = taskId;
+        public Builder regionId(String regionId) {
+            this.regionId = regionId;
             return this;
         }
 
         /**
-         * The ID of the region.
+         * RequestId.
          */
-        public Builder regionId(String regionId) {
-            this.regionId = regionId;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TaskId.
+         */
+        public Builder taskId(String taskId) {
+            this.taskId = taskId;
             return this;
         }
 

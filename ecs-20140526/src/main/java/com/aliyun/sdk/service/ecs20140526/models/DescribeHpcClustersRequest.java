@@ -12,9 +12,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeHpcClustersRequest</p>
  */
 public class DescribeHpcClustersRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("ClientToken")
+    private String clientToken;
+
+    @Query
+    @NameInMap("HpcClusterIds")
+    private String hpcClusterIds;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -23,23 +27,6 @@ public class DescribeHpcClustersRequest extends Request {
     @Query
     @NameInMap("OwnerId")
     private Long ownerId;
-
-    @Query
-    @NameInMap("ResourceOwnerAccount")
-    private String resourceOwnerAccount;
-
-    @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
-
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
-    @Query
-    @NameInMap("ClientToken")
-    private String clientToken;
 
     @Query
     @NameInMap("PageNumber")
@@ -51,21 +38,34 @@ public class DescribeHpcClustersRequest extends Request {
     private Integer pageSize;
 
     @Query
-    @NameInMap("HpcClusterIds")
-    private String hpcClusterIds;
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
+    @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     private DescribeHpcClustersRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
+        this.clientToken = builder.clientToken;
+        this.hpcClusterIds = builder.hpcClusterIds;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
-        this.resourceOwnerAccount = builder.resourceOwnerAccount;
-        this.resourceOwnerId = builder.resourceOwnerId;
-        this.regionId = builder.regionId;
-        this.clientToken = builder.clientToken;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.hpcClusterIds = builder.hpcClusterIds;
+        this.regionId = builder.regionId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -82,10 +82,17 @@ public class DescribeHpcClustersRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return clientToken
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
+     * @return hpcClusterIds
+     */
+    public String getHpcClusterIds() {
+        return this.hpcClusterIds;
     }
 
     /**
@@ -103,34 +110,6 @@ public class DescribeHpcClustersRequest extends Request {
     }
 
     /**
-     * @return resourceOwnerAccount
-     */
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    /**
-     * @return resourceOwnerId
-     */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return clientToken
-     */
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -145,23 +124,44 @@ public class DescribeHpcClustersRequest extends Request {
     }
 
     /**
-     * @return hpcClusterIds
+     * @return regionId
      */
-    public String getHpcClusterIds() {
-        return this.hpcClusterIds;
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public static final class Builder extends Request.Builder<DescribeHpcClustersRequest, Builder> {
-        private String sourceRegionId; 
+        private String clientToken; 
+        private String hpcClusterIds; 
         private String ownerAccount; 
         private Long ownerId; 
-        private String resourceOwnerAccount; 
-        private Long resourceOwnerId; 
-        private String regionId; 
-        private String clientToken; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private String hpcClusterIds; 
+        private String regionId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -169,24 +169,33 @@ public class DescribeHpcClustersRequest extends Request {
 
         private Builder(DescribeHpcClustersRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
+            this.clientToken = request.clientToken;
+            this.hpcClusterIds = request.hpcClusterIds;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
-            this.resourceOwnerAccount = request.resourceOwnerAccount;
-            this.resourceOwnerId = request.resourceOwnerId;
-            this.regionId = request.regionId;
-            this.clientToken = request.clientToken;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
-            this.hpcClusterIds = request.hpcClusterIds;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
-         * SourceRegionId.
+         * ClientToken.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * HpcClusterIds.
+         */
+        public Builder hpcClusterIds(String hpcClusterIds) {
+            this.putQueryParameter("HpcClusterIds", hpcClusterIds);
+            this.hpcClusterIds = hpcClusterIds;
             return this;
         }
 
@@ -200,7 +209,7 @@ public class DescribeHpcClustersRequest extends Request {
         }
 
         /**
-         * The ID of the RAM user.
+         * OwnerId.
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -209,48 +218,7 @@ public class DescribeHpcClustersRequest extends Request {
         }
 
         /**
-         * The account name of the resource master account.
-         */
-        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
-            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-            this.resourceOwnerAccount = resourceOwnerAccount;
-            return this;
-        }
-
-        /**
-         * The ID of the resource master account, that is, the UID.
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * The ID of the region. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * Ensure the idempotence of the request. Generate a parameter value from your client. Make sure that the value is unique among different requests. **ClientToken** supports only ASCII characters and cannot exceed 64 characters. For more information, see [how to ensure idempotence](~~ 25693 ~~).
-         */
-        public Builder clientToken(String clientToken) {
-            this.putQueryParameter("ClientToken", clientToken);
-            this.clientToken = clientToken;
-            return this;
-        }
-
-        /**
-         * The page number of the HPC cluster list.
-         * <p>
-         * 
-         * Start value: 1
-         * 
-         * Default value: 1.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -259,12 +227,7 @@ public class DescribeHpcClustersRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
-         * 
-         * Maximum Value: 100
-         * 
-         * Default value: 10
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -273,13 +236,38 @@ public class DescribeHpcClustersRequest extends Request {
         }
 
         /**
-         * The ID of the HPC cluster.
-         * <p>
-         * The value can be a JSON Array consisting of multiple HPC cluster IDs. A maximum of 100 IDs can be entered. Separate IDs with commas (,).
+         * RegionId.
          */
-        public Builder hpcClusterIds(String hpcClusterIds) {
-            this.putQueryParameter("HpcClusterIds", hpcClusterIds);
-            this.hpcClusterIds = hpcClusterIds;
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

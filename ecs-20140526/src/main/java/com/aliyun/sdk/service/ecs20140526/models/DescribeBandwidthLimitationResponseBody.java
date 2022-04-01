@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeBandwidthLimitationResponseBody</p>
  */
 public class DescribeBandwidthLimitationResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    private String requestId;
-
     @NameInMap("Bandwidths")
     private Bandwidths bandwidths;
 
+    @NameInMap("RequestId")
+    private String requestId;
+
     private DescribeBandwidthLimitationResponseBody(Builder builder) {
-        this.requestId = builder.requestId;
         this.bandwidths = builder.bandwidths;
+        this.requestId = builder.requestId;
     }
 
     public static Builder builder() {
@@ -32,36 +32,36 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
     }
 
     /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    /**
      * @return bandwidths
      */
     public Bandwidths getBandwidths() {
         return this.bandwidths;
     }
 
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static final class Builder {
-        private String requestId; 
         private Bandwidths bandwidths; 
+        private String requestId; 
 
         /**
-         * The ID of the request.
+         * Bandwidths.
          */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
+        public Builder bandwidths(Bandwidths bandwidths) {
+            this.bandwidths = bandwidths;
             return this;
         }
 
         /**
-         * A collection of Internet bandwidth limits.
+         * RequestId.
          */
-        public Builder bandwidths(Bandwidths bandwidths) {
-            this.bandwidths = bandwidths;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
@@ -134,11 +134,7 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
             private String unit; 
 
             /**
-             * The billing method of the Internet bandwidth. Valid values:
-             * <p>
-             * 
-             * -PayByBandwidth: pay-by-bandwidth.
-             * -PayByTraffic: pay by traffic.
+             * InternetChargeType.
              */
             public Builder internetChargeType(String internetChargeType) {
                 this.internetChargeType = internetChargeType;
@@ -146,7 +142,7 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum public bandwidth.
+             * Max.
              */
             public Builder max(Integer max) {
                 this.max = max;
@@ -154,7 +150,7 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum public bandwidth.
+             * Min.
              */
             public Builder min(Integer min) {
                 this.min = min;
@@ -162,7 +158,7 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of Internet bandwidth.
+             * Unit.
              */
             public Builder unit(String unit) {
                 this.unit = unit;

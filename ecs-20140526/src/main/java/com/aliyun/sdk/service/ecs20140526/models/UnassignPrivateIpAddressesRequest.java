@@ -12,9 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UnassignPrivateIpAddressesRequest</p>
  */
 public class UnassignPrivateIpAddressesRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("NetworkInterfaceId")
+    @Validation(required = true)
+    private String networkInterfaceId;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -25,12 +26,9 @@ public class UnassignPrivateIpAddressesRequest extends Request {
     private Long ownerId;
 
     @Query
-    @NameInMap("ResourceOwnerAccount")
-    private String resourceOwnerAccount;
-
-    @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
+    @NameInMap("PrivateIpAddress")
+    @Validation(required = true)
+    private java.util.List < String > privateIpAddress;
 
     @Query
     @NameInMap("RegionId")
@@ -38,25 +36,27 @@ public class UnassignPrivateIpAddressesRequest extends Request {
     private String regionId;
 
     @Query
-    @NameInMap("PrivateIpAddress")
-    @Validation(required = true)
-    private java.util.List < String > privateIpAddress;
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
 
     @Query
-    @NameInMap("NetworkInterfaceId")
-    @Validation(required = true)
-    private String networkInterfaceId;
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     private UnassignPrivateIpAddressesRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
+        this.networkInterfaceId = builder.networkInterfaceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.privateIpAddress = builder.privateIpAddress;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.regionId = builder.regionId;
-        this.privateIpAddress = builder.privateIpAddress;
-        this.networkInterfaceId = builder.networkInterfaceId;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -73,10 +73,10 @@ public class UnassignPrivateIpAddressesRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return networkInterfaceId
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getNetworkInterfaceId() {
+        return this.networkInterfaceId;
     }
 
     /**
@@ -94,6 +94,20 @@ public class UnassignPrivateIpAddressesRequest extends Request {
     }
 
     /**
+     * @return privateIpAddress
+     */
+    public java.util.List < String > getPrivateIpAddress() {
+        return this.privateIpAddress;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -108,35 +122,21 @@ public class UnassignPrivateIpAddressesRequest extends Request {
     }
 
     /**
-     * @return regionId
+     * @return sourceRegionId
      */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return privateIpAddress
-     */
-    public java.util.List < String > getPrivateIpAddress() {
-        return this.privateIpAddress;
-    }
-
-    /**
-     * @return networkInterfaceId
-     */
-    public String getNetworkInterfaceId() {
-        return this.networkInterfaceId;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public static final class Builder extends Request.Builder<UnassignPrivateIpAddressesRequest, Builder> {
-        private String sourceRegionId; 
+        private String networkInterfaceId; 
         private String ownerAccount; 
         private Long ownerId; 
+        private java.util.List < String > privateIpAddress; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String regionId; 
-        private java.util.List < String > privateIpAddress; 
-        private String networkInterfaceId; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -144,22 +144,22 @@ public class UnassignPrivateIpAddressesRequest extends Request {
 
         private Builder(UnassignPrivateIpAddressesRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
+            this.networkInterfaceId = request.networkInterfaceId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.privateIpAddress = request.privateIpAddress;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.regionId = request.regionId;
-            this.privateIpAddress = request.privateIpAddress;
-            this.networkInterfaceId = request.networkInterfaceId;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
-         * SourceRegionId.
+         * NetworkInterfaceId.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder networkInterfaceId(String networkInterfaceId) {
+            this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
+            this.networkInterfaceId = networkInterfaceId;
             return this;
         }
 
@@ -173,7 +173,7 @@ public class UnassignPrivateIpAddressesRequest extends Request {
         }
 
         /**
-         * The ID of the RAM user.
+         * OwnerId.
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -182,34 +182,7 @@ public class UnassignPrivateIpAddressesRequest extends Request {
         }
 
         /**
-         * The account name of the resource master account.
-         */
-        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
-            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-            this.resourceOwnerAccount = resourceOwnerAccount;
-            return this;
-        }
-
-        /**
-         * The ID of the resource master account, that is, the UID.
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * The region to which the resource belongs. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * One or more secondary private IP addresses to be deleted.
+         * PrivateIpAddress.
          */
         public Builder privateIpAddress(java.util.List < String > privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
@@ -218,11 +191,38 @@ public class UnassignPrivateIpAddressesRequest extends Request {
         }
 
         /**
-         * The ID of the Eni.
+         * RegionId.
          */
-        public Builder networkInterfaceId(String networkInterfaceId) {
-            this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
-            this.networkInterfaceId = networkInterfaceId;
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

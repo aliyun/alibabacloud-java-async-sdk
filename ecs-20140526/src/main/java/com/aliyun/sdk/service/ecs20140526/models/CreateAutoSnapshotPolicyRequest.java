@@ -12,13 +12,45 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateAutoSnapshotPolicyRequest</p>
  */
 public class CreateAutoSnapshotPolicyRequest extends Request {
+    @Query
+    @NameInMap("CopiedSnapshotsRetentionDays")
+    private Integer copiedSnapshotsRetentionDays;
+
+    @Query
+    @NameInMap("EnableCrossRegionCopy")
+    private Boolean enableCrossRegionCopy;
+
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
+
+    @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
     @Host
     @NameInMap("SourceRegionId")
     private String sourceRegionId;
 
     @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
+    @Query
+    @NameInMap("TargetCopyRegions")
+    private String targetCopyRegions;
+
+    @Query
+    @NameInMap("autoSnapshotPolicyName")
+    private String autoSnapshotPolicyName;
 
     @Query
     @NameInMap("regionId")
@@ -26,9 +58,9 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
     private String regionId;
 
     @Query
-    @NameInMap("timePoints")
+    @NameInMap("repeatWeekdays")
     @Validation(required = true)
-    private String timePoints;
+    private String repeatWeekdays;
 
     @Query
     @NameInMap("retentionDays")
@@ -36,48 +68,26 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
     private Integer retentionDays;
 
     @Query
-    @NameInMap("TargetCopyRegions")
-    private String targetCopyRegions;
-
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
-
-    @Query
-    @NameInMap("ResourceGroupId")
-    private String resourceGroupId;
-
-    @Query
-    @NameInMap("EnableCrossRegionCopy")
-    private Boolean enableCrossRegionCopy;
-
-    @Query
-    @NameInMap("CopiedSnapshotsRetentionDays")
-    private Integer copiedSnapshotsRetentionDays;
-
-    @Query
-    @NameInMap("repeatWeekdays")
+    @NameInMap("timePoints")
     @Validation(required = true)
-    private String repeatWeekdays;
-
-    @Query
-    @NameInMap("autoSnapshotPolicyName")
-    private String autoSnapshotPolicyName;
+    private String timePoints;
 
     private CreateAutoSnapshotPolicyRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
-        this.resourceOwnerId = builder.resourceOwnerId;
-        this.regionId = builder.regionId;
-        this.timePoints = builder.timePoints;
-        this.retentionDays = builder.retentionDays;
-        this.targetCopyRegions = builder.targetCopyRegions;
-        this.tag = builder.tag;
-        this.resourceGroupId = builder.resourceGroupId;
-        this.enableCrossRegionCopy = builder.enableCrossRegionCopy;
         this.copiedSnapshotsRetentionDays = builder.copiedSnapshotsRetentionDays;
-        this.repeatWeekdays = builder.repeatWeekdays;
+        this.enableCrossRegionCopy = builder.enableCrossRegionCopy;
+        this.ownerId = builder.ownerId;
+        this.resourceGroupId = builder.resourceGroupId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.sourceRegionId = builder.sourceRegionId;
+        this.tag = builder.tag;
+        this.targetCopyRegions = builder.targetCopyRegions;
         this.autoSnapshotPolicyName = builder.autoSnapshotPolicyName;
+        this.regionId = builder.regionId;
+        this.repeatWeekdays = builder.repeatWeekdays;
+        this.retentionDays = builder.retentionDays;
+        this.timePoints = builder.timePoints;
     }
 
     public static Builder builder() {
@@ -94,59 +104,10 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return copiedSnapshotsRetentionDays
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
-     * @return resourceOwnerId
-     */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return timePoints
-     */
-    public String getTimePoints() {
-        return this.timePoints;
-    }
-
-    /**
-     * @return retentionDays
-     */
-    public Integer getRetentionDays() {
-        return this.retentionDays;
-    }
-
-    /**
-     * @return targetCopyRegions
-     */
-    public String getTargetCopyRegions() {
-        return this.targetCopyRegions;
-    }
-
-    /**
-     * @return tag
-     */
-    public java.util.List < Tag> getTag() {
-        return this.tag;
-    }
-
-    /**
-     * @return resourceGroupId
-     */
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
+    public Integer getCopiedSnapshotsRetentionDays() {
+        return this.copiedSnapshotsRetentionDays;
     }
 
     /**
@@ -157,10 +118,66 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
     }
 
     /**
-     * @return copiedSnapshotsRetentionDays
+     * @return ownerId
      */
-    public Integer getCopiedSnapshotsRetentionDays() {
-        return this.copiedSnapshotsRetentionDays;
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
+     * @return targetCopyRegions
+     */
+    public String getTargetCopyRegions() {
+        return this.targetCopyRegions;
+    }
+
+    /**
+     * @return autoSnapshotPolicyName
+     */
+    public String getAutoSnapshotPolicyName() {
+        return this.autoSnapshotPolicyName;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -171,25 +188,34 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
     }
 
     /**
-     * @return autoSnapshotPolicyName
+     * @return retentionDays
      */
-    public String getAutoSnapshotPolicyName() {
-        return this.autoSnapshotPolicyName;
+    public Integer getRetentionDays() {
+        return this.retentionDays;
+    }
+
+    /**
+     * @return timePoints
+     */
+    public String getTimePoints() {
+        return this.timePoints;
     }
 
     public static final class Builder extends Request.Builder<CreateAutoSnapshotPolicyRequest, Builder> {
-        private String sourceRegionId; 
-        private Long resourceOwnerId; 
-        private String regionId; 
-        private String timePoints; 
-        private Integer retentionDays; 
-        private String targetCopyRegions; 
-        private java.util.List < Tag> tag; 
-        private String resourceGroupId; 
-        private Boolean enableCrossRegionCopy; 
         private Integer copiedSnapshotsRetentionDays; 
-        private String repeatWeekdays; 
+        private Boolean enableCrossRegionCopy; 
+        private Long ownerId; 
+        private String resourceGroupId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String sourceRegionId; 
+        private java.util.List < Tag> tag; 
+        private String targetCopyRegions; 
         private String autoSnapshotPolicyName; 
+        private String regionId; 
+        private String repeatWeekdays; 
+        private Integer retentionDays; 
+        private String timePoints; 
 
         private Builder() {
             super();
@@ -197,19 +223,75 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
 
         private Builder(CreateAutoSnapshotPolicyRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
-            this.resourceOwnerId = request.resourceOwnerId;
-            this.regionId = request.regionId;
-            this.timePoints = request.timePoints;
-            this.retentionDays = request.retentionDays;
-            this.targetCopyRegions = request.targetCopyRegions;
-            this.tag = request.tag;
-            this.resourceGroupId = request.resourceGroupId;
-            this.enableCrossRegionCopy = request.enableCrossRegionCopy;
             this.copiedSnapshotsRetentionDays = request.copiedSnapshotsRetentionDays;
-            this.repeatWeekdays = request.repeatWeekdays;
+            this.enableCrossRegionCopy = request.enableCrossRegionCopy;
+            this.ownerId = request.ownerId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceRegionId = request.sourceRegionId;
+            this.tag = request.tag;
+            this.targetCopyRegions = request.targetCopyRegions;
             this.autoSnapshotPolicyName = request.autoSnapshotPolicyName;
+            this.regionId = request.regionId;
+            this.repeatWeekdays = request.repeatWeekdays;
+            this.retentionDays = request.retentionDays;
+            this.timePoints = request.timePoints;
         } 
+
+        /**
+         * CopiedSnapshotsRetentionDays.
+         */
+        public Builder copiedSnapshotsRetentionDays(Integer copiedSnapshotsRetentionDays) {
+            this.putQueryParameter("CopiedSnapshotsRetentionDays", copiedSnapshotsRetentionDays);
+            this.copiedSnapshotsRetentionDays = copiedSnapshotsRetentionDays;
+            return this;
+        }
+
+        /**
+         * EnableCrossRegionCopy.
+         */
+        public Builder enableCrossRegionCopy(Boolean enableCrossRegionCopy) {
+            this.putQueryParameter("EnableCrossRegionCopy", enableCrossRegionCopy);
+            this.enableCrossRegionCopy = enableCrossRegionCopy;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
 
         /**
          * SourceRegionId.
@@ -221,62 +303,7 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account (primary account).
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * The region to which the automatic snapshot policy belongs. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("regionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The time when the automatic snapshot was created. Use UTC +8. Unit: Hour. Valid values: 0 to 23. Valid values: 00:00 to 23:00. For example, 1 indicates 01:00. Format Description:
-         * <p>
-         * 
-         * -The input parameters must remain in the JSON Array format. For example,["1"] indicates that automatic snapshots are created at 01:00.
-         * -If you need to create multiple automatic snapshots in a day, you can specify multiple time points. Separate the time points with commas (,). You can specify a maximum of 24 time points. For example,["1","3", and "5"] indicate that automatic snapshots are created at 01:00, 03:00, and 05:00.
-         */
-        public Builder timePoints(String timePoints) {
-            this.putQueryParameter("timePoints", timePoints);
-            this.timePoints = timePoints;
-            return this;
-        }
-
-        /**
-         * The retention period of the automatic snapshot. Unit: days. Valid values:
-         * <p>
-         * 
-         * -- 1: Permanently save
-         * -1 to 65535: specify the retention period.
-         * 
-         * Default value:-1
-         */
-        public Builder retentionDays(Integer retentionDays) {
-            this.putQueryParameter("retentionDays", retentionDays);
-            this.retentionDays = retentionDays;
-            return this;
-        }
-
-        /**
-         * Copy the destination region of the snapshot across regions. You can specify a region.
-         */
-        public Builder targetCopyRegions(String targetCopyRegions) {
-            this.putQueryParameter("TargetCopyRegions", targetCopyRegions);
-            this.targetCopyRegions = targetCopyRegions;
-            return this;
-        }
-
-        /**
-         * Tag list
+         * Tag.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -285,47 +312,34 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * TargetCopyRegions.
          */
-        public Builder resourceGroupId(String resourceGroupId) {
-            this.putQueryParameter("ResourceGroupId", resourceGroupId);
-            this.resourceGroupId = resourceGroupId;
+        public Builder targetCopyRegions(String targetCopyRegions) {
+            this.putQueryParameter("TargetCopyRegions", targetCopyRegions);
+            this.targetCopyRegions = targetCopyRegions;
             return this;
         }
 
         /**
-         * Indicates whether automatic cross-region replication is allowed.
-         * <p>
-         * -true: Yes
-         * -false: not allowed
+         * autoSnapshotPolicyName.
          */
-        public Builder enableCrossRegionCopy(Boolean enableCrossRegionCopy) {
-            this.putQueryParameter("EnableCrossRegionCopy", enableCrossRegionCopy);
-            this.enableCrossRegionCopy = enableCrossRegionCopy;
+        public Builder autoSnapshotPolicyName(String autoSnapshotPolicyName) {
+            this.putQueryParameter("autoSnapshotPolicyName", autoSnapshotPolicyName);
+            this.autoSnapshotPolicyName = autoSnapshotPolicyName;
             return this;
         }
 
         /**
-         * The retention period of a cross-region snapshot. Unit: days. Valid values:
-         * <p>
-         * 
-         * -- 1: Permanently save
-         * -1 to 65535: specify the retention period.
-         * 
-         * Default value:-1
+         * regionId.
          */
-        public Builder copiedSnapshotsRetentionDays(Integer copiedSnapshotsRetentionDays) {
-            this.putQueryParameter("CopiedSnapshotsRetentionDays", copiedSnapshotsRetentionDays);
-            this.copiedSnapshotsRetentionDays = copiedSnapshotsRetentionDays;
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("regionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
         /**
-         * The duplicate date of the automatic snapshot. Unit: Day. Cycle: week. Valid values: 1 to 7. For example, 1 indicates Monday. Format Description:
-         * <p>
-         * 
-         * -The input parameters must remain in the JSON Array format. For example,["1"] indicates that automatic snapshots are created every Monday.
-         * -If you need to create multiple automatic snapshots in a week, you can specify multiple time points. Separate the time points with commas (,). A maximum of seven time points can be entered. For example,["1","3","5"] indicates that automatic snapshots are created repeatedly every Monday, Wednesday, and Friday.
+         * repeatWeekdays.
          */
         public Builder repeatWeekdays(String repeatWeekdays) {
             this.putQueryParameter("repeatWeekdays", repeatWeekdays);
@@ -334,14 +348,20 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * The name of the automatic snapshot policy. The description must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https. It can contain numbers, colons (:), underscores (_), and hyphens (-).
-         * <p>
-         * 
-         * Default value: Null.
+         * retentionDays.
          */
-        public Builder autoSnapshotPolicyName(String autoSnapshotPolicyName) {
-            this.putQueryParameter("autoSnapshotPolicyName", autoSnapshotPolicyName);
-            this.autoSnapshotPolicyName = autoSnapshotPolicyName;
+        public Builder retentionDays(Integer retentionDays) {
+            this.putQueryParameter("retentionDays", retentionDays);
+            this.retentionDays = retentionDays;
+            return this;
+        }
+
+        /**
+         * timePoints.
+         */
+        public Builder timePoints(String timePoints) {
+            this.putQueryParameter("timePoints", timePoints);
+            this.timePoints = timePoints;
             return this;
         }
 
@@ -391,7 +411,7 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
             private String value; 
 
             /**
-             * 快照的标签键。N的取值范围：1~20。一旦传入该值，则不允许为空字符串。最多支持128个字符，不能以aliyun或acs:开头，不能包含http://或https://。
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -399,7 +419,7 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
             }
 
             /**
-             * 快照的标签值。N的取值范围：1~20。一旦传入该值，可以为空字符串。最多支持128个字符，不能以acs:开头，不能包含http://或https://。
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

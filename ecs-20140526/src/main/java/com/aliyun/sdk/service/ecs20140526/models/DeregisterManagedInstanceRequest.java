@@ -12,13 +12,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeregisterManagedInstanceRequest</p>
  */
 public class DeregisterManagedInstanceRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("InstanceId")
+    @Validation(required = true)
+    private String instanceId;
 
     @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
 
     @Query
     @NameInMap("RegionId")
@@ -26,16 +31,26 @@ public class DeregisterManagedInstanceRequest extends Request {
     private String regionId;
 
     @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
-    private String instanceId;
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     private DeregisterManagedInstanceRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
-        this.resourceOwnerId = builder.resourceOwnerId;
-        this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -52,17 +67,24 @@ public class DeregisterManagedInstanceRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return instanceId
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     /**
-     * @return resourceOwnerId
+     * @return ownerAccount
      */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     /**
@@ -73,17 +95,34 @@ public class DeregisterManagedInstanceRequest extends Request {
     }
 
     /**
-     * @return instanceId
+     * @return resourceOwnerAccount
      */
-    public String getInstanceId() {
-        return this.instanceId;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public static final class Builder extends Request.Builder<DeregisterManagedInstanceRequest, Builder> {
-        private String sourceRegionId; 
-        private Long resourceOwnerId; 
-        private String regionId; 
         private String instanceId; 
+        private String ownerAccount; 
+        private Long ownerId; 
+        private String regionId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -91,18 +130,57 @@ public class DeregisterManagedInstanceRequest extends Request {
 
         private Builder(DeregisterManagedInstanceRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
-            this.resourceOwnerId = request.resourceOwnerId;
-            this.regionId = request.regionId;
             this.instanceId = request.instanceId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
-         * SourceRegionId.
+         * InstanceId.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
             return this;
         }
 
@@ -116,23 +194,11 @@ public class DeregisterManagedInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the region. Supported regions: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), and China (Hong Kong).
-         * <p>
-         * 
-         * You can call [DescribeRegions](~~ 25609 ~~) to view the region ID and other information.
+         * SourceRegionId.
          */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The ID of the managed instance.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

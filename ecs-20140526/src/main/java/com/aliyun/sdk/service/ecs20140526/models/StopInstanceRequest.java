@@ -12,13 +12,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>StopInstanceRequest</p>
  */
 public class StopInstanceRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("ConfirmStop")
+    private Boolean confirmStop;
 
     @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
+    @NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @Query
+    @NameInMap("ForceStop")
+    private Boolean forceStop;
+
+    @Query
+    @NameInMap("Hibernate")
+    private Boolean hibernate;
 
     @Query
     @NameInMap("InstanceId")
@@ -26,20 +34,24 @@ public class StopInstanceRequest extends Request {
     private String instanceId;
 
     @Query
-    @NameInMap("ConfirmStop")
-    private Boolean confirmStop;
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
 
     @Query
-    @NameInMap("ForceStop")
-    private Boolean forceStop;
+    @NameInMap("OwnerId")
+    private Long ownerId;
 
     @Query
-    @NameInMap("DryRun")
-    private Boolean dryRun;
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
 
     @Query
-    @NameInMap("Hibernate")
-    private Boolean hibernate;
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     @Query
     @NameInMap("StoppedMode")
@@ -47,13 +59,16 @@ public class StopInstanceRequest extends Request {
 
     private StopInstanceRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
-        this.resourceOwnerId = builder.resourceOwnerId;
-        this.instanceId = builder.instanceId;
         this.confirmStop = builder.confirmStop;
-        this.forceStop = builder.forceStop;
         this.dryRun = builder.dryRun;
+        this.forceStop = builder.forceStop;
         this.hibernate = builder.hibernate;
+        this.instanceId = builder.instanceId;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.sourceRegionId = builder.sourceRegionId;
         this.stoppedMode = builder.stoppedMode;
     }
 
@@ -71,38 +86,10 @@ public class StopInstanceRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
-     * @return resourceOwnerId
-     */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    /**
-     * @return instanceId
-     */
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    /**
      * @return confirmStop
      */
     public Boolean getConfirmStop() {
         return this.confirmStop;
-    }
-
-    /**
-     * @return forceStop
-     */
-    public Boolean getForceStop() {
-        return this.forceStop;
     }
 
     /**
@@ -113,10 +100,59 @@ public class StopInstanceRequest extends Request {
     }
 
     /**
+     * @return forceStop
+     */
+    public Boolean getForceStop() {
+        return this.forceStop;
+    }
+
+    /**
      * @return hibernate
      */
     public Boolean getHibernate() {
         return this.hibernate;
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -127,13 +163,16 @@ public class StopInstanceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<StopInstanceRequest, Builder> {
-        private String sourceRegionId; 
-        private Long resourceOwnerId; 
-        private String instanceId; 
         private Boolean confirmStop; 
-        private Boolean forceStop; 
         private Boolean dryRun; 
+        private Boolean forceStop; 
         private Boolean hibernate; 
+        private String instanceId; 
+        private String ownerAccount; 
+        private Long ownerId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String sourceRegionId; 
         private String stoppedMode; 
 
         private Builder() {
@@ -142,22 +181,88 @@ public class StopInstanceRequest extends Request {
 
         private Builder(StopInstanceRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
-            this.resourceOwnerId = request.resourceOwnerId;
-            this.instanceId = request.instanceId;
             this.confirmStop = request.confirmStop;
-            this.forceStop = request.forceStop;
             this.dryRun = request.dryRun;
+            this.forceStop = request.forceStop;
             this.hibernate = request.hibernate;
+            this.instanceId = request.instanceId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceRegionId = request.sourceRegionId;
             this.stoppedMode = request.stoppedMode;
         } 
 
         /**
-         * SourceRegionId.
+         * ConfirmStop.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder confirmStop(Boolean confirmStop) {
+            this.putQueryParameter("ConfirmStop", confirmStop);
+            this.confirmStop = confirmStop;
+            return this;
+        }
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * ForceStop.
+         */
+        public Builder forceStop(Boolean forceStop) {
+            this.putQueryParameter("ForceStop", forceStop);
+            this.forceStop = forceStop;
+            return this;
+        }
+
+        /**
+         * Hibernate.
+         */
+        public Builder hibernate(Boolean hibernate) {
+            this.putQueryParameter("Hibernate", hibernate);
+            this.hibernate = hibernate;
+            return this;
+        }
+
+        /**
+         * InstanceId.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
             return this;
         }
 
@@ -171,71 +276,16 @@ public class StopInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * SourceRegionId.
          */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 
         /**
-         * > This parameter is about to be removed. This parameter is temporarily reserved for compatibility improvement. Ignore this parameter when you call this operation.
-         */
-        public Builder confirmStop(Boolean confirmStop) {
-            this.putQueryParameter("ConfirmStop", confirmStop);
-            this.confirmStop = confirmStop;
-            return this;
-        }
-
-        /**
-         * Specifies whether to disable the instance. Valid values:
-         * <p>
-         * 
-         * -true: forced shutdown.
-         * -false: the shutdown process is normal.
-         * 
-         * Default value: false.
-         */
-        public Builder forceStop(Boolean forceStop) {
-            this.putQueryParameter("ForceStop", forceStop);
-            this.forceStop = forceStop;
-            return this;
-        }
-
-        /**
-         * Specifies whether to PreCheck only this request. Valid values:
-         * <p>
-         * 
-         * -true: sends a check request and does not stop the instance. Check items include required parameters, request format, business restrictions, and ECS inventory. If the check fails, the corresponding error is returned. If the check succeeds, the error code "DryRunOperation" is returned ".
-         * 
-         * -false: sends a normal request and stops the instance after passing the check.
-         * 
-         * Default value: false.
-         */
-        public Builder dryRun(Boolean dryRun) {
-            this.putQueryParameter("DryRun", dryRun);
-            this.dryRun = dryRun;
-            return this;
-        }
-
-        /**
-         * Indicates whether to sleep.
-         */
-        public Builder hibernate(Boolean hibernate) {
-            this.putQueryParameter("Hibernate", hibernate);
-            this.hibernate = hibernate;
-            return this;
-        }
-
-        /**
-         * The stop mode that you set when you stop a pay-as-you-go ECS instance. Valid values:
-         * <p>
-         * 
-         * -StopCharging: reduces downtime. For more information about the conditions for "StopCharging" to take effect, see the enable conditions section of [pay-as-you-go instance shutdown mode](~~ 63353 ~~).
-         * -KeepCharging: normal shutdown mode. The instance continues to be billed after it is stopped.
-         * 
-         * default value: if you enable the VPC instance shutdown mode in the ECS console (for more information, see [enable default shutdown mode](~~ 63353#default ~~)) and meet the enabling conditions, the default value is "StopCharging ". Otherwise, the default value is keepcharging ".
+         * StoppedMode.
          */
         public Builder stoppedMode(String stoppedMode) {
             this.putQueryParameter("StoppedMode", stoppedMode);

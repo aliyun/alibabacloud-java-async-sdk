@@ -12,6 +12,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AttachInstanceRamRoleResponseBody</p>
  */
 public class AttachInstanceRamRoleResponseBody extends TeaModel {
+    @NameInMap("AttachInstanceRamRoleResults")
+    private AttachInstanceRamRoleResults attachInstanceRamRoleResults;
+
+    @NameInMap("FailCount")
+    private Integer failCount;
+
     @NameInMap("RamRoleName")
     private String ramRoleName;
 
@@ -21,18 +27,12 @@ public class AttachInstanceRamRoleResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("FailCount")
-    private Integer failCount;
-
-    @NameInMap("AttachInstanceRamRoleResults")
-    private AttachInstanceRamRoleResults attachInstanceRamRoleResults;
-
     private AttachInstanceRamRoleResponseBody(Builder builder) {
+        this.attachInstanceRamRoleResults = builder.attachInstanceRamRoleResults;
+        this.failCount = builder.failCount;
         this.ramRoleName = builder.ramRoleName;
         this.requestId = builder.requestId;
         this.totalCount = builder.totalCount;
-        this.failCount = builder.failCount;
-        this.attachInstanceRamRoleResults = builder.attachInstanceRamRoleResults;
     }
 
     public static Builder builder() {
@@ -41,6 +41,20 @@ public class AttachInstanceRamRoleResponseBody extends TeaModel {
 
     public static AttachInstanceRamRoleResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return attachInstanceRamRoleResults
+     */
+    public AttachInstanceRamRoleResults getAttachInstanceRamRoleResults() {
+        return this.attachInstanceRamRoleResults;
+    }
+
+    /**
+     * @return failCount
+     */
+    public Integer getFailCount() {
+        return this.failCount;
     }
 
     /**
@@ -64,53 +78,23 @@ public class AttachInstanceRamRoleResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    /**
-     * @return failCount
-     */
-    public Integer getFailCount() {
-        return this.failCount;
-    }
-
-    /**
-     * @return attachInstanceRamRoleResults
-     */
-    public AttachInstanceRamRoleResults getAttachInstanceRamRoleResults() {
-        return this.attachInstanceRamRoleResults;
-    }
-
     public static final class Builder {
+        private AttachInstanceRamRoleResults attachInstanceRamRoleResults; 
+        private Integer failCount; 
         private String ramRoleName; 
         private String requestId; 
         private Integer totalCount; 
-        private Integer failCount; 
-        private AttachInstanceRamRoleResults attachInstanceRamRoleResults; 
 
         /**
-         * The name of the instance RAM role.
+         * AttachInstanceRamRoleResults.
          */
-        public Builder ramRoleName(String ramRoleName) {
-            this.ramRoleName = ramRoleName;
+        public Builder attachInstanceRamRoleResults(AttachInstanceRamRoleResults attachInstanceRamRoleResults) {
+            this.attachInstanceRamRoleResults = attachInstanceRamRoleResults;
             return this;
         }
 
         /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The total number of RAM roles granted to the instance.
-         */
-        public Builder totalCount(Integer totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-
-        /**
-         * The number of failures to grant the instance RAM role.
+         * FailCount.
          */
         public Builder failCount(Integer failCount) {
             this.failCount = failCount;
@@ -118,10 +102,26 @@ public class AttachInstanceRamRoleResponseBody extends TeaModel {
         }
 
         /**
-         * The information set of the instance RAM role type (AttachInstanceRamRoleResult).
+         * RamRoleName.
          */
-        public Builder attachInstanceRamRoleResults(AttachInstanceRamRoleResults attachInstanceRamRoleResults) {
-            this.attachInstanceRamRoleResults = attachInstanceRamRoleResults;
+        public Builder ramRoleName(String ramRoleName) {
+            this.ramRoleName = ramRoleName;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
@@ -135,19 +135,19 @@ public class AttachInstanceRamRoleResponseBody extends TeaModel {
         @NameInMap("Code")
         private String code;
 
-        @NameInMap("Message")
-        private String message;
-
         @NameInMap("InstanceId")
         private String instanceId;
+
+        @NameInMap("Message")
+        private String message;
 
         @NameInMap("Success")
         private Boolean success;
 
         private AttachInstanceRamRoleResult(Builder builder) {
             this.code = builder.code;
-            this.message = builder.message;
             this.instanceId = builder.instanceId;
+            this.message = builder.message;
             this.success = builder.success;
         }
 
@@ -167,17 +167,17 @@ public class AttachInstanceRamRoleResponseBody extends TeaModel {
         }
 
         /**
-         * @return message
-         */
-        public String getMessage() {
-            return this.message;
-        }
-
-        /**
          * @return instanceId
          */
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        /**
+         * @return message
+         */
+        public String getMessage() {
+            return this.message;
         }
 
         /**
@@ -189,12 +189,12 @@ public class AttachInstanceRamRoleResponseBody extends TeaModel {
 
         public static final class Builder {
             private String code; 
-            private String message; 
             private String instanceId; 
+            private String message; 
             private Boolean success; 
 
             /**
-             * Determines whether the instance RAM role is granted. A value of 200 indicates that the application is successfully granted. A value other than 200 indicates that the application fails. For more information, see error codes.
+             * Code.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -202,15 +202,7 @@ public class AttachInstanceRamRoleResponseBody extends TeaModel {
             }
 
             /**
-             * Determines whether the instance RAM role is granted. If the return value is Success, the authorization is successful. If the return value is other, the authorization fails. For more information, see error codes.
-             */
-            public Builder message(String message) {
-                this.message = message;
-                return this;
-            }
-
-            /**
-             * The ID of the instance.
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -218,7 +210,15 @@ public class AttachInstanceRamRoleResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the instance RAM role is granted.
+             * Message.
+             */
+            public Builder message(String message) {
+                this.message = message;
+                return this;
+            }
+
+            /**
+             * Success.
              */
             public Builder success(Boolean success) {
                 this.success = success;

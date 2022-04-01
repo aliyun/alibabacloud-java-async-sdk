@@ -12,18 +12,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCommandsRequest</p>
  */
 public class DescribeCommandsRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("CommandId")
+    private String commandId;
 
     @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
-
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
+    @NameInMap("ContentEncoding")
+    private String contentEncoding;
 
     @Query
     @NameInMap("Description")
@@ -34,8 +29,12 @@ public class DescribeCommandsRequest extends Request {
     private String name;
 
     @Query
-    @NameInMap("Type")
-    private String type;
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
 
     @Query
     @NameInMap("PageNumber")
@@ -46,30 +45,46 @@ public class DescribeCommandsRequest extends Request {
     private Long pageSize;
 
     @Query
-    @NameInMap("CommandId")
-    private String commandId;
-
-    @Query
     @NameInMap("Provider")
     private String provider;
 
     @Query
-    @NameInMap("ContentEncoding")
-    private String contentEncoding;
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
+    @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
+    @Query
+    @NameInMap("Type")
+    private String type;
 
     private DescribeCommandsRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
-        this.resourceOwnerId = builder.resourceOwnerId;
-        this.regionId = builder.regionId;
+        this.commandId = builder.commandId;
+        this.contentEncoding = builder.contentEncoding;
         this.description = builder.description;
         this.name = builder.name;
-        this.type = builder.type;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.commandId = builder.commandId;
         this.provider = builder.provider;
-        this.contentEncoding = builder.contentEncoding;
+        this.regionId = builder.regionId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.sourceRegionId = builder.sourceRegionId;
+        this.type = builder.type;
     }
 
     public static Builder builder() {
@@ -86,24 +101,17 @@ public class DescribeCommandsRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return commandId
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getCommandId() {
+        return this.commandId;
     }
 
     /**
-     * @return resourceOwnerId
+     * @return contentEncoding
      */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
+    public String getContentEncoding() {
+        return this.contentEncoding;
     }
 
     /**
@@ -121,10 +129,17 @@ public class DescribeCommandsRequest extends Request {
     }
 
     /**
-     * @return type
+     * @return ownerAccount
      */
-    public String getType() {
-        return this.type;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     /**
@@ -142,13 +157,6 @@ public class DescribeCommandsRequest extends Request {
     }
 
     /**
-     * @return commandId
-     */
-    public String getCommandId() {
-        return this.commandId;
-    }
-
-    /**
      * @return provider
      */
     public String getProvider() {
@@ -156,24 +164,55 @@ public class DescribeCommandsRequest extends Request {
     }
 
     /**
-     * @return contentEncoding
+     * @return regionId
      */
-    public String getContentEncoding() {
-        return this.contentEncoding;
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
+    /**
+     * @return type
+     */
+    public String getType() {
+        return this.type;
     }
 
     public static final class Builder extends Request.Builder<DescribeCommandsRequest, Builder> {
-        private String sourceRegionId; 
-        private Long resourceOwnerId; 
-        private String regionId; 
+        private String commandId; 
+        private String contentEncoding; 
         private String description; 
         private String name; 
-        private String type; 
+        private String ownerAccount; 
+        private Long ownerId; 
         private Long pageNumber; 
         private Long pageSize; 
-        private String commandId; 
         private String provider; 
-        private String contentEncoding; 
+        private String regionId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String sourceRegionId; 
+        private String type; 
 
         private Builder() {
             super();
@@ -181,25 +220,118 @@ public class DescribeCommandsRequest extends Request {
 
         private Builder(DescribeCommandsRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
-            this.resourceOwnerId = request.resourceOwnerId;
-            this.regionId = request.regionId;
+            this.commandId = request.commandId;
+            this.contentEncoding = request.contentEncoding;
             this.description = request.description;
             this.name = request.name;
-            this.type = request.type;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
-            this.commandId = request.commandId;
             this.provider = request.provider;
-            this.contentEncoding = request.contentEncoding;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceRegionId = request.sourceRegionId;
+            this.type = request.type;
         } 
 
         /**
-         * SourceRegionId.
+         * CommandId.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder commandId(String commandId) {
+            this.putQueryParameter("CommandId", commandId);
+            this.commandId = commandId;
+            return this;
+        }
+
+        /**
+         * ContentEncoding.
+         */
+        public Builder contentEncoding(String contentEncoding) {
+            this.putQueryParameter("ContentEncoding", contentEncoding);
+            this.contentEncoding = contentEncoding;
+            return this;
+        }
+
+        /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
+            return this;
+        }
+
+        /**
+         * Name.
+         */
+        public Builder name(String name) {
+            this.putQueryParameter("Name", name);
+            this.name = name;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * PageNumber.
+         */
+        public Builder pageNumber(Long pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Long pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * Provider.
+         */
+        public Builder provider(String provider) {
+            this.putQueryParameter("Provider", provider);
+            this.provider = provider;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
             return this;
         }
 
@@ -213,111 +345,20 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
+         * SourceRegionId.
          */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 
         /**
-         * The description of the command.
-         */
-        public Builder description(String description) {
-            this.putQueryParameter("Description", description);
-            this.description = description;
-            return this;
-        }
-
-        /**
-         * The name of the command. Fuzzy query is not supported.
-         */
-        public Builder name(String name) {
-            this.putQueryParameter("Name", name);
-            this.name = name;
-            return this;
-        }
-
-        /**
-         * The type of the command. Valid values:
-         * <p>
-         * 
-         * -RunBatScript: The Bat script that runs in the Windows instance.
-         * -RunPowerShellScript: The command is the Windows script that runs in the PowerShell instance.
-         * -RunShellScript: The command is a Shell script that runs on a Linux instance.
-         * 
+         * Type.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
             this.type = type;
-            return this;
-        }
-
-        /**
-         * The current page number.
-         * <p>
-         * 
-         * The start value is 1.
-         * 
-         * Default value: 1.
-         */
-        public Builder pageNumber(Long pageNumber) {
-            this.putQueryParameter("PageNumber", pageNumber);
-            this.pageNumber = pageNumber;
-            return this;
-        }
-
-        /**
-         * The number of entries to return on each page.
-         * <p>
-         * 
-         * Maximum Value: 50.
-         * 
-         * Default value: 10.
-         */
-        public Builder pageSize(Long pageSize) {
-            this.putQueryParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * The ID of the command.
-         */
-        public Builder commandId(String commandId) {
-            this.putQueryParameter("CommandId", commandId);
-            this.commandId = commandId;
-            return this;
-        }
-
-        /**
-         * The provider of public commands. The parameter values are described as follows:
-         * <p>
-         * 
-         * -If this parameter is not set, all manually created cloud assistant commands are queried by default.
-         * -If this parameter is set to "AlibabaCloud", all public commands provided by Alibaba Cloud are queried.
-         * -If the value of this parameter is a specific public Command provider, query all public commands provided by the provider. Example:
-         * -When "Provider = AlibabaCloud.ECS.GuestOS", query the public commands provided by "AlibabaCloud.ECS.GuestOS.
-         * -When "Provider = AlibabaCloud.ECS.GuestOSDiagnose", query the public commands provided by "AlibabaCloud.ECS.GuestOSDiagnose.
-         */
-        public Builder provider(String provider) {
-            this.putQueryParameter("Provider", provider);
-            this.provider = provider;
-            return this;
-        }
-
-        /**
-         * Specifies the encoding method of the "CommandContent" and "Output" fields in the returned data. Valid values:
-         * <p>
-         * -PlainText: returns the original script content and output information.
-         * -Base64: returns the base64-encoded script content and output information.
-         * 
-         * The default value is base64.
-         */
-        public Builder contentEncoding(String contentEncoding) {
-            this.putQueryParameter("ContentEncoding", contentEncoding);
-            this.contentEncoding = contentEncoding;
             return this;
         }
 

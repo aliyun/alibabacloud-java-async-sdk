@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AssignPrivateIpAddressesResponseBody</p>
  */
 public class AssignPrivateIpAddressesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    private String requestId;
-
     @NameInMap("AssignedPrivateIpAddressesSet")
     private AssignedPrivateIpAddressesSet assignedPrivateIpAddressesSet;
 
+    @NameInMap("RequestId")
+    private String requestId;
+
     private AssignPrivateIpAddressesResponseBody(Builder builder) {
-        this.requestId = builder.requestId;
         this.assignedPrivateIpAddressesSet = builder.assignedPrivateIpAddressesSet;
+        this.requestId = builder.requestId;
     }
 
     public static Builder builder() {
@@ -32,36 +32,36 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
     }
 
     /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    /**
      * @return assignedPrivateIpAddressesSet
      */
     public AssignedPrivateIpAddressesSet getAssignedPrivateIpAddressesSet() {
         return this.assignedPrivateIpAddressesSet;
     }
 
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static final class Builder {
-        private String requestId; 
         private AssignedPrivateIpAddressesSet assignedPrivateIpAddressesSet; 
+        private String requestId; 
 
         /**
-         * The ID of the request.
+         * AssignedPrivateIpAddressesSet.
          */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
+        public Builder assignedPrivateIpAddressesSet(AssignedPrivateIpAddressesSet assignedPrivateIpAddressesSet) {
+            this.assignedPrivateIpAddressesSet = assignedPrivateIpAddressesSet;
             return this;
         }
 
         /**
-         * A collection of Enis that have been assigned secondary private IP addresses.
+         * RequestId.
          */
-        public Builder assignedPrivateIpAddressesSet(AssignedPrivateIpAddressesSet assignedPrivateIpAddressesSet) {
-            this.assignedPrivateIpAddressesSet = assignedPrivateIpAddressesSet;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
@@ -151,7 +151,7 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
             private PrivateIpSet privateIpSet; 
 
             /**
-             * The ID of the Eni.
+             * NetworkInterfaceId.
              */
             public Builder networkInterfaceId(String networkInterfaceId) {
                 this.networkInterfaceId = networkInterfaceId;
@@ -159,7 +159,7 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The assigned private IP address.
+             * PrivateIpSet.
              */
             public Builder privateIpSet(PrivateIpSet privateIpSet) {
                 this.privateIpSet = privateIpSet;

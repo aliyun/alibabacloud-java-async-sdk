@@ -12,6 +12,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCapacityReservationsResponseBody</p>
  */
 public class DescribeCapacityReservationsResponseBody extends TeaModel {
+    @NameInMap("CapacityReservationSet")
+    private CapacityReservationSet capacityReservationSet;
+
+    @NameInMap("MaxResults")
+    private Integer maxResults;
+
     @NameInMap("NextToken")
     private String nextToken;
 
@@ -21,18 +27,12 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("MaxResults")
-    private Integer maxResults;
-
-    @NameInMap("CapacityReservationSet")
-    private CapacityReservationSet capacityReservationSet;
-
     private DescribeCapacityReservationsResponseBody(Builder builder) {
+        this.capacityReservationSet = builder.capacityReservationSet;
+        this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.requestId = builder.requestId;
         this.totalCount = builder.totalCount;
-        this.maxResults = builder.maxResults;
-        this.capacityReservationSet = builder.capacityReservationSet;
     }
 
     public static Builder builder() {
@@ -41,6 +41,20 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
 
     public static DescribeCapacityReservationsResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return capacityReservationSet
+     */
+    public CapacityReservationSet getCapacityReservationSet() {
+        return this.capacityReservationSet;
+    }
+
+    /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
     }
 
     /**
@@ -64,53 +78,23 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    /**
-     * @return maxResults
-     */
-    public Integer getMaxResults() {
-        return this.maxResults;
-    }
-
-    /**
-     * @return capacityReservationSet
-     */
-    public CapacityReservationSet getCapacityReservationSet() {
-        return this.capacityReservationSet;
-    }
-
     public static final class Builder {
+        private CapacityReservationSet capacityReservationSet; 
+        private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
-        private Integer maxResults; 
-        private CapacityReservationSet capacityReservationSet; 
 
         /**
-         * The start flag of the next query in the capacity reservation service.
+         * CapacityReservationSet.
          */
-        public Builder nextToken(String nextToken) {
-            this.nextToken = nextToken;
+        public Builder capacityReservationSet(CapacityReservationSet capacityReservationSet) {
+            this.capacityReservationSet = capacityReservationSet;
             return this;
         }
 
         /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The number of records that meet the query criteria.
-         */
-        public Builder totalCount(Integer totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-
-        /**
-         * The number of rows displayed on each page of the capacity reservation service.
+         * MaxResults.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -118,10 +102,26 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         }
 
         /**
-         * A collection of capacity reservation service details.
+         * NextToken.
          */
-        public Builder capacityReservationSet(CapacityReservationSet capacityReservationSet) {
-            this.capacityReservationSet = capacityReservationSet;
+        public Builder nextToken(String nextToken) {
+            this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
@@ -132,23 +132,23 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
     } 
 
     public static class AllocatedResource extends TeaModel {
-        @NameInMap("UsedAmount")
-        private Integer usedAmount;
+        @NameInMap("InstanceType")
+        private String instanceType;
 
         @NameInMap("TotalAmount")
         private Integer totalAmount;
 
+        @NameInMap("UsedAmount")
+        private Integer usedAmount;
+
         @NameInMap("zoneId")
         private String zoneId;
 
-        @NameInMap("InstanceType")
-        private String instanceType;
-
         private AllocatedResource(Builder builder) {
-            this.usedAmount = builder.usedAmount;
-            this.totalAmount = builder.totalAmount;
-            this.zoneId = builder.zoneId;
             this.instanceType = builder.instanceType;
+            this.totalAmount = builder.totalAmount;
+            this.usedAmount = builder.usedAmount;
+            this.zoneId = builder.zoneId;
         }
 
         public static Builder builder() {
@@ -160,10 +160,10 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         }
 
         /**
-         * @return usedAmount
+         * @return instanceType
          */
-        public Integer getUsedAmount() {
-            return this.usedAmount;
+        public String getInstanceType() {
+            return this.instanceType;
         }
 
         /**
@@ -174,35 +174,35 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return usedAmount
+         */
+        public Integer getUsedAmount() {
+            return this.usedAmount;
+        }
+
+        /**
          * @return zoneId
          */
         public String getZoneId() {
             return this.zoneId;
         }
 
-        /**
-         * @return instanceType
-         */
-        public String getInstanceType() {
-            return this.instanceType;
-        }
-
         public static final class Builder {
-            private Integer usedAmount; 
-            private Integer totalAmount; 
-            private String zoneId; 
             private String instanceType; 
+            private Integer totalAmount; 
+            private Integer usedAmount; 
+            private String zoneId; 
 
             /**
-             * The number of used instances.
+             * InstanceType.
              */
-            public Builder usedAmount(Integer usedAmount) {
-                this.usedAmount = usedAmount;
+            public Builder instanceType(String instanceType) {
+                this.instanceType = instanceType;
                 return this;
             }
 
             /**
-             * The total number of instances to be reserved within an instance type.
+             * TotalAmount.
              */
             public Builder totalAmount(Integer totalAmount) {
                 this.totalAmount = totalAmount;
@@ -210,18 +210,18 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone.
+             * UsedAmount.
              */
-            public Builder zoneId(String zoneId) {
-                this.zoneId = zoneId;
+            public Builder usedAmount(Integer usedAmount) {
+                this.usedAmount = usedAmount;
                 return this;
             }
 
             /**
-             * The instance type.
+             * zoneId.
              */
-            public Builder instanceType(String instanceType) {
-                this.instanceType = instanceType;
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
                 return this;
             }
 
@@ -274,15 +274,15 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("TagValue")
-        private String tagValue;
-
         @NameInMap("TagKey")
         private String tagKey;
 
+        @NameInMap("TagValue")
+        private String tagValue;
+
         private Tag(Builder builder) {
-            this.tagValue = builder.tagValue;
             this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
         }
 
         public static Builder builder() {
@@ -294,36 +294,36 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         }
 
         /**
-         * @return tagValue
-         */
-        public String getTagValue() {
-            return this.tagValue;
-        }
-
-        /**
          * @return tagKey
          */
         public String getTagKey() {
             return this.tagKey;
         }
 
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
         public static final class Builder {
-            private String tagValue; 
             private String tagKey; 
+            private String tagValue; 
 
             /**
-             * The value of the tag.
+             * TagKey.
              */
-            public Builder tagValue(String tagValue) {
-                this.tagValue = tagValue;
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
                 return this;
             }
 
             /**
-             * The key of the tag.
+             * TagValue.
              */
-            public Builder tagKey(String tagKey) {
-                this.tagKey = tagKey;
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
                 return this;
             }
 
@@ -376,17 +376,29 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
 
     }
     public static class CapacityReservationItem extends TeaModel {
-        @NameInMap("Status")
-        private String status;
+        @NameInMap("AllocatedResources")
+        private AllocatedResources allocatedResources;
 
-        @NameInMap("TimeSlot")
-        private String timeSlot;
+        @NameInMap("Description")
+        private String description;
 
-        @NameInMap("PrivatePoolOptionsMatchCriteria")
-        private String privatePoolOptionsMatchCriteria;
+        @NameInMap("EndTime")
+        private String endTime;
+
+        @NameInMap("EndTimeType")
+        private String endTimeType;
+
+        @NameInMap("InstanceChargeType")
+        private String instanceChargeType;
+
+        @NameInMap("Platform")
+        private String platform;
 
         @NameInMap("PrivatePoolOptionsId")
         private String privatePoolOptionsId;
+
+        @NameInMap("PrivatePoolOptionsMatchCriteria")
+        private String privatePoolOptionsMatchCriteria;
 
         @NameInMap("PrivatePoolOptionsName")
         private String privatePoolOptionsName;
@@ -394,53 +406,41 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         @NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("InstanceChargeType")
-        private String instanceChargeType;
-
-        @NameInMap("EndTime")
-        private String endTime;
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
 
         @NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Description")
-        private String description;
+        @NameInMap("StartTimeType")
+        private String startTimeType;
 
-        @NameInMap("EndTimeType")
-        private String endTimeType;
-
-        @NameInMap("ResourceGroupId")
-        private String resourceGroupId;
-
-        @NameInMap("Platform")
-        private String platform;
-
-        @NameInMap("AllocatedResources")
-        private AllocatedResources allocatedResources;
+        @NameInMap("Status")
+        private String status;
 
         @NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("StartTimeType")
-        private String startTimeType;
+        @NameInMap("TimeSlot")
+        private String timeSlot;
 
         private CapacityReservationItem(Builder builder) {
-            this.status = builder.status;
-            this.timeSlot = builder.timeSlot;
-            this.privatePoolOptionsMatchCriteria = builder.privatePoolOptionsMatchCriteria;
+            this.allocatedResources = builder.allocatedResources;
+            this.description = builder.description;
+            this.endTime = builder.endTime;
+            this.endTimeType = builder.endTimeType;
+            this.instanceChargeType = builder.instanceChargeType;
+            this.platform = builder.platform;
             this.privatePoolOptionsId = builder.privatePoolOptionsId;
+            this.privatePoolOptionsMatchCriteria = builder.privatePoolOptionsMatchCriteria;
             this.privatePoolOptionsName = builder.privatePoolOptionsName;
             this.regionId = builder.regionId;
-            this.instanceChargeType = builder.instanceChargeType;
-            this.endTime = builder.endTime;
-            this.startTime = builder.startTime;
-            this.description = builder.description;
-            this.endTimeType = builder.endTimeType;
             this.resourceGroupId = builder.resourceGroupId;
-            this.platform = builder.platform;
-            this.allocatedResources = builder.allocatedResources;
-            this.tags = builder.tags;
+            this.startTime = builder.startTime;
             this.startTimeType = builder.startTimeType;
+            this.status = builder.status;
+            this.tags = builder.tags;
+            this.timeSlot = builder.timeSlot;
         }
 
         public static Builder builder() {
@@ -452,24 +452,45 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         }
 
         /**
-         * @return status
+         * @return allocatedResources
          */
-        public String getStatus() {
-            return this.status;
+        public AllocatedResources getAllocatedResources() {
+            return this.allocatedResources;
         }
 
         /**
-         * @return timeSlot
+         * @return description
          */
-        public String getTimeSlot() {
-            return this.timeSlot;
+        public String getDescription() {
+            return this.description;
         }
 
         /**
-         * @return privatePoolOptionsMatchCriteria
+         * @return endTime
          */
-        public String getPrivatePoolOptionsMatchCriteria() {
-            return this.privatePoolOptionsMatchCriteria;
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        /**
+         * @return endTimeType
+         */
+        public String getEndTimeType() {
+            return this.endTimeType;
+        }
+
+        /**
+         * @return instanceChargeType
+         */
+        public String getInstanceChargeType() {
+            return this.instanceChargeType;
+        }
+
+        /**
+         * @return platform
+         */
+        public String getPlatform() {
+            return this.platform;
         }
 
         /**
@@ -477,6 +498,13 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
          */
         public String getPrivatePoolOptionsId() {
             return this.privatePoolOptionsId;
+        }
+
+        /**
+         * @return privatePoolOptionsMatchCriteria
+         */
+        public String getPrivatePoolOptionsMatchCriteria() {
+            return this.privatePoolOptionsMatchCriteria;
         }
 
         /**
@@ -494,17 +522,10 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         }
 
         /**
-         * @return instanceChargeType
+         * @return resourceGroupId
          */
-        public String getInstanceChargeType() {
-            return this.instanceChargeType;
-        }
-
-        /**
-         * @return endTime
-         */
-        public String getEndTime() {
-            return this.endTime;
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         /**
@@ -515,38 +536,17 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         }
 
         /**
-         * @return description
+         * @return startTimeType
          */
-        public String getDescription() {
-            return this.description;
+        public String getStartTimeType() {
+            return this.startTimeType;
         }
 
         /**
-         * @return endTimeType
+         * @return status
          */
-        public String getEndTimeType() {
-            return this.endTimeType;
-        }
-
-        /**
-         * @return resourceGroupId
-         */
-        public String getResourceGroupId() {
-            return this.resourceGroupId;
-        }
-
-        /**
-         * @return platform
-         */
-        public String getPlatform() {
-            return this.platform;
-        }
-
-        /**
-         * @return allocatedResources
-         */
-        public AllocatedResources getAllocatedResources() {
-            return this.allocatedResources;
+        public String getStatus() {
+            return this.status;
         }
 
         /**
@@ -557,160 +557,32 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         }
 
         /**
-         * @return startTimeType
+         * @return timeSlot
          */
-        public String getStartTimeType() {
-            return this.startTimeType;
+        public String getTimeSlot() {
+            return this.timeSlot;
         }
 
         public static final class Builder {
-            private String status; 
-            private String timeSlot; 
-            private String privatePoolOptionsMatchCriteria; 
+            private AllocatedResources allocatedResources; 
+            private String description; 
+            private String endTime; 
+            private String endTimeType; 
+            private String instanceChargeType; 
+            private String platform; 
             private String privatePoolOptionsId; 
+            private String privatePoolOptionsMatchCriteria; 
             private String privatePoolOptionsName; 
             private String regionId; 
-            private String instanceChargeType; 
-            private String endTime; 
-            private String startTime; 
-            private String description; 
-            private String endTimeType; 
             private String resourceGroupId; 
-            private String platform; 
-            private AllocatedResources allocatedResources; 
-            private Tags tags; 
+            private String startTime; 
             private String startTimeType; 
+            private String status; 
+            private Tags tags; 
+            private String timeSlot; 
 
             /**
-             * The status of the subscription service. Possible values:
-             * <p>
-             * 
-             * -Pending: initialization.
-             * -Preparing: Preparing.
-             * -Prepared: to take effect.
-             * -Active: takes effect.
-             * -Released: Released, including manual release and automatic release upon expiration.
-             */
-            public Builder status(String status) {
-                this.status = status;
-                return this;
-            }
-
-            /**
-             * > This parameter is being invited for testing and is not currently available.
-             */
-            public Builder timeSlot(String timeSlot) {
-                this.timeSlot = timeSlot;
-                return this;
-            }
-
-            /**
-             * The type of the private resource pool generated after the capacity reservation service takes effect. Possible values:
-             * <p>
-             * 
-             * -Open: Open mode.
-             * -Target: The dedicated mode.
-             * 
-             */
-            public Builder privatePoolOptionsMatchCriteria(String privatePoolOptionsMatchCriteria) {
-                this.privatePoolOptionsMatchCriteria = privatePoolOptionsMatchCriteria;
-                return this;
-            }
-
-            /**
-             * The ID of the subscription service.
-             */
-            public Builder privatePoolOptionsId(String privatePoolOptionsId) {
-                this.privatePoolOptionsId = privatePoolOptionsId;
-                return this;
-            }
-
-            /**
-             * The name of the subscription service.
-             */
-            public Builder privatePoolOptionsName(String privatePoolOptionsName) {
-                this.privatePoolOptionsName = privatePoolOptionsName;
-                return this;
-            }
-
-            /**
-             * The ID of the region to which the capacity reservation service belongs.
-             */
-            public Builder regionId(String regionId) {
-                this.regionId = regionId;
-                return this;
-            }
-
-            /**
-             * The billing method of the instance in the capacity reservation service. Possible values:
-             * <p>
-             * 
-             * -PostPaid: pay-as-you-go.
-             * -PrePaid: subscription.
-             */
-            public Builder instanceChargeType(String instanceChargeType) {
-                this.instanceChargeType = instanceChargeType;
-                return this;
-            }
-
-            /**
-             * The expiration time of the subscription service.
-             */
-            public Builder endTime(String endTime) {
-                this.endTime = endTime;
-                return this;
-            }
-
-            /**
-             * The time when the scheduled service takes effect.
-             */
-            public Builder startTime(String startTime) {
-                this.startTime = startTime;
-                return this;
-            }
-
-            /**
-             * The description of the capacity reservation service.
-             */
-            public Builder description(String description) {
-                this.description = description;
-                return this;
-            }
-
-            /**
-             * The expiration method of the capacity reservation service. Possible values:
-             * <p>
-             * 
-             * -Limited: release at the specified time.
-             * -Unlimited: manually released. No time limit.
-             */
-            public Builder endTimeType(String endTimeType) {
-                this.endTimeType = endTimeType;
-                return this;
-            }
-
-            /**
-             * The ID of the resource group to which the capacity reservation service belongs.
-             */
-            public Builder resourceGroupId(String resourceGroupId) {
-                this.resourceGroupId = resourceGroupId;
-                return this;
-            }
-
-            /**
-             * The operating system of the matched instance. Possible values:
-             * <p>
-             * 
-             * -windows.
-             * -linux.
-             */
-            public Builder platform(String platform) {
-                this.platform = platform;
-                return this;
-            }
-
-            /**
-             * The resource allocation details.
+             * AllocatedResources.
              */
             public Builder allocatedResources(AllocatedResources allocatedResources) {
                 this.allocatedResources = allocatedResources;
@@ -718,7 +590,111 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag key-value pair associated with the capacity reservation service.
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * EndTime.
+             */
+            public Builder endTime(String endTime) {
+                this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * EndTimeType.
+             */
+            public Builder endTimeType(String endTimeType) {
+                this.endTimeType = endTimeType;
+                return this;
+            }
+
+            /**
+             * InstanceChargeType.
+             */
+            public Builder instanceChargeType(String instanceChargeType) {
+                this.instanceChargeType = instanceChargeType;
+                return this;
+            }
+
+            /**
+             * Platform.
+             */
+            public Builder platform(String platform) {
+                this.platform = platform;
+                return this;
+            }
+
+            /**
+             * PrivatePoolOptionsId.
+             */
+            public Builder privatePoolOptionsId(String privatePoolOptionsId) {
+                this.privatePoolOptionsId = privatePoolOptionsId;
+                return this;
+            }
+
+            /**
+             * PrivatePoolOptionsMatchCriteria.
+             */
+            public Builder privatePoolOptionsMatchCriteria(String privatePoolOptionsMatchCriteria) {
+                this.privatePoolOptionsMatchCriteria = privatePoolOptionsMatchCriteria;
+                return this;
+            }
+
+            /**
+             * PrivatePoolOptionsName.
+             */
+            public Builder privatePoolOptionsName(String privatePoolOptionsName) {
+                this.privatePoolOptionsName = privatePoolOptionsName;
+                return this;
+            }
+
+            /**
+             * RegionId.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * StartTime.
+             */
+            public Builder startTime(String startTime) {
+                this.startTime = startTime;
+                return this;
+            }
+
+            /**
+             * StartTimeType.
+             */
+            public Builder startTimeType(String startTimeType) {
+                this.startTimeType = startTimeType;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * Tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -726,14 +702,10 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * The effective method of capacity reservation. Possible values:
-             * <p>
-             * 
-             * -Now: takes effect immediately.
-             * -Later: takes effect at the specified time.
+             * TimeSlot.
              */
-            public Builder startTimeType(String startTimeType) {
-                this.startTimeType = startTimeType;
+            public Builder timeSlot(String timeSlot) {
+                this.timeSlot = timeSlot;
                 return this;
             }
 

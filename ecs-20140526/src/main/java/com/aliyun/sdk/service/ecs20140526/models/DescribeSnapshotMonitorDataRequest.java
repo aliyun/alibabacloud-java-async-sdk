@@ -12,31 +12,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSnapshotMonitorDataRequest</p>
  */
 public class DescribeSnapshotMonitorDataRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
-    @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
-    @NameInMap("ResourceOwnerAccount")
-    private String resourceOwnerAccount;
-
-    @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
-
-    @Query
-    @NameInMap("OwnerAccount")
-    private String ownerAccount;
-
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Query
     @NameInMap("Category")
     private String category;
@@ -47,8 +22,33 @@ public class DescribeSnapshotMonitorDataRequest extends Request {
     private String endTime;
 
     @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
+
+    @Query
     @NameInMap("Period")
     private Integer period;
+
+    @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
+    @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     @Query
     @NameInMap("StartTime")
@@ -57,15 +57,15 @@ public class DescribeSnapshotMonitorDataRequest extends Request {
 
     private DescribeSnapshotMonitorDataRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
-        this.ownerId = builder.ownerId;
-        this.resourceOwnerAccount = builder.resourceOwnerAccount;
-        this.resourceOwnerId = builder.resourceOwnerId;
-        this.ownerAccount = builder.ownerAccount;
-        this.regionId = builder.regionId;
         this.category = builder.category;
         this.endTime = builder.endTime;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
         this.period = builder.period;
+        this.regionId = builder.regionId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.sourceRegionId = builder.sourceRegionId;
         this.startTime = builder.startTime;
     }
 
@@ -83,10 +83,24 @@ public class DescribeSnapshotMonitorDataRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return category
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getCategory() {
+        return this.category;
+    }
+
+    /**
+     * @return endTime
+     */
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     /**
@@ -94,6 +108,20 @@ public class DescribeSnapshotMonitorDataRequest extends Request {
      */
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    /**
+     * @return period
+     */
+    public Integer getPeriod() {
+        return this.period;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -111,38 +139,10 @@ public class DescribeSnapshotMonitorDataRequest extends Request {
     }
 
     /**
-     * @return ownerAccount
+     * @return sourceRegionId
      */
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return category
-     */
-    public String getCategory() {
-        return this.category;
-    }
-
-    /**
-     * @return endTime
-     */
-    public String getEndTime() {
-        return this.endTime;
-    }
-
-    /**
-     * @return period
-     */
-    public Integer getPeriod() {
-        return this.period;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -153,15 +153,15 @@ public class DescribeSnapshotMonitorDataRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeSnapshotMonitorDataRequest, Builder> {
-        private String sourceRegionId; 
-        private Long ownerId; 
-        private String resourceOwnerAccount; 
-        private Long resourceOwnerId; 
-        private String ownerAccount; 
-        private String regionId; 
         private String category; 
         private String endTime; 
+        private String ownerAccount; 
+        private Long ownerId; 
         private Integer period; 
+        private String regionId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String sourceRegionId; 
         private String startTime; 
 
         private Builder() {
@@ -170,24 +170,42 @@ public class DescribeSnapshotMonitorDataRequest extends Request {
 
         private Builder(DescribeSnapshotMonitorDataRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
-            this.ownerId = request.ownerId;
-            this.resourceOwnerAccount = request.resourceOwnerAccount;
-            this.resourceOwnerId = request.resourceOwnerId;
-            this.ownerAccount = request.ownerAccount;
-            this.regionId = request.regionId;
             this.category = request.category;
             this.endTime = request.endTime;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
             this.period = request.period;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceRegionId = request.sourceRegionId;
             this.startTime = request.startTime;
         } 
 
         /**
-         * SourceRegionId.
+         * Category.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder category(String category) {
+            this.putQueryParameter("Category", category);
+            this.category = category;
+            return this;
+        }
+
+        /**
+         * EndTime.
+         */
+        public Builder endTime(String endTime) {
+            this.putQueryParameter("EndTime", endTime);
+            this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
             return this;
         }
 
@@ -197,6 +215,24 @@ public class DescribeSnapshotMonitorDataRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * Period.
+         */
+        public Builder period(Integer period) {
+            this.putQueryParameter("Period", period);
+            this.period = period;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
@@ -219,63 +255,16 @@ public class DescribeSnapshotMonitorDataRequest extends Request {
         }
 
         /**
-         * OwnerAccount.
+         * SourceRegionId.
          */
-        public Builder ownerAccount(String ownerAccount) {
-            this.putQueryParameter("OwnerAccount", ownerAccount);
-            this.ownerAccount = ownerAccount;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 
         /**
-         * The ID of the region. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The type of the snapshot. Valid values:
-         * <p>
-         * -Standard: normal snapshot
-         * -Flash: local snapshot
-         * 
-         * Default value: Standard
-         */
-        public Builder category(String category) {
-            this.putQueryParameter("Category", category);
-            this.category = category;
-            return this;
-        }
-
-        /**
-         * Obtain the end time of the snapshot capacity change data. The time follows the [ISO8601](~~ 25696 ~~) standard and uses UTC +0. The format is yyyy-MM-ddTHH:mm:ssZ. If the specified seconds (ss) is not 00, it is automatically converted to the next minute.
-         */
-        public Builder endTime(String endTime) {
-            this.putQueryParameter("EndTime", endTime);
-            this.endTime = endTime;
-            return this;
-        }
-
-        /**
-         * The interval between snapshot capacity changes. Unit: seconds. Valid values:
-         * <p>
-         * -60
-         * -600
-         * -3600
-         * 
-         * Default value: 60
-         */
-        public Builder period(Integer period) {
-            this.putQueryParameter("Period", period);
-            this.period = period;
-            return this;
-        }
-
-        /**
-         * The start time of the snapshot capacity change data. The time follows the [ISO8601](~~ 25696 ~~) standard and uses UTC +0. The format is yyyy-MM-ddTHH:mm:ssZ. If the specified seconds (ss) is not 00, it is automatically converted to the next minute.
+         * StartTime.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

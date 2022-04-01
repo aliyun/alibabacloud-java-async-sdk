@@ -12,25 +12,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSecurityGroupReferencesRequest</p>
  */
 public class DescribeSecurityGroupReferencesRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
-    @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
-    @NameInMap("ResourceOwnerAccount")
-    private String resourceOwnerAccount;
-
     @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
 
     @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
+    @NameInMap("OwnerId")
+    private Long ownerId;
 
     @Query
     @NameInMap("RegionId")
@@ -38,19 +26,31 @@ public class DescribeSecurityGroupReferencesRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Query
     @NameInMap("SecurityGroupId")
     @Validation(required = true)
     private java.util.List < String > securityGroupId;
 
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     private DescribeSecurityGroupReferencesRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
-        this.ownerId = builder.ownerId;
-        this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.ownerAccount = builder.ownerAccount;
-        this.resourceOwnerId = builder.resourceOwnerId;
+        this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
         this.securityGroupId = builder.securityGroupId;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -67,10 +67,10 @@ public class DescribeSecurityGroupReferencesRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return ownerAccount
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     /**
@@ -81,17 +81,17 @@ public class DescribeSecurityGroupReferencesRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
         return this.resourceOwnerAccount;
-    }
-
-    /**
-     * @return ownerAccount
-     */
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
     /**
@@ -102,27 +102,27 @@ public class DescribeSecurityGroupReferencesRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return securityGroupId
      */
     public java.util.List < String > getSecurityGroupId() {
         return this.securityGroupId;
     }
 
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
     public static final class Builder extends Request.Builder<DescribeSecurityGroupReferencesRequest, Builder> {
-        private String sourceRegionId; 
-        private Long ownerId; 
-        private String resourceOwnerAccount; 
         private String ownerAccount; 
-        private Long resourceOwnerId; 
+        private Long ownerId; 
         private String regionId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
         private java.util.List < String > securityGroupId; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -130,21 +130,21 @@ public class DescribeSecurityGroupReferencesRequest extends Request {
 
         private Builder(DescribeSecurityGroupReferencesRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
-            this.ownerId = request.ownerId;
-            this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.ownerAccount = request.ownerAccount;
-            this.resourceOwnerId = request.resourceOwnerId;
+            this.ownerId = request.ownerId;
             this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
             this.securityGroupId = request.securityGroupId;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
-         * SourceRegionId.
+         * OwnerAccount.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
             return this;
         }
 
@@ -158,34 +158,7 @@ public class DescribeSecurityGroupReferencesRequest extends Request {
         }
 
         /**
-         * The account name of the resource master account.
-         */
-        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
-            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-            this.resourceOwnerAccount = resourceOwnerAccount;
-            return this;
-        }
-
-        /**
-         * The logon name of the RAM user.
-         */
-        public Builder ownerAccount(String ownerAccount) {
-            this.putQueryParameter("OwnerAccount", ownerAccount);
-            this.ownerAccount = ownerAccount;
-            return this;
-        }
-
-        /**
-         * The ID of the resource master account, that is, the UID.
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * The region to which the security group belongs.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -194,11 +167,38 @@ public class DescribeSecurityGroupReferencesRequest extends Request {
         }
 
         /**
-         * The nth SecurityGroupId to be queried. Valid values of N: 1 to 10.
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * SecurityGroupId.
          */
         public Builder securityGroupId(java.util.List < String > securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
             this.securityGroupId = securityGroupId;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

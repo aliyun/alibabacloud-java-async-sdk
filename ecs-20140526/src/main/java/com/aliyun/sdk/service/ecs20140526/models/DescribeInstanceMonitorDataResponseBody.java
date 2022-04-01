@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceMonitorDataResponseBody</p>
  */
 public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    private String requestId;
-
     @NameInMap("MonitorData")
     private MonitorData monitorData;
 
+    @NameInMap("RequestId")
+    private String requestId;
+
     private DescribeInstanceMonitorDataResponseBody(Builder builder) {
-        this.requestId = builder.requestId;
         this.monitorData = builder.monitorData;
+        this.requestId = builder.requestId;
     }
 
     public static Builder builder() {
@@ -32,36 +32,36 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
     }
 
     /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    /**
      * @return monitorData
      */
     public MonitorData getMonitorData() {
         return this.monitorData;
     }
 
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static final class Builder {
-        private String requestId; 
         private MonitorData monitorData; 
+        private String requestId; 
 
         /**
-         * The ID of the request.
+         * MonitorData.
          */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
+        public Builder monitorData(MonitorData monitorData) {
+            this.monitorData = monitorData;
             return this;
         }
 
         /**
-         * The monitoring data set of the instance.
+         * RequestId.
          */
-        public Builder monitorData(MonitorData monitorData) {
-            this.monitorData = monitorData;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
@@ -72,41 +72,35 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
     } 
 
     public static class InstanceMonitorData extends TeaModel {
-        @NameInMap("CPUCreditBalance")
-        private Float CPUCreditBalance;
-
         @NameInMap("BPSRead")
         private Integer BPSRead;
-
-        @NameInMap("InternetTX")
-        private Integer internetTX;
-
-        @NameInMap("CPU")
-        private Integer CPU;
-
-        @NameInMap("CPUCreditUsage")
-        private Float CPUCreditUsage;
-
-        @NameInMap("IOPSWrite")
-        private Integer IOPSWrite;
-
-        @NameInMap("IntranetTX")
-        private Integer intranetTX;
-
-        @NameInMap("InstanceId")
-        private String instanceId;
 
         @NameInMap("BPSWrite")
         private Integer BPSWrite;
 
-        @NameInMap("CPUNotpaidSurplusCreditUsage")
-        private Float CPUNotpaidSurplusCreditUsage;
+        @NameInMap("CPU")
+        private Integer CPU;
 
         @NameInMap("CPUAdvanceCreditBalance")
         private Float CPUAdvanceCreditBalance;
 
+        @NameInMap("CPUCreditBalance")
+        private Float CPUCreditBalance;
+
+        @NameInMap("CPUCreditUsage")
+        private Float CPUCreditUsage;
+
+        @NameInMap("CPUNotpaidSurplusCreditUsage")
+        private Float CPUNotpaidSurplusCreditUsage;
+
         @NameInMap("IOPSRead")
         private Integer IOPSRead;
+
+        @NameInMap("IOPSWrite")
+        private Integer IOPSWrite;
+
+        @NameInMap("InstanceId")
+        private String instanceId;
 
         @NameInMap("InternetBandwidth")
         private Integer internetBandwidth;
@@ -114,33 +108,39 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
         @NameInMap("InternetRX")
         private Integer internetRX;
 
-        @NameInMap("TimeStamp")
-        private String timeStamp;
-
-        @NameInMap("IntranetRX")
-        private Integer intranetRX;
+        @NameInMap("InternetTX")
+        private Integer internetTX;
 
         @NameInMap("IntranetBandwidth")
         private Integer intranetBandwidth;
 
+        @NameInMap("IntranetRX")
+        private Integer intranetRX;
+
+        @NameInMap("IntranetTX")
+        private Integer intranetTX;
+
+        @NameInMap("TimeStamp")
+        private String timeStamp;
+
         private InstanceMonitorData(Builder builder) {
-            this.CPUCreditBalance = builder.CPUCreditBalance;
             this.BPSRead = builder.BPSRead;
-            this.internetTX = builder.internetTX;
-            this.CPU = builder.CPU;
-            this.CPUCreditUsage = builder.CPUCreditUsage;
-            this.IOPSWrite = builder.IOPSWrite;
-            this.intranetTX = builder.intranetTX;
-            this.instanceId = builder.instanceId;
             this.BPSWrite = builder.BPSWrite;
-            this.CPUNotpaidSurplusCreditUsage = builder.CPUNotpaidSurplusCreditUsage;
+            this.CPU = builder.CPU;
             this.CPUAdvanceCreditBalance = builder.CPUAdvanceCreditBalance;
+            this.CPUCreditBalance = builder.CPUCreditBalance;
+            this.CPUCreditUsage = builder.CPUCreditUsage;
+            this.CPUNotpaidSurplusCreditUsage = builder.CPUNotpaidSurplusCreditUsage;
             this.IOPSRead = builder.IOPSRead;
+            this.IOPSWrite = builder.IOPSWrite;
+            this.instanceId = builder.instanceId;
             this.internetBandwidth = builder.internetBandwidth;
             this.internetRX = builder.internetRX;
-            this.timeStamp = builder.timeStamp;
-            this.intranetRX = builder.intranetRX;
+            this.internetTX = builder.internetTX;
             this.intranetBandwidth = builder.intranetBandwidth;
+            this.intranetRX = builder.intranetRX;
+            this.intranetTX = builder.intranetTX;
+            this.timeStamp = builder.timeStamp;
         }
 
         public static Builder builder() {
@@ -152,59 +152,10 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
         }
 
         /**
-         * @return CPUCreditBalance
-         */
-        public Float getCPUCreditBalance() {
-            return this.CPUCreditBalance;
-        }
-
-        /**
          * @return BPSRead
          */
         public Integer getBPSRead() {
             return this.BPSRead;
-        }
-
-        /**
-         * @return internetTX
-         */
-        public Integer getInternetTX() {
-            return this.internetTX;
-        }
-
-        /**
-         * @return CPU
-         */
-        public Integer getCPU() {
-            return this.CPU;
-        }
-
-        /**
-         * @return CPUCreditUsage
-         */
-        public Float getCPUCreditUsage() {
-            return this.CPUCreditUsage;
-        }
-
-        /**
-         * @return IOPSWrite
-         */
-        public Integer getIOPSWrite() {
-            return this.IOPSWrite;
-        }
-
-        /**
-         * @return intranetTX
-         */
-        public Integer getIntranetTX() {
-            return this.intranetTX;
-        }
-
-        /**
-         * @return instanceId
-         */
-        public String getInstanceId() {
-            return this.instanceId;
         }
 
         /**
@@ -215,10 +166,10 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
         }
 
         /**
-         * @return CPUNotpaidSurplusCreditUsage
+         * @return CPU
          */
-        public Float getCPUNotpaidSurplusCreditUsage() {
-            return this.CPUNotpaidSurplusCreditUsage;
+        public Integer getCPU() {
+            return this.CPU;
         }
 
         /**
@@ -229,10 +180,45 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
         }
 
         /**
+         * @return CPUCreditBalance
+         */
+        public Float getCPUCreditBalance() {
+            return this.CPUCreditBalance;
+        }
+
+        /**
+         * @return CPUCreditUsage
+         */
+        public Float getCPUCreditUsage() {
+            return this.CPUCreditUsage;
+        }
+
+        /**
+         * @return CPUNotpaidSurplusCreditUsage
+         */
+        public Float getCPUNotpaidSurplusCreditUsage() {
+            return this.CPUNotpaidSurplusCreditUsage;
+        }
+
+        /**
          * @return IOPSRead
          */
         public Integer getIOPSRead() {
             return this.IOPSRead;
+        }
+
+        /**
+         * @return IOPSWrite
+         */
+        public Integer getIOPSWrite() {
+            return this.IOPSWrite;
+        }
+
+        /**
+         * @return instanceId
+         */
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
         /**
@@ -250,10 +236,17 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
         }
 
         /**
-         * @return timeStamp
+         * @return internetTX
          */
-        public String getTimeStamp() {
-            return this.timeStamp;
+        public Integer getInternetTX() {
+            return this.internetTX;
+        }
+
+        /**
+         * @return intranetBandwidth
+         */
+        public Integer getIntranetBandwidth() {
+            return this.intranetBandwidth;
         }
 
         /**
@@ -264,41 +257,40 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
         }
 
         /**
-         * @return intranetBandwidth
+         * @return intranetTX
          */
-        public Integer getIntranetBandwidth() {
-            return this.intranetBandwidth;
+        public Integer getIntranetTX() {
+            return this.intranetTX;
+        }
+
+        /**
+         * @return timeStamp
+         */
+        public String getTimeStamp() {
+            return this.timeStamp;
         }
 
         public static final class Builder {
-            private Float CPUCreditBalance; 
             private Integer BPSRead; 
-            private Integer internetTX; 
-            private Integer CPU; 
-            private Float CPUCreditUsage; 
-            private Integer IOPSWrite; 
-            private Integer intranetTX; 
-            private String instanceId; 
             private Integer BPSWrite; 
-            private Float CPUNotpaidSurplusCreditUsage; 
+            private Integer CPU; 
             private Float CPUAdvanceCreditBalance; 
+            private Float CPUCreditBalance; 
+            private Float CPUCreditUsage; 
+            private Float CPUNotpaidSurplusCreditUsage; 
             private Integer IOPSRead; 
+            private Integer IOPSWrite; 
+            private String instanceId; 
             private Integer internetBandwidth; 
             private Integer internetRX; 
-            private String timeStamp; 
-            private Integer intranetRX; 
+            private Integer internetTX; 
             private Integer intranetBandwidth; 
+            private Integer intranetRX; 
+            private Integer intranetTX; 
+            private String timeStamp; 
 
             /**
-             * The total number of credits for burstable instances.
-             */
-            public Builder CPUCreditBalance(Float CPUCreditBalance) {
-                this.CPUCreditBalance = CPUCreditBalance;
-                return this;
-            }
-
-            /**
-             * The read bandwidth of the instance disk, including the system disk and data disk. Unit: Byte/s.
+             * BPSRead.
              */
             public Builder BPSRead(Integer BPSRead) {
                 this.BPSRead = BPSRead;
@@ -306,55 +298,7 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * When you query monitoring information ("TimeStamp"), the public network data traffic sent by the instance within the specified interval ("1"). Unit: kbits.
-             */
-            public Builder internetTX(Integer internetTX) {
-                this.internetTX = internetTX;
-                return this;
-            }
-
-            /**
-             * The percentage of the vCPU used by the instance. Unit: Percentage (%).
-             */
-            public Builder CPU(Integer CPU) {
-                this.CPU = CPU;
-                return this;
-            }
-
-            /**
-             * The number of credits used by the burstable instance.
-             */
-            public Builder CPUCreditUsage(Float CPUCreditUsage) {
-                this.CPUCreditUsage = CPUCreditUsage;
-                return this;
-            }
-
-            /**
-             * I/O write operations on cloud disks (including system disks and data disks) of the instance. Unit: Times/s.
-             */
-            public Builder IOPSWrite(Integer IOPSWrite) {
-                this.IOPSWrite = IOPSWrite;
-                return this;
-            }
-
-            /**
-             * The intranet data traffic sent by the instance within the specified interval ("timestamp") when the monitoring information is queried. Unit: kbits.
-             */
-            public Builder intranetTX(Integer intranetTX) {
-                this.intranetTX = intranetTX;
-                return this;
-            }
-
-            /**
-             * The ID of the instance.
-             */
-            public Builder instanceId(String instanceId) {
-                this.instanceId = instanceId;
-                return this;
-            }
-
-            /**
-             * The write bandwidth of the cloud disk (including the system disk and data disk) of the instance. Unit: Byte/s.
+             * BPSWrite.
              */
             public Builder BPSWrite(Integer BPSWrite) {
                 this.BPSWrite = BPSWrite;
@@ -362,15 +306,15 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * Excess unpaid points.
+             * CPU.
              */
-            public Builder CPUNotpaidSurplusCreditUsage(Float CPUNotpaidSurplusCreditUsage) {
-                this.CPUNotpaidSurplusCreditUsage = CPUNotpaidSurplusCreditUsage;
+            public Builder CPU(Integer CPU) {
+                this.CPU = CPU;
                 return this;
             }
 
             /**
-             * Excess credits (the excess credits of burstable instances).
+             * CPUAdvanceCreditBalance.
              */
             public Builder CPUAdvanceCreditBalance(Float CPUAdvanceCreditBalance) {
                 this.CPUAdvanceCreditBalance = CPUAdvanceCreditBalance;
@@ -378,7 +322,31 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The I/O read operation of the instance disk (including the system disk and data disk). Unit: Times/s.
+             * CPUCreditBalance.
+             */
+            public Builder CPUCreditBalance(Float CPUCreditBalance) {
+                this.CPUCreditBalance = CPUCreditBalance;
+                return this;
+            }
+
+            /**
+             * CPUCreditUsage.
+             */
+            public Builder CPUCreditUsage(Float CPUCreditUsage) {
+                this.CPUCreditUsage = CPUCreditUsage;
+                return this;
+            }
+
+            /**
+             * CPUNotpaidSurplusCreditUsage.
+             */
+            public Builder CPUNotpaidSurplusCreditUsage(Float CPUNotpaidSurplusCreditUsage) {
+                this.CPUNotpaidSurplusCreditUsage = CPUNotpaidSurplusCreditUsage;
+                return this;
+            }
+
+            /**
+             * IOPSRead.
              */
             public Builder IOPSRead(Integer IOPSRead) {
                 this.IOPSRead = IOPSRead;
@@ -386,7 +354,23 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The Internet bandwidth of the instance. Unit: kbits/s.
+             * IOPSWrite.
+             */
+            public Builder IOPSWrite(Integer IOPSWrite) {
+                this.IOPSWrite = IOPSWrite;
+                return this;
+            }
+
+            /**
+             * InstanceId.
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * InternetBandwidth.
              */
             public Builder internetBandwidth(Integer internetBandwidth) {
                 this.internetBandwidth = internetBandwidth;
@@ -394,7 +378,7 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * When you query monitoring information ("TimeStamp"), the public network data traffic received by the instance within the specified interval ("1"). Unit: kbits.
+             * InternetRX.
              */
             public Builder internetRX(Integer internetRX) {
                 this.internetRX = internetRX;
@@ -402,15 +386,23 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp used to query monitoring information.
+             * InternetTX.
              */
-            public Builder timeStamp(String timeStamp) {
-                this.timeStamp = timeStamp;
+            public Builder internetTX(Integer internetTX) {
+                this.internetTX = internetTX;
                 return this;
             }
 
             /**
-             * The intranet data traffic received by the instance within the specified interval ("renew") when the monitoring information is queried ("TimeStamp"). Unit: kbits.
+             * IntranetBandwidth.
+             */
+            public Builder intranetBandwidth(Integer intranetBandwidth) {
+                this.intranetBandwidth = intranetBandwidth;
+                return this;
+            }
+
+            /**
+             * IntranetRX.
              */
             public Builder intranetRX(Integer intranetRX) {
                 this.intranetRX = intranetRX;
@@ -418,10 +410,18 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The internal bandwidth of the instance. Unit: kbits/s.
+             * IntranetTX.
              */
-            public Builder intranetBandwidth(Integer intranetBandwidth) {
-                this.intranetBandwidth = intranetBandwidth;
+            public Builder intranetTX(Integer intranetTX) {
+                this.intranetTX = intranetTX;
+                return this;
+            }
+
+            /**
+             * TimeStamp.
+             */
+            public Builder timeStamp(String timeStamp) {
+                this.timeStamp = timeStamp;
                 return this;
             }
 

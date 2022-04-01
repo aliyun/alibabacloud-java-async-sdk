@@ -12,13 +12,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAccountAttributesRequest</p>
  */
 public class DescribeAccountAttributesRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("AttributeName")
+    private java.util.List < String > attributeName;
 
     @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
+    @NameInMap("OwnerId")
+    private Long ownerId;
 
     @Query
     @NameInMap("RegionId")
@@ -26,20 +26,30 @@ public class DescribeAccountAttributesRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
+    @Query
     @NameInMap("ZoneId")
     private String zoneId;
 
-    @Query
-    @NameInMap("AttributeName")
-    private java.util.List < String > attributeName;
-
     private DescribeAccountAttributesRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
-        this.resourceOwnerId = builder.resourceOwnerId;
-        this.regionId = builder.regionId;
-        this.zoneId = builder.zoneId;
         this.attributeName = builder.attributeName;
+        this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.sourceRegionId = builder.sourceRegionId;
+        this.zoneId = builder.zoneId;
     }
 
     public static Builder builder() {
@@ -56,17 +66,17 @@ public class DescribeAccountAttributesRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return attributeName
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public java.util.List < String > getAttributeName() {
+        return this.attributeName;
     }
 
     /**
-     * @return resourceOwnerId
+     * @return ownerId
      */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     /**
@@ -77,25 +87,41 @@ public class DescribeAccountAttributesRequest extends Request {
     }
 
     /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
+    /**
      * @return zoneId
      */
     public String getZoneId() {
         return this.zoneId;
     }
 
-    /**
-     * @return attributeName
-     */
-    public java.util.List < String > getAttributeName() {
-        return this.attributeName;
-    }
-
     public static final class Builder extends Request.Builder<DescribeAccountAttributesRequest, Builder> {
-        private String sourceRegionId; 
-        private Long resourceOwnerId; 
-        private String regionId; 
-        private String zoneId; 
         private java.util.List < String > attributeName; 
+        private Long ownerId; 
+        private String regionId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String sourceRegionId; 
+        private String zoneId; 
 
         private Builder() {
             super();
@@ -103,19 +129,48 @@ public class DescribeAccountAttributesRequest extends Request {
 
         private Builder(DescribeAccountAttributesRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
-            this.resourceOwnerId = request.resourceOwnerId;
-            this.regionId = request.regionId;
-            this.zoneId = request.zoneId;
             this.attributeName = request.attributeName;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceRegionId = request.sourceRegionId;
+            this.zoneId = request.zoneId;
         } 
 
         /**
-         * SourceRegionId.
+         * AttributeName.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder attributeName(java.util.List < String > attributeName) {
+            this.putQueryParameter("AttributeName", attributeName);
+            this.attributeName = attributeName;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
             return this;
         }
 
@@ -129,49 +184,20 @@ public class DescribeAccountAttributesRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
+         * SourceRegionId.
          */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 
         /**
-         * The ID of the zone.
+         * ZoneId.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
             this.zoneId = zoneId;
-            return this;
-        }
-
-        /**
-         * You can call this operation to query the quota of a resource in a specified region. Valid values of N: 1 to 8. Valid values:
-         * <p>
-         * 
-         * -instance-network-type: optional network type.
-         * -max-security-groups: the number of security groups.
-         * -max-elastic-network-interfaces: the number of enis.
-         * -max-postpaid-instance-vcpu-count: the maximum number of vCPU cores for a pay-as-you-go instance.
-         * -max-spot-instance-vcpu-count: the maximum number of VCPUs in a preemptible instance.
-         * -used-postpaid-instance-vcpu-count: the number of vCPU cores of a pay-as-you-go instance.
-         * -used-spot-instance-vcpu-count: the number of vCPU cores of a preemptible instance.
-         * -max-postpaid-yundisk-capacity: the maximum capacity of a pay-as-you-go cloud disk used as a data disk.
-         * -used-postpaid-yundisk-capacity: the capacity of a pay-as-you-go cloud disk used as a data disk.
-         * -max-dedicated-hosts: the number of dedicated hosts.
-         * -supported-postpaid-instance-types: pay-as-you-go I/O optimized instance types.
-         * -max-axt-command-count: the number of cloud assistant commands.
-         * -max-axt-invocation-daily: the number of cloud assistant commands that can be executed per day.
-         * -real-name-authentication: indicates whether the account has completed real-name authentication.
-         * 
-         * > you can create ECS instances in mainland china only after you complete real-name authentication.
-         * 
-         * The default value is null.
-         */
-        public Builder attributeName(java.util.List < String > attributeName) {
-            this.putQueryParameter("AttributeName", attributeName);
-            this.attributeName = attributeName;
             return this;
         }
 

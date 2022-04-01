@@ -12,8 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeImageSharePermissionResponseBody</p>
  */
 public class DescribeImageSharePermissionResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    private String requestId;
+    @NameInMap("Accounts")
+    private Accounts accounts;
+
+    @NameInMap("ImageId")
+    private String imageId;
 
     @NameInMap("PageNumber")
     private Integer pageNumber;
@@ -21,30 +24,27 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
     @NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("TotalCount")
-    private Integer totalCount;
-
-    @NameInMap("ImageId")
-    private String imageId;
-
     @NameInMap("RegionId")
     private String regionId;
+
+    @NameInMap("RequestId")
+    private String requestId;
 
     @NameInMap("ShareGroups")
     private ShareGroups shareGroups;
 
-    @NameInMap("Accounts")
-    private Accounts accounts;
+    @NameInMap("TotalCount")
+    private Integer totalCount;
 
     private DescribeImageSharePermissionResponseBody(Builder builder) {
-        this.requestId = builder.requestId;
+        this.accounts = builder.accounts;
+        this.imageId = builder.imageId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.totalCount = builder.totalCount;
-        this.imageId = builder.imageId;
         this.regionId = builder.regionId;
+        this.requestId = builder.requestId;
         this.shareGroups = builder.shareGroups;
-        this.accounts = builder.accounts;
+        this.totalCount = builder.totalCount;
     }
 
     public static Builder builder() {
@@ -56,10 +56,17 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
     }
 
     /**
-     * @return requestId
+     * @return accounts
      */
-    public String getRequestId() {
-        return this.requestId;
+    public Accounts getAccounts() {
+        return this.accounts;
+    }
+
+    /**
+     * @return imageId
+     */
+    public String getImageId() {
+        return this.imageId;
     }
 
     /**
@@ -77,24 +84,17 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
     }
 
     /**
-     * @return totalCount
-     */
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
-    /**
-     * @return imageId
-     */
-    public String getImageId() {
-        return this.imageId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
     }
 
     /**
@@ -105,56 +105,32 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
     }
 
     /**
-     * @return accounts
+     * @return totalCount
      */
-    public Accounts getAccounts() {
-        return this.accounts;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static final class Builder {
-        private String requestId; 
+        private Accounts accounts; 
+        private String imageId; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private Integer totalCount; 
-        private String imageId; 
         private String regionId; 
+        private String requestId; 
         private ShareGroups shareGroups; 
-        private Accounts accounts; 
+        private Integer totalCount; 
 
         /**
-         * The ID of the request.
+         * Accounts.
          */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
+        public Builder accounts(Accounts accounts) {
+            this.accounts = accounts;
             return this;
         }
 
         /**
-         * The page number of the query result.
-         */
-        public Builder pageNumber(Integer pageNumber) {
-            this.pageNumber = pageNumber;
-            return this;
-        }
-
-        /**
-         * The number of entries per page.
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * The total number of records.
-         */
-        public Builder totalCount(Integer totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-
-        /**
-         * The ID of the custom image.
+         * ImageId.
          */
         public Builder imageId(String imageId) {
             this.imageId = imageId;
@@ -162,7 +138,23 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the region to which the image belongs.
+         * PageNumber.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -170,7 +162,15 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
         }
 
         /**
-         * A shared group.
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * ShareGroups.
          */
         public Builder shareGroups(ShareGroups shareGroups) {
             this.shareGroups = shareGroups;
@@ -178,10 +178,10 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
         }
 
         /**
-         * Registered users of Alibaba Cloud.
+         * TotalCount.
          */
-        public Builder accounts(Accounts accounts) {
-            this.accounts = accounts;
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
@@ -191,88 +191,6 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
 
     } 
 
-    public static class ShareGroup extends TeaModel {
-        @NameInMap("Group")
-        private String group;
-
-        private ShareGroup(Builder builder) {
-            this.group = builder.group;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static ShareGroup create() {
-            return builder().build();
-        }
-
-        /**
-         * @return group
-         */
-        public String getGroup() {
-            return this.group;
-        }
-
-        public static final class Builder {
-            private String group; 
-
-            /**
-             * A shared group.
-             */
-            public Builder group(String group) {
-                this.group = group;
-                return this;
-            }
-
-            public ShareGroup build() {
-                return new ShareGroup(this);
-            } 
-
-        } 
-
-    }
-    public static class ShareGroups extends TeaModel {
-        @NameInMap("ShareGroup")
-        private java.util.List < ShareGroup> shareGroup;
-
-        private ShareGroups(Builder builder) {
-            this.shareGroup = builder.shareGroup;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static ShareGroups create() {
-            return builder().build();
-        }
-
-        /**
-         * @return shareGroup
-         */
-        public java.util.List < ShareGroup> getShareGroup() {
-            return this.shareGroup;
-        }
-
-        public static final class Builder {
-            private java.util.List < ShareGroup> shareGroup; 
-
-            /**
-             * ShareGroup.
-             */
-            public Builder shareGroup(java.util.List < ShareGroup> shareGroup) {
-                this.shareGroup = shareGroup;
-                return this;
-            }
-
-            public ShareGroups build() {
-                return new ShareGroups(this);
-            } 
-
-        } 
-
-    }
     public static class Account extends TeaModel {
         @NameInMap("AliyunId")
         private String aliyunId;
@@ -300,7 +218,7 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
             private String aliyunId; 
 
             /**
-             * The ID of the Alibaba cloud account.
+             * AliyunId.
              */
             public Builder aliyunId(String aliyunId) {
                 this.aliyunId = aliyunId;
@@ -350,6 +268,88 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
 
             public Accounts build() {
                 return new Accounts(this);
+            } 
+
+        } 
+
+    }
+    public static class ShareGroup extends TeaModel {
+        @NameInMap("Group")
+        private String group;
+
+        private ShareGroup(Builder builder) {
+            this.group = builder.group;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ShareGroup create() {
+            return builder().build();
+        }
+
+        /**
+         * @return group
+         */
+        public String getGroup() {
+            return this.group;
+        }
+
+        public static final class Builder {
+            private String group; 
+
+            /**
+             * Group.
+             */
+            public Builder group(String group) {
+                this.group = group;
+                return this;
+            }
+
+            public ShareGroup build() {
+                return new ShareGroup(this);
+            } 
+
+        } 
+
+    }
+    public static class ShareGroups extends TeaModel {
+        @NameInMap("ShareGroup")
+        private java.util.List < ShareGroup> shareGroup;
+
+        private ShareGroups(Builder builder) {
+            this.shareGroup = builder.shareGroup;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ShareGroups create() {
+            return builder().build();
+        }
+
+        /**
+         * @return shareGroup
+         */
+        public java.util.List < ShareGroup> getShareGroup() {
+            return this.shareGroup;
+        }
+
+        public static final class Builder {
+            private java.util.List < ShareGroup> shareGroup; 
+
+            /**
+             * ShareGroup.
+             */
+            public Builder shareGroup(java.util.List < ShareGroup> shareGroup) {
+                this.shareGroup = shareGroup;
+                return this;
+            }
+
+            public ShareGroups build() {
+                return new ShareGroups(this);
             } 
 
         } 

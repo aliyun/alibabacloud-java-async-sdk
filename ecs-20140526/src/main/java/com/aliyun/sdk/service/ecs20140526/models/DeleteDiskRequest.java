@@ -12,9 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteDiskRequest</p>
  */
 public class DeleteDiskRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("DiskId")
+    @Validation(required = true)
+    private String diskId;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -32,19 +33,18 @@ public class DeleteDiskRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("DiskId")
-    @Validation(required = true)
-    private String diskId;
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     private DeleteDiskRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
+        this.diskId = builder.diskId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.diskId = builder.diskId;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -61,10 +61,10 @@ public class DeleteDiskRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return diskId
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getDiskId() {
+        return this.diskId;
     }
 
     /**
@@ -96,19 +96,19 @@ public class DeleteDiskRequest extends Request {
     }
 
     /**
-     * @return diskId
+     * @return sourceRegionId
      */
-    public String getDiskId() {
-        return this.diskId;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public static final class Builder extends Request.Builder<DeleteDiskRequest, Builder> {
-        private String sourceRegionId; 
+        private String diskId; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String diskId; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -116,20 +116,20 @@ public class DeleteDiskRequest extends Request {
 
         private Builder(DeleteDiskRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
+            this.diskId = request.diskId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.diskId = request.diskId;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
-         * SourceRegionId.
+         * DiskId.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder diskId(String diskId) {
+            this.putQueryParameter("DiskId", diskId);
+            this.diskId = diskId;
             return this;
         }
 
@@ -143,7 +143,7 @@ public class DeleteDiskRequest extends Request {
         }
 
         /**
-         * The ID of the RAM user.
+         * OwnerId.
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -152,7 +152,7 @@ public class DeleteDiskRequest extends Request {
         }
 
         /**
-         * The account name of the resource master account.
+         * ResourceOwnerAccount.
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
             this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
@@ -161,7 +161,7 @@ public class DeleteDiskRequest extends Request {
         }
 
         /**
-         * The ID of the resource master account, that is, the UID.
+         * ResourceOwnerId.
          */
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
@@ -170,11 +170,11 @@ public class DeleteDiskRequest extends Request {
         }
 
         /**
-         * The ID of the cloud disk device to be released.
+         * SourceRegionId.
          */
-        public Builder diskId(String diskId) {
-            this.putQueryParameter("DiskId", diskId);
-            this.diskId = diskId;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

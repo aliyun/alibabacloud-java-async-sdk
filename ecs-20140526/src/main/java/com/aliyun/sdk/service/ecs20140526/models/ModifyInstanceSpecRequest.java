@@ -13,46 +13,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyInstanceSpecRequest extends Request {
     @Query
+    @NameInMap("SystemDisk")
+    private SystemDisk systemDisk;
+
+    @Query
     @NameInMap("Temporary")
     private Temporary temporary;
 
     @Query
-    @NameInMap("SystemDisk")
-    private SystemDisk systemDisk;
-
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
-    @Query
-    @NameInMap("OwnerAccount")
-    private String ownerAccount;
-
-    @Query
-    @NameInMap("ResourceOwnerAccount")
-    private String resourceOwnerAccount;
-
-    @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
-
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
-    private String instanceId;
-
-    @Query
-    @NameInMap("InternetMaxBandwidthOut")
-    private Integer internetMaxBandwidthOut;
-
-    @Query
-    @NameInMap("InternetMaxBandwidthIn")
-    @Validation(maximum = 200, minimum = 1)
-    private Integer internetMaxBandwidthIn;
+    @NameInMap("AllowMigrateAcrossZone")
+    private Boolean allowMigrateAcrossZone;
 
     @Query
     @NameInMap("Async")
@@ -63,29 +33,59 @@ public class ModifyInstanceSpecRequest extends Request {
     private String clientToken;
 
     @Query
+    @NameInMap("InstanceId")
+    @Validation(required = true)
+    private String instanceId;
+
+    @Query
     @NameInMap("InstanceType")
     private String instanceType;
 
     @Query
-    @NameInMap("AllowMigrateAcrossZone")
-    private Boolean allowMigrateAcrossZone;
+    @NameInMap("InternetMaxBandwidthIn")
+    @Validation(maximum = 200, minimum = 1)
+    private Integer internetMaxBandwidthIn;
+
+    @Query
+    @NameInMap("InternetMaxBandwidthOut")
+    private Integer internetMaxBandwidthOut;
+
+    @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
+
+    @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     private ModifyInstanceSpecRequest(Builder builder) {
         super(builder);
-        this.temporary = builder.temporary;
         this.systemDisk = builder.systemDisk;
-        this.sourceRegionId = builder.sourceRegionId;
-        this.ownerAccount = builder.ownerAccount;
-        this.resourceOwnerAccount = builder.resourceOwnerAccount;
-        this.ownerId = builder.ownerId;
-        this.resourceOwnerId = builder.resourceOwnerId;
-        this.instanceId = builder.instanceId;
-        this.internetMaxBandwidthOut = builder.internetMaxBandwidthOut;
-        this.internetMaxBandwidthIn = builder.internetMaxBandwidthIn;
+        this.temporary = builder.temporary;
+        this.allowMigrateAcrossZone = builder.allowMigrateAcrossZone;
         this.async = builder.async;
         this.clientToken = builder.clientToken;
+        this.instanceId = builder.instanceId;
         this.instanceType = builder.instanceType;
-        this.allowMigrateAcrossZone = builder.allowMigrateAcrossZone;
+        this.internetMaxBandwidthIn = builder.internetMaxBandwidthIn;
+        this.internetMaxBandwidthOut = builder.internetMaxBandwidthOut;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -102,13 +102,6 @@ public class ModifyInstanceSpecRequest extends Request {
     }
 
     /**
-     * @return temporary
-     */
-    public Temporary getTemporary() {
-        return this.temporary;
-    }
-
-    /**
      * @return systemDisk
      */
     public SystemDisk getSystemDisk() {
@@ -116,59 +109,17 @@ public class ModifyInstanceSpecRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return temporary
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public Temporary getTemporary() {
+        return this.temporary;
     }
 
     /**
-     * @return ownerAccount
+     * @return allowMigrateAcrossZone
      */
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    /**
-     * @return resourceOwnerAccount
-     */
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
-     * @return resourceOwnerId
-     */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    /**
-     * @return instanceId
-     */
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    /**
-     * @return internetMaxBandwidthOut
-     */
-    public Integer getInternetMaxBandwidthOut() {
-        return this.internetMaxBandwidthOut;
-    }
-
-    /**
-     * @return internetMaxBandwidthIn
-     */
-    public Integer getInternetMaxBandwidthIn() {
-        return this.internetMaxBandwidthIn;
+    public Boolean getAllowMigrateAcrossZone() {
+        return this.allowMigrateAcrossZone;
     }
 
     /**
@@ -186,6 +137,13 @@ public class ModifyInstanceSpecRequest extends Request {
     }
 
     /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    /**
      * @return instanceType
      */
     public String getInstanceType() {
@@ -193,27 +151,69 @@ public class ModifyInstanceSpecRequest extends Request {
     }
 
     /**
-     * @return allowMigrateAcrossZone
+     * @return internetMaxBandwidthIn
      */
-    public Boolean getAllowMigrateAcrossZone() {
-        return this.allowMigrateAcrossZone;
+    public Integer getInternetMaxBandwidthIn() {
+        return this.internetMaxBandwidthIn;
+    }
+
+    /**
+     * @return internetMaxBandwidthOut
+     */
+    public Integer getInternetMaxBandwidthOut() {
+        return this.internetMaxBandwidthOut;
+    }
+
+    /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public static final class Builder extends Request.Builder<ModifyInstanceSpecRequest, Builder> {
-        private Temporary temporary; 
         private SystemDisk systemDisk; 
-        private String sourceRegionId; 
-        private String ownerAccount; 
-        private String resourceOwnerAccount; 
-        private Long ownerId; 
-        private Long resourceOwnerId; 
-        private String instanceId; 
-        private Integer internetMaxBandwidthOut; 
-        private Integer internetMaxBandwidthIn; 
+        private Temporary temporary; 
+        private Boolean allowMigrateAcrossZone; 
         private Boolean async; 
         private String clientToken; 
+        private String instanceId; 
         private String instanceType; 
-        private Boolean allowMigrateAcrossZone; 
+        private Integer internetMaxBandwidthIn; 
+        private Integer internetMaxBandwidthOut; 
+        private String ownerAccount; 
+        private Long ownerId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -221,30 +221,21 @@ public class ModifyInstanceSpecRequest extends Request {
 
         private Builder(ModifyInstanceSpecRequest request) {
             super(request);
-            this.temporary = request.temporary;
             this.systemDisk = request.systemDisk;
-            this.sourceRegionId = request.sourceRegionId;
-            this.ownerAccount = request.ownerAccount;
-            this.resourceOwnerAccount = request.resourceOwnerAccount;
-            this.ownerId = request.ownerId;
-            this.resourceOwnerId = request.resourceOwnerId;
-            this.instanceId = request.instanceId;
-            this.internetMaxBandwidthOut = request.internetMaxBandwidthOut;
-            this.internetMaxBandwidthIn = request.internetMaxBandwidthIn;
+            this.temporary = request.temporary;
+            this.allowMigrateAcrossZone = request.allowMigrateAcrossZone;
             this.async = request.async;
             this.clientToken = request.clientToken;
+            this.instanceId = request.instanceId;
             this.instanceType = request.instanceType;
-            this.allowMigrateAcrossZone = request.allowMigrateAcrossZone;
+            this.internetMaxBandwidthIn = request.internetMaxBandwidthIn;
+            this.internetMaxBandwidthOut = request.internetMaxBandwidthOut;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceRegionId = request.sourceRegionId;
         } 
-
-        /**
-         * Temporary.
-         */
-        public Builder temporary(Temporary temporary) {
-            this.putQueryParameter("Temporary", temporary);
-            this.temporary = temporary;
-            return this;
-        }
 
         /**
          * SystemDisk.
@@ -256,11 +247,74 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * SourceRegionId.
+         * Temporary.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder temporary(Temporary temporary) {
+            this.putQueryParameter("Temporary", temporary);
+            this.temporary = temporary;
+            return this;
+        }
+
+        /**
+         * AllowMigrateAcrossZone.
+         */
+        public Builder allowMigrateAcrossZone(Boolean allowMigrateAcrossZone) {
+            this.putQueryParameter("AllowMigrateAcrossZone", allowMigrateAcrossZone);
+            this.allowMigrateAcrossZone = allowMigrateAcrossZone;
+            return this;
+        }
+
+        /**
+         * Async.
+         */
+        public Builder async(Boolean async) {
+            this.putQueryParameter("Async", async);
+            this.async = async;
+            return this;
+        }
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * InstanceId.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * InstanceType.
+         */
+        public Builder instanceType(String instanceType) {
+            this.putQueryParameter("InstanceType", instanceType);
+            this.instanceType = instanceType;
+            return this;
+        }
+
+        /**
+         * InternetMaxBandwidthIn.
+         */
+        public Builder internetMaxBandwidthIn(Integer internetMaxBandwidthIn) {
+            this.putQueryParameter("InternetMaxBandwidthIn", internetMaxBandwidthIn);
+            this.internetMaxBandwidthIn = internetMaxBandwidthIn;
+            return this;
+        }
+
+        /**
+         * InternetMaxBandwidthOut.
+         */
+        public Builder internetMaxBandwidthOut(Integer internetMaxBandwidthOut) {
+            this.putQueryParameter("InternetMaxBandwidthOut", internetMaxBandwidthOut);
+            this.internetMaxBandwidthOut = internetMaxBandwidthOut;
             return this;
         }
 
@@ -274,16 +328,7 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * The account name of the resource master account.
-         */
-        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
-            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-            this.resourceOwnerAccount = resourceOwnerAccount;
-            return this;
-        }
-
-        /**
-         * The ID of the RAM user.
+         * OwnerId.
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -292,7 +337,16 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * The ID of the resource master account, that is, the UID.
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
          */
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
@@ -301,93 +355,11 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * SourceRegionId.
          */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * The maximum outbound Internet bandwidth. Unit: Mbit/s(Megabit per second). Valid values: 0 to 100.
-         * <p>
-         * 
-         * > **pay-by-traffic** mode: The peak inbound and outbound bandwidth is the upper limit of the bandwidth and is not used as a service commitment indicator. When a resource scramble occurs, the peak bandwidth may be limited. If your business needs to be guaranteed by bandwidth, use the **pay-by-bandwidth** mode.
-         * 
-         * 
-         */
-        public Builder internetMaxBandwidthOut(Integer internetMaxBandwidthOut) {
-            this.putQueryParameter("InternetMaxBandwidthOut", internetMaxBandwidthOut);
-            this.internetMaxBandwidthOut = internetMaxBandwidthOut;
-            return this;
-        }
-
-        /**
-         * The maximum inbound public bandwidth. Unit: Mbit/s(Megabit per second). Valid values:
-         * <p>
-         * 
-         * -When the purchased internet outbound bandwidth is less than or equal to 10 Mbit/s: 1 to 10, the default value is 10.
-         * -When the purchased public outbound bandwidth is greater than 10 Mbit/s: 1 to "InternetMaxBandwidthOut". The default value is "InternetMaxBandwidthOut.
-         * 
-         * > **pay-by-traffic** mode: The peak inbound and outbound bandwidth is the upper limit of the bandwidth and is not used as a service commitment indicator. When a resource scramble occurs, the peak bandwidth may be limited. If your business needs to be guaranteed by bandwidth, use the **pay-by-bandwidth** mode.
-         * 
-         */
-        public Builder internetMaxBandwidthIn(Integer internetMaxBandwidthIn) {
-            this.putQueryParameter("InternetMaxBandwidthIn", internetMaxBandwidthIn);
-            this.internetMaxBandwidthIn = internetMaxBandwidthIn;
-            return this;
-        }
-
-        /**
-         * Specifies whether to submit an asynchronous request.
-         * <p>
-         * 
-         * Default value: false
-         */
-        public Builder async(Boolean async) {
-            this.putQueryParameter("Async", async);
-            this.async = async;
-            return this;
-        }
-
-        /**
-         * Ensure the idempotence of the request. Generate a parameter value from your client. Make sure that the value is unique among different requests. **ClientToken** supports only ASCII characters and cannot exceed 64 characters. For more information, see [how to ensure idempotence](~~ 25693 ~~).
-         */
-        public Builder clientToken(String clientToken) {
-            this.putQueryParameter("ClientToken", clientToken);
-            this.clientToken = clientToken;
-            return this;
-        }
-
-        /**
-         * The target instance type. For more information, see [instance type family](~~ 25378 ~~), or call [DescribeInstanceTypes](~~ 25620 ~~) to obtain the latest specification.
-         */
-        public Builder instanceType(String instanceType) {
-            this.putQueryParameter("InstanceType", instanceType);
-            this.instanceType = instanceType;
-            return this;
-        }
-
-        /**
-         * Indicates whether the instance type can be upgraded across clusters.
-         * <p>
-         * 
-         * Default value: false
-         * 
-         * When "AllowMigrateAcrossZone" is set to true, note the following when you upgrade the ecs instance based on the returned information:
-         * 
-         * Classic network type instance:
-         * 
-         * * For [phased-out instance types](~~ 55263 ~~), when a non-I/O optimized instance is changed to an I/O optimized instance, the private ip address, disk device name, and software authorization code of the instance change. For Linux instances, basic cloud disks ("cloud") are identified as **xvda** or **xvdb**, and ultra cloud disks ("cloud_efficiency ") and SSD cloud disks ("cloud_ssd") are identified as **vda** or **vdb.
-         * 
-         * * For [normal instance type families](~~ 25378 ~~), the private ip address of the instance changes.
-         * 
-         * VPC instances: for [phased-out instance types](~~ 55263 ~~), when a non-I/O optimized instance is changed to an I/O optimized instance, the disk device name and software authorization code of the ecs instance change. For Linux instances, basic cloud disks ("cloud") are identified as **xvda** or **xvdb**, and ultra cloud disks ("cloud_efficiency ") and SSD cloud disks ("cloud_ssd") are identified as **vda** or **vdb.
-         */
-        public Builder allowMigrateAcrossZone(Boolean allowMigrateAcrossZone) {
-            this.putQueryParameter("AllowMigrateAcrossZone", allowMigrateAcrossZone);
-            this.allowMigrateAcrossZone = allowMigrateAcrossZone;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 
@@ -398,93 +370,6 @@ public class ModifyInstanceSpecRequest extends Request {
 
     } 
 
-    public static class Temporary extends TeaModel {
-        @NameInMap("StartTime")
-        private String startTime;
-
-        @NameInMap("EndTime")
-        private String endTime;
-
-        @NameInMap("InternetMaxBandwidthOut")
-        @Validation(maximum = 100, minimum = 1)
-        private Integer internetMaxBandwidthOut;
-
-        private Temporary(Builder builder) {
-            this.startTime = builder.startTime;
-            this.endTime = builder.endTime;
-            this.internetMaxBandwidthOut = builder.internetMaxBandwidthOut;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Temporary create() {
-            return builder().build();
-        }
-
-        /**
-         * @return startTime
-         */
-        public String getStartTime() {
-            return this.startTime;
-        }
-
-        /**
-         * @return endTime
-         */
-        public String getEndTime() {
-            return this.endTime;
-        }
-
-        /**
-         * @return internetMaxBandwidthOut
-         */
-        public Integer getInternetMaxBandwidthOut() {
-            return this.internetMaxBandwidthOut;
-        }
-
-        public static final class Builder {
-            private String startTime; 
-            private String endTime; 
-            private Integer internetMaxBandwidthOut; 
-
-            /**
-             * StartTime.
-             */
-            public Builder startTime(String startTime) {
-                this.startTime = startTime;
-                return this;
-            }
-
-            /**
-             * EndTime.
-             */
-            public Builder endTime(String endTime) {
-                this.endTime = endTime;
-                return this;
-            }
-
-            /**
-             * The maximum outbound Internet bandwidth. Unit: Mbit/s(Megabit per second). Valid values: 0 to 100.
-             * <p>
-             * 
-             * > **pay-by-traffic** mode: The peak inbound and outbound bandwidth is the upper limit of the bandwidth and is not used as a service commitment indicator. When a resource scramble occurs, the peak bandwidth may be limited. If your business needs to be guaranteed by bandwidth, use the **pay-by-bandwidth** mode.
-             * 
-             * 
-             */
-            public Builder internetMaxBandwidthOut(Integer internetMaxBandwidthOut) {
-                this.internetMaxBandwidthOut = internetMaxBandwidthOut;
-                return this;
-            }
-
-            public Temporary build() {
-                return new Temporary(this);
-            } 
-
-        } 
-
-    }
     public static class SystemDisk extends TeaModel {
         @NameInMap("Category")
         private String category;
@@ -512,12 +397,7 @@ public class ModifyInstanceSpecRequest extends Request {
             private String category; 
 
             /**
-             * Change the system disk type. This parameter is valid only when the instance type is upgraded from [phased-out instance type](~~ 55263 ~~) to [normal instance type family](~~ 25378 ~~), and the non-I/O optimized instance type is upgraded to the I/O optimized instance type. Valid values:
-             * <p>
-             * 
-             * -cloud_efficiency: Ultra disk
-             * 
-             * -cloud_ssd:SSD cloud disk
+             * Category.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -526,6 +406,88 @@ public class ModifyInstanceSpecRequest extends Request {
 
             public SystemDisk build() {
                 return new SystemDisk(this);
+            } 
+
+        } 
+
+    }
+    public static class Temporary extends TeaModel {
+        @NameInMap("EndTime")
+        private String endTime;
+
+        @NameInMap("InternetMaxBandwidthOut")
+        @Validation(maximum = 100, minimum = 1)
+        private Integer internetMaxBandwidthOut;
+
+        @NameInMap("StartTime")
+        private String startTime;
+
+        private Temporary(Builder builder) {
+            this.endTime = builder.endTime;
+            this.internetMaxBandwidthOut = builder.internetMaxBandwidthOut;
+            this.startTime = builder.startTime;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Temporary create() {
+            return builder().build();
+        }
+
+        /**
+         * @return endTime
+         */
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        /**
+         * @return internetMaxBandwidthOut
+         */
+        public Integer getInternetMaxBandwidthOut() {
+            return this.internetMaxBandwidthOut;
+        }
+
+        /**
+         * @return startTime
+         */
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public static final class Builder {
+            private String endTime; 
+            private Integer internetMaxBandwidthOut; 
+            private String startTime; 
+
+            /**
+             * EndTime.
+             */
+            public Builder endTime(String endTime) {
+                this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * InternetMaxBandwidthOut.
+             */
+            public Builder internetMaxBandwidthOut(Integer internetMaxBandwidthOut) {
+                this.internetMaxBandwidthOut = internetMaxBandwidthOut;
+                return this;
+            }
+
+            /**
+             * StartTime.
+             */
+            public Builder startTime(String startTime) {
+                this.startTime = startTime;
+                return this;
+            }
+
+            public Temporary build() {
+                return new Temporary(this);
             } 
 
         } 

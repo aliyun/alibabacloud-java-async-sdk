@@ -12,25 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RenewDedicatedHostsRequest</p>
  */
 public class RenewDedicatedHostsRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
-    @NameInMap("ResourceOwnerAccount")
-    private String resourceOwnerAccount;
-
-    @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
-
-    @Query
-    @NameInMap("OwnerAccount")
-    private String ownerAccount;
+    @NameInMap("ClientToken")
+    private String clientToken;
 
     @Query
     @NameInMap("DedicatedHostIds")
@@ -38,9 +22,12 @@ public class RenewDedicatedHostsRequest extends Request {
     private String dedicatedHostIds;
 
     @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
 
     @Query
     @NameInMap("Period")
@@ -52,21 +39,34 @@ public class RenewDedicatedHostsRequest extends Request {
     private String periodUnit;
 
     @Query
-    @NameInMap("ClientToken")
-    private String clientToken;
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
+    @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     private RenewDedicatedHostsRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
-        this.ownerId = builder.ownerId;
-        this.resourceOwnerAccount = builder.resourceOwnerAccount;
-        this.resourceOwnerId = builder.resourceOwnerId;
-        this.ownerAccount = builder.ownerAccount;
+        this.clientToken = builder.clientToken;
         this.dedicatedHostIds = builder.dedicatedHostIds;
-        this.regionId = builder.regionId;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
-        this.clientToken = builder.clientToken;
+        this.regionId = builder.regionId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -83,38 +83,10 @@ public class RenewDedicatedHostsRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return clientToken
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
-     * @return resourceOwnerAccount
-     */
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    /**
-     * @return resourceOwnerId
-     */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    /**
-     * @return ownerAccount
-     */
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -125,10 +97,17 @@ public class RenewDedicatedHostsRequest extends Request {
     }
 
     /**
-     * @return regionId
+     * @return ownerAccount
      */
-    public String getRegionId() {
-        return this.regionId;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     /**
@@ -146,23 +125,44 @@ public class RenewDedicatedHostsRequest extends Request {
     }
 
     /**
-     * @return clientToken
+     * @return regionId
      */
-    public String getClientToken() {
-        return this.clientToken;
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public static final class Builder extends Request.Builder<RenewDedicatedHostsRequest, Builder> {
-        private String sourceRegionId; 
-        private Long ownerId; 
-        private String resourceOwnerAccount; 
-        private Long resourceOwnerId; 
-        private String ownerAccount; 
+        private String clientToken; 
         private String dedicatedHostIds; 
-        private String regionId; 
+        private String ownerAccount; 
+        private Long ownerId; 
         private Integer period; 
         private String periodUnit; 
-        private String clientToken; 
+        private String regionId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -170,24 +170,42 @@ public class RenewDedicatedHostsRequest extends Request {
 
         private Builder(RenewDedicatedHostsRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
-            this.ownerId = request.ownerId;
-            this.resourceOwnerAccount = request.resourceOwnerAccount;
-            this.resourceOwnerId = request.resourceOwnerId;
-            this.ownerAccount = request.ownerAccount;
+            this.clientToken = request.clientToken;
             this.dedicatedHostIds = request.dedicatedHostIds;
-            this.regionId = request.regionId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
             this.period = request.period;
             this.periodUnit = request.periodUnit;
-            this.clientToken = request.clientToken;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
-         * SourceRegionId.
+         * ClientToken.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * DedicatedHostIds.
+         */
+        public Builder dedicatedHostIds(String dedicatedHostIds) {
+            this.putQueryParameter("DedicatedHostIds", dedicatedHostIds);
+            this.dedicatedHostIds = dedicatedHostIds;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
             return this;
         }
 
@@ -197,6 +215,33 @@ public class RenewDedicatedHostsRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * Period.
+         */
+        public Builder period(Integer period) {
+            this.putQueryParameter("Period", period);
+            this.period = period;
+            return this;
+        }
+
+        /**
+         * PeriodUnit.
+         */
+        public Builder periodUnit(String periodUnit) {
+            this.putQueryParameter("PeriodUnit", periodUnit);
+            this.periodUnit = periodUnit;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
@@ -219,62 +264,11 @@ public class RenewDedicatedHostsRequest extends Request {
         }
 
         /**
-         * OwnerAccount.
+         * SourceRegionId.
          */
-        public Builder ownerAccount(String ownerAccount) {
-            this.putQueryParameter("OwnerAccount", ownerAccount);
-            this.ownerAccount = ownerAccount;
-            return this;
-        }
-
-        /**
-         * The ID of the dedicated host. You can enter up to 100 subscription DDH IDs. The IDs of multiple dedicated hosts are in the same format as "["dh-xxxxxxxxx", "dh-yyyyyyyyy",... The JSON Array of "dh-zzzzzzz"]". Separate IDs with commas (,).
-         */
-        public Builder dedicatedHostIds(String dedicatedHostIds) {
-            this.putQueryParameter("DedicatedHostIds", dedicatedHostIds);
-            this.dedicatedHostIds = dedicatedHostIds;
-            return this;
-        }
-
-        /**
-         * The ID of the region to which the dedicated host belongs. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The renewal period. Valid values: For more information, see the description of the "$dune" parameter.
-         */
-        public Builder period(Integer period) {
-            this.putQueryParameter("Period", period);
-            this.period = period;
-            return this;
-        }
-
-        /**
-         * The renewal period. Unit. Valid values:
-         * <p>
-         * 
-         * -Week: Week. The value range of the "1" parameter is {1, 2, 3, 4}.
-         * 
-         * -Month (default): Month. The value range of the "$" parameter is {1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, 60}.
-         * 
-         */
-        public Builder periodUnit(String periodUnit) {
-            this.putQueryParameter("PeriodUnit", periodUnit);
-            this.periodUnit = periodUnit;
-            return this;
-        }
-
-        /**
-         * Ensure the idempotence of the request. Generate a parameter value from your client. Make sure that the value is unique among different requests. Only ASCII characters are supported and cannot exceed 64 characters in length. For more information, see [how to ensure idempotence](~~ 25693 ~~).
-         */
-        public Builder clientToken(String clientToken) {
-            this.putQueryParameter("ClientToken", clientToken);
-            this.clientToken = clientToken;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

@@ -12,13 +12,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyInstanceMetadataOptionsRequest</p>
  */
 public class ModifyInstanceMetadataOptionsRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("HttpEndpoint")
+    @Validation(required = true)
+    private String httpEndpoint;
+
+    @Query
+    @NameInMap("HttpPutResponseHopLimit")
+    private Integer httpPutResponseHopLimit;
+
+    @Query
+    @NameInMap("HttpTokens")
+    private String httpTokens;
+
+    @Query
+    @NameInMap("InstanceId")
+    private String instanceId;
 
     @Query
     @NameInMap("OwnerId")
     private Long ownerId;
+
+    @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
 
     @Query
     @NameInMap("ResourceOwnerAccount")
@@ -28,39 +46,21 @@ public class ModifyInstanceMetadataOptionsRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("HttpPutResponseHopLimit")
-    private Integer httpPutResponseHopLimit;
-
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
-    @Query
-    @NameInMap("InstanceId")
-    private String instanceId;
-
-    @Query
-    @NameInMap("HttpTokens")
-    private String httpTokens;
-
-    @Query
-    @NameInMap("HttpEndpoint")
-    @Validation(required = true)
-    private String httpEndpoint;
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     private ModifyInstanceMetadataOptionsRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
+        this.httpEndpoint = builder.httpEndpoint;
+        this.httpPutResponseHopLimit = builder.httpPutResponseHopLimit;
+        this.httpTokens = builder.httpTokens;
+        this.instanceId = builder.instanceId;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.httpPutResponseHopLimit = builder.httpPutResponseHopLimit;
-        this.regionId = builder.regionId;
-        this.instanceId = builder.instanceId;
-        this.httpTokens = builder.httpTokens;
-        this.httpEndpoint = builder.httpEndpoint;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -77,10 +77,31 @@ public class ModifyInstanceMetadataOptionsRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return httpEndpoint
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getHttpEndpoint() {
+        return this.httpEndpoint;
+    }
+
+    /**
+     * @return httpPutResponseHopLimit
+     */
+    public Integer getHttpPutResponseHopLimit() {
+        return this.httpPutResponseHopLimit;
+    }
+
+    /**
+     * @return httpTokens
+     */
+    public String getHttpTokens() {
+        return this.httpTokens;
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     /**
@@ -88,6 +109,13 @@ public class ModifyInstanceMetadataOptionsRequest extends Request {
      */
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -105,50 +133,22 @@ public class ModifyInstanceMetadataOptionsRequest extends Request {
     }
 
     /**
-     * @return httpPutResponseHopLimit
+     * @return sourceRegionId
      */
-    public Integer getHttpPutResponseHopLimit() {
-        return this.httpPutResponseHopLimit;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return instanceId
-     */
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    /**
-     * @return httpTokens
-     */
-    public String getHttpTokens() {
-        return this.httpTokens;
-    }
-
-    /**
-     * @return httpEndpoint
-     */
-    public String getHttpEndpoint() {
-        return this.httpEndpoint;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public static final class Builder extends Request.Builder<ModifyInstanceMetadataOptionsRequest, Builder> {
-        private String sourceRegionId; 
+        private String httpEndpoint; 
+        private Integer httpPutResponseHopLimit; 
+        private String httpTokens; 
+        private String instanceId; 
         private Long ownerId; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private Integer httpPutResponseHopLimit; 
-        private String regionId; 
-        private String instanceId; 
-        private String httpTokens; 
-        private String httpEndpoint; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -156,23 +156,50 @@ public class ModifyInstanceMetadataOptionsRequest extends Request {
 
         private Builder(ModifyInstanceMetadataOptionsRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
+            this.httpEndpoint = request.httpEndpoint;
+            this.httpPutResponseHopLimit = request.httpPutResponseHopLimit;
+            this.httpTokens = request.httpTokens;
+            this.instanceId = request.instanceId;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.httpPutResponseHopLimit = request.httpPutResponseHopLimit;
-            this.regionId = request.regionId;
-            this.instanceId = request.instanceId;
-            this.httpTokens = request.httpTokens;
-            this.httpEndpoint = request.httpEndpoint;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
-         * SourceRegionId.
+         * HttpEndpoint.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder httpEndpoint(String httpEndpoint) {
+            this.putQueryParameter("HttpEndpoint", httpEndpoint);
+            this.httpEndpoint = httpEndpoint;
+            return this;
+        }
+
+        /**
+         * HttpPutResponseHopLimit.
+         */
+        public Builder httpPutResponseHopLimit(Integer httpPutResponseHopLimit) {
+            this.putQueryParameter("HttpPutResponseHopLimit", httpPutResponseHopLimit);
+            this.httpPutResponseHopLimit = httpPutResponseHopLimit;
+            return this;
+        }
+
+        /**
+         * HttpTokens.
+         */
+        public Builder httpTokens(String httpTokens) {
+            this.putQueryParameter("HttpTokens", httpTokens);
+            this.httpTokens = httpTokens;
+            return this;
+        }
+
+        /**
+         * InstanceId.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
             return this;
         }
 
@@ -182,6 +209,15 @@ public class ModifyInstanceMetadataOptionsRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
@@ -204,59 +240,11 @@ public class ModifyInstanceMetadataOptionsRequest extends Request {
         }
 
         /**
-         * HttpPutResponseHopLimit.
+         * SourceRegionId.
          */
-        public Builder httpPutResponseHopLimit(Integer httpPutResponseHopLimit) {
-            this.putQueryParameter("HttpPutResponseHopLimit", httpPutResponseHopLimit);
-            this.httpPutResponseHopLimit = httpPutResponseHopLimit;
-            return this;
-        }
-
-        /**
-         * The ID of the region where the instance is located. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The ID of the instance.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * Specifies whether to use the enhanced mode (IMDSv2) when accessing instance metadata. Valid values:
-         * <p>
-         * -optional.
-         * -required: force use. If this parameter is set, the instance metadata cannot be accessed in normal mode.
-         * 
-         * Default value: optional.
-         * > For more information about how to access instance metadata, see [instance metadata access mode](~~ 150575 ~~).
-         */
-        public Builder httpTokens(String httpTokens) {
-            this.putQueryParameter("HttpTokens", httpTokens);
-            this.httpTokens = httpTokens;
-            return this;
-        }
-
-        /**
-         * Specifies whether to enable the access channel for instance metadata. Valid values:
-         * <p>
-         * -enabled: enabled
-         * -disabled: disabled
-         * 
-         * Default value: enabled
-         * > For more information about instance metadata, see [instance metadata Overview](~~ 49122 ~~).
-         */
-        public Builder httpEndpoint(String httpEndpoint) {
-            this.putQueryParameter("HttpEndpoint", httpEndpoint);
-            this.httpEndpoint = httpEndpoint;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

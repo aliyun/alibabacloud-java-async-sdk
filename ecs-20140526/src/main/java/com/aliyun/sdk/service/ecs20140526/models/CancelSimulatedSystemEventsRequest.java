@@ -12,9 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CancelSimulatedSystemEventsRequest</p>
  */
 public class CancelSimulatedSystemEventsRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("EventId")
+    @Validation(required = true)
+    private java.util.List < String > eventId;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -25,6 +26,11 @@ public class CancelSimulatedSystemEventsRequest extends Request {
     private Long ownerId;
 
     @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -32,25 +38,19 @@ public class CancelSimulatedSystemEventsRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
-    @Query
-    @NameInMap("EventId")
-    @Validation(required = true)
-    private java.util.List < String > eventId;
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     private CancelSimulatedSystemEventsRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
+        this.eventId = builder.eventId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.regionId = builder.regionId;
-        this.eventId = builder.eventId;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -67,10 +67,10 @@ public class CancelSimulatedSystemEventsRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return eventId
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public java.util.List < String > getEventId() {
+        return this.eventId;
     }
 
     /**
@@ -88,6 +88,13 @@ public class CancelSimulatedSystemEventsRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -102,27 +109,20 @@ public class CancelSimulatedSystemEventsRequest extends Request {
     }
 
     /**
-     * @return regionId
+     * @return sourceRegionId
      */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return eventId
-     */
-    public java.util.List < String > getEventId() {
-        return this.eventId;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public static final class Builder extends Request.Builder<CancelSimulatedSystemEventsRequest, Builder> {
-        private String sourceRegionId; 
+        private java.util.List < String > eventId; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String regionId; 
-        private java.util.List < String > eventId; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -130,21 +130,21 @@ public class CancelSimulatedSystemEventsRequest extends Request {
 
         private Builder(CancelSimulatedSystemEventsRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
+            this.eventId = request.eventId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.regionId = request.regionId;
-            this.eventId = request.eventId;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
-         * SourceRegionId.
+         * EventId.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder eventId(java.util.List < String > eventId) {
+            this.putQueryParameter("EventId", eventId);
+            this.eventId = eventId;
             return this;
         }
 
@@ -158,7 +158,7 @@ public class CancelSimulatedSystemEventsRequest extends Request {
         }
 
         /**
-         * The ID of the RAM user.
+         * OwnerId.
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -167,25 +167,7 @@ public class CancelSimulatedSystemEventsRequest extends Request {
         }
 
         /**
-         * The account name of the resource master account.
-         */
-        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
-            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-            this.resourceOwnerAccount = resourceOwnerAccount;
-            return this;
-        }
-
-        /**
-         * The ID of the resource master account, that is, the UID.
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * The ID of the region. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -194,11 +176,29 @@ public class CancelSimulatedSystemEventsRequest extends Request {
         }
 
         /**
-         * The ID of one or more system events. Valid values of N: 1 to 100. Multiple values are in the form of duplicate lists.
+         * ResourceOwnerAccount.
          */
-        public Builder eventId(java.util.List < String > eventId) {
-            this.putQueryParameter("EventId", eventId);
-            this.eventId = eventId;
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

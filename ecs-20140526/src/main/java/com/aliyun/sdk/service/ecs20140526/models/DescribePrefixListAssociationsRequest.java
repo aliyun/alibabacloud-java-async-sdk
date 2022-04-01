@@ -12,36 +12,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePrefixListAssociationsRequest</p>
  */
 public class DescribePrefixListAssociationsRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
-    @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
-    @NameInMap("ResourceOwnerAccount")
-    private String resourceOwnerAccount;
-
-    @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
-
-    @Query
-    @NameInMap("OwnerAccount")
-    private String ownerAccount;
-
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
-    @Query
-    @NameInMap("PrefixListId")
-    @Validation(required = true)
-    private String prefixListId;
-
     @Query
     @NameInMap("MaxResults")
     @Validation(maximum = 100, minimum = 1)
@@ -51,17 +21,47 @@ public class DescribePrefixListAssociationsRequest extends Request {
     @NameInMap("NextToken")
     private String nextToken;
 
+    @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
+
+    @Query
+    @NameInMap("PrefixListId")
+    @Validation(required = true)
+    private String prefixListId;
+
+    @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
+    @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     private DescribePrefixListAssociationsRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
-        this.ownerId = builder.ownerId;
-        this.resourceOwnerAccount = builder.resourceOwnerAccount;
-        this.resourceOwnerId = builder.resourceOwnerId;
-        this.ownerAccount = builder.ownerAccount;
-        this.regionId = builder.regionId;
-        this.prefixListId = builder.prefixListId;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
+        this.prefixListId = builder.prefixListId;
+        this.regionId = builder.regionId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -78,10 +78,24 @@ public class DescribePrefixListAssociationsRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return maxResults
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     /**
@@ -89,6 +103,20 @@ public class DescribePrefixListAssociationsRequest extends Request {
      */
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    /**
+     * @return prefixListId
+     */
+    public String getPrefixListId() {
+        return this.prefixListId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -106,50 +134,22 @@ public class DescribePrefixListAssociationsRequest extends Request {
     }
 
     /**
-     * @return ownerAccount
+     * @return sourceRegionId
      */
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return prefixListId
-     */
-    public String getPrefixListId() {
-        return this.prefixListId;
-    }
-
-    /**
-     * @return maxResults
-     */
-    public Integer getMaxResults() {
-        return this.maxResults;
-    }
-
-    /**
-     * @return nextToken
-     */
-    public String getNextToken() {
-        return this.nextToken;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public static final class Builder extends Request.Builder<DescribePrefixListAssociationsRequest, Builder> {
-        private String sourceRegionId; 
-        private Long ownerId; 
-        private String resourceOwnerAccount; 
-        private Long resourceOwnerId; 
-        private String ownerAccount; 
-        private String regionId; 
-        private String prefixListId; 
         private Integer maxResults; 
         private String nextToken; 
+        private String ownerAccount; 
+        private Long ownerId; 
+        private String prefixListId; 
+        private String regionId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -157,23 +157,41 @@ public class DescribePrefixListAssociationsRequest extends Request {
 
         private Builder(DescribePrefixListAssociationsRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
-            this.ownerId = request.ownerId;
-            this.resourceOwnerAccount = request.resourceOwnerAccount;
-            this.resourceOwnerId = request.resourceOwnerId;
-            this.ownerAccount = request.ownerAccount;
-            this.regionId = request.regionId;
-            this.prefixListId = request.prefixListId;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.prefixListId = request.prefixListId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
-         * SourceRegionId.
+         * MaxResults.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder maxResults(Integer maxResults) {
+            this.putQueryParameter("MaxResults", maxResults);
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
             return this;
         }
 
@@ -183,6 +201,24 @@ public class DescribePrefixListAssociationsRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * PrefixListId.
+         */
+        public Builder prefixListId(String prefixListId) {
+            this.putQueryParameter("PrefixListId", prefixListId);
+            this.prefixListId = prefixListId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
@@ -205,52 +241,11 @@ public class DescribePrefixListAssociationsRequest extends Request {
         }
 
         /**
-         * OwnerAccount.
+         * SourceRegionId.
          */
-        public Builder ownerAccount(String ownerAccount) {
-            this.putQueryParameter("OwnerAccount", ownerAccount);
-            this.ownerAccount = ownerAccount;
-            return this;
-        }
-
-        /**
-         * The ID of the region.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The ID of the prefix list.
-         */
-        public Builder prefixListId(String prefixListId) {
-            this.putQueryParameter("PrefixListId", prefixListId);
-            this.prefixListId = prefixListId;
-            return this;
-        }
-
-        /**
-         * The number of entries to return on each page.
-         * <p>
-         * 
-         * Maximum Value: 100
-         * 
-         * Default value: 10
-         */
-        public Builder maxResults(Integer maxResults) {
-            this.putQueryParameter("MaxResults", maxResults);
-            this.maxResults = maxResults;
-            return this;
-        }
-
-        /**
-         * Query the credential (Token). The value is the value of the "NextToken" parameter returned by the last call to the API. You do not need to set this parameter when you call the API for the first time.
-         */
-        public Builder nextToken(String nextToken) {
-            this.putQueryParameter("NextToken", nextToken);
-            this.nextToken = nextToken;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

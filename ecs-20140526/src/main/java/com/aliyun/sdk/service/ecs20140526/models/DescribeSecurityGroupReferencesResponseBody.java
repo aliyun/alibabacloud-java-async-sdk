@@ -50,7 +50,7 @@ public class DescribeSecurityGroupReferencesResponseBody extends TeaModel {
         private SecurityGroupReferences securityGroupReferences; 
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeSecurityGroupReferencesResponseBody extends TeaModel {
         }
 
         /**
-         * The complete authorization information of all user-specified security groups.
+         * SecurityGroupReferences.
          */
         public Builder securityGroupReferences(SecurityGroupReferences securityGroupReferences) {
             this.securityGroupReferences = securityGroupReferences;
@@ -72,15 +72,15 @@ public class DescribeSecurityGroupReferencesResponseBody extends TeaModel {
     } 
 
     public static class ReferencingSecurityGroup extends TeaModel {
-        @NameInMap("SecurityGroupId")
-        private String securityGroupId;
-
         @NameInMap("AliUid")
         private String aliUid;
 
+        @NameInMap("SecurityGroupId")
+        private String securityGroupId;
+
         private ReferencingSecurityGroup(Builder builder) {
-            this.securityGroupId = builder.securityGroupId;
             this.aliUid = builder.aliUid;
+            this.securityGroupId = builder.securityGroupId;
         }
 
         public static Builder builder() {
@@ -92,36 +92,36 @@ public class DescribeSecurityGroupReferencesResponseBody extends TeaModel {
         }
 
         /**
-         * @return securityGroupId
-         */
-        public String getSecurityGroupId() {
-            return this.securityGroupId;
-        }
-
-        /**
          * @return aliUid
          */
         public String getAliUid() {
             return this.aliUid;
         }
 
+        /**
+         * @return securityGroupId
+         */
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
         public static final class Builder {
-            private String securityGroupId; 
             private String aliUid; 
+            private String securityGroupId; 
 
             /**
-             * The ID of the security group.
+             * AliUid.
              */
-            public Builder securityGroupId(String securityGroupId) {
-                this.securityGroupId = securityGroupId;
+            public Builder aliUid(String aliUid) {
+                this.aliUid = aliUid;
                 return this;
             }
 
             /**
-             * The ID of the user to which the security group belongs.
+             * SecurityGroupId.
              */
-            public Builder aliUid(String aliUid) {
-                this.aliUid = aliUid;
+            public Builder securityGroupId(String securityGroupId) {
+                this.securityGroupId = securityGroupId;
                 return this;
             }
 
@@ -174,15 +174,15 @@ public class DescribeSecurityGroupReferencesResponseBody extends TeaModel {
 
     }
     public static class SecurityGroupReference extends TeaModel {
-        @NameInMap("SecurityGroupId")
-        private String securityGroupId;
-
         @NameInMap("ReferencingSecurityGroups")
         private ReferencingSecurityGroups referencingSecurityGroups;
 
+        @NameInMap("SecurityGroupId")
+        private String securityGroupId;
+
         private SecurityGroupReference(Builder builder) {
-            this.securityGroupId = builder.securityGroupId;
             this.referencingSecurityGroups = builder.referencingSecurityGroups;
+            this.securityGroupId = builder.securityGroupId;
         }
 
         public static Builder builder() {
@@ -194,36 +194,36 @@ public class DescribeSecurityGroupReferencesResponseBody extends TeaModel {
         }
 
         /**
-         * @return securityGroupId
-         */
-        public String getSecurityGroupId() {
-            return this.securityGroupId;
-        }
-
-        /**
          * @return referencingSecurityGroups
          */
         public ReferencingSecurityGroups getReferencingSecurityGroups() {
             return this.referencingSecurityGroups;
         }
 
+        /**
+         * @return securityGroupId
+         */
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
         public static final class Builder {
-            private String securityGroupId; 
             private ReferencingSecurityGroups referencingSecurityGroups; 
+            private String securityGroupId; 
 
             /**
-             * The security group that you want to query.
+             * ReferencingSecurityGroups.
              */
-            public Builder securityGroupId(String securityGroupId) {
-                this.securityGroupId = securityGroupId;
+            public Builder referencingSecurityGroups(ReferencingSecurityGroups referencingSecurityGroups) {
+                this.referencingSecurityGroups = referencingSecurityGroups;
                 return this;
             }
 
             /**
-             * The information about other security groups that are being authorized to this security group.
+             * SecurityGroupId.
              */
-            public Builder referencingSecurityGroups(ReferencingSecurityGroups referencingSecurityGroups) {
-                this.referencingSecurityGroups = referencingSecurityGroups;
+            public Builder securityGroupId(String securityGroupId) {
+                this.securityGroupId = securityGroupId;
                 return this;
             }
 

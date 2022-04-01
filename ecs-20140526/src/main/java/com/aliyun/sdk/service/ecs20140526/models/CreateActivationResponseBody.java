@@ -12,19 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateActivationResponseBody</p>
  */
 public class CreateActivationResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    private String requestId;
-
     @NameInMap("ActivationCode")
     private String activationCode;
 
     @NameInMap("ActivationId")
     private String activationId;
 
+    @NameInMap("RequestId")
+    private String requestId;
+
     private CreateActivationResponseBody(Builder builder) {
-        this.requestId = builder.requestId;
         this.activationCode = builder.activationCode;
         this.activationId = builder.activationId;
+        this.requestId = builder.requestId;
     }
 
     public static Builder builder() {
@@ -33,13 +33,6 @@ public class CreateActivationResponseBody extends TeaModel {
 
     public static CreateActivationResponseBody create() {
         return builder().build();
-    }
-
-    /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
     }
 
     /**
@@ -56,21 +49,20 @@ public class CreateActivationResponseBody extends TeaModel {
         return this.activationId;
     }
 
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static final class Builder {
-        private String requestId; 
         private String activationCode; 
         private String activationId; 
+        private String requestId; 
 
         /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The code of the activation code. This code is returned only once when an API is called and cannot be queried later. Therefore, you must properly save the returned value.
+         * ActivationCode.
          */
         public Builder activationCode(String activationCode) {
             this.activationCode = activationCode;
@@ -78,10 +70,18 @@ public class CreateActivationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the activation code.
+         * ActivationId.
          */
         public Builder activationId(String activationId) {
             this.activationId = activationId;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 

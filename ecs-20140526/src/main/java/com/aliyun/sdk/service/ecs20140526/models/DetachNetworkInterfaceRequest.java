@@ -12,21 +12,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DetachNetworkInterfaceRequest</p>
  */
 public class DetachNetworkInterfaceRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("InstanceId")
+    @Validation(required = true)
+    private String instanceId;
+
+    @Query
+    @NameInMap("NetworkInterfaceId")
+    @Validation(required = true)
+    private String networkInterfaceId;
 
     @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
 
     @Query
-    @NameInMap("TrunkNetworkInstanceId")
-    private String trunkNetworkInstanceId;
-
-    @Query
     @NameInMap("OwnerId")
     private Long ownerId;
+
+    @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
 
     @Query
     @NameInMap("ResourceOwnerAccount")
@@ -36,32 +43,25 @@ public class DetachNetworkInterfaceRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     @Query
-    @NameInMap("NetworkInterfaceId")
-    @Validation(required = true)
-    private String networkInterfaceId;
-
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
-    private String instanceId;
+    @NameInMap("TrunkNetworkInstanceId")
+    private String trunkNetworkInstanceId;
 
     private DetachNetworkInterfaceRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
+        this.instanceId = builder.instanceId;
+        this.networkInterfaceId = builder.networkInterfaceId;
         this.ownerAccount = builder.ownerAccount;
-        this.trunkNetworkInstanceId = builder.trunkNetworkInstanceId;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.regionId = builder.regionId;
-        this.networkInterfaceId = builder.networkInterfaceId;
-        this.instanceId = builder.instanceId;
+        this.sourceRegionId = builder.sourceRegionId;
+        this.trunkNetworkInstanceId = builder.trunkNetworkInstanceId;
     }
 
     public static Builder builder() {
@@ -78,10 +78,17 @@ public class DetachNetworkInterfaceRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return instanceId
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    /**
+     * @return networkInterfaceId
+     */
+    public String getNetworkInterfaceId() {
+        return this.networkInterfaceId;
     }
 
     /**
@@ -92,17 +99,17 @@ public class DetachNetworkInterfaceRequest extends Request {
     }
 
     /**
-     * @return trunkNetworkInstanceId
-     */
-    public String getTrunkNetworkInstanceId() {
-        return this.trunkNetworkInstanceId;
-    }
-
-    /**
      * @return ownerId
      */
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -120,36 +127,29 @@ public class DetachNetworkInterfaceRequest extends Request {
     }
 
     /**
-     * @return regionId
+     * @return sourceRegionId
      */
-    public String getRegionId() {
-        return this.regionId;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
-     * @return networkInterfaceId
+     * @return trunkNetworkInstanceId
      */
-    public String getNetworkInterfaceId() {
-        return this.networkInterfaceId;
-    }
-
-    /**
-     * @return instanceId
-     */
-    public String getInstanceId() {
-        return this.instanceId;
+    public String getTrunkNetworkInstanceId() {
+        return this.trunkNetworkInstanceId;
     }
 
     public static final class Builder extends Request.Builder<DetachNetworkInterfaceRequest, Builder> {
-        private String sourceRegionId; 
+        private String instanceId; 
+        private String networkInterfaceId; 
         private String ownerAccount; 
-        private String trunkNetworkInstanceId; 
         private Long ownerId; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String regionId; 
-        private String networkInterfaceId; 
-        private String instanceId; 
+        private String sourceRegionId; 
+        private String trunkNetworkInstanceId; 
 
         private Builder() {
             super();
@@ -157,23 +157,32 @@ public class DetachNetworkInterfaceRequest extends Request {
 
         private Builder(DetachNetworkInterfaceRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
+            this.instanceId = request.instanceId;
+            this.networkInterfaceId = request.networkInterfaceId;
             this.ownerAccount = request.ownerAccount;
-            this.trunkNetworkInstanceId = request.trunkNetworkInstanceId;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.regionId = request.regionId;
-            this.networkInterfaceId = request.networkInterfaceId;
-            this.instanceId = request.instanceId;
+            this.sourceRegionId = request.sourceRegionId;
+            this.trunkNetworkInstanceId = request.trunkNetworkInstanceId;
         } 
 
         /**
-         * SourceRegionId.
+         * InstanceId.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * NetworkInterfaceId.
+         */
+        public Builder networkInterfaceId(String networkInterfaceId) {
+            this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
+            this.networkInterfaceId = networkInterfaceId;
             return this;
         }
 
@@ -187,16 +196,7 @@ public class DetachNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * TrunkNetworkInstanceId.
-         */
-        public Builder trunkNetworkInstanceId(String trunkNetworkInstanceId) {
-            this.putQueryParameter("TrunkNetworkInstanceId", trunkNetworkInstanceId);
-            this.trunkNetworkInstanceId = trunkNetworkInstanceId;
-            return this;
-        }
-
-        /**
-         * The ID of the RAM user.
+         * OwnerId.
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -205,25 +205,7 @@ public class DetachNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * The account name of the resource master account.
-         */
-        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
-            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-            this.resourceOwnerAccount = resourceOwnerAccount;
-            return this;
-        }
-
-        /**
-         * The ID of the resource master account, that is, the UID.
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * The region to which the resource belongs. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -232,20 +214,38 @@ public class DetachNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * The ID of the Eni.
+         * ResourceOwnerAccount.
          */
-        public Builder networkInterfaceId(String networkInterfaceId) {
-            this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
-            this.networkInterfaceId = networkInterfaceId;
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
             return this;
         }
 
         /**
-         * The ID of the instance.
+         * ResourceOwnerId.
          */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
+
+        /**
+         * TrunkNetworkInstanceId.
+         */
+        public Builder trunkNetworkInstanceId(String trunkNetworkInstanceId) {
+            this.putQueryParameter("TrunkNetworkInstanceId", trunkNetworkInstanceId);
+            this.trunkNetworkInstanceId = trunkNetworkInstanceId;
             return this;
         }
 

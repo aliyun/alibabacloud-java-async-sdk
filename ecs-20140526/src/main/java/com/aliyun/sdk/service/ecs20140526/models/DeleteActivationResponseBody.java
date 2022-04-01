@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteActivationResponseBody</p>
  */
 public class DeleteActivationResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    private String requestId;
-
     @NameInMap("Activation")
     private Activation activation;
 
+    @NameInMap("RequestId")
+    private String requestId;
+
     private DeleteActivationResponseBody(Builder builder) {
-        this.requestId = builder.requestId;
         this.activation = builder.activation;
+        this.requestId = builder.requestId;
     }
 
     public static Builder builder() {
@@ -32,36 +32,36 @@ public class DeleteActivationResponseBody extends TeaModel {
     }
 
     /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    /**
      * @return activation
      */
     public Activation getActivation() {
         return this.activation;
     }
 
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static final class Builder {
-        private String requestId; 
         private Activation activation; 
+        private String requestId; 
 
         /**
-         * The ID of the request.
+         * Activation.
          */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
+        public Builder activation(Activation activation) {
+            this.activation = activation;
             return this;
         }
 
         /**
-         * A collection of activation codes and usage information.
+         * RequestId.
          */
-        public Builder activation(Activation activation) {
-            this.activation = activation;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
@@ -72,20 +72,20 @@ public class DeleteActivationResponseBody extends TeaModel {
     } 
 
     public static class Activation extends TeaModel {
+        @NameInMap("ActivationId")
+        private String activationId;
+
         @NameInMap("CreationTime")
         private String creationTime;
 
         @NameInMap("DeregisteredCount")
         private Integer deregisteredCount;
 
-        @NameInMap("InstanceCount")
-        private Integer instanceCount;
-
         @NameInMap("Description")
         private String description;
 
-        @NameInMap("RegisteredCount")
-        private Integer registeredCount;
+        @NameInMap("InstanceCount")
+        private Integer instanceCount;
 
         @NameInMap("InstanceName")
         private String instanceName;
@@ -93,22 +93,22 @@ public class DeleteActivationResponseBody extends TeaModel {
         @NameInMap("IpAddressRange")
         private String ipAddressRange;
 
+        @NameInMap("RegisteredCount")
+        private Integer registeredCount;
+
         @NameInMap("TimeToLiveInHours")
         private Long timeToLiveInHours;
 
-        @NameInMap("ActivationId")
-        private String activationId;
-
         private Activation(Builder builder) {
+            this.activationId = builder.activationId;
             this.creationTime = builder.creationTime;
             this.deregisteredCount = builder.deregisteredCount;
-            this.instanceCount = builder.instanceCount;
             this.description = builder.description;
-            this.registeredCount = builder.registeredCount;
+            this.instanceCount = builder.instanceCount;
             this.instanceName = builder.instanceName;
             this.ipAddressRange = builder.ipAddressRange;
+            this.registeredCount = builder.registeredCount;
             this.timeToLiveInHours = builder.timeToLiveInHours;
-            this.activationId = builder.activationId;
         }
 
         public static Builder builder() {
@@ -117,6 +117,13 @@ public class DeleteActivationResponseBody extends TeaModel {
 
         public static Activation create() {
             return builder().build();
+        }
+
+        /**
+         * @return activationId
+         */
+        public String getActivationId() {
+            return this.activationId;
         }
 
         /**
@@ -134,13 +141,6 @@ public class DeleteActivationResponseBody extends TeaModel {
         }
 
         /**
-         * @return instanceCount
-         */
-        public Integer getInstanceCount() {
-            return this.instanceCount;
-        }
-
-        /**
          * @return description
          */
         public String getDescription() {
@@ -148,10 +148,10 @@ public class DeleteActivationResponseBody extends TeaModel {
         }
 
         /**
-         * @return registeredCount
+         * @return instanceCount
          */
-        public Integer getRegisteredCount() {
-            return this.registeredCount;
+        public Integer getInstanceCount() {
+            return this.instanceCount;
         }
 
         /**
@@ -169,32 +169,40 @@ public class DeleteActivationResponseBody extends TeaModel {
         }
 
         /**
+         * @return registeredCount
+         */
+        public Integer getRegisteredCount() {
+            return this.registeredCount;
+        }
+
+        /**
          * @return timeToLiveInHours
          */
         public Long getTimeToLiveInHours() {
             return this.timeToLiveInHours;
         }
 
-        /**
-         * @return activationId
-         */
-        public String getActivationId() {
-            return this.activationId;
-        }
-
         public static final class Builder {
+            private String activationId; 
             private String creationTime; 
             private Integer deregisteredCount; 
-            private Integer instanceCount; 
             private String description; 
-            private Integer registeredCount; 
+            private Integer instanceCount; 
             private String instanceName; 
             private String ipAddressRange; 
+            private Integer registeredCount; 
             private Long timeToLiveInHours; 
-            private String activationId; 
 
             /**
-             * The creation time.
+             * ActivationId.
+             */
+            public Builder activationId(String activationId) {
+                this.activationId = activationId;
+                return this;
+            }
+
+            /**
+             * CreationTime.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -202,7 +210,7 @@ public class DeleteActivationResponseBody extends TeaModel {
             }
 
             /**
-             * The number of canceled instances.
+             * DeregisteredCount.
              */
             public Builder deregisteredCount(Integer deregisteredCount) {
                 this.deregisteredCount = deregisteredCount;
@@ -210,15 +218,7 @@ public class DeleteActivationResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of times an activation code is used to register a managed instance.
-             */
-            public Builder instanceCount(Integer instanceCount) {
-                this.instanceCount = instanceCount;
-                return this;
-            }
-
-            /**
-             * The description of the activation code.
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -226,15 +226,15 @@ public class DeleteActivationResponseBody extends TeaModel {
             }
 
             /**
-             * The number of registered instances.
+             * InstanceCount.
              */
-            public Builder registeredCount(Integer registeredCount) {
-                this.registeredCount = registeredCount;
+            public Builder instanceCount(Integer instanceCount) {
+                this.instanceCount = instanceCount;
                 return this;
             }
 
             /**
-             * The default instance name prefix.
+             * InstanceName.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -242,7 +242,7 @@ public class DeleteActivationResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the host that allows the activation code.
+             * IpAddressRange.
              */
             public Builder ipAddressRange(String ipAddressRange) {
                 this.ipAddressRange = ipAddressRange;
@@ -250,18 +250,18 @@ public class DeleteActivationResponseBody extends TeaModel {
             }
 
             /**
-             * The validity period of the activation code. Unit: Hour.
+             * RegisteredCount.
              */
-            public Builder timeToLiveInHours(Long timeToLiveInHours) {
-                this.timeToLiveInHours = timeToLiveInHours;
+            public Builder registeredCount(Integer registeredCount) {
+                this.registeredCount = registeredCount;
                 return this;
             }
 
             /**
-             * The ID of the activation code.
+             * TimeToLiveInHours.
              */
-            public Builder activationId(String activationId) {
-                this.activationId = activationId;
+            public Builder timeToLiveInHours(Long timeToLiveInHours) {
+                this.timeToLiveInHours = timeToLiveInHours;
                 return this;
             }
 

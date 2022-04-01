@@ -12,13 +12,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceTopologyRequest</p>
  */
 public class DescribeInstanceTopologyRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("InstanceIds")
+    private String instanceIds;
 
     @Query
     @NameInMap("OwnerId")
     private Long ownerId;
+
+    @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
 
     @Query
     @NameInMap("ResourceOwnerAccount")
@@ -28,23 +33,18 @@ public class DescribeInstanceTopologyRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
-    @Query
-    @NameInMap("InstanceIds")
-    private String instanceIds;
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     private DescribeInstanceTopologyRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
+        this.instanceIds = builder.instanceIds;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.regionId = builder.regionId;
-        this.instanceIds = builder.instanceIds;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -61,10 +61,10 @@ public class DescribeInstanceTopologyRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return instanceIds
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getInstanceIds() {
+        return this.instanceIds;
     }
 
     /**
@@ -72,6 +72,13 @@ public class DescribeInstanceTopologyRequest extends Request {
      */
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -89,26 +96,19 @@ public class DescribeInstanceTopologyRequest extends Request {
     }
 
     /**
-     * @return regionId
+     * @return sourceRegionId
      */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return instanceIds
-     */
-    public String getInstanceIds() {
-        return this.instanceIds;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public static final class Builder extends Request.Builder<DescribeInstanceTopologyRequest, Builder> {
-        private String sourceRegionId; 
+        private String instanceIds; 
         private Long ownerId; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String regionId; 
-        private String instanceIds; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -116,20 +116,20 @@ public class DescribeInstanceTopologyRequest extends Request {
 
         private Builder(DescribeInstanceTopologyRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
+            this.instanceIds = request.instanceIds;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.regionId = request.regionId;
-            this.instanceIds = request.instanceIds;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
-         * SourceRegionId.
+         * InstanceIds.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder instanceIds(String instanceIds) {
+            this.putQueryParameter("InstanceIds", instanceIds);
+            this.instanceIds = instanceIds;
             return this;
         }
 
@@ -139,6 +139,15 @@ public class DescribeInstanceTopologyRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
@@ -161,20 +170,11 @@ public class DescribeInstanceTopologyRequest extends Request {
         }
 
         /**
-         * The region ID of the ECS instance. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
+         * SourceRegionId.
          */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The ID of one or more ECS instances. A maximum of 100 ECS instances are supported.
-         */
-        public Builder instanceIds(String instanceIds) {
-            this.putQueryParameter("InstanceIds", instanceIds);
-            this.instanceIds = instanceIds;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

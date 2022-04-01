@@ -12,6 +12,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DetachInstanceRamRoleResponseBody</p>
  */
 public class DetachInstanceRamRoleResponseBody extends TeaModel {
+    @NameInMap("DetachInstanceRamRoleResults")
+    private DetachInstanceRamRoleResults detachInstanceRamRoleResults;
+
+    @NameInMap("FailCount")
+    private Integer failCount;
+
     @NameInMap("RamRoleName")
     private String ramRoleName;
 
@@ -21,18 +27,12 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("FailCount")
-    private Integer failCount;
-
-    @NameInMap("DetachInstanceRamRoleResults")
-    private DetachInstanceRamRoleResults detachInstanceRamRoleResults;
-
     private DetachInstanceRamRoleResponseBody(Builder builder) {
+        this.detachInstanceRamRoleResults = builder.detachInstanceRamRoleResults;
+        this.failCount = builder.failCount;
         this.ramRoleName = builder.ramRoleName;
         this.requestId = builder.requestId;
         this.totalCount = builder.totalCount;
-        this.failCount = builder.failCount;
-        this.detachInstanceRamRoleResults = builder.detachInstanceRamRoleResults;
     }
 
     public static Builder builder() {
@@ -41,6 +41,20 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
 
     public static DetachInstanceRamRoleResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return detachInstanceRamRoleResults
+     */
+    public DetachInstanceRamRoleResults getDetachInstanceRamRoleResults() {
+        return this.detachInstanceRamRoleResults;
+    }
+
+    /**
+     * @return failCount
+     */
+    public Integer getFailCount() {
+        return this.failCount;
     }
 
     /**
@@ -64,53 +78,23 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    /**
-     * @return failCount
-     */
-    public Integer getFailCount() {
-        return this.failCount;
-    }
-
-    /**
-     * @return detachInstanceRamRoleResults
-     */
-    public DetachInstanceRamRoleResults getDetachInstanceRamRoleResults() {
-        return this.detachInstanceRamRoleResults;
-    }
-
     public static final class Builder {
+        private DetachInstanceRamRoleResults detachInstanceRamRoleResults; 
+        private Integer failCount; 
         private String ramRoleName; 
         private String requestId; 
         private Integer totalCount; 
-        private Integer failCount; 
-        private DetachInstanceRamRoleResults detachInstanceRamRoleResults; 
 
         /**
-         * The name of the RAM role.
+         * DetachInstanceRamRoleResults.
          */
-        public Builder ramRoleName(String ramRoleName) {
-            this.ramRoleName = ramRoleName;
+        public Builder detachInstanceRamRoleResults(DetachInstanceRamRoleResults detachInstanceRamRoleResults) {
+            this.detachInstanceRamRoleResults = detachInstanceRamRoleResults;
             return this;
         }
 
         /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The total number of instance RAM roles that are reclaimed.
-         */
-        public Builder totalCount(Integer totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-
-        /**
-         * The number of instance RAM roles that failed to be detached.
+         * FailCount.
          */
         public Builder failCount(Integer failCount) {
             this.failCount = failCount;
@@ -118,10 +102,26 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
         }
 
         /**
-         * The information set of the instance RAM role type (DetachInstanceRamRoleResult).
+         * RamRoleName.
          */
-        public Builder detachInstanceRamRoleResults(DetachInstanceRamRoleResults detachInstanceRamRoleResults) {
-            this.detachInstanceRamRoleResults = detachInstanceRamRoleResults;
+        public Builder ramRoleName(String ramRoleName) {
+            this.ramRoleName = ramRoleName;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
@@ -132,15 +132,15 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
     } 
 
     public static class InstanceRamRoleSet extends TeaModel {
-        @NameInMap("RamRoleName")
-        private String ramRoleName;
-
         @NameInMap("InstanceId")
         private String instanceId;
 
+        @NameInMap("RamRoleName")
+        private String ramRoleName;
+
         private InstanceRamRoleSet(Builder builder) {
-            this.ramRoleName = builder.ramRoleName;
             this.instanceId = builder.instanceId;
+            this.ramRoleName = builder.ramRoleName;
         }
 
         public static Builder builder() {
@@ -152,36 +152,36 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
         }
 
         /**
-         * @return ramRoleName
-         */
-        public String getRamRoleName() {
-            return this.ramRoleName;
-        }
-
-        /**
          * @return instanceId
          */
         public String getInstanceId() {
             return this.instanceId;
         }
 
+        /**
+         * @return ramRoleName
+         */
+        public String getRamRoleName() {
+            return this.ramRoleName;
+        }
+
         public static final class Builder {
-            private String ramRoleName; 
             private String instanceId; 
+            private String ramRoleName; 
 
             /**
-             * The name of the RAM role.
+             * InstanceId.
              */
-            public Builder ramRoleName(String ramRoleName) {
-                this.ramRoleName = ramRoleName;
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
                 return this;
             }
 
             /**
-             * The ID of the instance.
+             * RamRoleName.
              */
-            public Builder instanceId(String instanceId) {
-                this.instanceId = instanceId;
+            public Builder ramRoleName(String ramRoleName) {
+                this.ramRoleName = ramRoleName;
                 return this;
             }
 
@@ -237,24 +237,24 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
         @NameInMap("Code")
         private String code;
 
-        @NameInMap("Message")
-        private String message;
-
         @NameInMap("InstanceId")
         private String instanceId;
-
-        @NameInMap("Success")
-        private Boolean success;
 
         @NameInMap("InstanceRamRoleSets")
         private InstanceRamRoleSets instanceRamRoleSets;
 
+        @NameInMap("Message")
+        private String message;
+
+        @NameInMap("Success")
+        private Boolean success;
+
         private DetachInstanceRamRoleResult(Builder builder) {
             this.code = builder.code;
-            this.message = builder.message;
             this.instanceId = builder.instanceId;
-            this.success = builder.success;
             this.instanceRamRoleSets = builder.instanceRamRoleSets;
+            this.message = builder.message;
+            this.success = builder.success;
         }
 
         public static Builder builder() {
@@ -273,24 +273,10 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
         }
 
         /**
-         * @return message
-         */
-        public String getMessage() {
-            return this.message;
-        }
-
-        /**
          * @return instanceId
          */
         public String getInstanceId() {
             return this.instanceId;
-        }
-
-        /**
-         * @return success
-         */
-        public Boolean getSuccess() {
-            return this.success;
         }
 
         /**
@@ -300,15 +286,29 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
             return this.instanceRamRoleSets;
         }
 
+        /**
+         * @return message
+         */
+        public String getMessage() {
+            return this.message;
+        }
+
+        /**
+         * @return success
+         */
+        public Boolean getSuccess() {
+            return this.success;
+        }
+
         public static final class Builder {
             private String code; 
-            private String message; 
             private String instanceId; 
-            private Boolean success; 
             private InstanceRamRoleSets instanceRamRoleSets; 
+            private String message; 
+            private Boolean success; 
 
             /**
-             * Determines whether the instance RAM role is revoked. A value of 200 indicates that the request is successfully withdrawn. A value other than 200 indicates that the request failed. For more information about the cause of the failure, see error codes.
+             * Code.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -316,15 +316,7 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
             }
 
             /**
-             * Determines whether the instance RAM role is revoked. If the return value is Success, it indicates that the Reclaim is successful. If the return value is other, it indicates that the reclaim fails. For more information, see error codes.
-             */
-            public Builder message(String message) {
-                this.message = message;
-                return this;
-            }
-
-            /**
-             * The ECS instance to which the instance RAM role is to be revoked.
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -332,18 +324,26 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the specified instance role has been reclaimed.
+             * InstanceRamRoleSets.
              */
-            public Builder success(Boolean success) {
-                this.success = success;
+            public Builder instanceRamRoleSets(InstanceRamRoleSets instanceRamRoleSets) {
+                this.instanceRamRoleSets = instanceRamRoleSets;
                 return this;
             }
 
             /**
-             * The set of RAM roles for the instance.
+             * Message.
              */
-            public Builder instanceRamRoleSets(InstanceRamRoleSets instanceRamRoleSets) {
-                this.instanceRamRoleSets = instanceRamRoleSets;
+            public Builder message(String message) {
+                this.message = message;
+                return this;
+            }
+
+            /**
+             * Success.
+             */
+            public Builder success(Boolean success) {
+                this.success = success;
                 return this;
             }
 

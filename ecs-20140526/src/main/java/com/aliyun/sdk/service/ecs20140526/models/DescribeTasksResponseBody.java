@@ -12,31 +12,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeTasksResponseBody</p>
  */
 public class DescribeTasksResponseBody extends TeaModel {
-    @NameInMap("PageSize")
-    private Integer pageSize;
-
     @NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("RequestId")
-    private String requestId;
-
-    @NameInMap("TotalCount")
-    private Integer totalCount;
+    @NameInMap("PageSize")
+    private Integer pageSize;
 
     @NameInMap("RegionId")
     private String regionId;
 
+    @NameInMap("RequestId")
+    private String requestId;
+
     @NameInMap("TaskSet")
     private TaskSet taskSet;
 
+    @NameInMap("TotalCount")
+    private Integer totalCount;
+
     private DescribeTasksResponseBody(Builder builder) {
-        this.pageSize = builder.pageSize;
         this.pageNumber = builder.pageNumber;
-        this.requestId = builder.requestId;
-        this.totalCount = builder.totalCount;
+        this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
+        this.requestId = builder.requestId;
         this.taskSet = builder.taskSet;
+        this.totalCount = builder.totalCount;
     }
 
     public static Builder builder() {
@@ -48,13 +48,6 @@ public class DescribeTasksResponseBody extends TeaModel {
     }
 
     /**
-     * @return pageSize
-     */
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -62,17 +55,10 @@ public class DescribeTasksResponseBody extends TeaModel {
     }
 
     /**
-     * @return requestId
+     * @return pageSize
      */
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    /**
-     * @return totalCount
-     */
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     /**
@@ -83,30 +69,36 @@ public class DescribeTasksResponseBody extends TeaModel {
     }
 
     /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
      * @return taskSet
      */
     public TaskSet getTaskSet() {
         return this.taskSet;
     }
 
+    /**
+     * @return totalCount
+     */
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static final class Builder {
-        private Integer pageSize; 
         private Integer pageNumber; 
-        private String requestId; 
-        private Integer totalCount; 
+        private Integer pageSize; 
         private String regionId; 
+        private String requestId; 
         private TaskSet taskSet; 
+        private Integer totalCount; 
 
         /**
-         * The number of entries in the current page.
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * The current page number of the paged query.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,23 +106,15 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * PageSize.
          */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
+        public Builder pageSize(Integer pageSize) {
+            this.pageSize = pageSize;
             return this;
         }
 
         /**
-         * The total number of entries returned.
-         */
-        public Builder totalCount(Integer totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-
-        /**
-         * The ID of the region.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -138,10 +122,26 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The collection of tasks.
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TaskSet.
          */
         public Builder taskSet(TaskSet taskSet) {
             this.taskSet = taskSet;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
@@ -155,28 +155,28 @@ public class DescribeTasksResponseBody extends TeaModel {
         @NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("TaskStatus")
-        private String taskStatus;
-
         @NameInMap("FinishedTime")
         private String finishedTime;
 
         @NameInMap("SupportCancel")
         private String supportCancel;
 
-        @NameInMap("TaskId")
-        private String taskId;
-
         @NameInMap("TaskAction")
         private String taskAction;
 
+        @NameInMap("TaskId")
+        private String taskId;
+
+        @NameInMap("TaskStatus")
+        private String taskStatus;
+
         private Task(Builder builder) {
             this.creationTime = builder.creationTime;
-            this.taskStatus = builder.taskStatus;
             this.finishedTime = builder.finishedTime;
             this.supportCancel = builder.supportCancel;
-            this.taskId = builder.taskId;
             this.taskAction = builder.taskAction;
+            this.taskId = builder.taskId;
+            this.taskStatus = builder.taskStatus;
         }
 
         public static Builder builder() {
@@ -195,13 +195,6 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * @return taskStatus
-         */
-        public String getTaskStatus() {
-            return this.taskStatus;
-        }
-
-        /**
          * @return finishedTime
          */
         public String getFinishedTime() {
@@ -216,6 +209,13 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
+         * @return taskAction
+         */
+        public String getTaskAction() {
+            return this.taskAction;
+        }
+
+        /**
          * @return taskId
          */
         public String getTaskId() {
@@ -223,22 +223,22 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * @return taskAction
+         * @return taskStatus
          */
-        public String getTaskAction() {
-            return this.taskAction;
+        public String getTaskStatus() {
+            return this.taskStatus;
         }
 
         public static final class Builder {
             private String creationTime; 
-            private String taskStatus; 
             private String finishedTime; 
             private String supportCancel; 
-            private String taskId; 
             private String taskAction; 
+            private String taskId; 
+            private String taskStatus; 
 
             /**
-             * The creation time.
+             * CreationTime.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -246,15 +246,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the task.
-             */
-            public Builder taskStatus(String taskStatus) {
-                this.taskStatus = taskStatus;
-                return this;
-            }
-
-            /**
-             * The end time.
+             * FinishedTime.
              */
             public Builder finishedTime(String finishedTime) {
                 this.finishedTime = finishedTime;
@@ -262,7 +254,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the task can be canceled.
+             * SupportCancel.
              */
             public Builder supportCancel(String supportCancel) {
                 this.supportCancel = supportCancel;
@@ -270,7 +262,15 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task.
+             * TaskAction.
+             */
+            public Builder taskAction(String taskAction) {
+                this.taskAction = taskAction;
+                return this;
+            }
+
+            /**
+             * TaskId.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -278,10 +278,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the task.
+             * TaskStatus.
              */
-            public Builder taskAction(String taskAction) {
-                this.taskAction = taskAction;
+            public Builder taskStatus(String taskStatus) {
+                this.taskStatus = taskStatus;
                 return this;
             }
 

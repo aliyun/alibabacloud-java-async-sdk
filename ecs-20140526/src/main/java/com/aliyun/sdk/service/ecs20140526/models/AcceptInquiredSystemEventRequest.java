@@ -12,13 +12,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AcceptInquiredSystemEventRequest</p>
  */
 public class AcceptInquiredSystemEventRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("Choice")
+    private String choice;
+
+    @Query
+    @NameInMap("EventId")
+    @Validation(required = true)
+    private String eventId;
+
+    @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
 
     @Query
     @NameInMap("OwnerId")
     private Long ownerId;
+
+    @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
 
     @Query
     @NameInMap("ResourceOwnerAccount")
@@ -28,29 +42,20 @@ public class AcceptInquiredSystemEventRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("OwnerAccount")
-    private String ownerAccount;
-
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
-    @Query
-    @NameInMap("EventId")
-    @Validation(required = true)
-    private String eventId;
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     private AcceptInquiredSystemEventRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
+        this.choice = builder.choice;
+        this.eventId = builder.eventId;
+        this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.ownerAccount = builder.ownerAccount;
-        this.regionId = builder.regionId;
-        this.eventId = builder.eventId;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -67,10 +72,24 @@ public class AcceptInquiredSystemEventRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return choice
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getChoice() {
+        return this.choice;
+    }
+
+    /**
+     * @return eventId
+     */
+    public String getEventId() {
+        return this.eventId;
+    }
+
+    /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     /**
@@ -78,6 +97,13 @@ public class AcceptInquiredSystemEventRequest extends Request {
      */
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -95,34 +121,21 @@ public class AcceptInquiredSystemEventRequest extends Request {
     }
 
     /**
-     * @return ownerAccount
+     * @return sourceRegionId
      */
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return eventId
-     */
-    public String getEventId() {
-        return this.eventId;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public static final class Builder extends Request.Builder<AcceptInquiredSystemEventRequest, Builder> {
-        private String sourceRegionId; 
+        private String choice; 
+        private String eventId; 
+        private String ownerAccount; 
         private Long ownerId; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String ownerAccount; 
-        private String regionId; 
-        private String eventId; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -130,21 +143,40 @@ public class AcceptInquiredSystemEventRequest extends Request {
 
         private Builder(AcceptInquiredSystemEventRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
+            this.choice = request.choice;
+            this.eventId = request.eventId;
+            this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.ownerAccount = request.ownerAccount;
-            this.regionId = request.regionId;
-            this.eventId = request.eventId;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
-         * SourceRegionId.
+         * Choice.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder choice(String choice) {
+            this.putQueryParameter("Choice", choice);
+            this.choice = choice;
+            return this;
+        }
+
+        /**
+         * EventId.
+         */
+        public Builder eventId(String eventId) {
+            this.putQueryParameter("EventId", eventId);
+            this.eventId = eventId;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
             return this;
         }
 
@@ -154,6 +186,15 @@ public class AcceptInquiredSystemEventRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
@@ -176,29 +217,11 @@ public class AcceptInquiredSystemEventRequest extends Request {
         }
 
         /**
-         * OwnerAccount.
+         * SourceRegionId.
          */
-        public Builder ownerAccount(String ownerAccount) {
-            this.putQueryParameter("OwnerAccount", ownerAccount);
-            this.ownerAccount = ownerAccount;
-            return this;
-        }
-
-        /**
-         * The region ID of the system event. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The ID of the system event.
-         */
-        public Builder eventId(String eventId) {
-            this.putQueryParameter("EventId", eventId);
-            this.eventId = eventId;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

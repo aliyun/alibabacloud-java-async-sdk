@@ -12,38 +12,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyPrefixListRequest</p>
  */
 public class ModifyPrefixListRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("AddEntry")
+    private java.util.List < AddEntry> addEntry;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
-    @NameInMap("ResourceOwnerAccount")
-    private String resourceOwnerAccount;
-
-    @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
+    @NameInMap("Description")
+    private String description;
 
     @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
 
     @Query
-    @NameInMap("AddEntry")
-    private java.util.List < AddEntry> addEntry;
-
-    @Query
-    @NameInMap("RemoveEntry")
-    private java.util.List < RemoveEntry> removeEntry;
-
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
+    @NameInMap("OwnerId")
+    private Long ownerId;
 
     @Query
     @NameInMap("PrefixListId")
@@ -55,22 +38,39 @@ public class ModifyPrefixListRequest extends Request {
     private String prefixListName;
 
     @Query
-    @NameInMap("Description")
-    private String description;
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
+    @Query
+    @NameInMap("RemoveEntry")
+    private java.util.List < RemoveEntry> removeEntry;
+
+    @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     private ModifyPrefixListRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
-        this.ownerId = builder.ownerId;
-        this.resourceOwnerAccount = builder.resourceOwnerAccount;
-        this.resourceOwnerId = builder.resourceOwnerId;
-        this.ownerAccount = builder.ownerAccount;
         this.addEntry = builder.addEntry;
-        this.removeEntry = builder.removeEntry;
-        this.regionId = builder.regionId;
+        this.description = builder.description;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
         this.prefixListId = builder.prefixListId;
         this.prefixListName = builder.prefixListName;
-        this.description = builder.description;
+        this.regionId = builder.regionId;
+        this.removeEntry = builder.removeEntry;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -87,31 +87,17 @@ public class ModifyPrefixListRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return addEntry
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public java.util.List < AddEntry> getAddEntry() {
+        return this.addEntry;
     }
 
     /**
-     * @return ownerId
+     * @return description
      */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
-     * @return resourceOwnerAccount
-     */
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    /**
-     * @return resourceOwnerId
-     */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public String getDescription() {
+        return this.description;
     }
 
     /**
@@ -122,24 +108,10 @@ public class ModifyPrefixListRequest extends Request {
     }
 
     /**
-     * @return addEntry
+     * @return ownerId
      */
-    public java.util.List < AddEntry> getAddEntry() {
-        return this.addEntry;
-    }
-
-    /**
-     * @return removeEntry
-     */
-    public java.util.List < RemoveEntry> getRemoveEntry() {
-        return this.removeEntry;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     /**
@@ -157,24 +129,52 @@ public class ModifyPrefixListRequest extends Request {
     }
 
     /**
-     * @return description
+     * @return regionId
      */
-    public String getDescription() {
-        return this.description;
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return removeEntry
+     */
+    public java.util.List < RemoveEntry> getRemoveEntry() {
+        return this.removeEntry;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public static final class Builder extends Request.Builder<ModifyPrefixListRequest, Builder> {
-        private String sourceRegionId; 
-        private Long ownerId; 
-        private String resourceOwnerAccount; 
-        private Long resourceOwnerId; 
-        private String ownerAccount; 
         private java.util.List < AddEntry> addEntry; 
-        private java.util.List < RemoveEntry> removeEntry; 
-        private String regionId; 
+        private String description; 
+        private String ownerAccount; 
+        private Long ownerId; 
         private String prefixListId; 
         private String prefixListName; 
-        private String description; 
+        private String regionId; 
+        private java.util.List < RemoveEntry> removeEntry; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -182,25 +182,43 @@ public class ModifyPrefixListRequest extends Request {
 
         private Builder(ModifyPrefixListRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
-            this.ownerId = request.ownerId;
-            this.resourceOwnerAccount = request.resourceOwnerAccount;
-            this.resourceOwnerId = request.resourceOwnerId;
-            this.ownerAccount = request.ownerAccount;
             this.addEntry = request.addEntry;
-            this.removeEntry = request.removeEntry;
-            this.regionId = request.regionId;
+            this.description = request.description;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
             this.prefixListId = request.prefixListId;
             this.prefixListName = request.prefixListName;
-            this.description = request.description;
+            this.regionId = request.regionId;
+            this.removeEntry = request.removeEntry;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
-         * SourceRegionId.
+         * AddEntry.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder addEntry(java.util.List < AddEntry> addEntry) {
+            this.putQueryParameter("AddEntry", addEntry);
+            this.addEntry = addEntry;
+            return this;
+        }
+
+        /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
             return this;
         }
 
@@ -210,6 +228,42 @@ public class ModifyPrefixListRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * PrefixListId.
+         */
+        public Builder prefixListId(String prefixListId) {
+            this.putQueryParameter("PrefixListId", prefixListId);
+            this.prefixListId = prefixListId;
+            return this;
+        }
+
+        /**
+         * PrefixListName.
+         */
+        public Builder prefixListName(String prefixListName) {
+            this.putQueryParameter("PrefixListName", prefixListName);
+            this.prefixListName = prefixListName;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * RemoveEntry.
+         */
+        public Builder removeEntry(java.util.List < RemoveEntry> removeEntry) {
+            this.putQueryParameter("RemoveEntry", removeEntry);
+            this.removeEntry = removeEntry;
             return this;
         }
 
@@ -232,67 +286,11 @@ public class ModifyPrefixListRequest extends Request {
         }
 
         /**
-         * OwnerAccount.
+         * SourceRegionId.
          */
-        public Builder ownerAccount(String ownerAccount) {
-            this.putQueryParameter("OwnerAccount", ownerAccount);
-            this.ownerAccount = ownerAccount;
-            return this;
-        }
-
-        /**
-         * AddEntry.
-         */
-        public Builder addEntry(java.util.List < AddEntry> addEntry) {
-            this.putQueryParameter("AddEntry", addEntry);
-            this.addEntry = addEntry;
-            return this;
-        }
-
-        /**
-         * RemoveEntry.
-         */
-        public Builder removeEntry(java.util.List < RemoveEntry> removeEntry) {
-            this.putQueryParameter("RemoveEntry", removeEntry);
-            this.removeEntry = removeEntry;
-            return this;
-        }
-
-        /**
-         * The ID of the region.
-         * <p>
-         * 
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The ID of the prefix list.
-         */
-        public Builder prefixListId(String prefixListId) {
-            this.putQueryParameter("PrefixListId", prefixListId);
-            this.prefixListId = prefixListId;
-            return this;
-        }
-
-        /**
-         * The name of the prefix list. The description must be 2 to 128 characters in length. It must start with a letter and cannot start with "http:// ", "https://", "com.aliyun", or "com.alibabacloud. It can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).
-         */
-        public Builder prefixListName(String prefixListName) {
-            this.putQueryParameter("PrefixListName", prefixListName);
-            this.prefixListName = prefixListName;
-            return this;
-        }
-
-        /**
-         * The description of the prefix list. The description must be 2 to 256 characters in length and cannot start with "http:// "or "https.
-         */
-        public Builder description(String description) {
-            this.putQueryParameter("Description", description);
-            this.description = description;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 
@@ -304,16 +302,16 @@ public class ModifyPrefixListRequest extends Request {
     } 
 
     public static class AddEntry extends TeaModel {
-        @NameInMap("Description")
-        private String description;
-
         @NameInMap("Cidr")
         @Validation(required = true)
         private String cidr;
 
+        @NameInMap("Description")
+        private String description;
+
         private AddEntry(Builder builder) {
-            this.description = builder.description;
             this.cidr = builder.cidr;
+            this.description = builder.description;
         }
 
         public static Builder builder() {
@@ -325,42 +323,36 @@ public class ModifyPrefixListRequest extends Request {
         }
 
         /**
-         * @return description
-         */
-        public String getDescription() {
-            return this.description;
-        }
-
-        /**
          * @return cidr
          */
         public String getCidr() {
             return this.cidr;
         }
 
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
         public static final class Builder {
-            private String description; 
             private String cidr; 
+            private String description; 
 
             /**
-             * 前缀列表条目的描述信息。长度为2~32个英文或中文字符，不能以`http://`和`https://`开头。N的取值范围：0~200。
+             * Cidr.
              */
-            public Builder description(String description) {
-                this.description = description;
+            public Builder cidr(String cidr) {
+                this.cidr = cidr;
                 return this;
             }
 
             /**
-             * 添加的前缀列表条目的CIDR地址块信息。N的取值范围：0~200。
-             * <p>
-             * 
-             * 添加时请您注意：
-             * - 前缀列表的条目数量，不能大于前缀列表支持的最大条目容量。您可以调用[DescribePrefixListAttributes](~~205872~~)查询指定前缀列表的最大条目容量信息。
-             * - 不允许设置重复的CIDR地址块信息。
-             * - 不允许与`RemoveEntry.N.Cidr`参数值重复。
+             * Description.
              */
-            public Builder cidr(String cidr) {
-                this.cidr = cidr;
+            public Builder description(String description) {
+                this.description = description;
                 return this;
             }
 
@@ -399,12 +391,7 @@ public class ModifyPrefixListRequest extends Request {
             private String cidr; 
 
             /**
-             * 删除的前缀列表条目的CIDR地址块信息。N的取值范围：0~200。
-             * <p>
-             * 
-             * 删除时请您注意：
-             * - 不允许设置重复的CIDR地址块信息。
-             * - 不允许与`AddEntry.N.Cidr`参数值重复。
+             * Cidr.
              */
             public Builder cidr(String cidr) {
                 this.cidr = cidr;

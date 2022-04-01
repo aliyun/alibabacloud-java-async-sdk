@@ -13,12 +13,42 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDedicatedBlockStorageClustersRequest extends Request {
     @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
+    @NameInMap("Category")
+    private String category;
 
     @Query
     @NameInMap("DedicatedBlockStorageClusterId")
     private java.util.List < String > dedicatedBlockStorageClusterId;
+
+    @Query
+    @NameInMap("MaxResults")
+    @Validation(maximum = 500, minimum = 1)
+    private Integer maxResults;
+
+    @Query
+    @NameInMap("NextToken")
+    private String nextToken;
+
+    @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
+
+    @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
+    @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
 
     @Query
     @NameInMap("Status")
@@ -28,34 +58,19 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
     @NameInMap("ZoneId")
     private String zoneId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
-    @Query
-    @NameInMap("Category")
-    private String category;
-
-    @Query
-    @NameInMap("NextToken")
-    private String nextToken;
-
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 500, minimum = 1)
-    private Integer maxResults;
-
     private DescribeDedicatedBlockStorageClustersRequest(Builder builder) {
         super(builder);
-        this.resourceOwnerId = builder.resourceOwnerId;
+        this.category = builder.category;
         this.dedicatedBlockStorageClusterId = builder.dedicatedBlockStorageClusterId;
+        this.maxResults = builder.maxResults;
+        this.nextToken = builder.nextToken;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
         this.status = builder.status;
         this.zoneId = builder.zoneId;
-        this.regionId = builder.regionId;
-        this.category = builder.category;
-        this.nextToken = builder.nextToken;
-        this.maxResults = builder.maxResults;
     }
 
     public static Builder builder() {
@@ -72,10 +87,10 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
     }
 
     /**
-     * @return resourceOwnerId
+     * @return category
      */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public String getCategory() {
+        return this.category;
     }
 
     /**
@@ -83,6 +98,55 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
      */
     public java.util.List < String > getDedicatedBlockStorageClusterId() {
         return this.dedicatedBlockStorageClusterId;
+    }
+
+    /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     /**
@@ -99,43 +163,18 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
         return this.zoneId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return category
-     */
-    public String getCategory() {
-        return this.category;
-    }
-
-    /**
-     * @return nextToken
-     */
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
-    /**
-     * @return maxResults
-     */
-    public Integer getMaxResults() {
-        return this.maxResults;
-    }
-
     public static final class Builder extends Request.Builder<DescribeDedicatedBlockStorageClustersRequest, Builder> {
-        private Long resourceOwnerId; 
+        private String category; 
         private java.util.List < String > dedicatedBlockStorageClusterId; 
+        private Integer maxResults; 
+        private String nextToken; 
+        private String ownerAccount; 
+        private Long ownerId; 
+        private String regionId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
         private java.util.List < String > status; 
         private String zoneId; 
-        private String regionId; 
-        private String category; 
-        private String nextToken; 
-        private Integer maxResults; 
 
         private Builder() {
             super();
@@ -143,22 +182,25 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
 
         private Builder(DescribeDedicatedBlockStorageClustersRequest request) {
             super(request);
-            this.resourceOwnerId = request.resourceOwnerId;
+            this.category = request.category;
             this.dedicatedBlockStorageClusterId = request.dedicatedBlockStorageClusterId;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
             this.status = request.status;
             this.zoneId = request.zoneId;
-            this.regionId = request.regionId;
-            this.category = request.category;
-            this.nextToken = request.nextToken;
-            this.maxResults = request.maxResults;
         } 
 
         /**
-         * ResourceOwnerId.
+         * Category.
          */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
+        public Builder category(String category) {
+            this.putQueryParameter("Category", category);
+            this.category = category;
             return this;
         }
 
@@ -172,6 +214,69 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
         }
 
         /**
+         * MaxResults.
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.putQueryParameter("MaxResults", maxResults);
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
          * Status.
          */
         public Builder status(java.util.List < String > status) {
@@ -181,53 +286,11 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
         }
 
         /**
-         * The ID of the zone. You can call [DescribeZones](~~ 25610 ~~) to obtain the list of zones.
+         * ZoneId.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
             this.zoneId = zoneId;
-            return this;
-        }
-
-        /**
-         * The ID of the region. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The type of cloud disk that can be created in the exclusive block storage cluster.
-         * <p>
-         * 
-         * The value can only be cloud_essd, that is, ESSD.
-         */
-        public Builder category(String category) {
-            this.putQueryParameter("Category", category);
-            this.category = category;
-            return this;
-        }
-
-        /**
-         * Query the credential (Token). The value of this parameter is the NextToken value returned by the last call to the API. You do not need to set this parameter when you call the API for the first time.
-         */
-        public Builder nextToken(String nextToken) {
-            this.putQueryParameter("NextToken", nextToken);
-            this.nextToken = nextToken;
-            return this;
-        }
-
-        /**
-         * The maximum number of entries to return on each page. Maximum Value: 500
-         * <p>
-         * 
-         * Default value: 10
-         */
-        public Builder maxResults(Integer maxResults) {
-            this.putQueryParameter("MaxResults", maxResults);
-            this.maxResults = maxResults;
             return this;
         }
 

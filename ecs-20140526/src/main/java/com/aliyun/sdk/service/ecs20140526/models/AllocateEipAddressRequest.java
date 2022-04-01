@@ -13,17 +13,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class AllocateEipAddressRequest extends Request {
     @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
-
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
+    @NameInMap("ActivityId")
+    private Long activityId;
 
     @Query
     @NameInMap("Bandwidth")
     private String bandwidth;
+
+    @Query
+    @NameInMap("ClientToken")
+    private String clientToken;
 
     @Query
     @NameInMap("ISP")
@@ -34,22 +33,38 @@ public class AllocateEipAddressRequest extends Request {
     private String internetChargeType;
 
     @Query
-    @NameInMap("ActivityId")
-    private Long activityId;
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
 
     @Query
-    @NameInMap("ClientToken")
-    private String clientToken;
+    @NameInMap("OwnerId")
+    private Long ownerId;
+
+    @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
+    @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
 
     private AllocateEipAddressRequest(Builder builder) {
         super(builder);
-        this.resourceOwnerId = builder.resourceOwnerId;
-        this.regionId = builder.regionId;
+        this.activityId = builder.activityId;
         this.bandwidth = builder.bandwidth;
+        this.clientToken = builder.clientToken;
         this.ISP = builder.ISP;
         this.internetChargeType = builder.internetChargeType;
-        this.activityId = builder.activityId;
-        this.clientToken = builder.clientToken;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
     }
 
     public static Builder builder() {
@@ -66,17 +81,10 @@ public class AllocateEipAddressRequest extends Request {
     }
 
     /**
-     * @return resourceOwnerId
+     * @return activityId
      */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
+    public Long getActivityId() {
+        return this.activityId;
     }
 
     /**
@@ -84,6 +92,13 @@ public class AllocateEipAddressRequest extends Request {
      */
     public String getBandwidth() {
         return this.bandwidth;
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -101,27 +116,51 @@ public class AllocateEipAddressRequest extends Request {
     }
 
     /**
-     * @return activityId
+     * @return ownerAccount
      */
-    public Long getActivityId() {
-        return this.activityId;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     /**
-     * @return clientToken
+     * @return ownerId
      */
-    public String getClientToken() {
-        return this.clientToken;
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public static final class Builder extends Request.Builder<AllocateEipAddressRequest, Builder> {
-        private Long resourceOwnerId; 
-        private String regionId; 
+        private Long activityId; 
         private String bandwidth; 
+        private String clientToken; 
         private String ISP; 
         private String internetChargeType; 
-        private Long activityId; 
-        private String clientToken; 
+        private String ownerAccount; 
+        private Long ownerId; 
+        private String regionId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
 
         private Builder() {
             super();
@@ -129,30 +168,24 @@ public class AllocateEipAddressRequest extends Request {
 
         private Builder(AllocateEipAddressRequest request) {
             super(request);
-            this.resourceOwnerId = request.resourceOwnerId;
-            this.regionId = request.regionId;
+            this.activityId = request.activityId;
             this.bandwidth = request.bandwidth;
+            this.clientToken = request.clientToken;
             this.ISP = request.ISP;
             this.internetChargeType = request.internetChargeType;
-            this.activityId = request.activityId;
-            this.clientToken = request.clientToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * ResourceOwnerId.
+         * ActivityId.
          */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
+        public Builder activityId(Long activityId) {
+            this.putQueryParameter("ActivityId", activityId);
+            this.activityId = activityId;
             return this;
         }
 
@@ -162,6 +195,15 @@ public class AllocateEipAddressRequest extends Request {
         public Builder bandwidth(String bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
             this.bandwidth = bandwidth;
+            return this;
+        }
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 
@@ -184,20 +226,47 @@ public class AllocateEipAddressRequest extends Request {
         }
 
         /**
-         * ActivityId.
+         * OwnerAccount.
          */
-        public Builder activityId(Long activityId) {
-            this.putQueryParameter("ActivityId", activityId);
-            this.activityId = activityId;
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
             return this;
         }
 
         /**
-         * ClientToken.
+         * OwnerId.
          */
-        public Builder clientToken(String clientToken) {
-            this.putQueryParameter("ClientToken", clientToken);
-            this.clientToken = clientToken;
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
             return this;
         }
 

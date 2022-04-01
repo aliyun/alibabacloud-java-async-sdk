@@ -12,23 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifySecurityGroupPolicyRequest</p>
  */
 public class ModifySecurityGroupPolicyRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
-    @NameInMap("OwnerAccount")
-    private String ownerAccount;
-
-    @Query
-    @NameInMap("SecurityGroupId")
-    @Validation(required = true)
-    private String securityGroupId;
-
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
+    @NameInMap("ClientToken")
+    private String clientToken;
 
     @Query
     @NameInMap("InnerAccessPolicy")
@@ -36,32 +22,46 @@ public class ModifySecurityGroupPolicyRequest extends Request {
     private String innerAccessPolicy;
 
     @Query
-    @NameInMap("ResourceOwnerAccount")
-    private String resourceOwnerAccount;
-
-    @Query
-    @NameInMap("ClientToken")
-    private String clientToken;
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
 
     @Query
     @NameInMap("OwnerId")
     private Long ownerId;
 
     @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
+    @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
+    @Query
+    @NameInMap("SecurityGroupId")
+    @Validation(required = true)
+    private String securityGroupId;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     private ModifySecurityGroupPolicyRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
-        this.ownerAccount = builder.ownerAccount;
-        this.securityGroupId = builder.securityGroupId;
-        this.regionId = builder.regionId;
-        this.innerAccessPolicy = builder.innerAccessPolicy;
-        this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.clientToken = builder.clientToken;
+        this.innerAccessPolicy = builder.innerAccessPolicy;
+        this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.securityGroupId = builder.securityGroupId;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -78,31 +78,10 @@ public class ModifySecurityGroupPolicyRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return clientToken
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
-     * @return ownerAccount
-     */
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    /**
-     * @return securityGroupId
-     */
-    public String getSecurityGroupId() {
-        return this.securityGroupId;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -113,17 +92,10 @@ public class ModifySecurityGroupPolicyRequest extends Request {
     }
 
     /**
-     * @return resourceOwnerAccount
+     * @return ownerAccount
      */
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    /**
-     * @return clientToken
-     */
-    public String getClientToken() {
-        return this.clientToken;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     /**
@@ -134,22 +106,50 @@ public class ModifySecurityGroupPolicyRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
      * @return resourceOwnerId
      */
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
     }
 
+    /**
+     * @return securityGroupId
+     */
+    public String getSecurityGroupId() {
+        return this.securityGroupId;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
     public static final class Builder extends Request.Builder<ModifySecurityGroupPolicyRequest, Builder> {
-        private String sourceRegionId; 
-        private String ownerAccount; 
-        private String securityGroupId; 
-        private String regionId; 
-        private String innerAccessPolicy; 
-        private String resourceOwnerAccount; 
         private String clientToken; 
+        private String innerAccessPolicy; 
+        private String ownerAccount; 
         private Long ownerId; 
+        private String regionId; 
+        private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String securityGroupId; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -157,23 +157,32 @@ public class ModifySecurityGroupPolicyRequest extends Request {
 
         private Builder(ModifySecurityGroupPolicyRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
-            this.ownerAccount = request.ownerAccount;
-            this.securityGroupId = request.securityGroupId;
-            this.regionId = request.regionId;
-            this.innerAccessPolicy = request.innerAccessPolicy;
-            this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.clientToken = request.clientToken;
+            this.innerAccessPolicy = request.innerAccessPolicy;
+            this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.securityGroupId = request.securityGroupId;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
-         * SourceRegionId.
+         * ClientToken.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * InnerAccessPolicy.
+         */
+        public Builder innerAccessPolicy(String innerAccessPolicy) {
+            this.putQueryParameter("InnerAccessPolicy", innerAccessPolicy);
+            this.innerAccessPolicy = innerAccessPolicy;
             return this;
         }
 
@@ -187,58 +196,7 @@ public class ModifySecurityGroupPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the security group.
-         */
-        public Builder securityGroupId(String securityGroupId) {
-            this.putQueryParameter("SecurityGroupId", securityGroupId);
-            this.securityGroupId = securityGroupId;
-            return this;
-        }
-
-        /**
-         * The ID of the region to which the security group belongs. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The Intranet connection policy between ECS instances in the security group. Valid values:
-         * <p>
-         * 
-         * -Accept: interconnect
-         * -Drop: Quarantine
-         * 
-         * The value is case insensitive.
-         */
-        public Builder innerAccessPolicy(String innerAccessPolicy) {
-            this.putQueryParameter("InnerAccessPolicy", innerAccessPolicy);
-            this.innerAccessPolicy = innerAccessPolicy;
-            return this;
-        }
-
-        /**
-         * The account name of the resource master account.
-         */
-        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
-            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-            this.resourceOwnerAccount = resourceOwnerAccount;
-            return this;
-        }
-
-        /**
-         * Ensure the idempotence of the request. Generate a parameter value from your client. Make sure that the value is unique among different requests. **ClientToken** supports only ASCII characters and cannot exceed 64 characters. For more information, see [how to ensure idempotence](~~ 25693 ~~).
-         */
-        public Builder clientToken(String clientToken) {
-            this.putQueryParameter("ClientToken", clientToken);
-            this.clientToken = clientToken;
-            return this;
-        }
-
-        /**
-         * The ID of the RAM user.
+         * OwnerId.
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -247,11 +205,47 @@ public class ModifySecurityGroupPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the resource master account, that is, the UID.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
          */
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * SecurityGroupId.
+         */
+        public Builder securityGroupId(String securityGroupId) {
+            this.putQueryParameter("SecurityGroupId", securityGroupId);
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

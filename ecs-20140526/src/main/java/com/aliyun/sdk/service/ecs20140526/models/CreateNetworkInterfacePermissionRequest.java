@@ -12,13 +12,33 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateNetworkInterfacePermissionRequest</p>
  */
 public class CreateNetworkInterfacePermissionRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("AccountId")
+    @Validation(required = true)
+    private Long accountId;
+
+    @Query
+    @NameInMap("NetworkInterfaceId")
+    @Validation(required = true)
+    private String networkInterfaceId;
+
+    @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
 
     @Query
     @NameInMap("OwnerId")
     private Long ownerId;
+
+    @Query
+    @NameInMap("Permission")
+    @Validation(required = true)
+    private String permission;
+
+    @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
 
     @Query
     @NameInMap("ResourceOwnerAccount")
@@ -28,41 +48,21 @@ public class CreateNetworkInterfacePermissionRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("OwnerAccount")
-    private String ownerAccount;
-
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
-    @Query
-    @NameInMap("NetworkInterfaceId")
-    @Validation(required = true)
-    private String networkInterfaceId;
-
-    @Query
-    @NameInMap("AccountId")
-    @Validation(required = true)
-    private Long accountId;
-
-    @Query
-    @NameInMap("Permission")
-    @Validation(required = true)
-    private String permission;
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     private CreateNetworkInterfacePermissionRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
+        this.accountId = builder.accountId;
+        this.networkInterfaceId = builder.networkInterfaceId;
+        this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.permission = builder.permission;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.ownerAccount = builder.ownerAccount;
-        this.regionId = builder.regionId;
-        this.networkInterfaceId = builder.networkInterfaceId;
-        this.accountId = builder.accountId;
-        this.permission = builder.permission;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -79,10 +79,24 @@ public class CreateNetworkInterfacePermissionRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return accountId
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public Long getAccountId() {
+        return this.accountId;
+    }
+
+    /**
+     * @return networkInterfaceId
+     */
+    public String getNetworkInterfaceId() {
+        return this.networkInterfaceId;
+    }
+
+    /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     /**
@@ -90,6 +104,20 @@ public class CreateNetworkInterfacePermissionRequest extends Request {
      */
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    /**
+     * @return permission
+     */
+    public String getPermission() {
+        return this.permission;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -107,50 +135,22 @@ public class CreateNetworkInterfacePermissionRequest extends Request {
     }
 
     /**
-     * @return ownerAccount
+     * @return sourceRegionId
      */
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return networkInterfaceId
-     */
-    public String getNetworkInterfaceId() {
-        return this.networkInterfaceId;
-    }
-
-    /**
-     * @return accountId
-     */
-    public Long getAccountId() {
-        return this.accountId;
-    }
-
-    /**
-     * @return permission
-     */
-    public String getPermission() {
-        return this.permission;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public static final class Builder extends Request.Builder<CreateNetworkInterfacePermissionRequest, Builder> {
-        private String sourceRegionId; 
+        private Long accountId; 
+        private String networkInterfaceId; 
+        private String ownerAccount; 
         private Long ownerId; 
+        private String permission; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String ownerAccount; 
-        private String regionId; 
-        private String networkInterfaceId; 
-        private Long accountId; 
-        private String permission; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -158,23 +158,41 @@ public class CreateNetworkInterfacePermissionRequest extends Request {
 
         private Builder(CreateNetworkInterfacePermissionRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
+            this.accountId = request.accountId;
+            this.networkInterfaceId = request.networkInterfaceId;
+            this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.permission = request.permission;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.ownerAccount = request.ownerAccount;
-            this.regionId = request.regionId;
-            this.networkInterfaceId = request.networkInterfaceId;
-            this.accountId = request.accountId;
-            this.permission = request.permission;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
-         * SourceRegionId.
+         * AccountId.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder accountId(Long accountId) {
+            this.putQueryParameter("AccountId", accountId);
+            this.accountId = accountId;
+            return this;
+        }
+
+        /**
+         * NetworkInterfaceId.
+         */
+        public Builder networkInterfaceId(String networkInterfaceId) {
+            this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
+            this.networkInterfaceId = networkInterfaceId;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
             return this;
         }
 
@@ -184,6 +202,24 @@ public class CreateNetworkInterfacePermissionRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * Permission.
+         */
+        public Builder permission(String permission) {
+            this.putQueryParameter("Permission", permission);
+            this.permission = permission;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
@@ -206,50 +242,11 @@ public class CreateNetworkInterfacePermissionRequest extends Request {
         }
 
         /**
-         * OwnerAccount.
+         * SourceRegionId.
          */
-        public Builder ownerAccount(String ownerAccount) {
-            this.putQueryParameter("OwnerAccount", ownerAccount);
-            this.ownerAccount = ownerAccount;
-            return this;
-        }
-
-        /**
-         * The region of the Eni. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The ID of the Eni.
-         */
-        public Builder networkInterfaceId(String networkInterfaceId) {
-            this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
-            this.networkInterfaceId = networkInterfaceId;
-            return this;
-        }
-
-        /**
-         * The account ID or individual user ID of the Alibaba Cloud Partner (Certified ISV).
-         */
-        public Builder accountId(Long accountId) {
-            this.putQueryParameter("AccountId", accountId);
-            this.accountId = accountId;
-            return this;
-        }
-
-        /**
-         * The Eni permission action. Valid values:
-         * <p>
-         * 
-         * InstanceAttach: allows authorized users to attach your Eni to the other ECS instance. The ECS instance and the Eni must be in the same zone.
-         */
-        public Builder permission(String permission) {
-            this.putQueryParameter("Permission", permission);
-            this.permission = permission;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

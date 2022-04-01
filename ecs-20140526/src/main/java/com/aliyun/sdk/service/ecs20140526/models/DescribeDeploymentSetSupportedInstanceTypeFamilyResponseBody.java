@@ -50,7 +50,7 @@ public class DescribeDeploymentSetSupportedInstanceTypeFamilyResponseBody extend
         private String requestId; 
 
         /**
-         * Instance families that support deployment sets.
+         * InstanceTypeFamilies.
          */
         public Builder instanceTypeFamilies(String instanceTypeFamilies) {
             this.instanceTypeFamilies = instanceTypeFamilies;
@@ -58,7 +58,7 @@ public class DescribeDeploymentSetSupportedInstanceTypeFamilyResponseBody extend
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

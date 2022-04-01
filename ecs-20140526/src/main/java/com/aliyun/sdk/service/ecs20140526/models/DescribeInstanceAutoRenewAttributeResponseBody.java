@@ -12,8 +12,8 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceAutoRenewAttributeResponseBody</p>
  */
 public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    private String requestId;
+    @NameInMap("InstanceRenewAttributes")
+    private InstanceRenewAttributes instanceRenewAttributes;
 
     @NameInMap("PageNumber")
     private Integer pageNumber;
@@ -21,18 +21,18 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
     @NameInMap("PageSize")
     private Integer pageSize;
 
+    @NameInMap("RequestId")
+    private String requestId;
+
     @NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("InstanceRenewAttributes")
-    private InstanceRenewAttributes instanceRenewAttributes;
-
     private DescribeInstanceAutoRenewAttributeResponseBody(Builder builder) {
-        this.requestId = builder.requestId;
+        this.instanceRenewAttributes = builder.instanceRenewAttributes;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.requestId = builder.requestId;
         this.totalCount = builder.totalCount;
-        this.instanceRenewAttributes = builder.instanceRenewAttributes;
     }
 
     public static Builder builder() {
@@ -44,10 +44,10 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
     }
 
     /**
-     * @return requestId
+     * @return instanceRenewAttributes
      */
-    public String getRequestId() {
-        return this.requestId;
+    public InstanceRenewAttributes getInstanceRenewAttributes() {
+        return this.instanceRenewAttributes;
     }
 
     /**
@@ -65,36 +65,36 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
      * @return totalCount
      */
     public Integer getTotalCount() {
         return this.totalCount;
     }
 
-    /**
-     * @return instanceRenewAttributes
-     */
-    public InstanceRenewAttributes getInstanceRenewAttributes() {
-        return this.instanceRenewAttributes;
-    }
-
     public static final class Builder {
-        private String requestId; 
+        private InstanceRenewAttributes instanceRenewAttributes; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String requestId; 
         private Integer totalCount; 
-        private InstanceRenewAttributes instanceRenewAttributes; 
 
         /**
-         * The ID of the request.
+         * InstanceRenewAttributes.
          */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
+        public Builder instanceRenewAttributes(InstanceRenewAttributes instanceRenewAttributes) {
+            this.instanceRenewAttributes = instanceRenewAttributes;
             return this;
         }
 
         /**
-         * The page number.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The number of rows per page.
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,18 +110,18 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned instances.
+         * RequestId.
          */
-        public Builder totalCount(Integer totalCount) {
-            this.totalCount = totalCount;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
         /**
-         * A collection of instance renewal attributes InstanceRenewAttribute.
+         * TotalCount.
          */
-        public Builder instanceRenewAttributes(InstanceRenewAttributes instanceRenewAttributes) {
-            this.instanceRenewAttributes = instanceRenewAttributes;
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
@@ -132,27 +132,27 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
     } 
 
     public static class InstanceRenewAttribute extends TeaModel {
-        @NameInMap("PeriodUnit")
-        private String periodUnit;
+        @NameInMap("AutoRenewEnabled")
+        private Boolean autoRenewEnabled;
 
         @NameInMap("Duration")
         private Integer duration;
 
-        @NameInMap("RenewalStatus")
-        private String renewalStatus;
-
         @NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("AutoRenewEnabled")
-        private Boolean autoRenewEnabled;
+        @NameInMap("PeriodUnit")
+        private String periodUnit;
+
+        @NameInMap("RenewalStatus")
+        private String renewalStatus;
 
         private InstanceRenewAttribute(Builder builder) {
-            this.periodUnit = builder.periodUnit;
-            this.duration = builder.duration;
-            this.renewalStatus = builder.renewalStatus;
-            this.instanceId = builder.instanceId;
             this.autoRenewEnabled = builder.autoRenewEnabled;
+            this.duration = builder.duration;
+            this.instanceId = builder.instanceId;
+            this.periodUnit = builder.periodUnit;
+            this.renewalStatus = builder.renewalStatus;
         }
 
         public static Builder builder() {
@@ -164,10 +164,10 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * @return periodUnit
+         * @return autoRenewEnabled
          */
-        public String getPeriodUnit() {
-            return this.periodUnit;
+        public Boolean getAutoRenewEnabled() {
+            return this.autoRenewEnabled;
         }
 
         /**
@@ -178,13 +178,6 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * @return renewalStatus
-         */
-        public String getRenewalStatus() {
-            return this.renewalStatus;
-        }
-
-        /**
          * @return instanceId
          */
         public String getInstanceId() {
@@ -192,29 +185,36 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * @return autoRenewEnabled
+         * @return periodUnit
          */
-        public Boolean getAutoRenewEnabled() {
-            return this.autoRenewEnabled;
+        public String getPeriodUnit() {
+            return this.periodUnit;
+        }
+
+        /**
+         * @return renewalStatus
+         */
+        public String getRenewalStatus() {
+            return this.renewalStatus;
         }
 
         public static final class Builder {
-            private String periodUnit; 
-            private Integer duration; 
-            private String renewalStatus; 
-            private String instanceId; 
             private Boolean autoRenewEnabled; 
+            private Integer duration; 
+            private String instanceId; 
+            private String periodUnit; 
+            private String renewalStatus; 
 
             /**
-             * The unit of the automatic renewal period.
+             * AutoRenewEnabled.
              */
-            public Builder periodUnit(String periodUnit) {
-                this.periodUnit = periodUnit;
+            public Builder autoRenewEnabled(Boolean autoRenewEnabled) {
+                this.autoRenewEnabled = autoRenewEnabled;
                 return this;
             }
 
             /**
-             * The automatic renewal period.
+             * Duration.
              */
             public Builder duration(Integer duration) {
                 this.duration = duration;
@@ -222,22 +222,7 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The automatic renewal status of the instance. Possible values:
-             * <p>
-             * 
-             * -AutoRenewal: set to automatic renewal.
-             * 
-             * -Normal: Cancels automatic renewal.
-             * 
-             * -NotRenewal: no renewal is required. The system does not send expiration reminders, but only sends non-renewal reminders three days before expiration. If you no longer renew an ECS instance, you can change it from [ModifyInstanceAutoRenewAttribute](~~ 52843 ~~) to pending ("Normal"), and then renew it by yourself or set it to automatic.
-             */
-            public Builder renewalStatus(String renewalStatus) {
-                this.renewalStatus = renewalStatus;
-                return this;
-            }
-
-            /**
-             * The ID of the instance.
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -245,10 +230,18 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether automatic renewal is enabled.
+             * PeriodUnit.
              */
-            public Builder autoRenewEnabled(Boolean autoRenewEnabled) {
-                this.autoRenewEnabled = autoRenewEnabled;
+            public Builder periodUnit(String periodUnit) {
+                this.periodUnit = periodUnit;
+                return this;
+            }
+
+            /**
+             * RenewalStatus.
+             */
+            public Builder renewalStatus(String renewalStatus) {
+                this.renewalStatus = renewalStatus;
                 return this;
             }
 

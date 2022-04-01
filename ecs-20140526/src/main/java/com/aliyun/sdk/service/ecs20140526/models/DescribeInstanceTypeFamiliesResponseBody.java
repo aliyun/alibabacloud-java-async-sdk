@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceTypeFamiliesResponseBody</p>
  */
 public class DescribeInstanceTypeFamiliesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    private String requestId;
-
     @NameInMap("InstanceTypeFamilies")
     private InstanceTypeFamilies instanceTypeFamilies;
 
+    @NameInMap("RequestId")
+    private String requestId;
+
     private DescribeInstanceTypeFamiliesResponseBody(Builder builder) {
-        this.requestId = builder.requestId;
         this.instanceTypeFamilies = builder.instanceTypeFamilies;
+        this.requestId = builder.requestId;
     }
 
     public static Builder builder() {
@@ -32,36 +32,36 @@ public class DescribeInstanceTypeFamiliesResponseBody extends TeaModel {
     }
 
     /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    /**
      * @return instanceTypeFamilies
      */
     public InstanceTypeFamilies getInstanceTypeFamilies() {
         return this.instanceTypeFamilies;
     }
 
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static final class Builder {
-        private String requestId; 
         private InstanceTypeFamilies instanceTypeFamilies; 
+        private String requestId; 
 
         /**
-         * The ID of the request.
+         * InstanceTypeFamilies.
          */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
+        public Builder instanceTypeFamilies(InstanceTypeFamilies instanceTypeFamilies) {
+            this.instanceTypeFamilies = instanceTypeFamilies;
             return this;
         }
 
         /**
-         * A collection of instance type families InstanceTypeFamily.
+         * RequestId.
          */
-        public Builder instanceTypeFamilies(InstanceTypeFamilies instanceTypeFamilies) {
-            this.instanceTypeFamilies = instanceTypeFamilies;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
@@ -110,7 +110,7 @@ public class DescribeInstanceTypeFamiliesResponseBody extends TeaModel {
             private String instanceTypeFamilyId; 
 
             /**
-             * The generation of the instance type family.
+             * Generation.
              */
             public Builder generation(String generation) {
                 this.generation = generation;
@@ -118,7 +118,7 @@ public class DescribeInstanceTypeFamiliesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance type family.
+             * InstanceTypeFamilyId.
              */
             public Builder instanceTypeFamilyId(String instanceTypeFamilyId) {
                 this.instanceTypeFamilyId = instanceTypeFamilyId;

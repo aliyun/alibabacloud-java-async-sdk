@@ -12,9 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRenewalPriceRequest</p>
  */
 public class DescribeRenewalPriceRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("ExpectedRenewDay")
+    private Integer expectedRenewDay;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -25,6 +25,24 @@ public class DescribeRenewalPriceRequest extends Request {
     private Long ownerId;
 
     @Query
+    @NameInMap("Period")
+    private Integer period;
+
+    @Query
+    @NameInMap("PriceUnit")
+    private String priceUnit;
+
+    @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
+    @Query
+    @NameInMap("ResourceId")
+    @Validation(required = true)
+    private String resourceId;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -33,44 +51,26 @@ public class DescribeRenewalPriceRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
-    @Query
-    @NameInMap("Period")
-    private Integer period;
-
-    @Query
     @NameInMap("ResourceType")
     private String resourceType;
 
-    @Query
-    @NameInMap("PriceUnit")
-    private String priceUnit;
-
-    @Query
-    @NameInMap("ResourceId")
-    @Validation(required = true)
-    private String resourceId;
-
-    @Query
-    @NameInMap("ExpectedRenewDay")
-    private Integer expectedRenewDay;
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     private DescribeRenewalPriceRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
+        this.expectedRenewDay = builder.expectedRenewDay;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.period = builder.period;
+        this.priceUnit = builder.priceUnit;
+        this.regionId = builder.regionId;
+        this.resourceId = builder.resourceId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.regionId = builder.regionId;
-        this.period = builder.period;
         this.resourceType = builder.resourceType;
-        this.priceUnit = builder.priceUnit;
-        this.resourceId = builder.resourceId;
-        this.expectedRenewDay = builder.expectedRenewDay;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public class DescribeRenewalPriceRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return expectedRenewDay
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public Integer getExpectedRenewDay() {
+        return this.expectedRenewDay;
     }
 
     /**
@@ -108,6 +108,34 @@ public class DescribeRenewalPriceRequest extends Request {
     }
 
     /**
+     * @return period
+     */
+    public Integer getPeriod() {
+        return this.period;
+    }
+
+    /**
+     * @return priceUnit
+     */
+    public String getPriceUnit() {
+        return this.priceUnit;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return resourceId
+     */
+    public String getResourceId() {
+        return this.resourceId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -122,20 +150,6 @@ public class DescribeRenewalPriceRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return period
-     */
-    public Integer getPeriod() {
-        return this.period;
-    }
-
-    /**
      * @return resourceType
      */
     public String getResourceType() {
@@ -143,38 +157,24 @@ public class DescribeRenewalPriceRequest extends Request {
     }
 
     /**
-     * @return priceUnit
+     * @return sourceRegionId
      */
-    public String getPriceUnit() {
-        return this.priceUnit;
-    }
-
-    /**
-     * @return resourceId
-     */
-    public String getResourceId() {
-        return this.resourceId;
-    }
-
-    /**
-     * @return expectedRenewDay
-     */
-    public Integer getExpectedRenewDay() {
-        return this.expectedRenewDay;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public static final class Builder extends Request.Builder<DescribeRenewalPriceRequest, Builder> {
-        private String sourceRegionId; 
+        private Integer expectedRenewDay; 
         private String ownerAccount; 
         private Long ownerId; 
+        private Integer period; 
+        private String priceUnit; 
+        private String regionId; 
+        private String resourceId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String regionId; 
-        private Integer period; 
         private String resourceType; 
-        private String priceUnit; 
-        private String resourceId; 
-        private Integer expectedRenewDay; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -182,25 +182,25 @@ public class DescribeRenewalPriceRequest extends Request {
 
         private Builder(DescribeRenewalPriceRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
+            this.expectedRenewDay = request.expectedRenewDay;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.period = request.period;
+            this.priceUnit = request.priceUnit;
+            this.regionId = request.regionId;
+            this.resourceId = request.resourceId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.regionId = request.regionId;
-            this.period = request.period;
             this.resourceType = request.resourceType;
-            this.priceUnit = request.priceUnit;
-            this.resourceId = request.resourceId;
-            this.expectedRenewDay = request.expectedRenewDay;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
-         * SourceRegionId.
+         * ExpectedRenewDay.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder expectedRenewDay(Integer expectedRenewDay) {
+            this.putQueryParameter("ExpectedRenewDay", expectedRenewDay);
+            this.expectedRenewDay = expectedRenewDay;
             return this;
         }
 
@@ -214,7 +214,7 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * The ID of the RAM user.
+         * OwnerId.
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -223,42 +223,7 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * The account name of the resource master account.
-         */
-        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
-            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-            this.resourceOwnerAccount = resourceOwnerAccount;
-            return this;
-        }
-
-        /**
-         * The ID of the resource master account, that is, the UID.
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * The ID of the region to which the instance belongs. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The renewal duration. Valid values:
-         * <p>
-         * 
-         * -If the value of "PriceUnit" is "Month", valid values: 1 to 9.
-         * -If the value of "PriceUnit" is "Year", valid values: 1 to 3.
-         * 
-         * Default value: 1.
-         * 
-         * > you cannot set the renewal duration parameter ("1", "1" Dune") and the unified expiration date parameter ("ExpectedRenewDay") at the same time.
+         * Period.
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -267,25 +232,7 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * Query the resource type of the renewal price. Value: instance
-         * <p>
-         * 
-         * Default value: instance
-         */
-        public Builder resourceType(String resourceType) {
-            this.putQueryParameter("ResourceType", resourceType);
-            this.resourceType = resourceType;
-            return this;
-        }
-
-        /**
-         * The renewal period. Valid values:
-         * <p>
-         * 
-         * -Month: the renewal period is one Month.
-         * -Year: the renewal period is one Year.
-         * 
-         * Default value: Month
+         * PriceUnit.
          */
         public Builder priceUnit(String priceUnit) {
             this.putQueryParameter("PriceUnit", priceUnit);
@@ -294,7 +241,16 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * The ID of the resource to query the renewal price. When the value of "ResourceType" is "instance", "ResourceId" can be interpreted as "InstanceId ".
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceId.
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -303,16 +259,38 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * Unified expiration date. If this parameter is specified, the price of the instance to the unified expiration date is queried. Valid values: 1 to 28.
-         * <p>
-         * 
-         * For more information about the unified expiration date feature, see [unified instance expiration date](~~ 108486 ~~).
-         * 
-         * > you cannot set the renewal duration parameter ("1", "1" dune") and the unified expiration date parameter ("ExpectedRenewDay") at the same time.
+         * ResourceOwnerAccount.
          */
-        public Builder expectedRenewDay(Integer expectedRenewDay) {
-            this.putQueryParameter("ExpectedRenewDay", expectedRenewDay);
-            this.expectedRenewDay = expectedRenewDay;
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * ResourceType.
+         */
+        public Builder resourceType(String resourceType) {
+            this.putQueryParameter("ResourceType", resourceType);
+            this.resourceType = resourceType;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

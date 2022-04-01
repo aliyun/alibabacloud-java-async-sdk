@@ -12,27 +12,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSnapshotPackageResponseBody</p>
  */
 public class DescribeSnapshotPackageResponseBody extends TeaModel {
+    @NameInMap("PageNumber")
+    private Integer pageNumber;
+
     @NameInMap("PageSize")
     private Integer pageSize;
 
     @NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("PageNumber")
-    private Integer pageNumber;
+    @NameInMap("SnapshotPackages")
+    private SnapshotPackages snapshotPackages;
 
     @NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("SnapshotPackages")
-    private SnapshotPackages snapshotPackages;
-
     private DescribeSnapshotPackageResponseBody(Builder builder) {
+        this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
-        this.pageNumber = builder.pageNumber;
-        this.totalCount = builder.totalCount;
         this.snapshotPackages = builder.snapshotPackages;
+        this.totalCount = builder.totalCount;
     }
 
     public static Builder builder() {
@@ -41,6 +41,13 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
 
     public static DescribeSnapshotPackageResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     /**
@@ -58,10 +65,10 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
     }
 
     /**
-     * @return pageNumber
+     * @return snapshotPackages
      */
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public SnapshotPackages getSnapshotPackages() {
+        return this.snapshotPackages;
     }
 
     /**
@@ -71,38 +78,15 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    /**
-     * @return snapshotPackages
-     */
-    public SnapshotPackages getSnapshotPackages() {
-        return this.snapshotPackages;
-    }
-
     public static final class Builder {
+        private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private Integer pageNumber; 
-        private Integer totalCount; 
         private SnapshotPackages snapshotPackages; 
+        private Integer totalCount; 
 
         /**
-         * The number of entries to return on each page.
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The page number of the OSS package list.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -110,18 +94,34 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned OSS storage packages.
+         * PageSize.
          */
-        public Builder totalCount(Integer totalCount) {
-            this.totalCount = totalCount;
+        public Builder pageSize(Integer pageSize) {
+            this.pageSize = pageSize;
             return this;
         }
 
         /**
-         * A collection of storage package information.
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * SnapshotPackages.
          */
         public Builder snapshotPackages(SnapshotPackages snapshotPackages) {
             this.snapshotPackages = snapshotPackages;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
@@ -138,17 +138,17 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
         @NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("StartTime")
-        private String startTime;
-
         @NameInMap("InitCapacity")
         private Long initCapacity;
+
+        @NameInMap("StartTime")
+        private String startTime;
 
         private SnapshotPackage(Builder builder) {
             this.displayName = builder.displayName;
             this.endTime = builder.endTime;
-            this.startTime = builder.startTime;
             this.initCapacity = builder.initCapacity;
+            this.startTime = builder.startTime;
         }
 
         public static Builder builder() {
@@ -174,27 +174,27 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
         }
 
         /**
-         * @return startTime
-         */
-        public String getStartTime() {
-            return this.startTime;
-        }
-
-        /**
          * @return initCapacity
          */
         public Long getInitCapacity() {
             return this.initCapacity;
         }
 
+        /**
+         * @return startTime
+         */
+        public String getStartTime() {
+            return this.startTime;
+        }
+
         public static final class Builder {
             private String displayName; 
             private String endTime; 
-            private String startTime; 
             private Long initCapacity; 
+            private String startTime; 
 
             /**
-             * The name of the storage package.
+             * DisplayName.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -202,7 +202,7 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration time of the storage package. The time follows the [ISO8601](~~ 25696 ~~) standard and uses UTC +0. The format is yyyy-MM-ddTHH:mm:ssZ.
+             * EndTime.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -210,18 +210,18 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the storage package was purchased. The time follows the [ISO8601](~~ 25696 ~~) standard and uses UTC +0. The format is yyyy-MM-ddTHH:mm:ssZ.
+             * InitCapacity.
              */
-            public Builder startTime(String startTime) {
-                this.startTime = startTime;
+            public Builder initCapacity(Long initCapacity) {
+                this.initCapacity = initCapacity;
                 return this;
             }
 
             /**
-             * The maximum capacity of the storage package.
+             * StartTime.
              */
-            public Builder initCapacity(Long initCapacity) {
-                this.initCapacity = initCapacity;
+            public Builder startTime(String startTime) {
+                this.startTime = startTime;
                 return this;
             }
 

@@ -12,47 +12,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyInstanceAttributeRequest</p>
  */
 public class ModifyInstanceAttributeRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
-    @Query
-    @NameInMap("OwnerAccount")
-    private String ownerAccount;
-
-    @Query
-    @NameInMap("Recyclable")
-    private Boolean recyclable;
-
-    @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
-    @NameInMap("ResourceOwnerAccount")
-    private String resourceOwnerAccount;
-
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
-    private String instanceId;
-
-    @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
-
-    @Query
-    @NameInMap("Password")
-    private String password;
-
-    @Query
-    @NameInMap("InstanceName")
-    private String instanceName;
-
-    @Query
-    @NameInMap("Description")
-    private String description;
-
     @Query
     @NameInMap("CreditSpecification")
     private String creditSpecification;
@@ -62,39 +21,85 @@ public class ModifyInstanceAttributeRequest extends Request {
     private Boolean deletionProtection;
 
     @Query
-    @NameInMap("SecurityGroupIds")
-    private java.util.List < String > securityGroupIds;
+    @NameInMap("Description")
+    private String description;
 
     @Query
-    @NameInMap("UserData")
-    private String userData;
+    @NameInMap("HostName")
+    private String hostName;
+
+    @Query
+    @NameInMap("InstanceId")
+    @Validation(required = true)
+    private String instanceId;
+
+    @Query
+    @NameInMap("InstanceName")
+    private String instanceName;
 
     @Query
     @NameInMap("NetworkInterfaceQueueNumber")
     private Integer networkInterfaceQueueNumber;
 
     @Query
-    @NameInMap("HostName")
-    private String hostName;
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
+
+    @Query
+    @NameInMap("Password")
+    private String password;
+
+    @Query
+    @NameInMap("Recyclable")
+    private Boolean recyclable;
+
+    @Query
+    @NameInMap("RemoteConnectionOptions")
+    private RemoteConnectionOptions remoteConnectionOptions;
+
+    @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Query
+    @NameInMap("SecurityGroupIds")
+    private java.util.List < String > securityGroupIds;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
+    @Query
+    @NameInMap("UserData")
+    private String userData;
 
     private ModifyInstanceAttributeRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
-        this.ownerAccount = builder.ownerAccount;
-        this.recyclable = builder.recyclable;
-        this.ownerId = builder.ownerId;
-        this.resourceOwnerAccount = builder.resourceOwnerAccount;
-        this.instanceId = builder.instanceId;
-        this.resourceOwnerId = builder.resourceOwnerId;
-        this.password = builder.password;
-        this.instanceName = builder.instanceName;
-        this.description = builder.description;
         this.creditSpecification = builder.creditSpecification;
         this.deletionProtection = builder.deletionProtection;
-        this.securityGroupIds = builder.securityGroupIds;
-        this.userData = builder.userData;
-        this.networkInterfaceQueueNumber = builder.networkInterfaceQueueNumber;
+        this.description = builder.description;
         this.hostName = builder.hostName;
+        this.instanceId = builder.instanceId;
+        this.instanceName = builder.instanceName;
+        this.networkInterfaceQueueNumber = builder.networkInterfaceQueueNumber;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
+        this.password = builder.password;
+        this.recyclable = builder.recyclable;
+        this.remoteConnectionOptions = builder.remoteConnectionOptions;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.securityGroupIds = builder.securityGroupIds;
+        this.sourceRegionId = builder.sourceRegionId;
+        this.userData = builder.userData;
     }
 
     public static Builder builder() {
@@ -108,76 +113,6 @@ public class ModifyInstanceAttributeRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
-     * @return ownerAccount
-     */
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    /**
-     * @return recyclable
-     */
-    public Boolean getRecyclable() {
-        return this.recyclable;
-    }
-
-    /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
-     * @return resourceOwnerAccount
-     */
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    /**
-     * @return instanceId
-     */
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    /**
-     * @return resourceOwnerId
-     */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    /**
-     * @return password
-     */
-    public String getPassword() {
-        return this.password;
-    }
-
-    /**
-     * @return instanceName
-     */
-    public String getInstanceName() {
-        return this.instanceName;
-    }
-
-    /**
-     * @return description
-     */
-    public String getDescription() {
-        return this.description;
     }
 
     /**
@@ -195,17 +130,31 @@ public class ModifyInstanceAttributeRequest extends Request {
     }
 
     /**
-     * @return securityGroupIds
+     * @return description
      */
-    public java.util.List < String > getSecurityGroupIds() {
-        return this.securityGroupIds;
+    public String getDescription() {
+        return this.description;
     }
 
     /**
-     * @return userData
+     * @return hostName
      */
-    public String getUserData() {
-        return this.userData;
+    public String getHostName() {
+        return this.hostName;
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    /**
+     * @return instanceName
+     */
+    public String getInstanceName() {
+        return this.instanceName;
     }
 
     /**
@@ -216,29 +165,93 @@ public class ModifyInstanceAttributeRequest extends Request {
     }
 
     /**
-     * @return hostName
+     * @return ownerAccount
      */
-    public String getHostName() {
-        return this.hostName;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
+     * @return password
+     */
+    public String getPassword() {
+        return this.password;
+    }
+
+    /**
+     * @return recyclable
+     */
+    public Boolean getRecyclable() {
+        return this.recyclable;
+    }
+
+    /**
+     * @return remoteConnectionOptions
+     */
+    public RemoteConnectionOptions getRemoteConnectionOptions() {
+        return this.remoteConnectionOptions;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    /**
+     * @return securityGroupIds
+     */
+    public java.util.List < String > getSecurityGroupIds() {
+        return this.securityGroupIds;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
+    /**
+     * @return userData
+     */
+    public String getUserData() {
+        return this.userData;
     }
 
     public static final class Builder extends Request.Builder<ModifyInstanceAttributeRequest, Builder> {
-        private String sourceRegionId; 
-        private String ownerAccount; 
-        private Boolean recyclable; 
-        private Long ownerId; 
-        private String resourceOwnerAccount; 
-        private String instanceId; 
-        private Long resourceOwnerId; 
-        private String password; 
-        private String instanceName; 
-        private String description; 
         private String creditSpecification; 
         private Boolean deletionProtection; 
-        private java.util.List < String > securityGroupIds; 
-        private String userData; 
-        private Integer networkInterfaceQueueNumber; 
+        private String description; 
         private String hostName; 
+        private String instanceId; 
+        private String instanceName; 
+        private Integer networkInterfaceQueueNumber; 
+        private String ownerAccount; 
+        private Long ownerId; 
+        private String password; 
+        private Boolean recyclable; 
+        private RemoteConnectionOptions remoteConnectionOptions; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private java.util.List < String > securityGroupIds; 
+        private String sourceRegionId; 
+        private String userData; 
 
         private Builder() {
             super();
@@ -246,30 +259,85 @@ public class ModifyInstanceAttributeRequest extends Request {
 
         private Builder(ModifyInstanceAttributeRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
-            this.ownerAccount = request.ownerAccount;
-            this.recyclable = request.recyclable;
-            this.ownerId = request.ownerId;
-            this.resourceOwnerAccount = request.resourceOwnerAccount;
-            this.instanceId = request.instanceId;
-            this.resourceOwnerId = request.resourceOwnerId;
-            this.password = request.password;
-            this.instanceName = request.instanceName;
-            this.description = request.description;
             this.creditSpecification = request.creditSpecification;
             this.deletionProtection = request.deletionProtection;
-            this.securityGroupIds = request.securityGroupIds;
-            this.userData = request.userData;
-            this.networkInterfaceQueueNumber = request.networkInterfaceQueueNumber;
+            this.description = request.description;
             this.hostName = request.hostName;
+            this.instanceId = request.instanceId;
+            this.instanceName = request.instanceName;
+            this.networkInterfaceQueueNumber = request.networkInterfaceQueueNumber;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.password = request.password;
+            this.recyclable = request.recyclable;
+            this.remoteConnectionOptions = request.remoteConnectionOptions;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.securityGroupIds = request.securityGroupIds;
+            this.sourceRegionId = request.sourceRegionId;
+            this.userData = request.userData;
         } 
 
         /**
-         * SourceRegionId.
+         * CreditSpecification.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder creditSpecification(String creditSpecification) {
+            this.putQueryParameter("CreditSpecification", creditSpecification);
+            this.creditSpecification = creditSpecification;
+            return this;
+        }
+
+        /**
+         * DeletionProtection.
+         */
+        public Builder deletionProtection(Boolean deletionProtection) {
+            this.putQueryParameter("DeletionProtection", deletionProtection);
+            this.deletionProtection = deletionProtection;
+            return this;
+        }
+
+        /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
+            return this;
+        }
+
+        /**
+         * HostName.
+         */
+        public Builder hostName(String hostName) {
+            this.putQueryParameter("HostName", hostName);
+            this.hostName = hostName;
+            return this;
+        }
+
+        /**
+         * InstanceId.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * InstanceName.
+         */
+        public Builder instanceName(String instanceName) {
+            this.putQueryParameter("InstanceName", instanceName);
+            this.instanceName = instanceName;
+            return this;
+        }
+
+        /**
+         * NetworkInterfaceQueueNumber.
+         */
+        public Builder networkInterfaceQueueNumber(Integer networkInterfaceQueueNumber) {
+            this.putQueryParameter("NetworkInterfaceQueueNumber", networkInterfaceQueueNumber);
+            this.networkInterfaceQueueNumber = networkInterfaceQueueNumber;
             return this;
         }
 
@@ -283,6 +351,24 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * Password.
+         */
+        public Builder password(String password) {
+            this.putQueryParameter("Password", password);
+            this.password = password;
+            return this;
+        }
+
+        /**
          * Recyclable.
          */
         public Builder recyclable(Boolean recyclable) {
@@ -292,16 +378,16 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the RAM user.
+         * RemoteConnectionOptions.
          */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
+        public Builder remoteConnectionOptions(RemoteConnectionOptions remoteConnectionOptions) {
+            this.putQueryParameter("RemoteConnectionOptions", remoteConnectionOptions);
+            this.remoteConnectionOptions = remoteConnectionOptions;
             return this;
         }
 
         /**
-         * The account name of the resource master account.
+         * ResourceOwnerAccount.
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
             this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
@@ -310,16 +396,7 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * The ID of the resource master account, that is, the UID.
+         * ResourceOwnerId.
          */
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
@@ -328,83 +405,7 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * The password of the instance. The description must be 8 to 30 characters in length and must contain letters, digits, and special characters. Special symbols can be:
-         * <p>
-         * 
-         * """
-         * ()"~! @%& *-_+ =} [],.?/
-         * """
-         * 
-         * The Windows instance cannot start with a slash (/).
-         * 
-         * > If the "Password" parameter is specified, we recommend that you send requests over HTTPS to avoid password leakage.
-         */
-        public Builder password(String password) {
-            this.putQueryParameter("Password", password);
-            this.password = password;
-            return this;
-        }
-
-        /**
-         * The name of the instance. The description must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https. It can contain numbers, colons (:), underscores (_), and hyphens (-).
-         */
-        public Builder instanceName(String instanceName) {
-            this.putQueryParameter("InstanceName", instanceName);
-            this.instanceName = instanceName;
-            return this;
-        }
-
-        /**
-         * The description of the instance. The description must be 2 to 256 characters in length and cannot start with http:// or https.
-         * <p>
-         * 
-         * Default value: None
-         */
-        public Builder description(String description) {
-            this.putQueryParameter("Description", description);
-            this.description = description;
-            return this;
-        }
-
-        /**
-         * Modify the running mode of a burstable instance. Valid values:
-         * <p>
-         * 
-         * -Standard: Standard mode. For more information about instance performance, see performance constraint mode in [What is burstable instance](~~ 59977 ~~).
-         * -Unlimited: Unlimited Mode. For more information about instance performance, see Unlimited mode in [What is burstable instance](~~ 59977 ~~).
-         * 
-         * Default value: None
-         */
-        public Builder creditSpecification(String creditSpecification) {
-            this.putQueryParameter("CreditSpecification", creditSpecification);
-            this.creditSpecification = creditSpecification;
-            return this;
-        }
-
-        /**
-         * The release protection property of the instance, which specifies whether to release the instance through the console or API([DeleteInstance](~~ 25507 ~~)).
-         * <p>
-         * 
-         * Default value: None
-         * 
-         * > This attribute applies only to pay-as-you-go instances and can only restrict manual release operations. This attribute does not take effect for system release operations.
-         */
-        public Builder deletionProtection(Boolean deletionProtection) {
-            this.putQueryParameter("DeletionProtection", deletionProtection);
-            this.deletionProtection = deletionProtection;
-            return this;
-        }
-
-        /**
-         * The list of security groups to which the instance is added.
-         * <p>
-         * 
-         * -The security group ID must be unique.
-         * -The instance will leave the current security group. To retain the settings, you must add the current security group ID to the list.
-         * -You can change the security group type. However, the security group list cannot contain both basic and enterprise security groups.
-         * -The security group and the instance must belong to the same VPC.
-         * The value range of-N depends on the number of security groups that the instance can join. For more information, see [limits](~~ 25412#SecurityGroupQuota1 ~~) security groups.
-         * -After the security group is modified, it will soon take effect on the corresponding instance, but there may be a small delay.
+         * SecurityGroupIds.
          */
         public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
             this.putQueryParameter("SecurityGroupIds", securityGroupIds);
@@ -413,39 +414,20 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * The user data of the instance, which must be base64-encoded.
-         * <p>
-         * 
-         * Before encoding, the raw data cannot exceed 16kb. We recommend that you do not pass sensitive information in plaintext, such as passwords and private keys. If sensitive information is required, we recommend that you encrypt it before passing it in Base64 encoding, and decrypt it in the same way inside the instance.
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
+
+        /**
+         * UserData.
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);
             this.userData = userData;
-            return this;
-        }
-
-        /**
-         * The number of queues for the primary eni.
-         * <p>
-         * 
-         */
-        public Builder networkInterfaceQueueNumber(Integer networkInterfaceQueueNumber) {
-            this.putQueryParameter("NetworkInterfaceQueueNumber", networkInterfaceQueueNumber);
-            this.networkInterfaceQueueNumber = networkInterfaceQueueNumber;
-            return this;
-        }
-
-        /**
-         * The hostname of the operating system. After you modify the hostname, call the RebootInstance to make the modification take effect.
-         * <p>
-         * 
-         * -Windows Server: the system must be 2 to 15 characters in length and can contain uppercase and lowercase letters, digits, and hyphens (-). It cannot start or end with a hyphen (-). It cannot contain consecutive hyphens (-) or digits.
-         * 
-         * -Other types of instances (such as Linux): the name must be 2 to 64 characters in length and can be separated by periods (.) into multiple segments. Each segment can contain uppercase and lowercase letters, digits, or hyphens (-), but cannot contain periods (.) or hyphens (-). It cannot start or end with a dot (.) or a hyphen (-).
-         */
-        public Builder hostName(String hostName) {
-            this.putQueryParameter("HostName", hostName);
-            this.hostName = hostName;
             return this;
         }
 
@@ -456,4 +438,65 @@ public class ModifyInstanceAttributeRequest extends Request {
 
     } 
 
+    public static class RemoteConnectionOptions extends TeaModel {
+        @NameInMap("Password")
+        private String password;
+
+        @NameInMap("Type")
+        private String type;
+
+        private RemoteConnectionOptions(Builder builder) {
+            this.password = builder.password;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RemoteConnectionOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return password
+         */
+        public String getPassword() {
+            return this.password;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String password; 
+            private String type; 
+
+            /**
+             * Password.
+             */
+            public Builder password(String password) {
+                this.password = password;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public RemoteConnectionOptions build() {
+                return new RemoteConnectionOptions(this);
+            } 
+
+        } 
+
+    }
 }

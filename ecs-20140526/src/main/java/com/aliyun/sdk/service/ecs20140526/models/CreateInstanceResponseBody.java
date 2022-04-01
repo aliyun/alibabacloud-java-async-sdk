@@ -12,22 +12,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateInstanceResponseBody</p>
  */
 public class CreateInstanceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    private String requestId;
-
     @NameInMap("InstanceId")
     private String instanceId;
 
     @NameInMap("OrderId")
     private String orderId;
 
+    @NameInMap("RequestId")
+    private String requestId;
+
     @NameInMap("TradePrice")
     private Float tradePrice;
 
     private CreateInstanceResponseBody(Builder builder) {
-        this.requestId = builder.requestId;
         this.instanceId = builder.instanceId;
         this.orderId = builder.orderId;
+        this.requestId = builder.requestId;
         this.tradePrice = builder.tradePrice;
     }
 
@@ -37,13 +37,6 @@ public class CreateInstanceResponseBody extends TeaModel {
 
     public static CreateInstanceResponseBody create() {
         return builder().build();
-    }
-
-    /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
     }
 
     /**
@@ -61,6 +54,13 @@ public class CreateInstanceResponseBody extends TeaModel {
     }
 
     /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
      * @return tradePrice
      */
     public Float getTradePrice() {
@@ -68,21 +68,13 @@ public class CreateInstanceResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String requestId; 
         private String instanceId; 
         private String orderId; 
+        private String requestId; 
         private Float tradePrice; 
 
         /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The ID of the instance.
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -90,7 +82,7 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the order. This parameter is returned only when you create a subscription instance (the request parameter "InstanceChargeType = PrePaid").
+         * OrderId.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -98,7 +90,15 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The transaction price of the order.
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TradePrice.
          */
         public Builder tradePrice(Float tradePrice) {
             this.tradePrice = tradePrice;

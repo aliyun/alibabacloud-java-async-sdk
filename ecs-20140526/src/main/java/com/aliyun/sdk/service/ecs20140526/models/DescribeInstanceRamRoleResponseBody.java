@@ -12,23 +12,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceRamRoleResponseBody</p>
  */
 public class DescribeInstanceRamRoleResponseBody extends TeaModel {
+    @NameInMap("InstanceRamRoleSets")
+    private InstanceRamRoleSets instanceRamRoleSets;
+
+    @NameInMap("RegionId")
+    private String regionId;
+
     @NameInMap("RequestId")
     private String requestId;
 
     @NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("RegionId")
-    private String regionId;
-
-    @NameInMap("InstanceRamRoleSets")
-    private InstanceRamRoleSets instanceRamRoleSets;
-
     private DescribeInstanceRamRoleResponseBody(Builder builder) {
+        this.instanceRamRoleSets = builder.instanceRamRoleSets;
+        this.regionId = builder.regionId;
         this.requestId = builder.requestId;
         this.totalCount = builder.totalCount;
-        this.regionId = builder.regionId;
-        this.instanceRamRoleSets = builder.instanceRamRoleSets;
     }
 
     public static Builder builder() {
@@ -37,6 +37,20 @@ public class DescribeInstanceRamRoleResponseBody extends TeaModel {
 
     public static DescribeInstanceRamRoleResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return instanceRamRoleSets
+     */
+    public InstanceRamRoleSets getInstanceRamRoleSets() {
+        return this.instanceRamRoleSets;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -53,44 +67,22 @@ public class DescribeInstanceRamRoleResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return instanceRamRoleSets
-     */
-    public InstanceRamRoleSets getInstanceRamRoleSets() {
-        return this.instanceRamRoleSets;
-    }
-
     public static final class Builder {
+        private InstanceRamRoleSets instanceRamRoleSets; 
+        private String regionId; 
         private String requestId; 
         private Integer totalCount; 
-        private String regionId; 
-        private InstanceRamRoleSets instanceRamRoleSets; 
 
         /**
-         * The ID of the request.
+         * InstanceRamRoleSets.
          */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
+        public Builder instanceRamRoleSets(InstanceRamRoleSets instanceRamRoleSets) {
+            this.instanceRamRoleSets = instanceRamRoleSets;
             return this;
         }
 
         /**
-         * The number of RAM roles returned.
-         */
-        public Builder totalCount(Integer totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-
-        /**
-         * The region of the instance RAM role.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -98,10 +90,18 @@ public class DescribeInstanceRamRoleResponseBody extends TeaModel {
         }
 
         /**
-         * A set of information consisting of instance RAM role types InstanceRamRoleSet.
+         * RequestId.
          */
-        public Builder instanceRamRoleSets(InstanceRamRoleSets instanceRamRoleSets) {
-            this.instanceRamRoleSets = instanceRamRoleSets;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
@@ -112,15 +112,15 @@ public class DescribeInstanceRamRoleResponseBody extends TeaModel {
     } 
 
     public static class InstanceRamRoleSet extends TeaModel {
-        @NameInMap("RamRoleName")
-        private String ramRoleName;
-
         @NameInMap("InstanceId")
         private String instanceId;
 
+        @NameInMap("RamRoleName")
+        private String ramRoleName;
+
         private InstanceRamRoleSet(Builder builder) {
-            this.ramRoleName = builder.ramRoleName;
             this.instanceId = builder.instanceId;
+            this.ramRoleName = builder.ramRoleName;
         }
 
         public static Builder builder() {
@@ -132,36 +132,36 @@ public class DescribeInstanceRamRoleResponseBody extends TeaModel {
         }
 
         /**
-         * @return ramRoleName
-         */
-        public String getRamRoleName() {
-            return this.ramRoleName;
-        }
-
-        /**
          * @return instanceId
          */
         public String getInstanceId() {
             return this.instanceId;
         }
 
+        /**
+         * @return ramRoleName
+         */
+        public String getRamRoleName() {
+            return this.ramRoleName;
+        }
+
         public static final class Builder {
-            private String ramRoleName; 
             private String instanceId; 
+            private String ramRoleName; 
 
             /**
-             * The list of instance RAM role names.
+             * InstanceId.
              */
-            public Builder ramRoleName(String ramRoleName) {
-                this.ramRoleName = ramRoleName;
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
                 return this;
             }
 
             /**
-             * The ID of the instance.
+             * RamRoleName.
              */
-            public Builder instanceId(String instanceId) {
-                this.instanceId = instanceId;
+            public Builder ramRoleName(String ramRoleName) {
+                this.ramRoleName = ramRoleName;
                 return this;
             }
 

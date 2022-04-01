@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRegionsResponseBody</p>
  */
 public class DescribeRegionsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    private String requestId;
-
     @NameInMap("Regions")
     private Regions regions;
 
+    @NameInMap("RequestId")
+    private String requestId;
+
     private DescribeRegionsResponseBody(Builder builder) {
-        this.requestId = builder.requestId;
         this.regions = builder.regions;
+        this.requestId = builder.requestId;
     }
 
     public static Builder builder() {
@@ -32,36 +32,36 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    /**
      * @return regions
      */
     public Regions getRegions() {
         return this.regions;
     }
 
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static final class Builder {
-        private String requestId; 
         private Regions regions; 
+        private String requestId; 
 
         /**
-         * The ID of the request.
+         * Regions.
          */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
+        public Builder regions(Regions regions) {
+            this.regions = regions;
             return this;
         }
 
         /**
-         * The set of region information.
+         * RequestId.
          */
-        public Builder regions(Regions regions) {
-            this.regions = regions;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
@@ -72,23 +72,23 @@ public class DescribeRegionsResponseBody extends TeaModel {
     } 
 
     public static class Region extends TeaModel {
-        @NameInMap("Status")
-        private String status;
+        @NameInMap("LocalName")
+        private String localName;
 
         @NameInMap("RegionEndpoint")
         private String regionEndpoint;
 
-        @NameInMap("LocalName")
-        private String localName;
-
         @NameInMap("RegionId")
         private String regionId;
 
+        @NameInMap("Status")
+        private String status;
+
         private Region(Builder builder) {
-            this.status = builder.status;
-            this.regionEndpoint = builder.regionEndpoint;
             this.localName = builder.localName;
+            this.regionEndpoint = builder.regionEndpoint;
             this.regionId = builder.regionId;
+            this.status = builder.status;
         }
 
         public static Builder builder() {
@@ -100,10 +100,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * @return status
+         * @return localName
          */
-        public String getStatus() {
-            return this.status;
+        public String getLocalName() {
+            return this.localName;
         }
 
         /**
@@ -114,47 +114,27 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * @return localName
-         */
-        public String getLocalName() {
-            return this.localName;
-        }
-
-        /**
          * @return regionId
          */
         public String getRegionId() {
             return this.regionId;
         }
 
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
         public static final class Builder {
-            private String status; 
-            private String regionEndpoint; 
             private String localName; 
+            private String regionEndpoint; 
             private String regionId; 
+            private String status; 
 
             /**
-             * Indicates whether the cluster is sold out. Possible values:
-             * <p>
-             * 
-             * -available
-             * -soldOut
-             */
-            public Builder status(String status) {
-                this.status = status;
-                return this;
-            }
-
-            /**
-             * The Endpoint of the region.
-             */
-            public Builder regionEndpoint(String regionEndpoint) {
-                this.regionEndpoint = regionEndpoint;
-                return this;
-            }
-
-            /**
-             * The region name.
+             * LocalName.
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -162,10 +142,26 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * RegionEndpoint.
+             */
+            public Builder regionEndpoint(String regionEndpoint) {
+                this.regionEndpoint = regionEndpoint;
+                return this;
+            }
+
+            /**
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
                 return this;
             }
 

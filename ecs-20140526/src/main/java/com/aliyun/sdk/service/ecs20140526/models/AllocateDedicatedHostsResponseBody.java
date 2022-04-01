@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AllocateDedicatedHostsResponseBody</p>
  */
 public class AllocateDedicatedHostsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    private String requestId;
-
     @NameInMap("DedicatedHostIdSets")
     private DedicatedHostIdSets dedicatedHostIdSets;
 
+    @NameInMap("RequestId")
+    private String requestId;
+
     private AllocateDedicatedHostsResponseBody(Builder builder) {
-        this.requestId = builder.requestId;
         this.dedicatedHostIdSets = builder.dedicatedHostIdSets;
+        this.requestId = builder.requestId;
     }
 
     public static Builder builder() {
@@ -32,36 +32,36 @@ public class AllocateDedicatedHostsResponseBody extends TeaModel {
     }
 
     /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    /**
      * @return dedicatedHostIdSets
      */
     public DedicatedHostIdSets getDedicatedHostIdSets() {
         return this.dedicatedHostIdSets;
     }
 
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static final class Builder {
-        private String requestId; 
         private DedicatedHostIdSets dedicatedHostIdSets; 
+        private String requestId; 
 
         /**
-         * The ID of the request.
+         * DedicatedHostIdSets.
          */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
+        public Builder dedicatedHostIdSets(DedicatedHostIdSets dedicatedHostIdSets) {
+            this.dedicatedHostIdSets = dedicatedHostIdSets;
             return this;
         }
 
         /**
-         * The list of dedicated host IDs (DedicatedHostId).
+         * RequestId.
          */
-        public Builder dedicatedHostIdSets(DedicatedHostIdSets dedicatedHostIdSets) {
-            this.dedicatedHostIdSets = dedicatedHostIdSets;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 

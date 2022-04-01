@@ -12,13 +12,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeNetworkInterfacePermissionsRequest</p>
  */
 public class DescribeNetworkInterfacePermissionsRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("NetworkInterfaceId")
+    private String networkInterfaceId;
+
+    @Query
+    @NameInMap("NetworkInterfacePermissionId")
+    private java.util.List < String > networkInterfacePermissionId;
+
+    @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
 
     @Query
     @NameInMap("OwnerId")
     private Long ownerId;
+
+    @Query
+    @NameInMap("PageNumber")
+    private Integer pageNumber;
+
+    @Query
+    @NameInMap("PageSize")
+    private Integer pageSize;
+
+    @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
 
     @Query
     @NameInMap("ResourceOwnerAccount")
@@ -28,43 +49,22 @@ public class DescribeNetworkInterfacePermissionsRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("OwnerAccount")
-    private String ownerAccount;
-
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
-    @Query
-    @NameInMap("NetworkInterfacePermissionId")
-    private java.util.List < String > networkInterfacePermissionId;
-
-    @Query
-    @NameInMap("NetworkInterfaceId")
-    private String networkInterfaceId;
-
-    @Query
-    @NameInMap("PageSize")
-    private Integer pageSize;
-
-    @Query
-    @NameInMap("PageNumber")
-    private Integer pageNumber;
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     private DescribeNetworkInterfacePermissionsRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
+        this.networkInterfaceId = builder.networkInterfaceId;
+        this.networkInterfacePermissionId = builder.networkInterfacePermissionId;
+        this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.ownerAccount = builder.ownerAccount;
-        this.regionId = builder.regionId;
-        this.networkInterfacePermissionId = builder.networkInterfacePermissionId;
-        this.networkInterfaceId = builder.networkInterfaceId;
-        this.pageSize = builder.pageSize;
-        this.pageNumber = builder.pageNumber;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -81,10 +81,24 @@ public class DescribeNetworkInterfacePermissionsRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return networkInterfaceId
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getNetworkInterfaceId() {
+        return this.networkInterfaceId;
+    }
+
+    /**
+     * @return networkInterfacePermissionId
+     */
+    public java.util.List < String > getNetworkInterfacePermissionId() {
+        return this.networkInterfacePermissionId;
+    }
+
+    /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     /**
@@ -92,6 +106,27 @@ public class DescribeNetworkInterfacePermissionsRequest extends Request {
      */
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -109,58 +144,23 @@ public class DescribeNetworkInterfacePermissionsRequest extends Request {
     }
 
     /**
-     * @return ownerAccount
+     * @return sourceRegionId
      */
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return networkInterfacePermissionId
-     */
-    public java.util.List < String > getNetworkInterfacePermissionId() {
-        return this.networkInterfacePermissionId;
-    }
-
-    /**
-     * @return networkInterfaceId
-     */
-    public String getNetworkInterfaceId() {
-        return this.networkInterfaceId;
-    }
-
-    /**
-     * @return pageSize
-     */
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    /**
-     * @return pageNumber
-     */
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public static final class Builder extends Request.Builder<DescribeNetworkInterfacePermissionsRequest, Builder> {
-        private String sourceRegionId; 
+        private String networkInterfaceId; 
+        private java.util.List < String > networkInterfacePermissionId; 
+        private String ownerAccount; 
         private Long ownerId; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String ownerAccount; 
-        private String regionId; 
-        private java.util.List < String > networkInterfacePermissionId; 
-        private String networkInterfaceId; 
-        private Integer pageSize; 
-        private Integer pageNumber; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -168,24 +168,42 @@ public class DescribeNetworkInterfacePermissionsRequest extends Request {
 
         private Builder(DescribeNetworkInterfacePermissionsRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
+            this.networkInterfaceId = request.networkInterfaceId;
+            this.networkInterfacePermissionId = request.networkInterfacePermissionId;
+            this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.ownerAccount = request.ownerAccount;
-            this.regionId = request.regionId;
-            this.networkInterfacePermissionId = request.networkInterfacePermissionId;
-            this.networkInterfaceId = request.networkInterfaceId;
-            this.pageSize = request.pageSize;
-            this.pageNumber = request.pageNumber;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
-         * SourceRegionId.
+         * NetworkInterfaceId.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder networkInterfaceId(String networkInterfaceId) {
+            this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
+            this.networkInterfaceId = networkInterfaceId;
+            return this;
+        }
+
+        /**
+         * NetworkInterfacePermissionId.
+         */
+        public Builder networkInterfacePermissionId(java.util.List < String > networkInterfacePermissionId) {
+            this.putQueryParameter("NetworkInterfacePermissionId", networkInterfacePermissionId);
+            this.networkInterfacePermissionId = networkInterfacePermissionId;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
             return this;
         }
 
@@ -195,6 +213,33 @@ public class DescribeNetworkInterfacePermissionsRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * PageNumber.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
@@ -217,66 +262,11 @@ public class DescribeNetworkInterfacePermissionsRequest extends Request {
         }
 
         /**
-         * OwnerAccount.
+         * SourceRegionId.
          */
-        public Builder ownerAccount(String ownerAccount) {
-            this.putQueryParameter("OwnerAccount", ownerAccount);
-            this.ownerAccount = ownerAccount;
-            return this;
-        }
-
-        /**
-         * The region of the Eni. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The ID of the Eni permission. Valid values of N: 1 to 100.
-         */
-        public Builder networkInterfacePermissionId(java.util.List < String > networkInterfacePermissionId) {
-            this.putQueryParameter("NetworkInterfacePermissionId", networkInterfacePermissionId);
-            this.networkInterfacePermissionId = networkInterfacePermissionId;
-            return this;
-        }
-
-        /**
-         * The ID of the Eni. You must specify "NetworkInterfaceId" or "NetworkInterfacePermissionId.... to determine the query range.
-         */
-        public Builder networkInterfaceId(String networkInterfaceId) {
-            this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
-            this.networkInterfaceId = networkInterfaceId;
-            return this;
-        }
-
-        /**
-         * The number of entries to return on each page.
-         * <p>
-         * 
-         * Maximum Value: 100
-         * 
-         * Default value: 10
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.putQueryParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * The page number of the eni permission list.
-         * <p>
-         * 
-         * Start value: 1
-         * 
-         * Default value: 1.
-         */
-        public Builder pageNumber(Integer pageNumber) {
-            this.putQueryParameter("PageNumber", pageNumber);
-            this.pageNumber = pageNumber;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

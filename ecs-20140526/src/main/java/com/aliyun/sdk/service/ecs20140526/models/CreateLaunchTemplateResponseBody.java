@@ -50,7 +50,7 @@ public class CreateLaunchTemplateResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the instance launch template.
+         * LaunchTemplateId.
          */
         public Builder launchTemplateId(String launchTemplateId) {
             this.launchTemplateId = launchTemplateId;
@@ -58,7 +58,7 @@ public class CreateLaunchTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

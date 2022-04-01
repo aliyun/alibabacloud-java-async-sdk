@@ -12,35 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ExportImageRequest</p>
  */
 public class ExportImageRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
-    @NameInMap("ResourceOwnerAccount")
-    private String resourceOwnerAccount;
-
-    @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
-
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
+    @NameInMap("ImageFormat")
+    private String imageFormat;
 
     @Query
     @NameInMap("ImageId")
     @Validation(required = true)
     private String imageId;
-
-    @Query
-    @NameInMap("RoleName")
-    private String roleName;
 
     @Query
     @NameInMap("OSSBucket")
@@ -52,21 +31,42 @@ public class ExportImageRequest extends Request {
     private String OSSPrefix;
 
     @Query
-    @NameInMap("ImageFormat")
-    private String imageFormat;
+    @NameInMap("OwnerId")
+    private Long ownerId;
+
+    @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
+    @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Query
+    @NameInMap("RoleName")
+    private String roleName;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     private ExportImageRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
-        this.ownerId = builder.ownerId;
-        this.resourceOwnerAccount = builder.resourceOwnerAccount;
-        this.resourceOwnerId = builder.resourceOwnerId;
-        this.regionId = builder.regionId;
+        this.imageFormat = builder.imageFormat;
         this.imageId = builder.imageId;
-        this.roleName = builder.roleName;
         this.OSSBucket = builder.OSSBucket;
         this.OSSPrefix = builder.OSSPrefix;
-        this.imageFormat = builder.imageFormat;
+        this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.roleName = builder.roleName;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -83,38 +83,10 @@ public class ExportImageRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return imageFormat
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
-     * @return resourceOwnerAccount
-     */
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    /**
-     * @return resourceOwnerId
-     */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
+    public String getImageFormat() {
+        return this.imageFormat;
     }
 
     /**
@@ -122,13 +94,6 @@ public class ExportImageRequest extends Request {
      */
     public String getImageId() {
         return this.imageId;
-    }
-
-    /**
-     * @return roleName
-     */
-    public String getRoleName() {
-        return this.roleName;
     }
 
     /**
@@ -146,23 +111,58 @@ public class ExportImageRequest extends Request {
     }
 
     /**
-     * @return imageFormat
+     * @return ownerId
      */
-    public String getImageFormat() {
-        return this.imageFormat;
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    /**
+     * @return roleName
+     */
+    public String getRoleName() {
+        return this.roleName;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public static final class Builder extends Request.Builder<ExportImageRequest, Builder> {
-        private String sourceRegionId; 
-        private Long ownerId; 
-        private String resourceOwnerAccount; 
-        private Long resourceOwnerId; 
-        private String regionId; 
+        private String imageFormat; 
         private String imageId; 
-        private String roleName; 
         private String OSSBucket; 
         private String OSSPrefix; 
-        private String imageFormat; 
+        private Long ownerId; 
+        private String regionId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String roleName; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -170,65 +170,29 @@ public class ExportImageRequest extends Request {
 
         private Builder(ExportImageRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
-            this.ownerId = request.ownerId;
-            this.resourceOwnerAccount = request.resourceOwnerAccount;
-            this.resourceOwnerId = request.resourceOwnerId;
-            this.regionId = request.regionId;
+            this.imageFormat = request.imageFormat;
             this.imageId = request.imageId;
-            this.roleName = request.roleName;
             this.OSSBucket = request.OSSBucket;
             this.OSSPrefix = request.OSSPrefix;
-            this.imageFormat = request.imageFormat;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.roleName = request.roleName;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
-         * SourceRegionId.
+         * ImageFormat.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder imageFormat(String imageFormat) {
+            this.putQueryParameter("ImageFormat", imageFormat);
+            this.imageFormat = imageFormat;
             return this;
         }
 
         /**
-         * The ID of the RAM user.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * The account name of the resource master account.
-         */
-        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
-            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-            this.resourceOwnerAccount = resourceOwnerAccount;
-            return this;
-        }
-
-        /**
-         * The ID of the resource master account, that is, the UID.
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * The region ID of the custom image. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The ID of the custom image.
+         * ImageId.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -237,16 +201,7 @@ public class ExportImageRequest extends Request {
         }
 
         /**
-         * The name of the RAM role used to export the image.
-         */
-        public Builder roleName(String roleName) {
-            this.putQueryParameter("RoleName", roleName);
-            this.roleName = roleName;
-            return this;
-        }
-
-        /**
-         * Save the OSS bucket of the exported image.
+         * OSSBucket.
          */
         public Builder OSSBucket(String OSSBucket) {
             this.putQueryParameter("OSSBucket", OSSBucket);
@@ -255,7 +210,7 @@ public class ExportImageRequest extends Request {
         }
 
         /**
-         * The prefix of your OSS Object. It can be 1 to 30 characters in length and can contain digits or letters.
+         * OSSPrefix.
          */
         public Builder OSSPrefix(String OSSPrefix) {
             this.putQueryParameter("OSSPrefix", OSSPrefix);
@@ -264,19 +219,56 @@ public class ExportImageRequest extends Request {
         }
 
         /**
-         * The export format of the image file. Valid values:
-         * <p>
-         * -raw
-         * -vhd
-         * -qcow2
-         * -vmdk
-         * -vdi
-         * 
-         * Default value: raw
+         * OwnerId.
          */
-        public Builder imageFormat(String imageFormat) {
-            this.putQueryParameter("ImageFormat", imageFormat);
-            this.imageFormat = imageFormat;
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * RoleName.
+         */
+        public Builder roleName(String roleName) {
+            this.putQueryParameter("RoleName", roleName);
+            this.roleName = roleName;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

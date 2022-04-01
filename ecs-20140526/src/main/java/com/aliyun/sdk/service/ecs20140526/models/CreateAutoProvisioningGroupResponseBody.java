@@ -15,16 +15,16 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
     @NameInMap("AutoProvisioningGroupId")
     private String autoProvisioningGroupId;
 
-    @NameInMap("RequestId")
-    private String requestId;
-
     @NameInMap("LaunchResults")
     private LaunchResults launchResults;
 
+    @NameInMap("RequestId")
+    private String requestId;
+
     private CreateAutoProvisioningGroupResponseBody(Builder builder) {
         this.autoProvisioningGroupId = builder.autoProvisioningGroupId;
-        this.requestId = builder.requestId;
         this.launchResults = builder.launchResults;
+        this.requestId = builder.requestId;
     }
 
     public static Builder builder() {
@@ -43,26 +43,26 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
     }
 
     /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    /**
      * @return launchResults
      */
     public LaunchResults getLaunchResults() {
         return this.launchResults;
     }
 
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static final class Builder {
         private String autoProvisioningGroupId; 
-        private String requestId; 
         private LaunchResults launchResults; 
+        private String requestId; 
 
         /**
-         * The ID of the auto provisioning group.
+         * AutoProvisioningGroupId.
          */
         public Builder autoProvisioningGroupId(String autoProvisioningGroupId) {
             this.autoProvisioningGroupId = autoProvisioningGroupId;
@@ -70,18 +70,18 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * LaunchResults.
          */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
+        public Builder launchResults(LaunchResults launchResults) {
+            this.launchResults = launchResults;
             return this;
         }
 
         /**
-         * A collection of instances created by the auto provisioning group. This set value is returned only when the delivery type of the auto provisioning Group is one-time synchronous delivery ("instant").
+         * RequestId.
          */
-        public Builder launchResults(LaunchResults launchResults) {
-            this.launchResults = launchResults;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
@@ -133,31 +133,31 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
 
     }
     public static class LaunchResult extends TeaModel {
-        @NameInMap("ZoneId")
-        private String zoneId;
+        @NameInMap("ErrorCode")
+        private String errorCode;
 
         @NameInMap("ErrorMsg")
         private String errorMsg;
 
+        @NameInMap("InstanceIds")
+        private InstanceIds instanceIds;
+
         @NameInMap("InstanceType")
         private String instanceType;
-
-        @NameInMap("ErrorCode")
-        private String errorCode;
 
         @NameInMap("SpotStrategy")
         private String spotStrategy;
 
-        @NameInMap("InstanceIds")
-        private InstanceIds instanceIds;
+        @NameInMap("ZoneId")
+        private String zoneId;
 
         private LaunchResult(Builder builder) {
-            this.zoneId = builder.zoneId;
-            this.errorMsg = builder.errorMsg;
-            this.instanceType = builder.instanceType;
             this.errorCode = builder.errorCode;
-            this.spotStrategy = builder.spotStrategy;
+            this.errorMsg = builder.errorMsg;
             this.instanceIds = builder.instanceIds;
+            this.instanceType = builder.instanceType;
+            this.spotStrategy = builder.spotStrategy;
+            this.zoneId = builder.zoneId;
         }
 
         public static Builder builder() {
@@ -169,10 +169,10 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
         }
 
         /**
-         * @return zoneId
+         * @return errorCode
          */
-        public String getZoneId() {
-            return this.zoneId;
+        public String getErrorCode() {
+            return this.errorCode;
         }
 
         /**
@@ -183,17 +183,17 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return instanceIds
+         */
+        public InstanceIds getInstanceIds() {
+            return this.instanceIds;
+        }
+
+        /**
          * @return instanceType
          */
         public String getInstanceType() {
             return this.instanceType;
-        }
-
-        /**
-         * @return errorCode
-         */
-        public String getErrorCode() {
-            return this.errorCode;
         }
 
         /**
@@ -204,46 +204,22 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
         }
 
         /**
-         * @return instanceIds
+         * @return zoneId
          */
-        public InstanceIds getInstanceIds() {
-            return this.instanceIds;
+        public String getZoneId() {
+            return this.zoneId;
         }
 
         public static final class Builder {
-            private String zoneId; 
-            private String errorMsg; 
-            private String instanceType; 
             private String errorCode; 
-            private String spotStrategy; 
+            private String errorMsg; 
             private InstanceIds instanceIds; 
+            private String instanceType; 
+            private String spotStrategy; 
+            private String zoneId; 
 
             /**
-             * The ID of the zone to which the instance belongs.
-             */
-            public Builder zoneId(String zoneId) {
-                this.zoneId = zoneId;
-                return this;
-            }
-
-            /**
-             * The error message returned when the instance fails to be created.
-             */
-            public Builder errorMsg(String errorMsg) {
-                this.errorMsg = errorMsg;
-                return this;
-            }
-
-            /**
-             * The instance type.
-             */
-            public Builder instanceType(String instanceType) {
-                this.instanceType = instanceType;
-                return this;
-            }
-
-            /**
-             * The error code returned when the instance fails to be created.
+             * ErrorCode.
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -251,14 +227,10 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The preemptible policy of the pay-as-you-go instance. Possible values:
-             * <p>
-             * -NoSpot: a pay-as-you-go instance.
-             * -SpotWithPriceLimit: sets the maximum price for preemptible instances.
-             * -SpotAsPriceGo: The system automatically bids based on the actual market price.
+             * ErrorMsg.
              */
-            public Builder spotStrategy(String spotStrategy) {
-                this.spotStrategy = spotStrategy;
+            public Builder errorMsg(String errorMsg) {
+                this.errorMsg = errorMsg;
                 return this;
             }
 
@@ -267,6 +239,30 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
              */
             public Builder instanceIds(InstanceIds instanceIds) {
                 this.instanceIds = instanceIds;
+                return this;
+            }
+
+            /**
+             * InstanceType.
+             */
+            public Builder instanceType(String instanceType) {
+                this.instanceType = instanceType;
+                return this;
+            }
+
+            /**
+             * SpotStrategy.
+             */
+            public Builder spotStrategy(String spotStrategy) {
+                this.spotStrategy = spotStrategy;
+                return this;
+            }
+
+            /**
+             * ZoneId.
+             */
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
                 return this;
             }
 

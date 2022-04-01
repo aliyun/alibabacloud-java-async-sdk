@@ -50,7 +50,7 @@ public class CreateDemandResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The report ID(DemandId).
+         * DemandId.
          */
         public Builder demandId(String demandId) {
             this.demandId = demandId;
@@ -58,9 +58,7 @@ public class CreateDemandResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
-         * <p>
-         * 
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

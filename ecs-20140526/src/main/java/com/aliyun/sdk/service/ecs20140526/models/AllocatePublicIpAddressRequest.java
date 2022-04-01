@@ -12,9 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AllocatePublicIpAddressRequest</p>
  */
 public class AllocatePublicIpAddressRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("InstanceId")
+    @Validation(required = true)
+    private String instanceId;
+
+    @Query
+    @NameInMap("IpAddress")
+    private String ipAddress;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -32,14 +37,9 @@ public class AllocatePublicIpAddressRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
-    private String instanceId;
-
-    @Query
-    @NameInMap("IpAddress")
-    private String ipAddress;
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     @Query
     @NameInMap("VlanId")
@@ -47,13 +47,13 @@ public class AllocatePublicIpAddressRequest extends Request {
 
     private AllocatePublicIpAddressRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
+        this.instanceId = builder.instanceId;
+        this.ipAddress = builder.ipAddress;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.instanceId = builder.instanceId;
-        this.ipAddress = builder.ipAddress;
+        this.sourceRegionId = builder.sourceRegionId;
         this.vlanId = builder.vlanId;
     }
 
@@ -71,10 +71,17 @@ public class AllocatePublicIpAddressRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return instanceId
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    /**
+     * @return ipAddress
+     */
+    public String getIpAddress() {
+        return this.ipAddress;
     }
 
     /**
@@ -106,17 +113,10 @@ public class AllocatePublicIpAddressRequest extends Request {
     }
 
     /**
-     * @return instanceId
+     * @return sourceRegionId
      */
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    /**
-     * @return ipAddress
-     */
-    public String getIpAddress() {
-        return this.ipAddress;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -127,13 +127,13 @@ public class AllocatePublicIpAddressRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AllocatePublicIpAddressRequest, Builder> {
-        private String sourceRegionId; 
+        private String instanceId; 
+        private String ipAddress; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String instanceId; 
-        private String ipAddress; 
+        private String sourceRegionId; 
         private String vlanId; 
 
         private Builder() {
@@ -142,22 +142,31 @@ public class AllocatePublicIpAddressRequest extends Request {
 
         private Builder(AllocatePublicIpAddressRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
+            this.instanceId = request.instanceId;
+            this.ipAddress = request.ipAddress;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.instanceId = request.instanceId;
-            this.ipAddress = request.ipAddress;
+            this.sourceRegionId = request.sourceRegionId;
             this.vlanId = request.vlanId;
         } 
 
         /**
-         * SourceRegionId.
+         * InstanceId.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * IpAddress.
+         */
+        public Builder ipAddress(String ipAddress) {
+            this.putQueryParameter("IpAddress", ipAddress);
+            this.ipAddress = ipAddress;
             return this;
         }
 
@@ -171,7 +180,7 @@ public class AllocatePublicIpAddressRequest extends Request {
         }
 
         /**
-         * The ID of the RAM user.
+         * OwnerId.
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -180,7 +189,7 @@ public class AllocatePublicIpAddressRequest extends Request {
         }
 
         /**
-         * The account name of the resource master account.
+         * ResourceOwnerAccount.
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
             this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
@@ -189,7 +198,7 @@ public class AllocatePublicIpAddressRequest extends Request {
         }
 
         /**
-         * The ID of the resource master account, that is, the UID.
+         * ResourceOwnerId.
          */
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
@@ -198,25 +207,16 @@ public class AllocatePublicIpAddressRequest extends Request {
         }
 
         /**
-         * The ID of the instance to be assigned an IP address.
+         * SourceRegionId.
          */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 
         /**
-         * The public IP address of the instance. If this parameter is empty, the system randomly assigns IP addresses by default.
-         */
-        public Builder ipAddress(String ipAddress) {
-            this.putQueryParameter("IpAddress", ipAddress);
-            this.ipAddress = ipAddress;
-            return this;
-        }
-
-        /**
-         * VLAN ID.
+         * VlanId.
          */
         public Builder vlanId(String vlanId) {
             this.putQueryParameter("VlanId", vlanId);

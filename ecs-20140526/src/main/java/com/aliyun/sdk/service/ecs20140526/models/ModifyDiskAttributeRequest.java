@@ -12,9 +12,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyDiskAttributeRequest</p>
  */
 public class ModifyDiskAttributeRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("BurstingEnabled")
+    private Boolean burstingEnabled;
+
+    @Query
+    @NameInMap("DeleteAutoSnapshot")
+    private Boolean deleteAutoSnapshot;
+
+    @Query
+    @NameInMap("DeleteWithInstance")
+    private Boolean deleteWithInstance;
+
+    @Query
+    @NameInMap("Description")
+    private String description;
+
+    @Query
+    @NameInMap("DiskId")
+    private String diskId;
+
+    @Query
+    @NameInMap("DiskIds")
+    private java.util.List < String > diskIds;
+
+    @Query
+    @NameInMap("DiskName")
+    private String diskName;
+
+    @Query
+    @NameInMap("EnableAutoSnapshot")
+    private Boolean enableAutoSnapshot;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -25,60 +53,37 @@ public class ModifyDiskAttributeRequest extends Request {
     private Long ownerId;
 
     @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
+    @NameInMap("RegionId")
+    private String regionId;
 
     @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
     @Query
-    @NameInMap("DiskName")
-    private String diskName;
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Description")
-    private String description;
-
-    @Query
-    @NameInMap("RegionId")
-    private String regionId;
-
-    @Query
-    @NameInMap("DeleteWithInstance")
-    private Boolean deleteWithInstance;
-
-    @Query
-    @NameInMap("DiskIds")
-    private java.util.List < String > diskIds;
-
-    @Query
-    @NameInMap("DiskId")
-    private String diskId;
-
-    @Query
-    @NameInMap("DeleteAutoSnapshot")
-    private Boolean deleteAutoSnapshot;
-
-    @Query
-    @NameInMap("EnableAutoSnapshot")
-    private Boolean enableAutoSnapshot;
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     private ModifyDiskAttributeRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
+        this.burstingEnabled = builder.burstingEnabled;
+        this.deleteAutoSnapshot = builder.deleteAutoSnapshot;
+        this.deleteWithInstance = builder.deleteWithInstance;
+        this.description = builder.description;
+        this.diskId = builder.diskId;
+        this.diskIds = builder.diskIds;
+        this.diskName = builder.diskName;
+        this.enableAutoSnapshot = builder.enableAutoSnapshot;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
-        this.resourceOwnerId = builder.resourceOwnerId;
-        this.resourceOwnerAccount = builder.resourceOwnerAccount;
-        this.diskName = builder.diskName;
-        this.description = builder.description;
         this.regionId = builder.regionId;
-        this.deleteWithInstance = builder.deleteWithInstance;
-        this.diskIds = builder.diskIds;
-        this.diskId = builder.diskId;
-        this.deleteAutoSnapshot = builder.deleteAutoSnapshot;
-        this.enableAutoSnapshot = builder.enableAutoSnapshot;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -95,10 +100,59 @@ public class ModifyDiskAttributeRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return burstingEnabled
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public Boolean getBurstingEnabled() {
+        return this.burstingEnabled;
+    }
+
+    /**
+     * @return deleteAutoSnapshot
+     */
+    public Boolean getDeleteAutoSnapshot() {
+        return this.deleteAutoSnapshot;
+    }
+
+    /**
+     * @return deleteWithInstance
+     */
+    public Boolean getDeleteWithInstance() {
+        return this.deleteWithInstance;
+    }
+
+    /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
+     * @return diskId
+     */
+    public String getDiskId() {
+        return this.diskId;
+    }
+
+    /**
+     * @return diskIds
+     */
+    public java.util.List < String > getDiskIds() {
+        return this.diskIds;
+    }
+
+    /**
+     * @return diskName
+     */
+    public String getDiskName() {
+        return this.diskName;
+    }
+
+    /**
+     * @return enableAutoSnapshot
+     */
+    public Boolean getEnableAutoSnapshot() {
+        return this.enableAutoSnapshot;
     }
 
     /**
@@ -116,10 +170,10 @@ public class ModifyDiskAttributeRequest extends Request {
     }
 
     /**
-     * @return resourceOwnerId
+     * @return regionId
      */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -130,75 +184,34 @@ public class ModifyDiskAttributeRequest extends Request {
     }
 
     /**
-     * @return diskName
+     * @return resourceOwnerId
      */
-    public String getDiskName() {
-        return this.diskName;
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     /**
-     * @return description
+     * @return sourceRegionId
      */
-    public String getDescription() {
-        return this.description;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return deleteWithInstance
-     */
-    public Boolean getDeleteWithInstance() {
-        return this.deleteWithInstance;
-    }
-
-    /**
-     * @return diskIds
-     */
-    public java.util.List < String > getDiskIds() {
-        return this.diskIds;
-    }
-
-    /**
-     * @return diskId
-     */
-    public String getDiskId() {
-        return this.diskId;
-    }
-
-    /**
-     * @return deleteAutoSnapshot
-     */
-    public Boolean getDeleteAutoSnapshot() {
-        return this.deleteAutoSnapshot;
-    }
-
-    /**
-     * @return enableAutoSnapshot
-     */
-    public Boolean getEnableAutoSnapshot() {
-        return this.enableAutoSnapshot;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public static final class Builder extends Request.Builder<ModifyDiskAttributeRequest, Builder> {
-        private String sourceRegionId; 
+        private Boolean burstingEnabled; 
+        private Boolean deleteAutoSnapshot; 
+        private Boolean deleteWithInstance; 
+        private String description; 
+        private String diskId; 
+        private java.util.List < String > diskIds; 
+        private String diskName; 
+        private Boolean enableAutoSnapshot; 
         private String ownerAccount; 
         private Long ownerId; 
-        private Long resourceOwnerId; 
-        private String resourceOwnerAccount; 
-        private String diskName; 
-        private String description; 
         private String regionId; 
-        private Boolean deleteWithInstance; 
-        private java.util.List < String > diskIds; 
-        private String diskId; 
-        private Boolean deleteAutoSnapshot; 
-        private Boolean enableAutoSnapshot; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -206,27 +219,91 @@ public class ModifyDiskAttributeRequest extends Request {
 
         private Builder(ModifyDiskAttributeRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
+            this.burstingEnabled = request.burstingEnabled;
+            this.deleteAutoSnapshot = request.deleteAutoSnapshot;
+            this.deleteWithInstance = request.deleteWithInstance;
+            this.description = request.description;
+            this.diskId = request.diskId;
+            this.diskIds = request.diskIds;
+            this.diskName = request.diskName;
+            this.enableAutoSnapshot = request.enableAutoSnapshot;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
-            this.resourceOwnerId = request.resourceOwnerId;
-            this.resourceOwnerAccount = request.resourceOwnerAccount;
-            this.diskName = request.diskName;
-            this.description = request.description;
             this.regionId = request.regionId;
-            this.deleteWithInstance = request.deleteWithInstance;
-            this.diskIds = request.diskIds;
-            this.diskId = request.diskId;
-            this.deleteAutoSnapshot = request.deleteAutoSnapshot;
-            this.enableAutoSnapshot = request.enableAutoSnapshot;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
-         * SourceRegionId.
+         * BurstingEnabled.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder burstingEnabled(Boolean burstingEnabled) {
+            this.putQueryParameter("BurstingEnabled", burstingEnabled);
+            this.burstingEnabled = burstingEnabled;
+            return this;
+        }
+
+        /**
+         * DeleteAutoSnapshot.
+         */
+        public Builder deleteAutoSnapshot(Boolean deleteAutoSnapshot) {
+            this.putQueryParameter("DeleteAutoSnapshot", deleteAutoSnapshot);
+            this.deleteAutoSnapshot = deleteAutoSnapshot;
+            return this;
+        }
+
+        /**
+         * DeleteWithInstance.
+         */
+        public Builder deleteWithInstance(Boolean deleteWithInstance) {
+            this.putQueryParameter("DeleteWithInstance", deleteWithInstance);
+            this.deleteWithInstance = deleteWithInstance;
+            return this;
+        }
+
+        /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
+            return this;
+        }
+
+        /**
+         * DiskId.
+         */
+        public Builder diskId(String diskId) {
+            this.putQueryParameter("DiskId", diskId);
+            this.diskId = diskId;
+            return this;
+        }
+
+        /**
+         * DiskIds.
+         */
+        public Builder diskIds(java.util.List < String > diskIds) {
+            this.putQueryParameter("DiskIds", diskIds);
+            this.diskIds = diskIds;
+            return this;
+        }
+
+        /**
+         * DiskName.
+         */
+        public Builder diskName(String diskName) {
+            this.putQueryParameter("DiskName", diskName);
+            this.diskName = diskName;
+            return this;
+        }
+
+        /**
+         * EnableAutoSnapshot.
+         */
+        public Builder enableAutoSnapshot(Boolean enableAutoSnapshot) {
+            this.putQueryParameter("EnableAutoSnapshot", enableAutoSnapshot);
+            this.enableAutoSnapshot = enableAutoSnapshot;
             return this;
         }
 
@@ -240,7 +317,7 @@ public class ModifyDiskAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the RAM user.
+         * OwnerId.
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -249,47 +326,7 @@ public class ModifyDiskAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the resource master account, that is, the UID.
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * The account name of the resource master account.
-         */
-        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
-            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-            this.resourceOwnerAccount = resourceOwnerAccount;
-            return this;
-        }
-
-        /**
-         * The name of the disk. The description must be 2 to 128 characters in length. It must start with a letter and cannot start with "http:// "or "https. It can contain numbers, colons (:), underscores (_), and hyphens (-).
-         * <p>
-         * 
-         */
-        public Builder diskName(String diskName) {
-            this.putQueryParameter("DiskName", diskName);
-            this.diskName = diskName;
-            return this;
-        }
-
-        /**
-         * The description of the disk. The description must be 2 to 256 characters in length and cannot start with "http:// "or "https.
-         * <p>
-         * 
-         */
-        public Builder description(String description) {
-            this.putQueryParameter("Description", description);
-            this.description = description;
-            return this;
-        }
-
-        /**
-         * The ID of the region. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -298,68 +335,29 @@ public class ModifyDiskAttributeRequest extends Request {
         }
 
         /**
-         * Indicates whether the disk is released with the instance. Default value: none.
-         * <p>
-         * 
-         * <props = "china"> this parameter is not supported for disks with multiple mount features enabled. </props>
-         * 
-         * If you set the "DeleteWithInstance" parameter to "false", an error is returned.
-         * 
-         * -When the category of the disk is ephemeral.
-         * -If the category of a disk is standard cloud and cannot be detached (Portable = false).
-         * 
+         * ResourceOwnerAccount.
          */
-        public Builder deleteWithInstance(Boolean deleteWithInstance) {
-            this.putQueryParameter("DeleteWithInstance", deleteWithInstance);
-            this.deleteWithInstance = deleteWithInstance;
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
             return this;
         }
 
         /**
-         * The IDs of multiple disks to be modified. Valid values of N: 0 to 100.
-         * <p>
-         * > "DiskId" and "DiskIds.... parameters cannot be called at the same time. Select either of them as needed.
+         * ResourceOwnerId.
          */
-        public Builder diskIds(java.util.List < String > diskIds) {
-            this.putQueryParameter("DiskIds", diskIds);
-            this.diskIds = diskIds;
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
             return this;
         }
 
         /**
-         * The ID of the disk to be modified.
-         * <p>
-         * > "DiskId" and "DiskIds.... parameters cannot be called at the same time. Select either of them as needed.
+         * SourceRegionId.
          */
-        public Builder diskId(String diskId) {
-            this.putQueryParameter("DiskId", diskId);
-            this.diskId = diskId;
-            return this;
-        }
-
-        /**
-         * Specifies whether to delete automatic snapshots of disks at the same time. Default value: none.
-         */
-        public Builder deleteAutoSnapshot(Boolean deleteAutoSnapshot) {
-            this.putQueryParameter("DeleteAutoSnapshot", deleteAutoSnapshot);
-            this.deleteAutoSnapshot = deleteAutoSnapshot;
-            return this;
-        }
-
-        /**
-         * Specifies whether to enable automatic snapshot policies for disks.
-         * <p>
-         * 
-         * -ture: enabled
-         * -false: disabled
-         * 
-         * Default value: none.
-         * 
-         * > by default, the automatic snapshot policy is enabled for the created cloud disk. You only need to bind an automatic snapshot policy to the disk.
-         */
-        public Builder enableAutoSnapshot(Boolean enableAutoSnapshot) {
-            this.putQueryParameter("EnableAutoSnapshot", enableAutoSnapshot);
-            this.enableAutoSnapshot = enableAutoSnapshot;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

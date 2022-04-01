@@ -12,27 +12,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSnapshotLinksResponseBody</p>
  */
 public class DescribeSnapshotLinksResponseBody extends TeaModel {
+    @NameInMap("PageNumber")
+    private Integer pageNumber;
+
     @NameInMap("PageSize")
     private Integer pageSize;
 
     @NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("PageNumber")
-    private Integer pageNumber;
+    @NameInMap("SnapshotLinks")
+    private SnapshotLinks snapshotLinks;
 
     @NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("SnapshotLinks")
-    private SnapshotLinks snapshotLinks;
-
     private DescribeSnapshotLinksResponseBody(Builder builder) {
+        this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
-        this.pageNumber = builder.pageNumber;
-        this.totalCount = builder.totalCount;
         this.snapshotLinks = builder.snapshotLinks;
+        this.totalCount = builder.totalCount;
     }
 
     public static Builder builder() {
@@ -41,6 +41,13 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
 
     public static DescribeSnapshotLinksResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     /**
@@ -58,10 +65,10 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
     }
 
     /**
-     * @return pageNumber
+     * @return snapshotLinks
      */
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public SnapshotLinks getSnapshotLinks() {
+        return this.snapshotLinks;
     }
 
     /**
@@ -71,38 +78,15 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    /**
-     * @return snapshotLinks
-     */
-    public SnapshotLinks getSnapshotLinks() {
-        return this.snapshotLinks;
-    }
-
     public static final class Builder {
+        private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private Integer pageNumber; 
-        private Integer totalCount; 
         private SnapshotLinks snapshotLinks; 
+        private Integer totalCount; 
 
         /**
-         * The number of entries to return on each page.
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The page number of the snapshot chain list.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -110,18 +94,34 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of snapshot chains.
+         * PageSize.
          */
-        public Builder totalCount(Integer totalCount) {
-            this.totalCount = totalCount;
+        public Builder pageSize(Integer pageSize) {
+            this.pageSize = pageSize;
             return this;
         }
 
         /**
-         * A collection of snapshot chain information.
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * SnapshotLinks.
          */
         public Builder snapshotLinks(SnapshotLinks snapshotLinks) {
             this.snapshotLinks = snapshotLinks;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
@@ -132,11 +132,26 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
     } 
 
     public static class SnapshotLink extends TeaModel {
+        @NameInMap("Category")
+        private String category;
+
+        @NameInMap("InstanceId")
+        private String instanceId;
+
+        @NameInMap("InstanceName")
+        private String instanceName;
+
         @NameInMap("InstantAccess")
         private Boolean instantAccess;
 
-        @NameInMap("TotalSize")
-        private Long totalSize;
+        @NameInMap("RegionId")
+        private String regionId;
+
+        @NameInMap("SnapshotLinkId")
+        private String snapshotLinkId;
+
+        @NameInMap("SourceDiskId")
+        private String sourceDiskId;
 
         @NameInMap("SourceDiskName")
         private String sourceDiskName;
@@ -147,40 +162,25 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
         @NameInMap("SourceDiskType")
         private String sourceDiskType;
 
-        @NameInMap("InstanceId")
-        private String instanceId;
-
-        @NameInMap("SnapshotLinkId")
-        private String snapshotLinkId;
-
         @NameInMap("TotalCount")
         private Integer totalCount;
 
-        @NameInMap("RegionId")
-        private String regionId;
-
-        @NameInMap("SourceDiskId")
-        private String sourceDiskId;
-
-        @NameInMap("InstanceName")
-        private String instanceName;
-
-        @NameInMap("Category")
-        private String category;
+        @NameInMap("TotalSize")
+        private Long totalSize;
 
         private SnapshotLink(Builder builder) {
+            this.category = builder.category;
+            this.instanceId = builder.instanceId;
+            this.instanceName = builder.instanceName;
             this.instantAccess = builder.instantAccess;
-            this.totalSize = builder.totalSize;
+            this.regionId = builder.regionId;
+            this.snapshotLinkId = builder.snapshotLinkId;
+            this.sourceDiskId = builder.sourceDiskId;
             this.sourceDiskName = builder.sourceDiskName;
             this.sourceDiskSize = builder.sourceDiskSize;
             this.sourceDiskType = builder.sourceDiskType;
-            this.instanceId = builder.instanceId;
-            this.snapshotLinkId = builder.snapshotLinkId;
             this.totalCount = builder.totalCount;
-            this.regionId = builder.regionId;
-            this.sourceDiskId = builder.sourceDiskId;
-            this.instanceName = builder.instanceName;
-            this.category = builder.category;
+            this.totalSize = builder.totalSize;
         }
 
         public static Builder builder() {
@@ -192,6 +192,27 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
         }
 
         /**
+         * @return category
+         */
+        public String getCategory() {
+            return this.category;
+        }
+
+        /**
+         * @return instanceId
+         */
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        /**
+         * @return instanceName
+         */
+        public String getInstanceName() {
+            return this.instanceName;
+        }
+
+        /**
          * @return instantAccess
          */
         public Boolean getInstantAccess() {
@@ -199,10 +220,24 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
         }
 
         /**
-         * @return totalSize
+         * @return regionId
          */
-        public Long getTotalSize() {
-            return this.totalSize;
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        /**
+         * @return snapshotLinkId
+         */
+        public String getSnapshotLinkId() {
+            return this.snapshotLinkId;
+        }
+
+        /**
+         * @return sourceDiskId
+         */
+        public String getSourceDiskId() {
+            return this.sourceDiskId;
         }
 
         /**
@@ -227,20 +262,6 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
         }
 
         /**
-         * @return instanceId
-         */
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
-        /**
-         * @return snapshotLinkId
-         */
-        public String getSnapshotLinkId() {
-            return this.snapshotLinkId;
-        }
-
-        /**
          * @return totalCount
          */
         public Integer getTotalCount() {
@@ -248,97 +269,36 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
         }
 
         /**
-         * @return regionId
+         * @return totalSize
          */
-        public String getRegionId() {
-            return this.regionId;
-        }
-
-        /**
-         * @return sourceDiskId
-         */
-        public String getSourceDiskId() {
-            return this.sourceDiskId;
-        }
-
-        /**
-         * @return instanceName
-         */
-        public String getInstanceName() {
-            return this.instanceName;
-        }
-
-        /**
-         * @return category
-         */
-        public String getCategory() {
-            return this.category;
+        public Long getTotalSize() {
+            return this.totalSize;
         }
 
         public static final class Builder {
+            private String category; 
+            private String instanceId; 
+            private String instanceName; 
             private Boolean instantAccess; 
-            private Long totalSize; 
+            private String regionId; 
+            private String snapshotLinkId; 
+            private String sourceDiskId; 
             private String sourceDiskName; 
             private Integer sourceDiskSize; 
             private String sourceDiskType; 
-            private String instanceId; 
-            private String snapshotLinkId; 
             private Integer totalCount; 
-            private String regionId; 
-            private String sourceDiskId; 
-            private String instanceName; 
-            private String category; 
+            private Long totalSize; 
 
             /**
-             * Indicates whether the snapshot extreme availability feature is enabled. Possible values:
-             * <p>
-             * 
-             * -true: enabled. Only ESSDS support this feature.
-             * -false: disabled. That is, a snapshot is a normal snapshot that is not enabled.
+             * Category.
              */
-            public Builder instantAccess(Boolean instantAccess) {
-                this.instantAccess = instantAccess;
+            public Builder category(String category) {
+                this.category = category;
                 return this;
             }
 
             /**
-             * The size of all snapshots in the snapshot chain. Unit: bytes.
-             */
-            public Builder totalSize(Long totalSize) {
-                this.totalSize = totalSize;
-                return this;
-            }
-
-            /**
-             * The name of the source disk.
-             */
-            public Builder sourceDiskName(String sourceDiskName) {
-                this.sourceDiskName = sourceDiskName;
-                return this;
-            }
-
-            /**
-             * The capacity of the source disk. Unit: GiB.
-             */
-            public Builder sourceDiskSize(Integer sourceDiskSize) {
-                this.sourceDiskSize = sourceDiskSize;
-                return this;
-            }
-
-            /**
-             * The type of the source disk. Possible values:
-             * <p>
-             * 
-             * -system: system disk
-             * -data: data disk
-             */
-            public Builder sourceDiskType(String sourceDiskType) {
-                this.sourceDiskType = sourceDiskType;
-                return this;
-            }
-
-            /**
-             * The ID of the instance.
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -346,39 +306,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the snapshot chain.
-             */
-            public Builder snapshotLinkId(String snapshotLinkId) {
-                this.snapshotLinkId = snapshotLinkId;
-                return this;
-            }
-
-            /**
-             * The total number of snapshots.
-             */
-            public Builder totalCount(Integer totalCount) {
-                this.totalCount = totalCount;
-                return this;
-            }
-
-            /**
-             * The ID of the region to which the snapshot chain source disk belongs.
-             */
-            public Builder regionId(String regionId) {
-                this.regionId = regionId;
-                return this;
-            }
-
-            /**
-             * The ID of the source disk. This field is retained if the source disk of the snapshot has been deleted.
-             */
-            public Builder sourceDiskId(String sourceDiskId) {
-                this.sourceDiskId = sourceDiskId;
-                return this;
-            }
-
-            /**
-             * The name of the instance.
+             * InstanceName.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -386,13 +314,74 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the snapshot.
-             * <p>
-             * 
-             * > This parameter will be deprecated soon. We recommend that you use the "InstantAccess" parameter to improve compatibility ".
+             * InstantAccess.
              */
-            public Builder category(String category) {
-                this.category = category;
+            public Builder instantAccess(Boolean instantAccess) {
+                this.instantAccess = instantAccess;
+                return this;
+            }
+
+            /**
+             * RegionId.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * SnapshotLinkId.
+             */
+            public Builder snapshotLinkId(String snapshotLinkId) {
+                this.snapshotLinkId = snapshotLinkId;
+                return this;
+            }
+
+            /**
+             * SourceDiskId.
+             */
+            public Builder sourceDiskId(String sourceDiskId) {
+                this.sourceDiskId = sourceDiskId;
+                return this;
+            }
+
+            /**
+             * SourceDiskName.
+             */
+            public Builder sourceDiskName(String sourceDiskName) {
+                this.sourceDiskName = sourceDiskName;
+                return this;
+            }
+
+            /**
+             * SourceDiskSize.
+             */
+            public Builder sourceDiskSize(Integer sourceDiskSize) {
+                this.sourceDiskSize = sourceDiskSize;
+                return this;
+            }
+
+            /**
+             * SourceDiskType.
+             */
+            public Builder sourceDiskType(String sourceDiskType) {
+                this.sourceDiskType = sourceDiskType;
+                return this;
+            }
+
+            /**
+             * TotalCount.
+             */
+            public Builder totalCount(Integer totalCount) {
+                this.totalCount = totalCount;
+                return this;
+            }
+
+            /**
+             * TotalSize.
+             */
+            public Builder totalSize(Long totalSize) {
+                this.totalSize = totalSize;
                 return this;
             }
 

@@ -13,8 +13,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ResetDisksRequest extends Request {
     @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
+    @NameInMap("Disk")
+    @Validation(required = true)
+    private java.util.List < Disk> disk;
+
+    @Query
+    @NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
 
     @Query
     @NameInMap("RegionId")
@@ -22,20 +35,22 @@ public class ResetDisksRequest extends Request {
     private String regionId;
 
     @Query
-    @NameInMap("DryRun")
-    private Boolean dryRun;
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
 
     @Query
-    @NameInMap("Disk")
-    @Validation(required = true)
-    private java.util.List < Disk> disk;
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
 
     private ResetDisksRequest(Builder builder) {
         super(builder);
-        this.resourceOwnerId = builder.resourceOwnerId;
-        this.regionId = builder.regionId;
-        this.dryRun = builder.dryRun;
         this.disk = builder.disk;
+        this.dryRun = builder.dryRun;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
     }
 
     public static Builder builder() {
@@ -52,17 +67,10 @@ public class ResetDisksRequest extends Request {
     }
 
     /**
-     * @return resourceOwnerId
+     * @return disk
      */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
+    public java.util.List < Disk> getDisk() {
+        return this.disk;
     }
 
     /**
@@ -73,17 +81,48 @@ public class ResetDisksRequest extends Request {
     }
 
     /**
-     * @return disk
+     * @return ownerAccount
      */
-    public java.util.List < Disk> getDisk() {
-        return this.disk;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public static final class Builder extends Request.Builder<ResetDisksRequest, Builder> {
-        private Long resourceOwnerId; 
-        private String regionId; 
-        private Boolean dryRun; 
         private java.util.List < Disk> disk; 
+        private Boolean dryRun; 
+        private String ownerAccount; 
+        private Long ownerId; 
+        private String regionId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
 
         private Builder() {
             super();
@@ -91,38 +130,26 @@ public class ResetDisksRequest extends Request {
 
         private Builder(ResetDisksRequest request) {
             super(request);
-            this.resourceOwnerId = request.resourceOwnerId;
-            this.regionId = request.regionId;
-            this.dryRun = request.dryRun;
             this.disk = request.disk;
+            this.dryRun = request.dryRun;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * The ID of the Alibaba Cloud account (primary account).
+         * Disk.
          */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
+        public Builder disk(java.util.List < Disk> disk) {
+            this.putQueryParameter("Disk", disk);
+            this.disk = disk;
             return this;
         }
 
         /**
-         * The ID of the region. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * Specifies whether to PreCheck the request. Valid values:
-         * <p>
-         * 
-         * -true: sends a check request and does not roll back the disk. Check items include required parameters, request format, and resource status restrictions. If the check fails, the corresponding error message is returned. If the check succeeds, the error code "DryRunOperation" is returned ".
-         * -false: a normal request is sent and the disk rollback operation is initiated after the check.
-         * 
-         * Default value: false
+         * DryRun.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -131,11 +158,47 @@ public class ResetDisksRequest extends Request {
         }
 
         /**
-         * The list of disks.
+         * OwnerAccount.
          */
-        public Builder disk(java.util.List < Disk> disk) {
-            this.putQueryParameter("Disk", disk);
-            this.disk = disk;
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
             return this;
         }
 
@@ -147,15 +210,15 @@ public class ResetDisksRequest extends Request {
     } 
 
     public static class Disk extends TeaModel {
-        @NameInMap("SnapshotId")
-        private String snapshotId;
-
         @NameInMap("DiskId")
         private String diskId;
 
+        @NameInMap("SnapshotId")
+        private String snapshotId;
+
         private Disk(Builder builder) {
-            this.snapshotId = builder.snapshotId;
             this.diskId = builder.diskId;
+            this.snapshotId = builder.snapshotId;
         }
 
         public static Builder builder() {
@@ -167,36 +230,36 @@ public class ResetDisksRequest extends Request {
         }
 
         /**
-         * @return snapshotId
-         */
-        public String getSnapshotId() {
-            return this.snapshotId;
-        }
-
-        /**
          * @return diskId
          */
         public String getDiskId() {
             return this.diskId;
         }
 
+        /**
+         * @return snapshotId
+         */
+        public String getSnapshotId() {
+            return this.snapshotId;
+        }
+
         public static final class Builder {
-            private String snapshotId; 
             private String diskId; 
+            private String snapshotId; 
 
             /**
-             * 实例快照中，指定云盘对应的快照ID。N的取值范围：1~10
+             * DiskId.
              */
-            public Builder snapshotId(String snapshotId) {
-                this.snapshotId = snapshotId;
+            public Builder diskId(String diskId) {
+                this.diskId = diskId;
                 return this;
             }
 
             /**
-             * 指定待回滚的云盘ID。N的取值范围：1~10
+             * SnapshotId.
              */
-            public Builder diskId(String diskId) {
-                this.diskId = diskId;
+            public Builder snapshotId(String snapshotId) {
+                this.snapshotId = snapshotId;
                 return this;
             }
 

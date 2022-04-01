@@ -12,21 +12,39 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyImageSharePermissionRequest</p>
  */
 public class ModifyImageSharePermissionRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("AddAccount")
+    private java.util.List < String > addAccount;
 
     @Query
-    @NameInMap("OwnerAccount")
-    private String ownerAccount;
+    @NameInMap("ImageId")
+    @Validation(required = true)
+    private String imageId;
+
+    @Query
+    @NameInMap("IsPublic")
+    private Boolean isPublic;
 
     @Query
     @NameInMap("LaunchPermission")
     private String launchPermission;
 
     @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @Query
     @NameInMap("OwnerId")
     private Long ownerId;
+
+    @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
+    @Query
+    @NameInMap("RemoveAccount")
+    private java.util.List < String > removeAccount;
 
     @Query
     @NameInMap("ResourceOwnerAccount")
@@ -36,36 +54,23 @@ public class ModifyImageSharePermissionRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("AddAccount")
-    private java.util.List < String > addAccount;
-
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
-    @Query
-    @NameInMap("ImageId")
-    @Validation(required = true)
-    private String imageId;
-
-    @Query
-    @NameInMap("RemoveAccount")
-    private java.util.List < String > removeAccount;
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     private ModifyImageSharePermissionRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
-        this.ownerAccount = builder.ownerAccount;
+        this.addAccount = builder.addAccount;
+        this.imageId = builder.imageId;
+        this.isPublic = builder.isPublic;
         this.launchPermission = builder.launchPermission;
+        this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
+        this.removeAccount = builder.removeAccount;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.addAccount = builder.addAccount;
-        this.regionId = builder.regionId;
-        this.imageId = builder.imageId;
-        this.removeAccount = builder.removeAccount;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -82,17 +87,24 @@ public class ModifyImageSharePermissionRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return addAccount
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public java.util.List < String > getAddAccount() {
+        return this.addAccount;
     }
 
     /**
-     * @return ownerAccount
+     * @return imageId
      */
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public String getImageId() {
+        return this.imageId;
+    }
+
+    /**
+     * @return isPublic
+     */
+    public Boolean getIsPublic() {
+        return this.isPublic;
     }
 
     /**
@@ -103,10 +115,31 @@ public class ModifyImageSharePermissionRequest extends Request {
     }
 
     /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
      * @return ownerId
      */
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return removeAccount
+     */
+    public java.util.List < String > getRemoveAccount() {
+        return this.removeAccount;
     }
 
     /**
@@ -124,44 +157,24 @@ public class ModifyImageSharePermissionRequest extends Request {
     }
 
     /**
-     * @return addAccount
+     * @return sourceRegionId
      */
-    public java.util.List < String > getAddAccount() {
-        return this.addAccount;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return imageId
-     */
-    public String getImageId() {
-        return this.imageId;
-    }
-
-    /**
-     * @return removeAccount
-     */
-    public java.util.List < String > getRemoveAccount() {
-        return this.removeAccount;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public static final class Builder extends Request.Builder<ModifyImageSharePermissionRequest, Builder> {
-        private String sourceRegionId; 
-        private String ownerAccount; 
+        private java.util.List < String > addAccount; 
+        private String imageId; 
+        private Boolean isPublic; 
         private String launchPermission; 
+        private String ownerAccount; 
         private Long ownerId; 
+        private String regionId; 
+        private java.util.List < String > removeAccount; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < String > addAccount; 
-        private String regionId; 
-        private String imageId; 
-        private java.util.List < String > removeAccount; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -169,33 +182,43 @@ public class ModifyImageSharePermissionRequest extends Request {
 
         private Builder(ModifyImageSharePermissionRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
-            this.ownerAccount = request.ownerAccount;
+            this.addAccount = request.addAccount;
+            this.imageId = request.imageId;
+            this.isPublic = request.isPublic;
             this.launchPermission = request.launchPermission;
+            this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.removeAccount = request.removeAccount;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.addAccount = request.addAccount;
-            this.regionId = request.regionId;
-            this.imageId = request.imageId;
-            this.removeAccount = request.removeAccount;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
-         * SourceRegionId.
+         * AddAccount.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder addAccount(java.util.List < String > addAccount) {
+            this.putQueryParameter("AddAccount", addAccount);
+            this.addAccount = addAccount;
             return this;
         }
 
         /**
-         * OwnerAccount.
+         * ImageId.
          */
-        public Builder ownerAccount(String ownerAccount) {
-            this.putQueryParameter("OwnerAccount", ownerAccount);
-            this.ownerAccount = ownerAccount;
+        public Builder imageId(String imageId) {
+            this.putQueryParameter("ImageId", imageId);
+            this.imageId = imageId;
+            return this;
+        }
+
+        /**
+         * 发布为社区镜像
+         */
+        public Builder isPublic(Boolean isPublic) {
+            this.putQueryParameter("IsPublic", isPublic);
+            this.isPublic = isPublic;
             return this;
         }
 
@@ -209,7 +232,16 @@ public class ModifyImageSharePermissionRequest extends Request {
         }
 
         /**
-         * The ID of the RAM user.
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
+
+        /**
+         * OwnerId.
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -218,34 +250,7 @@ public class ModifyImageSharePermissionRequest extends Request {
         }
 
         /**
-         * The account name of the resource master account.
-         */
-        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
-            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-            this.resourceOwnerAccount = resourceOwnerAccount;
-            return this;
-        }
-
-        /**
-         * The ID of the resource master account, that is, the UID.
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * The ID of the Alibaba Cloud account that is authorized to share images. Valid values of N: 1 to 10. If the value exceeds 10, the system ignores this parameter.
-         */
-        public Builder addAccount(java.util.List < String > addAccount) {
-            this.putQueryParameter("AddAccount", addAccount);
-            this.addAccount = addAccount;
-            return this;
-        }
-
-        /**
-         * The ID of the region to which the custom image belongs. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -254,20 +259,38 @@ public class ModifyImageSharePermissionRequest extends Request {
         }
 
         /**
-         * The ID of the shared custom image.
-         */
-        public Builder imageId(String imageId) {
-            this.putQueryParameter("ImageId", imageId);
-            this.imageId = imageId;
-            return this;
-        }
-
-        /**
-         * The ID of the alibaba cloud account that deletes image sharing. Valid values of N: 1 to 10. If the value exceeds 10, the system ignores this parameter.
+         * RemoveAccount.
          */
         public Builder removeAccount(java.util.List < String > removeAccount) {
             this.putQueryParameter("RemoveAccount", removeAccount);
             this.removeAccount = removeAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

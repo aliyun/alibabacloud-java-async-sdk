@@ -12,41 +12,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeNetworkInterfacesRequest</p>
  */
 public class DescribeNetworkInterfacesRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("InstanceId")
+    private String instanceId;
 
     @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
-
-    @Query
-    @NameInMap("VSwitchId")
-    private String vSwitchId;
-
-    @Query
-    @NameInMap("PrimaryIpAddress")
-    private String primaryIpAddress;
-
-    @Query
-    @NameInMap("NetworkInterfaceName")
-    private String networkInterfaceName;
-
-    @Query
-    @NameInMap("Type")
-    private String type;
-
-    @Query
-    @NameInMap("Status")
-    private String status;
-
-    @Query
-    @NameInMap("NextToken")
-    private String nextToken;
-
-    @Query
-    @NameInMap("PrivateIpAddress")
-    private java.util.List < String > privateIpAddress;
+    @NameInMap("Ipv6Address")
+    private java.util.List < String > ipv6Address;
 
     @Query
     @NameInMap("MaxResults")
@@ -57,8 +29,36 @@ public class DescribeNetworkInterfacesRequest extends Request {
     private java.util.List < String > networkInterfaceId;
 
     @Query
-    @NameInMap("VpcId")
-    private String vpcId;
+    @NameInMap("NetworkInterfaceName")
+    private String networkInterfaceName;
+
+    @Query
+    @NameInMap("NextToken")
+    private String nextToken;
+
+    @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
+
+    @Query
+    @NameInMap("PageNumber")
+    private Integer pageNumber;
+
+    @Query
+    @NameInMap("PageSize")
+    private Integer pageSize;
+
+    @Query
+    @NameInMap("PrimaryIpAddress")
+    private String primaryIpAddress;
+
+    @Query
+    @NameInMap("PrivateIpAddress")
+    private java.util.List < String > privateIpAddress;
 
     @Query
     @NameInMap("RegionId")
@@ -70,51 +70,71 @@ public class DescribeNetworkInterfacesRequest extends Request {
     private String resourceGroupId;
 
     @Query
-    @NameInMap("PageNumber")
-    private Integer pageNumber;
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
 
     @Query
     @NameInMap("SecurityGroupId")
     private String securityGroupId;
 
     @Query
-    @NameInMap("InstanceId")
-    private String instanceId;
-
-    @Query
-    @NameInMap("PageSize")
-    private Integer pageSize;
-
-    @Query
     @NameInMap("ServiceManaged")
     private Boolean serviceManaged;
 
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
-    @NameInMap("Ipv6Address")
-    private java.util.List < String > ipv6Address;
+    @NameInMap("Status")
+    private String status;
+
+    @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
+    @Query
+    @NameInMap("Type")
+    private String type;
+
+    @Query
+    @NameInMap("VSwitchId")
+    private String vSwitchId;
+
+    @Query
+    @NameInMap("VpcId")
+    private String vpcId;
 
     private DescribeNetworkInterfacesRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
-        this.tag = builder.tag;
-        this.vSwitchId = builder.vSwitchId;
-        this.primaryIpAddress = builder.primaryIpAddress;
-        this.networkInterfaceName = builder.networkInterfaceName;
-        this.type = builder.type;
-        this.status = builder.status;
-        this.nextToken = builder.nextToken;
-        this.privateIpAddress = builder.privateIpAddress;
+        this.instanceId = builder.instanceId;
+        this.ipv6Address = builder.ipv6Address;
         this.maxResults = builder.maxResults;
         this.networkInterfaceId = builder.networkInterfaceId;
-        this.vpcId = builder.vpcId;
+        this.networkInterfaceName = builder.networkInterfaceName;
+        this.nextToken = builder.nextToken;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
+        this.primaryIpAddress = builder.primaryIpAddress;
+        this.privateIpAddress = builder.privateIpAddress;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
-        this.pageNumber = builder.pageNumber;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
         this.securityGroupId = builder.securityGroupId;
-        this.instanceId = builder.instanceId;
-        this.pageSize = builder.pageSize;
         this.serviceManaged = builder.serviceManaged;
-        this.ipv6Address = builder.ipv6Address;
+        this.sourceRegionId = builder.sourceRegionId;
+        this.status = builder.status;
+        this.tag = builder.tag;
+        this.type = builder.type;
+        this.vSwitchId = builder.vSwitchId;
+        this.vpcId = builder.vpcId;
     }
 
     public static Builder builder() {
@@ -131,66 +151,17 @@ public class DescribeNetworkInterfacesRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return instanceId
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     /**
-     * @return tag
+     * @return ipv6Address
      */
-    public java.util.List < Tag> getTag() {
-        return this.tag;
-    }
-
-    /**
-     * @return vSwitchId
-     */
-    public String getVSwitchId() {
-        return this.vSwitchId;
-    }
-
-    /**
-     * @return primaryIpAddress
-     */
-    public String getPrimaryIpAddress() {
-        return this.primaryIpAddress;
-    }
-
-    /**
-     * @return networkInterfaceName
-     */
-    public String getNetworkInterfaceName() {
-        return this.networkInterfaceName;
-    }
-
-    /**
-     * @return type
-     */
-    public String getType() {
-        return this.type;
-    }
-
-    /**
-     * @return status
-     */
-    public String getStatus() {
-        return this.status;
-    }
-
-    /**
-     * @return nextToken
-     */
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
-    /**
-     * @return privateIpAddress
-     */
-    public java.util.List < String > getPrivateIpAddress() {
-        return this.privateIpAddress;
+    public java.util.List < String > getIpv6Address() {
+        return this.ipv6Address;
     }
 
     /**
@@ -208,10 +179,59 @@ public class DescribeNetworkInterfacesRequest extends Request {
     }
 
     /**
-     * @return vpcId
+     * @return networkInterfaceName
      */
-    public String getVpcId() {
-        return this.vpcId;
+    public String getNetworkInterfaceName() {
+        return this.networkInterfaceName;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
+     * @return primaryIpAddress
+     */
+    public String getPrimaryIpAddress() {
+        return this.primaryIpAddress;
+    }
+
+    /**
+     * @return privateIpAddress
+     */
+    public java.util.List < String > getPrivateIpAddress() {
+        return this.privateIpAddress;
     }
 
     /**
@@ -229,10 +249,17 @@ public class DescribeNetworkInterfacesRequest extends Request {
     }
 
     /**
-     * @return pageNumber
+     * @return resourceOwnerAccount
      */
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     /**
@@ -243,20 +270,6 @@ public class DescribeNetworkInterfacesRequest extends Request {
     }
 
     /**
-     * @return instanceId
-     */
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    /**
-     * @return pageSize
-     */
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    /**
      * @return serviceManaged
      */
     public Boolean getServiceManaged() {
@@ -264,33 +277,72 @@ public class DescribeNetworkInterfacesRequest extends Request {
     }
 
     /**
-     * @return ipv6Address
+     * @return sourceRegionId
      */
-    public java.util.List < String > getIpv6Address() {
-        return this.ipv6Address;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
+    /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
+     * @return type
+     */
+    public String getType() {
+        return this.type;
+    }
+
+    /**
+     * @return vSwitchId
+     */
+    public String getVSwitchId() {
+        return this.vSwitchId;
+    }
+
+    /**
+     * @return vpcId
+     */
+    public String getVpcId() {
+        return this.vpcId;
     }
 
     public static final class Builder extends Request.Builder<DescribeNetworkInterfacesRequest, Builder> {
-        private String sourceRegionId; 
-        private java.util.List < Tag> tag; 
-        private String vSwitchId; 
-        private String primaryIpAddress; 
-        private String networkInterfaceName; 
-        private String type; 
-        private String status; 
-        private String nextToken; 
-        private java.util.List < String > privateIpAddress; 
+        private String instanceId; 
+        private java.util.List < String > ipv6Address; 
         private Integer maxResults; 
         private java.util.List < String > networkInterfaceId; 
-        private String vpcId; 
+        private String networkInterfaceName; 
+        private String nextToken; 
+        private String ownerAccount; 
+        private Long ownerId; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
+        private String primaryIpAddress; 
+        private java.util.List < String > privateIpAddress; 
         private String regionId; 
         private String resourceGroupId; 
-        private Integer pageNumber; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
         private String securityGroupId; 
-        private String instanceId; 
-        private Integer pageSize; 
         private Boolean serviceManaged; 
-        private java.util.List < String > ipv6Address; 
+        private String sourceRegionId; 
+        private String status; 
+        private java.util.List < Tag> tag; 
+        private String type; 
+        private String vSwitchId; 
+        private String vpcId; 
 
         private Builder() {
             super();
@@ -298,27 +350,193 @@ public class DescribeNetworkInterfacesRequest extends Request {
 
         private Builder(DescribeNetworkInterfacesRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
-            this.tag = request.tag;
-            this.vSwitchId = request.vSwitchId;
-            this.primaryIpAddress = request.primaryIpAddress;
-            this.networkInterfaceName = request.networkInterfaceName;
-            this.type = request.type;
-            this.status = request.status;
-            this.nextToken = request.nextToken;
-            this.privateIpAddress = request.privateIpAddress;
+            this.instanceId = request.instanceId;
+            this.ipv6Address = request.ipv6Address;
             this.maxResults = request.maxResults;
             this.networkInterfaceId = request.networkInterfaceId;
-            this.vpcId = request.vpcId;
+            this.networkInterfaceName = request.networkInterfaceName;
+            this.nextToken = request.nextToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.primaryIpAddress = request.primaryIpAddress;
+            this.privateIpAddress = request.privateIpAddress;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
-            this.pageNumber = request.pageNumber;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
             this.securityGroupId = request.securityGroupId;
-            this.instanceId = request.instanceId;
-            this.pageSize = request.pageSize;
             this.serviceManaged = request.serviceManaged;
-            this.ipv6Address = request.ipv6Address;
+            this.sourceRegionId = request.sourceRegionId;
+            this.status = request.status;
+            this.tag = request.tag;
+            this.type = request.type;
+            this.vSwitchId = request.vSwitchId;
+            this.vpcId = request.vpcId;
         } 
+
+        /**
+         * InstanceId.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * Ipv6Address.
+         */
+        public Builder ipv6Address(java.util.List < String > ipv6Address) {
+            this.putQueryParameter("Ipv6Address", ipv6Address);
+            this.ipv6Address = ipv6Address;
+            return this;
+        }
+
+        /**
+         * MaxResults.
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.putQueryParameter("MaxResults", maxResults);
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * NetworkInterfaceId.
+         */
+        public Builder networkInterfaceId(java.util.List < String > networkInterfaceId) {
+            this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
+            this.networkInterfaceId = networkInterfaceId;
+            return this;
+        }
+
+        /**
+         * NetworkInterfaceName.
+         */
+        public Builder networkInterfaceName(String networkInterfaceName) {
+            this.putQueryParameter("NetworkInterfaceName", networkInterfaceName);
+            this.networkInterfaceName = networkInterfaceName;
+            return this;
+        }
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * PageNumber.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * PrimaryIpAddress.
+         */
+        public Builder primaryIpAddress(String primaryIpAddress) {
+            this.putQueryParameter("PrimaryIpAddress", primaryIpAddress);
+            this.primaryIpAddress = primaryIpAddress;
+            return this;
+        }
+
+        /**
+         * PrivateIpAddress.
+         */
+        public Builder privateIpAddress(java.util.List < String > privateIpAddress) {
+            this.putQueryParameter("PrivateIpAddress", privateIpAddress);
+            this.privateIpAddress = privateIpAddress;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * SecurityGroupId.
+         */
+        public Builder securityGroupId(String securityGroupId) {
+            this.putQueryParameter("SecurityGroupId", securityGroupId);
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+
+        /**
+         * ServiceManaged.
+         */
+        public Builder serviceManaged(Boolean serviceManaged) {
+            this.putQueryParameter("ServiceManaged", serviceManaged);
+            this.serviceManaged = serviceManaged;
+            return this;
+        }
 
         /**
          * SourceRegionId.
@@ -330,67 +548,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * Tag list
-         */
-        public Builder tag(java.util.List < Tag> tag) {
-            this.putQueryParameter("Tag", tag);
-            this.tag = tag;
-            return this;
-        }
-
-        /**
-         * The ID of the vSwitch to which the Eni belongs.
-         */
-        public Builder vSwitchId(String vSwitchId) {
-            this.putQueryParameter("VSwitchId", vSwitchId);
-            this.vSwitchId = vSwitchId;
-            return this;
-        }
-
-        /**
-         * The IPv4 address of the primary and private network of the Eni.
-         */
-        public Builder primaryIpAddress(String primaryIpAddress) {
-            this.putQueryParameter("PrimaryIpAddress", primaryIpAddress);
-            this.primaryIpAddress = primaryIpAddress;
-            return this;
-        }
-
-        /**
-         * The name of the Eni.
-         */
-        public Builder networkInterfaceName(String networkInterfaceName) {
-            this.putQueryParameter("NetworkInterfaceName", networkInterfaceName);
-            this.networkInterfaceName = networkInterfaceName;
-            return this;
-        }
-
-        /**
-         * The type of the Eni. Valid values:
-         * <p>
-         * 
-         * -Primary: The Primary Eni.
-         * -Secondary: Secondary Eni.
-         * 
-         * Default value: null, indicating that all types are queried.
-         */
-        public Builder type(String type) {
-            this.putQueryParameter("Type", type);
-            this.type = type;
-            return this;
-        }
-
-        /**
-         * The status of the Eni. Valid values:
-         * <p>
-         * 
-         * * Available: Available.
-         * * Attaching: binding.
-         * * InUse: the instance is bound.
-         * * Detaching: the instance is being unbound.
-         * * Deleting: Deleting.
-         * 
-         * Default value: null, indicating that all statuses are queried.
+         * Status.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -399,146 +557,38 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * The Token returned by the last API call.
-         * <p>
-         * 
-         * For more information about how to view the returned data, see the preceding API description.
+         * Tag.
          */
-        public Builder nextToken(String nextToken) {
-            this.putQueryParameter("NextToken", nextToken);
-            this.nextToken = nextToken;
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
             return this;
         }
 
         /**
-         * The secondary private IPv4 address of the Eni. Valid values of N: 1 to 100.
+         * Type.
          */
-        public Builder privateIpAddress(java.util.List < String > privateIpAddress) {
-            this.putQueryParameter("PrivateIpAddress", privateIpAddress);
-            this.privateIpAddress = privateIpAddress;
+        public Builder type(String type) {
+            this.putQueryParameter("Type", type);
+            this.type = type;
             return this;
         }
 
         /**
-         * The maximum number of entries to return on each page. Valid values: 10 to 500.
-         * <p>
-         * 
-         * Default value:
-         * 
-         * -If the value is not set or the value is less than 10, the default value is 10.
-         * -If the value is greater than 500, the default value is 500.
+         * VSwitchId.
          */
-        public Builder maxResults(Integer maxResults) {
-            this.putQueryParameter("MaxResults", maxResults);
-            this.maxResults = maxResults;
+        public Builder vSwitchId(String vSwitchId) {
+            this.putQueryParameter("VSwitchId", vSwitchId);
+            this.vSwitchId = vSwitchId;
             return this;
         }
 
         /**
-         * The ID of the Eni. Valid values of N: 1 to 100.
-         */
-        public Builder networkInterfaceId(java.util.List < String > networkInterfaceId) {
-            this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
-            this.networkInterfaceId = networkInterfaceId;
-            return this;
-        }
-
-        /**
-         * The VPC ID of the VPC to which the Eni belongs.
+         * VpcId.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
             this.vpcId = vpcId;
-            return this;
-        }
-
-        /**
-         * The region ID. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The ID of the resource group. When you use this parameter to filter resources, the number of resources cannot exceed 1,000.
-         */
-        public Builder resourceGroupId(String resourceGroupId) {
-            this.putQueryParameter("ResourceGroupId", resourceGroupId);
-            this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-
-        /**
-         * The page number of the query result.
-         * <p>
-         * 
-         * Start value: 1.
-         * 
-         * Default value: 1.
-         * 
-         * > This parameter is about to be offline. We recommend that you use the NextToken and MaxResults to complete the paging query.
-         */
-        public Builder pageNumber(Integer pageNumber) {
-            this.putQueryParameter("PageNumber", pageNumber);
-            this.pageNumber = pageNumber;
-            return this;
-        }
-
-        /**
-         * The ID of the security group to which the secondary Eni belongs.
-         * <p>
-         * 
-         * -If you want to query the information of the secondary Eni by using the security group ID, specify this parameter.
-         * -To query the primary Eni information by using the security group ID, call [DescribeInstances](~~ 25506 ~~) to specify the "SecurityGroupId" parameter.
-         */
-        public Builder securityGroupId(String securityGroupId) {
-            this.putQueryParameter("SecurityGroupId", securityGroupId);
-            this.securityGroupId = securityGroupId;
-            return this;
-        }
-
-        /**
-         * The ID of the instance associated with the Eni.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * The number of entries to return on each page.
-         * <p>
-         * 
-         * Maximum Value: 1000.
-         * 
-         * Default value: 10.
-         * 
-         * > This parameter is about to be offline. We recommend that you use the NextToken and MaxResults to complete the paging query.
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.putQueryParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * Whether the user of the Eni is a cloud product or a virtual merchant.
-         */
-        public Builder serviceManaged(Boolean serviceManaged) {
-            this.putQueryParameter("ServiceManaged", serviceManaged);
-            this.serviceManaged = serviceManaged;
-            return this;
-        }
-
-        /**
-         * The IPv6 address of the Eni. N indicates that multiple IPv6 addresses can be set. Valid values of N: 1 to 100.
-         */
-        public Builder ipv6Address(java.util.List < String > ipv6Address) {
-            this.putQueryParameter("Ipv6Address", ipv6Address);
-            this.ipv6Address = ipv6Address;
             return this;
         }
 
@@ -588,7 +638,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
             private String value; 
 
             /**
-             * 弹性网卡的标签键。N的取值范围：1~20
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -596,10 +646,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
             }
 
             /**
-             * 弹性网卡的标签值。N的取值范围：1~20
-             * <p>
-             * 
-             * 使用一个标签过滤资源，查询到该标签下的资源数量不能超过1000个；使用多个标签过滤资源，查询到同时绑定了多个标签的资源数量不能超过1000个。如果资源数量超过1000个，请使用[ListTagResources](~~110425~~)接口进行查询。
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

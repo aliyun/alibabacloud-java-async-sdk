@@ -12,9 +12,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyLaunchTemplateDefaultVersionRequest</p>
  */
 public class ModifyLaunchTemplateDefaultVersionRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("DefaultVersionNumber")
+    @Validation(required = true)
+    private Long defaultVersionNumber;
+
+    @Query
+    @NameInMap("LaunchTemplateId")
+    private String launchTemplateId;
+
+    @Query
+    @NameInMap("LaunchTemplateName")
+    private String launchTemplateName;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -23,14 +32,6 @@ public class ModifyLaunchTemplateDefaultVersionRequest extends Request {
     @Query
     @NameInMap("OwnerId")
     private Long ownerId;
-
-    @Query
-    @NameInMap("LaunchTemplateName")
-    private String launchTemplateName;
-
-    @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
 
     @Query
     @NameInMap("RegionId")
@@ -42,25 +43,24 @@ public class ModifyLaunchTemplateDefaultVersionRequest extends Request {
     private String resourceOwnerAccount;
 
     @Query
-    @NameInMap("LaunchTemplateId")
-    private String launchTemplateId;
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("DefaultVersionNumber")
-    @Validation(required = true)
-    private Long defaultVersionNumber;
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     private ModifyLaunchTemplateDefaultVersionRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
+        this.defaultVersionNumber = builder.defaultVersionNumber;
+        this.launchTemplateId = builder.launchTemplateId;
+        this.launchTemplateName = builder.launchTemplateName;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
-        this.launchTemplateName = builder.launchTemplateName;
-        this.resourceOwnerId = builder.resourceOwnerId;
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
-        this.launchTemplateId = builder.launchTemplateId;
-        this.defaultVersionNumber = builder.defaultVersionNumber;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -77,10 +77,24 @@ public class ModifyLaunchTemplateDefaultVersionRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return defaultVersionNumber
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public Long getDefaultVersionNumber() {
+        return this.defaultVersionNumber;
+    }
+
+    /**
+     * @return launchTemplateId
+     */
+    public String getLaunchTemplateId() {
+        return this.launchTemplateId;
+    }
+
+    /**
+     * @return launchTemplateName
+     */
+    public String getLaunchTemplateName() {
+        return this.launchTemplateName;
     }
 
     /**
@@ -98,20 +112,6 @@ public class ModifyLaunchTemplateDefaultVersionRequest extends Request {
     }
 
     /**
-     * @return launchTemplateName
-     */
-    public String getLaunchTemplateName() {
-        return this.launchTemplateName;
-    }
-
-    /**
-     * @return resourceOwnerId
-     */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -126,29 +126,29 @@ public class ModifyLaunchTemplateDefaultVersionRequest extends Request {
     }
 
     /**
-     * @return launchTemplateId
+     * @return resourceOwnerId
      */
-    public String getLaunchTemplateId() {
-        return this.launchTemplateId;
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     /**
-     * @return defaultVersionNumber
+     * @return sourceRegionId
      */
-    public Long getDefaultVersionNumber() {
-        return this.defaultVersionNumber;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public static final class Builder extends Request.Builder<ModifyLaunchTemplateDefaultVersionRequest, Builder> {
-        private String sourceRegionId; 
+        private Long defaultVersionNumber; 
+        private String launchTemplateId; 
+        private String launchTemplateName; 
         private String ownerAccount; 
         private Long ownerId; 
-        private String launchTemplateName; 
-        private Long resourceOwnerId; 
         private String regionId; 
         private String resourceOwnerAccount; 
-        private String launchTemplateId; 
-        private Long defaultVersionNumber; 
+        private Long resourceOwnerId; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -156,23 +156,41 @@ public class ModifyLaunchTemplateDefaultVersionRequest extends Request {
 
         private Builder(ModifyLaunchTemplateDefaultVersionRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
+            this.defaultVersionNumber = request.defaultVersionNumber;
+            this.launchTemplateId = request.launchTemplateId;
+            this.launchTemplateName = request.launchTemplateName;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
-            this.launchTemplateName = request.launchTemplateName;
-            this.resourceOwnerId = request.resourceOwnerId;
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
-            this.launchTemplateId = request.launchTemplateId;
-            this.defaultVersionNumber = request.defaultVersionNumber;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
-         * SourceRegionId.
+         * DefaultVersionNumber.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder defaultVersionNumber(Long defaultVersionNumber) {
+            this.putQueryParameter("DefaultVersionNumber", defaultVersionNumber);
+            this.defaultVersionNumber = defaultVersionNumber;
+            return this;
+        }
+
+        /**
+         * LaunchTemplateId.
+         */
+        public Builder launchTemplateId(String launchTemplateId) {
+            this.putQueryParameter("LaunchTemplateId", launchTemplateId);
+            this.launchTemplateId = launchTemplateId;
+            return this;
+        }
+
+        /**
+         * LaunchTemplateName.
+         */
+        public Builder launchTemplateName(String launchTemplateName) {
+            this.putQueryParameter("LaunchTemplateName", launchTemplateName);
+            this.launchTemplateName = launchTemplateName;
             return this;
         }
 
@@ -186,7 +204,7 @@ public class ModifyLaunchTemplateDefaultVersionRequest extends Request {
         }
 
         /**
-         * The ID of the RAM user.
+         * OwnerId.
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -195,25 +213,7 @@ public class ModifyLaunchTemplateDefaultVersionRequest extends Request {
         }
 
         /**
-         * The name of the launch template. You must specify LaunchTemplateId or LaunchTemplateName to determine the template.
-         */
-        public Builder launchTemplateName(String launchTemplateName) {
-            this.putQueryParameter("LaunchTemplateName", launchTemplateName);
-            this.launchTemplateName = launchTemplateName;
-            return this;
-        }
-
-        /**
-         * The ID of the resource master account, that is, the UID.
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * The ID of the region to which the template belongs. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -222,7 +222,7 @@ public class ModifyLaunchTemplateDefaultVersionRequest extends Request {
         }
 
         /**
-         * The account name of the resource master account.
+         * ResourceOwnerAccount.
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
             this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
@@ -231,20 +231,20 @@ public class ModifyLaunchTemplateDefaultVersionRequest extends Request {
         }
 
         /**
-         * The ID of the launch template. You must specify LaunchTemplateId or LaunchTemplateName to determine the template.
+         * ResourceOwnerId.
          */
-        public Builder launchTemplateId(String launchTemplateId) {
-            this.putQueryParameter("LaunchTemplateId", launchTemplateId);
-            this.launchTemplateId = launchTemplateId;
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
             return this;
         }
 
         /**
-         * The version number of the launch template that is set to the default version.
+         * SourceRegionId.
          */
-        public Builder defaultVersionNumber(Long defaultVersionNumber) {
-            this.putQueryParameter("DefaultVersionNumber", defaultVersionNumber);
-            this.defaultVersionNumber = defaultVersionNumber;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

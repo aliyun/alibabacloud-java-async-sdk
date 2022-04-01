@@ -12,14 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceTypesRequest</p>
  */
 public class DescribeInstanceTypesRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
-    @NameInMap("NextToken")
-    @Validation(maxLength = 50)
-    private String nextToken;
+    @NameInMap("InstanceTypeFamily")
+    private String instanceTypeFamily;
 
     @Query
     @NameInMap("InstanceTypes")
@@ -31,16 +26,41 @@ public class DescribeInstanceTypesRequest extends Request {
     private Long maxResults;
 
     @Query
-    @NameInMap("InstanceTypeFamily")
-    private String instanceTypeFamily;
+    @NameInMap("NextToken")
+    @Validation(maxLength = 50)
+    private String nextToken;
+
+    @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
+
+    @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     private DescribeInstanceTypesRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
-        this.nextToken = builder.nextToken;
+        this.instanceTypeFamily = builder.instanceTypeFamily;
         this.instanceTypes = builder.instanceTypes;
         this.maxResults = builder.maxResults;
-        this.instanceTypeFamily = builder.instanceTypeFamily;
+        this.nextToken = builder.nextToken;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -57,17 +77,10 @@ public class DescribeInstanceTypesRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return instanceTypeFamily
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
-     * @return nextToken
-     */
-    public String getNextToken() {
-        return this.nextToken;
+    public String getInstanceTypeFamily() {
+        return this.instanceTypeFamily;
     }
 
     /**
@@ -85,18 +98,57 @@ public class DescribeInstanceTypesRequest extends Request {
     }
 
     /**
-     * @return instanceTypeFamily
+     * @return nextToken
      */
-    public String getInstanceTypeFamily() {
-        return this.instanceTypeFamily;
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public static final class Builder extends Request.Builder<DescribeInstanceTypesRequest, Builder> {
-        private String sourceRegionId; 
-        private String nextToken; 
+        private String instanceTypeFamily; 
         private java.util.List < String > instanceTypes; 
         private Long maxResults; 
-        private String instanceTypeFamily; 
+        private String nextToken; 
+        private String ownerAccount; 
+        private Long ownerId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -104,33 +156,28 @@ public class DescribeInstanceTypesRequest extends Request {
 
         private Builder(DescribeInstanceTypesRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
-            this.nextToken = request.nextToken;
+            this.instanceTypeFamily = request.instanceTypeFamily;
             this.instanceTypes = request.instanceTypes;
             this.maxResults = request.maxResults;
-            this.instanceTypeFamily = request.instanceTypeFamily;
+            this.nextToken = request.nextToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
-         * SourceRegionId.
+         * InstanceTypeFamily.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder instanceTypeFamily(String instanceTypeFamily) {
+            this.putQueryParameter("InstanceTypeFamily", instanceTypeFamily);
+            this.instanceTypeFamily = instanceTypeFamily;
             return this;
         }
 
         /**
-         * Query the credential (Token). The value of this parameter is the NextToken value returned by the last call to the API. You do not need to set this parameter when you call the API for the first time.
-         */
-        public Builder nextToken(String nextToken) {
-            this.putQueryParameter("NextToken", nextToken);
-            this.nextToken = nextToken;
-            return this;
-        }
-
-        /**
-         * The type of the instance. Valid values of N: 1 to 10. If this parameter is not specified, all instance types are queried by default.
+         * InstanceTypes.
          */
         public Builder instanceTypes(java.util.List < String > instanceTypes) {
             this.putQueryParameter("InstanceTypes", instanceTypes);
@@ -139,10 +186,7 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return on each page. Maximum Value: 1600
-         * <p>
-         * 
-         * Default value: 1600
+         * MaxResults.
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -151,14 +195,56 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * The instance type family to which the instance type belongs. For more information, see [DescribeInstanceTypeFamilies](~~ 25621 ~~).
-         * <p>
-         * 
-         * For more information about instance type families, see [instance type families](~~ 25378 ~~).
+         * NextToken.
          */
-        public Builder instanceTypeFamily(String instanceTypeFamily) {
-            this.putQueryParameter("InstanceTypeFamily", instanceTypeFamily);
-            this.instanceTypeFamily = instanceTypeFamily;
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

@@ -12,19 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AllocateEipAddressResponseBody</p>
  */
 public class AllocateEipAddressResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    private String requestId;
-
     @NameInMap("AllocationId")
     private String allocationId;
 
     @NameInMap("EipAddress")
     private String eipAddress;
 
+    @NameInMap("RequestId")
+    private String requestId;
+
     private AllocateEipAddressResponseBody(Builder builder) {
-        this.requestId = builder.requestId;
         this.allocationId = builder.allocationId;
         this.eipAddress = builder.eipAddress;
+        this.requestId = builder.requestId;
     }
 
     public static Builder builder() {
@@ -33,13 +33,6 @@ public class AllocateEipAddressResponseBody extends TeaModel {
 
     public static AllocateEipAddressResponseBody create() {
         return builder().build();
-    }
-
-    /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
     }
 
     /**
@@ -56,18 +49,17 @@ public class AllocateEipAddressResponseBody extends TeaModel {
         return this.eipAddress;
     }
 
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static final class Builder {
-        private String requestId; 
         private String allocationId; 
         private String eipAddress; 
-
-        /**
-         * RequestId.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
+        private String requestId; 
 
         /**
          * AllocationId.
@@ -82,6 +74,14 @@ public class AllocateEipAddressResponseBody extends TeaModel {
          */
         public Builder eipAddress(String eipAddress) {
             this.eipAddress = eipAddress;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 

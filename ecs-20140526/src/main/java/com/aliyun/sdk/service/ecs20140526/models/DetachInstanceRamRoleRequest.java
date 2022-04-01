@@ -12,13 +12,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DetachInstanceRamRoleRequest</p>
  */
 public class DetachInstanceRamRoleRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("InstanceIds")
+    @Validation(required = true)
+    private String instanceIds;
 
     @Query
     @NameInMap("OwnerId")
     private Long ownerId;
+
+    @Query
+    @NameInMap("RamRoleName")
+    private String ramRoleName;
+
+    @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
 
     @Query
     @NameInMap("ResourceOwnerAccount")
@@ -28,29 +38,19 @@ public class DetachInstanceRamRoleRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
-    @Query
-    @NameInMap("RamRoleName")
-    private String ramRoleName;
-
-    @Query
-    @NameInMap("InstanceIds")
-    @Validation(required = true)
-    private String instanceIds;
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     private DetachInstanceRamRoleRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
+        this.instanceIds = builder.instanceIds;
         this.ownerId = builder.ownerId;
+        this.ramRoleName = builder.ramRoleName;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.regionId = builder.regionId;
-        this.ramRoleName = builder.ramRoleName;
-        this.instanceIds = builder.instanceIds;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -67,10 +67,10 @@ public class DetachInstanceRamRoleRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return instanceIds
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getInstanceIds() {
+        return this.instanceIds;
     }
 
     /**
@@ -78,6 +78,20 @@ public class DetachInstanceRamRoleRequest extends Request {
      */
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    /**
+     * @return ramRoleName
+     */
+    public String getRamRoleName() {
+        return this.ramRoleName;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -95,34 +109,20 @@ public class DetachInstanceRamRoleRequest extends Request {
     }
 
     /**
-     * @return regionId
+     * @return sourceRegionId
      */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return ramRoleName
-     */
-    public String getRamRoleName() {
-        return this.ramRoleName;
-    }
-
-    /**
-     * @return instanceIds
-     */
-    public String getInstanceIds() {
-        return this.instanceIds;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public static final class Builder extends Request.Builder<DetachInstanceRamRoleRequest, Builder> {
-        private String sourceRegionId; 
+        private String instanceIds; 
         private Long ownerId; 
+        private String ramRoleName; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String regionId; 
-        private String ramRoleName; 
-        private String instanceIds; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -130,26 +130,26 @@ public class DetachInstanceRamRoleRequest extends Request {
 
         private Builder(DetachInstanceRamRoleRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
+            this.instanceIds = request.instanceIds;
             this.ownerId = request.ownerId;
+            this.ramRoleName = request.ramRoleName;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.regionId = request.regionId;
-            this.ramRoleName = request.ramRoleName;
-            this.instanceIds = request.instanceIds;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
-         * SourceRegionId.
+         * InstanceIds.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder instanceIds(String instanceIds) {
+            this.putQueryParameter("InstanceIds", instanceIds);
+            this.instanceIds = instanceIds;
             return this;
         }
 
         /**
-         * The ID of the RAM user.
+         * OwnerId.
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -158,34 +158,7 @@ public class DetachInstanceRamRoleRequest extends Request {
         }
 
         /**
-         * The account name of the resource master account.
-         */
-        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
-            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-            this.resourceOwnerAccount = resourceOwnerAccount;
-            return this;
-        }
-
-        /**
-         * The ID of the resource master account, that is, the UID.
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * The ID of the region. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * Revoke all ECS instances that are assigned the RAM role to an instance. You can use the RAM API [ListRoles](~~ 28713 ~~) to query the created instance RAM role.
+         * RamRoleName.
          */
         public Builder ramRoleName(String ramRoleName) {
             this.putQueryParameter("RamRoleName", ramRoleName);
@@ -194,11 +167,38 @@ public class DetachInstanceRamRoleRequest extends Request {
         }
 
         /**
-         * The ID of the instance to be detached. The value can be a JSON Array consisting of multiple instance IDs. A maximum of 100 IDs can be entered. Separate IDs with commas (,).
+         * RegionId.
          */
-        public Builder instanceIds(String instanceIds) {
-            this.putQueryParameter("InstanceIds", instanceIds);
-            this.instanceIds = instanceIds;
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

@@ -17,33 +17,8 @@ public class ModifyCapacityReservationRequest extends Request {
     private PrivatePoolOptions privatePoolOptions;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
-    @NameInMap("ResourceOwnerAccount")
-    private String resourceOwnerAccount;
-
-    @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
-
-    @Query
-    @NameInMap("OwnerAccount")
-    private String ownerAccount;
-
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
-    @Query
     @NameInMap("Description")
     private String description;
-
-    @Query
-    @NameInMap("StartTime")
-    private String startTime;
 
     @Query
     @NameInMap("EndTime")
@@ -54,27 +29,52 @@ public class ModifyCapacityReservationRequest extends Request {
     private String endTimeType;
 
     @Query
+    @NameInMap("InstanceAmount")
+    private Integer instanceAmount;
+
+    @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
+
+    @Query
     @NameInMap("Platform")
     private String platform;
 
     @Query
-    @NameInMap("InstanceAmount")
-    private Integer instanceAmount;
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
+    @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Query
+    @NameInMap("StartTime")
+    private String startTime;
 
     private ModifyCapacityReservationRequest(Builder builder) {
         super(builder);
         this.privatePoolOptions = builder.privatePoolOptions;
-        this.ownerId = builder.ownerId;
-        this.resourceOwnerAccount = builder.resourceOwnerAccount;
-        this.resourceOwnerId = builder.resourceOwnerId;
-        this.ownerAccount = builder.ownerAccount;
-        this.regionId = builder.regionId;
         this.description = builder.description;
-        this.startTime = builder.startTime;
         this.endTime = builder.endTime;
         this.endTimeType = builder.endTimeType;
-        this.platform = builder.platform;
         this.instanceAmount = builder.instanceAmount;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
+        this.platform = builder.platform;
+        this.regionId = builder.regionId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.startTime = builder.startTime;
     }
 
     public static Builder builder() {
@@ -98,52 +98,10 @@ public class ModifyCapacityReservationRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
-     * @return resourceOwnerAccount
-     */
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    /**
-     * @return resourceOwnerId
-     */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    /**
-     * @return ownerAccount
-     */
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return description
      */
     public String getDescription() {
         return this.description;
-    }
-
-    /**
-     * @return startTime
-     */
-    public String getStartTime() {
-        return this.startTime;
     }
 
     /**
@@ -161,6 +119,27 @@ public class ModifyCapacityReservationRequest extends Request {
     }
 
     /**
+     * @return instanceAmount
+     */
+    public Integer getInstanceAmount() {
+        return this.instanceAmount;
+    }
+
+    /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
      * @return platform
      */
     public String getPlatform() {
@@ -168,25 +147,46 @@ public class ModifyCapacityReservationRequest extends Request {
     }
 
     /**
-     * @return instanceAmount
+     * @return regionId
      */
-    public Integer getInstanceAmount() {
-        return this.instanceAmount;
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    /**
+     * @return startTime
+     */
+    public String getStartTime() {
+        return this.startTime;
     }
 
     public static final class Builder extends Request.Builder<ModifyCapacityReservationRequest, Builder> {
         private PrivatePoolOptions privatePoolOptions; 
-        private Long ownerId; 
-        private String resourceOwnerAccount; 
-        private Long resourceOwnerId; 
-        private String ownerAccount; 
-        private String regionId; 
         private String description; 
-        private String startTime; 
         private String endTime; 
         private String endTimeType; 
-        private String platform; 
         private Integer instanceAmount; 
+        private String ownerAccount; 
+        private Long ownerId; 
+        private String platform; 
+        private String regionId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String startTime; 
 
         private Builder() {
             super();
@@ -195,17 +195,17 @@ public class ModifyCapacityReservationRequest extends Request {
         private Builder(ModifyCapacityReservationRequest request) {
             super(request);
             this.privatePoolOptions = request.privatePoolOptions;
-            this.ownerId = request.ownerId;
-            this.resourceOwnerAccount = request.resourceOwnerAccount;
-            this.resourceOwnerId = request.resourceOwnerId;
-            this.ownerAccount = request.ownerAccount;
-            this.regionId = request.regionId;
             this.description = request.description;
-            this.startTime = request.startTime;
             this.endTime = request.endTime;
             this.endTimeType = request.endTimeType;
-            this.platform = request.platform;
             this.instanceAmount = request.instanceAmount;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.platform = request.platform;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.startTime = request.startTime;
         } 
 
         /**
@@ -218,11 +218,74 @@ public class ModifyCapacityReservationRequest extends Request {
         }
 
         /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
+            return this;
+        }
+
+        /**
+         * EndTime.
+         */
+        public Builder endTime(String endTime) {
+            this.putQueryParameter("EndTime", endTime);
+            this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * EndTimeType.
+         */
+        public Builder endTimeType(String endTimeType) {
+            this.putQueryParameter("EndTimeType", endTimeType);
+            this.endTimeType = endTimeType;
+            return this;
+        }
+
+        /**
+         * InstanceAmount.
+         */
+        public Builder instanceAmount(Integer instanceAmount) {
+            this.putQueryParameter("InstanceAmount", instanceAmount);
+            this.instanceAmount = instanceAmount;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
+
+        /**
          * OwnerId.
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * Platform.
+         */
+        public Builder platform(String platform) {
+            this.putQueryParameter("Platform", platform);
+            this.platform = platform;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
@@ -245,90 +308,11 @@ public class ModifyCapacityReservationRequest extends Request {
         }
 
         /**
-         * OwnerAccount.
-         */
-        public Builder ownerAccount(String ownerAccount) {
-            this.putQueryParameter("OwnerAccount", ownerAccount);
-            this.ownerAccount = ownerAccount;
-            return this;
-        }
-
-        /**
-         * The ID of the region to which the capacity reservation service belongs. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The description of the capacity reservation service. The description must be 2 to 256 characters in length and cannot start with "http:// "or "https.
-         */
-        public Builder description(String description) {
-            this.putQueryParameter("Description", description);
-            this.description = description;
-            return this;
-        }
-
-        /**
-         * The effective method of the capacity reservation service. You can only set this parameter to take effect immediately.
-         * <p>
-         * 
-         * > If this parameter is not set, it takes effect immediately.
+         * StartTime.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
             this.startTime = startTime;
-            return this;
-        }
-
-        /**
-         * The expiration time of the subscription service. This parameter takes effect only when "EndTimeType = Limited. The time format is ISO 8601 and UTC +0 is required. The format is yyyy-MM-ddTHH:mm:ssZ ". For more information, see [ISO8601](~~ 25696 ~~).
-         */
-        public Builder endTime(String endTime) {
-            this.putQueryParameter("EndTime", endTime);
-            this.endTime = endTime;
-            return this;
-        }
-
-        /**
-         * The expiration method of the capacity reservation service. Valid values:
-         * <p>
-         * 
-         * -Limited: release at the specified time. You must specify the "EndTime" parameter at the same time.
-         * -Unlimited: manually released. No time limit.
-         */
-        public Builder endTimeType(String endTimeType) {
-            this.putQueryParameter("EndTimeType", endTimeType);
-            this.endTimeType = endTimeType;
-            return this;
-        }
-
-        /**
-         * The operating system type of the image used by the instance. Valid values:
-         * <p>
-         * 
-         * -Windows:Windows Server-type operating system.
-         * -Linux:Linux and Unix-like operating systems.
-         * 
-         * > This parameter is not available.
-         */
-        public Builder platform(String platform) {
-            this.putQueryParameter("Platform", platform);
-            this.platform = platform;
-            return this;
-        }
-
-        /**
-         * The total number of instances to be reserved for the capacity reservation service. Valid values: number of used instances to 1000
-         * <p>
-         * 
-         * > When the total number of instances is expanded, the expansion may fail due to insufficient inventory.
-         */
-        public Builder instanceAmount(Integer instanceAmount) {
-            this.putQueryParameter("InstanceAmount", instanceAmount);
-            this.instanceAmount = instanceAmount;
             return this;
         }
 
@@ -340,16 +324,16 @@ public class ModifyCapacityReservationRequest extends Request {
     } 
 
     public static class PrivatePoolOptions extends TeaModel {
-        @NameInMap("Name")
-        private String name;
-
         @NameInMap("Id")
         @Validation(required = true)
         private String id;
 
+        @NameInMap("Name")
+        private String name;
+
         private PrivatePoolOptions(Builder builder) {
-            this.name = builder.name;
             this.id = builder.id;
+            this.name = builder.name;
         }
 
         public static Builder builder() {
@@ -361,36 +345,36 @@ public class ModifyCapacityReservationRequest extends Request {
         }
 
         /**
-         * @return name
-         */
-        public String getName() {
-            return this.name;
-        }
-
-        /**
          * @return id
          */
         public String getId() {
             return this.id;
         }
 
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
         public static final class Builder {
-            private String name; 
             private String id; 
+            private String name; 
 
             /**
-             * The name of the capacity reservation service. The description must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https. It can contain numbers, colons (:), underscores (_), and hyphens (-).
+             * Id.
              */
-            public Builder name(String name) {
-                this.name = name;
+            public Builder id(String id) {
+                this.id = id;
                 return this;
             }
 
             /**
-             * The ID of the subscription service.
+             * Name.
              */
-            public Builder id(String id) {
-                this.id = id;
+            public Builder name(String name) {
+                this.name = name;
                 return this;
             }
 

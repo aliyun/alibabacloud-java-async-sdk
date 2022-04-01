@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceModificationPriceResponseBody</p>
  */
 public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    private String requestId;
-
     @NameInMap("PriceInfo")
     private PriceInfo priceInfo;
 
+    @NameInMap("RequestId")
+    private String requestId;
+
     private DescribeInstanceModificationPriceResponseBody(Builder builder) {
-        this.requestId = builder.requestId;
         this.priceInfo = builder.priceInfo;
+        this.requestId = builder.requestId;
     }
 
     public static Builder builder() {
@@ -32,36 +32,36 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
     }
 
     /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    /**
      * @return priceInfo
      */
     public PriceInfo getPriceInfo() {
         return this.priceInfo;
     }
 
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static final class Builder {
-        private String requestId; 
         private PriceInfo priceInfo; 
+        private String requestId; 
 
         /**
-         * The ID of the request.
+         * PriceInfo.
          */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
+        public Builder priceInfo(PriceInfo priceInfo) {
+            this.priceInfo = priceInfo;
             return this;
         }
 
         /**
-         * The data type consisting of price information types (PriceInfo), including price and discount rule information.
+         * RequestId.
          */
-        public Builder priceInfo(PriceInfo priceInfo) {
-            this.priceInfo = priceInfo;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
@@ -71,6 +71,107 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
 
     } 
 
+    public static class Price extends TeaModel {
+        @NameInMap("Currency")
+        private String currency;
+
+        @NameInMap("DiscountPrice")
+        private Float discountPrice;
+
+        @NameInMap("OriginalPrice")
+        private Float originalPrice;
+
+        @NameInMap("TradePrice")
+        private Float tradePrice;
+
+        private Price(Builder builder) {
+            this.currency = builder.currency;
+            this.discountPrice = builder.discountPrice;
+            this.originalPrice = builder.originalPrice;
+            this.tradePrice = builder.tradePrice;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Price create() {
+            return builder().build();
+        }
+
+        /**
+         * @return currency
+         */
+        public String getCurrency() {
+            return this.currency;
+        }
+
+        /**
+         * @return discountPrice
+         */
+        public Float getDiscountPrice() {
+            return this.discountPrice;
+        }
+
+        /**
+         * @return originalPrice
+         */
+        public Float getOriginalPrice() {
+            return this.originalPrice;
+        }
+
+        /**
+         * @return tradePrice
+         */
+        public Float getTradePrice() {
+            return this.tradePrice;
+        }
+
+        public static final class Builder {
+            private String currency; 
+            private Float discountPrice; 
+            private Float originalPrice; 
+            private Float tradePrice; 
+
+            /**
+             * Currency.
+             */
+            public Builder currency(String currency) {
+                this.currency = currency;
+                return this;
+            }
+
+            /**
+             * DiscountPrice.
+             */
+            public Builder discountPrice(Float discountPrice) {
+                this.discountPrice = discountPrice;
+                return this;
+            }
+
+            /**
+             * OriginalPrice.
+             */
+            public Builder originalPrice(Float originalPrice) {
+                this.originalPrice = originalPrice;
+                return this;
+            }
+
+            /**
+             * TradePrice.
+             */
+            public Builder tradePrice(Float tradePrice) {
+                this.tradePrice = tradePrice;
+                return this;
+            }
+
+            public Price build() {
+                return new Price(this);
+            } 
+
+        } 
+
+    }
     public static class Rule extends TeaModel {
         @NameInMap("Description")
         private String description;
@@ -110,7 +211,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
             private Long ruleId; 
 
             /**
-             * The description of the activity rule.
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -118,7 +219,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the activity.
+             * RuleId.
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -173,121 +274,16 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
         } 
 
     }
-    public static class Price extends TeaModel {
-        @NameInMap("OriginalPrice")
-        private Float originalPrice;
-
-        @NameInMap("DiscountPrice")
-        private Float discountPrice;
-
-        @NameInMap("Currency")
-        private String currency;
-
-        @NameInMap("TradePrice")
-        private Float tradePrice;
-
-        private Price(Builder builder) {
-            this.originalPrice = builder.originalPrice;
-            this.discountPrice = builder.discountPrice;
-            this.currency = builder.currency;
-            this.tradePrice = builder.tradePrice;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Price create() {
-            return builder().build();
-        }
-
-        /**
-         * @return originalPrice
-         */
-        public Float getOriginalPrice() {
-            return this.originalPrice;
-        }
-
-        /**
-         * @return discountPrice
-         */
-        public Float getDiscountPrice() {
-            return this.discountPrice;
-        }
-
-        /**
-         * @return currency
-         */
-        public String getCurrency() {
-            return this.currency;
-        }
-
-        /**
-         * @return tradePrice
-         */
-        public Float getTradePrice() {
-            return this.tradePrice;
-        }
-
-        public static final class Builder {
-            private Float originalPrice; 
-            private Float discountPrice; 
-            private String currency; 
-            private Float tradePrice; 
-
-            /**
-             * Original price.
-             */
-            public Builder originalPrice(Float originalPrice) {
-                this.originalPrice = originalPrice;
-                return this;
-            }
-
-            /**
-             * Discount.
-             */
-            public Builder discountPrice(Float discountPrice) {
-                this.discountPrice = discountPrice;
-                return this;
-            }
-
-            /**
-             * The unit of currency. Possible values:
-             * <p>
-             * 
-             * -CNY
-             * -USD
-             */
-            public Builder currency(String currency) {
-                this.currency = currency;
-                return this;
-            }
-
-            /**
-             * The final price, which is the original price minus the discount.
-             */
-            public Builder tradePrice(Float tradePrice) {
-                this.tradePrice = tradePrice;
-                return this;
-            }
-
-            public Price build() {
-                return new Price(this);
-            } 
-
-        } 
-
-    }
     public static class PriceInfo extends TeaModel {
-        @NameInMap("Rules")
-        private Rules rules;
-
         @NameInMap("Price")
         private Price price;
 
+        @NameInMap("Rules")
+        private Rules rules;
+
         private PriceInfo(Builder builder) {
-            this.rules = builder.rules;
             this.price = builder.price;
+            this.rules = builder.rules;
         }
 
         public static Builder builder() {
@@ -299,36 +295,36 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
         }
 
         /**
-         * @return rules
-         */
-        public Rules getRules() {
-            return this.rules;
-        }
-
-        /**
          * @return price
          */
         public Price getPrice() {
             return this.price;
         }
 
+        /**
+         * @return rules
+         */
+        public Rules getRules() {
+            return this.rules;
+        }
+
         public static final class Builder {
-            private Rules rules; 
             private Price price; 
+            private Rules rules; 
 
             /**
-             * The activity rule.
+             * Price.
              */
-            public Builder rules(Rules rules) {
-                this.rules = rules;
+            public Builder price(Price price) {
+                this.price = price;
                 return this;
             }
 
             /**
-             * The price.
+             * Rules.
              */
-            public Builder price(Price price) {
-                this.price = price;
+            public Builder rules(Rules rules) {
+                this.rules = rules;
                 return this;
             }
 

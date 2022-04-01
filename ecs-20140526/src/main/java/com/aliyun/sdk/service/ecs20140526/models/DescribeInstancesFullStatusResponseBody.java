@@ -12,27 +12,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstancesFullStatusResponseBody</p>
  */
 public class DescribeInstancesFullStatusResponseBody extends TeaModel {
+    @NameInMap("InstanceFullStatusSet")
+    private InstanceFullStatusSet instanceFullStatusSet;
+
+    @NameInMap("PageNumber")
+    private Integer pageNumber;
+
     @NameInMap("PageSize")
     private Integer pageSize;
 
     @NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("PageNumber")
-    private Integer pageNumber;
-
     @NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("InstanceFullStatusSet")
-    private InstanceFullStatusSet instanceFullStatusSet;
-
     private DescribeInstancesFullStatusResponseBody(Builder builder) {
+        this.instanceFullStatusSet = builder.instanceFullStatusSet;
+        this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
-        this.pageNumber = builder.pageNumber;
         this.totalCount = builder.totalCount;
-        this.instanceFullStatusSet = builder.instanceFullStatusSet;
     }
 
     public static Builder builder() {
@@ -41,6 +41,20 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
 
     public static DescribeInstancesFullStatusResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return instanceFullStatusSet
+     */
+    public InstanceFullStatusSet getInstanceFullStatusSet() {
+        return this.instanceFullStatusSet;
+    }
+
+    /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     /**
@@ -58,51 +72,29 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
     }
 
     /**
-     * @return pageNumber
-     */
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    /**
      * @return totalCount
      */
     public Integer getTotalCount() {
         return this.totalCount;
     }
 
-    /**
-     * @return instanceFullStatusSet
-     */
-    public InstanceFullStatusSet getInstanceFullStatusSet() {
-        return this.instanceFullStatusSet;
-    }
-
     public static final class Builder {
+        private InstanceFullStatusSet instanceFullStatusSet; 
+        private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private Integer pageNumber; 
         private Integer totalCount; 
-        private InstanceFullStatusSet instanceFullStatusSet; 
 
         /**
-         * The size of each page.
+         * InstanceFullStatusSet.
          */
-        public Builder pageSize(Integer pageSize) {
-            this.pageSize = pageSize;
+        public Builder instanceFullStatusSet(InstanceFullStatusSet instanceFullStatusSet) {
+            this.instanceFullStatusSet = instanceFullStatusSet;
             return this;
         }
 
         /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The page number.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -110,18 +102,26 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries.
+         * PageSize.
          */
-        public Builder totalCount(Integer totalCount) {
-            this.totalCount = totalCount;
+        public Builder pageSize(Integer pageSize) {
+            this.pageSize = pageSize;
             return this;
         }
 
         /**
-         * The full-state array of the instance.
+         * RequestId.
          */
-        public Builder instanceFullStatusSet(InstanceFullStatusSet instanceFullStatusSet) {
-            this.instanceFullStatusSet = instanceFullStatusSet;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
@@ -131,16 +131,77 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
 
     } 
 
-    public static class EventCycleStatus extends TeaModel {
-        @NameInMap("Name")
-        private String name;
-
+    public static class HealthStatus extends TeaModel {
         @NameInMap("Code")
         private Integer code;
 
-        private EventCycleStatus(Builder builder) {
-            this.name = builder.name;
+        @NameInMap("Name")
+        private String name;
+
+        private HealthStatus(Builder builder) {
             this.code = builder.code;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static HealthStatus create() {
+            return builder().build();
+        }
+
+        /**
+         * @return code
+         */
+        public Integer getCode() {
+            return this.code;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private Integer code; 
+            private String name; 
+
+            /**
+             * Code.
+             */
+            public Builder code(Integer code) {
+                this.code = code;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public HealthStatus build() {
+                return new HealthStatus(this);
+            } 
+
+        } 
+
+    }
+    public static class EventCycleStatus extends TeaModel {
+        @NameInMap("Code")
+        private Integer code;
+
+        @NameInMap("Name")
+        private String name;
+
+        private EventCycleStatus(Builder builder) {
+            this.code = builder.code;
+            this.name = builder.name;
         }
 
         public static Builder builder() {
@@ -152,36 +213,36 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
         }
 
         /**
-         * @return name
-         */
-        public String getName() {
-            return this.name;
-        }
-
-        /**
          * @return code
          */
         public Integer getCode() {
             return this.code;
         }
 
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
         public static final class Builder {
-            private String name; 
             private Integer code; 
+            private String name; 
 
             /**
-             * The name of the event status.
+             * Code.
              */
-            public Builder name(String name) {
-                this.name = name;
+            public Builder code(Integer code) {
+                this.code = code;
                 return this;
             }
 
             /**
-             * The event status code.
+             * Name.
              */
-            public Builder code(Integer code) {
-                this.code = code;
+            public Builder name(String name) {
+                this.name = name;
                 return this;
             }
 
@@ -193,15 +254,15 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
 
     }
     public static class EventType extends TeaModel {
-        @NameInMap("Name")
-        private String name;
-
         @NameInMap("Code")
         private Integer code;
 
+        @NameInMap("Name")
+        private String name;
+
         private EventType(Builder builder) {
-            this.name = builder.name;
             this.code = builder.code;
+            this.name = builder.name;
         }
 
         public static Builder builder() {
@@ -213,36 +274,36 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
         }
 
         /**
-         * @return name
-         */
-        public String getName() {
-            return this.name;
-        }
-
-        /**
          * @return code
          */
         public Integer getCode() {
             return this.code;
         }
 
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
         public static final class Builder {
-            private String name; 
             private Integer code; 
+            private String name; 
 
             /**
-             * The name of the event type.
+             * Code.
              */
-            public Builder name(String name) {
-                this.name = name;
+            public Builder code(Integer code) {
+                this.code = code;
                 return this;
             }
 
             /**
-             * The code of the event type.
+             * Name.
              */
-            public Builder code(Integer code) {
-                this.code = code;
+            public Builder name(String name) {
+                this.name = name;
                 return this;
             }
 
@@ -257,11 +318,11 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
         @NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("DeviceSize")
-        private String deviceSize;
-
         @NameInMap("DeviceCategory")
         private String deviceCategory;
+
+        @NameInMap("DeviceSize")
+        private String deviceSize;
 
         @NameInMap("DeviceType")
         private String deviceType;
@@ -271,8 +332,8 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
 
         private InactiveDisk(Builder builder) {
             this.creationTime = builder.creationTime;
-            this.deviceSize = builder.deviceSize;
             this.deviceCategory = builder.deviceCategory;
+            this.deviceSize = builder.deviceSize;
             this.deviceType = builder.deviceType;
             this.releaseTime = builder.releaseTime;
         }
@@ -293,17 +354,17 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
         }
 
         /**
-         * @return deviceSize
-         */
-        public String getDeviceSize() {
-            return this.deviceSize;
-        }
-
-        /**
          * @return deviceCategory
          */
         public String getDeviceCategory() {
             return this.deviceCategory;
+        }
+
+        /**
+         * @return deviceSize
+         */
+        public String getDeviceSize() {
+            return this.deviceSize;
         }
 
         /**
@@ -322,13 +383,13 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
 
         public static final class Builder {
             private String creationTime; 
-            private String deviceSize; 
             private String deviceCategory; 
+            private String deviceSize; 
             private String deviceType; 
             private String releaseTime; 
 
             /**
-             * The time when the disk or local disk was created. The time follows the [ISO8601](~~ 25696 ~~) standard in UTC. The format is yyyy-MM-ddTHH:mm:ssZ.
+             * CreationTime.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -336,24 +397,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the cloud disk or local disk. Unit: GiB.
-             */
-            public Builder deviceSize(String deviceSize) {
-                this.deviceSize = deviceSize;
-                return this;
-            }
-
-            /**
-             * The type of the cloud disk or local disk. Possible values:
-             * <p>
-             * -cloud: basic cloud disk
-             * -cloud_efficiency: Ultra disk
-             * -cloud_ssd:SSD
-             * -cloud_essd:ESSD
-             * -local_ssd_pro:I/O-intensive local disks
-             * -local_hdd_pro: Throughput-intensive local disks
-             * -ephemeral:(discontinued) local disk
-             * -ephemeral_ssd:(phased out) local SSD
+             * DeviceCategory.
              */
             public Builder deviceCategory(String deviceCategory) {
                 this.deviceCategory = deviceCategory;
@@ -361,10 +405,15 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the cloud disk or local disk. Possible values:
-             * <p>
-             * -system: system disk
-             * -data: data disk
+             * DeviceSize.
+             */
+            public Builder deviceSize(String deviceSize) {
+                this.deviceSize = deviceSize;
+                return this;
+            }
+
+            /**
+             * DeviceType.
              */
             public Builder deviceType(String deviceType) {
                 this.deviceType = deviceType;
@@ -372,7 +421,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The release time of the cloud disk or local disk. The time follows the [ISO8601](~~ 25696 ~~) standard in UTC. The format is yyyy-MM-ddTHH:mm:ssZ.
+             * ReleaseTime.
              */
             public Builder releaseTime(String releaseTime) {
                 this.releaseTime = releaseTime;
@@ -478,7 +527,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             private InactiveDisks inactiveDisks; 
 
             /**
-             * The name of the local disk device.
+             * Device.
              */
             public Builder device(String device) {
                 this.device = device;
@@ -486,7 +535,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the local disk.
+             * DiskId.
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;
@@ -494,7 +543,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the inactive or local disks that have been released but need to be cleaned.
+             * InactiveDisks.
              */
             public Builder inactiveDisks(InactiveDisks inactiveDisks) {
                 this.inactiveDisks = inactiveDisks;
@@ -509,23 +558,14 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
 
     }
     public static class ScheduledSystemEventType extends TeaModel {
-        @NameInMap("EventPublishTime")
-        private String eventPublishTime;
+        @NameInMap("EventCycleStatus")
+        private EventCycleStatus eventCycleStatus;
 
         @NameInMap("EventId")
         private String eventId;
 
-        @NameInMap("NotBefore")
-        private String notBefore;
-
-        @NameInMap("ImpactLevel")
-        private String impactLevel;
-
-        @NameInMap("Reason")
-        private String reason;
-
-        @NameInMap("EventCycleStatus")
-        private EventCycleStatus eventCycleStatus;
+        @NameInMap("EventPublishTime")
+        private String eventPublishTime;
 
         @NameInMap("EventType")
         private EventType eventType;
@@ -533,15 +573,24 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
         @NameInMap("ExtendedAttribute")
         private ExtendedAttribute extendedAttribute;
 
+        @NameInMap("ImpactLevel")
+        private String impactLevel;
+
+        @NameInMap("NotBefore")
+        private String notBefore;
+
+        @NameInMap("Reason")
+        private String reason;
+
         private ScheduledSystemEventType(Builder builder) {
-            this.eventPublishTime = builder.eventPublishTime;
-            this.eventId = builder.eventId;
-            this.notBefore = builder.notBefore;
-            this.impactLevel = builder.impactLevel;
-            this.reason = builder.reason;
             this.eventCycleStatus = builder.eventCycleStatus;
+            this.eventId = builder.eventId;
+            this.eventPublishTime = builder.eventPublishTime;
             this.eventType = builder.eventType;
             this.extendedAttribute = builder.extendedAttribute;
+            this.impactLevel = builder.impactLevel;
+            this.notBefore = builder.notBefore;
+            this.reason = builder.reason;
         }
 
         public static Builder builder() {
@@ -553,10 +602,10 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
         }
 
         /**
-         * @return eventPublishTime
+         * @return eventCycleStatus
          */
-        public String getEventPublishTime() {
-            return this.eventPublishTime;
+        public EventCycleStatus getEventCycleStatus() {
+            return this.eventCycleStatus;
         }
 
         /**
@@ -567,31 +616,10 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
         }
 
         /**
-         * @return notBefore
+         * @return eventPublishTime
          */
-        public String getNotBefore() {
-            return this.notBefore;
-        }
-
-        /**
-         * @return impactLevel
-         */
-        public String getImpactLevel() {
-            return this.impactLevel;
-        }
-
-        /**
-         * @return reason
-         */
-        public String getReason() {
-            return this.reason;
-        }
-
-        /**
-         * @return eventCycleStatus
-         */
-        public EventCycleStatus getEventCycleStatus() {
-            return this.eventCycleStatus;
+        public String getEventPublishTime() {
+            return this.eventPublishTime;
         }
 
         /**
@@ -608,58 +636,39 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             return this.extendedAttribute;
         }
 
+        /**
+         * @return impactLevel
+         */
+        public String getImpactLevel() {
+            return this.impactLevel;
+        }
+
+        /**
+         * @return notBefore
+         */
+        public String getNotBefore() {
+            return this.notBefore;
+        }
+
+        /**
+         * @return reason
+         */
+        public String getReason() {
+            return this.reason;
+        }
+
         public static final class Builder {
-            private String eventPublishTime; 
-            private String eventId; 
-            private String notBefore; 
-            private String impactLevel; 
-            private String reason; 
             private EventCycleStatus eventCycleStatus; 
+            private String eventId; 
+            private String eventPublishTime; 
             private EventType eventType; 
             private ExtendedAttribute extendedAttribute; 
+            private String impactLevel; 
+            private String notBefore; 
+            private String reason; 
 
             /**
-             * The time when the event was published. Use UTC +0.
-             */
-            public Builder eventPublishTime(String eventPublishTime) {
-                this.eventPublishTime = eventPublishTime;
-                return this;
-            }
-
-            /**
-             * The ID of the instance event.
-             */
-            public Builder eventId(String eventId) {
-                this.eventId = eventId;
-                return this;
-            }
-
-            /**
-             * The scheduled execution time of the event, in UTC +0.
-             */
-            public Builder notBefore(String notBefore) {
-                this.notBefore = notBefore;
-                return this;
-            }
-
-            /**
-             * The impact level.
-             */
-            public Builder impactLevel(String impactLevel) {
-                this.impactLevel = impactLevel;
-                return this;
-            }
-
-            /**
-             * The cause of the system event.
-             */
-            public Builder reason(String reason) {
-                this.reason = reason;
-                return this;
-            }
-
-            /**
-             * The status of the event.
+             * EventCycleStatus.
              */
             public Builder eventCycleStatus(EventCycleStatus eventCycleStatus) {
                 this.eventCycleStatus = eventCycleStatus;
@@ -667,7 +676,23 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the event.
+             * EventId.
+             */
+            public Builder eventId(String eventId) {
+                this.eventId = eventId;
+                return this;
+            }
+
+            /**
+             * EventPublishTime.
+             */
+            public Builder eventPublishTime(String eventPublishTime) {
+                this.eventPublishTime = eventPublishTime;
+                return this;
+            }
+
+            /**
+             * EventType.
              */
             public Builder eventType(EventType eventType) {
                 this.eventType = eventType;
@@ -675,10 +700,34 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Extended properties of local disk instance system events.
+             * ExtendedAttribute.
              */
             public Builder extendedAttribute(ExtendedAttribute extendedAttribute) {
                 this.extendedAttribute = extendedAttribute;
+                return this;
+            }
+
+            /**
+             * ImpactLevel.
+             */
+            public Builder impactLevel(String impactLevel) {
+                this.impactLevel = impactLevel;
+                return this;
+            }
+
+            /**
+             * NotBefore.
+             */
+            public Builder notBefore(String notBefore) {
+                this.notBefore = notBefore;
+                return this;
+            }
+
+            /**
+             * Reason.
+             */
+            public Builder reason(String reason) {
+                this.reason = reason;
                 return this;
             }
 
@@ -731,15 +780,15 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
 
     }
     public static class Status extends TeaModel {
-        @NameInMap("Name")
-        private String name;
-
         @NameInMap("Code")
         private Integer code;
 
+        @NameInMap("Name")
+        private String name;
+
         private Status(Builder builder) {
-            this.name = builder.name;
             this.code = builder.code;
+            this.name = builder.name;
         }
 
         public static Builder builder() {
@@ -751,36 +800,36 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
         }
 
         /**
-         * @return name
-         */
-        public String getName() {
-            return this.name;
-        }
-
-        /**
          * @return code
          */
         public Integer getCode() {
             return this.code;
         }
 
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
         public static final class Builder {
-            private String name; 
             private Integer code; 
+            private String name; 
 
             /**
-             * The name of the instance lifecycle status.
+             * Code.
              */
-            public Builder name(String name) {
-                this.name = name;
+            public Builder code(Integer code) {
+                this.code = code;
                 return this;
             }
 
             /**
-             * The lifecycle status code of the instance.
+             * Name.
              */
-            public Builder code(Integer code) {
-                this.code = code;
+            public Builder name(String name) {
+                this.name = name;
                 return this;
             }
 
@@ -791,68 +840,10 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
         } 
 
     }
-    public static class HealthStatus extends TeaModel {
-        @NameInMap("Name")
-        private String name;
-
-        @NameInMap("Code")
-        private Integer code;
-
-        private HealthStatus(Builder builder) {
-            this.name = builder.name;
-            this.code = builder.code;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static HealthStatus create() {
-            return builder().build();
-        }
-
-        /**
-         * @return name
-         */
-        public String getName() {
-            return this.name;
-        }
-
-        /**
-         * @return code
-         */
-        public Integer getCode() {
-            return this.code;
-        }
-
-        public static final class Builder {
-            private String name; 
-            private Integer code; 
-
-            /**
-             * The name of the health status.
-             */
-            public Builder name(String name) {
-                this.name = name;
-                return this;
-            }
-
-            /**
-             * The health status code.
-             */
-            public Builder code(Integer code) {
-                this.code = code;
-                return this;
-            }
-
-            public HealthStatus build() {
-                return new HealthStatus(this);
-            } 
-
-        } 
-
-    }
     public static class InstanceFullStatusType extends TeaModel {
+        @NameInMap("HealthStatus")
+        private HealthStatus healthStatus;
+
         @NameInMap("InstanceId")
         private String instanceId;
 
@@ -862,14 +853,11 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
         @NameInMap("Status")
         private Status status;
 
-        @NameInMap("HealthStatus")
-        private HealthStatus healthStatus;
-
         private InstanceFullStatusType(Builder builder) {
+            this.healthStatus = builder.healthStatus;
             this.instanceId = builder.instanceId;
             this.scheduledSystemEventSet = builder.scheduledSystemEventSet;
             this.status = builder.status;
-            this.healthStatus = builder.healthStatus;
         }
 
         public static Builder builder() {
@@ -878,6 +866,13 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
 
         public static InstanceFullStatusType create() {
             return builder().build();
+        }
+
+        /**
+         * @return healthStatus
+         */
+        public HealthStatus getHealthStatus() {
+            return this.healthStatus;
         }
 
         /**
@@ -901,21 +896,22 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             return this.status;
         }
 
-        /**
-         * @return healthStatus
-         */
-        public HealthStatus getHealthStatus() {
-            return this.healthStatus;
-        }
-
         public static final class Builder {
+            private HealthStatus healthStatus; 
             private String instanceId; 
             private ScheduledSystemEventSet scheduledSystemEventSet; 
             private Status status; 
-            private HealthStatus healthStatus; 
 
             /**
-             * The ID of the instance.
+             * HealthStatus.
+             */
+            public Builder healthStatus(HealthStatus healthStatus) {
+                this.healthStatus = healthStatus;
+                return this;
+            }
+
+            /**
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -923,7 +919,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The array of system events in the system plan.
+             * ScheduledSystemEventSet.
              */
             public Builder scheduledSystemEventSet(ScheduledSystemEventSet scheduledSystemEventSet) {
                 this.scheduledSystemEventSet = scheduledSystemEventSet;
@@ -931,18 +927,10 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The lifecycle status of the instance.
+             * Status.
              */
             public Builder status(Status status) {
                 this.status = status;
-                return this;
-            }
-
-            /**
-             * The health status of the instance.
-             */
-            public Builder healthStatus(HealthStatus healthStatus) {
-                this.healthStatus = healthStatus;
                 return this;
             }
 

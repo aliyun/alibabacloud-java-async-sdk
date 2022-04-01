@@ -12,17 +12,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeZonesRequest</p>
  */
 public class DescribeZonesRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("AcceptLanguage")
+    private String acceptLanguage;
 
     @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
+    @NameInMap("InstanceChargeType")
+    private String instanceChargeType;
 
     @Query
-    @NameInMap("Verbose")
-    private Boolean verbose;
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
 
     @Query
     @NameInMap("RegionId")
@@ -30,26 +34,37 @@ public class DescribeZonesRequest extends Request {
     private String regionId;
 
     @Query
-    @NameInMap("AcceptLanguage")
-    private String acceptLanguage;
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     @Query
     @NameInMap("SpotStrategy")
     private String spotStrategy;
 
     @Query
-    @NameInMap("InstanceChargeType")
-    private String instanceChargeType;
+    @NameInMap("Verbose")
+    private Boolean verbose;
 
     private DescribeZonesRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
-        this.resourceOwnerId = builder.resourceOwnerId;
-        this.verbose = builder.verbose;
-        this.regionId = builder.regionId;
         this.acceptLanguage = builder.acceptLanguage;
-        this.spotStrategy = builder.spotStrategy;
         this.instanceChargeType = builder.instanceChargeType;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.sourceRegionId = builder.sourceRegionId;
+        this.spotStrategy = builder.spotStrategy;
+        this.verbose = builder.verbose;
     }
 
     public static Builder builder() {
@@ -66,24 +81,31 @@ public class DescribeZonesRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return acceptLanguage
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     /**
-     * @return resourceOwnerId
+     * @return instanceChargeType
      */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public String getInstanceChargeType() {
+        return this.instanceChargeType;
     }
 
     /**
-     * @return verbose
+     * @return ownerAccount
      */
-    public Boolean getVerbose() {
-        return this.verbose;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     /**
@@ -94,10 +116,24 @@ public class DescribeZonesRequest extends Request {
     }
 
     /**
-     * @return acceptLanguage
+     * @return resourceOwnerAccount
      */
-    public String getAcceptLanguage() {
-        return this.acceptLanguage;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -108,20 +144,23 @@ public class DescribeZonesRequest extends Request {
     }
 
     /**
-     * @return instanceChargeType
+     * @return verbose
      */
-    public String getInstanceChargeType() {
-        return this.instanceChargeType;
+    public Boolean getVerbose() {
+        return this.verbose;
     }
 
     public static final class Builder extends Request.Builder<DescribeZonesRequest, Builder> {
-        private String sourceRegionId; 
-        private Long resourceOwnerId; 
-        private Boolean verbose; 
-        private String regionId; 
         private String acceptLanguage; 
-        private String spotStrategy; 
         private String instanceChargeType; 
+        private String ownerAccount; 
+        private Long ownerId; 
+        private String regionId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String sourceRegionId; 
+        private String spotStrategy; 
+        private Boolean verbose; 
 
         private Builder() {
             super();
@@ -129,21 +168,69 @@ public class DescribeZonesRequest extends Request {
 
         private Builder(DescribeZonesRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
-            this.resourceOwnerId = request.resourceOwnerId;
-            this.verbose = request.verbose;
-            this.regionId = request.regionId;
             this.acceptLanguage = request.acceptLanguage;
-            this.spotStrategy = request.spotStrategy;
             this.instanceChargeType = request.instanceChargeType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceRegionId = request.sourceRegionId;
+            this.spotStrategy = request.spotStrategy;
+            this.verbose = request.verbose;
         } 
 
         /**
-         * SourceRegionId.
+         * AcceptLanguage.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder acceptLanguage(String acceptLanguage) {
+            this.putQueryParameter("AcceptLanguage", acceptLanguage);
+            this.acceptLanguage = acceptLanguage;
+            return this;
+        }
+
+        /**
+         * InstanceChargeType.
+         */
+        public Builder instanceChargeType(String instanceChargeType) {
+            this.putQueryParameter("InstanceChargeType", instanceChargeType);
+            this.instanceChargeType = instanceChargeType;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
             return this;
         }
 
@@ -157,48 +244,16 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * Verbose.
+         * SourceRegionId.
          */
-        public Builder verbose(Boolean verbose) {
-            this.putQueryParameter("Verbose", verbose);
-            this.verbose = verbose;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 
         /**
-         * The region ID of the zone. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The returned results are filtered based on Chinese, English, and Japanese. For more information, see [RFC7231](https://tools.ietf.org/html/rfc7231). Valid values:
-         * <p>
-         * 
-         * -zh-CN
-         * -en-US
-         * -ja
-         * 
-         * Default value: zh-CN
-         */
-        public Builder acceptLanguage(String acceptLanguage) {
-            this.putQueryParameter("AcceptLanguage", acceptLanguage);
-            this.acceptLanguage = acceptLanguage;
-            return this;
-        }
-
-        /**
-         * The bidding policy of the pay-as-you-go instance. You can specify this parameter when "InstanceChargeType = PostPaid. For more information, see [preemptible instances](~~ 52088 ~~). Valid values:
-         * <p>
-         * 
-         * -NoSpot: a pay-as-you-go instance.
-         * -SpotWithPriceLimit: sets the maximum price for preemptible instances.
-         * -SpotAsPriceGo: the system automatically bids at the highest pay-as-you-go price.
-         * 
-         * Default value: NoSpot
+         * SpotStrategy.
          */
         public Builder spotStrategy(String spotStrategy) {
             this.putQueryParameter("SpotStrategy", spotStrategy);
@@ -207,17 +262,11 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * The billing method of resources in the zone. For more information, see [billing Overview](~~ 25398 ~~). Valid values:
-         * <p>
-         * 
-         * -PrePaid: Subscription
-         * -PostPaid: pay-as-you-go
-         * 
-         * Default value: PostPaid
+         * Verbose.
          */
-        public Builder instanceChargeType(String instanceChargeType) {
-            this.putQueryParameter("InstanceChargeType", instanceChargeType);
-            this.instanceChargeType = instanceChargeType;
+        public Builder verbose(Boolean verbose) {
+            this.putQueryParameter("Verbose", verbose);
+            this.verbose = verbose;
             return this;
         }
 

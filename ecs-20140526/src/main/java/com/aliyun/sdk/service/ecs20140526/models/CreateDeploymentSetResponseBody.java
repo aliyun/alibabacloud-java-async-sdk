@@ -50,7 +50,7 @@ public class CreateDeploymentSetResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the deployment set.
+         * DeploymentSetId.
          */
         public Builder deploymentSetId(String deploymentSetId) {
             this.deploymentSetId = deploymentSetId;
@@ -58,7 +58,7 @@ public class CreateDeploymentSetResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

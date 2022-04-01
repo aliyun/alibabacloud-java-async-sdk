@@ -12,30 +12,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAutoSnapshotPolicyExRequest</p>
  */
 public class DescribeAutoSnapshotPolicyExRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
-    @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
-
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Query
     @NameInMap("AutoSnapshotPolicyId")
     private String autoSnapshotPolicyId;
 
     @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
 
     @Query
-    @NameInMap("ResourceGroupId")
-    private String resourceGroupId;
+    @NameInMap("OwnerId")
+    private Long ownerId;
+
+    @Query
+    @NameInMap("PageNumber")
+    private Integer pageNumber;
 
     @Query
     @NameInMap("PageSize")
@@ -43,19 +34,43 @@ public class DescribeAutoSnapshotPolicyExRequest extends Request {
     private Integer pageSize;
 
     @Query
-    @NameInMap("PageNumber")
-    private Integer pageNumber;
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
+    @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
+    @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
 
     private DescribeAutoSnapshotPolicyExRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
-        this.resourceOwnerId = builder.resourceOwnerId;
-        this.regionId = builder.regionId;
         this.autoSnapshotPolicyId = builder.autoSnapshotPolicyId;
-        this.tag = builder.tag;
-        this.resourceGroupId = builder.resourceGroupId;
-        this.pageSize = builder.pageSize;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
+        this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.sourceRegionId = builder.sourceRegionId;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -72,27 +87,6 @@ public class DescribeAutoSnapshotPolicyExRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
-     * @return resourceOwnerId
-     */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return autoSnapshotPolicyId
      */
     public String getAutoSnapshotPolicyId() {
@@ -100,17 +94,24 @@ public class DescribeAutoSnapshotPolicyExRequest extends Request {
     }
 
     /**
-     * @return tag
+     * @return ownerAccount
      */
-    public java.util.List < Tag> getTag() {
-        return this.tag;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     /**
-     * @return resourceGroupId
+     * @return ownerId
      */
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     /**
@@ -121,21 +122,59 @@ public class DescribeAutoSnapshotPolicyExRequest extends Request {
     }
 
     /**
-     * @return pageNumber
+     * @return regionId
      */
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
     }
 
     public static final class Builder extends Request.Builder<DescribeAutoSnapshotPolicyExRequest, Builder> {
-        private String sourceRegionId; 
-        private Long resourceOwnerId; 
-        private String regionId; 
         private String autoSnapshotPolicyId; 
-        private java.util.List < Tag> tag; 
-        private String resourceGroupId; 
-        private Integer pageSize; 
+        private String ownerAccount; 
+        private Long ownerId; 
         private Integer pageNumber; 
+        private Integer pageSize; 
+        private String regionId; 
+        private String resourceGroupId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String sourceRegionId; 
+        private java.util.List < Tag> tag; 
 
         private Builder() {
             super();
@@ -143,15 +182,99 @@ public class DescribeAutoSnapshotPolicyExRequest extends Request {
 
         private Builder(DescribeAutoSnapshotPolicyExRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
-            this.resourceOwnerId = request.resourceOwnerId;
-            this.regionId = request.regionId;
             this.autoSnapshotPolicyId = request.autoSnapshotPolicyId;
-            this.tag = request.tag;
-            this.resourceGroupId = request.resourceGroupId;
-            this.pageSize = request.pageSize;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceRegionId = request.sourceRegionId;
+            this.tag = request.tag;
         } 
+
+        /**
+         * AutoSnapshotPolicyId.
+         */
+        public Builder autoSnapshotPolicyId(String autoSnapshotPolicyId) {
+            this.putQueryParameter("AutoSnapshotPolicyId", autoSnapshotPolicyId);
+            this.autoSnapshotPolicyId = autoSnapshotPolicyId;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * PageNumber.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
 
         /**
          * SourceRegionId.
@@ -163,75 +286,11 @@ public class DescribeAutoSnapshotPolicyExRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba cloud account.
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * The ID of the region to which the automatic snapshot policy belongs. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The ID of the automatic snapshot policy.
-         */
-        public Builder autoSnapshotPolicyId(String autoSnapshotPolicyId) {
-            this.putQueryParameter("AutoSnapshotPolicyId", autoSnapshotPolicyId);
-            this.autoSnapshotPolicyId = autoSnapshotPolicyId;
-            return this;
-        }
-
-        /**
-         * Tag list
+         * Tag.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
-            return this;
-        }
-
-        /**
-         * The ID of the resource group.
-         */
-        public Builder resourceGroupId(String resourceGroupId) {
-            this.putQueryParameter("ResourceGroupId", resourceGroupId);
-            this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-
-        /**
-         * The number of rows per page for the returned automatic snapshot policy.
-         * <p>
-         * 
-         * Maximum Value: 100
-         * 
-         * Default value: 10
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.putQueryParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * The response of an automatic snapshot policy is displayed on multiple pages.
-         * <p>
-         * 
-         * Start value: 1
-         * 
-         * Default value: 1.
-         */
-        public Builder pageNumber(Integer pageNumber) {
-            this.putQueryParameter("PageNumber", pageNumber);
-            this.pageNumber = pageNumber;
             return this;
         }
 
@@ -281,7 +340,7 @@ public class DescribeAutoSnapshotPolicyExRequest extends Request {
             private String value; 
 
             /**
-             * 自动快照策略的标签键。N的取值范围：1~20。一旦传入该值，则不允许为空字符串。最多支持128个字符，不能以aliyun和acs:开头，不能包含http://或者https://。
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -289,7 +348,7 @@ public class DescribeAutoSnapshotPolicyExRequest extends Request {
             }
 
             /**
-             * 自动快照策略的标签值。N的取值范围：1~20。一旦传入该值，可以为空字符串。最多支持128个字符，不能以acs:开头，不能包含http://或者https://。
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

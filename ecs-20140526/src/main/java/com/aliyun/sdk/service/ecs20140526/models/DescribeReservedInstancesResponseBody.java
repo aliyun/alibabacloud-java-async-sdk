@@ -12,27 +12,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeReservedInstancesResponseBody</p>
  */
 public class DescribeReservedInstancesResponseBody extends TeaModel {
+    @NameInMap("PageNumber")
+    private Integer pageNumber;
+
     @NameInMap("PageSize")
     private Integer pageSize;
 
     @NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("PageNumber")
-    private Integer pageNumber;
+    @NameInMap("ReservedInstances")
+    private ReservedInstances reservedInstances;
 
     @NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("ReservedInstances")
-    private ReservedInstances reservedInstances;
-
     private DescribeReservedInstancesResponseBody(Builder builder) {
+        this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
-        this.pageNumber = builder.pageNumber;
-        this.totalCount = builder.totalCount;
         this.reservedInstances = builder.reservedInstances;
+        this.totalCount = builder.totalCount;
     }
 
     public static Builder builder() {
@@ -41,6 +41,13 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
 
     public static DescribeReservedInstancesResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     /**
@@ -58,10 +65,10 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
     }
 
     /**
-     * @return pageNumber
+     * @return reservedInstances
      */
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public ReservedInstances getReservedInstances() {
+        return this.reservedInstances;
     }
 
     /**
@@ -71,38 +78,15 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    /**
-     * @return reservedInstances
-     */
-    public ReservedInstances getReservedInstances() {
-        return this.reservedInstances;
-    }
-
     public static final class Builder {
+        private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private Integer pageNumber; 
-        private Integer totalCount; 
         private ReservedInstances reservedInstances; 
+        private Integer totalCount; 
 
         /**
-         * The number of entries to return on each page.
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The page number of the reserved instance list.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -110,18 +94,34 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of reserved instances.
+         * PageSize.
          */
-        public Builder totalCount(Integer totalCount) {
-            this.totalCount = totalCount;
+        public Builder pageSize(Integer pageSize) {
+            this.pageSize = pageSize;
             return this;
         }
 
         /**
-         * Returns the details of Reserved Instances in an array of ReservedInstance.
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * ReservedInstances.
          */
         public Builder reservedInstances(ReservedInstances reservedInstances) {
             this.reservedInstances = reservedInstances;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
@@ -158,7 +158,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             private String lockReason; 
 
             /**
-             * The reason for the lock.
+             * LockReason.
              */
             public Builder lockReason(String lockReason) {
                 this.lockReason = lockReason;
@@ -214,15 +214,15 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("TagValue")
-        private String tagValue;
-
         @NameInMap("TagKey")
         private String tagKey;
 
+        @NameInMap("TagValue")
+        private String tagValue;
+
         private Tag(Builder builder) {
-            this.tagValue = builder.tagValue;
             this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
         }
 
         public static Builder builder() {
@@ -234,36 +234,36 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * @return tagValue
-         */
-        public String getTagValue() {
-            return this.tagValue;
-        }
-
-        /**
          * @return tagKey
          */
         public String getTagKey() {
             return this.tagKey;
         }
 
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
         public static final class Builder {
-            private String tagValue; 
             private String tagKey; 
+            private String tagValue; 
 
             /**
-             * The tag value of the reserved instance.
+             * TagKey.
              */
-            public Builder tagValue(String tagValue) {
-                this.tagValue = tagValue;
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
                 return this;
             }
 
             /**
-             * The tag key of the reserved instance.
+             * TagValue.
              */
-            public Builder tagKey(String tagKey) {
-                this.tagKey = tagKey;
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
                 return this;
             }
 
@@ -316,79 +316,79 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
 
     }
     public static class ReservedInstance extends TeaModel {
-        @NameInMap("Status")
-        private String status;
+        @NameInMap("AllocationStatus")
+        private String allocationStatus;
 
         @NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("ReservedInstanceName")
-        private String reservedInstanceName;
-
-        @NameInMap("ReservedInstanceId")
-        private String reservedInstanceId;
-
-        @NameInMap("InstanceType")
-        private String instanceType;
-
-        @NameInMap("InstanceAmount")
-        private Integer instanceAmount;
-
-        @NameInMap("RegionId")
-        private String regionId;
-
-        @NameInMap("OfferingType")
-        private String offeringType;
-
-        @NameInMap("StartTime")
-        private String startTime;
-
         @NameInMap("Description")
         private String description;
-
-        @NameInMap("AllocationStatus")
-        private String allocationStatus;
 
         @NameInMap("ExpiredTime")
         private String expiredTime;
 
-        @NameInMap("ResourceGroupId")
-        private String resourceGroupId;
+        @NameInMap("InstanceAmount")
+        private Integer instanceAmount;
 
-        @NameInMap("ZoneId")
-        private String zoneId;
+        @NameInMap("InstanceType")
+        private String instanceType;
 
-        @NameInMap("Platform")
-        private String platform;
-
-        @NameInMap("Scope")
-        private String scope;
+        @NameInMap("OfferingType")
+        private String offeringType;
 
         @NameInMap("OperationLocks")
         private OperationLocks operationLocks;
 
+        @NameInMap("Platform")
+        private String platform;
+
+        @NameInMap("RegionId")
+        private String regionId;
+
+        @NameInMap("ReservedInstanceId")
+        private String reservedInstanceId;
+
+        @NameInMap("ReservedInstanceName")
+        private String reservedInstanceName;
+
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
+        @NameInMap("Scope")
+        private String scope;
+
+        @NameInMap("StartTime")
+        private String startTime;
+
+        @NameInMap("Status")
+        private String status;
+
         @NameInMap("Tags")
         private Tags tags;
 
+        @NameInMap("ZoneId")
+        private String zoneId;
+
         private ReservedInstance(Builder builder) {
-            this.status = builder.status;
-            this.creationTime = builder.creationTime;
-            this.reservedInstanceName = builder.reservedInstanceName;
-            this.reservedInstanceId = builder.reservedInstanceId;
-            this.instanceType = builder.instanceType;
-            this.instanceAmount = builder.instanceAmount;
-            this.regionId = builder.regionId;
-            this.offeringType = builder.offeringType;
-            this.startTime = builder.startTime;
-            this.description = builder.description;
             this.allocationStatus = builder.allocationStatus;
+            this.creationTime = builder.creationTime;
+            this.description = builder.description;
             this.expiredTime = builder.expiredTime;
-            this.resourceGroupId = builder.resourceGroupId;
-            this.zoneId = builder.zoneId;
-            this.platform = builder.platform;
-            this.scope = builder.scope;
+            this.instanceAmount = builder.instanceAmount;
+            this.instanceType = builder.instanceType;
+            this.offeringType = builder.offeringType;
             this.operationLocks = builder.operationLocks;
+            this.platform = builder.platform;
+            this.regionId = builder.regionId;
+            this.reservedInstanceId = builder.reservedInstanceId;
+            this.reservedInstanceName = builder.reservedInstanceName;
+            this.resourceGroupId = builder.resourceGroupId;
+            this.scope = builder.scope;
+            this.startTime = builder.startTime;
+            this.status = builder.status;
             this.tags = builder.tags;
+            this.zoneId = builder.zoneId;
         }
 
         public static Builder builder() {
@@ -400,10 +400,10 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * @return status
+         * @return allocationStatus
          */
-        public String getStatus() {
-            return this.status;
+        public String getAllocationStatus() {
+            return this.allocationStatus;
         }
 
         /**
@@ -414,66 +414,10 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * @return reservedInstanceName
-         */
-        public String getReservedInstanceName() {
-            return this.reservedInstanceName;
-        }
-
-        /**
-         * @return reservedInstanceId
-         */
-        public String getReservedInstanceId() {
-            return this.reservedInstanceId;
-        }
-
-        /**
-         * @return instanceType
-         */
-        public String getInstanceType() {
-            return this.instanceType;
-        }
-
-        /**
-         * @return instanceAmount
-         */
-        public Integer getInstanceAmount() {
-            return this.instanceAmount;
-        }
-
-        /**
-         * @return regionId
-         */
-        public String getRegionId() {
-            return this.regionId;
-        }
-
-        /**
-         * @return offeringType
-         */
-        public String getOfferingType() {
-            return this.offeringType;
-        }
-
-        /**
-         * @return startTime
-         */
-        public String getStartTime() {
-            return this.startTime;
-        }
-
-        /**
          * @return description
          */
         public String getDescription() {
             return this.description;
-        }
-
-        /**
-         * @return allocationStatus
-         */
-        public String getAllocationStatus() {
-            return this.allocationStatus;
         }
 
         /**
@@ -484,31 +428,24 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * @return resourceGroupId
+         * @return instanceAmount
          */
-        public String getResourceGroupId() {
-            return this.resourceGroupId;
+        public Integer getInstanceAmount() {
+            return this.instanceAmount;
         }
 
         /**
-         * @return zoneId
+         * @return instanceType
          */
-        public String getZoneId() {
-            return this.zoneId;
+        public String getInstanceType() {
+            return this.instanceType;
         }
 
         /**
-         * @return platform
+         * @return offeringType
          */
-        public String getPlatform() {
-            return this.platform;
-        }
-
-        /**
-         * @return scope
-         */
-        public String getScope() {
-            return this.scope;
+        public String getOfferingType() {
+            return this.offeringType;
         }
 
         /**
@@ -519,119 +456,97 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return platform
+         */
+        public String getPlatform() {
+            return this.platform;
+        }
+
+        /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        /**
+         * @return reservedInstanceId
+         */
+        public String getReservedInstanceId() {
+            return this.reservedInstanceId;
+        }
+
+        /**
+         * @return reservedInstanceName
+         */
+        public String getReservedInstanceName() {
+            return this.reservedInstanceName;
+        }
+
+        /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
+         * @return scope
+         */
+        public String getScope() {
+            return this.scope;
+        }
+
+        /**
+         * @return startTime
+         */
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
          * @return tags
          */
         public Tags getTags() {
             return this.tags;
         }
 
+        /**
+         * @return zoneId
+         */
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
         public static final class Builder {
-            private String status; 
-            private String creationTime; 
-            private String reservedInstanceName; 
-            private String reservedInstanceId; 
-            private String instanceType; 
-            private Integer instanceAmount; 
-            private String regionId; 
-            private String offeringType; 
-            private String startTime; 
-            private String description; 
             private String allocationStatus; 
+            private String creationTime; 
+            private String description; 
             private String expiredTime; 
-            private String resourceGroupId; 
-            private String zoneId; 
-            private String platform; 
-            private String scope; 
+            private Integer instanceAmount; 
+            private String instanceType; 
+            private String offeringType; 
             private OperationLocks operationLocks; 
+            private String platform; 
+            private String regionId; 
+            private String reservedInstanceId; 
+            private String reservedInstanceName; 
+            private String resourceGroupId; 
+            private String scope; 
+            private String startTime; 
+            private String status; 
             private Tags tags; 
+            private String zoneId; 
 
             /**
-             * The status of the instance.
-             */
-            public Builder status(String status) {
-                this.status = status;
-                return this;
-            }
-
-            /**
-             * The creation time.
-             */
-            public Builder creationTime(String creationTime) {
-                this.creationTime = creationTime;
-                return this;
-            }
-
-            /**
-             * The name.
-             */
-            public Builder reservedInstanceName(String reservedInstanceName) {
-                this.reservedInstanceName = reservedInstanceName;
-                return this;
-            }
-
-            /**
-             * The ID of the reserved instance.
-             */
-            public Builder reservedInstanceId(String reservedInstanceId) {
-                this.reservedInstanceId = reservedInstanceId;
-                return this;
-            }
-
-            /**
-             * The type of the pay-as-you-go instance.
-             */
-            public Builder instanceType(String instanceType) {
-                this.instanceType = instanceType;
-                return this;
-            }
-
-            /**
-             * The number of pay-as-you-go instances of the same specification can be matched.
-             */
-            public Builder instanceAmount(Integer instanceAmount) {
-                this.instanceAmount = instanceAmount;
-                return this;
-            }
-
-            /**
-             * The ID of the region.
-             */
-            public Builder regionId(String regionId) {
-                this.regionId = regionId;
-                return this;
-            }
-
-            /**
-             * The payment type.
-             */
-            public Builder offeringType(String offeringType) {
-                this.offeringType = offeringType;
-                return this;
-            }
-
-            /**
-             * The effective time.
-             */
-            public Builder startTime(String startTime) {
-                this.startTime = startTime;
-                return this;
-            }
-
-            /**
-             * The description.
-             */
-            public Builder description(String description) {
-                this.description = description;
-                return this;
-            }
-
-            /**
-             * If the AllocationType value is Shared, this parameter indicates the allocation status of Reserved Instances. Possible values:
-             * <p>
-             * 
-             * -allocated: Reserved instances that have been allocated to other users.
-             * -beAllocated: Reserved Instances allocated to other users.
-             * 
+             * AllocationStatus.
              */
             public Builder allocationStatus(String allocationStatus) {
                 this.allocationStatus = allocationStatus;
@@ -639,7 +554,23 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration time.
+             * CreationTime.
+             */
+            public Builder creationTime(String creationTime) {
+                this.creationTime = creationTime;
+                return this;
+            }
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * ExpiredTime.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -647,44 +578,31 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The resource group.
+             * InstanceAmount.
              */
-            public Builder resourceGroupId(String resourceGroupId) {
-                this.resourceGroupId = resourceGroupId;
+            public Builder instanceAmount(Integer instanceAmount) {
+                this.instanceAmount = instanceAmount;
                 return this;
             }
 
             /**
-             * The ID of the zone.
+             * InstanceType.
              */
-            public Builder zoneId(String zoneId) {
-                this.zoneId = zoneId;
+            public Builder instanceType(String instanceType) {
+                this.instanceType = instanceType;
                 return this;
             }
 
             /**
-             * The operating system type of the image used by the instance. Possible values:
-             * <p>
-             * 
-             * -Windows:Windows Server-type operating system.
-             * 
-             * -Linux:Linux and Unix-like operating systems.
+             * OfferingType.
              */
-            public Builder platform(String platform) {
-                this.platform = platform;
+            public Builder offeringType(String offeringType) {
+                this.offeringType = offeringType;
                 return this;
             }
 
             /**
-             * The range.
-             */
-            public Builder scope(String scope) {
-                this.scope = scope;
-                return this;
-            }
-
-            /**
-             * Indicates whether the instance is locked.
+             * OperationLocks.
              */
             public Builder operationLocks(OperationLocks operationLocks) {
                 this.operationLocks = operationLocks;
@@ -692,10 +610,82 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag pair of the reserved instance.
+             * Platform.
+             */
+            public Builder platform(String platform) {
+                this.platform = platform;
+                return this;
+            }
+
+            /**
+             * RegionId.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * ReservedInstanceId.
+             */
+            public Builder reservedInstanceId(String reservedInstanceId) {
+                this.reservedInstanceId = reservedInstanceId;
+                return this;
+            }
+
+            /**
+             * ReservedInstanceName.
+             */
+            public Builder reservedInstanceName(String reservedInstanceName) {
+                this.reservedInstanceName = reservedInstanceName;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * Scope.
+             */
+            public Builder scope(String scope) {
+                this.scope = scope;
+                return this;
+            }
+
+            /**
+             * StartTime.
+             */
+            public Builder startTime(String startTime) {
+                this.startTime = startTime;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * Tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
+                return this;
+            }
+
+            /**
+             * ZoneId.
+             */
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
                 return this;
             }
 

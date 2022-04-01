@@ -12,9 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetInstanceConsoleOutputRequest</p>
  */
 public class GetInstanceConsoleOutputRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("InstanceId")
+    @Validation(required = true)
+    private String instanceId;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -25,6 +26,15 @@ public class GetInstanceConsoleOutputRequest extends Request {
     private Long ownerId;
 
     @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
+    @Query
+    @NameInMap("RemoveSymbols")
+    private Boolean removeSymbols;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -32,30 +42,20 @@ public class GetInstanceConsoleOutputRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
-    private String instanceId;
-
-    @Query
-    @NameInMap("RemoveSymbols")
-    private Boolean removeSymbols;
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     private GetInstanceConsoleOutputRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
+        this.instanceId = builder.instanceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
+        this.removeSymbols = builder.removeSymbols;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.regionId = builder.regionId;
-        this.instanceId = builder.instanceId;
-        this.removeSymbols = builder.removeSymbols;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -72,10 +72,10 @@ public class GetInstanceConsoleOutputRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return instanceId
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     /**
@@ -93,6 +93,20 @@ public class GetInstanceConsoleOutputRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return removeSymbols
+     */
+    public Boolean getRemoveSymbols() {
+        return this.removeSymbols;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -107,35 +121,21 @@ public class GetInstanceConsoleOutputRequest extends Request {
     }
 
     /**
-     * @return regionId
+     * @return sourceRegionId
      */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return instanceId
-     */
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    /**
-     * @return removeSymbols
-     */
-    public Boolean getRemoveSymbols() {
-        return this.removeSymbols;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public static final class Builder extends Request.Builder<GetInstanceConsoleOutputRequest, Builder> {
-        private String sourceRegionId; 
+        private String instanceId; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String regionId; 
+        private Boolean removeSymbols; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String regionId; 
-        private String instanceId; 
-        private Boolean removeSymbols; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -143,22 +143,22 @@ public class GetInstanceConsoleOutputRequest extends Request {
 
         private Builder(GetInstanceConsoleOutputRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
+            this.instanceId = request.instanceId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.removeSymbols = request.removeSymbols;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.regionId = request.regionId;
-            this.instanceId = request.instanceId;
-            this.removeSymbols = request.removeSymbols;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
-         * SourceRegionId.
+         * InstanceId.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
             return this;
         }
 
@@ -172,7 +172,7 @@ public class GetInstanceConsoleOutputRequest extends Request {
         }
 
         /**
-         * The ID of the RAM user.
+         * OwnerId.
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -181,25 +181,7 @@ public class GetInstanceConsoleOutputRequest extends Request {
         }
 
         /**
-         * The account name of the resource master account.
-         */
-        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
-            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-            this.resourceOwnerAccount = resourceOwnerAccount;
-            return this;
-        }
-
-        /**
-         * The ID of the resource master account, that is, the UID.
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * The region ID of the instance. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -208,25 +190,38 @@ public class GetInstanceConsoleOutputRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * Specifies whether to remove the typesetting symbols from the returned text. Valid values:
-         * <p>
-         * -true: remove
-         * -false: does not remove
-         * 
-         * Default value: false
+         * RemoveSymbols.
          */
         public Builder removeSymbols(Boolean removeSymbols) {
             this.putQueryParameter("RemoveSymbols", removeSymbols);
             this.removeSymbols = removeSymbols;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

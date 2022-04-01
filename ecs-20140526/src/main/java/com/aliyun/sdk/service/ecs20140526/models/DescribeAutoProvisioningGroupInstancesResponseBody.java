@@ -12,27 +12,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAutoProvisioningGroupInstancesResponseBody</p>
  */
 public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel {
+    @NameInMap("Instances")
+    private Instances instances;
+
+    @NameInMap("PageNumber")
+    private Integer pageNumber;
+
     @NameInMap("PageSize")
     private Integer pageSize;
 
     @NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("PageNumber")
-    private Integer pageNumber;
-
     @NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("Instances")
-    private Instances instances;
-
     private DescribeAutoProvisioningGroupInstancesResponseBody(Builder builder) {
+        this.instances = builder.instances;
+        this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
-        this.pageNumber = builder.pageNumber;
         this.totalCount = builder.totalCount;
-        this.instances = builder.instances;
     }
 
     public static Builder builder() {
@@ -41,6 +41,20 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
 
     public static DescribeAutoProvisioningGroupInstancesResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return instances
+     */
+    public Instances getInstances() {
+        return this.instances;
+    }
+
+    /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     /**
@@ -58,51 +72,29 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
     }
 
     /**
-     * @return pageNumber
-     */
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    /**
      * @return totalCount
      */
     public Integer getTotalCount() {
         return this.totalCount;
     }
 
-    /**
-     * @return instances
-     */
-    public Instances getInstances() {
-        return this.instances;
-    }
-
     public static final class Builder {
+        private Instances instances; 
+        private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private Integer pageNumber; 
         private Integer totalCount; 
-        private Instances instances; 
 
         /**
-         * The number of rows per page.
+         * Instances.
          */
-        public Builder pageSize(Integer pageSize) {
-            this.pageSize = pageSize;
+        public Builder instances(Instances instances) {
+            this.instances = instances;
             return this;
         }
 
         /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The page number.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -110,18 +102,26 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
         }
 
         /**
-         * The number of instances in the auto provisioning group.
+         * PageSize.
          */
-        public Builder totalCount(Integer totalCount) {
-            this.totalCount = totalCount;
+        public Builder pageSize(Integer pageSize) {
+            this.pageSize = pageSize;
             return this;
         }
 
         /**
-         * The information of all instances in the auto provisioning group.
+         * RequestId.
          */
-        public Builder instances(Instances instances) {
-            this.instances = instances;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
@@ -132,55 +132,55 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
     } 
 
     public static class Instance extends TeaModel {
-        @NameInMap("Status")
-        private String status;
+        @NameInMap("CPU")
+        private Integer CPU;
 
         @NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("IsSpot")
-        private Boolean isSpot;
-
-        @NameInMap("CPU")
-        private Integer CPU;
-
         @NameInMap("InstanceId")
         private String instanceId;
-
-        @NameInMap("NetworkType")
-        private String networkType;
 
         @NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("RegionId")
-        private String regionId;
-
         @NameInMap("IoOptimized")
         private Boolean ioOptimized;
 
-        @NameInMap("OsType")
-        private String osType;
-
-        @NameInMap("ZoneId")
-        private String zoneId;
+        @NameInMap("IsSpot")
+        private Boolean isSpot;
 
         @NameInMap("Memory")
         private Integer memory;
 
+        @NameInMap("NetworkType")
+        private String networkType;
+
+        @NameInMap("OsType")
+        private String osType;
+
+        @NameInMap("RegionId")
+        private String regionId;
+
+        @NameInMap("Status")
+        private String status;
+
+        @NameInMap("ZoneId")
+        private String zoneId;
+
         private Instance(Builder builder) {
-            this.status = builder.status;
-            this.creationTime = builder.creationTime;
-            this.isSpot = builder.isSpot;
             this.CPU = builder.CPU;
+            this.creationTime = builder.creationTime;
             this.instanceId = builder.instanceId;
-            this.networkType = builder.networkType;
             this.instanceType = builder.instanceType;
-            this.regionId = builder.regionId;
             this.ioOptimized = builder.ioOptimized;
-            this.osType = builder.osType;
-            this.zoneId = builder.zoneId;
+            this.isSpot = builder.isSpot;
             this.memory = builder.memory;
+            this.networkType = builder.networkType;
+            this.osType = builder.osType;
+            this.regionId = builder.regionId;
+            this.status = builder.status;
+            this.zoneId = builder.zoneId;
         }
 
         public static Builder builder() {
@@ -192,10 +192,10 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
         }
 
         /**
-         * @return status
+         * @return CPU
          */
-        public String getStatus() {
-            return this.status;
+        public Integer getCPU() {
+            return this.CPU;
         }
 
         /**
@@ -206,31 +206,10 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
         }
 
         /**
-         * @return isSpot
-         */
-        public Boolean getIsSpot() {
-            return this.isSpot;
-        }
-
-        /**
-         * @return CPU
-         */
-        public Integer getCPU() {
-            return this.CPU;
-        }
-
-        /**
          * @return instanceId
          */
         public String getInstanceId() {
             return this.instanceId;
-        }
-
-        /**
-         * @return networkType
-         */
-        public String getNetworkType() {
-            return this.networkType;
         }
 
         /**
@@ -241,17 +220,31 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
         }
 
         /**
-         * @return regionId
-         */
-        public String getRegionId() {
-            return this.regionId;
-        }
-
-        /**
          * @return ioOptimized
          */
         public Boolean getIoOptimized() {
             return this.ioOptimized;
+        }
+
+        /**
+         * @return isSpot
+         */
+        public Boolean getIsSpot() {
+            return this.isSpot;
+        }
+
+        /**
+         * @return memory
+         */
+        public Integer getMemory() {
+            return this.memory;
+        }
+
+        /**
+         * @return networkType
+         */
+        public String getNetworkType() {
+            return this.networkType;
         }
 
         /**
@@ -262,59 +255,42 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
         }
 
         /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
          * @return zoneId
          */
         public String getZoneId() {
             return this.zoneId;
         }
 
-        /**
-         * @return memory
-         */
-        public Integer getMemory() {
-            return this.memory;
-        }
-
         public static final class Builder {
-            private String status; 
-            private String creationTime; 
-            private Boolean isSpot; 
             private Integer CPU; 
+            private String creationTime; 
             private String instanceId; 
-            private String networkType; 
             private String instanceType; 
-            private String regionId; 
             private Boolean ioOptimized; 
-            private String osType; 
-            private String zoneId; 
+            private Boolean isSpot; 
             private Integer memory; 
+            private String networkType; 
+            private String osType; 
+            private String regionId; 
+            private String status; 
+            private String zoneId; 
 
             /**
-             * The status of the instance.
-             */
-            public Builder status(String status) {
-                this.status = status;
-                return this;
-            }
-
-            /**
-             * The time when the instance was created.
-             */
-            public Builder creationTime(String creationTime) {
-                this.creationTime = creationTime;
-                return this;
-            }
-
-            /**
-             * Indicates whether the instance is a preemptible instance.
-             */
-            public Builder isSpot(Boolean isSpot) {
-                this.isSpot = isSpot;
-                return this;
-            }
-
-            /**
-             * The number of vCPU cores of the instance.
+             * CPU.
              */
             public Builder CPU(Integer CPU) {
                 this.CPU = CPU;
@@ -322,9 +298,15 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             }
 
             /**
-             * The ID of the instance.
-             * <p>
-             * 
+             * CreationTime.
+             */
+            public Builder creationTime(String creationTime) {
+                this.creationTime = creationTime;
+                return this;
+            }
+
+            /**
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -332,19 +314,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             }
 
             /**
-             * The network type of the instance. Valid values:
-             * <p>
-             * 
-             * -vpc: vpc
-             * -classic: classic Network
-             */
-            public Builder networkType(String networkType) {
-                this.networkType = networkType;
-                return this;
-            }
-
-            /**
-             * The instance type.
+             * InstanceType.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -352,15 +322,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             }
 
             /**
-             * The ID of the region to which the instance belongs.
-             */
-            public Builder regionId(String regionId) {
-                this.regionId = regionId;
-                return this;
-            }
-
-            /**
-             * Indicates whether the instance is I/O optimized.
+             * IoOptimized.
              */
             public Builder ioOptimized(Boolean ioOptimized) {
                 this.ioOptimized = ioOptimized;
@@ -368,11 +330,31 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             }
 
             /**
-             * The operating system type of the instance. Valid values:
-             * <p>
-             * 
-             * -windows: The operating system type is Windows.
-             * -linux: the operating system is Linux.
+             * IsSpot.
+             */
+            public Builder isSpot(Boolean isSpot) {
+                this.isSpot = isSpot;
+                return this;
+            }
+
+            /**
+             * Memory.
+             */
+            public Builder memory(Integer memory) {
+                this.memory = memory;
+                return this;
+            }
+
+            /**
+             * NetworkType.
+             */
+            public Builder networkType(String networkType) {
+                this.networkType = networkType;
+                return this;
+            }
+
+            /**
+             * OsType.
              */
             public Builder osType(String osType) {
                 this.osType = osType;
@@ -380,18 +362,26 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             }
 
             /**
-             * The zone to which the instance belongs.
+             * RegionId.
              */
-            public Builder zoneId(String zoneId) {
-                this.zoneId = zoneId;
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
                 return this;
             }
 
             /**
-             * The memory size. Unit: MiB.
+             * Status.
              */
-            public Builder memory(Integer memory) {
-                this.memory = memory;
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * ZoneId.
+             */
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
                 return this;
             }
 

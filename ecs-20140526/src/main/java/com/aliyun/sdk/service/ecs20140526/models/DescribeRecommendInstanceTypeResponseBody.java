@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRecommendInstanceTypeResponseBody</p>
  */
 public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    private String requestId;
-
     @NameInMap("Data")
     private Data data;
 
+    @NameInMap("RequestId")
+    private String requestId;
+
     private DescribeRecommendInstanceTypeResponseBody(Builder builder) {
-        this.requestId = builder.requestId;
         this.data = builder.data;
+        this.requestId = builder.requestId;
     }
 
     public static Builder builder() {
@@ -32,36 +32,36 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
     }
 
     /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    /**
      * @return data
      */
     public Data getData() {
         return this.data;
     }
 
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static final class Builder {
-        private String requestId; 
         private Data data; 
+        private String requestId; 
 
         /**
-         * The ID of the request.
+         * Data.
          */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
+        public Builder data(Data data) {
+            this.data = data;
             return this;
         }
 
         /**
-         * The recommended instance types.
+         * RequestId.
          */
-        public Builder data(Data data) {
-            this.data = data;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
@@ -71,6 +71,147 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
 
     } 
 
+    public static class InstanceType extends TeaModel {
+        @NameInMap("Cores")
+        private Integer cores;
+
+        @NameInMap("Generation")
+        private String generation;
+
+        @NameInMap("InstanceType")
+        private String instanceType;
+
+        @NameInMap("InstanceTypeFamily")
+        private String instanceTypeFamily;
+
+        @NameInMap("Memory")
+        private Integer memory;
+
+        @NameInMap("SupportIoOptimized")
+        private String supportIoOptimized;
+
+        private InstanceType(Builder builder) {
+            this.cores = builder.cores;
+            this.generation = builder.generation;
+            this.instanceType = builder.instanceType;
+            this.instanceTypeFamily = builder.instanceTypeFamily;
+            this.memory = builder.memory;
+            this.supportIoOptimized = builder.supportIoOptimized;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static InstanceType create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cores
+         */
+        public Integer getCores() {
+            return this.cores;
+        }
+
+        /**
+         * @return generation
+         */
+        public String getGeneration() {
+            return this.generation;
+        }
+
+        /**
+         * @return instanceType
+         */
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        /**
+         * @return instanceTypeFamily
+         */
+        public String getInstanceTypeFamily() {
+            return this.instanceTypeFamily;
+        }
+
+        /**
+         * @return memory
+         */
+        public Integer getMemory() {
+            return this.memory;
+        }
+
+        /**
+         * @return supportIoOptimized
+         */
+        public String getSupportIoOptimized() {
+            return this.supportIoOptimized;
+        }
+
+        public static final class Builder {
+            private Integer cores; 
+            private String generation; 
+            private String instanceType; 
+            private String instanceTypeFamily; 
+            private Integer memory; 
+            private String supportIoOptimized; 
+
+            /**
+             * Cores.
+             */
+            public Builder cores(Integer cores) {
+                this.cores = cores;
+                return this;
+            }
+
+            /**
+             * Generation.
+             */
+            public Builder generation(String generation) {
+                this.generation = generation;
+                return this;
+            }
+
+            /**
+             * InstanceType.
+             */
+            public Builder instanceType(String instanceType) {
+                this.instanceType = instanceType;
+                return this;
+            }
+
+            /**
+             * InstanceTypeFamily.
+             */
+            public Builder instanceTypeFamily(String instanceTypeFamily) {
+                this.instanceTypeFamily = instanceTypeFamily;
+                return this;
+            }
+
+            /**
+             * Memory.
+             */
+            public Builder memory(Integer memory) {
+                this.memory = memory;
+                return this;
+            }
+
+            /**
+             * SupportIoOptimized.
+             */
+            public Builder supportIoOptimized(String supportIoOptimized) {
+                this.supportIoOptimized = supportIoOptimized;
+                return this;
+            }
+
+            public InstanceType build() {
+                return new InstanceType(this);
+            } 
+
+        } 
+
+    }
     public static class NetworkTypes extends TeaModel {
         @NameInMap("NetworkType")
         private java.util.List < String > networkType;
@@ -113,15 +254,15 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
 
     }
     public static class Zone extends TeaModel {
-        @NameInMap("ZoneNo")
-        private String zoneNo;
-
         @NameInMap("NetworkTypes")
         private NetworkTypes networkTypes;
 
+        @NameInMap("ZoneNo")
+        private String zoneNo;
+
         private Zone(Builder builder) {
-            this.zoneNo = builder.zoneNo;
             this.networkTypes = builder.networkTypes;
+            this.zoneNo = builder.zoneNo;
         }
 
         public static Builder builder() {
@@ -133,36 +274,36 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
         }
 
         /**
-         * @return zoneNo
-         */
-        public String getZoneNo() {
-            return this.zoneNo;
-        }
-
-        /**
          * @return networkTypes
          */
         public NetworkTypes getNetworkTypes() {
             return this.networkTypes;
         }
 
-        public static final class Builder {
-            private String zoneNo; 
-            private NetworkTypes networkTypes; 
+        /**
+         * @return zoneNo
+         */
+        public String getZoneNo() {
+            return this.zoneNo;
+        }
 
-            /**
-             * The ID of the zone to which the instance type belongs.
-             */
-            public Builder zoneNo(String zoneNo) {
-                this.zoneNo = zoneNo;
-                return this;
-            }
+        public static final class Builder {
+            private NetworkTypes networkTypes; 
+            private String zoneNo; 
 
             /**
              * NetworkTypes.
              */
             public Builder networkTypes(NetworkTypes networkTypes) {
                 this.networkTypes = networkTypes;
+                return this;
+            }
+
+            /**
+             * ZoneNo.
+             */
+            public Builder zoneNo(String zoneNo) {
+                this.zoneNo = zoneNo;
                 return this;
             }
 
@@ -214,159 +355,24 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
         } 
 
     }
-    public static class InstanceType extends TeaModel {
-        @NameInMap("SupportIoOptimized")
-        private String supportIoOptimized;
-
-        @NameInMap("Cores")
-        private Integer cores;
-
-        @NameInMap("Memory")
-        private Integer memory;
-
-        @NameInMap("InstanceType")
-        private String instanceType;
-
-        @NameInMap("InstanceTypeFamily")
-        private String instanceTypeFamily;
-
-        @NameInMap("Generation")
-        private String generation;
-
-        private InstanceType(Builder builder) {
-            this.supportIoOptimized = builder.supportIoOptimized;
-            this.cores = builder.cores;
-            this.memory = builder.memory;
-            this.instanceType = builder.instanceType;
-            this.instanceTypeFamily = builder.instanceTypeFamily;
-            this.generation = builder.generation;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static InstanceType create() {
-            return builder().build();
-        }
-
-        /**
-         * @return supportIoOptimized
-         */
-        public String getSupportIoOptimized() {
-            return this.supportIoOptimized;
-        }
-
-        /**
-         * @return cores
-         */
-        public Integer getCores() {
-            return this.cores;
-        }
-
-        /**
-         * @return memory
-         */
-        public Integer getMemory() {
-            return this.memory;
-        }
-
-        /**
-         * @return instanceType
-         */
-        public String getInstanceType() {
-            return this.instanceType;
-        }
-
-        /**
-         * @return instanceTypeFamily
-         */
-        public String getInstanceTypeFamily() {
-            return this.instanceTypeFamily;
-        }
-
-        /**
-         * @return generation
-         */
-        public String getGeneration() {
-            return this.generation;
-        }
-
-        public static final class Builder {
-            private String supportIoOptimized; 
-            private Integer cores; 
-            private Integer memory; 
-            private String instanceType; 
-            private String instanceTypeFamily; 
-            private String generation; 
-
-            /**
-             * Indicates whether the instance type supports I/O optimization.
-             */
-            public Builder supportIoOptimized(String supportIoOptimized) {
-                this.supportIoOptimized = supportIoOptimized;
-                return this;
-            }
-
-            /**
-             * The number of vCPU cores of the instance type.
-             */
-            public Builder cores(Integer cores) {
-                this.cores = cores;
-                return this;
-            }
-
-            /**
-             * The memory size of the instance type. Unit: MB.
-             */
-            public Builder memory(Integer memory) {
-                this.memory = memory;
-                return this;
-            }
-
-            /**
-             * The name of the instance type.
-             */
-            public Builder instanceType(String instanceType) {
-                this.instanceType = instanceType;
-                return this;
-            }
-
-            /**
-             * The instance type family.
-             */
-            public Builder instanceTypeFamily(String instanceTypeFamily) {
-                this.instanceTypeFamily = instanceTypeFamily;
-                return this;
-            }
-
-            /**
-             * The instance type family.
-             */
-            public Builder generation(String generation) {
-                this.generation = generation;
-                return this;
-            }
-
-            public InstanceType build() {
-                return new InstanceType(this);
-            } 
-
-        } 
-
-    }
     public static class RecommendInstanceType extends TeaModel {
         @NameInMap("CommodityCode")
         private String commodityCode;
 
-        @NameInMap("ZoneId")
-        private String zoneId;
+        @NameInMap("InstanceChargeType")
+        private String instanceChargeType;
+
+        @NameInMap("InstanceType")
+        private InstanceType instanceType;
+
+        @NameInMap("NetworkType")
+        private String networkType;
 
         @NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("NetworkType")
-        private String networkType;
+        @NameInMap("RegionId")
+        private String regionId;
 
         @NameInMap("Scene")
         private String scene;
@@ -374,29 +380,23 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
         @NameInMap("SpotStrategy")
         private String spotStrategy;
 
-        @NameInMap("RegionId")
-        private String regionId;
-
-        @NameInMap("InstanceChargeType")
-        private String instanceChargeType;
+        @NameInMap("ZoneId")
+        private String zoneId;
 
         @NameInMap("Zones")
         private Zones zones;
 
-        @NameInMap("InstanceType")
-        private InstanceType instanceType;
-
         private RecommendInstanceType(Builder builder) {
             this.commodityCode = builder.commodityCode;
-            this.zoneId = builder.zoneId;
-            this.priority = builder.priority;
+            this.instanceChargeType = builder.instanceChargeType;
+            this.instanceType = builder.instanceType;
             this.networkType = builder.networkType;
+            this.priority = builder.priority;
+            this.regionId = builder.regionId;
             this.scene = builder.scene;
             this.spotStrategy = builder.spotStrategy;
-            this.regionId = builder.regionId;
-            this.instanceChargeType = builder.instanceChargeType;
+            this.zoneId = builder.zoneId;
             this.zones = builder.zones;
-            this.instanceType = builder.instanceType;
         }
 
         public static Builder builder() {
@@ -415,10 +415,24 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
         }
 
         /**
-         * @return zoneId
+         * @return instanceChargeType
          */
-        public String getZoneId() {
-            return this.zoneId;
+        public String getInstanceChargeType() {
+            return this.instanceChargeType;
+        }
+
+        /**
+         * @return instanceType
+         */
+        public InstanceType getInstanceType() {
+            return this.instanceType;
+        }
+
+        /**
+         * @return networkType
+         */
+        public String getNetworkType() {
+            return this.networkType;
         }
 
         /**
@@ -429,10 +443,10 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
         }
 
         /**
-         * @return networkType
+         * @return regionId
          */
-        public String getNetworkType() {
-            return this.networkType;
+        public String getRegionId() {
+            return this.regionId;
         }
 
         /**
@@ -450,17 +464,10 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
         }
 
         /**
-         * @return regionId
+         * @return zoneId
          */
-        public String getRegionId() {
-            return this.regionId;
-        }
-
-        /**
-         * @return instanceChargeType
-         */
-        public String getInstanceChargeType() {
-            return this.instanceChargeType;
+        public String getZoneId() {
+            return this.zoneId;
         }
 
         /**
@@ -470,27 +477,20 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             return this.zones;
         }
 
-        /**
-         * @return instanceType
-         */
-        public InstanceType getInstanceType() {
-            return this.instanceType;
-        }
-
         public static final class Builder {
             private String commodityCode; 
-            private String zoneId; 
-            private Integer priority; 
+            private String instanceChargeType; 
+            private InstanceType instanceType; 
             private String networkType; 
+            private Integer priority; 
+            private String regionId; 
             private String scene; 
             private String spotStrategy; 
-            private String regionId; 
-            private String instanceChargeType; 
+            private String zoneId; 
             private Zones zones; 
-            private InstanceType instanceType; 
 
             /**
-             * The product code of the instance type.
+             * CommodityCode.
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -498,55 +498,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone to which the instance type belongs.
-             */
-            public Builder zoneId(String zoneId) {
-                this.zoneId = zoneId;
-                return this;
-            }
-
-            /**
-             * The priority of the order.
-             */
-            public Builder priority(Integer priority) {
-                this.priority = priority;
-                return this;
-            }
-
-            /**
-             * The network type of the ECS instance.
-             */
-            public Builder networkType(String networkType) {
-                this.networkType = networkType;
-                return this;
-            }
-
-            /**
-             * The recommended instance type.
-             */
-            public Builder scene(String scene) {
-                this.scene = scene;
-                return this;
-            }
-
-            /**
-             * The preemptible policy of the preemptible instance.
-             */
-            public Builder spotStrategy(String spotStrategy) {
-                this.spotStrategy = spotStrategy;
-                return this;
-            }
-
-            /**
-             * The ID of the region to which the instance type belongs.
-             */
-            public Builder regionId(String regionId) {
-                this.regionId = regionId;
-                return this;
-            }
-
-            /**
-             * The billing method of the instance.
+             * InstanceChargeType.
              */
             public Builder instanceChargeType(String instanceChargeType) {
                 this.instanceChargeType = instanceChargeType;
@@ -554,18 +506,66 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The list of zones where the instance type is located.
+             * InstanceType.
              */
-            public Builder zones(Zones zones) {
-                this.zones = zones;
+            public Builder instanceType(InstanceType instanceType) {
+                this.instanceType = instanceType;
                 return this;
             }
 
             /**
-             * The name of the instance type.
+             * NetworkType.
              */
-            public Builder instanceType(InstanceType instanceType) {
-                this.instanceType = instanceType;
+            public Builder networkType(String networkType) {
+                this.networkType = networkType;
+                return this;
+            }
+
+            /**
+             * Priority.
+             */
+            public Builder priority(Integer priority) {
+                this.priority = priority;
+                return this;
+            }
+
+            /**
+             * RegionId.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * Scene.
+             */
+            public Builder scene(String scene) {
+                this.scene = scene;
+                return this;
+            }
+
+            /**
+             * SpotStrategy.
+             */
+            public Builder spotStrategy(String spotStrategy) {
+                this.spotStrategy = spotStrategy;
+                return this;
+            }
+
+            /**
+             * ZoneId.
+             */
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
+                return this;
+            }
+
+            /**
+             * Zones.
+             */
+            public Builder zones(Zones zones) {
+                this.zones = zones;
                 return this;
             }
 

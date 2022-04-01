@@ -12,9 +12,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RebootInstanceRequest</p>
  */
 public class RebootInstanceRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @Query
+    @NameInMap("ForceStop")
+    private Boolean forceStop;
+
+    @Query
+    @NameInMap("InstanceId")
+    @Validation(required = true)
+    private String instanceId;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -32,29 +41,20 @@ public class RebootInstanceRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
-    private String instanceId;
-
-    @Query
-    @NameInMap("ForceStop")
-    private Boolean forceStop;
-
-    @Query
-    @NameInMap("DryRun")
-    private Boolean dryRun;
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     private RebootInstanceRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
+        this.dryRun = builder.dryRun;
+        this.forceStop = builder.forceStop;
+        this.instanceId = builder.instanceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.instanceId = builder.instanceId;
-        this.forceStop = builder.forceStop;
-        this.dryRun = builder.dryRun;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -71,10 +71,24 @@ public class RebootInstanceRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return dryRun
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
+     * @return forceStop
+     */
+    public Boolean getForceStop() {
+        return this.forceStop;
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     /**
@@ -106,35 +120,21 @@ public class RebootInstanceRequest extends Request {
     }
 
     /**
-     * @return instanceId
+     * @return sourceRegionId
      */
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    /**
-     * @return forceStop
-     */
-    public Boolean getForceStop() {
-        return this.forceStop;
-    }
-
-    /**
-     * @return dryRun
-     */
-    public Boolean getDryRun() {
-        return this.dryRun;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public static final class Builder extends Request.Builder<RebootInstanceRequest, Builder> {
-        private String sourceRegionId; 
+        private Boolean dryRun; 
+        private Boolean forceStop; 
+        private String instanceId; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String instanceId; 
-        private Boolean forceStop; 
-        private Boolean dryRun; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -142,22 +142,40 @@ public class RebootInstanceRequest extends Request {
 
         private Builder(RebootInstanceRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
+            this.dryRun = request.dryRun;
+            this.forceStop = request.forceStop;
+            this.instanceId = request.instanceId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.instanceId = request.instanceId;
-            this.forceStop = request.forceStop;
-            this.dryRun = request.dryRun;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
-         * SourceRegionId.
+         * DryRun.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * ForceStop.
+         */
+        public Builder forceStop(Boolean forceStop) {
+            this.putQueryParameter("ForceStop", forceStop);
+            this.forceStop = forceStop;
+            return this;
+        }
+
+        /**
+         * InstanceId.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
             return this;
         }
 
@@ -171,7 +189,7 @@ public class RebootInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the RAM user.
+         * OwnerId.
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -180,7 +198,7 @@ public class RebootInstanceRequest extends Request {
         }
 
         /**
-         * The account name of the resource master account.
+         * ResourceOwnerAccount.
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
             this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
@@ -189,7 +207,7 @@ public class RebootInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the resource master account, that is, the UID.
+         * ResourceOwnerId.
          */
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
@@ -198,40 +216,11 @@ public class RebootInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * SourceRegionId.
          */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * Specifies whether to forcibly shut down the instance before restarting it. Valid values:
-         * <p>
-         * 
-         * -true: forced shutdown. This is equivalent to a typical power-off operation. All cached data that is not written to the storage device will be lost.
-         * 
-         * -false (default): the instance is powered off.
-         */
-        public Builder forceStop(Boolean forceStop) {
-            this.putQueryParameter("ForceStop", forceStop);
-            this.forceStop = forceStop;
-            return this;
-        }
-
-        /**
-         * Specifies whether to PreCheck only this request. Valid values:
-         * <p>
-         * 
-         * -true: sends a check request and does not restart the instance. Check items include required parameters, request format, business restrictions, and ECS inventory. If the check fails, the corresponding error is returned. If the check succeeds, the error code "DryRunOperation" is returned ".
-         * -false: sends a normal request and restarts the instance after passing the check.
-         * 
-         * Default value: false
-         */
-        public Builder dryRun(Boolean dryRun) {
-            this.putQueryParameter("DryRun", dryRun);
-            this.dryRun = dryRun;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

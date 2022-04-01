@@ -13,22 +13,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateDedicatedBlockStorageClusterRequest extends Request {
     @Query
-    @NameInMap("FromApp")
-    private String fromApp;
-
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
-    @Query
-    @NameInMap("ZoneId")
-    @Validation(required = true)
-    private String zoneId;
-
-    @Query
-    @NameInMap("DedicatedBlockStorageClusterName")
-    private String dedicatedBlockStorageClusterName;
+    @NameInMap("Capacity")
+    @Validation(required = true, maximum = 2304, minimum = 60)
+    private Integer capacity;
 
     @Query
     @NameInMap("Category")
@@ -36,21 +23,28 @@ public class CreateDedicatedBlockStorageClusterRequest extends Request {
     private String category;
 
     @Query
+    @NameInMap("ClientToken")
+    private String clientToken;
+
+    @Query
+    @NameInMap("DedicatedBlockStorageClusterName")
+    private String dedicatedBlockStorageClusterName;
+
+    @Query
     @NameInMap("Description")
     private String description;
 
     @Query
-    @NameInMap("Capacity")
-    @Validation(required = true, maximum = 2304, minimum = 60)
-    private Integer capacity;
+    @NameInMap("FromApp")
+    private String fromApp;
 
     @Query
-    @NameInMap("Type")
-    private String type;
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
 
     @Query
-    @NameInMap("ClientToken")
-    private String clientToken;
+    @NameInMap("OwnerId")
+    private Long ownerId;
 
     @Query
     @NameInMap("Period")
@@ -60,19 +54,45 @@ public class CreateDedicatedBlockStorageClusterRequest extends Request {
     @NameInMap("PeriodUnit")
     private String periodUnit;
 
+    @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
+    @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Query
+    @NameInMap("Type")
+    private String type;
+
+    @Query
+    @NameInMap("ZoneId")
+    @Validation(required = true)
+    private String zoneId;
+
     private CreateDedicatedBlockStorageClusterRequest(Builder builder) {
         super(builder);
-        this.fromApp = builder.fromApp;
-        this.regionId = builder.regionId;
-        this.zoneId = builder.zoneId;
-        this.dedicatedBlockStorageClusterName = builder.dedicatedBlockStorageClusterName;
-        this.category = builder.category;
-        this.description = builder.description;
         this.capacity = builder.capacity;
-        this.type = builder.type;
+        this.category = builder.category;
         this.clientToken = builder.clientToken;
+        this.dedicatedBlockStorageClusterName = builder.dedicatedBlockStorageClusterName;
+        this.description = builder.description;
+        this.fromApp = builder.fromApp;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
+        this.regionId = builder.regionId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.type = builder.type;
+        this.zoneId = builder.zoneId;
     }
 
     public static Builder builder() {
@@ -89,31 +109,10 @@ public class CreateDedicatedBlockStorageClusterRequest extends Request {
     }
 
     /**
-     * @return fromApp
+     * @return capacity
      */
-    public String getFromApp() {
-        return this.fromApp;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return zoneId
-     */
-    public String getZoneId() {
-        return this.zoneId;
-    }
-
-    /**
-     * @return dedicatedBlockStorageClusterName
-     */
-    public String getDedicatedBlockStorageClusterName() {
-        return this.dedicatedBlockStorageClusterName;
+    public Integer getCapacity() {
+        return this.capacity;
     }
 
     /**
@@ -124,6 +123,20 @@ public class CreateDedicatedBlockStorageClusterRequest extends Request {
     }
 
     /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
+     * @return dedicatedBlockStorageClusterName
+     */
+    public String getDedicatedBlockStorageClusterName() {
+        return this.dedicatedBlockStorageClusterName;
+    }
+
+    /**
      * @return description
      */
     public String getDescription() {
@@ -131,24 +144,24 @@ public class CreateDedicatedBlockStorageClusterRequest extends Request {
     }
 
     /**
-     * @return capacity
+     * @return fromApp
      */
-    public Integer getCapacity() {
-        return this.capacity;
+    public String getFromApp() {
+        return this.fromApp;
     }
 
     /**
-     * @return type
+     * @return ownerAccount
      */
-    public String getType() {
-        return this.type;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     /**
-     * @return clientToken
+     * @return ownerId
      */
-    public String getClientToken() {
-        return this.clientToken;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     /**
@@ -165,18 +178,57 @@ public class CreateDedicatedBlockStorageClusterRequest extends Request {
         return this.periodUnit;
     }
 
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    /**
+     * @return type
+     */
+    public String getType() {
+        return this.type;
+    }
+
+    /**
+     * @return zoneId
+     */
+    public String getZoneId() {
+        return this.zoneId;
+    }
+
     public static final class Builder extends Request.Builder<CreateDedicatedBlockStorageClusterRequest, Builder> {
-        private String fromApp; 
-        private String regionId; 
-        private String zoneId; 
-        private String dedicatedBlockStorageClusterName; 
-        private String category; 
-        private String description; 
         private Integer capacity; 
-        private String type; 
+        private String category; 
         private String clientToken; 
+        private String dedicatedBlockStorageClusterName; 
+        private String description; 
+        private String fromApp; 
+        private String ownerAccount; 
+        private Long ownerId; 
         private Integer period; 
         private String periodUnit; 
+        private String regionId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String type; 
+        private String zoneId; 
 
         private Builder() {
             super();
@@ -184,18 +236,67 @@ public class CreateDedicatedBlockStorageClusterRequest extends Request {
 
         private Builder(CreateDedicatedBlockStorageClusterRequest request) {
             super(request);
-            this.fromApp = request.fromApp;
-            this.regionId = request.regionId;
-            this.zoneId = request.zoneId;
-            this.dedicatedBlockStorageClusterName = request.dedicatedBlockStorageClusterName;
-            this.category = request.category;
-            this.description = request.description;
             this.capacity = request.capacity;
-            this.type = request.type;
+            this.category = request.category;
             this.clientToken = request.clientToken;
+            this.dedicatedBlockStorageClusterName = request.dedicatedBlockStorageClusterName;
+            this.description = request.description;
+            this.fromApp = request.fromApp;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
             this.period = request.period;
             this.periodUnit = request.periodUnit;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.type = request.type;
+            this.zoneId = request.zoneId;
         } 
+
+        /**
+         * Capacity.
+         */
+        public Builder capacity(Integer capacity) {
+            this.putQueryParameter("Capacity", capacity);
+            this.capacity = capacity;
+            return this;
+        }
+
+        /**
+         * Category.
+         */
+        public Builder category(String category) {
+            this.putQueryParameter("Category", category);
+            this.category = category;
+            return this;
+        }
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * DedicatedBlockStorageClusterName.
+         */
+        public Builder dedicatedBlockStorageClusterName(String dedicatedBlockStorageClusterName) {
+            this.putQueryParameter("DedicatedBlockStorageClusterName", dedicatedBlockStorageClusterName);
+            this.dedicatedBlockStorageClusterName = dedicatedBlockStorageClusterName;
+            return this;
+        }
+
+        /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
+            return this;
+        }
 
         /**
          * FromApp.
@@ -207,98 +308,25 @@ public class CreateDedicatedBlockStorageClusterRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the cluster belongs. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
+         * OwnerAccount.
          */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
             return this;
         }
 
         /**
-         * The ID of the zone to which the cluster belongs. You can call [DescribeZones](~~ 25610 ~~) to obtain the list of zones.
+         * OwnerId.
          */
-        public Builder zoneId(String zoneId) {
-            this.putQueryParameter("ZoneId", zoneId);
-            this.zoneId = zoneId;
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
             return this;
         }
 
         /**
-         * The name of the dedicated block storage cluster.
-         */
-        public Builder dedicatedBlockStorageClusterName(String dedicatedBlockStorageClusterName) {
-            this.putQueryParameter("DedicatedBlockStorageClusterName", dedicatedBlockStorageClusterName);
-            this.dedicatedBlockStorageClusterName = dedicatedBlockStorageClusterName;
-            return this;
-        }
-
-        /**
-         * The type of cloud disk that can be created in the exclusive block storage cluster.
-         * <p>
-         * 
-         * The value can only be cloud_essd, that is, ESSD.
-         */
-        public Builder category(String category) {
-            this.putQueryParameter("Category", category);
-            this.category = category;
-            return this;
-        }
-
-        /**
-         * The description of the dedicated block storage cluster.
-         */
-        public Builder description(String description) {
-            this.putQueryParameter("Description", description);
-            this.description = description;
-            return this;
-        }
-
-        /**
-         * The capacity of the dedicated cluster. Valid values: 60 to 2304. Unit: TiB.
-         */
-        public Builder capacity(Integer capacity) {
-            this.putQueryParameter("Capacity", capacity);
-            this.capacity = capacity;
-            return this;
-        }
-
-        /**
-         * The performance type of the cluster. Valid values:
-         * <p>
-         * 
-         * -Standard: Basic. ESSD PL0 disks can be created in exclusive block storage clusters of this type.
-         * -Premium: performance type. ESSD PL1 cloud disks can be created in exclusive block storage clusters of this type.
-         * 
-         * Default value: Premium
-         */
-        public Builder type(String type) {
-            this.putQueryParameter("Type", type);
-            this.type = type;
-            return this;
-        }
-
-        /**
-         * Ensure the idempotence of the request. Generate a parameter value from your client. Make sure that the value is unique among different requests.
-         * <p>
-         * 
-         * "ClientToken" only supports ASCII characters and cannot exceed 64 characters in length. For more information, see [how to ensure idempotence](~~ 25693 ~~).
-         */
-        public Builder clientToken(String clientToken) {
-            this.putQueryParameter("ClientToken", clientToken);
-            this.clientToken = clientToken;
-            return this;
-        }
-
-        /**
-         * The duration of the cluster to be purchased. Unit: "__Dune. Valid values:
-         * <p>
-         * 
-         * -When "PeriodUnit = Year", the value range of this parameter is {"1", "2", "3", "4"}.
-         * 
-         * -When "PeriodUnit = Month", the value range of this parameter is {"6", "7", "8", "9", "10", "11"}.
-         * 
-         * > Exclusive block storage clusters only support the subscription billing method. Therefore, you must set the **and** duncles parameters.
+         * Period.
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -307,18 +335,56 @@ public class CreateDedicatedBlockStorageClusterRequest extends Request {
         }
 
         /**
-         * The duration of the cluster. Unit. Valid values:
-         * <p>
-         * 
-         * -Year: Year
-         * 
-         * -Month: Month
-         * 
-         * > Exclusive block storage clusters only support the subscription billing method. Therefore, you must set the **and** duncles parameters.
+         * PeriodUnit.
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
             this.periodUnit = periodUnit;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * Type.
+         */
+        public Builder type(String type) {
+            this.putQueryParameter("Type", type);
+            this.type = type;
+            return this;
+        }
+
+        /**
+         * ZoneId.
+         */
+        public Builder zoneId(String zoneId) {
+            this.putQueryParameter("ZoneId", zoneId);
+            this.zoneId = zoneId;
             return this;
         }
 

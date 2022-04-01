@@ -50,7 +50,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         private Topologys topologys; 
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         }
 
         /**
-         * The topology details.
+         * Topologys.
          */
         public Builder topologys(Topologys topologys) {
             this.topologys = topologys;
@@ -110,7 +110,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private String instanceId; 
 
             /**
-             * The ID of the physical machine to which the ECS instance belongs. After encryption, it cannot directly match the identity of Alibaba Cloud resources. However, if the values of different ECS instances are the same, the ECS instances are on the same physical server.
+             * HostId.
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;
@@ -118,7 +118,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;

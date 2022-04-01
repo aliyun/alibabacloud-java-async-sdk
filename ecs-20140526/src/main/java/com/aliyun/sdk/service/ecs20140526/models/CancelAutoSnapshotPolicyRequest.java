@@ -12,10 +12,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CancelAutoSnapshotPolicyRequest</p>
  */
 public class CancelAutoSnapshotPolicyRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("OwnerId")
     private Long ownerId;
@@ -28,24 +24,28 @@ public class CancelAutoSnapshotPolicyRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("regionId")
-    @Validation(required = true)
-    private String regionId;
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     @Query
     @NameInMap("diskIds")
     @Validation(required = true)
     private String diskIds;
 
+    @Query
+    @NameInMap("regionId")
+    @Validation(required = true)
+    private String regionId;
+
     private CancelAutoSnapshotPolicyRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.regionId = builder.regionId;
+        this.sourceRegionId = builder.sourceRegionId;
         this.diskIds = builder.diskIds;
+        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -59,13 +59,6 @@ public class CancelAutoSnapshotPolicyRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
     }
 
     /**
@@ -90,10 +83,10 @@ public class CancelAutoSnapshotPolicyRequest extends Request {
     }
 
     /**
-     * @return regionId
+     * @return sourceRegionId
      */
-    public String getRegionId() {
-        return this.regionId;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -103,13 +96,20 @@ public class CancelAutoSnapshotPolicyRequest extends Request {
         return this.diskIds;
     }
 
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public static final class Builder extends Request.Builder<CancelAutoSnapshotPolicyRequest, Builder> {
-        private String sourceRegionId; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String regionId; 
+        private String sourceRegionId; 
         private String diskIds; 
+        private String regionId; 
 
         private Builder() {
             super();
@@ -117,13 +117,40 @@ public class CancelAutoSnapshotPolicyRequest extends Request {
 
         private Builder(CancelAutoSnapshotPolicyRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.regionId = request.regionId;
+            this.sourceRegionId = request.sourceRegionId;
             this.diskIds = request.diskIds;
+            this.regionId = request.regionId;
         } 
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
 
         /**
          * SourceRegionId.
@@ -135,47 +162,20 @@ public class CancelAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the RAM user.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * The account name of the resource master account.
-         */
-        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
-            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-            this.resourceOwnerAccount = resourceOwnerAccount;
-            return this;
-        }
-
-        /**
-         * The ID of the resource master account, that is, the UID.
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * The ID of the region where the automatic snapshot policy and disk are located. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("regionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The ID of the target disk. If you want to cancel the automatic snapshot policy for multiple disks, use the same format as "d-xxxxxxxxx", "d-yyyyyyyyy",... The JSON Array of "d-zzzzzzzzz" indicates that the disk IDs are separated by commas (,).
+         * diskIds.
          */
         public Builder diskIds(String diskIds) {
             this.putQueryParameter("diskIds", diskIds);
             this.diskIds = diskIds;
+            return this;
+        }
+
+        /**
+         * regionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("regionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 

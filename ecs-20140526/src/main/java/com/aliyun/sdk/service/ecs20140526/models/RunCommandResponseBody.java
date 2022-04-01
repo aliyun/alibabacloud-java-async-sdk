@@ -12,19 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RunCommandResponseBody</p>
  */
 public class RunCommandResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    private String requestId;
-
     @NameInMap("CommandId")
     private String commandId;
 
     @NameInMap("InvokeId")
     private String invokeId;
 
+    @NameInMap("RequestId")
+    private String requestId;
+
     private RunCommandResponseBody(Builder builder) {
-        this.requestId = builder.requestId;
         this.commandId = builder.commandId;
         this.invokeId = builder.invokeId;
+        this.requestId = builder.requestId;
     }
 
     public static Builder builder() {
@@ -33,13 +33,6 @@ public class RunCommandResponseBody extends TeaModel {
 
     public static RunCommandResponseBody create() {
         return builder().build();
-    }
-
-    /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
     }
 
     /**
@@ -56,21 +49,20 @@ public class RunCommandResponseBody extends TeaModel {
         return this.invokeId;
     }
 
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static final class Builder {
-        private String requestId; 
         private String commandId; 
         private String invokeId; 
+        private String requestId; 
 
         /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The ID of the command.
+         * CommandId.
          */
         public Builder commandId(String commandId) {
             this.commandId = commandId;
@@ -78,10 +70,18 @@ public class RunCommandResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the command execution.
+         * InvokeId.
          */
         public Builder invokeId(String invokeId) {
             this.invokeId = invokeId;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 

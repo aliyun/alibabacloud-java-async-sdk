@@ -12,27 +12,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateDeploymentSetRequest</p>
  */
 public class CreateDeploymentSetRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
-    @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
-
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
-    @Query
-    @NameInMap("OnUnableToRedeployFailedInstance")
-    private String onUnableToRedeployFailedInstance;
-
-    @Query
-    @NameInMap("Description")
-    private String description;
-
     @Query
     @NameInMap("ClientToken")
     private String clientToken;
@@ -42,34 +21,70 @@ public class CreateDeploymentSetRequest extends Request {
     private String deploymentSetName;
 
     @Query
-    @NameInMap("Granularity")
-    private String granularity;
+    @NameInMap("Description")
+    private String description;
 
     @Query
     @NameInMap("Domain")
     private String domain;
 
     @Query
-    @NameInMap("Strategy")
-    private String strategy;
+    @NameInMap("Granularity")
+    private String granularity;
 
     @Query
     @NameInMap("GroupCount")
     private Long groupCount;
 
+    @Query
+    @NameInMap("OnUnableToRedeployFailedInstance")
+    private String onUnableToRedeployFailedInstance;
+
+    @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
+
+    @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
+    @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
+    @Query
+    @NameInMap("Strategy")
+    private String strategy;
+
     private CreateDeploymentSetRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
-        this.resourceOwnerId = builder.resourceOwnerId;
-        this.regionId = builder.regionId;
-        this.onUnableToRedeployFailedInstance = builder.onUnableToRedeployFailedInstance;
-        this.description = builder.description;
         this.clientToken = builder.clientToken;
         this.deploymentSetName = builder.deploymentSetName;
-        this.granularity = builder.granularity;
+        this.description = builder.description;
         this.domain = builder.domain;
-        this.strategy = builder.strategy;
+        this.granularity = builder.granularity;
         this.groupCount = builder.groupCount;
+        this.onUnableToRedeployFailedInstance = builder.onUnableToRedeployFailedInstance;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.sourceRegionId = builder.sourceRegionId;
+        this.strategy = builder.strategy;
     }
 
     public static Builder builder() {
@@ -83,41 +98,6 @@ public class CreateDeploymentSetRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
-     * @return resourceOwnerId
-     */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return onUnableToRedeployFailedInstance
-     */
-    public String getOnUnableToRedeployFailedInstance() {
-        return this.onUnableToRedeployFailedInstance;
-    }
-
-    /**
-     * @return description
-     */
-    public String getDescription() {
-        return this.description;
     }
 
     /**
@@ -135,10 +115,10 @@ public class CreateDeploymentSetRequest extends Request {
     }
 
     /**
-     * @return granularity
+     * @return description
      */
-    public String getGranularity() {
-        return this.granularity;
+    public String getDescription() {
+        return this.description;
     }
 
     /**
@@ -149,10 +129,10 @@ public class CreateDeploymentSetRequest extends Request {
     }
 
     /**
-     * @return strategy
+     * @return granularity
      */
-    public String getStrategy() {
-        return this.strategy;
+    public String getGranularity() {
+        return this.granularity;
     }
 
     /**
@@ -162,18 +142,77 @@ public class CreateDeploymentSetRequest extends Request {
         return this.groupCount;
     }
 
+    /**
+     * @return onUnableToRedeployFailedInstance
+     */
+    public String getOnUnableToRedeployFailedInstance() {
+        return this.onUnableToRedeployFailedInstance;
+    }
+
+    /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
+    /**
+     * @return strategy
+     */
+    public String getStrategy() {
+        return this.strategy;
+    }
+
     public static final class Builder extends Request.Builder<CreateDeploymentSetRequest, Builder> {
-        private String sourceRegionId; 
-        private Long resourceOwnerId; 
-        private String regionId; 
-        private String onUnableToRedeployFailedInstance; 
-        private String description; 
         private String clientToken; 
         private String deploymentSetName; 
-        private String granularity; 
+        private String description; 
         private String domain; 
-        private String strategy; 
+        private String granularity; 
         private Long groupCount; 
+        private String onUnableToRedeployFailedInstance; 
+        private String ownerAccount; 
+        private Long ownerId; 
+        private String regionId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String sourceRegionId; 
+        private String strategy; 
 
         private Builder() {
             super();
@@ -181,18 +220,129 @@ public class CreateDeploymentSetRequest extends Request {
 
         private Builder(CreateDeploymentSetRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
-            this.resourceOwnerId = request.resourceOwnerId;
-            this.regionId = request.regionId;
-            this.onUnableToRedeployFailedInstance = request.onUnableToRedeployFailedInstance;
-            this.description = request.description;
             this.clientToken = request.clientToken;
             this.deploymentSetName = request.deploymentSetName;
-            this.granularity = request.granularity;
+            this.description = request.description;
             this.domain = request.domain;
-            this.strategy = request.strategy;
+            this.granularity = request.granularity;
             this.groupCount = request.groupCount;
+            this.onUnableToRedeployFailedInstance = request.onUnableToRedeployFailedInstance;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceRegionId = request.sourceRegionId;
+            this.strategy = request.strategy;
         } 
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * DeploymentSetName.
+         */
+        public Builder deploymentSetName(String deploymentSetName) {
+            this.putQueryParameter("DeploymentSetName", deploymentSetName);
+            this.deploymentSetName = deploymentSetName;
+            return this;
+        }
+
+        /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
+            return this;
+        }
+
+        /**
+         * Domain.
+         */
+        public Builder domain(String domain) {
+            this.putQueryParameter("Domain", domain);
+            this.domain = domain;
+            return this;
+        }
+
+        /**
+         * Granularity.
+         */
+        public Builder granularity(String granularity) {
+            this.putQueryParameter("Granularity", granularity);
+            this.granularity = granularity;
+            return this;
+        }
+
+        /**
+         * GroupCount.
+         */
+        public Builder groupCount(Long groupCount) {
+            this.putQueryParameter("GroupCount", groupCount);
+            this.groupCount = groupCount;
+            return this;
+        }
+
+        /**
+         * OnUnableToRedeployFailedInstance.
+         */
+        public Builder onUnableToRedeployFailedInstance(String onUnableToRedeployFailedInstance) {
+            this.putQueryParameter("OnUnableToRedeployFailedInstance", onUnableToRedeployFailedInstance);
+            this.onUnableToRedeployFailedInstance = onUnableToRedeployFailedInstance;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
 
         /**
          * SourceRegionId.
@@ -204,109 +354,11 @@ public class CreateDeploymentSetRequest extends Request {
         }
 
         /**
-         * The ID of the resource master account, that is, the UID.
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * The ID of the region to which the deployment set belongs. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * After instances in the deployment set are down and migrated, there is no emergency solution to break up the instance inventory. Valid values:
-         * <p>
-         * 
-         * -CancelMembershipAndStart: remove the instance from the deployment set and start the instance immediately after the instance is down and migrated.
-         * -KeepStopped: maintains the deployment set properties of the instance, and the instance remains stopped.
-         * 
-         * Default value: CancelMembershipAndStart
-         */
-        public Builder onUnableToRedeployFailedInstance(String onUnableToRedeployFailedInstance) {
-            this.putQueryParameter("OnUnableToRedeployFailedInstance", onUnableToRedeployFailedInstance);
-            this.onUnableToRedeployFailedInstance = onUnableToRedeployFailedInstance;
-            return this;
-        }
-
-        /**
-         * The description of the deployment set. The description must be 2 to 256 characters in length and cannot start with "http:// "or "https.
-         */
-        public Builder description(String description) {
-            this.putQueryParameter("Description", description);
-            this.description = description;
-            return this;
-        }
-
-        /**
-         * Ensure the idempotence of the request. Generate a parameter value from your client. Make sure that the value is unique among different requests. **ClientToken** supports only ASCII characters and cannot exceed 64 characters. For more information, see [how to ensure idempotence](~~ 25693 ~~).
-         */
-        public Builder clientToken(String clientToken) {
-            this.putQueryParameter("ClientToken", clientToken);
-            this.clientToken = clientToken;
-            return this;
-        }
-
-        /**
-         * The name of the deployment set. The description must be 2 to 128 characters in length. It must start with a letter and cannot start with "http:// "or "https. It can contain numbers, colons (:), underscores (_), and hyphens (-).
-         */
-        public Builder deploymentSetName(String deploymentSetName) {
-            this.putQueryParameter("DeploymentSetName", deploymentSetName);
-            this.deploymentSetName = deploymentSetName;
-            return this;
-        }
-
-        /**
-         * The deployment granularity.
-         */
-        public Builder granularity(String granularity) {
-            this.putQueryParameter("Granularity", granularity);
-            this.granularity = granularity;
-            return this;
-        }
-
-        /**
-         * The deployment domain.
-         */
-        public Builder domain(String domain) {
-            this.putQueryParameter("Domain", domain);
-            this.domain = domain;
-            return this;
-        }
-
-        /**
-         * The deployment policy. Valid values:
-         * <p>
-         * 
-         * -Availability: high Availability policy
-         * -AvailabilityGroup: deploy a set group high availability policy
-         * 
-         * Default value: Availability
+         * Strategy.
          */
         public Builder strategy(String strategy) {
             this.putQueryParameter("Strategy", strategy);
             this.strategy = strategy;
-            return this;
-        }
-
-        /**
-         * Set the number of groups for the high availability policy of the deployment set group. Valid values: 1 to 7.
-         * <p>
-         * 
-         * Default value: 3.
-         * 
-         * > This parameter takes effect only when "Strategy = AvailabilityGroup.
-         */
-        public Builder groupCount(Long groupCount) {
-            this.putQueryParameter("GroupCount", groupCount);
-            this.groupCount = groupCount;
             return this;
         }
 

@@ -16,17 +16,26 @@ public class DescribeInstanceModificationPriceRequest extends Request {
     @NameInMap("SystemDisk")
     private SystemDisk systemDisk;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
-    @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
-
     @Query
     @NameInMap("DataDisk")
     private java.util.List < DataDisk> dataDisk;
+
+    @Query
+    @NameInMap("InstanceId")
+    @Validation(required = true)
+    private String instanceId;
+
+    @Query
+    @NameInMap("InstanceType")
+    private String instanceType;
+
+    @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
 
     @Query
     @NameInMap("RegionId")
@@ -34,23 +43,29 @@ public class DescribeInstanceModificationPriceRequest extends Request {
     private String regionId;
 
     @Query
-    @NameInMap("InstanceType")
-    private String instanceType;
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
 
     @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
-    private String instanceId;
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     private DescribeInstanceModificationPriceRequest(Builder builder) {
         super(builder);
         this.systemDisk = builder.systemDisk;
-        this.sourceRegionId = builder.sourceRegionId;
-        this.resourceOwnerId = builder.resourceOwnerId;
         this.dataDisk = builder.dataDisk;
-        this.regionId = builder.regionId;
-        this.instanceType = builder.instanceType;
         this.instanceId = builder.instanceId;
+        this.instanceType = builder.instanceType;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -74,20 +89,6 @@ public class DescribeInstanceModificationPriceRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
-     * @return resourceOwnerId
-     */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    /**
      * @return dataDisk
      */
     public java.util.List < DataDisk> getDataDisk() {
@@ -95,10 +96,10 @@ public class DescribeInstanceModificationPriceRequest extends Request {
     }
 
     /**
-     * @return regionId
+     * @return instanceId
      */
-    public String getRegionId() {
-        return this.regionId;
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     /**
@@ -109,20 +110,58 @@ public class DescribeInstanceModificationPriceRequest extends Request {
     }
 
     /**
-     * @return instanceId
+     * @return ownerAccount
      */
-    public String getInstanceId() {
-        return this.instanceId;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public static final class Builder extends Request.Builder<DescribeInstanceModificationPriceRequest, Builder> {
         private SystemDisk systemDisk; 
-        private String sourceRegionId; 
-        private Long resourceOwnerId; 
         private java.util.List < DataDisk> dataDisk; 
-        private String regionId; 
-        private String instanceType; 
         private String instanceId; 
+        private String instanceType; 
+        private String ownerAccount; 
+        private Long ownerId; 
+        private String regionId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -131,12 +170,15 @@ public class DescribeInstanceModificationPriceRequest extends Request {
         private Builder(DescribeInstanceModificationPriceRequest request) {
             super(request);
             this.systemDisk = request.systemDisk;
-            this.sourceRegionId = request.sourceRegionId;
-            this.resourceOwnerId = request.resourceOwnerId;
             this.dataDisk = request.dataDisk;
-            this.regionId = request.regionId;
-            this.instanceType = request.instanceType;
             this.instanceId = request.instanceId;
+            this.instanceType = request.instanceType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
@@ -145,24 +187,6 @@ public class DescribeInstanceModificationPriceRequest extends Request {
         public Builder systemDisk(SystemDisk systemDisk) {
             this.putQueryParameter("SystemDisk", systemDisk);
             this.systemDisk = systemDisk;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
-            return this;
-        }
-
-        /**
-         * ResourceOwnerId.
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
             return this;
         }
 
@@ -176,19 +200,16 @@ public class DescribeInstanceModificationPriceRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
+         * InstanceId.
          */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
             return this;
         }
 
         /**
-         * The specification of the target instance. We recommend that you call [DescribeResourcesModification](~~ 66187 ~~) to query the instance types that can be upgraded in a specified zone.
-         * <p>
-         * 
-         * > you must specify at least one of the instance type parameters ("InstanceType") and data disk parameters ("DataDisk.N.* ").
+         * InstanceType.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -197,11 +218,56 @@ public class DescribeInstanceModificationPriceRequest extends Request {
         }
 
         /**
-         * The ID of the instance for which you want to query the upgrade price.
+         * OwnerAccount.
          */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 
@@ -239,15 +305,7 @@ public class DescribeInstanceModificationPriceRequest extends Request {
             private String category; 
 
             /**
-             * The system disk type. Parameter values are required only when the instance type is upgraded from a phased-out instance type to an on-sale instance type and the non-I/O optimized instance type is upgraded to an I/O optimized instance type. For more information about instance types, see [instance type families](~~ 25378 ~~) and [phased-out instance types](~~ 55263 ~~).
-             * <p>
-             * 
-             * Valid values:
-             * 
-             * -cloud_efficiency: Ultra disk
-             * -cloud_ssd:SSD cloud disk
-             * 
-             * Default value: None
+             * Category.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -262,19 +320,19 @@ public class DescribeInstanceModificationPriceRequest extends Request {
 
     }
     public static class DataDisk extends TeaModel {
+        @NameInMap("Category")
+        private String category;
+
         @NameInMap("PerformanceLevel")
         private String performanceLevel;
 
         @NameInMap("Size")
         private Integer size;
 
-        @NameInMap("Category")
-        private String category;
-
         private DataDisk(Builder builder) {
+            this.category = builder.category;
             this.performanceLevel = builder.performanceLevel;
             this.size = builder.size;
-            this.category = builder.category;
         }
 
         public static Builder builder() {
@@ -283,6 +341,13 @@ public class DescribeInstanceModificationPriceRequest extends Request {
 
         public static DataDisk create() {
             return builder().build();
+        }
+
+        /**
+         * @return category
+         */
+        public String getCategory() {
+            return this.category;
         }
 
         /**
@@ -299,30 +364,21 @@ public class DescribeInstanceModificationPriceRequest extends Request {
             return this.size;
         }
 
-        /**
-         * @return category
-         */
-        public String getCategory() {
-            return this.category;
-        }
-
         public static final class Builder {
+            private String category; 
             private String performanceLevel; 
             private Integer size; 
-            private String category; 
 
             /**
-             * 当数据盘类型为ESSD云盘时，设置云盘的性能等级。N的取值必须和`DataDisk.N.Category=cloud_essd`中的N保持一致。取值范围：
-             * <p>
-             * 
-             * - PL0：单盘最高随机读写IOPS 1万
-             * - PL1：单盘最高随机读写IOPS 5万
-             * - PL2：单盘最高随机读写IOPS 10万
-             * - PL3：单盘最高随机读写IOPS 100万
-             * 
-             * 默认值：PL1
-             * 
-             * 有关如何选择ESSD性能等级，请参见[ESSD云盘](~~122389~~)。
+             * Category.
+             */
+            public Builder category(String category) {
+                this.category = category;
+                return this;
+            }
+
+            /**
+             * PerformanceLevel.
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
@@ -330,38 +386,10 @@ public class DescribeInstanceModificationPriceRequest extends Request {
             }
 
             /**
-             * 数据盘的容量大小。N的取值范围：1~16，内存单位为GiB。取值范围：
-             * <p>
-             * 
-             * - cloud_efficiency：20~32768
-             * - cloud_ssd：20~32768
-             * - cloud_essd：20~32768
-             * - cloud：5~2000
-             * 
-             * 默认值：指定数据盘类型相应的容量大小的最小值。
+             * Size.
              */
             public Builder size(Integer size) {
                 this.size = size;
-                return this;
-            }
-
-            /**
-             * 数据盘类型。当您需要查询ECS实例挂载的新包年包月数据盘的价格时，可以传入该参数值。N的取值范围：1~16。取值范围：
-             * <p>
-             * 
-             * - cloud_efficiency：高效云盘
-             * - cloud_ssd：SSD云盘
-             * - cloud_essd：ESSD云盘
-             * - cloud：普通云盘。
-             * 
-             * 默认值：无
-             * 
-             * > 查询时，实例规格参数（`InstanceType`）和数据盘参数（`DataDisk.N.*`）不得同时为空，必须至少指定一个。
-             * 
-             * 
-             */
-            public Builder category(String category) {
-                this.category = category;
                 return this;
             }
 

@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAccountAttributesResponseBody</p>
  */
 public class DescribeAccountAttributesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    private String requestId;
-
     @NameInMap("AccountAttributeItems")
     private AccountAttributeItems accountAttributeItems;
 
+    @NameInMap("RequestId")
+    private String requestId;
+
     private DescribeAccountAttributesResponseBody(Builder builder) {
-        this.requestId = builder.requestId;
         this.accountAttributeItems = builder.accountAttributeItems;
+        this.requestId = builder.requestId;
     }
 
     public static Builder builder() {
@@ -32,36 +32,36 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
     }
 
     /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    /**
      * @return accountAttributeItems
      */
     public AccountAttributeItems getAccountAttributeItems() {
         return this.accountAttributeItems;
     }
 
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static final class Builder {
-        private String requestId; 
         private AccountAttributeItems accountAttributeItems; 
+        private String requestId; 
 
         /**
-         * The ID of the request.
+         * AccountAttributeItems.
          */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
+        public Builder accountAttributeItems(AccountAttributeItems accountAttributeItems) {
+            this.accountAttributeItems = accountAttributeItems;
             return this;
         }
 
         /**
-         * The information set of account privilege AccountAttributeItem in the specified region.
+         * RequestId.
          */
-        public Builder accountAttributeItems(AccountAttributeItems accountAttributeItems) {
-            this.accountAttributeItems = accountAttributeItems;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
@@ -72,35 +72,35 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
     } 
 
     public static class ValueItem extends TeaModel {
+        @NameInMap("Count")
+        private Integer count;
+
         @NameInMap("DiskCategory")
         private String diskCategory;
-
-        @NameInMap("Value")
-        private String value;
 
         @NameInMap("ExpiredTime")
         private String expiredTime;
 
-        @NameInMap("ZoneId")
-        private String zoneId;
+        @NameInMap("InstanceChargeType")
+        private String instanceChargeType;
 
         @NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("Count")
-        private Integer count;
+        @NameInMap("Value")
+        private String value;
 
-        @NameInMap("InstanceChargeType")
-        private String instanceChargeType;
+        @NameInMap("ZoneId")
+        private String zoneId;
 
         private ValueItem(Builder builder) {
-            this.diskCategory = builder.diskCategory;
-            this.value = builder.value;
-            this.expiredTime = builder.expiredTime;
-            this.zoneId = builder.zoneId;
-            this.instanceType = builder.instanceType;
             this.count = builder.count;
+            this.diskCategory = builder.diskCategory;
+            this.expiredTime = builder.expiredTime;
             this.instanceChargeType = builder.instanceChargeType;
+            this.instanceType = builder.instanceType;
+            this.value = builder.value;
+            this.zoneId = builder.zoneId;
         }
 
         public static Builder builder() {
@@ -112,17 +112,17 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
         }
 
         /**
+         * @return count
+         */
+        public Integer getCount() {
+            return this.count;
+        }
+
+        /**
          * @return diskCategory
          */
         public String getDiskCategory() {
             return this.diskCategory;
-        }
-
-        /**
-         * @return value
-         */
-        public String getValue() {
-            return this.value;
         }
 
         /**
@@ -133,10 +133,10 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * @return zoneId
+         * @return instanceChargeType
          */
-        public String getZoneId() {
-            return this.zoneId;
+        public String getInstanceChargeType() {
+            return this.instanceChargeType;
         }
 
         /**
@@ -147,103 +147,30 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * @return count
+         * @return value
          */
-        public Integer getCount() {
-            return this.count;
+        public String getValue() {
+            return this.value;
         }
 
         /**
-         * @return instanceChargeType
+         * @return zoneId
          */
-        public String getInstanceChargeType() {
-            return this.instanceChargeType;
+        public String getZoneId() {
+            return this.zoneId;
         }
 
         public static final class Builder {
-            private String diskCategory; 
-            private String value; 
-            private String expiredTime; 
-            private String zoneId; 
-            private String instanceType; 
             private Integer count; 
+            private String diskCategory; 
+            private String expiredTime; 
             private String instanceChargeType; 
+            private String instanceType; 
+            private String value; 
+            private String zoneId; 
 
             /**
-             * The type of the data disk. Possible values:
-             * <p>
-             * -cloud_efficiency: Ultra disk.
-             * -cloud_ssd:SSD cloud disk.
-             * -cloud_essd:ESSD.
-             * 
-             */
-            public Builder diskCategory(String diskCategory) {
-                this.diskCategory = diskCategory;
-                return this;
-            }
-
-            /**
-             * The quota of a type of resource in the current region or all regions. Possible values:
-             * <p>
-             * 
-             * The following categories return a value of 0 or a positive integer:
-             * 
-             * -max-security-groups
-             * -max-elastic-network-interfaces
-             * -max-postpaid-instance-vcpu-count
-             * -max-spot-instance-vcpu-count
-             * -used-postpaid-instance-vcpu-count
-             * -used-spot-instance-vcpu-count
-             * -max-postpaid-yundisk-capacity
-             * -used-postpaid-yundisk-capacity
-             * -max-dedicated-hosts
-             * -max-axt-command-count
-             * -max-axt-invocation-daily
-             * 
-             * Return value: the value of the instance type. For more information, see [instance type family](~~ 25378 ~~).
-             * 
-             * Returns the value when the type is real-name-authentications:
-             * 
-             * -Yes
-             * -none
-             * -unnecessary
-             * 
-             * Return value of instance-network-type:
-             * 
-             * -vpc
-             * -classic
-             */
-            public Builder value(String value) {
-                this.value = value;
-                return this;
-            }
-
-            /**
-             * The expiration time of the privilege. This parameter is returned only for account privileges that have the Expiration Time. The time follows the [ISO 8601](~~ 25696 ~~) standard and uses UTC +0. The format is yyyy-MM-ddTHH:mm:ssZ.
-             */
-            public Builder expiredTime(String expiredTime) {
-                this.expiredTime = expiredTime;
-                return this;
-            }
-
-            /**
-             * The ID of the zone.
-             */
-            public Builder zoneId(String zoneId) {
-                this.zoneId = zoneId;
-                return this;
-            }
-
-            /**
-             * The instance type.
-             */
-            public Builder instanceType(String instanceType) {
-                this.instanceType = instanceType;
-                return this;
-            }
-
-            /**
-             * The number of privileged attribute types.
+             * Count.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -251,10 +178,50 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of the instance.
+             * DiskCategory.
+             */
+            public Builder diskCategory(String diskCategory) {
+                this.diskCategory = diskCategory;
+                return this;
+            }
+
+            /**
+             * ExpiredTime.
+             */
+            public Builder expiredTime(String expiredTime) {
+                this.expiredTime = expiredTime;
+                return this;
+            }
+
+            /**
+             * InstanceChargeType.
              */
             public Builder instanceChargeType(String instanceChargeType) {
                 this.instanceChargeType = instanceChargeType;
+                return this;
+            }
+
+            /**
+             * InstanceType.
+             */
+            public Builder instanceType(String instanceType) {
+                this.instanceType = instanceType;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            /**
+             * ZoneId.
+             */
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
                 return this;
             }
 
@@ -345,23 +312,7 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
             private AttributeValues attributeValues; 
 
             /**
-             * The quota category of resources in the specified region. Possible values:
-             * <p>
-             * 
-             * -instance-network-type: optional network type.
-             * -max-security-groups: the number of security groups.
-             * -max-elastic-network-interfaces: the number of Enis.
-             * -max-postpaid-instance-vcpu-count: the maximum number of vCPU cores for a pay-as-you-go instance.
-             * -max-spot-instance-vcpu-count: the maximum number of VCPUs in a preemptible instance.
-             * -used-postpaid-instance-vcpu-count: the number of vCPU cores of a pay-as-you-go instance.
-             * -used-spot-instance-vcpu-count: the number of vCPU cores of a preemptible instance.
-             * -max-postpaid-yundisk-capacity: the maximum capacity of a pay-as-you-go cloud disk used as a data disk.
-             * -used-postpaid-yundisk-capacity: the capacity of a pay-as-you-go cloud disk used as a data disk.
-             * -max-dedicated-hosts: the number of dedicated hosts.
-             * -supported-postpaid-instance-types: pay-as-you-go I/O optimized instance types.
-             * -max-axt-command-count: the number of cloud assistant commands.
-             * -max-axt-invocation-daily: the number of cloud assistant commands that can be executed per day.
-             * -real-name-authentication: indicates whether the account has completed real-name authentication.
+             * AttributeName.
              */
             public Builder attributeName(String attributeName) {
                 this.attributeName = attributeName;
@@ -369,7 +320,7 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of resource quotas.
+             * AttributeValues.
              */
             public Builder attributeValues(AttributeValues attributeValues) {
                 this.attributeValues = attributeValues;

@@ -12,9 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DetachDiskRequest</p>
  */
 public class DetachDiskRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("DeleteWithInstance")
+    private Boolean deleteWithInstance;
+
+    @Query
+    @NameInMap("DiskId")
+    @Validation(required = true)
+    private String diskId;
+
+    @Query
+    @NameInMap("InstanceId")
+    @Validation(required = true)
+    private String instanceId;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -32,30 +42,20 @@ public class DetachDiskRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
-    private String instanceId;
-
-    @Query
-    @NameInMap("DeleteWithInstance")
-    private Boolean deleteWithInstance;
-
-    @Query
-    @NameInMap("DiskId")
-    @Validation(required = true)
-    private String diskId;
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     private DetachDiskRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
+        this.deleteWithInstance = builder.deleteWithInstance;
+        this.diskId = builder.diskId;
+        this.instanceId = builder.instanceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.instanceId = builder.instanceId;
-        this.deleteWithInstance = builder.deleteWithInstance;
-        this.diskId = builder.diskId;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -72,10 +72,24 @@ public class DetachDiskRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return deleteWithInstance
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public Boolean getDeleteWithInstance() {
+        return this.deleteWithInstance;
+    }
+
+    /**
+     * @return diskId
+     */
+    public String getDiskId() {
+        return this.diskId;
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     /**
@@ -107,35 +121,21 @@ public class DetachDiskRequest extends Request {
     }
 
     /**
-     * @return instanceId
+     * @return sourceRegionId
      */
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    /**
-     * @return deleteWithInstance
-     */
-    public Boolean getDeleteWithInstance() {
-        return this.deleteWithInstance;
-    }
-
-    /**
-     * @return diskId
-     */
-    public String getDiskId() {
-        return this.diskId;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public static final class Builder extends Request.Builder<DetachDiskRequest, Builder> {
-        private String sourceRegionId; 
+        private Boolean deleteWithInstance; 
+        private String diskId; 
+        private String instanceId; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String instanceId; 
-        private Boolean deleteWithInstance; 
-        private String diskId; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -143,22 +143,40 @@ public class DetachDiskRequest extends Request {
 
         private Builder(DetachDiskRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
+            this.deleteWithInstance = request.deleteWithInstance;
+            this.diskId = request.diskId;
+            this.instanceId = request.instanceId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.instanceId = request.instanceId;
-            this.deleteWithInstance = request.deleteWithInstance;
-            this.diskId = request.diskId;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
-         * SourceRegionId.
+         * DeleteWithInstance.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder deleteWithInstance(Boolean deleteWithInstance) {
+            this.putQueryParameter("DeleteWithInstance", deleteWithInstance);
+            this.deleteWithInstance = deleteWithInstance;
+            return this;
+        }
+
+        /**
+         * DiskId.
+         */
+        public Builder diskId(String diskId) {
+            this.putQueryParameter("DiskId", diskId);
+            this.diskId = diskId;
+            return this;
+        }
+
+        /**
+         * InstanceId.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
             return this;
         }
 
@@ -172,7 +190,7 @@ public class DetachDiskRequest extends Request {
         }
 
         /**
-         * The ID of the resource master account, that is, the UID.
+         * OwnerId.
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -181,7 +199,7 @@ public class DetachDiskRequest extends Request {
         }
 
         /**
-         * The account name of the resource master account.
+         * ResourceOwnerAccount.
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
             this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
@@ -190,7 +208,7 @@ public class DetachDiskRequest extends Request {
         }
 
         /**
-         * The ID of the RAM user.
+         * ResourceOwnerId.
          */
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
@@ -199,40 +217,11 @@ public class DetachDiskRequest extends Request {
         }
 
         /**
-         * The ID of the ECS instance to be detached.
+         * SourceRegionId.
          */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * When you detach a system disk, the system disk is automatically released. Indicates whether the system disk is released at the same time when the ECS instance is released.
-         * <p>
-         * 
-         * -true: release.
-         * -false: not released. A cloud disk is converted to a pay-as-you-go data disk and is retained.
-         * 
-         * Default value: true
-         * 
-         * Note:
-         * 
-         * -This parameter is not supported for disks with multiple mount features enabled.
-         * -If the data disk is unmounted, the default value is "false ".
-         */
-        public Builder deleteWithInstance(Boolean deleteWithInstance) {
-            this.putQueryParameter("DeleteWithInstance", deleteWithInstance);
-            this.deleteWithInstance = deleteWithInstance;
-            return this;
-        }
-
-        /**
-         * The ID of the disk to be detached.
-         */
-        public Builder diskId(String diskId) {
-            this.putQueryParameter("DiskId", diskId);
-            this.diskId = diskId;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

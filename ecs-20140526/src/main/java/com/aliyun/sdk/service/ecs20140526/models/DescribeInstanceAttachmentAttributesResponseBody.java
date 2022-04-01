@@ -12,27 +12,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceAttachmentAttributesResponseBody</p>
  */
 public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
+    @NameInMap("Instances")
+    private Instances instances;
+
+    @NameInMap("PageNumber")
+    private Integer pageNumber;
+
     @NameInMap("PageSize")
     private Integer pageSize;
 
     @NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("PageNumber")
-    private Integer pageNumber;
-
     @NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("Instances")
-    private Instances instances;
-
     private DescribeInstanceAttachmentAttributesResponseBody(Builder builder) {
+        this.instances = builder.instances;
+        this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
-        this.pageNumber = builder.pageNumber;
         this.totalCount = builder.totalCount;
-        this.instances = builder.instances;
     }
 
     public static Builder builder() {
@@ -41,6 +41,20 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
 
     public static DescribeInstanceAttachmentAttributesResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return instances
+     */
+    public Instances getInstances() {
+        return this.instances;
+    }
+
+    /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     /**
@@ -58,51 +72,29 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
     }
 
     /**
-     * @return pageNumber
-     */
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    /**
      * @return totalCount
      */
     public Integer getTotalCount() {
         return this.totalCount;
     }
 
-    /**
-     * @return instances
-     */
-    public Instances getInstances() {
-        return this.instances;
-    }
-
     public static final class Builder {
+        private Instances instances; 
+        private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private Integer pageNumber; 
         private Integer totalCount; 
-        private Instances instances; 
 
         /**
-         * The number of entries to return on each page.
+         * Instances.
          */
-        public Builder pageSize(Integer pageSize) {
-            this.pageSize = pageSize;
+        public Builder instances(Instances instances) {
+            this.instances = instances;
             return this;
         }
 
         /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The page number of the instance status list.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -110,18 +102,26 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of records that meet the query criteria.
+         * PageSize.
          */
-        public Builder totalCount(Integer totalCount) {
-            this.totalCount = totalCount;
+        public Builder pageSize(Integer pageSize) {
+            this.pageSize = pageSize;
             return this;
         }
 
         /**
-         * A collection of private pool information that matches the instance.
+         * RequestId.
          */
-        public Builder instances(Instances instances) {
-            this.instances = instances;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
@@ -135,16 +135,16 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("PrivatePoolOptionsMatchCriteria")
-        private String privatePoolOptionsMatchCriteria;
-
         @NameInMap("PrivatePoolOptionsId")
         private String privatePoolOptionsId;
 
+        @NameInMap("PrivatePoolOptionsMatchCriteria")
+        private String privatePoolOptionsMatchCriteria;
+
         private Instance(Builder builder) {
             this.instanceId = builder.instanceId;
-            this.privatePoolOptionsMatchCriteria = builder.privatePoolOptionsMatchCriteria;
             this.privatePoolOptionsId = builder.privatePoolOptionsId;
+            this.privatePoolOptionsMatchCriteria = builder.privatePoolOptionsMatchCriteria;
         }
 
         public static Builder builder() {
@@ -163,26 +163,26 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * @return privatePoolOptionsMatchCriteria
-         */
-        public String getPrivatePoolOptionsMatchCriteria() {
-            return this.privatePoolOptionsMatchCriteria;
-        }
-
-        /**
          * @return privatePoolOptionsId
          */
         public String getPrivatePoolOptionsId() {
             return this.privatePoolOptionsId;
         }
 
+        /**
+         * @return privatePoolOptionsMatchCriteria
+         */
+        public String getPrivatePoolOptionsMatchCriteria() {
+            return this.privatePoolOptionsMatchCriteria;
+        }
+
         public static final class Builder {
             private String instanceId; 
-            private String privatePoolOptionsMatchCriteria; 
             private String privatePoolOptionsId; 
+            private String privatePoolOptionsMatchCriteria; 
 
             /**
-             * The ID of the instance.
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -190,23 +190,18 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The private pool matching mode of the instance. Possible values:
-             * <p>
-             * 
-             * -Open: Open mode. The instance automatically matches the open private pool.
-             * -Target: specifies the mode. The instance matches the specified private pool.
-             * -None: the mode is not used. The instance does not use a private pool.
+             * PrivatePoolOptionsId.
              */
-            public Builder privatePoolOptionsMatchCriteria(String privatePoolOptionsMatchCriteria) {
-                this.privatePoolOptionsMatchCriteria = privatePoolOptionsMatchCriteria;
+            public Builder privatePoolOptionsId(String privatePoolOptionsId) {
+                this.privatePoolOptionsId = privatePoolOptionsId;
                 return this;
             }
 
             /**
-             * The ID of the private pool. When "privatepooloptionsmatchbeautia" returns "Open", the private pool ID is the ID of the private pool allocated when the system automatically matches.
+             * PrivatePoolOptionsMatchCriteria.
              */
-            public Builder privatePoolOptionsId(String privatePoolOptionsId) {
-                this.privatePoolOptionsId = privatePoolOptionsId;
+            public Builder privatePoolOptionsMatchCriteria(String privatePoolOptionsMatchCriteria) {
+                this.privatePoolOptionsMatchCriteria = privatePoolOptionsMatchCriteria;
                 return this;
             }
 

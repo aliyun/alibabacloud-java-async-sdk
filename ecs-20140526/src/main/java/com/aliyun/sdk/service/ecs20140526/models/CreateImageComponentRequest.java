@@ -12,39 +12,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateImageComponentRequest</p>
  */
 public class CreateImageComponentRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
-    @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
-
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
-    @Query
-    @NameInMap("ResourceGroupId")
-    private String resourceGroupId;
-
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
-
-    @Query
-    @NameInMap("Name")
-    private String name;
-
-    @Query
-    @NameInMap("Description")
-    private String description;
-
-    @Query
-    @NameInMap("SystemType")
-    private String systemType;
-
     @Query
     @NameInMap("ClientToken")
     private String clientToken;
@@ -57,19 +24,67 @@ public class CreateImageComponentRequest extends Request {
     @NameInMap("Content")
     private String content;
 
+    @Query
+    @NameInMap("Description")
+    private String description;
+
+    @Query
+    @NameInMap("Name")
+    private String name;
+
+    @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
+
+    @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
+    @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
+    @Query
+    @NameInMap("SystemType")
+    private String systemType;
+
+    @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
     private CreateImageComponentRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
-        this.resourceOwnerId = builder.resourceOwnerId;
-        this.regionId = builder.regionId;
-        this.resourceGroupId = builder.resourceGroupId;
-        this.tag = builder.tag;
-        this.name = builder.name;
-        this.description = builder.description;
-        this.systemType = builder.systemType;
         this.clientToken = builder.clientToken;
         this.componentType = builder.componentType;
         this.content = builder.content;
+        this.description = builder.description;
+        this.name = builder.name;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.sourceRegionId = builder.sourceRegionId;
+        this.systemType = builder.systemType;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -83,62 +98,6 @@ public class CreateImageComponentRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
-     * @return resourceOwnerId
-     */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return resourceGroupId
-     */
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
-    }
-
-    /**
-     * @return tag
-     */
-    public java.util.List < Tag> getTag() {
-        return this.tag;
-    }
-
-    /**
-     * @return name
-     */
-    public String getName() {
-        return this.name;
-    }
-
-    /**
-     * @return description
-     */
-    public String getDescription() {
-        return this.description;
-    }
-
-    /**
-     * @return systemType
-     */
-    public String getSystemType() {
-        return this.systemType;
     }
 
     /**
@@ -162,18 +121,98 @@ public class CreateImageComponentRequest extends Request {
         return this.content;
     }
 
+    /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
+    }
+
+    /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
+    /**
+     * @return systemType
+     */
+    public String getSystemType() {
+        return this.systemType;
+    }
+
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
     public static final class Builder extends Request.Builder<CreateImageComponentRequest, Builder> {
-        private String sourceRegionId; 
-        private Long resourceOwnerId; 
-        private String regionId; 
-        private String resourceGroupId; 
-        private java.util.List < Tag> tag; 
-        private String name; 
-        private String description; 
-        private String systemType; 
         private String clientToken; 
         private String componentType; 
         private String content; 
+        private String description; 
+        private String name; 
+        private String ownerAccount; 
+        private Long ownerId; 
+        private String regionId; 
+        private String resourceGroupId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String sourceRegionId; 
+        private String systemType; 
+        private java.util.List < Tag> tag; 
 
         private Builder() {
             super();
@@ -181,18 +220,120 @@ public class CreateImageComponentRequest extends Request {
 
         private Builder(CreateImageComponentRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
-            this.resourceOwnerId = request.resourceOwnerId;
-            this.regionId = request.regionId;
-            this.resourceGroupId = request.resourceGroupId;
-            this.tag = request.tag;
-            this.name = request.name;
-            this.description = request.description;
-            this.systemType = request.systemType;
             this.clientToken = request.clientToken;
             this.componentType = request.componentType;
             this.content = request.content;
+            this.description = request.description;
+            this.name = request.name;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceRegionId = request.sourceRegionId;
+            this.systemType = request.systemType;
+            this.tag = request.tag;
         } 
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * ComponentType.
+         */
+        public Builder componentType(String componentType) {
+            this.putQueryParameter("ComponentType", componentType);
+            this.componentType = componentType;
+            return this;
+        }
+
+        /**
+         * Content.
+         */
+        public Builder content(String content) {
+            this.putQueryParameter("Content", content);
+            this.content = content;
+            return this;
+        }
+
+        /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
+            return this;
+        }
+
+        /**
+         * Name.
+         */
+        public Builder name(String name) {
+            this.putQueryParameter("Name", name);
+            this.name = name;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
 
         /**
          * SourceRegionId.
@@ -204,67 +345,7 @@ public class CreateImageComponentRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account (primary account).
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * The ID of the region to which the instance belongs. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The ID of the enterprise resource group.
-         */
-        public Builder resourceGroupId(String resourceGroupId) {
-            this.putQueryParameter("ResourceGroupId", resourceGroupId);
-            this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-
-        /**
-         * The list of tags.
-         */
-        public Builder tag(java.util.List < Tag> tag) {
-            this.putQueryParameter("Tag", tag);
-            this.tag = tag;
-            return this;
-        }
-
-        /**
-         * The name of the component. The description must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https. It can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).
-         * <p>
-         * 
-         * > If "Name" is not set, "ImageComponentId" is returned by default.
-         */
-        public Builder name(String name) {
-            this.putQueryParameter("Name", name);
-            this.name = name;
-            return this;
-        }
-
-        /**
-         * The description. The description must be 2 to 256 characters in length and cannot start with http:// or https.
-         */
-        public Builder description(String description) {
-            this.putQueryParameter("Description", description);
-            this.description = description;
-            return this;
-        }
-
-        /**
-         * The operating system supported by the component. Currently, only Linux is supported. Set the value to Linux.
-         * <p>
-         * 
-         * Default value: Linux
+         * SystemType.
          */
         public Builder systemType(String systemType) {
             this.putQueryParameter("SystemType", systemType);
@@ -273,38 +354,11 @@ public class CreateImageComponentRequest extends Request {
         }
 
         /**
-         * Ensure the idempotence of the request. Generate a parameter value from your client. Make sure that the value is unique among different requests. **ClientToken** supports only ASCII characters and cannot exceed 64 characters. For more information, see [how to ensure idempotence](~~ 25693 ~~).
+         * Tag.
          */
-        public Builder clientToken(String clientToken) {
-            this.putQueryParameter("ClientToken", clientToken);
-            this.clientToken = clientToken;
-            return this;
-        }
-
-        /**
-         * The type of the component. Currently, only Image building components are supported. Set the value to Build.
-         * <p>
-         * 
-         * Default value: Build
-         */
-        public Builder componentType(String componentType) {
-            this.putQueryParameter("ComponentType", componentType);
-            this.componentType = componentType;
-            return this;
-        }
-
-        /**
-         * <props = "china"> component content. It consists of multiple commands. The maximum number of commands cannot exceed 127. For more information about supported commands and command formats, see [commands supported by image building service](~~ 200206 ~~). </props>
-         * <p>
-         * 
-         * <props = "intl"> component content. It consists of multiple commands. The maximum number of commands cannot exceed 127. </props>
-         * 
-         * <props = "partner"> component content. It consists of multiple commands. The maximum number of commands cannot exceed 127. </props>
-         * 
-         */
-        public Builder content(String content) {
-            this.putQueryParameter("Content", content);
-            this.content = content;
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
             return this;
         }
 
@@ -354,7 +408,7 @@ public class CreateImageComponentRequest extends Request {
             private String value; 
 
             /**
-             * 标签键。N的取值范围：1~20。一旦传入该值，则不允许为空字符串。最多支持128个字符，不能以aliyun和acs:开头，不能包含http://或者https://。
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -362,7 +416,7 @@ public class CreateImageComponentRequest extends Request {
             }
 
             /**
-             * 标签值。N的取值范围：1~20。一旦传入该值，可以为空字符串。最多支持128个字符，不能以acs:开头，不能包含http://或者https://。
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -50,7 +50,7 @@ public class AllocatePublicIpAddressResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The public IP address of the instance.
+         * IpAddress.
          */
         public Builder ipAddress(String ipAddress) {
             this.ipAddress = ipAddress;
@@ -58,7 +58,7 @@ public class AllocatePublicIpAddressResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

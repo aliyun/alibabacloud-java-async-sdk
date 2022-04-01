@@ -13,57 +13,36 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeReservedInstancesRequest extends Request {
     @Query
-    @NameInMap("PageNumber")
-    private Integer pageNumber;
-
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
-
-    @Query
-    @NameInMap("LockReason")
-    private String lockReason;
+    @NameInMap("AllocationType")
+    private String allocationType;
 
     @Query
     @NameInMap("InstanceType")
     private String instanceType;
 
     @Query
-    @NameInMap("OfferingType")
-    private String offeringType;
-
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
-    @Query
     @NameInMap("InstanceTypeFamily")
     private String instanceTypeFamily;
 
     @Query
-    @NameInMap("ReservedInstanceId")
-    private java.util.List < String > reservedInstanceId;
+    @NameInMap("LockReason")
+    private String lockReason;
 
     @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
+    @NameInMap("OfferingType")
+    private String offeringType;
 
     @Query
-    @NameInMap("ReservedInstanceName")
-    private String reservedInstanceName;
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
 
     @Query
-    @NameInMap("ZoneId")
-    private String zoneId;
+    @NameInMap("OwnerId")
+    private Long ownerId;
 
     @Query
-    @NameInMap("AllocationType")
-    private String allocationType;
-
-    @Query
-    @NameInMap("Scope")
-    private String scope;
+    @NameInMap("PageNumber")
+    private Integer pageNumber;
 
     @Query
     @NameInMap("PageSize")
@@ -71,26 +50,62 @@ public class DescribeReservedInstancesRequest extends Request {
     private Integer pageSize;
 
     @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
+    @Query
+    @NameInMap("ReservedInstanceId")
+    private java.util.List < String > reservedInstanceId;
+
+    @Query
+    @NameInMap("ReservedInstanceName")
+    private String reservedInstanceName;
+
+    @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Query
+    @NameInMap("Scope")
+    private String scope;
+
+    @Query
     @NameInMap("Status")
     private java.util.List < String > status;
 
+    @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
+    @Query
+    @NameInMap("ZoneId")
+    private String zoneId;
+
     private DescribeReservedInstancesRequest(Builder builder) {
         super(builder);
-        this.pageNumber = builder.pageNumber;
-        this.tag = builder.tag;
-        this.lockReason = builder.lockReason;
-        this.instanceType = builder.instanceType;
-        this.offeringType = builder.offeringType;
-        this.regionId = builder.regionId;
-        this.instanceTypeFamily = builder.instanceTypeFamily;
-        this.reservedInstanceId = builder.reservedInstanceId;
-        this.resourceOwnerId = builder.resourceOwnerId;
-        this.reservedInstanceName = builder.reservedInstanceName;
-        this.zoneId = builder.zoneId;
         this.allocationType = builder.allocationType;
-        this.scope = builder.scope;
+        this.instanceType = builder.instanceType;
+        this.instanceTypeFamily = builder.instanceTypeFamily;
+        this.lockReason = builder.lockReason;
+        this.offeringType = builder.offeringType;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
+        this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.regionId = builder.regionId;
+        this.reservedInstanceId = builder.reservedInstanceId;
+        this.reservedInstanceName = builder.reservedInstanceName;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.scope = builder.scope;
         this.status = builder.status;
+        this.tag = builder.tag;
+        this.zoneId = builder.zoneId;
     }
 
     public static Builder builder() {
@@ -107,24 +122,10 @@ public class DescribeReservedInstancesRequest extends Request {
     }
 
     /**
-     * @return pageNumber
+     * @return allocationType
      */
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    /**
-     * @return tag
-     */
-    public java.util.List < Tag> getTag() {
-        return this.tag;
-    }
-
-    /**
-     * @return lockReason
-     */
-    public String getLockReason() {
-        return this.lockReason;
+    public String getAllocationType() {
+        return this.allocationType;
     }
 
     /**
@@ -135,20 +136,6 @@ public class DescribeReservedInstancesRequest extends Request {
     }
 
     /**
-     * @return offeringType
-     */
-    public String getOfferingType() {
-        return this.offeringType;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return instanceTypeFamily
      */
     public String getInstanceTypeFamily() {
@@ -156,45 +143,38 @@ public class DescribeReservedInstancesRequest extends Request {
     }
 
     /**
-     * @return reservedInstanceId
+     * @return lockReason
      */
-    public java.util.List < String > getReservedInstanceId() {
-        return this.reservedInstanceId;
+    public String getLockReason() {
+        return this.lockReason;
     }
 
     /**
-     * @return resourceOwnerId
+     * @return offeringType
      */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public String getOfferingType() {
+        return this.offeringType;
     }
 
     /**
-     * @return reservedInstanceName
+     * @return ownerAccount
      */
-    public String getReservedInstanceName() {
-        return this.reservedInstanceName;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     /**
-     * @return zoneId
+     * @return ownerId
      */
-    public String getZoneId() {
-        return this.zoneId;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     /**
-     * @return allocationType
+     * @return pageNumber
      */
-    public String getAllocationType() {
-        return this.allocationType;
-    }
-
-    /**
-     * @return scope
-     */
-    public String getScope() {
-        return this.scope;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     /**
@@ -205,28 +185,87 @@ public class DescribeReservedInstancesRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return reservedInstanceId
+     */
+    public java.util.List < String > getReservedInstanceId() {
+        return this.reservedInstanceId;
+    }
+
+    /**
+     * @return reservedInstanceName
+     */
+    public String getReservedInstanceName() {
+        return this.reservedInstanceName;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    /**
+     * @return scope
+     */
+    public String getScope() {
+        return this.scope;
+    }
+
+    /**
      * @return status
      */
     public java.util.List < String > getStatus() {
         return this.status;
     }
 
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
+     * @return zoneId
+     */
+    public String getZoneId() {
+        return this.zoneId;
+    }
+
     public static final class Builder extends Request.Builder<DescribeReservedInstancesRequest, Builder> {
-        private Integer pageNumber; 
-        private java.util.List < Tag> tag; 
-        private String lockReason; 
-        private String instanceType; 
-        private String offeringType; 
-        private String regionId; 
-        private String instanceTypeFamily; 
-        private java.util.List < String > reservedInstanceId; 
-        private Long resourceOwnerId; 
-        private String reservedInstanceName; 
-        private String zoneId; 
         private String allocationType; 
-        private String scope; 
+        private String instanceType; 
+        private String instanceTypeFamily; 
+        private String lockReason; 
+        private String offeringType; 
+        private String ownerAccount; 
+        private Long ownerId; 
+        private Integer pageNumber; 
         private Integer pageSize; 
+        private String regionId; 
+        private java.util.List < String > reservedInstanceId; 
+        private String reservedInstanceName; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String scope; 
         private java.util.List < String > status; 
+        private java.util.List < Tag> tag; 
+        private String zoneId; 
 
         private Builder() {
             super();
@@ -234,142 +273,28 @@ public class DescribeReservedInstancesRequest extends Request {
 
         private Builder(DescribeReservedInstancesRequest request) {
             super(request);
-            this.pageNumber = request.pageNumber;
-            this.tag = request.tag;
-            this.lockReason = request.lockReason;
-            this.instanceType = request.instanceType;
-            this.offeringType = request.offeringType;
-            this.regionId = request.regionId;
-            this.instanceTypeFamily = request.instanceTypeFamily;
-            this.reservedInstanceId = request.reservedInstanceId;
-            this.resourceOwnerId = request.resourceOwnerId;
-            this.reservedInstanceName = request.reservedInstanceName;
-            this.zoneId = request.zoneId;
             this.allocationType = request.allocationType;
-            this.scope = request.scope;
+            this.instanceType = request.instanceType;
+            this.instanceTypeFamily = request.instanceTypeFamily;
+            this.lockReason = request.lockReason;
+            this.offeringType = request.offeringType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.reservedInstanceId = request.reservedInstanceId;
+            this.reservedInstanceName = request.reservedInstanceName;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.scope = request.scope;
             this.status = request.status;
+            this.tag = request.tag;
+            this.zoneId = request.zoneId;
         } 
 
         /**
-         * The page number of the reserved instance List. Start value: 1.
-         * <p>
-         * 
-         * Default value: 1.
-         */
-        public Builder pageNumber(Integer pageNumber) {
-            this.putQueryParameter("PageNumber", pageNumber);
-            this.pageNumber = pageNumber;
-            return this;
-        }
-
-        /**
-         * Tag list
-         */
-        public Builder tag(java.util.List < Tag> tag) {
-            this.putQueryParameter("Tag", tag);
-            this.tag = tag;
-            return this;
-        }
-
-        /**
-         * The lock type. Valid values:
-         * <p>
-         * 
-         * -financial: The account is overdue or the service has expired.
-         * -security: security reasons
-         */
-        public Builder lockReason(String lockReason) {
-            this.putQueryParameter("LockReason", lockReason);
-            this.lockReason = lockReason;
-            return this;
-        }
-
-        /**
-         * The instance type. For more information, see [instance type family](~~ 25378 ~~).
-         */
-        public Builder instanceType(String instanceType) {
-            this.putQueryParameter("InstanceType", instanceType);
-            this.instanceType = instanceType;
-            return this;
-        }
-
-        /**
-         * The Payment type of the reserved instance. Valid values:
-         * <p>
-         * 
-         * -No Upfront: zero prepaid
-         * -Partial Upfront: Partial prepaid
-         * -All Upfront: full prepaid
-         */
-        public Builder offeringType(String offeringType) {
-            this.putQueryParameter("OfferingType", offeringType);
-            this.offeringType = offeringType;
-            return this;
-        }
-
-        /**
-         * The ID of the region to which the instance belongs. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The instance type family. For more information, see [instance type family](~~ 25378 ~~).
-         */
-        public Builder instanceTypeFamily(String instanceTypeFamily) {
-            this.putQueryParameter("InstanceTypeFamily", instanceTypeFamily);
-            this.instanceTypeFamily = instanceTypeFamily;
-            return this;
-        }
-
-        /**
-         * The ID of the reserved instance. Valid values of N: 1 to 100.
-         */
-        public Builder reservedInstanceId(java.util.List < String > reservedInstanceId) {
-            this.putQueryParameter("ReservedInstanceId", reservedInstanceId);
-            this.reservedInstanceId = reservedInstanceId;
-            return this;
-        }
-
-        /**
-         * The ID of the Alibaba Cloud primary account.
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * The name of the reserved instance.
-         */
-        public Builder reservedInstanceName(String reservedInstanceName) {
-            this.putQueryParameter("ReservedInstanceName", reservedInstanceName);
-            this.reservedInstanceName = reservedInstanceName;
-            return this;
-        }
-
-        /**
-         * The ID of the Zone to which the instance belongs. This parameter is required when the Scope parameter is set to Zone. For more information, see [DescribeZones](~~ 25610 ~~) for a list of zones.
-         */
-        public Builder zoneId(String zoneId) {
-            this.putQueryParameter("ZoneId", zoneId);
-            this.zoneId = zoneId;
-            return this;
-        }
-
-        /**
-         * The allocation type. Valid values:
-         * <p>
-         * 
-         * -Normal: queries Reserved Instances under the current account.
-         * -Shared: queries Reserved instances that have been Shared by primary and sub-accounts under the current account.
-         * 
-         * Default value: Normal
+         * AllocationType.
          */
         public Builder allocationType(String allocationType) {
             this.putQueryParameter("AllocationType", allocationType);
@@ -378,25 +303,70 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * The range of Reserved Instances. Valid values:
-         * <p>
-         * 
-         * -Region: Region
-         * -Zone: Zone
-         * 
-         * Default value: Region
+         * InstanceType.
          */
-        public Builder scope(String scope) {
-            this.putQueryParameter("Scope", scope);
-            this.scope = scope;
+        public Builder instanceType(String instanceType) {
+            this.putQueryParameter("InstanceType", instanceType);
+            this.instanceType = instanceType;
             return this;
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 100.
-         * <p>
-         * 
-         * Default value: 10
+         * InstanceTypeFamily.
+         */
+        public Builder instanceTypeFamily(String instanceTypeFamily) {
+            this.putQueryParameter("InstanceTypeFamily", instanceTypeFamily);
+            this.instanceTypeFamily = instanceTypeFamily;
+            return this;
+        }
+
+        /**
+         * LockReason.
+         */
+        public Builder lockReason(String lockReason) {
+            this.putQueryParameter("LockReason", lockReason);
+            this.lockReason = lockReason;
+            return this;
+        }
+
+        /**
+         * OfferingType.
+         */
+        public Builder offeringType(String offeringType) {
+            this.putQueryParameter("OfferingType", offeringType);
+            this.offeringType = offeringType;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * PageNumber.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -405,17 +375,83 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * The status of the reserved instance. Valid values of N: 1 to 100. Valid values:
-         * <p>
-         * 
-         * -Creating: Creating
-         * -Active: in validity period
-         * -Expired: Expired
-         * -Updating: the reserved instance properties are being changed.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ReservedInstanceId.
+         */
+        public Builder reservedInstanceId(java.util.List < String > reservedInstanceId) {
+            this.putQueryParameter("ReservedInstanceId", reservedInstanceId);
+            this.reservedInstanceId = reservedInstanceId;
+            return this;
+        }
+
+        /**
+         * ReservedInstanceName.
+         */
+        public Builder reservedInstanceName(String reservedInstanceName) {
+            this.putQueryParameter("ReservedInstanceName", reservedInstanceName);
+            this.reservedInstanceName = reservedInstanceName;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * Scope.
+         */
+        public Builder scope(String scope) {
+            this.putQueryParameter("Scope", scope);
+            this.scope = scope;
+            return this;
+        }
+
+        /**
+         * Status.
          */
         public Builder status(java.util.List < String > status) {
             this.putQueryParameter("Status", status);
             this.status = status;
+            return this;
+        }
+
+        /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
+         * ZoneId.
+         */
+        public Builder zoneId(String zoneId) {
+            this.putQueryParameter("ZoneId", zoneId);
+            this.zoneId = zoneId;
             return this;
         }
 
@@ -465,10 +501,7 @@ public class DescribeReservedInstancesRequest extends Request {
             private String value; 
 
             /**
-             * 预留实例券的标签键。N的取值范围：1~20。一旦传入该值，则不允许为空字符串。最多支持128个字符，不能以aliyun和acs:开头，不能包含http://或者https://。
-             * <p>
-             * 
-             * 使用一个标签过滤资源，查询到该标签下的资源数量不能超过1000个；使用多个标签过滤资源，查询到同时绑定了多个标签的资源数量不能超过1000个。如果资源数量超过1000个，请使用[ListTagResources](~~110425~~)接口进行查询。
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -476,7 +509,7 @@ public class DescribeReservedInstancesRequest extends Request {
             }
 
             /**
-             * 预留实例券的标签值。N的取值范围：1~20。一旦传入该值，允许为空字符串。最多支持128个字符，不能以acs:开头，不能包含http://或者https://。
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

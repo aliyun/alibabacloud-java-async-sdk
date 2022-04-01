@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RedeployInstanceResponseBody</p>
  */
 public class RedeployInstanceResponseBody extends TeaModel {
-    @NameInMap("TaskId")
-    private String taskId;
-
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("TaskId")
+    private String taskId;
+
     private RedeployInstanceResponseBody(Builder builder) {
-        this.taskId = builder.taskId;
         this.requestId = builder.requestId;
+        this.taskId = builder.taskId;
     }
 
     public static Builder builder() {
@@ -32,40 +32,36 @@ public class RedeployInstanceResponseBody extends TeaModel {
     }
 
     /**
-     * @return taskId
-     */
-    public String getTaskId() {
-        return this.taskId;
-    }
-
-    /**
      * @return requestId
      */
     public String getRequestId() {
         return this.requestId;
     }
 
+    /**
+     * @return taskId
+     */
+    public String getTaskId() {
+        return this.taskId;
+    }
+
     public static final class Builder {
-        private String taskId; 
         private String requestId; 
+        private String taskId; 
 
         /**
-         * The ID of the redeployment task.
-         * <p>
-         * 
-         * You can call the [DescribeTasks](~~ 25622 ~~) operation to query the migration results.
-         * 
+         * RequestId.
          */
-        public Builder taskId(String taskId) {
-            this.taskId = taskId;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * TaskId.
          */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
+        public Builder taskId(String taskId) {
+            this.taskId = taskId;
             return this;
         }
 

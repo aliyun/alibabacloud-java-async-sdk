@@ -12,19 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateElasticityAssuranceResponseBody</p>
  */
 public class CreateElasticityAssuranceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    private String requestId;
+    @NameInMap("OrderId")
+    private String orderId;
 
     @NameInMap("PrivatePoolOptionsId")
     private String privatePoolOptionsId;
 
-    @NameInMap("OrderId")
-    private String orderId;
+    @NameInMap("RequestId")
+    private String requestId;
 
     private CreateElasticityAssuranceResponseBody(Builder builder) {
-        this.requestId = builder.requestId;
-        this.privatePoolOptionsId = builder.privatePoolOptionsId;
         this.orderId = builder.orderId;
+        this.privatePoolOptionsId = builder.privatePoolOptionsId;
+        this.requestId = builder.requestId;
     }
 
     public static Builder builder() {
@@ -36,10 +36,10 @@ public class CreateElasticityAssuranceResponseBody extends TeaModel {
     }
 
     /**
-     * @return requestId
+     * @return orderId
      */
-    public String getRequestId() {
-        return this.requestId;
+    public String getOrderId() {
+        return this.orderId;
     }
 
     /**
@@ -50,27 +50,27 @@ public class CreateElasticityAssuranceResponseBody extends TeaModel {
     }
 
     /**
-     * @return orderId
+     * @return requestId
      */
-    public String getOrderId() {
-        return this.orderId;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static final class Builder {
-        private String requestId; 
-        private String privatePoolOptionsId; 
         private String orderId; 
+        private String privatePoolOptionsId; 
+        private String requestId; 
 
         /**
-         * The ID of the request.
+         * OrderId.
          */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
+        public Builder orderId(String orderId) {
+            this.orderId = orderId;
             return this;
         }
 
         /**
-         * The ID of the elastic protection service.
+         * PrivatePoolOptionsId.
          */
         public Builder privatePoolOptionsId(String privatePoolOptionsId) {
             this.privatePoolOptionsId = privatePoolOptionsId;
@@ -78,10 +78,10 @@ public class CreateElasticityAssuranceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the generated order.
+         * RequestId.
          */
-        public Builder orderId(String orderId) {
-            this.orderId = orderId;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 

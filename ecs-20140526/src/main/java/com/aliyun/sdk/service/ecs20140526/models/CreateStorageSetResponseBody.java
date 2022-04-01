@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateStorageSetResponseBody</p>
  */
 public class CreateStorageSetResponseBody extends TeaModel {
-    @NameInMap("StorageSetId")
-    private String storageSetId;
-
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("StorageSetId")
+    private String storageSetId;
+
     private CreateStorageSetResponseBody(Builder builder) {
-        this.storageSetId = builder.storageSetId;
         this.requestId = builder.requestId;
+        this.storageSetId = builder.storageSetId;
     }
 
     public static Builder builder() {
@@ -32,36 +32,36 @@ public class CreateStorageSetResponseBody extends TeaModel {
     }
 
     /**
-     * @return storageSetId
-     */
-    public String getStorageSetId() {
-        return this.storageSetId;
-    }
-
-    /**
      * @return requestId
      */
     public String getRequestId() {
         return this.requestId;
     }
 
+    /**
+     * @return storageSetId
+     */
+    public String getStorageSetId() {
+        return this.storageSetId;
+    }
+
     public static final class Builder {
-        private String storageSetId; 
         private String requestId; 
+        private String storageSetId; 
 
         /**
-         * The ID of the storage set.
+         * RequestId.
          */
-        public Builder storageSetId(String storageSetId) {
-            this.storageSetId = storageSetId;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * StorageSetId.
          */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
+        public Builder storageSetId(String storageSetId) {
+            this.storageSetId = storageSetId;
             return this;
         }
 

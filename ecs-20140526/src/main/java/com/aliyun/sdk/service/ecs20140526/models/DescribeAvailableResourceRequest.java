@@ -12,63 +12,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAvailableResourceRequest</p>
  */
 public class DescribeAvailableResourceRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
-
-    @Query
-    @NameInMap("SpotDuration")
-    @Validation(maximum = 6, minimum = 2)
-    private Integer spotDuration;
-
-    @Query
-    @NameInMap("Scope")
-    private String scope;
-
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
-    @Query
-    @NameInMap("InstanceChargeType")
-    private String instanceChargeType;
-
-    @Query
-    @NameInMap("SpotStrategy")
-    private String spotStrategy;
-
-    @Query
-    @NameInMap("IoOptimized")
-    private String ioOptimized;
-
-    @Query
-    @NameInMap("DedicatedHostId")
-    private String dedicatedHostId;
-
-    @Query
-    @NameInMap("InstanceType")
-    private String instanceType;
-
-    @Query
-    @NameInMap("SystemDiskCategory")
-    private String systemDiskCategory;
+    @NameInMap("Cores")
+    private Integer cores;
 
     @Query
     @NameInMap("DataDiskCategory")
     private String dataDiskCategory;
 
     @Query
-    @NameInMap("NetworkCategory")
-    private String networkCategory;
-
-    @Query
-    @NameInMap("Memory")
-    private Float memory;
+    @NameInMap("DedicatedHostId")
+    private String dedicatedHostId;
 
     @Query
     @NameInMap("DestinationResource")
@@ -76,12 +30,70 @@ public class DescribeAvailableResourceRequest extends Request {
     private String destinationResource;
 
     @Query
-    @NameInMap("Cores")
-    private Integer cores;
+    @NameInMap("InstanceChargeType")
+    private String instanceChargeType;
+
+    @Query
+    @NameInMap("InstanceType")
+    private String instanceType;
+
+    @Query
+    @NameInMap("IoOptimized")
+    private String ioOptimized;
+
+    @Query
+    @NameInMap("Memory")
+    private Float memory;
+
+    @Query
+    @NameInMap("NetworkCategory")
+    private String networkCategory;
+
+    @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
+
+    @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
+    @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
 
     @Query
     @NameInMap("ResourceType")
     private String resourceType;
+
+    @Query
+    @NameInMap("Scope")
+    private String scope;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
+    @Query
+    @NameInMap("SpotDuration")
+    @Validation(maximum = 6, minimum = 2)
+    private Integer spotDuration;
+
+    @Query
+    @NameInMap("SpotStrategy")
+    private String spotStrategy;
+
+    @Query
+    @NameInMap("SystemDiskCategory")
+    private String systemDiskCategory;
 
     @Query
     @NameInMap("ZoneId")
@@ -89,23 +101,26 @@ public class DescribeAvailableResourceRequest extends Request {
 
     private DescribeAvailableResourceRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
-        this.resourceOwnerId = builder.resourceOwnerId;
-        this.spotDuration = builder.spotDuration;
-        this.scope = builder.scope;
-        this.regionId = builder.regionId;
-        this.instanceChargeType = builder.instanceChargeType;
-        this.spotStrategy = builder.spotStrategy;
-        this.ioOptimized = builder.ioOptimized;
-        this.dedicatedHostId = builder.dedicatedHostId;
-        this.instanceType = builder.instanceType;
-        this.systemDiskCategory = builder.systemDiskCategory;
-        this.dataDiskCategory = builder.dataDiskCategory;
-        this.networkCategory = builder.networkCategory;
-        this.memory = builder.memory;
-        this.destinationResource = builder.destinationResource;
         this.cores = builder.cores;
+        this.dataDiskCategory = builder.dataDiskCategory;
+        this.dedicatedHostId = builder.dedicatedHostId;
+        this.destinationResource = builder.destinationResource;
+        this.instanceChargeType = builder.instanceChargeType;
+        this.instanceType = builder.instanceType;
+        this.ioOptimized = builder.ioOptimized;
+        this.memory = builder.memory;
+        this.networkCategory = builder.networkCategory;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
         this.resourceType = builder.resourceType;
+        this.scope = builder.scope;
+        this.sourceRegionId = builder.sourceRegionId;
+        this.spotDuration = builder.spotDuration;
+        this.spotStrategy = builder.spotStrategy;
+        this.systemDiskCategory = builder.systemDiskCategory;
         this.zoneId = builder.zoneId;
     }
 
@@ -123,80 +138,10 @@ public class DescribeAvailableResourceRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return cores
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
-     * @return resourceOwnerId
-     */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    /**
-     * @return spotDuration
-     */
-    public Integer getSpotDuration() {
-        return this.spotDuration;
-    }
-
-    /**
-     * @return scope
-     */
-    public String getScope() {
-        return this.scope;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return instanceChargeType
-     */
-    public String getInstanceChargeType() {
-        return this.instanceChargeType;
-    }
-
-    /**
-     * @return spotStrategy
-     */
-    public String getSpotStrategy() {
-        return this.spotStrategy;
-    }
-
-    /**
-     * @return ioOptimized
-     */
-    public String getIoOptimized() {
-        return this.ioOptimized;
-    }
-
-    /**
-     * @return dedicatedHostId
-     */
-    public String getDedicatedHostId() {
-        return this.dedicatedHostId;
-    }
-
-    /**
-     * @return instanceType
-     */
-    public String getInstanceType() {
-        return this.instanceType;
-    }
-
-    /**
-     * @return systemDiskCategory
-     */
-    public String getSystemDiskCategory() {
-        return this.systemDiskCategory;
+    public Integer getCores() {
+        return this.cores;
     }
 
     /**
@@ -207,17 +152,10 @@ public class DescribeAvailableResourceRequest extends Request {
     }
 
     /**
-     * @return networkCategory
+     * @return dedicatedHostId
      */
-    public String getNetworkCategory() {
-        return this.networkCategory;
-    }
-
-    /**
-     * @return memory
-     */
-    public Float getMemory() {
-        return this.memory;
+    public String getDedicatedHostId() {
+        return this.dedicatedHostId;
     }
 
     /**
@@ -228,10 +166,73 @@ public class DescribeAvailableResourceRequest extends Request {
     }
 
     /**
-     * @return cores
+     * @return instanceChargeType
      */
-    public Integer getCores() {
-        return this.cores;
+    public String getInstanceChargeType() {
+        return this.instanceChargeType;
+    }
+
+    /**
+     * @return instanceType
+     */
+    public String getInstanceType() {
+        return this.instanceType;
+    }
+
+    /**
+     * @return ioOptimized
+     */
+    public String getIoOptimized() {
+        return this.ioOptimized;
+    }
+
+    /**
+     * @return memory
+     */
+    public Float getMemory() {
+        return this.memory;
+    }
+
+    /**
+     * @return networkCategory
+     */
+    public String getNetworkCategory() {
+        return this.networkCategory;
+    }
+
+    /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     /**
@@ -242,6 +243,41 @@ public class DescribeAvailableResourceRequest extends Request {
     }
 
     /**
+     * @return scope
+     */
+    public String getScope() {
+        return this.scope;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
+    /**
+     * @return spotDuration
+     */
+    public Integer getSpotDuration() {
+        return this.spotDuration;
+    }
+
+    /**
+     * @return spotStrategy
+     */
+    public String getSpotStrategy() {
+        return this.spotStrategy;
+    }
+
+    /**
+     * @return systemDiskCategory
+     */
+    public String getSystemDiskCategory() {
+        return this.systemDiskCategory;
+    }
+
+    /**
      * @return zoneId
      */
     public String getZoneId() {
@@ -249,23 +285,26 @@ public class DescribeAvailableResourceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeAvailableResourceRequest, Builder> {
-        private String sourceRegionId; 
-        private Long resourceOwnerId; 
-        private Integer spotDuration; 
-        private String scope; 
-        private String regionId; 
-        private String instanceChargeType; 
-        private String spotStrategy; 
-        private String ioOptimized; 
-        private String dedicatedHostId; 
-        private String instanceType; 
-        private String systemDiskCategory; 
-        private String dataDiskCategory; 
-        private String networkCategory; 
-        private Float memory; 
-        private String destinationResource; 
         private Integer cores; 
+        private String dataDiskCategory; 
+        private String dedicatedHostId; 
+        private String destinationResource; 
+        private String instanceChargeType; 
+        private String instanceType; 
+        private String ioOptimized; 
+        private Float memory; 
+        private String networkCategory; 
+        private String ownerAccount; 
+        private Long ownerId; 
+        private String regionId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
         private String resourceType; 
+        private String scope; 
+        private String sourceRegionId; 
+        private Integer spotDuration; 
+        private String spotStrategy; 
+        private String systemDiskCategory; 
         private String zoneId; 
 
         private Builder() {
@@ -274,32 +313,143 @@ public class DescribeAvailableResourceRequest extends Request {
 
         private Builder(DescribeAvailableResourceRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
-            this.resourceOwnerId = request.resourceOwnerId;
-            this.spotDuration = request.spotDuration;
-            this.scope = request.scope;
-            this.regionId = request.regionId;
-            this.instanceChargeType = request.instanceChargeType;
-            this.spotStrategy = request.spotStrategy;
-            this.ioOptimized = request.ioOptimized;
-            this.dedicatedHostId = request.dedicatedHostId;
-            this.instanceType = request.instanceType;
-            this.systemDiskCategory = request.systemDiskCategory;
-            this.dataDiskCategory = request.dataDiskCategory;
-            this.networkCategory = request.networkCategory;
-            this.memory = request.memory;
-            this.destinationResource = request.destinationResource;
             this.cores = request.cores;
+            this.dataDiskCategory = request.dataDiskCategory;
+            this.dedicatedHostId = request.dedicatedHostId;
+            this.destinationResource = request.destinationResource;
+            this.instanceChargeType = request.instanceChargeType;
+            this.instanceType = request.instanceType;
+            this.ioOptimized = request.ioOptimized;
+            this.memory = request.memory;
+            this.networkCategory = request.networkCategory;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
             this.resourceType = request.resourceType;
+            this.scope = request.scope;
+            this.sourceRegionId = request.sourceRegionId;
+            this.spotDuration = request.spotDuration;
+            this.spotStrategy = request.spotStrategy;
+            this.systemDiskCategory = request.systemDiskCategory;
             this.zoneId = request.zoneId;
         } 
 
         /**
-         * SourceRegionId.
+         * Cores.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder cores(Integer cores) {
+            this.putQueryParameter("Cores", cores);
+            this.cores = cores;
+            return this;
+        }
+
+        /**
+         * DataDiskCategory.
+         */
+        public Builder dataDiskCategory(String dataDiskCategory) {
+            this.putQueryParameter("DataDiskCategory", dataDiskCategory);
+            this.dataDiskCategory = dataDiskCategory;
+            return this;
+        }
+
+        /**
+         * DedicatedHostId.
+         */
+        public Builder dedicatedHostId(String dedicatedHostId) {
+            this.putQueryParameter("DedicatedHostId", dedicatedHostId);
+            this.dedicatedHostId = dedicatedHostId;
+            return this;
+        }
+
+        /**
+         * DestinationResource.
+         */
+        public Builder destinationResource(String destinationResource) {
+            this.putQueryParameter("DestinationResource", destinationResource);
+            this.destinationResource = destinationResource;
+            return this;
+        }
+
+        /**
+         * InstanceChargeType.
+         */
+        public Builder instanceChargeType(String instanceChargeType) {
+            this.putQueryParameter("InstanceChargeType", instanceChargeType);
+            this.instanceChargeType = instanceChargeType;
+            return this;
+        }
+
+        /**
+         * InstanceType.
+         */
+        public Builder instanceType(String instanceType) {
+            this.putQueryParameter("InstanceType", instanceType);
+            this.instanceType = instanceType;
+            return this;
+        }
+
+        /**
+         * IoOptimized.
+         */
+        public Builder ioOptimized(String ioOptimized) {
+            this.putQueryParameter("IoOptimized", ioOptimized);
+            this.ioOptimized = ioOptimized;
+            return this;
+        }
+
+        /**
+         * Memory.
+         */
+        public Builder memory(Float memory) {
+            this.putQueryParameter("Memory", memory);
+            this.memory = memory;
+            return this;
+        }
+
+        /**
+         * NetworkCategory.
+         */
+        public Builder networkCategory(String networkCategory) {
+            this.putQueryParameter("NetworkCategory", networkCategory);
+            this.networkCategory = networkCategory;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
             return this;
         }
 
@@ -313,11 +463,11 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * SpotDuration.
+         * ResourceType.
          */
-        public Builder spotDuration(Integer spotDuration) {
-            this.putQueryParameter("SpotDuration", spotDuration);
-            this.spotDuration = spotDuration;
+        public Builder resourceType(String resourceType) {
+            this.putQueryParameter("ResourceType", resourceType);
+            this.resourceType = resourceType;
             return this;
         }
 
@@ -331,40 +481,25 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * The ID of the destination region. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
+         * SourceRegionId.
          */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 
         /**
-         * The billing method of the resource. For more information, see [billing Overview](~~ 25398 ~~). Valid values:
-         * <p>
-         * 
-         * -PrePaid: Subscription
-         * -PostPaid: pay-as-you-go
-         * 
-         * Default value: PostPaid
+         * SpotDuration.
          */
-        public Builder instanceChargeType(String instanceChargeType) {
-            this.putQueryParameter("InstanceChargeType", instanceChargeType);
-            this.instanceChargeType = instanceChargeType;
+        public Builder spotDuration(Integer spotDuration) {
+            this.putQueryParameter("SpotDuration", spotDuration);
+            this.spotDuration = spotDuration;
             return this;
         }
 
         /**
-         * The preemptible policy of the pay-as-you-go instance. Valid values:
-         * <p>
-         * 
-         * -NoSpot: a pay-as-you-go instance.
-         * -SpotWithPriceLimit: sets the maximum price for preemptible instances.
-         * -SpotAsPriceGo: The system automatically bids at the highest pay-as-you-go price.
-         * 
-         * Default value: NoSpot
-         * 
-         * The parameter InstanceChargeType is valid only when the parameter PostPaid is set to SpotStrategy.
+         * SpotStrategy.
          */
         public Builder spotStrategy(String spotStrategy) {
             this.putQueryParameter("SpotStrategy", spotStrategy);
@@ -373,55 +508,7 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * Indicates whether the instance is I/O optimized. Valid values:
-         * <p>
-         * 
-         * -none: Non-I/O optimized instance
-         * -optimized:I/O optimized instance
-         * 
-         * 
-         * Default value: optimized
-         */
-        public Builder ioOptimized(String ioOptimized) {
-            this.putQueryParameter("IoOptimized", ioOptimized);
-            this.ioOptimized = ioOptimized;
-            return this;
-        }
-
-        /**
-         * The ID of the dedicated host.
-         */
-        public Builder dedicatedHostId(String dedicatedHostId) {
-            this.putQueryParameter("DedicatedHostId", dedicatedHostId);
-            this.dedicatedHostId = dedicatedHostId;
-            return this;
-        }
-
-        /**
-         * The instance type. For more information, see [instance type family](~~ 25378 ~~). You can also call the [DescribeInstanceTypes](~~ 25620 ~~) API to obtain the latest specifications.
-         * <p>
-         * 
-         * If the parameter DestinationResource is set to SystemDisk, InstanceType is required.
-         */
-        public Builder instanceType(String instanceType) {
-            this.putQueryParameter("InstanceType", instanceType);
-            this.instanceType = instanceType;
-            return this;
-        }
-
-        /**
-         * The system disk type. Valid values:
-         * <p>
-         * 
-         * -cloud: basic cloud disk
-         * -cloud_efficiency: Ultra disk
-         * -cloud_ssd:SSD cloud disk
-         * -ephemeral_ssd: local SSD
-         * -cloud_essd:ESSD
-         * 
-         * Default value: cloud_efficiency
-         * 
-         * > If the parameter ResourceType is set to instance and the DestinationResource is set to DataDisk, the parameter SystemDiskCategory is required. If no parameter value is passed, the default value takes effect.
+         * SystemDiskCategory.
          */
         public Builder systemDiskCategory(String systemDiskCategory) {
             this.putQueryParameter("SystemDiskCategory", systemDiskCategory);
@@ -430,99 +517,7 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * The data disk type. Valid values:
-         * <p>
-         * 
-         * -cloud: basic cloud disk
-         * -cloud_efficiency: Ultra disk
-         * -cloud_ssd:SSD cloud disk
-         * -ephemeral_ssd: local SSD
-         * -cloud_essd:ESSD
-         */
-        public Builder dataDiskCategory(String dataDiskCategory) {
-            this.putQueryParameter("DataDiskCategory", dataDiskCategory);
-            this.dataDiskCategory = dataDiskCategory;
-            return this;
-        }
-
-        /**
-         * The network type. Valid values:
-         * <p>
-         * 
-         * -vpc: vpc
-         * -classic: classic Network
-         * 
-         */
-        public Builder networkCategory(String networkCategory) {
-            this.putQueryParameter("NetworkCategory", networkCategory);
-            this.networkCategory = networkCategory;
-            return this;
-        }
-
-        /**
-         * The memory size of the instance type. Unit: GiB. For more information, see [instance type family](~~ 25378 ~~).
-         * <p>
-         * 
-         * Memory is a valid parameter only when the DestinationResource is set to InstanceType.
-         */
-        public Builder memory(Float memory) {
-            this.putQueryParameter("Memory", memory);
-            this.memory = memory;
-            return this;
-        }
-
-        /**
-         * The type of the resource to query. Valid values:
-         * <p>
-         * 
-         * -Zone: Zone
-         * -IoOptimized:I/O optimization
-         * -InstanceType: instance type
-         * -SystemDisk: system disk
-         * -DataDisk: data disk
-         * -Network: Network type
-         * -ddh: Dedicated host
-         * 
-         * For more information about how to DestinationResource parameters, see the preceding operations.
-         */
-        public Builder destinationResource(String destinationResource) {
-            this.putQueryParameter("DestinationResource", destinationResource);
-            this.destinationResource = destinationResource;
-            return this;
-        }
-
-        /**
-         * The number of vCPU cores of the instance type. For more information, see [instance type family](~~ 25378 ~~).
-         * <p>
-         * 
-         * This parameter is valid only when the DestinationResource is set to InstanceType.
-         */
-        public Builder cores(Integer cores) {
-            this.putQueryParameter("Cores", cores);
-            this.cores = cores;
-            return this;
-        }
-
-        /**
-         * The type of the resource. Valid values:
-         * <p>
-         * 
-         * -instance:ECS instance
-         * -disk: Cloud disk
-         * -reservedinstance: Reserved Instance
-         * -ddh: Dedicated host
-         */
-        public Builder resourceType(String resourceType) {
-            this.putQueryParameter("ResourceType", resourceType);
-            this.resourceType = resourceType;
-            return this;
-        }
-
-        /**
-         * The ID of the zone.
-         * <p>
-         * 
-         * Default value: none, indicating that the zones in the current region are randomly allocated, and the resources that meet the query criteria in all zones in the region ("RegionId") are returned.
+         * ZoneId.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

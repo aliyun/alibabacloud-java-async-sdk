@@ -12,34 +12,38 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyInstanceVpcAttributeRequest</p>
  */
 public class ModifyInstanceVpcAttributeRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
-    @Query
-    @NameInMap("OwnerAccount")
-    private String ownerAccount;
-
-    @Query
-    @NameInMap("ResourceOwnerAccount")
-    private String resourceOwnerAccount;
-
-    @Query
-    @NameInMap("VpcId")
-    private String vpcId;
-
-    @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
 
     @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
+
+    @Query
+    @NameInMap("PrivateIpAddress")
+    private String privateIpAddress;
+
+    @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
+
+    @Query
+    @NameInMap("SecurityGroupId")
+    private java.util.List < String > securityGroupId;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     @Query
     @NameInMap("VSwitchId")
@@ -47,25 +51,21 @@ public class ModifyInstanceVpcAttributeRequest extends Request {
     private String vSwitchId;
 
     @Query
-    @NameInMap("PrivateIpAddress")
-    private String privateIpAddress;
-
-    @Query
-    @NameInMap("SecurityGroupId")
-    private java.util.List < String > securityGroupId;
+    @NameInMap("VpcId")
+    private String vpcId;
 
     private ModifyInstanceVpcAttributeRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
-        this.ownerAccount = builder.ownerAccount;
-        this.resourceOwnerAccount = builder.resourceOwnerAccount;
-        this.vpcId = builder.vpcId;
-        this.ownerId = builder.ownerId;
         this.instanceId = builder.instanceId;
-        this.resourceOwnerId = builder.resourceOwnerId;
-        this.vSwitchId = builder.vSwitchId;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
         this.privateIpAddress = builder.privateIpAddress;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
         this.securityGroupId = builder.securityGroupId;
+        this.sourceRegionId = builder.sourceRegionId;
+        this.vSwitchId = builder.vSwitchId;
+        this.vpcId = builder.vpcId;
     }
 
     public static Builder builder() {
@@ -82,10 +82,10 @@ public class ModifyInstanceVpcAttributeRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return instanceId
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     /**
@@ -96,45 +96,10 @@ public class ModifyInstanceVpcAttributeRequest extends Request {
     }
 
     /**
-     * @return resourceOwnerAccount
-     */
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    /**
-     * @return vpcId
-     */
-    public String getVpcId() {
-        return this.vpcId;
-    }
-
-    /**
      * @return ownerId
      */
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    /**
-     * @return instanceId
-     */
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    /**
-     * @return resourceOwnerId
-     */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    /**
-     * @return vSwitchId
-     */
-    public String getVSwitchId() {
-        return this.vSwitchId;
     }
 
     /**
@@ -145,23 +110,58 @@ public class ModifyInstanceVpcAttributeRequest extends Request {
     }
 
     /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    /**
      * @return securityGroupId
      */
     public java.util.List < String > getSecurityGroupId() {
         return this.securityGroupId;
     }
 
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
+    /**
+     * @return vSwitchId
+     */
+    public String getVSwitchId() {
+        return this.vSwitchId;
+    }
+
+    /**
+     * @return vpcId
+     */
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
     public static final class Builder extends Request.Builder<ModifyInstanceVpcAttributeRequest, Builder> {
-        private String sourceRegionId; 
-        private String ownerAccount; 
-        private String resourceOwnerAccount; 
-        private String vpcId; 
-        private Long ownerId; 
         private String instanceId; 
-        private Long resourceOwnerId; 
-        private String vSwitchId; 
+        private String ownerAccount; 
+        private Long ownerId; 
         private String privateIpAddress; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
         private java.util.List < String > securityGroupId; 
+        private String sourceRegionId; 
+        private String vSwitchId; 
+        private String vpcId; 
 
         private Builder() {
             super();
@@ -169,24 +169,24 @@ public class ModifyInstanceVpcAttributeRequest extends Request {
 
         private Builder(ModifyInstanceVpcAttributeRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
-            this.ownerAccount = request.ownerAccount;
-            this.resourceOwnerAccount = request.resourceOwnerAccount;
-            this.vpcId = request.vpcId;
-            this.ownerId = request.ownerId;
             this.instanceId = request.instanceId;
-            this.resourceOwnerId = request.resourceOwnerId;
-            this.vSwitchId = request.vSwitchId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
             this.privateIpAddress = request.privateIpAddress;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
             this.securityGroupId = request.securityGroupId;
+            this.sourceRegionId = request.sourceRegionId;
+            this.vSwitchId = request.vSwitchId;
+            this.vpcId = request.vpcId;
         } 
 
         /**
-         * SourceRegionId.
+         * InstanceId.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
             return this;
         }
 
@@ -200,25 +200,7 @@ public class ModifyInstanceVpcAttributeRequest extends Request {
         }
 
         /**
-         * The account name of the resource master account.
-         */
-        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
-            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-            this.resourceOwnerAccount = resourceOwnerAccount;
-            return this;
-        }
-
-        /**
-         * The target VPC ID.
-         */
-        public Builder vpcId(String vpcId) {
-            this.putQueryParameter("VpcId", vpcId);
-            this.vpcId = vpcId;
-            return this;
-        }
-
-        /**
-         * The ID of the RAM user.
+         * OwnerId.
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -227,44 +209,7 @@ public class ModifyInstanceVpcAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * The ID of the resource master account, that is, the UID.
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * The ID of the vSwitch.
-         * <p>
-         * 
-         * -If the input ID is the current vSwitch of the instance, the instance does not change the vSwitch.
-         * -If the input ID is a new vSwitch and the parameter "VpcId" is empty, the new and old vswitches must belong to the same zone and VPC.
-         * -If the "VpcId" parameter is not empty, the vswitch ID specified by this parameter must belong to VpcId and belong to the same zone as the original vswitch.
-         */
-        public Builder vSwitchId(String vSwitchId) {
-            this.putQueryParameter("VSwitchId", vSwitchId);
-            this.vSwitchId = vSwitchId;
-            return this;
-        }
-
-        /**
-         * The new private ip address.
-         * <p>
-         * 
-         * > "PrivateIpAddress" depends on "VSwitchId". The specified ip address must be in the subnet cidr block of the vswitch.
-         * 
-         * Default value: if this value is not specified, the vswitch subnet cidr block is randomly allocated.
+         * PrivateIpAddress.
          */
         public Builder privateIpAddress(String privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
@@ -273,15 +218,56 @@ public class ModifyInstanceVpcAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the security group to which the instance belongs after the VPC is modified. This parameter must be specified only when the "VpcId" parameter is specified.
-         * <p>
-         * -The security group type must be the same.
-         * -The list of security groups to which the instance is modified. It can be one or more. The value range of N in the parameter depends on the limit that the instance can join the security group. For more information, see [limits](~~ 25412 ~~).
-         * -The security group of the VPC ECS instance must belong to the VPC where the "VpcId" belongs.
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * SecurityGroupId.
          */
         public Builder securityGroupId(java.util.List < String > securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
             this.securityGroupId = securityGroupId;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
+
+        /**
+         * VSwitchId.
+         */
+        public Builder vSwitchId(String vSwitchId) {
+            this.putQueryParameter("VSwitchId", vSwitchId);
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+
+        /**
+         * VpcId.
+         */
+        public Builder vpcId(String vpcId) {
+            this.putQueryParameter("VpcId", vpcId);
+            this.vpcId = vpcId;
             return this;
         }
 

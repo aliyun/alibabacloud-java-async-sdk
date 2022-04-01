@@ -12,27 +12,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDedicatedHostClustersResponseBody</p>
  */
 public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
+    @NameInMap("DedicatedHostClusters")
+    private DedicatedHostClusters dedicatedHostClusters;
+
+    @NameInMap("PageNumber")
+    private Integer pageNumber;
+
     @NameInMap("PageSize")
     private Integer pageSize;
 
     @NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("PageNumber")
-    private Integer pageNumber;
-
     @NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("DedicatedHostClusters")
-    private DedicatedHostClusters dedicatedHostClusters;
-
     private DescribeDedicatedHostClustersResponseBody(Builder builder) {
+        this.dedicatedHostClusters = builder.dedicatedHostClusters;
+        this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
-        this.pageNumber = builder.pageNumber;
         this.totalCount = builder.totalCount;
-        this.dedicatedHostClusters = builder.dedicatedHostClusters;
     }
 
     public static Builder builder() {
@@ -41,6 +41,20 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
 
     public static DescribeDedicatedHostClustersResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return dedicatedHostClusters
+     */
+    public DedicatedHostClusters getDedicatedHostClusters() {
+        return this.dedicatedHostClusters;
+    }
+
+    /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     /**
@@ -58,51 +72,29 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
     }
 
     /**
-     * @return pageNumber
-     */
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    /**
      * @return totalCount
      */
     public Integer getTotalCount() {
         return this.totalCount;
     }
 
-    /**
-     * @return dedicatedHostClusters
-     */
-    public DedicatedHostClusters getDedicatedHostClusters() {
-        return this.dedicatedHostClusters;
-    }
-
     public static final class Builder {
+        private DedicatedHostClusters dedicatedHostClusters; 
+        private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private Integer pageNumber; 
         private Integer totalCount; 
-        private DedicatedHostClusters dedicatedHostClusters; 
 
         /**
-         * The number of entries to return on each page.
+         * DedicatedHostClusters.
          */
-        public Builder pageSize(Integer pageSize) {
-            this.pageSize = pageSize;
+        public Builder dedicatedHostClusters(DedicatedHostClusters dedicatedHostClusters) {
+            this.dedicatedHostClusters = dedicatedHostClusters;
             return this;
         }
 
         /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The page number of the DDH cluster status list.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -110,18 +102,26 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of dedicated hosts.
+         * PageSize.
          */
-        public Builder totalCount(Integer totalCount) {
-            this.totalCount = totalCount;
+        public Builder pageSize(Integer pageSize) {
+            this.pageSize = pageSize;
             return this;
         }
 
         /**
-         * An array of the statuses of one or more DDH clusters.
+         * RequestId.
          */
-        public Builder dedicatedHostClusters(DedicatedHostClusters dedicatedHostClusters) {
-            this.dedicatedHostClusters = dedicatedHostClusters;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
@@ -131,162 +131,121 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
 
     } 
 
-    public static class Tag extends TeaModel {
-        @NameInMap("TagValue")
-        private String tagValue;
+    public static class AvailableInstanceType extends TeaModel {
+        @NameInMap("AvailableInstanceCapacity")
+        private Integer availableInstanceCapacity;
 
-        @NameInMap("TagKey")
-        private String tagKey;
+        @NameInMap("InstanceType")
+        private String instanceType;
 
-        private Tag(Builder builder) {
-            this.tagValue = builder.tagValue;
-            this.tagKey = builder.tagKey;
+        private AvailableInstanceType(Builder builder) {
+            this.availableInstanceCapacity = builder.availableInstanceCapacity;
+            this.instanceType = builder.instanceType;
         }
 
         public static Builder builder() {
             return new Builder();
         }
 
-        public static Tag create() {
+        public static AvailableInstanceType create() {
             return builder().build();
         }
 
         /**
-         * @return tagValue
+         * @return availableInstanceCapacity
          */
-        public String getTagValue() {
-            return this.tagValue;
+        public Integer getAvailableInstanceCapacity() {
+            return this.availableInstanceCapacity;
         }
 
         /**
-         * @return tagKey
+         * @return instanceType
          */
-        public String getTagKey() {
-            return this.tagKey;
+        public String getInstanceType() {
+            return this.instanceType;
         }
 
         public static final class Builder {
-            private String tagValue; 
-            private String tagKey; 
+            private Integer availableInstanceCapacity; 
+            private String instanceType; 
 
             /**
-             * The tag value of the DDH cluster.
+             * AvailableInstanceCapacity.
              */
-            public Builder tagValue(String tagValue) {
-                this.tagValue = tagValue;
+            public Builder availableInstanceCapacity(Integer availableInstanceCapacity) {
+                this.availableInstanceCapacity = availableInstanceCapacity;
                 return this;
             }
 
             /**
-             * The tag key of the DDH cluster.
+             * InstanceType.
              */
-            public Builder tagKey(String tagKey) {
-                this.tagKey = tagKey;
+            public Builder instanceType(String instanceType) {
+                this.instanceType = instanceType;
                 return this;
             }
 
-            public Tag build() {
-                return new Tag(this);
+            public AvailableInstanceType build() {
+                return new AvailableInstanceType(this);
             } 
 
         } 
 
     }
-    public static class Tags extends TeaModel {
-        @NameInMap("Tag")
-        private java.util.List < Tag> tag;
+    public static class AvailableInstanceTypes extends TeaModel {
+        @NameInMap("AvailableInstanceType")
+        private java.util.List < AvailableInstanceType> availableInstanceType;
 
-        private Tags(Builder builder) {
-            this.tag = builder.tag;
+        private AvailableInstanceTypes(Builder builder) {
+            this.availableInstanceType = builder.availableInstanceType;
         }
 
         public static Builder builder() {
             return new Builder();
         }
 
-        public static Tags create() {
+        public static AvailableInstanceTypes create() {
             return builder().build();
         }
 
         /**
-         * @return tag
+         * @return availableInstanceType
          */
-        public java.util.List < Tag> getTag() {
-            return this.tag;
+        public java.util.List < AvailableInstanceType> getAvailableInstanceType() {
+            return this.availableInstanceType;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List < AvailableInstanceType> availableInstanceType; 
 
             /**
-             * Tag.
+             * AvailableInstanceType.
              */
-            public Builder tag(java.util.List < Tag> tag) {
-                this.tag = tag;
+            public Builder availableInstanceType(java.util.List < AvailableInstanceType> availableInstanceType) {
+                this.availableInstanceType = availableInstanceType;
                 return this;
             }
 
-            public Tags build() {
-                return new Tags(this);
-            } 
-
-        } 
-
-    }
-    public static class DedicatedHostIds extends TeaModel {
-        @NameInMap("DedicatedHostId")
-        private java.util.List < String > dedicatedHostId;
-
-        private DedicatedHostIds(Builder builder) {
-            this.dedicatedHostId = builder.dedicatedHostId;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static DedicatedHostIds create() {
-            return builder().build();
-        }
-
-        /**
-         * @return dedicatedHostId
-         */
-        public java.util.List < String > getDedicatedHostId() {
-            return this.dedicatedHostId;
-        }
-
-        public static final class Builder {
-            private java.util.List < String > dedicatedHostId; 
-
-            /**
-             * DedicatedHostId.
-             */
-            public Builder dedicatedHostId(java.util.List < String > dedicatedHostId) {
-                this.dedicatedHostId = dedicatedHostId;
-                return this;
-            }
-
-            public DedicatedHostIds build() {
-                return new DedicatedHostIds(this);
+            public AvailableInstanceTypes build() {
+                return new AvailableInstanceTypes(this);
             } 
 
         } 
 
     }
     public static class LocalStorageCapacity extends TeaModel {
-        @NameInMap("DataDiskCategory")
-        private String dataDiskCategory;
-
         @NameInMap("AvailableDisk")
         private Integer availableDisk;
+
+        @NameInMap("DataDiskCategory")
+        private String dataDiskCategory;
 
         @NameInMap("TotalDisk")
         private Integer totalDisk;
 
         private LocalStorageCapacity(Builder builder) {
-            this.dataDiskCategory = builder.dataDiskCategory;
             this.availableDisk = builder.availableDisk;
+            this.dataDiskCategory = builder.dataDiskCategory;
             this.totalDisk = builder.totalDisk;
         }
 
@@ -299,17 +258,17 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
         }
 
         /**
-         * @return dataDiskCategory
-         */
-        public String getDataDiskCategory() {
-            return this.dataDiskCategory;
-        }
-
-        /**
          * @return availableDisk
          */
         public Integer getAvailableDisk() {
             return this.availableDisk;
+        }
+
+        /**
+         * @return dataDiskCategory
+         */
+        public String getDataDiskCategory() {
+            return this.dataDiskCategory;
         }
 
         /**
@@ -320,26 +279,12 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private String dataDiskCategory; 
             private Integer availableDisk; 
+            private String dataDiskCategory; 
             private Integer totalDisk; 
 
             /**
-             * The data disk type. Possible values:
-             * <p>
-             * -cloud: basic cloud disk
-             * -cloud_efficiency: Ultra disk
-             * -cloud_ssd:SSD cloud disk
-             * -ephemeral_ssd: local SSD
-             * -cloud_essd:ESSD
-             */
-            public Builder dataDiskCategory(String dataDiskCategory) {
-                this.dataDiskCategory = dataDiskCategory;
-                return this;
-            }
-
-            /**
-             * The size of the available local disk. Unit: GiB
+             * AvailableDisk.
              */
             public Builder availableDisk(Integer availableDisk) {
                 this.availableDisk = availableDisk;
@@ -347,7 +292,15 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The total size of the local disk. Unit: GiB
+             * DataDiskCategory.
+             */
+            public Builder dataDiskCategory(String dataDiskCategory) {
+                this.dataDiskCategory = dataDiskCategory;
+                return this;
+            }
+
+            /**
+             * TotalDisk.
              */
             public Builder totalDisk(Integer totalDisk) {
                 this.totalDisk = totalDisk;
@@ -403,11 +356,17 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
 
     }
     public static class DedicatedHostClusterCapacity extends TeaModel {
-        @NameInMap("AvailableVcpus")
-        private Integer availableVcpus;
+        @NameInMap("AvailableInstanceTypes")
+        private AvailableInstanceTypes availableInstanceTypes;
 
         @NameInMap("AvailableMemory")
         private Integer availableMemory;
+
+        @NameInMap("AvailableVcpus")
+        private Integer availableVcpus;
+
+        @NameInMap("LocalStorageCapacities")
+        private LocalStorageCapacities localStorageCapacities;
 
         @NameInMap("TotalMemory")
         private Integer totalMemory;
@@ -415,15 +374,13 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
         @NameInMap("TotalVcpus")
         private Integer totalVcpus;
 
-        @NameInMap("LocalStorageCapacities")
-        private LocalStorageCapacities localStorageCapacities;
-
         private DedicatedHostClusterCapacity(Builder builder) {
-            this.availableVcpus = builder.availableVcpus;
+            this.availableInstanceTypes = builder.availableInstanceTypes;
             this.availableMemory = builder.availableMemory;
+            this.availableVcpus = builder.availableVcpus;
+            this.localStorageCapacities = builder.localStorageCapacities;
             this.totalMemory = builder.totalMemory;
             this.totalVcpus = builder.totalVcpus;
-            this.localStorageCapacities = builder.localStorageCapacities;
         }
 
         public static Builder builder() {
@@ -435,10 +392,10 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
         }
 
         /**
-         * @return availableVcpus
+         * @return availableInstanceTypes
          */
-        public Integer getAvailableVcpus() {
-            return this.availableVcpus;
+        public AvailableInstanceTypes getAvailableInstanceTypes() {
+            return this.availableInstanceTypes;
         }
 
         /**
@@ -446,6 +403,20 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
          */
         public Integer getAvailableMemory() {
             return this.availableMemory;
+        }
+
+        /**
+         * @return availableVcpus
+         */
+        public Integer getAvailableVcpus() {
+            return this.availableVcpus;
+        }
+
+        /**
+         * @return localStorageCapacities
+         */
+        public LocalStorageCapacities getLocalStorageCapacities() {
+            return this.localStorageCapacities;
         }
 
         /**
@@ -462,30 +433,24 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             return this.totalVcpus;
         }
 
-        /**
-         * @return localStorageCapacities
-         */
-        public LocalStorageCapacities getLocalStorageCapacities() {
-            return this.localStorageCapacities;
-        }
-
         public static final class Builder {
-            private Integer availableVcpus; 
+            private AvailableInstanceTypes availableInstanceTypes; 
             private Integer availableMemory; 
+            private Integer availableVcpus; 
+            private LocalStorageCapacities localStorageCapacities; 
             private Integer totalMemory; 
             private Integer totalVcpus; 
-            private LocalStorageCapacities localStorageCapacities; 
 
             /**
-             * The number of available vCPU.
+             * AvailableInstanceTypes.
              */
-            public Builder availableVcpus(Integer availableVcpus) {
-                this.availableVcpus = availableVcpus;
+            public Builder availableInstanceTypes(AvailableInstanceTypes availableInstanceTypes) {
+                this.availableInstanceTypes = availableInstanceTypes;
                 return this;
             }
 
             /**
-             * The amount of available memory. Unit: GiB
+             * AvailableMemory.
              */
             public Builder availableMemory(Integer availableMemory) {
                 this.availableMemory = availableMemory;
@@ -493,7 +458,23 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The total memory size. Unit: GiB
+             * AvailableVcpus.
+             */
+            public Builder availableVcpus(Integer availableVcpus) {
+                this.availableVcpus = availableVcpus;
+                return this;
+            }
+
+            /**
+             * LocalStorageCapacities.
+             */
+            public Builder localStorageCapacities(LocalStorageCapacities localStorageCapacities) {
+                this.localStorageCapacities = localStorageCapacities;
+                return this;
+            }
+
+            /**
+             * TotalMemory.
              */
             public Builder totalMemory(Integer totalMemory) {
                 this.totalMemory = totalMemory;
@@ -501,18 +482,10 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of VCPUs.
+             * TotalVcpus.
              */
             public Builder totalVcpus(Integer totalVcpus) {
                 this.totalVcpus = totalVcpus;
-                return this;
-            }
-
-            /**
-             * The local storage capacity.
-             */
-            public Builder localStorageCapacities(LocalStorageCapacities localStorageCapacities) {
-                this.localStorageCapacities = localStorageCapacities;
                 return this;
             }
 
@@ -523,44 +496,187 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
         } 
 
     }
+    public static class DedicatedHostIds extends TeaModel {
+        @NameInMap("DedicatedHostId")
+        private java.util.List < String > dedicatedHostId;
+
+        private DedicatedHostIds(Builder builder) {
+            this.dedicatedHostId = builder.dedicatedHostId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DedicatedHostIds create() {
+            return builder().build();
+        }
+
+        /**
+         * @return dedicatedHostId
+         */
+        public java.util.List < String > getDedicatedHostId() {
+            return this.dedicatedHostId;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > dedicatedHostId; 
+
+            /**
+             * DedicatedHostId.
+             */
+            public Builder dedicatedHostId(java.util.List < String > dedicatedHostId) {
+                this.dedicatedHostId = dedicatedHostId;
+                return this;
+            }
+
+            public DedicatedHostIds build() {
+                return new DedicatedHostIds(this);
+            } 
+
+        } 
+
+    }
+    public static class Tag extends TeaModel {
+        @NameInMap("TagKey")
+        private String tagKey;
+
+        @NameInMap("TagValue")
+        private String tagValue;
+
+        private Tag(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            /**
+             * TagKey.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * TagValue.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
+    public static class Tags extends TeaModel {
+        @NameInMap("Tag")
+        private java.util.List < Tag> tag;
+
+        private Tags(Builder builder) {
+            this.tag = builder.tag;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tag
+         */
+        public java.util.List < Tag> getTag() {
+            return this.tag;
+        }
+
+        public static final class Builder {
+            private java.util.List < Tag> tag; 
+
+            /**
+             * Tag.
+             */
+            public Builder tag(java.util.List < Tag> tag) {
+                this.tag = tag;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class DedicatedHostCluster extends TeaModel {
-        @NameInMap("Description")
-        private String description;
+        @NameInMap("DedicatedHostClusterCapacity")
+        private DedicatedHostClusterCapacity dedicatedHostClusterCapacity;
 
         @NameInMap("DedicatedHostClusterId")
         private String dedicatedHostClusterId;
 
-        @NameInMap("ResourceGroupId")
-        private String resourceGroupId;
-
-        @NameInMap("ZoneId")
-        private String zoneId;
-
-        @NameInMap("RegionId")
-        private String regionId;
-
         @NameInMap("DedicatedHostClusterName")
         private String dedicatedHostClusterName;
-
-        @NameInMap("Tags")
-        private Tags tags;
 
         @NameInMap("DedicatedHostIds")
         private DedicatedHostIds dedicatedHostIds;
 
-        @NameInMap("DedicatedHostClusterCapacity")
-        private DedicatedHostClusterCapacity dedicatedHostClusterCapacity;
+        @NameInMap("Description")
+        private String description;
+
+        @NameInMap("RegionId")
+        private String regionId;
+
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
+        @NameInMap("Tags")
+        private Tags tags;
+
+        @NameInMap("ZoneId")
+        private String zoneId;
 
         private DedicatedHostCluster(Builder builder) {
-            this.description = builder.description;
-            this.dedicatedHostClusterId = builder.dedicatedHostClusterId;
-            this.resourceGroupId = builder.resourceGroupId;
-            this.zoneId = builder.zoneId;
-            this.regionId = builder.regionId;
-            this.dedicatedHostClusterName = builder.dedicatedHostClusterName;
-            this.tags = builder.tags;
-            this.dedicatedHostIds = builder.dedicatedHostIds;
             this.dedicatedHostClusterCapacity = builder.dedicatedHostClusterCapacity;
+            this.dedicatedHostClusterId = builder.dedicatedHostClusterId;
+            this.dedicatedHostClusterName = builder.dedicatedHostClusterName;
+            this.dedicatedHostIds = builder.dedicatedHostIds;
+            this.description = builder.description;
+            this.regionId = builder.regionId;
+            this.resourceGroupId = builder.resourceGroupId;
+            this.tags = builder.tags;
+            this.zoneId = builder.zoneId;
         }
 
         public static Builder builder() {
@@ -572,10 +688,10 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
         }
 
         /**
-         * @return description
+         * @return dedicatedHostClusterCapacity
          */
-        public String getDescription() {
-            return this.description;
+        public DedicatedHostClusterCapacity getDedicatedHostClusterCapacity() {
+            return this.dedicatedHostClusterCapacity;
         }
 
         /**
@@ -586,38 +702,10 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
         }
 
         /**
-         * @return resourceGroupId
-         */
-        public String getResourceGroupId() {
-            return this.resourceGroupId;
-        }
-
-        /**
-         * @return zoneId
-         */
-        public String getZoneId() {
-            return this.zoneId;
-        }
-
-        /**
-         * @return regionId
-         */
-        public String getRegionId() {
-            return this.regionId;
-        }
-
-        /**
          * @return dedicatedHostClusterName
          */
         public String getDedicatedHostClusterName() {
             return this.dedicatedHostClusterName;
-        }
-
-        /**
-         * @return tags
-         */
-        public Tags getTags() {
-            return this.tags;
         }
 
         /**
@@ -628,33 +716,61 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
         }
 
         /**
-         * @return dedicatedHostClusterCapacity
+         * @return description
          */
-        public DedicatedHostClusterCapacity getDedicatedHostClusterCapacity() {
-            return this.dedicatedHostClusterCapacity;
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
+         * @return tags
+         */
+        public Tags getTags() {
+            return this.tags;
+        }
+
+        /**
+         * @return zoneId
+         */
+        public String getZoneId() {
+            return this.zoneId;
         }
 
         public static final class Builder {
-            private String description; 
-            private String dedicatedHostClusterId; 
-            private String resourceGroupId; 
-            private String zoneId; 
-            private String regionId; 
-            private String dedicatedHostClusterName; 
-            private Tags tags; 
-            private DedicatedHostIds dedicatedHostIds; 
             private DedicatedHostClusterCapacity dedicatedHostClusterCapacity; 
+            private String dedicatedHostClusterId; 
+            private String dedicatedHostClusterName; 
+            private DedicatedHostIds dedicatedHostIds; 
+            private String description; 
+            private String regionId; 
+            private String resourceGroupId; 
+            private Tags tags; 
+            private String zoneId; 
 
             /**
-             * The description of the DDH cluster.
+             * DedicatedHostClusterCapacity.
              */
-            public Builder description(String description) {
-                this.description = description;
+            public Builder dedicatedHostClusterCapacity(DedicatedHostClusterCapacity dedicatedHostClusterCapacity) {
+                this.dedicatedHostClusterCapacity = dedicatedHostClusterCapacity;
                 return this;
             }
 
             /**
-             * The ID of the DDH cluster.
+             * DedicatedHostClusterId.
              */
             public Builder dedicatedHostClusterId(String dedicatedHostClusterId) {
                 this.dedicatedHostClusterId = dedicatedHostClusterId;
@@ -662,42 +778,10 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Resource Group of the DDH cluster.
-             */
-            public Builder resourceGroupId(String resourceGroupId) {
-                this.resourceGroupId = resourceGroupId;
-                return this;
-            }
-
-            /**
-             * The ID of the zone where the dedicated host cluster is located.
-             */
-            public Builder zoneId(String zoneId) {
-                this.zoneId = zoneId;
-                return this;
-            }
-
-            /**
-             * The region ID of the DDH cluster.
-             */
-            public Builder regionId(String regionId) {
-                this.regionId = regionId;
-                return this;
-            }
-
-            /**
-             * The name of the DDH cluster.
+             * DedicatedHostClusterName.
              */
             public Builder dedicatedHostClusterName(String dedicatedHostClusterName) {
                 this.dedicatedHostClusterName = dedicatedHostClusterName;
-                return this;
-            }
-
-            /**
-             * The tag of the DDH cluster.
-             */
-            public Builder tags(Tags tags) {
-                this.tags = tags;
                 return this;
             }
 
@@ -710,10 +794,42 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The capacity of the dedicated host cluster.
+             * Description.
              */
-            public Builder dedicatedHostClusterCapacity(DedicatedHostClusterCapacity dedicatedHostClusterCapacity) {
-                this.dedicatedHostClusterCapacity = dedicatedHostClusterCapacity;
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * RegionId.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(Tags tags) {
+                this.tags = tags;
+                return this;
+            }
+
+            /**
+             * ZoneId.
+             */
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
                 return this;
             }
 

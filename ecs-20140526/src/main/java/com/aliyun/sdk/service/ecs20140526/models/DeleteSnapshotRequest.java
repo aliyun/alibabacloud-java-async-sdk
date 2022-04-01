@@ -12,21 +12,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteSnapshotRequest</p>
  */
 public class DeleteSnapshotRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("Force")
+    private Boolean force;
 
     @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
 
     @Query
-    @NameInMap("ResourceOwnerAccount")
-    private String resourceOwnerAccount;
-
-    @Query
     @NameInMap("OwnerId")
     private Long ownerId;
+
+    @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
 
     @Query
     @NameInMap("ResourceOwnerId")
@@ -37,19 +37,19 @@ public class DeleteSnapshotRequest extends Request {
     @Validation(required = true)
     private String snapshotId;
 
-    @Query
-    @NameInMap("Force")
-    private Boolean force;
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     private DeleteSnapshotRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
+        this.force = builder.force;
         this.ownerAccount = builder.ownerAccount;
-        this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.ownerId = builder.ownerId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.snapshotId = builder.snapshotId;
-        this.force = builder.force;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -66,10 +66,10 @@ public class DeleteSnapshotRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return force
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public Boolean getForce() {
+        return this.force;
     }
 
     /**
@@ -80,17 +80,17 @@ public class DeleteSnapshotRequest extends Request {
     }
 
     /**
-     * @return resourceOwnerAccount
-     */
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    /**
      * @return ownerId
      */
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
     }
 
     /**
@@ -108,20 +108,20 @@ public class DeleteSnapshotRequest extends Request {
     }
 
     /**
-     * @return force
+     * @return sourceRegionId
      */
-    public Boolean getForce() {
-        return this.force;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public static final class Builder extends Request.Builder<DeleteSnapshotRequest, Builder> {
-        private String sourceRegionId; 
+        private Boolean force; 
         private String ownerAccount; 
-        private String resourceOwnerAccount; 
         private Long ownerId; 
+        private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String snapshotId; 
-        private Boolean force; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -129,21 +129,21 @@ public class DeleteSnapshotRequest extends Request {
 
         private Builder(DeleteSnapshotRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
+            this.force = request.force;
             this.ownerAccount = request.ownerAccount;
-            this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.snapshotId = request.snapshotId;
-            this.force = request.force;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
-         * SourceRegionId.
+         * Force.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder force(Boolean force) {
+            this.putQueryParameter("Force", force);
+            this.force = force;
             return this;
         }
 
@@ -157,16 +157,7 @@ public class DeleteSnapshotRequest extends Request {
         }
 
         /**
-         * The account name of the resource master account.
-         */
-        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
-            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-            this.resourceOwnerAccount = resourceOwnerAccount;
-            return this;
-        }
-
-        /**
-         * The ID of the RAM user.
+         * OwnerId.
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -175,7 +166,16 @@ public class DeleteSnapshotRequest extends Request {
         }
 
         /**
-         * The ID of the resource master account, that is, the UID.
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
          */
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
@@ -184,7 +184,7 @@ public class DeleteSnapshotRequest extends Request {
         }
 
         /**
-         * The ID of the snapshot.
+         * SnapshotId.
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);
@@ -193,18 +193,11 @@ public class DeleteSnapshotRequest extends Request {
         }
 
         /**
-         * Specifies whether to forcibly delete snapshots that have been used to create cloud disks. Valid values:
-         * <p>
-         * 
-         * -true: forced deletion. After the disk is forcibly deleted, it cannot be reinitialized.
-         * 
-         * -false: does not force deletion.
-         * 
-         * Default value: false
+         * SourceRegionId.
          */
-        public Builder force(Boolean force) {
-            this.putQueryParameter("Force", force);
-            this.force = force;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

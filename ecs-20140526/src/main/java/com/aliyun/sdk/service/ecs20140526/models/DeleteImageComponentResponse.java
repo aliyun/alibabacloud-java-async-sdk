@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteDiskReplicaPairResponse} extends {@link TeaModel}
+ * {@link DeleteImageComponentResponse} extends {@link TeaModel}
  *
- * <p>DeleteDiskReplicaPairResponse</p>
+ * <p>DeleteImageComponentResponse</p>
  */
-public class DeleteDiskReplicaPairResponse extends Response {
+public class DeleteImageComponentResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private DeleteDiskReplicaPairResponseBody body;
+    private DeleteImageComponentResponseBody body;
 
-    private DeleteDiskReplicaPairResponse(BuilderImpl builder) {
+    private DeleteImageComponentResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static DeleteDiskReplicaPairResponse create() {
+    public static DeleteImageComponentResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class DeleteDiskReplicaPairResponse extends Response {
     /**
      * @return body
      */
-    public DeleteDiskReplicaPairResponseBody getBody() {
+    public DeleteImageComponentResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DeleteDiskReplicaPairResponse, Builder> {
+    public interface Builder extends Response.Builder<DeleteImageComponentResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(DeleteDiskReplicaPairResponseBody body);
+        Builder body(DeleteImageComponentResponseBody body);
 
         @Override
-        DeleteDiskReplicaPairResponse build();
+        DeleteImageComponentResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DeleteDiskReplicaPairResponse, Builder>
+            extends Response.BuilderImpl<DeleteImageComponentResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private DeleteDiskReplicaPairResponseBody body; 
+        private DeleteImageComponentResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DeleteDiskReplicaPairResponse response) {
+        private BuilderImpl(DeleteImageComponentResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class DeleteDiskReplicaPairResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DeleteDiskReplicaPairResponseBody body) {
+        public Builder body(DeleteImageComponentResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DeleteDiskReplicaPairResponse build() {
-            return new DeleteDiskReplicaPairResponse(this);
+        public DeleteImageComponentResponse build() {
+            return new DeleteImageComponentResponse(this);
         } 
 
     } 

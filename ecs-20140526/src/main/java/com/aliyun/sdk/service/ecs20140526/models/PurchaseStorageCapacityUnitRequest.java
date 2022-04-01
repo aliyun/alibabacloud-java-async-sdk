@@ -13,25 +13,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class PurchaseStorageCapacityUnitRequest extends Request {
     @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
-
-    @Query
-    @NameInMap("FromApp")
-    private String fromApp;
-
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
-
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
-    @Query
-    @NameInMap("Name")
-    private String name;
+    @NameInMap("Amount")
+    @Validation(maximum = 20, minimum = 1)
+    private Integer amount;
 
     @Query
     @NameInMap("Capacity")
@@ -39,12 +23,28 @@ public class PurchaseStorageCapacityUnitRequest extends Request {
     private Integer capacity;
 
     @Query
+    @NameInMap("ClientToken")
+    private String clientToken;
+
+    @Query
     @NameInMap("Description")
     private String description;
 
     @Query
-    @NameInMap("StartTime")
-    private String startTime;
+    @NameInMap("FromApp")
+    private String fromApp;
+
+    @Query
+    @NameInMap("Name")
+    private String name;
+
+    @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
 
     @Query
     @NameInMap("Period")
@@ -55,28 +55,43 @@ public class PurchaseStorageCapacityUnitRequest extends Request {
     private String periodUnit;
 
     @Query
-    @NameInMap("ClientToken")
-    private String clientToken;
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
 
     @Query
-    @NameInMap("Amount")
-    @Validation(maximum = 20, minimum = 1)
-    private Integer amount;
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Query
+    @NameInMap("StartTime")
+    private String startTime;
+
+    @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
 
     private PurchaseStorageCapacityUnitRequest(Builder builder) {
         super(builder);
-        this.resourceOwnerId = builder.resourceOwnerId;
-        this.fromApp = builder.fromApp;
-        this.tag = builder.tag;
-        this.regionId = builder.regionId;
-        this.name = builder.name;
+        this.amount = builder.amount;
         this.capacity = builder.capacity;
+        this.clientToken = builder.clientToken;
         this.description = builder.description;
-        this.startTime = builder.startTime;
+        this.fromApp = builder.fromApp;
+        this.name = builder.name;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
-        this.clientToken = builder.clientToken;
-        this.amount = builder.amount;
+        this.regionId = builder.regionId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.startTime = builder.startTime;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -93,38 +108,10 @@ public class PurchaseStorageCapacityUnitRequest extends Request {
     }
 
     /**
-     * @return resourceOwnerId
+     * @return amount
      */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    /**
-     * @return fromApp
-     */
-    public String getFromApp() {
-        return this.fromApp;
-    }
-
-    /**
-     * @return tag
-     */
-    public java.util.List < Tag> getTag() {
-        return this.tag;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return name
-     */
-    public String getName() {
-        return this.name;
+    public Integer getAmount() {
+        return this.amount;
     }
 
     /**
@@ -135,6 +122,13 @@ public class PurchaseStorageCapacityUnitRequest extends Request {
     }
 
     /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
      * @return description
      */
     public String getDescription() {
@@ -142,10 +136,31 @@ public class PurchaseStorageCapacityUnitRequest extends Request {
     }
 
     /**
-     * @return startTime
+     * @return fromApp
      */
-    public String getStartTime() {
-        return this.startTime;
+    public String getFromApp() {
+        return this.fromApp;
+    }
+
+    /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
+    }
+
+    /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     /**
@@ -163,32 +178,56 @@ public class PurchaseStorageCapacityUnitRequest extends Request {
     }
 
     /**
-     * @return clientToken
+     * @return regionId
      */
-    public String getClientToken() {
-        return this.clientToken;
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
-     * @return amount
+     * @return resourceOwnerAccount
      */
-    public Integer getAmount() {
-        return this.amount;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    /**
+     * @return startTime
+     */
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
     }
 
     public static final class Builder extends Request.Builder<PurchaseStorageCapacityUnitRequest, Builder> {
-        private Long resourceOwnerId; 
-        private String fromApp; 
-        private java.util.List < Tag> tag; 
-        private String regionId; 
-        private String name; 
+        private Integer amount; 
         private Integer capacity; 
+        private String clientToken; 
         private String description; 
-        private String startTime; 
+        private String fromApp; 
+        private String name; 
+        private String ownerAccount; 
+        private Long ownerId; 
         private Integer period; 
         private String periodUnit; 
-        private String clientToken; 
-        private Integer amount; 
+        private String regionId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String startTime; 
+        private java.util.List < Tag> tag; 
 
         private Builder() {
             super();
@@ -196,26 +235,56 @@ public class PurchaseStorageCapacityUnitRequest extends Request {
 
         private Builder(PurchaseStorageCapacityUnitRequest request) {
             super(request);
-            this.resourceOwnerId = request.resourceOwnerId;
-            this.fromApp = request.fromApp;
-            this.tag = request.tag;
-            this.regionId = request.regionId;
-            this.name = request.name;
+            this.amount = request.amount;
             this.capacity = request.capacity;
+            this.clientToken = request.clientToken;
             this.description = request.description;
-            this.startTime = request.startTime;
+            this.fromApp = request.fromApp;
+            this.name = request.name;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
             this.period = request.period;
             this.periodUnit = request.periodUnit;
-            this.clientToken = request.clientToken;
-            this.amount = request.amount;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.startTime = request.startTime;
+            this.tag = request.tag;
         } 
 
         /**
-         * ResourceOwnerId.
+         * Amount.
          */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
+        public Builder amount(Integer amount) {
+            this.putQueryParameter("Amount", amount);
+            this.amount = amount;
+            return this;
+        }
+
+        /**
+         * Capacity.
+         */
+        public Builder capacity(Integer capacity) {
+            this.putQueryParameter("Capacity", capacity);
+            this.capacity = capacity;
+            return this;
+        }
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
             return this;
         }
 
@@ -229,27 +298,7 @@ public class PurchaseStorageCapacityUnitRequest extends Request {
         }
 
         /**
-         * Tag.
-         */
-        public Builder tag(java.util.List < Tag> tag) {
-            this.putQueryParameter("Tag", tag);
-            this.tag = tag;
-            return this;
-        }
-
-        /**
-         * The ID of the region to which the SCU belongs. After the region is determined, SCU can only deduct the pay-as-you-go billing of cloud disks in the region. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The name of the SCU. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with "http:// "or "https. It can contain numbers, colons (:), underscores (_), and hyphens (-).
-         * <p>
-         * 
+         * Name.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -258,43 +307,25 @@ public class PurchaseStorageCapacityUnitRequest extends Request {
         }
 
         /**
-         * The capacity of the SCU. Unit: GiB. Valid values:{20, 40, 100, 200, 500, 1024, 2048, 5120, 10240, 20480, 51200}.
+         * OwnerAccount.
          */
-        public Builder capacity(Integer capacity) {
-            this.putQueryParameter("Capacity", capacity);
-            this.capacity = capacity;
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
             return this;
         }
 
         /**
-         * The description of the SCU. It must be 2 to 256 characters in length and cannot start with "http:// "or "https.
+         * OwnerId.
          */
-        public Builder description(String description) {
-            this.putQueryParameter("Description", description);
-            this.description = description;
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
             return this;
         }
 
         /**
-         * The effective time of the SCU. The validity period cannot exceed six months. The time follows the ISO 8601 standard and uses UTC +0. The format is yyyy-MM-ddTHH:mm:ssZ.
-         * <p>
-         * 
-         * Default value: none.
-         */
-        public Builder startTime(String startTime) {
-            this.putQueryParameter("StartTime", startTime);
-            this.startTime = startTime;
-            return this;
-        }
-
-        /**
-         * The validity period of the SCU. Valid values:
-         * <p>
-         * 
-         * -When PeriodUnit is set to Month, the valid value of the Period parameter is {1, 2, 3, 6}.
-         * -When PeriodUnit = Year, the valid value of the Period parameter is {1, 3, 5}.
-         * 
-         * Default value: 1.
+         * Period.
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -303,13 +334,7 @@ public class PurchaseStorageCapacityUnitRequest extends Request {
         }
 
         /**
-         * The validity period of the SCU. Unit. Valid values:
-         * <p>
-         * 
-         * -Month: Month
-         * -Year: Year
-         * 
-         * Default value: Month
+         * PeriodUnit.
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -318,23 +343,47 @@ public class PurchaseStorageCapacityUnitRequest extends Request {
         }
 
         /**
-         * Ensure the idempotence of the request. Generate a parameter value from your client. Make sure that the value is unique among different requests. "ClientToken" only supports ASCII characters and cannot exceed 64 characters in length. For more information, see [how to ensure idempotence](~~ 25693 ~~).
+         * RegionId.
          */
-        public Builder clientToken(String clientToken) {
-            this.putQueryParameter("ClientToken", clientToken);
-            this.clientToken = clientToken;
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
         /**
-         * The number of SCUs purchased. Valid values: 1 to 20.
-         * <p>
-         * 
-         * Default value: 1.
+         * ResourceOwnerAccount.
          */
-        public Builder amount(Integer amount) {
-            this.putQueryParameter("Amount", amount);
-            this.amount = amount;
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * StartTime.
+         */
+        public Builder startTime(String startTime) {
+            this.putQueryParameter("StartTime", startTime);
+            this.startTime = startTime;
+            return this;
+        }
+
+        /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
             return this;
         }
 
@@ -384,7 +433,7 @@ public class PurchaseStorageCapacityUnitRequest extends Request {
             private String value; 
 
             /**
-             * SCU的标签键。N表示可以设置的标签键数量，取值范围：1~20。一旦传入该值，则不允许为空字符串。最多支持128个字符，不能以`aliyun`或`acs:`开头，不能包含`http://`或`https://`。
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -392,7 +441,7 @@ public class PurchaseStorageCapacityUnitRequest extends Request {
             }
 
             /**
-             * SCU的标签值。N表示可以设置的标签值数量，且与`Tag.N.Key`的N对应。取值范围：1~20。一旦传入该值，可以为空字符串。最多支持128个字符，不能以`acs:`开头，不能包含`http://`或`https://`。
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

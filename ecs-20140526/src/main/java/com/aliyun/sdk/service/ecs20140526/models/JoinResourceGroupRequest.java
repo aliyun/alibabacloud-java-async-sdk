@@ -12,10 +12,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>JoinResourceGroupRequest</p>
  */
 public class JoinResourceGroupRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
@@ -23,14 +19,6 @@ public class JoinResourceGroupRequest extends Request {
     @Query
     @NameInMap("OwnerId")
     private Long ownerId;
-
-    @Query
-    @NameInMap("ResourceOwnerAccount")
-    private String resourceOwnerAccount;
-
-    @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
 
     @Query
     @NameInMap("RegionId")
@@ -45,20 +33,32 @@ public class JoinResourceGroupRequest extends Request {
     private String resourceId;
 
     @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Query
     @NameInMap("ResourceType")
     private String resourceType;
 
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     private JoinResourceGroupRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
-        this.resourceOwnerAccount = builder.resourceOwnerAccount;
-        this.resourceOwnerId = builder.resourceOwnerId;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceId = builder.resourceId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
         this.resourceType = builder.resourceType;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -75,13 +75,6 @@ public class JoinResourceGroupRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return ownerAccount
      */
     public String getOwnerAccount() {
@@ -93,20 +86,6 @@ public class JoinResourceGroupRequest extends Request {
      */
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    /**
-     * @return resourceOwnerAccount
-     */
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    /**
-     * @return resourceOwnerId
-     */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
     }
 
     /**
@@ -131,22 +110,43 @@ public class JoinResourceGroupRequest extends Request {
     }
 
     /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    /**
      * @return resourceType
      */
     public String getResourceType() {
         return this.resourceType;
     }
 
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
     public static final class Builder extends Request.Builder<JoinResourceGroupRequest, Builder> {
-        private String sourceRegionId; 
         private String ownerAccount; 
         private Long ownerId; 
-        private String resourceOwnerAccount; 
-        private Long resourceOwnerId; 
         private String regionId; 
         private String resourceGroupId; 
         private String resourceId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
         private String resourceType; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -154,25 +154,16 @@ public class JoinResourceGroupRequest extends Request {
 
         private Builder(JoinResourceGroupRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
-            this.resourceOwnerAccount = request.resourceOwnerAccount;
-            this.resourceOwnerId = request.resourceOwnerId;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.resourceId = request.resourceId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
             this.resourceType = request.resourceType;
+            this.sourceRegionId = request.sourceRegionId;
         } 
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
-            return this;
-        }
 
         /**
          * OwnerAccount.
@@ -184,7 +175,7 @@ public class JoinResourceGroupRequest extends Request {
         }
 
         /**
-         * The ID of the RAM user.
+         * OwnerId.
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -193,25 +184,7 @@ public class JoinResourceGroupRequest extends Request {
         }
 
         /**
-         * The account name of the resource master account.
-         */
-        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
-            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-            this.resourceOwnerAccount = resourceOwnerAccount;
-            return this;
-        }
-
-        /**
-         * The ID of the resource master account, that is, the UID.
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * The region ID of the resource. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -220,7 +193,7 @@ public class JoinResourceGroupRequest extends Request {
         }
 
         /**
-         * The ID of the target Resource Group.
+         * ResourceGroupId.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -229,7 +202,7 @@ public class JoinResourceGroupRequest extends Request {
         }
 
         /**
-         * The ID of the resource type. For example, if ResourceType = instance, ResourceId can be considered as InstanceId.
+         * ResourceId.
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -238,24 +211,38 @@ public class JoinResourceGroupRequest extends Request {
         }
 
         /**
-         * The type of the ECS resource. Valid values:
-         * <p>
-         * 
-         * -instance: instance
-         * -disk: block storage
-         * -snapshot: snapshot
-         * -image: image
-         * -securitygroup: Security Group
-         * -ddh: Dedicated host
-         * -eni: eni
-         * -keypair: key pair
-         * -launchtemplate: launch Template
-         * 
-         * The preceding parameter values are case sensitive.
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * ResourceType.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
             this.resourceType = resourceType;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

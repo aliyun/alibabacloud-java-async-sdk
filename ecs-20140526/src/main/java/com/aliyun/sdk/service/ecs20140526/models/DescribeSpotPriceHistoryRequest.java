@@ -12,9 +12,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSpotPriceHistoryRequest</p>
  */
 public class DescribeSpotPriceHistoryRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("EndTime")
+    private String endTime;
+
+    @Query
+    @NameInMap("InstanceType")
+    @Validation(required = true)
+    private String instanceType;
+
+    @Query
+    @NameInMap("IoOptimized")
+    private String ioOptimized;
+
+    @Query
+    @NameInMap("NetworkType")
+    @Validation(required = true)
+    private String networkType;
+
+    @Query
+    @NameInMap("OSType")
+    private String OSType;
+
+    @Query
+    @NameInMap("Offset")
+    private Integer offset;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -25,6 +47,11 @@ public class DescribeSpotPriceHistoryRequest extends Request {
     private Long ownerId;
 
     @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -32,24 +59,9 @@ public class DescribeSpotPriceHistoryRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
-    @Query
-    @NameInMap("ZoneId")
-    private String zoneId;
-
-    @Query
-    @NameInMap("NetworkType")
-    @Validation(required = true)
-    private String networkType;
-
-    @Query
-    @NameInMap("InstanceType")
-    @Validation(required = true)
-    private String instanceType;
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     @Query
     @NameInMap("SpotDuration")
@@ -60,38 +72,26 @@ public class DescribeSpotPriceHistoryRequest extends Request {
     private String startTime;
 
     @Query
-    @NameInMap("OSType")
-    private String OSType;
-
-    @Query
-    @NameInMap("IoOptimized")
-    private String ioOptimized;
-
-    @Query
-    @NameInMap("Offset")
-    private Integer offset;
-
-    @Query
-    @NameInMap("EndTime")
-    private String endTime;
+    @NameInMap("ZoneId")
+    private String zoneId;
 
     private DescribeSpotPriceHistoryRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
+        this.endTime = builder.endTime;
+        this.instanceType = builder.instanceType;
+        this.ioOptimized = builder.ioOptimized;
+        this.networkType = builder.networkType;
+        this.OSType = builder.OSType;
+        this.offset = builder.offset;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.regionId = builder.regionId;
-        this.zoneId = builder.zoneId;
-        this.networkType = builder.networkType;
-        this.instanceType = builder.instanceType;
+        this.sourceRegionId = builder.sourceRegionId;
         this.spotDuration = builder.spotDuration;
         this.startTime = builder.startTime;
-        this.OSType = builder.OSType;
-        this.ioOptimized = builder.ioOptimized;
-        this.offset = builder.offset;
-        this.endTime = builder.endTime;
+        this.zoneId = builder.zoneId;
     }
 
     public static Builder builder() {
@@ -108,10 +108,45 @@ public class DescribeSpotPriceHistoryRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return endTime
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    /**
+     * @return instanceType
+     */
+    public String getInstanceType() {
+        return this.instanceType;
+    }
+
+    /**
+     * @return ioOptimized
+     */
+    public String getIoOptimized() {
+        return this.ioOptimized;
+    }
+
+    /**
+     * @return networkType
+     */
+    public String getNetworkType() {
+        return this.networkType;
+    }
+
+    /**
+     * @return OSType
+     */
+    public String getOSType() {
+        return this.OSType;
+    }
+
+    /**
+     * @return offset
+     */
+    public Integer getOffset() {
+        return this.offset;
     }
 
     /**
@@ -129,6 +164,13 @@ public class DescribeSpotPriceHistoryRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -143,31 +185,10 @@ public class DescribeSpotPriceHistoryRequest extends Request {
     }
 
     /**
-     * @return regionId
+     * @return sourceRegionId
      */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return zoneId
-     */
-    public String getZoneId() {
-        return this.zoneId;
-    }
-
-    /**
-     * @return networkType
-     */
-    public String getNetworkType() {
-        return this.networkType;
-    }
-
-    /**
-     * @return instanceType
-     */
-    public String getInstanceType() {
-        return this.instanceType;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -185,49 +206,28 @@ public class DescribeSpotPriceHistoryRequest extends Request {
     }
 
     /**
-     * @return OSType
+     * @return zoneId
      */
-    public String getOSType() {
-        return this.OSType;
-    }
-
-    /**
-     * @return ioOptimized
-     */
-    public String getIoOptimized() {
-        return this.ioOptimized;
-    }
-
-    /**
-     * @return offset
-     */
-    public Integer getOffset() {
-        return this.offset;
-    }
-
-    /**
-     * @return endTime
-     */
-    public String getEndTime() {
-        return this.endTime;
+    public String getZoneId() {
+        return this.zoneId;
     }
 
     public static final class Builder extends Request.Builder<DescribeSpotPriceHistoryRequest, Builder> {
-        private String sourceRegionId; 
+        private String endTime; 
+        private String instanceType; 
+        private String ioOptimized; 
+        private String networkType; 
+        private String OSType; 
+        private Integer offset; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String regionId; 
-        private String zoneId; 
-        private String networkType; 
-        private String instanceType; 
+        private String sourceRegionId; 
         private Integer spotDuration; 
         private String startTime; 
-        private String OSType; 
-        private String ioOptimized; 
-        private Integer offset; 
-        private String endTime; 
+        private String zoneId; 
 
         private Builder() {
             super();
@@ -235,29 +235,74 @@ public class DescribeSpotPriceHistoryRequest extends Request {
 
         private Builder(DescribeSpotPriceHistoryRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
+            this.endTime = request.endTime;
+            this.instanceType = request.instanceType;
+            this.ioOptimized = request.ioOptimized;
+            this.networkType = request.networkType;
+            this.OSType = request.OSType;
+            this.offset = request.offset;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.regionId = request.regionId;
-            this.zoneId = request.zoneId;
-            this.networkType = request.networkType;
-            this.instanceType = request.instanceType;
+            this.sourceRegionId = request.sourceRegionId;
             this.spotDuration = request.spotDuration;
             this.startTime = request.startTime;
-            this.OSType = request.OSType;
-            this.ioOptimized = request.ioOptimized;
-            this.offset = request.offset;
-            this.endTime = request.endTime;
+            this.zoneId = request.zoneId;
         } 
 
         /**
-         * SourceRegionId.
+         * EndTime.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder endTime(String endTime) {
+            this.putQueryParameter("EndTime", endTime);
+            this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * InstanceType.
+         */
+        public Builder instanceType(String instanceType) {
+            this.putQueryParameter("InstanceType", instanceType);
+            this.instanceType = instanceType;
+            return this;
+        }
+
+        /**
+         * IoOptimized.
+         */
+        public Builder ioOptimized(String ioOptimized) {
+            this.putQueryParameter("IoOptimized", ioOptimized);
+            this.ioOptimized = ioOptimized;
+            return this;
+        }
+
+        /**
+         * NetworkType.
+         */
+        public Builder networkType(String networkType) {
+            this.putQueryParameter("NetworkType", networkType);
+            this.networkType = networkType;
+            return this;
+        }
+
+        /**
+         * OSType.
+         */
+        public Builder OSType(String OSType) {
+            this.putQueryParameter("OSType", OSType);
+            this.OSType = OSType;
+            return this;
+        }
+
+        /**
+         * Offset.
+         */
+        public Builder offset(Integer offset) {
+            this.putQueryParameter("Offset", offset);
+            this.offset = offset;
             return this;
         }
 
@@ -271,7 +316,7 @@ public class DescribeSpotPriceHistoryRequest extends Request {
         }
 
         /**
-         * The ID of the RAM user.
+         * OwnerId.
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -280,25 +325,7 @@ public class DescribeSpotPriceHistoryRequest extends Request {
         }
 
         /**
-         * The account name of the resource master account.
-         */
-        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
-            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-            this.resourceOwnerAccount = resourceOwnerAccount;
-            return this;
-        }
-
-        /**
-         * The ID of the resource master account, that is, the UID.
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * The ID of the region to which the instance belongs. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -307,45 +334,34 @@ public class DescribeSpotPriceHistoryRequest extends Request {
         }
 
         /**
-         * The ID of the zone.
+         * ResourceOwnerAccount.
          */
-        public Builder zoneId(String zoneId) {
-            this.putQueryParameter("ZoneId", zoneId);
-            this.zoneId = zoneId;
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
             return this;
         }
 
         /**
-         * The network type of the preemptible instance. Valid values:
-         * <p>
-         * 
-         * -classic: indicates that the network type of the preemptible instance is classic.
-         * 
-         * -vpc: indicates that the network type of the preemptible instance is vpc.
+         * ResourceOwnerId.
          */
-        public Builder networkType(String networkType) {
-            this.putQueryParameter("NetworkType", networkType);
-            this.networkType = networkType;
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
             return this;
         }
 
         /**
-         * The instance type.
+         * SourceRegionId.
          */
-        public Builder instanceType(String instanceType) {
-            this.putQueryParameter("InstanceType", instanceType);
-            this.instanceType = instanceType;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 
         /**
-         * The retention period of a preemptible instance. Unit: hours. Valid values: 0 to 6.
-         * <p>
-         * 
-         * -The retention period is 2 to 6 and is being invited for testing. If you want to activate the service, submit a ticket.
-         * -If the value is 0, the mode is not protected.
-         * 
-         * Default value: 1.
+         * SpotDuration.
          */
         public Builder spotDuration(Integer spotDuration) {
             this.putQueryParameter("SpotDuration", spotDuration);
@@ -354,10 +370,7 @@ public class DescribeSpotPriceHistoryRequest extends Request {
         }
 
         /**
-         * The start time for querying the historical price of a preemptible instance. The time follows the [ISO8601](~~ 25696 ~~) standard and uses UTC +0. The format is "yyyy-MM-ddTHH:mm:ssZ ".
-         * <p>
-         * 
-         * Default value: NULL. Null indicates the first 3 hours of the end time. The maximum value cannot exceed 30 days.
+         * StartTime.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -366,57 +379,11 @@ public class DescribeSpotPriceHistoryRequest extends Request {
         }
 
         /**
-         * The release platform type of the operating system. Valid values:
-         * <p>
-         * 
-         * -linux
-         * -Windows
+         * ZoneId.
          */
-        public Builder OSType(String OSType) {
-            this.putQueryParameter("OSType", OSType);
-            this.OSType = OSType;
-            return this;
-        }
-
-        /**
-         * Indicates whether the instance is I/O optimized. Valid values:
-         * <p>
-         * 
-         * -optimized: indicates that the preemptible instance is an I/O optimized instance.
-         * 
-         * -none: indicates that the preemptible instance is not I/O optimized.
-         * 
-         * Default value: none
-         * 
-         * Default value for other instance families: optimized
-         */
-        public Builder ioOptimized(String ioOptimized) {
-            this.putQueryParameter("IoOptimized", ioOptimized);
-            this.ioOptimized = ioOptimized;
-            return this;
-        }
-
-        /**
-         * The start row of the query.
-         * <p>
-         * 
-         * Default value: 0.
-         */
-        public Builder offset(Integer offset) {
-            this.putQueryParameter("Offset", offset);
-            this.offset = offset;
-            return this;
-        }
-
-        /**
-         * Query the end time of the historical price of a preemptible instance. The time follows the [ISO8601](~~ 25696 ~~) standard and uses UTC +0. The format is "yyyy-MM-ddTHH:mm:ssZ ".
-         * <p>
-         * 
-         * Default value: null. Null indicates the current time.
-         */
-        public Builder endTime(String endTime) {
-            this.putQueryParameter("EndTime", endTime);
-            this.endTime = endTime;
+        public Builder zoneId(String zoneId) {
+            this.putQueryParameter("ZoneId", zoneId);
+            this.zoneId = zoneId;
             return this;
         }
 

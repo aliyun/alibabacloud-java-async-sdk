@@ -12,9 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDiskMonitorDataRequest</p>
  */
 public class DescribeDiskMonitorDataRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("DiskId")
+    @Validation(required = true)
+    private String diskId;
+
+    @Query
+    @NameInMap("EndTime")
+    @Validation(required = true)
+    private String endTime;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -25,6 +31,10 @@ public class DescribeDiskMonitorDataRequest extends Request {
     private Long ownerId;
 
     @Query
+    @NameInMap("Period")
+    private Integer period;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -32,19 +42,9 @@ public class DescribeDiskMonitorDataRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("DiskId")
-    @Validation(required = true)
-    private String diskId;
-
-    @Query
-    @NameInMap("Period")
-    private Integer period;
-
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
-    private String endTime;
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     @Query
     @NameInMap("StartTime")
@@ -53,14 +53,14 @@ public class DescribeDiskMonitorDataRequest extends Request {
 
     private DescribeDiskMonitorDataRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
+        this.diskId = builder.diskId;
+        this.endTime = builder.endTime;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.period = builder.period;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.diskId = builder.diskId;
-        this.period = builder.period;
-        this.endTime = builder.endTime;
+        this.sourceRegionId = builder.sourceRegionId;
         this.startTime = builder.startTime;
     }
 
@@ -78,10 +78,17 @@ public class DescribeDiskMonitorDataRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return diskId
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getDiskId() {
+        return this.diskId;
+    }
+
+    /**
+     * @return endTime
+     */
+    public String getEndTime() {
+        return this.endTime;
     }
 
     /**
@@ -99,6 +106,13 @@ public class DescribeDiskMonitorDataRequest extends Request {
     }
 
     /**
+     * @return period
+     */
+    public Integer getPeriod() {
+        return this.period;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -113,24 +127,10 @@ public class DescribeDiskMonitorDataRequest extends Request {
     }
 
     /**
-     * @return diskId
+     * @return sourceRegionId
      */
-    public String getDiskId() {
-        return this.diskId;
-    }
-
-    /**
-     * @return period
-     */
-    public Integer getPeriod() {
-        return this.period;
-    }
-
-    /**
-     * @return endTime
-     */
-    public String getEndTime() {
-        return this.endTime;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -141,14 +141,14 @@ public class DescribeDiskMonitorDataRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeDiskMonitorDataRequest, Builder> {
-        private String sourceRegionId; 
+        private String diskId; 
+        private String endTime; 
         private String ownerAccount; 
         private Long ownerId; 
+        private Integer period; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String diskId; 
-        private Integer period; 
-        private String endTime; 
+        private String sourceRegionId; 
         private String startTime; 
 
         private Builder() {
@@ -157,23 +157,32 @@ public class DescribeDiskMonitorDataRequest extends Request {
 
         private Builder(DescribeDiskMonitorDataRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
+            this.diskId = request.diskId;
+            this.endTime = request.endTime;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.period = request.period;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.diskId = request.diskId;
-            this.period = request.period;
-            this.endTime = request.endTime;
+            this.sourceRegionId = request.sourceRegionId;
             this.startTime = request.startTime;
         } 
 
         /**
-         * SourceRegionId.
+         * DiskId.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder diskId(String diskId) {
+            this.putQueryParameter("DiskId", diskId);
+            this.diskId = diskId;
+            return this;
+        }
+
+        /**
+         * EndTime.
+         */
+        public Builder endTime(String endTime) {
+            this.putQueryParameter("EndTime", endTime);
+            this.endTime = endTime;
             return this;
         }
 
@@ -187,7 +196,7 @@ public class DescribeDiskMonitorDataRequest extends Request {
         }
 
         /**
-         * The ID of the RAM user.
+         * OwnerId.
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -196,41 +205,7 @@ public class DescribeDiskMonitorDataRequest extends Request {
         }
 
         /**
-         * The account name of the resource master account.
-         */
-        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
-            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-            this.resourceOwnerAccount = resourceOwnerAccount;
-            return this;
-        }
-
-        /**
-         * The ID of the resource master account, that is, the UID.
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * The ID of the disk.
-         */
-        public Builder diskId(String diskId) {
-            this.putQueryParameter("DiskId", diskId);
-            this.diskId = diskId;
-            return this;
-        }
-
-        /**
-         * The precision of the data. Unit: seconds. Valid values:
-         * <p>
-         * 
-         * -60
-         * -600
-         * -3600
-         * 
-         * Default value: 60
+         * Period.
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -239,16 +214,34 @@ public class DescribeDiskMonitorDataRequest extends Request {
         }
 
         /**
-         * The end time of the data. The time follows the [ISO8601](~~ 25696 ~~) standard and uses UTC +0. The format is yyyy-MM-ddTHH:mm:ssZ. If the seconds (ss) is not 00, it is automatically set to the start of the next minute.
+         * ResourceOwnerAccount.
          */
-        public Builder endTime(String endTime) {
-            this.putQueryParameter("EndTime", endTime);
-            this.endTime = endTime;
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
             return this;
         }
 
         /**
-         * The start time of the data. The time follows the [ISO8601](~~ 25696 ~~) standard and uses UTC +0. The format is yyyy-MM-ddTHH:mm:ssZ. If the seconds (ss) is not 00, it is automatically set to the start of the next minute.
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
+
+        /**
+         * StartTime.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

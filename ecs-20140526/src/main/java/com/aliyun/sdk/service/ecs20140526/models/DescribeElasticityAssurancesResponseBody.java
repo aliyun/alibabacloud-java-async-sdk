@@ -12,6 +12,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeElasticityAssurancesResponseBody</p>
  */
 public class DescribeElasticityAssurancesResponseBody extends TeaModel {
+    @NameInMap("ElasticityAssuranceSet")
+    private ElasticityAssuranceSet elasticityAssuranceSet;
+
+    @NameInMap("MaxResults")
+    private Integer maxResults;
+
     @NameInMap("NextToken")
     private String nextToken;
 
@@ -21,18 +27,12 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("MaxResults")
-    private Integer maxResults;
-
-    @NameInMap("ElasticityAssuranceSet")
-    private ElasticityAssuranceSet elasticityAssuranceSet;
-
     private DescribeElasticityAssurancesResponseBody(Builder builder) {
+        this.elasticityAssuranceSet = builder.elasticityAssuranceSet;
+        this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.requestId = builder.requestId;
         this.totalCount = builder.totalCount;
-        this.maxResults = builder.maxResults;
-        this.elasticityAssuranceSet = builder.elasticityAssuranceSet;
     }
 
     public static Builder builder() {
@@ -41,6 +41,20 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
 
     public static DescribeElasticityAssurancesResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return elasticityAssuranceSet
+     */
+    public ElasticityAssuranceSet getElasticityAssuranceSet() {
+        return this.elasticityAssuranceSet;
+    }
+
+    /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
     }
 
     /**
@@ -64,53 +78,23 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    /**
-     * @return maxResults
-     */
-    public Integer getMaxResults() {
-        return this.maxResults;
-    }
-
-    /**
-     * @return elasticityAssuranceSet
-     */
-    public ElasticityAssuranceSet getElasticityAssuranceSet() {
-        return this.elasticityAssuranceSet;
-    }
-
     public static final class Builder {
+        private ElasticityAssuranceSet elasticityAssuranceSet; 
+        private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
-        private Integer maxResults; 
-        private ElasticityAssuranceSet elasticityAssuranceSet; 
 
         /**
-         * The start flag of the next query.
+         * ElasticityAssuranceSet.
          */
-        public Builder nextToken(String nextToken) {
-            this.nextToken = nextToken;
+        public Builder elasticityAssuranceSet(ElasticityAssuranceSet elasticityAssuranceSet) {
+            this.elasticityAssuranceSet = elasticityAssuranceSet;
             return this;
         }
 
         /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The number of records that meet the query criteria.
-         */
-        public Builder totalCount(Integer totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-
-        /**
-         * The number of rows displayed on each page.
+         * MaxResults.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -118,10 +102,26 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         }
 
         /**
-         * A collection of details about elastic protection services.
+         * NextToken.
          */
-        public Builder elasticityAssuranceSet(ElasticityAssuranceSet elasticityAssuranceSet) {
-            this.elasticityAssuranceSet = elasticityAssuranceSet;
+        public Builder nextToken(String nextToken) {
+            this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
@@ -132,23 +132,23 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
     } 
 
     public static class AllocatedResource extends TeaModel {
-        @NameInMap("UsedAmount")
-        private Integer usedAmount;
+        @NameInMap("InstanceType")
+        private String instanceType;
 
         @NameInMap("TotalAmount")
         private Integer totalAmount;
 
+        @NameInMap("UsedAmount")
+        private Integer usedAmount;
+
         @NameInMap("zoneId")
         private String zoneId;
 
-        @NameInMap("InstanceType")
-        private String instanceType;
-
         private AllocatedResource(Builder builder) {
-            this.usedAmount = builder.usedAmount;
-            this.totalAmount = builder.totalAmount;
-            this.zoneId = builder.zoneId;
             this.instanceType = builder.instanceType;
+            this.totalAmount = builder.totalAmount;
+            this.usedAmount = builder.usedAmount;
+            this.zoneId = builder.zoneId;
         }
 
         public static Builder builder() {
@@ -160,10 +160,10 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         }
 
         /**
-         * @return usedAmount
+         * @return instanceType
          */
-        public Integer getUsedAmount() {
-            return this.usedAmount;
+        public String getInstanceType() {
+            return this.instanceType;
         }
 
         /**
@@ -174,35 +174,35 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return usedAmount
+         */
+        public Integer getUsedAmount() {
+            return this.usedAmount;
+        }
+
+        /**
          * @return zoneId
          */
         public String getZoneId() {
             return this.zoneId;
         }
 
-        /**
-         * @return instanceType
-         */
-        public String getInstanceType() {
-            return this.instanceType;
-        }
-
         public static final class Builder {
-            private Integer usedAmount; 
-            private Integer totalAmount; 
-            private String zoneId; 
             private String instanceType; 
+            private Integer totalAmount; 
+            private Integer usedAmount; 
+            private String zoneId; 
 
             /**
-             * The number of used instances.
+             * InstanceType.
              */
-            public Builder usedAmount(Integer usedAmount) {
-                this.usedAmount = usedAmount;
+            public Builder instanceType(String instanceType) {
+                this.instanceType = instanceType;
                 return this;
             }
 
             /**
-             * The total number of instances to be reserved within an instance type.
+             * TotalAmount.
              */
             public Builder totalAmount(Integer totalAmount) {
                 this.totalAmount = totalAmount;
@@ -210,18 +210,18 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone.
+             * UsedAmount.
              */
-            public Builder zoneId(String zoneId) {
-                this.zoneId = zoneId;
+            public Builder usedAmount(Integer usedAmount) {
+                this.usedAmount = usedAmount;
                 return this;
             }
 
             /**
-             * The instance type.
+             * zoneId.
              */
-            public Builder instanceType(String instanceType) {
-                this.instanceType = instanceType;
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
                 return this;
             }
 
@@ -274,15 +274,15 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("TagValue")
-        private String tagValue;
-
         @NameInMap("TagKey")
         private String tagKey;
 
+        @NameInMap("TagValue")
+        private String tagValue;
+
         private Tag(Builder builder) {
-            this.tagValue = builder.tagValue;
             this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
         }
 
         public static Builder builder() {
@@ -294,36 +294,36 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         }
 
         /**
-         * @return tagValue
-         */
-        public String getTagValue() {
-            return this.tagValue;
-        }
-
-        /**
          * @return tagKey
          */
         public String getTagKey() {
             return this.tagKey;
         }
 
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
         public static final class Builder {
-            private String tagValue; 
             private String tagKey; 
+            private String tagValue; 
 
             /**
-             * The value of the tag.
+             * TagKey.
              */
-            public Builder tagValue(String tagValue) {
-                this.tagValue = tagValue;
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
                 return this;
             }
 
             /**
-             * The key of the tag.
+             * TagValue.
              */
-            public Builder tagKey(String tagKey) {
-                this.tagKey = tagKey;
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
                 return this;
             }
 
@@ -376,20 +376,26 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
 
     }
     public static class ElasticityAssuranceItem extends TeaModel {
-        @NameInMap("Status")
-        private String status;
+        @NameInMap("AllocatedResources")
+        private AllocatedResources allocatedResources;
 
-        @NameInMap("PrivatePoolOptionsMatchCriteria")
-        private String privatePoolOptionsMatchCriteria;
+        @NameInMap("Description")
+        private String description;
+
+        @NameInMap("EndTime")
+        private String endTime;
+
+        @NameInMap("InstanceChargeType")
+        private String instanceChargeType;
+
+        @NameInMap("LatestStartTime")
+        private String latestStartTime;
 
         @NameInMap("PrivatePoolOptionsId")
         private String privatePoolOptionsId;
 
-        @NameInMap("UsedAssuranceTimes")
-        private Integer usedAssuranceTimes;
-
-        @NameInMap("LatestStartTime")
-        private String latestStartTime;
+        @NameInMap("PrivatePoolOptionsMatchCriteria")
+        private String privatePoolOptionsMatchCriteria;
 
         @NameInMap("PrivatePoolOptionsName")
         private String privatePoolOptionsName;
@@ -397,50 +403,44 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         @NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("EndTime")
-        private String endTime;
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
 
         @NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Description")
-        private String description;
+        @NameInMap("StartTimeType")
+        private String startTimeType;
 
-        @NameInMap("ResourceGroupId")
-        private String resourceGroupId;
-
-        @NameInMap("TotalAssuranceTimes")
-        private String totalAssuranceTimes;
-
-        @NameInMap("AllocatedResources")
-        private AllocatedResources allocatedResources;
+        @NameInMap("Status")
+        private String status;
 
         @NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("InstanceChargeType")
-        private String instanceChargeType;
+        @NameInMap("TotalAssuranceTimes")
+        private String totalAssuranceTimes;
 
-        @NameInMap("StartTimeType")
-        private String startTimeType;
+        @NameInMap("UsedAssuranceTimes")
+        private Integer usedAssuranceTimes;
 
         private ElasticityAssuranceItem(Builder builder) {
-            this.status = builder.status;
-            this.privatePoolOptionsMatchCriteria = builder.privatePoolOptionsMatchCriteria;
-            this.privatePoolOptionsId = builder.privatePoolOptionsId;
-            this.usedAssuranceTimes = builder.usedAssuranceTimes;
+            this.allocatedResources = builder.allocatedResources;
+            this.description = builder.description;
+            this.endTime = builder.endTime;
+            this.instanceChargeType = builder.instanceChargeType;
             this.latestStartTime = builder.latestStartTime;
+            this.privatePoolOptionsId = builder.privatePoolOptionsId;
+            this.privatePoolOptionsMatchCriteria = builder.privatePoolOptionsMatchCriteria;
             this.privatePoolOptionsName = builder.privatePoolOptionsName;
             this.regionId = builder.regionId;
-            this.endTime = builder.endTime;
-            this.startTime = builder.startTime;
-            this.description = builder.description;
             this.resourceGroupId = builder.resourceGroupId;
-            this.totalAssuranceTimes = builder.totalAssuranceTimes;
-            this.allocatedResources = builder.allocatedResources;
-            this.tags = builder.tags;
-            this.instanceChargeType = builder.instanceChargeType;
+            this.startTime = builder.startTime;
             this.startTimeType = builder.startTimeType;
+            this.status = builder.status;
+            this.tags = builder.tags;
+            this.totalAssuranceTimes = builder.totalAssuranceTimes;
+            this.usedAssuranceTimes = builder.usedAssuranceTimes;
         }
 
         public static Builder builder() {
@@ -452,17 +452,38 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         }
 
         /**
-         * @return status
+         * @return allocatedResources
          */
-        public String getStatus() {
-            return this.status;
+        public AllocatedResources getAllocatedResources() {
+            return this.allocatedResources;
         }
 
         /**
-         * @return privatePoolOptionsMatchCriteria
+         * @return description
          */
-        public String getPrivatePoolOptionsMatchCriteria() {
-            return this.privatePoolOptionsMatchCriteria;
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return endTime
+         */
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        /**
+         * @return instanceChargeType
+         */
+        public String getInstanceChargeType() {
+            return this.instanceChargeType;
+        }
+
+        /**
+         * @return latestStartTime
+         */
+        public String getLatestStartTime() {
+            return this.latestStartTime;
         }
 
         /**
@@ -473,17 +494,10 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         }
 
         /**
-         * @return usedAssuranceTimes
+         * @return privatePoolOptionsMatchCriteria
          */
-        public Integer getUsedAssuranceTimes() {
-            return this.usedAssuranceTimes;
-        }
-
-        /**
-         * @return latestStartTime
-         */
-        public String getLatestStartTime() {
-            return this.latestStartTime;
+        public String getPrivatePoolOptionsMatchCriteria() {
+            return this.privatePoolOptionsMatchCriteria;
         }
 
         /**
@@ -501,10 +515,10 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         }
 
         /**
-         * @return endTime
+         * @return resourceGroupId
          */
-        public String getEndTime() {
-            return this.endTime;
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         /**
@@ -515,31 +529,17 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         }
 
         /**
-         * @return description
+         * @return startTimeType
          */
-        public String getDescription() {
-            return this.description;
+        public String getStartTimeType() {
+            return this.startTimeType;
         }
 
         /**
-         * @return resourceGroupId
+         * @return status
          */
-        public String getResourceGroupId() {
-            return this.resourceGroupId;
-        }
-
-        /**
-         * @return totalAssuranceTimes
-         */
-        public String getTotalAssuranceTimes() {
-            return this.totalAssuranceTimes;
-        }
-
-        /**
-         * @return allocatedResources
-         */
-        public AllocatedResources getAllocatedResources() {
-            return this.allocatedResources;
+        public String getStatus() {
+            return this.status;
         }
 
         /**
@@ -550,145 +550,39 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         }
 
         /**
-         * @return instanceChargeType
+         * @return totalAssuranceTimes
          */
-        public String getInstanceChargeType() {
-            return this.instanceChargeType;
+        public String getTotalAssuranceTimes() {
+            return this.totalAssuranceTimes;
         }
 
         /**
-         * @return startTimeType
+         * @return usedAssuranceTimes
          */
-        public String getStartTimeType() {
-            return this.startTimeType;
+        public Integer getUsedAssuranceTimes() {
+            return this.usedAssuranceTimes;
         }
 
         public static final class Builder {
-            private String status; 
-            private String privatePoolOptionsMatchCriteria; 
-            private String privatePoolOptionsId; 
-            private Integer usedAssuranceTimes; 
+            private AllocatedResources allocatedResources; 
+            private String description; 
+            private String endTime; 
+            private String instanceChargeType; 
             private String latestStartTime; 
+            private String privatePoolOptionsId; 
+            private String privatePoolOptionsMatchCriteria; 
             private String privatePoolOptionsName; 
             private String regionId; 
-            private String endTime; 
-            private String startTime; 
-            private String description; 
             private String resourceGroupId; 
-            private String totalAssuranceTimes; 
-            private AllocatedResources allocatedResources; 
-            private Tags tags; 
-            private String instanceChargeType; 
+            private String startTime; 
             private String startTimeType; 
+            private String status; 
+            private Tags tags; 
+            private String totalAssuranceTimes; 
+            private Integer usedAssuranceTimes; 
 
             /**
-             * The status of the elastic protection service. Possible values:
-             * <p>
-             * 
-             * -Preparing: Preparing.
-             * -Prepared: to take effect.
-             * -Active: takes effect.
-             * -Released: Released.
-             */
-            public Builder status(String status) {
-                this.status = status;
-                return this;
-            }
-
-            /**
-             * The matching mode of the elastic protection service. Possible values:
-             * <p>
-             * 
-             * -Open: the elastic guarantee service in the Open mode.
-             * -Target: the elastic Protection Service of the specified mode.
-             */
-            public Builder privatePoolOptionsMatchCriteria(String privatePoolOptionsMatchCriteria) {
-                this.privatePoolOptionsMatchCriteria = privatePoolOptionsMatchCriteria;
-                return this;
-            }
-
-            /**
-             * The ID of the elastic protection service.
-             */
-            public Builder privatePoolOptionsId(String privatePoolOptionsId) {
-                this.privatePoolOptionsId = privatePoolOptionsId;
-                return this;
-            }
-
-            /**
-             * > This parameter is not available.
-             */
-            public Builder usedAssuranceTimes(Integer usedAssuranceTimes) {
-                this.usedAssuranceTimes = usedAssuranceTimes;
-                return this;
-            }
-
-            /**
-             * > This parameter is not available.
-             */
-            public Builder latestStartTime(String latestStartTime) {
-                this.latestStartTime = latestStartTime;
-                return this;
-            }
-
-            /**
-             * The name of the elastic protection service.
-             */
-            public Builder privatePoolOptionsName(String privatePoolOptionsName) {
-                this.privatePoolOptionsName = privatePoolOptionsName;
-                return this;
-            }
-
-            /**
-             * The ID of the region to which the elastic Protection Service belongs.
-             */
-            public Builder regionId(String regionId) {
-                this.regionId = regionId;
-                return this;
-            }
-
-            /**
-             * The expiration time of the elastic protection service.
-             */
-            public Builder endTime(String endTime) {
-                this.endTime = endTime;
-                return this;
-            }
-
-            /**
-             * The effective time of the elastic protection service.
-             */
-            public Builder startTime(String startTime) {
-                this.startTime = startTime;
-                return this;
-            }
-
-            /**
-             * The description of the elastic protection service.
-             */
-            public Builder description(String description) {
-                this.description = description;
-                return this;
-            }
-
-            /**
-             * The ID of the resource group.
-             */
-            public Builder resourceGroupId(String resourceGroupId) {
-                this.resourceGroupId = resourceGroupId;
-                return this;
-            }
-
-            /**
-             * The total number of elastic protection services.
-             */
-            public Builder totalAssuranceTimes(String totalAssuranceTimes) {
-                this.totalAssuranceTimes = totalAssuranceTimes;
-                return this;
-            }
-
-            /**
-             * The resource allocation details.
+             * AllocatedResources.
              */
             public Builder allocatedResources(AllocatedResources allocatedResources) {
                 this.allocatedResources = allocatedResources;
@@ -696,15 +590,23 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag key-value pair associated with the elastic protection service.
+             * Description.
              */
-            public Builder tags(Tags tags) {
-                this.tags = tags;
+            public Builder description(String description) {
+                this.description = description;
                 return this;
             }
 
             /**
-             * The billing method of the instance. Possible value: PostPaid. Currently, only pay-as-you-go is supported.
+             * EndTime.
+             */
+            public Builder endTime(String endTime) {
+                this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * InstanceChargeType.
              */
             public Builder instanceChargeType(String instanceChargeType) {
                 this.instanceChargeType = instanceChargeType;
@@ -712,14 +614,98 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * The effective method of elastic protection. Possible values:
-             * <p>
-             * 
-             * -Now: takes effect immediately.
-             * -Later: takes effect at the specified time.
+             * LatestStartTime.
+             */
+            public Builder latestStartTime(String latestStartTime) {
+                this.latestStartTime = latestStartTime;
+                return this;
+            }
+
+            /**
+             * PrivatePoolOptionsId.
+             */
+            public Builder privatePoolOptionsId(String privatePoolOptionsId) {
+                this.privatePoolOptionsId = privatePoolOptionsId;
+                return this;
+            }
+
+            /**
+             * PrivatePoolOptionsMatchCriteria.
+             */
+            public Builder privatePoolOptionsMatchCriteria(String privatePoolOptionsMatchCriteria) {
+                this.privatePoolOptionsMatchCriteria = privatePoolOptionsMatchCriteria;
+                return this;
+            }
+
+            /**
+             * PrivatePoolOptionsName.
+             */
+            public Builder privatePoolOptionsName(String privatePoolOptionsName) {
+                this.privatePoolOptionsName = privatePoolOptionsName;
+                return this;
+            }
+
+            /**
+             * RegionId.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * StartTime.
+             */
+            public Builder startTime(String startTime) {
+                this.startTime = startTime;
+                return this;
+            }
+
+            /**
+             * StartTimeType.
              */
             public Builder startTimeType(String startTimeType) {
                 this.startTimeType = startTimeType;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(Tags tags) {
+                this.tags = tags;
+                return this;
+            }
+
+            /**
+             * TotalAssuranceTimes.
+             */
+            public Builder totalAssuranceTimes(String totalAssuranceTimes) {
+                this.totalAssuranceTimes = totalAssuranceTimes;
+                return this;
+            }
+
+            /**
+             * UsedAssuranceTimes.
+             */
+            public Builder usedAssuranceTimes(Integer usedAssuranceTimes) {
+                this.usedAssuranceTimes = usedAssuranceTimes;
                 return this;
             }
 

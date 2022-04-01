@@ -12,13 +12,26 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSecurityGroupAttributeRequest</p>
  */
 public class DescribeSecurityGroupAttributeRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("Direction")
+    private String direction;
+
+    @Query
+    @NameInMap("NicType")
+    private String nicType;
 
     @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
+
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
+
+    @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
 
     @Query
     @NameInMap("ResourceOwnerAccount")
@@ -33,34 +46,21 @@ public class DescribeSecurityGroupAttributeRequest extends Request {
     @Validation(required = true)
     private String securityGroupId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
-    @Query
-    @NameInMap("NicType")
-    private String nicType;
-
-    @Query
-    @NameInMap("Direction")
-    private String direction;
-
-    @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     private DescribeSecurityGroupAttributeRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
+        this.direction = builder.direction;
+        this.nicType = builder.nicType;
         this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityGroupId = builder.securityGroupId;
-        this.regionId = builder.regionId;
-        this.nicType = builder.nicType;
-        this.direction = builder.direction;
-        this.ownerId = builder.ownerId;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -77,10 +77,17 @@ public class DescribeSecurityGroupAttributeRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return direction
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getDirection() {
+        return this.direction;
+    }
+
+    /**
+     * @return nicType
+     */
+    public String getNicType() {
+        return this.nicType;
     }
 
     /**
@@ -88,6 +95,20 @@ public class DescribeSecurityGroupAttributeRequest extends Request {
      */
     public String getOwnerAccount() {
         return this.ownerAccount;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -112,43 +133,22 @@ public class DescribeSecurityGroupAttributeRequest extends Request {
     }
 
     /**
-     * @return regionId
+     * @return sourceRegionId
      */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return nicType
-     */
-    public String getNicType() {
-        return this.nicType;
-    }
-
-    /**
-     * @return direction
-     */
-    public String getDirection() {
-        return this.direction;
-    }
-
-    /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public static final class Builder extends Request.Builder<DescribeSecurityGroupAttributeRequest, Builder> {
-        private String sourceRegionId; 
+        private String direction; 
+        private String nicType; 
         private String ownerAccount; 
+        private Long ownerId; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityGroupId; 
-        private String regionId; 
-        private String nicType; 
-        private String direction; 
-        private Long ownerId; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -156,23 +156,32 @@ public class DescribeSecurityGroupAttributeRequest extends Request {
 
         private Builder(DescribeSecurityGroupAttributeRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
+            this.direction = request.direction;
+            this.nicType = request.nicType;
             this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityGroupId = request.securityGroupId;
-            this.regionId = request.regionId;
-            this.nicType = request.nicType;
-            this.direction = request.direction;
-            this.ownerId = request.ownerId;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
-         * SourceRegionId.
+         * Direction.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder direction(String direction) {
+            this.putQueryParameter("Direction", direction);
+            this.direction = direction;
+            return this;
+        }
+
+        /**
+         * NicType.
+         */
+        public Builder nicType(String nicType) {
+            this.putQueryParameter("NicType", nicType);
+            this.nicType = nicType;
             return this;
         }
 
@@ -186,34 +195,16 @@ public class DescribeSecurityGroupAttributeRequest extends Request {
         }
 
         /**
-         * The account name of the resource master account.
+         * OwnerId.
          */
-        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
-            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-            this.resourceOwnerAccount = resourceOwnerAccount;
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
             return this;
         }
 
         /**
-         * The ID of the resource master account, that is, the UID.
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * The ID of the security group.
-         */
-        public Builder securityGroupId(String securityGroupId) {
-            this.putQueryParameter("SecurityGroupId", securityGroupId);
-            this.securityGroupId = securityGroupId;
-            return this;
-        }
-
-        /**
-         * The ID of the region to which the security group belongs. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -222,44 +213,38 @@ public class DescribeSecurityGroupAttributeRequest extends Request {
         }
 
         /**
-         * The NIC type of the security group rule.
-         * <p>
-         * 
-         * -Valid values of the classic network security group:
-         * -internet (default): Public network
-         * -intranet: intranet
-         * > You can query only one security group rule of the NIC type in a single call. Query all types in two times.
-         * -The value of a VPC-type security group can only be intranet (default), that is, intranet.
-         * > If you specify an internet or a null value, it is converted to intranet by default.
+         * ResourceOwnerAccount.
          */
-        public Builder nicType(String nicType) {
-            this.putQueryParameter("NicType", nicType);
-            this.nicType = nicType;
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
             return this;
         }
 
         /**
-         * The authorization direction of the security group rule. Valid values:
-         * <p>
-         * 
-         * -egress: the outbound direction of the security group.
-         * -ingress: The inbound direction of the security group.
-         * -all: do not distinguish directions
-         * 
-         * Default value: all
+         * ResourceOwnerId.
          */
-        public Builder direction(String direction) {
-            this.putQueryParameter("Direction", direction);
-            this.direction = direction;
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
             return this;
         }
 
         /**
-         * The ID of the RAM user.
+         * SecurityGroupId.
          */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
+        public Builder securityGroupId(String securityGroupId) {
+            this.putQueryParameter("SecurityGroupId", securityGroupId);
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

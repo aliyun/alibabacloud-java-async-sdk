@@ -12,6 +12,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeImagePipelinesResponseBody</p>
  */
 public class DescribeImagePipelinesResponseBody extends TeaModel {
+    @NameInMap("ImagePipeline")
+    private ImagePipeline imagePipeline;
+
+    @NameInMap("MaxResults")
+    private Integer maxResults;
+
     @NameInMap("NextToken")
     private String nextToken;
 
@@ -21,18 +27,12 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("MaxResults")
-    private Integer maxResults;
-
-    @NameInMap("ImagePipeline")
-    private ImagePipeline imagePipeline;
-
     private DescribeImagePipelinesResponseBody(Builder builder) {
+        this.imagePipeline = builder.imagePipeline;
+        this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.requestId = builder.requestId;
         this.totalCount = builder.totalCount;
-        this.maxResults = builder.maxResults;
-        this.imagePipeline = builder.imagePipeline;
     }
 
     public static Builder builder() {
@@ -41,6 +41,20 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
 
     public static DescribeImagePipelinesResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return imagePipeline
+     */
+    public ImagePipeline getImagePipeline() {
+        return this.imagePipeline;
+    }
+
+    /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
     }
 
     /**
@@ -64,53 +78,23 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    /**
-     * @return maxResults
-     */
-    public Integer getMaxResults() {
-        return this.maxResults;
-    }
-
-    /**
-     * @return imagePipeline
-     */
-    public ImagePipeline getImagePipeline() {
-        return this.imagePipeline;
-    }
-
     public static final class Builder {
+        private ImagePipeline imagePipeline; 
+        private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
-        private Integer maxResults; 
-        private ImagePipeline imagePipeline; 
 
         /**
-         * The Token returned by this call. For more information, see API description.
+         * ImagePipeline.
          */
-        public Builder nextToken(String nextToken) {
-            this.nextToken = nextToken;
+        public Builder imagePipeline(ImagePipeline imagePipeline) {
+            this.imagePipeline = imagePipeline;
             return this;
         }
 
         /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The number of returned image templates.
-         */
-        public Builder totalCount(Integer totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-
-        /**
-         * The number of entries to return on each page.
+         * MaxResults.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -118,10 +102,26 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         }
 
         /**
-         * The list of image template details.
+         * NextToken.
          */
-        public Builder imagePipeline(ImagePipeline imagePipeline) {
-            this.imagePipeline = imagePipeline;
+        public Builder nextToken(String nextToken) {
+            this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
@@ -131,6 +131,47 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
 
     } 
 
+    public static class AddAccounts extends TeaModel {
+        @NameInMap("AddAccount")
+        private java.util.List < String > addAccount;
+
+        private AddAccounts(Builder builder) {
+            this.addAccount = builder.addAccount;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AddAccounts create() {
+            return builder().build();
+        }
+
+        /**
+         * @return addAccount
+         */
+        public java.util.List < String > getAddAccount() {
+            return this.addAccount;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > addAccount; 
+
+            /**
+             * AddAccount.
+             */
+            public Builder addAccount(java.util.List < String > addAccount) {
+                this.addAccount = addAccount;
+                return this;
+            }
+
+            public AddAccounts build() {
+                return new AddAccounts(this);
+            } 
+
+        } 
+
+    }
     public static class Tag extends TeaModel {
         @NameInMap("TagKey")
         private String tagKey;
@@ -170,7 +211,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The key of the tag.
+             * TagKey.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -178,7 +219,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * TagValue.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -233,47 +274,6 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         } 
 
     }
-    public static class AddAccounts extends TeaModel {
-        @NameInMap("AddAccount")
-        private java.util.List < String > addAccount;
-
-        private AddAccounts(Builder builder) {
-            this.addAccount = builder.addAccount;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static AddAccounts create() {
-            return builder().build();
-        }
-
-        /**
-         * @return addAccount
-         */
-        public java.util.List < String > getAddAccount() {
-            return this.addAccount;
-        }
-
-        public static final class Builder {
-            private java.util.List < String > addAccount; 
-
-            /**
-             * AddAccount.
-             */
-            public Builder addAccount(java.util.List < String > addAccount) {
-                this.addAccount = addAccount;
-                return this;
-            }
-
-            public AddAccounts build() {
-                return new AddAccounts(this);
-            } 
-
-        } 
-
-    }
     public static class ToRegionIds extends TeaModel {
         @NameInMap("ToRegionId")
         private java.util.List < String > toRegionId;
@@ -316,11 +316,32 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
 
     }
     public static class ImagePipelineSet extends TeaModel {
+        @NameInMap("AddAccounts")
+        private AddAccounts addAccounts;
+
+        @NameInMap("BaseImage")
+        private String baseImage;
+
+        @NameInMap("BaseImageType")
+        private String baseImageType;
+
+        @NameInMap("BuildContent")
+        private String buildContent;
+
         @NameInMap("CreationTime")
         private String creationTime;
 
         @NameInMap("DeleteInstanceOnFailure")
         private Boolean deleteInstanceOnFailure;
+
+        @NameInMap("Description")
+        private String description;
+
+        @NameInMap("ImageName")
+        private String imageName;
+
+        @NameInMap("ImagePipelineId")
+        private String imagePipelineId;
 
         @NameInMap("InstanceType")
         private String instanceType;
@@ -328,63 +349,42 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         @NameInMap("InternetMaxBandwidthOut")
         private Integer internetMaxBandwidthOut;
 
-        @NameInMap("ImagePipelineId")
-        private String imagePipelineId;
-
-        @NameInMap("VSwitchId")
-        private String vSwitchId;
-
-        @NameInMap("SystemDiskSize")
-        private Integer systemDiskSize;
-
-        @NameInMap("Description")
-        private String description;
-
-        @NameInMap("BaseImage")
-        private String baseImage;
+        @NameInMap("Name")
+        private String name;
 
         @NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("ImageName")
-        private String imageName;
-
-        @NameInMap("BaseImageType")
-        private String baseImageType;
-
-        @NameInMap("Name")
-        private String name;
-
-        @NameInMap("BuildContent")
-        private String buildContent;
+        @NameInMap("SystemDiskSize")
+        private Integer systemDiskSize;
 
         @NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("AddAccounts")
-        private AddAccounts addAccounts;
-
         @NameInMap("ToRegionIds")
         private ToRegionIds toRegionIds;
 
+        @NameInMap("VSwitchId")
+        private String vSwitchId;
+
         private ImagePipelineSet(Builder builder) {
+            this.addAccounts = builder.addAccounts;
+            this.baseImage = builder.baseImage;
+            this.baseImageType = builder.baseImageType;
+            this.buildContent = builder.buildContent;
             this.creationTime = builder.creationTime;
             this.deleteInstanceOnFailure = builder.deleteInstanceOnFailure;
+            this.description = builder.description;
+            this.imageName = builder.imageName;
+            this.imagePipelineId = builder.imagePipelineId;
             this.instanceType = builder.instanceType;
             this.internetMaxBandwidthOut = builder.internetMaxBandwidthOut;
-            this.imagePipelineId = builder.imagePipelineId;
-            this.vSwitchId = builder.vSwitchId;
-            this.systemDiskSize = builder.systemDiskSize;
-            this.description = builder.description;
-            this.baseImage = builder.baseImage;
-            this.resourceGroupId = builder.resourceGroupId;
-            this.imageName = builder.imageName;
-            this.baseImageType = builder.baseImageType;
             this.name = builder.name;
-            this.buildContent = builder.buildContent;
+            this.resourceGroupId = builder.resourceGroupId;
+            this.systemDiskSize = builder.systemDiskSize;
             this.tags = builder.tags;
-            this.addAccounts = builder.addAccounts;
             this.toRegionIds = builder.toRegionIds;
+            this.vSwitchId = builder.vSwitchId;
         }
 
         public static Builder builder() {
@@ -393,6 +393,34 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
 
         public static ImagePipelineSet create() {
             return builder().build();
+        }
+
+        /**
+         * @return addAccounts
+         */
+        public AddAccounts getAddAccounts() {
+            return this.addAccounts;
+        }
+
+        /**
+         * @return baseImage
+         */
+        public String getBaseImage() {
+            return this.baseImage;
+        }
+
+        /**
+         * @return baseImageType
+         */
+        public String getBaseImageType() {
+            return this.baseImageType;
+        }
+
+        /**
+         * @return buildContent
+         */
+        public String getBuildContent() {
+            return this.buildContent;
         }
 
         /**
@@ -410,6 +438,27 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         }
 
         /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return imageName
+         */
+        public String getImageName() {
+            return this.imageName;
+        }
+
+        /**
+         * @return imagePipelineId
+         */
+        public String getImagePipelineId() {
+            return this.imagePipelineId;
+        }
+
+        /**
          * @return instanceType
          */
         public String getInstanceType() {
@@ -424,38 +473,10 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         }
 
         /**
-         * @return imagePipelineId
+         * @return name
          */
-        public String getImagePipelineId() {
-            return this.imagePipelineId;
-        }
-
-        /**
-         * @return vSwitchId
-         */
-        public String getVSwitchId() {
-            return this.vSwitchId;
-        }
-
-        /**
-         * @return systemDiskSize
-         */
-        public Integer getSystemDiskSize() {
-            return this.systemDiskSize;
-        }
-
-        /**
-         * @return description
-         */
-        public String getDescription() {
-            return this.description;
-        }
-
-        /**
-         * @return baseImage
-         */
-        public String getBaseImage() {
-            return this.baseImage;
+        public String getName() {
+            return this.name;
         }
 
         /**
@@ -466,31 +487,10 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         }
 
         /**
-         * @return imageName
+         * @return systemDiskSize
          */
-        public String getImageName() {
-            return this.imageName;
-        }
-
-        /**
-         * @return baseImageType
-         */
-        public String getBaseImageType() {
-            return this.baseImageType;
-        }
-
-        /**
-         * @return name
-         */
-        public String getName() {
-            return this.name;
-        }
-
-        /**
-         * @return buildContent
-         */
-        public String getBuildContent() {
-            return this.buildContent;
+        public Integer getSystemDiskSize() {
+            return this.systemDiskSize;
         }
 
         /**
@@ -501,164 +501,37 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         }
 
         /**
-         * @return addAccounts
-         */
-        public AddAccounts getAddAccounts() {
-            return this.addAccounts;
-        }
-
-        /**
          * @return toRegionIds
          */
         public ToRegionIds getToRegionIds() {
             return this.toRegionIds;
         }
 
+        /**
+         * @return vSwitchId
+         */
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
         public static final class Builder {
+            private AddAccounts addAccounts; 
+            private String baseImage; 
+            private String baseImageType; 
+            private String buildContent; 
             private String creationTime; 
             private Boolean deleteInstanceOnFailure; 
+            private String description; 
+            private String imageName; 
+            private String imagePipelineId; 
             private String instanceType; 
             private Integer internetMaxBandwidthOut; 
-            private String imagePipelineId; 
-            private String vSwitchId; 
-            private Integer systemDiskSize; 
-            private String description; 
-            private String baseImage; 
-            private String resourceGroupId; 
-            private String imageName; 
-            private String baseImageType; 
             private String name; 
-            private String buildContent; 
+            private String resourceGroupId; 
+            private Integer systemDiskSize; 
             private Tags tags; 
-            private AddAccounts addAccounts; 
             private ToRegionIds toRegionIds; 
-
-            /**
-             * The time when the template was created.
-             */
-            public Builder creationTime(String creationTime) {
-                this.creationTime = creationTime;
-                return this;
-            }
-
-            /**
-             * Specifies whether to release the intermediate instance after the image fails to be built.
-             */
-            public Builder deleteInstanceOnFailure(Boolean deleteInstanceOnFailure) {
-                this.deleteInstanceOnFailure = deleteInstanceOnFailure;
-                return this;
-            }
-
-            /**
-             * The instance type.
-             */
-            public Builder instanceType(String instanceType) {
-                this.instanceType = instanceType;
-                return this;
-            }
-
-            /**
-             * The Internet outbound bandwidth of the intermediate instance. Unit: Mbit/s
-             */
-            public Builder internetMaxBandwidthOut(Integer internetMaxBandwidthOut) {
-                this.internetMaxBandwidthOut = internetMaxBandwidthOut;
-                return this;
-            }
-
-            /**
-             * The ID of the image template.
-             */
-            public Builder imagePipelineId(String imagePipelineId) {
-                this.imagePipelineId = imagePipelineId;
-                return this;
-            }
-
-            /**
-             * The vSwitch ID of the VPC.
-             */
-            public Builder vSwitchId(String vSwitchId) {
-                this.vSwitchId = vSwitchId;
-                return this;
-            }
-
-            /**
-             * The system disk size of the intermediate instance. Unit: GiB
-             */
-            public Builder systemDiskSize(Integer systemDiskSize) {
-                this.systemDiskSize = systemDiskSize;
-                return this;
-            }
-
-            /**
-             * The description.
-             */
-            public Builder description(String description) {
-                this.description = description;
-                return this;
-            }
-
-            /**
-             * The source image.
-             * <p>
-             * -When "BaseImageType = IMAGE", the value of this parameter is the ID of the custom image.
-             * -When "BaseImageType = IMAGE_FAMILY ", the value of this parameter is the name of the Image family.
-             */
-            public Builder baseImage(String baseImage) {
-                this.baseImage = baseImage;
-                return this;
-            }
-
-            /**
-             * The ID of the enterprise resource group.
-             */
-            public Builder resourceGroupId(String resourceGroupId) {
-                this.resourceGroupId = resourceGroupId;
-                return this;
-            }
-
-            /**
-             * The prefix of the target image name.
-             */
-            public Builder imageName(String imageName) {
-                this.imageName = imageName;
-                return this;
-            }
-
-            /**
-             * The type of the source image. Possible values:
-             * <p>
-             * 
-             * -IMAGE: custom IMAGE.
-             * -IMAGE_FAMILY: The Image family is.
-             */
-            public Builder baseImageType(String baseImageType) {
-                this.baseImageType = baseImageType;
-                return this;
-            }
-
-            /**
-             * The name of the template.
-             */
-            public Builder name(String name) {
-                this.name = name;
-                return this;
-            }
-
-            /**
-             * The content of the image template.
-             */
-            public Builder buildContent(String buildContent) {
-                this.buildContent = buildContent;
-                return this;
-            }
-
-            /**
-             * The list of key-value pairs.
-             */
-            public Builder tags(Tags tags) {
-                this.tags = tags;
-                return this;
-            }
+            private String vSwitchId; 
 
             /**
              * AddAccounts.
@@ -669,10 +542,130 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
+             * BaseImage.
+             */
+            public Builder baseImage(String baseImage) {
+                this.baseImage = baseImage;
+                return this;
+            }
+
+            /**
+             * BaseImageType.
+             */
+            public Builder baseImageType(String baseImageType) {
+                this.baseImageType = baseImageType;
+                return this;
+            }
+
+            /**
+             * BuildContent.
+             */
+            public Builder buildContent(String buildContent) {
+                this.buildContent = buildContent;
+                return this;
+            }
+
+            /**
+             * CreationTime.
+             */
+            public Builder creationTime(String creationTime) {
+                this.creationTime = creationTime;
+                return this;
+            }
+
+            /**
+             * DeleteInstanceOnFailure.
+             */
+            public Builder deleteInstanceOnFailure(Boolean deleteInstanceOnFailure) {
+                this.deleteInstanceOnFailure = deleteInstanceOnFailure;
+                return this;
+            }
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * ImageName.
+             */
+            public Builder imageName(String imageName) {
+                this.imageName = imageName;
+                return this;
+            }
+
+            /**
+             * ImagePipelineId.
+             */
+            public Builder imagePipelineId(String imagePipelineId) {
+                this.imagePipelineId = imagePipelineId;
+                return this;
+            }
+
+            /**
+             * InstanceType.
+             */
+            public Builder instanceType(String instanceType) {
+                this.instanceType = instanceType;
+                return this;
+            }
+
+            /**
+             * InternetMaxBandwidthOut.
+             */
+            public Builder internetMaxBandwidthOut(Integer internetMaxBandwidthOut) {
+                this.internetMaxBandwidthOut = internetMaxBandwidthOut;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * SystemDiskSize.
+             */
+            public Builder systemDiskSize(Integer systemDiskSize) {
+                this.systemDiskSize = systemDiskSize;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(Tags tags) {
+                this.tags = tags;
+                return this;
+            }
+
+            /**
              * ToRegionIds.
              */
             public Builder toRegionIds(ToRegionIds toRegionIds) {
                 this.toRegionIds = toRegionIds;
+                return this;
+            }
+
+            /**
+             * VSwitchId.
+             */
+            public Builder vSwitchId(String vSwitchId) {
+                this.vSwitchId = vSwitchId;
                 return this;
             }
 

@@ -15,19 +15,19 @@ public class StartTerminalSessionResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SessionId")
-    private String sessionId;
-
     @NameInMap("SecurityToken")
     private String securityToken;
+
+    @NameInMap("SessionId")
+    private String sessionId;
 
     @NameInMap("WebSocketUrl")
     private String webSocketUrl;
 
     private StartTerminalSessionResponseBody(Builder builder) {
         this.requestId = builder.requestId;
-        this.sessionId = builder.sessionId;
         this.securityToken = builder.securityToken;
+        this.sessionId = builder.sessionId;
         this.webSocketUrl = builder.webSocketUrl;
     }
 
@@ -47,17 +47,17 @@ public class StartTerminalSessionResponseBody extends TeaModel {
     }
 
     /**
-     * @return sessionId
-     */
-    public String getSessionId() {
-        return this.sessionId;
-    }
-
-    /**
      * @return securityToken
      */
     public String getSecurityToken() {
         return this.securityToken;
+    }
+
+    /**
+     * @return sessionId
+     */
+    public String getSessionId() {
+        return this.sessionId;
     }
 
     /**
@@ -69,12 +69,12 @@ public class StartTerminalSessionResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private String sessionId; 
         private String securityToken; 
+        private String sessionId; 
         private String webSocketUrl; 
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -82,15 +82,7 @@ public class StartTerminalSessionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the session.
-         */
-        public Builder sessionId(String sessionId) {
-            this.sessionId = sessionId;
-            return this;
-        }
-
-        /**
-         * The request header attached to the WebSocket is used to verify the request.
+         * SecurityToken.
          */
         public Builder securityToken(String securityToken) {
             this.securityToken = securityToken;
@@ -98,7 +90,15 @@ public class StartTerminalSessionResponseBody extends TeaModel {
         }
 
         /**
-         * The URL of the WebSocket session to connect to the ECS instance. Contains the session ID("SessionId") and the "SecurityToken" used for system verification ".
+         * SessionId.
+         */
+        public Builder sessionId(String sessionId) {
+            this.sessionId = sessionId;
+            return this;
+        }
+
+        /**
+         * WebSocketUrl.
          */
         public Builder webSocketUrl(String webSocketUrl) {
             this.webSocketUrl = webSocketUrl;

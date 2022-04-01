@@ -13,12 +13,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class StartInstanceRequest extends Request {
     @Query
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @NameInMap("DryRun")
+    private Boolean dryRun;
 
     @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
+    @NameInMap("InitLocalDisk")
+    private Boolean initLocalDisk;
 
     @Query
     @NameInMap("InstanceId")
@@ -26,20 +26,35 @@ public class StartInstanceRequest extends Request {
     private String instanceId;
 
     @Query
-    @NameInMap("InitLocalDisk")
-    private Boolean initLocalDisk;
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
 
     @Query
-    @NameInMap("DryRun")
-    private Boolean dryRun;
+    @NameInMap("OwnerId")
+    private Long ownerId;
+
+    @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Query
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     private StartInstanceRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
-        this.resourceOwnerId = builder.resourceOwnerId;
-        this.instanceId = builder.instanceId;
-        this.initLocalDisk = builder.initLocalDisk;
         this.dryRun = builder.dryRun;
+        this.initLocalDisk = builder.initLocalDisk;
+        this.instanceId = builder.instanceId;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -56,24 +71,10 @@ public class StartInstanceRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return dryRun
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
-     * @return resourceOwnerId
-     */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    /**
-     * @return instanceId
-     */
-    public String getInstanceId() {
-        return this.instanceId;
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -84,18 +85,56 @@ public class StartInstanceRequest extends Request {
     }
 
     /**
-     * @return dryRun
+     * @return instanceId
      */
-    public Boolean getDryRun() {
-        return this.dryRun;
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public static final class Builder extends Request.Builder<StartInstanceRequest, Builder> {
-        private String sourceRegionId; 
-        private Long resourceOwnerId; 
-        private String instanceId; 
-        private Boolean initLocalDisk; 
         private Boolean dryRun; 
+        private Boolean initLocalDisk; 
+        private String instanceId; 
+        private String ownerAccount; 
+        private Long ownerId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -103,19 +142,67 @@ public class StartInstanceRequest extends Request {
 
         private Builder(StartInstanceRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
-            this.resourceOwnerId = request.resourceOwnerId;
-            this.instanceId = request.instanceId;
-            this.initLocalDisk = request.initLocalDisk;
             this.dryRun = request.dryRun;
+            this.initLocalDisk = request.initLocalDisk;
+            this.instanceId = request.instanceId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
-         * SourceRegionId.
+         * DryRun.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putQueryParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * InitLocalDisk.
+         */
+        public Builder initLocalDisk(Boolean initLocalDisk) {
+            this.putQueryParameter("InitLocalDisk", initLocalDisk);
+            this.initLocalDisk = initLocalDisk;
+            return this;
+        }
+
+        /**
+         * InstanceId.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
             return this;
         }
 
@@ -129,41 +216,11 @@ public class StartInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the instance to be started.
+         * SourceRegionId.
          */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * This parameter is applicable to instances that contain local disks, such as d1, i1, or i2. When the local disk of d1, i1, or i2 fails, you can use this parameter to specify whether to restore the instance to its original health status when the instance is started. Valid values:
-         * <p>
-         * 
-         * -true: restore the instance to its original health status, and the data in the original local disk of the instance will be lost.
-         * -false: no processing is performed to maintain the status quo.
-         * 
-         * Default value: false.
-         */
-        public Builder initLocalDisk(Boolean initLocalDisk) {
-            this.putQueryParameter("InitLocalDisk", initLocalDisk);
-            this.initLocalDisk = initLocalDisk;
-            return this;
-        }
-
-        /**
-         * Indicates whether to PreCheck only this request. Valid values:
-         * <p>
-         * 
-         * -true: only this request is checked and the instance is not started. Check whether the AccessKey is valid, whether the RAM user is authorized, and whether required parameters are specified. If the check fails, the corresponding error is returned. If the check succeeds, an error code DryRunOperation is returned.
-         * -false: a normal request is sent. After the request passes the check, the HTTP status code 2XX is returned and the instance is started.
-         * 
-         * Default value: false.
-         */
-        public Builder dryRun(Boolean dryRun) {
-            this.putQueryParameter("DryRun", dryRun);
-            this.dryRun = dryRun;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putQueryParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

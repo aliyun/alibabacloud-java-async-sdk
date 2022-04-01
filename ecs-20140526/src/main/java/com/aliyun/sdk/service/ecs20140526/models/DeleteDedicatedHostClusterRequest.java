@@ -12,13 +12,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteDedicatedHostClusterRequest</p>
  */
 public class DeleteDedicatedHostClusterRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("DedicatedHostClusterId")
+    @Validation(required = true)
+    private String dedicatedHostClusterId;
+
+    @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
 
     @Query
     @NameInMap("OwnerId")
     private Long ownerId;
+
+    @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
 
     @Query
     @NameInMap("ResourceOwnerAccount")
@@ -28,29 +38,19 @@ public class DeleteDedicatedHostClusterRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("OwnerAccount")
-    private String ownerAccount;
-
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
-    @Query
-    @NameInMap("DedicatedHostClusterId")
-    @Validation(required = true)
-    private String dedicatedHostClusterId;
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     private DeleteDedicatedHostClusterRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
+        this.dedicatedHostClusterId = builder.dedicatedHostClusterId;
+        this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.ownerAccount = builder.ownerAccount;
-        this.regionId = builder.regionId;
-        this.dedicatedHostClusterId = builder.dedicatedHostClusterId;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -67,10 +67,17 @@ public class DeleteDedicatedHostClusterRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return dedicatedHostClusterId
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getDedicatedHostClusterId() {
+        return this.dedicatedHostClusterId;
+    }
+
+    /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     /**
@@ -78,6 +85,13 @@ public class DeleteDedicatedHostClusterRequest extends Request {
      */
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -95,34 +109,20 @@ public class DeleteDedicatedHostClusterRequest extends Request {
     }
 
     /**
-     * @return ownerAccount
+     * @return sourceRegionId
      */
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return dedicatedHostClusterId
-     */
-    public String getDedicatedHostClusterId() {
-        return this.dedicatedHostClusterId;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public static final class Builder extends Request.Builder<DeleteDedicatedHostClusterRequest, Builder> {
-        private String sourceRegionId; 
+        private String dedicatedHostClusterId; 
+        private String ownerAccount; 
         private Long ownerId; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String ownerAccount; 
-        private String regionId; 
-        private String dedicatedHostClusterId; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -130,21 +130,30 @@ public class DeleteDedicatedHostClusterRequest extends Request {
 
         private Builder(DeleteDedicatedHostClusterRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
+            this.dedicatedHostClusterId = request.dedicatedHostClusterId;
+            this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.ownerAccount = request.ownerAccount;
-            this.regionId = request.regionId;
-            this.dedicatedHostClusterId = request.dedicatedHostClusterId;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
-         * SourceRegionId.
+         * DedicatedHostClusterId.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder dedicatedHostClusterId(String dedicatedHostClusterId) {
+            this.putQueryParameter("DedicatedHostClusterId", dedicatedHostClusterId);
+            this.dedicatedHostClusterId = dedicatedHostClusterId;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
             return this;
         }
 
@@ -154,6 +163,15 @@ public class DeleteDedicatedHostClusterRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
@@ -176,29 +194,11 @@ public class DeleteDedicatedHostClusterRequest extends Request {
         }
 
         /**
-         * OwnerAccount.
+         * SourceRegionId.
          */
-        public Builder ownerAccount(String ownerAccount) {
-            this.putQueryParameter("OwnerAccount", ownerAccount);
-            this.ownerAccount = ownerAccount;
-            return this;
-        }
-
-        /**
-         * The region ID of the DDH cluster. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The ID of the DDH cluster.
-         */
-        public Builder dedicatedHostClusterId(String dedicatedHostClusterId) {
-            this.putQueryParameter("DedicatedHostClusterId", dedicatedHostClusterId);
-            this.dedicatedHostClusterId = dedicatedHostClusterId;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

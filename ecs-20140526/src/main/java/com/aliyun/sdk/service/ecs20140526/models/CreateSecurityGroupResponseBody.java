@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateSecurityGroupResponseBody</p>
  */
 public class CreateSecurityGroupResponseBody extends TeaModel {
-    @NameInMap("SecurityGroupId")
-    private String securityGroupId;
-
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("SecurityGroupId")
+    private String securityGroupId;
+
     private CreateSecurityGroupResponseBody(Builder builder) {
-        this.securityGroupId = builder.securityGroupId;
         this.requestId = builder.requestId;
+        this.securityGroupId = builder.securityGroupId;
     }
 
     public static Builder builder() {
@@ -32,36 +32,36 @@ public class CreateSecurityGroupResponseBody extends TeaModel {
     }
 
     /**
-     * @return securityGroupId
-     */
-    public String getSecurityGroupId() {
-        return this.securityGroupId;
-    }
-
-    /**
      * @return requestId
      */
     public String getRequestId() {
         return this.requestId;
     }
 
+    /**
+     * @return securityGroupId
+     */
+    public String getSecurityGroupId() {
+        return this.securityGroupId;
+    }
+
     public static final class Builder {
-        private String securityGroupId; 
         private String requestId; 
+        private String securityGroupId; 
 
         /**
-         * The ID of the security group.
+         * RequestId.
          */
-        public Builder securityGroupId(String securityGroupId) {
-            this.securityGroupId = securityGroupId;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * SecurityGroupId.
          */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
+        public Builder securityGroupId(String securityGroupId) {
+            this.securityGroupId = securityGroupId;
             return this;
         }
 

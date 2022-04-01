@@ -12,13 +12,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyInstanceMaintenanceAttributesRequest</p>
  */
 public class ModifyInstanceMaintenanceAttributesRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("ActionOnMaintenance")
+    private String actionOnMaintenance;
+
+    @Query
+    @NameInMap("InstanceId")
+    private java.util.List < String > instanceId;
+
+    @Query
+    @NameInMap("MaintenanceWindow")
+    private java.util.List < MaintenanceWindow> maintenanceWindow;
+
+    @Query
+    @NameInMap("NotifyOnMaintenance")
+    private Boolean notifyOnMaintenance;
+
+    @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
 
     @Query
     @NameInMap("OwnerId")
     private Long ownerId;
+
+    @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
 
     @Query
     @NameInMap("ResourceOwnerAccount")
@@ -28,43 +49,22 @@ public class ModifyInstanceMaintenanceAttributesRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("OwnerAccount")
-    private String ownerAccount;
-
-    @Query
-    @NameInMap("MaintenanceWindow")
-    private java.util.List < MaintenanceWindow> maintenanceWindow;
-
-    @Query
-    @NameInMap("InstanceId")
-    private java.util.List < String > instanceId;
-
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
-    @Query
-    @NameInMap("NotifyOnMaintenance")
-    private Boolean notifyOnMaintenance;
-
-    @Query
-    @NameInMap("ActionOnMaintenance")
-    private String actionOnMaintenance;
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     private ModifyInstanceMaintenanceAttributesRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
+        this.actionOnMaintenance = builder.actionOnMaintenance;
+        this.instanceId = builder.instanceId;
+        this.maintenanceWindow = builder.maintenanceWindow;
+        this.notifyOnMaintenance = builder.notifyOnMaintenance;
+        this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.ownerAccount = builder.ownerAccount;
-        this.maintenanceWindow = builder.maintenanceWindow;
-        this.instanceId = builder.instanceId;
-        this.regionId = builder.regionId;
-        this.notifyOnMaintenance = builder.notifyOnMaintenance;
-        this.actionOnMaintenance = builder.actionOnMaintenance;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -81,10 +81,38 @@ public class ModifyInstanceMaintenanceAttributesRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return actionOnMaintenance
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getActionOnMaintenance() {
+        return this.actionOnMaintenance;
+    }
+
+    /**
+     * @return instanceId
+     */
+    public java.util.List < String > getInstanceId() {
+        return this.instanceId;
+    }
+
+    /**
+     * @return maintenanceWindow
+     */
+    public java.util.List < MaintenanceWindow> getMaintenanceWindow() {
+        return this.maintenanceWindow;
+    }
+
+    /**
+     * @return notifyOnMaintenance
+     */
+    public Boolean getNotifyOnMaintenance() {
+        return this.notifyOnMaintenance;
+    }
+
+    /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     /**
@@ -92,6 +120,13 @@ public class ModifyInstanceMaintenanceAttributesRequest extends Request {
      */
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -109,58 +144,23 @@ public class ModifyInstanceMaintenanceAttributesRequest extends Request {
     }
 
     /**
-     * @return ownerAccount
+     * @return sourceRegionId
      */
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    /**
-     * @return maintenanceWindow
-     */
-    public java.util.List < MaintenanceWindow> getMaintenanceWindow() {
-        return this.maintenanceWindow;
-    }
-
-    /**
-     * @return instanceId
-     */
-    public java.util.List < String > getInstanceId() {
-        return this.instanceId;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return notifyOnMaintenance
-     */
-    public Boolean getNotifyOnMaintenance() {
-        return this.notifyOnMaintenance;
-    }
-
-    /**
-     * @return actionOnMaintenance
-     */
-    public String getActionOnMaintenance() {
-        return this.actionOnMaintenance;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public static final class Builder extends Request.Builder<ModifyInstanceMaintenanceAttributesRequest, Builder> {
-        private String sourceRegionId; 
+        private String actionOnMaintenance; 
+        private java.util.List < String > instanceId; 
+        private java.util.List < MaintenanceWindow> maintenanceWindow; 
+        private Boolean notifyOnMaintenance; 
+        private String ownerAccount; 
         private Long ownerId; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String ownerAccount; 
-        private java.util.List < MaintenanceWindow> maintenanceWindow; 
-        private java.util.List < String > instanceId; 
-        private String regionId; 
-        private Boolean notifyOnMaintenance; 
-        private String actionOnMaintenance; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -168,24 +168,60 @@ public class ModifyInstanceMaintenanceAttributesRequest extends Request {
 
         private Builder(ModifyInstanceMaintenanceAttributesRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
+            this.actionOnMaintenance = request.actionOnMaintenance;
+            this.instanceId = request.instanceId;
+            this.maintenanceWindow = request.maintenanceWindow;
+            this.notifyOnMaintenance = request.notifyOnMaintenance;
+            this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.ownerAccount = request.ownerAccount;
-            this.maintenanceWindow = request.maintenanceWindow;
-            this.instanceId = request.instanceId;
-            this.regionId = request.regionId;
-            this.notifyOnMaintenance = request.notifyOnMaintenance;
-            this.actionOnMaintenance = request.actionOnMaintenance;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
-         * SourceRegionId.
+         * ActionOnMaintenance.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder actionOnMaintenance(String actionOnMaintenance) {
+            this.putQueryParameter("ActionOnMaintenance", actionOnMaintenance);
+            this.actionOnMaintenance = actionOnMaintenance;
+            return this;
+        }
+
+        /**
+         * InstanceId.
+         */
+        public Builder instanceId(java.util.List < String > instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * MaintenanceWindow.
+         */
+        public Builder maintenanceWindow(java.util.List < MaintenanceWindow> maintenanceWindow) {
+            this.putQueryParameter("MaintenanceWindow", maintenanceWindow);
+            this.maintenanceWindow = maintenanceWindow;
+            return this;
+        }
+
+        /**
+         * NotifyOnMaintenance.
+         */
+        public Builder notifyOnMaintenance(Boolean notifyOnMaintenance) {
+            this.putQueryParameter("NotifyOnMaintenance", notifyOnMaintenance);
+            this.notifyOnMaintenance = notifyOnMaintenance;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
             return this;
         }
 
@@ -195,6 +231,15 @@ public class ModifyInstanceMaintenanceAttributesRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
@@ -217,67 +262,11 @@ public class ModifyInstanceMaintenanceAttributesRequest extends Request {
         }
 
         /**
-         * OwnerAccount.
+         * SourceRegionId.
          */
-        public Builder ownerAccount(String ownerAccount) {
-            this.putQueryParameter("OwnerAccount", ownerAccount);
-            this.ownerAccount = ownerAccount;
-            return this;
-        }
-
-        /**
-         * MaintenanceWindow.
-         */
-        public Builder maintenanceWindow(java.util.List < MaintenanceWindow> maintenanceWindow) {
-            this.putQueryParameter("MaintenanceWindow", maintenanceWindow);
-            this.maintenanceWindow = maintenanceWindow;
-            return this;
-        }
-
-        /**
-         * The ID of the instance. Valid values of N: 1 to 100
-         */
-        public Builder instanceId(java.util.List < String > instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * The ID of the region to which the instance belongs. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * Specifies whether to send event notifications before instance downtime. Valid values:
-         * <p>
-         * 
-         * -true: sends an event notification.
-         * -false: no event notification is sent.
-         * 
-         * Default value: false
-         */
-        public Builder notifyOnMaintenance(Boolean notifyOnMaintenance) {
-            this.putQueryParameter("NotifyOnMaintenance", notifyOnMaintenance);
-            this.notifyOnMaintenance = notifyOnMaintenance;
-            return this;
-        }
-
-        /**
-         * The maintenance action. Valid values:
-         * <p>
-         * 
-         * -Stop: the stopped state (that is, the downtime).
-         * -AutoRecover: automatic recovery.
-         * -AutoRedeploy: data disks are damaged due to downtime migration.
-         */
-        public Builder actionOnMaintenance(String actionOnMaintenance) {
-            this.putQueryParameter("ActionOnMaintenance", actionOnMaintenance);
-            this.actionOnMaintenance = actionOnMaintenance;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 
@@ -327,7 +316,7 @@ public class ModifyInstanceMaintenanceAttributesRequest extends Request {
             private String startTime; 
 
             /**
-             * 维护时间窗口结束时间。必须为整小时，不允许设置分、秒。开始时间和结束时间必须同时设置，并且结束时间与开始时间需要间隔1~23个整小时。采用UTC +8时区，格式为`HH:mm:ss`。N的取值为1，只支持设置1个时间窗口。
+             * EndTime.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -335,7 +324,7 @@ public class ModifyInstanceMaintenanceAttributesRequest extends Request {
             }
 
             /**
-             * 维护时间窗口开始时间。必须为整小时，不允许设置分、秒。开始时间和结束时间必须同时设置，并且结束时间与开始时间需要间隔1~23个整小时。采用UTC +8时区，格式为`HH:mm:ss`。N的取值为1，只支持设置1个时间窗口。
+             * StartTime.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;

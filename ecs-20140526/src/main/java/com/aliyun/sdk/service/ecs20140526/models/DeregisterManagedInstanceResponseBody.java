@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeregisterManagedInstanceResponseBody</p>
  */
 public class DeregisterManagedInstanceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    private String requestId;
-
     @NameInMap("Instance")
     private Instance instance;
 
+    @NameInMap("RequestId")
+    private String requestId;
+
     private DeregisterManagedInstanceResponseBody(Builder builder) {
-        this.requestId = builder.requestId;
         this.instance = builder.instance;
+        this.requestId = builder.requestId;
     }
 
     public static Builder builder() {
@@ -32,36 +32,36 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
     }
 
     /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    /**
      * @return instance
      */
     public Instance getInstance() {
         return this.instance;
     }
 
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static final class Builder {
-        private String requestId; 
         private Instance instance; 
+        private String requestId; 
 
         /**
-         * The ID of the request.
+         * Instance.
          */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
+        public Builder instance(Instance instance) {
+            this.instance = instance;
             return this;
         }
 
         /**
-         * A collection of managed instance information.
+         * RequestId.
          */
-        public Builder instance(Instance instance) {
-            this.instance = instance;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
@@ -72,11 +72,11 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
     } 
 
     public static class Instance extends TeaModel {
-        @NameInMap("LastInvokedTime")
-        private String lastInvokedTime;
+        @NameInMap("ActivationId")
+        private String activationId;
 
-        @NameInMap("InternetIp")
-        private String internetIp;
+        @NameInMap("AgentVersion")
+        private String agentVersion;
 
         @NameInMap("Hostname")
         private String hostname;
@@ -84,20 +84,23 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("ActivationId")
-        private String activationId;
+        @NameInMap("InstanceName")
+        private String instanceName;
+
+        @NameInMap("InternetIp")
+        private String internetIp;
 
         @NameInMap("IntranetIp")
         private String intranetIp;
 
-        @NameInMap("AgentVersion")
-        private String agentVersion;
+        @NameInMap("InvocationCount")
+        private Long invocationCount;
 
-        @NameInMap("RegistrationTime")
-        private String registrationTime;
+        @NameInMap("LastInvokedTime")
+        private String lastInvokedTime;
 
-        @NameInMap("InstanceName")
-        private String instanceName;
+        @NameInMap("MachineId")
+        private String machineId;
 
         @NameInMap("OsType")
         private String osType;
@@ -105,26 +108,23 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
         @NameInMap("OsVersion")
         private String osVersion;
 
-        @NameInMap("InvocationCount")
-        private Long invocationCount;
-
-        @NameInMap("MachineId")
-        private String machineId;
+        @NameInMap("RegistrationTime")
+        private String registrationTime;
 
         private Instance(Builder builder) {
-            this.lastInvokedTime = builder.lastInvokedTime;
-            this.internetIp = builder.internetIp;
+            this.activationId = builder.activationId;
+            this.agentVersion = builder.agentVersion;
             this.hostname = builder.hostname;
             this.instanceId = builder.instanceId;
-            this.activationId = builder.activationId;
-            this.intranetIp = builder.intranetIp;
-            this.agentVersion = builder.agentVersion;
-            this.registrationTime = builder.registrationTime;
             this.instanceName = builder.instanceName;
+            this.internetIp = builder.internetIp;
+            this.intranetIp = builder.intranetIp;
+            this.invocationCount = builder.invocationCount;
+            this.lastInvokedTime = builder.lastInvokedTime;
+            this.machineId = builder.machineId;
             this.osType = builder.osType;
             this.osVersion = builder.osVersion;
-            this.invocationCount = builder.invocationCount;
-            this.machineId = builder.machineId;
+            this.registrationTime = builder.registrationTime;
         }
 
         public static Builder builder() {
@@ -136,17 +136,17 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * @return lastInvokedTime
+         * @return activationId
          */
-        public String getLastInvokedTime() {
-            return this.lastInvokedTime;
+        public String getActivationId() {
+            return this.activationId;
         }
 
         /**
-         * @return internetIp
+         * @return agentVersion
          */
-        public String getInternetIp() {
-            return this.internetIp;
+        public String getAgentVersion() {
+            return this.agentVersion;
         }
 
         /**
@@ -164,10 +164,17 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * @return activationId
+         * @return instanceName
          */
-        public String getActivationId() {
-            return this.activationId;
+        public String getInstanceName() {
+            return this.instanceName;
+        }
+
+        /**
+         * @return internetIp
+         */
+        public String getInternetIp() {
+            return this.internetIp;
         }
 
         /**
@@ -178,24 +185,24 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * @return agentVersion
+         * @return invocationCount
          */
-        public String getAgentVersion() {
-            return this.agentVersion;
+        public Long getInvocationCount() {
+            return this.invocationCount;
         }
 
         /**
-         * @return registrationTime
+         * @return lastInvokedTime
          */
-        public String getRegistrationTime() {
-            return this.registrationTime;
+        public String getLastInvokedTime() {
+            return this.lastInvokedTime;
         }
 
         /**
-         * @return instanceName
+         * @return machineId
          */
-        public String getInstanceName() {
-            return this.instanceName;
+        public String getMachineId() {
+            return this.machineId;
         }
 
         /**
@@ -213,68 +220,29 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * @return invocationCount
+         * @return registrationTime
          */
-        public Long getInvocationCount() {
-            return this.invocationCount;
-        }
-
-        /**
-         * @return machineId
-         */
-        public String getMachineId() {
-            return this.machineId;
+        public String getRegistrationTime() {
+            return this.registrationTime;
         }
 
         public static final class Builder {
-            private String lastInvokedTime; 
-            private String internetIp; 
+            private String activationId; 
+            private String agentVersion; 
             private String hostname; 
             private String instanceId; 
-            private String activationId; 
-            private String intranetIp; 
-            private String agentVersion; 
-            private String registrationTime; 
             private String instanceName; 
+            private String internetIp; 
+            private String intranetIp; 
+            private Long invocationCount; 
+            private String lastInvokedTime; 
+            private String machineId; 
             private String osType; 
             private String osVersion; 
-            private Long invocationCount; 
-            private String machineId; 
+            private String registrationTime; 
 
             /**
-             * The time when the cloud assistant task was last executed.
-             */
-            public Builder lastInvokedTime(String lastInvokedTime) {
-                this.lastInvokedTime = lastInvokedTime;
-                return this;
-            }
-
-            /**
-             * The public IP address of the managed instance.
-             */
-            public Builder internetIp(String internetIp) {
-                this.internetIp = internetIp;
-                return this;
-            }
-
-            /**
-             * The hostname of the managed instance.
-             */
-            public Builder hostname(String hostname) {
-                this.hostname = hostname;
-                return this;
-            }
-
-            /**
-             * The ID of the managed instance.
-             */
-            public Builder instanceId(String instanceId) {
-                this.instanceId = instanceId;
-                return this;
-            }
-
-            /**
-             * The ID of the activation code.
+             * ActivationId.
              */
             public Builder activationId(String activationId) {
                 this.activationId = activationId;
@@ -282,15 +250,7 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The internal IP address of the managed instance.
-             */
-            public Builder intranetIp(String intranetIp) {
-                this.intranetIp = intranetIp;
-                return this;
-            }
-
-            /**
-             * The version number of the cloud assistant client.
+             * AgentVersion.
              */
             public Builder agentVersion(String agentVersion) {
                 this.agentVersion = agentVersion;
@@ -298,15 +258,23 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The registration time of the managed instance.
+             * Hostname.
              */
-            public Builder registrationTime(String registrationTime) {
-                this.registrationTime = registrationTime;
+            public Builder hostname(String hostname) {
+                this.hostname = hostname;
                 return this;
             }
 
             /**
-             * The name of the managed instance.
+             * InstanceId.
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * InstanceName.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -314,23 +282,23 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The operating system of the managed instance.
+             * InternetIp.
              */
-            public Builder osType(String osType) {
-                this.osType = osType;
+            public Builder internetIp(String internetIp) {
+                this.internetIp = internetIp;
                 return this;
             }
 
             /**
-             * The version of the operating system.
+             * IntranetIp.
              */
-            public Builder osVersion(String osVersion) {
-                this.osVersion = osVersion;
+            public Builder intranetIp(String intranetIp) {
+                this.intranetIp = intranetIp;
                 return this;
             }
 
             /**
-             * The number of times that the managed instance performs cloud assistant tasks.
+             * InvocationCount.
              */
             public Builder invocationCount(Long invocationCount) {
                 this.invocationCount = invocationCount;
@@ -338,10 +306,42 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The machine code of the managed instance.
+             * LastInvokedTime.
+             */
+            public Builder lastInvokedTime(String lastInvokedTime) {
+                this.lastInvokedTime = lastInvokedTime;
+                return this;
+            }
+
+            /**
+             * MachineId.
              */
             public Builder machineId(String machineId) {
                 this.machineId = machineId;
+                return this;
+            }
+
+            /**
+             * OsType.
+             */
+            public Builder osType(String osType) {
+                this.osType = osType;
+                return this;
+            }
+
+            /**
+             * OsVersion.
+             */
+            public Builder osVersion(String osVersion) {
+                this.osVersion = osVersion;
+                return this;
+            }
+
+            /**
+             * RegistrationTime.
+             */
+            public Builder registrationTime(String registrationTime) {
+                this.registrationTime = registrationTime;
                 return this;
             }
 

@@ -7,15 +7,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteDiskReplicaPairResponseBody} extends {@link TeaModel}
+ * {@link DeleteImageComponentResponseBody} extends {@link TeaModel}
  *
- * <p>DeleteDiskReplicaPairResponseBody</p>
+ * <p>DeleteImageComponentResponseBody</p>
  */
-public class DeleteDiskReplicaPairResponseBody extends TeaModel {
+public class DeleteImageComponentResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private DeleteDiskReplicaPairResponseBody(Builder builder) {
+    private DeleteImageComponentResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -23,7 +23,7 @@ public class DeleteDiskReplicaPairResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static DeleteDiskReplicaPairResponseBody create() {
+    public static DeleteImageComponentResponseBody create() {
         return builder().build();
     }
 
@@ -38,15 +38,15 @@ public class DeleteDiskReplicaPairResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public DeleteDiskReplicaPairResponseBody build() {
-            return new DeleteDiskReplicaPairResponseBody(this);
+        public DeleteImageComponentResponseBody build() {
+            return new DeleteImageComponentResponseBody(this);
         } 
 
     } 

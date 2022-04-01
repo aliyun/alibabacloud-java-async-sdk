@@ -12,13 +12,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AttachNetworkInterfaceRequest</p>
  */
 public class AttachNetworkInterfaceRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("InstanceId")
+    @Validation(required = true)
+    private String instanceId;
+
+    @Query
+    @NameInMap("NetworkInterfaceId")
+    @Validation(required = true)
+    private String networkInterfaceId;
+
+    @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
+
+    @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
+    @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
 
     @Query
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     @Query
     @NameInMap("TrunkNetworkInstanceId")
@@ -28,30 +55,18 @@ public class AttachNetworkInterfaceRequest extends Request {
     @NameInMap("WaitForNetworkConfigurationReady")
     private Boolean waitForNetworkConfigurationReady;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
-    @Query
-    @NameInMap("NetworkInterfaceId")
-    @Validation(required = true)
-    private String networkInterfaceId;
-
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
-    private String instanceId;
-
     private AttachNetworkInterfaceRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
+        this.instanceId = builder.instanceId;
+        this.networkInterfaceId = builder.networkInterfaceId;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.sourceRegionId = builder.sourceRegionId;
         this.trunkNetworkInstanceId = builder.trunkNetworkInstanceId;
         this.waitForNetworkConfigurationReady = builder.waitForNetworkConfigurationReady;
-        this.regionId = builder.regionId;
-        this.networkInterfaceId = builder.networkInterfaceId;
-        this.instanceId = builder.instanceId;
     }
 
     public static Builder builder() {
@@ -68,10 +83,45 @@ public class AttachNetworkInterfaceRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return instanceId
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    /**
+     * @return networkInterfaceId
+     */
+    public String getNetworkInterfaceId() {
+        return this.networkInterfaceId;
+    }
+
+    /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
     }
 
     /**
@@ -79,6 +129,13 @@ public class AttachNetworkInterfaceRequest extends Request {
      */
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -95,35 +152,17 @@ public class AttachNetworkInterfaceRequest extends Request {
         return this.waitForNetworkConfigurationReady;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return networkInterfaceId
-     */
-    public String getNetworkInterfaceId() {
-        return this.networkInterfaceId;
-    }
-
-    /**
-     * @return instanceId
-     */
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
     public static final class Builder extends Request.Builder<AttachNetworkInterfaceRequest, Builder> {
-        private String sourceRegionId; 
+        private String instanceId; 
+        private String networkInterfaceId; 
+        private String ownerAccount; 
+        private Long ownerId; 
+        private String regionId; 
+        private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String sourceRegionId; 
         private String trunkNetworkInstanceId; 
         private Boolean waitForNetworkConfigurationReady; 
-        private String regionId; 
-        private String networkInterfaceId; 
-        private String instanceId; 
 
         private Builder() {
             super();
@@ -131,21 +170,69 @@ public class AttachNetworkInterfaceRequest extends Request {
 
         private Builder(AttachNetworkInterfaceRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
+            this.instanceId = request.instanceId;
+            this.networkInterfaceId = request.networkInterfaceId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceRegionId = request.sourceRegionId;
             this.trunkNetworkInstanceId = request.trunkNetworkInstanceId;
             this.waitForNetworkConfigurationReady = request.waitForNetworkConfigurationReady;
-            this.regionId = request.regionId;
-            this.networkInterfaceId = request.networkInterfaceId;
-            this.instanceId = request.instanceId;
         } 
 
         /**
-         * SourceRegionId.
+         * InstanceId.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * NetworkInterfaceId.
+         */
+        public Builder networkInterfaceId(String networkInterfaceId) {
+            this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
+            this.networkInterfaceId = networkInterfaceId;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
             return this;
         }
 
@@ -155,6 +242,15 @@ public class AttachNetworkInterfaceRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 
@@ -173,33 +269,6 @@ public class AttachNetworkInterfaceRequest extends Request {
         public Builder waitForNetworkConfigurationReady(Boolean waitForNetworkConfigurationReady) {
             this.putQueryParameter("WaitForNetworkConfigurationReady", waitForNetworkConfigurationReady);
             this.waitForNetworkConfigurationReady = waitForNetworkConfigurationReady;
-            return this;
-        }
-
-        /**
-         * The ID of the region where the instance is located. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The ID of the Eni.
-         */
-        public Builder networkInterfaceId(String networkInterfaceId) {
-            this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
-            this.networkInterfaceId = networkInterfaceId;
-            return this;
-        }
-
-        /**
-         * The ID of the instance.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
             return this;
         }
 

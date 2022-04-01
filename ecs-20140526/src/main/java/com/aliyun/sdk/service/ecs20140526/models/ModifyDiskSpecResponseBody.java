@@ -12,19 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyDiskSpecResponseBody</p>
  */
 public class ModifyDiskSpecResponseBody extends TeaModel {
+    @NameInMap("OrderId")
+    private String orderId;
+
     @NameInMap("RequestId")
     private String requestId;
 
     @NameInMap("TaskId")
     private String taskId;
 
-    @NameInMap("OrderId")
-    private String orderId;
-
     private ModifyDiskSpecResponseBody(Builder builder) {
+        this.orderId = builder.orderId;
         this.requestId = builder.requestId;
         this.taskId = builder.taskId;
-        this.orderId = builder.orderId;
     }
 
     public static Builder builder() {
@@ -33,6 +33,13 @@ public class ModifyDiskSpecResponseBody extends TeaModel {
 
     public static ModifyDiskSpecResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return orderId
+     */
+    public String getOrderId() {
+        return this.orderId;
     }
 
     /**
@@ -49,20 +56,21 @@ public class ModifyDiskSpecResponseBody extends TeaModel {
         return this.taskId;
     }
 
-    /**
-     * @return orderId
-     */
-    public String getOrderId() {
-        return this.orderId;
-    }
-
     public static final class Builder {
+        private String orderId; 
         private String requestId; 
         private String taskId; 
-        private String orderId; 
 
         /**
-         * The ID of the request.
+         * OrderId.
+         */
+        public Builder orderId(String orderId) {
+            this.orderId = orderId;
+            return this;
+        }
+
+        /**
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,24 +78,10 @@ public class ModifyDiskSpecResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the task to change the disk configuration.
-         * <p>
-         * 
-         * > This parameter is not returned if you modify the performance level of only one ESSD disk.
+         * TaskId.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
-            return this;
-        }
-
-        /**
-         * The ID of the generated order.
-         * <p>
-         * 
-         * > The Order ID is returned only when you change or modify a subscription disk.
-         */
-        public Builder orderId(String orderId) {
-            this.orderId = orderId;
             return this;
         }
 

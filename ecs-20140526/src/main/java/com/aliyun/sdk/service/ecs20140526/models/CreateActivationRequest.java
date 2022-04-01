@@ -12,19 +12,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateActivationRequest</p>
  */
 public class CreateActivationRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
-    @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
-
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Query
     @NameInMap("Description")
     private String description;
@@ -34,27 +21,55 @@ public class CreateActivationRequest extends Request {
     private Integer instanceCount;
 
     @Query
-    @NameInMap("TimeToLiveInHours")
-    private Long timeToLiveInHours;
+    @NameInMap("InstanceName")
+    private String instanceName;
 
     @Query
     @NameInMap("IpAddressRange")
     private String ipAddressRange;
 
     @Query
-    @NameInMap("InstanceName")
-    private String instanceName;
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
+
+    @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
+    @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
+    @Query
+    @NameInMap("TimeToLiveInHours")
+    private Long timeToLiveInHours;
 
     private CreateActivationRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
-        this.resourceOwnerId = builder.resourceOwnerId;
-        this.regionId = builder.regionId;
         this.description = builder.description;
         this.instanceCount = builder.instanceCount;
-        this.timeToLiveInHours = builder.timeToLiveInHours;
-        this.ipAddressRange = builder.ipAddressRange;
         this.instanceName = builder.instanceName;
+        this.ipAddressRange = builder.ipAddressRange;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.sourceRegionId = builder.sourceRegionId;
+        this.timeToLiveInHours = builder.timeToLiveInHours;
     }
 
     public static Builder builder() {
@@ -68,27 +83,6 @@ public class CreateActivationRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
-     * @return resourceOwnerId
-     */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -106,10 +100,10 @@ public class CreateActivationRequest extends Request {
     }
 
     /**
-     * @return timeToLiveInHours
+     * @return instanceName
      */
-    public Long getTimeToLiveInHours() {
-        return this.timeToLiveInHours;
+    public String getInstanceName() {
+        return this.instanceName;
     }
 
     /**
@@ -120,21 +114,66 @@ public class CreateActivationRequest extends Request {
     }
 
     /**
-     * @return instanceName
+     * @return ownerAccount
      */
-    public String getInstanceName() {
-        return this.instanceName;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
+    /**
+     * @return timeToLiveInHours
+     */
+    public Long getTimeToLiveInHours() {
+        return this.timeToLiveInHours;
     }
 
     public static final class Builder extends Request.Builder<CreateActivationRequest, Builder> {
-        private String sourceRegionId; 
-        private Long resourceOwnerId; 
-        private String regionId; 
         private String description; 
         private Integer instanceCount; 
-        private Long timeToLiveInHours; 
-        private String ipAddressRange; 
         private String instanceName; 
+        private String ipAddressRange; 
+        private String ownerAccount; 
+        private Long ownerId; 
+        private String regionId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String sourceRegionId; 
+        private Long timeToLiveInHours; 
 
         private Builder() {
             super();
@@ -142,22 +181,88 @@ public class CreateActivationRequest extends Request {
 
         private Builder(CreateActivationRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
-            this.resourceOwnerId = request.resourceOwnerId;
-            this.regionId = request.regionId;
             this.description = request.description;
             this.instanceCount = request.instanceCount;
-            this.timeToLiveInHours = request.timeToLiveInHours;
-            this.ipAddressRange = request.ipAddressRange;
             this.instanceName = request.instanceName;
+            this.ipAddressRange = request.ipAddressRange;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceRegionId = request.sourceRegionId;
+            this.timeToLiveInHours = request.timeToLiveInHours;
         } 
 
         /**
-         * SourceRegionId.
+         * Description.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
+            return this;
+        }
+
+        /**
+         * InstanceCount.
+         */
+        public Builder instanceCount(Integer instanceCount) {
+            this.putQueryParameter("InstanceCount", instanceCount);
+            this.instanceCount = instanceCount;
+            return this;
+        }
+
+        /**
+         * InstanceName.
+         */
+        public Builder instanceName(String instanceName) {
+            this.putQueryParameter("InstanceName", instanceName);
+            this.instanceName = instanceName;
+            return this;
+        }
+
+        /**
+         * IpAddressRange.
+         */
+        public Builder ipAddressRange(String ipAddressRange) {
+            this.putQueryParameter("IpAddressRange", ipAddressRange);
+            this.ipAddressRange = ipAddressRange;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
             return this;
         }
 
@@ -171,70 +276,20 @@ public class CreateActivationRequest extends Request {
         }
 
         /**
-         * The ID of the region. Supported regions: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), and China (Hong Kong).
-         * <p>
-         * 
-         * You can call [DescribeRegions](~~ 25609 ~~) to view the region ID and other information.
+         * SourceRegionId.
          */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 
         /**
-         * The description of the activation code. It can be 1 to 100 characters in length and cannot start with "http:// "or "https.
-         */
-        public Builder description(String description) {
-            this.putQueryParameter("Description", description);
-            this.description = description;
-            return this;
-        }
-
-        /**
-         * The maximum number of times an activation code is used to register a managed instance. Valid values: 1 to 1000.
-         * <p>
-         * 
-         * Default value: 10.
-         */
-        public Builder instanceCount(Integer instanceCount) {
-            this.putQueryParameter("InstanceCount", instanceCount);
-            this.instanceCount = instanceCount;
-            return this;
-        }
-
-        /**
-         * The validity period of the activation code. After the activation code expires, it cannot be used to register a new instance. Unit: Hour. Valid values: 1 to 24.
-         * <p>
-         * 
-         * Default value: 4.
+         * TimeToLiveInHours.
          */
         public Builder timeToLiveInHours(Long timeToLiveInHours) {
             this.putQueryParameter("TimeToLiveInHours", timeToLiveInHours);
             this.timeToLiveInHours = timeToLiveInHours;
-            return this;
-        }
-
-        /**
-         * The IP address of the host that allows the activation code. Valid values: IPv4 address, IPv6 address, or CIDR block.
-         */
-        public Builder ipAddressRange(String ipAddressRange) {
-            this.putQueryParameter("IpAddressRange", ipAddressRange);
-            this.ipAddressRange = ipAddressRange;
-            return this;
-        }
-
-        /**
-         * The default instance name prefix. The name must be 1 to 50 characters in length. It must start with a letter and cannot start with a special character or digit. It can only contain half-width periods (.), underscores (_), hyphens (-), and colons (:). It cannot start with "http:// "or "https.
-         * <p>
-         * 
-         * For instances registered with the activation code created by using this API, this name is used as the prefix to generate ordered instance names. You can also specify a new instance name when registering a managed instance to overwrite this default value.
-         * 
-         * When registering a managed instance, if the value of the InstanceName is specified, the name "< InstanceName>-00" is generated, where the number of digits numbered "00" depends on the number of digits of the "InstanceCount" value. If the value of the InstanceName is not specified, the host name (Hostname) is used as the instance name.
-         */
-        public Builder instanceName(String instanceName) {
-            this.putQueryParameter("InstanceName", instanceName);
-            this.instanceName = instanceName;
             return this;
         }
 

@@ -12,27 +12,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAutoProvisioningGroupHistoryResponseBody</p>
  */
 public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
+    @NameInMap("AutoProvisioningGroupHistories")
+    private AutoProvisioningGroupHistories autoProvisioningGroupHistories;
+
+    @NameInMap("PageNumber")
+    private Integer pageNumber;
+
     @NameInMap("PageSize")
     private Integer pageSize;
 
     @NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("PageNumber")
-    private Integer pageNumber;
-
     @NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("AutoProvisioningGroupHistories")
-    private AutoProvisioningGroupHistories autoProvisioningGroupHistories;
-
     private DescribeAutoProvisioningGroupHistoryResponseBody(Builder builder) {
+        this.autoProvisioningGroupHistories = builder.autoProvisioningGroupHistories;
+        this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
-        this.pageNumber = builder.pageNumber;
         this.totalCount = builder.totalCount;
-        this.autoProvisioningGroupHistories = builder.autoProvisioningGroupHistories;
     }
 
     public static Builder builder() {
@@ -41,6 +41,20 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
 
     public static DescribeAutoProvisioningGroupHistoryResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return autoProvisioningGroupHistories
+     */
+    public AutoProvisioningGroupHistories getAutoProvisioningGroupHistories() {
+        return this.autoProvisioningGroupHistories;
+    }
+
+    /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     /**
@@ -58,51 +72,29 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
     }
 
     /**
-     * @return pageNumber
-     */
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    /**
      * @return totalCount
      */
     public Integer getTotalCount() {
         return this.totalCount;
     }
 
-    /**
-     * @return autoProvisioningGroupHistories
-     */
-    public AutoProvisioningGroupHistories getAutoProvisioningGroupHistories() {
-        return this.autoProvisioningGroupHistories;
-    }
-
     public static final class Builder {
+        private AutoProvisioningGroupHistories autoProvisioningGroupHistories; 
+        private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private Integer pageNumber; 
         private Integer totalCount; 
-        private AutoProvisioningGroupHistories autoProvisioningGroupHistories; 
 
         /**
-         * The number of rows per page.
+         * AutoProvisioningGroupHistories.
          */
-        public Builder pageSize(Integer pageSize) {
-            this.pageSize = pageSize;
+        public Builder autoProvisioningGroupHistories(AutoProvisioningGroupHistories autoProvisioningGroupHistories) {
+            this.autoProvisioningGroupHistories = autoProvisioningGroupHistories;
             return this;
         }
 
         /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The page number.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -110,18 +102,26 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of queried scheduling tasks.
+         * PageSize.
          */
-        public Builder totalCount(Integer totalCount) {
-            this.totalCount = totalCount;
+        public Builder pageSize(Integer pageSize) {
+            this.pageSize = pageSize;
             return this;
         }
 
         /**
-         * The information of all scheduling tasks.
+         * RequestId.
          */
-        public Builder autoProvisioningGroupHistories(AutoProvisioningGroupHistories autoProvisioningGroupHistories) {
-            this.autoProvisioningGroupHistories = autoProvisioningGroupHistories;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
@@ -132,15 +132,15 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
     } 
 
     public static class ActivityDetail extends TeaModel {
-        @NameInMap("Status")
-        private String status;
-
         @NameInMap("Detail")
         private String detail;
 
+        @NameInMap("Status")
+        private String status;
+
         private ActivityDetail(Builder builder) {
-            this.status = builder.status;
             this.detail = builder.detail;
+            this.status = builder.status;
         }
 
         public static Builder builder() {
@@ -152,42 +152,36 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * @return status
-         */
-        public String getStatus() {
-            return this.status;
-        }
-
-        /**
          * @return detail
          */
         public String getDetail() {
             return this.detail;
         }
 
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
         public static final class Builder {
-            private String status; 
             private String detail; 
+            private String status; 
 
             /**
-             * The execution status of an instance creation activity for a single scheduling task. Possible values:
-             * <p>
-             * 
-             * -Successful: the instance is created.
-             * -Failed: the instance Failed to be created.
-             * -InProgress: the instance is being created.
-             * -Warning: the instance is created.
+             * Detail.
              */
-            public Builder status(String status) {
-                this.status = status;
+            public Builder detail(String detail) {
+                this.detail = detail;
                 return this;
             }
 
             /**
-             * The execution details of a single scheduling task and an instance creation activity.
+             * Status.
              */
-            public Builder detail(String detail) {
-                this.detail = detail;
+            public Builder status(String status) {
+                this.status = status;
                 return this;
             }
 
@@ -240,27 +234,27 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
 
     }
     public static class AutoProvisioningGroupHistory extends TeaModel {
-        @NameInMap("Status")
-        private String status;
-
-        @NameInMap("StartTime")
-        private String startTime;
-
-        @NameInMap("TaskId")
-        private String taskId;
+        @NameInMap("ActivityDetails")
+        private ActivityDetails activityDetails;
 
         @NameInMap("LastEventTime")
         private String lastEventTime;
 
-        @NameInMap("ActivityDetails")
-        private ActivityDetails activityDetails;
+        @NameInMap("StartTime")
+        private String startTime;
+
+        @NameInMap("Status")
+        private String status;
+
+        @NameInMap("TaskId")
+        private String taskId;
 
         private AutoProvisioningGroupHistory(Builder builder) {
-            this.status = builder.status;
-            this.startTime = builder.startTime;
-            this.taskId = builder.taskId;
-            this.lastEventTime = builder.lastEventTime;
             this.activityDetails = builder.activityDetails;
+            this.lastEventTime = builder.lastEventTime;
+            this.startTime = builder.startTime;
+            this.status = builder.status;
+            this.taskId = builder.taskId;
         }
 
         public static Builder builder() {
@@ -272,24 +266,10 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * @return status
+         * @return activityDetails
          */
-        public String getStatus() {
-            return this.status;
-        }
-
-        /**
-         * @return startTime
-         */
-        public String getStartTime() {
-            return this.startTime;
-        }
-
-        /**
-         * @return taskId
-         */
-        public String getTaskId() {
-            return this.taskId;
+        public ActivityDetails getActivityDetails() {
+            return this.activityDetails;
         }
 
         /**
@@ -300,50 +280,43 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * @return activityDetails
+         * @return startTime
          */
-        public ActivityDetails getActivityDetails() {
-            return this.activityDetails;
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return taskId
+         */
+        public String getTaskId() {
+            return this.taskId;
         }
 
         public static final class Builder {
-            private String status; 
-            private String startTime; 
-            private String taskId; 
-            private String lastEventTime; 
             private ActivityDetails activityDetails; 
+            private String lastEventTime; 
+            private String startTime; 
+            private String status; 
+            private String taskId; 
 
             /**
-             * The status of a single scheduling task. Possible values:
-             * <p>
-             * 
-             * -prepare: the scheduling task is running.
-             * -success: the scheduling task is successfully executed.
-             * -failed: the scheduling task failed.
+             * ActivityDetails.
              */
-            public Builder status(String status) {
-                this.status = status;
+            public Builder activityDetails(ActivityDetails activityDetails) {
+                this.activityDetails = activityDetails;
                 return this;
             }
 
             /**
-             * The time when a single scheduling task starts.
-             */
-            public Builder startTime(String startTime) {
-                this.startTime = startTime;
-                return this;
-            }
-
-            /**
-             * The ID of a single scheduling task.
-             */
-            public Builder taskId(String taskId) {
-                this.taskId = taskId;
-                return this;
-            }
-
-            /**
-             * The execution time of the last instance creation activity for a single scheduling task.
+             * LastEventTime.
              */
             public Builder lastEventTime(String lastEventTime) {
                 this.lastEventTime = lastEventTime;
@@ -351,10 +324,26 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The details of a single scheduling task.
+             * StartTime.
              */
-            public Builder activityDetails(ActivityDetails activityDetails) {
-                this.activityDetails = activityDetails;
+            public Builder startTime(String startTime) {
+                this.startTime = startTime;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * TaskId.
+             */
+            public Builder taskId(String taskId) {
+                this.taskId = taskId;
                 return this;
             }
 

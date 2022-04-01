@@ -13,29 +13,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeSnapshotGroupsRequest extends Request {
     @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
-
-    @Query
     @NameInMap("AdditionalAttributes")
     private java.util.List < String > additionalAttributes;
 
     @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
-    @Query
-    @NameInMap("NextToken")
-    private String nextToken;
-
-    @Query
-    @NameInMap("SnapshotGroupId")
-    private java.util.List < String > snapshotGroupId;
-
-    @Query
-    @NameInMap("ResourceGroupId")
-    private String resourceGroupId;
+    @NameInMap("InstanceId")
+    private String instanceId;
 
     @Query
     @NameInMap("MaxResults")
@@ -43,34 +26,66 @@ public class DescribeSnapshotGroupsRequest extends Request {
     private Integer maxResults;
 
     @Query
-    @NameInMap("InstanceId")
-    private String instanceId;
-
-    @Query
     @NameInMap("Name")
     private String name;
 
     @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @NameInMap("NextToken")
+    private String nextToken;
+
+    @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
+
+    @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
+    @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Query
+    @NameInMap("SnapshotGroupId")
+    private java.util.List < String > snapshotGroupId;
 
     @Query
     @NameInMap("Status")
     private java.util.List < String > status;
 
+    @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
     private DescribeSnapshotGroupsRequest(Builder builder) {
         super(builder);
-        this.resourceOwnerId = builder.resourceOwnerId;
         this.additionalAttributes = builder.additionalAttributes;
-        this.regionId = builder.regionId;
-        this.nextToken = builder.nextToken;
-        this.snapshotGroupId = builder.snapshotGroupId;
-        this.resourceGroupId = builder.resourceGroupId;
-        this.maxResults = builder.maxResults;
         this.instanceId = builder.instanceId;
+        this.maxResults = builder.maxResults;
         this.name = builder.name;
-        this.tag = builder.tag;
+        this.nextToken = builder.nextToken;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.snapshotGroupId = builder.snapshotGroupId;
         this.status = builder.status;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -87,52 +102,10 @@ public class DescribeSnapshotGroupsRequest extends Request {
     }
 
     /**
-     * @return resourceOwnerId
-     */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    /**
      * @return additionalAttributes
      */
     public java.util.List < String > getAdditionalAttributes() {
         return this.additionalAttributes;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return nextToken
-     */
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
-    /**
-     * @return snapshotGroupId
-     */
-    public java.util.List < String > getSnapshotGroupId() {
-        return this.snapshotGroupId;
-    }
-
-    /**
-     * @return resourceGroupId
-     */
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
-    }
-
-    /**
-     * @return maxResults
-     */
-    public Integer getMaxResults() {
-        return this.maxResults;
     }
 
     /**
@@ -143,6 +116,13 @@ public class DescribeSnapshotGroupsRequest extends Request {
     }
 
     /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -150,10 +130,59 @@ public class DescribeSnapshotGroupsRequest extends Request {
     }
 
     /**
-     * @return tag
+     * @return nextToken
      */
-    public java.util.List < Tag> getTag() {
-        return this.tag;
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    /**
+     * @return snapshotGroupId
+     */
+    public java.util.List < String > getSnapshotGroupId() {
+        return this.snapshotGroupId;
     }
 
     /**
@@ -163,18 +192,28 @@ public class DescribeSnapshotGroupsRequest extends Request {
         return this.status;
     }
 
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
     public static final class Builder extends Request.Builder<DescribeSnapshotGroupsRequest, Builder> {
-        private Long resourceOwnerId; 
         private java.util.List < String > additionalAttributes; 
-        private String regionId; 
-        private String nextToken; 
-        private java.util.List < String > snapshotGroupId; 
-        private String resourceGroupId; 
-        private Integer maxResults; 
         private String instanceId; 
+        private Integer maxResults; 
         private String name; 
-        private java.util.List < Tag> tag; 
+        private String nextToken; 
+        private String ownerAccount; 
+        private Long ownerId; 
+        private String regionId; 
+        private String resourceGroupId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private java.util.List < String > snapshotGroupId; 
         private java.util.List < String > status; 
+        private java.util.List < Tag> tag; 
 
         private Builder() {
             super();
@@ -182,27 +221,21 @@ public class DescribeSnapshotGroupsRequest extends Request {
 
         private Builder(DescribeSnapshotGroupsRequest request) {
             super(request);
-            this.resourceOwnerId = request.resourceOwnerId;
             this.additionalAttributes = request.additionalAttributes;
-            this.regionId = request.regionId;
-            this.nextToken = request.nextToken;
-            this.snapshotGroupId = request.snapshotGroupId;
-            this.resourceGroupId = request.resourceGroupId;
-            this.maxResults = request.maxResults;
             this.instanceId = request.instanceId;
+            this.maxResults = request.maxResults;
             this.name = request.name;
-            this.tag = request.tag;
+            this.nextToken = request.nextToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.snapshotGroupId = request.snapshotGroupId;
             this.status = request.status;
+            this.tag = request.tag;
         } 
-
-        /**
-         * ResourceOwnerId.
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
 
         /**
          * AdditionalAttributes.
@@ -214,57 +247,7 @@ public class DescribeSnapshotGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the instance belongs. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The Token of the query. The value is the NextToken parameter returned by the last API call.
-         */
-        public Builder nextToken(String nextToken) {
-            this.putQueryParameter("NextToken", nextToken);
-            this.nextToken = nextToken;
-            return this;
-        }
-
-        /**
-         * The ID of the specified snapshot consistency group. Valid values of N: 1 to 10.
-         */
-        public Builder snapshotGroupId(java.util.List < String > snapshotGroupId) {
-            this.putQueryParameter("SnapshotGroupId", snapshotGroupId);
-            this.snapshotGroupId = snapshotGroupId;
-            return this;
-        }
-
-        /**
-         * The ID of the resource group to which the snapshot consistency group belongs.
-         */
-        public Builder resourceGroupId(String resourceGroupId) {
-            this.putQueryParameter("ResourceGroupId", resourceGroupId);
-            this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-
-        /**
-         * The number of entries to return on each page.
-         * <p>
-         * 
-         * Maximum Value: 100.
-         * 
-         * Default value: 10.
-         */
-        public Builder maxResults(Integer maxResults) {
-            this.putQueryParameter("MaxResults", maxResults);
-            this.maxResults = maxResults;
-            return this;
-        }
-
-        /**
-         * The ID of the instance.
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -273,7 +256,16 @@ public class DescribeSnapshotGroupsRequest extends Request {
         }
 
         /**
-         * The name of the snapshot consistency group.
+         * MaxResults.
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.putQueryParameter("MaxResults", maxResults);
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * Name.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -282,27 +274,92 @@ public class DescribeSnapshotGroupsRequest extends Request {
         }
 
         /**
-         * The key-value pair of the snapshot consistency group.
+         * NextToken.
          */
-        public Builder tag(java.util.List < Tag> tag) {
-            this.putQueryParameter("Tag", tag);
-            this.tag = tag;
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
             return this;
         }
 
         /**
-         * The status of the snapshot consistency group. Valid values of N: 1 to 3. Valid values:
-         * <p>
-         * 
-         * -progressing: creating.
-         * 
-         * -accomplished: successfully created.
-         * 
-         * -failed: failed to be created.
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * SnapshotGroupId.
+         */
+        public Builder snapshotGroupId(java.util.List < String > snapshotGroupId) {
+            this.putQueryParameter("SnapshotGroupId", snapshotGroupId);
+            this.snapshotGroupId = snapshotGroupId;
+            return this;
+        }
+
+        /**
+         * Status.
          */
         public Builder status(java.util.List < String > status) {
             this.putQueryParameter("Status", status);
             this.status = status;
+            return this;
+        }
+
+        /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
             return this;
         }
 
@@ -352,7 +409,7 @@ public class DescribeSnapshotGroupsRequest extends Request {
             private String value; 
 
             /**
-             * 快照一致性组的标签键。N的取值范围为1~20。
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -360,7 +417,7 @@ public class DescribeSnapshotGroupsRequest extends Request {
             }
 
             /**
-             * 快照一致性组的标签值。N的取值范围为1~20。
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

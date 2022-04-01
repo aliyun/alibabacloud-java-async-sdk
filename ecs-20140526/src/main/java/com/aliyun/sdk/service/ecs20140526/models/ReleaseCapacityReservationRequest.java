@@ -16,13 +16,22 @@ public class ReleaseCapacityReservationRequest extends Request {
     @NameInMap("PrivatePoolOptions")
     private PrivatePoolOptions privatePoolOptions;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
 
     @Query
     @NameInMap("OwnerId")
     private Long ownerId;
+
+    @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
 
     @Query
     @NameInMap("ResourceOwnerAccount")
@@ -32,29 +41,20 @@ public class ReleaseCapacityReservationRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("OwnerAccount")
-    private String ownerAccount;
-
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
-    @Query
-    @NameInMap("DryRun")
-    private Boolean dryRun;
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     private ReleaseCapacityReservationRequest(Builder builder) {
         super(builder);
         this.privatePoolOptions = builder.privatePoolOptions;
-        this.sourceRegionId = builder.sourceRegionId;
+        this.dryRun = builder.dryRun;
+        this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.ownerAccount = builder.ownerAccount;
-        this.regionId = builder.regionId;
-        this.dryRun = builder.dryRun;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -78,10 +78,17 @@ public class ReleaseCapacityReservationRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return dryRun
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     /**
@@ -89,6 +96,13 @@ public class ReleaseCapacityReservationRequest extends Request {
      */
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -106,35 +120,21 @@ public class ReleaseCapacityReservationRequest extends Request {
     }
 
     /**
-     * @return ownerAccount
+     * @return sourceRegionId
      */
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return dryRun
-     */
-    public Boolean getDryRun() {
-        return this.dryRun;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public static final class Builder extends Request.Builder<ReleaseCapacityReservationRequest, Builder> {
         private PrivatePoolOptions privatePoolOptions; 
-        private String sourceRegionId; 
+        private Boolean dryRun; 
+        private String ownerAccount; 
         private Long ownerId; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String ownerAccount; 
-        private String regionId; 
-        private Boolean dryRun; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -143,13 +143,13 @@ public class ReleaseCapacityReservationRequest extends Request {
         private Builder(ReleaseCapacityReservationRequest request) {
             super(request);
             this.privatePoolOptions = request.privatePoolOptions;
-            this.sourceRegionId = request.sourceRegionId;
+            this.dryRun = request.dryRun;
+            this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.ownerAccount = request.ownerAccount;
-            this.regionId = request.regionId;
-            this.dryRun = request.dryRun;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
@@ -162,11 +162,20 @@ public class ReleaseCapacityReservationRequest extends Request {
         }
 
         /**
-         * SourceRegionId.
+         * DryRun.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
             return this;
         }
 
@@ -176,6 +185,15 @@ public class ReleaseCapacityReservationRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
@@ -198,29 +216,11 @@ public class ReleaseCapacityReservationRequest extends Request {
         }
 
         /**
-         * OwnerAccount.
+         * SourceRegionId.
          */
-        public Builder ownerAccount(String ownerAccount) {
-            this.putQueryParameter("OwnerAccount", ownerAccount);
-            this.ownerAccount = ownerAccount;
-            return this;
-        }
-
-        /**
-         * The ID of the region to which the capacity reservation service belongs. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * Indicates whether to retrieve the request. Set the value to false. Currently, you can only release the capacity reservation service without retrieving this request.
-         */
-        public Builder dryRun(Boolean dryRun) {
-            this.putQueryParameter("DryRun", dryRun);
-            this.dryRun = dryRun;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 
@@ -259,7 +259,7 @@ public class ReleaseCapacityReservationRequest extends Request {
             private String id; 
 
             /**
-             * The ID of the subscription service.
+             * Id.
              */
             public Builder id(String id) {
                 this.id = id;

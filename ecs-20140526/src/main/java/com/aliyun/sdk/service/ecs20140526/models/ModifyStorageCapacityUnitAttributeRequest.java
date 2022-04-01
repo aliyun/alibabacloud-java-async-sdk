@@ -13,8 +13,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyStorageCapacityUnitAttributeRequest extends Request {
     @Query
+    @NameInMap("Description")
+    private String description;
+
+    @Query
+    @NameInMap("Name")
+    private String name;
+
+    @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @Query
     @NameInMap("OwnerId")
     private Long ownerId;
+
+    @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
 
     @Query
     @NameInMap("ResourceOwnerAccount")
@@ -25,37 +42,20 @@ public class ModifyStorageCapacityUnitAttributeRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
-    @NameInMap("OwnerAccount")
-    private String ownerAccount;
-
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
-    @Query
     @NameInMap("StorageCapacityUnitId")
     @Validation(required = true)
     private String storageCapacityUnitId;
 
-    @Query
-    @NameInMap("Name")
-    private String name;
-
-    @Query
-    @NameInMap("Description")
-    private String description;
-
     private ModifyStorageCapacityUnitAttributeRequest(Builder builder) {
         super(builder);
+        this.description = builder.description;
+        this.name = builder.name;
+        this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.ownerAccount = builder.ownerAccount;
-        this.regionId = builder.regionId;
         this.storageCapacityUnitId = builder.storageCapacityUnitId;
-        this.name = builder.name;
-        this.description = builder.description;
     }
 
     public static Builder builder() {
@@ -72,10 +72,38 @@ public class ModifyStorageCapacityUnitAttributeRequest extends Request {
     }
 
     /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
+    }
+
+    /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
      * @return ownerId
      */
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -93,49 +121,21 @@ public class ModifyStorageCapacityUnitAttributeRequest extends Request {
     }
 
     /**
-     * @return ownerAccount
-     */
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return storageCapacityUnitId
      */
     public String getStorageCapacityUnitId() {
         return this.storageCapacityUnitId;
     }
 
-    /**
-     * @return name
-     */
-    public String getName() {
-        return this.name;
-    }
-
-    /**
-     * @return description
-     */
-    public String getDescription() {
-        return this.description;
-    }
-
     public static final class Builder extends Request.Builder<ModifyStorageCapacityUnitAttributeRequest, Builder> {
+        private String description; 
+        private String name; 
+        private String ownerAccount; 
         private Long ownerId; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String ownerAccount; 
-        private String regionId; 
         private String storageCapacityUnitId; 
-        private String name; 
-        private String description; 
 
         private Builder() {
             super();
@@ -143,15 +143,42 @@ public class ModifyStorageCapacityUnitAttributeRequest extends Request {
 
         private Builder(ModifyStorageCapacityUnitAttributeRequest request) {
             super(request);
+            this.description = request.description;
+            this.name = request.name;
+            this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.ownerAccount = request.ownerAccount;
-            this.regionId = request.regionId;
             this.storageCapacityUnitId = request.storageCapacityUnitId;
-            this.name = request.name;
-            this.description = request.description;
         } 
+
+        /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
+            return this;
+        }
+
+        /**
+         * Name.
+         */
+        public Builder name(String name) {
+            this.putQueryParameter("Name", name);
+            this.name = name;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
 
         /**
          * OwnerId.
@@ -159,6 +186,15 @@ public class ModifyStorageCapacityUnitAttributeRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
@@ -181,47 +217,11 @@ public class ModifyStorageCapacityUnitAttributeRequest extends Request {
         }
 
         /**
-         * OwnerAccount.
-         */
-        public Builder ownerAccount(String ownerAccount) {
-            this.putQueryParameter("OwnerAccount", ownerAccount);
-            this.ownerAccount = ownerAccount;
-            return this;
-        }
-
-        /**
-         * The ID of the region to which the SCU belongs. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * SCU ID.
+         * StorageCapacityUnitId.
          */
         public Builder storageCapacityUnitId(String storageCapacityUnitId) {
             this.putQueryParameter("StorageCapacityUnitId", storageCapacityUnitId);
             this.storageCapacityUnitId = storageCapacityUnitId;
-            return this;
-        }
-
-        /**
-         * The name of the SCU. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https. It can contain numbers, colons (:), underscores (_), and hyphens (-).
-         */
-        public Builder name(String name) {
-            this.putQueryParameter("Name", name);
-            this.name = name;
-            return this;
-        }
-
-        /**
-         * The description of the SCU. It must be 2 to 256 characters in length and cannot start with http:// or https.
-         */
-        public Builder description(String description) {
-            this.putQueryParameter("Description", description);
-            this.description = description;
             return this;
         }
 

@@ -50,7 +50,7 @@ public class CreateCommandResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the command.
+         * CommandId.
          */
         public Builder commandId(String commandId) {
             this.commandId = commandId;
@@ -58,7 +58,7 @@ public class CreateCommandResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

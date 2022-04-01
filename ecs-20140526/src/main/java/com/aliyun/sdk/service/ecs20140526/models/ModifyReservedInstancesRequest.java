@@ -13,24 +13,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyReservedInstancesRequest extends Request {
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
-    @NameInMap("ResourceOwnerAccount")
-    private String resourceOwnerAccount;
-
-    @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
+    @NameInMap("Configuration")
+    private java.util.List < Configuration> configuration;
 
     @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
 
     @Query
-    @NameInMap("Configuration")
-    private java.util.List < Configuration> configuration;
+    @NameInMap("OwnerId")
+    private Long ownerId;
 
     @Query
     @NameInMap("RegionId")
@@ -42,15 +34,23 @@ public class ModifyReservedInstancesRequest extends Request {
     @Validation(required = true)
     private java.util.List < String > reservedInstanceId;
 
+    @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
     private ModifyReservedInstancesRequest(Builder builder) {
         super(builder);
-        this.ownerId = builder.ownerId;
-        this.resourceOwnerAccount = builder.resourceOwnerAccount;
-        this.resourceOwnerId = builder.resourceOwnerId;
-        this.ownerAccount = builder.ownerAccount;
         this.configuration = builder.configuration;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
         this.reservedInstanceId = builder.reservedInstanceId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
     }
 
     public static Builder builder() {
@@ -67,24 +67,10 @@ public class ModifyReservedInstancesRequest extends Request {
     }
 
     /**
-     * @return ownerId
+     * @return configuration
      */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
-     * @return resourceOwnerAccount
-     */
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    /**
-     * @return resourceOwnerId
-     */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public java.util.List < Configuration> getConfiguration() {
+        return this.configuration;
     }
 
     /**
@@ -95,10 +81,10 @@ public class ModifyReservedInstancesRequest extends Request {
     }
 
     /**
-     * @return configuration
+     * @return ownerId
      */
-    public java.util.List < Configuration> getConfiguration() {
-        return this.configuration;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     /**
@@ -115,14 +101,28 @@ public class ModifyReservedInstancesRequest extends Request {
         return this.reservedInstanceId;
     }
 
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
     public static final class Builder extends Request.Builder<ModifyReservedInstancesRequest, Builder> {
-        private Long ownerId; 
-        private String resourceOwnerAccount; 
-        private Long resourceOwnerId; 
-        private String ownerAccount; 
         private java.util.List < Configuration> configuration; 
+        private String ownerAccount; 
+        private Long ownerId; 
         private String regionId; 
         private java.util.List < String > reservedInstanceId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
 
         private Builder() {
             super();
@@ -130,14 +130,32 @@ public class ModifyReservedInstancesRequest extends Request {
 
         private Builder(ModifyReservedInstancesRequest request) {
             super(request);
-            this.ownerId = request.ownerId;
-            this.resourceOwnerAccount = request.resourceOwnerAccount;
-            this.resourceOwnerId = request.resourceOwnerId;
-            this.ownerAccount = request.ownerAccount;
             this.configuration = request.configuration;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
             this.regionId = request.regionId;
             this.reservedInstanceId = request.reservedInstanceId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
+
+        /**
+         * Configuration.
+         */
+        public Builder configuration(java.util.List < Configuration> configuration) {
+            this.putQueryParameter("Configuration", configuration);
+            this.configuration = configuration;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
 
         /**
          * OwnerId.
@@ -145,6 +163,24 @@ public class ModifyReservedInstancesRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ReservedInstanceId.
+         */
+        public Builder reservedInstanceId(java.util.List < String > reservedInstanceId) {
+            this.putQueryParameter("ReservedInstanceId", reservedInstanceId);
+            this.reservedInstanceId = reservedInstanceId;
             return this;
         }
 
@@ -166,45 +202,6 @@ public class ModifyReservedInstancesRequest extends Request {
             return this;
         }
 
-        /**
-         * OwnerAccount.
-         */
-        public Builder ownerAccount(String ownerAccount) {
-            this.putQueryParameter("OwnerAccount", ownerAccount);
-            this.ownerAccount = ownerAccount;
-            return this;
-        }
-
-        /**
-         * Configuration.
-         */
-        public Builder configuration(java.util.List < Configuration> configuration) {
-            this.putQueryParameter("Configuration", configuration);
-            this.configuration = configuration;
-            return this;
-        }
-
-        /**
-         * The ID of the region to which the reserved instance belongs.
-         * <p>
-         * 
-         * You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The ID of the reserved instance. Valid values of N: 1 to 20.
-         */
-        public Builder reservedInstanceId(java.util.List < String > reservedInstanceId) {
-            this.putQueryParameter("ReservedInstanceId", reservedInstanceId);
-            this.reservedInstanceId = reservedInstanceId;
-            return this;
-        }
-
         @Override
         public ModifyReservedInstancesRequest build() {
             return new ModifyReservedInstancesRequest(this);
@@ -213,27 +210,27 @@ public class ModifyReservedInstancesRequest extends Request {
     } 
 
     public static class Configuration extends TeaModel {
-        @NameInMap("ReservedInstanceName")
-        private String reservedInstanceName;
-
-        @NameInMap("ZoneId")
-        private String zoneId;
-
-        @NameInMap("Scope")
-        private String scope;
+        @NameInMap("InstanceAmount")
+        private Integer instanceAmount;
 
         @NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("InstanceAmount")
-        private Integer instanceAmount;
+        @NameInMap("ReservedInstanceName")
+        private String reservedInstanceName;
+
+        @NameInMap("Scope")
+        private String scope;
+
+        @NameInMap("ZoneId")
+        private String zoneId;
 
         private Configuration(Builder builder) {
-            this.reservedInstanceName = builder.reservedInstanceName;
-            this.zoneId = builder.zoneId;
-            this.scope = builder.scope;
-            this.instanceType = builder.instanceType;
             this.instanceAmount = builder.instanceAmount;
+            this.instanceType = builder.instanceType;
+            this.reservedInstanceName = builder.reservedInstanceName;
+            this.scope = builder.scope;
+            this.zoneId = builder.zoneId;
         }
 
         public static Builder builder() {
@@ -245,24 +242,10 @@ public class ModifyReservedInstancesRequest extends Request {
         }
 
         /**
-         * @return reservedInstanceName
+         * @return instanceAmount
          */
-        public String getReservedInstanceName() {
-            return this.reservedInstanceName;
-        }
-
-        /**
-         * @return zoneId
-         */
-        public String getZoneId() {
-            return this.zoneId;
-        }
-
-        /**
-         * @return scope
-         */
-        public String getScope() {
-            return this.scope;
+        public Integer getInstanceAmount() {
+            return this.instanceAmount;
         }
 
         /**
@@ -273,66 +256,43 @@ public class ModifyReservedInstancesRequest extends Request {
         }
 
         /**
-         * @return instanceAmount
+         * @return reservedInstanceName
          */
-        public Integer getInstanceAmount() {
-            return this.instanceAmount;
+        public String getReservedInstanceName() {
+            return this.reservedInstanceName;
+        }
+
+        /**
+         * @return scope
+         */
+        public String getScope() {
+            return this.scope;
+        }
+
+        /**
+         * @return zoneId
+         */
+        public String getZoneId() {
+            return this.zoneId;
         }
 
         public static final class Builder {
-            private String reservedInstanceName; 
-            private String zoneId; 
-            private String scope; 
-            private String instanceType; 
             private Integer instanceAmount; 
+            private String instanceType; 
+            private String reservedInstanceName; 
+            private String scope; 
+            private String zoneId; 
 
             /**
-             * 预留实例券的名称。N的取值范围：1~100
-             * <p>
-             * 
-             * 长度为2~128个英文或中文字符。必须以大小写字母或中文开头，不能以http://和https://开头。可以包含数字、半角冒号（:）、下划线（_）或者连字符（-）。
+             * InstanceAmount.
              */
-            public Builder reservedInstanceName(String reservedInstanceName) {
-                this.reservedInstanceName = reservedInstanceName;
+            public Builder instanceAmount(Integer instanceAmount) {
+                this.instanceAmount = instanceAmount;
                 return this;
             }
 
             /**
-             * 预留实例券所属的可用区编号。N的取值范围：1~100
-             * <p>
-             * 
-             * `Scope`参数值为`Zone`时，该参数为必填参数。
-             * 
-             * 您可以调用[DescribeZones](~~25609~~)获取可用区列表。 
-             */
-            public Builder zoneId(String zoneId) {
-                this.zoneId = zoneId;
-                return this;
-            }
-
-            /**
-             * 预留实例券的范围。取值范围： 
-             * <p>
-             * 
-             * - Region：地域级别
-             * - Zone：可用区级别
-             * 
-             * N的取值范围：1~100
-             * 
-             * 默认值：Region  
-             */
-            public Builder scope(String scope) {
-                this.scope = scope;
-                return this;
-            }
-
-            /**
-             * 预留实例券可以同时匹配的实例规格。N的取值范围：1~100
-             * <p>
-             * 
-             * - 可用区级别预留实例券能够匹配的实例规格族包括：c6、g6、r6、c5、g5、r5、hfc5、hfg5、ic5、se1ne、sn1ne、sn2ne、i2、t5、t6
-             * 
-             * - 地域级别预留实例券能够匹配的实例规格族包括：c6、g6、r6、c5、g5、r5、hfc5、hfg5、ic5、se1ne、sn1ne、sn2ne、i2
+             * InstanceType.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -340,10 +300,26 @@ public class ModifyReservedInstancesRequest extends Request {
             }
 
             /**
-             * 预留实例券可以同时匹配同规格按量付费实例的数量。取值范围：大于等于1。N的取值范围：1~100
+             * ReservedInstanceName.
              */
-            public Builder instanceAmount(Integer instanceAmount) {
-                this.instanceAmount = instanceAmount;
+            public Builder reservedInstanceName(String reservedInstanceName) {
+                this.reservedInstanceName = reservedInstanceName;
+                return this;
+            }
+
+            /**
+             * Scope.
+             */
+            public Builder scope(String scope) {
+                this.scope = scope;
+                return this;
+            }
+
+            /**
+             * ZoneId.
+             */
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
                 return this;
             }
 

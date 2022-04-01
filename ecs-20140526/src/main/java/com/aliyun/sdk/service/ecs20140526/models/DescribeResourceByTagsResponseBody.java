@@ -12,27 +12,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeResourceByTagsResponseBody</p>
  */
 public class DescribeResourceByTagsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    private String requestId;
+    @NameInMap("PageNumber")
+    private Integer pageNumber;
 
     @NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("PageNumber")
-    private Integer pageNumber;
-
-    @NameInMap("TotalCount")
-    private Integer totalCount;
+    @NameInMap("RequestId")
+    private String requestId;
 
     @NameInMap("Resources")
     private Resources resources;
 
+    @NameInMap("TotalCount")
+    private Integer totalCount;
+
     private DescribeResourceByTagsResponseBody(Builder builder) {
-        this.requestId = builder.requestId;
-        this.pageSize = builder.pageSize;
         this.pageNumber = builder.pageNumber;
-        this.totalCount = builder.totalCount;
+        this.pageSize = builder.pageSize;
+        this.requestId = builder.requestId;
         this.resources = builder.resources;
+        this.totalCount = builder.totalCount;
     }
 
     public static Builder builder() {
@@ -44,10 +44,10 @@ public class DescribeResourceByTagsResponseBody extends TeaModel {
     }
 
     /**
-     * @return requestId
+     * @return pageNumber
      */
-    public String getRequestId() {
-        return this.requestId;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     /**
@@ -58,17 +58,10 @@ public class DescribeResourceByTagsResponseBody extends TeaModel {
     }
 
     /**
-     * @return pageNumber
+     * @return requestId
      */
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    /**
-     * @return totalCount
-     */
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     /**
@@ -78,31 +71,22 @@ public class DescribeResourceByTagsResponseBody extends TeaModel {
         return this.resources;
     }
 
+    /**
+     * @return totalCount
+     */
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static final class Builder {
-        private String requestId; 
-        private Integer pageSize; 
         private Integer pageNumber; 
-        private Integer totalCount; 
+        private Integer pageSize; 
+        private String requestId; 
         private Resources resources; 
+        private Integer totalCount; 
 
         /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The number of entries per page displayed in the query results.
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * The page number of the query result.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -110,18 +94,34 @@ public class DescribeResourceByTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned resources.
+         * PageSize.
          */
-        public Builder totalCount(Integer totalCount) {
-            this.totalCount = totalCount;
+        public Builder pageSize(Integer pageSize) {
+            this.pageSize = pageSize;
             return this;
         }
 
         /**
-         * The collection of resource information associated with the tag.
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * Resources.
          */
         public Builder resources(Resources resources) {
             this.resources = resources;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
@@ -132,19 +132,19 @@ public class DescribeResourceByTagsResponseBody extends TeaModel {
     } 
 
     public static class Resource extends TeaModel {
-        @NameInMap("ResourceType")
-        private String resourceType;
+        @NameInMap("RegionId")
+        private String regionId;
 
         @NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("RegionId")
-        private String regionId;
+        @NameInMap("ResourceType")
+        private String resourceType;
 
         private Resource(Builder builder) {
-            this.resourceType = builder.resourceType;
-            this.resourceId = builder.resourceId;
             this.regionId = builder.regionId;
+            this.resourceId = builder.resourceId;
+            this.resourceType = builder.resourceType;
         }
 
         public static Builder builder() {
@@ -156,10 +156,10 @@ public class DescribeResourceByTagsResponseBody extends TeaModel {
         }
 
         /**
-         * @return resourceType
+         * @return regionId
          */
-        public String getResourceType() {
-            return this.resourceType;
+        public String getRegionId() {
+            return this.regionId;
         }
 
         /**
@@ -170,27 +170,27 @@ public class DescribeResourceByTagsResponseBody extends TeaModel {
         }
 
         /**
-         * @return regionId
+         * @return resourceType
          */
-        public String getRegionId() {
-            return this.regionId;
+        public String getResourceType() {
+            return this.resourceType;
         }
 
         public static final class Builder {
-            private String resourceType; 
-            private String resourceId; 
             private String regionId; 
+            private String resourceId; 
+            private String resourceType; 
 
             /**
-             * The type of the resource.
+             * RegionId.
              */
-            public Builder resourceType(String resourceType) {
-                this.resourceType = resourceType;
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
                 return this;
             }
 
             /**
-             * The ID of the resource.
+             * ResourceId.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -198,10 +198,10 @@ public class DescribeResourceByTagsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * ResourceType.
              */
-            public Builder regionId(String regionId) {
-                this.regionId = regionId;
+            public Builder resourceType(String resourceType) {
+                this.resourceType = resourceType;
                 return this;
             }
 

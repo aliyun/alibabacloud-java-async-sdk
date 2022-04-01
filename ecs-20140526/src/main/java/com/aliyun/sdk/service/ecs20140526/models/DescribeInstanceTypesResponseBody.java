@@ -12,19 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceTypesResponseBody</p>
  */
 public class DescribeInstanceTypesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    private String requestId;
-
     @NameInMap("InstanceTypes")
     private InstanceTypes instanceTypes;
 
     @NameInMap("NextToken")
     private String nextToken;
 
+    @NameInMap("RequestId")
+    private String requestId;
+
     private DescribeInstanceTypesResponseBody(Builder builder) {
-        this.requestId = builder.requestId;
         this.instanceTypes = builder.instanceTypes;
         this.nextToken = builder.nextToken;
+        this.requestId = builder.requestId;
     }
 
     public static Builder builder() {
@@ -33,13 +33,6 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
 
     public static DescribeInstanceTypesResponseBody create() {
         return builder().build();
-    }
-
-    /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
     }
 
     /**
@@ -56,21 +49,20 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         return this.nextToken;
     }
 
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static final class Builder {
-        private String requestId; 
         private InstanceTypes instanceTypes; 
         private String nextToken; 
+        private String requestId; 
 
         /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The set of instance types.
+         * InstanceTypes.
          */
         public Builder instanceTypes(InstanceTypes instanceTypes) {
             this.instanceTypes = instanceTypes;
@@ -78,10 +70,18 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         }
 
         /**
-         * The Token returned by this call.
+         * NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
@@ -92,50 +92,29 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
     } 
 
     public static class InstanceType extends TeaModel {
-        @NameInMap("EniTotalQuantity")
-        private Integer eniTotalQuantity;
+        @NameInMap("BaselineCredit")
+        private Integer baselineCredit;
 
-        @NameInMap("LocalStorageCategory")
-        private String localStorageCategory;
+        @NameInMap("CpuCoreCount")
+        private Integer cpuCoreCount;
 
-        @NameInMap("PrimaryEniQueueNumber")
-        private Integer primaryEniQueueNumber;
-
-        @NameInMap("MemorySize")
-        private Float memorySize;
-
-        @NameInMap("LocalStorageCapacity")
-        private Long localStorageCapacity;
-
-        @NameInMap("InstanceFamilyLevel")
-        private String instanceFamilyLevel;
-
-        @NameInMap("InstancePpsRx")
-        private Long instancePpsRx;
+        @NameInMap("DiskQuantity")
+        private Integer diskQuantity;
 
         @NameInMap("EniIpv6AddressQuantity")
         private Integer eniIpv6AddressQuantity;
 
-        @NameInMap("MaximumQueueNumberPerEni")
-        private Integer maximumQueueNumberPerEni;
+        @NameInMap("EniPrivateIpAddressQuantity")
+        private Integer eniPrivateIpAddressQuantity;
 
-        @NameInMap("InstanceTypeId")
-        private String instanceTypeId;
+        @NameInMap("EniQuantity")
+        private Integer eniQuantity;
 
-        @NameInMap("InstanceBandwidthRx")
-        private Integer instanceBandwidthRx;
+        @NameInMap("EniTotalQuantity")
+        private Integer eniTotalQuantity;
 
-        @NameInMap("SecondaryEniQueueNumber")
-        private Integer secondaryEniQueueNumber;
-
-        @NameInMap("GPUSpec")
-        private String GPUSpec;
-
-        @NameInMap("InstanceBandwidthTx")
-        private Integer instanceBandwidthTx;
-
-        @NameInMap("QueuePairNumber")
-        private Integer queuePairNumber;
+        @NameInMap("EniTrunkSupported")
+        private Boolean eniTrunkSupported;
 
         @NameInMap("EriQuantity")
         private Integer eriQuantity;
@@ -143,72 +122,93 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         @NameInMap("GPUAmount")
         private Integer GPUAmount;
 
-        @NameInMap("TotalEniQueueQuantity")
-        private Integer totalEniQueueQuantity;
-
-        @NameInMap("NvmeSupport")
-        private String nvmeSupport;
-
-        @NameInMap("DiskQuantity")
-        private Integer diskQuantity;
+        @NameInMap("GPUSpec")
+        private String GPUSpec;
 
         @NameInMap("InitialCredit")
         private Integer initialCredit;
 
-        @NameInMap("LocalStorageAmount")
-        private Integer localStorageAmount;
+        @NameInMap("InstanceBandwidthRx")
+        private Integer instanceBandwidthRx;
 
-        @NameInMap("BaselineCredit")
-        private Integer baselineCredit;
+        @NameInMap("InstanceBandwidthTx")
+        private Integer instanceBandwidthTx;
+
+        @NameInMap("InstanceFamilyLevel")
+        private String instanceFamilyLevel;
+
+        @NameInMap("InstancePpsRx")
+        private Long instancePpsRx;
 
         @NameInMap("InstancePpsTx")
         private Long instancePpsTx;
 
-        @NameInMap("EniPrivateIpAddressQuantity")
-        private Integer eniPrivateIpAddressQuantity;
-
-        @NameInMap("CpuCoreCount")
-        private Integer cpuCoreCount;
-
         @NameInMap("InstanceTypeFamily")
         private String instanceTypeFamily;
 
-        @NameInMap("EniQuantity")
-        private Integer eniQuantity;
+        @NameInMap("InstanceTypeId")
+        private String instanceTypeId;
 
-        @NameInMap("EniTrunkSupported")
-        private Boolean eniTrunkSupported;
+        @NameInMap("LocalStorageAmount")
+        private Integer localStorageAmount;
+
+        @NameInMap("LocalStorageCapacity")
+        private Long localStorageCapacity;
+
+        @NameInMap("LocalStorageCategory")
+        private String localStorageCategory;
+
+        @NameInMap("MaximumQueueNumberPerEni")
+        private Integer maximumQueueNumberPerEni;
+
+        @NameInMap("MemorySize")
+        private Float memorySize;
+
+        @NameInMap("NvmeSupport")
+        private String nvmeSupport;
+
+        @NameInMap("PrimaryEniQueueNumber")
+        private Integer primaryEniQueueNumber;
+
+        @NameInMap("QueuePairNumber")
+        private Integer queuePairNumber;
+
+        @NameInMap("SecondaryEniQueueNumber")
+        private Integer secondaryEniQueueNumber;
+
+        @NameInMap("TotalEniQueueQuantity")
+        private Integer totalEniQueueQuantity;
 
         private InstanceType(Builder builder) {
-            this.eniTotalQuantity = builder.eniTotalQuantity;
-            this.localStorageCategory = builder.localStorageCategory;
-            this.primaryEniQueueNumber = builder.primaryEniQueueNumber;
-            this.memorySize = builder.memorySize;
-            this.localStorageCapacity = builder.localStorageCapacity;
-            this.instanceFamilyLevel = builder.instanceFamilyLevel;
-            this.instancePpsRx = builder.instancePpsRx;
+            this.baselineCredit = builder.baselineCredit;
+            this.cpuCoreCount = builder.cpuCoreCount;
+            this.diskQuantity = builder.diskQuantity;
             this.eniIpv6AddressQuantity = builder.eniIpv6AddressQuantity;
-            this.maximumQueueNumberPerEni = builder.maximumQueueNumberPerEni;
-            this.instanceTypeId = builder.instanceTypeId;
-            this.instanceBandwidthRx = builder.instanceBandwidthRx;
-            this.secondaryEniQueueNumber = builder.secondaryEniQueueNumber;
-            this.GPUSpec = builder.GPUSpec;
-            this.instanceBandwidthTx = builder.instanceBandwidthTx;
-            this.queuePairNumber = builder.queuePairNumber;
+            this.eniPrivateIpAddressQuantity = builder.eniPrivateIpAddressQuantity;
+            this.eniQuantity = builder.eniQuantity;
+            this.eniTotalQuantity = builder.eniTotalQuantity;
+            this.eniTrunkSupported = builder.eniTrunkSupported;
             this.eriQuantity = builder.eriQuantity;
             this.GPUAmount = builder.GPUAmount;
-            this.totalEniQueueQuantity = builder.totalEniQueueQuantity;
-            this.nvmeSupport = builder.nvmeSupport;
-            this.diskQuantity = builder.diskQuantity;
+            this.GPUSpec = builder.GPUSpec;
             this.initialCredit = builder.initialCredit;
-            this.localStorageAmount = builder.localStorageAmount;
-            this.baselineCredit = builder.baselineCredit;
+            this.instanceBandwidthRx = builder.instanceBandwidthRx;
+            this.instanceBandwidthTx = builder.instanceBandwidthTx;
+            this.instanceFamilyLevel = builder.instanceFamilyLevel;
+            this.instancePpsRx = builder.instancePpsRx;
             this.instancePpsTx = builder.instancePpsTx;
-            this.eniPrivateIpAddressQuantity = builder.eniPrivateIpAddressQuantity;
-            this.cpuCoreCount = builder.cpuCoreCount;
             this.instanceTypeFamily = builder.instanceTypeFamily;
-            this.eniQuantity = builder.eniQuantity;
-            this.eniTrunkSupported = builder.eniTrunkSupported;
+            this.instanceTypeId = builder.instanceTypeId;
+            this.localStorageAmount = builder.localStorageAmount;
+            this.localStorageCapacity = builder.localStorageCapacity;
+            this.localStorageCategory = builder.localStorageCategory;
+            this.maximumQueueNumberPerEni = builder.maximumQueueNumberPerEni;
+            this.memorySize = builder.memorySize;
+            this.nvmeSupport = builder.nvmeSupport;
+            this.primaryEniQueueNumber = builder.primaryEniQueueNumber;
+            this.queuePairNumber = builder.queuePairNumber;
+            this.secondaryEniQueueNumber = builder.secondaryEniQueueNumber;
+            this.totalEniQueueQuantity = builder.totalEniQueueQuantity;
         }
 
         public static Builder builder() {
@@ -220,52 +220,24 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         }
 
         /**
-         * @return eniTotalQuantity
+         * @return baselineCredit
          */
-        public Integer getEniTotalQuantity() {
-            return this.eniTotalQuantity;
+        public Integer getBaselineCredit() {
+            return this.baselineCredit;
         }
 
         /**
-         * @return localStorageCategory
+         * @return cpuCoreCount
          */
-        public String getLocalStorageCategory() {
-            return this.localStorageCategory;
+        public Integer getCpuCoreCount() {
+            return this.cpuCoreCount;
         }
 
         /**
-         * @return primaryEniQueueNumber
+         * @return diskQuantity
          */
-        public Integer getPrimaryEniQueueNumber() {
-            return this.primaryEniQueueNumber;
-        }
-
-        /**
-         * @return memorySize
-         */
-        public Float getMemorySize() {
-            return this.memorySize;
-        }
-
-        /**
-         * @return localStorageCapacity
-         */
-        public Long getLocalStorageCapacity() {
-            return this.localStorageCapacity;
-        }
-
-        /**
-         * @return instanceFamilyLevel
-         */
-        public String getInstanceFamilyLevel() {
-            return this.instanceFamilyLevel;
-        }
-
-        /**
-         * @return instancePpsRx
-         */
-        public Long getInstancePpsRx() {
-            return this.instancePpsRx;
+        public Integer getDiskQuantity() {
+            return this.diskQuantity;
         }
 
         /**
@@ -276,52 +248,31 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         }
 
         /**
-         * @return maximumQueueNumberPerEni
+         * @return eniPrivateIpAddressQuantity
          */
-        public Integer getMaximumQueueNumberPerEni() {
-            return this.maximumQueueNumberPerEni;
+        public Integer getEniPrivateIpAddressQuantity() {
+            return this.eniPrivateIpAddressQuantity;
         }
 
         /**
-         * @return instanceTypeId
+         * @return eniQuantity
          */
-        public String getInstanceTypeId() {
-            return this.instanceTypeId;
+        public Integer getEniQuantity() {
+            return this.eniQuantity;
         }
 
         /**
-         * @return instanceBandwidthRx
+         * @return eniTotalQuantity
          */
-        public Integer getInstanceBandwidthRx() {
-            return this.instanceBandwidthRx;
+        public Integer getEniTotalQuantity() {
+            return this.eniTotalQuantity;
         }
 
         /**
-         * @return secondaryEniQueueNumber
+         * @return eniTrunkSupported
          */
-        public Integer getSecondaryEniQueueNumber() {
-            return this.secondaryEniQueueNumber;
-        }
-
-        /**
-         * @return GPUSpec
-         */
-        public String getGPUSpec() {
-            return this.GPUSpec;
-        }
-
-        /**
-         * @return instanceBandwidthTx
-         */
-        public Integer getInstanceBandwidthTx() {
-            return this.instanceBandwidthTx;
-        }
-
-        /**
-         * @return queuePairNumber
-         */
-        public Integer getQueuePairNumber() {
-            return this.queuePairNumber;
+        public Boolean getEniTrunkSupported() {
+            return this.eniTrunkSupported;
         }
 
         /**
@@ -339,24 +290,10 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         }
 
         /**
-         * @return totalEniQueueQuantity
+         * @return GPUSpec
          */
-        public Integer getTotalEniQueueQuantity() {
-            return this.totalEniQueueQuantity;
-        }
-
-        /**
-         * @return nvmeSupport
-         */
-        public String getNvmeSupport() {
-            return this.nvmeSupport;
-        }
-
-        /**
-         * @return diskQuantity
-         */
-        public Integer getDiskQuantity() {
-            return this.diskQuantity;
+        public String getGPUSpec() {
+            return this.GPUSpec;
         }
 
         /**
@@ -367,17 +304,31 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         }
 
         /**
-         * @return localStorageAmount
+         * @return instanceBandwidthRx
          */
-        public Integer getLocalStorageAmount() {
-            return this.localStorageAmount;
+        public Integer getInstanceBandwidthRx() {
+            return this.instanceBandwidthRx;
         }
 
         /**
-         * @return baselineCredit
+         * @return instanceBandwidthTx
          */
-        public Integer getBaselineCredit() {
-            return this.baselineCredit;
+        public Integer getInstanceBandwidthTx() {
+            return this.instanceBandwidthTx;
+        }
+
+        /**
+         * @return instanceFamilyLevel
+         */
+        public String getInstanceFamilyLevel() {
+            return this.instanceFamilyLevel;
+        }
+
+        /**
+         * @return instancePpsRx
+         */
+        public Long getInstancePpsRx() {
+            return this.instancePpsRx;
         }
 
         /**
@@ -388,20 +339,6 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         }
 
         /**
-         * @return eniPrivateIpAddressQuantity
-         */
-        public Integer getEniPrivateIpAddressQuantity() {
-            return this.eniPrivateIpAddressQuantity;
-        }
-
-        /**
-         * @return cpuCoreCount
-         */
-        public Integer getCpuCoreCount() {
-            return this.cpuCoreCount;
-        }
-
-        /**
          * @return instanceTypeFamily
          */
         public String getInstanceTypeFamily() {
@@ -409,243 +346,115 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         }
 
         /**
-         * @return eniQuantity
+         * @return instanceTypeId
          */
-        public Integer getEniQuantity() {
-            return this.eniQuantity;
+        public String getInstanceTypeId() {
+            return this.instanceTypeId;
         }
 
         /**
-         * @return eniTrunkSupported
+         * @return localStorageAmount
          */
-        public Boolean getEniTrunkSupported() {
-            return this.eniTrunkSupported;
+        public Integer getLocalStorageAmount() {
+            return this.localStorageAmount;
+        }
+
+        /**
+         * @return localStorageCapacity
+         */
+        public Long getLocalStorageCapacity() {
+            return this.localStorageCapacity;
+        }
+
+        /**
+         * @return localStorageCategory
+         */
+        public String getLocalStorageCategory() {
+            return this.localStorageCategory;
+        }
+
+        /**
+         * @return maximumQueueNumberPerEni
+         */
+        public Integer getMaximumQueueNumberPerEni() {
+            return this.maximumQueueNumberPerEni;
+        }
+
+        /**
+         * @return memorySize
+         */
+        public Float getMemorySize() {
+            return this.memorySize;
+        }
+
+        /**
+         * @return nvmeSupport
+         */
+        public String getNvmeSupport() {
+            return this.nvmeSupport;
+        }
+
+        /**
+         * @return primaryEniQueueNumber
+         */
+        public Integer getPrimaryEniQueueNumber() {
+            return this.primaryEniQueueNumber;
+        }
+
+        /**
+         * @return queuePairNumber
+         */
+        public Integer getQueuePairNumber() {
+            return this.queuePairNumber;
+        }
+
+        /**
+         * @return secondaryEniQueueNumber
+         */
+        public Integer getSecondaryEniQueueNumber() {
+            return this.secondaryEniQueueNumber;
+        }
+
+        /**
+         * @return totalEniQueueQuantity
+         */
+        public Integer getTotalEniQueueQuantity() {
+            return this.totalEniQueueQuantity;
         }
 
         public static final class Builder {
-            private Integer eniTotalQuantity; 
-            private String localStorageCategory; 
-            private Integer primaryEniQueueNumber; 
-            private Float memorySize; 
-            private Long localStorageCapacity; 
-            private String instanceFamilyLevel; 
-            private Long instancePpsRx; 
+            private Integer baselineCredit; 
+            private Integer cpuCoreCount; 
+            private Integer diskQuantity; 
             private Integer eniIpv6AddressQuantity; 
-            private Integer maximumQueueNumberPerEni; 
-            private String instanceTypeId; 
-            private Integer instanceBandwidthRx; 
-            private Integer secondaryEniQueueNumber; 
-            private String GPUSpec; 
-            private Integer instanceBandwidthTx; 
-            private Integer queuePairNumber; 
+            private Integer eniPrivateIpAddressQuantity; 
+            private Integer eniQuantity; 
+            private Integer eniTotalQuantity; 
+            private Boolean eniTrunkSupported; 
             private Integer eriQuantity; 
             private Integer GPUAmount; 
-            private Integer totalEniQueueQuantity; 
-            private String nvmeSupport; 
-            private Integer diskQuantity; 
+            private String GPUSpec; 
             private Integer initialCredit; 
-            private Integer localStorageAmount; 
-            private Integer baselineCredit; 
+            private Integer instanceBandwidthRx; 
+            private Integer instanceBandwidthTx; 
+            private String instanceFamilyLevel; 
+            private Long instancePpsRx; 
             private Long instancePpsTx; 
-            private Integer eniPrivateIpAddressQuantity; 
-            private Integer cpuCoreCount; 
             private String instanceTypeFamily; 
-            private Integer eniQuantity; 
-            private Boolean eniTrunkSupported; 
+            private String instanceTypeId; 
+            private Integer localStorageAmount; 
+            private Long localStorageCapacity; 
+            private String localStorageCategory; 
+            private Integer maximumQueueNumberPerEni; 
+            private Float memorySize; 
+            private String nvmeSupport; 
+            private Integer primaryEniQueueNumber; 
+            private Integer queuePairNumber; 
+            private Integer secondaryEniQueueNumber; 
+            private Integer totalEniQueueQuantity; 
 
             /**
-             * > This parameter is being invited for testing and is not currently available.
-             */
-            public Builder eniTotalQuantity(Integer eniTotalQuantity) {
-                this.eniTotalQuantity = eniTotalQuantity;
-                return this;
-            }
-
-            /**
-             * The type of the local disk. For more information, see [local disk](~~ 63138 ~~). Possible values:
-             * <p>
-             * 
-             * -local_hdd_pro: SATA HDD local disks for d1ne and d1 instance families.
-             * -local_ssd_pro: local NVMe SSD disks of instance family i2, i2g, i1, ga1, and gn5.
-             */
-            public Builder localStorageCategory(String localStorageCategory) {
-                this.localStorageCategory = localStorageCategory;
-                return this;
-            }
-
-            /**
-             * The default number of queues for the primary Eni.
-             */
-            public Builder primaryEniQueueNumber(Integer primaryEniQueueNumber) {
-                this.primaryEniQueueNumber = primaryEniQueueNumber;
-                return this;
-            }
-
-            /**
-             * The memory size. Unit: GiB
-             */
-            public Builder memorySize(Float memorySize) {
-                this.memorySize = memorySize;
-                return this;
-            }
-
-            /**
-             * The capacity of a local disk attached to the instance. Unit: GiB
-             */
-            public Builder localStorageCapacity(Long localStorageCapacity) {
-                this.localStorageCapacity = localStorageCapacity;
-                return this;
-            }
-
-            /**
-             * The instance type family. Possible values:
-             * <p>
-             * 
-             * -EntryLevel: entry-level (shared type).
-             * -EnterpriseLevel: enterprise-level.
-             * -CreditEntryLevel: the entry level of points. For more information, see [burstable instances](~~ 59977 ~~).
-             */
-            public Builder instanceFamilyLevel(String instanceFamilyLevel) {
-                this.instanceFamilyLevel = instanceFamilyLevel;
-                return this;
-            }
-
-            /**
-             * The inbound packet forwarding rate of the intranet. Unit: Pps
-             */
-            public Builder instancePpsRx(Long instancePpsRx) {
-                this.instancePpsRx = instancePpsRx;
-                return this;
-            }
-
-            /**
-             * The maximum IPv6 address of a single Eni.
-             */
-            public Builder eniIpv6AddressQuantity(Integer eniIpv6AddressQuantity) {
-                this.eniIpv6AddressQuantity = eniIpv6AddressQuantity;
-                return this;
-            }
-
-            /**
-             * The maximum number of queues for an Eni.
-             */
-            public Builder maximumQueueNumberPerEni(Integer maximumQueueNumberPerEni) {
-                this.maximumQueueNumberPerEni = maximumQueueNumberPerEni;
-                return this;
-            }
-
-            /**
-             * The ID of the instance type.
-             */
-            public Builder instanceTypeId(String instanceTypeId) {
-                this.instanceTypeId = instanceTypeId;
-                return this;
-            }
-
-            /**
-             * The inbound bandwidth limit of the internal network. Unit: kbit/s
-             */
-            public Builder instanceBandwidthRx(Integer instanceBandwidthRx) {
-                this.instanceBandwidthRx = instanceBandwidthRx;
-                return this;
-            }
-
-            /**
-             * The default number of queues for secondary Enis.
-             */
-            public Builder secondaryEniQueueNumber(Integer secondaryEniQueueNumber) {
-                this.secondaryEniQueueNumber = secondaryEniQueueNumber;
-                return this;
-            }
-
-            /**
-             * The type of the GPU.
-             */
-            public Builder GPUSpec(String GPUSpec) {
-                this.GPUSpec = GPUSpec;
-                return this;
-            }
-
-            /**
-             * The outbound bandwidth limit of the internal network. Unit: kbit/s
-             */
-            public Builder instanceBandwidthTx(Integer instanceBandwidthTx) {
-                this.instanceBandwidthTx = instanceBandwidthTx;
-                return this;
-            }
-
-            /**
-             * The maximum number of QP(QueuePair) queues for a single Elastic RDMA Nic (ERI).
-             */
-            public Builder queuePairNumber(Integer queuePairNumber) {
-                this.queuePairNumber = queuePairNumber;
-                return this;
-            }
-
-            /**
-             * The number of Enis (ERI).
-             * <p>
-             * 
-             * > This parameter is being invited for testing and is not currently available.
-             */
-            public Builder eriQuantity(Integer eriQuantity) {
-                this.eriQuantity = eriQuantity;
-                return this;
-            }
-
-            /**
-             * The number of GPUs.
-             */
-            public Builder GPUAmount(Integer GPUAmount) {
-                this.GPUAmount = GPUAmount;
-                return this;
-            }
-
-            /**
-             * The total number of Eni queues that can be modified for the instance type.
-             */
-            public Builder totalEniQueueQuantity(Integer totalEniQueueQuantity) {
-                this.totalEniQueueQuantity = totalEniQueueQuantity;
-                return this;
-            }
-
-            /**
-             * Indicates whether the cloud disk attached to the instance type supports NVMe. Possible values:
-             * <p>
-             * -required: supported. Indicates that the cloud disk is mounted as NVMe.
-             * -unsupported: not supported. Indicates that the cloud disk is not mounted as NVMe.
-             */
-            public Builder nvmeSupport(String nvmeSupport) {
-                this.nvmeSupport = nvmeSupport;
-                return this;
-            }
-
-            /**
-             * The maximum number of disks that can be mounted.
-             */
-            public Builder diskQuantity(Integer diskQuantity) {
-                this.diskQuantity = diskQuantity;
-                return this;
-            }
-
-            /**
-             * The initial vCPU credits of the t5 and t6 burstable instances.
-             */
-            public Builder initialCredit(Integer initialCredit) {
-                this.initialCredit = initialCredit;
-                return this;
-            }
-
-            /**
-             * The number of local disks attached to the instance.
-             */
-            public Builder localStorageAmount(Integer localStorageAmount) {
-                this.localStorageAmount = localStorageAmount;
-                return this;
-            }
-
-            /**
-             * The baseline vCPU computing performance (the sum of all VCPUs) of the t5 and t6 burstable instances.
+             * BaselineCredit.
              */
             public Builder baselineCredit(Integer baselineCredit) {
                 this.baselineCredit = baselineCredit;
@@ -653,23 +462,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The outbound packet forwarding rate of the internal network. Unit: Pps
-             */
-            public Builder instancePpsTx(Long instancePpsTx) {
-                this.instancePpsTx = instancePpsTx;
-                return this;
-            }
-
-            /**
-             * The maximum number of private IP addresses for a single Eni.
-             */
-            public Builder eniPrivateIpAddressQuantity(Integer eniPrivateIpAddressQuantity) {
-                this.eniPrivateIpAddressQuantity = eniPrivateIpAddressQuantity;
-                return this;
-            }
-
-            /**
-             * The number of vCPU cores.
+             * CpuCoreCount.
              */
             public Builder cpuCoreCount(Integer cpuCoreCount) {
                 this.cpuCoreCount = cpuCoreCount;
@@ -677,15 +470,31 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type family.
+             * DiskQuantity.
              */
-            public Builder instanceTypeFamily(String instanceTypeFamily) {
-                this.instanceTypeFamily = instanceTypeFamily;
+            public Builder diskQuantity(Integer diskQuantity) {
+                this.diskQuantity = diskQuantity;
                 return this;
             }
 
             /**
-             * The maximum number of Enis that can be mounted.
+             * EniIpv6AddressQuantity.
+             */
+            public Builder eniIpv6AddressQuantity(Integer eniIpv6AddressQuantity) {
+                this.eniIpv6AddressQuantity = eniIpv6AddressQuantity;
+                return this;
+            }
+
+            /**
+             * EniPrivateIpAddressQuantity.
+             */
+            public Builder eniPrivateIpAddressQuantity(Integer eniPrivateIpAddressQuantity) {
+                this.eniPrivateIpAddressQuantity = eniPrivateIpAddressQuantity;
+                return this;
+            }
+
+            /**
+             * EniQuantity.
              */
             public Builder eniQuantity(Integer eniQuantity) {
                 this.eniQuantity = eniQuantity;
@@ -693,10 +502,186 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * > This parameter is being invited for testing and is not currently available.
+             * EniTotalQuantity.
+             */
+            public Builder eniTotalQuantity(Integer eniTotalQuantity) {
+                this.eniTotalQuantity = eniTotalQuantity;
+                return this;
+            }
+
+            /**
+             * EniTrunkSupported.
              */
             public Builder eniTrunkSupported(Boolean eniTrunkSupported) {
                 this.eniTrunkSupported = eniTrunkSupported;
+                return this;
+            }
+
+            /**
+             * EriQuantity.
+             */
+            public Builder eriQuantity(Integer eriQuantity) {
+                this.eriQuantity = eriQuantity;
+                return this;
+            }
+
+            /**
+             * GPUAmount.
+             */
+            public Builder GPUAmount(Integer GPUAmount) {
+                this.GPUAmount = GPUAmount;
+                return this;
+            }
+
+            /**
+             * GPUSpec.
+             */
+            public Builder GPUSpec(String GPUSpec) {
+                this.GPUSpec = GPUSpec;
+                return this;
+            }
+
+            /**
+             * InitialCredit.
+             */
+            public Builder initialCredit(Integer initialCredit) {
+                this.initialCredit = initialCredit;
+                return this;
+            }
+
+            /**
+             * InstanceBandwidthRx.
+             */
+            public Builder instanceBandwidthRx(Integer instanceBandwidthRx) {
+                this.instanceBandwidthRx = instanceBandwidthRx;
+                return this;
+            }
+
+            /**
+             * InstanceBandwidthTx.
+             */
+            public Builder instanceBandwidthTx(Integer instanceBandwidthTx) {
+                this.instanceBandwidthTx = instanceBandwidthTx;
+                return this;
+            }
+
+            /**
+             * InstanceFamilyLevel.
+             */
+            public Builder instanceFamilyLevel(String instanceFamilyLevel) {
+                this.instanceFamilyLevel = instanceFamilyLevel;
+                return this;
+            }
+
+            /**
+             * InstancePpsRx.
+             */
+            public Builder instancePpsRx(Long instancePpsRx) {
+                this.instancePpsRx = instancePpsRx;
+                return this;
+            }
+
+            /**
+             * InstancePpsTx.
+             */
+            public Builder instancePpsTx(Long instancePpsTx) {
+                this.instancePpsTx = instancePpsTx;
+                return this;
+            }
+
+            /**
+             * InstanceTypeFamily.
+             */
+            public Builder instanceTypeFamily(String instanceTypeFamily) {
+                this.instanceTypeFamily = instanceTypeFamily;
+                return this;
+            }
+
+            /**
+             * InstanceTypeId.
+             */
+            public Builder instanceTypeId(String instanceTypeId) {
+                this.instanceTypeId = instanceTypeId;
+                return this;
+            }
+
+            /**
+             * LocalStorageAmount.
+             */
+            public Builder localStorageAmount(Integer localStorageAmount) {
+                this.localStorageAmount = localStorageAmount;
+                return this;
+            }
+
+            /**
+             * LocalStorageCapacity.
+             */
+            public Builder localStorageCapacity(Long localStorageCapacity) {
+                this.localStorageCapacity = localStorageCapacity;
+                return this;
+            }
+
+            /**
+             * LocalStorageCategory.
+             */
+            public Builder localStorageCategory(String localStorageCategory) {
+                this.localStorageCategory = localStorageCategory;
+                return this;
+            }
+
+            /**
+             * MaximumQueueNumberPerEni.
+             */
+            public Builder maximumQueueNumberPerEni(Integer maximumQueueNumberPerEni) {
+                this.maximumQueueNumberPerEni = maximumQueueNumberPerEni;
+                return this;
+            }
+
+            /**
+             * MemorySize.
+             */
+            public Builder memorySize(Float memorySize) {
+                this.memorySize = memorySize;
+                return this;
+            }
+
+            /**
+             * NvmeSupport.
+             */
+            public Builder nvmeSupport(String nvmeSupport) {
+                this.nvmeSupport = nvmeSupport;
+                return this;
+            }
+
+            /**
+             * PrimaryEniQueueNumber.
+             */
+            public Builder primaryEniQueueNumber(Integer primaryEniQueueNumber) {
+                this.primaryEniQueueNumber = primaryEniQueueNumber;
+                return this;
+            }
+
+            /**
+             * QueuePairNumber.
+             */
+            public Builder queuePairNumber(Integer queuePairNumber) {
+                this.queuePairNumber = queuePairNumber;
+                return this;
+            }
+
+            /**
+             * SecondaryEniQueueNumber.
+             */
+            public Builder secondaryEniQueueNumber(Integer secondaryEniQueueNumber) {
+                this.secondaryEniQueueNumber = secondaryEniQueueNumber;
+                return this;
+            }
+
+            /**
+             * TotalEniQueueQuantity.
+             */
+            public Builder totalEniQueueQuantity(Integer totalEniQueueQuantity) {
+                this.totalEniQueueQuantity = totalEniQueueQuantity;
                 return this;
             }
 

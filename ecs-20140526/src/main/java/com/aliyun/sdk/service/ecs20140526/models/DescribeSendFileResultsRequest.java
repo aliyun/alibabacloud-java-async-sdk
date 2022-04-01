@@ -12,17 +12,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSendFileResultsRequest</p>
  */
 public class DescribeSendFileResultsRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("InstanceId")
+    private String instanceId;
 
     @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
+    @NameInMap("InvokeId")
+    private String invokeId;
 
     @Query
     @NameInMap("Name")
     private String name;
+
+    @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
 
     @Query
     @NameInMap("PageNumber")
@@ -38,23 +46,30 @@ public class DescribeSendFileResultsRequest extends Request {
     private String regionId;
 
     @Query
-    @NameInMap("InvokeId")
-    private String invokeId;
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
 
     @Query
-    @NameInMap("InstanceId")
-    private String instanceId;
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     private DescribeSendFileResultsRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
-        this.resourceOwnerId = builder.resourceOwnerId;
+        this.instanceId = builder.instanceId;
+        this.invokeId = builder.invokeId;
         this.name = builder.name;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
-        this.invokeId = builder.invokeId;
-        this.instanceId = builder.instanceId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -71,17 +86,17 @@ public class DescribeSendFileResultsRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return instanceId
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     /**
-     * @return resourceOwnerId
+     * @return invokeId
      */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public String getInvokeId() {
+        return this.invokeId;
     }
 
     /**
@@ -89,6 +104,20 @@ public class DescribeSendFileResultsRequest extends Request {
      */
     public String getName() {
         return this.name;
+    }
+
+    /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     /**
@@ -113,28 +142,38 @@ public class DescribeSendFileResultsRequest extends Request {
     }
 
     /**
-     * @return invokeId
+     * @return resourceOwnerAccount
      */
-    public String getInvokeId() {
-        return this.invokeId;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
     }
 
     /**
-     * @return instanceId
+     * @return resourceOwnerId
      */
-    public String getInstanceId() {
-        return this.instanceId;
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public static final class Builder extends Request.Builder<DescribeSendFileResultsRequest, Builder> {
-        private String sourceRegionId; 
-        private Long resourceOwnerId; 
+        private String instanceId; 
+        private String invokeId; 
         private String name; 
+        private String ownerAccount; 
+        private Long ownerId; 
         private Long pageNumber; 
         private Long pageSize; 
         private String regionId; 
-        private String invokeId; 
-        private String instanceId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -142,22 +181,97 @@ public class DescribeSendFileResultsRequest extends Request {
 
         private Builder(DescribeSendFileResultsRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
-            this.resourceOwnerId = request.resourceOwnerId;
+            this.instanceId = request.instanceId;
+            this.invokeId = request.invokeId;
             this.name = request.name;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
-            this.invokeId = request.invokeId;
-            this.instanceId = request.instanceId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
-         * SourceRegionId.
+         * InstanceId.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * InvokeId.
+         */
+        public Builder invokeId(String invokeId) {
+            this.putQueryParameter("InvokeId", invokeId);
+            this.invokeId = invokeId;
+            return this;
+        }
+
+        /**
+         * Name.
+         */
+        public Builder name(String name) {
+            this.putQueryParameter("Name", name);
+            this.name = name;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * PageNumber.
+         */
+        public Builder pageNumber(Long pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Long pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
             return this;
         }
 
@@ -171,66 +285,11 @@ public class DescribeSendFileResultsRequest extends Request {
         }
 
         /**
-         * The name of the file. After you specify this parameter, all delivery records of the name file are queried.
+         * SourceRegionId.
          */
-        public Builder name(String name) {
-            this.putQueryParameter("Name", name);
-            this.name = name;
-            return this;
-        }
-
-        /**
-         * The current page number.
-         * <p>
-         * 
-         * The start value is 1.
-         * 
-         * Default value: 1.
-         */
-        public Builder pageNumber(Long pageNumber) {
-            this.putQueryParameter("PageNumber", pageNumber);
-            this.pageNumber = pageNumber;
-            return this;
-        }
-
-        /**
-         * The number of entries to return on each page.
-         * <p>
-         * 
-         * Maximum Value: 50.
-         * 
-         * Default value: 10.
-         */
-        public Builder pageSize(Long pageSize) {
-            this.putQueryParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * The region ID of the ECS instance. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The ID of the execution.
-         */
-        public Builder invokeId(String invokeId) {
-            this.putQueryParameter("InvokeId", invokeId);
-            this.invokeId = invokeId;
-            return this;
-        }
-
-        /**
-         * The ID of the instance. After you specify this parameter, all file distribution records of the instance are queried.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

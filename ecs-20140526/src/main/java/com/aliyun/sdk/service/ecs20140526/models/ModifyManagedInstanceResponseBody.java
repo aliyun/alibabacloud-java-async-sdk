@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyManagedInstanceResponseBody</p>
  */
 public class ModifyManagedInstanceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    private String requestId;
-
     @NameInMap("Instance")
     private Instance instance;
 
+    @NameInMap("RequestId")
+    private String requestId;
+
     private ModifyManagedInstanceResponseBody(Builder builder) {
-        this.requestId = builder.requestId;
         this.instance = builder.instance;
+        this.requestId = builder.requestId;
     }
 
     public static Builder builder() {
@@ -32,36 +32,36 @@ public class ModifyManagedInstanceResponseBody extends TeaModel {
     }
 
     /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    /**
      * @return instance
      */
     public Instance getInstance() {
         return this.instance;
     }
 
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static final class Builder {
-        private String requestId; 
         private Instance instance; 
+        private String requestId; 
 
         /**
-         * The ID of the request.
+         * Instance.
          */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
+        public Builder instance(Instance instance) {
+            this.instance = instance;
             return this;
         }
 
         /**
-         * A collection of managed instance information.
+         * RequestId.
          */
-        public Builder instance(Instance instance) {
-            this.instance = instance;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
@@ -72,15 +72,15 @@ public class ModifyManagedInstanceResponseBody extends TeaModel {
     } 
 
     public static class Instance extends TeaModel {
-        @NameInMap("InstanceName")
-        private String instanceName;
-
         @NameInMap("InstanceId")
         private String instanceId;
 
+        @NameInMap("InstanceName")
+        private String instanceName;
+
         private Instance(Builder builder) {
-            this.instanceName = builder.instanceName;
             this.instanceId = builder.instanceId;
+            this.instanceName = builder.instanceName;
         }
 
         public static Builder builder() {
@@ -92,36 +92,36 @@ public class ModifyManagedInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * @return instanceName
-         */
-        public String getInstanceName() {
-            return this.instanceName;
-        }
-
-        /**
          * @return instanceId
          */
         public String getInstanceId() {
             return this.instanceId;
         }
 
+        /**
+         * @return instanceName
+         */
+        public String getInstanceName() {
+            return this.instanceName;
+        }
+
         public static final class Builder {
-            private String instanceName; 
             private String instanceId; 
+            private String instanceName; 
 
             /**
-             * The name of the managed instance.
+             * InstanceId.
              */
-            public Builder instanceName(String instanceName) {
-                this.instanceName = instanceName;
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
                 return this;
             }
 
             /**
-             * The ID of the managed instance.
+             * InstanceName.
              */
-            public Builder instanceId(String instanceId) {
-                this.instanceId = instanceId;
+            public Builder instanceName(String instanceName) {
+                this.instanceName = instanceName;
                 return this;
             }
 

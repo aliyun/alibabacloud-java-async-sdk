@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSnapshotMonitorDataResponseBody</p>
  */
 public class DescribeSnapshotMonitorDataResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    private String requestId;
-
     @NameInMap("MonitorData")
     private MonitorData monitorData;
 
+    @NameInMap("RequestId")
+    private String requestId;
+
     private DescribeSnapshotMonitorDataResponseBody(Builder builder) {
-        this.requestId = builder.requestId;
         this.monitorData = builder.monitorData;
+        this.requestId = builder.requestId;
     }
 
     public static Builder builder() {
@@ -32,36 +32,36 @@ public class DescribeSnapshotMonitorDataResponseBody extends TeaModel {
     }
 
     /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    /**
      * @return monitorData
      */
     public MonitorData getMonitorData() {
         return this.monitorData;
     }
 
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static final class Builder {
-        private String requestId; 
         private MonitorData monitorData; 
+        private String requestId; 
 
         /**
-         * The ID of the request.
+         * MonitorData.
          */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
+        public Builder monitorData(MonitorData monitorData) {
+            this.monitorData = monitorData;
             return this;
         }
 
         /**
-         * The collection of snapshot capacity change data.
+         * RequestId.
          */
-        public Builder monitorData(MonitorData monitorData) {
-            this.monitorData = monitorData;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
@@ -110,7 +110,7 @@ public class DescribeSnapshotMonitorDataResponseBody extends TeaModel {
             private String timeStamp; 
 
             /**
-             * The total size of the snapshot. Unit: bytes.
+             * Size.
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -118,7 +118,7 @@ public class DescribeSnapshotMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp corresponding to the size of a snapshot.
+             * TimeStamp.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;

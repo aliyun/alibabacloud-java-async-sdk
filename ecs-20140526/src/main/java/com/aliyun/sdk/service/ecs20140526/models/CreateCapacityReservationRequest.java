@@ -17,8 +17,42 @@ public class CreateCapacityReservationRequest extends Request {
     private PrivatePoolOptions privatePoolOptions;
 
     @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
+    @NameInMap("ClientToken")
+    private String clientToken;
+
+    @Query
+    @NameInMap("Description")
+    private String description;
+
+    @Query
+    @NameInMap("EndTime")
+    private String endTime;
+
+    @Query
+    @NameInMap("EndTimeType")
+    private String endTimeType;
+
+    @Query
+    @NameInMap("InstanceAmount")
+    @Validation(required = true, minimum = 1)
+    private Integer instanceAmount;
+
+    @Query
+    @NameInMap("InstanceType")
+    @Validation(required = true)
+    private String instanceType;
+
+    @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
+
+    @Query
+    @NameInMap("Platform")
+    private String platform;
 
     @Query
     @NameInMap("RegionId")
@@ -30,42 +64,20 @@ public class CreateCapacityReservationRequest extends Request {
     private String resourceGroupId;
 
     @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
 
     @Query
-    @NameInMap("ClientToken")
-    private String clientToken;
-
-    @Query
-    @NameInMap("Description")
-    private String description;
-
-    @Query
-    @NameInMap("InstanceType")
-    @Validation(required = true)
-    private String instanceType;
-
-    @Query
-    @NameInMap("EndTime")
-    private String endTime;
-
-    @Query
-    @NameInMap("EndTimeType")
-    private String endTimeType;
-
-    @Query
-    @NameInMap("Platform")
-    private String platform;
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
 
     @Query
     @NameInMap("StartTime")
     private String startTime;
 
     @Query
-    @NameInMap("InstanceAmount")
-    @Validation(required = true, minimum = 1)
-    private Integer instanceAmount;
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
 
     @Query
     @NameInMap("ZoneId")
@@ -75,18 +87,21 @@ public class CreateCapacityReservationRequest extends Request {
     private CreateCapacityReservationRequest(Builder builder) {
         super(builder);
         this.privatePoolOptions = builder.privatePoolOptions;
-        this.resourceOwnerId = builder.resourceOwnerId;
-        this.regionId = builder.regionId;
-        this.resourceGroupId = builder.resourceGroupId;
-        this.tag = builder.tag;
         this.clientToken = builder.clientToken;
         this.description = builder.description;
-        this.instanceType = builder.instanceType;
         this.endTime = builder.endTime;
         this.endTimeType = builder.endTimeType;
-        this.platform = builder.platform;
-        this.startTime = builder.startTime;
         this.instanceAmount = builder.instanceAmount;
+        this.instanceType = builder.instanceType;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
+        this.platform = builder.platform;
+        this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.startTime = builder.startTime;
+        this.tag = builder.tag;
         this.zoneId = builder.zoneId;
     }
 
@@ -111,34 +126,6 @@ public class CreateCapacityReservationRequest extends Request {
     }
 
     /**
-     * @return resourceOwnerId
-     */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return resourceGroupId
-     */
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
-    }
-
-    /**
-     * @return tag
-     */
-    public java.util.List < Tag> getTag() {
-        return this.tag;
-    }
-
-    /**
      * @return clientToken
      */
     public String getClientToken() {
@@ -150,13 +137,6 @@ public class CreateCapacityReservationRequest extends Request {
      */
     public String getDescription() {
         return this.description;
-    }
-
-    /**
-     * @return instanceType
-     */
-    public String getInstanceType() {
-        return this.instanceType;
     }
 
     /**
@@ -174,10 +154,66 @@ public class CreateCapacityReservationRequest extends Request {
     }
 
     /**
+     * @return instanceAmount
+     */
+    public Integer getInstanceAmount() {
+        return this.instanceAmount;
+    }
+
+    /**
+     * @return instanceType
+     */
+    public String getInstanceType() {
+        return this.instanceType;
+    }
+
+    /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
      * @return platform
      */
     public String getPlatform() {
         return this.platform;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     /**
@@ -188,10 +224,10 @@ public class CreateCapacityReservationRequest extends Request {
     }
 
     /**
-     * @return instanceAmount
+     * @return tag
      */
-    public Integer getInstanceAmount() {
-        return this.instanceAmount;
+    public java.util.List < Tag> getTag() {
+        return this.tag;
     }
 
     /**
@@ -203,18 +239,21 @@ public class CreateCapacityReservationRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateCapacityReservationRequest, Builder> {
         private PrivatePoolOptions privatePoolOptions; 
-        private Long resourceOwnerId; 
-        private String regionId; 
-        private String resourceGroupId; 
-        private java.util.List < Tag> tag; 
         private String clientToken; 
         private String description; 
-        private String instanceType; 
         private String endTime; 
         private String endTimeType; 
-        private String platform; 
-        private String startTime; 
         private Integer instanceAmount; 
+        private String instanceType; 
+        private String ownerAccount; 
+        private Long ownerId; 
+        private String platform; 
+        private String regionId; 
+        private String resourceGroupId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String startTime; 
+        private java.util.List < Tag> tag; 
         private java.util.List < String > zoneId; 
 
         private Builder() {
@@ -224,18 +263,21 @@ public class CreateCapacityReservationRequest extends Request {
         private Builder(CreateCapacityReservationRequest request) {
             super(request);
             this.privatePoolOptions = request.privatePoolOptions;
-            this.resourceOwnerId = request.resourceOwnerId;
-            this.regionId = request.regionId;
-            this.resourceGroupId = request.resourceGroupId;
-            this.tag = request.tag;
             this.clientToken = request.clientToken;
             this.description = request.description;
-            this.instanceType = request.instanceType;
             this.endTime = request.endTime;
             this.endTimeType = request.endTimeType;
-            this.platform = request.platform;
-            this.startTime = request.startTime;
             this.instanceAmount = request.instanceAmount;
+            this.instanceType = request.instanceType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.platform = request.platform;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.startTime = request.startTime;
+            this.tag = request.tag;
             this.zoneId = request.zoneId;
         } 
 
@@ -249,43 +291,7 @@ public class CreateCapacityReservationRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account (primary account).
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * The ID of the region to which the capacity reservation service belongs. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The ID of the resource group to which the capacity reservation service belongs.
-         */
-        public Builder resourceGroupId(String resourceGroupId) {
-            this.putQueryParameter("ResourceGroupId", resourceGroupId);
-            this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-
-        /**
-         * Tag list
-         */
-        public Builder tag(java.util.List < Tag> tag) {
-            this.putQueryParameter("Tag", tag);
-            this.tag = tag;
-            return this;
-        }
-
-        /**
-         * Ensure the idempotence of the request. Generate a parameter value from your client. Make sure that the value is unique among different requests. "ClientToken" only supports ASCII characters and cannot exceed 64 characters in length. For more information, see [how to ensure idempotence](~~ 25693 ~~).
+         * ClientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -294,10 +300,7 @@ public class CreateCapacityReservationRequest extends Request {
         }
 
         /**
-         * The description of the capacity reservation service. The description must be 2 to 256 characters in length and cannot start with "http:// "or "https.
-         * <p>
-         * 
-         * Default value: Null.
+         * Description.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -306,16 +309,7 @@ public class CreateCapacityReservationRequest extends Request {
         }
 
         /**
-         * The instance type. Currently, you can only set the capacity reservation service for one instance type. You can call [DescribeInstanceTypes](~~ 25620 ~~) to query the instance types provided by ECS.
-         */
-        public Builder instanceType(String instanceType) {
-            this.putQueryParameter("InstanceType", instanceType);
-            this.instanceType = instanceType;
-            return this;
-        }
-
-        /**
-         * The expiration time of the subscription service. The time format is ISO 8601 and UTC +0 is required. The format is yyyy-MM-ddTHH:mm:ssZ ". For more information, see [ISO 8601](~~ 25696 ~~).
+         * EndTime.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -324,11 +318,7 @@ public class CreateCapacityReservationRequest extends Request {
         }
 
         /**
-         * The expiration method of the capacity reservation service. Valid values:
-         * <p>
-         * 
-         * -Limited: release at the specified time. You must specify the "EndTime" parameter at the same time.
-         * -Unlimited: manually released. No time limit.
+         * EndTimeType.
          */
         public Builder endTimeType(String endTimeType) {
             this.putQueryParameter("EndTimeType", endTimeType);
@@ -337,36 +327,7 @@ public class CreateCapacityReservationRequest extends Request {
         }
 
         /**
-         * The operating system type of the image used by the instance. This parameter corresponds to the "Platform" parameter of the regional reserved instance. If the capacity reservation service matches the operating system type of the regional reserved instance, you can use the regional reserved instance to offset the unused capacity bill in the capacity reservation service. Valid values:
-         * <p>
-         * 
-         * -Windows:Windows Server-type operating system.
-         * -Linux:Linux and Unix-like operating systems.
-         * 
-         * Default value: Linux
-         * 
-         * > This parameter is not available.
-         */
-        public Builder platform(String platform) {
-            this.putQueryParameter("Platform", platform);
-            this.platform = platform;
-            return this;
-        }
-
-        /**
-         * The effective method of the capacity reservation service. Currently, you can only set the method to take effect immediately.
-         * <p>
-         * 
-         * > If this parameter is not set, it takes effect immediately.
-         */
-        public Builder startTime(String startTime) {
-            this.putQueryParameter("StartTime", startTime);
-            this.startTime = startTime;
-            return this;
-        }
-
-        /**
-         * The total number of instances to be reserved within an instance type.
+         * InstanceAmount.
          */
         public Builder instanceAmount(Integer instanceAmount) {
             this.putQueryParameter("InstanceAmount", instanceAmount);
@@ -375,7 +336,97 @@ public class CreateCapacityReservationRequest extends Request {
         }
 
         /**
-         * The ID of the zone to which the capacity reservation service belongs. Currently, you can create a capacity reservation service in only one zone.
+         * InstanceType.
+         */
+        public Builder instanceType(String instanceType) {
+            this.putQueryParameter("InstanceType", instanceType);
+            this.instanceType = instanceType;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * Platform.
+         */
+        public Builder platform(String platform) {
+            this.putQueryParameter("Platform", platform);
+            this.platform = platform;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * StartTime.
+         */
+        public Builder startTime(String startTime) {
+            this.putQueryParameter("StartTime", startTime);
+            this.startTime = startTime;
+            return this;
+        }
+
+        /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
+         * ZoneId.
          */
         public Builder zoneId(java.util.List < String > zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -391,15 +442,15 @@ public class CreateCapacityReservationRequest extends Request {
     } 
 
     public static class PrivatePoolOptions extends TeaModel {
-        @NameInMap("Name")
-        private String name;
-
         @NameInMap("MatchCriteria")
         private String matchCriteria;
 
+        @NameInMap("Name")
+        private String name;
+
         private PrivatePoolOptions(Builder builder) {
-            this.name = builder.name;
             this.matchCriteria = builder.matchCriteria;
+            this.name = builder.name;
         }
 
         public static Builder builder() {
@@ -411,42 +462,36 @@ public class CreateCapacityReservationRequest extends Request {
         }
 
         /**
-         * @return name
-         */
-        public String getName() {
-            return this.name;
-        }
-
-        /**
          * @return matchCriteria
          */
         public String getMatchCriteria() {
             return this.matchCriteria;
         }
 
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
         public static final class Builder {
-            private String name; 
             private String matchCriteria; 
+            private String name; 
 
             /**
-             * The name of the capacity reservation service. The description must be 2 to 128 characters in length. It must start with a letter and cannot start with "http:// "or "https. It can contain numbers, colons (:), underscores (_), and hyphens (-).
+             * MatchCriteria.
              */
-            public Builder name(String name) {
-                this.name = name;
+            public Builder matchCriteria(String matchCriteria) {
+                this.matchCriteria = matchCriteria;
                 return this;
             }
 
             /**
-             * The type of the private resource pool generated after the capacity reservation service takes effect. Valid values:
-             * <p>
-             * 
-             * -Open: Open mode.
-             * -Target: The dedicated mode.
-             * 
-             * Default value: Open
+             * Name.
              */
-            public Builder matchCriteria(String matchCriteria) {
-                this.matchCriteria = matchCriteria;
+            public Builder name(String name) {
+                this.name = name;
                 return this;
             }
 
@@ -496,7 +541,7 @@ public class CreateCapacityReservationRequest extends Request {
             private String value; 
 
             /**
-             * 容量预定服务的标签键。N的取值范围：1~20。一旦传入该值，则不允许为空字符串。最多支持128个字符，不能以`aliyun`和`acs:`开头，不能包含`http://`或者`https://`。
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -504,7 +549,7 @@ public class CreateCapacityReservationRequest extends Request {
             }
 
             /**
-             * 容量预定服务的标签值。N的取值范围：1~20。一旦传入该值，允许为空字符串。最多支持128个字符，不能以`acs:`开头，不能包含`http://`或者`https://`。
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -12,19 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateDedicatedBlockStorageClusterResponseBody</p>
  */
 public class CreateDedicatedBlockStorageClusterResponseBody extends TeaModel {
+    @NameInMap("DedicatedBlockStorageClusterId")
+    private String dedicatedBlockStorageClusterId;
+
     @NameInMap("DedicatedBlockStorageClusterOrderId")
     private String dedicatedBlockStorageClusterOrderId;
 
     @NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("DedicatedBlockStorageClusterId")
-    private String dedicatedBlockStorageClusterId;
-
     private CreateDedicatedBlockStorageClusterResponseBody(Builder builder) {
+        this.dedicatedBlockStorageClusterId = builder.dedicatedBlockStorageClusterId;
         this.dedicatedBlockStorageClusterOrderId = builder.dedicatedBlockStorageClusterOrderId;
         this.requestId = builder.requestId;
-        this.dedicatedBlockStorageClusterId = builder.dedicatedBlockStorageClusterId;
     }
 
     public static Builder builder() {
@@ -33,6 +33,13 @@ public class CreateDedicatedBlockStorageClusterResponseBody extends TeaModel {
 
     public static CreateDedicatedBlockStorageClusterResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return dedicatedBlockStorageClusterId
+     */
+    public String getDedicatedBlockStorageClusterId() {
+        return this.dedicatedBlockStorageClusterId;
     }
 
     /**
@@ -49,20 +56,21 @@ public class CreateDedicatedBlockStorageClusterResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    /**
-     * @return dedicatedBlockStorageClusterId
-     */
-    public String getDedicatedBlockStorageClusterId() {
-        return this.dedicatedBlockStorageClusterId;
-    }
-
     public static final class Builder {
+        private String dedicatedBlockStorageClusterId; 
         private String dedicatedBlockStorageClusterOrderId; 
         private String requestId; 
-        private String dedicatedBlockStorageClusterId; 
 
         /**
-         * The ID of the order.
+         * DedicatedBlockStorageClusterId.
+         */
+        public Builder dedicatedBlockStorageClusterId(String dedicatedBlockStorageClusterId) {
+            this.dedicatedBlockStorageClusterId = dedicatedBlockStorageClusterId;
+            return this;
+        }
+
+        /**
+         * DedicatedBlockStorageClusterOrderId.
          */
         public Builder dedicatedBlockStorageClusterOrderId(String dedicatedBlockStorageClusterOrderId) {
             this.dedicatedBlockStorageClusterOrderId = dedicatedBlockStorageClusterOrderId;
@@ -70,18 +78,10 @@ public class CreateDedicatedBlockStorageClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The ID of the dedicated block storage cluster.
-         */
-        public Builder dedicatedBlockStorageClusterId(String dedicatedBlockStorageClusterId) {
-            this.dedicatedBlockStorageClusterId = dedicatedBlockStorageClusterId;
             return this;
         }
 

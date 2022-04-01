@@ -15,28 +15,28 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
     @NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("PageSize")
-    private Integer pageSize;
-
     @NameInMap("PageNumber")
     private Integer pageNumber;
+
+    @NameInMap("PageSize")
+    private Integer pageSize;
 
     @NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
-    private Integer totalCount;
-
     @NameInMap("Snapshots")
     private Snapshots snapshots;
 
+    @NameInMap("TotalCount")
+    private Integer totalCount;
+
     private DescribeSnapshotsResponseBody(Builder builder) {
         this.nextToken = builder.nextToken;
-        this.pageSize = builder.pageSize;
         this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
-        this.totalCount = builder.totalCount;
         this.snapshots = builder.snapshots;
+        this.totalCount = builder.totalCount;
     }
 
     public static Builder builder() {
@@ -55,17 +55,17 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
     }
 
     /**
-     * @return pageSize
-     */
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
         return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     /**
@@ -76,29 +76,29 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
     }
 
     /**
-     * @return totalCount
-     */
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
-    /**
      * @return snapshots
      */
     public Snapshots getSnapshots() {
         return this.snapshots;
     }
 
+    /**
+     * @return totalCount
+     */
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static final class Builder {
         private String nextToken; 
-        private Integer pageSize; 
         private Integer pageNumber; 
+        private Integer pageSize; 
         private String requestId; 
-        private Integer totalCount; 
         private Snapshots snapshots; 
+        private Integer totalCount; 
 
         /**
-         * The start flag of the next query.
+         * NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -106,15 +106,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries to return on each page.
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * The page number of the snapshot list.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +114,15 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * PageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,18 +130,18 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of snapshots.
+         * Snapshots.
          */
-        public Builder totalCount(Integer totalCount) {
-            this.totalCount = totalCount;
+        public Builder snapshots(Snapshots snapshots) {
+            this.snapshots = snapshots;
             return this;
         }
 
         /**
-         * A collection of snapshot details.
+         * TotalCount.
          */
-        public Builder snapshots(Snapshots snapshots) {
-            this.snapshots = snapshots;
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
@@ -152,15 +152,15 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("TagValue")
-        private String tagValue;
-
         @NameInMap("TagKey")
         private String tagKey;
 
+        @NameInMap("TagValue")
+        private String tagValue;
+
         private Tag(Builder builder) {
-            this.tagValue = builder.tagValue;
             this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
         }
 
         public static Builder builder() {
@@ -172,36 +172,36 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * @return tagValue
-         */
-        public String getTagValue() {
-            return this.tagValue;
-        }
-
-        /**
          * @return tagKey
          */
         public String getTagKey() {
             return this.tagKey;
         }
 
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
         public static final class Builder {
-            private String tagValue; 
             private String tagKey; 
+            private String tagValue; 
 
             /**
-             * The tag value of the snapshot.
+             * TagKey.
              */
-            public Builder tagValue(String tagValue) {
-                this.tagValue = tagValue;
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
                 return this;
             }
 
             /**
-             * The tag key of the snapshot.
+             * TagValue.
              */
-            public Builder tagKey(String tagKey) {
-                this.tagKey = tagKey;
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
                 return this;
             }
 
@@ -254,41 +254,53 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
 
     }
     public static class Snapshot extends TeaModel {
-        @NameInMap("Status")
-        private String status;
+        @NameInMap("Category")
+        private String category;
 
         @NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Progress")
-        private String progress;
+        @NameInMap("Description")
+        private String description;
+
+        @NameInMap("Encrypted")
+        private Boolean encrypted;
 
         @NameInMap("InstantAccess")
         private Boolean instantAccess;
 
-        @NameInMap("RemainTime")
-        private Integer remainTime;
+        @NameInMap("InstantAccessRetentionDays")
+        private Integer instantAccessRetentionDays;
 
-        @NameInMap("SourceDiskSize")
-        private String sourceDiskSize;
-
-        @NameInMap("RetentionDays")
-        private Integer retentionDays;
-
-        @NameInMap("SourceDiskType")
-        private String sourceDiskType;
-
-        @NameInMap("SourceStorageType")
-        private String sourceStorageType;
-
-        @NameInMap("Usage")
-        private String usage;
+        @NameInMap("KMSKeyId")
+        private String KMSKeyId;
 
         @NameInMap("LastModifiedTime")
         private String lastModifiedTime;
 
-        @NameInMap("Encrypted")
-        private Boolean encrypted;
+        @NameInMap("ProductCode")
+        private String productCode;
+
+        @NameInMap("Progress")
+        private String progress;
+
+        @NameInMap("RemainTime")
+        private Integer remainTime;
+
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
+        @NameInMap("RetentionDays")
+        private Integer retentionDays;
+
+        @NameInMap("SnapshotId")
+        private String snapshotId;
+
+        @NameInMap("SnapshotName")
+        private String snapshotName;
+
+        @NameInMap("SnapshotSN")
+        private String snapshotSN;
 
         @NameInMap("SnapshotType")
         private String snapshotType;
@@ -296,69 +308,57 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         @NameInMap("SourceDiskId")
         private String sourceDiskId;
 
-        @NameInMap("SnapshotName")
-        private String snapshotName;
+        @NameInMap("SourceDiskSize")
+        private String sourceDiskSize;
 
-        @NameInMap("InstantAccessRetentionDays")
-        private Integer instantAccessRetentionDays;
-
-        @NameInMap("Description")
-        private String description;
-
-        @NameInMap("SnapshotId")
-        private String snapshotId;
-
-        @NameInMap("ResourceGroupId")
-        private String resourceGroupId;
-
-        @NameInMap("Category")
-        private String category;
-
-        @NameInMap("KMSKeyId")
-        private String KMSKeyId;
-
-        @NameInMap("SnapshotSN")
-        private String snapshotSN;
-
-        @NameInMap("ProductCode")
-        private String productCode;
-
-        @NameInMap("SourceSnapshotId")
-        private String sourceSnapshotId;
+        @NameInMap("SourceDiskType")
+        private String sourceDiskType;
 
         @NameInMap("SourceRegionId")
         private String sourceRegionId;
 
+        @NameInMap("SourceSnapshotId")
+        private String sourceSnapshotId;
+
+        @NameInMap("SourceStorageType")
+        private String sourceStorageType;
+
+        @NameInMap("Status")
+        private String status;
+
         @NameInMap("Tags")
         private Tags tags;
 
+        @NameInMap("Usage")
+        private String usage;
+
         private Snapshot(Builder builder) {
-            this.status = builder.status;
+            this.category = builder.category;
             this.creationTime = builder.creationTime;
-            this.progress = builder.progress;
-            this.instantAccess = builder.instantAccess;
-            this.remainTime = builder.remainTime;
-            this.sourceDiskSize = builder.sourceDiskSize;
-            this.retentionDays = builder.retentionDays;
-            this.sourceDiskType = builder.sourceDiskType;
-            this.sourceStorageType = builder.sourceStorageType;
-            this.usage = builder.usage;
-            this.lastModifiedTime = builder.lastModifiedTime;
+            this.description = builder.description;
             this.encrypted = builder.encrypted;
+            this.instantAccess = builder.instantAccess;
+            this.instantAccessRetentionDays = builder.instantAccessRetentionDays;
+            this.KMSKeyId = builder.KMSKeyId;
+            this.lastModifiedTime = builder.lastModifiedTime;
+            this.productCode = builder.productCode;
+            this.progress = builder.progress;
+            this.remainTime = builder.remainTime;
+            this.resourceGroupId = builder.resourceGroupId;
+            this.retentionDays = builder.retentionDays;
+            this.snapshotId = builder.snapshotId;
+            this.snapshotName = builder.snapshotName;
+            this.snapshotSN = builder.snapshotSN;
             this.snapshotType = builder.snapshotType;
             this.sourceDiskId = builder.sourceDiskId;
-            this.snapshotName = builder.snapshotName;
-            this.instantAccessRetentionDays = builder.instantAccessRetentionDays;
-            this.description = builder.description;
-            this.snapshotId = builder.snapshotId;
-            this.resourceGroupId = builder.resourceGroupId;
-            this.category = builder.category;
-            this.KMSKeyId = builder.KMSKeyId;
-            this.snapshotSN = builder.snapshotSN;
-            this.productCode = builder.productCode;
-            this.sourceSnapshotId = builder.sourceSnapshotId;
+            this.sourceDiskSize = builder.sourceDiskSize;
+            this.sourceDiskType = builder.sourceDiskType;
             this.sourceRegionId = builder.sourceRegionId;
+            this.sourceSnapshotId = builder.sourceSnapshotId;
+            this.sourceStorageType = builder.sourceStorageType;
+            this.status = builder.status;
             this.tags = builder.tags;
+            this.usage = builder.usage;
         }
 
         public static Builder builder() {
@@ -370,10 +370,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * @return status
+         * @return category
          */
-        public String getStatus() {
-            return this.status;
+        public String getCategory() {
+            return this.category;
         }
 
         /**
@@ -384,10 +384,17 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * @return progress
+         * @return description
          */
-        public String getProgress() {
-            return this.progress;
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return encrypted
+         */
+        public Boolean getEncrypted() {
+            return this.encrypted;
         }
 
         /**
@@ -398,45 +405,17 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * @return remainTime
+         * @return instantAccessRetentionDays
          */
-        public Integer getRemainTime() {
-            return this.remainTime;
+        public Integer getInstantAccessRetentionDays() {
+            return this.instantAccessRetentionDays;
         }
 
         /**
-         * @return sourceDiskSize
+         * @return KMSKeyId
          */
-        public String getSourceDiskSize() {
-            return this.sourceDiskSize;
-        }
-
-        /**
-         * @return retentionDays
-         */
-        public Integer getRetentionDays() {
-            return this.retentionDays;
-        }
-
-        /**
-         * @return sourceDiskType
-         */
-        public String getSourceDiskType() {
-            return this.sourceDiskType;
-        }
-
-        /**
-         * @return sourceStorageType
-         */
-        public String getSourceStorageType() {
-            return this.sourceStorageType;
-        }
-
-        /**
-         * @return usage
-         */
-        public String getUsage() {
-            return this.usage;
+        public String getKMSKeyId() {
+            return this.KMSKeyId;
         }
 
         /**
@@ -447,10 +426,59 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * @return encrypted
+         * @return productCode
          */
-        public Boolean getEncrypted() {
-            return this.encrypted;
+        public String getProductCode() {
+            return this.productCode;
+        }
+
+        /**
+         * @return progress
+         */
+        public String getProgress() {
+            return this.progress;
+        }
+
+        /**
+         * @return remainTime
+         */
+        public Integer getRemainTime() {
+            return this.remainTime;
+        }
+
+        /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
+         * @return retentionDays
+         */
+        public Integer getRetentionDays() {
+            return this.retentionDays;
+        }
+
+        /**
+         * @return snapshotId
+         */
+        public String getSnapshotId() {
+            return this.snapshotId;
+        }
+
+        /**
+         * @return snapshotName
+         */
+        public String getSnapshotName() {
+            return this.snapshotName;
+        }
+
+        /**
+         * @return snapshotSN
+         */
+        public String getSnapshotSN() {
+            return this.snapshotSN;
         }
 
         /**
@@ -468,73 +496,17 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * @return snapshotName
+         * @return sourceDiskSize
          */
-        public String getSnapshotName() {
-            return this.snapshotName;
+        public String getSourceDiskSize() {
+            return this.sourceDiskSize;
         }
 
         /**
-         * @return instantAccessRetentionDays
+         * @return sourceDiskType
          */
-        public Integer getInstantAccessRetentionDays() {
-            return this.instantAccessRetentionDays;
-        }
-
-        /**
-         * @return description
-         */
-        public String getDescription() {
-            return this.description;
-        }
-
-        /**
-         * @return snapshotId
-         */
-        public String getSnapshotId() {
-            return this.snapshotId;
-        }
-
-        /**
-         * @return resourceGroupId
-         */
-        public String getResourceGroupId() {
-            return this.resourceGroupId;
-        }
-
-        /**
-         * @return category
-         */
-        public String getCategory() {
-            return this.category;
-        }
-
-        /**
-         * @return KMSKeyId
-         */
-        public String getKMSKeyId() {
-            return this.KMSKeyId;
-        }
-
-        /**
-         * @return snapshotSN
-         */
-        public String getSnapshotSN() {
-            return this.snapshotSN;
-        }
-
-        /**
-         * @return productCode
-         */
-        public String getProductCode() {
-            return this.productCode;
-        }
-
-        /**
-         * @return sourceSnapshotId
-         */
-        public String getSourceSnapshotId() {
-            return this.sourceSnapshotId;
+        public String getSourceDiskType() {
+            return this.sourceDiskType;
         }
 
         /**
@@ -545,227 +517,70 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
 
         /**
+         * @return sourceSnapshotId
+         */
+        public String getSourceSnapshotId() {
+            return this.sourceSnapshotId;
+        }
+
+        /**
+         * @return sourceStorageType
+         */
+        public String getSourceStorageType() {
+            return this.sourceStorageType;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
          * @return tags
          */
         public Tags getTags() {
             return this.tags;
         }
 
+        /**
+         * @return usage
+         */
+        public String getUsage() {
+            return this.usage;
+        }
+
         public static final class Builder {
-            private String status; 
+            private String category; 
             private String creationTime; 
-            private String progress; 
-            private Boolean instantAccess; 
-            private Integer remainTime; 
-            private String sourceDiskSize; 
-            private Integer retentionDays; 
-            private String sourceDiskType; 
-            private String sourceStorageType; 
-            private String usage; 
-            private String lastModifiedTime; 
+            private String description; 
             private Boolean encrypted; 
+            private Boolean instantAccess; 
+            private Integer instantAccessRetentionDays; 
+            private String KMSKeyId; 
+            private String lastModifiedTime; 
+            private String productCode; 
+            private String progress; 
+            private Integer remainTime; 
+            private String resourceGroupId; 
+            private Integer retentionDays; 
+            private String snapshotId; 
+            private String snapshotName; 
+            private String snapshotSN; 
             private String snapshotType; 
             private String sourceDiskId; 
-            private String snapshotName; 
-            private Integer instantAccessRetentionDays; 
-            private String description; 
-            private String snapshotId; 
-            private String resourceGroupId; 
-            private String category; 
-            private String KMSKeyId; 
-            private String snapshotSN; 
-            private String productCode; 
-            private String sourceSnapshotId; 
+            private String sourceDiskSize; 
+            private String sourceDiskType; 
             private String sourceRegionId; 
+            private String sourceSnapshotId; 
+            private String sourceStorageType; 
+            private String status; 
             private Tags tags; 
+            private String usage; 
 
             /**
-             * The status of the snapshot. Possible values:
-             * <p>
-             * 
-             * -progressing
-             * -accomplished
-             * -failed
-             */
-            public Builder status(String status) {
-                this.status = status;
-                return this;
-            }
-
-            /**
-             * The creation time. The time follows the [ISO8601](~~ 25696 ~~) standard and uses UTC +0. The format is yyyy-MM-ddTHH:mm:ssZ.
-             */
-            public Builder creationTime(String creationTime) {
-                this.creationTime = creationTime;
-                return this;
-            }
-
-            /**
-             * The progress of snapshot creation. Unit: percentage.
-             */
-            public Builder progress(String progress) {
-                this.progress = progress;
-                return this;
-            }
-
-            /**
-             * Indicates whether the snapshot extreme availability feature is enabled. Possible values:
-             * <p>
-             * 
-             * -true: enabled. Only ESSDS support this feature.
-             * -false: disabled. That is, a snapshot is a normal snapshot that is not enabled.
-             */
-            public Builder instantAccess(Boolean instantAccess) {
-                this.instantAccess = instantAccess;
-                return this;
-            }
-
-            /**
-             * The remaining completion time of the snapshot being created. Unit: seconds.
-             */
-            public Builder remainTime(Integer remainTime) {
-                this.remainTime = remainTime;
-                return this;
-            }
-
-            /**
-             * The capacity of the source disk. Unit: GiB.
-             */
-            public Builder sourceDiskSize(String sourceDiskSize) {
-                this.sourceDiskSize = sourceDiskSize;
-                return this;
-            }
-
-            /**
-             * The number of days that automatic snapshots are retained.
-             */
-            public Builder retentionDays(Integer retentionDays) {
-                this.retentionDays = retentionDays;
-                return this;
-            }
-
-            /**
-             * The attributes of the source disk. Possible values:
-             * <p>
-             * 
-             * -system
-             * -data
-             */
-            public Builder sourceDiskType(String sourceDiskType) {
-                this.sourceDiskType = sourceDiskType;
-                return this;
-            }
-
-            /**
-             * The type of the disk.
-             * <p>
-             * 
-             * > This parameter will be deprecated soon. We recommend that you use other parameters to improve compatibility.
-             */
-            public Builder sourceStorageType(String sourceStorageType) {
-                this.sourceStorageType = sourceStorageType;
-                return this;
-            }
-
-            /**
-             * Specifies whether a snapshot is used to create an image or cloud disk. Possible values:
-             * <p>
-             * 
-             * -image
-             * -disk
-             * -image_disk
-             * -none
-             */
-            public Builder usage(String usage) {
-                this.usage = usage;
-                return this;
-            }
-
-            /**
-             * The last time when the snapshot was changed. The time follows the [ISO8601](~~ 25696 ~~) standard and uses UTC +0. The format is yyyy-MM-ddTHH:mm:ssZ.
-             */
-            public Builder lastModifiedTime(String lastModifiedTime) {
-                this.lastModifiedTime = lastModifiedTime;
-                return this;
-            }
-
-            /**
-             * Specifies whether the snapshot is encrypted.
-             */
-            public Builder encrypted(Boolean encrypted) {
-                this.encrypted = encrypted;
-                return this;
-            }
-
-            /**
-             * The type of the snapshot. Possible values:
-             * <p>
-             * 
-             * -auto or timer: automatically creates snapshots.
-             * -user: manually create a snapshot.
-             * -all: all snapshot creation types.
-             */
-            public Builder snapshotType(String snapshotType) {
-                this.snapshotType = snapshotType;
-                return this;
-            }
-
-            /**
-             * The ID of the source disk. This field is retained if the source disk of the snapshot is released.
-             */
-            public Builder sourceDiskId(String sourceDiskId) {
-                this.sourceDiskId = sourceDiskId;
-                return this;
-            }
-
-            /**
-             * The name of the snapshot. If the snapshot display name is specified during creation, the system returns.
-             */
-            public Builder snapshotName(String snapshotName) {
-                this.snapshotName = snapshotName;
-                return this;
-            }
-
-            /**
-             * Specifies the retention period of the snapshot extreme availability feature. After the retention period expires, the snapshot extreme availability feature is automatically disabled.
-             * <p>
-             * 
-             * The default value is the same as the value of the "RetentionDays" parameter.
-             */
-            public Builder instantAccessRetentionDays(Integer instantAccessRetentionDays) {
-                this.instantAccessRetentionDays = instantAccessRetentionDays;
-                return this;
-            }
-
-            /**
-             * The description.
-             */
-            public Builder description(String description) {
-                this.description = description;
-                return this;
-            }
-
-            /**
-             * The ID of the snapshot.
-             */
-            public Builder snapshotId(String snapshotId) {
-                this.snapshotId = snapshotId;
-                return this;
-            }
-
-            /**
-             * The ID of the resource group.
-             */
-            public Builder resourceGroupId(String resourceGroupId) {
-                this.resourceGroupId = resourceGroupId;
-                return this;
-            }
-
-            /**
-             * The type of the snapshot.
-             * <p>
-             * 
-             * > This parameter will be deprecated soon. We recommend that you use the "InstantAccess" parameter to improve compatibility ".
+             * Category.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -773,7 +588,47 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The KMS key ID of the data disk.
+             * CreationTime.
+             */
+            public Builder creationTime(String creationTime) {
+                this.creationTime = creationTime;
+                return this;
+            }
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * Encrypted.
+             */
+            public Builder encrypted(Boolean encrypted) {
+                this.encrypted = encrypted;
+                return this;
+            }
+
+            /**
+             * InstantAccess.
+             */
+            public Builder instantAccess(Boolean instantAccess) {
+                this.instantAccess = instantAccess;
+                return this;
+            }
+
+            /**
+             * InstantAccessRetentionDays.
+             */
+            public Builder instantAccessRetentionDays(Integer instantAccessRetentionDays) {
+                this.instantAccessRetentionDays = instantAccessRetentionDays;
+                return this;
+            }
+
+            /**
+             * KMSKeyId.
              */
             public Builder KMSKeyId(String KMSKeyId) {
                 this.KMSKeyId = KMSKeyId;
@@ -781,15 +636,15 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The sequence number of the snapshot.
+             * LastModifiedTime.
              */
-            public Builder snapshotSN(String snapshotSN) {
-                this.snapshotSN = snapshotSN;
+            public Builder lastModifiedTime(String lastModifiedTime) {
+                this.lastModifiedTime = lastModifiedTime;
                 return this;
             }
 
             /**
-             * The product ID inherited from the marketplace.
+             * ProductCode.
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -797,15 +652,95 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * SOURCE snapshot
+             * Progress.
              */
-            public Builder sourceSnapshotId(String sourceSnapshotId) {
-                this.sourceSnapshotId = sourceSnapshotId;
+            public Builder progress(String progress) {
+                this.progress = progress;
                 return this;
             }
 
             /**
-             * SOURCE snapshot region
+             * RemainTime.
+             */
+            public Builder remainTime(Integer remainTime) {
+                this.remainTime = remainTime;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * RetentionDays.
+             */
+            public Builder retentionDays(Integer retentionDays) {
+                this.retentionDays = retentionDays;
+                return this;
+            }
+
+            /**
+             * SnapshotId.
+             */
+            public Builder snapshotId(String snapshotId) {
+                this.snapshotId = snapshotId;
+                return this;
+            }
+
+            /**
+             * SnapshotName.
+             */
+            public Builder snapshotName(String snapshotName) {
+                this.snapshotName = snapshotName;
+                return this;
+            }
+
+            /**
+             * SnapshotSN.
+             */
+            public Builder snapshotSN(String snapshotSN) {
+                this.snapshotSN = snapshotSN;
+                return this;
+            }
+
+            /**
+             * SnapshotType.
+             */
+            public Builder snapshotType(String snapshotType) {
+                this.snapshotType = snapshotType;
+                return this;
+            }
+
+            /**
+             * SourceDiskId.
+             */
+            public Builder sourceDiskId(String sourceDiskId) {
+                this.sourceDiskId = sourceDiskId;
+                return this;
+            }
+
+            /**
+             * SourceDiskSize.
+             */
+            public Builder sourceDiskSize(String sourceDiskSize) {
+                this.sourceDiskSize = sourceDiskSize;
+                return this;
+            }
+
+            /**
+             * SourceDiskType.
+             */
+            public Builder sourceDiskType(String sourceDiskType) {
+                this.sourceDiskType = sourceDiskType;
+                return this;
+            }
+
+            /**
+             * 源快照地域
              */
             public Builder sourceRegionId(String sourceRegionId) {
                 this.sourceRegionId = sourceRegionId;
@@ -813,10 +748,42 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag.
+             * 源快照
+             */
+            public Builder sourceSnapshotId(String sourceSnapshotId) {
+                this.sourceSnapshotId = sourceSnapshotId;
+                return this;
+            }
+
+            /**
+             * SourceStorageType.
+             */
+            public Builder sourceStorageType(String sourceStorageType) {
+                this.sourceStorageType = sourceStorageType;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * Tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
+                return this;
+            }
+
+            /**
+             * Usage.
+             */
+            public Builder usage(String usage) {
+                this.usage = usage;
                 return this;
             }
 

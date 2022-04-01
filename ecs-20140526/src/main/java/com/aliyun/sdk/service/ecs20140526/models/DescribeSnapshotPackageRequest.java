@@ -12,10 +12,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSnapshotPackageRequest</p>
  */
 public class DescribeSnapshotPackageRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
@@ -25,12 +21,8 @@ public class DescribeSnapshotPackageRequest extends Request {
     private Long ownerId;
 
     @Query
-    @NameInMap("ResourceOwnerAccount")
-    private String resourceOwnerAccount;
-
-    @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
+    @NameInMap("PageNumber")
+    private Integer pageNumber;
 
     @Query
     @NameInMap("PageSize")
@@ -43,19 +35,27 @@ public class DescribeSnapshotPackageRequest extends Request {
     private String regionId;
 
     @Query
-    @NameInMap("PageNumber")
-    private Integer pageNumber;
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     private DescribeSnapshotPackageRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
-        this.resourceOwnerAccount = builder.resourceOwnerAccount;
-        this.resourceOwnerId = builder.resourceOwnerId;
+        this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
-        this.pageNumber = builder.pageNumber;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -69,13 +69,6 @@ public class DescribeSnapshotPackageRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
     }
 
     /**
@@ -93,17 +86,10 @@ public class DescribeSnapshotPackageRequest extends Request {
     }
 
     /**
-     * @return resourceOwnerAccount
+     * @return pageNumber
      */
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    /**
-     * @return resourceOwnerId
-     */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     /**
@@ -121,21 +107,35 @@ public class DescribeSnapshotPackageRequest extends Request {
     }
 
     /**
-     * @return pageNumber
+     * @return resourceOwnerAccount
      */
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public static final class Builder extends Request.Builder<DescribeSnapshotPackageRequest, Builder> {
-        private String sourceRegionId; 
         private String ownerAccount; 
         private Long ownerId; 
-        private String resourceOwnerAccount; 
-        private Long resourceOwnerId; 
+        private Integer pageNumber; 
         private Integer pageSize; 
         private String regionId; 
-        private Integer pageNumber; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -143,24 +143,15 @@ public class DescribeSnapshotPackageRequest extends Request {
 
         private Builder(DescribeSnapshotPackageRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
-            this.resourceOwnerAccount = request.resourceOwnerAccount;
-            this.resourceOwnerId = request.resourceOwnerId;
+            this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
-            this.pageNumber = request.pageNumber;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceRegionId = request.sourceRegionId;
         } 
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
-            return this;
-        }
 
         /**
          * OwnerAccount.
@@ -172,7 +163,7 @@ public class DescribeSnapshotPackageRequest extends Request {
         }
 
         /**
-         * The ID of the RAM user.
+         * OwnerId.
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -181,28 +172,16 @@ public class DescribeSnapshotPackageRequest extends Request {
         }
 
         /**
-         * The account name of the resource master account.
+         * PageNumber.
          */
-        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
-            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-            this.resourceOwnerAccount = resourceOwnerAccount;
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
             return this;
         }
 
         /**
-         * The ID of the resource master account, that is, the UID.
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * The number of entries to return on each page. Maximum Value: 100
-         * <p>
-         * 
-         * Default value: 10
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -211,7 +190,7 @@ public class DescribeSnapshotPackageRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the snapshot belongs. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -220,14 +199,29 @@ public class DescribeSnapshotPackageRequest extends Request {
         }
 
         /**
-         * The page number of the OSS package list. Start value: 1
-         * <p>
-         * 
-         * Default value: 1.
+         * ResourceOwnerAccount.
          */
-        public Builder pageNumber(Integer pageNumber) {
-            this.putQueryParameter("PageNumber", pageNumber);
-            this.pageNumber = pageNumber;
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

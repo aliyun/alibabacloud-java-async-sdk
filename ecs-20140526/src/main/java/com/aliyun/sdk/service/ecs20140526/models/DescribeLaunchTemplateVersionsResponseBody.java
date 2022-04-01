@@ -12,27 +12,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLaunchTemplateVersionsResponseBody</p>
  */
 public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
+    @NameInMap("LaunchTemplateVersionSets")
+    private LaunchTemplateVersionSets launchTemplateVersionSets;
+
+    @NameInMap("PageNumber")
+    private Integer pageNumber;
+
     @NameInMap("PageSize")
     private Integer pageSize;
 
     @NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("PageNumber")
-    private Integer pageNumber;
-
     @NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("LaunchTemplateVersionSets")
-    private LaunchTemplateVersionSets launchTemplateVersionSets;
-
     private DescribeLaunchTemplateVersionsResponseBody(Builder builder) {
+        this.launchTemplateVersionSets = builder.launchTemplateVersionSets;
+        this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
-        this.pageNumber = builder.pageNumber;
         this.totalCount = builder.totalCount;
-        this.launchTemplateVersionSets = builder.launchTemplateVersionSets;
     }
 
     public static Builder builder() {
@@ -41,6 +41,20 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
 
     public static DescribeLaunchTemplateVersionsResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return launchTemplateVersionSets
+     */
+    public LaunchTemplateVersionSets getLaunchTemplateVersionSets() {
+        return this.launchTemplateVersionSets;
+    }
+
+    /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     /**
@@ -58,51 +72,29 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
     }
 
     /**
-     * @return pageNumber
-     */
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    /**
      * @return totalCount
      */
     public Integer getTotalCount() {
         return this.totalCount;
     }
 
-    /**
-     * @return launchTemplateVersionSets
-     */
-    public LaunchTemplateVersionSets getLaunchTemplateVersionSets() {
-        return this.launchTemplateVersionSets;
-    }
-
     public static final class Builder {
+        private LaunchTemplateVersionSets launchTemplateVersionSets; 
+        private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private Integer pageNumber; 
         private Integer totalCount; 
-        private LaunchTemplateVersionSets launchTemplateVersionSets; 
 
         /**
-         * The number of entries to return on each page.
+         * LaunchTemplateVersionSets.
          */
-        public Builder pageSize(Integer pageSize) {
-            this.pageSize = pageSize;
+        public Builder launchTemplateVersionSets(LaunchTemplateVersionSets launchTemplateVersionSets) {
+            this.launchTemplateVersionSets = launchTemplateVersionSets;
             return this;
         }
 
         /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The current page number.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -110,18 +102,26 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of instance launch templates.
+         * PageSize.
          */
-        public Builder totalCount(Integer totalCount) {
-            this.totalCount = totalCount;
+        public Builder pageSize(Integer pageSize) {
+            this.pageSize = pageSize;
             return this;
         }
 
         /**
-         * The information about the template version.
+         * RequestId.
          */
-        public Builder launchTemplateVersionSets(LaunchTemplateVersionSets launchTemplateVersionSets) {
-            this.launchTemplateVersionSets = launchTemplateVersionSets;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
@@ -132,43 +132,43 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
     } 
 
     public static class DataDisk extends TeaModel {
-        @NameInMap("PerformanceLevel")
-        private String performanceLevel;
-
-        @NameInMap("Description")
-        private String description;
-
-        @NameInMap("SnapshotId")
-        private String snapshotId;
-
-        @NameInMap("Device")
-        private String device;
-
-        @NameInMap("Size")
-        private Integer size;
-
-        @NameInMap("DiskName")
-        private String diskName;
-
         @NameInMap("Category")
         private String category;
 
         @NameInMap("DeleteWithInstance")
         private Boolean deleteWithInstance;
 
+        @NameInMap("Description")
+        private String description;
+
+        @NameInMap("Device")
+        private String device;
+
+        @NameInMap("DiskName")
+        private String diskName;
+
         @NameInMap("Encrypted")
         private String encrypted;
 
+        @NameInMap("PerformanceLevel")
+        private String performanceLevel;
+
+        @NameInMap("Size")
+        private Integer size;
+
+        @NameInMap("SnapshotId")
+        private String snapshotId;
+
         private DataDisk(Builder builder) {
-            this.performanceLevel = builder.performanceLevel;
-            this.description = builder.description;
-            this.snapshotId = builder.snapshotId;
-            this.device = builder.device;
-            this.size = builder.size;
-            this.diskName = builder.diskName;
             this.category = builder.category;
             this.deleteWithInstance = builder.deleteWithInstance;
+            this.description = builder.description;
+            this.device = builder.device;
+            this.diskName = builder.diskName;
             this.encrypted = builder.encrypted;
+            this.performanceLevel = builder.performanceLevel;
+            this.size = builder.size;
+            this.snapshotId = builder.snapshotId;
         }
 
         public static Builder builder() {
@@ -177,48 +177,6 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
 
         public static DataDisk create() {
             return builder().build();
-        }
-
-        /**
-         * @return performanceLevel
-         */
-        public String getPerformanceLevel() {
-            return this.performanceLevel;
-        }
-
-        /**
-         * @return description
-         */
-        public String getDescription() {
-            return this.description;
-        }
-
-        /**
-         * @return snapshotId
-         */
-        public String getSnapshotId() {
-            return this.snapshotId;
-        }
-
-        /**
-         * @return device
-         */
-        public String getDevice() {
-            return this.device;
-        }
-
-        /**
-         * @return size
-         */
-        public Integer getSize() {
-            return this.size;
-        }
-
-        /**
-         * @return diskName
-         */
-        public String getDiskName() {
-            return this.diskName;
         }
 
         /**
@@ -236,82 +194,67 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         }
 
         /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return device
+         */
+        public String getDevice() {
+            return this.device;
+        }
+
+        /**
+         * @return diskName
+         */
+        public String getDiskName() {
+            return this.diskName;
+        }
+
+        /**
          * @return encrypted
          */
         public String getEncrypted() {
             return this.encrypted;
         }
 
+        /**
+         * @return performanceLevel
+         */
+        public String getPerformanceLevel() {
+            return this.performanceLevel;
+        }
+
+        /**
+         * @return size
+         */
+        public Integer getSize() {
+            return this.size;
+        }
+
+        /**
+         * @return snapshotId
+         */
+        public String getSnapshotId() {
+            return this.snapshotId;
+        }
+
         public static final class Builder {
-            private String performanceLevel; 
-            private String description; 
-            private String snapshotId; 
-            private String device; 
-            private Integer size; 
-            private String diskName; 
             private String category; 
             private Boolean deleteWithInstance; 
+            private String description; 
+            private String device; 
+            private String diskName; 
             private String encrypted; 
+            private String performanceLevel; 
+            private Integer size; 
+            private String snapshotId; 
 
             /**
-             * When you create an ESSD as a data disk, set the performance level of the disk. This parameter returns a value when "Category = cloud_essd. Possible values:
-             * <p>
-             * 
-             * -PL0: The maximum random read/write IOPS per disk is 10,000.
-             * -PL1: The maximum random read/write IOPS per disk is 50,000.
-             * -PL2: The maximum random read/write IOPS per disk is 100,000.
-             * -PL3: The maximum random read/write IOPS per disk is 1 million.
-             */
-            public Builder performanceLevel(String performanceLevel) {
-                this.performanceLevel = performanceLevel;
-                return this;
-            }
-
-            /**
-             * The description of the data disk.
-             */
-            public Builder description(String description) {
-                this.description = description;
-                return this;
-            }
-
-            /**
-             * The ID of the snapshot used by the data disk.
-             */
-            public Builder snapshotId(String snapshotId) {
-                this.snapshotId = snapshotId;
-                return this;
-            }
-
-            /**
-             * The device name of the data disk.
-             * <p>
-             * 
-             * > This parameter will be discontinued soon. We recommend that you do not use this parameter to improve code compatibility.
-             */
-            public Builder device(String device) {
-                this.device = device;
-                return this;
-            }
-
-            /**
-             * The size of the data disk.
-             */
-            public Builder size(Integer size) {
-                this.size = size;
-                return this;
-            }
-
-            /**
-             * The name of the data disk.
-             */
-            public Builder diskName(String diskName) {
-                this.diskName = diskName;
-                return this;
-            }
-
-            /**
-             * The type of the data disk.
+             * Category.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -319,7 +262,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the data disk is released as the instance is released.
+             * DeleteWithInstance.
              */
             public Builder deleteWithInstance(Boolean deleteWithInstance) {
                 this.deleteWithInstance = deleteWithInstance;
@@ -327,10 +270,58 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the data disk is encrypted.
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * Device.
+             */
+            public Builder device(String device) {
+                this.device = device;
+                return this;
+            }
+
+            /**
+             * DiskName.
+             */
+            public Builder diskName(String diskName) {
+                this.diskName = diskName;
+                return this;
+            }
+
+            /**
+             * Encrypted.
              */
             public Builder encrypted(String encrypted) {
                 this.encrypted = encrypted;
+                return this;
+            }
+
+            /**
+             * PerformanceLevel.
+             */
+            public Builder performanceLevel(String performanceLevel) {
+                this.performanceLevel = performanceLevel;
+                return this;
+            }
+
+            /**
+             * Size.
+             */
+            public Builder size(Integer size) {
+                this.size = size;
+                return this;
+            }
+
+            /**
+             * SnapshotId.
+             */
+            public Builder snapshotId(String snapshotId) {
+                this.snapshotId = snapshotId;
                 return this;
             }
 
@@ -424,14 +415,11 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
 
     }
     public static class NetworkInterface extends TeaModel {
-        @NameInMap("NetworkInterfaceName")
-        private String networkInterfaceName;
-
-        @NameInMap("VSwitchId")
-        private String vSwitchId;
-
         @NameInMap("Description")
         private String description;
+
+        @NameInMap("NetworkInterfaceName")
+        private String networkInterfaceName;
 
         @NameInMap("PrimaryIpAddress")
         private String primaryIpAddress;
@@ -442,13 +430,16 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         @NameInMap("SecurityGroupIds")
         private SecurityGroupIds securityGroupIds;
 
+        @NameInMap("VSwitchId")
+        private String vSwitchId;
+
         private NetworkInterface(Builder builder) {
-            this.networkInterfaceName = builder.networkInterfaceName;
-            this.vSwitchId = builder.vSwitchId;
             this.description = builder.description;
+            this.networkInterfaceName = builder.networkInterfaceName;
             this.primaryIpAddress = builder.primaryIpAddress;
             this.securityGroupId = builder.securityGroupId;
             this.securityGroupIds = builder.securityGroupIds;
+            this.vSwitchId = builder.vSwitchId;
         }
 
         public static Builder builder() {
@@ -460,24 +451,17 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * @return networkInterfaceName
-         */
-        public String getNetworkInterfaceName() {
-            return this.networkInterfaceName;
-        }
-
-        /**
-         * @return vSwitchId
-         */
-        public String getVSwitchId() {
-            return this.vSwitchId;
-        }
-
-        /**
          * @return description
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return networkInterfaceName
+         */
+        public String getNetworkInterfaceName() {
+            return this.networkInterfaceName;
         }
 
         /**
@@ -501,32 +485,23 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             return this.securityGroupIds;
         }
 
+        /**
+         * @return vSwitchId
+         */
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
         public static final class Builder {
-            private String networkInterfaceName; 
-            private String vSwitchId; 
             private String description; 
+            private String networkInterfaceName; 
             private String primaryIpAddress; 
             private String securityGroupId; 
             private SecurityGroupIds securityGroupIds; 
+            private String vSwitchId; 
 
             /**
-             * The name of the secondary eni.
-             */
-            public Builder networkInterfaceName(String networkInterfaceName) {
-                this.networkInterfaceName = networkInterfaceName;
-                return this;
-            }
-
-            /**
-             * The ID of the vSwitch to which the Eni belongs.
-             */
-            public Builder vSwitchId(String vSwitchId) {
-                this.vSwitchId = vSwitchId;
-                return this;
-            }
-
-            /**
-             * The description of the secondary eni.
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -534,7 +509,15 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The primary private IP address of the secondary Eni.
+             * NetworkInterfaceName.
+             */
+            public Builder networkInterfaceName(String networkInterfaceName) {
+                this.networkInterfaceName = networkInterfaceName;
+                return this;
+            }
+
+            /**
+             * PrimaryIpAddress.
              */
             public Builder primaryIpAddress(String primaryIpAddress) {
                 this.primaryIpAddress = primaryIpAddress;
@@ -542,10 +525,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the security group to which the secondary Eni belongs. Must be a security group in the same VPC.
-             * <p>
-             * 
-             * > SecurityGroupId and SecurityGroupIds do not return values at the same time.
+             * SecurityGroupId.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -557,6 +537,14 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
              */
             public Builder securityGroupIds(SecurityGroupIds securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
+                return this;
+            }
+
+            /**
+             * VSwitchId.
+             */
+            public Builder vSwitchId(String vSwitchId) {
+                this.vSwitchId = vSwitchId;
                 return this;
             }
 
@@ -608,6 +596,47 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         } 
 
     }
+    public static class LaunchTemplateDataSecurityGroupIds extends TeaModel {
+        @NameInMap("SecurityGroupId")
+        private java.util.List < String > securityGroupId;
+
+        private LaunchTemplateDataSecurityGroupIds(Builder builder) {
+            this.securityGroupId = builder.securityGroupId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static LaunchTemplateDataSecurityGroupIds create() {
+            return builder().build();
+        }
+
+        /**
+         * @return securityGroupId
+         */
+        public java.util.List < String > getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > securityGroupId; 
+
+            /**
+             * SecurityGroupId.
+             */
+            public Builder securityGroupId(java.util.List < String > securityGroupId) {
+                this.securityGroupId = securityGroupId;
+                return this;
+            }
+
+            public LaunchTemplateDataSecurityGroupIds build() {
+                return new LaunchTemplateDataSecurityGroupIds(this);
+            } 
+
+        } 
+
+    }
     public static class InstanceTag extends TeaModel {
         @NameInMap("Key")
         private String key;
@@ -647,7 +676,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key of the instance.
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -655,7 +684,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of the instance.
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -710,216 +739,176 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         } 
 
     }
-    public static class LaunchTemplateDataSecurityGroupIds extends TeaModel {
-        @NameInMap("SecurityGroupId")
-        private java.util.List < String > securityGroupId;
-
-        private LaunchTemplateDataSecurityGroupIds(Builder builder) {
-            this.securityGroupId = builder.securityGroupId;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static LaunchTemplateDataSecurityGroupIds create() {
-            return builder().build();
-        }
-
-        /**
-         * @return securityGroupId
-         */
-        public java.util.List < String > getSecurityGroupId() {
-            return this.securityGroupId;
-        }
-
-        public static final class Builder {
-            private java.util.List < String > securityGroupId; 
-
-            /**
-             * The ID of the security group to which the secondary Eni belongs. Must be a security group in the same VPC.
-             * <p>
-             * 
-             * > SecurityGroupId and SecurityGroupIds do not return values at the same time.
-             */
-            public Builder securityGroupId(java.util.List < String > securityGroupId) {
-                this.securityGroupId = securityGroupId;
-                return this;
-            }
-
-            public LaunchTemplateDataSecurityGroupIds build() {
-                return new LaunchTemplateDataSecurityGroupIds(this);
-            } 
-
-        } 
-
-    }
     public static class LaunchTemplateData extends TeaModel {
-        @NameInMap("DeploymentSetId")
-        private String deploymentSetId;
-
-        @NameInMap("VpcId")
-        private String vpcId;
-
-        @NameInMap("SystemDisk.PerformanceLevel")
-        private String systemDisk_performanceLevel;
-
-        @NameInMap("KeyPairName")
-        private String keyPairName;
-
-        @NameInMap("SecurityGroupId")
-        private String securityGroupId;
-
-        @NameInMap("NetworkType")
-        private String networkType;
-
-        @NameInMap("SpotStrategy")
-        private String spotStrategy;
-
-        @NameInMap("EnableVmOsConfig")
-        private Boolean enableVmOsConfig;
-
-        @NameInMap("Description")
-        private String description;
-
-        @NameInMap("SpotDuration")
-        private Integer spotDuration;
-
-        @NameInMap("InstanceName")
-        private String instanceName;
-
-        @NameInMap("SecurityEnhancementStrategy")
-        private String securityEnhancementStrategy;
-
-        @NameInMap("UserData")
-        private String userData;
-
-        @NameInMap("SystemDisk.DiskName")
-        private String systemDisk_diskName;
-
-        @NameInMap("SystemDisk.Size")
-        private Integer systemDisk_size;
-
-        @NameInMap("SpotPriceLimit")
-        private Float spotPriceLimit;
-
-        @NameInMap("PasswordInherit")
-        private Boolean passwordInherit;
-
-        @NameInMap("PrivateIpAddress")
-        private String privateIpAddress;
-
-        @NameInMap("ImageId")
-        private String imageId;
-
-        @NameInMap("SystemDisk.DeleteWithInstance")
-        private Boolean systemDisk_deleteWithInstance;
-
-        @NameInMap("SystemDisk.Category")
-        private String systemDisk_category;
-
         @NameInMap("AutoReleaseTime")
         private String autoReleaseTime;
-
-        @NameInMap("SystemDisk.Description")
-        private String systemDisk_description;
-
-        @NameInMap("ImageOwnerAlias")
-        private String imageOwnerAlias;
-
-        @NameInMap("HostName")
-        private String hostName;
-
-        @NameInMap("SystemDisk.Iops")
-        private Integer systemDisk_iops;
-
-        @NameInMap("InternetMaxBandwidthOut")
-        private Integer internetMaxBandwidthOut;
-
-        @NameInMap("InternetMaxBandwidthIn")
-        private Integer internetMaxBandwidthIn;
-
-        @NameInMap("InstanceType")
-        private String instanceType;
-
-        @NameInMap("Period")
-        private Integer period;
-
-        @NameInMap("InstanceChargeType")
-        private String instanceChargeType;
-
-        @NameInMap("IoOptimized")
-        private String ioOptimized;
-
-        @NameInMap("RamRoleName")
-        private String ramRoleName;
-
-        @NameInMap("VSwitchId")
-        private String vSwitchId;
-
-        @NameInMap("ResourceGroupId")
-        private String resourceGroupId;
-
-        @NameInMap("InternetChargeType")
-        private String internetChargeType;
-
-        @NameInMap("ZoneId")
-        private String zoneId;
 
         @NameInMap("DataDisks")
         private DataDisks dataDisks;
 
+        @NameInMap("DeploymentSetId")
+        private String deploymentSetId;
+
+        @NameInMap("Description")
+        private String description;
+
+        @NameInMap("EnableVmOsConfig")
+        private Boolean enableVmOsConfig;
+
+        @NameInMap("HostName")
+        private String hostName;
+
+        @NameInMap("ImageId")
+        private String imageId;
+
+        @NameInMap("ImageOwnerAlias")
+        private String imageOwnerAlias;
+
+        @NameInMap("InstanceChargeType")
+        private String instanceChargeType;
+
+        @NameInMap("InstanceName")
+        private String instanceName;
+
+        @NameInMap("InstanceType")
+        private String instanceType;
+
+        @NameInMap("InternetChargeType")
+        private String internetChargeType;
+
+        @NameInMap("InternetMaxBandwidthIn")
+        private Integer internetMaxBandwidthIn;
+
+        @NameInMap("InternetMaxBandwidthOut")
+        private Integer internetMaxBandwidthOut;
+
+        @NameInMap("IoOptimized")
+        private String ioOptimized;
+
+        @NameInMap("Ipv6AddressCount")
+        private Integer ipv6AddressCount;
+
+        @NameInMap("KeyPairName")
+        private String keyPairName;
+
         @NameInMap("NetworkInterfaces")
         private NetworkInterfaces networkInterfaces;
 
-        @NameInMap("Tags")
-        private Tags tags;
+        @NameInMap("NetworkType")
+        private String networkType;
+
+        @NameInMap("PasswordInherit")
+        private Boolean passwordInherit;
+
+        @NameInMap("Period")
+        private Integer period;
+
+        @NameInMap("PrivateIpAddress")
+        private String privateIpAddress;
+
+        @NameInMap("RamRoleName")
+        private String ramRoleName;
+
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
+        @NameInMap("SecurityEnhancementStrategy")
+        private String securityEnhancementStrategy;
+
+        @NameInMap("SecurityGroupId")
+        private String securityGroupId;
 
         @NameInMap("SecurityGroupIds")
         private LaunchTemplateDataSecurityGroupIds securityGroupIds;
 
+        @NameInMap("SpotDuration")
+        private Integer spotDuration;
+
+        @NameInMap("SpotPriceLimit")
+        private Float spotPriceLimit;
+
+        @NameInMap("SpotStrategy")
+        private String spotStrategy;
+
+        @NameInMap("SystemDisk.Category")
+        private String systemDisk_category;
+
+        @NameInMap("SystemDisk.DeleteWithInstance")
+        private Boolean systemDisk_deleteWithInstance;
+
+        @NameInMap("SystemDisk.Description")
+        private String systemDisk_description;
+
+        @NameInMap("SystemDisk.DiskName")
+        private String systemDisk_diskName;
+
+        @NameInMap("SystemDisk.Iops")
+        private Integer systemDisk_iops;
+
+        @NameInMap("SystemDisk.PerformanceLevel")
+        private String systemDisk_performanceLevel;
+
+        @NameInMap("SystemDisk.Size")
+        private Integer systemDisk_size;
+
+        @NameInMap("Tags")
+        private Tags tags;
+
+        @NameInMap("UserData")
+        private String userData;
+
+        @NameInMap("VSwitchId")
+        private String vSwitchId;
+
+        @NameInMap("VpcId")
+        private String vpcId;
+
+        @NameInMap("ZoneId")
+        private String zoneId;
+
         private LaunchTemplateData(Builder builder) {
-            this.deploymentSetId = builder.deploymentSetId;
-            this.vpcId = builder.vpcId;
-            this.systemDisk_performanceLevel = builder.systemDisk_performanceLevel;
-            this.keyPairName = builder.keyPairName;
-            this.securityGroupId = builder.securityGroupId;
-            this.networkType = builder.networkType;
-            this.spotStrategy = builder.spotStrategy;
-            this.enableVmOsConfig = builder.enableVmOsConfig;
-            this.description = builder.description;
-            this.spotDuration = builder.spotDuration;
-            this.instanceName = builder.instanceName;
-            this.securityEnhancementStrategy = builder.securityEnhancementStrategy;
-            this.userData = builder.userData;
-            this.systemDisk_diskName = builder.systemDisk_diskName;
-            this.systemDisk_size = builder.systemDisk_size;
-            this.spotPriceLimit = builder.spotPriceLimit;
-            this.passwordInherit = builder.passwordInherit;
-            this.privateIpAddress = builder.privateIpAddress;
-            this.imageId = builder.imageId;
-            this.systemDisk_deleteWithInstance = builder.systemDisk_deleteWithInstance;
-            this.systemDisk_category = builder.systemDisk_category;
             this.autoReleaseTime = builder.autoReleaseTime;
-            this.systemDisk_description = builder.systemDisk_description;
-            this.imageOwnerAlias = builder.imageOwnerAlias;
-            this.hostName = builder.hostName;
-            this.systemDisk_iops = builder.systemDisk_iops;
-            this.internetMaxBandwidthOut = builder.internetMaxBandwidthOut;
-            this.internetMaxBandwidthIn = builder.internetMaxBandwidthIn;
-            this.instanceType = builder.instanceType;
-            this.period = builder.period;
-            this.instanceChargeType = builder.instanceChargeType;
-            this.ioOptimized = builder.ioOptimized;
-            this.ramRoleName = builder.ramRoleName;
-            this.vSwitchId = builder.vSwitchId;
-            this.resourceGroupId = builder.resourceGroupId;
-            this.internetChargeType = builder.internetChargeType;
-            this.zoneId = builder.zoneId;
             this.dataDisks = builder.dataDisks;
+            this.deploymentSetId = builder.deploymentSetId;
+            this.description = builder.description;
+            this.enableVmOsConfig = builder.enableVmOsConfig;
+            this.hostName = builder.hostName;
+            this.imageId = builder.imageId;
+            this.imageOwnerAlias = builder.imageOwnerAlias;
+            this.instanceChargeType = builder.instanceChargeType;
+            this.instanceName = builder.instanceName;
+            this.instanceType = builder.instanceType;
+            this.internetChargeType = builder.internetChargeType;
+            this.internetMaxBandwidthIn = builder.internetMaxBandwidthIn;
+            this.internetMaxBandwidthOut = builder.internetMaxBandwidthOut;
+            this.ioOptimized = builder.ioOptimized;
+            this.ipv6AddressCount = builder.ipv6AddressCount;
+            this.keyPairName = builder.keyPairName;
             this.networkInterfaces = builder.networkInterfaces;
-            this.tags = builder.tags;
+            this.networkType = builder.networkType;
+            this.passwordInherit = builder.passwordInherit;
+            this.period = builder.period;
+            this.privateIpAddress = builder.privateIpAddress;
+            this.ramRoleName = builder.ramRoleName;
+            this.resourceGroupId = builder.resourceGroupId;
+            this.securityEnhancementStrategy = builder.securityEnhancementStrategy;
+            this.securityGroupId = builder.securityGroupId;
             this.securityGroupIds = builder.securityGroupIds;
+            this.spotDuration = builder.spotDuration;
+            this.spotPriceLimit = builder.spotPriceLimit;
+            this.spotStrategy = builder.spotStrategy;
+            this.systemDisk_category = builder.systemDisk_category;
+            this.systemDisk_deleteWithInstance = builder.systemDisk_deleteWithInstance;
+            this.systemDisk_description = builder.systemDisk_description;
+            this.systemDisk_diskName = builder.systemDisk_diskName;
+            this.systemDisk_iops = builder.systemDisk_iops;
+            this.systemDisk_performanceLevel = builder.systemDisk_performanceLevel;
+            this.systemDisk_size = builder.systemDisk_size;
+            this.tags = builder.tags;
+            this.userData = builder.userData;
+            this.vSwitchId = builder.vSwitchId;
+            this.vpcId = builder.vpcId;
+            this.zoneId = builder.zoneId;
         }
 
         public static Builder builder() {
@@ -931,262 +920,10 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * @return deploymentSetId
-         */
-        public String getDeploymentSetId() {
-            return this.deploymentSetId;
-        }
-
-        /**
-         * @return vpcId
-         */
-        public String getVpcId() {
-            return this.vpcId;
-        }
-
-        /**
-         * @return systemDisk_performanceLevel
-         */
-        public String getSystemDisk_performanceLevel() {
-            return this.systemDisk_performanceLevel;
-        }
-
-        /**
-         * @return keyPairName
-         */
-        public String getKeyPairName() {
-            return this.keyPairName;
-        }
-
-        /**
-         * @return securityGroupId
-         */
-        public String getSecurityGroupId() {
-            return this.securityGroupId;
-        }
-
-        /**
-         * @return networkType
-         */
-        public String getNetworkType() {
-            return this.networkType;
-        }
-
-        /**
-         * @return spotStrategy
-         */
-        public String getSpotStrategy() {
-            return this.spotStrategy;
-        }
-
-        /**
-         * @return enableVmOsConfig
-         */
-        public Boolean getEnableVmOsConfig() {
-            return this.enableVmOsConfig;
-        }
-
-        /**
-         * @return description
-         */
-        public String getDescription() {
-            return this.description;
-        }
-
-        /**
-         * @return spotDuration
-         */
-        public Integer getSpotDuration() {
-            return this.spotDuration;
-        }
-
-        /**
-         * @return instanceName
-         */
-        public String getInstanceName() {
-            return this.instanceName;
-        }
-
-        /**
-         * @return securityEnhancementStrategy
-         */
-        public String getSecurityEnhancementStrategy() {
-            return this.securityEnhancementStrategy;
-        }
-
-        /**
-         * @return userData
-         */
-        public String getUserData() {
-            return this.userData;
-        }
-
-        /**
-         * @return systemDisk_diskName
-         */
-        public String getSystemDisk_diskName() {
-            return this.systemDisk_diskName;
-        }
-
-        /**
-         * @return systemDisk_size
-         */
-        public Integer getSystemDisk_size() {
-            return this.systemDisk_size;
-        }
-
-        /**
-         * @return spotPriceLimit
-         */
-        public Float getSpotPriceLimit() {
-            return this.spotPriceLimit;
-        }
-
-        /**
-         * @return passwordInherit
-         */
-        public Boolean getPasswordInherit() {
-            return this.passwordInherit;
-        }
-
-        /**
-         * @return privateIpAddress
-         */
-        public String getPrivateIpAddress() {
-            return this.privateIpAddress;
-        }
-
-        /**
-         * @return imageId
-         */
-        public String getImageId() {
-            return this.imageId;
-        }
-
-        /**
-         * @return systemDisk_deleteWithInstance
-         */
-        public Boolean getSystemDisk_deleteWithInstance() {
-            return this.systemDisk_deleteWithInstance;
-        }
-
-        /**
-         * @return systemDisk_category
-         */
-        public String getSystemDisk_category() {
-            return this.systemDisk_category;
-        }
-
-        /**
          * @return autoReleaseTime
          */
         public String getAutoReleaseTime() {
             return this.autoReleaseTime;
-        }
-
-        /**
-         * @return systemDisk_description
-         */
-        public String getSystemDisk_description() {
-            return this.systemDisk_description;
-        }
-
-        /**
-         * @return imageOwnerAlias
-         */
-        public String getImageOwnerAlias() {
-            return this.imageOwnerAlias;
-        }
-
-        /**
-         * @return hostName
-         */
-        public String getHostName() {
-            return this.hostName;
-        }
-
-        /**
-         * @return systemDisk_iops
-         */
-        public Integer getSystemDisk_iops() {
-            return this.systemDisk_iops;
-        }
-
-        /**
-         * @return internetMaxBandwidthOut
-         */
-        public Integer getInternetMaxBandwidthOut() {
-            return this.internetMaxBandwidthOut;
-        }
-
-        /**
-         * @return internetMaxBandwidthIn
-         */
-        public Integer getInternetMaxBandwidthIn() {
-            return this.internetMaxBandwidthIn;
-        }
-
-        /**
-         * @return instanceType
-         */
-        public String getInstanceType() {
-            return this.instanceType;
-        }
-
-        /**
-         * @return period
-         */
-        public Integer getPeriod() {
-            return this.period;
-        }
-
-        /**
-         * @return instanceChargeType
-         */
-        public String getInstanceChargeType() {
-            return this.instanceChargeType;
-        }
-
-        /**
-         * @return ioOptimized
-         */
-        public String getIoOptimized() {
-            return this.ioOptimized;
-        }
-
-        /**
-         * @return ramRoleName
-         */
-        public String getRamRoleName() {
-            return this.ramRoleName;
-        }
-
-        /**
-         * @return vSwitchId
-         */
-        public String getVSwitchId() {
-            return this.vSwitchId;
-        }
-
-        /**
-         * @return resourceGroupId
-         */
-        public String getResourceGroupId() {
-            return this.resourceGroupId;
-        }
-
-        /**
-         * @return internetChargeType
-         */
-        public String getInternetChargeType() {
-            return this.internetChargeType;
-        }
-
-        /**
-         * @return zoneId
-         */
-        public String getZoneId() {
-            return this.zoneId;
         }
 
         /**
@@ -1197,10 +934,248 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         }
 
         /**
+         * @return deploymentSetId
+         */
+        public String getDeploymentSetId() {
+            return this.deploymentSetId;
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return enableVmOsConfig
+         */
+        public Boolean getEnableVmOsConfig() {
+            return this.enableVmOsConfig;
+        }
+
+        /**
+         * @return hostName
+         */
+        public String getHostName() {
+            return this.hostName;
+        }
+
+        /**
+         * @return imageId
+         */
+        public String getImageId() {
+            return this.imageId;
+        }
+
+        /**
+         * @return imageOwnerAlias
+         */
+        public String getImageOwnerAlias() {
+            return this.imageOwnerAlias;
+        }
+
+        /**
+         * @return instanceChargeType
+         */
+        public String getInstanceChargeType() {
+            return this.instanceChargeType;
+        }
+
+        /**
+         * @return instanceName
+         */
+        public String getInstanceName() {
+            return this.instanceName;
+        }
+
+        /**
+         * @return instanceType
+         */
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        /**
+         * @return internetChargeType
+         */
+        public String getInternetChargeType() {
+            return this.internetChargeType;
+        }
+
+        /**
+         * @return internetMaxBandwidthIn
+         */
+        public Integer getInternetMaxBandwidthIn() {
+            return this.internetMaxBandwidthIn;
+        }
+
+        /**
+         * @return internetMaxBandwidthOut
+         */
+        public Integer getInternetMaxBandwidthOut() {
+            return this.internetMaxBandwidthOut;
+        }
+
+        /**
+         * @return ioOptimized
+         */
+        public String getIoOptimized() {
+            return this.ioOptimized;
+        }
+
+        /**
+         * @return ipv6AddressCount
+         */
+        public Integer getIpv6AddressCount() {
+            return this.ipv6AddressCount;
+        }
+
+        /**
+         * @return keyPairName
+         */
+        public String getKeyPairName() {
+            return this.keyPairName;
+        }
+
+        /**
          * @return networkInterfaces
          */
         public NetworkInterfaces getNetworkInterfaces() {
             return this.networkInterfaces;
+        }
+
+        /**
+         * @return networkType
+         */
+        public String getNetworkType() {
+            return this.networkType;
+        }
+
+        /**
+         * @return passwordInherit
+         */
+        public Boolean getPasswordInherit() {
+            return this.passwordInherit;
+        }
+
+        /**
+         * @return period
+         */
+        public Integer getPeriod() {
+            return this.period;
+        }
+
+        /**
+         * @return privateIpAddress
+         */
+        public String getPrivateIpAddress() {
+            return this.privateIpAddress;
+        }
+
+        /**
+         * @return ramRoleName
+         */
+        public String getRamRoleName() {
+            return this.ramRoleName;
+        }
+
+        /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
+         * @return securityEnhancementStrategy
+         */
+        public String getSecurityEnhancementStrategy() {
+            return this.securityEnhancementStrategy;
+        }
+
+        /**
+         * @return securityGroupId
+         */
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        /**
+         * @return securityGroupIds
+         */
+        public LaunchTemplateDataSecurityGroupIds getSecurityGroupIds() {
+            return this.securityGroupIds;
+        }
+
+        /**
+         * @return spotDuration
+         */
+        public Integer getSpotDuration() {
+            return this.spotDuration;
+        }
+
+        /**
+         * @return spotPriceLimit
+         */
+        public Float getSpotPriceLimit() {
+            return this.spotPriceLimit;
+        }
+
+        /**
+         * @return spotStrategy
+         */
+        public String getSpotStrategy() {
+            return this.spotStrategy;
+        }
+
+        /**
+         * @return systemDisk_category
+         */
+        public String getSystemDisk_category() {
+            return this.systemDisk_category;
+        }
+
+        /**
+         * @return systemDisk_deleteWithInstance
+         */
+        public Boolean getSystemDisk_deleteWithInstance() {
+            return this.systemDisk_deleteWithInstance;
+        }
+
+        /**
+         * @return systemDisk_description
+         */
+        public String getSystemDisk_description() {
+            return this.systemDisk_description;
+        }
+
+        /**
+         * @return systemDisk_diskName
+         */
+        public String getSystemDisk_diskName() {
+            return this.systemDisk_diskName;
+        }
+
+        /**
+         * @return systemDisk_iops
+         */
+        public Integer getSystemDisk_iops() {
+            return this.systemDisk_iops;
+        }
+
+        /**
+         * @return systemDisk_performanceLevel
+         */
+        public String getSystemDisk_performanceLevel() {
+            return this.systemDisk_performanceLevel;
+        }
+
+        /**
+         * @return systemDisk_size
+         */
+        public Integer getSystemDisk_size() {
+            return this.systemDisk_size;
         }
 
         /**
@@ -1211,239 +1186,79 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * @return securityGroupIds
+         * @return userData
          */
-        public LaunchTemplateDataSecurityGroupIds getSecurityGroupIds() {
-            return this.securityGroupIds;
+        public String getUserData() {
+            return this.userData;
+        }
+
+        /**
+         * @return vSwitchId
+         */
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        /**
+         * @return zoneId
+         */
+        public String getZoneId() {
+            return this.zoneId;
         }
 
         public static final class Builder {
-            private String deploymentSetId; 
-            private String vpcId; 
-            private String systemDisk_performanceLevel; 
-            private String keyPairName; 
-            private String securityGroupId; 
-            private String networkType; 
-            private String spotStrategy; 
-            private Boolean enableVmOsConfig; 
-            private String description; 
-            private Integer spotDuration; 
-            private String instanceName; 
-            private String securityEnhancementStrategy; 
-            private String userData; 
-            private String systemDisk_diskName; 
-            private Integer systemDisk_size; 
-            private Float spotPriceLimit; 
-            private Boolean passwordInherit; 
-            private String privateIpAddress; 
-            private String imageId; 
-            private Boolean systemDisk_deleteWithInstance; 
-            private String systemDisk_category; 
             private String autoReleaseTime; 
-            private String systemDisk_description; 
-            private String imageOwnerAlias; 
-            private String hostName; 
-            private Integer systemDisk_iops; 
-            private Integer internetMaxBandwidthOut; 
-            private Integer internetMaxBandwidthIn; 
-            private String instanceType; 
-            private Integer period; 
-            private String instanceChargeType; 
-            private String ioOptimized; 
-            private String ramRoleName; 
-            private String vSwitchId; 
-            private String resourceGroupId; 
-            private String internetChargeType; 
-            private String zoneId; 
             private DataDisks dataDisks; 
+            private String deploymentSetId; 
+            private String description; 
+            private Boolean enableVmOsConfig; 
+            private String hostName; 
+            private String imageId; 
+            private String imageOwnerAlias; 
+            private String instanceChargeType; 
+            private String instanceName; 
+            private String instanceType; 
+            private String internetChargeType; 
+            private Integer internetMaxBandwidthIn; 
+            private Integer internetMaxBandwidthOut; 
+            private String ioOptimized; 
+            private Integer ipv6AddressCount; 
+            private String keyPairName; 
             private NetworkInterfaces networkInterfaces; 
-            private Tags tags; 
+            private String networkType; 
+            private Boolean passwordInherit; 
+            private Integer period; 
+            private String privateIpAddress; 
+            private String ramRoleName; 
+            private String resourceGroupId; 
+            private String securityEnhancementStrategy; 
+            private String securityGroupId; 
             private LaunchTemplateDataSecurityGroupIds securityGroupIds; 
+            private Integer spotDuration; 
+            private Float spotPriceLimit; 
+            private String spotStrategy; 
+            private String systemDisk_category; 
+            private Boolean systemDisk_deleteWithInstance; 
+            private String systemDisk_description; 
+            private String systemDisk_diskName; 
+            private Integer systemDisk_iops; 
+            private String systemDisk_performanceLevel; 
+            private Integer systemDisk_size; 
+            private Tags tags; 
+            private String userData; 
+            private String vSwitchId; 
+            private String vpcId; 
+            private String zoneId; 
 
             /**
-             * The ID of the deployment set.
-             */
-            public Builder deploymentSetId(String deploymentSetId) {
-                this.deploymentSetId = deploymentSetId;
-                return this;
-            }
-
-            /**
-             * VPC VPC ID.
-             */
-            public Builder vpcId(String vpcId) {
-                this.vpcId = vpcId;
-                return this;
-            }
-
-            /**
-             * When you create an ESSD as a system disk, set the performance level of the disk. This parameter returns a value when "SystemDisk.Category = cloud_essd. Possible values:
-             * <p>
-             * 
-             * -PL0: The maximum random read/write IOPS per disk is 10,000.
-             * -PL1: The maximum random read/write IOPS per disk is 50,000.
-             * -PL2: The maximum random read/write IOPS per disk is 100,000.
-             * -PL3: The maximum random read/write IOPS per disk is 1 million.
-             */
-            public Builder systemDisk_performanceLevel(String systemDisk_performanceLevel) {
-                this.systemDisk_performanceLevel = systemDisk_performanceLevel;
-                return this;
-            }
-
-            /**
-             * The name of the key pair.
-             */
-            public Builder keyPairName(String keyPairName) {
-                this.keyPairName = keyPairName;
-                return this;
-            }
-
-            /**
-             * The ID of the security group.
-             * <p>
-             * 
-             * > "SecurityGroupId" and "SecurityGroupIds" do not return values at the same time.
-             * 
-             */
-            public Builder securityGroupId(String securityGroupId) {
-                this.securityGroupId = securityGroupId;
-                return this;
-            }
-
-            /**
-             * The network type.
-             */
-            public Builder networkType(String networkType) {
-                this.networkType = networkType;
-                return this;
-            }
-
-            /**
-             * The bidding policy of the pay-as-you-go instance.
-             */
-            public Builder spotStrategy(String spotStrategy) {
-                this.spotStrategy = spotStrategy;
-                return this;
-            }
-
-            /**
-             * Specifies whether to enable instance operating system configuration.
-             */
-            public Builder enableVmOsConfig(Boolean enableVmOsConfig) {
-                this.enableVmOsConfig = enableVmOsConfig;
-                return this;
-            }
-
-            /**
-             * The description of the instance.
-             */
-            public Builder description(String description) {
-                this.description = description;
-                return this;
-            }
-
-            /**
-             * The retention period of a preemptible instance. Unit: hours. Valid values: 0 to 6.
-             * <p>
-             * 
-             * -The retention period is 2 to 6 and is being invited for testing. If you want to activate the service, submit a ticket.
-             * -If the value is 0, the mode is not protected.
-             */
-            public Builder spotDuration(Integer spotDuration) {
-                this.spotDuration = spotDuration;
-                return this;
-            }
-
-            /**
-             * The name of the instance.
-             */
-            public Builder instanceName(String instanceName) {
-                this.instanceName = instanceName;
-                return this;
-            }
-
-            /**
-             * Specifies whether to enable security hardening.
-             */
-            public Builder securityEnhancementStrategy(String securityEnhancementStrategy) {
-                this.securityEnhancementStrategy = securityEnhancementStrategy;
-                return this;
-            }
-
-            /**
-             * The user data of the instance, encoded in Base64.
-             */
-            public Builder userData(String userData) {
-                this.userData = userData;
-                return this;
-            }
-
-            /**
-             * The name of the system disk.
-             */
-            public Builder systemDisk_diskName(String systemDisk_diskName) {
-                this.systemDisk_diskName = systemDisk_diskName;
-                return this;
-            }
-
-            /**
-             * The size of the system disk. Unit: GiB.
-             */
-            public Builder systemDisk_size(Integer systemDisk_size) {
-                this.systemDisk_size = systemDisk_size;
-                return this;
-            }
-
-            /**
-             * Set the maximum hourly price for an instance.
-             */
-            public Builder spotPriceLimit(Float spotPriceLimit) {
-                this.spotPriceLimit = spotPriceLimit;
-                return this;
-            }
-
-            /**
-             * Specifies whether to inherit the username and password set in the original image.
-             */
-            public Builder passwordInherit(Boolean passwordInherit) {
-                this.passwordInherit = passwordInherit;
-                return this;
-            }
-
-            /**
-             * The private IP address of the instance.
-             */
-            public Builder privateIpAddress(String privateIpAddress) {
-                this.privateIpAddress = privateIpAddress;
-                return this;
-            }
-
-            /**
-             * The ID of the image used by the instance.
-             */
-            public Builder imageId(String imageId) {
-                this.imageId = imageId;
-                return this;
-            }
-
-            /**
-             * Indicates whether the system disk is released with the instance.
-             */
-            public Builder systemDisk_deleteWithInstance(Boolean systemDisk_deleteWithInstance) {
-                this.systemDisk_deleteWithInstance = systemDisk_deleteWithInstance;
-                return this;
-            }
-
-            /**
-             * The type of the system disk.
-             */
-            public Builder systemDisk_category(String systemDisk_category) {
-                this.systemDisk_category = systemDisk_category;
-                return this;
-            }
-
-            /**
-             * The automatic release time.
+             * AutoReleaseTime.
              */
             public Builder autoReleaseTime(String autoReleaseTime) {
                 this.autoReleaseTime = autoReleaseTime;
@@ -1451,130 +1266,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the system disk.
-             */
-            public Builder systemDisk_description(String systemDisk_description) {
-                this.systemDisk_description = systemDisk_description;
-                return this;
-            }
-
-            /**
-             * The source of the image.
-             */
-            public Builder imageOwnerAlias(String imageOwnerAlias) {
-                this.imageOwnerAlias = imageOwnerAlias;
-                return this;
-            }
-
-            /**
-             * The hostname of the instance.
-             */
-            public Builder hostName(String hostName) {
-                this.hostName = hostName;
-                return this;
-            }
-
-            /**
-             * The number of I/O operations per second on the system disk.
-             * <p>
-             * 
-             * > This parameter will be discontinued soon. To improve code compatibility, try to use other parameters.
-             */
-            public Builder systemDisk_iops(Integer systemDisk_iops) {
-                this.systemDisk_iops = systemDisk_iops;
-                return this;
-            }
-
-            /**
-             * The maximum outbound Internet bandwidth.
-             */
-            public Builder internetMaxBandwidthOut(Integer internetMaxBandwidthOut) {
-                this.internetMaxBandwidthOut = internetMaxBandwidthOut;
-                return this;
-            }
-
-            /**
-             * The maximum inbound public bandwidth.
-             */
-            public Builder internetMaxBandwidthIn(Integer internetMaxBandwidthIn) {
-                this.internetMaxBandwidthIn = internetMaxBandwidthIn;
-                return this;
-            }
-
-            /**
-             * The instance type.
-             */
-            public Builder instanceType(String instanceType) {
-                this.instanceType = instanceType;
-                return this;
-            }
-
-            /**
-             * The duration of the resource purchase.
-             */
-            public Builder period(Integer period) {
-                this.period = period;
-                return this;
-            }
-
-            /**
-             * The billing method of the instance.
-             */
-            public Builder instanceChargeType(String instanceChargeType) {
-                this.instanceChargeType = instanceChargeType;
-                return this;
-            }
-
-            /**
-             * Indicates whether the instance is I/O optimized.
-             */
-            public Builder ioOptimized(String ioOptimized) {
-                this.ioOptimized = ioOptimized;
-                return this;
-            }
-
-            /**
-             * The name of the instance RAM role.
-             */
-            public Builder ramRoleName(String ramRoleName) {
-                this.ramRoleName = ramRoleName;
-                return this;
-            }
-
-            /**
-             * The ID of the vSwitch to which the instance belongs.
-             */
-            public Builder vSwitchId(String vSwitchId) {
-                this.vSwitchId = vSwitchId;
-                return this;
-            }
-
-            /**
-             * The ID of the resource group to which the launch template belongs.
-             */
-            public Builder resourceGroupId(String resourceGroupId) {
-                this.resourceGroupId = resourceGroupId;
-                return this;
-            }
-
-            /**
-             * The billing method of the Internet bandwidth.
-             */
-            public Builder internetChargeType(String internetChargeType) {
-                this.internetChargeType = internetChargeType;
-                return this;
-            }
-
-            /**
-             * The ID of the zone.
-             */
-            public Builder zoneId(String zoneId) {
-                this.zoneId = zoneId;
-                return this;
-            }
-
-            /**
-             * The collection of data disks.
+             * DataDisks.
              */
             public Builder dataDisks(DataDisks dataDisks) {
                 this.dataDisks = dataDisks;
@@ -1582,7 +1274,127 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The attribute set of the secondary Eni.
+             * DeploymentSetId.
+             */
+            public Builder deploymentSetId(String deploymentSetId) {
+                this.deploymentSetId = deploymentSetId;
+                return this;
+            }
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * EnableVmOsConfig.
+             */
+            public Builder enableVmOsConfig(Boolean enableVmOsConfig) {
+                this.enableVmOsConfig = enableVmOsConfig;
+                return this;
+            }
+
+            /**
+             * HostName.
+             */
+            public Builder hostName(String hostName) {
+                this.hostName = hostName;
+                return this;
+            }
+
+            /**
+             * ImageId.
+             */
+            public Builder imageId(String imageId) {
+                this.imageId = imageId;
+                return this;
+            }
+
+            /**
+             * ImageOwnerAlias.
+             */
+            public Builder imageOwnerAlias(String imageOwnerAlias) {
+                this.imageOwnerAlias = imageOwnerAlias;
+                return this;
+            }
+
+            /**
+             * InstanceChargeType.
+             */
+            public Builder instanceChargeType(String instanceChargeType) {
+                this.instanceChargeType = instanceChargeType;
+                return this;
+            }
+
+            /**
+             * InstanceName.
+             */
+            public Builder instanceName(String instanceName) {
+                this.instanceName = instanceName;
+                return this;
+            }
+
+            /**
+             * InstanceType.
+             */
+            public Builder instanceType(String instanceType) {
+                this.instanceType = instanceType;
+                return this;
+            }
+
+            /**
+             * InternetChargeType.
+             */
+            public Builder internetChargeType(String internetChargeType) {
+                this.internetChargeType = internetChargeType;
+                return this;
+            }
+
+            /**
+             * InternetMaxBandwidthIn.
+             */
+            public Builder internetMaxBandwidthIn(Integer internetMaxBandwidthIn) {
+                this.internetMaxBandwidthIn = internetMaxBandwidthIn;
+                return this;
+            }
+
+            /**
+             * InternetMaxBandwidthOut.
+             */
+            public Builder internetMaxBandwidthOut(Integer internetMaxBandwidthOut) {
+                this.internetMaxBandwidthOut = internetMaxBandwidthOut;
+                return this;
+            }
+
+            /**
+             * IoOptimized.
+             */
+            public Builder ioOptimized(String ioOptimized) {
+                this.ioOptimized = ioOptimized;
+                return this;
+            }
+
+            /**
+             * Ipv6AddressCount.
+             */
+            public Builder ipv6AddressCount(Integer ipv6AddressCount) {
+                this.ipv6AddressCount = ipv6AddressCount;
+                return this;
+            }
+
+            /**
+             * KeyPairName.
+             */
+            public Builder keyPairName(String keyPairName) {
+                this.keyPairName = keyPairName;
+                return this;
+            }
+
+            /**
+             * NetworkInterfaces.
              */
             public Builder networkInterfaces(NetworkInterfaces networkInterfaces) {
                 this.networkInterfaces = networkInterfaces;
@@ -1590,10 +1402,66 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag of the instance.
+             * NetworkType.
              */
-            public Builder tags(Tags tags) {
-                this.tags = tags;
+            public Builder networkType(String networkType) {
+                this.networkType = networkType;
+                return this;
+            }
+
+            /**
+             * PasswordInherit.
+             */
+            public Builder passwordInherit(Boolean passwordInherit) {
+                this.passwordInherit = passwordInherit;
+                return this;
+            }
+
+            /**
+             * Period.
+             */
+            public Builder period(Integer period) {
+                this.period = period;
+                return this;
+            }
+
+            /**
+             * PrivateIpAddress.
+             */
+            public Builder privateIpAddress(String privateIpAddress) {
+                this.privateIpAddress = privateIpAddress;
+                return this;
+            }
+
+            /**
+             * RamRoleName.
+             */
+            public Builder ramRoleName(String ramRoleName) {
+                this.ramRoleName = ramRoleName;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * SecurityEnhancementStrategy.
+             */
+            public Builder securityEnhancementStrategy(String securityEnhancementStrategy) {
+                this.securityEnhancementStrategy = securityEnhancementStrategy;
+                return this;
+            }
+
+            /**
+             * SecurityGroupId.
+             */
+            public Builder securityGroupId(String securityGroupId) {
+                this.securityGroupId = securityGroupId;
                 return this;
             }
 
@@ -1605,6 +1473,126 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * SpotDuration.
+             */
+            public Builder spotDuration(Integer spotDuration) {
+                this.spotDuration = spotDuration;
+                return this;
+            }
+
+            /**
+             * SpotPriceLimit.
+             */
+            public Builder spotPriceLimit(Float spotPriceLimit) {
+                this.spotPriceLimit = spotPriceLimit;
+                return this;
+            }
+
+            /**
+             * SpotStrategy.
+             */
+            public Builder spotStrategy(String spotStrategy) {
+                this.spotStrategy = spotStrategy;
+                return this;
+            }
+
+            /**
+             * SystemDisk.Category.
+             */
+            public Builder systemDisk_category(String systemDisk_category) {
+                this.systemDisk_category = systemDisk_category;
+                return this;
+            }
+
+            /**
+             * SystemDisk.DeleteWithInstance.
+             */
+            public Builder systemDisk_deleteWithInstance(Boolean systemDisk_deleteWithInstance) {
+                this.systemDisk_deleteWithInstance = systemDisk_deleteWithInstance;
+                return this;
+            }
+
+            /**
+             * SystemDisk.Description.
+             */
+            public Builder systemDisk_description(String systemDisk_description) {
+                this.systemDisk_description = systemDisk_description;
+                return this;
+            }
+
+            /**
+             * SystemDisk.DiskName.
+             */
+            public Builder systemDisk_diskName(String systemDisk_diskName) {
+                this.systemDisk_diskName = systemDisk_diskName;
+                return this;
+            }
+
+            /**
+             * SystemDisk.Iops.
+             */
+            public Builder systemDisk_iops(Integer systemDisk_iops) {
+                this.systemDisk_iops = systemDisk_iops;
+                return this;
+            }
+
+            /**
+             * SystemDisk.PerformanceLevel.
+             */
+            public Builder systemDisk_performanceLevel(String systemDisk_performanceLevel) {
+                this.systemDisk_performanceLevel = systemDisk_performanceLevel;
+                return this;
+            }
+
+            /**
+             * SystemDisk.Size.
+             */
+            public Builder systemDisk_size(Integer systemDisk_size) {
+                this.systemDisk_size = systemDisk_size;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(Tags tags) {
+                this.tags = tags;
+                return this;
+            }
+
+            /**
+             * UserData.
+             */
+            public Builder userData(String userData) {
+                this.userData = userData;
+                return this;
+            }
+
+            /**
+             * VSwitchId.
+             */
+            public Builder vSwitchId(String vSwitchId) {
+                this.vSwitchId = vSwitchId;
+                return this;
+            }
+
+            /**
+             * VpcId.
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
+                return this;
+            }
+
+            /**
+             * ZoneId.
+             */
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
+                return this;
+            }
+
             public LaunchTemplateData build() {
                 return new LaunchTemplateData(this);
             } 
@@ -1613,43 +1601,43 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
 
     }
     public static class LaunchTemplateVersionSet extends TeaModel {
-        @NameInMap("LaunchTemplateName")
-        private String launchTemplateName;
-
-        @NameInMap("DefaultVersion")
-        private Boolean defaultVersion;
-
-        @NameInMap("VersionNumber")
-        private Long versionNumber;
-
-        @NameInMap("ModifiedTime")
-        private String modifiedTime;
-
-        @NameInMap("LaunchTemplateId")
-        private String launchTemplateId;
-
         @NameInMap("CreateTime")
         private String createTime;
 
         @NameInMap("CreatedBy")
         private String createdBy;
 
-        @NameInMap("VersionDescription")
-        private String versionDescription;
+        @NameInMap("DefaultVersion")
+        private Boolean defaultVersion;
 
         @NameInMap("LaunchTemplateData")
         private LaunchTemplateData launchTemplateData;
 
+        @NameInMap("LaunchTemplateId")
+        private String launchTemplateId;
+
+        @NameInMap("LaunchTemplateName")
+        private String launchTemplateName;
+
+        @NameInMap("ModifiedTime")
+        private String modifiedTime;
+
+        @NameInMap("VersionDescription")
+        private String versionDescription;
+
+        @NameInMap("VersionNumber")
+        private Long versionNumber;
+
         private LaunchTemplateVersionSet(Builder builder) {
-            this.launchTemplateName = builder.launchTemplateName;
-            this.defaultVersion = builder.defaultVersion;
-            this.versionNumber = builder.versionNumber;
-            this.modifiedTime = builder.modifiedTime;
-            this.launchTemplateId = builder.launchTemplateId;
             this.createTime = builder.createTime;
             this.createdBy = builder.createdBy;
-            this.versionDescription = builder.versionDescription;
+            this.defaultVersion = builder.defaultVersion;
             this.launchTemplateData = builder.launchTemplateData;
+            this.launchTemplateId = builder.launchTemplateId;
+            this.launchTemplateName = builder.launchTemplateName;
+            this.modifiedTime = builder.modifiedTime;
+            this.versionDescription = builder.versionDescription;
+            this.versionNumber = builder.versionNumber;
         }
 
         public static Builder builder() {
@@ -1658,41 +1646,6 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
 
         public static LaunchTemplateVersionSet create() {
             return builder().build();
-        }
-
-        /**
-         * @return launchTemplateName
-         */
-        public String getLaunchTemplateName() {
-            return this.launchTemplateName;
-        }
-
-        /**
-         * @return defaultVersion
-         */
-        public Boolean getDefaultVersion() {
-            return this.defaultVersion;
-        }
-
-        /**
-         * @return versionNumber
-         */
-        public Long getVersionNumber() {
-            return this.versionNumber;
-        }
-
-        /**
-         * @return modifiedTime
-         */
-        public String getModifiedTime() {
-            return this.modifiedTime;
-        }
-
-        /**
-         * @return launchTemplateId
-         */
-        public String getLaunchTemplateId() {
-            return this.launchTemplateId;
         }
 
         /**
@@ -1710,10 +1663,10 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * @return versionDescription
+         * @return defaultVersion
          */
-        public String getVersionDescription() {
-            return this.versionDescription;
+        public Boolean getDefaultVersion() {
+            return this.defaultVersion;
         }
 
         /**
@@ -1723,59 +1676,54 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             return this.launchTemplateData;
         }
 
+        /**
+         * @return launchTemplateId
+         */
+        public String getLaunchTemplateId() {
+            return this.launchTemplateId;
+        }
+
+        /**
+         * @return launchTemplateName
+         */
+        public String getLaunchTemplateName() {
+            return this.launchTemplateName;
+        }
+
+        /**
+         * @return modifiedTime
+         */
+        public String getModifiedTime() {
+            return this.modifiedTime;
+        }
+
+        /**
+         * @return versionDescription
+         */
+        public String getVersionDescription() {
+            return this.versionDescription;
+        }
+
+        /**
+         * @return versionNumber
+         */
+        public Long getVersionNumber() {
+            return this.versionNumber;
+        }
+
         public static final class Builder {
-            private String launchTemplateName; 
-            private Boolean defaultVersion; 
-            private Long versionNumber; 
-            private String modifiedTime; 
-            private String launchTemplateId; 
             private String createTime; 
             private String createdBy; 
-            private String versionDescription; 
+            private Boolean defaultVersion; 
             private LaunchTemplateData launchTemplateData; 
+            private String launchTemplateId; 
+            private String launchTemplateName; 
+            private String modifiedTime; 
+            private String versionDescription; 
+            private Long versionNumber; 
 
             /**
-             * The name of the template.
-             */
-            public Builder launchTemplateName(String launchTemplateName) {
-                this.launchTemplateName = launchTemplateName;
-                return this;
-            }
-
-            /**
-             * The default version of the template.
-             */
-            public Builder defaultVersion(Boolean defaultVersion) {
-                this.defaultVersion = defaultVersion;
-                return this;
-            }
-
-            /**
-             * The version number of the template.
-             */
-            public Builder versionNumber(Long versionNumber) {
-                this.versionNumber = versionNumber;
-                return this;
-            }
-
-            /**
-             * The time when the template was modified.
-             */
-            public Builder modifiedTime(String modifiedTime) {
-                this.modifiedTime = modifiedTime;
-                return this;
-            }
-
-            /**
-             * The ID of the template.
-             */
-            public Builder launchTemplateId(String launchTemplateId) {
-                this.launchTemplateId = launchTemplateId;
-                return this;
-            }
-
-            /**
-             * The time when the template was created.
+             * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -1783,7 +1731,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The creator of the template.
+             * CreatedBy.
              */
             public Builder createdBy(String createdBy) {
                 this.createdBy = createdBy;
@@ -1791,7 +1739,47 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the template version.
+             * DefaultVersion.
+             */
+            public Builder defaultVersion(Boolean defaultVersion) {
+                this.defaultVersion = defaultVersion;
+                return this;
+            }
+
+            /**
+             * LaunchTemplateData.
+             */
+            public Builder launchTemplateData(LaunchTemplateData launchTemplateData) {
+                this.launchTemplateData = launchTemplateData;
+                return this;
+            }
+
+            /**
+             * LaunchTemplateId.
+             */
+            public Builder launchTemplateId(String launchTemplateId) {
+                this.launchTemplateId = launchTemplateId;
+                return this;
+            }
+
+            /**
+             * LaunchTemplateName.
+             */
+            public Builder launchTemplateName(String launchTemplateName) {
+                this.launchTemplateName = launchTemplateName;
+                return this;
+            }
+
+            /**
+             * ModifiedTime.
+             */
+            public Builder modifiedTime(String modifiedTime) {
+                this.modifiedTime = modifiedTime;
+                return this;
+            }
+
+            /**
+             * VersionDescription.
              */
             public Builder versionDescription(String versionDescription) {
                 this.versionDescription = versionDescription;
@@ -1799,10 +1787,10 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The template configuration.
+             * VersionNumber.
              */
-            public Builder launchTemplateData(LaunchTemplateData launchTemplateData) {
-                this.launchTemplateData = launchTemplateData;
+            public Builder versionNumber(Long versionNumber) {
+                this.versionNumber = versionNumber;
                 return this;
             }
 

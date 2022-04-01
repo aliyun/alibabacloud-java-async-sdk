@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeImageFromFamilyResponseBody</p>
  */
 public class DescribeImageFromFamilyResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    private String requestId;
-
     @NameInMap("Image")
     private Image image;
 
+    @NameInMap("RequestId")
+    private String requestId;
+
     private DescribeImageFromFamilyResponseBody(Builder builder) {
-        this.requestId = builder.requestId;
         this.image = builder.image;
+        this.requestId = builder.requestId;
     }
 
     public static Builder builder() {
@@ -32,36 +32,36 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
     }
 
     /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    /**
      * @return image
      */
     public Image getImage() {
         return this.image;
     }
 
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static final class Builder {
-        private String requestId; 
         private Image image; 
+        private String requestId; 
 
         /**
-         * The ID of the request.
+         * Image.
          */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
+        public Builder image(Image image) {
+            this.image = image;
             return this;
         }
 
         /**
-         * The returned image information.
+         * RequestId.
          */
-        public Builder image(Image image) {
-            this.image = image;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
@@ -72,14 +72,14 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
     } 
 
     public static class DiskDeviceMapping extends TeaModel {
-        @NameInMap("Type")
-        private String type;
+        @NameInMap("Device")
+        private String device;
+
+        @NameInMap("Format")
+        private String format;
 
         @NameInMap("ImportOSSBucket")
         private String importOSSBucket;
-
-        @NameInMap("SnapshotId")
-        private String snapshotId;
 
         @NameInMap("ImportOSSObject")
         private String importOSSObject;
@@ -87,20 +87,20 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         @NameInMap("Size")
         private String size;
 
-        @NameInMap("Device")
-        private String device;
+        @NameInMap("SnapshotId")
+        private String snapshotId;
 
-        @NameInMap("Format")
-        private String format;
+        @NameInMap("Type")
+        private String type;
 
         private DiskDeviceMapping(Builder builder) {
-            this.type = builder.type;
-            this.importOSSBucket = builder.importOSSBucket;
-            this.snapshotId = builder.snapshotId;
-            this.importOSSObject = builder.importOSSObject;
-            this.size = builder.size;
             this.device = builder.device;
             this.format = builder.format;
+            this.importOSSBucket = builder.importOSSBucket;
+            this.importOSSObject = builder.importOSSObject;
+            this.size = builder.size;
+            this.snapshotId = builder.snapshotId;
+            this.type = builder.type;
         }
 
         public static Builder builder() {
@@ -112,10 +112,17 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         }
 
         /**
-         * @return type
+         * @return device
          */
-        public String getType() {
-            return this.type;
+        public String getDevice() {
+            return this.device;
+        }
+
+        /**
+         * @return format
+         */
+        public String getFormat() {
+            return this.format;
         }
 
         /**
@@ -123,13 +130,6 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
          */
         public String getImportOSSBucket() {
             return this.importOSSBucket;
-        }
-
-        /**
-         * @return snapshotId
-         */
-        public String getSnapshotId() {
-            return this.snapshotId;
         }
 
         /**
@@ -147,72 +147,30 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         }
 
         /**
-         * @return device
+         * @return snapshotId
          */
-        public String getDevice() {
-            return this.device;
+        public String getSnapshotId() {
+            return this.snapshotId;
         }
 
         /**
-         * @return format
+         * @return type
          */
-        public String getFormat() {
-            return this.format;
+        public String getType() {
+            return this.type;
         }
 
         public static final class Builder {
-            private String type; 
-            private String importOSSBucket; 
-            private String snapshotId; 
-            private String importOSSObject; 
-            private String size; 
             private String device; 
             private String format; 
+            private String importOSSBucket; 
+            private String importOSSObject; 
+            private String size; 
+            private String snapshotId; 
+            private String type; 
 
             /**
-             * The type of the image.
-             */
-            public Builder type(String type) {
-                this.type = type;
-                return this;
-            }
-
-            /**
-             * The OSS Bucket to which the imported Image belongs.
-             */
-            public Builder importOSSBucket(String importOSSBucket) {
-                this.importOSSBucket = importOSSBucket;
-                return this;
-            }
-
-            /**
-             * The ID of the snapshot.
-             */
-            public Builder snapshotId(String snapshotId) {
-                this.snapshotId = snapshotId;
-                return this;
-            }
-
-            /**
-             * The OSS Object to which the imported Image belongs.
-             */
-            public Builder importOSSObject(String importOSSObject) {
-                this.importOSSObject = importOSSObject;
-                return this;
-            }
-
-            /**
-             * The size of the disk. Unit: GiB.
-             */
-            public Builder size(String size) {
-                this.size = size;
-                return this;
-            }
-
-            /**
-             * The device information of the cloud disk, such as/dev/xvdb.
-             * <p>
-             * > This parameter will be discontinued soon. We recommend that you do not use this parameter to improve code compatibility.
+             * Device.
              */
             public Builder device(String device) {
                 this.device = device;
@@ -220,10 +178,50 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             }
 
             /**
-             * The image format.
+             * Format.
              */
             public Builder format(String format) {
                 this.format = format;
+                return this;
+            }
+
+            /**
+             * ImportOSSBucket.
+             */
+            public Builder importOSSBucket(String importOSSBucket) {
+                this.importOSSBucket = importOSSBucket;
+                return this;
+            }
+
+            /**
+             * ImportOSSObject.
+             */
+            public Builder importOSSObject(String importOSSObject) {
+                this.importOSSObject = importOSSObject;
+                return this;
+            }
+
+            /**
+             * Size.
+             */
+            public Builder size(String size) {
+                this.size = size;
+                return this;
+            }
+
+            /**
+             * SnapshotId.
+             */
+            public Builder snapshotId(String snapshotId) {
+                this.snapshotId = snapshotId;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
                 return this;
             }
 
@@ -276,15 +274,15 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("TagValue")
-        private String tagValue;
-
         @NameInMap("TagKey")
         private String tagKey;
 
+        @NameInMap("TagValue")
+        private String tagValue;
+
         private Tag(Builder builder) {
-            this.tagValue = builder.tagValue;
             this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
         }
 
         public static Builder builder() {
@@ -296,36 +294,36 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         }
 
         /**
-         * @return tagValue
-         */
-        public String getTagValue() {
-            return this.tagValue;
-        }
-
-        /**
          * @return tagKey
          */
         public String getTagKey() {
             return this.tagKey;
         }
 
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
         public static final class Builder {
-            private String tagValue; 
             private String tagKey; 
+            private String tagValue; 
 
             /**
-             * The tag value of the custom image.
+             * TagKey.
              */
-            public Builder tagValue(String tagValue) {
-                this.tagValue = tagValue;
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
                 return this;
             }
 
             /**
-             * The tag key of the custom image.
+             * TagValue.
              */
-            public Builder tagKey(String tagKey) {
-                this.tagKey = tagKey;
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
                 return this;
             }
 
@@ -378,99 +376,99 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
 
     }
     public static class Image extends TeaModel {
+        @NameInMap("Architecture")
+        private String architecture;
+
         @NameInMap("CreationTime")
         private String creationTime;
-
-        @NameInMap("Status")
-        private String status;
-
-        @NameInMap("ImageFamily")
-        private String imageFamily;
-
-        @NameInMap("Progress")
-        private String progress;
-
-        @NameInMap("IsCopied")
-        private Boolean isCopied;
-
-        @NameInMap("IsSupportIoOptimized")
-        private Boolean isSupportIoOptimized;
-
-        @NameInMap("ImageOwnerAlias")
-        private String imageOwnerAlias;
-
-        @NameInMap("IsSupportCloudinit")
-        private Boolean isSupportCloudinit;
-
-        @NameInMap("ImageVersion")
-        private String imageVersion;
-
-        @NameInMap("Usage")
-        private String usage;
-
-        @NameInMap("IsSelfShared")
-        private String isSelfShared;
 
         @NameInMap("Description")
         private String description;
 
-        @NameInMap("Size")
-        private Integer size;
+        @NameInMap("DiskDeviceMappings")
+        private DiskDeviceMappings diskDeviceMappings;
 
-        @NameInMap("Platform")
-        private String platform;
-
-        @NameInMap("ImageName")
-        private String imageName;
-
-        @NameInMap("OSName")
-        private String OSName;
+        @NameInMap("ImageFamily")
+        private String imageFamily;
 
         @NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("OSType")
-        private String OSType;
+        @NameInMap("ImageName")
+        private String imageName;
+
+        @NameInMap("ImageOwnerAlias")
+        private String imageOwnerAlias;
+
+        @NameInMap("ImageVersion")
+        private String imageVersion;
+
+        @NameInMap("IsCopied")
+        private Boolean isCopied;
+
+        @NameInMap("IsSelfShared")
+        private String isSelfShared;
 
         @NameInMap("IsSubscribed")
         private Boolean isSubscribed;
 
+        @NameInMap("IsSupportCloudinit")
+        private Boolean isSupportCloudinit;
+
+        @NameInMap("IsSupportIoOptimized")
+        private Boolean isSupportIoOptimized;
+
+        @NameInMap("OSName")
+        private String OSName;
+
+        @NameInMap("OSType")
+        private String OSType;
+
+        @NameInMap("Platform")
+        private String platform;
+
         @NameInMap("ProductCode")
         private String productCode;
 
-        @NameInMap("Architecture")
-        private String architecture;
+        @NameInMap("Progress")
+        private String progress;
 
-        @NameInMap("DiskDeviceMappings")
-        private DiskDeviceMappings diskDeviceMappings;
+        @NameInMap("Size")
+        private Integer size;
+
+        @NameInMap("Status")
+        private String status;
 
         @NameInMap("Tags")
         private Tags tags;
 
+        @NameInMap("Usage")
+        private String usage;
+
         private Image(Builder builder) {
-            this.creationTime = builder.creationTime;
-            this.status = builder.status;
-            this.imageFamily = builder.imageFamily;
-            this.progress = builder.progress;
-            this.isCopied = builder.isCopied;
-            this.isSupportIoOptimized = builder.isSupportIoOptimized;
-            this.imageOwnerAlias = builder.imageOwnerAlias;
-            this.isSupportCloudinit = builder.isSupportCloudinit;
-            this.imageVersion = builder.imageVersion;
-            this.usage = builder.usage;
-            this.isSelfShared = builder.isSelfShared;
-            this.description = builder.description;
-            this.size = builder.size;
-            this.platform = builder.platform;
-            this.imageName = builder.imageName;
-            this.OSName = builder.OSName;
-            this.imageId = builder.imageId;
-            this.OSType = builder.OSType;
-            this.isSubscribed = builder.isSubscribed;
-            this.productCode = builder.productCode;
             this.architecture = builder.architecture;
+            this.creationTime = builder.creationTime;
+            this.description = builder.description;
             this.diskDeviceMappings = builder.diskDeviceMappings;
+            this.imageFamily = builder.imageFamily;
+            this.imageId = builder.imageId;
+            this.imageName = builder.imageName;
+            this.imageOwnerAlias = builder.imageOwnerAlias;
+            this.imageVersion = builder.imageVersion;
+            this.isCopied = builder.isCopied;
+            this.isSelfShared = builder.isSelfShared;
+            this.isSubscribed = builder.isSubscribed;
+            this.isSupportCloudinit = builder.isSupportCloudinit;
+            this.isSupportIoOptimized = builder.isSupportIoOptimized;
+            this.OSName = builder.OSName;
+            this.OSType = builder.OSType;
+            this.platform = builder.platform;
+            this.productCode = builder.productCode;
+            this.progress = builder.progress;
+            this.size = builder.size;
+            this.status = builder.status;
             this.tags = builder.tags;
+            this.usage = builder.usage;
         }
 
         public static Builder builder() {
@@ -482,80 +480,17 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         }
 
         /**
+         * @return architecture
+         */
+        public String getArchitecture() {
+            return this.architecture;
+        }
+
+        /**
          * @return creationTime
          */
         public String getCreationTime() {
             return this.creationTime;
-        }
-
-        /**
-         * @return status
-         */
-        public String getStatus() {
-            return this.status;
-        }
-
-        /**
-         * @return imageFamily
-         */
-        public String getImageFamily() {
-            return this.imageFamily;
-        }
-
-        /**
-         * @return progress
-         */
-        public String getProgress() {
-            return this.progress;
-        }
-
-        /**
-         * @return isCopied
-         */
-        public Boolean getIsCopied() {
-            return this.isCopied;
-        }
-
-        /**
-         * @return isSupportIoOptimized
-         */
-        public Boolean getIsSupportIoOptimized() {
-            return this.isSupportIoOptimized;
-        }
-
-        /**
-         * @return imageOwnerAlias
-         */
-        public String getImageOwnerAlias() {
-            return this.imageOwnerAlias;
-        }
-
-        /**
-         * @return isSupportCloudinit
-         */
-        public Boolean getIsSupportCloudinit() {
-            return this.isSupportCloudinit;
-        }
-
-        /**
-         * @return imageVersion
-         */
-        public String getImageVersion() {
-            return this.imageVersion;
-        }
-
-        /**
-         * @return usage
-         */
-        public String getUsage() {
-            return this.usage;
-        }
-
-        /**
-         * @return isSelfShared
-         */
-        public String getIsSelfShared() {
-            return this.isSelfShared;
         }
 
         /**
@@ -566,31 +501,17 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         }
 
         /**
-         * @return size
+         * @return diskDeviceMappings
          */
-        public Integer getSize() {
-            return this.size;
+        public DiskDeviceMappings getDiskDeviceMappings() {
+            return this.diskDeviceMappings;
         }
 
         /**
-         * @return platform
+         * @return imageFamily
          */
-        public String getPlatform() {
-            return this.platform;
-        }
-
-        /**
-         * @return imageName
-         */
-        public String getImageName() {
-            return this.imageName;
-        }
-
-        /**
-         * @return OSName
-         */
-        public String getOSName() {
-            return this.OSName;
+        public String getImageFamily() {
+            return this.imageFamily;
         }
 
         /**
@@ -601,10 +522,38 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         }
 
         /**
-         * @return OSType
+         * @return imageName
          */
-        public String getOSType() {
-            return this.OSType;
+        public String getImageName() {
+            return this.imageName;
+        }
+
+        /**
+         * @return imageOwnerAlias
+         */
+        public String getImageOwnerAlias() {
+            return this.imageOwnerAlias;
+        }
+
+        /**
+         * @return imageVersion
+         */
+        public String getImageVersion() {
+            return this.imageVersion;
+        }
+
+        /**
+         * @return isCopied
+         */
+        public Boolean getIsCopied() {
+            return this.isCopied;
+        }
+
+        /**
+         * @return isSelfShared
+         */
+        public String getIsSelfShared() {
+            return this.isSelfShared;
         }
 
         /**
@@ -615,6 +564,41 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         }
 
         /**
+         * @return isSupportCloudinit
+         */
+        public Boolean getIsSupportCloudinit() {
+            return this.isSupportCloudinit;
+        }
+
+        /**
+         * @return isSupportIoOptimized
+         */
+        public Boolean getIsSupportIoOptimized() {
+            return this.isSupportIoOptimized;
+        }
+
+        /**
+         * @return OSName
+         */
+        public String getOSName() {
+            return this.OSName;
+        }
+
+        /**
+         * @return OSType
+         */
+        public String getOSType() {
+            return this.OSType;
+        }
+
+        /**
+         * @return platform
+         */
+        public String getPlatform() {
+            return this.platform;
+        }
+
+        /**
          * @return productCode
          */
         public String getProductCode() {
@@ -622,17 +606,24 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         }
 
         /**
-         * @return architecture
+         * @return progress
          */
-        public String getArchitecture() {
-            return this.architecture;
+        public String getProgress() {
+            return this.progress;
         }
 
         /**
-         * @return diskDeviceMappings
+         * @return size
          */
-        public DiskDeviceMappings getDiskDeviceMappings() {
-            return this.diskDeviceMappings;
+        public Integer getSize() {
+            return this.size;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
         }
 
         /**
@@ -642,212 +633,40 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             return this.tags;
         }
 
+        /**
+         * @return usage
+         */
+        public String getUsage() {
+            return this.usage;
+        }
+
         public static final class Builder {
-            private String creationTime; 
-            private String status; 
-            private String imageFamily; 
-            private String progress; 
-            private Boolean isCopied; 
-            private Boolean isSupportIoOptimized; 
-            private String imageOwnerAlias; 
-            private Boolean isSupportCloudinit; 
-            private String imageVersion; 
-            private String usage; 
-            private String isSelfShared; 
-            private String description; 
-            private Integer size; 
-            private String platform; 
-            private String imageName; 
-            private String OSName; 
-            private String imageId; 
-            private String OSType; 
-            private Boolean isSubscribed; 
-            private String productCode; 
             private String architecture; 
+            private String creationTime; 
+            private String description; 
             private DiskDeviceMappings diskDeviceMappings; 
+            private String imageFamily; 
+            private String imageId; 
+            private String imageName; 
+            private String imageOwnerAlias; 
+            private String imageVersion; 
+            private Boolean isCopied; 
+            private String isSelfShared; 
+            private Boolean isSubscribed; 
+            private Boolean isSupportCloudinit; 
+            private Boolean isSupportIoOptimized; 
+            private String OSName; 
+            private String OSType; 
+            private String platform; 
+            private String productCode; 
+            private String progress; 
+            private Integer size; 
+            private String status; 
             private Tags tags; 
+            private String usage; 
 
             /**
-             * The time when the image was created.
-             */
-            public Builder creationTime(String creationTime) {
-                this.creationTime = creationTime;
-                return this;
-            }
-
-            /**
-             * The status of the image. Possible values:
-             * <p>
-             * -UnAvailable: UnAvailable
-             * -Available: Available
-             * -Creating: Creating
-             * -CreateFailed: Failed to be created.
-             */
-            public Builder status(String status) {
-                this.status = status;
-                return this;
-            }
-
-            /**
-             * The image family is.
-             */
-            public Builder imageFamily(String imageFamily) {
-                this.imageFamily = imageFamily;
-                return this;
-            }
-
-            /**
-             * The progress of the image completion. Unit: percentage.
-             */
-            public Builder progress(String progress) {
-                this.progress = progress;
-                return this;
-            }
-
-            /**
-             * Indicates whether the image is copied.
-             */
-            public Builder isCopied(Boolean isCopied) {
-                this.isCopied = isCopied;
-                return this;
-            }
-
-            /**
-             * Indicates whether it can be run on I/O optimized instances.
-             */
-            public Builder isSupportIoOptimized(Boolean isSupportIoOptimized) {
-                this.isSupportIoOptimized = isSupportIoOptimized;
-                return this;
-            }
-
-            /**
-             * The alias of the image owner. Possible values:
-             * <p>
-             * -system: public image.
-             * -self: your custom image.
-             * -others: public images of other users.
-             * -marketplace: Alibaba Cloud marketplace image.
-             */
-            public Builder imageOwnerAlias(String imageOwnerAlias) {
-                this.imageOwnerAlias = imageOwnerAlias;
-                return this;
-            }
-
-            /**
-             * Indicates whether cloud-init is supported.
-             */
-            public Builder isSupportCloudinit(Boolean isSupportCloudinit) {
-                this.isSupportCloudinit = isSupportCloudinit;
-                return this;
-            }
-
-            /**
-             * The version of the image.
-             */
-            public Builder imageVersion(String imageVersion) {
-                this.imageVersion = imageVersion;
-                return this;
-            }
-
-            /**
-             * The type of the resource to be referenced. Possible values:
-             * <p>
-             * -instance: one or more ECS instances are created.
-             * -none: no ECS instance has been created.
-             */
-            public Builder usage(String usage) {
-                this.usage = usage;
-                return this;
-            }
-
-            /**
-             * Indicates whether the custom image has been shared with other users.
-             */
-            public Builder isSelfShared(String isSelfShared) {
-                this.isSelfShared = isSelfShared;
-                return this;
-            }
-
-            /**
-             * The description.
-             */
-            public Builder description(String description) {
-                this.description = description;
-                return this;
-            }
-
-            /**
-             * The size of the image. Unit: GiB.
-             */
-            public Builder size(Integer size) {
-                this.size = size;
-                return this;
-            }
-
-            /**
-             * The operating system platform.
-             */
-            public Builder platform(String platform) {
-                this.platform = platform;
-                return this;
-            }
-
-            /**
-             * The name of the image.
-             */
-            public Builder imageName(String imageName) {
-                this.imageName = imageName;
-                return this;
-            }
-
-            /**
-             * The Chinese display name of the operating system.
-             */
-            public Builder OSName(String OSName) {
-                this.OSName = OSName;
-                return this;
-            }
-
-            /**
-             * The ID of the image.
-             */
-            public Builder imageId(String imageId) {
-                this.imageId = imageId;
-                return this;
-            }
-
-            /**
-             * The operating system type. Possible values:
-             * <p>
-             * -Windows
-             * -linux
-             */
-            public Builder OSType(String OSType) {
-                this.OSType = OSType;
-                return this;
-            }
-
-            /**
-             * Indicates whether you have subscribed to the terms of service of the image product corresponding to the image product code.
-             */
-            public Builder isSubscribed(Boolean isSubscribed) {
-                this.isSubscribed = isSubscribed;
-                return this;
-            }
-
-            /**
-             * The ID of the image product in the marketplace.
-             */
-            public Builder productCode(String productCode) {
-                this.productCode = productCode;
-                return this;
-            }
-
-            /**
-             * The architecture type of the image system. Possible values:
-             * <p>
-             * -i386
-             * -x86_64
+             * Architecture.
              */
             public Builder architecture(String architecture) {
                 this.architecture = architecture;
@@ -855,7 +674,23 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             }
 
             /**
-             * The mapping between disks and snapshots in an image.
+             * CreationTime.
+             */
+            public Builder creationTime(String creationTime) {
+                this.creationTime = creationTime;
+                return this;
+            }
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * DiskDeviceMappings.
              */
             public Builder diskDeviceMappings(DiskDeviceMappings diskDeviceMappings) {
                 this.diskDeviceMappings = diskDeviceMappings;
@@ -863,10 +698,154 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             }
 
             /**
-             * The tag pair of the image.
+             * ImageFamily.
+             */
+            public Builder imageFamily(String imageFamily) {
+                this.imageFamily = imageFamily;
+                return this;
+            }
+
+            /**
+             * ImageId.
+             */
+            public Builder imageId(String imageId) {
+                this.imageId = imageId;
+                return this;
+            }
+
+            /**
+             * ImageName.
+             */
+            public Builder imageName(String imageName) {
+                this.imageName = imageName;
+                return this;
+            }
+
+            /**
+             * ImageOwnerAlias.
+             */
+            public Builder imageOwnerAlias(String imageOwnerAlias) {
+                this.imageOwnerAlias = imageOwnerAlias;
+                return this;
+            }
+
+            /**
+             * ImageVersion.
+             */
+            public Builder imageVersion(String imageVersion) {
+                this.imageVersion = imageVersion;
+                return this;
+            }
+
+            /**
+             * IsCopied.
+             */
+            public Builder isCopied(Boolean isCopied) {
+                this.isCopied = isCopied;
+                return this;
+            }
+
+            /**
+             * IsSelfShared.
+             */
+            public Builder isSelfShared(String isSelfShared) {
+                this.isSelfShared = isSelfShared;
+                return this;
+            }
+
+            /**
+             * IsSubscribed.
+             */
+            public Builder isSubscribed(Boolean isSubscribed) {
+                this.isSubscribed = isSubscribed;
+                return this;
+            }
+
+            /**
+             * IsSupportCloudinit.
+             */
+            public Builder isSupportCloudinit(Boolean isSupportCloudinit) {
+                this.isSupportCloudinit = isSupportCloudinit;
+                return this;
+            }
+
+            /**
+             * IsSupportIoOptimized.
+             */
+            public Builder isSupportIoOptimized(Boolean isSupportIoOptimized) {
+                this.isSupportIoOptimized = isSupportIoOptimized;
+                return this;
+            }
+
+            /**
+             * OSName.
+             */
+            public Builder OSName(String OSName) {
+                this.OSName = OSName;
+                return this;
+            }
+
+            /**
+             * OSType.
+             */
+            public Builder OSType(String OSType) {
+                this.OSType = OSType;
+                return this;
+            }
+
+            /**
+             * Platform.
+             */
+            public Builder platform(String platform) {
+                this.platform = platform;
+                return this;
+            }
+
+            /**
+             * ProductCode.
+             */
+            public Builder productCode(String productCode) {
+                this.productCode = productCode;
+                return this;
+            }
+
+            /**
+             * Progress.
+             */
+            public Builder progress(String progress) {
+                this.progress = progress;
+                return this;
+            }
+
+            /**
+             * Size.
+             */
+            public Builder size(Integer size) {
+                this.size = size;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * Tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
+                return this;
+            }
+
+            /**
+             * Usage.
+             */
+            public Builder usage(String usage) {
+                this.usage = usage;
                 return this;
             }
 

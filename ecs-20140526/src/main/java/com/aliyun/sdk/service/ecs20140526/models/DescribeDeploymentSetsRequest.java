@@ -12,44 +12,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDeploymentSetsRequest</p>
  */
 public class DescribeDeploymentSetsRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
-    @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
-
-    @Query
-    @NameInMap("NetworkType")
-    private String networkType;
-
-    @Query
-    @NameInMap("Granularity")
-    private String granularity;
-
-    @Query
-    @NameInMap("Domain")
-    private String domain;
-
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 50, minimum = 1)
-    private Integer pageSize;
-
-    @Query
-    @NameInMap("Strategy")
-    private String strategy;
-
-    @Query
-    @NameInMap("PageNumber")
-    private Integer pageNumber;
-
     @Query
     @NameInMap("DeploymentSetIds")
     private String deploymentSetIds;
@@ -58,19 +20,72 @@ public class DescribeDeploymentSetsRequest extends Request {
     @NameInMap("DeploymentSetName")
     private String deploymentSetName;
 
+    @Query
+    @NameInMap("Domain")
+    private String domain;
+
+    @Query
+    @NameInMap("Granularity")
+    private String granularity;
+
+    @Query
+    @NameInMap("NetworkType")
+    private String networkType;
+
+    @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
+
+    @Query
+    @NameInMap("PageNumber")
+    private Integer pageNumber;
+
+    @Query
+    @NameInMap("PageSize")
+    @Validation(maximum = 50, minimum = 1)
+    private Integer pageSize;
+
+    @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
+    @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
+    @Query
+    @NameInMap("Strategy")
+    private String strategy;
+
     private DescribeDeploymentSetsRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
-        this.resourceOwnerId = builder.resourceOwnerId;
-        this.networkType = builder.networkType;
-        this.granularity = builder.granularity;
-        this.domain = builder.domain;
-        this.regionId = builder.regionId;
-        this.pageSize = builder.pageSize;
-        this.strategy = builder.strategy;
-        this.pageNumber = builder.pageNumber;
         this.deploymentSetIds = builder.deploymentSetIds;
         this.deploymentSetName = builder.deploymentSetName;
+        this.domain = builder.domain;
+        this.granularity = builder.granularity;
+        this.networkType = builder.networkType;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
+        this.regionId = builder.regionId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.sourceRegionId = builder.sourceRegionId;
+        this.strategy = builder.strategy;
     }
 
     public static Builder builder() {
@@ -87,69 +102,6 @@ public class DescribeDeploymentSetsRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
-     * @return resourceOwnerId
-     */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    /**
-     * @return networkType
-     */
-    public String getNetworkType() {
-        return this.networkType;
-    }
-
-    /**
-     * @return granularity
-     */
-    public String getGranularity() {
-        return this.granularity;
-    }
-
-    /**
-     * @return domain
-     */
-    public String getDomain() {
-        return this.domain;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return pageSize
-     */
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    /**
-     * @return strategy
-     */
-    public String getStrategy() {
-        return this.strategy;
-    }
-
-    /**
-     * @return pageNumber
-     */
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    /**
      * @return deploymentSetIds
      */
     public String getDeploymentSetIds() {
@@ -163,18 +115,105 @@ public class DescribeDeploymentSetsRequest extends Request {
         return this.deploymentSetName;
     }
 
+    /**
+     * @return domain
+     */
+    public String getDomain() {
+        return this.domain;
+    }
+
+    /**
+     * @return granularity
+     */
+    public String getGranularity() {
+        return this.granularity;
+    }
+
+    /**
+     * @return networkType
+     */
+    public String getNetworkType() {
+        return this.networkType;
+    }
+
+    /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
+    /**
+     * @return strategy
+     */
+    public String getStrategy() {
+        return this.strategy;
+    }
+
     public static final class Builder extends Request.Builder<DescribeDeploymentSetsRequest, Builder> {
-        private String sourceRegionId; 
-        private Long resourceOwnerId; 
-        private String networkType; 
-        private String granularity; 
-        private String domain; 
-        private String regionId; 
-        private Integer pageSize; 
-        private String strategy; 
-        private Integer pageNumber; 
         private String deploymentSetIds; 
         private String deploymentSetName; 
+        private String domain; 
+        private String granularity; 
+        private String networkType; 
+        private String ownerAccount; 
+        private Long ownerId; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
+        private String regionId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String sourceRegionId; 
+        private String strategy; 
 
         private Builder() {
             super();
@@ -182,52 +221,37 @@ public class DescribeDeploymentSetsRequest extends Request {
 
         private Builder(DescribeDeploymentSetsRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
-            this.resourceOwnerId = request.resourceOwnerId;
-            this.networkType = request.networkType;
-            this.granularity = request.granularity;
-            this.domain = request.domain;
-            this.regionId = request.regionId;
-            this.pageSize = request.pageSize;
-            this.strategy = request.strategy;
-            this.pageNumber = request.pageNumber;
             this.deploymentSetIds = request.deploymentSetIds;
             this.deploymentSetName = request.deploymentSetName;
+            this.domain = request.domain;
+            this.granularity = request.granularity;
+            this.networkType = request.networkType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceRegionId = request.sourceRegionId;
+            this.strategy = request.strategy;
         } 
 
         /**
-         * SourceRegionId.
+         * DeploymentSetIds.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder deploymentSetIds(String deploymentSetIds) {
+            this.putQueryParameter("DeploymentSetIds", deploymentSetIds);
+            this.deploymentSetIds = deploymentSetIds;
             return this;
         }
 
         /**
-         * ResourceOwnerId.
+         * DeploymentSetName.
          */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * NetworkType.
-         */
-        public Builder networkType(String networkType) {
-            this.putQueryParameter("NetworkType", networkType);
-            this.networkType = networkType;
-            return this;
-        }
-
-        /**
-         * Granularity.
-         */
-        public Builder granularity(String granularity) {
-            this.putQueryParameter("Granularity", granularity);
-            this.granularity = granularity;
+        public Builder deploymentSetName(String deploymentSetName) {
+            this.putQueryParameter("DeploymentSetName", deploymentSetName);
+            this.deploymentSetName = deploymentSetName;
             return this;
         }
 
@@ -241,48 +265,43 @@ public class DescribeDeploymentSetsRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the deployment set belongs. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
+         * Granularity.
          */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
+        public Builder granularity(String granularity) {
+            this.putQueryParameter("Granularity", granularity);
+            this.granularity = granularity;
             return this;
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
-         * 
-         * Maximum Value: 50.
-         * 
-         * Default value: 10.
+         * NetworkType.
          */
-        public Builder pageSize(Integer pageSize) {
-            this.putQueryParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
+        public Builder networkType(String networkType) {
+            this.putQueryParameter("NetworkType", networkType);
+            this.networkType = networkType;
             return this;
         }
 
         /**
-         * The deployment policy. Valid values:
-         * <p>
-         * 
-         * -Availability: the high-Availability policy.
-         * -AvailabilityGroup: deploy a high-availability policy for a set group.
+         * OwnerAccount.
          */
-        public Builder strategy(String strategy) {
-            this.putQueryParameter("Strategy", strategy);
-            this.strategy = strategy;
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
             return this;
         }
 
         /**
-         * The page number of the deployment set list.
-         * <p>
-         * 
-         * The start value is 1.
-         * 
-         * Default value: 1.
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -291,20 +310,56 @@ public class DescribeDeploymentSetsRequest extends Request {
         }
 
         /**
-         * The list of deployment set IDs. The value can be a JSON Array composed of multiple deployment set IDs, in the format of "["ds-xxxxxxxxx", "ds-yyyyyyyyy",... "ds-zzzzzzzzz"]". You can specify a maximum of 100 IDs. Separate IDs with commas (,).
+         * PageSize.
          */
-        public Builder deploymentSetIds(String deploymentSetIds) {
-            this.putQueryParameter("DeploymentSetIds", deploymentSetIds);
-            this.deploymentSetIds = deploymentSetIds;
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
             return this;
         }
 
         /**
-         * The name of the deployment set.
+         * RegionId.
          */
-        public Builder deploymentSetName(String deploymentSetName) {
-            this.putQueryParameter("DeploymentSetName", deploymentSetName);
-            this.deploymentSetName = deploymentSetName;
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
+
+        /**
+         * Strategy.
+         */
+        public Builder strategy(String strategy) {
+            this.putQueryParameter("Strategy", strategy);
+            this.strategy = strategy;
             return this;
         }
 

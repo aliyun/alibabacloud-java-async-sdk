@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDedicatedHostTypesResponseBody</p>
  */
 public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    private String requestId;
-
     @NameInMap("DedicatedHostTypes")
     private DedicatedHostTypes dedicatedHostTypes;
 
+    @NameInMap("RequestId")
+    private String requestId;
+
     private DescribeDedicatedHostTypesResponseBody(Builder builder) {
-        this.requestId = builder.requestId;
         this.dedicatedHostTypes = builder.dedicatedHostTypes;
+        this.requestId = builder.requestId;
     }
 
     public static Builder builder() {
@@ -32,36 +32,36 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
     }
 
     /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    /**
      * @return dedicatedHostTypes
      */
     public DedicatedHostTypes getDedicatedHostTypes() {
         return this.dedicatedHostTypes;
     }
 
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static final class Builder {
-        private String requestId; 
         private DedicatedHostTypes dedicatedHostTypes; 
+        private String requestId; 
 
         /**
-         * The ID of the request.
+         * DedicatedHostTypes.
          */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
+        public Builder dedicatedHostTypes(DedicatedHostTypes dedicatedHostTypes) {
+            this.dedicatedHostTypes = dedicatedHostTypes;
             return this;
         }
 
         /**
-         * Returns the specifications of the dedicated host.
+         * RequestId.
          */
-        public Builder dedicatedHostTypes(DedicatedHostTypes dedicatedHostTypes) {
-            this.dedicatedHostTypes = dedicatedHostTypes;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
@@ -157,41 +157,35 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
         @NameInMap("Cores")
         private Integer cores;
 
-        @NameInMap("LocalStorageCategory")
-        private String localStorageCategory;
-
-        @NameInMap("GPUSpec")
-        private String GPUSpec;
-
-        @NameInMap("TotalVcpus")
-        private Integer totalVcpus;
-
         @NameInMap("CpuOverCommitRatioRange")
         private String cpuOverCommitRatioRange;
-
-        @NameInMap("PhysicalGpus")
-        private Integer physicalGpus;
-
-        @NameInMap("MemorySize")
-        private Float memorySize;
-
-        @NameInMap("SupportCpuOverCommitRatio")
-        private Boolean supportCpuOverCommitRatio;
-
-        @NameInMap("LocalStorageCapacity")
-        private Long localStorageCapacity;
 
         @NameInMap("DedicatedHostType")
         private String dedicatedHostType;
 
+        @NameInMap("GPUSpec")
+        private String GPUSpec;
+
         @NameInMap("LocalStorageAmount")
         private Integer localStorageAmount;
 
-        @NameInMap("TotalVgpus")
-        private Integer totalVgpus;
+        @NameInMap("LocalStorageCapacity")
+        private Long localStorageCapacity;
+
+        @NameInMap("LocalStorageCategory")
+        private String localStorageCategory;
+
+        @NameInMap("MemorySize")
+        private Float memorySize;
+
+        @NameInMap("PhysicalGpus")
+        private Integer physicalGpus;
 
         @NameInMap("Sockets")
         private Integer sockets;
+
+        @NameInMap("SupportCpuOverCommitRatio")
+        private Boolean supportCpuOverCommitRatio;
 
         @NameInMap("SupportedInstanceTypeFamilies")
         private SupportedInstanceTypeFamilies supportedInstanceTypeFamilies;
@@ -199,22 +193,28 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
         @NameInMap("SupportedInstanceTypesList")
         private SupportedInstanceTypesList supportedInstanceTypesList;
 
+        @NameInMap("TotalVcpus")
+        private Integer totalVcpus;
+
+        @NameInMap("TotalVgpus")
+        private Integer totalVgpus;
+
         private DedicatedHostType(Builder builder) {
             this.cores = builder.cores;
-            this.localStorageCategory = builder.localStorageCategory;
-            this.GPUSpec = builder.GPUSpec;
-            this.totalVcpus = builder.totalVcpus;
             this.cpuOverCommitRatioRange = builder.cpuOverCommitRatioRange;
-            this.physicalGpus = builder.physicalGpus;
-            this.memorySize = builder.memorySize;
-            this.supportCpuOverCommitRatio = builder.supportCpuOverCommitRatio;
-            this.localStorageCapacity = builder.localStorageCapacity;
             this.dedicatedHostType = builder.dedicatedHostType;
+            this.GPUSpec = builder.GPUSpec;
             this.localStorageAmount = builder.localStorageAmount;
-            this.totalVgpus = builder.totalVgpus;
+            this.localStorageCapacity = builder.localStorageCapacity;
+            this.localStorageCategory = builder.localStorageCategory;
+            this.memorySize = builder.memorySize;
+            this.physicalGpus = builder.physicalGpus;
             this.sockets = builder.sockets;
+            this.supportCpuOverCommitRatio = builder.supportCpuOverCommitRatio;
             this.supportedInstanceTypeFamilies = builder.supportedInstanceTypeFamilies;
             this.supportedInstanceTypesList = builder.supportedInstanceTypesList;
+            this.totalVcpus = builder.totalVcpus;
+            this.totalVgpus = builder.totalVgpus;
         }
 
         public static Builder builder() {
@@ -233,59 +233,10 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
         }
 
         /**
-         * @return localStorageCategory
-         */
-        public String getLocalStorageCategory() {
-            return this.localStorageCategory;
-        }
-
-        /**
-         * @return GPUSpec
-         */
-        public String getGPUSpec() {
-            return this.GPUSpec;
-        }
-
-        /**
-         * @return totalVcpus
-         */
-        public Integer getTotalVcpus() {
-            return this.totalVcpus;
-        }
-
-        /**
          * @return cpuOverCommitRatioRange
          */
         public String getCpuOverCommitRatioRange() {
             return this.cpuOverCommitRatioRange;
-        }
-
-        /**
-         * @return physicalGpus
-         */
-        public Integer getPhysicalGpus() {
-            return this.physicalGpus;
-        }
-
-        /**
-         * @return memorySize
-         */
-        public Float getMemorySize() {
-            return this.memorySize;
-        }
-
-        /**
-         * @return supportCpuOverCommitRatio
-         */
-        public Boolean getSupportCpuOverCommitRatio() {
-            return this.supportCpuOverCommitRatio;
-        }
-
-        /**
-         * @return localStorageCapacity
-         */
-        public Long getLocalStorageCapacity() {
-            return this.localStorageCapacity;
         }
 
         /**
@@ -296,6 +247,13 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
         }
 
         /**
+         * @return GPUSpec
+         */
+        public String getGPUSpec() {
+            return this.GPUSpec;
+        }
+
+        /**
          * @return localStorageAmount
          */
         public Integer getLocalStorageAmount() {
@@ -303,10 +261,31 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
         }
 
         /**
-         * @return totalVgpus
+         * @return localStorageCapacity
          */
-        public Integer getTotalVgpus() {
-            return this.totalVgpus;
+        public Long getLocalStorageCapacity() {
+            return this.localStorageCapacity;
+        }
+
+        /**
+         * @return localStorageCategory
+         */
+        public String getLocalStorageCategory() {
+            return this.localStorageCategory;
+        }
+
+        /**
+         * @return memorySize
+         */
+        public Float getMemorySize() {
+            return this.memorySize;
+        }
+
+        /**
+         * @return physicalGpus
+         */
+        public Integer getPhysicalGpus() {
+            return this.physicalGpus;
         }
 
         /**
@@ -314,6 +293,13 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
          */
         public Integer getSockets() {
             return this.sockets;
+        }
+
+        /**
+         * @return supportCpuOverCommitRatio
+         */
+        public Boolean getSupportCpuOverCommitRatio() {
+            return this.supportCpuOverCommitRatio;
         }
 
         /**
@@ -330,25 +316,39 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
             return this.supportedInstanceTypesList;
         }
 
+        /**
+         * @return totalVcpus
+         */
+        public Integer getTotalVcpus() {
+            return this.totalVcpus;
+        }
+
+        /**
+         * @return totalVgpus
+         */
+        public Integer getTotalVgpus() {
+            return this.totalVgpus;
+        }
+
         public static final class Builder {
             private Integer cores; 
-            private String localStorageCategory; 
-            private String GPUSpec; 
-            private Integer totalVcpus; 
             private String cpuOverCommitRatioRange; 
-            private Integer physicalGpus; 
-            private Float memorySize; 
-            private Boolean supportCpuOverCommitRatio; 
-            private Long localStorageCapacity; 
             private String dedicatedHostType; 
+            private String GPUSpec; 
             private Integer localStorageAmount; 
-            private Integer totalVgpus; 
+            private Long localStorageCapacity; 
+            private String localStorageCategory; 
+            private Float memorySize; 
+            private Integer physicalGpus; 
             private Integer sockets; 
+            private Boolean supportCpuOverCommitRatio; 
             private SupportedInstanceTypeFamilies supportedInstanceTypeFamilies; 
             private SupportedInstanceTypesList supportedInstanceTypesList; 
+            private Integer totalVcpus; 
+            private Integer totalVgpus; 
 
             /**
-             * The number of cores per physical CPU.
+             * Cores.
              */
             public Builder cores(Integer cores) {
                 this.cores = cores;
@@ -356,31 +356,7 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the local disk.
-             */
-            public Builder localStorageCategory(String localStorageCategory) {
-                this.localStorageCategory = localStorageCategory;
-                return this;
-            }
-
-            /**
-             * The GPU model.
-             */
-            public Builder GPUSpec(String GPUSpec) {
-                this.GPUSpec = GPUSpec;
-                return this;
-            }
-
-            /**
-             * The total number of virtual CPU cores.
-             */
-            public Builder totalVcpus(Integer totalVcpus) {
-                this.totalVcpus = totalVcpus;
-                return this;
-            }
-
-            /**
-             * You can set the CPU oversell ratio.
+             * CpuOverCommitRatioRange.
              */
             public Builder cpuOverCommitRatioRange(String cpuOverCommitRatioRange) {
                 this.cpuOverCommitRatioRange = cpuOverCommitRatioRange;
@@ -388,39 +364,7 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of physical GPUs.
-             */
-            public Builder physicalGpus(Integer physicalGpus) {
-                this.physicalGpus = physicalGpus;
-                return this;
-            }
-
-            /**
-             * The memory capacity. Unit: GiB.
-             */
-            public Builder memorySize(Float memorySize) {
-                this.memorySize = memorySize;
-                return this;
-            }
-
-            /**
-             * Specifies whether to set the CPU oversell ratio.
-             */
-            public Builder supportCpuOverCommitRatio(Boolean supportCpuOverCommitRatio) {
-                this.supportCpuOverCommitRatio = supportCpuOverCommitRatio;
-                return this;
-            }
-
-            /**
-             * The capacity of a local disk. Unit: GiB.
-             */
-            public Builder localStorageCapacity(Long localStorageCapacity) {
-                this.localStorageCapacity = localStorageCapacity;
-                return this;
-            }
-
-            /**
-             * The type of the dedicated host. If you want to use more dedicated host specifications, open a ticket to contact Alibaba Cloud.
+             * DedicatedHostType.
              */
             public Builder dedicatedHostType(String dedicatedHostType) {
                 this.dedicatedHostType = dedicatedHostType;
@@ -428,7 +372,15 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of local disks on the dedicated host.
+             * GPUSpec.
+             */
+            public Builder GPUSpec(String GPUSpec) {
+                this.GPUSpec = GPUSpec;
+                return this;
+            }
+
+            /**
+             * LocalStorageAmount.
              */
             public Builder localStorageAmount(Integer localStorageAmount) {
                 this.localStorageAmount = localStorageAmount;
@@ -436,18 +388,50 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of virtual GPU cores.
+             * LocalStorageCapacity.
              */
-            public Builder totalVgpus(Integer totalVgpus) {
-                this.totalVgpus = totalVgpus;
+            public Builder localStorageCapacity(Long localStorageCapacity) {
+                this.localStorageCapacity = localStorageCapacity;
                 return this;
             }
 
             /**
-             * The number of physical processors.
+             * LocalStorageCategory.
+             */
+            public Builder localStorageCategory(String localStorageCategory) {
+                this.localStorageCategory = localStorageCategory;
+                return this;
+            }
+
+            /**
+             * MemorySize.
+             */
+            public Builder memorySize(Float memorySize) {
+                this.memorySize = memorySize;
+                return this;
+            }
+
+            /**
+             * PhysicalGpus.
+             */
+            public Builder physicalGpus(Integer physicalGpus) {
+                this.physicalGpus = physicalGpus;
+                return this;
+            }
+
+            /**
+             * Sockets.
              */
             public Builder sockets(Integer sockets) {
                 this.sockets = sockets;
+                return this;
+            }
+
+            /**
+             * SupportCpuOverCommitRatio.
+             */
+            public Builder supportCpuOverCommitRatio(Boolean supportCpuOverCommitRatio) {
+                this.supportCpuOverCommitRatio = supportCpuOverCommitRatio;
                 return this;
             }
 
@@ -464,6 +448,22 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
              */
             public Builder supportedInstanceTypesList(SupportedInstanceTypesList supportedInstanceTypesList) {
                 this.supportedInstanceTypesList = supportedInstanceTypesList;
+                return this;
+            }
+
+            /**
+             * TotalVcpus.
+             */
+            public Builder totalVcpus(Integer totalVcpus) {
+                this.totalVcpus = totalVcpus;
+                return this;
+            }
+
+            /**
+             * TotalVgpus.
+             */
+            public Builder totalVgpus(Integer totalVgpus) {
+                this.totalVgpus = totalVgpus;
                 return this;
             }
 
@@ -501,7 +501,7 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
             private java.util.List < DedicatedHostType> dedicatedHostType; 
 
             /**
-             * The type of the dedicated host. If you want to use more dedicated host specifications, open a ticket to contact Alibaba Cloud.
+             * DedicatedHostType.
              */
             public Builder dedicatedHostType(java.util.List < DedicatedHostType> dedicatedHostType) {
                 this.dedicatedHostType = dedicatedHostType;

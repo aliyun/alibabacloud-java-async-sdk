@@ -12,42 +12,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyInstanceChargeTypeRequest</p>
  */
 public class ModifyInstanceChargeTypeRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
-    @NameInMap("OwnerAccount")
-    private String ownerAccount;
-
-    @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
-    @NameInMap("ResourceOwnerAccount")
-    private String resourceOwnerAccount;
-
-    @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
-
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
-    @Query
-    @NameInMap("PeriodUnit")
-    private String periodUnit;
-
-    @Query
-    @NameInMap("IsDetailFee")
-    private Boolean isDetailFee;
+    @NameInMap("AutoPay")
+    private Boolean autoPay;
 
     @Query
     @NameInMap("ClientToken")
     private String clientToken;
+
+    @Query
+    @NameInMap("DryRun")
+    private Boolean dryRun;
 
     @Query
     @NameInMap("IncludeDataDisks")
@@ -63,34 +38,59 @@ public class ModifyInstanceChargeTypeRequest extends Request {
     private String instanceIds;
 
     @Query
-    @NameInMap("DryRun")
-    private Boolean dryRun;
+    @NameInMap("IsDetailFee")
+    private Boolean isDetailFee;
 
     @Query
-    @NameInMap("AutoPay")
-    private Boolean autoPay;
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
 
     @Query
     @NameInMap("Period")
     private Integer period;
 
+    @Query
+    @NameInMap("PeriodUnit")
+    private String periodUnit;
+
+    @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
+    @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     private ModifyInstanceChargeTypeRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
-        this.ownerAccount = builder.ownerAccount;
-        this.ownerId = builder.ownerId;
-        this.resourceOwnerAccount = builder.resourceOwnerAccount;
-        this.resourceOwnerId = builder.resourceOwnerId;
-        this.regionId = builder.regionId;
-        this.periodUnit = builder.periodUnit;
-        this.isDetailFee = builder.isDetailFee;
+        this.autoPay = builder.autoPay;
         this.clientToken = builder.clientToken;
+        this.dryRun = builder.dryRun;
         this.includeDataDisks = builder.includeDataDisks;
         this.instanceChargeType = builder.instanceChargeType;
         this.instanceIds = builder.instanceIds;
-        this.dryRun = builder.dryRun;
-        this.autoPay = builder.autoPay;
+        this.isDetailFee = builder.isDetailFee;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
         this.period = builder.period;
+        this.periodUnit = builder.periodUnit;
+        this.regionId = builder.regionId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -107,59 +107,10 @@ public class ModifyInstanceChargeTypeRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return autoPay
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
-     * @return ownerAccount
-     */
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
-     * @return resourceOwnerAccount
-     */
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    /**
-     * @return resourceOwnerId
-     */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return periodUnit
-     */
-    public String getPeriodUnit() {
-        return this.periodUnit;
-    }
-
-    /**
-     * @return isDetailFee
-     */
-    public Boolean getIsDetailFee() {
-        return this.isDetailFee;
+    public Boolean getAutoPay() {
+        return this.autoPay;
     }
 
     /**
@@ -167,6 +118,13 @@ public class ModifyInstanceChargeTypeRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -191,17 +149,24 @@ public class ModifyInstanceChargeTypeRequest extends Request {
     }
 
     /**
-     * @return dryRun
+     * @return isDetailFee
      */
-    public Boolean getDryRun() {
-        return this.dryRun;
+    public Boolean getIsDetailFee() {
+        return this.isDetailFee;
     }
 
     /**
-     * @return autoPay
+     * @return ownerAccount
      */
-    public Boolean getAutoPay() {
-        return this.autoPay;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     /**
@@ -211,22 +176,57 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         return this.period;
     }
 
+    /**
+     * @return periodUnit
+     */
+    public String getPeriodUnit() {
+        return this.periodUnit;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
     public static final class Builder extends Request.Builder<ModifyInstanceChargeTypeRequest, Builder> {
-        private String sourceRegionId; 
-        private String ownerAccount; 
-        private Long ownerId; 
-        private String resourceOwnerAccount; 
-        private Long resourceOwnerId; 
-        private String regionId; 
-        private String periodUnit; 
-        private Boolean isDetailFee; 
+        private Boolean autoPay; 
         private String clientToken; 
+        private Boolean dryRun; 
         private Boolean includeDataDisks; 
         private String instanceChargeType; 
         private String instanceIds; 
-        private Boolean dryRun; 
-        private Boolean autoPay; 
+        private Boolean isDetailFee; 
+        private String ownerAccount; 
+        private Long ownerId; 
         private Integer period; 
+        private String periodUnit; 
+        private String regionId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -234,29 +234,83 @@ public class ModifyInstanceChargeTypeRequest extends Request {
 
         private Builder(ModifyInstanceChargeTypeRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
-            this.ownerAccount = request.ownerAccount;
-            this.ownerId = request.ownerId;
-            this.resourceOwnerAccount = request.resourceOwnerAccount;
-            this.resourceOwnerId = request.resourceOwnerId;
-            this.regionId = request.regionId;
-            this.periodUnit = request.periodUnit;
-            this.isDetailFee = request.isDetailFee;
+            this.autoPay = request.autoPay;
             this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
             this.includeDataDisks = request.includeDataDisks;
             this.instanceChargeType = request.instanceChargeType;
             this.instanceIds = request.instanceIds;
-            this.dryRun = request.dryRun;
-            this.autoPay = request.autoPay;
+            this.isDetailFee = request.isDetailFee;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
             this.period = request.period;
+            this.periodUnit = request.periodUnit;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
-         * SourceRegionId.
+         * AutoPay.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder autoPay(Boolean autoPay) {
+            this.putQueryParameter("AutoPay", autoPay);
+            this.autoPay = autoPay;
+            return this;
+        }
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * IncludeDataDisks.
+         */
+        public Builder includeDataDisks(Boolean includeDataDisks) {
+            this.putQueryParameter("IncludeDataDisks", includeDataDisks);
+            this.includeDataDisks = includeDataDisks;
+            return this;
+        }
+
+        /**
+         * InstanceChargeType.
+         */
+        public Builder instanceChargeType(String instanceChargeType) {
+            this.putQueryParameter("InstanceChargeType", instanceChargeType);
+            this.instanceChargeType = instanceChargeType;
+            return this;
+        }
+
+        /**
+         * InstanceIds.
+         */
+        public Builder instanceIds(String instanceIds) {
+            this.putQueryParameter("InstanceIds", instanceIds);
+            this.instanceIds = instanceIds;
+            return this;
+        }
+
+        /**
+         * IsDetailFee.
+         */
+        public Builder isDetailFee(Boolean isDetailFee) {
+            this.putQueryParameter("IsDetailFee", isDetailFee);
+            this.isDetailFee = isDetailFee;
             return this;
         }
 
@@ -270,7 +324,7 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * The ID of the RAM user.
+         * OwnerId.
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -279,38 +333,16 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * The account name of the resource master account.
+         * Period.
          */
-        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
-            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-            this.resourceOwnerAccount = resourceOwnerAccount;
+        public Builder period(Integer period) {
+            this.putQueryParameter("Period", period);
+            this.period = period;
             return this;
         }
 
         /**
-         * The ID of the resource master account, that is, the UID.
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * The ID of the region to which the instance belongs. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The unit of the renewal period. Valid values:
-         * <p>
-         * 
-         * -<props="china">Week</props>
-         * -Month (default)
+         * PeriodUnit.
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -319,103 +351,38 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * Specifies whether to return the order fee details when the subscription is converted to pay-as-you-go.
-         * <p>
-         * 
-         * Default value: false
+         * RegionId.
          */
-        public Builder isDetailFee(Boolean isDetailFee) {
-            this.putQueryParameter("IsDetailFee", isDetailFee);
-            this.isDetailFee = isDetailFee;
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
         /**
-         * Ensure the idempotence of the request. Generate a parameter value from your client. Make sure that the value is unique among different requests. **ClientToken** supports only ASCII characters and cannot exceed 64 characters. For more information, see [how to ensure idempotence](~~ 25693 ~~).
+         * ResourceOwnerAccount.
          */
-        public Builder clientToken(String clientToken) {
-            this.putQueryParameter("ClientToken", clientToken);
-            this.clientToken = clientToken;
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
             return this;
         }
 
         /**
-         * Specifies whether to convert all pay-as-you-go data disks attached to the instance to subscription data disks.
-         * <p>
-         * 
-         * Default value: false
+         * ResourceOwnerId.
          */
-        public Builder includeDataDisks(Boolean includeDataDisks) {
-            this.putQueryParameter("IncludeDataDisks", includeDataDisks);
-            this.includeDataDisks = includeDataDisks;
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
             return this;
         }
 
         /**
-         * The target billing method of the instance. Valid values:
-         * <p>
-         * 
-         * -PrePaid (default): converts a pay-as-you-go instance to a subscription instance.
-         * 
-         * -PostPaid: converts a subscription instance to a pay-as-you-go instance.
+         * SourceRegionId.
          */
-        public Builder instanceChargeType(String instanceChargeType) {
-            this.putQueryParameter("InstanceChargeType", instanceChargeType);
-            this.instanceChargeType = instanceChargeType;
-            return this;
-        }
-
-        /**
-         * The ID of the instance. The value can be a JSON array consisting of multiple instance ids. A maximum of 20 ids can be entered. Separate ids with commas (,).
-         */
-        public Builder instanceIds(String instanceIds) {
-            this.putQueryParameter("InstanceIds", instanceIds);
-            this.instanceIds = instanceIds;
-            return this;
-        }
-
-        /**
-         * Specifies whether to PreCheck only this request. Valid values:
-         * <p>
-         * 
-         * -true: sends a check request without querying the resource status. Check whether the AccessKey is valid, whether the RAM user is authorized, and whether required parameters are specified. If the check fails, the corresponding error is returned. If the check succeeds, the error code "DryRunOperation" is returned ".
-         * 
-         * -false (default): a normal request is sent. After the request passes the check, the status code 2XX is returned and the resource status is directly queried.
-         */
-        public Builder dryRun(Boolean dryRun) {
-            this.putQueryParameter("DryRun", dryRun);
-            this.dryRun = dryRun;
-            return this;
-        }
-
-        /**
-         * Indicates whether to pay automatically. Valid values:
-         * <p>
-         * 
-         * -true (default): automatic payment. You must ensure that your account balance is sufficient. If your account balance is insufficient, an abnormal order will be generated and you can only cancel the order.
-         * 
-         * -false: only generated orders are billed.
-         * 
-         * > if the balance of your payment method is insufficient, you can set the AutoPay parameter to false. In this case, an unpaid order is generated. You can log on to the ECS console to pay by yourself.
-         */
-        public Builder autoPay(Boolean autoPay) {
-            this.putQueryParameter("AutoPay", autoPay);
-            this.autoPay = autoPay;
-            return this;
-        }
-
-        /**
-         * The subscription duration. If the DDH of the ECS instance is a dedicated host, the value range cannot exceed the subscription period of the dedicated host. Valid values:
-         * <p>
-         * 
-         * -<props = "china">"periodunit = Week", the value of "1" is {"1", "2", "3", "4"}</props>
-         * 
-         * -When "PeriodUnit = Month", "1" value:{ "1", "2", "3", "4", "5", "6", "7", "8", "9", "12", "24", "36", "48", "60"}
-         * 
-         */
-        public Builder period(Integer period) {
-            this.putQueryParameter("Period", period);
-            this.period = period;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

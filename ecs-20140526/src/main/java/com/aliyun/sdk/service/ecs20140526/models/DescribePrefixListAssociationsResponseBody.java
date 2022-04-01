@@ -15,16 +15,16 @@ public class DescribePrefixListAssociationsResponseBody extends TeaModel {
     @NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
-    private String requestId;
-
     @NameInMap("PrefixListAssociations")
     private PrefixListAssociations prefixListAssociations;
 
+    @NameInMap("RequestId")
+    private String requestId;
+
     private DescribePrefixListAssociationsResponseBody(Builder builder) {
         this.nextToken = builder.nextToken;
-        this.requestId = builder.requestId;
         this.prefixListAssociations = builder.prefixListAssociations;
+        this.requestId = builder.requestId;
     }
 
     public static Builder builder() {
@@ -43,26 +43,26 @@ public class DescribePrefixListAssociationsResponseBody extends TeaModel {
     }
 
     /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    /**
      * @return prefixListAssociations
      */
     public PrefixListAssociations getPrefixListAssociations() {
         return this.prefixListAssociations;
     }
 
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static final class Builder {
         private String nextToken; 
-        private String requestId; 
         private PrefixListAssociations prefixListAssociations; 
+        private String requestId; 
 
         /**
-         * The Token returned by this call. If the returned value is null, no more data is returned.
+         * NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,18 +70,18 @@ public class DescribePrefixListAssociationsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * PrefixListAssociations.
          */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
+        public Builder prefixListAssociations(PrefixListAssociations prefixListAssociations) {
+            this.prefixListAssociations = prefixListAssociations;
             return this;
         }
 
         /**
-         * An array of associated resources in the prefix list.
+         * RequestId.
          */
-        public Builder prefixListAssociations(PrefixListAssociations prefixListAssociations) {
-            this.prefixListAssociations = prefixListAssociations;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
@@ -130,7 +130,7 @@ public class DescribePrefixListAssociationsResponseBody extends TeaModel {
             private String resourceType; 
 
             /**
-             * The ID of the resource.
+             * ResourceId.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -138,7 +138,7 @@ public class DescribePrefixListAssociationsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource.
+             * ResourceType.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

@@ -38,9 +38,7 @@ public class ReActivateInstancesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
-         * <p>
-         * 
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

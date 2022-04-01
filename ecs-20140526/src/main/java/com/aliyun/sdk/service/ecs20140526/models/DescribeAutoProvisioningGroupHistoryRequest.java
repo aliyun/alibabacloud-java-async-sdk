@@ -13,25 +13,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeAutoProvisioningGroupHistoryRequest extends Request {
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
+    @NameInMap("AutoProvisioningGroupId")
+    @Validation(required = true)
+    private String autoProvisioningGroupId;
 
     @Query
-    @NameInMap("ResourceOwnerAccount")
-    private String resourceOwnerAccount;
-
-    @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
+    @NameInMap("EndTime")
+    private String endTime;
 
     @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
 
     @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
+    @NameInMap("OwnerId")
+    private Long ownerId;
 
     @Query
     @NameInMap("PageNumber")
@@ -43,30 +39,34 @@ public class DescribeAutoProvisioningGroupHistoryRequest extends Request {
     private Integer pageSize;
 
     @Query
-    @NameInMap("AutoProvisioningGroupId")
+    @NameInMap("RegionId")
     @Validation(required = true)
-    private String autoProvisioningGroupId;
+    private String regionId;
+
+    @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
 
     @Query
     @NameInMap("StartTime")
     private String startTime;
 
-    @Query
-    @NameInMap("EndTime")
-    private String endTime;
-
     private DescribeAutoProvisioningGroupHistoryRequest(Builder builder) {
         super(builder);
-        this.ownerId = builder.ownerId;
-        this.resourceOwnerAccount = builder.resourceOwnerAccount;
-        this.resourceOwnerId = builder.resourceOwnerId;
+        this.autoProvisioningGroupId = builder.autoProvisioningGroupId;
+        this.endTime = builder.endTime;
         this.ownerAccount = builder.ownerAccount;
-        this.regionId = builder.regionId;
+        this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.autoProvisioningGroupId = builder.autoProvisioningGroupId;
+        this.regionId = builder.regionId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
         this.startTime = builder.startTime;
-        this.endTime = builder.endTime;
     }
 
     public static Builder builder() {
@@ -83,24 +83,17 @@ public class DescribeAutoProvisioningGroupHistoryRequest extends Request {
     }
 
     /**
-     * @return ownerId
+     * @return autoProvisioningGroupId
      */
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getAutoProvisioningGroupId() {
+        return this.autoProvisioningGroupId;
     }
 
     /**
-     * @return resourceOwnerAccount
+     * @return endTime
      */
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    /**
-     * @return resourceOwnerId
-     */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public String getEndTime() {
+        return this.endTime;
     }
 
     /**
@@ -111,10 +104,10 @@ public class DescribeAutoProvisioningGroupHistoryRequest extends Request {
     }
 
     /**
-     * @return regionId
+     * @return ownerId
      */
-    public String getRegionId() {
-        return this.regionId;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     /**
@@ -132,10 +125,24 @@ public class DescribeAutoProvisioningGroupHistoryRequest extends Request {
     }
 
     /**
-     * @return autoProvisioningGroupId
+     * @return regionId
      */
-    public String getAutoProvisioningGroupId() {
-        return this.autoProvisioningGroupId;
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     /**
@@ -145,24 +152,17 @@ public class DescribeAutoProvisioningGroupHistoryRequest extends Request {
         return this.startTime;
     }
 
-    /**
-     * @return endTime
-     */
-    public String getEndTime() {
-        return this.endTime;
-    }
-
     public static final class Builder extends Request.Builder<DescribeAutoProvisioningGroupHistoryRequest, Builder> {
-        private Long ownerId; 
-        private String resourceOwnerAccount; 
-        private Long resourceOwnerId; 
+        private String autoProvisioningGroupId; 
+        private String endTime; 
         private String ownerAccount; 
-        private String regionId; 
+        private Long ownerId; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private String autoProvisioningGroupId; 
+        private String regionId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
         private String startTime; 
-        private String endTime; 
 
         private Builder() {
             super();
@@ -170,17 +170,44 @@ public class DescribeAutoProvisioningGroupHistoryRequest extends Request {
 
         private Builder(DescribeAutoProvisioningGroupHistoryRequest request) {
             super(request);
-            this.ownerId = request.ownerId;
-            this.resourceOwnerAccount = request.resourceOwnerAccount;
-            this.resourceOwnerId = request.resourceOwnerId;
+            this.autoProvisioningGroupId = request.autoProvisioningGroupId;
+            this.endTime = request.endTime;
             this.ownerAccount = request.ownerAccount;
-            this.regionId = request.regionId;
+            this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
-            this.autoProvisioningGroupId = request.autoProvisioningGroupId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
             this.startTime = request.startTime;
-            this.endTime = request.endTime;
         } 
+
+        /**
+         * AutoProvisioningGroupId.
+         */
+        public Builder autoProvisioningGroupId(String autoProvisioningGroupId) {
+            this.putQueryParameter("AutoProvisioningGroupId", autoProvisioningGroupId);
+            this.autoProvisioningGroupId = autoProvisioningGroupId;
+            return this;
+        }
+
+        /**
+         * EndTime.
+         */
+        public Builder endTime(String endTime) {
+            this.putQueryParameter("EndTime", endTime);
+            this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
 
         /**
          * OwnerId.
@@ -188,6 +215,33 @@ public class DescribeAutoProvisioningGroupHistoryRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * PageNumber.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
@@ -210,71 +264,11 @@ public class DescribeAutoProvisioningGroupHistoryRequest extends Request {
         }
 
         /**
-         * OwnerAccount.
-         */
-        public Builder ownerAccount(String ownerAccount) {
-            this.putQueryParameter("OwnerAccount", ownerAccount);
-            this.ownerAccount = ownerAccount;
-            return this;
-        }
-
-        /**
-         * The ID of the region where the auto provisioning Group is located.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The current page number of the paged query. Start value: 1
-         * <p>
-         * 
-         * Default value: 1.
-         */
-        public Builder pageNumber(Integer pageNumber) {
-            this.putQueryParameter("PageNumber", pageNumber);
-            this.pageNumber = pageNumber;
-            return this;
-        }
-
-        /**
-         * The number of entries to return on each page. Maximum Value: 100
-         * <p>
-         * 
-         * Default value: 10
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.putQueryParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * The ID of the auto provisioning group.
-         */
-        public Builder autoProvisioningGroupId(String autoProvisioningGroupId) {
-            this.putQueryParameter("AutoProvisioningGroupId", autoProvisioningGroupId);
-            this.autoProvisioningGroupId = autoProvisioningGroupId;
-            return this;
-        }
-
-        /**
-         * The start time of the query scheduling history. The time follows the [ISO8601](~~ 25696 ~~) standard and uses UTC +0. The format is yyyy-MM-ddTHH:mm:ssZ.
+         * StartTime.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
             this.startTime = startTime;
-            return this;
-        }
-
-        /**
-         * The end time of the query scheduling history. The time follows the [ISO8601](~~ 25696 ~~) standard and uses UTC +0. The format is yyyy-MM-ddTHH:mm:ssZ.
-         */
-        public Builder endTime(String endTime) {
-            this.putQueryParameter("EndTime", endTime);
-            this.endTime = endTime;
             return this;
         }
 

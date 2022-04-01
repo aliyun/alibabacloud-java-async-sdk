@@ -12,23 +12,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeUserDataResponseBody</p>
  */
 public class DescribeUserDataResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    private String requestId;
-
     @NameInMap("InstanceId")
     private String instanceId;
-
-    @NameInMap("UserData")
-    private String userData;
 
     @NameInMap("RegionId")
     private String regionId;
 
+    @NameInMap("RequestId")
+    private String requestId;
+
+    @NameInMap("UserData")
+    private String userData;
+
     private DescribeUserDataResponseBody(Builder builder) {
-        this.requestId = builder.requestId;
         this.instanceId = builder.instanceId;
-        this.userData = builder.userData;
         this.regionId = builder.regionId;
+        this.requestId = builder.requestId;
+        this.userData = builder.userData;
     }
 
     public static Builder builder() {
@@ -40,24 +40,10 @@ public class DescribeUserDataResponseBody extends TeaModel {
     }
 
     /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    /**
      * @return instanceId
      */
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    /**
-     * @return userData
-     */
-    public String getUserData() {
-        return this.userData;
     }
 
     /**
@@ -67,22 +53,28 @@ public class DescribeUserDataResponseBody extends TeaModel {
         return this.regionId;
     }
 
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
+     * @return userData
+     */
+    public String getUserData() {
+        return this.userData;
+    }
+
     public static final class Builder {
-        private String requestId; 
         private String instanceId; 
-        private String userData; 
         private String regionId; 
+        private String requestId; 
+        private String userData; 
 
         /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The ID of the instance.
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -90,18 +82,26 @@ public class DescribeUserDataResponseBody extends TeaModel {
         }
 
         /**
-         * The user data of the instance.
+         * RegionId.
          */
-        public Builder userData(String userData) {
-            this.userData = userData;
+        public Builder regionId(String regionId) {
+            this.regionId = regionId;
             return this;
         }
 
         /**
-         * The ID of the region.
+         * RequestId.
          */
-        public Builder regionId(String regionId) {
-            this.regionId = regionId;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * UserData.
+         */
+        public Builder userData(String userData) {
+            this.userData = userData;
             return this;
         }
 

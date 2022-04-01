@@ -12,27 +12,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceMaintenanceAttributesResponseBody</p>
  */
 public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel {
+    @NameInMap("MaintenanceAttributes")
+    private MaintenanceAttributes maintenanceAttributes;
+
+    @NameInMap("PageNumber")
+    private Integer pageNumber;
+
     @NameInMap("PageSize")
     private Integer pageSize;
 
     @NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("PageNumber")
-    private Integer pageNumber;
-
     @NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("MaintenanceAttributes")
-    private MaintenanceAttributes maintenanceAttributes;
-
     private DescribeInstanceMaintenanceAttributesResponseBody(Builder builder) {
+        this.maintenanceAttributes = builder.maintenanceAttributes;
+        this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
-        this.pageNumber = builder.pageNumber;
         this.totalCount = builder.totalCount;
-        this.maintenanceAttributes = builder.maintenanceAttributes;
     }
 
     public static Builder builder() {
@@ -41,6 +41,20 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
 
     public static DescribeInstanceMaintenanceAttributesResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return maintenanceAttributes
+     */
+    public MaintenanceAttributes getMaintenanceAttributes() {
+        return this.maintenanceAttributes;
+    }
+
+    /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     /**
@@ -58,51 +72,29 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
     }
 
     /**
-     * @return pageNumber
-     */
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    /**
      * @return totalCount
      */
     public Integer getTotalCount() {
         return this.totalCount;
     }
 
-    /**
-     * @return maintenanceAttributes
-     */
-    public MaintenanceAttributes getMaintenanceAttributes() {
-        return this.maintenanceAttributes;
-    }
-
     public static final class Builder {
+        private MaintenanceAttributes maintenanceAttributes; 
+        private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private Integer pageNumber; 
         private Integer totalCount; 
-        private MaintenanceAttributes maintenanceAttributes; 
 
         /**
-         * The number of entries returned per page.
+         * MaintenanceAttributes.
          */
-        public Builder pageSize(Integer pageSize) {
-            this.pageSize = pageSize;
+        public Builder maintenanceAttributes(MaintenanceAttributes maintenanceAttributes) {
+            this.maintenanceAttributes = maintenanceAttributes;
             return this;
         }
 
         /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The page number of the maintenance attribute list.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -110,18 +102,26 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
         }
 
         /**
-         * The total number of maintenance attributes queried.
+         * PageSize.
          */
-        public Builder totalCount(Integer totalCount) {
-            this.totalCount = totalCount;
+        public Builder pageSize(Integer pageSize) {
+            this.pageSize = pageSize;
             return this;
         }
 
         /**
-         * The collection of O & M attributes.
+         * RequestId.
          */
-        public Builder maintenanceAttributes(MaintenanceAttributes maintenanceAttributes) {
-            this.maintenanceAttributes = maintenanceAttributes;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
@@ -131,6 +131,128 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
 
     } 
 
+    public static class SupportedValues extends TeaModel {
+        @NameInMap("SupportedValue")
+        private java.util.List < String > supportedValue;
+
+        private SupportedValues(Builder builder) {
+            this.supportedValue = builder.supportedValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SupportedValues create() {
+            return builder().build();
+        }
+
+        /**
+         * @return supportedValue
+         */
+        public java.util.List < String > getSupportedValue() {
+            return this.supportedValue;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > supportedValue; 
+
+            /**
+             * SupportedValue.
+             */
+            public Builder supportedValue(java.util.List < String > supportedValue) {
+                this.supportedValue = supportedValue;
+                return this;
+            }
+
+            public SupportedValues build() {
+                return new SupportedValues(this);
+            } 
+
+        } 
+
+    }
+    public static class ActionOnMaintenance extends TeaModel {
+        @NameInMap("DefaultValue")
+        private String defaultValue;
+
+        @NameInMap("SupportedValues")
+        private SupportedValues supportedValues;
+
+        @NameInMap("Value")
+        private String value;
+
+        private ActionOnMaintenance(Builder builder) {
+            this.defaultValue = builder.defaultValue;
+            this.supportedValues = builder.supportedValues;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ActionOnMaintenance create() {
+            return builder().build();
+        }
+
+        /**
+         * @return defaultValue
+         */
+        public String getDefaultValue() {
+            return this.defaultValue;
+        }
+
+        /**
+         * @return supportedValues
+         */
+        public SupportedValues getSupportedValues() {
+            return this.supportedValues;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String defaultValue; 
+            private SupportedValues supportedValues; 
+            private String value; 
+
+            /**
+             * DefaultValue.
+             */
+            public Builder defaultValue(String defaultValue) {
+                this.defaultValue = defaultValue;
+                return this;
+            }
+
+            /**
+             * SupportedValues.
+             */
+            public Builder supportedValues(SupportedValues supportedValues) {
+                this.supportedValues = supportedValues;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public ActionOnMaintenance build() {
+                return new ActionOnMaintenance(this);
+            } 
+
+        } 
+
+    }
     public static class MaintenanceWindow extends TeaModel {
         @NameInMap("EndTime")
         private String endTime;
@@ -170,7 +292,7 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
             private String startTime; 
 
             /**
-             * The end time of the maintenance window.
+             * EndTime.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -178,7 +300,7 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
             }
 
             /**
-             * The start time of the maintenance time window.
+             * StartTime.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -233,138 +355,9 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
         } 
 
     }
-    public static class SupportedValues extends TeaModel {
-        @NameInMap("SupportedValue")
-        private java.util.List < String > supportedValue;
-
-        private SupportedValues(Builder builder) {
-            this.supportedValue = builder.supportedValue;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static SupportedValues create() {
-            return builder().build();
-        }
-
-        /**
-         * @return supportedValue
-         */
-        public java.util.List < String > getSupportedValue() {
-            return this.supportedValue;
-        }
-
-        public static final class Builder {
-            private java.util.List < String > supportedValue; 
-
-            /**
-             * SupportedValue.
-             */
-            public Builder supportedValue(java.util.List < String > supportedValue) {
-                this.supportedValue = supportedValue;
-                return this;
-            }
-
-            public SupportedValues build() {
-                return new SupportedValues(this);
-            } 
-
-        } 
-
-    }
-    public static class ActionOnMaintenance extends TeaModel {
-        @NameInMap("DefaultValue")
-        private String defaultValue;
-
-        @NameInMap("Value")
-        private String value;
-
-        @NameInMap("SupportedValues")
-        private SupportedValues supportedValues;
-
-        private ActionOnMaintenance(Builder builder) {
-            this.defaultValue = builder.defaultValue;
-            this.value = builder.value;
-            this.supportedValues = builder.supportedValues;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static ActionOnMaintenance create() {
-            return builder().build();
-        }
-
-        /**
-         * @return defaultValue
-         */
-        public String getDefaultValue() {
-            return this.defaultValue;
-        }
-
-        /**
-         * @return value
-         */
-        public String getValue() {
-            return this.value;
-        }
-
-        /**
-         * @return supportedValues
-         */
-        public SupportedValues getSupportedValues() {
-            return this.supportedValues;
-        }
-
-        public static final class Builder {
-            private String defaultValue; 
-            private String value; 
-            private SupportedValues supportedValues; 
-
-            /**
-             * The default value of the maintenance action.
-             * <p>
-             * 
-             */
-            public Builder defaultValue(String defaultValue) {
-                this.defaultValue = defaultValue;
-                return this;
-            }
-
-            /**
-             * The value of the maintenance action. Possible values:
-             * <p>
-             * 
-             * -Stop: the stopped state (that is, the downtime).
-             * -AutoRecover: automatic recovery.
-             * -AutoRedeploy: data disks are damaged due to downtime migration.
-             */
-            public Builder value(String value) {
-                this.value = value;
-                return this;
-            }
-
-            /**
-             * SupportedValues.
-             */
-            public Builder supportedValues(SupportedValues supportedValues) {
-                this.supportedValues = supportedValues;
-                return this;
-            }
-
-            public ActionOnMaintenance build() {
-                return new ActionOnMaintenance(this);
-            } 
-
-        } 
-
-    }
     public static class MaintenanceAttribute extends TeaModel {
-        @NameInMap("NotifyOnMaintenance")
-        private Boolean notifyOnMaintenance;
+        @NameInMap("ActionOnMaintenance")
+        private ActionOnMaintenance actionOnMaintenance;
 
         @NameInMap("InstanceId")
         private String instanceId;
@@ -372,14 +365,14 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
         @NameInMap("MaintenanceWindows")
         private MaintenanceWindows maintenanceWindows;
 
-        @NameInMap("ActionOnMaintenance")
-        private ActionOnMaintenance actionOnMaintenance;
+        @NameInMap("NotifyOnMaintenance")
+        private Boolean notifyOnMaintenance;
 
         private MaintenanceAttribute(Builder builder) {
-            this.notifyOnMaintenance = builder.notifyOnMaintenance;
+            this.actionOnMaintenance = builder.actionOnMaintenance;
             this.instanceId = builder.instanceId;
             this.maintenanceWindows = builder.maintenanceWindows;
-            this.actionOnMaintenance = builder.actionOnMaintenance;
+            this.notifyOnMaintenance = builder.notifyOnMaintenance;
         }
 
         public static Builder builder() {
@@ -391,10 +384,10 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
         }
 
         /**
-         * @return notifyOnMaintenance
+         * @return actionOnMaintenance
          */
-        public Boolean getNotifyOnMaintenance() {
-            return this.notifyOnMaintenance;
+        public ActionOnMaintenance getActionOnMaintenance() {
+            return this.actionOnMaintenance;
         }
 
         /**
@@ -412,28 +405,28 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
         }
 
         /**
-         * @return actionOnMaintenance
+         * @return notifyOnMaintenance
          */
-        public ActionOnMaintenance getActionOnMaintenance() {
-            return this.actionOnMaintenance;
+        public Boolean getNotifyOnMaintenance() {
+            return this.notifyOnMaintenance;
         }
 
         public static final class Builder {
-            private Boolean notifyOnMaintenance; 
+            private ActionOnMaintenance actionOnMaintenance; 
             private String instanceId; 
             private MaintenanceWindows maintenanceWindows; 
-            private ActionOnMaintenance actionOnMaintenance; 
+            private Boolean notifyOnMaintenance; 
 
             /**
-             * Specifies whether to send event notifications before instance downtime.
+             * ActionOnMaintenance.
              */
-            public Builder notifyOnMaintenance(Boolean notifyOnMaintenance) {
-                this.notifyOnMaintenance = notifyOnMaintenance;
+            public Builder actionOnMaintenance(ActionOnMaintenance actionOnMaintenance) {
+                this.actionOnMaintenance = actionOnMaintenance;
                 return this;
             }
 
             /**
-             * The ID of the instance.
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -441,7 +434,7 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
             }
 
             /**
-             * The list of instances in the O & M window.
+             * MaintenanceWindows.
              */
             public Builder maintenanceWindows(MaintenanceWindows maintenanceWindows) {
                 this.maintenanceWindows = maintenanceWindows;
@@ -449,10 +442,10 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
             }
 
             /**
-             * The operation and maintenance properties of the instance.
+             * NotifyOnMaintenance.
              */
-            public Builder actionOnMaintenance(ActionOnMaintenance actionOnMaintenance) {
-                this.actionOnMaintenance = actionOnMaintenance;
+            public Builder notifyOnMaintenance(Boolean notifyOnMaintenance) {
+                this.notifyOnMaintenance = notifyOnMaintenance;
                 return this;
             }
 

@@ -12,23 +12,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeImageSupportInstanceTypesResponseBody</p>
  */
 public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    private String requestId;
-
     @NameInMap("ImageId")
     private String imageId;
-
-    @NameInMap("RegionId")
-    private String regionId;
 
     @NameInMap("InstanceTypes")
     private InstanceTypes instanceTypes;
 
+    @NameInMap("RegionId")
+    private String regionId;
+
+    @NameInMap("RequestId")
+    private String requestId;
+
     private DescribeImageSupportInstanceTypesResponseBody(Builder builder) {
-        this.requestId = builder.requestId;
         this.imageId = builder.imageId;
-        this.regionId = builder.regionId;
         this.instanceTypes = builder.instanceTypes;
+        this.regionId = builder.regionId;
+        this.requestId = builder.requestId;
     }
 
     public static Builder builder() {
@@ -40,17 +40,17 @@ public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
     }
 
     /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    /**
      * @return imageId
      */
     public String getImageId() {
         return this.imageId;
+    }
+
+    /**
+     * @return instanceTypes
+     */
+    public InstanceTypes getInstanceTypes() {
+        return this.instanceTypes;
     }
 
     /**
@@ -61,28 +61,20 @@ public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
     }
 
     /**
-     * @return instanceTypes
+     * @return requestId
      */
-    public InstanceTypes getInstanceTypes() {
-        return this.instanceTypes;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static final class Builder {
-        private String requestId; 
         private String imageId; 
-        private String regionId; 
         private InstanceTypes instanceTypes; 
+        private String regionId; 
+        private String requestId; 
 
         /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The ID of the queried image.
+         * ImageId.
          */
         public Builder imageId(String imageId) {
             this.imageId = imageId;
@@ -90,7 +82,15 @@ public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the region to which the image belongs.
+         * InstanceTypes.
+         */
+        public Builder instanceTypes(InstanceTypes instanceTypes) {
+            this.instanceTypes = instanceTypes;
+            return this;
+        }
+
+        /**
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -98,10 +98,10 @@ public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
         }
 
         /**
-         * A collection of instance types consisting of InstanceTypeItemType.
+         * RequestId.
          */
-        public Builder instanceTypes(InstanceTypes instanceTypes) {
-            this.instanceTypes = instanceTypes;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
@@ -112,22 +112,22 @@ public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
     } 
 
     public static class InstanceType extends TeaModel {
-        @NameInMap("InstanceTypeId")
-        private String instanceTypeId;
+        @NameInMap("CpuCoreCount")
+        private Integer cpuCoreCount;
 
         @NameInMap("InstanceTypeFamily")
         private String instanceTypeFamily;
 
-        @NameInMap("CpuCoreCount")
-        private Integer cpuCoreCount;
+        @NameInMap("InstanceTypeId")
+        private String instanceTypeId;
 
         @NameInMap("MemorySize")
         private Float memorySize;
 
         private InstanceType(Builder builder) {
-            this.instanceTypeId = builder.instanceTypeId;
-            this.instanceTypeFamily = builder.instanceTypeFamily;
             this.cpuCoreCount = builder.cpuCoreCount;
+            this.instanceTypeFamily = builder.instanceTypeFamily;
+            this.instanceTypeId = builder.instanceTypeId;
             this.memorySize = builder.memorySize;
         }
 
@@ -140,10 +140,10 @@ public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
         }
 
         /**
-         * @return instanceTypeId
+         * @return cpuCoreCount
          */
-        public String getInstanceTypeId() {
-            return this.instanceTypeId;
+        public Integer getCpuCoreCount() {
+            return this.cpuCoreCount;
         }
 
         /**
@@ -154,10 +154,10 @@ public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
         }
 
         /**
-         * @return cpuCoreCount
+         * @return instanceTypeId
          */
-        public Integer getCpuCoreCount() {
-            return this.cpuCoreCount;
+        public String getInstanceTypeId() {
+            return this.instanceTypeId;
         }
 
         /**
@@ -168,29 +168,13 @@ public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private String instanceTypeId; 
-            private String instanceTypeFamily; 
             private Integer cpuCoreCount; 
+            private String instanceTypeFamily; 
+            private String instanceTypeId; 
             private Float memorySize; 
 
             /**
-             * The ID of the instance type supported by the image.
-             */
-            public Builder instanceTypeId(String instanceTypeId) {
-                this.instanceTypeId = instanceTypeId;
-                return this;
-            }
-
-            /**
-             * The instance type family.
-             */
-            public Builder instanceTypeFamily(String instanceTypeFamily) {
-                this.instanceTypeFamily = instanceTypeFamily;
-                return this;
-            }
-
-            /**
-             * The number of vCPU cores of the instance type.
+             * CpuCoreCount.
              */
             public Builder cpuCoreCount(Integer cpuCoreCount) {
                 this.cpuCoreCount = cpuCoreCount;
@@ -198,7 +182,23 @@ public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The memory size of the instance type. Unit: GiB.
+             * InstanceTypeFamily.
+             */
+            public Builder instanceTypeFamily(String instanceTypeFamily) {
+                this.instanceTypeFamily = instanceTypeFamily;
+                return this;
+            }
+
+            /**
+             * InstanceTypeId.
+             */
+            public Builder instanceTypeId(String instanceTypeId) {
+                this.instanceTypeId = instanceTypeId;
+                return this;
+            }
+
+            /**
+             * MemorySize.
              */
             public Builder memorySize(Float memorySize) {
                 this.memorySize = memorySize;

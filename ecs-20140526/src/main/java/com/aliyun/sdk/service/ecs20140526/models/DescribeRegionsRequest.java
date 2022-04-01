@@ -12,9 +12,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRegionsRequest</p>
  */
 public class DescribeRegionsRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("AcceptLanguage")
+    private String acceptLanguage;
+
+    @Query
+    @NameInMap("InstanceChargeType")
+    private String instanceChargeType;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -36,24 +40,20 @@ public class DescribeRegionsRequest extends Request {
     @NameInMap("ResourceType")
     private String resourceType;
 
-    @Query
-    @NameInMap("InstanceChargeType")
-    private String instanceChargeType;
-
-    @Query
-    @NameInMap("AcceptLanguage")
-    private String acceptLanguage;
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     private DescribeRegionsRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
+        this.acceptLanguage = builder.acceptLanguage;
+        this.instanceChargeType = builder.instanceChargeType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.resourceType = builder.resourceType;
-        this.instanceChargeType = builder.instanceChargeType;
-        this.acceptLanguage = builder.acceptLanguage;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -70,10 +70,17 @@ public class DescribeRegionsRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return acceptLanguage
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
+    }
+
+    /**
+     * @return instanceChargeType
+     */
+    public String getInstanceChargeType() {
+        return this.instanceChargeType;
     }
 
     /**
@@ -112,28 +119,21 @@ public class DescribeRegionsRequest extends Request {
     }
 
     /**
-     * @return instanceChargeType
+     * @return sourceRegionId
      */
-    public String getInstanceChargeType() {
-        return this.instanceChargeType;
-    }
-
-    /**
-     * @return acceptLanguage
-     */
-    public String getAcceptLanguage() {
-        return this.acceptLanguage;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public static final class Builder extends Request.Builder<DescribeRegionsRequest, Builder> {
-        private String sourceRegionId; 
+        private String acceptLanguage; 
+        private String instanceChargeType; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String resourceType; 
-        private String instanceChargeType; 
-        private String acceptLanguage; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -141,22 +141,31 @@ public class DescribeRegionsRequest extends Request {
 
         private Builder(DescribeRegionsRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
+            this.acceptLanguage = request.acceptLanguage;
+            this.instanceChargeType = request.instanceChargeType;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.resourceType = request.resourceType;
-            this.instanceChargeType = request.instanceChargeType;
-            this.acceptLanguage = request.acceptLanguage;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
-         * SourceRegionId.
+         * AcceptLanguage.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder acceptLanguage(String acceptLanguage) {
+            this.putQueryParameter("AcceptLanguage", acceptLanguage);
+            this.acceptLanguage = acceptLanguage;
+            return this;
+        }
+
+        /**
+         * InstanceChargeType.
+         */
+        public Builder instanceChargeType(String instanceChargeType) {
+            this.putQueryParameter("InstanceChargeType", instanceChargeType);
+            this.instanceChargeType = instanceChargeType;
             return this;
         }
 
@@ -170,7 +179,7 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * The ID of the RAM user.
+         * OwnerId.
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -179,7 +188,7 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * The account name of the resource master account.
+         * ResourceOwnerAccount.
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
             this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
@@ -188,7 +197,7 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * The ID of the resource master account, that is, the UID.
+         * ResourceOwnerId.
          */
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
@@ -197,14 +206,7 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * The type of the resource. Valid values:
-         * <p>
-         * -instance:ECS instance
-         * -disk: disk
-         * -reservedinstance: Reserved Instance
-         * -scu: storage capacity unit package
-         * 
-         * Default value: instance
+         * ResourceType.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -213,33 +215,11 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * The billing method of the instance. For more information, see [billing overview](~~ 25398 ~~). Valid values:
-         * <p>
-         * 
-         * -PrePaid: subscription. At this point, you must ensure that your account supports balance payment or credit payment. Otherwise, an error InvalidPayMethod is reported.
-         * -PostPaid: pay-as-you-go.
-         * 
-         * Default value: PostPaid
+         * SourceRegionId.
          */
-        public Builder instanceChargeType(String instanceChargeType) {
-            this.putQueryParameter("InstanceChargeType", instanceChargeType);
-            this.instanceChargeType = instanceChargeType;
-            return this;
-        }
-
-        /**
-         * The returned results are filtered based on Chinese, English, and Japanese. For more information, see [RFC7231](https://tools.ietf.org/html/rfc7231). Valid values:
-         * <p>
-         * 
-         * -zh-CN: chinese
-         * -en-US: english
-         * -ja: japanese
-         * 
-         * Default value: zh-CN
-         */
-        public Builder acceptLanguage(String acceptLanguage) {
-            this.putQueryParameter("AcceptLanguage", acceptLanguage);
-            this.acceptLanguage = acceptLanguage;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

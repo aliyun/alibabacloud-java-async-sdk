@@ -12,23 +12,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInvocationsRequest</p>
  */
 public class DescribeInvocationsRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
-    @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
-
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
-    @Query
-    @NameInMap("InvokeId")
-    private String invokeId;
-
     @Query
     @NameInMap("CommandId")
     private String commandId;
@@ -36,22 +19,6 @@ public class DescribeInvocationsRequest extends Request {
     @Query
     @NameInMap("CommandName")
     private String commandName;
-
-    @Query
-    @NameInMap("PageNumber")
-    private Long pageNumber;
-
-    @Query
-    @NameInMap("RepeatMode")
-    private String repeatMode;
-
-    @Query
-    @NameInMap("IncludeOutput")
-    private Boolean includeOutput;
-
-    @Query
-    @NameInMap("PageSize")
-    private Long pageSize;
 
     @Query
     @NameInMap("CommandType")
@@ -62,12 +29,57 @@ public class DescribeInvocationsRequest extends Request {
     private String contentEncoding;
 
     @Query
+    @NameInMap("IncludeOutput")
+    private Boolean includeOutput;
+
+    @Query
     @NameInMap("InstanceId")
     private String instanceId;
 
     @Query
+    @NameInMap("InvokeId")
+    private String invokeId;
+
+    @Query
     @NameInMap("InvokeStatus")
     private String invokeStatus;
+
+    @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
+
+    @Query
+    @NameInMap("PageNumber")
+    private Long pageNumber;
+
+    @Query
+    @NameInMap("PageSize")
+    private Long pageSize;
+
+    @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
+    @Query
+    @NameInMap("RepeatMode")
+    private String repeatMode;
+
+    @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     @Query
     @NameInMap("Timed")
@@ -75,20 +87,23 @@ public class DescribeInvocationsRequest extends Request {
 
     private DescribeInvocationsRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
-        this.resourceOwnerId = builder.resourceOwnerId;
-        this.regionId = builder.regionId;
-        this.invokeId = builder.invokeId;
         this.commandId = builder.commandId;
         this.commandName = builder.commandName;
-        this.pageNumber = builder.pageNumber;
-        this.repeatMode = builder.repeatMode;
-        this.includeOutput = builder.includeOutput;
-        this.pageSize = builder.pageSize;
         this.commandType = builder.commandType;
         this.contentEncoding = builder.contentEncoding;
+        this.includeOutput = builder.includeOutput;
         this.instanceId = builder.instanceId;
+        this.invokeId = builder.invokeId;
         this.invokeStatus = builder.invokeStatus;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
+        this.regionId = builder.regionId;
+        this.repeatMode = builder.repeatMode;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.sourceRegionId = builder.sourceRegionId;
         this.timed = builder.timed;
     }
 
@@ -106,34 +121,6 @@ public class DescribeInvocationsRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
-     * @return resourceOwnerId
-     */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return invokeId
-     */
-    public String getInvokeId() {
-        return this.invokeId;
-    }
-
-    /**
      * @return commandId
      */
     public String getCommandId() {
@@ -145,34 +132,6 @@ public class DescribeInvocationsRequest extends Request {
      */
     public String getCommandName() {
         return this.commandName;
-    }
-
-    /**
-     * @return pageNumber
-     */
-    public Long getPageNumber() {
-        return this.pageNumber;
-    }
-
-    /**
-     * @return repeatMode
-     */
-    public String getRepeatMode() {
-        return this.repeatMode;
-    }
-
-    /**
-     * @return includeOutput
-     */
-    public Boolean getIncludeOutput() {
-        return this.includeOutput;
-    }
-
-    /**
-     * @return pageSize
-     */
-    public Long getPageSize() {
-        return this.pageSize;
     }
 
     /**
@@ -190,10 +149,24 @@ public class DescribeInvocationsRequest extends Request {
     }
 
     /**
+     * @return includeOutput
+     */
+    public Boolean getIncludeOutput() {
+        return this.includeOutput;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return invokeId
+     */
+    public String getInvokeId() {
+        return this.invokeId;
     }
 
     /**
@@ -204,6 +177,69 @@ public class DescribeInvocationsRequest extends Request {
     }
 
     /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
+     * @return pageNumber
+     */
+    public Long getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Long getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return repeatMode
+     */
+    public String getRepeatMode() {
+        return this.repeatMode;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
+    /**
      * @return timed
      */
     public Boolean getTimed() {
@@ -211,20 +247,23 @@ public class DescribeInvocationsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeInvocationsRequest, Builder> {
-        private String sourceRegionId; 
-        private Long resourceOwnerId; 
-        private String regionId; 
-        private String invokeId; 
         private String commandId; 
         private String commandName; 
-        private Long pageNumber; 
-        private String repeatMode; 
-        private Boolean includeOutput; 
-        private Long pageSize; 
         private String commandType; 
         private String contentEncoding; 
+        private Boolean includeOutput; 
         private String instanceId; 
+        private String invokeId; 
         private String invokeStatus; 
+        private String ownerAccount; 
+        private Long ownerId; 
+        private Long pageNumber; 
+        private Long pageSize; 
+        private String regionId; 
+        private String repeatMode; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String sourceRegionId; 
         private Boolean timed; 
 
         private Builder() {
@@ -233,29 +272,158 @@ public class DescribeInvocationsRequest extends Request {
 
         private Builder(DescribeInvocationsRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
-            this.resourceOwnerId = request.resourceOwnerId;
-            this.regionId = request.regionId;
-            this.invokeId = request.invokeId;
             this.commandId = request.commandId;
             this.commandName = request.commandName;
-            this.pageNumber = request.pageNumber;
-            this.repeatMode = request.repeatMode;
-            this.includeOutput = request.includeOutput;
-            this.pageSize = request.pageSize;
             this.commandType = request.commandType;
             this.contentEncoding = request.contentEncoding;
+            this.includeOutput = request.includeOutput;
             this.instanceId = request.instanceId;
+            this.invokeId = request.invokeId;
             this.invokeStatus = request.invokeStatus;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.repeatMode = request.repeatMode;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceRegionId = request.sourceRegionId;
             this.timed = request.timed;
         } 
 
         /**
-         * SourceRegionId.
+         * CommandId.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder commandId(String commandId) {
+            this.putQueryParameter("CommandId", commandId);
+            this.commandId = commandId;
+            return this;
+        }
+
+        /**
+         * CommandName.
+         */
+        public Builder commandName(String commandName) {
+            this.putQueryParameter("CommandName", commandName);
+            this.commandName = commandName;
+            return this;
+        }
+
+        /**
+         * CommandType.
+         */
+        public Builder commandType(String commandType) {
+            this.putQueryParameter("CommandType", commandType);
+            this.commandType = commandType;
+            return this;
+        }
+
+        /**
+         * ContentEncoding.
+         */
+        public Builder contentEncoding(String contentEncoding) {
+            this.putQueryParameter("ContentEncoding", contentEncoding);
+            this.contentEncoding = contentEncoding;
+            return this;
+        }
+
+        /**
+         * IncludeOutput.
+         */
+        public Builder includeOutput(Boolean includeOutput) {
+            this.putQueryParameter("IncludeOutput", includeOutput);
+            this.includeOutput = includeOutput;
+            return this;
+        }
+
+        /**
+         * InstanceId.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * InvokeId.
+         */
+        public Builder invokeId(String invokeId) {
+            this.putQueryParameter("InvokeId", invokeId);
+            this.invokeId = invokeId;
+            return this;
+        }
+
+        /**
+         * InvokeStatus.
+         */
+        public Builder invokeStatus(String invokeStatus) {
+            this.putQueryParameter("InvokeStatus", invokeStatus);
+            this.invokeStatus = invokeStatus;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * PageNumber.
+         */
+        public Builder pageNumber(Long pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Long pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * RepeatMode.
+         */
+        public Builder repeatMode(String repeatMode) {
+            this.putQueryParameter("RepeatMode", repeatMode);
+            this.repeatMode = repeatMode;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
             return this;
         }
 
@@ -269,170 +437,16 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
+         * SourceRegionId.
          */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 
         /**
-         * The ID of the command execution.
-         */
-        public Builder invokeId(String invokeId) {
-            this.putQueryParameter("InvokeId", invokeId);
-            this.invokeId = invokeId;
-            return this;
-        }
-
-        /**
-         * The ID of the command. You can call the [DescribeCommands](~~ 64843 ~~) operation to query all available CommandId.
-         */
-        public Builder commandId(String commandId) {
-            this.putQueryParameter("CommandId", commandId);
-            this.commandId = commandId;
-            return this;
-        }
-
-        /**
-         * The name of the command.
-         */
-        public Builder commandName(String commandName) {
-            this.putQueryParameter("CommandName", commandName);
-            this.commandName = commandName;
-            return this;
-        }
-
-        /**
-         * The current page number.
-         * <p>
-         * 
-         * The start value is 1.
-         * 
-         * Default value: 1.
-         */
-        public Builder pageNumber(Long pageNumber) {
-            this.putQueryParameter("PageNumber", pageNumber);
-            this.pageNumber = pageNumber;
-            return this;
-        }
-
-        /**
-         * The command execution method. Valid values:
-         * <p>
-         * 
-         * -Once: run the command immediately.
-         * -Period: run the command regularly.
-         * -NextRebootOnly: When the instance starts next time, the command is automatically executed.
-         * -EveryReboot: The command is automatically executed each time the instance is started.
-         * 
-         * The default value is null, indicating all queries.
-         */
-        public Builder repeatMode(String repeatMode) {
-            this.putQueryParameter("RepeatMode", repeatMode);
-            this.repeatMode = repeatMode;
-            return this;
-        }
-
-        /**
-         * Indicates whether to return the output information of the command run in the result.
-         * <p>
-         * 
-         * -true: returns. You must specify at least the "InvokeId" or "InstanceId" parameters ".
-         * -false: does not return.
-         * 
-         * Default value: false.
-         */
-        public Builder includeOutput(Boolean includeOutput) {
-            this.putQueryParameter("IncludeOutput", includeOutput);
-            this.includeOutput = includeOutput;
-            return this;
-        }
-
-        /**
-         * The number of entries to return on each page.
-         * <p>
-         * 
-         * Maximum Value: 50.
-         * 
-         * Default value: 10.
-         */
-        public Builder pageSize(Long pageSize) {
-            this.putQueryParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * The type of the command.
-         */
-        public Builder commandType(String commandType) {
-            this.putQueryParameter("CommandType", commandType);
-            this.commandType = commandType;
-            return this;
-        }
-
-        /**
-         * Specifies the encoding method of the "CommandContent" and "Output" fields in the returned data. Valid values:
-         * <p>
-         * 
-         * -PlainText: returns the original command content and output information.
-         * -Base64: returns the base64-encoded command content and output information.
-         * 
-         * The default value is Base64.
-         */
-        public Builder contentEncoding(String contentEncoding) {
-            this.putQueryParameter("ContentEncoding", contentEncoding);
-            this.contentEncoding = contentEncoding;
-            return this;
-        }
-
-        /**
-         * The ID of the instance. When you specify this parameter, all command execution records of the instance are queried.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * The total invocation status of the command. The total execution status depends on the co-execution status of one or more instances in the execution process. Valid values:
-         * <p>
-         * 
-         * -Running:
-         * -Periodic invocation: the invocation status remains in progress until the periodic invocation command is manually stopped.
-         * -Single execution: Once a command process is in progress, the overall execution status is in progress.
-         * -Finished:
-         * -Periodic execution: the command process cannot be executed.
-         * -Single execution: all instances are executed. Alternatively, you can manually stop the command processes of some instances, and all other instances are executed.
-         * -Failed:
-         * -Periodic execution: the command process cannot fail to be executed.
-         * -Single execution: all instances fail to be executed.
-         * -PartialFailed:
-         * -Periodic execution: the command process cannot be partially failed.
-         * -Single execution: if some instances have failed command execution processes, the total execution status is partially failed.
-         * -Stopped: stop the command.
-         * 
-         * Default value: Running.
-         */
-        public Builder invokeStatus(String invokeStatus) {
-            this.putQueryParameter("InvokeStatus", invokeStatus);
-            this.invokeStatus = invokeStatus;
-            return this;
-        }
-
-        /**
-         * Whether the query command will be automatically executed in the future. Valid values:
-         * <p>
-         * 
-         * -true: when the "RunCommand" or "InvokeCommand" command is called, the value of the "RepeatMod" parameter is "1", "n"bootone", or "EveryReboot", and the command is in the uncompleted state or unstopped state.
-         * -false: the command to query the following two statuses:
-         * -When "RunCommand" or "InvokeCommand" is called to execute a command, the value of "RepeatMod" is "Once ".
-         * -Canceled, stopped, or completed commands.
-         * 
-         * Default value: false.
+         * Timed.
          */
         public Builder timed(Boolean timed) {
             this.putQueryParameter("Timed", timed);

@@ -12,9 +12,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeBandwidthLimitationRequest</p>
  */
 public class DescribeBandwidthLimitationRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("InstanceChargeType")
+    private String instanceChargeType;
+
+    @Query
+    @NameInMap("InstanceType")
+    private String instanceType;
+
+    @Query
+    @NameInMap("OperationType")
+    private String operationType;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -25,6 +33,15 @@ public class DescribeBandwidthLimitationRequest extends Request {
     private Long ownerId;
 
     @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
+    @Query
+    @NameInMap("ResourceId")
+    private String resourceId;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -32,44 +49,27 @@ public class DescribeBandwidthLimitationRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     @Query
     @NameInMap("SpotStrategy")
     private String spotStrategy;
 
-    @Query
-    @NameInMap("InstanceType")
-    private String instanceType;
-
-    @Query
-    @NameInMap("ResourceId")
-    private String resourceId;
-
-    @Query
-    @NameInMap("InstanceChargeType")
-    private String instanceChargeType;
-
-    @Query
-    @NameInMap("OperationType")
-    private String operationType;
-
     private DescribeBandwidthLimitationRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
+        this.instanceChargeType = builder.instanceChargeType;
+        this.instanceType = builder.instanceType;
+        this.operationType = builder.operationType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
+        this.resourceId = builder.resourceId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.regionId = builder.regionId;
+        this.sourceRegionId = builder.sourceRegionId;
         this.spotStrategy = builder.spotStrategy;
-        this.instanceType = builder.instanceType;
-        this.resourceId = builder.resourceId;
-        this.instanceChargeType = builder.instanceChargeType;
-        this.operationType = builder.operationType;
     }
 
     public static Builder builder() {
@@ -86,10 +86,24 @@ public class DescribeBandwidthLimitationRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return instanceChargeType
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getInstanceChargeType() {
+        return this.instanceChargeType;
+    }
+
+    /**
+     * @return instanceType
+     */
+    public String getInstanceType() {
+        return this.instanceType;
+    }
+
+    /**
+     * @return operationType
+     */
+    public String getOperationType() {
+        return this.operationType;
     }
 
     /**
@@ -107,6 +121,20 @@ public class DescribeBandwidthLimitationRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return resourceId
+     */
+    public String getResourceId() {
+        return this.resourceId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -121,10 +149,10 @@ public class DescribeBandwidthLimitationRequest extends Request {
     }
 
     /**
-     * @return regionId
+     * @return sourceRegionId
      */
-    public String getRegionId() {
-        return this.regionId;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -134,46 +162,18 @@ public class DescribeBandwidthLimitationRequest extends Request {
         return this.spotStrategy;
     }
 
-    /**
-     * @return instanceType
-     */
-    public String getInstanceType() {
-        return this.instanceType;
-    }
-
-    /**
-     * @return resourceId
-     */
-    public String getResourceId() {
-        return this.resourceId;
-    }
-
-    /**
-     * @return instanceChargeType
-     */
-    public String getInstanceChargeType() {
-        return this.instanceChargeType;
-    }
-
-    /**
-     * @return operationType
-     */
-    public String getOperationType() {
-        return this.operationType;
-    }
-
     public static final class Builder extends Request.Builder<DescribeBandwidthLimitationRequest, Builder> {
-        private String sourceRegionId; 
+        private String instanceChargeType; 
+        private String instanceType; 
+        private String operationType; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String regionId; 
+        private String resourceId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String regionId; 
+        private String sourceRegionId; 
         private String spotStrategy; 
-        private String instanceType; 
-        private String resourceId; 
-        private String instanceChargeType; 
-        private String operationType; 
 
         private Builder() {
             super();
@@ -181,25 +181,43 @@ public class DescribeBandwidthLimitationRequest extends Request {
 
         private Builder(DescribeBandwidthLimitationRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
+            this.instanceChargeType = request.instanceChargeType;
+            this.instanceType = request.instanceType;
+            this.operationType = request.operationType;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceId = request.resourceId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.regionId = request.regionId;
+            this.sourceRegionId = request.sourceRegionId;
             this.spotStrategy = request.spotStrategy;
-            this.instanceType = request.instanceType;
-            this.resourceId = request.resourceId;
-            this.instanceChargeType = request.instanceChargeType;
-            this.operationType = request.operationType;
         } 
 
         /**
-         * SourceRegionId.
+         * InstanceChargeType.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder instanceChargeType(String instanceChargeType) {
+            this.putQueryParameter("InstanceChargeType", instanceChargeType);
+            this.instanceChargeType = instanceChargeType;
+            return this;
+        }
+
+        /**
+         * InstanceType.
+         */
+        public Builder instanceType(String instanceType) {
+            this.putQueryParameter("InstanceType", instanceType);
+            this.instanceType = instanceType;
+            return this;
+        }
+
+        /**
+         * OperationType.
+         */
+        public Builder operationType(String operationType) {
+            this.putQueryParameter("OperationType", operationType);
+            this.operationType = operationType;
             return this;
         }
 
@@ -213,7 +231,7 @@ public class DescribeBandwidthLimitationRequest extends Request {
         }
 
         /**
-         * The ID of the RAM user.
+         * OwnerId.
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -222,25 +240,7 @@ public class DescribeBandwidthLimitationRequest extends Request {
         }
 
         /**
-         * The account name of the resource master account.
-         */
-        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
-            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-            this.resourceOwnerAccount = resourceOwnerAccount;
-            return this;
-        }
-
-        /**
-         * The ID of the resource master account, that is, the UID.
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * The ID of the destination region. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -249,40 +249,7 @@ public class DescribeBandwidthLimitationRequest extends Request {
         }
 
         /**
-         * The preemptible policy of the pay-as-you-go instance. Valid values:
-         * <p>
-         * 
-         * -NoSpot: a pay-as-you-go instance.
-         * -SpotWithPriceLimit: sets the maximum price for preemptible instances.
-         * -SpotAsPriceGo: The system automatically bids at the highest pay-as-you-go price.
-         * 
-         * Default value: NoSpot
-         * 
-         * > The parameter InstanceChargeType is valid only when the parameter PostPaid is set to SpotStrategy.
-         */
-        public Builder spotStrategy(String spotStrategy) {
-            this.putQueryParameter("SpotStrategy", spotStrategy);
-            this.spotStrategy = spotStrategy;
-            return this;
-        }
-
-        /**
-         * The instance type. For more information, see [instance type family](~~ 25378 ~~).
-         * <p>
-         * 
-         * > This parameter is required.
-         */
-        public Builder instanceType(String instanceType) {
-            this.putQueryParameter("InstanceType", instanceType);
-            this.instanceType = instanceType;
-            return this;
-        }
-
-        /**
-         * The ID of the resource.
-         * <p>
-         * 
-         * > If you set the parameter OperationType to Upgrade or Downgrade, the parameter ResourceId is required.
+         * ResourceId.
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -291,33 +258,38 @@ public class DescribeBandwidthLimitationRequest extends Request {
         }
 
         /**
-         * The billing method of the instance. For more information, see [billing Overview](~~ 25398 ~~). Valid values:
-         * <p>
-         * 
-         * -PrePaid: Subscription
-         * -PostPaid: pay-as-you-go
-         * 
-         * Default value: PostPaid
+         * ResourceOwnerAccount.
          */
-        public Builder instanceChargeType(String instanceChargeType) {
-            this.putQueryParameter("InstanceChargeType", instanceChargeType);
-            this.instanceChargeType = instanceChargeType;
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
             return this;
         }
 
         /**
-         * You can call this operation to query the limits of public network bandwidth. Valid values:
-         * <p>
-         * 
-         * -Upgrade: upgrades the internet bandwidth.
-         * -Downgrade: Downgrade the internet bandwidth.
-         * -Create: Create an ECS instance.
-         * 
-         * Default value: Create
+         * ResourceOwnerId.
          */
-        public Builder operationType(String operationType) {
-            this.putQueryParameter("OperationType", operationType);
-            this.operationType = operationType;
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
+
+        /**
+         * SpotStrategy.
+         */
+        public Builder spotStrategy(String spotStrategy) {
+            this.putQueryParameter("SpotStrategy", spotStrategy);
+            this.spotStrategy = spotStrategy;
             return this;
         }
 

@@ -12,13 +12,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeKeyPairsRequest</p>
  */
 public class DescribeKeyPairsRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("KeyPairFingerPrint")
+    private String keyPairFingerPrint;
 
     @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
+    @NameInMap("KeyPairName")
+    private String keyPairName;
+
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
+
+    @Query
+    @NameInMap("PageNumber")
+    private Integer pageNumber;
 
     @Query
     @NameInMap("PageSize")
@@ -26,41 +34,43 @@ public class DescribeKeyPairsRequest extends Request {
     private Integer pageSize;
 
     @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
-
-    @Query
-    @NameInMap("PageNumber")
-    private Integer pageNumber;
-
-    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
-
-    @Query
-    @NameInMap("KeyPairFingerPrint")
-    private String keyPairFingerPrint;
 
     @Query
     @NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
     @Query
-    @NameInMap("KeyPairName")
-    private String keyPairName;
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
+    @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
 
     private DescribeKeyPairsRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
-        this.resourceOwnerId = builder.resourceOwnerId;
-        this.pageSize = builder.pageSize;
-        this.tag = builder.tag;
-        this.pageNumber = builder.pageNumber;
-        this.regionId = builder.regionId;
         this.keyPairFingerPrint = builder.keyPairFingerPrint;
-        this.resourceGroupId = builder.resourceGroupId;
         this.keyPairName = builder.keyPairName;
+        this.ownerId = builder.ownerId;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
+        this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.sourceRegionId = builder.sourceRegionId;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -77,31 +87,24 @@ public class DescribeKeyPairsRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return keyPairFingerPrint
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getKeyPairFingerPrint() {
+        return this.keyPairFingerPrint;
     }
 
     /**
-     * @return resourceOwnerId
+     * @return keyPairName
      */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public String getKeyPairName() {
+        return this.keyPairName;
     }
 
     /**
-     * @return pageSize
+     * @return ownerId
      */
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    /**
-     * @return tag
-     */
-    public java.util.List < Tag> getTag() {
-        return this.tag;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     /**
@@ -112,17 +115,17 @@ public class DescribeKeyPairsRequest extends Request {
     }
 
     /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
-    }
-
-    /**
-     * @return keyPairFingerPrint
-     */
-    public String getKeyPairFingerPrint() {
-        return this.keyPairFingerPrint;
     }
 
     /**
@@ -133,22 +136,45 @@ public class DescribeKeyPairsRequest extends Request {
     }
 
     /**
-     * @return keyPairName
+     * @return resourceOwnerAccount
      */
-    public String getKeyPairName() {
-        return this.keyPairName;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
     }
 
     public static final class Builder extends Request.Builder<DescribeKeyPairsRequest, Builder> {
-        private String sourceRegionId; 
-        private Long resourceOwnerId; 
-        private Integer pageSize; 
-        private java.util.List < Tag> tag; 
-        private Integer pageNumber; 
-        private String regionId; 
         private String keyPairFingerPrint; 
-        private String resourceGroupId; 
         private String keyPairName; 
+        private Long ownerId; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
+        private String regionId; 
+        private String resourceGroupId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String sourceRegionId; 
+        private java.util.List < Tag> tag; 
 
         private Builder() {
             super();
@@ -156,16 +182,99 @@ public class DescribeKeyPairsRequest extends Request {
 
         private Builder(DescribeKeyPairsRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
-            this.resourceOwnerId = request.resourceOwnerId;
-            this.pageSize = request.pageSize;
-            this.tag = request.tag;
-            this.pageNumber = request.pageNumber;
-            this.regionId = request.regionId;
             this.keyPairFingerPrint = request.keyPairFingerPrint;
-            this.resourceGroupId = request.resourceGroupId;
             this.keyPairName = request.keyPairName;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceRegionId = request.sourceRegionId;
+            this.tag = request.tag;
         } 
+
+        /**
+         * KeyPairFingerPrint.
+         */
+        public Builder keyPairFingerPrint(String keyPairFingerPrint) {
+            this.putQueryParameter("KeyPairFingerPrint", keyPairFingerPrint);
+            this.keyPairFingerPrint = keyPairFingerPrint;
+            return this;
+        }
+
+        /**
+         * KeyPairName.
+         */
+        public Builder keyPairName(String keyPairName) {
+            this.putQueryParameter("KeyPairName", keyPairName);
+            this.keyPairName = keyPairName;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * PageNumber.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
 
         /**
          * SourceRegionId.
@@ -177,86 +286,11 @@ public class DescribeKeyPairsRequest extends Request {
         }
 
         /**
-         * The Alibaba cloud account.
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * The number of entries to return on each page. Maximum Value: 50
-         * <p>
-         * 
-         * Default value: 10
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.putQueryParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * The list of tags.
+         * Tag.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
-            return this;
-        }
-
-        /**
-         * The page number of the key pair list. Start value: 1
-         * <p>
-         * 
-         * Default value: 1.
-         */
-        public Builder pageNumber(Integer pageNumber) {
-            this.putQueryParameter("PageNumber", pageNumber);
-            this.pageNumber = pageNumber;
-            return this;
-        }
-
-        /**
-         * The region ID of the key pair. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The fingerprint of the key pair. According to the public key fingerprint format defined in RFC4716, MD5 Information Digest Algorithm is adopted. For more information, see [RFC4716](https://tools.ietf.org/html/rfc4716).
-         */
-        public Builder keyPairFingerPrint(String keyPairFingerPrint) {
-            this.putQueryParameter("KeyPairFingerPrint", keyPairFingerPrint);
-            this.keyPairFingerPrint = keyPairFingerPrint;
-            return this;
-        }
-
-        /**
-         * The ID of the resource group to which the key pair belongs. When you use this parameter to filter resources, the number of resources cannot exceed 1,000.
-         */
-        public Builder resourceGroupId(String resourceGroupId) {
-            this.putQueryParameter("ResourceGroupId", resourceGroupId);
-            this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-
-        /**
-         * The name of the key pair. Fuzzy search of regular expressions is supported. Use * to match subexpressions. Example:
-         * <p>
-         * 
-         * -"* SshKey": queries the key pair names that end with SshKey, including SshKey.
-         * -Speechshkey * ": queries the names of key pairs that start with SshKey, including SshKey.
-         * -"* SshKey *": the key pair with SshKey in the middle of the query name, including SshKey.
-         * -Speechshkey": exactly matches the SshKey.
-         */
-        public Builder keyPairName(String keyPairName) {
-            this.putQueryParameter("KeyPairName", keyPairName);
-            this.keyPairName = keyPairName;
             return this;
         }
 
@@ -306,10 +340,7 @@ public class DescribeKeyPairsRequest extends Request {
             private String value; 
 
             /**
-             * 密钥对的标签键。N的取值范围：1~20
-             * <p>
-             * 
-             * 使用一个标签过滤资源，查询到该标签下的资源数量不能超过1000个；使用多个标签过滤资源，查询到同时绑定了多个标签的资源数量不能超过1000个。如果资源数量超过1000个，请使用[ListTagResources](~~110425~~)接口进行查询。
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -317,7 +348,7 @@ public class DescribeKeyPairsRequest extends Request {
             }
 
             /**
-             * 密钥对的标签值。N的取值范围：1~20
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

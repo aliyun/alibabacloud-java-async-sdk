@@ -12,19 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AssignIpv6AddressesResponseBody</p>
  */
 public class AssignIpv6AddressesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    private String requestId;
+    @NameInMap("Ipv6Sets")
+    private Ipv6Sets ipv6Sets;
 
     @NameInMap("NetworkInterfaceId")
     private String networkInterfaceId;
 
-    @NameInMap("Ipv6Sets")
-    private Ipv6Sets ipv6Sets;
+    @NameInMap("RequestId")
+    private String requestId;
 
     private AssignIpv6AddressesResponseBody(Builder builder) {
-        this.requestId = builder.requestId;
-        this.networkInterfaceId = builder.networkInterfaceId;
         this.ipv6Sets = builder.ipv6Sets;
+        this.networkInterfaceId = builder.networkInterfaceId;
+        this.requestId = builder.requestId;
     }
 
     public static Builder builder() {
@@ -36,10 +36,10 @@ public class AssignIpv6AddressesResponseBody extends TeaModel {
     }
 
     /**
-     * @return requestId
+     * @return ipv6Sets
      */
-    public String getRequestId() {
-        return this.requestId;
+    public Ipv6Sets getIpv6Sets() {
+        return this.ipv6Sets;
     }
 
     /**
@@ -50,27 +50,27 @@ public class AssignIpv6AddressesResponseBody extends TeaModel {
     }
 
     /**
-     * @return ipv6Sets
+     * @return requestId
      */
-    public Ipv6Sets getIpv6Sets() {
-        return this.ipv6Sets;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static final class Builder {
-        private String requestId; 
-        private String networkInterfaceId; 
         private Ipv6Sets ipv6Sets; 
+        private String networkInterfaceId; 
+        private String requestId; 
 
         /**
-         * The ID of the request.
+         * Ipv6Sets.
          */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
+        public Builder ipv6Sets(Ipv6Sets ipv6Sets) {
+            this.ipv6Sets = ipv6Sets;
             return this;
         }
 
         /**
-         * The ID of the Eni.
+         * NetworkInterfaceId.
          */
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.networkInterfaceId = networkInterfaceId;
@@ -78,10 +78,10 @@ public class AssignIpv6AddressesResponseBody extends TeaModel {
         }
 
         /**
-         * The IPv6 address assigned to the Eni.
+         * RequestId.
          */
-        public Builder ipv6Sets(Ipv6Sets ipv6Sets) {
-            this.ipv6Sets = ipv6Sets;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 

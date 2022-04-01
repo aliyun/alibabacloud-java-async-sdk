@@ -13,8 +13,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeStorageCapacityUnitsRequest extends Request {
     @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
+    @NameInMap("AllocationType")
+    private String allocationType;
+
+    @Query
+    @NameInMap("Capacity")
+    private Integer capacity;
+
+    @Query
+    @NameInMap("Name")
+    private String name;
+
+    @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
 
     @Query
     @NameInMap("PageNumber")
@@ -26,46 +42,45 @@ public class DescribeStorageCapacityUnitsRequest extends Request {
     private Integer pageSize;
 
     @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
-
-    @Query
-    @NameInMap("Capacity")
-    private Integer capacity;
-
-    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
 
     @Query
-    @NameInMap("StorageCapacityUnitId")
-    private java.util.List < String > storageCapacityUnitId;
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
 
     @Query
-    @NameInMap("AllocationType")
-    private String allocationType;
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
 
     @Query
     @NameInMap("Status")
     private java.util.List < String > status;
 
     @Query
-    @NameInMap("Name")
-    private String name;
+    @NameInMap("StorageCapacityUnitId")
+    private java.util.List < String > storageCapacityUnitId;
+
+    @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
 
     private DescribeStorageCapacityUnitsRequest(Builder builder) {
         super(builder);
-        this.resourceOwnerId = builder.resourceOwnerId;
+        this.allocationType = builder.allocationType;
+        this.capacity = builder.capacity;
+        this.name = builder.name;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.tag = builder.tag;
-        this.capacity = builder.capacity;
         this.regionId = builder.regionId;
-        this.storageCapacityUnitId = builder.storageCapacityUnitId;
-        this.allocationType = builder.allocationType;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
         this.status = builder.status;
-        this.name = builder.name;
+        this.storageCapacityUnitId = builder.storageCapacityUnitId;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -82,10 +97,38 @@ public class DescribeStorageCapacityUnitsRequest extends Request {
     }
 
     /**
-     * @return resourceOwnerId
+     * @return allocationType
      */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public String getAllocationType() {
+        return this.allocationType;
+    }
+
+    /**
+     * @return capacity
+     */
+    public Integer getCapacity() {
+        return this.capacity;
+    }
+
+    /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
+    }
+
+    /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     /**
@@ -103,20 +146,6 @@ public class DescribeStorageCapacityUnitsRequest extends Request {
     }
 
     /**
-     * @return tag
-     */
-    public java.util.List < Tag> getTag() {
-        return this.tag;
-    }
-
-    /**
-     * @return capacity
-     */
-    public Integer getCapacity() {
-        return this.capacity;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -124,17 +153,17 @@ public class DescribeStorageCapacityUnitsRequest extends Request {
     }
 
     /**
-     * @return storageCapacityUnitId
+     * @return resourceOwnerAccount
      */
-    public java.util.List < String > getStorageCapacityUnitId() {
-        return this.storageCapacityUnitId;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
     }
 
     /**
-     * @return allocationType
+     * @return resourceOwnerId
      */
-    public String getAllocationType() {
-        return this.allocationType;
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     /**
@@ -145,23 +174,33 @@ public class DescribeStorageCapacityUnitsRequest extends Request {
     }
 
     /**
-     * @return name
+     * @return storageCapacityUnitId
      */
-    public String getName() {
-        return this.name;
+    public java.util.List < String > getStorageCapacityUnitId() {
+        return this.storageCapacityUnitId;
+    }
+
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
     }
 
     public static final class Builder extends Request.Builder<DescribeStorageCapacityUnitsRequest, Builder> {
-        private Long resourceOwnerId; 
+        private String allocationType; 
+        private Integer capacity; 
+        private String name; 
+        private String ownerAccount; 
+        private Long ownerId; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private java.util.List < Tag> tag; 
-        private Integer capacity; 
         private String regionId; 
-        private java.util.List < String > storageCapacityUnitId; 
-        private String allocationType; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
         private java.util.List < String > status; 
-        private String name; 
+        private java.util.List < String > storageCapacityUnitId; 
+        private java.util.List < Tag> tag; 
 
         private Builder() {
             super();
@@ -169,99 +208,23 @@ public class DescribeStorageCapacityUnitsRequest extends Request {
 
         private Builder(DescribeStorageCapacityUnitsRequest request) {
             super(request);
-            this.resourceOwnerId = request.resourceOwnerId;
+            this.allocationType = request.allocationType;
+            this.capacity = request.capacity;
+            this.name = request.name;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
-            this.tag = request.tag;
-            this.capacity = request.capacity;
             this.regionId = request.regionId;
-            this.storageCapacityUnitId = request.storageCapacityUnitId;
-            this.allocationType = request.allocationType;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
             this.status = request.status;
-            this.name = request.name;
+            this.storageCapacityUnitId = request.storageCapacityUnitId;
+            this.tag = request.tag;
         } 
 
         /**
-         * The ID of the Alibaba cloud account.
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * The page number of the SCU list.
-         * <p>
-         * 
-         * Start value: 1
-         * 
-         * Default value: 1.
-         */
-        public Builder pageNumber(Integer pageNumber) {
-            this.putQueryParameter("PageNumber", pageNumber);
-            this.pageNumber = pageNumber;
-            return this;
-        }
-
-        /**
-         * The number of entries to return on each page.
-         * <p>
-         * 
-         * Maximum Value: 100
-         * 
-         * Default value: 10
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.putQueryParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * Tag list
-         */
-        public Builder tag(java.util.List < Tag> tag) {
-            this.putQueryParameter("Tag", tag);
-            this.tag = tag;
-            return this;
-        }
-
-        /**
-         * The capacity of the SCU. Unit: GiB. Valid values:{20, 40, 100, 200, 500, 1024, 2048, 5120, 10240, 20480, 51200}.
-         */
-        public Builder capacity(Integer capacity) {
-            this.putQueryParameter("Capacity", capacity);
-            this.capacity = capacity;
-            return this;
-        }
-
-        /**
-         * The ID of the region to which the SCU belongs. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * One or more SCU ID. Valid values of N: 1 to 100.
-         */
-        public Builder storageCapacityUnitId(java.util.List < String > storageCapacityUnitId) {
-            this.putQueryParameter("StorageCapacityUnitId", storageCapacityUnitId);
-            this.storageCapacityUnitId = storageCapacityUnitId;
-            return this;
-        }
-
-        /**
-         * The allocation type. Valid values:
-         * <p>
-         * 
-         * -Normal: queries the scus under the current alibaba cloud account.
-         * -Shared: queries scus that are Shared with RAM users by alibaba cloud accounts.
-         * 
-         * Default value: Normal
+         * AllocationType.
          */
         public Builder allocationType(String allocationType) {
             this.putQueryParameter("AllocationType", allocationType);
@@ -270,13 +233,88 @@ public class DescribeStorageCapacityUnitsRequest extends Request {
         }
 
         /**
-         * The status of one or more scus. Valid values of N: 1 to 4. Valid values:
-         * <p>
-         * 
-         * -Creating: Creating
-         * -Active: enabling
-         * -Expired: Expired
-         * -Pending: to take effect
+         * Capacity.
+         */
+        public Builder capacity(Integer capacity) {
+            this.putQueryParameter("Capacity", capacity);
+            this.capacity = capacity;
+            return this;
+        }
+
+        /**
+         * Name.
+         */
+        public Builder name(String name) {
+            this.putQueryParameter("Name", name);
+            this.name = name;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * PageNumber.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * Status.
          */
         public Builder status(java.util.List < String > status) {
             this.putQueryParameter("Status", status);
@@ -285,11 +323,20 @@ public class DescribeStorageCapacityUnitsRequest extends Request {
         }
 
         /**
-         * The name of the SCU.
+         * StorageCapacityUnitId.
          */
-        public Builder name(String name) {
-            this.putQueryParameter("Name", name);
-            this.name = name;
+        public Builder storageCapacityUnitId(java.util.List < String > storageCapacityUnitId) {
+            this.putQueryParameter("StorageCapacityUnitId", storageCapacityUnitId);
+            this.storageCapacityUnitId = storageCapacityUnitId;
+            return this;
+        }
+
+        /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
             return this;
         }
 
@@ -339,7 +386,7 @@ public class DescribeStorageCapacityUnitsRequest extends Request {
             private String value; 
 
             /**
-             * SCU的标签键。N表示可以设置多个标签键进行查询，N的取值范围：1~20。
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -347,7 +394,7 @@ public class DescribeStorageCapacityUnitsRequest extends Request {
             }
 
             /**
-             * SCU的标签值。N表示可以设置多个标签值进行查询，且与`Tag.N.Key`的N对应，N的取值范围：1~20。
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

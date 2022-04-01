@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RebootInstancesResponseBody</p>
  */
 public class RebootInstancesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    private String requestId;
-
     @NameInMap("InstanceResponses")
     private InstanceResponses instanceResponses;
 
+    @NameInMap("RequestId")
+    private String requestId;
+
     private RebootInstancesResponseBody(Builder builder) {
-        this.requestId = builder.requestId;
         this.instanceResponses = builder.instanceResponses;
+        this.requestId = builder.requestId;
     }
 
     public static Builder builder() {
@@ -32,36 +32,36 @@ public class RebootInstancesResponseBody extends TeaModel {
     }
 
     /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    /**
      * @return instanceResponses
      */
     public InstanceResponses getInstanceResponses() {
         return this.instanceResponses;
     }
 
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static final class Builder {
-        private String requestId; 
         private InstanceResponses instanceResponses; 
+        private String requestId; 
 
         /**
-         * The ID of the request.
+         * InstanceResponses.
          */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
+        public Builder instanceResponses(InstanceResponses instanceResponses) {
+            this.instanceResponses = instanceResponses;
             return this;
         }
 
         /**
-         * An array consisting of InstanceResposne, which returns the status and result of each instance operation.
+         * RequestId.
          */
-        public Builder instanceResponses(InstanceResponses instanceResponses) {
-            this.instanceResponses = instanceResponses;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
@@ -75,23 +75,23 @@ public class RebootInstancesResponseBody extends TeaModel {
         @NameInMap("Code")
         private String code;
 
-        @NameInMap("Message")
-        private String message;
+        @NameInMap("CurrentStatus")
+        private String currentStatus;
 
         @NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("CurrentStatus")
-        private String currentStatus;
+        @NameInMap("Message")
+        private String message;
 
         @NameInMap("PreviousStatus")
         private String previousStatus;
 
         private InstanceResponse(Builder builder) {
             this.code = builder.code;
-            this.message = builder.message;
-            this.instanceId = builder.instanceId;
             this.currentStatus = builder.currentStatus;
+            this.instanceId = builder.instanceId;
+            this.message = builder.message;
             this.previousStatus = builder.previousStatus;
         }
 
@@ -111,10 +111,10 @@ public class RebootInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * @return message
+         * @return currentStatus
          */
-        public String getMessage() {
-            return this.message;
+        public String getCurrentStatus() {
+            return this.currentStatus;
         }
 
         /**
@@ -125,10 +125,10 @@ public class RebootInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * @return currentStatus
+         * @return message
          */
-        public String getCurrentStatus() {
-            return this.currentStatus;
+        public String getMessage() {
+            return this.message;
         }
 
         /**
@@ -140,13 +140,13 @@ public class RebootInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String code; 
-            private String message; 
-            private String instanceId; 
             private String currentStatus; 
+            private String instanceId; 
+            private String message; 
             private String previousStatus; 
 
             /**
-             * The error code of the instance operation result. The return value 200 is successful. For more information, see the following error codes.
+             * Code.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -154,23 +154,7 @@ public class RebootInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned for the instance operation. The Success returned value is successful. For more information, see the following error codes.
-             */
-            public Builder message(String message) {
-                this.message = message;
-                return this;
-            }
-
-            /**
-             * The ID of the instance.
-             */
-            public Builder instanceId(String instanceId) {
-                this.instanceId = instanceId;
-                return this;
-            }
-
-            /**
-             * The current status of the instance.
+             * CurrentStatus.
              */
             public Builder currentStatus(String currentStatus) {
                 this.currentStatus = currentStatus;
@@ -178,7 +162,23 @@ public class RebootInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the instance before the operation.
+             * InstanceId.
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * Message.
+             */
+            public Builder message(String message) {
+                this.message = message;
+                return this;
+            }
+
+            /**
+             * PreviousStatus.
              */
             public Builder previousStatus(String previousStatus) {
                 this.previousStatus = previousStatus;

@@ -12,6 +12,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeImageComponentsResponseBody</p>
  */
 public class DescribeImageComponentsResponseBody extends TeaModel {
+    @NameInMap("ImageComponent")
+    private ImageComponent imageComponent;
+
+    @NameInMap("MaxResults")
+    private Integer maxResults;
+
     @NameInMap("NextToken")
     private String nextToken;
 
@@ -21,18 +27,12 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("MaxResults")
-    private Integer maxResults;
-
-    @NameInMap("ImageComponent")
-    private ImageComponent imageComponent;
-
     private DescribeImageComponentsResponseBody(Builder builder) {
+        this.imageComponent = builder.imageComponent;
+        this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.requestId = builder.requestId;
         this.totalCount = builder.totalCount;
-        this.maxResults = builder.maxResults;
-        this.imageComponent = builder.imageComponent;
     }
 
     public static Builder builder() {
@@ -41,6 +41,20 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
 
     public static DescribeImageComponentsResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return imageComponent
+     */
+    public ImageComponent getImageComponent() {
+        return this.imageComponent;
+    }
+
+    /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
     }
 
     /**
@@ -64,53 +78,23 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    /**
-     * @return maxResults
-     */
-    public Integer getMaxResults() {
-        return this.maxResults;
-    }
-
-    /**
-     * @return imageComponent
-     */
-    public ImageComponent getImageComponent() {
-        return this.imageComponent;
-    }
-
     public static final class Builder {
+        private ImageComponent imageComponent; 
+        private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
-        private Integer maxResults; 
-        private ImageComponent imageComponent; 
 
         /**
-         * The Token returned by this call. For more information, see API description.
+         * ImageComponent.
          */
-        public Builder nextToken(String nextToken) {
-            this.nextToken = nextToken;
+        public Builder imageComponent(ImageComponent imageComponent) {
+            this.imageComponent = imageComponent;
             return this;
         }
 
         /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The number of returned image components.
-         */
-        public Builder totalCount(Integer totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-
-        /**
-         * The number of entries to return on each page.
+         * MaxResults.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -118,10 +102,26 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
         }
 
         /**
-         * The list of image components.
+         * NextToken.
          */
-        public Builder imageComponent(ImageComponent imageComponent) {
-            this.imageComponent = imageComponent;
+        public Builder nextToken(String nextToken) {
+            this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
@@ -132,15 +132,15 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("TagValue")
-        private String tagValue;
-
         @NameInMap("TagKey")
         private String tagKey;
 
+        @NameInMap("TagValue")
+        private String tagValue;
+
         private Tag(Builder builder) {
-            this.tagValue = builder.tagValue;
             this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
         }
 
         public static Builder builder() {
@@ -152,36 +152,36 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
         }
 
         /**
-         * @return tagValue
-         */
-        public String getTagValue() {
-            return this.tagValue;
-        }
-
-        /**
          * @return tagKey
          */
         public String getTagKey() {
             return this.tagKey;
         }
 
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
         public static final class Builder {
-            private String tagValue; 
             private String tagKey; 
+            private String tagValue; 
 
             /**
-             * The value of the tag.
+             * TagKey.
              */
-            public Builder tagValue(String tagValue) {
-                this.tagValue = tagValue;
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
                 return this;
             }
 
             /**
-             * The key of the tag.
+             * TagValue.
              */
-            public Builder tagKey(String tagKey) {
-                this.tagKey = tagKey;
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
                 return this;
             }
 
@@ -234,46 +234,46 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
 
     }
     public static class ImageComponentSet extends TeaModel {
+        @NameInMap("ComponentType")
+        private String componentType;
+
+        @NameInMap("Content")
+        private String content;
+
         @NameInMap("CreationTime")
         private String creationTime;
 
         @NameInMap("Description")
         private String description;
 
-        @NameInMap("SystemType")
-        private String systemType;
-
         @NameInMap("ImageComponentId")
         private String imageComponentId;
-
-        @NameInMap("ComponentType")
-        private String componentType;
-
-        @NameInMap("ResourceGroupId")
-        private String resourceGroupId;
 
         @NameInMap("Name")
         private String name;
 
-        @NameInMap("Content")
-        private String content;
-
         @NameInMap("Owner")
         private String owner;
+
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
+        @NameInMap("SystemType")
+        private String systemType;
 
         @NameInMap("Tags")
         private Tags tags;
 
         private ImageComponentSet(Builder builder) {
+            this.componentType = builder.componentType;
+            this.content = builder.content;
             this.creationTime = builder.creationTime;
             this.description = builder.description;
-            this.systemType = builder.systemType;
             this.imageComponentId = builder.imageComponentId;
-            this.componentType = builder.componentType;
-            this.resourceGroupId = builder.resourceGroupId;
             this.name = builder.name;
-            this.content = builder.content;
             this.owner = builder.owner;
+            this.resourceGroupId = builder.resourceGroupId;
+            this.systemType = builder.systemType;
             this.tags = builder.tags;
         }
 
@@ -283,6 +283,20 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
 
         public static ImageComponentSet create() {
             return builder().build();
+        }
+
+        /**
+         * @return componentType
+         */
+        public String getComponentType() {
+            return this.componentType;
+        }
+
+        /**
+         * @return content
+         */
+        public String getContent() {
+            return this.content;
         }
 
         /**
@@ -300,31 +314,10 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
         }
 
         /**
-         * @return systemType
-         */
-        public String getSystemType() {
-            return this.systemType;
-        }
-
-        /**
          * @return imageComponentId
          */
         public String getImageComponentId() {
             return this.imageComponentId;
-        }
-
-        /**
-         * @return componentType
-         */
-        public String getComponentType() {
-            return this.componentType;
-        }
-
-        /**
-         * @return resourceGroupId
-         */
-        public String getResourceGroupId() {
-            return this.resourceGroupId;
         }
 
         /**
@@ -335,17 +328,24 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
         }
 
         /**
-         * @return content
-         */
-        public String getContent() {
-            return this.content;
-        }
-
-        /**
          * @return owner
          */
         public String getOwner() {
             return this.owner;
+        }
+
+        /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
+         * @return systemType
+         */
+        public String getSystemType() {
+            return this.systemType;
         }
 
         /**
@@ -356,51 +356,19 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String componentType; 
+            private String content; 
             private String creationTime; 
             private String description; 
-            private String systemType; 
             private String imageComponentId; 
-            private String componentType; 
-            private String resourceGroupId; 
             private String name; 
-            private String content; 
             private String owner; 
+            private String resourceGroupId; 
+            private String systemType; 
             private Tags tags; 
 
             /**
-             * The time when the component was created.
-             */
-            public Builder creationTime(String creationTime) {
-                this.creationTime = creationTime;
-                return this;
-            }
-
-            /**
-             * The description.
-             */
-            public Builder description(String description) {
-                this.description = description;
-                return this;
-            }
-
-            /**
-             * The operating system supported by the component.
-             */
-            public Builder systemType(String systemType) {
-                this.systemType = systemType;
-                return this;
-            }
-
-            /**
-             * The ID of the image component.
-             */
-            public Builder imageComponentId(String imageComponentId) {
-                this.imageComponentId = imageComponentId;
-                return this;
-            }
-
-            /**
-             * The type of the component.
+             * ComponentType.
              */
             public Builder componentType(String componentType) {
                 this.componentType = componentType;
@@ -408,23 +376,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
-             */
-            public Builder resourceGroupId(String resourceGroupId) {
-                this.resourceGroupId = resourceGroupId;
-                return this;
-            }
-
-            /**
-             * The name of the component.
-             */
-            public Builder name(String name) {
-                this.name = name;
-                return this;
-            }
-
-            /**
-             * The content of the component.
+             * Content.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -432,11 +384,39 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the image component. Possible values:
-             * <p>
-             * 
-             * -SELF: The custom image component you created.
-             * -ALIYUN: The system component provided by Alibaba Cloud.
+             * CreationTime.
+             */
+            public Builder creationTime(String creationTime) {
+                this.creationTime = creationTime;
+                return this;
+            }
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * ImageComponentId.
+             */
+            public Builder imageComponentId(String imageComponentId) {
+                this.imageComponentId = imageComponentId;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Owner.
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -444,7 +424,23 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * The list of key-value pairs.
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * SystemType.
+             */
+            public Builder systemType(String systemType) {
+                this.systemType = systemType;
+                return this;
+            }
+
+            /**
+             * Tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;

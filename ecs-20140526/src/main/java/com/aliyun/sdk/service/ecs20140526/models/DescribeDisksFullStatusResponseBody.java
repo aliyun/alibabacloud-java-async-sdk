@@ -12,27 +12,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDisksFullStatusResponseBody</p>
  */
 public class DescribeDisksFullStatusResponseBody extends TeaModel {
+    @NameInMap("DiskFullStatusSet")
+    private DiskFullStatusSet diskFullStatusSet;
+
+    @NameInMap("PageNumber")
+    private Integer pageNumber;
+
     @NameInMap("PageSize")
     private Integer pageSize;
 
     @NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("PageNumber")
-    private Integer pageNumber;
-
     @NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("DiskFullStatusSet")
-    private DiskFullStatusSet diskFullStatusSet;
-
     private DescribeDisksFullStatusResponseBody(Builder builder) {
+        this.diskFullStatusSet = builder.diskFullStatusSet;
+        this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
-        this.pageNumber = builder.pageNumber;
         this.totalCount = builder.totalCount;
-        this.diskFullStatusSet = builder.diskFullStatusSet;
     }
 
     public static Builder builder() {
@@ -41,6 +41,20 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
 
     public static DescribeDisksFullStatusResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return diskFullStatusSet
+     */
+    public DiskFullStatusSet getDiskFullStatusSet() {
+        return this.diskFullStatusSet;
+    }
+
+    /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     /**
@@ -58,51 +72,29 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
     }
 
     /**
-     * @return pageNumber
-     */
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    /**
      * @return totalCount
      */
     public Integer getTotalCount() {
         return this.totalCount;
     }
 
-    /**
-     * @return diskFullStatusSet
-     */
-    public DiskFullStatusSet getDiskFullStatusSet() {
-        return this.diskFullStatusSet;
-    }
-
     public static final class Builder {
+        private DiskFullStatusSet diskFullStatusSet; 
+        private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private Integer pageNumber; 
         private Integer totalCount; 
-        private DiskFullStatusSet diskFullStatusSet; 
 
         /**
-         * The size of each page.
+         * DiskFullStatusSet.
          */
-        public Builder pageSize(Integer pageSize) {
-            this.pageSize = pageSize;
+        public Builder diskFullStatusSet(DiskFullStatusSet diskFullStatusSet) {
+            this.diskFullStatusSet = diskFullStatusSet;
             return this;
         }
 
         /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The page number.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -110,18 +102,26 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of all statuses.
+         * PageSize.
          */
-        public Builder totalCount(Integer totalCount) {
-            this.totalCount = totalCount;
+        public Builder pageSize(Integer pageSize) {
+            this.pageSize = pageSize;
             return this;
         }
 
         /**
-         * Block storage full-state array.
+         * RequestId.
          */
-        public Builder diskFullStatusSet(DiskFullStatusSet diskFullStatusSet) {
-            this.diskFullStatusSet = diskFullStatusSet;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
@@ -170,7 +170,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The code of the event type.
+             * Code.
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -178,12 +178,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the event type. Possible values:
-             * <p>
-             * -Degraded: the performance of block storage is Degraded.
-             * -SeverelyDegraded: the performance of block storage is severely degraded.
-             * -Stalled: block storage performance is severely affected.
-             * -ErrorDetected: The local disk is damaged.
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -198,27 +193,27 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
 
     }
     public static class DiskEventType extends TeaModel {
-        @NameInMap("EventId")
-        private String eventId;
-
         @NameInMap("EventEndTime")
         private String eventEndTime;
+
+        @NameInMap("EventId")
+        private String eventId;
 
         @NameInMap("EventTime")
         private String eventTime;
 
-        @NameInMap("ImpactLevel")
-        private String impactLevel;
-
         @NameInMap("EventType")
         private EventType eventType;
 
+        @NameInMap("ImpactLevel")
+        private String impactLevel;
+
         private DiskEventType(Builder builder) {
-            this.eventId = builder.eventId;
             this.eventEndTime = builder.eventEndTime;
+            this.eventId = builder.eventId;
             this.eventTime = builder.eventTime;
-            this.impactLevel = builder.impactLevel;
             this.eventType = builder.eventType;
+            this.impactLevel = builder.impactLevel;
         }
 
         public static Builder builder() {
@@ -230,17 +225,17 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
         }
 
         /**
-         * @return eventId
-         */
-        public String getEventId() {
-            return this.eventId;
-        }
-
-        /**
          * @return eventEndTime
          */
         public String getEventEndTime() {
             return this.eventEndTime;
+        }
+
+        /**
+         * @return eventId
+         */
+        public String getEventId() {
+            return this.eventId;
         }
 
         /**
@@ -251,36 +246,28 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
         }
 
         /**
-         * @return impactLevel
-         */
-        public String getImpactLevel() {
-            return this.impactLevel;
-        }
-
-        /**
          * @return eventType
          */
         public EventType getEventType() {
             return this.eventType;
         }
 
+        /**
+         * @return impactLevel
+         */
+        public String getImpactLevel() {
+            return this.impactLevel;
+        }
+
         public static final class Builder {
-            private String eventId; 
             private String eventEndTime; 
+            private String eventId; 
             private String eventTime; 
-            private String impactLevel; 
             private EventType eventType; 
+            private String impactLevel; 
 
             /**
-             * The ID of the block storage event.
-             */
-            public Builder eventId(String eventId) {
-                this.eventId = eventId;
-                return this;
-            }
-
-            /**
-             * The end time of the event.
+             * EventEndTime.
              */
             public Builder eventEndTime(String eventEndTime) {
                 this.eventEndTime = eventEndTime;
@@ -288,7 +275,15 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the event occurred.
+             * EventId.
+             */
+            public Builder eventId(String eventId) {
+                this.eventId = eventId;
+                return this;
+            }
+
+            /**
+             * EventTime.
              */
             public Builder eventTime(String eventTime) {
                 this.eventTime = eventTime;
@@ -296,18 +291,18 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The impact level.
+             * EventType.
              */
-            public Builder impactLevel(String impactLevel) {
-                this.impactLevel = impactLevel;
+            public Builder eventType(EventType eventType) {
+                this.eventType = eventType;
                 return this;
             }
 
             /**
-             * The type of the event.
+             * ImpactLevel.
              */
-            public Builder eventType(EventType eventType) {
-                this.eventType = eventType;
+            public Builder impactLevel(String impactLevel) {
+                this.impactLevel = impactLevel;
                 return this;
             }
 
@@ -359,67 +354,6 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
         } 
 
     }
-    public static class Status extends TeaModel {
-        @NameInMap("Code")
-        private Integer code;
-
-        @NameInMap("Name")
-        private String name;
-
-        private Status(Builder builder) {
-            this.code = builder.code;
-            this.name = builder.name;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Status create() {
-            return builder().build();
-        }
-
-        /**
-         * @return code
-         */
-        public Integer getCode() {
-            return this.code;
-        }
-
-        /**
-         * @return name
-         */
-        public String getName() {
-            return this.name;
-        }
-
-        public static final class Builder {
-            private Integer code; 
-            private String name; 
-
-            /**
-             * The lifecycle status code of block storage.
-             */
-            public Builder code(Integer code) {
-                this.code = code;
-                return this;
-            }
-
-            /**
-             * The name of the block storage lifecycle status.
-             */
-            public Builder name(String name) {
-                this.name = name;
-                return this;
-            }
-
-            public Status build() {
-                return new Status(this);
-            } 
-
-        } 
-
-    }
     public static class HealthStatus extends TeaModel {
         @NameInMap("Code")
         private Integer code;
@@ -459,7 +393,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The health status code of the block storage.
+             * Code.
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -467,7 +401,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the health status of the block storage device.
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -481,32 +415,93 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
         } 
 
     }
+    public static class Status extends TeaModel {
+        @NameInMap("Code")
+        private Integer code;
+
+        @NameInMap("Name")
+        private String name;
+
+        private Status(Builder builder) {
+            this.code = builder.code;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Status create() {
+            return builder().build();
+        }
+
+        /**
+         * @return code
+         */
+        public Integer getCode() {
+            return this.code;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private Integer code; 
+            private String name; 
+
+            /**
+             * Code.
+             */
+            public Builder code(Integer code) {
+                this.code = code;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public Status build() {
+                return new Status(this);
+            } 
+
+        } 
+
+    }
     public static class DiskFullStatusType extends TeaModel {
-        @NameInMap("DiskId")
-        private String diskId;
-
-        @NameInMap("InstanceId")
-        private String instanceId;
-
         @NameInMap("Device")
         private String device;
 
         @NameInMap("DiskEventSet")
         private DiskEventSet diskEventSet;
 
-        @NameInMap("Status")
-        private Status status;
+        @NameInMap("DiskId")
+        private String diskId;
 
         @NameInMap("HealthStatus")
         private HealthStatus healthStatus;
 
+        @NameInMap("InstanceId")
+        private String instanceId;
+
+        @NameInMap("Status")
+        private Status status;
+
         private DiskFullStatusType(Builder builder) {
-            this.diskId = builder.diskId;
-            this.instanceId = builder.instanceId;
             this.device = builder.device;
             this.diskEventSet = builder.diskEventSet;
-            this.status = builder.status;
+            this.diskId = builder.diskId;
             this.healthStatus = builder.healthStatus;
+            this.instanceId = builder.instanceId;
+            this.status = builder.status;
         }
 
         public static Builder builder() {
@@ -515,20 +510,6 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
 
         public static DiskFullStatusType create() {
             return builder().build();
-        }
-
-        /**
-         * @return diskId
-         */
-        public String getDiskId() {
-            return this.diskId;
-        }
-
-        /**
-         * @return instanceId
-         */
-        public String getInstanceId() {
-            return this.instanceId;
         }
 
         /**
@@ -546,10 +527,10 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
         }
 
         /**
-         * @return status
+         * @return diskId
          */
-        public Status getStatus() {
-            return this.status;
+        public String getDiskId() {
+            return this.diskId;
         }
 
         /**
@@ -559,37 +540,30 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             return this.healthStatus;
         }
 
+        /**
+         * @return instanceId
+         */
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        /**
+         * @return status
+         */
+        public Status getStatus() {
+            return this.status;
+        }
+
         public static final class Builder {
-            private String diskId; 
-            private String instanceId; 
             private String device; 
             private DiskEventSet diskEventSet; 
-            private Status status; 
+            private String diskId; 
             private HealthStatus healthStatus; 
+            private String instanceId; 
+            private Status status; 
 
             /**
-             * The ID of the block storage.
-             */
-            public Builder diskId(String diskId) {
-                this.diskId = diskId;
-                return this;
-            }
-
-            /**
-             * The ID of the instance.
-             */
-            public Builder instanceId(String instanceId) {
-                this.instanceId = instanceId;
-                return this;
-            }
-
-            /**
-             * The name of the device to which block storage is attached to the instance, for example,/dev/xvdb.
-             * <p>
-             * 
-             * This parameter is valid only when the value of the "Status" parameter is "in_us". This parameter is empty when it is in other states.
-             * 
-             * > This parameter will be discontinued soon. We recommend that you do not use this parameter to improve code compatibility.
+             * Device.
              */
             public Builder device(String device) {
                 this.device = device;
@@ -597,7 +571,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The array of block storage events.
+             * DiskEventSet.
              */
             public Builder diskEventSet(DiskEventSet diskEventSet) {
                 this.diskEventSet = diskEventSet;
@@ -605,18 +579,34 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The lifecycle status of block storage.
+             * DiskId.
              */
-            public Builder status(Status status) {
-                this.status = status;
+            public Builder diskId(String diskId) {
+                this.diskId = diskId;
                 return this;
             }
 
             /**
-             * The health status of the block storage.
+             * HealthStatus.
              */
             public Builder healthStatus(HealthStatus healthStatus) {
                 this.healthStatus = healthStatus;
+                return this;
+            }
+
+            /**
+             * InstanceId.
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(Status status) {
+                this.status = status;
                 return this;
             }
 

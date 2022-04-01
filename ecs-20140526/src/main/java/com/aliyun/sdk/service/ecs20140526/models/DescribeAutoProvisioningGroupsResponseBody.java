@@ -12,27 +12,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAutoProvisioningGroupsResponseBody</p>
  */
 public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
+    @NameInMap("AutoProvisioningGroups")
+    private AutoProvisioningGroups autoProvisioningGroups;
+
+    @NameInMap("PageNumber")
+    private Integer pageNumber;
+
     @NameInMap("PageSize")
     private Integer pageSize;
 
     @NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("PageNumber")
-    private Integer pageNumber;
-
     @NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("AutoProvisioningGroups")
-    private AutoProvisioningGroups autoProvisioningGroups;
-
     private DescribeAutoProvisioningGroupsResponseBody(Builder builder) {
+        this.autoProvisioningGroups = builder.autoProvisioningGroups;
+        this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
-        this.pageNumber = builder.pageNumber;
         this.totalCount = builder.totalCount;
-        this.autoProvisioningGroups = builder.autoProvisioningGroups;
     }
 
     public static Builder builder() {
@@ -41,6 +41,20 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
 
     public static DescribeAutoProvisioningGroupsResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return autoProvisioningGroups
+     */
+    public AutoProvisioningGroups getAutoProvisioningGroups() {
+        return this.autoProvisioningGroups;
+    }
+
+    /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     /**
@@ -58,51 +72,29 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
     }
 
     /**
-     * @return pageNumber
-     */
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    /**
      * @return totalCount
      */
     public Integer getTotalCount() {
         return this.totalCount;
     }
 
-    /**
-     * @return autoProvisioningGroups
-     */
-    public AutoProvisioningGroups getAutoProvisioningGroups() {
-        return this.autoProvisioningGroups;
-    }
-
     public static final class Builder {
+        private AutoProvisioningGroups autoProvisioningGroups; 
+        private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private Integer pageNumber; 
         private Integer totalCount; 
-        private AutoProvisioningGroups autoProvisioningGroups; 
 
         /**
-         * The number of rows per page.
+         * AutoProvisioningGroups.
          */
-        public Builder pageSize(Integer pageSize) {
-            this.pageSize = pageSize;
+        public Builder autoProvisioningGroups(AutoProvisioningGroups autoProvisioningGroups) {
+            this.autoProvisioningGroups = autoProvisioningGroups;
             return this;
         }
 
         /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The page number.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -110,18 +102,26 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of auto provisioning groups queried.
+         * PageSize.
          */
-        public Builder totalCount(Integer totalCount) {
-            this.totalCount = totalCount;
+        public Builder pageSize(Integer pageSize) {
+            this.pageSize = pageSize;
             return this;
         }
 
         /**
-         * The details of the auto provisioning group.
+         * RequestId.
          */
-        public Builder autoProvisioningGroups(AutoProvisioningGroups autoProvisioningGroups) {
-            this.autoProvisioningGroups = autoProvisioningGroups;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
@@ -132,6 +132,9 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
     } 
 
     public static class LaunchTemplateConfig extends TeaModel {
+        @NameInMap("InstanceType")
+        private String instanceType;
+
         @NameInMap("MaxPrice")
         private Float maxPrice;
 
@@ -144,15 +147,12 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
         @NameInMap("WeightedCapacity")
         private Float weightedCapacity;
 
-        @NameInMap("InstanceType")
-        private String instanceType;
-
         private LaunchTemplateConfig(Builder builder) {
+            this.instanceType = builder.instanceType;
             this.maxPrice = builder.maxPrice;
             this.priority = builder.priority;
             this.vSwitchId = builder.vSwitchId;
             this.weightedCapacity = builder.weightedCapacity;
-            this.instanceType = builder.instanceType;
         }
 
         public static Builder builder() {
@@ -161,6 +161,13 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
 
         public static LaunchTemplateConfig create() {
             return builder().build();
+        }
+
+        /**
+         * @return instanceType
+         */
+        public String getInstanceType() {
+            return this.instanceType;
         }
 
         /**
@@ -191,22 +198,23 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             return this.weightedCapacity;
         }
 
-        /**
-         * @return instanceType
-         */
-        public String getInstanceType() {
-            return this.instanceType;
-        }
-
         public static final class Builder {
+            private String instanceType; 
             private Float maxPrice; 
             private Float priority; 
             private String vSwitchId; 
             private Float weightedCapacity; 
-            private String instanceType; 
 
             /**
-             * The maximum price of the instance type corresponding to the extended launch template.
+             * InstanceType.
+             */
+            public Builder instanceType(String instanceType) {
+                this.instanceType = instanceType;
+                return this;
+            }
+
+            /**
+             * MaxPrice.
              */
             public Builder maxPrice(Float maxPrice) {
                 this.maxPrice = maxPrice;
@@ -214,7 +222,7 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The priority of the instance type corresponding to the extended launch template. The highest value is 0.
+             * Priority.
              */
             public Builder priority(Float priority) {
                 this.priority = priority;
@@ -222,7 +230,7 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch corresponding to the extended launch template.
+             * VSwitchId.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -230,18 +238,10 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The weight of the instance type corresponding to the extended launch template.
+             * WeightedCapacity.
              */
             public Builder weightedCapacity(Float weightedCapacity) {
                 this.weightedCapacity = weightedCapacity;
-                return this;
-            }
-
-            /**
-             * Expand the instance type corresponding to the launch template.
-             */
-            public Builder instanceType(String instanceType) {
-                this.instanceType = instanceType;
                 return this;
             }
 
@@ -293,99 +293,6 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
         } 
 
     }
-    public static class SpotOptions extends TeaModel {
-        @NameInMap("InstancePoolsToUseCount")
-        private Integer instancePoolsToUseCount;
-
-        @NameInMap("AllocationStrategy")
-        private String allocationStrategy;
-
-        @NameInMap("InstanceInterruptionBehavior")
-        private String instanceInterruptionBehavior;
-
-        private SpotOptions(Builder builder) {
-            this.instancePoolsToUseCount = builder.instancePoolsToUseCount;
-            this.allocationStrategy = builder.allocationStrategy;
-            this.instanceInterruptionBehavior = builder.instanceInterruptionBehavior;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static SpotOptions create() {
-            return builder().build();
-        }
-
-        /**
-         * @return instancePoolsToUseCount
-         */
-        public Integer getInstancePoolsToUseCount() {
-            return this.instancePoolsToUseCount;
-        }
-
-        /**
-         * @return allocationStrategy
-         */
-        public String getAllocationStrategy() {
-            return this.allocationStrategy;
-        }
-
-        /**
-         * @return instanceInterruptionBehavior
-         */
-        public String getInstanceInterruptionBehavior() {
-            return this.instanceInterruptionBehavior;
-        }
-
-        public static final class Builder {
-            private Integer instancePoolsToUseCount; 
-            private String allocationStrategy; 
-            private String instanceInterruptionBehavior; 
-
-            /**
-             * The auto provisioning group selects the instance type with the lowest price to create the number of instances.
-             * <p>
-             * 
-             * > This parameter is set when you create an auto provisioning group and cannot be modified.
-             */
-            public Builder instancePoolsToUseCount(Integer instancePoolsToUseCount) {
-                this.instancePoolsToUseCount = instancePoolsToUseCount;
-                return this;
-            }
-
-            /**
-             * The policy used to create preemptible instances. Possible values:
-             * <p>
-             * 
-             * -lowest-price: the cost optimization policy. Select the instance type with the lowest price.
-             * 
-             * -diversified: the distribution strategy of the balanced zone. Create instances in the zones specified by the extended launch template and distribute them evenly to each zone.
-             */
-            public Builder allocationStrategy(String allocationStrategy) {
-                this.allocationStrategy = allocationStrategy;
-                return this;
-            }
-
-            /**
-             * The next action after the excess preemptible instance is stopped. Possible values:
-             * <p>
-             * 
-             * -stop: the status is stopped.
-             * -terminate: release.
-             */
-            public Builder instanceInterruptionBehavior(String instanceInterruptionBehavior) {
-                this.instanceInterruptionBehavior = instanceInterruptionBehavior;
-                return this;
-            }
-
-            public SpotOptions build() {
-                return new SpotOptions(this);
-            } 
-
-        } 
-
-    }
     public static class PayAsYouGoOptions extends TeaModel {
         @NameInMap("AllocationStrategy")
         private String allocationStrategy;
@@ -413,14 +320,7 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             private String allocationStrategy; 
 
             /**
-             * The policy used to create a pay-as-you-go instance. Possible values:
-             * <p>
-             * 
-             * -lowest-price: the cost optimization policy. Select the instance type with the lowest price.
-             * 
-             * -prioritized: the priority policy. Create instances based on the Priority set by LaunchTemplateConfig.N.Priority.
-             * 
-             * > LaunchTemplateConfig.N.Priority is set when you create an auto provisioning group and cannot be modified.
+             * AllocationStrategy.
              */
             public Builder allocationStrategy(String allocationStrategy) {
                 this.allocationStrategy = allocationStrategy;
@@ -434,23 +334,104 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
         } 
 
     }
+    public static class SpotOptions extends TeaModel {
+        @NameInMap("AllocationStrategy")
+        private String allocationStrategy;
+
+        @NameInMap("InstanceInterruptionBehavior")
+        private String instanceInterruptionBehavior;
+
+        @NameInMap("InstancePoolsToUseCount")
+        private Integer instancePoolsToUseCount;
+
+        private SpotOptions(Builder builder) {
+            this.allocationStrategy = builder.allocationStrategy;
+            this.instanceInterruptionBehavior = builder.instanceInterruptionBehavior;
+            this.instancePoolsToUseCount = builder.instancePoolsToUseCount;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SpotOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return allocationStrategy
+         */
+        public String getAllocationStrategy() {
+            return this.allocationStrategy;
+        }
+
+        /**
+         * @return instanceInterruptionBehavior
+         */
+        public String getInstanceInterruptionBehavior() {
+            return this.instanceInterruptionBehavior;
+        }
+
+        /**
+         * @return instancePoolsToUseCount
+         */
+        public Integer getInstancePoolsToUseCount() {
+            return this.instancePoolsToUseCount;
+        }
+
+        public static final class Builder {
+            private String allocationStrategy; 
+            private String instanceInterruptionBehavior; 
+            private Integer instancePoolsToUseCount; 
+
+            /**
+             * AllocationStrategy.
+             */
+            public Builder allocationStrategy(String allocationStrategy) {
+                this.allocationStrategy = allocationStrategy;
+                return this;
+            }
+
+            /**
+             * InstanceInterruptionBehavior.
+             */
+            public Builder instanceInterruptionBehavior(String instanceInterruptionBehavior) {
+                this.instanceInterruptionBehavior = instanceInterruptionBehavior;
+                return this;
+            }
+
+            /**
+             * InstancePoolsToUseCount.
+             */
+            public Builder instancePoolsToUseCount(Integer instancePoolsToUseCount) {
+                this.instancePoolsToUseCount = instancePoolsToUseCount;
+                return this;
+            }
+
+            public SpotOptions build() {
+                return new SpotOptions(this);
+            } 
+
+        } 
+
+    }
     public static class TargetCapacitySpecification extends TeaModel {
-        @NameInMap("SpotTargetCapacity")
-        private Float spotTargetCapacity;
+        @NameInMap("DefaultTargetCapacityType")
+        private String defaultTargetCapacityType;
 
         @NameInMap("PayAsYouGoTargetCapacity")
         private Float payAsYouGoTargetCapacity;
 
-        @NameInMap("DefaultTargetCapacityType")
-        private String defaultTargetCapacityType;
+        @NameInMap("SpotTargetCapacity")
+        private Float spotTargetCapacity;
 
         @NameInMap("TotalTargetCapacity")
         private Float totalTargetCapacity;
 
         private TargetCapacitySpecification(Builder builder) {
-            this.spotTargetCapacity = builder.spotTargetCapacity;
-            this.payAsYouGoTargetCapacity = builder.payAsYouGoTargetCapacity;
             this.defaultTargetCapacityType = builder.defaultTargetCapacityType;
+            this.payAsYouGoTargetCapacity = builder.payAsYouGoTargetCapacity;
+            this.spotTargetCapacity = builder.spotTargetCapacity;
             this.totalTargetCapacity = builder.totalTargetCapacity;
         }
 
@@ -463,10 +444,10 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * @return spotTargetCapacity
+         * @return defaultTargetCapacityType
          */
-        public Float getSpotTargetCapacity() {
-            return this.spotTargetCapacity;
+        public String getDefaultTargetCapacityType() {
+            return this.defaultTargetCapacityType;
         }
 
         /**
@@ -477,10 +458,10 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * @return defaultTargetCapacityType
+         * @return spotTargetCapacity
          */
-        public String getDefaultTargetCapacityType() {
-            return this.defaultTargetCapacityType;
+        public Float getSpotTargetCapacity() {
+            return this.spotTargetCapacity;
         }
 
         /**
@@ -491,33 +472,13 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private Float spotTargetCapacity; 
-            private Float payAsYouGoTargetCapacity; 
             private String defaultTargetCapacityType; 
+            private Float payAsYouGoTargetCapacity; 
+            private Float spotTargetCapacity; 
             private Float totalTargetCapacity; 
 
             /**
-             * The target capacity of the preemptible instance.
-             */
-            public Builder spotTargetCapacity(Float spotTargetCapacity) {
-                this.spotTargetCapacity = spotTargetCapacity;
-                return this;
-            }
-
-            /**
-             * The target capacity of the pay-as-you-go instance.
-             */
-            public Builder payAsYouGoTargetCapacity(Float payAsYouGoTargetCapacity) {
-                this.payAsYouGoTargetCapacity = payAsYouGoTargetCapacity;
-                return this;
-            }
-
-            /**
-             * If the sum of PayAsYouGoTargetCapacity and SpotTargetCapacity is less than TotalTargetCapacity, the billing method of the specified differential capacity. Possible values:
-             * <p>
-             * 
-             * -PayAsYouGo: pay-as-you-go instance
-             * -Spot: preemptible instance
+             * DefaultTargetCapacityType.
              */
             public Builder defaultTargetCapacityType(String defaultTargetCapacityType) {
                 this.defaultTargetCapacityType = defaultTargetCapacityType;
@@ -525,12 +486,23 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The total capacity of the auto provisioning group. It consists of the following three parts:
-             * <p>
-             * 
-             * -PayAsYouGoTargetCapacity
-             * -SpotTargetCapacity
-             * -Differential capacity beyond PayAsYouGoTargetCapacity and SpotTargetCapacity
+             * PayAsYouGoTargetCapacity.
+             */
+            public Builder payAsYouGoTargetCapacity(Float payAsYouGoTargetCapacity) {
+                this.payAsYouGoTargetCapacity = payAsYouGoTargetCapacity;
+                return this;
+            }
+
+            /**
+             * SpotTargetCapacity.
+             */
+            public Builder spotTargetCapacity(Float spotTargetCapacity) {
+                this.spotTargetCapacity = spotTargetCapacity;
+                return this;
+            }
+
+            /**
+             * TotalTargetCapacity.
              */
             public Builder totalTargetCapacity(Float totalTargetCapacity) {
                 this.totalTargetCapacity = totalTargetCapacity;
@@ -545,47 +517,17 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
 
     }
     public static class AutoProvisioningGroup extends TeaModel {
-        @NameInMap("CreationTime")
-        private String creationTime;
+        @NameInMap("AutoProvisioningGroupId")
+        private String autoProvisioningGroupId;
 
         @NameInMap("AutoProvisioningGroupName")
         private String autoProvisioningGroupName;
 
-        @NameInMap("Status")
-        private String status;
-
-        @NameInMap("TerminateInstances")
-        private Boolean terminateInstances;
-
-        @NameInMap("MaxSpotPrice")
-        private Float maxSpotPrice;
-
-        @NameInMap("State")
-        private String state;
-
-        @NameInMap("LaunchTemplateId")
-        private String launchTemplateId;
-
-        @NameInMap("ValidFrom")
-        private String validFrom;
-
-        @NameInMap("LaunchTemplateVersion")
-        private String launchTemplateVersion;
-
-        @NameInMap("TerminateInstancesWithExpiration")
-        private Boolean terminateInstancesWithExpiration;
-
-        @NameInMap("RegionId")
-        private String regionId;
-
-        @NameInMap("ValidUntil")
-        private String validUntil;
-
         @NameInMap("AutoProvisioningGroupType")
         private String autoProvisioningGroupType;
 
-        @NameInMap("AutoProvisioningGroupId")
-        private String autoProvisioningGroupId;
+        @NameInMap("CreationTime")
+        private String creationTime;
 
         @NameInMap("ExcessCapacityTerminationPolicy")
         private String excessCapacityTerminationPolicy;
@@ -593,35 +535,65 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
         @NameInMap("LaunchTemplateConfigs")
         private LaunchTemplateConfigs launchTemplateConfigs;
 
-        @NameInMap("SpotOptions")
-        private SpotOptions spotOptions;
+        @NameInMap("LaunchTemplateId")
+        private String launchTemplateId;
+
+        @NameInMap("LaunchTemplateVersion")
+        private String launchTemplateVersion;
+
+        @NameInMap("MaxSpotPrice")
+        private Float maxSpotPrice;
 
         @NameInMap("PayAsYouGoOptions")
         private PayAsYouGoOptions payAsYouGoOptions;
 
+        @NameInMap("RegionId")
+        private String regionId;
+
+        @NameInMap("SpotOptions")
+        private SpotOptions spotOptions;
+
+        @NameInMap("State")
+        private String state;
+
+        @NameInMap("Status")
+        private String status;
+
         @NameInMap("TargetCapacitySpecification")
         private TargetCapacitySpecification targetCapacitySpecification;
 
+        @NameInMap("TerminateInstances")
+        private Boolean terminateInstances;
+
+        @NameInMap("TerminateInstancesWithExpiration")
+        private Boolean terminateInstancesWithExpiration;
+
+        @NameInMap("ValidFrom")
+        private String validFrom;
+
+        @NameInMap("ValidUntil")
+        private String validUntil;
+
         private AutoProvisioningGroup(Builder builder) {
-            this.creationTime = builder.creationTime;
-            this.autoProvisioningGroupName = builder.autoProvisioningGroupName;
-            this.status = builder.status;
-            this.terminateInstances = builder.terminateInstances;
-            this.maxSpotPrice = builder.maxSpotPrice;
-            this.state = builder.state;
-            this.launchTemplateId = builder.launchTemplateId;
-            this.validFrom = builder.validFrom;
-            this.launchTemplateVersion = builder.launchTemplateVersion;
-            this.terminateInstancesWithExpiration = builder.terminateInstancesWithExpiration;
-            this.regionId = builder.regionId;
-            this.validUntil = builder.validUntil;
-            this.autoProvisioningGroupType = builder.autoProvisioningGroupType;
             this.autoProvisioningGroupId = builder.autoProvisioningGroupId;
+            this.autoProvisioningGroupName = builder.autoProvisioningGroupName;
+            this.autoProvisioningGroupType = builder.autoProvisioningGroupType;
+            this.creationTime = builder.creationTime;
             this.excessCapacityTerminationPolicy = builder.excessCapacityTerminationPolicy;
             this.launchTemplateConfigs = builder.launchTemplateConfigs;
-            this.spotOptions = builder.spotOptions;
+            this.launchTemplateId = builder.launchTemplateId;
+            this.launchTemplateVersion = builder.launchTemplateVersion;
+            this.maxSpotPrice = builder.maxSpotPrice;
             this.payAsYouGoOptions = builder.payAsYouGoOptions;
+            this.regionId = builder.regionId;
+            this.spotOptions = builder.spotOptions;
+            this.state = builder.state;
+            this.status = builder.status;
             this.targetCapacitySpecification = builder.targetCapacitySpecification;
+            this.terminateInstances = builder.terminateInstances;
+            this.terminateInstancesWithExpiration = builder.terminateInstancesWithExpiration;
+            this.validFrom = builder.validFrom;
+            this.validUntil = builder.validUntil;
         }
 
         public static Builder builder() {
@@ -633,10 +605,10 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * @return creationTime
+         * @return autoProvisioningGroupId
          */
-        public String getCreationTime() {
-            return this.creationTime;
+        public String getAutoProvisioningGroupId() {
+            return this.autoProvisioningGroupId;
         }
 
         /**
@@ -647,76 +619,6 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * @return status
-         */
-        public String getStatus() {
-            return this.status;
-        }
-
-        /**
-         * @return terminateInstances
-         */
-        public Boolean getTerminateInstances() {
-            return this.terminateInstances;
-        }
-
-        /**
-         * @return maxSpotPrice
-         */
-        public Float getMaxSpotPrice() {
-            return this.maxSpotPrice;
-        }
-
-        /**
-         * @return state
-         */
-        public String getState() {
-            return this.state;
-        }
-
-        /**
-         * @return launchTemplateId
-         */
-        public String getLaunchTemplateId() {
-            return this.launchTemplateId;
-        }
-
-        /**
-         * @return validFrom
-         */
-        public String getValidFrom() {
-            return this.validFrom;
-        }
-
-        /**
-         * @return launchTemplateVersion
-         */
-        public String getLaunchTemplateVersion() {
-            return this.launchTemplateVersion;
-        }
-
-        /**
-         * @return terminateInstancesWithExpiration
-         */
-        public Boolean getTerminateInstancesWithExpiration() {
-            return this.terminateInstancesWithExpiration;
-        }
-
-        /**
-         * @return regionId
-         */
-        public String getRegionId() {
-            return this.regionId;
-        }
-
-        /**
-         * @return validUntil
-         */
-        public String getValidUntil() {
-            return this.validUntil;
-        }
-
-        /**
          * @return autoProvisioningGroupType
          */
         public String getAutoProvisioningGroupType() {
@@ -724,10 +626,10 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * @return autoProvisioningGroupId
+         * @return creationTime
          */
-        public String getAutoProvisioningGroupId() {
-            return this.autoProvisioningGroupId;
+        public String getCreationTime() {
+            return this.creationTime;
         }
 
         /**
@@ -745,10 +647,24 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * @return spotOptions
+         * @return launchTemplateId
          */
-        public SpotOptions getSpotOptions() {
-            return this.spotOptions;
+        public String getLaunchTemplateId() {
+            return this.launchTemplateId;
+        }
+
+        /**
+         * @return launchTemplateVersion
+         */
+        public String getLaunchTemplateVersion() {
+            return this.launchTemplateVersion;
+        }
+
+        /**
+         * @return maxSpotPrice
+         */
+        public Float getMaxSpotPrice() {
+            return this.maxSpotPrice;
         }
 
         /**
@@ -759,170 +675,91 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        /**
+         * @return spotOptions
+         */
+        public SpotOptions getSpotOptions() {
+            return this.spotOptions;
+        }
+
+        /**
+         * @return state
+         */
+        public String getState() {
+            return this.state;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
          * @return targetCapacitySpecification
          */
         public TargetCapacitySpecification getTargetCapacitySpecification() {
             return this.targetCapacitySpecification;
         }
 
+        /**
+         * @return terminateInstances
+         */
+        public Boolean getTerminateInstances() {
+            return this.terminateInstances;
+        }
+
+        /**
+         * @return terminateInstancesWithExpiration
+         */
+        public Boolean getTerminateInstancesWithExpiration() {
+            return this.terminateInstancesWithExpiration;
+        }
+
+        /**
+         * @return validFrom
+         */
+        public String getValidFrom() {
+            return this.validFrom;
+        }
+
+        /**
+         * @return validUntil
+         */
+        public String getValidUntil() {
+            return this.validUntil;
+        }
+
         public static final class Builder {
-            private String creationTime; 
-            private String autoProvisioningGroupName; 
-            private String status; 
-            private Boolean terminateInstances; 
-            private Float maxSpotPrice; 
-            private String state; 
-            private String launchTemplateId; 
-            private String validFrom; 
-            private String launchTemplateVersion; 
-            private Boolean terminateInstancesWithExpiration; 
-            private String regionId; 
-            private String validUntil; 
-            private String autoProvisioningGroupType; 
             private String autoProvisioningGroupId; 
+            private String autoProvisioningGroupName; 
+            private String autoProvisioningGroupType; 
+            private String creationTime; 
             private String excessCapacityTerminationPolicy; 
             private LaunchTemplateConfigs launchTemplateConfigs; 
-            private SpotOptions spotOptions; 
+            private String launchTemplateId; 
+            private String launchTemplateVersion; 
+            private Float maxSpotPrice; 
             private PayAsYouGoOptions payAsYouGoOptions; 
+            private String regionId; 
+            private SpotOptions spotOptions; 
+            private String state; 
+            private String status; 
             private TargetCapacitySpecification targetCapacitySpecification; 
+            private Boolean terminateInstances; 
+            private Boolean terminateInstancesWithExpiration; 
+            private String validFrom; 
+            private String validUntil; 
 
             /**
-             * The creation time.
-             */
-            public Builder creationTime(String creationTime) {
-                this.creationTime = creationTime;
-                return this;
-            }
-
-            /**
-             * The name of the auto provisioning group.
-             */
-            public Builder autoProvisioningGroupName(String autoProvisioningGroupName) {
-                this.autoProvisioningGroupName = autoProvisioningGroupName;
-                return this;
-            }
-
-            /**
-             * The status of the auto provisioning group. Possible values:
-             * <p>
-             * 
-             * -submitted: The auto provisioning group is created, but the scheduling task has not been started.
-             * -active: the auto provisioning group has started scheduling tasks.
-             * -deleted: the auto provisioning group has been deleted.
-             * -delete-running: the auto provisioning group is being deleted.
-             * -modifying: the auto provisioning group is being modified.
-             */
-            public Builder status(String status) {
-                this.status = status;
-                return this;
-            }
-
-            /**
-             * Specifies whether to release instances in an auto provisioning group. Possible values:
-             * <p>
-             * 
-             * -true: Releases instances in the group.
-             * -false: the instances in the group are retained.
-             */
-            public Builder terminateInstances(Boolean terminateInstances) {
-                this.terminateInstances = terminateInstances;
-                return this;
-            }
-
-            /**
-             * The highest price for a preemptible instance.
-             * <p>
-             * 
-             * > When MaxSpotPrice and LaunchTemplateConfig.N.MaxPrice are set at the same time, the lowest value prevail.
-             * 
-             * LaunchTemplateConfig.N.MaxPrice is set when you create an auto provisioning group and cannot be modified.
-             */
-            public Builder maxSpotPrice(Float maxSpotPrice) {
-                this.maxSpotPrice = maxSpotPrice;
-                return this;
-            }
-
-            /**
-             * The overall scheduling status of the auto provisioning group. Possible values:
-             * <p>
-             * 
-             * -fulfilled: the scheduling task has been completed.
-             * -pending-fulfillment: the instance is being created.
-             * -pending-termination: the instance is being removed.
-             * -error: An error occurred while scheduling and the instance cluster failed to be delivered.
-             */
-            public Builder state(String state) {
-                this.state = state;
-                return this;
-            }
-
-            /**
-             * The ID of the associated instance launch template.
-             */
-            public Builder launchTemplateId(String launchTemplateId) {
-                this.launchTemplateId = launchTemplateId;
-                return this;
-            }
-
-            /**
-             * The start time of the auto provisioning group. This parameter is used to determine the validity period in combination with "ValidUntil.
-             */
-            public Builder validFrom(String validFrom) {
-                this.validFrom = validFrom;
-                return this;
-            }
-
-            /**
-             * The version of the associated instance launch template.
-             */
-            public Builder launchTemplateVersion(String launchTemplateVersion) {
-                this.launchTemplateVersion = launchTemplateVersion;
-                return this;
-            }
-
-            /**
-             * Specifies whether to release instances in the auto provisioning group upon expiration. Possible values:
-             * <p>
-             * 
-             * -true: Releases instances in the group.
-             * -false: only instances in the group are removed from the auto provisioning group.
-             */
-            public Builder terminateInstancesWithExpiration(Boolean terminateInstancesWithExpiration) {
-                this.terminateInstancesWithExpiration = terminateInstancesWithExpiration;
-                return this;
-            }
-
-            /**
-             * The ID of the region.
-             */
-            public Builder regionId(String regionId) {
-                this.regionId = regionId;
-                return this;
-            }
-
-            /**
-             * The expiration time of the auto provisioning group. This parameter is used together with "ValidFrom" to determine the validity period.
-             */
-            public Builder validUntil(String validUntil) {
-                this.validUntil = validUntil;
-                return this;
-            }
-
-            /**
-             * The delivery type. Possible values:
-             * <p>
-             * 
-             * -request: one-time request. The provisioning group delivers the instance cluster only at startup and does not retry after scheduling fails.
-             * 
-             * -maintain: continuous supply. The provisioning group attempts to deliver the instance cluster at startup and monitors the real-time capacity. If the target capacity is not reached, it attempts to continue creating ECS instances.
-             */
-            public Builder autoProvisioningGroupType(String autoProvisioningGroupType) {
-                this.autoProvisioningGroupType = autoProvisioningGroupType;
-                return this;
-            }
-
-            /**
-             * The ID of the auto provisioning group.
+             * AutoProvisioningGroupId.
              */
             public Builder autoProvisioningGroupId(String autoProvisioningGroupId) {
                 this.autoProvisioningGroupId = autoProvisioningGroupId;
@@ -930,11 +767,31 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Whether to release the scale-in instance when the real-time capacity of the auto provisioning group exceeds the target capacity and the scale-in is triggered. Possible values:
-             * <p>
-             * 
-             * -termination: releases the scaled-In instance.
-             * -no-termination: only the scaled-in instances are removed from the auto provisioning group.
+             * AutoProvisioningGroupName.
+             */
+            public Builder autoProvisioningGroupName(String autoProvisioningGroupName) {
+                this.autoProvisioningGroupName = autoProvisioningGroupName;
+                return this;
+            }
+
+            /**
+             * AutoProvisioningGroupType.
+             */
+            public Builder autoProvisioningGroupType(String autoProvisioningGroupType) {
+                this.autoProvisioningGroupType = autoProvisioningGroupType;
+                return this;
+            }
+
+            /**
+             * CreationTime.
+             */
+            public Builder creationTime(String creationTime) {
+                this.creationTime = creationTime;
+                return this;
+            }
+
+            /**
+             * ExcessCapacityTerminationPolicy.
              */
             public Builder excessCapacityTerminationPolicy(String excessCapacityTerminationPolicy) {
                 this.excessCapacityTerminationPolicy = excessCapacityTerminationPolicy;
@@ -942,7 +799,7 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the extended launch template.
+             * LaunchTemplateConfigs.
              */
             public Builder launchTemplateConfigs(LaunchTemplateConfigs launchTemplateConfigs) {
                 this.launchTemplateConfigs = launchTemplateConfigs;
@@ -950,15 +807,31 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The policies related to preemptible instances.
+             * LaunchTemplateId.
              */
-            public Builder spotOptions(SpotOptions spotOptions) {
-                this.spotOptions = spotOptions;
+            public Builder launchTemplateId(String launchTemplateId) {
+                this.launchTemplateId = launchTemplateId;
                 return this;
             }
 
             /**
-             * Policies related to pay-as-you-go instances.
+             * LaunchTemplateVersion.
+             */
+            public Builder launchTemplateVersion(String launchTemplateVersion) {
+                this.launchTemplateVersion = launchTemplateVersion;
+                return this;
+            }
+
+            /**
+             * MaxSpotPrice.
+             */
+            public Builder maxSpotPrice(Float maxSpotPrice) {
+                this.maxSpotPrice = maxSpotPrice;
+                return this;
+            }
+
+            /**
+             * PayAsYouGoOptions.
              */
             public Builder payAsYouGoOptions(PayAsYouGoOptions payAsYouGoOptions) {
                 this.payAsYouGoOptions = payAsYouGoOptions;
@@ -966,10 +839,74 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The target capacity of the auto provisioning group.
+             * RegionId.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * SpotOptions.
+             */
+            public Builder spotOptions(SpotOptions spotOptions) {
+                this.spotOptions = spotOptions;
+                return this;
+            }
+
+            /**
+             * State.
+             */
+            public Builder state(String state) {
+                this.state = state;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * TargetCapacitySpecification.
              */
             public Builder targetCapacitySpecification(TargetCapacitySpecification targetCapacitySpecification) {
                 this.targetCapacitySpecification = targetCapacitySpecification;
+                return this;
+            }
+
+            /**
+             * TerminateInstances.
+             */
+            public Builder terminateInstances(Boolean terminateInstances) {
+                this.terminateInstances = terminateInstances;
+                return this;
+            }
+
+            /**
+             * TerminateInstancesWithExpiration.
+             */
+            public Builder terminateInstancesWithExpiration(Boolean terminateInstancesWithExpiration) {
+                this.terminateInstancesWithExpiration = terminateInstancesWithExpiration;
+                return this;
+            }
+
+            /**
+             * ValidFrom.
+             */
+            public Builder validFrom(String validFrom) {
+                this.validFrom = validFrom;
+                return this;
+            }
+
+            /**
+             * ValidUntil.
+             */
+            public Builder validUntil(String validUntil) {
+                this.validUntil = validUntil;
                 return this;
             }
 

@@ -13,24 +13,58 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateImagePipelineRequest extends Request {
     @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
-
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
-    @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
-
-    @Query
     @NameInMap("AddAccount")
     private java.util.List < Long > addAccount;
 
     @Query
-    @NameInMap("ToRegionId")
-    private java.util.List < String > toRegionId;
+    @NameInMap("BaseImage")
+    @Validation(required = true)
+    private String baseImage;
+
+    @Query
+    @NameInMap("BaseImageType")
+    @Validation(required = true)
+    private String baseImageType;
+
+    @Query
+    @NameInMap("BuildContent")
+    private String buildContent;
+
+    @Query
+    @NameInMap("ClientToken")
+    private String clientToken;
+
+    @Query
+    @NameInMap("DeleteInstanceOnFailure")
+    private Boolean deleteInstanceOnFailure;
+
+    @Query
+    @NameInMap("Description")
+    private String description;
+
+    @Query
+    @NameInMap("ImageName")
+    private String imageName;
+
+    @Query
+    @NameInMap("InstanceType")
+    private String instanceType;
+
+    @Query
+    @NameInMap("InternetMaxBandwidthOut")
+    private Integer internetMaxBandwidthOut;
+
+    @Query
+    @NameInMap("Name")
+    private String name;
+
+    @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
 
     @Query
     @NameInMap("RegionId")
@@ -42,76 +76,57 @@ public class CreateImagePipelineRequest extends Request {
     private String resourceGroupId;
 
     @Query
-    @NameInMap("BaseImageType")
-    @Validation(required = true)
-    private String baseImageType;
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
 
     @Query
-    @NameInMap("BaseImage")
-    @Validation(required = true)
-    private String baseImage;
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Name")
-    private String name;
-
-    @Query
-    @NameInMap("Description")
-    private String description;
-
-    @Query
-    @NameInMap("ClientToken")
-    private String clientToken;
-
-    @Query
-    @NameInMap("InternetMaxBandwidthOut")
-    private Integer internetMaxBandwidthOut;
-
-    @Query
-    @NameInMap("BuildContent")
-    private String buildContent;
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     @Query
     @NameInMap("SystemDiskSize")
     private Integer systemDiskSize;
 
     @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
+    @Query
+    @NameInMap("ToRegionId")
+    private java.util.List < String > toRegionId;
+
+    @Query
     @NameInMap("VSwitchId")
     private String vSwitchId;
 
-    @Query
-    @NameInMap("ImageName")
-    private String imageName;
-
-    @Query
-    @NameInMap("InstanceType")
-    private String instanceType;
-
-    @Query
-    @NameInMap("DeleteInstanceOnFailure")
-    private Boolean deleteInstanceOnFailure;
-
     private CreateImagePipelineRequest(Builder builder) {
         super(builder);
-        this.tag = builder.tag;
-        this.sourceRegionId = builder.sourceRegionId;
-        this.resourceOwnerId = builder.resourceOwnerId;
         this.addAccount = builder.addAccount;
-        this.toRegionId = builder.toRegionId;
-        this.regionId = builder.regionId;
-        this.resourceGroupId = builder.resourceGroupId;
-        this.baseImageType = builder.baseImageType;
         this.baseImage = builder.baseImage;
-        this.name = builder.name;
-        this.description = builder.description;
-        this.clientToken = builder.clientToken;
-        this.internetMaxBandwidthOut = builder.internetMaxBandwidthOut;
+        this.baseImageType = builder.baseImageType;
         this.buildContent = builder.buildContent;
-        this.systemDiskSize = builder.systemDiskSize;
-        this.vSwitchId = builder.vSwitchId;
+        this.clientToken = builder.clientToken;
+        this.deleteInstanceOnFailure = builder.deleteInstanceOnFailure;
+        this.description = builder.description;
         this.imageName = builder.imageName;
         this.instanceType = builder.instanceType;
-        this.deleteInstanceOnFailure = builder.deleteInstanceOnFailure;
+        this.internetMaxBandwidthOut = builder.internetMaxBandwidthOut;
+        this.name = builder.name;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.sourceRegionId = builder.sourceRegionId;
+        this.systemDiskSize = builder.systemDiskSize;
+        this.tag = builder.tag;
+        this.toRegionId = builder.toRegionId;
+        this.vSwitchId = builder.vSwitchId;
     }
 
     public static Builder builder() {
@@ -128,59 +143,10 @@ public class CreateImagePipelineRequest extends Request {
     }
 
     /**
-     * @return tag
-     */
-    public java.util.List < Tag> getTag() {
-        return this.tag;
-    }
-
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
-     * @return resourceOwnerId
-     */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    /**
      * @return addAccount
      */
     public java.util.List < Long > getAddAccount() {
         return this.addAccount;
-    }
-
-    /**
-     * @return toRegionId
-     */
-    public java.util.List < String > getToRegionId() {
-        return this.toRegionId;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return resourceGroupId
-     */
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
-    }
-
-    /**
-     * @return baseImageType
-     */
-    public String getBaseImageType() {
-        return this.baseImageType;
     }
 
     /**
@@ -191,31 +157,10 @@ public class CreateImagePipelineRequest extends Request {
     }
 
     /**
-     * @return name
+     * @return baseImageType
      */
-    public String getName() {
-        return this.name;
-    }
-
-    /**
-     * @return description
-     */
-    public String getDescription() {
-        return this.description;
-    }
-
-    /**
-     * @return clientToken
-     */
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    /**
-     * @return internetMaxBandwidthOut
-     */
-    public Integer getInternetMaxBandwidthOut() {
-        return this.internetMaxBandwidthOut;
+    public String getBaseImageType() {
+        return this.baseImageType;
     }
 
     /**
@@ -226,17 +171,24 @@ public class CreateImagePipelineRequest extends Request {
     }
 
     /**
-     * @return systemDiskSize
+     * @return clientToken
      */
-    public Integer getSystemDiskSize() {
-        return this.systemDiskSize;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
-     * @return vSwitchId
+     * @return deleteInstanceOnFailure
      */
-    public String getVSwitchId() {
-        return this.vSwitchId;
+    public Boolean getDeleteInstanceOnFailure() {
+        return this.deleteInstanceOnFailure;
+    }
+
+    /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
     }
 
     /**
@@ -254,32 +206,119 @@ public class CreateImagePipelineRequest extends Request {
     }
 
     /**
-     * @return deleteInstanceOnFailure
+     * @return internetMaxBandwidthOut
      */
-    public Boolean getDeleteInstanceOnFailure() {
-        return this.deleteInstanceOnFailure;
+    public Integer getInternetMaxBandwidthOut() {
+        return this.internetMaxBandwidthOut;
+    }
+
+    /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
+    }
+
+    /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
+    /**
+     * @return systemDiskSize
+     */
+    public Integer getSystemDiskSize() {
+        return this.systemDiskSize;
+    }
+
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
+     * @return toRegionId
+     */
+    public java.util.List < String > getToRegionId() {
+        return this.toRegionId;
+    }
+
+    /**
+     * @return vSwitchId
+     */
+    public String getVSwitchId() {
+        return this.vSwitchId;
     }
 
     public static final class Builder extends Request.Builder<CreateImagePipelineRequest, Builder> {
-        private java.util.List < Tag> tag; 
-        private String sourceRegionId; 
-        private Long resourceOwnerId; 
         private java.util.List < Long > addAccount; 
-        private java.util.List < String > toRegionId; 
-        private String regionId; 
-        private String resourceGroupId; 
-        private String baseImageType; 
         private String baseImage; 
-        private String name; 
-        private String description; 
-        private String clientToken; 
-        private Integer internetMaxBandwidthOut; 
+        private String baseImageType; 
         private String buildContent; 
-        private Integer systemDiskSize; 
-        private String vSwitchId; 
+        private String clientToken; 
+        private Boolean deleteInstanceOnFailure; 
+        private String description; 
         private String imageName; 
         private String instanceType; 
-        private Boolean deleteInstanceOnFailure; 
+        private Integer internetMaxBandwidthOut; 
+        private String name; 
+        private String ownerAccount; 
+        private Long ownerId; 
+        private String regionId; 
+        private String resourceGroupId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String sourceRegionId; 
+        private Integer systemDiskSize; 
+        private java.util.List < Tag> tag; 
+        private java.util.List < String > toRegionId; 
+        private String vSwitchId; 
 
         private Builder() {
             super();
@@ -287,42 +326,171 @@ public class CreateImagePipelineRequest extends Request {
 
         private Builder(CreateImagePipelineRequest request) {
             super(request);
-            this.tag = request.tag;
-            this.sourceRegionId = request.sourceRegionId;
-            this.resourceOwnerId = request.resourceOwnerId;
             this.addAccount = request.addAccount;
-            this.toRegionId = request.toRegionId;
-            this.regionId = request.regionId;
-            this.resourceGroupId = request.resourceGroupId;
-            this.baseImageType = request.baseImageType;
             this.baseImage = request.baseImage;
-            this.name = request.name;
-            this.description = request.description;
-            this.clientToken = request.clientToken;
-            this.internetMaxBandwidthOut = request.internetMaxBandwidthOut;
+            this.baseImageType = request.baseImageType;
             this.buildContent = request.buildContent;
-            this.systemDiskSize = request.systemDiskSize;
-            this.vSwitchId = request.vSwitchId;
+            this.clientToken = request.clientToken;
+            this.deleteInstanceOnFailure = request.deleteInstanceOnFailure;
+            this.description = request.description;
             this.imageName = request.imageName;
             this.instanceType = request.instanceType;
-            this.deleteInstanceOnFailure = request.deleteInstanceOnFailure;
+            this.internetMaxBandwidthOut = request.internetMaxBandwidthOut;
+            this.name = request.name;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceRegionId = request.sourceRegionId;
+            this.systemDiskSize = request.systemDiskSize;
+            this.tag = request.tag;
+            this.toRegionId = request.toRegionId;
+            this.vSwitchId = request.vSwitchId;
         } 
 
         /**
-         * Tag.
+         * AddAccount.
          */
-        public Builder tag(java.util.List < Tag> tag) {
-            this.putQueryParameter("Tag", tag);
-            this.tag = tag;
+        public Builder addAccount(java.util.List < Long > addAccount) {
+            this.putQueryParameter("AddAccount", addAccount);
+            this.addAccount = addAccount;
             return this;
         }
 
         /**
-         * SourceRegionId.
+         * BaseImage.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder baseImage(String baseImage) {
+            this.putQueryParameter("BaseImage", baseImage);
+            this.baseImage = baseImage;
+            return this;
+        }
+
+        /**
+         * BaseImageType.
+         */
+        public Builder baseImageType(String baseImageType) {
+            this.putQueryParameter("BaseImageType", baseImageType);
+            this.baseImageType = baseImageType;
+            return this;
+        }
+
+        /**
+         * BuildContent.
+         */
+        public Builder buildContent(String buildContent) {
+            this.putQueryParameter("BuildContent", buildContent);
+            this.buildContent = buildContent;
+            return this;
+        }
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * DeleteInstanceOnFailure.
+         */
+        public Builder deleteInstanceOnFailure(Boolean deleteInstanceOnFailure) {
+            this.putQueryParameter("DeleteInstanceOnFailure", deleteInstanceOnFailure);
+            this.deleteInstanceOnFailure = deleteInstanceOnFailure;
+            return this;
+        }
+
+        /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
+            return this;
+        }
+
+        /**
+         * ImageName.
+         */
+        public Builder imageName(String imageName) {
+            this.putQueryParameter("ImageName", imageName);
+            this.imageName = imageName;
+            return this;
+        }
+
+        /**
+         * InstanceType.
+         */
+        public Builder instanceType(String instanceType) {
+            this.putQueryParameter("InstanceType", instanceType);
+            this.instanceType = instanceType;
+            return this;
+        }
+
+        /**
+         * InternetMaxBandwidthOut.
+         */
+        public Builder internetMaxBandwidthOut(Integer internetMaxBandwidthOut) {
+            this.putQueryParameter("InternetMaxBandwidthOut", internetMaxBandwidthOut);
+            this.internetMaxBandwidthOut = internetMaxBandwidthOut;
+            return this;
+        }
+
+        /**
+         * Name.
+         */
+        public Builder name(String name) {
+            this.putQueryParameter("Name", name);
+            this.name = name;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
             return this;
         }
 
@@ -336,11 +504,29 @@ public class CreateImagePipelineRequest extends Request {
         }
 
         /**
-         * AddAccount.
+         * SourceRegionId.
          */
-        public Builder addAccount(java.util.List < Long > addAccount) {
-            this.putQueryParameter("AddAccount", addAccount);
-            this.addAccount = addAccount;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
+
+        /**
+         * SystemDiskSize.
+         */
+        public Builder systemDiskSize(Integer systemDiskSize) {
+            this.putQueryParameter("SystemDiskSize", systemDiskSize);
+            this.systemDiskSize = systemDiskSize;
+            return this;
+        }
+
+        /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
             return this;
         }
 
@@ -354,165 +540,11 @@ public class CreateImagePipelineRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the instance belongs. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The ID of the enterprise resource group.
-         */
-        public Builder resourceGroupId(String resourceGroupId) {
-            this.putQueryParameter("ResourceGroupId", resourceGroupId);
-            this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-
-        /**
-         * The type of the source image. Valid values:
-         * <p>
-         * 
-         * -IMAGE: IMAGE.
-         * -IMAGE_FAMILY: The Image family is.
-         */
-        public Builder baseImageType(String baseImageType) {
-            this.putQueryParameter("BaseImageType", baseImageType);
-            this.baseImageType = baseImageType;
-            return this;
-        }
-
-        /**
-         * The source image.
-         * <p>
-         * -When "BaseImageType = IMAGE", this parameter is set to the image ID.
-         * -When "BaseImageType = IMAGE_FAMILY ", this parameter is set to the name of the Image family.
-         */
-        public Builder baseImage(String baseImage) {
-            this.putQueryParameter("BaseImage", baseImage);
-            this.baseImage = baseImage;
-            return this;
-        }
-
-        /**
-         * The name of the template. The description must be 2 to 128 characters in length. It must start with a letter and cannot start with "http://" or "https. It can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).
-         * <p>
-         * 
-         * > If "Name" is not set, "ImagePipelineId" is returned by default.
-         */
-        public Builder name(String name) {
-            this.putQueryParameter("Name", name);
-            this.name = name;
-            return this;
-        }
-
-        /**
-         * The description. The description must be 2 to 256 characters in length and cannot start with "http:// "or "https.
-         */
-        public Builder description(String description) {
-            this.putQueryParameter("Description", description);
-            this.description = description;
-            return this;
-        }
-
-        /**
-         * Ensure the idempotence of the request. Generate a parameter value from your client. Make sure that the value is unique among different requests. **ClientToken** supports only ASCII characters and cannot exceed 64 characters. For more information, see [how to ensure idempotence](~~ 25693 ~~).
-         */
-        public Builder clientToken(String clientToken) {
-            this.putQueryParameter("ClientToken", clientToken);
-            this.clientToken = clientToken;
-            return this;
-        }
-
-        /**
-         * The Internet outbound bandwidth of the intermediate instance. Unit: Mbit/s. Valid values: 0 to 100.
-         * <p>
-         * 
-         * Default value: 0.
-         */
-        public Builder internetMaxBandwidthOut(Integer internetMaxBandwidthOut) {
-            this.putQueryParameter("InternetMaxBandwidthOut", internetMaxBandwidthOut);
-            this.internetMaxBandwidthOut = internetMaxBandwidthOut;
-            return this;
-        }
-
-        /**
-         * The content of the image template. The content size cannot exceed 16KB. A maximum of 127 commands are supported. For more information about supported commands, see API description.
-         */
-        public Builder buildContent(String buildContent) {
-            this.putQueryParameter("BuildContent", buildContent);
-            this.buildContent = buildContent;
-            return this;
-        }
-
-        /**
-         * The system disk size of the intermediate instance. Unit: GiB. Valid values: 20 to 500.
-         * <p>
-         * 
-         * Default value: 40
-         */
-        public Builder systemDiskSize(Integer systemDiskSize) {
-            this.putQueryParameter("SystemDiskSize", systemDiskSize);
-            this.systemDiskSize = systemDiskSize;
-            return this;
-        }
-
-        /**
-         * The vSwitch ID of the VPC.
-         * <p>
-         * 
-         * If you do not set the parameter value, new VPCs and vswitches are created by default. Make sure that the VPC resource quota under your account is sufficient. For more information, see [limits](~~ 27750 ~~).
+         * VSwitchId.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
             this.vSwitchId = vSwitchId;
-            return this;
-        }
-
-        /**
-         * The prefix of the target image name. The description must be 2 to 64 characters in length. It must start with a letter and cannot start with "http://" or "https. It can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).
-         * <p>
-         * 
-         * The complete image name is automatically concatenated with the prefix of the name and the ID of the build task ("ExecutionId"). The format is "{ ImageName }_{ ExecutionId}".
-         * 
-         * 
-         */
-        public Builder imageName(String imageName) {
-            this.putQueryParameter("ImageName", imageName);
-            this.imageName = imageName;
-            return this;
-        }
-
-        /**
-         * The instance type. You can call [DescribeInstanceTypes](~~ 25620 ~~) to query different instance types.
-         * <p>
-         * 
-         * If you do not set the parameter value, the instance type is automatically set based on the principle of minimum vCPU and memory, and is affected by the instance type inventory. For example, the ecs.g6.large instance type is selected by default. If the inventory is insufficient, the ecs.g6.xlarge instance type is selected.
-         */
-        public Builder instanceType(String instanceType) {
-            this.putQueryParameter("InstanceType", instanceType);
-            this.instanceType = instanceType;
-            return this;
-        }
-
-        /**
-         * Specifies whether to release the intermediate instance after the image fails to be built. Valid values:
-         * <p>
-         * 
-         * -true: release
-         * -false: do not release
-         * 
-         * Default value: true
-         * 
-         * > if the intermediate instance is not started, the instance is not retained by default.
-         * 
-         * 
-         */
-        public Builder deleteInstanceOnFailure(Boolean deleteInstanceOnFailure) {
-            this.putQueryParameter("DeleteInstanceOnFailure", deleteInstanceOnFailure);
-            this.deleteInstanceOnFailure = deleteInstanceOnFailure;
             return this;
         }
 
@@ -562,7 +594,7 @@ public class CreateImagePipelineRequest extends Request {
             private String value; 
 
             /**
-             * 标签键。N的取值范围：1~20。一旦传入该值，则不允许为空字符串。最多支持128个字符，不能以`aliyun`和`acs:`开头，不能包含`http://`或者`https://`。
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -570,7 +602,7 @@ public class CreateImagePipelineRequest extends Request {
             }
 
             /**
-             * 标签值。N的取值范围：1~20。一旦传入该值，可以为空字符串。最多支持128个字符，不能以`acs:`开头，不能包含`http://`或者`https://`。
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

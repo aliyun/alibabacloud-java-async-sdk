@@ -12,22 +12,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CopyImageRequest</p>
  */
 public class CopyImageRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
-    @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
-
-    @Query
-    @NameInMap("EncryptAlgorithm")
-    private String encryptAlgorithm;
-
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
-
     @Query
     @NameInMap("DestinationDescription")
     private String destinationDescription;
@@ -37,9 +21,33 @@ public class CopyImageRequest extends Request {
     private String destinationImageName;
 
     @Query
+    @NameInMap("DestinationRegionId")
+    private String destinationRegionId;
+
+    @Query
+    @NameInMap("EncryptAlgorithm")
+    private String encryptAlgorithm;
+
+    @Query
+    @NameInMap("Encrypted")
+    private Boolean encrypted;
+
+    @Query
     @NameInMap("ImageId")
     @Validation(required = true)
     private String imageId;
+
+    @Query
+    @NameInMap("KMSKeyId")
+    private String KMSKeyId;
+
+    @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
 
     @Query
     @NameInMap("RegionId")
@@ -47,35 +55,42 @@ public class CopyImageRequest extends Request {
     private String regionId;
 
     @Query
-    @NameInMap("DestinationRegionId")
-    private String destinationRegionId;
-
-    @Query
-    @NameInMap("Encrypted")
-    private Boolean encrypted;
-
-    @Query
-    @NameInMap("KMSKeyId")
-    private String KMSKeyId;
-
-    @Query
     @NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
+    @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
+    @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
     private CopyImageRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
-        this.resourceOwnerId = builder.resourceOwnerId;
-        this.encryptAlgorithm = builder.encryptAlgorithm;
-        this.tag = builder.tag;
         this.destinationDescription = builder.destinationDescription;
         this.destinationImageName = builder.destinationImageName;
-        this.imageId = builder.imageId;
-        this.regionId = builder.regionId;
         this.destinationRegionId = builder.destinationRegionId;
+        this.encryptAlgorithm = builder.encryptAlgorithm;
         this.encrypted = builder.encrypted;
+        this.imageId = builder.imageId;
         this.KMSKeyId = builder.KMSKeyId;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.sourceRegionId = builder.sourceRegionId;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -89,34 +104,6 @@ public class CopyImageRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
-     * @return resourceOwnerId
-     */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    /**
-     * @return encryptAlgorithm
-     */
-    public String getEncryptAlgorithm() {
-        return this.encryptAlgorithm;
-    }
-
-    /**
-     * @return tag
-     */
-    public java.util.List < Tag> getTag() {
-        return this.tag;
     }
 
     /**
@@ -134,24 +121,17 @@ public class CopyImageRequest extends Request {
     }
 
     /**
-     * @return imageId
-     */
-    public String getImageId() {
-        return this.imageId;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return destinationRegionId
      */
     public String getDestinationRegionId() {
         return this.destinationRegionId;
+    }
+
+    /**
+     * @return encryptAlgorithm
+     */
+    public String getEncryptAlgorithm() {
+        return this.encryptAlgorithm;
     }
 
     /**
@@ -162,10 +142,38 @@ public class CopyImageRequest extends Request {
     }
 
     /**
+     * @return imageId
+     */
+    public String getImageId() {
+        return this.imageId;
+    }
+
+    /**
      * @return KMSKeyId
      */
     public String getKMSKeyId() {
         return this.KMSKeyId;
+    }
+
+    /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -175,19 +183,50 @@ public class CopyImageRequest extends Request {
         return this.resourceGroupId;
     }
 
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
     public static final class Builder extends Request.Builder<CopyImageRequest, Builder> {
-        private String sourceRegionId; 
-        private Long resourceOwnerId; 
-        private String encryptAlgorithm; 
-        private java.util.List < Tag> tag; 
         private String destinationDescription; 
         private String destinationImageName; 
-        private String imageId; 
-        private String regionId; 
         private String destinationRegionId; 
+        private String encryptAlgorithm; 
         private Boolean encrypted; 
+        private String imageId; 
         private String KMSKeyId; 
+        private String ownerAccount; 
+        private Long ownerId; 
+        private String regionId; 
         private String resourceGroupId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String sourceRegionId; 
+        private java.util.List < Tag> tag; 
 
         private Builder() {
             super();
@@ -195,35 +234,47 @@ public class CopyImageRequest extends Request {
 
         private Builder(CopyImageRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
-            this.resourceOwnerId = request.resourceOwnerId;
-            this.encryptAlgorithm = request.encryptAlgorithm;
-            this.tag = request.tag;
             this.destinationDescription = request.destinationDescription;
             this.destinationImageName = request.destinationImageName;
-            this.imageId = request.imageId;
-            this.regionId = request.regionId;
             this.destinationRegionId = request.destinationRegionId;
+            this.encryptAlgorithm = request.encryptAlgorithm;
             this.encrypted = request.encrypted;
+            this.imageId = request.imageId;
             this.KMSKeyId = request.KMSKeyId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceRegionId = request.sourceRegionId;
+            this.tag = request.tag;
         } 
 
         /**
-         * SourceRegionId.
+         * DestinationDescription.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder destinationDescription(String destinationDescription) {
+            this.putQueryParameter("DestinationDescription", destinationDescription);
+            this.destinationDescription = destinationDescription;
             return this;
         }
 
         /**
-         * ResourceOwnerId.
+         * DestinationImageName.
          */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
+        public Builder destinationImageName(String destinationImageName) {
+            this.putQueryParameter("DestinationImageName", destinationImageName);
+            this.destinationImageName = destinationImageName;
+            return this;
+        }
+
+        /**
+         * DestinationRegionId.
+         */
+        public Builder destinationRegionId(String destinationRegionId) {
+            this.putQueryParameter("DestinationRegionId", destinationRegionId);
+            this.destinationRegionId = destinationRegionId;
             return this;
         }
 
@@ -237,64 +288,7 @@ public class CopyImageRequest extends Request {
         }
 
         /**
-         * Tag.
-         */
-        public Builder tag(java.util.List < Tag> tag) {
-            this.putQueryParameter("Tag", tag);
-            this.tag = tag;
-            return this;
-        }
-
-        /**
-         * The description of the copied image. The description must be 2 to 256 characters in length and cannot start with "http:// "or "https.
-         */
-        public Builder destinationDescription(String destinationDescription) {
-            this.putQueryParameter("DestinationDescription", destinationDescription);
-            this.destinationDescription = destinationDescription;
-            return this;
-        }
-
-        /**
-         * The name of the copied image. The description must be 2 to 128 characters in length. It must start with a letter and cannot start with "aliyun" or "acs:". It cannot contain "http://" or "https://". It can contain numbers, periods (.), colons (:), underscores (_), and hyphens (-).
-         */
-        public Builder destinationImageName(String destinationImageName) {
-            this.putQueryParameter("DestinationImageName", destinationImageName);
-            this.destinationImageName = destinationImageName;
-            return this;
-        }
-
-        /**
-         * The ID of the custom image.
-         */
-        public Builder imageId(String imageId) {
-            this.putQueryParameter("ImageId", imageId);
-            this.imageId = imageId;
-            return this;
-        }
-
-        /**
-         * The ID of the region from which the image is defined. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The ID of the destination region.
-         */
-        public Builder destinationRegionId(String destinationRegionId) {
-            this.putQueryParameter("DestinationRegionId", destinationRegionId);
-            this.destinationRegionId = destinationRegionId;
-            return this;
-        }
-
-        /**
-         * Specifies whether to encrypt the copied image.
-         * <p>
-         * 
-         * Default value: false.
+         * Encrypted.
          */
         public Builder encrypted(Boolean encrypted) {
             this.putQueryParameter("Encrypted", encrypted);
@@ -303,7 +297,16 @@ public class CopyImageRequest extends Request {
         }
 
         /**
-         * The accesskey ID used to encrypt the image.
+         * ImageId.
+         */
+        public Builder imageId(String imageId) {
+            this.putQueryParameter("ImageId", imageId);
+            this.imageId = imageId;
+            return this;
+        }
+
+        /**
+         * KMSKeyId.
          */
         public Builder KMSKeyId(String KMSKeyId) {
             this.putQueryParameter("KMSKeyId", KMSKeyId);
@@ -312,14 +315,74 @@ public class CopyImageRequest extends Request {
         }
 
         /**
-         * The ID of the Resource Group of the copied image. If this parameter is not set, the copied image belongs to the default resource group.
-         * <p>
-         * 
-         * > If you are using a RAM User to call this operation and the value of "ResourceGroupId" is empty, note that if the RAM User does not have the default Resource Group permission, an error message "Forbbiden: User not authorized to operate on the specified resource" is returned ". You can call this operation again after setting the ID of the resource group supported by the RAM user or granting the default resource group permission to the RAM user through the corresponding Alibaba cloud account.
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
             this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
+
+        /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
             return this;
         }
 
@@ -369,7 +432,7 @@ public class CopyImageRequest extends Request {
             private String value; 
 
             /**
-             * 复制后的镜像的标签键。N的取值范围为1~20。一旦传入该值，则不允许为空字符串。最多支持128个字符，不能以`aliyun`或`acs:`开头，不能包含`http://`或`https://`。
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -377,7 +440,7 @@ public class CopyImageRequest extends Request {
             }
 
             /**
-             * 复制后的镜像的标签值。N的取值范围为1~20。一旦传入该值，可以为空字符串。最多支持128个字符，不能以`acs:`开头，不能包含`http://`或`https://`。
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

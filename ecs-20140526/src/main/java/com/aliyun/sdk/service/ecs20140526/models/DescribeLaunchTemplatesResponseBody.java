@@ -12,27 +12,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLaunchTemplatesResponseBody</p>
  */
 public class DescribeLaunchTemplatesResponseBody extends TeaModel {
+    @NameInMap("LaunchTemplateSets")
+    private LaunchTemplateSets launchTemplateSets;
+
+    @NameInMap("PageNumber")
+    private Integer pageNumber;
+
     @NameInMap("PageSize")
     private Integer pageSize;
 
     @NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("PageNumber")
-    private Integer pageNumber;
-
     @NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("LaunchTemplateSets")
-    private LaunchTemplateSets launchTemplateSets;
-
     private DescribeLaunchTemplatesResponseBody(Builder builder) {
+        this.launchTemplateSets = builder.launchTemplateSets;
+        this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
-        this.pageNumber = builder.pageNumber;
         this.totalCount = builder.totalCount;
-        this.launchTemplateSets = builder.launchTemplateSets;
     }
 
     public static Builder builder() {
@@ -41,6 +41,20 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
 
     public static DescribeLaunchTemplatesResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return launchTemplateSets
+     */
+    public LaunchTemplateSets getLaunchTemplateSets() {
+        return this.launchTemplateSets;
+    }
+
+    /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     /**
@@ -58,51 +72,29 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
     }
 
     /**
-     * @return pageNumber
-     */
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    /**
      * @return totalCount
      */
     public Integer getTotalCount() {
         return this.totalCount;
     }
 
-    /**
-     * @return launchTemplateSets
-     */
-    public LaunchTemplateSets getLaunchTemplateSets() {
-        return this.launchTemplateSets;
-    }
-
     public static final class Builder {
+        private LaunchTemplateSets launchTemplateSets; 
+        private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private Integer pageNumber; 
         private Integer totalCount; 
-        private LaunchTemplateSets launchTemplateSets; 
 
         /**
-         * The number of entries to return on each page.
+         * LaunchTemplateSets.
          */
-        public Builder pageSize(Integer pageSize) {
-            this.pageSize = pageSize;
+        public Builder launchTemplateSets(LaunchTemplateSets launchTemplateSets) {
+            this.launchTemplateSets = launchTemplateSets;
             return this;
         }
 
         /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The current page number.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -110,18 +102,26 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of instance launch templates.
+         * PageSize.
          */
-        public Builder totalCount(Integer totalCount) {
-            this.totalCount = totalCount;
+        public Builder pageSize(Integer pageSize) {
+            this.pageSize = pageSize;
             return this;
         }
 
         /**
-         * A collection of instance launch templates.
+         * RequestId.
          */
-        public Builder launchTemplateSets(LaunchTemplateSets launchTemplateSets) {
-            this.launchTemplateSets = launchTemplateSets;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
@@ -132,15 +132,15 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("TagValue")
-        private String tagValue;
-
         @NameInMap("TagKey")
         private String tagKey;
 
+        @NameInMap("TagValue")
+        private String tagValue;
+
         private Tag(Builder builder) {
-            this.tagValue = builder.tagValue;
             this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
         }
 
         public static Builder builder() {
@@ -152,36 +152,36 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * @return tagValue
-         */
-        public String getTagValue() {
-            return this.tagValue;
-        }
-
-        /**
          * @return tagKey
          */
         public String getTagKey() {
             return this.tagKey;
         }
 
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
         public static final class Builder {
-            private String tagValue; 
             private String tagKey; 
+            private String tagValue; 
 
             /**
-             * The tag value of the launch template.
+             * TagKey.
              */
-            public Builder tagValue(String tagValue) {
-                this.tagValue = tagValue;
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
                 return this;
             }
 
             /**
-             * The tag key of the launch template.
+             * TagValue.
              */
-            public Builder tagKey(String tagKey) {
-                this.tagKey = tagKey;
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
                 return this;
             }
 
@@ -234,42 +234,42 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
 
     }
     public static class LaunchTemplateSet extends TeaModel {
-        @NameInMap("LaunchTemplateName")
-        private String launchTemplateName;
-
-        @NameInMap("DefaultVersionNumber")
-        private Long defaultVersionNumber;
-
-        @NameInMap("ModifiedTime")
-        private String modifiedTime;
-
-        @NameInMap("LaunchTemplateId")
-        private String launchTemplateId;
-
         @NameInMap("CreateTime")
         private String createTime;
-
-        @NameInMap("ResourceGroupId")
-        private String resourceGroupId;
 
         @NameInMap("CreatedBy")
         private String createdBy;
 
+        @NameInMap("DefaultVersionNumber")
+        private Long defaultVersionNumber;
+
         @NameInMap("LatestVersionNumber")
         private Long latestVersionNumber;
+
+        @NameInMap("LaunchTemplateId")
+        private String launchTemplateId;
+
+        @NameInMap("LaunchTemplateName")
+        private String launchTemplateName;
+
+        @NameInMap("ModifiedTime")
+        private String modifiedTime;
+
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
 
         @NameInMap("Tags")
         private Tags tags;
 
         private LaunchTemplateSet(Builder builder) {
-            this.launchTemplateName = builder.launchTemplateName;
-            this.defaultVersionNumber = builder.defaultVersionNumber;
-            this.modifiedTime = builder.modifiedTime;
-            this.launchTemplateId = builder.launchTemplateId;
             this.createTime = builder.createTime;
-            this.resourceGroupId = builder.resourceGroupId;
             this.createdBy = builder.createdBy;
+            this.defaultVersionNumber = builder.defaultVersionNumber;
             this.latestVersionNumber = builder.latestVersionNumber;
+            this.launchTemplateId = builder.launchTemplateId;
+            this.launchTemplateName = builder.launchTemplateName;
+            this.modifiedTime = builder.modifiedTime;
+            this.resourceGroupId = builder.resourceGroupId;
             this.tags = builder.tags;
         }
 
@@ -282,45 +282,10 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * @return launchTemplateName
-         */
-        public String getLaunchTemplateName() {
-            return this.launchTemplateName;
-        }
-
-        /**
-         * @return defaultVersionNumber
-         */
-        public Long getDefaultVersionNumber() {
-            return this.defaultVersionNumber;
-        }
-
-        /**
-         * @return modifiedTime
-         */
-        public String getModifiedTime() {
-            return this.modifiedTime;
-        }
-
-        /**
-         * @return launchTemplateId
-         */
-        public String getLaunchTemplateId() {
-            return this.launchTemplateId;
-        }
-
-        /**
          * @return createTime
          */
         public String getCreateTime() {
             return this.createTime;
-        }
-
-        /**
-         * @return resourceGroupId
-         */
-        public String getResourceGroupId() {
-            return this.resourceGroupId;
         }
 
         /**
@@ -331,10 +296,45 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
         }
 
         /**
+         * @return defaultVersionNumber
+         */
+        public Long getDefaultVersionNumber() {
+            return this.defaultVersionNumber;
+        }
+
+        /**
          * @return latestVersionNumber
          */
         public Long getLatestVersionNumber() {
             return this.latestVersionNumber;
+        }
+
+        /**
+         * @return launchTemplateId
+         */
+        public String getLaunchTemplateId() {
+            return this.launchTemplateId;
+        }
+
+        /**
+         * @return launchTemplateName
+         */
+        public String getLaunchTemplateName() {
+            return this.launchTemplateName;
+        }
+
+        /**
+         * @return modifiedTime
+         */
+        public String getModifiedTime() {
+            return this.modifiedTime;
+        }
+
+        /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         /**
@@ -345,50 +345,18 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private String launchTemplateName; 
-            private Long defaultVersionNumber; 
-            private String modifiedTime; 
-            private String launchTemplateId; 
             private String createTime; 
-            private String resourceGroupId; 
             private String createdBy; 
+            private Long defaultVersionNumber; 
             private Long latestVersionNumber; 
+            private String launchTemplateId; 
+            private String launchTemplateName; 
+            private String modifiedTime; 
+            private String resourceGroupId; 
             private Tags tags; 
 
             /**
-             * The name of the template.
-             */
-            public Builder launchTemplateName(String launchTemplateName) {
-                this.launchTemplateName = launchTemplateName;
-                return this;
-            }
-
-            /**
-             * The default version of the template.
-             */
-            public Builder defaultVersionNumber(Long defaultVersionNumber) {
-                this.defaultVersionNumber = defaultVersionNumber;
-                return this;
-            }
-
-            /**
-             * The modification time.
-             */
-            public Builder modifiedTime(String modifiedTime) {
-                this.modifiedTime = modifiedTime;
-                return this;
-            }
-
-            /**
-             * The ID of the template.
-             */
-            public Builder launchTemplateId(String launchTemplateId) {
-                this.launchTemplateId = launchTemplateId;
-                return this;
-            }
-
-            /**
-             * The time when the instance launch template was created.
+             * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -396,15 +364,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the launch template belongs.
-             */
-            public Builder resourceGroupId(String resourceGroupId) {
-                this.resourceGroupId = resourceGroupId;
-                return this;
-            }
-
-            /**
-             * The creator of the template.
+             * CreatedBy.
              */
             public Builder createdBy(String createdBy) {
                 this.createdBy = createdBy;
@@ -412,7 +372,15 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The latest version of the template.
+             * DefaultVersionNumber.
+             */
+            public Builder defaultVersionNumber(Long defaultVersionNumber) {
+                this.defaultVersionNumber = defaultVersionNumber;
+                return this;
+            }
+
+            /**
+             * LatestVersionNumber.
              */
             public Builder latestVersionNumber(Long latestVersionNumber) {
                 this.latestVersionNumber = latestVersionNumber;
@@ -420,7 +388,39 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag pair attribute of the launch template.
+             * LaunchTemplateId.
+             */
+            public Builder launchTemplateId(String launchTemplateId) {
+                this.launchTemplateId = launchTemplateId;
+                return this;
+            }
+
+            /**
+             * LaunchTemplateName.
+             */
+            public Builder launchTemplateName(String launchTemplateName) {
+                this.launchTemplateName = launchTemplateName;
+                return this;
+            }
+
+            /**
+             * ModifiedTime.
+             */
+            public Builder modifiedTime(String modifiedTime) {
+                this.modifiedTime = modifiedTime;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * Tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;

@@ -12,30 +12,45 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteActivationRequest</p>
  */
 public class DeleteActivationRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
-    @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
-
     @Query
     @NameInMap("ActivationId")
     @Validation(required = true)
     private String activationId;
 
     @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
+
+    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
 
+    @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     private DeleteActivationRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
-        this.resourceOwnerId = builder.resourceOwnerId;
         this.activationId = builder.activationId;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -52,10 +67,38 @@ public class DeleteActivationRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return activationId
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getActivationId() {
+        return this.activationId;
+    }
+
+    /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
     }
 
     /**
@@ -66,24 +109,20 @@ public class DeleteActivationRequest extends Request {
     }
 
     /**
-     * @return activationId
+     * @return sourceRegionId
      */
-    public String getActivationId() {
-        return this.activationId;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public static final class Builder extends Request.Builder<DeleteActivationRequest, Builder> {
-        private String sourceRegionId; 
-        private Long resourceOwnerId; 
         private String activationId; 
+        private String ownerAccount; 
+        private Long ownerId; 
         private String regionId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -91,18 +130,57 @@ public class DeleteActivationRequest extends Request {
 
         private Builder(DeleteActivationRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
-            this.resourceOwnerId = request.resourceOwnerId;
             this.activationId = request.activationId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
             this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
-         * SourceRegionId.
+         * ActivationId.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder activationId(String activationId) {
+            this.putQueryParameter("ActivationId", activationId);
+            this.activationId = activationId;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
             return this;
         }
 
@@ -116,23 +194,11 @@ public class DeleteActivationRequest extends Request {
         }
 
         /**
-         * The ID of the unused activation code.
+         * SourceRegionId.
          */
-        public Builder activationId(String activationId) {
-            this.putQueryParameter("ActivationId", activationId);
-            this.activationId = activationId;
-            return this;
-        }
-
-        /**
-         * The ID of the region. Supported regions: china (qingdao), china (beijing), china (zhangjiakou), china (hohhot), china (hangzhou), china (shanghai), china (shenzhen), china (heyuan), and china (hong kong).
-         * <p>
-         * 
-         * You can call [DescribeRegions](~~ 25609 ~~) to view the region ID and other information.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

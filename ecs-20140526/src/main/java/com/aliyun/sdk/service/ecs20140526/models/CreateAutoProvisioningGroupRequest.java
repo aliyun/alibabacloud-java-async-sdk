@@ -17,36 +17,68 @@ public class CreateAutoProvisioningGroupRequest extends Request {
     private LaunchConfiguration launchConfiguration;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
+    @NameInMap("AutoProvisioningGroupName")
+    private String autoProvisioningGroupName;
 
     @Query
-    @NameInMap("ResourceOwnerAccount")
-    private String resourceOwnerAccount;
+    @NameInMap("AutoProvisioningGroupType")
+    private String autoProvisioningGroupType;
 
     @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
-
-    @Query
-    @NameInMap("OwnerAccount")
-    private String ownerAccount;
-
-    @Query
-    @NameInMap("LaunchTemplateConfig")
-    private java.util.List < LaunchTemplateConfig> launchTemplateConfig;
-
-    @Query
-    @NameInMap("SystemDiskConfig")
-    private java.util.List < SystemDiskConfig> systemDiskConfig;
+    @NameInMap("ClientToken")
+    private String clientToken;
 
     @Query
     @NameInMap("DataDiskConfig")
     private java.util.List < DataDiskConfig> dataDiskConfig;
 
     @Query
-    @NameInMap("SpotInstanceInterruptionBehavior")
-    private String spotInstanceInterruptionBehavior;
+    @NameInMap("DefaultTargetCapacityType")
+    private String defaultTargetCapacityType;
+
+    @Query
+    @NameInMap("Description")
+    private String description;
+
+    @Query
+    @NameInMap("ExcessCapacityTerminationPolicy")
+    private String excessCapacityTerminationPolicy;
+
+    @Query
+    @NameInMap("LaunchTemplateConfig")
+    private java.util.List < LaunchTemplateConfig> launchTemplateConfig;
+
+    @Query
+    @NameInMap("LaunchTemplateId")
+    private String launchTemplateId;
+
+    @Query
+    @NameInMap("LaunchTemplateVersion")
+    private String launchTemplateVersion;
+
+    @Query
+    @NameInMap("MaxSpotPrice")
+    private Float maxSpotPrice;
+
+    @Query
+    @NameInMap("MinTargetCapacity")
+    private String minTargetCapacity;
+
+    @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
+
+    @Query
+    @NameInMap("PayAsYouGoAllocationStrategy")
+    private String payAsYouGoAllocationStrategy;
+
+    @Query
+    @NameInMap("PayAsYouGoTargetCapacity")
+    private String payAsYouGoTargetCapacity;
 
     @Query
     @NameInMap("RegionId")
@@ -58,36 +90,40 @@ public class CreateAutoProvisioningGroupRequest extends Request {
     private String resourceGroupId;
 
     @Query
-    @NameInMap("AutoProvisioningGroupName")
-    private String autoProvisioningGroupName;
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Query
+    @NameInMap("SpotAllocationStrategy")
+    private String spotAllocationStrategy;
+
+    @Query
+    @NameInMap("SpotInstanceInterruptionBehavior")
+    private String spotInstanceInterruptionBehavior;
 
     @Query
     @NameInMap("SpotInstancePoolsToUseCount")
     private Integer spotInstancePoolsToUseCount;
 
     @Query
-    @NameInMap("PayAsYouGoAllocationStrategy")
-    private String payAsYouGoAllocationStrategy;
+    @NameInMap("SpotTargetCapacity")
+    private String spotTargetCapacity;
 
     @Query
-    @NameInMap("ExcessCapacityTerminationPolicy")
-    private String excessCapacityTerminationPolicy;
-
-    @Query
-    @NameInMap("ValidUntil")
-    private String validUntil;
-
-    @Query
-    @NameInMap("TerminateInstancesWithExpiration")
-    private Boolean terminateInstancesWithExpiration;
+    @NameInMap("SystemDiskConfig")
+    private java.util.List < SystemDiskConfig> systemDiskConfig;
 
     @Query
     @NameInMap("TerminateInstances")
     private Boolean terminateInstances;
 
     @Query
-    @NameInMap("MaxSpotPrice")
-    private Float maxSpotPrice;
+    @NameInMap("TerminateInstancesWithExpiration")
+    private Boolean terminateInstancesWithExpiration;
 
     @Query
     @NameInMap("TotalTargetCapacity")
@@ -95,82 +131,46 @@ public class CreateAutoProvisioningGroupRequest extends Request {
     private String totalTargetCapacity;
 
     @Query
-    @NameInMap("PayAsYouGoTargetCapacity")
-    private String payAsYouGoTargetCapacity;
-
-    @Query
-    @NameInMap("SpotTargetCapacity")
-    private String spotTargetCapacity;
-
-    @Query
-    @NameInMap("LaunchTemplateId")
-    private String launchTemplateId;
-
-    @Query
-    @NameInMap("Description")
-    private String description;
-
-    @Query
-    @NameInMap("ClientToken")
-    private String clientToken;
-
-    @Query
-    @NameInMap("MinTargetCapacity")
-    private String minTargetCapacity;
-
-    @Query
-    @NameInMap("DefaultTargetCapacityType")
-    private String defaultTargetCapacityType;
-
-    @Query
-    @NameInMap("SpotAllocationStrategy")
-    private String spotAllocationStrategy;
-
-    @Query
-    @NameInMap("AutoProvisioningGroupType")
-    private String autoProvisioningGroupType;
-
-    @Query
     @NameInMap("ValidFrom")
     private String validFrom;
 
     @Query
-    @NameInMap("LaunchTemplateVersion")
-    private String launchTemplateVersion;
+    @NameInMap("ValidUntil")
+    private String validUntil;
 
     private CreateAutoProvisioningGroupRequest(Builder builder) {
         super(builder);
         this.launchConfiguration = builder.launchConfiguration;
-        this.ownerId = builder.ownerId;
-        this.resourceOwnerAccount = builder.resourceOwnerAccount;
-        this.resourceOwnerId = builder.resourceOwnerId;
-        this.ownerAccount = builder.ownerAccount;
-        this.launchTemplateConfig = builder.launchTemplateConfig;
-        this.systemDiskConfig = builder.systemDiskConfig;
+        this.autoProvisioningGroupName = builder.autoProvisioningGroupName;
+        this.autoProvisioningGroupType = builder.autoProvisioningGroupType;
+        this.clientToken = builder.clientToken;
         this.dataDiskConfig = builder.dataDiskConfig;
-        this.spotInstanceInterruptionBehavior = builder.spotInstanceInterruptionBehavior;
+        this.defaultTargetCapacityType = builder.defaultTargetCapacityType;
+        this.description = builder.description;
+        this.excessCapacityTerminationPolicy = builder.excessCapacityTerminationPolicy;
+        this.launchTemplateConfig = builder.launchTemplateConfig;
+        this.launchTemplateId = builder.launchTemplateId;
+        this.launchTemplateVersion = builder.launchTemplateVersion;
+        this.maxSpotPrice = builder.maxSpotPrice;
+        this.minTargetCapacity = builder.minTargetCapacity;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
+        this.payAsYouGoAllocationStrategy = builder.payAsYouGoAllocationStrategy;
+        this.payAsYouGoTargetCapacity = builder.payAsYouGoTargetCapacity;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
-        this.autoProvisioningGroupName = builder.autoProvisioningGroupName;
-        this.spotInstancePoolsToUseCount = builder.spotInstancePoolsToUseCount;
-        this.payAsYouGoAllocationStrategy = builder.payAsYouGoAllocationStrategy;
-        this.excessCapacityTerminationPolicy = builder.excessCapacityTerminationPolicy;
-        this.validUntil = builder.validUntil;
-        this.terminateInstancesWithExpiration = builder.terminateInstancesWithExpiration;
-        this.terminateInstances = builder.terminateInstances;
-        this.maxSpotPrice = builder.maxSpotPrice;
-        this.totalTargetCapacity = builder.totalTargetCapacity;
-        this.payAsYouGoTargetCapacity = builder.payAsYouGoTargetCapacity;
-        this.spotTargetCapacity = builder.spotTargetCapacity;
-        this.launchTemplateId = builder.launchTemplateId;
-        this.description = builder.description;
-        this.clientToken = builder.clientToken;
-        this.minTargetCapacity = builder.minTargetCapacity;
-        this.defaultTargetCapacityType = builder.defaultTargetCapacityType;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
         this.spotAllocationStrategy = builder.spotAllocationStrategy;
-        this.autoProvisioningGroupType = builder.autoProvisioningGroupType;
+        this.spotInstanceInterruptionBehavior = builder.spotInstanceInterruptionBehavior;
+        this.spotInstancePoolsToUseCount = builder.spotInstancePoolsToUseCount;
+        this.spotTargetCapacity = builder.spotTargetCapacity;
+        this.systemDiskConfig = builder.systemDiskConfig;
+        this.terminateInstances = builder.terminateInstances;
+        this.terminateInstancesWithExpiration = builder.terminateInstancesWithExpiration;
+        this.totalTargetCapacity = builder.totalTargetCapacity;
         this.validFrom = builder.validFrom;
-        this.launchTemplateVersion = builder.launchTemplateVersion;
+        this.validUntil = builder.validUntil;
     }
 
     public static Builder builder() {
@@ -194,45 +194,24 @@ public class CreateAutoProvisioningGroupRequest extends Request {
     }
 
     /**
-     * @return ownerId
+     * @return autoProvisioningGroupName
      */
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getAutoProvisioningGroupName() {
+        return this.autoProvisioningGroupName;
     }
 
     /**
-     * @return resourceOwnerAccount
+     * @return autoProvisioningGroupType
      */
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
+    public String getAutoProvisioningGroupType() {
+        return this.autoProvisioningGroupType;
     }
 
     /**
-     * @return resourceOwnerId
+     * @return clientToken
      */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    /**
-     * @return ownerAccount
-     */
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    /**
-     * @return launchTemplateConfig
-     */
-    public java.util.List < LaunchTemplateConfig> getLaunchTemplateConfig() {
-        return this.launchTemplateConfig;
-    }
-
-    /**
-     * @return systemDiskConfig
-     */
-    public java.util.List < SystemDiskConfig> getSystemDiskConfig() {
-        return this.systemDiskConfig;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -243,10 +222,87 @@ public class CreateAutoProvisioningGroupRequest extends Request {
     }
 
     /**
-     * @return spotInstanceInterruptionBehavior
+     * @return defaultTargetCapacityType
      */
-    public String getSpotInstanceInterruptionBehavior() {
-        return this.spotInstanceInterruptionBehavior;
+    public String getDefaultTargetCapacityType() {
+        return this.defaultTargetCapacityType;
+    }
+
+    /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
+     * @return excessCapacityTerminationPolicy
+     */
+    public String getExcessCapacityTerminationPolicy() {
+        return this.excessCapacityTerminationPolicy;
+    }
+
+    /**
+     * @return launchTemplateConfig
+     */
+    public java.util.List < LaunchTemplateConfig> getLaunchTemplateConfig() {
+        return this.launchTemplateConfig;
+    }
+
+    /**
+     * @return launchTemplateId
+     */
+    public String getLaunchTemplateId() {
+        return this.launchTemplateId;
+    }
+
+    /**
+     * @return launchTemplateVersion
+     */
+    public String getLaunchTemplateVersion() {
+        return this.launchTemplateVersion;
+    }
+
+    /**
+     * @return maxSpotPrice
+     */
+    public Float getMaxSpotPrice() {
+        return this.maxSpotPrice;
+    }
+
+    /**
+     * @return minTargetCapacity
+     */
+    public String getMinTargetCapacity() {
+        return this.minTargetCapacity;
+    }
+
+    /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
+     * @return payAsYouGoAllocationStrategy
+     */
+    public String getPayAsYouGoAllocationStrategy() {
+        return this.payAsYouGoAllocationStrategy;
+    }
+
+    /**
+     * @return payAsYouGoTargetCapacity
+     */
+    public String getPayAsYouGoTargetCapacity() {
+        return this.payAsYouGoTargetCapacity;
     }
 
     /**
@@ -264,115 +320,17 @@ public class CreateAutoProvisioningGroupRequest extends Request {
     }
 
     /**
-     * @return autoProvisioningGroupName
+     * @return resourceOwnerAccount
      */
-    public String getAutoProvisioningGroupName() {
-        return this.autoProvisioningGroupName;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
     }
 
     /**
-     * @return spotInstancePoolsToUseCount
+     * @return resourceOwnerId
      */
-    public Integer getSpotInstancePoolsToUseCount() {
-        return this.spotInstancePoolsToUseCount;
-    }
-
-    /**
-     * @return payAsYouGoAllocationStrategy
-     */
-    public String getPayAsYouGoAllocationStrategy() {
-        return this.payAsYouGoAllocationStrategy;
-    }
-
-    /**
-     * @return excessCapacityTerminationPolicy
-     */
-    public String getExcessCapacityTerminationPolicy() {
-        return this.excessCapacityTerminationPolicy;
-    }
-
-    /**
-     * @return validUntil
-     */
-    public String getValidUntil() {
-        return this.validUntil;
-    }
-
-    /**
-     * @return terminateInstancesWithExpiration
-     */
-    public Boolean getTerminateInstancesWithExpiration() {
-        return this.terminateInstancesWithExpiration;
-    }
-
-    /**
-     * @return terminateInstances
-     */
-    public Boolean getTerminateInstances() {
-        return this.terminateInstances;
-    }
-
-    /**
-     * @return maxSpotPrice
-     */
-    public Float getMaxSpotPrice() {
-        return this.maxSpotPrice;
-    }
-
-    /**
-     * @return totalTargetCapacity
-     */
-    public String getTotalTargetCapacity() {
-        return this.totalTargetCapacity;
-    }
-
-    /**
-     * @return payAsYouGoTargetCapacity
-     */
-    public String getPayAsYouGoTargetCapacity() {
-        return this.payAsYouGoTargetCapacity;
-    }
-
-    /**
-     * @return spotTargetCapacity
-     */
-    public String getSpotTargetCapacity() {
-        return this.spotTargetCapacity;
-    }
-
-    /**
-     * @return launchTemplateId
-     */
-    public String getLaunchTemplateId() {
-        return this.launchTemplateId;
-    }
-
-    /**
-     * @return description
-     */
-    public String getDescription() {
-        return this.description;
-    }
-
-    /**
-     * @return clientToken
-     */
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    /**
-     * @return minTargetCapacity
-     */
-    public String getMinTargetCapacity() {
-        return this.minTargetCapacity;
-    }
-
-    /**
-     * @return defaultTargetCapacityType
-     */
-    public String getDefaultTargetCapacityType() {
-        return this.defaultTargetCapacityType;
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     /**
@@ -383,10 +341,52 @@ public class CreateAutoProvisioningGroupRequest extends Request {
     }
 
     /**
-     * @return autoProvisioningGroupType
+     * @return spotInstanceInterruptionBehavior
      */
-    public String getAutoProvisioningGroupType() {
-        return this.autoProvisioningGroupType;
+    public String getSpotInstanceInterruptionBehavior() {
+        return this.spotInstanceInterruptionBehavior;
+    }
+
+    /**
+     * @return spotInstancePoolsToUseCount
+     */
+    public Integer getSpotInstancePoolsToUseCount() {
+        return this.spotInstancePoolsToUseCount;
+    }
+
+    /**
+     * @return spotTargetCapacity
+     */
+    public String getSpotTargetCapacity() {
+        return this.spotTargetCapacity;
+    }
+
+    /**
+     * @return systemDiskConfig
+     */
+    public java.util.List < SystemDiskConfig> getSystemDiskConfig() {
+        return this.systemDiskConfig;
+    }
+
+    /**
+     * @return terminateInstances
+     */
+    public Boolean getTerminateInstances() {
+        return this.terminateInstances;
+    }
+
+    /**
+     * @return terminateInstancesWithExpiration
+     */
+    public Boolean getTerminateInstancesWithExpiration() {
+        return this.terminateInstancesWithExpiration;
+    }
+
+    /**
+     * @return totalTargetCapacity
+     */
+    public String getTotalTargetCapacity() {
+        return this.totalTargetCapacity;
     }
 
     /**
@@ -397,44 +397,44 @@ public class CreateAutoProvisioningGroupRequest extends Request {
     }
 
     /**
-     * @return launchTemplateVersion
+     * @return validUntil
      */
-    public String getLaunchTemplateVersion() {
-        return this.launchTemplateVersion;
+    public String getValidUntil() {
+        return this.validUntil;
     }
 
     public static final class Builder extends Request.Builder<CreateAutoProvisioningGroupRequest, Builder> {
         private LaunchConfiguration launchConfiguration; 
-        private Long ownerId; 
-        private String resourceOwnerAccount; 
-        private Long resourceOwnerId; 
-        private String ownerAccount; 
-        private java.util.List < LaunchTemplateConfig> launchTemplateConfig; 
-        private java.util.List < SystemDiskConfig> systemDiskConfig; 
+        private String autoProvisioningGroupName; 
+        private String autoProvisioningGroupType; 
+        private String clientToken; 
         private java.util.List < DataDiskConfig> dataDiskConfig; 
-        private String spotInstanceInterruptionBehavior; 
+        private String defaultTargetCapacityType; 
+        private String description; 
+        private String excessCapacityTerminationPolicy; 
+        private java.util.List < LaunchTemplateConfig> launchTemplateConfig; 
+        private String launchTemplateId; 
+        private String launchTemplateVersion; 
+        private Float maxSpotPrice; 
+        private String minTargetCapacity; 
+        private String ownerAccount; 
+        private Long ownerId; 
+        private String payAsYouGoAllocationStrategy; 
+        private String payAsYouGoTargetCapacity; 
         private String regionId; 
         private String resourceGroupId; 
-        private String autoProvisioningGroupName; 
-        private Integer spotInstancePoolsToUseCount; 
-        private String payAsYouGoAllocationStrategy; 
-        private String excessCapacityTerminationPolicy; 
-        private String validUntil; 
-        private Boolean terminateInstancesWithExpiration; 
-        private Boolean terminateInstances; 
-        private Float maxSpotPrice; 
-        private String totalTargetCapacity; 
-        private String payAsYouGoTargetCapacity; 
-        private String spotTargetCapacity; 
-        private String launchTemplateId; 
-        private String description; 
-        private String clientToken; 
-        private String minTargetCapacity; 
-        private String defaultTargetCapacityType; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
         private String spotAllocationStrategy; 
-        private String autoProvisioningGroupType; 
+        private String spotInstanceInterruptionBehavior; 
+        private Integer spotInstancePoolsToUseCount; 
+        private String spotTargetCapacity; 
+        private java.util.List < SystemDiskConfig> systemDiskConfig; 
+        private Boolean terminateInstances; 
+        private Boolean terminateInstancesWithExpiration; 
+        private String totalTargetCapacity; 
         private String validFrom; 
-        private String launchTemplateVersion; 
+        private String validUntil; 
 
         private Builder() {
             super();
@@ -443,36 +443,36 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         private Builder(CreateAutoProvisioningGroupRequest request) {
             super(request);
             this.launchConfiguration = request.launchConfiguration;
-            this.ownerId = request.ownerId;
-            this.resourceOwnerAccount = request.resourceOwnerAccount;
-            this.resourceOwnerId = request.resourceOwnerId;
-            this.ownerAccount = request.ownerAccount;
-            this.launchTemplateConfig = request.launchTemplateConfig;
-            this.systemDiskConfig = request.systemDiskConfig;
+            this.autoProvisioningGroupName = request.autoProvisioningGroupName;
+            this.autoProvisioningGroupType = request.autoProvisioningGroupType;
+            this.clientToken = request.clientToken;
             this.dataDiskConfig = request.dataDiskConfig;
-            this.spotInstanceInterruptionBehavior = request.spotInstanceInterruptionBehavior;
+            this.defaultTargetCapacityType = request.defaultTargetCapacityType;
+            this.description = request.description;
+            this.excessCapacityTerminationPolicy = request.excessCapacityTerminationPolicy;
+            this.launchTemplateConfig = request.launchTemplateConfig;
+            this.launchTemplateId = request.launchTemplateId;
+            this.launchTemplateVersion = request.launchTemplateVersion;
+            this.maxSpotPrice = request.maxSpotPrice;
+            this.minTargetCapacity = request.minTargetCapacity;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.payAsYouGoAllocationStrategy = request.payAsYouGoAllocationStrategy;
+            this.payAsYouGoTargetCapacity = request.payAsYouGoTargetCapacity;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
-            this.autoProvisioningGroupName = request.autoProvisioningGroupName;
-            this.spotInstancePoolsToUseCount = request.spotInstancePoolsToUseCount;
-            this.payAsYouGoAllocationStrategy = request.payAsYouGoAllocationStrategy;
-            this.excessCapacityTerminationPolicy = request.excessCapacityTerminationPolicy;
-            this.validUntil = request.validUntil;
-            this.terminateInstancesWithExpiration = request.terminateInstancesWithExpiration;
-            this.terminateInstances = request.terminateInstances;
-            this.maxSpotPrice = request.maxSpotPrice;
-            this.totalTargetCapacity = request.totalTargetCapacity;
-            this.payAsYouGoTargetCapacity = request.payAsYouGoTargetCapacity;
-            this.spotTargetCapacity = request.spotTargetCapacity;
-            this.launchTemplateId = request.launchTemplateId;
-            this.description = request.description;
-            this.clientToken = request.clientToken;
-            this.minTargetCapacity = request.minTargetCapacity;
-            this.defaultTargetCapacityType = request.defaultTargetCapacityType;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
             this.spotAllocationStrategy = request.spotAllocationStrategy;
-            this.autoProvisioningGroupType = request.autoProvisioningGroupType;
+            this.spotInstanceInterruptionBehavior = request.spotInstanceInterruptionBehavior;
+            this.spotInstancePoolsToUseCount = request.spotInstancePoolsToUseCount;
+            this.spotTargetCapacity = request.spotTargetCapacity;
+            this.systemDiskConfig = request.systemDiskConfig;
+            this.terminateInstances = request.terminateInstances;
+            this.terminateInstancesWithExpiration = request.terminateInstancesWithExpiration;
+            this.totalTargetCapacity = request.totalTargetCapacity;
             this.validFrom = request.validFrom;
-            this.launchTemplateVersion = request.launchTemplateVersion;
+            this.validUntil = request.validUntil;
         } 
 
         /**
@@ -485,11 +485,164 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         /**
+         * AutoProvisioningGroupName.
+         */
+        public Builder autoProvisioningGroupName(String autoProvisioningGroupName) {
+            this.putQueryParameter("AutoProvisioningGroupName", autoProvisioningGroupName);
+            this.autoProvisioningGroupName = autoProvisioningGroupName;
+            return this;
+        }
+
+        /**
+         * AutoProvisioningGroupType.
+         */
+        public Builder autoProvisioningGroupType(String autoProvisioningGroupType) {
+            this.putQueryParameter("AutoProvisioningGroupType", autoProvisioningGroupType);
+            this.autoProvisioningGroupType = autoProvisioningGroupType;
+            return this;
+        }
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * DataDiskConfig.
+         */
+        public Builder dataDiskConfig(java.util.List < DataDiskConfig> dataDiskConfig) {
+            this.putQueryParameter("DataDiskConfig", dataDiskConfig);
+            this.dataDiskConfig = dataDiskConfig;
+            return this;
+        }
+
+        /**
+         * DefaultTargetCapacityType.
+         */
+        public Builder defaultTargetCapacityType(String defaultTargetCapacityType) {
+            this.putQueryParameter("DefaultTargetCapacityType", defaultTargetCapacityType);
+            this.defaultTargetCapacityType = defaultTargetCapacityType;
+            return this;
+        }
+
+        /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
+            return this;
+        }
+
+        /**
+         * ExcessCapacityTerminationPolicy.
+         */
+        public Builder excessCapacityTerminationPolicy(String excessCapacityTerminationPolicy) {
+            this.putQueryParameter("ExcessCapacityTerminationPolicy", excessCapacityTerminationPolicy);
+            this.excessCapacityTerminationPolicy = excessCapacityTerminationPolicy;
+            return this;
+        }
+
+        /**
+         * LaunchTemplateConfig.
+         */
+        public Builder launchTemplateConfig(java.util.List < LaunchTemplateConfig> launchTemplateConfig) {
+            this.putQueryParameter("LaunchTemplateConfig", launchTemplateConfig);
+            this.launchTemplateConfig = launchTemplateConfig;
+            return this;
+        }
+
+        /**
+         * LaunchTemplateId.
+         */
+        public Builder launchTemplateId(String launchTemplateId) {
+            this.putQueryParameter("LaunchTemplateId", launchTemplateId);
+            this.launchTemplateId = launchTemplateId;
+            return this;
+        }
+
+        /**
+         * LaunchTemplateVersion.
+         */
+        public Builder launchTemplateVersion(String launchTemplateVersion) {
+            this.putQueryParameter("LaunchTemplateVersion", launchTemplateVersion);
+            this.launchTemplateVersion = launchTemplateVersion;
+            return this;
+        }
+
+        /**
+         * MaxSpotPrice.
+         */
+        public Builder maxSpotPrice(Float maxSpotPrice) {
+            this.putQueryParameter("MaxSpotPrice", maxSpotPrice);
+            this.maxSpotPrice = maxSpotPrice;
+            return this;
+        }
+
+        /**
+         * MinTargetCapacity.
+         */
+        public Builder minTargetCapacity(String minTargetCapacity) {
+            this.putQueryParameter("MinTargetCapacity", minTargetCapacity);
+            this.minTargetCapacity = minTargetCapacity;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
+
+        /**
          * OwnerId.
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * PayAsYouGoAllocationStrategy.
+         */
+        public Builder payAsYouGoAllocationStrategy(String payAsYouGoAllocationStrategy) {
+            this.putQueryParameter("PayAsYouGoAllocationStrategy", payAsYouGoAllocationStrategy);
+            this.payAsYouGoAllocationStrategy = payAsYouGoAllocationStrategy;
+            return this;
+        }
+
+        /**
+         * PayAsYouGoTargetCapacity.
+         */
+        public Builder payAsYouGoTargetCapacity(String payAsYouGoTargetCapacity) {
+            this.putQueryParameter("PayAsYouGoTargetCapacity", payAsYouGoTargetCapacity);
+            this.payAsYouGoTargetCapacity = payAsYouGoTargetCapacity;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 
@@ -512,38 +665,11 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * OwnerAccount.
+         * SpotAllocationStrategy.
          */
-        public Builder ownerAccount(String ownerAccount) {
-            this.putQueryParameter("OwnerAccount", ownerAccount);
-            this.ownerAccount = ownerAccount;
-            return this;
-        }
-
-        /**
-         * LaunchTemplateConfig.
-         */
-        public Builder launchTemplateConfig(java.util.List < LaunchTemplateConfig> launchTemplateConfig) {
-            this.putQueryParameter("LaunchTemplateConfig", launchTemplateConfig);
-            this.launchTemplateConfig = launchTemplateConfig;
-            return this;
-        }
-
-        /**
-         * SystemDiskConfig.
-         */
-        public Builder systemDiskConfig(java.util.List < SystemDiskConfig> systemDiskConfig) {
-            this.putQueryParameter("SystemDiskConfig", systemDiskConfig);
-            this.systemDiskConfig = systemDiskConfig;
-            return this;
-        }
-
-        /**
-         * DataDiskConfig.
-         */
-        public Builder dataDiskConfig(java.util.List < DataDiskConfig> dataDiskConfig) {
-            this.putQueryParameter("DataDiskConfig", dataDiskConfig);
-            this.dataDiskConfig = dataDiskConfig;
+        public Builder spotAllocationStrategy(String spotAllocationStrategy) {
+            this.putQueryParameter("SpotAllocationStrategy", spotAllocationStrategy);
+            this.spotAllocationStrategy = spotAllocationStrategy;
             return this;
         }
 
@@ -557,37 +683,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * The ID of the region where the auto provisioning Group is located. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list of Alibaba Cloud.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The ID of the resource group to which the auto provisioning group belongs.
-         */
-        public Builder resourceGroupId(String resourceGroupId) {
-            this.putQueryParameter("ResourceGroupId", resourceGroupId);
-            this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-
-        /**
-         * The name of the auto provisioning group. The description must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https. It can contain numbers, colons (:), underscores (_), and hyphens (-).
-         */
-        public Builder autoProvisioningGroupName(String autoProvisioningGroupName) {
-            this.putQueryParameter("AutoProvisioningGroupName", autoProvisioningGroupName);
-            this.autoProvisioningGroupName = autoProvisioningGroupName;
-            return this;
-        }
-
-        /**
-         * This parameter takes effect when "SpotAllocationStrategy" is set to "lowest-price", indicating that the auto provisioning group selects the instance type with the lowest price to create the number of instances.
-         * <p>
-         * 
-         * Valid values: less than N in launchtemplateconfig.
+         * SpotInstancePoolsToUseCount.
          */
         public Builder spotInstancePoolsToUseCount(Integer spotInstancePoolsToUseCount) {
             this.putQueryParameter("SpotInstancePoolsToUseCount", spotInstancePoolsToUseCount);
@@ -596,115 +692,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * The policy used to create a pay-as-you-go instance. Valid values:
-         * <p>
-         * 
-         * -lowest-price: the cost optimization policy. Select the instance type with the lowest price.
-         * 
-         * -prioritized: the priority policy. Create an instance based on the priority set by "LaunchTemplateConfig.N.Priority.
-         * 
-         * Default value: lowest-price
-         */
-        public Builder payAsYouGoAllocationStrategy(String payAsYouGoAllocationStrategy) {
-            this.putQueryParameter("PayAsYouGoAllocationStrategy", payAsYouGoAllocationStrategy);
-            this.payAsYouGoAllocationStrategy = payAsYouGoAllocationStrategy;
-            return this;
-        }
-
-        /**
-         * Whether to release the scale-in instance when the real-time capacity of the auto provisioning group exceeds the target capacity and the scale-in is triggered. Valid values:
-         * <p>
-         * 
-         * -termination: releases the scaled-In instance.
-         * -no-termination: only the scaled-in instances are removed from the auto provisioning group.
-         * 
-         * Default value: no-termination
-         */
-        public Builder excessCapacityTerminationPolicy(String excessCapacityTerminationPolicy) {
-            this.putQueryParameter("ExcessCapacityTerminationPolicy", excessCapacityTerminationPolicy);
-            this.excessCapacityTerminationPolicy = excessCapacityTerminationPolicy;
-            return this;
-        }
-
-        /**
-         * The expiration time of the auto provisioning group. The validity period is determined together with "ValidFrom.
-         * <p>
-         * 
-         * The time follows the [ISO8601](~~ 25696 ~~) standard and uses UTC +0. The format is yyyy-MM-ddTHH:mm:ssZ.
-         * 
-         * Default value: 2099-12-31 T23:59:59Z
-         */
-        public Builder validUntil(String validUntil) {
-            this.putQueryParameter("ValidUntil", validUntil);
-            this.validUntil = validUntil;
-            return this;
-        }
-
-        /**
-         * Specifies whether to release instances in the auto provisioning group upon expiration. Valid values:
-         * <p>
-         * 
-         * -true: Releases instances in the group.
-         * -false: only instances in the group are removed from the auto provisioning group.
-         * 
-         * Default value: false
-         */
-        public Builder terminateInstancesWithExpiration(Boolean terminateInstancesWithExpiration) {
-            this.putQueryParameter("TerminateInstancesWithExpiration", terminateInstancesWithExpiration);
-            this.terminateInstancesWithExpiration = terminateInstancesWithExpiration;
-            return this;
-        }
-
-        /**
-         * Specifies whether to release instances in an auto provisioning group. Valid values:
-         * <p>
-         * 
-         * -true: Releases instances in the group.
-         * -false: the instances in the group are retained.
-         * 
-         * Default value: false
-         */
-        public Builder terminateInstances(Boolean terminateInstances) {
-            this.putQueryParameter("TerminateInstances", terminateInstances);
-            this.terminateInstances = terminateInstances;
-            return this;
-        }
-
-        /**
-         * The highest price for preemptible instances in the auto provisioning group.
-         * <p>
-         * 
-         * > When "MaxSpotPrice" and "LaunchTemplateConfig.N.MaxPrice" are set at the same time, the minimum value is used.
-         */
-        public Builder maxSpotPrice(Float maxSpotPrice) {
-            this.putQueryParameter("MaxSpotPrice", maxSpotPrice);
-            this.maxSpotPrice = maxSpotPrice;
-            return this;
-        }
-
-        /**
-         * The total capacity of the auto provisioning group. Value range: positive integer
-         * <p>
-         * 
-         * The total capacity must be greater than or equal to the sum of the values of "PayAsYouGoTargetCapacity" and "SpotTargetCapacity.
-         */
-        public Builder totalTargetCapacity(String totalTargetCapacity) {
-            this.putQueryParameter("TotalTargetCapacity", totalTargetCapacity);
-            this.totalTargetCapacity = totalTargetCapacity;
-            return this;
-        }
-
-        /**
-         * The target capacity of pay-as-you-go instances in the auto provisioning group. Value range: parameter value less than "TotalTargetCapacity"
-         */
-        public Builder payAsYouGoTargetCapacity(String payAsYouGoTargetCapacity) {
-            this.putQueryParameter("PayAsYouGoTargetCapacity", payAsYouGoTargetCapacity);
-            this.payAsYouGoTargetCapacity = payAsYouGoTargetCapacity;
-            return this;
-        }
-
-        /**
-         * The target capacity of preemptible instances in the auto provisioning group. Value range: parameter value less than "TotalTargetCapacity"
+         * SpotTargetCapacity.
          */
         public Builder spotTargetCapacity(String spotTargetCapacity) {
             this.putQueryParameter("SpotTargetCapacity", spotTargetCapacity);
@@ -713,105 +701,43 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * The ID of the instance launch template associated with the auto provisioning group. You can call [DescribeLaunchTemplates](~~ 73759 ~~) to query available instance launch templates. When both the launch template and the launch configuration ("LaunchConfiguration.* ") are specified, the launch template is preferentially used.
+         * SystemDiskConfig.
          */
-        public Builder launchTemplateId(String launchTemplateId) {
-            this.putQueryParameter("LaunchTemplateId", launchTemplateId);
-            this.launchTemplateId = launchTemplateId;
+        public Builder systemDiskConfig(java.util.List < SystemDiskConfig> systemDiskConfig) {
+            this.putQueryParameter("SystemDiskConfig", systemDiskConfig);
+            this.systemDiskConfig = systemDiskConfig;
             return this;
         }
 
         /**
-         * The description of the auto provisioning group.
+         * TerminateInstances.
          */
-        public Builder description(String description) {
-            this.putQueryParameter("Description", description);
-            this.description = description;
+        public Builder terminateInstances(Boolean terminateInstances) {
+            this.putQueryParameter("TerminateInstances", terminateInstances);
+            this.terminateInstances = terminateInstances;
             return this;
         }
 
         /**
-         * Ensure the idempotence of the request. Generate a parameter value from your client. Make sure that the value is unique among different requests. The ClientToken can contain only ASCII characters and cannot exceed 64 characters. For more information, see [how to ensure idempotence](~~ 25693 ~~).
+         * TerminateInstancesWithExpiration.
          */
-        public Builder clientToken(String clientToken) {
-            this.putQueryParameter("ClientToken", clientToken);
-            this.clientToken = clientToken;
+        public Builder terminateInstancesWithExpiration(Boolean terminateInstancesWithExpiration) {
+            this.putQueryParameter("TerminateInstancesWithExpiration", terminateInstancesWithExpiration);
+            this.terminateInstancesWithExpiration = terminateInstancesWithExpiration;
             return this;
         }
 
         /**
-         * The minimum capacity of the auto provisioning group. Valid values: positive integer.
-         * <p>
-         * 
-         * After you set this parameter, note that:
-         * -This parameter takes effect only when you create an auto provisioning Group of the one-time synchronous delivery type ("AutoProvisioningGroupType = instant").
-         * -If the instance inventory in the current region is less than the value of this parameter, the API call fails and no instance is created.
-         * -If the instance inventory in the current region is greater than this parameter value, the instance is created based on other parameter values that have been set.
+         * TotalTargetCapacity.
          */
-        public Builder minTargetCapacity(String minTargetCapacity) {
-            this.putQueryParameter("MinTargetCapacity", minTargetCapacity);
-            this.minTargetCapacity = minTargetCapacity;
+        public Builder totalTargetCapacity(String totalTargetCapacity) {
+            this.putQueryParameter("TotalTargetCapacity", totalTargetCapacity);
+            this.totalTargetCapacity = totalTargetCapacity;
             return this;
         }
 
         /**
-         * If the sum of "PayAsYouGoTargetCapacity" and "SpotTargetCapacity" is smaller than "TotalTargetCapacity", the billing method of the difference capacity is specified. Valid values:
-         * <p>
-         * 
-         * -PayAsYouGo: pay-as-you-go instance
-         * -Spot: preemptible instance
-         * 
-         * Default value: Spot
-         */
-        public Builder defaultTargetCapacityType(String defaultTargetCapacityType) {
-            this.putQueryParameter("DefaultTargetCapacityType", defaultTargetCapacityType);
-            this.defaultTargetCapacityType = defaultTargetCapacityType;
-            return this;
-        }
-
-        /**
-         * The policy used to create preemptible instances. Valid values:
-         * <p>
-         * 
-         * -lowest-price: the cost optimization policy. Select the instance type with the lowest price.
-         * 
-         * -diversified: the distribution strategy of the balanced zone. Create instances in the zones specified by the extended launch template and distribute them evenly to each zone.
-         * 
-         * -capacity-optimized: the capacity optimization distribution policy. Select the optimal instance type and zone based on the inventory.
-         * 
-         * Default value: lowest-price
-         */
-        public Builder spotAllocationStrategy(String spotAllocationStrategy) {
-            this.putQueryParameter("SpotAllocationStrategy", spotAllocationStrategy);
-            this.spotAllocationStrategy = spotAllocationStrategy;
-            return this;
-        }
-
-        /**
-         * The delivery type of the auto provisioning group. Valid values:
-         * <p>
-         * 
-         * -request: one-time asynchronous delivery. The provisioning group delivers the instance cluster asynchronously only at startup and does not retry after scheduling fails.
-         * 
-         * -instant: one-time synchronous delivery. The provisioning group creates instances synchronously only at startup, and returns the list of successfully created instances and the cause of creation failure in the request response.
-         * 
-         * -maintain: continuous supply. The provisioning group attempts to deliver the instance cluster at startup and monitors the real-time capacity. If the target capacity is not reached, it attempts to continue creating ECS instances.
-         * 
-         * Default value: maintain
-         */
-        public Builder autoProvisioningGroupType(String autoProvisioningGroupType) {
-            this.putQueryParameter("AutoProvisioningGroupType", autoProvisioningGroupType);
-            this.autoProvisioningGroupType = autoProvisioningGroupType;
-            return this;
-        }
-
-        /**
-         * The start time of the auto provisioning group and the "ValidUntil" determine the validity period.
-         * <p>
-         * 
-         * The time follows the [ISO8601](~~ 25696 ~~) standard and uses UTC +0. The format is yyyy-MM-ddTHH:mm:ssZ.
-         * 
-         * Default value: takes effect immediately
+         * ValidFrom.
          */
         public Builder validFrom(String validFrom) {
             this.putQueryParameter("ValidFrom", validFrom);
@@ -820,14 +746,11 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * The version of the instance launch template associated with the auto provisioning group. You can call [DescribeLaunchTemplateVersions](~~ 73761 ~~) to query the available instance launch template versions.
-         * <p>
-         * 
-         * Default value: the default version of the launch template.
+         * ValidUntil.
          */
-        public Builder launchTemplateVersion(String launchTemplateVersion) {
-            this.putQueryParameter("LaunchTemplateVersion", launchTemplateVersion);
-            this.launchTemplateVersion = launchTemplateVersion;
+        public Builder validUntil(String validUntil) {
+            this.putQueryParameter("ValidUntil", validUntil);
+            this.validUntil = validUntil;
             return this;
         }
 
@@ -839,20 +762,14 @@ public class CreateAutoProvisioningGroupRequest extends Request {
     } 
 
     public static class DataDisk extends TeaModel {
-        @NameInMap("PerformanceLevel")
-        private String performanceLevel;
+        @NameInMap("Category")
+        private String category;
 
-        @NameInMap("KmsKeyId")
-        private String kmsKeyId;
+        @NameInMap("DeleteWithInstance")
+        private Boolean deleteWithInstance;
 
         @NameInMap("Description")
         private String description;
-
-        @NameInMap("SnapshotId")
-        private String snapshotId;
-
-        @NameInMap("Size")
-        private Integer size;
 
         @NameInMap("Device")
         private String device;
@@ -860,26 +777,32 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         @NameInMap("DiskName")
         private String diskName;
 
-        @NameInMap("Category")
-        private String category;
-
-        @NameInMap("DeleteWithInstance")
-        private Boolean deleteWithInstance;
-
         @NameInMap("Encrypted")
         private Boolean encrypted;
 
+        @NameInMap("KmsKeyId")
+        private String kmsKeyId;
+
+        @NameInMap("PerformanceLevel")
+        private String performanceLevel;
+
+        @NameInMap("Size")
+        private Integer size;
+
+        @NameInMap("SnapshotId")
+        private String snapshotId;
+
         private DataDisk(Builder builder) {
-            this.performanceLevel = builder.performanceLevel;
-            this.kmsKeyId = builder.kmsKeyId;
-            this.description = builder.description;
-            this.snapshotId = builder.snapshotId;
-            this.size = builder.size;
-            this.device = builder.device;
-            this.diskName = builder.diskName;
             this.category = builder.category;
             this.deleteWithInstance = builder.deleteWithInstance;
+            this.description = builder.description;
+            this.device = builder.device;
+            this.diskName = builder.diskName;
             this.encrypted = builder.encrypted;
+            this.kmsKeyId = builder.kmsKeyId;
+            this.performanceLevel = builder.performanceLevel;
+            this.size = builder.size;
+            this.snapshotId = builder.snapshotId;
         }
 
         public static Builder builder() {
@@ -888,55 +811,6 @@ public class CreateAutoProvisioningGroupRequest extends Request {
 
         public static DataDisk create() {
             return builder().build();
-        }
-
-        /**
-         * @return performanceLevel
-         */
-        public String getPerformanceLevel() {
-            return this.performanceLevel;
-        }
-
-        /**
-         * @return kmsKeyId
-         */
-        public String getKmsKeyId() {
-            return this.kmsKeyId;
-        }
-
-        /**
-         * @return description
-         */
-        public String getDescription() {
-            return this.description;
-        }
-
-        /**
-         * @return snapshotId
-         */
-        public String getSnapshotId() {
-            return this.snapshotId;
-        }
-
-        /**
-         * @return size
-         */
-        public Integer getSize() {
-            return this.size;
-        }
-
-        /**
-         * @return device
-         */
-        public String getDevice() {
-            return this.device;
-        }
-
-        /**
-         * @return diskName
-         */
-        public String getDiskName() {
-            return this.diskName;
         }
 
         /**
@@ -954,122 +828,75 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return device
+         */
+        public String getDevice() {
+            return this.device;
+        }
+
+        /**
+         * @return diskName
+         */
+        public String getDiskName() {
+            return this.diskName;
+        }
+
+        /**
          * @return encrypted
          */
         public Boolean getEncrypted() {
             return this.encrypted;
         }
 
+        /**
+         * @return kmsKeyId
+         */
+        public String getKmsKeyId() {
+            return this.kmsKeyId;
+        }
+
+        /**
+         * @return performanceLevel
+         */
+        public String getPerformanceLevel() {
+            return this.performanceLevel;
+        }
+
+        /**
+         * @return size
+         */
+        public Integer getSize() {
+            return this.size;
+        }
+
+        /**
+         * @return snapshotId
+         */
+        public String getSnapshotId() {
+            return this.snapshotId;
+        }
+
         public static final class Builder {
-            private String performanceLevel; 
-            private String kmsKeyId; 
-            private String description; 
-            private String snapshotId; 
-            private Integer size; 
-            private String device; 
-            private String diskName; 
             private String category; 
             private Boolean deleteWithInstance; 
+            private String description; 
+            private String device; 
+            private String diskName; 
             private Boolean encrypted; 
+            private String kmsKeyId; 
+            private String performanceLevel; 
+            private Integer size; 
+            private String snapshotId; 
 
             /**
-             * 创建ESSD云盘作为数据盘使用时，设置云盘的性能等级。N的取值必须和`LaunchConfiguration.DataDisk.N.Category`中的N保持一致。取值范围：
-             * <p>
-             * 
-             * - PL0：单盘最高随机读写IOPS 1万
-             * - PL1（默认）：单盘最高随机读写IOPS 5万
-             * - PL2：单盘最高随机读写IOPS 10万
-             * - PL3：单盘最高随机读写IOPS 100万
-             * 
-             * 有关如何选择ESSD性能等级，请参见[ESSD云盘](~~122389~~)。
-             * 
-             * 同时指定启动模板与启动配置信息时，优先使用启动模板。
-             */
-            public Builder performanceLevel(String performanceLevel) {
-                this.performanceLevel = performanceLevel;
-                return this;
-            }
-
-            /**
-             * 数据盘对应的KMS密钥ID。同时指定启动模板与启动配置信息时，优先使用启动模板。
-             */
-            public Builder kmsKeyId(String kmsKeyId) {
-                this.kmsKeyId = kmsKeyId;
-                return this;
-            }
-
-            /**
-             * 数据盘的描述。长度为2~256个英文或中文字符，不能以`http://`和`https://`开头。同时指定启动模板与启动配置信息时，优先使用启动模板。
-             */
-            public Builder description(String description) {
-                this.description = description;
-                return this;
-            }
-
-            /**
-             * 创建数据盘N使用的快照。N的取值范围为1~16。
-             * <p>
-             * 
-             * 指定该参数后，参数`LaunchConfiguration.DataDisk.N.Size`会被忽略，实际创建的云盘大小为指定的快照的大小。不能使用早于2013年7月15日（含）创建的快照，请求会报错被拒绝。
-             * 
-             * 同时指定启动模板与启动配置信息时，优先使用启动模板。
-             */
-            public Builder snapshotId(String snapshotId) {
-                this.snapshotId = snapshotId;
-                return this;
-            }
-
-            /**
-             * 第N个数据盘的容量大小，N的取值范围为1~16，单位为GiB。取值范围：
-             * <p>
-             * 
-             * - cloud_efficiency：20~32768
-             * - cloud_ssd：20~32768
-             * - cloud_essd：20~32768
-             * - cloud：5~2000
-             * 
-             * > 该参数的取值必须大于等于参数`LaunchConfiguration.DataDisk.N.SnapshotId`指定的快照的大小。
-             * 
-             * 同时指定启动模板与启动配置信息时，优先使用启动模板。
-             */
-            public Builder size(Integer size) {
-                this.size = size;
-                return this;
-            }
-
-            /**
-             * 数据盘的挂载点。同时指定启动模板与启动配置信息时，优先使用启动模板。
-             */
-            public Builder device(String device) {
-                this.device = device;
-                return this;
-            }
-
-            /**
-             * 数据盘名称。长度为2~128个英文或中文字符。必须以大小字母或中文开头，不能以`http://`和`https://`开头。可以包含数字、半角句号（.）、半角冒号（:）、下划线（_）或者短划线（-）。
-             * <p>
-             * 
-             * 默认值：空
-             * 
-             * 同时指定启动模板与启动配置信息时，优先使用启动模板。
-             */
-            public Builder diskName(String diskName) {
-                this.diskName = diskName;
-                return this;
-            }
-
-            /**
-             * 数据盘N的云盘类型。N的取值范围为1~16。取值范围：
-             * <p>
-             * 
-             * - cloud_efficiency：高效云盘
-             * - cloud_ssd：SSD云盘
-             * - cloud_essd：ESSD云盘
-             * - cloud：普通云盘。
-             * 
-             * 对于I/O优化实例，默认值为cloud_efficiency。对于非I/O优化实例，默认值为cloud。
-             * 
-             * 同时指定启动模板与启动配置信息时，优先使用启动模板。
+             * Category.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -1077,14 +904,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * 数据盘是否随实例释放。取值范围：
-             * <p>
-             * - true：数据盘随实例释放。
-             * - false：数据盘不随实例释放。
-             * 
-             * 默认值：true
-             * 
-             * 同时指定启动模板与启动配置信息时，优先使用启动模板。
+             * DeleteWithInstance.
              */
             public Builder deleteWithInstance(Boolean deleteWithInstance) {
                 this.deleteWithInstance = deleteWithInstance;
@@ -1092,18 +912,66 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * 数据盘N是否加密。取值范围：
-             * <p>
-             * 
-             * - true：加密
-             * - false：不加密
-             * 
-             * 默认值：false
-             * 
-             * 同时指定启动模板与启动配置信息时，优先使用启动模板。
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * Device.
+             */
+            public Builder device(String device) {
+                this.device = device;
+                return this;
+            }
+
+            /**
+             * DiskName.
+             */
+            public Builder diskName(String diskName) {
+                this.diskName = diskName;
+                return this;
+            }
+
+            /**
+             * Encrypted.
              */
             public Builder encrypted(Boolean encrypted) {
                 this.encrypted = encrypted;
+                return this;
+            }
+
+            /**
+             * KmsKeyId.
+             */
+            public Builder kmsKeyId(String kmsKeyId) {
+                this.kmsKeyId = kmsKeyId;
+                return this;
+            }
+
+            /**
+             * PerformanceLevel.
+             */
+            public Builder performanceLevel(String performanceLevel) {
+                this.performanceLevel = performanceLevel;
+                return this;
+            }
+
+            /**
+             * Size.
+             */
+            public Builder size(Integer size) {
+                this.size = size;
+                return this;
+            }
+
+            /**
+             * SnapshotId.
+             */
+            public Builder snapshotId(String snapshotId) {
+                this.snapshotId = snapshotId;
                 return this;
             }
 
@@ -1153,7 +1021,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             private String value; 
 
             /**
-             * 实例的标签键。N的取值范围：1~20。一旦传入该值，则不允许为空字符串。最多支持128个字符，不能以aliyun和acs:开头，不能包含`http://`或`https://`。同时指定启动模板与启动配置信息时，优先使用启动模板。
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1161,7 +1029,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * 实例的标签值。N的取值范围：1~20。一旦传入该值，可以为空字符串。最多支持128个字符，不能以acs:开头，不能包含`http://`或者`https://`。同时指定启动模板与启动配置信息时，优先使用启动模板。
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1176,65 +1044,26 @@ public class CreateAutoProvisioningGroupRequest extends Request {
 
     }
     public static class LaunchConfiguration extends TeaModel {
+        @NameInMap("CreditSpecification")
+        private String creditSpecification;
+
         @NameInMap("DataDisk")
         private java.util.List < DataDisk> dataDisk;
 
-        @NameInMap("Tag")
-        private java.util.List < Tag> tag;
-
-        @NameInMap("ImageId")
-        private String imageId;
-
-        @NameInMap("IoOptimized")
-        private String ioOptimized;
-
-        @NameInMap("InternetMaxBandwidthIn")
-        private Integer internetMaxBandwidthIn;
-
-        @NameInMap("InternetMaxBandwidthOut")
-        private Integer internetMaxBandwidthOut;
+        @NameInMap("DeploymentSetId")
+        private String deploymentSetId;
 
         @NameInMap("HostName")
         private String hostName;
 
+        @NameInMap("HostNames")
+        private java.util.List < String > hostNames;
+
+        @NameInMap("ImageId")
+        private String imageId;
+
         @NameInMap("InstanceDescription")
         private String instanceDescription;
-
-        @NameInMap("KeyPairName")
-        private String keyPairName;
-
-        @NameInMap("RamRoleName")
-        private String ramRoleName;
-
-        @NameInMap("SecurityEnhancementStrategy")
-        private String securityEnhancementStrategy;
-
-        @NameInMap("UserData")
-        private String userData;
-
-        @NameInMap("SystemDiskCategory")
-        private String systemDiskCategory;
-
-        @NameInMap("SystemDiskSize")
-        private Integer systemDiskSize;
-
-        @NameInMap("SystemDiskName")
-        private String systemDiskName;
-
-        @NameInMap("SystemDiskDescription")
-        private String systemDiskDescription;
-
-        @NameInMap("PasswordInherit")
-        private Boolean passwordInherit;
-
-        @NameInMap("ResourceGroupId")
-        private String resourceGroupId;
-
-        @NameInMap("CreditSpecification")
-        private String creditSpecification;
-
-        @NameInMap("DeploymentSetId")
-        private String deploymentSetId;
 
         @NameInMap("InstanceName")
         private String instanceName;
@@ -1242,41 +1071,88 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         @NameInMap("InternetChargeType")
         private String internetChargeType;
 
-        @NameInMap("SystemDiskPerformanceLevel")
-        private String systemDiskPerformanceLevel;
+        @NameInMap("InternetMaxBandwidthIn")
+        private Integer internetMaxBandwidthIn;
 
-        @NameInMap("HostNames")
-        private java.util.List < String > hostNames;
+        @NameInMap("InternetMaxBandwidthOut")
+        private Integer internetMaxBandwidthOut;
+
+        @NameInMap("IoOptimized")
+        private String ioOptimized;
+
+        @NameInMap("KeyPairName")
+        private String keyPairName;
+
+        @NameInMap("Password")
+        private String password;
+
+        @NameInMap("PasswordInherit")
+        private Boolean passwordInherit;
+
+        @NameInMap("RamRoleName")
+        private String ramRoleName;
+
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
+        @NameInMap("SecurityEnhancementStrategy")
+        private String securityEnhancementStrategy;
 
         @NameInMap("SecurityGroupId")
         private String securityGroupId;
 
+        @NameInMap("SecurityGroupIds")
+        private java.util.List < String > securityGroupIds;
+
+        @NameInMap("SystemDiskCategory")
+        private String systemDiskCategory;
+
+        @NameInMap("SystemDiskDescription")
+        private String systemDiskDescription;
+
+        @NameInMap("SystemDiskName")
+        private String systemDiskName;
+
+        @NameInMap("SystemDiskPerformanceLevel")
+        private String systemDiskPerformanceLevel;
+
+        @NameInMap("SystemDiskSize")
+        private Integer systemDiskSize;
+
+        @NameInMap("Tag")
+        private java.util.List < Tag> tag;
+
+        @NameInMap("UserData")
+        private String userData;
+
         private LaunchConfiguration(Builder builder) {
-            this.dataDisk = builder.dataDisk;
-            this.tag = builder.tag;
-            this.imageId = builder.imageId;
-            this.ioOptimized = builder.ioOptimized;
-            this.internetMaxBandwidthIn = builder.internetMaxBandwidthIn;
-            this.internetMaxBandwidthOut = builder.internetMaxBandwidthOut;
-            this.hostName = builder.hostName;
-            this.instanceDescription = builder.instanceDescription;
-            this.keyPairName = builder.keyPairName;
-            this.ramRoleName = builder.ramRoleName;
-            this.securityEnhancementStrategy = builder.securityEnhancementStrategy;
-            this.userData = builder.userData;
-            this.systemDiskCategory = builder.systemDiskCategory;
-            this.systemDiskSize = builder.systemDiskSize;
-            this.systemDiskName = builder.systemDiskName;
-            this.systemDiskDescription = builder.systemDiskDescription;
-            this.passwordInherit = builder.passwordInherit;
-            this.resourceGroupId = builder.resourceGroupId;
             this.creditSpecification = builder.creditSpecification;
+            this.dataDisk = builder.dataDisk;
             this.deploymentSetId = builder.deploymentSetId;
+            this.hostName = builder.hostName;
+            this.hostNames = builder.hostNames;
+            this.imageId = builder.imageId;
+            this.instanceDescription = builder.instanceDescription;
             this.instanceName = builder.instanceName;
             this.internetChargeType = builder.internetChargeType;
-            this.systemDiskPerformanceLevel = builder.systemDiskPerformanceLevel;
-            this.hostNames = builder.hostNames;
+            this.internetMaxBandwidthIn = builder.internetMaxBandwidthIn;
+            this.internetMaxBandwidthOut = builder.internetMaxBandwidthOut;
+            this.ioOptimized = builder.ioOptimized;
+            this.keyPairName = builder.keyPairName;
+            this.password = builder.password;
+            this.passwordInherit = builder.passwordInherit;
+            this.ramRoleName = builder.ramRoleName;
+            this.resourceGroupId = builder.resourceGroupId;
+            this.securityEnhancementStrategy = builder.securityEnhancementStrategy;
             this.securityGroupId = builder.securityGroupId;
+            this.securityGroupIds = builder.securityGroupIds;
+            this.systemDiskCategory = builder.systemDiskCategory;
+            this.systemDiskDescription = builder.systemDiskDescription;
+            this.systemDiskName = builder.systemDiskName;
+            this.systemDiskPerformanceLevel = builder.systemDiskPerformanceLevel;
+            this.systemDiskSize = builder.systemDiskSize;
+            this.tag = builder.tag;
+            this.userData = builder.userData;
         }
 
         public static Builder builder() {
@@ -1288,6 +1164,13 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         /**
+         * @return creditSpecification
+         */
+        public String getCreditSpecification() {
+            return this.creditSpecification;
+        }
+
+        /**
          * @return dataDisk
          */
         public java.util.List < DataDisk> getDataDisk() {
@@ -1295,38 +1178,10 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * @return tag
+         * @return deploymentSetId
          */
-        public java.util.List < Tag> getTag() {
-            return this.tag;
-        }
-
-        /**
-         * @return imageId
-         */
-        public String getImageId() {
-            return this.imageId;
-        }
-
-        /**
-         * @return ioOptimized
-         */
-        public String getIoOptimized() {
-            return this.ioOptimized;
-        }
-
-        /**
-         * @return internetMaxBandwidthIn
-         */
-        public Integer getInternetMaxBandwidthIn() {
-            return this.internetMaxBandwidthIn;
-        }
-
-        /**
-         * @return internetMaxBandwidthOut
-         */
-        public Integer getInternetMaxBandwidthOut() {
-            return this.internetMaxBandwidthOut;
+        public String getDeploymentSetId() {
+            return this.deploymentSetId;
         }
 
         /**
@@ -1337,94 +1192,24 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         /**
+         * @return hostNames
+         */
+        public java.util.List < String > getHostNames() {
+            return this.hostNames;
+        }
+
+        /**
+         * @return imageId
+         */
+        public String getImageId() {
+            return this.imageId;
+        }
+
+        /**
          * @return instanceDescription
          */
         public String getInstanceDescription() {
             return this.instanceDescription;
-        }
-
-        /**
-         * @return keyPairName
-         */
-        public String getKeyPairName() {
-            return this.keyPairName;
-        }
-
-        /**
-         * @return ramRoleName
-         */
-        public String getRamRoleName() {
-            return this.ramRoleName;
-        }
-
-        /**
-         * @return securityEnhancementStrategy
-         */
-        public String getSecurityEnhancementStrategy() {
-            return this.securityEnhancementStrategy;
-        }
-
-        /**
-         * @return userData
-         */
-        public String getUserData() {
-            return this.userData;
-        }
-
-        /**
-         * @return systemDiskCategory
-         */
-        public String getSystemDiskCategory() {
-            return this.systemDiskCategory;
-        }
-
-        /**
-         * @return systemDiskSize
-         */
-        public Integer getSystemDiskSize() {
-            return this.systemDiskSize;
-        }
-
-        /**
-         * @return systemDiskName
-         */
-        public String getSystemDiskName() {
-            return this.systemDiskName;
-        }
-
-        /**
-         * @return systemDiskDescription
-         */
-        public String getSystemDiskDescription() {
-            return this.systemDiskDescription;
-        }
-
-        /**
-         * @return passwordInherit
-         */
-        public Boolean getPasswordInherit() {
-            return this.passwordInherit;
-        }
-
-        /**
-         * @return resourceGroupId
-         */
-        public String getResourceGroupId() {
-            return this.resourceGroupId;
-        }
-
-        /**
-         * @return creditSpecification
-         */
-        public String getCreditSpecification() {
-            return this.creditSpecification;
-        }
-
-        /**
-         * @return deploymentSetId
-         */
-        public String getDeploymentSetId() {
-            return this.deploymentSetId;
         }
 
         /**
@@ -1442,17 +1227,66 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * @return systemDiskPerformanceLevel
+         * @return internetMaxBandwidthIn
          */
-        public String getSystemDiskPerformanceLevel() {
-            return this.systemDiskPerformanceLevel;
+        public Integer getInternetMaxBandwidthIn() {
+            return this.internetMaxBandwidthIn;
         }
 
         /**
-         * @return hostNames
+         * @return internetMaxBandwidthOut
          */
-        public java.util.List < String > getHostNames() {
-            return this.hostNames;
+        public Integer getInternetMaxBandwidthOut() {
+            return this.internetMaxBandwidthOut;
+        }
+
+        /**
+         * @return ioOptimized
+         */
+        public String getIoOptimized() {
+            return this.ioOptimized;
+        }
+
+        /**
+         * @return keyPairName
+         */
+        public String getKeyPairName() {
+            return this.keyPairName;
+        }
+
+        /**
+         * @return password
+         */
+        public String getPassword() {
+            return this.password;
+        }
+
+        /**
+         * @return passwordInherit
+         */
+        public Boolean getPasswordInherit() {
+            return this.passwordInherit;
+        }
+
+        /**
+         * @return ramRoleName
+         */
+        public String getRamRoleName() {
+            return this.ramRoleName;
+        }
+
+        /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
+         * @return securityEnhancementStrategy
+         */
+        public String getSecurityEnhancementStrategy() {
+            return this.securityEnhancementStrategy;
         }
 
         /**
@@ -1462,38 +1296,288 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             return this.securityGroupId;
         }
 
+        /**
+         * @return securityGroupIds
+         */
+        public java.util.List < String > getSecurityGroupIds() {
+            return this.securityGroupIds;
+        }
+
+        /**
+         * @return systemDiskCategory
+         */
+        public String getSystemDiskCategory() {
+            return this.systemDiskCategory;
+        }
+
+        /**
+         * @return systemDiskDescription
+         */
+        public String getSystemDiskDescription() {
+            return this.systemDiskDescription;
+        }
+
+        /**
+         * @return systemDiskName
+         */
+        public String getSystemDiskName() {
+            return this.systemDiskName;
+        }
+
+        /**
+         * @return systemDiskPerformanceLevel
+         */
+        public String getSystemDiskPerformanceLevel() {
+            return this.systemDiskPerformanceLevel;
+        }
+
+        /**
+         * @return systemDiskSize
+         */
+        public Integer getSystemDiskSize() {
+            return this.systemDiskSize;
+        }
+
+        /**
+         * @return tag
+         */
+        public java.util.List < Tag> getTag() {
+            return this.tag;
+        }
+
+        /**
+         * @return userData
+         */
+        public String getUserData() {
+            return this.userData;
+        }
+
         public static final class Builder {
-            private java.util.List < DataDisk> dataDisk; 
-            private java.util.List < Tag> tag; 
-            private String imageId; 
-            private String ioOptimized; 
-            private Integer internetMaxBandwidthIn; 
-            private Integer internetMaxBandwidthOut; 
-            private String hostName; 
-            private String instanceDescription; 
-            private String keyPairName; 
-            private String ramRoleName; 
-            private String securityEnhancementStrategy; 
-            private String userData; 
-            private String systemDiskCategory; 
-            private Integer systemDiskSize; 
-            private String systemDiskName; 
-            private String systemDiskDescription; 
-            private Boolean passwordInherit; 
-            private String resourceGroupId; 
             private String creditSpecification; 
+            private java.util.List < DataDisk> dataDisk; 
             private String deploymentSetId; 
+            private String hostName; 
+            private java.util.List < String > hostNames; 
+            private String imageId; 
+            private String instanceDescription; 
             private String instanceName; 
             private String internetChargeType; 
-            private String systemDiskPerformanceLevel; 
-            private java.util.List < String > hostNames; 
+            private Integer internetMaxBandwidthIn; 
+            private Integer internetMaxBandwidthOut; 
+            private String ioOptimized; 
+            private String keyPairName; 
+            private String password; 
+            private Boolean passwordInherit; 
+            private String ramRoleName; 
+            private String resourceGroupId; 
+            private String securityEnhancementStrategy; 
             private String securityGroupId; 
+            private java.util.List < String > securityGroupIds; 
+            private String systemDiskCategory; 
+            private String systemDiskDescription; 
+            private String systemDiskName; 
+            private String systemDiskPerformanceLevel; 
+            private Integer systemDiskSize; 
+            private java.util.List < Tag> tag; 
+            private String userData; 
+
+            /**
+             * CreditSpecification.
+             */
+            public Builder creditSpecification(String creditSpecification) {
+                this.creditSpecification = creditSpecification;
+                return this;
+            }
 
             /**
              * DataDisk.
              */
             public Builder dataDisk(java.util.List < DataDisk> dataDisk) {
                 this.dataDisk = dataDisk;
+                return this;
+            }
+
+            /**
+             * DeploymentSetId.
+             */
+            public Builder deploymentSetId(String deploymentSetId) {
+                this.deploymentSetId = deploymentSetId;
+                return this;
+            }
+
+            /**
+             * HostName.
+             */
+            public Builder hostName(String hostName) {
+                this.hostName = hostName;
+                return this;
+            }
+
+            /**
+             * HostNames.
+             */
+            public Builder hostNames(java.util.List < String > hostNames) {
+                this.hostNames = hostNames;
+                return this;
+            }
+
+            /**
+             * ImageId.
+             */
+            public Builder imageId(String imageId) {
+                this.imageId = imageId;
+                return this;
+            }
+
+            /**
+             * InstanceDescription.
+             */
+            public Builder instanceDescription(String instanceDescription) {
+                this.instanceDescription = instanceDescription;
+                return this;
+            }
+
+            /**
+             * InstanceName.
+             */
+            public Builder instanceName(String instanceName) {
+                this.instanceName = instanceName;
+                return this;
+            }
+
+            /**
+             * InternetChargeType.
+             */
+            public Builder internetChargeType(String internetChargeType) {
+                this.internetChargeType = internetChargeType;
+                return this;
+            }
+
+            /**
+             * InternetMaxBandwidthIn.
+             */
+            public Builder internetMaxBandwidthIn(Integer internetMaxBandwidthIn) {
+                this.internetMaxBandwidthIn = internetMaxBandwidthIn;
+                return this;
+            }
+
+            /**
+             * InternetMaxBandwidthOut.
+             */
+            public Builder internetMaxBandwidthOut(Integer internetMaxBandwidthOut) {
+                this.internetMaxBandwidthOut = internetMaxBandwidthOut;
+                return this;
+            }
+
+            /**
+             * IoOptimized.
+             */
+            public Builder ioOptimized(String ioOptimized) {
+                this.ioOptimized = ioOptimized;
+                return this;
+            }
+
+            /**
+             * KeyPairName.
+             */
+            public Builder keyPairName(String keyPairName) {
+                this.keyPairName = keyPairName;
+                return this;
+            }
+
+            /**
+             * Password.
+             */
+            public Builder password(String password) {
+                this.password = password;
+                return this;
+            }
+
+            /**
+             * PasswordInherit.
+             */
+            public Builder passwordInherit(Boolean passwordInherit) {
+                this.passwordInherit = passwordInherit;
+                return this;
+            }
+
+            /**
+             * RamRoleName.
+             */
+            public Builder ramRoleName(String ramRoleName) {
+                this.ramRoleName = ramRoleName;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * SecurityEnhancementStrategy.
+             */
+            public Builder securityEnhancementStrategy(String securityEnhancementStrategy) {
+                this.securityEnhancementStrategy = securityEnhancementStrategy;
+                return this;
+            }
+
+            /**
+             * SecurityGroupId.
+             */
+            public Builder securityGroupId(String securityGroupId) {
+                this.securityGroupId = securityGroupId;
+                return this;
+            }
+
+            /**
+             * SecurityGroupIds.
+             */
+            public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
+                this.securityGroupIds = securityGroupIds;
+                return this;
+            }
+
+            /**
+             * SystemDiskCategory.
+             */
+            public Builder systemDiskCategory(String systemDiskCategory) {
+                this.systemDiskCategory = systemDiskCategory;
+                return this;
+            }
+
+            /**
+             * SystemDiskDescription.
+             */
+            public Builder systemDiskDescription(String systemDiskDescription) {
+                this.systemDiskDescription = systemDiskDescription;
+                return this;
+            }
+
+            /**
+             * SystemDiskName.
+             */
+            public Builder systemDiskName(String systemDiskName) {
+                this.systemDiskName = systemDiskName;
+                return this;
+            }
+
+            /**
+             * SystemDiskPerformanceLevel.
+             */
+            public Builder systemDiskPerformanceLevel(String systemDiskPerformanceLevel) {
+                this.systemDiskPerformanceLevel = systemDiskPerformanceLevel;
+                return this;
+            }
+
+            /**
+             * SystemDiskSize.
+             */
+            public Builder systemDiskSize(Integer systemDiskSize) {
+                this.systemDiskSize = systemDiskSize;
                 return this;
             }
 
@@ -1506,295 +1590,10 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The ID of the image. You can call [DescribeImages](~~ 25534 ~~) to query available image resources. When you specify both the launch template and the launch configuration, the launch template is used first.
-             */
-            public Builder imageId(String imageId) {
-                this.imageId = imageId;
-                return this;
-            }
-
-            /**
-             * Indicates whether the instance is I/O optimized. Valid values:
-             * <p>
-             * 
-             * -none: Non-I/O optimized
-             * -optimized:I/O optimized
-             * 
-             * The default value of phased-out instance types is none. The default value of other instance types is optimized.
-             * 
-             * When you specify both the launch template and the launch configuration, the launch template is used first.
-             */
-            public Builder ioOptimized(String ioOptimized) {
-                this.ioOptimized = ioOptimized;
-                return this;
-            }
-
-            /**
-             * The maximum inbound public bandwidth. Unit: Mbit/s. Valid values:
-             * <p>
-             * 
-             * -When the Internet outbound bandwidth is less than or equal to 10Mbit/s: 1 to 10, the default value is 10.
-             * -When the outbound bandwidth of the public network is greater than 10Mbit/s: 1 to "LaunchConfiguration.InternetMaxBandwidthOut". The default value is "LaunchConfiguration.InternetMaxBandwidthOut.
-             * 
-             * When you specify both the launch template and the launch configuration, the launch template is used first.
-             */
-            public Builder internetMaxBandwidthIn(Integer internetMaxBandwidthIn) {
-                this.internetMaxBandwidthIn = internetMaxBandwidthIn;
-                return this;
-            }
-
-            /**
-             * The maximum outbound public bandwidth. Unit: Mbit/s. Valid values: 0 to 100.
-             * <p>
-             * 
-             * Default value: 0.
-             * 
-             * When you specify both the launch template and the launch configuration, the launch template is used first.
-             */
-            public Builder internetMaxBandwidthOut(Integer internetMaxBandwidthOut) {
-                this.internetMaxBandwidthOut = internetMaxBandwidthOut;
-                return this;
-            }
-
-            /**
-             * The name of the instance. Limits:
-             * <p>
-             * 
-             * -Periods (.) and hyphens (-) cannot be used as start and end characters, and cannot be used consecutively.
-             * -Windows instance: the name must be 2 to 15 characters in length and cannot contain periods (.). It can contain uppercase and lowercase letters, digits, and hyphens (-).
-             * -For other types of instances (such as Linux), the name must be 2 to 64 characters in length and can contain multiple periods (.). A segment can be separated by periods. Each segment can contain uppercase and lowercase letters, digits, and hyphens (-).
-             * -You cannot set "LaunchConfiguration.HostName" and "LaunchConfiguration.HostNames. **At the same time. Otherwise, an error message is returned.
-             * -When you specify both the startup template and startup configuration information, the startup template is used first.
-             * 
-             * 
-             */
-            public Builder hostName(String hostName) {
-                this.hostName = hostName;
-                return this;
-            }
-
-            /**
-             * The description of the instance. The description must be 2 to 256 characters in length and cannot start with "http:// "or "https. When you specify both the launch template and the launch configuration, the launch template is used first.
-             */
-            public Builder instanceDescription(String instanceDescription) {
-                this.instanceDescription = instanceDescription;
-                return this;
-            }
-
-            /**
-             * The name of the key pair.
-             * <p>
-             * 
-             * -Windows the instance. Ignore this parameter. The default value is null.
-             * -The password logon method for Linux instances is initialized to disable.
-             * 
-             * When you specify both the launch template and the launch configuration, the launch template is used first.
-             */
-            public Builder keyPairName(String keyPairName) {
-                this.keyPairName = keyPairName;
-                return this;
-            }
-
-            /**
-             * The name of the instance RAM role. You can use the RAM API [ListRoles](~~ 28713 ~~) to query the created instance RAM role. When you specify both the launch template and the launch configuration, the launch template is used first.
-             */
-            public Builder ramRoleName(String ramRoleName) {
-                this.ramRoleName = ramRoleName;
-                return this;
-            }
-
-            /**
-             * Specifies whether to enable security hardening. Valid values:
-             * <p>
-             * 
-             * -Active: enables security hardening, which takes effect only for public images.
-             * -Deactive: does not enable security hardening and takes effect for all image types.
-             * 
-             * When you specify both the launch template and the launch configuration, the launch template is used first.
-             */
-            public Builder securityEnhancementStrategy(String securityEnhancementStrategy) {
-                this.securityEnhancementStrategy = securityEnhancementStrategy;
-                return this;
-            }
-
-            /**
-             * The user data of the instance. It must be encoded in Base64. the maximum size of raw data is 16KB. When you specify both the launch template and the launch configuration, the launch template is used first.
+             * UserData.
              */
             public Builder userData(String userData) {
                 this.userData = userData;
-                return this;
-            }
-
-            /**
-             * The type of the system disk. Valid values:
-             * <p>
-             * 
-             * -cloud_efficiency: Ultra disk
-             * -cloud_ssd:SSD cloud disk
-             * -cloud_essd:ESSD
-             * -cloud: basic cloud disk
-             * 
-             * For phased-out instance types and non-I/O optimized instances, the default value is cloud. Otherwise, the default value is cloud_efficiency.
-             * 
-             * When you specify both the launch template and the launch configuration, the launch template is used first.
-             */
-            public Builder systemDiskCategory(String systemDiskCategory) {
-                this.systemDiskCategory = systemDiskCategory;
-                return this;
-            }
-
-            /**
-             * The size of the system disk. The unit is GiB. Valid values: 20 to 500. The value of this parameter must be greater than or equal to max{20, LaunchConfiguration.ImageId image size}.
-             * <p>
-             * 
-             * Default value: max{40. The image size corresponding to the parameter LaunchConfiguration.ImageId}.
-             * 
-             * When you specify both the launch template and the launch configuration, the launch template is used first.
-             */
-            public Builder systemDiskSize(Integer systemDiskSize) {
-                this.systemDiskSize = systemDiskSize;
-                return this;
-            }
-
-            /**
-             * The name of the system disk. The description must be 2 to 128 characters in length. It must start with a letter and cannot start with "http:// "or "https. It can contain numbers, periods (.), colons (:), underscores (_), and hyphens (-).
-             * <p>
-             * 
-             * Default value: Null.
-             * 
-             * When you specify both the launch template and the launch configuration, the launch template is used first.
-             */
-            public Builder systemDiskName(String systemDiskName) {
-                this.systemDiskName = systemDiskName;
-                return this;
-            }
-
-            /**
-             * The description of the system disk. The description must be 2 to 256 characters in length and cannot start with "http:// "or "https.
-             * <p>
-             * 
-             * When you specify both the launch template and the launch configuration, the launch template is used first.
-             */
-            public Builder systemDiskDescription(String systemDiskDescription) {
-                this.systemDiskDescription = systemDiskDescription;
-                return this;
-            }
-
-            /**
-             * Specifies whether to use the default password of the image. Valid values:
-             * <p>
-             * 
-             * -true: use
-             * -false: Do not use
-             * 
-             * When you specify both the launch template and the launch configuration, the launch template is used first.
-             */
-            public Builder passwordInherit(Boolean passwordInherit) {
-                this.passwordInherit = passwordInherit;
-                return this;
-            }
-
-            /**
-             * The ID of the resource group to which the instance belongs. When you specify both the launch template and the launch configuration, the launch template is used first.
-             */
-            public Builder resourceGroupId(String resourceGroupId) {
-                this.resourceGroupId = resourceGroupId;
-                return this;
-            }
-
-            /**
-             * Modify the running mode of a burstable instance. Valid values:
-             * <p>
-             * 
-             * -Standard: Standard mode. For more information about instance performance, see performance constraint mode in [What is burstable instance](~~ 59977 ~~).
-             * -Unlimited: Unlimited Mode. For more information about instance performance, see Unlimited mode in [What is burstable instance](~~ 59977 ~~).
-             * 
-             * Default value: None
-             * 
-             * When you specify both the launch template and the launch configuration, the launch template is used first.
-             */
-            public Builder creditSpecification(String creditSpecification) {
-                this.creditSpecification = creditSpecification;
-                return this;
-            }
-
-            /**
-             * The ID of the deployment set.
-             */
-            public Builder deploymentSetId(String deploymentSetId) {
-                this.deploymentSetId = deploymentSetId;
-                return this;
-            }
-
-            /**
-             * The name of the instance. The description must be 2 to 128 characters in length. It must start with a letter and cannot start with "http://" or "https. It can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-). The default value is the instanceid" of the instance ".
-             * <p>
-             * 
-             * When you create multiple ECS instances, you can set multiple instance names in batches. For more information, see [batch set ordered instance names or host names](~~ 196048 ~~).
-             * 
-             * When you specify both the launch template and the launch configuration, the launch template is used first.
-             */
-            public Builder instanceName(String instanceName) {
-                this.instanceName = instanceName;
-                return this;
-            }
-
-            /**
-             * The billing method of the network. Valid values:
-             * <p>
-             * 
-             * -PayByBandwidth: pay-by-bandwidth
-             * -PayByTraffic: pay by traffic
-             * 
-             * > The peak inbound and outbound bandwidth in pay-by-traffic mode is the upper limit of the bandwidth and is not used as a service commitment indicator. When a resource scramble occurs, the peak bandwidth may be limited. If your business needs to be guaranteed by bandwidth, use the pay-by-bandwidth billing method.
-             * 
-             * When you specify both the launch template and the launch configuration, the launch template is used first.
-             */
-            public Builder internetChargeType(String internetChargeType) {
-                this.internetChargeType = internetChargeType;
-                return this;
-            }
-
-            /**
-             * When you create an ESSD as a system disk, set the performance level of the disk. Valid values:
-             * <p>
-             * 
-             * -PL0 (default): The maximum random read/write IOPS per disk is 10,000.
-             * -PL1: The maximum random read/write IOPS per disk is 50,000
-             * -PL2: The maximum random read/write IOPS per disk is 100,000
-             * -PL3: The maximum random read/write IOPS per disk is 1 million
-             * 
-             * For more information about how to select an ESSD performance level, see [ESSD cloud disk](~~ 122389 ~~).
-             * 
-             * When you specify both the launch template and the launch configuration, the launch template is used first.
-             */
-            public Builder systemDiskPerformanceLevel(String systemDiskPerformanceLevel) {
-                this.systemDiskPerformanceLevel = systemDiskPerformanceLevel;
-                return this;
-            }
-
-            /**
-             * Specify different host names for one or more instances. Limits:
-             * <p>
-             * 
-             * -This parameter takes effect only when you create an auto provisioning Group of the one-time synchronous delivery type ("AutoProvisioningGroupType = instant").
-             * -N indicates the number of instances. Valid values: 1 to 1000. The value must be the same as that of the TotalTargetCapacity parameter.
-             * -Periods (.) and hyphens (-) cannot be used as start and end characters, and cannot be used consecutively.
-             * -Windows instance: the name must be 2 to 15 characters in length and cannot contain periods (.). It can contain uppercase and lowercase letters, digits, and hyphens (-).
-             * -For other types of instances (such as Linux), the name must be 2 to 64 characters in length and can contain multiple half-width periods (.). The half-width periods (.) must be a segment. Each segment can contain uppercase and lowercase letters, digits, and hyphens (-).
-             * -You cannot set "LaunchConfiguration.HostName" and "LaunchConfiguration.HostNames. **At the same time. Otherwise, an error message is returned.
-             * -When you specify both the startup template and startup configuration information, the startup template is used first.
-             */
-            public Builder hostNames(java.util.List < String > hostNames) {
-                this.hostNames = hostNames;
-                return this;
-            }
-
-            /**
-             * The ID of the security group to which the instance belongs. When you specify both the launch template and the launch configuration, the launch template is used first.
-             */
-            public Builder securityGroupId(String securityGroupId) {
-                this.securityGroupId = securityGroupId;
                 return this;
             }
 
@@ -1805,9 +1604,50 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         } 
 
     }
+    public static class DataDiskConfig extends TeaModel {
+        @NameInMap("DiskCategory")
+        private String diskCategory;
+
+        private DataDiskConfig(Builder builder) {
+            this.diskCategory = builder.diskCategory;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DataDiskConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return diskCategory
+         */
+        public String getDiskCategory() {
+            return this.diskCategory;
+        }
+
+        public static final class Builder {
+            private String diskCategory; 
+
+            /**
+             * DiskCategory.
+             */
+            public Builder diskCategory(String diskCategory) {
+                this.diskCategory = diskCategory;
+                return this;
+            }
+
+            public DataDiskConfig build() {
+                return new DataDiskConfig(this);
+            } 
+
+        } 
+
+    }
     public static class LaunchTemplateConfig extends TeaModel {
-        @NameInMap("VSwitchId")
-        private String vSwitchId;
+        @NameInMap("InstanceType")
+        private String instanceType;
 
         @NameInMap("MaxPrice")
         private Double maxPrice;
@@ -1815,17 +1655,17 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         @NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("InstanceType")
-        private String instanceType;
+        @NameInMap("VSwitchId")
+        private String vSwitchId;
 
         @NameInMap("WeightedCapacity")
         private Double weightedCapacity;
 
         private LaunchTemplateConfig(Builder builder) {
-            this.vSwitchId = builder.vSwitchId;
+            this.instanceType = builder.instanceType;
             this.maxPrice = builder.maxPrice;
             this.priority = builder.priority;
-            this.instanceType = builder.instanceType;
+            this.vSwitchId = builder.vSwitchId;
             this.weightedCapacity = builder.weightedCapacity;
         }
 
@@ -1838,10 +1678,10 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * @return vSwitchId
+         * @return instanceType
          */
-        public String getVSwitchId() {
-            return this.vSwitchId;
+        public String getInstanceType() {
+            return this.instanceType;
         }
 
         /**
@@ -1859,10 +1699,10 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * @return instanceType
+         * @return vSwitchId
          */
-        public String getInstanceType() {
-            return this.instanceType;
+        public String getVSwitchId() {
+            return this.vSwitchId;
         }
 
         /**
@@ -1873,47 +1713,14 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         public static final class Builder {
-            private String vSwitchId; 
+            private String instanceType; 
             private Double maxPrice; 
             private Integer priority; 
-            private String instanceType; 
+            private String vSwitchId; 
             private Double weightedCapacity; 
 
             /**
-             * 扩展启动模板中，ECS实例加入的虚拟交换机的ID。扩展模板中启动的ECS实例的可用区由虚拟交换机决定。
-             * <p>
-             * 
-             * > 设置了`LaunchTemplateConfig`后，`LaunchTemplateConfig.N.VSwitchId`为必选参数。
-             */
-            public Builder vSwitchId(String vSwitchId) {
-                this.vSwitchId = vSwitchId;
-                return this;
-            }
-
-            /**
-             * 扩展启动模板中，抢占式实例的价格上限。
-             * <p>
-             * 
-             * > 设置了`LaunchTemplateConfig`后，`LaunchTemplateConfig.N.MaxPrice`为必选参数。
-             */
-            public Builder maxPrice(Double maxPrice) {
-                this.maxPrice = maxPrice;
-                return this;
-            }
-
-            /**
-             * 扩展启动模板的优先级，取值为0时优先级最高。取值范围：0 ~ +∞
-             * <p>
-             * 
-             * 
-             */
-            public Builder priority(Integer priority) {
-                this.priority = priority;
-                return this;
-            }
-
-            /**
-             * 扩展启动模板对应的实例规格，N的取值范围：1~20。取值范围：请参见[实例规格族](~~25378~~)。
+             * InstanceType.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -1921,13 +1728,31 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * 扩展启动模板中，实例规格的权重。取值越高，单台实例满足计算力需求的能力越大，所需的实例数量越小。取值范围：大于0
-             * <p>
-             * 
-             * 您可以根据指定实例规格的计算力和集群单节点最低计算力得出权重值。假设单节点最低计算力为8 vCPU、60GiB，则：
-             * 
-             * - 8 vCPU、60GiB的实例规格权重可以设置为1
-             * - 16 vCPU、120GiB的实例规格权重可以设置为2
+             * MaxPrice.
+             */
+            public Builder maxPrice(Double maxPrice) {
+                this.maxPrice = maxPrice;
+                return this;
+            }
+
+            /**
+             * Priority.
+             */
+            public Builder priority(Integer priority) {
+                this.priority = priority;
+                return this;
+            }
+
+            /**
+             * VSwitchId.
+             */
+            public Builder vSwitchId(String vSwitchId) {
+                this.vSwitchId = vSwitchId;
+                return this;
+            }
+
+            /**
+             * WeightedCapacity.
              */
             public Builder weightedCapacity(Double weightedCapacity) {
                 this.weightedCapacity = weightedCapacity;
@@ -1968,13 +1793,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             private String diskCategory; 
 
             /**
-             * 实例系统盘类型。您可通过该参数指定多种候选磁盘类型，指定顺序作为各磁盘类型的优先级顺序，当某一种磁盘不可用时，自动更换磁盘类型。取值范围：
-             * <p>
-             * 
-             * -   cloud_efficiency：高效云盘
-             * -   cloud_ssd：SSD云盘
-             * -   cloud_essd：ESSD云盘
-             * -   cloud：普通云盘
+             * DiskCategory.
              */
             public Builder diskCategory(String diskCategory) {
                 this.diskCategory = diskCategory;
@@ -1983,53 +1802,6 @@ public class CreateAutoProvisioningGroupRequest extends Request {
 
             public SystemDiskConfig build() {
                 return new SystemDiskConfig(this);
-            } 
-
-        } 
-
-    }
-    public static class DataDiskConfig extends TeaModel {
-        @NameInMap("DiskCategory")
-        private String diskCategory;
-
-        private DataDiskConfig(Builder builder) {
-            this.diskCategory = builder.diskCategory;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static DataDiskConfig create() {
-            return builder().build();
-        }
-
-        /**
-         * @return diskCategory
-         */
-        public String getDiskCategory() {
-            return this.diskCategory;
-        }
-
-        public static final class Builder {
-            private String diskCategory; 
-
-            /**
-             * 实例数据盘类型。您可通过该参数指定多种候选磁盘类型，指定顺序作为各磁盘类型的优先级顺序，当某一种磁盘不可用时，自动更换磁盘类型。取值范围：
-             * <p>
-             * 
-             * -   cloud_efficiency：高效云盘
-             * -   cloud_ssd：SSD云盘
-             * -   cloud_essd：ESSD云盘
-             * -   cloud：普通云盘
-             */
-            public Builder diskCategory(String diskCategory) {
-                this.diskCategory = diskCategory;
-                return this;
-            }
-
-            public DataDiskConfig build() {
-                return new DataDiskConfig(this);
             } 
 
         } 

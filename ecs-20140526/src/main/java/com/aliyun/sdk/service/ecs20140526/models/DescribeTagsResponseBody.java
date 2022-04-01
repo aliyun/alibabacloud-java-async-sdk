@@ -12,27 +12,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeTagsResponseBody</p>
  */
 public class DescribeTagsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    private String requestId;
+    @NameInMap("PageNumber")
+    private Integer pageNumber;
 
     @NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("PageNumber")
-    private Integer pageNumber;
-
-    @NameInMap("TotalCount")
-    private Integer totalCount;
+    @NameInMap("RequestId")
+    private String requestId;
 
     @NameInMap("Tags")
     private Tags tags;
 
+    @NameInMap("TotalCount")
+    private Integer totalCount;
+
     private DescribeTagsResponseBody(Builder builder) {
-        this.requestId = builder.requestId;
-        this.pageSize = builder.pageSize;
         this.pageNumber = builder.pageNumber;
-        this.totalCount = builder.totalCount;
+        this.pageSize = builder.pageSize;
+        this.requestId = builder.requestId;
         this.tags = builder.tags;
+        this.totalCount = builder.totalCount;
     }
 
     public static Builder builder() {
@@ -44,10 +44,10 @@ public class DescribeTagsResponseBody extends TeaModel {
     }
 
     /**
-     * @return requestId
+     * @return pageNumber
      */
-    public String getRequestId() {
-        return this.requestId;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     /**
@@ -58,17 +58,10 @@ public class DescribeTagsResponseBody extends TeaModel {
     }
 
     /**
-     * @return pageNumber
+     * @return requestId
      */
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    /**
-     * @return totalCount
-     */
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     /**
@@ -78,31 +71,22 @@ public class DescribeTagsResponseBody extends TeaModel {
         return this.tags;
     }
 
+    /**
+     * @return totalCount
+     */
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static final class Builder {
-        private String requestId; 
-        private Integer pageSize; 
         private Integer pageNumber; 
-        private Integer totalCount; 
+        private Integer pageSize; 
+        private String requestId; 
         private Tags tags; 
+        private Integer totalCount; 
 
         /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The number of entries to return on each page.
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * The page number of the tag list.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -110,18 +94,34 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of tags.
+         * PageSize.
          */
-        public Builder totalCount(Integer totalCount) {
-            this.totalCount = totalCount;
+        public Builder pageSize(Integer pageSize) {
+            this.pageSize = pageSize;
             return this;
         }
 
         /**
-         * The tags that meet all the filter conditions.
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * Tags.
          */
         public Builder tags(Tags tags) {
             this.tags = tags;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
@@ -132,29 +132,29 @@ public class DescribeTagsResponseBody extends TeaModel {
     } 
 
     public static class ResourceTypeCount extends TeaModel {
-        @NameInMap("Instance")
-        private Integer instance;
-
-        @NameInMap("Image")
-        private Integer image;
-
-        @NameInMap("Eni")
-        private Integer eni;
-
-        @NameInMap("LaunchTemplate")
-        private Integer launchTemplate;
-
-        @NameInMap("KeyPair")
-        private Integer keyPair;
-
         @NameInMap("Ddh")
         private Integer ddh;
 
         @NameInMap("Disk")
         private Integer disk;
 
-        @NameInMap("Volume")
-        private Integer volume;
+        @NameInMap("Eni")
+        private Integer eni;
+
+        @NameInMap("Image")
+        private Integer image;
+
+        @NameInMap("Instance")
+        private Integer instance;
+
+        @NameInMap("KeyPair")
+        private Integer keyPair;
+
+        @NameInMap("LaunchTemplate")
+        private Integer launchTemplate;
+
+        @NameInMap("ReservedInstance")
+        private Integer reservedInstance;
 
         @NameInMap("Securitygroup")
         private Integer securitygroup;
@@ -162,17 +162,25 @@ public class DescribeTagsResponseBody extends TeaModel {
         @NameInMap("Snapshot")
         private Integer snapshot;
 
+        @NameInMap("SnapshotPolicy")
+        private Integer snapshotPolicy;
+
+        @NameInMap("Volume")
+        private Integer volume;
+
         private ResourceTypeCount(Builder builder) {
-            this.instance = builder.instance;
-            this.image = builder.image;
-            this.eni = builder.eni;
-            this.launchTemplate = builder.launchTemplate;
-            this.keyPair = builder.keyPair;
             this.ddh = builder.ddh;
             this.disk = builder.disk;
-            this.volume = builder.volume;
+            this.eni = builder.eni;
+            this.image = builder.image;
+            this.instance = builder.instance;
+            this.keyPair = builder.keyPair;
+            this.launchTemplate = builder.launchTemplate;
+            this.reservedInstance = builder.reservedInstance;
             this.securitygroup = builder.securitygroup;
             this.snapshot = builder.snapshot;
+            this.snapshotPolicy = builder.snapshotPolicy;
+            this.volume = builder.volume;
         }
 
         public static Builder builder() {
@@ -181,41 +189,6 @@ public class DescribeTagsResponseBody extends TeaModel {
 
         public static ResourceTypeCount create() {
             return builder().build();
-        }
-
-        /**
-         * @return instance
-         */
-        public Integer getInstance() {
-            return this.instance;
-        }
-
-        /**
-         * @return image
-         */
-        public Integer getImage() {
-            return this.image;
-        }
-
-        /**
-         * @return eni
-         */
-        public Integer getEni() {
-            return this.eni;
-        }
-
-        /**
-         * @return launchTemplate
-         */
-        public Integer getLaunchTemplate() {
-            return this.launchTemplate;
-        }
-
-        /**
-         * @return keyPair
-         */
-        public Integer getKeyPair() {
-            return this.keyPair;
         }
 
         /**
@@ -233,10 +206,45 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * @return volume
+         * @return eni
          */
-        public Integer getVolume() {
-            return this.volume;
+        public Integer getEni() {
+            return this.eni;
+        }
+
+        /**
+         * @return image
+         */
+        public Integer getImage() {
+            return this.image;
+        }
+
+        /**
+         * @return instance
+         */
+        public Integer getInstance() {
+            return this.instance;
+        }
+
+        /**
+         * @return keyPair
+         */
+        public Integer getKeyPair() {
+            return this.keyPair;
+        }
+
+        /**
+         * @return launchTemplate
+         */
+        public Integer getLaunchTemplate() {
+            return this.launchTemplate;
+        }
+
+        /**
+         * @return reservedInstance
+         */
+        public Integer getReservedInstance() {
+            return this.reservedInstance;
         }
 
         /**
@@ -253,60 +261,36 @@ public class DescribeTagsResponseBody extends TeaModel {
             return this.snapshot;
         }
 
+        /**
+         * @return snapshotPolicy
+         */
+        public Integer getSnapshotPolicy() {
+            return this.snapshotPolicy;
+        }
+
+        /**
+         * @return volume
+         */
+        public Integer getVolume() {
+            return this.volume;
+        }
+
         public static final class Builder {
-            private Integer instance; 
-            private Integer image; 
-            private Integer eni; 
-            private Integer launchTemplate; 
-            private Integer keyPair; 
             private Integer ddh; 
             private Integer disk; 
-            private Integer volume; 
+            private Integer eni; 
+            private Integer image; 
+            private Integer instance; 
+            private Integer keyPair; 
+            private Integer launchTemplate; 
+            private Integer reservedInstance; 
             private Integer securitygroup; 
             private Integer snapshot; 
+            private Integer snapshotPolicy; 
+            private Integer volume; 
 
             /**
-             * The number of instances marked by the tag.
-             */
-            public Builder instance(Integer instance) {
-                this.instance = instance;
-                return this;
-            }
-
-            /**
-             * The number of images marked by the tag.
-             */
-            public Builder image(Integer image) {
-                this.image = image;
-                return this;
-            }
-
-            /**
-             * The number of Enis marked by the tag.
-             */
-            public Builder eni(Integer eni) {
-                this.eni = eni;
-                return this;
-            }
-
-            /**
-             * The number of launch templates marked by the tag.
-             */
-            public Builder launchTemplate(Integer launchTemplate) {
-                this.launchTemplate = launchTemplate;
-                return this;
-            }
-
-            /**
-             * The number of key pairs marked by the tag.
-             */
-            public Builder keyPair(Integer keyPair) {
-                this.keyPair = keyPair;
-                return this;
-            }
-
-            /**
-             * The number of dedicated hosts marked by the tag.
+             * Ddh.
              */
             public Builder ddh(Integer ddh) {
                 this.ddh = ddh;
@@ -314,7 +298,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of disks marked by the tag.
+             * Disk.
              */
             public Builder disk(Integer disk) {
                 this.disk = disk;
@@ -322,15 +306,55 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of extended volumes marked by the tag.
+             * Eni.
              */
-            public Builder volume(Integer volume) {
-                this.volume = volume;
+            public Builder eni(Integer eni) {
+                this.eni = eni;
                 return this;
             }
 
             /**
-             * The number of security groups marked by the tag.
+             * Image.
+             */
+            public Builder image(Integer image) {
+                this.image = image;
+                return this;
+            }
+
+            /**
+             * Instance.
+             */
+            public Builder instance(Integer instance) {
+                this.instance = instance;
+                return this;
+            }
+
+            /**
+             * KeyPair.
+             */
+            public Builder keyPair(Integer keyPair) {
+                this.keyPair = keyPair;
+                return this;
+            }
+
+            /**
+             * LaunchTemplate.
+             */
+            public Builder launchTemplate(Integer launchTemplate) {
+                this.launchTemplate = launchTemplate;
+                return this;
+            }
+
+            /**
+             * ReservedInstance.
+             */
+            public Builder reservedInstance(Integer reservedInstance) {
+                this.reservedInstance = reservedInstance;
+                return this;
+            }
+
+            /**
+             * Securitygroup.
              */
             public Builder securitygroup(Integer securitygroup) {
                 this.securitygroup = securitygroup;
@@ -338,10 +362,26 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of snapshots marked by the tag.
+             * Snapshot.
              */
             public Builder snapshot(Integer snapshot) {
                 this.snapshot = snapshot;
+                return this;
+            }
+
+            /**
+             * SnapshotPolicy.
+             */
+            public Builder snapshotPolicy(Integer snapshotPolicy) {
+                this.snapshotPolicy = snapshotPolicy;
+                return this;
+            }
+
+            /**
+             * Volume.
+             */
+            public Builder volume(Integer volume) {
+                this.volume = volume;
                 return this;
             }
 
@@ -353,19 +393,19 @@ public class DescribeTagsResponseBody extends TeaModel {
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("TagValue")
-        private String tagValue;
+        @NameInMap("ResourceTypeCount")
+        private ResourceTypeCount resourceTypeCount;
 
         @NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("ResourceTypeCount")
-        private ResourceTypeCount resourceTypeCount;
+        @NameInMap("TagValue")
+        private String tagValue;
 
         private Tag(Builder builder) {
-            this.tagValue = builder.tagValue;
-            this.tagKey = builder.tagKey;
             this.resourceTypeCount = builder.resourceTypeCount;
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
         }
 
         public static Builder builder() {
@@ -377,10 +417,10 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * @return tagValue
+         * @return resourceTypeCount
          */
-        public String getTagValue() {
-            return this.tagValue;
+        public ResourceTypeCount getResourceTypeCount() {
+            return this.resourceTypeCount;
         }
 
         /**
@@ -391,27 +431,27 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * @return resourceTypeCount
+         * @return tagValue
          */
-        public ResourceTypeCount getResourceTypeCount() {
-            return this.resourceTypeCount;
+        public String getTagValue() {
+            return this.tagValue;
         }
 
         public static final class Builder {
-            private String tagValue; 
-            private String tagKey; 
             private ResourceTypeCount resourceTypeCount; 
+            private String tagKey; 
+            private String tagValue; 
 
             /**
-             * The value of the tag.
+             * ResourceTypeCount.
              */
-            public Builder tagValue(String tagValue) {
-                this.tagValue = tagValue;
+            public Builder resourceTypeCount(ResourceTypeCount resourceTypeCount) {
+                this.resourceTypeCount = resourceTypeCount;
                 return this;
             }
 
             /**
-             * The key of the tag.
+             * TagKey.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -419,10 +459,10 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * The Count of resource types.
+             * TagValue.
              */
-            public Builder resourceTypeCount(ResourceTypeCount resourceTypeCount) {
-                this.resourceTypeCount = resourceTypeCount;
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
                 return this;
             }
 

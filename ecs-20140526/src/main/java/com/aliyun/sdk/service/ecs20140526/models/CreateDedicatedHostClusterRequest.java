@@ -13,28 +13,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateDedicatedHostClusterRequest extends Request {
     @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
-
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @NameInMap("DedicatedHostClusterName")
+    private String dedicatedHostClusterName;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
+    @NameInMap("Description")
+    private String description;
 
     @Query
-    @NameInMap("ResourceOwnerAccount")
-    private String resourceOwnerAccount;
-
-    @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
+    @NameInMap("DryRun")
+    private Boolean dryRun;
 
     @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
+
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
 
     @Query
     @NameInMap("RegionId")
@@ -46,16 +42,20 @@ public class CreateDedicatedHostClusterRequest extends Request {
     private String resourceGroupId;
 
     @Query
-    @NameInMap("DryRun")
-    private Boolean dryRun;
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
 
     @Query
-    @NameInMap("DedicatedHostClusterName")
-    private String dedicatedHostClusterName;
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     @Query
-    @NameInMap("Description")
-    private String description;
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
 
     @Query
     @NameInMap("ZoneId")
@@ -63,17 +63,17 @@ public class CreateDedicatedHostClusterRequest extends Request {
 
     private CreateDedicatedHostClusterRequest(Builder builder) {
         super(builder);
-        this.tag = builder.tag;
-        this.sourceRegionId = builder.sourceRegionId;
-        this.ownerId = builder.ownerId;
-        this.resourceOwnerAccount = builder.resourceOwnerAccount;
-        this.resourceOwnerId = builder.resourceOwnerId;
-        this.ownerAccount = builder.ownerAccount;
-        this.regionId = builder.regionId;
-        this.resourceGroupId = builder.resourceGroupId;
-        this.dryRun = builder.dryRun;
         this.dedicatedHostClusterName = builder.dedicatedHostClusterName;
         this.description = builder.description;
+        this.dryRun = builder.dryRun;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.sourceRegionId = builder.sourceRegionId;
+        this.tag = builder.tag;
         this.zoneId = builder.zoneId;
     }
 
@@ -91,38 +91,24 @@ public class CreateDedicatedHostClusterRequest extends Request {
     }
 
     /**
-     * @return tag
+     * @return dedicatedHostClusterName
      */
-    public java.util.List < Tag> getTag() {
-        return this.tag;
+    public String getDedicatedHostClusterName() {
+        return this.dedicatedHostClusterName;
     }
 
     /**
-     * @return sourceRegionId
+     * @return description
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getDescription() {
+        return this.description;
     }
 
     /**
-     * @return ownerId
+     * @return dryRun
      */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
-     * @return resourceOwnerAccount
-     */
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    /**
-     * @return resourceOwnerId
-     */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -130,6 +116,13 @@ public class CreateDedicatedHostClusterRequest extends Request {
      */
     public String getOwnerAccount() {
         return this.ownerAccount;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     /**
@@ -147,24 +140,31 @@ public class CreateDedicatedHostClusterRequest extends Request {
     }
 
     /**
-     * @return dryRun
+     * @return resourceOwnerAccount
      */
-    public Boolean getDryRun() {
-        return this.dryRun;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
     }
 
     /**
-     * @return dedicatedHostClusterName
+     * @return resourceOwnerId
      */
-    public String getDedicatedHostClusterName() {
-        return this.dedicatedHostClusterName;
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     /**
-     * @return description
+     * @return sourceRegionId
      */
-    public String getDescription() {
-        return this.description;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
     }
 
     /**
@@ -175,17 +175,17 @@ public class CreateDedicatedHostClusterRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateDedicatedHostClusterRequest, Builder> {
-        private java.util.List < Tag> tag; 
-        private String sourceRegionId; 
-        private Long ownerId; 
-        private String resourceOwnerAccount; 
-        private Long resourceOwnerId; 
-        private String ownerAccount; 
-        private String regionId; 
-        private String resourceGroupId; 
-        private Boolean dryRun; 
         private String dedicatedHostClusterName; 
         private String description; 
+        private Boolean dryRun; 
+        private String ownerAccount; 
+        private Long ownerId; 
+        private String regionId; 
+        private String resourceGroupId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String sourceRegionId; 
+        private java.util.List < Tag> tag; 
         private String zoneId; 
 
         private Builder() {
@@ -194,35 +194,53 @@ public class CreateDedicatedHostClusterRequest extends Request {
 
         private Builder(CreateDedicatedHostClusterRequest request) {
             super(request);
-            this.tag = request.tag;
-            this.sourceRegionId = request.sourceRegionId;
-            this.ownerId = request.ownerId;
-            this.resourceOwnerAccount = request.resourceOwnerAccount;
-            this.resourceOwnerId = request.resourceOwnerId;
-            this.ownerAccount = request.ownerAccount;
-            this.regionId = request.regionId;
-            this.resourceGroupId = request.resourceGroupId;
-            this.dryRun = request.dryRun;
             this.dedicatedHostClusterName = request.dedicatedHostClusterName;
             this.description = request.description;
+            this.dryRun = request.dryRun;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceRegionId = request.sourceRegionId;
+            this.tag = request.tag;
             this.zoneId = request.zoneId;
         } 
 
         /**
-         * Tag.
+         * DedicatedHostClusterName.
          */
-        public Builder tag(java.util.List < Tag> tag) {
-            this.putQueryParameter("Tag", tag);
-            this.tag = tag;
+        public Builder dedicatedHostClusterName(String dedicatedHostClusterName) {
+            this.putQueryParameter("DedicatedHostClusterName", dedicatedHostClusterName);
+            this.dedicatedHostClusterName = dedicatedHostClusterName;
             return this;
         }
 
         /**
-         * SourceRegionId.
+         * Description.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
+            return this;
+        }
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
             return this;
         }
 
@@ -232,6 +250,24 @@ public class CreateDedicatedHostClusterRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 
@@ -254,73 +290,25 @@ public class CreateDedicatedHostClusterRequest extends Request {
         }
 
         /**
-         * OwnerAccount.
+         * SourceRegionId.
          */
-        public Builder ownerAccount(String ownerAccount) {
-            this.putQueryParameter("OwnerAccount", ownerAccount);
-            this.ownerAccount = ownerAccount;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 
         /**
-         * The region ID of the DDH cluster. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
+         * Tag.
          */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
             return this;
         }
 
         /**
-         * The ID of the resource group to which the DDH cluster belongs.
-         */
-        public Builder resourceGroupId(String resourceGroupId) {
-            this.putQueryParameter("ResourceGroupId", resourceGroupId);
-            this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-
-        /**
-         * Specifies whether to PreCheck only this request. Valid values:
-         * <p>
-         * 
-         * -true: sends a check request without querying the resource status. Check whether the AccessKey is valid, whether the RAM user is authorized, and whether required parameters are specified. If the check fails, the corresponding error is returned. If the check succeeds, the error code "DryRunOperation" is returned ".
-         * -false: a normal request is sent. After the request passes the check, the 2XX HTTP status code is returned and the resource status is directly queried.
-         * 
-         * Default value: false
-         */
-        public Builder dryRun(Boolean dryRun) {
-            this.putQueryParameter("DryRun", dryRun);
-            this.dryRun = dryRun;
-            return this;
-        }
-
-        /**
-         * The name of the DDH cluster. The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter. It cannot contain "http:// "or "https://".
-         * <p>
-         * 
-         * Default value: Null.
-         */
-        public Builder dedicatedHostClusterName(String dedicatedHostClusterName) {
-            this.putQueryParameter("DedicatedHostClusterName", dedicatedHostClusterName);
-            this.dedicatedHostClusterName = dedicatedHostClusterName;
-            return this;
-        }
-
-        /**
-         * The description of the DDH cluster. The description must be 2 to 256 characters in length. It cannot start with "http:// "or "https.
-         * <p>
-         * 
-         * Default value: Null.
-         */
-        public Builder description(String description) {
-            this.putQueryParameter("Description", description);
-            this.description = description;
-            return this;
-        }
-
-        /**
-         * The ID of the zone where the dedicated host cluster is located. You can call [DescribeZones](~~ 25610 ~~) to view the zones in the Alibaba Cloud region.
+         * ZoneId.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -374,7 +362,7 @@ public class CreateDedicatedHostClusterRequest extends Request {
             private String value; 
 
             /**
-             * 专有宿主机集群的标签键。N的取值范围：1~20。一旦传入该值，则不允许为空字符串。最多支持64个字符，不能以`aliyun`和`acs:`开头，不能包含`http://`或`https://`。
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -382,7 +370,7 @@ public class CreateDedicatedHostClusterRequest extends Request {
             }
 
             /**
-             * 专有宿主机集群的标签值。N的取值范围：1~20。一旦传入该值，则不允许为空字符串。最多支持64个字符，不能以`aliyun`和`acs:`开头，不能包含`http://`或`https://`。
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

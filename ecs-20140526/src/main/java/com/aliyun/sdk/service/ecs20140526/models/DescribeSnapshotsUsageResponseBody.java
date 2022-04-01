@@ -12,19 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSnapshotsUsageResponseBody</p>
  */
 public class DescribeSnapshotsUsageResponseBody extends TeaModel {
-    @NameInMap("SnapshotSize")
-    private Long snapshotSize;
-
     @NameInMap("RequestId")
     private String requestId;
 
     @NameInMap("SnapshotCount")
     private Integer snapshotCount;
 
+    @NameInMap("SnapshotSize")
+    private Long snapshotSize;
+
     private DescribeSnapshotsUsageResponseBody(Builder builder) {
-        this.snapshotSize = builder.snapshotSize;
         this.requestId = builder.requestId;
         this.snapshotCount = builder.snapshotCount;
+        this.snapshotSize = builder.snapshotSize;
     }
 
     public static Builder builder() {
@@ -33,13 +33,6 @@ public class DescribeSnapshotsUsageResponseBody extends TeaModel {
 
     public static DescribeSnapshotsUsageResponseBody create() {
         return builder().build();
-    }
-
-    /**
-     * @return snapshotSize
-     */
-    public Long getSnapshotSize() {
-        return this.snapshotSize;
     }
 
     /**
@@ -56,21 +49,20 @@ public class DescribeSnapshotsUsageResponseBody extends TeaModel {
         return this.snapshotCount;
     }
 
+    /**
+     * @return snapshotSize
+     */
+    public Long getSnapshotSize() {
+        return this.snapshotSize;
+    }
+
     public static final class Builder {
-        private Long snapshotSize; 
         private String requestId; 
         private Integer snapshotCount; 
+        private Long snapshotSize; 
 
         /**
-         * The size of a snapshot in the current region. Unit: bytes.
-         */
-        public Builder snapshotSize(Long snapshotSize) {
-            this.snapshotSize = snapshotSize;
-            return this;
-        }
-
-        /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,10 +70,18 @@ public class DescribeSnapshotsUsageResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of snapshots in the current region.
+         * SnapshotCount.
          */
         public Builder snapshotCount(Integer snapshotCount) {
             this.snapshotCount = snapshotCount;
+            return this;
+        }
+
+        /**
+         * SnapshotSize.
+         */
+        public Builder snapshotSize(Long snapshotSize) {
+            this.snapshotSize = snapshotSize;
             return this;
         }
 

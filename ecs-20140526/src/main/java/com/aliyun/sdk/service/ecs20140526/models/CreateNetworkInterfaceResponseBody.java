@@ -12,17 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateNetworkInterfaceResponseBody</p>
  */
 public class CreateNetworkInterfaceResponseBody extends TeaModel {
-    @NameInMap("Status")
-    private String status;
+    @NameInMap("Description")
+    private String description;
 
-    @NameInMap("Type")
-    private String type;
-
-    @NameInMap("VpcId")
-    private String vpcId;
-
-    @NameInMap("NetworkInterfaceName")
-    private String networkInterfaceName;
+    @NameInMap("Ipv6Sets")
+    private Ipv6Sets ipv6Sets;
 
     @NameInMap("MacAddress")
     private String macAddress;
@@ -30,65 +24,71 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     @NameInMap("NetworkInterfaceId")
     private String networkInterfaceId;
 
-    @NameInMap("ServiceID")
-    private Long serviceID;
+    @NameInMap("NetworkInterfaceName")
+    private String networkInterfaceName;
 
     @NameInMap("OwnerId")
     private String ownerId;
 
-    @NameInMap("ServiceManaged")
-    private Boolean serviceManaged;
-
-    @NameInMap("VSwitchId")
-    private String vSwitchId;
-
-    @NameInMap("RequestId")
-    private String requestId;
-
-    @NameInMap("Description")
-    private String description;
-
-    @NameInMap("ResourceGroupId")
-    private String resourceGroupId;
-
-    @NameInMap("ZoneId")
-    private String zoneId;
-
     @NameInMap("PrivateIpAddress")
     private String privateIpAddress;
-
-    @NameInMap("SecurityGroupIds")
-    private SecurityGroupIds securityGroupIds;
 
     @NameInMap("PrivateIpSets")
     private PrivateIpSets privateIpSets;
 
+    @NameInMap("RequestId")
+    private String requestId;
+
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @NameInMap("SecurityGroupIds")
+    private SecurityGroupIds securityGroupIds;
+
+    @NameInMap("ServiceID")
+    private Long serviceID;
+
+    @NameInMap("ServiceManaged")
+    private Boolean serviceManaged;
+
+    @NameInMap("Status")
+    private String status;
+
     @NameInMap("Tags")
     private Tags tags;
 
-    @NameInMap("Ipv6Sets")
-    private Ipv6Sets ipv6Sets;
+    @NameInMap("Type")
+    private String type;
+
+    @NameInMap("VSwitchId")
+    private String vSwitchId;
+
+    @NameInMap("VpcId")
+    private String vpcId;
+
+    @NameInMap("ZoneId")
+    private String zoneId;
 
     private CreateNetworkInterfaceResponseBody(Builder builder) {
-        this.status = builder.status;
-        this.type = builder.type;
-        this.vpcId = builder.vpcId;
-        this.networkInterfaceName = builder.networkInterfaceName;
+        this.description = builder.description;
+        this.ipv6Sets = builder.ipv6Sets;
         this.macAddress = builder.macAddress;
         this.networkInterfaceId = builder.networkInterfaceId;
-        this.serviceID = builder.serviceID;
+        this.networkInterfaceName = builder.networkInterfaceName;
         this.ownerId = builder.ownerId;
-        this.serviceManaged = builder.serviceManaged;
-        this.vSwitchId = builder.vSwitchId;
-        this.requestId = builder.requestId;
-        this.description = builder.description;
-        this.resourceGroupId = builder.resourceGroupId;
-        this.zoneId = builder.zoneId;
         this.privateIpAddress = builder.privateIpAddress;
-        this.securityGroupIds = builder.securityGroupIds;
         this.privateIpSets = builder.privateIpSets;
+        this.requestId = builder.requestId;
+        this.resourceGroupId = builder.resourceGroupId;
+        this.securityGroupIds = builder.securityGroupIds;
+        this.serviceID = builder.serviceID;
+        this.serviceManaged = builder.serviceManaged;
+        this.status = builder.status;
         this.tags = builder.tags;
-        this.ipv6Sets = builder.ipv6Sets;
+        this.type = builder.type;
+        this.vSwitchId = builder.vSwitchId;
+        this.vpcId = builder.vpcId;
+        this.zoneId = builder.zoneId;
     }
 
     public static Builder builder() {
@@ -100,31 +100,17 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     }
 
     /**
-     * @return status
+     * @return description
      */
-    public String getStatus() {
-        return this.status;
+    public String getDescription() {
+        return this.description;
     }
 
     /**
-     * @return type
+     * @return ipv6Sets
      */
-    public String getType() {
-        return this.type;
-    }
-
-    /**
-     * @return vpcId
-     */
-    public String getVpcId() {
-        return this.vpcId;
-    }
-
-    /**
-     * @return networkInterfaceName
-     */
-    public String getNetworkInterfaceName() {
-        return this.networkInterfaceName;
+    public Ipv6Sets getIpv6Sets() {
+        return this.ipv6Sets;
     }
 
     /**
@@ -142,10 +128,10 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     }
 
     /**
-     * @return serviceID
+     * @return networkInterfaceName
      */
-    public Long getServiceID() {
-        return this.serviceID;
+    public String getNetworkInterfaceName() {
+        return this.networkInterfaceName;
     }
 
     /**
@@ -156,59 +142,10 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     }
 
     /**
-     * @return serviceManaged
-     */
-    public Boolean getServiceManaged() {
-        return this.serviceManaged;
-    }
-
-    /**
-     * @return vSwitchId
-     */
-    public String getVSwitchId() {
-        return this.vSwitchId;
-    }
-
-    /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    /**
-     * @return description
-     */
-    public String getDescription() {
-        return this.description;
-    }
-
-    /**
-     * @return resourceGroupId
-     */
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
-    }
-
-    /**
-     * @return zoneId
-     */
-    public String getZoneId() {
-        return this.zoneId;
-    }
-
-    /**
      * @return privateIpAddress
      */
     public String getPrivateIpAddress() {
         return this.privateIpAddress;
-    }
-
-    /**
-     * @return securityGroupIds
-     */
-    public SecurityGroupIds getSecurityGroupIds() {
-        return this.securityGroupIds;
     }
 
     /**
@@ -219,6 +156,48 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     }
 
     /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
+     * @return securityGroupIds
+     */
+    public SecurityGroupIds getSecurityGroupIds() {
+        return this.securityGroupIds;
+    }
+
+    /**
+     * @return serviceID
+     */
+    public Long getServiceID() {
+        return this.serviceID;
+    }
+
+    /**
+     * @return serviceManaged
+     */
+    public Boolean getServiceManaged() {
+        return this.serviceManaged;
+    }
+
+    /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
+    /**
      * @return tags
      */
     public Tags getTags() {
@@ -226,123 +205,56 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     }
 
     /**
-     * @return ipv6Sets
+     * @return type
      */
-    public Ipv6Sets getIpv6Sets() {
-        return this.ipv6Sets;
+    public String getType() {
+        return this.type;
+    }
+
+    /**
+     * @return vSwitchId
+     */
+    public String getVSwitchId() {
+        return this.vSwitchId;
+    }
+
+    /**
+     * @return vpcId
+     */
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
+    /**
+     * @return zoneId
+     */
+    public String getZoneId() {
+        return this.zoneId;
     }
 
     public static final class Builder {
-        private String status; 
-        private String type; 
-        private String vpcId; 
-        private String networkInterfaceName; 
+        private String description; 
+        private Ipv6Sets ipv6Sets; 
         private String macAddress; 
         private String networkInterfaceId; 
-        private Long serviceID; 
+        private String networkInterfaceName; 
         private String ownerId; 
-        private Boolean serviceManaged; 
-        private String vSwitchId; 
-        private String requestId; 
-        private String description; 
-        private String resourceGroupId; 
-        private String zoneId; 
         private String privateIpAddress; 
-        private SecurityGroupIds securityGroupIds; 
         private PrivateIpSets privateIpSets; 
+        private String requestId; 
+        private String resourceGroupId; 
+        private SecurityGroupIds securityGroupIds; 
+        private Long serviceID; 
+        private Boolean serviceManaged; 
+        private String status; 
         private Tags tags; 
-        private Ipv6Sets ipv6Sets; 
+        private String type; 
+        private String vSwitchId; 
+        private String vpcId; 
+        private String zoneId; 
 
         /**
-         * The status of the Eni.
-         */
-        public Builder status(String status) {
-            this.status = status;
-            return this;
-        }
-
-        /**
-         * The type of the Eni.
-         */
-        public Builder type(String type) {
-            this.type = type;
-            return this;
-        }
-
-        /**
-         * The VPC ID of the VPC to which the Eni belongs.
-         */
-        public Builder vpcId(String vpcId) {
-            this.vpcId = vpcId;
-            return this;
-        }
-
-        /**
-         * The name of the Eni.
-         */
-        public Builder networkInterfaceName(String networkInterfaceName) {
-            this.networkInterfaceName = networkInterfaceName;
-            return this;
-        }
-
-        /**
-         * The MAC address of the Eni.
-         */
-        public Builder macAddress(String macAddress) {
-            this.macAddress = macAddress;
-            return this;
-        }
-
-        /**
-         * The ID of the Eni.
-         */
-        public Builder networkInterfaceId(String networkInterfaceId) {
-            this.networkInterfaceId = networkInterfaceId;
-            return this;
-        }
-
-        /**
-         * The ID of the virtual merchant corresponding to the Eni.
-         */
-        public Builder serviceID(Long serviceID) {
-            this.serviceID = serviceID;
-            return this;
-        }
-
-        /**
-         * The ID of the account to which the Eni belongs.
-         */
-        public Builder ownerId(String ownerId) {
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * Whether the user of the Eni is a cloud product or a virtual merchant.
-         */
-        public Builder serviceManaged(Boolean serviceManaged) {
-            this.serviceManaged = serviceManaged;
-            return this;
-        }
-
-        /**
-         * The vSwitch ID of the VPC.
-         */
-        public Builder vSwitchId(String vSwitchId) {
-            this.vSwitchId = vSwitchId;
-            return this;
-        }
-
-        /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The description of the Eni.
+         * Description.
          */
         public Builder description(String description) {
             this.description = description;
@@ -350,26 +262,74 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the resource group.
+         * Ipv6Sets.
          */
-        public Builder resourceGroupId(String resourceGroupId) {
-            this.resourceGroupId = resourceGroupId;
+        public Builder ipv6Sets(Ipv6Sets ipv6Sets) {
+            this.ipv6Sets = ipv6Sets;
             return this;
         }
 
         /**
-         * The ID of the zone.
+         * MacAddress.
          */
-        public Builder zoneId(String zoneId) {
-            this.zoneId = zoneId;
+        public Builder macAddress(String macAddress) {
+            this.macAddress = macAddress;
             return this;
         }
 
         /**
-         * The private IP address of the Eni.
+         * NetworkInterfaceId.
+         */
+        public Builder networkInterfaceId(String networkInterfaceId) {
+            this.networkInterfaceId = networkInterfaceId;
+            return this;
+        }
+
+        /**
+         * NetworkInterfaceName.
+         */
+        public Builder networkInterfaceName(String networkInterfaceName) {
+            this.networkInterfaceName = networkInterfaceName;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(String ownerId) {
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * PrivateIpAddress.
          */
         public Builder privateIpAddress(String privateIpAddress) {
             this.privateIpAddress = privateIpAddress;
+            return this;
+        }
+
+        /**
+         * PrivateIpSets.
+         */
+        public Builder privateIpSets(PrivateIpSets privateIpSets) {
+            this.privateIpSets = privateIpSets;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 
@@ -382,15 +342,31 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * A collection of PrivateIpSet.
+         * ServiceID.
          */
-        public Builder privateIpSets(PrivateIpSets privateIpSets) {
-            this.privateIpSets = privateIpSets;
+        public Builder serviceID(Long serviceID) {
+            this.serviceID = serviceID;
             return this;
         }
 
         /**
-         * The tag.
+         * ServiceManaged.
+         */
+        public Builder serviceManaged(Boolean serviceManaged) {
+            this.serviceManaged = serviceManaged;
+            return this;
+        }
+
+        /**
+         * Status.
+         */
+        public Builder status(String status) {
+            this.status = status;
+            return this;
+        }
+
+        /**
+         * Tags.
          */
         public Builder tags(Tags tags) {
             this.tags = tags;
@@ -398,10 +374,34 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * The IPv6 address assigned to the Eni.
+         * Type.
          */
-        public Builder ipv6Sets(Ipv6Sets ipv6Sets) {
-            this.ipv6Sets = ipv6Sets;
+        public Builder type(String type) {
+            this.type = type;
+            return this;
+        }
+
+        /**
+         * VSwitchId.
+         */
+        public Builder vSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+
+        /**
+         * VpcId.
+         */
+        public Builder vpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+
+        /**
+         * ZoneId.
+         */
+        public Builder zoneId(String zoneId) {
+            this.zoneId = zoneId;
             return this;
         }
 
@@ -411,57 +411,98 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
 
     } 
 
-    public static class SecurityGroupIds extends TeaModel {
-        @NameInMap("SecurityGroupId")
-        private java.util.List < String > securityGroupId;
+    public static class Ipv6Set extends TeaModel {
+        @NameInMap("Ipv6Address")
+        private String ipv6Address;
 
-        private SecurityGroupIds(Builder builder) {
-            this.securityGroupId = builder.securityGroupId;
+        private Ipv6Set(Builder builder) {
+            this.ipv6Address = builder.ipv6Address;
         }
 
         public static Builder builder() {
             return new Builder();
         }
 
-        public static SecurityGroupIds create() {
+        public static Ipv6Set create() {
             return builder().build();
         }
 
         /**
-         * @return securityGroupId
+         * @return ipv6Address
          */
-        public java.util.List < String > getSecurityGroupId() {
-            return this.securityGroupId;
+        public String getIpv6Address() {
+            return this.ipv6Address;
         }
 
         public static final class Builder {
-            private java.util.List < String > securityGroupId; 
+            private String ipv6Address; 
 
             /**
-             * SecurityGroupId.
+             * Ipv6Address.
              */
-            public Builder securityGroupId(java.util.List < String > securityGroupId) {
-                this.securityGroupId = securityGroupId;
+            public Builder ipv6Address(String ipv6Address) {
+                this.ipv6Address = ipv6Address;
                 return this;
             }
 
-            public SecurityGroupIds build() {
-                return new SecurityGroupIds(this);
+            public Ipv6Set build() {
+                return new Ipv6Set(this);
+            } 
+
+        } 
+
+    }
+    public static class Ipv6Sets extends TeaModel {
+        @NameInMap("Ipv6Set")
+        private java.util.List < Ipv6Set> ipv6Set;
+
+        private Ipv6Sets(Builder builder) {
+            this.ipv6Set = builder.ipv6Set;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Ipv6Sets create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ipv6Set
+         */
+        public java.util.List < Ipv6Set> getIpv6Set() {
+            return this.ipv6Set;
+        }
+
+        public static final class Builder {
+            private java.util.List < Ipv6Set> ipv6Set; 
+
+            /**
+             * Ipv6Set.
+             */
+            public Builder ipv6Set(java.util.List < Ipv6Set> ipv6Set) {
+                this.ipv6Set = ipv6Set;
+                return this;
+            }
+
+            public Ipv6Sets build() {
+                return new Ipv6Sets(this);
             } 
 
         } 
 
     }
     public static class PrivateIpSet extends TeaModel {
-        @NameInMap("PrivateIpAddress")
-        private String privateIpAddress;
-
         @NameInMap("Primary")
         private Boolean primary;
 
+        @NameInMap("PrivateIpAddress")
+        private String privateIpAddress;
+
         private PrivateIpSet(Builder builder) {
-            this.privateIpAddress = builder.privateIpAddress;
             this.primary = builder.primary;
+            this.privateIpAddress = builder.privateIpAddress;
         }
 
         public static Builder builder() {
@@ -473,36 +514,36 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * @return privateIpAddress
-         */
-        public String getPrivateIpAddress() {
-            return this.privateIpAddress;
-        }
-
-        /**
          * @return primary
          */
         public Boolean getPrimary() {
             return this.primary;
         }
 
+        /**
+         * @return privateIpAddress
+         */
+        public String getPrivateIpAddress() {
+            return this.privateIpAddress;
+        }
+
         public static final class Builder {
-            private String privateIpAddress; 
             private Boolean primary; 
+            private String privateIpAddress; 
 
             /**
-             * The private IP address of the instance.
+             * Primary.
              */
-            public Builder privateIpAddress(String privateIpAddress) {
-                this.privateIpAddress = privateIpAddress;
+            public Builder primary(Boolean primary) {
+                this.primary = primary;
                 return this;
             }
 
             /**
-             * Indicates whether the private IP address is the primary IP address.
+             * PrivateIpAddress.
              */
-            public Builder primary(Boolean primary) {
-                this.primary = primary;
+            public Builder privateIpAddress(String privateIpAddress) {
+                this.privateIpAddress = privateIpAddress;
                 return this;
             }
 
@@ -554,6 +595,47 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         } 
 
     }
+    public static class SecurityGroupIds extends TeaModel {
+        @NameInMap("SecurityGroupId")
+        private java.util.List < String > securityGroupId;
+
+        private SecurityGroupIds(Builder builder) {
+            this.securityGroupId = builder.securityGroupId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SecurityGroupIds create() {
+            return builder().build();
+        }
+
+        /**
+         * @return securityGroupId
+         */
+        public java.util.List < String > getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > securityGroupId; 
+
+            /**
+             * SecurityGroupId.
+             */
+            public Builder securityGroupId(java.util.List < String > securityGroupId) {
+                this.securityGroupId = securityGroupId;
+                return this;
+            }
+
+            public SecurityGroupIds build() {
+                return new SecurityGroupIds(this);
+            } 
+
+        } 
+
+    }
     public static class Tag extends TeaModel {
         @NameInMap("TagKey")
         private String tagKey;
@@ -593,7 +675,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The key of the tag.
+             * TagKey.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -601,7 +683,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * TagValue.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -651,88 +733,6 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
 
             public Tags build() {
                 return new Tags(this);
-            } 
-
-        } 
-
-    }
-    public static class Ipv6Set extends TeaModel {
-        @NameInMap("Ipv6Address")
-        private String ipv6Address;
-
-        private Ipv6Set(Builder builder) {
-            this.ipv6Address = builder.ipv6Address;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Ipv6Set create() {
-            return builder().build();
-        }
-
-        /**
-         * @return ipv6Address
-         */
-        public String getIpv6Address() {
-            return this.ipv6Address;
-        }
-
-        public static final class Builder {
-            private String ipv6Address; 
-
-            /**
-             * The IPv6 address.
-             */
-            public Builder ipv6Address(String ipv6Address) {
-                this.ipv6Address = ipv6Address;
-                return this;
-            }
-
-            public Ipv6Set build() {
-                return new Ipv6Set(this);
-            } 
-
-        } 
-
-    }
-    public static class Ipv6Sets extends TeaModel {
-        @NameInMap("Ipv6Set")
-        private java.util.List < Ipv6Set> ipv6Set;
-
-        private Ipv6Sets(Builder builder) {
-            this.ipv6Set = builder.ipv6Set;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Ipv6Sets create() {
-            return builder().build();
-        }
-
-        /**
-         * @return ipv6Set
-         */
-        public java.util.List < Ipv6Set> getIpv6Set() {
-            return this.ipv6Set;
-        }
-
-        public static final class Builder {
-            private java.util.List < Ipv6Set> ipv6Set; 
-
-            /**
-             * Ipv6Set.
-             */
-            public Builder ipv6Set(java.util.List < Ipv6Set> ipv6Set) {
-                this.ipv6Set = ipv6Set;
-                return this;
-            }
-
-            public Ipv6Sets build() {
-                return new Ipv6Sets(this);
             } 
 
         } 

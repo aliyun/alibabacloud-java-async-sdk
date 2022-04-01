@@ -12,26 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeEniMonitorDataRequest</p>
  */
 public class DescribeEniMonitorDataRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
-
-    @Query
-    @NameInMap("RegionId")
+    @NameInMap("EndTime")
     @Validation(required = true)
-    private String regionId;
+    private String endTime;
 
     @Query
     @NameInMap("EniId")
     private String eniId;
-
-    @Query
-    @NameInMap("Period")
-    private Integer period;
 
     @Query
     @NameInMap("InstanceId")
@@ -39,25 +27,52 @@ public class DescribeEniMonitorDataRequest extends Request {
     private String instanceId;
 
     @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
+
+    @Query
+    @NameInMap("Period")
+    private Integer period;
+
+    @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
+    @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
+    @Query
     @NameInMap("StartTime")
     @Validation(required = true)
     private String startTime;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
-    private String endTime;
-
     private DescribeEniMonitorDataRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
-        this.resourceOwnerId = builder.resourceOwnerId;
-        this.regionId = builder.regionId;
-        this.eniId = builder.eniId;
-        this.period = builder.period;
-        this.instanceId = builder.instanceId;
-        this.startTime = builder.startTime;
         this.endTime = builder.endTime;
+        this.eniId = builder.eniId;
+        this.instanceId = builder.instanceId;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
+        this.period = builder.period;
+        this.regionId = builder.regionId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.sourceRegionId = builder.sourceRegionId;
+        this.startTime = builder.startTime;
     }
 
     public static Builder builder() {
@@ -74,24 +89,10 @@ public class DescribeEniMonitorDataRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return endTime
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
-     * @return resourceOwnerId
-     */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
+    public String getEndTime() {
+        return this.endTime;
     }
 
     /**
@@ -102,6 +103,27 @@ public class DescribeEniMonitorDataRequest extends Request {
     }
 
     /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
      * @return period
      */
     public Integer getPeriod() {
@@ -109,10 +131,31 @@ public class DescribeEniMonitorDataRequest extends Request {
     }
 
     /**
-     * @return instanceId
+     * @return regionId
      */
-    public String getInstanceId() {
-        return this.instanceId;
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -122,22 +165,18 @@ public class DescribeEniMonitorDataRequest extends Request {
         return this.startTime;
     }
 
-    /**
-     * @return endTime
-     */
-    public String getEndTime() {
-        return this.endTime;
-    }
-
     public static final class Builder extends Request.Builder<DescribeEniMonitorDataRequest, Builder> {
-        private String sourceRegionId; 
-        private Long resourceOwnerId; 
-        private String regionId; 
-        private String eniId; 
-        private Integer period; 
-        private String instanceId; 
-        private String startTime; 
         private String endTime; 
+        private String eniId; 
+        private String instanceId; 
+        private String ownerAccount; 
+        private Long ownerId; 
+        private Integer period; 
+        private String regionId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String sourceRegionId; 
+        private String startTime; 
 
         private Builder() {
             super();
@@ -145,22 +184,88 @@ public class DescribeEniMonitorDataRequest extends Request {
 
         private Builder(DescribeEniMonitorDataRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
-            this.resourceOwnerId = request.resourceOwnerId;
-            this.regionId = request.regionId;
-            this.eniId = request.eniId;
-            this.period = request.period;
-            this.instanceId = request.instanceId;
-            this.startTime = request.startTime;
             this.endTime = request.endTime;
+            this.eniId = request.eniId;
+            this.instanceId = request.instanceId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.period = request.period;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceRegionId = request.sourceRegionId;
+            this.startTime = request.startTime;
         } 
 
         /**
-         * SourceRegionId.
+         * EndTime.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder endTime(String endTime) {
+            this.putQueryParameter("EndTime", endTime);
+            this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * EniId.
+         */
+        public Builder eniId(String eniId) {
+            this.putQueryParameter("EniId", eniId);
+            this.eniId = eniId;
+            return this;
+        }
+
+        /**
+         * InstanceId.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * Period.
+         */
+        public Builder period(Integer period) {
+            this.putQueryParameter("Period", period);
+            this.period = period;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
             return this;
         }
 
@@ -174,62 +279,20 @@ public class DescribeEniMonitorDataRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
+         * SourceRegionId.
          */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 
         /**
-         * The ID of the secondary Eni. By default, all secondary Enis associated with a specified instance are queried.
-         */
-        public Builder eniId(String eniId) {
-            this.putQueryParameter("EniId", eniId);
-            this.eniId = eniId;
-            return this;
-        }
-
-        /**
-         * The interval between obtaining monitoring data. Unit: seconds. Valid values:
-         * <p>
-         * -60.
-         * -600.
-         * -3600.
-         * 
-         * Default value: 60.
-         */
-        public Builder period(Integer period) {
-            this.putQueryParameter("Period", period);
-            this.period = period;
-            return this;
-        }
-
-        /**
-         * The ID of the instance to which the secondary Eni is bound.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * The start time of obtaining data. The time follows the [ISO8601](~~ 25696 ~~) standard and uses UTC +0. The format is yyyy-MM-ddTHH:mm:ssZ. If the specified seconds (ss) is not 00, it is automatically converted to the next minute.
+         * StartTime.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
             this.startTime = startTime;
-            return this;
-        }
-
-        /**
-         * The end of the time range to query data. The time follows the [ISO8601](~~ 25696 ~~) standard and uses UTC +0. The format is yyyy-MM-ddTHH:mm:ssZ. If the specified seconds (ss) is not 00, it is automatically converted to the next minute.
-         */
-        public Builder endTime(String endTime) {
-            this.putQueryParameter("EndTime", endTime);
-            this.endTime = endTime;
             return this;
         }
 

@@ -13,8 +13,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifySnapshotGroupRequest extends Request {
     @Query
+    @NameInMap("Description")
+    private String description;
+
+    @Query
+    @NameInMap("Name")
+    private String name;
+
+    @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @Query
     @NameInMap("OwnerId")
     private Long ownerId;
+
+    @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
 
     @Query
     @NameInMap("ResourceOwnerAccount")
@@ -25,37 +42,20 @@ public class ModifySnapshotGroupRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
-    @NameInMap("OwnerAccount")
-    private String ownerAccount;
-
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
-    @Query
     @NameInMap("SnapshotGroupId")
     @Validation(required = true)
     private String snapshotGroupId;
 
-    @Query
-    @NameInMap("Description")
-    private String description;
-
-    @Query
-    @NameInMap("Name")
-    private String name;
-
     private ModifySnapshotGroupRequest(Builder builder) {
         super(builder);
-        this.ownerId = builder.ownerId;
-        this.resourceOwnerAccount = builder.resourceOwnerAccount;
-        this.resourceOwnerId = builder.resourceOwnerId;
-        this.ownerAccount = builder.ownerAccount;
-        this.regionId = builder.regionId;
-        this.snapshotGroupId = builder.snapshotGroupId;
         this.description = builder.description;
         this.name = builder.name;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.snapshotGroupId = builder.snapshotGroupId;
     }
 
     public static Builder builder() {
@@ -72,10 +72,38 @@ public class ModifySnapshotGroupRequest extends Request {
     }
 
     /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
+    }
+
+    /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
      * @return ownerId
      */
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -93,49 +121,21 @@ public class ModifySnapshotGroupRequest extends Request {
     }
 
     /**
-     * @return ownerAccount
-     */
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return snapshotGroupId
      */
     public String getSnapshotGroupId() {
         return this.snapshotGroupId;
     }
 
-    /**
-     * @return description
-     */
-    public String getDescription() {
-        return this.description;
-    }
-
-    /**
-     * @return name
-     */
-    public String getName() {
-        return this.name;
-    }
-
     public static final class Builder extends Request.Builder<ModifySnapshotGroupRequest, Builder> {
-        private Long ownerId; 
-        private String resourceOwnerAccount; 
-        private Long resourceOwnerId; 
-        private String ownerAccount; 
-        private String regionId; 
-        private String snapshotGroupId; 
         private String description; 
         private String name; 
+        private String ownerAccount; 
+        private Long ownerId; 
+        private String regionId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String snapshotGroupId; 
 
         private Builder() {
             super();
@@ -143,15 +143,42 @@ public class ModifySnapshotGroupRequest extends Request {
 
         private Builder(ModifySnapshotGroupRequest request) {
             super(request);
-            this.ownerId = request.ownerId;
-            this.resourceOwnerAccount = request.resourceOwnerAccount;
-            this.resourceOwnerId = request.resourceOwnerId;
-            this.ownerAccount = request.ownerAccount;
-            this.regionId = request.regionId;
-            this.snapshotGroupId = request.snapshotGroupId;
             this.description = request.description;
             this.name = request.name;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.snapshotGroupId = request.snapshotGroupId;
         } 
+
+        /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
+            return this;
+        }
+
+        /**
+         * Name.
+         */
+        public Builder name(String name) {
+            this.putQueryParameter("Name", name);
+            this.name = name;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
 
         /**
          * OwnerId.
@@ -159,6 +186,15 @@ public class ModifySnapshotGroupRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
@@ -181,47 +217,11 @@ public class ModifySnapshotGroupRequest extends Request {
         }
 
         /**
-         * OwnerAccount.
-         */
-        public Builder ownerAccount(String ownerAccount) {
-            this.putQueryParameter("OwnerAccount", ownerAccount);
-            this.ownerAccount = ownerAccount;
-            return this;
-        }
-
-        /**
-         * The ID of the region to which the instance snapshot belongs. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The ID of the instance snapshot.
+         * SnapshotGroupId.
          */
         public Builder snapshotGroupId(String snapshotGroupId) {
             this.putQueryParameter("SnapshotGroupId", snapshotGroupId);
             this.snapshotGroupId = snapshotGroupId;
-            return this;
-        }
-
-        /**
-         * The modified description. The description must be 2 to 256 characters in length and cannot start with "http:// "or "https.
-         */
-        public Builder description(String description) {
-            this.putQueryParameter("Description", description);
-            this.description = description;
-            return this;
-        }
-
-        /**
-         * The name of the modified snapshot. The description must be 2 to 128 characters in length. It must start with a letter and cannot start with "http:// "or "https://". It can contain numbers, periods (.), underscores (_), hyphens (-), and colons (:).
-         */
-        public Builder name(String name) {
-            this.putQueryParameter("Name", name);
-            this.name = name;
             return this;
         }
 

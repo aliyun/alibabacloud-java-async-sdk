@@ -12,17 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteKeyPairsRequest</p>
  */
 public class DeleteKeyPairsRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("KeyPairNames")
+    @Validation(required = true)
+    private String keyPairNames;
 
     @Query
     @NameInMap("OwnerId")
     private Long ownerId;
-
-    @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
 
     @Query
     @NameInMap("RegionId")
@@ -34,18 +31,21 @@ public class DeleteKeyPairsRequest extends Request {
     private String resourceOwnerAccount;
 
     @Query
-    @NameInMap("KeyPairNames")
-    @Validation(required = true)
-    private String keyPairNames;
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     private DeleteKeyPairsRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
+        this.keyPairNames = builder.keyPairNames;
         this.ownerId = builder.ownerId;
-        this.resourceOwnerId = builder.resourceOwnerId;
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
-        this.keyPairNames = builder.keyPairNames;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -62,10 +62,10 @@ public class DeleteKeyPairsRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return keyPairNames
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getKeyPairNames() {
+        return this.keyPairNames;
     }
 
     /**
@@ -73,13 +73,6 @@ public class DeleteKeyPairsRequest extends Request {
      */
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    /**
-     * @return resourceOwnerId
-     */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
     }
 
     /**
@@ -97,19 +90,26 @@ public class DeleteKeyPairsRequest extends Request {
     }
 
     /**
-     * @return keyPairNames
+     * @return resourceOwnerId
      */
-    public String getKeyPairNames() {
-        return this.keyPairNames;
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public static final class Builder extends Request.Builder<DeleteKeyPairsRequest, Builder> {
-        private String sourceRegionId; 
+        private String keyPairNames; 
         private Long ownerId; 
-        private Long resourceOwnerId; 
         private String regionId; 
         private String resourceOwnerAccount; 
-        private String keyPairNames; 
+        private Long resourceOwnerId; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -117,25 +117,25 @@ public class DeleteKeyPairsRequest extends Request {
 
         private Builder(DeleteKeyPairsRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
+            this.keyPairNames = request.keyPairNames;
             this.ownerId = request.ownerId;
-            this.resourceOwnerId = request.resourceOwnerId;
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
-            this.keyPairNames = request.keyPairNames;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
-         * SourceRegionId.
+         * KeyPairNames.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder keyPairNames(String keyPairNames) {
+            this.putQueryParameter("KeyPairNames", keyPairNames);
+            this.keyPairNames = keyPairNames;
             return this;
         }
 
         /**
-         * The ID of the RAM user.
+         * OwnerId.
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -144,16 +144,7 @@ public class DeleteKeyPairsRequest extends Request {
         }
 
         /**
-         * The ID of the resource master account, that is, the UID.
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * The region of the SSH key pair. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -162,7 +153,7 @@ public class DeleteKeyPairsRequest extends Request {
         }
 
         /**
-         * The account name of the resource master account.
+         * ResourceOwnerAccount.
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
             this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
@@ -171,11 +162,20 @@ public class DeleteKeyPairsRequest extends Request {
         }
 
         /**
-         * The name of the SSH key pair. The value can be a JSON Array consisting of multiple SSH key pair names. A maximum of 100 SSH key pairs can be used. Separate the names with commas (,).
+         * ResourceOwnerId.
          */
-        public Builder keyPairNames(String keyPairNames) {
-            this.putQueryParameter("KeyPairNames", keyPairNames);
-            this.keyPairNames = keyPairNames;
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInvocationResultsResponseBody</p>
  */
 public class DescribeInvocationResultsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    private String requestId;
-
     @NameInMap("Invocation")
     private Invocation invocation;
 
+    @NameInMap("RequestId")
+    private String requestId;
+
     private DescribeInvocationResultsResponseBody(Builder builder) {
-        this.requestId = builder.requestId;
         this.invocation = builder.invocation;
+        this.requestId = builder.requestId;
     }
 
     public static Builder builder() {
@@ -32,36 +32,36 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
     }
 
     /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    /**
      * @return invocation
      */
     public Invocation getInvocation() {
         return this.invocation;
     }
 
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static final class Builder {
-        private String requestId; 
         private Invocation invocation; 
+        private String requestId; 
 
         /**
-         * The ID of the request.
+         * Invocation.
          */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
+        public Builder invocation(Invocation invocation) {
+            this.invocation = invocation;
             return this;
         }
 
         /**
-         * The collection of command execution results.
+         * RequestId.
          */
-        public Builder invocation(Invocation invocation) {
-            this.invocation = invocation;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
@@ -72,41 +72,29 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
     } 
 
     public static class InvocationResult extends TeaModel {
-        @NameInMap("InvocationStatus")
-        private String invocationStatus;
-
-        @NameInMap("Repeats")
-        private Integer repeats;
-
         @NameInMap("CommandId")
         private String commandId;
-
-        @NameInMap("InstanceId")
-        private String instanceId;
-
-        @NameInMap("Output")
-        private String output;
 
         @NameInMap("Dropped")
         private Integer dropped;
 
-        @NameInMap("StopTime")
-        private String stopTime;
-
-        @NameInMap("ExitCode")
-        private Long exitCode;
-
-        @NameInMap("StartTime")
-        private String startTime;
+        @NameInMap("ErrorCode")
+        private String errorCode;
 
         @NameInMap("ErrorInfo")
         private String errorInfo;
 
-        @NameInMap("ErrorCode")
-        private String errorCode;
+        @NameInMap("ExitCode")
+        private Long exitCode;
 
         @NameInMap("FinishedTime")
         private String finishedTime;
+
+        @NameInMap("InstanceId")
+        private String instanceId;
+
+        @NameInMap("InvocationStatus")
+        private String invocationStatus;
 
         @NameInMap("InvokeId")
         private String invokeId;
@@ -114,24 +102,36 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         @NameInMap("InvokeRecordStatus")
         private String invokeRecordStatus;
 
+        @NameInMap("Output")
+        private String output;
+
+        @NameInMap("Repeats")
+        private Integer repeats;
+
+        @NameInMap("StartTime")
+        private String startTime;
+
+        @NameInMap("StopTime")
+        private String stopTime;
+
         @NameInMap("Username")
         private String username;
 
         private InvocationResult(Builder builder) {
-            this.invocationStatus = builder.invocationStatus;
-            this.repeats = builder.repeats;
             this.commandId = builder.commandId;
-            this.instanceId = builder.instanceId;
-            this.output = builder.output;
             this.dropped = builder.dropped;
-            this.stopTime = builder.stopTime;
-            this.exitCode = builder.exitCode;
-            this.startTime = builder.startTime;
-            this.errorInfo = builder.errorInfo;
             this.errorCode = builder.errorCode;
+            this.errorInfo = builder.errorInfo;
+            this.exitCode = builder.exitCode;
             this.finishedTime = builder.finishedTime;
+            this.instanceId = builder.instanceId;
+            this.invocationStatus = builder.invocationStatus;
             this.invokeId = builder.invokeId;
             this.invokeRecordStatus = builder.invokeRecordStatus;
+            this.output = builder.output;
+            this.repeats = builder.repeats;
+            this.startTime = builder.startTime;
+            this.stopTime = builder.stopTime;
             this.username = builder.username;
         }
 
@@ -144,38 +144,10 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         }
 
         /**
-         * @return invocationStatus
-         */
-        public String getInvocationStatus() {
-            return this.invocationStatus;
-        }
-
-        /**
-         * @return repeats
-         */
-        public Integer getRepeats() {
-            return this.repeats;
-        }
-
-        /**
          * @return commandId
          */
         public String getCommandId() {
             return this.commandId;
-        }
-
-        /**
-         * @return instanceId
-         */
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
-        /**
-         * @return output
-         */
-        public String getOutput() {
-            return this.output;
         }
 
         /**
@@ -186,24 +158,10 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         }
 
         /**
-         * @return stopTime
+         * @return errorCode
          */
-        public String getStopTime() {
-            return this.stopTime;
-        }
-
-        /**
-         * @return exitCode
-         */
-        public Long getExitCode() {
-            return this.exitCode;
-        }
-
-        /**
-         * @return startTime
-         */
-        public String getStartTime() {
-            return this.startTime;
+        public String getErrorCode() {
+            return this.errorCode;
         }
 
         /**
@@ -214,10 +172,10 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         }
 
         /**
-         * @return errorCode
+         * @return exitCode
          */
-        public String getErrorCode() {
-            return this.errorCode;
+        public Long getExitCode() {
+            return this.exitCode;
         }
 
         /**
@@ -225,6 +183,20 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
          */
         public String getFinishedTime() {
             return this.finishedTime;
+        }
+
+        /**
+         * @return instanceId
+         */
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        /**
+         * @return invocationStatus
+         */
+        public String getInvocationStatus() {
+            return this.invocationStatus;
         }
 
         /**
@@ -242,6 +214,34 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         }
 
         /**
+         * @return output
+         */
+        public String getOutput() {
+            return this.output;
+        }
+
+        /**
+         * @return repeats
+         */
+        public Integer getRepeats() {
+            return this.repeats;
+        }
+
+        /**
+         * @return startTime
+         */
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        /**
+         * @return stopTime
+         */
+        public String getStopTime() {
+            return this.stopTime;
+        }
+
+        /**
          * @return username
          */
         public String getUsername() {
@@ -249,62 +249,24 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private String invocationStatus; 
-            private Integer repeats; 
             private String commandId; 
-            private String instanceId; 
-            private String output; 
             private Integer dropped; 
-            private String stopTime; 
-            private Long exitCode; 
-            private String startTime; 
-            private String errorInfo; 
             private String errorCode; 
+            private String errorInfo; 
+            private Long exitCode; 
             private String finishedTime; 
+            private String instanceId; 
+            private String invocationStatus; 
             private String invokeId; 
             private String invokeRecordStatus; 
+            private String output; 
+            private Integer repeats; 
+            private String startTime; 
+            private String stopTime; 
             private String username; 
 
             /**
-             * The command progress status of a single instance. Valid values:
-             * <p>
-             * -Pending: the system is verifying or sending commands.
-             * -Invalid: the specified command type or parameter is incorrect.
-             * -Aborted: failed to send the command to the instance. The instance must be running and the command can be sent within 1 minute.
-             * -Running: the command is being executed on the instance.
-             * -Success:
-             * -Single command: the command is executed and the exit code is 0.
-             * -Run periodically: the last run succeeds and the exit code is 0. The specified cycle has ended.
-             * -Failed:
-             * -Single command: the command is executed and the exit code is not 0.
-             * -Periodic invocation: the last invocation succeeds and the exit code is not 0. The specified cycle will be aborted.
-             * -Error: an Error occurred while running the command and cannot continue.
-             * -Timeout: the command execution times out.
-             * -Cancelled: the command execution has been canceled and the command has not been started.
-             * -Stopping: the command that is being stopped.
-             * -Terminated: the command is Terminated when it is executed.
-             * -Scheduled:
-             * -Single-run command: not applicable and does not appear.
-             * -Periodically executed command: pending execution.
-             */
-            public Builder invocationStatus(String invocationStatus) {
-                this.invocationStatus = invocationStatus;
-                return this;
-            }
-
-            /**
-             * The number of times that the command is run on the instance.
-             * <p>
-             * -If the execution method is immediate, the value is 0 or 1.
-             * -If the execution mode is periodic, the value is the number of executions.
-             */
-            public Builder repeats(Integer repeats) {
-                this.repeats = repeats;
-                return this;
-            }
-
-            /**
-             * The ID of the command.
+             * CommandId.
              */
             public Builder commandId(String commandId) {
                 this.commandId = commandId;
@@ -312,23 +274,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
-             */
-            public Builder instanceId(String instanceId) {
-                this.instanceId = instanceId;
-                return this;
-            }
-
-            /**
-             * The output information after the command is executed.
-             */
-            public Builder output(String output) {
-                this.output = output;
-                return this;
-            }
-
-            /**
-             * The length of the text that is truncated and discarded when the length of the "Output" field exceeds 24KB.
+             * Dropped.
              */
             public Builder dropped(Integer dropped) {
                 this.dropped = dropped;
@@ -336,79 +282,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * If "StopInvocation" is called, it indicates the call time.
-             */
-            public Builder stopTime(String stopTime) {
-                this.stopTime = stopTime;
-                return this;
-            }
-
-            /**
-             * The exit code of the command.
-             * <p>
-             * 
-             * -The Linux instance is the exit code of the Shell command.
-             * -Windows the exit code of the Bat or PowerShell command.
-             */
-            public Builder exitCode(Long exitCode) {
-                this.exitCode = exitCode;
-                return this;
-            }
-
-            /**
-             * The time when the command starts to run in the instance.
-             */
-            public Builder startTime(String startTime) {
-                this.startTime = startTime;
-                return this;
-            }
-
-            /**
-             * The error message returned because the command failed to be issued or failed to be executed. Valid values:
-             * <p>
-             * -Null: The Command runs normally.
-             * -the specified instance does not exist: the specified instance does not exist or has been released.
-             * -the instance has released when create task: the instance is released during command execution.
-             * -the instance is not running when create task: the instance is not running when the command is executed.
-             * -the command is not applicable: the command does not apply to the specified instance.
-             * -the specified account does not exist.
-             * -the specified directory does not exist.
-             * -the cron job expression is invalid: the specified periodic expression is invalid.
-             * -the aliyun service is not running on the instance: the cloud assistant client is not running.
-             * -the aliyun service in the instance does not response: the cloud assistant client does not respond.
-             * -the aliyun service in the instance is upgrading now: the cloud assistant client is being upgraded.
-             * -the aliyun service in the instance need upgrade: the cloud assistant client needs to be upgraded.
-             * -the command delivery has been timeout.
-             * -the command execution has been timed out.
-             * -the command execution got an exception.
-             * -the command execution has been interrupted.
-             * -the command execution exit code is not zero: the command execution ends and the exit code is not zero.
-             */
-            public Builder errorInfo(String errorInfo) {
-                this.errorInfo = errorInfo;
-                return this;
-            }
-
-            /**
-             * The code for the reason why the command fails to be issued or executed. Valid values:
-             * <p>
-             * -Null: The Command runs normally.
-             * -InstanceNotExists: the specified instance does not exist or has been released.
-             * -InstanceReleased: the instance is released during command execution.
-             * -InstanceNotRunning: the instance is not running when the command is executed.
-             * -CommandNotApplicable: the command does not apply to the specified instance.
-             * -AccountNotExists: the specified account does not exist.
-             * -DirectoryNotExists: the specified directory does not exist.
-             * -BadCronExpression: the specified periodic expression is invalid.
-             * -ClientNotRunning: The cloud assistant client is not running.
-             * -ClientNotResponse: The cloud assistant client does not respond.
-             * -ClientIsUpgrading: The cloud assistant client is being upgraded.
-             * -ClientNeedUpgrade: The cloud assistant client needs to be upgraded.
-             * -DeliveryTimeout: the sending command timed out.
-             * -ExecutionTimeout: the command execution times out.
-             * -ExecutionException: command execution exception occurs.
-             * -ExecutionInterrupted: the command execution is interrupted.
-             * -ExitCodeNonzero: The command is executed and the exit code is not 0.
+             * ErrorCode.
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -416,7 +290,23 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The completion time of the command. If the command execution times out, the completion time of the command execution is subject to the parameter CreateCommand specified in [TimedOut](~~ 64844 ~~).
+             * ErrorInfo.
+             */
+            public Builder errorInfo(String errorInfo) {
+                this.errorInfo = errorInfo;
+                return this;
+            }
+
+            /**
+             * ExitCode.
+             */
+            public Builder exitCode(Long exitCode) {
+                this.exitCode = exitCode;
+                return this;
+            }
+
+            /**
+             * FinishedTime.
              */
             public Builder finishedTime(String finishedTime) {
                 this.finishedTime = finishedTime;
@@ -424,7 +314,23 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the command execution.
+             * InstanceId.
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * InvocationStatus.
+             */
+            public Builder invocationStatus(String invocationStatus) {
+                this.invocationStatus = invocationStatus;
+                return this;
+            }
+
+            /**
+             * InvokeId.
              */
             public Builder invokeId(String invokeId) {
                 this.invokeId = invokeId;
@@ -432,7 +338,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The command execution status.
+             * InvokeRecordStatus.
              */
             public Builder invokeRecordStatus(String invokeRecordStatus) {
                 this.invokeRecordStatus = invokeRecordStatus;
@@ -440,7 +346,39 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the user who runs the command on the ECS instance.
+             * Output.
+             */
+            public Builder output(String output) {
+                this.output = output;
+                return this;
+            }
+
+            /**
+             * Repeats.
+             */
+            public Builder repeats(Integer repeats) {
+                this.repeats = repeats;
+                return this;
+            }
+
+            /**
+             * StartTime.
+             */
+            public Builder startTime(String startTime) {
+                this.startTime = startTime;
+                return this;
+            }
+
+            /**
+             * StopTime.
+             */
+            public Builder stopTime(String stopTime) {
+                this.stopTime = stopTime;
+                return this;
+            }
+
+            /**
+             * Username.
              */
             public Builder username(String username) {
                 this.username = username;
@@ -496,23 +434,23 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
 
     }
     public static class Invocation extends TeaModel {
-        @NameInMap("PageSize")
-        private Long pageSize;
+        @NameInMap("InvocationResults")
+        private InvocationResults invocationResults;
 
         @NameInMap("PageNumber")
         private Long pageNumber;
 
+        @NameInMap("PageSize")
+        private Long pageSize;
+
         @NameInMap("TotalCount")
         private Long totalCount;
 
-        @NameInMap("InvocationResults")
-        private InvocationResults invocationResults;
-
         private Invocation(Builder builder) {
-            this.pageSize = builder.pageSize;
-            this.pageNumber = builder.pageNumber;
-            this.totalCount = builder.totalCount;
             this.invocationResults = builder.invocationResults;
+            this.pageNumber = builder.pageNumber;
+            this.pageSize = builder.pageSize;
+            this.totalCount = builder.totalCount;
         }
 
         public static Builder builder() {
@@ -524,10 +462,10 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         }
 
         /**
-         * @return pageSize
+         * @return invocationResults
          */
-        public Long getPageSize() {
-            return this.pageSize;
+        public InvocationResults getInvocationResults() {
+            return this.invocationResults;
         }
 
         /**
@@ -538,35 +476,35 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         }
 
         /**
+         * @return pageSize
+         */
+        public Long getPageSize() {
+            return this.pageSize;
+        }
+
+        /**
          * @return totalCount
          */
         public Long getTotalCount() {
             return this.totalCount;
         }
 
-        /**
-         * @return invocationResults
-         */
-        public InvocationResults getInvocationResults() {
-            return this.invocationResults;
-        }
-
         public static final class Builder {
-            private Long pageSize; 
-            private Long pageNumber; 
-            private Long totalCount; 
             private InvocationResults invocationResults; 
+            private Long pageNumber; 
+            private Long pageSize; 
+            private Long totalCount; 
 
             /**
-             * The number of entries to return on each page.
+             * InvocationResults.
              */
-            public Builder pageSize(Long pageSize) {
-                this.pageSize = pageSize;
+            public Builder invocationResults(InvocationResults invocationResults) {
+                this.invocationResults = invocationResults;
                 return this;
             }
 
             /**
-             * The current page number.
+             * PageNumber.
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -574,18 +512,18 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of commands.
+             * PageSize.
              */
-            public Builder totalCount(Long totalCount) {
-                this.totalCount = totalCount;
+            public Builder pageSize(Long pageSize) {
+                this.pageSize = pageSize;
                 return this;
             }
 
             /**
-             * The result set of command execution.
+             * TotalCount.
              */
-            public Builder invocationResults(InvocationResults invocationResults) {
-                this.invocationResults = invocationResults;
+            public Builder totalCount(Long totalCount) {
+                this.totalCount = totalCount;
                 return this;
             }
 

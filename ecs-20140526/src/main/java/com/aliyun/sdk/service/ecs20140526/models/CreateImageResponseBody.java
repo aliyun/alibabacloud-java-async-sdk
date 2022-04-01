@@ -50,7 +50,7 @@ public class CreateImageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the image.
+         * ImageId.
          */
         public Builder imageId(String imageId) {
             this.imageId = imageId;
@@ -58,7 +58,7 @@ public class CreateImageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

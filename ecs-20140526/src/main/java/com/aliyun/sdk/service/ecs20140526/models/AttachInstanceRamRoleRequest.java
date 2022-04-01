@@ -12,21 +12,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AttachInstanceRamRoleRequest</p>
  */
 public class AttachInstanceRamRoleRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("InstanceIds")
+    @Validation(required = true)
+    private String instanceIds;
 
     @Query
     @NameInMap("OwnerId")
     private Long ownerId;
 
     @Query
-    @NameInMap("ResourceOwnerAccount")
-    private String resourceOwnerAccount;
-
-    @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
+    @NameInMap("Policy")
+    private String policy;
 
     @Query
     @NameInMap("RamRoleName")
@@ -39,24 +36,27 @@ public class AttachInstanceRamRoleRequest extends Request {
     private String regionId;
 
     @Query
-    @NameInMap("InstanceIds")
-    @Validation(required = true)
-    private String instanceIds;
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
 
     @Query
-    @NameInMap("Policy")
-    private String policy;
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     private AttachInstanceRamRoleRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
+        this.instanceIds = builder.instanceIds;
         this.ownerId = builder.ownerId;
-        this.resourceOwnerAccount = builder.resourceOwnerAccount;
-        this.resourceOwnerId = builder.resourceOwnerId;
+        this.policy = builder.policy;
         this.ramRoleName = builder.ramRoleName;
         this.regionId = builder.regionId;
-        this.instanceIds = builder.instanceIds;
-        this.policy = builder.policy;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -73,10 +73,10 @@ public class AttachInstanceRamRoleRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return instanceIds
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getInstanceIds() {
+        return this.instanceIds;
     }
 
     /**
@@ -87,17 +87,10 @@ public class AttachInstanceRamRoleRequest extends Request {
     }
 
     /**
-     * @return resourceOwnerAccount
+     * @return policy
      */
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    /**
-     * @return resourceOwnerId
-     */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public String getPolicy() {
+        return this.policy;
     }
 
     /**
@@ -115,28 +108,35 @@ public class AttachInstanceRamRoleRequest extends Request {
     }
 
     /**
-     * @return instanceIds
+     * @return resourceOwnerAccount
      */
-    public String getInstanceIds() {
-        return this.instanceIds;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
     }
 
     /**
-     * @return policy
+     * @return resourceOwnerId
      */
-    public String getPolicy() {
-        return this.policy;
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public static final class Builder extends Request.Builder<AttachInstanceRamRoleRequest, Builder> {
-        private String sourceRegionId; 
+        private String instanceIds; 
         private Long ownerId; 
-        private String resourceOwnerAccount; 
-        private Long resourceOwnerId; 
+        private String policy; 
         private String ramRoleName; 
         private String regionId; 
-        private String instanceIds; 
-        private String policy; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -144,72 +144,18 @@ public class AttachInstanceRamRoleRequest extends Request {
 
         private Builder(AttachInstanceRamRoleRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
+            this.instanceIds = request.instanceIds;
             this.ownerId = request.ownerId;
-            this.resourceOwnerAccount = request.resourceOwnerAccount;
-            this.resourceOwnerId = request.resourceOwnerId;
+            this.policy = request.policy;
             this.ramRoleName = request.ramRoleName;
             this.regionId = request.regionId;
-            this.instanceIds = request.instanceIds;
-            this.policy = request.policy;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
-            return this;
-        }
-
-        /**
-         * The ID of the RAM user.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * The account name of the resource master account.
-         */
-        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
-            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-            this.resourceOwnerAccount = resourceOwnerAccount;
-            return this;
-        }
-
-        /**
-         * The ID of the resource master account, that is, the UID.
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * The name of the instance RAM role. You can use the RAM API [ListRoles](~~ 28713 ~~) to query the created instance RAM role.
-         */
-        public Builder ramRoleName(String ramRoleName) {
-            this.putQueryParameter("RamRoleName", ramRoleName);
-            this.ramRoleName = ramRoleName;
-            return this;
-        }
-
-        /**
-         * The ID of the region. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The ID of the instance. The value can be a JSON Array consisting of multiple instance IDs. A maximum of 100 IDs can be entered. Separate IDs with commas (,).
+         * InstanceIds.
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -218,13 +164,65 @@ public class AttachInstanceRamRoleRequest extends Request {
         }
 
         /**
-         * The policy. The description must be 1 to 1024 characters in length. When you grant an instance RAM role to one or more ECS instances, you can specify an additional policy to further restrict the permissions of the RAM role. For more information, see [Policy Overview](~~ 93732 ~~).
-         * <p>
-         * 
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * Policy.
          */
         public Builder policy(String policy) {
             this.putQueryParameter("Policy", policy);
             this.policy = policy;
+            return this;
+        }
+
+        /**
+         * RamRoleName.
+         */
+        public Builder ramRoleName(String ramRoleName) {
+            this.putQueryParameter("RamRoleName", ramRoleName);
+            this.ramRoleName = ramRoleName;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

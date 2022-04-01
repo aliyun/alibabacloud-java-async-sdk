@@ -12,13 +12,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeletePrefixListRequest</p>
  */
 public class DeletePrefixListRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
 
     @Query
     @NameInMap("OwnerId")
     private Long ownerId;
+
+    @Query
+    @NameInMap("PrefixListId")
+    @Validation(required = true)
+    private String prefixListId;
+
+    @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
 
     @Query
     @NameInMap("ResourceOwnerAccount")
@@ -28,29 +38,19 @@ public class DeletePrefixListRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("OwnerAccount")
-    private String ownerAccount;
-
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
-    @Query
-    @NameInMap("PrefixListId")
-    @Validation(required = true)
-    private String prefixListId;
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     private DeletePrefixListRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
+        this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.prefixListId = builder.prefixListId;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.ownerAccount = builder.ownerAccount;
-        this.regionId = builder.regionId;
-        this.prefixListId = builder.prefixListId;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -67,10 +67,10 @@ public class DeletePrefixListRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return ownerAccount
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     /**
@@ -78,6 +78,20 @@ public class DeletePrefixListRequest extends Request {
      */
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    /**
+     * @return prefixListId
+     */
+    public String getPrefixListId() {
+        return this.prefixListId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -95,34 +109,20 @@ public class DeletePrefixListRequest extends Request {
     }
 
     /**
-     * @return ownerAccount
+     * @return sourceRegionId
      */
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return prefixListId
-     */
-    public String getPrefixListId() {
-        return this.prefixListId;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public static final class Builder extends Request.Builder<DeletePrefixListRequest, Builder> {
-        private String sourceRegionId; 
+        private String ownerAccount; 
         private Long ownerId; 
+        private String prefixListId; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String ownerAccount; 
-        private String regionId; 
-        private String prefixListId; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -130,21 +130,21 @@ public class DeletePrefixListRequest extends Request {
 
         private Builder(DeletePrefixListRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
+            this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.prefixListId = request.prefixListId;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.ownerAccount = request.ownerAccount;
-            this.regionId = request.regionId;
-            this.prefixListId = request.prefixListId;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
-         * SourceRegionId.
+         * OwnerAccount.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
             return this;
         }
 
@@ -154,6 +154,24 @@ public class DeletePrefixListRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * PrefixListId.
+         */
+        public Builder prefixListId(String prefixListId) {
+            this.putQueryParameter("PrefixListId", prefixListId);
+            this.prefixListId = prefixListId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
@@ -176,29 +194,11 @@ public class DeletePrefixListRequest extends Request {
         }
 
         /**
-         * OwnerAccount.
+         * SourceRegionId.
          */
-        public Builder ownerAccount(String ownerAccount) {
-            this.putQueryParameter("OwnerAccount", ownerAccount);
-            this.ownerAccount = ownerAccount;
-            return this;
-        }
-
-        /**
-         * The ID of the region.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The ID of the prefix list.
-         */
-        public Builder prefixListId(String prefixListId) {
-            this.putQueryParameter("PrefixListId", prefixListId);
-            this.prefixListId = prefixListId;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

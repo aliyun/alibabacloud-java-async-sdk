@@ -12,42 +12,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeTagsRequest</p>
  */
 public class DescribeTagsRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("Category")
     private String category;
-
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
 
     @Query
     @NameInMap("OwnerId")
     private Long ownerId;
 
     @Query
-    @NameInMap("ResourceOwnerAccount")
-    private String resourceOwnerAccount;
-
-    @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
+    @NameInMap("PageNumber")
+    private Integer pageNumber;
 
     @Query
     @NameInMap("PageSize")
     @Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
-
-    @Query
-    @NameInMap("PageNumber")
-    private Integer pageNumber;
-
-    @Query
-    @NameInMap("ResourceType")
-    private String resourceType;
 
     @Query
     @NameInMap("RegionId")
@@ -58,19 +38,39 @@ public class DescribeTagsRequest extends Request {
     @NameInMap("ResourceId")
     private String resourceId;
 
+    @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Query
+    @NameInMap("ResourceType")
+    private String resourceType;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
+    @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
     private DescribeTagsRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
         this.category = builder.category;
-        this.tag = builder.tag;
         this.ownerId = builder.ownerId;
-        this.resourceOwnerAccount = builder.resourceOwnerAccount;
-        this.resourceOwnerId = builder.resourceOwnerId;
-        this.pageSize = builder.pageSize;
         this.pageNumber = builder.pageNumber;
-        this.resourceType = builder.resourceType;
+        this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
         this.resourceId = builder.resourceId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.resourceType = builder.resourceType;
+        this.sourceRegionId = builder.sourceRegionId;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -87,13 +87,6 @@ public class DescribeTagsRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return category
      */
     public String getCategory() {
@@ -101,17 +94,38 @@ public class DescribeTagsRequest extends Request {
     }
 
     /**
-     * @return tag
-     */
-    public java.util.List < Tag> getTag() {
-        return this.tag;
-    }
-
-    /**
      * @return ownerId
      */
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return resourceId
+     */
+    public String getResourceId() {
+        return this.resourceId;
     }
 
     /**
@@ -129,20 +143,6 @@ public class DescribeTagsRequest extends Request {
     }
 
     /**
-     * @return pageSize
-     */
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    /**
-     * @return pageNumber
-     */
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    /**
      * @return resourceType
      */
     public String getResourceType() {
@@ -150,31 +150,31 @@ public class DescribeTagsRequest extends Request {
     }
 
     /**
-     * @return regionId
+     * @return sourceRegionId
      */
-    public String getRegionId() {
-        return this.regionId;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
-     * @return resourceId
+     * @return tag
      */
-    public String getResourceId() {
-        return this.resourceId;
+    public java.util.List < Tag> getTag() {
+        return this.tag;
     }
 
     public static final class Builder extends Request.Builder<DescribeTagsRequest, Builder> {
-        private String sourceRegionId; 
         private String category; 
-        private java.util.List < Tag> tag; 
         private Long ownerId; 
-        private String resourceOwnerAccount; 
-        private Long resourceOwnerId; 
-        private Integer pageSize; 
         private Integer pageNumber; 
-        private String resourceType; 
+        private Integer pageSize; 
         private String regionId; 
         private String resourceId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String resourceType; 
+        private String sourceRegionId; 
+        private java.util.List < Tag> tag; 
 
         private Builder() {
             super();
@@ -182,27 +182,18 @@ public class DescribeTagsRequest extends Request {
 
         private Builder(DescribeTagsRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
             this.category = request.category;
-            this.tag = request.tag;
             this.ownerId = request.ownerId;
-            this.resourceOwnerAccount = request.resourceOwnerAccount;
-            this.resourceOwnerId = request.resourceOwnerId;
-            this.pageSize = request.pageSize;
             this.pageNumber = request.pageNumber;
-            this.resourceType = request.resourceType;
+            this.pageSize = request.pageSize;
             this.regionId = request.regionId;
             this.resourceId = request.resourceId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.resourceType = request.resourceType;
+            this.sourceRegionId = request.sourceRegionId;
+            this.tag = request.tag;
         } 
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
-            return this;
-        }
 
         /**
          * Category.
@@ -210,6 +201,87 @@ public class DescribeTagsRequest extends Request {
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
             this.category = category;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * PageNumber.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceId.
+         */
+        public Builder resourceId(String resourceId) {
+            this.putQueryParameter("ResourceId", resourceId);
+            this.resourceId = resourceId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * ResourceType.
+         */
+        public Builder resourceType(String resourceType) {
+            this.putQueryParameter("ResourceType", resourceType);
+            this.resourceType = resourceType;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 
@@ -222,97 +294,6 @@ public class DescribeTagsRequest extends Request {
             return this;
         }
 
-        /**
-         * The ID of the RAM user.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * The account name of the resource master account.
-         */
-        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
-            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-            this.resourceOwnerAccount = resourceOwnerAccount;
-            return this;
-        }
-
-        /**
-         * The ID of the resource master account, that is, the UID.
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * The number of entries to return on each page.
-         * <p>
-         * 
-         * Maximum Value: 100
-         * 
-         * Default value: 50
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.putQueryParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * The page number of the tag list.
-         * <p>
-         * 
-         * Start value: 1
-         * 
-         * Default value: 1.
-         */
-        public Builder pageNumber(Integer pageNumber) {
-            this.putQueryParameter("PageNumber", pageNumber);
-            this.pageNumber = pageNumber;
-            return this;
-        }
-
-        /**
-         * The type of the resource. Valid values:
-         * <p>
-         * 
-         * -disk
-         * -instance
-         * -image
-         * -securitygroup
-         * -snapshot
-         * 
-         * The preceding values are all in lowercase.
-         */
-        public Builder resourceType(String resourceType) {
-            this.putQueryParameter("ResourceType", resourceType);
-            this.resourceType = resourceType;
-            return this;
-        }
-
-        /**
-         * The ID of the region. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The ID of the resource associated with the tag. For example, if the resource type (ResourceType) is an instance, the resource ID can be considered as the instance ID.
-         */
-        public Builder resourceId(String resourceId) {
-            this.putQueryParameter("ResourceId", resourceId);
-            this.resourceId = resourceId;
-            return this;
-        }
-
         @Override
         public DescribeTagsRequest build() {
             return new DescribeTagsRequest(this);
@@ -321,7 +302,7 @@ public class DescribeTagsRequest extends Request {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("key")
+        @NameInMap("Key")
         private String key;
 
         @NameInMap("Value")
@@ -359,10 +340,7 @@ public class DescribeTagsRequest extends Request {
             private String value; 
 
             /**
-             * 资源的标签键。
-             * <p>
-             * 
-             * >为提高兼容性，建议您尽量使用Tag.N.Key参数。
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -370,7 +348,7 @@ public class DescribeTagsRequest extends Request {
             }
 
             /**
-             * 资源的标签值。N的取值范围：1~20。一旦传入该值，可以为空字符串。最多支持128个字符，不能以aliyun和acs:开头，不能包含 http:// 或者 https:// 。
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -17,12 +17,20 @@ public class DescribeDisksFullStatusRequest extends Request {
     private EventTime eventTime;
 
     @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @NameInMap("DiskId")
+    private java.util.List < String > diskId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("EventId")
+    private java.util.List < String > eventId;
+
+    @Query
+    @NameInMap("EventType")
+    private String eventType;
+
+    @Query
+    @NameInMap("HealthStatus")
+    private String healthStatus;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -33,23 +41,6 @@ public class DescribeDisksFullStatusRequest extends Request {
     private Long ownerId;
 
     @Query
-    @NameInMap("ResourceOwnerAccount")
-    private String resourceOwnerAccount;
-
-    @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
-
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
-    @Query
-    @NameInMap("DiskId")
-    private java.util.List < String > diskId;
-
-    @Query
     @NameInMap("PageNumber")
     private Integer pageNumber;
 
@@ -58,43 +49,52 @@ public class DescribeDisksFullStatusRequest extends Request {
     private Integer pageSize;
 
     @Query
-    @NameInMap("Status")
-    private String status;
-
-    @Query
-    @NameInMap("EventId")
-    private java.util.List < String > eventId;
-
-    @Query
-    @NameInMap("HealthStatus")
-    private String healthStatus;
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
 
     @Query
     @NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
     @Query
-    @NameInMap("EventType")
-    private String eventType;
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
+    @Query
+    @NameInMap("Status")
+    private String status;
+
+    @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
 
     private DescribeDisksFullStatusRequest(Builder builder) {
         super(builder);
         this.eventTime = builder.eventTime;
-        this.tag = builder.tag;
-        this.sourceRegionId = builder.sourceRegionId;
+        this.diskId = builder.diskId;
+        this.eventId = builder.eventId;
+        this.eventType = builder.eventType;
+        this.healthStatus = builder.healthStatus;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
-        this.resourceOwnerAccount = builder.resourceOwnerAccount;
-        this.resourceOwnerId = builder.resourceOwnerId;
-        this.regionId = builder.regionId;
-        this.diskId = builder.diskId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.status = builder.status;
-        this.eventId = builder.eventId;
-        this.healthStatus = builder.healthStatus;
+        this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
-        this.eventType = builder.eventType;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.sourceRegionId = builder.sourceRegionId;
+        this.status = builder.status;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -118,17 +118,31 @@ public class DescribeDisksFullStatusRequest extends Request {
     }
 
     /**
-     * @return tag
+     * @return diskId
      */
-    public java.util.List < Tag> getTag() {
-        return this.tag;
+    public java.util.List < String > getDiskId() {
+        return this.diskId;
     }
 
     /**
-     * @return sourceRegionId
+     * @return eventId
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public java.util.List < String > getEventId() {
+        return this.eventId;
+    }
+
+    /**
+     * @return eventType
+     */
+    public String getEventType() {
+        return this.eventType;
+    }
+
+    /**
+     * @return healthStatus
+     */
+    public String getHealthStatus() {
+        return this.healthStatus;
     }
 
     /**
@@ -146,34 +160,6 @@ public class DescribeDisksFullStatusRequest extends Request {
     }
 
     /**
-     * @return resourceOwnerAccount
-     */
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    /**
-     * @return resourceOwnerId
-     */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return diskId
-     */
-    public java.util.List < String > getDiskId() {
-        return this.diskId;
-    }
-
-    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -188,24 +174,10 @@ public class DescribeDisksFullStatusRequest extends Request {
     }
 
     /**
-     * @return status
+     * @return regionId
      */
-    public String getStatus() {
-        return this.status;
-    }
-
-    /**
-     * @return eventId
-     */
-    public java.util.List < String > getEventId() {
-        return this.eventId;
-    }
-
-    /**
-     * @return healthStatus
-     */
-    public String getHealthStatus() {
-        return this.healthStatus;
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -216,29 +188,57 @@ public class DescribeDisksFullStatusRequest extends Request {
     }
 
     /**
-     * @return eventType
+     * @return resourceOwnerAccount
      */
-    public String getEventType() {
-        return this.eventType;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
+    /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
     }
 
     public static final class Builder extends Request.Builder<DescribeDisksFullStatusRequest, Builder> {
         private EventTime eventTime; 
-        private java.util.List < Tag> tag; 
-        private String sourceRegionId; 
+        private java.util.List < String > diskId; 
+        private java.util.List < String > eventId; 
+        private String eventType; 
+        private String healthStatus; 
         private String ownerAccount; 
         private Long ownerId; 
-        private String resourceOwnerAccount; 
-        private Long resourceOwnerId; 
-        private String regionId; 
-        private java.util.List < String > diskId; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private String status; 
-        private java.util.List < String > eventId; 
-        private String healthStatus; 
+        private String regionId; 
         private String resourceGroupId; 
-        private String eventType; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String sourceRegionId; 
+        private String status; 
+        private java.util.List < Tag> tag; 
 
         private Builder() {
             super();
@@ -247,21 +247,21 @@ public class DescribeDisksFullStatusRequest extends Request {
         private Builder(DescribeDisksFullStatusRequest request) {
             super(request);
             this.eventTime = request.eventTime;
-            this.tag = request.tag;
-            this.sourceRegionId = request.sourceRegionId;
+            this.diskId = request.diskId;
+            this.eventId = request.eventId;
+            this.eventType = request.eventType;
+            this.healthStatus = request.healthStatus;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
-            this.resourceOwnerAccount = request.resourceOwnerAccount;
-            this.resourceOwnerId = request.resourceOwnerId;
-            this.regionId = request.regionId;
-            this.diskId = request.diskId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
-            this.status = request.status;
-            this.eventId = request.eventId;
-            this.healthStatus = request.healthStatus;
+            this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
-            this.eventType = request.eventType;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceRegionId = request.sourceRegionId;
+            this.status = request.status;
+            this.tag = request.tag;
         } 
 
         /**
@@ -274,20 +274,38 @@ public class DescribeDisksFullStatusRequest extends Request {
         }
 
         /**
-         * Tag.
+         * DiskId.
          */
-        public Builder tag(java.util.List < Tag> tag) {
-            this.putQueryParameter("Tag", tag);
-            this.tag = tag;
+        public Builder diskId(java.util.List < String > diskId) {
+            this.putQueryParameter("DiskId", diskId);
+            this.diskId = diskId;
             return this;
         }
 
         /**
-         * SourceRegionId.
+         * EventId.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder eventId(java.util.List < String > eventId) {
+            this.putQueryParameter("EventId", eventId);
+            this.eventId = eventId;
+            return this;
+        }
+
+        /**
+         * EventType.
+         */
+        public Builder eventType(String eventType) {
+            this.putQueryParameter("EventType", eventType);
+            this.eventType = eventType;
+            return this;
+        }
+
+        /**
+         * HealthStatus.
+         */
+        public Builder healthStatus(String healthStatus) {
+            this.putQueryParameter("HealthStatus", healthStatus);
+            this.healthStatus = healthStatus;
             return this;
         }
 
@@ -301,7 +319,7 @@ public class DescribeDisksFullStatusRequest extends Request {
         }
 
         /**
-         * The ID of the RAM user.
+         * OwnerId.
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -310,46 +328,7 @@ public class DescribeDisksFullStatusRequest extends Request {
         }
 
         /**
-         * The account name of the resource master account.
-         */
-        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
-            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-            this.resourceOwnerAccount = resourceOwnerAccount;
-            return this;
-        }
-
-        /**
-         * The ID of the resource master account, that is, the UID.
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * The region ID of the block storage. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The ID of the block storage. Valid values of N: 1 to 100.
-         */
-        public Builder diskId(java.util.List < String > diskId) {
-            this.putQueryParameter("DiskId", diskId);
-            this.diskId = diskId;
-            return this;
-        }
-
-        /**
-         * The page number of the query result. Value range: positive integer
-         * <p>
-         * 
-         * Default value: 1.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -358,10 +337,7 @@ public class DescribeDisksFullStatusRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: 1 to 100.
-         * <p>
-         * 
-         * Default value: 10
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -370,51 +346,16 @@ public class DescribeDisksFullStatusRequest extends Request {
         }
 
         /**
-         * Specifies the lifecycle status of block storage. For more information, see [disk Status Table](~~ 25689 ~~). Valid values:
-         * <p>
-         * 
-         * -In_use: In use
-         * -Available: to be mounted
-         * -Attaching: Mounting
-         * -Detaching: uninstalling
-         * -Creating: Creating
-         * -ReIniting: initializing
-         * 
+         * RegionId.
          */
-        public Builder status(String status) {
-            this.putQueryParameter("Status", status);
-            this.status = status;
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
         /**
-         * The ID of the event. Valid values of N: 1 to 100.
-         */
-        public Builder eventId(java.util.List < String > eventId) {
-            this.putQueryParameter("EventId", eventId);
-            this.eventId = eventId;
-            return this;
-        }
-
-        /**
-         * The health status of the block storage. Valid values:
-         * <p>
-         * 
-         * -Impaired: temporary read/write failure
-         * -Warning: service degradation
-         * -Initializing: Initializing
-         * -InsufficientData: insufficient data
-         * -NotApplicable: not applicable
-         * 
-         */
-        public Builder healthStatus(String healthStatus) {
-            this.putQueryParameter("HealthStatus", healthStatus);
-            this.healthStatus = healthStatus;
-            return this;
-        }
-
-        /**
-         * The ID of the resource group to which the block storage resource belongs. When you use this parameter to filter resources, the number of resources cannot exceed 1,000.
+         * ResourceGroupId.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -423,17 +364,47 @@ public class DescribeDisksFullStatusRequest extends Request {
         }
 
         /**
-         * Specifies the event type of block storage. Valid values:
-         * <p>
-         * 
-         * -Degraded: the performance of block storage is Degraded.
-         * -SeverelyDegraded: the performance of block storage is severely degraded.
-         * -Stalled: block storage performance is severely affected.
-         * -ErrorDetected: The local disk is damaged.
+         * ResourceOwnerAccount.
          */
-        public Builder eventType(String eventType) {
-            this.putQueryParameter("EventType", eventType);
-            this.eventType = eventType;
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
+
+        /**
+         * Status.
+         */
+        public Builder status(String status) {
+            this.putQueryParameter("Status", status);
+            this.status = status;
+            return this;
+        }
+
+        /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
             return this;
         }
 
@@ -445,15 +416,15 @@ public class DescribeDisksFullStatusRequest extends Request {
     } 
 
     public static class EventTime extends TeaModel {
-        @NameInMap("Start")
-        private String start;
-
         @NameInMap("End")
         private String end;
 
+        @NameInMap("Start")
+        private String start;
+
         private EventTime(Builder builder) {
-            this.start = builder.start;
             this.end = builder.end;
+            this.start = builder.start;
         }
 
         public static Builder builder() {
@@ -465,42 +436,36 @@ public class DescribeDisksFullStatusRequest extends Request {
         }
 
         /**
-         * @return start
-         */
-        public String getStart() {
-            return this.start;
-        }
-
-        /**
          * @return end
          */
         public String getEnd() {
             return this.end;
         }
 
+        /**
+         * @return start
+         */
+        public String getStart() {
+            return this.start;
+        }
+
         public static final class Builder {
-            private String start; 
             private String end; 
+            private String start; 
 
             /**
-             * Query the start time of the event occurrence time.
-             * <p>
-             * 
-             * The time follows the [ISO8601](~~ 25696 ~~) standard and uses UTC +0. The format is "yyyy-MM-ddTHH:mm:ssZ ".
+             * End.
              */
-            public Builder start(String start) {
-                this.start = start;
+            public Builder end(String end) {
+                this.end = end;
                 return this;
             }
 
             /**
-             * Query the end time of the event occurrence time.
-             * <p>
-             * 
-             * The time follows the [ISO8601](~~ 25696 ~~) standard and uses UTC +0. The format is "yyyy-MM-ddTHH:mm:ssZ ".
+             * Start.
              */
-            public Builder end(String end) {
-                this.end = end;
+            public Builder start(String start) {
+                this.start = start;
                 return this;
             }
 
@@ -550,10 +515,7 @@ public class DescribeDisksFullStatusRequest extends Request {
             private String value; 
 
             /**
-             * 块存储资源绑定的标签键。N表示可以设置一个或多个标签键，且N的数值和`Tag.N.Value`参数中的N对应，构成键值对。N的取值范围：1~20
-             * <p>
-             * 
-             * 使用一个标签过滤资源，查询到该标签下的资源数量不能超过1000个；使用多个标签过滤资源，查询到同时绑定了多个标签的资源数量不能超过1000个。
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -561,7 +523,7 @@ public class DescribeDisksFullStatusRequest extends Request {
             }
 
             /**
-             * 块存储资源绑定的标签值。N表示可以设置一个或多个标签值，且N的数值和`Tag.N.Key`参数中的N对应，构成键值对。N的取值范围：1~20
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

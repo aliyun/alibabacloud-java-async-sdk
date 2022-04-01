@@ -50,10 +50,7 @@ public class ResizeDiskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the generated order.
-         * <p>
-         * 
-         * > The Order ID is returned only when the disk is resized.
+         * OrderId.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -61,7 +58,7 @@ public class ResizeDiskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -12,22 +12,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSpotPriceHistoryResponseBody</p>
  */
 public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    private String requestId;
-
     @NameInMap("Currency")
     private String currency;
 
     @NameInMap("NextOffset")
     private Integer nextOffset;
 
+    @NameInMap("RequestId")
+    private String requestId;
+
     @NameInMap("SpotPrices")
     private SpotPrices spotPrices;
 
     private DescribeSpotPriceHistoryResponseBody(Builder builder) {
-        this.requestId = builder.requestId;
         this.currency = builder.currency;
         this.nextOffset = builder.nextOffset;
+        this.requestId = builder.requestId;
         this.spotPrices = builder.spotPrices;
     }
 
@@ -37,13 +37,6 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
 
     public static DescribeSpotPriceHistoryResponseBody create() {
         return builder().build();
-    }
-
-    /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
     }
 
     /**
@@ -61,6 +54,13 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
     }
 
     /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
      * @return spotPrices
      */
     public SpotPrices getSpotPrices() {
@@ -68,21 +68,13 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String requestId; 
         private String currency; 
         private Integer nextOffset; 
+        private String requestId; 
         private SpotPrices spotPrices; 
 
         /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The monetary unit of the price.
+         * Currency.
          */
         public Builder currency(String currency) {
             this.currency = currency;
@@ -90,7 +82,7 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * The start line of the next page to query the data on the next page. The value of the "Offset" parameter is specified.
+         * NextOffset.
          */
         public Builder nextOffset(Integer nextOffset) {
             this.nextOffset = nextOffset;
@@ -98,7 +90,15 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * Preemptible price details.
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * SpotPrices.
          */
         public Builder spotPrices(SpotPrices spotPrices) {
             this.spotPrices = spotPrices;
@@ -112,11 +112,17 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
     } 
 
     public static class SpotPriceType extends TeaModel {
+        @NameInMap("InstanceType")
+        private String instanceType;
+
         @NameInMap("IoOptimized")
         private String ioOptimized;
 
-        @NameInMap("ZoneId")
-        private String zoneId;
+        @NameInMap("NetworkType")
+        private String networkType;
+
+        @NameInMap("OriginPrice")
+        private Float originPrice;
 
         @NameInMap("SpotPrice")
         private Float spotPrice;
@@ -124,23 +130,17 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
         @NameInMap("Timestamp")
         private String timestamp;
 
-        @NameInMap("NetworkType")
-        private String networkType;
-
-        @NameInMap("InstanceType")
-        private String instanceType;
-
-        @NameInMap("OriginPrice")
-        private Float originPrice;
+        @NameInMap("ZoneId")
+        private String zoneId;
 
         private SpotPriceType(Builder builder) {
+            this.instanceType = builder.instanceType;
             this.ioOptimized = builder.ioOptimized;
-            this.zoneId = builder.zoneId;
+            this.networkType = builder.networkType;
+            this.originPrice = builder.originPrice;
             this.spotPrice = builder.spotPrice;
             this.timestamp = builder.timestamp;
-            this.networkType = builder.networkType;
-            this.instanceType = builder.instanceType;
-            this.originPrice = builder.originPrice;
+            this.zoneId = builder.zoneId;
         }
 
         public static Builder builder() {
@@ -152,6 +152,13 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
         }
 
         /**
+         * @return instanceType
+         */
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        /**
          * @return ioOptimized
          */
         public String getIoOptimized() {
@@ -159,10 +166,17 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * @return zoneId
+         * @return networkType
          */
-        public String getZoneId() {
-            return this.zoneId;
+        public String getNetworkType() {
+            return this.networkType;
+        }
+
+        /**
+         * @return originPrice
+         */
+        public Float getOriginPrice() {
+            return this.originPrice;
         }
 
         /**
@@ -180,77 +194,23 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * @return networkType
+         * @return zoneId
          */
-        public String getNetworkType() {
-            return this.networkType;
-        }
-
-        /**
-         * @return instanceType
-         */
-        public String getInstanceType() {
-            return this.instanceType;
-        }
-
-        /**
-         * @return originPrice
-         */
-        public Float getOriginPrice() {
-            return this.originPrice;
+        public String getZoneId() {
+            return this.zoneId;
         }
 
         public static final class Builder {
+            private String instanceType; 
             private String ioOptimized; 
-            private String zoneId; 
+            private String networkType; 
+            private Float originPrice; 
             private Float spotPrice; 
             private String timestamp; 
-            private String networkType; 
-            private String instanceType; 
-            private Float originPrice; 
+            private String zoneId; 
 
             /**
-             * Indicates whether the preemptible instance is an I/O optimized instance.
-             */
-            public Builder ioOptimized(String ioOptimized) {
-                this.ioOptimized = ioOptimized;
-                return this;
-            }
-
-            /**
-             * The ID of the zone to which the preemptible instance belongs.
-             */
-            public Builder zoneId(String zoneId) {
-                this.zoneId = zoneId;
-                return this;
-            }
-
-            /**
-             * The price of a preemptible instance.
-             */
-            public Builder spotPrice(Float spotPrice) {
-                this.spotPrice = spotPrice;
-                return this;
-            }
-
-            /**
-             * The time format is "yyyy-MM-ddTHH:mm:ssZ.
-             */
-            public Builder timestamp(String timestamp) {
-                this.timestamp = timestamp;
-                return this;
-            }
-
-            /**
-             * The network type of the preemptible instance.
-             */
-            public Builder networkType(String networkType) {
-                this.networkType = networkType;
-                return this;
-            }
-
-            /**
-             * The instance type of the preemptible instance.
+             * InstanceType.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -258,10 +218,50 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The original price of the pay-as-you-go instance.
+             * IoOptimized.
+             */
+            public Builder ioOptimized(String ioOptimized) {
+                this.ioOptimized = ioOptimized;
+                return this;
+            }
+
+            /**
+             * NetworkType.
+             */
+            public Builder networkType(String networkType) {
+                this.networkType = networkType;
+                return this;
+            }
+
+            /**
+             * OriginPrice.
              */
             public Builder originPrice(Float originPrice) {
                 this.originPrice = originPrice;
+                return this;
+            }
+
+            /**
+             * SpotPrice.
+             */
+            public Builder spotPrice(Float spotPrice) {
+                this.spotPrice = spotPrice;
+                return this;
+            }
+
+            /**
+             * Timestamp.
+             */
+            public Builder timestamp(String timestamp) {
+                this.timestamp = timestamp;
+                return this;
+            }
+
+            /**
+             * ZoneId.
+             */
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
                 return this;
             }
 

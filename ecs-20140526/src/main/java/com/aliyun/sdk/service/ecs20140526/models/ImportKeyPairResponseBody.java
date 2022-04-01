@@ -12,19 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ImportKeyPairResponseBody</p>
  */
 public class ImportKeyPairResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    private String requestId;
+    @NameInMap("KeyPairFingerPrint")
+    private String keyPairFingerPrint;
 
     @NameInMap("KeyPairName")
     private String keyPairName;
 
-    @NameInMap("KeyPairFingerPrint")
-    private String keyPairFingerPrint;
+    @NameInMap("RequestId")
+    private String requestId;
 
     private ImportKeyPairResponseBody(Builder builder) {
-        this.requestId = builder.requestId;
-        this.keyPairName = builder.keyPairName;
         this.keyPairFingerPrint = builder.keyPairFingerPrint;
+        this.keyPairName = builder.keyPairName;
+        this.requestId = builder.requestId;
     }
 
     public static Builder builder() {
@@ -36,10 +36,10 @@ public class ImportKeyPairResponseBody extends TeaModel {
     }
 
     /**
-     * @return requestId
+     * @return keyPairFingerPrint
      */
-    public String getRequestId() {
-        return this.requestId;
+    public String getKeyPairFingerPrint() {
+        return this.keyPairFingerPrint;
     }
 
     /**
@@ -50,27 +50,27 @@ public class ImportKeyPairResponseBody extends TeaModel {
     }
 
     /**
-     * @return keyPairFingerPrint
+     * @return requestId
      */
-    public String getKeyPairFingerPrint() {
-        return this.keyPairFingerPrint;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static final class Builder {
-        private String requestId; 
-        private String keyPairName; 
         private String keyPairFingerPrint; 
+        private String keyPairName; 
+        private String requestId; 
 
         /**
-         * The ID of the request.
+         * KeyPairFingerPrint.
          */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
+        public Builder keyPairFingerPrint(String keyPairFingerPrint) {
+            this.keyPairFingerPrint = keyPairFingerPrint;
             return this;
         }
 
         /**
-         * The name of the key pair.
+         * KeyPairName.
          */
         public Builder keyPairName(String keyPairName) {
             this.keyPairName = keyPairName;
@@ -78,10 +78,10 @@ public class ImportKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * The fingerprint of the key pair. According to the public key fingerprint format defined in RFC4716, MD5 Information Digest Algorithm is adopted.
+         * RequestId.
          */
-        public Builder keyPairFingerPrint(String keyPairFingerPrint) {
-            this.keyPairFingerPrint = keyPairFingerPrint;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 

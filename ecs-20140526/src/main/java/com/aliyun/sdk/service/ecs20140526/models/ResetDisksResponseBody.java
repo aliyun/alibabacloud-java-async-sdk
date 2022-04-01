@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ResetDisksResponseBody</p>
  */
 public class ResetDisksResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    private String requestId;
-
     @NameInMap("OperationProgressSet")
     private OperationProgressSet operationProgressSet;
 
+    @NameInMap("RequestId")
+    private String requestId;
+
     private ResetDisksResponseBody(Builder builder) {
-        this.requestId = builder.requestId;
         this.operationProgressSet = builder.operationProgressSet;
+        this.requestId = builder.requestId;
     }
 
     public static Builder builder() {
@@ -32,36 +32,36 @@ public class ResetDisksResponseBody extends TeaModel {
     }
 
     /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    /**
      * @return operationProgressSet
      */
     public OperationProgressSet getOperationProgressSet() {
         return this.operationProgressSet;
     }
 
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static final class Builder {
-        private String requestId; 
         private OperationProgressSet operationProgressSet; 
+        private String requestId; 
 
         /**
-         * The ID of the request.
+         * OperationProgressSet.
          */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
+        public Builder operationProgressSet(OperationProgressSet operationProgressSet) {
+            this.operationProgressSet = operationProgressSet;
             return this;
         }
 
         /**
-         * A collection of Operation status information when one or more cloud disks are rolled back.
+         * RequestId.
          */
-        public Builder operationProgressSet(OperationProgressSet operationProgressSet) {
-            this.operationProgressSet = operationProgressSet;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
@@ -110,7 +110,7 @@ public class ResetDisksResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The name of the resource.
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -118,7 +118,7 @@ public class ResetDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource.
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -174,11 +174,11 @@ public class ResetDisksResponseBody extends TeaModel {
 
     }
     public static class OperationProgress extends TeaModel {
-        @NameInMap("ErrorMsg")
-        private String errorMsg;
-
         @NameInMap("ErrorCode")
         private String errorCode;
+
+        @NameInMap("ErrorMsg")
+        private String errorMsg;
 
         @NameInMap("OperationStatus")
         private String operationStatus;
@@ -187,8 +187,8 @@ public class ResetDisksResponseBody extends TeaModel {
         private RelatedItemSet relatedItemSet;
 
         private OperationProgress(Builder builder) {
-            this.errorMsg = builder.errorMsg;
             this.errorCode = builder.errorCode;
+            this.errorMsg = builder.errorMsg;
             this.operationStatus = builder.operationStatus;
             this.relatedItemSet = builder.relatedItemSet;
         }
@@ -202,17 +202,17 @@ public class ResetDisksResponseBody extends TeaModel {
         }
 
         /**
-         * @return errorMsg
-         */
-        public String getErrorMsg() {
-            return this.errorMsg;
-        }
-
-        /**
          * @return errorCode
          */
         public String getErrorCode() {
             return this.errorCode;
+        }
+
+        /**
+         * @return errorMsg
+         */
+        public String getErrorMsg() {
+            return this.errorMsg;
         }
 
         /**
@@ -230,34 +230,13 @@ public class ResetDisksResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private String errorMsg; 
             private String errorCode; 
+            private String errorMsg; 
             private String operationStatus; 
             private RelatedItemSet relatedItemSet; 
 
             /**
-             * The error message. If the rollback succeeds, a null value is returned.
-             * <p>
-             * 
-             * <props = "intl"> for error codes and error messages, see [error Center](https://error-center.alibabacloud.com/status/product/Ecs). </props>
-             * 
-             * <props = "china"> for error codes and error messages, see [error Center](https://error-center.aliyun.com/status/product/Ecs). </props>
-             * 
-             */
-            public Builder errorMsg(String errorMsg) {
-                this.errorMsg = errorMsg;
-                return this;
-            }
-
-            /**
-             * The error code. If the rollback succeeds, a null value is returned.
-             * <p>
-             * 
-             * 
-             * <props = "intl"> for error codes and error messages, see [error Center](https://error-center.alibabacloud.com/status/product/Ecs). </props>
-             * 
-             * <props = "china"> for error codes and error messages, see [error Center](https://error-center.aliyun.com/status/product/Ecs). </props>
-             * 
+             * ErrorCode.
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -265,9 +244,15 @@ public class ResetDisksResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the operation is successful.
-             * <p>
-             * Success is returned if the request succeeds. ErrorCode and ErrorMsg are returned if the request fails.
+             * ErrorMsg.
+             */
+            public Builder errorMsg(String errorMsg) {
+                this.errorMsg = errorMsg;
+                return this;
+            }
+
+            /**
+             * OperationStatus.
              */
             public Builder operationStatus(String operationStatus) {
                 this.operationStatus = operationStatus;
@@ -275,7 +260,7 @@ public class ResetDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The resource information.
+             * RelatedItemSet.
              */
             public Builder relatedItemSet(RelatedItemSet relatedItemSet) {
                 this.relatedItemSet = relatedItemSet;

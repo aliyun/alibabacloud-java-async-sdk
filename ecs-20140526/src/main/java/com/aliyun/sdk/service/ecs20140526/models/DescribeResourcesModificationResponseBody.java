@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeResourcesModificationResponseBody</p>
  */
 public class DescribeResourcesModificationResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    private String requestId;
-
     @NameInMap("AvailableZones")
     private AvailableZones availableZones;
 
+    @NameInMap("RequestId")
+    private String requestId;
+
     private DescribeResourcesModificationResponseBody(Builder builder) {
-        this.requestId = builder.requestId;
         this.availableZones = builder.availableZones;
+        this.requestId = builder.requestId;
     }
 
     public static Builder builder() {
@@ -32,36 +32,36 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
     }
 
     /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    /**
      * @return availableZones
      */
     public AvailableZones getAvailableZones() {
         return this.availableZones;
     }
 
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static final class Builder {
-        private String requestId; 
         private AvailableZones availableZones; 
+        private String requestId; 
 
         /**
-         * The ID of the request.
+         * AvailableZones.
          */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
+        public Builder availableZones(AvailableZones availableZones) {
+            this.availableZones = availableZones;
             return this;
         }
 
         /**
-         * A collection of data center information AvailableZone.
+         * RequestId.
          */
-        public Builder availableZones(AvailableZones availableZones) {
-            this.availableZones = availableZones;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
@@ -72,31 +72,31 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
     } 
 
     public static class SupportedResource extends TeaModel {
-        @NameInMap("Status")
-        private String status;
-
-        @NameInMap("Value")
-        private String value;
-
         @NameInMap("Max")
         private Integer max;
-
-        @NameInMap("Unit")
-        private String unit;
-
-        @NameInMap("StatusCategory")
-        private String statusCategory;
 
         @NameInMap("Min")
         private Integer min;
 
+        @NameInMap("Status")
+        private String status;
+
+        @NameInMap("StatusCategory")
+        private String statusCategory;
+
+        @NameInMap("Unit")
+        private String unit;
+
+        @NameInMap("Value")
+        private String value;
+
         private SupportedResource(Builder builder) {
-            this.status = builder.status;
-            this.value = builder.value;
             this.max = builder.max;
-            this.unit = builder.unit;
-            this.statusCategory = builder.statusCategory;
             this.min = builder.min;
+            this.status = builder.status;
+            this.statusCategory = builder.statusCategory;
+            this.unit = builder.unit;
+            this.value = builder.value;
         }
 
         public static Builder builder() {
@@ -108,20 +108,6 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
         }
 
         /**
-         * @return status
-         */
-        public String getStatus() {
-            return this.status;
-        }
-
-        /**
-         * @return value
-         */
-        public String getValue() {
-            return this.value;
-        }
-
-        /**
          * @return max
          */
         public Integer getMax() {
@@ -129,10 +115,17 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
         }
 
         /**
-         * @return unit
+         * @return min
          */
-        public String getUnit() {
-            return this.unit;
+        public Integer getMin() {
+            return this.min;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
         }
 
         /**
@@ -143,43 +136,29 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
         }
 
         /**
-         * @return min
+         * @return unit
          */
-        public Integer getMin() {
-            return this.min;
+        public String getUnit() {
+            return this.unit;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
         }
 
         public static final class Builder {
-            private String status; 
-            private String value; 
             private Integer max; 
-            private String unit; 
-            private String statusCategory; 
             private Integer min; 
+            private String status; 
+            private String statusCategory; 
+            private String unit; 
+            private String value; 
 
             /**
-             * The status of the resource. Possible values:
-             * <p>
-             * 
-             * -Available: sufficient resources
-             * -SoldOut: resources are sold out
-             * 
-             */
-            public Builder status(String status) {
-                this.status = status;
-                return this;
-            }
-
-            /**
-             * The value of the resource.
-             */
-            public Builder value(String value) {
-                this.value = value;
-                return this;
-            }
-
-            /**
-             * The maximum value of the resource type. This parameter is not returned if it is null.
+             * Max.
              */
             public Builder max(Integer max) {
                 this.max = max;
@@ -187,20 +166,23 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the resource type. This parameter is not returned if it is null.
+             * Min.
              */
-            public Builder unit(String unit) {
-                this.unit = unit;
+            public Builder min(Integer min) {
+                this.min = min;
                 return this;
             }
 
             /**
-             * Resource categories are classified by inventory. Possible values:
-             * <p>
-             * 
-             * -WithStock: sufficient inventory
-             * -ClosedWithStock: the inventory is close to the low-level line.
-             * -WithoutStock: the inventory is out of stock.
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * StatusCategory.
              */
             public Builder statusCategory(String statusCategory) {
                 this.statusCategory = statusCategory;
@@ -208,10 +190,18 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum value of the resource type. This parameter is not returned if it is null.
+             * Unit.
              */
-            public Builder min(Integer min) {
-                this.min = min;
+            public Builder unit(String unit) {
+                this.unit = unit;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
                 return this;
             }
 
@@ -264,15 +254,15 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
 
     }
     public static class AvailableResource extends TeaModel {
-        @NameInMap("Type")
-        private String type;
-
         @NameInMap("SupportedResources")
         private SupportedResources supportedResources;
 
+        @NameInMap("Type")
+        private String type;
+
         private AvailableResource(Builder builder) {
-            this.type = builder.type;
             this.supportedResources = builder.supportedResources;
+            this.type = builder.type;
         }
 
         public static Builder builder() {
@@ -284,45 +274,36 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
         }
 
         /**
-         * @return type
-         */
-        public String getType() {
-            return this.type;
-        }
-
-        /**
          * @return supportedResources
          */
         public SupportedResources getSupportedResources() {
             return this.supportedResources;
         }
 
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
         public static final class Builder {
-            private String type; 
             private SupportedResources supportedResources; 
+            private String type; 
 
             /**
-             * The type of the resource. Possible values:
-             * <p>
-             * 
-             * -Zone: Zone
-             * -IoOptimized:I/O optimization
-             * -InstanceType: instance type
-             * -SystemDisk: system disk type
-             * -DataDisk: data disk type
-             * -Network: Network type
-             * 
+             * SupportedResources.
              */
-            public Builder type(String type) {
-                this.type = type;
+            public Builder supportedResources(SupportedResources supportedResources) {
+                this.supportedResources = supportedResources;
                 return this;
             }
 
             /**
-             * An array of specific resources that can be created.
+             * Type.
              */
-            public Builder supportedResources(SupportedResources supportedResources) {
-                this.supportedResources = supportedResources;
+            public Builder type(String type) {
+                this.type = type;
                 return this;
             }
 
@@ -375,8 +356,11 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
 
     }
     public static class AvailableZone extends TeaModel {
-        @NameInMap("ZoneId")
-        private String zoneId;
+        @NameInMap("AvailableResources")
+        private AvailableResources availableResources;
+
+        @NameInMap("RegionId")
+        private String regionId;
 
         @NameInMap("Status")
         private String status;
@@ -384,18 +368,15 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
         @NameInMap("StatusCategory")
         private String statusCategory;
 
-        @NameInMap("RegionId")
-        private String regionId;
-
-        @NameInMap("AvailableResources")
-        private AvailableResources availableResources;
+        @NameInMap("ZoneId")
+        private String zoneId;
 
         private AvailableZone(Builder builder) {
-            this.zoneId = builder.zoneId;
+            this.availableResources = builder.availableResources;
+            this.regionId = builder.regionId;
             this.status = builder.status;
             this.statusCategory = builder.statusCategory;
-            this.regionId = builder.regionId;
-            this.availableResources = builder.availableResources;
+            this.zoneId = builder.zoneId;
         }
 
         public static Builder builder() {
@@ -407,10 +388,17 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
         }
 
         /**
-         * @return zoneId
+         * @return availableResources
          */
-        public String getZoneId() {
-            return this.zoneId;
+        public AvailableResources getAvailableResources() {
+            return this.availableResources;
+        }
+
+        /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
         }
 
         /**
@@ -428,62 +416,29 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
         }
 
         /**
-         * @return regionId
+         * @return zoneId
          */
-        public String getRegionId() {
-            return this.regionId;
-        }
-
-        /**
-         * @return availableResources
-         */
-        public AvailableResources getAvailableResources() {
-            return this.availableResources;
+        public String getZoneId() {
+            return this.zoneId;
         }
 
         public static final class Builder {
-            private String zoneId; 
+            private AvailableResources availableResources; 
+            private String regionId; 
             private String status; 
             private String statusCategory; 
-            private String regionId; 
-            private AvailableResources availableResources; 
+            private String zoneId; 
 
             /**
-             * The ID of the zone.
+             * AvailableResources.
              */
-            public Builder zoneId(String zoneId) {
-                this.zoneId = zoneId;
+            public Builder availableResources(AvailableResources availableResources) {
+                this.availableResources = availableResources;
                 return this;
             }
 
             /**
-             * The status of the resource. Possible values:
-             * <p>
-             * 
-             * -Available: sufficient resources
-             * -SoldOut: resources are sold out
-             * 
-             */
-            public Builder status(String status) {
-                this.status = status;
-                return this;
-            }
-
-            /**
-             * Resource categories are classified by inventory. Possible values:
-             * <p>
-             * 
-             * -WithStock: sufficient inventory
-             * -ClosedWithStock: the inventory is close to the low-level line.
-             * -WithoutStock: the inventory is out of stock.
-             */
-            public Builder statusCategory(String statusCategory) {
-                this.statusCategory = statusCategory;
-                return this;
-            }
-
-            /**
-             * The ID of the region.
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -491,10 +446,26 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
             }
 
             /**
-             * An array of specific resources that can be created.
+             * Status.
              */
-            public Builder availableResources(AvailableResources availableResources) {
-                this.availableResources = availableResources;
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * StatusCategory.
+             */
+            public Builder statusCategory(String statusCategory) {
+                this.statusCategory = statusCategory;
+                return this;
+            }
+
+            /**
+             * ZoneId.
+             */
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
                 return this;
             }
 

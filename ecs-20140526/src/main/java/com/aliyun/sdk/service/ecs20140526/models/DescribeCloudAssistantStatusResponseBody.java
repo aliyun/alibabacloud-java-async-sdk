@@ -12,27 +12,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCloudAssistantStatusResponseBody</p>
  */
 public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
+    @NameInMap("InstanceCloudAssistantStatusSet")
+    private InstanceCloudAssistantStatusSet instanceCloudAssistantStatusSet;
+
+    @NameInMap("PageNumber")
+    private Long pageNumber;
+
     @NameInMap("PageSize")
     private Long pageSize;
 
     @NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("PageNumber")
-    private Long pageNumber;
-
     @NameInMap("TotalCount")
     private Long totalCount;
 
-    @NameInMap("InstanceCloudAssistantStatusSet")
-    private InstanceCloudAssistantStatusSet instanceCloudAssistantStatusSet;
-
     private DescribeCloudAssistantStatusResponseBody(Builder builder) {
+        this.instanceCloudAssistantStatusSet = builder.instanceCloudAssistantStatusSet;
+        this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
-        this.pageNumber = builder.pageNumber;
         this.totalCount = builder.totalCount;
-        this.instanceCloudAssistantStatusSet = builder.instanceCloudAssistantStatusSet;
     }
 
     public static Builder builder() {
@@ -41,6 +41,20 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
 
     public static DescribeCloudAssistantStatusResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return instanceCloudAssistantStatusSet
+     */
+    public InstanceCloudAssistantStatusSet getInstanceCloudAssistantStatusSet() {
+        return this.instanceCloudAssistantStatusSet;
+    }
+
+    /**
+     * @return pageNumber
+     */
+    public Long getPageNumber() {
+        return this.pageNumber;
     }
 
     /**
@@ -58,51 +72,29 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
     }
 
     /**
-     * @return pageNumber
-     */
-    public Long getPageNumber() {
-        return this.pageNumber;
-    }
-
-    /**
      * @return totalCount
      */
     public Long getTotalCount() {
         return this.totalCount;
     }
 
-    /**
-     * @return instanceCloudAssistantStatusSet
-     */
-    public InstanceCloudAssistantStatusSet getInstanceCloudAssistantStatusSet() {
-        return this.instanceCloudAssistantStatusSet;
-    }
-
     public static final class Builder {
+        private InstanceCloudAssistantStatusSet instanceCloudAssistantStatusSet; 
+        private Long pageNumber; 
         private Long pageSize; 
         private String requestId; 
-        private Long pageNumber; 
         private Long totalCount; 
-        private InstanceCloudAssistantStatusSet instanceCloudAssistantStatusSet; 
 
         /**
-         * The number of rows per page.
+         * InstanceCloudAssistantStatusSet.
          */
-        public Builder pageSize(Long pageSize) {
-            this.pageSize = pageSize;
+        public Builder instanceCloudAssistantStatusSet(InstanceCloudAssistantStatusSet instanceCloudAssistantStatusSet) {
+            this.instanceCloudAssistantStatusSet = instanceCloudAssistantStatusSet;
             return this;
         }
 
         /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The current page number.
+         * PageNumber.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -110,18 +102,26 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of instances.
+         * PageSize.
          */
-        public Builder totalCount(Long totalCount) {
-            this.totalCount = totalCount;
+        public Builder pageSize(Long pageSize) {
+            this.pageSize = pageSize;
             return this;
         }
 
         /**
-         * The collection of installation status results of the instance cloud assistant.
+         * RequestId.
          */
-        public Builder instanceCloudAssistantStatusSet(InstanceCloudAssistantStatusSet instanceCloudAssistantStatusSet) {
-            this.instanceCloudAssistantStatusSet = instanceCloudAssistantStatusSet;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Long totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
@@ -132,26 +132,26 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
     } 
 
     public static class InstanceCloudAssistantStatus extends TeaModel {
+        @NameInMap("ActiveTaskCount")
+        private Long activeTaskCount;
+
         @NameInMap("CloudAssistantStatus")
         private String cloudAssistantStatus;
-
-        @NameInMap("LastInvokedTime")
-        private String lastInvokedTime;
 
         @NameInMap("CloudAssistantVersion")
         private String cloudAssistantVersion;
 
-        @NameInMap("ActiveTaskCount")
-        private Long activeTaskCount;
+        @NameInMap("InstanceId")
+        private String instanceId;
 
         @NameInMap("InvocationCount")
         private Long invocationCount;
 
-        @NameInMap("InstanceId")
-        private String instanceId;
-
         @NameInMap("LastHeartbeatTime")
         private String lastHeartbeatTime;
+
+        @NameInMap("LastInvokedTime")
+        private String lastInvokedTime;
 
         @NameInMap("OSType")
         private String OSType;
@@ -160,13 +160,13 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
         private Boolean supportSessionManager;
 
         private InstanceCloudAssistantStatus(Builder builder) {
-            this.cloudAssistantStatus = builder.cloudAssistantStatus;
-            this.lastInvokedTime = builder.lastInvokedTime;
-            this.cloudAssistantVersion = builder.cloudAssistantVersion;
             this.activeTaskCount = builder.activeTaskCount;
-            this.invocationCount = builder.invocationCount;
+            this.cloudAssistantStatus = builder.cloudAssistantStatus;
+            this.cloudAssistantVersion = builder.cloudAssistantVersion;
             this.instanceId = builder.instanceId;
+            this.invocationCount = builder.invocationCount;
             this.lastHeartbeatTime = builder.lastHeartbeatTime;
+            this.lastInvokedTime = builder.lastInvokedTime;
             this.OSType = builder.OSType;
             this.supportSessionManager = builder.supportSessionManager;
         }
@@ -180,17 +180,17 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
         }
 
         /**
+         * @return activeTaskCount
+         */
+        public Long getActiveTaskCount() {
+            return this.activeTaskCount;
+        }
+
+        /**
          * @return cloudAssistantStatus
          */
         public String getCloudAssistantStatus() {
             return this.cloudAssistantStatus;
-        }
-
-        /**
-         * @return lastInvokedTime
-         */
-        public String getLastInvokedTime() {
-            return this.lastInvokedTime;
         }
 
         /**
@@ -201,10 +201,10 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
         }
 
         /**
-         * @return activeTaskCount
+         * @return instanceId
          */
-        public Long getActiveTaskCount() {
-            return this.activeTaskCount;
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
         /**
@@ -215,17 +215,17 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
         }
 
         /**
-         * @return instanceId
-         */
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
-        /**
          * @return lastHeartbeatTime
          */
         public String getLastHeartbeatTime() {
             return this.lastHeartbeatTime;
+        }
+
+        /**
+         * @return lastInvokedTime
+         */
+        public String getLastInvokedTime() {
+            return this.lastInvokedTime;
         }
 
         /**
@@ -243,42 +243,18 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private String cloudAssistantStatus; 
-            private String lastInvokedTime; 
-            private String cloudAssistantVersion; 
             private Long activeTaskCount; 
-            private Long invocationCount; 
+            private String cloudAssistantStatus; 
+            private String cloudAssistantVersion; 
             private String instanceId; 
+            private Long invocationCount; 
             private String lastHeartbeatTime; 
+            private String lastInvokedTime; 
             private String OSType; 
             private Boolean supportSessionManager; 
 
             /**
-             * Indicates whether cloud assistant is installed.
-             */
-            public Builder cloudAssistantStatus(String cloudAssistantStatus) {
-                this.cloudAssistantStatus = cloudAssistantStatus;
-                return this;
-            }
-
-            /**
-             * The time when the last command was run.
-             */
-            public Builder lastInvokedTime(String lastInvokedTime) {
-                this.lastInvokedTime = lastInvokedTime;
-                return this;
-            }
-
-            /**
-             * The version number of the cloud assistant client.
-             */
-            public Builder cloudAssistantVersion(String cloudAssistantVersion) {
-                this.cloudAssistantVersion = cloudAssistantVersion;
-                return this;
-            }
-
-            /**
-             * The number of commands that are being executed.
+             * ActiveTaskCount.
              */
             public Builder activeTaskCount(Long activeTaskCount) {
                 this.activeTaskCount = activeTaskCount;
@@ -286,15 +262,23 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of executed commands.
+             * CloudAssistantStatus.
              */
-            public Builder invocationCount(Long invocationCount) {
-                this.invocationCount = invocationCount;
+            public Builder cloudAssistantStatus(String cloudAssistantStatus) {
+                this.cloudAssistantStatus = cloudAssistantStatus;
                 return this;
             }
 
             /**
-             * The ID of the instance.
+             * CloudAssistantVersion.
+             */
+            public Builder cloudAssistantVersion(String cloudAssistantVersion) {
+                this.cloudAssistantVersion = cloudAssistantVersion;
+                return this;
+            }
+
+            /**
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -302,7 +286,15 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The last heartbeat time of cloud assistant.
+             * InvocationCount.
+             */
+            public Builder invocationCount(Long invocationCount) {
+                this.invocationCount = invocationCount;
+                return this;
+            }
+
+            /**
+             * LastHeartbeatTime.
              */
             public Builder lastHeartbeatTime(String lastHeartbeatTime) {
                 this.lastHeartbeatTime = lastHeartbeatTime;
@@ -310,11 +302,15 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The operating system type of the instance. Possible values:
-             * <p>
-             * 
-             * -Windows.
-             * -Linux.
+             * LastInvokedTime.
+             */
+            public Builder lastInvokedTime(String lastInvokedTime) {
+                this.lastInvokedTime = lastInvokedTime;
+                return this;
+            }
+
+            /**
+             * OSType.
              */
             public Builder OSType(String OSType) {
                 this.OSType = OSType;
@@ -322,7 +318,7 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Whether the current cloud assistant client version supports session management.
+             * SupportSessionManager.
              */
             public Builder supportSessionManager(Boolean supportSessionManager) {
                 this.supportSessionManager = supportSessionManager;

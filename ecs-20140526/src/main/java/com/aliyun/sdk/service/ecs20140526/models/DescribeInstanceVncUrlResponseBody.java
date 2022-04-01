@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceVncUrlResponseBody</p>
  */
 public class DescribeInstanceVncUrlResponseBody extends TeaModel {
-    @NameInMap("VncUrl")
-    private String vncUrl;
-
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("VncUrl")
+    private String vncUrl;
+
     private DescribeInstanceVncUrlResponseBody(Builder builder) {
-        this.vncUrl = builder.vncUrl;
         this.requestId = builder.requestId;
+        this.vncUrl = builder.vncUrl;
     }
 
     public static Builder builder() {
@@ -32,36 +32,36 @@ public class DescribeInstanceVncUrlResponseBody extends TeaModel {
     }
 
     /**
-     * @return vncUrl
-     */
-    public String getVncUrl() {
-        return this.vncUrl;
-    }
-
-    /**
      * @return requestId
      */
     public String getRequestId() {
         return this.requestId;
     }
 
+    /**
+     * @return vncUrl
+     */
+    public String getVncUrl() {
+        return this.vncUrl;
+    }
+
     public static final class Builder {
-        private String vncUrl; 
         private String requestId; 
+        private String vncUrl; 
 
         /**
-         * Manage the terminal Url.
+         * RequestId.
          */
-        public Builder vncUrl(String vncUrl) {
-            this.vncUrl = vncUrl;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * VncUrl.
          */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
+        public Builder vncUrl(String vncUrl) {
+            this.vncUrl = vncUrl;
             return this;
         }
 

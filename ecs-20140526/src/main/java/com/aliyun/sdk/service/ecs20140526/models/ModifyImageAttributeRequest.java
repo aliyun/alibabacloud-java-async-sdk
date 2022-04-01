@@ -12,9 +12,26 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyImageAttributeRequest</p>
  */
 public class ModifyImageAttributeRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("BootMode")
+    private String bootMode;
+
+    @Query
+    @NameInMap("Description")
+    private String description;
+
+    @Query
+    @NameInMap("ImageFamily")
+    private String imageFamily;
+
+    @Query
+    @NameInMap("ImageId")
+    @Validation(required = true)
+    private String imageId;
+
+    @Query
+    @NameInMap("ImageName")
+    private String imageName;
 
     @Query
     @NameInMap("LicenseType")
@@ -29,6 +46,11 @@ public class ModifyImageAttributeRequest extends Request {
     private Long ownerId;
 
     @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -36,51 +58,29 @@ public class ModifyImageAttributeRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
-    @Query
-    @NameInMap("ImageId")
-    @Validation(required = true)
-    private String imageId;
-
-    @Query
-    @NameInMap("ImageName")
-    private String imageName;
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     @Query
     @NameInMap("Status")
     private String status;
 
-    @Query
-    @NameInMap("ImageFamily")
-    private String imageFamily;
-
-    @Query
-    @NameInMap("BootMode")
-    private String bootMode;
-
-    @Query
-    @NameInMap("Description")
-    private String description;
-
     private ModifyImageAttributeRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
+        this.bootMode = builder.bootMode;
+        this.description = builder.description;
+        this.imageFamily = builder.imageFamily;
+        this.imageId = builder.imageId;
+        this.imageName = builder.imageName;
         this.licenseType = builder.licenseType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.regionId = builder.regionId;
-        this.imageId = builder.imageId;
-        this.imageName = builder.imageName;
+        this.sourceRegionId = builder.sourceRegionId;
         this.status = builder.status;
-        this.imageFamily = builder.imageFamily;
-        this.bootMode = builder.bootMode;
-        this.description = builder.description;
     }
 
     public static Builder builder() {
@@ -97,10 +97,38 @@ public class ModifyImageAttributeRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return bootMode
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getBootMode() {
+        return this.bootMode;
+    }
+
+    /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
+     * @return imageFamily
+     */
+    public String getImageFamily() {
+        return this.imageFamily;
+    }
+
+    /**
+     * @return imageId
+     */
+    public String getImageId() {
+        return this.imageId;
+    }
+
+    /**
+     * @return imageName
+     */
+    public String getImageName() {
+        return this.imageName;
     }
 
     /**
@@ -125,6 +153,13 @@ public class ModifyImageAttributeRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -139,24 +174,10 @@ public class ModifyImageAttributeRequest extends Request {
     }
 
     /**
-     * @return regionId
+     * @return sourceRegionId
      */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return imageId
-     */
-    public String getImageId() {
-        return this.imageId;
-    }
-
-    /**
-     * @return imageName
-     */
-    public String getImageName() {
-        return this.imageName;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -166,41 +187,20 @@ public class ModifyImageAttributeRequest extends Request {
         return this.status;
     }
 
-    /**
-     * @return imageFamily
-     */
-    public String getImageFamily() {
-        return this.imageFamily;
-    }
-
-    /**
-     * @return bootMode
-     */
-    public String getBootMode() {
-        return this.bootMode;
-    }
-
-    /**
-     * @return description
-     */
-    public String getDescription() {
-        return this.description;
-    }
-
     public static final class Builder extends Request.Builder<ModifyImageAttributeRequest, Builder> {
-        private String sourceRegionId; 
+        private String bootMode; 
+        private String description; 
+        private String imageFamily; 
+        private String imageId; 
+        private String imageName; 
         private String licenseType; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String regionId; 
-        private String imageId; 
-        private String imageName; 
+        private String sourceRegionId; 
         private String status; 
-        private String imageFamily; 
-        private String bootMode; 
-        private String description; 
 
         private Builder() {
             super();
@@ -208,27 +208,63 @@ public class ModifyImageAttributeRequest extends Request {
 
         private Builder(ModifyImageAttributeRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
+            this.bootMode = request.bootMode;
+            this.description = request.description;
+            this.imageFamily = request.imageFamily;
+            this.imageId = request.imageId;
+            this.imageName = request.imageName;
             this.licenseType = request.licenseType;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.regionId = request.regionId;
-            this.imageId = request.imageId;
-            this.imageName = request.imageName;
+            this.sourceRegionId = request.sourceRegionId;
             this.status = request.status;
-            this.imageFamily = request.imageFamily;
-            this.bootMode = request.bootMode;
-            this.description = request.description;
         } 
 
         /**
-         * SourceRegionId.
+         * BootMode.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder bootMode(String bootMode) {
+            this.putQueryParameter("BootMode", bootMode);
+            this.bootMode = bootMode;
+            return this;
+        }
+
+        /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
+            return this;
+        }
+
+        /**
+         * ImageFamily.
+         */
+        public Builder imageFamily(String imageFamily) {
+            this.putQueryParameter("ImageFamily", imageFamily);
+            this.imageFamily = imageFamily;
+            return this;
+        }
+
+        /**
+         * ImageId.
+         */
+        public Builder imageId(String imageId) {
+            this.putQueryParameter("ImageId", imageId);
+            this.imageId = imageId;
+            return this;
+        }
+
+        /**
+         * ImageName.
+         */
+        public Builder imageName(String imageName) {
+            this.putQueryParameter("ImageName", imageName);
+            this.imageName = imageName;
             return this;
         }
 
@@ -251,7 +287,7 @@ public class ModifyImageAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the RAM user.
+         * OwnerId.
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -260,25 +296,7 @@ public class ModifyImageAttributeRequest extends Request {
         }
 
         /**
-         * The account name of the resource master account.
-         */
-        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
-            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-            this.resourceOwnerAccount = resourceOwnerAccount;
-            return this;
-        }
-
-        /**
-         * The ID of the resource master account, that is, the UID.
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * The region ID of the custom image. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -287,76 +305,38 @@ public class ModifyImageAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the custom image.
+         * ResourceOwnerAccount.
          */
-        public Builder imageId(String imageId) {
-            this.putQueryParameter("ImageId", imageId);
-            this.imageId = imageId;
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
             return this;
         }
 
         /**
-         * The name of the custom image. The description must be 2 to 128 characters in length. It must start with a letter and cannot start with "aliyun" or "acs:". It cannot contain "http://" or "https://". It can contain numbers, periods (.), colons (:), underscores (_), and hyphens (-).
-         * <p>
-         * 
-         * Default value: null, indicating that the original name remains unchanged.
+         * ResourceOwnerId.
          */
-        public Builder imageName(String imageName) {
-            this.putQueryParameter("ImageName", imageName);
-            this.imageName = imageName;
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
             return this;
         }
 
         /**
-         * The status of the image. Valid values:
-         * <p>
-         * -Deprecated: sets the image to Deprecated. If you have already shared a custom image, you must cancel the sharing before changing it to the deprecated state. Images in the deprecated state cannot be shared or copied. However, you can use an image to create an instance or replace the system disk.
-         * -Available: set the image to Available. You can restore a deprecated image.
-         * 
-         * > If you want to roll back the previous version of the custom image in the Image family, you can set the latest available custom image to the deprecated state. However, if the image is the only available custom image in the Image family, the deprecated custom image in the Image family will be used to create instances. Therefore, proceed with caution.
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
+
+        /**
+         * Status.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
             this.status = status;
-            return this;
-        }
-
-        /**
-         * The name of the Image family. The description must be 2 to 128 characters in length. It must start with a letter and cannot start with "aliyun" or "acs:". It cannot contain "http://" or "https://". It can contain numbers, periods (.), colons (:), underscores (_), and hyphens (-).
-         * <p>
-         * 
-         * Default value: Null.
-         */
-        public Builder imageFamily(String imageFamily) {
-            this.putQueryParameter("ImageFamily", imageFamily);
-            this.imageFamily = imageFamily;
-            return this;
-        }
-
-        /**
-         * Modify the startup mode of an image. Valid values:
-         * <p>
-         * 
-         * -BIOS:BIOS startup mode.
-         * -UEFI:UEFI startup mode.
-         * 
-         * > you need to know the startup mode supported by the specified image. After you use this parameter to modify the startup mode, the instance must match the startup mode supported by the image to start normally.
-         */
-        public Builder bootMode(String bootMode) {
-            this.putQueryParameter("BootMode", bootMode);
-            this.bootMode = bootMode;
-            return this;
-        }
-
-        /**
-         * The description of the custom image. The description must be 2 to 256 characters in length. It cannot start with "http:// "or "https.
-         * <p>
-         * 
-         * Default value: Null.
-         */
-        public Builder description(String description) {
-            this.putQueryParameter("Description", description);
-            this.description = description;
             return this;
         }
 

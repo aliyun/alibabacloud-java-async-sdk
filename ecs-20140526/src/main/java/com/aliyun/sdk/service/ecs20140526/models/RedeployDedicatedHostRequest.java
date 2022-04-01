@@ -13,8 +13,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class RedeployDedicatedHostRequest extends Request {
     @Query
+    @NameInMap("DedicatedHostId")
+    @Validation(required = true)
+    private String dedicatedHostId;
+
+    @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @Query
     @NameInMap("OwnerId")
     private Long ownerId;
+
+    @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
 
     @Query
     @NameInMap("ResourceOwnerAccount")
@@ -24,28 +38,14 @@ public class RedeployDedicatedHostRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("OwnerAccount")
-    private String ownerAccount;
-
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
-    @Query
-    @NameInMap("DedicatedHostId")
-    @Validation(required = true)
-    private String dedicatedHostId;
-
     private RedeployDedicatedHostRequest(Builder builder) {
         super(builder);
+        this.dedicatedHostId = builder.dedicatedHostId;
+        this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.ownerAccount = builder.ownerAccount;
-        this.regionId = builder.regionId;
-        this.dedicatedHostId = builder.dedicatedHostId;
     }
 
     public static Builder builder() {
@@ -62,10 +62,31 @@ public class RedeployDedicatedHostRequest extends Request {
     }
 
     /**
+     * @return dedicatedHostId
+     */
+    public String getDedicatedHostId() {
+        return this.dedicatedHostId;
+    }
+
+    /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
      * @return ownerId
      */
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -82,34 +103,13 @@ public class RedeployDedicatedHostRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return ownerAccount
-     */
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return dedicatedHostId
-     */
-    public String getDedicatedHostId() {
-        return this.dedicatedHostId;
-    }
-
     public static final class Builder extends Request.Builder<RedeployDedicatedHostRequest, Builder> {
+        private String dedicatedHostId; 
+        private String ownerAccount; 
         private Long ownerId; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String ownerAccount; 
-        private String regionId; 
-        private String dedicatedHostId; 
 
         private Builder() {
             super();
@@ -117,13 +117,31 @@ public class RedeployDedicatedHostRequest extends Request {
 
         private Builder(RedeployDedicatedHostRequest request) {
             super(request);
+            this.dedicatedHostId = request.dedicatedHostId;
+            this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.ownerAccount = request.ownerAccount;
-            this.regionId = request.regionId;
-            this.dedicatedHostId = request.dedicatedHostId;
         } 
+
+        /**
+         * DedicatedHostId.
+         */
+        public Builder dedicatedHostId(String dedicatedHostId) {
+            this.putQueryParameter("DedicatedHostId", dedicatedHostId);
+            this.dedicatedHostId = dedicatedHostId;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
 
         /**
          * OwnerId.
@@ -131,6 +149,15 @@ public class RedeployDedicatedHostRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
@@ -149,33 +176,6 @@ public class RedeployDedicatedHostRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * OwnerAccount.
-         */
-        public Builder ownerAccount(String ownerAccount) {
-            this.putQueryParameter("OwnerAccount", ownerAccount);
-            this.ownerAccount = ownerAccount;
-            return this;
-        }
-
-        /**
-         * The ID of the region to which the dedicated host belongs. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The ID of the dedicated host.
-         */
-        public Builder dedicatedHostId(String dedicatedHostId) {
-            this.putQueryParameter("DedicatedHostId", dedicatedHostId);
-            this.dedicatedHostId = dedicatedHostId;
             return this;
         }
 

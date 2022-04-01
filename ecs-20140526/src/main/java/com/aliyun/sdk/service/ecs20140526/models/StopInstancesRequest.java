@@ -12,30 +12,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>StopInstancesRequest</p>
  */
 public class StopInstancesRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
+    @NameInMap("BatchOptimization")
+    private String batchOptimization;
 
     @Query
     @NameInMap("DryRun")
     private Boolean dryRun;
 
     @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
-    @Query
     @NameInMap("ForceStop")
     private Boolean forceStop;
-
-    @Query
-    @NameInMap("StoppedMode")
-    private String stoppedMode;
 
     @Query
     @NameInMap("InstanceId")
@@ -43,19 +30,47 @@ public class StopInstancesRequest extends Request {
     private java.util.List < String > instanceId;
 
     @Query
-    @NameInMap("BatchOptimization")
-    private String batchOptimization;
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
+
+    @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
+    @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
+    @Query
+    @NameInMap("StoppedMode")
+    private String stoppedMode;
 
     private StopInstancesRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
-        this.resourceOwnerId = builder.resourceOwnerId;
-        this.dryRun = builder.dryRun;
-        this.regionId = builder.regionId;
-        this.forceStop = builder.forceStop;
-        this.stoppedMode = builder.stoppedMode;
-        this.instanceId = builder.instanceId;
         this.batchOptimization = builder.batchOptimization;
+        this.dryRun = builder.dryRun;
+        this.forceStop = builder.forceStop;
+        this.instanceId = builder.instanceId;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.sourceRegionId = builder.sourceRegionId;
+        this.stoppedMode = builder.stoppedMode;
     }
 
     public static Builder builder() {
@@ -72,17 +87,10 @@ public class StopInstancesRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return batchOptimization
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
-     * @return resourceOwnerId
-     */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public String getBatchOptimization() {
+        return this.batchOptimization;
     }
 
     /**
@@ -93,24 +101,10 @@ public class StopInstancesRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return forceStop
      */
     public Boolean getForceStop() {
         return this.forceStop;
-    }
-
-    /**
-     * @return stoppedMode
-     */
-    public String getStoppedMode() {
-        return this.stoppedMode;
     }
 
     /**
@@ -121,21 +115,66 @@ public class StopInstancesRequest extends Request {
     }
 
     /**
-     * @return batchOptimization
+     * @return ownerAccount
      */
-    public String getBatchOptimization() {
-        return this.batchOptimization;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
+    /**
+     * @return stoppedMode
+     */
+    public String getStoppedMode() {
+        return this.stoppedMode;
     }
 
     public static final class Builder extends Request.Builder<StopInstancesRequest, Builder> {
-        private String sourceRegionId; 
-        private Long resourceOwnerId; 
-        private Boolean dryRun; 
-        private String regionId; 
-        private Boolean forceStop; 
-        private String stoppedMode; 
-        private java.util.List < String > instanceId; 
         private String batchOptimization; 
+        private Boolean dryRun; 
+        private Boolean forceStop; 
+        private java.util.List < String > instanceId; 
+        private String ownerAccount; 
+        private Long ownerId; 
+        private String regionId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String sourceRegionId; 
+        private String stoppedMode; 
 
         private Builder() {
             super();
@@ -143,22 +182,88 @@ public class StopInstancesRequest extends Request {
 
         private Builder(StopInstancesRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
-            this.resourceOwnerId = request.resourceOwnerId;
-            this.dryRun = request.dryRun;
-            this.regionId = request.regionId;
-            this.forceStop = request.forceStop;
-            this.stoppedMode = request.stoppedMode;
-            this.instanceId = request.instanceId;
             this.batchOptimization = request.batchOptimization;
+            this.dryRun = request.dryRun;
+            this.forceStop = request.forceStop;
+            this.instanceId = request.instanceId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceRegionId = request.sourceRegionId;
+            this.stoppedMode = request.stoppedMode;
         } 
 
         /**
-         * SourceRegionId.
+         * BatchOptimization.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder batchOptimization(String batchOptimization) {
+            this.putQueryParameter("BatchOptimization", batchOptimization);
+            this.batchOptimization = batchOptimization;
+            return this;
+        }
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * ForceStop.
+         */
+        public Builder forceStop(Boolean forceStop) {
+            this.putQueryParameter("ForceStop", forceStop);
+            this.forceStop = forceStop;
+            return this;
+        }
+
+        /**
+         * InstanceId.
+         */
+        public Builder instanceId(java.util.List < String > instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
             return this;
         }
 
@@ -172,84 +277,20 @@ public class StopInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to PreCheck only this request. Valid values:
-         * <p>
-         * 
-         * -true: sends a check request and does not stop the instance. Check items include required parameters, request format, and instance status. If the check fails, the corresponding error is returned. If the check succeeds, "DRYRUN.SUCCESS" is returned ".
-         * > If the "BatchOptimization" parameter is set to "SuccessFirst", only "DryRun. SUCCESS" is returned for the PreCheck result of "DRYRUN = true ".
-         * 
-         * -false: Sends a normal request and stops the instance after passing the check.
-         * 
-         * Default value: false
+         * SourceRegionId.
          */
-        public Builder dryRun(Boolean dryRun) {
-            this.putQueryParameter("DryRun", dryRun);
-            this.dryRun = dryRun;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 
         /**
-         * The region of the instance. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * Indicates whether to force shutdown. Valid values:
-         * <p>
-         * 
-         * -true: forced shutdown. This is equivalent to a typical power-off operation. All cached data that is not written to the storage device will be lost.
-         * 
-         * -false: the instance is powered off.
-         * 
-         * Default value: false
-         */
-        public Builder forceStop(Boolean forceStop) {
-            this.putQueryParameter("ForceStop", forceStop);
-            this.forceStop = forceStop;
-            return this;
-        }
-
-        /**
-         * The stop mode that you set when you stop a pay-as-you-go ECS instance. Valid values:
-         * <p>
-         * 
-         * -StopCharging: reduces downtime. For more information about the conditions for "StopCharging" to take effect, see The enable conditions section of [pay-as-you-go instance shutdown mode](~~ 63353 ~~).
-         * -KeepCharging: normal shutdown mode. The instance continues to be billed after it is stopped.
-         * 
-         * default value: if you enable the VPC instance shutdown mode in the ECS console (For more information, see [enable default shutdown mode](~~ 63353#default ~~)) and meet the enabling conditions, the default value is "StopCharging ". Otherwise, the default value is keepcharging ".
+         * StoppedMode.
          */
         public Builder stoppedMode(String stoppedMode) {
             this.putQueryParameter("StoppedMode", stoppedMode);
             this.stoppedMode = stoppedMode;
-            return this;
-        }
-
-        /**
-         * The list of instance IDs.
-         */
-        public Builder instanceId(java.util.List < String > instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * Set the batch operation mode. Valid values:
-         * <p>
-         * 
-         * -AllTogether: in this mode, if all instances are stopped successfully, a success message is returned. If any instance fails the verification, all instances fail to be stopped and a failure message is returned.
-         * 
-         * -SuccessFirst: in this mode, each instance is stopped. The returned results include the operation results of each instance.
-         * 
-         * Default value: AllTogether
-         */
-        public Builder batchOptimization(String batchOptimization) {
-            this.putQueryParameter("BatchOptimization", batchOptimization);
-            this.batchOptimization = batchOptimization;
             return this;
         }
 

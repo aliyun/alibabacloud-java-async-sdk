@@ -12,27 +12,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAutoSnapshotPolicyExResponseBody</p>
  */
 public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
+    @NameInMap("AutoSnapshotPolicies")
+    private AutoSnapshotPolicies autoSnapshotPolicies;
+
+    @NameInMap("PageNumber")
+    private Integer pageNumber;
+
     @NameInMap("PageSize")
     private Integer pageSize;
 
     @NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("PageNumber")
-    private Integer pageNumber;
-
     @NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("AutoSnapshotPolicies")
-    private AutoSnapshotPolicies autoSnapshotPolicies;
-
     private DescribeAutoSnapshotPolicyExResponseBody(Builder builder) {
+        this.autoSnapshotPolicies = builder.autoSnapshotPolicies;
+        this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
-        this.pageNumber = builder.pageNumber;
         this.totalCount = builder.totalCount;
-        this.autoSnapshotPolicies = builder.autoSnapshotPolicies;
     }
 
     public static Builder builder() {
@@ -41,6 +41,20 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
 
     public static DescribeAutoSnapshotPolicyExResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return autoSnapshotPolicies
+     */
+    public AutoSnapshotPolicies getAutoSnapshotPolicies() {
+        return this.autoSnapshotPolicies;
+    }
+
+    /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     /**
@@ -58,51 +72,29 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
     }
 
     /**
-     * @return pageNumber
-     */
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    /**
      * @return totalCount
      */
     public Integer getTotalCount() {
         return this.totalCount;
     }
 
-    /**
-     * @return autoSnapshotPolicies
-     */
-    public AutoSnapshotPolicies getAutoSnapshotPolicies() {
-        return this.autoSnapshotPolicies;
-    }
-
     public static final class Builder {
+        private AutoSnapshotPolicies autoSnapshotPolicies; 
+        private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private Integer pageNumber; 
         private Integer totalCount; 
-        private AutoSnapshotPolicies autoSnapshotPolicies; 
 
         /**
-         * The number of rows per page for the returned automatic snapshot policy.
+         * AutoSnapshotPolicies.
          */
-        public Builder pageSize(Integer pageSize) {
-            this.pageSize = pageSize;
+        public Builder autoSnapshotPolicies(AutoSnapshotPolicies autoSnapshotPolicies) {
+            this.autoSnapshotPolicies = autoSnapshotPolicies;
             return this;
         }
 
         /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The page number of the automatic snapshot policy list.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -110,18 +102,26 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of automatic snapshot policies.
+         * PageSize.
          */
-        public Builder totalCount(Integer totalCount) {
-            this.totalCount = totalCount;
+        public Builder pageSize(Integer pageSize) {
+            this.pageSize = pageSize;
             return this;
         }
 
         /**
-         * A collection of automatic snapshot policy details AutoSnapshotPolicy.
+         * RequestId.
          */
-        public Builder autoSnapshotPolicies(AutoSnapshotPolicies autoSnapshotPolicies) {
-            this.autoSnapshotPolicies = autoSnapshotPolicies;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
@@ -132,15 +132,15 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("TagValue")
-        private String tagValue;
-
         @NameInMap("TagKey")
         private String tagKey;
 
+        @NameInMap("TagValue")
+        private String tagValue;
+
         private Tag(Builder builder) {
-            this.tagValue = builder.tagValue;
             this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
         }
 
         public static Builder builder() {
@@ -152,36 +152,36 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
         }
 
         /**
-         * @return tagValue
-         */
-        public String getTagValue() {
-            return this.tagValue;
-        }
-
-        /**
          * @return tagKey
          */
         public String getTagKey() {
             return this.tagKey;
         }
 
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
         public static final class Builder {
-            private String tagValue; 
             private String tagKey; 
+            private String tagValue; 
 
             /**
-             * The tag value of the automatic snapshot policy.
+             * TagKey.
              */
-            public Builder tagValue(String tagValue) {
-                this.tagValue = tagValue;
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
                 return this;
             }
 
             /**
-             * The tag key of the automatic snapshot policy.
+             * TagValue.
              */
-            public Builder tagKey(String tagKey) {
-                this.tagKey = tagKey;
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
                 return this;
             }
 
@@ -234,32 +234,17 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
 
     }
     public static class AutoSnapshotPolicy extends TeaModel {
-        @NameInMap("TimePoints")
-        private String timePoints;
-
-        @NameInMap("CreationTime")
-        private String creationTime;
-
-        @NameInMap("Status")
-        private String status;
+        @NameInMap("AutoSnapshotPolicyId")
+        private String autoSnapshotPolicyId;
 
         @NameInMap("AutoSnapshotPolicyName")
         private String autoSnapshotPolicyName;
 
-        @NameInMap("TargetCopyRegions")
-        private String targetCopyRegions;
-
         @NameInMap("CopiedSnapshotsRetentionDays")
         private Integer copiedSnapshotsRetentionDays;
 
-        @NameInMap("AutoSnapshotPolicyId")
-        private String autoSnapshotPolicyId;
-
-        @NameInMap("RetentionDays")
-        private Integer retentionDays;
-
-        @NameInMap("RegionId")
-        private String regionId;
+        @NameInMap("CreationTime")
+        private String creationTime;
 
         @NameInMap("DiskNums")
         private Integer diskNums;
@@ -267,34 +252,49 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
         @NameInMap("EnableCrossRegionCopy")
         private Boolean enableCrossRegionCopy;
 
+        @NameInMap("RegionId")
+        private String regionId;
+
         @NameInMap("RepeatWeekdays")
         private String repeatWeekdays;
-
-        @NameInMap("VolumeNums")
-        private Integer volumeNums;
 
         @NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
+        @NameInMap("RetentionDays")
+        private Integer retentionDays;
+
+        @NameInMap("Status")
+        private String status;
+
         @NameInMap("Tags")
         private Tags tags;
 
+        @NameInMap("TargetCopyRegions")
+        private String targetCopyRegions;
+
+        @NameInMap("TimePoints")
+        private String timePoints;
+
+        @NameInMap("VolumeNums")
+        private Integer volumeNums;
+
         private AutoSnapshotPolicy(Builder builder) {
-            this.timePoints = builder.timePoints;
-            this.creationTime = builder.creationTime;
-            this.status = builder.status;
-            this.autoSnapshotPolicyName = builder.autoSnapshotPolicyName;
-            this.targetCopyRegions = builder.targetCopyRegions;
-            this.copiedSnapshotsRetentionDays = builder.copiedSnapshotsRetentionDays;
             this.autoSnapshotPolicyId = builder.autoSnapshotPolicyId;
-            this.retentionDays = builder.retentionDays;
-            this.regionId = builder.regionId;
+            this.autoSnapshotPolicyName = builder.autoSnapshotPolicyName;
+            this.copiedSnapshotsRetentionDays = builder.copiedSnapshotsRetentionDays;
+            this.creationTime = builder.creationTime;
             this.diskNums = builder.diskNums;
             this.enableCrossRegionCopy = builder.enableCrossRegionCopy;
+            this.regionId = builder.regionId;
             this.repeatWeekdays = builder.repeatWeekdays;
-            this.volumeNums = builder.volumeNums;
             this.resourceGroupId = builder.resourceGroupId;
+            this.retentionDays = builder.retentionDays;
+            this.status = builder.status;
             this.tags = builder.tags;
+            this.targetCopyRegions = builder.targetCopyRegions;
+            this.timePoints = builder.timePoints;
+            this.volumeNums = builder.volumeNums;
         }
 
         public static Builder builder() {
@@ -306,24 +306,10 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
         }
 
         /**
-         * @return timePoints
+         * @return autoSnapshotPolicyId
          */
-        public String getTimePoints() {
-            return this.timePoints;
-        }
-
-        /**
-         * @return creationTime
-         */
-        public String getCreationTime() {
-            return this.creationTime;
-        }
-
-        /**
-         * @return status
-         */
-        public String getStatus() {
-            return this.status;
+        public String getAutoSnapshotPolicyId() {
+            return this.autoSnapshotPolicyId;
         }
 
         /**
@@ -334,13 +320,6 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
         }
 
         /**
-         * @return targetCopyRegions
-         */
-        public String getTargetCopyRegions() {
-            return this.targetCopyRegions;
-        }
-
-        /**
          * @return copiedSnapshotsRetentionDays
          */
         public Integer getCopiedSnapshotsRetentionDays() {
@@ -348,24 +327,10 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
         }
 
         /**
-         * @return autoSnapshotPolicyId
+         * @return creationTime
          */
-        public String getAutoSnapshotPolicyId() {
-            return this.autoSnapshotPolicyId;
-        }
-
-        /**
-         * @return retentionDays
-         */
-        public Integer getRetentionDays() {
-            return this.retentionDays;
-        }
-
-        /**
-         * @return regionId
-         */
-        public String getRegionId() {
-            return this.regionId;
+        public String getCreationTime() {
+            return this.creationTime;
         }
 
         /**
@@ -383,17 +348,17 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
         }
 
         /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        /**
          * @return repeatWeekdays
          */
         public String getRepeatWeekdays() {
             return this.repeatWeekdays;
-        }
-
-        /**
-         * @return volumeNums
-         */
-        public Integer getVolumeNums() {
-            return this.volumeNums;
         }
 
         /**
@@ -404,88 +369,66 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
         }
 
         /**
+         * @return retentionDays
+         */
+        public Integer getRetentionDays() {
+            return this.retentionDays;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
          * @return tags
          */
         public Tags getTags() {
             return this.tags;
         }
 
+        /**
+         * @return targetCopyRegions
+         */
+        public String getTargetCopyRegions() {
+            return this.targetCopyRegions;
+        }
+
+        /**
+         * @return timePoints
+         */
+        public String getTimePoints() {
+            return this.timePoints;
+        }
+
+        /**
+         * @return volumeNums
+         */
+        public Integer getVolumeNums() {
+            return this.volumeNums;
+        }
+
         public static final class Builder {
-            private String timePoints; 
-            private String creationTime; 
-            private String status; 
-            private String autoSnapshotPolicyName; 
-            private String targetCopyRegions; 
-            private Integer copiedSnapshotsRetentionDays; 
             private String autoSnapshotPolicyId; 
-            private Integer retentionDays; 
-            private String regionId; 
+            private String autoSnapshotPolicyName; 
+            private Integer copiedSnapshotsRetentionDays; 
+            private String creationTime; 
             private Integer diskNums; 
             private Boolean enableCrossRegionCopy; 
+            private String regionId; 
             private String repeatWeekdays; 
-            private Integer volumeNums; 
             private String resourceGroupId; 
+            private Integer retentionDays; 
+            private String status; 
             private Tags tags; 
+            private String targetCopyRegions; 
+            private String timePoints; 
+            private Integer volumeNums; 
 
             /**
-             * The time when the automatic snapshot was created.
-             * <p>
-             * 
-             * Use UTC +8. Unit: Hour. Valid values: 0 to 23:00. You can select multiple time points.
-             * 
-             * The passed parameters are in the JSON Array format: "["0", "1", "23"]", with a maximum of 24 time points, separated by commas (,).
-             */
-            public Builder timePoints(String timePoints) {
-                this.timePoints = timePoints;
-                return this;
-            }
-
-            /**
-             * The creation time. The time follows the [ISO8601](~~ 25696 ~~) standard and uses UTC time. The format is yyyy-MM-ddTHH:mm:ssZ.
-             */
-            public Builder creationTime(String creationTime) {
-                this.creationTime = creationTime;
-                return this;
-            }
-
-            /**
-             * The status of the automatic snapshot policy. Possible values:
-             * <p>
-             * 
-             * -Normal: Normal.
-             * -Expire: the policy cannot be used due to overdue payments.
-             */
-            public Builder status(String status) {
-                this.status = status;
-                return this;
-            }
-
-            /**
-             * The name of the automatic snapshot policy.
-             */
-            public Builder autoSnapshotPolicyName(String autoSnapshotPolicyName) {
-                this.autoSnapshotPolicyName = autoSnapshotPolicyName;
-                return this;
-            }
-
-            /**
-             * > This parameter is being invited for testing and is not currently available.
-             */
-            public Builder targetCopyRegions(String targetCopyRegions) {
-                this.targetCopyRegions = targetCopyRegions;
-                return this;
-            }
-
-            /**
-             * > This parameter is being invited for testing and is not currently available.
-             */
-            public Builder copiedSnapshotsRetentionDays(Integer copiedSnapshotsRetentionDays) {
-                this.copiedSnapshotsRetentionDays = copiedSnapshotsRetentionDays;
-                return this;
-            }
-
-            /**
-             * The ID of the automatic snapshot policy.
+             * AutoSnapshotPolicyId.
              */
             public Builder autoSnapshotPolicyId(String autoSnapshotPolicyId) {
                 this.autoSnapshotPolicyId = autoSnapshotPolicyId;
@@ -493,27 +436,31 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
             }
 
             /**
-             * The retention period of automatic snapshots. Unit: days. Possible values:
-             * <p>
-             * 
-             * -- 1: Permanently save
-             * -1 to 65536: specify the retention period.
+             * AutoSnapshotPolicyName.
              */
-            public Builder retentionDays(Integer retentionDays) {
-                this.retentionDays = retentionDays;
+            public Builder autoSnapshotPolicyName(String autoSnapshotPolicyName) {
+                this.autoSnapshotPolicyName = autoSnapshotPolicyName;
                 return this;
             }
 
             /**
-             * The ID of the region to which the automatic snapshot policy belongs.
+             * CopiedSnapshotsRetentionDays.
              */
-            public Builder regionId(String regionId) {
-                this.regionId = regionId;
+            public Builder copiedSnapshotsRetentionDays(Integer copiedSnapshotsRetentionDays) {
+                this.copiedSnapshotsRetentionDays = copiedSnapshotsRetentionDays;
                 return this;
             }
 
             /**
-             * The number of disks that have the policy enabled.
+             * CreationTime.
+             */
+            public Builder creationTime(String creationTime) {
+                this.creationTime = creationTime;
+                return this;
+            }
+
+            /**
+             * DiskNums.
              */
             public Builder diskNums(Integer diskNums) {
                 this.diskNums = diskNums;
@@ -521,7 +468,7 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
             }
 
             /**
-             * > This parameter is being invited for testing and is not currently available.
+             * EnableCrossRegionCopy.
              */
             public Builder enableCrossRegionCopy(Boolean enableCrossRegionCopy) {
                 this.enableCrossRegionCopy = enableCrossRegionCopy;
@@ -529,7 +476,15 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies the repetition date of the automatic snapshot. Select the date on which you want to create a snapshot from Monday to Sunday. The value ranges from 1 to 7. For example, 1 indicates Monday. You can select multiple dates.
+             * RegionId.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * RepeatWeekdays.
              */
             public Builder repeatWeekdays(String repeatWeekdays) {
                 this.repeatWeekdays = repeatWeekdays;
@@ -537,15 +492,7 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
             }
 
             /**
-             * The number of extended volumes that have enabled the policy.
-             */
-            public Builder volumeNums(Integer volumeNums) {
-                this.volumeNums = volumeNums;
-                return this;
-            }
-
-            /**
-             * The ID of the resource group.
+             * ResourceGroupId.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -553,10 +500,50 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
             }
 
             /**
-             * The key-value set of the automatic snapshot policy.
+             * RetentionDays.
+             */
+            public Builder retentionDays(Integer retentionDays) {
+                this.retentionDays = retentionDays;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * Tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
+                return this;
+            }
+
+            /**
+             * TargetCopyRegions.
+             */
+            public Builder targetCopyRegions(String targetCopyRegions) {
+                this.targetCopyRegions = targetCopyRegions;
+                return this;
+            }
+
+            /**
+             * TimePoints.
+             */
+            public Builder timePoints(String timePoints) {
+                this.timePoints = timePoints;
+                return this;
+            }
+
+            /**
+             * VolumeNums.
+             */
+            public Builder volumeNums(Integer volumeNums) {
+                this.volumeNums = volumeNums;
                 return this;
             }
 

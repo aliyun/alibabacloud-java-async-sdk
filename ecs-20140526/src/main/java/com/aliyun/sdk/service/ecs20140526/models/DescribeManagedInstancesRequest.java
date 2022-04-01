@@ -12,26 +12,33 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeManagedInstancesRequest</p>
  */
 public class DescribeManagedInstancesRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
-    @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
-
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Query
     @NameInMap("ActivationId")
     private String activationId;
 
     @Query
+    @NameInMap("InstanceId")
+    private java.util.List < String > instanceId;
+
+    @Query
+    @NameInMap("InstanceIp")
+    private String instanceIp;
+
+    @Query
     @NameInMap("InstanceName")
     private String instanceName;
+
+    @Query
+    @NameInMap("OsType")
+    private String osType;
+
+    @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
 
     @Query
     @NameInMap("PageNumber")
@@ -42,29 +49,37 @@ public class DescribeManagedInstancesRequest extends Request {
     private Long pageSize;
 
     @Query
-    @NameInMap("OsType")
-    private String osType;
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
 
     @Query
-    @NameInMap("InstanceIp")
-    private String instanceIp;
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
 
     @Query
-    @NameInMap("InstanceId")
-    private java.util.List < String > instanceId;
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     private DescribeManagedInstancesRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
-        this.resourceOwnerId = builder.resourceOwnerId;
-        this.regionId = builder.regionId;
         this.activationId = builder.activationId;
+        this.instanceId = builder.instanceId;
+        this.instanceIp = builder.instanceIp;
         this.instanceName = builder.instanceName;
+        this.osType = builder.osType;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.osType = builder.osType;
-        this.instanceIp = builder.instanceIp;
-        this.instanceId = builder.instanceId;
+        this.regionId = builder.regionId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -81,27 +96,6 @@ public class DescribeManagedInstancesRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
-     * @return resourceOwnerId
-     */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return activationId
      */
     public String getActivationId() {
@@ -109,10 +103,45 @@ public class DescribeManagedInstancesRequest extends Request {
     }
 
     /**
+     * @return instanceId
+     */
+    public java.util.List < String > getInstanceId() {
+        return this.instanceId;
+    }
+
+    /**
+     * @return instanceIp
+     */
+    public String getInstanceIp() {
+        return this.instanceIp;
+    }
+
+    /**
      * @return instanceName
      */
     public String getInstanceName() {
         return this.instanceName;
+    }
+
+    /**
+     * @return osType
+     */
+    public String getOsType() {
+        return this.osType;
+    }
+
+    /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     /**
@@ -130,37 +159,47 @@ public class DescribeManagedInstancesRequest extends Request {
     }
 
     /**
-     * @return osType
+     * @return regionId
      */
-    public String getOsType() {
-        return this.osType;
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
-     * @return instanceIp
+     * @return resourceOwnerAccount
      */
-    public String getInstanceIp() {
-        return this.instanceIp;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
     }
 
     /**
-     * @return instanceId
+     * @return resourceOwnerId
      */
-    public java.util.List < String > getInstanceId() {
-        return this.instanceId;
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public static final class Builder extends Request.Builder<DescribeManagedInstancesRequest, Builder> {
-        private String sourceRegionId; 
-        private Long resourceOwnerId; 
-        private String regionId; 
         private String activationId; 
+        private java.util.List < String > instanceId; 
+        private String instanceIp; 
         private String instanceName; 
+        private String osType; 
+        private String ownerAccount; 
+        private Long ownerId; 
         private Long pageNumber; 
         private Long pageSize; 
-        private String osType; 
-        private String instanceIp; 
-        private java.util.List < String > instanceId; 
+        private String regionId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -168,24 +207,117 @@ public class DescribeManagedInstancesRequest extends Request {
 
         private Builder(DescribeManagedInstancesRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
-            this.resourceOwnerId = request.resourceOwnerId;
-            this.regionId = request.regionId;
             this.activationId = request.activationId;
+            this.instanceId = request.instanceId;
+            this.instanceIp = request.instanceIp;
             this.instanceName = request.instanceName;
+            this.osType = request.osType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
-            this.osType = request.osType;
-            this.instanceIp = request.instanceIp;
-            this.instanceId = request.instanceId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
-         * SourceRegionId.
+         * ActivationId.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder activationId(String activationId) {
+            this.putQueryParameter("ActivationId", activationId);
+            this.activationId = activationId;
+            return this;
+        }
+
+        /**
+         * InstanceId.
+         */
+        public Builder instanceId(java.util.List < String > instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * InstanceIp.
+         */
+        public Builder instanceIp(String instanceIp) {
+            this.putQueryParameter("InstanceIp", instanceIp);
+            this.instanceIp = instanceIp;
+            return this;
+        }
+
+        /**
+         * InstanceName.
+         */
+        public Builder instanceName(String instanceName) {
+            this.putQueryParameter("InstanceName", instanceName);
+            this.instanceName = instanceName;
+            return this;
+        }
+
+        /**
+         * OsType.
+         */
+        public Builder osType(String osType) {
+            this.putQueryParameter("OsType", osType);
+            this.osType = osType;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * PageNumber.
+         */
+        public Builder pageNumber(Long pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Long pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
             return this;
         }
 
@@ -199,92 +331,11 @@ public class DescribeManagedInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the region. Supported regions: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), and China (Hong Kong).
-         * <p>
-         * 
-         * You can call [DescribeRegions](~~ 25609 ~~) to view the region ID and other information.
+         * SourceRegionId.
          */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The ID of the activation code.
-         */
-        public Builder activationId(String activationId) {
-            this.putQueryParameter("ActivationId", activationId);
-            this.activationId = activationId;
-            return this;
-        }
-
-        /**
-         * The name of the managed instance.
-         */
-        public Builder instanceName(String instanceName) {
-            this.putQueryParameter("InstanceName", instanceName);
-            this.instanceName = instanceName;
-            return this;
-        }
-
-        /**
-         * The page number of the managed instance list.
-         * <p>
-         * 
-         * The start value is 1.
-         * 
-         * Default value: 1.
-         */
-        public Builder pageNumber(Long pageNumber) {
-            this.putQueryParameter("PageNumber", pageNumber);
-            this.pageNumber = pageNumber;
-            return this;
-        }
-
-        /**
-         * The number of entries to return on each page.
-         * <p>
-         * 
-         * Maximum Value: 50.
-         * 
-         * Default value: 10.
-         */
-        public Builder pageSize(Long pageSize) {
-            this.putQueryParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * The operating system type of the managed instance. Valid values:
-         * <p>
-         * 
-         * -windows.
-         * -linux.
-         * 
-         */
-        public Builder osType(String osType) {
-            this.putQueryParameter("OsType", osType);
-            this.osType = osType;
-            return this;
-        }
-
-        /**
-         * The internal or public IP address of the managed instance.
-         */
-        public Builder instanceIp(String instanceIp) {
-            this.putQueryParameter("InstanceIp", instanceIp);
-            this.instanceIp = instanceIp;
-            return this;
-        }
-
-        /**
-         * The ID of the managed instance. Valid values of N: 1 to 50.
-         */
-        public Builder instanceId(java.util.List < String > instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

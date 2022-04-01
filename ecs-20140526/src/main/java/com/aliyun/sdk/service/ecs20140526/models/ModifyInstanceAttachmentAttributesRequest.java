@@ -16,31 +16,46 @@ public class ModifyInstanceAttachmentAttributesRequest extends Request {
     @NameInMap("PrivatePoolOptions")
     private PrivatePoolOptions privatePoolOptions;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
-    @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
-
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
 
     @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
+
+    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
 
+    @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     private ModifyInstanceAttachmentAttributesRequest(Builder builder) {
         super(builder);
         this.privatePoolOptions = builder.privatePoolOptions;
-        this.sourceRegionId = builder.sourceRegionId;
-        this.resourceOwnerId = builder.resourceOwnerId;
         this.instanceId = builder.instanceId;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -64,10 +79,38 @@ public class ModifyInstanceAttachmentAttributesRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return instanceId
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
     }
 
     /**
@@ -78,25 +121,21 @@ public class ModifyInstanceAttachmentAttributesRequest extends Request {
     }
 
     /**
-     * @return instanceId
+     * @return sourceRegionId
      */
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public static final class Builder extends Request.Builder<ModifyInstanceAttachmentAttributesRequest, Builder> {
         private PrivatePoolOptions privatePoolOptions; 
-        private String sourceRegionId; 
-        private Long resourceOwnerId; 
         private String instanceId; 
+        private String ownerAccount; 
+        private Long ownerId; 
         private String regionId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -105,10 +144,13 @@ public class ModifyInstanceAttachmentAttributesRequest extends Request {
         private Builder(ModifyInstanceAttachmentAttributesRequest request) {
             super(request);
             this.privatePoolOptions = request.privatePoolOptions;
-            this.sourceRegionId = request.sourceRegionId;
-            this.resourceOwnerId = request.resourceOwnerId;
             this.instanceId = request.instanceId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
             this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
@@ -121,11 +163,47 @@ public class ModifyInstanceAttachmentAttributesRequest extends Request {
         }
 
         /**
-         * SourceRegionId.
+         * InstanceId.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
             return this;
         }
 
@@ -139,20 +217,11 @@ public class ModifyInstanceAttachmentAttributesRequest extends Request {
         }
 
         /**
-         * The ID of the instance that you want to modify the matching properties of the private pool.
+         * SourceRegionId.
          */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * The ID of the region to which the private pool belongs. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 
@@ -164,16 +233,16 @@ public class ModifyInstanceAttachmentAttributesRequest extends Request {
     } 
 
     public static class PrivatePoolOptions extends TeaModel {
+        @NameInMap("Id")
+        private String id;
+
         @NameInMap("MatchCriteria")
         @Validation(required = true)
         private String matchCriteria;
 
-        @NameInMap("Id")
-        private String id;
-
         private PrivatePoolOptions(Builder builder) {
-            this.matchCriteria = builder.matchCriteria;
             this.id = builder.id;
+            this.matchCriteria = builder.matchCriteria;
         }
 
         public static Builder builder() {
@@ -185,45 +254,36 @@ public class ModifyInstanceAttachmentAttributesRequest extends Request {
         }
 
         /**
-         * @return matchCriteria
-         */
-        public String getMatchCriteria() {
-            return this.matchCriteria;
-        }
-
-        /**
          * @return id
          */
         public String getId() {
             return this.id;
         }
 
+        /**
+         * @return matchCriteria
+         */
+        public String getMatchCriteria() {
+            return this.matchCriteria;
+        }
+
         public static final class Builder {
-            private String matchCriteria; 
             private String id; 
+            private String matchCriteria; 
 
             /**
-             * Modifies the private pool matching mode of an instance. Valid values:
-             * <p>
-             * 
-             * -Open: Open mode. In this mode, the system automatically matches the open private pool for the instance.
-             * -Target: specifies the mode. In this mode, you must also specify the "PrivatePoolOptions.Id" parameter to set the ID of the specified private pool.
-             * -None: not used. In this mode, the instance starts normally without using a private pool.
+             * Id.
              */
-            public Builder matchCriteria(String matchCriteria) {
-                this.matchCriteria = matchCriteria;
+            public Builder id(String id) {
+                this.id = id;
                 return this;
             }
 
             /**
-             * The ID of the private pool.
-             * <p>
-             * 
-             * -This parameter is required when "PrivatePoolOptions. Matchbeautia" is set to "Target.
-             * -If "PrivatePoolOptions. Matchefulia" is set to "Open" or "None", this parameter is not set.
+             * MatchCriteria.
              */
-            public Builder id(String id) {
-                this.id = id;
+            public Builder matchCriteria(String matchCriteria) {
+                this.matchCriteria = matchCriteria;
                 return this;
             }
 

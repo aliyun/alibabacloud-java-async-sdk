@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateNetworkInterfacePermissionResponseBody</p>
  */
 public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    private String requestId;
-
     @NameInMap("NetworkInterfacePermission")
     private NetworkInterfacePermission networkInterfacePermission;
 
+    @NameInMap("RequestId")
+    private String requestId;
+
     private CreateNetworkInterfacePermissionResponseBody(Builder builder) {
-        this.requestId = builder.requestId;
         this.networkInterfacePermission = builder.networkInterfacePermission;
+        this.requestId = builder.requestId;
     }
 
     public static Builder builder() {
@@ -32,36 +32,36 @@ public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
     }
 
     /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    /**
      * @return networkInterfacePermission
      */
     public NetworkInterfacePermission getNetworkInterfacePermission() {
         return this.networkInterfacePermission;
     }
 
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static final class Builder {
-        private String requestId; 
         private NetworkInterfacePermission networkInterfacePermission; 
+        private String requestId; 
 
         /**
-         * The ID of the request.
+         * NetworkInterfacePermission.
          */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
+        public Builder networkInterfacePermission(NetworkInterfacePermission networkInterfacePermission) {
+            this.networkInterfacePermission = networkInterfacePermission;
             return this;
         }
 
         /**
-         * The list of Eni permissions.
+         * RequestId.
          */
-        public Builder networkInterfacePermission(NetworkInterfacePermission networkInterfacePermission) {
-            this.networkInterfacePermission = networkInterfacePermission;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
@@ -72,31 +72,31 @@ public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
     } 
 
     public static class NetworkInterfacePermission extends TeaModel {
-        @NameInMap("Permission")
-        private String permission;
+        @NameInMap("AccountId")
+        private Long accountId;
 
         @NameInMap("NetworkInterfaceId")
         private String networkInterfaceId;
 
-        @NameInMap("AccountId")
-        private Long accountId;
-
         @NameInMap("NetworkInterfacePermissionId")
         private String networkInterfacePermissionId;
 
-        @NameInMap("ServiceName")
-        private String serviceName;
+        @NameInMap("Permission")
+        private String permission;
 
         @NameInMap("PermissionState")
         private String permissionState;
 
+        @NameInMap("ServiceName")
+        private String serviceName;
+
         private NetworkInterfacePermission(Builder builder) {
-            this.permission = builder.permission;
-            this.networkInterfaceId = builder.networkInterfaceId;
             this.accountId = builder.accountId;
+            this.networkInterfaceId = builder.networkInterfaceId;
             this.networkInterfacePermissionId = builder.networkInterfacePermissionId;
-            this.serviceName = builder.serviceName;
+            this.permission = builder.permission;
             this.permissionState = builder.permissionState;
+            this.serviceName = builder.serviceName;
         }
 
         public static Builder builder() {
@@ -108,10 +108,10 @@ public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
         }
 
         /**
-         * @return permission
+         * @return accountId
          */
-        public String getPermission() {
-            return this.permission;
+        public Long getAccountId() {
+            return this.accountId;
         }
 
         /**
@@ -122,13 +122,6 @@ public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
         }
 
         /**
-         * @return accountId
-         */
-        public Long getAccountId() {
-            return this.accountId;
-        }
-
-        /**
          * @return networkInterfacePermissionId
          */
         public String getNetworkInterfacePermissionId() {
@@ -136,10 +129,10 @@ public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
         }
 
         /**
-         * @return serviceName
+         * @return permission
          */
-        public String getServiceName() {
-            return this.serviceName;
+        public String getPermission() {
+            return this.permission;
         }
 
         /**
@@ -149,32 +142,23 @@ public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
             return this.permissionState;
         }
 
+        /**
+         * @return serviceName
+         */
+        public String getServiceName() {
+            return this.serviceName;
+        }
+
         public static final class Builder {
-            private String permission; 
-            private String networkInterfaceId; 
             private Long accountId; 
+            private String networkInterfaceId; 
             private String networkInterfacePermissionId; 
-            private String serviceName; 
+            private String permission; 
             private String permissionState; 
+            private String serviceName; 
 
             /**
-             * The Eni permission.
-             */
-            public Builder permission(String permission) {
-                this.permission = permission;
-                return this;
-            }
-
-            /**
-             * The ID of the Eni.
-             */
-            public Builder networkInterfaceId(String networkInterfaceId) {
-                this.networkInterfaceId = networkInterfaceId;
-                return this;
-            }
-
-            /**
-             * The ID of the Alibaba Cloud Partner (Certified ISV) account.
+             * AccountId.
              */
             public Builder accountId(Long accountId) {
                 this.accountId = accountId;
@@ -182,7 +166,15 @@ public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Eni permission.
+             * NetworkInterfaceId.
+             */
+            public Builder networkInterfaceId(String networkInterfaceId) {
+                this.networkInterfaceId = networkInterfaceId;
+                return this;
+            }
+
+            /**
+             * NetworkInterfacePermissionId.
              */
             public Builder networkInterfacePermissionId(String networkInterfacePermissionId) {
                 this.networkInterfacePermissionId = networkInterfacePermissionId;
@@ -190,24 +182,26 @@ public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Alibaba Cloud service.
+             * Permission.
              */
-            public Builder serviceName(String serviceName) {
-                this.serviceName = serviceName;
+            public Builder permission(String permission) {
+                this.permission = permission;
                 return this;
             }
 
             /**
-             * The status of the Eni permission. Possible values:
-             * <p>
-             * 
-             * -Pending: authorization in progress
-             * -Granted: Authorized
-             * -Revoking: the authorization is being revoked.
-             * -Revoked: the authorization has been Revoked.
+             * PermissionState.
              */
             public Builder permissionState(String permissionState) {
                 this.permissionState = permissionState;
+                return this;
+            }
+
+            /**
+             * ServiceName.
+             */
+            public Builder serviceName(String serviceName) {
+                this.serviceName = serviceName;
                 return this;
             }
 

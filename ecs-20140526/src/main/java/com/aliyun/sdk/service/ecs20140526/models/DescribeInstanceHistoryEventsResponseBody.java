@@ -12,27 +12,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceHistoryEventsResponseBody</p>
  */
 public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
+    @NameInMap("InstanceSystemEventSet")
+    private InstanceSystemEventSet instanceSystemEventSet;
+
+    @NameInMap("PageNumber")
+    private Integer pageNumber;
+
     @NameInMap("PageSize")
     private Integer pageSize;
 
     @NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("PageNumber")
-    private Integer pageNumber;
-
     @NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("InstanceSystemEventSet")
-    private InstanceSystemEventSet instanceSystemEventSet;
-
     private DescribeInstanceHistoryEventsResponseBody(Builder builder) {
+        this.instanceSystemEventSet = builder.instanceSystemEventSet;
+        this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
-        this.pageNumber = builder.pageNumber;
         this.totalCount = builder.totalCount;
-        this.instanceSystemEventSet = builder.instanceSystemEventSet;
     }
 
     public static Builder builder() {
@@ -41,6 +41,20 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
 
     public static DescribeInstanceHistoryEventsResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return instanceSystemEventSet
+     */
+    public InstanceSystemEventSet getInstanceSystemEventSet() {
+        return this.instanceSystemEventSet;
+    }
+
+    /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     /**
@@ -58,51 +72,29 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
     }
 
     /**
-     * @return pageNumber
-     */
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    /**
      * @return totalCount
      */
     public Integer getTotalCount() {
         return this.totalCount;
     }
 
-    /**
-     * @return instanceSystemEventSet
-     */
-    public InstanceSystemEventSet getInstanceSystemEventSet() {
-        return this.instanceSystemEventSet;
-    }
-
     public static final class Builder {
+        private InstanceSystemEventSet instanceSystemEventSet; 
+        private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private Integer pageNumber; 
         private Integer totalCount; 
-        private InstanceSystemEventSet instanceSystemEventSet; 
 
         /**
-         * The number of entries to return on each page.
+         * InstanceSystemEventSet.
          */
-        public Builder pageSize(Integer pageSize) {
-            this.pageSize = pageSize;
+        public Builder instanceSystemEventSet(InstanceSystemEventSet instanceSystemEventSet) {
+            this.instanceSystemEventSet = instanceSystemEventSet;
             return this;
         }
 
         /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The page number of the instance list.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -110,18 +102,26 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of instances.
+         * PageSize.
          */
-        public Builder totalCount(Integer totalCount) {
-            this.totalCount = totalCount;
+        public Builder pageSize(Integer pageSize) {
+            this.pageSize = pageSize;
             return this;
         }
 
         /**
-         * The array of historical system events.
+         * RequestId.
          */
-        public Builder instanceSystemEventSet(InstanceSystemEventSet instanceSystemEventSet) {
-            this.instanceSystemEventSet = instanceSystemEventSet;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
@@ -131,77 +131,16 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
 
     } 
 
-    public static class EventType extends TeaModel {
-        @NameInMap("Name")
-        private String name;
-
-        @NameInMap("Code")
-        private Integer code;
-
-        private EventType(Builder builder) {
-            this.name = builder.name;
-            this.code = builder.code;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static EventType create() {
-            return builder().build();
-        }
-
-        /**
-         * @return name
-         */
-        public String getName() {
-            return this.name;
-        }
-
-        /**
-         * @return code
-         */
-        public Integer getCode() {
-            return this.code;
-        }
-
-        public static final class Builder {
-            private String name; 
-            private Integer code; 
-
-            /**
-             * The name of the system event type.
-             */
-            public Builder name(String name) {
-                this.name = name;
-                return this;
-            }
-
-            /**
-             * The system event type code.
-             */
-            public Builder code(Integer code) {
-                this.code = code;
-                return this;
-            }
-
-            public EventType build() {
-                return new EventType(this);
-            } 
-
-        } 
-
-    }
     public static class EventCycleStatus extends TeaModel {
-        @NameInMap("Name")
-        private String name;
-
         @NameInMap("Code")
         private Integer code;
+
+        @NameInMap("Name")
+        private String name;
 
         private EventCycleStatus(Builder builder) {
-            this.name = builder.name;
             this.code = builder.code;
+            this.name = builder.name;
         }
 
         public static Builder builder() {
@@ -213,36 +152,36 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         }
 
         /**
-         * @return name
-         */
-        public String getName() {
-            return this.name;
-        }
-
-        /**
          * @return code
          */
         public Integer getCode() {
             return this.code;
         }
 
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
         public static final class Builder {
-            private String name; 
             private Integer code; 
+            private String name; 
 
             /**
-             * The name of the system event status.
+             * Code.
              */
-            public Builder name(String name) {
-                this.name = name;
+            public Builder code(Integer code) {
+                this.code = code;
                 return this;
             }
 
             /**
-             * The system event status code.
+             * Name.
              */
-            public Builder code(Integer code) {
-                this.code = code;
+            public Builder name(String name) {
+                this.name = name;
                 return this;
             }
 
@@ -253,15 +192,76 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         } 
 
     }
+    public static class EventType extends TeaModel {
+        @NameInMap("Code")
+        private Integer code;
+
+        @NameInMap("Name")
+        private String name;
+
+        private EventType(Builder builder) {
+            this.code = builder.code;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static EventType create() {
+            return builder().build();
+        }
+
+        /**
+         * @return code
+         */
+        public Integer getCode() {
+            return this.code;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private Integer code; 
+            private String name; 
+
+            /**
+             * Code.
+             */
+            public Builder code(Integer code) {
+                this.code = code;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public EventType build() {
+                return new EventType(this);
+            } 
+
+        } 
+
+    }
     public static class InactiveDisk extends TeaModel {
         @NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("DeviceSize")
-        private String deviceSize;
-
         @NameInMap("DeviceCategory")
         private String deviceCategory;
+
+        @NameInMap("DeviceSize")
+        private String deviceSize;
 
         @NameInMap("DeviceType")
         private String deviceType;
@@ -271,8 +271,8 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
 
         private InactiveDisk(Builder builder) {
             this.creationTime = builder.creationTime;
-            this.deviceSize = builder.deviceSize;
             this.deviceCategory = builder.deviceCategory;
+            this.deviceSize = builder.deviceSize;
             this.deviceType = builder.deviceType;
             this.releaseTime = builder.releaseTime;
         }
@@ -293,17 +293,17 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         }
 
         /**
-         * @return deviceSize
-         */
-        public String getDeviceSize() {
-            return this.deviceSize;
-        }
-
-        /**
          * @return deviceCategory
          */
         public String getDeviceCategory() {
             return this.deviceCategory;
+        }
+
+        /**
+         * @return deviceSize
+         */
+        public String getDeviceSize() {
+            return this.deviceSize;
         }
 
         /**
@@ -322,13 +322,13 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String creationTime; 
-            private String deviceSize; 
             private String deviceCategory; 
+            private String deviceSize; 
             private String deviceType; 
             private String releaseTime; 
 
             /**
-             * The time when the cloud disk or local disk was created. The time follows the [ISO8601](~~ 25696 ~~) standard and uses UTC +0. The format is yyyy-MM-ddTHH:mm:ssZ.
+             * CreationTime.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -336,24 +336,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the cloud disk or local disk. Unit: GiB.
-             */
-            public Builder deviceSize(String deviceSize) {
-                this.deviceSize = deviceSize;
-                return this;
-            }
-
-            /**
-             * The type of the cloud disk or local disk. Possible values:
-             * <p>
-             * -cloud: basic cloud disk
-             * -cloud_efficiency: Ultra disk
-             * -cloud_ssd:SSD
-             * -cloud_essd:ESSD
-             * -local_ssd_pro:I/O-intensive local disks
-             * -local_hdd_pro: Throughput-intensive local disks
-             * -ephemeral:(discontinued) local disk
-             * -ephemeral_ssd:(phased out) local SSD
+             * DeviceCategory.
              */
             public Builder deviceCategory(String deviceCategory) {
                 this.deviceCategory = deviceCategory;
@@ -361,10 +344,15 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the cloud disk or local disk. Possible values:
-             * <p>
-             * -system: system disk
-             * -data: data disk
+             * DeviceSize.
+             */
+            public Builder deviceSize(String deviceSize) {
+                this.deviceSize = deviceSize;
+                return this;
+            }
+
+            /**
+             * DeviceType.
              */
             public Builder deviceType(String deviceType) {
                 this.deviceType = deviceType;
@@ -372,7 +360,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The release time of the cloud disk or local disk. The time follows the [ISO8601](~~ 25696 ~~) standard and uses UTC +0. The format is yyyy-MM-ddTHH:mm:ssZ.
+             * ReleaseTime.
              */
             public Builder releaseTime(String releaseTime) {
                 this.releaseTime = releaseTime;
@@ -475,14 +463,14 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         @NameInMap("DiskId")
         private String diskId;
 
-        @NameInMap("InactiveDisks")
-        private InactiveDisks inactiveDisks;
+        @NameInMap("HostId")
+        private String hostId;
 
         @NameInMap("HostType")
         private String hostType;
 
-        @NameInMap("HostId")
-        private String hostId;
+        @NameInMap("InactiveDisks")
+        private InactiveDisks inactiveDisks;
 
         @NameInMap("MigrationOptions")
         private MigrationOptions migrationOptions;
@@ -493,9 +481,9 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         private ExtendedAttribute(Builder builder) {
             this.device = builder.device;
             this.diskId = builder.diskId;
-            this.inactiveDisks = builder.inactiveDisks;
-            this.hostType = builder.hostType;
             this.hostId = builder.hostId;
+            this.hostType = builder.hostType;
+            this.inactiveDisks = builder.inactiveDisks;
             this.migrationOptions = builder.migrationOptions;
             this.onlineRepairPolicy = builder.onlineRepairPolicy;
         }
@@ -523,10 +511,10 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         }
 
         /**
-         * @return inactiveDisks
+         * @return hostId
          */
-        public InactiveDisks getInactiveDisks() {
-            return this.inactiveDisks;
+        public String getHostId() {
+            return this.hostId;
         }
 
         /**
@@ -537,10 +525,10 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         }
 
         /**
-         * @return hostId
+         * @return inactiveDisks
          */
-        public String getHostId() {
-            return this.hostId;
+        public InactiveDisks getInactiveDisks() {
+            return this.inactiveDisks;
         }
 
         /**
@@ -560,14 +548,14 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         public static final class Builder {
             private String device; 
             private String diskId; 
-            private InactiveDisks inactiveDisks; 
-            private String hostType; 
             private String hostId; 
+            private String hostType; 
+            private InactiveDisks inactiveDisks; 
             private MigrationOptions migrationOptions; 
             private String onlineRepairPolicy; 
 
             /**
-             * The name of the local disk device.
+             * Device.
              */
             public Builder device(String device) {
                 this.device = device;
@@ -575,7 +563,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the local disk.
+             * DiskId.
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;
@@ -583,19 +571,15 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the inactive or local disks that have been released but need to be cleaned.
+             * HostId.
              */
-            public Builder inactiveDisks(InactiveDisks inactiveDisks) {
-                this.inactiveDisks = inactiveDisks;
+            public Builder hostId(String hostId) {
+                this.hostId = hostId;
                 return this;
             }
 
             /**
-             * The type of the host. Possible values:
-             * <p>
-             * 
-             * -ddh: Dedicated host
-             * -managedhost: physical machines in the intelligent fully managed resource pool
+             * HostType.
              */
             public Builder hostType(String hostType) {
                 this.hostType = hostType;
@@ -603,10 +587,10 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the host.
+             * InactiveDisks.
              */
-            public Builder hostId(String hostId) {
-                this.hostId = hostId;
+            public Builder inactiveDisks(InactiveDisks inactiveDisks) {
+                this.inactiveDisks = inactiveDisks;
                 return this;
             }
 
@@ -634,51 +618,51 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
 
     }
     public static class InstanceSystemEventType extends TeaModel {
+        @NameInMap("EventCycleStatus")
+        private EventCycleStatus eventCycleStatus;
+
+        @NameInMap("EventFinishTime")
+        private String eventFinishTime;
+
         @NameInMap("EventId")
         private String eventId;
 
         @NameInMap("EventPublishTime")
         private String eventPublishTime;
 
-        @NameInMap("EventFinishTime")
-        private String eventFinishTime;
-
-        @NameInMap("ResourceType")
-        private String resourceType;
-
-        @NameInMap("ImpactLevel")
-        private String impactLevel;
-
-        @NameInMap("NotBefore")
-        private String notBefore;
-
-        @NameInMap("InstanceId")
-        private String instanceId;
-
-        @NameInMap("Reason")
-        private String reason;
-
         @NameInMap("EventType")
         private EventType eventType;
-
-        @NameInMap("EventCycleStatus")
-        private EventCycleStatus eventCycleStatus;
 
         @NameInMap("ExtendedAttribute")
         private ExtendedAttribute extendedAttribute;
 
+        @NameInMap("ImpactLevel")
+        private String impactLevel;
+
+        @NameInMap("InstanceId")
+        private String instanceId;
+
+        @NameInMap("NotBefore")
+        private String notBefore;
+
+        @NameInMap("Reason")
+        private String reason;
+
+        @NameInMap("ResourceType")
+        private String resourceType;
+
         private InstanceSystemEventType(Builder builder) {
+            this.eventCycleStatus = builder.eventCycleStatus;
+            this.eventFinishTime = builder.eventFinishTime;
             this.eventId = builder.eventId;
             this.eventPublishTime = builder.eventPublishTime;
-            this.eventFinishTime = builder.eventFinishTime;
-            this.resourceType = builder.resourceType;
-            this.impactLevel = builder.impactLevel;
-            this.notBefore = builder.notBefore;
-            this.instanceId = builder.instanceId;
-            this.reason = builder.reason;
             this.eventType = builder.eventType;
-            this.eventCycleStatus = builder.eventCycleStatus;
             this.extendedAttribute = builder.extendedAttribute;
+            this.impactLevel = builder.impactLevel;
+            this.instanceId = builder.instanceId;
+            this.notBefore = builder.notBefore;
+            this.reason = builder.reason;
+            this.resourceType = builder.resourceType;
         }
 
         public static Builder builder() {
@@ -687,6 +671,20 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
 
         public static InstanceSystemEventType create() {
             return builder().build();
+        }
+
+        /**
+         * @return eventCycleStatus
+         */
+        public EventCycleStatus getEventCycleStatus() {
+            return this.eventCycleStatus;
+        }
+
+        /**
+         * @return eventFinishTime
+         */
+        public String getEventFinishTime() {
+            return this.eventFinishTime;
         }
 
         /**
@@ -704,17 +702,17 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         }
 
         /**
-         * @return eventFinishTime
+         * @return eventType
          */
-        public String getEventFinishTime() {
-            return this.eventFinishTime;
+        public EventType getEventType() {
+            return this.eventType;
         }
 
         /**
-         * @return resourceType
+         * @return extendedAttribute
          */
-        public String getResourceType() {
-            return this.resourceType;
+        public ExtendedAttribute getExtendedAttribute() {
+            return this.extendedAttribute;
         }
 
         /**
@@ -725,17 +723,17 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         }
 
         /**
-         * @return notBefore
-         */
-        public String getNotBefore() {
-            return this.notBefore;
-        }
-
-        /**
          * @return instanceId
          */
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        /**
+         * @return notBefore
+         */
+        public String getNotBefore() {
+            return this.notBefore;
         }
 
         /**
@@ -746,118 +744,27 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         }
 
         /**
-         * @return eventType
+         * @return resourceType
          */
-        public EventType getEventType() {
-            return this.eventType;
-        }
-
-        /**
-         * @return eventCycleStatus
-         */
-        public EventCycleStatus getEventCycleStatus() {
-            return this.eventCycleStatus;
-        }
-
-        /**
-         * @return extendedAttribute
-         */
-        public ExtendedAttribute getExtendedAttribute() {
-            return this.extendedAttribute;
+        public String getResourceType() {
+            return this.resourceType;
         }
 
         public static final class Builder {
+            private EventCycleStatus eventCycleStatus; 
+            private String eventFinishTime; 
             private String eventId; 
             private String eventPublishTime; 
-            private String eventFinishTime; 
-            private String resourceType; 
-            private String impactLevel; 
-            private String notBefore; 
-            private String instanceId; 
-            private String reason; 
             private EventType eventType; 
-            private EventCycleStatus eventCycleStatus; 
             private ExtendedAttribute extendedAttribute; 
+            private String impactLevel; 
+            private String instanceId; 
+            private String notBefore; 
+            private String reason; 
+            private String resourceType; 
 
             /**
-             * The ID of the system event.
-             */
-            public Builder eventId(String eventId) {
-                this.eventId = eventId;
-                return this;
-            }
-
-            /**
-             * The release time of the system event. The time follows the [ISO8601](~~ 25696 ~~) standard and uses UTC +0. The format is yyyy-MM-ddTHH:mm:ssZ.
-             */
-            public Builder eventPublishTime(String eventPublishTime) {
-                this.eventPublishTime = eventPublishTime;
-                return this;
-            }
-
-            /**
-             * The end time of the system event. The time follows the [ISO8601](~~ 25696 ~~) standard and uses UTC +0. The format is yyyy-MM-ddTHH:mm:ssZ.
-             */
-            public Builder eventFinishTime(String eventFinishTime) {
-                this.eventFinishTime = eventFinishTime;
-                return this;
-            }
-
-            /**
-             * The type of the resource. Possible values:
-             * <p>
-             * 
-             * -instance:ECS instance
-             * -ddh: Dedicated host
-             * -managedhost: physical machines in the intelligent fully managed resource pool
-             */
-            public Builder resourceType(String resourceType) {
-                this.resourceType = resourceType;
-                return this;
-            }
-
-            /**
-             * The impact level.
-             */
-            public Builder impactLevel(String impactLevel) {
-                this.impactLevel = impactLevel;
-                return this;
-            }
-
-            /**
-             * The scheduled execution time of the system event. The time follows the [ISO8601](~~ 25696 ~~) standard and uses UTC +0. The format is yyyy-MM-ddTHH:mm:ssZ.
-             */
-            public Builder notBefore(String notBefore) {
-                this.notBefore = notBefore;
-                return this;
-            }
-
-            /**
-             * The ID of the instance.
-             */
-            public Builder instanceId(String instanceId) {
-                this.instanceId = instanceId;
-                return this;
-            }
-
-            /**
-             * The cause of the system event.
-             */
-            public Builder reason(String reason) {
-                this.reason = reason;
-                return this;
-            }
-
-            /**
-             * The type of the system event.
-             */
-            public Builder eventType(EventType eventType) {
-                this.eventType = eventType;
-                return this;
-            }
-
-            /**
-             * The lifecycle status of a system event.
+             * EventCycleStatus.
              */
             public Builder eventCycleStatus(EventCycleStatus eventCycleStatus) {
                 this.eventCycleStatus = eventCycleStatus;
@@ -865,10 +772,82 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Event extension properties.
+             * EventFinishTime.
+             */
+            public Builder eventFinishTime(String eventFinishTime) {
+                this.eventFinishTime = eventFinishTime;
+                return this;
+            }
+
+            /**
+             * EventId.
+             */
+            public Builder eventId(String eventId) {
+                this.eventId = eventId;
+                return this;
+            }
+
+            /**
+             * EventPublishTime.
+             */
+            public Builder eventPublishTime(String eventPublishTime) {
+                this.eventPublishTime = eventPublishTime;
+                return this;
+            }
+
+            /**
+             * EventType.
+             */
+            public Builder eventType(EventType eventType) {
+                this.eventType = eventType;
+                return this;
+            }
+
+            /**
+             * ExtendedAttribute.
              */
             public Builder extendedAttribute(ExtendedAttribute extendedAttribute) {
                 this.extendedAttribute = extendedAttribute;
+                return this;
+            }
+
+            /**
+             * ImpactLevel.
+             */
+            public Builder impactLevel(String impactLevel) {
+                this.impactLevel = impactLevel;
+                return this;
+            }
+
+            /**
+             * InstanceId.
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * NotBefore.
+             */
+            public Builder notBefore(String notBefore) {
+                this.notBefore = notBefore;
+                return this;
+            }
+
+            /**
+             * Reason.
+             */
+            public Builder reason(String reason) {
+                this.reason = reason;
+                return this;
+            }
+
+            /**
+             * ResourceType.
+             */
+            public Builder resourceType(String resourceType) {
+                this.resourceType = resourceType;
                 return this;
             }
 

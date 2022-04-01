@@ -12,9 +12,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSnapshotLinksRequest</p>
  */
 public class DescribeSnapshotLinksRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("DiskIds")
+    private String diskIds;
+
+    @Query
+    @NameInMap("InstanceId")
+    private String instanceId;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -23,14 +27,6 @@ public class DescribeSnapshotLinksRequest extends Request {
     @Query
     @NameInMap("OwnerId")
     private Long ownerId;
-
-    @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
-
-    @Query
-    @NameInMap("InstanceId")
-    private String instanceId;
 
     @Query
     @NameInMap("PageNumber")
@@ -42,35 +38,39 @@ public class DescribeSnapshotLinksRequest extends Request {
     private Integer pageSize;
 
     @Query
-    @NameInMap("ResourceOwnerAccount")
-    private String resourceOwnerAccount;
-
-    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
 
     @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Query
     @NameInMap("SnapshotLinkIds")
     private String snapshotLinkIds;
 
-    @Query
-    @NameInMap("DiskIds")
-    private String diskIds;
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     private DescribeSnapshotLinksRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
+        this.diskIds = builder.diskIds;
+        this.instanceId = builder.instanceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
-        this.resourceOwnerId = builder.resourceOwnerId;
-        this.instanceId = builder.instanceId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.regionId = builder.regionId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
         this.snapshotLinkIds = builder.snapshotLinkIds;
-        this.diskIds = builder.diskIds;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -87,10 +87,17 @@ public class DescribeSnapshotLinksRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return diskIds
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getDiskIds() {
+        return this.diskIds;
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     /**
@@ -108,20 +115,6 @@ public class DescribeSnapshotLinksRequest extends Request {
     }
 
     /**
-     * @return resourceOwnerId
-     */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    /**
-     * @return instanceId
-     */
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -136,6 +129,13 @@ public class DescribeSnapshotLinksRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -143,10 +143,10 @@ public class DescribeSnapshotLinksRequest extends Request {
     }
 
     /**
-     * @return regionId
+     * @return resourceOwnerId
      */
-    public String getRegionId() {
-        return this.regionId;
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     /**
@@ -157,24 +157,24 @@ public class DescribeSnapshotLinksRequest extends Request {
     }
 
     /**
-     * @return diskIds
+     * @return sourceRegionId
      */
-    public String getDiskIds() {
-        return this.diskIds;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public static final class Builder extends Request.Builder<DescribeSnapshotLinksRequest, Builder> {
-        private String sourceRegionId; 
+        private String diskIds; 
+        private String instanceId; 
         private String ownerAccount; 
         private Long ownerId; 
-        private Long resourceOwnerId; 
-        private String instanceId; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private String resourceOwnerAccount; 
         private String regionId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
         private String snapshotLinkIds; 
-        private String diskIds; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -182,25 +182,34 @@ public class DescribeSnapshotLinksRequest extends Request {
 
         private Builder(DescribeSnapshotLinksRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
+            this.diskIds = request.diskIds;
+            this.instanceId = request.instanceId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
-            this.resourceOwnerId = request.resourceOwnerId;
-            this.instanceId = request.instanceId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
-            this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
             this.snapshotLinkIds = request.snapshotLinkIds;
-            this.diskIds = request.diskIds;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
-         * SourceRegionId.
+         * DiskIds.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder diskIds(String diskIds) {
+            this.putQueryParameter("DiskIds", diskIds);
+            this.diskIds = diskIds;
+            return this;
+        }
+
+        /**
+         * InstanceId.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
             return this;
         }
 
@@ -214,7 +223,7 @@ public class DescribeSnapshotLinksRequest extends Request {
         }
 
         /**
-         * The ID of the RAM user.
+         * OwnerId.
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -223,28 +232,7 @@ public class DescribeSnapshotLinksRequest extends Request {
         }
 
         /**
-         * The ID of the resource master account, that is, the UID.
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * The ID of the instance.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * The page number of the disk status list. Start value: 1
-         * <p>
-         * 
-         * Default value: 1.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -253,10 +241,7 @@ public class DescribeSnapshotLinksRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: 1 to 100.
-         * <p>
-         * 
-         * Default value: 10
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -265,16 +250,7 @@ public class DescribeSnapshotLinksRequest extends Request {
         }
 
         /**
-         * The account name of the resource master account.
-         */
-        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
-            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-            this.resourceOwnerAccount = resourceOwnerAccount;
-            return this;
-        }
-
-        /**
-         * The ID of the region to which the cloud disk belongs. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -283,7 +259,25 @@ public class DescribeSnapshotLinksRequest extends Request {
         }
 
         /**
-         * The ID of the snapshot chain. You can specify up to 100 snapshot ids at a time. The format of SnapshotLinkIds parameter values is a JSON Array. Separate IDs with commas (,).
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * SnapshotLinkIds.
          */
         public Builder snapshotLinkIds(String snapshotLinkIds) {
             this.putQueryParameter("SnapshotLinkIds", snapshotLinkIds);
@@ -292,11 +286,11 @@ public class DescribeSnapshotLinksRequest extends Request {
         }
 
         /**
-         * The ID of the disk. You can specify a maximum of 100 disk ids at a time. The format of DiskIds parameter values is a JSON array. Separate ids with commas (,).
+         * SourceRegionId.
          */
-        public Builder diskIds(String diskIds) {
-            this.putQueryParameter("DiskIds", diskIds);
-            this.diskIds = diskIds;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

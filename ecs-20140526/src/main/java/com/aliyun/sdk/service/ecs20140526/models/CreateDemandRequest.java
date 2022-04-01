@@ -13,62 +13,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateDemandRequest extends Request {
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
-    @NameInMap("ResourceOwnerAccount")
-    private String resourceOwnerAccount;
-
-    @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
-
-    @Query
-    @NameInMap("OwnerAccount")
-    private String ownerAccount;
+    @NameInMap("Amount")
+    @Validation(required = true)
+    private Integer amount;
 
     @Query
     @NameInMap("ClientToken")
     private String clientToken;
 
     @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
-    @Query
-    @NameInMap("ZoneId")
-    @Validation(required = true)
-    private String zoneId;
-
-    @Query
-    @NameInMap("DemandName")
-    private String demandName;
-
-    @Query
     @NameInMap("DemandDescription")
     private String demandDescription;
 
     @Query
-    @NameInMap("InstanceType")
-    @Validation(required = true)
-    private String instanceType;
-
-    @Query
-    @NameInMap("Amount")
-    @Validation(required = true)
-    private Integer amount;
-
-    @Query
-    @NameInMap("PeriodUnit")
-    @Validation(required = true)
-    private String periodUnit;
-
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
-    private String startTime;
+    @NameInMap("DemandName")
+    private String demandName;
 
     @Query
     @NameInMap("EndTime")
@@ -80,28 +39,69 @@ public class CreateDemandRequest extends Request {
     private String instanceChargeType;
 
     @Query
+    @NameInMap("InstanceType")
+    @Validation(required = true)
+    private String instanceType;
+
+    @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
+
+    @Query
     @NameInMap("Period")
     @Validation(required = true)
     private Integer period;
 
+    @Query
+    @NameInMap("PeriodUnit")
+    @Validation(required = true)
+    private String periodUnit;
+
+    @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
+    @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Query
+    @NameInMap("StartTime")
+    @Validation(required = true)
+    private String startTime;
+
+    @Query
+    @NameInMap("ZoneId")
+    @Validation(required = true)
+    private String zoneId;
+
     private CreateDemandRequest(Builder builder) {
         super(builder);
-        this.ownerId = builder.ownerId;
-        this.resourceOwnerAccount = builder.resourceOwnerAccount;
-        this.resourceOwnerId = builder.resourceOwnerId;
-        this.ownerAccount = builder.ownerAccount;
-        this.clientToken = builder.clientToken;
-        this.regionId = builder.regionId;
-        this.zoneId = builder.zoneId;
-        this.demandName = builder.demandName;
-        this.demandDescription = builder.demandDescription;
-        this.instanceType = builder.instanceType;
         this.amount = builder.amount;
-        this.periodUnit = builder.periodUnit;
-        this.startTime = builder.startTime;
+        this.clientToken = builder.clientToken;
+        this.demandDescription = builder.demandDescription;
+        this.demandName = builder.demandName;
         this.endTime = builder.endTime;
         this.instanceChargeType = builder.instanceChargeType;
+        this.instanceType = builder.instanceType;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
         this.period = builder.period;
+        this.periodUnit = builder.periodUnit;
+        this.regionId = builder.regionId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.startTime = builder.startTime;
+        this.zoneId = builder.zoneId;
     }
 
     public static Builder builder() {
@@ -118,31 +118,10 @@ public class CreateDemandRequest extends Request {
     }
 
     /**
-     * @return ownerId
+     * @return amount
      */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
-     * @return resourceOwnerAccount
-     */
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    /**
-     * @return resourceOwnerId
-     */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    /**
-     * @return ownerAccount
-     */
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public Integer getAmount() {
+        return this.amount;
     }
 
     /**
@@ -153,27 +132,6 @@ public class CreateDemandRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return zoneId
-     */
-    public String getZoneId() {
-        return this.zoneId;
-    }
-
-    /**
-     * @return demandName
-     */
-    public String getDemandName() {
-        return this.demandName;
-    }
-
-    /**
      * @return demandDescription
      */
     public String getDemandDescription() {
@@ -181,31 +139,10 @@ public class CreateDemandRequest extends Request {
     }
 
     /**
-     * @return instanceType
+     * @return demandName
      */
-    public String getInstanceType() {
-        return this.instanceType;
-    }
-
-    /**
-     * @return amount
-     */
-    public Integer getAmount() {
-        return this.amount;
-    }
-
-    /**
-     * @return periodUnit
-     */
-    public String getPeriodUnit() {
-        return this.periodUnit;
-    }
-
-    /**
-     * @return startTime
-     */
-    public String getStartTime() {
-        return this.startTime;
+    public String getDemandName() {
+        return this.demandName;
     }
 
     /**
@@ -223,29 +160,92 @@ public class CreateDemandRequest extends Request {
     }
 
     /**
+     * @return instanceType
+     */
+    public String getInstanceType() {
+        return this.instanceType;
+    }
+
+    /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
      * @return period
      */
     public Integer getPeriod() {
         return this.period;
     }
 
+    /**
+     * @return periodUnit
+     */
+    public String getPeriodUnit() {
+        return this.periodUnit;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    /**
+     * @return startTime
+     */
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+    /**
+     * @return zoneId
+     */
+    public String getZoneId() {
+        return this.zoneId;
+    }
+
     public static final class Builder extends Request.Builder<CreateDemandRequest, Builder> {
-        private Long ownerId; 
-        private String resourceOwnerAccount; 
-        private Long resourceOwnerId; 
-        private String ownerAccount; 
-        private String clientToken; 
-        private String regionId; 
-        private String zoneId; 
-        private String demandName; 
-        private String demandDescription; 
-        private String instanceType; 
         private Integer amount; 
-        private String periodUnit; 
-        private String startTime; 
+        private String clientToken; 
+        private String demandDescription; 
+        private String demandName; 
         private String endTime; 
         private String instanceChargeType; 
+        private String instanceType; 
+        private String ownerAccount; 
+        private Long ownerId; 
         private Integer period; 
+        private String periodUnit; 
+        private String regionId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String startTime; 
+        private String zoneId; 
 
         private Builder() {
             super();
@@ -253,23 +253,95 @@ public class CreateDemandRequest extends Request {
 
         private Builder(CreateDemandRequest request) {
             super(request);
-            this.ownerId = request.ownerId;
-            this.resourceOwnerAccount = request.resourceOwnerAccount;
-            this.resourceOwnerId = request.resourceOwnerId;
-            this.ownerAccount = request.ownerAccount;
-            this.clientToken = request.clientToken;
-            this.regionId = request.regionId;
-            this.zoneId = request.zoneId;
-            this.demandName = request.demandName;
-            this.demandDescription = request.demandDescription;
-            this.instanceType = request.instanceType;
             this.amount = request.amount;
-            this.periodUnit = request.periodUnit;
-            this.startTime = request.startTime;
+            this.clientToken = request.clientToken;
+            this.demandDescription = request.demandDescription;
+            this.demandName = request.demandName;
             this.endTime = request.endTime;
             this.instanceChargeType = request.instanceChargeType;
+            this.instanceType = request.instanceType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
             this.period = request.period;
+            this.periodUnit = request.periodUnit;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.startTime = request.startTime;
+            this.zoneId = request.zoneId;
         } 
+
+        /**
+         * Amount.
+         */
+        public Builder amount(Integer amount) {
+            this.putQueryParameter("Amount", amount);
+            this.amount = amount;
+            return this;
+        }
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * DemandDescription.
+         */
+        public Builder demandDescription(String demandDescription) {
+            this.putQueryParameter("DemandDescription", demandDescription);
+            this.demandDescription = demandDescription;
+            return this;
+        }
+
+        /**
+         * DemandName.
+         */
+        public Builder demandName(String demandName) {
+            this.putQueryParameter("DemandName", demandName);
+            this.demandName = demandName;
+            return this;
+        }
+
+        /**
+         * EndTime.
+         */
+        public Builder endTime(String endTime) {
+            this.putQueryParameter("EndTime", endTime);
+            this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * InstanceChargeType.
+         */
+        public Builder instanceChargeType(String instanceChargeType) {
+            this.putQueryParameter("InstanceChargeType", instanceChargeType);
+            this.instanceChargeType = instanceChargeType;
+            return this;
+        }
+
+        /**
+         * InstanceType.
+         */
+        public Builder instanceType(String instanceType) {
+            this.putQueryParameter("InstanceType", instanceType);
+            this.instanceType = instanceType;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
 
         /**
          * OwnerId.
@@ -277,6 +349,33 @@ public class CreateDemandRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * Period.
+         */
+        public Builder period(Integer period) {
+            this.putQueryParameter("Period", period);
+            this.period = period;
+            return this;
+        }
+
+        /**
+         * PeriodUnit.
+         */
+        public Builder periodUnit(String periodUnit) {
+            this.putQueryParameter("PeriodUnit", periodUnit);
+            this.periodUnit = periodUnit;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
@@ -299,106 +398,7 @@ public class CreateDemandRequest extends Request {
         }
 
         /**
-         * OwnerAccount.
-         */
-        public Builder ownerAccount(String ownerAccount) {
-            this.putQueryParameter("OwnerAccount", ownerAccount);
-            this.ownerAccount = ownerAccount;
-            return this;
-        }
-
-        /**
-         * Ensure the idempotence of the request. Generate a parameter value from your client. Make sure that the value is unique among different requests. "ClientToken" only supports ASCII characters and cannot exceed 64 characters in length. For more information, see [how to ensure idempotence](~~ 25693 ~~).
-         */
-        public Builder clientToken(String clientToken) {
-            this.putQueryParameter("ClientToken", clientToken);
-            this.clientToken = clientToken;
-            return this;
-        }
-
-        /**
-         * The ID of the region to which the instance belongs. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The ID of the zone to which the reported instance belongs. For more information, see [DescribeZones](~~ 25610 ~~) for a list of zones.
-         * <p>
-         * 
-         * Default value: Null.
-         * 
-         * 
-         */
-        public Builder zoneId(String zoneId) {
-            this.putQueryParameter("ZoneId", zoneId);
-            this.zoneId = zoneId;
-            return this;
-        }
-
-        /**
-         * The name of the report. The description must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https. It can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).
-         * <p>
-         * 
-         * Default value: the name of the instance type.
-         */
-        public Builder demandName(String demandName) {
-            this.putQueryParameter("DemandName", demandName);
-            this.demandName = demandName;
-            return this;
-        }
-
-        /**
-         * The description of the report. The description must be 2 to 256 characters in length and cannot start with http:// or https.
-         */
-        public Builder demandDescription(String demandDescription) {
-            this.putQueryParameter("DemandDescription", demandDescription);
-            this.demandDescription = demandDescription;
-            return this;
-        }
-
-        /**
-         * The resource type of the reported instance. See [instance type family](~~ 25378 ~~) or call [DescribeInstanceTypes](~~ 25620 ~~) to view the performance data of the target instance type, or see [select configuration](~~ 58291 ~~) to learn how to select an instance type.
-         */
-        public Builder instanceType(String instanceType) {
-            this.putQueryParameter("InstanceType", instanceType);
-            this.instanceType = instanceType;
-            return this;
-        }
-
-        /**
-         * The number of required specifications. Valid values: 1 to 100000.
-         */
-        public Builder amount(Integer amount) {
-            this.putQueryParameter("Amount", amount);
-            this.amount = amount;
-            return this;
-        }
-
-        /**
-         * The duration of the resource purchase. Valid values:
-         * <p>
-         * 
-         * * Day
-         * * Week
-         * * Month (default)
-         */
-        public Builder periodUnit(String periodUnit) {
-            this.putQueryParameter("PeriodUnit", periodUnit);
-            this.periodUnit = periodUnit;
-            return this;
-        }
-
-        /**
-         * The earliest purchase time. The time follows the [ISO8601](~~ 25696 ~~) standard and uses UTC +0. The format is yyyy-MM-dd HH:mm:ss.
-         * <p>
-         * 
-         * If the value of seconds (ss) is not 00, it is automatically set to the beginning of the current minute (mm).
-         * The latest purchase time is later than the earliest purchase time.
-         * The time span between morning and evening is generally not allowed to exceed 10 days.
+         * StartTime.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -407,46 +407,11 @@ public class CreateDemandRequest extends Request {
         }
 
         /**
-         * The latest purchase time. The time follows the [ISO8601](~~ 25696 ~~) standard and uses UTC +0. The format is yyyy-MM-dd HH:mm:ss.
-         * <p>
-         * 
-         * If the value of seconds (ss) is not 00, it is automatically set to the beginning of the current minute (mm).
-         * The latest purchase time is later than the earliest purchase time.
-         * The length of time in the morning and evening cannot exceed 10 days.
-         * 
+         * ZoneId.
          */
-        public Builder endTime(String endTime) {
-            this.putQueryParameter("EndTime", endTime);
-            this.endTime = endTime;
-            return this;
-        }
-
-        /**
-         * The billing method of the reported instance. Valid values:
-         * <p>
-         * 
-         * * PrePaid: Subscription
-         * * PostPaid (default): Pay-as-you-go
-         */
-        public Builder instanceChargeType(String instanceChargeType) {
-            this.putQueryParameter("InstanceChargeType", instanceChargeType);
-            this.instanceChargeType = instanceChargeType;
-            return this;
-        }
-
-        /**
-         * The duration of the resource to be purchased. This parameter is required. Valid values:
-         * <p>
-         * 
-         * * When the PeriodUnit is Day, the value of Period is {"1", "2", "3", "4", "5", "6"}.
-         * 
-         * * When the PeriodUnit is set to Week, the value of Period is {"1", "2", "3", "4"}.
-         * 
-         * * When the PeriodUnit is Month, the value of Period is:{ "1", "2", "3", "4", "5", "6", "7", "8", "9", "12", "24", "36", "48", "60"}
-         */
-        public Builder period(Integer period) {
-            this.putQueryParameter("Period", period);
-            this.period = period;
+        public Builder zoneId(String zoneId) {
+            this.putQueryParameter("ZoneId", zoneId);
+            this.zoneId = zoneId;
             return this;
         }
 

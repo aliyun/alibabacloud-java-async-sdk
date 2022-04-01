@@ -12,9 +12,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteInstancesRequest</p>
  */
 public class DeleteInstancesRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("ClientToken")
+    private String clientToken;
+
+    @Query
+    @NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @Query
+    @NameInMap("Force")
+    private Boolean force;
+
+    @Query
+    @NameInMap("InstanceId")
+    @Validation(required = true)
+    private java.util.List < String > instanceId;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -25,6 +38,11 @@ public class DeleteInstancesRequest extends Request {
     private Long ownerId;
 
     @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -32,45 +50,27 @@ public class DeleteInstancesRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("DryRun")
-    private Boolean dryRun;
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     @Query
     @NameInMap("TerminateSubscription")
     private Boolean terminateSubscription;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
-    @Query
-    @NameInMap("ClientToken")
-    private String clientToken;
-
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
-    private java.util.List < String > instanceId;
-
-    @Query
-    @NameInMap("Force")
-    private Boolean force;
-
     private DeleteInstancesRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
+        this.clientToken = builder.clientToken;
+        this.dryRun = builder.dryRun;
+        this.force = builder.force;
+        this.instanceId = builder.instanceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.dryRun = builder.dryRun;
+        this.sourceRegionId = builder.sourceRegionId;
         this.terminateSubscription = builder.terminateSubscription;
-        this.regionId = builder.regionId;
-        this.clientToken = builder.clientToken;
-        this.instanceId = builder.instanceId;
-        this.force = builder.force;
     }
 
     public static Builder builder() {
@@ -87,10 +87,31 @@ public class DeleteInstancesRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return clientToken
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
+     * @return force
+     */
+    public Boolean getForce() {
+        return this.force;
+    }
+
+    /**
+     * @return instanceId
+     */
+    public java.util.List < String > getInstanceId() {
+        return this.instanceId;
     }
 
     /**
@@ -108,6 +129,13 @@ public class DeleteInstancesRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -122,10 +150,10 @@ public class DeleteInstancesRequest extends Request {
     }
 
     /**
-     * @return dryRun
+     * @return sourceRegionId
      */
-    public Boolean getDryRun() {
-        return this.dryRun;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -135,46 +163,18 @@ public class DeleteInstancesRequest extends Request {
         return this.terminateSubscription;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return clientToken
-     */
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    /**
-     * @return instanceId
-     */
-    public java.util.List < String > getInstanceId() {
-        return this.instanceId;
-    }
-
-    /**
-     * @return force
-     */
-    public Boolean getForce() {
-        return this.force;
-    }
-
     public static final class Builder extends Request.Builder<DeleteInstancesRequest, Builder> {
-        private String sourceRegionId; 
+        private String clientToken; 
+        private Boolean dryRun; 
+        private Boolean force; 
+        private java.util.List < String > instanceId; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private Boolean dryRun; 
+        private String sourceRegionId; 
         private Boolean terminateSubscription; 
-        private String regionId; 
-        private String clientToken; 
-        private java.util.List < String > instanceId; 
-        private Boolean force; 
 
         private Builder() {
             super();
@@ -182,25 +182,52 @@ public class DeleteInstancesRequest extends Request {
 
         private Builder(DeleteInstancesRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.force = request.force;
+            this.instanceId = request.instanceId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.dryRun = request.dryRun;
+            this.sourceRegionId = request.sourceRegionId;
             this.terminateSubscription = request.terminateSubscription;
-            this.regionId = request.regionId;
-            this.clientToken = request.clientToken;
-            this.instanceId = request.instanceId;
-            this.force = request.force;
         } 
 
         /**
-         * SourceRegionId.
+         * ClientToken.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * Force.
+         */
+        public Builder force(Boolean force) {
+            this.putQueryParameter("Force", force);
+            this.force = force;
+            return this;
+        }
+
+        /**
+         * InstanceId.
+         */
+        public Builder instanceId(java.util.List < String > instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
             return this;
         }
 
@@ -214,7 +241,7 @@ public class DeleteInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the RAM user.
+         * OwnerId.
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -223,50 +250,7 @@ public class DeleteInstancesRequest extends Request {
         }
 
         /**
-         * The account name of the resource master account.
-         */
-        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
-            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-            this.resourceOwnerAccount = resourceOwnerAccount;
-            return this;
-        }
-
-        /**
-         * The ID of the resource master account, that is, the UID.
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * Specifies whether to PreCheck only this request.
-         * <p>
-         * 
-         * -true: sends a check request without querying the resource status. Check whether the AccessKey is valid, whether the RAM user is authorized, and whether required parameters are specified. If the check fails, the corresponding error is returned. If the check succeeds, the error code DRYRUN.SUCCESS is returned.
-         * -false (default): a normal request is sent. After the request passes the check, the 2XX HTTP status code is returned and the resource status is directly queried.
-         */
-        public Builder dryRun(Boolean dryRun) {
-            this.putQueryParameter("DryRun", dryRun);
-            this.dryRun = dryRun;
-            return this;
-        }
-
-        /**
-         * Specifies whether to release expired subscription instances.
-         * <p>
-         * 
-         * Default value: false
-         */
-        public Builder terminateSubscription(Boolean terminateSubscription) {
-            this.putQueryParameter("TerminateSubscription", terminateSubscription);
-            this.terminateSubscription = terminateSubscription;
-            return this;
-        }
-
-        /**
-         * The ID of the region to which the instance belongs. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -275,33 +259,38 @@ public class DeleteInstancesRequest extends Request {
         }
 
         /**
-         * Ensure the idempotence of the request. Generate a parameter value from your client. Make sure that the value is unique among different requests. **ClientToken** supports only ASCII characters and cannot exceed 64 characters. For more information, see [how to ensure idempotence](~~ 25693 ~~).
+         * ResourceOwnerAccount.
          */
-        public Builder clientToken(String clientToken) {
-            this.putQueryParameter("ClientToken", clientToken);
-            this.clientToken = clientToken;
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
             return this;
         }
 
         /**
-         * The ID of the instance. Valid values of N: 1 to 100.
+         * ResourceOwnerId.
          */
-        public Builder instanceId(java.util.List < String > instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
             return this;
         }
 
         /**
-         * Specifies whether to force the release of **running**("Running") ECS instances.
-         * <p>
-         * 
-         * -true: forcibly releases **running**("Running") instances. Forced release is equivalent to power failure, and temporary data in the instance memory and storage will be erased and cannot be recovered.
-         * -false (default): the instance is released. The instance must be in the **stopped**("Stopped") state.
+         * SourceRegionId.
          */
-        public Builder force(Boolean force) {
-            this.putQueryParameter("Force", force);
-            this.force = force;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
+
+        /**
+         * TerminateSubscription.
+         */
+        public Builder terminateSubscription(Boolean terminateSubscription) {
+            this.putQueryParameter("TerminateSubscription", terminateSubscription);
+            this.terminateSubscription = terminateSubscription;
             return this;
         }
 

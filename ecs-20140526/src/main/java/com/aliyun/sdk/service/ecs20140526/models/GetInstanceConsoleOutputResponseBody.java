@@ -12,23 +12,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetInstanceConsoleOutputResponseBody</p>
  */
 public class GetInstanceConsoleOutputResponseBody extends TeaModel {
+    @NameInMap("ConsoleOutput")
+    private String consoleOutput;
+
+    @NameInMap("InstanceId")
+    private String instanceId;
+
     @NameInMap("LastUpdateTime")
     private String lastUpdateTime;
 
     @NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("InstanceId")
-    private String instanceId;
-
-    @NameInMap("ConsoleOutput")
-    private String consoleOutput;
-
     private GetInstanceConsoleOutputResponseBody(Builder builder) {
+        this.consoleOutput = builder.consoleOutput;
+        this.instanceId = builder.instanceId;
         this.lastUpdateTime = builder.lastUpdateTime;
         this.requestId = builder.requestId;
-        this.instanceId = builder.instanceId;
-        this.consoleOutput = builder.consoleOutput;
     }
 
     public static Builder builder() {
@@ -37,6 +37,20 @@ public class GetInstanceConsoleOutputResponseBody extends TeaModel {
 
     public static GetInstanceConsoleOutputResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return consoleOutput
+     */
+    public String getConsoleOutput() {
+        return this.consoleOutput;
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     /**
@@ -53,44 +67,22 @@ public class GetInstanceConsoleOutputResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    /**
-     * @return instanceId
-     */
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    /**
-     * @return consoleOutput
-     */
-    public String getConsoleOutput() {
-        return this.consoleOutput;
-    }
-
     public static final class Builder {
+        private String consoleOutput; 
+        private String instanceId; 
         private String lastUpdateTime; 
         private String requestId; 
-        private String instanceId; 
-        private String consoleOutput; 
 
         /**
-         * The time when the instance was last started, restarted, or shut down. The time follows the [ISO8601](~~ 25696 ~~) standard and uses UTC time. The format is yyyy-MM-ddTHH:mm:ssZ.
+         * ConsoleOutput.
          */
-        public Builder lastUpdateTime(String lastUpdateTime) {
-            this.lastUpdateTime = lastUpdateTime;
+        public Builder consoleOutput(String consoleOutput) {
+            this.consoleOutput = consoleOutput;
             return this;
         }
 
         /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The ID of the instance.
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -98,10 +90,18 @@ public class GetInstanceConsoleOutputResponseBody extends TeaModel {
         }
 
         /**
-         * The system command output of the instance. The output is Base64-encoded.
+         * LastUpdateTime.
          */
-        public Builder consoleOutput(String consoleOutput) {
-            this.consoleOutput = consoleOutput;
+        public Builder lastUpdateTime(String lastUpdateTime) {
+            this.lastUpdateTime = lastUpdateTime;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 

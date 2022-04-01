@@ -12,17 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RemoveTagsRequest</p>
  */
 public class RemoveTagsRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
-
     @Query
     @NameInMap("OwnerId")
     private Long ownerId;
+
+    @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
+    @Query
+    @NameInMap("ResourceId")
+    @Validation(required = true)
+    private String resourceId;
 
     @Query
     @NameInMap("ResourceOwnerAccount")
@@ -33,30 +35,28 @@ public class RemoveTagsRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
-    @Query
     @NameInMap("ResourceType")
     @Validation(required = true)
     private String resourceType;
 
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
-    @NameInMap("ResourceId")
-    @Validation(required = true)
-    private String resourceId;
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
 
     private RemoveTagsRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
-        this.tag = builder.tag;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
+        this.resourceId = builder.resourceId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.regionId = builder.regionId;
         this.resourceType = builder.resourceType;
-        this.resourceId = builder.resourceId;
+        this.sourceRegionId = builder.sourceRegionId;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -73,24 +73,24 @@ public class RemoveTagsRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
-     * @return tag
-     */
-    public java.util.List < Tag> getTag() {
-        return this.tag;
-    }
-
-    /**
      * @return ownerId
      */
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return resourceId
+     */
+    public String getResourceId() {
+        return this.resourceId;
     }
 
     /**
@@ -108,13 +108,6 @@ public class RemoveTagsRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return resourceType
      */
     public String getResourceType() {
@@ -122,21 +115,28 @@ public class RemoveTagsRequest extends Request {
     }
 
     /**
-     * @return resourceId
+     * @return sourceRegionId
      */
-    public String getResourceId() {
-        return this.resourceId;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
     }
 
     public static final class Builder extends Request.Builder<RemoveTagsRequest, Builder> {
-        private String sourceRegionId; 
-        private java.util.List < Tag> tag; 
         private Long ownerId; 
+        private String regionId; 
+        private String resourceId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String regionId; 
         private String resourceType; 
-        private String resourceId; 
+        private String sourceRegionId; 
+        private java.util.List < Tag> tag; 
 
         private Builder() {
             super();
@@ -144,15 +144,69 @@ public class RemoveTagsRequest extends Request {
 
         private Builder(RemoveTagsRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
-            this.tag = request.tag;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceId = request.resourceId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.regionId = request.regionId;
             this.resourceType = request.resourceType;
-            this.resourceId = request.resourceId;
+            this.sourceRegionId = request.sourceRegionId;
+            this.tag = request.tag;
         } 
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceId.
+         */
+        public Builder resourceId(String resourceId) {
+            this.putQueryParameter("ResourceId", resourceId);
+            this.resourceId = resourceId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * ResourceType.
+         */
+        public Builder resourceType(String resourceType) {
+            this.putQueryParameter("ResourceType", resourceType);
+            this.resourceType = resourceType;
+            return this;
+        }
 
         /**
          * SourceRegionId.
@@ -172,69 +226,6 @@ public class RemoveTagsRequest extends Request {
             return this;
         }
 
-        /**
-         * The ID of the RAM user.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * The account name of the resource master account.
-         */
-        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
-            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-            this.resourceOwnerAccount = resourceOwnerAccount;
-            return this;
-        }
-
-        /**
-         * The ID of the resource master account, that is, the UID.
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * The region to which the resource belongs. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The type of the resource. Valid values:
-         * <p>
-         * 
-         * -disk
-         * -instance
-         * -image
-         * -securitygroup
-         * -snapshot
-         * 
-         * The preceding values are all in lowercase.
-         */
-        public Builder resourceType(String resourceType) {
-            this.putQueryParameter("ResourceType", resourceType);
-            this.resourceType = resourceType;
-            return this;
-        }
-
-        /**
-         * The ID of the resource to unbind the tag. For example, if the resource type (ResourceType) is an instance, the resource ID can be considered as the instance ID.
-         */
-        public Builder resourceId(String resourceId) {
-            this.putQueryParameter("ResourceId", resourceId);
-            this.resourceId = resourceId;
-            return this;
-        }
-
         @Override
         public RemoveTagsRequest build() {
             return new RemoveTagsRequest(this);
@@ -243,7 +234,7 @@ public class RemoveTagsRequest extends Request {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("key")
+        @NameInMap("Key")
         private String key;
 
         @NameInMap("Value")
@@ -281,10 +272,7 @@ public class RemoveTagsRequest extends Request {
             private String value; 
 
             /**
-             * 资源的标签键。
-             * <p>
-             * 
-             * >为提高兼容性，建议您尽量使用Tag.N.Key参数。
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -292,7 +280,7 @@ public class RemoveTagsRequest extends Request {
             }
 
             /**
-             * 资源的标签值。N的取值范围：1~20。一旦传入该值，可以为空字符串。最多支持128个字符，不能以aliyun和acs:开头，不能包含http://或者https://。
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

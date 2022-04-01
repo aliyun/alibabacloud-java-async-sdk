@@ -12,13 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateKeyPairRequest</p>
  */
 public class CreateKeyPairRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("KeyPairName")
+    @Validation(required = true)
+    private String keyPairName;
 
     @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
+    @NameInMap("OwnerId")
+    private Long ownerId;
 
     @Query
     @NameInMap("RegionId")
@@ -26,13 +27,20 @@ public class CreateKeyPairRequest extends Request {
     private String regionId;
 
     @Query
-    @NameInMap("KeyPairName")
-    @Validation(required = true)
-    private String keyPairName;
-
-    @Query
     @NameInMap("ResourceGroupId")
     private String resourceGroupId;
+
+    @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     @Query
     @NameInMap("Tag")
@@ -40,11 +48,13 @@ public class CreateKeyPairRequest extends Request {
 
     private CreateKeyPairRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
-        this.resourceOwnerId = builder.resourceOwnerId;
-        this.regionId = builder.regionId;
         this.keyPairName = builder.keyPairName;
+        this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.sourceRegionId = builder.sourceRegionId;
         this.tag = builder.tag;
     }
 
@@ -62,17 +72,17 @@ public class CreateKeyPairRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return keyPairName
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getKeyPairName() {
+        return this.keyPairName;
     }
 
     /**
-     * @return resourceOwnerId
+     * @return ownerId
      */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     /**
@@ -83,17 +93,31 @@ public class CreateKeyPairRequest extends Request {
     }
 
     /**
-     * @return keyPairName
-     */
-    public String getKeyPairName() {
-        return this.keyPairName;
-    }
-
-    /**
      * @return resourceGroupId
      */
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -104,11 +128,13 @@ public class CreateKeyPairRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateKeyPairRequest, Builder> {
-        private String sourceRegionId; 
-        private Long resourceOwnerId; 
-        private String regionId; 
         private String keyPairName; 
+        private Long ownerId; 
+        private String regionId; 
         private String resourceGroupId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String sourceRegionId; 
         private java.util.List < Tag> tag; 
 
         private Builder() {
@@ -117,20 +143,58 @@ public class CreateKeyPairRequest extends Request {
 
         private Builder(CreateKeyPairRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
-            this.resourceOwnerId = request.resourceOwnerId;
-            this.regionId = request.regionId;
             this.keyPairName = request.keyPairName;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceRegionId = request.sourceRegionId;
             this.tag = request.tag;
         } 
 
         /**
-         * SourceRegionId.
+         * KeyPairName.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder keyPairName(String keyPairName) {
+            this.putQueryParameter("KeyPairName", keyPairName);
+            this.keyPairName = keyPairName;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
             return this;
         }
 
@@ -144,34 +208,16 @@ public class CreateKeyPairRequest extends Request {
         }
 
         /**
-         * The region ID of the key pair. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
+         * SourceRegionId.
          */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 
         /**
-         * The name of the key pair. The description must be 2 to 128 characters in length. It must start with a letter and cannot start with "http:// "or "https. It can contain numbers, colons (:), underscores (_), and hyphens (-).
-         */
-        public Builder keyPairName(String keyPairName) {
-            this.putQueryParameter("KeyPairName", keyPairName);
-            this.keyPairName = keyPairName;
-            return this;
-        }
-
-        /**
-         * The ID of the resource group to which the SSH key pair belongs.
-         */
-        public Builder resourceGroupId(String resourceGroupId) {
-            this.putQueryParameter("ResourceGroupId", resourceGroupId);
-            this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-
-        /**
-         * Tag list
+         * Tag.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -225,7 +271,7 @@ public class CreateKeyPairRequest extends Request {
             private String value; 
 
             /**
-             * 密钥对的标签键。N的取值范围：1~20。一旦传入该值，则不允许为空字符串。最多支持128个字符，不能以`aliyun`或`acs:`开头，不能包含`http://`或者`https://`。
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -233,7 +279,7 @@ public class CreateKeyPairRequest extends Request {
             }
 
             /**
-             * 密钥对的标签值。N的取值范围：1~20。一旦传入该值，允许为空字符串。最多支持128个字符，不能以acs:开头，不能包含http://或者https://。
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

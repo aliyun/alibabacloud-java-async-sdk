@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePriceResponseBody</p>
  */
 public class DescribePriceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    private String requestId;
-
     @NameInMap("PriceInfo")
     private PriceInfo priceInfo;
 
+    @NameInMap("RequestId")
+    private String requestId;
+
     private DescribePriceResponseBody(Builder builder) {
-        this.requestId = builder.requestId;
         this.priceInfo = builder.priceInfo;
+        this.requestId = builder.requestId;
     }
 
     public static Builder builder() {
@@ -32,36 +32,36 @@ public class DescribePriceResponseBody extends TeaModel {
     }
 
     /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    /**
      * @return priceInfo
      */
     public PriceInfo getPriceInfo() {
         return this.priceInfo;
     }
 
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static final class Builder {
-        private String requestId; 
         private PriceInfo priceInfo; 
+        private String requestId; 
 
         /**
-         * The ID of the request.
+         * PriceInfo.
          */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
+        public Builder priceInfo(PriceInfo priceInfo) {
+            this.priceInfo = priceInfo;
             return this;
         }
 
         /**
-         * The type of Price information, including Price and discount rules.
+         * RequestId.
          */
-        public Builder priceInfo(PriceInfo priceInfo) {
-            this.priceInfo = priceInfo;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
@@ -110,7 +110,7 @@ public class DescribePriceResponseBody extends TeaModel {
             private Long ruleId; 
 
             /**
-             * The description of the activity rule.
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -118,7 +118,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the activity.
+             * RuleId.
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -132,11 +132,11 @@ public class DescribePriceResponseBody extends TeaModel {
         } 
 
     }
-    public static class Rules extends TeaModel {
+    public static class SubRules extends TeaModel {
         @NameInMap("Rule")
         private java.util.List < Rule> rule;
 
-        private Rules(Builder builder) {
+        private SubRules(Builder builder) {
             this.rule = builder.rule;
         }
 
@@ -144,7 +144,7 @@ public class DescribePriceResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static Rules create() {
+        public static SubRules create() {
             return builder().build();
         }
 
@@ -166,108 +166,6 @@ public class DescribePriceResponseBody extends TeaModel {
                 return this;
             }
 
-            public Rules build() {
-                return new Rules(this);
-            } 
-
-        } 
-
-    }
-    public static class SubRulesRule extends TeaModel {
-        @NameInMap("Description")
-        private String description;
-
-        @NameInMap("RuleId")
-        private Long ruleId;
-
-        private SubRulesRule(Builder builder) {
-            this.description = builder.description;
-            this.ruleId = builder.ruleId;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static SubRulesRule create() {
-            return builder().build();
-        }
-
-        /**
-         * @return description
-         */
-        public String getDescription() {
-            return this.description;
-        }
-
-        /**
-         * @return ruleId
-         */
-        public Long getRuleId() {
-            return this.ruleId;
-        }
-
-        public static final class Builder {
-            private String description; 
-            private Long ruleId; 
-
-            /**
-             * The description of the rule subset.
-             */
-            public Builder description(String description) {
-                this.description = description;
-                return this;
-            }
-
-            /**
-             * The ID of the rule.
-             */
-            public Builder ruleId(Long ruleId) {
-                this.ruleId = ruleId;
-                return this;
-            }
-
-            public SubRulesRule build() {
-                return new SubRulesRule(this);
-            } 
-
-        } 
-
-    }
-    public static class SubRules extends TeaModel {
-        @NameInMap("Rule")
-        private java.util.List < SubRulesRule> rule;
-
-        private SubRules(Builder builder) {
-            this.rule = builder.rule;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static SubRules create() {
-            return builder().build();
-        }
-
-        /**
-         * @return rule
-         */
-        public java.util.List < SubRulesRule> getRule() {
-            return this.rule;
-        }
-
-        public static final class Builder {
-            private java.util.List < SubRulesRule> rule; 
-
-            /**
-             * Rule.
-             */
-            public Builder rule(java.util.List < SubRulesRule> rule) {
-                this.rule = rule;
-                return this;
-            }
-
             public SubRules build() {
                 return new SubRules(this);
             } 
@@ -276,27 +174,27 @@ public class DescribePriceResponseBody extends TeaModel {
 
     }
     public static class ResourcePriceModel extends TeaModel {
-        @NameInMap("Resource")
-        private String resource;
+        @NameInMap("DiscountPrice")
+        private Float discountPrice;
 
         @NameInMap("OriginalPrice")
         private Float originalPrice;
 
-        @NameInMap("DiscountPrice")
-        private Float discountPrice;
-
-        @NameInMap("TradePrice")
-        private Float tradePrice;
+        @NameInMap("Resource")
+        private String resource;
 
         @NameInMap("SubRules")
         private SubRules subRules;
 
+        @NameInMap("TradePrice")
+        private Float tradePrice;
+
         private ResourcePriceModel(Builder builder) {
-            this.resource = builder.resource;
-            this.originalPrice = builder.originalPrice;
             this.discountPrice = builder.discountPrice;
-            this.tradePrice = builder.tradePrice;
+            this.originalPrice = builder.originalPrice;
+            this.resource = builder.resource;
             this.subRules = builder.subRules;
+            this.tradePrice = builder.tradePrice;
         }
 
         public static Builder builder() {
@@ -308,10 +206,10 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * @return resource
+         * @return discountPrice
          */
-        public String getResource() {
-            return this.resource;
+        public Float getDiscountPrice() {
+            return this.discountPrice;
         }
 
         /**
@@ -322,17 +220,10 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * @return discountPrice
+         * @return resource
          */
-        public Float getDiscountPrice() {
-            return this.discountPrice;
-        }
-
-        /**
-         * @return tradePrice
-         */
-        public Float getTradePrice() {
-            return this.tradePrice;
+        public String getResource() {
+            return this.resource;
         }
 
         /**
@@ -342,31 +233,22 @@ public class DescribePriceResponseBody extends TeaModel {
             return this.subRules;
         }
 
+        /**
+         * @return tradePrice
+         */
+        public Float getTradePrice() {
+            return this.tradePrice;
+        }
+
         public static final class Builder {
-            private String resource; 
-            private Float originalPrice; 
             private Float discountPrice; 
-            private Float tradePrice; 
+            private Float originalPrice; 
+            private String resource; 
             private SubRules subRules; 
+            private Float tradePrice; 
 
             /**
-             * The name of the resource.
-             */
-            public Builder resource(String resource) {
-                this.resource = resource;
-                return this;
-            }
-
-            /**
-             * Original price.
-             */
-            public Builder originalPrice(Float originalPrice) {
-                this.originalPrice = originalPrice;
-                return this;
-            }
-
-            /**
-             * Discount price.
+             * DiscountPrice.
              */
             public Builder discountPrice(Float discountPrice) {
                 this.discountPrice = discountPrice;
@@ -374,18 +256,34 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The transaction price.
+             * OriginalPrice.
              */
-            public Builder tradePrice(Float tradePrice) {
-                this.tradePrice = tradePrice;
+            public Builder originalPrice(Float originalPrice) {
+                this.originalPrice = originalPrice;
                 return this;
             }
 
             /**
-             * A subset of pricing rules.
+             * Resource.
+             */
+            public Builder resource(String resource) {
+                this.resource = resource;
+                return this;
+            }
+
+            /**
+             * SubRules.
              */
             public Builder subRules(SubRules subRules) {
                 this.subRules = subRules;
+                return this;
+            }
+
+            /**
+             * TradePrice.
+             */
+            public Builder tradePrice(Float tradePrice) {
+                this.tradePrice = tradePrice;
                 return this;
             }
 
@@ -438,31 +336,31 @@ public class DescribePriceResponseBody extends TeaModel {
 
     }
     public static class Price extends TeaModel {
+        @NameInMap("Currency")
+        private String currency;
+
+        @NameInMap("DetailInfos")
+        private DetailInfos detailInfos;
+
+        @NameInMap("DiscountPrice")
+        private Float discountPrice;
+
         @NameInMap("OriginalPrice")
         private Float originalPrice;
 
         @NameInMap("ReservedInstanceHourPrice")
         private Float reservedInstanceHourPrice;
 
-        @NameInMap("DiscountPrice")
-        private Float discountPrice;
-
-        @NameInMap("Currency")
-        private String currency;
-
         @NameInMap("TradePrice")
         private Float tradePrice;
 
-        @NameInMap("DetailInfos")
-        private DetailInfos detailInfos;
-
         private Price(Builder builder) {
+            this.currency = builder.currency;
+            this.detailInfos = builder.detailInfos;
+            this.discountPrice = builder.discountPrice;
             this.originalPrice = builder.originalPrice;
             this.reservedInstanceHourPrice = builder.reservedInstanceHourPrice;
-            this.discountPrice = builder.discountPrice;
-            this.currency = builder.currency;
             this.tradePrice = builder.tradePrice;
-            this.detailInfos = builder.detailInfos;
         }
 
         public static Builder builder() {
@@ -471,6 +369,27 @@ public class DescribePriceResponseBody extends TeaModel {
 
         public static Price create() {
             return builder().build();
+        }
+
+        /**
+         * @return currency
+         */
+        public String getCurrency() {
+            return this.currency;
+        }
+
+        /**
+         * @return detailInfos
+         */
+        public DetailInfos getDetailInfos() {
+            return this.detailInfos;
+        }
+
+        /**
+         * @return discountPrice
+         */
+        public Float getDiscountPrice() {
+            return this.discountPrice;
         }
 
         /**
@@ -488,67 +407,22 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * @return discountPrice
-         */
-        public Float getDiscountPrice() {
-            return this.discountPrice;
-        }
-
-        /**
-         * @return currency
-         */
-        public String getCurrency() {
-            return this.currency;
-        }
-
-        /**
          * @return tradePrice
          */
         public Float getTradePrice() {
             return this.tradePrice;
         }
 
-        /**
-         * @return detailInfos
-         */
-        public DetailInfos getDetailInfos() {
-            return this.detailInfos;
-        }
-
         public static final class Builder {
+            private String currency; 
+            private DetailInfos detailInfos; 
+            private Float discountPrice; 
             private Float originalPrice; 
             private Float reservedInstanceHourPrice; 
-            private Float discountPrice; 
-            private String currency; 
             private Float tradePrice; 
-            private DetailInfos detailInfos; 
 
             /**
-             * Original price.
-             */
-            public Builder originalPrice(Float originalPrice) {
-                this.originalPrice = originalPrice;
-                return this;
-            }
-
-            /**
-             * The hourly price of reserved instances that are 0 or partially prepaid.
-             */
-            public Builder reservedInstanceHourPrice(Float reservedInstanceHourPrice) {
-                this.reservedInstanceHourPrice = reservedInstanceHourPrice;
-                return this;
-            }
-
-            /**
-             * Discount.
-             */
-            public Builder discountPrice(Float discountPrice) {
-                this.discountPrice = discountPrice;
-                return this;
-            }
-
-            /**
-             * The unit of currency.
+             * Currency.
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -556,21 +430,42 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The final price, which is the original price minus the discount.
+             * DetailInfos.
              */
-            public Builder tradePrice(Float tradePrice) {
-                this.tradePrice = tradePrice;
+            public Builder detailInfos(DetailInfos detailInfos) {
+                this.detailInfos = detailInfos;
                 return this;
             }
 
             /**
-             * The price details.
-             * <p>
-             * 
-             * > the returned value is being invited for testing and is not currently available.
+             * DiscountPrice.
              */
-            public Builder detailInfos(DetailInfos detailInfos) {
-                this.detailInfos = detailInfos;
+            public Builder discountPrice(Float discountPrice) {
+                this.discountPrice = discountPrice;
+                return this;
+            }
+
+            /**
+             * OriginalPrice.
+             */
+            public Builder originalPrice(Float originalPrice) {
+                this.originalPrice = originalPrice;
+                return this;
+            }
+
+            /**
+             * ReservedInstanceHourPrice.
+             */
+            public Builder reservedInstanceHourPrice(Float reservedInstanceHourPrice) {
+                this.reservedInstanceHourPrice = reservedInstanceHourPrice;
+                return this;
+            }
+
+            /**
+             * TradePrice.
+             */
+            public Builder tradePrice(Float tradePrice) {
+                this.tradePrice = tradePrice;
                 return this;
             }
 
@@ -581,16 +476,118 @@ public class DescribePriceResponseBody extends TeaModel {
         } 
 
     }
-    public static class PriceInfo extends TeaModel {
-        @NameInMap("Rules")
-        private Rules rules;
+    public static class RulesRule extends TeaModel {
+        @NameInMap("Description")
+        private String description;
 
+        @NameInMap("RuleId")
+        private Long ruleId;
+
+        private RulesRule(Builder builder) {
+            this.description = builder.description;
+            this.ruleId = builder.ruleId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RulesRule create() {
+            return builder().build();
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return ruleId
+         */
+        public Long getRuleId() {
+            return this.ruleId;
+        }
+
+        public static final class Builder {
+            private String description; 
+            private Long ruleId; 
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * RuleId.
+             */
+            public Builder ruleId(Long ruleId) {
+                this.ruleId = ruleId;
+                return this;
+            }
+
+            public RulesRule build() {
+                return new RulesRule(this);
+            } 
+
+        } 
+
+    }
+    public static class Rules extends TeaModel {
+        @NameInMap("Rule")
+        private java.util.List < RulesRule> rule;
+
+        private Rules(Builder builder) {
+            this.rule = builder.rule;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Rules create() {
+            return builder().build();
+        }
+
+        /**
+         * @return rule
+         */
+        public java.util.List < RulesRule> getRule() {
+            return this.rule;
+        }
+
+        public static final class Builder {
+            private java.util.List < RulesRule> rule; 
+
+            /**
+             * Rule.
+             */
+            public Builder rule(java.util.List < RulesRule> rule) {
+                this.rule = rule;
+                return this;
+            }
+
+            public Rules build() {
+                return new Rules(this);
+            } 
+
+        } 
+
+    }
+    public static class PriceInfo extends TeaModel {
         @NameInMap("Price")
         private Price price;
 
+        @NameInMap("Rules")
+        private Rules rules;
+
         private PriceInfo(Builder builder) {
-            this.rules = builder.rules;
             this.price = builder.price;
+            this.rules = builder.rules;
         }
 
         public static Builder builder() {
@@ -602,36 +599,36 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * @return rules
-         */
-        public Rules getRules() {
-            return this.rules;
-        }
-
-        /**
          * @return price
          */
         public Price getPrice() {
             return this.price;
         }
 
+        /**
+         * @return rules
+         */
+        public Rules getRules() {
+            return this.rules;
+        }
+
         public static final class Builder {
-            private Rules rules; 
             private Price price; 
+            private Rules rules; 
 
             /**
-             * The activity rule.
+             * Price.
              */
-            public Builder rules(Rules rules) {
-                this.rules = rules;
+            public Builder price(Price price) {
+                this.price = price;
                 return this;
             }
 
             /**
-             * The price.
+             * Rules.
              */
-            public Builder price(Price price) {
-                this.price = price;
+            public Builder rules(Rules rules) {
+                this.rules = rules;
                 return this;
             }
 

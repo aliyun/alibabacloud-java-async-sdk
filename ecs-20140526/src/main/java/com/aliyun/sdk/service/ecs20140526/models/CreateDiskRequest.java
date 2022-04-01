@@ -12,78 +12,41 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateDiskRequest</p>
  */
 public class CreateDiskRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
-    @Query
-    @NameInMap("OwnerAccount")
-    private String ownerAccount;
-
     @Query
     @NameInMap("AdvancedFeatures")
     private String advancedFeatures;
-
-    @Query
-    @NameInMap("EncryptAlgorithm")
-    private String encryptAlgorithm;
-
-    @Query
-    @NameInMap("ProvisionedIops")
-    private Long provisionedIops;
-
-    @Query
-    @NameInMap("BurstingEnabled")
-    private Boolean burstingEnabled;
-
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
 
     @Query
     @NameInMap("Arn")
     private java.util.List < Arn> arn;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
-    @NameInMap("ResourceOwnerAccount")
-    private String resourceOwnerAccount;
-
-    @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
-
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
-    @Query
-    @NameInMap("DiskName")
-    private String diskName;
-
-    @Query
-    @NameInMap("DiskCategory")
-    private String diskCategory;
-
-    @Query
-    @NameInMap("Description")
-    private String description;
-
-    @Query
-    @NameInMap("Encrypted")
-    private Boolean encrypted;
+    @NameInMap("BurstingEnabled")
+    private Boolean burstingEnabled;
 
     @Query
     @NameInMap("ClientToken")
     private String clientToken;
 
     @Query
-    @NameInMap("ResourceGroupId")
-    private String resourceGroupId;
+    @NameInMap("Description")
+    private String description;
+
+    @Query
+    @NameInMap("DiskCategory")
+    private String diskCategory;
+
+    @Query
+    @NameInMap("DiskName")
+    private String diskName;
+
+    @Query
+    @NameInMap("EncryptAlgorithm")
+    private String encryptAlgorithm;
+
+    @Query
+    @NameInMap("Encrypted")
+    private Boolean encrypted;
 
     @Query
     @NameInMap("InstanceId")
@@ -94,68 +57,105 @@ public class CreateDiskRequest extends Request {
     private String KMSKeyId;
 
     @Query
-    @NameInMap("StorageSetId")
-    private String storageSetId;
+    @NameInMap("MultiAttach")
+    private String multiAttach;
+
+    @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
 
     @Query
     @NameInMap("PerformanceLevel")
     private String performanceLevel;
 
     @Query
-    @NameInMap("StorageClusterId")
-    private String storageClusterId;
+    @NameInMap("ProvisionedIops")
+    private Long provisionedIops;
 
     @Query
-    @NameInMap("StorageSetPartitionNumber")
-    private Integer storageSetPartitionNumber;
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
 
     @Query
-    @NameInMap("SnapshotId")
-    private String snapshotId;
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
 
     @Query
-    @NameInMap("ZoneId")
-    private String zoneId;
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
 
     @Query
-    @NameInMap("MultiAttach")
-    private String multiAttach;
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
 
     @Query
     @NameInMap("Size")
     @Validation(maximum = 32768, minimum = 5)
     private Integer size;
 
+    @Query
+    @NameInMap("SnapshotId")
+    private String snapshotId;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
+    @Query
+    @NameInMap("StorageClusterId")
+    private String storageClusterId;
+
+    @Query
+    @NameInMap("StorageSetId")
+    private String storageSetId;
+
+    @Query
+    @NameInMap("StorageSetPartitionNumber")
+    private Integer storageSetPartitionNumber;
+
+    @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
+    @Query
+    @NameInMap("ZoneId")
+    private String zoneId;
+
     private CreateDiskRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
-        this.ownerAccount = builder.ownerAccount;
         this.advancedFeatures = builder.advancedFeatures;
-        this.encryptAlgorithm = builder.encryptAlgorithm;
-        this.provisionedIops = builder.provisionedIops;
-        this.burstingEnabled = builder.burstingEnabled;
-        this.tag = builder.tag;
         this.arn = builder.arn;
-        this.ownerId = builder.ownerId;
-        this.resourceOwnerAccount = builder.resourceOwnerAccount;
-        this.resourceOwnerId = builder.resourceOwnerId;
-        this.regionId = builder.regionId;
-        this.diskName = builder.diskName;
-        this.diskCategory = builder.diskCategory;
-        this.description = builder.description;
-        this.encrypted = builder.encrypted;
+        this.burstingEnabled = builder.burstingEnabled;
         this.clientToken = builder.clientToken;
-        this.resourceGroupId = builder.resourceGroupId;
+        this.description = builder.description;
+        this.diskCategory = builder.diskCategory;
+        this.diskName = builder.diskName;
+        this.encryptAlgorithm = builder.encryptAlgorithm;
+        this.encrypted = builder.encrypted;
         this.instanceId = builder.instanceId;
         this.KMSKeyId = builder.KMSKeyId;
-        this.storageSetId = builder.storageSetId;
-        this.performanceLevel = builder.performanceLevel;
-        this.storageClusterId = builder.storageClusterId;
-        this.storageSetPartitionNumber = builder.storageSetPartitionNumber;
-        this.snapshotId = builder.snapshotId;
-        this.zoneId = builder.zoneId;
         this.multiAttach = builder.multiAttach;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
+        this.performanceLevel = builder.performanceLevel;
+        this.provisionedIops = builder.provisionedIops;
+        this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
         this.size = builder.size;
+        this.snapshotId = builder.snapshotId;
+        this.sourceRegionId = builder.sourceRegionId;
+        this.storageClusterId = builder.storageClusterId;
+        this.storageSetId = builder.storageSetId;
+        this.storageSetPartitionNumber = builder.storageSetPartitionNumber;
+        this.tag = builder.tag;
+        this.zoneId = builder.zoneId;
     }
 
     public static Builder builder() {
@@ -172,52 +172,10 @@ public class CreateDiskRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
-     * @return ownerAccount
-     */
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    /**
      * @return advancedFeatures
      */
     public String getAdvancedFeatures() {
         return this.advancedFeatures;
-    }
-
-    /**
-     * @return encryptAlgorithm
-     */
-    public String getEncryptAlgorithm() {
-        return this.encryptAlgorithm;
-    }
-
-    /**
-     * @return provisionedIops
-     */
-    public Long getProvisionedIops() {
-        return this.provisionedIops;
-    }
-
-    /**
-     * @return burstingEnabled
-     */
-    public Boolean getBurstingEnabled() {
-        return this.burstingEnabled;
-    }
-
-    /**
-     * @return tag
-     */
-    public java.util.List < Tag> getTag() {
-        return this.tag;
     }
 
     /**
@@ -228,59 +186,10 @@ public class CreateDiskRequest extends Request {
     }
 
     /**
-     * @return ownerId
+     * @return burstingEnabled
      */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
-     * @return resourceOwnerAccount
-     */
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    /**
-     * @return resourceOwnerId
-     */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return diskName
-     */
-    public String getDiskName() {
-        return this.diskName;
-    }
-
-    /**
-     * @return diskCategory
-     */
-    public String getDiskCategory() {
-        return this.diskCategory;
-    }
-
-    /**
-     * @return description
-     */
-    public String getDescription() {
-        return this.description;
-    }
-
-    /**
-     * @return encrypted
-     */
-    public Boolean getEncrypted() {
-        return this.encrypted;
+    public Boolean getBurstingEnabled() {
+        return this.burstingEnabled;
     }
 
     /**
@@ -291,10 +200,38 @@ public class CreateDiskRequest extends Request {
     }
 
     /**
-     * @return resourceGroupId
+     * @return description
      */
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
+     * @return diskCategory
+     */
+    public String getDiskCategory() {
+        return this.diskCategory;
+    }
+
+    /**
+     * @return diskName
+     */
+    public String getDiskName() {
+        return this.diskName;
+    }
+
+    /**
+     * @return encryptAlgorithm
+     */
+    public String getEncryptAlgorithm() {
+        return this.encryptAlgorithm;
+    }
+
+    /**
+     * @return encrypted
+     */
+    public Boolean getEncrypted() {
+        return this.encrypted;
     }
 
     /**
@@ -312,10 +249,24 @@ public class CreateDiskRequest extends Request {
     }
 
     /**
-     * @return storageSetId
+     * @return multiAttach
      */
-    public String getStorageSetId() {
-        return this.storageSetId;
+    public String getMultiAttach() {
+        return this.multiAttach;
+    }
+
+    /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     /**
@@ -326,17 +277,45 @@ public class CreateDiskRequest extends Request {
     }
 
     /**
-     * @return storageClusterId
+     * @return provisionedIops
      */
-    public String getStorageClusterId() {
-        return this.storageClusterId;
+    public Long getProvisionedIops() {
+        return this.provisionedIops;
     }
 
     /**
-     * @return storageSetPartitionNumber
+     * @return regionId
      */
-    public Integer getStorageSetPartitionNumber() {
-        return this.storageSetPartitionNumber;
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    /**
+     * @return size
+     */
+    public Integer getSize() {
+        return this.size;
     }
 
     /**
@@ -347,55 +326,76 @@ public class CreateDiskRequest extends Request {
     }
 
     /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
+    /**
+     * @return storageClusterId
+     */
+    public String getStorageClusterId() {
+        return this.storageClusterId;
+    }
+
+    /**
+     * @return storageSetId
+     */
+    public String getStorageSetId() {
+        return this.storageSetId;
+    }
+
+    /**
+     * @return storageSetPartitionNumber
+     */
+    public Integer getStorageSetPartitionNumber() {
+        return this.storageSetPartitionNumber;
+    }
+
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return zoneId
      */
     public String getZoneId() {
         return this.zoneId;
     }
 
-    /**
-     * @return multiAttach
-     */
-    public String getMultiAttach() {
-        return this.multiAttach;
-    }
-
-    /**
-     * @return size
-     */
-    public Integer getSize() {
-        return this.size;
-    }
-
     public static final class Builder extends Request.Builder<CreateDiskRequest, Builder> {
-        private String sourceRegionId; 
-        private String ownerAccount; 
         private String advancedFeatures; 
-        private String encryptAlgorithm; 
-        private Long provisionedIops; 
-        private Boolean burstingEnabled; 
-        private java.util.List < Tag> tag; 
         private java.util.List < Arn> arn; 
-        private Long ownerId; 
-        private String resourceOwnerAccount; 
-        private Long resourceOwnerId; 
-        private String regionId; 
-        private String diskName; 
-        private String diskCategory; 
-        private String description; 
-        private Boolean encrypted; 
+        private Boolean burstingEnabled; 
         private String clientToken; 
-        private String resourceGroupId; 
+        private String description; 
+        private String diskCategory; 
+        private String diskName; 
+        private String encryptAlgorithm; 
+        private Boolean encrypted; 
         private String instanceId; 
         private String KMSKeyId; 
-        private String storageSetId; 
-        private String performanceLevel; 
-        private String storageClusterId; 
-        private Integer storageSetPartitionNumber; 
-        private String snapshotId; 
-        private String zoneId; 
         private String multiAttach; 
+        private String ownerAccount; 
+        private Long ownerId; 
+        private String performanceLevel; 
+        private Long provisionedIops; 
+        private String regionId; 
+        private String resourceGroupId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
         private Integer size; 
+        private String snapshotId; 
+        private String sourceRegionId; 
+        private String storageClusterId; 
+        private String storageSetId; 
+        private Integer storageSetPartitionNumber; 
+        private java.util.List < Tag> tag; 
+        private String zoneId; 
 
         private Builder() {
             super();
@@ -403,53 +403,35 @@ public class CreateDiskRequest extends Request {
 
         private Builder(CreateDiskRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
-            this.ownerAccount = request.ownerAccount;
             this.advancedFeatures = request.advancedFeatures;
-            this.encryptAlgorithm = request.encryptAlgorithm;
-            this.provisionedIops = request.provisionedIops;
-            this.burstingEnabled = request.burstingEnabled;
-            this.tag = request.tag;
             this.arn = request.arn;
-            this.ownerId = request.ownerId;
-            this.resourceOwnerAccount = request.resourceOwnerAccount;
-            this.resourceOwnerId = request.resourceOwnerId;
-            this.regionId = request.regionId;
-            this.diskName = request.diskName;
-            this.diskCategory = request.diskCategory;
-            this.description = request.description;
-            this.encrypted = request.encrypted;
+            this.burstingEnabled = request.burstingEnabled;
             this.clientToken = request.clientToken;
-            this.resourceGroupId = request.resourceGroupId;
+            this.description = request.description;
+            this.diskCategory = request.diskCategory;
+            this.diskName = request.diskName;
+            this.encryptAlgorithm = request.encryptAlgorithm;
+            this.encrypted = request.encrypted;
             this.instanceId = request.instanceId;
             this.KMSKeyId = request.KMSKeyId;
-            this.storageSetId = request.storageSetId;
-            this.performanceLevel = request.performanceLevel;
-            this.storageClusterId = request.storageClusterId;
-            this.storageSetPartitionNumber = request.storageSetPartitionNumber;
-            this.snapshotId = request.snapshotId;
-            this.zoneId = request.zoneId;
             this.multiAttach = request.multiAttach;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.performanceLevel = request.performanceLevel;
+            this.provisionedIops = request.provisionedIops;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
             this.size = request.size;
+            this.snapshotId = request.snapshotId;
+            this.sourceRegionId = request.sourceRegionId;
+            this.storageClusterId = request.storageClusterId;
+            this.storageSetId = request.storageSetId;
+            this.storageSetPartitionNumber = request.storageSetPartitionNumber;
+            this.tag = request.tag;
+            this.zoneId = request.zoneId;
         } 
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
-            return this;
-        }
-
-        /**
-         * OwnerAccount.
-         */
-        public Builder ownerAccount(String ownerAccount) {
-            this.putQueryParameter("OwnerAccount", ownerAccount);
-            this.ownerAccount = ownerAccount;
-            return this;
-        }
 
         /**
          * AdvancedFeatures.
@@ -457,42 +439,6 @@ public class CreateDiskRequest extends Request {
         public Builder advancedFeatures(String advancedFeatures) {
             this.putQueryParameter("AdvancedFeatures", advancedFeatures);
             this.advancedFeatures = advancedFeatures;
-            return this;
-        }
-
-        /**
-         * EncryptAlgorithm.
-         */
-        public Builder encryptAlgorithm(String encryptAlgorithm) {
-            this.putQueryParameter("EncryptAlgorithm", encryptAlgorithm);
-            this.encryptAlgorithm = encryptAlgorithm;
-            return this;
-        }
-
-        /**
-         * ProvisionedIops.
-         */
-        public Builder provisionedIops(Long provisionedIops) {
-            this.putQueryParameter("ProvisionedIops", provisionedIops);
-            this.provisionedIops = provisionedIops;
-            return this;
-        }
-
-        /**
-         * BurstingEnabled.
-         */
-        public Builder burstingEnabled(Boolean burstingEnabled) {
-            this.putQueryParameter("BurstingEnabled", burstingEnabled);
-            this.burstingEnabled = burstingEnabled;
-            return this;
-        }
-
-        /**
-         * Tag.
-         */
-        public Builder tag(java.util.List < Tag> tag) {
-            this.putQueryParameter("Tag", tag);
-            this.tag = tag;
             return this;
         }
 
@@ -506,89 +452,16 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * The ID of the RAM user.
+         * BurstingEnabled.
          */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
+        public Builder burstingEnabled(Boolean burstingEnabled) {
+            this.putQueryParameter("BurstingEnabled", burstingEnabled);
+            this.burstingEnabled = burstingEnabled;
             return this;
         }
 
         /**
-         * The account name of the resource master account.
-         */
-        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
-            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-            this.resourceOwnerAccount = resourceOwnerAccount;
-            return this;
-        }
-
-        /**
-         * The ID of the resource master account, that is, the UID.
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * The ID of the region to which the instance belongs. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The name of the disk. The description must be 2 to 128 characters in length. It must start with a letter and cannot start with "http:// "or "https. It can contain numbers, colons (:), periods (.), underscores (_), and hyphens (-).
-         */
-        public Builder diskName(String diskName) {
-            this.putQueryParameter("DiskName", diskName);
-            this.diskName = diskName;
-            return this;
-        }
-
-        /**
-         * The type of the data disk. Valid values:
-         * <p>
-         * -cloud: basic cloud disk.
-         * -cloud_efficiency: Ultra disk.
-         * -cloud_ssd:SSD cloud disk.
-         * -cloud_essd:ESSD.
-         * 
-         * Default value: cloud.
-         */
-        public Builder diskCategory(String diskCategory) {
-            this.putQueryParameter("DiskCategory", diskCategory);
-            this.diskCategory = diskCategory;
-            return this;
-        }
-
-        /**
-         * The description of the disk. The description must be 2 to 256 characters in length and cannot start with "http:// "or "https.
-         */
-        public Builder description(String description) {
-            this.putQueryParameter("Description", description);
-            this.description = description;
-            return this;
-        }
-
-        /**
-         * Specifies whether to encrypt the disk.
-         * <p>
-         * 
-         * Default value: false.
-         */
-        public Builder encrypted(Boolean encrypted) {
-            this.putQueryParameter("Encrypted", encrypted);
-            this.encrypted = encrypted;
-            return this;
-        }
-
-        /**
-         * Ensure the idempotence of the request. Generate a parameter value from your client. Make sure that the value is unique among different requests. **ClientToken** supports only ASCII characters and cannot exceed 64 characters. For more information, see [how to ensure idempotence](~~ 25693 ~~).
+         * ClientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -597,22 +470,52 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the cloud disk belongs.
+         * Description.
          */
-        public Builder resourceGroupId(String resourceGroupId) {
-            this.putQueryParameter("ResourceGroupId", resourceGroupId);
-            this.resourceGroupId = resourceGroupId;
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
             return this;
         }
 
         /**
-         * Create a subscription cloud disk and attach it to the specified subscription instance (InstanceId).
-         * <p>
-         * 
-         * -After you set the instance ID, the ResourceGroupId, Tag.N.Key, Tag.N.Value, ClientToken, and KMSKeyId parameters are ignored.
-         * -You cannot specify both ZoneId and InstanceId.
-         * 
-         * The default value is null, indicating that a pay-as-you-go cloud disk is created. The location of the cloud disk is determined by the RegionId and ZoneId.
+         * DiskCategory.
+         */
+        public Builder diskCategory(String diskCategory) {
+            this.putQueryParameter("DiskCategory", diskCategory);
+            this.diskCategory = diskCategory;
+            return this;
+        }
+
+        /**
+         * DiskName.
+         */
+        public Builder diskName(String diskName) {
+            this.putQueryParameter("DiskName", diskName);
+            this.diskName = diskName;
+            return this;
+        }
+
+        /**
+         * EncryptAlgorithm.
+         */
+        public Builder encryptAlgorithm(String encryptAlgorithm) {
+            this.putQueryParameter("EncryptAlgorithm", encryptAlgorithm);
+            this.encryptAlgorithm = encryptAlgorithm;
+            return this;
+        }
+
+        /**
+         * Encrypted.
+         */
+        public Builder encrypted(Boolean encrypted) {
+            this.putQueryParameter("Encrypted", encrypted);
+            this.encrypted = encrypted;
+            return this;
+        }
+
+        /**
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -621,7 +524,7 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * The ID of the KMS key used by the cloud disk.
+         * KMSKeyId.
          */
         public Builder KMSKeyId(String KMSKeyId) {
             this.putQueryParameter("KMSKeyId", KMSKeyId);
@@ -630,109 +533,7 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * The ID of the storage set.
-         * <p>
-         * 
-         * > You can select only one of the parameters for the storage set ("StorageSetId", "StorageSetPartitionNumber") and the parameters for the exclusive block storage cluster ("StorageClusterId"). If you set this parameter at the same time, the operation fails.
-         */
-        public Builder storageSetId(String storageSetId) {
-            this.putQueryParameter("StorageSetId", storageSetId);
-            this.storageSetId = storageSetId;
-            return this;
-        }
-
-        /**
-         * When creating an ESSD, set the performance level of the disk. Valid values:
-         * <p>
-         * 
-         * -PL0: The maximum random read/write IOPS per disk is 10,000.
-         * -PL1: The maximum random read/write IOPS per disk is 50,000.
-         * -PL2: The maximum random read/write IOPS per disk is 100,000.
-         * -PL3: The maximum random read/write IOPS per disk is 1 million.
-         * 
-         * Default value: pl1.
-         * 
-         * For more information about how to select an ESSD performance level, see [ESSD cloud disk](~~ 122389 ~~).
-         */
-        public Builder performanceLevel(String performanceLevel) {
-            this.putQueryParameter("PerformanceLevel", performanceLevel);
-            this.performanceLevel = performanceLevel;
-            return this;
-        }
-
-        /**
-         * The ID of the dedicated block storage cluster. If you want to create a cloud disk in a specified exclusive block storage cluster, specify this parameter. For more information about dedicated block storage clusters, see [what is dedicated block storage cluster](~~ 208883 ~~).
-         * <p>
-         * 
-         * > You can select only one of the parameters for the storage set ("StorageSetId", "StorageSetPartitionNumber") and the parameters for the exclusive block storage cluster ("StorageClusterId"). If you set this parameter at the same time, the operation fails.
-         */
-        public Builder storageClusterId(String storageClusterId) {
-            this.putQueryParameter("StorageClusterId", storageClusterId);
-            this.storageClusterId = storageClusterId;
-            return this;
-        }
-
-        /**
-         * The number of partitions in the storage set.
-         */
-        public Builder storageSetPartitionNumber(Integer storageSetPartitionNumber) {
-            this.putQueryParameter("StorageSetPartitionNumber", storageSetPartitionNumber);
-            this.storageSetPartitionNumber = storageSetPartitionNumber;
-            return this;
-        }
-
-        /**
-         * The snapshot used to create a cloud disk. Snapshots created on or before July 15, 2013 cannot be used to create cloud disks.
-         * <p>
-         * 
-         * The "SnapshotId" parameter and the "Size" parameter have the following limits:
-         * 
-         * -If the snapshot capacity of the "SnapshotId" parameter is greater than the value of the "Size" parameter, the size of the disk is the size of the specified snapshot.
-         * -If the snapshot size of the "SnapshotId" parameter is smaller than the value of the "Size" parameter, the size of the created disk is the value of the specified "Size" parameter.
-         */
-        public Builder snapshotId(String snapshotId) {
-            this.putQueryParameter("SnapshotId", snapshotId);
-            this.snapshotId = snapshotId;
-            return this;
-        }
-
-        /**
-         * Create a pay-as-you-go cloud disk in the specified zone.
-         * <p>
-         * 
-         * -If you do not set InstanceId, ZoneId is required.
-         * -You cannot specify both ZoneId and InstanceId.
-         */
-        public Builder zoneId(String zoneId) {
-            this.putQueryParameter("ZoneId", zoneId);
-            this.zoneId = zoneId;
-            return this;
-        }
-
-        /**
-         * Specifies whether to enable the multi-Mount feature. Valid values:
-         * <p>
-         * 
-         * -Disabled: Disabled.
-         * -Enabled: Enabled. Currently, only ESSDS can be set to enabled ".
-         * 
-         * Default value: Disabled.
-         * 
-         * Note:
-         * 
-         * <props="china">
-         * -The multi-Mount feature is in public preview. For more information, see [enable multiple mount](~~ 262105 ~~).
-         * 
-         * -Only pay-as-you-go billing method is supported for disks with multiple mount features. Therefore, when "MultiAttach = Enabled ", you cannot set the "InstanceId" parameter at the same time. You can call [AttachDisk](~~ 25515 ~~) to mount a cloud disk after it is created. However, you must note that a cloud disk with multiple Mount functions can only be mounted as a data disk.
-         * 
-         * </props>
-         * <props="intl">
-         * -The multi-Mount feature is in public preview. For more information, [submit a ticket](https://workorder-intl.console.aliyun.com/console.htm#/ticket/list).
-         * 
-         * -Only pay-as-you-go billing method is supported for disks with multiple mount features. Therefore, when "MultiAttach = Enabled ", you cannot set the "InstanceId" parameter at the same time. You can call [AttachDisk](~~ 25515 ~~) to mount a cloud disk after it is created. However, you must note that a cloud disk with multiple Mount functions can only be mounted as a data disk.
-         * 
-         * </props>
-         * 
+         * MultiAttach.
          */
         public Builder multiAttach(String multiAttach) {
             this.putQueryParameter("MultiAttach", multiAttach);
@@ -741,26 +542,146 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * The capacity. Unit: GiB. You must specify the parameter value for this parameter. Valid values:
-         * <p>
-         * 
-         * -cloud:5~2,000
-         * -cloud_efficiency:20~32,768
-         * -cloud_ssd:20~32,768
-         * -cloud_essd:
-         * -PL0:40~32,768
-         * -PL1:20~32,768
-         * -PL2:461~32,768
-         * -PL3:1,261~32,768
-         * 
-         * If you specify the "SnapshotId" parameter, the "SnapshotId" parameter and the "Size" parameter have the following limits:
-         * 
-         * -If the snapshot capacity of the "SnapshotId" parameter is greater than the value of the "Size" parameter, the size of the disk is the size of the specified snapshot.
-         * -If the snapshot size of the "SnapshotId" parameter is smaller than the value of the "Size" parameter, the size of the created disk is the value of the specified "Size" parameter.
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * PerformanceLevel.
+         */
+        public Builder performanceLevel(String performanceLevel) {
+            this.putQueryParameter("PerformanceLevel", performanceLevel);
+            this.performanceLevel = performanceLevel;
+            return this;
+        }
+
+        /**
+         * ProvisionedIops.
+         */
+        public Builder provisionedIops(Long provisionedIops) {
+            this.putQueryParameter("ProvisionedIops", provisionedIops);
+            this.provisionedIops = provisionedIops;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * Size.
          */
         public Builder size(Integer size) {
             this.putQueryParameter("Size", size);
             this.size = size;
+            return this;
+        }
+
+        /**
+         * SnapshotId.
+         */
+        public Builder snapshotId(String snapshotId) {
+            this.putQueryParameter("SnapshotId", snapshotId);
+            this.snapshotId = snapshotId;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
+
+        /**
+         * StorageClusterId.
+         */
+        public Builder storageClusterId(String storageClusterId) {
+            this.putQueryParameter("StorageClusterId", storageClusterId);
+            this.storageClusterId = storageClusterId;
+            return this;
+        }
+
+        /**
+         * StorageSetId.
+         */
+        public Builder storageSetId(String storageSetId) {
+            this.putQueryParameter("StorageSetId", storageSetId);
+            this.storageSetId = storageSetId;
+            return this;
+        }
+
+        /**
+         * StorageSetPartitionNumber.
+         */
+        public Builder storageSetPartitionNumber(Integer storageSetPartitionNumber) {
+            this.putQueryParameter("StorageSetPartitionNumber", storageSetPartitionNumber);
+            this.storageSetPartitionNumber = storageSetPartitionNumber;
+            return this;
+        }
+
+        /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
+         * ZoneId.
+         */
+        public Builder zoneId(String zoneId) {
+            this.putQueryParameter("ZoneId", zoneId);
+            this.zoneId = zoneId;
             return this;
         }
 
@@ -771,8 +692,89 @@ public class CreateDiskRequest extends Request {
 
     } 
 
+    public static class Arn extends TeaModel {
+        @NameInMap("AssumeRoleFor")
+        private Long assumeRoleFor;
+
+        @NameInMap("RoleType")
+        private String roleType;
+
+        @NameInMap("Rolearn")
+        private String rolearn;
+
+        private Arn(Builder builder) {
+            this.assumeRoleFor = builder.assumeRoleFor;
+            this.roleType = builder.roleType;
+            this.rolearn = builder.rolearn;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Arn create() {
+            return builder().build();
+        }
+
+        /**
+         * @return assumeRoleFor
+         */
+        public Long getAssumeRoleFor() {
+            return this.assumeRoleFor;
+        }
+
+        /**
+         * @return roleType
+         */
+        public String getRoleType() {
+            return this.roleType;
+        }
+
+        /**
+         * @return rolearn
+         */
+        public String getRolearn() {
+            return this.rolearn;
+        }
+
+        public static final class Builder {
+            private Long assumeRoleFor; 
+            private String roleType; 
+            private String rolearn; 
+
+            /**
+             * AssumeRoleFor.
+             */
+            public Builder assumeRoleFor(Long assumeRoleFor) {
+                this.assumeRoleFor = assumeRoleFor;
+                return this;
+            }
+
+            /**
+             * RoleType.
+             */
+            public Builder roleType(String roleType) {
+                this.roleType = roleType;
+                return this;
+            }
+
+            /**
+             * Rolearn.
+             */
+            public Builder rolearn(String rolearn) {
+                this.rolearn = rolearn;
+                return this;
+            }
+
+            public Arn build() {
+                return new Arn(this);
+            } 
+
+        } 
+
+    }
     public static class Tag extends TeaModel {
-        @NameInMap("key")
+        @NameInMap("Key")
         private String key;
 
         @NameInMap("Value")
@@ -810,7 +812,7 @@ public class CreateDiskRequest extends Request {
             private String value; 
 
             /**
-             * key.
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -818,7 +820,7 @@ public class CreateDiskRequest extends Request {
             }
 
             /**
-             * 云盘的标签值。N的取值范围：1~20。一旦传入该值，可以为空字符串。最多支持128个字符，不能以`acs:`开头，不能包含`http://`或者`https://`。
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -827,87 +829,6 @@ public class CreateDiskRequest extends Request {
 
             public Tag build() {
                 return new Tag(this);
-            } 
-
-        } 
-
-    }
-    public static class Arn extends TeaModel {
-        @NameInMap("RoleType")
-        private String roleType;
-
-        @NameInMap("Rolearn")
-        private String rolearn;
-
-        @NameInMap("AssumeRoleFor")
-        private Long assumeRoleFor;
-
-        private Arn(Builder builder) {
-            this.roleType = builder.roleType;
-            this.rolearn = builder.rolearn;
-            this.assumeRoleFor = builder.assumeRoleFor;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Arn create() {
-            return builder().build();
-        }
-
-        /**
-         * @return roleType
-         */
-        public String getRoleType() {
-            return this.roleType;
-        }
-
-        /**
-         * @return rolearn
-         */
-        public String getRolearn() {
-            return this.rolearn;
-        }
-
-        /**
-         * @return assumeRoleFor
-         */
-        public Long getAssumeRoleFor() {
-            return this.assumeRoleFor;
-        }
-
-        public static final class Builder {
-            private String roleType; 
-            private String rolearn; 
-            private Long assumeRoleFor; 
-
-            /**
-             * RoleType.
-             */
-            public Builder roleType(String roleType) {
-                this.roleType = roleType;
-                return this;
-            }
-
-            /**
-             * Rolearn.
-             */
-            public Builder rolearn(String rolearn) {
-                this.rolearn = rolearn;
-                return this;
-            }
-
-            /**
-             * AssumeRoleFor.
-             */
-            public Builder assumeRoleFor(Long assumeRoleFor) {
-                this.assumeRoleFor = assumeRoleFor;
-                return this;
-            }
-
-            public Arn build() {
-                return new Arn(this);
             } 
 
         } 

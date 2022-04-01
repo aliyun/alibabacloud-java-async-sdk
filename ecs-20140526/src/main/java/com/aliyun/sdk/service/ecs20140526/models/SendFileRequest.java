@@ -12,49 +12,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SendFileRequest</p>
  */
 public class SendFileRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
-    @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
-
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
-    private String name;
-
-    @Query
-    @NameInMap("Description")
-    private String description;
-
-    @Query
-    @NameInMap("Timeout")
-    private Long timeout;
-
-    @Query
-    @NameInMap("ContentType")
-    private String contentType;
-
-    @Query
-    @NameInMap("TargetDir")
-    @Validation(required = true)
-    private String targetDir;
-
     @Query
     @NameInMap("Content")
     @Validation(required = true)
     private String content;
 
     @Query
-    @NameInMap("FileOwner")
-    private String fileOwner;
+    @NameInMap("ContentType")
+    private String contentType;
+
+    @Query
+    @NameInMap("Description")
+    private String description;
 
     @Query
     @NameInMap("FileGroup")
@@ -65,30 +34,76 @@ public class SendFileRequest extends Request {
     private String fileMode;
 
     @Query
-    @NameInMap("Overwrite")
-    private Boolean overwrite;
+    @NameInMap("FileOwner")
+    private String fileOwner;
 
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
     private java.util.List < String > instanceId;
 
+    @Query
+    @NameInMap("Name")
+    @Validation(required = true)
+    private String name;
+
+    @Query
+    @NameInMap("Overwrite")
+    private Boolean overwrite;
+
+    @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
+
+    @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
+    @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
+    @Query
+    @NameInMap("TargetDir")
+    @Validation(required = true)
+    private String targetDir;
+
+    @Query
+    @NameInMap("Timeout")
+    private Long timeout;
+
     private SendFileRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
-        this.resourceOwnerId = builder.resourceOwnerId;
-        this.regionId = builder.regionId;
-        this.name = builder.name;
-        this.description = builder.description;
-        this.timeout = builder.timeout;
-        this.contentType = builder.contentType;
-        this.targetDir = builder.targetDir;
         this.content = builder.content;
-        this.fileOwner = builder.fileOwner;
+        this.contentType = builder.contentType;
+        this.description = builder.description;
         this.fileGroup = builder.fileGroup;
         this.fileMode = builder.fileMode;
-        this.overwrite = builder.overwrite;
+        this.fileOwner = builder.fileOwner;
         this.instanceId = builder.instanceId;
+        this.name = builder.name;
+        this.overwrite = builder.overwrite;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.sourceRegionId = builder.sourceRegionId;
+        this.targetDir = builder.targetDir;
+        this.timeout = builder.timeout;
     }
 
     public static Builder builder() {
@@ -105,45 +120,10 @@ public class SendFileRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return content
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
-     * @return resourceOwnerId
-     */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return name
-     */
-    public String getName() {
-        return this.name;
-    }
-
-    /**
-     * @return description
-     */
-    public String getDescription() {
-        return this.description;
-    }
-
-    /**
-     * @return timeout
-     */
-    public Long getTimeout() {
-        return this.timeout;
+    public String getContent() {
+        return this.content;
     }
 
     /**
@@ -154,24 +134,10 @@ public class SendFileRequest extends Request {
     }
 
     /**
-     * @return targetDir
+     * @return description
      */
-    public String getTargetDir() {
-        return this.targetDir;
-    }
-
-    /**
-     * @return content
-     */
-    public String getContent() {
-        return this.content;
-    }
-
-    /**
-     * @return fileOwner
-     */
-    public String getFileOwner() {
-        return this.fileOwner;
+    public String getDescription() {
+        return this.description;
     }
 
     /**
@@ -189,10 +155,10 @@ public class SendFileRequest extends Request {
     }
 
     /**
-     * @return overwrite
+     * @return fileOwner
      */
-    public Boolean getOverwrite() {
-        return this.overwrite;
+    public String getFileOwner() {
+        return this.fileOwner;
     }
 
     /**
@@ -202,21 +168,94 @@ public class SendFileRequest extends Request {
         return this.instanceId;
     }
 
+    /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
+    }
+
+    /**
+     * @return overwrite
+     */
+    public Boolean getOverwrite() {
+        return this.overwrite;
+    }
+
+    /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
+    /**
+     * @return targetDir
+     */
+    public String getTargetDir() {
+        return this.targetDir;
+    }
+
+    /**
+     * @return timeout
+     */
+    public Long getTimeout() {
+        return this.timeout;
+    }
+
     public static final class Builder extends Request.Builder<SendFileRequest, Builder> {
-        private String sourceRegionId; 
-        private Long resourceOwnerId; 
-        private String regionId; 
-        private String name; 
-        private String description; 
-        private Long timeout; 
-        private String contentType; 
-        private String targetDir; 
         private String content; 
-        private String fileOwner; 
+        private String contentType; 
+        private String description; 
         private String fileGroup; 
         private String fileMode; 
-        private Boolean overwrite; 
+        private String fileOwner; 
         private java.util.List < String > instanceId; 
+        private String name; 
+        private Boolean overwrite; 
+        private String ownerAccount; 
+        private Long ownerId; 
+        private String regionId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String sourceRegionId; 
+        private String targetDir; 
+        private Long timeout; 
 
         private Builder() {
             super();
@@ -224,28 +263,139 @@ public class SendFileRequest extends Request {
 
         private Builder(SendFileRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
-            this.resourceOwnerId = request.resourceOwnerId;
-            this.regionId = request.regionId;
-            this.name = request.name;
-            this.description = request.description;
-            this.timeout = request.timeout;
-            this.contentType = request.contentType;
-            this.targetDir = request.targetDir;
             this.content = request.content;
-            this.fileOwner = request.fileOwner;
+            this.contentType = request.contentType;
+            this.description = request.description;
             this.fileGroup = request.fileGroup;
             this.fileMode = request.fileMode;
-            this.overwrite = request.overwrite;
+            this.fileOwner = request.fileOwner;
             this.instanceId = request.instanceId;
+            this.name = request.name;
+            this.overwrite = request.overwrite;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceRegionId = request.sourceRegionId;
+            this.targetDir = request.targetDir;
+            this.timeout = request.timeout;
         } 
 
         /**
-         * SourceRegionId.
+         * Content.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder content(String content) {
+            this.putQueryParameter("Content", content);
+            this.content = content;
+            return this;
+        }
+
+        /**
+         * ContentType.
+         */
+        public Builder contentType(String contentType) {
+            this.putQueryParameter("ContentType", contentType);
+            this.contentType = contentType;
+            return this;
+        }
+
+        /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
+            return this;
+        }
+
+        /**
+         * FileGroup.
+         */
+        public Builder fileGroup(String fileGroup) {
+            this.putQueryParameter("FileGroup", fileGroup);
+            this.fileGroup = fileGroup;
+            return this;
+        }
+
+        /**
+         * FileMode.
+         */
+        public Builder fileMode(String fileMode) {
+            this.putQueryParameter("FileMode", fileMode);
+            this.fileMode = fileMode;
+            return this;
+        }
+
+        /**
+         * FileOwner.
+         */
+        public Builder fileOwner(String fileOwner) {
+            this.putQueryParameter("FileOwner", fileOwner);
+            this.fileOwner = fileOwner;
+            return this;
+        }
+
+        /**
+         * InstanceId.
+         */
+        public Builder instanceId(java.util.List < String > instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * Name.
+         */
+        public Builder name(String name) {
+            this.putQueryParameter("Name", name);
+            this.name = name;
+            return this;
+        }
+
+        /**
+         * Overwrite.
+         */
+        public Builder overwrite(Boolean overwrite) {
+            this.putQueryParameter("Overwrite", overwrite);
+            this.overwrite = overwrite;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
             return this;
         }
 
@@ -259,63 +409,16 @@ public class SendFileRequest extends Request {
         }
 
         /**
-         * The region ID of the target ECS instance. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
+         * SourceRegionId.
          */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 
         /**
-         * The name of the file. The full character set is supported and cannot exceed 255 characters in length.
-         */
-        public Builder name(String name) {
-            this.putQueryParameter("Name", name);
-            this.name = name;
-            return this;
-        }
-
-        /**
-         * The description. The full character set is supported and cannot exceed 512 characters in length.
-         */
-        public Builder description(String description) {
-            this.putQueryParameter("Description", description);
-            this.description = description;
-            return this;
-        }
-
-        /**
-         * The timeout period of the object to be delivered. Unit: seconds.
-         * <p>
-         * 
-         * -A timeout occurs when files cannot be delivered due to process reasons, missing modules, or missing cloud assistant clients.
-         * -When the specified timeout period is less than 10 seconds, the system automatically sets the timeout period to 10 seconds to ensure successful delivery.
-         * 
-         * Default value: 60.
-         */
-        public Builder timeout(Long timeout) {
-            this.putQueryParameter("Timeout", timeout);
-            this.timeout = timeout;
-            return this;
-        }
-
-        /**
-         * The content type of the file.
-         * <p>
-         * -PlainText: plain text.
-         * -Base64: base64-encoded.
-         * 
-         * Default value: PlainText.
-         */
-        public Builder contentType(String contentType) {
-            this.putQueryParameter("ContentType", contentType);
-            this.contentType = contentType;
-            return this;
-        }
-
-        /**
-         * Deliver the file to the Directory of the target ECS instance. If it does not exist, it is automatically created.
+         * TargetDir.
          */
         public Builder targetDir(String targetDir) {
             this.putQueryParameter("TargetDir", targetDir);
@@ -324,68 +427,11 @@ public class SendFileRequest extends Request {
         }
 
         /**
-         * The content of the file. The size of a base64-encoded file cannot exceed 32KB.
-         * <p>
-         * 
-         * -If the "ContentType" parameter is "PlainText", this field is plain text.
-         * -If the "ContentType" parameter is "Base64", this field is Base64-encoded.
+         * Timeout.
          */
-        public Builder content(String content) {
-            this.putQueryParameter("Content", content);
-            this.content = content;
-            return this;
-        }
-
-        /**
-         * The user of the file. This parameter takes effect only for Linux instances. The default value is root.
-         */
-        public Builder fileOwner(String fileOwner) {
-            this.putQueryParameter("FileOwner", fileOwner);
-            this.fileOwner = fileOwner;
-            return this;
-        }
-
-        /**
-         * The user group of the file. This parameter takes effect only for Linux instances. The default value is root.
-         */
-        public Builder fileGroup(String fileGroup) {
-            this.putQueryParameter("FileGroup", fileGroup);
-            this.fileGroup = fileGroup;
-            return this;
-        }
-
-        /**
-         * The permissions of the file. This parameter takes effect only for Linux instances and is configured in the same way as the chmod command.
-         * <p>
-         * 
-         * The default value is 0644, indicating that users have read/write permissions, and user groups and other users have read-only permissions.
-         */
-        public Builder fileMode(String fileMode) {
-            this.putQueryParameter("FileMode", fileMode);
-            this.fileMode = fileMode;
-            return this;
-        }
-
-        /**
-         * Specifies whether to overwrite an object with the same name if it already exists in the destination directory.
-         * <p>
-         * -true: overwrites.
-         * -false: The value is not overwritten.
-         * 
-         * Default value: false.
-         */
-        public Builder overwrite(Boolean overwrite) {
-            this.putQueryParameter("Overwrite", overwrite);
-            this.overwrite = overwrite;
-            return this;
-        }
-
-        /**
-         * The list of ECS instances to run the command. You can specify a maximum of 50 ECS instance IDs. Valid values of N: 1 to 50.
-         */
-        public Builder instanceId(java.util.List < String > instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
+        public Builder timeout(Long timeout) {
+            this.putQueryParameter("Timeout", timeout);
+            this.timeout = timeout;
             return this;
         }
 

@@ -12,6 +12,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCapacityReservationInstancesResponseBody</p>
  */
 public class DescribeCapacityReservationInstancesResponseBody extends TeaModel {
+    @NameInMap("CapacityReservationItem")
+    private CapacityReservationItem capacityReservationItem;
+
+    @NameInMap("MaxResults")
+    private Integer maxResults;
+
     @NameInMap("NextToken")
     private String nextToken;
 
@@ -21,18 +27,12 @@ public class DescribeCapacityReservationInstancesResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("MaxResults")
-    private Integer maxResults;
-
-    @NameInMap("CapacityReservationItem")
-    private CapacityReservationItem capacityReservationItem;
-
     private DescribeCapacityReservationInstancesResponseBody(Builder builder) {
+        this.capacityReservationItem = builder.capacityReservationItem;
+        this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.requestId = builder.requestId;
         this.totalCount = builder.totalCount;
-        this.maxResults = builder.maxResults;
-        this.capacityReservationItem = builder.capacityReservationItem;
     }
 
     public static Builder builder() {
@@ -41,6 +41,20 @@ public class DescribeCapacityReservationInstancesResponseBody extends TeaModel {
 
     public static DescribeCapacityReservationInstancesResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return capacityReservationItem
+     */
+    public CapacityReservationItem getCapacityReservationItem() {
+        return this.capacityReservationItem;
+    }
+
+    /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
     }
 
     /**
@@ -64,53 +78,23 @@ public class DescribeCapacityReservationInstancesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    /**
-     * @return maxResults
-     */
-    public Integer getMaxResults() {
-        return this.maxResults;
-    }
-
-    /**
-     * @return capacityReservationItem
-     */
-    public CapacityReservationItem getCapacityReservationItem() {
-        return this.capacityReservationItem;
-    }
-
     public static final class Builder {
+        private CapacityReservationItem capacityReservationItem; 
+        private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
-        private Integer maxResults; 
-        private CapacityReservationItem capacityReservationItem; 
 
         /**
-         * The start flag of the next query in the capacity reservation service.
+         * CapacityReservationItem.
          */
-        public Builder nextToken(String nextToken) {
-            this.nextToken = nextToken;
+        public Builder capacityReservationItem(CapacityReservationItem capacityReservationItem) {
+            this.capacityReservationItem = capacityReservationItem;
             return this;
         }
 
         /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The number of records that meet the query criteria.
-         */
-        public Builder totalCount(Integer totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-
-        /**
-         * The number of rows displayed on each page of the capacity reservation service.
+         * MaxResults.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -118,10 +102,26 @@ public class DescribeCapacityReservationInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The list of instances that have been matched by the capacity reservation service.
+         * NextToken.
          */
-        public Builder capacityReservationItem(CapacityReservationItem capacityReservationItem) {
-            this.capacityReservationItem = capacityReservationItem;
+        public Builder nextToken(String nextToken) {
+            this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
@@ -158,7 +158,7 @@ public class DescribeCapacityReservationInstancesResponseBody extends TeaModel {
             private String instanceId; 
 
             /**
-             * The ID of the instance.
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;

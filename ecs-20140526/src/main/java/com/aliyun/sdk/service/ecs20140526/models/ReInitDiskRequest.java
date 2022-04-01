@@ -12,9 +12,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ReInitDiskRequest</p>
  */
 public class ReInitDiskRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("AutoStartInstance")
+    private Boolean autoStartInstance;
+
+    @Query
+    @NameInMap("DiskId")
+    @Validation(required = true)
+    private String diskId;
+
+    @Query
+    @NameInMap("KeyPairName")
+    private String keyPairName;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -25,6 +34,10 @@ public class ReInitDiskRequest extends Request {
     private Long ownerId;
 
     @Query
+    @NameInMap("Password")
+    private String password;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -33,38 +46,25 @@ public class ReInitDiskRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
-    @NameInMap("DiskId")
-    @Validation(required = true)
-    private String diskId;
-
-    @Query
-    @NameInMap("Password")
-    private String password;
-
-    @Query
-    @NameInMap("KeyPairName")
-    private String keyPairName;
-
-    @Query
-    @NameInMap("AutoStartInstance")
-    private Boolean autoStartInstance;
-
-    @Query
     @NameInMap("SecurityEnhancementStrategy")
     private String securityEnhancementStrategy;
 
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     private ReInitDiskRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
+        this.autoStartInstance = builder.autoStartInstance;
+        this.diskId = builder.diskId;
+        this.keyPairName = builder.keyPairName;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.password = builder.password;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.diskId = builder.diskId;
-        this.password = builder.password;
-        this.keyPairName = builder.keyPairName;
-        this.autoStartInstance = builder.autoStartInstance;
         this.securityEnhancementStrategy = builder.securityEnhancementStrategy;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -81,10 +81,24 @@ public class ReInitDiskRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return autoStartInstance
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public Boolean getAutoStartInstance() {
+        return this.autoStartInstance;
+    }
+
+    /**
+     * @return diskId
+     */
+    public String getDiskId() {
+        return this.diskId;
+    }
+
+    /**
+     * @return keyPairName
+     */
+    public String getKeyPairName() {
+        return this.keyPairName;
     }
 
     /**
@@ -102,6 +116,13 @@ public class ReInitDiskRequest extends Request {
     }
 
     /**
+     * @return password
+     */
+    public String getPassword() {
+        return this.password;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -116,51 +137,30 @@ public class ReInitDiskRequest extends Request {
     }
 
     /**
-     * @return diskId
-     */
-    public String getDiskId() {
-        return this.diskId;
-    }
-
-    /**
-     * @return password
-     */
-    public String getPassword() {
-        return this.password;
-    }
-
-    /**
-     * @return keyPairName
-     */
-    public String getKeyPairName() {
-        return this.keyPairName;
-    }
-
-    /**
-     * @return autoStartInstance
-     */
-    public Boolean getAutoStartInstance() {
-        return this.autoStartInstance;
-    }
-
-    /**
      * @return securityEnhancementStrategy
      */
     public String getSecurityEnhancementStrategy() {
         return this.securityEnhancementStrategy;
     }
 
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
     public static final class Builder extends Request.Builder<ReInitDiskRequest, Builder> {
-        private String sourceRegionId; 
+        private Boolean autoStartInstance; 
+        private String diskId; 
+        private String keyPairName; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String password; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String diskId; 
-        private String password; 
-        private String keyPairName; 
-        private Boolean autoStartInstance; 
         private String securityEnhancementStrategy; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -168,24 +168,42 @@ public class ReInitDiskRequest extends Request {
 
         private Builder(ReInitDiskRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
+            this.autoStartInstance = request.autoStartInstance;
+            this.diskId = request.diskId;
+            this.keyPairName = request.keyPairName;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.password = request.password;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.diskId = request.diskId;
-            this.password = request.password;
-            this.keyPairName = request.keyPairName;
-            this.autoStartInstance = request.autoStartInstance;
             this.securityEnhancementStrategy = request.securityEnhancementStrategy;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
-         * SourceRegionId.
+         * AutoStartInstance.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder autoStartInstance(Boolean autoStartInstance) {
+            this.putQueryParameter("AutoStartInstance", autoStartInstance);
+            this.autoStartInstance = autoStartInstance;
+            return this;
+        }
+
+        /**
+         * DiskId.
+         */
+        public Builder diskId(String diskId) {
+            this.putQueryParameter("DiskId", diskId);
+            this.diskId = diskId;
+            return this;
+        }
+
+        /**
+         * KeyPairName.
+         */
+        public Builder keyPairName(String keyPairName) {
+            this.putQueryParameter("KeyPairName", keyPairName);
+            this.keyPairName = keyPairName;
             return this;
         }
 
@@ -199,7 +217,7 @@ public class ReInitDiskRequest extends Request {
         }
 
         /**
-         * The ID of the RAM user.
+         * OwnerId.
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -208,43 +226,7 @@ public class ReInitDiskRequest extends Request {
         }
 
         /**
-         * The account name of the resource master account.
-         */
-        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
-            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-            this.resourceOwnerAccount = resourceOwnerAccount;
-            return this;
-        }
-
-        /**
-         * The ID of the resource master account, that is, the UID.
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * The ID of the cloud disk.
-         */
-        public Builder diskId(String diskId) {
-            this.putQueryParameter("DiskId", diskId);
-            this.diskId = diskId;
-            return this;
-        }
-
-        /**
-         * Specifies whether to reset the username and password of the ECS instance when the system disk is reinitialized. The description must be 8 to 30 characters in length and must contain letters, digits, and special characters. Special symbols can be:
-         * <p>
-         * 
-         * """
-         * ()"~! @%& *-_+ =} [],.?/
-         * """
-         * 
-         * The Windows instance cannot start with a slash (/).
-         * 
-         * > If the "Password" parameter is specified, we recommend that you send requests over HTTPS to avoid password leakage.
+         * Password.
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -253,42 +235,38 @@ public class ReInitDiskRequest extends Request {
         }
 
         /**
-         * The name of the key pair.
-         * <p>
-         * 
-         * > This parameter applies only to Linux instances. When you reinitialize the system disk, you can bind an SSH key pair to the ECS instance as the logon credential. After an SSH key pair is used, the logon credential for the username and password is disabled.
+         * ResourceOwnerAccount.
          */
-        public Builder keyPairName(String keyPairName) {
-            this.putQueryParameter("KeyPairName", keyPairName);
-            this.keyPairName = keyPairName;
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
             return this;
         }
 
         /**
-         * Indicates whether the instance is automatically started after the disk is reinitialized.
-         * <p>
-         * 
-         * Default value: false
+         * ResourceOwnerId.
          */
-        public Builder autoStartInstance(Boolean autoStartInstance) {
-            this.putQueryParameter("AutoStartInstance", autoStartInstance);
-            this.autoStartInstance = autoStartInstance;
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
             return this;
         }
 
         /**
-         * If the specified cloud disk is a system disk, whether to use security center for free after the cloud disk is reinitialized. Valid values:
-         * <p>
-         * 
-         * -Active: used. This value only supports public images.
-         * 
-         * -Deactive: not used. This value supports all images.
-         * 
-         * Default value: Deactive
+         * SecurityEnhancementStrategy.
          */
         public Builder securityEnhancementStrategy(String securityEnhancementStrategy) {
             this.putQueryParameter("SecurityEnhancementStrategy", securityEnhancementStrategy);
             this.securityEnhancementStrategy = securityEnhancementStrategy;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

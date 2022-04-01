@@ -12,13 +12,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDedicatedHostTypesRequest</p>
  */
 public class DescribeDedicatedHostTypesRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("DedicatedHostType")
+    private String dedicatedHostType;
+
+    @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
 
     @Query
     @NameInMap("OwnerId")
     private Long ownerId;
+
+    @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
 
     @Query
     @NameInMap("ResourceOwnerAccount")
@@ -28,33 +37,24 @@ public class DescribeDedicatedHostTypesRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("OwnerAccount")
-    private String ownerAccount;
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     @Query
     @NameInMap("SupportedInstanceTypeFamily")
     private String supportedInstanceTypeFamily;
 
-    @Query
-    @NameInMap("DedicatedHostType")
-    private String dedicatedHostType;
-
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     private DescribeDedicatedHostTypesRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
+        this.dedicatedHostType = builder.dedicatedHostType;
+        this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.ownerAccount = builder.ownerAccount;
+        this.sourceRegionId = builder.sourceRegionId;
         this.supportedInstanceTypeFamily = builder.supportedInstanceTypeFamily;
-        this.dedicatedHostType = builder.dedicatedHostType;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -71,10 +71,17 @@ public class DescribeDedicatedHostTypesRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return dedicatedHostType
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getDedicatedHostType() {
+        return this.dedicatedHostType;
+    }
+
+    /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     /**
@@ -82,6 +89,13 @@ public class DescribeDedicatedHostTypesRequest extends Request {
      */
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -99,10 +113,10 @@ public class DescribeDedicatedHostTypesRequest extends Request {
     }
 
     /**
-     * @return ownerAccount
+     * @return sourceRegionId
      */
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -112,29 +126,15 @@ public class DescribeDedicatedHostTypesRequest extends Request {
         return this.supportedInstanceTypeFamily;
     }
 
-    /**
-     * @return dedicatedHostType
-     */
-    public String getDedicatedHostType() {
-        return this.dedicatedHostType;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<DescribeDedicatedHostTypesRequest, Builder> {
-        private String sourceRegionId; 
+        private String dedicatedHostType; 
+        private String ownerAccount; 
         private Long ownerId; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String ownerAccount; 
+        private String sourceRegionId; 
         private String supportedInstanceTypeFamily; 
-        private String dedicatedHostType; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -142,22 +142,31 @@ public class DescribeDedicatedHostTypesRequest extends Request {
 
         private Builder(DescribeDedicatedHostTypesRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
+            this.dedicatedHostType = request.dedicatedHostType;
+            this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.ownerAccount = request.ownerAccount;
+            this.sourceRegionId = request.sourceRegionId;
             this.supportedInstanceTypeFamily = request.supportedInstanceTypeFamily;
-            this.dedicatedHostType = request.dedicatedHostType;
-            this.regionId = request.regionId;
         } 
 
         /**
-         * SourceRegionId.
+         * DedicatedHostType.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder dedicatedHostType(String dedicatedHostType) {
+            this.putQueryParameter("DedicatedHostType", dedicatedHostType);
+            this.dedicatedHostType = dedicatedHostType;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
             return this;
         }
 
@@ -167,6 +176,15 @@ public class DescribeDedicatedHostTypesRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
@@ -189,38 +207,20 @@ public class DescribeDedicatedHostTypesRequest extends Request {
         }
 
         /**
-         * OwnerAccount.
+         * SourceRegionId.
          */
-        public Builder ownerAccount(String ownerAccount) {
-            this.putQueryParameter("OwnerAccount", ownerAccount);
-            this.ownerAccount = ownerAccount;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 
         /**
-         * The ECS instance type families supported by the dedicated host.
+         * SupportedInstanceTypeFamily.
          */
         public Builder supportedInstanceTypeFamily(String supportedInstanceTypeFamily) {
             this.putQueryParameter("SupportedInstanceTypeFamily", supportedInstanceTypeFamily);
             this.supportedInstanceTypeFamily = supportedInstanceTypeFamily;
-            return this;
-        }
-
-        /**
-         * The type of the dedicated host. For more information, see [host specifications](~~ 68564 ~~).
-         */
-        public Builder dedicatedHostType(String dedicatedHostType) {
-            this.putQueryParameter("DedicatedHostType", dedicatedHostType);
-            this.dedicatedHostType = dedicatedHostType;
-            return this;
-        }
-
-        /**
-         * The region ID of the dedicated host. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

@@ -12,27 +12,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeStorageSetsResponseBody</p>
  */
 public class DescribeStorageSetsResponseBody extends TeaModel {
+    @NameInMap("PageNumber")
+    private Integer pageNumber;
+
     @NameInMap("PageSize")
     private Integer pageSize;
 
     @NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("PageNumber")
-    private Integer pageNumber;
+    @NameInMap("StorageSets")
+    private StorageSets storageSets;
 
     @NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("StorageSets")
-    private StorageSets storageSets;
-
     private DescribeStorageSetsResponseBody(Builder builder) {
+        this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
-        this.pageNumber = builder.pageNumber;
-        this.totalCount = builder.totalCount;
         this.storageSets = builder.storageSets;
+        this.totalCount = builder.totalCount;
     }
 
     public static Builder builder() {
@@ -41,6 +41,13 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
 
     public static DescribeStorageSetsResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     /**
@@ -58,10 +65,10 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
     }
 
     /**
-     * @return pageNumber
+     * @return storageSets
      */
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public StorageSets getStorageSets() {
+        return this.storageSets;
     }
 
     /**
@@ -71,38 +78,15 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    /**
-     * @return storageSets
-     */
-    public StorageSets getStorageSets() {
-        return this.storageSets;
-    }
-
     public static final class Builder {
+        private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private Integer pageNumber; 
-        private Integer totalCount; 
         private StorageSets storageSets; 
+        private Integer totalCount; 
 
         /**
-         * The number of entries returned per page.
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The page number of the bucket list.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -110,18 +94,34 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of buckets.
+         * PageSize.
          */
-        public Builder totalCount(Integer totalCount) {
-            this.totalCount = totalCount;
+        public Builder pageSize(Integer pageSize) {
+            this.pageSize = pageSize;
             return this;
         }
 
         /**
-         * An array consisting of StorageSet.
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * StorageSets.
          */
         public Builder storageSets(StorageSets storageSets) {
             this.storageSets = storageSets;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
@@ -138,29 +138,29 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
         @NameInMap("Description")
         private String description;
 
-        @NameInMap("ZoneId")
-        private String zoneId;
+        @NameInMap("RegionId")
+        private String regionId;
 
         @NameInMap("StorageSetId")
         private String storageSetId;
 
-        @NameInMap("StorageSetPartitionNumber")
-        private Integer storageSetPartitionNumber;
-
         @NameInMap("StorageSetName")
         private String storageSetName;
 
-        @NameInMap("RegionId")
-        private String regionId;
+        @NameInMap("StorageSetPartitionNumber")
+        private Integer storageSetPartitionNumber;
+
+        @NameInMap("ZoneId")
+        private String zoneId;
 
         private StorageSet(Builder builder) {
             this.creationTime = builder.creationTime;
             this.description = builder.description;
-            this.zoneId = builder.zoneId;
-            this.storageSetId = builder.storageSetId;
-            this.storageSetPartitionNumber = builder.storageSetPartitionNumber;
-            this.storageSetName = builder.storageSetName;
             this.regionId = builder.regionId;
+            this.storageSetId = builder.storageSetId;
+            this.storageSetName = builder.storageSetName;
+            this.storageSetPartitionNumber = builder.storageSetPartitionNumber;
+            this.zoneId = builder.zoneId;
         }
 
         public static Builder builder() {
@@ -186,10 +186,10 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
         }
 
         /**
-         * @return zoneId
+         * @return regionId
          */
-        public String getZoneId() {
-            return this.zoneId;
+        public String getRegionId() {
+            return this.regionId;
         }
 
         /**
@@ -200,13 +200,6 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
         }
 
         /**
-         * @return storageSetPartitionNumber
-         */
-        public Integer getStorageSetPartitionNumber() {
-            return this.storageSetPartitionNumber;
-        }
-
-        /**
          * @return storageSetName
          */
         public String getStorageSetName() {
@@ -214,23 +207,30 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
         }
 
         /**
-         * @return regionId
+         * @return storageSetPartitionNumber
          */
-        public String getRegionId() {
-            return this.regionId;
+        public Integer getStorageSetPartitionNumber() {
+            return this.storageSetPartitionNumber;
+        }
+
+        /**
+         * @return zoneId
+         */
+        public String getZoneId() {
+            return this.zoneId;
         }
 
         public static final class Builder {
             private String creationTime; 
             private String description; 
-            private String zoneId; 
-            private String storageSetId; 
-            private Integer storageSetPartitionNumber; 
-            private String storageSetName; 
             private String regionId; 
+            private String storageSetId; 
+            private String storageSetName; 
+            private Integer storageSetPartitionNumber; 
+            private String zoneId; 
 
             /**
-             * The time when the storage set was created.
+             * CreationTime.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -238,7 +238,7 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the storage set.
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -246,15 +246,15 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone to which the bucket belongs.
+             * RegionId.
              */
-            public Builder zoneId(String zoneId) {
-                this.zoneId = zoneId;
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
                 return this;
             }
 
             /**
-             * The ID of the storage set.
+             * StorageSetId.
              */
             public Builder storageSetId(String storageSetId) {
                 this.storageSetId = storageSetId;
@@ -262,15 +262,7 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of partitions supported by a storage set.
-             */
-            public Builder storageSetPartitionNumber(Integer storageSetPartitionNumber) {
-                this.storageSetPartitionNumber = storageSetPartitionNumber;
-                return this;
-            }
-
-            /**
-             * The name of the storage set.
+             * StorageSetName.
              */
             public Builder storageSetName(String storageSetName) {
                 this.storageSetName = storageSetName;
@@ -278,10 +270,18 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region to which the bucket belongs.
+             * StorageSetPartitionNumber.
              */
-            public Builder regionId(String regionId) {
-                this.regionId = regionId;
+            public Builder storageSetPartitionNumber(Integer storageSetPartitionNumber) {
+                this.storageSetPartitionNumber = storageSetPartitionNumber;
+                return this;
+            }
+
+            /**
+             * ZoneId.
+             */
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
                 return this;
             }
 

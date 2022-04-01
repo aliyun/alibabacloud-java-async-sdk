@@ -13,28 +13,29 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeImagePipelinesRequest extends Request {
     @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
-
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @NameInMap("ImagePipelineId")
+    private java.util.List < String > imagePipelineId;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
+    @NameInMap("MaxResults")
+    @Validation(maximum = 500, minimum = 1)
+    private Integer maxResults;
 
     @Query
-    @NameInMap("ResourceOwnerAccount")
-    private String resourceOwnerAccount;
+    @NameInMap("Name")
+    private String name;
 
     @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
+    @NameInMap("NextToken")
+    private String nextToken;
 
     @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
+
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
 
     @Query
     @NameInMap("RegionId")
@@ -46,36 +47,35 @@ public class DescribeImagePipelinesRequest extends Request {
     private String resourceGroupId;
 
     @Query
-    @NameInMap("Name")
-    private String name;
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
 
     @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 500, minimum = 1)
-    private Integer maxResults;
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     @Query
-    @NameInMap("NextToken")
-    private String nextToken;
-
-    @Query
-    @NameInMap("ImagePipelineId")
-    private java.util.List < String > imagePipelineId;
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
 
     private DescribeImagePipelinesRequest(Builder builder) {
         super(builder);
-        this.tag = builder.tag;
-        this.sourceRegionId = builder.sourceRegionId;
-        this.ownerId = builder.ownerId;
-        this.resourceOwnerAccount = builder.resourceOwnerAccount;
-        this.resourceOwnerId = builder.resourceOwnerId;
+        this.imagePipelineId = builder.imagePipelineId;
+        this.maxResults = builder.maxResults;
+        this.name = builder.name;
+        this.nextToken = builder.nextToken;
         this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
-        this.name = builder.name;
-        this.maxResults = builder.maxResults;
-        this.nextToken = builder.nextToken;
-        this.imagePipelineId = builder.imagePipelineId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.sourceRegionId = builder.sourceRegionId;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -92,38 +92,31 @@ public class DescribeImagePipelinesRequest extends Request {
     }
 
     /**
-     * @return tag
+     * @return imagePipelineId
      */
-    public java.util.List < Tag> getTag() {
-        return this.tag;
+    public java.util.List < String > getImagePipelineId() {
+        return this.imagePipelineId;
     }
 
     /**
-     * @return sourceRegionId
+     * @return maxResults
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public Integer getMaxResults() {
+        return this.maxResults;
     }
 
     /**
-     * @return ownerId
+     * @return name
      */
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getName() {
+        return this.name;
     }
 
     /**
-     * @return resourceOwnerAccount
+     * @return nextToken
      */
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    /**
-     * @return resourceOwnerId
-     */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -131,6 +124,13 @@ public class DescribeImagePipelinesRequest extends Request {
      */
     public String getOwnerAccount() {
         return this.ownerAccount;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     /**
@@ -148,46 +148,46 @@ public class DescribeImagePipelinesRequest extends Request {
     }
 
     /**
-     * @return name
+     * @return resourceOwnerAccount
      */
-    public String getName() {
-        return this.name;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
     }
 
     /**
-     * @return maxResults
+     * @return resourceOwnerId
      */
-    public Integer getMaxResults() {
-        return this.maxResults;
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     /**
-     * @return nextToken
+     * @return sourceRegionId
      */
-    public String getNextToken() {
-        return this.nextToken;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
-     * @return imagePipelineId
+     * @return tag
      */
-    public java.util.List < String > getImagePipelineId() {
-        return this.imagePipelineId;
+    public java.util.List < Tag> getTag() {
+        return this.tag;
     }
 
     public static final class Builder extends Request.Builder<DescribeImagePipelinesRequest, Builder> {
-        private java.util.List < Tag> tag; 
-        private String sourceRegionId; 
-        private Long ownerId; 
-        private String resourceOwnerAccount; 
-        private Long resourceOwnerId; 
+        private java.util.List < String > imagePipelineId; 
+        private Integer maxResults; 
+        private String name; 
+        private String nextToken; 
         private String ownerAccount; 
+        private Long ownerId; 
         private String regionId; 
         private String resourceGroupId; 
-        private String name; 
-        private Integer maxResults; 
-        private String nextToken; 
-        private java.util.List < String > imagePipelineId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String sourceRegionId; 
+        private java.util.List < Tag> tag; 
 
         private Builder() {
             super();
@@ -195,35 +195,62 @@ public class DescribeImagePipelinesRequest extends Request {
 
         private Builder(DescribeImagePipelinesRequest request) {
             super(request);
-            this.tag = request.tag;
-            this.sourceRegionId = request.sourceRegionId;
-            this.ownerId = request.ownerId;
-            this.resourceOwnerAccount = request.resourceOwnerAccount;
-            this.resourceOwnerId = request.resourceOwnerId;
+            this.imagePipelineId = request.imagePipelineId;
+            this.maxResults = request.maxResults;
+            this.name = request.name;
+            this.nextToken = request.nextToken;
             this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
-            this.name = request.name;
-            this.maxResults = request.maxResults;
-            this.nextToken = request.nextToken;
-            this.imagePipelineId = request.imagePipelineId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceRegionId = request.sourceRegionId;
+            this.tag = request.tag;
         } 
 
         /**
-         * Tag.
+         * ImagePipelineId.
          */
-        public Builder tag(java.util.List < Tag> tag) {
-            this.putQueryParameter("Tag", tag);
-            this.tag = tag;
+        public Builder imagePipelineId(java.util.List < String > imagePipelineId) {
+            this.putQueryParameter("ImagePipelineId", imagePipelineId);
+            this.imagePipelineId = imagePipelineId;
             return this;
         }
 
         /**
-         * SourceRegionId.
+         * MaxResults.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder maxResults(Integer maxResults) {
+            this.putQueryParameter("MaxResults", maxResults);
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * Name.
+         */
+        public Builder name(String name) {
+            this.putQueryParameter("Name", name);
+            this.name = name;
+            return this;
+        }
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
             return this;
         }
 
@@ -233,6 +260,24 @@ public class DescribeImagePipelinesRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 
@@ -255,68 +300,20 @@ public class DescribeImagePipelinesRequest extends Request {
         }
 
         /**
-         * OwnerAccount.
+         * SourceRegionId.
          */
-        public Builder ownerAccount(String ownerAccount) {
-            this.putQueryParameter("OwnerAccount", ownerAccount);
-            this.ownerAccount = ownerAccount;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 
         /**
-         * The ID of the region to which the instance belongs. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
+         * Tag.
          */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The ID of the enterprise resource group.
-         */
-        public Builder resourceGroupId(String resourceGroupId) {
-            this.putQueryParameter("ResourceGroupId", resourceGroupId);
-            this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-
-        /**
-         * The name of the template.
-         */
-        public Builder name(String name) {
-            this.putQueryParameter("Name", name);
-            this.name = name;
-            return this;
-        }
-
-        /**
-         * The number of entries to return on each page. Valid values: 1 to 500.
-         * <p>
-         * 
-         * Default value: 50.
-         */
-        public Builder maxResults(Integer maxResults) {
-            this.putQueryParameter("MaxResults", maxResults);
-            this.maxResults = maxResults;
-            return this;
-        }
-
-        /**
-         * Query the credential (Token). The value is the value of the "NextToken" parameter returned by the last call to the API. You do not need to set this parameter when you call the API for the first time.
-         */
-        public Builder nextToken(String nextToken) {
-            this.putQueryParameter("NextToken", nextToken);
-            this.nextToken = nextToken;
-            return this;
-        }
-
-        /**
-         * The ID of the image template. Valid values of N: 1 to 20.
-         */
-        public Builder imagePipelineId(java.util.List < String > imagePipelineId) {
-            this.putQueryParameter("ImagePipelineId", imagePipelineId);
-            this.imagePipelineId = imagePipelineId;
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
             return this;
         }
 
@@ -366,7 +363,7 @@ public class DescribeImagePipelinesRequest extends Request {
             private String value; 
 
             /**
-             * 标签键。N的取值范围：1~20
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -374,7 +371,7 @@ public class DescribeImagePipelinesRequest extends Request {
             }
 
             /**
-             * 标签值。N的取值范围：1~20
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -12,9 +12,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyDeploymentSetAttributeRequest</p>
  */
 public class ModifyDeploymentSetAttributeRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("DeploymentSetId")
+    @Validation(required = true)
+    private String deploymentSetId;
+
+    @Query
+    @NameInMap("DeploymentSetName")
+    private String deploymentSetName;
+
+    @Query
+    @NameInMap("Description")
+    private String description;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -25,6 +34,11 @@ public class ModifyDeploymentSetAttributeRequest extends Request {
     private Long ownerId;
 
     @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -32,35 +46,21 @@ public class ModifyDeploymentSetAttributeRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("DeploymentSetId")
-    @Validation(required = true)
-    private String deploymentSetId;
-
-    @Query
-    @NameInMap("Description")
-    private String description;
-
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
-    @Query
-    @NameInMap("DeploymentSetName")
-    private String deploymentSetName;
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     private ModifyDeploymentSetAttributeRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
+        this.deploymentSetId = builder.deploymentSetId;
+        this.deploymentSetName = builder.deploymentSetName;
+        this.description = builder.description;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.deploymentSetId = builder.deploymentSetId;
-        this.description = builder.description;
-        this.regionId = builder.regionId;
-        this.deploymentSetName = builder.deploymentSetName;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -77,10 +77,24 @@ public class ModifyDeploymentSetAttributeRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return deploymentSetId
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getDeploymentSetId() {
+        return this.deploymentSetId;
+    }
+
+    /**
+     * @return deploymentSetName
+     */
+    public String getDeploymentSetName() {
+        return this.deploymentSetName;
+    }
+
+    /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
     }
 
     /**
@@ -98,6 +112,13 @@ public class ModifyDeploymentSetAttributeRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -112,43 +133,22 @@ public class ModifyDeploymentSetAttributeRequest extends Request {
     }
 
     /**
-     * @return deploymentSetId
+     * @return sourceRegionId
      */
-    public String getDeploymentSetId() {
-        return this.deploymentSetId;
-    }
-
-    /**
-     * @return description
-     */
-    public String getDescription() {
-        return this.description;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return deploymentSetName
-     */
-    public String getDeploymentSetName() {
-        return this.deploymentSetName;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public static final class Builder extends Request.Builder<ModifyDeploymentSetAttributeRequest, Builder> {
-        private String sourceRegionId; 
+        private String deploymentSetId; 
+        private String deploymentSetName; 
+        private String description; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String deploymentSetId; 
-        private String description; 
-        private String regionId; 
-        private String deploymentSetName; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -156,23 +156,41 @@ public class ModifyDeploymentSetAttributeRequest extends Request {
 
         private Builder(ModifyDeploymentSetAttributeRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
+            this.deploymentSetId = request.deploymentSetId;
+            this.deploymentSetName = request.deploymentSetName;
+            this.description = request.description;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.deploymentSetId = request.deploymentSetId;
-            this.description = request.description;
-            this.regionId = request.regionId;
-            this.deploymentSetName = request.deploymentSetName;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
-         * SourceRegionId.
+         * DeploymentSetId.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder deploymentSetId(String deploymentSetId) {
+            this.putQueryParameter("DeploymentSetId", deploymentSetId);
+            this.deploymentSetId = deploymentSetId;
+            return this;
+        }
+
+        /**
+         * DeploymentSetName.
+         */
+        public Builder deploymentSetName(String deploymentSetName) {
+            this.putQueryParameter("DeploymentSetName", deploymentSetName);
+            this.deploymentSetName = deploymentSetName;
+            return this;
+        }
+
+        /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
             return this;
         }
 
@@ -186,7 +204,7 @@ public class ModifyDeploymentSetAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the RAM user.
+         * OwnerId.
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -195,43 +213,7 @@ public class ModifyDeploymentSetAttributeRequest extends Request {
         }
 
         /**
-         * The account name of the resource master account.
-         */
-        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
-            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-            this.resourceOwnerAccount = resourceOwnerAccount;
-            return this;
-        }
-
-        /**
-         * The ID of the resource master account, that is, the UID.
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * The ID of the deployment set.
-         */
-        public Builder deploymentSetId(String deploymentSetId) {
-            this.putQueryParameter("DeploymentSetId", deploymentSetId);
-            this.deploymentSetId = deploymentSetId;
-            return this;
-        }
-
-        /**
-         * The description of the new deployment set. The description must be 2 to 256 characters in length and cannot start with http:// or https.
-         */
-        public Builder description(String description) {
-            this.putQueryParameter("Description", description);
-            this.description = description;
-            return this;
-        }
-
-        /**
-         * The ID of the region to which the deployment set belongs. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -240,11 +222,29 @@ public class ModifyDeploymentSetAttributeRequest extends Request {
         }
 
         /**
-         * The name of the new deployment set. The description must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https. It can contain numbers, colons (:), underscores (_), and hyphens (-).
+         * ResourceOwnerAccount.
          */
-        public Builder deploymentSetName(String deploymentSetName) {
-            this.putQueryParameter("DeploymentSetName", deploymentSetName);
-            this.deploymentSetName = deploymentSetName;
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

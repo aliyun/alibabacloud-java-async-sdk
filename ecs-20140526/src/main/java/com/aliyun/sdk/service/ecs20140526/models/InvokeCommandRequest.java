@@ -12,34 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>InvokeCommandRequest</p>
  */
 public class InvokeCommandRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
-
-    @Query
-    @NameInMap("RegionId")
+    @NameInMap("CommandId")
     @Validation(required = true)
-    private String regionId;
-
-    @Query
-    @NameInMap("Timed")
-    private Boolean timed;
+    private String commandId;
 
     @Query
     @NameInMap("Frequency")
     private String frequency;
-
-    @Query
-    @NameInMap("Parameters")
-    private java.util.Map < String, ? > parameters;
-
-    @Query
-    @NameInMap("Username")
-    private String username;
 
     @Query
     @NameInMap("InstanceId")
@@ -47,13 +27,45 @@ public class InvokeCommandRequest extends Request {
     private java.util.List < String > instanceId;
 
     @Query
-    @NameInMap("CommandId")
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
+
+    @Query
+    @NameInMap("Parameters")
+    private java.util.Map < String, ? > parameters;
+
+    @Query
+    @NameInMap("RegionId")
     @Validation(required = true)
-    private String commandId;
+    private String regionId;
 
     @Query
     @NameInMap("RepeatMode")
     private String repeatMode;
+
+    @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
+    @Query
+    @NameInMap("Timed")
+    private Boolean timed;
+
+    @Query
+    @NameInMap("Username")
+    private String username;
 
     @Query
     @NameInMap("WindowsPasswordName")
@@ -61,16 +73,19 @@ public class InvokeCommandRequest extends Request {
 
     private InvokeCommandRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
-        this.resourceOwnerId = builder.resourceOwnerId;
-        this.regionId = builder.regionId;
-        this.timed = builder.timed;
-        this.frequency = builder.frequency;
-        this.parameters = builder.parameters;
-        this.username = builder.username;
-        this.instanceId = builder.instanceId;
         this.commandId = builder.commandId;
+        this.frequency = builder.frequency;
+        this.instanceId = builder.instanceId;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
+        this.parameters = builder.parameters;
+        this.regionId = builder.regionId;
         this.repeatMode = builder.repeatMode;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.sourceRegionId = builder.sourceRegionId;
+        this.timed = builder.timed;
+        this.username = builder.username;
         this.windowsPasswordName = builder.windowsPasswordName;
     }
 
@@ -88,31 +103,10 @@ public class InvokeCommandRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return commandId
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
-     * @return resourceOwnerId
-     */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return timed
-     */
-    public Boolean getTimed() {
-        return this.timed;
+    public String getCommandId() {
+        return this.commandId;
     }
 
     /**
@@ -123,20 +117,6 @@ public class InvokeCommandRequest extends Request {
     }
 
     /**
-     * @return parameters
-     */
-    public java.util.Map < String, ? > getParameters() {
-        return this.parameters;
-    }
-
-    /**
-     * @return username
-     */
-    public String getUsername() {
-        return this.username;
-    }
-
-    /**
      * @return instanceId
      */
     public java.util.List < String > getInstanceId() {
@@ -144,10 +124,31 @@ public class InvokeCommandRequest extends Request {
     }
 
     /**
-     * @return commandId
+     * @return ownerAccount
      */
-    public String getCommandId() {
-        return this.commandId;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
+     * @return parameters
+     */
+    public java.util.Map < String, ? > getParameters() {
+        return this.parameters;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -158,6 +159,41 @@ public class InvokeCommandRequest extends Request {
     }
 
     /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
+    /**
+     * @return timed
+     */
+    public Boolean getTimed() {
+        return this.timed;
+    }
+
+    /**
+     * @return username
+     */
+    public String getUsername() {
+        return this.username;
+    }
+
+    /**
      * @return windowsPasswordName
      */
     public String getWindowsPasswordName() {
@@ -165,16 +201,19 @@ public class InvokeCommandRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<InvokeCommandRequest, Builder> {
-        private String sourceRegionId; 
-        private Long resourceOwnerId; 
-        private String regionId; 
-        private Boolean timed; 
-        private String frequency; 
-        private java.util.Map < String, ? > parameters; 
-        private String username; 
-        private java.util.List < String > instanceId; 
         private String commandId; 
+        private String frequency; 
+        private java.util.List < String > instanceId; 
+        private String ownerAccount; 
+        private Long ownerId; 
+        private java.util.Map < String, ? > parameters; 
+        private String regionId; 
         private String repeatMode; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String sourceRegionId; 
+        private Boolean timed; 
+        private String username; 
         private String windowsPasswordName; 
 
         private Builder() {
@@ -183,25 +222,101 @@ public class InvokeCommandRequest extends Request {
 
         private Builder(InvokeCommandRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
-            this.resourceOwnerId = request.resourceOwnerId;
-            this.regionId = request.regionId;
-            this.timed = request.timed;
-            this.frequency = request.frequency;
-            this.parameters = request.parameters;
-            this.username = request.username;
-            this.instanceId = request.instanceId;
             this.commandId = request.commandId;
+            this.frequency = request.frequency;
+            this.instanceId = request.instanceId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.parameters = request.parameters;
+            this.regionId = request.regionId;
             this.repeatMode = request.repeatMode;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceRegionId = request.sourceRegionId;
+            this.timed = request.timed;
+            this.username = request.username;
             this.windowsPasswordName = request.windowsPasswordName;
         } 
 
         /**
-         * SourceRegionId.
+         * CommandId.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder commandId(String commandId) {
+            this.putQueryParameter("CommandId", commandId);
+            this.commandId = commandId;
+            return this;
+        }
+
+        /**
+         * Frequency.
+         */
+        public Builder frequency(String frequency) {
+            this.putQueryParameter("Frequency", frequency);
+            this.frequency = frequency;
+            return this;
+        }
+
+        /**
+         * InstanceId.
+         */
+        public Builder instanceId(java.util.List < String > instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * Parameters.
+         */
+        public Builder parameters(java.util.Map < String, ? > parameters) {
+            String parametersShrink = shrink(parameters, "Parameters", "json");
+            this.putQueryParameter("Parameters", parametersShrink);
+            this.parameters = parameters;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * RepeatMode.
+         */
+        public Builder repeatMode(String repeatMode) {
+            this.putQueryParameter("RepeatMode", repeatMode);
+            this.repeatMode = repeatMode;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
             return this;
         }
 
@@ -215,19 +330,16 @@ public class InvokeCommandRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
+         * SourceRegionId.
          */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 
         /**
-         * Indicates whether the command is executed periodically.
-         * <p>
-         * 
-         * Default value: false.
+         * Timed.
          */
         public Builder timed(Boolean timed) {
             this.putQueryParameter("Timed", timed);
@@ -236,42 +348,7 @@ public class InvokeCommandRequest extends Request {
         }
 
         /**
-         * The execution cycle of a periodic command. The interval between two periodic commands cannot be less than 10 seconds. When the value of "Timed" is "true", "ence" is required.
-         * <p>
-         * 
-         * The value of this parameter follows the Cron expression. For more information, see [set scheduled execution commands](~~ 64769 ~~).
-         */
-        public Builder frequency(String frequency) {
-            this.putQueryParameter("Frequency", frequency);
-            this.frequency = frequency;
-            return this;
-        }
-
-        /**
-         * The key-value pair of the custom parameter that is passed in when the custom parameter function is enabled. The number of custom parameters ranges from 0 to 10.
-         * <p>
-         * 
-         * The key of-Map cannot be an empty string. It can be up to 64 characters in length.
-         * The value of-Map can be an empty string.
-         * -After the custom parameters and the original command content are encoded in Base64, the total length cannot exceed 16kB.
-         * -The set of custom parameter names must be a subset of the parameter set defined when the command is created. For parameters that are not specified, you can use an empty string instead.
-         * 
-         * You can disable custom parameters by canceling this parameter.
-         */
-        public Builder parameters(java.util.Map < String, ? > parameters) {
-            this.putQueryParameter("Parameters", parameters);
-            this.parameters = parameters;
-            return this;
-        }
-
-        /**
-         * The name of the user who runs the command on the ECS instance.
-         * <p>
-         * 
-         * -Linux ECS instances run commands as root users by default.
-         * -Windows the ECS instance of the System. By default, the System user runs the command.
-         * 
-         * You can also specify other users that already exist in the instance to run commands. It is more secure for ordinary users to run cloud assistant commands. For more information, see [set common users to run cloud assistant commands](~~ 203771 ~~).
+         * Username.
          */
         public Builder username(String username) {
             this.putQueryParameter("Username", username);
@@ -280,55 +357,7 @@ public class InvokeCommandRequest extends Request {
         }
 
         /**
-         * The list of instances to run the command. You can specify a maximum of 50 instance IDs. Valid values of N: 1 to 50.
-         */
-        public Builder instanceId(java.util.List < String > instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * The ID of the command. You can call the [DescribeCommands](~~ 64843 ~~) operation to query all available CommandId.
-         */
-        public Builder commandId(String commandId) {
-            this.putQueryParameter("CommandId", commandId);
-            this.commandId = commandId;
-            return this;
-        }
-
-        /**
-         * Set the command execution method. Valid values:
-         * <p>
-         * 
-         * -Once: run the command immediately.
-         * -Period: run the command regularly. When this parameter is set to **, you must specify both the "** = true" parameter and the "ence" parameter.
-         * -NextRebootOnly: When the instance starts next time, the command is automatically executed.
-         * -EveryReboot: The command is automatically executed each time the instance is started.
-         * 
-         * Default value:
-         * 
-         * -If you do not specify the value of the "1" = true" parameter and the "ence" parameter, the default value is "Once ".
-         * -If you specify the "1" = true" parameter value and the "ence" parameter, the parameter is processed as "1" regardless of whether the parameter value has been set.
-         * 
-         * Note:
-         * 
-         * -When this parameter is set to "1", "n"bootonly", or "EveryReboot", you can call [StopInvocation](~~ 64838 ~~) to stop the pending or periodic commands.
-         * -If this parameter is set to "1" or "EveryReboot", you can call [DescribeInvocationResults](~~ 64845 ~~) and specify IncludeHistory = true to view the execution history of the command cycle.
-         */
-        public Builder repeatMode(String repeatMode) {
-            this.putQueryParameter("RepeatMode", repeatMode);
-            this.repeatMode = repeatMode;
-            return this;
-        }
-
-        /**
-         * The password of the user who runs the command in the Windows instance.
-         * <p>
-         * 
-         * If you want to run a command in a Windows instance as a non-default user (System), you must specify "Username" and this parameter at the same time. To reduce the risk of password leakage, you must host the password in plaintext in the parameter repository of o & m orchestration service. Only the password name is specified here. For more information, see [encryption parameters](~~ 186828 ~~) and [set common users to run cloud assistant commands](~~ 203771 ~~).
-         * 
-         * > this parameter is not required when you use the root user of a Linux instance or the System user of a Windows instance to run commands.
+         * WindowsPasswordName.
          */
         public Builder windowsPasswordName(String windowsPasswordName) {
             this.putQueryParameter("WindowsPasswordName", windowsPasswordName);

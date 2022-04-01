@@ -12,27 +12,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSendFileResultsResponseBody</p>
  */
 public class DescribeSendFileResultsResponseBody extends TeaModel {
+    @NameInMap("Invocations")
+    private Invocations invocations;
+
+    @NameInMap("PageNumber")
+    private Long pageNumber;
+
     @NameInMap("PageSize")
     private Long pageSize;
 
     @NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("PageNumber")
-    private Long pageNumber;
-
     @NameInMap("TotalCount")
     private Long totalCount;
 
-    @NameInMap("Invocations")
-    private Invocations invocations;
-
     private DescribeSendFileResultsResponseBody(Builder builder) {
+        this.invocations = builder.invocations;
+        this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
-        this.pageNumber = builder.pageNumber;
         this.totalCount = builder.totalCount;
-        this.invocations = builder.invocations;
     }
 
     public static Builder builder() {
@@ -41,6 +41,20 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
 
     public static DescribeSendFileResultsResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return invocations
+     */
+    public Invocations getInvocations() {
+        return this.invocations;
+    }
+
+    /**
+     * @return pageNumber
+     */
+    public Long getPageNumber() {
+        return this.pageNumber;
     }
 
     /**
@@ -58,51 +72,29 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
     }
 
     /**
-     * @return pageNumber
-     */
-    public Long getPageNumber() {
-        return this.pageNumber;
-    }
-
-    /**
      * @return totalCount
      */
     public Long getTotalCount() {
         return this.totalCount;
     }
 
-    /**
-     * @return invocations
-     */
-    public Invocations getInvocations() {
-        return this.invocations;
-    }
-
     public static final class Builder {
+        private Invocations invocations; 
+        private Long pageNumber; 
         private Long pageSize; 
         private String requestId; 
-        private Long pageNumber; 
         private Long totalCount; 
-        private Invocations invocations; 
 
         /**
-         * The number of rows per page.
+         * Invocations.
          */
-        public Builder pageSize(Long pageSize) {
-            this.pageSize = pageSize;
+        public Builder invocations(Invocations invocations) {
+            this.invocations = invocations;
             return this;
         }
 
         /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The current page number of the query result.
+         * PageNumber.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -110,18 +102,26 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of scripts.
+         * PageSize.
          */
-        public Builder totalCount(Long totalCount) {
-            this.totalCount = totalCount;
+        public Builder pageSize(Long pageSize) {
+            this.pageSize = pageSize;
             return this;
         }
 
         /**
-         * File Distribution records.
+         * RequestId.
          */
-        public Builder invocations(Invocations invocations) {
-            this.invocations = invocations;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Long totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
@@ -135,36 +135,36 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         @NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("StartTime")
-        private String startTime;
-
-        @NameInMap("InvocationStatus")
-        private String invocationStatus;
-
-        @NameInMap("FinishTime")
-        private String finishTime;
-
-        @NameInMap("UpdateTime")
-        private String updateTime;
+        @NameInMap("ErrorCode")
+        private String errorCode;
 
         @NameInMap("ErrorInfo")
         private String errorInfo;
 
-        @NameInMap("ErrorCode")
-        private String errorCode;
+        @NameInMap("FinishTime")
+        private String finishTime;
 
         @NameInMap("InstanceId")
         private String instanceId;
 
+        @NameInMap("InvocationStatus")
+        private String invocationStatus;
+
+        @NameInMap("StartTime")
+        private String startTime;
+
+        @NameInMap("UpdateTime")
+        private String updateTime;
+
         private InvokeInstance(Builder builder) {
             this.creationTime = builder.creationTime;
-            this.startTime = builder.startTime;
-            this.invocationStatus = builder.invocationStatus;
-            this.finishTime = builder.finishTime;
-            this.updateTime = builder.updateTime;
-            this.errorInfo = builder.errorInfo;
             this.errorCode = builder.errorCode;
+            this.errorInfo = builder.errorInfo;
+            this.finishTime = builder.finishTime;
             this.instanceId = builder.instanceId;
+            this.invocationStatus = builder.invocationStatus;
+            this.startTime = builder.startTime;
+            this.updateTime = builder.updateTime;
         }
 
         public static Builder builder() {
@@ -183,31 +183,10 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         }
 
         /**
-         * @return startTime
+         * @return errorCode
          */
-        public String getStartTime() {
-            return this.startTime;
-        }
-
-        /**
-         * @return invocationStatus
-         */
-        public String getInvocationStatus() {
-            return this.invocationStatus;
-        }
-
-        /**
-         * @return finishTime
-         */
-        public String getFinishTime() {
-            return this.finishTime;
-        }
-
-        /**
-         * @return updateTime
-         */
-        public String getUpdateTime() {
-            return this.updateTime;
+        public String getErrorCode() {
+            return this.errorCode;
         }
 
         /**
@@ -218,10 +197,10 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         }
 
         /**
-         * @return errorCode
+         * @return finishTime
          */
-        public String getErrorCode() {
-            return this.errorCode;
+        public String getFinishTime() {
+            return this.finishTime;
         }
 
         /**
@@ -231,18 +210,39 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             return this.instanceId;
         }
 
+        /**
+         * @return invocationStatus
+         */
+        public String getInvocationStatus() {
+            return this.invocationStatus;
+        }
+
+        /**
+         * @return startTime
+         */
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        /**
+         * @return updateTime
+         */
+        public String getUpdateTime() {
+            return this.updateTime;
+        }
+
         public static final class Builder {
             private String creationTime; 
-            private String startTime; 
-            private String invocationStatus; 
-            private String finishTime; 
-            private String updateTime; 
-            private String errorInfo; 
             private String errorCode; 
+            private String errorInfo; 
+            private String finishTime; 
             private String instanceId; 
+            private String invocationStatus; 
+            private String startTime; 
+            private String updateTime; 
 
             /**
-             * The creation time of the file delivery task.
+             * CreationTime.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -250,85 +250,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the task starts to run in the instance.
-             */
-            public Builder startTime(String startTime) {
-                this.startTime = startTime;
-                return this;
-            }
-
-            /**
-             * The status of the task.
-             */
-            public Builder invocationStatus(String invocationStatus) {
-                this.invocationStatus = invocationStatus;
-                return this;
-            }
-
-            /**
-             * The end time of the task.
-             */
-            public Builder finishTime(String finishTime) {
-                this.finishTime = finishTime;
-                return this;
-            }
-
-            /**
-             * The time when the task status was updated.
-             */
-            public Builder updateTime(String updateTime) {
-                this.updateTime = updateTime;
-                return this;
-            }
-
-            /**
-             * The error message returned because the file failed to be delivered or failed to be executed. Possible values:
-             * <p>
-             * 
-             * -Null: The file is delivered normally.
-             * -the specified instance does not exist: the specified instance does not exist or has been released.
-             * -the instance has released when create task: the instance is released during file delivery.
-             * -the instance is not running when create task: the instance is not running.
-             * -the specified account does not exist.
-             * -the aliyun service is not running on the instance: the cloud assistant client is not running.
-             * -the aliyun service in the instance does not response: the cloud assistant client does not respond.
-             * -the aliyun service in the instance is upgrading now: the cloud assistant client is being upgraded.
-             * -the aliyun service in the instance need upgrade: the cloud assistant client needs to be upgraded.
-             * -the command delivery has been timeout.
-             * -Unexpected error during creating: file creation failed.
-             * -File already exists: files with the same name exist in the same path.
-             * -File content error: the File content is invalid.
-             * -File name is invalid: the File name is invalid.
-             * -File path is invalid: the File path is invalid.
-             * -Owner not exists: the user does not exist.
-             * -Group not exists: the user Group does not exist.
-             * -Mode is invalid: The file permission is invalid.
-             */
-            public Builder errorInfo(String errorInfo) {
-                this.errorInfo = errorInfo;
-                return this;
-            }
-
-            /**
-             * The error message returned because the file failed to be delivered. Possible values:
-             * <p>
-             * 
-             * -Null: The file is delivered normally.
-             * -InstanceNotExists: the specified instance does not exist or has been released.
-             * -InstanceReleased: the instance is released during file delivery.
-             * -InstanceNotRunning: the instance is not running when you create a file task.
-             * -AccountNotExists: the specified account does not exist.
-             * -ClientNotRunning: The cloud assistant client is not running.
-             * -ClientNotResponse: The cloud assistant client does not respond.
-             * -ClientIsUpgrading: The cloud assistant client is being upgraded.
-             * -ClientNeedUpgrade: The cloud assistant client needs to be upgraded.
-             * -DeliveryTimeout: The file sending times out.
-             * -FileCreateFail: file creation failed.
-             * -FileAlreadyExists: files with the same name exist in the same path.
-             * -FileContentInvalid: the file content is invalid.
-             * -FileNameInvalid: the file name is invalid.
-             * -FilePathInvalid: the file path is invalid.
-             * -FileAuthorityInvalid: The file permission is invalid.
+             * ErrorCode.
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -336,10 +258,50 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * ErrorInfo.
+             */
+            public Builder errorInfo(String errorInfo) {
+                this.errorInfo = errorInfo;
+                return this;
+            }
+
+            /**
+             * FinishTime.
+             */
+            public Builder finishTime(String finishTime) {
+                this.finishTime = finishTime;
+                return this;
+            }
+
+            /**
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * InvocationStatus.
+             */
+            public Builder invocationStatus(String invocationStatus) {
+                this.invocationStatus = invocationStatus;
+                return this;
+            }
+
+            /**
+             * StartTime.
+             */
+            public Builder startTime(String startTime) {
+                this.startTime = startTime;
+                return this;
+            }
+
+            /**
+             * UpdateTime.
+             */
+            public Builder updateTime(String updateTime) {
+                this.updateTime = updateTime;
                 return this;
             }
 
@@ -392,63 +354,63 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
 
     }
     public static class Invocation extends TeaModel {
-        @NameInMap("CreationTime")
-        private String creationTime;
-
-        @NameInMap("InvocationStatus")
-        private String invocationStatus;
+        @NameInMap("Content")
+        private String content;
 
         @NameInMap("ContentType")
         private String contentType;
 
-        @NameInMap("TargetDir")
-        private String targetDir;
-
-        @NameInMap("FileOwner")
-        private String fileOwner;
+        @NameInMap("CreationTime")
+        private String creationTime;
 
         @NameInMap("Description")
         private String description;
 
-        @NameInMap("VmCount")
-        private Integer vmCount;
+        @NameInMap("FileGroup")
+        private String fileGroup;
 
         @NameInMap("FileMode")
         private String fileMode;
 
-        @NameInMap("FileGroup")
-        private String fileGroup;
+        @NameInMap("FileOwner")
+        private String fileOwner;
+
+        @NameInMap("InvocationStatus")
+        private String invocationStatus;
 
         @NameInMap("InvokeId")
         private String invokeId;
 
+        @NameInMap("InvokeInstances")
+        private InvokeInstances invokeInstances;
+
         @NameInMap("Name")
         private String name;
-
-        @NameInMap("Content")
-        private String content;
 
         @NameInMap("Overwrite")
         private String overwrite;
 
-        @NameInMap("InvokeInstances")
-        private InvokeInstances invokeInstances;
+        @NameInMap("TargetDir")
+        private String targetDir;
+
+        @NameInMap("VmCount")
+        private Integer vmCount;
 
         private Invocation(Builder builder) {
-            this.creationTime = builder.creationTime;
-            this.invocationStatus = builder.invocationStatus;
-            this.contentType = builder.contentType;
-            this.targetDir = builder.targetDir;
-            this.fileOwner = builder.fileOwner;
-            this.description = builder.description;
-            this.vmCount = builder.vmCount;
-            this.fileMode = builder.fileMode;
-            this.fileGroup = builder.fileGroup;
-            this.invokeId = builder.invokeId;
-            this.name = builder.name;
             this.content = builder.content;
-            this.overwrite = builder.overwrite;
+            this.contentType = builder.contentType;
+            this.creationTime = builder.creationTime;
+            this.description = builder.description;
+            this.fileGroup = builder.fileGroup;
+            this.fileMode = builder.fileMode;
+            this.fileOwner = builder.fileOwner;
+            this.invocationStatus = builder.invocationStatus;
+            this.invokeId = builder.invokeId;
             this.invokeInstances = builder.invokeInstances;
+            this.name = builder.name;
+            this.overwrite = builder.overwrite;
+            this.targetDir = builder.targetDir;
+            this.vmCount = builder.vmCount;
         }
 
         public static Builder builder() {
@@ -460,17 +422,10 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         }
 
         /**
-         * @return creationTime
+         * @return content
          */
-        public String getCreationTime() {
-            return this.creationTime;
-        }
-
-        /**
-         * @return invocationStatus
-         */
-        public String getInvocationStatus() {
-            return this.invocationStatus;
+        public String getContent() {
+            return this.content;
         }
 
         /**
@@ -481,17 +436,10 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         }
 
         /**
-         * @return targetDir
+         * @return creationTime
          */
-        public String getTargetDir() {
-            return this.targetDir;
-        }
-
-        /**
-         * @return fileOwner
-         */
-        public String getFileOwner() {
-            return this.fileOwner;
+        public String getCreationTime() {
+            return this.creationTime;
         }
 
         /**
@@ -502,10 +450,10 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         }
 
         /**
-         * @return vmCount
+         * @return fileGroup
          */
-        public Integer getVmCount() {
-            return this.vmCount;
+        public String getFileGroup() {
+            return this.fileGroup;
         }
 
         /**
@@ -516,10 +464,17 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         }
 
         /**
-         * @return fileGroup
+         * @return fileOwner
          */
-        public String getFileGroup() {
-            return this.fileGroup;
+        public String getFileOwner() {
+            return this.fileOwner;
+        }
+
+        /**
+         * @return invocationStatus
+         */
+        public String getInvocationStatus() {
+            return this.invocationStatus;
         }
 
         /**
@@ -530,17 +485,17 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         }
 
         /**
+         * @return invokeInstances
+         */
+        public InvokeInstances getInvokeInstances() {
+            return this.invokeInstances;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
             return this.name;
-        }
-
-        /**
-         * @return content
-         */
-        public String getContent() {
-            return this.content;
         }
 
         /**
@@ -551,133 +506,37 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         }
 
         /**
-         * @return invokeInstances
+         * @return targetDir
          */
-        public InvokeInstances getInvokeInstances() {
-            return this.invokeInstances;
+        public String getTargetDir() {
+            return this.targetDir;
+        }
+
+        /**
+         * @return vmCount
+         */
+        public Integer getVmCount() {
+            return this.vmCount;
         }
 
         public static final class Builder {
-            private String creationTime; 
-            private String invocationStatus; 
-            private String contentType; 
-            private String targetDir; 
-            private String fileOwner; 
-            private String description; 
-            private Integer vmCount; 
-            private String fileMode; 
-            private String fileGroup; 
-            private String invokeId; 
-            private String name; 
             private String content; 
-            private String overwrite; 
+            private String contentType; 
+            private String creationTime; 
+            private String description; 
+            private String fileGroup; 
+            private String fileMode; 
+            private String fileOwner; 
+            private String invocationStatus; 
+            private String invokeId; 
             private InvokeInstances invokeInstances; 
+            private String name; 
+            private String overwrite; 
+            private String targetDir; 
+            private Integer vmCount; 
 
             /**
-             * The time when the file delivery task was created.
-             */
-            public Builder creationTime(String creationTime) {
-                this.creationTime = creationTime;
-                return this;
-            }
-
-            /**
-             * The total status of the file. The total status depends on the common execution status of all instances issued this time. Possible values:
-             * <p>
-             * 
-             * -Pending: The system is verifying or distributing files. If the delivery status of at least one instance is Pending, the total status is Pending.
-             * -Running: The file creation task is Running on the instance. If the status of at least one instance is Running, the total status is Running.
-             * -Success: If the file status on each instance is Success, the total execution status is Success.
-             * -Failed: if all files on each instance are in the Failed status, the total execution status is Failed. If one or more of the objects on the instance are in the following status, the returned value is Failed:
-             * -Verification failed (Invalid)
-             * -File sending failed (Aborted)
-             * -Failed file creation
-             * -File delivery Timeout (Timeout)
-             * -File delivery exception (Error)
-             * -PartialFailed: Some instances are successfully delivered and some instances fail to be executed. If the instance status is Success and Failed, the total execution status is PartialFailed.
-             */
-            public Builder invocationStatus(String invocationStatus) {
-                this.invocationStatus = invocationStatus;
-                return this;
-            }
-
-            /**
-             * The content type of the file. Possible values:
-             * <p>
-             * -PlainText: plain text.
-             * -Base64: base64-encoded.
-             */
-            public Builder contentType(String contentType) {
-                this.contentType = contentType;
-                return this;
-            }
-
-            /**
-             * The destination path.
-             */
-            public Builder targetDir(String targetDir) {
-                this.targetDir = targetDir;
-                return this;
-            }
-
-            /**
-             * The user of the file.
-             */
-            public Builder fileOwner(String fileOwner) {
-                this.fileOwner = fileOwner;
-                return this;
-            }
-
-            /**
-             * The description.
-             */
-            public Builder description(String description) {
-                this.description = description;
-                return this;
-            }
-
-            /**
-             * The number of instances to be delivered.
-             */
-            public Builder vmCount(Integer vmCount) {
-                this.vmCount = vmCount;
-                return this;
-            }
-
-            /**
-             * The permissions of the file.
-             */
-            public Builder fileMode(String fileMode) {
-                this.fileMode = fileMode;
-                return this;
-            }
-
-            /**
-             * The user group of the file.
-             */
-            public Builder fileGroup(String fileGroup) {
-                this.fileGroup = fileGroup;
-                return this;
-            }
-
-            /**
-             * The ID of the execution.
-             */
-            public Builder invokeId(String invokeId) {
-                this.invokeId = invokeId;
-                return this;
-            }
-
-            /**
-             * The name of the file.
-             */
-            public Builder name(String name) {
-                this.name = name;
-                return this;
-            }
-
-            /**
-             * The content of the file.
+             * Content.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -685,7 +544,87 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether to allow overwriting.
+             * ContentType.
+             */
+            public Builder contentType(String contentType) {
+                this.contentType = contentType;
+                return this;
+            }
+
+            /**
+             * CreationTime.
+             */
+            public Builder creationTime(String creationTime) {
+                this.creationTime = creationTime;
+                return this;
+            }
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * FileGroup.
+             */
+            public Builder fileGroup(String fileGroup) {
+                this.fileGroup = fileGroup;
+                return this;
+            }
+
+            /**
+             * FileMode.
+             */
+            public Builder fileMode(String fileMode) {
+                this.fileMode = fileMode;
+                return this;
+            }
+
+            /**
+             * FileOwner.
+             */
+            public Builder fileOwner(String fileOwner) {
+                this.fileOwner = fileOwner;
+                return this;
+            }
+
+            /**
+             * InvocationStatus.
+             */
+            public Builder invocationStatus(String invocationStatus) {
+                this.invocationStatus = invocationStatus;
+                return this;
+            }
+
+            /**
+             * InvokeId.
+             */
+            public Builder invokeId(String invokeId) {
+                this.invokeId = invokeId;
+                return this;
+            }
+
+            /**
+             * InvokeInstances.
+             */
+            public Builder invokeInstances(InvokeInstances invokeInstances) {
+                this.invokeInstances = invokeInstances;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Overwrite.
              */
             public Builder overwrite(String overwrite) {
                 this.overwrite = overwrite;
@@ -693,10 +632,18 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the target instance set.
+             * TargetDir.
              */
-            public Builder invokeInstances(InvokeInstances invokeInstances) {
-                this.invokeInstances = invokeInstances;
+            public Builder targetDir(String targetDir) {
+                this.targetDir = targetDir;
+                return this;
+            }
+
+            /**
+             * VmCount.
+             */
+            public Builder vmCount(Integer vmCount) {
+                this.vmCount = vmCount;
                 return this;
             }
 

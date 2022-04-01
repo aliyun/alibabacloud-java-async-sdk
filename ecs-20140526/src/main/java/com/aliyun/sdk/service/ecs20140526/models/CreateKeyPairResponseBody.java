@@ -12,27 +12,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateKeyPairResponseBody</p>
  */
 public class CreateKeyPairResponseBody extends TeaModel {
-    @NameInMap("PrivateKeyBody")
-    private String privateKeyBody;
-
-    @NameInMap("KeyPairName")
-    private String keyPairName;
+    @NameInMap("KeyPairFingerPrint")
+    private String keyPairFingerPrint;
 
     @NameInMap("KeyPairId")
     private String keyPairId;
 
+    @NameInMap("KeyPairName")
+    private String keyPairName;
+
+    @NameInMap("PrivateKeyBody")
+    private String privateKeyBody;
+
     @NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("KeyPairFingerPrint")
-    private String keyPairFingerPrint;
-
     private CreateKeyPairResponseBody(Builder builder) {
-        this.privateKeyBody = builder.privateKeyBody;
-        this.keyPairName = builder.keyPairName;
-        this.keyPairId = builder.keyPairId;
-        this.requestId = builder.requestId;
         this.keyPairFingerPrint = builder.keyPairFingerPrint;
+        this.keyPairId = builder.keyPairId;
+        this.keyPairName = builder.keyPairName;
+        this.privateKeyBody = builder.privateKeyBody;
+        this.requestId = builder.requestId;
     }
 
     public static Builder builder() {
@@ -44,17 +44,10 @@ public class CreateKeyPairResponseBody extends TeaModel {
     }
 
     /**
-     * @return privateKeyBody
+     * @return keyPairFingerPrint
      */
-    public String getPrivateKeyBody() {
-        return this.privateKeyBody;
-    }
-
-    /**
-     * @return keyPairName
-     */
-    public String getKeyPairName() {
-        return this.keyPairName;
+    public String getKeyPairFingerPrint() {
+        return this.keyPairFingerPrint;
     }
 
     /**
@@ -65,44 +58,43 @@ public class CreateKeyPairResponseBody extends TeaModel {
     }
 
     /**
+     * @return keyPairName
+     */
+    public String getKeyPairName() {
+        return this.keyPairName;
+    }
+
+    /**
+     * @return privateKeyBody
+     */
+    public String getPrivateKeyBody() {
+        return this.privateKeyBody;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
         return this.requestId;
     }
 
-    /**
-     * @return keyPairFingerPrint
-     */
-    public String getKeyPairFingerPrint() {
-        return this.keyPairFingerPrint;
-    }
-
     public static final class Builder {
-        private String privateKeyBody; 
-        private String keyPairName; 
-        private String keyPairId; 
-        private String requestId; 
         private String keyPairFingerPrint; 
+        private String keyPairId; 
+        private String keyPairName; 
+        private String privateKeyBody; 
+        private String requestId; 
 
         /**
-         * The private key of the key pair. The private key in the PKCS#8 format encoded by PEM.
+         * KeyPairFingerPrint.
          */
-        public Builder privateKeyBody(String privateKeyBody) {
-            this.privateKeyBody = privateKeyBody;
+        public Builder keyPairFingerPrint(String keyPairFingerPrint) {
+            this.keyPairFingerPrint = keyPairFingerPrint;
             return this;
         }
 
         /**
-         * The name of the key pair.
-         */
-        public Builder keyPairName(String keyPairName) {
-            this.keyPairName = keyPairName;
-            return this;
-        }
-
-        /**
-         * The ID of the SSH key pair.
+         * KeyPairId.
          */
         public Builder keyPairId(String keyPairId) {
             this.keyPairId = keyPairId;
@@ -110,18 +102,26 @@ public class CreateKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * KeyPairName.
          */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
+        public Builder keyPairName(String keyPairName) {
+            this.keyPairName = keyPairName;
             return this;
         }
 
         /**
-         * The fingerprint of the key pair. According to the public key fingerprint format defined in RFC4716, MD5 Information Digest Algorithm is adopted. For more information, see [RFC4716](https://tools.ietf.org/html/rfc4716).
+         * PrivateKeyBody.
          */
-        public Builder keyPairFingerPrint(String keyPairFingerPrint) {
-            this.keyPairFingerPrint = keyPairFingerPrint;
+        public Builder privateKeyBody(String privateKeyBody) {
+            this.privateKeyBody = privateKeyBody;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 

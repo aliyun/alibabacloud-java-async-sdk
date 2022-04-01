@@ -12,9 +12,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceStatusRequest</p>
  */
 public class DescribeInstanceStatusRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("ClusterId")
+    private String clusterId;
+
+    @Query
+    @NameInMap("InstanceId")
+    private java.util.List < String > instanceId;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -25,21 +29,8 @@ public class DescribeInstanceStatusRequest extends Request {
     private Long ownerId;
 
     @Query
-    @NameInMap("ResourceOwnerAccount")
-    private String resourceOwnerAccount;
-
-    @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
-
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
-    @Query
-    @NameInMap("ClusterId")
-    private String clusterId;
+    @NameInMap("PageNumber")
+    private Integer pageNumber;
 
     @Query
     @NameInMap("PageSize")
@@ -47,30 +38,39 @@ public class DescribeInstanceStatusRequest extends Request {
     private Integer pageSize;
 
     @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
+    @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
+    @Query
     @NameInMap("ZoneId")
     private String zoneId;
 
-    @Query
-    @NameInMap("PageNumber")
-    private Integer pageNumber;
-
-    @Query
-    @NameInMap("InstanceId")
-    private java.util.List < String > instanceId;
-
     private DescribeInstanceStatusRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
+        this.clusterId = builder.clusterId;
+        this.instanceId = builder.instanceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.regionId = builder.regionId;
-        this.clusterId = builder.clusterId;
-        this.pageSize = builder.pageSize;
+        this.sourceRegionId = builder.sourceRegionId;
         this.zoneId = builder.zoneId;
-        this.pageNumber = builder.pageNumber;
-        this.instanceId = builder.instanceId;
     }
 
     public static Builder builder() {
@@ -87,10 +87,17 @@ public class DescribeInstanceStatusRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return clusterId
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getClusterId() {
+        return this.clusterId;
+    }
+
+    /**
+     * @return instanceId
+     */
+    public java.util.List < String > getInstanceId() {
+        return this.instanceId;
     }
 
     /**
@@ -108,6 +115,27 @@ public class DescribeInstanceStatusRequest extends Request {
     }
 
     /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -122,24 +150,10 @@ public class DescribeInstanceStatusRequest extends Request {
     }
 
     /**
-     * @return regionId
+     * @return sourceRegionId
      */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return clusterId
-     */
-    public String getClusterId() {
-        return this.clusterId;
-    }
-
-    /**
-     * @return pageSize
-     */
-    public Integer getPageSize() {
-        return this.pageSize;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -149,32 +163,18 @@ public class DescribeInstanceStatusRequest extends Request {
         return this.zoneId;
     }
 
-    /**
-     * @return pageNumber
-     */
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    /**
-     * @return instanceId
-     */
-    public java.util.List < String > getInstanceId() {
-        return this.instanceId;
-    }
-
     public static final class Builder extends Request.Builder<DescribeInstanceStatusRequest, Builder> {
-        private String sourceRegionId; 
+        private String clusterId; 
+        private java.util.List < String > instanceId; 
         private String ownerAccount; 
         private Long ownerId; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String regionId; 
-        private String clusterId; 
-        private Integer pageSize; 
+        private String sourceRegionId; 
         private String zoneId; 
-        private Integer pageNumber; 
-        private java.util.List < String > instanceId; 
 
         private Builder() {
             super();
@@ -182,25 +182,34 @@ public class DescribeInstanceStatusRequest extends Request {
 
         private Builder(DescribeInstanceStatusRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
+            this.clusterId = request.clusterId;
+            this.instanceId = request.instanceId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.regionId = request.regionId;
-            this.clusterId = request.clusterId;
-            this.pageSize = request.pageSize;
+            this.sourceRegionId = request.sourceRegionId;
             this.zoneId = request.zoneId;
-            this.pageNumber = request.pageNumber;
-            this.instanceId = request.instanceId;
         } 
 
         /**
-         * SourceRegionId.
+         * ClusterId.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder clusterId(String clusterId) {
+            this.putQueryParameter("ClusterId", clusterId);
+            this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * InstanceId.
+         */
+        public Builder instanceId(java.util.List < String > instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
             return this;
         }
 
@@ -214,7 +223,7 @@ public class DescribeInstanceStatusRequest extends Request {
         }
 
         /**
-         * The ID of the RAM user.
+         * OwnerId.
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -223,69 +232,7 @@ public class DescribeInstanceStatusRequest extends Request {
         }
 
         /**
-         * The account name of the resource master account.
-         */
-        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
-            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-            this.resourceOwnerAccount = resourceOwnerAccount;
-            return this;
-        }
-
-        /**
-         * The ID of the resource master account, that is, the UID.
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * The ID of the region to which the instance belongs. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The ID of the cluster to which the instance belongs.
-         */
-        public Builder clusterId(String clusterId) {
-            this.putQueryParameter("ClusterId", clusterId);
-            this.clusterId = clusterId;
-            return this;
-        }
-
-        /**
-         * The number of entries to return on each page. Valid values: 1 to 50.
-         * <p>
-         * 
-         * Default value: 10
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.putQueryParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * The zone to which the instance belongs.
-         */
-        public Builder zoneId(String zoneId) {
-            this.putQueryParameter("ZoneId", zoneId);
-            this.zoneId = zoneId;
-            return this;
-        }
-
-        /**
-         * The page number of the instance status list.
-         * <p>
-         * 
-         * Start value: 1
-         * 
-         * Default value: 1.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -294,11 +241,56 @@ public class DescribeInstanceStatusRequest extends Request {
         }
 
         /**
-         * The ID of one or more ECS instances. Valid values of N: 1 to 100. Multiple values are in the form of duplicate lists.
+         * PageSize.
          */
-        public Builder instanceId(java.util.List < String > instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
+
+        /**
+         * ZoneId.
+         */
+        public Builder zoneId(String zoneId) {
+            this.putQueryParameter("ZoneId", zoneId);
+            this.zoneId = zoneId;
             return this;
         }
 

@@ -12,9 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RedeployInstanceRequest</p>
  */
 public class RedeployInstanceRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("ForceStop")
+    private Boolean forceStop;
+
+    @Query
+    @NameInMap("InstanceId")
+    @Validation(required = true)
+    private String instanceId;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -32,24 +37,19 @@ public class RedeployInstanceRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("ForceStop")
-    private Boolean forceStop;
-
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
-    private String instanceId;
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     private RedeployInstanceRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
+        this.forceStop = builder.forceStop;
+        this.instanceId = builder.instanceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.forceStop = builder.forceStop;
-        this.instanceId = builder.instanceId;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -66,10 +66,17 @@ public class RedeployInstanceRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return forceStop
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public Boolean getForceStop() {
+        return this.forceStop;
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     /**
@@ -101,27 +108,20 @@ public class RedeployInstanceRequest extends Request {
     }
 
     /**
-     * @return forceStop
+     * @return sourceRegionId
      */
-    public Boolean getForceStop() {
-        return this.forceStop;
-    }
-
-    /**
-     * @return instanceId
-     */
-    public String getInstanceId() {
-        return this.instanceId;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public static final class Builder extends Request.Builder<RedeployInstanceRequest, Builder> {
-        private String sourceRegionId; 
+        private Boolean forceStop; 
+        private String instanceId; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private Boolean forceStop; 
-        private String instanceId; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -129,21 +129,30 @@ public class RedeployInstanceRequest extends Request {
 
         private Builder(RedeployInstanceRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
+            this.forceStop = request.forceStop;
+            this.instanceId = request.instanceId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.forceStop = request.forceStop;
-            this.instanceId = request.instanceId;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
-         * SourceRegionId.
+         * ForceStop.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder forceStop(Boolean forceStop) {
+            this.putQueryParameter("ForceStop", forceStop);
+            this.forceStop = forceStop;
+            return this;
+        }
+
+        /**
+         * InstanceId.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
             return this;
         }
 
@@ -157,7 +166,7 @@ public class RedeployInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the RAM user.
+         * OwnerId.
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -166,7 +175,7 @@ public class RedeployInstanceRequest extends Request {
         }
 
         /**
-         * The account name of the resource master account.
+         * ResourceOwnerAccount.
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
             this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
@@ -175,7 +184,7 @@ public class RedeployInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the resource master account, that is, the UID.
+         * ResourceOwnerId.
          */
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
@@ -184,25 +193,11 @@ public class RedeployInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to forcibly stop Running (Running) instances.
-         * <p>
-         * 
-         * Default value: false
-         * 
-         * > force stop is equivalent to a typical server shutdown, data that has not been written to the storage device in the instance operating system will be lost. We recommend that you redeploy stopped instances.
+         * SourceRegionId.
          */
-        public Builder forceStop(Boolean forceStop) {
-            this.putQueryParameter("ForceStop", forceStop);
-            this.forceStop = forceStop;
-            return this;
-        }
-
-        /**
-         * The ID of the instance that is in the running or stopped state.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

@@ -13,8 +13,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyStorageSetAttributeRequest extends Request {
     @Query
+    @NameInMap("ClientToken")
+    private String clientToken;
+
+    @Query
+    @NameInMap("Description")
+    private String description;
+
+    @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @Query
     @NameInMap("OwnerId")
     private Long ownerId;
+
+    @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
 
     @Query
     @NameInMap("ResourceOwnerAccount")
@@ -25,42 +42,25 @@ public class ModifyStorageSetAttributeRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
-    @NameInMap("OwnerAccount")
-    private String ownerAccount;
-
-    @Query
-    @NameInMap("ClientToken")
-    private String clientToken;
-
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
-    @Query
-    @NameInMap("StorageSetName")
-    private String storageSetName;
-
-    @Query
     @NameInMap("StorageSetId")
     @Validation(required = true)
     private String storageSetId;
 
     @Query
-    @NameInMap("Description")
-    private String description;
+    @NameInMap("StorageSetName")
+    private String storageSetName;
 
     private ModifyStorageSetAttributeRequest(Builder builder) {
         super(builder);
+        this.clientToken = builder.clientToken;
+        this.description = builder.description;
+        this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.ownerAccount = builder.ownerAccount;
-        this.clientToken = builder.clientToken;
-        this.regionId = builder.regionId;
-        this.storageSetName = builder.storageSetName;
         this.storageSetId = builder.storageSetId;
-        this.description = builder.description;
+        this.storageSetName = builder.storageSetName;
     }
 
     public static Builder builder() {
@@ -77,10 +77,38 @@ public class ModifyStorageSetAttributeRequest extends Request {
     }
 
     /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
      * @return ownerId
      */
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -98,24 +126,10 @@ public class ModifyStorageSetAttributeRequest extends Request {
     }
 
     /**
-     * @return ownerAccount
+     * @return storageSetId
      */
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    /**
-     * @return clientToken
-     */
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
+    public String getStorageSetId() {
+        return this.storageSetId;
     }
 
     /**
@@ -125,30 +139,16 @@ public class ModifyStorageSetAttributeRequest extends Request {
         return this.storageSetName;
     }
 
-    /**
-     * @return storageSetId
-     */
-    public String getStorageSetId() {
-        return this.storageSetId;
-    }
-
-    /**
-     * @return description
-     */
-    public String getDescription() {
-        return this.description;
-    }
-
     public static final class Builder extends Request.Builder<ModifyStorageSetAttributeRequest, Builder> {
+        private String clientToken; 
+        private String description; 
+        private String ownerAccount; 
         private Long ownerId; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String ownerAccount; 
-        private String clientToken; 
-        private String regionId; 
-        private String storageSetName; 
         private String storageSetId; 
-        private String description; 
+        private String storageSetName; 
 
         private Builder() {
             super();
@@ -156,16 +156,43 @@ public class ModifyStorageSetAttributeRequest extends Request {
 
         private Builder(ModifyStorageSetAttributeRequest request) {
             super(request);
+            this.clientToken = request.clientToken;
+            this.description = request.description;
+            this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.ownerAccount = request.ownerAccount;
-            this.clientToken = request.clientToken;
-            this.regionId = request.regionId;
-            this.storageSetName = request.storageSetName;
             this.storageSetId = request.storageSetId;
-            this.description = request.description;
+            this.storageSetName = request.storageSetName;
         } 
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
 
         /**
          * OwnerId.
@@ -173,6 +200,15 @@ public class ModifyStorageSetAttributeRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
@@ -195,43 +231,7 @@ public class ModifyStorageSetAttributeRequest extends Request {
         }
 
         /**
-         * OwnerAccount.
-         */
-        public Builder ownerAccount(String ownerAccount) {
-            this.putQueryParameter("OwnerAccount", ownerAccount);
-            this.ownerAccount = ownerAccount;
-            return this;
-        }
-
-        /**
-         * Ensure the idempotence of the request. Generate a parameter value from your client. Make sure that the value is unique among different requests. **ClientToken** supports only ASCII characters and cannot exceed 64 characters. For more information, see [how to ensure idempotence](~~ 25693 ~~).
-         */
-        public Builder clientToken(String clientToken) {
-            this.putQueryParameter("ClientToken", clientToken);
-            this.clientToken = clientToken;
-            return this;
-        }
-
-        /**
-         * The region to which the bucket belongs. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The name of the storage set. The description must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https. It can contain numbers, colons (:), underscores (_), and hyphens (-).
-         */
-        public Builder storageSetName(String storageSetName) {
-            this.putQueryParameter("StorageSetName", storageSetName);
-            this.storageSetName = storageSetName;
-            return this;
-        }
-
-        /**
-         * The ID of the storage set.
+         * StorageSetId.
          */
         public Builder storageSetId(String storageSetId) {
             this.putQueryParameter("StorageSetId", storageSetId);
@@ -240,11 +240,11 @@ public class ModifyStorageSetAttributeRequest extends Request {
         }
 
         /**
-         * The description of the storage set. The description must be 2 to 256 characters in length and cannot start with http:// or https.
+         * StorageSetName.
          */
-        public Builder description(String description) {
-            this.putQueryParameter("Description", description);
-            this.description = description;
+        public Builder storageSetName(String storageSetName) {
+            this.putQueryParameter("StorageSetName", storageSetName);
+            this.storageSetName = storageSetName;
             return this;
         }
 

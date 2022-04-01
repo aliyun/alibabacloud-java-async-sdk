@@ -12,13 +12,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDedicatedHostAutoRenewRequest</p>
  */
 public class DescribeDedicatedHostAutoRenewRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("DedicatedHostIds")
+    @Validation(required = true)
+    private String dedicatedHostIds;
 
     @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
 
     @Query
     @NameInMap("RegionId")
@@ -26,16 +31,26 @@ public class DescribeDedicatedHostAutoRenewRequest extends Request {
     private String regionId;
 
     @Query
-    @NameInMap("DedicatedHostIds")
-    @Validation(required = true)
-    private String dedicatedHostIds;
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     private DescribeDedicatedHostAutoRenewRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
-        this.resourceOwnerId = builder.resourceOwnerId;
-        this.regionId = builder.regionId;
         this.dedicatedHostIds = builder.dedicatedHostIds;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -52,17 +67,24 @@ public class DescribeDedicatedHostAutoRenewRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return dedicatedHostIds
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getDedicatedHostIds() {
+        return this.dedicatedHostIds;
     }
 
     /**
-     * @return resourceOwnerId
+     * @return ownerAccount
      */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     /**
@@ -73,17 +95,34 @@ public class DescribeDedicatedHostAutoRenewRequest extends Request {
     }
 
     /**
-     * @return dedicatedHostIds
+     * @return resourceOwnerAccount
      */
-    public String getDedicatedHostIds() {
-        return this.dedicatedHostIds;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public static final class Builder extends Request.Builder<DescribeDedicatedHostAutoRenewRequest, Builder> {
-        private String sourceRegionId; 
-        private Long resourceOwnerId; 
-        private String regionId; 
         private String dedicatedHostIds; 
+        private String ownerAccount; 
+        private Long ownerId; 
+        private String regionId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -91,18 +130,57 @@ public class DescribeDedicatedHostAutoRenewRequest extends Request {
 
         private Builder(DescribeDedicatedHostAutoRenewRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
-            this.resourceOwnerId = request.resourceOwnerId;
-            this.regionId = request.regionId;
             this.dedicatedHostIds = request.dedicatedHostIds;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
-         * SourceRegionId.
+         * DedicatedHostIds.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder dedicatedHostIds(String dedicatedHostIds) {
+            this.putQueryParameter("DedicatedHostIds", dedicatedHostIds);
+            this.dedicatedHostIds = dedicatedHostIds;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
             return this;
         }
 
@@ -116,20 +194,11 @@ public class DescribeDedicatedHostAutoRenewRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the dedicated host belongs.
+         * SourceRegionId.
          */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The ID of the dedicated host. You can enter up to 100 dedicated host IDs. Separate the IDs with commas (,).
-         */
-        public Builder dedicatedHostIds(String dedicatedHostIds) {
-            this.putQueryParameter("DedicatedHostIds", dedicatedHostIds);
-            this.dedicatedHostIds = dedicatedHostIds;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

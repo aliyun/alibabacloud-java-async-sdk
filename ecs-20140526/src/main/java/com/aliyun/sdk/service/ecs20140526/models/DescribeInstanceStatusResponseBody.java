@@ -12,27 +12,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceStatusResponseBody</p>
  */
 public class DescribeInstanceStatusResponseBody extends TeaModel {
+    @NameInMap("InstanceStatuses")
+    private InstanceStatuses instanceStatuses;
+
+    @NameInMap("PageNumber")
+    private Integer pageNumber;
+
     @NameInMap("PageSize")
     private Integer pageSize;
 
     @NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("PageNumber")
-    private Integer pageNumber;
-
     @NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("InstanceStatuses")
-    private InstanceStatuses instanceStatuses;
-
     private DescribeInstanceStatusResponseBody(Builder builder) {
+        this.instanceStatuses = builder.instanceStatuses;
+        this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
-        this.pageNumber = builder.pageNumber;
         this.totalCount = builder.totalCount;
-        this.instanceStatuses = builder.instanceStatuses;
     }
 
     public static Builder builder() {
@@ -41,6 +41,20 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
 
     public static DescribeInstanceStatusResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return instanceStatuses
+     */
+    public InstanceStatuses getInstanceStatuses() {
+        return this.instanceStatuses;
+    }
+
+    /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     /**
@@ -58,51 +72,29 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
     }
 
     /**
-     * @return pageNumber
-     */
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    /**
      * @return totalCount
      */
     public Integer getTotalCount() {
         return this.totalCount;
     }
 
-    /**
-     * @return instanceStatuses
-     */
-    public InstanceStatuses getInstanceStatuses() {
-        return this.instanceStatuses;
-    }
-
     public static final class Builder {
+        private InstanceStatuses instanceStatuses; 
+        private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private Integer pageNumber; 
         private Integer totalCount; 
-        private InstanceStatuses instanceStatuses; 
 
         /**
-         * The number of entries to return on each page.
+         * InstanceStatuses.
          */
-        public Builder pageSize(Integer pageSize) {
-            this.pageSize = pageSize;
+        public Builder instanceStatuses(InstanceStatuses instanceStatuses) {
+            this.instanceStatuses = instanceStatuses;
             return this;
         }
 
         /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The page number of the instance list.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -110,18 +102,26 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of instances.
+         * PageSize.
          */
-        public Builder totalCount(Integer totalCount) {
-            this.totalCount = totalCount;
+        public Builder pageSize(Integer pageSize) {
+            this.pageSize = pageSize;
             return this;
         }
 
         /**
-         * The type of the instance status set (InstanceStatus).
+         * RequestId.
          */
-        public Builder instanceStatuses(InstanceStatuses instanceStatuses) {
-            this.instanceStatuses = instanceStatuses;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
@@ -132,15 +132,15 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
     } 
 
     public static class InstanceStatus extends TeaModel {
-        @NameInMap("Status")
-        private String status;
-
         @NameInMap("InstanceId")
         private String instanceId;
 
+        @NameInMap("Status")
+        private String status;
+
         private InstanceStatus(Builder builder) {
-            this.status = builder.status;
             this.instanceId = builder.instanceId;
+            this.status = builder.status;
         }
 
         public static Builder builder() {
@@ -152,36 +152,36 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * @return status
-         */
-        public String getStatus() {
-            return this.status;
-        }
-
-        /**
          * @return instanceId
          */
         public String getInstanceId() {
             return this.instanceId;
         }
 
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
         public static final class Builder {
-            private String status; 
             private String instanceId; 
+            private String status; 
 
             /**
-             * The status of the instance.
+             * InstanceId.
              */
-            public Builder status(String status) {
-                this.status = status;
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
                 return this;
             }
 
             /**
-             * The ID of the instance.
+             * Status.
              */
-            public Builder instanceId(String instanceId) {
-                this.instanceId = instanceId;
+            public Builder status(String status) {
+                this.status = status;
                 return this;
             }
 

@@ -12,21 +12,42 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateSnapshotRequest</p>
  */
 public class CreateSnapshotRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("Category")
+    private String category;
+
+    @Query
+    @NameInMap("ClientToken")
+    private String clientToken;
+
+    @Query
+    @NameInMap("Description")
+    private String description;
+
+    @Query
+    @NameInMap("DiskId")
+    @Validation(required = true)
+    private String diskId;
+
+    @Query
+    @NameInMap("InstantAccess")
+    private Boolean instantAccess;
+
+    @Query
+    @NameInMap("InstantAccessRetentionDays")
+    private Integer instantAccessRetentionDays;
 
     @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
 
     @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
-
-    @Query
     @NameInMap("OwnerId")
     private Long ownerId;
+
+    @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
 
     @Query
     @NameInMap("ResourceOwnerAccount")
@@ -37,31 +58,6 @@ public class CreateSnapshotRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
-    @NameInMap("DiskId")
-    @Validation(required = true)
-    private String diskId;
-
-    @Query
-    @NameInMap("Description")
-    private String description;
-
-    @Query
-    @NameInMap("ClientToken")
-    private String clientToken;
-
-    @Query
-    @NameInMap("Category")
-    private String category;
-
-    @Query
-    @NameInMap("ResourceGroupId")
-    private String resourceGroupId;
-
-    @Query
-    @NameInMap("InstantAccessRetentionDays")
-    private Integer instantAccessRetentionDays;
-
-    @Query
     @NameInMap("RetentionDays")
     private Integer retentionDays;
 
@@ -69,27 +65,31 @@ public class CreateSnapshotRequest extends Request {
     @NameInMap("SnapshotName")
     private String snapshotName;
 
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
-    @NameInMap("InstantAccess")
-    private Boolean instantAccess;
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
 
     private CreateSnapshotRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
+        this.category = builder.category;
+        this.clientToken = builder.clientToken;
+        this.description = builder.description;
+        this.diskId = builder.diskId;
+        this.instantAccess = builder.instantAccess;
+        this.instantAccessRetentionDays = builder.instantAccessRetentionDays;
         this.ownerAccount = builder.ownerAccount;
-        this.tag = builder.tag;
         this.ownerId = builder.ownerId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.diskId = builder.diskId;
-        this.description = builder.description;
-        this.clientToken = builder.clientToken;
-        this.category = builder.category;
-        this.resourceGroupId = builder.resourceGroupId;
-        this.instantAccessRetentionDays = builder.instantAccessRetentionDays;
         this.retentionDays = builder.retentionDays;
         this.snapshotName = builder.snapshotName;
-        this.instantAccess = builder.instantAccess;
+        this.sourceRegionId = builder.sourceRegionId;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -106,10 +106,45 @@ public class CreateSnapshotRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return category
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getCategory() {
+        return this.category;
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
+     * @return diskId
+     */
+    public String getDiskId() {
+        return this.diskId;
+    }
+
+    /**
+     * @return instantAccess
+     */
+    public Boolean getInstantAccess() {
+        return this.instantAccess;
+    }
+
+    /**
+     * @return instantAccessRetentionDays
+     */
+    public Integer getInstantAccessRetentionDays() {
+        return this.instantAccessRetentionDays;
     }
 
     /**
@@ -120,17 +155,17 @@ public class CreateSnapshotRequest extends Request {
     }
 
     /**
-     * @return tag
-     */
-    public java.util.List < Tag> getTag() {
-        return this.tag;
-    }
-
-    /**
      * @return ownerId
      */
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     /**
@@ -148,48 +183,6 @@ public class CreateSnapshotRequest extends Request {
     }
 
     /**
-     * @return diskId
-     */
-    public String getDiskId() {
-        return this.diskId;
-    }
-
-    /**
-     * @return description
-     */
-    public String getDescription() {
-        return this.description;
-    }
-
-    /**
-     * @return clientToken
-     */
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    /**
-     * @return category
-     */
-    public String getCategory() {
-        return this.category;
-    }
-
-    /**
-     * @return resourceGroupId
-     */
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
-    }
-
-    /**
-     * @return instantAccessRetentionDays
-     */
-    public Integer getInstantAccessRetentionDays() {
-        return this.instantAccessRetentionDays;
-    }
-
-    /**
      * @return retentionDays
      */
     public Integer getRetentionDays() {
@@ -204,28 +197,35 @@ public class CreateSnapshotRequest extends Request {
     }
 
     /**
-     * @return instantAccess
+     * @return sourceRegionId
      */
-    public Boolean getInstantAccess() {
-        return this.instantAccess;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
     }
 
     public static final class Builder extends Request.Builder<CreateSnapshotRequest, Builder> {
-        private String sourceRegionId; 
+        private String category; 
+        private String clientToken; 
+        private String description; 
+        private String diskId; 
+        private Boolean instantAccess; 
+        private Integer instantAccessRetentionDays; 
         private String ownerAccount; 
-        private java.util.List < Tag> tag; 
         private Long ownerId; 
+        private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String diskId; 
-        private String description; 
-        private String clientToken; 
-        private String category; 
-        private String resourceGroupId; 
-        private Integer instantAccessRetentionDays; 
         private Integer retentionDays; 
         private String snapshotName; 
-        private Boolean instantAccess; 
+        private String sourceRegionId; 
+        private java.util.List < Tag> tag; 
 
         private Builder() {
             super();
@@ -233,29 +233,74 @@ public class CreateSnapshotRequest extends Request {
 
         private Builder(CreateSnapshotRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
+            this.category = request.category;
+            this.clientToken = request.clientToken;
+            this.description = request.description;
+            this.diskId = request.diskId;
+            this.instantAccess = request.instantAccess;
+            this.instantAccessRetentionDays = request.instantAccessRetentionDays;
             this.ownerAccount = request.ownerAccount;
-            this.tag = request.tag;
             this.ownerId = request.ownerId;
+            this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.diskId = request.diskId;
-            this.description = request.description;
-            this.clientToken = request.clientToken;
-            this.category = request.category;
-            this.resourceGroupId = request.resourceGroupId;
-            this.instantAccessRetentionDays = request.instantAccessRetentionDays;
             this.retentionDays = request.retentionDays;
             this.snapshotName = request.snapshotName;
-            this.instantAccess = request.instantAccess;
+            this.sourceRegionId = request.sourceRegionId;
+            this.tag = request.tag;
         } 
 
         /**
-         * SourceRegionId.
+         * Category.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder category(String category) {
+            this.putQueryParameter("Category", category);
+            this.category = category;
+            return this;
+        }
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
+            return this;
+        }
+
+        /**
+         * DiskId.
+         */
+        public Builder diskId(String diskId) {
+            this.putQueryParameter("DiskId", diskId);
+            this.diskId = diskId;
+            return this;
+        }
+
+        /**
+         * InstantAccess.
+         */
+        public Builder instantAccess(Boolean instantAccess) {
+            this.putQueryParameter("InstantAccess", instantAccess);
+            this.instantAccess = instantAccess;
+            return this;
+        }
+
+        /**
+         * InstantAccessRetentionDays.
+         */
+        public Builder instantAccessRetentionDays(Integer instantAccessRetentionDays) {
+            this.putQueryParameter("InstantAccessRetentionDays", instantAccessRetentionDays);
+            this.instantAccessRetentionDays = instantAccessRetentionDays;
             return this;
         }
 
@@ -269,16 +314,7 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * Tag.
-         */
-        public Builder tag(java.util.List < Tag> tag) {
-            this.putQueryParameter("Tag", tag);
-            this.tag = tag;
-            return this;
-        }
-
-        /**
-         * The ID of the RAM user.
+         * OwnerId.
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -287,69 +323,7 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * The account name of the resource master account.
-         */
-        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
-            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-            this.resourceOwnerAccount = resourceOwnerAccount;
-            return this;
-        }
-
-        /**
-         * The ID of the resource master account, that is, the UID.
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * The ID of the disk.
-         */
-        public Builder diskId(String diskId) {
-            this.putQueryParameter("DiskId", diskId);
-            this.diskId = diskId;
-            return this;
-        }
-
-        /**
-         * The description of the snapshot. The description must be 2 to 256 characters in length and cannot start with http:// or https.
-         * <p>
-         * 
-         * Default value: Null.
-         */
-        public Builder description(String description) {
-            this.putQueryParameter("Description", description);
-            this.description = description;
-            return this;
-        }
-
-        /**
-         * Ensure the idempotence of the request. Generate a parameter value from your client. Make sure that the value is unique among different requests. **ClientToken** supports only ASCII characters and cannot exceed 64 characters. For more information, see [how to ensure idempotence](~~ 25693 ~~).
-         */
-        public Builder clientToken(String clientToken) {
-            this.putQueryParameter("ClientToken", clientToken);
-            this.clientToken = clientToken;
-            return this;
-        }
-
-        /**
-         * The type of the snapshot. Valid values:
-         * <p>
-         * -Standard: normal snapshot
-         * -Flash: local snapshot
-         * 
-         * > This parameter will be deprecated soon. We recommend that you use the "InstantAccess" parameter to improve compatibility ". This parameter and the "InstantAccess" parameter cannot be passed at the same time. For more information, see API description.
-         */
-        public Builder category(String category) {
-            this.putQueryParameter("Category", category);
-            this.category = category;
-            return this;
-        }
-
-        /**
-         * The ID of the resource group to which the snapshot belongs.
+         * ResourceGroupId.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -358,19 +332,25 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * Set the retention period of the snapshot extreme availability feature. After the retention period expires, the snapshot is automatically released. This parameter takes effect when "InstantAccess = true. Unit: days. Valid values: 1 to 65535. The default value is the same as the value of the "RetentionDays" parameter.
+         * ResourceOwnerAccount.
          */
-        public Builder instantAccessRetentionDays(Integer instantAccessRetentionDays) {
-            this.putQueryParameter("InstantAccessRetentionDays", instantAccessRetentionDays);
-            this.instantAccessRetentionDays = instantAccessRetentionDays;
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
             return this;
         }
 
         /**
-         * The retention period of the snapshot. Unit: days. Snapshots are automatically released after the retention period expires. Valid values: 1 to 65536.
-         * <p>
-         * 
-         * Default value: null, indicating that snapshots are not automatically released.
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * RetentionDays.
          */
         public Builder retentionDays(Integer retentionDays) {
             this.putQueryParameter("RetentionDays", retentionDays);
@@ -379,10 +359,7 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * The name of the snapshot. The description must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https. It can contain numbers, colons (:), underscores (_), and hyphens (-).
-         * <p>
-         * 
-         * To prevent conflicts with the name of an automatic snapshot, it cannot start with auto.
+         * SnapshotName.
          */
         public Builder snapshotName(String snapshotName) {
             this.putQueryParameter("SnapshotName", snapshotName);
@@ -391,18 +368,20 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable quick snapshot availability. Valid values:
-         * <p>
-         * -true: enabled. Only ESSDS support this feature.
-         * -false: disabled. Create a normal snapshot.
-         * 
-         * Default value: false
-         * 
-         * > This parameter and the "categore" parameter cannot be passed at the same time. For more information, see API description.
+         * SourceRegionId.
          */
-        public Builder instantAccess(Boolean instantAccess) {
-            this.putQueryParameter("InstantAccess", instantAccess);
-            this.instantAccess = instantAccess;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
+
+        /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
             return this;
         }
 
@@ -414,7 +393,7 @@ public class CreateSnapshotRequest extends Request {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("key")
+        @NameInMap("Key")
         private String key;
 
         @NameInMap("Value")
@@ -452,10 +431,7 @@ public class CreateSnapshotRequest extends Request {
             private String value; 
 
             /**
-             * 快照的标签键。
-             * <p>
-             * 
-             * >  为提高兼容性，建议您尽量使用Tag.N.Key参数。
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -463,7 +439,7 @@ public class CreateSnapshotRequest extends Request {
             }
 
             /**
-             * 快照的标签值。N的取值范围：1~20。一旦传入该值，可以为空字符串。最多支持128个字符，不能以acs:开头，不能包含http://或者https://。
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

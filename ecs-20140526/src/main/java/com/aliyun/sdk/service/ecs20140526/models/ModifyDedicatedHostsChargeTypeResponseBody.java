@@ -12,19 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyDedicatedHostsChargeTypeResponseBody</p>
  */
 public class ModifyDedicatedHostsChargeTypeResponseBody extends TeaModel {
+    @NameInMap("FeeOfInstances")
+    private FeeOfInstances feeOfInstances;
+
     @NameInMap("OrderId")
     private String orderId;
 
     @NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("FeeOfInstances")
-    private FeeOfInstances feeOfInstances;
-
     private ModifyDedicatedHostsChargeTypeResponseBody(Builder builder) {
+        this.feeOfInstances = builder.feeOfInstances;
         this.orderId = builder.orderId;
         this.requestId = builder.requestId;
-        this.feeOfInstances = builder.feeOfInstances;
     }
 
     public static Builder builder() {
@@ -33,6 +33,13 @@ public class ModifyDedicatedHostsChargeTypeResponseBody extends TeaModel {
 
     public static ModifyDedicatedHostsChargeTypeResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return feeOfInstances
+     */
+    public FeeOfInstances getFeeOfInstances() {
+        return this.feeOfInstances;
     }
 
     /**
@@ -49,20 +56,21 @@ public class ModifyDedicatedHostsChargeTypeResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    /**
-     * @return feeOfInstances
-     */
-    public FeeOfInstances getFeeOfInstances() {
-        return this.feeOfInstances;
-    }
-
     public static final class Builder {
+        private FeeOfInstances feeOfInstances; 
         private String orderId; 
         private String requestId; 
-        private FeeOfInstances feeOfInstances; 
 
         /**
-         * The ID of the generated order.
+         * FeeOfInstances.
+         */
+        public Builder feeOfInstances(FeeOfInstances feeOfInstances) {
+            this.feeOfInstances = feeOfInstances;
+            return this;
+        }
+
+        /**
+         * OrderId.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -70,18 +78,10 @@ public class ModifyDedicatedHostsChargeTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The details of the order fee.
-         */
-        public Builder feeOfInstances(FeeOfInstances feeOfInstances) {
-            this.feeOfInstances = feeOfInstances;
             return this;
         }
 
@@ -92,19 +92,19 @@ public class ModifyDedicatedHostsChargeTypeResponseBody extends TeaModel {
     } 
 
     public static class FeeOfInstance extends TeaModel {
-        @NameInMap("InstanceId")
-        private String instanceId;
-
         @NameInMap("Currency")
         private String currency;
 
         @NameInMap("Fee")
         private String fee;
 
+        @NameInMap("InstanceId")
+        private String instanceId;
+
         private FeeOfInstance(Builder builder) {
-            this.instanceId = builder.instanceId;
             this.currency = builder.currency;
             this.fee = builder.fee;
+            this.instanceId = builder.instanceId;
         }
 
         public static Builder builder() {
@@ -113,13 +113,6 @@ public class ModifyDedicatedHostsChargeTypeResponseBody extends TeaModel {
 
         public static FeeOfInstance create() {
             return builder().build();
-        }
-
-        /**
-         * @return instanceId
-         */
-        public String getInstanceId() {
-            return this.instanceId;
         }
 
         /**
@@ -136,21 +129,20 @@ public class ModifyDedicatedHostsChargeTypeResponseBody extends TeaModel {
             return this.fee;
         }
 
+        /**
+         * @return instanceId
+         */
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
         public static final class Builder {
-            private String instanceId; 
             private String currency; 
             private String fee; 
+            private String instanceId; 
 
             /**
-             * The ID of the dedicated host.
-             */
-            public Builder instanceId(String instanceId) {
-                this.instanceId = instanceId;
-                return this;
-            }
-
-            /**
-             * The unit of the bill.
+             * Currency.
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -158,10 +150,18 @@ public class ModifyDedicatedHostsChargeTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the fee.
+             * Fee.
              */
             public Builder fee(String fee) {
                 this.fee = fee;
+                return this;
+            }
+
+            /**
+             * InstanceId.
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
                 return this;
             }
 

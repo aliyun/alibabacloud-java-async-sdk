@@ -13,8 +13,29 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateStorageSetRequest extends Request {
     @Query
+    @NameInMap("ClientToken")
+    private String clientToken;
+
+    @Query
+    @NameInMap("Description")
+    private String description;
+
+    @Query
+    @NameInMap("MaxPartitionNumber")
+    private Integer maxPartitionNumber;
+
+    @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @Query
     @NameInMap("OwnerId")
     private Long ownerId;
+
+    @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
 
     @Query
     @NameInMap("ResourceOwnerAccount")
@@ -25,23 +46,6 @@ public class CreateStorageSetRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
-    @NameInMap("OwnerAccount")
-    private String ownerAccount;
-
-    @Query
-    @NameInMap("ClientToken")
-    private String clientToken;
-
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
-    @Query
-    @NameInMap("Description")
-    private String description;
-
-    @Query
     @NameInMap("StorageSetName")
     private String storageSetName;
 
@@ -50,22 +54,18 @@ public class CreateStorageSetRequest extends Request {
     @Validation(required = true)
     private String zoneId;
 
-    @Query
-    @NameInMap("MaxPartitionNumber")
-    private Integer maxPartitionNumber;
-
     private CreateStorageSetRequest(Builder builder) {
         super(builder);
+        this.clientToken = builder.clientToken;
+        this.description = builder.description;
+        this.maxPartitionNumber = builder.maxPartitionNumber;
+        this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.ownerAccount = builder.ownerAccount;
-        this.clientToken = builder.clientToken;
-        this.regionId = builder.regionId;
-        this.description = builder.description;
         this.storageSetName = builder.storageSetName;
         this.zoneId = builder.zoneId;
-        this.maxPartitionNumber = builder.maxPartitionNumber;
     }
 
     public static Builder builder() {
@@ -82,10 +82,45 @@ public class CreateStorageSetRequest extends Request {
     }
 
     /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
+     * @return maxPartitionNumber
+     */
+    public Integer getMaxPartitionNumber() {
+        return this.maxPartitionNumber;
+    }
+
+    /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
      * @return ownerId
      */
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -103,34 +138,6 @@ public class CreateStorageSetRequest extends Request {
     }
 
     /**
-     * @return ownerAccount
-     */
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    /**
-     * @return clientToken
-     */
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return description
-     */
-    public String getDescription() {
-        return this.description;
-    }
-
-    /**
      * @return storageSetName
      */
     public String getStorageSetName() {
@@ -144,24 +151,17 @@ public class CreateStorageSetRequest extends Request {
         return this.zoneId;
     }
 
-    /**
-     * @return maxPartitionNumber
-     */
-    public Integer getMaxPartitionNumber() {
-        return this.maxPartitionNumber;
-    }
-
     public static final class Builder extends Request.Builder<CreateStorageSetRequest, Builder> {
+        private String clientToken; 
+        private String description; 
+        private Integer maxPartitionNumber; 
+        private String ownerAccount; 
         private Long ownerId; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String ownerAccount; 
-        private String clientToken; 
-        private String regionId; 
-        private String description; 
         private String storageSetName; 
         private String zoneId; 
-        private Integer maxPartitionNumber; 
 
         private Builder() {
             super();
@@ -169,17 +169,53 @@ public class CreateStorageSetRequest extends Request {
 
         private Builder(CreateStorageSetRequest request) {
             super(request);
+            this.clientToken = request.clientToken;
+            this.description = request.description;
+            this.maxPartitionNumber = request.maxPartitionNumber;
+            this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.ownerAccount = request.ownerAccount;
-            this.clientToken = request.clientToken;
-            this.regionId = request.regionId;
-            this.description = request.description;
             this.storageSetName = request.storageSetName;
             this.zoneId = request.zoneId;
-            this.maxPartitionNumber = request.maxPartitionNumber;
         } 
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
+            return this;
+        }
+
+        /**
+         * MaxPartitionNumber.
+         */
+        public Builder maxPartitionNumber(Integer maxPartitionNumber) {
+            this.putQueryParameter("MaxPartitionNumber", maxPartitionNumber);
+            this.maxPartitionNumber = maxPartitionNumber;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
 
         /**
          * OwnerId.
@@ -187,6 +223,15 @@ public class CreateStorageSetRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
@@ -209,43 +254,7 @@ public class CreateStorageSetRequest extends Request {
         }
 
         /**
-         * OwnerAccount.
-         */
-        public Builder ownerAccount(String ownerAccount) {
-            this.putQueryParameter("OwnerAccount", ownerAccount);
-            this.ownerAccount = ownerAccount;
-            return this;
-        }
-
-        /**
-         * Ensure the idempotence of the request. Generate a parameter value from your client. Make sure that the value is unique among different requests. **ClientToken** supports only ASCII characters and cannot exceed 64 characters. For more information, see [how to ensure idempotence](~~ 25693 ~~).
-         */
-        public Builder clientToken(String clientToken) {
-            this.putQueryParameter("ClientToken", clientToken);
-            this.clientToken = clientToken;
-            return this;
-        }
-
-        /**
-         * The region to which the bucket belongs. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The description of the storage set. The description must be 2 to 256 characters in length and cannot start with http:// or https.
-         */
-        public Builder description(String description) {
-            this.putQueryParameter("Description", description);
-            this.description = description;
-            return this;
-        }
-
-        /**
-         * The name of the storage set. The description must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https. It can contain numbers, colons (:), underscores (_), and hyphens (-).
+         * StorageSetName.
          */
         public Builder storageSetName(String storageSetName) {
             this.putQueryParameter("StorageSetName", storageSetName);
@@ -254,23 +263,11 @@ public class CreateStorageSetRequest extends Request {
         }
 
         /**
-         * The zone to which the bucket belongs. You can call [DescribeZones](~~ 25610 ~~) to query the latest zone list.
+         * ZoneId.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
             this.zoneId = zoneId;
-            return this;
-        }
-
-        /**
-         * The maximum partition size of the Storage Set. The maximum partition number supported by the StorageSet. Valid values: 2 to 2. The maximum value cannot exceed the quota displayed after [DescribeAccountAttributes](~~ 73772 ~~) is called.
-         * <p>
-         * 
-         * Default value: 2.
-         */
-        public Builder maxPartitionNumber(Integer maxPartitionNumber) {
-            this.putQueryParameter("MaxPartitionNumber", maxPartitionNumber);
-            this.maxPartitionNumber = maxPartitionNumber;
             return this;
         }
 

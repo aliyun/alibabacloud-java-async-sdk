@@ -12,17 +12,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSecurityGroupAttributeResponseBody</p>
  */
 public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
-    @NameInMap("VpcId")
-    private String vpcId;
-
-    @NameInMap("RequestId")
-    private String requestId;
+    @NameInMap("Description")
+    private String description;
 
     @NameInMap("InnerAccessPolicy")
     private String innerAccessPolicy;
 
-    @NameInMap("Description")
-    private String description;
+    @NameInMap("Permissions")
+    private Permissions permissions;
+
+    @NameInMap("RegionId")
+    private String regionId;
+
+    @NameInMap("RequestId")
+    private String requestId;
 
     @NameInMap("SecurityGroupId")
     private String securityGroupId;
@@ -30,21 +33,18 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
     @NameInMap("SecurityGroupName")
     private String securityGroupName;
 
-    @NameInMap("RegionId")
-    private String regionId;
-
-    @NameInMap("Permissions")
-    private Permissions permissions;
+    @NameInMap("VpcId")
+    private String vpcId;
 
     private DescribeSecurityGroupAttributeResponseBody(Builder builder) {
-        this.vpcId = builder.vpcId;
-        this.requestId = builder.requestId;
-        this.innerAccessPolicy = builder.innerAccessPolicy;
         this.description = builder.description;
+        this.innerAccessPolicy = builder.innerAccessPolicy;
+        this.permissions = builder.permissions;
+        this.regionId = builder.regionId;
+        this.requestId = builder.requestId;
         this.securityGroupId = builder.securityGroupId;
         this.securityGroupName = builder.securityGroupName;
-        this.regionId = builder.regionId;
-        this.permissions = builder.permissions;
+        this.vpcId = builder.vpcId;
     }
 
     public static Builder builder() {
@@ -56,17 +56,10 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
     }
 
     /**
-     * @return vpcId
+     * @return description
      */
-    public String getVpcId() {
-        return this.vpcId;
-    }
-
-    /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
+    public String getDescription() {
+        return this.description;
     }
 
     /**
@@ -77,10 +70,24 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
     }
 
     /**
-     * @return description
+     * @return permissions
      */
-    public String getDescription() {
-        return this.description;
+    public Permissions getPermissions() {
+        return this.permissions;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
     }
 
     /**
@@ -98,59 +105,24 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
     }
 
     /**
-     * @return regionId
+     * @return vpcId
      */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return permissions
-     */
-    public Permissions getPermissions() {
-        return this.permissions;
+    public String getVpcId() {
+        return this.vpcId;
     }
 
     public static final class Builder {
-        private String vpcId; 
-        private String requestId; 
-        private String innerAccessPolicy; 
         private String description; 
+        private String innerAccessPolicy; 
+        private Permissions permissions; 
+        private String regionId; 
+        private String requestId; 
         private String securityGroupId; 
         private String securityGroupName; 
-        private String regionId; 
-        private Permissions permissions; 
+        private String vpcId; 
 
         /**
-         * VPC ID. If VPC ID is returned, the network type of the security group is VPC. Otherwise, it indicates a classic network security group.
-         */
-        public Builder vpcId(String vpcId) {
-            this.vpcId = vpcId;
-            return this;
-        }
-
-        /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The network connection policy in the security group. Possible values:
-         * <p>
-         * 
-         * -Accept: intranet interconnection
-         * -Drop: internal network isolation
-         */
-        public Builder innerAccessPolicy(String innerAccessPolicy) {
-            this.innerAccessPolicy = innerAccessPolicy;
-            return this;
-        }
-
-        /**
-         * The description of the security group.
+         * Description.
          */
         public Builder description(String description) {
             this.description = description;
@@ -158,23 +130,23 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the Target security group.
+         * InnerAccessPolicy.
          */
-        public Builder securityGroupId(String securityGroupId) {
-            this.securityGroupId = securityGroupId;
+        public Builder innerAccessPolicy(String innerAccessPolicy) {
+            this.innerAccessPolicy = innerAccessPolicy;
             return this;
         }
 
         /**
-         * The name of the target security group.
+         * Permissions.
          */
-        public Builder securityGroupName(String securityGroupName) {
-            this.securityGroupName = securityGroupName;
+        public Builder permissions(Permissions permissions) {
+            this.permissions = permissions;
             return this;
         }
 
         /**
-         * The ID of the region.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -182,10 +154,34 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The set of Security Group permission rules.
+         * RequestId.
          */
-        public Builder permissions(Permissions permissions) {
-            this.permissions = permissions;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * SecurityGroupId.
+         */
+        public Builder securityGroupId(String securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+
+        /**
+         * SecurityGroupName.
+         */
+        public Builder securityGroupName(String securityGroupName) {
+            this.securityGroupName = securityGroupName;
+            return this;
+        }
+
+        /**
+         * VpcId.
+         */
+        public Builder vpcId(String vpcId) {
+            this.vpcId = vpcId;
             return this;
         }
 
@@ -196,11 +192,20 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
     } 
 
     public static class Permission extends TeaModel {
-        @NameInMap("Direction")
-        private String direction;
+        @NameInMap("CreateTime")
+        private String createTime;
 
-        @NameInMap("SourceGroupId")
-        private String sourceGroupId;
+        @NameInMap("Description")
+        private String description;
+
+        @NameInMap("DestCidrIp")
+        private String destCidrIp;
+
+        @NameInMap("DestGroupId")
+        private String destGroupId;
+
+        @NameInMap("DestGroupName")
+        private String destGroupName;
 
         @NameInMap("DestGroupOwnerAccount")
         private String destGroupOwnerAccount;
@@ -211,32 +216,17 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
         @NameInMap("DestPrefixListName")
         private String destPrefixListName;
 
-        @NameInMap("SourceCidrIp")
-        private String sourceCidrIp;
-
-        @NameInMap("Ipv6DestCidrIp")
-        private String ipv6DestCidrIp;
-
-        @NameInMap("CreateTime")
-        private String createTime;
-
-        @NameInMap("Ipv6SourceCidrIp")
-        private String ipv6SourceCidrIp;
-
-        @NameInMap("DestGroupId")
-        private String destGroupId;
-
-        @NameInMap("DestCidrIp")
-        private String destCidrIp;
+        @NameInMap("Direction")
+        private String direction;
 
         @NameInMap("IpProtocol")
         private String ipProtocol;
 
-        @NameInMap("Priority")
-        private String priority;
+        @NameInMap("Ipv6DestCidrIp")
+        private String ipv6DestCidrIp;
 
-        @NameInMap("DestGroupName")
-        private String destGroupName;
+        @NameInMap("Ipv6SourceCidrIp")
+        private String ipv6SourceCidrIp;
 
         @NameInMap("NicType")
         private String nicType;
@@ -244,51 +234,57 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
         @NameInMap("Policy")
         private String policy;
 
-        @NameInMap("Description")
-        private String description;
-
         @NameInMap("PortRange")
         private String portRange;
 
-        @NameInMap("SourcePrefixListName")
-        private String sourcePrefixListName;
+        @NameInMap("Priority")
+        private String priority;
 
-        @NameInMap("SourcePrefixListId")
-        private String sourcePrefixListId;
+        @NameInMap("SourceCidrIp")
+        private String sourceCidrIp;
 
-        @NameInMap("SourceGroupOwnerAccount")
-        private String sourceGroupOwnerAccount;
+        @NameInMap("SourceGroupId")
+        private String sourceGroupId;
 
         @NameInMap("SourceGroupName")
         private String sourceGroupName;
 
+        @NameInMap("SourceGroupOwnerAccount")
+        private String sourceGroupOwnerAccount;
+
         @NameInMap("SourcePortRange")
         private String sourcePortRange;
 
+        @NameInMap("SourcePrefixListId")
+        private String sourcePrefixListId;
+
+        @NameInMap("SourcePrefixListName")
+        private String sourcePrefixListName;
+
         private Permission(Builder builder) {
-            this.direction = builder.direction;
-            this.sourceGroupId = builder.sourceGroupId;
+            this.createTime = builder.createTime;
+            this.description = builder.description;
+            this.destCidrIp = builder.destCidrIp;
+            this.destGroupId = builder.destGroupId;
+            this.destGroupName = builder.destGroupName;
             this.destGroupOwnerAccount = builder.destGroupOwnerAccount;
             this.destPrefixListId = builder.destPrefixListId;
             this.destPrefixListName = builder.destPrefixListName;
-            this.sourceCidrIp = builder.sourceCidrIp;
-            this.ipv6DestCidrIp = builder.ipv6DestCidrIp;
-            this.createTime = builder.createTime;
-            this.ipv6SourceCidrIp = builder.ipv6SourceCidrIp;
-            this.destGroupId = builder.destGroupId;
-            this.destCidrIp = builder.destCidrIp;
+            this.direction = builder.direction;
             this.ipProtocol = builder.ipProtocol;
-            this.priority = builder.priority;
-            this.destGroupName = builder.destGroupName;
+            this.ipv6DestCidrIp = builder.ipv6DestCidrIp;
+            this.ipv6SourceCidrIp = builder.ipv6SourceCidrIp;
             this.nicType = builder.nicType;
             this.policy = builder.policy;
-            this.description = builder.description;
             this.portRange = builder.portRange;
-            this.sourcePrefixListName = builder.sourcePrefixListName;
-            this.sourcePrefixListId = builder.sourcePrefixListId;
-            this.sourceGroupOwnerAccount = builder.sourceGroupOwnerAccount;
+            this.priority = builder.priority;
+            this.sourceCidrIp = builder.sourceCidrIp;
+            this.sourceGroupId = builder.sourceGroupId;
             this.sourceGroupName = builder.sourceGroupName;
+            this.sourceGroupOwnerAccount = builder.sourceGroupOwnerAccount;
             this.sourcePortRange = builder.sourcePortRange;
+            this.sourcePrefixListId = builder.sourcePrefixListId;
+            this.sourcePrefixListName = builder.sourcePrefixListName;
         }
 
         public static Builder builder() {
@@ -300,17 +296,38 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * @return direction
+         * @return createTime
          */
-        public String getDirection() {
-            return this.direction;
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         /**
-         * @return sourceGroupId
+         * @return description
          */
-        public String getSourceGroupId() {
-            return this.sourceGroupId;
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return destCidrIp
+         */
+        public String getDestCidrIp() {
+            return this.destCidrIp;
+        }
+
+        /**
+         * @return destGroupId
+         */
+        public String getDestGroupId() {
+            return this.destGroupId;
+        }
+
+        /**
+         * @return destGroupName
+         */
+        public String getDestGroupName() {
+            return this.destGroupName;
         }
 
         /**
@@ -335,45 +352,10 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * @return sourceCidrIp
+         * @return direction
          */
-        public String getSourceCidrIp() {
-            return this.sourceCidrIp;
-        }
-
-        /**
-         * @return ipv6DestCidrIp
-         */
-        public String getIpv6DestCidrIp() {
-            return this.ipv6DestCidrIp;
-        }
-
-        /**
-         * @return createTime
-         */
-        public String getCreateTime() {
-            return this.createTime;
-        }
-
-        /**
-         * @return ipv6SourceCidrIp
-         */
-        public String getIpv6SourceCidrIp() {
-            return this.ipv6SourceCidrIp;
-        }
-
-        /**
-         * @return destGroupId
-         */
-        public String getDestGroupId() {
-            return this.destGroupId;
-        }
-
-        /**
-         * @return destCidrIp
-         */
-        public String getDestCidrIp() {
-            return this.destCidrIp;
+        public String getDirection() {
+            return this.direction;
         }
 
         /**
@@ -384,17 +366,17 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * @return priority
+         * @return ipv6DestCidrIp
          */
-        public String getPriority() {
-            return this.priority;
+        public String getIpv6DestCidrIp() {
+            return this.ipv6DestCidrIp;
         }
 
         /**
-         * @return destGroupName
+         * @return ipv6SourceCidrIp
          */
-        public String getDestGroupName() {
-            return this.destGroupName;
+        public String getIpv6SourceCidrIp() {
+            return this.ipv6SourceCidrIp;
         }
 
         /**
@@ -412,13 +394,6 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * @return description
-         */
-        public String getDescription() {
-            return this.description;
-        }
-
-        /**
          * @return portRange
          */
         public String getPortRange() {
@@ -426,24 +401,24 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * @return sourcePrefixListName
+         * @return priority
          */
-        public String getSourcePrefixListName() {
-            return this.sourcePrefixListName;
+        public String getPriority() {
+            return this.priority;
         }
 
         /**
-         * @return sourcePrefixListId
+         * @return sourceCidrIp
          */
-        public String getSourcePrefixListId() {
-            return this.sourcePrefixListId;
+        public String getSourceCidrIp() {
+            return this.sourceCidrIp;
         }
 
         /**
-         * @return sourceGroupOwnerAccount
+         * @return sourceGroupId
          */
-        public String getSourceGroupOwnerAccount() {
-            return this.sourceGroupOwnerAccount;
+        public String getSourceGroupId() {
+            return this.sourceGroupId;
         }
 
         /**
@@ -454,95 +429,60 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return sourceGroupOwnerAccount
+         */
+        public String getSourceGroupOwnerAccount() {
+            return this.sourceGroupOwnerAccount;
+        }
+
+        /**
          * @return sourcePortRange
          */
         public String getSourcePortRange() {
             return this.sourcePortRange;
         }
 
+        /**
+         * @return sourcePrefixListId
+         */
+        public String getSourcePrefixListId() {
+            return this.sourcePrefixListId;
+        }
+
+        /**
+         * @return sourcePrefixListName
+         */
+        public String getSourcePrefixListName() {
+            return this.sourcePrefixListName;
+        }
+
         public static final class Builder {
-            private String direction; 
-            private String sourceGroupId; 
+            private String createTime; 
+            private String description; 
+            private String destCidrIp; 
+            private String destGroupId; 
+            private String destGroupName; 
             private String destGroupOwnerAccount; 
             private String destPrefixListId; 
             private String destPrefixListName; 
-            private String sourceCidrIp; 
-            private String ipv6DestCidrIp; 
-            private String createTime; 
-            private String ipv6SourceCidrIp; 
-            private String destGroupId; 
-            private String destCidrIp; 
+            private String direction; 
             private String ipProtocol; 
-            private String priority; 
-            private String destGroupName; 
+            private String ipv6DestCidrIp; 
+            private String ipv6SourceCidrIp; 
             private String nicType; 
             private String policy; 
-            private String description; 
             private String portRange; 
-            private String sourcePrefixListName; 
-            private String sourcePrefixListId; 
-            private String sourceGroupOwnerAccount; 
+            private String priority; 
+            private String sourceCidrIp; 
+            private String sourceGroupId; 
             private String sourceGroupName; 
+            private String sourceGroupOwnerAccount; 
             private String sourcePortRange; 
+            private String sourcePrefixListId; 
+            private String sourcePrefixListName; 
 
             /**
-             * The authorization direction.
-             */
-            public Builder direction(String direction) {
-                this.direction = direction;
-                return this;
-            }
-
-            /**
-             * The source security group used for inbound authorization.
-             */
-            public Builder sourceGroupId(String sourceGroupId) {
-                this.sourceGroupId = sourceGroupId;
-                return this;
-            }
-
-            /**
-             * The ID of the Alibaba Cloud account to which the destination security group belongs.
-             */
-            public Builder destGroupOwnerAccount(String destGroupOwnerAccount) {
-                this.destGroupOwnerAccount = destGroupOwnerAccount;
-                return this;
-            }
-
-            /**
-             * The destination Prefix List ID, which is used for outbound authorization.
-             */
-            public Builder destPrefixListId(String destPrefixListId) {
-                this.destPrefixListId = destPrefixListId;
-                return this;
-            }
-
-            /**
-             * The name of the destination Prefix List.
-             */
-            public Builder destPrefixListName(String destPrefixListName) {
-                this.destPrefixListName = destPrefixListName;
-                return this;
-            }
-
-            /**
-             * The source IP address segment used for inbound authorization.
-             */
-            public Builder sourceCidrIp(String sourceCidrIp) {
-                this.sourceCidrIp = sourceCidrIp;
-                return this;
-            }
-
-            /**
-             * The Destination IPv6 CIDR block.
-             */
-            public Builder ipv6DestCidrIp(String ipv6DestCidrIp) {
-                this.ipv6DestCidrIp = ipv6DestCidrIp;
-                return this;
-            }
-
-            /**
-             * The creation time in UTC.
+             * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -550,71 +490,7 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The source IPv6 CIDR block.
-             */
-            public Builder ipv6SourceCidrIp(String ipv6SourceCidrIp) {
-                this.ipv6SourceCidrIp = ipv6SourceCidrIp;
-                return this;
-            }
-
-            /**
-             * The destination security group used for outbound authorization.
-             */
-            public Builder destGroupId(String destGroupId) {
-                this.destGroupId = destGroupId;
-                return this;
-            }
-
-            /**
-             * The destination IP address segment used for outbound authorization.
-             */
-            public Builder destCidrIp(String destCidrIp) {
-                this.destCidrIp = destCidrIp;
-                return this;
-            }
-
-            /**
-             * The IP protocol.
-             */
-            public Builder ipProtocol(String ipProtocol) {
-                this.ipProtocol = ipProtocol;
-                return this;
-            }
-
-            /**
-             * The priority of the rule.
-             */
-            public Builder priority(String priority) {
-                this.priority = priority;
-                return this;
-            }
-
-            /**
-             * The name of the destination security group.
-             */
-            public Builder destGroupName(String destGroupName) {
-                this.destGroupName = destGroupName;
-                return this;
-            }
-
-            /**
-             * The network type.
-             */
-            public Builder nicType(String nicType) {
-                this.nicType = nicType;
-                return this;
-            }
-
-            /**
-             * The authorization policy.
-             */
-            public Builder policy(String policy) {
-                this.policy = policy;
-                return this;
-            }
-
-            /**
-             * The description of the security group.
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -622,7 +498,103 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The port range.
+             * DestCidrIp.
+             */
+            public Builder destCidrIp(String destCidrIp) {
+                this.destCidrIp = destCidrIp;
+                return this;
+            }
+
+            /**
+             * DestGroupId.
+             */
+            public Builder destGroupId(String destGroupId) {
+                this.destGroupId = destGroupId;
+                return this;
+            }
+
+            /**
+             * DestGroupName.
+             */
+            public Builder destGroupName(String destGroupName) {
+                this.destGroupName = destGroupName;
+                return this;
+            }
+
+            /**
+             * DestGroupOwnerAccount.
+             */
+            public Builder destGroupOwnerAccount(String destGroupOwnerAccount) {
+                this.destGroupOwnerAccount = destGroupOwnerAccount;
+                return this;
+            }
+
+            /**
+             * DestPrefixListId.
+             */
+            public Builder destPrefixListId(String destPrefixListId) {
+                this.destPrefixListId = destPrefixListId;
+                return this;
+            }
+
+            /**
+             * DestPrefixListName.
+             */
+            public Builder destPrefixListName(String destPrefixListName) {
+                this.destPrefixListName = destPrefixListName;
+                return this;
+            }
+
+            /**
+             * Direction.
+             */
+            public Builder direction(String direction) {
+                this.direction = direction;
+                return this;
+            }
+
+            /**
+             * IpProtocol.
+             */
+            public Builder ipProtocol(String ipProtocol) {
+                this.ipProtocol = ipProtocol;
+                return this;
+            }
+
+            /**
+             * Ipv6DestCidrIp.
+             */
+            public Builder ipv6DestCidrIp(String ipv6DestCidrIp) {
+                this.ipv6DestCidrIp = ipv6DestCidrIp;
+                return this;
+            }
+
+            /**
+             * Ipv6SourceCidrIp.
+             */
+            public Builder ipv6SourceCidrIp(String ipv6SourceCidrIp) {
+                this.ipv6SourceCidrIp = ipv6SourceCidrIp;
+                return this;
+            }
+
+            /**
+             * NicType.
+             */
+            public Builder nicType(String nicType) {
+                this.nicType = nicType;
+                return this;
+            }
+
+            /**
+             * Policy.
+             */
+            public Builder policy(String policy) {
+                this.policy = policy;
+                return this;
+            }
+
+            /**
+             * PortRange.
              */
             public Builder portRange(String portRange) {
                 this.portRange = portRange;
@@ -630,31 +602,31 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the source prefix list.
+             * Priority.
              */
-            public Builder sourcePrefixListName(String sourcePrefixListName) {
-                this.sourcePrefixListName = sourcePrefixListName;
+            public Builder priority(String priority) {
+                this.priority = priority;
                 return this;
             }
 
             /**
-             * The source Prefix List ID, which is used for inbound authorization.
+             * SourceCidrIp.
              */
-            public Builder sourcePrefixListId(String sourcePrefixListId) {
-                this.sourcePrefixListId = sourcePrefixListId;
+            public Builder sourceCidrIp(String sourceCidrIp) {
+                this.sourceCidrIp = sourceCidrIp;
                 return this;
             }
 
             /**
-             * The ID of the Alibaba Cloud account to which the source Security Group belongs.
+             * SourceGroupId.
              */
-            public Builder sourceGroupOwnerAccount(String sourceGroupOwnerAccount) {
-                this.sourceGroupOwnerAccount = sourceGroupOwnerAccount;
+            public Builder sourceGroupId(String sourceGroupId) {
+                this.sourceGroupId = sourceGroupId;
                 return this;
             }
 
             /**
-             * The name of the source security group.
+             * SourceGroupName.
              */
             public Builder sourceGroupName(String sourceGroupName) {
                 this.sourceGroupName = sourceGroupName;
@@ -662,10 +634,34 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The range of source ports.
+             * SourceGroupOwnerAccount.
+             */
+            public Builder sourceGroupOwnerAccount(String sourceGroupOwnerAccount) {
+                this.sourceGroupOwnerAccount = sourceGroupOwnerAccount;
+                return this;
+            }
+
+            /**
+             * SourcePortRange.
              */
             public Builder sourcePortRange(String sourcePortRange) {
                 this.sourcePortRange = sourcePortRange;
+                return this;
+            }
+
+            /**
+             * SourcePrefixListId.
+             */
+            public Builder sourcePrefixListId(String sourcePrefixListId) {
+                this.sourcePrefixListId = sourcePrefixListId;
+                return this;
+            }
+
+            /**
+             * SourcePrefixListName.
+             */
+            public Builder sourcePrefixListName(String sourcePrefixListName) {
+                this.sourcePrefixListName = sourcePrefixListName;
                 return this;
             }
 

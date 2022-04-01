@@ -12,27 +12,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeKeyPairsResponseBody</p>
  */
 public class DescribeKeyPairsResponseBody extends TeaModel {
+    @NameInMap("KeyPairs")
+    private KeyPairs keyPairs;
+
+    @NameInMap("PageNumber")
+    private Integer pageNumber;
+
     @NameInMap("PageSize")
     private Integer pageSize;
 
     @NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("PageNumber")
-    private Integer pageNumber;
-
     @NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("KeyPairs")
-    private KeyPairs keyPairs;
-
     private DescribeKeyPairsResponseBody(Builder builder) {
+        this.keyPairs = builder.keyPairs;
+        this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
-        this.pageNumber = builder.pageNumber;
         this.totalCount = builder.totalCount;
-        this.keyPairs = builder.keyPairs;
     }
 
     public static Builder builder() {
@@ -41,6 +41,20 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
 
     public static DescribeKeyPairsResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return keyPairs
+     */
+    public KeyPairs getKeyPairs() {
+        return this.keyPairs;
+    }
+
+    /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     /**
@@ -58,51 +72,29 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
     }
 
     /**
-     * @return pageNumber
-     */
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    /**
      * @return totalCount
      */
     public Integer getTotalCount() {
         return this.totalCount;
     }
 
-    /**
-     * @return keyPairs
-     */
-    public KeyPairs getKeyPairs() {
-        return this.keyPairs;
-    }
-
     public static final class Builder {
+        private KeyPairs keyPairs; 
+        private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private Integer pageNumber; 
         private Integer totalCount; 
-        private KeyPairs keyPairs; 
 
         /**
-         * The number of rows per page.
+         * KeyPairs.
          */
-        public Builder pageSize(Integer pageSize) {
-            this.pageSize = pageSize;
+        public Builder keyPairs(KeyPairs keyPairs) {
+            this.keyPairs = keyPairs;
             return this;
         }
 
         /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The current page number.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -110,18 +102,26 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of key pairs.
+         * PageSize.
          */
-        public Builder totalCount(Integer totalCount) {
-            this.totalCount = totalCount;
+        public Builder pageSize(Integer pageSize) {
+            this.pageSize = pageSize;
             return this;
         }
 
         /**
-         * The collection of key pair information.
+         * RequestId.
          */
-        public Builder keyPairs(KeyPairs keyPairs) {
-            this.keyPairs = keyPairs;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
@@ -132,15 +132,15 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("TagValue")
-        private String tagValue;
-
         @NameInMap("TagKey")
         private String tagKey;
 
+        @NameInMap("TagValue")
+        private String tagValue;
+
         private Tag(Builder builder) {
-            this.tagValue = builder.tagValue;
             this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
         }
 
         public static Builder builder() {
@@ -152,36 +152,36 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         }
 
         /**
-         * @return tagValue
-         */
-        public String getTagValue() {
-            return this.tagValue;
-        }
-
-        /**
          * @return tagKey
          */
         public String getTagKey() {
             return this.tagKey;
         }
 
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
         public static final class Builder {
-            private String tagValue; 
             private String tagKey; 
+            private String tagValue; 
 
             /**
-             * The tag value of the key pair.
+             * TagKey.
              */
-            public Builder tagValue(String tagValue) {
-                this.tagValue = tagValue;
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
                 return this;
             }
 
             /**
-             * The tag key of the key pair.
+             * TagValue.
              */
-            public Builder tagKey(String tagKey) {
-                this.tagKey = tagKey;
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
                 return this;
             }
 
@@ -237,11 +237,11 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         @NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("KeyPairName")
-        private String keyPairName;
-
         @NameInMap("KeyPairFingerPrint")
         private String keyPairFingerPrint;
+
+        @NameInMap("KeyPairName")
+        private String keyPairName;
 
         @NameInMap("ResourceGroupId")
         private String resourceGroupId;
@@ -251,8 +251,8 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
 
         private KeyPair(Builder builder) {
             this.creationTime = builder.creationTime;
-            this.keyPairName = builder.keyPairName;
             this.keyPairFingerPrint = builder.keyPairFingerPrint;
+            this.keyPairName = builder.keyPairName;
             this.resourceGroupId = builder.resourceGroupId;
             this.tags = builder.tags;
         }
@@ -273,17 +273,17 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         }
 
         /**
-         * @return keyPairName
-         */
-        public String getKeyPairName() {
-            return this.keyPairName;
-        }
-
-        /**
          * @return keyPairFingerPrint
          */
         public String getKeyPairFingerPrint() {
             return this.keyPairFingerPrint;
+        }
+
+        /**
+         * @return keyPairName
+         */
+        public String getKeyPairName() {
+            return this.keyPairName;
         }
 
         /**
@@ -302,13 +302,13 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String creationTime; 
-            private String keyPairName; 
             private String keyPairFingerPrint; 
+            private String keyPairName; 
             private String resourceGroupId; 
             private Tags tags; 
 
             /**
-             * The time when the key pair was created.
+             * CreationTime.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -316,15 +316,7 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the key pair.
-             */
-            public Builder keyPairName(String keyPairName) {
-                this.keyPairName = keyPairName;
-                return this;
-            }
-
-            /**
-             * The fingerprint of the key pair.
+             * KeyPairFingerPrint.
              */
             public Builder keyPairFingerPrint(String keyPairFingerPrint) {
                 this.keyPairFingerPrint = keyPairFingerPrint;
@@ -332,7 +324,15 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * KeyPairName.
+             */
+            public Builder keyPairName(String keyPairName) {
+                this.keyPairName = keyPairName;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -340,7 +340,7 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag of the key pair.
+             * Tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;

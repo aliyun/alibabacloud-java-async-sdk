@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateSimulatedSystemEventsResponseBody</p>
  */
 public class CreateSimulatedSystemEventsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    private String requestId;
-
     @NameInMap("EventIdSet")
     private EventIdSet eventIdSet;
 
+    @NameInMap("RequestId")
+    private String requestId;
+
     private CreateSimulatedSystemEventsResponseBody(Builder builder) {
-        this.requestId = builder.requestId;
         this.eventIdSet = builder.eventIdSet;
+        this.requestId = builder.requestId;
     }
 
     public static Builder builder() {
@@ -32,36 +32,36 @@ public class CreateSimulatedSystemEventsResponseBody extends TeaModel {
     }
 
     /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    /**
      * @return eventIdSet
      */
     public EventIdSet getEventIdSet() {
         return this.eventIdSet;
     }
 
-    public static final class Builder {
-        private String requestId; 
-        private EventIdSet eventIdSet; 
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
 
-        /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
+    public static final class Builder {
+        private EventIdSet eventIdSet; 
+        private String requestId; 
 
         /**
          * EventIdSet.
          */
         public Builder eventIdSet(EventIdSet eventIdSet) {
             this.eventIdSet = eventIdSet;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 

@@ -12,9 +12,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifySnapshotAttributeRequest</p>
  */
 public class ModifySnapshotAttributeRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("Description")
+    private String description;
+
+    @Query
+    @NameInMap("DisableInstantAccess")
+    private Boolean disableInstantAccess;
+
+    @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
 
     @Query
     @NameInMap("OwnerId")
@@ -29,10 +37,6 @@ public class ModifySnapshotAttributeRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
-    @NameInMap("OwnerAccount")
-    private String ownerAccount;
-
-    @Query
     @NameInMap("SnapshotId")
     @Validation(required = true)
     private String snapshotId;
@@ -41,25 +45,21 @@ public class ModifySnapshotAttributeRequest extends Request {
     @NameInMap("SnapshotName")
     private String snapshotName;
 
-    @Query
-    @NameInMap("Description")
-    private String description;
-
-    @Query
-    @NameInMap("DisableInstantAccess")
-    private Boolean disableInstantAccess;
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     private ModifySnapshotAttributeRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
+        this.description = builder.description;
+        this.disableInstantAccess = builder.disableInstantAccess;
+        this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.ownerAccount = builder.ownerAccount;
         this.snapshotId = builder.snapshotId;
         this.snapshotName = builder.snapshotName;
-        this.description = builder.description;
-        this.disableInstantAccess = builder.disableInstantAccess;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -76,10 +76,24 @@ public class ModifySnapshotAttributeRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return description
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
+     * @return disableInstantAccess
+     */
+    public Boolean getDisableInstantAccess() {
+        return this.disableInstantAccess;
+    }
+
+    /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     /**
@@ -104,13 +118,6 @@ public class ModifySnapshotAttributeRequest extends Request {
     }
 
     /**
-     * @return ownerAccount
-     */
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    /**
      * @return snapshotId
      */
     public String getSnapshotId() {
@@ -125,29 +132,22 @@ public class ModifySnapshotAttributeRequest extends Request {
     }
 
     /**
-     * @return description
+     * @return sourceRegionId
      */
-    public String getDescription() {
-        return this.description;
-    }
-
-    /**
-     * @return disableInstantAccess
-     */
-    public Boolean getDisableInstantAccess() {
-        return this.disableInstantAccess;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public static final class Builder extends Request.Builder<ModifySnapshotAttributeRequest, Builder> {
-        private String sourceRegionId; 
+        private String description; 
+        private Boolean disableInstantAccess; 
+        private String ownerAccount; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String ownerAccount; 
         private String snapshotId; 
         private String snapshotName; 
-        private String description; 
-        private Boolean disableInstantAccess; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -155,23 +155,41 @@ public class ModifySnapshotAttributeRequest extends Request {
 
         private Builder(ModifySnapshotAttributeRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
+            this.description = request.description;
+            this.disableInstantAccess = request.disableInstantAccess;
+            this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.ownerAccount = request.ownerAccount;
             this.snapshotId = request.snapshotId;
             this.snapshotName = request.snapshotName;
-            this.description = request.description;
-            this.disableInstantAccess = request.disableInstantAccess;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
-         * SourceRegionId.
+         * Description.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
+            return this;
+        }
+
+        /**
+         * DisableInstantAccess.
+         */
+        public Builder disableInstantAccess(Boolean disableInstantAccess) {
+            this.putQueryParameter("DisableInstantAccess", disableInstantAccess);
+            this.disableInstantAccess = disableInstantAccess;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
             return this;
         }
 
@@ -203,16 +221,7 @@ public class ModifySnapshotAttributeRequest extends Request {
         }
 
         /**
-         * OwnerAccount.
-         */
-        public Builder ownerAccount(String ownerAccount) {
-            this.putQueryParameter("OwnerAccount", ownerAccount);
-            this.ownerAccount = ownerAccount;
-            return this;
-        }
-
-        /**
-         * The ID of the snapshot.
+         * SnapshotId.
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);
@@ -221,10 +230,7 @@ public class ModifySnapshotAttributeRequest extends Request {
         }
 
         /**
-         * The name of the snapshot. The description must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https. It can contain numbers, colons (:), underscores (_), and hyphens (-).
-         * <p>
-         * 
-         * To prevent conflicts with the name of an automatic snapshot, it cannot start with auto.
+         * SnapshotName.
          */
         public Builder snapshotName(String snapshotName) {
             this.putQueryParameter("SnapshotName", snapshotName);
@@ -233,26 +239,11 @@ public class ModifySnapshotAttributeRequest extends Request {
         }
 
         /**
-         * The description of the snapshot. The description must be 2 to 256 characters in length and cannot start with http:// or https.
+         * SourceRegionId.
          */
-        public Builder description(String description) {
-            this.putQueryParameter("Description", description);
-            this.description = description;
-            return this;
-        }
-
-        /**
-         * Disable the snapshot extreme availability feature. Valid values:
-         * <p>
-         * 
-         * -true: disable snapshot extreme availability.
-         * -false: the snapshot is not disabled.
-         * 
-         * Default value: false
-         */
-        public Builder disableInstantAccess(Boolean disableInstantAccess) {
-            this.putQueryParameter("DisableInstantAccess", disableInstantAccess);
-            this.disableInstantAccess = disableInstantAccess;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

@@ -12,9 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyInstanceAutoReleaseTimeRequest</p>
  */
 public class ModifyInstanceAutoReleaseTimeRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("AutoReleaseTime")
+    private String autoReleaseTime;
+
+    @Query
+    @NameInMap("InstanceId")
+    @Validation(required = true)
+    private String instanceId;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -25,36 +30,31 @@ public class ModifyInstanceAutoReleaseTimeRequest extends Request {
     private Long ownerId;
 
     @Query
-    @NameInMap("ResourceOwnerAccount")
-    private String resourceOwnerAccount;
-
-    @Query
     @NameInMap("RegionId")
     private String regionId;
+
+    @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
 
     @Query
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("AutoReleaseTime")
-    private String autoReleaseTime;
-
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
-    private String instanceId;
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     private ModifyInstanceAutoReleaseTimeRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
-        this.ownerAccount = builder.ownerAccount;
-        this.ownerId = builder.ownerId;
-        this.resourceOwnerAccount = builder.resourceOwnerAccount;
-        this.regionId = builder.regionId;
-        this.resourceOwnerId = builder.resourceOwnerId;
         this.autoReleaseTime = builder.autoReleaseTime;
         this.instanceId = builder.instanceId;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -71,10 +71,17 @@ public class ModifyInstanceAutoReleaseTimeRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return autoReleaseTime
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getAutoReleaseTime() {
+        return this.autoReleaseTime;
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     /**
@@ -92,17 +99,17 @@ public class ModifyInstanceAutoReleaseTimeRequest extends Request {
     }
 
     /**
-     * @return resourceOwnerAccount
-     */
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
     }
 
     /**
@@ -113,28 +120,21 @@ public class ModifyInstanceAutoReleaseTimeRequest extends Request {
     }
 
     /**
-     * @return autoReleaseTime
+     * @return sourceRegionId
      */
-    public String getAutoReleaseTime() {
-        return this.autoReleaseTime;
-    }
-
-    /**
-     * @return instanceId
-     */
-    public String getInstanceId() {
-        return this.instanceId;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public static final class Builder extends Request.Builder<ModifyInstanceAutoReleaseTimeRequest, Builder> {
-        private String sourceRegionId; 
-        private String ownerAccount; 
-        private Long ownerId; 
-        private String resourceOwnerAccount; 
-        private String regionId; 
-        private Long resourceOwnerId; 
         private String autoReleaseTime; 
         private String instanceId; 
+        private String ownerAccount; 
+        private Long ownerId; 
+        private String regionId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -142,22 +142,31 @@ public class ModifyInstanceAutoReleaseTimeRequest extends Request {
 
         private Builder(ModifyInstanceAutoReleaseTimeRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
-            this.ownerAccount = request.ownerAccount;
-            this.ownerId = request.ownerId;
-            this.resourceOwnerAccount = request.resourceOwnerAccount;
-            this.regionId = request.regionId;
-            this.resourceOwnerId = request.resourceOwnerId;
             this.autoReleaseTime = request.autoReleaseTime;
             this.instanceId = request.instanceId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
-         * SourceRegionId.
+         * AutoReleaseTime.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder autoReleaseTime(String autoReleaseTime) {
+            this.putQueryParameter("AutoReleaseTime", autoReleaseTime);
+            this.autoReleaseTime = autoReleaseTime;
+            return this;
+        }
+
+        /**
+         * InstanceId.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
             return this;
         }
 
@@ -171,7 +180,7 @@ public class ModifyInstanceAutoReleaseTimeRequest extends Request {
         }
 
         /**
-         * The ID of the RAM user.
+         * OwnerId.
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -180,16 +189,7 @@ public class ModifyInstanceAutoReleaseTimeRequest extends Request {
         }
 
         /**
-         * The account name of the resource master account.
-         */
-        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
-            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-            this.resourceOwnerAccount = resourceOwnerAccount;
-            return this;
-        }
-
-        /**
-         * The ID of the region to which the instance belongs. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -198,7 +198,16 @@ public class ModifyInstanceAutoReleaseTimeRequest extends Request {
         }
 
         /**
-         * The ID of the resource master account, that is, the UID.
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
          */
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
@@ -207,29 +216,11 @@ public class ModifyInstanceAutoReleaseTimeRequest extends Request {
         }
 
         /**
-         * The automatic release time. The time follows the [ISO8601](~~ 25696 ~~) standard and uses UTC +0. The format is yyyy-MM-ddTHH:mm:ssZ.
-         * <p>
-         * 
-         * -If the value of seconds is not "00", it is automatically set to the beginning of the current minute ("mm").
-         * 
-         * -The minimum release time is half an hour later than the current time.
-         * 
-         * -The maximum release time cannot exceed three years.
-         * 
-         * If you do not specify the "AutoReleaseTime" parameter, the auto release feature is disabled and the ECS instance is no longer released.
+         * SourceRegionId.
          */
-        public Builder autoReleaseTime(String autoReleaseTime) {
-            this.putQueryParameter("AutoReleaseTime", autoReleaseTime);
-            this.autoReleaseTime = autoReleaseTime;
-            return this;
-        }
-
-        /**
-         * The ID of the ECS instance to be automatically released.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

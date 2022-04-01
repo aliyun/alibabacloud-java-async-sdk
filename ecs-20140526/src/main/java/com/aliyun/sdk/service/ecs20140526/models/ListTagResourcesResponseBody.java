@@ -62,7 +62,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         private TagResources tagResources; 
 
         /**
-         * The start Token of the next query.
+         * NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +70,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * A collection of resources and their tags, including the resource ID, resource type, and tag key.
+         * TagResources.
          */
         public Builder tagResources(TagResources tagResources) {
             this.tagResources = tagResources;
@@ -92,23 +92,23 @@ public class ListTagResourcesResponseBody extends TeaModel {
     } 
 
     public static class TagResource extends TeaModel {
-        @NameInMap("TagValue")
-        private String tagValue;
+        @NameInMap("ResourceId")
+        private String resourceId;
 
         @NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("ResourceId")
-        private String resourceId;
-
         @NameInMap("TagKey")
         private String tagKey;
 
+        @NameInMap("TagValue")
+        private String tagValue;
+
         private TagResource(Builder builder) {
-            this.tagValue = builder.tagValue;
-            this.resourceType = builder.resourceType;
             this.resourceId = builder.resourceId;
+            this.resourceType = builder.resourceType;
             this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
         }
 
         public static Builder builder() {
@@ -120,10 +120,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * @return tagValue
+         * @return resourceId
          */
-        public String getTagValue() {
-            return this.tagValue;
+        public String getResourceId() {
+            return this.resourceId;
         }
 
         /**
@@ -134,60 +134,27 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * @return resourceId
-         */
-        public String getResourceId() {
-            return this.resourceId;
-        }
-
-        /**
          * @return tagKey
          */
         public String getTagKey() {
             return this.tagKey;
         }
 
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
         public static final class Builder {
-            private String tagValue; 
-            private String resourceType; 
             private String resourceId; 
+            private String resourceType; 
             private String tagKey; 
+            private String tagValue; 
 
             /**
-             * The value of the tag.
-             */
-            public Builder tagValue(String tagValue) {
-                this.tagValue = tagValue;
-                return this;
-            }
-
-            /**
-             * The type of the resource. Possible values:
-             * <p>
-             * 
-             * -instance:ECS instance.
-             * -disk: the disk.
-             * -snapshot: snapshot.
-             * -image: image.
-             * -securitygroup: Security Group.
-             * -volume: the storage volume.
-             * -eni: eni.
-             * -ddh: Dedicated host.
-             * -ddhcluster: Dedicated host cluster.
-             * -keypair:SSH key pair.
-             * -launchtemplate: the launch template.
-             * -reservedinstance: Reserved Instance.
-             * -snapshotpolicy: automatic snapshot policy.
-             * -elasticityassurance: elastic assurance.
-             * -capacityreservation: capacity reservation.
-             */
-            public Builder resourceType(String resourceType) {
-                this.resourceType = resourceType;
-                return this;
-            }
-
-            /**
-             * The ID of the resource.
+             * ResourceId.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -195,10 +162,26 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the tag.
+             * ResourceType.
+             */
+            public Builder resourceType(String resourceType) {
+                this.resourceType = resourceType;
+                return this;
+            }
+
+            /**
+             * TagKey.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * TagValue.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
                 return this;
             }
 

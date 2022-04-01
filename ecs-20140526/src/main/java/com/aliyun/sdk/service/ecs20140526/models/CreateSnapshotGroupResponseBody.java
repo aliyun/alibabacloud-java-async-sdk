@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateSnapshotGroupResponseBody</p>
  */
 public class CreateSnapshotGroupResponseBody extends TeaModel {
-    @NameInMap("SnapshotGroupId")
-    private String snapshotGroupId;
-
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("SnapshotGroupId")
+    private String snapshotGroupId;
+
     private CreateSnapshotGroupResponseBody(Builder builder) {
-        this.snapshotGroupId = builder.snapshotGroupId;
         this.requestId = builder.requestId;
+        this.snapshotGroupId = builder.snapshotGroupId;
     }
 
     public static Builder builder() {
@@ -32,36 +32,36 @@ public class CreateSnapshotGroupResponseBody extends TeaModel {
     }
 
     /**
-     * @return snapshotGroupId
-     */
-    public String getSnapshotGroupId() {
-        return this.snapshotGroupId;
-    }
-
-    /**
      * @return requestId
      */
     public String getRequestId() {
         return this.requestId;
     }
 
+    /**
+     * @return snapshotGroupId
+     */
+    public String getSnapshotGroupId() {
+        return this.snapshotGroupId;
+    }
+
     public static final class Builder {
-        private String snapshotGroupId; 
         private String requestId; 
+        private String snapshotGroupId; 
 
         /**
-         * The ID of the snapshot consistency group.
+         * RequestId.
          */
-        public Builder snapshotGroupId(String snapshotGroupId) {
-            this.snapshotGroupId = snapshotGroupId;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * SnapshotGroupId.
          */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
+        public Builder snapshotGroupId(String snapshotGroupId) {
+            this.snapshotGroupId = snapshotGroupId;
             return this;
         }
 

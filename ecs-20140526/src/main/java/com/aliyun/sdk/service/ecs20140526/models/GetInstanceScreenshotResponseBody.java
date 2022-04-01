@@ -12,18 +12,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetInstanceScreenshotResponseBody</p>
  */
 public class GetInstanceScreenshotResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    private String requestId;
-
     @NameInMap("InstanceId")
     private String instanceId;
+
+    @NameInMap("RequestId")
+    private String requestId;
 
     @NameInMap("Screenshot")
     private String screenshot;
 
     private GetInstanceScreenshotResponseBody(Builder builder) {
-        this.requestId = builder.requestId;
         this.instanceId = builder.instanceId;
+        this.requestId = builder.requestId;
         this.screenshot = builder.screenshot;
     }
 
@@ -36,17 +36,17 @@ public class GetInstanceScreenshotResponseBody extends TeaModel {
     }
 
     /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    /**
      * @return instanceId
      */
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
     }
 
     /**
@@ -57,20 +57,12 @@ public class GetInstanceScreenshotResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String requestId; 
         private String instanceId; 
+        private String requestId; 
         private String screenshot; 
 
         /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The ID of the instance.
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -78,7 +70,15 @@ public class GetInstanceScreenshotResponseBody extends TeaModel {
         }
 
         /**
-         * A screenshot of an instance in JPG format. The base64-encoded image is returned.
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * Screenshot.
          */
         public Builder screenshot(String screenshot) {
             this.screenshot = screenshot;

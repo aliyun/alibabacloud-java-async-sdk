@@ -62,10 +62,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         private SnapshotGroups snapshotGroups; 
 
         /**
-         * The start flag of the next query.
-         * <p>
-         * 
-         * > If the return value is null, no more data is returned.
+         * NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -73,7 +70,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -81,7 +78,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * An array of snapshot consistency groups.
+         * SnapshotGroups.
          */
         public Builder snapshotGroups(SnapshotGroups snapshotGroups) {
             this.snapshotGroups = snapshotGroups;
@@ -133,7 +130,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key of the snapshot consistency group.
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -141,7 +138,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of the snapshot consistency group.
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -196,136 +193,34 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         } 
 
     }
-    public static class TagsTag extends TeaModel {
-        @NameInMap("Key")
-        private String key;
-
-        @NameInMap("Value")
-        private String value;
-
-        private TagsTag(Builder builder) {
-            this.key = builder.key;
-            this.value = builder.value;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static TagsTag create() {
-            return builder().build();
-        }
-
-        /**
-         * @return key
-         */
-        public String getKey() {
-            return this.key;
-        }
-
-        /**
-         * @return value
-         */
-        public String getValue() {
-            return this.value;
-        }
-
-        public static final class Builder {
-            private String key; 
-            private String value; 
-
-            /**
-             * The tag key of each snapshot in the snapshot consistency group. The snapshot source information is provided in the default values of Key and Value.
-             */
-            public Builder key(String key) {
-                this.key = key;
-                return this;
-            }
-
-            /**
-             * The tag value of each snapshot in the snapshot consistency group. The snapshot source information is provided in the default values of Key and Value.
-             */
-            public Builder value(String value) {
-                this.value = value;
-                return this;
-            }
-
-            public TagsTag build() {
-                return new TagsTag(this);
-            } 
-
-        } 
-
-    }
-    public static class SnapshotTags extends TeaModel {
-        @NameInMap("Tag")
-        private java.util.List < TagsTag> tag;
-
-        private SnapshotTags(Builder builder) {
-            this.tag = builder.tag;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static SnapshotTags create() {
-            return builder().build();
-        }
-
-        /**
-         * @return tag
-         */
-        public java.util.List < TagsTag> getTag() {
-            return this.tag;
-        }
-
-        public static final class Builder {
-            private java.util.List < TagsTag> tag; 
-
-            /**
-             * Tag.
-             */
-            public Builder tag(java.util.List < TagsTag> tag) {
-                this.tag = tag;
-                return this;
-            }
-
-            public SnapshotTags build() {
-                return new SnapshotTags(this);
-            } 
-
-        } 
-
-    }
     public static class Snapshot extends TeaModel {
-        @NameInMap("SourceDiskId")
-        private String sourceDiskId;
-
-        @NameInMap("Progress")
-        private String progress;
+        @NameInMap("InstantAccess")
+        private Boolean instantAccess;
 
         @NameInMap("InstantAccessRetentionDays")
         private Integer instantAccessRetentionDays;
 
+        @NameInMap("Progress")
+        private String progress;
+
         @NameInMap("SnapshotId")
         private String snapshotId;
 
-        @NameInMap("InstantAccess")
-        private Boolean instantAccess;
+        @NameInMap("SourceDiskId")
+        private String sourceDiskId;
 
         @NameInMap("SourceDiskType")
         private String sourceDiskType;
 
         @NameInMap("Tags")
-        private SnapshotTags tags;
+        private Tags tags;
 
         private Snapshot(Builder builder) {
-            this.sourceDiskId = builder.sourceDiskId;
-            this.progress = builder.progress;
-            this.instantAccessRetentionDays = builder.instantAccessRetentionDays;
-            this.snapshotId = builder.snapshotId;
             this.instantAccess = builder.instantAccess;
+            this.instantAccessRetentionDays = builder.instantAccessRetentionDays;
+            this.progress = builder.progress;
+            this.snapshotId = builder.snapshotId;
+            this.sourceDiskId = builder.sourceDiskId;
             this.sourceDiskType = builder.sourceDiskType;
             this.tags = builder.tags;
         }
@@ -339,17 +234,10 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * @return sourceDiskId
+         * @return instantAccess
          */
-        public String getSourceDiskId() {
-            return this.sourceDiskId;
-        }
-
-        /**
-         * @return progress
-         */
-        public String getProgress() {
-            return this.progress;
+        public Boolean getInstantAccess() {
+            return this.instantAccess;
         }
 
         /**
@@ -360,6 +248,13 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return progress
+         */
+        public String getProgress() {
+            return this.progress;
+        }
+
+        /**
          * @return snapshotId
          */
         public String getSnapshotId() {
@@ -367,10 +262,10 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * @return instantAccess
+         * @return sourceDiskId
          */
-        public Boolean getInstantAccess() {
-            return this.instantAccess;
+        public String getSourceDiskId() {
+            return this.sourceDiskId;
         }
 
         /**
@@ -383,57 +278,21 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public SnapshotTags getTags() {
+        public Tags getTags() {
             return this.tags;
         }
 
         public static final class Builder {
-            private String sourceDiskId; 
-            private String progress; 
-            private Integer instantAccessRetentionDays; 
-            private String snapshotId; 
             private Boolean instantAccess; 
+            private Integer instantAccessRetentionDays; 
+            private String progress; 
+            private String snapshotId; 
+            private String sourceDiskId; 
             private String sourceDiskType; 
-            private SnapshotTags tags; 
+            private Tags tags; 
 
             /**
-             * The ID of the source disk. This field is retained if the source disk of the snapshot is released.
-             */
-            public Builder sourceDiskId(String sourceDiskId) {
-                this.sourceDiskId = sourceDiskId;
-                return this;
-            }
-
-            /**
-             * The progress of snapshot creation. Unit: percentage.
-             */
-            public Builder progress(String progress) {
-                this.progress = progress;
-                return this;
-            }
-
-            /**
-             * The retention period of the snapshot feature. The snapshot is automatically released when the retention period expires.
-             */
-            public Builder instantAccessRetentionDays(Integer instantAccessRetentionDays) {
-                this.instantAccessRetentionDays = instantAccessRetentionDays;
-                return this;
-            }
-
-            /**
-             * The ID of the snapshot.
-             */
-            public Builder snapshotId(String snapshotId) {
-                this.snapshotId = snapshotId;
-                return this;
-            }
-
-            /**
-             * Indicates whether the snapshot extreme availability feature is enabled. Possible values:
-             * <p>
-             * 
-             * -true: enabled. Only ESSDS support this feature.
-             * -false: disabled. That is, a snapshot is a normal snapshot that is not enabled.
+             * InstantAccess.
              */
             public Builder instantAccess(Boolean instantAccess) {
                 this.instantAccess = instantAccess;
@@ -441,11 +300,39 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the source disk. Possible values:
-             * <p>
-             * 
-             * -system: system disk
-             * -data: data disk
+             * InstantAccessRetentionDays.
+             */
+            public Builder instantAccessRetentionDays(Integer instantAccessRetentionDays) {
+                this.instantAccessRetentionDays = instantAccessRetentionDays;
+                return this;
+            }
+
+            /**
+             * Progress.
+             */
+            public Builder progress(String progress) {
+                this.progress = progress;
+                return this;
+            }
+
+            /**
+             * SnapshotId.
+             */
+            public Builder snapshotId(String snapshotId) {
+                this.snapshotId = snapshotId;
+                return this;
+            }
+
+            /**
+             * SourceDiskId.
+             */
+            public Builder sourceDiskId(String sourceDiskId) {
+                this.sourceDiskId = sourceDiskId;
+                return this;
+            }
+
+            /**
+             * SourceDiskType.
              */
             public Builder sourceDiskType(String sourceDiskType) {
                 this.sourceDiskType = sourceDiskType;
@@ -453,9 +340,9 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The key-value pairs of each snapshot in the snapshot consistency group. By default, the snapshot source information is included.
+             * Tags.
              */
-            public Builder tags(SnapshotTags tags) {
+            public Builder tags(Tags tags) {
                 this.tags = tags;
                 return this;
             }
@@ -508,21 +395,114 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         } 
 
     }
-    public static class SnapshotGroup extends TeaModel {
-        @NameInMap("Status")
-        private String status;
+    public static class TagsTag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
 
+        @NameInMap("Value")
+        private String value;
+
+        private TagsTag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TagsTag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public TagsTag build() {
+                return new TagsTag(this);
+            } 
+
+        } 
+
+    }
+    public static class SnapshotGroupTags extends TeaModel {
+        @NameInMap("Tag")
+        private java.util.List < TagsTag> tag;
+
+        private SnapshotGroupTags(Builder builder) {
+            this.tag = builder.tag;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SnapshotGroupTags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tag
+         */
+        public java.util.List < TagsTag> getTag() {
+            return this.tag;
+        }
+
+        public static final class Builder {
+            private java.util.List < TagsTag> tag; 
+
+            /**
+             * Tag.
+             */
+            public Builder tag(java.util.List < TagsTag> tag) {
+                this.tag = tag;
+                return this;
+            }
+
+            public SnapshotGroupTags build() {
+                return new SnapshotGroupTags(this);
+            } 
+
+        } 
+
+    }
+    public static class SnapshotGroup extends TeaModel {
         @NameInMap("CreationTime")
         private String creationTime;
 
         @NameInMap("Description")
         private String description;
-
-        @NameInMap("ProgressStatus")
-        private String progressStatus;
-
-        @NameInMap("SnapshotGroupId")
-        private String snapshotGroupId;
 
         @NameInMap("InstanceId")
         private String instanceId;
@@ -530,26 +510,35 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         @NameInMap("Name")
         private String name;
 
+        @NameInMap("ProgressStatus")
+        private String progressStatus;
+
         @NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Tags")
-        private Tags tags;
+        @NameInMap("SnapshotGroupId")
+        private String snapshotGroupId;
 
         @NameInMap("Snapshots")
         private Snapshots snapshots;
 
+        @NameInMap("Status")
+        private String status;
+
+        @NameInMap("Tags")
+        private SnapshotGroupTags tags;
+
         private SnapshotGroup(Builder builder) {
-            this.status = builder.status;
             this.creationTime = builder.creationTime;
             this.description = builder.description;
-            this.progressStatus = builder.progressStatus;
-            this.snapshotGroupId = builder.snapshotGroupId;
             this.instanceId = builder.instanceId;
             this.name = builder.name;
+            this.progressStatus = builder.progressStatus;
             this.resourceGroupId = builder.resourceGroupId;
-            this.tags = builder.tags;
+            this.snapshotGroupId = builder.snapshotGroupId;
             this.snapshots = builder.snapshots;
+            this.status = builder.status;
+            this.tags = builder.tags;
         }
 
         public static Builder builder() {
@@ -558,13 +547,6 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
 
         public static SnapshotGroup create() {
             return builder().build();
-        }
-
-        /**
-         * @return status
-         */
-        public String getStatus() {
-            return this.status;
         }
 
         /**
@@ -582,20 +564,6 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * @return progressStatus
-         */
-        public String getProgressStatus() {
-            return this.progressStatus;
-        }
-
-        /**
-         * @return snapshotGroupId
-         */
-        public String getSnapshotGroupId() {
-            return this.snapshotGroupId;
-        }
-
-        /**
          * @return instanceId
          */
         public String getInstanceId() {
@@ -610,6 +578,13 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return progressStatus
+         */
+        public String getProgressStatus() {
+            return this.progressStatus;
+        }
+
+        /**
          * @return resourceGroupId
          */
         public String getResourceGroupId() {
@@ -617,10 +592,10 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * @return tags
+         * @return snapshotGroupId
          */
-        public Tags getTags() {
-            return this.tags;
+        public String getSnapshotGroupId() {
+            return this.snapshotGroupId;
         }
 
         /**
@@ -630,35 +605,34 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             return this.snapshots;
         }
 
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return tags
+         */
+        public SnapshotGroupTags getTags() {
+            return this.tags;
+        }
+
         public static final class Builder {
-            private String status; 
             private String creationTime; 
             private String description; 
-            private String progressStatus; 
-            private String snapshotGroupId; 
             private String instanceId; 
             private String name; 
+            private String progressStatus; 
             private String resourceGroupId; 
-            private Tags tags; 
+            private String snapshotGroupId; 
             private Snapshots snapshots; 
+            private String status; 
+            private SnapshotGroupTags tags; 
 
             /**
-             * The status of the snapshot consistency group. Possible values:
-             * <p>
-             * 
-             * -progressing: creating.
-             * 
-             * -accomplished: successfully created.
-             * 
-             * -failed: failed to be created.
-             */
-            public Builder status(String status) {
-                this.status = status;
-                return this;
-            }
-
-            /**
-             * The creation time.
+             * CreationTime.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -666,7 +640,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The description.
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -674,23 +648,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * > This parameter is not available.
-             */
-            public Builder progressStatus(String progressStatus) {
-                this.progressStatus = progressStatus;
-                return this;
-            }
-
-            /**
-             * The ID of the snapshot consistency group.
-             */
-            public Builder snapshotGroupId(String snapshotGroupId) {
-                this.snapshotGroupId = snapshotGroupId;
-                return this;
-            }
-
-            /**
-             * The ID of the instance to which the snapshot consistency group belongs. This parameter is returned only when all cloud disk snapshots in the snapshot consistency group belong to the same instance. If multiple cloud disk snapshots in the Snapshot consistency group belong to different ECS instances, you can use the "Snapshots.Snapshot.Tags.* "parameter in the response to view the ID of the instance to which a single Snapshot in the group belongs.
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -698,7 +656,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the snapshot consistency group.
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -706,7 +664,15 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the snapshot consistency group belongs.
+             * ProgressStatus.
+             */
+            public Builder progressStatus(String progressStatus) {
+                this.progressStatus = progressStatus;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -714,18 +680,34 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The key-value pair of the snapshot consistency group.
+             * SnapshotGroupId.
              */
-            public Builder tags(Tags tags) {
-                this.tags = tags;
+            public Builder snapshotGroupId(String snapshotGroupId) {
+                this.snapshotGroupId = snapshotGroupId;
                 return this;
             }
 
             /**
-             * An array of snapshot information contained in a snapshot consistency group.
+             * Snapshots.
              */
             public Builder snapshots(Snapshots snapshots) {
                 this.snapshots = snapshots;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(SnapshotGroupTags tags) {
+                this.tags = tags;
                 return this;
             }
 

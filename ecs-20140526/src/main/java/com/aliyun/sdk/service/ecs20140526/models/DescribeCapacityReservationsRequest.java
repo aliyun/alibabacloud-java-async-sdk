@@ -16,22 +16,13 @@ public class DescribeCapacityReservationsRequest extends Request {
     @NameInMap("PrivatePoolOptions")
     private PrivatePoolOptions privatePoolOptions;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("InstanceChargeType")
+    private String instanceChargeType;
 
     @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
-    @Query
-    @NameInMap("ResourceGroupId")
-    private String resourceGroupId;
-
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @NameInMap("InstanceType")
+    private String instanceType;
 
     @Query
     @NameInMap("MaxResults")
@@ -43,20 +34,45 @@ public class DescribeCapacityReservationsRequest extends Request {
     private String nextToken;
 
     @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
+
+    @Query
     @NameInMap("Platform")
     private String platform;
 
     @Query
-    @NameInMap("InstanceType")
-    private String instanceType;
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
 
     @Query
-    @NameInMap("InstanceChargeType")
-    private String instanceChargeType;
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     @Query
     @NameInMap("Status")
     private String status;
+
+    @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
 
     @Query
     @NameInMap("ZoneId")
@@ -65,16 +81,20 @@ public class DescribeCapacityReservationsRequest extends Request {
     private DescribeCapacityReservationsRequest(Builder builder) {
         super(builder);
         this.privatePoolOptions = builder.privatePoolOptions;
-        this.sourceRegionId = builder.sourceRegionId;
-        this.regionId = builder.regionId;
-        this.resourceGroupId = builder.resourceGroupId;
-        this.tag = builder.tag;
+        this.instanceChargeType = builder.instanceChargeType;
+        this.instanceType = builder.instanceType;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
         this.platform = builder.platform;
-        this.instanceType = builder.instanceType;
-        this.instanceChargeType = builder.instanceChargeType;
+        this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.sourceRegionId = builder.sourceRegionId;
         this.status = builder.status;
+        this.tag = builder.tag;
         this.zoneId = builder.zoneId;
     }
 
@@ -99,31 +119,17 @@ public class DescribeCapacityReservationsRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return instanceChargeType
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getInstanceChargeType() {
+        return this.instanceChargeType;
     }
 
     /**
-     * @return regionId
+     * @return instanceType
      */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return resourceGroupId
-     */
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
-    }
-
-    /**
-     * @return tag
-     */
-    public java.util.List < Tag> getTag() {
-        return this.tag;
+    public String getInstanceType() {
+        return this.instanceType;
     }
 
     /**
@@ -141,6 +147,20 @@ public class DescribeCapacityReservationsRequest extends Request {
     }
 
     /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
      * @return platform
      */
     public String getPlatform() {
@@ -148,17 +168,38 @@ public class DescribeCapacityReservationsRequest extends Request {
     }
 
     /**
-     * @return instanceType
+     * @return regionId
      */
-    public String getInstanceType() {
-        return this.instanceType;
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
-     * @return instanceChargeType
+     * @return resourceGroupId
      */
-    public String getInstanceChargeType() {
-        return this.instanceChargeType;
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -166,6 +207,13 @@ public class DescribeCapacityReservationsRequest extends Request {
      */
     public String getStatus() {
         return this.status;
+    }
+
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
     }
 
     /**
@@ -177,16 +225,20 @@ public class DescribeCapacityReservationsRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeCapacityReservationsRequest, Builder> {
         private PrivatePoolOptions privatePoolOptions; 
-        private String sourceRegionId; 
-        private String regionId; 
-        private String resourceGroupId; 
-        private java.util.List < Tag> tag; 
+        private String instanceChargeType; 
+        private String instanceType; 
         private Integer maxResults; 
         private String nextToken; 
+        private String ownerAccount; 
+        private Long ownerId; 
         private String platform; 
-        private String instanceType; 
-        private String instanceChargeType; 
+        private String regionId; 
+        private String resourceGroupId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String sourceRegionId; 
         private String status; 
+        private java.util.List < Tag> tag; 
         private String zoneId; 
 
         private Builder() {
@@ -196,16 +248,20 @@ public class DescribeCapacityReservationsRequest extends Request {
         private Builder(DescribeCapacityReservationsRequest request) {
             super(request);
             this.privatePoolOptions = request.privatePoolOptions;
-            this.sourceRegionId = request.sourceRegionId;
-            this.regionId = request.regionId;
-            this.resourceGroupId = request.resourceGroupId;
-            this.tag = request.tag;
+            this.instanceChargeType = request.instanceChargeType;
+            this.instanceType = request.instanceType;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
             this.platform = request.platform;
-            this.instanceType = request.instanceType;
-            this.instanceChargeType = request.instanceChargeType;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceRegionId = request.sourceRegionId;
             this.status = request.status;
+            this.tag = request.tag;
             this.zoneId = request.zoneId;
         } 
 
@@ -219,6 +275,105 @@ public class DescribeCapacityReservationsRequest extends Request {
         }
 
         /**
+         * InstanceChargeType.
+         */
+        public Builder instanceChargeType(String instanceChargeType) {
+            this.putQueryParameter("InstanceChargeType", instanceChargeType);
+            this.instanceChargeType = instanceChargeType;
+            return this;
+        }
+
+        /**
+         * InstanceType.
+         */
+        public Builder instanceType(String instanceType) {
+            this.putQueryParameter("InstanceType", instanceType);
+            this.instanceType = instanceType;
+            return this;
+        }
+
+        /**
+         * MaxResults.
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.putQueryParameter("MaxResults", maxResults);
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * Platform.
+         */
+        public Builder platform(String platform) {
+            this.putQueryParameter("Platform", platform);
+            this.platform = platform;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
          * SourceRegionId.
          */
         public Builder sourceRegionId(String sourceRegionId) {
@@ -228,107 +383,7 @@ public class DescribeCapacityReservationsRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the capacity reservation service belongs. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The ID of the resource group.
-         */
-        public Builder resourceGroupId(String resourceGroupId) {
-            this.putQueryParameter("ResourceGroupId", resourceGroupId);
-            this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-
-        /**
-         * Tag list
-         */
-        public Builder tag(java.util.List < Tag> tag) {
-            this.putQueryParameter("Tag", tag);
-            this.tag = tag;
-            return this;
-        }
-
-        /**
-         * The number of entries to return on each page.
-         * <p>
-         * 
-         * Maximum Value: 100.
-         * 
-         * Default value: 10.
-         */
-        public Builder maxResults(Integer maxResults) {
-            this.putQueryParameter("MaxResults", maxResults);
-            this.maxResults = maxResults;
-            return this;
-        }
-
-        /**
-         * The start flag of the capacity reservation service query. This parameter is obtained from the last request.
-         */
-        public Builder nextToken(String nextToken) {
-            this.putQueryParameter("NextToken", nextToken);
-            this.nextToken = nextToken;
-            return this;
-        }
-
-        /**
-         * The operating system of the instance. Valid values:
-         * <p>
-         * 
-         * -windows: queries only the capacity reservation service of the Windows system.
-         * -linux: only check the capacity reservation service of the Linux system.
-         * -all: queries all capacity reservation services.
-         * 
-         * Default value: all.
-         */
-        public Builder platform(String platform) {
-            this.putQueryParameter("Platform", platform);
-            this.platform = platform;
-            return this;
-        }
-
-        /**
-         * The instance type.
-         */
-        public Builder instanceType(String instanceType) {
-            this.putQueryParameter("InstanceType", instanceType);
-            this.instanceType = instanceType;
-            return this;
-        }
-
-        /**
-         * The billing method of the instance. Valid values:
-         * <p>
-         * 
-         * -PostPaid: pay-as-you-go.
-         * -PrePaid: subscription.
-         * 
-         * Default value: PostPaid.
-         */
-        public Builder instanceChargeType(String instanceChargeType) {
-            this.putQueryParameter("InstanceChargeType", instanceChargeType);
-            this.instanceChargeType = instanceChargeType;
-            return this;
-        }
-
-        /**
-         * The status of the subscription service. Valid values:
-         * <p>
-         * 
-         * -All: All statuses.
-         * -Pending: initialization. The scheduled capacity takes effect at the specified time will be initialized first.
-         * -Preparing: Preparing. The capacity that takes effect at the specified time is scheduled to be in the preparing state during resource delivery.
-         * -Prepared: to take effect. The capacity that takes effect at the specified time is scheduled to take effect before the resource delivery is completed and the service takes effect.
-         * -Active: takes effect.
-         * -Released: Released, including manual release and automatic release upon expiration.
-         * 
-         * The default value is Active.
+         * Status.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -337,7 +392,16 @@ public class DescribeCapacityReservationsRequest extends Request {
         }
 
         /**
-         * The ID of the zone to which the capacity reservation service belongs.
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
+         * ZoneId.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -379,7 +443,7 @@ public class DescribeCapacityReservationsRequest extends Request {
             private String ids; 
 
             /**
-             * The ID of the subscription service. The value can be a JSON Array consisting of multiple ids. A maximum of 100 IDs can be entered. Separate IDs with commas (,).
+             * Ids.
              */
             public Builder ids(String ids) {
                 this.ids = ids;
@@ -432,10 +496,7 @@ public class DescribeCapacityReservationsRequest extends Request {
             private String value; 
 
             /**
-             * 标签键。N表示可以设置多个标签键进行过滤，N的取值范围为1~20。
-             * <p>
-             * 
-             * 使用一个标签过滤资源，查询到该标签下的资源数量不能超过1000个；使用多个标签过滤资源，查询到同时绑定了多个标签的资源数量不能超过1000个。如果资源数量超过1000个，请使用[ListTagResources](~~110425~~)接口进行查询。
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -443,7 +504,7 @@ public class DescribeCapacityReservationsRequest extends Request {
             }
 
             /**
-             * 标签值。N表示可以设置多个标签值进行过滤，N的取值范围为1~20。
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

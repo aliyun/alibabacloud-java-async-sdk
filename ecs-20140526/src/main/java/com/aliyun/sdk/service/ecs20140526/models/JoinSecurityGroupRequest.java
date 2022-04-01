@@ -12,9 +12,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>JoinSecurityGroupRequest</p>
  */
 public class JoinSecurityGroupRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("InstanceId")
+    private String instanceId;
+
+    @Query
+    @NameInMap("NetworkInterfaceId")
+    private String networkInterfaceId;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -23,6 +27,10 @@ public class JoinSecurityGroupRequest extends Request {
     @Query
     @NameInMap("OwnerId")
     private Long ownerId;
+
+    @Query
+    @NameInMap("RegionId")
+    private String regionId;
 
     @Query
     @NameInMap("ResourceOwnerAccount")
@@ -37,29 +45,21 @@ public class JoinSecurityGroupRequest extends Request {
     @Validation(required = true)
     private String securityGroupId;
 
-    @Query
-    @NameInMap("NetworkInterfaceId")
-    private String networkInterfaceId;
-
-    @Query
-    @NameInMap("InstanceId")
-    private String instanceId;
-
-    @Query
-    @NameInMap("RegionId")
-    private String regionId;
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     private JoinSecurityGroupRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
+        this.instanceId = builder.instanceId;
+        this.networkInterfaceId = builder.networkInterfaceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityGroupId = builder.securityGroupId;
-        this.networkInterfaceId = builder.networkInterfaceId;
-        this.instanceId = builder.instanceId;
-        this.regionId = builder.regionId;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -76,10 +76,17 @@ public class JoinSecurityGroupRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return instanceId
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    /**
+     * @return networkInterfaceId
+     */
+    public String getNetworkInterfaceId() {
+        return this.networkInterfaceId;
     }
 
     /**
@@ -94,6 +101,13 @@ public class JoinSecurityGroupRequest extends Request {
      */
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -118,36 +132,22 @@ public class JoinSecurityGroupRequest extends Request {
     }
 
     /**
-     * @return networkInterfaceId
+     * @return sourceRegionId
      */
-    public String getNetworkInterfaceId() {
-        return this.networkInterfaceId;
-    }
-
-    /**
-     * @return instanceId
-     */
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public static final class Builder extends Request.Builder<JoinSecurityGroupRequest, Builder> {
-        private String sourceRegionId; 
+        private String instanceId; 
+        private String networkInterfaceId; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityGroupId; 
-        private String networkInterfaceId; 
-        private String instanceId; 
-        private String regionId; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -155,23 +155,32 @@ public class JoinSecurityGroupRequest extends Request {
 
         private Builder(JoinSecurityGroupRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
+            this.instanceId = request.instanceId;
+            this.networkInterfaceId = request.networkInterfaceId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityGroupId = request.securityGroupId;
-            this.networkInterfaceId = request.networkInterfaceId;
-            this.instanceId = request.instanceId;
-            this.regionId = request.regionId;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
-         * SourceRegionId.
+         * InstanceId.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * NetworkInterfaceId.
+         */
+        public Builder networkInterfaceId(String networkInterfaceId) {
+            this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
+            this.networkInterfaceId = networkInterfaceId;
             return this;
         }
 
@@ -185,7 +194,7 @@ public class JoinSecurityGroupRequest extends Request {
         }
 
         /**
-         * The ID of the RAM user.
+         * OwnerId.
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -194,7 +203,16 @@ public class JoinSecurityGroupRequest extends Request {
         }
 
         /**
-         * The account name of the resource master account.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
             this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
@@ -203,7 +221,7 @@ public class JoinSecurityGroupRequest extends Request {
         }
 
         /**
-         * The ID of the resource master account, that is, the UID.
+         * ResourceOwnerId.
          */
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
@@ -212,7 +230,7 @@ public class JoinSecurityGroupRequest extends Request {
         }
 
         /**
-         * The ID of the security group. You can call [DescribeSecurityGroups](~~ 25556 ~~) to view the available security groups.
+         * SecurityGroupId.
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -221,39 +239,11 @@ public class JoinSecurityGroupRequest extends Request {
         }
 
         /**
-         * The ID of the Eni.
-         * <p>
-         * 
-         * > When this parameter is specified, "InstanceId" must be empty.
+         * SourceRegionId.
          */
-        public Builder networkInterfaceId(String networkInterfaceId) {
-            this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
-            this.networkInterfaceId = networkInterfaceId;
-            return this;
-        }
-
-        /**
-         * The ID of the instance.
-         * <p>
-         * 
-         * > When this parameter is specified, "NetworkInterfaceId" must be empty.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * The ID of the region. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         * <p>
-         * 
-         * -You can add an instance to a security group without specifying the region ID.
-         * -To add an eni to a security group, you must specify the region ID of the eni.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

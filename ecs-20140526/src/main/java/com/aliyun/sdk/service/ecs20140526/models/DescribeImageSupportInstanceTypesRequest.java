@@ -12,17 +12,26 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeImageSupportInstanceTypesRequest</p>
  */
 public class DescribeImageSupportInstanceTypesRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("ActionType")
+    private String actionType;
 
     @Query
     @NameInMap("Filter")
     private java.util.List < Filter> filter;
 
     @Query
+    @NameInMap("ImageId")
+    private String imageId;
+
+    @Query
     @NameInMap("OwnerId")
     private Long ownerId;
+
+    @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
 
     @Query
     @NameInMap("ResourceOwnerAccount")
@@ -32,29 +41,20 @@ public class DescribeImageSupportInstanceTypesRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
-    @Query
-    @NameInMap("ImageId")
-    private String imageId;
-
-    @Query
-    @NameInMap("ActionType")
-    private String actionType;
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     private DescribeImageSupportInstanceTypesRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
+        this.actionType = builder.actionType;
         this.filter = builder.filter;
+        this.imageId = builder.imageId;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.regionId = builder.regionId;
-        this.imageId = builder.imageId;
-        this.actionType = builder.actionType;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -71,10 +71,10 @@ public class DescribeImageSupportInstanceTypesRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return actionType
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getActionType() {
+        return this.actionType;
     }
 
     /**
@@ -85,10 +85,24 @@ public class DescribeImageSupportInstanceTypesRequest extends Request {
     }
 
     /**
+     * @return imageId
+     */
+    public String getImageId() {
+        return this.imageId;
+    }
+
+    /**
      * @return ownerId
      */
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -106,35 +120,21 @@ public class DescribeImageSupportInstanceTypesRequest extends Request {
     }
 
     /**
-     * @return regionId
+     * @return sourceRegionId
      */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return imageId
-     */
-    public String getImageId() {
-        return this.imageId;
-    }
-
-    /**
-     * @return actionType
-     */
-    public String getActionType() {
-        return this.actionType;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public static final class Builder extends Request.Builder<DescribeImageSupportInstanceTypesRequest, Builder> {
-        private String sourceRegionId; 
+        private String actionType; 
         private java.util.List < Filter> filter; 
+        private String imageId; 
         private Long ownerId; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String regionId; 
-        private String imageId; 
-        private String actionType; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -142,22 +142,22 @@ public class DescribeImageSupportInstanceTypesRequest extends Request {
 
         private Builder(DescribeImageSupportInstanceTypesRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
+            this.actionType = request.actionType;
             this.filter = request.filter;
+            this.imageId = request.imageId;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.regionId = request.regionId;
-            this.imageId = request.imageId;
-            this.actionType = request.actionType;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
-         * SourceRegionId.
+         * ActionType.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder actionType(String actionType) {
+            this.putQueryParameter("ActionType", actionType);
+            this.actionType = actionType;
             return this;
         }
 
@@ -171,43 +171,7 @@ public class DescribeImageSupportInstanceTypesRequest extends Request {
         }
 
         /**
-         * The ID of the RAM user.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * The account name of the resource master account.
-         */
-        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
-            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-            this.resourceOwnerAccount = resourceOwnerAccount;
-            return this;
-        }
-
-        /**
-         * The ID of the resource master account, that is, the UID.
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * The ID of the region to which the image belongs. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The ID of the image.
+         * ImageId.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -216,17 +180,47 @@ public class DescribeImageSupportInstanceTypesRequest extends Request {
         }
 
         /**
-         * The scenario of the instance type. Valid values:
-         * <p>
-         * 
-         * -CreateEcs (default): creates an instance.
-         * -Upgrade: Upgrade the instance type.
-         * -Downgrade: Downgrade the instance type.
-         * -RenewDowngrade: renewal and downgrade.
+         * OwnerId.
          */
-        public Builder actionType(String actionType) {
-            this.putQueryParameter("ActionType", actionType);
-            this.actionType = actionType;
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 
@@ -276,10 +270,7 @@ public class DescribeImageSupportInstanceTypesRequest extends Request {
             private String value; 
 
             /**
-             * 指定过滤条件Key，当前只支持过滤镜像ID。取值范围：
-             * <p>
-             * -  imageId：过滤条件为镜像ID。
-             * -  filter：过滤条件为镜像ID。
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -287,7 +278,7 @@ public class DescribeImageSupportInstanceTypesRequest extends Request {
             }
 
             /**
-             * 指定过滤条件Value。
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

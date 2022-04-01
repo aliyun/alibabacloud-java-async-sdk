@@ -12,27 +12,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeStorageSetDetailsResponseBody</p>
  */
 public class DescribeStorageSetDetailsResponseBody extends TeaModel {
+    @NameInMap("Disks")
+    private Disks disks;
+
+    @NameInMap("PageNumber")
+    private Integer pageNumber;
+
     @NameInMap("PageSize")
     private Integer pageSize;
 
     @NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("PageNumber")
-    private Integer pageNumber;
-
     @NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("Disks")
-    private Disks disks;
-
     private DescribeStorageSetDetailsResponseBody(Builder builder) {
+        this.disks = builder.disks;
+        this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
-        this.pageNumber = builder.pageNumber;
         this.totalCount = builder.totalCount;
-        this.disks = builder.disks;
     }
 
     public static Builder builder() {
@@ -41,6 +41,20 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
 
     public static DescribeStorageSetDetailsResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return disks
+     */
+    public Disks getDisks() {
+        return this.disks;
+    }
+
+    /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     /**
@@ -58,51 +72,29 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
     }
 
     /**
-     * @return pageNumber
-     */
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    /**
      * @return totalCount
      */
     public Integer getTotalCount() {
         return this.totalCount;
     }
 
-    /**
-     * @return disks
-     */
-    public Disks getDisks() {
-        return this.disks;
-    }
-
     public static final class Builder {
+        private Disks disks; 
+        private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private Integer pageNumber; 
         private Integer totalCount; 
-        private Disks disks; 
 
         /**
-         * The number of entries returned per page.
+         * Disks.
          */
-        public Builder pageSize(Integer pageSize) {
-            this.pageSize = pageSize;
+        public Builder disks(Disks disks) {
+            this.disks = disks;
             return this;
         }
 
         /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The number of pages in the bucket list.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -110,18 +102,26 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of buckets.
+         * PageSize.
          */
-        public Builder totalCount(Integer totalCount) {
-            this.totalCount = totalCount;
+        public Builder pageSize(Integer pageSize) {
+            this.pageSize = pageSize;
             return this;
         }
 
         /**
-         * A Disk array that returns the details of cloud disks or shared block storage in a storage set.
+         * RequestId.
          */
-        public Builder disks(Disks disks) {
-            this.disks = disks;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
@@ -132,39 +132,39 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
     } 
 
     public static class Disk extends TeaModel {
+        @NameInMap("Category")
+        private String category;
+
         @NameInMap("CreationTime")
         private String creationTime;
-
-        @NameInMap("DiskName")
-        private String diskName;
-
-        @NameInMap("ZoneId")
-        private String zoneId;
-
-        @NameInMap("StorageSetId")
-        private String storageSetId;
 
         @NameInMap("DiskId")
         private String diskId;
 
-        @NameInMap("Category")
-        private String category;
-
-        @NameInMap("StorageSetPartitionNumber")
-        private Integer storageSetPartitionNumber;
+        @NameInMap("DiskName")
+        private String diskName;
 
         @NameInMap("RegionId")
         private String regionId;
 
+        @NameInMap("StorageSetId")
+        private String storageSetId;
+
+        @NameInMap("StorageSetPartitionNumber")
+        private Integer storageSetPartitionNumber;
+
+        @NameInMap("ZoneId")
+        private String zoneId;
+
         private Disk(Builder builder) {
-            this.creationTime = builder.creationTime;
-            this.diskName = builder.diskName;
-            this.zoneId = builder.zoneId;
-            this.storageSetId = builder.storageSetId;
-            this.diskId = builder.diskId;
             this.category = builder.category;
-            this.storageSetPartitionNumber = builder.storageSetPartitionNumber;
+            this.creationTime = builder.creationTime;
+            this.diskId = builder.diskId;
+            this.diskName = builder.diskName;
             this.regionId = builder.regionId;
+            this.storageSetId = builder.storageSetId;
+            this.storageSetPartitionNumber = builder.storageSetPartitionNumber;
+            this.zoneId = builder.zoneId;
         }
 
         public static Builder builder() {
@@ -176,31 +176,17 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
         }
 
         /**
+         * @return category
+         */
+        public String getCategory() {
+            return this.category;
+        }
+
+        /**
          * @return creationTime
          */
         public String getCreationTime() {
             return this.creationTime;
-        }
-
-        /**
-         * @return diskName
-         */
-        public String getDiskName() {
-            return this.diskName;
-        }
-
-        /**
-         * @return zoneId
-         */
-        public String getZoneId() {
-            return this.zoneId;
-        }
-
-        /**
-         * @return storageSetId
-         */
-        public String getStorageSetId() {
-            return this.storageSetId;
         }
 
         /**
@@ -211,10 +197,24 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * @return category
+         * @return diskName
          */
-        public String getCategory() {
-            return this.category;
+        public String getDiskName() {
+            return this.diskName;
+        }
+
+        /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        /**
+         * @return storageSetId
+         */
+        public String getStorageSetId() {
+            return this.storageSetId;
         }
 
         /**
@@ -225,64 +225,24 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * @return regionId
+         * @return zoneId
          */
-        public String getRegionId() {
-            return this.regionId;
+        public String getZoneId() {
+            return this.zoneId;
         }
 
         public static final class Builder {
-            private String creationTime; 
-            private String diskName; 
-            private String zoneId; 
-            private String storageSetId; 
-            private String diskId; 
             private String category; 
-            private Integer storageSetPartitionNumber; 
+            private String creationTime; 
+            private String diskId; 
+            private String diskName; 
             private String regionId; 
+            private String storageSetId; 
+            private Integer storageSetPartitionNumber; 
+            private String zoneId; 
 
             /**
-             * The time when the disk or shared block storage was created.
-             */
-            public Builder creationTime(String creationTime) {
-                this.creationTime = creationTime;
-                return this;
-            }
-
-            /**
-             * The name of the cloud disk or shared block storage.
-             */
-            public Builder diskName(String diskName) {
-                this.diskName = diskName;
-                return this;
-            }
-
-            /**
-             * The zone to which the cloud disk or shared block storage belongs.
-             */
-            public Builder zoneId(String zoneId) {
-                this.zoneId = zoneId;
-                return this;
-            }
-
-            /**
-             * The ID of the storage set.
-             */
-            public Builder storageSetId(String storageSetId) {
-                this.storageSetId = storageSetId;
-                return this;
-            }
-
-            /**
-             * The ID of the cloud disk or shared block storage.
-             */
-            public Builder diskId(String diskId) {
-                this.diskId = diskId;
-                return this;
-            }
-
-            /**
-             * The type of cloud disk or shared block storage.
+             * Category.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -290,7 +250,47 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of partitions in the storage set.
+             * CreationTime.
+             */
+            public Builder creationTime(String creationTime) {
+                this.creationTime = creationTime;
+                return this;
+            }
+
+            /**
+             * DiskId.
+             */
+            public Builder diskId(String diskId) {
+                this.diskId = diskId;
+                return this;
+            }
+
+            /**
+             * DiskName.
+             */
+            public Builder diskName(String diskName) {
+                this.diskName = diskName;
+                return this;
+            }
+
+            /**
+             * RegionId.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * StorageSetId.
+             */
+            public Builder storageSetId(String storageSetId) {
+                this.storageSetId = storageSetId;
+                return this;
+            }
+
+            /**
+             * StorageSetPartitionNumber.
              */
             public Builder storageSetPartitionNumber(Integer storageSetPartitionNumber) {
                 this.storageSetPartitionNumber = storageSetPartitionNumber;
@@ -298,10 +298,10 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The region to which the cloud disk or shared block storage belongs.
+             * ZoneId.
              */
-            public Builder regionId(String regionId) {
-                this.regionId = regionId;
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
                 return this;
             }
 

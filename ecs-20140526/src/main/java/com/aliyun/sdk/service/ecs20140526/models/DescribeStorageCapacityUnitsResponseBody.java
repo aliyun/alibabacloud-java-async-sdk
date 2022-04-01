@@ -12,27 +12,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeStorageCapacityUnitsResponseBody</p>
  */
 public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
+    @NameInMap("PageNumber")
+    private Integer pageNumber;
+
     @NameInMap("PageSize")
     private Integer pageSize;
 
     @NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("PageNumber")
-    private Integer pageNumber;
+    @NameInMap("StorageCapacityUnits")
+    private StorageCapacityUnits storageCapacityUnits;
 
     @NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("StorageCapacityUnits")
-    private StorageCapacityUnits storageCapacityUnits;
-
     private DescribeStorageCapacityUnitsResponseBody(Builder builder) {
+        this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
-        this.pageNumber = builder.pageNumber;
-        this.totalCount = builder.totalCount;
         this.storageCapacityUnits = builder.storageCapacityUnits;
+        this.totalCount = builder.totalCount;
     }
 
     public static Builder builder() {
@@ -41,6 +41,13 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
 
     public static DescribeStorageCapacityUnitsResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     /**
@@ -58,10 +65,10 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
     }
 
     /**
-     * @return pageNumber
+     * @return storageCapacityUnits
      */
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public StorageCapacityUnits getStorageCapacityUnits() {
+        return this.storageCapacityUnits;
     }
 
     /**
@@ -71,38 +78,15 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    /**
-     * @return storageCapacityUnits
-     */
-    public StorageCapacityUnits getStorageCapacityUnits() {
-        return this.storageCapacityUnits;
-    }
-
     public static final class Builder {
+        private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private Integer pageNumber; 
-        private Integer totalCount; 
         private StorageCapacityUnits storageCapacityUnits; 
+        private Integer totalCount; 
 
         /**
-         * The number of entries to return on each page.
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The page number of the SCU list.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -110,18 +94,34 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of SCUs.
+         * PageSize.
          */
-        public Builder totalCount(Integer totalCount) {
-            this.totalCount = totalCount;
+        public Builder pageSize(Integer pageSize) {
+            this.pageSize = pageSize;
             return this;
         }
 
         /**
-         * Returns the details of the SCU in an array of StorageCapacityUnits.
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * StorageCapacityUnits.
          */
         public Builder storageCapacityUnits(StorageCapacityUnits storageCapacityUnits) {
             this.storageCapacityUnits = storageCapacityUnits;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
@@ -132,15 +132,15 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("TagValue")
-        private String tagValue;
-
         @NameInMap("TagKey")
         private String tagKey;
 
+        @NameInMap("TagValue")
+        private String tagValue;
+
         private Tag(Builder builder) {
-            this.tagValue = builder.tagValue;
             this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
         }
 
         public static Builder builder() {
@@ -152,36 +152,36 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
         }
 
         /**
-         * @return tagValue
-         */
-        public String getTagValue() {
-            return this.tagValue;
-        }
-
-        /**
          * @return tagKey
          */
         public String getTagKey() {
             return this.tagKey;
         }
 
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
         public static final class Builder {
-            private String tagValue; 
             private String tagKey; 
+            private String tagValue; 
 
             /**
-             * The tag key of the SCU.
+             * TagKey.
              */
-            public Builder tagValue(String tagValue) {
-                this.tagValue = tagValue;
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
                 return this;
             }
 
             /**
-             * The tag value of the SCU.
+             * TagValue.
              */
-            public Builder tagKey(String tagKey) {
-                this.tagKey = tagKey;
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
                 return this;
             }
 
@@ -234,29 +234,20 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
 
     }
     public static class StorageCapacityUnit extends TeaModel {
-        @NameInMap("CreationTime")
-        private String creationTime;
-
-        @NameInMap("Status")
-        private String status;
-
-        @NameInMap("StartTime")
-        private String startTime;
+        @NameInMap("AllocationStatus")
+        private String allocationStatus;
 
         @NameInMap("Capacity")
         private Integer capacity;
 
+        @NameInMap("CreationTime")
+        private String creationTime;
+
         @NameInMap("Description")
         private String description;
 
-        @NameInMap("AllocationStatus")
-        private String allocationStatus;
-
         @NameInMap("ExpiredTime")
         private String expiredTime;
-
-        @NameInMap("StorageCapacityUnitId")
-        private String storageCapacityUnitId;
 
         @NameInMap("Name")
         private String name;
@@ -264,20 +255,29 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
         @NameInMap("RegionId")
         private String regionId;
 
+        @NameInMap("StartTime")
+        private String startTime;
+
+        @NameInMap("Status")
+        private String status;
+
+        @NameInMap("StorageCapacityUnitId")
+        private String storageCapacityUnitId;
+
         @NameInMap("Tags")
         private Tags tags;
 
         private StorageCapacityUnit(Builder builder) {
-            this.creationTime = builder.creationTime;
-            this.status = builder.status;
-            this.startTime = builder.startTime;
-            this.capacity = builder.capacity;
-            this.description = builder.description;
             this.allocationStatus = builder.allocationStatus;
+            this.capacity = builder.capacity;
+            this.creationTime = builder.creationTime;
+            this.description = builder.description;
             this.expiredTime = builder.expiredTime;
-            this.storageCapacityUnitId = builder.storageCapacityUnitId;
             this.name = builder.name;
             this.regionId = builder.regionId;
+            this.startTime = builder.startTime;
+            this.status = builder.status;
+            this.storageCapacityUnitId = builder.storageCapacityUnitId;
             this.tags = builder.tags;
         }
 
@@ -290,24 +290,10 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
         }
 
         /**
-         * @return creationTime
+         * @return allocationStatus
          */
-        public String getCreationTime() {
-            return this.creationTime;
-        }
-
-        /**
-         * @return status
-         */
-        public String getStatus() {
-            return this.status;
-        }
-
-        /**
-         * @return startTime
-         */
-        public String getStartTime() {
-            return this.startTime;
+        public String getAllocationStatus() {
+            return this.allocationStatus;
         }
 
         /**
@@ -318,6 +304,13 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
         }
 
         /**
+         * @return creationTime
+         */
+        public String getCreationTime() {
+            return this.creationTime;
+        }
+
+        /**
          * @return description
          */
         public String getDescription() {
@@ -325,24 +318,10 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
         }
 
         /**
-         * @return allocationStatus
-         */
-        public String getAllocationStatus() {
-            return this.allocationStatus;
-        }
-
-        /**
          * @return expiredTime
          */
         public String getExpiredTime() {
             return this.expiredTime;
-        }
-
-        /**
-         * @return storageCapacityUnitId
-         */
-        public String getStorageCapacityUnitId() {
-            return this.storageCapacityUnitId;
         }
 
         /**
@@ -360,6 +339,27 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
         }
 
         /**
+         * @return startTime
+         */
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return storageCapacityUnitId
+         */
+        public String getStorageCapacityUnitId() {
+            return this.storageCapacityUnitId;
+        }
+
+        /**
          * @return tags
          */
         public Tags getTags() {
@@ -367,65 +367,20 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private String creationTime; 
-            private String status; 
-            private String startTime; 
-            private Integer capacity; 
-            private String description; 
             private String allocationStatus; 
+            private Integer capacity; 
+            private String creationTime; 
+            private String description; 
             private String expiredTime; 
-            private String storageCapacityUnitId; 
             private String name; 
             private String regionId; 
+            private String startTime; 
+            private String status; 
+            private String storageCapacityUnitId; 
             private Tags tags; 
 
             /**
-             * The time when the SCU was created.
-             */
-            public Builder creationTime(String creationTime) {
-                this.creationTime = creationTime;
-                return this;
-            }
-
-            /**
-             * The status of the SCU.
-             */
-            public Builder status(String status) {
-                this.status = status;
-                return this;
-            }
-
-            /**
-             * The start time of the SCU.
-             * <p>
-             * 
-             */
-            public Builder startTime(String startTime) {
-                this.startTime = startTime;
-                return this;
-            }
-
-            /**
-             * The capacity of the SCU.
-             */
-            public Builder capacity(Integer capacity) {
-                this.capacity = capacity;
-                return this;
-            }
-
-            /**
-             * The description of the SCU.
-             */
-            public Builder description(String description) {
-                this.description = description;
-                return this;
-            }
-
-            /**
-             * If the AllocationType value is Shared, this parameter indicates the allocation status of the SCU. Possible values:
-             * <p>
-             * -allocated: The SCUs that have been allocated to other users.
-             * -beAllocated: The SCU allocated to other users.
+             * AllocationStatus.
              */
             public Builder allocationStatus(String allocationStatus) {
                 this.allocationStatus = allocationStatus;
@@ -433,7 +388,31 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration time of the SCU.
+             * Capacity.
+             */
+            public Builder capacity(Integer capacity) {
+                this.capacity = capacity;
+                return this;
+            }
+
+            /**
+             * CreationTime.
+             */
+            public Builder creationTime(String creationTime) {
+                this.creationTime = creationTime;
+                return this;
+            }
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * ExpiredTime.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -441,15 +420,7 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the SCU.
-             */
-            public Builder storageCapacityUnitId(String storageCapacityUnitId) {
-                this.storageCapacityUnitId = storageCapacityUnitId;
-                return this;
-            }
-
-            /**
-             * The name of the SCU.
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -457,7 +428,7 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region to which the SCU belongs.
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -465,7 +436,31 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * The key-value pair of the SCU tag.
+             * StartTime.
+             */
+            public Builder startTime(String startTime) {
+                this.startTime = startTime;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * StorageCapacityUnitId.
+             */
+            public Builder storageCapacityUnitId(String storageCapacityUnitId) {
+                this.storageCapacityUnitId = storageCapacityUnitId;
+                return this;
+            }
+
+            /**
+             * Tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;

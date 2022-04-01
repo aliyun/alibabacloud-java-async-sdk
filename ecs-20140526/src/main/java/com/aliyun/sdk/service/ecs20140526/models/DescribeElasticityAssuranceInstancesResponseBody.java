@@ -12,6 +12,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeElasticityAssuranceInstancesResponseBody</p>
  */
 public class DescribeElasticityAssuranceInstancesResponseBody extends TeaModel {
+    @NameInMap("ElasticityAssuranceItem")
+    private ElasticityAssuranceItem elasticityAssuranceItem;
+
+    @NameInMap("MaxResults")
+    private Integer maxResults;
+
     @NameInMap("NextToken")
     private String nextToken;
 
@@ -21,18 +27,12 @@ public class DescribeElasticityAssuranceInstancesResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("MaxResults")
-    private Integer maxResults;
-
-    @NameInMap("ElasticityAssuranceItem")
-    private ElasticityAssuranceItem elasticityAssuranceItem;
-
     private DescribeElasticityAssuranceInstancesResponseBody(Builder builder) {
+        this.elasticityAssuranceItem = builder.elasticityAssuranceItem;
+        this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.requestId = builder.requestId;
         this.totalCount = builder.totalCount;
-        this.maxResults = builder.maxResults;
-        this.elasticityAssuranceItem = builder.elasticityAssuranceItem;
     }
 
     public static Builder builder() {
@@ -41,6 +41,20 @@ public class DescribeElasticityAssuranceInstancesResponseBody extends TeaModel {
 
     public static DescribeElasticityAssuranceInstancesResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return elasticityAssuranceItem
+     */
+    public ElasticityAssuranceItem getElasticityAssuranceItem() {
+        return this.elasticityAssuranceItem;
+    }
+
+    /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
     }
 
     /**
@@ -64,53 +78,23 @@ public class DescribeElasticityAssuranceInstancesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    /**
-     * @return maxResults
-     */
-    public Integer getMaxResults() {
-        return this.maxResults;
-    }
-
-    /**
-     * @return elasticityAssuranceItem
-     */
-    public ElasticityAssuranceItem getElasticityAssuranceItem() {
-        return this.elasticityAssuranceItem;
-    }
-
     public static final class Builder {
+        private ElasticityAssuranceItem elasticityAssuranceItem; 
+        private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
-        private Integer maxResults; 
-        private ElasticityAssuranceItem elasticityAssuranceItem; 
 
         /**
-         * The start flag of the next query.
+         * ElasticityAssuranceItem.
          */
-        public Builder nextToken(String nextToken) {
-            this.nextToken = nextToken;
+        public Builder elasticityAssuranceItem(ElasticityAssuranceItem elasticityAssuranceItem) {
+            this.elasticityAssuranceItem = elasticityAssuranceItem;
             return this;
         }
 
         /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The number of records that meet the query criteria.
-         */
-        public Builder totalCount(Integer totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-
-        /**
-         * The number of entries to return on each page.
+         * MaxResults.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -118,10 +102,26 @@ public class DescribeElasticityAssuranceInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The list of instances that have been matched by the elastic protection service.
+         * NextToken.
          */
-        public Builder elasticityAssuranceItem(ElasticityAssuranceItem elasticityAssuranceItem) {
-            this.elasticityAssuranceItem = elasticityAssuranceItem;
+        public Builder nextToken(String nextToken) {
+            this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
@@ -158,7 +158,7 @@ public class DescribeElasticityAssuranceInstancesResponseBody extends TeaModel {
             private String instanceId; 
 
             /**
-             * The ID of the instance.
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;

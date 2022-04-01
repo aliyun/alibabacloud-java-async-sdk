@@ -13,38 +13,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeStorageSetDetailsRequest extends Request {
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
+    @NameInMap("ClientToken")
+    private String clientToken;
 
     @Query
-    @NameInMap("ResourceOwnerAccount")
-    private String resourceOwnerAccount;
-
-    @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
+    @NameInMap("DiskIds")
+    private String diskIds;
 
     @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
 
     @Query
-    @NameInMap("ClientToken")
-    private String clientToken;
-
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
-    @Query
-    @NameInMap("StorageSetId")
-    @Validation(required = true)
-    private String storageSetId;
-
-    @Query
-    @NameInMap("StorageSetPartitionNumber")
-    private Integer storageSetPartitionNumber;
+    @NameInMap("OwnerId")
+    private Long ownerId;
 
     @Query
     @NameInMap("PageNumber")
@@ -57,22 +39,40 @@ public class DescribeStorageSetDetailsRequest extends Request {
     private Integer pageSize;
 
     @Query
-    @NameInMap("DiskIds")
-    private String diskIds;
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
+    @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Query
+    @NameInMap("StorageSetId")
+    @Validation(required = true)
+    private String storageSetId;
+
+    @Query
+    @NameInMap("StorageSetPartitionNumber")
+    private Integer storageSetPartitionNumber;
 
     private DescribeStorageSetDetailsRequest(Builder builder) {
         super(builder);
-        this.ownerId = builder.ownerId;
-        this.resourceOwnerAccount = builder.resourceOwnerAccount;
-        this.resourceOwnerId = builder.resourceOwnerId;
-        this.ownerAccount = builder.ownerAccount;
         this.clientToken = builder.clientToken;
-        this.regionId = builder.regionId;
-        this.storageSetId = builder.storageSetId;
-        this.storageSetPartitionNumber = builder.storageSetPartitionNumber;
+        this.diskIds = builder.diskIds;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.diskIds = builder.diskIds;
+        this.regionId = builder.regionId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.storageSetId = builder.storageSetId;
+        this.storageSetPartitionNumber = builder.storageSetPartitionNumber;
     }
 
     public static Builder builder() {
@@ -89,24 +89,17 @@ public class DescribeStorageSetDetailsRequest extends Request {
     }
 
     /**
-     * @return ownerId
+     * @return clientToken
      */
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
-     * @return resourceOwnerAccount
+     * @return diskIds
      */
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    /**
-     * @return resourceOwnerId
-     */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public String getDiskIds() {
+        return this.diskIds;
     }
 
     /**
@@ -117,31 +110,10 @@ public class DescribeStorageSetDetailsRequest extends Request {
     }
 
     /**
-     * @return clientToken
+     * @return ownerId
      */
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return storageSetId
-     */
-    public String getStorageSetId() {
-        return this.storageSetId;
-    }
-
-    /**
-     * @return storageSetPartitionNumber
-     */
-    public Integer getStorageSetPartitionNumber() {
-        return this.storageSetPartitionNumber;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     /**
@@ -159,24 +131,52 @@ public class DescribeStorageSetDetailsRequest extends Request {
     }
 
     /**
-     * @return diskIds
+     * @return regionId
      */
-    public String getDiskIds() {
-        return this.diskIds;
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    /**
+     * @return storageSetId
+     */
+    public String getStorageSetId() {
+        return this.storageSetId;
+    }
+
+    /**
+     * @return storageSetPartitionNumber
+     */
+    public Integer getStorageSetPartitionNumber() {
+        return this.storageSetPartitionNumber;
     }
 
     public static final class Builder extends Request.Builder<DescribeStorageSetDetailsRequest, Builder> {
-        private Long ownerId; 
-        private String resourceOwnerAccount; 
-        private Long resourceOwnerId; 
-        private String ownerAccount; 
         private String clientToken; 
-        private String regionId; 
-        private String storageSetId; 
-        private Integer storageSetPartitionNumber; 
+        private String diskIds; 
+        private String ownerAccount; 
+        private Long ownerId; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private String diskIds; 
+        private String regionId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String storageSetId; 
+        private Integer storageSetPartitionNumber; 
 
         private Builder() {
             super();
@@ -184,18 +184,45 @@ public class DescribeStorageSetDetailsRequest extends Request {
 
         private Builder(DescribeStorageSetDetailsRequest request) {
             super(request);
-            this.ownerId = request.ownerId;
-            this.resourceOwnerAccount = request.resourceOwnerAccount;
-            this.resourceOwnerId = request.resourceOwnerId;
-            this.ownerAccount = request.ownerAccount;
             this.clientToken = request.clientToken;
-            this.regionId = request.regionId;
-            this.storageSetId = request.storageSetId;
-            this.storageSetPartitionNumber = request.storageSetPartitionNumber;
+            this.diskIds = request.diskIds;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
-            this.diskIds = request.diskIds;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.storageSetId = request.storageSetId;
+            this.storageSetPartitionNumber = request.storageSetPartitionNumber;
         } 
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * DiskIds.
+         */
+        public Builder diskIds(String diskIds) {
+            this.putQueryParameter("DiskIds", diskIds);
+            this.diskIds = diskIds;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
 
         /**
          * OwnerId.
@@ -203,6 +230,33 @@ public class DescribeStorageSetDetailsRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * PageNumber.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
@@ -225,34 +279,7 @@ public class DescribeStorageSetDetailsRequest extends Request {
         }
 
         /**
-         * OwnerAccount.
-         */
-        public Builder ownerAccount(String ownerAccount) {
-            this.putQueryParameter("OwnerAccount", ownerAccount);
-            this.ownerAccount = ownerAccount;
-            return this;
-        }
-
-        /**
-         * Ensure the idempotence of the request. Generate a parameter value from your client. Make sure that the value is unique among different requests. **ClientToken** supports only ASCII characters and cannot exceed 64 characters. For more information, see [how to ensure idempotence](~~ 25693 ~~).
-         */
-        public Builder clientToken(String clientToken) {
-            this.putQueryParameter("ClientToken", clientToken);
-            this.clientToken = clientToken;
-            return this;
-        }
-
-        /**
-         * The region to which the bucket belongs. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The ID of the storage set.
+         * StorageSetId.
          */
         public Builder storageSetId(String storageSetId) {
             this.putQueryParameter("StorageSetId", storageSetId);
@@ -261,48 +288,11 @@ public class DescribeStorageSetDetailsRequest extends Request {
         }
 
         /**
-         * The maximum number of partitions in a storage set.
+         * StorageSetPartitionNumber.
          */
         public Builder storageSetPartitionNumber(Integer storageSetPartitionNumber) {
             this.putQueryParameter("StorageSetPartitionNumber", storageSetPartitionNumber);
             this.storageSetPartitionNumber = storageSetPartitionNumber;
-            return this;
-        }
-
-        /**
-         * The page number of the bucket list.
-         * <p>
-         * 
-         * Start value: 1
-         * 
-         * Default value: 1.
-         */
-        public Builder pageNumber(Integer pageNumber) {
-            this.putQueryParameter("PageNumber", pageNumber);
-            this.pageNumber = pageNumber;
-            return this;
-        }
-
-        /**
-         * The number of entries to return on each page.
-         * <p>
-         * 
-         * Maximum Value: 100
-         * 
-         * Default value: 10
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.putQueryParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * The ID of the cloud disk or shared block storage. The value can be a JSON array consisting of multiple cloud disks or shared block storage ids. A maximum of 100 ids can be entered. Separate ids with commas (,).
-         */
-        public Builder diskIds(String diskIds) {
-            this.putQueryParameter("DiskIds", diskIds);
-            this.diskIds = diskIds;
             return this;
         }
 

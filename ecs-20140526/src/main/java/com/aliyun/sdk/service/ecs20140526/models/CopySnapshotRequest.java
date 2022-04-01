@@ -13,12 +13,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CopySnapshotRequest extends Request {
     @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @NameInMap("DestinationRegionId")
+    @Validation(required = true)
+    private String destinationRegionId;
+
+    @Query
+    @NameInMap("DestinationSnapshotDescription")
+    @Validation(required = true)
+    private String destinationSnapshotDescription;
+
+    @Query
+    @NameInMap("DestinationSnapshotName")
+    @Validation(required = true)
+    private String destinationSnapshotName;
 
     @Query
     @NameInMap("OwnerId")
     private Long ownerId;
+
+    @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
+    @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
 
     @Query
     @NameInMap("ResourceOwnerAccount")
@@ -29,18 +49,8 @@ public class CopySnapshotRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
-    @NameInMap("ResourceGroupId")
-    private String resourceGroupId;
-
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
-    @Query
-    @NameInMap("DestinationRegionId")
-    @Validation(required = true)
-    private String destinationRegionId;
+    @NameInMap("RetentionDays")
+    private Integer retentionDays;
 
     @Query
     @NameInMap("SnapshotId")
@@ -48,32 +58,22 @@ public class CopySnapshotRequest extends Request {
     private String snapshotId;
 
     @Query
-    @NameInMap("DestinationSnapshotDescription")
-    @Validation(required = true)
-    private String destinationSnapshotDescription;
-
-    @Query
-    @NameInMap("RetentionDays")
-    private Integer retentionDays;
-
-    @Query
-    @NameInMap("DestinationSnapshotName")
-    @Validation(required = true)
-    private String destinationSnapshotName;
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
 
     private CopySnapshotRequest(Builder builder) {
         super(builder);
-        this.tag = builder.tag;
+        this.destinationRegionId = builder.destinationRegionId;
+        this.destinationSnapshotDescription = builder.destinationSnapshotDescription;
+        this.destinationSnapshotName = builder.destinationSnapshotName;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.resourceGroupId = builder.resourceGroupId;
-        this.regionId = builder.regionId;
-        this.destinationRegionId = builder.destinationRegionId;
-        this.snapshotId = builder.snapshotId;
-        this.destinationSnapshotDescription = builder.destinationSnapshotDescription;
         this.retentionDays = builder.retentionDays;
-        this.destinationSnapshotName = builder.destinationSnapshotName;
+        this.snapshotId = builder.snapshotId;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -90,10 +90,24 @@ public class CopySnapshotRequest extends Request {
     }
 
     /**
-     * @return tag
+     * @return destinationRegionId
      */
-    public java.util.List < Tag> getTag() {
-        return this.tag;
+    public String getDestinationRegionId() {
+        return this.destinationRegionId;
+    }
+
+    /**
+     * @return destinationSnapshotDescription
+     */
+    public String getDestinationSnapshotDescription() {
+        return this.destinationSnapshotDescription;
+    }
+
+    /**
+     * @return destinationSnapshotName
+     */
+    public String getDestinationSnapshotName() {
+        return this.destinationSnapshotName;
     }
 
     /**
@@ -101,6 +115,20 @@ public class CopySnapshotRequest extends Request {
      */
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     /**
@@ -118,24 +146,10 @@ public class CopySnapshotRequest extends Request {
     }
 
     /**
-     * @return resourceGroupId
+     * @return retentionDays
      */
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return destinationRegionId
-     */
-    public String getDestinationRegionId() {
-        return this.destinationRegionId;
+    public Integer getRetentionDays() {
+        return this.retentionDays;
     }
 
     /**
@@ -146,38 +160,24 @@ public class CopySnapshotRequest extends Request {
     }
 
     /**
-     * @return destinationSnapshotDescription
+     * @return tag
      */
-    public String getDestinationSnapshotDescription() {
-        return this.destinationSnapshotDescription;
-    }
-
-    /**
-     * @return retentionDays
-     */
-    public Integer getRetentionDays() {
-        return this.retentionDays;
-    }
-
-    /**
-     * @return destinationSnapshotName
-     */
-    public String getDestinationSnapshotName() {
-        return this.destinationSnapshotName;
+    public java.util.List < Tag> getTag() {
+        return this.tag;
     }
 
     public static final class Builder extends Request.Builder<CopySnapshotRequest, Builder> {
-        private java.util.List < Tag> tag; 
+        private String destinationRegionId; 
+        private String destinationSnapshotDescription; 
+        private String destinationSnapshotName; 
         private Long ownerId; 
+        private String regionId; 
+        private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String resourceGroupId; 
-        private String regionId; 
-        private String destinationRegionId; 
-        private String snapshotId; 
-        private String destinationSnapshotDescription; 
         private Integer retentionDays; 
-        private String destinationSnapshotName; 
+        private String snapshotId; 
+        private java.util.List < Tag> tag; 
 
         private Builder() {
             super();
@@ -185,25 +185,43 @@ public class CopySnapshotRequest extends Request {
 
         private Builder(CopySnapshotRequest request) {
             super(request);
-            this.tag = request.tag;
+            this.destinationRegionId = request.destinationRegionId;
+            this.destinationSnapshotDescription = request.destinationSnapshotDescription;
+            this.destinationSnapshotName = request.destinationSnapshotName;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.resourceGroupId = request.resourceGroupId;
-            this.regionId = request.regionId;
-            this.destinationRegionId = request.destinationRegionId;
-            this.snapshotId = request.snapshotId;
-            this.destinationSnapshotDescription = request.destinationSnapshotDescription;
             this.retentionDays = request.retentionDays;
-            this.destinationSnapshotName = request.destinationSnapshotName;
+            this.snapshotId = request.snapshotId;
+            this.tag = request.tag;
         } 
 
         /**
-         * Tag.
+         * DestinationRegionId.
          */
-        public Builder tag(java.util.List < Tag> tag) {
-            this.putQueryParameter("Tag", tag);
-            this.tag = tag;
+        public Builder destinationRegionId(String destinationRegionId) {
+            this.putQueryParameter("DestinationRegionId", destinationRegionId);
+            this.destinationRegionId = destinationRegionId;
+            return this;
+        }
+
+        /**
+         * DestinationSnapshotDescription.
+         */
+        public Builder destinationSnapshotDescription(String destinationSnapshotDescription) {
+            this.putQueryParameter("DestinationSnapshotDescription", destinationSnapshotDescription);
+            this.destinationSnapshotDescription = destinationSnapshotDescription;
+            return this;
+        }
+
+        /**
+         * DestinationSnapshotName.
+         */
+        public Builder destinationSnapshotName(String destinationSnapshotName) {
+            this.putQueryParameter("DestinationSnapshotName", destinationSnapshotName);
+            this.destinationSnapshotName = destinationSnapshotName;
             return this;
         }
 
@@ -213,6 +231,24 @@ public class CopySnapshotRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 
@@ -235,58 +271,7 @@ public class CopySnapshotRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
-         */
-        public Builder resourceGroupId(String resourceGroupId) {
-            this.putQueryParameter("ResourceGroupId", resourceGroupId);
-            this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-
-        /**
-         * The region of the source snapshot. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The region ID of the new snapshot.
-         */
-        public Builder destinationRegionId(String destinationRegionId) {
-            this.putQueryParameter("DestinationRegionId", destinationRegionId);
-            this.destinationRegionId = destinationRegionId;
-            return this;
-        }
-
-        /**
-         * The ID of the source snapshot.
-         */
-        public Builder snapshotId(String snapshotId) {
-            this.putQueryParameter("SnapshotId", snapshotId);
-            this.snapshotId = snapshotId;
-            return this;
-        }
-
-        /**
-         * The description of the new snapshot. The description must be 2 to 256 characters in length and cannot start with http:// or https.
-         * <p>
-         * 
-         * Default value: Null.
-         */
-        public Builder destinationSnapshotDescription(String destinationSnapshotDescription) {
-            this.putQueryParameter("DestinationSnapshotDescription", destinationSnapshotDescription);
-            this.destinationSnapshotDescription = destinationSnapshotDescription;
-            return this;
-        }
-
-        /**
-         * The retention period of a new snapshot. Unit: Days. Snapshots are automatically released after expiration. Valid values: 1 to 65536.
-         * <p>
-         * 
-         * Default value: null, indicating that snapshots are not automatically released.
+         * RetentionDays.
          */
         public Builder retentionDays(Integer retentionDays) {
             this.putQueryParameter("RetentionDays", retentionDays);
@@ -295,14 +280,20 @@ public class CopySnapshotRequest extends Request {
         }
 
         /**
-         * The name of the new snapshot. The description must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https. It can contain numbers, colons (:), underscores (_), and hyphens (-).
-         * <p>
-         * 
-         * Default value: Null.
+         * SnapshotId.
          */
-        public Builder destinationSnapshotName(String destinationSnapshotName) {
-            this.putQueryParameter("DestinationSnapshotName", destinationSnapshotName);
-            this.destinationSnapshotName = destinationSnapshotName;
+        public Builder snapshotId(String snapshotId) {
+            this.putQueryParameter("SnapshotId", snapshotId);
+            this.snapshotId = snapshotId;
+            return this;
+        }
+
+        /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
             return this;
         }
 
@@ -352,7 +343,7 @@ public class CopySnapshotRequest extends Request {
             private String value; 
 
             /**
-             * 新快照的标签键。一旦传入该值，则不允许为空字符串。最多支持128个字符，不能以aliyun和acs:开头，不能包含http://或者https://。
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -360,7 +351,7 @@ public class CopySnapshotRequest extends Request {
             }
 
             /**
-             * 新快照的标签值。一旦传入该值，允许为空字符串。最多支持128个字符，不能以aliyun和acs:开头，不能包含http://或者https://。
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

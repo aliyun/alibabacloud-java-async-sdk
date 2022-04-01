@@ -13,25 +13,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeAutoProvisioningGroupInstancesRequest extends Request {
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
-    @NameInMap("ResourceOwnerAccount")
-    private String resourceOwnerAccount;
-
-    @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
+    @NameInMap("AutoProvisioningGroupId")
+    @Validation(required = true)
+    private String autoProvisioningGroupId;
 
     @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
 
     @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
+    @NameInMap("OwnerId")
+    private Long ownerId;
 
     @Query
     @NameInMap("PageNumber")
@@ -43,20 +35,28 @@ public class DescribeAutoProvisioningGroupInstancesRequest extends Request {
     private Integer pageSize;
 
     @Query
-    @NameInMap("AutoProvisioningGroupId")
+    @NameInMap("RegionId")
     @Validation(required = true)
-    private String autoProvisioningGroupId;
+    private String regionId;
+
+    @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
 
     private DescribeAutoProvisioningGroupInstancesRequest(Builder builder) {
         super(builder);
-        this.ownerId = builder.ownerId;
-        this.resourceOwnerAccount = builder.resourceOwnerAccount;
-        this.resourceOwnerId = builder.resourceOwnerId;
+        this.autoProvisioningGroupId = builder.autoProvisioningGroupId;
         this.ownerAccount = builder.ownerAccount;
-        this.regionId = builder.regionId;
+        this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.autoProvisioningGroupId = builder.autoProvisioningGroupId;
+        this.regionId = builder.regionId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
     }
 
     public static Builder builder() {
@@ -73,24 +73,10 @@ public class DescribeAutoProvisioningGroupInstancesRequest extends Request {
     }
 
     /**
-     * @return ownerId
+     * @return autoProvisioningGroupId
      */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
-     * @return resourceOwnerAccount
-     */
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    /**
-     * @return resourceOwnerId
-     */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public String getAutoProvisioningGroupId() {
+        return this.autoProvisioningGroupId;
     }
 
     /**
@@ -101,10 +87,10 @@ public class DescribeAutoProvisioningGroupInstancesRequest extends Request {
     }
 
     /**
-     * @return regionId
+     * @return ownerId
      */
-    public String getRegionId() {
-        return this.regionId;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     /**
@@ -122,21 +108,35 @@ public class DescribeAutoProvisioningGroupInstancesRequest extends Request {
     }
 
     /**
-     * @return autoProvisioningGroupId
+     * @return regionId
      */
-    public String getAutoProvisioningGroupId() {
-        return this.autoProvisioningGroupId;
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public static final class Builder extends Request.Builder<DescribeAutoProvisioningGroupInstancesRequest, Builder> {
-        private Long ownerId; 
-        private String resourceOwnerAccount; 
-        private Long resourceOwnerId; 
+        private String autoProvisioningGroupId; 
         private String ownerAccount; 
-        private String regionId; 
+        private Long ownerId; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private String autoProvisioningGroupId; 
+        private String regionId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
 
         private Builder() {
             super();
@@ -144,15 +144,33 @@ public class DescribeAutoProvisioningGroupInstancesRequest extends Request {
 
         private Builder(DescribeAutoProvisioningGroupInstancesRequest request) {
             super(request);
-            this.ownerId = request.ownerId;
-            this.resourceOwnerAccount = request.resourceOwnerAccount;
-            this.resourceOwnerId = request.resourceOwnerId;
+            this.autoProvisioningGroupId = request.autoProvisioningGroupId;
             this.ownerAccount = request.ownerAccount;
-            this.regionId = request.regionId;
+            this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
-            this.autoProvisioningGroupId = request.autoProvisioningGroupId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
+
+        /**
+         * AutoProvisioningGroupId.
+         */
+        public Builder autoProvisioningGroupId(String autoProvisioningGroupId) {
+            this.putQueryParameter("AutoProvisioningGroupId", autoProvisioningGroupId);
+            this.autoProvisioningGroupId = autoProvisioningGroupId;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
 
         /**
          * OwnerId.
@@ -160,6 +178,33 @@ public class DescribeAutoProvisioningGroupInstancesRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * PageNumber.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
@@ -178,61 +223,6 @@ public class DescribeAutoProvisioningGroupInstancesRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * OwnerAccount.
-         */
-        public Builder ownerAccount(String ownerAccount) {
-            this.putQueryParameter("OwnerAccount", ownerAccount);
-            this.ownerAccount = ownerAccount;
-            return this;
-        }
-
-        /**
-         * The ID of the region where the auto provisioning Group is located. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The number of the page to return.
-         * <p>
-         * 
-         * Start value: 1
-         * 
-         * Default value: 1.
-         */
-        public Builder pageNumber(Integer pageNumber) {
-            this.putQueryParameter("PageNumber", pageNumber);
-            this.pageNumber = pageNumber;
-            return this;
-        }
-
-        /**
-         * The number of entries to return on each page.
-         * <p>
-         * 
-         * Maximum Value: 100
-         * 
-         * Default value: 10
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.putQueryParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * The ID of the auto provisioning group.
-         */
-        public Builder autoProvisioningGroupId(String autoProvisioningGroupId) {
-            this.putQueryParameter("AutoProvisioningGroupId", autoProvisioningGroupId);
-            this.autoProvisioningGroupId = autoProvisioningGroupId;
             return this;
         }
 

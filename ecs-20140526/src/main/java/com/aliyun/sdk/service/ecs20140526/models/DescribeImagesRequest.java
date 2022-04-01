@@ -12,30 +12,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeImagesRequest</p>
  */
 public class DescribeImagesRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("ActionType")
+    private String actionType;
 
     @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
+    @NameInMap("Architecture")
+    private String architecture;
 
     @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @NameInMap("DryRun")
+    private Boolean dryRun;
 
     @Query
     @NameInMap("Filter")
     private java.util.List < Filter> filter;
 
     @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
-    @Query
-    @NameInMap("Status")
-    private String status;
+    @NameInMap("ImageFamily")
+    private String imageFamily;
 
     @Query
     @NameInMap("ImageId")
@@ -46,6 +41,26 @@ public class DescribeImagesRequest extends Request {
     private String imageName;
 
     @Query
+    @NameInMap("ImageOwnerAlias")
+    private String imageOwnerAlias;
+
+    @Query
+    @NameInMap("ImageOwnerId")
+    private Long imageOwnerId;
+
+    @Query
+    @NameInMap("InstanceType")
+    private String instanceType;
+
+    @Query
+    @NameInMap("IsPublic")
+    private Boolean isPublic;
+
+    @Query
+    @NameInMap("IsSupportCloudinit")
+    private Boolean isSupportCloudinit;
+
+    @Query
     @NameInMap("IsSupportIoOptimized")
     private Boolean isSupportIoOptimized;
 
@@ -54,8 +69,16 @@ public class DescribeImagesRequest extends Request {
     private String OSType;
 
     @Query
-    @NameInMap("DryRun")
-    private Boolean dryRun;
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
+
+    @Query
+    @NameInMap("PageNumber")
+    private Integer pageNumber;
 
     @Query
     @NameInMap("PageSize")
@@ -63,84 +86,76 @@ public class DescribeImagesRequest extends Request {
     private Integer pageSize;
 
     @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
+    @Query
     @NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
     @Query
-    @NameInMap("ImageOwnerAlias")
-    private String imageOwnerAlias;
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
 
     @Query
-    @NameInMap("SnapshotId")
-    private String snapshotId;
-
-    @Query
-    @NameInMap("Architecture")
-    private String architecture;
-
-    @Query
-    @NameInMap("PageNumber")
-    private Integer pageNumber;
-
-    @Query
-    @NameInMap("InstanceType")
-    private String instanceType;
-
-    @Query
-    @NameInMap("IsSupportCloudinit")
-    private Boolean isSupportCloudinit;
-
-    @Query
-    @NameInMap("ImageFamily")
-    private String imageFamily;
-
-    @Query
-    @NameInMap("IsPublic")
-    private Boolean isPublic;
-
-    @Query
-    @NameInMap("ActionType")
-    private String actionType;
-
-    @Query
-    @NameInMap("Usage")
-    private String usage;
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
 
     @Query
     @NameInMap("ShowExpired")
     private Boolean showExpired;
 
     @Query
-    @NameInMap("ImageOwnerId")
-    private Long imageOwnerId;
+    @NameInMap("SnapshotId")
+    private String snapshotId;
+
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
+    @Query
+    @NameInMap("Status")
+    private String status;
+
+    @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
+    @Query
+    @NameInMap("Usage")
+    private String usage;
 
     private DescribeImagesRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
-        this.resourceOwnerId = builder.resourceOwnerId;
-        this.tag = builder.tag;
+        this.actionType = builder.actionType;
+        this.architecture = builder.architecture;
+        this.dryRun = builder.dryRun;
         this.filter = builder.filter;
-        this.regionId = builder.regionId;
-        this.status = builder.status;
+        this.imageFamily = builder.imageFamily;
         this.imageId = builder.imageId;
         this.imageName = builder.imageName;
+        this.imageOwnerAlias = builder.imageOwnerAlias;
+        this.imageOwnerId = builder.imageOwnerId;
+        this.instanceType = builder.instanceType;
+        this.isPublic = builder.isPublic;
+        this.isSupportCloudinit = builder.isSupportCloudinit;
         this.isSupportIoOptimized = builder.isSupportIoOptimized;
         this.OSType = builder.OSType;
-        this.dryRun = builder.dryRun;
-        this.pageSize = builder.pageSize;
-        this.resourceGroupId = builder.resourceGroupId;
-        this.imageOwnerAlias = builder.imageOwnerAlias;
-        this.snapshotId = builder.snapshotId;
-        this.architecture = builder.architecture;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
-        this.instanceType = builder.instanceType;
-        this.isSupportCloudinit = builder.isSupportCloudinit;
-        this.imageFamily = builder.imageFamily;
-        this.isPublic = builder.isPublic;
-        this.actionType = builder.actionType;
-        this.usage = builder.usage;
+        this.pageSize = builder.pageSize;
+        this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
         this.showExpired = builder.showExpired;
-        this.imageOwnerId = builder.imageOwnerId;
+        this.snapshotId = builder.snapshotId;
+        this.sourceRegionId = builder.sourceRegionId;
+        this.status = builder.status;
+        this.tag = builder.tag;
+        this.usage = builder.usage;
     }
 
     public static Builder builder() {
@@ -157,24 +172,24 @@ public class DescribeImagesRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return actionType
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getActionType() {
+        return this.actionType;
     }
 
     /**
-     * @return resourceOwnerId
+     * @return architecture
      */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public String getArchitecture() {
+        return this.architecture;
     }
 
     /**
-     * @return tag
+     * @return dryRun
      */
-    public java.util.List < Tag> getTag() {
-        return this.tag;
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -185,17 +200,10 @@ public class DescribeImagesRequest extends Request {
     }
 
     /**
-     * @return regionId
+     * @return imageFamily
      */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return status
-     */
-    public String getStatus() {
-        return this.status;
+    public String getImageFamily() {
+        return this.imageFamily;
     }
 
     /**
@@ -213,6 +221,41 @@ public class DescribeImagesRequest extends Request {
     }
 
     /**
+     * @return imageOwnerAlias
+     */
+    public String getImageOwnerAlias() {
+        return this.imageOwnerAlias;
+    }
+
+    /**
+     * @return imageOwnerId
+     */
+    public Long getImageOwnerId() {
+        return this.imageOwnerId;
+    }
+
+    /**
+     * @return instanceType
+     */
+    public String getInstanceType() {
+        return this.instanceType;
+    }
+
+    /**
+     * @return isPublic
+     */
+    public Boolean getIsPublic() {
+        return this.isPublic;
+    }
+
+    /**
+     * @return isSupportCloudinit
+     */
+    public Boolean getIsSupportCloudinit() {
+        return this.isSupportCloudinit;
+    }
+
+    /**
      * @return isSupportIoOptimized
      */
     public Boolean getIsSupportIoOptimized() {
@@ -227,45 +270,17 @@ public class DescribeImagesRequest extends Request {
     }
 
     /**
-     * @return dryRun
+     * @return ownerAccount
      */
-    public Boolean getDryRun() {
-        return this.dryRun;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     /**
-     * @return pageSize
+     * @return ownerId
      */
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    /**
-     * @return resourceGroupId
-     */
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
-    }
-
-    /**
-     * @return imageOwnerAlias
-     */
-    public String getImageOwnerAlias() {
-        return this.imageOwnerAlias;
-    }
-
-    /**
-     * @return snapshotId
-     */
-    public String getSnapshotId() {
-        return this.snapshotId;
-    }
-
-    /**
-     * @return architecture
-     */
-    public String getArchitecture() {
-        return this.architecture;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     /**
@@ -276,45 +291,38 @@ public class DescribeImagesRequest extends Request {
     }
 
     /**
-     * @return instanceType
+     * @return pageSize
      */
-    public String getInstanceType() {
-        return this.instanceType;
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     /**
-     * @return isSupportCloudinit
+     * @return regionId
      */
-    public Boolean getIsSupportCloudinit() {
-        return this.isSupportCloudinit;
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
-     * @return imageFamily
+     * @return resourceGroupId
      */
-    public String getImageFamily() {
-        return this.imageFamily;
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     /**
-     * @return isPublic
+     * @return resourceOwnerAccount
      */
-    public Boolean getIsPublic() {
-        return this.isPublic;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
     }
 
     /**
-     * @return actionType
+     * @return resourceOwnerId
      */
-    public String getActionType() {
-        return this.actionType;
-    }
-
-    /**
-     * @return usage
-     */
-    public String getUsage() {
-        return this.usage;
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     /**
@@ -325,38 +333,69 @@ public class DescribeImagesRequest extends Request {
     }
 
     /**
-     * @return imageOwnerId
+     * @return snapshotId
      */
-    public Long getImageOwnerId() {
-        return this.imageOwnerId;
+    public String getSnapshotId() {
+        return this.snapshotId;
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
+    /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
+     * @return usage
+     */
+    public String getUsage() {
+        return this.usage;
     }
 
     public static final class Builder extends Request.Builder<DescribeImagesRequest, Builder> {
-        private String sourceRegionId; 
-        private Long resourceOwnerId; 
-        private java.util.List < Tag> tag; 
+        private String actionType; 
+        private String architecture; 
+        private Boolean dryRun; 
         private java.util.List < Filter> filter; 
-        private String regionId; 
-        private String status; 
+        private String imageFamily; 
         private String imageId; 
         private String imageName; 
+        private String imageOwnerAlias; 
+        private Long imageOwnerId; 
+        private String instanceType; 
+        private Boolean isPublic; 
+        private Boolean isSupportCloudinit; 
         private Boolean isSupportIoOptimized; 
         private String OSType; 
-        private Boolean dryRun; 
-        private Integer pageSize; 
-        private String resourceGroupId; 
-        private String imageOwnerAlias; 
-        private String snapshotId; 
-        private String architecture; 
+        private String ownerAccount; 
+        private Long ownerId; 
         private Integer pageNumber; 
-        private String instanceType; 
-        private Boolean isSupportCloudinit; 
-        private String imageFamily; 
-        private Boolean isPublic; 
-        private String actionType; 
-        private String usage; 
+        private Integer pageSize; 
+        private String regionId; 
+        private String resourceGroupId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
         private Boolean showExpired; 
-        private Long imageOwnerId; 
+        private String snapshotId; 
+        private String sourceRegionId; 
+        private String status; 
+        private java.util.List < Tag> tag; 
+        private String usage; 
 
         private Builder() {
             super();
@@ -364,57 +403,60 @@ public class DescribeImagesRequest extends Request {
 
         private Builder(DescribeImagesRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
-            this.resourceOwnerId = request.resourceOwnerId;
-            this.tag = request.tag;
+            this.actionType = request.actionType;
+            this.architecture = request.architecture;
+            this.dryRun = request.dryRun;
             this.filter = request.filter;
-            this.regionId = request.regionId;
-            this.status = request.status;
+            this.imageFamily = request.imageFamily;
             this.imageId = request.imageId;
             this.imageName = request.imageName;
+            this.imageOwnerAlias = request.imageOwnerAlias;
+            this.imageOwnerId = request.imageOwnerId;
+            this.instanceType = request.instanceType;
+            this.isPublic = request.isPublic;
+            this.isSupportCloudinit = request.isSupportCloudinit;
             this.isSupportIoOptimized = request.isSupportIoOptimized;
             this.OSType = request.OSType;
-            this.dryRun = request.dryRun;
-            this.pageSize = request.pageSize;
-            this.resourceGroupId = request.resourceGroupId;
-            this.imageOwnerAlias = request.imageOwnerAlias;
-            this.snapshotId = request.snapshotId;
-            this.architecture = request.architecture;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
-            this.instanceType = request.instanceType;
-            this.isSupportCloudinit = request.isSupportCloudinit;
-            this.imageFamily = request.imageFamily;
-            this.isPublic = request.isPublic;
-            this.actionType = request.actionType;
-            this.usage = request.usage;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
             this.showExpired = request.showExpired;
-            this.imageOwnerId = request.imageOwnerId;
+            this.snapshotId = request.snapshotId;
+            this.sourceRegionId = request.sourceRegionId;
+            this.status = request.status;
+            this.tag = request.tag;
+            this.usage = request.usage;
         } 
 
         /**
-         * SourceRegionId.
+         * ActionType.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder actionType(String actionType) {
+            this.putQueryParameter("ActionType", actionType);
+            this.actionType = actionType;
             return this;
         }
 
         /**
-         * ResourceOwnerId.
+         * Architecture.
          */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
+        public Builder architecture(String architecture) {
+            this.putQueryParameter("Architecture", architecture);
+            this.architecture = architecture;
             return this;
         }
 
         /**
-         * Tag.
+         * DryRun.
          */
-        public Builder tag(java.util.List < Tag> tag) {
-            this.putQueryParameter("Tag", tag);
-            this.tag = tag;
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 
@@ -428,205 +470,7 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the image belongs. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * You can call this operation to query images in a certain state. Valid values:
-         * <p>
-         * 
-         * -Creating: The image is being created.
-         * -Waiting: multiple tasks are being queued.
-         * -Available (default): The image that you can use.
-         * -UnAvailable: images that you cannot use.
-         * -CreateFailed: the image fails to be created.
-         * -Deprecated: Deprecated images.
-         * 
-         * Separate multiple values with commas (,).
-         */
-        public Builder status(String status) {
-            this.putQueryParameter("Status", status);
-            this.status = status;
-            return this;
-        }
-
-        /**
-         * The ID of the image.
-         */
-        public Builder imageId(String imageId) {
-            this.putQueryParameter("ImageId", imageId);
-            this.imageId = imageId;
-            return this;
-        }
-
-        /**
-         * The name of the image.
-         */
-        public Builder imageName(String imageName) {
-            this.putQueryParameter("ImageName", imageName);
-            this.imageName = imageName;
-            return this;
-        }
-
-        /**
-         * Indicates whether the image can run on an I/O optimized instance.
-         */
-        public Builder isSupportIoOptimized(Boolean isSupportIoOptimized) {
-            this.putQueryParameter("IsSupportIoOptimized", isSupportIoOptimized);
-            this.isSupportIoOptimized = isSupportIoOptimized;
-            return this;
-        }
-
-        /**
-         * The operating system type of the image. Valid values:
-         * <p>
-         * 
-         * -Windows
-         * -linux
-         */
-        public Builder OSType(String OSType) {
-            this.putQueryParameter("OSType", OSType);
-            this.OSType = OSType;
-            return this;
-        }
-
-        /**
-         * Specifies whether to PreCheck only this request.
-         * <p>
-         * 
-         * -true: sends a check request without querying the resource status. Check whether the AccessKey is valid, whether the RAM user is authorized, and whether required parameters are specified. If the check fails, the corresponding error is returned. If the check succeeds, an error code DryRunOperation is returned.
-         * -false: a normal request is sent. After the request passes the check, the 2XX HTTP status code is returned and the resource status is directly queried.
-         * 
-         * Default value: false
-         */
-        public Builder dryRun(Boolean dryRun) {
-            this.putQueryParameter("DryRun", dryRun);
-            this.dryRun = dryRun;
-            return this;
-        }
-
-        /**
-         * The number of entries to return on each page. Maximum Value: 100
-         * <p>
-         * 
-         * Default value: 10
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.putQueryParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * The ID of the resource group to which the custom image belongs. When you use this parameter to filter resources, the number of resources cannot exceed 1,000.
-         */
-        public Builder resourceGroupId(String resourceGroupId) {
-            this.putQueryParameter("ResourceGroupId", resourceGroupId);
-            this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-
-        /**
-         * The source of the image. Valid values:
-         * <p>
-         * 
-         * <props="china">
-         * -system: a public image provided by Alibaba Cloud.
-         * -self: The custom image you created.
-         * -others: images shared by other Alibaba Cloud users or published community images.
-         * -marketplace: The image provided by the marketplace. You can directly use the cloud marketplace images that you query without subscribing to them in advance. You must pay attention to the billing details of Alibaba Cloud marketplace images.
-         * 
-         * </props>
-         * 
-         * <props="intl">
-         * -system: a public image provided by Alibaba Cloud.
-         * -self: The custom image you created.
-         * -others: images shared by other Alibaba Cloud users or published community images. Note:
-         * -The IsPublic must be true when you search for a community image.
-         * -When you search for a shared image, you must set the IsPublic to false or leave no value.
-         * -marketplace: The image provided by the marketplace. You can directly use the cloud marketplace images that you query without subscribing to them in advance. You must pay attention to the billing details of Alibaba Cloud marketplace images.
-         * 
-         * </props>
-         * 
-         * <props="partner">
-         * -system: a public image provided by Alibaba Cloud.
-         * -self: The custom image you created.
-         * -others: images shared by other Alibaba Cloud users or published community images.
-         * -marketplace: The image provided by the marketplace. You can directly use the cloud marketplace images that you query without subscribing to them in advance. You must pay attention to the billing details of Alibaba Cloud marketplace images.
-         * 
-         * </props>
-         * 
-         * Default value: NULL. Null indicates that the system, self, and others values are returned.
-         */
-        public Builder imageOwnerAlias(String imageOwnerAlias) {
-            this.putQueryParameter("ImageOwnerAlias", imageOwnerAlias);
-            this.imageOwnerAlias = imageOwnerAlias;
-            return this;
-        }
-
-        /**
-         * A custom image created based on a snapshot ID.
-         */
-        public Builder snapshotId(String snapshotId) {
-            this.putQueryParameter("SnapshotId", snapshotId);
-            this.snapshotId = snapshotId;
-            return this;
-        }
-
-        /**
-         * The architecture of the image. Valid values:
-         * <p>
-         * 
-         * -i386
-         * -x86_64
-         * -arm64
-         */
-        public Builder architecture(String architecture) {
-            this.putQueryParameter("Architecture", architecture);
-            this.architecture = architecture;
-            return this;
-        }
-
-        /**
-         * The page number of the image resource list. Start value: 1
-         * <p>
-         * 
-         * Default value: 1.
-         */
-        public Builder pageNumber(Integer pageNumber) {
-            this.putQueryParameter("PageNumber", pageNumber);
-            this.pageNumber = pageNumber;
-            return this;
-        }
-
-        /**
-         * Specifies the images that can be used by the instance type.
-         */
-        public Builder instanceType(String instanceType) {
-            this.putQueryParameter("InstanceType", instanceType);
-            this.instanceType = instanceType;
-            return this;
-        }
-
-        /**
-         * Indicates whether the image supports cloud-init.
-         */
-        public Builder isSupportCloudinit(Boolean isSupportCloudinit) {
-            this.putQueryParameter("IsSupportCloudinit", isSupportCloudinit);
-            this.isSupportCloudinit = isSupportCloudinit;
-            return this;
-        }
-
-        /**
-         * The name of the Image family. You can set this parameter to filter images of the current family when querying images.
-         * <p>
-         * 
-         * Default value: Null.
+         * ImageFamily.
          */
         public Builder imageFamily(String imageFamily) {
             this.putQueryParameter("ImageFamily", imageFamily);
@@ -635,15 +479,52 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * <props = "intl"> Whether to query published community images. Valid values:</props>
-         * <p>
-         * <props="intl">
-         * -true: queries published community images. If you set this parameter to true, the ImageOwnerAlias must be others.
-         * -false: you can call this operation to query images of other types except the Community Image. The value of the ImageOwnerAlias parameter shall prevail.
-         * 
-         * </props>
-         * 
-         * <props = "intl"> Default value: false</props>
+         * ImageId.
+         */
+        public Builder imageId(String imageId) {
+            this.putQueryParameter("ImageId", imageId);
+            this.imageId = imageId;
+            return this;
+        }
+
+        /**
+         * ImageName.
+         */
+        public Builder imageName(String imageName) {
+            this.putQueryParameter("ImageName", imageName);
+            this.imageName = imageName;
+            return this;
+        }
+
+        /**
+         * ImageOwnerAlias.
+         */
+        public Builder imageOwnerAlias(String imageOwnerAlias) {
+            this.putQueryParameter("ImageOwnerAlias", imageOwnerAlias);
+            this.imageOwnerAlias = imageOwnerAlias;
+            return this;
+        }
+
+        /**
+         * ImageOwnerId.
+         */
+        public Builder imageOwnerId(Long imageOwnerId) {
+            this.putQueryParameter("ImageOwnerId", imageOwnerId);
+            this.imageOwnerId = imageOwnerId;
+            return this;
+        }
+
+        /**
+         * InstanceType.
+         */
+        public Builder instanceType(String instanceType) {
+            this.putQueryParameter("InstanceType", instanceType);
+            this.instanceType = instanceType;
+            return this;
+        }
+
+        /**
+         * IsPublic.
          */
         public Builder isPublic(Boolean isPublic) {
             this.putQueryParameter("IsPublic", isPublic);
@@ -652,36 +533,106 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * The scenario where the image needs to be used. Valid values:
-         * <p>
-         * 
-         * -CreateEcs (default): creates an instance.
-         * -ChangeOS: replace the system disk or operating system.
+         * IsSupportCloudinit.
          */
-        public Builder actionType(String actionType) {
-            this.putQueryParameter("ActionType", actionType);
-            this.actionType = actionType;
+        public Builder isSupportCloudinit(Boolean isSupportCloudinit) {
+            this.putQueryParameter("IsSupportCloudinit", isSupportCloudinit);
+            this.isSupportCloudinit = isSupportCloudinit;
             return this;
         }
 
         /**
-         * Indicates whether the image is already running on the ECS instance. Valid values:
-         * <p>
-         * 
-         * -instance: the image is running and is used by ECS instances.
-         * -none: the image is idle and no ECS instance is available.
+         * IsSupportIoOptimized.
          */
-        public Builder usage(String usage) {
-            this.putQueryParameter("Usage", usage);
-            this.usage = usage;
+        public Builder isSupportIoOptimized(Boolean isSupportIoOptimized) {
+            this.putQueryParameter("IsSupportIoOptimized", isSupportIoOptimized);
+            this.isSupportIoOptimized = isSupportIoOptimized;
             return this;
         }
 
         /**
-         * Indicates whether the subscription image has expired.
-         * <p>
-         * 
-         * > This parameter will be deprecated soon. To improve compatibility, try to use other parameters.
+         * OSType.
+         */
+        public Builder OSType(String OSType) {
+            this.putQueryParameter("OSType", OSType);
+            this.OSType = OSType;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * PageNumber.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * ShowExpired.
          */
         public Builder showExpired(Boolean showExpired) {
             this.putQueryParameter("ShowExpired", showExpired);
@@ -690,16 +641,47 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * <props = "china"> the ID of the alibaba cloud account to which the image belongs. This parameter takes effect only when you query a shared image. </props>
-         * <p>
-         * 
-         * <props = "intl"> the ID of the alibaba cloud account to which the image belongs. This parameter takes effect only when you query shared images and community images. </props>
-         * 
-         * <props = "partner"> the ID of the alibaba cloud account to which the image belongs. This parameter takes effect only when you query a shared image. </props>
+         * SnapshotId.
          */
-        public Builder imageOwnerId(Long imageOwnerId) {
-            this.putQueryParameter("ImageOwnerId", imageOwnerId);
-            this.imageOwnerId = imageOwnerId;
+        public Builder snapshotId(String snapshotId) {
+            this.putQueryParameter("SnapshotId", snapshotId);
+            this.snapshotId = snapshotId;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
+
+        /**
+         * Status.
+         */
+        public Builder status(String status) {
+            this.putQueryParameter("Status", status);
+            this.status = status;
+            return this;
+        }
+
+        /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
+         * Usage.
+         */
+        public Builder usage(String usage) {
+            this.putQueryParameter("Usage", usage);
+            this.usage = usage;
             return this;
         }
 
@@ -710,70 +692,6 @@ public class DescribeImagesRequest extends Request {
 
     } 
 
-    public static class Tag extends TeaModel {
-        @NameInMap("key")
-        private String key;
-
-        @NameInMap("Value")
-        private String value;
-
-        private Tag(Builder builder) {
-            this.key = builder.key;
-            this.value = builder.value;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Tag create() {
-            return builder().build();
-        }
-
-        /**
-         * @return key
-         */
-        public String getKey() {
-            return this.key;
-        }
-
-        /**
-         * @return value
-         */
-        public String getValue() {
-            return this.value;
-        }
-
-        public static final class Builder {
-            private String key; 
-            private String value; 
-
-            /**
-             * 镜像的标签键。
-             * <p>
-             * 
-             * >该参数即将被弃用，为提高兼容性，建议您使用另一个`Tag.N.Key`参数。
-             */
-            public Builder key(String key) {
-                this.key = key;
-                return this;
-            }
-
-            /**
-             * 镜像的标签值。N的取值范围：1~20
-             */
-            public Builder value(String value) {
-                this.value = value;
-                return this;
-            }
-
-            public Tag build() {
-                return new Tag(this);
-            } 
-
-        } 
-
-    }
     public static class Filter extends TeaModel {
         @NameInMap("Key")
         private String key;
@@ -813,11 +731,7 @@ public class DescribeImagesRequest extends Request {
             private String value; 
 
             /**
-             * 查询资源时的筛选键。取值范围：
-             * <p>
-             * 
-             * - 当该参数取值为`CreationStartTime`时，可以查询在指定时间点（`Filter.N.Value`）后创建的资源信息。
-             * - 当该参数取值为`CreationEndTime`时，可以查询在指定时间点（`Filter.N.Value`）前创建的资源信息。
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -825,7 +739,7 @@ public class DescribeImagesRequest extends Request {
             }
 
             /**
-             * 查询资源时的筛选值。指定该参数时必须同时指定`Filter.N.Key`参数，格式为：`yyyy-MM-ddTHH:mmZ`，采用UTC +0时区。
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -834,6 +748,67 @@ public class DescribeImagesRequest extends Request {
 
             public Filter build() {
                 return new Filter(this);
+            } 
+
+        } 
+
+    }
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
             } 
 
         } 

@@ -12,27 +12,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeClassicLinkInstancesResponseBody</p>
  */
 public class DescribeClassicLinkInstancesResponseBody extends TeaModel {
+    @NameInMap("Links")
+    private Links links;
+
+    @NameInMap("PageNumber")
+    private Integer pageNumber;
+
     @NameInMap("PageSize")
     private Integer pageSize;
 
     @NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("PageNumber")
-    private Integer pageNumber;
-
     @NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("Links")
-    private Links links;
-
     private DescribeClassicLinkInstancesResponseBody(Builder builder) {
+        this.links = builder.links;
+        this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
-        this.pageNumber = builder.pageNumber;
         this.totalCount = builder.totalCount;
-        this.links = builder.links;
     }
 
     public static Builder builder() {
@@ -41,6 +41,20 @@ public class DescribeClassicLinkInstancesResponseBody extends TeaModel {
 
     public static DescribeClassicLinkInstancesResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return links
+     */
+    public Links getLinks() {
+        return this.links;
+    }
+
+    /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     /**
@@ -58,51 +72,29 @@ public class DescribeClassicLinkInstancesResponseBody extends TeaModel {
     }
 
     /**
-     * @return pageNumber
-     */
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    /**
      * @return totalCount
      */
     public Integer getTotalCount() {
         return this.totalCount;
     }
 
-    /**
-     * @return links
-     */
-    public Links getLinks() {
-        return this.links;
-    }
-
     public static final class Builder {
+        private Links links; 
+        private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private Integer pageNumber; 
         private Integer totalCount; 
-        private Links links; 
 
         /**
-         * The number of entries to return on each page.
+         * Links.
          */
-        public Builder pageSize(Integer pageSize) {
-            this.pageSize = pageSize;
+        public Builder links(Links links) {
+            this.links = links;
             return this;
         }
 
         /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The number of the page to return.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -110,18 +102,26 @@ public class DescribeClassicLinkInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of connections.
+         * PageSize.
          */
-        public Builder totalCount(Integer totalCount) {
-            this.totalCount = totalCount;
+        public Builder pageSize(Integer pageSize) {
+            this.pageSize = pageSize;
             return this;
         }
 
         /**
-         * Returns the connection information of a classic network instance and a VPC.
+         * RequestId.
          */
-        public Builder links(Links links) {
-            this.links = links;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
@@ -132,15 +132,15 @@ public class DescribeClassicLinkInstancesResponseBody extends TeaModel {
     } 
 
     public static class Link extends TeaModel {
-        @NameInMap("VpcId")
-        private String vpcId;
-
         @NameInMap("InstanceId")
         private String instanceId;
 
+        @NameInMap("VpcId")
+        private String vpcId;
+
         private Link(Builder builder) {
-            this.vpcId = builder.vpcId;
             this.instanceId = builder.instanceId;
+            this.vpcId = builder.vpcId;
         }
 
         public static Builder builder() {
@@ -152,36 +152,36 @@ public class DescribeClassicLinkInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * @return vpcId
-         */
-        public String getVpcId() {
-            return this.vpcId;
-        }
-
-        /**
          * @return instanceId
          */
         public String getInstanceId() {
             return this.instanceId;
         }
 
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
         public static final class Builder {
-            private String vpcId; 
             private String instanceId; 
+            private String vpcId; 
 
             /**
-             * VPC ID.
+             * InstanceId.
              */
-            public Builder vpcId(String vpcId) {
-                this.vpcId = vpcId;
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
                 return this;
             }
 
             /**
-             * The ID of the instance.
+             * VpcId.
              */
-            public Builder instanceId(String instanceId) {
-                this.instanceId = instanceId;
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
                 return this;
             }
 

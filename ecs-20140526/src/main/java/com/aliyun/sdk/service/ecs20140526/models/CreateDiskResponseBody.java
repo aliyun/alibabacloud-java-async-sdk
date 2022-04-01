@@ -15,16 +15,16 @@ public class CreateDiskResponseBody extends TeaModel {
     @NameInMap("DiskId")
     private String diskId;
 
-    @NameInMap("RequestId")
-    private String requestId;
-
     @NameInMap("OrderId")
     private String orderId;
 
+    @NameInMap("RequestId")
+    private String requestId;
+
     private CreateDiskResponseBody(Builder builder) {
         this.diskId = builder.diskId;
-        this.requestId = builder.requestId;
         this.orderId = builder.orderId;
+        this.requestId = builder.requestId;
     }
 
     public static Builder builder() {
@@ -43,26 +43,26 @@ public class CreateDiskResponseBody extends TeaModel {
     }
 
     /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    /**
      * @return orderId
      */
     public String getOrderId() {
         return this.orderId;
     }
 
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static final class Builder {
         private String diskId; 
-        private String requestId; 
         private String orderId; 
+        private String requestId; 
 
         /**
-         * The ID of the disk.
+         * DiskId.
          */
         public Builder diskId(String diskId) {
             this.diskId = diskId;
@@ -70,21 +70,18 @@ public class CreateDiskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * OrderId.
          */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
+        public Builder orderId(String orderId) {
+            this.orderId = orderId;
             return this;
         }
 
         /**
-         * The ID of the generated order.
-         * <p>
-         * 
-         * > The Order ID is returned only when a subscription disk is created.
+         * RequestId.
          */
-        public Builder orderId(String orderId) {
-            this.orderId = orderId;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 

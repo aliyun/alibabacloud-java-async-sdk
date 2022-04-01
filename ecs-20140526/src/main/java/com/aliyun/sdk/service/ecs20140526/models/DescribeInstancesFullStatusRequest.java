@@ -20,9 +20,25 @@ public class DescribeInstancesFullStatusRequest extends Request {
     @NameInMap("NotBefore")
     private NotBefore notBefore;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("EventId")
+    private java.util.List < String > eventId;
+
+    @Query
+    @NameInMap("EventType")
+    private String eventType;
+
+    @Query
+    @NameInMap("HealthStatus")
+    private String healthStatus;
+
+    @Query
+    @NameInMap("InstanceEventType")
+    private java.util.List < String > instanceEventType;
+
+    @Query
+    @NameInMap("InstanceId")
+    private java.util.List < String > instanceId;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -33,12 +49,12 @@ public class DescribeInstancesFullStatusRequest extends Request {
     private Long ownerId;
 
     @Query
-    @NameInMap("ResourceOwnerAccount")
-    private String resourceOwnerAccount;
+    @NameInMap("PageNumber")
+    private Integer pageNumber;
 
     @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
+    @NameInMap("PageSize")
+    private Integer pageSize;
 
     @Query
     @NameInMap("RegionId")
@@ -46,55 +62,39 @@ public class DescribeInstancesFullStatusRequest extends Request {
     private String regionId;
 
     @Query
-    @NameInMap("EventId")
-    private java.util.List < String > eventId;
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
 
     @Query
-    @NameInMap("InstanceId")
-    private java.util.List < String > instanceId;
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("PageSize")
-    private Integer pageSize;
-
-    @Query
-    @NameInMap("PageNumber")
-    private Integer pageNumber;
-
-    @Query
-    @NameInMap("HealthStatus")
-    private String healthStatus;
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     @Query
     @NameInMap("Status")
     private String status;
 
-    @Query
-    @NameInMap("EventType")
-    private String eventType;
-
-    @Query
-    @NameInMap("InstanceEventType")
-    private java.util.List < String > instanceEventType;
-
     private DescribeInstancesFullStatusRequest(Builder builder) {
         super(builder);
         this.eventPublishTime = builder.eventPublishTime;
         this.notBefore = builder.notBefore;
-        this.sourceRegionId = builder.sourceRegionId;
+        this.eventId = builder.eventId;
+        this.eventType = builder.eventType;
+        this.healthStatus = builder.healthStatus;
+        this.instanceEventType = builder.instanceEventType;
+        this.instanceId = builder.instanceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.regionId = builder.regionId;
-        this.eventId = builder.eventId;
-        this.instanceId = builder.instanceId;
-        this.pageSize = builder.pageSize;
-        this.pageNumber = builder.pageNumber;
-        this.healthStatus = builder.healthStatus;
+        this.sourceRegionId = builder.sourceRegionId;
         this.status = builder.status;
-        this.eventType = builder.eventType;
-        this.instanceEventType = builder.instanceEventType;
     }
 
     public static Builder builder() {
@@ -125,10 +125,38 @@ public class DescribeInstancesFullStatusRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return eventId
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public java.util.List < String > getEventId() {
+        return this.eventId;
+    }
+
+    /**
+     * @return eventType
+     */
+    public String getEventType() {
+        return this.eventType;
+    }
+
+    /**
+     * @return healthStatus
+     */
+    public String getHealthStatus() {
+        return this.healthStatus;
+    }
+
+    /**
+     * @return instanceEventType
+     */
+    public java.util.List < String > getInstanceEventType() {
+        return this.instanceEventType;
+    }
+
+    /**
+     * @return instanceId
+     */
+    public java.util.List < String > getInstanceId() {
+        return this.instanceId;
     }
 
     /**
@@ -146,6 +174,27 @@ public class DescribeInstancesFullStatusRequest extends Request {
     }
 
     /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -160,45 +209,10 @@ public class DescribeInstancesFullStatusRequest extends Request {
     }
 
     /**
-     * @return regionId
+     * @return sourceRegionId
      */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return eventId
-     */
-    public java.util.List < String > getEventId() {
-        return this.eventId;
-    }
-
-    /**
-     * @return instanceId
-     */
-    public java.util.List < String > getInstanceId() {
-        return this.instanceId;
-    }
-
-    /**
-     * @return pageSize
-     */
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    /**
-     * @return pageNumber
-     */
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    /**
-     * @return healthStatus
-     */
-    public String getHealthStatus() {
-        return this.healthStatus;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -208,37 +222,23 @@ public class DescribeInstancesFullStatusRequest extends Request {
         return this.status;
     }
 
-    /**
-     * @return eventType
-     */
-    public String getEventType() {
-        return this.eventType;
-    }
-
-    /**
-     * @return instanceEventType
-     */
-    public java.util.List < String > getInstanceEventType() {
-        return this.instanceEventType;
-    }
-
     public static final class Builder extends Request.Builder<DescribeInstancesFullStatusRequest, Builder> {
         private EventPublishTime eventPublishTime; 
         private NotBefore notBefore; 
-        private String sourceRegionId; 
+        private java.util.List < String > eventId; 
+        private String eventType; 
+        private String healthStatus; 
+        private java.util.List < String > instanceEventType; 
+        private java.util.List < String > instanceId; 
         private String ownerAccount; 
         private Long ownerId; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String regionId; 
-        private java.util.List < String > eventId; 
-        private java.util.List < String > instanceId; 
-        private Integer pageSize; 
-        private Integer pageNumber; 
-        private String healthStatus; 
+        private String sourceRegionId; 
         private String status; 
-        private String eventType; 
-        private java.util.List < String > instanceEventType; 
 
         private Builder() {
             super();
@@ -248,20 +248,20 @@ public class DescribeInstancesFullStatusRequest extends Request {
             super(request);
             this.eventPublishTime = request.eventPublishTime;
             this.notBefore = request.notBefore;
-            this.sourceRegionId = request.sourceRegionId;
+            this.eventId = request.eventId;
+            this.eventType = request.eventType;
+            this.healthStatus = request.healthStatus;
+            this.instanceEventType = request.instanceEventType;
+            this.instanceId = request.instanceId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.regionId = request.regionId;
-            this.eventId = request.eventId;
-            this.instanceId = request.instanceId;
-            this.pageSize = request.pageSize;
-            this.pageNumber = request.pageNumber;
-            this.healthStatus = request.healthStatus;
+            this.sourceRegionId = request.sourceRegionId;
             this.status = request.status;
-            this.eventType = request.eventType;
-            this.instanceEventType = request.instanceEventType;
         } 
 
         /**
@@ -283,11 +283,47 @@ public class DescribeInstancesFullStatusRequest extends Request {
         }
 
         /**
-         * SourceRegionId.
+         * EventId.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder eventId(java.util.List < String > eventId) {
+            this.putQueryParameter("EventId", eventId);
+            this.eventId = eventId;
+            return this;
+        }
+
+        /**
+         * EventType.
+         */
+        public Builder eventType(String eventType) {
+            this.putQueryParameter("EventType", eventType);
+            this.eventType = eventType;
+            return this;
+        }
+
+        /**
+         * HealthStatus.
+         */
+        public Builder healthStatus(String healthStatus) {
+            this.putQueryParameter("HealthStatus", healthStatus);
+            this.healthStatus = healthStatus;
+            return this;
+        }
+
+        /**
+         * InstanceEventType.
+         */
+        public Builder instanceEventType(java.util.List < String > instanceEventType) {
+            this.putQueryParameter("InstanceEventType", instanceEventType);
+            this.instanceEventType = instanceEventType;
+            return this;
+        }
+
+        /**
+         * InstanceId.
+         */
+        public Builder instanceId(java.util.List < String > instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
             return this;
         }
 
@@ -301,7 +337,7 @@ public class DescribeInstancesFullStatusRequest extends Request {
         }
 
         /**
-         * The ID of the RAM user.
+         * OwnerId.
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -310,67 +346,7 @@ public class DescribeInstancesFullStatusRequest extends Request {
         }
 
         /**
-         * The account name of the resource master account.
-         */
-        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
-            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-            this.resourceOwnerAccount = resourceOwnerAccount;
-            return this;
-        }
-
-        /**
-         * The ID of the resource master account, that is, the UID.
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * The region ID of the instance. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * One or more event IDs. Valid values of N: 1 to 100. Multiple values are in the form of duplicate lists.
-         */
-        public Builder eventId(java.util.List < String > eventId) {
-            this.putQueryParameter("EventId", eventId);
-            this.eventId = eventId;
-            return this;
-        }
-
-        /**
-         * The ID of one or more instances. Valid values of N: 1 to 100. Multiple values are in the form of duplicate lists.
-         */
-        public Builder instanceId(java.util.List < String > instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * The number of entries to return on each page. Valid values: 1 to 100.
-         * <p>
-         * 
-         * Default value: 10.
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.putQueryParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * The page number of the query result. Value range: positive integer
-         * <p>
-         * 
-         * Default value: 1.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -379,71 +355,56 @@ public class DescribeInstancesFullStatusRequest extends Request {
         }
 
         /**
-         * The health status of the instance. Valid values:
-         * <p>
-         * 
-         * -Impaired: Service corruption
-         * -Warning: service degradation
-         * -Maintaining: System Maintenance
-         * -Initializing: Initializing
-         * -InsufficientData: insufficient data
-         * -NotApplicable: not applicable
-         * 
-         * The preceding parameter values are case sensitive.
+         * PageSize.
          */
-        public Builder healthStatus(String healthStatus) {
-            this.putQueryParameter("HealthStatus", healthStatus);
-            this.healthStatus = healthStatus;
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
             return this;
         }
 
         /**
-         * The lifecycle status of the instance. Valid values:
-         * <p>
-         * -Starting: Starting
-         * -Running: Running
-         * -Stopped: Stopped
-         * 
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
+
+        /**
+         * Status.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
             this.status = status;
-            return this;
-        }
-
-        /**
-         * The type of an event. EventType parameter is valid only when the InstanceEventType.N parameter is not specified. Valid values:
-         * <p>
-         * 
-         * -SystemMaintenance.Reboot: The instance is restarted due to system maintenance.
-         * -SystemFailure.Reboot: The instance is restarted due to a system error.
-         * -InstanceFailure.Reboot: The instance is restarted due to an instance error.
-         * -InstanceExpiration.Stop: the instance is stopped because the subscription period expires.
-         * -InstanceExpiration.Delete: the instance is released because the subscription period expires.
-         * -AccountUnbalanced.Stop: the pay-as-you-go instance is stopped due to an overdue payment.
-         * -AccountUnbalanced.Delete: the pay-as-you-go instance is released due to an overdue payment.
-         * 
-         */
-        public Builder eventType(String eventType) {
-            this.putQueryParameter("EventType", eventType);
-            this.eventType = eventType;
-            return this;
-        }
-
-        /**
-         * The type of one or more events. Valid values of N: 1 to 30. Multiple values are in the form of duplicate lists. Valid values:
-         * <p>
-         * -SystemMaintenance.Reboot: The instance is restarted due to system maintenance.
-         * -SystemFailure.Reboot: The instance is restarted due to a system error.
-         * -InstanceFailure.Reboot: The instance is restarted due to an instance error.
-         * -InstanceExpiration.Stop: the instance is stopped because the subscription period expires.
-         * -InstanceExpiration.Delete: the instance is released because the subscription period expires.
-         * -AccountUnbalanced.Stop: the pay-as-you-go instance is stopped due to an overdue payment.
-         * -AccountUnbalanced.Delete: the pay-as-you-go instance is released due to an overdue payment.
-         */
-        public Builder instanceEventType(java.util.List < String > instanceEventType) {
-            this.putQueryParameter("InstanceEventType", instanceEventType);
-            this.instanceEventType = instanceEventType;
             return this;
         }
 
@@ -455,15 +416,15 @@ public class DescribeInstancesFullStatusRequest extends Request {
     } 
 
     public static class EventPublishTime extends TeaModel {
-        @NameInMap("Start")
-        private String start;
-
         @NameInMap("End")
         private String end;
 
+        @NameInMap("Start")
+        private String start;
+
         private EventPublishTime(Builder builder) {
-            this.start = builder.start;
             this.end = builder.end;
+            this.start = builder.start;
         }
 
         public static Builder builder() {
@@ -475,36 +436,36 @@ public class DescribeInstancesFullStatusRequest extends Request {
         }
 
         /**
-         * @return start
-         */
-        public String getStart() {
-            return this.start;
-        }
-
-        /**
          * @return end
          */
         public String getEnd() {
             return this.end;
         }
 
+        /**
+         * @return start
+         */
+        public String getStart() {
+            return this.start;
+        }
+
         public static final class Builder {
-            private String start; 
             private String end; 
+            private String start; 
 
             /**
-             * Query the start time of the event release time. The time follows the [ISO8601](~~ 25696 ~~) standard and uses UTC time. The format is yyyy-MM-ddTHH:mm:ssZ.
+             * End.
              */
-            public Builder start(String start) {
-                this.start = start;
+            public Builder end(String end) {
+                this.end = end;
                 return this;
             }
 
             /**
-             * Query the end time of the event release time. The time follows the [ISO8601](~~ 25696 ~~) standard and uses UTC time. The format is yyyy-MM-ddTHH:mm:ssZ.
+             * Start.
              */
-            public Builder end(String end) {
-                this.end = end;
+            public Builder start(String start) {
+                this.start = start;
                 return this;
             }
 
@@ -516,15 +477,15 @@ public class DescribeInstancesFullStatusRequest extends Request {
 
     }
     public static class NotBefore extends TeaModel {
-        @NameInMap("Start")
-        private String start;
-
         @NameInMap("End")
         private String end;
 
+        @NameInMap("Start")
+        private String start;
+
         private NotBefore(Builder builder) {
-            this.start = builder.start;
             this.end = builder.end;
+            this.start = builder.start;
         }
 
         public static Builder builder() {
@@ -536,36 +497,36 @@ public class DescribeInstancesFullStatusRequest extends Request {
         }
 
         /**
-         * @return start
-         */
-        public String getStart() {
-            return this.start;
-        }
-
-        /**
          * @return end
          */
         public String getEnd() {
             return this.end;
         }
 
+        /**
+         * @return start
+         */
+        public String getStart() {
+            return this.start;
+        }
+
         public static final class Builder {
-            private String start; 
             private String end; 
+            private String start; 
 
             /**
-             * Query the start time of the scheduled event execution time. The time follows the [ISO8601](~~ 25696 ~~) standard and uses UTC time. The format is yyyy-MM-ddTHH:mm:ssZ.
+             * End.
              */
-            public Builder start(String start) {
-                this.start = start;
+            public Builder end(String end) {
+                this.end = end;
                 return this;
             }
 
             /**
-             * Query the end time of the scheduled event execution time. The time follows the [ISO8601](~~ 25696 ~~) standard and uses UTC time. The format is yyyy-MM-ddTHH:mm:ssZ.
+             * Start.
              */
-            public Builder end(String end) {
-                this.end = end;
+            public Builder start(String start) {
+                this.start = start;
                 return this;
             }
 

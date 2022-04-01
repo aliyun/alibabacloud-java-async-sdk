@@ -12,19 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSpotAdviceResponseBody</p>
  */
 public class DescribeSpotAdviceResponseBody extends TeaModel {
+    @NameInMap("AvailableSpotZones")
+    private AvailableSpotZones availableSpotZones;
+
     @NameInMap("RegionId")
     private String regionId;
 
     @NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("AvailableSpotZones")
-    private AvailableSpotZones availableSpotZones;
-
     private DescribeSpotAdviceResponseBody(Builder builder) {
+        this.availableSpotZones = builder.availableSpotZones;
         this.regionId = builder.regionId;
         this.requestId = builder.requestId;
-        this.availableSpotZones = builder.availableSpotZones;
     }
 
     public static Builder builder() {
@@ -33,6 +33,13 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
 
     public static DescribeSpotAdviceResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return availableSpotZones
+     */
+    public AvailableSpotZones getAvailableSpotZones() {
+        return this.availableSpotZones;
     }
 
     /**
@@ -49,20 +56,21 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    /**
-     * @return availableSpotZones
-     */
-    public AvailableSpotZones getAvailableSpotZones() {
-        return this.availableSpotZones;
-    }
-
     public static final class Builder {
+        private AvailableSpotZones availableSpotZones; 
         private String regionId; 
         private String requestId; 
-        private AvailableSpotZones availableSpotZones; 
 
         /**
-         * The ID of the region.
+         * AvailableSpotZones.
+         */
+        public Builder availableSpotZones(AvailableSpotZones availableSpotZones) {
+            this.availableSpotZones = availableSpotZones;
+            return this;
+        }
+
+        /**
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -70,21 +78,10 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * An array of zones and their corresponding preemptible instances.
-         * <p>
-         * 
-         * > The Order of returned values is sorted by the historical average discount rate of the instance type.
-         */
-        public Builder availableSpotZones(AvailableSpotZones availableSpotZones) {
-            this.availableSpotZones = availableSpotZones;
             return this;
         }
 
@@ -95,22 +92,22 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
     } 
 
     public static class AvailableSpotResource extends TeaModel {
-        @NameInMap("InterruptRateDesc")
-        private String interruptRateDesc;
-
         @NameInMap("AverageSpotDiscount")
         private Integer averageSpotDiscount;
 
         @NameInMap("InstanceType")
         private String instanceType;
 
+        @NameInMap("InterruptRateDesc")
+        private String interruptRateDesc;
+
         @NameInMap("InterruptionRate")
         private Float interruptionRate;
 
         private AvailableSpotResource(Builder builder) {
-            this.interruptRateDesc = builder.interruptRateDesc;
             this.averageSpotDiscount = builder.averageSpotDiscount;
             this.instanceType = builder.instanceType;
+            this.interruptRateDesc = builder.interruptRateDesc;
             this.interruptionRate = builder.interruptionRate;
         }
 
@@ -120,13 +117,6 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
 
         public static AvailableSpotResource create() {
             return builder().build();
-        }
-
-        /**
-         * @return interruptRateDesc
-         */
-        public String getInterruptRateDesc() {
-            return this.interruptRateDesc;
         }
 
         /**
@@ -144,6 +134,13 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
         }
 
         /**
+         * @return interruptRateDesc
+         */
+        public String getInterruptRateDesc() {
+            return this.interruptRateDesc;
+        }
+
+        /**
          * @return interruptionRate
          */
         public Float getInterruptionRate() {
@@ -151,30 +148,13 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private String interruptRateDesc; 
             private Integer averageSpotDiscount; 
             private String instanceType; 
+            private String interruptRateDesc; 
             private Float interruptionRate; 
 
             /**
-             * The release rate range of preemptible instances in the last 30 days, corresponding to the "InterruptionRate" return value. Possible values:
-             * <p>
-             * 
-             * -0-3%
-             * -3-5%
-             * -5-10%
-             * -10-100%
-             */
-            public Builder interruptRateDesc(String interruptRateDesc) {
-                this.interruptRateDesc = interruptRateDesc;
-                return this;
-            }
-
-            /**
-             * The discount rate of the average price of preemptible instances in the last 30 days compared to the price of pay-as-you-go instances. Unit:%. Valid values: 1 to 100.
-             * <p>
-             * 
-             * You can calculate the average price of preemptible instances based on the returned value. For example, if the price of a pay-as-you-go instance is 1 and the return value is 20 (20%), the average price of a preemptible instance in the last 30 days is 0.2.
+             * AverageSpotDiscount.
              */
             public Builder averageSpotDiscount(Integer averageSpotDiscount) {
                 this.averageSpotDiscount = averageSpotDiscount;
@@ -182,7 +162,7 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type.
+             * InstanceType.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -190,7 +170,15 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
             }
 
             /**
-             * The average release rate of preemptible instances in the last 30 days. Unit:%
+             * InterruptRateDesc.
+             */
+            public Builder interruptRateDesc(String interruptRateDesc) {
+                this.interruptRateDesc = interruptRateDesc;
+                return this;
+            }
+
+            /**
+             * InterruptionRate.
              */
             public Builder interruptionRate(Float interruptionRate) {
                 this.interruptionRate = interruptionRate;
@@ -246,15 +234,15 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
 
     }
     public static class AvailableSpotZone extends TeaModel {
-        @NameInMap("ZoneId")
-        private String zoneId;
-
         @NameInMap("AvailableSpotResources")
         private AvailableSpotResources availableSpotResources;
 
+        @NameInMap("ZoneId")
+        private String zoneId;
+
         private AvailableSpotZone(Builder builder) {
-            this.zoneId = builder.zoneId;
             this.availableSpotResources = builder.availableSpotResources;
+            this.zoneId = builder.zoneId;
         }
 
         public static Builder builder() {
@@ -266,36 +254,36 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
         }
 
         /**
-         * @return zoneId
-         */
-        public String getZoneId() {
-            return this.zoneId;
-        }
-
-        /**
          * @return availableSpotResources
          */
         public AvailableSpotResources getAvailableSpotResources() {
             return this.availableSpotResources;
         }
 
+        /**
+         * @return zoneId
+         */
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
         public static final class Builder {
-            private String zoneId; 
             private AvailableSpotResources availableSpotResources; 
+            private String zoneId; 
 
             /**
-             * The ID of the zone.
+             * AvailableSpotResources.
              */
-            public Builder zoneId(String zoneId) {
-                this.zoneId = zoneId;
+            public Builder availableSpotResources(AvailableSpotResources availableSpotResources) {
+                this.availableSpotResources = availableSpotResources;
                 return this;
             }
 
             /**
-             * An array of the release rate and discount rate of preemptible instances in the last 30 days.
+             * ZoneId.
              */
-            public Builder availableSpotResources(AvailableSpotResources availableSpotResources) {
-                this.availableSpotResources = availableSpotResources;
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
                 return this;
             }
 

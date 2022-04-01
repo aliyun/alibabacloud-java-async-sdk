@@ -12,27 +12,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeHpcClustersResponseBody</p>
  */
 public class DescribeHpcClustersResponseBody extends TeaModel {
+    @NameInMap("HpcClusters")
+    private HpcClusters hpcClusters;
+
+    @NameInMap("PageNumber")
+    private Integer pageNumber;
+
     @NameInMap("PageSize")
     private Integer pageSize;
 
     @NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("PageNumber")
-    private Integer pageNumber;
-
     @NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("HpcClusters")
-    private HpcClusters hpcClusters;
-
     private DescribeHpcClustersResponseBody(Builder builder) {
+        this.hpcClusters = builder.hpcClusters;
+        this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
-        this.pageNumber = builder.pageNumber;
         this.totalCount = builder.totalCount;
-        this.hpcClusters = builder.hpcClusters;
     }
 
     public static Builder builder() {
@@ -41,6 +41,20 @@ public class DescribeHpcClustersResponseBody extends TeaModel {
 
     public static DescribeHpcClustersResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return hpcClusters
+     */
+    public HpcClusters getHpcClusters() {
+        return this.hpcClusters;
+    }
+
+    /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     /**
@@ -58,51 +72,29 @@ public class DescribeHpcClustersResponseBody extends TeaModel {
     }
 
     /**
-     * @return pageNumber
-     */
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    /**
      * @return totalCount
      */
     public Integer getTotalCount() {
         return this.totalCount;
     }
 
-    /**
-     * @return hpcClusters
-     */
-    public HpcClusters getHpcClusters() {
-        return this.hpcClusters;
-    }
-
     public static final class Builder {
+        private HpcClusters hpcClusters; 
+        private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private Integer pageNumber; 
         private Integer totalCount; 
-        private HpcClusters hpcClusters; 
 
         /**
-         * The number of entries to return on each page.
+         * HpcClusters.
          */
-        public Builder pageSize(Integer pageSize) {
-            this.pageSize = pageSize;
+        public Builder hpcClusters(HpcClusters hpcClusters) {
+            this.hpcClusters = hpcClusters;
             return this;
         }
 
         /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The page number of the HPC cluster list.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -110,18 +102,26 @@ public class DescribeHpcClustersResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of HPC clusters.
+         * PageSize.
          */
-        public Builder totalCount(Integer totalCount) {
-            this.totalCount = totalCount;
+        public Builder pageSize(Integer pageSize) {
+            this.pageSize = pageSize;
             return this;
         }
 
         /**
-         * Returns the HPC cluster information in an array of HpcCluster.
+         * RequestId.
          */
-        public Builder hpcClusters(HpcClusters hpcClusters) {
-            this.hpcClusters = hpcClusters;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
@@ -132,19 +132,19 @@ public class DescribeHpcClustersResponseBody extends TeaModel {
     } 
 
     public static class HpcCluster extends TeaModel {
+        @NameInMap("Description")
+        private String description;
+
         @NameInMap("HpcClusterId")
         private String hpcClusterId;
 
         @NameInMap("Name")
         private String name;
 
-        @NameInMap("Description")
-        private String description;
-
         private HpcCluster(Builder builder) {
+            this.description = builder.description;
             this.hpcClusterId = builder.hpcClusterId;
             this.name = builder.name;
-            this.description = builder.description;
         }
 
         public static Builder builder() {
@@ -153,6 +153,13 @@ public class DescribeHpcClustersResponseBody extends TeaModel {
 
         public static HpcCluster create() {
             return builder().build();
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
         }
 
         /**
@@ -169,20 +176,21 @@ public class DescribeHpcClustersResponseBody extends TeaModel {
             return this.name;
         }
 
-        /**
-         * @return description
-         */
-        public String getDescription() {
-            return this.description;
-        }
-
         public static final class Builder {
+            private String description; 
             private String hpcClusterId; 
             private String name; 
-            private String description; 
 
             /**
-             * The ID of the HPC cluster.
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * HpcClusterId.
              */
             public Builder hpcClusterId(String hpcClusterId) {
                 this.hpcClusterId = hpcClusterId;
@@ -190,18 +198,10 @@ public class DescribeHpcClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the HPC cluster.
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
-                return this;
-            }
-
-            /**
-             * The description of the HPC cluster.
-             */
-            public Builder description(String description) {
-                this.description = description;
                 return this;
             }
 

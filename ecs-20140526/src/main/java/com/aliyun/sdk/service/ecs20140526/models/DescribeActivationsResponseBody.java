@@ -12,27 +12,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeActivationsResponseBody</p>
  */
 public class DescribeActivationsResponseBody extends TeaModel {
+    @NameInMap("ActivationList")
+    private java.util.List < ActivationList> activationList;
+
+    @NameInMap("PageNumber")
+    private Long pageNumber;
+
     @NameInMap("PageSize")
     private Long pageSize;
 
     @NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("PageNumber")
-    private Long pageNumber;
-
     @NameInMap("TotalCount")
     private Long totalCount;
 
-    @NameInMap("ActivationList")
-    private java.util.List < ActivationList> activationList;
-
     private DescribeActivationsResponseBody(Builder builder) {
+        this.activationList = builder.activationList;
+        this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
-        this.pageNumber = builder.pageNumber;
         this.totalCount = builder.totalCount;
-        this.activationList = builder.activationList;
     }
 
     public static Builder builder() {
@@ -41,6 +41,20 @@ public class DescribeActivationsResponseBody extends TeaModel {
 
     public static DescribeActivationsResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return activationList
+     */
+    public java.util.List < ActivationList> getActivationList() {
+        return this.activationList;
+    }
+
+    /**
+     * @return pageNumber
+     */
+    public Long getPageNumber() {
+        return this.pageNumber;
     }
 
     /**
@@ -58,51 +72,29 @@ public class DescribeActivationsResponseBody extends TeaModel {
     }
 
     /**
-     * @return pageNumber
-     */
-    public Long getPageNumber() {
-        return this.pageNumber;
-    }
-
-    /**
      * @return totalCount
      */
     public Long getTotalCount() {
         return this.totalCount;
     }
 
-    /**
-     * @return activationList
-     */
-    public java.util.List < ActivationList> getActivationList() {
-        return this.activationList;
-    }
-
     public static final class Builder {
+        private java.util.List < ActivationList> activationList; 
+        private Long pageNumber; 
         private Long pageSize; 
         private String requestId; 
-        private Long pageNumber; 
         private Long totalCount; 
-        private java.util.List < ActivationList> activationList; 
 
         /**
-         * The number of entries to return on each page.
+         * ActivationList.
          */
-        public Builder pageSize(Long pageSize) {
-            this.pageSize = pageSize;
+        public Builder activationList(java.util.List < ActivationList> activationList) {
+            this.activationList = activationList;
             return this;
         }
 
         /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The current page number.
+         * PageNumber.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -110,18 +102,26 @@ public class DescribeActivationsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of records that meet the query criteria.
+         * PageSize.
          */
-        public Builder totalCount(Long totalCount) {
-            this.totalCount = totalCount;
+        public Builder pageSize(Long pageSize) {
+            this.pageSize = pageSize;
             return this;
         }
 
         /**
-         * A collection of activation codes and usage information.
+         * RequestId.
          */
-        public Builder activationList(java.util.List < ActivationList> activationList) {
-            this.activationList = activationList;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Long totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
@@ -132,47 +132,47 @@ public class DescribeActivationsResponseBody extends TeaModel {
     } 
 
     public static class ActivationList extends TeaModel {
+        @NameInMap("ActivationId")
+        private String activationId;
+
         @NameInMap("CreationTime")
         private String creationTime;
 
         @NameInMap("DeregisteredCount")
         private Integer deregisteredCount;
 
-        @NameInMap("InstanceCount")
-        private Integer instanceCount;
-
         @NameInMap("Description")
         private String description;
-
-        @NameInMap("RegisteredCount")
-        private Integer registeredCount;
-
-        @NameInMap("InstanceName")
-        private String instanceName;
 
         @NameInMap("Disabled")
         private Boolean disabled;
 
+        @NameInMap("InstanceCount")
+        private Integer instanceCount;
+
+        @NameInMap("InstanceName")
+        private String instanceName;
+
         @NameInMap("IpAddressRange")
         private String ipAddressRange;
+
+        @NameInMap("RegisteredCount")
+        private Integer registeredCount;
 
         @NameInMap("TimeToLiveInHours")
         private Long timeToLiveInHours;
 
-        @NameInMap("ActivationId")
-        private String activationId;
-
         private ActivationList(Builder builder) {
+            this.activationId = builder.activationId;
             this.creationTime = builder.creationTime;
             this.deregisteredCount = builder.deregisteredCount;
-            this.instanceCount = builder.instanceCount;
             this.description = builder.description;
-            this.registeredCount = builder.registeredCount;
-            this.instanceName = builder.instanceName;
             this.disabled = builder.disabled;
+            this.instanceCount = builder.instanceCount;
+            this.instanceName = builder.instanceName;
             this.ipAddressRange = builder.ipAddressRange;
+            this.registeredCount = builder.registeredCount;
             this.timeToLiveInHours = builder.timeToLiveInHours;
-            this.activationId = builder.activationId;
         }
 
         public static Builder builder() {
@@ -181,6 +181,13 @@ public class DescribeActivationsResponseBody extends TeaModel {
 
         public static ActivationList create() {
             return builder().build();
+        }
+
+        /**
+         * @return activationId
+         */
+        public String getActivationId() {
+            return this.activationId;
         }
 
         /**
@@ -198,31 +205,10 @@ public class DescribeActivationsResponseBody extends TeaModel {
         }
 
         /**
-         * @return instanceCount
-         */
-        public Integer getInstanceCount() {
-            return this.instanceCount;
-        }
-
-        /**
          * @return description
          */
         public String getDescription() {
             return this.description;
-        }
-
-        /**
-         * @return registeredCount
-         */
-        public Integer getRegisteredCount() {
-            return this.registeredCount;
-        }
-
-        /**
-         * @return instanceName
-         */
-        public String getInstanceName() {
-            return this.instanceName;
         }
 
         /**
@@ -233,10 +219,31 @@ public class DescribeActivationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return instanceCount
+         */
+        public Integer getInstanceCount() {
+            return this.instanceCount;
+        }
+
+        /**
+         * @return instanceName
+         */
+        public String getInstanceName() {
+            return this.instanceName;
+        }
+
+        /**
          * @return ipAddressRange
          */
         public String getIpAddressRange() {
             return this.ipAddressRange;
+        }
+
+        /**
+         * @return registeredCount
+         */
+        public Integer getRegisteredCount() {
+            return this.registeredCount;
         }
 
         /**
@@ -246,27 +253,28 @@ public class DescribeActivationsResponseBody extends TeaModel {
             return this.timeToLiveInHours;
         }
 
-        /**
-         * @return activationId
-         */
-        public String getActivationId() {
-            return this.activationId;
-        }
-
         public static final class Builder {
+            private String activationId; 
             private String creationTime; 
             private Integer deregisteredCount; 
-            private Integer instanceCount; 
             private String description; 
-            private Integer registeredCount; 
-            private String instanceName; 
             private Boolean disabled; 
+            private Integer instanceCount; 
+            private String instanceName; 
             private String ipAddressRange; 
+            private Integer registeredCount; 
             private Long timeToLiveInHours; 
-            private String activationId; 
 
             /**
-             * The creation time.
+             * ActivationId.
+             */
+            public Builder activationId(String activationId) {
+                this.activationId = activationId;
+                return this;
+            }
+
+            /**
+             * CreationTime.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -274,7 +282,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of canceled instances.
+             * DeregisteredCount.
              */
             public Builder deregisteredCount(Integer deregisteredCount) {
                 this.deregisteredCount = deregisteredCount;
@@ -282,15 +290,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of times an activation code is used to register a managed instance.
-             */
-            public Builder instanceCount(Integer instanceCount) {
-                this.instanceCount = instanceCount;
-                return this;
-            }
-
-            /**
-             * The description of the activation code.
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -298,23 +298,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of registered instances.
-             */
-            public Builder registeredCount(Integer registeredCount) {
-                this.registeredCount = registeredCount;
-                return this;
-            }
-
-            /**
-             * The default instance name prefix.
-             */
-            public Builder instanceName(String instanceName) {
-                this.instanceName = instanceName;
-                return this;
-            }
-
-            /**
-             * Indicates whether the activation code is disabled.
+             * Disabled.
              */
             public Builder disabled(Boolean disabled) {
                 this.disabled = disabled;
@@ -322,7 +306,23 @@ public class DescribeActivationsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the host that allows the activation code.
+             * InstanceCount.
+             */
+            public Builder instanceCount(Integer instanceCount) {
+                this.instanceCount = instanceCount;
+                return this;
+            }
+
+            /**
+             * InstanceName.
+             */
+            public Builder instanceName(String instanceName) {
+                this.instanceName = instanceName;
+                return this;
+            }
+
+            /**
+             * IpAddressRange.
              */
             public Builder ipAddressRange(String ipAddressRange) {
                 this.ipAddressRange = ipAddressRange;
@@ -330,18 +330,18 @@ public class DescribeActivationsResponseBody extends TeaModel {
             }
 
             /**
-             * The validity period of the activation code. Unit: Hour.
+             * RegisteredCount.
              */
-            public Builder timeToLiveInHours(Long timeToLiveInHours) {
-                this.timeToLiveInHours = timeToLiveInHours;
+            public Builder registeredCount(Integer registeredCount) {
+                this.registeredCount = registeredCount;
                 return this;
             }
 
             /**
-             * The ID of the activation code.
+             * TimeToLiveInHours.
              */
-            public Builder activationId(String activationId) {
-                this.activationId = activationId;
+            public Builder timeToLiveInHours(Long timeToLiveInHours) {
+                this.timeToLiveInHours = timeToLiveInHours;
                 return this;
             }
 

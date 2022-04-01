@@ -16,17 +16,30 @@ public class DescribeElasticityAssurancesRequest extends Request {
     @NameInMap("PrivatePoolOptions")
     private PrivatePoolOptions privatePoolOptions;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("InstanceChargeType")
+    private String instanceChargeType;
 
     @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
+    @NameInMap("InstanceType")
+    private String instanceType;
 
     @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @NameInMap("MaxResults")
+    @Validation(maximum = 100, minimum = 1)
+    private Integer maxResults;
+
+    @Query
+    @NameInMap("NextToken")
+    private String nextToken;
+
+    @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
 
     @Query
     @NameInMap("Platform")
@@ -42,45 +55,47 @@ public class DescribeElasticityAssurancesRequest extends Request {
     private String resourceGroupId;
 
     @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 100, minimum = 1)
-    private Integer maxResults;
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
 
     @Query
-    @NameInMap("NextToken")
-    private String nextToken;
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("InstanceType")
-    private String instanceType;
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     @Query
     @NameInMap("Status")
     private String status;
 
     @Query
-    @NameInMap("ZoneId")
-    private String zoneId;
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
 
     @Query
-    @NameInMap("InstanceChargeType")
-    private String instanceChargeType;
+    @NameInMap("ZoneId")
+    private String zoneId;
 
     private DescribeElasticityAssurancesRequest(Builder builder) {
         super(builder);
         this.privatePoolOptions = builder.privatePoolOptions;
-        this.sourceRegionId = builder.sourceRegionId;
-        this.resourceOwnerId = builder.resourceOwnerId;
-        this.tag = builder.tag;
+        this.instanceChargeType = builder.instanceChargeType;
+        this.instanceType = builder.instanceType;
+        this.maxResults = builder.maxResults;
+        this.nextToken = builder.nextToken;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
         this.platform = builder.platform;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
-        this.maxResults = builder.maxResults;
-        this.nextToken = builder.nextToken;
-        this.instanceType = builder.instanceType;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.sourceRegionId = builder.sourceRegionId;
         this.status = builder.status;
+        this.tag = builder.tag;
         this.zoneId = builder.zoneId;
-        this.instanceChargeType = builder.instanceChargeType;
     }
 
     public static Builder builder() {
@@ -104,24 +119,45 @@ public class DescribeElasticityAssurancesRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return instanceChargeType
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getInstanceChargeType() {
+        return this.instanceChargeType;
     }
 
     /**
-     * @return resourceOwnerId
+     * @return instanceType
      */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public String getInstanceType() {
+        return this.instanceType;
     }
 
     /**
-     * @return tag
+     * @return maxResults
      */
-    public java.util.List < Tag> getTag() {
-        return this.tag;
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     /**
@@ -146,24 +182,24 @@ public class DescribeElasticityAssurancesRequest extends Request {
     }
 
     /**
-     * @return maxResults
+     * @return resourceOwnerAccount
      */
-    public Integer getMaxResults() {
-        return this.maxResults;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
     }
 
     /**
-     * @return nextToken
+     * @return resourceOwnerId
      */
-    public String getNextToken() {
-        return this.nextToken;
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     /**
-     * @return instanceType
+     * @return sourceRegionId
      */
-    public String getInstanceType() {
-        return this.instanceType;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -174,33 +210,36 @@ public class DescribeElasticityAssurancesRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return zoneId
      */
     public String getZoneId() {
         return this.zoneId;
     }
 
-    /**
-     * @return instanceChargeType
-     */
-    public String getInstanceChargeType() {
-        return this.instanceChargeType;
-    }
-
     public static final class Builder extends Request.Builder<DescribeElasticityAssurancesRequest, Builder> {
         private PrivatePoolOptions privatePoolOptions; 
-        private String sourceRegionId; 
-        private Long resourceOwnerId; 
-        private java.util.List < Tag> tag; 
+        private String instanceChargeType; 
+        private String instanceType; 
+        private Integer maxResults; 
+        private String nextToken; 
+        private String ownerAccount; 
+        private Long ownerId; 
         private String platform; 
         private String regionId; 
         private String resourceGroupId; 
-        private Integer maxResults; 
-        private String nextToken; 
-        private String instanceType; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String sourceRegionId; 
         private String status; 
+        private java.util.List < Tag> tag; 
         private String zoneId; 
-        private String instanceChargeType; 
 
         private Builder() {
             super();
@@ -209,18 +248,21 @@ public class DescribeElasticityAssurancesRequest extends Request {
         private Builder(DescribeElasticityAssurancesRequest request) {
             super(request);
             this.privatePoolOptions = request.privatePoolOptions;
-            this.sourceRegionId = request.sourceRegionId;
-            this.resourceOwnerId = request.resourceOwnerId;
-            this.tag = request.tag;
+            this.instanceChargeType = request.instanceChargeType;
+            this.instanceType = request.instanceType;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
             this.platform = request.platform;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
-            this.maxResults = request.maxResults;
-            this.nextToken = request.nextToken;
-            this.instanceType = request.instanceType;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceRegionId = request.sourceRegionId;
             this.status = request.status;
+            this.tag = request.tag;
             this.zoneId = request.zoneId;
-            this.instanceChargeType = request.instanceChargeType;
         } 
 
         /**
@@ -233,29 +275,56 @@ public class DescribeElasticityAssurancesRequest extends Request {
         }
 
         /**
-         * SourceRegionId.
+         * InstanceChargeType.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder instanceChargeType(String instanceChargeType) {
+            this.putQueryParameter("InstanceChargeType", instanceChargeType);
+            this.instanceChargeType = instanceChargeType;
             return this;
         }
 
         /**
-         * ResourceOwnerId.
+         * InstanceType.
          */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
+        public Builder instanceType(String instanceType) {
+            this.putQueryParameter("InstanceType", instanceType);
+            this.instanceType = instanceType;
             return this;
         }
 
         /**
-         * Tag.
+         * MaxResults.
          */
-        public Builder tag(java.util.List < Tag> tag) {
-            this.putQueryParameter("Tag", tag);
-            this.tag = tag;
+        public Builder maxResults(Integer maxResults) {
+            this.putQueryParameter("MaxResults", maxResults);
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
             return this;
         }
 
@@ -269,7 +338,7 @@ public class DescribeElasticityAssurancesRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the elastic Protection Service belongs. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -278,7 +347,7 @@ public class DescribeElasticityAssurancesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * ResourceGroupId.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -287,48 +356,34 @@ public class DescribeElasticityAssurancesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
-         * 
-         * Maximum Value: 100.
-         * 
-         * Default value: 10.
+         * ResourceOwnerAccount.
          */
-        public Builder maxResults(Integer maxResults) {
-            this.putQueryParameter("MaxResults", maxResults);
-            this.maxResults = maxResults;
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
             return this;
         }
 
         /**
-         * The start flag of the query. This parameter is obtained from the last request.
+         * ResourceOwnerId.
          */
-        public Builder nextToken(String nextToken) {
-            this.putQueryParameter("NextToken", nextToken);
-            this.nextToken = nextToken;
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
             return this;
         }
 
         /**
-         * The instance type.
+         * SourceRegionId.
          */
-        public Builder instanceType(String instanceType) {
-            this.putQueryParameter("InstanceType", instanceType);
-            this.instanceType = instanceType;
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 
         /**
-         * The status of the elastic protection service. Valid values:
-         * <p>
-         * 
-         * -All: All statuses.
-         * -Preparing: Preparing.
-         * -Prepared: to take effect.
-         * -Active: takes effect.
-         * -Released: Released.
-         * 
-         * The default value is Active.
+         * Status.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -337,23 +392,20 @@ public class DescribeElasticityAssurancesRequest extends Request {
         }
 
         /**
-         * The ID of the zone to which the elastic Protection Service belongs.
+         * Tag.
          */
-        public Builder zoneId(String zoneId) {
-            this.putQueryParameter("ZoneId", zoneId);
-            this.zoneId = zoneId;
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
             return this;
         }
 
         /**
-         * The billing method of the instance. Set the value to PostPaid. Currently, only pay-as-you-go is supported.
-         * <p>
-         * 
-         * Default value: PostPaid.
+         * ZoneId.
          */
-        public Builder instanceChargeType(String instanceChargeType) {
-            this.putQueryParameter("InstanceChargeType", instanceChargeType);
-            this.instanceChargeType = instanceChargeType;
+        public Builder zoneId(String zoneId) {
+            this.putQueryParameter("ZoneId", zoneId);
+            this.zoneId = zoneId;
             return this;
         }
 
@@ -391,7 +443,7 @@ public class DescribeElasticityAssurancesRequest extends Request {
             private String ids; 
 
             /**
-             * The list of elastic protection service IDs. The value can be a JSON Array consisting of multiple ids. A maximum of 100 IDs can be entered. Separate IDs with commas (,).
+             * Ids.
              */
             public Builder ids(String ids) {
                 this.ids = ids;
@@ -444,10 +496,7 @@ public class DescribeElasticityAssurancesRequest extends Request {
             private String value; 
 
             /**
-             * 标签键。N表示可以设置多个标签键进行过滤，N的取值范围为1~20。
-             * <p>
-             * 
-             * 使用一个标签过滤资源，查询到该标签下的资源数量不能超过1000个；使用多个标签过滤资源，查询到同时绑定了多个标签的资源数量不能超过1000个。如果资源数量超过1000个，请使用[ListTagResources](~~110425~~)接口进行查询。
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -455,7 +504,7 @@ public class DescribeElasticityAssurancesRequest extends Request {
             }
 
             /**
-             * 标签值。N表示可以设置多个标签键进行过滤，N的取值范围为1~20。
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -13,6 +13,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class TagResourcesRequest extends Request {
     @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
+
+    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
@@ -23,21 +31,28 @@ public class TagResourcesRequest extends Request {
     private java.util.List < String > resourceId;
 
     @Query
-    @NameInMap("Tag")
-    @Validation(required = true)
-    private java.util.List < Tag> tag;
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
 
     @Query
     @NameInMap("ResourceType")
     @Validation(required = true)
     private String resourceType;
 
+    @Query
+    @NameInMap("Tag")
+    @Validation(required = true)
+    private java.util.List < Tag> tag;
+
     private TagResourcesRequest(Builder builder) {
         super(builder);
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
         this.resourceId = builder.resourceId;
-        this.tag = builder.tag;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceType = builder.resourceType;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -51,6 +66,20 @@ public class TagResourcesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     /**
@@ -68,10 +97,10 @@ public class TagResourcesRequest extends Request {
     }
 
     /**
-     * @return tag
+     * @return resourceOwnerAccount
      */
-    public java.util.List < Tag> getTag() {
-        return this.tag;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
     }
 
     /**
@@ -81,11 +110,21 @@ public class TagResourcesRequest extends Request {
         return this.resourceType;
     }
 
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
     public static final class Builder extends Request.Builder<TagResourcesRequest, Builder> {
+        private String ownerAccount; 
+        private Long ownerId; 
         private String regionId; 
         private java.util.List < String > resourceId; 
-        private java.util.List < Tag> tag; 
+        private String resourceOwnerAccount; 
         private String resourceType; 
+        private java.util.List < Tag> tag; 
 
         private Builder() {
             super();
@@ -93,14 +132,35 @@ public class TagResourcesRequest extends Request {
 
         private Builder(TagResourcesRequest request) {
             super(request);
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
             this.regionId = request.regionId;
             this.resourceId = request.resourceId;
-            this.tag = request.tag;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceType = request.resourceType;
+            this.tag = request.tag;
         } 
 
         /**
-         * The ID of the region to which the resource belongs. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -109,7 +169,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the resource. Valid values of N: 1 to 50.
+         * ResourceId.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -118,37 +178,29 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The list of tags.
+         * ResourceOwnerAccount.
          */
-        public Builder tag(java.util.List < Tag> tag) {
-            this.putQueryParameter("Tag", tag);
-            this.tag = tag;
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
             return this;
         }
 
         /**
-         * The definition of the resource type. Valid values:
-         * <p>
-         * 
-         * -instance:ECS instance
-         * -disk: disk
-         * -snapshot: snapshot
-         * -image: image
-         * -securitygroup: Security Group
-         * -volume: storage volume
-         * -eni: eni
-         * -ddh: Dedicated host
-         * -ddhcluster: Dedicated host cluster
-         * -keypair:SSH key pair
-         * -launchtemplate: launch Template
-         * -reservedinstance: Reserved Instance
-         * -snapshotpolicy: automatic snapshot policy
-         * -elasticityassurance: elastic assurance
-         * -capacityreservation: capacity reservation
+         * ResourceType.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
             this.resourceType = resourceType;
+            return this;
+        }
+
+        /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
             return this;
         }
 
@@ -198,7 +250,7 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * 资源的标签键。N的取值范围：1~20。一旦传入该值，则不允许为空字符串。最多支持128个字符，不能以`aliyun`和`acs:`开头，不能包含`http://`或者`https://`。
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -206,7 +258,7 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * 资源的标签值。N的取值范围：1~20。一旦传入该值，可以为空字符串。最多支持128个字符，不能以`acs:`开头，不能包含`http://`或者`https://`。
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

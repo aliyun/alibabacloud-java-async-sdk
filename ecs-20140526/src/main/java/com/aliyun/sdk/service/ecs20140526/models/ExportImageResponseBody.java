@@ -12,19 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ExportImageResponseBody</p>
  */
 public class ExportImageResponseBody extends TeaModel {
+    @NameInMap("RegionId")
+    private String regionId;
+
     @NameInMap("RequestId")
     private String requestId;
 
     @NameInMap("TaskId")
     private String taskId;
 
-    @NameInMap("RegionId")
-    private String regionId;
-
     private ExportImageResponseBody(Builder builder) {
+        this.regionId = builder.regionId;
         this.requestId = builder.requestId;
         this.taskId = builder.taskId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -33,6 +33,13 @@ public class ExportImageResponseBody extends TeaModel {
 
     public static ExportImageResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -49,20 +56,21 @@ public class ExportImageResponseBody extends TeaModel {
         return this.taskId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder {
+        private String regionId; 
         private String requestId; 
         private String taskId; 
-        private String regionId; 
 
         /**
-         * The ID of the request.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,18 +78,10 @@ public class ExportImageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the image export task.
+         * TaskId.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
-            return this;
-        }
-
-        /**
-         * The ID of the region.
-         */
-        public Builder regionId(String regionId) {
-            this.regionId = regionId;
             return this;
         }
 

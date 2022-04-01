@@ -50,7 +50,7 @@ public class CreatePrefixListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the prefix list.
+         * PrefixListId.
          */
         public Builder prefixListId(String prefixListId) {
             this.prefixListId = prefixListId;
@@ -58,7 +58,7 @@ public class CreatePrefixListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

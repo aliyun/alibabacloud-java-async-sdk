@@ -12,21 +12,29 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>LeaveSecurityGroupRequest</p>
  */
 public class LeaveSecurityGroupRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @Query
+    @NameInMap("InstanceId")
+    private String instanceId;
+
+    @Query
+    @NameInMap("NetworkInterfaceId")
+    private String networkInterfaceId;
 
     @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
 
     @Query
-    @NameInMap("ResourceOwnerAccount")
-    private String resourceOwnerAccount;
-
-    @Query
     @NameInMap("OwnerId")
     private Long ownerId;
+
+    @Query
+    @NameInMap("RegionId")
+    private String regionId;
+
+    @Query
+    @NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
 
     @Query
     @NameInMap("ResourceOwnerId")
@@ -37,29 +45,21 @@ public class LeaveSecurityGroupRequest extends Request {
     @Validation(required = true)
     private String securityGroupId;
 
-    @Query
-    @NameInMap("RegionId")
-    private String regionId;
-
-    @Query
-    @NameInMap("InstanceId")
-    private String instanceId;
-
-    @Query
-    @NameInMap("NetworkInterfaceId")
-    private String networkInterfaceId;
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
 
     private LeaveSecurityGroupRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
-        this.ownerAccount = builder.ownerAccount;
-        this.resourceOwnerAccount = builder.resourceOwnerAccount;
-        this.ownerId = builder.ownerId;
-        this.resourceOwnerId = builder.resourceOwnerId;
-        this.securityGroupId = builder.securityGroupId;
-        this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.networkInterfaceId = builder.networkInterfaceId;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
+        this.securityGroupId = builder.securityGroupId;
+        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -76,10 +76,17 @@ public class LeaveSecurityGroupRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return instanceId
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    /**
+     * @return networkInterfaceId
+     */
+    public String getNetworkInterfaceId() {
+        return this.networkInterfaceId;
     }
 
     /**
@@ -90,17 +97,24 @@ public class LeaveSecurityGroupRequest extends Request {
     }
 
     /**
-     * @return resourceOwnerAccount
-     */
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    /**
      * @return ownerId
      */
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
     }
 
     /**
@@ -118,36 +132,22 @@ public class LeaveSecurityGroupRequest extends Request {
     }
 
     /**
-     * @return regionId
+     * @return sourceRegionId
      */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return instanceId
-     */
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    /**
-     * @return networkInterfaceId
-     */
-    public String getNetworkInterfaceId() {
-        return this.networkInterfaceId;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public static final class Builder extends Request.Builder<LeaveSecurityGroupRequest, Builder> {
-        private String sourceRegionId; 
-        private String ownerAccount; 
-        private String resourceOwnerAccount; 
-        private Long ownerId; 
-        private Long resourceOwnerId; 
-        private String securityGroupId; 
-        private String regionId; 
         private String instanceId; 
         private String networkInterfaceId; 
+        private String ownerAccount; 
+        private Long ownerId; 
+        private String regionId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
+        private String securityGroupId; 
+        private String sourceRegionId; 
 
         private Builder() {
             super();
@@ -155,23 +155,32 @@ public class LeaveSecurityGroupRequest extends Request {
 
         private Builder(LeaveSecurityGroupRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
-            this.ownerAccount = request.ownerAccount;
-            this.resourceOwnerAccount = request.resourceOwnerAccount;
-            this.ownerId = request.ownerId;
-            this.resourceOwnerId = request.resourceOwnerId;
-            this.securityGroupId = request.securityGroupId;
-            this.regionId = request.regionId;
             this.instanceId = request.instanceId;
             this.networkInterfaceId = request.networkInterfaceId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.securityGroupId = request.securityGroupId;
+            this.sourceRegionId = request.sourceRegionId;
         } 
 
         /**
-         * SourceRegionId.
+         * InstanceId.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * NetworkInterfaceId.
+         */
+        public Builder networkInterfaceId(String networkInterfaceId) {
+            this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
+            this.networkInterfaceId = networkInterfaceId;
             return this;
         }
 
@@ -185,16 +194,7 @@ public class LeaveSecurityGroupRequest extends Request {
         }
 
         /**
-         * The account name of the resource master account.
-         */
-        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
-            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-            this.resourceOwnerAccount = resourceOwnerAccount;
-            return this;
-        }
-
-        /**
-         * The ID of the RAM user.
+         * OwnerId.
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -203,29 +203,7 @@ public class LeaveSecurityGroupRequest extends Request {
         }
 
         /**
-         * The ID of the resource master account, that is, the UID.
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * The ID of the security group.
-         */
-        public Builder securityGroupId(String securityGroupId) {
-            this.putQueryParameter("SecurityGroupId", securityGroupId);
-            this.securityGroupId = securityGroupId;
-            return this;
-        }
-
-        /**
-         * The ID of the region. You can call [DescribeRegions](~~ 25609 ~~) to view the latest region list.
-         * <p>
-         * 
-         * -You can remove an instance from a security group without specifying the region ID.
-         * -To remove an Eni from a security group, you must specify the region ID of the Eni.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -234,26 +212,38 @@ public class LeaveSecurityGroupRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
-         * <p>
-         * 
-         * > when this parameter is specified, "NetworkInterfaceId" must be empty.
+         * ResourceOwnerAccount.
          */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
             return this;
         }
 
         /**
-         * The ID of the Eni.
-         * <p>
-         * 
-         * > when this parameter is specified, "InstanceId" must be empty.
+         * ResourceOwnerId.
          */
-        public Builder networkInterfaceId(String networkInterfaceId) {
-            this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
-            this.networkInterfaceId = networkInterfaceId;
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * SecurityGroupId.
+         */
+        public Builder securityGroupId(String securityGroupId) {
+            this.putQueryParameter("SecurityGroupId", securityGroupId);
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

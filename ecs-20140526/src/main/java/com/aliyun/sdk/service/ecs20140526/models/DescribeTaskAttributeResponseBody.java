@@ -15,56 +15,56 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
     @NameInMap("CreationTime")
     private String creationTime;
 
-    @NameInMap("SupportCancel")
-    private String supportCancel;
-
-    @NameInMap("TotalCount")
-    private Integer totalCount;
-
-    @NameInMap("SuccessCount")
-    private Integer successCount;
-
-    @NameInMap("RegionId")
-    private String regionId;
-
-    @NameInMap("TaskAction")
-    private String taskAction;
-
     @NameInMap("FailedCount")
     private Integer failedCount;
-
-    @NameInMap("RequestId")
-    private String requestId;
-
-    @NameInMap("TaskStatus")
-    private String taskStatus;
-
-    @NameInMap("TaskProcess")
-    private String taskProcess;
 
     @NameInMap("FinishedTime")
     private String finishedTime;
 
-    @NameInMap("TaskId")
-    private String taskId;
-
     @NameInMap("OperationProgressSet")
     private OperationProgressSet operationProgressSet;
 
+    @NameInMap("RegionId")
+    private String regionId;
+
+    @NameInMap("RequestId")
+    private String requestId;
+
+    @NameInMap("SuccessCount")
+    private Integer successCount;
+
+    @NameInMap("SupportCancel")
+    private String supportCancel;
+
+    @NameInMap("TaskAction")
+    private String taskAction;
+
+    @NameInMap("TaskId")
+    private String taskId;
+
+    @NameInMap("TaskProcess")
+    private String taskProcess;
+
+    @NameInMap("TaskStatus")
+    private String taskStatus;
+
+    @NameInMap("TotalCount")
+    private Integer totalCount;
+
     private DescribeTaskAttributeResponseBody(Builder builder) {
         this.creationTime = builder.creationTime;
-        this.supportCancel = builder.supportCancel;
-        this.totalCount = builder.totalCount;
-        this.successCount = builder.successCount;
-        this.regionId = builder.regionId;
-        this.taskAction = builder.taskAction;
         this.failedCount = builder.failedCount;
-        this.requestId = builder.requestId;
-        this.taskStatus = builder.taskStatus;
-        this.taskProcess = builder.taskProcess;
         this.finishedTime = builder.finishedTime;
-        this.taskId = builder.taskId;
         this.operationProgressSet = builder.operationProgressSet;
+        this.regionId = builder.regionId;
+        this.requestId = builder.requestId;
+        this.successCount = builder.successCount;
+        this.supportCancel = builder.supportCancel;
+        this.taskAction = builder.taskAction;
+        this.taskId = builder.taskId;
+        this.taskProcess = builder.taskProcess;
+        this.taskStatus = builder.taskStatus;
+        this.totalCount = builder.totalCount;
     }
 
     public static Builder builder() {
@@ -83,66 +83,10 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
     }
 
     /**
-     * @return supportCancel
-     */
-    public String getSupportCancel() {
-        return this.supportCancel;
-    }
-
-    /**
-     * @return totalCount
-     */
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
-    /**
-     * @return successCount
-     */
-    public Integer getSuccessCount() {
-        return this.successCount;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return taskAction
-     */
-    public String getTaskAction() {
-        return this.taskAction;
-    }
-
-    /**
      * @return failedCount
      */
     public Integer getFailedCount() {
         return this.failedCount;
-    }
-
-    /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    /**
-     * @return taskStatus
-     */
-    public String getTaskStatus() {
-        return this.taskStatus;
-    }
-
-    /**
-     * @return taskProcess
-     */
-    public String getTaskProcess() {
-        return this.taskProcess;
     }
 
     /**
@@ -153,6 +97,48 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return operationProgressSet
+     */
+    public OperationProgressSet getOperationProgressSet() {
+        return this.operationProgressSet;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
+     * @return successCount
+     */
+    public Integer getSuccessCount() {
+        return this.successCount;
+    }
+
+    /**
+     * @return supportCancel
+     */
+    public String getSupportCancel() {
+        return this.supportCancel;
+    }
+
+    /**
+     * @return taskAction
+     */
+    public String getTaskAction() {
+        return this.taskAction;
+    }
+
+    /**
      * @return taskId
      */
     public String getTaskId() {
@@ -160,29 +146,43 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
     }
 
     /**
-     * @return operationProgressSet
+     * @return taskProcess
      */
-    public OperationProgressSet getOperationProgressSet() {
-        return this.operationProgressSet;
+    public String getTaskProcess() {
+        return this.taskProcess;
+    }
+
+    /**
+     * @return taskStatus
+     */
+    public String getTaskStatus() {
+        return this.taskStatus;
+    }
+
+    /**
+     * @return totalCount
+     */
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static final class Builder {
         private String creationTime; 
-        private String supportCancel; 
-        private Integer totalCount; 
-        private Integer successCount; 
-        private String regionId; 
-        private String taskAction; 
         private Integer failedCount; 
-        private String requestId; 
-        private String taskStatus; 
-        private String taskProcess; 
         private String finishedTime; 
-        private String taskId; 
         private OperationProgressSet operationProgressSet; 
+        private String regionId; 
+        private String requestId; 
+        private Integer successCount; 
+        private String supportCancel; 
+        private String taskAction; 
+        private String taskId; 
+        private String taskProcess; 
+        private String taskStatus; 
+        private Integer totalCount; 
 
         /**
-         * The time when the task was created.
+         * CreationTime.
          */
         public Builder creationTime(String creationTime) {
             this.creationTime = creationTime;
@@ -190,52 +190,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the task can be canceled ([CancelTask](~~ 25624 ~~)). Valid values:
-         * <p>
-         * 
-         * -true: can be canceled
-         * -false: cannot be canceled.
-         * 
-         */
-        public Builder supportCancel(String supportCancel) {
-            this.supportCancel = supportCancel;
-            return this;
-        }
-
-        /**
-         * The total number of tasks.
-         */
-        public Builder totalCount(Integer totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-
-        /**
-         * The number of successful tasks.
-         */
-        public Builder successCount(Integer successCount) {
-            this.successCount = successCount;
-            return this;
-        }
-
-        /**
-         * The ID of the region.
-         */
-        public Builder regionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The operation that you want to perform.
-         */
-        public Builder taskAction(String taskAction) {
-            this.taskAction = taskAction;
-            return this;
-        }
-
-        /**
-         * The number of failed tasks.
+         * FailedCount.
          */
         public Builder failedCount(Integer failedCount) {
             this.failedCount = failedCount;
@@ -243,31 +198,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The status of the task.
-         */
-        public Builder taskStatus(String taskStatus) {
-            this.taskStatus = taskStatus;
-            return this;
-        }
-
-        /**
-         * The process of the task.
-         */
-        public Builder taskProcess(String taskProcess) {
-            this.taskProcess = taskProcess;
-            return this;
-        }
-
-        /**
-         * The time when the task was completed.
+         * FinishedTime.
          */
         public Builder finishedTime(String finishedTime) {
             this.finishedTime = finishedTime;
@@ -275,7 +206,55 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the task.
+         * OperationProgressSet.
+         */
+        public Builder operationProgressSet(OperationProgressSet operationProgressSet) {
+            this.operationProgressSet = operationProgressSet;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * SuccessCount.
+         */
+        public Builder successCount(Integer successCount) {
+            this.successCount = successCount;
+            return this;
+        }
+
+        /**
+         * SupportCancel.
+         */
+        public Builder supportCancel(String supportCancel) {
+            this.supportCancel = supportCancel;
+            return this;
+        }
+
+        /**
+         * TaskAction.
+         */
+        public Builder taskAction(String taskAction) {
+            this.taskAction = taskAction;
+            return this;
+        }
+
+        /**
+         * TaskId.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -283,10 +262,26 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The information contained in the returned task, including the status and related information of each subtask.
+         * TaskProcess.
          */
-        public Builder operationProgressSet(OperationProgressSet operationProgressSet) {
-            this.operationProgressSet = operationProgressSet;
+        public Builder taskProcess(String taskProcess) {
+            this.taskProcess = taskProcess;
+            return this;
+        }
+
+        /**
+         * TaskStatus.
+         */
+        public Builder taskStatus(String taskStatus) {
+            this.taskStatus = taskStatus;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
@@ -335,7 +330,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The name of the relevant item.
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -343,7 +338,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the relevant item.
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -399,11 +394,11 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
 
     }
     public static class OperationProgress extends TeaModel {
-        @NameInMap("ErrorMsg")
-        private String errorMsg;
-
         @NameInMap("ErrorCode")
         private String errorCode;
+
+        @NameInMap("ErrorMsg")
+        private String errorMsg;
 
         @NameInMap("OperationStatus")
         private String operationStatus;
@@ -412,8 +407,8 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
         private RelatedItemSet relatedItemSet;
 
         private OperationProgress(Builder builder) {
-            this.errorMsg = builder.errorMsg;
             this.errorCode = builder.errorCode;
+            this.errorMsg = builder.errorMsg;
             this.operationStatus = builder.operationStatus;
             this.relatedItemSet = builder.relatedItemSet;
         }
@@ -427,17 +422,17 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * @return errorMsg
-         */
-        public String getErrorMsg() {
-            return this.errorMsg;
-        }
-
-        /**
          * @return errorCode
          */
         public String getErrorCode() {
             return this.errorCode;
+        }
+
+        /**
+         * @return errorMsg
+         */
+        public String getErrorMsg() {
+            return this.errorMsg;
         }
 
         /**
@@ -455,21 +450,13 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private String errorMsg; 
             private String errorCode; 
+            private String errorMsg; 
             private String operationStatus; 
             private RelatedItemSet relatedItemSet; 
 
             /**
-             * The error message.
-             */
-            public Builder errorMsg(String errorMsg) {
-                this.errorMsg = errorMsg;
-                return this;
-            }
-
-            /**
-             * The error code.
+             * ErrorCode.
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -477,7 +464,15 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The operation status.
+             * ErrorMsg.
+             */
+            public Builder errorMsg(String errorMsg) {
+                this.errorMsg = errorMsg;
+                return this;
+            }
+
+            /**
+             * OperationStatus.
              */
             public Builder operationStatus(String operationStatus) {
                 this.operationStatus = operationStatus;
@@ -485,7 +480,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource information.
+             * RelatedItemSet.
              */
             public Builder relatedItemSet(RelatedItemSet relatedItemSet) {
                 this.relatedItemSet = relatedItemSet;
