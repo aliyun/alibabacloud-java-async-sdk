@@ -178,19 +178,19 @@ public class GetStatefulAsyncInvocationRequest extends Request {
             super();
         } 
 
-        private Builder(GetStatefulAsyncInvocationRequest response) {
-            super(response);
-            this.serviceName = response.serviceName;
-            this.functionName = response.functionName;
-            this.invocationId = response.invocationId;
-            this.accountID = response.accountID;
-            this.xFcAccountId = response.xFcAccountId;
-            this.xFcCodeChecksum = response.xFcCodeChecksum;
-            this.xFcDate = response.xFcDate;
-            this.xFcInvocationType = response.xFcInvocationType;
-            this.xFcLogType = response.xFcLogType;
-            this.xFcTraceId = response.xFcTraceId;
-            this.qualifier = response.qualifier;
+        private Builder(GetStatefulAsyncInvocationRequest request) {
+            super(request);
+            this.serviceName = request.serviceName;
+            this.functionName = request.functionName;
+            this.invocationId = request.invocationId;
+            this.accountID = request.accountID;
+            this.xFcAccountId = request.xFcAccountId;
+            this.xFcCodeChecksum = request.xFcCodeChecksum;
+            this.xFcDate = request.xFcDate;
+            this.xFcInvocationType = request.xFcInvocationType;
+            this.xFcLogType = request.xFcLogType;
+            this.xFcTraceId = request.xFcTraceId;
+            this.qualifier = request.qualifier;
         } 
 
         /**

@@ -114,14 +114,14 @@ public class ListLayerVersionsRequest extends Request {
             super();
         } 
 
-        private Builder(ListLayerVersionsRequest response) {
-            super(response);
-            this.layerName = response.layerName;
-            this.xFcAccountId = response.xFcAccountId;
-            this.xFcDate = response.xFcDate;
-            this.xFcTraceId = response.xFcTraceId;
-            this.limit = response.limit;
-            this.startVersion = response.startVersion;
+        private Builder(ListLayerVersionsRequest request) {
+            super(request);
+            this.layerName = request.layerName;
+            this.xFcAccountId = request.xFcAccountId;
+            this.xFcDate = request.xFcDate;
+            this.xFcTraceId = request.xFcTraceId;
+            this.limit = request.limit;
+            this.startVersion = request.startVersion;
         } 
 
         /**

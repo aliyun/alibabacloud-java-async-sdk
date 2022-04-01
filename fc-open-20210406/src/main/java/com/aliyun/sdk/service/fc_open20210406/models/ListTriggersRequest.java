@@ -154,17 +154,17 @@ public class ListTriggersRequest extends Request {
             super();
         } 
 
-        private Builder(ListTriggersRequest response) {
-            super(response);
-            this.serviceName = response.serviceName;
-            this.functionName = response.functionName;
-            this.xFcAccountId = response.xFcAccountId;
-            this.xFcDate = response.xFcDate;
-            this.xFcTraceId = response.xFcTraceId;
-            this.limit = response.limit;
-            this.nextToken = response.nextToken;
-            this.prefix = response.prefix;
-            this.startKey = response.startKey;
+        private Builder(ListTriggersRequest request) {
+            super(request);
+            this.serviceName = request.serviceName;
+            this.functionName = request.functionName;
+            this.xFcAccountId = request.xFcAccountId;
+            this.xFcDate = request.xFcDate;
+            this.xFcTraceId = request.xFcTraceId;
+            this.limit = request.limit;
+            this.nextToken = request.nextToken;
+            this.prefix = request.prefix;
+            this.startKey = request.startKey;
         } 
 
         /**

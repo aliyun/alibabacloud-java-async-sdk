@@ -126,15 +126,15 @@ public class UpdateCustomDomainRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateCustomDomainRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.xFcAccountId = response.xFcAccountId;
-            this.xFcDate = response.xFcDate;
-            this.xFcTraceId = response.xFcTraceId;
-            this.certConfig = response.certConfig;
-            this.protocol = response.protocol;
-            this.routeConfig = response.routeConfig;
+        private Builder(UpdateCustomDomainRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.xFcAccountId = request.xFcAccountId;
+            this.xFcDate = request.xFcDate;
+            this.xFcTraceId = request.xFcTraceId;
+            this.certConfig = request.certConfig;
+            this.protocol = request.protocol;
+            this.routeConfig = request.routeConfig;
         } 
 
         /**

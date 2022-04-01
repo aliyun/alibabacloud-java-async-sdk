@@ -106,6 +106,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListServicesResponse> listServices(ListServicesRequest request);
 
+    CompletableFuture<ListStatefulAsyncInvocationFunctionsResponse> listStatefulAsyncInvocationFunctions(ListStatefulAsyncInvocationFunctionsRequest request);
+
     CompletableFuture<ListStatefulAsyncInvocationsResponse> listStatefulAsyncInvocations(ListStatefulAsyncInvocationsRequest request);
 
     CompletableFuture<ListTaggedResourcesResponse> listTaggedResources(ListTaggedResourcesRequest request);

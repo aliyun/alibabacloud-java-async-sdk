@@ -88,12 +88,12 @@ public class DeleteCustomDomainRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteCustomDomainRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.xFcAccountId = response.xFcAccountId;
-            this.xFcDate = response.xFcDate;
-            this.xFcTraceId = response.xFcTraceId;
+        private Builder(DeleteCustomDomainRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.xFcAccountId = request.xFcAccountId;
+            this.xFcDate = request.xFcDate;
+            this.xFcTraceId = request.xFcTraceId;
         } 
 
         /**

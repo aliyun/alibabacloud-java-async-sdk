@@ -114,14 +114,14 @@ public class PublishServiceVersionRequest extends Request {
             super();
         } 
 
-        private Builder(PublishServiceVersionRequest response) {
-            super(response);
-            this.serviceName = response.serviceName;
-            this.ifMatch = response.ifMatch;
-            this.xFcAccountId = response.xFcAccountId;
-            this.xFcDate = response.xFcDate;
-            this.xFcTraceId = response.xFcTraceId;
-            this.description = response.description;
+        private Builder(PublishServiceVersionRequest request) {
+            super(request);
+            this.serviceName = request.serviceName;
+            this.ifMatch = request.ifMatch;
+            this.xFcAccountId = request.xFcAccountId;
+            this.xFcDate = request.xFcDate;
+            this.xFcTraceId = request.xFcTraceId;
+            this.description = request.description;
         } 
 
         /**

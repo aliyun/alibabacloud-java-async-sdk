@@ -126,15 +126,15 @@ public class CreateCustomDomainRequest extends Request {
             super();
         } 
 
-        private Builder(CreateCustomDomainRequest response) {
-            super(response);
-            this.xFcAccountId = response.xFcAccountId;
-            this.xFcDate = response.xFcDate;
-            this.xFcTraceId = response.xFcTraceId;
-            this.certConfig = response.certConfig;
-            this.domainName = response.domainName;
-            this.protocol = response.protocol;
-            this.routeConfig = response.routeConfig;
+        private Builder(CreateCustomDomainRequest request) {
+            super(request);
+            this.xFcAccountId = request.xFcAccountId;
+            this.xFcDate = request.xFcDate;
+            this.xFcTraceId = request.xFcTraceId;
+            this.certConfig = request.certConfig;
+            this.domainName = request.domainName;
+            this.protocol = request.protocol;
+            this.routeConfig = request.routeConfig;
         } 
 
         /**

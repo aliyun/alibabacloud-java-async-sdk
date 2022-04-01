@@ -167,18 +167,18 @@ public class PutFunctionAsyncInvokeConfigRequest extends Request {
             super();
         } 
 
-        private Builder(PutFunctionAsyncInvokeConfigRequest response) {
-            super(response);
-            this.serviceName = response.serviceName;
-            this.functionName = response.functionName;
-            this.xFcAccountId = response.xFcAccountId;
-            this.xFcDate = response.xFcDate;
-            this.xFcTraceId = response.xFcTraceId;
-            this.destinationConfig = response.destinationConfig;
-            this.maxAsyncEventAgeInSeconds = response.maxAsyncEventAgeInSeconds;
-            this.maxAsyncRetryAttempts = response.maxAsyncRetryAttempts;
-            this.statefulInvocation = response.statefulInvocation;
-            this.qualifier = response.qualifier;
+        private Builder(PutFunctionAsyncInvokeConfigRequest request) {
+            super(request);
+            this.serviceName = request.serviceName;
+            this.functionName = request.functionName;
+            this.xFcAccountId = request.xFcAccountId;
+            this.xFcDate = request.xFcDate;
+            this.xFcTraceId = request.xFcTraceId;
+            this.destinationConfig = request.destinationConfig;
+            this.maxAsyncEventAgeInSeconds = request.maxAsyncEventAgeInSeconds;
+            this.maxAsyncRetryAttempts = request.maxAsyncRetryAttempts;
+            this.statefulInvocation = request.statefulInvocation;
+            this.qualifier = request.qualifier;
         } 
 
         /**

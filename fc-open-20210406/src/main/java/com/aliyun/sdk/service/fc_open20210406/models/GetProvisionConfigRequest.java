@@ -116,14 +116,14 @@ public class GetProvisionConfigRequest extends Request {
             super();
         } 
 
-        private Builder(GetProvisionConfigRequest response) {
-            super(response);
-            this.serviceName = response.serviceName;
-            this.functionName = response.functionName;
-            this.xFcAccountId = response.xFcAccountId;
-            this.xFcDate = response.xFcDate;
-            this.xFcTraceId = response.xFcTraceId;
-            this.qualifier = response.qualifier;
+        private Builder(GetProvisionConfigRequest request) {
+            super(request);
+            this.serviceName = request.serviceName;
+            this.functionName = request.functionName;
+            this.xFcAccountId = request.xFcAccountId;
+            this.xFcDate = request.xFcDate;
+            this.xFcTraceId = request.xFcTraceId;
+            this.qualifier = request.qualifier;
         } 
 
         /**

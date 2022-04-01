@@ -347,32 +347,32 @@ public class UpdateFunctionRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateFunctionRequest response) {
-            super(response);
-            this.serviceName = response.serviceName;
-            this.functionName = response.functionName;
-            this.ifMatch = response.ifMatch;
-            this.xFcAccountId = response.xFcAccountId;
-            this.xFcCodeChecksum = response.xFcCodeChecksum;
-            this.xFcDate = response.xFcDate;
-            this.xFcTraceId = response.xFcTraceId;
-            this.instanceConcurrency = response.instanceConcurrency;
-            this.caPort = response.caPort;
-            this.code = response.code;
-            this.customContainerConfig = response.customContainerConfig;
-            this.customDNS = response.customDNS;
-            this.customRuntimeConfig = response.customRuntimeConfig;
-            this.description = response.description;
-            this.environmentVariables = response.environmentVariables;
-            this.handler = response.handler;
-            this.initializationTimeout = response.initializationTimeout;
-            this.initializer = response.initializer;
-            this.instanceLifecycleConfig = response.instanceLifecycleConfig;
-            this.instanceType = response.instanceType;
-            this.layers = response.layers;
-            this.memorySize = response.memorySize;
-            this.runtime = response.runtime;
-            this.timeout = response.timeout;
+        private Builder(UpdateFunctionRequest request) {
+            super(request);
+            this.serviceName = request.serviceName;
+            this.functionName = request.functionName;
+            this.ifMatch = request.ifMatch;
+            this.xFcAccountId = request.xFcAccountId;
+            this.xFcCodeChecksum = request.xFcCodeChecksum;
+            this.xFcDate = request.xFcDate;
+            this.xFcTraceId = request.xFcTraceId;
+            this.instanceConcurrency = request.instanceConcurrency;
+            this.caPort = request.caPort;
+            this.code = request.code;
+            this.customContainerConfig = request.customContainerConfig;
+            this.customDNS = request.customDNS;
+            this.customRuntimeConfig = request.customRuntimeConfig;
+            this.description = request.description;
+            this.environmentVariables = request.environmentVariables;
+            this.handler = request.handler;
+            this.initializationTimeout = request.initializationTimeout;
+            this.initializer = request.initializer;
+            this.instanceLifecycleConfig = request.instanceLifecycleConfig;
+            this.instanceType = request.instanceType;
+            this.layers = request.layers;
+            this.memorySize = request.memorySize;
+            this.runtime = request.runtime;
+            this.timeout = request.timeout;
         } 
 
         /**

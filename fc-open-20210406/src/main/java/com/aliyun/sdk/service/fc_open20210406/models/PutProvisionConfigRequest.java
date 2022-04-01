@@ -156,17 +156,17 @@ public class PutProvisionConfigRequest extends Request {
             super();
         } 
 
-        private Builder(PutProvisionConfigRequest response) {
-            super(response);
-            this.serviceName = response.serviceName;
-            this.functionName = response.functionName;
-            this.xFcAccountId = response.xFcAccountId;
-            this.xFcDate = response.xFcDate;
-            this.xFcTraceId = response.xFcTraceId;
-            this.scheduledActions = response.scheduledActions;
-            this.target = response.target;
-            this.targetTrackingPolicies = response.targetTrackingPolicies;
-            this.qualifier = response.qualifier;
+        private Builder(PutProvisionConfigRequest request) {
+            super(request);
+            this.serviceName = request.serviceName;
+            this.functionName = request.functionName;
+            this.xFcAccountId = request.xFcAccountId;
+            this.xFcDate = request.xFcDate;
+            this.xFcTraceId = request.xFcTraceId;
+            this.scheduledActions = request.scheduledActions;
+            this.target = request.target;
+            this.targetTrackingPolicies = request.targetTrackingPolicies;
+            this.qualifier = request.qualifier;
         } 
 
         /**

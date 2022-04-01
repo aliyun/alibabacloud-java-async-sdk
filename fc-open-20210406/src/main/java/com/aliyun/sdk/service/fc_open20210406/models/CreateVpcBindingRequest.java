@@ -100,13 +100,13 @@ public class CreateVpcBindingRequest extends Request {
             super();
         } 
 
-        private Builder(CreateVpcBindingRequest response) {
-            super(response);
-            this.serviceName = response.serviceName;
-            this.xFcAccountId = response.xFcAccountId;
-            this.xFcDate = response.xFcDate;
-            this.xFcTraceId = response.xFcTraceId;
-            this.vpcId = response.vpcId;
+        private Builder(CreateVpcBindingRequest request) {
+            super(request);
+            this.serviceName = request.serviceName;
+            this.xFcAccountId = request.xFcAccountId;
+            this.xFcDate = request.xFcDate;
+            this.xFcTraceId = request.xFcTraceId;
+            this.vpcId = request.vpcId;
         } 
 
         /**

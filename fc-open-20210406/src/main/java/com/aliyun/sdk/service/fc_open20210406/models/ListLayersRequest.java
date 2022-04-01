@@ -126,15 +126,15 @@ public class ListLayersRequest extends Request {
             super();
         } 
 
-        private Builder(ListLayersRequest response) {
-            super(response);
-            this.xFcAccountId = response.xFcAccountId;
-            this.xFcDate = response.xFcDate;
-            this.xFcTraceId = response.xFcTraceId;
-            this.limit = response.limit;
-            this.nextToken = response.nextToken;
-            this.prefix = response.prefix;
-            this.startKey = response.startKey;
+        private Builder(ListLayersRequest request) {
+            super(request);
+            this.xFcAccountId = request.xFcAccountId;
+            this.xFcDate = request.xFcDate;
+            this.xFcTraceId = request.xFcTraceId;
+            this.limit = request.limit;
+            this.nextToken = request.nextToken;
+            this.prefix = request.prefix;
+            this.startKey = request.startKey;
         } 
 
         /**

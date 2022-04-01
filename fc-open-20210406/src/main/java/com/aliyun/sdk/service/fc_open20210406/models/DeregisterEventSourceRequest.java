@@ -128,15 +128,15 @@ public class DeregisterEventSourceRequest extends Request {
             super();
         } 
 
-        private Builder(DeregisterEventSourceRequest response) {
-            super(response);
-            this.serviceName = response.serviceName;
-            this.functionName = response.functionName;
-            this.sourceArn = response.sourceArn;
-            this.xFcAccountId = response.xFcAccountId;
-            this.xFcDate = response.xFcDate;
-            this.xFcTraceId = response.xFcTraceId;
-            this.qualifier = response.qualifier;
+        private Builder(DeregisterEventSourceRequest request) {
+            super(request);
+            this.serviceName = request.serviceName;
+            this.functionName = request.functionName;
+            this.sourceArn = request.sourceArn;
+            this.xFcAccountId = request.xFcAccountId;
+            this.xFcDate = request.xFcDate;
+            this.xFcTraceId = request.xFcTraceId;
+            this.qualifier = request.qualifier;
         } 
 
         /**

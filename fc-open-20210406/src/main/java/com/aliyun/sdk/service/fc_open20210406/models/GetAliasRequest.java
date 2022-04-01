@@ -102,13 +102,13 @@ public class GetAliasRequest extends Request {
             super();
         } 
 
-        private Builder(GetAliasRequest response) {
-            super(response);
-            this.serviceName = response.serviceName;
-            this.aliasName = response.aliasName;
-            this.xFcAccountId = response.xFcAccountId;
-            this.xFcDate = response.xFcDate;
-            this.xFcTraceId = response.xFcTraceId;
+        private Builder(GetAliasRequest request) {
+            super(request);
+            this.serviceName = request.serviceName;
+            this.aliasName = request.aliasName;
+            this.xFcAccountId = request.xFcAccountId;
+            this.xFcDate = request.xFcDate;
+            this.xFcTraceId = request.xFcTraceId;
         } 
 
         /**

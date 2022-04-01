@@ -74,11 +74,11 @@ public class GetAccountSettingsRequest extends Request {
             super();
         } 
 
-        private Builder(GetAccountSettingsRequest response) {
-            super(response);
-            this.xFcAccountId = response.xFcAccountId;
-            this.xFcDate = response.xFcDate;
-            this.xFcTraceId = response.xFcTraceId;
+        private Builder(GetAccountSettingsRequest request) {
+            super(request);
+            this.xFcAccountId = request.xFcAccountId;
+            this.xFcDate = request.xFcDate;
+            this.xFcTraceId = request.xFcTraceId;
         } 
 
         /**

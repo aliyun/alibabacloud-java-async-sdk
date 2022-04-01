@@ -12,12 +12,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Code</p>
  */
 public class Code extends TeaModel {
-    @NameInMap("codeCheckSum")
-    private String codeCheckSum;
-
-    @NameInMap("err")
-    private String err;
-
     @NameInMap("ossBucketName")
     private String ossBucketName;
 
@@ -28,8 +22,6 @@ public class Code extends TeaModel {
     private String zipFile;
 
     private Code(Builder builder) {
-        this.codeCheckSum = builder.codeCheckSum;
-        this.err = builder.err;
         this.ossBucketName = builder.ossBucketName;
         this.ossObjectName = builder.ossObjectName;
         this.zipFile = builder.zipFile;
@@ -41,20 +33,6 @@ public class Code extends TeaModel {
 
     public static Code create() {
         return builder().build();
-    }
-
-    /**
-     * @return codeCheckSum
-     */
-    public String getCodeCheckSum() {
-        return this.codeCheckSum;
-    }
-
-    /**
-     * @return err
-     */
-    public String getErr() {
-        return this.err;
     }
 
     /**
@@ -79,27 +57,9 @@ public class Code extends TeaModel {
     }
 
     public static final class Builder {
-        private String codeCheckSum; 
-        private String err; 
         private String ossBucketName; 
         private String ossObjectName; 
         private String zipFile; 
-
-        /**
-         * codeCheckSum
-         */
-        public Builder codeCheckSum(String codeCheckSum) {
-            this.codeCheckSum = codeCheckSum;
-            return this;
-        }
-
-        /**
-         * error
-         */
-        public Builder err(String err) {
-            this.err = err;
-            return this;
-        }
 
         /**
          * 函数代码包的OSS bucket name

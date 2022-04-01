@@ -269,26 +269,26 @@ public class ListStatefulAsyncInvocationsRequest extends Request {
             super();
         } 
 
-        private Builder(ListStatefulAsyncInvocationsRequest response) {
-            super(response);
-            this.serviceName = response.serviceName;
-            this.functionName = response.functionName;
-            this.accountID = response.accountID;
-            this.xFcAccountId = response.xFcAccountId;
-            this.xFcCodeChecksum = response.xFcCodeChecksum;
-            this.xFcDate = response.xFcDate;
-            this.xFcInvocationType = response.xFcInvocationType;
-            this.xFcLogType = response.xFcLogType;
-            this.xFcTraceId = response.xFcTraceId;
-            this.includePayload = response.includePayload;
-            this.invocationIdPrefix = response.invocationIdPrefix;
-            this.limit = response.limit;
-            this.nextToken = response.nextToken;
-            this.qualifier = response.qualifier;
-            this.sortOrderByTime = response.sortOrderByTime;
-            this.startedTimeBegin = response.startedTimeBegin;
-            this.startedTimeEnd = response.startedTimeEnd;
-            this.status = response.status;
+        private Builder(ListStatefulAsyncInvocationsRequest request) {
+            super(request);
+            this.serviceName = request.serviceName;
+            this.functionName = request.functionName;
+            this.accountID = request.accountID;
+            this.xFcAccountId = request.xFcAccountId;
+            this.xFcCodeChecksum = request.xFcCodeChecksum;
+            this.xFcDate = request.xFcDate;
+            this.xFcInvocationType = request.xFcInvocationType;
+            this.xFcLogType = request.xFcLogType;
+            this.xFcTraceId = request.xFcTraceId;
+            this.includePayload = request.includePayload;
+            this.invocationIdPrefix = request.invocationIdPrefix;
+            this.limit = request.limit;
+            this.nextToken = request.nextToken;
+            this.qualifier = request.qualifier;
+            this.sortOrderByTime = request.sortOrderByTime;
+            this.startedTimeBegin = request.startedTimeBegin;
+            this.startedTimeEnd = request.startedTimeEnd;
+            this.status = request.status;
         } 
 
         /**

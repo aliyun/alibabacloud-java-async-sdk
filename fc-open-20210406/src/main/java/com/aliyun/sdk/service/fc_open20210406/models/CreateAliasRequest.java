@@ -142,16 +142,16 @@ public class CreateAliasRequest extends Request {
             super();
         } 
 
-        private Builder(CreateAliasRequest response) {
-            super(response);
-            this.serviceName = response.serviceName;
-            this.xFcAccountId = response.xFcAccountId;
-            this.xFcDate = response.xFcDate;
-            this.xFcTraceId = response.xFcTraceId;
-            this.additionalVersionWeight = response.additionalVersionWeight;
-            this.aliasName = response.aliasName;
-            this.description = response.description;
-            this.versionId = response.versionId;
+        private Builder(CreateAliasRequest request) {
+            super(request);
+            this.serviceName = request.serviceName;
+            this.xFcAccountId = request.xFcAccountId;
+            this.xFcDate = request.xFcDate;
+            this.xFcTraceId = request.xFcTraceId;
+            this.additionalVersionWeight = request.additionalVersionWeight;
+            this.aliasName = request.aliasName;
+            this.description = request.description;
+            this.versionId = request.versionId;
         } 
 
         /**

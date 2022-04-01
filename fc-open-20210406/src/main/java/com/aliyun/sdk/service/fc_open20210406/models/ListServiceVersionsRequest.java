@@ -140,16 +140,16 @@ public class ListServiceVersionsRequest extends Request {
             super();
         } 
 
-        private Builder(ListServiceVersionsRequest response) {
-            super(response);
-            this.serviceName = response.serviceName;
-            this.xFcAccountId = response.xFcAccountId;
-            this.xFcDate = response.xFcDate;
-            this.xFcTraceId = response.xFcTraceId;
-            this.direction = response.direction;
-            this.limit = response.limit;
-            this.nextToken = response.nextToken;
-            this.startKey = response.startKey;
+        private Builder(ListServiceVersionsRequest request) {
+            super(request);
+            this.serviceName = request.serviceName;
+            this.xFcAccountId = request.xFcAccountId;
+            this.xFcDate = request.xFcDate;
+            this.xFcTraceId = request.xFcTraceId;
+            this.direction = request.direction;
+            this.limit = request.limit;
+            this.nextToken = request.nextToken;
+            this.startKey = request.startKey;
         } 
 
         /**

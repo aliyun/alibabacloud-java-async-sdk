@@ -126,15 +126,15 @@ public class StopStatefulAsyncInvocationRequest extends Request {
             super();
         } 
 
-        private Builder(StopStatefulAsyncInvocationRequest response) {
-            super(response);
-            this.serviceName = response.serviceName;
-            this.functionName = response.functionName;
-            this.invocationId = response.invocationId;
-            this.xFcAccountId = response.xFcAccountId;
-            this.xFcDate = response.xFcDate;
-            this.xFcTraceId = response.xFcTraceId;
-            this.qualifier = response.qualifier;
+        private Builder(StopStatefulAsyncInvocationRequest request) {
+            super(request);
+            this.serviceName = request.serviceName;
+            this.functionName = request.functionName;
+            this.invocationId = request.invocationId;
+            this.xFcAccountId = request.xFcAccountId;
+            this.xFcDate = request.xFcDate;
+            this.xFcTraceId = request.xFcTraceId;
+            this.qualifier = request.qualifier;
         } 
 
         /**

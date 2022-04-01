@@ -180,19 +180,19 @@ public class ListFunctionAsyncInvokeConfigsRequest extends Request {
             super();
         } 
 
-        private Builder(ListFunctionAsyncInvokeConfigsRequest response) {
-            super(response);
-            this.serviceName = response.serviceName;
-            this.functionName = response.functionName;
-            this.accountID = response.accountID;
-            this.xFcAccountId = response.xFcAccountId;
-            this.xFcCodeChecksum = response.xFcCodeChecksum;
-            this.xFcDate = response.xFcDate;
-            this.xFcInvocationType = response.xFcInvocationType;
-            this.xFcLogType = response.xFcLogType;
-            this.xFcTraceId = response.xFcTraceId;
-            this.limit = response.limit;
-            this.nextToken = response.nextToken;
+        private Builder(ListFunctionAsyncInvokeConfigsRequest request) {
+            super(request);
+            this.serviceName = request.serviceName;
+            this.functionName = request.functionName;
+            this.accountID = request.accountID;
+            this.xFcAccountId = request.xFcAccountId;
+            this.xFcCodeChecksum = request.xFcCodeChecksum;
+            this.xFcDate = request.xFcDate;
+            this.xFcInvocationType = request.xFcInvocationType;
+            this.xFcLogType = request.xFcLogType;
+            this.xFcTraceId = request.xFcTraceId;
+            this.limit = request.limit;
+            this.nextToken = request.nextToken;
         } 
 
         /**

@@ -87,12 +87,12 @@ public class ListVpcBindingsRequest extends Request {
             super();
         } 
 
-        private Builder(ListVpcBindingsRequest response) {
-            super(response);
-            this.serviceName = response.serviceName;
-            this.xFcAccountId = response.xFcAccountId;
-            this.xFcDate = response.xFcDate;
-            this.xFcTraceId = response.xFcTraceId;
+        private Builder(ListVpcBindingsRequest request) {
+            super(request);
+            this.serviceName = request.serviceName;
+            this.xFcAccountId = request.xFcAccountId;
+            this.xFcDate = request.xFcDate;
+            this.xFcTraceId = request.xFcTraceId;
         } 
 
         /**

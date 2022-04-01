@@ -7,15 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListFunctionsRequest} extends {@link RequestModel}
+ * {@link ListStatefulAsyncInvocationFunctionsRequest} extends {@link RequestModel}
  *
- * <p>ListFunctionsRequest</p>
+ * <p>ListStatefulAsyncInvocationFunctionsRequest</p>
  */
-public class ListFunctionsRequest extends Request {
-    @Path
-    @NameInMap("serviceName")
-    private String serviceName;
-
+public class ListStatefulAsyncInvocationFunctionsRequest extends Request {
     @Header
     @NameInMap("X-Fc-Account-Id")
     private String xFcAccountId;
@@ -30,55 +26,33 @@ public class ListFunctionsRequest extends Request {
 
     @Query
     @NameInMap("limit")
+    @Validation(maximum = 100)
     private Integer limit;
 
     @Query
     @NameInMap("nextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("prefix")
-    private String prefix;
-
-    @Query
-    @NameInMap("qualifier")
-    private String qualifier;
-
-    @Query
-    @NameInMap("startKey")
-    private String startKey;
-
-    private ListFunctionsRequest(Builder builder) {
+    private ListStatefulAsyncInvocationFunctionsRequest(Builder builder) {
         super(builder);
-        this.serviceName = builder.serviceName;
         this.xFcAccountId = builder.xFcAccountId;
         this.xFcDate = builder.xFcDate;
         this.xFcTraceId = builder.xFcTraceId;
         this.limit = builder.limit;
         this.nextToken = builder.nextToken;
-        this.prefix = builder.prefix;
-        this.qualifier = builder.qualifier;
-        this.startKey = builder.startKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ListFunctionsRequest create() {
+    public static ListStatefulAsyncInvocationFunctionsRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return serviceName
-     */
-    public String getServiceName() {
-        return this.serviceName;
     }
 
     /**
@@ -116,66 +90,28 @@ public class ListFunctionsRequest extends Request {
         return this.nextToken;
     }
 
-    /**
-     * @return prefix
-     */
-    public String getPrefix() {
-        return this.prefix;
-    }
-
-    /**
-     * @return qualifier
-     */
-    public String getQualifier() {
-        return this.qualifier;
-    }
-
-    /**
-     * @return startKey
-     */
-    public String getStartKey() {
-        return this.startKey;
-    }
-
-    public static final class Builder extends Request.Builder<ListFunctionsRequest, Builder> {
-        private String serviceName; 
+    public static final class Builder extends Request.Builder<ListStatefulAsyncInvocationFunctionsRequest, Builder> {
         private String xFcAccountId; 
         private String xFcDate; 
         private String xFcTraceId; 
         private Integer limit; 
         private String nextToken; 
-        private String prefix; 
-        private String qualifier; 
-        private String startKey; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListFunctionsRequest request) {
+        private Builder(ListStatefulAsyncInvocationFunctionsRequest request) {
             super(request);
-            this.serviceName = request.serviceName;
             this.xFcAccountId = request.xFcAccountId;
             this.xFcDate = request.xFcDate;
             this.xFcTraceId = request.xFcTraceId;
             this.limit = request.limit;
             this.nextToken = request.nextToken;
-            this.prefix = request.prefix;
-            this.qualifier = request.qualifier;
-            this.startKey = request.startKey;
         } 
 
         /**
-         * service名称
-         */
-        public Builder serviceName(String serviceName) {
-            this.putPathParameter("serviceName", serviceName);
-            this.serviceName = serviceName;
-            return this;
-        }
-
-        /**
-         * X-Fc-Account-Id.
+         * 您的阿里云账号（主账号）ID。
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -184,7 +120,7 @@ public class ListFunctionsRequest extends Request {
         }
 
         /**
-         * X-Fc-Date.
+         * 发起API调用的日期，用于对请求签名。格式为yyyy-mm-ddhh:mm:ss。
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -193,7 +129,7 @@ public class ListFunctionsRequest extends Request {
         }
 
         /**
-         * X-Fc-Trace-Id.
+         * 用于链路追踪的ID。
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);
@@ -202,7 +138,7 @@ public class ListFunctionsRequest extends Request {
         }
 
         /**
-         * 限定此次返回资源的数量。如果不设定，默认返回20，最大不能超过100。返回结果可能小于指定的数量，但不会多于指定的数量
+         * 限定此次返回资源的数量。如果不设定，默认返回20，最大不能超过100。返回结果可以小于指定的数量，但不会多于指定的数量。
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("limit", limit);
@@ -211,7 +147,7 @@ public class ListFunctionsRequest extends Request {
         }
 
         /**
-         * 用来返回更多结果。第一次查询不需要提供这个参数，后续查询的token从返回结果中获取
+         * 用来标记当前开始读取的位置，置空表示从头开始。第一次查询不需要提供这个参数，后续查询的Token从前一次查询的返回结果中获取。
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -219,36 +155,9 @@ public class ListFunctionsRequest extends Request {
             return this;
         }
 
-        /**
-         * 限定返回的资源名称必须以prefix作为前缀
-         */
-        public Builder prefix(String prefix) {
-            this.putQueryParameter("prefix", prefix);
-            this.prefix = prefix;
-            return this;
-        }
-
-        /**
-         * service版本, 可以是versionId或者aliasName
-         */
-        public Builder qualifier(String qualifier) {
-            this.putQueryParameter("qualifier", qualifier);
-            this.qualifier = qualifier;
-            return this;
-        }
-
-        /**
-         * 设定结果从startKey之后（包括startKey）按字母排序的第一个开始返回
-         */
-        public Builder startKey(String startKey) {
-            this.putQueryParameter("startKey", startKey);
-            this.startKey = startKey;
-            return this;
-        }
-
         @Override
-        public ListFunctionsRequest build() {
-            return new ListFunctionsRequest(this);
+        public ListStatefulAsyncInvocationFunctionsRequest build() {
+            return new ListStatefulAsyncInvocationFunctionsRequest(this);
         } 
 
     } 

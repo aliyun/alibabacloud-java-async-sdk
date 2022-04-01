@@ -128,15 +128,15 @@ public class RegisterEventSourceRequest extends Request {
             super();
         } 
 
-        private Builder(RegisterEventSourceRequest response) {
-            super(response);
-            this.serviceName = response.serviceName;
-            this.functionName = response.functionName;
-            this.xFcAccountId = response.xFcAccountId;
-            this.xFcDate = response.xFcDate;
-            this.xFcTraceId = response.xFcTraceId;
-            this.sourceArn = response.sourceArn;
-            this.qualifier = response.qualifier;
+        private Builder(RegisterEventSourceRequest request) {
+            super(request);
+            this.serviceName = request.serviceName;
+            this.functionName = request.functionName;
+            this.xFcAccountId = request.xFcAccountId;
+            this.xFcDate = request.xFcDate;
+            this.xFcTraceId = request.xFcTraceId;
+            this.sourceArn = request.sourceArn;
+            this.qualifier = request.qualifier;
         } 
 
         /**

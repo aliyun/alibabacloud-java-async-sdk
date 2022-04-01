@@ -88,12 +88,12 @@ public class GetResourceTagsRequest extends Request {
             super();
         } 
 
-        private Builder(GetResourceTagsRequest response) {
-            super(response);
-            this.xFcAccountId = response.xFcAccountId;
-            this.xFcDate = response.xFcDate;
-            this.xFcTraceId = response.xFcTraceId;
-            this.resourceArn = response.resourceArn;
+        private Builder(GetResourceTagsRequest request) {
+            super(request);
+            this.xFcAccountId = request.xFcAccountId;
+            this.xFcDate = request.xFcDate;
+            this.xFcTraceId = request.xFcTraceId;
+            this.resourceArn = request.resourceArn;
         } 
 
         /**

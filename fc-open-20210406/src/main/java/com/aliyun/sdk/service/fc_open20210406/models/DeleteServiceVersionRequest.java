@@ -102,13 +102,13 @@ public class DeleteServiceVersionRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteServiceVersionRequest response) {
-            super(response);
-            this.serviceName = response.serviceName;
-            this.versionId = response.versionId;
-            this.xFcAccountId = response.xFcAccountId;
-            this.xFcDate = response.xFcDate;
-            this.xFcTraceId = response.xFcTraceId;
+        private Builder(DeleteServiceVersionRequest request) {
+            super(request);
+            this.serviceName = request.serviceName;
+            this.versionId = request.versionId;
+            this.xFcAccountId = request.xFcAccountId;
+            this.xFcDate = request.xFcDate;
+            this.xFcTraceId = request.xFcTraceId;
         } 
 
         /**

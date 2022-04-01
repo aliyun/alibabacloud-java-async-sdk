@@ -196,20 +196,20 @@ public class CreateTriggerRequest extends Request {
             super();
         } 
 
-        private Builder(CreateTriggerRequest response) {
-            super(response);
-            this.serviceName = response.serviceName;
-            this.functionName = response.functionName;
-            this.xFcAccountId = response.xFcAccountId;
-            this.xFcDate = response.xFcDate;
-            this.xFcTraceId = response.xFcTraceId;
-            this.description = response.description;
-            this.invocationRole = response.invocationRole;
-            this.qualifier = response.qualifier;
-            this.sourceArn = response.sourceArn;
-            this.triggerConfig = response.triggerConfig;
-            this.triggerName = response.triggerName;
-            this.triggerType = response.triggerType;
+        private Builder(CreateTriggerRequest request) {
+            super(request);
+            this.serviceName = request.serviceName;
+            this.functionName = request.functionName;
+            this.xFcAccountId = request.xFcAccountId;
+            this.xFcDate = request.xFcDate;
+            this.xFcTraceId = request.xFcTraceId;
+            this.description = request.description;
+            this.invocationRole = request.invocationRole;
+            this.qualifier = request.qualifier;
+            this.sourceArn = request.sourceArn;
+            this.triggerConfig = request.triggerConfig;
+            this.triggerName = request.triggerName;
+            this.triggerType = request.triggerType;
         } 
 
         /**

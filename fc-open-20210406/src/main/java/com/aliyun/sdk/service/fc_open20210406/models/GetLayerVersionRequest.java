@@ -102,13 +102,13 @@ public class GetLayerVersionRequest extends Request {
             super();
         } 
 
-        private Builder(GetLayerVersionRequest response) {
-            super(response);
-            this.layerName = response.layerName;
-            this.version = response.version;
-            this.xFcAccountId = response.xFcAccountId;
-            this.xFcDate = response.xFcDate;
-            this.xFcTraceId = response.xFcTraceId;
+        private Builder(GetLayerVersionRequest request) {
+            super(request);
+            this.layerName = request.layerName;
+            this.version = request.version;
+            this.xFcAccountId = request.xFcAccountId;
+            this.xFcDate = request.xFcDate;
+            this.xFcTraceId = request.xFcTraceId;
         } 
 
         /**

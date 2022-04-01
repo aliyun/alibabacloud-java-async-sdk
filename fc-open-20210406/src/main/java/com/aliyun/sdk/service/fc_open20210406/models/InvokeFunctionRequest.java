@@ -167,18 +167,18 @@ public class InvokeFunctionRequest extends Request {
             super();
         } 
 
-        private Builder(InvokeFunctionRequest response) {
-            super(response);
-            this.serviceName = response.serviceName;
-            this.functionName = response.functionName;
-            this.xFcAccountId = response.xFcAccountId;
-            this.xFcDate = response.xFcDate;
-            this.xFcInvocationType = response.xFcInvocationType;
-            this.xFcLogType = response.xFcLogType;
-            this.xFcStatefulAsyncInvocationId = response.xFcStatefulAsyncInvocationId;
-            this.xFcTraceId = response.xFcTraceId;
-            this.body = response.body;
-            this.qualifier = response.qualifier;
+        private Builder(InvokeFunctionRequest request) {
+            super(request);
+            this.serviceName = request.serviceName;
+            this.functionName = request.functionName;
+            this.xFcAccountId = request.xFcAccountId;
+            this.xFcDate = request.xFcDate;
+            this.xFcInvocationType = request.xFcInvocationType;
+            this.xFcLogType = request.xFcLogType;
+            this.xFcStatefulAsyncInvocationId = request.xFcStatefulAsyncInvocationId;
+            this.xFcTraceId = request.xFcTraceId;
+            this.body = request.body;
+            this.qualifier = request.qualifier;
         } 
 
         /**

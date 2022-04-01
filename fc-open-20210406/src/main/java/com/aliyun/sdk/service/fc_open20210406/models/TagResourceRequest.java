@@ -100,13 +100,13 @@ public class TagResourceRequest extends Request {
             super();
         } 
 
-        private Builder(TagResourceRequest response) {
-            super(response);
-            this.xFcAccountId = response.xFcAccountId;
-            this.xFcDate = response.xFcDate;
-            this.xFcTraceId = response.xFcTraceId;
-            this.resourceArn = response.resourceArn;
-            this.tags = response.tags;
+        private Builder(TagResourceRequest request) {
+            super(request);
+            this.xFcAccountId = request.xFcAccountId;
+            this.xFcDate = request.xFcDate;
+            this.xFcTraceId = request.xFcTraceId;
+            this.resourceArn = request.resourceArn;
+            this.tags = request.tags;
         } 
 
         /**

@@ -114,14 +114,14 @@ public class UntagResourceRequest extends Request {
             super();
         } 
 
-        private Builder(UntagResourceRequest response) {
-            super(response);
-            this.xFcAccountId = response.xFcAccountId;
-            this.xFcDate = response.xFcDate;
-            this.xFcTraceId = response.xFcTraceId;
-            this.all = response.all;
-            this.resourceArn = response.resourceArn;
-            this.tagKeys = response.tagKeys;
+        private Builder(UntagResourceRequest request) {
+            super(request);
+            this.xFcAccountId = request.xFcAccountId;
+            this.xFcDate = request.xFcDate;
+            this.xFcTraceId = request.xFcTraceId;
+            this.all = request.all;
+            this.resourceArn = request.resourceArn;
+            this.tagKeys = request.tagKeys;
         } 
 
         /**

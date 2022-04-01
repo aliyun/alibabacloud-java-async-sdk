@@ -126,15 +126,15 @@ public class DeleteFunctionOnDemandConfigRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteFunctionOnDemandConfigRequest response) {
-            super(response);
-            this.serviceName = response.serviceName;
-            this.functionName = response.functionName;
-            this.ifMatch = response.ifMatch;
-            this.xFcAccountId = response.xFcAccountId;
-            this.xFcDate = response.xFcDate;
-            this.xFcTraceId = response.xFcTraceId;
-            this.qualifier = response.qualifier;
+        private Builder(DeleteFunctionOnDemandConfigRequest request) {
+            super(request);
+            this.serviceName = request.serviceName;
+            this.functionName = request.functionName;
+            this.ifMatch = request.ifMatch;
+            this.xFcAccountId = request.xFcAccountId;
+            this.xFcDate = request.xFcDate;
+            this.xFcTraceId = request.xFcTraceId;
+            this.qualifier = request.qualifier;
         } 
 
         /**

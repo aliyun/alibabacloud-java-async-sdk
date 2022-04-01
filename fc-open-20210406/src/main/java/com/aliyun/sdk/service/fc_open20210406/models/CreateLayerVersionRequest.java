@@ -126,15 +126,15 @@ public class CreateLayerVersionRequest extends Request {
             super();
         } 
 
-        private Builder(CreateLayerVersionRequest response) {
-            super(response);
-            this.layerName = response.layerName;
-            this.xFcAccountId = response.xFcAccountId;
-            this.xFcDate = response.xFcDate;
-            this.xFcTraceId = response.xFcTraceId;
-            this.code = response.code;
-            this.compatibleRuntime = response.compatibleRuntime;
-            this.description = response.description;
+        private Builder(CreateLayerVersionRequest request) {
+            super(request);
+            this.layerName = request.layerName;
+            this.xFcAccountId = request.xFcAccountId;
+            this.xFcDate = request.xFcDate;
+            this.xFcTraceId = request.xFcTraceId;
+            this.code = request.code;
+            this.compatibleRuntime = request.compatibleRuntime;
+            this.description = request.description;
         } 
 
         /**

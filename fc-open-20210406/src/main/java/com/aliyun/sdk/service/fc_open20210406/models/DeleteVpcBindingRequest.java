@@ -100,13 +100,13 @@ public class DeleteVpcBindingRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteVpcBindingRequest response) {
-            super(response);
-            this.serviceName = response.serviceName;
-            this.vpcId = response.vpcId;
-            this.xFcAccountId = response.xFcAccountId;
-            this.xFcDate = response.xFcDate;
-            this.xFcTraceId = response.xFcTraceId;
+        private Builder(DeleteVpcBindingRequest request) {
+            super(request);
+            this.serviceName = request.serviceName;
+            this.vpcId = request.vpcId;
+            this.xFcAccountId = request.xFcAccountId;
+            this.xFcDate = request.xFcDate;
+            this.xFcTraceId = request.xFcTraceId;
         } 
 
         /**

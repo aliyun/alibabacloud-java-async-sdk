@@ -115,14 +115,14 @@ public class DeleteAliasRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteAliasRequest response) {
-            super(response);
-            this.serviceName = response.serviceName;
-            this.aliasName = response.aliasName;
-            this.ifMatch = response.ifMatch;
-            this.xFcAccountId = response.xFcAccountId;
-            this.xFcDate = response.xFcDate;
-            this.xFcTraceId = response.xFcTraceId;
+        private Builder(DeleteAliasRequest request) {
+            super(request);
+            this.serviceName = request.serviceName;
+            this.aliasName = request.aliasName;
+            this.ifMatch = request.ifMatch;
+            this.xFcAccountId = request.xFcAccountId;
+            this.xFcDate = request.xFcDate;
+            this.xFcTraceId = request.xFcTraceId;
         } 
 
         /**

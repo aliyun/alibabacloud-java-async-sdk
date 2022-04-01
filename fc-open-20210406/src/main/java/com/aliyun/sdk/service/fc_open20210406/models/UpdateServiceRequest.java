@@ -192,20 +192,20 @@ public class UpdateServiceRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateServiceRequest response) {
-            super(response);
-            this.serviceName = response.serviceName;
-            this.ifMatch = response.ifMatch;
-            this.xFcAccountId = response.xFcAccountId;
-            this.xFcDate = response.xFcDate;
-            this.xFcTraceId = response.xFcTraceId;
-            this.description = response.description;
-            this.internetAccess = response.internetAccess;
-            this.logConfig = response.logConfig;
-            this.nasConfig = response.nasConfig;
-            this.role = response.role;
-            this.tracingConfig = response.tracingConfig;
-            this.vpcConfig = response.vpcConfig;
+        private Builder(UpdateServiceRequest request) {
+            super(request);
+            this.serviceName = request.serviceName;
+            this.ifMatch = request.ifMatch;
+            this.xFcAccountId = request.xFcAccountId;
+            this.xFcDate = request.xFcDate;
+            this.xFcTraceId = request.xFcTraceId;
+            this.description = request.description;
+            this.internetAccess = request.internetAccess;
+            this.logConfig = request.logConfig;
+            this.nasConfig = request.nasConfig;
+            this.role = request.role;
+            this.tracingConfig = request.tracingConfig;
+            this.vpcConfig = request.vpcConfig;
         } 
 
         /**

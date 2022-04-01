@@ -179,19 +179,19 @@ public class CreateServiceRequest extends Request {
             super();
         } 
 
-        private Builder(CreateServiceRequest response) {
-            super(response);
-            this.xFcAccountId = response.xFcAccountId;
-            this.xFcDate = response.xFcDate;
-            this.xFcTraceId = response.xFcTraceId;
-            this.description = response.description;
-            this.internetAccess = response.internetAccess;
-            this.logConfig = response.logConfig;
-            this.nasConfig = response.nasConfig;
-            this.role = response.role;
-            this.serviceName = response.serviceName;
-            this.tracingConfig = response.tracingConfig;
-            this.vpcConfig = response.vpcConfig;
+        private Builder(CreateServiceRequest request) {
+            super(request);
+            this.xFcAccountId = request.xFcAccountId;
+            this.xFcDate = request.xFcDate;
+            this.xFcTraceId = request.xFcTraceId;
+            this.description = request.description;
+            this.internetAccess = request.internetAccess;
+            this.logConfig = request.logConfig;
+            this.nasConfig = request.nasConfig;
+            this.role = request.role;
+            this.serviceName = request.serviceName;
+            this.tracingConfig = request.tracingConfig;
+            this.vpcConfig = request.vpcConfig;
         } 
 
         /**

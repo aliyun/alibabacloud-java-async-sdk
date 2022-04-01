@@ -87,12 +87,12 @@ public class GetCustomDomainRequest extends Request {
             super();
         } 
 
-        private Builder(GetCustomDomainRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.xFcAccountId = response.xFcAccountId;
-            this.xFcDate = response.xFcDate;
-            this.xFcTraceId = response.xFcTraceId;
+        private Builder(GetCustomDomainRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.xFcAccountId = request.xFcAccountId;
+            this.xFcDate = request.xFcDate;
+            this.xFcTraceId = request.xFcTraceId;
         } 
 
         /**

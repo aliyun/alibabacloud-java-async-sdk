@@ -100,13 +100,13 @@ public class ListTaggedResourcesRequest extends Request {
             super();
         } 
 
-        private Builder(ListTaggedResourcesRequest response) {
-            super(response);
-            this.xFcAccountId = response.xFcAccountId;
-            this.xFcDate = response.xFcDate;
-            this.xFcTraceId = response.xFcTraceId;
-            this.limit = response.limit;
-            this.nextToken = response.nextToken;
+        private Builder(ListTaggedResourcesRequest request) {
+            super(request);
+            this.xFcAccountId = request.xFcAccountId;
+            this.xFcDate = request.xFcDate;
+            this.xFcTraceId = request.xFcTraceId;
+            this.limit = request.limit;
+            this.nextToken = request.nextToken;
         } 
 
         /**
