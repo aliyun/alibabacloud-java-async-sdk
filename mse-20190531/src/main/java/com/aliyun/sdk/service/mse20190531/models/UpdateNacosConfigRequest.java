@@ -207,21 +207,21 @@ public class UpdateNacosConfigRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateNacosConfigRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.appName = response.appName;
-            this.betaIps = response.betaIps;
-            this.content = response.content;
-            this.dataId = response.dataId;
-            this.desc = response.desc;
-            this.encryptedDataKey = response.encryptedDataKey;
-            this.group = response.group;
-            this.instanceId = response.instanceId;
-            this.md5 = response.md5;
-            this.namespaceId = response.namespaceId;
-            this.tags = response.tags;
-            this.type = response.type;
+        private Builder(UpdateNacosConfigRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.appName = request.appName;
+            this.betaIps = request.betaIps;
+            this.content = request.content;
+            this.dataId = request.dataId;
+            this.desc = request.desc;
+            this.encryptedDataKey = request.encryptedDataKey;
+            this.group = request.group;
+            this.instanceId = request.instanceId;
+            this.md5 = request.md5;
+            this.namespaceId = request.namespaceId;
+            this.tags = request.tags;
+            this.type = request.type;
         } 
 
         /**

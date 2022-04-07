@@ -12,8 +12,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryGatewayRegionRequest</p>
  */
 public class QueryGatewayRegionRequest extends Request {
+    @Query
+    @NameInMap("AcceptLanguage")
+    private String acceptLanguage;
+
     private QueryGatewayRegionRequest(Builder builder) {
         super(builder);
+        this.acceptLanguage = builder.acceptLanguage;
     }
 
     public static Builder builder() {
@@ -29,15 +34,33 @@ public class QueryGatewayRegionRequest extends Request {
         return new Builder(this);
     }
 
+    /**
+     * @return acceptLanguage
+     */
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
+    }
+
     public static final class Builder extends Request.Builder<QueryGatewayRegionRequest, Builder> {
+        private String acceptLanguage; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(QueryGatewayRegionRequest response) {
-            super(response);
+        private Builder(QueryGatewayRegionRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
         } 
+
+        /**
+         * AcceptLanguage.
+         */
+        public Builder acceptLanguage(String acceptLanguage) {
+            this.putQueryParameter("AcceptLanguage", acceptLanguage);
+            this.acceptLanguage = acceptLanguage;
+            return this;
+        }
 
         @Override
         public QueryGatewayRegionRequest build() {

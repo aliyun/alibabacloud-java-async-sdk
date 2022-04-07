@@ -116,14 +116,14 @@ public class CloneNacosConfigRequest extends Request {
             super();
         } 
 
-        private Builder(CloneNacosConfigRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.ids = response.ids;
-            this.instanceId = response.instanceId;
-            this.originNamespaceId = response.originNamespaceId;
-            this.policy = response.policy;
-            this.targetNamespaceId = response.targetNamespaceId;
+        private Builder(CloneNacosConfigRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.ids = request.ids;
+            this.instanceId = request.instanceId;
+            this.originNamespaceId = request.originNamespaceId;
+            this.policy = request.policy;
+            this.targetNamespaceId = request.targetNamespaceId;
         } 
 
         /**

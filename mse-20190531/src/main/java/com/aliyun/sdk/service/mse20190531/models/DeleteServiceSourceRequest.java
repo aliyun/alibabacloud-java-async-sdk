@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DeleteServiceSourceRequest extends Request {
     @Query
+    @NameInMap("AcceptLanguage")
+    private String acceptLanguage;
+
+    @Query
     @NameInMap("GatewayUniqueId")
     private String gatewayUniqueId;
 
@@ -22,6 +26,7 @@ public class DeleteServiceSourceRequest extends Request {
 
     private DeleteServiceSourceRequest(Builder builder) {
         super(builder);
+        this.acceptLanguage = builder.acceptLanguage;
         this.gatewayUniqueId = builder.gatewayUniqueId;
         this.sourceId = builder.sourceId;
     }
@@ -40,6 +45,13 @@ public class DeleteServiceSourceRequest extends Request {
     }
 
     /**
+     * @return acceptLanguage
+     */
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
+    }
+
+    /**
      * @return gatewayUniqueId
      */
     public String getGatewayUniqueId() {
@@ -54,6 +66,7 @@ public class DeleteServiceSourceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteServiceSourceRequest, Builder> {
+        private String acceptLanguage; 
         private String gatewayUniqueId; 
         private Long sourceId; 
 
@@ -61,11 +74,21 @@ public class DeleteServiceSourceRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteServiceSourceRequest response) {
-            super(response);
-            this.gatewayUniqueId = response.gatewayUniqueId;
-            this.sourceId = response.sourceId;
+        private Builder(DeleteServiceSourceRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.gatewayUniqueId = request.gatewayUniqueId;
+            this.sourceId = request.sourceId;
         } 
+
+        /**
+         * AcceptLanguage.
+         */
+        public Builder acceptLanguage(String acceptLanguage) {
+            this.putQueryParameter("AcceptLanguage", acceptLanguage);
+            this.acceptLanguage = acceptLanguage;
+            return this;
+        }
 
         /**
          * GatewayUniqueId.

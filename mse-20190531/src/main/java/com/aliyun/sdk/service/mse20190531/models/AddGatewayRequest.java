@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class AddGatewayRequest extends Request {
     @Query
+    @NameInMap("AcceptLanguage")
+    private String acceptLanguage;
+
+    @Query
     @NameInMap("EnterpriseSecurityGroup")
     private Boolean enterpriseSecurityGroup;
 
@@ -59,6 +63,7 @@ public class AddGatewayRequest extends Request {
 
     private AddGatewayRequest(Builder builder) {
         super(builder);
+        this.acceptLanguage = builder.acceptLanguage;
         this.enterpriseSecurityGroup = builder.enterpriseSecurityGroup;
         this.internetSlbSpec = builder.internetSlbSpec;
         this.name = builder.name;
@@ -82,6 +87,13 @@ public class AddGatewayRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return acceptLanguage
+     */
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     /**
@@ -155,6 +167,7 @@ public class AddGatewayRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AddGatewayRequest, Builder> {
+        private String acceptLanguage; 
         private Boolean enterpriseSecurityGroup; 
         private String internetSlbSpec; 
         private String name; 
@@ -170,19 +183,29 @@ public class AddGatewayRequest extends Request {
             super();
         } 
 
-        private Builder(AddGatewayRequest response) {
-            super(response);
-            this.enterpriseSecurityGroup = response.enterpriseSecurityGroup;
-            this.internetSlbSpec = response.internetSlbSpec;
-            this.name = response.name;
-            this.region = response.region;
-            this.replica = response.replica;
-            this.slbSpec = response.slbSpec;
-            this.spec = response.spec;
-            this.vSwitchId = response.vSwitchId;
-            this.vSwitchId2 = response.vSwitchId2;
-            this.vpc = response.vpc;
+        private Builder(AddGatewayRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.enterpriseSecurityGroup = request.enterpriseSecurityGroup;
+            this.internetSlbSpec = request.internetSlbSpec;
+            this.name = request.name;
+            this.region = request.region;
+            this.replica = request.replica;
+            this.slbSpec = request.slbSpec;
+            this.spec = request.spec;
+            this.vSwitchId = request.vSwitchId;
+            this.vSwitchId2 = request.vSwitchId2;
+            this.vpc = request.vpc;
         } 
+
+        /**
+         * AcceptLanguage.
+         */
+        public Builder acceptLanguage(String acceptLanguage) {
+            this.putQueryParameter("AcceptLanguage", acceptLanguage);
+            this.acceptLanguage = acceptLanguage;
+            return this;
+        }
 
         /**
          * 是否企业安全组类型

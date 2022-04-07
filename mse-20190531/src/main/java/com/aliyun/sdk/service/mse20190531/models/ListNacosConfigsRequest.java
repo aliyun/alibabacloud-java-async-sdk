@@ -181,19 +181,19 @@ public class ListNacosConfigsRequest extends Request {
             super();
         } 
 
-        private Builder(ListNacosConfigsRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.appName = response.appName;
-            this.dataId = response.dataId;
-            this.group = response.group;
-            this.instanceId = response.instanceId;
-            this.namespaceId = response.namespaceId;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.requestPars = response.requestPars;
-            this.tags = response.tags;
+        private Builder(ListNacosConfigsRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.appName = request.appName;
+            this.dataId = request.dataId;
+            this.group = request.group;
+            this.instanceId = request.instanceId;
+            this.namespaceId = request.namespaceId;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.requestPars = request.requestPars;
+            this.tags = request.tags;
         } 
 
         /**

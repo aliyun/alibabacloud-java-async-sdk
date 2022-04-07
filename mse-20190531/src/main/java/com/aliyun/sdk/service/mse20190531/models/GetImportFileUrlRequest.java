@@ -88,12 +88,12 @@ public class GetImportFileUrlRequest extends Request {
             super();
         } 
 
-        private Builder(GetImportFileUrlRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.contentType = response.contentType;
-            this.instanceId = response.instanceId;
-            this.namespaceId = response.namespaceId;
+        private Builder(GetImportFileUrlRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.contentType = request.contentType;
+            this.instanceId = request.instanceId;
+            this.namespaceId = request.namespaceId;
         } 
 
         /**

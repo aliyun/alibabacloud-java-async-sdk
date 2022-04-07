@@ -62,10 +62,10 @@ public class QuerySwimmingLaneByIdRequest extends Request {
             super();
         } 
 
-        private Builder(QuerySwimmingLaneByIdRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.laneId = response.laneId;
+        private Builder(QuerySwimmingLaneByIdRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.laneId = request.laneId;
         } 
 
         /**

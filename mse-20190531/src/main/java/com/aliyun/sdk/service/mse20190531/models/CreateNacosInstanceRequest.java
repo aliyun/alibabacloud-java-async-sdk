@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateNacosInstanceRequest extends Request {
     @Query
+    @NameInMap("AcceptLanguage")
+    private String acceptLanguage;
+
+    @Query
     @NameInMap("ClusterName")
     private String clusterName;
 
@@ -66,6 +70,7 @@ public class CreateNacosInstanceRequest extends Request {
 
     private CreateNacosInstanceRequest(Builder builder) {
         super(builder);
+        this.acceptLanguage = builder.acceptLanguage;
         this.clusterName = builder.clusterName;
         this.enabled = builder.enabled;
         this.ephemeral = builder.ephemeral;
@@ -90,6 +95,13 @@ public class CreateNacosInstanceRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return acceptLanguage
+     */
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     /**
@@ -170,6 +182,7 @@ public class CreateNacosInstanceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateNacosInstanceRequest, Builder> {
+        private String acceptLanguage; 
         private String clusterName; 
         private Boolean enabled; 
         private Boolean ephemeral; 
@@ -186,20 +199,30 @@ public class CreateNacosInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(CreateNacosInstanceRequest response) {
-            super(response);
-            this.clusterName = response.clusterName;
-            this.enabled = response.enabled;
-            this.ephemeral = response.ephemeral;
-            this.groupName = response.groupName;
-            this.instanceId = response.instanceId;
-            this.ip = response.ip;
-            this.metadata = response.metadata;
-            this.namespaceId = response.namespaceId;
-            this.port = response.port;
-            this.serviceName = response.serviceName;
-            this.weight = response.weight;
+        private Builder(CreateNacosInstanceRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.clusterName = request.clusterName;
+            this.enabled = request.enabled;
+            this.ephemeral = request.ephemeral;
+            this.groupName = request.groupName;
+            this.instanceId = request.instanceId;
+            this.ip = request.ip;
+            this.metadata = request.metadata;
+            this.namespaceId = request.namespaceId;
+            this.port = request.port;
+            this.serviceName = request.serviceName;
+            this.weight = request.weight;
         } 
+
+        /**
+         * AcceptLanguage.
+         */
+        public Builder acceptLanguage(String acceptLanguage) {
+            this.putQueryParameter("AcceptLanguage", acceptLanguage);
+            this.acceptLanguage = acceptLanguage;
+            return this;
+        }
 
         /**
          * Nacos集群名

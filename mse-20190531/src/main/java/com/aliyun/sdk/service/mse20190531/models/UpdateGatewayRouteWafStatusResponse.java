@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListAlarmRulesResponse} extends {@link TeaModel}
+ * {@link UpdateGatewayRouteWafStatusResponse} extends {@link TeaModel}
  *
- * <p>ListAlarmRulesResponse</p>
+ * <p>UpdateGatewayRouteWafStatusResponse</p>
  */
-public class ListAlarmRulesResponse extends Response {
+public class UpdateGatewayRouteWafStatusResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private ListAlarmRulesResponseBody body;
+    private UpdateGatewayRouteWafStatusResponseBody body;
 
-    private ListAlarmRulesResponse(BuilderImpl builder) {
+    private UpdateGatewayRouteWafStatusResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static ListAlarmRulesResponse create() {
+    public static UpdateGatewayRouteWafStatusResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class ListAlarmRulesResponse extends Response {
     /**
      * @return body
      */
-    public ListAlarmRulesResponseBody getBody() {
+    public UpdateGatewayRouteWafStatusResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ListAlarmRulesResponse, Builder> {
+    public interface Builder extends Response.Builder<UpdateGatewayRouteWafStatusResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(ListAlarmRulesResponseBody body);
+        Builder body(UpdateGatewayRouteWafStatusResponseBody body);
 
         @Override
-        ListAlarmRulesResponse build();
+        UpdateGatewayRouteWafStatusResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ListAlarmRulesResponse, Builder>
+            extends Response.BuilderImpl<UpdateGatewayRouteWafStatusResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private ListAlarmRulesResponseBody body; 
+        private UpdateGatewayRouteWafStatusResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ListAlarmRulesResponse response) {
+        private BuilderImpl(UpdateGatewayRouteWafStatusResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class ListAlarmRulesResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ListAlarmRulesResponseBody body) {
+        public Builder body(UpdateGatewayRouteWafStatusResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ListAlarmRulesResponse build() {
-            return new ListAlarmRulesResponse(this);
+        public UpdateGatewayRouteWafStatusResponse build() {
+            return new UpdateGatewayRouteWafStatusResponse(this);
         } 
 
     } 

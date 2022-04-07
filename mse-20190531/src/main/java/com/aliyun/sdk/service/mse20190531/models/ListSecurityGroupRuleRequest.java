@@ -7,30 +7,31 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListAlarmItemsRequest} extends {@link RequestModel}
+ * {@link ListSecurityGroupRuleRequest} extends {@link RequestModel}
  *
- * <p>ListAlarmItemsRequest</p>
+ * <p>ListSecurityGroupRuleRequest</p>
  */
-public class ListAlarmItemsRequest extends Request {
+public class ListSecurityGroupRuleRequest extends Request {
     @Query
     @NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
     @Query
-    @NameInMap("RequestPars")
-    private String requestPars;
+    @NameInMap("GatewayUniqueId")
+    @Validation(required = true)
+    private String gatewayUniqueId;
 
-    private ListAlarmItemsRequest(Builder builder) {
+    private ListSecurityGroupRuleRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
-        this.requestPars = builder.requestPars;
+        this.gatewayUniqueId = builder.gatewayUniqueId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ListAlarmItemsRequest create() {
+    public static ListSecurityGroupRuleRequest create() {
         return builder().build();
     }
 
@@ -47,24 +48,24 @@ public class ListAlarmItemsRequest extends Request {
     }
 
     /**
-     * @return requestPars
+     * @return gatewayUniqueId
      */
-    public String getRequestPars() {
-        return this.requestPars;
+    public String getGatewayUniqueId() {
+        return this.gatewayUniqueId;
     }
 
-    public static final class Builder extends Request.Builder<ListAlarmItemsRequest, Builder> {
+    public static final class Builder extends Request.Builder<ListSecurityGroupRuleRequest, Builder> {
         private String acceptLanguage; 
-        private String requestPars; 
+        private String gatewayUniqueId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListAlarmItemsRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.requestPars = response.requestPars;
+        private Builder(ListSecurityGroupRuleRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.gatewayUniqueId = request.gatewayUniqueId;
         } 
 
         /**
@@ -77,17 +78,17 @@ public class ListAlarmItemsRequest extends Request {
         }
 
         /**
-         * RequestPars.
+         * 网关ID
          */
-        public Builder requestPars(String requestPars) {
-            this.putQueryParameter("RequestPars", requestPars);
-            this.requestPars = requestPars;
+        public Builder gatewayUniqueId(String gatewayUniqueId) {
+            this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
+            this.gatewayUniqueId = gatewayUniqueId;
             return this;
         }
 
         @Override
-        public ListAlarmItemsRequest build() {
-            return new ListAlarmItemsRequest(this);
+        public ListSecurityGroupRuleRequest build() {
+            return new ListSecurityGroupRuleRequest(this);
         } 
 
     } 

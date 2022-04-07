@@ -116,14 +116,14 @@ public class ListEurekaInstancesRequest extends Request {
             super();
         } 
 
-        private Builder(ListEurekaInstancesRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.clusterId = response.clusterId;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.requestPars = response.requestPars;
-            this.serviceName = response.serviceName;
+        private Builder(ListEurekaInstancesRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.clusterId = request.clusterId;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.requestPars = request.requestPars;
+            this.serviceName = request.serviceName;
         } 
 
         /**

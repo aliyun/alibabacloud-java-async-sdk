@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteAlarmRuleResponse} extends {@link TeaModel}
+ * {@link ListSecurityGroupRuleResponse} extends {@link TeaModel}
  *
- * <p>DeleteAlarmRuleResponse</p>
+ * <p>ListSecurityGroupRuleResponse</p>
  */
-public class DeleteAlarmRuleResponse extends Response {
+public class ListSecurityGroupRuleResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private DeleteAlarmRuleResponseBody body;
+    private ListSecurityGroupRuleResponseBody body;
 
-    private DeleteAlarmRuleResponse(BuilderImpl builder) {
+    private ListSecurityGroupRuleResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static DeleteAlarmRuleResponse create() {
+    public static ListSecurityGroupRuleResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class DeleteAlarmRuleResponse extends Response {
     /**
      * @return body
      */
-    public DeleteAlarmRuleResponseBody getBody() {
+    public ListSecurityGroupRuleResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DeleteAlarmRuleResponse, Builder> {
+    public interface Builder extends Response.Builder<ListSecurityGroupRuleResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(DeleteAlarmRuleResponseBody body);
+        Builder body(ListSecurityGroupRuleResponseBody body);
 
         @Override
-        DeleteAlarmRuleResponse build();
+        ListSecurityGroupRuleResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DeleteAlarmRuleResponse, Builder>
+            extends Response.BuilderImpl<ListSecurityGroupRuleResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private DeleteAlarmRuleResponseBody body; 
+        private ListSecurityGroupRuleResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DeleteAlarmRuleResponse response) {
+        private BuilderImpl(ListSecurityGroupRuleResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class DeleteAlarmRuleResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DeleteAlarmRuleResponseBody body) {
+        public Builder body(ListSecurityGroupRuleResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DeleteAlarmRuleResponse build() {
-            return new DeleteAlarmRuleResponse(this);
+        public ListSecurityGroupRuleResponse build() {
+            return new ListSecurityGroupRuleResponse(this);
         } 
 
     } 

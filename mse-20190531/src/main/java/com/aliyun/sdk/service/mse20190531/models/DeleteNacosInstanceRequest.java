@@ -158,17 +158,17 @@ public class DeleteNacosInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteNacosInstanceRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.clusterName = response.clusterName;
-            this.ephemeral = response.ephemeral;
-            this.groupName = response.groupName;
-            this.instanceId = response.instanceId;
-            this.ip = response.ip;
-            this.namespaceId = response.namespaceId;
-            this.port = response.port;
-            this.serviceName = response.serviceName;
+        private Builder(DeleteNacosInstanceRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.clusterName = request.clusterName;
+            this.ephemeral = request.ephemeral;
+            this.groupName = request.groupName;
+            this.instanceId = request.instanceId;
+            this.ip = request.ip;
+            this.namespaceId = request.namespaceId;
+            this.port = request.port;
+            this.serviceName = request.serviceName;
         } 
 
         /**

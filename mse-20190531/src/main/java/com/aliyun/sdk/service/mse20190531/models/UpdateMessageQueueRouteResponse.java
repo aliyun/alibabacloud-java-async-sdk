@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListAlarmItemsResponse} extends {@link TeaModel}
+ * {@link UpdateMessageQueueRouteResponse} extends {@link TeaModel}
  *
- * <p>ListAlarmItemsResponse</p>
+ * <p>UpdateMessageQueueRouteResponse</p>
  */
-public class ListAlarmItemsResponse extends Response {
+public class UpdateMessageQueueRouteResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private ListAlarmItemsResponseBody body;
+    private UpdateMessageQueueRouteResponseBody body;
 
-    private ListAlarmItemsResponse(BuilderImpl builder) {
+    private UpdateMessageQueueRouteResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static ListAlarmItemsResponse create() {
+    public static UpdateMessageQueueRouteResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class ListAlarmItemsResponse extends Response {
     /**
      * @return body
      */
-    public ListAlarmItemsResponseBody getBody() {
+    public UpdateMessageQueueRouteResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ListAlarmItemsResponse, Builder> {
+    public interface Builder extends Response.Builder<UpdateMessageQueueRouteResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(ListAlarmItemsResponseBody body);
+        Builder body(UpdateMessageQueueRouteResponseBody body);
 
         @Override
-        ListAlarmItemsResponse build();
+        UpdateMessageQueueRouteResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ListAlarmItemsResponse, Builder>
+            extends Response.BuilderImpl<UpdateMessageQueueRouteResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private ListAlarmItemsResponseBody body; 
+        private UpdateMessageQueueRouteResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ListAlarmItemsResponse response) {
+        private BuilderImpl(UpdateMessageQueueRouteResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class ListAlarmItemsResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ListAlarmItemsResponseBody body) {
+        public Builder body(UpdateMessageQueueRouteResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ListAlarmItemsResponse build() {
-            return new ListAlarmItemsResponse(this);
+        public UpdateMessageQueueRouteResponse build() {
+            return new UpdateMessageQueueRouteResponse(this);
         } 
 
     } 

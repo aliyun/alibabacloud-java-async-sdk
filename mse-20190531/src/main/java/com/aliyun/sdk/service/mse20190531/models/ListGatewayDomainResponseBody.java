@@ -151,12 +151,56 @@ public class ListGatewayDomainResponseBody extends TeaModel {
 
     } 
 
+    public static class Comment extends TeaModel {
+        @NameInMap("Status")
+        private String status;
+
+        private Comment(Builder builder) {
+            this.status = builder.status;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Comment create() {
+            return builder().build();
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        public static final class Builder {
+            private String status; 
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            public Comment build() {
+                return new Comment(this);
+            } 
+
+        } 
+
+    }
     public static class Data extends TeaModel {
         @NameInMap("CertBeforeDate")
         private String certBeforeDate;
 
         @NameInMap("CertIdentifier")
         private String certIdentifier;
+
+        @NameInMap("Comment")
+        private Comment comment;
 
         @NameInMap("GatewayId")
         private Long gatewayId;
@@ -179,9 +223,16 @@ public class ListGatewayDomainResponseBody extends TeaModel {
         @NameInMap("Protocol")
         private String protocol;
 
+        @NameInMap("Status")
+        private Integer status;
+
+        @NameInMap("Type")
+        private String type;
+
         private Data(Builder builder) {
             this.certBeforeDate = builder.certBeforeDate;
             this.certIdentifier = builder.certIdentifier;
+            this.comment = builder.comment;
             this.gatewayId = builder.gatewayId;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
@@ -189,6 +240,8 @@ public class ListGatewayDomainResponseBody extends TeaModel {
             this.mustHttps = builder.mustHttps;
             this.name = builder.name;
             this.protocol = builder.protocol;
+            this.status = builder.status;
+            this.type = builder.type;
         }
 
         public static Builder builder() {
@@ -211,6 +264,13 @@ public class ListGatewayDomainResponseBody extends TeaModel {
          */
         public String getCertIdentifier() {
             return this.certIdentifier;
+        }
+
+        /**
+         * @return comment
+         */
+        public Comment getComment() {
+            return this.comment;
         }
 
         /**
@@ -262,9 +322,24 @@ public class ListGatewayDomainResponseBody extends TeaModel {
             return this.protocol;
         }
 
+        /**
+         * @return status
+         */
+        public Integer getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
         public static final class Builder {
             private String certBeforeDate; 
             private String certIdentifier; 
+            private Comment comment; 
             private Long gatewayId; 
             private String gmtCreate; 
             private String gmtModified; 
@@ -272,6 +347,8 @@ public class ListGatewayDomainResponseBody extends TeaModel {
             private Boolean mustHttps; 
             private String name; 
             private String protocol; 
+            private Integer status; 
+            private String type; 
 
             /**
              * CertBeforeDate.
@@ -286,6 +363,14 @@ public class ListGatewayDomainResponseBody extends TeaModel {
              */
             public Builder certIdentifier(String certIdentifier) {
                 this.certIdentifier = certIdentifier;
+                return this;
+            }
+
+            /**
+             * Comment.
+             */
+            public Builder comment(Comment comment) {
+                this.comment = comment;
                 return this;
             }
 
@@ -342,6 +427,22 @@ public class ListGatewayDomainResponseBody extends TeaModel {
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(Integer status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
                 return this;
             }
 

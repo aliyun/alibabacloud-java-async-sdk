@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DeleteGatewaySlbRequest extends Request {
     @Query
+    @NameInMap("AcceptLanguage")
+    private String acceptLanguage;
+
+    @Query
     @NameInMap("DeleteSlb")
     private Boolean deleteSlb;
 
@@ -26,6 +30,7 @@ public class DeleteGatewaySlbRequest extends Request {
 
     private DeleteGatewaySlbRequest(Builder builder) {
         super(builder);
+        this.acceptLanguage = builder.acceptLanguage;
         this.deleteSlb = builder.deleteSlb;
         this.gatewayUniqueId = builder.gatewayUniqueId;
         this.id = builder.id;
@@ -42,6 +47,13 @@ public class DeleteGatewaySlbRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return acceptLanguage
+     */
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     /**
@@ -66,6 +78,7 @@ public class DeleteGatewaySlbRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteGatewaySlbRequest, Builder> {
+        private String acceptLanguage; 
         private Boolean deleteSlb; 
         private String gatewayUniqueId; 
         private String id; 
@@ -74,12 +87,22 @@ public class DeleteGatewaySlbRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteGatewaySlbRequest response) {
-            super(response);
-            this.deleteSlb = response.deleteSlb;
-            this.gatewayUniqueId = response.gatewayUniqueId;
-            this.id = response.id;
+        private Builder(DeleteGatewaySlbRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.deleteSlb = request.deleteSlb;
+            this.gatewayUniqueId = request.gatewayUniqueId;
+            this.id = request.id;
         } 
+
+        /**
+         * AcceptLanguage.
+         */
+        public Builder acceptLanguage(String acceptLanguage) {
+            this.putQueryParameter("AcceptLanguage", acceptLanguage);
+            this.acceptLanguage = acceptLanguage;
+            return this;
+        }
 
         /**
          * DeleteSlb.

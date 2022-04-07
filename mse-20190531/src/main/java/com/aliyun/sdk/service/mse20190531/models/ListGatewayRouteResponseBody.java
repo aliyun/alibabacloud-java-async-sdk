@@ -151,6 +151,47 @@ public class ListGatewayRouteResponseBody extends TeaModel {
 
     } 
 
+    public static class Comment extends TeaModel {
+        @NameInMap("Status")
+        private String status;
+
+        private Comment(Builder builder) {
+            this.status = builder.status;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Comment create() {
+            return builder().build();
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        public static final class Builder {
+            private String status; 
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            public Comment build() {
+                return new Comment(this);
+            } 
+
+        } 
+
+    }
     public static class DirectResponse extends TeaModel {
         @NameInMap("Body")
         private String body;
@@ -819,6 +860,9 @@ public class ListGatewayRouteResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
+        @NameInMap("Comment")
+        private Comment comment;
+
         @NameInMap("DefaultServiceId")
         private Long defaultServiceId;
 
@@ -842,6 +886,9 @@ public class ListGatewayRouteResponseBody extends TeaModel {
 
         @NameInMap("DomainNameList")
         private java.util.List < String > domainNameList;
+
+        @NameInMap("EnableWaf")
+        private String enableWaf;
 
         @NameInMap("GatewayId")
         private Long gatewayId;
@@ -882,7 +929,11 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         @NameInMap("Status")
         private Integer status;
 
+        @NameInMap("Type")
+        private String type;
+
         private Result(Builder builder) {
+            this.comment = builder.comment;
             this.defaultServiceId = builder.defaultServiceId;
             this.defaultServiceName = builder.defaultServiceName;
             this.destinationType = builder.destinationType;
@@ -891,6 +942,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             this.domainIdList = builder.domainIdList;
             this.domainName = builder.domainName;
             this.domainNameList = builder.domainNameList;
+            this.enableWaf = builder.enableWaf;
             this.gatewayId = builder.gatewayId;
             this.gatewayUniqueId = builder.gatewayUniqueId;
             this.gmtCreate = builder.gmtCreate;
@@ -904,6 +956,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             this.routeServices = builder.routeServices;
             this.services = builder.services;
             this.status = builder.status;
+            this.type = builder.type;
         }
 
         public static Builder builder() {
@@ -912,6 +965,13 @@ public class ListGatewayRouteResponseBody extends TeaModel {
 
         public static Result create() {
             return builder().build();
+        }
+
+        /**
+         * @return comment
+         */
+        public Comment getComment() {
+            return this.comment;
         }
 
         /**
@@ -968,6 +1028,13 @@ public class ListGatewayRouteResponseBody extends TeaModel {
          */
         public java.util.List < String > getDomainNameList() {
             return this.domainNameList;
+        }
+
+        /**
+         * @return enableWaf
+         */
+        public String getEnableWaf() {
+            return this.enableWaf;
         }
 
         /**
@@ -1061,7 +1128,15 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             return this.status;
         }
 
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
         public static final class Builder {
+            private Comment comment; 
             private Long defaultServiceId; 
             private String defaultServiceName; 
             private String destinationType; 
@@ -1070,6 +1145,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             private java.util.List < Long > domainIdList; 
             private String domainName; 
             private java.util.List < String > domainNameList; 
+            private String enableWaf; 
             private Long gatewayId; 
             private String gatewayUniqueId; 
             private String gmtCreate; 
@@ -1083,6 +1159,15 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             private java.util.List < RouteServices> routeServices; 
             private String services; 
             private Integer status; 
+            private String type; 
+
+            /**
+             * Comment.
+             */
+            public Builder comment(Comment comment) {
+                this.comment = comment;
+                return this;
+            }
 
             /**
              * DefaultServiceId.
@@ -1145,6 +1230,14 @@ public class ListGatewayRouteResponseBody extends TeaModel {
              */
             public Builder domainNameList(java.util.List < String > domainNameList) {
                 this.domainNameList = domainNameList;
+                return this;
+            }
+
+            /**
+             * EnableWaf.
+             */
+            public Builder enableWaf(String enableWaf) {
+                this.enableWaf = enableWaf;
                 return this;
             }
 
@@ -1249,6 +1342,14 @@ public class ListGatewayRouteResponseBody extends TeaModel {
              */
             public Builder status(Integer status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
                 return this;
             }
 

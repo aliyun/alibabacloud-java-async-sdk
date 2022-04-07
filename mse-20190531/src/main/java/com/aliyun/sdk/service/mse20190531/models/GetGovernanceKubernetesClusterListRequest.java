@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetGovernanceKubernetesClusterListRequest extends Request {
     @Query
+    @NameInMap("AcceptLanguage")
+    private String acceptLanguage;
+
+    @Query
     @NameInMap("ClusterId")
     private String clusterId;
 
@@ -32,6 +36,7 @@ public class GetGovernanceKubernetesClusterListRequest extends Request {
 
     private GetGovernanceKubernetesClusterListRequest(Builder builder) {
         super(builder);
+        this.acceptLanguage = builder.acceptLanguage;
         this.clusterId = builder.clusterId;
         this.clusterName = builder.clusterName;
         this.pageNumber = builder.pageNumber;
@@ -49,6 +54,13 @@ public class GetGovernanceKubernetesClusterListRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return acceptLanguage
+     */
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     /**
@@ -80,6 +92,7 @@ public class GetGovernanceKubernetesClusterListRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetGovernanceKubernetesClusterListRequest, Builder> {
+        private String acceptLanguage; 
         private String clusterId; 
         private String clusterName; 
         private Integer pageNumber; 
@@ -89,13 +102,23 @@ public class GetGovernanceKubernetesClusterListRequest extends Request {
             super();
         } 
 
-        private Builder(GetGovernanceKubernetesClusterListRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.clusterName = response.clusterName;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(GetGovernanceKubernetesClusterListRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.clusterId = request.clusterId;
+            this.clusterName = request.clusterName;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
+
+        /**
+         * AcceptLanguage.
+         */
+        public Builder acceptLanguage(String acceptLanguage) {
+            this.putQueryParameter("AcceptLanguage", acceptLanguage);
+            this.acceptLanguage = acceptLanguage;
+            return this;
+        }
 
         /**
          * ClusterId.

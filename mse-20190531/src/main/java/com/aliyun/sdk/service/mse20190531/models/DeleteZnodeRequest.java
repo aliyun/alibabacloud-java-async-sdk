@@ -89,12 +89,12 @@ public class DeleteZnodeRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteZnodeRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.clusterId = response.clusterId;
-            this.path = response.path;
-            this.requestPars = response.requestPars;
+        private Builder(DeleteZnodeRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.clusterId = request.clusterId;
+            this.path = request.path;
+            this.requestPars = request.requestPars;
         } 
 
         /**

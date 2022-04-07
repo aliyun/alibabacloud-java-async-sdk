@@ -167,18 +167,18 @@ public class ListAnsServicesRequest extends Request {
             super();
         } 
 
-        private Builder(ListAnsServicesRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.clusterId = response.clusterId;
-            this.groupName = response.groupName;
-            this.hasIpCount = response.hasIpCount;
-            this.instanceId = response.instanceId;
-            this.namespaceId = response.namespaceId;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.requestPars = response.requestPars;
-            this.serviceName = response.serviceName;
+        private Builder(ListAnsServicesRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.clusterId = request.clusterId;
+            this.groupName = request.groupName;
+            this.hasIpCount = request.hasIpCount;
+            this.instanceId = request.instanceId;
+            this.namespaceId = request.namespaceId;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.requestPars = request.requestPars;
+            this.serviceName = request.serviceName;
         } 
 
         /**

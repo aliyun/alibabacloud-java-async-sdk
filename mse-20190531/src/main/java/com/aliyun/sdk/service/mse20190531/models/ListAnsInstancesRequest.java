@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListAnsInstancesRequest extends Request {
     @Query
+    @NameInMap("AcceptLanguage")
+    private String acceptLanguage;
+
+    @Query
     @NameInMap("ClusterId")
     private String clusterId;
 
@@ -53,6 +57,7 @@ public class ListAnsInstancesRequest extends Request {
 
     private ListAnsInstancesRequest(Builder builder) {
         super(builder);
+        this.acceptLanguage = builder.acceptLanguage;
         this.clusterId = builder.clusterId;
         this.clusterName = builder.clusterName;
         this.groupName = builder.groupName;
@@ -75,6 +80,13 @@ public class ListAnsInstancesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return acceptLanguage
+     */
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     /**
@@ -141,6 +153,7 @@ public class ListAnsInstancesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListAnsInstancesRequest, Builder> {
+        private String acceptLanguage; 
         private String clusterId; 
         private String clusterName; 
         private String groupName; 
@@ -155,18 +168,28 @@ public class ListAnsInstancesRequest extends Request {
             super();
         } 
 
-        private Builder(ListAnsInstancesRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.clusterName = response.clusterName;
-            this.groupName = response.groupName;
-            this.instanceId = response.instanceId;
-            this.namespaceId = response.namespaceId;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.requestPars = response.requestPars;
-            this.serviceName = response.serviceName;
+        private Builder(ListAnsInstancesRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.clusterId = request.clusterId;
+            this.clusterName = request.clusterName;
+            this.groupName = request.groupName;
+            this.instanceId = request.instanceId;
+            this.namespaceId = request.namespaceId;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.requestPars = request.requestPars;
+            this.serviceName = request.serviceName;
         } 
+
+        /**
+         * AcceptLanguage.
+         */
+        public Builder acceptLanguage(String acceptLanguage) {
+            this.putQueryParameter("AcceptLanguage", acceptLanguage);
+            this.acceptLanguage = acceptLanguage;
+            return this;
+        }
 
         /**
          * ClusterId.

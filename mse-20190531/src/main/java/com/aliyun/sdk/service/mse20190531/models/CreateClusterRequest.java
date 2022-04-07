@@ -248,24 +248,24 @@ public class CreateClusterRequest extends Request {
             super();
         } 
 
-        private Builder(CreateClusterRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.clusterSpecification = response.clusterSpecification;
-            this.clusterType = response.clusterType;
-            this.clusterVersion = response.clusterVersion;
-            this.connectionType = response.connectionType;
-            this.diskType = response.diskType;
-            this.instanceCount = response.instanceCount;
-            this.mseVersion = response.mseVersion;
-            this.netType = response.netType;
-            this.privateSlbSpecification = response.privateSlbSpecification;
-            this.pubNetworkFlow = response.pubNetworkFlow;
-            this.pubSlbSpecification = response.pubSlbSpecification;
-            this.region = response.region;
-            this.requestPars = response.requestPars;
-            this.vSwitchId = response.vSwitchId;
-            this.vpcId = response.vpcId;
+        private Builder(CreateClusterRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.clusterSpecification = request.clusterSpecification;
+            this.clusterType = request.clusterType;
+            this.clusterVersion = request.clusterVersion;
+            this.connectionType = request.connectionType;
+            this.diskType = request.diskType;
+            this.instanceCount = request.instanceCount;
+            this.mseVersion = request.mseVersion;
+            this.netType = request.netType;
+            this.privateSlbSpecification = request.privateSlbSpecification;
+            this.pubNetworkFlow = request.pubNetworkFlow;
+            this.pubSlbSpecification = request.pubSlbSpecification;
+            this.region = request.region;
+            this.requestPars = request.requestPars;
+            this.vSwitchId = request.vSwitchId;
+            this.vpcId = request.vpcId;
         } 
 
         /**

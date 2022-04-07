@@ -114,14 +114,14 @@ public class CreateEngineNamespaceRequest extends Request {
             super();
         } 
 
-        private Builder(CreateEngineNamespaceRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.clusterId = response.clusterId;
-            this.desc = response.desc;
-            this.instanceId = response.instanceId;
-            this.name = response.name;
-            this.serviceCount = response.serviceCount;
+        private Builder(CreateEngineNamespaceRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.clusterId = request.clusterId;
+            this.desc = request.desc;
+            this.instanceId = request.instanceId;
+            this.name = request.name;
+            this.serviceCount = request.serviceCount;
         } 
 
         /**

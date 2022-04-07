@@ -102,13 +102,13 @@ public class ImportNacosConfigRequest extends Request {
             super();
         } 
 
-        private Builder(ImportNacosConfigRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.fileUrl = response.fileUrl;
-            this.instanceId = response.instanceId;
-            this.namespaceId = response.namespaceId;
-            this.policy = response.policy;
+        private Builder(ImportNacosConfigRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.fileUrl = request.fileUrl;
+            this.instanceId = request.instanceId;
+            this.namespaceId = request.namespaceId;
+            this.policy = request.policy;
         } 
 
         /**

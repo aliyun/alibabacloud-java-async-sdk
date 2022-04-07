@@ -7,13 +7,19 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateAlarmRuleResponseBody} extends {@link TeaModel}
+ * {@link AddSecurityGroupRuleResponseBody} extends {@link TeaModel}
  *
- * <p>CreateAlarmRuleResponseBody</p>
+ * <p>AddSecurityGroupRuleResponseBody</p>
  */
-public class CreateAlarmRuleResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
-    private String errorCode;
+public class AddSecurityGroupRuleResponseBody extends TeaModel {
+    @NameInMap("Code")
+    private Integer code;
+
+    @NameInMap("Data")
+    private String data;
+
+    @NameInMap("HttpStatusCode")
+    private Integer httpStatusCode;
 
     @NameInMap("Message")
     private String message;
@@ -24,8 +30,10 @@ public class CreateAlarmRuleResponseBody extends TeaModel {
     @NameInMap("Success")
     private Boolean success;
 
-    private CreateAlarmRuleResponseBody(Builder builder) {
-        this.errorCode = builder.errorCode;
+    private AddSecurityGroupRuleResponseBody(Builder builder) {
+        this.code = builder.code;
+        this.data = builder.data;
+        this.httpStatusCode = builder.httpStatusCode;
         this.message = builder.message;
         this.requestId = builder.requestId;
         this.success = builder.success;
@@ -35,15 +43,29 @@ public class CreateAlarmRuleResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static CreateAlarmRuleResponseBody create() {
+    public static AddSecurityGroupRuleResponseBody create() {
         return builder().build();
     }
 
     /**
-     * @return errorCode
+     * @return code
      */
-    public String getErrorCode() {
-        return this.errorCode;
+    public Integer getCode() {
+        return this.code;
+    }
+
+    /**
+     * @return data
+     */
+    public String getData() {
+        return this.data;
+    }
+
+    /**
+     * @return httpStatusCode
+     */
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     /**
@@ -68,16 +90,34 @@ public class CreateAlarmRuleResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String errorCode; 
+        private Integer code; 
+        private String data; 
+        private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * ErrorCode.
+         * Code.
          */
-        public Builder errorCode(String errorCode) {
-            this.errorCode = errorCode;
+        public Builder code(Integer code) {
+            this.code = code;
+            return this;
+        }
+
+        /**
+         * Data.
+         */
+        public Builder data(String data) {
+            this.data = data;
+            return this;
+        }
+
+        /**
+         * HttpStatusCode.
+         */
+        public Builder httpStatusCode(Integer httpStatusCode) {
+            this.httpStatusCode = httpStatusCode;
             return this;
         }
 
@@ -90,7 +130,7 @@ public class CreateAlarmRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -105,8 +145,8 @@ public class CreateAlarmRuleResponseBody extends TeaModel {
             return this;
         }
 
-        public CreateAlarmRuleResponseBody build() {
-            return new CreateAlarmRuleResponseBody(this);
+        public AddSecurityGroupRuleResponseBody build() {
+            return new AddSecurityGroupRuleResponseBody(this);
         } 
 
     } 

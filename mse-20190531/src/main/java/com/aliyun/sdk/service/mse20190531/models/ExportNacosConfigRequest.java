@@ -127,15 +127,15 @@ public class ExportNacosConfigRequest extends Request {
             super();
         } 
 
-        private Builder(ExportNacosConfigRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.appName = response.appName;
-            this.dataId = response.dataId;
-            this.group = response.group;
-            this.ids = response.ids;
-            this.instanceId = response.instanceId;
-            this.namespaceId = response.namespaceId;
+        private Builder(ExportNacosConfigRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.appName = request.appName;
+            this.dataId = request.dataId;
+            this.group = request.group;
+            this.ids = request.ids;
+            this.instanceId = request.instanceId;
+            this.namespaceId = request.namespaceId;
         } 
 
         /**

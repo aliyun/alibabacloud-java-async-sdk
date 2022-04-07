@@ -76,11 +76,11 @@ public class ListZnodeChildrenRequest extends Request {
             super();
         } 
 
-        private Builder(ListZnodeChildrenRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.clusterId = response.clusterId;
-            this.path = response.path;
+        private Builder(ListZnodeChildrenRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.clusterId = request.clusterId;
+            this.path = request.path;
         } 
 
         /**

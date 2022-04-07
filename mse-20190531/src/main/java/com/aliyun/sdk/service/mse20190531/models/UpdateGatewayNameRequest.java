@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateGatewayNameRequest extends Request {
     @Query
+    @NameInMap("AcceptLanguage")
+    private String acceptLanguage;
+
+    @Query
     @NameInMap("GatewayUniqueId")
     private String gatewayUniqueId;
 
@@ -22,6 +26,7 @@ public class UpdateGatewayNameRequest extends Request {
 
     private UpdateGatewayNameRequest(Builder builder) {
         super(builder);
+        this.acceptLanguage = builder.acceptLanguage;
         this.gatewayUniqueId = builder.gatewayUniqueId;
         this.name = builder.name;
     }
@@ -40,6 +45,13 @@ public class UpdateGatewayNameRequest extends Request {
     }
 
     /**
+     * @return acceptLanguage
+     */
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
+    }
+
+    /**
      * @return gatewayUniqueId
      */
     public String getGatewayUniqueId() {
@@ -54,6 +66,7 @@ public class UpdateGatewayNameRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateGatewayNameRequest, Builder> {
+        private String acceptLanguage; 
         private String gatewayUniqueId; 
         private String name; 
 
@@ -61,11 +74,21 @@ public class UpdateGatewayNameRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateGatewayNameRequest response) {
-            super(response);
-            this.gatewayUniqueId = response.gatewayUniqueId;
-            this.name = response.name;
+        private Builder(UpdateGatewayNameRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.gatewayUniqueId = request.gatewayUniqueId;
+            this.name = request.name;
         } 
+
+        /**
+         * AcceptLanguage.
+         */
+        public Builder acceptLanguage(String acceptLanguage) {
+            this.putQueryParameter("AcceptLanguage", acceptLanguage);
+            this.acceptLanguage = acceptLanguage;
+            return this;
+        }
 
         /**
          * GatewayUniqueId.

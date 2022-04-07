@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DeleteGatewayRequest extends Request {
     @Query
+    @NameInMap("AcceptLanguage")
+    private String acceptLanguage;
+
+    @Query
     @NameInMap("DeleteSlb")
     private Boolean deleteSlb;
 
@@ -22,6 +26,7 @@ public class DeleteGatewayRequest extends Request {
 
     private DeleteGatewayRequest(Builder builder) {
         super(builder);
+        this.acceptLanguage = builder.acceptLanguage;
         this.deleteSlb = builder.deleteSlb;
         this.gatewayUniqueId = builder.gatewayUniqueId;
     }
@@ -40,6 +45,13 @@ public class DeleteGatewayRequest extends Request {
     }
 
     /**
+     * @return acceptLanguage
+     */
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
+    }
+
+    /**
      * @return deleteSlb
      */
     public Boolean getDeleteSlb() {
@@ -54,6 +66,7 @@ public class DeleteGatewayRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteGatewayRequest, Builder> {
+        private String acceptLanguage; 
         private Boolean deleteSlb; 
         private String gatewayUniqueId; 
 
@@ -61,11 +74,21 @@ public class DeleteGatewayRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteGatewayRequest response) {
-            super(response);
-            this.deleteSlb = response.deleteSlb;
-            this.gatewayUniqueId = response.gatewayUniqueId;
+        private Builder(DeleteGatewayRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.deleteSlb = request.deleteSlb;
+            this.gatewayUniqueId = request.gatewayUniqueId;
         } 
+
+        /**
+         * AcceptLanguage.
+         */
+        public Builder acceptLanguage(String acceptLanguage) {
+            this.putQueryParameter("AcceptLanguage", acceptLanguage);
+            this.acceptLanguage = acceptLanguage;
+            return this;
+        }
 
         /**
          * DeleteSlb.

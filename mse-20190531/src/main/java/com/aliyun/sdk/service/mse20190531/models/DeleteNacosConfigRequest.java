@@ -116,14 +116,14 @@ public class DeleteNacosConfigRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteNacosConfigRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.beta = response.beta;
-            this.dataId = response.dataId;
-            this.group = response.group;
-            this.instanceId = response.instanceId;
-            this.namespaceId = response.namespaceId;
+        private Builder(DeleteNacosConfigRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.beta = request.beta;
+            this.dataId = request.dataId;
+            this.group = request.group;
+            this.instanceId = request.instanceId;
+            this.namespaceId = request.namespaceId;
         } 
 
         /**

@@ -128,15 +128,15 @@ public class UpdateEngineNamespaceRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateEngineNamespaceRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.clusterId = response.clusterId;
-            this.desc = response.desc;
-            this.id = response.id;
-            this.instanceId = response.instanceId;
-            this.name = response.name;
-            this.serviceCount = response.serviceCount;
+        private Builder(UpdateEngineNamespaceRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.clusterId = request.clusterId;
+            this.desc = request.desc;
+            this.id = request.id;
+            this.instanceId = request.instanceId;
+            this.name = request.name;
+            this.serviceCount = request.serviceCount;
         } 
 
         /**

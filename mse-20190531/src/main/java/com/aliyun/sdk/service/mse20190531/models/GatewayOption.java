@@ -12,6 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GatewayOption</p>
  */
 public class GatewayOption extends TeaModel {
+    @NameInMap("DisableHttp2Alpn")
+    private Boolean disableHttp2Alpn;
+
+    @NameInMap("EnableHardwareAcceleration")
+    private Boolean enableHardwareAcceleration;
+
+    @NameInMap("EnableWaf")
+    private Boolean enableWaf;
+
     @NameInMap("LogConfigDetails")
     private LogConfigDetails logConfigDetails;
 
@@ -19,6 +28,9 @@ public class GatewayOption extends TeaModel {
     private TraceDetails traceDetails;
 
     private GatewayOption(Builder builder) {
+        this.disableHttp2Alpn = builder.disableHttp2Alpn;
+        this.enableHardwareAcceleration = builder.enableHardwareAcceleration;
+        this.enableWaf = builder.enableWaf;
         this.logConfigDetails = builder.logConfigDetails;
         this.traceDetails = builder.traceDetails;
     }
@@ -29,6 +41,27 @@ public class GatewayOption extends TeaModel {
 
     public static GatewayOption create() {
         return builder().build();
+    }
+
+    /**
+     * @return disableHttp2Alpn
+     */
+    public Boolean getDisableHttp2Alpn() {
+        return this.disableHttp2Alpn;
+    }
+
+    /**
+     * @return enableHardwareAcceleration
+     */
+    public Boolean getEnableHardwareAcceleration() {
+        return this.enableHardwareAcceleration;
+    }
+
+    /**
+     * @return enableWaf
+     */
+    public Boolean getEnableWaf() {
+        return this.enableWaf;
     }
 
     /**
@@ -46,8 +79,35 @@ public class GatewayOption extends TeaModel {
     }
 
     public static final class Builder {
+        private Boolean disableHttp2Alpn; 
+        private Boolean enableHardwareAcceleration; 
+        private Boolean enableWaf; 
         private LogConfigDetails logConfigDetails; 
         private TraceDetails traceDetails; 
+
+        /**
+         * 是否禁用http
+         */
+        public Builder disableHttp2Alpn(Boolean disableHttp2Alpn) {
+            this.disableHttp2Alpn = disableHttp2Alpn;
+            return this;
+        }
+
+        /**
+         * 是否开启硬件加速
+         */
+        public Builder enableHardwareAcceleration(Boolean enableHardwareAcceleration) {
+            this.enableHardwareAcceleration = enableHardwareAcceleration;
+            return this;
+        }
+
+        /**
+         * 是否开启waf
+         */
+        public Builder enableWaf(Boolean enableWaf) {
+            this.enableWaf = enableWaf;
+            return this;
+        }
 
         /**
          * 日志配置详情
@@ -73,6 +133,7 @@ public class GatewayOption extends TeaModel {
 
     public static class LogConfigDetails extends TeaModel {
         @NameInMap("LogEnabled")
+        @Validation(required = true)
         private Boolean logEnabled;
 
         @NameInMap("LogStoreName")
@@ -157,6 +218,7 @@ public class GatewayOption extends TeaModel {
         private Long sample;
 
         @NameInMap("TraceEnabled")
+        @Validation(required = true)
         private Boolean traceEnabled;
 
         private TraceDetails(Builder builder) {

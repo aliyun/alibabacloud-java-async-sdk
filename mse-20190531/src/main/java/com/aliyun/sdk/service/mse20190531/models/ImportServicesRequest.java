@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ImportServicesRequest extends Request {
     @Query
+    @NameInMap("AcceptLanguage")
+    private String acceptLanguage;
+
+    @Query
     @NameInMap("GatewayUniqueId")
     private String gatewayUniqueId;
 
@@ -30,6 +34,7 @@ public class ImportServicesRequest extends Request {
 
     private ImportServicesRequest(Builder builder) {
         super(builder);
+        this.acceptLanguage = builder.acceptLanguage;
         this.gatewayUniqueId = builder.gatewayUniqueId;
         this.serviceList = builder.serviceList;
         this.sourceId = builder.sourceId;
@@ -47,6 +52,13 @@ public class ImportServicesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return acceptLanguage
+     */
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     /**
@@ -78,6 +90,7 @@ public class ImportServicesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ImportServicesRequest, Builder> {
+        private String acceptLanguage; 
         private String gatewayUniqueId; 
         private java.util.List < ServiceList> serviceList; 
         private String sourceId; 
@@ -87,13 +100,23 @@ public class ImportServicesRequest extends Request {
             super();
         } 
 
-        private Builder(ImportServicesRequest response) {
-            super(response);
-            this.gatewayUniqueId = response.gatewayUniqueId;
-            this.serviceList = response.serviceList;
-            this.sourceId = response.sourceId;
-            this.sourceType = response.sourceType;
+        private Builder(ImportServicesRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.gatewayUniqueId = request.gatewayUniqueId;
+            this.serviceList = request.serviceList;
+            this.sourceId = request.sourceId;
+            this.sourceType = request.sourceType;
         } 
+
+        /**
+         * AcceptLanguage.
+         */
+        public Builder acceptLanguage(String acceptLanguage) {
+            this.putQueryParameter("AcceptLanguage", acceptLanguage);
+            this.acceptLanguage = acceptLanguage;
+            return this;
+        }
 
         /**
          * GatewayUniqueId.
@@ -108,7 +131,8 @@ public class ImportServicesRequest extends Request {
          * ServiceList.
          */
         public Builder serviceList(java.util.List < ServiceList> serviceList) {
-            this.putQueryParameter("ServiceList", serviceList);
+            String serviceListShrink = shrink(serviceList, "ServiceList", "json");
+            this.putQueryParameter("ServiceList", serviceListShrink);
             this.serviceList = serviceList;
             return this;
         }

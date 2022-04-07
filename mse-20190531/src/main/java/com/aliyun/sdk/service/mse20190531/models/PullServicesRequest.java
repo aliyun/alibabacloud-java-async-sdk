@@ -13,12 +13,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class PullServicesRequest extends Request {
     @Query
-    @NameInMap("GatewayUniqueId")
-    private String gatewayUniqueId;
+    @NameInMap("AcceptLanguage")
+    private String acceptLanguage;
 
     @Query
-    @NameInMap("SourceId")
-    private String sourceId;
+    @NameInMap("GatewayUniqueId")
+    private String gatewayUniqueId;
 
     @Query
     @NameInMap("SourceType")
@@ -26,8 +26,8 @@ public class PullServicesRequest extends Request {
 
     private PullServicesRequest(Builder builder) {
         super(builder);
+        this.acceptLanguage = builder.acceptLanguage;
         this.gatewayUniqueId = builder.gatewayUniqueId;
-        this.sourceId = builder.sourceId;
         this.sourceType = builder.sourceType;
     }
 
@@ -45,17 +45,17 @@ public class PullServicesRequest extends Request {
     }
 
     /**
+     * @return acceptLanguage
+     */
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
+    }
+
+    /**
      * @return gatewayUniqueId
      */
     public String getGatewayUniqueId() {
         return this.gatewayUniqueId;
-    }
-
-    /**
-     * @return sourceId
-     */
-    public String getSourceId() {
-        return this.sourceId;
     }
 
     /**
@@ -66,20 +66,29 @@ public class PullServicesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<PullServicesRequest, Builder> {
+        private String acceptLanguage; 
         private String gatewayUniqueId; 
-        private String sourceId; 
         private String sourceType; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(PullServicesRequest response) {
-            super(response);
-            this.gatewayUniqueId = response.gatewayUniqueId;
-            this.sourceId = response.sourceId;
-            this.sourceType = response.sourceType;
+        private Builder(PullServicesRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.gatewayUniqueId = request.gatewayUniqueId;
+            this.sourceType = request.sourceType;
         } 
+
+        /**
+         * AcceptLanguage.
+         */
+        public Builder acceptLanguage(String acceptLanguage) {
+            this.putQueryParameter("AcceptLanguage", acceptLanguage);
+            this.acceptLanguage = acceptLanguage;
+            return this;
+        }
 
         /**
          * GatewayUniqueId.
@@ -87,15 +96,6 @@ public class PullServicesRequest extends Request {
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
             this.gatewayUniqueId = gatewayUniqueId;
-            return this;
-        }
-
-        /**
-         * SourceId.
-         */
-        public Builder sourceId(String sourceId) {
-            this.putQueryParameter("SourceId", sourceId);
-            this.sourceId = sourceId;
             return this;
         }
 

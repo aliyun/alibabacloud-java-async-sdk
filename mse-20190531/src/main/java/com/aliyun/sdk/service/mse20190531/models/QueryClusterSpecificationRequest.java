@@ -61,10 +61,10 @@ public class QueryClusterSpecificationRequest extends Request {
             super();
         } 
 
-        private Builder(QueryClusterSpecificationRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.connectType = response.connectType;
+        private Builder(QueryClusterSpecificationRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.connectType = request.connectType;
         } 
 
         /**

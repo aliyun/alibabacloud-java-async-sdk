@@ -48,9 +48,9 @@ public class QueryGatewayTypeRequest extends Request {
             super();
         } 
 
-        private Builder(QueryGatewayTypeRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
+        private Builder(QueryGatewayTypeRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
         } 
 
         /**

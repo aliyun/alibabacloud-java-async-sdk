@@ -100,13 +100,13 @@ public class UpdateGatewayRouteRetryRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateGatewayRouteRetryRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.gatewayId = response.gatewayId;
-            this.gatewayUniqueId = response.gatewayUniqueId;
-            this.id = response.id;
-            this.retryJSON = response.retryJSON;
+        private Builder(UpdateGatewayRouteRetryRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.gatewayId = request.gatewayId;
+            this.gatewayUniqueId = request.gatewayUniqueId;
+            this.id = request.id;
+            this.retryJSON = request.retryJSON;
         } 
 
         /**
@@ -149,7 +149,8 @@ public class UpdateGatewayRouteRetryRequest extends Request {
          * RetryJSON.
          */
         public Builder retryJSON(RetryJSON retryJSON) {
-            this.putQueryParameter("RetryJSON", retryJSON);
+            String retryJSONShrink = shrink(retryJSON, "RetryJSON", "json");
+            this.putQueryParameter("RetryJSON", retryJSONShrink);
             this.retryJSON = retryJSON;
             return this;
         }

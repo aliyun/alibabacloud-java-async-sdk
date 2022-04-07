@@ -74,11 +74,11 @@ public class RetryClusterRequest extends Request {
             super();
         } 
 
-        private Builder(RetryClusterRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.instanceId = response.instanceId;
-            this.requestPars = response.requestPars;
+        private Builder(RetryClusterRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.instanceId = request.instanceId;
+            this.requestPars = request.requestPars;
         } 
 
         /**

@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetGatewayServiceDetailRequest extends Request {
     @Query
+    @NameInMap("AcceptLanguage")
+    private String acceptLanguage;
+
+    @Query
     @NameInMap("GatewayUniqueId")
     private String gatewayUniqueId;
 
@@ -22,6 +26,7 @@ public class GetGatewayServiceDetailRequest extends Request {
 
     private GetGatewayServiceDetailRequest(Builder builder) {
         super(builder);
+        this.acceptLanguage = builder.acceptLanguage;
         this.gatewayUniqueId = builder.gatewayUniqueId;
         this.serviceId = builder.serviceId;
     }
@@ -40,6 +45,13 @@ public class GetGatewayServiceDetailRequest extends Request {
     }
 
     /**
+     * @return acceptLanguage
+     */
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
+    }
+
+    /**
      * @return gatewayUniqueId
      */
     public String getGatewayUniqueId() {
@@ -54,6 +66,7 @@ public class GetGatewayServiceDetailRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetGatewayServiceDetailRequest, Builder> {
+        private String acceptLanguage; 
         private String gatewayUniqueId; 
         private Long serviceId; 
 
@@ -61,11 +74,21 @@ public class GetGatewayServiceDetailRequest extends Request {
             super();
         } 
 
-        private Builder(GetGatewayServiceDetailRequest response) {
-            super(response);
-            this.gatewayUniqueId = response.gatewayUniqueId;
-            this.serviceId = response.serviceId;
+        private Builder(GetGatewayServiceDetailRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.gatewayUniqueId = request.gatewayUniqueId;
+            this.serviceId = request.serviceId;
         } 
+
+        /**
+         * AcceptLanguage.
+         */
+        public Builder acceptLanguage(String acceptLanguage) {
+            this.putQueryParameter("AcceptLanguage", acceptLanguage);
+            this.acceptLanguage = acceptLanguage;
+            return this;
+        }
 
         /**
          * GatewayUniqueId.

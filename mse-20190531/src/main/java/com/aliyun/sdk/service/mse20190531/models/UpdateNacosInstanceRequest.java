@@ -199,20 +199,20 @@ public class UpdateNacosInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateNacosInstanceRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.clusterName = response.clusterName;
-            this.enabled = response.enabled;
-            this.ephemeral = response.ephemeral;
-            this.groupName = response.groupName;
-            this.instanceId = response.instanceId;
-            this.ip = response.ip;
-            this.metadata = response.metadata;
-            this.namespaceId = response.namespaceId;
-            this.port = response.port;
-            this.serviceName = response.serviceName;
-            this.weight = response.weight;
+        private Builder(UpdateNacosInstanceRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.clusterName = request.clusterName;
+            this.enabled = request.enabled;
+            this.ephemeral = request.ephemeral;
+            this.groupName = request.groupName;
+            this.instanceId = request.instanceId;
+            this.ip = request.ip;
+            this.metadata = request.metadata;
+            this.namespaceId = request.namespaceId;
+            this.port = request.port;
+            this.serviceName = request.serviceName;
+            this.weight = request.weight;
         } 
 
         /**

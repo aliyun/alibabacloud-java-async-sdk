@@ -155,17 +155,17 @@ public class ListNacosHistoryConfigsRequest extends Request {
             super();
         } 
 
-        private Builder(ListNacosHistoryConfigsRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.dataId = response.dataId;
-            this.group = response.group;
-            this.instanceId = response.instanceId;
-            this.namespaceId = response.namespaceId;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.requestPars = response.requestPars;
+        private Builder(ListNacosHistoryConfigsRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.dataId = request.dataId;
+            this.group = request.group;
+            this.instanceId = request.instanceId;
+            this.namespaceId = request.namespaceId;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.requestPars = request.requestPars;
         } 
 
         /**

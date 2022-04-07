@@ -102,13 +102,13 @@ public class ListListenersByIpRequest extends Request {
             super();
         } 
 
-        private Builder(ListListenersByIpRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.instanceId = response.instanceId;
-            this.ip = response.ip;
-            this.namespaceId = response.namespaceId;
-            this.requestPars = response.requestPars;
+        private Builder(ListListenersByIpRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.instanceId = request.instanceId;
+            this.ip = request.ip;
+            this.namespaceId = request.namespaceId;
+            this.requestPars = request.requestPars;
         } 
 
         /**

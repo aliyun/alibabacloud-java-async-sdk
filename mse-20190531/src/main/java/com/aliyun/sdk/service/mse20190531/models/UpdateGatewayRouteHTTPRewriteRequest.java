@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateGatewayRouteHTTPRewriteRequest extends Request {
     @Query
+    @NameInMap("AcceptLanguage")
+    private String acceptLanguage;
+
+    @Query
     @NameInMap("GatewayId")
     private Long gatewayId;
 
@@ -30,6 +34,7 @@ public class UpdateGatewayRouteHTTPRewriteRequest extends Request {
 
     private UpdateGatewayRouteHTTPRewriteRequest(Builder builder) {
         super(builder);
+        this.acceptLanguage = builder.acceptLanguage;
         this.gatewayId = builder.gatewayId;
         this.gatewayUniqueId = builder.gatewayUniqueId;
         this.httpRewriteJSON = builder.httpRewriteJSON;
@@ -47,6 +52,13 @@ public class UpdateGatewayRouteHTTPRewriteRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return acceptLanguage
+     */
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     /**
@@ -78,6 +90,7 @@ public class UpdateGatewayRouteHTTPRewriteRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateGatewayRouteHTTPRewriteRequest, Builder> {
+        private String acceptLanguage; 
         private Long gatewayId; 
         private String gatewayUniqueId; 
         private String httpRewriteJSON; 
@@ -87,13 +100,23 @@ public class UpdateGatewayRouteHTTPRewriteRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateGatewayRouteHTTPRewriteRequest response) {
-            super(response);
-            this.gatewayId = response.gatewayId;
-            this.gatewayUniqueId = response.gatewayUniqueId;
-            this.httpRewriteJSON = response.httpRewriteJSON;
-            this.id = response.id;
+        private Builder(UpdateGatewayRouteHTTPRewriteRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.gatewayId = request.gatewayId;
+            this.gatewayUniqueId = request.gatewayUniqueId;
+            this.httpRewriteJSON = request.httpRewriteJSON;
+            this.id = request.id;
         } 
+
+        /**
+         * AcceptLanguage.
+         */
+        public Builder acceptLanguage(String acceptLanguage) {
+            this.putQueryParameter("AcceptLanguage", acceptLanguage);
+            this.acceptLanguage = acceptLanguage;
+            return this;
+        }
 
         /**
          * GatewayId.

@@ -87,12 +87,12 @@ public class GetEngineNamepaceRequest extends Request {
             super();
         } 
 
-        private Builder(GetEngineNamepaceRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.clusterId = response.clusterId;
-            this.id = response.id;
-            this.instanceId = response.instanceId;
+        private Builder(GetEngineNamepaceRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.clusterId = request.clusterId;
+            this.id = request.id;
+            this.instanceId = request.instanceId;
         } 
 
         /**

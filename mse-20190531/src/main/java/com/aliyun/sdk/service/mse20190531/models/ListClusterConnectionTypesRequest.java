@@ -48,9 +48,9 @@ public class ListClusterConnectionTypesRequest extends Request {
             super();
         } 
 
-        private Builder(ListClusterConnectionTypesRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
+        private Builder(ListClusterConnectionTypesRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
         } 
 
         /**

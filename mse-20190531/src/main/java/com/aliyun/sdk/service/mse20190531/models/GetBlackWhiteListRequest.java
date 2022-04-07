@@ -100,13 +100,13 @@ public class GetBlackWhiteListRequest extends Request {
             super();
         } 
 
-        private Builder(GetBlackWhiteListRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.gatewayUniqueId = response.gatewayUniqueId;
-            this.isWhite = response.isWhite;
-            this.resourceType = response.resourceType;
-            this.type = response.type;
+        private Builder(GetBlackWhiteListRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.gatewayUniqueId = request.gatewayUniqueId;
+            this.isWhite = request.isWhite;
+            this.resourceType = request.resourceType;
+            this.type = request.type;
         } 
 
         /**

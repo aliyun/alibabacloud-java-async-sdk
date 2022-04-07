@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateImageRequest extends Request {
     @Query
+    @NameInMap("AcceptLanguage")
+    private String acceptLanguage;
+
+    @Query
     @NameInMap("ClusterId")
     @Validation(required = true)
     private String clusterId;
@@ -24,6 +28,7 @@ public class UpdateImageRequest extends Request {
 
     private UpdateImageRequest(Builder builder) {
         super(builder);
+        this.acceptLanguage = builder.acceptLanguage;
         this.clusterId = builder.clusterId;
         this.versionCode = builder.versionCode;
     }
@@ -42,6 +47,13 @@ public class UpdateImageRequest extends Request {
     }
 
     /**
+     * @return acceptLanguage
+     */
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
+    }
+
+    /**
      * @return clusterId
      */
     public String getClusterId() {
@@ -56,6 +68,7 @@ public class UpdateImageRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateImageRequest, Builder> {
+        private String acceptLanguage; 
         private String clusterId; 
         private String versionCode; 
 
@@ -63,11 +76,21 @@ public class UpdateImageRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateImageRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.versionCode = response.versionCode;
+        private Builder(UpdateImageRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.clusterId = request.clusterId;
+            this.versionCode = request.versionCode;
         } 
+
+        /**
+         * AcceptLanguage.
+         */
+        public Builder acceptLanguage(String acceptLanguage) {
+            this.putQueryParameter("AcceptLanguage", acceptLanguage);
+            this.acceptLanguage = acceptLanguage;
+            return this;
+        }
 
         /**
          * 目标集群的id

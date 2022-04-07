@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class SelectGatewaySlbRequest extends Request {
     @Query
+    @NameInMap("AcceptLanguage")
+    private String acceptLanguage;
+
+    @Query
     @NameInMap("GatewayUniqueId")
     private String gatewayUniqueId;
 
@@ -26,6 +30,7 @@ public class SelectGatewaySlbRequest extends Request {
 
     private SelectGatewaySlbRequest(Builder builder) {
         super(builder);
+        this.acceptLanguage = builder.acceptLanguage;
         this.gatewayUniqueId = builder.gatewayUniqueId;
         this.name = builder.name;
         this.type = builder.type;
@@ -42,6 +47,13 @@ public class SelectGatewaySlbRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return acceptLanguage
+     */
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     /**
@@ -66,6 +78,7 @@ public class SelectGatewaySlbRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SelectGatewaySlbRequest, Builder> {
+        private String acceptLanguage; 
         private String gatewayUniqueId; 
         private String name; 
         private String type; 
@@ -74,12 +87,22 @@ public class SelectGatewaySlbRequest extends Request {
             super();
         } 
 
-        private Builder(SelectGatewaySlbRequest response) {
-            super(response);
-            this.gatewayUniqueId = response.gatewayUniqueId;
-            this.name = response.name;
-            this.type = response.type;
+        private Builder(SelectGatewaySlbRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.gatewayUniqueId = request.gatewayUniqueId;
+            this.name = request.name;
+            this.type = request.type;
         } 
+
+        /**
+         * AcceptLanguage.
+         */
+        public Builder acceptLanguage(String acceptLanguage) {
+            this.putQueryParameter("AcceptLanguage", acceptLanguage);
+            this.acceptLanguage = acceptLanguage;
+            return this;
+        }
 
         /**
          * GatewayUniqueId.

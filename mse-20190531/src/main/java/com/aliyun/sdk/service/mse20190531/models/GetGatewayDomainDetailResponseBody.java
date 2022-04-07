@@ -162,7 +162,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
         private Long beforeDate;
 
         @NameInMap("CertIdentifier")
-        private Integer certIdentifier;
+        private String certIdentifier;
 
         @NameInMap("CertName")
         private String certName;
@@ -259,7 +259,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
         /**
          * @return certIdentifier
          */
-        public Integer getCertIdentifier() {
+        public String getCertIdentifier() {
             return this.certIdentifier;
         }
 
@@ -365,7 +365,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             private Long afterDate; 
             private String algorithm; 
             private Long beforeDate; 
-            private Integer certIdentifier; 
+            private String certIdentifier; 
             private String certName; 
             private String commonName; 
             private Long gatewayId; 
@@ -408,7 +408,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             /**
              * CertIdentifier.
              */
-            public Builder certIdentifier(Integer certIdentifier) {
+            public Builder certIdentifier(String certIdentifier) {
                 this.certIdentifier = certIdentifier;
                 return this;
             }

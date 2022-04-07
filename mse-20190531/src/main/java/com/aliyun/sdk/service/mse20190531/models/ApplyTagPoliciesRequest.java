@@ -129,15 +129,15 @@ public class ApplyTagPoliciesRequest extends Request {
             super();
         } 
 
-        private Builder(ApplyTagPoliciesRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.appId = response.appId;
-            this.enable = response.enable;
-            this.namespaceId = response.namespaceId;
-            this.region = response.region;
-            this.rules = response.rules;
-            this.source = response.source;
+        private Builder(ApplyTagPoliciesRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.appId = request.appId;
+            this.enable = request.enable;
+            this.namespaceId = request.namespaceId;
+            this.region = request.region;
+            this.rules = request.rules;
+            this.source = request.source;
         } 
 
         /**

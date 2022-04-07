@@ -113,14 +113,14 @@ public class ScalingClusterRequest extends Request {
             super();
         } 
 
-        private Builder(ScalingClusterRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.clusterSpecification = response.clusterSpecification;
-            this.cpu = response.cpu;
-            this.instanceCount = response.instanceCount;
-            this.instanceId = response.instanceId;
-            this.memoryCapacity = response.memoryCapacity;
+        private Builder(ScalingClusterRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.clusterSpecification = request.clusterSpecification;
+            this.cpu = request.cpu;
+            this.instanceCount = request.instanceCount;
+            this.instanceId = request.instanceId;
+            this.memoryCapacity = request.memoryCapacity;
         } 
 
         /**

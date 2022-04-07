@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateGatewayOptionRequest extends Request {
     @Query
+    @NameInMap("AcceptLanguage")
+    private String acceptLanguage;
+
+    @Query
     @NameInMap("GatewayId")
     private Long gatewayId;
 
@@ -26,6 +30,7 @@ public class UpdateGatewayOptionRequest extends Request {
 
     private UpdateGatewayOptionRequest(Builder builder) {
         super(builder);
+        this.acceptLanguage = builder.acceptLanguage;
         this.gatewayId = builder.gatewayId;
         this.gatewayOption = builder.gatewayOption;
         this.gatewayUniqueId = builder.gatewayUniqueId;
@@ -42,6 +47,13 @@ public class UpdateGatewayOptionRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return acceptLanguage
+     */
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     /**
@@ -66,6 +78,7 @@ public class UpdateGatewayOptionRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateGatewayOptionRequest, Builder> {
+        private String acceptLanguage; 
         private Long gatewayId; 
         private GatewayOption gatewayOption; 
         private String gatewayUniqueId; 
@@ -74,12 +87,22 @@ public class UpdateGatewayOptionRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateGatewayOptionRequest response) {
-            super(response);
-            this.gatewayId = response.gatewayId;
-            this.gatewayOption = response.gatewayOption;
-            this.gatewayUniqueId = response.gatewayUniqueId;
+        private Builder(UpdateGatewayOptionRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.gatewayId = request.gatewayId;
+            this.gatewayOption = request.gatewayOption;
+            this.gatewayUniqueId = request.gatewayUniqueId;
         } 
+
+        /**
+         * AcceptLanguage.
+         */
+        public Builder acceptLanguage(String acceptLanguage) {
+            this.putQueryParameter("AcceptLanguage", acceptLanguage);
+            this.acceptLanguage = acceptLanguage;
+            return this;
+        }
 
         /**
          * GatewayId.
@@ -94,7 +117,8 @@ public class UpdateGatewayOptionRequest extends Request {
          * GatewayOption.
          */
         public Builder gatewayOption(GatewayOption gatewayOption) {
-            this.putQueryParameter("GatewayOption", gatewayOption);
+            String gatewayOptionShrink = shrink(gatewayOption, "GatewayOption", "json");
+            this.putQueryParameter("GatewayOption", gatewayOptionShrink);
             this.gatewayOption = gatewayOption;
             return this;
         }

@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateNacosClusterRequest extends Request {
     @Query
+    @NameInMap("AcceptLanguage")
+    private String acceptLanguage;
+
+    @Query
     @NameInMap("CheckPort")
     private Integer checkPort;
 
@@ -50,6 +54,7 @@ public class UpdateNacosClusterRequest extends Request {
 
     private UpdateNacosClusterRequest(Builder builder) {
         super(builder);
+        this.acceptLanguage = builder.acceptLanguage;
         this.checkPort = builder.checkPort;
         this.clusterName = builder.clusterName;
         this.groupName = builder.groupName;
@@ -71,6 +76,13 @@ public class UpdateNacosClusterRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return acceptLanguage
+     */
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     /**
@@ -130,6 +142,7 @@ public class UpdateNacosClusterRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateNacosClusterRequest, Builder> {
+        private String acceptLanguage; 
         private Integer checkPort; 
         private String clusterName; 
         private String groupName; 
@@ -143,17 +156,27 @@ public class UpdateNacosClusterRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateNacosClusterRequest response) {
-            super(response);
-            this.checkPort = response.checkPort;
-            this.clusterName = response.clusterName;
-            this.groupName = response.groupName;
-            this.healthChecker = response.healthChecker;
-            this.instanceId = response.instanceId;
-            this.namespaceId = response.namespaceId;
-            this.serviceName = response.serviceName;
-            this.useInstancePortForCheck = response.useInstancePortForCheck;
+        private Builder(UpdateNacosClusterRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.checkPort = request.checkPort;
+            this.clusterName = request.clusterName;
+            this.groupName = request.groupName;
+            this.healthChecker = request.healthChecker;
+            this.instanceId = request.instanceId;
+            this.namespaceId = request.namespaceId;
+            this.serviceName = request.serviceName;
+            this.useInstancePortForCheck = request.useInstancePortForCheck;
         } 
+
+        /**
+         * AcceptLanguage.
+         */
+        public Builder acceptLanguage(String acceptLanguage) {
+            this.putQueryParameter("AcceptLanguage", acceptLanguage);
+            this.acceptLanguage = acceptLanguage;
+            return this;
+        }
 
         /**
          * 健康检查端口

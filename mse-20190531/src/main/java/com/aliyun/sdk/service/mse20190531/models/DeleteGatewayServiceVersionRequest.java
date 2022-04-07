@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DeleteGatewayServiceVersionRequest extends Request {
     @Query
+    @NameInMap("AcceptLanguage")
+    private String acceptLanguage;
+
+    @Query
     @NameInMap("GatewayUniqueId")
     private String gatewayUniqueId;
 
@@ -26,6 +30,7 @@ public class DeleteGatewayServiceVersionRequest extends Request {
 
     private DeleteGatewayServiceVersionRequest(Builder builder) {
         super(builder);
+        this.acceptLanguage = builder.acceptLanguage;
         this.gatewayUniqueId = builder.gatewayUniqueId;
         this.serviceId = builder.serviceId;
         this.serviceVersion = builder.serviceVersion;
@@ -42,6 +47,13 @@ public class DeleteGatewayServiceVersionRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return acceptLanguage
+     */
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     /**
@@ -66,6 +78,7 @@ public class DeleteGatewayServiceVersionRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteGatewayServiceVersionRequest, Builder> {
+        private String acceptLanguage; 
         private String gatewayUniqueId; 
         private Long serviceId; 
         private String serviceVersion; 
@@ -74,12 +87,22 @@ public class DeleteGatewayServiceVersionRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteGatewayServiceVersionRequest response) {
-            super(response);
-            this.gatewayUniqueId = response.gatewayUniqueId;
-            this.serviceId = response.serviceId;
-            this.serviceVersion = response.serviceVersion;
+        private Builder(DeleteGatewayServiceVersionRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.gatewayUniqueId = request.gatewayUniqueId;
+            this.serviceId = request.serviceId;
+            this.serviceVersion = request.serviceVersion;
         } 
+
+        /**
+         * AcceptLanguage.
+         */
+        public Builder acceptLanguage(String acceptLanguage) {
+            this.putQueryParameter("AcceptLanguage", acceptLanguage);
+            this.acceptLanguage = acceptLanguage;
+            return this;
+        }
 
         /**
          * GatewayUniqueId.

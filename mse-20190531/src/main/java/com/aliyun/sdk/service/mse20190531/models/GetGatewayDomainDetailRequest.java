@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetGatewayDomainDetailRequest extends Request {
     @Query
+    @NameInMap("AcceptLanguage")
+    private String acceptLanguage;
+
+    @Query
     @NameInMap("GatewayUniqueId")
     private String gatewayUniqueId;
 
@@ -22,6 +26,7 @@ public class GetGatewayDomainDetailRequest extends Request {
 
     private GetGatewayDomainDetailRequest(Builder builder) {
         super(builder);
+        this.acceptLanguage = builder.acceptLanguage;
         this.gatewayUniqueId = builder.gatewayUniqueId;
         this.id = builder.id;
     }
@@ -40,6 +45,13 @@ public class GetGatewayDomainDetailRequest extends Request {
     }
 
     /**
+     * @return acceptLanguage
+     */
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
+    }
+
+    /**
      * @return gatewayUniqueId
      */
     public String getGatewayUniqueId() {
@@ -54,6 +66,7 @@ public class GetGatewayDomainDetailRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetGatewayDomainDetailRequest, Builder> {
+        private String acceptLanguage; 
         private String gatewayUniqueId; 
         private String id; 
 
@@ -61,11 +74,21 @@ public class GetGatewayDomainDetailRequest extends Request {
             super();
         } 
 
-        private Builder(GetGatewayDomainDetailRequest response) {
-            super(response);
-            this.gatewayUniqueId = response.gatewayUniqueId;
-            this.id = response.id;
+        private Builder(GetGatewayDomainDetailRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.gatewayUniqueId = request.gatewayUniqueId;
+            this.id = request.id;
         } 
+
+        /**
+         * AcceptLanguage.
+         */
+        public Builder acceptLanguage(String acceptLanguage) {
+            this.putQueryParameter("AcceptLanguage", acceptLanguage);
+            this.acceptLanguage = acceptLanguage;
+            return this;
+        }
 
         /**
          * GatewayUniqueId.

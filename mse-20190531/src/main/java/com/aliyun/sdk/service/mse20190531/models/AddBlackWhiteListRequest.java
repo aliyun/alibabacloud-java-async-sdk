@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class AddBlackWhiteListRequest extends Request {
     @Query
+    @NameInMap("AcceptLanguage")
+    private String acceptLanguage;
+
+    @Query
     @NameInMap("Content")
     private String content;
 
@@ -38,6 +42,7 @@ public class AddBlackWhiteListRequest extends Request {
 
     private AddBlackWhiteListRequest(Builder builder) {
         super(builder);
+        this.acceptLanguage = builder.acceptLanguage;
         this.content = builder.content;
         this.gatewayUniqueId = builder.gatewayUniqueId;
         this.isWhite = builder.isWhite;
@@ -57,6 +62,13 @@ public class AddBlackWhiteListRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return acceptLanguage
+     */
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     /**
@@ -102,6 +114,7 @@ public class AddBlackWhiteListRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AddBlackWhiteListRequest, Builder> {
+        private String acceptLanguage; 
         private String content; 
         private String gatewayUniqueId; 
         private Boolean isWhite; 
@@ -113,15 +126,25 @@ public class AddBlackWhiteListRequest extends Request {
             super();
         } 
 
-        private Builder(AddBlackWhiteListRequest response) {
-            super(response);
-            this.content = response.content;
-            this.gatewayUniqueId = response.gatewayUniqueId;
-            this.isWhite = response.isWhite;
-            this.resourceType = response.resourceType;
-            this.status = response.status;
-            this.type = response.type;
+        private Builder(AddBlackWhiteListRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.content = request.content;
+            this.gatewayUniqueId = request.gatewayUniqueId;
+            this.isWhite = request.isWhite;
+            this.resourceType = request.resourceType;
+            this.status = request.status;
+            this.type = request.type;
         } 
+
+        /**
+         * AcceptLanguage.
+         */
+        public Builder acceptLanguage(String acceptLanguage) {
+            this.putQueryParameter("AcceptLanguage", acceptLanguage);
+            this.acceptLanguage = acceptLanguage;
+            return this;
+        }
 
         /**
          * Content.

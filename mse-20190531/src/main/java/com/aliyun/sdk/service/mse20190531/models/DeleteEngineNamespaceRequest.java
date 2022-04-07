@@ -87,12 +87,12 @@ public class DeleteEngineNamespaceRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteEngineNamespaceRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.clusterId = response.clusterId;
-            this.id = response.id;
-            this.instanceId = response.instanceId;
+        private Builder(DeleteEngineNamespaceRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.clusterId = request.clusterId;
+            this.id = request.id;
+            this.instanceId = request.instanceId;
         } 
 
         /**

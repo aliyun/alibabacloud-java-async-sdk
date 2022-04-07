@@ -87,12 +87,12 @@ public class CreateZnodeRequest extends Request {
             super();
         } 
 
-        private Builder(CreateZnodeRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.clusterId = response.clusterId;
-            this.data = response.data;
-            this.path = response.path;
+        private Builder(CreateZnodeRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.clusterId = request.clusterId;
+            this.data = request.data;
+            this.path = request.path;
         } 
 
         /**

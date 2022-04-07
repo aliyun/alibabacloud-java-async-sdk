@@ -13,11 +13,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListServiceSourceRequest extends Request {
     @Query
+    @NameInMap("AcceptLanguage")
+    private String acceptLanguage;
+
+    @Query
     @NameInMap("GatewayUniqueId")
     private String gatewayUniqueId;
 
     private ListServiceSourceRequest(Builder builder) {
         super(builder);
+        this.acceptLanguage = builder.acceptLanguage;
         this.gatewayUniqueId = builder.gatewayUniqueId;
     }
 
@@ -35,6 +40,13 @@ public class ListServiceSourceRequest extends Request {
     }
 
     /**
+     * @return acceptLanguage
+     */
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
+    }
+
+    /**
      * @return gatewayUniqueId
      */
     public String getGatewayUniqueId() {
@@ -42,16 +54,27 @@ public class ListServiceSourceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListServiceSourceRequest, Builder> {
+        private String acceptLanguage; 
         private String gatewayUniqueId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListServiceSourceRequest response) {
-            super(response);
-            this.gatewayUniqueId = response.gatewayUniqueId;
+        private Builder(ListServiceSourceRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.gatewayUniqueId = request.gatewayUniqueId;
         } 
+
+        /**
+         * AcceptLanguage.
+         */
+        public Builder acceptLanguage(String acceptLanguage) {
+            this.putQueryParameter("AcceptLanguage", acceptLanguage);
+            this.acceptLanguage = acceptLanguage;
+            return this;
+        }
 
         /**
          * GatewayUniqueId.

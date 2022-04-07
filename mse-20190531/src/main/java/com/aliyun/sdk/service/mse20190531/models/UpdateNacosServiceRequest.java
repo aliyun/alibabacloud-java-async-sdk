@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateNacosServiceRequest extends Request {
     @Query
+    @NameInMap("AcceptLanguage")
+    private String acceptLanguage;
+
+    @Query
     @NameInMap("ClusterId")
     private String clusterId;
 
@@ -39,6 +43,7 @@ public class UpdateNacosServiceRequest extends Request {
 
     private UpdateNacosServiceRequest(Builder builder) {
         super(builder);
+        this.acceptLanguage = builder.acceptLanguage;
         this.clusterId = builder.clusterId;
         this.groupName = builder.groupName;
         this.instanceId = builder.instanceId;
@@ -58,6 +63,13 @@ public class UpdateNacosServiceRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return acceptLanguage
+     */
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     /**
@@ -103,6 +115,7 @@ public class UpdateNacosServiceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateNacosServiceRequest, Builder> {
+        private String acceptLanguage; 
         private String clusterId; 
         private String groupName; 
         private String instanceId; 
@@ -114,15 +127,25 @@ public class UpdateNacosServiceRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateNacosServiceRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.groupName = response.groupName;
-            this.instanceId = response.instanceId;
-            this.namespaceId = response.namespaceId;
-            this.protectThreshold = response.protectThreshold;
-            this.serviceName = response.serviceName;
+        private Builder(UpdateNacosServiceRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.clusterId = request.clusterId;
+            this.groupName = request.groupName;
+            this.instanceId = request.instanceId;
+            this.namespaceId = request.namespaceId;
+            this.protectThreshold = request.protectThreshold;
+            this.serviceName = request.serviceName;
         } 
+
+        /**
+         * AcceptLanguage.
+         */
+        public Builder acceptLanguage(String acceptLanguage) {
+            this.putQueryParameter("AcceptLanguage", acceptLanguage);
+            this.acceptLanguage = acceptLanguage;
+            return this;
+        }
 
         /**
          * ClusterId.

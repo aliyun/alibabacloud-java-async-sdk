@@ -74,11 +74,11 @@ public class UpdateAclRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateAclRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.aclEntryList = response.aclEntryList;
-            this.instanceId = response.instanceId;
+        private Builder(UpdateAclRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.aclEntryList = request.aclEntryList;
+            this.instanceId = request.instanceId;
         } 
 
         /**

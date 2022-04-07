@@ -48,9 +48,9 @@ public class QueryBusinessLocationsRequest extends Request {
             super();
         } 
 
-        private Builder(QueryBusinessLocationsRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
+        private Builder(QueryBusinessLocationsRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
         } 
 
         /**

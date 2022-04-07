@@ -116,14 +116,14 @@ public class ListEurekaServicesRequest extends Request {
             super();
         } 
 
-        private Builder(ListEurekaServicesRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.clusterId = response.clusterId;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.requestPars = response.requestPars;
+        private Builder(ListEurekaServicesRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.clusterId = request.clusterId;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.requestPars = request.requestPars;
         } 
 
         /**

@@ -76,11 +76,11 @@ public class GetGovernanceKubernetesClusterRequest extends Request {
             super();
         } 
 
-        private Builder(GetGovernanceKubernetesClusterRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.clusterId = response.clusterId;
-            this.regionId = response.regionId;
+        private Builder(GetGovernanceKubernetesClusterRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.clusterId = request.clusterId;
+            this.regionId = request.regionId;
         } 
 
         /**

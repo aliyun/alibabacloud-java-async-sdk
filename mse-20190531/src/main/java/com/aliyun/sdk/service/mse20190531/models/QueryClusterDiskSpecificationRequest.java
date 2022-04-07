@@ -61,10 +61,10 @@ public class QueryClusterDiskSpecificationRequest extends Request {
             super();
         } 
 
-        private Builder(QueryClusterDiskSpecificationRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.clusterType = response.clusterType;
+        private Builder(QueryClusterDiskSpecificationRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.clusterType = request.clusterType;
         } 
 
         /**

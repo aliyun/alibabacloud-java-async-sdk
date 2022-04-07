@@ -62,10 +62,10 @@ public class DeleteSwimmingLaneGroupRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteSwimmingLaneGroupRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.groupId = response.groupId;
+        private Builder(DeleteSwimmingLaneGroupRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.groupId = request.groupId;
         } 
 
         /**

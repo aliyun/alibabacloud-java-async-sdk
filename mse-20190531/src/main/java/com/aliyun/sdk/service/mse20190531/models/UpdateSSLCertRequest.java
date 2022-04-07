@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateSSLCertRequest extends Request {
     @Query
+    @NameInMap("AcceptLanguage")
+    private String acceptLanguage;
+
+    @Query
     @NameInMap("CertIdentifier")
     private String certIdentifier;
 
@@ -26,6 +30,7 @@ public class UpdateSSLCertRequest extends Request {
 
     private UpdateSSLCertRequest(Builder builder) {
         super(builder);
+        this.acceptLanguage = builder.acceptLanguage;
         this.certIdentifier = builder.certIdentifier;
         this.domainId = builder.domainId;
         this.gatewayUniqueId = builder.gatewayUniqueId;
@@ -42,6 +47,13 @@ public class UpdateSSLCertRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return acceptLanguage
+     */
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     /**
@@ -66,6 +78,7 @@ public class UpdateSSLCertRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateSSLCertRequest, Builder> {
+        private String acceptLanguage; 
         private String certIdentifier; 
         private Long domainId; 
         private String gatewayUniqueId; 
@@ -74,12 +87,22 @@ public class UpdateSSLCertRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateSSLCertRequest response) {
-            super(response);
-            this.certIdentifier = response.certIdentifier;
-            this.domainId = response.domainId;
-            this.gatewayUniqueId = response.gatewayUniqueId;
+        private Builder(UpdateSSLCertRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.certIdentifier = request.certIdentifier;
+            this.domainId = request.domainId;
+            this.gatewayUniqueId = request.gatewayUniqueId;
         } 
+
+        /**
+         * AcceptLanguage.
+         */
+        public Builder acceptLanguage(String acceptLanguage) {
+            this.putQueryParameter("AcceptLanguage", acceptLanguage);
+            this.acceptLanguage = acceptLanguage;
+            return this;
+        }
 
         /**
          * CertIdentifier.

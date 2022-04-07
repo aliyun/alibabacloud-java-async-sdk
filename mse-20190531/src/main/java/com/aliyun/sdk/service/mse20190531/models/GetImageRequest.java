@@ -13,12 +13,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetImageRequest extends Request {
     @Query
+    @NameInMap("AcceptLanguage")
+    private String acceptLanguage;
+
+    @Query
     @NameInMap("VersionCode")
     @Validation(required = true)
     private String versionCode;
 
     private GetImageRequest(Builder builder) {
         super(builder);
+        this.acceptLanguage = builder.acceptLanguage;
         this.versionCode = builder.versionCode;
     }
 
@@ -36,6 +41,13 @@ public class GetImageRequest extends Request {
     }
 
     /**
+     * @return acceptLanguage
+     */
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
+    }
+
+    /**
      * @return versionCode
      */
     public String getVersionCode() {
@@ -43,16 +55,27 @@ public class GetImageRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetImageRequest, Builder> {
+        private String acceptLanguage; 
         private String versionCode; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetImageRequest response) {
-            super(response);
-            this.versionCode = response.versionCode;
+        private Builder(GetImageRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.versionCode = request.versionCode;
         } 
+
+        /**
+         * AcceptLanguage.
+         */
+        public Builder acceptLanguage(String acceptLanguage) {
+            this.putQueryParameter("AcceptLanguage", acceptLanguage);
+            this.acceptLanguage = acceptLanguage;
+            return this;
+        }
 
         /**
          * 集群版本

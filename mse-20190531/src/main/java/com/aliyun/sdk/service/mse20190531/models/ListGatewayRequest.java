@@ -113,14 +113,14 @@ public class ListGatewayRequest extends Request {
             super();
         } 
 
-        private Builder(ListGatewayRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.descSort = response.descSort;
-            this.filterParams = response.filterParams;
-            this.orderItem = response.orderItem;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(ListGatewayRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.descSort = request.descSort;
+            this.filterParams = request.filterParams;
+            this.orderItem = request.orderItem;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**
@@ -145,7 +145,8 @@ public class ListGatewayRequest extends Request {
          * FilterParams.
          */
         public Builder filterParams(FilterParams filterParams) {
-            this.putQueryParameter("FilterParams", filterParams);
+            String filterParamsShrink = shrink(filterParams, "FilterParams", "json");
+            this.putQueryParameter("FilterParams", filterParamsShrink);
             this.filterParams = filterParams;
             return this;
         }

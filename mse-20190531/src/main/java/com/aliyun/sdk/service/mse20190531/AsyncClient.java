@@ -36,6 +36,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AddSSLCertResponse> addSSLCert(AddSSLCertRequest request);
 
+    CompletableFuture<AddSecurityGroupRuleResponse> addSecurityGroupRule(AddSecurityGroupRuleRequest request);
+
     CompletableFuture<AddServiceSourceResponse> addServiceSource(AddServiceSourceRequest request);
 
     CompletableFuture<ApplyGatewayRouteResponse> applyGatewayRoute(ApplyGatewayRouteRequest request);
@@ -43,8 +45,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ApplyTagPoliciesResponse> applyTagPolicies(ApplyTagPoliciesRequest request);
 
     CompletableFuture<CloneNacosConfigResponse> cloneNacosConfig(CloneNacosConfigRequest request);
-
-    CompletableFuture<CreateAlarmRuleResponse> createAlarmRule(CreateAlarmRuleRequest request);
 
     CompletableFuture<CreateApplicationResponse> createApplication(CreateApplicationRequest request);
 
@@ -64,8 +64,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateZnodeResponse> createZnode(CreateZnodeRequest request);
 
-    CompletableFuture<DeleteAlarmRuleResponse> deleteAlarmRule(DeleteAlarmRuleRequest request);
-
     CompletableFuture<DeleteAuthResourceResponse> deleteAuthResource(DeleteAuthResourceRequest request);
 
     CompletableFuture<DeleteClusterResponse> deleteCluster(DeleteClusterRequest request);
@@ -77,6 +75,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteGatewayDomainResponse> deleteGatewayDomain(DeleteGatewayDomainRequest request);
 
     CompletableFuture<DeleteGatewayRouteResponse> deleteGatewayRoute(DeleteGatewayRouteRequest request);
+
+    CompletableFuture<DeleteGatewayServiceResponse> deleteGatewayService(DeleteGatewayServiceRequest request);
 
     CompletableFuture<DeleteGatewayServiceVersionResponse> deleteGatewayServiceVersion(DeleteGatewayServiceVersionRequest request);
 
@@ -90,6 +90,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteNacosServiceResponse> deleteNacosService(DeleteNacosServiceRequest request);
 
+    CompletableFuture<DeleteSecurityGroupRuleResponse> deleteSecurityGroupRule(DeleteSecurityGroupRuleRequest request);
+
     CompletableFuture<DeleteServiceSourceResponse> deleteServiceSource(DeleteServiceSourceRequest request);
 
     CompletableFuture<DeleteSwimmingLaneResponse> deleteSwimmingLane(DeleteSwimmingLaneRequest request);
@@ -99,6 +101,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteZnodeResponse> deleteZnode(DeleteZnodeRequest request);
 
     CompletableFuture<ExportNacosConfigResponse> exportNacosConfig(ExportNacosConfigRequest request);
+
+    CompletableFuture<GetAppMessageQueueRouteResponse> getAppMessageQueueRoute(GetAppMessageQueueRouteRequest request);
 
     CompletableFuture<GetBlackWhiteListResponse> getBlackWhiteList(GetBlackWhiteListRequest request);
 
@@ -141,14 +145,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ImportNacosConfigResponse> importNacosConfig(ImportNacosConfigRequest request);
 
     CompletableFuture<ImportServicesResponse> importServices(ImportServicesRequest request);
-
-    CompletableFuture<ListAlarmContactGroupsResponse> listAlarmContactGroups(ListAlarmContactGroupsRequest request);
-
-    CompletableFuture<ListAlarmHistoriesResponse> listAlarmHistories(ListAlarmHistoriesRequest request);
-
-    CompletableFuture<ListAlarmItemsResponse> listAlarmItems(ListAlarmItemsRequest request);
-
-    CompletableFuture<ListAlarmRulesResponse> listAlarmRules(ListAlarmRulesRequest request);
 
     CompletableFuture<ListAnsInstancesResponse> listAnsInstances(ListAnsInstancesRequest request);
 
@@ -193,6 +189,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListNacosHistoryConfigsResponse> listNacosHistoryConfigs(ListNacosHistoryConfigsRequest request);
 
     CompletableFuture<ListSSLCertResponse> listSSLCert(ListSSLCertRequest request);
+
+    CompletableFuture<ListSecurityGroupResponse> listSecurityGroup(ListSecurityGroupRequest request);
+
+    CompletableFuture<ListSecurityGroupRuleResponse> listSecurityGroupRule(ListSecurityGroupRuleRequest request);
 
     CompletableFuture<ListServiceSourceResponse> listServiceSource(ListServiceSourceRequest request);
 
@@ -268,9 +268,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UpdateGatewayRouteTimeoutResponse> updateGatewayRouteTimeout(UpdateGatewayRouteTimeoutRequest request);
 
+    CompletableFuture<UpdateGatewayRouteWafStatusResponse> updateGatewayRouteWafStatus(UpdateGatewayRouteWafStatusRequest request);
+
+    CompletableFuture<UpdateGatewayServiceTrafficPolicyResponse> updateGatewayServiceTrafficPolicy(UpdateGatewayServiceTrafficPolicyRequest request);
+
     CompletableFuture<UpdateGatewayServiceVersionResponse> updateGatewayServiceVersion(UpdateGatewayServiceVersionRequest request);
 
     CompletableFuture<UpdateImageResponse> updateImage(UpdateImageRequest request);
+
+    CompletableFuture<UpdateMessageQueueRouteResponse> updateMessageQueueRoute(UpdateMessageQueueRouteRequest request);
 
     CompletableFuture<UpdateNacosClusterResponse> updateNacosCluster(UpdateNacosClusterRequest request);
 

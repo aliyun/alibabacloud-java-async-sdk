@@ -113,14 +113,14 @@ public class ListGatewayRouteRequest extends Request {
             super();
         } 
 
-        private Builder(ListGatewayRouteRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.descSort = response.descSort;
-            this.filterParams = response.filterParams;
-            this.orderItem = response.orderItem;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(ListGatewayRouteRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.descSort = request.descSort;
+            this.filterParams = request.filterParams;
+            this.orderItem = request.orderItem;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**
@@ -145,7 +145,8 @@ public class ListGatewayRouteRequest extends Request {
          * FilterParams.
          */
         public Builder filterParams(FilterParams filterParams) {
-            this.putQueryParameter("FilterParams", filterParams);
+            String filterParamsShrink = shrink(filterParams, "FilterParams", "json");
+            this.putQueryParameter("FilterParams", filterParamsShrink);
             this.filterParams = filterParams;
             return this;
         }
@@ -191,6 +192,9 @@ public class ListGatewayRouteRequest extends Request {
         @NameInMap("DomainId")
         private Long domainId;
 
+        @NameInMap("DomainName")
+        private String domainName;
+
         @NameInMap("GatewayId")
         private Long gatewayId;
 
@@ -209,6 +213,7 @@ public class ListGatewayRouteRequest extends Request {
         private FilterParams(Builder builder) {
             this.defaultServiceId = builder.defaultServiceId;
             this.domainId = builder.domainId;
+            this.domainName = builder.domainName;
             this.gatewayId = builder.gatewayId;
             this.gatewayUniqueId = builder.gatewayUniqueId;
             this.name = builder.name;
@@ -236,6 +241,13 @@ public class ListGatewayRouteRequest extends Request {
          */
         public Long getDomainId() {
             return this.domainId;
+        }
+
+        /**
+         * @return domainName
+         */
+        public String getDomainName() {
+            return this.domainName;
         }
 
         /**
@@ -276,6 +288,7 @@ public class ListGatewayRouteRequest extends Request {
         public static final class Builder {
             private Long defaultServiceId; 
             private Long domainId; 
+            private String domainName; 
             private Long gatewayId; 
             private String gatewayUniqueId; 
             private String name; 
@@ -295,6 +308,14 @@ public class ListGatewayRouteRequest extends Request {
              */
             public Builder domainId(Long domainId) {
                 this.domainId = domainId;
+                return this;
+            }
+
+            /**
+             * DomainName.
+             */
+            public Builder domainName(String domainName) {
+                this.domainName = domainName;
                 return this;
             }
 

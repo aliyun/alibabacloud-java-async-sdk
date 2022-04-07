@@ -48,9 +48,9 @@ public class GetMseFeatureSwitchRequest extends Request {
             super();
         } 
 
-        private Builder(GetMseFeatureSwitchRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
+        private Builder(GetMseFeatureSwitchRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
         } 
 
         /**

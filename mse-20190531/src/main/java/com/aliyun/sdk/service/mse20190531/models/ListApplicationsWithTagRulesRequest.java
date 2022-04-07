@@ -130,15 +130,15 @@ public class ListApplicationsWithTagRulesRequest extends Request {
             super();
         } 
 
-        private Builder(ListApplicationsWithTagRulesRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.appId = response.appId;
-            this.appName = response.appName;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.region = response.region;
-            this.source = response.source;
+        private Builder(ListApplicationsWithTagRulesRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.appId = request.appId;
+            this.appName = request.appName;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.region = request.region;
+            this.source = request.source;
         } 
 
         /**

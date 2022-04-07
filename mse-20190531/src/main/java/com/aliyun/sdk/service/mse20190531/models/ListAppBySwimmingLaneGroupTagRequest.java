@@ -76,11 +76,11 @@ public class ListAppBySwimmingLaneGroupTagRequest extends Request {
             super();
         } 
 
-        private Builder(ListAppBySwimmingLaneGroupTagRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.groupId = response.groupId;
-            this.tag = response.tag;
+        private Builder(ListAppBySwimmingLaneGroupTagRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.groupId = request.groupId;
+            this.tag = request.tag;
         } 
 
         /**

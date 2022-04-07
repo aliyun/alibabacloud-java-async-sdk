@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class AddMockRuleRequest extends Request {
     @Query
+    @NameInMap("AcceptLanguage")
+    private String acceptLanguage;
+
+    @Query
     @NameInMap("ConsumerAppIds")
     @Validation(required = true)
     private String consumerAppIds;
@@ -65,6 +69,7 @@ public class AddMockRuleRequest extends Request {
 
     private AddMockRuleRequest(Builder builder) {
         super(builder);
+        this.acceptLanguage = builder.acceptLanguage;
         this.consumerAppIds = builder.consumerAppIds;
         this.dubboMockItems = builder.dubboMockItems;
         this.enable = builder.enable;
@@ -89,6 +94,13 @@ public class AddMockRuleRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return acceptLanguage
+     */
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     /**
@@ -169,6 +181,7 @@ public class AddMockRuleRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AddMockRuleRequest, Builder> {
+        private String acceptLanguage; 
         private String consumerAppIds; 
         private String dubboMockItems; 
         private Boolean enable; 
@@ -185,20 +198,30 @@ public class AddMockRuleRequest extends Request {
             super();
         } 
 
-        private Builder(AddMockRuleRequest response) {
-            super(response);
-            this.consumerAppIds = response.consumerAppIds;
-            this.dubboMockItems = response.dubboMockItems;
-            this.enable = response.enable;
-            this.extraJson = response.extraJson;
-            this.mockType = response.mockType;
-            this.name = response.name;
-            this.providerAppId = response.providerAppId;
-            this.providerAppName = response.providerAppName;
-            this.region = response.region;
-            this.scMockItems = response.scMockItems;
-            this.source = response.source;
+        private Builder(AddMockRuleRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.consumerAppIds = request.consumerAppIds;
+            this.dubboMockItems = request.dubboMockItems;
+            this.enable = request.enable;
+            this.extraJson = request.extraJson;
+            this.mockType = request.mockType;
+            this.name = request.name;
+            this.providerAppId = request.providerAppId;
+            this.providerAppName = request.providerAppName;
+            this.region = request.region;
+            this.scMockItems = request.scMockItems;
+            this.source = request.source;
         } 
+
+        /**
+         * AcceptLanguage.
+         */
+        public Builder acceptLanguage(String acceptLanguage) {
+            this.putQueryParameter("AcceptLanguage", acceptLanguage);
+            this.acceptLanguage = acceptLanguage;
+            return this;
+        }
 
         /**
          * ConsumerAppIds.

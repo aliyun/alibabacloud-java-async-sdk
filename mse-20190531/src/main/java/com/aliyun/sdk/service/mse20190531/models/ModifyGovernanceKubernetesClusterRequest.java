@@ -90,12 +90,12 @@ public class ModifyGovernanceKubernetesClusterRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyGovernanceKubernetesClusterRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.clusterId = response.clusterId;
-            this.namespaceInfos = response.namespaceInfos;
-            this.regionId = response.regionId;
+        private Builder(ModifyGovernanceKubernetesClusterRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.clusterId = request.clusterId;
+            this.namespaceInfos = request.namespaceInfos;
+            this.regionId = request.regionId;
         } 
 
         /**

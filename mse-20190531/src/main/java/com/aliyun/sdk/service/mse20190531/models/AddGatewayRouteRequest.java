@@ -33,6 +33,10 @@ public class AddGatewayRouteRequest extends Request {
     private String domainIdListJSON;
 
     @Query
+    @NameInMap("EnableWaf")
+    private Boolean enableWaf;
+
+    @Query
     @NameInMap("GatewayId")
     private Long gatewayId;
 
@@ -67,6 +71,7 @@ public class AddGatewayRouteRequest extends Request {
         this.directResponseJSON = builder.directResponseJSON;
         this.domainId = builder.domainId;
         this.domainIdListJSON = builder.domainIdListJSON;
+        this.enableWaf = builder.enableWaf;
         this.gatewayId = builder.gatewayId;
         this.gatewayUniqueId = builder.gatewayUniqueId;
         this.name = builder.name;
@@ -125,6 +130,13 @@ public class AddGatewayRouteRequest extends Request {
     }
 
     /**
+     * @return enableWaf
+     */
+    public Boolean getEnableWaf() {
+        return this.enableWaf;
+    }
+
+    /**
      * @return gatewayId
      */
     public Long getGatewayId() {
@@ -179,6 +191,7 @@ public class AddGatewayRouteRequest extends Request {
         private DirectResponseJSON directResponseJSON; 
         private Long domainId; 
         private String domainIdListJSON; 
+        private Boolean enableWaf; 
         private Long gatewayId; 
         private String gatewayUniqueId; 
         private String name; 
@@ -191,20 +204,21 @@ public class AddGatewayRouteRequest extends Request {
             super();
         } 
 
-        private Builder(AddGatewayRouteRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.destinationType = response.destinationType;
-            this.directResponseJSON = response.directResponseJSON;
-            this.domainId = response.domainId;
-            this.domainIdListJSON = response.domainIdListJSON;
-            this.gatewayId = response.gatewayId;
-            this.gatewayUniqueId = response.gatewayUniqueId;
-            this.name = response.name;
-            this.predicates = response.predicates;
-            this.redirectJSON = response.redirectJSON;
-            this.routeOrder = response.routeOrder;
-            this.services = response.services;
+        private Builder(AddGatewayRouteRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.destinationType = request.destinationType;
+            this.directResponseJSON = request.directResponseJSON;
+            this.domainId = request.domainId;
+            this.domainIdListJSON = request.domainIdListJSON;
+            this.enableWaf = request.enableWaf;
+            this.gatewayId = request.gatewayId;
+            this.gatewayUniqueId = request.gatewayUniqueId;
+            this.name = request.name;
+            this.predicates = request.predicates;
+            this.redirectJSON = request.redirectJSON;
+            this.routeOrder = request.routeOrder;
+            this.services = request.services;
         } 
 
         /**
@@ -229,7 +243,8 @@ public class AddGatewayRouteRequest extends Request {
          * DirectResponseJSON.
          */
         public Builder directResponseJSON(DirectResponseJSON directResponseJSON) {
-            this.putQueryParameter("DirectResponseJSON", directResponseJSON);
+            String directResponseJSONShrink = shrink(directResponseJSON, "DirectResponseJSON", "json");
+            this.putQueryParameter("DirectResponseJSON", directResponseJSONShrink);
             this.directResponseJSON = directResponseJSON;
             return this;
         }
@@ -249,6 +264,15 @@ public class AddGatewayRouteRequest extends Request {
         public Builder domainIdListJSON(String domainIdListJSON) {
             this.putQueryParameter("DomainIdListJSON", domainIdListJSON);
             this.domainIdListJSON = domainIdListJSON;
+            return this;
+        }
+
+        /**
+         * EnableWaf.
+         */
+        public Builder enableWaf(Boolean enableWaf) {
+            this.putQueryParameter("EnableWaf", enableWaf);
+            this.enableWaf = enableWaf;
             return this;
         }
 
@@ -283,7 +307,8 @@ public class AddGatewayRouteRequest extends Request {
          * Predicates.
          */
         public Builder predicates(Predicates predicates) {
-            this.putQueryParameter("Predicates", predicates);
+            String predicatesShrink = shrink(predicates, "Predicates", "json");
+            this.putQueryParameter("Predicates", predicatesShrink);
             this.predicates = predicates;
             return this;
         }
@@ -292,7 +317,8 @@ public class AddGatewayRouteRequest extends Request {
          * RedirectJSON.
          */
         public Builder redirectJSON(RedirectJSON redirectJSON) {
-            this.putQueryParameter("RedirectJSON", redirectJSON);
+            String redirectJSONShrink = shrink(redirectJSON, "RedirectJSON", "json");
+            this.putQueryParameter("RedirectJSON", redirectJSONShrink);
             this.redirectJSON = redirectJSON;
             return this;
         }
@@ -310,7 +336,8 @@ public class AddGatewayRouteRequest extends Request {
          * Services.
          */
         public Builder services(java.util.List < Services> services) {
-            this.putQueryParameter("Services", services);
+            String servicesShrink = shrink(services, "Services", "json");
+            this.putQueryParameter("Services", servicesShrink);
             this.services = services;
             return this;
         }

@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListAlarmHistoriesResponse} extends {@link TeaModel}
+ * {@link UpdateGatewayServiceTrafficPolicyResponse} extends {@link TeaModel}
  *
- * <p>ListAlarmHistoriesResponse</p>
+ * <p>UpdateGatewayServiceTrafficPolicyResponse</p>
  */
-public class ListAlarmHistoriesResponse extends Response {
+public class UpdateGatewayServiceTrafficPolicyResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private ListAlarmHistoriesResponseBody body;
+    private UpdateGatewayServiceTrafficPolicyResponseBody body;
 
-    private ListAlarmHistoriesResponse(BuilderImpl builder) {
+    private UpdateGatewayServiceTrafficPolicyResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static ListAlarmHistoriesResponse create() {
+    public static UpdateGatewayServiceTrafficPolicyResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class ListAlarmHistoriesResponse extends Response {
     /**
      * @return body
      */
-    public ListAlarmHistoriesResponseBody getBody() {
+    public UpdateGatewayServiceTrafficPolicyResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ListAlarmHistoriesResponse, Builder> {
+    public interface Builder extends Response.Builder<UpdateGatewayServiceTrafficPolicyResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(ListAlarmHistoriesResponseBody body);
+        Builder body(UpdateGatewayServiceTrafficPolicyResponseBody body);
 
         @Override
-        ListAlarmHistoriesResponse build();
+        UpdateGatewayServiceTrafficPolicyResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ListAlarmHistoriesResponse, Builder>
+            extends Response.BuilderImpl<UpdateGatewayServiceTrafficPolicyResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private ListAlarmHistoriesResponseBody body; 
+        private UpdateGatewayServiceTrafficPolicyResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ListAlarmHistoriesResponse response) {
+        private BuilderImpl(UpdateGatewayServiceTrafficPolicyResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class ListAlarmHistoriesResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ListAlarmHistoriesResponseBody body) {
+        public Builder body(UpdateGatewayServiceTrafficPolicyResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ListAlarmHistoriesResponse build() {
-            return new ListAlarmHistoriesResponse(this);
+        public UpdateGatewayServiceTrafficPolicyResponse build() {
+            return new UpdateGatewayServiceTrafficPolicyResponse(this);
         } 
 
     } 

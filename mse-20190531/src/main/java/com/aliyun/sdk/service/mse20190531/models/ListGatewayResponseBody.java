@@ -151,6 +151,67 @@ public class ListGatewayResponseBody extends TeaModel {
 
     } 
 
+    public static class InitConfig extends TeaModel {
+        @NameInMap("EnableWaf")
+        private Boolean enableWaf;
+
+        @NameInMap("SupportWaf")
+        private Boolean supportWaf;
+
+        private InitConfig(Builder builder) {
+            this.enableWaf = builder.enableWaf;
+            this.supportWaf = builder.supportWaf;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static InitConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enableWaf
+         */
+        public Boolean getEnableWaf() {
+            return this.enableWaf;
+        }
+
+        /**
+         * @return supportWaf
+         */
+        public Boolean getSupportWaf() {
+            return this.supportWaf;
+        }
+
+        public static final class Builder {
+            private Boolean enableWaf; 
+            private Boolean supportWaf; 
+
+            /**
+             * EnableWaf.
+             */
+            public Builder enableWaf(Boolean enableWaf) {
+                this.enableWaf = enableWaf;
+                return this;
+            }
+
+            /**
+             * SupportWaf.
+             */
+            public Builder supportWaf(Boolean supportWaf) {
+                this.supportWaf = supportWaf;
+                return this;
+            }
+
+            public InitConfig build() {
+                return new InitConfig(this);
+            } 
+
+        } 
+
+    }
     public static class InternetSlb extends TeaModel {
         @NameInMap("GatewaySlbMode")
         private String gatewaySlbMode;
@@ -564,6 +625,9 @@ public class ListGatewayResponseBody extends TeaModel {
         @NameInMap("Id")
         private Long id;
 
+        @NameInMap("InitConfig")
+        private InitConfig initConfig;
+
         @NameInMap("InstanceId")
         private String instanceId;
 
@@ -620,6 +684,7 @@ public class ListGatewayResponseBody extends TeaModel {
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
             this.id = builder.id;
+            this.initConfig = builder.initConfig;
             this.instanceId = builder.instanceId;
             this.internetSlb = builder.internetSlb;
             this.latestVersion = builder.latestVersion;
@@ -713,6 +778,13 @@ public class ListGatewayResponseBody extends TeaModel {
          */
         public Long getId() {
             return this.id;
+        }
+
+        /**
+         * @return initConfig
+         */
+        public InitConfig getInitConfig() {
+            return this.initConfig;
         }
 
         /**
@@ -831,6 +903,7 @@ public class ListGatewayResponseBody extends TeaModel {
             private String gmtCreate; 
             private String gmtModified; 
             private Long id; 
+            private InitConfig initConfig; 
             private String instanceId; 
             private java.util.List < InternetSlb> internetSlb; 
             private String latestVersion; 
@@ -924,6 +997,14 @@ public class ListGatewayResponseBody extends TeaModel {
              */
             public Builder id(Long id) {
                 this.id = id;
+                return this;
+            }
+
+            /**
+             * InitConfig.
+             */
+            public Builder initConfig(InitConfig initConfig) {
+                this.initConfig = initConfig;
                 return this;
             }
 

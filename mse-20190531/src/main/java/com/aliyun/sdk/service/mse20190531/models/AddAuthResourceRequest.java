@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class AddAuthResourceRequest extends Request {
     @Query
+    @NameInMap("AcceptLanguage")
+    private String acceptLanguage;
+
+    @Query
     @NameInMap("AuthId")
     private Long authId;
 
@@ -30,6 +34,7 @@ public class AddAuthResourceRequest extends Request {
 
     private AddAuthResourceRequest(Builder builder) {
         super(builder);
+        this.acceptLanguage = builder.acceptLanguage;
         this.authId = builder.authId;
         this.domainId = builder.domainId;
         this.gatewayUniqueId = builder.gatewayUniqueId;
@@ -47,6 +52,13 @@ public class AddAuthResourceRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return acceptLanguage
+     */
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     /**
@@ -78,6 +90,7 @@ public class AddAuthResourceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AddAuthResourceRequest, Builder> {
+        private String acceptLanguage; 
         private Long authId; 
         private Long domainId; 
         private String gatewayUniqueId; 
@@ -87,13 +100,23 @@ public class AddAuthResourceRequest extends Request {
             super();
         } 
 
-        private Builder(AddAuthResourceRequest response) {
-            super(response);
-            this.authId = response.authId;
-            this.domainId = response.domainId;
-            this.gatewayUniqueId = response.gatewayUniqueId;
-            this.path = response.path;
+        private Builder(AddAuthResourceRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.authId = request.authId;
+            this.domainId = request.domainId;
+            this.gatewayUniqueId = request.gatewayUniqueId;
+            this.path = request.path;
         } 
+
+        /**
+         * AcceptLanguage.
+         */
+        public Builder acceptLanguage(String acceptLanguage) {
+            this.putQueryParameter("AcceptLanguage", acceptLanguage);
+            this.acceptLanguage = acceptLanguage;
+            return this;
+        }
 
         /**
          * AuthId.

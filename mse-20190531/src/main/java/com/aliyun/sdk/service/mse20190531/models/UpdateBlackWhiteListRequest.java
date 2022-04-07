@@ -139,16 +139,16 @@ public class UpdateBlackWhiteListRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateBlackWhiteListRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.content = response.content;
-            this.gatewayUniqueId = response.gatewayUniqueId;
-            this.id = response.id;
-            this.isWhite = response.isWhite;
-            this.resourceType = response.resourceType;
-            this.status = response.status;
-            this.type = response.type;
+        private Builder(UpdateBlackWhiteListRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.content = request.content;
+            this.gatewayUniqueId = request.gatewayUniqueId;
+            this.id = request.id;
+            this.isWhite = request.isWhite;
+            this.resourceType = request.resourceType;
+            this.status = request.status;
+            this.type = request.type;
         } 
 
         /**

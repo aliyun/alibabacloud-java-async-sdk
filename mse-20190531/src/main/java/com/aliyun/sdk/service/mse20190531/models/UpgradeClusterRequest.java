@@ -89,12 +89,12 @@ public class UpgradeClusterRequest extends Request {
             super();
         } 
 
-        private Builder(UpgradeClusterRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.instanceId = response.instanceId;
-            this.requestPars = response.requestPars;
-            this.upgradeVersion = response.upgradeVersion;
+        private Builder(UpgradeClusterRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.instanceId = request.instanceId;
+            this.requestPars = request.requestPars;
+            this.upgradeVersion = request.upgradeVersion;
         } 
 
         /**

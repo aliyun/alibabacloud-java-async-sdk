@@ -279,12 +279,16 @@ public class PullServicesResponseBody extends TeaModel {
         @NameInMap("Namespace")
         private String namespace;
 
+        @NameInMap("NamespaceShowName")
+        private String namespaceShowName;
+
         @NameInMap("Services")
         private java.util.List < Services> services;
 
         private Data(Builder builder) {
             this.groupName = builder.groupName;
             this.namespace = builder.namespace;
+            this.namespaceShowName = builder.namespaceShowName;
             this.services = builder.services;
         }
 
@@ -311,6 +315,13 @@ public class PullServicesResponseBody extends TeaModel {
         }
 
         /**
+         * @return namespaceShowName
+         */
+        public String getNamespaceShowName() {
+            return this.namespaceShowName;
+        }
+
+        /**
          * @return services
          */
         public java.util.List < Services> getServices() {
@@ -320,6 +331,7 @@ public class PullServicesResponseBody extends TeaModel {
         public static final class Builder {
             private String groupName; 
             private String namespace; 
+            private String namespaceShowName; 
             private java.util.List < Services> services; 
 
             /**
@@ -335,6 +347,14 @@ public class PullServicesResponseBody extends TeaModel {
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
+                return this;
+            }
+
+            /**
+             * NamespaceShowName.
+             */
+            public Builder namespaceShowName(String namespaceShowName) {
+                this.namespaceShowName = namespaceShowName;
                 return this;
             }
 

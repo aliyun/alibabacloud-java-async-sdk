@@ -35,8 +35,16 @@ public class CreateApplicationRequest extends Request {
     private String region;
 
     @Query
+    @NameInMap("SentinelEnable")
+    private String sentinelEnable;
+
+    @Query
     @NameInMap("Source")
     private String source;
+
+    @Query
+    @NameInMap("SwitchEnable")
+    private String switchEnable;
 
     private CreateApplicationRequest(Builder builder) {
         super(builder);
@@ -45,7 +53,9 @@ public class CreateApplicationRequest extends Request {
         this.extraInfo = builder.extraInfo;
         this.language = builder.language;
         this.region = builder.region;
+        this.sentinelEnable = builder.sentinelEnable;
         this.source = builder.source;
+        this.switchEnable = builder.switchEnable;
     }
 
     public static Builder builder() {
@@ -97,10 +107,24 @@ public class CreateApplicationRequest extends Request {
     }
 
     /**
+     * @return sentinelEnable
+     */
+    public String getSentinelEnable() {
+        return this.sentinelEnable;
+    }
+
+    /**
      * @return source
      */
     public String getSource() {
         return this.source;
+    }
+
+    /**
+     * @return switchEnable
+     */
+    public String getSwitchEnable() {
+        return this.switchEnable;
     }
 
     public static final class Builder extends Request.Builder<CreateApplicationRequest, Builder> {
@@ -109,20 +133,24 @@ public class CreateApplicationRequest extends Request {
         private String extraInfo; 
         private String language; 
         private String region; 
+        private String sentinelEnable; 
         private String source; 
+        private String switchEnable; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateApplicationRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.appName = response.appName;
-            this.extraInfo = response.extraInfo;
-            this.language = response.language;
-            this.region = response.region;
-            this.source = response.source;
+        private Builder(CreateApplicationRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.appName = request.appName;
+            this.extraInfo = request.extraInfo;
+            this.language = request.language;
+            this.region = request.region;
+            this.sentinelEnable = request.sentinelEnable;
+            this.source = request.source;
+            this.switchEnable = request.switchEnable;
         } 
 
         /**
@@ -171,11 +199,29 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
+         * SentinelEnable.
+         */
+        public Builder sentinelEnable(String sentinelEnable) {
+            this.putQueryParameter("SentinelEnable", sentinelEnable);
+            this.sentinelEnable = sentinelEnable;
+            return this;
+        }
+
+        /**
          * Source.
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
             this.source = source;
+            return this;
+        }
+
+        /**
+         * SwitchEnable.
+         */
+        public Builder switchEnable(String switchEnable) {
+            this.putQueryParameter("SwitchEnable", switchEnable);
+            this.switchEnable = switchEnable;
             return this;
         }
 

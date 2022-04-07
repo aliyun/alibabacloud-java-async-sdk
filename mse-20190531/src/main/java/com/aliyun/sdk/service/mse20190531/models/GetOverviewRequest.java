@@ -74,11 +74,11 @@ public class GetOverviewRequest extends Request {
             super();
         } 
 
-        private Builder(GetOverviewRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.period = response.period;
-            this.region = response.region;
+        private Builder(GetOverviewRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.period = request.period;
+            this.region = request.region;
         } 
 
         /**

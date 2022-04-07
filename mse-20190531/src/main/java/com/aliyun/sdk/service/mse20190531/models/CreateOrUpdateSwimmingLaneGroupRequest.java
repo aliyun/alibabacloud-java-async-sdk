@@ -204,21 +204,21 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
             super();
         } 
 
-        private Builder(CreateOrUpdateSwimmingLaneGroupRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.appIds = response.appIds;
-            this.enable = response.enable;
-            this.entryApp = response.entryApp;
-            this.gmtCreate = response.gmtCreate;
-            this.gmtModified = response.gmtModified;
-            this.id = response.id;
-            this.licenseKey = response.licenseKey;
-            this.name = response.name;
-            this.region = response.region;
-            this.source = response.source;
-            this.status = response.status;
-            this.userId = response.userId;
+        private Builder(CreateOrUpdateSwimmingLaneGroupRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.appIds = request.appIds;
+            this.enable = request.enable;
+            this.entryApp = request.entryApp;
+            this.gmtCreate = request.gmtCreate;
+            this.gmtModified = request.gmtModified;
+            this.id = request.id;
+            this.licenseKey = request.licenseKey;
+            this.name = request.name;
+            this.region = request.region;
+            this.source = request.source;
+            this.status = request.status;
+            this.userId = request.userId;
         } 
 
         /**

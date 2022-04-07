@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateConfigRequest extends Request {
     @Query
+    @NameInMap("AcceptLanguage")
+    private String acceptLanguage;
+
+    @Query
     @NameInMap("AutopurgePurgeInterval")
     private String autopurgePurgeInterval;
 
@@ -90,6 +94,7 @@ public class UpdateConfigRequest extends Request {
 
     private UpdateConfigRequest(Builder builder) {
         super(builder);
+        this.acceptLanguage = builder.acceptLanguage;
         this.autopurgePurgeInterval = builder.autopurgePurgeInterval;
         this.autopurgeSnapRetainCount = builder.autopurgeSnapRetainCount;
         this.clusterId = builder.clusterId;
@@ -122,6 +127,13 @@ public class UpdateConfigRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return acceptLanguage
+     */
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     /**
@@ -258,6 +270,7 @@ public class UpdateConfigRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateConfigRequest, Builder> {
+        private String acceptLanguage; 
         private String autopurgePurgeInterval; 
         private String autopurgeSnapRetainCount; 
         private String clusterId; 
@@ -282,28 +295,38 @@ public class UpdateConfigRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateConfigRequest response) {
-            super(response);
-            this.autopurgePurgeInterval = response.autopurgePurgeInterval;
-            this.autopurgeSnapRetainCount = response.autopurgeSnapRetainCount;
-            this.clusterId = response.clusterId;
-            this.configAuthEnabled = response.configAuthEnabled;
-            this.configSecretEnabled = response.configSecretEnabled;
-            this.configType = response.configType;
-            this.initLimit = response.initLimit;
-            this.instanceId = response.instanceId;
-            this.juteMaxbuffer = response.juteMaxbuffer;
-            this.MCPEnabled = response.MCPEnabled;
-            this.maxClientCnxns = response.maxClientCnxns;
-            this.maxSessionTimeout = response.maxSessionTimeout;
-            this.minSessionTimeout = response.minSessionTimeout;
-            this.openSuperAcl = response.openSuperAcl;
-            this.passWord = response.passWord;
-            this.requestPars = response.requestPars;
-            this.syncLimit = response.syncLimit;
-            this.tickTime = response.tickTime;
-            this.userName = response.userName;
+        private Builder(UpdateConfigRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.autopurgePurgeInterval = request.autopurgePurgeInterval;
+            this.autopurgeSnapRetainCount = request.autopurgeSnapRetainCount;
+            this.clusterId = request.clusterId;
+            this.configAuthEnabled = request.configAuthEnabled;
+            this.configSecretEnabled = request.configSecretEnabled;
+            this.configType = request.configType;
+            this.initLimit = request.initLimit;
+            this.instanceId = request.instanceId;
+            this.juteMaxbuffer = request.juteMaxbuffer;
+            this.MCPEnabled = request.MCPEnabled;
+            this.maxClientCnxns = request.maxClientCnxns;
+            this.maxSessionTimeout = request.maxSessionTimeout;
+            this.minSessionTimeout = request.minSessionTimeout;
+            this.openSuperAcl = request.openSuperAcl;
+            this.passWord = request.passWord;
+            this.requestPars = request.requestPars;
+            this.syncLimit = request.syncLimit;
+            this.tickTime = request.tickTime;
+            this.userName = request.userName;
         } 
+
+        /**
+         * AcceptLanguage.
+         */
+        public Builder acceptLanguage(String acceptLanguage) {
+            this.putQueryParameter("AcceptLanguage", acceptLanguage);
+            this.acceptLanguage = acceptLanguage;
+            return this;
+        }
 
         /**
          * AutopurgePurgeInterval.

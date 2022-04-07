@@ -116,14 +116,14 @@ public class ListListenersByConfigRequest extends Request {
             super();
         } 
 
-        private Builder(ListListenersByConfigRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.dataId = response.dataId;
-            this.group = response.group;
-            this.instanceId = response.instanceId;
-            this.namespaceId = response.namespaceId;
-            this.requestPars = response.requestPars;
+        private Builder(ListListenersByConfigRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.dataId = request.dataId;
+            this.group = request.group;
+            this.instanceId = request.instanceId;
+            this.namespaceId = request.namespaceId;
+            this.requestPars = request.requestPars;
         } 
 
         /**

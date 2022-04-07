@@ -13,12 +13,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class AddServiceSourceRequest extends Request {
     @Query
+    @NameInMap("AcceptLanguage")
+    private String acceptLanguage;
+
+    @Query
     @NameInMap("Address")
     private String address;
 
     @Query
     @NameInMap("GatewayUniqueId")
     private String gatewayUniqueId;
+
+    @Query
+    @NameInMap("IngressOptionsRequest")
+    private IngressOptionsRequest ingressOptionsRequest;
 
     @Query
     @NameInMap("Name")
@@ -34,8 +42,10 @@ public class AddServiceSourceRequest extends Request {
 
     private AddServiceSourceRequest(Builder builder) {
         super(builder);
+        this.acceptLanguage = builder.acceptLanguage;
         this.address = builder.address;
         this.gatewayUniqueId = builder.gatewayUniqueId;
+        this.ingressOptionsRequest = builder.ingressOptionsRequest;
         this.name = builder.name;
         this.source = builder.source;
         this.type = builder.type;
@@ -55,6 +65,13 @@ public class AddServiceSourceRequest extends Request {
     }
 
     /**
+     * @return acceptLanguage
+     */
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
+    }
+
+    /**
      * @return address
      */
     public String getAddress() {
@@ -66,6 +83,13 @@ public class AddServiceSourceRequest extends Request {
      */
     public String getGatewayUniqueId() {
         return this.gatewayUniqueId;
+    }
+
+    /**
+     * @return ingressOptionsRequest
+     */
+    public IngressOptionsRequest getIngressOptionsRequest() {
+        return this.ingressOptionsRequest;
     }
 
     /**
@@ -90,8 +114,10 @@ public class AddServiceSourceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AddServiceSourceRequest, Builder> {
+        private String acceptLanguage; 
         private String address; 
         private String gatewayUniqueId; 
+        private IngressOptionsRequest ingressOptionsRequest; 
         private String name; 
         private String source; 
         private String type; 
@@ -100,14 +126,25 @@ public class AddServiceSourceRequest extends Request {
             super();
         } 
 
-        private Builder(AddServiceSourceRequest response) {
-            super(response);
-            this.address = response.address;
-            this.gatewayUniqueId = response.gatewayUniqueId;
-            this.name = response.name;
-            this.source = response.source;
-            this.type = response.type;
+        private Builder(AddServiceSourceRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.address = request.address;
+            this.gatewayUniqueId = request.gatewayUniqueId;
+            this.ingressOptionsRequest = request.ingressOptionsRequest;
+            this.name = request.name;
+            this.source = request.source;
+            this.type = request.type;
         } 
+
+        /**
+         * AcceptLanguage.
+         */
+        public Builder acceptLanguage(String acceptLanguage) {
+            this.putQueryParameter("AcceptLanguage", acceptLanguage);
+            this.acceptLanguage = acceptLanguage;
+            return this;
+        }
 
         /**
          * Address.
@@ -124,6 +161,16 @@ public class AddServiceSourceRequest extends Request {
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
             this.gatewayUniqueId = gatewayUniqueId;
+            return this;
+        }
+
+        /**
+         * IngressOptionsRequest.
+         */
+        public Builder ingressOptionsRequest(IngressOptionsRequest ingressOptionsRequest) {
+            String ingressOptionsRequestShrink = shrink(ingressOptionsRequest, "IngressOptionsRequest", "json");
+            this.putQueryParameter("IngressOptionsRequest", ingressOptionsRequestShrink);
+            this.ingressOptionsRequest = ingressOptionsRequest;
             return this;
         }
 
@@ -161,4 +208,85 @@ public class AddServiceSourceRequest extends Request {
 
     } 
 
+    public static class IngressOptionsRequest extends TeaModel {
+        @NameInMap("EnableIngress")
+        private Boolean enableIngress;
+
+        @NameInMap("IngressClass")
+        private String ingressClass;
+
+        @NameInMap("WatchNamespace")
+        private String watchNamespace;
+
+        private IngressOptionsRequest(Builder builder) {
+            this.enableIngress = builder.enableIngress;
+            this.ingressClass = builder.ingressClass;
+            this.watchNamespace = builder.watchNamespace;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static IngressOptionsRequest create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enableIngress
+         */
+        public Boolean getEnableIngress() {
+            return this.enableIngress;
+        }
+
+        /**
+         * @return ingressClass
+         */
+        public String getIngressClass() {
+            return this.ingressClass;
+        }
+
+        /**
+         * @return watchNamespace
+         */
+        public String getWatchNamespace() {
+            return this.watchNamespace;
+        }
+
+        public static final class Builder {
+            private Boolean enableIngress; 
+            private String ingressClass; 
+            private String watchNamespace; 
+
+            /**
+             * EnableIngress.
+             */
+            public Builder enableIngress(Boolean enableIngress) {
+                this.enableIngress = enableIngress;
+                return this;
+            }
+
+            /**
+             * IngressClass.
+             */
+            public Builder ingressClass(String ingressClass) {
+                this.ingressClass = ingressClass;
+                return this;
+            }
+
+            /**
+             * WatchNamespace.
+             */
+            public Builder watchNamespace(String watchNamespace) {
+                this.watchNamespace = watchNamespace;
+                return this;
+            }
+
+            public IngressOptionsRequest build() {
+                return new IngressOptionsRequest(this);
+            } 
+
+        } 
+
+    }
 }

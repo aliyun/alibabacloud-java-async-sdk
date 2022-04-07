@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateGatewayDomainRequest extends Request {
     @Query
+    @NameInMap("AcceptLanguage")
+    private String acceptLanguage;
+
+    @Query
     @NameInMap("CertIdentifier")
     private String certIdentifier;
 
@@ -34,6 +38,7 @@ public class UpdateGatewayDomainRequest extends Request {
 
     private UpdateGatewayDomainRequest(Builder builder) {
         super(builder);
+        this.acceptLanguage = builder.acceptLanguage;
         this.certIdentifier = builder.certIdentifier;
         this.gatewayUniqueId = builder.gatewayUniqueId;
         this.id = builder.id;
@@ -52,6 +57,13 @@ public class UpdateGatewayDomainRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return acceptLanguage
+     */
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     /**
@@ -90,6 +102,7 @@ public class UpdateGatewayDomainRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateGatewayDomainRequest, Builder> {
+        private String acceptLanguage; 
         private String certIdentifier; 
         private String gatewayUniqueId; 
         private Long id; 
@@ -100,14 +113,24 @@ public class UpdateGatewayDomainRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateGatewayDomainRequest response) {
-            super(response);
-            this.certIdentifier = response.certIdentifier;
-            this.gatewayUniqueId = response.gatewayUniqueId;
-            this.id = response.id;
-            this.mustHttps = response.mustHttps;
-            this.protocol = response.protocol;
+        private Builder(UpdateGatewayDomainRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.certIdentifier = request.certIdentifier;
+            this.gatewayUniqueId = request.gatewayUniqueId;
+            this.id = request.id;
+            this.mustHttps = request.mustHttps;
+            this.protocol = request.protocol;
         } 
+
+        /**
+         * AcceptLanguage.
+         */
+        public Builder acceptLanguage(String acceptLanguage) {
+            this.putQueryParameter("AcceptLanguage", acceptLanguage);
+            this.acceptLanguage = acceptLanguage;
+            return this;
+        }
 
         /**
          * CertIdentifier.

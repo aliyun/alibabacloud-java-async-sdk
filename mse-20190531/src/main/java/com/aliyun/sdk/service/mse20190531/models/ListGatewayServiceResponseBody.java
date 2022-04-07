@@ -208,6 +208,9 @@ public class ListGatewayServiceResponseBody extends TeaModel {
         @NameInMap("GroupName")
         private String groupName;
 
+        @NameInMap("HealehStatus")
+        private String healehStatus;
+
         @NameInMap("Id")
         private Long id;
 
@@ -247,6 +250,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
             this.groupName = builder.groupName;
+            this.healehStatus = builder.healehStatus;
             this.id = builder.id;
             this.ips = builder.ips;
             this.metaInfo = builder.metaInfo;
@@ -301,6 +305,13 @@ public class ListGatewayServiceResponseBody extends TeaModel {
          */
         public String getGroupName() {
             return this.groupName;
+        }
+
+        /**
+         * @return healehStatus
+         */
+        public String getHealehStatus() {
+            return this.healehStatus;
         }
 
         /**
@@ -386,6 +397,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             private String gmtCreate; 
             private String gmtModified; 
             private String groupName; 
+            private String healehStatus; 
             private Long id; 
             private java.util.List < String > ips; 
             private String metaInfo; 
@@ -435,6 +447,14 @@ public class ListGatewayServiceResponseBody extends TeaModel {
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
+                return this;
+            }
+
+            /**
+             * HealehStatus.
+             */
+            public Builder healehStatus(String healehStatus) {
+                this.healehStatus = healehStatus;
                 return this;
             }
 

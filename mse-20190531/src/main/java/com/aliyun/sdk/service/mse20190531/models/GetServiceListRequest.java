@@ -113,14 +113,14 @@ public class GetServiceListRequest extends Request {
             super();
         } 
 
-        private Builder(GetServiceListRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.appId = response.appId;
-            this.ip = response.ip;
-            this.region = response.region;
-            this.serviceName = response.serviceName;
-            this.serviceType = response.serviceType;
+        private Builder(GetServiceListRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.appId = request.appId;
+            this.ip = request.ip;
+            this.region = request.region;
+            this.serviceName = request.serviceName;
+            this.serviceType = request.serviceType;
         } 
 
         /**

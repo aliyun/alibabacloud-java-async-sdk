@@ -61,10 +61,10 @@ public class ListClusterVersionsRequest extends Request {
             super();
         } 
 
-        private Builder(ListClusterVersionsRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.clusterType = response.clusterType;
+        private Builder(ListClusterVersionsRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.clusterType = request.clusterType;
         } 
 
         /**

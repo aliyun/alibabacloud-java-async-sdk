@@ -151,6 +151,87 @@ public class ListServiceSourceResponseBody extends TeaModel {
 
     } 
 
+    public static class IngressOptions extends TeaModel {
+        @NameInMap("EnableIngress")
+        private Boolean enableIngress;
+
+        @NameInMap("IngressClass")
+        private String ingressClass;
+
+        @NameInMap("WatchNamespace")
+        private String watchNamespace;
+
+        private IngressOptions(Builder builder) {
+            this.enableIngress = builder.enableIngress;
+            this.ingressClass = builder.ingressClass;
+            this.watchNamespace = builder.watchNamespace;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static IngressOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enableIngress
+         */
+        public Boolean getEnableIngress() {
+            return this.enableIngress;
+        }
+
+        /**
+         * @return ingressClass
+         */
+        public String getIngressClass() {
+            return this.ingressClass;
+        }
+
+        /**
+         * @return watchNamespace
+         */
+        public String getWatchNamespace() {
+            return this.watchNamespace;
+        }
+
+        public static final class Builder {
+            private Boolean enableIngress; 
+            private String ingressClass; 
+            private String watchNamespace; 
+
+            /**
+             * EnableIngress.
+             */
+            public Builder enableIngress(Boolean enableIngress) {
+                this.enableIngress = enableIngress;
+                return this;
+            }
+
+            /**
+             * IngressClass.
+             */
+            public Builder ingressClass(String ingressClass) {
+                this.ingressClass = ingressClass;
+                return this;
+            }
+
+            /**
+             * WatchNamespace.
+             */
+            public Builder watchNamespace(String watchNamespace) {
+                this.watchNamespace = watchNamespace;
+                return this;
+            }
+
+            public IngressOptions build() {
+                return new IngressOptions(this);
+            } 
+
+        } 
+
+    }
     public static class Data extends TeaModel {
         @NameInMap("Address")
         private String address;
@@ -169,6 +250,9 @@ public class ListServiceSourceResponseBody extends TeaModel {
 
         @NameInMap("Id")
         private Long id;
+
+        @NameInMap("IngressOptions")
+        private IngressOptions ingressOptions;
 
         @NameInMap("Name")
         private String name;
@@ -189,6 +273,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
             this.id = builder.id;
+            this.ingressOptions = builder.ingressOptions;
             this.name = builder.name;
             this.source = builder.source;
             this.sourceUniqueId = builder.sourceUniqueId;
@@ -246,6 +331,13 @@ public class ListServiceSourceResponseBody extends TeaModel {
         }
 
         /**
+         * @return ingressOptions
+         */
+        public IngressOptions getIngressOptions() {
+            return this.ingressOptions;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -280,6 +372,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
             private String gmtCreate; 
             private String gmtModified; 
             private Long id; 
+            private IngressOptions ingressOptions; 
             private String name; 
             private String source; 
             private String sourceUniqueId; 
@@ -330,6 +423,14 @@ public class ListServiceSourceResponseBody extends TeaModel {
              */
             public Builder id(Long id) {
                 this.id = id;
+                return this;
+            }
+
+            /**
+             * IngressOptions.
+             */
+            public Builder ingressOptions(IngressOptions ingressOptions) {
+                this.ingressOptions = ingressOptions;
                 return this;
             }
 

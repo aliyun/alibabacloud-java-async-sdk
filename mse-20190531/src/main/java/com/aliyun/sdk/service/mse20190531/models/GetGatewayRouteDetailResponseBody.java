@@ -1512,6 +1512,9 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         @NameInMap("DomainNameList")
         private java.util.List < String > domainNameList;
 
+        @NameInMap("EnableWaf")
+        private Boolean enableWaf;
+
         @NameInMap("GatewayId")
         private Long gatewayId;
 
@@ -1573,6 +1576,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             this.domainIdList = builder.domainIdList;
             this.domainName = builder.domainName;
             this.domainNameList = builder.domainNameList;
+            this.enableWaf = builder.enableWaf;
             this.gatewayId = builder.gatewayId;
             this.gatewayUniqueId = builder.gatewayUniqueId;
             this.gmtCreate = builder.gmtCreate;
@@ -1661,6 +1665,13 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
          */
         public java.util.List < String > getDomainNameList() {
             return this.domainNameList;
+        }
+
+        /**
+         * @return enableWaf
+         */
+        public Boolean getEnableWaf() {
+            return this.enableWaf;
         }
 
         /**
@@ -1792,6 +1803,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             private java.util.List < Long > domainIdList; 
             private String domainName; 
             private java.util.List < String > domainNameList; 
+            private Boolean enableWaf; 
             private Long gatewayId; 
             private String gatewayUniqueId; 
             private String gmtCreate; 
@@ -1879,6 +1891,14 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
              */
             public Builder domainNameList(java.util.List < String > domainNameList) {
                 this.domainNameList = domainNameList;
+                return this;
+            }
+
+            /**
+             * EnableWaf.
+             */
+            public Builder enableWaf(Boolean enableWaf) {
+                this.enableWaf = enableWaf;
                 return this;
             }
 

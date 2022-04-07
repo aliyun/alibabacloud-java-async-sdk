@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class QueryClusterDetailRequest extends Request {
     @Query
+    @NameInMap("AcceptLanguage")
+    private String acceptLanguage;
+
+    @Query
     @NameInMap("InstanceId")
     private String instanceId;
 
@@ -22,6 +26,7 @@ public class QueryClusterDetailRequest extends Request {
 
     private QueryClusterDetailRequest(Builder builder) {
         super(builder);
+        this.acceptLanguage = builder.acceptLanguage;
         this.instanceId = builder.instanceId;
         this.orderId = builder.orderId;
     }
@@ -40,6 +45,13 @@ public class QueryClusterDetailRequest extends Request {
     }
 
     /**
+     * @return acceptLanguage
+     */
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -54,6 +66,7 @@ public class QueryClusterDetailRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<QueryClusterDetailRequest, Builder> {
+        private String acceptLanguage; 
         private String instanceId; 
         private String orderId; 
 
@@ -61,11 +74,21 @@ public class QueryClusterDetailRequest extends Request {
             super();
         } 
 
-        private Builder(QueryClusterDetailRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.orderId = response.orderId;
+        private Builder(QueryClusterDetailRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.instanceId = request.instanceId;
+            this.orderId = request.orderId;
         } 
+
+        /**
+         * AcceptLanguage.
+         */
+        public Builder acceptLanguage(String acceptLanguage) {
+            this.putQueryParameter("AcceptLanguage", acceptLanguage);
+            this.acceptLanguage = acceptLanguage;
+            return this;
+        }
 
         /**
          * InstanceId.

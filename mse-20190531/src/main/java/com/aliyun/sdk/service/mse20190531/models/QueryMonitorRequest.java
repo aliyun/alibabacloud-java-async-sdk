@@ -129,15 +129,15 @@ public class QueryMonitorRequest extends Request {
             super();
         } 
 
-        private Builder(QueryMonitorRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.endTime = response.endTime;
-            this.instanceId = response.instanceId;
-            this.monitorType = response.monitorType;
-            this.requestPars = response.requestPars;
-            this.startTime = response.startTime;
-            this.step = response.step;
+        private Builder(QueryMonitorRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.endTime = request.endTime;
+            this.instanceId = request.instanceId;
+            this.monitorType = request.monitorType;
+            this.requestPars = request.requestPars;
+            this.startTime = request.startTime;
+            this.step = request.step;
         } 
 
         /**

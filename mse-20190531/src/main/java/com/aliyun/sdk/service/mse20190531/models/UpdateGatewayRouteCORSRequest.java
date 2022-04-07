@@ -100,13 +100,13 @@ public class UpdateGatewayRouteCORSRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateGatewayRouteCORSRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.corsJSON = response.corsJSON;
-            this.gatewayId = response.gatewayId;
-            this.gatewayUniqueId = response.gatewayUniqueId;
-            this.id = response.id;
+        private Builder(UpdateGatewayRouteCORSRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.corsJSON = request.corsJSON;
+            this.gatewayId = request.gatewayId;
+            this.gatewayUniqueId = request.gatewayUniqueId;
+            this.id = request.id;
         } 
 
         /**
@@ -122,7 +122,8 @@ public class UpdateGatewayRouteCORSRequest extends Request {
          * CorsJSON.
          */
         public Builder corsJSON(CorsJSON corsJSON) {
-            this.putQueryParameter("CorsJSON", corsJSON);
+            String corsJSONShrink = shrink(corsJSON, "CorsJSON", "json");
+            this.putQueryParameter("CorsJSON", corsJSONShrink);
             this.corsJSON = corsJSON;
             return this;
         }

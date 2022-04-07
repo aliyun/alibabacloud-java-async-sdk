@@ -18,8 +18,11 @@ public class QueryZnodeDetailRequest extends Request {
 
     @Query
     @NameInMap("ClusterId")
-    @Validation(required = true)
     private String clusterId;
+
+    @Query
+    @NameInMap("InstanceId")
+    private String instanceId;
 
     @Query
     @NameInMap("Path")
@@ -34,6 +37,7 @@ public class QueryZnodeDetailRequest extends Request {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
         this.clusterId = builder.clusterId;
+        this.instanceId = builder.instanceId;
         this.path = builder.path;
         this.requestPars = builder.requestPars;
     }
@@ -66,6 +70,13 @@ public class QueryZnodeDetailRequest extends Request {
     }
 
     /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    /**
      * @return path
      */
     public String getPath() {
@@ -82,6 +93,7 @@ public class QueryZnodeDetailRequest extends Request {
     public static final class Builder extends Request.Builder<QueryZnodeDetailRequest, Builder> {
         private String acceptLanguage; 
         private String clusterId; 
+        private String instanceId; 
         private String path; 
         private String requestPars; 
 
@@ -89,12 +101,13 @@ public class QueryZnodeDetailRequest extends Request {
             super();
         } 
 
-        private Builder(QueryZnodeDetailRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.clusterId = response.clusterId;
-            this.path = response.path;
-            this.requestPars = response.requestPars;
+        private Builder(QueryZnodeDetailRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.clusterId = request.clusterId;
+            this.instanceId = request.instanceId;
+            this.path = request.path;
+            this.requestPars = request.requestPars;
         } 
 
         /**
@@ -112,6 +125,15 @@ public class QueryZnodeDetailRequest extends Request {
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
             this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * InstanceId.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
             return this;
         }
 

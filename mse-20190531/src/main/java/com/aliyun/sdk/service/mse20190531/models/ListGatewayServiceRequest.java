@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListGatewayServiceRequest extends Request {
     @Query
+    @NameInMap("AcceptLanguage")
+    private String acceptLanguage;
+
+    @Query
     @NameInMap("DescSort")
     private Boolean descSort;
 
@@ -34,6 +38,7 @@ public class ListGatewayServiceRequest extends Request {
 
     private ListGatewayServiceRequest(Builder builder) {
         super(builder);
+        this.acceptLanguage = builder.acceptLanguage;
         this.descSort = builder.descSort;
         this.filterParams = builder.filterParams;
         this.orderItem = builder.orderItem;
@@ -52,6 +57,13 @@ public class ListGatewayServiceRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return acceptLanguage
+     */
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     /**
@@ -90,6 +102,7 @@ public class ListGatewayServiceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListGatewayServiceRequest, Builder> {
+        private String acceptLanguage; 
         private Boolean descSort; 
         private FilterParams filterParams; 
         private String orderItem; 
@@ -100,14 +113,24 @@ public class ListGatewayServiceRequest extends Request {
             super();
         } 
 
-        private Builder(ListGatewayServiceRequest response) {
-            super(response);
-            this.descSort = response.descSort;
-            this.filterParams = response.filterParams;
-            this.orderItem = response.orderItem;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(ListGatewayServiceRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.descSort = request.descSort;
+            this.filterParams = request.filterParams;
+            this.orderItem = request.orderItem;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
+
+        /**
+         * AcceptLanguage.
+         */
+        public Builder acceptLanguage(String acceptLanguage) {
+            this.putQueryParameter("AcceptLanguage", acceptLanguage);
+            this.acceptLanguage = acceptLanguage;
+            return this;
+        }
 
         /**
          * DescSort.
@@ -122,7 +145,8 @@ public class ListGatewayServiceRequest extends Request {
          * FilterParams.
          */
         public Builder filterParams(FilterParams filterParams) {
-            this.putQueryParameter("FilterParams", filterParams);
+            String filterParamsShrink = shrink(filterParams, "FilterParams", "json");
+            this.putQueryParameter("FilterParams", filterParamsShrink);
             this.filterParams = filterParams;
             return this;
         }

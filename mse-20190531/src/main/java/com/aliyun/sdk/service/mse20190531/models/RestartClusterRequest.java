@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class RestartClusterRequest extends Request {
     @Query
+    @NameInMap("AcceptLanguage")
+    private String acceptLanguage;
+
+    @Query
     @NameInMap("ClusterId")
     private String clusterId;
 
@@ -30,6 +34,7 @@ public class RestartClusterRequest extends Request {
 
     private RestartClusterRequest(Builder builder) {
         super(builder);
+        this.acceptLanguage = builder.acceptLanguage;
         this.clusterId = builder.clusterId;
         this.instanceId = builder.instanceId;
         this.podNameList = builder.podNameList;
@@ -47,6 +52,13 @@ public class RestartClusterRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return acceptLanguage
+     */
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     /**
@@ -78,6 +90,7 @@ public class RestartClusterRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<RestartClusterRequest, Builder> {
+        private String acceptLanguage; 
         private String clusterId; 
         private String instanceId; 
         private String podNameList; 
@@ -87,13 +100,23 @@ public class RestartClusterRequest extends Request {
             super();
         } 
 
-        private Builder(RestartClusterRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.instanceId = response.instanceId;
-            this.podNameList = response.podNameList;
-            this.requestPars = response.requestPars;
+        private Builder(RestartClusterRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.clusterId = request.clusterId;
+            this.instanceId = request.instanceId;
+            this.podNameList = request.podNameList;
+            this.requestPars = request.requestPars;
         } 
+
+        /**
+         * AcceptLanguage.
+         */
+        public Builder acceptLanguage(String acceptLanguage) {
+            this.putQueryParameter("AcceptLanguage", acceptLanguage);
+            this.acceptLanguage = acceptLanguage;
+            return this;
+        }
 
         /**
          * ClusterId.

@@ -103,13 +103,13 @@ public class DeleteNacosServiceRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteNacosServiceRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.groupName = response.groupName;
-            this.instanceId = response.instanceId;
-            this.namespaceId = response.namespaceId;
-            this.serviceName = response.serviceName;
+        private Builder(DeleteNacosServiceRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.groupName = request.groupName;
+            this.instanceId = request.instanceId;
+            this.namespaceId = request.namespaceId;
+            this.serviceName = request.serviceName;
         } 
 
         /**

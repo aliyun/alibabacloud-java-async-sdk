@@ -48,9 +48,9 @@ public class QuerySlbSpecRequest extends Request {
             super();
         } 
 
-        private Builder(QuerySlbSpecRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
+        private Builder(QuerySlbSpecRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
         } 
 
         /**

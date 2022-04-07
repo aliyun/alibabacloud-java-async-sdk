@@ -74,11 +74,11 @@ public class ApplyGatewayRouteRequest extends Request {
             super();
         } 
 
-        private Builder(ApplyGatewayRouteRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.gatewayUniqueId = response.gatewayUniqueId;
-            this.routeId = response.routeId;
+        private Builder(ApplyGatewayRouteRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.gatewayUniqueId = request.gatewayUniqueId;
+            this.routeId = request.routeId;
         } 
 
         /**

@@ -103,13 +103,13 @@ public class UpdateZnodeRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateZnodeRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.clusterId = response.clusterId;
-            this.data = response.data;
-            this.path = response.path;
-            this.requestPars = response.requestPars;
+        private Builder(UpdateZnodeRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.clusterId = request.clusterId;
+            this.data = request.data;
+            this.path = request.path;
+            this.requestPars = request.requestPars;
         } 
 
         /**

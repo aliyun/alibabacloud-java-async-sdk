@@ -74,11 +74,11 @@ public class ListClusterTypesRequest extends Request {
             super();
         } 
 
-        private Builder(ListClusterTypesRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.connectType = response.connectType;
-            this.regionId = response.regionId;
+        private Builder(ListClusterTypesRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.connectType = request.connectType;
+            this.regionId = request.regionId;
         } 
 
         /**

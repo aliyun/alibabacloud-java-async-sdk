@@ -100,13 +100,13 @@ public class UpdateGatewayRouteTimeoutRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateGatewayRouteTimeoutRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.gatewayId = response.gatewayId;
-            this.gatewayUniqueId = response.gatewayUniqueId;
-            this.id = response.id;
-            this.timeoutJSON = response.timeoutJSON;
+        private Builder(UpdateGatewayRouteTimeoutRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.gatewayId = request.gatewayId;
+            this.gatewayUniqueId = request.gatewayUniqueId;
+            this.id = request.id;
+            this.timeoutJSON = request.timeoutJSON;
         } 
 
         /**
@@ -149,7 +149,8 @@ public class UpdateGatewayRouteTimeoutRequest extends Request {
          * TimeoutJSON.
          */
         public Builder timeoutJSON(TimeoutJSON timeoutJSON) {
-            this.putQueryParameter("TimeoutJSON", timeoutJSON);
+            String timeoutJSONShrink = shrink(timeoutJSON, "TimeoutJSON", "json");
+            this.putQueryParameter("TimeoutJSON", timeoutJSONShrink);
             this.timeoutJSON = timeoutJSON;
             return this;
         }

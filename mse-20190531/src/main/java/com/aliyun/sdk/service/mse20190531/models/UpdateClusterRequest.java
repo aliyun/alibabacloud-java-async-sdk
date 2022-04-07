@@ -87,12 +87,12 @@ public class UpdateClusterRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateClusterRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.clusterAliasName = response.clusterAliasName;
-            this.instanceId = response.instanceId;
-            this.requestPars = response.requestPars;
+        private Builder(UpdateClusterRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.clusterAliasName = request.clusterAliasName;
+            this.instanceId = request.instanceId;
+            this.requestPars = request.requestPars;
         } 
 
         /**

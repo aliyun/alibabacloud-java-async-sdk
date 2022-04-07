@@ -181,19 +181,19 @@ public class CreateNacosConfigRequest extends Request {
             super();
         } 
 
-        private Builder(CreateNacosConfigRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.appName = response.appName;
-            this.betaIps = response.betaIps;
-            this.content = response.content;
-            this.dataId = response.dataId;
-            this.desc = response.desc;
-            this.group = response.group;
-            this.instanceId = response.instanceId;
-            this.namespaceId = response.namespaceId;
-            this.tags = response.tags;
-            this.type = response.type;
+        private Builder(CreateNacosConfigRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.appName = request.appName;
+            this.betaIps = request.betaIps;
+            this.content = request.content;
+            this.dataId = request.dataId;
+            this.desc = request.desc;
+            this.group = request.group;
+            this.instanceId = request.instanceId;
+            this.namespaceId = request.namespaceId;
+            this.tags = request.tags;
+            this.type = request.type;
         } 
 
         /**

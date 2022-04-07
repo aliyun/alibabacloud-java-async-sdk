@@ -48,9 +48,9 @@ public class QueryAllSwimmingLaneGroupRequest extends Request {
             super();
         } 
 
-        private Builder(QueryAllSwimmingLaneGroupRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
+        private Builder(QueryAllSwimmingLaneGroupRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
         } 
 
         /**

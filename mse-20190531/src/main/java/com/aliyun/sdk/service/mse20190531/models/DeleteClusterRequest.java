@@ -61,10 +61,10 @@ public class DeleteClusterRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteClusterRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.instanceId = response.instanceId;
+        private Builder(DeleteClusterRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.instanceId = request.instanceId;
         } 
 
         /**

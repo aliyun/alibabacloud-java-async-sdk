@@ -243,24 +243,24 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             super();
         } 
 
-        private Builder(CreateOrUpdateSwimmingLaneRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.enable = response.enable;
-            this.enableRules = response.enableRules;
-            this.entryRule = response.entryRule;
-            this.entryRules = response.entryRules;
-            this.gmtCreate = response.gmtCreate;
-            this.gmtModified = response.gmtModified;
-            this.groupId = response.groupId;
-            this.id = response.id;
-            this.licenseKey = response.licenseKey;
-            this.name = response.name;
-            this.regionId = response.regionId;
-            this.source = response.source;
-            this.status = response.status;
-            this.tag = response.tag;
-            this.userId = response.userId;
+        private Builder(CreateOrUpdateSwimmingLaneRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.enable = request.enable;
+            this.enableRules = request.enableRules;
+            this.entryRule = request.entryRule;
+            this.entryRules = request.entryRules;
+            this.gmtCreate = request.gmtCreate;
+            this.gmtModified = request.gmtModified;
+            this.groupId = request.groupId;
+            this.id = request.id;
+            this.licenseKey = request.licenseKey;
+            this.name = request.name;
+            this.regionId = request.regionId;
+            this.source = request.source;
+            this.status = request.status;
+            this.tag = request.tag;
+            this.userId = request.userId;
         } 
 
         /**

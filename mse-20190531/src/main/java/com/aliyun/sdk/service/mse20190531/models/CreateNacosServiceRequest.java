@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateNacosServiceRequest extends Request {
     @Query
+    @NameInMap("AcceptLanguage")
+    private String acceptLanguage;
+
+    @Query
     @NameInMap("ClusterId")
     private String clusterId;
 
@@ -43,6 +47,7 @@ public class CreateNacosServiceRequest extends Request {
 
     private CreateNacosServiceRequest(Builder builder) {
         super(builder);
+        this.acceptLanguage = builder.acceptLanguage;
         this.clusterId = builder.clusterId;
         this.ephemeral = builder.ephemeral;
         this.groupName = builder.groupName;
@@ -63,6 +68,13 @@ public class CreateNacosServiceRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return acceptLanguage
+     */
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     /**
@@ -115,6 +127,7 @@ public class CreateNacosServiceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateNacosServiceRequest, Builder> {
+        private String acceptLanguage; 
         private String clusterId; 
         private Boolean ephemeral; 
         private String groupName; 
@@ -127,16 +140,26 @@ public class CreateNacosServiceRequest extends Request {
             super();
         } 
 
-        private Builder(CreateNacosServiceRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.ephemeral = response.ephemeral;
-            this.groupName = response.groupName;
-            this.instanceId = response.instanceId;
-            this.namespaceId = response.namespaceId;
-            this.protectThreshold = response.protectThreshold;
-            this.serviceName = response.serviceName;
+        private Builder(CreateNacosServiceRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.clusterId = request.clusterId;
+            this.ephemeral = request.ephemeral;
+            this.groupName = request.groupName;
+            this.instanceId = request.instanceId;
+            this.namespaceId = request.namespaceId;
+            this.protectThreshold = request.protectThreshold;
+            this.serviceName = request.serviceName;
         } 
+
+        /**
+         * AcceptLanguage.
+         */
+        public Builder acceptLanguage(String acceptLanguage) {
+            this.putQueryParameter("AcceptLanguage", acceptLanguage);
+            this.acceptLanguage = acceptLanguage;
+            return this;
+        }
 
         /**
          * ClusterId.

@@ -100,13 +100,13 @@ public class UpdateGatewayRouteHeaderOpRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateGatewayRouteHeaderOpRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.gatewayId = response.gatewayId;
-            this.gatewayUniqueId = response.gatewayUniqueId;
-            this.headerOpJSON = response.headerOpJSON;
-            this.id = response.id;
+        private Builder(UpdateGatewayRouteHeaderOpRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.gatewayId = request.gatewayId;
+            this.gatewayUniqueId = request.gatewayUniqueId;
+            this.headerOpJSON = request.headerOpJSON;
+            this.id = request.id;
         } 
 
         /**
