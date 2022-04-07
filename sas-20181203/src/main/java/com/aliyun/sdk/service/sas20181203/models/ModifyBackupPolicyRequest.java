@@ -149,7 +149,8 @@ public class ModifyBackupPolicyRequest extends Request {
          * Policy.
          */
         public Builder policy(java.util.Map < String, ? > policy) {
-            this.putQueryParameter("Policy", policy);
+            String policyShrink = shrink(policy, "Policy", "json");
+            this.putQueryParameter("Policy", policyShrink);
             this.policy = policy;
             return this;
         }

@@ -288,6 +288,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<InstallBackupClientResponse> installBackupClient(InstallBackupClientRequest request);
 
+    CompletableFuture<InstallCloudMonitorResponse> installCloudMonitor(InstallCloudMonitorRequest request);
+
     CompletableFuture<ModifyAntiBruteForceRuleResponse> modifyAntiBruteForceRule(ModifyAntiBruteForceRuleRequest request);
 
     CompletableFuture<ModifyAssetGroupResponse> modifyAssetGroup(ModifyAssetGroupRequest request);
