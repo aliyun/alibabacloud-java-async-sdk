@@ -25,6 +25,10 @@ public class CreateEngineNamespaceRequest extends Request {
     private String desc;
 
     @Query
+    @NameInMap("Id")
+    private String id;
+
+    @Query
     @NameInMap("InstanceId")
     private String instanceId;
 
@@ -42,6 +46,7 @@ public class CreateEngineNamespaceRequest extends Request {
         this.acceptLanguage = builder.acceptLanguage;
         this.clusterId = builder.clusterId;
         this.desc = builder.desc;
+        this.id = builder.id;
         this.instanceId = builder.instanceId;
         this.name = builder.name;
         this.serviceCount = builder.serviceCount;
@@ -82,6 +87,13 @@ public class CreateEngineNamespaceRequest extends Request {
     }
 
     /**
+     * @return id
+     */
+    public String getId() {
+        return this.id;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -106,6 +118,7 @@ public class CreateEngineNamespaceRequest extends Request {
         private String acceptLanguage; 
         private String clusterId; 
         private String desc; 
+        private String id; 
         private String instanceId; 
         private String name; 
         private Integer serviceCount; 
@@ -119,6 +132,7 @@ public class CreateEngineNamespaceRequest extends Request {
             this.acceptLanguage = request.acceptLanguage;
             this.clusterId = request.clusterId;
             this.desc = request.desc;
+            this.id = request.id;
             this.instanceId = request.instanceId;
             this.name = request.name;
             this.serviceCount = request.serviceCount;
@@ -148,6 +162,15 @@ public class CreateEngineNamespaceRequest extends Request {
         public Builder desc(String desc) {
             this.putQueryParameter("Desc", desc);
             this.desc = desc;
+            return this;
+        }
+
+        /**
+         * Id.
+         */
+        public Builder id(String id) {
+            this.putQueryParameter("Id", id);
+            this.id = id;
             return this;
         }
 

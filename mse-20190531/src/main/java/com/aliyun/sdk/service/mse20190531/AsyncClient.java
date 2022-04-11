@@ -236,8 +236,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RetryClusterResponse> retryCluster(RetryClusterRequest request);
 
-    CompletableFuture<ScalingClusterResponse> scalingCluster(ScalingClusterRequest request);
-
     CompletableFuture<SelectGatewaySlbResponse> selectGatewaySlb(SelectGatewaySlbRequest request);
 
     CompletableFuture<UpdateAclResponse> updateAcl(UpdateAclRequest request);
