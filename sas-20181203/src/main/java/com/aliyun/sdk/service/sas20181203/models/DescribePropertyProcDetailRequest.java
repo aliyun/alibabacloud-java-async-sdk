@@ -21,6 +21,10 @@ public class DescribePropertyProcDetailRequest extends Request {
     private Integer currentPage;
 
     @Query
+    @NameInMap("Extend")
+    private String extend;
+
+    @Query
     @NameInMap("Name")
     private String name;
 
@@ -52,6 +56,7 @@ public class DescribePropertyProcDetailRequest extends Request {
         super(builder);
         this.cmdline = builder.cmdline;
         this.currentPage = builder.currentPage;
+        this.extend = builder.extend;
         this.name = builder.name;
         this.pageSize = builder.pageSize;
         this.procTimeEnd = builder.procTimeEnd;
@@ -86,6 +91,13 @@ public class DescribePropertyProcDetailRequest extends Request {
      */
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    /**
+     * @return extend
+     */
+    public String getExtend() {
+        return this.extend;
     }
 
     /**
@@ -140,6 +152,7 @@ public class DescribePropertyProcDetailRequest extends Request {
     public static final class Builder extends Request.Builder<DescribePropertyProcDetailRequest, Builder> {
         private String cmdline; 
         private Integer currentPage; 
+        private String extend; 
         private String name; 
         private Integer pageSize; 
         private Long procTimeEnd; 
@@ -156,6 +169,7 @@ public class DescribePropertyProcDetailRequest extends Request {
             super(request);
             this.cmdline = request.cmdline;
             this.currentPage = request.currentPage;
+            this.extend = request.extend;
             this.name = request.name;
             this.pageSize = request.pageSize;
             this.procTimeEnd = request.procTimeEnd;
@@ -180,6 +194,15 @@ public class DescribePropertyProcDetailRequest extends Request {
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
             this.currentPage = currentPage;
+            return this;
+        }
+
+        /**
+         * Extend.
+         */
+        public Builder extend(String extend) {
+            this.putQueryParameter("Extend", extend);
+            this.extend = extend;
             return this;
         }
 

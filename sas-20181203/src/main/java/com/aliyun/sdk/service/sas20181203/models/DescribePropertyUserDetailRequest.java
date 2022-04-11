@@ -17,6 +17,10 @@ public class DescribePropertyUserDetailRequest extends Request {
     private Integer currentPage;
 
     @Query
+    @NameInMap("Extend")
+    private String extend;
+
+    @Query
     @NameInMap("IsRoot")
     private String isRoot;
 
@@ -47,6 +51,7 @@ public class DescribePropertyUserDetailRequest extends Request {
     private DescribePropertyUserDetailRequest(Builder builder) {
         super(builder);
         this.currentPage = builder.currentPage;
+        this.extend = builder.extend;
         this.isRoot = builder.isRoot;
         this.lastLoginTimeEnd = builder.lastLoginTimeEnd;
         this.lastLoginTimeStart = builder.lastLoginTimeStart;
@@ -74,6 +79,13 @@ public class DescribePropertyUserDetailRequest extends Request {
      */
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    /**
+     * @return extend
+     */
+    public String getExtend() {
+        return this.extend;
     }
 
     /**
@@ -127,6 +139,7 @@ public class DescribePropertyUserDetailRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribePropertyUserDetailRequest, Builder> {
         private Integer currentPage; 
+        private String extend; 
         private String isRoot; 
         private Long lastLoginTimeEnd; 
         private Long lastLoginTimeStart; 
@@ -142,6 +155,7 @@ public class DescribePropertyUserDetailRequest extends Request {
         private Builder(DescribePropertyUserDetailRequest request) {
             super(request);
             this.currentPage = request.currentPage;
+            this.extend = request.extend;
             this.isRoot = request.isRoot;
             this.lastLoginTimeEnd = request.lastLoginTimeEnd;
             this.lastLoginTimeStart = request.lastLoginTimeStart;
@@ -157,6 +171,15 @@ public class DescribePropertyUserDetailRequest extends Request {
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
             this.currentPage = currentPage;
+            return this;
+        }
+
+        /**
+         * Extend.
+         */
+        public Builder extend(String extend) {
+            this.putQueryParameter("Extend", extend);
+            this.extend = extend;
             return this;
         }
 

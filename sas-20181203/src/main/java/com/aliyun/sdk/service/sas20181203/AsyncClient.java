@@ -272,6 +272,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ExportVulResponse> exportVul(ExportVulRequest request);
 
+    CompletableFuture<ExportWarningResponse> exportWarning(ExportWarningRequest request);
+
     CompletableFuture<FixCheckWarningsResponse> fixCheckWarnings(FixCheckWarningsRequest request);
 
     CompletableFuture<GetBackupStorageCountResponse> getBackupStorageCount(GetBackupStorageCountRequest request);
