@@ -102,13 +102,13 @@ public class ReprotectDiskReplicaGroupRequest extends Request {
             super();
         } 
 
-        private Builder(ReprotectDiskReplicaGroupRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.regionId = response.regionId;
-            this.replicaGroupId = response.replicaGroupId;
-            this.sourceRegionId = response.sourceRegionId;
-            this.sourceZoneId = response.sourceZoneId;
+        private Builder(ReprotectDiskReplicaGroupRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.regionId = request.regionId;
+            this.replicaGroupId = request.replicaGroupId;
+            this.sourceRegionId = request.sourceRegionId;
+            this.sourceZoneId = request.sourceZoneId;
         } 
 
         /**

@@ -115,14 +115,14 @@ public class ModifyDiskReplicaGroupRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDiskReplicaGroupRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.description = response.description;
-            this.groupName = response.groupName;
-            this.RPO = response.RPO;
-            this.regionId = response.regionId;
-            this.replicaGroupId = response.replicaGroupId;
+        private Builder(ModifyDiskReplicaGroupRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.description = request.description;
+            this.groupName = request.groupName;
+            this.RPO = request.RPO;
+            this.regionId = request.regionId;
+            this.replicaGroupId = request.replicaGroupId;
         } 
 
         /**

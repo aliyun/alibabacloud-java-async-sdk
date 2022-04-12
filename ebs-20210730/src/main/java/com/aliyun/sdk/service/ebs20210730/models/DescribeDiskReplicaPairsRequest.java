@@ -29,12 +29,22 @@ public class DescribeDiskReplicaPairsRequest extends Request {
     @Validation(required = true)
     private String regionId;
 
+    @Query
+    @NameInMap("ReplicaGroupId")
+    private String replicaGroupId;
+
+    @Query
+    @NameInMap("Site")
+    private String site;
+
     private DescribeDiskReplicaPairsRequest(Builder builder) {
         super(builder);
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.pairIds = builder.pairIds;
         this.regionId = builder.regionId;
+        this.replicaGroupId = builder.replicaGroupId;
+        this.site = builder.site;
     }
 
     public static Builder builder() {
@@ -78,22 +88,40 @@ public class DescribeDiskReplicaPairsRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return replicaGroupId
+     */
+    public String getReplicaGroupId() {
+        return this.replicaGroupId;
+    }
+
+    /**
+     * @return site
+     */
+    public String getSite() {
+        return this.site;
+    }
+
     public static final class Builder extends Request.Builder<DescribeDiskReplicaPairsRequest, Builder> {
         private Long maxResults; 
         private String nextToken; 
         private String pairIds; 
         private String regionId; 
+        private String replicaGroupId; 
+        private String site; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeDiskReplicaPairsRequest response) {
-            super(response);
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.pairIds = response.pairIds;
-            this.regionId = response.regionId;
+        private Builder(DescribeDiskReplicaPairsRequest request) {
+            super(request);
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.pairIds = request.pairIds;
+            this.regionId = request.regionId;
+            this.replicaGroupId = request.replicaGroupId;
+            this.site = request.site;
         } 
 
         /**
@@ -129,6 +157,24 @@ public class DescribeDiskReplicaPairsRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ReplicaGroupId.
+         */
+        public Builder replicaGroupId(String replicaGroupId) {
+            this.putQueryParameter("ReplicaGroupId", replicaGroupId);
+            this.replicaGroupId = replicaGroupId;
+            return this;
+        }
+
+        /**
+         * production或backup，表示数据从主或备站点获取，默认为production。
+         */
+        public Builder site(String site) {
+            this.putQueryParameter("Site", site);
+            this.site = site;
             return this;
         }
 

@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link TestDescribeRegionsResponse} extends {@link TeaModel}
+ * {@link DescribeDiskReplicaPairProgressResponse} extends {@link TeaModel}
  *
- * <p>TestDescribeRegionsResponse</p>
+ * <p>DescribeDiskReplicaPairProgressResponse</p>
  */
-public class TestDescribeRegionsResponse extends Response {
+public class DescribeDiskReplicaPairProgressResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private TestDescribeRegionsResponseBody body;
+    private DescribeDiskReplicaPairProgressResponseBody body;
 
-    private TestDescribeRegionsResponse(BuilderImpl builder) {
+    private DescribeDiskReplicaPairProgressResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static TestDescribeRegionsResponse create() {
+    public static DescribeDiskReplicaPairProgressResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class TestDescribeRegionsResponse extends Response {
     /**
      * @return body
      */
-    public TestDescribeRegionsResponseBody getBody() {
+    public DescribeDiskReplicaPairProgressResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<TestDescribeRegionsResponse, Builder> {
+    public interface Builder extends Response.Builder<DescribeDiskReplicaPairProgressResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(TestDescribeRegionsResponseBody body);
+        Builder body(DescribeDiskReplicaPairProgressResponseBody body);
 
         @Override
-        TestDescribeRegionsResponse build();
+        DescribeDiskReplicaPairProgressResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<TestDescribeRegionsResponse, Builder>
+            extends Response.BuilderImpl<DescribeDiskReplicaPairProgressResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private TestDescribeRegionsResponseBody body; 
+        private DescribeDiskReplicaPairProgressResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(TestDescribeRegionsResponse response) {
+        private BuilderImpl(DescribeDiskReplicaPairProgressResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class TestDescribeRegionsResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(TestDescribeRegionsResponseBody body) {
+        public Builder body(DescribeDiskReplicaPairProgressResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public TestDescribeRegionsResponse build() {
-            return new TestDescribeRegionsResponse(this);
+        public DescribeDiskReplicaPairProgressResponse build() {
+            return new DescribeDiskReplicaPairProgressResponse(this);
         } 
 
     } 

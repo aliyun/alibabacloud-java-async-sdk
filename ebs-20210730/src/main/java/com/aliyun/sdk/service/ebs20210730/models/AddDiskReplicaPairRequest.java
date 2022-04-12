@@ -90,12 +90,12 @@ public class AddDiskReplicaPairRequest extends Request {
             super();
         } 
 
-        private Builder(AddDiskReplicaPairRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.regionId = response.regionId;
-            this.replicaGroupId = response.replicaGroupId;
-            this.replicaPairId = response.replicaPairId;
+        private Builder(AddDiskReplicaPairRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.regionId = request.regionId;
+            this.replicaGroupId = request.replicaGroupId;
+            this.replicaPairId = request.replicaPairId;
         } 
 
         /**

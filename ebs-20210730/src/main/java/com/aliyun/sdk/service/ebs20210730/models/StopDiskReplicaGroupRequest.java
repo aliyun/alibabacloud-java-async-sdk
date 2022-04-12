@@ -76,11 +76,11 @@ public class StopDiskReplicaGroupRequest extends Request {
             super();
         } 
 
-        private Builder(StopDiskReplicaGroupRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.regionId = response.regionId;
-            this.replicaGroupId = response.replicaGroupId;
+        private Builder(StopDiskReplicaGroupRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.regionId = request.regionId;
+            this.replicaGroupId = request.replicaGroupId;
         } 
 
         /**

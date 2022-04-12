@@ -32,6 +32,7 @@ public class CreateDiskReplicaGroupRequest extends Request {
 
     @Query
     @NameInMap("GroupName")
+    @Validation(maxLength = 128, minLength = 2)
     private String groupName;
 
     @Query
@@ -39,9 +40,9 @@ public class CreateDiskReplicaGroupRequest extends Request {
     private Long RPO;
 
     @Query
-    @NameInMap("SourceRegionId")
+    @NameInMap("RegionId")
     @Validation(required = true)
-    private String sourceRegionId;
+    private String regionId;
 
     @Query
     @NameInMap("SourceZoneId")
@@ -56,7 +57,7 @@ public class CreateDiskReplicaGroupRequest extends Request {
         this.destinationZoneId = builder.destinationZoneId;
         this.groupName = builder.groupName;
         this.RPO = builder.RPO;
-        this.sourceRegionId = builder.sourceRegionId;
+        this.regionId = builder.regionId;
         this.sourceZoneId = builder.sourceZoneId;
     }
 
@@ -116,10 +117,10 @@ public class CreateDiskReplicaGroupRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return regionId
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -136,23 +137,23 @@ public class CreateDiskReplicaGroupRequest extends Request {
         private String destinationZoneId; 
         private String groupName; 
         private Long RPO; 
-        private String sourceRegionId; 
+        private String regionId; 
         private String sourceZoneId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateDiskReplicaGroupRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.description = response.description;
-            this.destinationRegionId = response.destinationRegionId;
-            this.destinationZoneId = response.destinationZoneId;
-            this.groupName = response.groupName;
-            this.RPO = response.RPO;
-            this.sourceRegionId = response.sourceRegionId;
-            this.sourceZoneId = response.sourceZoneId;
+        private Builder(CreateDiskReplicaGroupRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.description = request.description;
+            this.destinationRegionId = request.destinationRegionId;
+            this.destinationZoneId = request.destinationZoneId;
+            this.groupName = request.groupName;
+            this.RPO = request.RPO;
+            this.regionId = request.regionId;
+            this.sourceZoneId = request.sourceZoneId;
         } 
 
         /**
@@ -210,11 +211,11 @@ public class CreateDiskReplicaGroupRequest extends Request {
         }
 
         /**
-         * SourceRegionId.
+         * RegionId.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putQueryParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 

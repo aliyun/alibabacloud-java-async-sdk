@@ -29,12 +29,17 @@ public class DescribeDiskReplicaGroupsRequest extends Request {
     @Validation(required = true)
     private String regionId;
 
+    @Query
+    @NameInMap("Site")
+    private String site;
+
     private DescribeDiskReplicaGroupsRequest(Builder builder) {
         super(builder);
         this.groupIds = builder.groupIds;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.regionId = builder.regionId;
+        this.site = builder.site;
     }
 
     public static Builder builder() {
@@ -78,22 +83,31 @@ public class DescribeDiskReplicaGroupsRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return site
+     */
+    public String getSite() {
+        return this.site;
+    }
+
     public static final class Builder extends Request.Builder<DescribeDiskReplicaGroupsRequest, Builder> {
         private String groupIds; 
         private Long maxResults; 
         private String nextToken; 
         private String regionId; 
+        private String site; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeDiskReplicaGroupsRequest response) {
-            super(response);
-            this.groupIds = response.groupIds;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.regionId = response.regionId;
+        private Builder(DescribeDiskReplicaGroupsRequest request) {
+            super(request);
+            this.groupIds = request.groupIds;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.regionId = request.regionId;
+            this.site = request.site;
         } 
 
         /**
@@ -129,6 +143,15 @@ public class DescribeDiskReplicaGroupsRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * production或backup，表示数据从主或备站点获取，默认为production。
+         */
+        public Builder site(String site) {
+            this.putQueryParameter("Site", site);
+            this.site = site;
             return this;
         }
 

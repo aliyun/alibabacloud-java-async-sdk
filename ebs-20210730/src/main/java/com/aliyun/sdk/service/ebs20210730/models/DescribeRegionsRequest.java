@@ -16,7 +16,7 @@ public class DescribeRegionsRequest extends Request {
     @NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Host
+    @Query
     @NameInMap("RegionId")
     private String regionId;
 
@@ -74,11 +74,11 @@ public class DescribeRegionsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeRegionsRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.regionId = response.regionId;
-            this.resourceType = response.resourceType;
+        private Builder(DescribeRegionsRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.regionId = request.regionId;
+            this.resourceType = request.resourceType;
         } 
 
         /**
@@ -94,7 +94,7 @@ public class DescribeRegionsRequest extends Request {
          * RegionId.
          */
         public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
+            this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
             return this;
         }

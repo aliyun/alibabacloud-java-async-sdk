@@ -7,15 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link StopDiskReplicaPairRequest} extends {@link RequestModel}
+ * {@link DescribeDiskReplicaPairProgressRequest} extends {@link RequestModel}
  *
- * <p>StopDiskReplicaPairRequest</p>
+ * <p>DescribeDiskReplicaPairProgressRequest</p>
  */
-public class StopDiskReplicaPairRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
-    private String clientToken;
-
+public class DescribeDiskReplicaPairProgressRequest extends Request {
     @Query
     @NameInMap("RegionId")
     @Validation(required = true)
@@ -26,9 +22,8 @@ public class StopDiskReplicaPairRequest extends Request {
     @Validation(required = true)
     private String replicaPairId;
 
-    private StopDiskReplicaPairRequest(Builder builder) {
+    private DescribeDiskReplicaPairProgressRequest(Builder builder) {
         super(builder);
-        this.clientToken = builder.clientToken;
         this.regionId = builder.regionId;
         this.replicaPairId = builder.replicaPairId;
     }
@@ -37,20 +32,13 @@ public class StopDiskReplicaPairRequest extends Request {
         return new Builder();
     }
 
-    public static StopDiskReplicaPairRequest create() {
+    public static DescribeDiskReplicaPairProgressRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return clientToken
-     */
-    public String getClientToken() {
-        return this.clientToken;
     }
 
     /**
@@ -67,8 +55,7 @@ public class StopDiskReplicaPairRequest extends Request {
         return this.replicaPairId;
     }
 
-    public static final class Builder extends Request.Builder<StopDiskReplicaPairRequest, Builder> {
-        private String clientToken; 
+    public static final class Builder extends Request.Builder<DescribeDiskReplicaPairProgressRequest, Builder> {
         private String regionId; 
         private String replicaPairId; 
 
@@ -76,21 +63,11 @@ public class StopDiskReplicaPairRequest extends Request {
             super();
         } 
 
-        private Builder(StopDiskReplicaPairRequest request) {
+        private Builder(DescribeDiskReplicaPairProgressRequest request) {
             super(request);
-            this.clientToken = request.clientToken;
             this.regionId = request.regionId;
             this.replicaPairId = request.replicaPairId;
         } 
-
-        /**
-         * ClientToken.
-         */
-        public Builder clientToken(String clientToken) {
-            this.putQueryParameter("ClientToken", clientToken);
-            this.clientToken = clientToken;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -111,8 +88,8 @@ public class StopDiskReplicaPairRequest extends Request {
         }
 
         @Override
-        public StopDiskReplicaPairRequest build() {
-            return new StopDiskReplicaPairRequest(this);
+        public DescribeDiskReplicaPairProgressRequest build() {
+            return new DescribeDiskReplicaPairProgressRequest(this);
         } 
 
     } 

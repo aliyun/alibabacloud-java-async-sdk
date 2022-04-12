@@ -76,11 +76,11 @@ public class DeleteDiskReplicaGroupRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteDiskReplicaGroupRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.regionId = response.regionId;
-            this.replicaGroupId = response.replicaGroupId;
+        private Builder(DeleteDiskReplicaGroupRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.regionId = request.regionId;
+            this.replicaGroupId = request.replicaGroupId;
         } 
 
         /**

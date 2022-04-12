@@ -76,11 +76,11 @@ public class FailoverDiskReplicaPairRequest extends Request {
             super();
         } 
 
-        private Builder(FailoverDiskReplicaPairRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.regionId = response.regionId;
-            this.replicaPairId = response.replicaPairId;
+        private Builder(FailoverDiskReplicaPairRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.regionId = request.regionId;
+            this.replicaPairId = request.replicaPairId;
         } 
 
         /**

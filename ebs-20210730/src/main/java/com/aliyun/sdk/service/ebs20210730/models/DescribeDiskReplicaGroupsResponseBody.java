@@ -92,9 +92,6 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
     } 
 
     public static class ReplicaGroups extends TeaModel {
-        @NameInMap("Bandwidth")
-        private Long bandwidth;
-
         @NameInMap("Description")
         private String description;
 
@@ -107,17 +104,23 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         @NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("LastRPO")
-        private Long lastRPO;
+        @NameInMap("LastRecoverPoint")
+        private Long lastRecoverPoint;
 
         @NameInMap("PairIds")
         private java.util.List < byte[] > pairIds;
+
+        @NameInMap("PairNumber")
+        private Long pairNumber;
 
         @NameInMap("RPO")
         private Long RPO;
 
         @NameInMap("ReplicaGroupId")
         private String replicaGroupId;
+
+        @NameInMap("Site")
+        private String site;
 
         @NameInMap("SourceRegionId")
         private String sourceRegionId;
@@ -129,15 +132,16 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         private String status;
 
         private ReplicaGroups(Builder builder) {
-            this.bandwidth = builder.bandwidth;
             this.description = builder.description;
             this.destinationRegionId = builder.destinationRegionId;
             this.destinationZoneId = builder.destinationZoneId;
             this.groupName = builder.groupName;
-            this.lastRPO = builder.lastRPO;
+            this.lastRecoverPoint = builder.lastRecoverPoint;
             this.pairIds = builder.pairIds;
+            this.pairNumber = builder.pairNumber;
             this.RPO = builder.RPO;
             this.replicaGroupId = builder.replicaGroupId;
+            this.site = builder.site;
             this.sourceRegionId = builder.sourceRegionId;
             this.sourceZoneId = builder.sourceZoneId;
             this.status = builder.status;
@@ -149,13 +153,6 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
 
         public static ReplicaGroups create() {
             return builder().build();
-        }
-
-        /**
-         * @return bandwidth
-         */
-        public Long getBandwidth() {
-            return this.bandwidth;
         }
 
         /**
@@ -187,10 +184,10 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * @return lastRPO
+         * @return lastRecoverPoint
          */
-        public Long getLastRPO() {
-            return this.lastRPO;
+        public Long getLastRecoverPoint() {
+            return this.lastRecoverPoint;
         }
 
         /**
@@ -198,6 +195,13 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
          */
         public java.util.List < byte[] > getPairIds() {
             return this.pairIds;
+        }
+
+        /**
+         * @return pairNumber
+         */
+        public Long getPairNumber() {
+            return this.pairNumber;
         }
 
         /**
@@ -212,6 +216,13 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
          */
         public String getReplicaGroupId() {
             return this.replicaGroupId;
+        }
+
+        /**
+         * @return site
+         */
+        public String getSite() {
+            return this.site;
         }
 
         /**
@@ -236,26 +247,19 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private Long bandwidth; 
             private String description; 
             private String destinationRegionId; 
             private String destinationZoneId; 
             private String groupName; 
-            private Long lastRPO; 
+            private Long lastRecoverPoint; 
             private java.util.List < byte[] > pairIds; 
+            private Long pairNumber; 
             private Long RPO; 
             private String replicaGroupId; 
+            private String site; 
             private String sourceRegionId; 
             private String sourceZoneId; 
             private String status; 
-
-            /**
-             * Bandwidth.
-             */
-            public Builder bandwidth(Long bandwidth) {
-                this.bandwidth = bandwidth;
-                return this;
-            }
 
             /**
              * Description.
@@ -290,10 +294,10 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * LastRPO.
+             * LastRecoverPoint.
              */
-            public Builder lastRPO(Long lastRPO) {
-                this.lastRPO = lastRPO;
+            public Builder lastRecoverPoint(Long lastRecoverPoint) {
+                this.lastRecoverPoint = lastRecoverPoint;
                 return this;
             }
 
@@ -302,6 +306,14 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
              */
             public Builder pairIds(java.util.List < byte[] > pairIds) {
                 this.pairIds = pairIds;
+                return this;
+            }
+
+            /**
+             * 复制组中的复制对个数
+             */
+            public Builder pairNumber(Long pairNumber) {
+                this.pairNumber = pairNumber;
                 return this;
             }
 
@@ -318,6 +330,14 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
              */
             public Builder replicaGroupId(String replicaGroupId) {
                 this.replicaGroupId = replicaGroupId;
+                return this;
+            }
+
+            /**
+             * pair信息的后端站点来源，production或backup
+             */
+            public Builder site(String site) {
+                this.site = site;
                 return this;
             }
 

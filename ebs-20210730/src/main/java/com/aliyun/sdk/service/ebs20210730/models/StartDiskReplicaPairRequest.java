@@ -17,6 +17,10 @@ public class StartDiskReplicaPairRequest extends Request {
     private String clientToken;
 
     @Query
+    @NameInMap("OneShot")
+    private Boolean oneShot;
+
+    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
@@ -29,6 +33,7 @@ public class StartDiskReplicaPairRequest extends Request {
     private StartDiskReplicaPairRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
+        this.oneShot = builder.oneShot;
         this.regionId = builder.regionId;
         this.replicaPairId = builder.replicaPairId;
     }
@@ -54,6 +59,13 @@ public class StartDiskReplicaPairRequest extends Request {
     }
 
     /**
+     * @return oneShot
+     */
+    public Boolean getOneShot() {
+        return this.oneShot;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -69,6 +81,7 @@ public class StartDiskReplicaPairRequest extends Request {
 
     public static final class Builder extends Request.Builder<StartDiskReplicaPairRequest, Builder> {
         private String clientToken; 
+        private Boolean oneShot; 
         private String regionId; 
         private String replicaPairId; 
 
@@ -76,11 +89,12 @@ public class StartDiskReplicaPairRequest extends Request {
             super();
         } 
 
-        private Builder(StartDiskReplicaPairRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.regionId = response.regionId;
-            this.replicaPairId = response.replicaPairId;
+        private Builder(StartDiskReplicaPairRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.oneShot = request.oneShot;
+            this.regionId = request.regionId;
+            this.replicaPairId = request.replicaPairId;
         } 
 
         /**
@@ -89,6 +103,15 @@ public class StartDiskReplicaPairRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * OneShot.
+         */
+        public Builder oneShot(Boolean oneShot) {
+            this.putQueryParameter("OneShot", oneShot);
+            this.oneShot = oneShot;
             return this;
         }
 

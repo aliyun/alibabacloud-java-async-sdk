@@ -76,11 +76,11 @@ public class ReprotectDiskReplicaPairRequest extends Request {
             super();
         } 
 
-        private Builder(ReprotectDiskReplicaPairRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.regionId = response.regionId;
-            this.replicaPairId = response.replicaPairId;
+        private Builder(ReprotectDiskReplicaPairRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.regionId = request.regionId;
+            this.replicaPairId = request.replicaPairId;
         } 
 
         /**

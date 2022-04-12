@@ -40,6 +40,7 @@ public class CreateDiskReplicaPairRequest extends Request {
 
     @Query
     @NameInMap("DestinationZoneId")
+    @Validation(required = true)
     private String destinationZoneId;
 
     @Query
@@ -60,12 +61,17 @@ public class CreateDiskReplicaPairRequest extends Request {
     private String periodUnit;
 
     @Query
-    @NameInMap("SourceRegionId")
+    @NameInMap("RPO")
+    private Long RPO;
+
+    @Query
+    @NameInMap("RegionId")
     @Validation(required = true)
-    private String sourceRegionId;
+    private String regionId;
 
     @Query
     @NameInMap("SourceZoneId")
+    @Validation(required = true)
     private String sourceZoneId;
 
     private CreateDiskReplicaPairRequest(Builder builder) {
@@ -81,7 +87,8 @@ public class CreateDiskReplicaPairRequest extends Request {
         this.pairName = builder.pairName;
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
-        this.sourceRegionId = builder.sourceRegionId;
+        this.RPO = builder.RPO;
+        this.regionId = builder.regionId;
         this.sourceZoneId = builder.sourceZoneId;
     }
 
@@ -176,10 +183,17 @@ public class CreateDiskReplicaPairRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return RPO
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public Long getRPO() {
+        return this.RPO;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -201,28 +215,30 @@ public class CreateDiskReplicaPairRequest extends Request {
         private String pairName; 
         private Long period; 
         private String periodUnit; 
-        private String sourceRegionId; 
+        private Long RPO; 
+        private String regionId; 
         private String sourceZoneId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateDiskReplicaPairRequest response) {
-            super(response);
-            this.bandwidth = response.bandwidth;
-            this.chargeType = response.chargeType;
-            this.clientToken = response.clientToken;
-            this.description = response.description;
-            this.destinationDiskId = response.destinationDiskId;
-            this.destinationRegionId = response.destinationRegionId;
-            this.destinationZoneId = response.destinationZoneId;
-            this.diskId = response.diskId;
-            this.pairName = response.pairName;
-            this.period = response.period;
-            this.periodUnit = response.periodUnit;
-            this.sourceRegionId = response.sourceRegionId;
-            this.sourceZoneId = response.sourceZoneId;
+        private Builder(CreateDiskReplicaPairRequest request) {
+            super(request);
+            this.bandwidth = request.bandwidth;
+            this.chargeType = request.chargeType;
+            this.clientToken = request.clientToken;
+            this.description = request.description;
+            this.destinationDiskId = request.destinationDiskId;
+            this.destinationRegionId = request.destinationRegionId;
+            this.destinationZoneId = request.destinationZoneId;
+            this.diskId = request.diskId;
+            this.pairName = request.pairName;
+            this.period = request.period;
+            this.periodUnit = request.periodUnit;
+            this.RPO = request.RPO;
+            this.regionId = request.regionId;
+            this.sourceZoneId = request.sourceZoneId;
         } 
 
         /**
@@ -325,11 +341,20 @@ public class CreateDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * SourceRegionId.
+         * RPO.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putQueryParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder RPO(Long RPO) {
+            this.putQueryParameter("RPO", RPO);
+            this.RPO = RPO;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 

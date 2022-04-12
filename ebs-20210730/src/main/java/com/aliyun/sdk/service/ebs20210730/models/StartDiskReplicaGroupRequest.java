@@ -89,12 +89,12 @@ public class StartDiskReplicaGroupRequest extends Request {
             super();
         } 
 
-        private Builder(StartDiskReplicaGroupRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.oneShot = response.oneShot;
-            this.regionId = response.regionId;
-            this.replicaGroupId = response.replicaGroupId;
+        private Builder(StartDiskReplicaGroupRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.oneShot = request.oneShot;
+            this.regionId = request.regionId;
+            this.replicaGroupId = request.replicaGroupId;
         } 
 
         /**

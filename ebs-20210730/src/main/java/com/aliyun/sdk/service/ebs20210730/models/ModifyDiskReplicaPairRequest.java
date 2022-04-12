@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyDiskReplicaPairRequest extends Request {
     @Query
+    @NameInMap("Bandwidth")
+    private Long bandwidth;
+
+    @Query
     @NameInMap("ClientToken")
     private String clientToken;
 
@@ -23,6 +27,10 @@ public class ModifyDiskReplicaPairRequest extends Request {
     @Query
     @NameInMap("PairName")
     private String pairName;
+
+    @Query
+    @NameInMap("RPO")
+    private Long RPO;
 
     @Query
     @NameInMap("RegionId")
@@ -36,9 +44,11 @@ public class ModifyDiskReplicaPairRequest extends Request {
 
     private ModifyDiskReplicaPairRequest(Builder builder) {
         super(builder);
+        this.bandwidth = builder.bandwidth;
         this.clientToken = builder.clientToken;
         this.description = builder.description;
         this.pairName = builder.pairName;
+        this.RPO = builder.RPO;
         this.regionId = builder.regionId;
         this.replicaPairId = builder.replicaPairId;
     }
@@ -54,6 +64,13 @@ public class ModifyDiskReplicaPairRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return bandwidth
+     */
+    public Long getBandwidth() {
+        return this.bandwidth;
     }
 
     /**
@@ -78,6 +95,13 @@ public class ModifyDiskReplicaPairRequest extends Request {
     }
 
     /**
+     * @return RPO
+     */
+    public Long getRPO() {
+        return this.RPO;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -92,9 +116,11 @@ public class ModifyDiskReplicaPairRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyDiskReplicaPairRequest, Builder> {
+        private Long bandwidth; 
         private String clientToken; 
         private String description; 
         private String pairName; 
+        private Long RPO; 
         private String regionId; 
         private String replicaPairId; 
 
@@ -102,14 +128,25 @@ public class ModifyDiskReplicaPairRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDiskReplicaPairRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.description = response.description;
-            this.pairName = response.pairName;
-            this.regionId = response.regionId;
-            this.replicaPairId = response.replicaPairId;
+        private Builder(ModifyDiskReplicaPairRequest request) {
+            super(request);
+            this.bandwidth = request.bandwidth;
+            this.clientToken = request.clientToken;
+            this.description = request.description;
+            this.pairName = request.pairName;
+            this.RPO = request.RPO;
+            this.regionId = request.regionId;
+            this.replicaPairId = request.replicaPairId;
         } 
+
+        /**
+         * Bandwidth.
+         */
+        public Builder bandwidth(Long bandwidth) {
+            this.putQueryParameter("Bandwidth", bandwidth);
+            this.bandwidth = bandwidth;
+            return this;
+        }
 
         /**
          * ClientToken.
@@ -135,6 +172,15 @@ public class ModifyDiskReplicaPairRequest extends Request {
         public Builder pairName(String pairName) {
             this.putQueryParameter("PairName", pairName);
             this.pairName = pairName;
+            return this;
+        }
+
+        /**
+         * RPO.
+         */
+        public Builder RPO(Long RPO) {
+            this.putQueryParameter("RPO", RPO);
+            this.RPO = RPO;
             return this;
         }
 
