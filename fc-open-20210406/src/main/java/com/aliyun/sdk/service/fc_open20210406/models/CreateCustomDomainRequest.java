@@ -40,6 +40,10 @@ public class CreateCustomDomainRequest extends Request {
     @NameInMap("routeConfig")
     private RouteConfig routeConfig;
 
+    @Body
+    @NameInMap("tlsConfig")
+    private TLSConfig tlsConfig;
+
     private CreateCustomDomainRequest(Builder builder) {
         super(builder);
         this.xFcAccountId = builder.xFcAccountId;
@@ -49,6 +53,7 @@ public class CreateCustomDomainRequest extends Request {
         this.domainName = builder.domainName;
         this.protocol = builder.protocol;
         this.routeConfig = builder.routeConfig;
+        this.tlsConfig = builder.tlsConfig;
     }
 
     public static Builder builder() {
@@ -113,6 +118,13 @@ public class CreateCustomDomainRequest extends Request {
         return this.routeConfig;
     }
 
+    /**
+     * @return tlsConfig
+     */
+    public TLSConfig getTlsConfig() {
+        return this.tlsConfig;
+    }
+
     public static final class Builder extends Request.Builder<CreateCustomDomainRequest, Builder> {
         private String xFcAccountId; 
         private String xFcDate; 
@@ -121,6 +133,7 @@ public class CreateCustomDomainRequest extends Request {
         private String domainName; 
         private String protocol; 
         private RouteConfig routeConfig; 
+        private TLSConfig tlsConfig; 
 
         private Builder() {
             super();
@@ -135,6 +148,7 @@ public class CreateCustomDomainRequest extends Request {
             this.domainName = request.domainName;
             this.protocol = request.protocol;
             this.routeConfig = request.routeConfig;
+            this.tlsConfig = request.tlsConfig;
         } 
 
         /**
@@ -197,6 +211,15 @@ public class CreateCustomDomainRequest extends Request {
         public Builder routeConfig(RouteConfig routeConfig) {
             this.putBodyParameter("routeConfig", routeConfig);
             this.routeConfig = routeConfig;
+            return this;
+        }
+
+        /**
+         * tlsConfig.
+         */
+        public Builder tlsConfig(TLSConfig tlsConfig) {
+            this.putBodyParameter("tlsConfig", tlsConfig);
+            this.tlsConfig = tlsConfig;
             return this;
         }
 

@@ -36,6 +36,9 @@ public class CreateCustomDomainResponseBody extends TeaModel {
     @NameInMap("routeConfig")
     private RouteConfig routeConfig;
 
+    @NameInMap("tlsConfig")
+    private TLSConfig tlsConfig;
+
     private CreateCustomDomainResponseBody(Builder builder) {
         this.accountId = builder.accountId;
         this.apiVersion = builder.apiVersion;
@@ -45,6 +48,7 @@ public class CreateCustomDomainResponseBody extends TeaModel {
         this.lastModifiedTime = builder.lastModifiedTime;
         this.protocol = builder.protocol;
         this.routeConfig = builder.routeConfig;
+        this.tlsConfig = builder.tlsConfig;
     }
 
     public static Builder builder() {
@@ -111,6 +115,13 @@ public class CreateCustomDomainResponseBody extends TeaModel {
         return this.routeConfig;
     }
 
+    /**
+     * @return tlsConfig
+     */
+    public TLSConfig getTlsConfig() {
+        return this.tlsConfig;
+    }
+
     public static final class Builder {
         private String accountId; 
         private String apiVersion; 
@@ -120,6 +131,7 @@ public class CreateCustomDomainResponseBody extends TeaModel {
         private String lastModifiedTime; 
         private String protocol; 
         private RouteConfig routeConfig; 
+        private TLSConfig tlsConfig; 
 
         /**
          * accountId.
@@ -182,6 +194,14 @@ public class CreateCustomDomainResponseBody extends TeaModel {
          */
         public Builder routeConfig(RouteConfig routeConfig) {
             this.routeConfig = routeConfig;
+            return this;
+        }
+
+        /**
+         * tlsConfig.
+         */
+        public Builder tlsConfig(TLSConfig tlsConfig) {
+            this.tlsConfig = tlsConfig;
             return this;
         }
 

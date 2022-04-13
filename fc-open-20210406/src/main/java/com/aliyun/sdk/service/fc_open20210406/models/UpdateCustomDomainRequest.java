@@ -40,6 +40,10 @@ public class UpdateCustomDomainRequest extends Request {
     @NameInMap("routeConfig")
     private RouteConfig routeConfig;
 
+    @Body
+    @NameInMap("tlsConfig")
+    private TLSConfig tlsConfig;
+
     private UpdateCustomDomainRequest(Builder builder) {
         super(builder);
         this.domainName = builder.domainName;
@@ -49,6 +53,7 @@ public class UpdateCustomDomainRequest extends Request {
         this.certConfig = builder.certConfig;
         this.protocol = builder.protocol;
         this.routeConfig = builder.routeConfig;
+        this.tlsConfig = builder.tlsConfig;
     }
 
     public static Builder builder() {
@@ -113,6 +118,13 @@ public class UpdateCustomDomainRequest extends Request {
         return this.routeConfig;
     }
 
+    /**
+     * @return tlsConfig
+     */
+    public TLSConfig getTlsConfig() {
+        return this.tlsConfig;
+    }
+
     public static final class Builder extends Request.Builder<UpdateCustomDomainRequest, Builder> {
         private String domainName; 
         private String xFcAccountId; 
@@ -121,6 +133,7 @@ public class UpdateCustomDomainRequest extends Request {
         private CertConfig certConfig; 
         private String protocol; 
         private RouteConfig routeConfig; 
+        private TLSConfig tlsConfig; 
 
         private Builder() {
             super();
@@ -135,6 +148,7 @@ public class UpdateCustomDomainRequest extends Request {
             this.certConfig = request.certConfig;
             this.protocol = request.protocol;
             this.routeConfig = request.routeConfig;
+            this.tlsConfig = request.tlsConfig;
         } 
 
         /**
@@ -197,6 +211,15 @@ public class UpdateCustomDomainRequest extends Request {
         public Builder routeConfig(RouteConfig routeConfig) {
             this.putBodyParameter("routeConfig", routeConfig);
             this.routeConfig = routeConfig;
+            return this;
+        }
+
+        /**
+         * tlsConfig.
+         */
+        public Builder tlsConfig(TLSConfig tlsConfig) {
+            this.putBodyParameter("tlsConfig", tlsConfig);
+            this.tlsConfig = tlsConfig;
             return this;
         }
 
