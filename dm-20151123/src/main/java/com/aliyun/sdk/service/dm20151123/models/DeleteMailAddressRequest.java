@@ -88,12 +88,12 @@ public class DeleteMailAddressRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteMailAddressRequest response) {
-            super(response);
-            this.mailAddressId = response.mailAddressId;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DeleteMailAddressRequest request) {
+            super(request);
+            this.mailAddressId = request.mailAddressId;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

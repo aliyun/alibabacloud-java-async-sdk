@@ -88,12 +88,12 @@ public class DeleteTagRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteTagRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.tagId = response.tagId;
+        private Builder(DeleteTagRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.tagId = request.tagId;
         } 
 
         /**

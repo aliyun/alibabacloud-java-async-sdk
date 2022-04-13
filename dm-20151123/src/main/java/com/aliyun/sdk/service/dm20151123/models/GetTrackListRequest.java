@@ -180,19 +180,19 @@ public class GetTrackListRequest extends Request {
             super();
         } 
 
-        private Builder(GetTrackListRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.offset = response.offset;
-            this.offsetCreateTime = response.offsetCreateTime;
-            this.offsetCreateTimeDesc = response.offsetCreateTimeDesc;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.startTime = response.startTime;
-            this.total = response.total;
+        private Builder(GetTrackListRequest request) {
+            super(request);
+            this.endTime = request.endTime;
+            this.offset = request.offset;
+            this.offsetCreateTime = request.offsetCreateTime;
+            this.offsetCreateTimeDesc = request.offsetCreateTimeDesc;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.startTime = request.startTime;
+            this.total = request.total;
         } 
 
         /**

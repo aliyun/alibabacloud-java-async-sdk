@@ -182,19 +182,19 @@ public class BatchSendMailRequest extends Request {
             super();
         } 
 
-        private Builder(BatchSendMailRequest response) {
-            super(response);
-            this.accountName = response.accountName;
-            this.addressType = response.addressType;
-            this.clickTrace = response.clickTrace;
-            this.ownerId = response.ownerId;
-            this.receiversName = response.receiversName;
-            this.replyAddress = response.replyAddress;
-            this.replyAddressAlias = response.replyAddressAlias;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.tagName = response.tagName;
-            this.templateName = response.templateName;
+        private Builder(BatchSendMailRequest request) {
+            super(request);
+            this.accountName = request.accountName;
+            this.addressType = request.addressType;
+            this.clickTrace = request.clickTrace;
+            this.ownerId = request.ownerId;
+            this.receiversName = request.receiversName;
+            this.replyAddress = request.replyAddress;
+            this.replyAddressAlias = request.replyAddressAlias;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.tagName = request.tagName;
+            this.templateName = request.templateName;
         } 
 
         /**

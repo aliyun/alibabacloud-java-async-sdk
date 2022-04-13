@@ -128,15 +128,15 @@ public class QueryReceiverDetailRequest extends Request {
             super();
         } 
 
-        private Builder(QueryReceiverDetailRequest response) {
-            super(response);
-            this.keyWord = response.keyWord;
-            this.nextStart = response.nextStart;
-            this.ownerId = response.ownerId;
-            this.pageSize = response.pageSize;
-            this.receiverId = response.receiverId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(QueryReceiverDetailRequest request) {
+            super(request);
+            this.keyWord = request.keyWord;
+            this.nextStart = request.nextStart;
+            this.ownerId = request.ownerId;
+            this.pageSize = request.pageSize;
+            this.receiverId = request.receiverId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

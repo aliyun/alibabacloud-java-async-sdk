@@ -88,12 +88,12 @@ public class DeleteReceiverRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteReceiverRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.receiverId = response.receiverId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DeleteReceiverRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.receiverId = request.receiverId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

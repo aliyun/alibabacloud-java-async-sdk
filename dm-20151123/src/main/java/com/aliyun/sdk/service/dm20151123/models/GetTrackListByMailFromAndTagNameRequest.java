@@ -206,21 +206,21 @@ public class GetTrackListByMailFromAndTagNameRequest extends Request {
             super();
         } 
 
-        private Builder(GetTrackListByMailFromAndTagNameRequest response) {
-            super(response);
-            this.accountName = response.accountName;
-            this.endTime = response.endTime;
-            this.offset = response.offset;
-            this.offsetCreateTime = response.offsetCreateTime;
-            this.offsetCreateTimeDesc = response.offsetCreateTimeDesc;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.startTime = response.startTime;
-            this.tagName = response.tagName;
-            this.total = response.total;
+        private Builder(GetTrackListByMailFromAndTagNameRequest request) {
+            super(request);
+            this.accountName = request.accountName;
+            this.endTime = request.endTime;
+            this.offset = request.offset;
+            this.offsetCreateTime = request.offsetCreateTime;
+            this.offsetCreateTimeDesc = request.offsetCreateTimeDesc;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.startTime = request.startTime;
+            this.tagName = request.tagName;
+            this.total = request.total;
         } 
 
         /**

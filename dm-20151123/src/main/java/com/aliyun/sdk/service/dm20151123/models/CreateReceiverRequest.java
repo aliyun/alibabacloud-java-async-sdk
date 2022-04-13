@@ -115,14 +115,14 @@ public class CreateReceiverRequest extends Request {
             super();
         } 
 
-        private Builder(CreateReceiverRequest response) {
-            super(response);
-            this.desc = response.desc;
-            this.ownerId = response.ownerId;
-            this.receiversAlias = response.receiversAlias;
-            this.receiversName = response.receiversName;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(CreateReceiverRequest request) {
+            super(request);
+            this.desc = request.desc;
+            this.ownerId = request.ownerId;
+            this.receiversAlias = request.receiversAlias;
+            this.receiversName = request.receiversName;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

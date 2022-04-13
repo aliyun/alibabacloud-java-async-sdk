@@ -88,12 +88,12 @@ public class CreateTagRequest extends Request {
             super();
         } 
 
-        private Builder(CreateTagRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.tagName = response.tagName;
+        private Builder(CreateTagRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.tagName = request.tagName;
         } 
 
         /**

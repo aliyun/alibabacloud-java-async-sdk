@@ -140,16 +140,16 @@ public class QueryInvalidAddressRequest extends Request {
             super();
         } 
 
-        private Builder(QueryInvalidAddressRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.keyWord = response.keyWord;
-            this.length = response.length;
-            this.nextStart = response.nextStart;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.startTime = response.startTime;
+        private Builder(QueryInvalidAddressRequest request) {
+            super(request);
+            this.endTime = request.endTime;
+            this.keyWord = request.keyWord;
+            this.length = request.length;
+            this.nextStart = request.nextStart;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.startTime = request.startTime;
         } 
 
         /**

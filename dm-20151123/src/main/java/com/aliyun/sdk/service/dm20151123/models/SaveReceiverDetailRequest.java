@@ -102,13 +102,13 @@ public class SaveReceiverDetailRequest extends Request {
             super();
         } 
 
-        private Builder(SaveReceiverDetailRequest response) {
-            super(response);
-            this.detail = response.detail;
-            this.ownerId = response.ownerId;
-            this.receiverId = response.receiverId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(SaveReceiverDetailRequest request) {
+            super(request);
+            this.detail = request.detail;
+            this.ownerId = request.ownerId;
+            this.receiverId = request.receiverId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

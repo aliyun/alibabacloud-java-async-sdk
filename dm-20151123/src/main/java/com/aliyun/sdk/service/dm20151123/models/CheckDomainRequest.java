@@ -88,12 +88,12 @@ public class CheckDomainRequest extends Request {
             super();
         } 
 
-        private Builder(CheckDomainRequest response) {
-            super(response);
-            this.domainId = response.domainId;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(CheckDomainRequest request) {
+            super(request);
+            this.domainId = request.domainId;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

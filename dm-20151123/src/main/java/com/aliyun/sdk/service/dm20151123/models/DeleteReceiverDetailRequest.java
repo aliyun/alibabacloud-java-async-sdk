@@ -101,13 +101,13 @@ public class DeleteReceiverDetailRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteReceiverDetailRequest response) {
-            super(response);
-            this.email = response.email;
-            this.ownerId = response.ownerId;
-            this.receiverId = response.receiverId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DeleteReceiverDetailRequest request) {
+            super(request);
+            this.email = request.email;
+            this.ownerId = request.ownerId;
+            this.receiverId = request.receiverId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

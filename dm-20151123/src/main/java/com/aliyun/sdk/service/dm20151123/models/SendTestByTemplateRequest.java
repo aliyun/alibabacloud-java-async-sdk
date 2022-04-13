@@ -181,19 +181,19 @@ public class SendTestByTemplateRequest extends Request {
             super();
         } 
 
-        private Builder(SendTestByTemplateRequest response) {
-            super(response);
-            this.accountName = response.accountName;
-            this.birthday = response.birthday;
-            this.email = response.email;
-            this.gender = response.gender;
-            this.mobile = response.mobile;
-            this.nickName = response.nickName;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.templateId = response.templateId;
-            this.userName = response.userName;
+        private Builder(SendTestByTemplateRequest request) {
+            super(request);
+            this.accountName = request.accountName;
+            this.birthday = request.birthday;
+            this.email = request.email;
+            this.gender = request.gender;
+            this.mobile = request.mobile;
+            this.nickName = request.nickName;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.templateId = request.templateId;
+            this.userName = request.userName;
         } 
 
         /**

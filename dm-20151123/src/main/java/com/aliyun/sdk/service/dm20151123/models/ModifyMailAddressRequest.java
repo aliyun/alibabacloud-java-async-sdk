@@ -114,14 +114,14 @@ public class ModifyMailAddressRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyMailAddressRequest response) {
-            super(response);
-            this.mailAddressId = response.mailAddressId;
-            this.ownerId = response.ownerId;
-            this.password = response.password;
-            this.replyAddress = response.replyAddress;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyMailAddressRequest request) {
+            super(request);
+            this.mailAddressId = request.mailAddressId;
+            this.ownerId = request.ownerId;
+            this.password = request.password;
+            this.replyAddress = request.replyAddress;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

@@ -128,15 +128,15 @@ public class SenderStatisticsByTagNameAndBatchIDRequest extends Request {
             super();
         } 
 
-        private Builder(SenderStatisticsByTagNameAndBatchIDRequest response) {
-            super(response);
-            this.accountName = response.accountName;
-            this.endTime = response.endTime;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.startTime = response.startTime;
-            this.tagName = response.tagName;
+        private Builder(SenderStatisticsByTagNameAndBatchIDRequest request) {
+            super(request);
+            this.accountName = request.accountName;
+            this.endTime = request.endTime;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.startTime = request.startTime;
+            this.tagName = request.tagName;
         } 
 
         /**

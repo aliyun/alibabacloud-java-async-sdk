@@ -101,13 +101,13 @@ public class UpdateMailAddressMsgCallBackUrlRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateMailAddressMsgCallBackUrlRequest response) {
-            super(response);
-            this.mailFrom = response.mailFrom;
-            this.notifyUrl = response.notifyUrl;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(UpdateMailAddressMsgCallBackUrlRequest request) {
+            super(request);
+            this.mailFrom = request.mailFrom;
+            this.notifyUrl = request.notifyUrl;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

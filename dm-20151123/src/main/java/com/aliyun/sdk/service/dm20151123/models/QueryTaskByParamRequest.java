@@ -128,15 +128,15 @@ public class QueryTaskByParamRequest extends Request {
             super();
         } 
 
-        private Builder(QueryTaskByParamRequest response) {
-            super(response);
-            this.keyWord = response.keyWord;
-            this.ownerId = response.ownerId;
-            this.pageNo = response.pageNo;
-            this.pageSize = response.pageSize;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.status = response.status;
+        private Builder(QueryTaskByParamRequest request) {
+            super(request);
+            this.keyWord = request.keyWord;
+            this.ownerId = request.ownerId;
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.status = request.status;
         } 
 
         /**

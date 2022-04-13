@@ -13,7 +13,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class QueryInvalidAddressResponseBody extends TeaModel {
     @NameInMap("NextStart")
-    private Integer nextStart;
+    private String nextStart;
 
     @NameInMap("RequestId")
     private String requestId;
@@ -42,7 +42,7 @@ public class QueryInvalidAddressResponseBody extends TeaModel {
     /**
      * @return nextStart
      */
-    public Integer getNextStart() {
+    public String getNextStart() {
         return this.nextStart;
     }
 
@@ -68,7 +68,7 @@ public class QueryInvalidAddressResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private Integer nextStart; 
+        private String nextStart; 
         private String requestId; 
         private Integer totalCount; 
         private Data data; 
@@ -76,7 +76,7 @@ public class QueryInvalidAddressResponseBody extends TeaModel {
         /**
          * NextStart.
          */
-        public Builder nextStart(Integer nextStart) {
+        public Builder nextStart(String nextStart) {
             this.nextStart = nextStart;
             return this;
         }

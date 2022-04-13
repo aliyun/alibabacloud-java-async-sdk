@@ -115,14 +115,14 @@ public class CreateMailAddressRequest extends Request {
             super();
         } 
 
-        private Builder(CreateMailAddressRequest response) {
-            super(response);
-            this.accountName = response.accountName;
-            this.ownerId = response.ownerId;
-            this.replyAddress = response.replyAddress;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sendtype = response.sendtype;
+        private Builder(CreateMailAddressRequest request) {
+            super(request);
+            this.accountName = request.accountName;
+            this.ownerId = request.ownerId;
+            this.replyAddress = request.replyAddress;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sendtype = request.sendtype;
         } 
 
         /**

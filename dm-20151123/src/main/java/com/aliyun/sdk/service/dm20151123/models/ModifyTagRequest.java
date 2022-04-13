@@ -102,13 +102,13 @@ public class ModifyTagRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyTagRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.tagId = response.tagId;
-            this.tagName = response.tagName;
+        private Builder(ModifyTagRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.tagId = request.tagId;
+            this.tagName = request.tagName;
         } 
 
         /**

@@ -88,12 +88,12 @@ public class ApproveReplyMailAddressRequest extends Request {
             super();
         } 
 
-        private Builder(ApproveReplyMailAddressRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.ticket = response.ticket;
+        private Builder(ApproveReplyMailAddressRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.ticket = request.ticket;
         } 
 
         /**

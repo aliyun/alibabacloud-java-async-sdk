@@ -76,11 +76,11 @@ public class ModifyPWByDomainRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyPWByDomainRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.password = response.password;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyPWByDomainRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.password = request.password;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

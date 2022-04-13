@@ -152,17 +152,17 @@ public class GetRegionListRequest extends Request {
             super();
         } 
 
-        private Builder(GetRegionListRequest response) {
-            super(response);
-            this.offset = response.offset;
-            this.offsetCreateTime = response.offsetCreateTime;
-            this.offsetCreateTimeDesc = response.offsetCreateTimeDesc;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.total = response.total;
+        private Builder(GetRegionListRequest request) {
+            super(request);
+            this.offset = request.offset;
+            this.offsetCreateTime = request.offsetCreateTime;
+            this.offsetCreateTimeDesc = request.offsetCreateTimeDesc;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.total = request.total;
         } 
 
         /**

@@ -114,14 +114,14 @@ public class CheckReplyToMailAddressRequest extends Request {
             super();
         } 
 
-        private Builder(CheckReplyToMailAddressRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.mailAddressId = response.mailAddressId;
-            this.ownerId = response.ownerId;
-            this.region = response.region;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(CheckReplyToMailAddressRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.mailAddressId = request.mailAddressId;
+            this.ownerId = request.ownerId;
+            this.region = request.region;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

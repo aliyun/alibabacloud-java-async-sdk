@@ -235,23 +235,23 @@ public class SingleSendMailRequest extends Request {
             super();
         } 
 
-        private Builder(SingleSendMailRequest response) {
-            super(response);
-            this.accountName = response.accountName;
-            this.addressType = response.addressType;
-            this.clickTrace = response.clickTrace;
-            this.fromAlias = response.fromAlias;
-            this.htmlBody = response.htmlBody;
-            this.ownerId = response.ownerId;
-            this.replyAddress = response.replyAddress;
-            this.replyAddressAlias = response.replyAddressAlias;
-            this.replyToAddress = response.replyToAddress;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.subject = response.subject;
-            this.tagName = response.tagName;
-            this.textBody = response.textBody;
-            this.toAddress = response.toAddress;
+        private Builder(SingleSendMailRequest request) {
+            super(request);
+            this.accountName = request.accountName;
+            this.addressType = request.addressType;
+            this.clickTrace = request.clickTrace;
+            this.fromAlias = request.fromAlias;
+            this.htmlBody = request.htmlBody;
+            this.ownerId = request.ownerId;
+            this.replyAddress = request.replyAddress;
+            this.replyAddressAlias = request.replyAddressAlias;
+            this.replyToAddress = request.replyToAddress;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.subject = request.subject;
+            this.tagName = request.tagName;
+            this.textBody = request.textBody;
+            this.toAddress = request.toAddress;
         } 
 
         /**
