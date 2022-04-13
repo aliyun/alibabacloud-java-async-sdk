@@ -128,8 +128,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreatePrefixListResponse> createPrefixList(CreatePrefixListRequest request);
 
-    CompletableFuture<CreateResource02Response> createResource02(CreateResource02Request request);
-
     CompletableFuture<CreateRouteEntryResponse> createRouteEntry(CreateRouteEntryRequest request);
 
     CompletableFuture<CreateRouterInterfaceResponse> createRouterInterface(CreateRouterInterfaceRequest request);
@@ -201,8 +199,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeletePhysicalConnectionResponse> deletePhysicalConnection(DeletePhysicalConnectionRequest request);
 
     CompletableFuture<DeletePrefixListResponse> deletePrefixList(DeletePrefixListRequest request);
-
-    CompletableFuture<DeleteReplicaPairResponse> deleteReplicaPair(DeleteReplicaPairRequest request);
 
     CompletableFuture<DeleteRouteEntryResponse> deleteRouteEntry(DeleteRouteEntryRequest request);
 

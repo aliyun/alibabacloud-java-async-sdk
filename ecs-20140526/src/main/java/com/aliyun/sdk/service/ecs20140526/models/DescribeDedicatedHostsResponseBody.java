@@ -916,6 +916,9 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         @NameInMap("SaleCycle")
         private String saleCycle;
 
+        @NameInMap("SchedulerOptions.ManagedPrivateSpaceId")
+        private String schedulerOptions_managedPrivateSpaceId;
+
         @NameInMap("Sockets")
         private Integer sockets;
 
@@ -962,6 +965,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             this.regionId = builder.regionId;
             this.resourceGroupId = builder.resourceGroupId;
             this.saleCycle = builder.saleCycle;
+            this.schedulerOptions_managedPrivateSpaceId = builder.schedulerOptions_managedPrivateSpaceId;
             this.sockets = builder.sockets;
             this.status = builder.status;
             this.supportedCustomInstanceTypeFamilies = builder.supportedCustomInstanceTypeFamilies;
@@ -1148,6 +1152,13 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         }
 
         /**
+         * @return schedulerOptions_managedPrivateSpaceId
+         */
+        public String getSchedulerOptions_managedPrivateSpaceId() {
+            return this.schedulerOptions_managedPrivateSpaceId;
+        }
+
+        /**
          * @return sockets
          */
         public Integer getSockets() {
@@ -1221,6 +1232,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             private String regionId; 
             private String resourceGroupId; 
             private String saleCycle; 
+            private String schedulerOptions_managedPrivateSpaceId; 
             private Integer sockets; 
             private String status; 
             private SupportedCustomInstanceTypeFamilies supportedCustomInstanceTypeFamilies; 
@@ -1418,6 +1430,14 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
              */
             public Builder saleCycle(String saleCycle) {
                 this.saleCycle = saleCycle;
+                return this;
+            }
+
+            /**
+             * SchedulerOptions.ManagedPrivateSpaceId.
+             */
+            public Builder schedulerOptions_managedPrivateSpaceId(String schedulerOptions_managedPrivateSpaceId) {
+                this.schedulerOptions_managedPrivateSpaceId = schedulerOptions_managedPrivateSpaceId;
                 return this;
             }
 

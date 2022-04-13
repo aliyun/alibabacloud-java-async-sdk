@@ -709,6 +709,9 @@ public class DescribeDisksResponseBody extends TeaModel {
         @NameInMap("Tags")
         private Tags tags;
 
+        @NameInMap("Throughput")
+        private Integer throughput;
+
         @NameInMap("Type")
         private String type;
 
@@ -759,6 +762,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             this.storageSetId = builder.storageSetId;
             this.storageSetPartitionNumber = builder.storageSetPartitionNumber;
             this.tags = builder.tags;
+            this.throughput = builder.throughput;
             this.type = builder.type;
             this.zoneId = builder.zoneId;
         }
@@ -1073,6 +1077,13 @@ public class DescribeDisksResponseBody extends TeaModel {
         }
 
         /**
+         * @return throughput
+         */
+        public Integer getThroughput() {
+            return this.throughput;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -1130,6 +1141,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             private String storageSetId; 
             private Integer storageSetPartitionNumber; 
             private Tags tags; 
+            private Integer throughput; 
             private String type; 
             private String zoneId; 
 
@@ -1474,6 +1486,14 @@ public class DescribeDisksResponseBody extends TeaModel {
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
+                return this;
+            }
+
+            /**
+             * Throughput.
+             */
+            public Builder throughput(Integer throughput) {
+                this.throughput = throughput;
                 return this;
             }
 
