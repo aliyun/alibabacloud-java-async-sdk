@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeGroupedMaliciousFilesRequest extends Request {
     @Query
+    @NameInMap("ClusterId")
+    private String clusterId;
+
+    @Query
     @NameInMap("CurrentPage")
     @Validation(required = true)
     private Integer currentPage;
@@ -68,6 +72,7 @@ public class DescribeGroupedMaliciousFilesRequest extends Request {
 
     private DescribeGroupedMaliciousFilesRequest(Builder builder) {
         super(builder);
+        this.clusterId = builder.clusterId;
         this.currentPage = builder.currentPage;
         this.fuzzyMaliciousName = builder.fuzzyMaliciousName;
         this.imageDigest = builder.imageDigest;
@@ -94,6 +99,13 @@ public class DescribeGroupedMaliciousFilesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return clusterId
+     */
+    public String getClusterId() {
+        return this.clusterId;
     }
 
     /**
@@ -188,6 +200,7 @@ public class DescribeGroupedMaliciousFilesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeGroupedMaliciousFilesRequest, Builder> {
+        private String clusterId; 
         private Integer currentPage; 
         private String fuzzyMaliciousName; 
         private String imageDigest; 
@@ -208,6 +221,7 @@ public class DescribeGroupedMaliciousFilesRequest extends Request {
 
         private Builder(DescribeGroupedMaliciousFilesRequest request) {
             super(request);
+            this.clusterId = request.clusterId;
             this.currentPage = request.currentPage;
             this.fuzzyMaliciousName = request.fuzzyMaliciousName;
             this.imageDigest = request.imageDigest;
@@ -222,6 +236,15 @@ public class DescribeGroupedMaliciousFilesRequest extends Request {
             this.repoNamespace = request.repoNamespace;
             this.repoRegionId = request.repoRegionId;
         } 
+
+        /**
+         * ClusterId.
+         */
+        public Builder clusterId(String clusterId) {
+            this.putQueryParameter("ClusterId", clusterId);
+            this.clusterId = clusterId;
+            return this;
+        }
 
         /**
          * CurrentPage.

@@ -500,6 +500,9 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         @NameInMap("Level")
         private String level;
 
+        @NameInMap("MaliciousRuleStatus")
+        private String maliciousRuleStatus;
+
         @NameInMap("MarkMisRules")
         private String markMisRules;
 
@@ -575,6 +578,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             this.lastTime = builder.lastTime;
             this.lastTimeStamp = builder.lastTimeStamp;
             this.level = builder.level;
+            this.maliciousRuleStatus = builder.maliciousRuleStatus;
             this.markMisRules = builder.markMisRules;
             this.name = builder.name;
             this.occurrenceTime = builder.occurrenceTime;
@@ -844,6 +848,13 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         }
 
         /**
+         * @return maliciousRuleStatus
+         */
+        public String getMaliciousRuleStatus() {
+            return this.maliciousRuleStatus;
+        }
+
+        /**
          * @return markMisRules
          */
         public String getMarkMisRules() {
@@ -970,6 +981,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             private String lastTime; 
             private Long lastTimeStamp; 
             private String level; 
+            private String maliciousRuleStatus; 
             private String markMisRules; 
             private String name; 
             private String occurrenceTime; 
@@ -1261,6 +1273,14 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
              */
             public Builder level(String level) {
                 this.level = level;
+                return this;
+            }
+
+            /**
+             * MaliciousRuleStatus.
+             */
+            public Builder maliciousRuleStatus(String maliciousRuleStatus) {
+                this.maliciousRuleStatus = maliciousRuleStatus;
                 return this;
             }
 

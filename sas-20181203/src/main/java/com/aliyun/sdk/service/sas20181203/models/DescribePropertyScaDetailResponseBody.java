@@ -208,9 +208,6 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
         @NameInMap("ContainerName")
         private String containerName;
 
-        @NameInMap("Create")
-        private String create;
-
         @NameInMap("CreateTimestamp")
         private Long createTimestamp;
 
@@ -265,6 +262,9 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
         @NameInMap("Proof")
         private String proof;
 
+        @NameInMap("RuntimeEnvVersion")
+        private String runtimeEnvVersion;
+
         @NameInMap("Type")
         private String type;
 
@@ -283,7 +283,6 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             this.cmdline = builder.cmdline;
             this.configPath = builder.configPath;
             this.containerName = builder.containerName;
-            this.create = builder.create;
             this.createTimestamp = builder.createTimestamp;
             this.imageName = builder.imageName;
             this.instanceId = builder.instanceId;
@@ -302,6 +301,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             this.processStarted = builder.processStarted;
             this.processUser = builder.processUser;
             this.proof = builder.proof;
+            this.runtimeEnvVersion = builder.runtimeEnvVersion;
             this.type = builder.type;
             this.uuid = builder.uuid;
             this.version = builder.version;
@@ -349,13 +349,6 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
          */
         public String getContainerName() {
             return this.containerName;
-        }
-
-        /**
-         * @return create
-         */
-        public String getCreate() {
-            return this.create;
         }
 
         /**
@@ -485,6 +478,13 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return runtimeEnvVersion
+         */
+        public String getRuntimeEnvVersion() {
+            return this.runtimeEnvVersion;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -518,7 +518,6 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             private String cmdline; 
             private String configPath; 
             private String containerName; 
-            private String create; 
             private Long createTimestamp; 
             private String imageName; 
             private String instanceId; 
@@ -537,6 +536,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             private Long processStarted; 
             private String processUser; 
             private String proof; 
+            private String runtimeEnvVersion; 
             private String type; 
             private String uuid; 
             private String version; 
@@ -579,14 +579,6 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
              */
             public Builder containerName(String containerName) {
                 this.containerName = containerName;
-                return this;
-            }
-
-            /**
-             * Create.
-             */
-            public Builder create(String create) {
-                this.create = create;
                 return this;
             }
 
@@ -731,6 +723,14 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
              */
             public Builder proof(String proof) {
                 this.proof = proof;
+                return this;
+            }
+
+            /**
+             * RuntimeEnvVersion.
+             */
+            public Builder runtimeEnvVersion(String runtimeEnvVersion) {
+                this.runtimeEnvVersion = runtimeEnvVersion;
                 return this;
             }
 

@@ -95,11 +95,17 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
         @NameInMap("Digest")
         private String digest;
 
+        @NameInMap("DownloadUrl")
+        private String downloadUrl;
+
         @NameInMap("FilePath")
         private String filePath;
 
         @NameInMap("FirstScanTimestamp")
         private Long firstScanTimestamp;
+
+        @NameInMap("HighLight")
+        private String highLight;
 
         @NameInMap("ImageUuid")
         private String imageUuid;
@@ -142,8 +148,10 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
 
         private AffectedMaliciousFileImagesResponse(Builder builder) {
             this.digest = builder.digest;
+            this.downloadUrl = builder.downloadUrl;
             this.filePath = builder.filePath;
             this.firstScanTimestamp = builder.firstScanTimestamp;
+            this.highLight = builder.highLight;
             this.imageUuid = builder.imageUuid;
             this.latestScanTimestamp = builder.latestScanTimestamp;
             this.latestVerifyTimestamp = builder.latestVerifyTimestamp;
@@ -175,6 +183,13 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
         }
 
         /**
+         * @return downloadUrl
+         */
+        public String getDownloadUrl() {
+            return this.downloadUrl;
+        }
+
+        /**
          * @return filePath
          */
         public String getFilePath() {
@@ -186,6 +201,13 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
          */
         public Long getFirstScanTimestamp() {
             return this.firstScanTimestamp;
+        }
+
+        /**
+         * @return highLight
+         */
+        public String getHighLight() {
+            return this.highLight;
         }
 
         /**
@@ -281,8 +303,10 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String digest; 
+            private String downloadUrl; 
             private String filePath; 
             private Long firstScanTimestamp; 
+            private String highLight; 
             private String imageUuid; 
             private Long latestScanTimestamp; 
             private Long latestVerifyTimestamp; 
@@ -306,6 +330,14 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
+             * DownloadUrl.
+             */
+            public Builder downloadUrl(String downloadUrl) {
+                this.downloadUrl = downloadUrl;
+                return this;
+            }
+
+            /**
              * FilePath.
              */
             public Builder filePath(String filePath) {
@@ -318,6 +350,14 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
              */
             public Builder firstScanTimestamp(Long firstScanTimestamp) {
                 this.firstScanTimestamp = firstScanTimestamp;
+                return this;
+            }
+
+            /**
+             * HighLight.
+             */
+            public Builder highLight(String highLight) {
+                this.highLight = highLight;
                 return this;
             }
 

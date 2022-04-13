@@ -196,9 +196,6 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
         @NameInMap("Cmd")
         private String cmd;
 
-        @NameInMap("Create")
-        private String create;
-
         @NameInMap("CreateTimestamp")
         private Long createTimestamp;
 
@@ -234,7 +231,6 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
 
         private Propertys(Builder builder) {
             this.cmd = builder.cmd;
-            this.create = builder.create;
             this.createTimestamp = builder.createTimestamp;
             this.instanceId = builder.instanceId;
             this.instanceName = builder.instanceName;
@@ -261,13 +257,6 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
          */
         public String getCmd() {
             return this.cmd;
-        }
-
-        /**
-         * @return create
-         */
-        public String getCreate() {
-            return this.create;
         }
 
         /**
@@ -349,7 +338,6 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private String cmd; 
-            private String create; 
             private Long createTimestamp; 
             private String instanceId; 
             private String instanceName; 
@@ -367,14 +355,6 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
              */
             public Builder cmd(String cmd) {
                 this.cmd = cmd;
-                return this;
-            }
-
-            /**
-             * Create.
-             */
-            public Builder create(String create) {
-                this.create = create;
                 return this;
             }
 

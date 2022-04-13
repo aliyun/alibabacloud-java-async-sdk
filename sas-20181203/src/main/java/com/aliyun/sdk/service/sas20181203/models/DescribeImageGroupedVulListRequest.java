@@ -17,6 +17,10 @@ public class DescribeImageGroupedVulListRequest extends Request {
     private String aliasName;
 
     @Query
+    @NameInMap("ClusterId")
+    private String clusterId;
+
+    @Query
     @NameInMap("CurrentPage")
     private Integer currentPage;
 
@@ -95,6 +99,7 @@ public class DescribeImageGroupedVulListRequest extends Request {
     private DescribeImageGroupedVulListRequest(Builder builder) {
         super(builder);
         this.aliasName = builder.aliasName;
+        this.clusterId = builder.clusterId;
         this.currentPage = builder.currentPage;
         this.cveId = builder.cveId;
         this.groupId = builder.groupId;
@@ -134,6 +139,13 @@ public class DescribeImageGroupedVulListRequest extends Request {
      */
     public String getAliasName() {
         return this.aliasName;
+    }
+
+    /**
+     * @return clusterId
+     */
+    public String getClusterId() {
+        return this.clusterId;
     }
 
     /**
@@ -271,6 +283,7 @@ public class DescribeImageGroupedVulListRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeImageGroupedVulListRequest, Builder> {
         private String aliasName; 
+        private String clusterId; 
         private Integer currentPage; 
         private String cveId; 
         private String groupId; 
@@ -298,6 +311,7 @@ public class DescribeImageGroupedVulListRequest extends Request {
         private Builder(DescribeImageGroupedVulListRequest request) {
             super(request);
             this.aliasName = request.aliasName;
+            this.clusterId = request.clusterId;
             this.currentPage = request.currentPage;
             this.cveId = request.cveId;
             this.groupId = request.groupId;
@@ -325,6 +339,15 @@ public class DescribeImageGroupedVulListRequest extends Request {
         public Builder aliasName(String aliasName) {
             this.putQueryParameter("AliasName", aliasName);
             this.aliasName = aliasName;
+            return this;
+        }
+
+        /**
+         * ClusterId.
+         */
+        public Builder clusterId(String clusterId) {
+            this.putQueryParameter("ClusterId", clusterId);
+            this.clusterId = clusterId;
             return this;
         }
 

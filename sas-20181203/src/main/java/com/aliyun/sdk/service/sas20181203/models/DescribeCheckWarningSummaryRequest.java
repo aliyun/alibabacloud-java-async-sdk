@@ -13,6 +13,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeCheckWarningSummaryRequest extends Request {
     @Query
+    @NameInMap("ClusterId")
+    private String clusterId;
+
+    @Query
+    @NameInMap("ContainerFieldName")
+    private String containerFieldName;
+
+    @Query
+    @NameInMap("ContainerFieldValue")
+    private String containerFieldValue;
+
+    @Query
     @NameInMap("CurrentPage")
     private Integer currentPage;
 
@@ -45,6 +57,10 @@ public class DescribeCheckWarningSummaryRequest extends Request {
     private Long strategyId;
 
     @Query
+    @NameInMap("TargetType")
+    private String targetType;
+
+    @Query
     @NameInMap("TypeName")
     private String typeName;
 
@@ -54,6 +70,9 @@ public class DescribeCheckWarningSummaryRequest extends Request {
 
     private DescribeCheckWarningSummaryRequest(Builder builder) {
         super(builder);
+        this.clusterId = builder.clusterId;
+        this.containerFieldName = builder.containerFieldName;
+        this.containerFieldValue = builder.containerFieldValue;
         this.currentPage = builder.currentPage;
         this.lang = builder.lang;
         this.pageSize = builder.pageSize;
@@ -62,6 +81,7 @@ public class DescribeCheckWarningSummaryRequest extends Request {
         this.sourceIp = builder.sourceIp;
         this.status = builder.status;
         this.strategyId = builder.strategyId;
+        this.targetType = builder.targetType;
         this.typeName = builder.typeName;
         this.uuids = builder.uuids;
     }
@@ -77,6 +97,27 @@ public class DescribeCheckWarningSummaryRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return clusterId
+     */
+    public String getClusterId() {
+        return this.clusterId;
+    }
+
+    /**
+     * @return containerFieldName
+     */
+    public String getContainerFieldName() {
+        return this.containerFieldName;
+    }
+
+    /**
+     * @return containerFieldValue
+     */
+    public String getContainerFieldValue() {
+        return this.containerFieldValue;
     }
 
     /**
@@ -136,6 +177,13 @@ public class DescribeCheckWarningSummaryRequest extends Request {
     }
 
     /**
+     * @return targetType
+     */
+    public String getTargetType() {
+        return this.targetType;
+    }
+
+    /**
      * @return typeName
      */
     public String getTypeName() {
@@ -150,6 +198,9 @@ public class DescribeCheckWarningSummaryRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeCheckWarningSummaryRequest, Builder> {
+        private String clusterId; 
+        private String containerFieldName; 
+        private String containerFieldValue; 
         private Integer currentPage; 
         private String lang; 
         private Integer pageSize; 
@@ -158,6 +209,7 @@ public class DescribeCheckWarningSummaryRequest extends Request {
         private String sourceIp; 
         private String status; 
         private Long strategyId; 
+        private String targetType; 
         private String typeName; 
         private String uuids; 
 
@@ -167,6 +219,9 @@ public class DescribeCheckWarningSummaryRequest extends Request {
 
         private Builder(DescribeCheckWarningSummaryRequest request) {
             super(request);
+            this.clusterId = request.clusterId;
+            this.containerFieldName = request.containerFieldName;
+            this.containerFieldValue = request.containerFieldValue;
             this.currentPage = request.currentPage;
             this.lang = request.lang;
             this.pageSize = request.pageSize;
@@ -175,9 +230,37 @@ public class DescribeCheckWarningSummaryRequest extends Request {
             this.sourceIp = request.sourceIp;
             this.status = request.status;
             this.strategyId = request.strategyId;
+            this.targetType = request.targetType;
             this.typeName = request.typeName;
             this.uuids = request.uuids;
         } 
+
+        /**
+         * ClusterId.
+         */
+        public Builder clusterId(String clusterId) {
+            this.putQueryParameter("ClusterId", clusterId);
+            this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * ContainerFieldName.
+         */
+        public Builder containerFieldName(String containerFieldName) {
+            this.putQueryParameter("ContainerFieldName", containerFieldName);
+            this.containerFieldName = containerFieldName;
+            return this;
+        }
+
+        /**
+         * ContainerFieldValue.
+         */
+        public Builder containerFieldValue(String containerFieldValue) {
+            this.putQueryParameter("ContainerFieldValue", containerFieldValue);
+            this.containerFieldValue = containerFieldValue;
+            return this;
+        }
 
         /**
          * CurrentPage.
@@ -248,6 +331,15 @@ public class DescribeCheckWarningSummaryRequest extends Request {
         public Builder strategyId(Long strategyId) {
             this.putQueryParameter("StrategyId", strategyId);
             this.strategyId = strategyId;
+            return this;
+        }
+
+        /**
+         * TargetType.
+         */
+        public Builder targetType(String targetType) {
+            this.putQueryParameter("TargetType", targetType);
+            this.targetType = targetType;
             return this;
         }
 

@@ -18,6 +18,10 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
     private String baselineNameKey;
 
     @Query
+    @NameInMap("ClusterId")
+    private String clusterId;
+
+    @Query
     @NameInMap("Criteria")
     private String criteria;
 
@@ -56,6 +60,7 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
     private DescribeImageListWithBaselineNameRequest(Builder builder) {
         super(builder);
         this.baselineNameKey = builder.baselineNameKey;
+        this.clusterId = builder.clusterId;
         this.criteria = builder.criteria;
         this.criteriaType = builder.criteriaType;
         this.currentPage = builder.currentPage;
@@ -85,6 +90,13 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
      */
     public String getBaselineNameKey() {
         return this.baselineNameKey;
+    }
+
+    /**
+     * @return clusterId
+     */
+    public String getClusterId() {
+        return this.clusterId;
     }
 
     /**
@@ -152,6 +164,7 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeImageListWithBaselineNameRequest, Builder> {
         private String baselineNameKey; 
+        private String clusterId; 
         private String criteria; 
         private String criteriaType; 
         private Integer currentPage; 
@@ -169,6 +182,7 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
         private Builder(DescribeImageListWithBaselineNameRequest request) {
             super(request);
             this.baselineNameKey = request.baselineNameKey;
+            this.clusterId = request.clusterId;
             this.criteria = request.criteria;
             this.criteriaType = request.criteriaType;
             this.currentPage = request.currentPage;
@@ -186,6 +200,15 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
         public Builder baselineNameKey(String baselineNameKey) {
             this.putQueryParameter("BaselineNameKey", baselineNameKey);
             this.baselineNameKey = baselineNameKey;
+            return this;
+        }
+
+        /**
+         * ClusterId.
+         */
+        public Builder clusterId(String clusterId) {
+            this.putQueryParameter("ClusterId", clusterId);
+            this.clusterId = clusterId;
             return this;
         }
 

@@ -196,9 +196,6 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
         @NameInMap("Cmdline")
         private String cmdline;
 
-        @NameInMap("Create")
-        private String create;
-
         @NameInMap("CreateTimestamp")
         private Long createTimestamp;
 
@@ -252,7 +249,6 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
 
         private Propertys(Builder builder) {
             this.cmdline = builder.cmdline;
-            this.create = builder.create;
             this.createTimestamp = builder.createTimestamp;
             this.euidName = builder.euidName;
             this.instanceId = builder.instanceId;
@@ -285,13 +281,6 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
          */
         public String getCmdline() {
             return this.cmdline;
-        }
-
-        /**
-         * @return create
-         */
-        public String getCreate() {
-            return this.create;
         }
 
         /**
@@ -415,7 +404,6 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private String cmdline; 
-            private String create; 
             private Long createTimestamp; 
             private String euidName; 
             private String instanceId; 
@@ -439,14 +427,6 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
              */
             public Builder cmdline(String cmdline) {
                 this.cmdline = cmdline;
-                return this;
-            }
-
-            /**
-             * Create.
-             */
-            public Builder create(String create) {
-                this.create = create;
                 return this;
             }
 

@@ -193,9 +193,6 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
 
     }
     public static class Propertys extends TeaModel {
-        @NameInMap("Create")
-        private Long create;
-
         @NameInMap("CreateTimestamp")
         private Long createTimestamp;
 
@@ -233,7 +230,6 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
         private String version;
 
         private Propertys(Builder builder) {
-            this.create = builder.create;
             this.createTimestamp = builder.createTimestamp;
             this.installTime = builder.installTime;
             this.installTimeDt = builder.installTimeDt;
@@ -254,13 +250,6 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
 
         public static Propertys create() {
             return builder().build();
-        }
-
-        /**
-         * @return create
-         */
-        public Long getCreate() {
-            return this.create;
         }
 
         /**
@@ -348,7 +337,6 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private Long create; 
             private Long createTimestamp; 
             private String installTime; 
             private Long installTimeDt; 
@@ -361,14 +349,6 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
             private String path; 
             private String uuid; 
             private String version; 
-
-            /**
-             * Create.
-             */
-            public Builder create(Long create) {
-                this.create = create;
-                return this;
-            }
 
             /**
              * CreateTimestamp.

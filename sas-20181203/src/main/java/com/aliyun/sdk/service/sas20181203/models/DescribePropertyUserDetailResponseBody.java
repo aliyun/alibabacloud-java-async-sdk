@@ -196,9 +196,6 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
         @NameInMap("AccountsExpirationDate")
         private String accountsExpirationDate;
 
-        @NameInMap("Create")
-        private String create;
-
         @NameInMap("CreateTimestamp")
         private Long createTimestamp;
 
@@ -264,7 +261,6 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
 
         private Propertys(Builder builder) {
             this.accountsExpirationDate = builder.accountsExpirationDate;
-            this.create = builder.create;
             this.createTimestamp = builder.createTimestamp;
             this.groupNames = builder.groupNames;
             this.instanceId = builder.instanceId;
@@ -301,13 +297,6 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
          */
         public String getAccountsExpirationDate() {
             return this.accountsExpirationDate;
-        }
-
-        /**
-         * @return create
-         */
-        public String getCreate() {
-            return this.create;
         }
 
         /**
@@ -459,7 +448,6 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private String accountsExpirationDate; 
-            private String create; 
             private Long createTimestamp; 
             private java.util.List < String > groupNames; 
             private String instanceId; 
@@ -487,14 +475,6 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
              */
             public Builder accountsExpirationDate(String accountsExpirationDate) {
                 this.accountsExpirationDate = accountsExpirationDate;
-                return this;
-            }
-
-            /**
-             * Create.
-             */
-            public Builder create(String create) {
-                this.create = create;
                 return this;
             }
 
