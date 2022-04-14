@@ -1,3 +1,6 @@
+2022-04-14 Version: 1.0.1
+- Update API endpoints configurations.
+
 2022-04-14 Version: 1.0.0
 - ACKOne SDK First Release.
 
