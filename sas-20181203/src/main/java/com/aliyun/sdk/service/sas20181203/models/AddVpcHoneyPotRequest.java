@@ -17,15 +17,9 @@ public class AddVpcHoneyPotRequest extends Request {
     @Validation(required = true)
     private String vpcId;
 
-    @Query
-    @NameInMap("VpcSwitchId")
-    @Validation(required = true)
-    private String vpcSwitchId;
-
     private AddVpcHoneyPotRequest(Builder builder) {
         super(builder);
         this.vpcId = builder.vpcId;
-        this.vpcSwitchId = builder.vpcSwitchId;
     }
 
     public static Builder builder() {
@@ -48,16 +42,8 @@ public class AddVpcHoneyPotRequest extends Request {
         return this.vpcId;
     }
 
-    /**
-     * @return vpcSwitchId
-     */
-    public String getVpcSwitchId() {
-        return this.vpcSwitchId;
-    }
-
     public static final class Builder extends Request.Builder<AddVpcHoneyPotRequest, Builder> {
         private String vpcId; 
-        private String vpcSwitchId; 
 
         private Builder() {
             super();
@@ -66,7 +52,6 @@ public class AddVpcHoneyPotRequest extends Request {
         private Builder(AddVpcHoneyPotRequest request) {
             super(request);
             this.vpcId = request.vpcId;
-            this.vpcSwitchId = request.vpcSwitchId;
         } 
 
         /**
@@ -75,15 +60,6 @@ public class AddVpcHoneyPotRequest extends Request {
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
             this.vpcId = vpcId;
-            return this;
-        }
-
-        /**
-         * VpcSwitchId.
-         */
-        public Builder vpcSwitchId(String vpcSwitchId) {
-            this.putQueryParameter("VpcSwitchId", vpcSwitchId);
-            this.vpcSwitchId = vpcSwitchId;
             return this;
         }
 

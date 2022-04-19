@@ -87,12 +87,16 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
         @NameInMap("SupportedMisType")
         private java.util.List < String > supportedMisType;
 
+        @NameInMap("Uuid")
+        private String uuid;
+
         private MarkField(Builder builder) {
             this.filedAliasName = builder.filedAliasName;
             this.filedName = builder.filedName;
             this.markMisType = builder.markMisType;
             this.markMisValue = builder.markMisValue;
             this.supportedMisType = builder.supportedMisType;
+            this.uuid = builder.uuid;
         }
 
         public static Builder builder() {
@@ -138,12 +142,20 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
             return this.supportedMisType;
         }
 
+        /**
+         * @return uuid
+         */
+        public String getUuid() {
+            return this.uuid;
+        }
+
         public static final class Builder {
             private String filedAliasName; 
             private String filedName; 
             private String markMisType; 
             private String markMisValue; 
             private java.util.List < String > supportedMisType; 
+            private String uuid; 
 
             /**
              * FiledAliasName.
@@ -182,6 +194,14 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
              */
             public Builder supportedMisType(java.util.List < String > supportedMisType) {
                 this.supportedMisType = supportedMisType;
+                return this;
+            }
+
+            /**
+             * 资产uuid
+             */
+            public Builder uuid(String uuid) {
+                this.uuid = uuid;
                 return this;
             }
 

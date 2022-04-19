@@ -22,6 +22,7 @@ public class DescribeSecurityEventOperationsRequest extends Request {
 
     @Query
     @NameInMap("SecurityEventId")
+    @Validation(required = true)
     private Long securityEventId;
 
     @Query
