@@ -17,6 +17,10 @@ public class DescribeGroupedVulRequest extends Request {
     private String aliasName;
 
     @Query
+    @NameInMap("AttachTypes")
+    private String attachTypes;
+
+    @Query
     @NameInMap("CurrentPage")
     private Integer currentPage;
 
@@ -55,6 +59,7 @@ public class DescribeGroupedVulRequest extends Request {
     private DescribeGroupedVulRequest(Builder builder) {
         super(builder);
         this.aliasName = builder.aliasName;
+        this.attachTypes = builder.attachTypes;
         this.currentPage = builder.currentPage;
         this.dealed = builder.dealed;
         this.groupId = builder.groupId;
@@ -84,6 +89,13 @@ public class DescribeGroupedVulRequest extends Request {
      */
     public String getAliasName() {
         return this.aliasName;
+    }
+
+    /**
+     * @return attachTypes
+     */
+    public String getAttachTypes() {
+        return this.attachTypes;
     }
 
     /**
@@ -151,6 +163,7 @@ public class DescribeGroupedVulRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeGroupedVulRequest, Builder> {
         private String aliasName; 
+        private String attachTypes; 
         private Integer currentPage; 
         private String dealed; 
         private String groupId; 
@@ -168,6 +181,7 @@ public class DescribeGroupedVulRequest extends Request {
         private Builder(DescribeGroupedVulRequest request) {
             super(request);
             this.aliasName = request.aliasName;
+            this.attachTypes = request.attachTypes;
             this.currentPage = request.currentPage;
             this.dealed = request.dealed;
             this.groupId = request.groupId;
@@ -185,6 +199,15 @@ public class DescribeGroupedVulRequest extends Request {
         public Builder aliasName(String aliasName) {
             this.putQueryParameter("AliasName", aliasName);
             this.aliasName = aliasName;
+            return this;
+        }
+
+        /**
+         * AttachTypes.
+         */
+        public Builder attachTypes(String attachTypes) {
+            this.putQueryParameter("AttachTypes", attachTypes);
+            this.attachTypes = attachTypes;
             return this;
         }
 
