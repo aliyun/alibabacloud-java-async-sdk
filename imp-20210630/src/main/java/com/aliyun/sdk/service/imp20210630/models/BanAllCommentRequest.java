@@ -90,12 +90,12 @@ public class BanAllCommentRequest extends Request {
             super();
         } 
 
-        private Builder(BanAllCommentRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.regionId = response.regionId;
-            this.roomId = response.roomId;
-            this.userId = response.userId;
+        private Builder(BanAllCommentRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.regionId = request.regionId;
+            this.roomId = request.roomId;
+            this.userId = request.userId;
         } 
 
         /**

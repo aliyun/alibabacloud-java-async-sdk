@@ -7,20 +7,24 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link StopLiveRequest} extends {@link RequestModel}
+ * {@link KickRoomUserRequest} extends {@link RequestModel}
  *
- * <p>StopLiveRequest</p>
+ * <p>KickRoomUserRequest</p>
  */
-public class StopLiveRequest extends Request {
+public class KickRoomUserRequest extends Request {
     @Body
     @NameInMap("AppId")
     @Validation(required = true)
     private String appId;
 
     @Body
-    @NameInMap("LiveId")
+    @NameInMap("BlockTime")
+    private Long blockTime;
+
+    @Body
+    @NameInMap("KickUser")
     @Validation(required = true)
-    private String liveId;
+    private String kickUser;
 
     @Host
     @NameInMap("RegionId")
@@ -36,10 +40,11 @@ public class StopLiveRequest extends Request {
     @Validation(required = true)
     private String userId;
 
-    private StopLiveRequest(Builder builder) {
+    private KickRoomUserRequest(Builder builder) {
         super(builder);
         this.appId = builder.appId;
-        this.liveId = builder.liveId;
+        this.blockTime = builder.blockTime;
+        this.kickUser = builder.kickUser;
         this.regionId = builder.regionId;
         this.roomId = builder.roomId;
         this.userId = builder.userId;
@@ -49,7 +54,7 @@ public class StopLiveRequest extends Request {
         return new Builder();
     }
 
-    public static StopLiveRequest create() {
+    public static KickRoomUserRequest create() {
         return builder().build();
     }
 
@@ -66,10 +71,17 @@ public class StopLiveRequest extends Request {
     }
 
     /**
-     * @return liveId
+     * @return blockTime
      */
-    public String getLiveId() {
-        return this.liveId;
+    public Long getBlockTime() {
+        return this.blockTime;
+    }
+
+    /**
+     * @return kickUser
+     */
+    public String getKickUser() {
+        return this.kickUser;
     }
 
     /**
@@ -93,9 +105,10 @@ public class StopLiveRequest extends Request {
         return this.userId;
     }
 
-    public static final class Builder extends Request.Builder<StopLiveRequest, Builder> {
+    public static final class Builder extends Request.Builder<KickRoomUserRequest, Builder> {
         private String appId; 
-        private String liveId; 
+        private Long blockTime; 
+        private String kickUser; 
         private String regionId; 
         private String roomId; 
         private String userId; 
@@ -104,17 +117,18 @@ public class StopLiveRequest extends Request {
             super();
         } 
 
-        private Builder(StopLiveRequest request) {
+        private Builder(KickRoomUserRequest request) {
             super(request);
             this.appId = request.appId;
-            this.liveId = request.liveId;
+            this.blockTime = request.blockTime;
+            this.kickUser = request.kickUser;
             this.regionId = request.regionId;
             this.roomId = request.roomId;
             this.userId = request.userId;
         } 
 
         /**
-         * 租户名
+         * 应用唯一标识，由6位小写字母、数字组成。
          */
         public Builder appId(String appId) {
             this.putBodyParameter("AppId", appId);
@@ -123,11 +137,20 @@ public class StopLiveRequest extends Request {
         }
 
         /**
-         * 直播资源的唯一标识ID
+         * BlockTime.
          */
-        public Builder liveId(String liveId) {
-            this.putBodyParameter("LiveId", liveId);
-            this.liveId = liveId;
+        public Builder blockTime(Long blockTime) {
+            this.putBodyParameter("BlockTime", blockTime);
+            this.blockTime = blockTime;
+            return this;
+        }
+
+        /**
+         * 被踢出房间的用户ID。
+         */
+        public Builder kickUser(String kickUser) {
+            this.putBodyParameter("KickUser", kickUser);
+            this.kickUser = kickUser;
             return this;
         }
 
@@ -141,7 +164,7 @@ public class StopLiveRequest extends Request {
         }
 
         /**
-         * 房间ID，最大长度36位
+         * 房间唯一标识，由字母、数字、符号.和-组成，最大长度36位，传空则随机生成一个房间id。
          */
         public Builder roomId(String roomId) {
             this.putBodyParameter("RoomId", roomId);
@@ -150,7 +173,7 @@ public class StopLiveRequest extends Request {
         }
 
         /**
-         * 创建直播用户ID
+         * 操作人的用户ID，用于表示谁执行了踢人操作。
          */
         public Builder userId(String userId) {
             this.putBodyParameter("UserId", userId);
@@ -159,8 +182,8 @@ public class StopLiveRequest extends Request {
         }
 
         @Override
-        public StopLiveRequest build() {
-            return new StopLiveRequest(this);
+        public KickRoomUserRequest build() {
+            return new KickRoomUserRequest(this);
         } 
 
     } 

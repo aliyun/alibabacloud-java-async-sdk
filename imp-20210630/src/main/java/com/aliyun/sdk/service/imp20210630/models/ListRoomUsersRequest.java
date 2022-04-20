@@ -103,13 +103,13 @@ public class ListRoomUsersRequest extends Request {
             super();
         } 
 
-        private Builder(ListRoomUsersRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.roomId = response.roomId;
+        private Builder(ListRoomUsersRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.roomId = request.roomId;
         } 
 
         /**

@@ -88,12 +88,12 @@ public class UpdateLiveRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateLiveRequest response) {
-            super(response);
-            this.introduction = response.introduction;
-            this.liveId = response.liveId;
-            this.regionId = response.regionId;
-            this.title = response.title;
+        private Builder(UpdateLiveRequest request) {
+            super(request);
+            this.introduction = request.introduction;
+            this.liveId = request.liveId;
+            this.regionId = request.regionId;
+            this.title = request.title;
         } 
 
         /**

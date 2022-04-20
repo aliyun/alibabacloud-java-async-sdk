@@ -62,10 +62,10 @@ public class GetDomainOwnerVerifyContentRequest extends Request {
             super();
         } 
 
-        private Builder(GetDomainOwnerVerifyContentRequest response) {
-            super(response);
-            this.liveDomainName = response.liveDomainName;
-            this.regionId = response.regionId;
+        private Builder(GetDomainOwnerVerifyContentRequest request) {
+            super(request);
+            this.liveDomainName = request.liveDomainName;
+            this.regionId = request.regionId;
         } 
 
         /**

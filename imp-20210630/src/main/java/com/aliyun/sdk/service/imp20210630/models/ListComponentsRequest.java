@@ -74,11 +74,11 @@ public class ListComponentsRequest extends Request {
             super();
         } 
 
-        private Builder(ListComponentsRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.appTemplateId = response.appTemplateId;
-            this.regionId = response.regionId;
+        private Builder(ListComponentsRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.appTemplateId = request.appTemplateId;
+            this.regionId = request.regionId;
         } 
 
         /**

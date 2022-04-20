@@ -117,14 +117,14 @@ public class BanCommentRequest extends Request {
             super();
         } 
 
-        private Builder(BanCommentRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.banCommentTime = response.banCommentTime;
-            this.banCommentUser = response.banCommentUser;
-            this.regionId = response.regionId;
-            this.roomId = response.roomId;
-            this.userId = response.userId;
+        private Builder(BanCommentRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.banCommentTime = request.banCommentTime;
+            this.banCommentUser = request.banCommentUser;
+            this.regionId = request.regionId;
+            this.roomId = request.roomId;
+            this.userId = request.userId;
         } 
 
         /**

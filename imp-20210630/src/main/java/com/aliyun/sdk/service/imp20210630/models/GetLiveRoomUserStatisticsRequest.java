@@ -102,13 +102,13 @@ public class GetLiveRoomUserStatisticsRequest extends Request {
             super();
         } 
 
-        private Builder(GetLiveRoomUserStatisticsRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.liveId = response.liveId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
+        private Builder(GetLiveRoomUserStatisticsRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.liveId = request.liveId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
         } 
 
         /**

@@ -101,13 +101,13 @@ public class ListLiveRoomsRequest extends Request {
             super();
         } 
 
-        private Builder(ListLiveRoomsRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.status = response.status;
+        private Builder(ListLiveRoomsRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.status = request.status;
         } 
 
         /**

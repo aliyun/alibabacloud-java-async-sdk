@@ -131,15 +131,15 @@ public class ListCommentsRequest extends Request {
             super();
         } 
 
-        private Builder(ListCommentsRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.roomId = response.roomId;
-            this.sortType = response.sortType;
-            this.userId = response.userId;
+        private Builder(ListCommentsRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.roomId = request.roomId;
+            this.sortType = request.sortType;
+            this.userId = request.userId;
         } 
 
         /**

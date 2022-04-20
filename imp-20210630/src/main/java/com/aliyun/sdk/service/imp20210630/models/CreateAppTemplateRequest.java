@@ -102,13 +102,13 @@ public class CreateAppTemplateRequest extends Request {
             super();
         } 
 
-        private Builder(CreateAppTemplateRequest response) {
-            super(response);
-            this.appTemplateName = response.appTemplateName;
-            this.componentList = response.componentList;
-            this.integrationMode = response.integrationMode;
-            this.regionId = response.regionId;
-            this.scene = response.scene;
+        private Builder(CreateAppTemplateRequest request) {
+            super(request);
+            this.appTemplateName = request.appTemplateName;
+            this.componentList = request.componentList;
+            this.integrationMode = request.integrationMode;
+            this.regionId = request.regionId;
+            this.scene = request.scene;
         } 
 
         /**
@@ -124,7 +124,8 @@ public class CreateAppTemplateRequest extends Request {
          * 组件列表
          */
         public Builder componentList(java.util.List < String > componentList) {
-            this.putBodyParameter("ComponentList", componentList);
+            String componentListShrink = shrink(componentList, "ComponentList", "json");
+            this.putBodyParameter("ComponentList", componentListShrink);
             this.componentList = componentList;
             return this;
         }

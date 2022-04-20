@@ -155,17 +155,17 @@ public class CreateLiveRoomRequest extends Request {
             super();
         } 
 
-        private Builder(CreateLiveRoomRequest response) {
-            super(response);
-            this.anchorId = response.anchorId;
-            this.anchorNick = response.anchorNick;
-            this.appId = response.appId;
-            this.coverUrl = response.coverUrl;
-            this.extension = response.extension;
-            this.notice = response.notice;
-            this.regionId = response.regionId;
-            this.title = response.title;
-            this.userId = response.userId;
+        private Builder(CreateLiveRoomRequest request) {
+            super(request);
+            this.anchorId = request.anchorId;
+            this.anchorNick = request.anchorNick;
+            this.appId = request.appId;
+            this.coverUrl = request.coverUrl;
+            this.extension = request.extension;
+            this.notice = request.notice;
+            this.regionId = request.regionId;
+            this.title = request.title;
+            this.userId = request.userId;
         } 
 
         /**
@@ -205,10 +205,11 @@ public class CreateLiveRoomRequest extends Request {
         }
 
         /**
-         * 拓展字段，按需传递，需要额外记录的房间属性。
+         * 拓展字段，按需传递，需要额外记录的房间属性。最大支持4096个字节。
          */
         public Builder extension(java.util.Map < String, String > extension) {
-            this.putBodyParameter("Extension", extension);
+            String extensionShrink = shrink(extension, "Extension", "json");
+            this.putBodyParameter("Extension", extensionShrink);
             this.extension = extension;
             return this;
         }

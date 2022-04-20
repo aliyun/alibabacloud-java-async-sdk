@@ -104,13 +104,13 @@ public class DeleteCommentRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteCommentRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.commentIdList = response.commentIdList;
-            this.regionId = response.regionId;
-            this.roomId = response.roomId;
-            this.userId = response.userId;
+        private Builder(DeleteCommentRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.commentIdList = request.commentIdList;
+            this.regionId = request.regionId;
+            this.roomId = request.roomId;
+            this.userId = request.userId;
         } 
 
         /**

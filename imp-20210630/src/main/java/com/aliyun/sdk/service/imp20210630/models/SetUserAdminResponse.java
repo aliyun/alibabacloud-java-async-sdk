@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListRoomLivesResponse} extends {@link TeaModel}
+ * {@link SetUserAdminResponse} extends {@link TeaModel}
  *
- * <p>ListRoomLivesResponse</p>
+ * <p>SetUserAdminResponse</p>
  */
-public class ListRoomLivesResponse extends Response {
+public class SetUserAdminResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private ListRoomLivesResponseBody body;
+    private SetUserAdminResponseBody body;
 
-    private ListRoomLivesResponse(BuilderImpl builder) {
+    private SetUserAdminResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static ListRoomLivesResponse create() {
+    public static SetUserAdminResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class ListRoomLivesResponse extends Response {
     /**
      * @return body
      */
-    public ListRoomLivesResponseBody getBody() {
+    public SetUserAdminResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ListRoomLivesResponse, Builder> {
+    public interface Builder extends Response.Builder<SetUserAdminResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(ListRoomLivesResponseBody body);
+        Builder body(SetUserAdminResponseBody body);
 
         @Override
-        ListRoomLivesResponse build();
+        SetUserAdminResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ListRoomLivesResponse, Builder>
+            extends Response.BuilderImpl<SetUserAdminResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private ListRoomLivesResponseBody body; 
+        private SetUserAdminResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ListRoomLivesResponse response) {
+        private BuilderImpl(SetUserAdminResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class ListRoomLivesResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ListRoomLivesResponseBody body) {
+        public Builder body(SetUserAdminResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ListRoomLivesResponse build() {
-            return new ListRoomLivesResponse(this);
+        public SetUserAdminResponse build() {
+            return new SetUserAdminResponse(this);
         } 
 
     } 

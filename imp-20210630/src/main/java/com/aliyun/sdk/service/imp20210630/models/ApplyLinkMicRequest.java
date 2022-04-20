@@ -76,11 +76,11 @@ public class ApplyLinkMicRequest extends Request {
             super();
         } 
 
-        private Builder(ApplyLinkMicRequest response) {
-            super(response);
-            this.conferenceId = response.conferenceId;
-            this.regionId = response.regionId;
-            this.userId = response.userId;
+        private Builder(ApplyLinkMicRequest request) {
+            super(request);
+            this.conferenceId = request.conferenceId;
+            this.regionId = request.regionId;
+            this.userId = request.userId;
         } 
 
         /**

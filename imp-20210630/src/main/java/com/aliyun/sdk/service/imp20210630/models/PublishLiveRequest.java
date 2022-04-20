@@ -76,11 +76,11 @@ public class PublishLiveRequest extends Request {
             super();
         } 
 
-        private Builder(PublishLiveRequest response) {
-            super(response);
-            this.liveId = response.liveId;
-            this.regionId = response.regionId;
-            this.userId = response.userId;
+        private Builder(PublishLiveRequest request) {
+            super(request);
+            this.liveId = request.liveId;
+            this.regionId = request.regionId;
+            this.userId = request.userId;
         } 
 
         /**

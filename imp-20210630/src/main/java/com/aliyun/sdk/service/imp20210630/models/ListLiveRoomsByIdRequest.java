@@ -76,11 +76,11 @@ public class ListLiveRoomsByIdRequest extends Request {
             super();
         } 
 
-        private Builder(ListLiveRoomsByIdRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.liveIdList = response.liveIdList;
-            this.regionId = response.regionId;
+        private Builder(ListLiveRoomsByIdRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.liveIdList = request.liveIdList;
+            this.regionId = request.regionId;
         } 
 
         /**
@@ -96,7 +96,8 @@ public class ListLiveRoomsByIdRequest extends Request {
          * 直播ID列表。
          */
         public Builder liveIdList(java.util.List < String > liveIdList) {
-            this.putBodyParameter("LiveIdList", liveIdList);
+            String liveIdListShrink = shrink(liveIdList, "LiveIdList", "json");
+            this.putBodyParameter("LiveIdList", liveIdListShrink);
             this.liveIdList = liveIdList;
             return this;
         }

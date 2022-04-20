@@ -89,12 +89,12 @@ public class GetLiveRecordRequest extends Request {
             super();
         } 
 
-        private Builder(GetLiveRecordRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.liveId = response.liveId;
-            this.regionId = response.regionId;
-            this.userId = response.userId;
+        private Builder(GetLiveRecordRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.liveId = request.liveId;
+            this.regionId = request.regionId;
+            this.userId = request.userId;
         } 
 
         /**

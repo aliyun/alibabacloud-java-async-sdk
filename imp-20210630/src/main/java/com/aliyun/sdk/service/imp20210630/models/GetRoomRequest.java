@@ -76,11 +76,11 @@ public class GetRoomRequest extends Request {
             super();
         } 
 
-        private Builder(GetRoomRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.regionId = response.regionId;
-            this.roomId = response.roomId;
+        private Builder(GetRoomRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.regionId = request.regionId;
+            this.roomId = request.roomId;
         } 
 
         /**

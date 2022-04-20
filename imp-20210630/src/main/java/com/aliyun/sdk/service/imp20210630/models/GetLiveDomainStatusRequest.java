@@ -88,12 +88,12 @@ public class GetLiveDomainStatusRequest extends Request {
             super();
         } 
 
-        private Builder(GetLiveDomainStatusRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.liveDomainList = response.liveDomainList;
-            this.liveDomainType = response.liveDomainType;
-            this.regionId = response.regionId;
+        private Builder(GetLiveDomainStatusRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.liveDomainList = request.liveDomainList;
+            this.liveDomainType = request.liveDomainType;
+            this.regionId = request.regionId;
         } 
 
         /**
@@ -109,7 +109,8 @@ public class GetLiveDomainStatusRequest extends Request {
          * 直播域名列表
          */
         public Builder liveDomainList(java.util.List < String > liveDomainList) {
-            this.putBodyParameter("LiveDomainList", liveDomainList);
+            String liveDomainListShrink = shrink(liveDomainList, "LiveDomainList", "json");
+            this.putBodyParameter("LiveDomainList", liveDomainListShrink);
             this.liveDomainList = liveDomainList;
             return this;
         }

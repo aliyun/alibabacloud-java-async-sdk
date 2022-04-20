@@ -24,8 +24,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ApplyLinkMicResponse> applyLinkMic(ApplyLinkMicRequest request);
 
-    CompletableFuture<AttachStandardRoomHttpsCertificateResponse> attachStandardRoomHttpsCertificate(AttachStandardRoomHttpsCertificateRequest request);
-
     CompletableFuture<BanAllCommentResponse> banAllComment(BanAllCommentRequest request);
 
     CompletableFuture<BanCommentResponse> banComment(BanCommentRequest request);
@@ -35,6 +33,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CancelBanAllCommentResponse> cancelBanAllComment(CancelBanAllCommentRequest request);
 
     CompletableFuture<CancelBanCommentResponse> cancelBanComment(CancelBanCommentRequest request);
+
+    CompletableFuture<CancelUserAdminResponse> cancelUserAdmin(CancelUserAdminRequest request);
 
     CompletableFuture<CreateAppResponse> createApp(CreateAppRequest request);
 
@@ -49,6 +49,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateLiveRoomResponse> createLiveRoom(CreateLiveRoomRequest request);
 
     CompletableFuture<CreateRoomResponse> createRoom(CreateRoomRequest request);
+
+    CompletableFuture<CreateSensitiveWordResponse> createSensitiveWord(CreateSensitiveWordRequest request);
 
     CompletableFuture<DeleteAppResponse> deleteApp(DeleteAppRequest request);
 
@@ -66,6 +68,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteRoomResponse> deleteRoom(DeleteRoomRequest request);
 
+    CompletableFuture<DeleteSensitiveWordResponse> deleteSensitiveWord(DeleteSensitiveWordRequest request);
+
     CompletableFuture<GetAppResponse> getApp(GetAppRequest request);
 
     CompletableFuture<GetAppTemplateResponse> getAppTemplate(GetAppTemplateRequest request);
@@ -76,13 +80,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetClassRecordResponse> getClassRecord(GetClassRecordRequest request);
 
-    CompletableFuture<GetCnameDetailResponse> getCnameDetail(GetCnameDetailRequest request);
-
     CompletableFuture<GetConferenceResponse> getConference(GetConferenceRequest request);
 
     CompletableFuture<GetDomainOwnerVerifyContentResponse> getDomainOwnerVerifyContent(GetDomainOwnerVerifyContentRequest request);
-
-    CompletableFuture<GetImpProductStatusResponse> getImpProductStatus(GetImpProductStatusRequest request);
 
     CompletableFuture<GetLiveResponse> getLive(GetLiveRequest request);
 
@@ -102,7 +102,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetStandardRoomJumpUrlResponse> getStandardRoomJumpUrl(GetStandardRoomJumpUrlRequest request);
 
-    CompletableFuture<GetUserInfoResponse> getUserInfo(GetUserInfoRequest request);
+    CompletableFuture<KickRoomUserResponse> kickRoomUser(KickRoomUserRequest request);
 
     CompletableFuture<ListAppTemplatesResponse> listAppTemplates(ListAppTemplatesRequest request);
 
@@ -122,11 +122,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListLiveRoomsByIdResponse> listLiveRoomsById(ListLiveRoomsByIdRequest request);
 
-    CompletableFuture<ListRoomLivesResponse> listRoomLives(ListRoomLivesRequest request);
-
     CompletableFuture<ListRoomUsersResponse> listRoomUsers(ListRoomUsersRequest request);
 
     CompletableFuture<ListRoomsResponse> listRooms(ListRoomsRequest request);
+
+    CompletableFuture<ListSensitiveWordResponse> listSensitiveWord(ListSensitiveWordRequest request);
 
     CompletableFuture<PublishLiveResponse> publishLive(PublishLiveRequest request);
 
@@ -141,6 +141,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SendCustomMessageToAllResponse> sendCustomMessageToAll(SendCustomMessageToAllRequest request);
 
     CompletableFuture<SendCustomMessageToUsersResponse> sendCustomMessageToUsers(SendCustomMessageToUsersRequest request);
+
+    CompletableFuture<SetUserAdminResponse> setUserAdmin(SetUserAdminRequest request);
 
     CompletableFuture<StopClassResponse> stopClass(StopClassRequest request);
 

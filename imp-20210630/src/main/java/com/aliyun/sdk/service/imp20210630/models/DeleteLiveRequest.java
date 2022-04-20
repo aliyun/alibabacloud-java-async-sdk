@@ -62,10 +62,10 @@ public class DeleteLiveRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteLiveRequest response) {
-            super(response);
-            this.liveId = response.liveId;
-            this.regionId = response.regionId;
+        private Builder(DeleteLiveRequest request) {
+            super(request);
+            this.liveId = request.liveId;
+            this.regionId = request.regionId;
         } 
 
         /**

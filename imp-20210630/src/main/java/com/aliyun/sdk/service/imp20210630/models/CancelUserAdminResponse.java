@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetCnameDetailResponse} extends {@link TeaModel}
+ * {@link CancelUserAdminResponse} extends {@link TeaModel}
  *
- * <p>GetCnameDetailResponse</p>
+ * <p>CancelUserAdminResponse</p>
  */
-public class GetCnameDetailResponse extends Response {
+public class CancelUserAdminResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private GetCnameDetailResponseBody body;
+    private CancelUserAdminResponseBody body;
 
-    private GetCnameDetailResponse(BuilderImpl builder) {
+    private CancelUserAdminResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static GetCnameDetailResponse create() {
+    public static CancelUserAdminResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class GetCnameDetailResponse extends Response {
     /**
      * @return body
      */
-    public GetCnameDetailResponseBody getBody() {
+    public CancelUserAdminResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetCnameDetailResponse, Builder> {
+    public interface Builder extends Response.Builder<CancelUserAdminResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(GetCnameDetailResponseBody body);
+        Builder body(CancelUserAdminResponseBody body);
 
         @Override
-        GetCnameDetailResponse build();
+        CancelUserAdminResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetCnameDetailResponse, Builder>
+            extends Response.BuilderImpl<CancelUserAdminResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private GetCnameDetailResponseBody body; 
+        private CancelUserAdminResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetCnameDetailResponse response) {
+        private BuilderImpl(CancelUserAdminResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class GetCnameDetailResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetCnameDetailResponseBody body) {
+        public Builder body(CancelUserAdminResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetCnameDetailResponse build() {
-            return new GetCnameDetailResponse(this);
+        public CancelUserAdminResponse build() {
+            return new CancelUserAdminResponse(this);
         } 
 
     } 

@@ -122,7 +122,7 @@ public class GetAuthTokenResponseBody extends TeaModel {
             private String refreshToken; 
 
             /**
-             * 用于长链接建连的token
+             * 用于长连接建连的token
              */
             public Builder accessToken(String accessToken) {
                 this.accessToken = accessToken;

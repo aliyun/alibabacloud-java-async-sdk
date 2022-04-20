@@ -62,10 +62,10 @@ public class GetConferenceRequest extends Request {
             super();
         } 
 
-        private Builder(GetConferenceRequest response) {
-            super(response);
-            this.conferenceId = response.conferenceId;
-            this.regionId = response.regionId;
+        private Builder(GetConferenceRequest request) {
+            super(request);
+            this.conferenceId = request.conferenceId;
+            this.regionId = request.regionId;
         } 
 
         /**

@@ -104,13 +104,13 @@ public class CreateConferenceRequest extends Request {
             super();
         } 
 
-        private Builder(CreateConferenceRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.regionId = response.regionId;
-            this.roomId = response.roomId;
-            this.title = response.title;
-            this.userId = response.userId;
+        private Builder(CreateConferenceRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.regionId = request.regionId;
+            this.roomId = request.roomId;
+            this.title = request.title;
+            this.userId = request.userId;
         } 
 
         /**

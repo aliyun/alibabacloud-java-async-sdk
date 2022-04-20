@@ -62,10 +62,10 @@ public class GetStandardRoomHttpsCertificateRequest extends Request {
             super();
         } 
 
-        private Builder(GetStandardRoomHttpsCertificateRequest response) {
-            super(response);
-            this.certificateId = response.certificateId;
-            this.regionId = response.regionId;
+        private Builder(GetStandardRoomHttpsCertificateRequest request) {
+            super(request);
+            this.certificateId = request.certificateId;
+            this.regionId = request.regionId;
         } 
 
         /**

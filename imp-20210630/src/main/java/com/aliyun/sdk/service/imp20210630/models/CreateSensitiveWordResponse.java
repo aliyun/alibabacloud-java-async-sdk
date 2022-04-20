@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetUserInfoResponse} extends {@link TeaModel}
+ * {@link CreateSensitiveWordResponse} extends {@link TeaModel}
  *
- * <p>GetUserInfoResponse</p>
+ * <p>CreateSensitiveWordResponse</p>
  */
-public class GetUserInfoResponse extends Response {
+public class CreateSensitiveWordResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private GetUserInfoResponseBody body;
+    private CreateSensitiveWordResponseBody body;
 
-    private GetUserInfoResponse(BuilderImpl builder) {
+    private CreateSensitiveWordResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static GetUserInfoResponse create() {
+    public static CreateSensitiveWordResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class GetUserInfoResponse extends Response {
     /**
      * @return body
      */
-    public GetUserInfoResponseBody getBody() {
+    public CreateSensitiveWordResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetUserInfoResponse, Builder> {
+    public interface Builder extends Response.Builder<CreateSensitiveWordResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(GetUserInfoResponseBody body);
+        Builder body(CreateSensitiveWordResponseBody body);
 
         @Override
-        GetUserInfoResponse build();
+        CreateSensitiveWordResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetUserInfoResponse, Builder>
+            extends Response.BuilderImpl<CreateSensitiveWordResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private GetUserInfoResponseBody body; 
+        private CreateSensitiveWordResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetUserInfoResponse response) {
+        private BuilderImpl(CreateSensitiveWordResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class GetUserInfoResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetUserInfoResponseBody body) {
+        public Builder body(CreateSensitiveWordResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetUserInfoResponse build() {
-            return new GetUserInfoResponse(this);
+        public CreateSensitiveWordResponse build() {
+            return new CreateSensitiveWordResponse(this);
         } 
 
     } 

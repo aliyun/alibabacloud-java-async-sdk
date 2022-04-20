@@ -74,11 +74,11 @@ public class ListAppTemplatesRequest extends Request {
             super();
         } 
 
-        private Builder(ListAppTemplatesRequest response) {
-            super(response);
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
+        private Builder(ListAppTemplatesRequest request) {
+            super(request);
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
         } 
 
         /**

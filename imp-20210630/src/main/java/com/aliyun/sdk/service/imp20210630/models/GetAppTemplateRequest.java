@@ -62,10 +62,10 @@ public class GetAppTemplateRequest extends Request {
             super();
         } 
 
-        private Builder(GetAppTemplateRequest response) {
-            super(response);
-            this.appTemplateId = response.appTemplateId;
-            this.regionId = response.regionId;
+        private Builder(GetAppTemplateRequest request) {
+            super(request);
+            this.appTemplateId = request.appTemplateId;
+            this.regionId = request.regionId;
         } 
 
         /**

@@ -7,20 +7,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link StopLiveRequest} extends {@link RequestModel}
+ * {@link CancelUserAdminRequest} extends {@link RequestModel}
  *
- * <p>StopLiveRequest</p>
+ * <p>CancelUserAdminRequest</p>
  */
-public class StopLiveRequest extends Request {
+public class CancelUserAdminRequest extends Request {
     @Body
     @NameInMap("AppId")
     @Validation(required = true)
     private String appId;
-
-    @Body
-    @NameInMap("LiveId")
-    @Validation(required = true)
-    private String liveId;
 
     @Host
     @NameInMap("RegionId")
@@ -36,10 +31,9 @@ public class StopLiveRequest extends Request {
     @Validation(required = true)
     private String userId;
 
-    private StopLiveRequest(Builder builder) {
+    private CancelUserAdminRequest(Builder builder) {
         super(builder);
         this.appId = builder.appId;
-        this.liveId = builder.liveId;
         this.regionId = builder.regionId;
         this.roomId = builder.roomId;
         this.userId = builder.userId;
@@ -49,7 +43,7 @@ public class StopLiveRequest extends Request {
         return new Builder();
     }
 
-    public static StopLiveRequest create() {
+    public static CancelUserAdminRequest create() {
         return builder().build();
     }
 
@@ -63,13 +57,6 @@ public class StopLiveRequest extends Request {
      */
     public String getAppId() {
         return this.appId;
-    }
-
-    /**
-     * @return liveId
-     */
-    public String getLiveId() {
-        return this.liveId;
     }
 
     /**
@@ -93,9 +80,8 @@ public class StopLiveRequest extends Request {
         return this.userId;
     }
 
-    public static final class Builder extends Request.Builder<StopLiveRequest, Builder> {
+    public static final class Builder extends Request.Builder<CancelUserAdminRequest, Builder> {
         private String appId; 
-        private String liveId; 
         private String regionId; 
         private String roomId; 
         private String userId; 
@@ -104,30 +90,20 @@ public class StopLiveRequest extends Request {
             super();
         } 
 
-        private Builder(StopLiveRequest request) {
+        private Builder(CancelUserAdminRequest request) {
             super(request);
             this.appId = request.appId;
-            this.liveId = request.liveId;
             this.regionId = request.regionId;
             this.roomId = request.roomId;
             this.userId = request.userId;
         } 
 
         /**
-         * 租户名
+         * 应用唯一标识，由6位小写字母、数字组成。
          */
         public Builder appId(String appId) {
             this.putBodyParameter("AppId", appId);
             this.appId = appId;
-            return this;
-        }
-
-        /**
-         * 直播资源的唯一标识ID
-         */
-        public Builder liveId(String liveId) {
-            this.putBodyParameter("LiveId", liveId);
-            this.liveId = liveId;
             return this;
         }
 
@@ -141,7 +117,7 @@ public class StopLiveRequest extends Request {
         }
 
         /**
-         * 房间ID，最大长度36位
+         * 房间唯一标识，由字母、数字、符号.和-组成，最大长度36位。
          */
         public Builder roomId(String roomId) {
             this.putBodyParameter("RoomId", roomId);
@@ -150,7 +126,7 @@ public class StopLiveRequest extends Request {
         }
 
         /**
-         * 创建直播用户ID
+         * 用户ID
          */
         public Builder userId(String userId) {
             this.putBodyParameter("UserId", userId);
@@ -159,8 +135,8 @@ public class StopLiveRequest extends Request {
         }
 
         @Override
-        public StopLiveRequest build() {
-            return new StopLiveRequest(this);
+        public CancelUserAdminRequest build() {
+            return new CancelUserAdminRequest(this);
         } 
 
     } 

@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetImpProductStatusResponse} extends {@link TeaModel}
+ * {@link KickRoomUserResponse} extends {@link TeaModel}
  *
- * <p>GetImpProductStatusResponse</p>
+ * <p>KickRoomUserResponse</p>
  */
-public class GetImpProductStatusResponse extends Response {
+public class KickRoomUserResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private GetImpProductStatusResponseBody body;
+    private KickRoomUserResponseBody body;
 
-    private GetImpProductStatusResponse(BuilderImpl builder) {
+    private KickRoomUserResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static GetImpProductStatusResponse create() {
+    public static KickRoomUserResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class GetImpProductStatusResponse extends Response {
     /**
      * @return body
      */
-    public GetImpProductStatusResponseBody getBody() {
+    public KickRoomUserResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetImpProductStatusResponse, Builder> {
+    public interface Builder extends Response.Builder<KickRoomUserResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(GetImpProductStatusResponseBody body);
+        Builder body(KickRoomUserResponseBody body);
 
         @Override
-        GetImpProductStatusResponse build();
+        KickRoomUserResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetImpProductStatusResponse, Builder>
+            extends Response.BuilderImpl<KickRoomUserResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private GetImpProductStatusResponseBody body; 
+        private KickRoomUserResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetImpProductStatusResponse response) {
+        private BuilderImpl(KickRoomUserResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class GetImpProductStatusResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetImpProductStatusResponseBody body) {
+        public Builder body(KickRoomUserResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetImpProductStatusResponse build() {
-            return new GetImpProductStatusResponse(this);
+        public KickRoomUserResponse build() {
+            return new KickRoomUserResponse(this);
         } 
 
     } 

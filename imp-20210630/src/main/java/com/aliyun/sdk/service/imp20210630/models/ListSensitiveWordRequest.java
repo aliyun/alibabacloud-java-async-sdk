@@ -7,22 +7,23 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetUserInfoRequest} extends {@link RequestModel}
+ * {@link ListSensitiveWordRequest} extends {@link RequestModel}
  *
- * <p>GetUserInfoRequest</p>
+ * <p>ListSensitiveWordRequest</p>
  */
-public class GetUserInfoRequest extends Request {
-    @Query
-    @NameInMap("CloudUid")
-    private String cloudUid;
+public class ListSensitiveWordRequest extends Request {
+    @Body
+    @NameInMap("AppId")
+    @Validation(required = true)
+    private String appId;
 
     @Host
     @NameInMap("RegionId")
     private String regionId;
 
-    private GetUserInfoRequest(Builder builder) {
+    private ListSensitiveWordRequest(Builder builder) {
         super(builder);
-        this.cloudUid = builder.cloudUid;
+        this.appId = builder.appId;
         this.regionId = builder.regionId;
     }
 
@@ -30,7 +31,7 @@ public class GetUserInfoRequest extends Request {
         return new Builder();
     }
 
-    public static GetUserInfoRequest create() {
+    public static ListSensitiveWordRequest create() {
         return builder().build();
     }
 
@@ -40,10 +41,10 @@ public class GetUserInfoRequest extends Request {
     }
 
     /**
-     * @return cloudUid
+     * @return appId
      */
-    public String getCloudUid() {
-        return this.cloudUid;
+    public String getAppId() {
+        return this.appId;
     }
 
     /**
@@ -53,31 +54,31 @@ public class GetUserInfoRequest extends Request {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder<GetUserInfoRequest, Builder> {
-        private String cloudUid; 
+    public static final class Builder extends Request.Builder<ListSensitiveWordRequest, Builder> {
+        private String appId; 
         private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetUserInfoRequest response) {
-            super(response);
-            this.cloudUid = response.cloudUid;
-            this.regionId = response.regionId;
+        private Builder(ListSensitiveWordRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * 云账号id
+         * 弹幕发送者的用户ID，最大长度不超过32个字节。
          */
-        public Builder cloudUid(String cloudUid) {
-            this.putQueryParameter("CloudUid", cloudUid);
-            this.cloudUid = cloudUid;
+        public Builder appId(String appId) {
+            this.putBodyParameter("AppId", appId);
+            this.appId = appId;
             return this;
         }
 
         /**
-         * 地域
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -86,8 +87,8 @@ public class GetUserInfoRequest extends Request {
         }
 
         @Override
-        public GetUserInfoRequest build() {
-            return new GetUserInfoRequest(this);
+        public ListSensitiveWordRequest build() {
+            return new ListSensitiveWordRequest(this);
         } 
 
     } 

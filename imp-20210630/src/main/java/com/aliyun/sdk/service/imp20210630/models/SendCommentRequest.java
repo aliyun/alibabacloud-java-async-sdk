@@ -130,15 +130,15 @@ public class SendCommentRequest extends Request {
             super();
         } 
 
-        private Builder(SendCommentRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.content = response.content;
-            this.extension = response.extension;
-            this.regionId = response.regionId;
-            this.roomId = response.roomId;
-            this.senderId = response.senderId;
-            this.senderNick = response.senderNick;
+        private Builder(SendCommentRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.content = request.content;
+            this.extension = request.extension;
+            this.regionId = request.regionId;
+            this.roomId = request.roomId;
+            this.senderId = request.senderId;
+            this.senderNick = request.senderNick;
         } 
 
         /**
@@ -163,7 +163,8 @@ public class SendCommentRequest extends Request {
          * 扩展字段，服务端仅做透传。
          */
         public Builder extension(java.util.Map < String, String > extension) {
-            this.putBodyParameter("Extension", extension);
+            String extensionShrink = shrink(extension, "Extension", "json");
+            this.putBodyParameter("Extension", extensionShrink);
             this.extension = extension;
             return this;
         }

@@ -88,12 +88,12 @@ public class UpdateAppTemplateRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateAppTemplateRequest response) {
-            super(response);
-            this.appTemplateId = response.appTemplateId;
-            this.appTemplateName = response.appTemplateName;
-            this.componentList = response.componentList;
-            this.regionId = response.regionId;
+        private Builder(UpdateAppTemplateRequest request) {
+            super(request);
+            this.appTemplateId = request.appTemplateId;
+            this.appTemplateName = request.appTemplateName;
+            this.componentList = request.componentList;
+            this.regionId = request.regionId;
         } 
 
         /**
@@ -118,7 +118,8 @@ public class UpdateAppTemplateRequest extends Request {
          * 组件列表
          */
         public Builder componentList(java.util.List < String > componentList) {
-            this.putBodyParameter("ComponentList", componentList);
+            String componentListShrink = shrink(componentList, "ComponentList", "json");
+            this.putBodyParameter("ComponentList", componentListShrink);
             this.componentList = componentList;
             return this;
         }

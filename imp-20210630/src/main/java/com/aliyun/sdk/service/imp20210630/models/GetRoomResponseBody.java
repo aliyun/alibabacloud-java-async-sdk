@@ -173,6 +173,9 @@ public class GetRoomResponseBody extends TeaModel {
 
     }
     public static class RoomInfo extends TeaModel {
+        @NameInMap("AdminIdList")
+        private java.util.List < String > adminIdList;
+
         @NameInMap("AppId")
         private String appId;
 
@@ -210,6 +213,7 @@ public class GetRoomResponseBody extends TeaModel {
         private Long uv;
 
         private RoomInfo(Builder builder) {
+            this.adminIdList = builder.adminIdList;
             this.appId = builder.appId;
             this.createTime = builder.createTime;
             this.extension = builder.extension;
@@ -230,6 +234,13 @@ public class GetRoomResponseBody extends TeaModel {
 
         public static RoomInfo create() {
             return builder().build();
+        }
+
+        /**
+         * @return adminIdList
+         */
+        public java.util.List < String > getAdminIdList() {
+            return this.adminIdList;
         }
 
         /**
@@ -317,6 +328,7 @@ public class GetRoomResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List < String > adminIdList; 
             private String appId; 
             private Long createTime; 
             private java.util.Map < String, String > extension; 
@@ -329,6 +341,14 @@ public class GetRoomResponseBody extends TeaModel {
             private String templateId; 
             private String title; 
             private Long uv; 
+
+            /**
+             * 管理员ID列表。
+             */
+            public Builder adminIdList(java.util.List < String > adminIdList) {
+                this.adminIdList = adminIdList;
+                return this;
+            }
 
             /**
              * 应用唯一标识，由6位小写字母、数字组成。

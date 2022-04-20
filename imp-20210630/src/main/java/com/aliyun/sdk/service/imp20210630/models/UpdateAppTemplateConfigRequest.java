@@ -75,11 +75,11 @@ public class UpdateAppTemplateConfigRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateAppTemplateConfigRequest response) {
-            super(response);
-            this.appTemplateId = response.appTemplateId;
-            this.configList = response.configList;
-            this.regionId = response.regionId;
+        private Builder(UpdateAppTemplateConfigRequest request) {
+            super(request);
+            this.appTemplateId = request.appTemplateId;
+            this.configList = request.configList;
+            this.regionId = request.regionId;
         } 
 
         /**
@@ -95,7 +95,8 @@ public class UpdateAppTemplateConfigRequest extends Request {
          * 更新配置
          */
         public Builder configList(java.util.List < ConfigList> configList) {
-            this.putBodyParameter("ConfigList", configList);
+            String configListShrink = shrink(configList, "ConfigList", "json");
+            this.putBodyParameter("ConfigList", configListShrink);
             this.configList = configList;
             return this;
         }

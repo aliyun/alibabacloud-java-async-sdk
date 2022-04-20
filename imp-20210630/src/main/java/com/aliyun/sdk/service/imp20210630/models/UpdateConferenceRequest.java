@@ -76,11 +76,11 @@ public class UpdateConferenceRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateConferenceRequest response) {
-            super(response);
-            this.conferenceId = response.conferenceId;
-            this.regionId = response.regionId;
-            this.title = response.title;
+        private Builder(UpdateConferenceRequest request) {
+            super(request);
+            this.conferenceId = request.conferenceId;
+            this.regionId = request.regionId;
+            this.title = request.title;
         } 
 
         /**

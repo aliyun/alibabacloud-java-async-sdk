@@ -104,13 +104,13 @@ public class SendCustomMessageToUsersRequest extends Request {
             super();
         } 
 
-        private Builder(SendCustomMessageToUsersRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.body = response.body;
-            this.receiverList = response.receiverList;
-            this.regionId = response.regionId;
-            this.roomId = response.roomId;
+        private Builder(SendCustomMessageToUsersRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.body = request.body;
+            this.receiverList = request.receiverList;
+            this.regionId = request.regionId;
+            this.roomId = request.roomId;
         } 
 
         /**

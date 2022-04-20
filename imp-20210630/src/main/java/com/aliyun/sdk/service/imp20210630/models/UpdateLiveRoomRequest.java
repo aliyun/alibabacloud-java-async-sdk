@@ -167,18 +167,18 @@ public class UpdateLiveRoomRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateLiveRoomRequest response) {
-            super(response);
-            this.anchorId = response.anchorId;
-            this.anchorNick = response.anchorNick;
-            this.appId = response.appId;
-            this.coverUrl = response.coverUrl;
-            this.extension = response.extension;
-            this.liveId = response.liveId;
-            this.notice = response.notice;
-            this.regionId = response.regionId;
-            this.title = response.title;
-            this.userId = response.userId;
+        private Builder(UpdateLiveRoomRequest request) {
+            super(request);
+            this.anchorId = request.anchorId;
+            this.anchorNick = request.anchorNick;
+            this.appId = request.appId;
+            this.coverUrl = request.coverUrl;
+            this.extension = request.extension;
+            this.liveId = request.liveId;
+            this.notice = request.notice;
+            this.regionId = request.regionId;
+            this.title = request.title;
+            this.userId = request.userId;
         } 
 
         /**
@@ -221,7 +221,8 @@ public class UpdateLiveRoomRequest extends Request {
          * 拓展字段，按需传递，需要额外记录的房间属性。
          */
         public Builder extension(java.util.Map < String, String > extension) {
-            this.putBodyParameter("Extension", extension);
+            String extensionShrink = shrink(extension, "Extension", "json");
+            this.putBodyParameter("Extension", extensionShrink);
             this.extension = extension;
             return this;
         }

@@ -76,11 +76,11 @@ public class GetLiveRoomStatisticsRequest extends Request {
             super();
         } 
 
-        private Builder(GetLiveRoomStatisticsRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.liveId = response.liveId;
-            this.regionId = response.regionId;
+        private Builder(GetLiveRoomStatisticsRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.liveId = request.liveId;
+            this.regionId = request.regionId;
         } 
 
         /**

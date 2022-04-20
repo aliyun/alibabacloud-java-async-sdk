@@ -115,14 +115,14 @@ public class UpdateClassRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateClassRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.classId = response.classId;
-            this.createNickname = response.createNickname;
-            this.createUserId = response.createUserId;
-            this.regionId = response.regionId;
-            this.title = response.title;
+        private Builder(UpdateClassRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.classId = request.classId;
+            this.createNickname = request.createNickname;
+            this.createUserId = request.createUserId;
+            this.regionId = request.regionId;
+            this.title = request.title;
         } 
 
         /**

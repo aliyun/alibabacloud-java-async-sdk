@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link AttachStandardRoomHttpsCertificateResponse} extends {@link TeaModel}
+ * {@link DeleteSensitiveWordResponse} extends {@link TeaModel}
  *
- * <p>AttachStandardRoomHttpsCertificateResponse</p>
+ * <p>DeleteSensitiveWordResponse</p>
  */
-public class AttachStandardRoomHttpsCertificateResponse extends Response {
+public class DeleteSensitiveWordResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private AttachStandardRoomHttpsCertificateResponseBody body;
+    private DeleteSensitiveWordResponseBody body;
 
-    private AttachStandardRoomHttpsCertificateResponse(BuilderImpl builder) {
+    private DeleteSensitiveWordResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static AttachStandardRoomHttpsCertificateResponse create() {
+    public static DeleteSensitiveWordResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class AttachStandardRoomHttpsCertificateResponse extends Response {
     /**
      * @return body
      */
-    public AttachStandardRoomHttpsCertificateResponseBody getBody() {
+    public DeleteSensitiveWordResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<AttachStandardRoomHttpsCertificateResponse, Builder> {
+    public interface Builder extends Response.Builder<DeleteSensitiveWordResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(AttachStandardRoomHttpsCertificateResponseBody body);
+        Builder body(DeleteSensitiveWordResponseBody body);
 
         @Override
-        AttachStandardRoomHttpsCertificateResponse build();
+        DeleteSensitiveWordResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<AttachStandardRoomHttpsCertificateResponse, Builder>
+            extends Response.BuilderImpl<DeleteSensitiveWordResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private AttachStandardRoomHttpsCertificateResponseBody body; 
+        private DeleteSensitiveWordResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(AttachStandardRoomHttpsCertificateResponse response) {
+        private BuilderImpl(DeleteSensitiveWordResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class AttachStandardRoomHttpsCertificateResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(AttachStandardRoomHttpsCertificateResponseBody body) {
+        public Builder body(DeleteSensitiveWordResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public AttachStandardRoomHttpsCertificateResponse build() {
-            return new AttachStandardRoomHttpsCertificateResponse(this);
+        public DeleteSensitiveWordResponse build() {
+            return new DeleteSensitiveWordResponse(this);
         } 
 
     } 

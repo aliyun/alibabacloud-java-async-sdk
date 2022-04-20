@@ -104,13 +104,13 @@ public class GetAuthTokenRequest extends Request {
             super();
         } 
 
-        private Builder(GetAuthTokenRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.appKey = response.appKey;
-            this.deviceId = response.deviceId;
-            this.regionId = response.regionId;
-            this.userId = response.userId;
+        private Builder(GetAuthTokenRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.appKey = request.appKey;
+            this.deviceId = request.deviceId;
+            this.regionId = request.regionId;
+            this.userId = request.userId;
         } 
 
         /**

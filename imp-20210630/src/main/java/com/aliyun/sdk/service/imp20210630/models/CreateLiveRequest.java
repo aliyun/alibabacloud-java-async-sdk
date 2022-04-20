@@ -155,17 +155,17 @@ public class CreateLiveRequest extends Request {
             super();
         } 
 
-        private Builder(CreateLiveRequest response) {
-            super(response);
-            this.anchorId = response.anchorId;
-            this.appId = response.appId;
-            this.codeLevel = response.codeLevel;
-            this.introduction = response.introduction;
-            this.liveId = response.liveId;
-            this.regionId = response.regionId;
-            this.roomId = response.roomId;
-            this.title = response.title;
-            this.userId = response.userId;
+        private Builder(CreateLiveRequest request) {
+            super(request);
+            this.anchorId = request.anchorId;
+            this.appId = request.appId;
+            this.codeLevel = request.codeLevel;
+            this.introduction = request.introduction;
+            this.liveId = request.liveId;
+            this.regionId = request.regionId;
+            this.roomId = request.roomId;
+            this.title = request.title;
+            this.userId = request.userId;
         } 
 
         /**

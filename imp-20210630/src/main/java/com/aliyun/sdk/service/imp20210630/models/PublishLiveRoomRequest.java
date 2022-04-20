@@ -89,12 +89,12 @@ public class PublishLiveRoomRequest extends Request {
             super();
         } 
 
-        private Builder(PublishLiveRoomRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.liveId = response.liveId;
-            this.regionId = response.regionId;
-            this.userId = response.userId;
+        private Builder(PublishLiveRoomRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.liveId = request.liveId;
+            this.regionId = request.regionId;
+            this.userId = request.userId;
         } 
 
         /**

@@ -146,16 +146,16 @@ public class GetStandardRoomJumpUrlRequest extends Request {
             super();
         } 
 
-        private Builder(GetStandardRoomJumpUrlRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.appKey = response.appKey;
-            this.bizId = response.bizId;
-            this.bizType = response.bizType;
-            this.platform = response.platform;
-            this.regionId = response.regionId;
-            this.userId = response.userId;
-            this.userNick = response.userNick;
+        private Builder(GetStandardRoomJumpUrlRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.appKey = request.appKey;
+            this.bizId = request.bizId;
+            this.bizType = request.bizType;
+            this.platform = request.platform;
+            this.regionId = request.regionId;
+            this.userId = request.userId;
+            this.userNick = request.userNick;
         } 
 
         /**

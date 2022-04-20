@@ -7,43 +7,36 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link SendCustomMessageToAllRequest} extends {@link RequestModel}
+ * {@link DeleteSensitiveWordRequest} extends {@link RequestModel}
  *
- * <p>SendCustomMessageToAllRequest</p>
+ * <p>DeleteSensitiveWordRequest</p>
  */
-public class SendCustomMessageToAllRequest extends Request {
+public class DeleteSensitiveWordRequest extends Request {
     @Body
     @NameInMap("AppId")
     @Validation(required = true)
     private String appId;
-
-    @Body
-    @NameInMap("Body")
-    @Validation(required = true)
-    private String body;
 
     @Host
     @NameInMap("RegionId")
     private String regionId;
 
     @Body
-    @NameInMap("RoomId")
-    @Validation(required = true)
-    private String roomId;
+    @NameInMap("WordList")
+    private java.util.List < String > wordList;
 
-    private SendCustomMessageToAllRequest(Builder builder) {
+    private DeleteSensitiveWordRequest(Builder builder) {
         super(builder);
         this.appId = builder.appId;
-        this.body = builder.body;
         this.regionId = builder.regionId;
-        this.roomId = builder.roomId;
+        this.wordList = builder.wordList;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static SendCustomMessageToAllRequest create() {
+    public static DeleteSensitiveWordRequest create() {
         return builder().build();
     }
 
@@ -60,13 +53,6 @@ public class SendCustomMessageToAllRequest extends Request {
     }
 
     /**
-     * @return body
-     */
-    public String getBody() {
-        return this.body;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -74,45 +60,34 @@ public class SendCustomMessageToAllRequest extends Request {
     }
 
     /**
-     * @return roomId
+     * @return wordList
      */
-    public String getRoomId() {
-        return this.roomId;
+    public java.util.List < String > getWordList() {
+        return this.wordList;
     }
 
-    public static final class Builder extends Request.Builder<SendCustomMessageToAllRequest, Builder> {
+    public static final class Builder extends Request.Builder<DeleteSensitiveWordRequest, Builder> {
         private String appId; 
-        private String body; 
         private String regionId; 
-        private String roomId; 
+        private java.util.List < String > wordList; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(SendCustomMessageToAllRequest request) {
+        private Builder(DeleteSensitiveWordRequest request) {
             super(request);
             this.appId = request.appId;
-            this.body = request.body;
             this.regionId = request.regionId;
-            this.roomId = request.roomId;
+            this.wordList = request.wordList;
         } 
 
         /**
-         * 应用唯一标识，由6位小写字母、数字组成。
+         * 弹幕发送者的用户ID，最大长度不超过32个字节。
          */
         public Builder appId(String appId) {
             this.putBodyParameter("AppId", appId);
             this.appId = appId;
-            return this;
-        }
-
-        /**
-         * 消息体内容。
-         */
-        public Builder body(String body) {
-            this.putBodyParameter("Body", body);
-            this.body = body;
             return this;
         }
 
@@ -126,17 +101,18 @@ public class SendCustomMessageToAllRequest extends Request {
         }
 
         /**
-         * 房间唯一标识，由调用CreateRoom返回。
+         * WordList.
          */
-        public Builder roomId(String roomId) {
-            this.putBodyParameter("RoomId", roomId);
-            this.roomId = roomId;
+        public Builder wordList(java.util.List < String > wordList) {
+            String wordListShrink = shrink(wordList, "WordList", "json");
+            this.putBodyParameter("WordList", wordListShrink);
+            this.wordList = wordList;
             return this;
         }
 
         @Override
-        public SendCustomMessageToAllRequest build() {
-            return new SendCustomMessageToAllRequest(this);
+        public DeleteSensitiveWordRequest build() {
+            return new DeleteSensitiveWordRequest(this);
         } 
 
     } 

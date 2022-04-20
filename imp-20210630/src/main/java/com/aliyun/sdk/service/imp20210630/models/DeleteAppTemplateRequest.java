@@ -62,10 +62,10 @@ public class DeleteAppTemplateRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteAppTemplateRequest response) {
-            super(response);
-            this.appTemplateId = response.appTemplateId;
-            this.regionId = response.regionId;
+        private Builder(DeleteAppTemplateRequest request) {
+            super(request);
+            this.appTemplateId = request.appTemplateId;
+            this.regionId = request.regionId;
         } 
 
         /**

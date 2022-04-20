@@ -76,11 +76,11 @@ public class CreateAppRequest extends Request {
             super();
         } 
 
-        private Builder(CreateAppRequest response) {
-            super(response);
-            this.appName = response.appName;
-            this.appTemplateId = response.appTemplateId;
-            this.regionId = response.regionId;
+        private Builder(CreateAppRequest request) {
+            super(request);
+            this.appName = request.appName;
+            this.appTemplateId = request.appTemplateId;
+            this.regionId = request.regionId;
         } 
 
         /**

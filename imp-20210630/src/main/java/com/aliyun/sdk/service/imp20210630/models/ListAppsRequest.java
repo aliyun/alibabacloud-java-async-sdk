@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListAppsRequest extends Request {
     @Body
+    @NameInMap("AppIds")
+    private String appIds;
+
+    @Body
     @NameInMap("IntegrationMode")
     private String integrationMode;
 
@@ -34,6 +38,7 @@ public class ListAppsRequest extends Request {
 
     private ListAppsRequest(Builder builder) {
         super(builder);
+        this.appIds = builder.appIds;
         this.integrationMode = builder.integrationMode;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -52,6 +57,13 @@ public class ListAppsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return appIds
+     */
+    public String getAppIds() {
+        return this.appIds;
     }
 
     /**
@@ -90,6 +102,7 @@ public class ListAppsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListAppsRequest, Builder> {
+        private String appIds; 
         private String integrationMode; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -100,14 +113,24 @@ public class ListAppsRequest extends Request {
             super();
         } 
 
-        private Builder(ListAppsRequest response) {
-            super(response);
-            this.integrationMode = response.integrationMode;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.status = response.status;
+        private Builder(ListAppsRequest request) {
+            super(request);
+            this.appIds = request.appIds;
+            this.integrationMode = request.integrationMode;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.status = request.status;
         } 
+
+        /**
+         * 过滤的应用id列表
+         */
+        public Builder appIds(String appIds) {
+            this.putBodyParameter("AppIds", appIds);
+            this.appIds = appIds;
+            return this;
+        }
 
         /**
          * 集成方式：- 一体化SDK：paasSDK - 样板间：standardRoom

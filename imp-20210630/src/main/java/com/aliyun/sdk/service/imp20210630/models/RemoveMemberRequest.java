@@ -90,12 +90,12 @@ public class RemoveMemberRequest extends Request {
             super();
         } 
 
-        private Builder(RemoveMemberRequest response) {
-            super(response);
-            this.conferenceId = response.conferenceId;
-            this.fromUserId = response.fromUserId;
-            this.regionId = response.regionId;
-            this.toUserId = response.toUserId;
+        private Builder(RemoveMemberRequest request) {
+            super(request);
+            this.conferenceId = request.conferenceId;
+            this.fromUserId = request.fromUserId;
+            this.regionId = request.regionId;
+            this.toUserId = request.toUserId;
         } 
 
         /**

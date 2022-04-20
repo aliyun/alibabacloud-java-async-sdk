@@ -90,12 +90,12 @@ public class AddMemberRequest extends Request {
             super();
         } 
 
-        private Builder(AddMemberRequest response) {
-            super(response);
-            this.conferenceId = response.conferenceId;
-            this.fromUserId = response.fromUserId;
-            this.regionId = response.regionId;
-            this.toUserId = response.toUserId;
+        private Builder(AddMemberRequest request) {
+            super(request);
+            this.conferenceId = request.conferenceId;
+            this.fromUserId = request.fromUserId;
+            this.regionId = request.regionId;
+            this.toUserId = request.toUserId;
         } 
 
         /**

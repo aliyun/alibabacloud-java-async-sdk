@@ -142,16 +142,16 @@ public class CreateRoomRequest extends Request {
             super();
         } 
 
-        private Builder(CreateRoomRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.extension = response.extension;
-            this.notice = response.notice;
-            this.regionId = response.regionId;
-            this.roomId = response.roomId;
-            this.roomOwnerId = response.roomOwnerId;
-            this.templateId = response.templateId;
-            this.title = response.title;
+        private Builder(CreateRoomRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.extension = request.extension;
+            this.notice = request.notice;
+            this.regionId = request.regionId;
+            this.roomId = request.roomId;
+            this.roomOwnerId = request.roomOwnerId;
+            this.templateId = request.templateId;
+            this.title = request.title;
         } 
 
         /**
@@ -167,7 +167,8 @@ public class CreateRoomRequest extends Request {
          * 拓展字段，按需传递，需要额外记录的房间属性。
          */
         public Builder extension(java.util.Map < String, String > extension) {
-            this.putBodyParameter("Extension", extension);
+            String extensionShrink = shrink(extension, "Extension", "json");
+            this.putBodyParameter("Extension", extensionShrink);
             this.extension = extension;
             return this;
         }

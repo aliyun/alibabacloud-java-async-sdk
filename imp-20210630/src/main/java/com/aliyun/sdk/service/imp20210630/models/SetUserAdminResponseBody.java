@@ -7,27 +7,23 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetImpProductStatusResponseBody} extends {@link TeaModel}
+ * {@link SetUserAdminResponseBody} extends {@link TeaModel}
  *
- * <p>GetImpProductStatusResponseBody</p>
+ * <p>SetUserAdminResponseBody</p>
  */
-public class GetImpProductStatusResponseBody extends TeaModel {
+public class SetUserAdminResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
-    private Boolean result;
-
-    private GetImpProductStatusResponseBody(Builder builder) {
+    private SetUserAdminResponseBody(Builder builder) {
         this.requestId = builder.requestId;
-        this.result = builder.result;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static GetImpProductStatusResponseBody create() {
+    public static SetUserAdminResponseBody create() {
         return builder().build();
     }
 
@@ -38,35 +34,19 @@ public class GetImpProductStatusResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    /**
-     * @return result
-     */
-    public Boolean getResult() {
-        return this.result;
-    }
-
     public static final class Builder {
         private String requestId; 
-        private Boolean result; 
 
         /**
-         * 请求ID
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        /**
-         * 开通状态
-         */
-        public Builder result(Boolean result) {
-            this.result = result;
-            return this;
-        }
-
-        public GetImpProductStatusResponseBody build() {
-            return new GetImpProductStatusResponseBody(this);
+        public SetUserAdminResponseBody build() {
+            return new SetUserAdminResponseBody(this);
         } 
 
     } 

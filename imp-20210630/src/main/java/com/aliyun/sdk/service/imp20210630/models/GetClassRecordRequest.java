@@ -89,12 +89,12 @@ public class GetClassRecordRequest extends Request {
             super();
         } 
 
-        private Builder(GetClassRecordRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.classId = response.classId;
-            this.regionId = response.regionId;
-            this.userId = response.userId;
+        private Builder(GetClassRecordRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.classId = request.classId;
+            this.regionId = request.regionId;
+            this.userId = request.userId;
         } 
 
         /**

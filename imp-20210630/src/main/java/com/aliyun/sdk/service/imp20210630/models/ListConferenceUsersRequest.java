@@ -90,12 +90,12 @@ public class ListConferenceUsersRequest extends Request {
             super();
         } 
 
-        private Builder(ListConferenceUsersRequest response) {
-            super(response);
-            this.conferenceId = response.conferenceId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
+        private Builder(ListConferenceUsersRequest request) {
+            super(request);
+            this.conferenceId = request.conferenceId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
         } 
 
         /**

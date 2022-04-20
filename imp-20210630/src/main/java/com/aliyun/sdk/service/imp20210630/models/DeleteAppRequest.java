@@ -62,10 +62,10 @@ public class DeleteAppRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteAppRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.regionId = response.regionId;
+        private Builder(DeleteAppRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.regionId = request.regionId;
         } 
 
         /**

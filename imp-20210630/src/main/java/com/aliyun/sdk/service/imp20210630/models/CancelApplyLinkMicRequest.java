@@ -76,11 +76,11 @@ public class CancelApplyLinkMicRequest extends Request {
             super();
         } 
 
-        private Builder(CancelApplyLinkMicRequest response) {
-            super(response);
-            this.conferenceId = response.conferenceId;
-            this.regionId = response.regionId;
-            this.userId = response.userId;
+        private Builder(CancelApplyLinkMicRequest request) {
+            super(request);
+            this.conferenceId = request.conferenceId;
+            this.regionId = request.regionId;
+            this.userId = request.userId;
         } 
 
         /**

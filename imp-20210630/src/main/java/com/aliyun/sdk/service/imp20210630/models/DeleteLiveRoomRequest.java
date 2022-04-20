@@ -89,12 +89,12 @@ public class DeleteLiveRoomRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteLiveRoomRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.liveId = response.liveId;
-            this.regionId = response.regionId;
-            this.userId = response.userId;
+        private Builder(DeleteLiveRoomRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.liveId = request.liveId;
+            this.regionId = request.regionId;
+            this.userId = request.userId;
         } 
 
         /**

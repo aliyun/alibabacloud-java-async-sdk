@@ -7,18 +7,18 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link AttachStandardRoomHttpsCertificateResponseBody} extends {@link TeaModel}
+ * {@link DeleteSensitiveWordResponseBody} extends {@link TeaModel}
  *
- * <p>AttachStandardRoomHttpsCertificateResponseBody</p>
+ * <p>DeleteSensitiveWordResponseBody</p>
  */
-public class AttachStandardRoomHttpsCertificateResponseBody extends TeaModel {
+public class DeleteSensitiveWordResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
     @NameInMap("Result")
     private Result result;
 
-    private AttachStandardRoomHttpsCertificateResponseBody(Builder builder) {
+    private DeleteSensitiveWordResponseBody(Builder builder) {
         this.requestId = builder.requestId;
         this.result = builder.result;
     }
@@ -27,7 +27,7 @@ public class AttachStandardRoomHttpsCertificateResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static AttachStandardRoomHttpsCertificateResponseBody create() {
+    public static DeleteSensitiveWordResponseBody create() {
         return builder().build();
     }
 
@@ -50,7 +50,7 @@ public class AttachStandardRoomHttpsCertificateResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * 请求ID
+         * 请求ID。
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,25 +58,25 @@ public class AttachStandardRoomHttpsCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * 返回结果
+         * 调用发送直播间弹幕的返回结果。
          */
         public Builder result(Result result) {
             this.result = result;
             return this;
         }
 
-        public AttachStandardRoomHttpsCertificateResponseBody build() {
-            return new AttachStandardRoomHttpsCertificateResponseBody(this);
+        public DeleteSensitiveWordResponseBody build() {
+            return new DeleteSensitiveWordResponseBody(this);
         } 
 
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("CertificateId")
-        private String certificateId;
+        @NameInMap("Success")
+        private Boolean success;
 
         private Result(Builder builder) {
-            this.certificateId = builder.certificateId;
+            this.success = builder.success;
         }
 
         public static Builder builder() {
@@ -88,20 +88,20 @@ public class AttachStandardRoomHttpsCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * @return certificateId
+         * @return success
          */
-        public String getCertificateId() {
-            return this.certificateId;
+        public Boolean getSuccess() {
+            return this.success;
         }
 
         public static final class Builder {
-            private String certificateId; 
+            private Boolean success; 
 
             /**
-             * 证书Id
+             * Success.
              */
-            public Builder certificateId(String certificateId) {
-                this.certificateId = certificateId;
+            public Builder success(Boolean success) {
+                this.success = success;
                 return this;
             }
 

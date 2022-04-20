@@ -62,10 +62,10 @@ public class GetLiveRequest extends Request {
             super();
         } 
 
-        private Builder(GetLiveRequest response) {
-            super(response);
-            this.liveId = response.liveId;
-            this.regionId = response.regionId;
+        private Builder(GetLiveRequest request) {
+            super(request);
+            this.liveId = request.liveId;
+            this.regionId = request.regionId;
         } 
 
         /**

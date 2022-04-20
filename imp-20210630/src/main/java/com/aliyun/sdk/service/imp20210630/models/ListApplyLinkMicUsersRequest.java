@@ -90,12 +90,12 @@ public class ListApplyLinkMicUsersRequest extends Request {
             super();
         } 
 
-        private Builder(ListApplyLinkMicUsersRequest response) {
-            super(response);
-            this.conferenceId = response.conferenceId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
+        private Builder(ListApplyLinkMicUsersRequest request) {
+            super(request);
+            this.conferenceId = request.conferenceId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
         } 
 
         /**

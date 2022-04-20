@@ -89,12 +89,12 @@ public class StopClassRequest extends Request {
             super();
         } 
 
-        private Builder(StopClassRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.classId = response.classId;
-            this.regionId = response.regionId;
-            this.userId = response.userId;
+        private Builder(StopClassRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.classId = request.classId;
+            this.regionId = request.regionId;
+            this.userId = request.userId;
         } 
 
         /**
