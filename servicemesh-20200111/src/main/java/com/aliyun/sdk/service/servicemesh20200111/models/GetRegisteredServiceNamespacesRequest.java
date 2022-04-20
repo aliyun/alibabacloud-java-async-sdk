@@ -49,9 +49,9 @@ public class GetRegisteredServiceNamespacesRequest extends Request {
             super();
         } 
 
-        private Builder(GetRegisteredServiceNamespacesRequest response) {
-            super(response);
-            this.serviceMeshId = response.serviceMeshId;
+        private Builder(GetRegisteredServiceNamespacesRequest request) {
+            super(request);
+            this.serviceMeshId = request.serviceMeshId;
         } 
 
         /**

@@ -63,10 +63,10 @@ public class RemoveClusterFromServiceMeshRequest extends Request {
             super();
         } 
 
-        private Builder(RemoveClusterFromServiceMeshRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.serviceMeshId = response.serviceMeshId;
+        private Builder(RemoveClusterFromServiceMeshRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.serviceMeshId = request.serviceMeshId;
         } 
 
         /**

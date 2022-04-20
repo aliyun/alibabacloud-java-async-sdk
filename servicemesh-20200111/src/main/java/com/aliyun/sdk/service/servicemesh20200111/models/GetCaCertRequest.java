@@ -49,9 +49,9 @@ public class GetCaCertRequest extends Request {
             super();
         } 
 
-        private Builder(GetCaCertRequest response) {
-            super(response);
-            this.serviceMeshId = response.serviceMeshId;
+        private Builder(GetCaCertRequest request) {
+            super(request);
+            this.serviceMeshId = request.serviceMeshId;
         } 
 
         /**

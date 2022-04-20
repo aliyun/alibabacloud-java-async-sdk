@@ -63,10 +63,10 @@ public class RemoveVMFromServiceMeshRequest extends Request {
             super();
         } 
 
-        private Builder(RemoveVMFromServiceMeshRequest response) {
-            super(response);
-            this.ecsId = response.ecsId;
-            this.serviceMeshId = response.serviceMeshId;
+        private Builder(RemoveVMFromServiceMeshRequest request) {
+            super(request);
+            this.ecsId = request.ecsId;
+            this.serviceMeshId = request.serviceMeshId;
         } 
 
         /**

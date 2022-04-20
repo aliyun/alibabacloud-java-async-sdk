@@ -75,11 +75,11 @@ public class DescribeImportedServicesDetailRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeImportedServicesDetailRequest response) {
-            super(response);
-            this.ASMGatewayName = response.ASMGatewayName;
-            this.serviceMeshId = response.serviceMeshId;
-            this.serviceNamespace = response.serviceNamespace;
+        private Builder(DescribeImportedServicesDetailRequest request) {
+            super(request);
+            this.ASMGatewayName = request.ASMGatewayName;
+            this.serviceMeshId = request.serviceMeshId;
+            this.serviceNamespace = request.serviceNamespace;
         } 
 
         /**

@@ -49,9 +49,9 @@ public class DescribeUsersWithPermissionsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeUsersWithPermissionsRequest response) {
-            super(response);
-            this.userType = response.userType;
+        private Builder(DescribeUsersWithPermissionsRequest request) {
+            super(request);
+            this.userType = request.userType;
         } 
 
         /**

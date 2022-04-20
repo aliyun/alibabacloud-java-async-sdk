@@ -49,9 +49,9 @@ public class DescribeVpcsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeVpcsRequest response) {
-            super(response);
-            this.regionId = response.regionId;
+        private Builder(DescribeVpcsRequest request) {
+            super(request);
+            this.regionId = request.regionId;
         } 
 
         /**

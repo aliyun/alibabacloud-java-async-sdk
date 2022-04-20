@@ -63,10 +63,10 @@ public class AddClusterIntoServiceMeshRequest extends Request {
             super();
         } 
 
-        private Builder(AddClusterIntoServiceMeshRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.serviceMeshId = response.serviceMeshId;
+        private Builder(AddClusterIntoServiceMeshRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.serviceMeshId = request.serviceMeshId;
         } 
 
         /**

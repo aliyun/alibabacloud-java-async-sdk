@@ -49,9 +49,9 @@ public class DescribeUpgradeVersionRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeUpgradeVersionRequest response) {
-            super(response);
-            this.serviceMeshId = response.serviceMeshId;
+        private Builder(DescribeUpgradeVersionRequest request) {
+            super(request);
+            this.serviceMeshId = request.serviceMeshId;
         } 
 
         /**

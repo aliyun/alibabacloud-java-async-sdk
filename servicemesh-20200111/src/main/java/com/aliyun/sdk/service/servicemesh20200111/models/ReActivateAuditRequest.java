@@ -62,10 +62,10 @@ public class ReActivateAuditRequest extends Request {
             super();
         } 
 
-        private Builder(ReActivateAuditRequest response) {
-            super(response);
-            this.enableAudit = response.enableAudit;
-            this.serviceMeshId = response.serviceMeshId;
+        private Builder(ReActivateAuditRequest request) {
+            super(request);
+            this.enableAudit = request.enableAudit;
+            this.serviceMeshId = request.serviceMeshId;
         } 
 
         /**

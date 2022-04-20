@@ -101,13 +101,13 @@ public class GetRegisteredServiceEndpointsRequest extends Request {
             super();
         } 
 
-        private Builder(GetRegisteredServiceEndpointsRequest response) {
-            super(response);
-            this.clusterIds = response.clusterIds;
-            this.name = response.name;
-            this.namespace = response.namespace;
-            this.serviceMeshId = response.serviceMeshId;
-            this.serviceType = response.serviceType;
+        private Builder(GetRegisteredServiceEndpointsRequest request) {
+            super(request);
+            this.clusterIds = request.clusterIds;
+            this.name = request.name;
+            this.namespace = request.namespace;
+            this.serviceMeshId = request.serviceMeshId;
+            this.serviceType = request.serviceType;
         } 
 
         /**

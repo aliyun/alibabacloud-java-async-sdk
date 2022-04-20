@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
     @Body
+    @NameInMap("Concurrency")
+    private Integer concurrency;
+
+    @Body
     @NameInMap("ExcludeIPRanges")
     private String excludeIPRanges;
 
@@ -23,6 +27,10 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
     @Body
     @NameInMap("ExcludeOutboundPorts")
     private String excludeOutboundPorts;
+
+    @Body
+    @NameInMap("HoldApplicationUntilProxyStarts")
+    private Boolean holdApplicationUntilProxyStarts;
 
     @Body
     @NameInMap("IncludeIPRanges")
@@ -45,8 +53,20 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
     private String lifecycle;
 
     @Body
+    @NameInMap("LogLevel")
+    private String logLevel;
+
+    @Body
     @NameInMap("Namespace")
     private String namespace;
+
+    @Body
+    @NameInMap("PostStart")
+    private String postStart;
+
+    @Body
+    @NameInMap("PreStop")
+    private String preStop;
 
     @Body
     @NameInMap("ProxyInitCPUResourceLimit")
@@ -63,6 +83,10 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
     @Body
     @NameInMap("ProxyInitMemoryResourceRequest")
     private String proxyInitMemoryResourceRequest;
+
+    @Body
+    @NameInMap("ProxyStatsMatcher")
+    private String proxyStatsMatcher;
 
     @Body
     @NameInMap("ServiceMeshId")
@@ -91,19 +115,25 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
 
     private UpdateNamespaceScopeSidecarConfigRequest(Builder builder) {
         super(builder);
+        this.concurrency = builder.concurrency;
         this.excludeIPRanges = builder.excludeIPRanges;
         this.excludeInboundPorts = builder.excludeInboundPorts;
         this.excludeOutboundPorts = builder.excludeOutboundPorts;
+        this.holdApplicationUntilProxyStarts = builder.holdApplicationUntilProxyStarts;
         this.includeIPRanges = builder.includeIPRanges;
         this.includeInboundPorts = builder.includeInboundPorts;
         this.includeOutboundPorts = builder.includeOutboundPorts;
         this.istioDNSProxyEnabled = builder.istioDNSProxyEnabled;
         this.lifecycle = builder.lifecycle;
+        this.logLevel = builder.logLevel;
         this.namespace = builder.namespace;
+        this.postStart = builder.postStart;
+        this.preStop = builder.preStop;
         this.proxyInitCPUResourceLimit = builder.proxyInitCPUResourceLimit;
         this.proxyInitCPUResourceRequest = builder.proxyInitCPUResourceRequest;
         this.proxyInitMemoryResourceLimit = builder.proxyInitMemoryResourceLimit;
         this.proxyInitMemoryResourceRequest = builder.proxyInitMemoryResourceRequest;
+        this.proxyStatsMatcher = builder.proxyStatsMatcher;
         this.serviceMeshId = builder.serviceMeshId;
         this.sidecarProxyCPUResourceLimit = builder.sidecarProxyCPUResourceLimit;
         this.sidecarProxyCPUResourceRequest = builder.sidecarProxyCPUResourceRequest;
@@ -126,6 +156,13 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
     }
 
     /**
+     * @return concurrency
+     */
+    public Integer getConcurrency() {
+        return this.concurrency;
+    }
+
+    /**
      * @return excludeIPRanges
      */
     public String getExcludeIPRanges() {
@@ -144,6 +181,13 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
      */
     public String getExcludeOutboundPorts() {
         return this.excludeOutboundPorts;
+    }
+
+    /**
+     * @return holdApplicationUntilProxyStarts
+     */
+    public Boolean getHoldApplicationUntilProxyStarts() {
+        return this.holdApplicationUntilProxyStarts;
     }
 
     /**
@@ -182,10 +226,31 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
     }
 
     /**
+     * @return logLevel
+     */
+    public String getLogLevel() {
+        return this.logLevel;
+    }
+
+    /**
      * @return namespace
      */
     public String getNamespace() {
         return this.namespace;
+    }
+
+    /**
+     * @return postStart
+     */
+    public String getPostStart() {
+        return this.postStart;
+    }
+
+    /**
+     * @return preStop
+     */
+    public String getPreStop() {
+        return this.preStop;
     }
 
     /**
@@ -214,6 +279,13 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
      */
     public String getProxyInitMemoryResourceRequest() {
         return this.proxyInitMemoryResourceRequest;
+    }
+
+    /**
+     * @return proxyStatsMatcher
+     */
+    public String getProxyStatsMatcher() {
+        return this.proxyStatsMatcher;
     }
 
     /**
@@ -259,19 +331,25 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateNamespaceScopeSidecarConfigRequest, Builder> {
+        private Integer concurrency; 
         private String excludeIPRanges; 
         private String excludeInboundPorts; 
         private String excludeOutboundPorts; 
+        private Boolean holdApplicationUntilProxyStarts; 
         private String includeIPRanges; 
         private String includeInboundPorts; 
         private String includeOutboundPorts; 
         private Boolean istioDNSProxyEnabled; 
         private String lifecycle; 
+        private String logLevel; 
         private String namespace; 
+        private String postStart; 
+        private String preStop; 
         private String proxyInitCPUResourceLimit; 
         private String proxyInitCPUResourceRequest; 
         private String proxyInitMemoryResourceLimit; 
         private String proxyInitMemoryResourceRequest; 
+        private String proxyStatsMatcher; 
         private String serviceMeshId; 
         private String sidecarProxyCPUResourceLimit; 
         private String sidecarProxyCPUResourceRequest; 
@@ -283,28 +361,43 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateNamespaceScopeSidecarConfigRequest response) {
-            super(response);
-            this.excludeIPRanges = response.excludeIPRanges;
-            this.excludeInboundPorts = response.excludeInboundPorts;
-            this.excludeOutboundPorts = response.excludeOutboundPorts;
-            this.includeIPRanges = response.includeIPRanges;
-            this.includeInboundPorts = response.includeInboundPorts;
-            this.includeOutboundPorts = response.includeOutboundPorts;
-            this.istioDNSProxyEnabled = response.istioDNSProxyEnabled;
-            this.lifecycle = response.lifecycle;
-            this.namespace = response.namespace;
-            this.proxyInitCPUResourceLimit = response.proxyInitCPUResourceLimit;
-            this.proxyInitCPUResourceRequest = response.proxyInitCPUResourceRequest;
-            this.proxyInitMemoryResourceLimit = response.proxyInitMemoryResourceLimit;
-            this.proxyInitMemoryResourceRequest = response.proxyInitMemoryResourceRequest;
-            this.serviceMeshId = response.serviceMeshId;
-            this.sidecarProxyCPUResourceLimit = response.sidecarProxyCPUResourceLimit;
-            this.sidecarProxyCPUResourceRequest = response.sidecarProxyCPUResourceRequest;
-            this.sidecarProxyMemoryResourceLimit = response.sidecarProxyMemoryResourceLimit;
-            this.sidecarProxyMemoryResourceRequest = response.sidecarProxyMemoryResourceRequest;
-            this.terminationDrainDuration = response.terminationDrainDuration;
+        private Builder(UpdateNamespaceScopeSidecarConfigRequest request) {
+            super(request);
+            this.concurrency = request.concurrency;
+            this.excludeIPRanges = request.excludeIPRanges;
+            this.excludeInboundPorts = request.excludeInboundPorts;
+            this.excludeOutboundPorts = request.excludeOutboundPorts;
+            this.holdApplicationUntilProxyStarts = request.holdApplicationUntilProxyStarts;
+            this.includeIPRanges = request.includeIPRanges;
+            this.includeInboundPorts = request.includeInboundPorts;
+            this.includeOutboundPorts = request.includeOutboundPorts;
+            this.istioDNSProxyEnabled = request.istioDNSProxyEnabled;
+            this.lifecycle = request.lifecycle;
+            this.logLevel = request.logLevel;
+            this.namespace = request.namespace;
+            this.postStart = request.postStart;
+            this.preStop = request.preStop;
+            this.proxyInitCPUResourceLimit = request.proxyInitCPUResourceLimit;
+            this.proxyInitCPUResourceRequest = request.proxyInitCPUResourceRequest;
+            this.proxyInitMemoryResourceLimit = request.proxyInitMemoryResourceLimit;
+            this.proxyInitMemoryResourceRequest = request.proxyInitMemoryResourceRequest;
+            this.proxyStatsMatcher = request.proxyStatsMatcher;
+            this.serviceMeshId = request.serviceMeshId;
+            this.sidecarProxyCPUResourceLimit = request.sidecarProxyCPUResourceLimit;
+            this.sidecarProxyCPUResourceRequest = request.sidecarProxyCPUResourceRequest;
+            this.sidecarProxyMemoryResourceLimit = request.sidecarProxyMemoryResourceLimit;
+            this.sidecarProxyMemoryResourceRequest = request.sidecarProxyMemoryResourceRequest;
+            this.terminationDrainDuration = request.terminationDrainDuration;
         } 
+
+        /**
+         * Concurrency.
+         */
+        public Builder concurrency(Integer concurrency) {
+            this.putBodyParameter("Concurrency", concurrency);
+            this.concurrency = concurrency;
+            return this;
+        }
 
         /**
          * ExcludeIPRanges.
@@ -330,6 +423,15 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
         public Builder excludeOutboundPorts(String excludeOutboundPorts) {
             this.putBodyParameter("ExcludeOutboundPorts", excludeOutboundPorts);
             this.excludeOutboundPorts = excludeOutboundPorts;
+            return this;
+        }
+
+        /**
+         * HoldApplicationUntilProxyStarts.
+         */
+        public Builder holdApplicationUntilProxyStarts(Boolean holdApplicationUntilProxyStarts) {
+            this.putBodyParameter("HoldApplicationUntilProxyStarts", holdApplicationUntilProxyStarts);
+            this.holdApplicationUntilProxyStarts = holdApplicationUntilProxyStarts;
             return this;
         }
 
@@ -379,11 +481,38 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
         }
 
         /**
+         * LogLevel.
+         */
+        public Builder logLevel(String logLevel) {
+            this.putBodyParameter("LogLevel", logLevel);
+            this.logLevel = logLevel;
+            return this;
+        }
+
+        /**
          * Namespace.
          */
         public Builder namespace(String namespace) {
             this.putBodyParameter("Namespace", namespace);
             this.namespace = namespace;
+            return this;
+        }
+
+        /**
+         * PostStart.
+         */
+        public Builder postStart(String postStart) {
+            this.putBodyParameter("PostStart", postStart);
+            this.postStart = postStart;
+            return this;
+        }
+
+        /**
+         * PreStop.
+         */
+        public Builder preStop(String preStop) {
+            this.putBodyParameter("PreStop", preStop);
+            this.preStop = preStop;
             return this;
         }
 
@@ -420,6 +549,15 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
         public Builder proxyInitMemoryResourceRequest(String proxyInitMemoryResourceRequest) {
             this.putBodyParameter("ProxyInitMemoryResourceRequest", proxyInitMemoryResourceRequest);
             this.proxyInitMemoryResourceRequest = proxyInitMemoryResourceRequest;
+            return this;
+        }
+
+        /**
+         * ProxyStatsMatcher.
+         */
+        public Builder proxyStatsMatcher(String proxyStatsMatcher) {
+            this.putBodyParameter("ProxyStatsMatcher", proxyStatsMatcher);
+            this.proxyStatsMatcher = proxyStatsMatcher;
             return this;
         }
 

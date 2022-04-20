@@ -49,9 +49,9 @@ public class DescribeGuestClusterAccessLogDashboardsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeGuestClusterAccessLogDashboardsRequest response) {
-            super(response);
-            this.k8sClusterId = response.k8sClusterId;
+        private Builder(DescribeGuestClusterAccessLogDashboardsRequest request) {
+            super(request);
+            this.k8sClusterId = request.k8sClusterId;
         } 
 
         /**

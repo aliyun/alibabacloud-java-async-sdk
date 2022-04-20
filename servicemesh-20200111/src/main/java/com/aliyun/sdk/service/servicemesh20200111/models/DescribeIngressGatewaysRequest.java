@@ -48,9 +48,9 @@ public class DescribeIngressGatewaysRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeIngressGatewaysRequest response) {
-            super(response);
-            this.serviceMeshId = response.serviceMeshId;
+        private Builder(DescribeIngressGatewaysRequest request) {
+            super(request);
+            this.serviceMeshId = request.serviceMeshId;
         } 
 
         /**

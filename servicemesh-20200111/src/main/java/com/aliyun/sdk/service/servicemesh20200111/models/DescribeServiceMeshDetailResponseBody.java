@@ -800,7 +800,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
 
     }
     public static class Exec extends TeaModel {
-        @NameInMap("Command")
+        @NameInMap("command")
         private java.util.List < String > command;
 
         private Exec(Builder builder) {
@@ -826,7 +826,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             private java.util.List < String > command; 
 
             /**
-             * Command.
+             * command.
              */
             public Builder command(java.util.List < String > command) {
                 this.command = command;
@@ -840,14 +840,14 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         } 
 
     }
-    public static class HTTPHeaders extends TeaModel {
-        @NameInMap("Name")
+    public static class HttpHeaders extends TeaModel {
+        @NameInMap("name")
         private String name;
 
-        @NameInMap("Value")
+        @NameInMap("value")
         private String value;
 
-        private HTTPHeaders(Builder builder) {
+        private HttpHeaders(Builder builder) {
             this.name = builder.name;
             this.value = builder.value;
         }
@@ -856,7 +856,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static HTTPHeaders create() {
+        public static HttpHeaders create() {
             return builder().build();
         }
 
@@ -879,7 +879,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Name.
+             * name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -887,36 +887,36 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * value.
              */
             public Builder value(String value) {
                 this.value = value;
                 return this;
             }
 
-            public HTTPHeaders build() {
-                return new HTTPHeaders(this);
+            public HttpHeaders build() {
+                return new HttpHeaders(this);
             } 
 
         } 
 
     }
-    public static class HTTPGet extends TeaModel {
-        @NameInMap("HTTPHeaders")
-        private java.util.List < HTTPHeaders> HTTPHeaders;
-
-        @NameInMap("Host")
+    public static class HttpGet extends TeaModel {
+        @NameInMap("host")
         private String host;
 
-        @NameInMap("Port")
+        @NameInMap("httpHeaders")
+        private java.util.List < HttpHeaders> httpHeaders;
+
+        @NameInMap("port")
         private String port;
 
-        @NameInMap("Scheme")
+        @NameInMap("scheme")
         private String scheme;
 
-        private HTTPGet(Builder builder) {
-            this.HTTPHeaders = builder.HTTPHeaders;
+        private HttpGet(Builder builder) {
             this.host = builder.host;
+            this.httpHeaders = builder.httpHeaders;
             this.port = builder.port;
             this.scheme = builder.scheme;
         }
@@ -925,15 +925,8 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static HTTPGet create() {
+        public static HttpGet create() {
             return builder().build();
-        }
-
-        /**
-         * @return HTTPHeaders
-         */
-        public java.util.List < HTTPHeaders> getHTTPHeaders() {
-            return this.HTTPHeaders;
         }
 
         /**
@@ -941,6 +934,13 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
          */
         public String getHost() {
             return this.host;
+        }
+
+        /**
+         * @return httpHeaders
+         */
+        public java.util.List < HttpHeaders> getHttpHeaders() {
+            return this.httpHeaders;
         }
 
         /**
@@ -958,21 +958,13 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < HTTPHeaders> HTTPHeaders; 
             private String host; 
+            private java.util.List < HttpHeaders> httpHeaders; 
             private String port; 
             private String scheme; 
 
             /**
-             * HTTPHeaders.
-             */
-            public Builder HTTPHeaders(java.util.List < HTTPHeaders> HTTPHeaders) {
-                this.HTTPHeaders = HTTPHeaders;
-                return this;
-            }
-
-            /**
-             * Host.
+             * host.
              */
             public Builder host(String host) {
                 this.host = host;
@@ -980,7 +972,15 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * httpHeaders.
+             */
+            public Builder httpHeaders(java.util.List < HttpHeaders> httpHeaders) {
+                this.httpHeaders = httpHeaders;
+                return this;
+            }
+
+            /**
+             * port.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -988,28 +988,28 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Scheme.
+             * scheme.
              */
             public Builder scheme(String scheme) {
                 this.scheme = scheme;
                 return this;
             }
 
-            public HTTPGet build() {
-                return new HTTPGet(this);
+            public HttpGet build() {
+                return new HttpGet(this);
             } 
 
         } 
 
     }
-    public static class TCPSocket extends TeaModel {
-        @NameInMap("Host")
+    public static class TcpSocket extends TeaModel {
+        @NameInMap("host")
         private String host;
 
-        @NameInMap("Port")
+        @NameInMap("port")
         private String port;
 
-        private TCPSocket(Builder builder) {
+        private TcpSocket(Builder builder) {
             this.host = builder.host;
             this.port = builder.port;
         }
@@ -1018,7 +1018,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static TCPSocket create() {
+        public static TcpSocket create() {
             return builder().build();
         }
 
@@ -1041,7 +1041,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             private String port; 
 
             /**
-             * Host.
+             * host.
              */
             public Builder host(String host) {
                 this.host = host;
@@ -1049,34 +1049,34 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * port.
              */
             public Builder port(String port) {
                 this.port = port;
                 return this;
             }
 
-            public TCPSocket build() {
-                return new TCPSocket(this);
+            public TcpSocket build() {
+                return new TcpSocket(this);
             } 
 
         } 
 
     }
     public static class PostStart extends TeaModel {
-        @NameInMap("Exec")
+        @NameInMap("exec")
         private Exec exec;
 
-        @NameInMap("HTTPGet")
-        private HTTPGet HTTPGet;
+        @NameInMap("httpGet")
+        private HttpGet httpGet;
 
-        @NameInMap("TCPSocket")
-        private TCPSocket TCPSocket;
+        @NameInMap("tcpSocket")
+        private TcpSocket tcpSocket;
 
         private PostStart(Builder builder) {
             this.exec = builder.exec;
-            this.HTTPGet = builder.HTTPGet;
-            this.TCPSocket = builder.TCPSocket;
+            this.httpGet = builder.httpGet;
+            this.tcpSocket = builder.tcpSocket;
         }
 
         public static Builder builder() {
@@ -1095,26 +1095,26 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         }
 
         /**
-         * @return HTTPGet
+         * @return httpGet
          */
-        public HTTPGet getHTTPGet() {
-            return this.HTTPGet;
+        public HttpGet getHttpGet() {
+            return this.httpGet;
         }
 
         /**
-         * @return TCPSocket
+         * @return tcpSocket
          */
-        public TCPSocket getTCPSocket() {
-            return this.TCPSocket;
+        public TcpSocket getTcpSocket() {
+            return this.tcpSocket;
         }
 
         public static final class Builder {
             private Exec exec; 
-            private HTTPGet HTTPGet; 
-            private TCPSocket TCPSocket; 
+            private HttpGet httpGet; 
+            private TcpSocket tcpSocket; 
 
             /**
-             * Exec.
+             * exec.
              */
             public Builder exec(Exec exec) {
                 this.exec = exec;
@@ -1122,18 +1122,18 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * HTTPGet.
+             * httpGet.
              */
-            public Builder HTTPGet(HTTPGet HTTPGet) {
-                this.HTTPGet = HTTPGet;
+            public Builder httpGet(HttpGet httpGet) {
+                this.httpGet = httpGet;
                 return this;
             }
 
             /**
-             * TCPSocket.
+             * tcpSocket.
              */
-            public Builder TCPSocket(TCPSocket TCPSocket) {
-                this.TCPSocket = TCPSocket;
+            public Builder tcpSocket(TcpSocket tcpSocket) {
+                this.tcpSocket = tcpSocket;
                 return this;
             }
 
@@ -1145,7 +1145,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
 
     }
     public static class PreStopExec extends TeaModel {
-        @NameInMap("Command")
+        @NameInMap("command")
         private java.util.List < String > command;
 
         private PreStopExec(Builder builder) {
@@ -1171,7 +1171,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             private java.util.List < String > command; 
 
             /**
-             * Command.
+             * command.
              */
             public Builder command(java.util.List < String > command) {
                 this.command = command;
@@ -1185,14 +1185,14 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         } 
 
     }
-    public static class HTTPGetHTTPHeaders extends TeaModel {
-        @NameInMap("Name")
+    public static class HttpGetHttpHeaders extends TeaModel {
+        @NameInMap("name")
         private String name;
 
-        @NameInMap("Value")
+        @NameInMap("value")
         private String value;
 
-        private HTTPGetHTTPHeaders(Builder builder) {
+        private HttpGetHttpHeaders(Builder builder) {
             this.name = builder.name;
             this.value = builder.value;
         }
@@ -1201,7 +1201,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static HTTPGetHTTPHeaders create() {
+        public static HttpGetHttpHeaders create() {
             return builder().build();
         }
 
@@ -1224,7 +1224,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Name.
+             * name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1232,36 +1232,36 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * value.
              */
             public Builder value(String value) {
                 this.value = value;
                 return this;
             }
 
-            public HTTPGetHTTPHeaders build() {
-                return new HTTPGetHTTPHeaders(this);
+            public HttpGetHttpHeaders build() {
+                return new HttpGetHttpHeaders(this);
             } 
 
         } 
 
     }
-    public static class PreStopHTTPGet extends TeaModel {
-        @NameInMap("HTTPHeaders")
-        private java.util.List < HTTPGetHTTPHeaders> HTTPHeaders;
-
-        @NameInMap("Host")
+    public static class PreStopHttpGet extends TeaModel {
+        @NameInMap("host")
         private String host;
 
-        @NameInMap("Port")
+        @NameInMap("httpHeaders")
+        private java.util.List < HttpGetHttpHeaders> httpHeaders;
+
+        @NameInMap("port")
         private String port;
 
-        @NameInMap("Scheme")
+        @NameInMap("scheme")
         private String scheme;
 
-        private PreStopHTTPGet(Builder builder) {
-            this.HTTPHeaders = builder.HTTPHeaders;
+        private PreStopHttpGet(Builder builder) {
             this.host = builder.host;
+            this.httpHeaders = builder.httpHeaders;
             this.port = builder.port;
             this.scheme = builder.scheme;
         }
@@ -1270,15 +1270,8 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static PreStopHTTPGet create() {
+        public static PreStopHttpGet create() {
             return builder().build();
-        }
-
-        /**
-         * @return HTTPHeaders
-         */
-        public java.util.List < HTTPGetHTTPHeaders> getHTTPHeaders() {
-            return this.HTTPHeaders;
         }
 
         /**
@@ -1286,6 +1279,13 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
          */
         public String getHost() {
             return this.host;
+        }
+
+        /**
+         * @return httpHeaders
+         */
+        public java.util.List < HttpGetHttpHeaders> getHttpHeaders() {
+            return this.httpHeaders;
         }
 
         /**
@@ -1303,21 +1303,13 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < HTTPGetHTTPHeaders> HTTPHeaders; 
             private String host; 
+            private java.util.List < HttpGetHttpHeaders> httpHeaders; 
             private String port; 
             private String scheme; 
 
             /**
-             * HTTPHeaders.
-             */
-            public Builder HTTPHeaders(java.util.List < HTTPGetHTTPHeaders> HTTPHeaders) {
-                this.HTTPHeaders = HTTPHeaders;
-                return this;
-            }
-
-            /**
-             * Host.
+             * host.
              */
             public Builder host(String host) {
                 this.host = host;
@@ -1325,7 +1317,15 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * httpHeaders.
+             */
+            public Builder httpHeaders(java.util.List < HttpGetHttpHeaders> httpHeaders) {
+                this.httpHeaders = httpHeaders;
+                return this;
+            }
+
+            /**
+             * port.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -1333,28 +1333,28 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Scheme.
+             * scheme.
              */
             public Builder scheme(String scheme) {
                 this.scheme = scheme;
                 return this;
             }
 
-            public PreStopHTTPGet build() {
-                return new PreStopHTTPGet(this);
+            public PreStopHttpGet build() {
+                return new PreStopHttpGet(this);
             } 
 
         } 
 
     }
-    public static class PreStopTCPSocket extends TeaModel {
-        @NameInMap("Host")
+    public static class PreStopTcpSocket extends TeaModel {
+        @NameInMap("host")
         private String host;
 
-        @NameInMap("Port")
+        @NameInMap("port")
         private String port;
 
-        private PreStopTCPSocket(Builder builder) {
+        private PreStopTcpSocket(Builder builder) {
             this.host = builder.host;
             this.port = builder.port;
         }
@@ -1363,7 +1363,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static PreStopTCPSocket create() {
+        public static PreStopTcpSocket create() {
             return builder().build();
         }
 
@@ -1386,7 +1386,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             private String port; 
 
             /**
-             * Host.
+             * host.
              */
             public Builder host(String host) {
                 this.host = host;
@@ -1394,34 +1394,34 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * port.
              */
             public Builder port(String port) {
                 this.port = port;
                 return this;
             }
 
-            public PreStopTCPSocket build() {
-                return new PreStopTCPSocket(this);
+            public PreStopTcpSocket build() {
+                return new PreStopTcpSocket(this);
             } 
 
         } 
 
     }
     public static class PreStop extends TeaModel {
-        @NameInMap("Exec")
+        @NameInMap("exec")
         private PreStopExec exec;
 
-        @NameInMap("HTTPGet")
-        private PreStopHTTPGet HTTPGet;
+        @NameInMap("httpGet")
+        private PreStopHttpGet httpGet;
 
-        @NameInMap("TCPSocket")
-        private PreStopTCPSocket TCPSocket;
+        @NameInMap("tcpSocket")
+        private PreStopTcpSocket tcpSocket;
 
         private PreStop(Builder builder) {
             this.exec = builder.exec;
-            this.HTTPGet = builder.HTTPGet;
-            this.TCPSocket = builder.TCPSocket;
+            this.httpGet = builder.httpGet;
+            this.tcpSocket = builder.tcpSocket;
         }
 
         public static Builder builder() {
@@ -1440,26 +1440,26 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         }
 
         /**
-         * @return HTTPGet
+         * @return httpGet
          */
-        public PreStopHTTPGet getHTTPGet() {
-            return this.HTTPGet;
+        public PreStopHttpGet getHttpGet() {
+            return this.httpGet;
         }
 
         /**
-         * @return TCPSocket
+         * @return tcpSocket
          */
-        public PreStopTCPSocket getTCPSocket() {
-            return this.TCPSocket;
+        public PreStopTcpSocket getTcpSocket() {
+            return this.tcpSocket;
         }
 
         public static final class Builder {
             private PreStopExec exec; 
-            private PreStopHTTPGet HTTPGet; 
-            private PreStopTCPSocket TCPSocket; 
+            private PreStopHttpGet httpGet; 
+            private PreStopTcpSocket tcpSocket; 
 
             /**
-             * Exec.
+             * exec.
              */
             public Builder exec(PreStopExec exec) {
                 this.exec = exec;
@@ -1467,18 +1467,18 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * HTTPGet.
+             * httpGet.
              */
-            public Builder HTTPGet(PreStopHTTPGet HTTPGet) {
-                this.HTTPGet = HTTPGet;
+            public Builder httpGet(PreStopHttpGet httpGet) {
+                this.httpGet = httpGet;
                 return this;
             }
 
             /**
-             * TCPSocket.
+             * tcpSocket.
              */
-            public Builder TCPSocket(PreStopTCPSocket TCPSocket) {
-                this.TCPSocket = TCPSocket;
+            public Builder tcpSocket(PreStopTcpSocket tcpSocket) {
+                this.tcpSocket = tcpSocket;
                 return this;
             }
 
@@ -1490,10 +1490,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
 
     }
     public static class Lifecycle extends TeaModel {
-        @NameInMap("PostStart")
+        @NameInMap("postStart")
         private PostStart postStart;
 
-        @NameInMap("PreStop")
+        @NameInMap("preStop")
         private PreStop preStop;
 
         private Lifecycle(Builder builder) {
@@ -1528,7 +1528,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             private PreStop preStop; 
 
             /**
-             * PostStart.
+             * postStart.
              */
             public Builder postStart(PostStart postStart) {
                 this.postStart = postStart;
@@ -1536,7 +1536,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PreStop.
+             * preStop.
              */
             public Builder preStop(PreStop preStop) {
                 this.preStop = preStop;
@@ -1606,6 +1606,88 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
 
             public MultiBuffer build() {
                 return new MultiBuffer(this);
+            } 
+
+        } 
+
+    }
+    public static class OPAScopeInjection extends TeaModel {
+        @NameInMap("OPAScopeInjected")
+        private Boolean OPAScopeInjected;
+
+        private OPAScopeInjection(Builder builder) {
+            this.OPAScopeInjected = builder.OPAScopeInjected;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OPAScopeInjection create() {
+            return builder().build();
+        }
+
+        /**
+         * @return OPAScopeInjected
+         */
+        public Boolean getOPAScopeInjected() {
+            return this.OPAScopeInjected;
+        }
+
+        public static final class Builder {
+            private Boolean OPAScopeInjected; 
+
+            /**
+             * OPAScopeInjected.
+             */
+            public Builder OPAScopeInjected(Boolean OPAScopeInjected) {
+                this.OPAScopeInjected = OPAScopeInjected;
+                return this;
+            }
+
+            public OPAScopeInjection build() {
+                return new OPAScopeInjection(this);
+            } 
+
+        } 
+
+    }
+    public static class RateLimit extends TeaModel {
+        @NameInMap("EnableGlobalRateLimit")
+        private Boolean enableGlobalRateLimit;
+
+        private RateLimit(Builder builder) {
+            this.enableGlobalRateLimit = builder.enableGlobalRateLimit;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RateLimit create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enableGlobalRateLimit
+         */
+        public Boolean getEnableGlobalRateLimit() {
+            return this.enableGlobalRateLimit;
+        }
+
+        public static final class Builder {
+            private Boolean enableGlobalRateLimit; 
+
+            /**
+             * EnableGlobalRateLimit.
+             */
+            public Builder enableGlobalRateLimit(Boolean enableGlobalRateLimit) {
+                this.enableGlobalRateLimit = enableGlobalRateLimit;
+                return this;
+            }
+
+            public RateLimit build() {
+                return new RateLimit(this);
             } 
 
         } 
@@ -1749,6 +1831,12 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         @NameInMap("MultiBuffer")
         private MultiBuffer multiBuffer;
 
+        @NameInMap("OPAScopeInjection")
+        private OPAScopeInjection OPAScopeInjection;
+
+        @NameInMap("RateLimit")
+        private RateLimit rateLimit;
+
         @NameInMap("SidecarProxyInitResourceLimit")
         private SidecarProxyInitResourceLimit sidecarProxyInitResourceLimit;
 
@@ -1764,6 +1852,8 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             this.istioCRHistory = builder.istioCRHistory;
             this.lifecycle = builder.lifecycle;
             this.multiBuffer = builder.multiBuffer;
+            this.OPAScopeInjection = builder.OPAScopeInjection;
+            this.rateLimit = builder.rateLimit;
             this.sidecarProxyInitResourceLimit = builder.sidecarProxyInitResourceLimit;
             this.sidecarProxyInitResourceRequest = builder.sidecarProxyInitResourceRequest;
             this.terminationDrainDuration = builder.terminationDrainDuration;
@@ -1813,6 +1903,20 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return OPAScopeInjection
+         */
+        public OPAScopeInjection getOPAScopeInjection() {
+            return this.OPAScopeInjection;
+        }
+
+        /**
+         * @return rateLimit
+         */
+        public RateLimit getRateLimit() {
+            return this.rateLimit;
+        }
+
+        /**
          * @return sidecarProxyInitResourceLimit
          */
         public SidecarProxyInitResourceLimit getSidecarProxyInitResourceLimit() {
@@ -1839,6 +1943,8 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             private IstioCRHistory istioCRHistory; 
             private Lifecycle lifecycle; 
             private MultiBuffer multiBuffer; 
+            private OPAScopeInjection OPAScopeInjection; 
+            private RateLimit rateLimit; 
             private SidecarProxyInitResourceLimit sidecarProxyInitResourceLimit; 
             private SidecarProxyInitResourceRequest sidecarProxyInitResourceRequest; 
             private String terminationDrainDuration; 
@@ -1880,6 +1986,22 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
              */
             public Builder multiBuffer(MultiBuffer multiBuffer) {
                 this.multiBuffer = multiBuffer;
+                return this;
+            }
+
+            /**
+             * OPAScopeInjection.
+             */
+            public Builder OPAScopeInjection(OPAScopeInjection OPAScopeInjection) {
+                this.OPAScopeInjection = OPAScopeInjection;
+                return this;
+            }
+
+            /**
+             * RateLimit.
+             */
+            public Builder rateLimit(RateLimit rateLimit) {
+                this.rateLimit = rateLimit;
                 return this;
             }
 
@@ -3872,11 +3994,20 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
 
     }
     public static class ServiceMesh extends TeaModel {
+        @NameInMap("ClusterSpec")
+        private String clusterSpec;
+
         @NameInMap("Clusters")
         private java.util.List < String > clusters;
 
         @NameInMap("Endpoints")
         private Endpoints endpoints;
+
+        @NameInMap("OwnerId")
+        private String ownerId;
+
+        @NameInMap("OwnerType")
+        private String ownerType;
 
         @NameInMap("ServiceMeshInfo")
         private ServiceMeshInfo serviceMeshInfo;
@@ -3885,8 +4016,11 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         private Spec spec;
 
         private ServiceMesh(Builder builder) {
+            this.clusterSpec = builder.clusterSpec;
             this.clusters = builder.clusters;
             this.endpoints = builder.endpoints;
+            this.ownerId = builder.ownerId;
+            this.ownerType = builder.ownerType;
             this.serviceMeshInfo = builder.serviceMeshInfo;
             this.spec = builder.spec;
         }
@@ -3897,6 +4031,13 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
 
         public static ServiceMesh create() {
             return builder().build();
+        }
+
+        /**
+         * @return clusterSpec
+         */
+        public String getClusterSpec() {
+            return this.clusterSpec;
         }
 
         /**
@@ -3914,6 +4055,20 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return ownerId
+         */
+        public String getOwnerId() {
+            return this.ownerId;
+        }
+
+        /**
+         * @return ownerType
+         */
+        public String getOwnerType() {
+            return this.ownerType;
+        }
+
+        /**
          * @return serviceMeshInfo
          */
         public ServiceMeshInfo getServiceMeshInfo() {
@@ -3928,10 +4083,21 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String clusterSpec; 
             private java.util.List < String > clusters; 
             private Endpoints endpoints; 
+            private String ownerId; 
+            private String ownerType; 
             private ServiceMeshInfo serviceMeshInfo; 
             private Spec spec; 
+
+            /**
+             * ClusterSpec.
+             */
+            public Builder clusterSpec(String clusterSpec) {
+                this.clusterSpec = clusterSpec;
+                return this;
+            }
 
             /**
              * Clusters.
@@ -3946,6 +4112,22 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
              */
             public Builder endpoints(Endpoints endpoints) {
                 this.endpoints = endpoints;
+                return this;
+            }
+
+            /**
+             * OwnerId.
+             */
+            public Builder ownerId(String ownerId) {
+                this.ownerId = ownerId;
+                return this;
+            }
+
+            /**
+             * OwnerType.
+             */
+            public Builder ownerType(String ownerType) {
+                this.ownerType = ownerType;
                 return this;
             }
 

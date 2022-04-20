@@ -49,9 +49,9 @@ public class DescribeCCMVersionRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeCCMVersionRequest response) {
-            super(response);
-            this.serviceMeshId = response.serviceMeshId;
+        private Builder(DescribeCCMVersionRequest request) {
+            super(request);
+            this.serviceMeshId = request.serviceMeshId;
         } 
 
         /**

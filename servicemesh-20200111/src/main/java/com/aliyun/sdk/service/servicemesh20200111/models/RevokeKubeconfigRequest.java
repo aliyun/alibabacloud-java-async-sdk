@@ -62,10 +62,10 @@ public class RevokeKubeconfigRequest extends Request {
             super();
         } 
 
-        private Builder(RevokeKubeconfigRequest response) {
-            super(response);
-            this.privateIpAddress = response.privateIpAddress;
-            this.serviceMeshId = response.serviceMeshId;
+        private Builder(RevokeKubeconfigRequest request) {
+            super(request);
+            this.privateIpAddress = request.privateIpAddress;
+            this.serviceMeshId = request.serviceMeshId;
         } 
 
         /**

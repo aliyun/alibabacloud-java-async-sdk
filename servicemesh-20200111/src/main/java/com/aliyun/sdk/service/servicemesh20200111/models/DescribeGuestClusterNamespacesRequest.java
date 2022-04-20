@@ -63,10 +63,10 @@ public class DescribeGuestClusterNamespacesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeGuestClusterNamespacesRequest response) {
-            super(response);
-            this.guestClusterID = response.guestClusterID;
-            this.serviceMeshId = response.serviceMeshId;
+        private Builder(DescribeGuestClusterNamespacesRequest request) {
+            super(request);
+            this.guestClusterID = request.guestClusterID;
+            this.serviceMeshId = request.serviceMeshId;
         } 
 
         /**

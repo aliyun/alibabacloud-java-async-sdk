@@ -48,9 +48,9 @@ public class DescribeCensRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeCensRequest response) {
-            super(response);
-            this.serviceMeshId = response.serviceMeshId;
+        private Builder(DescribeCensRequest request) {
+            super(request);
+            this.serviceMeshId = request.serviceMeshId;
         } 
 
         /**

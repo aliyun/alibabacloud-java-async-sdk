@@ -16,11 +16,11 @@ public class DescribeVMsInServiceMeshResponseBody extends TeaModel {
     private String requestId;
 
     @NameInMap("VMs")
-    private java.util.List < VMs> VMs;
+    private java.util.List < VMs> vMs;
 
     private DescribeVMsInServiceMeshResponseBody(Builder builder) {
         this.requestId = builder.requestId;
-        this.VMs = builder.VMs;
+        this.vMs = builder.vMs;
     }
 
     public static Builder builder() {
@@ -39,15 +39,15 @@ public class DescribeVMsInServiceMeshResponseBody extends TeaModel {
     }
 
     /**
-     * @return VMs
+     * @return vMs
      */
     public java.util.List < VMs> getVMs() {
-        return this.VMs;
+        return this.vMs;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < VMs> VMs; 
+        private java.util.List < VMs> vMs; 
 
         /**
          * Id of the request
@@ -60,8 +60,8 @@ public class DescribeVMsInServiceMeshResponseBody extends TeaModel {
         /**
          * VMs.
          */
-        public Builder VMs(java.util.List < VMs> VMs) {
-            this.VMs = VMs;
+        public Builder vMs(java.util.List < VMs> vMs) {
+            this.vMs = vMs;
             return this;
         }
 

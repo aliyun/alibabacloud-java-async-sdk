@@ -75,11 +75,11 @@ public class UpdateASMGatewayRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateASMGatewayRequest response) {
-            super(response);
-            this.body = response.body;
-            this.istioGatewayName = response.istioGatewayName;
-            this.serviceMeshId = response.serviceMeshId;
+        private Builder(UpdateASMGatewayRequest request) {
+            super(request);
+            this.body = request.body;
+            this.istioGatewayName = request.istioGatewayName;
+            this.serviceMeshId = request.serviceMeshId;
         } 
 
         /**

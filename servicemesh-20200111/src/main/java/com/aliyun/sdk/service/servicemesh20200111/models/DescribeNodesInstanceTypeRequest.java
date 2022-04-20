@@ -49,9 +49,9 @@ public class DescribeNodesInstanceTypeRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeNodesInstanceTypeRequest response) {
-            super(response);
-            this.serviceMeshId = response.serviceMeshId;
+        private Builder(DescribeNodesInstanceTypeRequest request) {
+            super(request);
+            this.serviceMeshId = request.serviceMeshId;
         } 
 
         /**

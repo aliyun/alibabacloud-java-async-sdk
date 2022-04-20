@@ -41,6 +41,10 @@ public class CreateServiceMeshRequest extends Request {
     private Integer accessLogServicePort;
 
     @Body
+    @NameInMap("ApiServerLoadBalancerSpec")
+    private String apiServerLoadBalancerSpec;
+
+    @Body
     @NameInMap("ApiServerPublicEip")
     private Boolean apiServerPublicEip;
 
@@ -49,8 +53,28 @@ public class CreateServiceMeshRequest extends Request {
     private String auditProject;
 
     @Body
+    @NameInMap("AutoRenew")
+    private Boolean autoRenew;
+
+    @Body
+    @NameInMap("AutoRenewPeriod")
+    private Integer autoRenewPeriod;
+
+    @Body
     @NameInMap("CRAggregationEnabled")
     private Boolean CRAggregationEnabled;
+
+    @Body
+    @NameInMap("CanaryUpgradeEnabled")
+    private Boolean canaryUpgradeEnabled;
+
+    @Body
+    @NameInMap("ChargeType")
+    private String chargeType;
+
+    @Body
+    @NameInMap("ClusterSpec")
+    private String clusterSpec;
 
     @Body
     @NameInMap("ConfigSourceEnabled")
@@ -121,6 +145,10 @@ public class CreateServiceMeshRequest extends Request {
     private Boolean gatewayAPIEnabled;
 
     @Body
+    @NameInMap("GlobalRateLimitEnabled")
+    private Boolean globalRateLimitEnabled;
+
+    @Body
     @NameInMap("IncludeIPRanges")
     private String includeIPRanges;
 
@@ -143,6 +171,14 @@ public class CreateServiceMeshRequest extends Request {
     @Body
     @NameInMap("MSEEnabled")
     private Boolean MSEEnabled;
+
+    @Body
+    @NameInMap("MultiBufferEnabled")
+    private Boolean multiBufferEnabled;
+
+    @Body
+    @NameInMap("MultiBufferPollDelay")
+    private String multiBufferPollDelay;
 
     @Body
     @NameInMap("MysqlFilterEnabled")
@@ -179,6 +215,14 @@ public class CreateServiceMeshRequest extends Request {
     @Body
     @NameInMap("OpenAgentPolicy")
     private Boolean openAgentPolicy;
+
+    @Body
+    @NameInMap("Period")
+    private Integer period;
+
+    @Body
+    @NameInMap("PilotLoadBalancerSpec")
+    private String pilotLoadBalancerSpec;
 
     @Body
     @NameInMap("PrometheusUrl")
@@ -248,9 +292,15 @@ public class CreateServiceMeshRequest extends Request {
         this.accessLogServiceEnabled = builder.accessLogServiceEnabled;
         this.accessLogServiceHost = builder.accessLogServiceHost;
         this.accessLogServicePort = builder.accessLogServicePort;
+        this.apiServerLoadBalancerSpec = builder.apiServerLoadBalancerSpec;
         this.apiServerPublicEip = builder.apiServerPublicEip;
         this.auditProject = builder.auditProject;
+        this.autoRenew = builder.autoRenew;
+        this.autoRenewPeriod = builder.autoRenewPeriod;
         this.CRAggregationEnabled = builder.CRAggregationEnabled;
+        this.canaryUpgradeEnabled = builder.canaryUpgradeEnabled;
+        this.chargeType = builder.chargeType;
+        this.clusterSpec = builder.clusterSpec;
         this.configSourceEnabled = builder.configSourceEnabled;
         this.configSourceNacosID = builder.configSourceNacosID;
         this.controlPlaneLogEnabled = builder.controlPlaneLogEnabled;
@@ -268,12 +318,15 @@ public class CreateServiceMeshRequest extends Request {
         this.excludeOutboundPorts = builder.excludeOutboundPorts;
         this.filterGatewayClusterConfig = builder.filterGatewayClusterConfig;
         this.gatewayAPIEnabled = builder.gatewayAPIEnabled;
+        this.globalRateLimitEnabled = builder.globalRateLimitEnabled;
         this.includeIPRanges = builder.includeIPRanges;
         this.istioVersion = builder.istioVersion;
         this.kialiEnabled = builder.kialiEnabled;
         this.localityLBConf = builder.localityLBConf;
         this.localityLoadBalancing = builder.localityLoadBalancing;
         this.MSEEnabled = builder.MSEEnabled;
+        this.multiBufferEnabled = builder.multiBufferEnabled;
+        this.multiBufferPollDelay = builder.multiBufferPollDelay;
         this.mysqlFilterEnabled = builder.mysqlFilterEnabled;
         this.name = builder.name;
         this.OPALimitCPU = builder.OPALimitCPU;
@@ -283,6 +336,8 @@ public class CreateServiceMeshRequest extends Request {
         this.OPARequestMemory = builder.OPARequestMemory;
         this.opaEnabled = builder.opaEnabled;
         this.openAgentPolicy = builder.openAgentPolicy;
+        this.period = builder.period;
+        this.pilotLoadBalancerSpec = builder.pilotLoadBalancerSpec;
         this.prometheusUrl = builder.prometheusUrl;
         this.proxyLimitCPU = builder.proxyLimitCPU;
         this.proxyLimitMemory = builder.proxyLimitMemory;
@@ -362,6 +417,13 @@ public class CreateServiceMeshRequest extends Request {
     }
 
     /**
+     * @return apiServerLoadBalancerSpec
+     */
+    public String getApiServerLoadBalancerSpec() {
+        return this.apiServerLoadBalancerSpec;
+    }
+
+    /**
      * @return apiServerPublicEip
      */
     public Boolean getApiServerPublicEip() {
@@ -376,10 +438,45 @@ public class CreateServiceMeshRequest extends Request {
     }
 
     /**
+     * @return autoRenew
+     */
+    public Boolean getAutoRenew() {
+        return this.autoRenew;
+    }
+
+    /**
+     * @return autoRenewPeriod
+     */
+    public Integer getAutoRenewPeriod() {
+        return this.autoRenewPeriod;
+    }
+
+    /**
      * @return CRAggregationEnabled
      */
     public Boolean getCRAggregationEnabled() {
         return this.CRAggregationEnabled;
+    }
+
+    /**
+     * @return canaryUpgradeEnabled
+     */
+    public Boolean getCanaryUpgradeEnabled() {
+        return this.canaryUpgradeEnabled;
+    }
+
+    /**
+     * @return chargeType
+     */
+    public String getChargeType() {
+        return this.chargeType;
+    }
+
+    /**
+     * @return clusterSpec
+     */
+    public String getClusterSpec() {
+        return this.clusterSpec;
     }
 
     /**
@@ -502,6 +599,13 @@ public class CreateServiceMeshRequest extends Request {
     }
 
     /**
+     * @return globalRateLimitEnabled
+     */
+    public Boolean getGlobalRateLimitEnabled() {
+        return this.globalRateLimitEnabled;
+    }
+
+    /**
      * @return includeIPRanges
      */
     public String getIncludeIPRanges() {
@@ -541,6 +645,20 @@ public class CreateServiceMeshRequest extends Request {
      */
     public Boolean getMSEEnabled() {
         return this.MSEEnabled;
+    }
+
+    /**
+     * @return multiBufferEnabled
+     */
+    public Boolean getMultiBufferEnabled() {
+        return this.multiBufferEnabled;
+    }
+
+    /**
+     * @return multiBufferPollDelay
+     */
+    public String getMultiBufferPollDelay() {
+        return this.multiBufferPollDelay;
     }
 
     /**
@@ -604,6 +722,20 @@ public class CreateServiceMeshRequest extends Request {
      */
     public Boolean getOpenAgentPolicy() {
         return this.openAgentPolicy;
+    }
+
+    /**
+     * @return period
+     */
+    public Integer getPeriod() {
+        return this.period;
+    }
+
+    /**
+     * @return pilotLoadBalancerSpec
+     */
+    public String getPilotLoadBalancerSpec() {
+        return this.pilotLoadBalancerSpec;
     }
 
     /**
@@ -712,9 +844,15 @@ public class CreateServiceMeshRequest extends Request {
         private Boolean accessLogServiceEnabled; 
         private String accessLogServiceHost; 
         private Integer accessLogServicePort; 
+        private String apiServerLoadBalancerSpec; 
         private Boolean apiServerPublicEip; 
         private String auditProject; 
+        private Boolean autoRenew; 
+        private Integer autoRenewPeriod; 
         private Boolean CRAggregationEnabled; 
+        private Boolean canaryUpgradeEnabled; 
+        private String chargeType; 
+        private String clusterSpec; 
         private Boolean configSourceEnabled; 
         private String configSourceNacosID; 
         private Boolean controlPlaneLogEnabled; 
@@ -732,12 +870,15 @@ public class CreateServiceMeshRequest extends Request {
         private String excludeOutboundPorts; 
         private Boolean filterGatewayClusterConfig; 
         private Boolean gatewayAPIEnabled; 
+        private Boolean globalRateLimitEnabled; 
         private String includeIPRanges; 
         private String istioVersion; 
         private Boolean kialiEnabled; 
         private String localityLBConf; 
         private Boolean localityLoadBalancing; 
         private Boolean MSEEnabled; 
+        private Boolean multiBufferEnabled; 
+        private String multiBufferPollDelay; 
         private Boolean mysqlFilterEnabled; 
         private String name; 
         private String OPALimitCPU; 
@@ -747,6 +888,8 @@ public class CreateServiceMeshRequest extends Request {
         private String OPARequestMemory; 
         private Boolean opaEnabled; 
         private Boolean openAgentPolicy; 
+        private Integer period; 
+        private String pilotLoadBalancerSpec; 
         private String prometheusUrl; 
         private String proxyLimitCPU; 
         private String proxyLimitMemory; 
@@ -766,64 +909,75 @@ public class CreateServiceMeshRequest extends Request {
             super();
         } 
 
-        private Builder(CreateServiceMeshRequest response) {
-            super(response);
-            this.accessLogEnabled = response.accessLogEnabled;
-            this.accessLogFile = response.accessLogFile;
-            this.accessLogFormat = response.accessLogFormat;
-            this.accessLogProject = response.accessLogProject;
-            this.accessLogServiceEnabled = response.accessLogServiceEnabled;
-            this.accessLogServiceHost = response.accessLogServiceHost;
-            this.accessLogServicePort = response.accessLogServicePort;
-            this.apiServerPublicEip = response.apiServerPublicEip;
-            this.auditProject = response.auditProject;
-            this.CRAggregationEnabled = response.CRAggregationEnabled;
-            this.configSourceEnabled = response.configSourceEnabled;
-            this.configSourceNacosID = response.configSourceNacosID;
-            this.controlPlaneLogEnabled = response.controlPlaneLogEnabled;
-            this.controlPlaneLogProject = response.controlPlaneLogProject;
-            this.customizedPrometheus = response.customizedPrometheus;
-            this.customizedZipkin = response.customizedZipkin;
-            this.DNSProxyingEnabled = response.DNSProxyingEnabled;
-            this.dubboFilterEnabled = response.dubboFilterEnabled;
-            this.edition = response.edition;
-            this.enableAudit = response.enableAudit;
-            this.enableCRHistory = response.enableCRHistory;
-            this.enableSDSServer = response.enableSDSServer;
-            this.excludeIPRanges = response.excludeIPRanges;
-            this.excludeInboundPorts = response.excludeInboundPorts;
-            this.excludeOutboundPorts = response.excludeOutboundPorts;
-            this.filterGatewayClusterConfig = response.filterGatewayClusterConfig;
-            this.gatewayAPIEnabled = response.gatewayAPIEnabled;
-            this.includeIPRanges = response.includeIPRanges;
-            this.istioVersion = response.istioVersion;
-            this.kialiEnabled = response.kialiEnabled;
-            this.localityLBConf = response.localityLBConf;
-            this.localityLoadBalancing = response.localityLoadBalancing;
-            this.MSEEnabled = response.MSEEnabled;
-            this.mysqlFilterEnabled = response.mysqlFilterEnabled;
-            this.name = response.name;
-            this.OPALimitCPU = response.OPALimitCPU;
-            this.OPALimitMemory = response.OPALimitMemory;
-            this.OPALogLevel = response.OPALogLevel;
-            this.OPARequestCPU = response.OPARequestCPU;
-            this.OPARequestMemory = response.OPARequestMemory;
-            this.opaEnabled = response.opaEnabled;
-            this.openAgentPolicy = response.openAgentPolicy;
-            this.prometheusUrl = response.prometheusUrl;
-            this.proxyLimitCPU = response.proxyLimitCPU;
-            this.proxyLimitMemory = response.proxyLimitMemory;
-            this.proxyRequestCPU = response.proxyRequestCPU;
-            this.proxyRequestMemory = response.proxyRequestMemory;
-            this.redisFilterEnabled = response.redisFilterEnabled;
-            this.regionId = response.regionId;
-            this.telemetry = response.telemetry;
-            this.thriftFilterEnabled = response.thriftFilterEnabled;
-            this.traceSampling = response.traceSampling;
-            this.tracing = response.tracing;
-            this.vSwitches = response.vSwitches;
-            this.vpcId = response.vpcId;
-            this.webAssemblyFilterEnabled = response.webAssemblyFilterEnabled;
+        private Builder(CreateServiceMeshRequest request) {
+            super(request);
+            this.accessLogEnabled = request.accessLogEnabled;
+            this.accessLogFile = request.accessLogFile;
+            this.accessLogFormat = request.accessLogFormat;
+            this.accessLogProject = request.accessLogProject;
+            this.accessLogServiceEnabled = request.accessLogServiceEnabled;
+            this.accessLogServiceHost = request.accessLogServiceHost;
+            this.accessLogServicePort = request.accessLogServicePort;
+            this.apiServerLoadBalancerSpec = request.apiServerLoadBalancerSpec;
+            this.apiServerPublicEip = request.apiServerPublicEip;
+            this.auditProject = request.auditProject;
+            this.autoRenew = request.autoRenew;
+            this.autoRenewPeriod = request.autoRenewPeriod;
+            this.CRAggregationEnabled = request.CRAggregationEnabled;
+            this.canaryUpgradeEnabled = request.canaryUpgradeEnabled;
+            this.chargeType = request.chargeType;
+            this.clusterSpec = request.clusterSpec;
+            this.configSourceEnabled = request.configSourceEnabled;
+            this.configSourceNacosID = request.configSourceNacosID;
+            this.controlPlaneLogEnabled = request.controlPlaneLogEnabled;
+            this.controlPlaneLogProject = request.controlPlaneLogProject;
+            this.customizedPrometheus = request.customizedPrometheus;
+            this.customizedZipkin = request.customizedZipkin;
+            this.DNSProxyingEnabled = request.DNSProxyingEnabled;
+            this.dubboFilterEnabled = request.dubboFilterEnabled;
+            this.edition = request.edition;
+            this.enableAudit = request.enableAudit;
+            this.enableCRHistory = request.enableCRHistory;
+            this.enableSDSServer = request.enableSDSServer;
+            this.excludeIPRanges = request.excludeIPRanges;
+            this.excludeInboundPorts = request.excludeInboundPorts;
+            this.excludeOutboundPorts = request.excludeOutboundPorts;
+            this.filterGatewayClusterConfig = request.filterGatewayClusterConfig;
+            this.gatewayAPIEnabled = request.gatewayAPIEnabled;
+            this.globalRateLimitEnabled = request.globalRateLimitEnabled;
+            this.includeIPRanges = request.includeIPRanges;
+            this.istioVersion = request.istioVersion;
+            this.kialiEnabled = request.kialiEnabled;
+            this.localityLBConf = request.localityLBConf;
+            this.localityLoadBalancing = request.localityLoadBalancing;
+            this.MSEEnabled = request.MSEEnabled;
+            this.multiBufferEnabled = request.multiBufferEnabled;
+            this.multiBufferPollDelay = request.multiBufferPollDelay;
+            this.mysqlFilterEnabled = request.mysqlFilterEnabled;
+            this.name = request.name;
+            this.OPALimitCPU = request.OPALimitCPU;
+            this.OPALimitMemory = request.OPALimitMemory;
+            this.OPALogLevel = request.OPALogLevel;
+            this.OPARequestCPU = request.OPARequestCPU;
+            this.OPARequestMemory = request.OPARequestMemory;
+            this.opaEnabled = request.opaEnabled;
+            this.openAgentPolicy = request.openAgentPolicy;
+            this.period = request.period;
+            this.pilotLoadBalancerSpec = request.pilotLoadBalancerSpec;
+            this.prometheusUrl = request.prometheusUrl;
+            this.proxyLimitCPU = request.proxyLimitCPU;
+            this.proxyLimitMemory = request.proxyLimitMemory;
+            this.proxyRequestCPU = request.proxyRequestCPU;
+            this.proxyRequestMemory = request.proxyRequestMemory;
+            this.redisFilterEnabled = request.redisFilterEnabled;
+            this.regionId = request.regionId;
+            this.telemetry = request.telemetry;
+            this.thriftFilterEnabled = request.thriftFilterEnabled;
+            this.traceSampling = request.traceSampling;
+            this.tracing = request.tracing;
+            this.vSwitches = request.vSwitches;
+            this.vpcId = request.vpcId;
+            this.webAssemblyFilterEnabled = request.webAssemblyFilterEnabled;
         } 
 
         /**
@@ -890,6 +1044,15 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
+         * ApiServerLoadBalancerSpec.
+         */
+        public Builder apiServerLoadBalancerSpec(String apiServerLoadBalancerSpec) {
+            this.putBodyParameter("ApiServerLoadBalancerSpec", apiServerLoadBalancerSpec);
+            this.apiServerLoadBalancerSpec = apiServerLoadBalancerSpec;
+            return this;
+        }
+
+        /**
          * ApiServerPublicEip.
          */
         public Builder apiServerPublicEip(Boolean apiServerPublicEip) {
@@ -908,11 +1071,56 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
+         * AutoRenew.
+         */
+        public Builder autoRenew(Boolean autoRenew) {
+            this.putBodyParameter("AutoRenew", autoRenew);
+            this.autoRenew = autoRenew;
+            return this;
+        }
+
+        /**
+         * AutoRenewPeriod.
+         */
+        public Builder autoRenewPeriod(Integer autoRenewPeriod) {
+            this.putBodyParameter("AutoRenewPeriod", autoRenewPeriod);
+            this.autoRenewPeriod = autoRenewPeriod;
+            return this;
+        }
+
+        /**
          * CRAggregationEnabled.
          */
         public Builder CRAggregationEnabled(Boolean CRAggregationEnabled) {
             this.putBodyParameter("CRAggregationEnabled", CRAggregationEnabled);
             this.CRAggregationEnabled = CRAggregationEnabled;
+            return this;
+        }
+
+        /**
+         * CanaryUpgradeEnabled.
+         */
+        public Builder canaryUpgradeEnabled(Boolean canaryUpgradeEnabled) {
+            this.putBodyParameter("CanaryUpgradeEnabled", canaryUpgradeEnabled);
+            this.canaryUpgradeEnabled = canaryUpgradeEnabled;
+            return this;
+        }
+
+        /**
+         * ChargeType.
+         */
+        public Builder chargeType(String chargeType) {
+            this.putBodyParameter("ChargeType", chargeType);
+            this.chargeType = chargeType;
+            return this;
+        }
+
+        /**
+         * ClusterSpec.
+         */
+        public Builder clusterSpec(String clusterSpec) {
+            this.putBodyParameter("ClusterSpec", clusterSpec);
+            this.clusterSpec = clusterSpec;
             return this;
         }
 
@@ -1070,6 +1278,15 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
+         * GlobalRateLimitEnabled.
+         */
+        public Builder globalRateLimitEnabled(Boolean globalRateLimitEnabled) {
+            this.putBodyParameter("GlobalRateLimitEnabled", globalRateLimitEnabled);
+            this.globalRateLimitEnabled = globalRateLimitEnabled;
+            return this;
+        }
+
+        /**
          * IncludeIPRanges.
          */
         public Builder includeIPRanges(String includeIPRanges) {
@@ -1120,6 +1337,24 @@ public class CreateServiceMeshRequest extends Request {
         public Builder MSEEnabled(Boolean MSEEnabled) {
             this.putBodyParameter("MSEEnabled", MSEEnabled);
             this.MSEEnabled = MSEEnabled;
+            return this;
+        }
+
+        /**
+         * MultiBufferEnabled.
+         */
+        public Builder multiBufferEnabled(Boolean multiBufferEnabled) {
+            this.putBodyParameter("MultiBufferEnabled", multiBufferEnabled);
+            this.multiBufferEnabled = multiBufferEnabled;
+            return this;
+        }
+
+        /**
+         * MultiBufferPollDelay.
+         */
+        public Builder multiBufferPollDelay(String multiBufferPollDelay) {
+            this.putBodyParameter("MultiBufferPollDelay", multiBufferPollDelay);
+            this.multiBufferPollDelay = multiBufferPollDelay;
             return this;
         }
 
@@ -1201,6 +1436,24 @@ public class CreateServiceMeshRequest extends Request {
         public Builder openAgentPolicy(Boolean openAgentPolicy) {
             this.putBodyParameter("OpenAgentPolicy", openAgentPolicy);
             this.openAgentPolicy = openAgentPolicy;
+            return this;
+        }
+
+        /**
+         * Period.
+         */
+        public Builder period(Integer period) {
+            this.putBodyParameter("Period", period);
+            this.period = period;
+            return this;
+        }
+
+        /**
+         * PilotLoadBalancerSpec.
+         */
+        public Builder pilotLoadBalancerSpec(String pilotLoadBalancerSpec) {
+            this.putBodyParameter("PilotLoadBalancerSpec", pilotLoadBalancerSpec);
+            this.pilotLoadBalancerSpec = pilotLoadBalancerSpec;
             return this;
         }
 

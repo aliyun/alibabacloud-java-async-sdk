@@ -49,9 +49,9 @@ public class DescribeClustersInServiceMeshRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeClustersInServiceMeshRequest response) {
-            super(response);
-            this.serviceMeshId = response.serviceMeshId;
+        private Builder(DescribeClustersInServiceMeshRequest request) {
+            super(request);
+            this.serviceMeshId = request.serviceMeshId;
         } 
 
         /**

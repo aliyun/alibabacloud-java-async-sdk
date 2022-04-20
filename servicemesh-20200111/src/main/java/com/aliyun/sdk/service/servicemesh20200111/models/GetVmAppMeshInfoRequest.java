@@ -49,9 +49,9 @@ public class GetVmAppMeshInfoRequest extends Request {
             super();
         } 
 
-        private Builder(GetVmAppMeshInfoRequest response) {
-            super(response);
-            this.serviceMeshId = response.serviceMeshId;
+        private Builder(GetVmAppMeshInfoRequest request) {
+            super(request);
+            this.serviceMeshId = request.serviceMeshId;
         } 
 
         /**

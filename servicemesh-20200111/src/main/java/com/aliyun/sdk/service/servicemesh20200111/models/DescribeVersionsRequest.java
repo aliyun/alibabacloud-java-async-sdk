@@ -35,8 +35,8 @@ public class DescribeVersionsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeVersionsRequest response) {
-            super(response);
+        private Builder(DescribeVersionsRequest request) {
+            super(request);
         } 
 
         @Override

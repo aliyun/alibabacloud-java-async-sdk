@@ -88,12 +88,12 @@ public class GetVmMetaRequest extends Request {
             super();
         } 
 
-        private Builder(GetVmMetaRequest response) {
-            super(response);
-            this.namespace = response.namespace;
-            this.serviceAccount = response.serviceAccount;
-            this.serviceMeshId = response.serviceMeshId;
-            this.trustDomain = response.trustDomain;
+        private Builder(GetVmMetaRequest request) {
+            super(request);
+            this.namespace = request.namespace;
+            this.serviceAccount = request.serviceAccount;
+            this.serviceMeshId = request.serviceMeshId;
+            this.trustDomain = request.trustDomain;
         } 
 
         /**

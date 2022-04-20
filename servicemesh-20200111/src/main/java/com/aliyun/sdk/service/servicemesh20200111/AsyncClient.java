@@ -18,31 +18,31 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
-    CompletableFuture<AddBuiltinEnvoyFilterResponse> addBuiltinEnvoyFilter(AddBuiltinEnvoyFilterRequest request);
-
     CompletableFuture<AddClusterIntoServiceMeshResponse> addClusterIntoServiceMesh(AddClusterIntoServiceMeshRequest request);
-
-    CompletableFuture<AddMeshTagToEcsResponse> addMeshTagToEcs(AddMeshTagToEcsRequest request);
 
     CompletableFuture<AddVMIntoServiceMeshResponse> addVMIntoServiceMesh(AddVMIntoServiceMeshRequest request);
 
-    CompletableFuture<AddVmAppToMeshResponse> addVmAppToMesh(AddVmAppToMeshRequest request);
-
     CompletableFuture<CreateASMGatewayResponse> createASMGateway(CreateASMGatewayRequest request);
 
-    CompletableFuture<CreateExtensionProviderResponse> createExtensionProvider(CreateExtensionProviderRequest request);
+    CompletableFuture<CreateGatewaySecretResponse> createGatewaySecret(CreateGatewaySecretRequest request);
+
+    CompletableFuture<CreateIstioGatewayDomainsResponse> createIstioGatewayDomains(CreateIstioGatewayDomainsRequest request);
+
+    CompletableFuture<CreateIstioGatewayRoutesResponse> createIstioGatewayRoutes(CreateIstioGatewayRoutesRequest request);
 
     CompletableFuture<CreateServiceMeshResponse> createServiceMesh(CreateServiceMeshRequest request);
 
-    CompletableFuture<DeleteExtensionProviderResponse> deleteExtensionProvider(DeleteExtensionProviderRequest request);
+    CompletableFuture<DeleteGatewayRouteResponse> deleteGatewayRoute(DeleteGatewayRouteRequest request);
+
+    CompletableFuture<DeleteGatewaySecretResponse> deleteGatewaySecret(DeleteGatewaySecretRequest request);
+
+    CompletableFuture<DeleteIstioGatewayDomainsResponse> deleteIstioGatewayDomains(DeleteIstioGatewayDomainsRequest request);
 
     CompletableFuture<DeleteServiceMeshResponse> deleteServiceMesh(DeleteServiceMeshRequest request);
 
     CompletableFuture<DescribeASMGatewayImportedServicesResponse> describeASMGatewayImportedServices(DescribeASMGatewayImportedServicesRequest request);
 
-    CompletableFuture<DescribeAlertActionPoliciesResponse> describeAlertActionPolicies(DescribeAlertActionPoliciesRequest request);
-
-    CompletableFuture<DescribeAvailableNacosInstancesResponse> describeAvailableNacosInstances(DescribeAvailableNacosInstancesRequest request);
+    CompletableFuture<DescribeAhasProResponse> describeAhasPro(DescribeAhasProRequest request);
 
     CompletableFuture<DescribeCCMVersionResponse> describeCCMVersion(DescribeCCMVersionRequest request);
 
@@ -54,11 +54,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeClustersInServiceMeshResponse> describeClustersInServiceMesh(DescribeClustersInServiceMeshRequest request);
 
-    CompletableFuture<DescribeControlPlaneLogAlertRulesResponse> describeControlPlaneLogAlertRules(DescribeControlPlaneLogAlertRulesRequest request);
-
     CompletableFuture<DescribeCrTemplatesResponse> describeCrTemplates(DescribeCrTemplatesRequest request);
 
-    CompletableFuture<DescribeExtensionProviderResponse> describeExtensionProvider(DescribeExtensionProviderRequest request);
+    CompletableFuture<DescribeEipResourcesResponse> describeEipResources(DescribeEipResourcesRequest request);
+
+    CompletableFuture<DescribeGatewaySecretDetailsResponse> describeGatewaySecretDetails(DescribeGatewaySecretDetailsRequest request);
 
     CompletableFuture<DescribeGuestClusterAccessLogDashboardsResponse> describeGuestClusterAccessLogDashboards(DescribeGuestClusterAccessLogDashboardsRequest request);
 
@@ -70,19 +70,35 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeIngressGatewaysResponse> describeIngressGateways(DescribeIngressGatewaysRequest request);
 
+    CompletableFuture<DescribeIstioGatewayDomainsResponse> describeIstioGatewayDomains(DescribeIstioGatewayDomainsRequest request);
+
+    CompletableFuture<DescribeIstioGatewayRouteDetailResponse> describeIstioGatewayRouteDetail(DescribeIstioGatewayRouteDetailRequest request);
+
+    CompletableFuture<DescribeIstioGatewayRoutesResponse> describeIstioGatewayRoutes(DescribeIstioGatewayRoutesRequest request);
+
+    CompletableFuture<DescribeManagedServicesResponse> describeManagedServices(DescribeManagedServicesRequest request);
+
     CompletableFuture<DescribeNamespaceScopeSidecarConfigResponse> describeNamespaceScopeSidecarConfig(DescribeNamespaceScopeSidecarConfigRequest request);
 
     CompletableFuture<DescribeNodesInstanceTypeResponse> describeNodesInstanceType(DescribeNodesInstanceTypeRequest request);
 
-    CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request);
+    CompletableFuture<DescribeReusableSlbResponse> describeReusableSlb(DescribeReusableSlbRequest request);
+
+    CompletableFuture<DescribeServiceAccessDetailResponse> describeServiceAccessDetail(DescribeServiceAccessDetailRequest request);
+
+    CompletableFuture<DescribeServiceMeshAdditionalStatusResponse> describeServiceMeshAdditionalStatus(DescribeServiceMeshAdditionalStatusRequest request);
+
+    CompletableFuture<DescribeServiceMeshClustersResponse> describeServiceMeshClusters(DescribeServiceMeshClustersRequest request);
 
     CompletableFuture<DescribeServiceMeshDetailResponse> describeServiceMeshDetail(DescribeServiceMeshDetailRequest request);
 
-    CompletableFuture<DescribeServiceMeshGatewayPodStatusResponse> describeServiceMeshGatewayPodStatus(DescribeServiceMeshGatewayPodStatusRequest request);
-
-    CompletableFuture<DescribeServiceMeshGatewaySLBStatusResponse> describeServiceMeshGatewaySLBStatus(DescribeServiceMeshGatewaySLBStatusRequest request);
-
     CompletableFuture<DescribeServiceMeshKubeconfigResponse> describeServiceMeshKubeconfig(DescribeServiceMeshKubeconfigRequest request);
+
+    CompletableFuture<DescribeServiceMeshLogsResponse> describeServiceMeshLogs(DescribeServiceMeshLogsRequest request);
+
+    CompletableFuture<DescribeServiceMeshProxyStatusResponse> describeServiceMeshProxyStatus(DescribeServiceMeshProxyStatusRequest request);
+
+    CompletableFuture<DescribeServiceMeshServiceLabelResponse> describeServiceMeshServiceLabel(DescribeServiceMeshServiceLabelRequest request);
 
     CompletableFuture<DescribeServiceMeshUpgradeStatusResponse> describeServiceMeshUpgradeStatus(DescribeServiceMeshUpgradeStatusRequest request);
 
@@ -98,81 +114,49 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeVSwitchesResponse> describeVSwitches(DescribeVSwitchesRequest request);
 
+    CompletableFuture<DescribeVersionManagementResponse> describeVersionManagement(DescribeVersionManagementRequest request);
+
     CompletableFuture<DescribeVersionsResponse> describeVersions(DescribeVersionsRequest request);
 
     CompletableFuture<DescribeVpcsResponse> describeVpcs(DescribeVpcsRequest request);
 
-    CompletableFuture<DisableControlPlaneLogAlertResponse> disableControlPlaneLogAlert(DisableControlPlaneLogAlertRequest request);
-
-    CompletableFuture<EnableControlPlaneLogAlertResponse> enableControlPlaneLogAlert(EnableControlPlaneLogAlertRequest request);
-
-    CompletableFuture<GetAutoInjectionLabelSyncStatusResponse> getAutoInjectionLabelSyncStatus(GetAutoInjectionLabelSyncStatusRequest request);
-
-    CompletableFuture<GetBuiltinEnvoyFilterResponse> getBuiltinEnvoyFilter(GetBuiltinEnvoyFilterRequest request);
-
-    CompletableFuture<GetBuiltinEnvoyFilterCatalogResponse> getBuiltinEnvoyFilterCatalog(GetBuiltinEnvoyFilterCatalogRequest request);
-
     CompletableFuture<GetCaCertResponse> getCaCert(GetCaCertRequest request);
-
-    CompletableFuture<GetDiagnosisResponse> getDiagnosis(GetDiagnosisRequest request);
-
-    CompletableFuture<GetEcsListResponse> getEcsList(GetEcsListRequest request);
 
     CompletableFuture<GetRegisteredServiceEndpointsResponse> getRegisteredServiceEndpoints(GetRegisteredServiceEndpointsRequest request);
 
     CompletableFuture<GetRegisteredServiceNamespacesResponse> getRegisteredServiceNamespaces(GetRegisteredServiceNamespacesRequest request);
 
-    CompletableFuture<GetRegisteredServicesResponse> getRegisteredServices(GetRegisteredServicesRequest request);
-
-    CompletableFuture<GetSaTokenResponse> getSaToken(GetSaTokenRequest request);
-
-    CompletableFuture<GetServiceMeshSlbResponse> getServiceMeshSlb(GetServiceMeshSlbRequest request);
-
-    CompletableFuture<GetServiceRegistrySourceResponse> getServiceRegistrySource(GetServiceRegistrySourceRequest request);
-
     CompletableFuture<GetVmAppMeshInfoResponse> getVmAppMeshInfo(GetVmAppMeshInfoRequest request);
 
     CompletableFuture<GetVmMetaResponse> getVmMeta(GetVmMetaRequest request);
 
-    CompletableFuture<InitializeASMRoleResponse> initializeASMRole(InitializeASMRoleRequest request);
+    CompletableFuture<ListDashboardResponse> listDashboard(ListDashboardRequest request);
 
-    CompletableFuture<ListBuiltinEnvoyFilterResponse> listBuiltinEnvoyFilter(ListBuiltinEnvoyFilterRequest request);
-
-    CompletableFuture<ModifyBuiltinEnvoyFilterResponse> modifyBuiltinEnvoyFilter(ModifyBuiltinEnvoyFilterRequest request);
+    CompletableFuture<ModifyApiServerEipResourceResponse> modifyApiServerEipResource(ModifyApiServerEipResourceRequest request);
 
     CompletableFuture<ModifyServiceMeshNameResponse> modifyServiceMeshName(ModifyServiceMeshNameRequest request);
 
     CompletableFuture<ReActivateAuditResponse> reActivateAudit(ReActivateAuditRequest request);
 
-    CompletableFuture<RemoveBuiltinEnvoyFilterResponse> removeBuiltinEnvoyFilter(RemoveBuiltinEnvoyFilterRequest request);
-
     CompletableFuture<RemoveClusterFromServiceMeshResponse> removeClusterFromServiceMesh(RemoveClusterFromServiceMeshRequest request);
 
     CompletableFuture<RemoveVMFromServiceMeshResponse> removeVMFromServiceMesh(RemoveVMFromServiceMeshRequest request);
 
-    CompletableFuture<RemoveVmAppFromMeshResponse> removeVmAppFromMesh(RemoveVmAppFromMeshRequest request);
-
     CompletableFuture<RevokeKubeconfigResponse> revokeKubeconfig(RevokeKubeconfigRequest request);
-
-    CompletableFuture<RunDiagnosisResponse> runDiagnosis(RunDiagnosisRequest request);
-
-    CompletableFuture<SetServiceRegistrySourceResponse> setServiceRegistrySource(SetServiceRegistrySourceRequest request);
 
     CompletableFuture<UpdateASMGatewayResponse> updateASMGateway(UpdateASMGatewayRequest request);
 
     CompletableFuture<UpdateASMGatewayImportedServicesResponse> updateASMGatewayImportedServices(UpdateASMGatewayImportedServicesRequest request);
 
-    CompletableFuture<UpdateControlPlaneLogAlertActionPolicyResponse> updateControlPlaneLogAlertActionPolicy(UpdateControlPlaneLogAlertActionPolicyRequest request);
+    CompletableFuture<UpdateIstioGatewayRoutesResponse> updateIstioGatewayRoutes(UpdateIstioGatewayRoutesRequest request);
 
-    CompletableFuture<UpdateControlPlaneLogConfigResponse> updateControlPlaneLogConfig(UpdateControlPlaneLogConfigRequest request);
-
-    CompletableFuture<UpdateExtensionProviderResponse> updateExtensionProvider(UpdateExtensionProviderRequest request);
-
-    CompletableFuture<UpdateIstioInjectionConfigResponse> updateIstioInjectionConfig(UpdateIstioInjectionConfigRequest request);
+    CompletableFuture<UpdateIstioRouteAdditionalStatusResponse> updateIstioRouteAdditionalStatus(UpdateIstioRouteAdditionalStatusRequest request);
 
     CompletableFuture<UpdateMeshFeatureResponse> updateMeshFeature(UpdateMeshFeatureRequest request);
 
     CompletableFuture<UpdateNamespaceScopeSidecarConfigResponse> updateNamespaceScopeSidecarConfig(UpdateNamespaceScopeSidecarConfigRequest request);
+
+    CompletableFuture<UpgradeMeshEditionPartiallyResponse> upgradeMeshEditionPartially(UpgradeMeshEditionPartiallyRequest request);
 
     CompletableFuture<UpgradeMeshVersionResponse> upgradeMeshVersion(UpgradeMeshVersionRequest request);
 

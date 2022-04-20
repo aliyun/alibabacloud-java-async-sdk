@@ -71,6 +71,87 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
 
     } 
 
+    public static class ProxyStatsMatcher extends TeaModel {
+        @NameInMap("InclusionPrefixes")
+        private java.util.List < String > inclusionPrefixes;
+
+        @NameInMap("InclusionRegexps")
+        private java.util.List < String > inclusionRegexps;
+
+        @NameInMap("InclusionSuffixes")
+        private java.util.List < String > inclusionSuffixes;
+
+        private ProxyStatsMatcher(Builder builder) {
+            this.inclusionPrefixes = builder.inclusionPrefixes;
+            this.inclusionRegexps = builder.inclusionRegexps;
+            this.inclusionSuffixes = builder.inclusionSuffixes;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ProxyStatsMatcher create() {
+            return builder().build();
+        }
+
+        /**
+         * @return inclusionPrefixes
+         */
+        public java.util.List < String > getInclusionPrefixes() {
+            return this.inclusionPrefixes;
+        }
+
+        /**
+         * @return inclusionRegexps
+         */
+        public java.util.List < String > getInclusionRegexps() {
+            return this.inclusionRegexps;
+        }
+
+        /**
+         * @return inclusionSuffixes
+         */
+        public java.util.List < String > getInclusionSuffixes() {
+            return this.inclusionSuffixes;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > inclusionPrefixes; 
+            private java.util.List < String > inclusionRegexps; 
+            private java.util.List < String > inclusionSuffixes; 
+
+            /**
+             * InclusionPrefixes.
+             */
+            public Builder inclusionPrefixes(java.util.List < String > inclusionPrefixes) {
+                this.inclusionPrefixes = inclusionPrefixes;
+                return this;
+            }
+
+            /**
+             * InclusionRegexps.
+             */
+            public Builder inclusionRegexps(java.util.List < String > inclusionRegexps) {
+                this.inclusionRegexps = inclusionRegexps;
+                return this;
+            }
+
+            /**
+             * InclusionSuffixes.
+             */
+            public Builder inclusionSuffixes(java.util.List < String > inclusionSuffixes) {
+                this.inclusionSuffixes = inclusionSuffixes;
+                return this;
+            }
+
+            public ProxyStatsMatcher build() {
+                return new ProxyStatsMatcher(this);
+            } 
+
+        } 
+
+    }
     public static class SidecarProxyInitResourceLimit extends TeaModel {
         @NameInMap("ResourceCPULimit")
         private String resourceCPULimit;
@@ -316,6 +397,9 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
 
     }
     public static class ConfigPatches extends TeaModel {
+        @NameInMap("Concurrency")
+        private Integer concurrency;
+
         @NameInMap("ExcludeInboundPorts")
         private String excludeInboundPorts;
 
@@ -324,6 +408,9 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
 
         @NameInMap("ExcludeOutboundPorts")
         private String excludeOutboundPorts;
+
+        @NameInMap("HoldApplicationUntilProxyStarts")
+        private Boolean holdApplicationUntilProxyStarts;
 
         @NameInMap("IncludeInboundPorts")
         private String includeInboundPorts;
@@ -339,6 +426,12 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
 
         @NameInMap("LifecycleStr")
         private String lifecycleStr;
+
+        @NameInMap("LogLevel")
+        private String logLevel;
+
+        @NameInMap("ProxyStatsMatcher")
+        private ProxyStatsMatcher proxyStatsMatcher;
 
         @NameInMap("SidecarProxyInitResourceLimit")
         private SidecarProxyInitResourceLimit sidecarProxyInitResourceLimit;
@@ -356,14 +449,18 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
         private String terminationDrainDuration;
 
         private ConfigPatches(Builder builder) {
+            this.concurrency = builder.concurrency;
             this.excludeInboundPorts = builder.excludeInboundPorts;
             this.excludeOutboundIPRanges = builder.excludeOutboundIPRanges;
             this.excludeOutboundPorts = builder.excludeOutboundPorts;
+            this.holdApplicationUntilProxyStarts = builder.holdApplicationUntilProxyStarts;
             this.includeInboundPorts = builder.includeInboundPorts;
             this.includeOutboundIPRanges = builder.includeOutboundIPRanges;
             this.includeOutboundPorts = builder.includeOutboundPorts;
             this.istioDNSProxyEnabled = builder.istioDNSProxyEnabled;
             this.lifecycleStr = builder.lifecycleStr;
+            this.logLevel = builder.logLevel;
+            this.proxyStatsMatcher = builder.proxyStatsMatcher;
             this.sidecarProxyInitResourceLimit = builder.sidecarProxyInitResourceLimit;
             this.sidecarProxyInitResourceRequest = builder.sidecarProxyInitResourceRequest;
             this.sidecarProxyResourceLimit = builder.sidecarProxyResourceLimit;
@@ -377,6 +474,13 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
 
         public static ConfigPatches create() {
             return builder().build();
+        }
+
+        /**
+         * @return concurrency
+         */
+        public Integer getConcurrency() {
+            return this.concurrency;
         }
 
         /**
@@ -398,6 +502,13 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
          */
         public String getExcludeOutboundPorts() {
             return this.excludeOutboundPorts;
+        }
+
+        /**
+         * @return holdApplicationUntilProxyStarts
+         */
+        public Boolean getHoldApplicationUntilProxyStarts() {
+            return this.holdApplicationUntilProxyStarts;
         }
 
         /**
@@ -436,6 +547,20 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return logLevel
+         */
+        public String getLogLevel() {
+            return this.logLevel;
+        }
+
+        /**
+         * @return proxyStatsMatcher
+         */
+        public ProxyStatsMatcher getProxyStatsMatcher() {
+            return this.proxyStatsMatcher;
+        }
+
+        /**
          * @return sidecarProxyInitResourceLimit
          */
         public SidecarProxyInitResourceLimit getSidecarProxyInitResourceLimit() {
@@ -471,19 +596,31 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer concurrency; 
             private String excludeInboundPorts; 
             private String excludeOutboundIPRanges; 
             private String excludeOutboundPorts; 
+            private Boolean holdApplicationUntilProxyStarts; 
             private String includeInboundPorts; 
             private String includeOutboundIPRanges; 
             private String includeOutboundPorts; 
             private Boolean istioDNSProxyEnabled; 
             private String lifecycleStr; 
+            private String logLevel; 
+            private ProxyStatsMatcher proxyStatsMatcher; 
             private SidecarProxyInitResourceLimit sidecarProxyInitResourceLimit; 
             private SidecarProxyInitResourceRequest sidecarProxyInitResourceRequest; 
             private SidecarProxyResourceLimit sidecarProxyResourceLimit; 
             private SidecarProxyResourceRequest sidecarProxyResourceRequest; 
             private String terminationDrainDuration; 
+
+            /**
+             * Concurrency.
+             */
+            public Builder concurrency(Integer concurrency) {
+                this.concurrency = concurrency;
+                return this;
+            }
 
             /**
              * ExcludeInboundPorts.
@@ -506,6 +643,14 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
              */
             public Builder excludeOutboundPorts(String excludeOutboundPorts) {
                 this.excludeOutboundPorts = excludeOutboundPorts;
+                return this;
+            }
+
+            /**
+             * HoldApplicationUntilProxyStarts.
+             */
+            public Builder holdApplicationUntilProxyStarts(Boolean holdApplicationUntilProxyStarts) {
+                this.holdApplicationUntilProxyStarts = holdApplicationUntilProxyStarts;
                 return this;
             }
 
@@ -546,6 +691,22 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
              */
             public Builder lifecycleStr(String lifecycleStr) {
                 this.lifecycleStr = lifecycleStr;
+                return this;
+            }
+
+            /**
+             * LogLevel.
+             */
+            public Builder logLevel(String logLevel) {
+                this.logLevel = logLevel;
+                return this;
+            }
+
+            /**
+             * ProxyStatsMatcher.
+             */
+            public Builder proxyStatsMatcher(ProxyStatsMatcher proxyStatsMatcher) {
+                this.proxyStatsMatcher = proxyStatsMatcher;
                 return this;
             }
 

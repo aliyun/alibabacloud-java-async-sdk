@@ -1021,11 +1021,20 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
 
     }
     public static class ServiceMeshes extends TeaModel {
+        @NameInMap("ClusterSpec")
+        private String clusterSpec;
+
         @NameInMap("Clusters")
         private java.util.List < String > clusters;
 
         @NameInMap("Endpoints")
         private Endpoints endpoints;
+
+        @NameInMap("OwnerId")
+        private String ownerId;
+
+        @NameInMap("OwnerType")
+        private String ownerType;
 
         @NameInMap("ServiceMeshInfo")
         private ServiceMeshInfo serviceMeshInfo;
@@ -1034,8 +1043,11 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
         private Spec spec;
 
         private ServiceMeshes(Builder builder) {
+            this.clusterSpec = builder.clusterSpec;
             this.clusters = builder.clusters;
             this.endpoints = builder.endpoints;
+            this.ownerId = builder.ownerId;
+            this.ownerType = builder.ownerType;
             this.serviceMeshInfo = builder.serviceMeshInfo;
             this.spec = builder.spec;
         }
@@ -1046,6 +1058,13 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
 
         public static ServiceMeshes create() {
             return builder().build();
+        }
+
+        /**
+         * @return clusterSpec
+         */
+        public String getClusterSpec() {
+            return this.clusterSpec;
         }
 
         /**
@@ -1063,6 +1082,20 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
         }
 
         /**
+         * @return ownerId
+         */
+        public String getOwnerId() {
+            return this.ownerId;
+        }
+
+        /**
+         * @return ownerType
+         */
+        public String getOwnerType() {
+            return this.ownerType;
+        }
+
+        /**
          * @return serviceMeshInfo
          */
         public ServiceMeshInfo getServiceMeshInfo() {
@@ -1077,10 +1110,21 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String clusterSpec; 
             private java.util.List < String > clusters; 
             private Endpoints endpoints; 
+            private String ownerId; 
+            private String ownerType; 
             private ServiceMeshInfo serviceMeshInfo; 
             private Spec spec; 
+
+            /**
+             * ClusterSpec.
+             */
+            public Builder clusterSpec(String clusterSpec) {
+                this.clusterSpec = clusterSpec;
+                return this;
+            }
 
             /**
              * Clusters.
@@ -1095,6 +1139,22 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
              */
             public Builder endpoints(Endpoints endpoints) {
                 this.endpoints = endpoints;
+                return this;
+            }
+
+            /**
+             * OwnerId.
+             */
+            public Builder ownerId(String ownerId) {
+                this.ownerId = ownerId;
+                return this;
+            }
+
+            /**
+             * OwnerType.
+             */
+            public Builder ownerType(String ownerType) {
+                this.ownerType = ownerType;
                 return this;
             }
 

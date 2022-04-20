@@ -53,6 +53,14 @@ public class UpdateMeshFeatureRequest extends Request {
     private Boolean CRAggregationEnabled;
 
     @Body
+    @NameInMap("CanaryUpgradeEnabled")
+    private Boolean canaryUpgradeEnabled;
+
+    @Body
+    @NameInMap("ClusterSpec")
+    private String clusterSpec;
+
+    @Body
     @NameInMap("CniEnabled")
     private Boolean cniEnabled;
 
@@ -125,6 +133,10 @@ public class UpdateMeshFeatureRequest extends Request {
     private Boolean gatewayAPIEnabled;
 
     @Body
+    @NameInMap("GlobalRateLimitEnabled")
+    private Boolean globalRateLimitEnabled;
+
+    @Body
     @NameInMap("Http10Enabled")
     private Boolean http10Enabled;
 
@@ -169,6 +181,22 @@ public class UpdateMeshFeatureRequest extends Request {
     private Boolean mysqlFilterEnabled;
 
     @Body
+    @NameInMap("OPAInjectorCPULimit")
+    private String OPAInjectorCPULimit;
+
+    @Body
+    @NameInMap("OPAInjectorCPURequirement")
+    private String OPAInjectorCPURequirement;
+
+    @Body
+    @NameInMap("OPAInjectorMemoryLimit")
+    private String OPAInjectorMemoryLimit;
+
+    @Body
+    @NameInMap("OPAInjectorMemoryRequirement")
+    private String OPAInjectorMemoryRequirement;
+
+    @Body
     @NameInMap("OPALimitCPU")
     private String OPALimitCPU;
 
@@ -187,6 +215,10 @@ public class UpdateMeshFeatureRequest extends Request {
     @Body
     @NameInMap("OPARequestMemory")
     private String OPARequestMemory;
+
+    @Body
+    @NameInMap("OPAScopeInjected")
+    private Boolean OPAScopeInjected;
 
     @Body
     @NameInMap("OpaEnabled")
@@ -301,6 +333,8 @@ public class UpdateMeshFeatureRequest extends Request {
         this.auditProject = builder.auditProject;
         this.autoInjectionPolicyEnabled = builder.autoInjectionPolicyEnabled;
         this.CRAggregationEnabled = builder.CRAggregationEnabled;
+        this.canaryUpgradeEnabled = builder.canaryUpgradeEnabled;
+        this.clusterSpec = builder.clusterSpec;
         this.cniEnabled = builder.cniEnabled;
         this.cniExcludeNamespaces = builder.cniExcludeNamespaces;
         this.configSourceEnabled = builder.configSourceEnabled;
@@ -319,6 +353,7 @@ public class UpdateMeshFeatureRequest extends Request {
         this.excludeOutboundPorts = builder.excludeOutboundPorts;
         this.filterGatewayClusterConfig = builder.filterGatewayClusterConfig;
         this.gatewayAPIEnabled = builder.gatewayAPIEnabled;
+        this.globalRateLimitEnabled = builder.globalRateLimitEnabled;
         this.http10Enabled = builder.http10Enabled;
         this.includeIPRanges = builder.includeIPRanges;
         this.includeInboundPorts = builder.includeInboundPorts;
@@ -330,11 +365,16 @@ public class UpdateMeshFeatureRequest extends Request {
         this.multiBufferEnabled = builder.multiBufferEnabled;
         this.multiBufferPollDelay = builder.multiBufferPollDelay;
         this.mysqlFilterEnabled = builder.mysqlFilterEnabled;
+        this.OPAInjectorCPULimit = builder.OPAInjectorCPULimit;
+        this.OPAInjectorCPURequirement = builder.OPAInjectorCPURequirement;
+        this.OPAInjectorMemoryLimit = builder.OPAInjectorMemoryLimit;
+        this.OPAInjectorMemoryRequirement = builder.OPAInjectorMemoryRequirement;
         this.OPALimitCPU = builder.OPALimitCPU;
         this.OPALimitMemory = builder.OPALimitMemory;
         this.OPALogLevel = builder.OPALogLevel;
         this.OPARequestCPU = builder.OPARequestCPU;
         this.OPARequestMemory = builder.OPARequestMemory;
+        this.OPAScopeInjected = builder.OPAScopeInjected;
         this.opaEnabled = builder.opaEnabled;
         this.openAgentPolicy = builder.openAgentPolicy;
         this.outboundTrafficPolicy = builder.outboundTrafficPolicy;
@@ -443,6 +483,20 @@ public class UpdateMeshFeatureRequest extends Request {
      */
     public Boolean getCRAggregationEnabled() {
         return this.CRAggregationEnabled;
+    }
+
+    /**
+     * @return canaryUpgradeEnabled
+     */
+    public Boolean getCanaryUpgradeEnabled() {
+        return this.canaryUpgradeEnabled;
+    }
+
+    /**
+     * @return clusterSpec
+     */
+    public String getClusterSpec() {
+        return this.clusterSpec;
     }
 
     /**
@@ -572,6 +626,13 @@ public class UpdateMeshFeatureRequest extends Request {
     }
 
     /**
+     * @return globalRateLimitEnabled
+     */
+    public Boolean getGlobalRateLimitEnabled() {
+        return this.globalRateLimitEnabled;
+    }
+
+    /**
      * @return http10Enabled
      */
     public Boolean getHttp10Enabled() {
@@ -649,6 +710,34 @@ public class UpdateMeshFeatureRequest extends Request {
     }
 
     /**
+     * @return OPAInjectorCPULimit
+     */
+    public String getOPAInjectorCPULimit() {
+        return this.OPAInjectorCPULimit;
+    }
+
+    /**
+     * @return OPAInjectorCPURequirement
+     */
+    public String getOPAInjectorCPURequirement() {
+        return this.OPAInjectorCPURequirement;
+    }
+
+    /**
+     * @return OPAInjectorMemoryLimit
+     */
+    public String getOPAInjectorMemoryLimit() {
+        return this.OPAInjectorMemoryLimit;
+    }
+
+    /**
+     * @return OPAInjectorMemoryRequirement
+     */
+    public String getOPAInjectorMemoryRequirement() {
+        return this.OPAInjectorMemoryRequirement;
+    }
+
+    /**
      * @return OPALimitCPU
      */
     public String getOPALimitCPU() {
@@ -681,6 +770,13 @@ public class UpdateMeshFeatureRequest extends Request {
      */
     public String getOPARequestMemory() {
         return this.OPARequestMemory;
+    }
+
+    /**
+     * @return OPAScopeInjected
+     */
+    public Boolean getOPAScopeInjected() {
+        return this.OPAScopeInjected;
     }
 
     /**
@@ -869,6 +965,8 @@ public class UpdateMeshFeatureRequest extends Request {
         private String auditProject; 
         private Boolean autoInjectionPolicyEnabled; 
         private Boolean CRAggregationEnabled; 
+        private Boolean canaryUpgradeEnabled; 
+        private String clusterSpec; 
         private Boolean cniEnabled; 
         private String cniExcludeNamespaces; 
         private Boolean configSourceEnabled; 
@@ -887,6 +985,7 @@ public class UpdateMeshFeatureRequest extends Request {
         private String excludeOutboundPorts; 
         private Boolean filterGatewayClusterConfig; 
         private Boolean gatewayAPIEnabled; 
+        private Boolean globalRateLimitEnabled; 
         private Boolean http10Enabled; 
         private String includeIPRanges; 
         private String includeInboundPorts; 
@@ -898,11 +997,16 @@ public class UpdateMeshFeatureRequest extends Request {
         private Boolean multiBufferEnabled; 
         private String multiBufferPollDelay; 
         private Boolean mysqlFilterEnabled; 
+        private String OPAInjectorCPULimit; 
+        private String OPAInjectorCPURequirement; 
+        private String OPAInjectorMemoryLimit; 
+        private String OPAInjectorMemoryRequirement; 
         private String OPALimitCPU; 
         private String OPALimitMemory; 
         private String OPALogLevel; 
         private String OPARequestCPU; 
         private String OPARequestMemory; 
+        private Boolean OPAScopeInjected; 
         private Boolean opaEnabled; 
         private Boolean openAgentPolicy; 
         private String outboundTrafficPolicy; 
@@ -933,77 +1037,85 @@ public class UpdateMeshFeatureRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateMeshFeatureRequest response) {
-            super(response);
-            this.accessLogEnabled = response.accessLogEnabled;
-            this.accessLogFile = response.accessLogFile;
-            this.accessLogFormat = response.accessLogFormat;
-            this.accessLogProject = response.accessLogProject;
-            this.accessLogServiceEnabled = response.accessLogServiceEnabled;
-            this.accessLogServiceHost = response.accessLogServiceHost;
-            this.accessLogServicePort = response.accessLogServicePort;
-            this.auditProject = response.auditProject;
-            this.autoInjectionPolicyEnabled = response.autoInjectionPolicyEnabled;
-            this.CRAggregationEnabled = response.CRAggregationEnabled;
-            this.cniEnabled = response.cniEnabled;
-            this.cniExcludeNamespaces = response.cniExcludeNamespaces;
-            this.configSourceEnabled = response.configSourceEnabled;
-            this.configSourceNacosID = response.configSourceNacosID;
-            this.customizedPrometheus = response.customizedPrometheus;
-            this.customizedZipkin = response.customizedZipkin;
-            this.DNSProxyingEnabled = response.DNSProxyingEnabled;
-            this.discoverySelectors = response.discoverySelectors;
-            this.dubboFilterEnabled = response.dubboFilterEnabled;
-            this.enableAudit = response.enableAudit;
-            this.enableCRHistory = response.enableCRHistory;
-            this.enableNamespacesByDefault = response.enableNamespacesByDefault;
-            this.enableSDSServer = response.enableSDSServer;
-            this.excludeIPRanges = response.excludeIPRanges;
-            this.excludeInboundPorts = response.excludeInboundPorts;
-            this.excludeOutboundPorts = response.excludeOutboundPorts;
-            this.filterGatewayClusterConfig = response.filterGatewayClusterConfig;
-            this.gatewayAPIEnabled = response.gatewayAPIEnabled;
-            this.http10Enabled = response.http10Enabled;
-            this.includeIPRanges = response.includeIPRanges;
-            this.includeInboundPorts = response.includeInboundPorts;
-            this.kialiEnabled = response.kialiEnabled;
-            this.lifecycle = response.lifecycle;
-            this.localityLBConf = response.localityLBConf;
-            this.localityLoadBalancing = response.localityLoadBalancing;
-            this.MSEEnabled = response.MSEEnabled;
-            this.multiBufferEnabled = response.multiBufferEnabled;
-            this.multiBufferPollDelay = response.multiBufferPollDelay;
-            this.mysqlFilterEnabled = response.mysqlFilterEnabled;
-            this.OPALimitCPU = response.OPALimitCPU;
-            this.OPALimitMemory = response.OPALimitMemory;
-            this.OPALogLevel = response.OPALogLevel;
-            this.OPARequestCPU = response.OPARequestCPU;
-            this.OPARequestMemory = response.OPARequestMemory;
-            this.opaEnabled = response.opaEnabled;
-            this.openAgentPolicy = response.openAgentPolicy;
-            this.outboundTrafficPolicy = response.outboundTrafficPolicy;
-            this.prometheusUrl = response.prometheusUrl;
-            this.proxyInitCPUResourceLimit = response.proxyInitCPUResourceLimit;
-            this.proxyInitCPUResourceRequest = response.proxyInitCPUResourceRequest;
-            this.proxyInitMemoryResourceLimit = response.proxyInitMemoryResourceLimit;
-            this.proxyInitMemoryResourceRequest = response.proxyInitMemoryResourceRequest;
-            this.proxyLimitCPU = response.proxyLimitCPU;
-            this.proxyLimitMemory = response.proxyLimitMemory;
-            this.proxyRequestCPU = response.proxyRequestCPU;
-            this.proxyRequestMemory = response.proxyRequestMemory;
-            this.redisFilterEnabled = response.redisFilterEnabled;
-            this.serviceMeshId = response.serviceMeshId;
-            this.sidecarInjectorLimitCPU = response.sidecarInjectorLimitCPU;
-            this.sidecarInjectorLimitMemory = response.sidecarInjectorLimitMemory;
-            this.sidecarInjectorRequestCPU = response.sidecarInjectorRequestCPU;
-            this.sidecarInjectorRequestMemory = response.sidecarInjectorRequestMemory;
-            this.sidecarInjectorWebhookAsYaml = response.sidecarInjectorWebhookAsYaml;
-            this.telemetry = response.telemetry;
-            this.terminationDrainDuration = response.terminationDrainDuration;
-            this.thriftFilterEnabled = response.thriftFilterEnabled;
-            this.traceSampling = response.traceSampling;
-            this.tracing = response.tracing;
-            this.webAssemblyFilterEnabled = response.webAssemblyFilterEnabled;
+        private Builder(UpdateMeshFeatureRequest request) {
+            super(request);
+            this.accessLogEnabled = request.accessLogEnabled;
+            this.accessLogFile = request.accessLogFile;
+            this.accessLogFormat = request.accessLogFormat;
+            this.accessLogProject = request.accessLogProject;
+            this.accessLogServiceEnabled = request.accessLogServiceEnabled;
+            this.accessLogServiceHost = request.accessLogServiceHost;
+            this.accessLogServicePort = request.accessLogServicePort;
+            this.auditProject = request.auditProject;
+            this.autoInjectionPolicyEnabled = request.autoInjectionPolicyEnabled;
+            this.CRAggregationEnabled = request.CRAggregationEnabled;
+            this.canaryUpgradeEnabled = request.canaryUpgradeEnabled;
+            this.clusterSpec = request.clusterSpec;
+            this.cniEnabled = request.cniEnabled;
+            this.cniExcludeNamespaces = request.cniExcludeNamespaces;
+            this.configSourceEnabled = request.configSourceEnabled;
+            this.configSourceNacosID = request.configSourceNacosID;
+            this.customizedPrometheus = request.customizedPrometheus;
+            this.customizedZipkin = request.customizedZipkin;
+            this.DNSProxyingEnabled = request.DNSProxyingEnabled;
+            this.discoverySelectors = request.discoverySelectors;
+            this.dubboFilterEnabled = request.dubboFilterEnabled;
+            this.enableAudit = request.enableAudit;
+            this.enableCRHistory = request.enableCRHistory;
+            this.enableNamespacesByDefault = request.enableNamespacesByDefault;
+            this.enableSDSServer = request.enableSDSServer;
+            this.excludeIPRanges = request.excludeIPRanges;
+            this.excludeInboundPorts = request.excludeInboundPorts;
+            this.excludeOutboundPorts = request.excludeOutboundPorts;
+            this.filterGatewayClusterConfig = request.filterGatewayClusterConfig;
+            this.gatewayAPIEnabled = request.gatewayAPIEnabled;
+            this.globalRateLimitEnabled = request.globalRateLimitEnabled;
+            this.http10Enabled = request.http10Enabled;
+            this.includeIPRanges = request.includeIPRanges;
+            this.includeInboundPorts = request.includeInboundPorts;
+            this.kialiEnabled = request.kialiEnabled;
+            this.lifecycle = request.lifecycle;
+            this.localityLBConf = request.localityLBConf;
+            this.localityLoadBalancing = request.localityLoadBalancing;
+            this.MSEEnabled = request.MSEEnabled;
+            this.multiBufferEnabled = request.multiBufferEnabled;
+            this.multiBufferPollDelay = request.multiBufferPollDelay;
+            this.mysqlFilterEnabled = request.mysqlFilterEnabled;
+            this.OPAInjectorCPULimit = request.OPAInjectorCPULimit;
+            this.OPAInjectorCPURequirement = request.OPAInjectorCPURequirement;
+            this.OPAInjectorMemoryLimit = request.OPAInjectorMemoryLimit;
+            this.OPAInjectorMemoryRequirement = request.OPAInjectorMemoryRequirement;
+            this.OPALimitCPU = request.OPALimitCPU;
+            this.OPALimitMemory = request.OPALimitMemory;
+            this.OPALogLevel = request.OPALogLevel;
+            this.OPARequestCPU = request.OPARequestCPU;
+            this.OPARequestMemory = request.OPARequestMemory;
+            this.OPAScopeInjected = request.OPAScopeInjected;
+            this.opaEnabled = request.opaEnabled;
+            this.openAgentPolicy = request.openAgentPolicy;
+            this.outboundTrafficPolicy = request.outboundTrafficPolicy;
+            this.prometheusUrl = request.prometheusUrl;
+            this.proxyInitCPUResourceLimit = request.proxyInitCPUResourceLimit;
+            this.proxyInitCPUResourceRequest = request.proxyInitCPUResourceRequest;
+            this.proxyInitMemoryResourceLimit = request.proxyInitMemoryResourceLimit;
+            this.proxyInitMemoryResourceRequest = request.proxyInitMemoryResourceRequest;
+            this.proxyLimitCPU = request.proxyLimitCPU;
+            this.proxyLimitMemory = request.proxyLimitMemory;
+            this.proxyRequestCPU = request.proxyRequestCPU;
+            this.proxyRequestMemory = request.proxyRequestMemory;
+            this.redisFilterEnabled = request.redisFilterEnabled;
+            this.serviceMeshId = request.serviceMeshId;
+            this.sidecarInjectorLimitCPU = request.sidecarInjectorLimitCPU;
+            this.sidecarInjectorLimitMemory = request.sidecarInjectorLimitMemory;
+            this.sidecarInjectorRequestCPU = request.sidecarInjectorRequestCPU;
+            this.sidecarInjectorRequestMemory = request.sidecarInjectorRequestMemory;
+            this.sidecarInjectorWebhookAsYaml = request.sidecarInjectorWebhookAsYaml;
+            this.telemetry = request.telemetry;
+            this.terminationDrainDuration = request.terminationDrainDuration;
+            this.thriftFilterEnabled = request.thriftFilterEnabled;
+            this.traceSampling = request.traceSampling;
+            this.tracing = request.tracing;
+            this.webAssemblyFilterEnabled = request.webAssemblyFilterEnabled;
         } 
 
         /**
@@ -1093,6 +1205,24 @@ public class UpdateMeshFeatureRequest extends Request {
         public Builder CRAggregationEnabled(Boolean CRAggregationEnabled) {
             this.putBodyParameter("CRAggregationEnabled", CRAggregationEnabled);
             this.CRAggregationEnabled = CRAggregationEnabled;
+            return this;
+        }
+
+        /**
+         * CanaryUpgradeEnabled.
+         */
+        public Builder canaryUpgradeEnabled(Boolean canaryUpgradeEnabled) {
+            this.putBodyParameter("CanaryUpgradeEnabled", canaryUpgradeEnabled);
+            this.canaryUpgradeEnabled = canaryUpgradeEnabled;
+            return this;
+        }
+
+        /**
+         * ClusterSpec.
+         */
+        public Builder clusterSpec(String clusterSpec) {
+            this.putBodyParameter("ClusterSpec", clusterSpec);
+            this.clusterSpec = clusterSpec;
             return this;
         }
 
@@ -1259,6 +1389,15 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
+         * GlobalRateLimitEnabled.
+         */
+        public Builder globalRateLimitEnabled(Boolean globalRateLimitEnabled) {
+            this.putBodyParameter("GlobalRateLimitEnabled", globalRateLimitEnabled);
+            this.globalRateLimitEnabled = globalRateLimitEnabled;
+            return this;
+        }
+
+        /**
          * Http10Enabled.
          */
         public Builder http10Enabled(Boolean http10Enabled) {
@@ -1358,6 +1497,42 @@ public class UpdateMeshFeatureRequest extends Request {
         }
 
         /**
+         * OPAInjectorCPULimit.
+         */
+        public Builder OPAInjectorCPULimit(String OPAInjectorCPULimit) {
+            this.putBodyParameter("OPAInjectorCPULimit", OPAInjectorCPULimit);
+            this.OPAInjectorCPULimit = OPAInjectorCPULimit;
+            return this;
+        }
+
+        /**
+         * OPAInjectorCPURequirement.
+         */
+        public Builder OPAInjectorCPURequirement(String OPAInjectorCPURequirement) {
+            this.putBodyParameter("OPAInjectorCPURequirement", OPAInjectorCPURequirement);
+            this.OPAInjectorCPURequirement = OPAInjectorCPURequirement;
+            return this;
+        }
+
+        /**
+         * OPAInjectorMemoryLimit.
+         */
+        public Builder OPAInjectorMemoryLimit(String OPAInjectorMemoryLimit) {
+            this.putBodyParameter("OPAInjectorMemoryLimit", OPAInjectorMemoryLimit);
+            this.OPAInjectorMemoryLimit = OPAInjectorMemoryLimit;
+            return this;
+        }
+
+        /**
+         * OPAInjectorMemoryRequirement.
+         */
+        public Builder OPAInjectorMemoryRequirement(String OPAInjectorMemoryRequirement) {
+            this.putBodyParameter("OPAInjectorMemoryRequirement", OPAInjectorMemoryRequirement);
+            this.OPAInjectorMemoryRequirement = OPAInjectorMemoryRequirement;
+            return this;
+        }
+
+        /**
          * OPALimitCPU.
          */
         public Builder OPALimitCPU(String OPALimitCPU) {
@@ -1399,6 +1574,15 @@ public class UpdateMeshFeatureRequest extends Request {
         public Builder OPARequestMemory(String OPARequestMemory) {
             this.putBodyParameter("OPARequestMemory", OPARequestMemory);
             this.OPARequestMemory = OPARequestMemory;
+            return this;
+        }
+
+        /**
+         * OPAScopeInjected.
+         */
+        public Builder OPAScopeInjected(Boolean OPAScopeInjected) {
+            this.putBodyParameter("OPAScopeInjected", OPAScopeInjected);
+            this.OPAScopeInjected = OPAScopeInjected;
             return this;
         }
 

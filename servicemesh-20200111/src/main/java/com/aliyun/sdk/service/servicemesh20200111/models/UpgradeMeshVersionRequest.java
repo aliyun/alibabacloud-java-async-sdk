@@ -49,9 +49,9 @@ public class UpgradeMeshVersionRequest extends Request {
             super();
         } 
 
-        private Builder(UpgradeMeshVersionRequest response) {
-            super(response);
-            this.serviceMeshId = response.serviceMeshId;
+        private Builder(UpgradeMeshVersionRequest request) {
+            super(request);
+            this.serviceMeshId = request.serviceMeshId;
         } 
 
         /**

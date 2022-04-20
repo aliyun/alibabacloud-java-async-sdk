@@ -75,11 +75,11 @@ public class DescribeServiceMeshUpgradeStatusRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeServiceMeshUpgradeStatusRequest response) {
-            super(response);
-            this.allIstioGatewayFullNames = response.allIstioGatewayFullNames;
-            this.guestClusterIds = response.guestClusterIds;
-            this.serviceMeshId = response.serviceMeshId;
+        private Builder(DescribeServiceMeshUpgradeStatusRequest request) {
+            super(request);
+            this.allIstioGatewayFullNames = request.allIstioGatewayFullNames;
+            this.guestClusterIds = request.guestClusterIds;
+            this.serviceMeshId = request.serviceMeshId;
         } 
 
         /**

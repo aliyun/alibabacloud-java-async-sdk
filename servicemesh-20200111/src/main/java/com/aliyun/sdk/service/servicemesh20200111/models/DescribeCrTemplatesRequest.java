@@ -63,10 +63,10 @@ public class DescribeCrTemplatesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeCrTemplatesRequest response) {
-            super(response);
-            this.istioVersion = response.istioVersion;
-            this.kind = response.kind;
+        private Builder(DescribeCrTemplatesRequest request) {
+            super(request);
+            this.istioVersion = request.istioVersion;
+            this.kind = request.kind;
         } 
 
         /**

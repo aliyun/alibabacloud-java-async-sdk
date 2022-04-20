@@ -88,12 +88,12 @@ public class UpdateASMGatewayImportedServicesRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateASMGatewayImportedServicesRequest response) {
-            super(response);
-            this.ASMGatewayName = response.ASMGatewayName;
-            this.serviceMeshId = response.serviceMeshId;
-            this.serviceNames = response.serviceNames;
-            this.serviceNamespace = response.serviceNamespace;
+        private Builder(UpdateASMGatewayImportedServicesRequest request) {
+            super(request);
+            this.ASMGatewayName = request.ASMGatewayName;
+            this.serviceMeshId = request.serviceMeshId;
+            this.serviceNames = request.serviceNames;
+            this.serviceNamespace = request.serviceNamespace;
         } 
 
         /**

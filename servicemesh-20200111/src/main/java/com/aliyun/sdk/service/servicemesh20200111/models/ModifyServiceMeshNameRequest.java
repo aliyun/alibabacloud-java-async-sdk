@@ -63,10 +63,10 @@ public class ModifyServiceMeshNameRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyServiceMeshNameRequest response) {
-            super(response);
-            this.name = response.name;
-            this.serviceMeshId = response.serviceMeshId;
+        private Builder(ModifyServiceMeshNameRequest request) {
+            super(request);
+            this.name = request.name;
+            this.serviceMeshId = request.serviceMeshId;
         } 
 
         /**

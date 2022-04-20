@@ -63,10 +63,10 @@ public class AddVMIntoServiceMeshRequest extends Request {
             super();
         } 
 
-        private Builder(AddVMIntoServiceMeshRequest response) {
-            super(response);
-            this.ecsId = response.ecsId;
-            this.serviceMeshId = response.serviceMeshId;
+        private Builder(AddVMIntoServiceMeshRequest request) {
+            super(request);
+            this.ecsId = request.ecsId;
+            this.serviceMeshId = request.serviceMeshId;
         } 
 
         /**

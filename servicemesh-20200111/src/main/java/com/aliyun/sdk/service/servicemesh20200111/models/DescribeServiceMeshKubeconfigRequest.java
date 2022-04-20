@@ -62,10 +62,10 @@ public class DescribeServiceMeshKubeconfigRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeServiceMeshKubeconfigRequest response) {
-            super(response);
-            this.privateIpAddress = response.privateIpAddress;
-            this.serviceMeshId = response.serviceMeshId;
+        private Builder(DescribeServiceMeshKubeconfigRequest request) {
+            super(request);
+            this.privateIpAddress = request.privateIpAddress;
+            this.serviceMeshId = request.serviceMeshId;
         } 
 
         /**

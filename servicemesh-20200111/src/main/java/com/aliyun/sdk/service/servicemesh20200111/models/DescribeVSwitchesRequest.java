@@ -63,10 +63,10 @@ public class DescribeVSwitchesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeVSwitchesRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.vpcId = response.vpcId;
+        private Builder(DescribeVSwitchesRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.vpcId = request.vpcId;
         } 
 
         /**

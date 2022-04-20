@@ -77,11 +77,11 @@ public class DescribeGuestClusterPodsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeGuestClusterPodsRequest response) {
-            super(response);
-            this.guestClusterID = response.guestClusterID;
-            this.namespace = response.namespace;
-            this.serviceMeshId = response.serviceMeshId;
+        private Builder(DescribeGuestClusterPodsRequest request) {
+            super(request);
+            this.guestClusterID = request.guestClusterID;
+            this.namespace = request.namespace;
+            this.serviceMeshId = request.serviceMeshId;
         } 
 
         /**

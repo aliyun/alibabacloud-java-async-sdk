@@ -49,9 +49,9 @@ public class DescribeServiceMeshDetailRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeServiceMeshDetailRequest response) {
-            super(response);
-            this.serviceMeshId = response.serviceMeshId;
+        private Builder(DescribeServiceMeshDetailRequest request) {
+            super(request);
+            this.serviceMeshId = request.serviceMeshId;
         } 
 
         /**

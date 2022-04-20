@@ -75,11 +75,11 @@ public class DeleteServiceMeshRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteServiceMeshRequest response) {
-            super(response);
-            this.force = response.force;
-            this.retainResources = response.retainResources;
-            this.serviceMeshId = response.serviceMeshId;
+        private Builder(DeleteServiceMeshRequest request) {
+            super(request);
+            this.force = request.force;
+            this.retainResources = request.retainResources;
+            this.serviceMeshId = request.serviceMeshId;
         } 
 
         /**

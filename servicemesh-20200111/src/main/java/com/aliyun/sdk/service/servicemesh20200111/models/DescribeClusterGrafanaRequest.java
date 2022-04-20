@@ -63,10 +63,10 @@ public class DescribeClusterGrafanaRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeClusterGrafanaRequest response) {
-            super(response);
-            this.k8sClusterId = response.k8sClusterId;
-            this.serviceMeshId = response.serviceMeshId;
+        private Builder(DescribeClusterGrafanaRequest request) {
+            super(request);
+            this.k8sClusterId = request.k8sClusterId;
+            this.serviceMeshId = request.serviceMeshId;
         } 
 
         /**

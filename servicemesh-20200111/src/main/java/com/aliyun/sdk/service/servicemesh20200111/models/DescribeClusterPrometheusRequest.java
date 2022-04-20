@@ -74,11 +74,11 @@ public class DescribeClusterPrometheusRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeClusterPrometheusRequest response) {
-            super(response);
-            this.k8sClusterId = response.k8sClusterId;
-            this.k8sClusterRegionId = response.k8sClusterRegionId;
-            this.serviceMeshId = response.serviceMeshId;
+        private Builder(DescribeClusterPrometheusRequest request) {
+            super(request);
+            this.k8sClusterId = request.k8sClusterId;
+            this.k8sClusterRegionId = request.k8sClusterRegionId;
+            this.serviceMeshId = request.serviceMeshId;
         } 
 
         /**

@@ -35,8 +35,8 @@ public class DescribeServiceMeshesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeServiceMeshesRequest response) {
-            super(response);
+        private Builder(DescribeServiceMeshesRequest request) {
+            super(request);
         } 
 
         @Override

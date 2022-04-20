@@ -62,10 +62,10 @@ public class DescribeNamespaceScopeSidecarConfigRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeNamespaceScopeSidecarConfigRequest response) {
-            super(response);
-            this.namespace = response.namespace;
-            this.serviceMeshId = response.serviceMeshId;
+        private Builder(DescribeNamespaceScopeSidecarConfigRequest request) {
+            super(request);
+            this.namespace = request.namespace;
+            this.serviceMeshId = request.serviceMeshId;
         } 
 
         /**
