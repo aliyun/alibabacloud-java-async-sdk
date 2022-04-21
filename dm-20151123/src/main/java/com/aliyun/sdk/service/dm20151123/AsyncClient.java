@@ -48,8 +48,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescDomainResponse> descDomain(DescDomainRequest request);
 
-    CompletableFuture<GetRegionListResponse> getRegionList(GetRegionListRequest request);
-
     CompletableFuture<GetTrackListResponse> getTrackList(GetTrackListRequest request);
 
     CompletableFuture<GetTrackListByMailFromAndTagNameResponse> getTrackListByMailFromAndTagName(GetTrackListByMailFromAndTagNameRequest request);

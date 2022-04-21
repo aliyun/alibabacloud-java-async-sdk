@@ -13,7 +13,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
     @NameInMap("NextStart")
-    private Integer nextStart;
+    private String nextStart;
 
     @NameInMap("RequestId")
     private String requestId;
@@ -38,7 +38,7 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
     /**
      * @return nextStart
      */
-    public Integer getNextStart() {
+    public String getNextStart() {
         return this.nextStart;
     }
 
@@ -57,14 +57,14 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private Integer nextStart; 
+        private String nextStart; 
         private String requestId; 
         private Data data; 
 
         /**
          * NextStart.
          */
-        public Builder nextStart(Integer nextStart) {
+        public Builder nextStart(String nextStart) {
             this.nextStart = nextStart;
             return this;
         }
