@@ -1,0 +1,73 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.mpserverless20190615.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link ResetServerSecretRequest} extends {@link RequestModel}
+ *
+ * <p>ResetServerSecretRequest</p>
+ */
+public class ResetServerSecretRequest extends Request {
+    @Body
+    @NameInMap("SpaceId")
+    @Validation(required = true)
+    private String spaceId;
+
+    private ResetServerSecretRequest(Builder builder) {
+        super(builder);
+        this.spaceId = builder.spaceId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static ResetServerSecretRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return spaceId
+     */
+    public String getSpaceId() {
+        return this.spaceId;
+    }
+
+    public static final class Builder extends Request.Builder<ResetServerSecretRequest, Builder> {
+        private String spaceId; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(ResetServerSecretRequest request) {
+            super(request);
+            this.spaceId = request.spaceId;
+        } 
+
+        /**
+         * SpaceId.
+         */
+        public Builder spaceId(String spaceId) {
+            this.putBodyParameter("SpaceId", spaceId);
+            this.spaceId = spaceId;
+            return this;
+        }
+
+        @Override
+        public ResetServerSecretRequest build() {
+            return new ResetServerSecretRequest(this);
+        } 
+
+    } 
+
+}
