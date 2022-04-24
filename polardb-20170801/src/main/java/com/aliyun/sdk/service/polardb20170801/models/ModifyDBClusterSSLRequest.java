@@ -153,17 +153,17 @@ public class ModifyDBClusterSSLRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDBClusterSSLRequest response) {
-            super(response);
-            this.DBClusterId = response.DBClusterId;
-            this.DBEndpointId = response.DBEndpointId;
-            this.netType = response.netType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.SSLAutoRotate = response.SSLAutoRotate;
-            this.SSLEnabled = response.SSLEnabled;
+        private Builder(ModifyDBClusterSSLRequest request) {
+            super(request);
+            this.DBClusterId = request.DBClusterId;
+            this.DBEndpointId = request.DBEndpointId;
+            this.netType = request.netType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.SSLAutoRotate = request.SSLAutoRotate;
+            this.SSLEnabled = request.SSLEnabled;
         } 
 
         /**

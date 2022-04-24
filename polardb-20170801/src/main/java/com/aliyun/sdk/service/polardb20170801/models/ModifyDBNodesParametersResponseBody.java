@@ -7,15 +7,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link RefreshProxyLevelResponseBody} extends {@link TeaModel}
+ * {@link ModifyDBNodesParametersResponseBody} extends {@link TeaModel}
  *
- * <p>RefreshProxyLevelResponseBody</p>
+ * <p>ModifyDBNodesParametersResponseBody</p>
  */
-public class RefreshProxyLevelResponseBody extends TeaModel {
+public class ModifyDBNodesParametersResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private RefreshProxyLevelResponseBody(Builder builder) {
+    private ModifyDBNodesParametersResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -23,7 +23,7 @@ public class RefreshProxyLevelResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static RefreshProxyLevelResponseBody create() {
+    public static ModifyDBNodesParametersResponseBody create() {
         return builder().build();
     }
 
@@ -45,8 +45,8 @@ public class RefreshProxyLevelResponseBody extends TeaModel {
             return this;
         }
 
-        public RefreshProxyLevelResponseBody build() {
-            return new RefreshProxyLevelResponseBody(this);
+        public ModifyDBNodesParametersResponseBody build() {
+            return new ModifyDBNodesParametersResponseBody(this);
         } 
 
     } 

@@ -129,15 +129,15 @@ public class DescribeParameterTemplatesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeParameterTemplatesRequest response) {
-            super(response);
-            this.DBType = response.DBType;
-            this.DBVersion = response.DBVersion;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeParameterTemplatesRequest request) {
+            super(request);
+            this.DBType = request.DBType;
+            this.DBVersion = request.DBVersion;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

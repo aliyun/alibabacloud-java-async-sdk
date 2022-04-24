@@ -168,18 +168,18 @@ public class ModifyDBClusterMigrationRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDBClusterMigrationRequest response) {
-            super(response);
-            this.DBClusterId = response.DBClusterId;
-            this.newMasterInstanceId = response.newMasterInstanceId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.securityToken = response.securityToken;
-            this.sourceRDSDBInstanceId = response.sourceRDSDBInstanceId;
-            this.swapConnectionString = response.swapConnectionString;
+        private Builder(ModifyDBClusterMigrationRequest request) {
+            super(request);
+            this.DBClusterId = request.DBClusterId;
+            this.newMasterInstanceId = request.newMasterInstanceId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.securityToken = request.securityToken;
+            this.sourceRDSDBInstanceId = request.sourceRDSDBInstanceId;
+            this.swapConnectionString = request.swapConnectionString;
         } 
 
         /**

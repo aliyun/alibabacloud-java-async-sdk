@@ -196,20 +196,20 @@ public class DescribeBackupsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeBackupsRequest response) {
-            super(response);
-            this.backupId = response.backupId;
-            this.backupMode = response.backupMode;
-            this.backupStatus = response.backupStatus;
-            this.DBClusterId = response.DBClusterId;
-            this.endTime = response.endTime;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.startTime = response.startTime;
+        private Builder(DescribeBackupsRequest request) {
+            super(request);
+            this.backupId = request.backupId;
+            this.backupMode = request.backupMode;
+            this.backupStatus = request.backupStatus;
+            this.DBClusterId = request.DBClusterId;
+            this.endTime = request.endTime;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.startTime = request.startTime;
         } 
 
         /**

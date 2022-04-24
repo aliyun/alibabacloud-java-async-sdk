@@ -154,17 +154,17 @@ public class ModifyDBClusterTDERequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDBClusterTDERequest response) {
-            super(response);
-            this.DBClusterId = response.DBClusterId;
-            this.encryptNewTables = response.encryptNewTables;
-            this.encryptionKey = response.encryptionKey;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.roleArn = response.roleArn;
-            this.TDEStatus = response.TDEStatus;
+        private Builder(ModifyDBClusterTDERequest request) {
+            super(request);
+            this.DBClusterId = request.DBClusterId;
+            this.encryptNewTables = request.encryptNewTables;
+            this.encryptionKey = request.encryptionKey;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.roleArn = request.roleArn;
+            this.TDEStatus = request.TDEStatus;
         } 
 
         /**

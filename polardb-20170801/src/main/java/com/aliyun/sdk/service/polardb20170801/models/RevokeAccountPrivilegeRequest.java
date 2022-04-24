@@ -129,15 +129,15 @@ public class RevokeAccountPrivilegeRequest extends Request {
             super();
         } 
 
-        private Builder(RevokeAccountPrivilegeRequest response) {
-            super(response);
-            this.accountName = response.accountName;
-            this.DBClusterId = response.DBClusterId;
-            this.DBName = response.DBName;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(RevokeAccountPrivilegeRequest request) {
+            super(request);
+            this.accountName = request.accountName;
+            this.DBClusterId = request.DBClusterId;
+            this.DBName = request.DBName;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

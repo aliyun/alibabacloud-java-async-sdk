@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListTagResourcesForRegionResponse} extends {@link TeaModel}
+ * {@link DescribeSlowLogsResponse} extends {@link TeaModel}
  *
- * <p>ListTagResourcesForRegionResponse</p>
+ * <p>DescribeSlowLogsResponse</p>
  */
-public class ListTagResourcesForRegionResponse extends Response {
+public class DescribeSlowLogsResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private ListTagResourcesForRegionResponseBody body;
+    private DescribeSlowLogsResponseBody body;
 
-    private ListTagResourcesForRegionResponse(BuilderImpl builder) {
+    private DescribeSlowLogsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static ListTagResourcesForRegionResponse create() {
+    public static DescribeSlowLogsResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class ListTagResourcesForRegionResponse extends Response {
     /**
      * @return body
      */
-    public ListTagResourcesForRegionResponseBody getBody() {
+    public DescribeSlowLogsResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ListTagResourcesForRegionResponse, Builder> {
+    public interface Builder extends Response.Builder<DescribeSlowLogsResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(ListTagResourcesForRegionResponseBody body);
+        Builder body(DescribeSlowLogsResponseBody body);
 
         @Override
-        ListTagResourcesForRegionResponse build();
+        DescribeSlowLogsResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ListTagResourcesForRegionResponse, Builder>
+            extends Response.BuilderImpl<DescribeSlowLogsResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private ListTagResourcesForRegionResponseBody body; 
+        private DescribeSlowLogsResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ListTagResourcesForRegionResponse response) {
+        private BuilderImpl(DescribeSlowLogsResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class ListTagResourcesForRegionResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ListTagResourcesForRegionResponseBody body) {
+        public Builder body(DescribeSlowLogsResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ListTagResourcesForRegionResponse build() {
-            return new ListTagResourcesForRegionResponse(this);
+        public DescribeSlowLogsResponse build() {
+            return new DescribeSlowLogsResponse(this);
         } 
 
     } 

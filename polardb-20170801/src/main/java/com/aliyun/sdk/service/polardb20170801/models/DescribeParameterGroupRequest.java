@@ -115,14 +115,14 @@ public class DescribeParameterGroupRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeParameterGroupRequest response) {
-            super(response);
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.parameterGroupId = response.parameterGroupId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeParameterGroupRequest request) {
+            super(request);
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.parameterGroupId = request.parameterGroupId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

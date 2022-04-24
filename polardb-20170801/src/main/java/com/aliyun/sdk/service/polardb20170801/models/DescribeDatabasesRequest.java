@@ -140,16 +140,16 @@ public class DescribeDatabasesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDatabasesRequest response) {
-            super(response);
-            this.DBClusterId = response.DBClusterId;
-            this.DBName = response.DBName;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeDatabasesRequest request) {
+            super(request);
+            this.DBClusterId = request.DBClusterId;
+            this.DBName = request.DBName;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

@@ -101,13 +101,13 @@ public class ModifyMaskingRulesRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyMaskingRulesRequest response) {
-            super(response);
-            this.DBClusterId = response.DBClusterId;
-            this.enable = response.enable;
-            this.ruleConfig = response.ruleConfig;
-            this.ruleName = response.ruleName;
-            this.ruleNameList = response.ruleNameList;
+        private Builder(ModifyMaskingRulesRequest request) {
+            super(request);
+            this.DBClusterId = request.DBClusterId;
+            this.enable = request.enable;
+            this.ruleConfig = request.ruleConfig;
+            this.ruleName = request.ruleName;
+            this.ruleNameList = request.ruleNameList;
         } 
 
         /**

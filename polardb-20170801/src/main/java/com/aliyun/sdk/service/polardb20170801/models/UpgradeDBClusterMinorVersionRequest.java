@@ -140,16 +140,16 @@ public class UpgradeDBClusterMinorVersionRequest extends Request {
             super();
         } 
 
-        private Builder(UpgradeDBClusterMinorVersionRequest response) {
-            super(response);
-            this.DBClusterId = response.DBClusterId;
-            this.fromTimeService = response.fromTimeService;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.plannedEndTime = response.plannedEndTime;
-            this.plannedStartTime = response.plannedStartTime;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(UpgradeDBClusterMinorVersionRequest request) {
+            super(request);
+            this.DBClusterId = request.DBClusterId;
+            this.fromTimeService = request.fromTimeService;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.plannedEndTime = request.plannedEndTime;
+            this.plannedStartTime = request.plannedStartTime;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

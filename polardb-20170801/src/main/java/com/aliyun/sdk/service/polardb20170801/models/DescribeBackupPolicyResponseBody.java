@@ -18,8 +18,20 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     @NameInMap("BackupRetentionPolicyOnClusterDeletion")
     private String backupRetentionPolicyOnClusterDeletion;
 
+    @NameInMap("DataLevel1BackupFrequency")
+    private String dataLevel1BackupFrequency;
+
+    @NameInMap("DataLevel1BackupPeriod")
+    private String dataLevel1BackupPeriod;
+
     @NameInMap("DataLevel1BackupRetentionPeriod")
     private String dataLevel1BackupRetentionPeriod;
+
+    @NameInMap("DataLevel1BackupTime")
+    private String dataLevel1BackupTime;
+
+    @NameInMap("DataLevel2BackupPeriod")
+    private String dataLevel2BackupPeriod;
 
     @NameInMap("DataLevel2BackupRetentionPeriod")
     private String dataLevel2BackupRetentionPeriod;
@@ -39,7 +51,11 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     private DescribeBackupPolicyResponseBody(Builder builder) {
         this.backupFrequency = builder.backupFrequency;
         this.backupRetentionPolicyOnClusterDeletion = builder.backupRetentionPolicyOnClusterDeletion;
+        this.dataLevel1BackupFrequency = builder.dataLevel1BackupFrequency;
+        this.dataLevel1BackupPeriod = builder.dataLevel1BackupPeriod;
         this.dataLevel1BackupRetentionPeriod = builder.dataLevel1BackupRetentionPeriod;
+        this.dataLevel1BackupTime = builder.dataLevel1BackupTime;
+        this.dataLevel2BackupPeriod = builder.dataLevel2BackupPeriod;
         this.dataLevel2BackupRetentionPeriod = builder.dataLevel2BackupRetentionPeriod;
         this.preferredBackupPeriod = builder.preferredBackupPeriod;
         this.preferredBackupTime = builder.preferredBackupTime;
@@ -70,10 +86,38 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     }
 
     /**
+     * @return dataLevel1BackupFrequency
+     */
+    public String getDataLevel1BackupFrequency() {
+        return this.dataLevel1BackupFrequency;
+    }
+
+    /**
+     * @return dataLevel1BackupPeriod
+     */
+    public String getDataLevel1BackupPeriod() {
+        return this.dataLevel1BackupPeriod;
+    }
+
+    /**
      * @return dataLevel1BackupRetentionPeriod
      */
     public String getDataLevel1BackupRetentionPeriod() {
         return this.dataLevel1BackupRetentionPeriod;
+    }
+
+    /**
+     * @return dataLevel1BackupTime
+     */
+    public String getDataLevel1BackupTime() {
+        return this.dataLevel1BackupTime;
+    }
+
+    /**
+     * @return dataLevel2BackupPeriod
+     */
+    public String getDataLevel2BackupPeriod() {
+        return this.dataLevel2BackupPeriod;
     }
 
     /**
@@ -114,7 +158,11 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public static final class Builder {
         private String backupFrequency; 
         private String backupRetentionPolicyOnClusterDeletion; 
+        private String dataLevel1BackupFrequency; 
+        private String dataLevel1BackupPeriod; 
         private String dataLevel1BackupRetentionPeriod; 
+        private String dataLevel1BackupTime; 
+        private String dataLevel2BackupPeriod; 
         private String dataLevel2BackupRetentionPeriod; 
         private String preferredBackupPeriod; 
         private String preferredBackupTime; 
@@ -138,10 +186,42 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
+         * DataLevel1BackupFrequency.
+         */
+        public Builder dataLevel1BackupFrequency(String dataLevel1BackupFrequency) {
+            this.dataLevel1BackupFrequency = dataLevel1BackupFrequency;
+            return this;
+        }
+
+        /**
+         * DataLevel1BackupPeriod.
+         */
+        public Builder dataLevel1BackupPeriod(String dataLevel1BackupPeriod) {
+            this.dataLevel1BackupPeriod = dataLevel1BackupPeriod;
+            return this;
+        }
+
+        /**
          * DataLevel1BackupRetentionPeriod.
          */
         public Builder dataLevel1BackupRetentionPeriod(String dataLevel1BackupRetentionPeriod) {
             this.dataLevel1BackupRetentionPeriod = dataLevel1BackupRetentionPeriod;
+            return this;
+        }
+
+        /**
+         * DataLevel1BackupTime.
+         */
+        public Builder dataLevel1BackupTime(String dataLevel1BackupTime) {
+            this.dataLevel1BackupTime = dataLevel1BackupTime;
+            return this;
+        }
+
+        /**
+         * DataLevel2BackupPeriod.
+         */
+        public Builder dataLevel2BackupPeriod(String dataLevel2BackupPeriod) {
+            this.dataLevel2BackupPeriod = dataLevel2BackupPeriod;
             return this;
         }
 

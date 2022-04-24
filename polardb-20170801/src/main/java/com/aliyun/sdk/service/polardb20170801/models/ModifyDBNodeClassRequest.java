@@ -181,19 +181,19 @@ public class ModifyDBNodeClassRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDBNodeClassRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.DBClusterId = response.DBClusterId;
-            this.DBNodeTargetClass = response.DBNodeTargetClass;
-            this.modifyType = response.modifyType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.plannedEndTime = response.plannedEndTime;
-            this.plannedStartTime = response.plannedStartTime;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.subCategory = response.subCategory;
+        private Builder(ModifyDBNodeClassRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.DBClusterId = request.DBClusterId;
+            this.DBNodeTargetClass = request.DBNodeTargetClass;
+            this.modifyType = request.modifyType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.plannedEndTime = request.plannedEndTime;
+            this.plannedStartTime = request.plannedStartTime;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.subCategory = request.subCategory;
         } 
 
         /**

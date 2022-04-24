@@ -127,15 +127,15 @@ public class ModifyDBClusterParametersRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDBClusterParametersRequest response) {
-            super(response);
-            this.DBClusterId = response.DBClusterId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.parameterGroupId = response.parameterGroupId;
-            this.parameters = response.parameters;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyDBClusterParametersRequest request) {
+            super(request);
+            this.DBClusterId = request.DBClusterId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.parameterGroupId = request.parameterGroupId;
+            this.parameters = request.parameters;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

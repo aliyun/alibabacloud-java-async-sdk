@@ -170,18 +170,18 @@ public class TempModifyDBNodeRequest extends Request {
             super();
         } 
 
-        private Builder(TempModifyDBNodeRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.DBClusterId = response.DBClusterId;
-            this.DBNode = response.DBNode;
-            this.modifyType = response.modifyType;
-            this.operationType = response.operationType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.restoreTime = response.restoreTime;
+        private Builder(TempModifyDBNodeRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.DBClusterId = request.DBClusterId;
+            this.DBNode = request.DBNode;
+            this.modifyType = request.modifyType;
+            this.operationType = request.operationType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.restoreTime = request.restoreTime;
         } 
 
         /**

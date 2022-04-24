@@ -115,14 +115,14 @@ public class DeleteDBClusterEndpointRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteDBClusterEndpointRequest response) {
-            super(response);
-            this.DBClusterId = response.DBClusterId;
-            this.DBEndpointId = response.DBEndpointId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DeleteDBClusterEndpointRequest request) {
+            super(request);
+            this.DBClusterId = request.DBClusterId;
+            this.DBEndpointId = request.DBEndpointId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

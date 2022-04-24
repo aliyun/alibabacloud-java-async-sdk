@@ -101,13 +101,13 @@ public class RestartDBNodeRequest extends Request {
             super();
         } 
 
-        private Builder(RestartDBNodeRequest response) {
-            super(response);
-            this.DBNodeId = response.DBNodeId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(RestartDBNodeRequest request) {
+            super(request);
+            this.DBNodeId = request.DBNodeId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

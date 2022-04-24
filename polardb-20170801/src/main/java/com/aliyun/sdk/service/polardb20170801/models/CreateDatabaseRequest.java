@@ -194,20 +194,20 @@ public class CreateDatabaseRequest extends Request {
             super();
         } 
 
-        private Builder(CreateDatabaseRequest response) {
-            super(response);
-            this.accountName = response.accountName;
-            this.accountPrivilege = response.accountPrivilege;
-            this.characterSetName = response.characterSetName;
-            this.collate = response.collate;
-            this.ctype = response.ctype;
-            this.DBClusterId = response.DBClusterId;
-            this.DBDescription = response.DBDescription;
-            this.DBName = response.DBName;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(CreateDatabaseRequest request) {
+            super(request);
+            this.accountName = request.accountName;
+            this.accountPrivilege = request.accountPrivilege;
+            this.characterSetName = request.characterSetName;
+            this.collate = request.collate;
+            this.ctype = request.ctype;
+            this.DBClusterId = request.DBClusterId;
+            this.DBDescription = request.DBDescription;
+            this.DBName = request.DBName;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

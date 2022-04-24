@@ -443,39 +443,39 @@ public class CreateDBClusterRequest extends Request {
             super();
         } 
 
-        private Builder(CreateDBClusterRequest response) {
-            super(response);
-            this.autoRenew = response.autoRenew;
-            this.backupRetentionPolicyOnClusterDeletion = response.backupRetentionPolicyOnClusterDeletion;
-            this.clientToken = response.clientToken;
-            this.cloneDataPoint = response.cloneDataPoint;
-            this.clusterNetworkType = response.clusterNetworkType;
-            this.creationCategory = response.creationCategory;
-            this.creationOption = response.creationOption;
-            this.DBClusterDescription = response.DBClusterDescription;
-            this.DBMinorVersion = response.DBMinorVersion;
-            this.DBNodeClass = response.DBNodeClass;
-            this.DBType = response.DBType;
-            this.DBVersion = response.DBVersion;
-            this.defaultTimeZone = response.defaultTimeZone;
-            this.GDNId = response.GDNId;
-            this.lowerCaseTableNames = response.lowerCaseTableNames;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.parameterGroupId = response.parameterGroupId;
-            this.payType = response.payType;
-            this.period = response.period;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.securityIPList = response.securityIPList;
-            this.sourceResourceId = response.sourceResourceId;
-            this.TDEStatus = response.TDEStatus;
-            this.usedTime = response.usedTime;
-            this.VPCId = response.VPCId;
-            this.vSwitchId = response.vSwitchId;
-            this.zoneId = response.zoneId;
+        private Builder(CreateDBClusterRequest request) {
+            super(request);
+            this.autoRenew = request.autoRenew;
+            this.backupRetentionPolicyOnClusterDeletion = request.backupRetentionPolicyOnClusterDeletion;
+            this.clientToken = request.clientToken;
+            this.cloneDataPoint = request.cloneDataPoint;
+            this.clusterNetworkType = request.clusterNetworkType;
+            this.creationCategory = request.creationCategory;
+            this.creationOption = request.creationOption;
+            this.DBClusterDescription = request.DBClusterDescription;
+            this.DBMinorVersion = request.DBMinorVersion;
+            this.DBNodeClass = request.DBNodeClass;
+            this.DBType = request.DBType;
+            this.DBVersion = request.DBVersion;
+            this.defaultTimeZone = request.defaultTimeZone;
+            this.GDNId = request.GDNId;
+            this.lowerCaseTableNames = request.lowerCaseTableNames;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.parameterGroupId = request.parameterGroupId;
+            this.payType = request.payType;
+            this.period = request.period;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.securityIPList = request.securityIPList;
+            this.sourceResourceId = request.sourceResourceId;
+            this.TDEStatus = request.TDEStatus;
+            this.usedTime = request.usedTime;
+            this.VPCId = request.VPCId;
+            this.vSwitchId = request.vSwitchId;
+            this.zoneId = request.zoneId;
         } 
 
         /**

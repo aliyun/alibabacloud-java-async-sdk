@@ -140,16 +140,16 @@ public class CreateGlobalDatabaseNetworkRequest extends Request {
             super();
         } 
 
-        private Builder(CreateGlobalDatabaseNetworkRequest response) {
-            super(response);
-            this.DBClusterId = response.DBClusterId;
-            this.GDNDescription = response.GDNDescription;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.securityToken = response.securityToken;
+        private Builder(CreateGlobalDatabaseNetworkRequest request) {
+            super(request);
+            this.DBClusterId = request.DBClusterId;
+            this.GDNDescription = request.GDNDescription;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.securityToken = request.securityToken;
         } 
 
         /**

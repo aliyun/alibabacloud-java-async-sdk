@@ -104,13 +104,13 @@ public class DescribeDBNodePerformanceRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDBNodePerformanceRequest response) {
-            super(response);
-            this.DBClusterId = response.DBClusterId;
-            this.DBNodeId = response.DBNodeId;
-            this.endTime = response.endTime;
-            this.key = response.key;
-            this.startTime = response.startTime;
+        private Builder(DescribeDBNodePerformanceRequest request) {
+            super(request);
+            this.DBClusterId = request.DBClusterId;
+            this.DBNodeId = request.DBNodeId;
+            this.endTime = request.endTime;
+            this.key = request.key;
+            this.startTime = request.startTime;
         } 
 
         /**

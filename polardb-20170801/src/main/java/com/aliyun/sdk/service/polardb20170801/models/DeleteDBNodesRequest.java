@@ -128,15 +128,15 @@ public class DeleteDBNodesRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteDBNodesRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.DBClusterId = response.DBClusterId;
-            this.DBNodeId = response.DBNodeId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DeleteDBNodesRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.DBClusterId = request.DBClusterId;
+            this.DBNodeId = request.DBNodeId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

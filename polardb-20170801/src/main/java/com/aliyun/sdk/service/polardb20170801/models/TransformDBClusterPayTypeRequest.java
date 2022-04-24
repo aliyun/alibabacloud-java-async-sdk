@@ -181,19 +181,19 @@ public class TransformDBClusterPayTypeRequest extends Request {
             super();
         } 
 
-        private Builder(TransformDBClusterPayTypeRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.DBClusterId = response.DBClusterId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.payType = response.payType;
-            this.period = response.period;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.usedTime = response.usedTime;
+        private Builder(TransformDBClusterPayTypeRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.DBClusterId = request.DBClusterId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.payType = request.payType;
+            this.period = request.period;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.usedTime = request.usedTime;
         } 
 
         /**

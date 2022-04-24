@@ -180,19 +180,19 @@ public class CreateDBNodesRequest extends Request {
             super();
         } 
 
-        private Builder(CreateDBNodesRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.DBClusterId = response.DBClusterId;
-            this.DBNode = response.DBNode;
-            this.endpointBindList = response.endpointBindList;
-            this.imciSwitch = response.imciSwitch;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.plannedEndTime = response.plannedEndTime;
-            this.plannedStartTime = response.plannedStartTime;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(CreateDBNodesRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.DBClusterId = request.DBClusterId;
+            this.DBNode = request.DBNode;
+            this.endpointBindList = request.endpointBindList;
+            this.imciSwitch = request.imciSwitch;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.plannedEndTime = request.plannedEndTime;
+            this.plannedStartTime = request.plannedStartTime;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

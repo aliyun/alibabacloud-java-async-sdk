@@ -7,25 +7,20 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ModifyDBNodeHotReplicaModeRequest} extends {@link RequestModel}
+ * {@link DescribeDBNodesParametersRequest} extends {@link RequestModel}
  *
- * <p>ModifyDBNodeHotReplicaModeRequest</p>
+ * <p>DescribeDBNodesParametersRequest</p>
  */
-public class ModifyDBNodeHotReplicaModeRequest extends Request {
+public class DescribeDBNodesParametersRequest extends Request {
     @Query
     @NameInMap("DBClusterId")
     @Validation(required = true)
     private String DBClusterId;
 
     @Query
-    @NameInMap("DBNodeId")
+    @NameInMap("DBNodeIds")
     @Validation(required = true)
-    private String DBNodeId;
-
-    @Query
-    @NameInMap("HotReplicaMode")
-    @Validation(required = true)
-    private String hotReplicaMode;
+    private String DBNodeIds;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -43,11 +38,10 @@ public class ModifyDBNodeHotReplicaModeRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    private ModifyDBNodeHotReplicaModeRequest(Builder builder) {
+    private DescribeDBNodesParametersRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
-        this.DBNodeId = builder.DBNodeId;
-        this.hotReplicaMode = builder.hotReplicaMode;
+        this.DBNodeIds = builder.DBNodeIds;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -58,7 +52,7 @@ public class ModifyDBNodeHotReplicaModeRequest extends Request {
         return new Builder();
     }
 
-    public static ModifyDBNodeHotReplicaModeRequest create() {
+    public static DescribeDBNodesParametersRequest create() {
         return builder().build();
     }
 
@@ -75,17 +69,10 @@ public class ModifyDBNodeHotReplicaModeRequest extends Request {
     }
 
     /**
-     * @return DBNodeId
+     * @return DBNodeIds
      */
-    public String getDBNodeId() {
-        return this.DBNodeId;
-    }
-
-    /**
-     * @return hotReplicaMode
-     */
-    public String getHotReplicaMode() {
-        return this.hotReplicaMode;
+    public String getDBNodeIds() {
+        return this.DBNodeIds;
     }
 
     /**
@@ -116,10 +103,9 @@ public class ModifyDBNodeHotReplicaModeRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    public static final class Builder extends Request.Builder<ModifyDBNodeHotReplicaModeRequest, Builder> {
+    public static final class Builder extends Request.Builder<DescribeDBNodesParametersRequest, Builder> {
         private String DBClusterId; 
-        private String DBNodeId; 
-        private String hotReplicaMode; 
+        private String DBNodeIds; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
@@ -129,15 +115,14 @@ public class ModifyDBNodeHotReplicaModeRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDBNodeHotReplicaModeRequest response) {
-            super(response);
-            this.DBClusterId = response.DBClusterId;
-            this.DBNodeId = response.DBNodeId;
-            this.hotReplicaMode = response.hotReplicaMode;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeDBNodesParametersRequest request) {
+            super(request);
+            this.DBClusterId = request.DBClusterId;
+            this.DBNodeIds = request.DBNodeIds;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
@@ -150,20 +135,11 @@ public class ModifyDBNodeHotReplicaModeRequest extends Request {
         }
 
         /**
-         * DBNodeId.
+         * 查询指定节点的参数列表
          */
-        public Builder DBNodeId(String DBNodeId) {
-            this.putQueryParameter("DBNodeId", DBNodeId);
-            this.DBNodeId = DBNodeId;
-            return this;
-        }
-
-        /**
-         * HotReplicaMode.
-         */
-        public Builder hotReplicaMode(String hotReplicaMode) {
-            this.putQueryParameter("HotReplicaMode", hotReplicaMode);
-            this.hotReplicaMode = hotReplicaMode;
+        public Builder DBNodeIds(String DBNodeIds) {
+            this.putQueryParameter("DBNodeIds", DBNodeIds);
+            this.DBNodeIds = DBNodeIds;
             return this;
         }
 
@@ -204,8 +180,8 @@ public class ModifyDBNodeHotReplicaModeRequest extends Request {
         }
 
         @Override
-        public ModifyDBNodeHotReplicaModeRequest build() {
-            return new ModifyDBNodeHotReplicaModeRequest(this);
+        public DescribeDBNodesParametersRequest build() {
+            return new DescribeDBNodesParametersRequest(this);
         } 
 
     } 

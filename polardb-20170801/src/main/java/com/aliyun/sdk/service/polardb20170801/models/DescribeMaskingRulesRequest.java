@@ -62,10 +62,10 @@ public class DescribeMaskingRulesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeMaskingRulesRequest response) {
-            super(response);
-            this.DBClusterId = response.DBClusterId;
-            this.ruleNameList = response.ruleNameList;
+        private Builder(DescribeMaskingRulesRequest request) {
+            super(request);
+            this.DBClusterId = request.DBClusterId;
+            this.ruleNameList = request.ruleNameList;
         } 
 
         /**

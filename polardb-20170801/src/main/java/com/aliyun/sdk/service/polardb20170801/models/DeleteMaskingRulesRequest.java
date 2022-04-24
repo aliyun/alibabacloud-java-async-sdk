@@ -63,10 +63,10 @@ public class DeleteMaskingRulesRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteMaskingRulesRequest response) {
-            super(response);
-            this.DBClusterId = response.DBClusterId;
-            this.ruleNameList = response.ruleNameList;
+        private Builder(DeleteMaskingRulesRequest request) {
+            super(request);
+            this.DBClusterId = request.DBClusterId;
+            this.ruleNameList = request.ruleNameList;
         } 
 
         /**

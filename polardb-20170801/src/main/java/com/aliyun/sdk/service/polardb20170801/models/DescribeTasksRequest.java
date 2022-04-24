@@ -180,19 +180,19 @@ public class DescribeTasksRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeTasksRequest response) {
-            super(response);
-            this.DBClusterId = response.DBClusterId;
-            this.DBNodeId = response.DBNodeId;
-            this.endTime = response.endTime;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.startTime = response.startTime;
-            this.status = response.status;
+        private Builder(DescribeTasksRequest request) {
+            super(request);
+            this.DBClusterId = request.DBClusterId;
+            this.DBNodeId = request.DBNodeId;
+            this.endTime = request.endTime;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.startTime = request.startTime;
+            this.status = request.status;
         } 
 
         /**

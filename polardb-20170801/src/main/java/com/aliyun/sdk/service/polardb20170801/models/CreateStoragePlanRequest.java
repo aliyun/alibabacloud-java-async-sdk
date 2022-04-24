@@ -156,17 +156,17 @@ public class CreateStoragePlanRequest extends Request {
             super();
         } 
 
-        private Builder(CreateStoragePlanRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.period = response.period;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.storageClass = response.storageClass;
-            this.storageType = response.storageType;
-            this.usedTime = response.usedTime;
+        private Builder(CreateStoragePlanRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.period = request.period;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.storageClass = request.storageClass;
+            this.storageType = request.storageType;
+            this.usedTime = request.usedTime;
         } 
 
         /**

@@ -26,8 +26,24 @@ public class ModifyBackupPolicyRequest extends Request {
     private String DBClusterId;
 
     @Query
+    @NameInMap("DataLevel1BackupFrequency")
+    private String dataLevel1BackupFrequency;
+
+    @Query
+    @NameInMap("DataLevel1BackupPeriod")
+    private String dataLevel1BackupPeriod;
+
+    @Query
     @NameInMap("DataLevel1BackupRetentionPeriod")
     private String dataLevel1BackupRetentionPeriod;
+
+    @Query
+    @NameInMap("DataLevel1BackupTime")
+    private String dataLevel1BackupTime;
+
+    @Query
+    @NameInMap("DataLevel2BackupPeriod")
+    private String dataLevel2BackupPeriod;
 
     @Query
     @NameInMap("DataLevel2BackupRetentionPeriod")
@@ -62,7 +78,11 @@ public class ModifyBackupPolicyRequest extends Request {
         this.backupFrequency = builder.backupFrequency;
         this.backupRetentionPolicyOnClusterDeletion = builder.backupRetentionPolicyOnClusterDeletion;
         this.DBClusterId = builder.DBClusterId;
+        this.dataLevel1BackupFrequency = builder.dataLevel1BackupFrequency;
+        this.dataLevel1BackupPeriod = builder.dataLevel1BackupPeriod;
         this.dataLevel1BackupRetentionPeriod = builder.dataLevel1BackupRetentionPeriod;
+        this.dataLevel1BackupTime = builder.dataLevel1BackupTime;
+        this.dataLevel2BackupPeriod = builder.dataLevel2BackupPeriod;
         this.dataLevel2BackupRetentionPeriod = builder.dataLevel2BackupRetentionPeriod;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -107,10 +127,38 @@ public class ModifyBackupPolicyRequest extends Request {
     }
 
     /**
+     * @return dataLevel1BackupFrequency
+     */
+    public String getDataLevel1BackupFrequency() {
+        return this.dataLevel1BackupFrequency;
+    }
+
+    /**
+     * @return dataLevel1BackupPeriod
+     */
+    public String getDataLevel1BackupPeriod() {
+        return this.dataLevel1BackupPeriod;
+    }
+
+    /**
      * @return dataLevel1BackupRetentionPeriod
      */
     public String getDataLevel1BackupRetentionPeriod() {
         return this.dataLevel1BackupRetentionPeriod;
+    }
+
+    /**
+     * @return dataLevel1BackupTime
+     */
+    public String getDataLevel1BackupTime() {
+        return this.dataLevel1BackupTime;
+    }
+
+    /**
+     * @return dataLevel2BackupPeriod
+     */
+    public String getDataLevel2BackupPeriod() {
+        return this.dataLevel2BackupPeriod;
     }
 
     /**
@@ -166,7 +214,11 @@ public class ModifyBackupPolicyRequest extends Request {
         private String backupFrequency; 
         private String backupRetentionPolicyOnClusterDeletion; 
         private String DBClusterId; 
+        private String dataLevel1BackupFrequency; 
+        private String dataLevel1BackupPeriod; 
         private String dataLevel1BackupRetentionPeriod; 
+        private String dataLevel1BackupTime; 
+        private String dataLevel2BackupPeriod; 
         private String dataLevel2BackupRetentionPeriod; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -179,19 +231,23 @@ public class ModifyBackupPolicyRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyBackupPolicyRequest response) {
-            super(response);
-            this.backupFrequency = response.backupFrequency;
-            this.backupRetentionPolicyOnClusterDeletion = response.backupRetentionPolicyOnClusterDeletion;
-            this.DBClusterId = response.DBClusterId;
-            this.dataLevel1BackupRetentionPeriod = response.dataLevel1BackupRetentionPeriod;
-            this.dataLevel2BackupRetentionPeriod = response.dataLevel2BackupRetentionPeriod;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.preferredBackupPeriod = response.preferredBackupPeriod;
-            this.preferredBackupTime = response.preferredBackupTime;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyBackupPolicyRequest request) {
+            super(request);
+            this.backupFrequency = request.backupFrequency;
+            this.backupRetentionPolicyOnClusterDeletion = request.backupRetentionPolicyOnClusterDeletion;
+            this.DBClusterId = request.DBClusterId;
+            this.dataLevel1BackupFrequency = request.dataLevel1BackupFrequency;
+            this.dataLevel1BackupPeriod = request.dataLevel1BackupPeriod;
+            this.dataLevel1BackupRetentionPeriod = request.dataLevel1BackupRetentionPeriod;
+            this.dataLevel1BackupTime = request.dataLevel1BackupTime;
+            this.dataLevel2BackupPeriod = request.dataLevel2BackupPeriod;
+            this.dataLevel2BackupRetentionPeriod = request.dataLevel2BackupRetentionPeriod;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.preferredBackupPeriod = request.preferredBackupPeriod;
+            this.preferredBackupTime = request.preferredBackupTime;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
@@ -222,11 +278,47 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
+         * DataLevel1BackupFrequency.
+         */
+        public Builder dataLevel1BackupFrequency(String dataLevel1BackupFrequency) {
+            this.putQueryParameter("DataLevel1BackupFrequency", dataLevel1BackupFrequency);
+            this.dataLevel1BackupFrequency = dataLevel1BackupFrequency;
+            return this;
+        }
+
+        /**
+         * DataLevel1BackupPeriod.
+         */
+        public Builder dataLevel1BackupPeriod(String dataLevel1BackupPeriod) {
+            this.putQueryParameter("DataLevel1BackupPeriod", dataLevel1BackupPeriod);
+            this.dataLevel1BackupPeriod = dataLevel1BackupPeriod;
+            return this;
+        }
+
+        /**
          * DataLevel1BackupRetentionPeriod.
          */
         public Builder dataLevel1BackupRetentionPeriod(String dataLevel1BackupRetentionPeriod) {
             this.putQueryParameter("DataLevel1BackupRetentionPeriod", dataLevel1BackupRetentionPeriod);
             this.dataLevel1BackupRetentionPeriod = dataLevel1BackupRetentionPeriod;
+            return this;
+        }
+
+        /**
+         * DataLevel1BackupTime.
+         */
+        public Builder dataLevel1BackupTime(String dataLevel1BackupTime) {
+            this.putQueryParameter("DataLevel1BackupTime", dataLevel1BackupTime);
+            this.dataLevel1BackupTime = dataLevel1BackupTime;
+            return this;
+        }
+
+        /**
+         * DataLevel2BackupPeriod.
+         */
+        public Builder dataLevel2BackupPeriod(String dataLevel2BackupPeriod) {
+            this.putQueryParameter("DataLevel2BackupPeriod", dataLevel2BackupPeriod);
+            this.dataLevel2BackupPeriod = dataLevel2BackupPeriod;
             return this;
         }
 

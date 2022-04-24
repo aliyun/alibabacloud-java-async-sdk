@@ -193,20 +193,20 @@ public class CreateDBClusterEndpointRequest extends Request {
             super();
         } 
 
-        private Builder(CreateDBClusterEndpointRequest response) {
-            super(response);
-            this.autoAddNewNodes = response.autoAddNewNodes;
-            this.clientToken = response.clientToken;
-            this.DBClusterId = response.DBClusterId;
-            this.DBEndpointDescription = response.DBEndpointDescription;
-            this.endpointConfig = response.endpointConfig;
-            this.endpointType = response.endpointType;
-            this.nodes = response.nodes;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.readWriteMode = response.readWriteMode;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(CreateDBClusterEndpointRequest request) {
+            super(request);
+            this.autoAddNewNodes = request.autoAddNewNodes;
+            this.clientToken = request.clientToken;
+            this.DBClusterId = request.DBClusterId;
+            this.DBEndpointDescription = request.DBEndpointDescription;
+            this.endpointConfig = request.endpointConfig;
+            this.endpointType = request.endpointType;
+            this.nodes = request.nodes;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.readWriteMode = request.readWriteMode;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

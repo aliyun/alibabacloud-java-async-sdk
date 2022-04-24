@@ -75,6 +75,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     @NameInMap("ProxyCpuCores")
     private String proxyCpuCores;
 
+    @NameInMap("ProxyStandardCpuCores")
+    private String proxyStandardCpuCores;
+
     @NameInMap("ProxyStatus")
     private String proxyStatus;
 
@@ -139,6 +142,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         this.maintainTime = builder.maintainTime;
         this.payType = builder.payType;
         this.proxyCpuCores = builder.proxyCpuCores;
+        this.proxyStandardCpuCores = builder.proxyStandardCpuCores;
         this.proxyStatus = builder.proxyStatus;
         this.proxyType = builder.proxyType;
         this.regionId = builder.regionId;
@@ -311,6 +315,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return proxyStandardCpuCores
+     */
+    public String getProxyStandardCpuCores() {
+        return this.proxyStandardCpuCores;
+    }
+
+    /**
      * @return proxyStatus
      */
     public String getProxyStatus() {
@@ -430,6 +441,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         private String maintainTime; 
         private String payType; 
         private String proxyCpuCores; 
+        private String proxyStandardCpuCores; 
         private String proxyStatus; 
         private String proxyType; 
         private String regionId; 
@@ -614,6 +626,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * ProxyStandardCpuCores.
+         */
+        public Builder proxyStandardCpuCores(String proxyStandardCpuCores) {
+            this.proxyStandardCpuCores = proxyStandardCpuCores;
+            return this;
+        }
+
+        /**
          * ProxyStatus.
          */
         public Builder proxyStatus(String proxyStatus) {
@@ -732,6 +752,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     } 
 
     public static class DBNodes extends TeaModel {
+        @NameInMap("AddedCpuCores")
+        private String addedCpuCores;
+
         @NameInMap("CreationTime")
         private String creationTime;
 
@@ -756,6 +779,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("ImciSwitch")
         private String imciSwitch;
 
+        @NameInMap("MasterId")
+        private String masterId;
+
         @NameInMap("MaxConnections")
         private Integer maxConnections;
 
@@ -766,6 +792,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         private String zoneId;
 
         private DBNodes(Builder builder) {
+            this.addedCpuCores = builder.addedCpuCores;
             this.creationTime = builder.creationTime;
             this.DBNodeClass = builder.DBNodeClass;
             this.DBNodeId = builder.DBNodeId;
@@ -774,6 +801,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             this.failoverPriority = builder.failoverPriority;
             this.hotReplicaMode = builder.hotReplicaMode;
             this.imciSwitch = builder.imciSwitch;
+            this.masterId = builder.masterId;
             this.maxConnections = builder.maxConnections;
             this.maxIOPS = builder.maxIOPS;
             this.zoneId = builder.zoneId;
@@ -785,6 +813,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
 
         public static DBNodes create() {
             return builder().build();
+        }
+
+        /**
+         * @return addedCpuCores
+         */
+        public String getAddedCpuCores() {
+            return this.addedCpuCores;
         }
 
         /**
@@ -844,6 +879,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return masterId
+         */
+        public String getMasterId() {
+            return this.masterId;
+        }
+
+        /**
          * @return maxConnections
          */
         public Integer getMaxConnections() {
@@ -865,6 +907,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String addedCpuCores; 
             private String creationTime; 
             private String DBNodeClass; 
             private String DBNodeId; 
@@ -873,9 +916,18 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             private Integer failoverPriority; 
             private String hotReplicaMode; 
             private String imciSwitch; 
+            private String masterId; 
             private Integer maxConnections; 
             private Integer maxIOPS; 
             private String zoneId; 
+
+            /**
+             * AddedCpuCores.
+             */
+            public Builder addedCpuCores(String addedCpuCores) {
+                this.addedCpuCores = addedCpuCores;
+                return this;
+            }
 
             /**
              * CreationTime.
@@ -938,6 +990,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
              */
             public Builder imciSwitch(String imciSwitch) {
                 this.imciSwitch = imciSwitch;
+                return this;
+            }
+
+            /**
+             * MasterId.
+             */
+            public Builder masterId(String masterId) {
+                this.masterId = masterId;
                 return this;
             }
 

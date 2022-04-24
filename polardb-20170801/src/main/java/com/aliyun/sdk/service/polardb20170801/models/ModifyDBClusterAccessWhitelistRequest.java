@@ -179,19 +179,19 @@ public class ModifyDBClusterAccessWhitelistRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDBClusterAccessWhitelistRequest response) {
-            super(response);
-            this.DBClusterIPArrayAttribute = response.DBClusterIPArrayAttribute;
-            this.DBClusterIPArrayName = response.DBClusterIPArrayName;
-            this.DBClusterId = response.DBClusterId;
-            this.modifyMode = response.modifyMode;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.securityGroupIds = response.securityGroupIds;
-            this.securityIps = response.securityIps;
-            this.whiteListType = response.whiteListType;
+        private Builder(ModifyDBClusterAccessWhitelistRequest request) {
+            super(request);
+            this.DBClusterIPArrayAttribute = request.DBClusterIPArrayAttribute;
+            this.DBClusterIPArrayName = request.DBClusterIPArrayName;
+            this.DBClusterId = request.DBClusterId;
+            this.modifyMode = request.modifyMode;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.securityGroupIds = request.securityGroupIds;
+            this.securityIps = request.securityIps;
+            this.whiteListType = request.whiteListType;
         } 
 
         /**

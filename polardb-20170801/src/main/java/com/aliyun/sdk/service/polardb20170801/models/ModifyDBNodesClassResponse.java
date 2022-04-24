@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ModifyDBNodeHotReplicaModeResponse} extends {@link TeaModel}
+ * {@link ModifyDBNodesClassResponse} extends {@link TeaModel}
  *
- * <p>ModifyDBNodeHotReplicaModeResponse</p>
+ * <p>ModifyDBNodesClassResponse</p>
  */
-public class ModifyDBNodeHotReplicaModeResponse extends Response {
+public class ModifyDBNodesClassResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private ModifyDBNodeHotReplicaModeResponseBody body;
+    private ModifyDBNodesClassResponseBody body;
 
-    private ModifyDBNodeHotReplicaModeResponse(BuilderImpl builder) {
+    private ModifyDBNodesClassResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static ModifyDBNodeHotReplicaModeResponse create() {
+    public static ModifyDBNodesClassResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class ModifyDBNodeHotReplicaModeResponse extends Response {
     /**
      * @return body
      */
-    public ModifyDBNodeHotReplicaModeResponseBody getBody() {
+    public ModifyDBNodesClassResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ModifyDBNodeHotReplicaModeResponse, Builder> {
+    public interface Builder extends Response.Builder<ModifyDBNodesClassResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(ModifyDBNodeHotReplicaModeResponseBody body);
+        Builder body(ModifyDBNodesClassResponseBody body);
 
         @Override
-        ModifyDBNodeHotReplicaModeResponse build();
+        ModifyDBNodesClassResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ModifyDBNodeHotReplicaModeResponse, Builder>
+            extends Response.BuilderImpl<ModifyDBNodesClassResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private ModifyDBNodeHotReplicaModeResponseBody body; 
+        private ModifyDBNodesClassResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ModifyDBNodeHotReplicaModeResponse response) {
+        private BuilderImpl(ModifyDBNodesClassResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class ModifyDBNodeHotReplicaModeResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ModifyDBNodeHotReplicaModeResponseBody body) {
+        public Builder body(ModifyDBNodesClassResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ModifyDBNodeHotReplicaModeResponse build() {
-            return new ModifyDBNodeHotReplicaModeResponse(this);
+        public ModifyDBNodesClassResponse build() {
+            return new ModifyDBNodesClassResponse(this);
         } 
 
     } 

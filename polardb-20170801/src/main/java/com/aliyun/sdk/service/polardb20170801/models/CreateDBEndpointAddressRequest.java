@@ -142,16 +142,16 @@ public class CreateDBEndpointAddressRequest extends Request {
             super();
         } 
 
-        private Builder(CreateDBEndpointAddressRequest response) {
-            super(response);
-            this.connectionStringPrefix = response.connectionStringPrefix;
-            this.DBClusterId = response.DBClusterId;
-            this.DBEndpointId = response.DBEndpointId;
-            this.netType = response.netType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(CreateDBEndpointAddressRequest request) {
+            super(request);
+            this.connectionStringPrefix = request.connectionStringPrefix;
+            this.DBClusterId = request.DBClusterId;
+            this.DBEndpointId = request.DBEndpointId;
+            this.netType = request.netType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

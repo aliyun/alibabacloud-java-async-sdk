@@ -115,14 +115,14 @@ public class ModifyDBClusterAuditLogCollectorRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDBClusterAuditLogCollectorRequest response) {
-            super(response);
-            this.collectorStatus = response.collectorStatus;
-            this.DBClusterId = response.DBClusterId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyDBClusterAuditLogCollectorRequest request) {
+            super(request);
+            this.collectorStatus = request.collectorStatus;
+            this.DBClusterId = request.DBClusterId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

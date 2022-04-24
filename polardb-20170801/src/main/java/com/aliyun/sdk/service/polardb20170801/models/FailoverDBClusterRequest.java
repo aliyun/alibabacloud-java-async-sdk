@@ -127,15 +127,15 @@ public class FailoverDBClusterRequest extends Request {
             super();
         } 
 
-        private Builder(FailoverDBClusterRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.DBClusterId = response.DBClusterId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.targetDBNodeId = response.targetDBNodeId;
+        private Builder(FailoverDBClusterRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.DBClusterId = request.DBClusterId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.targetDBNodeId = request.targetDBNodeId;
         } 
 
         /**

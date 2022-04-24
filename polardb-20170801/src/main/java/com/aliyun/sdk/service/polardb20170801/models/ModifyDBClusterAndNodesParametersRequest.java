@@ -7,19 +7,19 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link RefreshProxyLevelRequest} extends {@link RequestModel}
+ * {@link ModifyDBClusterAndNodesParametersRequest} extends {@link RequestModel}
  *
- * <p>RefreshProxyLevelRequest</p>
+ * <p>ModifyDBClusterAndNodesParametersRequest</p>
  */
-public class RefreshProxyLevelRequest extends Request {
+public class ModifyDBClusterAndNodesParametersRequest extends Request {
     @Query
     @NameInMap("DBClusterId")
     @Validation(required = true)
     private String DBClusterId;
 
     @Query
-    @NameInMap("FromTimeService")
-    private Boolean fromTimeService;
+    @NameInMap("DBNodeIds")
+    private String DBNodeIds;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -30,17 +30,12 @@ public class RefreshProxyLevelRequest extends Request {
     private Long ownerId;
 
     @Query
-    @NameInMap("PlannedEndTime")
-    private String plannedEndTime;
+    @NameInMap("ParameterGroupId")
+    private String parameterGroupId;
 
     @Query
-    @NameInMap("PlannedStartTime")
-    private String plannedStartTime;
-
-    @Query
-    @NameInMap("ProxyTargetClass")
-    @Validation(required = true)
-    private String proxyTargetClass;
+    @NameInMap("Parameters")
+    private String parameters;
 
     @Query
     @NameInMap("ResourceOwnerAccount")
@@ -50,15 +45,14 @@ public class RefreshProxyLevelRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    private RefreshProxyLevelRequest(Builder builder) {
+    private ModifyDBClusterAndNodesParametersRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
-        this.fromTimeService = builder.fromTimeService;
+        this.DBNodeIds = builder.DBNodeIds;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
-        this.plannedEndTime = builder.plannedEndTime;
-        this.plannedStartTime = builder.plannedStartTime;
-        this.proxyTargetClass = builder.proxyTargetClass;
+        this.parameterGroupId = builder.parameterGroupId;
+        this.parameters = builder.parameters;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
     }
@@ -67,7 +61,7 @@ public class RefreshProxyLevelRequest extends Request {
         return new Builder();
     }
 
-    public static RefreshProxyLevelRequest create() {
+    public static ModifyDBClusterAndNodesParametersRequest create() {
         return builder().build();
     }
 
@@ -84,10 +78,10 @@ public class RefreshProxyLevelRequest extends Request {
     }
 
     /**
-     * @return fromTimeService
+     * @return DBNodeIds
      */
-    public Boolean getFromTimeService() {
-        return this.fromTimeService;
+    public String getDBNodeIds() {
+        return this.DBNodeIds;
     }
 
     /**
@@ -105,24 +99,17 @@ public class RefreshProxyLevelRequest extends Request {
     }
 
     /**
-     * @return plannedEndTime
+     * @return parameterGroupId
      */
-    public String getPlannedEndTime() {
-        return this.plannedEndTime;
+    public String getParameterGroupId() {
+        return this.parameterGroupId;
     }
 
     /**
-     * @return plannedStartTime
+     * @return parameters
      */
-    public String getPlannedStartTime() {
-        return this.plannedStartTime;
-    }
-
-    /**
-     * @return proxyTargetClass
-     */
-    public String getProxyTargetClass() {
-        return this.proxyTargetClass;
+    public String getParameters() {
+        return this.parameters;
     }
 
     /**
@@ -139,14 +126,13 @@ public class RefreshProxyLevelRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    public static final class Builder extends Request.Builder<RefreshProxyLevelRequest, Builder> {
+    public static final class Builder extends Request.Builder<ModifyDBClusterAndNodesParametersRequest, Builder> {
         private String DBClusterId; 
-        private Boolean fromTimeService; 
+        private String DBNodeIds; 
         private String ownerAccount; 
         private Long ownerId; 
-        private String plannedEndTime; 
-        private String plannedStartTime; 
-        private String proxyTargetClass; 
+        private String parameterGroupId; 
+        private String parameters; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
 
@@ -154,17 +140,16 @@ public class RefreshProxyLevelRequest extends Request {
             super();
         } 
 
-        private Builder(RefreshProxyLevelRequest response) {
-            super(response);
-            this.DBClusterId = response.DBClusterId;
-            this.fromTimeService = response.fromTimeService;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.plannedEndTime = response.plannedEndTime;
-            this.plannedStartTime = response.plannedStartTime;
-            this.proxyTargetClass = response.proxyTargetClass;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyDBClusterAndNodesParametersRequest request) {
+            super(request);
+            this.DBClusterId = request.DBClusterId;
+            this.DBNodeIds = request.DBNodeIds;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.parameterGroupId = request.parameterGroupId;
+            this.parameters = request.parameters;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
@@ -177,11 +162,13 @@ public class RefreshProxyLevelRequest extends Request {
         }
 
         /**
-         * FromTimeService.
+         * 1、修改多个指定节点的参数，以‘，’分割。，修改此集群的集群参数和指定节点的参数
+         * <p>
+         * 2、当为空时，说明没有指定，则只修改集群参数。
          */
-        public Builder fromTimeService(Boolean fromTimeService) {
-            this.putQueryParameter("FromTimeService", fromTimeService);
-            this.fromTimeService = fromTimeService;
+        public Builder DBNodeIds(String DBNodeIds) {
+            this.putQueryParameter("DBNodeIds", DBNodeIds);
+            this.DBNodeIds = DBNodeIds;
             return this;
         }
 
@@ -204,29 +191,20 @@ public class RefreshProxyLevelRequest extends Request {
         }
 
         /**
-         * PlannedEndTime.
+         * 参数模板ID。
          */
-        public Builder plannedEndTime(String plannedEndTime) {
-            this.putQueryParameter("PlannedEndTime", plannedEndTime);
-            this.plannedEndTime = plannedEndTime;
+        public Builder parameterGroupId(String parameterGroupId) {
+            this.putQueryParameter("ParameterGroupId", parameterGroupId);
+            this.parameterGroupId = parameterGroupId;
             return this;
         }
 
         /**
-         * PlannedStartTime.
+         * 参数及其值的JSON串，参数的值都是字符串类型，例如{"wait_timeout":"86","innodb_old_blocks_time":"10"}
          */
-        public Builder plannedStartTime(String plannedStartTime) {
-            this.putQueryParameter("PlannedStartTime", plannedStartTime);
-            this.plannedStartTime = plannedStartTime;
-            return this;
-        }
-
-        /**
-         * ProxyTargetClass.
-         */
-        public Builder proxyTargetClass(String proxyTargetClass) {
-            this.putQueryParameter("ProxyTargetClass", proxyTargetClass);
-            this.proxyTargetClass = proxyTargetClass;
+        public Builder parameters(String parameters) {
+            this.putQueryParameter("Parameters", parameters);
+            this.parameters = parameters;
             return this;
         }
 
@@ -249,8 +227,8 @@ public class RefreshProxyLevelRequest extends Request {
         }
 
         @Override
-        public RefreshProxyLevelRequest build() {
-            return new RefreshProxyLevelRequest(this);
+        public ModifyDBClusterAndNodesParametersRequest build() {
+            return new ModifyDBClusterAndNodesParametersRequest(this);
         } 
 
     } 

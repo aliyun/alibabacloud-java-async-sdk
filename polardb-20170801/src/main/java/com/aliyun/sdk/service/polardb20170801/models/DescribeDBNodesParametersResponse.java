@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link RefreshProxyLevelResponse} extends {@link TeaModel}
+ * {@link DescribeDBNodesParametersResponse} extends {@link TeaModel}
  *
- * <p>RefreshProxyLevelResponse</p>
+ * <p>DescribeDBNodesParametersResponse</p>
  */
-public class RefreshProxyLevelResponse extends Response {
+public class DescribeDBNodesParametersResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private RefreshProxyLevelResponseBody body;
+    private DescribeDBNodesParametersResponseBody body;
 
-    private RefreshProxyLevelResponse(BuilderImpl builder) {
+    private DescribeDBNodesParametersResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static RefreshProxyLevelResponse create() {
+    public static DescribeDBNodesParametersResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class RefreshProxyLevelResponse extends Response {
     /**
      * @return body
      */
-    public RefreshProxyLevelResponseBody getBody() {
+    public DescribeDBNodesParametersResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<RefreshProxyLevelResponse, Builder> {
+    public interface Builder extends Response.Builder<DescribeDBNodesParametersResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(RefreshProxyLevelResponseBody body);
+        Builder body(DescribeDBNodesParametersResponseBody body);
 
         @Override
-        RefreshProxyLevelResponse build();
+        DescribeDBNodesParametersResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<RefreshProxyLevelResponse, Builder>
+            extends Response.BuilderImpl<DescribeDBNodesParametersResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private RefreshProxyLevelResponseBody body; 
+        private DescribeDBNodesParametersResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(RefreshProxyLevelResponse response) {
+        private BuilderImpl(DescribeDBNodesParametersResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class RefreshProxyLevelResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(RefreshProxyLevelResponseBody body) {
+        public Builder body(DescribeDBNodesParametersResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public RefreshProxyLevelResponse build() {
-            return new RefreshProxyLevelResponse(this);
+        public DescribeDBNodesParametersResponse build() {
+            return new DescribeDBNodesParametersResponse(this);
         } 
 
     } 

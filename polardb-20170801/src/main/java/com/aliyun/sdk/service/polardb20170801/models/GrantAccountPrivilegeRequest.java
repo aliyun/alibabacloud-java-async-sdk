@@ -143,16 +143,16 @@ public class GrantAccountPrivilegeRequest extends Request {
             super();
         } 
 
-        private Builder(GrantAccountPrivilegeRequest response) {
-            super(response);
-            this.accountName = response.accountName;
-            this.accountPrivilege = response.accountPrivilege;
-            this.DBClusterId = response.DBClusterId;
-            this.DBName = response.DBName;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(GrantAccountPrivilegeRequest request) {
+            super(request);
+            this.accountName = request.accountName;
+            this.accountPrivilege = request.accountPrivilege;
+            this.DBClusterId = request.DBClusterId;
+            this.DBName = request.DBName;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

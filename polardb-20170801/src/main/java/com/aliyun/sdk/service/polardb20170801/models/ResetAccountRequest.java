@@ -128,15 +128,15 @@ public class ResetAccountRequest extends Request {
             super();
         } 
 
-        private Builder(ResetAccountRequest response) {
-            super(response);
-            this.accountName = response.accountName;
-            this.accountPassword = response.accountPassword;
-            this.DBClusterId = response.DBClusterId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ResetAccountRequest request) {
+            super(request);
+            this.accountName = request.accountName;
+            this.accountPassword = request.accountPassword;
+            this.DBClusterId = request.DBClusterId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

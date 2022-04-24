@@ -181,19 +181,19 @@ public class ModifyDBEndpointAddressRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDBEndpointAddressRequest response) {
-            super(response);
-            this.connectionStringPrefix = response.connectionStringPrefix;
-            this.DBClusterId = response.DBClusterId;
-            this.DBEndpointId = response.DBEndpointId;
-            this.netType = response.netType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.port = response.port;
-            this.privateZoneAddressPrefix = response.privateZoneAddressPrefix;
-            this.privateZoneName = response.privateZoneName;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyDBEndpointAddressRequest request) {
+            super(request);
+            this.connectionStringPrefix = request.connectionStringPrefix;
+            this.DBClusterId = request.DBClusterId;
+            this.DBEndpointId = request.DBEndpointId;
+            this.netType = request.netType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.port = request.port;
+            this.privateZoneAddressPrefix = request.privateZoneAddressPrefix;
+            this.privateZoneName = request.privateZoneName;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

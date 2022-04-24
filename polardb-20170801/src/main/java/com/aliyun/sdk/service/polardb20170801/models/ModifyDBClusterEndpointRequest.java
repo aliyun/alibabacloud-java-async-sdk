@@ -180,19 +180,19 @@ public class ModifyDBClusterEndpointRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDBClusterEndpointRequest response) {
-            super(response);
-            this.autoAddNewNodes = response.autoAddNewNodes;
-            this.DBClusterId = response.DBClusterId;
-            this.DBEndpointDescription = response.DBEndpointDescription;
-            this.DBEndpointId = response.DBEndpointId;
-            this.endpointConfig = response.endpointConfig;
-            this.nodes = response.nodes;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.readWriteMode = response.readWriteMode;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyDBClusterEndpointRequest request) {
+            super(request);
+            this.autoAddNewNodes = request.autoAddNewNodes;
+            this.DBClusterId = request.DBClusterId;
+            this.DBEndpointDescription = request.DBEndpointDescription;
+            this.DBEndpointId = request.DBEndpointId;
+            this.endpointConfig = request.endpointConfig;
+            this.nodes = request.nodes;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.readWriteMode = request.readWriteMode;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

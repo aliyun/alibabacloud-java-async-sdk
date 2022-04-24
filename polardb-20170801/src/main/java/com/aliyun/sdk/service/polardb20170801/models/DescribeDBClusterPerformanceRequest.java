@@ -91,12 +91,12 @@ public class DescribeDBClusterPerformanceRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDBClusterPerformanceRequest response) {
-            super(response);
-            this.DBClusterId = response.DBClusterId;
-            this.endTime = response.endTime;
-            this.key = response.key;
-            this.startTime = response.startTime;
+        private Builder(DescribeDBClusterPerformanceRequest request) {
+            super(request);
+            this.DBClusterId = request.DBClusterId;
+            this.endTime = request.endTime;
+            this.key = request.key;
+            this.startTime = request.startTime;
         } 
 
         /**

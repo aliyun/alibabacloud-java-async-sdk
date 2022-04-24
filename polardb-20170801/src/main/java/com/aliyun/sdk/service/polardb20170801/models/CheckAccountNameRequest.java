@@ -115,14 +115,14 @@ public class CheckAccountNameRequest extends Request {
             super();
         } 
 
-        private Builder(CheckAccountNameRequest response) {
-            super(response);
-            this.accountName = response.accountName;
-            this.DBClusterId = response.DBClusterId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(CheckAccountNameRequest request) {
+            super(request);
+            this.accountName = request.accountName;
+            this.DBClusterId = request.DBClusterId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

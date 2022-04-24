@@ -231,23 +231,23 @@ public class DescribeDBClustersRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDBClustersRequest response) {
-            super(response);
-            this.DBClusterDescription = response.DBClusterDescription;
-            this.DBClusterIds = response.DBClusterIds;
-            this.DBClusterStatus = response.DBClusterStatus;
-            this.DBNodeIds = response.DBNodeIds;
-            this.DBType = response.DBType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.payType = response.payType;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.tag = response.tag;
+        private Builder(DescribeDBClustersRequest request) {
+            super(request);
+            this.DBClusterDescription = request.DBClusterDescription;
+            this.DBClusterIds = request.DBClusterIds;
+            this.DBClusterStatus = request.DBClusterStatus;
+            this.DBNodeIds = request.DBNodeIds;
+            this.DBType = request.DBType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.payType = request.payType;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.tag = request.tag;
         } 
 
         /**

@@ -114,14 +114,14 @@ public class DescribeDBLinksRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDBLinksRequest response) {
-            super(response);
-            this.DBClusterId = response.DBClusterId;
-            this.DBLinkName = response.DBLinkName;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeDBLinksRequest request) {
+            super(request);
+            this.DBClusterId = request.DBClusterId;
+            this.DBLinkName = request.DBLinkName;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

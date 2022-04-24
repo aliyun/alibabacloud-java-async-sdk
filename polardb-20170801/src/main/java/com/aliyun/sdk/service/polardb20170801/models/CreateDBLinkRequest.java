@@ -249,24 +249,24 @@ public class CreateDBLinkRequest extends Request {
             super();
         } 
 
-        private Builder(CreateDBLinkRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.DBClusterId = response.DBClusterId;
-            this.DBLinkName = response.DBLinkName;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sourceDBName = response.sourceDBName;
-            this.targetDBAccount = response.targetDBAccount;
-            this.targetDBInstanceName = response.targetDBInstanceName;
-            this.targetDBName = response.targetDBName;
-            this.targetDBPasswd = response.targetDBPasswd;
-            this.targetIp = response.targetIp;
-            this.targetPort = response.targetPort;
-            this.vpcId = response.vpcId;
+        private Builder(CreateDBLinkRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.DBClusterId = request.DBClusterId;
+            this.DBLinkName = request.DBLinkName;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceDBName = request.sourceDBName;
+            this.targetDBAccount = request.targetDBAccount;
+            this.targetDBInstanceName = request.targetDBInstanceName;
+            this.targetDBName = request.targetDBName;
+            this.targetDBPasswd = request.targetDBPasswd;
+            this.targetIp = request.targetIp;
+            this.targetPort = request.targetPort;
+            this.vpcId = request.vpcId;
         } 
 
         /**

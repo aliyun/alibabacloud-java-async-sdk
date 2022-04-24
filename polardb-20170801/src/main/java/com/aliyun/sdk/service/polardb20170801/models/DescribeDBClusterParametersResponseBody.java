@@ -147,6 +147,12 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
         @NameInMap("IsModifiable")
         private Boolean isModifiable;
 
+        @NameInMap("IsNodeAvailable")
+        private String isNodeAvailable;
+
+        @NameInMap("ParamRelyRule")
+        private String paramRelyRule;
+
         @NameInMap("ParameterDescription")
         private String parameterDescription;
 
@@ -165,6 +171,8 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             this.defaultParameterValue = builder.defaultParameterValue;
             this.forceRestart = builder.forceRestart;
             this.isModifiable = builder.isModifiable;
+            this.isNodeAvailable = builder.isNodeAvailable;
+            this.paramRelyRule = builder.paramRelyRule;
             this.parameterDescription = builder.parameterDescription;
             this.parameterName = builder.parameterName;
             this.parameterStatus = builder.parameterStatus;
@@ -215,6 +223,20 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
         }
 
         /**
+         * @return isNodeAvailable
+         */
+        public String getIsNodeAvailable() {
+            return this.isNodeAvailable;
+        }
+
+        /**
+         * @return paramRelyRule
+         */
+        public String getParamRelyRule() {
+            return this.paramRelyRule;
+        }
+
+        /**
          * @return parameterDescription
          */
         public String getParameterDescription() {
@@ -248,6 +270,8 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             private String defaultParameterValue; 
             private Boolean forceRestart; 
             private Boolean isModifiable; 
+            private String isNodeAvailable; 
+            private String paramRelyRule; 
             private String parameterDescription; 
             private String parameterName; 
             private String parameterStatus; 
@@ -290,6 +314,22 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
              */
             public Builder isModifiable(Boolean isModifiable) {
                 this.isModifiable = isModifiable;
+                return this;
+            }
+
+            /**
+             * IsNodeAvailable.
+             */
+            public Builder isNodeAvailable(String isNodeAvailable) {
+                this.isNodeAvailable = isNodeAvailable;
+                return this;
+            }
+
+            /**
+             * ParamRelyRule.
+             */
+            public Builder paramRelyRule(String paramRelyRule) {
+                this.paramRelyRule = paramRelyRule;
                 return this;
             }
 

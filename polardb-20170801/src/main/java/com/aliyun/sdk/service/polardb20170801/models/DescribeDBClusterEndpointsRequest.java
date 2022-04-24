@@ -114,14 +114,14 @@ public class DescribeDBClusterEndpointsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDBClusterEndpointsRequest response) {
-            super(response);
-            this.DBClusterId = response.DBClusterId;
-            this.DBEndpointId = response.DBEndpointId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeDBClusterEndpointsRequest request) {
+            super(request);
+            this.DBClusterId = request.DBClusterId;
+            this.DBEndpointId = request.DBEndpointId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

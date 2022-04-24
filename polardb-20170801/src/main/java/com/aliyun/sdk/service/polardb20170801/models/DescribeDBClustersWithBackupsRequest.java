@@ -192,20 +192,20 @@ public class DescribeDBClustersWithBackupsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDBClustersWithBackupsRequest response) {
-            super(response);
-            this.DBClusterDescription = response.DBClusterDescription;
-            this.DBClusterIds = response.DBClusterIds;
-            this.DBType = response.DBType;
-            this.DBVersion = response.DBVersion;
-            this.isDeleted = response.isDeleted;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeDBClustersWithBackupsRequest request) {
+            super(request);
+            this.DBClusterDescription = request.DBClusterDescription;
+            this.DBClusterIds = request.DBClusterIds;
+            this.DBType = request.DBType;
+            this.DBVersion = request.DBVersion;
+            this.isDeleted = request.isDeleted;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

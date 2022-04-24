@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ModifyDBNodeHotReplicaModeResponseBody} extends {@link TeaModel}
+ * {@link ModifyDBNodesClassResponseBody} extends {@link TeaModel}
  *
- * <p>ModifyDBNodeHotReplicaModeResponseBody</p>
+ * <p>ModifyDBNodesClassResponseBody</p>
  */
-public class ModifyDBNodeHotReplicaModeResponseBody extends TeaModel {
+public class ModifyDBNodesClassResponseBody extends TeaModel {
     @NameInMap("DBClusterId")
     private String DBClusterId;
 
@@ -21,7 +21,7 @@ public class ModifyDBNodeHotReplicaModeResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private ModifyDBNodeHotReplicaModeResponseBody(Builder builder) {
+    private ModifyDBNodesClassResponseBody(Builder builder) {
         this.DBClusterId = builder.DBClusterId;
         this.orderId = builder.orderId;
         this.requestId = builder.requestId;
@@ -31,7 +31,7 @@ public class ModifyDBNodeHotReplicaModeResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ModifyDBNodeHotReplicaModeResponseBody create() {
+    public static ModifyDBNodesClassResponseBody create() {
         return builder().build();
     }
 
@@ -85,8 +85,8 @@ public class ModifyDBNodeHotReplicaModeResponseBody extends TeaModel {
             return this;
         }
 
-        public ModifyDBNodeHotReplicaModeResponseBody build() {
-            return new ModifyDBNodeHotReplicaModeResponseBody(this);
+        public ModifyDBNodesClassResponseBody build() {
+            return new ModifyDBNodesClassResponseBody(this);
         } 
 
     } 

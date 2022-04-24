@@ -161,6 +161,12 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         @NameInMap("ForceRestart")
         private String forceRestart;
 
+        @NameInMap("IsNodeAvailable")
+        private String isNodeAvailable;
+
+        @NameInMap("ParamRelyRule")
+        private String paramRelyRule;
+
         @NameInMap("ParameterDescription")
         private String parameterDescription;
 
@@ -174,6 +180,8 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             this.checkingCode = builder.checkingCode;
             this.forceModify = builder.forceModify;
             this.forceRestart = builder.forceRestart;
+            this.isNodeAvailable = builder.isNodeAvailable;
+            this.paramRelyRule = builder.paramRelyRule;
             this.parameterDescription = builder.parameterDescription;
             this.parameterName = builder.parameterName;
             this.parameterValue = builder.parameterValue;
@@ -209,6 +217,20 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         }
 
         /**
+         * @return isNodeAvailable
+         */
+        public String getIsNodeAvailable() {
+            return this.isNodeAvailable;
+        }
+
+        /**
+         * @return paramRelyRule
+         */
+        public String getParamRelyRule() {
+            return this.paramRelyRule;
+        }
+
+        /**
          * @return parameterDescription
          */
         public String getParameterDescription() {
@@ -233,6 +255,8 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             private String checkingCode; 
             private String forceModify; 
             private String forceRestart; 
+            private String isNodeAvailable; 
+            private String paramRelyRule; 
             private String parameterDescription; 
             private String parameterName; 
             private String parameterValue; 
@@ -258,6 +282,22 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
              */
             public Builder forceRestart(String forceRestart) {
                 this.forceRestart = forceRestart;
+                return this;
+            }
+
+            /**
+             * IsNodeAvailable.
+             */
+            public Builder isNodeAvailable(String isNodeAvailable) {
+                this.isNodeAvailable = isNodeAvailable;
+                return this;
+            }
+
+            /**
+             * ParamRelyRule.
+             */
+            public Builder paramRelyRule(String paramRelyRule) {
+                this.paramRelyRule = paramRelyRule;
                 return this;
             }
 

@@ -191,20 +191,20 @@ public class DescribeScheduleTasksRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeScheduleTasksRequest response) {
-            super(response);
-            this.DBClusterDescription = response.DBClusterDescription;
-            this.DBClusterId = response.DBClusterId;
-            this.orderId = response.orderId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.status = response.status;
-            this.taskAction = response.taskAction;
+        private Builder(DescribeScheduleTasksRequest request) {
+            super(request);
+            this.DBClusterDescription = request.DBClusterDescription;
+            this.DBClusterId = request.DBClusterId;
+            this.orderId = request.orderId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.status = request.status;
+            this.taskAction = request.taskAction;
         } 
 
         /**

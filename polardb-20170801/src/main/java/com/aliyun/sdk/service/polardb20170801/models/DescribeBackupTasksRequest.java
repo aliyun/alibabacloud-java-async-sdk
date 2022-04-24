@@ -127,15 +127,15 @@ public class DescribeBackupTasksRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeBackupTasksRequest response) {
-            super(response);
-            this.backupJobId = response.backupJobId;
-            this.backupMode = response.backupMode;
-            this.DBClusterId = response.DBClusterId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeBackupTasksRequest request) {
+            super(request);
+            this.backupJobId = request.backupJobId;
+            this.backupMode = request.backupMode;
+            this.DBClusterId = request.DBClusterId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

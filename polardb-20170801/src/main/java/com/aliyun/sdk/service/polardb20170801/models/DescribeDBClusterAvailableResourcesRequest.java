@@ -166,18 +166,18 @@ public class DescribeDBClusterAvailableResourcesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDBClusterAvailableResourcesRequest response) {
-            super(response);
-            this.DBNodeClass = response.DBNodeClass;
-            this.DBType = response.DBType;
-            this.DBVersion = response.DBVersion;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.payType = response.payType;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.zoneId = response.zoneId;
+        private Builder(DescribeDBClusterAvailableResourcesRequest request) {
+            super(request);
+            this.DBNodeClass = request.DBNodeClass;
+            this.DBType = request.DBType;
+            this.DBVersion = request.DBVersion;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.payType = request.payType;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.zoneId = request.zoneId;
         } 
 
         /**

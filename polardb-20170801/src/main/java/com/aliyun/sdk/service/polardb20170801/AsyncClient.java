@@ -118,6 +118,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeDBNodePerformanceResponse> describeDBNodePerformance(DescribeDBNodePerformanceRequest request);
 
+    CompletableFuture<DescribeDBNodesParametersResponse> describeDBNodesParameters(DescribeDBNodesParametersRequest request);
+
     CompletableFuture<DescribeDBProxyPerformanceResponse> describeDBProxyPerformance(DescribeDBProxyPerformanceRequest request);
 
     CompletableFuture<DescribeDatabasesResponse> describeDatabases(DescribeDatabasesRequest request);
@@ -152,6 +154,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeSlowLogRecordsResponse> describeSlowLogRecords(DescribeSlowLogRecordsRequest request);
 
+    CompletableFuture<DescribeSlowLogsResponse> describeSlowLogs(DescribeSlowLogsRequest request);
+
     CompletableFuture<DescribeStoragePlanResponse> describeStoragePlan(DescribeStoragePlanRequest request);
 
     CompletableFuture<DescribeTasksResponse> describeTasks(DescribeTasksRequest request);
@@ -162,8 +166,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
 
-    CompletableFuture<ListTagResourcesForRegionResponse> listTagResourcesForRegion(ListTagResourcesForRegionRequest request);
-
     CompletableFuture<ModifyAccountDescriptionResponse> modifyAccountDescription(ModifyAccountDescriptionRequest request);
 
     CompletableFuture<ModifyAccountPasswordResponse> modifyAccountPassword(ModifyAccountPasswordRequest request);
@@ -173,6 +175,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyBackupPolicyResponse> modifyBackupPolicy(ModifyBackupPolicyRequest request);
 
     CompletableFuture<ModifyDBClusterAccessWhitelistResponse> modifyDBClusterAccessWhitelist(ModifyDBClusterAccessWhitelistRequest request);
+
+    CompletableFuture<ModifyDBClusterAndNodesParametersResponse> modifyDBClusterAndNodesParameters(ModifyDBClusterAndNodesParametersRequest request);
 
     CompletableFuture<ModifyDBClusterAuditLogCollectorResponse> modifyDBClusterAuditLogCollector(ModifyDBClusterAuditLogCollectorRequest request);
 
@@ -200,7 +204,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ModifyDBNodeClassResponse> modifyDBNodeClass(ModifyDBNodeClassRequest request);
 
-    CompletableFuture<ModifyDBNodeHotReplicaModeResponse> modifyDBNodeHotReplicaMode(ModifyDBNodeHotReplicaModeRequest request);
+    CompletableFuture<ModifyDBNodesClassResponse> modifyDBNodesClass(ModifyDBNodesClassRequest request);
+
+    CompletableFuture<ModifyDBNodesParametersResponse> modifyDBNodesParameters(ModifyDBNodesParametersRequest request);
 
     CompletableFuture<ModifyGlobalDatabaseNetworkResponse> modifyGlobalDatabaseNetwork(ModifyGlobalDatabaseNetworkRequest request);
 
@@ -209,8 +215,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyMaskingRulesResponse> modifyMaskingRules(ModifyMaskingRulesRequest request);
 
     CompletableFuture<ModifyPendingMaintenanceActionResponse> modifyPendingMaintenanceAction(ModifyPendingMaintenanceActionRequest request);
-
-    CompletableFuture<RefreshProxyLevelResponse> refreshProxyLevel(RefreshProxyLevelRequest request);
 
     CompletableFuture<RemoveDBClusterFromGDNResponse> removeDBClusterFromGDN(RemoveDBClusterFromGDNRequest request);
 
