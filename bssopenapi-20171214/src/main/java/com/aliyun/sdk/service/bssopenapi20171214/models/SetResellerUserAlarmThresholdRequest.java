@@ -76,11 +76,11 @@ public class SetResellerUserAlarmThresholdRequest extends Request {
             super();
         } 
 
-        private Builder(SetResellerUserAlarmThresholdRequest response) {
-            super(response);
-            this.alarmThresholds = response.alarmThresholds;
-            this.alarmType = response.alarmType;
-            this.ownerId = response.ownerId;
+        private Builder(SetResellerUserAlarmThresholdRequest request) {
+            super(request);
+            this.alarmThresholds = request.alarmThresholds;
+            this.alarmType = request.alarmType;
+            this.ownerId = request.ownerId;
         } 
 
         /**

@@ -90,12 +90,12 @@ public class DescribeSavingsPlansCoverageTotalRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeSavingsPlansCoverageTotalRequest response) {
-            super(response);
-            this.billOwnerId = response.billOwnerId;
-            this.endPeriod = response.endPeriod;
-            this.periodType = response.periodType;
-            this.startPeriod = response.startPeriod;
+        private Builder(DescribeSavingsPlansCoverageTotalRequest request) {
+            super(request);
+            this.billOwnerId = request.billOwnerId;
+            this.endPeriod = request.endPeriod;
+            this.periodType = request.periodType;
+            this.startPeriod = request.startPeriod;
         } 
 
         /**

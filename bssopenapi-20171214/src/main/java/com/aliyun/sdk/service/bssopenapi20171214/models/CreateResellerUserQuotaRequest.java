@@ -90,12 +90,12 @@ public class CreateResellerUserQuotaRequest extends Request {
             super();
         } 
 
-        private Builder(CreateResellerUserQuotaRequest response) {
-            super(response);
-            this.amount = response.amount;
-            this.currency = response.currency;
-            this.outBizId = response.outBizId;
-            this.ownerId = response.ownerId;
+        private Builder(CreateResellerUserQuotaRequest request) {
+            super(request);
+            this.amount = request.amount;
+            this.currency = request.currency;
+            this.outBizId = request.outBizId;
+            this.ownerId = request.ownerId;
         } 
 
         /**

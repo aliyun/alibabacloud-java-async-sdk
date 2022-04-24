@@ -35,8 +35,8 @@ public class GetCustomerListRequest extends Request {
             super();
         } 
 
-        private Builder(GetCustomerListRequest response) {
-            super(response);
+        private Builder(GetCustomerListRequest request) {
+            super(request);
         } 
 
         @Override

@@ -74,11 +74,11 @@ public class QueryPrepaidCardsRequest extends Request {
             super();
         } 
 
-        private Builder(QueryPrepaidCardsRequest response) {
-            super(response);
-            this.effectiveOrNot = response.effectiveOrNot;
-            this.expiryTimeEnd = response.expiryTimeEnd;
-            this.expiryTimeStart = response.expiryTimeStart;
+        private Builder(QueryPrepaidCardsRequest request) {
+            super(request);
+            this.effectiveOrNot = request.effectiveOrNot;
+            this.expiryTimeEnd = request.expiryTimeEnd;
+            this.expiryTimeStart = request.expiryTimeStart;
         } 
 
         /**

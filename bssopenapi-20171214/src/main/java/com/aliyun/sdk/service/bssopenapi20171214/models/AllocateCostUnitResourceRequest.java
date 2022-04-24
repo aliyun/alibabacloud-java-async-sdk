@@ -105,13 +105,13 @@ public class AllocateCostUnitResourceRequest extends Request {
             super();
         } 
 
-        private Builder(AllocateCostUnitResourceRequest response) {
-            super(response);
-            this.fromUnitId = response.fromUnitId;
-            this.fromUnitUserId = response.fromUnitUserId;
-            this.resourceInstanceList = response.resourceInstanceList;
-            this.toUnitId = response.toUnitId;
-            this.toUnitUserId = response.toUnitUserId;
+        private Builder(AllocateCostUnitResourceRequest request) {
+            super(request);
+            this.fromUnitId = request.fromUnitId;
+            this.fromUnitUserId = request.fromUnitUserId;
+            this.resourceInstanceList = request.resourceInstanceList;
+            this.toUnitId = request.toUnitId;
+            this.toUnitUserId = request.toUnitUserId;
         } 
 
         /**

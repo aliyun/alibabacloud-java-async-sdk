@@ -75,11 +75,11 @@ public class QueryInstanceByTagRequest extends Request {
             super();
         } 
 
-        private Builder(QueryInstanceByTagRequest response) {
-            super(response);
-            this.resourceId = response.resourceId;
-            this.resourceType = response.resourceType;
-            this.tag = response.tag;
+        private Builder(QueryInstanceByTagRequest request) {
+            super(request);
+            this.resourceId = request.resourceId;
+            this.resourceType = request.resourceType;
+            this.tag = request.tag;
         } 
 
         /**

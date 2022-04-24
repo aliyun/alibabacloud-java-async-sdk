@@ -62,10 +62,10 @@ public class SetAllExpirationDayRequest extends Request {
             super();
         } 
 
-        private Builder(SetAllExpirationDayRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.unifyExpireDay = response.unifyExpireDay;
+        private Builder(SetAllExpirationDayRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.unifyExpireDay = request.unifyExpireDay;
         } 
 
         /**

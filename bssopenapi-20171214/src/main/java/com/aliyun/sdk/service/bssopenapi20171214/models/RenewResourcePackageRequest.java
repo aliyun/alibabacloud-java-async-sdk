@@ -103,13 +103,13 @@ public class RenewResourcePackageRequest extends Request {
             super();
         } 
 
-        private Builder(RenewResourcePackageRequest response) {
-            super(response);
-            this.duration = response.duration;
-            this.effectiveDate = response.effectiveDate;
-            this.instanceId = response.instanceId;
-            this.ownerId = response.ownerId;
-            this.pricingCycle = response.pricingCycle;
+        private Builder(RenewResourcePackageRequest request) {
+            super(request);
+            this.duration = request.duration;
+            this.effectiveDate = request.effectiveDate;
+            this.instanceId = request.instanceId;
+            this.ownerId = request.ownerId;
+            this.pricingCycle = request.pricingCycle;
         } 
 
         /**

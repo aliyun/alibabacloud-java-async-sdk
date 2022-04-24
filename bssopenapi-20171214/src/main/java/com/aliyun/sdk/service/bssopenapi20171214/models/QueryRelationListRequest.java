@@ -88,12 +88,12 @@ public class QueryRelationListRequest extends Request {
             super();
         } 
 
-        private Builder(QueryRelationListRequest response) {
-            super(response);
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.statusList = response.statusList;
-            this.userId = response.userId;
+        private Builder(QueryRelationListRequest request) {
+            super(request);
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.statusList = request.statusList;
+            this.userId = request.userId;
         } 
 
         /**

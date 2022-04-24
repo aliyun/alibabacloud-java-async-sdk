@@ -165,18 +165,18 @@ public class QueryOrdersRequest extends Request {
             super();
         } 
 
-        private Builder(QueryOrdersRequest response) {
-            super(response);
-            this.createTimeEnd = response.createTimeEnd;
-            this.createTimeStart = response.createTimeStart;
-            this.orderType = response.orderType;
-            this.ownerId = response.ownerId;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.paymentStatus = response.paymentStatus;
-            this.productCode = response.productCode;
-            this.productType = response.productType;
-            this.subscriptionType = response.subscriptionType;
+        private Builder(QueryOrdersRequest request) {
+            super(request);
+            this.createTimeEnd = request.createTimeEnd;
+            this.createTimeStart = request.createTimeStart;
+            this.orderType = request.orderType;
+            this.ownerId = request.ownerId;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.paymentStatus = request.paymentStatus;
+            this.productCode = request.productCode;
+            this.productType = request.productType;
+            this.subscriptionType = request.subscriptionType;
         } 
 
         /**

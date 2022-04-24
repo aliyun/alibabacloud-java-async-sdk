@@ -142,16 +142,16 @@ public class ModifyInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyInstanceRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.instanceId = response.instanceId;
-            this.modifyType = response.modifyType;
-            this.ownerId = response.ownerId;
-            this.parameter = response.parameter;
-            this.productCode = response.productCode;
-            this.productType = response.productType;
-            this.subscriptionType = response.subscriptionType;
+        private Builder(ModifyInstanceRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.instanceId = request.instanceId;
+            this.modifyType = request.modifyType;
+            this.ownerId = request.ownerId;
+            this.parameter = request.parameter;
+            this.productCode = request.productCode;
+            this.productType = request.productType;
+            this.subscriptionType = request.subscriptionType;
         } 
 
         /**

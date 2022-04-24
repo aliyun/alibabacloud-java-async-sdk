@@ -49,9 +49,9 @@ public class QueryPermissionListRequest extends Request {
             super();
         } 
 
-        private Builder(QueryPermissionListRequest response) {
-            super(response);
-            this.relationId = response.relationId;
+        private Builder(QueryPermissionListRequest request) {
+            super(request);
+            this.relationId = request.relationId;
         } 
 
         /**

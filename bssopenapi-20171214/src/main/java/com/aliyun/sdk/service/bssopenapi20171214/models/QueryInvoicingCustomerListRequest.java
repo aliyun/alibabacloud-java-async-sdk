@@ -48,9 +48,9 @@ public class QueryInvoicingCustomerListRequest extends Request {
             super();
         } 
 
-        private Builder(QueryInvoicingCustomerListRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
+        private Builder(QueryInvoicingCustomerListRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
         } 
 
         /**

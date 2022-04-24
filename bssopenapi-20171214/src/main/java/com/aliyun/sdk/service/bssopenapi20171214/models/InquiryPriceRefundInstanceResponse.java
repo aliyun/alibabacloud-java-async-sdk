@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link QueryUserAvailableCreditAmountResponse} extends {@link TeaModel}
+ * {@link InquiryPriceRefundInstanceResponse} extends {@link TeaModel}
  *
- * <p>QueryUserAvailableCreditAmountResponse</p>
+ * <p>InquiryPriceRefundInstanceResponse</p>
  */
-public class QueryUserAvailableCreditAmountResponse extends Response {
+public class InquiryPriceRefundInstanceResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private QueryUserAvailableCreditAmountResponseBody body;
+    private InquiryPriceRefundInstanceResponseBody body;
 
-    private QueryUserAvailableCreditAmountResponse(BuilderImpl builder) {
+    private InquiryPriceRefundInstanceResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static QueryUserAvailableCreditAmountResponse create() {
+    public static InquiryPriceRefundInstanceResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class QueryUserAvailableCreditAmountResponse extends Response {
     /**
      * @return body
      */
-    public QueryUserAvailableCreditAmountResponseBody getBody() {
+    public InquiryPriceRefundInstanceResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<QueryUserAvailableCreditAmountResponse, Builder> {
+    public interface Builder extends Response.Builder<InquiryPriceRefundInstanceResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(QueryUserAvailableCreditAmountResponseBody body);
+        Builder body(InquiryPriceRefundInstanceResponseBody body);
 
         @Override
-        QueryUserAvailableCreditAmountResponse build();
+        InquiryPriceRefundInstanceResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<QueryUserAvailableCreditAmountResponse, Builder>
+            extends Response.BuilderImpl<InquiryPriceRefundInstanceResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private QueryUserAvailableCreditAmountResponseBody body; 
+        private InquiryPriceRefundInstanceResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(QueryUserAvailableCreditAmountResponse response) {
+        private BuilderImpl(InquiryPriceRefundInstanceResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class QueryUserAvailableCreditAmountResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(QueryUserAvailableCreditAmountResponseBody body) {
+        public Builder body(InquiryPriceRefundInstanceResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public QueryUserAvailableCreditAmountResponse build() {
-            return new QueryUserAvailableCreditAmountResponse(this);
+        public InquiryPriceRefundInstanceResponse build() {
+            return new InquiryPriceRefundInstanceResponse(this);
         } 
 
     } 

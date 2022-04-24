@@ -33,12 +33,24 @@ public class QueryAccountTransactionsRequest extends Request {
     private String recordID;
 
     @Query
+    @NameInMap("TransactionChannel")
+    private String transactionChannel;
+
+    @Query
     @NameInMap("TransactionChannelSN")
     private String transactionChannelSN;
 
     @Query
+    @NameInMap("TransactionFlow")
+    private String transactionFlow;
+
+    @Query
     @NameInMap("TransactionNumber")
     private String transactionNumber;
+
+    @Query
+    @NameInMap("TransactionType")
+    private String transactionType;
 
     private QueryAccountTransactionsRequest(Builder builder) {
         super(builder);
@@ -47,8 +59,11 @@ public class QueryAccountTransactionsRequest extends Request {
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
         this.recordID = builder.recordID;
+        this.transactionChannel = builder.transactionChannel;
         this.transactionChannelSN = builder.transactionChannelSN;
+        this.transactionFlow = builder.transactionFlow;
         this.transactionNumber = builder.transactionNumber;
+        this.transactionType = builder.transactionType;
     }
 
     public static Builder builder() {
@@ -100,10 +115,24 @@ public class QueryAccountTransactionsRequest extends Request {
     }
 
     /**
+     * @return transactionChannel
+     */
+    public String getTransactionChannel() {
+        return this.transactionChannel;
+    }
+
+    /**
      * @return transactionChannelSN
      */
     public String getTransactionChannelSN() {
         return this.transactionChannelSN;
+    }
+
+    /**
+     * @return transactionFlow
+     */
+    public String getTransactionFlow() {
+        return this.transactionFlow;
     }
 
     /**
@@ -113,28 +142,41 @@ public class QueryAccountTransactionsRequest extends Request {
         return this.transactionNumber;
     }
 
+    /**
+     * @return transactionType
+     */
+    public String getTransactionType() {
+        return this.transactionType;
+    }
+
     public static final class Builder extends Request.Builder<QueryAccountTransactionsRequest, Builder> {
         private String createTimeEnd; 
         private String createTimeStart; 
         private Integer pageNum; 
         private Integer pageSize; 
         private String recordID; 
+        private String transactionChannel; 
         private String transactionChannelSN; 
+        private String transactionFlow; 
         private String transactionNumber; 
+        private String transactionType; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(QueryAccountTransactionsRequest response) {
-            super(response);
-            this.createTimeEnd = response.createTimeEnd;
-            this.createTimeStart = response.createTimeStart;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.recordID = response.recordID;
-            this.transactionChannelSN = response.transactionChannelSN;
-            this.transactionNumber = response.transactionNumber;
+        private Builder(QueryAccountTransactionsRequest request) {
+            super(request);
+            this.createTimeEnd = request.createTimeEnd;
+            this.createTimeStart = request.createTimeStart;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.recordID = request.recordID;
+            this.transactionChannel = request.transactionChannel;
+            this.transactionChannelSN = request.transactionChannelSN;
+            this.transactionFlow = request.transactionFlow;
+            this.transactionNumber = request.transactionNumber;
+            this.transactionType = request.transactionType;
         } 
 
         /**
@@ -183,6 +225,15 @@ public class QueryAccountTransactionsRequest extends Request {
         }
 
         /**
+         * TransactionChannel.
+         */
+        public Builder transactionChannel(String transactionChannel) {
+            this.putQueryParameter("TransactionChannel", transactionChannel);
+            this.transactionChannel = transactionChannel;
+            return this;
+        }
+
+        /**
          * TransactionChannelSN.
          */
         public Builder transactionChannelSN(String transactionChannelSN) {
@@ -192,11 +243,29 @@ public class QueryAccountTransactionsRequest extends Request {
         }
 
         /**
+         * TransactionFlow.
+         */
+        public Builder transactionFlow(String transactionFlow) {
+            this.putQueryParameter("TransactionFlow", transactionFlow);
+            this.transactionFlow = transactionFlow;
+            return this;
+        }
+
+        /**
          * TransactionNumber.
          */
         public Builder transactionNumber(String transactionNumber) {
             this.putQueryParameter("TransactionNumber", transactionNumber);
             this.transactionNumber = transactionNumber;
+            return this;
+        }
+
+        /**
+         * TransactionType.
+         */
+        public Builder transactionType(String transactionType) {
+            this.putQueryParameter("TransactionType", transactionType);
+            this.transactionType = transactionType;
             return this;
         }
 

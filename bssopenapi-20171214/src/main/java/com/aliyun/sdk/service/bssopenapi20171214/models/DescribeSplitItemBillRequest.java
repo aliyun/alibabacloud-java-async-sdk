@@ -206,21 +206,21 @@ public class DescribeSplitItemBillRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeSplitItemBillRequest response) {
-            super(response);
-            this.billOwnerId = response.billOwnerId;
-            this.billingCycle = response.billingCycle;
-            this.billingDate = response.billingDate;
-            this.granularity = response.granularity;
-            this.instanceID = response.instanceID;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.ownerId = response.ownerId;
-            this.productCode = response.productCode;
-            this.productType = response.productType;
-            this.splitItemID = response.splitItemID;
-            this.subscriptionType = response.subscriptionType;
-            this.tagFilter = response.tagFilter;
+        private Builder(DescribeSplitItemBillRequest request) {
+            super(request);
+            this.billOwnerId = request.billOwnerId;
+            this.billingCycle = request.billingCycle;
+            this.billingDate = request.billingDate;
+            this.granularity = request.granularity;
+            this.instanceID = request.instanceID;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.ownerId = request.ownerId;
+            this.productCode = request.productCode;
+            this.productType = request.productType;
+            this.splitItemID = request.splitItemID;
+            this.subscriptionType = request.subscriptionType;
+            this.tagFilter = request.tagFilter;
         } 
 
         /**

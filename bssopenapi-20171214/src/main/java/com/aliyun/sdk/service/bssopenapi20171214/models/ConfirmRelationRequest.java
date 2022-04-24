@@ -131,15 +131,15 @@ public class ConfirmRelationRequest extends Request {
             super();
         } 
 
-        private Builder(ConfirmRelationRequest response) {
-            super(response);
-            this.childUserId = response.childUserId;
-            this.confirmCode = response.confirmCode;
-            this.parentUserId = response.parentUserId;
-            this.permissionCodes = response.permissionCodes;
-            this.relationId = response.relationId;
-            this.relationType = response.relationType;
-            this.requestId = response.requestId;
+        private Builder(ConfirmRelationRequest request) {
+            super(request);
+            this.childUserId = request.childUserId;
+            this.confirmCode = request.confirmCode;
+            this.parentUserId = request.parentUserId;
+            this.permissionCodes = request.permissionCodes;
+            this.relationId = request.relationId;
+            this.relationType = request.relationType;
+            this.requestId = request.requestId;
         } 
 
         /**

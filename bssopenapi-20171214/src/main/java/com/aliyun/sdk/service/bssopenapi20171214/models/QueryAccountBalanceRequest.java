@@ -35,8 +35,8 @@ public class QueryAccountBalanceRequest extends Request {
             super();
         } 
 
-        private Builder(QueryAccountBalanceRequest response) {
-            super(response);
+        private Builder(QueryAccountBalanceRequest request) {
+            super(request);
         } 
 
         @Override

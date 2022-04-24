@@ -103,13 +103,13 @@ public class RelieveAccountRelationRequest extends Request {
             super();
         } 
 
-        private Builder(RelieveAccountRelationRequest response) {
-            super(response);
-            this.childUserId = response.childUserId;
-            this.parentUserId = response.parentUserId;
-            this.relationId = response.relationId;
-            this.relationType = response.relationType;
-            this.requestId = response.requestId;
+        private Builder(RelieveAccountRelationRequest request) {
+            super(request);
+            this.childUserId = request.childUserId;
+            this.parentUserId = request.parentUserId;
+            this.relationId = request.relationId;
+            this.relationType = request.relationType;
+            this.requestId = request.requestId;
         } 
 
         /**

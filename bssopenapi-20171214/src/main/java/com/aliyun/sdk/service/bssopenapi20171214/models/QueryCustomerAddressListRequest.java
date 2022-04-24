@@ -48,9 +48,9 @@ public class QueryCustomerAddressListRequest extends Request {
             super();
         } 
 
-        private Builder(QueryCustomerAddressListRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
+        private Builder(QueryCustomerAddressListRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
         } 
 
         /**

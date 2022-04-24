@@ -75,11 +75,11 @@ public class QueryProductListRequest extends Request {
             super();
         } 
 
-        private Builder(QueryProductListRequest response) {
-            super(response);
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.queryTotalCount = response.queryTotalCount;
+        private Builder(QueryProductListRequest request) {
+            super(request);
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.queryTotalCount = request.queryTotalCount;
         } 
 
         /**

@@ -261,25 +261,25 @@ public class SetCreditLabelActionRequest extends Request {
             super();
         } 
 
-        private Builder(SetCreditLabelActionRequest response) {
-            super(response);
-            this.actionType = response.actionType;
-            this.clearCycle = response.clearCycle;
-            this.creditAmount = response.creditAmount;
-            this.currencyCode = response.currencyCode;
-            this.dailyCycle = response.dailyCycle;
-            this.description = response.description;
-            this.isNeedAddSettleLabel = response.isNeedAddSettleLabel;
-            this.isNeedAdjustCreditAccount = response.isNeedAdjustCreditAccount;
-            this.isNeedSaveNotifyRule = response.isNeedSaveNotifyRule;
-            this.isNeedSetCreditAmount = response.isNeedSetCreditAmount;
-            this.needNotice = response.needNotice;
-            this.newCreateMode = response.newCreateMode;
-            this.operator = response.operator;
-            this.requestId = response.requestId;
-            this.siteCode = response.siteCode;
-            this.source = response.source;
-            this.uid = response.uid;
+        private Builder(SetCreditLabelActionRequest request) {
+            super(request);
+            this.actionType = request.actionType;
+            this.clearCycle = request.clearCycle;
+            this.creditAmount = request.creditAmount;
+            this.currencyCode = request.currencyCode;
+            this.dailyCycle = request.dailyCycle;
+            this.description = request.description;
+            this.isNeedAddSettleLabel = request.isNeedAddSettleLabel;
+            this.isNeedAdjustCreditAccount = request.isNeedAdjustCreditAccount;
+            this.isNeedSaveNotifyRule = request.isNeedSaveNotifyRule;
+            this.isNeedSetCreditAmount = request.isNeedSetCreditAmount;
+            this.needNotice = request.needNotice;
+            this.newCreateMode = request.newCreateMode;
+            this.operator = request.operator;
+            this.requestId = request.requestId;
+            this.siteCode = request.siteCode;
+            this.source = request.source;
+            this.uid = request.uid;
         } 
 
         /**

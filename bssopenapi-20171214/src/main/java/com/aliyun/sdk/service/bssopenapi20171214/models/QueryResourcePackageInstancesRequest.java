@@ -126,15 +126,15 @@ public class QueryResourcePackageInstancesRequest extends Request {
             super();
         } 
 
-        private Builder(QueryResourcePackageInstancesRequest response) {
-            super(response);
-            this.expiryTimeEnd = response.expiryTimeEnd;
-            this.expiryTimeStart = response.expiryTimeStart;
-            this.includePartner = response.includePartner;
-            this.ownerId = response.ownerId;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.productCode = response.productCode;
+        private Builder(QueryResourcePackageInstancesRequest request) {
+            super(request);
+            this.expiryTimeEnd = request.expiryTimeEnd;
+            this.expiryTimeStart = request.expiryTimeStart;
+            this.includePartner = request.includePartner;
+            this.ownerId = request.ownerId;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.productCode = request.productCode;
         } 
 
         /**

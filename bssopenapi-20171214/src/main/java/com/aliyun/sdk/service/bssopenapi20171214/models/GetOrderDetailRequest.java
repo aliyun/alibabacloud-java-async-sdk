@@ -62,10 +62,10 @@ public class GetOrderDetailRequest extends Request {
             super();
         } 
 
-        private Builder(GetOrderDetailRequest response) {
-            super(response);
-            this.orderId = response.orderId;
-            this.ownerId = response.ownerId;
+        private Builder(GetOrderDetailRequest request) {
+            super(request);
+            this.orderId = request.orderId;
+            this.ownerId = request.ownerId;
         } 
 
         /**

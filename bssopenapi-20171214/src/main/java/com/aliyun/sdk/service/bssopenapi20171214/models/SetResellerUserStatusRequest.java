@@ -77,11 +77,11 @@ public class SetResellerUserStatusRequest extends Request {
             super();
         } 
 
-        private Builder(SetResellerUserStatusRequest response) {
-            super(response);
-            this.businessType = response.businessType;
-            this.ownerId = response.ownerId;
-            this.status = response.status;
+        private Builder(SetResellerUserStatusRequest request) {
+            super(request);
+            this.businessType = request.businessType;
+            this.ownerId = request.ownerId;
+            this.status = request.status;
         } 
 
         /**

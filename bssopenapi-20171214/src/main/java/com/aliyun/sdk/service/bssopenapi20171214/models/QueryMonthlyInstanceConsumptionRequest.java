@@ -127,15 +127,15 @@ public class QueryMonthlyInstanceConsumptionRequest extends Request {
             super();
         } 
 
-        private Builder(QueryMonthlyInstanceConsumptionRequest response) {
-            super(response);
-            this.billingCycle = response.billingCycle;
-            this.ownerId = response.ownerId;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.productCode = response.productCode;
-            this.productType = response.productType;
-            this.subscriptionType = response.subscriptionType;
+        private Builder(QueryMonthlyInstanceConsumptionRequest request) {
+            super(request);
+            this.billingCycle = request.billingCycle;
+            this.ownerId = request.ownerId;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.productCode = request.productCode;
+            this.productType = request.productType;
+            this.subscriptionType = request.subscriptionType;
         } 
 
         /**

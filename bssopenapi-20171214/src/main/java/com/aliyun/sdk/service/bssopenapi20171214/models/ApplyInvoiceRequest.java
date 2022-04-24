@@ -170,18 +170,18 @@ public class ApplyInvoiceRequest extends Request {
             super();
         } 
 
-        private Builder(ApplyInvoiceRequest response) {
-            super(response);
-            this.addressId = response.addressId;
-            this.applyUserNick = response.applyUserNick;
-            this.customerId = response.customerId;
-            this.invoiceAmount = response.invoiceAmount;
-            this.invoiceByAmount = response.invoiceByAmount;
-            this.invoicingType = response.invoicingType;
-            this.ownerId = response.ownerId;
-            this.processWay = response.processWay;
-            this.selectedIds = response.selectedIds;
-            this.userRemark = response.userRemark;
+        private Builder(ApplyInvoiceRequest request) {
+            super(request);
+            this.addressId = request.addressId;
+            this.applyUserNick = request.applyUserNick;
+            this.customerId = request.customerId;
+            this.invoiceAmount = request.invoiceAmount;
+            this.invoiceByAmount = request.invoiceByAmount;
+            this.invoicingType = request.invoicingType;
+            this.ownerId = request.ownerId;
+            this.processWay = request.processWay;
+            this.selectedIds = request.selectedIds;
+            this.userRemark = request.userRemark;
         } 
 
         /**

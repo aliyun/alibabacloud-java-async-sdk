@@ -116,14 +116,14 @@ public class GetPayAsYouGoPriceRequest extends Request {
             super();
         } 
 
-        private Builder(GetPayAsYouGoPriceRequest response) {
-            super(response);
-            this.moduleList = response.moduleList;
-            this.ownerId = response.ownerId;
-            this.productCode = response.productCode;
-            this.productType = response.productType;
-            this.region = response.region;
-            this.subscriptionType = response.subscriptionType;
+        private Builder(GetPayAsYouGoPriceRequest request) {
+            super(request);
+            this.moduleList = request.moduleList;
+            this.ownerId = request.ownerId;
+            this.productCode = request.productCode;
+            this.productType = request.productType;
+            this.region = request.region;
+            this.subscriptionType = request.subscriptionType;
         } 
 
         /**

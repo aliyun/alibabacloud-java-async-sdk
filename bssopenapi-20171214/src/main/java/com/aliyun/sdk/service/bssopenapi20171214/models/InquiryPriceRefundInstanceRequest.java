@@ -7,42 +7,40 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribePricingModuleRequest} extends {@link RequestModel}
+ * {@link InquiryPriceRefundInstanceRequest} extends {@link RequestModel}
  *
- * <p>DescribePricingModuleRequest</p>
+ * <p>InquiryPriceRefundInstanceRequest</p>
  */
-public class DescribePricingModuleRequest extends Request {
+public class InquiryPriceRefundInstanceRequest extends Request {
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
+    @NameInMap("ClientToken")
+    private String clientToken;
+
+    @Query
+    @NameInMap("InstanceId")
+    private String instanceId;
 
     @Query
     @NameInMap("ProductCode")
-    @Validation(required = true)
     private String productCode;
 
     @Query
     @NameInMap("ProductType")
     private String productType;
 
-    @Query
-    @NameInMap("SubscriptionType")
-    @Validation(required = true)
-    private String subscriptionType;
-
-    private DescribePricingModuleRequest(Builder builder) {
+    private InquiryPriceRefundInstanceRequest(Builder builder) {
         super(builder);
-        this.ownerId = builder.ownerId;
+        this.clientToken = builder.clientToken;
+        this.instanceId = builder.instanceId;
         this.productCode = builder.productCode;
         this.productType = builder.productType;
-        this.subscriptionType = builder.subscriptionType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DescribePricingModuleRequest create() {
+    public static InquiryPriceRefundInstanceRequest create() {
         return builder().build();
     }
 
@@ -52,10 +50,17 @@ public class DescribePricingModuleRequest extends Request {
     }
 
     /**
-     * @return ownerId
+     * @return clientToken
      */
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     /**
@@ -72,42 +77,44 @@ public class DescribePricingModuleRequest extends Request {
         return this.productType;
     }
 
-    /**
-     * @return subscriptionType
-     */
-    public String getSubscriptionType() {
-        return this.subscriptionType;
-    }
-
-    public static final class Builder extends Request.Builder<DescribePricingModuleRequest, Builder> {
-        private Long ownerId; 
+    public static final class Builder extends Request.Builder<InquiryPriceRefundInstanceRequest, Builder> {
+        private String clientToken; 
+        private String instanceId; 
         private String productCode; 
         private String productType; 
-        private String subscriptionType; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribePricingModuleRequest request) {
+        private Builder(InquiryPriceRefundInstanceRequest request) {
             super(request);
-            this.ownerId = request.ownerId;
+            this.clientToken = request.clientToken;
+            this.instanceId = request.instanceId;
             this.productCode = request.productCode;
             this.productType = request.productType;
-            this.subscriptionType = request.subscriptionType;
         } 
 
         /**
-         * OwnerId.
+         * clientToken
          */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 
         /**
-         * ProductCode.
+         * instanceId
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * productCode
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -116,7 +123,7 @@ public class DescribePricingModuleRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * productType
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -124,18 +131,9 @@ public class DescribePricingModuleRequest extends Request {
             return this;
         }
 
-        /**
-         * SubscriptionType.
-         */
-        public Builder subscriptionType(String subscriptionType) {
-            this.putQueryParameter("SubscriptionType", subscriptionType);
-            this.subscriptionType = subscriptionType;
-            return this;
-        }
-
         @Override
-        public DescribePricingModuleRequest build() {
-            return new DescribePricingModuleRequest(this);
+        public InquiryPriceRefundInstanceRequest build() {
+            return new InquiryPriceRefundInstanceRequest(this);
         } 
 
     } 

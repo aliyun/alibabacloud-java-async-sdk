@@ -206,21 +206,21 @@ public class DescribeInstanceBillRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeInstanceBillRequest response) {
-            super(response);
-            this.billOwnerId = response.billOwnerId;
-            this.billingCycle = response.billingCycle;
-            this.billingDate = response.billingDate;
-            this.granularity = response.granularity;
-            this.instanceID = response.instanceID;
-            this.isBillingItem = response.isBillingItem;
-            this.isHideZeroCharge = response.isHideZeroCharge;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.ownerId = response.ownerId;
-            this.productCode = response.productCode;
-            this.productType = response.productType;
-            this.subscriptionType = response.subscriptionType;
+        private Builder(DescribeInstanceBillRequest request) {
+            super(request);
+            this.billOwnerId = request.billOwnerId;
+            this.billingCycle = request.billingCycle;
+            this.billingDate = request.billingDate;
+            this.granularity = request.granularity;
+            this.instanceID = request.instanceID;
+            this.isBillingItem = request.isBillingItem;
+            this.isHideZeroCharge = request.isHideZeroCharge;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.ownerId = request.ownerId;
+            this.productCode = request.productCode;
+            this.productType = request.productType;
+            this.subscriptionType = request.subscriptionType;
         } 
 
         /**

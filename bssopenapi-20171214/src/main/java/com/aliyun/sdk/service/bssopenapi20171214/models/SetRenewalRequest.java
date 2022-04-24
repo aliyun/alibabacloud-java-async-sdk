@@ -141,16 +141,16 @@ public class SetRenewalRequest extends Request {
             super();
         } 
 
-        private Builder(SetRenewalRequest response) {
-            super(response);
-            this.instanceIDs = response.instanceIDs;
-            this.ownerId = response.ownerId;
-            this.productCode = response.productCode;
-            this.productType = response.productType;
-            this.renewalPeriod = response.renewalPeriod;
-            this.renewalPeriodUnit = response.renewalPeriodUnit;
-            this.renewalStatus = response.renewalStatus;
-            this.subscriptionType = response.subscriptionType;
+        private Builder(SetRenewalRequest request) {
+            super(request);
+            this.instanceIDs = request.instanceIDs;
+            this.ownerId = request.ownerId;
+            this.productCode = request.productCode;
+            this.productType = request.productType;
+            this.renewalPeriod = request.renewalPeriod;
+            this.renewalPeriodUnit = request.renewalPeriodUnit;
+            this.renewalStatus = request.renewalStatus;
+            this.subscriptionType = request.subscriptionType;
         } 
 
         /**

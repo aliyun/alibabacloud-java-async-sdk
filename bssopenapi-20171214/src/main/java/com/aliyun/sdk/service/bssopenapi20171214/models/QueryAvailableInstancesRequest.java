@@ -204,21 +204,21 @@ public class QueryAvailableInstancesRequest extends Request {
             super();
         } 
 
-        private Builder(QueryAvailableInstancesRequest response) {
-            super(response);
-            this.createTimeEnd = response.createTimeEnd;
-            this.createTimeStart = response.createTimeStart;
-            this.endTimeEnd = response.endTimeEnd;
-            this.endTimeStart = response.endTimeStart;
-            this.instanceIDs = response.instanceIDs;
-            this.ownerId = response.ownerId;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.productCode = response.productCode;
-            this.productType = response.productType;
-            this.region = response.region;
-            this.renewStatus = response.renewStatus;
-            this.subscriptionType = response.subscriptionType;
+        private Builder(QueryAvailableInstancesRequest request) {
+            super(request);
+            this.createTimeEnd = request.createTimeEnd;
+            this.createTimeStart = request.createTimeStart;
+            this.endTimeEnd = request.endTimeEnd;
+            this.endTimeStart = request.endTimeStart;
+            this.instanceIDs = request.instanceIDs;
+            this.ownerId = request.ownerId;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.productCode = request.productCode;
+            this.productType = request.productType;
+            this.region = request.region;
+            this.renewStatus = request.renewStatus;
+            this.subscriptionType = request.subscriptionType;
         } 
 
         /**

@@ -7,53 +7,45 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link RenewInstanceRequest} extends {@link RequestModel}
+ * {@link RefundInstanceRequest} extends {@link RequestModel}
  *
- * <p>RenewInstanceRequest</p>
+ * <p>RefundInstanceRequest</p>
  */
-public class RenewInstanceRequest extends Request {
+public class RefundInstanceRequest extends Request {
     @Query
     @NameInMap("ClientToken")
     private String clientToken;
 
     @Query
+    @NameInMap("ImmediatelyRelease")
+    private String immediatelyRelease;
+
+    @Query
     @NameInMap("InstanceId")
-    @Validation(required = true)
     private String instanceId;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("ProductCode")
-    @Validation(required = true)
     private String productCode;
 
     @Query
     @NameInMap("ProductType")
     private String productType;
 
-    @Query
-    @NameInMap("RenewPeriod")
-    @Validation(required = true)
-    private Integer renewPeriod;
-
-    private RenewInstanceRequest(Builder builder) {
+    private RefundInstanceRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
+        this.immediatelyRelease = builder.immediatelyRelease;
         this.instanceId = builder.instanceId;
-        this.ownerId = builder.ownerId;
         this.productCode = builder.productCode;
         this.productType = builder.productType;
-        this.renewPeriod = builder.renewPeriod;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static RenewInstanceRequest create() {
+    public static RefundInstanceRequest create() {
         return builder().build();
     }
 
@@ -70,17 +62,17 @@ public class RenewInstanceRequest extends Request {
     }
 
     /**
+     * @return immediatelyRelease
+     */
+    public String getImmediatelyRelease() {
+        return this.immediatelyRelease;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     /**
@@ -97,37 +89,28 @@ public class RenewInstanceRequest extends Request {
         return this.productType;
     }
 
-    /**
-     * @return renewPeriod
-     */
-    public Integer getRenewPeriod() {
-        return this.renewPeriod;
-    }
-
-    public static final class Builder extends Request.Builder<RenewInstanceRequest, Builder> {
+    public static final class Builder extends Request.Builder<RefundInstanceRequest, Builder> {
         private String clientToken; 
+        private String immediatelyRelease; 
         private String instanceId; 
-        private Long ownerId; 
         private String productCode; 
         private String productType; 
-        private Integer renewPeriod; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(RenewInstanceRequest request) {
+        private Builder(RefundInstanceRequest request) {
             super(request);
             this.clientToken = request.clientToken;
+            this.immediatelyRelease = request.immediatelyRelease;
             this.instanceId = request.instanceId;
-            this.ownerId = request.ownerId;
             this.productCode = request.productCode;
             this.productType = request.productType;
-            this.renewPeriod = request.renewPeriod;
         } 
 
         /**
-         * ClientToken.
+         * clientToken
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -136,7 +119,16 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * immediatelyRelease
+         */
+        public Builder immediatelyRelease(String immediatelyRelease) {
+            this.putQueryParameter("ImmediatelyRelease", immediatelyRelease);
+            this.immediatelyRelease = immediatelyRelease;
+            return this;
+        }
+
+        /**
+         * instanceId
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -145,16 +137,7 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * ProductCode.
+         * productCode
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -163,7 +146,7 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * productType
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -171,18 +154,9 @@ public class RenewInstanceRequest extends Request {
             return this;
         }
 
-        /**
-         * RenewPeriod.
-         */
-        public Builder renewPeriod(Integer renewPeriod) {
-            this.putQueryParameter("RenewPeriod", renewPeriod);
-            this.renewPeriod = renewPeriod;
-            return this;
-        }
-
         @Override
-        public RenewInstanceRequest build() {
-            return new RenewInstanceRequest(this);
+        public RefundInstanceRequest build() {
+            return new RefundInstanceRequest(this);
         } 
 
     } 

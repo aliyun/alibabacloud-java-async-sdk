@@ -130,15 +130,15 @@ public class DescribeResourceUsageDetailRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeResourceUsageDetailRequest response) {
-            super(response);
-            this.billOwnerId = response.billOwnerId;
-            this.endPeriod = response.endPeriod;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.periodType = response.periodType;
-            this.resourceType = response.resourceType;
-            this.startPeriod = response.startPeriod;
+        private Builder(DescribeResourceUsageDetailRequest request) {
+            super(request);
+            this.billOwnerId = request.billOwnerId;
+            this.endPeriod = request.endPeriod;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.periodType = request.periodType;
+            this.resourceType = request.resourceType;
+            this.startPeriod = request.startPeriod;
         } 
 
         /**

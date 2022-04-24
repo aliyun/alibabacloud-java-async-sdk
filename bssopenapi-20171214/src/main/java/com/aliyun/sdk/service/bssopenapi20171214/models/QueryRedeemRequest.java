@@ -100,13 +100,13 @@ public class QueryRedeemRequest extends Request {
             super();
         } 
 
-        private Builder(QueryRedeemRequest response) {
-            super(response);
-            this.effectiveOrNot = response.effectiveOrNot;
-            this.expiryTimeEnd = response.expiryTimeEnd;
-            this.expiryTimeStart = response.expiryTimeStart;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
+        private Builder(QueryRedeemRequest request) {
+            super(request);
+            this.effectiveOrNot = request.effectiveOrNot;
+            this.expiryTimeEnd = request.expiryTimeEnd;
+            this.expiryTimeStart = request.expiryTimeStart;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
         } 
 
         /**

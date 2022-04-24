@@ -130,15 +130,15 @@ public class AddAccountRelationRequest extends Request {
             super();
         } 
 
-        private Builder(AddAccountRelationRequest response) {
-            super(response);
-            this.childNick = response.childNick;
-            this.childUserId = response.childUserId;
-            this.parentUserId = response.parentUserId;
-            this.permissionCodes = response.permissionCodes;
-            this.relationType = response.relationType;
-            this.requestId = response.requestId;
-            this.roleCodes = response.roleCodes;
+        private Builder(AddAccountRelationRequest request) {
+            super(request);
+            this.childNick = request.childNick;
+            this.childUserId = request.childUserId;
+            this.parentUserId = request.parentUserId;
+            this.permissionCodes = request.permissionCodes;
+            this.relationType = request.relationType;
+            this.requestId = request.requestId;
+            this.roleCodes = request.roleCodes;
         } 
 
         /**

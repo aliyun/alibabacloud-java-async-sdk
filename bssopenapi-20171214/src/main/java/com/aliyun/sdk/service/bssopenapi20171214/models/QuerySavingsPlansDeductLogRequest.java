@@ -127,15 +127,15 @@ public class QuerySavingsPlansDeductLogRequest extends Request {
             super();
         } 
 
-        private Builder(QuerySavingsPlansDeductLogRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.instanceId = response.instanceId;
-            this.instanceType = response.instanceType;
-            this.locale = response.locale;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.startTime = response.startTime;
+        private Builder(QuerySavingsPlansDeductLogRequest request) {
+            super(request);
+            this.endTime = request.endTime;
+            this.instanceId = request.instanceId;
+            this.instanceType = request.instanceType;
+            this.locale = request.locale;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.startTime = request.startTime;
         } 
 
         /**

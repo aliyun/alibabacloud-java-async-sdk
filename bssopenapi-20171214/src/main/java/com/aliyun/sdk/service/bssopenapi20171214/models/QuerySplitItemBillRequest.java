@@ -141,16 +141,16 @@ public class QuerySplitItemBillRequest extends Request {
             super();
         } 
 
-        private Builder(QuerySplitItemBillRequest response) {
-            super(response);
-            this.billOwnerId = response.billOwnerId;
-            this.billingCycle = response.billingCycle;
-            this.ownerId = response.ownerId;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.productCode = response.productCode;
-            this.productType = response.productType;
-            this.subscriptionType = response.subscriptionType;
+        private Builder(QuerySplitItemBillRequest request) {
+            super(request);
+            this.billOwnerId = request.billOwnerId;
+            this.billingCycle = request.billingCycle;
+            this.ownerId = request.ownerId;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.productCode = request.productCode;
+            this.productType = request.productType;
+            this.subscriptionType = request.subscriptionType;
         } 
 
         /**

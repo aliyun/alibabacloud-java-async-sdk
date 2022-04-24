@@ -62,10 +62,10 @@ public class UnsubscribeBillToOSSRequest extends Request {
             super();
         } 
 
-        private Builder(UnsubscribeBillToOSSRequest response) {
-            super(response);
-            this.multAccountRelSubscribe = response.multAccountRelSubscribe;
-            this.subscribeType = response.subscribeType;
+        private Builder(UnsubscribeBillToOSSRequest request) {
+            super(request);
+            this.multAccountRelSubscribe = request.multAccountRelSubscribe;
+            this.subscribeType = request.subscribeType;
         } 
 
         /**

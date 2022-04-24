@@ -87,12 +87,12 @@ public class UpgradeResourcePackageRequest extends Request {
             super();
         } 
 
-        private Builder(UpgradeResourcePackageRequest response) {
-            super(response);
-            this.effectiveDate = response.effectiveDate;
-            this.instanceId = response.instanceId;
-            this.ownerId = response.ownerId;
-            this.specification = response.specification;
+        private Builder(UpgradeResourcePackageRequest request) {
+            super(request);
+            this.effectiveDate = request.effectiveDate;
+            this.instanceId = request.instanceId;
+            this.ownerId = request.ownerId;
+            this.specification = request.specification;
         } 
 
         /**

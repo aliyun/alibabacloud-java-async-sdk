@@ -101,13 +101,13 @@ public class SubscribeBillToOSSRequest extends Request {
             super();
         } 
 
-        private Builder(SubscribeBillToOSSRequest response) {
-            super(response);
-            this.beginBillingCycle = response.beginBillingCycle;
-            this.bucketOwnerId = response.bucketOwnerId;
-            this.multAccountRelSubscribe = response.multAccountRelSubscribe;
-            this.subscribeBucket = response.subscribeBucket;
-            this.subscribeType = response.subscribeType;
+        private Builder(SubscribeBillToOSSRequest request) {
+            super(request);
+            this.beginBillingCycle = request.beginBillingCycle;
+            this.bucketOwnerId = request.bucketOwnerId;
+            this.multAccountRelSubscribe = request.multAccountRelSubscribe;
+            this.subscribeBucket = request.subscribeBucket;
+            this.subscribeType = request.subscribeType;
         } 
 
         /**

@@ -48,9 +48,9 @@ public class ModifyCostUnitRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyCostUnitRequest response) {
-            super(response);
-            this.unitEntityList = response.unitEntityList;
+        private Builder(ModifyCostUnitRequest request) {
+            super(request);
+            this.unitEntityList = request.unitEntityList;
         } 
 
         /**

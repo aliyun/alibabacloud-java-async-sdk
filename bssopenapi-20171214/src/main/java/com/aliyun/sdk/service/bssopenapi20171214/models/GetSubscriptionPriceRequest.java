@@ -182,19 +182,19 @@ public class GetSubscriptionPriceRequest extends Request {
             super();
         } 
 
-        private Builder(GetSubscriptionPriceRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.moduleList = response.moduleList;
-            this.orderType = response.orderType;
-            this.ownerId = response.ownerId;
-            this.productCode = response.productCode;
-            this.productType = response.productType;
-            this.quantity = response.quantity;
-            this.region = response.region;
-            this.servicePeriodQuantity = response.servicePeriodQuantity;
-            this.servicePeriodUnit = response.servicePeriodUnit;
-            this.subscriptionType = response.subscriptionType;
+        private Builder(GetSubscriptionPriceRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.moduleList = request.moduleList;
+            this.orderType = request.orderType;
+            this.ownerId = request.ownerId;
+            this.productCode = request.productCode;
+            this.productType = request.productType;
+            this.quantity = request.quantity;
+            this.region = request.region;
+            this.servicePeriodQuantity = request.servicePeriodQuantity;
+            this.servicePeriodUnit = request.servicePeriodUnit;
+            this.subscriptionType = request.subscriptionType;
         } 
 
         /**

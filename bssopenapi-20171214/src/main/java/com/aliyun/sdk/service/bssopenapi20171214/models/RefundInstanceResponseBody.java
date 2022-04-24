@@ -7,16 +7,16 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link QueryResellerUserAvailableQuotaResponseBody} extends {@link TeaModel}
+ * {@link RefundInstanceResponseBody} extends {@link TeaModel}
  *
- * <p>QueryResellerUserAvailableQuotaResponseBody</p>
+ * <p>RefundInstanceResponseBody</p>
  */
-public class QueryResellerUserAvailableQuotaResponseBody extends TeaModel {
+public class RefundInstanceResponseBody extends TeaModel {
     @NameInMap("Code")
     private String code;
 
     @NameInMap("Data")
-    private String data;
+    private Data data;
 
     @NameInMap("Message")
     private String message;
@@ -27,7 +27,7 @@ public class QueryResellerUserAvailableQuotaResponseBody extends TeaModel {
     @NameInMap("Success")
     private Boolean success;
 
-    private QueryResellerUserAvailableQuotaResponseBody(Builder builder) {
+    private RefundInstanceResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -39,7 +39,7 @@ public class QueryResellerUserAvailableQuotaResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static QueryResellerUserAvailableQuotaResponseBody create() {
+    public static RefundInstanceResponseBody create() {
         return builder().build();
     }
 
@@ -53,7 +53,7 @@ public class QueryResellerUserAvailableQuotaResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public String getData() {
+    public Data getData() {
         return this.data;
     }
 
@@ -80,13 +80,13 @@ public class QueryResellerUserAvailableQuotaResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private String data; 
+        private Data data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * Code.
+         * code
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,15 +94,15 @@ public class QueryResellerUserAvailableQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * data
          */
-        public Builder data(String data) {
+        public Builder data(Data data) {
             this.data = data;
             return this;
         }
 
         /**
-         * Message.
+         * message
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class QueryResellerUserAvailableQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * requestId
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,17 +118,78 @@ public class QueryResellerUserAvailableQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * success
          */
         public Builder success(Boolean success) {
             this.success = success;
             return this;
         }
 
-        public QueryResellerUserAvailableQuotaResponseBody build() {
-            return new QueryResellerUserAvailableQuotaResponseBody(this);
+        public RefundInstanceResponseBody build() {
+            return new RefundInstanceResponseBody(this);
         } 
 
     } 
 
+    public static class Data extends TeaModel {
+        @NameInMap("HostId")
+        private String hostId;
+
+        @NameInMap("OrderId")
+        private Long orderId;
+
+        private Data(Builder builder) {
+            this.hostId = builder.hostId;
+            this.orderId = builder.orderId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Data create() {
+            return builder().build();
+        }
+
+        /**
+         * @return hostId
+         */
+        public String getHostId() {
+            return this.hostId;
+        }
+
+        /**
+         * @return orderId
+         */
+        public Long getOrderId() {
+            return this.orderId;
+        }
+
+        public static final class Builder {
+            private String hostId; 
+            private Long orderId; 
+
+            /**
+             * hostId
+             */
+            public Builder hostId(String hostId) {
+                this.hostId = hostId;
+                return this;
+            }
+
+            /**
+             * orderId
+             */
+            public Builder orderId(Long orderId) {
+                this.orderId = orderId;
+                return this;
+            }
+
+            public Data build() {
+                return new Data(this);
+            } 
+
+        } 
+
+    }
 }

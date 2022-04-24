@@ -63,10 +63,10 @@ public class DeleteCostUnitRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteCostUnitRequest response) {
-            super(response);
-            this.ownerUid = response.ownerUid;
-            this.unitId = response.unitId;
+        private Builder(DeleteCostUnitRequest request) {
+            super(request);
+            this.ownerUid = request.ownerUid;
+            this.unitId = request.unitId;
         } 
 
         /**

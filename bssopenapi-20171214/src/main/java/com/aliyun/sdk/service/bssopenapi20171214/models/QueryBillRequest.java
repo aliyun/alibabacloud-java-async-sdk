@@ -180,19 +180,19 @@ public class QueryBillRequest extends Request {
             super();
         } 
 
-        private Builder(QueryBillRequest response) {
-            super(response);
-            this.billOwnerId = response.billOwnerId;
-            this.billingCycle = response.billingCycle;
-            this.isDisplayLocalCurrency = response.isDisplayLocalCurrency;
-            this.isHideZeroCharge = response.isHideZeroCharge;
-            this.ownerId = response.ownerId;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.productCode = response.productCode;
-            this.productType = response.productType;
-            this.subscriptionType = response.subscriptionType;
-            this.type = response.type;
+        private Builder(QueryBillRequest request) {
+            super(request);
+            this.billOwnerId = request.billOwnerId;
+            this.billingCycle = request.billingCycle;
+            this.isDisplayLocalCurrency = request.isDisplayLocalCurrency;
+            this.isHideZeroCharge = request.isHideZeroCharge;
+            this.ownerId = request.ownerId;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.productCode = request.productCode;
+            this.productType = request.productType;
+            this.subscriptionType = request.subscriptionType;
+            this.type = request.type;
         } 
 
         /**

@@ -49,9 +49,9 @@ public class QueryMonthlyBillRequest extends Request {
             super();
         } 
 
-        private Builder(QueryMonthlyBillRequest response) {
-            super(response);
-            this.billingCycle = response.billingCycle;
+        private Builder(QueryMonthlyBillRequest request) {
+            super(request);
+            this.billingCycle = request.billingCycle;
         } 
 
         /**

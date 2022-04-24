@@ -61,10 +61,10 @@ public class GetAccountRelationRequest extends Request {
             super();
         } 
 
-        private Builder(GetAccountRelationRequest response) {
-            super(response);
-            this.relationId = response.relationId;
-            this.requestId = response.requestId;
+        private Builder(GetAccountRelationRequest request) {
+            super(request);
+            this.relationId = request.relationId;
+            this.requestId = request.requestId;
         } 
 
         /**

@@ -49,9 +49,9 @@ public class GetCustomerAccountInfoRequest extends Request {
             super();
         } 
 
-        private Builder(GetCustomerAccountInfoRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
+        private Builder(GetCustomerAccountInfoRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
         } 
 
         /**

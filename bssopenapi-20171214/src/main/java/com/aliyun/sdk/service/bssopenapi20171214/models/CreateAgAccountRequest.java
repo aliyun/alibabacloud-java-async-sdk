@@ -153,17 +153,17 @@ public class CreateAgAccountRequest extends Request {
             super();
         } 
 
-        private Builder(CreateAgAccountRequest response) {
-            super(response);
-            this.accountAttr = response.accountAttr;
-            this.cityName = response.cityName;
-            this.enterpriseName = response.enterpriseName;
-            this.firstName = response.firstName;
-            this.lastName = response.lastName;
-            this.loginEmail = response.loginEmail;
-            this.nationCode = response.nationCode;
-            this.postcode = response.postcode;
-            this.provinceName = response.provinceName;
+        private Builder(CreateAgAccountRequest request) {
+            super(request);
+            this.accountAttr = request.accountAttr;
+            this.cityName = request.cityName;
+            this.enterpriseName = request.enterpriseName;
+            this.firstName = request.firstName;
+            this.lastName = request.lastName;
+            this.loginEmail = request.loginEmail;
+            this.nationCode = request.nationCode;
+            this.postcode = request.postcode;
+            this.provinceName = request.provinceName;
         } 
 
         /**

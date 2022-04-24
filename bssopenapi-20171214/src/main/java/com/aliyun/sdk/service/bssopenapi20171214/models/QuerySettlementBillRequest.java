@@ -179,19 +179,19 @@ public class QuerySettlementBillRequest extends Request {
             super();
         } 
 
-        private Builder(QuerySettlementBillRequest response) {
-            super(response);
-            this.billingCycle = response.billingCycle;
-            this.endTime = response.endTime;
-            this.isHideZeroCharge = response.isHideZeroCharge;
-            this.ownerId = response.ownerId;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.productCode = response.productCode;
-            this.productType = response.productType;
-            this.startTime = response.startTime;
-            this.subscriptionType = response.subscriptionType;
-            this.type = response.type;
+        private Builder(QuerySettlementBillRequest request) {
+            super(request);
+            this.billingCycle = request.billingCycle;
+            this.endTime = request.endTime;
+            this.isHideZeroCharge = request.isHideZeroCharge;
+            this.ownerId = request.ownerId;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.productCode = request.productCode;
+            this.productType = request.productType;
+            this.startTime = request.startTime;
+            this.subscriptionType = request.subscriptionType;
+            this.type = request.type;
         } 
 
         /**

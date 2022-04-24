@@ -116,14 +116,14 @@ public class DescribeSavingsPlansCoverageDetailRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeSavingsPlansCoverageDetailRequest response) {
-            super(response);
-            this.billOwnerId = response.billOwnerId;
-            this.endPeriod = response.endPeriod;
-            this.maxResults = response.maxResults;
-            this.periodType = response.periodType;
-            this.startPeriod = response.startPeriod;
-            this.token = response.token;
+        private Builder(DescribeSavingsPlansCoverageDetailRequest request) {
+            super(request);
+            this.billOwnerId = request.billOwnerId;
+            this.endPeriod = request.endPeriod;
+            this.maxResults = request.maxResults;
+            this.periodType = request.periodType;
+            this.startPeriod = request.startPeriod;
+            this.token = request.token;
         } 
 
         /**

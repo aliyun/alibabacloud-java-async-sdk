@@ -126,15 +126,15 @@ public class QuerySavingsPlansInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(QuerySavingsPlansInstanceRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.instanceId = response.instanceId;
-            this.locale = response.locale;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.startTime = response.startTime;
-            this.tag = response.tag;
+        private Builder(QuerySavingsPlansInstanceRequest request) {
+            super(request);
+            this.endTime = request.endTime;
+            this.instanceId = request.instanceId;
+            this.locale = request.locale;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.startTime = request.startTime;
+            this.tag = request.tag;
         } 
 
         /**

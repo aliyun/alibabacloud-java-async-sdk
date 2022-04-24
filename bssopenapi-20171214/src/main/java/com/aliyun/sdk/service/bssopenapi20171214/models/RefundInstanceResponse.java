@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link SetRenewalApiResponse} extends {@link TeaModel}
+ * {@link RefundInstanceResponse} extends {@link TeaModel}
  *
- * <p>SetRenewalApiResponse</p>
+ * <p>RefundInstanceResponse</p>
  */
-public class SetRenewalApiResponse extends Response {
+public class RefundInstanceResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private SetRenewalApiResponseBody body;
+    private RefundInstanceResponseBody body;
 
-    private SetRenewalApiResponse(BuilderImpl builder) {
+    private RefundInstanceResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static SetRenewalApiResponse create() {
+    public static RefundInstanceResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class SetRenewalApiResponse extends Response {
     /**
      * @return body
      */
-    public SetRenewalApiResponseBody getBody() {
+    public RefundInstanceResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<SetRenewalApiResponse, Builder> {
+    public interface Builder extends Response.Builder<RefundInstanceResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(SetRenewalApiResponseBody body);
+        Builder body(RefundInstanceResponseBody body);
 
         @Override
-        SetRenewalApiResponse build();
+        RefundInstanceResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<SetRenewalApiResponse, Builder>
+            extends Response.BuilderImpl<RefundInstanceResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private SetRenewalApiResponseBody body; 
+        private RefundInstanceResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(SetRenewalApiResponse response) {
+        private BuilderImpl(RefundInstanceResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class SetRenewalApiResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(SetRenewalApiResponseBody body) {
+        public Builder body(RefundInstanceResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public SetRenewalApiResponse build() {
-            return new SetRenewalApiResponse(this);
+        public RefundInstanceResponse build() {
+            return new RefundInstanceResponse(this);
         } 
 
     } 

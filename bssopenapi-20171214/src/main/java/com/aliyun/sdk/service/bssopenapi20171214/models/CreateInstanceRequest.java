@@ -167,18 +167,18 @@ public class CreateInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(CreateInstanceRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.logistics = response.logistics;
-            this.ownerId = response.ownerId;
-            this.parameter = response.parameter;
-            this.period = response.period;
-            this.productCode = response.productCode;
-            this.productType = response.productType;
-            this.renewPeriod = response.renewPeriod;
-            this.renewalStatus = response.renewalStatus;
-            this.subscriptionType = response.subscriptionType;
+        private Builder(CreateInstanceRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.logistics = request.logistics;
+            this.ownerId = request.ownerId;
+            this.parameter = request.parameter;
+            this.period = request.period;
+            this.productCode = request.productCode;
+            this.productType = request.productType;
+            this.renewPeriod = request.renewPeriod;
+            this.renewalStatus = request.renewalStatus;
+            this.subscriptionType = request.subscriptionType;
         } 
 
         /**

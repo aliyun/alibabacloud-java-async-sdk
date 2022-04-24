@@ -152,17 +152,17 @@ public class QueryAccountTransactionDetailsRequest extends Request {
             super();
         } 
 
-        private Builder(QueryAccountTransactionDetailsRequest response) {
-            super(response);
-            this.createTimeEnd = response.createTimeEnd;
-            this.createTimeStart = response.createTimeStart;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.recordID = response.recordID;
-            this.transactionChannel = response.transactionChannel;
-            this.transactionChannelSN = response.transactionChannelSN;
-            this.transactionNumber = response.transactionNumber;
-            this.transactionType = response.transactionType;
+        private Builder(QueryAccountTransactionDetailsRequest request) {
+            super(request);
+            this.createTimeEnd = request.createTimeEnd;
+            this.createTimeStart = request.createTimeStart;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.recordID = request.recordID;
+            this.transactionChannel = request.transactionChannel;
+            this.transactionChannelSN = request.transactionChannelSN;
+            this.transactionNumber = request.transactionNumber;
+            this.transactionType = request.transactionType;
         } 
 
         /**

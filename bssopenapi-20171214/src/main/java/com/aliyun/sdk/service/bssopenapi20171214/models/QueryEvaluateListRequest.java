@@ -217,22 +217,22 @@ public class QueryEvaluateListRequest extends Request {
             super();
         } 
 
-        private Builder(QueryEvaluateListRequest response) {
-            super(response);
-            this.billCycle = response.billCycle;
-            this.bizTypeList = response.bizTypeList;
-            this.endAmount = response.endAmount;
-            this.endBizTime = response.endBizTime;
-            this.endSearchTime = response.endSearchTime;
-            this.outBizId = response.outBizId;
-            this.ownerId = response.ownerId;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.sortType = response.sortType;
-            this.startAmount = response.startAmount;
-            this.startBizTime = response.startBizTime;
-            this.startSearchTime = response.startSearchTime;
-            this.type = response.type;
+        private Builder(QueryEvaluateListRequest request) {
+            super(request);
+            this.billCycle = request.billCycle;
+            this.bizTypeList = request.bizTypeList;
+            this.endAmount = request.endAmount;
+            this.endBizTime = request.endBizTime;
+            this.endSearchTime = request.endSearchTime;
+            this.outBizId = request.outBizId;
+            this.ownerId = request.ownerId;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.sortType = request.sortType;
+            this.startAmount = request.startAmount;
+            this.startBizTime = request.startBizTime;
+            this.startSearchTime = request.startSearchTime;
+            this.type = request.type;
         } 
 
         /**

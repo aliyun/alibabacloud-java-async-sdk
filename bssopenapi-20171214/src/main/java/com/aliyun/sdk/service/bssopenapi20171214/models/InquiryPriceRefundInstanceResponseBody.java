@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link QueryUserAvailableCreditAmountResponseBody} extends {@link TeaModel}
+ * {@link InquiryPriceRefundInstanceResponseBody} extends {@link TeaModel}
  *
- * <p>QueryUserAvailableCreditAmountResponseBody</p>
+ * <p>InquiryPriceRefundInstanceResponseBody</p>
  */
-public class QueryUserAvailableCreditAmountResponseBody extends TeaModel {
+public class InquiryPriceRefundInstanceResponseBody extends TeaModel {
     @NameInMap("Code")
     private String code;
 
@@ -27,7 +27,7 @@ public class QueryUserAvailableCreditAmountResponseBody extends TeaModel {
     @NameInMap("Success")
     private Boolean success;
 
-    private QueryUserAvailableCreditAmountResponseBody(Builder builder) {
+    private InquiryPriceRefundInstanceResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -39,7 +39,7 @@ public class QueryUserAvailableCreditAmountResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static QueryUserAvailableCreditAmountResponseBody create() {
+    public static InquiryPriceRefundInstanceResponseBody create() {
         return builder().build();
     }
 
@@ -86,7 +86,7 @@ public class QueryUserAvailableCreditAmountResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * code
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class QueryUserAvailableCreditAmountResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * data
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class QueryUserAvailableCreditAmountResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * message
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class QueryUserAvailableCreditAmountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * requestId
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,41 +118,37 @@ public class QueryUserAvailableCreditAmountResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * success
          */
         public Builder success(Boolean success) {
             this.success = success;
             return this;
         }
 
-        public QueryUserAvailableCreditAmountResponseBody build() {
-            return new QueryUserAvailableCreditAmountResponseBody(this);
+        public InquiryPriceRefundInstanceResponseBody build() {
+            return new InquiryPriceRefundInstanceResponseBody(this);
         } 
 
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("AvailableAmount")
-        private String availableAmount;
-
-        @NameInMap("AvailableCacheAmount")
-        private String availableCacheAmount;
-
-        @NameInMap("AwardedCreditAmount")
-        private String awardedCreditAmount;
-
         @NameInMap("Currency")
         private String currency;
 
-        @NameInMap("WwardMyBankAmount")
-        private String wwardMyBankAmount;
+        @NameInMap("HostId")
+        private String hostId;
+
+        @NameInMap("InstanceId")
+        private String instanceId;
+
+        @NameInMap("RefundAmount")
+        private Double refundAmount;
 
         private Data(Builder builder) {
-            this.availableAmount = builder.availableAmount;
-            this.availableCacheAmount = builder.availableCacheAmount;
-            this.awardedCreditAmount = builder.awardedCreditAmount;
             this.currency = builder.currency;
-            this.wwardMyBankAmount = builder.wwardMyBankAmount;
+            this.hostId = builder.hostId;
+            this.instanceId = builder.instanceId;
+            this.refundAmount = builder.refundAmount;
         }
 
         public static Builder builder() {
@@ -164,27 +160,6 @@ public class QueryUserAvailableCreditAmountResponseBody extends TeaModel {
         }
 
         /**
-         * @return availableAmount
-         */
-        public String getAvailableAmount() {
-            return this.availableAmount;
-        }
-
-        /**
-         * @return availableCacheAmount
-         */
-        public String getAvailableCacheAmount() {
-            return this.availableCacheAmount;
-        }
-
-        /**
-         * @return awardedCreditAmount
-         */
-        public String getAwardedCreditAmount() {
-            return this.awardedCreditAmount;
-        }
-
-        /**
          * @return currency
          */
         public String getCurrency() {
@@ -192,45 +167,34 @@ public class QueryUserAvailableCreditAmountResponseBody extends TeaModel {
         }
 
         /**
-         * @return wwardMyBankAmount
+         * @return hostId
          */
-        public String getWwardMyBankAmount() {
-            return this.wwardMyBankAmount;
+        public String getHostId() {
+            return this.hostId;
+        }
+
+        /**
+         * @return instanceId
+         */
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        /**
+         * @return refundAmount
+         */
+        public Double getRefundAmount() {
+            return this.refundAmount;
         }
 
         public static final class Builder {
-            private String availableAmount; 
-            private String availableCacheAmount; 
-            private String awardedCreditAmount; 
             private String currency; 
-            private String wwardMyBankAmount; 
+            private String hostId; 
+            private String instanceId; 
+            private Double refundAmount; 
 
             /**
-             * AvailableAmount.
-             */
-            public Builder availableAmount(String availableAmount) {
-                this.availableAmount = availableAmount;
-                return this;
-            }
-
-            /**
-             * AvailableCacheAmount.
-             */
-            public Builder availableCacheAmount(String availableCacheAmount) {
-                this.availableCacheAmount = availableCacheAmount;
-                return this;
-            }
-
-            /**
-             * AwardedCreditAmount.
-             */
-            public Builder awardedCreditAmount(String awardedCreditAmount) {
-                this.awardedCreditAmount = awardedCreditAmount;
-                return this;
-            }
-
-            /**
-             * Currency.
+             * currency
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -238,10 +202,26 @@ public class QueryUserAvailableCreditAmountResponseBody extends TeaModel {
             }
 
             /**
-             * WwardMyBankAmount.
+             * hostId
              */
-            public Builder wwardMyBankAmount(String wwardMyBankAmount) {
-                this.wwardMyBankAmount = wwardMyBankAmount;
+            public Builder hostId(String hostId) {
+                this.hostId = hostId;
+                return this;
+            }
+
+            /**
+             * instanceId
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * refundAmount
+             */
+            public Builder refundAmount(Double refundAmount) {
+                this.refundAmount = refundAmount;
                 return this;
             }
 

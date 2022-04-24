@@ -147,16 +147,16 @@ public class SaveUserCreditRequest extends Request {
             super();
         } 
 
-        private Builder(SaveUserCreditRequest response) {
-            super(response);
-            this.avoidExpiration = response.avoidExpiration;
-            this.avoidNotification = response.avoidNotification;
-            this.avoidPrepaidExpiration = response.avoidPrepaidExpiration;
-            this.avoidPrepaidNotification = response.avoidPrepaidNotification;
-            this.creditType = response.creditType;
-            this.creditValue = response.creditValue;
-            this.description = response.description;
-            this.operator = response.operator;
+        private Builder(SaveUserCreditRequest request) {
+            super(request);
+            this.avoidExpiration = request.avoidExpiration;
+            this.avoidNotification = request.avoidNotification;
+            this.avoidPrepaidExpiration = request.avoidPrepaidExpiration;
+            this.avoidPrepaidNotification = request.avoidPrepaidNotification;
+            this.creditType = request.creditType;
+            this.creditValue = request.creditValue;
+            this.description = request.description;
+            this.operator = request.operator;
         } 
 
         /**

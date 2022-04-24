@@ -116,14 +116,14 @@ public class ConvertChargeTypeRequest extends Request {
             super();
         } 
 
-        private Builder(ConvertChargeTypeRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.ownerId = response.ownerId;
-            this.period = response.period;
-            this.productCode = response.productCode;
-            this.productType = response.productType;
-            this.subscriptionType = response.subscriptionType;
+        private Builder(ConvertChargeTypeRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.ownerId = request.ownerId;
+            this.period = request.period;
+            this.productCode = request.productCode;
+            this.productType = request.productType;
+            this.subscriptionType = request.subscriptionType;
         } 
 
         /**

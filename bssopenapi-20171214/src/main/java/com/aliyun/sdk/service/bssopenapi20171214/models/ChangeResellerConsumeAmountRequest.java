@@ -146,16 +146,16 @@ public class ChangeResellerConsumeAmountRequest extends Request {
             super();
         } 
 
-        private Builder(ChangeResellerConsumeAmountRequest response) {
-            super(response);
-            this.adjustType = response.adjustType;
-            this.amount = response.amount;
-            this.businessType = response.businessType;
-            this.currency = response.currency;
-            this.extendMap = response.extendMap;
-            this.outBizId = response.outBizId;
-            this.ownerId = response.ownerId;
-            this.source = response.source;
+        private Builder(ChangeResellerConsumeAmountRequest request) {
+            super(request);
+            this.adjustType = request.adjustType;
+            this.amount = request.amount;
+            this.businessType = request.businessType;
+            this.currency = request.currency;
+            this.extendMap = request.extendMap;
+            this.outBizId = request.outBizId;
+            this.ownerId = request.ownerId;
+            this.source = request.source;
         } 
 
         /**

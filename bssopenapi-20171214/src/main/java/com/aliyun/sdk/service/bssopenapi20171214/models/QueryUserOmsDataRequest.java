@@ -130,15 +130,15 @@ public class QueryUserOmsDataRequest extends Request {
             super();
         } 
 
-        private Builder(QueryUserOmsDataRequest response) {
-            super(response);
-            this.dataType = response.dataType;
-            this.endTime = response.endTime;
-            this.marker = response.marker;
-            this.ownerId = response.ownerId;
-            this.pageSize = response.pageSize;
-            this.startTime = response.startTime;
-            this.table = response.table;
+        private Builder(QueryUserOmsDataRequest request) {
+            super(request);
+            this.dataType = request.dataType;
+            this.endTime = request.endTime;
+            this.marker = request.marker;
+            this.ownerId = request.ownerId;
+            this.pageSize = request.pageSize;
+            this.startTime = request.startTime;
+            this.table = request.table;
         } 
 
         /**

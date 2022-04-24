@@ -35,8 +35,8 @@ public class QueryBillToOSSSubscriptionRequest extends Request {
             super();
         } 
 
-        private Builder(QueryBillToOSSSubscriptionRequest response) {
-            super(response);
+        private Builder(QueryBillToOSSSubscriptionRequest request) {
+            super(request);
         } 
 
         @Override

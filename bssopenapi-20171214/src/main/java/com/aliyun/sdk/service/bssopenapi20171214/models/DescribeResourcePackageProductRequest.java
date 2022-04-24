@@ -48,9 +48,9 @@ public class DescribeResourcePackageProductRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeResourcePackageProductRequest response) {
-            super(response);
-            this.productCode = response.productCode;
+        private Builder(DescribeResourcePackageProductRequest request) {
+            super(request);
+            this.productCode = request.productCode;
         } 
 
         /**

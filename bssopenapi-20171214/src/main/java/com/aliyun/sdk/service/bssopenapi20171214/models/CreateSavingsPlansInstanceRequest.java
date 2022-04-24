@@ -171,18 +171,18 @@ public class CreateSavingsPlansInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(CreateSavingsPlansInstanceRequest response) {
-            super(response);
-            this.commodityCode = response.commodityCode;
-            this.duration = response.duration;
-            this.effectiveDate = response.effectiveDate;
-            this.payMode = response.payMode;
-            this.poolValue = response.poolValue;
-            this.pricingCycle = response.pricingCycle;
-            this.region = response.region;
-            this.specType = response.specType;
-            this.specification = response.specification;
-            this.type = response.type;
+        private Builder(CreateSavingsPlansInstanceRequest request) {
+            super(request);
+            this.commodityCode = request.commodityCode;
+            this.duration = request.duration;
+            this.effectiveDate = request.effectiveDate;
+            this.payMode = request.payMode;
+            this.poolValue = request.poolValue;
+            this.pricingCycle = request.pricingCycle;
+            this.region = request.region;
+            this.specType = request.specType;
+            this.specification = request.specification;
+            this.type = request.type;
         } 
 
         /**

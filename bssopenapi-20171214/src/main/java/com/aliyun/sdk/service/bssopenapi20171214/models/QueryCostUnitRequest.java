@@ -89,12 +89,12 @@ public class QueryCostUnitRequest extends Request {
             super();
         } 
 
-        private Builder(QueryCostUnitRequest response) {
-            super(response);
-            this.ownerUid = response.ownerUid;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.parentUnitId = response.parentUnitId;
+        private Builder(QueryCostUnitRequest request) {
+            super(request);
+            this.ownerUid = request.ownerUid;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.parentUnitId = request.parentUnitId;
         } 
 
         /**

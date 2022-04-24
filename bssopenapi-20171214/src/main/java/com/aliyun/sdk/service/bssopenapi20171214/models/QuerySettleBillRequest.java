@@ -193,20 +193,20 @@ public class QuerySettleBillRequest extends Request {
             super();
         } 
 
-        private Builder(QuerySettleBillRequest response) {
-            super(response);
-            this.billOwnerId = response.billOwnerId;
-            this.billingCycle = response.billingCycle;
-            this.isDisplayLocalCurrency = response.isDisplayLocalCurrency;
-            this.isHideZeroCharge = response.isHideZeroCharge;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.ownerId = response.ownerId;
-            this.productCode = response.productCode;
-            this.productType = response.productType;
-            this.recordID = response.recordID;
-            this.subscriptionType = response.subscriptionType;
-            this.type = response.type;
+        private Builder(QuerySettleBillRequest request) {
+            super(request);
+            this.billOwnerId = request.billOwnerId;
+            this.billingCycle = request.billingCycle;
+            this.isDisplayLocalCurrency = request.isDisplayLocalCurrency;
+            this.isHideZeroCharge = request.isHideZeroCharge;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.ownerId = request.ownerId;
+            this.productCode = request.productCode;
+            this.productType = request.productType;
+            this.recordID = request.recordID;
+            this.subscriptionType = request.subscriptionType;
+            this.type = request.type;
         } 
 
         /**

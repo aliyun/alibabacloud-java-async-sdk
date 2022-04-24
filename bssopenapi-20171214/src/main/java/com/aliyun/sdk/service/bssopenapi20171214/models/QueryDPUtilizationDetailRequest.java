@@ -168,18 +168,18 @@ public class QueryDPUtilizationDetailRequest extends Request {
             super();
         } 
 
-        private Builder(QueryDPUtilizationDetailRequest response) {
-            super(response);
-            this.commodityCode = response.commodityCode;
-            this.deductedInstanceId = response.deductedInstanceId;
-            this.endTime = response.endTime;
-            this.includeShare = response.includeShare;
-            this.instanceId = response.instanceId;
-            this.instanceSpec = response.instanceSpec;
-            this.lastToken = response.lastToken;
-            this.limit = response.limit;
-            this.prodCode = response.prodCode;
-            this.startTime = response.startTime;
+        private Builder(QueryDPUtilizationDetailRequest request) {
+            super(request);
+            this.commodityCode = request.commodityCode;
+            this.deductedInstanceId = request.deductedInstanceId;
+            this.endTime = request.endTime;
+            this.includeShare = request.includeShare;
+            this.instanceId = request.instanceId;
+            this.instanceSpec = request.instanceSpec;
+            this.lastToken = request.lastToken;
+            this.limit = request.limit;
+            this.prodCode = request.prodCode;
+            this.startTime = request.startTime;
         } 
 
         /**

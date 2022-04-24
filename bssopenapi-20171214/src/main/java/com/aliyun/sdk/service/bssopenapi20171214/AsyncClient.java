@@ -86,6 +86,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetSubscriptionPriceResponse> getSubscriptionPrice(GetSubscriptionPriceRequest request);
 
+    CompletableFuture<InquiryPriceRefundInstanceResponse> inquiryPriceRefundInstance(InquiryPriceRefundInstanceRequest request);
+
     CompletableFuture<ModifyAccountRelationResponse> modifyAccountRelation(ModifyAccountRelationRequest request);
 
     CompletableFuture<ModifyCostUnitResponse> modifyCostUnit(ModifyCostUnitRequest request);
@@ -101,8 +103,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryAccountTransactionsResponse> queryAccountTransactions(QueryAccountTransactionsRequest request);
 
     CompletableFuture<QueryAvailableInstancesResponse> queryAvailableInstances(QueryAvailableInstancesRequest request);
-
-    CompletableFuture<QueryAvailableInstancesApiResponse> queryAvailableInstancesApi(QueryAvailableInstancesApiRequest request);
 
     CompletableFuture<QueryBillResponse> queryBill(QueryBillRequest request);
 
@@ -152,8 +152,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<QueryResellerAvailableQuotaResponse> queryResellerAvailableQuota(QueryResellerAvailableQuotaRequest request);
 
-    CompletableFuture<QueryResellerUserAvailableQuotaResponse> queryResellerUserAvailableQuota(QueryResellerUserAvailableQuotaRequest request);
-
     CompletableFuture<QueryResourcePackageInstancesResponse> queryResourcePackageInstances(QueryResourcePackageInstancesRequest request);
 
     CompletableFuture<QuerySavingsPlansDeductLogResponse> querySavingsPlansDeductLog(QuerySavingsPlansDeductLogRequest request);
@@ -166,13 +164,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<QuerySplitItemBillResponse> querySplitItemBill(QuerySplitItemBillRequest request);
 
-    CompletableFuture<QueryUserAvailableCreditAmountResponse> queryUserAvailableCreditAmount(QueryUserAvailableCreditAmountRequest request);
-
-    CompletableFuture<QueryUserCouponResponse> queryUserCoupon(QueryUserCouponRequest request);
-
     CompletableFuture<QueryUserOmsDataResponse> queryUserOmsData(QueryUserOmsDataRequest request);
 
-    CompletableFuture<QueryUserValueCardResponse> queryUserValueCard(QueryUserValueCardRequest request);
+    CompletableFuture<RefundInstanceResponse> refundInstance(RefundInstanceRequest request);
 
     CompletableFuture<RelieveAccountRelationResponse> relieveAccountRelation(RelieveAccountRelationRequest request);
 
@@ -184,15 +178,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<SetAllExpirationDayResponse> setAllExpirationDay(SetAllExpirationDayRequest request);
 
-    CompletableFuture<SetAutoRenewalApiResponse> setAutoRenewalApi(SetAutoRenewalApiRequest request);
-
     CompletableFuture<SetCreditLabelActionResponse> setCreditLabelAction(SetCreditLabelActionRequest request);
 
-    CompletableFuture<SetNotRenewalApiResponse> setNotRenewalApi(SetNotRenewalApiRequest request);
-
     CompletableFuture<SetRenewalResponse> setRenewal(SetRenewalRequest request);
-
-    CompletableFuture<SetRenewalApiResponse> setRenewalApi(SetRenewalApiRequest request);
 
     CompletableFuture<SetResellerUserAlarmThresholdResponse> setResellerUserAlarmThreshold(SetResellerUserAlarmThresholdRequest request);
 

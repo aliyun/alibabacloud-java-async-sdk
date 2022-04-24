@@ -62,10 +62,10 @@ public class CancelOrderRequest extends Request {
             super();
         } 
 
-        private Builder(CancelOrderRequest response) {
-            super(response);
-            this.orderId = response.orderId;
-            this.ownerId = response.ownerId;
+        private Builder(CancelOrderRequest request) {
+            super(request);
+            this.orderId = request.orderId;
+            this.ownerId = request.ownerId;
         } 
 
         /**

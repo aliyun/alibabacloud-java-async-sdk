@@ -126,15 +126,15 @@ public class CreateResourcePackageRequest extends Request {
             super();
         } 
 
-        private Builder(CreateResourcePackageRequest response) {
-            super(response);
-            this.duration = response.duration;
-            this.effectiveDate = response.effectiveDate;
-            this.ownerId = response.ownerId;
-            this.packageType = response.packageType;
-            this.pricingCycle = response.pricingCycle;
-            this.productCode = response.productCode;
-            this.specification = response.specification;
+        private Builder(CreateResourcePackageRequest request) {
+            super(request);
+            this.duration = request.duration;
+            this.effectiveDate = request.effectiveDate;
+            this.ownerId = request.ownerId;
+            this.packageType = request.packageType;
+            this.pricingCycle = request.pricingCycle;
+            this.productCode = request.productCode;
+            this.specification = request.specification;
         } 
 
         /**

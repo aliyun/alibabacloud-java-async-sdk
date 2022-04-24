@@ -104,13 +104,13 @@ public class DescribeResourceCoverageTotalRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeResourceCoverageTotalRequest response) {
-            super(response);
-            this.billOwnerId = response.billOwnerId;
-            this.endPeriod = response.endPeriod;
-            this.periodType = response.periodType;
-            this.resourceType = response.resourceType;
-            this.startPeriod = response.startPeriod;
+        private Builder(DescribeResourceCoverageTotalRequest request) {
+            super(request);
+            this.billOwnerId = request.billOwnerId;
+            this.endPeriod = request.endPeriod;
+            this.periodType = request.periodType;
+            this.resourceType = request.resourceType;
+            this.startPeriod = request.startPeriod;
         } 
 
         /**

@@ -74,11 +74,11 @@ public class QueryCashCouponsRequest extends Request {
             super();
         } 
 
-        private Builder(QueryCashCouponsRequest response) {
-            super(response);
-            this.effectiveOrNot = response.effectiveOrNot;
-            this.expiryTimeEnd = response.expiryTimeEnd;
-            this.expiryTimeStart = response.expiryTimeStart;
+        private Builder(QueryCashCouponsRequest request) {
+            super(request);
+            this.effectiveOrNot = request.effectiveOrNot;
+            this.expiryTimeEnd = request.expiryTimeEnd;
+            this.expiryTimeStart = request.expiryTimeStart;
         } 
 
         /**

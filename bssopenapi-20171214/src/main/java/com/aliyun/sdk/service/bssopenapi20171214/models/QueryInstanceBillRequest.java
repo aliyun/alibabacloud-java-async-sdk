@@ -193,20 +193,20 @@ public class QueryInstanceBillRequest extends Request {
             super();
         } 
 
-        private Builder(QueryInstanceBillRequest response) {
-            super(response);
-            this.billOwnerId = response.billOwnerId;
-            this.billingCycle = response.billingCycle;
-            this.billingDate = response.billingDate;
-            this.granularity = response.granularity;
-            this.isBillingItem = response.isBillingItem;
-            this.isHideZeroCharge = response.isHideZeroCharge;
-            this.ownerId = response.ownerId;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.productCode = response.productCode;
-            this.productType = response.productType;
-            this.subscriptionType = response.subscriptionType;
+        private Builder(QueryInstanceBillRequest request) {
+            super(request);
+            this.billOwnerId = request.billOwnerId;
+            this.billingCycle = request.billingCycle;
+            this.billingDate = request.billingDate;
+            this.granularity = request.granularity;
+            this.isBillingItem = request.isBillingItem;
+            this.isHideZeroCharge = request.isHideZeroCharge;
+            this.ownerId = request.ownerId;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.productCode = request.productCode;
+            this.productType = request.productType;
+            this.subscriptionType = request.subscriptionType;
         } 
 
         /**

@@ -154,17 +154,17 @@ public class QueryAccountBillRequest extends Request {
             super();
         } 
 
-        private Builder(QueryAccountBillRequest response) {
-            super(response);
-            this.billOwnerId = response.billOwnerId;
-            this.billingCycle = response.billingCycle;
-            this.billingDate = response.billingDate;
-            this.granularity = response.granularity;
-            this.isGroupByProduct = response.isGroupByProduct;
-            this.ownerID = response.ownerID;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.productCode = response.productCode;
+        private Builder(QueryAccountBillRequest request) {
+            super(request);
+            this.billOwnerId = request.billOwnerId;
+            this.billingCycle = request.billingCycle;
+            this.billingDate = request.billingDate;
+            this.granularity = request.granularity;
+            this.isGroupByProduct = request.isGroupByProduct;
+            this.ownerID = request.ownerID;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.productCode = request.productCode;
         } 
 
         /**

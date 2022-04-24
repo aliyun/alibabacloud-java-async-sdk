@@ -49,9 +49,9 @@ public class QueryFinancialAccountInfoRequest extends Request {
             super();
         } 
 
-        private Builder(QueryFinancialAccountInfoRequest response) {
-            super(response);
-            this.userId = response.userId;
+        private Builder(QueryFinancialAccountInfoRequest request) {
+            super(request);
+            this.userId = request.userId;
         } 
 
         /**

@@ -63,10 +63,10 @@ public class EnableBillGenerationRequest extends Request {
             super();
         } 
 
-        private Builder(EnableBillGenerationRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.productCode = response.productCode;
+        private Builder(EnableBillGenerationRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.productCode = request.productCode;
         } 
 
         /**

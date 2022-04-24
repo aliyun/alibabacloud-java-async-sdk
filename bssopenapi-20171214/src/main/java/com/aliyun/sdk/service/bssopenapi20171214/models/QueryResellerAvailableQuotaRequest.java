@@ -62,10 +62,10 @@ public class QueryResellerAvailableQuotaRequest extends Request {
             super();
         } 
 
-        private Builder(QueryResellerAvailableQuotaRequest response) {
-            super(response);
-            this.itemCodes = response.itemCodes;
-            this.ownerId = response.ownerId;
+        private Builder(QueryResellerAvailableQuotaRequest request) {
+            super(request);
+            this.itemCodes = request.itemCodes;
+            this.ownerId = request.ownerId;
         } 
 
         /**

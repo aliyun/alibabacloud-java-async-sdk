@@ -142,16 +142,16 @@ public class QueryRIUtilizationDetailRequest extends Request {
             super();
         } 
 
-        private Builder(QueryRIUtilizationDetailRequest response) {
-            super(response);
-            this.deductedInstanceId = response.deductedInstanceId;
-            this.endTime = response.endTime;
-            this.instanceSpec = response.instanceSpec;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.RICommodityCode = response.RICommodityCode;
-            this.RIInstanceId = response.RIInstanceId;
-            this.startTime = response.startTime;
+        private Builder(QueryRIUtilizationDetailRequest request) {
+            super(request);
+            this.deductedInstanceId = request.deductedInstanceId;
+            this.endTime = request.endTime;
+            this.instanceSpec = request.instanceSpec;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.RICommodityCode = request.RICommodityCode;
+            this.RIInstanceId = request.RIInstanceId;
+            this.startTime = request.startTime;
         } 
 
         /**

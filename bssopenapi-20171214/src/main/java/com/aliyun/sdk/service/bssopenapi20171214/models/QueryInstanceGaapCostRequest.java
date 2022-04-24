@@ -114,14 +114,14 @@ public class QueryInstanceGaapCostRequest extends Request {
             super();
         } 
 
-        private Builder(QueryInstanceGaapCostRequest response) {
-            super(response);
-            this.billingCycle = response.billingCycle;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.productCode = response.productCode;
-            this.productType = response.productType;
-            this.subscriptionType = response.subscriptionType;
+        private Builder(QueryInstanceGaapCostRequest request) {
+            super(request);
+            this.billingCycle = request.billingCycle;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.productCode = request.productCode;
+            this.productType = request.productType;
+            this.subscriptionType = request.subscriptionType;
         } 
 
         /**
