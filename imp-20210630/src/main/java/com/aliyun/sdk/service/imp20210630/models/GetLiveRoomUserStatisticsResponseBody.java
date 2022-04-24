@@ -72,6 +72,12 @@ public class GetLiveRoomUserStatisticsResponseBody extends TeaModel {
     } 
 
     public static class UserStatisticsList extends TeaModel {
+        @NameInMap("CommentCount")
+        private Integer commentCount;
+
+        @NameInMap("LikeCount")
+        private Integer likeCount;
+
         @NameInMap("UserId")
         private String userId;
 
@@ -79,6 +85,8 @@ public class GetLiveRoomUserStatisticsResponseBody extends TeaModel {
         private Long watchLiveTime;
 
         private UserStatisticsList(Builder builder) {
+            this.commentCount = builder.commentCount;
+            this.likeCount = builder.likeCount;
             this.userId = builder.userId;
             this.watchLiveTime = builder.watchLiveTime;
         }
@@ -89,6 +97,20 @@ public class GetLiveRoomUserStatisticsResponseBody extends TeaModel {
 
         public static UserStatisticsList create() {
             return builder().build();
+        }
+
+        /**
+         * @return commentCount
+         */
+        public Integer getCommentCount() {
+            return this.commentCount;
+        }
+
+        /**
+         * @return likeCount
+         */
+        public Integer getLikeCount() {
+            return this.likeCount;
         }
 
         /**
@@ -106,8 +128,26 @@ public class GetLiveRoomUserStatisticsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer commentCount; 
+            private Integer likeCount; 
             private String userId; 
             private Long watchLiveTime; 
+
+            /**
+             * CommentCount.
+             */
+            public Builder commentCount(Integer commentCount) {
+                this.commentCount = commentCount;
+                return this;
+            }
+
+            /**
+             * LikeCount.
+             */
+            public Builder likeCount(Integer likeCount) {
+                this.likeCount = likeCount;
+                return this;
+            }
 
             /**
              * 用户ID。
