@@ -156,17 +156,17 @@ public class UpdateInstanceIpWhiteListRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateInstanceIpWhiteListRequest response) {
-            super(response);
-            this.groupName = response.groupName;
-            this.instanceId = response.instanceId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.securityIpList = response.securityIpList;
-            this.securityToken = response.securityToken;
+        private Builder(UpdateInstanceIpWhiteListRequest request) {
+            super(request);
+            this.groupName = request.groupName;
+            this.instanceId = request.instanceId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.securityIpList = request.securityIpList;
+            this.securityToken = request.securityToken;
         } 
 
         /**

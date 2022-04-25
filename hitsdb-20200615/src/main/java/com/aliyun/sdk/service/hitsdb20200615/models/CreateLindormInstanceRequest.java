@@ -368,33 +368,33 @@ public class CreateLindormInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(CreateLindormInstanceRequest response) {
-            super(response);
-            this.coldStorage = response.coldStorage;
-            this.coreSpec = response.coreSpec;
-            this.diskCategory = response.diskCategory;
-            this.duration = response.duration;
-            this.filestoreNum = response.filestoreNum;
-            this.filestoreSpec = response.filestoreSpec;
-            this.instanceAlias = response.instanceAlias;
-            this.instanceStorage = response.instanceStorage;
-            this.lindormNum = response.lindormNum;
-            this.lindormSpec = response.lindormSpec;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.payType = response.payType;
-            this.pricingCycle = response.pricingCycle;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.securityToken = response.securityToken;
-            this.solrNum = response.solrNum;
-            this.solrSpec = response.solrSpec;
-            this.tsdbNum = response.tsdbNum;
-            this.tsdbSpec = response.tsdbSpec;
-            this.VPCId = response.VPCId;
-            this.vSwitchId = response.vSwitchId;
-            this.zoneId = response.zoneId;
+        private Builder(CreateLindormInstanceRequest request) {
+            super(request);
+            this.coldStorage = request.coldStorage;
+            this.coreSpec = request.coreSpec;
+            this.diskCategory = request.diskCategory;
+            this.duration = request.duration;
+            this.filestoreNum = request.filestoreNum;
+            this.filestoreSpec = request.filestoreSpec;
+            this.instanceAlias = request.instanceAlias;
+            this.instanceStorage = request.instanceStorage;
+            this.lindormNum = request.lindormNum;
+            this.lindormSpec = request.lindormSpec;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.payType = request.payType;
+            this.pricingCycle = request.pricingCycle;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.securityToken = request.securityToken;
+            this.solrNum = request.solrNum;
+            this.solrSpec = request.solrSpec;
+            this.tsdbNum = request.tsdbNum;
+            this.tsdbSpec = request.tsdbSpec;
+            this.VPCId = request.VPCId;
+            this.vSwitchId = request.vSwitchId;
+            this.zoneId = request.zoneId;
         } 
 
         /**

@@ -7,19 +7,14 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetInstanceIpWhiteListRequest} extends {@link RequestModel}
+ * {@link UntagResourcesRequest} extends {@link RequestModel}
  *
- * <p>GetInstanceIpWhiteListRequest</p>
+ * <p>UntagResourcesRequest</p>
  */
-public class GetInstanceIpWhiteListRequest extends Request {
+public class UntagResourcesRequest extends Request {
     @Query
-    @NameInMap("GroupName")
-    private String groupName;
-
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
-    private String instanceId;
+    @NameInMap("All")
+    private Boolean all;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -32,7 +27,13 @@ public class GetInstanceIpWhiteListRequest extends Request {
 
     @Host
     @NameInMap("RegionId")
+    @Validation(required = true)
     private String regionId;
+
+    @Query
+    @NameInMap("ResourceId")
+    @Validation(required = true)
+    private java.util.List < String > resourceId;
 
     @Query
     @NameInMap("ResourceOwnerAccount")
@@ -44,26 +45,37 @@ public class GetInstanceIpWhiteListRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
+    @NameInMap("ResourceType")
+    @Validation(required = true)
+    private String resourceType;
+
+    @Query
     @NameInMap("SecurityToken")
     private String securityToken;
 
-    private GetInstanceIpWhiteListRequest(Builder builder) {
+    @Query
+    @NameInMap("TagKey")
+    private java.util.List < String > tagKey;
+
+    private UntagResourcesRequest(Builder builder) {
         super(builder);
-        this.groupName = builder.groupName;
-        this.instanceId = builder.instanceId;
+        this.all = builder.all;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
+        this.resourceId = builder.resourceId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.resourceType = builder.resourceType;
         this.securityToken = builder.securityToken;
+        this.tagKey = builder.tagKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static GetInstanceIpWhiteListRequest create() {
+    public static UntagResourcesRequest create() {
         return builder().build();
     }
 
@@ -73,17 +85,10 @@ public class GetInstanceIpWhiteListRequest extends Request {
     }
 
     /**
-     * @return groupName
+     * @return all
      */
-    public String getGroupName() {
-        return this.groupName;
-    }
-
-    /**
-     * @return instanceId
-     */
-    public String getInstanceId() {
-        return this.instanceId;
+    public Boolean getAll() {
+        return this.all;
     }
 
     /**
@@ -108,6 +113,13 @@ public class GetInstanceIpWhiteListRequest extends Request {
     }
 
     /**
+     * @return resourceId
+     */
+    public java.util.List < String > getResourceId() {
+        return this.resourceId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -122,53 +134,62 @@ public class GetInstanceIpWhiteListRequest extends Request {
     }
 
     /**
+     * @return resourceType
+     */
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
+    /**
      * @return securityToken
      */
     public String getSecurityToken() {
         return this.securityToken;
     }
 
-    public static final class Builder extends Request.Builder<GetInstanceIpWhiteListRequest, Builder> {
-        private String groupName; 
-        private String instanceId; 
+    /**
+     * @return tagKey
+     */
+    public java.util.List < String > getTagKey() {
+        return this.tagKey;
+    }
+
+    public static final class Builder extends Request.Builder<UntagResourcesRequest, Builder> {
+        private Boolean all; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
+        private java.util.List < String > resourceId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String resourceType; 
         private String securityToken; 
+        private java.util.List < String > tagKey; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetInstanceIpWhiteListRequest request) {
+        private Builder(UntagResourcesRequest request) {
             super(request);
-            this.groupName = request.groupName;
-            this.instanceId = request.instanceId;
+            this.all = request.all;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
+            this.resourceId = request.resourceId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.resourceType = request.resourceType;
             this.securityToken = request.securityToken;
+            this.tagKey = request.tagKey;
         } 
 
         /**
-         * GroupName.
+         * All.
          */
-        public Builder groupName(String groupName) {
-            this.putQueryParameter("GroupName", groupName);
-            this.groupName = groupName;
-            return this;
-        }
-
-        /**
-         * InstanceId.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
+        public Builder all(Boolean all) {
+            this.putQueryParameter("All", all);
+            this.all = all;
             return this;
         }
 
@@ -200,6 +221,15 @@ public class GetInstanceIpWhiteListRequest extends Request {
         }
 
         /**
+         * ResourceId.
+         */
+        public Builder resourceId(java.util.List < String > resourceId) {
+            this.putQueryParameter("ResourceId", resourceId);
+            this.resourceId = resourceId;
+            return this;
+        }
+
+        /**
          * ResourceOwnerAccount.
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
@@ -218,6 +248,15 @@ public class GetInstanceIpWhiteListRequest extends Request {
         }
 
         /**
+         * ResourceType.
+         */
+        public Builder resourceType(String resourceType) {
+            this.putQueryParameter("ResourceType", resourceType);
+            this.resourceType = resourceType;
+            return this;
+        }
+
+        /**
          * SecurityToken.
          */
         public Builder securityToken(String securityToken) {
@@ -226,9 +265,18 @@ public class GetInstanceIpWhiteListRequest extends Request {
             return this;
         }
 
+        /**
+         * TagKey.
+         */
+        public Builder tagKey(java.util.List < String > tagKey) {
+            this.putQueryParameter("TagKey", tagKey);
+            this.tagKey = tagKey;
+            return this;
+        }
+
         @Override
-        public GetInstanceIpWhiteListRequest build() {
-            return new GetInstanceIpWhiteListRequest(this);
+        public UntagResourcesRequest build() {
+            return new UntagResourcesRequest(this);
         } 
 
     } 

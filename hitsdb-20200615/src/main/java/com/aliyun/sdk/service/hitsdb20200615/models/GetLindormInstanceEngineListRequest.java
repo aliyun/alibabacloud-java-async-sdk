@@ -129,15 +129,15 @@ public class GetLindormInstanceEngineListRequest extends Request {
             super();
         } 
 
-        private Builder(GetLindormInstanceEngineListRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.securityToken = response.securityToken;
+        private Builder(GetLindormInstanceEngineListRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.securityToken = request.securityToken;
         } 
 
         /**

@@ -366,33 +366,33 @@ public class UpgradeLindormInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(UpgradeLindormInstanceRequest response) {
-            super(response);
-            this.clusterStorage = response.clusterStorage;
-            this.coldStorage = response.coldStorage;
-            this.coreNum = response.coreNum;
-            this.coreSpec = response.coreSpec;
-            this.filestoreNum = response.filestoreNum;
-            this.filestoreSpec = response.filestoreSpec;
-            this.instanceId = response.instanceId;
-            this.lindormNum = response.lindormNum;
-            this.lindormSpec = response.lindormSpec;
-            this.ltsCoreNum = response.ltsCoreNum;
-            this.ltsCoreSpec = response.ltsCoreSpec;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.phoenixCoreNum = response.phoenixCoreNum;
-            this.phoenixCoreSpec = response.phoenixCoreSpec;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.securityToken = response.securityToken;
-            this.solrNum = response.solrNum;
-            this.solrSpec = response.solrSpec;
-            this.tsdbNum = response.tsdbNum;
-            this.tsdbSpec = response.tsdbSpec;
-            this.upgradeType = response.upgradeType;
-            this.zoneId = response.zoneId;
+        private Builder(UpgradeLindormInstanceRequest request) {
+            super(request);
+            this.clusterStorage = request.clusterStorage;
+            this.coldStorage = request.coldStorage;
+            this.coreNum = request.coreNum;
+            this.coreSpec = request.coreSpec;
+            this.filestoreNum = request.filestoreNum;
+            this.filestoreSpec = request.filestoreSpec;
+            this.instanceId = request.instanceId;
+            this.lindormNum = request.lindormNum;
+            this.lindormSpec = request.lindormSpec;
+            this.ltsCoreNum = request.ltsCoreNum;
+            this.ltsCoreSpec = request.ltsCoreSpec;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.phoenixCoreNum = request.phoenixCoreNum;
+            this.phoenixCoreSpec = request.phoenixCoreSpec;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.securityToken = request.securityToken;
+            this.solrNum = request.solrNum;
+            this.solrSpec = request.solrSpec;
+            this.tsdbNum = request.tsdbNum;
+            this.tsdbSpec = request.tsdbSpec;
+            this.upgradeType = request.upgradeType;
+            this.zoneId = request.zoneId;
         } 
 
         /**

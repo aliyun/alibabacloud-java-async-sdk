@@ -51,6 +51,12 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     @NameInMap("EnableSSL")
     private Boolean enableSSL;
 
+    @NameInMap("EnableShs")
+    private Boolean enableShs;
+
+    @NameInMap("EnableStream")
+    private Boolean enableStream;
+
     @NameInMap("EngineList")
     private java.util.List < EngineList> engineList;
 
@@ -74,6 +80,12 @@ public class GetLindormInstanceResponseBody extends TeaModel {
 
     @NameInMap("InstanceStorage")
     private String instanceStorage;
+
+    @NameInMap("MaintainEndTime")
+    private String maintainEndTime;
+
+    @NameInMap("MaintainStartTime")
+    private String maintainStartTime;
 
     @NameInMap("NetworkType")
     private String networkType;
@@ -113,6 +125,8 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         this.enableCompute = builder.enableCompute;
         this.enableKms = builder.enableKms;
         this.enableSSL = builder.enableSSL;
+        this.enableShs = builder.enableShs;
+        this.enableStream = builder.enableStream;
         this.engineList = builder.engineList;
         this.engineType = builder.engineType;
         this.expireTime = builder.expireTime;
@@ -121,6 +135,8 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         this.instanceId = builder.instanceId;
         this.instanceStatus = builder.instanceStatus;
         this.instanceStorage = builder.instanceStorage;
+        this.maintainEndTime = builder.maintainEndTime;
+        this.maintainStartTime = builder.maintainStartTime;
         this.networkType = builder.networkType;
         this.payType = builder.payType;
         this.regionId = builder.regionId;
@@ -231,6 +247,20 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     }
 
     /**
+     * @return enableShs
+     */
+    public Boolean getEnableShs() {
+        return this.enableShs;
+    }
+
+    /**
+     * @return enableStream
+     */
+    public Boolean getEnableStream() {
+        return this.enableStream;
+    }
+
+    /**
      * @return engineList
      */
     public java.util.List < EngineList> getEngineList() {
@@ -284,6 +314,20 @@ public class GetLindormInstanceResponseBody extends TeaModel {
      */
     public String getInstanceStorage() {
         return this.instanceStorage;
+    }
+
+    /**
+     * @return maintainEndTime
+     */
+    public String getMaintainEndTime() {
+        return this.maintainEndTime;
+    }
+
+    /**
+     * @return maintainStartTime
+     */
+    public String getMaintainStartTime() {
+        return this.maintainStartTime;
     }
 
     /**
@@ -356,6 +400,8 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         private Boolean enableCompute; 
         private Boolean enableKms; 
         private Boolean enableSSL; 
+        private Boolean enableShs; 
+        private Boolean enableStream; 
         private java.util.List < EngineList> engineList; 
         private Integer engineType; 
         private String expireTime; 
@@ -364,6 +410,8 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         private String instanceId; 
         private String instanceStatus; 
         private String instanceStorage; 
+        private String maintainEndTime; 
+        private String maintainStartTime; 
         private String networkType; 
         private String payType; 
         private String regionId; 
@@ -478,6 +526,22 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * EnableShs.
+         */
+        public Builder enableShs(Boolean enableShs) {
+            this.enableShs = enableShs;
+            return this;
+        }
+
+        /**
+         * EnableStream.
+         */
+        public Builder enableStream(Boolean enableStream) {
+            this.enableStream = enableStream;
+            return this;
+        }
+
+        /**
          * EngineList.
          */
         public Builder engineList(java.util.List < EngineList> engineList) {
@@ -538,6 +602,22 @@ public class GetLindormInstanceResponseBody extends TeaModel {
          */
         public Builder instanceStorage(String instanceStorage) {
             this.instanceStorage = instanceStorage;
+            return this;
+        }
+
+        /**
+         * MaintainEndTime.
+         */
+        public Builder maintainEndTime(String maintainEndTime) {
+            this.maintainEndTime = maintainEndTime;
+            return this;
+        }
+
+        /**
+         * MaintainStartTime.
+         */
+        public Builder maintainStartTime(String maintainStartTime) {
+            this.maintainStartTime = maintainStartTime;
             return this;
         }
 

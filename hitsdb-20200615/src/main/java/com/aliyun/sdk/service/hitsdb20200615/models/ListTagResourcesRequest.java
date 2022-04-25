@@ -7,11 +7,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetLindormInstanceListRequest} extends {@link RequestModel}
+ * {@link ListTagResourcesRequest} extends {@link RequestModel}
  *
- * <p>GetLindormInstanceListRequest</p>
+ * <p>ListTagResourcesRequest</p>
  */
-public class GetLindormInstanceListRequest extends Request {
+public class ListTagResourcesRequest extends Request {
+    @Query
+    @NameInMap("NextToken")
+    private String nextToken;
+
     @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
@@ -22,22 +26,13 @@ public class GetLindormInstanceListRequest extends Request {
     private Long ownerId;
 
     @Query
-    @NameInMap("PageNumber")
-    @Validation(required = true)
-    private Integer pageNumber;
-
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true)
-    private Integer pageSize;
-
-    @Query
-    @NameInMap("QueryStr")
-    private String queryStr;
-
-    @Query
     @NameInMap("RegionId")
+    @Validation(required = true)
     private String regionId;
+
+    @Query
+    @NameInMap("ResourceId")
+    private java.util.List < String > resourceId;
 
     @Query
     @NameInMap("ResourceOwnerAccount")
@@ -49,35 +44,29 @@ public class GetLindormInstanceListRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
+    @NameInMap("ResourceType")
+    @Validation(required = true)
+    private String resourceType;
+
+    @Query
     @NameInMap("SecurityToken")
     private String securityToken;
-
-    @Query
-    @NameInMap("ServiceType")
-    private String serviceType;
-
-    @Query
-    @NameInMap("SupportEngine")
-    @Validation(maximum = 7)
-    private Integer supportEngine;
 
     @Query
     @NameInMap("Tag")
     private java.util.List < Tag> tag;
 
-    private GetLindormInstanceListRequest(Builder builder) {
+    private ListTagResourcesRequest(Builder builder) {
         super(builder);
+        this.nextToken = builder.nextToken;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
-        this.pageNumber = builder.pageNumber;
-        this.pageSize = builder.pageSize;
-        this.queryStr = builder.queryStr;
         this.regionId = builder.regionId;
+        this.resourceId = builder.resourceId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.resourceType = builder.resourceType;
         this.securityToken = builder.securityToken;
-        this.serviceType = builder.serviceType;
-        this.supportEngine = builder.supportEngine;
         this.tag = builder.tag;
     }
 
@@ -85,13 +74,20 @@ public class GetLindormInstanceListRequest extends Request {
         return new Builder();
     }
 
-    public static GetLindormInstanceListRequest create() {
+    public static ListTagResourcesRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -109,31 +105,17 @@ public class GetLindormInstanceListRequest extends Request {
     }
 
     /**
-     * @return pageNumber
-     */
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    /**
-     * @return pageSize
-     */
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    /**
-     * @return queryStr
-     */
-    public String getQueryStr() {
-        return this.queryStr;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return resourceId
+     */
+    public java.util.List < String > getResourceId() {
+        return this.resourceId;
     }
 
     /**
@@ -151,24 +133,17 @@ public class GetLindormInstanceListRequest extends Request {
     }
 
     /**
+     * @return resourceType
+     */
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
+    /**
      * @return securityToken
      */
     public String getSecurityToken() {
         return this.securityToken;
-    }
-
-    /**
-     * @return serviceType
-     */
-    public String getServiceType() {
-        return this.serviceType;
-    }
-
-    /**
-     * @return supportEngine
-     */
-    public Integer getSupportEngine() {
-        return this.supportEngine;
     }
 
     /**
@@ -178,39 +153,44 @@ public class GetLindormInstanceListRequest extends Request {
         return this.tag;
     }
 
-    public static final class Builder extends Request.Builder<GetLindormInstanceListRequest, Builder> {
+    public static final class Builder extends Request.Builder<ListTagResourcesRequest, Builder> {
+        private String nextToken; 
         private String ownerAccount; 
         private Long ownerId; 
-        private Integer pageNumber; 
-        private Integer pageSize; 
-        private String queryStr; 
         private String regionId; 
+        private java.util.List < String > resourceId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String resourceType; 
         private String securityToken; 
-        private String serviceType; 
-        private Integer supportEngine; 
         private java.util.List < Tag> tag; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetLindormInstanceListRequest request) {
+        private Builder(ListTagResourcesRequest request) {
             super(request);
+            this.nextToken = request.nextToken;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
-            this.pageNumber = request.pageNumber;
-            this.pageSize = request.pageSize;
-            this.queryStr = request.queryStr;
             this.regionId = request.regionId;
+            this.resourceId = request.resourceId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.resourceType = request.resourceType;
             this.securityToken = request.securityToken;
-            this.serviceType = request.serviceType;
-            this.supportEngine = request.supportEngine;
             this.tag = request.tag;
         } 
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
+            return this;
+        }
 
         /**
          * OwnerAccount.
@@ -231,38 +211,20 @@ public class GetLindormInstanceListRequest extends Request {
         }
 
         /**
-         * PageNumber.
-         */
-        public Builder pageNumber(Integer pageNumber) {
-            this.putQueryParameter("PageNumber", pageNumber);
-            this.pageNumber = pageNumber;
-            return this;
-        }
-
-        /**
-         * PageSize.
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.putQueryParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * QueryStr.
-         */
-        public Builder queryStr(String queryStr) {
-            this.putQueryParameter("QueryStr", queryStr);
-            this.queryStr = queryStr;
-            return this;
-        }
-
-        /**
          * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceId.
+         */
+        public Builder resourceId(java.util.List < String > resourceId) {
+            this.putQueryParameter("ResourceId", resourceId);
+            this.resourceId = resourceId;
             return this;
         }
 
@@ -285,29 +247,20 @@ public class GetLindormInstanceListRequest extends Request {
         }
 
         /**
+         * ResourceType.
+         */
+        public Builder resourceType(String resourceType) {
+            this.putQueryParameter("ResourceType", resourceType);
+            this.resourceType = resourceType;
+            return this;
+        }
+
+        /**
          * SecurityToken.
          */
         public Builder securityToken(String securityToken) {
             this.putQueryParameter("SecurityToken", securityToken);
             this.securityToken = securityToken;
-            return this;
-        }
-
-        /**
-         * ServiceType.
-         */
-        public Builder serviceType(String serviceType) {
-            this.putQueryParameter("ServiceType", serviceType);
-            this.serviceType = serviceType;
-            return this;
-        }
-
-        /**
-         * SupportEngine.
-         */
-        public Builder supportEngine(Integer supportEngine) {
-            this.putQueryParameter("SupportEngine", supportEngine);
-            this.supportEngine = supportEngine;
             return this;
         }
 
@@ -321,8 +274,8 @@ public class GetLindormInstanceListRequest extends Request {
         }
 
         @Override
-        public GetLindormInstanceListRequest build() {
-            return new GetLindormInstanceListRequest(this);
+        public ListTagResourcesRequest build() {
+            return new ListTagResourcesRequest(this);
         } 
 
     } 
