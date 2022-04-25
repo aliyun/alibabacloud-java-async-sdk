@@ -75,11 +75,11 @@ public class GetStackGroupRequest extends Request {
             super();
         } 
 
-        private Builder(GetStackGroupRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.stackGroupId = response.stackGroupId;
-            this.stackGroupName = response.stackGroupName;
+        private Builder(GetStackGroupRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.stackGroupId = request.stackGroupId;
+            this.stackGroupName = request.stackGroupName;
         } 
 
         /**

@@ -48,9 +48,9 @@ public class ListResourceTypesRequest extends Request {
             super();
         } 
 
-        private Builder(ListResourceTypesRequest response) {
-            super(response);
-            this.entityType = response.entityType;
+        private Builder(ListResourceTypesRequest request) {
+            super(request);
+            this.entityType = request.entityType;
         } 
 
         /**

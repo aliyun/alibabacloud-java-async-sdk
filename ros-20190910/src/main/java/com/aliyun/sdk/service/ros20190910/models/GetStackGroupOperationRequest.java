@@ -63,10 +63,10 @@ public class GetStackGroupOperationRequest extends Request {
             super();
         } 
 
-        private Builder(GetStackGroupOperationRequest response) {
-            super(response);
-            this.operationId = response.operationId;
-            this.regionId = response.regionId;
+        private Builder(GetStackGroupOperationRequest request) {
+            super(request);
+            this.operationId = request.operationId;
+            this.regionId = request.regionId;
         } 
 
         /**

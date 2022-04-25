@@ -63,10 +63,10 @@ public class StopStackGroupOperationRequest extends Request {
             super();
         } 
 
-        private Builder(StopStackGroupOperationRequest response) {
-            super(response);
-            this.operationId = response.operationId;
-            this.regionId = response.regionId;
+        private Builder(StopStackGroupOperationRequest request) {
+            super(request);
+            this.operationId = request.operationId;
+            this.regionId = request.regionId;
         } 
 
         /**

@@ -141,16 +141,16 @@ public class ListChangeSetsRequest extends Request {
             super();
         } 
 
-        private Builder(ListChangeSetsRequest response) {
-            super(response);
-            this.changeSetId = response.changeSetId;
-            this.changeSetName = response.changeSetName;
-            this.executionStatus = response.executionStatus;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.stackId = response.stackId;
-            this.status = response.status;
+        private Builder(ListChangeSetsRequest request) {
+            super(request);
+            this.changeSetId = request.changeSetId;
+            this.changeSetName = request.changeSetName;
+            this.executionStatus = request.executionStatus;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.stackId = request.stackId;
+            this.status = request.status;
         } 
 
         /**

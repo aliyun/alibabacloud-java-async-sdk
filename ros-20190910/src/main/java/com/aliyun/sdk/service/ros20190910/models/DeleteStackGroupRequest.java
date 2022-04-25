@@ -63,10 +63,10 @@ public class DeleteStackGroupRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteStackGroupRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.stackGroupName = response.stackGroupName;
+        private Builder(DeleteStackGroupRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.stackGroupName = request.stackGroupName;
         } 
 
         /**

@@ -42,6 +42,10 @@ public class UpdateStackRequest extends Request {
     private String replacementOption;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("StackId")
     @Validation(required = true)
     private String stackId;
@@ -99,6 +103,7 @@ public class UpdateStackRequest extends Request {
         this.ramRoleName = builder.ramRoleName;
         this.regionId = builder.regionId;
         this.replacementOption = builder.replacementOption;
+        this.resourceGroupId = builder.resourceGroupId;
         this.stackId = builder.stackId;
         this.stackPolicyBody = builder.stackPolicyBody;
         this.stackPolicyDuringUpdateBody = builder.stackPolicyDuringUpdateBody;
@@ -173,6 +178,13 @@ public class UpdateStackRequest extends Request {
      */
     public String getReplacementOption() {
         return this.replacementOption;
+    }
+
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     /**
@@ -267,6 +279,7 @@ public class UpdateStackRequest extends Request {
         private String ramRoleName; 
         private String regionId; 
         private String replacementOption; 
+        private String resourceGroupId; 
         private String stackId; 
         private String stackPolicyBody; 
         private String stackPolicyDuringUpdateBody; 
@@ -284,27 +297,28 @@ public class UpdateStackRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateStackRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.disableRollback = response.disableRollback;
-            this.parallelism = response.parallelism;
-            this.parameters = response.parameters;
-            this.ramRoleName = response.ramRoleName;
-            this.regionId = response.regionId;
-            this.replacementOption = response.replacementOption;
-            this.stackId = response.stackId;
-            this.stackPolicyBody = response.stackPolicyBody;
-            this.stackPolicyDuringUpdateBody = response.stackPolicyDuringUpdateBody;
-            this.stackPolicyDuringUpdateURL = response.stackPolicyDuringUpdateURL;
-            this.stackPolicyURL = response.stackPolicyURL;
-            this.tags = response.tags;
-            this.templateBody = response.templateBody;
-            this.templateId = response.templateId;
-            this.templateURL = response.templateURL;
-            this.templateVersion = response.templateVersion;
-            this.timeoutInMinutes = response.timeoutInMinutes;
-            this.usePreviousParameters = response.usePreviousParameters;
+        private Builder(UpdateStackRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.disableRollback = request.disableRollback;
+            this.parallelism = request.parallelism;
+            this.parameters = request.parameters;
+            this.ramRoleName = request.ramRoleName;
+            this.regionId = request.regionId;
+            this.replacementOption = request.replacementOption;
+            this.resourceGroupId = request.resourceGroupId;
+            this.stackId = request.stackId;
+            this.stackPolicyBody = request.stackPolicyBody;
+            this.stackPolicyDuringUpdateBody = request.stackPolicyDuringUpdateBody;
+            this.stackPolicyDuringUpdateURL = request.stackPolicyDuringUpdateURL;
+            this.stackPolicyURL = request.stackPolicyURL;
+            this.tags = request.tags;
+            this.templateBody = request.templateBody;
+            this.templateId = request.templateId;
+            this.templateURL = request.templateURL;
+            this.templateVersion = request.templateVersion;
+            this.timeoutInMinutes = request.timeoutInMinutes;
+            this.usePreviousParameters = request.usePreviousParameters;
         } 
 
         /**
@@ -367,6 +381,15 @@ public class UpdateStackRequest extends Request {
         public Builder replacementOption(String replacementOption) {
             this.putQueryParameter("ReplacementOption", replacementOption);
             this.replacementOption = replacementOption;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

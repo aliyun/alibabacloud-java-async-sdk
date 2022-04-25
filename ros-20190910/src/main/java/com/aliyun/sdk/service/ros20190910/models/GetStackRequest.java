@@ -102,13 +102,13 @@ public class GetStackRequest extends Request {
             super();
         } 
 
-        private Builder(GetStackRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.outputOption = response.outputOption;
-            this.regionId = response.regionId;
-            this.showResourceProgress = response.showResourceProgress;
-            this.stackId = response.stackId;
+        private Builder(GetStackRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.outputOption = request.outputOption;
+            this.regionId = request.regionId;
+            this.showResourceProgress = request.showResourceProgress;
+            this.stackId = request.stackId;
         } 
 
         /**

@@ -156,24 +156,25 @@ public class DeleteStackInstancesRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteStackInstancesRequest response) {
-            super(response);
-            this.accountIds = response.accountIds;
-            this.clientToken = response.clientToken;
-            this.deploymentTargets = response.deploymentTargets;
-            this.operationDescription = response.operationDescription;
-            this.operationPreferences = response.operationPreferences;
-            this.regionId = response.regionId;
-            this.regionIds = response.regionIds;
-            this.retainStacks = response.retainStacks;
-            this.stackGroupName = response.stackGroupName;
+        private Builder(DeleteStackInstancesRequest request) {
+            super(request);
+            this.accountIds = request.accountIds;
+            this.clientToken = request.clientToken;
+            this.deploymentTargets = request.deploymentTargets;
+            this.operationDescription = request.operationDescription;
+            this.operationPreferences = request.operationPreferences;
+            this.regionId = request.regionId;
+            this.regionIds = request.regionIds;
+            this.retainStacks = request.retainStacks;
+            this.stackGroupName = request.stackGroupName;
         } 
 
         /**
          * AccountIds.
          */
         public Builder accountIds(java.util.List < String > accountIds) {
-            this.putQueryParameter("AccountIds", accountIds);
+            String accountIdsShrink = shrink(accountIds, "AccountIds", "json");
+            this.putQueryParameter("AccountIds", accountIdsShrink);
             this.accountIds = accountIds;
             return this;
         }
@@ -191,7 +192,8 @@ public class DeleteStackInstancesRequest extends Request {
          * DeploymentTargets.
          */
         public Builder deploymentTargets(DeploymentTargets deploymentTargets) {
-            this.putQueryParameter("DeploymentTargets", deploymentTargets);
+            String deploymentTargetsShrink = shrink(deploymentTargets, "DeploymentTargets", "json");
+            this.putQueryParameter("DeploymentTargets", deploymentTargetsShrink);
             this.deploymentTargets = deploymentTargets;
             return this;
         }
@@ -209,7 +211,8 @@ public class DeleteStackInstancesRequest extends Request {
          * OperationPreferences.
          */
         public Builder operationPreferences(java.util.Map < String, ? > operationPreferences) {
-            this.putQueryParameter("OperationPreferences", operationPreferences);
+            String operationPreferencesShrink = shrink(operationPreferences, "OperationPreferences", "json");
+            this.putQueryParameter("OperationPreferences", operationPreferencesShrink);
             this.operationPreferences = operationPreferences;
             return this;
         }
@@ -227,7 +230,8 @@ public class DeleteStackInstancesRequest extends Request {
          * RegionIds.
          */
         public Builder regionIds(java.util.List < String > regionIds) {
-            this.putQueryParameter("RegionIds", regionIds);
+            String regionIdsShrink = shrink(regionIds, "RegionIds", "json");
+            this.putQueryParameter("RegionIds", regionIdsShrink);
             this.regionIds = regionIds;
             return this;
         }

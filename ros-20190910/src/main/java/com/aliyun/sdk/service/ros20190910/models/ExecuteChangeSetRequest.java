@@ -76,11 +76,11 @@ public class ExecuteChangeSetRequest extends Request {
             super();
         } 
 
-        private Builder(ExecuteChangeSetRequest response) {
-            super(response);
-            this.changeSetId = response.changeSetId;
-            this.clientToken = response.clientToken;
-            this.regionId = response.regionId;
+        private Builder(ExecuteChangeSetRequest request) {
+            super(request);
+            this.changeSetId = request.changeSetId;
+            this.clientToken = request.clientToken;
+            this.regionId = request.regionId;
         } 
 
         /**

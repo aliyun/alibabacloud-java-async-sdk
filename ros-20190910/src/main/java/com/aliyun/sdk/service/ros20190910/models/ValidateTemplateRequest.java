@@ -100,13 +100,13 @@ public class ValidateTemplateRequest extends Request {
             super();
         } 
 
-        private Builder(ValidateTemplateRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.regionId = response.regionId;
-            this.templateBody = response.templateBody;
-            this.templateURL = response.templateURL;
-            this.validationOption = response.validationOption;
+        private Builder(ValidateTemplateRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.regionId = request.regionId;
+            this.templateBody = request.templateBody;
+            this.templateURL = request.templateURL;
+            this.validationOption = request.validationOption;
         } 
 
         /**

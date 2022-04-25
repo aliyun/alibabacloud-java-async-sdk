@@ -193,20 +193,20 @@ public class ContinueCreateStackRequest extends Request {
             super();
         } 
 
-        private Builder(ContinueCreateStackRequest response) {
-            super(response);
-            this.dryRun = response.dryRun;
-            this.mode = response.mode;
-            this.parallelism = response.parallelism;
-            this.parameters = response.parameters;
-            this.ramRoleName = response.ramRoleName;
-            this.recreatingResources = response.recreatingResources;
-            this.regionId = response.regionId;
-            this.stackId = response.stackId;
-            this.templateBody = response.templateBody;
-            this.templateId = response.templateId;
-            this.templateURL = response.templateURL;
-            this.templateVersion = response.templateVersion;
+        private Builder(ContinueCreateStackRequest request) {
+            super(request);
+            this.dryRun = request.dryRun;
+            this.mode = request.mode;
+            this.parallelism = request.parallelism;
+            this.parameters = request.parameters;
+            this.ramRoleName = request.ramRoleName;
+            this.recreatingResources = request.recreatingResources;
+            this.regionId = request.regionId;
+            this.stackId = request.stackId;
+            this.templateBody = request.templateBody;
+            this.templateId = request.templateId;
+            this.templateURL = request.templateURL;
+            this.templateVersion = request.templateVersion;
         } 
 
         /**

@@ -91,12 +91,12 @@ public class GetStackInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(GetStackInstanceRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.stackGroupName = response.stackGroupName;
-            this.stackInstanceAccountId = response.stackInstanceAccountId;
-            this.stackInstanceRegionId = response.stackInstanceRegionId;
+        private Builder(GetStackInstanceRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.stackGroupName = request.stackGroupName;
+            this.stackInstanceAccountId = request.stackInstanceAccountId;
+            this.stackInstanceRegionId = request.stackInstanceRegionId;
         } 
 
         /**

@@ -89,12 +89,12 @@ public class SetStackPolicyRequest extends Request {
             super();
         } 
 
-        private Builder(SetStackPolicyRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.stackId = response.stackId;
-            this.stackPolicyBody = response.stackPolicyBody;
-            this.stackPolicyURL = response.stackPolicyURL;
+        private Builder(SetStackPolicyRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.stackId = request.stackId;
+            this.stackPolicyBody = request.stackPolicyBody;
+            this.stackPolicyURL = request.stackPolicyURL;
         } 
 
         /**

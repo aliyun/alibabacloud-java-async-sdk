@@ -102,13 +102,13 @@ public class DeleteStackRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteStackRequest response) {
-            super(response);
-            this.ramRoleName = response.ramRoleName;
-            this.regionId = response.regionId;
-            this.retainAllResources = response.retainAllResources;
-            this.retainResources = response.retainResources;
-            this.stackId = response.stackId;
+        private Builder(DeleteStackRequest request) {
+            super(request);
+            this.ramRoleName = request.ramRoleName;
+            this.regionId = request.regionId;
+            this.retainAllResources = request.retainAllResources;
+            this.retainResources = request.retainResources;
+            this.stackId = request.stackId;
         } 
 
         /**

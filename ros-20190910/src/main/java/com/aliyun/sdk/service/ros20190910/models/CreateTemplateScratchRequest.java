@@ -167,18 +167,18 @@ public class CreateTemplateScratchRequest extends Request {
             super();
         } 
 
-        private Builder(CreateTemplateScratchRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.description = response.description;
-            this.executionMode = response.executionMode;
-            this.logicalIdStrategy = response.logicalIdStrategy;
-            this.preferenceParameters = response.preferenceParameters;
-            this.regionId = response.regionId;
-            this.sourceResourceGroup = response.sourceResourceGroup;
-            this.sourceResources = response.sourceResources;
-            this.sourceTag = response.sourceTag;
-            this.templateScratchType = response.templateScratchType;
+        private Builder(CreateTemplateScratchRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.description = request.description;
+            this.executionMode = request.executionMode;
+            this.logicalIdStrategy = request.logicalIdStrategy;
+            this.preferenceParameters = request.preferenceParameters;
+            this.regionId = request.regionId;
+            this.sourceResourceGroup = request.sourceResourceGroup;
+            this.sourceResources = request.sourceResources;
+            this.sourceTag = request.sourceTag;
+            this.templateScratchType = request.templateScratchType;
         } 
 
         /**
@@ -221,7 +221,8 @@ public class CreateTemplateScratchRequest extends Request {
          * PreferenceParameters.
          */
         public Builder preferenceParameters(java.util.List < PreferenceParameters> preferenceParameters) {
-            this.putQueryParameter("PreferenceParameters", preferenceParameters);
+            String preferenceParametersShrink = shrink(preferenceParameters, "PreferenceParameters", "json");
+            this.putQueryParameter("PreferenceParameters", preferenceParametersShrink);
             this.preferenceParameters = preferenceParameters;
             return this;
         }
@@ -239,7 +240,8 @@ public class CreateTemplateScratchRequest extends Request {
          * SourceResourceGroup.
          */
         public Builder sourceResourceGroup(SourceResourceGroup sourceResourceGroup) {
-            this.putQueryParameter("SourceResourceGroup", sourceResourceGroup);
+            String sourceResourceGroupShrink = shrink(sourceResourceGroup, "SourceResourceGroup", "json");
+            this.putQueryParameter("SourceResourceGroup", sourceResourceGroupShrink);
             this.sourceResourceGroup = sourceResourceGroup;
             return this;
         }
@@ -248,7 +250,8 @@ public class CreateTemplateScratchRequest extends Request {
          * SourceResources.
          */
         public Builder sourceResources(java.util.List < SourceResources> sourceResources) {
-            this.putQueryParameter("SourceResources", sourceResources);
+            String sourceResourcesShrink = shrink(sourceResources, "SourceResources", "json");
+            this.putQueryParameter("SourceResources", sourceResourcesShrink);
             this.sourceResources = sourceResources;
             return this;
         }
@@ -257,7 +260,8 @@ public class CreateTemplateScratchRequest extends Request {
          * SourceTag.
          */
         public Builder sourceTag(SourceTag sourceTag) {
-            this.putQueryParameter("SourceTag", sourceTag);
+            String sourceTagShrink = shrink(sourceTag, "SourceTag", "json");
+            this.putQueryParameter("SourceTag", sourceTagShrink);
             this.sourceTag = sourceTag;
             return this;
         }

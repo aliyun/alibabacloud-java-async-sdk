@@ -15,11 +15,15 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("TemplateScratch")
+    private TemplateScratch templateScratch;
+
     @NameInMap("Terraform")
     private Terraform terraform;
 
     private GetFeatureDetailsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
+        this.templateScratch = builder.templateScratch;
         this.terraform = builder.terraform;
     }
 
@@ -39,6 +43,13 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
     }
 
     /**
+     * @return templateScratch
+     */
+    public TemplateScratch getTemplateScratch() {
+        return this.templateScratch;
+    }
+
+    /**
      * @return terraform
      */
     public Terraform getTerraform() {
@@ -47,6 +58,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
+        private TemplateScratch templateScratch; 
         private Terraform terraform; 
 
         /**
@@ -54,6 +66,14 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TemplateScratch.
+         */
+        public Builder templateScratch(TemplateScratch templateScratch) {
+            this.templateScratch = templateScratch;
             return this;
         }
 
@@ -72,6 +92,168 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
     } 
 
     public static class SupportedResourceTypes extends TeaModel {
+        @NameInMap("ResourceType")
+        private String resourceType;
+
+        @NameInMap("SourceResourceGroupSupported")
+        private Boolean sourceResourceGroupSupported;
+
+        @NameInMap("SourceResourcesSupported")
+        private Boolean sourceResourcesSupported;
+
+        @NameInMap("SourceSupported")
+        private Boolean sourceSupported;
+
+        @NameInMap("SourceTagSupported")
+        private Boolean sourceTagSupported;
+
+        private SupportedResourceTypes(Builder builder) {
+            this.resourceType = builder.resourceType;
+            this.sourceResourceGroupSupported = builder.sourceResourceGroupSupported;
+            this.sourceResourcesSupported = builder.sourceResourcesSupported;
+            this.sourceSupported = builder.sourceSupported;
+            this.sourceTagSupported = builder.sourceTagSupported;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SupportedResourceTypes create() {
+            return builder().build();
+        }
+
+        /**
+         * @return resourceType
+         */
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        /**
+         * @return sourceResourceGroupSupported
+         */
+        public Boolean getSourceResourceGroupSupported() {
+            return this.sourceResourceGroupSupported;
+        }
+
+        /**
+         * @return sourceResourcesSupported
+         */
+        public Boolean getSourceResourcesSupported() {
+            return this.sourceResourcesSupported;
+        }
+
+        /**
+         * @return sourceSupported
+         */
+        public Boolean getSourceSupported() {
+            return this.sourceSupported;
+        }
+
+        /**
+         * @return sourceTagSupported
+         */
+        public Boolean getSourceTagSupported() {
+            return this.sourceTagSupported;
+        }
+
+        public static final class Builder {
+            private String resourceType; 
+            private Boolean sourceResourceGroupSupported; 
+            private Boolean sourceResourcesSupported; 
+            private Boolean sourceSupported; 
+            private Boolean sourceTagSupported; 
+
+            /**
+             * ResourceType.
+             */
+            public Builder resourceType(String resourceType) {
+                this.resourceType = resourceType;
+                return this;
+            }
+
+            /**
+             * SourceResourceGroupSupported.
+             */
+            public Builder sourceResourceGroupSupported(Boolean sourceResourceGroupSupported) {
+                this.sourceResourceGroupSupported = sourceResourceGroupSupported;
+                return this;
+            }
+
+            /**
+             * SourceResourcesSupported.
+             */
+            public Builder sourceResourcesSupported(Boolean sourceResourcesSupported) {
+                this.sourceResourcesSupported = sourceResourcesSupported;
+                return this;
+            }
+
+            /**
+             * SourceSupported.
+             */
+            public Builder sourceSupported(Boolean sourceSupported) {
+                this.sourceSupported = sourceSupported;
+                return this;
+            }
+
+            /**
+             * SourceTagSupported.
+             */
+            public Builder sourceTagSupported(Boolean sourceTagSupported) {
+                this.sourceTagSupported = sourceTagSupported;
+                return this;
+            }
+
+            public SupportedResourceTypes build() {
+                return new SupportedResourceTypes(this);
+            } 
+
+        } 
+
+    }
+    public static class TemplateScratch extends TeaModel {
+        @NameInMap("SupportedResourceTypes")
+        private java.util.List < SupportedResourceTypes> supportedResourceTypes;
+
+        private TemplateScratch(Builder builder) {
+            this.supportedResourceTypes = builder.supportedResourceTypes;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TemplateScratch create() {
+            return builder().build();
+        }
+
+        /**
+         * @return supportedResourceTypes
+         */
+        public java.util.List < SupportedResourceTypes> getSupportedResourceTypes() {
+            return this.supportedResourceTypes;
+        }
+
+        public static final class Builder {
+            private java.util.List < SupportedResourceTypes> supportedResourceTypes; 
+
+            /**
+             * SupportedResourceTypes.
+             */
+            public Builder supportedResourceTypes(java.util.List < SupportedResourceTypes> supportedResourceTypes) {
+                this.supportedResourceTypes = supportedResourceTypes;
+                return this;
+            }
+
+            public TemplateScratch build() {
+                return new TemplateScratch(this);
+            } 
+
+        } 
+
+    }
+    public static class TerraformSupportedResourceTypes extends TeaModel {
         @NameInMap("CustomTag")
         private java.util.List < String > customTag;
 
@@ -84,7 +266,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         @NameInMap("SystemTag")
         private java.util.List < String > systemTag;
 
-        private SupportedResourceTypes(Builder builder) {
+        private TerraformSupportedResourceTypes(Builder builder) {
             this.customTag = builder.customTag;
             this.estimateCost = builder.estimateCost;
             this.resourceGroup = builder.resourceGroup;
@@ -95,7 +277,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static SupportedResourceTypes create() {
+        public static TerraformSupportedResourceTypes create() {
             return builder().build();
         }
 
@@ -165,8 +347,8 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
                 return this;
             }
 
-            public SupportedResourceTypes build() {
-                return new SupportedResourceTypes(this);
+            public TerraformSupportedResourceTypes build() {
+                return new TerraformSupportedResourceTypes(this);
             } 
 
         } 
@@ -336,7 +518,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
     }
     public static class Terraform extends TeaModel {
         @NameInMap("SupportedResourceTypes")
-        private SupportedResourceTypes supportedResourceTypes;
+        private TerraformSupportedResourceTypes supportedResourceTypes;
 
         @NameInMap("SupportedVersions")
         private java.util.List < SupportedVersions> supportedVersions;
@@ -357,7 +539,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         /**
          * @return supportedResourceTypes
          */
-        public SupportedResourceTypes getSupportedResourceTypes() {
+        public TerraformSupportedResourceTypes getSupportedResourceTypes() {
             return this.supportedResourceTypes;
         }
 
@@ -369,13 +551,13 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private SupportedResourceTypes supportedResourceTypes; 
+            private TerraformSupportedResourceTypes supportedResourceTypes; 
             private java.util.List < SupportedVersions> supportedVersions; 
 
             /**
              * SupportedResourceTypes.
              */
-            public Builder supportedResourceTypes(SupportedResourceTypes supportedResourceTypes) {
+            public Builder supportedResourceTypes(TerraformSupportedResourceTypes supportedResourceTypes) {
                 this.supportedResourceTypes = supportedResourceTypes;
                 return this;
             }

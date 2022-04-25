@@ -89,12 +89,12 @@ public class DetectStackDriftRequest extends Request {
             super();
         } 
 
-        private Builder(DetectStackDriftRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.logicalResourceId = response.logicalResourceId;
-            this.regionId = response.regionId;
-            this.stackId = response.stackId;
+        private Builder(DetectStackDriftRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.logicalResourceId = request.logicalResourceId;
+            this.regionId = request.regionId;
+            this.stackId = request.stackId;
         } 
 
         /**

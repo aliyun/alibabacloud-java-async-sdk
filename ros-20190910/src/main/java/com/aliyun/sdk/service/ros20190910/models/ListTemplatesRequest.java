@@ -113,14 +113,14 @@ public class ListTemplatesRequest extends Request {
             super();
         } 
 
-        private Builder(ListTemplatesRequest response) {
-            super(response);
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.resourceGroupId = response.resourceGroupId;
-            this.shareType = response.shareType;
-            this.tag = response.tag;
-            this.templateName = response.templateName;
+        private Builder(ListTemplatesRequest request) {
+            super(request);
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.resourceGroupId = request.resourceGroupId;
+            this.shareType = request.shareType;
+            this.tag = request.tag;
+            this.templateName = request.templateName;
         } 
 
         /**

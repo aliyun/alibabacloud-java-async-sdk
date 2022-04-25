@@ -63,10 +63,10 @@ public class GetFeatureDetailsRequest extends Request {
             super();
         } 
 
-        private Builder(GetFeatureDetailsRequest response) {
-            super(response);
-            this.feature = response.feature;
-            this.regionId = response.regionId;
+        private Builder(GetFeatureDetailsRequest request) {
+            super(request);
+            this.feature = request.feature;
+            this.regionId = request.regionId;
         } 
 
         /**

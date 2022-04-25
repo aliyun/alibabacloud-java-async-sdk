@@ -271,33 +271,34 @@ public class UpdateStackGroupRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateStackGroupRequest response) {
-            super(response);
-            this.accountIds = response.accountIds;
-            this.administrationRoleName = response.administrationRoleName;
-            this.autoDeployment = response.autoDeployment;
-            this.clientToken = response.clientToken;
-            this.deploymentTargets = response.deploymentTargets;
-            this.description = response.description;
-            this.executionRoleName = response.executionRoleName;
-            this.operationDescription = response.operationDescription;
-            this.operationPreferences = response.operationPreferences;
-            this.parameters = response.parameters;
-            this.permissionModel = response.permissionModel;
-            this.regionId = response.regionId;
-            this.regionIds = response.regionIds;
-            this.stackGroupName = response.stackGroupName;
-            this.templateBody = response.templateBody;
-            this.templateId = response.templateId;
-            this.templateURL = response.templateURL;
-            this.templateVersion = response.templateVersion;
+        private Builder(UpdateStackGroupRequest request) {
+            super(request);
+            this.accountIds = request.accountIds;
+            this.administrationRoleName = request.administrationRoleName;
+            this.autoDeployment = request.autoDeployment;
+            this.clientToken = request.clientToken;
+            this.deploymentTargets = request.deploymentTargets;
+            this.description = request.description;
+            this.executionRoleName = request.executionRoleName;
+            this.operationDescription = request.operationDescription;
+            this.operationPreferences = request.operationPreferences;
+            this.parameters = request.parameters;
+            this.permissionModel = request.permissionModel;
+            this.regionId = request.regionId;
+            this.regionIds = request.regionIds;
+            this.stackGroupName = request.stackGroupName;
+            this.templateBody = request.templateBody;
+            this.templateId = request.templateId;
+            this.templateURL = request.templateURL;
+            this.templateVersion = request.templateVersion;
         } 
 
         /**
          * AccountIds.
          */
         public Builder accountIds(java.util.List < String > accountIds) {
-            this.putQueryParameter("AccountIds", accountIds);
+            String accountIdsShrink = shrink(accountIds, "AccountIds", "json");
+            this.putQueryParameter("AccountIds", accountIdsShrink);
             this.accountIds = accountIds;
             return this;
         }
@@ -315,7 +316,8 @@ public class UpdateStackGroupRequest extends Request {
          * AutoDeployment.
          */
         public Builder autoDeployment(AutoDeployment autoDeployment) {
-            this.putQueryParameter("AutoDeployment", autoDeployment);
+            String autoDeploymentShrink = shrink(autoDeployment, "AutoDeployment", "json");
+            this.putQueryParameter("AutoDeployment", autoDeploymentShrink);
             this.autoDeployment = autoDeployment;
             return this;
         }
@@ -333,7 +335,8 @@ public class UpdateStackGroupRequest extends Request {
          * DeploymentTargets.
          */
         public Builder deploymentTargets(DeploymentTargets deploymentTargets) {
-            this.putQueryParameter("DeploymentTargets", deploymentTargets);
+            String deploymentTargetsShrink = shrink(deploymentTargets, "DeploymentTargets", "json");
+            this.putQueryParameter("DeploymentTargets", deploymentTargetsShrink);
             this.deploymentTargets = deploymentTargets;
             return this;
         }
@@ -369,7 +372,8 @@ public class UpdateStackGroupRequest extends Request {
          * OperationPreferences.
          */
         public Builder operationPreferences(java.util.Map < String, ? > operationPreferences) {
-            this.putQueryParameter("OperationPreferences", operationPreferences);
+            String operationPreferencesShrink = shrink(operationPreferences, "OperationPreferences", "json");
+            this.putQueryParameter("OperationPreferences", operationPreferencesShrink);
             this.operationPreferences = operationPreferences;
             return this;
         }
@@ -405,7 +409,8 @@ public class UpdateStackGroupRequest extends Request {
          * RegionIds.
          */
         public Builder regionIds(java.util.List < String > regionIds) {
-            this.putQueryParameter("RegionIds", regionIds);
+            String regionIdsShrink = shrink(regionIds, "RegionIds", "json");
+            this.putQueryParameter("RegionIds", regionIdsShrink);
             this.regionIds = regionIds;
             return this;
         }

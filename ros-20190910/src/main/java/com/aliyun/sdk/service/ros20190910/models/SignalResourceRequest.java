@@ -118,14 +118,14 @@ public class SignalResourceRequest extends Request {
             super();
         } 
 
-        private Builder(SignalResourceRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.logicalResourceId = response.logicalResourceId;
-            this.regionId = response.regionId;
-            this.stackId = response.stackId;
-            this.status = response.status;
-            this.uniqueId = response.uniqueId;
+        private Builder(SignalResourceRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.logicalResourceId = request.logicalResourceId;
+            this.regionId = request.regionId;
+            this.stackId = request.stackId;
+            this.status = request.status;
+            this.uniqueId = request.uniqueId;
         } 
 
         /**

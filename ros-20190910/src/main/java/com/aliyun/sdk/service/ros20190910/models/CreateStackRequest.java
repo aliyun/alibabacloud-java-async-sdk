@@ -310,29 +310,29 @@ public class CreateStackRequest extends Request {
             super();
         } 
 
-        private Builder(CreateStackRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.createOption = response.createOption;
-            this.deletionProtection = response.deletionProtection;
-            this.disableRollback = response.disableRollback;
-            this.notificationURLs = response.notificationURLs;
-            this.parallelism = response.parallelism;
-            this.parameters = response.parameters;
-            this.ramRoleName = response.ramRoleName;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.stackName = response.stackName;
-            this.stackPolicyBody = response.stackPolicyBody;
-            this.stackPolicyURL = response.stackPolicyURL;
-            this.tags = response.tags;
-            this.templateBody = response.templateBody;
-            this.templateId = response.templateId;
-            this.templateScratchId = response.templateScratchId;
-            this.templateScratchRegionId = response.templateScratchRegionId;
-            this.templateURL = response.templateURL;
-            this.templateVersion = response.templateVersion;
-            this.timeoutInMinutes = response.timeoutInMinutes;
+        private Builder(CreateStackRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.createOption = request.createOption;
+            this.deletionProtection = request.deletionProtection;
+            this.disableRollback = request.disableRollback;
+            this.notificationURLs = request.notificationURLs;
+            this.parallelism = request.parallelism;
+            this.parameters = request.parameters;
+            this.ramRoleName = request.ramRoleName;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.stackName = request.stackName;
+            this.stackPolicyBody = request.stackPolicyBody;
+            this.stackPolicyURL = request.stackPolicyURL;
+            this.tags = request.tags;
+            this.templateBody = request.templateBody;
+            this.templateId = request.templateId;
+            this.templateScratchId = request.templateScratchId;
+            this.templateScratchRegionId = request.templateScratchRegionId;
+            this.templateURL = request.templateURL;
+            this.templateVersion = request.templateVersion;
+            this.timeoutInMinutes = request.timeoutInMinutes;
         } 
 
         /**

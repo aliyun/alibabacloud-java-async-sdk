@@ -76,11 +76,11 @@ public class CancelUpdateStackRequest extends Request {
             super();
         } 
 
-        private Builder(CancelUpdateStackRequest response) {
-            super(response);
-            this.cancelType = response.cancelType;
-            this.regionId = response.regionId;
-            this.stackId = response.stackId;
+        private Builder(CancelUpdateStackRequest request) {
+            super(request);
+            this.cancelType = request.cancelType;
+            this.regionId = request.regionId;
+            this.stackId = request.stackId;
         } 
 
         /**

@@ -87,12 +87,12 @@ public class GenerateTemplatePolicyRequest extends Request {
             super();
         } 
 
-        private Builder(GenerateTemplatePolicyRequest response) {
-            super(response);
-            this.templateBody = response.templateBody;
-            this.templateId = response.templateId;
-            this.templateURL = response.templateURL;
-            this.templateVersion = response.templateVersion;
+        private Builder(GenerateTemplatePolicyRequest request) {
+            super(request);
+            this.templateBody = request.templateBody;
+            this.templateId = request.templateId;
+            this.templateURL = request.templateURL;
+            this.templateVersion = request.templateVersion;
         } 
 
         /**

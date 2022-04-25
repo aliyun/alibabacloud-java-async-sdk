@@ -101,13 +101,13 @@ public class UpdateTemplateRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateTemplateRequest response) {
-            super(response);
-            this.description = response.description;
-            this.templateBody = response.templateBody;
-            this.templateId = response.templateId;
-            this.templateName = response.templateName;
-            this.templateURL = response.templateURL;
+        private Builder(UpdateTemplateRequest request) {
+            super(request);
+            this.description = request.description;
+            this.templateBody = request.templateBody;
+            this.templateId = request.templateId;
+            this.templateName = request.templateName;
+            this.templateURL = request.templateURL;
         } 
 
         /**

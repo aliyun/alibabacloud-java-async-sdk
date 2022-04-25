@@ -179,19 +179,19 @@ public class ListStacksRequest extends Request {
             super();
         } 
 
-        private Builder(ListStacksRequest response) {
-            super(response);
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.parentStackId = response.parentStackId;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.showNestedStack = response.showNestedStack;
-            this.stackId = response.stackId;
-            this.stackIds = response.stackIds;
-            this.stackName = response.stackName;
-            this.status = response.status;
-            this.tag = response.tag;
+        private Builder(ListStacksRequest request) {
+            super(request);
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.parentStackId = request.parentStackId;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.showNestedStack = request.showNestedStack;
+            this.stackId = request.stackId;
+            this.stackIds = request.stackIds;
+            this.stackName = request.stackName;
+            this.status = request.status;
+            this.tag = request.tag;
         } 
 
         /**

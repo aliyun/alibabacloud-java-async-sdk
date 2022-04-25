@@ -76,11 +76,11 @@ public class ListTemplateVersionsRequest extends Request {
             super();
         } 
 
-        private Builder(ListTemplateVersionsRequest response) {
-            super(response);
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.templateId = response.templateId;
+        private Builder(ListTemplateVersionsRequest request) {
+            super(request);
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.templateId = request.templateId;
         } 
 
         /**

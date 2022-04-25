@@ -63,10 +63,10 @@ public class ListStackResourcesRequest extends Request {
             super();
         } 
 
-        private Builder(ListStackResourcesRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.stackId = response.stackId;
+        private Builder(ListStackResourcesRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.stackId = request.stackId;
         } 
 
         /**

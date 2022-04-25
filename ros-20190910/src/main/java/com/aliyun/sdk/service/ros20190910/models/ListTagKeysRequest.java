@@ -76,11 +76,11 @@ public class ListTagKeysRequest extends Request {
             super();
         } 
 
-        private Builder(ListTagKeysRequest response) {
-            super(response);
-            this.nextToken = response.nextToken;
-            this.regionId = response.regionId;
-            this.resourceType = response.resourceType;
+        private Builder(ListTagKeysRequest request) {
+            super(request);
+            this.nextToken = request.nextToken;
+            this.regionId = request.regionId;
+            this.resourceType = request.resourceType;
         } 
 
         /**

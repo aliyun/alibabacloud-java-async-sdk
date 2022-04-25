@@ -128,15 +128,15 @@ public class ListStackOperationRisksRequest extends Request {
             super();
         } 
 
-        private Builder(ListStackOperationRisksRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.operationType = response.operationType;
-            this.ramRoleName = response.ramRoleName;
-            this.regionId = response.regionId;
-            this.retainAllResources = response.retainAllResources;
-            this.retainResources = response.retainResources;
-            this.stackId = response.stackId;
+        private Builder(ListStackOperationRisksRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.operationType = request.operationType;
+            this.ramRoleName = request.ramRoleName;
+            this.regionId = request.regionId;
+            this.retainAllResources = request.retainAllResources;
+            this.retainResources = request.retainResources;
+            this.stackId = request.stackId;
         } 
 
         /**

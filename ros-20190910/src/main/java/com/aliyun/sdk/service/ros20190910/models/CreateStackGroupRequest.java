@@ -219,22 +219,22 @@ public class CreateStackGroupRequest extends Request {
             super();
         } 
 
-        private Builder(CreateStackGroupRequest response) {
-            super(response);
-            this.administrationRoleName = response.administrationRoleName;
-            this.autoDeployment = response.autoDeployment;
-            this.clientToken = response.clientToken;
-            this.description = response.description;
-            this.executionRoleName = response.executionRoleName;
-            this.parameters = response.parameters;
-            this.permissionModel = response.permissionModel;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.stackGroupName = response.stackGroupName;
-            this.templateBody = response.templateBody;
-            this.templateId = response.templateId;
-            this.templateURL = response.templateURL;
-            this.templateVersion = response.templateVersion;
+        private Builder(CreateStackGroupRequest request) {
+            super(request);
+            this.administrationRoleName = request.administrationRoleName;
+            this.autoDeployment = request.autoDeployment;
+            this.clientToken = request.clientToken;
+            this.description = request.description;
+            this.executionRoleName = request.executionRoleName;
+            this.parameters = request.parameters;
+            this.permissionModel = request.permissionModel;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.stackGroupName = request.stackGroupName;
+            this.templateBody = request.templateBody;
+            this.templateId = request.templateId;
+            this.templateURL = request.templateURL;
+            this.templateVersion = request.templateVersion;
         } 
 
         /**
@@ -250,7 +250,8 @@ public class CreateStackGroupRequest extends Request {
          * AutoDeployment.
          */
         public Builder autoDeployment(AutoDeployment autoDeployment) {
-            this.putQueryParameter("AutoDeployment", autoDeployment);
+            String autoDeploymentShrink = shrink(autoDeployment, "AutoDeployment", "json");
+            this.putQueryParameter("AutoDeployment", autoDeploymentShrink);
             this.autoDeployment = autoDeployment;
             return this;
         }

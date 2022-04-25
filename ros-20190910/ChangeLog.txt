@@ -1,3 +1,6 @@
+2022-04-25 Version: 1.2.3
+- The Feature parameter of GetFeatureDetails is supported to be specified as TemplateScratch, which indicates the supported resource types for the template scratch.
+
 2022-03-01 Version: 1.2.2
 - Generated java-async 2019-09-10 for ROS.
 

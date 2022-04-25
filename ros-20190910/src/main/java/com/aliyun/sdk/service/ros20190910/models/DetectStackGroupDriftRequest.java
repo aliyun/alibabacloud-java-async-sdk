@@ -89,12 +89,12 @@ public class DetectStackGroupDriftRequest extends Request {
             super();
         } 
 
-        private Builder(DetectStackGroupDriftRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.operationPreferences = response.operationPreferences;
-            this.regionId = response.regionId;
-            this.stackGroupName = response.stackGroupName;
+        private Builder(DetectStackGroupDriftRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.operationPreferences = request.operationPreferences;
+            this.regionId = request.regionId;
+            this.stackGroupName = request.stackGroupName;
         } 
 
         /**
@@ -110,7 +110,8 @@ public class DetectStackGroupDriftRequest extends Request {
          * OperationPreferences.
          */
         public Builder operationPreferences(java.util.Map < String, ? > operationPreferences) {
-            this.putQueryParameter("OperationPreferences", operationPreferences);
+            String operationPreferencesShrink = shrink(operationPreferences, "OperationPreferences", "json");
+            this.putQueryParameter("OperationPreferences", operationPreferencesShrink);
             this.operationPreferences = operationPreferences;
             return this;
         }

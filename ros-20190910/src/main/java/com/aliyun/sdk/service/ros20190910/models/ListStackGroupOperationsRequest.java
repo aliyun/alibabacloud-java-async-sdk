@@ -89,12 +89,12 @@ public class ListStackGroupOperationsRequest extends Request {
             super();
         } 
 
-        private Builder(ListStackGroupOperationsRequest response) {
-            super(response);
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.stackGroupName = response.stackGroupName;
+        private Builder(ListStackGroupOperationsRequest request) {
+            super(request);
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.stackGroupName = request.stackGroupName;
         } 
 
         /**

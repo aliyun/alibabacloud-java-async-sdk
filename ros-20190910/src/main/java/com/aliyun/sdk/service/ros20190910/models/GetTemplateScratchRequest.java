@@ -75,11 +75,11 @@ public class GetTemplateScratchRequest extends Request {
             super();
         } 
 
-        private Builder(GetTemplateScratchRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.showDataOption = response.showDataOption;
-            this.templateScratchId = response.templateScratchId;
+        private Builder(GetTemplateScratchRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.showDataOption = request.showDataOption;
+            this.templateScratchId = request.templateScratchId;
         } 
 
         /**

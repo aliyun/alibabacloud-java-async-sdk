@@ -77,11 +77,11 @@ public class SetDeletionProtectionRequest extends Request {
             super();
         } 
 
-        private Builder(SetDeletionProtectionRequest response) {
-            super(response);
-            this.deletionProtection = response.deletionProtection;
-            this.regionId = response.regionId;
-            this.stackId = response.stackId;
+        private Builder(SetDeletionProtectionRequest request) {
+            super(request);
+            this.deletionProtection = request.deletionProtection;
+            this.regionId = request.regionId;
+            this.stackId = request.stackId;
         } 
 
         /**

@@ -63,10 +63,10 @@ public class DeleteTemplateScratchRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteTemplateScratchRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.templateScratchId = response.templateScratchId;
+        private Builder(DeleteTemplateScratchRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.templateScratchId = request.templateScratchId;
         } 
 
         /**

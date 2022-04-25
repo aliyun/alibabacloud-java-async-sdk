@@ -90,12 +90,12 @@ public class ListTagValuesRequest extends Request {
             super();
         } 
 
-        private Builder(ListTagValuesRequest response) {
-            super(response);
-            this.key = response.key;
-            this.nextToken = response.nextToken;
-            this.regionId = response.regionId;
-            this.resourceType = response.resourceType;
+        private Builder(ListTagValuesRequest request) {
+            super(request);
+            this.key = request.key;
+            this.nextToken = request.nextToken;
+            this.regionId = request.regionId;
+            this.resourceType = request.resourceType;
         } 
 
         /**

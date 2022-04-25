@@ -115,14 +115,14 @@ public class ListStackInstancesRequest extends Request {
             super();
         } 
 
-        private Builder(ListStackInstancesRequest response) {
-            super(response);
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.stackGroupName = response.stackGroupName;
-            this.stackInstanceAccountId = response.stackInstanceAccountId;
-            this.stackInstanceRegionId = response.stackInstanceRegionId;
+        private Builder(ListStackInstancesRequest request) {
+            super(request);
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.stackGroupName = request.stackGroupName;
+            this.stackInstanceAccountId = request.stackInstanceAccountId;
+            this.stackInstanceRegionId = request.stackInstanceRegionId;
         } 
 
         /**

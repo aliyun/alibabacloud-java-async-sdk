@@ -115,14 +115,14 @@ public class UpdateStackTemplateByResourcesRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateStackTemplateByResourcesRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.logicalResourceId = response.logicalResourceId;
-            this.regionId = response.regionId;
-            this.stackId = response.stackId;
-            this.templateFormat = response.templateFormat;
+        private Builder(UpdateStackTemplateByResourcesRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.logicalResourceId = request.logicalResourceId;
+            this.regionId = request.regionId;
+            this.stackId = request.stackId;
+            this.templateFormat = request.templateFormat;
         } 
 
         /**

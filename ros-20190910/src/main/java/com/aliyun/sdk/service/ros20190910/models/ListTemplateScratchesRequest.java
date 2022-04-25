@@ -114,14 +114,14 @@ public class ListTemplateScratchesRequest extends Request {
             super();
         } 
 
-        private Builder(ListTemplateScratchesRequest response) {
-            super(response);
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.status = response.status;
-            this.templateScratchId = response.templateScratchId;
-            this.templateScratchType = response.templateScratchType;
+        private Builder(ListTemplateScratchesRequest request) {
+            super(request);
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.status = request.status;
+            this.templateScratchId = request.templateScratchId;
+            this.templateScratchType = request.templateScratchType;
         } 
 
         /**

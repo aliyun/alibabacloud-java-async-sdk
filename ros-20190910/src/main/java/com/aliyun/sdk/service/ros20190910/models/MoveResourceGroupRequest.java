@@ -91,12 +91,12 @@ public class MoveResourceGroupRequest extends Request {
             super();
         } 
 
-        private Builder(MoveResourceGroupRequest response) {
-            super(response);
-            this.newResourceGroupId = response.newResourceGroupId;
-            this.regionId = response.regionId;
-            this.resourceId = response.resourceId;
-            this.resourceType = response.resourceType;
+        private Builder(MoveResourceGroupRequest request) {
+            super(request);
+            this.newResourceGroupId = request.newResourceGroupId;
+            this.regionId = request.regionId;
+            this.resourceId = request.resourceId;
+            this.resourceType = request.resourceType;
         } 
 
         /**

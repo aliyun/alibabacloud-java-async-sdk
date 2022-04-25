@@ -63,10 +63,10 @@ public class GetStackDriftDetectionStatusRequest extends Request {
             super();
         } 
 
-        private Builder(GetStackDriftDetectionStatusRequest response) {
-            super(response);
-            this.driftDetectionId = response.driftDetectionId;
-            this.regionId = response.regionId;
+        private Builder(GetStackDriftDetectionStatusRequest request) {
+            super(request);
+            this.driftDetectionId = request.driftDetectionId;
+            this.regionId = request.regionId;
         } 
 
         /**

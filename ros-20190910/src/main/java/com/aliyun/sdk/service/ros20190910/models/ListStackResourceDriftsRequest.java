@@ -102,13 +102,13 @@ public class ListStackResourceDriftsRequest extends Request {
             super();
         } 
 
-        private Builder(ListStackResourceDriftsRequest response) {
-            super(response);
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.regionId = response.regionId;
-            this.resourceDriftStatus = response.resourceDriftStatus;
-            this.stackId = response.stackId;
+        private Builder(ListStackResourceDriftsRequest request) {
+            super(request);
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.regionId = request.regionId;
+            this.resourceDriftStatus = request.resourceDriftStatus;
+            this.stackId = request.stackId;
         } 
 
         /**

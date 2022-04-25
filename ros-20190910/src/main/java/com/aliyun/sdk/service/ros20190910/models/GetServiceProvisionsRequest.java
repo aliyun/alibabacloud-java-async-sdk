@@ -127,15 +127,15 @@ public class GetServiceProvisionsRequest extends Request {
             super();
         } 
 
-        private Builder(GetServiceProvisionsRequest response) {
-            super(response);
-            this.parameters = response.parameters;
-            this.regionId = response.regionId;
-            this.services = response.services;
-            this.templateBody = response.templateBody;
-            this.templateId = response.templateId;
-            this.templateURL = response.templateURL;
-            this.templateVersion = response.templateVersion;
+        private Builder(GetServiceProvisionsRequest request) {
+            super(request);
+            this.parameters = request.parameters;
+            this.regionId = request.regionId;
+            this.services = request.services;
+            this.templateBody = request.templateBody;
+            this.templateId = request.templateId;
+            this.templateURL = request.templateURL;
+            this.templateVersion = request.templateVersion;
         } 
 
         /**

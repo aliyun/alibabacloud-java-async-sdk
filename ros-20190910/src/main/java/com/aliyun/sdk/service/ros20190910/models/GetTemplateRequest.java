@@ -139,16 +139,16 @@ public class GetTemplateRequest extends Request {
             super();
         } 
 
-        private Builder(GetTemplateRequest response) {
-            super(response);
-            this.changeSetId = response.changeSetId;
-            this.includePermission = response.includePermission;
-            this.regionId = response.regionId;
-            this.stackGroupName = response.stackGroupName;
-            this.stackId = response.stackId;
-            this.templateId = response.templateId;
-            this.templateStage = response.templateStage;
-            this.templateVersion = response.templateVersion;
+        private Builder(GetTemplateRequest request) {
+            super(request);
+            this.changeSetId = request.changeSetId;
+            this.includePermission = request.includePermission;
+            this.regionId = request.regionId;
+            this.stackGroupName = request.stackGroupName;
+            this.stackId = request.stackId;
+            this.templateId = request.templateId;
+            this.templateStage = request.templateStage;
+            this.templateVersion = request.templateVersion;
         } 
 
         /**

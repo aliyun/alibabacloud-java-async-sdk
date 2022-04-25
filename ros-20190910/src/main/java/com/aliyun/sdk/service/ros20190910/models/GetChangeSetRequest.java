@@ -76,11 +76,11 @@ public class GetChangeSetRequest extends Request {
             super();
         } 
 
-        private Builder(GetChangeSetRequest response) {
-            super(response);
-            this.changeSetId = response.changeSetId;
-            this.regionId = response.regionId;
-            this.showTemplate = response.showTemplate;
+        private Builder(GetChangeSetRequest request) {
+            super(request);
+            this.changeSetId = request.changeSetId;
+            this.regionId = request.regionId;
+            this.showTemplate = request.showTemplate;
         } 
 
         /**

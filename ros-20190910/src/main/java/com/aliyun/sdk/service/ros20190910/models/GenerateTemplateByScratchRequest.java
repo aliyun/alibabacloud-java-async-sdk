@@ -76,11 +76,11 @@ public class GenerateTemplateByScratchRequest extends Request {
             super();
         } 
 
-        private Builder(GenerateTemplateByScratchRequest response) {
-            super(response);
-            this.provisionRegionId = response.provisionRegionId;
-            this.regionId = response.regionId;
-            this.templateScratchId = response.templateScratchId;
+        private Builder(GenerateTemplateByScratchRequest request) {
+            super(request);
+            this.provisionRegionId = request.provisionRegionId;
+            this.regionId = request.regionId;
+            this.templateScratchId = request.templateScratchId;
         } 
 
         /**

@@ -139,16 +139,16 @@ public class GetTemplateSummaryRequest extends Request {
             super();
         } 
 
-        private Builder(GetTemplateSummaryRequest response) {
-            super(response);
-            this.changeSetId = response.changeSetId;
-            this.regionId = response.regionId;
-            this.stackGroupName = response.stackGroupName;
-            this.stackId = response.stackId;
-            this.templateBody = response.templateBody;
-            this.templateId = response.templateId;
-            this.templateURL = response.templateURL;
-            this.templateVersion = response.templateVersion;
+        private Builder(GetTemplateSummaryRequest request) {
+            super(request);
+            this.changeSetId = request.changeSetId;
+            this.regionId = request.regionId;
+            this.stackGroupName = request.stackGroupName;
+            this.stackId = request.stackId;
+            this.templateBody = request.templateBody;
+            this.templateId = request.templateId;
+            this.templateURL = request.templateURL;
+            this.templateVersion = request.templateVersion;
         } 
 
         /**

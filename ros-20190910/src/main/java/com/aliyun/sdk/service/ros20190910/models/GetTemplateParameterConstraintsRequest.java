@@ -140,16 +140,16 @@ public class GetTemplateParameterConstraintsRequest extends Request {
             super();
         } 
 
-        private Builder(GetTemplateParameterConstraintsRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.parameters = response.parameters;
-            this.parametersKeyFilter = response.parametersKeyFilter;
-            this.regionId = response.regionId;
-            this.templateBody = response.templateBody;
-            this.templateId = response.templateId;
-            this.templateURL = response.templateURL;
-            this.templateVersion = response.templateVersion;
+        private Builder(GetTemplateParameterConstraintsRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.parameters = request.parameters;
+            this.parametersKeyFilter = request.parametersKeyFilter;
+            this.regionId = request.regionId;
+            this.templateBody = request.templateBody;
+            this.templateId = request.templateId;
+            this.templateURL = request.templateURL;
+            this.templateVersion = request.templateVersion;
         } 
 
         /**
@@ -174,7 +174,8 @@ public class GetTemplateParameterConstraintsRequest extends Request {
          * ParametersKeyFilter.
          */
         public Builder parametersKeyFilter(java.util.List < String > parametersKeyFilter) {
-            this.putQueryParameter("ParametersKeyFilter", parametersKeyFilter);
+            String parametersKeyFilterShrink = shrink(parametersKeyFilter, "ParametersKeyFilter", "json");
+            this.putQueryParameter("ParametersKeyFilter", parametersKeyFilterShrink);
             this.parametersKeyFilter = parametersKeyFilter;
             return this;
         }

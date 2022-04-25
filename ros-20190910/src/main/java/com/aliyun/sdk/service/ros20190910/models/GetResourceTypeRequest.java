@@ -49,9 +49,9 @@ public class GetResourceTypeRequest extends Request {
             super();
         } 
 
-        private Builder(GetResourceTypeRequest response) {
-            super(response);
-            this.resourceType = response.resourceType;
+        private Builder(GetResourceTypeRequest request) {
+            super(request);
+            this.resourceType = request.resourceType;
         } 
 
         /**

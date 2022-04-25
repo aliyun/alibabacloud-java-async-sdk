@@ -103,13 +103,13 @@ public class SetTemplatePermissionRequest extends Request {
             super();
         } 
 
-        private Builder(SetTemplatePermissionRequest response) {
-            super(response);
-            this.accountIds = response.accountIds;
-            this.shareOption = response.shareOption;
-            this.templateId = response.templateId;
-            this.templateVersion = response.templateVersion;
-            this.versionOption = response.versionOption;
+        private Builder(SetTemplatePermissionRequest request) {
+            super(request);
+            this.accountIds = request.accountIds;
+            this.shareOption = request.shareOption;
+            this.templateId = request.templateId;
+            this.templateVersion = request.templateVersion;
+            this.versionOption = request.versionOption;
         } 
 
         /**

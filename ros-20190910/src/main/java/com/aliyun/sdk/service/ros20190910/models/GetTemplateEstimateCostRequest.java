@@ -153,17 +153,17 @@ public class GetTemplateEstimateCostRequest extends Request {
             super();
         } 
 
-        private Builder(GetTemplateEstimateCostRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.parameters = response.parameters;
-            this.regionId = response.regionId;
-            this.templateBody = response.templateBody;
-            this.templateId = response.templateId;
-            this.templateScratchId = response.templateScratchId;
-            this.templateScratchRegionId = response.templateScratchRegionId;
-            this.templateURL = response.templateURL;
-            this.templateVersion = response.templateVersion;
+        private Builder(GetTemplateEstimateCostRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.parameters = request.parameters;
+            this.regionId = request.regionId;
+            this.templateBody = request.templateBody;
+            this.templateId = request.templateId;
+            this.templateScratchId = request.templateScratchId;
+            this.templateScratchRegionId = request.templateScratchRegionId;
+            this.templateURL = request.templateURL;
+            this.templateVersion = request.templateVersion;
         } 
 
         /**

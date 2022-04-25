@@ -128,15 +128,15 @@ public class ListStackEventsRequest extends Request {
             super();
         } 
 
-        private Builder(ListStackEventsRequest response) {
-            super(response);
-            this.logicalResourceId = response.logicalResourceId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceType = response.resourceType;
-            this.stackId = response.stackId;
-            this.status = response.status;
+        private Builder(ListStackEventsRequest request) {
+            super(request);
+            this.logicalResourceId = request.logicalResourceId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceType = request.resourceType;
+            this.stackId = request.stackId;
+            this.status = request.status;
         } 
 
         /**

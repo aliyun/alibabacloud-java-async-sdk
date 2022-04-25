@@ -101,13 +101,13 @@ public class CreateTemplateRequest extends Request {
             super();
         } 
 
-        private Builder(CreateTemplateRequest response) {
-            super(response);
-            this.description = response.description;
-            this.resourceGroupId = response.resourceGroupId;
-            this.templateBody = response.templateBody;
-            this.templateName = response.templateName;
-            this.templateURL = response.templateURL;
+        private Builder(CreateTemplateRequest request) {
+            super(request);
+            this.description = request.description;
+            this.resourceGroupId = request.resourceGroupId;
+            this.templateBody = request.templateBody;
+            this.templateName = request.templateName;
+            this.templateURL = request.templateURL;
         } 
 
         /**

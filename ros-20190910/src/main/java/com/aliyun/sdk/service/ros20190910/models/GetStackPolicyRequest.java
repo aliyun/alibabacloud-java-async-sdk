@@ -63,10 +63,10 @@ public class GetStackPolicyRequest extends Request {
             super();
         } 
 
-        private Builder(GetStackPolicyRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.stackId = response.stackId;
+        private Builder(GetStackPolicyRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.stackId = request.stackId;
         } 
 
         /**

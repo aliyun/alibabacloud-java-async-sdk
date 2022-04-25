@@ -63,10 +63,10 @@ public class DeleteChangeSetRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteChangeSetRequest response) {
-            super(response);
-            this.changeSetId = response.changeSetId;
-            this.regionId = response.regionId;
+        private Builder(DeleteChangeSetRequest request) {
+            super(request);
+            this.changeSetId = request.changeSetId;
+            this.regionId = request.regionId;
         } 
 
         /**

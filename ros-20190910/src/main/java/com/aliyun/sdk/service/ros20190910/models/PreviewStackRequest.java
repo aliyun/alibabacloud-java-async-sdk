@@ -232,23 +232,23 @@ public class PreviewStackRequest extends Request {
             super();
         } 
 
-        private Builder(PreviewStackRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.disableRollback = response.disableRollback;
-            this.parallelism = response.parallelism;
-            this.parameters = response.parameters;
-            this.regionId = response.regionId;
-            this.stackName = response.stackName;
-            this.stackPolicyBody = response.stackPolicyBody;
-            this.stackPolicyURL = response.stackPolicyURL;
-            this.templateBody = response.templateBody;
-            this.templateId = response.templateId;
-            this.templateScratchId = response.templateScratchId;
-            this.templateScratchRegionId = response.templateScratchRegionId;
-            this.templateURL = response.templateURL;
-            this.templateVersion = response.templateVersion;
-            this.timeoutInMinutes = response.timeoutInMinutes;
+        private Builder(PreviewStackRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.disableRollback = request.disableRollback;
+            this.parallelism = request.parallelism;
+            this.parameters = request.parameters;
+            this.regionId = request.regionId;
+            this.stackName = request.stackName;
+            this.stackPolicyBody = request.stackPolicyBody;
+            this.stackPolicyURL = request.stackPolicyURL;
+            this.templateBody = request.templateBody;
+            this.templateId = request.templateId;
+            this.templateScratchId = request.templateScratchId;
+            this.templateScratchRegionId = request.templateScratchRegionId;
+            this.templateURL = request.templateURL;
+            this.templateVersion = request.templateVersion;
+            this.timeoutInMinutes = request.timeoutInMinutes;
         } 
 
         /**

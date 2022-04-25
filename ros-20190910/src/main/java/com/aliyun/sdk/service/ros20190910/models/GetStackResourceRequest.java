@@ -103,13 +103,13 @@ public class GetStackResourceRequest extends Request {
             super();
         } 
 
-        private Builder(GetStackResourceRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.logicalResourceId = response.logicalResourceId;
-            this.regionId = response.regionId;
-            this.showResourceAttributes = response.showResourceAttributes;
-            this.stackId = response.stackId;
+        private Builder(GetStackResourceRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.logicalResourceId = request.logicalResourceId;
+            this.regionId = request.regionId;
+            this.showResourceAttributes = request.showResourceAttributes;
+            this.stackId = request.stackId;
         } 
 
         /**

@@ -362,33 +362,33 @@ public class CreateChangeSetRequest extends Request {
             super();
         } 
 
-        private Builder(CreateChangeSetRequest response) {
-            super(response);
-            this.changeSetName = response.changeSetName;
-            this.changeSetType = response.changeSetType;
-            this.clientToken = response.clientToken;
-            this.description = response.description;
-            this.disableRollback = response.disableRollback;
-            this.notificationURLs = response.notificationURLs;
-            this.parallelism = response.parallelism;
-            this.parameters = response.parameters;
-            this.ramRoleName = response.ramRoleName;
-            this.regionId = response.regionId;
-            this.replacementOption = response.replacementOption;
-            this.resourcesToImport = response.resourcesToImport;
-            this.stackId = response.stackId;
-            this.stackName = response.stackName;
-            this.stackPolicyBody = response.stackPolicyBody;
-            this.stackPolicyDuringUpdateBody = response.stackPolicyDuringUpdateBody;
-            this.stackPolicyDuringUpdateURL = response.stackPolicyDuringUpdateURL;
-            this.stackPolicyURL = response.stackPolicyURL;
-            this.templateBody = response.templateBody;
-            this.templateId = response.templateId;
-            this.templateScratchId = response.templateScratchId;
-            this.templateURL = response.templateURL;
-            this.templateVersion = response.templateVersion;
-            this.timeoutInMinutes = response.timeoutInMinutes;
-            this.usePreviousParameters = response.usePreviousParameters;
+        private Builder(CreateChangeSetRequest request) {
+            super(request);
+            this.changeSetName = request.changeSetName;
+            this.changeSetType = request.changeSetType;
+            this.clientToken = request.clientToken;
+            this.description = request.description;
+            this.disableRollback = request.disableRollback;
+            this.notificationURLs = request.notificationURLs;
+            this.parallelism = request.parallelism;
+            this.parameters = request.parameters;
+            this.ramRoleName = request.ramRoleName;
+            this.regionId = request.regionId;
+            this.replacementOption = request.replacementOption;
+            this.resourcesToImport = request.resourcesToImport;
+            this.stackId = request.stackId;
+            this.stackName = request.stackName;
+            this.stackPolicyBody = request.stackPolicyBody;
+            this.stackPolicyDuringUpdateBody = request.stackPolicyDuringUpdateBody;
+            this.stackPolicyDuringUpdateURL = request.stackPolicyDuringUpdateURL;
+            this.stackPolicyURL = request.stackPolicyURL;
+            this.templateBody = request.templateBody;
+            this.templateId = request.templateId;
+            this.templateScratchId = request.templateScratchId;
+            this.templateURL = request.templateURL;
+            this.templateVersion = request.templateVersion;
+            this.timeoutInMinutes = request.timeoutInMinutes;
+            this.usePreviousParameters = request.usePreviousParameters;
         } 
 
         /**
