@@ -74,11 +74,11 @@ public class RecognizeExitEntryPermitToMainlandRequest extends Request {
             super();
         } 
 
-        private Builder(RecognizeExitEntryPermitToMainlandRequest response) {
-            super(response);
-            this.outputFigure = response.outputFigure;
-            this.url = response.url;
-            this.body = response.body;
+        private Builder(RecognizeExitEntryPermitToMainlandRequest request) {
+            super(request);
+            this.outputFigure = request.outputFigure;
+            this.url = request.url;
+            this.body = request.body;
         } 
 
         /**

@@ -61,10 +61,10 @@ public class RecognizeSocialSecurityCardRequest extends Request {
             super();
         } 
 
-        private Builder(RecognizeSocialSecurityCardRequest response) {
-            super(response);
-            this.url = response.url;
-            this.body = response.body;
+        private Builder(RecognizeSocialSecurityCardRequest request) {
+            super(request);
+            this.url = request.url;
+            this.body = request.body;
         } 
 
         /**

@@ -87,12 +87,12 @@ public class RecognizeEduPaperStructedRequest extends Request {
             super();
         } 
 
-        private Builder(RecognizeEduPaperStructedRequest response) {
-            super(response);
-            this.needRotate = response.needRotate;
-            this.subject = response.subject;
-            this.url = response.url;
-            this.body = response.body;
+        private Builder(RecognizeEduPaperStructedRequest request) {
+            super(request);
+            this.needRotate = request.needRotate;
+            this.subject = request.subject;
+            this.url = request.url;
+            this.body = request.body;
         } 
 
         /**

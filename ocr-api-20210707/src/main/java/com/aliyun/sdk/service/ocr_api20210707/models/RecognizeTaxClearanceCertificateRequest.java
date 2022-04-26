@@ -61,10 +61,10 @@ public class RecognizeTaxClearanceCertificateRequest extends Request {
             super();
         } 
 
-        private Builder(RecognizeTaxClearanceCertificateRequest response) {
-            super(response);
-            this.url = response.url;
-            this.body = response.body;
+        private Builder(RecognizeTaxClearanceCertificateRequest request) {
+            super(request);
+            this.url = request.url;
+            this.body = request.body;
         } 
 
         /**

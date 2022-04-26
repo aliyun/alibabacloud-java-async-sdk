@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link RecognizeMixedCardsResponse} extends {@link TeaModel}
+ * {@link RecognizePurchaseRecordResponse} extends {@link TeaModel}
  *
- * <p>RecognizeMixedCardsResponse</p>
+ * <p>RecognizePurchaseRecordResponse</p>
  */
-public class RecognizeMixedCardsResponse extends Response {
+public class RecognizePurchaseRecordResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private RecognizeMixedCardsResponseBody body;
+    private RecognizePurchaseRecordResponseBody body;
 
-    private RecognizeMixedCardsResponse(BuilderImpl builder) {
+    private RecognizePurchaseRecordResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static RecognizeMixedCardsResponse create() {
+    public static RecognizePurchaseRecordResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class RecognizeMixedCardsResponse extends Response {
     /**
      * @return body
      */
-    public RecognizeMixedCardsResponseBody getBody() {
+    public RecognizePurchaseRecordResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<RecognizeMixedCardsResponse, Builder> {
+    public interface Builder extends Response.Builder<RecognizePurchaseRecordResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(RecognizeMixedCardsResponseBody body);
+        Builder body(RecognizePurchaseRecordResponseBody body);
 
         @Override
-        RecognizeMixedCardsResponse build();
+        RecognizePurchaseRecordResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<RecognizeMixedCardsResponse, Builder>
+            extends Response.BuilderImpl<RecognizePurchaseRecordResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private RecognizeMixedCardsResponseBody body; 
+        private RecognizePurchaseRecordResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(RecognizeMixedCardsResponse response) {
+        private BuilderImpl(RecognizePurchaseRecordResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class RecognizeMixedCardsResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(RecognizeMixedCardsResponseBody body) {
+        public Builder body(RecognizePurchaseRecordResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public RecognizeMixedCardsResponse build() {
-            return new RecognizeMixedCardsResponse(this);
+        public RecognizePurchaseRecordResponse build() {
+            return new RecognizePurchaseRecordResponse(this);
         } 
 
     } 

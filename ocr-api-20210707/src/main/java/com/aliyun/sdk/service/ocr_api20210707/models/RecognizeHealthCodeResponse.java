@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link RecognizeDoctypeResponse} extends {@link TeaModel}
+ * {@link RecognizeHealthCodeResponse} extends {@link TeaModel}
  *
- * <p>RecognizeDoctypeResponse</p>
+ * <p>RecognizeHealthCodeResponse</p>
  */
-public class RecognizeDoctypeResponse extends Response {
+public class RecognizeHealthCodeResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private RecognizeDoctypeResponseBody body;
+    private RecognizeHealthCodeResponseBody body;
 
-    private RecognizeDoctypeResponse(BuilderImpl builder) {
+    private RecognizeHealthCodeResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static RecognizeDoctypeResponse create() {
+    public static RecognizeHealthCodeResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class RecognizeDoctypeResponse extends Response {
     /**
      * @return body
      */
-    public RecognizeDoctypeResponseBody getBody() {
+    public RecognizeHealthCodeResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<RecognizeDoctypeResponse, Builder> {
+    public interface Builder extends Response.Builder<RecognizeHealthCodeResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(RecognizeDoctypeResponseBody body);
+        Builder body(RecognizeHealthCodeResponseBody body);
 
         @Override
-        RecognizeDoctypeResponse build();
+        RecognizeHealthCodeResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<RecognizeDoctypeResponse, Builder>
+            extends Response.BuilderImpl<RecognizeHealthCodeResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private RecognizeDoctypeResponseBody body; 
+        private RecognizeHealthCodeResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(RecognizeDoctypeResponse response) {
+        private BuilderImpl(RecognizeHealthCodeResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class RecognizeDoctypeResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(RecognizeDoctypeResponseBody body) {
+        public Builder body(RecognizeHealthCodeResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public RecognizeDoctypeResponse build() {
-            return new RecognizeDoctypeResponse(this);
+        public RecognizeHealthCodeResponse build() {
+            return new RecognizeHealthCodeResponse(this);
         } 
 
     } 

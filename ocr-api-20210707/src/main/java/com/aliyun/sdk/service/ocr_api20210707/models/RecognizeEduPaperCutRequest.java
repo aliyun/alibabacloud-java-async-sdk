@@ -102,13 +102,13 @@ public class RecognizeEduPaperCutRequest extends Request {
             super();
         } 
 
-        private Builder(RecognizeEduPaperCutRequest response) {
-            super(response);
-            this.cutType = response.cutType;
-            this.imageType = response.imageType;
-            this.subject = response.subject;
-            this.url = response.url;
-            this.body = response.body;
+        private Builder(RecognizeEduPaperCutRequest request) {
+            super(request);
+            this.cutType = request.cutType;
+            this.imageType = request.imageType;
+            this.subject = request.subject;
+            this.url = request.url;
+            this.body = request.body;
         } 
 
         /**

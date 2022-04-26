@@ -61,10 +61,10 @@ public class RecognizeEstateCertificationRequest extends Request {
             super();
         } 
 
-        private Builder(RecognizeEstateCertificationRequest response) {
-            super(response);
-            this.url = response.url;
-            this.body = response.body;
+        private Builder(RecognizeEstateCertificationRequest request) {
+            super(request);
+            this.url = request.url;
+            this.body = request.body;
         } 
 
         /**

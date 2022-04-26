@@ -165,18 +165,18 @@ public class RecognizeAdvancedRequest extends Request {
             super();
         } 
 
-        private Builder(RecognizeAdvancedRequest response) {
-            super(response);
-            this.needRotate = response.needRotate;
-            this.needSortPage = response.needSortPage;
-            this.noStamp = response.noStamp;
-            this.outputCharInfo = response.outputCharInfo;
-            this.outputFigure = response.outputFigure;
-            this.outputTable = response.outputTable;
-            this.paragraph = response.paragraph;
-            this.row = response.row;
-            this.url = response.url;
-            this.body = response.body;
+        private Builder(RecognizeAdvancedRequest request) {
+            super(request);
+            this.needRotate = request.needRotate;
+            this.needSortPage = request.needSortPage;
+            this.noStamp = request.noStamp;
+            this.outputCharInfo = request.outputCharInfo;
+            this.outputFigure = request.outputFigure;
+            this.outputTable = request.outputTable;
+            this.paragraph = request.paragraph;
+            this.row = request.row;
+            this.url = request.url;
+            this.body = request.body;
         } 
 
         /**

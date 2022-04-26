@@ -61,10 +61,10 @@ public class RecognizeQuotaInvoiceRequest extends Request {
             super();
         } 
 
-        private Builder(RecognizeQuotaInvoiceRequest response) {
-            super(response);
-            this.url = response.url;
-            this.body = response.body;
+        private Builder(RecognizeQuotaInvoiceRequest request) {
+            super(request);
+            this.url = request.url;
+            this.body = request.body;
         } 
 
         /**

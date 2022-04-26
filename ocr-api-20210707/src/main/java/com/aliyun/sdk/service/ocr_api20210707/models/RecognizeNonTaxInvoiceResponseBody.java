@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link RecognizeMixedCardsResponseBody} extends {@link TeaModel}
+ * {@link RecognizeNonTaxInvoiceResponseBody} extends {@link TeaModel}
  *
- * <p>RecognizeMixedCardsResponseBody</p>
+ * <p>RecognizeNonTaxInvoiceResponseBody</p>
  */
-public class RecognizeMixedCardsResponseBody extends TeaModel {
+public class RecognizeNonTaxInvoiceResponseBody extends TeaModel {
     @NameInMap("Code")
     private String code;
 
@@ -24,7 +24,7 @@ public class RecognizeMixedCardsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private RecognizeMixedCardsResponseBody(Builder builder) {
+    private RecognizeNonTaxInvoiceResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -35,7 +35,7 @@ public class RecognizeMixedCardsResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static RecognizeMixedCardsResponseBody create() {
+    public static RecognizeNonTaxInvoiceResponseBody create() {
         return builder().build();
     }
 
@@ -105,8 +105,8 @@ public class RecognizeMixedCardsResponseBody extends TeaModel {
             return this;
         }
 
-        public RecognizeMixedCardsResponseBody build() {
-            return new RecognizeMixedCardsResponseBody(this);
+        public RecognizeNonTaxInvoiceResponseBody build() {
+            return new RecognizeNonTaxInvoiceResponseBody(this);
         } 
 
     } 

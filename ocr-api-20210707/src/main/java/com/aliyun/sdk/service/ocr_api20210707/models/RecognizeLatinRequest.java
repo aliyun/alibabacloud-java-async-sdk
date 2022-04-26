@@ -100,13 +100,13 @@ public class RecognizeLatinRequest extends Request {
             super();
         } 
 
-        private Builder(RecognizeLatinRequest response) {
-            super(response);
-            this.needRotate = response.needRotate;
-            this.outputCharInfo = response.outputCharInfo;
-            this.outputTable = response.outputTable;
-            this.url = response.url;
-            this.body = response.body;
+        private Builder(RecognizeLatinRequest request) {
+            super(request);
+            this.needRotate = request.needRotate;
+            this.outputCharInfo = request.outputCharInfo;
+            this.outputTable = request.outputTable;
+            this.url = request.url;
+            this.body = request.body;
         } 
 
         /**

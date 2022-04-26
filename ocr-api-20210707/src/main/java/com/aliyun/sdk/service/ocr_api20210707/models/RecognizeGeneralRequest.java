@@ -61,10 +61,10 @@ public class RecognizeGeneralRequest extends Request {
             super();
         } 
 
-        private Builder(RecognizeGeneralRequest response) {
-            super(response);
-            this.url = response.url;
-            this.body = response.body;
+        private Builder(RecognizeGeneralRequest request) {
+            super(request);
+            this.url = request.url;
+            this.body = request.body;
         } 
 
         /**

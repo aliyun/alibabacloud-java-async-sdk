@@ -61,10 +61,10 @@ public class RecognizeCtwoMedicalDeviceManageLicenseRequest extends Request {
             super();
         } 
 
-        private Builder(RecognizeCtwoMedicalDeviceManageLicenseRequest response) {
-            super(response);
-            this.url = response.url;
-            this.body = response.body;
+        private Builder(RecognizeCtwoMedicalDeviceManageLicenseRequest request) {
+            super(request);
+            this.url = request.url;
+            this.body = request.body;
         } 
 
         /**

@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link RecognizeDoctypeResponseBody} extends {@link TeaModel}
+ * {@link RecognizePurchaseRecordResponseBody} extends {@link TeaModel}
  *
- * <p>RecognizeDoctypeResponseBody</p>
+ * <p>RecognizePurchaseRecordResponseBody</p>
  */
-public class RecognizeDoctypeResponseBody extends TeaModel {
+public class RecognizePurchaseRecordResponseBody extends TeaModel {
     @NameInMap("Code")
     private String code;
 
@@ -24,7 +24,7 @@ public class RecognizeDoctypeResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private RecognizeDoctypeResponseBody(Builder builder) {
+    private RecognizePurchaseRecordResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -35,7 +35,7 @@ public class RecognizeDoctypeResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static RecognizeDoctypeResponseBody create() {
+    public static RecognizePurchaseRecordResponseBody create() {
         return builder().build();
     }
 
@@ -105,8 +105,8 @@ public class RecognizeDoctypeResponseBody extends TeaModel {
             return this;
         }
 
-        public RecognizeDoctypeResponseBody build() {
-            return new RecognizeDoctypeResponseBody(this);
+        public RecognizePurchaseRecordResponseBody build() {
+            return new RecognizePurchaseRecordResponseBody(this);
         } 
 
     } 

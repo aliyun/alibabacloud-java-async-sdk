@@ -61,10 +61,10 @@ public class RecognizeVehicleRegistrationRequest extends Request {
             super();
         } 
 
-        private Builder(RecognizeVehicleRegistrationRequest response) {
-            super(response);
-            this.url = response.url;
-            this.body = response.body;
+        private Builder(RecognizeVehicleRegistrationRequest request) {
+            super(request);
+            this.url = request.url;
+            this.body = request.body;
         } 
 
         /**

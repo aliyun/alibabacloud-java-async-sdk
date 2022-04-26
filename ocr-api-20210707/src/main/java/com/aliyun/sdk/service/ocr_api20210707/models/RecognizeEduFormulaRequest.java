@@ -61,10 +61,10 @@ public class RecognizeEduFormulaRequest extends Request {
             super();
         } 
 
-        private Builder(RecognizeEduFormulaRequest response) {
-            super(response);
-            this.url = response.url;
-            this.body = response.body;
+        private Builder(RecognizeEduFormulaRequest request) {
+            super(request);
+            this.url = request.url;
+            this.body = request.body;
         } 
 
         /**

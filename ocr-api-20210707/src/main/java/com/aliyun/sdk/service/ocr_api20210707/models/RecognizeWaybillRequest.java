@@ -61,10 +61,10 @@ public class RecognizeWaybillRequest extends Request {
             super();
         } 
 
-        private Builder(RecognizeWaybillRequest response) {
-            super(response);
-            this.url = response.url;
-            this.body = response.body;
+        private Builder(RecognizeWaybillRequest request) {
+            super(request);
+            this.url = request.url;
+            this.body = request.body;
         } 
 
         /**

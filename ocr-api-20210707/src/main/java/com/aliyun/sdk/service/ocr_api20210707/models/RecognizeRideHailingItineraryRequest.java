@@ -61,10 +61,10 @@ public class RecognizeRideHailingItineraryRequest extends Request {
             super();
         } 
 
-        private Builder(RecognizeRideHailingItineraryRequest response) {
-            super(response);
-            this.url = response.url;
-            this.body = response.body;
+        private Builder(RecognizeRideHailingItineraryRequest request) {
+            super(request);
+            this.url = request.url;
+            this.body = request.body;
         } 
 
         /**

@@ -127,22 +127,23 @@ public class RecognizeMultiLanguageRequest extends Request {
             super();
         } 
 
-        private Builder(RecognizeMultiLanguageRequest response) {
-            super(response);
-            this.languages = response.languages;
-            this.needRotate = response.needRotate;
-            this.needSortPage = response.needSortPage;
-            this.outputCharInfo = response.outputCharInfo;
-            this.outputTable = response.outputTable;
-            this.url = response.url;
-            this.body = response.body;
+        private Builder(RecognizeMultiLanguageRequest request) {
+            super(request);
+            this.languages = request.languages;
+            this.needRotate = request.needRotate;
+            this.needSortPage = request.needSortPage;
+            this.outputCharInfo = request.outputCharInfo;
+            this.outputTable = request.outputTable;
+            this.url = request.url;
+            this.body = request.body;
         } 
 
         /**
          * 识别语种
          */
         public Builder languages(java.util.List < String > languages) {
-            this.putQueryParameter("Languages", languages);
+            String languagesShrink = shrink(languages, "Languages", "simple");
+            this.putQueryParameter("Languages", languagesShrink);
             this.languages = languages;
             return this;
         }

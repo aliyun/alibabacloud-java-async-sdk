@@ -61,10 +61,10 @@ public class RecognizeBusShipTicketRequest extends Request {
             super();
         } 
 
-        private Builder(RecognizeBusShipTicketRequest response) {
-            super(response);
-            this.url = response.url;
-            this.body = response.body;
+        private Builder(RecognizeBusShipTicketRequest request) {
+            super(request);
+            this.url = request.url;
+            this.body = request.body;
         } 
 
         /**

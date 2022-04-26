@@ -61,10 +61,10 @@ public class RecognizeCommonPrintedInvoiceRequest extends Request {
             super();
         } 
 
-        private Builder(RecognizeCommonPrintedInvoiceRequest response) {
-            super(response);
-            this.url = response.url;
-            this.body = response.body;
+        private Builder(RecognizeCommonPrintedInvoiceRequest request) {
+            super(request);
+            this.url = request.url;
+            this.body = request.body;
         } 
 
         /**

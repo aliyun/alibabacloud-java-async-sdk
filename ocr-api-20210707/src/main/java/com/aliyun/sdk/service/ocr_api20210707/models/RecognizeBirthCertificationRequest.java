@@ -61,10 +61,10 @@ public class RecognizeBirthCertificationRequest extends Request {
             super();
         } 
 
-        private Builder(RecognizeBirthCertificationRequest response) {
-            super(response);
-            this.url = response.url;
-            this.body = response.body;
+        private Builder(RecognizeBirthCertificationRequest request) {
+            super(request);
+            this.url = request.url;
+            this.body = request.body;
         } 
 
         /**

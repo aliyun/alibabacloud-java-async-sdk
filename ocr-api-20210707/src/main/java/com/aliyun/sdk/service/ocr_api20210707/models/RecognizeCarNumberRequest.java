@@ -61,10 +61,10 @@ public class RecognizeCarNumberRequest extends Request {
             super();
         } 
 
-        private Builder(RecognizeCarNumberRequest response) {
-            super(response);
-            this.url = response.url;
-            this.body = response.body;
+        private Builder(RecognizeCarNumberRequest request) {
+            super(request);
+            this.url = request.url;
+            this.body = request.body;
         } 
 
         /**

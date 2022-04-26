@@ -100,13 +100,13 @@ public class RecognizeTableOcrRequest extends Request {
             super();
         } 
 
-        private Builder(RecognizeTableOcrRequest response) {
-            super(response);
-            this.lineLess = response.lineLess;
-            this.needRotate = response.needRotate;
-            this.skipDetection = response.skipDetection;
-            this.url = response.url;
-            this.body = response.body;
+        private Builder(RecognizeTableOcrRequest request) {
+            super(request);
+            this.lineLess = request.lineLess;
+            this.needRotate = request.needRotate;
+            this.skipDetection = request.skipDetection;
+            this.url = request.url;
+            this.body = request.body;
         } 
 
         /**

@@ -87,12 +87,12 @@ public class RecognizeEnglishRequest extends Request {
             super();
         } 
 
-        private Builder(RecognizeEnglishRequest response) {
-            super(response);
-            this.needRotate = response.needRotate;
-            this.outputTable = response.outputTable;
-            this.url = response.url;
-            this.body = response.body;
+        private Builder(RecognizeEnglishRequest request) {
+            super(request);
+            this.needRotate = request.needRotate;
+            this.outputTable = request.outputTable;
+            this.url = request.url;
+            this.body = request.body;
         } 
 
         /**

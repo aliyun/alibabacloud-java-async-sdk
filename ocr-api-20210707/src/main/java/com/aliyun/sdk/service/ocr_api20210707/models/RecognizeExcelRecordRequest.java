@@ -63,10 +63,10 @@ public class RecognizeExcelRecordRequest extends Request {
             super();
         } 
 
-        private Builder(RecognizeExcelRecordRequest response) {
-            super(response);
-            this.currPage = response.currPage;
-            this.pageSize = response.pageSize;
+        private Builder(RecognizeExcelRecordRequest request) {
+            super(request);
+            this.currPage = request.currPage;
+            this.pageSize = request.pageSize;
         } 
 
         /**

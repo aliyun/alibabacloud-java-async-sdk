@@ -61,10 +61,10 @@ public class RecognizeBankAccountLicenseRequest extends Request {
             super();
         } 
 
-        private Builder(RecognizeBankAccountLicenseRequest response) {
-            super(response);
-            this.url = response.url;
-            this.body = response.body;
+        private Builder(RecognizeBankAccountLicenseRequest request) {
+            super(request);
+            this.url = request.url;
+            this.body = request.body;
         } 
 
         /**

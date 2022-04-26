@@ -61,10 +61,10 @@ public class RecognizeRollTicketRequest extends Request {
             super();
         } 
 
-        private Builder(RecognizeRollTicketRequest response) {
-            super(response);
-            this.url = response.url;
-            this.body = response.body;
+        private Builder(RecognizeRollTicketRequest request) {
+            super(request);
+            this.url = request.url;
+            this.body = request.body;
         } 
 
         /**

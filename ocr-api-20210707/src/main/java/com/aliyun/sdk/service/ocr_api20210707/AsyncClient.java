@@ -46,11 +46,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RecognizeCommonPrintedInvoiceResponse> recognizeCommonPrintedInvoice(RecognizeCommonPrintedInvoiceRequest request);
 
+    CompletableFuture<RecognizeCosmeticProduceLicenseResponse> recognizeCosmeticProduceLicense(RecognizeCosmeticProduceLicenseRequest request);
+
     CompletableFuture<RecognizeCtwoMedicalDeviceManageLicenseResponse> recognizeCtwoMedicalDeviceManageLicense(RecognizeCtwoMedicalDeviceManageLicenseRequest request);
 
     CompletableFuture<RecognizeDeleteExcelRecordResponse> recognizeDeleteExcelRecord(RecognizeDeleteExcelRecordRequest request);
-
-    CompletableFuture<RecognizeDoctypeResponse> recognizeDoctype(RecognizeDoctypeRequest request);
 
     CompletableFuture<RecognizeDrivingLicenseResponse> recognizeDrivingLicense(RecognizeDrivingLicenseRequest request);
 
@@ -86,6 +86,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RecognizeHandwritingResponse> recognizeHandwriting(RecognizeHandwritingRequest request);
 
+    CompletableFuture<RecognizeHealthCodeResponse> recognizeHealthCode(RecognizeHealthCodeRequest request);
+
+    CompletableFuture<RecognizeHotelConsumeResponse> recognizeHotelConsume(RecognizeHotelConsumeRequest request);
+
     CompletableFuture<RecognizeHouseholdResponse> recognizeHousehold(RecognizeHouseholdRequest request);
 
     CompletableFuture<RecognizeIdcardResponse> recognizeIdcard(RecognizeIdcardRequest request);
@@ -102,13 +106,17 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RecognizeMedicalDeviceProduceLicenseResponse> recognizeMedicalDeviceProduceLicense(RecognizeMedicalDeviceProduceLicenseRequest request);
 
-    CompletableFuture<RecognizeMixedCardsResponse> recognizeMixedCards(RecognizeMixedCardsRequest request);
-
     CompletableFuture<RecognizeMixedInvoicesResponse> recognizeMixedInvoices(RecognizeMixedInvoicesRequest request);
 
     CompletableFuture<RecognizeMultiLanguageResponse> recognizeMultiLanguage(RecognizeMultiLanguageRequest request);
 
+    CompletableFuture<RecognizeNonTaxInvoiceResponse> recognizeNonTaxInvoice(RecognizeNonTaxInvoiceRequest request);
+
     CompletableFuture<RecognizePassportResponse> recognizePassport(RecognizePassportRequest request);
+
+    CompletableFuture<RecognizePaymentRecordResponse> recognizePaymentRecord(RecognizePaymentRecordRequest request);
+
+    CompletableFuture<RecognizePurchaseRecordResponse> recognizePurchaseRecord(RecognizePurchaseRecordRequest request);
 
     CompletableFuture<RecognizeQuotaInvoiceResponse> recognizeQuotaInvoice(RecognizeQuotaInvoiceRequest request);
 
@@ -133,6 +141,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RecognizeTradeMarkCertificationResponse> recognizeTradeMarkCertification(RecognizeTradeMarkCertificationRequest request);
 
     CompletableFuture<RecognizeTrainInvoiceResponse> recognizeTrainInvoice(RecognizeTrainInvoiceRequest request);
+
+    CompletableFuture<RecognizeTravelCardResponse> recognizeTravelCard(RecognizeTravelCardRequest request);
 
     CompletableFuture<RecognizeUsedCarInvoiceResponse> recognizeUsedCarInvoice(RecognizeUsedCarInvoiceRequest request);
 

@@ -61,10 +61,10 @@ public class RecognizeBankCardRequest extends Request {
             super();
         } 
 
-        private Builder(RecognizeBankCardRequest response) {
-            super(response);
-            this.url = response.url;
-            this.body = response.body;
+        private Builder(RecognizeBankCardRequest request) {
+            super(request);
+            this.url = request.url;
+            this.body = request.body;
         } 
 
         /**

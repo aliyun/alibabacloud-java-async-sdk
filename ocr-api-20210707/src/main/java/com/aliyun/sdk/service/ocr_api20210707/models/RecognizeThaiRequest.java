@@ -100,13 +100,13 @@ public class RecognizeThaiRequest extends Request {
             super();
         } 
 
-        private Builder(RecognizeThaiRequest response) {
-            super(response);
-            this.needRotate = response.needRotate;
-            this.outputCharInfo = response.outputCharInfo;
-            this.outputTable = response.outputTable;
-            this.url = response.url;
-            this.body = response.body;
+        private Builder(RecognizeThaiRequest request) {
+            super(request);
+            this.needRotate = request.needRotate;
+            this.outputCharInfo = request.outputCharInfo;
+            this.outputTable = request.outputTable;
+            this.url = request.url;
+            this.body = request.body;
         } 
 
         /**

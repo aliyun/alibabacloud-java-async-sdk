@@ -101,13 +101,13 @@ public class RecognizeEduPaperOcrRequest extends Request {
             super();
         } 
 
-        private Builder(RecognizeEduPaperOcrRequest response) {
-            super(response);
-            this.imageType = response.imageType;
-            this.outputOricoord = response.outputOricoord;
-            this.subject = response.subject;
-            this.url = response.url;
-            this.body = response.body;
+        private Builder(RecognizeEduPaperOcrRequest request) {
+            super(request);
+            this.imageType = request.imageType;
+            this.outputOricoord = request.outputOricoord;
+            this.subject = request.subject;
+            this.url = request.url;
+            this.body = request.body;
         } 
 
         /**

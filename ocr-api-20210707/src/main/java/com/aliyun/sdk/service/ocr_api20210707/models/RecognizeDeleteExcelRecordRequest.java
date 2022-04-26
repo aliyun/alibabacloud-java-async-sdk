@@ -49,9 +49,9 @@ public class RecognizeDeleteExcelRecordRequest extends Request {
             super();
         } 
 
-        private Builder(RecognizeDeleteExcelRecordRequest response) {
-            super(response);
-            this.id = response.id;
+        private Builder(RecognizeDeleteExcelRecordRequest request) {
+            super(request);
+            this.id = request.id;
         } 
 
         /**

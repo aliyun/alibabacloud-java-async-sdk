@@ -105,13 +105,13 @@ public class RecognizeExcelExportRequest extends Request {
             super();
         } 
 
-        private Builder(RecognizeExcelExportRequest response) {
-            super(response);
-            this.fileName = response.fileName;
-            this.imageOp = response.imageOp;
-            this.ocrImageCount = response.ocrImageCount;
-            this.ocrResult = response.ocrResult;
-            this.ocrType = response.ocrType;
+        private Builder(RecognizeExcelExportRequest request) {
+            super(request);
+            this.fileName = request.fileName;
+            this.imageOp = request.imageOp;
+            this.ocrImageCount = request.ocrImageCount;
+            this.ocrResult = request.ocrResult;
+            this.ocrType = request.ocrType;
         } 
 
         /**

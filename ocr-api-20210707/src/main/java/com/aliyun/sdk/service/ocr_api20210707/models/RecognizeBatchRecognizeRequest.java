@@ -142,16 +142,16 @@ public class RecognizeBatchRecognizeRequest extends Request {
             super();
         } 
 
-        private Builder(RecognizeBatchRecognizeRequest response) {
-            super(response);
-            this.imageName = response.imageName;
-            this.imageOp = response.imageOp;
-            this.imageOssKey = response.imageOssKey;
-            this.needRotate = response.needRotate;
-            this.needSortPage = response.needSortPage;
-            this.outputCharInfo = response.outputCharInfo;
-            this.outputTable = response.outputTable;
-            this.url = response.url;
+        private Builder(RecognizeBatchRecognizeRequest request) {
+            super(request);
+            this.imageName = request.imageName;
+            this.imageOp = request.imageOp;
+            this.imageOssKey = request.imageOssKey;
+            this.needRotate = request.needRotate;
+            this.needSortPage = request.needSortPage;
+            this.outputCharInfo = request.outputCharInfo;
+            this.outputTable = request.outputTable;
+            this.url = request.url;
         } 
 
         /**

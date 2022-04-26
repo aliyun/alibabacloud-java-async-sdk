@@ -74,11 +74,11 @@ public class RecognizeEduQuestionOcrRequest extends Request {
             super();
         } 
 
-        private Builder(RecognizeEduQuestionOcrRequest response) {
-            super(response);
-            this.needRotate = response.needRotate;
-            this.url = response.url;
-            this.body = response.body;
+        private Builder(RecognizeEduQuestionOcrRequest request) {
+            super(request);
+            this.needRotate = request.needRotate;
+            this.url = request.url;
+            this.body = request.body;
         } 
 
         /**

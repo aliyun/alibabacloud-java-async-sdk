@@ -61,10 +61,10 @@ public class RecognizeDrivingLicenseRequest extends Request {
             super();
         } 
 
-        private Builder(RecognizeDrivingLicenseRequest response) {
-            super(response);
-            this.url = response.url;
-            this.body = response.body;
+        private Builder(RecognizeDrivingLicenseRequest request) {
+            super(request);
+            this.url = request.url;
+            this.body = request.body;
         } 
 
         /**

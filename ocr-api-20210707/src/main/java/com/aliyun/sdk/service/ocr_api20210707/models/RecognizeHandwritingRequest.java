@@ -113,14 +113,14 @@ public class RecognizeHandwritingRequest extends Request {
             super();
         } 
 
-        private Builder(RecognizeHandwritingRequest response) {
-            super(response);
-            this.needRotate = response.needRotate;
-            this.needSortPage = response.needSortPage;
-            this.outputCharInfo = response.outputCharInfo;
-            this.outputTable = response.outputTable;
-            this.url = response.url;
-            this.body = response.body;
+        private Builder(RecognizeHandwritingRequest request) {
+            super(request);
+            this.needRotate = request.needRotate;
+            this.needSortPage = request.needSortPage;
+            this.outputCharInfo = request.outputCharInfo;
+            this.outputTable = request.outputTable;
+            this.url = request.url;
+            this.body = request.body;
         } 
 
         /**

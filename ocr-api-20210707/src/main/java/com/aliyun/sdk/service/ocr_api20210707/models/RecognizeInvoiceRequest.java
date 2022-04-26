@@ -61,10 +61,10 @@ public class RecognizeInvoiceRequest extends Request {
             super();
         } 
 
-        private Builder(RecognizeInvoiceRequest response) {
-            super(response);
-            this.url = response.url;
-            this.body = response.body;
+        private Builder(RecognizeInvoiceRequest request) {
+            super(request);
+            this.url = request.url;
+            this.body = request.body;
         } 
 
         /**
