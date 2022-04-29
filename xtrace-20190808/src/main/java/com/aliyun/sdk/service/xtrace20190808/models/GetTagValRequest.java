@@ -114,14 +114,14 @@ public class GetTagValRequest extends Request {
             super();
         } 
 
-        private Builder(GetTagValRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.regionId = response.regionId;
-            this.serviceName = response.serviceName;
-            this.spanName = response.spanName;
-            this.startTime = response.startTime;
-            this.tagKey = response.tagKey;
+        private Builder(GetTagValRequest request) {
+            super(request);
+            this.endTime = request.endTime;
+            this.regionId = request.regionId;
+            this.serviceName = request.serviceName;
+            this.spanName = request.spanName;
+            this.startTime = request.startTime;
+            this.tagKey = request.tagKey;
         } 
 
         /**

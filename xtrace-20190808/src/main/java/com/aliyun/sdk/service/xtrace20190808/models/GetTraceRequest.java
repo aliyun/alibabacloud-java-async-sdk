@@ -76,11 +76,11 @@ public class GetTraceRequest extends Request {
             super();
         } 
 
-        private Builder(GetTraceRequest response) {
-            super(response);
-            this.appType = response.appType;
-            this.regionId = response.regionId;
-            this.traceID = response.traceID;
+        private Builder(GetTraceRequest request) {
+            super(request);
+            this.appType = request.appType;
+            this.regionId = request.regionId;
+            this.traceID = request.traceID;
         } 
 
         /**

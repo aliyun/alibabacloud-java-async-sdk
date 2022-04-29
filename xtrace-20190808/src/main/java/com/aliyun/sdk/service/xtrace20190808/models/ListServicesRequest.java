@@ -62,10 +62,10 @@ public class ListServicesRequest extends Request {
             super();
         } 
 
-        private Builder(ListServicesRequest response) {
-            super(response);
-            this.appType = response.appType;
-            this.regionId = response.regionId;
+        private Builder(ListServicesRequest request) {
+            super(request);
+            this.appType = request.appType;
+            this.regionId = request.regionId;
         } 
 
         /**

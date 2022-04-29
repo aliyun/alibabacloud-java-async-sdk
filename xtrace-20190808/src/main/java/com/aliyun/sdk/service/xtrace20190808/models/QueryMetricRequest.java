@@ -195,20 +195,20 @@ public class QueryMetricRequest extends Request {
             super();
         } 
 
-        private Builder(QueryMetricRequest response) {
-            super(response);
-            this.dimensions = response.dimensions;
-            this.endTime = response.endTime;
-            this.filters = response.filters;
-            this.intervalInSec = response.intervalInSec;
-            this.limit = response.limit;
-            this.measures = response.measures;
-            this.metric = response.metric;
-            this.order = response.order;
-            this.orderBy = response.orderBy;
-            this.proxyUserId = response.proxyUserId;
-            this.regionId = response.regionId;
-            this.startTime = response.startTime;
+        private Builder(QueryMetricRequest request) {
+            super(request);
+            this.dimensions = request.dimensions;
+            this.endTime = request.endTime;
+            this.filters = request.filters;
+            this.intervalInSec = request.intervalInSec;
+            this.limit = request.limit;
+            this.measures = request.measures;
+            this.metric = request.metric;
+            this.order = request.order;
+            this.orderBy = request.orderBy;
+            this.proxyUserId = request.proxyUserId;
+            this.regionId = request.regionId;
+            this.startTime = request.startTime;
         } 
 
         /**

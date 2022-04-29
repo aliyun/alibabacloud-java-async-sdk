@@ -194,20 +194,20 @@ public class SearchTracesRequest extends Request {
             super();
         } 
 
-        private Builder(SearchTracesRequest response) {
-            super(response);
-            this.appType = response.appType;
-            this.endTime = response.endTime;
-            this.minDuration = response.minDuration;
-            this.operationName = response.operationName;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.reverse = response.reverse;
-            this.serviceIp = response.serviceIp;
-            this.serviceName = response.serviceName;
-            this.startTime = response.startTime;
-            this.tag = response.tag;
+        private Builder(SearchTracesRequest request) {
+            super(request);
+            this.appType = request.appType;
+            this.endTime = request.endTime;
+            this.minDuration = request.minDuration;
+            this.operationName = request.operationName;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.reverse = request.reverse;
+            this.serviceIp = request.serviceIp;
+            this.serviceName = request.serviceName;
+            this.startTime = request.startTime;
+            this.tag = request.tag;
         } 
 
         /**

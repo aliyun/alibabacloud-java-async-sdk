@@ -22,8 +22,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetTagValResponse> getTagVal(GetTagValRequest request);
 
-    CompletableFuture<GetTokenResponse> getToken(GetTokenRequest request);
-
     CompletableFuture<GetTraceResponse> getTrace(GetTraceRequest request);
 
     CompletableFuture<ListIpOrHostsResponse> listIpOrHosts(ListIpOrHostsRequest request);

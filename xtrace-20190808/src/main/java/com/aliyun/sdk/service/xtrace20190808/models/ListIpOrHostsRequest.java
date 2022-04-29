@@ -88,12 +88,12 @@ public class ListIpOrHostsRequest extends Request {
             super();
         } 
 
-        private Builder(ListIpOrHostsRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.regionId = response.regionId;
-            this.serviceName = response.serviceName;
-            this.startTime = response.startTime;
+        private Builder(ListIpOrHostsRequest request) {
+            super(request);
+            this.endTime = request.endTime;
+            this.regionId = request.regionId;
+            this.serviceName = request.serviceName;
+            this.startTime = request.startTime;
         } 
 
         /**
