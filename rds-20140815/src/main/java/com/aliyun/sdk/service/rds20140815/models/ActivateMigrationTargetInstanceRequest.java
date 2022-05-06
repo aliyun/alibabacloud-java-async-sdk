@@ -101,13 +101,13 @@ public class ActivateMigrationTargetInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(ActivateMigrationTargetInstanceRequest response) {
-            super(response);
-            this.DBInstanceName = response.DBInstanceName;
-            this.forceSwitch = response.forceSwitch;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.switchTime = response.switchTime;
-            this.switchTimeMode = response.switchTimeMode;
+        private Builder(ActivateMigrationTargetInstanceRequest request) {
+            super(request);
+            this.DBInstanceName = request.DBInstanceName;
+            this.forceSwitch = request.forceSwitch;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.switchTime = request.switchTime;
+            this.switchTimeMode = request.switchTimeMode;
         } 
 
         /**

@@ -220,22 +220,22 @@ public class DescribeRenewalPriceRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeRenewalPriceRequest response) {
-            super(response);
-            this.businessInfo = response.businessInfo;
-            this.clientToken = response.clientToken;
-            this.DBInstanceClass = response.DBInstanceClass;
-            this.DBInstanceId = response.DBInstanceId;
-            this.orderType = response.orderType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.payType = response.payType;
-            this.quantity = response.quantity;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.timeType = response.timeType;
-            this.usedTime = response.usedTime;
+        private Builder(DescribeRenewalPriceRequest request) {
+            super(request);
+            this.businessInfo = request.businessInfo;
+            this.clientToken = request.clientToken;
+            this.DBInstanceClass = request.DBInstanceClass;
+            this.DBInstanceId = request.DBInstanceId;
+            this.orderType = request.orderType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.payType = request.payType;
+            this.quantity = request.quantity;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.timeType = request.timeType;
+            this.usedTime = request.usedTime;
         } 
 
         /**

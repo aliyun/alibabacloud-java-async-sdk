@@ -88,12 +88,12 @@ public class DescribeRdsResourceSettingsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeRdsResourceSettingsRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.resourceNiche = response.resourceNiche;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeRdsResourceSettingsRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.resourceNiche = request.resourceNiche;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

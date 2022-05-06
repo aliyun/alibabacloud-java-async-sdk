@@ -182,19 +182,19 @@ public class ImportUserBackupFileRequest extends Request {
             super();
         } 
 
-        private Builder(ImportUserBackupFileRequest response) {
-            super(response);
-            this.backupFile = response.backupFile;
-            this.bucketRegion = response.bucketRegion;
-            this.comment = response.comment;
-            this.engineVersion = response.engineVersion;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.restoreSize = response.restoreSize;
-            this.retention = response.retention;
-            this.zoneId = response.zoneId;
+        private Builder(ImportUserBackupFileRequest request) {
+            super(request);
+            this.backupFile = request.backupFile;
+            this.bucketRegion = request.bucketRegion;
+            this.comment = request.comment;
+            this.engineVersion = request.engineVersion;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.restoreSize = request.restoreSize;
+            this.retention = request.retention;
+            this.zoneId = request.zoneId;
         } 
 
         /**

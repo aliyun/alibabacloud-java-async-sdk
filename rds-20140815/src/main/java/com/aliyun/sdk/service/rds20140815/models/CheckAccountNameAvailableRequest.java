@@ -38,10 +38,6 @@ public class CheckAccountNameAvailableRequest extends Request {
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
-
     private CheckAccountNameAvailableRequest(Builder builder) {
         super(builder);
         this.accountName = builder.accountName;
@@ -50,7 +46,6 @@ public class CheckAccountNameAvailableRequest extends Request {
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
-        this.resourceOwnerId = builder.resourceOwnerId;
     }
 
     public static Builder builder() {
@@ -108,13 +103,6 @@ public class CheckAccountNameAvailableRequest extends Request {
         return this.resourceOwnerAccount;
     }
 
-    /**
-     * @return resourceOwnerId
-     */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
     public static final class Builder extends Request.Builder<CheckAccountNameAvailableRequest, Builder> {
         private String accountName; 
         private String clientToken; 
@@ -122,21 +110,19 @@ public class CheckAccountNameAvailableRequest extends Request {
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
-        private Long resourceOwnerId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CheckAccountNameAvailableRequest response) {
-            super(response);
-            this.accountName = response.accountName;
-            this.clientToken = response.clientToken;
-            this.DBInstanceId = response.DBInstanceId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(CheckAccountNameAvailableRequest request) {
+            super(request);
+            this.accountName = request.accountName;
+            this.clientToken = request.clientToken;
+            this.DBInstanceId = request.DBInstanceId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
         } 
 
         /**
@@ -190,15 +176,6 @@ public class CheckAccountNameAvailableRequest extends Request {
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
             this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
             this.resourceOwnerAccount = resourceOwnerAccount;
-            return this;
-        }
-
-        /**
-         * ResourceOwnerId.
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
             return this;
         }
 

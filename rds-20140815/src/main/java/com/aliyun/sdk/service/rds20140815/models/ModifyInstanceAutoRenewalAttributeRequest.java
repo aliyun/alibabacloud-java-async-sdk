@@ -154,17 +154,17 @@ public class ModifyInstanceAutoRenewalAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyInstanceAutoRenewalAttributeRequest response) {
-            super(response);
-            this.autoRenew = response.autoRenew;
-            this.clientToken = response.clientToken;
-            this.DBInstanceId = response.DBInstanceId;
-            this.duration = response.duration;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyInstanceAutoRenewalAttributeRequest request) {
+            super(request);
+            this.autoRenew = request.autoRenew;
+            this.clientToken = request.clientToken;
+            this.DBInstanceId = request.DBInstanceId;
+            this.duration = request.duration;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

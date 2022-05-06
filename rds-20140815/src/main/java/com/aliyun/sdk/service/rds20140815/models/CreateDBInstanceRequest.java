@@ -80,6 +80,10 @@ public class CreateDBInstanceRequest extends Request {
     private String dedicatedHostGroupId;
 
     @Query
+    @NameInMap("DeletionProtection")
+    private Boolean deletionProtection;
+
+    @Query
     @NameInMap("DryRun")
     private Boolean dryRun;
 
@@ -218,6 +222,7 @@ public class CreateDBInstanceRequest extends Request {
         this.DBParamGroupId = builder.DBParamGroupId;
         this.DBTimeZone = builder.DBTimeZone;
         this.dedicatedHostGroupId = builder.dedicatedHostGroupId;
+        this.deletionProtection = builder.deletionProtection;
         this.dryRun = builder.dryRun;
         this.encryptionKey = builder.encryptionKey;
         this.engine = builder.engine;
@@ -372,6 +377,13 @@ public class CreateDBInstanceRequest extends Request {
      */
     public String getDedicatedHostGroupId() {
         return this.dedicatedHostGroupId;
+    }
+
+    /**
+     * @return deletionProtection
+     */
+    public Boolean getDeletionProtection() {
+        return this.deletionProtection;
     }
 
     /**
@@ -594,6 +606,7 @@ public class CreateDBInstanceRequest extends Request {
         private String DBParamGroupId; 
         private String DBTimeZone; 
         private String dedicatedHostGroupId; 
+        private Boolean deletionProtection; 
         private Boolean dryRun; 
         private String encryptionKey; 
         private String engine; 
@@ -628,53 +641,54 @@ public class CreateDBInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(CreateDBInstanceRequest response) {
-            super(response);
-            this.amount = response.amount;
-            this.autoRenew = response.autoRenew;
-            this.businessInfo = response.businessInfo;
-            this.category = response.category;
-            this.clientToken = response.clientToken;
-            this.connectionMode = response.connectionMode;
-            this.createStrategy = response.createStrategy;
-            this.DBInstanceClass = response.DBInstanceClass;
-            this.DBInstanceDescription = response.DBInstanceDescription;
-            this.DBInstanceNetType = response.DBInstanceNetType;
-            this.DBInstanceStorage = response.DBInstanceStorage;
-            this.DBInstanceStorageType = response.DBInstanceStorageType;
-            this.DBIsIgnoreCase = response.DBIsIgnoreCase;
-            this.DBParamGroupId = response.DBParamGroupId;
-            this.DBTimeZone = response.DBTimeZone;
-            this.dedicatedHostGroupId = response.dedicatedHostGroupId;
-            this.dryRun = response.dryRun;
-            this.encryptionKey = response.encryptionKey;
-            this.engine = response.engine;
-            this.engineVersion = response.engineVersion;
-            this.instanceNetworkType = response.instanceNetworkType;
-            this.payType = response.payType;
-            this.period = response.period;
-            this.privateIpAddress = response.privateIpAddress;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.roleARN = response.roleARN;
-            this.securityIPList = response.securityIPList;
-            this.storageAutoScale = response.storageAutoScale;
-            this.storageThreshold = response.storageThreshold;
-            this.storageUpperBound = response.storageUpperBound;
-            this.systemDBCharset = response.systemDBCharset;
-            this.tag = response.tag;
-            this.targetDedicatedHostIdForLog = response.targetDedicatedHostIdForLog;
-            this.targetDedicatedHostIdForMaster = response.targetDedicatedHostIdForMaster;
-            this.targetDedicatedHostIdForSlave = response.targetDedicatedHostIdForSlave;
-            this.targetMinorVersion = response.targetMinorVersion;
-            this.usedTime = response.usedTime;
-            this.userBackupId = response.userBackupId;
-            this.VPCId = response.VPCId;
-            this.vSwitchId = response.vSwitchId;
-            this.zoneId = response.zoneId;
-            this.zoneIdSlave1 = response.zoneIdSlave1;
-            this.zoneIdSlave2 = response.zoneIdSlave2;
+        private Builder(CreateDBInstanceRequest request) {
+            super(request);
+            this.amount = request.amount;
+            this.autoRenew = request.autoRenew;
+            this.businessInfo = request.businessInfo;
+            this.category = request.category;
+            this.clientToken = request.clientToken;
+            this.connectionMode = request.connectionMode;
+            this.createStrategy = request.createStrategy;
+            this.DBInstanceClass = request.DBInstanceClass;
+            this.DBInstanceDescription = request.DBInstanceDescription;
+            this.DBInstanceNetType = request.DBInstanceNetType;
+            this.DBInstanceStorage = request.DBInstanceStorage;
+            this.DBInstanceStorageType = request.DBInstanceStorageType;
+            this.DBIsIgnoreCase = request.DBIsIgnoreCase;
+            this.DBParamGroupId = request.DBParamGroupId;
+            this.DBTimeZone = request.DBTimeZone;
+            this.dedicatedHostGroupId = request.dedicatedHostGroupId;
+            this.deletionProtection = request.deletionProtection;
+            this.dryRun = request.dryRun;
+            this.encryptionKey = request.encryptionKey;
+            this.engine = request.engine;
+            this.engineVersion = request.engineVersion;
+            this.instanceNetworkType = request.instanceNetworkType;
+            this.payType = request.payType;
+            this.period = request.period;
+            this.privateIpAddress = request.privateIpAddress;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.roleARN = request.roleARN;
+            this.securityIPList = request.securityIPList;
+            this.storageAutoScale = request.storageAutoScale;
+            this.storageThreshold = request.storageThreshold;
+            this.storageUpperBound = request.storageUpperBound;
+            this.systemDBCharset = request.systemDBCharset;
+            this.tag = request.tag;
+            this.targetDedicatedHostIdForLog = request.targetDedicatedHostIdForLog;
+            this.targetDedicatedHostIdForMaster = request.targetDedicatedHostIdForMaster;
+            this.targetDedicatedHostIdForSlave = request.targetDedicatedHostIdForSlave;
+            this.targetMinorVersion = request.targetMinorVersion;
+            this.usedTime = request.usedTime;
+            this.userBackupId = request.userBackupId;
+            this.VPCId = request.VPCId;
+            this.vSwitchId = request.vSwitchId;
+            this.zoneId = request.zoneId;
+            this.zoneIdSlave1 = request.zoneIdSlave1;
+            this.zoneIdSlave2 = request.zoneIdSlave2;
         } 
 
         /**
@@ -818,6 +832,15 @@ public class CreateDBInstanceRequest extends Request {
         public Builder dedicatedHostGroupId(String dedicatedHostGroupId) {
             this.putQueryParameter("DedicatedHostGroupId", dedicatedHostGroupId);
             this.dedicatedHostGroupId = dedicatedHostGroupId;
+            return this;
+        }
+
+        /**
+         * DeletionProtection.
+         */
+        public Builder deletionProtection(Boolean deletionProtection) {
+            this.putQueryParameter("DeletionProtection", deletionProtection);
+            this.deletionProtection = deletionProtection;
             return this;
         }
 

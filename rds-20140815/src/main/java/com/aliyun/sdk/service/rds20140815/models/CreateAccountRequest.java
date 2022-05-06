@@ -155,17 +155,17 @@ public class CreateAccountRequest extends Request {
             super();
         } 
 
-        private Builder(CreateAccountRequest response) {
-            super(response);
-            this.accountDescription = response.accountDescription;
-            this.accountName = response.accountName;
-            this.accountPassword = response.accountPassword;
-            this.accountType = response.accountType;
-            this.DBInstanceId = response.DBInstanceId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(CreateAccountRequest request) {
+            super(request);
+            this.accountDescription = request.accountDescription;
+            this.accountName = request.accountName;
+            this.accountPassword = request.accountPassword;
+            this.accountType = request.accountType;
+            this.DBInstanceId = request.DBInstanceId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

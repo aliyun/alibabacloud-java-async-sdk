@@ -178,19 +178,19 @@ public class DescribeVSwitchesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeVSwitchesRequest response) {
-            super(response);
-            this.dedicatedHostGroupId = response.dedicatedHostGroupId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.securityToken = response.securityToken;
-            this.vpcId = response.vpcId;
-            this.zoneId = response.zoneId;
+        private Builder(DescribeVSwitchesRequest request) {
+            super(request);
+            this.dedicatedHostGroupId = request.dedicatedHostGroupId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.securityToken = request.securityToken;
+            this.vpcId = request.vpcId;
+            this.zoneId = request.zoneId;
         } 
 
         /**

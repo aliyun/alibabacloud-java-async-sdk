@@ -115,14 +115,14 @@ public class ModifyDBInstanceAutoUpgradeMinorVersionRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDBInstanceAutoUpgradeMinorVersionRequest response) {
-            super(response);
-            this.autoUpgradeMinorVersion = response.autoUpgradeMinorVersion;
-            this.clientToken = response.clientToken;
-            this.DBInstanceId = response.DBInstanceId;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyDBInstanceAutoUpgradeMinorVersionRequest request) {
+            super(request);
+            this.autoUpgradeMinorVersion = request.autoUpgradeMinorVersion;
+            this.clientToken = request.clientToken;
+            this.DBInstanceId = request.DBInstanceId;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

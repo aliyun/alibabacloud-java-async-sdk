@@ -128,15 +128,15 @@ public class CheckDBNameAvailableRequest extends Request {
             super();
         } 
 
-        private Builder(CheckDBNameAvailableRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.DBInstanceId = response.DBInstanceId;
-            this.DBName = response.DBName;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(CheckDBNameAvailableRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.DBInstanceId = request.DBInstanceId;
+            this.DBName = request.DBName;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

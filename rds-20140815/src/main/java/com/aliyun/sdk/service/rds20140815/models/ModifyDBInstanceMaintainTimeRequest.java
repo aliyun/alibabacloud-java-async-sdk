@@ -128,15 +128,15 @@ public class ModifyDBInstanceMaintainTimeRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDBInstanceMaintainTimeRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.DBInstanceId = response.DBInstanceId;
-            this.maintainTime = response.maintainTime;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyDBInstanceMaintainTimeRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.DBInstanceId = request.DBInstanceId;
+            this.maintainTime = request.maintainTime;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

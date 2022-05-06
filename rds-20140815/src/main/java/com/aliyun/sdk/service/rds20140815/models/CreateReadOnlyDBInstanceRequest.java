@@ -52,6 +52,10 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
     private String dedicatedHostGroupId;
 
     @Query
+    @NameInMap("DeletionProtection")
+    private Boolean deletionProtection;
+
+    @Query
     @NameInMap("EngineVersion")
     @Validation(required = true)
     private String engineVersion;
@@ -146,6 +150,7 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         this.DBInstanceStorage = builder.DBInstanceStorage;
         this.DBInstanceStorageType = builder.DBInstanceStorageType;
         this.dedicatedHostGroupId = builder.dedicatedHostGroupId;
+        this.deletionProtection = builder.deletionProtection;
         this.engineVersion = builder.engineVersion;
         this.gdnInstanceName = builder.gdnInstanceName;
         this.instanceNetworkType = builder.instanceNetworkType;
@@ -242,6 +247,13 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
      */
     public String getDedicatedHostGroupId() {
         return this.dedicatedHostGroupId;
+    }
+
+    /**
+     * @return deletionProtection
+     */
+    public Boolean getDeletionProtection() {
+        return this.deletionProtection;
     }
 
     /**
@@ -394,6 +406,7 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         private Integer DBInstanceStorage; 
         private String DBInstanceStorageType; 
         private String dedicatedHostGroupId; 
+        private Boolean deletionProtection; 
         private String engineVersion; 
         private String gdnInstanceName; 
         private String instanceNetworkType; 
@@ -419,37 +432,38 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(CreateReadOnlyDBInstanceRequest response) {
-            super(response);
-            this.autoRenew = response.autoRenew;
-            this.category = response.category;
-            this.clientToken = response.clientToken;
-            this.DBInstanceClass = response.DBInstanceClass;
-            this.DBInstanceDescription = response.DBInstanceDescription;
-            this.DBInstanceId = response.DBInstanceId;
-            this.DBInstanceStorage = response.DBInstanceStorage;
-            this.DBInstanceStorageType = response.DBInstanceStorageType;
-            this.dedicatedHostGroupId = response.dedicatedHostGroupId;
-            this.engineVersion = response.engineVersion;
-            this.gdnInstanceName = response.gdnInstanceName;
-            this.instanceNetworkType = response.instanceNetworkType;
-            this.instructionSetArch = response.instructionSetArch;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.payType = response.payType;
-            this.period = response.period;
-            this.privateIpAddress = response.privateIpAddress;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.targetDedicatedHostIdForMaster = response.targetDedicatedHostIdForMaster;
-            this.tddlBizType = response.tddlBizType;
-            this.tddlRegionConfig = response.tddlRegionConfig;
-            this.usedTime = response.usedTime;
-            this.VPCId = response.VPCId;
-            this.vSwitchId = response.vSwitchId;
-            this.zoneId = response.zoneId;
+        private Builder(CreateReadOnlyDBInstanceRequest request) {
+            super(request);
+            this.autoRenew = request.autoRenew;
+            this.category = request.category;
+            this.clientToken = request.clientToken;
+            this.DBInstanceClass = request.DBInstanceClass;
+            this.DBInstanceDescription = request.DBInstanceDescription;
+            this.DBInstanceId = request.DBInstanceId;
+            this.DBInstanceStorage = request.DBInstanceStorage;
+            this.DBInstanceStorageType = request.DBInstanceStorageType;
+            this.dedicatedHostGroupId = request.dedicatedHostGroupId;
+            this.deletionProtection = request.deletionProtection;
+            this.engineVersion = request.engineVersion;
+            this.gdnInstanceName = request.gdnInstanceName;
+            this.instanceNetworkType = request.instanceNetworkType;
+            this.instructionSetArch = request.instructionSetArch;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.payType = request.payType;
+            this.period = request.period;
+            this.privateIpAddress = request.privateIpAddress;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.targetDedicatedHostIdForMaster = request.targetDedicatedHostIdForMaster;
+            this.tddlBizType = request.tddlBizType;
+            this.tddlRegionConfig = request.tddlRegionConfig;
+            this.usedTime = request.usedTime;
+            this.VPCId = request.VPCId;
+            this.vSwitchId = request.vSwitchId;
+            this.zoneId = request.zoneId;
         } 
 
         /**
@@ -530,6 +544,15 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         public Builder dedicatedHostGroupId(String dedicatedHostGroupId) {
             this.putQueryParameter("DedicatedHostGroupId", dedicatedHostGroupId);
             this.dedicatedHostGroupId = dedicatedHostGroupId;
+            return this;
+        }
+
+        /**
+         * DeletionProtection.
+         */
+        public Builder deletionProtection(Boolean deletionProtection) {
+            this.putQueryParameter("DeletionProtection", deletionProtection);
+            this.deletionProtection = deletionProtection;
             return this;
         }
 

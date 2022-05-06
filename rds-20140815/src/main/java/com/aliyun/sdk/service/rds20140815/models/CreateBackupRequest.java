@@ -114,14 +114,14 @@ public class CreateBackupRequest extends Request {
             super();
         } 
 
-        private Builder(CreateBackupRequest response) {
-            super(response);
-            this.backupMethod = response.backupMethod;
-            this.backupStrategy = response.backupStrategy;
-            this.backupType = response.backupType;
-            this.DBInstanceId = response.DBInstanceId;
-            this.DBName = response.DBName;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(CreateBackupRequest request) {
+            super(request);
+            this.backupMethod = request.backupMethod;
+            this.backupStrategy = request.backupStrategy;
+            this.backupType = request.backupType;
+            this.DBInstanceId = request.DBInstanceId;
+            this.DBName = request.DBName;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

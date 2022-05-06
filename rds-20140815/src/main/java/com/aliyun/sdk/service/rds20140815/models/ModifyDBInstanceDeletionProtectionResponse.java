@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateDedicatedHostUserResponse} extends {@link TeaModel}
+ * {@link ModifyDBInstanceDeletionProtectionResponse} extends {@link TeaModel}
  *
- * <p>CreateDedicatedHostUserResponse</p>
+ * <p>ModifyDBInstanceDeletionProtectionResponse</p>
  */
-public class CreateDedicatedHostUserResponse extends Response {
+public class ModifyDBInstanceDeletionProtectionResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private CreateDedicatedHostUserResponseBody body;
+    private ModifyDBInstanceDeletionProtectionResponseBody body;
 
-    private CreateDedicatedHostUserResponse(BuilderImpl builder) {
+    private ModifyDBInstanceDeletionProtectionResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static CreateDedicatedHostUserResponse create() {
+    public static ModifyDBInstanceDeletionProtectionResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class CreateDedicatedHostUserResponse extends Response {
     /**
      * @return body
      */
-    public CreateDedicatedHostUserResponseBody getBody() {
+    public ModifyDBInstanceDeletionProtectionResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<CreateDedicatedHostUserResponse, Builder> {
+    public interface Builder extends Response.Builder<ModifyDBInstanceDeletionProtectionResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(CreateDedicatedHostUserResponseBody body);
+        Builder body(ModifyDBInstanceDeletionProtectionResponseBody body);
 
         @Override
-        CreateDedicatedHostUserResponse build();
+        ModifyDBInstanceDeletionProtectionResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<CreateDedicatedHostUserResponse, Builder>
+            extends Response.BuilderImpl<ModifyDBInstanceDeletionProtectionResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private CreateDedicatedHostUserResponseBody body; 
+        private ModifyDBInstanceDeletionProtectionResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(CreateDedicatedHostUserResponse response) {
+        private BuilderImpl(ModifyDBInstanceDeletionProtectionResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class CreateDedicatedHostUserResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(CreateDedicatedHostUserResponseBody body) {
+        public Builder body(ModifyDBInstanceDeletionProtectionResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public CreateDedicatedHostUserResponse build() {
-            return new CreateDedicatedHostUserResponse(this);
+        public ModifyDBInstanceDeletionProtectionResponse build() {
+            return new ModifyDBInstanceDeletionProtectionResponse(this);
         } 
 
     } 

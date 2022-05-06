@@ -442,39 +442,39 @@ public class DescribeDBInstancesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDBInstancesRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.connectionMode = response.connectionMode;
-            this.connectionString = response.connectionString;
-            this.DBInstanceClass = response.DBInstanceClass;
-            this.DBInstanceId = response.DBInstanceId;
-            this.DBInstanceStatus = response.DBInstanceStatus;
-            this.DBInstanceType = response.DBInstanceType;
-            this.dedicatedHostGroupId = response.dedicatedHostGroupId;
-            this.dedicatedHostId = response.dedicatedHostId;
-            this.engine = response.engine;
-            this.engineVersion = response.engineVersion;
-            this.expired = response.expired;
-            this.instanceLevel = response.instanceLevel;
-            this.instanceNetworkType = response.instanceNetworkType;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.payType = response.payType;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.searchKey = response.searchKey;
-            this.tags = response.tags;
-            this.vSwitchId = response.vSwitchId;
-            this.vpcId = response.vpcId;
-            this.zoneId = response.zoneId;
-            this.proxyId = response.proxyId;
+        private Builder(DescribeDBInstancesRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.connectionMode = request.connectionMode;
+            this.connectionString = request.connectionString;
+            this.DBInstanceClass = request.DBInstanceClass;
+            this.DBInstanceId = request.DBInstanceId;
+            this.DBInstanceStatus = request.DBInstanceStatus;
+            this.DBInstanceType = request.DBInstanceType;
+            this.dedicatedHostGroupId = request.dedicatedHostGroupId;
+            this.dedicatedHostId = request.dedicatedHostId;
+            this.engine = request.engine;
+            this.engineVersion = request.engineVersion;
+            this.expired = request.expired;
+            this.instanceLevel = request.instanceLevel;
+            this.instanceNetworkType = request.instanceNetworkType;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.payType = request.payType;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.searchKey = request.searchKey;
+            this.tags = request.tags;
+            this.vSwitchId = request.vSwitchId;
+            this.vpcId = request.vpcId;
+            this.zoneId = request.zoneId;
+            this.proxyId = request.proxyId;
         } 
 
         /**

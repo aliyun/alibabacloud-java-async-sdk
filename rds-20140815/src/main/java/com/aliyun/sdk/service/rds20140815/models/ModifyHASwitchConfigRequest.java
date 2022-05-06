@@ -128,15 +128,15 @@ public class ModifyHASwitchConfigRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyHASwitchConfigRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.HAConfig = response.HAConfig;
-            this.manualHATime = response.manualHATime;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyHASwitchConfigRequest request) {
+            super(request);
+            this.DBInstanceId = request.DBInstanceId;
+            this.HAConfig = request.HAConfig;
+            this.manualHATime = request.manualHATime;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

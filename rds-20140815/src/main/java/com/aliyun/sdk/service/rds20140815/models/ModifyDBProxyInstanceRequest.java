@@ -155,17 +155,17 @@ public class ModifyDBProxyInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDBProxyInstanceRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.DBProxyInstanceNum = response.DBProxyInstanceNum;
-            this.DBProxyInstanceType = response.DBProxyInstanceType;
-            this.effectiveSpecificTime = response.effectiveSpecificTime;
-            this.effectiveTime = response.effectiveTime;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyDBProxyInstanceRequest request) {
+            super(request);
+            this.DBInstanceId = request.DBInstanceId;
+            this.DBProxyInstanceNum = request.DBProxyInstanceNum;
+            this.DBProxyInstanceType = request.DBProxyInstanceType;
+            this.effectiveSpecificTime = request.effectiveSpecificTime;
+            this.effectiveTime = request.effectiveTime;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

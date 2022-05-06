@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateDedicatedHostResponse} extends {@link TeaModel}
+ * {@link ConfirmNotifyResponse} extends {@link TeaModel}
  *
- * <p>CreateDedicatedHostResponse</p>
+ * <p>ConfirmNotifyResponse</p>
  */
-public class CreateDedicatedHostResponse extends Response {
+public class ConfirmNotifyResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private CreateDedicatedHostResponseBody body;
+    private ConfirmNotifyResponseBody body;
 
-    private CreateDedicatedHostResponse(BuilderImpl builder) {
+    private ConfirmNotifyResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static CreateDedicatedHostResponse create() {
+    public static ConfirmNotifyResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class CreateDedicatedHostResponse extends Response {
     /**
      * @return body
      */
-    public CreateDedicatedHostResponseBody getBody() {
+    public ConfirmNotifyResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<CreateDedicatedHostResponse, Builder> {
+    public interface Builder extends Response.Builder<ConfirmNotifyResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(CreateDedicatedHostResponseBody body);
+        Builder body(ConfirmNotifyResponseBody body);
 
         @Override
-        CreateDedicatedHostResponse build();
+        ConfirmNotifyResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<CreateDedicatedHostResponse, Builder>
+            extends Response.BuilderImpl<ConfirmNotifyResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private CreateDedicatedHostResponseBody body; 
+        private ConfirmNotifyResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(CreateDedicatedHostResponse response) {
+        private BuilderImpl(ConfirmNotifyResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class CreateDedicatedHostResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(CreateDedicatedHostResponseBody body) {
+        public Builder body(ConfirmNotifyResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public CreateDedicatedHostResponse build() {
-            return new CreateDedicatedHostResponse(this);
+        public ConfirmNotifyResponse build() {
+            return new ConfirmNotifyResponse(this);
         } 
 
     } 

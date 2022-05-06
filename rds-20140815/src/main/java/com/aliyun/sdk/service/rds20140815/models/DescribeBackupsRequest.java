@@ -155,17 +155,17 @@ public class DescribeBackupsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeBackupsRequest response) {
-            super(response);
-            this.backupId = response.backupId;
-            this.backupMode = response.backupMode;
-            this.backupStatus = response.backupStatus;
-            this.DBInstanceId = response.DBInstanceId;
-            this.endTime = response.endTime;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.startTime = response.startTime;
+        private Builder(DescribeBackupsRequest request) {
+            super(request);
+            this.backupId = request.backupId;
+            this.backupMode = request.backupMode;
+            this.backupStatus = request.backupStatus;
+            this.DBInstanceId = request.DBInstanceId;
+            this.endTime = request.endTime;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.startTime = request.startTime;
         } 
 
         /**

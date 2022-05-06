@@ -301,28 +301,28 @@ public class DescribePriceRequest extends Request {
             super();
         } 
 
-        private Builder(DescribePriceRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.commodityCode = response.commodityCode;
-            this.DBInstanceClass = response.DBInstanceClass;
-            this.DBInstanceId = response.DBInstanceId;
-            this.DBInstanceStorage = response.DBInstanceStorage;
-            this.DBInstanceStorageType = response.DBInstanceStorageType;
-            this.engine = response.engine;
-            this.engineVersion = response.engineVersion;
-            this.instanceUsedType = response.instanceUsedType;
-            this.orderType = response.orderType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.payType = response.payType;
-            this.quantity = response.quantity;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.timeType = response.timeType;
-            this.usedTime = response.usedTime;
-            this.zoneId = response.zoneId;
+        private Builder(DescribePriceRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.commodityCode = request.commodityCode;
+            this.DBInstanceClass = request.DBInstanceClass;
+            this.DBInstanceId = request.DBInstanceId;
+            this.DBInstanceStorage = request.DBInstanceStorage;
+            this.DBInstanceStorageType = request.DBInstanceStorageType;
+            this.engine = request.engine;
+            this.engineVersion = request.engineVersion;
+            this.instanceUsedType = request.instanceUsedType;
+            this.orderType = request.orderType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.payType = request.payType;
+            this.quantity = request.quantity;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.timeType = request.timeType;
+            this.usedTime = request.usedTime;
+            this.zoneId = request.zoneId;
         } 
 
         /**

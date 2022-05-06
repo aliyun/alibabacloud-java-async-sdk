@@ -23,7 +23,6 @@ public class StartDBInstanceRequest extends Request {
 
     @Query
     @NameInMap("DedicatedHostGroupId")
-    @Validation(required = true)
     private String dedicatedHostGroupId;
 
     @Query
@@ -258,25 +257,25 @@ public class StartDBInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(StartDBInstanceRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.DBInstanceTransType = response.DBInstanceTransType;
-            this.dedicatedHostGroupId = response.dedicatedHostGroupId;
-            this.effectiveTime = response.effectiveTime;
-            this.engineVersion = response.engineVersion;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.specifiedTime = response.specifiedTime;
-            this.storage = response.storage;
-            this.targetDBInstanceClass = response.targetDBInstanceClass;
-            this.targetDedicatedHostIdForLog = response.targetDedicatedHostIdForLog;
-            this.targetDedicatedHostIdForMaster = response.targetDedicatedHostIdForMaster;
-            this.targetDedicatedHostIdForSlave = response.targetDedicatedHostIdForSlave;
-            this.vSwitchId = response.vSwitchId;
-            this.zoneId = response.zoneId;
+        private Builder(StartDBInstanceRequest request) {
+            super(request);
+            this.DBInstanceId = request.DBInstanceId;
+            this.DBInstanceTransType = request.DBInstanceTransType;
+            this.dedicatedHostGroupId = request.dedicatedHostGroupId;
+            this.effectiveTime = request.effectiveTime;
+            this.engineVersion = request.engineVersion;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.specifiedTime = request.specifiedTime;
+            this.storage = request.storage;
+            this.targetDBInstanceClass = request.targetDBInstanceClass;
+            this.targetDedicatedHostIdForLog = request.targetDedicatedHostIdForLog;
+            this.targetDedicatedHostIdForMaster = request.targetDedicatedHostIdForMaster;
+            this.targetDedicatedHostIdForSlave = request.targetDedicatedHostIdForSlave;
+            this.vSwitchId = request.vSwitchId;
+            this.zoneId = request.zoneId;
         } 
 
         /**

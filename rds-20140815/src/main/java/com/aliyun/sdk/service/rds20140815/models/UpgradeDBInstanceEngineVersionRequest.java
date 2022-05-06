@@ -141,16 +141,16 @@ public class UpgradeDBInstanceEngineVersionRequest extends Request {
             super();
         } 
 
-        private Builder(UpgradeDBInstanceEngineVersionRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.DBInstanceId = response.DBInstanceId;
-            this.effectiveTime = response.effectiveTime;
-            this.engineVersion = response.engineVersion;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(UpgradeDBInstanceEngineVersionRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.DBInstanceId = request.DBInstanceId;
+            this.effectiveTime = request.effectiveTime;
+            this.engineVersion = request.engineVersion;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

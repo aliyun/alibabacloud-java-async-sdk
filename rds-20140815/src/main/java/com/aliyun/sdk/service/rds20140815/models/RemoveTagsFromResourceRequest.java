@@ -12,6 +12,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RemoveTagsFromResourceRequest</p>
  */
 public class RemoveTagsFromResourceRequest extends Request {
+    @Query
     @NameInMap("Tag")
     private java.util.List < Tag> tag;
 
@@ -166,24 +167,25 @@ public class RemoveTagsFromResourceRequest extends Request {
             super();
         } 
 
-        private Builder(RemoveTagsFromResourceRequest response) {
-            super(response);
-            this.tag = response.tag;
-            this.clientToken = response.clientToken;
-            this.DBInstanceId = response.DBInstanceId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.tags = response.tags;
-            this.proxyId = response.proxyId;
+        private Builder(RemoveTagsFromResourceRequest request) {
+            super(request);
+            this.tag = request.tag;
+            this.clientToken = request.clientToken;
+            this.DBInstanceId = request.DBInstanceId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.tags = request.tags;
+            this.proxyId = request.proxyId;
         } 
 
         /**
          * Tag.
          */
         public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }

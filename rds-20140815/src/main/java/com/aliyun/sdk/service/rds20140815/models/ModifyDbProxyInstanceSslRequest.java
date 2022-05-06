@@ -104,13 +104,13 @@ public class ModifyDbProxyInstanceSslRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDbProxyInstanceSslRequest response) {
-            super(response);
-            this.dbInstanceId = response.dbInstanceId;
-            this.dbProxyConnectString = response.dbProxyConnectString;
-            this.dbProxyEndpointId = response.dbProxyEndpointId;
-            this.dbProxySslEnabled = response.dbProxySslEnabled;
-            this.regionId = response.regionId;
+        private Builder(ModifyDbProxyInstanceSslRequest request) {
+            super(request);
+            this.dbInstanceId = request.dbInstanceId;
+            this.dbProxyConnectString = request.dbProxyConnectString;
+            this.dbProxyEndpointId = request.dbProxyEndpointId;
+            this.dbProxySslEnabled = request.dbProxySslEnabled;
+            this.regionId = request.regionId;
         } 
 
         /**

@@ -129,15 +129,15 @@ public class ModifyDBInstanceNetworkExpireTimeRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDBInstanceNetworkExpireTimeRequest response) {
-            super(response);
-            this.classicExpiredDays = response.classicExpiredDays;
-            this.connectionString = response.connectionString;
-            this.DBInstanceId = response.DBInstanceId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyDBInstanceNetworkExpireTimeRequest request) {
+            super(request);
+            this.classicExpiredDays = request.classicExpiredDays;
+            this.connectionString = request.connectionString;
+            this.DBInstanceId = request.DBInstanceId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

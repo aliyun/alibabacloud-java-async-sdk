@@ -235,6 +235,67 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         } 
 
     }
+    public static class ServerlessConfig extends TeaModel {
+        @NameInMap("ScaleMax")
+        private Double scaleMax;
+
+        @NameInMap("ScaleMin")
+        private Double scaleMin;
+
+        private ServerlessConfig(Builder builder) {
+            this.scaleMax = builder.scaleMax;
+            this.scaleMin = builder.scaleMin;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ServerlessConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return scaleMax
+         */
+        public Double getScaleMax() {
+            return this.scaleMax;
+        }
+
+        /**
+         * @return scaleMin
+         */
+        public Double getScaleMin() {
+            return this.scaleMin;
+        }
+
+        public static final class Builder {
+            private Double scaleMax; 
+            private Double scaleMin; 
+
+            /**
+             * ScaleMax.
+             */
+            public Builder scaleMax(Double scaleMax) {
+                this.scaleMax = scaleMax;
+                return this;
+            }
+
+            /**
+             * ScaleMin.
+             */
+            public Builder scaleMin(Double scaleMin) {
+                this.scaleMin = scaleMin;
+                return this;
+            }
+
+            public ServerlessConfig build() {
+                return new ServerlessConfig(this);
+            } 
+
+        } 
+
+    }
     public static class SlaveZone extends TeaModel {
         @NameInMap("ZoneId")
         private String zoneId;
@@ -390,6 +451,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("DedicatedHostGroupId")
         private String dedicatedHostGroupId;
 
+        @NameInMap("DeletionProtection")
+        private Boolean deletionProtection;
+
         @NameInMap("Engine")
         private String engine;
 
@@ -407,6 +471,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
         @NameInMap("GuardDBInstanceId")
         private String guardDBInstanceId;
+
+        @NameInMap("IPType")
+        private String IPType;
 
         @NameInMap("IncrementSourceDBInstanceId")
         private String incrementSourceDBInstanceId;
@@ -435,6 +502,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("MaxConnections")
         private Integer maxConnections;
 
+        @NameInMap("MaxIOMBPS")
+        private Integer maxIOMBPS;
+
         @NameInMap("MaxIOPS")
         private Integer maxIOPS;
 
@@ -459,8 +529,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
+        @NameInMap("SecurityIPList")
+        private String securityIPList;
+
         @NameInMap("SecurityIPMode")
         private String securityIPMode;
+
+        @NameInMap("ServerlessConfig")
+        private ServerlessConfig serverlessConfig;
 
         @NameInMap("SlaveZones")
         private SlaveZones slaveZones;
@@ -517,12 +593,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.DBInstanceType = builder.DBInstanceType;
             this.DBMaxQuantity = builder.DBMaxQuantity;
             this.dedicatedHostGroupId = builder.dedicatedHostGroupId;
+            this.deletionProtection = builder.deletionProtection;
             this.engine = builder.engine;
             this.engineVersion = builder.engineVersion;
             this.expireTime = builder.expireTime;
             this.extra = builder.extra;
             this.generalGroupName = builder.generalGroupName;
             this.guardDBInstanceId = builder.guardDBInstanceId;
+            this.IPType = builder.IPType;
             this.incrementSourceDBInstanceId = builder.incrementSourceDBInstanceId;
             this.instanceNetworkType = builder.instanceNetworkType;
             this.latestKernelVersion = builder.latestKernelVersion;
@@ -532,6 +610,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.masterInstanceId = builder.masterInstanceId;
             this.masterZone = builder.masterZone;
             this.maxConnections = builder.maxConnections;
+            this.maxIOMBPS = builder.maxIOMBPS;
             this.maxIOPS = builder.maxIOPS;
             this.payType = builder.payType;
             this.port = builder.port;
@@ -540,7 +619,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.readonlyInstanceSQLDelayedTime = builder.readonlyInstanceSQLDelayedTime;
             this.regionId = builder.regionId;
             this.resourceGroupId = builder.resourceGroupId;
+            this.securityIPList = builder.securityIPList;
             this.securityIPMode = builder.securityIPMode;
+            this.serverlessConfig = builder.serverlessConfig;
             this.slaveZones = builder.slaveZones;
             this.superPermissionMode = builder.superPermissionMode;
             this.tempDBInstanceId = builder.tempDBInstanceId;
@@ -730,6 +811,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return deletionProtection
+         */
+        public Boolean getDeletionProtection() {
+            return this.deletionProtection;
+        }
+
+        /**
          * @return engine
          */
         public String getEngine() {
@@ -769,6 +857,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         public String getGuardDBInstanceId() {
             return this.guardDBInstanceId;
+        }
+
+        /**
+         * @return IPType
+         */
+        public String getIPType() {
+            return this.IPType;
         }
 
         /**
@@ -835,6 +930,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return maxIOMBPS
+         */
+        public Integer getMaxIOMBPS() {
+            return this.maxIOMBPS;
+        }
+
+        /**
          * @return maxIOPS
          */
         public Integer getMaxIOPS() {
@@ -891,10 +993,24 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return securityIPList
+         */
+        public String getSecurityIPList() {
+            return this.securityIPList;
+        }
+
+        /**
          * @return securityIPMode
          */
         public String getSecurityIPMode() {
             return this.securityIPMode;
+        }
+
+        /**
+         * @return serverlessConfig
+         */
+        public ServerlessConfig getServerlessConfig() {
+            return this.serverlessConfig;
         }
 
         /**
@@ -992,12 +1108,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String DBInstanceType; 
             private Integer DBMaxQuantity; 
             private String dedicatedHostGroupId; 
+            private Boolean deletionProtection; 
             private String engine; 
             private String engineVersion; 
             private String expireTime; 
             private Extra extra; 
             private String generalGroupName; 
             private String guardDBInstanceId; 
+            private String IPType; 
             private String incrementSourceDBInstanceId; 
             private String instanceNetworkType; 
             private String latestKernelVersion; 
@@ -1007,6 +1125,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String masterInstanceId; 
             private String masterZone; 
             private Integer maxConnections; 
+            private Integer maxIOMBPS; 
             private Integer maxIOPS; 
             private String payType; 
             private String port; 
@@ -1015,7 +1134,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String readonlyInstanceSQLDelayedTime; 
             private String regionId; 
             private String resourceGroupId; 
+            private String securityIPList; 
             private String securityIPMode; 
+            private ServerlessConfig serverlessConfig; 
             private SlaveZones slaveZones; 
             private String superPermissionMode; 
             private String tempDBInstanceId; 
@@ -1220,6 +1341,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
+             * DeletionProtection.
+             */
+            public Builder deletionProtection(Boolean deletionProtection) {
+                this.deletionProtection = deletionProtection;
+                return this;
+            }
+
+            /**
              * Engine.
              */
             public Builder engine(String engine) {
@@ -1264,6 +1393,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder guardDBInstanceId(String guardDBInstanceId) {
                 this.guardDBInstanceId = guardDBInstanceId;
+                return this;
+            }
+
+            /**
+             * IPType.
+             */
+            public Builder IPType(String IPType) {
+                this.IPType = IPType;
                 return this;
             }
 
@@ -1340,6 +1477,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
+             * MaxIOMBPS.
+             */
+            public Builder maxIOMBPS(Integer maxIOMBPS) {
+                this.maxIOMBPS = maxIOMBPS;
+                return this;
+            }
+
+            /**
              * MaxIOPS.
              */
             public Builder maxIOPS(Integer maxIOPS) {
@@ -1404,10 +1549,26 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
+             * SecurityIPList.
+             */
+            public Builder securityIPList(String securityIPList) {
+                this.securityIPList = securityIPList;
+                return this;
+            }
+
+            /**
              * SecurityIPMode.
              */
             public Builder securityIPMode(String securityIPMode) {
                 this.securityIPMode = securityIPMode;
+                return this;
+            }
+
+            /**
+             * ServerlessConfig.
+             */
+            public Builder serverlessConfig(ServerlessConfig serverlessConfig) {
+                this.serverlessConfig = serverlessConfig;
                 return this;
             }
 

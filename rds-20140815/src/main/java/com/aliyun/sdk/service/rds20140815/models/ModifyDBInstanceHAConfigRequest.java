@@ -129,15 +129,15 @@ public class ModifyDBInstanceHAConfigRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDBInstanceHAConfigRequest response) {
-            super(response);
-            this.dbInstanceId = response.dbInstanceId;
-            this.HAMode = response.HAMode;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.syncMode = response.syncMode;
+        private Builder(ModifyDBInstanceHAConfigRequest request) {
+            super(request);
+            this.dbInstanceId = request.dbInstanceId;
+            this.HAMode = request.HAMode;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.syncMode = request.syncMode;
         } 
 
         /**

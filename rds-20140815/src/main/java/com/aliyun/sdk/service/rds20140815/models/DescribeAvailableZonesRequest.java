@@ -13,10 +13,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeAvailableZonesRequest extends Request {
     @Query
-    @NameInMap("CachedAsync")
-    private Boolean cachedAsync;
-
-    @Query
     @NameInMap("Category")
     private String category;
 
@@ -56,7 +52,6 @@ public class DescribeAvailableZonesRequest extends Request {
 
     private DescribeAvailableZonesRequest(Builder builder) {
         super(builder);
-        this.cachedAsync = builder.cachedAsync;
         this.category = builder.category;
         this.commodityCode = builder.commodityCode;
         this.DBInstanceName = builder.DBInstanceName;
@@ -79,13 +74,6 @@ public class DescribeAvailableZonesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return cachedAsync
-     */
-    public Boolean getCachedAsync() {
-        return this.cachedAsync;
     }
 
     /**
@@ -152,7 +140,6 @@ public class DescribeAvailableZonesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeAvailableZonesRequest, Builder> {
-        private Boolean cachedAsync; 
         private String category; 
         private String commodityCode; 
         private String DBInstanceName; 
@@ -167,28 +154,18 @@ public class DescribeAvailableZonesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAvailableZonesRequest response) {
-            super(response);
-            this.cachedAsync = response.cachedAsync;
-            this.category = response.category;
-            this.commodityCode = response.commodityCode;
-            this.DBInstanceName = response.DBInstanceName;
-            this.dispenseMode = response.dispenseMode;
-            this.engine = response.engine;
-            this.engineVersion = response.engineVersion;
-            this.regionId = response.regionId;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.zoneId = response.zoneId;
+        private Builder(DescribeAvailableZonesRequest request) {
+            super(request);
+            this.category = request.category;
+            this.commodityCode = request.commodityCode;
+            this.DBInstanceName = request.DBInstanceName;
+            this.dispenseMode = request.dispenseMode;
+            this.engine = request.engine;
+            this.engineVersion = request.engineVersion;
+            this.regionId = request.regionId;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.zoneId = request.zoneId;
         } 
-
-        /**
-         * CachedAsync.
-         */
-        public Builder cachedAsync(Boolean cachedAsync) {
-            this.putQueryParameter("CachedAsync", cachedAsync);
-            this.cachedAsync = cachedAsync;
-            return this;
-        }
 
         /**
          * Category.

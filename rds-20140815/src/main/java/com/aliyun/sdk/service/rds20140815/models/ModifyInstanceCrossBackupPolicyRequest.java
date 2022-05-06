@@ -180,19 +180,19 @@ public class ModifyInstanceCrossBackupPolicyRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyInstanceCrossBackupPolicyRequest response) {
-            super(response);
-            this.backupEnabled = response.backupEnabled;
-            this.crossBackupRegion = response.crossBackupRegion;
-            this.crossBackupType = response.crossBackupType;
-            this.DBInstanceId = response.DBInstanceId;
-            this.logBackupEnabled = response.logBackupEnabled;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.retentType = response.retentType;
-            this.retention = response.retention;
+        private Builder(ModifyInstanceCrossBackupPolicyRequest request) {
+            super(request);
+            this.backupEnabled = request.backupEnabled;
+            this.crossBackupRegion = request.crossBackupRegion;
+            this.crossBackupType = request.crossBackupType;
+            this.DBInstanceId = request.DBInstanceId;
+            this.logBackupEnabled = request.logBackupEnabled;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.retentType = request.retentType;
+            this.retention = request.retention;
         } 
 
         /**

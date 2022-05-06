@@ -62,10 +62,10 @@ public class GetDbProxyInstanceSslRequest extends Request {
             super();
         } 
 
-        private Builder(GetDbProxyInstanceSslRequest response) {
-            super(response);
-            this.dbInstanceId = response.dbInstanceId;
-            this.regionId = response.regionId;
+        private Builder(GetDbProxyInstanceSslRequest request) {
+            super(request);
+            this.dbInstanceId = request.dbInstanceId;
+            this.regionId = request.regionId;
         } 
 
         /**

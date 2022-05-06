@@ -101,13 +101,13 @@ public class SwitchDBInstanceVpcRequest extends Request {
             super();
         } 
 
-        private Builder(SwitchDBInstanceVpcRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.privateIpAddress = response.privateIpAddress;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.VPCId = response.VPCId;
-            this.vSwitchId = response.vSwitchId;
+        private Builder(SwitchDBInstanceVpcRequest request) {
+            super(request);
+            this.DBInstanceId = request.DBInstanceId;
+            this.privateIpAddress = request.privateIpAddress;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.VPCId = request.VPCId;
+            this.vSwitchId = request.vSwitchId;
         } 
 
         /**

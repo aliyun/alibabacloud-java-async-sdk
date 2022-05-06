@@ -103,13 +103,13 @@ public class ModifyDBInstancePayTypeRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDBInstancePayTypeRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.payType = response.payType;
-            this.period = response.period;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.usedTime = response.usedTime;
+        private Builder(ModifyDBInstancePayTypeRequest request) {
+            super(request);
+            this.DBInstanceId = request.DBInstanceId;
+            this.payType = request.payType;
+            this.period = request.period;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.usedTime = request.usedTime;
         } 
 
         /**

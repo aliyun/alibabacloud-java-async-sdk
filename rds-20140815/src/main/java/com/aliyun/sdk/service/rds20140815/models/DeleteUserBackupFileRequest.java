@@ -102,13 +102,13 @@ public class DeleteUserBackupFileRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteUserBackupFileRequest response) {
-            super(response);
-            this.backupId = response.backupId;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DeleteUserBackupFileRequest request) {
+            super(request);
+            this.backupId = request.backupId;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

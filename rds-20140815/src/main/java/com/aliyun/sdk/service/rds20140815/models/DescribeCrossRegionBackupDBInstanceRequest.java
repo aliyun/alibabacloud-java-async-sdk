@@ -127,15 +127,15 @@ public class DescribeCrossRegionBackupDBInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeCrossRegionBackupDBInstanceRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeCrossRegionBackupDBInstanceRequest request) {
+            super(request);
+            this.DBInstanceId = request.DBInstanceId;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

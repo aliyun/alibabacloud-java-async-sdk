@@ -249,24 +249,24 @@ public class CheckCreateDdrDBInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(CheckCreateDdrDBInstanceRequest response) {
-            super(response);
-            this.backupSetId = response.backupSetId;
-            this.binlogName = response.binlogName;
-            this.binlogPosition = response.binlogPosition;
-            this.binlogRole = response.binlogRole;
-            this.DBInstanceClass = response.DBInstanceClass;
-            this.DBInstanceStorage = response.DBInstanceStorage;
-            this.engine = response.engine;
-            this.engineVersion = response.engineVersion;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.restoreTime = response.restoreTime;
-            this.restoreType = response.restoreType;
-            this.sourceDBInstanceName = response.sourceDBInstanceName;
-            this.sourceRegion = response.sourceRegion;
+        private Builder(CheckCreateDdrDBInstanceRequest request) {
+            super(request);
+            this.backupSetId = request.backupSetId;
+            this.binlogName = request.binlogName;
+            this.binlogPosition = request.binlogPosition;
+            this.binlogRole = request.binlogRole;
+            this.DBInstanceClass = request.DBInstanceClass;
+            this.DBInstanceStorage = request.DBInstanceStorage;
+            this.engine = request.engine;
+            this.engineVersion = request.engineVersion;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.restoreTime = request.restoreTime;
+            this.restoreType = request.restoreType;
+            this.sourceDBInstanceName = request.sourceDBInstanceName;
+            this.sourceRegion = request.sourceRegion;
         } 
 
         /**

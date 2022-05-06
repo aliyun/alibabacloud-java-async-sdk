@@ -101,13 +101,13 @@ public class DescribeDBProxyRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDBProxyRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeDBProxyRequest request) {
+            super(request);
+            this.DBInstanceId = request.DBInstanceId;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

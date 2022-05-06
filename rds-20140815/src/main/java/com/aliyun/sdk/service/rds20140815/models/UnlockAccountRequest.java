@@ -102,13 +102,13 @@ public class UnlockAccountRequest extends Request {
             super();
         } 
 
-        private Builder(UnlockAccountRequest response) {
-            super(response);
-            this.accountName = response.accountName;
-            this.DBInstanceId = response.DBInstanceId;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(UnlockAccountRequest request) {
+            super(request);
+            this.accountName = request.accountName;
+            this.DBInstanceId = request.DBInstanceId;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

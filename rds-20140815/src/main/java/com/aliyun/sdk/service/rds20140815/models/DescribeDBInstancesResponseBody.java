@@ -300,6 +300,9 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         @NameInMap("DedicatedHostZoneIdForSlave")
         private String dedicatedHostZoneIdForSlave;
 
+        @NameInMap("DeletionProtection")
+        private Boolean deletionProtection;
+
         @NameInMap("DestroyTime")
         private String destroyTime;
 
@@ -395,6 +398,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             this.dedicatedHostZoneIdForLog = builder.dedicatedHostZoneIdForLog;
             this.dedicatedHostZoneIdForMaster = builder.dedicatedHostZoneIdForMaster;
             this.dedicatedHostZoneIdForSlave = builder.dedicatedHostZoneIdForSlave;
+            this.deletionProtection = builder.deletionProtection;
             this.destroyTime = builder.destroyTime;
             this.engine = builder.engine;
             this.engineVersion = builder.engineVersion;
@@ -581,6 +585,13 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
          */
         public String getDedicatedHostZoneIdForSlave() {
             return this.dedicatedHostZoneIdForSlave;
+        }
+
+        /**
+         * @return deletionProtection
+         */
+        public Boolean getDeletionProtection() {
+            return this.deletionProtection;
         }
 
         /**
@@ -774,6 +785,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             private String dedicatedHostZoneIdForLog; 
             private String dedicatedHostZoneIdForMaster; 
             private String dedicatedHostZoneIdForSlave; 
+            private Boolean deletionProtection; 
             private String destroyTime; 
             private String engine; 
             private String engineVersion; 
@@ -972,6 +984,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
              */
             public Builder dedicatedHostZoneIdForSlave(String dedicatedHostZoneIdForSlave) {
                 this.dedicatedHostZoneIdForSlave = dedicatedHostZoneIdForSlave;
+                return this;
+            }
+
+            /**
+             * DeletionProtection.
+             */
+            public Builder deletionProtection(Boolean deletionProtection) {
+                this.deletionProtection = deletionProtection;
                 return this;
             }
 

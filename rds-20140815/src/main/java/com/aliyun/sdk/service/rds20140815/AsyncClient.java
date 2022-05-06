@@ -40,11 +40,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CheckInstanceExistResponse> checkInstanceExist(CheckInstanceExistRequest request);
 
-    CompletableFuture<ClearDedicatedHostResponse> clearDedicatedHost(ClearDedicatedHostRequest request);
-
     CompletableFuture<CloneDBInstanceResponse> cloneDBInstance(CloneDBInstanceRequest request);
 
     CompletableFuture<CloneParameterGroupResponse> cloneParameterGroup(CloneParameterGroupRequest request);
+
+    CompletableFuture<ConfirmNotifyResponse> confirmNotify(ConfirmNotifyRequest request);
 
     CompletableFuture<CopyDatabaseResponse> copyDatabase(CopyDatabaseRequest request);
 
@@ -66,14 +66,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateDdrInstanceResponse> createDdrInstance(CreateDdrInstanceRequest request);
 
-    CompletableFuture<CreateDedicatedHostResponse> createDedicatedHost(CreateDedicatedHostRequest request);
-
-    CompletableFuture<CreateDedicatedHostAccountResponse> createDedicatedHostAccount(CreateDedicatedHostAccountRequest request);
-
-    CompletableFuture<CreateDedicatedHostGroupResponse> createDedicatedHostGroup(CreateDedicatedHostGroupRequest request);
-
-    CompletableFuture<CreateDedicatedHostUserResponse> createDedicatedHostUser(CreateDedicatedHostUserRequest request);
-
     CompletableFuture<CreateDiagnosticReportResponse> createDiagnosticReport(CreateDiagnosticReportRequest request);
 
     CompletableFuture<CreateGADInstanceResponse> createGADInstance(CreateGADInstanceRequest request);
@@ -82,7 +74,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateMigrateTaskResponse> createMigrateTask(CreateMigrateTaskRequest request);
 
-    CompletableFuture<CreateMigrateTaskForSQLServerResponse> createMigrateTaskForSQLServer(CreateMigrateTaskForSQLServerRequest request);
+    CompletableFuture<CreateNotifyResponse> createNotify(CreateNotifyRequest request);
 
     CompletableFuture<CreateOnlineDatabaseTaskResponse> createOnlineDatabaseTask(CreateOnlineDatabaseTaskRequest request);
 
@@ -106,10 +98,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteDatabaseResponse> deleteDatabase(DeleteDatabaseRequest request);
 
-    CompletableFuture<DeleteDedicatedHostAccountResponse> deleteDedicatedHostAccount(DeleteDedicatedHostAccountRequest request);
-
-    CompletableFuture<DeleteDedicatedHostGroupResponse> deleteDedicatedHostGroup(DeleteDedicatedHostGroupRequest request);
-
     CompletableFuture<DeleteGadInstanceResponse> deleteGadInstance(DeleteGadInstanceRequest request);
 
     CompletableFuture<DeleteParameterGroupResponse> deleteParameterGroup(DeleteParameterGroupRequest request);
@@ -128,13 +116,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeAvailableDedicatedHostClassesResponse> describeAvailableDedicatedHostClasses(DescribeAvailableDedicatedHostClassesRequest request);
 
-    CompletableFuture<DescribeAvailableDedicatedHostZonesResponse> describeAvailableDedicatedHostZones(DescribeAvailableDedicatedHostZonesRequest request);
-
     CompletableFuture<DescribeAvailableMetricsResponse> describeAvailableMetrics(DescribeAvailableMetricsRequest request);
 
     CompletableFuture<DescribeAvailableRecoveryTimeResponse> describeAvailableRecoveryTime(DescribeAvailableRecoveryTimeRequest request);
-
-    CompletableFuture<DescribeAvailableResourceResponse> describeAvailableResource(DescribeAvailableResourceRequest request);
 
     CompletableFuture<DescribeAvailableZonesResponse> describeAvailableZones(DescribeAvailableZonesRequest request);
 
@@ -188,8 +172,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeDBInstanceSSLResponse> describeDBInstanceSSL(DescribeDBInstanceSSLRequest request);
 
-    CompletableFuture<DescribeDBInstanceStatusResponse> describeDBInstanceStatus(DescribeDBInstanceStatusRequest request);
-
     CompletableFuture<DescribeDBInstanceTDEResponse> describeDBInstanceTDE(DescribeDBInstanceTDERequest request);
 
     CompletableFuture<DescribeDBInstancesResponse> describeDBInstances(DescribeDBInstancesRequest request);
@@ -212,11 +194,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeDatabasesResponse> describeDatabases(DescribeDatabasesRequest request);
 
-    CompletableFuture<DescribeDedicatedHostAttributeResponse> describeDedicatedHostAttribute(DescribeDedicatedHostAttributeRequest request);
-
     CompletableFuture<DescribeDedicatedHostGroupsResponse> describeDedicatedHostGroups(DescribeDedicatedHostGroupsRequest request);
-
-    CompletableFuture<DescribeDedicatedHostImageCategoriesResponse> describeDedicatedHostImageCategories(DescribeDedicatedHostImageCategoriesRequest request);
 
     CompletableFuture<DescribeDedicatedHostsResponse> describeDedicatedHosts(DescribeDedicatedHostsRequest request);
 
@@ -250,15 +228,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeMigrateTasksResponse> describeMigrateTasks(DescribeMigrateTasksRequest request);
 
-    CompletableFuture<DescribeMigrateTasksForSQLServerResponse> describeMigrateTasksForSQLServer(DescribeMigrateTasksForSQLServerRequest request);
-
     CompletableFuture<DescribeModifyPGHbaConfigLogResponse> describeModifyPGHbaConfigLog(DescribeModifyPGHbaConfigLogRequest request);
 
     CompletableFuture<DescribeModifyParameterLogResponse> describeModifyParameterLog(DescribeModifyParameterLogRequest request);
 
     CompletableFuture<DescribeOssDownloadsResponse> describeOssDownloads(DescribeOssDownloadsRequest request);
-
-    CompletableFuture<DescribeOssDownloadsForSQLServerResponse> describeOssDownloadsForSQLServer(DescribeOssDownloadsForSQLServerRequest request);
 
     CompletableFuture<DescribePGHbaConfigResponse> describePGHbaConfig(DescribePGHbaConfigRequest request);
 
@@ -312,10 +286,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DetachGadInstanceMemberResponse> detachGadInstanceMember(DetachGadInstanceMemberRequest request);
 
-    CompletableFuture<DropDedicatedHostUserResponse> dropDedicatedHostUser(DropDedicatedHostUserRequest request);
-
-    CompletableFuture<EvaluateDedicatedHostInstanceResourceResponse> evaluateDedicatedHostInstanceResource(EvaluateDedicatedHostInstanceResourceRequest request);
-
     CompletableFuture<GetDbProxyInstanceSslResponse> getDbProxyInstanceSsl(GetDbProxyInstanceSslRequest request);
 
     CompletableFuture<GrantAccountPrivilegeResponse> grantAccountPrivilege(GrantAccountPrivilegeRequest request);
@@ -356,6 +326,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ModifyDBInstanceConnectionStringResponse> modifyDBInstanceConnectionString(ModifyDBInstanceConnectionStringRequest request);
 
+    CompletableFuture<ModifyDBInstanceDeletionProtectionResponse> modifyDBInstanceDeletionProtection(ModifyDBInstanceDeletionProtectionRequest request);
+
     CompletableFuture<ModifyDBInstanceDescriptionResponse> modifyDBInstanceDescription(ModifyDBInstanceDescriptionRequest request);
 
     CompletableFuture<ModifyDBInstanceHAConfigResponse> modifyDBInstanceHAConfig(ModifyDBInstanceHAConfigRequest request);
@@ -394,14 +366,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ModifyDbProxyInstanceSslResponse> modifyDbProxyInstanceSsl(ModifyDbProxyInstanceSslRequest request);
 
-    CompletableFuture<ModifyDedicatedHostAccountResponse> modifyDedicatedHostAccount(ModifyDedicatedHostAccountRequest request);
-
-    CompletableFuture<ModifyDedicatedHostAttributeResponse> modifyDedicatedHostAttribute(ModifyDedicatedHostAttributeRequest request);
-
-    CompletableFuture<ModifyDedicatedHostGroupAttributeResponse> modifyDedicatedHostGroupAttribute(ModifyDedicatedHostGroupAttributeRequest request);
-
-    CompletableFuture<ModifyDedicatedHostUserResponse> modifyDedicatedHostUser(ModifyDedicatedHostUserRequest request);
-
     CompletableFuture<ModifyHADiagnoseConfigResponse> modifyHADiagnoseConfig(ModifyHADiagnoseConfigRequest request);
 
     CompletableFuture<ModifyHASwitchConfigResponse> modifyHASwitchConfig(ModifyHASwitchConfigRequest request);
@@ -432,6 +396,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<PurgeDBInstanceLogResponse> purgeDBInstanceLog(PurgeDBInstanceLogRequest request);
 
+    CompletableFuture<QueryNotifyResponse> queryNotify(QueryNotifyRequest request);
+
     CompletableFuture<RebuildDBInstanceResponse> rebuildDBInstance(RebuildDBInstanceRequest request);
 
     CompletableFuture<RecoveryDBInstanceResponse> recoveryDBInstance(RecoveryDBInstanceRequest request);
@@ -446,15 +412,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RenewInstanceResponse> renewInstance(RenewInstanceRequest request);
 
-    CompletableFuture<ReplaceDedicatedHostResponse> replaceDedicatedHost(ReplaceDedicatedHostRequest request);
-
     CompletableFuture<ResetAccountResponse> resetAccount(ResetAccountRequest request);
 
     CompletableFuture<ResetAccountPasswordResponse> resetAccountPassword(ResetAccountPasswordRequest request);
 
     CompletableFuture<RestartDBInstanceResponse> restartDBInstance(RestartDBInstanceRequest request);
-
-    CompletableFuture<RestartDedicatedHostResponse> restartDedicatedHost(RestartDedicatedHostRequest request);
 
     CompletableFuture<RestoreDdrTableResponse> restoreDdrTable(RestoreDdrTableRequest request);
 

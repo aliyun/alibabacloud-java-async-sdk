@@ -127,15 +127,15 @@ public class DescribeDBProxyEndpointRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDBProxyEndpointRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.DBProxyConnectString = response.DBProxyConnectString;
-            this.DBProxyEndpointId = response.DBProxyEndpointId;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeDBProxyEndpointRequest request) {
+            super(request);
+            this.DBInstanceId = request.DBInstanceId;
+            this.DBProxyConnectString = request.DBProxyConnectString;
+            this.DBProxyEndpointId = request.DBProxyEndpointId;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

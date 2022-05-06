@@ -76,11 +76,11 @@ public class UpgradeDBInstanceMajorVersionPrecheckRequest extends Request {
             super();
         } 
 
-        private Builder(UpgradeDBInstanceMajorVersionPrecheckRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.targetMajorVersion = response.targetMajorVersion;
+        private Builder(UpgradeDBInstanceMajorVersionPrecheckRequest request) {
+            super(request);
+            this.DBInstanceId = request.DBInstanceId;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.targetMajorVersion = request.targetMajorVersion;
         } 
 
         /**

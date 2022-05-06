@@ -157,17 +157,17 @@ public class CreateParameterGroupRequest extends Request {
             super();
         } 
 
-        private Builder(CreateParameterGroupRequest response) {
-            super(response);
-            this.engine = response.engine;
-            this.engineVersion = response.engineVersion;
-            this.ownerId = response.ownerId;
-            this.parameterGroupDesc = response.parameterGroupDesc;
-            this.parameterGroupName = response.parameterGroupName;
-            this.parameters = response.parameters;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(CreateParameterGroupRequest request) {
+            super(request);
+            this.engine = request.engine;
+            this.engineVersion = request.engineVersion;
+            this.ownerId = request.ownerId;
+            this.parameterGroupDesc = request.parameterGroupDesc;
+            this.parameterGroupName = request.parameterGroupName;
+            this.parameters = request.parameters;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

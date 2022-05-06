@@ -192,20 +192,20 @@ public class DescribeMetaListRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeMetaListRequest response) {
-            super(response);
-            this.backupSetID = response.backupSetID;
-            this.clientToken = response.clientToken;
-            this.DBInstanceId = response.DBInstanceId;
-            this.getDbName = response.getDbName;
-            this.ownerId = response.ownerId;
-            this.pageIndex = response.pageIndex;
-            this.pageSize = response.pageSize;
-            this.pattern = response.pattern;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.restoreTime = response.restoreTime;
-            this.restoreType = response.restoreType;
+        private Builder(DescribeMetaListRequest request) {
+            super(request);
+            this.backupSetID = request.backupSetID;
+            this.clientToken = request.clientToken;
+            this.DBInstanceId = request.DBInstanceId;
+            this.getDbName = request.getDbName;
+            this.ownerId = request.ownerId;
+            this.pageIndex = request.pageIndex;
+            this.pageSize = request.pageSize;
+            this.pattern = request.pattern;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.restoreTime = request.restoreTime;
+            this.restoreType = request.restoreType;
         } 
 
         /**

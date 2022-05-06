@@ -115,14 +115,14 @@ public class ModifyDBInstanceConnectionModeRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDBInstanceConnectionModeRequest response) {
-            super(response);
-            this.connectionMode = response.connectionMode;
-            this.DBInstanceId = response.DBInstanceId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyDBInstanceConnectionModeRequest request) {
+            super(request);
+            this.connectionMode = request.connectionMode;
+            this.DBInstanceId = request.DBInstanceId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

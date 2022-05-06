@@ -156,17 +156,17 @@ public class CreateOnlineDatabaseTaskRequest extends Request {
             super();
         } 
 
-        private Builder(CreateOnlineDatabaseTaskRequest response) {
-            super(response);
-            this.checkDBMode = response.checkDBMode;
-            this.clientToken = response.clientToken;
-            this.DBInstanceId = response.DBInstanceId;
-            this.DBName = response.DBName;
-            this.migrateTaskId = response.migrateTaskId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(CreateOnlineDatabaseTaskRequest request) {
+            super(request);
+            this.checkDBMode = request.checkDBMode;
+            this.clientToken = request.clientToken;
+            this.DBInstanceId = request.DBInstanceId;
+            this.DBName = request.DBName;
+            this.migrateTaskId = request.migrateTaskId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

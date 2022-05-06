@@ -115,14 +115,14 @@ public class ModifyDBInstanceDescriptionRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDBInstanceDescriptionRequest response) {
-            super(response);
-            this.DBInstanceDescription = response.DBInstanceDescription;
-            this.DBInstanceId = response.DBInstanceId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyDBInstanceDescriptionRequest request) {
+            super(request);
+            this.DBInstanceDescription = request.DBInstanceDescription;
+            this.DBInstanceId = request.DBInstanceId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

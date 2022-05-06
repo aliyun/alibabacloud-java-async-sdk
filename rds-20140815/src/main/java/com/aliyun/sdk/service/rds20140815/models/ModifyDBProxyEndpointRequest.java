@@ -218,22 +218,22 @@ public class ModifyDBProxyEndpointRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDBProxyEndpointRequest response) {
-            super(response);
-            this.configDBProxyFeatures = response.configDBProxyFeatures;
-            this.DBInstanceId = response.DBInstanceId;
-            this.DBProxyEndpointId = response.DBProxyEndpointId;
-            this.dbEndpointAliases = response.dbEndpointAliases;
-            this.dbEndpointOperator = response.dbEndpointOperator;
-            this.dbEndpointReadWriteMode = response.dbEndpointReadWriteMode;
-            this.dbEndpointType = response.dbEndpointType;
-            this.ownerId = response.ownerId;
-            this.readOnlyInstanceDistributionType = response.readOnlyInstanceDistributionType;
-            this.readOnlyInstanceMaxDelayTime = response.readOnlyInstanceMaxDelayTime;
-            this.readOnlyInstanceWeight = response.readOnlyInstanceWeight;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyDBProxyEndpointRequest request) {
+            super(request);
+            this.configDBProxyFeatures = request.configDBProxyFeatures;
+            this.DBInstanceId = request.DBInstanceId;
+            this.DBProxyEndpointId = request.DBProxyEndpointId;
+            this.dbEndpointAliases = request.dbEndpointAliases;
+            this.dbEndpointOperator = request.dbEndpointOperator;
+            this.dbEndpointReadWriteMode = request.dbEndpointReadWriteMode;
+            this.dbEndpointType = request.dbEndpointType;
+            this.ownerId = request.ownerId;
+            this.readOnlyInstanceDistributionType = request.readOnlyInstanceDistributionType;
+            this.readOnlyInstanceMaxDelayTime = request.readOnlyInstanceMaxDelayTime;
+            this.readOnlyInstanceWeight = request.readOnlyInstanceWeight;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

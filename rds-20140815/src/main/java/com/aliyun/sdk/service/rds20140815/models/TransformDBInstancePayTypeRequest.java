@@ -180,19 +180,19 @@ public class TransformDBInstancePayTypeRequest extends Request {
             super();
         } 
 
-        private Builder(TransformDBInstancePayTypeRequest response) {
-            super(response);
-            this.autoRenew = response.autoRenew;
-            this.businessInfo = response.businessInfo;
-            this.clientToken = response.clientToken;
-            this.DBInstanceId = response.DBInstanceId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.payType = response.payType;
-            this.period = response.period;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.usedTime = response.usedTime;
+        private Builder(TransformDBInstancePayTypeRequest request) {
+            super(request);
+            this.autoRenew = request.autoRenew;
+            this.businessInfo = request.businessInfo;
+            this.clientToken = request.clientToken;
+            this.DBInstanceId = request.DBInstanceId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.payType = request.payType;
+            this.period = request.period;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.usedTime = request.usedTime;
         } 
 
         /**

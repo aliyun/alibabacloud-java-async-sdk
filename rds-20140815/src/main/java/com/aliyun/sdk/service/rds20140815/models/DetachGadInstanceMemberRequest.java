@@ -76,11 +76,11 @@ public class DetachGadInstanceMemberRequest extends Request {
             super();
         } 
 
-        private Builder(DetachGadInstanceMemberRequest response) {
-            super(response);
-            this.gadInstanceName = response.gadInstanceName;
-            this.memberInstanceName = response.memberInstanceName;
-            this.regionId = response.regionId;
+        private Builder(DetachGadInstanceMemberRequest request) {
+            super(request);
+            this.gadInstanceName = request.gadInstanceName;
+            this.memberInstanceName = request.memberInstanceName;
+            this.regionId = request.regionId;
         } 
 
         /**

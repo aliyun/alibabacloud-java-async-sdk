@@ -129,15 +129,15 @@ public class ReleaseInstanceConnectionRequest extends Request {
             super();
         } 
 
-        private Builder(ReleaseInstanceConnectionRequest response) {
-            super(response);
-            this.currentConnectionString = response.currentConnectionString;
-            this.DBInstanceId = response.DBInstanceId;
-            this.instanceNetworkType = response.instanceNetworkType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ReleaseInstanceConnectionRequest request) {
+            super(request);
+            this.currentConnectionString = request.currentConnectionString;
+            this.DBInstanceId = request.DBInstanceId;
+            this.instanceNetworkType = request.instanceNetworkType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

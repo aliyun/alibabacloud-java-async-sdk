@@ -61,10 +61,10 @@ public class DescribeGadInstancesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeGadInstancesRequest response) {
-            super(response);
-            this.gadInstanceName = response.gadInstanceName;
-            this.regionId = response.regionId;
+        private Builder(DescribeGadInstancesRequest request) {
+            super(request);
+            this.gadInstanceName = request.gadInstanceName;
+            this.regionId = request.regionId;
         } 
 
         /**

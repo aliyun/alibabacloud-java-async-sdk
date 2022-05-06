@@ -49,6 +49,14 @@ public class ModifyParameterRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
+    @Query
+    @NameInMap("SwitchTime")
+    private String switchTime;
+
+    @Query
+    @NameInMap("SwitchTimeMode")
+    private String switchTimeMode;
+
     private ModifyParameterRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
@@ -60,6 +68,8 @@ public class ModifyParameterRequest extends Request {
         this.parameters = builder.parameters;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.switchTime = builder.switchTime;
+        this.switchTimeMode = builder.switchTimeMode;
     }
 
     public static Builder builder() {
@@ -138,6 +148,20 @@ public class ModifyParameterRequest extends Request {
         return this.resourceOwnerId;
     }
 
+    /**
+     * @return switchTime
+     */
+    public String getSwitchTime() {
+        return this.switchTime;
+    }
+
+    /**
+     * @return switchTimeMode
+     */
+    public String getSwitchTimeMode() {
+        return this.switchTimeMode;
+    }
+
     public static final class Builder extends Request.Builder<ModifyParameterRequest, Builder> {
         private String clientToken; 
         private String DBInstanceId; 
@@ -148,22 +172,26 @@ public class ModifyParameterRequest extends Request {
         private String parameters; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String switchTime; 
+        private String switchTimeMode; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ModifyParameterRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.DBInstanceId = response.DBInstanceId;
-            this.forcerestart = response.forcerestart;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.parameterGroupId = response.parameterGroupId;
-            this.parameters = response.parameters;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyParameterRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.DBInstanceId = request.DBInstanceId;
+            this.forcerestart = request.forcerestart;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.parameterGroupId = request.parameterGroupId;
+            this.parameters = request.parameters;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.switchTime = request.switchTime;
+            this.switchTimeMode = request.switchTimeMode;
         } 
 
         /**
@@ -244,6 +272,24 @@ public class ModifyParameterRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * SwitchTime.
+         */
+        public Builder switchTime(String switchTime) {
+            this.putQueryParameter("SwitchTime", switchTime);
+            this.switchTime = switchTime;
+            return this;
+        }
+
+        /**
+         * SwitchTimeMode.
+         */
+        public Builder switchTimeMode(String switchTimeMode) {
+            this.putQueryParameter("SwitchTimeMode", switchTimeMode);
+            this.switchTimeMode = switchTimeMode;
             return this;
         }
 

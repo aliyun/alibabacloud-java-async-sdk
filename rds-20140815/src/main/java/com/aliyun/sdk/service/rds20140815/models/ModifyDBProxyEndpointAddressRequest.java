@@ -141,16 +141,16 @@ public class ModifyDBProxyEndpointAddressRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDBProxyEndpointAddressRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.DBProxyConnectStringNetType = response.DBProxyConnectStringNetType;
-            this.DBProxyEndpointId = response.DBProxyEndpointId;
-            this.DBProxyNewConnectString = response.DBProxyNewConnectString;
-            this.DBProxyNewConnectStringPort = response.DBProxyNewConnectStringPort;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyDBProxyEndpointAddressRequest request) {
+            super(request);
+            this.DBInstanceId = request.DBInstanceId;
+            this.DBProxyConnectStringNetType = request.DBProxyConnectStringNetType;
+            this.DBProxyEndpointId = request.DBProxyEndpointId;
+            this.DBProxyNewConnectString = request.DBProxyNewConnectString;
+            this.DBProxyNewConnectStringPort = request.DBProxyNewConnectStringPort;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

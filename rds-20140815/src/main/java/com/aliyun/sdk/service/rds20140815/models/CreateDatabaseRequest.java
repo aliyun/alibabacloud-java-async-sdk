@@ -142,16 +142,16 @@ public class CreateDatabaseRequest extends Request {
             super();
         } 
 
-        private Builder(CreateDatabaseRequest response) {
-            super(response);
-            this.characterSetName = response.characterSetName;
-            this.DBDescription = response.DBDescription;
-            this.DBInstanceId = response.DBInstanceId;
-            this.DBName = response.DBName;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(CreateDatabaseRequest request) {
+            super(request);
+            this.characterSetName = request.characterSetName;
+            this.DBDescription = request.DBDescription;
+            this.DBInstanceId = request.DBInstanceId;
+            this.DBName = request.DBName;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

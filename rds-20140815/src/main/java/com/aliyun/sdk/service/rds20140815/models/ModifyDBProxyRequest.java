@@ -167,18 +167,18 @@ public class ModifyDBProxyRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDBProxyRequest response) {
-            super(response);
-            this.configDBProxyService = response.configDBProxyService;
-            this.DBInstanceId = response.DBInstanceId;
-            this.DBProxyInstanceNum = response.DBProxyInstanceNum;
-            this.instanceNetworkType = response.instanceNetworkType;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.VPCId = response.VPCId;
-            this.vSwitchId = response.vSwitchId;
+        private Builder(ModifyDBProxyRequest request) {
+            super(request);
+            this.configDBProxyService = request.configDBProxyService;
+            this.DBInstanceId = request.DBInstanceId;
+            this.DBProxyInstanceNum = request.DBProxyInstanceNum;
+            this.instanceNetworkType = request.instanceNetworkType;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.VPCId = request.VPCId;
+            this.vSwitchId = request.vSwitchId;
         } 
 
         /**

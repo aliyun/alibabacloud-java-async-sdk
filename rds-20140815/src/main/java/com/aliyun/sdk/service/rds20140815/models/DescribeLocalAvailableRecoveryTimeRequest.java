@@ -101,13 +101,13 @@ public class DescribeLocalAvailableRecoveryTimeRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeLocalAvailableRecoveryTimeRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.ownerId = response.ownerId;
-            this.region = response.region;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeLocalAvailableRecoveryTimeRequest request) {
+            super(request);
+            this.DBInstanceId = request.DBInstanceId;
+            this.ownerId = request.ownerId;
+            this.region = request.region;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

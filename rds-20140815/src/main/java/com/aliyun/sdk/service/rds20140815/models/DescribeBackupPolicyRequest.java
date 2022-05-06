@@ -140,16 +140,16 @@ public class DescribeBackupPolicyRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeBackupPolicyRequest response) {
-            super(response);
-            this.backupPolicyMode = response.backupPolicyMode;
-            this.compressType = response.compressType;
-            this.DBInstanceId = response.DBInstanceId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.releasedKeepPolicy = response.releasedKeepPolicy;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeBackupPolicyRequest request) {
+            super(request);
+            this.backupPolicyMode = request.backupPolicyMode;
+            this.compressType = request.compressType;
+            this.DBInstanceId = request.DBInstanceId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.releasedKeepPolicy = request.releasedKeepPolicy;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

@@ -88,12 +88,12 @@ public class CheckInstanceExistRequest extends Request {
             super();
         } 
 
-        private Builder(CheckInstanceExistRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(CheckInstanceExistRequest request) {
+            super(request);
+            this.DBInstanceId = request.DBInstanceId;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

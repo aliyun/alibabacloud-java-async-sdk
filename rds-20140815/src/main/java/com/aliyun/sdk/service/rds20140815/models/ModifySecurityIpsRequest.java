@@ -154,17 +154,17 @@ public class ModifySecurityIpsRequest extends Request {
             super();
         } 
 
-        private Builder(ModifySecurityIpsRequest response) {
-            super(response);
-            this.DBInstanceIPArrayAttribute = response.DBInstanceIPArrayAttribute;
-            this.DBInstanceIPArrayName = response.DBInstanceIPArrayName;
-            this.DBInstanceId = response.DBInstanceId;
-            this.freshWhiteListReadins = response.freshWhiteListReadins;
-            this.modifyMode = response.modifyMode;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.securityIPType = response.securityIPType;
-            this.securityIps = response.securityIps;
-            this.whitelistNetworkType = response.whitelistNetworkType;
+        private Builder(ModifySecurityIpsRequest request) {
+            super(request);
+            this.DBInstanceIPArrayAttribute = request.DBInstanceIPArrayAttribute;
+            this.DBInstanceIPArrayName = request.DBInstanceIPArrayName;
+            this.DBInstanceId = request.DBInstanceId;
+            this.freshWhiteListReadins = request.freshWhiteListReadins;
+            this.modifyMode = request.modifyMode;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.securityIPType = request.securityIPType;
+            this.securityIps = request.securityIps;
+            this.whitelistNetworkType = request.whitelistNetworkType;
         } 
 
         /**

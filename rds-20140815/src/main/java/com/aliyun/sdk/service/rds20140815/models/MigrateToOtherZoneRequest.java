@@ -245,24 +245,24 @@ public class MigrateToOtherZoneRequest extends Request {
             super();
         } 
 
-        private Builder(MigrateToOtherZoneRequest response) {
-            super(response);
-            this.category = response.category;
-            this.DBInstanceClass = response.DBInstanceClass;
-            this.DBInstanceId = response.DBInstanceId;
-            this.DBInstanceStorage = response.DBInstanceStorage;
-            this.effectiveTime = response.effectiveTime;
-            this.isModifySpec = response.isModifySpec;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.switchTime = response.switchTime;
-            this.VPCId = response.VPCId;
-            this.vSwitchId = response.vSwitchId;
-            this.zoneId = response.zoneId;
-            this.zoneIdSlave1 = response.zoneIdSlave1;
-            this.zoneIdSlave2 = response.zoneIdSlave2;
+        private Builder(MigrateToOtherZoneRequest request) {
+            super(request);
+            this.category = request.category;
+            this.DBInstanceClass = request.DBInstanceClass;
+            this.DBInstanceId = request.DBInstanceId;
+            this.DBInstanceStorage = request.DBInstanceStorage;
+            this.effectiveTime = request.effectiveTime;
+            this.isModifySpec = request.isModifySpec;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.switchTime = request.switchTime;
+            this.VPCId = request.VPCId;
+            this.vSwitchId = request.vSwitchId;
+            this.zoneId = request.zoneId;
+            this.zoneIdSlave1 = request.zoneIdSlave1;
+            this.zoneIdSlave2 = request.zoneIdSlave2;
         } 
 
         /**

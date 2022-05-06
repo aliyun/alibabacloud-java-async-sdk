@@ -129,15 +129,15 @@ public class ImportDatabaseBetweenInstancesRequest extends Request {
             super();
         } 
 
-        private Builder(ImportDatabaseBetweenInstancesRequest response) {
-            super(response);
-            this.DBInfo = response.DBInfo;
-            this.DBInstanceId = response.DBInstanceId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sourceDBInstanceId = response.sourceDBInstanceId;
+        private Builder(ImportDatabaseBetweenInstancesRequest request) {
+            super(request);
+            this.DBInfo = request.DBInfo;
+            this.DBInstanceId = request.DBInstanceId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceDBInstanceId = request.sourceDBInstanceId;
         } 
 
         /**

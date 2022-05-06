@@ -132,15 +132,15 @@ public class CreateGADInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(CreateGADInstanceRequest response) {
-            super(response);
-            this.centralDBInstanceId = response.centralDBInstanceId;
-            this.centralRdsDtsAdminAccount = response.centralRdsDtsAdminAccount;
-            this.centralRdsDtsAdminPassword = response.centralRdsDtsAdminPassword;
-            this.centralRegionId = response.centralRegionId;
-            this.DBList = response.DBList;
-            this.description = response.description;
-            this.unitNode = response.unitNode;
+        private Builder(CreateGADInstanceRequest request) {
+            super(request);
+            this.centralDBInstanceId = request.centralDBInstanceId;
+            this.centralRdsDtsAdminAccount = request.centralRdsDtsAdminAccount;
+            this.centralRdsDtsAdminPassword = request.centralRdsDtsAdminPassword;
+            this.centralRegionId = request.centralRegionId;
+            this.DBList = request.DBList;
+            this.description = request.description;
+            this.unitNode = request.unitNode;
         } 
 
         /**

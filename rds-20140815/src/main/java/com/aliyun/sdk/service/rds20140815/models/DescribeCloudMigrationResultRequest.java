@@ -142,16 +142,16 @@ public class DescribeCloudMigrationResultRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeCloudMigrationResultRequest response) {
-            super(response);
-            this.DBInstanceName = response.DBInstanceName;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sourceIpAddress = response.sourceIpAddress;
-            this.sourcePort = response.sourcePort;
-            this.taskId = response.taskId;
-            this.taskName = response.taskName;
+        private Builder(DescribeCloudMigrationResultRequest request) {
+            super(request);
+            this.DBInstanceName = request.DBInstanceName;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceIpAddress = request.sourceIpAddress;
+            this.sourcePort = request.sourcePort;
+            this.taskId = request.taskId;
+            this.taskName = request.taskName;
         } 
 
         /**

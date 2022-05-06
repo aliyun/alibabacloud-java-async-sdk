@@ -157,17 +157,17 @@ public class DescribeDBProxyPerformanceRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDBProxyPerformanceRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.DBProxyInstanceType = response.DBProxyInstanceType;
-            this.endTime = response.endTime;
-            this.metricsName = response.metricsName;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.startTime = response.startTime;
+        private Builder(DescribeDBProxyPerformanceRequest request) {
+            super(request);
+            this.DBInstanceId = request.DBInstanceId;
+            this.DBProxyInstanceType = request.DBProxyInstanceType;
+            this.endTime = request.endTime;
+            this.metricsName = request.metricsName;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.startTime = request.startTime;
         } 
 
         /**

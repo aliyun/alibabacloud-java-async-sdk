@@ -114,14 +114,14 @@ public class DescribeDedicatedHostGroupsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDedicatedHostGroupsRequest response) {
-            super(response);
-            this.dedicatedHostGroupId = response.dedicatedHostGroupId;
-            this.imageCategory = response.imageCategory;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeDedicatedHostGroupsRequest request) {
+            super(request);
+            this.dedicatedHostGroupId = request.dedicatedHostGroupId;
+            this.imageCategory = request.imageCategory;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

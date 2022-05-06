@@ -155,17 +155,17 @@ public class DescribeUpgradeMajorVersionPrecheckTaskRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeUpgradeMajorVersionPrecheckTaskRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.targetMajorVersion = response.targetMajorVersion;
-            this.taskId = response.taskId;
+        private Builder(DescribeUpgradeMajorVersionPrecheckTaskRequest request) {
+            super(request);
+            this.DBInstanceId = request.DBInstanceId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.targetMajorVersion = request.targetMajorVersion;
+            this.taskId = request.taskId;
         } 
 
         /**

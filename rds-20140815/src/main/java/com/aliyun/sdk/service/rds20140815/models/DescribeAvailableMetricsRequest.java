@@ -62,10 +62,10 @@ public class DescribeAvailableMetricsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAvailableMetricsRequest response) {
-            super(response);
-            this.DBInstanceName = response.DBInstanceName;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeAvailableMetricsRequest request) {
+            super(request);
+            this.DBInstanceName = request.DBInstanceName;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

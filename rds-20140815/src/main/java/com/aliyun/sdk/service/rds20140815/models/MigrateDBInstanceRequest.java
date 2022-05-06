@@ -193,20 +193,20 @@ public class MigrateDBInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(MigrateDBInstanceRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.dedicatedHostGroupId = response.dedicatedHostGroupId;
-            this.effectiveTime = response.effectiveTime;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.specifiedTime = response.specifiedTime;
-            this.targetDedicatedHostIdForMaster = response.targetDedicatedHostIdForMaster;
-            this.targetDedicatedHostIdForSlave = response.targetDedicatedHostIdForSlave;
-            this.zoneIdForFollower = response.zoneIdForFollower;
-            this.zoneIdForLog = response.zoneIdForLog;
+        private Builder(MigrateDBInstanceRequest request) {
+            super(request);
+            this.DBInstanceId = request.DBInstanceId;
+            this.dedicatedHostGroupId = request.dedicatedHostGroupId;
+            this.effectiveTime = request.effectiveTime;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.specifiedTime = request.specifiedTime;
+            this.targetDedicatedHostIdForMaster = request.targetDedicatedHostIdForMaster;
+            this.targetDedicatedHostIdForSlave = request.targetDedicatedHostIdForSlave;
+            this.zoneIdForFollower = request.zoneIdForFollower;
+            this.zoneIdForLog = request.zoneIdForLog;
         } 
 
         /**

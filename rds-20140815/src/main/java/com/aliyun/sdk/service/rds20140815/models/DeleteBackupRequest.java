@@ -115,14 +115,14 @@ public class DeleteBackupRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteBackupRequest response) {
-            super(response);
-            this.backupId = response.backupId;
-            this.DBInstanceId = response.DBInstanceId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DeleteBackupRequest request) {
+            super(request);
+            this.backupId = request.backupId;
+            this.DBInstanceId = request.DBInstanceId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

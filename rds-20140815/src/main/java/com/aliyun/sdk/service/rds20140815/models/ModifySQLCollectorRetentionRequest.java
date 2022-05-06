@@ -154,17 +154,17 @@ public class ModifySQLCollectorRetentionRequest extends Request {
             super();
         } 
 
-        private Builder(ModifySQLCollectorRetentionRequest response) {
-            super(response);
-            this.configValue = response.configValue;
-            this.DBInstanceId = response.DBInstanceId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.securityToken = response.securityToken;
+        private Builder(ModifySQLCollectorRetentionRequest request) {
+            super(request);
+            this.configValue = request.configValue;
+            this.DBInstanceId = request.DBInstanceId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.securityToken = request.securityToken;
         } 
 
         /**

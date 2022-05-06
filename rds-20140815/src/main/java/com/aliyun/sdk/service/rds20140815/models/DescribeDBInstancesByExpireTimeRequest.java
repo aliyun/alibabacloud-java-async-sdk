@@ -180,19 +180,19 @@ public class DescribeDBInstancesByExpireTimeRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDBInstancesByExpireTimeRequest response) {
-            super(response);
-            this.expirePeriod = response.expirePeriod;
-            this.expired = response.expired;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.tags = response.tags;
-            this.proxyId = response.proxyId;
+        private Builder(DescribeDBInstancesByExpireTimeRequest request) {
+            super(request);
+            this.expirePeriod = request.expirePeriod;
+            this.expired = request.expired;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.tags = request.tags;
+            this.proxyId = request.proxyId;
         } 
 
         /**

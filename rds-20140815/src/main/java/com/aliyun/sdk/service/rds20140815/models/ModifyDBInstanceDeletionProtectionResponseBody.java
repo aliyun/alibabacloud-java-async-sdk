@@ -7,15 +7,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ModifyDedicatedHostGroupAttributeResponseBody} extends {@link TeaModel}
+ * {@link ModifyDBInstanceDeletionProtectionResponseBody} extends {@link TeaModel}
  *
- * <p>ModifyDedicatedHostGroupAttributeResponseBody</p>
+ * <p>ModifyDBInstanceDeletionProtectionResponseBody</p>
  */
-public class ModifyDedicatedHostGroupAttributeResponseBody extends TeaModel {
+public class ModifyDBInstanceDeletionProtectionResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private ModifyDedicatedHostGroupAttributeResponseBody(Builder builder) {
+    private ModifyDBInstanceDeletionProtectionResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -23,7 +23,7 @@ public class ModifyDedicatedHostGroupAttributeResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ModifyDedicatedHostGroupAttributeResponseBody create() {
+    public static ModifyDBInstanceDeletionProtectionResponseBody create() {
         return builder().build();
     }
 
@@ -38,15 +38,15 @@ public class ModifyDedicatedHostGroupAttributeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public ModifyDedicatedHostGroupAttributeResponseBody build() {
-            return new ModifyDedicatedHostGroupAttributeResponseBody(this);
+        public ModifyDBInstanceDeletionProtectionResponseBody build() {
+            return new ModifyDBInstanceDeletionProtectionResponseBody(this);
         } 
 
     } 

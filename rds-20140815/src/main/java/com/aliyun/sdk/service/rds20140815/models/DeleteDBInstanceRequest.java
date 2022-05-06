@@ -114,14 +114,14 @@ public class DeleteDBInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteDBInstanceRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.releasedKeepPolicy = response.releasedKeepPolicy;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DeleteDBInstanceRequest request) {
+            super(request);
+            this.DBInstanceId = request.DBInstanceId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.releasedKeepPolicy = request.releasedKeepPolicy;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

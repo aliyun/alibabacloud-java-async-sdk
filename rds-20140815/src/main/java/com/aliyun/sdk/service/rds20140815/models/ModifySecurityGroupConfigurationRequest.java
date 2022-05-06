@@ -102,13 +102,13 @@ public class ModifySecurityGroupConfigurationRequest extends Request {
             super();
         } 
 
-        private Builder(ModifySecurityGroupConfigurationRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.securityGroupId = response.securityGroupId;
+        private Builder(ModifySecurityGroupConfigurationRequest request) {
+            super(request);
+            this.DBInstanceId = request.DBInstanceId;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.securityGroupId = request.securityGroupId;
         } 
 
         /**

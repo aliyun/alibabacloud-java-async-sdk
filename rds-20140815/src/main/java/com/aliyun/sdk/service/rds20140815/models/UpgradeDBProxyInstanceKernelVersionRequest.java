@@ -114,14 +114,14 @@ public class UpgradeDBProxyInstanceKernelVersionRequest extends Request {
             super();
         } 
 
-        private Builder(UpgradeDBProxyInstanceKernelVersionRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.switchTime = response.switchTime;
-            this.upgradeTime = response.upgradeTime;
+        private Builder(UpgradeDBProxyInstanceKernelVersionRequest request) {
+            super(request);
+            this.DBInstanceId = request.DBInstanceId;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.switchTime = request.switchTime;
+            this.upgradeTime = request.upgradeTime;
         } 
 
         /**

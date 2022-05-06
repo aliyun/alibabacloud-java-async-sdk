@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyDBInstanceSpecRequest extends Request {
     @Query
+    @NameInMap("Category")
+    private String category;
+
+    @Query
     @NameInMap("DBInstanceClass")
     private String DBInstanceClass;
 
@@ -72,6 +76,10 @@ public class ModifyDBInstanceSpecRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
+    @NameInMap("ServerlessConfiguration")
+    private ServerlessConfiguration serverlessConfiguration;
+
+    @Query
     @NameInMap("SourceBiz")
     private String sourceBiz;
 
@@ -89,6 +97,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
 
     private ModifyDBInstanceSpecRequest(Builder builder) {
         super(builder);
+        this.category = builder.category;
         this.DBInstanceClass = builder.DBInstanceClass;
         this.DBInstanceId = builder.DBInstanceId;
         this.DBInstanceStorage = builder.DBInstanceStorage;
@@ -103,6 +112,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.serverlessConfiguration = builder.serverlessConfiguration;
         this.sourceBiz = builder.sourceBiz;
         this.switchTime = builder.switchTime;
         this.usedTime = builder.usedTime;
@@ -120,6 +130,13 @@ public class ModifyDBInstanceSpecRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return category
+     */
+    public String getCategory() {
+        return this.category;
     }
 
     /**
@@ -221,6 +238,13 @@ public class ModifyDBInstanceSpecRequest extends Request {
     }
 
     /**
+     * @return serverlessConfiguration
+     */
+    public ServerlessConfiguration getServerlessConfiguration() {
+        return this.serverlessConfiguration;
+    }
+
+    /**
      * @return sourceBiz
      */
     public String getSourceBiz() {
@@ -249,6 +273,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyDBInstanceSpecRequest, Builder> {
+        private String category; 
         private String DBInstanceClass; 
         private String DBInstanceId; 
         private Integer DBInstanceStorage; 
@@ -263,6 +288,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private ServerlessConfiguration serverlessConfiguration; 
         private String sourceBiz; 
         private String switchTime; 
         private Long usedTime; 
@@ -272,27 +298,38 @@ public class ModifyDBInstanceSpecRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDBInstanceSpecRequest response) {
-            super(response);
-            this.DBInstanceClass = response.DBInstanceClass;
-            this.DBInstanceId = response.DBInstanceId;
-            this.DBInstanceStorage = response.DBInstanceStorage;
-            this.DBInstanceStorageType = response.DBInstanceStorageType;
-            this.dedicatedHostGroupId = response.dedicatedHostGroupId;
-            this.direction = response.direction;
-            this.effectiveTime = response.effectiveTime;
-            this.engineVersion = response.engineVersion;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.payType = response.payType;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sourceBiz = response.sourceBiz;
-            this.switchTime = response.switchTime;
-            this.usedTime = response.usedTime;
-            this.zoneId = response.zoneId;
+        private Builder(ModifyDBInstanceSpecRequest request) {
+            super(request);
+            this.category = request.category;
+            this.DBInstanceClass = request.DBInstanceClass;
+            this.DBInstanceId = request.DBInstanceId;
+            this.DBInstanceStorage = request.DBInstanceStorage;
+            this.DBInstanceStorageType = request.DBInstanceStorageType;
+            this.dedicatedHostGroupId = request.dedicatedHostGroupId;
+            this.direction = request.direction;
+            this.effectiveTime = request.effectiveTime;
+            this.engineVersion = request.engineVersion;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.payType = request.payType;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.serverlessConfiguration = request.serverlessConfiguration;
+            this.sourceBiz = request.sourceBiz;
+            this.switchTime = request.switchTime;
+            this.usedTime = request.usedTime;
+            this.zoneId = request.zoneId;
         } 
+
+        /**
+         * Category.
+         */
+        public Builder category(String category) {
+            this.putQueryParameter("Category", category);
+            this.category = category;
+            return this;
+        }
 
         /**
          * DBInstanceClass.
@@ -421,6 +458,16 @@ public class ModifyDBInstanceSpecRequest extends Request {
         }
 
         /**
+         * ServerlessConfiguration.
+         */
+        public Builder serverlessConfiguration(ServerlessConfiguration serverlessConfiguration) {
+            String serverlessConfigurationShrink = shrink(serverlessConfiguration, "ServerlessConfiguration", "json");
+            this.putQueryParameter("ServerlessConfiguration", serverlessConfigurationShrink);
+            this.serverlessConfiguration = serverlessConfiguration;
+            return this;
+        }
+
+        /**
          * SourceBiz.
          */
         public Builder sourceBiz(String sourceBiz) {
@@ -463,4 +510,65 @@ public class ModifyDBInstanceSpecRequest extends Request {
 
     } 
 
+    public static class ServerlessConfiguration extends TeaModel {
+        @NameInMap("MaxCapacity")
+        private Double maxCapacity;
+
+        @NameInMap("MinCapacity")
+        private Double minCapacity;
+
+        private ServerlessConfiguration(Builder builder) {
+            this.maxCapacity = builder.maxCapacity;
+            this.minCapacity = builder.minCapacity;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ServerlessConfiguration create() {
+            return builder().build();
+        }
+
+        /**
+         * @return maxCapacity
+         */
+        public Double getMaxCapacity() {
+            return this.maxCapacity;
+        }
+
+        /**
+         * @return minCapacity
+         */
+        public Double getMinCapacity() {
+            return this.minCapacity;
+        }
+
+        public static final class Builder {
+            private Double maxCapacity; 
+            private Double minCapacity; 
+
+            /**
+             * MaxCapacity.
+             */
+            public Builder maxCapacity(Double maxCapacity) {
+                this.maxCapacity = maxCapacity;
+                return this;
+            }
+
+            /**
+             * MinCapacity.
+             */
+            public Builder minCapacity(Double minCapacity) {
+                this.minCapacity = minCapacity;
+                return this;
+            }
+
+            public ServerlessConfiguration build() {
+                return new ServerlessConfiguration(this);
+            } 
+
+        } 
+
+    }
 }

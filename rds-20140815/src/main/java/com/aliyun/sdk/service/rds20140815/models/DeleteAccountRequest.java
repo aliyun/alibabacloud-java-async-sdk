@@ -115,14 +115,14 @@ public class DeleteAccountRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteAccountRequest response) {
-            super(response);
-            this.accountName = response.accountName;
-            this.DBInstanceId = response.DBInstanceId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DeleteAccountRequest request) {
+            super(request);
+            this.accountName = request.accountName;
+            this.DBInstanceId = request.DBInstanceId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

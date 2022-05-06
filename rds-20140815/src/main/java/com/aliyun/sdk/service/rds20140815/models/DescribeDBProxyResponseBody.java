@@ -27,6 +27,9 @@ public class DescribeDBProxyResponseBody extends TeaModel {
     @NameInMap("DBProxyInstanceNum")
     private Integer DBProxyInstanceNum;
 
+    @NameInMap("DBProxyInstanceSize")
+    private String DBProxyInstanceSize;
+
     @NameInMap("DBProxyInstanceStatus")
     private String DBProxyInstanceStatus;
 
@@ -48,6 +51,7 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         this.DBProxyInstanceLatestMinorVersion = builder.DBProxyInstanceLatestMinorVersion;
         this.DBProxyInstanceName = builder.DBProxyInstanceName;
         this.DBProxyInstanceNum = builder.DBProxyInstanceNum;
+        this.DBProxyInstanceSize = builder.DBProxyInstanceSize;
         this.DBProxyInstanceStatus = builder.DBProxyInstanceStatus;
         this.DBProxyInstanceType = builder.DBProxyInstanceType;
         this.DBProxyServiceStatus = builder.DBProxyServiceStatus;
@@ -99,6 +103,13 @@ public class DescribeDBProxyResponseBody extends TeaModel {
     }
 
     /**
+     * @return DBProxyInstanceSize
+     */
+    public String getDBProxyInstanceSize() {
+        return this.DBProxyInstanceSize;
+    }
+
+    /**
      * @return DBProxyInstanceStatus
      */
     public String getDBProxyInstanceStatus() {
@@ -139,6 +150,7 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         private String DBProxyInstanceLatestMinorVersion; 
         private String DBProxyInstanceName; 
         private Integer DBProxyInstanceNum; 
+        private String DBProxyInstanceSize; 
         private String DBProxyInstanceStatus; 
         private String DBProxyInstanceType; 
         private String DBProxyServiceStatus; 
@@ -182,6 +194,14 @@ public class DescribeDBProxyResponseBody extends TeaModel {
          */
         public Builder DBProxyInstanceNum(Integer DBProxyInstanceNum) {
             this.DBProxyInstanceNum = DBProxyInstanceNum;
+            return this;
+        }
+
+        /**
+         * DBProxyInstanceSize.
+         */
+        public Builder DBProxyInstanceSize(String DBProxyInstanceSize) {
+            this.DBProxyInstanceSize = DBProxyInstanceSize;
             return this;
         }
 

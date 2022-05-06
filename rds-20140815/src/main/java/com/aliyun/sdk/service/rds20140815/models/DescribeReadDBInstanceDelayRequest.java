@@ -128,15 +128,15 @@ public class DescribeReadDBInstanceDelayRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeReadDBInstanceDelayRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.readInstanceId = response.readInstanceId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.securityToken = response.securityToken;
+        private Builder(DescribeReadDBInstanceDelayRequest request) {
+            super(request);
+            this.DBInstanceId = request.DBInstanceId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.readInstanceId = request.readInstanceId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.securityToken = request.securityToken;
         } 
 
         /**

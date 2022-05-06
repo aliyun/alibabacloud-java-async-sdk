@@ -179,19 +179,19 @@ public class AllocateReadWriteSplittingConnectionRequest extends Request {
             super();
         } 
 
-        private Builder(AllocateReadWriteSplittingConnectionRequest response) {
-            super(response);
-            this.connectionStringPrefix = response.connectionStringPrefix;
-            this.DBInstanceId = response.DBInstanceId;
-            this.distributionType = response.distributionType;
-            this.maxDelayTime = response.maxDelayTime;
-            this.netType = response.netType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.port = response.port;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.weight = response.weight;
+        private Builder(AllocateReadWriteSplittingConnectionRequest request) {
+            super(request);
+            this.connectionStringPrefix = request.connectionStringPrefix;
+            this.DBInstanceId = request.DBInstanceId;
+            this.distributionType = request.distributionType;
+            this.maxDelayTime = request.maxDelayTime;
+            this.netType = request.netType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.port = request.port;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.weight = request.weight;
         } 
 
         /**

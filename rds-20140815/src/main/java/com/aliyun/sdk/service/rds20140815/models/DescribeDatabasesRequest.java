@@ -40,7 +40,7 @@ public class DescribeDatabasesRequest extends Request {
 
     @Query
     @NameInMap("PageSize")
-    @Validation(maximum = 2147483647, minimum = 1)
+    @Validation(maximum = 2147483647)
     private Integer pageSize;
 
     @Query
@@ -155,17 +155,17 @@ public class DescribeDatabasesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDatabasesRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.DBName = response.DBName;
-            this.DBStatus = response.DBStatus;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeDatabasesRequest request) {
+            super(request);
+            this.DBInstanceId = request.DBInstanceId;
+            this.DBName = request.DBName;
+            this.DBStatus = request.DBStatus;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

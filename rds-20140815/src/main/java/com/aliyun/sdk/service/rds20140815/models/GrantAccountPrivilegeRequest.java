@@ -104,13 +104,13 @@ public class GrantAccountPrivilegeRequest extends Request {
             super();
         } 
 
-        private Builder(GrantAccountPrivilegeRequest response) {
-            super(response);
-            this.accountName = response.accountName;
-            this.accountPrivilege = response.accountPrivilege;
-            this.DBInstanceId = response.DBInstanceId;
-            this.DBName = response.DBName;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(GrantAccountPrivilegeRequest request) {
+            super(request);
+            this.accountName = request.accountName;
+            this.accountPrivilege = request.accountPrivilege;
+            this.DBInstanceId = request.DBInstanceId;
+            this.DBName = request.DBName;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

@@ -182,19 +182,19 @@ public class CreateMigrateTaskRequest extends Request {
             super();
         } 
 
-        private Builder(CreateMigrateTaskRequest response) {
-            super(response);
-            this.backupMode = response.backupMode;
-            this.checkDBMode = response.checkDBMode;
-            this.DBInstanceId = response.DBInstanceId;
-            this.DBName = response.DBName;
-            this.isOnlineDB = response.isOnlineDB;
-            this.migrateTaskId = response.migrateTaskId;
-            this.OSSUrls = response.OSSUrls;
-            this.ossObjectPositions = response.ossObjectPositions;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(CreateMigrateTaskRequest request) {
+            super(request);
+            this.backupMode = request.backupMode;
+            this.checkDBMode = request.checkDBMode;
+            this.DBInstanceId = request.DBInstanceId;
+            this.DBName = request.DBName;
+            this.isOnlineDB = request.isOnlineDB;
+            this.migrateTaskId = request.migrateTaskId;
+            this.OSSUrls = request.OSSUrls;
+            this.ossObjectPositions = request.ossObjectPositions;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

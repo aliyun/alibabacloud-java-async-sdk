@@ -129,15 +129,15 @@ public class CopyDatabaseBetweenInstancesRequest extends Request {
             super();
         } 
 
-        private Builder(CopyDatabaseBetweenInstancesRequest response) {
-            super(response);
-            this.backupId = response.backupId;
-            this.DBInstanceId = response.DBInstanceId;
-            this.dbNames = response.dbNames;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.restoreTime = response.restoreTime;
-            this.syncUserPrivilege = response.syncUserPrivilege;
-            this.targetDBInstanceId = response.targetDBInstanceId;
+        private Builder(CopyDatabaseBetweenInstancesRequest request) {
+            super(request);
+            this.backupId = request.backupId;
+            this.DBInstanceId = request.DBInstanceId;
+            this.dbNames = request.dbNames;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.restoreTime = request.restoreTime;
+            this.syncUserPrivilege = request.syncUserPrivilege;
+            this.targetDBInstanceId = request.targetDBInstanceId;
         } 
 
         /**

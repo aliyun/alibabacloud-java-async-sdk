@@ -90,12 +90,12 @@ public class ModifyDBInstanceMetricsRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDBInstanceMetricsRequest response) {
-            super(response);
-            this.DBInstanceName = response.DBInstanceName;
-            this.metricsConfig = response.metricsConfig;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.scope = response.scope;
+        private Builder(ModifyDBInstanceMetricsRequest request) {
+            super(request);
+            this.DBInstanceName = request.DBInstanceName;
+            this.metricsConfig = request.metricsConfig;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.scope = request.scope;
         } 
 
         /**

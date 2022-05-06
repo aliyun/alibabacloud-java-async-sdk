@@ -102,13 +102,13 @@ public class ModifyReadonlyInstanceDelayReplicationTimeRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyReadonlyInstanceDelayReplicationTimeRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.ownerId = response.ownerId;
-            this.readSQLReplicationTime = response.readSQLReplicationTime;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyReadonlyInstanceDelayReplicationTimeRequest request) {
+            super(request);
+            this.DBInstanceId = request.DBInstanceId;
+            this.ownerId = request.ownerId;
+            this.readSQLReplicationTime = request.readSQLReplicationTime;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

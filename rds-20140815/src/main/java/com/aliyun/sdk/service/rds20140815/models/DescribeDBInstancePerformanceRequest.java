@@ -104,13 +104,13 @@ public class DescribeDBInstancePerformanceRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDBInstancePerformanceRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.endTime = response.endTime;
-            this.key = response.key;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.startTime = response.startTime;
+        private Builder(DescribeDBInstancePerformanceRequest request) {
+            super(request);
+            this.DBInstanceId = request.DBInstanceId;
+            this.endTime = request.endTime;
+            this.key = request.key;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.startTime = request.startTime;
         } 
 
         /**

@@ -145,16 +145,16 @@ public class CreateCloudMigrationPrecheckTaskRequest extends Request {
             super();
         } 
 
-        private Builder(CreateCloudMigrationPrecheckTaskRequest response) {
-            super(response);
-            this.DBInstanceName = response.DBInstanceName;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sourceAccount = response.sourceAccount;
-            this.sourceCategory = response.sourceCategory;
-            this.sourceIpAddress = response.sourceIpAddress;
-            this.sourcePassword = response.sourcePassword;
-            this.sourcePort = response.sourcePort;
-            this.taskName = response.taskName;
+        private Builder(CreateCloudMigrationPrecheckTaskRequest request) {
+            super(request);
+            this.DBInstanceName = request.DBInstanceName;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceAccount = request.sourceAccount;
+            this.sourceCategory = request.sourceCategory;
+            this.sourceIpAddress = request.sourceIpAddress;
+            this.sourcePassword = request.sourcePassword;
+            this.sourcePort = request.sourcePort;
+            this.taskName = request.taskName;
         } 
 
         /**

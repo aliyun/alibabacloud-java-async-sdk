@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeAvailableDedicatedHostZonesResponse} extends {@link TeaModel}
+ * {@link CreateNotifyResponse} extends {@link TeaModel}
  *
- * <p>DescribeAvailableDedicatedHostZonesResponse</p>
+ * <p>CreateNotifyResponse</p>
  */
-public class DescribeAvailableDedicatedHostZonesResponse extends Response {
+public class CreateNotifyResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private DescribeAvailableDedicatedHostZonesResponseBody body;
+    private CreateNotifyResponseBody body;
 
-    private DescribeAvailableDedicatedHostZonesResponse(BuilderImpl builder) {
+    private CreateNotifyResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static DescribeAvailableDedicatedHostZonesResponse create() {
+    public static CreateNotifyResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class DescribeAvailableDedicatedHostZonesResponse extends Response {
     /**
      * @return body
      */
-    public DescribeAvailableDedicatedHostZonesResponseBody getBody() {
+    public CreateNotifyResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribeAvailableDedicatedHostZonesResponse, Builder> {
+    public interface Builder extends Response.Builder<CreateNotifyResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(DescribeAvailableDedicatedHostZonesResponseBody body);
+        Builder body(CreateNotifyResponseBody body);
 
         @Override
-        DescribeAvailableDedicatedHostZonesResponse build();
+        CreateNotifyResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribeAvailableDedicatedHostZonesResponse, Builder>
+            extends Response.BuilderImpl<CreateNotifyResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private DescribeAvailableDedicatedHostZonesResponseBody body; 
+        private CreateNotifyResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribeAvailableDedicatedHostZonesResponse response) {
+        private BuilderImpl(CreateNotifyResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class DescribeAvailableDedicatedHostZonesResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DescribeAvailableDedicatedHostZonesResponseBody body) {
+        public Builder body(CreateNotifyResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribeAvailableDedicatedHostZonesResponse build() {
-            return new DescribeAvailableDedicatedHostZonesResponse(this);
+        public CreateNotifyResponse build() {
+            return new CreateNotifyResponse(this);
         } 
 
     } 

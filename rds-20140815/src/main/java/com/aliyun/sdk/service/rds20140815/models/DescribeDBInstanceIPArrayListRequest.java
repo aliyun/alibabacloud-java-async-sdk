@@ -88,12 +88,12 @@ public class DescribeDBInstanceIPArrayListRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDBInstanceIPArrayListRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.ownerAccount = response.ownerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.whitelistNetworkType = response.whitelistNetworkType;
+        private Builder(DescribeDBInstanceIPArrayListRequest request) {
+            super(request);
+            this.DBInstanceId = request.DBInstanceId;
+            this.ownerAccount = request.ownerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.whitelistNetworkType = request.whitelistNetworkType;
         } 
 
         /**

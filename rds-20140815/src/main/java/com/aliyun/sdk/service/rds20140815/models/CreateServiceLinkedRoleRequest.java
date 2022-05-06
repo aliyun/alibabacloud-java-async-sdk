@@ -102,13 +102,13 @@ public class CreateServiceLinkedRoleRequest extends Request {
             super();
         } 
 
-        private Builder(CreateServiceLinkedRoleRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.serviceLinkedRole = response.serviceLinkedRole;
+        private Builder(CreateServiceLinkedRoleRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.serviceLinkedRole = request.serviceLinkedRole;
         } 
 
         /**

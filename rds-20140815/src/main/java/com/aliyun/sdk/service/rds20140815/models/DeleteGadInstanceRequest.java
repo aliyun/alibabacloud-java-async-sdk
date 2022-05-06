@@ -62,10 +62,10 @@ public class DeleteGadInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteGadInstanceRequest response) {
-            super(response);
-            this.gadInstanceName = response.gadInstanceName;
-            this.regionId = response.regionId;
+        private Builder(DeleteGadInstanceRequest request) {
+            super(request);
+            this.gadInstanceName = request.gadInstanceName;
+            this.regionId = request.regionId;
         } 
 
         /**

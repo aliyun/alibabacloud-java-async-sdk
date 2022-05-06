@@ -102,13 +102,13 @@ public class ModifyActionEventPolicyRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyActionEventPolicyRequest response) {
-            super(response);
-            this.enableEventLog = response.enableEventLog;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyActionEventPolicyRequest request) {
+            super(request);
+            this.enableEventLog = request.enableEventLog;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

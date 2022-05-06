@@ -140,16 +140,16 @@ public class DeleteBackupFileRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteBackupFileRequest response) {
-            super(response);
-            this.backupId = response.backupId;
-            this.backupTime = response.backupTime;
-            this.DBInstanceId = response.DBInstanceId;
-            this.DBName = response.DBName;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DeleteBackupFileRequest request) {
+            super(request);
+            this.backupId = request.backupId;
+            this.backupTime = request.backupTime;
+            this.DBInstanceId = request.DBInstanceId;
+            this.DBName = request.DBName;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

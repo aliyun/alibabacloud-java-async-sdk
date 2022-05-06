@@ -133,15 +133,15 @@ public class CreateGadInstanceMemberRequest extends Request {
             super();
         } 
 
-        private Builder(CreateGadInstanceMemberRequest response) {
-            super(response);
-            this.centralDBInstanceId = response.centralDBInstanceId;
-            this.centralRdsDtsAdminAccount = response.centralRdsDtsAdminAccount;
-            this.centralRdsDtsAdminPassword = response.centralRdsDtsAdminPassword;
-            this.centralRegionId = response.centralRegionId;
-            this.DBList = response.DBList;
-            this.gadInstanceId = response.gadInstanceId;
-            this.unitNode = response.unitNode;
+        private Builder(CreateGadInstanceMemberRequest request) {
+            super(request);
+            this.centralDBInstanceId = request.centralDBInstanceId;
+            this.centralRdsDtsAdminAccount = request.centralRdsDtsAdminAccount;
+            this.centralRdsDtsAdminPassword = request.centralRdsDtsAdminPassword;
+            this.centralRegionId = request.centralRegionId;
+            this.DBList = request.DBList;
+            this.gadInstanceId = request.gadInstanceId;
+            this.unitNode = request.unitNode;
         } 
 
         /**

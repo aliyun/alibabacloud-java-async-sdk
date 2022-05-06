@@ -184,19 +184,19 @@ public class DescribeAvailableClassesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAvailableClassesRequest response) {
-            super(response);
-            this.category = response.category;
-            this.commodityCode = response.commodityCode;
-            this.DBInstanceId = response.DBInstanceId;
-            this.DBInstanceStorageType = response.DBInstanceStorageType;
-            this.engine = response.engine;
-            this.engineVersion = response.engineVersion;
-            this.instanceChargeType = response.instanceChargeType;
-            this.orderType = response.orderType;
-            this.regionId = response.regionId;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.zoneId = response.zoneId;
+        private Builder(DescribeAvailableClassesRequest request) {
+            super(request);
+            this.category = request.category;
+            this.commodityCode = request.commodityCode;
+            this.DBInstanceId = request.DBInstanceId;
+            this.DBInstanceStorageType = request.DBInstanceStorageType;
+            this.engine = request.engine;
+            this.engineVersion = request.engineVersion;
+            this.instanceChargeType = request.instanceChargeType;
+            this.orderType = request.orderType;
+            this.regionId = request.regionId;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.zoneId = request.zoneId;
         } 
 
         /**

@@ -296,28 +296,28 @@ public class UpgradeDBInstanceMajorVersionRequest extends Request {
             super();
         } 
 
-        private Builder(UpgradeDBInstanceMajorVersionRequest response) {
-            super(response);
-            this.collectStatMode = response.collectStatMode;
-            this.DBInstanceClass = response.DBInstanceClass;
-            this.DBInstanceId = response.DBInstanceId;
-            this.DBInstanceStorage = response.DBInstanceStorage;
-            this.DBInstanceStorageType = response.DBInstanceStorageType;
-            this.instanceNetworkType = response.instanceNetworkType;
-            this.payType = response.payType;
-            this.period = response.period;
-            this.privateIpAddress = response.privateIpAddress;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.switchOver = response.switchOver;
-            this.switchTime = response.switchTime;
-            this.switchTimeMode = response.switchTimeMode;
-            this.targetMajorVersion = response.targetMajorVersion;
-            this.usedTime = response.usedTime;
-            this.VPCId = response.VPCId;
-            this.vSwitchId = response.vSwitchId;
-            this.zoneId = response.zoneId;
-            this.zoneIdSlave1 = response.zoneIdSlave1;
-            this.zoneIdSlave2 = response.zoneIdSlave2;
+        private Builder(UpgradeDBInstanceMajorVersionRequest request) {
+            super(request);
+            this.collectStatMode = request.collectStatMode;
+            this.DBInstanceClass = request.DBInstanceClass;
+            this.DBInstanceId = request.DBInstanceId;
+            this.DBInstanceStorage = request.DBInstanceStorage;
+            this.DBInstanceStorageType = request.DBInstanceStorageType;
+            this.instanceNetworkType = request.instanceNetworkType;
+            this.payType = request.payType;
+            this.period = request.period;
+            this.privateIpAddress = request.privateIpAddress;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.switchOver = request.switchOver;
+            this.switchTime = request.switchTime;
+            this.switchTimeMode = request.switchTimeMode;
+            this.targetMajorVersion = request.targetMajorVersion;
+            this.usedTime = request.usedTime;
+            this.VPCId = request.VPCId;
+            this.vSwitchId = request.vSwitchId;
+            this.zoneId = request.zoneId;
+            this.zoneIdSlave1 = request.zoneIdSlave1;
+            this.zoneIdSlave2 = request.zoneIdSlave2;
         } 
 
         /**

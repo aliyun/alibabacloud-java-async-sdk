@@ -473,41 +473,41 @@ public class CreateDdrInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(CreateDdrInstanceRequest response) {
-            super(response);
-            this.backupSetId = response.backupSetId;
-            this.binlogName = response.binlogName;
-            this.binlogPosition = response.binlogPosition;
-            this.binlogRole = response.binlogRole;
-            this.clientToken = response.clientToken;
-            this.connectionMode = response.connectionMode;
-            this.DBInstanceClass = response.DBInstanceClass;
-            this.DBInstanceDescription = response.DBInstanceDescription;
-            this.DBInstanceNetType = response.DBInstanceNetType;
-            this.DBInstanceStorage = response.DBInstanceStorage;
-            this.DBInstanceStorageType = response.DBInstanceStorageType;
-            this.engine = response.engine;
-            this.engineVersion = response.engineVersion;
-            this.instanceNetworkType = response.instanceNetworkType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.payType = response.payType;
-            this.period = response.period;
-            this.privateIpAddress = response.privateIpAddress;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.restoreTime = response.restoreTime;
-            this.restoreType = response.restoreType;
-            this.securityIPList = response.securityIPList;
-            this.sourceDBInstanceName = response.sourceDBInstanceName;
-            this.sourceRegion = response.sourceRegion;
-            this.systemDBCharset = response.systemDBCharset;
-            this.usedTime = response.usedTime;
-            this.VPCId = response.VPCId;
-            this.vSwitchId = response.vSwitchId;
-            this.zoneId = response.zoneId;
+        private Builder(CreateDdrInstanceRequest request) {
+            super(request);
+            this.backupSetId = request.backupSetId;
+            this.binlogName = request.binlogName;
+            this.binlogPosition = request.binlogPosition;
+            this.binlogRole = request.binlogRole;
+            this.clientToken = request.clientToken;
+            this.connectionMode = request.connectionMode;
+            this.DBInstanceClass = request.DBInstanceClass;
+            this.DBInstanceDescription = request.DBInstanceDescription;
+            this.DBInstanceNetType = request.DBInstanceNetType;
+            this.DBInstanceStorage = request.DBInstanceStorage;
+            this.DBInstanceStorageType = request.DBInstanceStorageType;
+            this.engine = request.engine;
+            this.engineVersion = request.engineVersion;
+            this.instanceNetworkType = request.instanceNetworkType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.payType = request.payType;
+            this.period = request.period;
+            this.privateIpAddress = request.privateIpAddress;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.restoreTime = request.restoreTime;
+            this.restoreType = request.restoreType;
+            this.securityIPList = request.securityIPList;
+            this.sourceDBInstanceName = request.sourceDBInstanceName;
+            this.sourceRegion = request.sourceRegion;
+            this.systemDBCharset = request.systemDBCharset;
+            this.usedTime = request.usedTime;
+            this.VPCId = request.VPCId;
+            this.vSwitchId = request.vSwitchId;
+            this.zoneId = request.zoneId;
         } 
 
         /**

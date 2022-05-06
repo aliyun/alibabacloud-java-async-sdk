@@ -193,20 +193,20 @@ public class ModifyDBInstanceTDERequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDBInstanceTDERequest response) {
-            super(response);
-            this.certificate = response.certificate;
-            this.DBInstanceId = response.DBInstanceId;
-            this.DBName = response.DBName;
-            this.encryptionKey = response.encryptionKey;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.passWord = response.passWord;
-            this.privateKey = response.privateKey;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.roleArn = response.roleArn;
-            this.TDEStatus = response.TDEStatus;
+        private Builder(ModifyDBInstanceTDERequest request) {
+            super(request);
+            this.certificate = request.certificate;
+            this.DBInstanceId = request.DBInstanceId;
+            this.DBName = request.DBName;
+            this.encryptionKey = request.encryptionKey;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.passWord = request.passWord;
+            this.privateKey = request.privateKey;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.roleArn = request.roleArn;
+            this.TDEStatus = request.TDEStatus;
         } 
 
         /**

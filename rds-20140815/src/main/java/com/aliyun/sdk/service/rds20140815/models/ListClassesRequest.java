@@ -141,16 +141,16 @@ public class ListClassesRequest extends Request {
             super();
         } 
 
-        private Builder(ListClassesRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.commodityCode = response.commodityCode;
-            this.DBInstanceId = response.DBInstanceId;
-            this.orderType = response.orderType;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ListClassesRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.commodityCode = request.commodityCode;
+            this.DBInstanceId = request.DBInstanceId;
+            this.orderType = request.orderType;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

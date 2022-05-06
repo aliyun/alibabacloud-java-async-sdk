@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link EvaluateDedicatedHostInstanceResourceResponse} extends {@link TeaModel}
+ * {@link QueryNotifyResponse} extends {@link TeaModel}
  *
- * <p>EvaluateDedicatedHostInstanceResourceResponse</p>
+ * <p>QueryNotifyResponse</p>
  */
-public class EvaluateDedicatedHostInstanceResourceResponse extends Response {
+public class QueryNotifyResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private EvaluateDedicatedHostInstanceResourceResponseBody body;
+    private QueryNotifyResponseBody body;
 
-    private EvaluateDedicatedHostInstanceResourceResponse(BuilderImpl builder) {
+    private QueryNotifyResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static EvaluateDedicatedHostInstanceResourceResponse create() {
+    public static QueryNotifyResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class EvaluateDedicatedHostInstanceResourceResponse extends Response {
     /**
      * @return body
      */
-    public EvaluateDedicatedHostInstanceResourceResponseBody getBody() {
+    public QueryNotifyResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<EvaluateDedicatedHostInstanceResourceResponse, Builder> {
+    public interface Builder extends Response.Builder<QueryNotifyResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(EvaluateDedicatedHostInstanceResourceResponseBody body);
+        Builder body(QueryNotifyResponseBody body);
 
         @Override
-        EvaluateDedicatedHostInstanceResourceResponse build();
+        QueryNotifyResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<EvaluateDedicatedHostInstanceResourceResponse, Builder>
+            extends Response.BuilderImpl<QueryNotifyResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private EvaluateDedicatedHostInstanceResourceResponseBody body; 
+        private QueryNotifyResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(EvaluateDedicatedHostInstanceResourceResponse response) {
+        private BuilderImpl(QueryNotifyResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class EvaluateDedicatedHostInstanceResourceResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(EvaluateDedicatedHostInstanceResourceResponseBody body) {
+        public Builder body(QueryNotifyResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public EvaluateDedicatedHostInstanceResourceResponse build() {
-            return new EvaluateDedicatedHostInstanceResourceResponse(this);
+        public QueryNotifyResponse build() {
+            return new QueryNotifyResponse(this);
         } 
 
     } 

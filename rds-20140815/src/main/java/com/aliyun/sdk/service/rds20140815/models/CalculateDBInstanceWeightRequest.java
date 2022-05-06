@@ -62,10 +62,10 @@ public class CalculateDBInstanceWeightRequest extends Request {
             super();
         } 
 
-        private Builder(CalculateDBInstanceWeightRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(CalculateDBInstanceWeightRequest request) {
+            super(request);
+            this.DBInstanceId = request.DBInstanceId;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

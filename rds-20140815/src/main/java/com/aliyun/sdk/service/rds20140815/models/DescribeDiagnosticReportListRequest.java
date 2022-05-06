@@ -49,9 +49,9 @@ public class DescribeDiagnosticReportListRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDiagnosticReportListRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
+        private Builder(DescribeDiagnosticReportListRequest request) {
+            super(request);
+            this.DBInstanceId = request.DBInstanceId;
         } 
 
         /**

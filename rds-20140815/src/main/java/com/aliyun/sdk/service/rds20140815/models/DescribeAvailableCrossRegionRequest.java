@@ -88,12 +88,12 @@ public class DescribeAvailableCrossRegionRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAvailableCrossRegionRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeAvailableCrossRegionRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

@@ -114,14 +114,14 @@ public class ModifyCollationTimeZoneRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyCollationTimeZoneRequest response) {
-            super(response);
-            this.collation = response.collation;
-            this.DBInstanceId = response.DBInstanceId;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.timezone = response.timezone;
+        private Builder(ModifyCollationTimeZoneRequest request) {
+            super(request);
+            this.collation = request.collation;
+            this.DBInstanceId = request.DBInstanceId;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.timezone = request.timezone;
         } 
 
         /**

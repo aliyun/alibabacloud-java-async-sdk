@@ -153,17 +153,17 @@ public class ListUserBackupFilesRequest extends Request {
             super();
         } 
 
-        private Builder(ListUserBackupFilesRequest response) {
-            super(response);
-            this.backupId = response.backupId;
-            this.comment = response.comment;
-            this.ossUrl = response.ossUrl;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.status = response.status;
-            this.tags = response.tags;
+        private Builder(ListUserBackupFilesRequest request) {
+            super(request);
+            this.backupId = request.backupId;
+            this.comment = request.comment;
+            this.ossUrl = request.ossUrl;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.status = request.status;
+            this.tags = request.tags;
         } 
 
         /**

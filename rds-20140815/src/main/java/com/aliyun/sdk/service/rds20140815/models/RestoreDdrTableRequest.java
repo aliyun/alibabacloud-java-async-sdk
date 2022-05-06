@@ -194,20 +194,20 @@ public class RestoreDdrTableRequest extends Request {
             super();
         } 
 
-        private Builder(RestoreDdrTableRequest response) {
-            super(response);
-            this.backupId = response.backupId;
-            this.clientToken = response.clientToken;
-            this.DBInstanceId = response.DBInstanceId;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.restoreTime = response.restoreTime;
-            this.restoreType = response.restoreType;
-            this.sourceDBInstanceName = response.sourceDBInstanceName;
-            this.sourceRegion = response.sourceRegion;
-            this.tableMeta = response.tableMeta;
+        private Builder(RestoreDdrTableRequest request) {
+            super(request);
+            this.backupId = request.backupId;
+            this.clientToken = request.clientToken;
+            this.DBInstanceId = request.DBInstanceId;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.restoreTime = request.restoreTime;
+            this.restoreType = request.restoreType;
+            this.sourceDBInstanceName = request.sourceDBInstanceName;
+            this.sourceRegion = request.sourceRegion;
+            this.tableMeta = request.tableMeta;
         } 
 
         /**

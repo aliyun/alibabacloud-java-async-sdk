@@ -361,33 +361,33 @@ public class ModifyBackupPolicyRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyBackupPolicyRequest response) {
-            super(response);
-            this.archiveBackupKeepCount = response.archiveBackupKeepCount;
-            this.archiveBackupKeepPolicy = response.archiveBackupKeepPolicy;
-            this.archiveBackupRetentionPeriod = response.archiveBackupRetentionPeriod;
-            this.backupInterval = response.backupInterval;
-            this.backupLog = response.backupLog;
-            this.backupMethod = response.backupMethod;
-            this.backupPolicyMode = response.backupPolicyMode;
-            this.backupRetentionPeriod = response.backupRetentionPeriod;
-            this.category = response.category;
-            this.compressType = response.compressType;
-            this.DBInstanceId = response.DBInstanceId;
-            this.enableBackupLog = response.enableBackupLog;
-            this.highSpaceUsageProtection = response.highSpaceUsageProtection;
-            this.localLogRetentionHours = response.localLogRetentionHours;
-            this.localLogRetentionSpace = response.localLogRetentionSpace;
-            this.logBackupFrequency = response.logBackupFrequency;
-            this.logBackupLocalRetentionNumber = response.logBackupLocalRetentionNumber;
-            this.logBackupRetentionPeriod = response.logBackupRetentionPeriod;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.preferredBackupPeriod = response.preferredBackupPeriod;
-            this.preferredBackupTime = response.preferredBackupTime;
-            this.releasedKeepPolicy = response.releasedKeepPolicy;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyBackupPolicyRequest request) {
+            super(request);
+            this.archiveBackupKeepCount = request.archiveBackupKeepCount;
+            this.archiveBackupKeepPolicy = request.archiveBackupKeepPolicy;
+            this.archiveBackupRetentionPeriod = request.archiveBackupRetentionPeriod;
+            this.backupInterval = request.backupInterval;
+            this.backupLog = request.backupLog;
+            this.backupMethod = request.backupMethod;
+            this.backupPolicyMode = request.backupPolicyMode;
+            this.backupRetentionPeriod = request.backupRetentionPeriod;
+            this.category = request.category;
+            this.compressType = request.compressType;
+            this.DBInstanceId = request.DBInstanceId;
+            this.enableBackupLog = request.enableBackupLog;
+            this.highSpaceUsageProtection = request.highSpaceUsageProtection;
+            this.localLogRetentionHours = request.localLogRetentionHours;
+            this.localLogRetentionSpace = request.localLogRetentionSpace;
+            this.logBackupFrequency = request.logBackupFrequency;
+            this.logBackupLocalRetentionNumber = request.logBackupLocalRetentionNumber;
+            this.logBackupRetentionPeriod = request.logBackupRetentionPeriod;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.preferredBackupPeriod = request.preferredBackupPeriod;
+            this.preferredBackupTime = request.preferredBackupTime;
+            this.releasedKeepPolicy = request.releasedKeepPolicy;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

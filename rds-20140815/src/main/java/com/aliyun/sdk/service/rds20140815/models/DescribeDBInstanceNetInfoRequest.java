@@ -153,17 +153,17 @@ public class DescribeDBInstanceNetInfoRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDBInstanceNetInfoRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.DBInstanceId = response.DBInstanceId;
-            this.DBInstanceNetRWSplitType = response.DBInstanceNetRWSplitType;
-            this.flag = response.flag;
-            this.generalGroupName = response.generalGroupName;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeDBInstanceNetInfoRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.DBInstanceId = request.DBInstanceId;
+            this.DBInstanceNetRWSplitType = request.DBInstanceNetRWSplitType;
+            this.flag = request.flag;
+            this.generalGroupName = request.generalGroupName;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

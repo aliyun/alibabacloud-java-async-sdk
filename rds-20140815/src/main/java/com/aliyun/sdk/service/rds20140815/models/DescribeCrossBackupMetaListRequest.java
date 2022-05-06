@@ -153,17 +153,17 @@ public class DescribeCrossBackupMetaListRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeCrossBackupMetaListRequest response) {
-            super(response);
-            this.backupSetId = response.backupSetId;
-            this.getDbName = response.getDbName;
-            this.ownerId = response.ownerId;
-            this.pageIndex = response.pageIndex;
-            this.pageSize = response.pageSize;
-            this.pattern = response.pattern;
-            this.region = response.region;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeCrossBackupMetaListRequest request) {
+            super(request);
+            this.backupSetId = request.backupSetId;
+            this.getDbName = request.getDbName;
+            this.ownerId = request.ownerId;
+            this.pageIndex = request.pageIndex;
+            this.pageSize = request.pageSize;
+            this.pattern = request.pattern;
+            this.region = request.region;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

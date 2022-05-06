@@ -143,16 +143,16 @@ public class CloneParameterGroupRequest extends Request {
             super();
         } 
 
-        private Builder(CloneParameterGroupRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.parameterGroupDesc = response.parameterGroupDesc;
-            this.parameterGroupId = response.parameterGroupId;
-            this.parameterGroupName = response.parameterGroupName;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.targetRegionId = response.targetRegionId;
+        private Builder(CloneParameterGroupRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.parameterGroupDesc = request.parameterGroupDesc;
+            this.parameterGroupId = request.parameterGroupId;
+            this.parameterGroupName = request.parameterGroupName;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.targetRegionId = request.targetRegionId;
         } 
 
         /**

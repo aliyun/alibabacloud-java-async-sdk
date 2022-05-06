@@ -129,15 +129,15 @@ public class UpdateUserBackupFileRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateUserBackupFileRequest response) {
-            super(response);
-            this.backupId = response.backupId;
-            this.comment = response.comment;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.retention = response.retention;
+        private Builder(UpdateUserBackupFileRequest request) {
+            super(request);
+            this.backupId = request.backupId;
+            this.comment = request.comment;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.retention = request.retention;
         } 
 
         /**

@@ -75,11 +75,11 @@ public class DescribeDBInstanceAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDBInstanceAttributeRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.expired = response.expired;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeDBInstanceAttributeRequest request) {
+            super(request);
+            this.DBInstanceId = request.DBInstanceId;
+            this.expired = request.expired;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

@@ -142,16 +142,16 @@ public class AllocateInstancePublicConnectionRequest extends Request {
             super();
         } 
 
-        private Builder(AllocateInstancePublicConnectionRequest response) {
-            super(response);
-            this.connectionStringPrefix = response.connectionStringPrefix;
-            this.DBInstanceId = response.DBInstanceId;
-            this.generalGroupName = response.generalGroupName;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.port = response.port;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(AllocateInstancePublicConnectionRequest request) {
+            super(request);
+            this.connectionStringPrefix = request.connectionStringPrefix;
+            this.DBInstanceId = request.DBInstanceId;
+            this.generalGroupName = request.generalGroupName;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.port = request.port;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

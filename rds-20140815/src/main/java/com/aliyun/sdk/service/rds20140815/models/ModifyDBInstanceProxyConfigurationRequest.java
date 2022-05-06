@@ -116,14 +116,14 @@ public class ModifyDBInstanceProxyConfigurationRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDBInstanceProxyConfigurationRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.ownerId = response.ownerId;
-            this.proxyConfigurationKey = response.proxyConfigurationKey;
-            this.proxyConfigurationValue = response.proxyConfigurationValue;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyDBInstanceProxyConfigurationRequest request) {
+            super(request);
+            this.DBInstanceId = request.DBInstanceId;
+            this.ownerId = request.ownerId;
+            this.proxyConfigurationKey = request.proxyConfigurationKey;
+            this.proxyConfigurationValue = request.proxyConfigurationValue;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

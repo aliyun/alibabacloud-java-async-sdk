@@ -7,15 +7,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DropDedicatedHostUserResponseBody} extends {@link TeaModel}
+ * {@link CreateNotifyResponseBody} extends {@link TeaModel}
  *
- * <p>DropDedicatedHostUserResponseBody</p>
+ * <p>CreateNotifyResponseBody</p>
  */
-public class DropDedicatedHostUserResponseBody extends TeaModel {
+public class CreateNotifyResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private DropDedicatedHostUserResponseBody(Builder builder) {
+    private CreateNotifyResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -23,7 +23,7 @@ public class DropDedicatedHostUserResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static DropDedicatedHostUserResponseBody create() {
+    public static CreateNotifyResponseBody create() {
         return builder().build();
     }
 
@@ -38,15 +38,15 @@ public class DropDedicatedHostUserResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public DropDedicatedHostUserResponseBody build() {
-            return new DropDedicatedHostUserResponseBody(this);
+        public CreateNotifyResponseBody build() {
+            return new CreateNotifyResponseBody(this);
         } 
 
     } 

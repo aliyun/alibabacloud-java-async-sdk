@@ -245,24 +245,24 @@ public class ModifyDBInstanceSSLRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDBInstanceSSLRequest response) {
-            super(response);
-            this.ACL = response.ACL;
-            this.CAType = response.CAType;
-            this.clientCACert = response.clientCACert;
-            this.clientCAEnabled = response.clientCAEnabled;
-            this.clientCertRevocationList = response.clientCertRevocationList;
-            this.clientCrlEnabled = response.clientCrlEnabled;
-            this.connectionString = response.connectionString;
-            this.DBInstanceId = response.DBInstanceId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.replicationACL = response.replicationACL;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.SSLEnabled = response.SSLEnabled;
-            this.serverCert = response.serverCert;
-            this.serverKey = response.serverKey;
+        private Builder(ModifyDBInstanceSSLRequest request) {
+            super(request);
+            this.ACL = request.ACL;
+            this.CAType = request.CAType;
+            this.clientCACert = request.clientCACert;
+            this.clientCAEnabled = request.clientCAEnabled;
+            this.clientCertRevocationList = request.clientCertRevocationList;
+            this.clientCrlEnabled = request.clientCrlEnabled;
+            this.connectionString = request.connectionString;
+            this.DBInstanceId = request.DBInstanceId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.replicationACL = request.replicationACL;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.SSLEnabled = request.SSLEnabled;
+            this.serverCert = request.serverCert;
+            this.serverKey = request.serverKey;
         } 
 
         /**

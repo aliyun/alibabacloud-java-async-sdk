@@ -115,14 +115,14 @@ public class CancelImportRequest extends Request {
             super();
         } 
 
-        private Builder(CancelImportRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.importId = response.importId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(CancelImportRequest request) {
+            super(request);
+            this.DBInstanceId = request.DBInstanceId;
+            this.importId = request.importId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

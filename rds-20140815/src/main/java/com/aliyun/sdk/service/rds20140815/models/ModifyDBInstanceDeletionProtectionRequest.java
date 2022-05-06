@@ -7,20 +7,28 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeOssDownloadsForSQLServerRequest} extends {@link RequestModel}
+ * {@link ModifyDBInstanceDeletionProtectionRequest} extends {@link RequestModel}
  *
- * <p>DescribeOssDownloadsForSQLServerRequest</p>
+ * <p>ModifyDBInstanceDeletionProtectionRequest</p>
  */
-public class DescribeOssDownloadsForSQLServerRequest extends Request {
+public class ModifyDBInstanceDeletionProtectionRequest extends Request {
+    @Query
+    @NameInMap("ClientToken")
+    private String clientToken;
+
     @Query
     @NameInMap("DBInstanceId")
     @Validation(required = true)
     private String DBInstanceId;
 
     @Query
-    @NameInMap("MigrateTaskId")
+    @NameInMap("DeletionProtection")
     @Validation(required = true)
-    private String migrateTaskId;
+    private Boolean deletionProtection;
+
+    @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
 
     @Query
     @NameInMap("OwnerId")
@@ -34,10 +42,12 @@ public class DescribeOssDownloadsForSQLServerRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    private DescribeOssDownloadsForSQLServerRequest(Builder builder) {
+    private ModifyDBInstanceDeletionProtectionRequest(Builder builder) {
         super(builder);
+        this.clientToken = builder.clientToken;
         this.DBInstanceId = builder.DBInstanceId;
-        this.migrateTaskId = builder.migrateTaskId;
+        this.deletionProtection = builder.deletionProtection;
+        this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
@@ -47,13 +57,20 @@ public class DescribeOssDownloadsForSQLServerRequest extends Request {
         return new Builder();
     }
 
-    public static DescribeOssDownloadsForSQLServerRequest create() {
+    public static ModifyDBInstanceDeletionProtectionRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -64,10 +81,17 @@ public class DescribeOssDownloadsForSQLServerRequest extends Request {
     }
 
     /**
-     * @return migrateTaskId
+     * @return deletionProtection
      */
-    public String getMigrateTaskId() {
-        return this.migrateTaskId;
+    public Boolean getDeletionProtection() {
+        return this.deletionProtection;
+    }
+
+    /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     /**
@@ -91,9 +115,11 @@ public class DescribeOssDownloadsForSQLServerRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    public static final class Builder extends Request.Builder<DescribeOssDownloadsForSQLServerRequest, Builder> {
+    public static final class Builder extends Request.Builder<ModifyDBInstanceDeletionProtectionRequest, Builder> {
+        private String clientToken; 
         private String DBInstanceId; 
-        private String migrateTaskId; 
+        private Boolean deletionProtection; 
+        private String ownerAccount; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
@@ -102,14 +128,25 @@ public class DescribeOssDownloadsForSQLServerRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeOssDownloadsForSQLServerRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.migrateTaskId = response.migrateTaskId;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyDBInstanceDeletionProtectionRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.DBInstanceId = request.DBInstanceId;
+            this.deletionProtection = request.deletionProtection;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
 
         /**
          * DBInstanceId.
@@ -121,11 +158,20 @@ public class DescribeOssDownloadsForSQLServerRequest extends Request {
         }
 
         /**
-         * MigrateTaskId.
+         * DeletionProtection.
          */
-        public Builder migrateTaskId(String migrateTaskId) {
-            this.putQueryParameter("MigrateTaskId", migrateTaskId);
-            this.migrateTaskId = migrateTaskId;
+        public Builder deletionProtection(Boolean deletionProtection) {
+            this.putQueryParameter("DeletionProtection", deletionProtection);
+            this.deletionProtection = deletionProtection;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
             return this;
         }
 
@@ -157,8 +203,8 @@ public class DescribeOssDownloadsForSQLServerRequest extends Request {
         }
 
         @Override
-        public DescribeOssDownloadsForSQLServerRequest build() {
-            return new DescribeOssDownloadsForSQLServerRequest(this);
+        public ModifyDBInstanceDeletionProtectionRequest build() {
+            return new ModifyDBInstanceDeletionProtectionRequest(this);
         } 
 
     } 

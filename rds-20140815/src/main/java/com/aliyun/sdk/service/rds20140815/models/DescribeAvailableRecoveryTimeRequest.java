@@ -101,13 +101,13 @@ public class DescribeAvailableRecoveryTimeRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAvailableRecoveryTimeRequest response) {
-            super(response);
-            this.crossBackupId = response.crossBackupId;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeAvailableRecoveryTimeRequest request) {
+            super(request);
+            this.crossBackupId = request.crossBackupId;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

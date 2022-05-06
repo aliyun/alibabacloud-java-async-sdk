@@ -127,15 +127,15 @@ public class UpgradeDBInstanceKernelVersionRequest extends Request {
             super();
         } 
 
-        private Builder(UpgradeDBInstanceKernelVersionRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.switchTime = response.switchTime;
-            this.targetMinorVersion = response.targetMinorVersion;
-            this.upgradeTime = response.upgradeTime;
+        private Builder(UpgradeDBInstanceKernelVersionRequest request) {
+            super(request);
+            this.DBInstanceId = request.DBInstanceId;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.switchTime = request.switchTime;
+            this.targetMinorVersion = request.targetMinorVersion;
+            this.upgradeTime = request.upgradeTime;
         } 
 
         /**

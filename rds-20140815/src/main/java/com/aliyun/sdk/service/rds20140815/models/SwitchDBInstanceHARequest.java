@@ -141,16 +141,16 @@ public class SwitchDBInstanceHARequest extends Request {
             super();
         } 
 
-        private Builder(SwitchDBInstanceHARequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.effectiveTime = response.effectiveTime;
-            this.force = response.force;
-            this.nodeId = response.nodeId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(SwitchDBInstanceHARequest request) {
+            super(request);
+            this.DBInstanceId = request.DBInstanceId;
+            this.effectiveTime = request.effectiveTime;
+            this.force = request.force;
+            this.nodeId = request.nodeId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

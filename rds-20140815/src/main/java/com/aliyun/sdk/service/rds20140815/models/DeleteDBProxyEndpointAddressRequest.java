@@ -90,12 +90,12 @@ public class DeleteDBProxyEndpointAddressRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteDBProxyEndpointAddressRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.DBProxyConnectStringNetType = response.DBProxyConnectStringNetType;
-            this.DBProxyEndpointId = response.DBProxyEndpointId;
-            this.regionId = response.regionId;
+        private Builder(DeleteDBProxyEndpointAddressRequest request) {
+            super(request);
+            this.DBInstanceId = request.DBInstanceId;
+            this.DBProxyConnectStringNetType = request.DBProxyConnectStringNetType;
+            this.DBProxyEndpointId = request.DBProxyEndpointId;
+            this.regionId = request.regionId;
         } 
 
         /**

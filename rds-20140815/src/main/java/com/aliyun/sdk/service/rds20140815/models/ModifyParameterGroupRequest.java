@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyParameterGroupRequest extends Request {
     @Query
+    @NameInMap("ModifyMode")
+    private String modifyMode;
+
+    @Query
     @NameInMap("OwnerId")
     private Long ownerId;
 
@@ -48,6 +52,7 @@ public class ModifyParameterGroupRequest extends Request {
 
     private ModifyParameterGroupRequest(Builder builder) {
         super(builder);
+        this.modifyMode = builder.modifyMode;
         this.ownerId = builder.ownerId;
         this.parameterGroupDesc = builder.parameterGroupDesc;
         this.parameterGroupId = builder.parameterGroupId;
@@ -69,6 +74,13 @@ public class ModifyParameterGroupRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return modifyMode
+     */
+    public String getModifyMode() {
+        return this.modifyMode;
     }
 
     /**
@@ -128,6 +140,7 @@ public class ModifyParameterGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyParameterGroupRequest, Builder> {
+        private String modifyMode; 
         private Long ownerId; 
         private String parameterGroupDesc; 
         private String parameterGroupId; 
@@ -141,17 +154,27 @@ public class ModifyParameterGroupRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyParameterGroupRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.parameterGroupDesc = response.parameterGroupDesc;
-            this.parameterGroupId = response.parameterGroupId;
-            this.parameterGroupName = response.parameterGroupName;
-            this.parameters = response.parameters;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyParameterGroupRequest request) {
+            super(request);
+            this.modifyMode = request.modifyMode;
+            this.ownerId = request.ownerId;
+            this.parameterGroupDesc = request.parameterGroupDesc;
+            this.parameterGroupId = request.parameterGroupId;
+            this.parameterGroupName = request.parameterGroupName;
+            this.parameters = request.parameters;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
+
+        /**
+         * ModifyMode.
+         */
+        public Builder modifyMode(String modifyMode) {
+            this.putQueryParameter("ModifyMode", modifyMode);
+            this.modifyMode = modifyMode;
+            return this;
+        }
 
         /**
          * OwnerId.

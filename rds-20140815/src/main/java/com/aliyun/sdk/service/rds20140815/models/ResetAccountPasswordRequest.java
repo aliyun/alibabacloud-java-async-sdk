@@ -129,15 +129,15 @@ public class ResetAccountPasswordRequest extends Request {
             super();
         } 
 
-        private Builder(ResetAccountPasswordRequest response) {
-            super(response);
-            this.accountName = response.accountName;
-            this.accountPassword = response.accountPassword;
-            this.DBInstanceId = response.DBInstanceId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ResetAccountPasswordRequest request) {
+            super(request);
+            this.accountName = request.accountName;
+            this.accountPassword = request.accountPassword;
+            this.DBInstanceId = request.DBInstanceId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

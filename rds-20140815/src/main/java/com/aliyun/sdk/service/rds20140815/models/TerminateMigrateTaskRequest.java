@@ -102,13 +102,13 @@ public class TerminateMigrateTaskRequest extends Request {
             super();
         } 
 
-        private Builder(TerminateMigrateTaskRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.migrateTaskId = response.migrateTaskId;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(TerminateMigrateTaskRequest request) {
+            super(request);
+            this.DBInstanceId = request.DBInstanceId;
+            this.migrateTaskId = request.migrateTaskId;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

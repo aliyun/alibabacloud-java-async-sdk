@@ -244,24 +244,24 @@ public class RecoveryDBInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(RecoveryDBInstanceRequest response) {
-            super(response);
-            this.backupId = response.backupId;
-            this.DBInstanceClass = response.DBInstanceClass;
-            this.DBInstanceId = response.DBInstanceId;
-            this.DBInstanceStorage = response.DBInstanceStorage;
-            this.DBInstanceStorageType = response.DBInstanceStorageType;
-            this.dbNames = response.dbNames;
-            this.instanceNetworkType = response.instanceNetworkType;
-            this.payType = response.payType;
-            this.period = response.period;
-            this.privateIpAddress = response.privateIpAddress;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.restoreTime = response.restoreTime;
-            this.targetDBInstanceId = response.targetDBInstanceId;
-            this.usedTime = response.usedTime;
-            this.VPCId = response.VPCId;
-            this.vSwitchId = response.vSwitchId;
+        private Builder(RecoveryDBInstanceRequest request) {
+            super(request);
+            this.backupId = request.backupId;
+            this.DBInstanceClass = request.DBInstanceClass;
+            this.DBInstanceId = request.DBInstanceId;
+            this.DBInstanceStorage = request.DBInstanceStorage;
+            this.DBInstanceStorageType = request.DBInstanceStorageType;
+            this.dbNames = request.dbNames;
+            this.instanceNetworkType = request.instanceNetworkType;
+            this.payType = request.payType;
+            this.period = request.period;
+            this.privateIpAddress = request.privateIpAddress;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.restoreTime = request.restoreTime;
+            this.targetDBInstanceId = request.targetDBInstanceId;
+            this.usedTime = request.usedTime;
+            this.VPCId = request.VPCId;
+            this.vSwitchId = request.vSwitchId;
         } 
 
         /**

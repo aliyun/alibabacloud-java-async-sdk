@@ -235,23 +235,23 @@ public class DescribeSQLLogRecordsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeSQLLogRecordsRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.DBInstanceId = response.DBInstanceId;
-            this.database = response.database;
-            this.endTime = response.endTime;
-            this.form = response.form;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.queryKeywords = response.queryKeywords;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.SQLId = response.SQLId;
-            this.startTime = response.startTime;
-            this.user = response.user;
+        private Builder(DescribeSQLLogRecordsRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.DBInstanceId = request.DBInstanceId;
+            this.database = request.database;
+            this.endTime = request.endTime;
+            this.form = request.form;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.queryKeywords = request.queryKeywords;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.SQLId = request.SQLId;
+            this.startTime = request.startTime;
+            this.user = request.user;
         } 
 
         /**

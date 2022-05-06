@@ -101,13 +101,13 @@ public class DescribeBackupDatabaseRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeBackupDatabaseRequest response) {
-            super(response);
-            this.backupId = response.backupId;
-            this.DBInstanceId = response.DBInstanceId;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeBackupDatabaseRequest request) {
+            super(request);
+            this.backupId = request.backupId;
+            this.DBInstanceId = request.DBInstanceId;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

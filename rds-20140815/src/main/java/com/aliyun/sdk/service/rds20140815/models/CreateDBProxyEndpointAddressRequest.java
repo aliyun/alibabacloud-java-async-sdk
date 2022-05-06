@@ -143,16 +143,16 @@ public class CreateDBProxyEndpointAddressRequest extends Request {
             super();
         } 
 
-        private Builder(CreateDBProxyEndpointAddressRequest response) {
-            super(response);
-            this.connectionStringPrefix = response.connectionStringPrefix;
-            this.DBInstanceId = response.DBInstanceId;
-            this.DBProxyConnectStringNetType = response.DBProxyConnectStringNetType;
-            this.DBProxyEndpointId = response.DBProxyEndpointId;
-            this.DBProxyNewConnectStringPort = response.DBProxyNewConnectStringPort;
-            this.regionId = response.regionId;
-            this.VPCId = response.VPCId;
-            this.vSwitchId = response.vSwitchId;
+        private Builder(CreateDBProxyEndpointAddressRequest request) {
+            super(request);
+            this.connectionStringPrefix = request.connectionStringPrefix;
+            this.DBInstanceId = request.DBInstanceId;
+            this.DBProxyConnectStringNetType = request.DBProxyConnectStringNetType;
+            this.DBProxyEndpointId = request.DBProxyEndpointId;
+            this.DBProxyNewConnectStringPort = request.DBProxyNewConnectStringPort;
+            this.regionId = request.regionId;
+            this.VPCId = request.VPCId;
+            this.vSwitchId = request.vSwitchId;
         } 
 
         /**

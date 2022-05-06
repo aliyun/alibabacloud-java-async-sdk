@@ -101,13 +101,13 @@ public class ReleaseReadWriteSplittingConnectionRequest extends Request {
             super();
         } 
 
-        private Builder(ReleaseReadWriteSplittingConnectionRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ReleaseReadWriteSplittingConnectionRequest request) {
+            super(request);
+            this.DBInstanceId = request.DBInstanceId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

@@ -167,18 +167,18 @@ public class RestoreTableRequest extends Request {
             super();
         } 
 
-        private Builder(RestoreTableRequest response) {
-            super(response);
-            this.backupId = response.backupId;
-            this.clientToken = response.clientToken;
-            this.DBInstanceId = response.DBInstanceId;
-            this.instantRecovery = response.instantRecovery;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.restoreTime = response.restoreTime;
-            this.tableMeta = response.tableMeta;
+        private Builder(RestoreTableRequest request) {
+            super(request);
+            this.backupId = request.backupId;
+            this.clientToken = request.clientToken;
+            this.DBInstanceId = request.DBInstanceId;
+            this.instantRecovery = request.instantRecovery;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.restoreTime = request.restoreTime;
+            this.tableMeta = request.tableMeta;
         } 
 
         /**

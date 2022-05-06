@@ -206,21 +206,21 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDBInstanceNetworkTypeRequest response) {
-            super(response);
-            this.classicExpiredDays = response.classicExpiredDays;
-            this.DBInstanceId = response.DBInstanceId;
-            this.instanceNetworkType = response.instanceNetworkType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.privateIpAddress = response.privateIpAddress;
-            this.readWriteSplittingClassicExpiredDays = response.readWriteSplittingClassicExpiredDays;
-            this.readWriteSplittingPrivateIpAddress = response.readWriteSplittingPrivateIpAddress;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.retainClassic = response.retainClassic;
-            this.VPCId = response.VPCId;
-            this.vSwitchId = response.vSwitchId;
+        private Builder(ModifyDBInstanceNetworkTypeRequest request) {
+            super(request);
+            this.classicExpiredDays = request.classicExpiredDays;
+            this.DBInstanceId = request.DBInstanceId;
+            this.instanceNetworkType = request.instanceNetworkType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.privateIpAddress = request.privateIpAddress;
+            this.readWriteSplittingClassicExpiredDays = request.readWriteSplittingClassicExpiredDays;
+            this.readWriteSplittingPrivateIpAddress = request.readWriteSplittingPrivateIpAddress;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.retainClassic = request.retainClassic;
+            this.VPCId = request.VPCId;
+            this.vSwitchId = request.vSwitchId;
         } 
 
         /**

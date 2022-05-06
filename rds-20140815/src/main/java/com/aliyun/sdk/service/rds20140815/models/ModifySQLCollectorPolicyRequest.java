@@ -128,15 +128,15 @@ public class ModifySQLCollectorPolicyRequest extends Request {
             super();
         } 
 
-        private Builder(ModifySQLCollectorPolicyRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.SQLCollectorStatus = response.SQLCollectorStatus;
+        private Builder(ModifySQLCollectorPolicyRequest request) {
+            super(request);
+            this.DBInstanceId = request.DBInstanceId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.SQLCollectorStatus = request.SQLCollectorStatus;
         } 
 
         /**

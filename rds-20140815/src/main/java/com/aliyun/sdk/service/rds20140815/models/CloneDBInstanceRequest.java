@@ -50,6 +50,10 @@ public class CloneDBInstanceRequest extends Request {
     private String dedicatedHostGroupId;
 
     @Query
+    @NameInMap("DeletionProtection")
+    private Boolean deletionProtection;
+
+    @Query
     @NameInMap("InstanceNetworkType")
     private String instanceNetworkType;
 
@@ -113,6 +117,7 @@ public class CloneDBInstanceRequest extends Request {
         this.DBInstanceStorageType = builder.DBInstanceStorageType;
         this.dbNames = builder.dbNames;
         this.dedicatedHostGroupId = builder.dedicatedHostGroupId;
+        this.deletionProtection = builder.deletionProtection;
         this.instanceNetworkType = builder.instanceNetworkType;
         this.payType = builder.payType;
         this.period = builder.period;
@@ -202,6 +207,13 @@ public class CloneDBInstanceRequest extends Request {
      */
     public String getDedicatedHostGroupId() {
         return this.dedicatedHostGroupId;
+    }
+
+    /**
+     * @return deletionProtection
+     */
+    public Boolean getDeletionProtection() {
+        return this.deletionProtection;
     }
 
     /**
@@ -305,6 +317,7 @@ public class CloneDBInstanceRequest extends Request {
         private String DBInstanceStorageType; 
         private String dbNames; 
         private String dedicatedHostGroupId; 
+        private Boolean deletionProtection; 
         private String instanceNetworkType; 
         private String payType; 
         private String period; 
@@ -323,30 +336,31 @@ public class CloneDBInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(CloneDBInstanceRequest response) {
-            super(response);
-            this.backupId = response.backupId;
-            this.backupType = response.backupType;
-            this.category = response.category;
-            this.DBInstanceClass = response.DBInstanceClass;
-            this.DBInstanceId = response.DBInstanceId;
-            this.DBInstanceStorage = response.DBInstanceStorage;
-            this.DBInstanceStorageType = response.DBInstanceStorageType;
-            this.dbNames = response.dbNames;
-            this.dedicatedHostGroupId = response.dedicatedHostGroupId;
-            this.instanceNetworkType = response.instanceNetworkType;
-            this.payType = response.payType;
-            this.period = response.period;
-            this.privateIpAddress = response.privateIpAddress;
-            this.regionId = response.regionId;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.restoreTable = response.restoreTable;
-            this.restoreTime = response.restoreTime;
-            this.tableMeta = response.tableMeta;
-            this.usedTime = response.usedTime;
-            this.VPCId = response.VPCId;
-            this.vSwitchId = response.vSwitchId;
-            this.zoneId = response.zoneId;
+        private Builder(CloneDBInstanceRequest request) {
+            super(request);
+            this.backupId = request.backupId;
+            this.backupType = request.backupType;
+            this.category = request.category;
+            this.DBInstanceClass = request.DBInstanceClass;
+            this.DBInstanceId = request.DBInstanceId;
+            this.DBInstanceStorage = request.DBInstanceStorage;
+            this.DBInstanceStorageType = request.DBInstanceStorageType;
+            this.dbNames = request.dbNames;
+            this.dedicatedHostGroupId = request.dedicatedHostGroupId;
+            this.deletionProtection = request.deletionProtection;
+            this.instanceNetworkType = request.instanceNetworkType;
+            this.payType = request.payType;
+            this.period = request.period;
+            this.privateIpAddress = request.privateIpAddress;
+            this.regionId = request.regionId;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.restoreTable = request.restoreTable;
+            this.restoreTime = request.restoreTime;
+            this.tableMeta = request.tableMeta;
+            this.usedTime = request.usedTime;
+            this.VPCId = request.VPCId;
+            this.vSwitchId = request.vSwitchId;
+            this.zoneId = request.zoneId;
         } 
 
         /**
@@ -427,6 +441,15 @@ public class CloneDBInstanceRequest extends Request {
         public Builder dedicatedHostGroupId(String dedicatedHostGroupId) {
             this.putQueryParameter("DedicatedHostGroupId", dedicatedHostGroupId);
             this.dedicatedHostGroupId = dedicatedHostGroupId;
+            return this;
+        }
+
+        /**
+         * DeletionProtection.
+         */
+        public Builder deletionProtection(Boolean deletionProtection) {
+            this.putQueryParameter("DeletionProtection", deletionProtection);
+            this.deletionProtection = deletionProtection;
             return this;
         }
 

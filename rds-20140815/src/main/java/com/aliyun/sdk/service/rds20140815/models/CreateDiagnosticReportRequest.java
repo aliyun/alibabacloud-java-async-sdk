@@ -77,11 +77,11 @@ public class CreateDiagnosticReportRequest extends Request {
             super();
         } 
 
-        private Builder(CreateDiagnosticReportRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.endTime = response.endTime;
-            this.startTime = response.startTime;
+        private Builder(CreateDiagnosticReportRequest request) {
+            super(request);
+            this.DBInstanceId = request.DBInstanceId;
+            this.endTime = request.endTime;
+            this.startTime = request.startTime;
         } 
 
         /**

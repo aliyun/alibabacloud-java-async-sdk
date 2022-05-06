@@ -193,20 +193,20 @@ public class DescribeCrossRegionBackupsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeCrossRegionBackupsRequest response) {
-            super(response);
-            this.backupId = response.backupId;
-            this.crossBackupId = response.crossBackupId;
-            this.crossBackupRegion = response.crossBackupRegion;
-            this.DBInstanceId = response.DBInstanceId;
-            this.endTime = response.endTime;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.startTime = response.startTime;
+        private Builder(DescribeCrossRegionBackupsRequest request) {
+            super(request);
+            this.backupId = request.backupId;
+            this.crossBackupId = request.crossBackupId;
+            this.crossBackupRegion = request.crossBackupRegion;
+            this.DBInstanceId = request.DBInstanceId;
+            this.endTime = request.endTime;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.startTime = request.startTime;
         } 
 
         /**

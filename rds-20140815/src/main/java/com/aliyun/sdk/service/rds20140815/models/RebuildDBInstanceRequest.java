@@ -141,16 +141,16 @@ public class RebuildDBInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(RebuildDBInstanceRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.dedicatedHostGroupId = response.dedicatedHostGroupId;
-            this.dedicatedHostId = response.dedicatedHostId;
-            this.ownerId = response.ownerId;
-            this.rebuildNodeType = response.rebuildNodeType;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(RebuildDBInstanceRequest request) {
+            super(request);
+            this.DBInstanceId = request.DBInstanceId;
+            this.dedicatedHostGroupId = request.dedicatedHostGroupId;
+            this.dedicatedHostId = request.dedicatedHostId;
+            this.ownerId = request.ownerId;
+            this.rebuildNodeType = request.rebuildNodeType;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

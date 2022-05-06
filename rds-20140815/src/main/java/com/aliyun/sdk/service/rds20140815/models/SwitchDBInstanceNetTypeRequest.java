@@ -154,17 +154,17 @@ public class SwitchDBInstanceNetTypeRequest extends Request {
             super();
         } 
 
-        private Builder(SwitchDBInstanceNetTypeRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.connectionStringPrefix = response.connectionStringPrefix;
-            this.connectionStringType = response.connectionStringType;
-            this.DBInstanceId = response.DBInstanceId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.port = response.port;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(SwitchDBInstanceNetTypeRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.connectionStringPrefix = request.connectionStringPrefix;
+            this.connectionStringType = request.connectionStringType;
+            this.DBInstanceId = request.DBInstanceId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.port = request.port;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

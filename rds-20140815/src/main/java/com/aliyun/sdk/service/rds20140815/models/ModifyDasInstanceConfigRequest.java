@@ -142,16 +142,16 @@ public class ModifyDasInstanceConfigRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDasInstanceConfigRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.DBInstanceId = response.DBInstanceId;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.storageAutoScale = response.storageAutoScale;
-            this.storageThreshold = response.storageThreshold;
-            this.storageUpperBound = response.storageUpperBound;
+        private Builder(ModifyDasInstanceConfigRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.DBInstanceId = request.DBInstanceId;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.storageAutoScale = request.storageAutoScale;
+            this.storageThreshold = request.storageThreshold;
+            this.storageUpperBound = request.storageUpperBound;
         } 
 
         /**
