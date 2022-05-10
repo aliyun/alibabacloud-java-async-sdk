@@ -39,6 +39,10 @@ public class DescribeAlarmEventListRequest extends Request {
     private String groupId;
 
     @Query
+    @NameInMap("Id")
+    private Long id;
+
+    @Query
     @NameInMap("Lang")
     private String lang;
 
@@ -75,6 +79,7 @@ public class DescribeAlarmEventListRequest extends Request {
         this.dealed = builder.dealed;
         this.from = builder.from;
         this.groupId = builder.groupId;
+        this.id = builder.id;
         this.lang = builder.lang;
         this.levels = builder.levels;
         this.operateErrorCodeList = builder.operateErrorCodeList;
@@ -140,6 +145,13 @@ public class DescribeAlarmEventListRequest extends Request {
     }
 
     /**
+     * @return id
+     */
+    public Long getId() {
+        return this.id;
+    }
+
+    /**
      * @return lang
      */
     public String getLang() {
@@ -195,6 +207,7 @@ public class DescribeAlarmEventListRequest extends Request {
         private String dealed; 
         private String from; 
         private String groupId; 
+        private Long id; 
         private String lang; 
         private String levels; 
         private java.util.List < String > operateErrorCodeList; 
@@ -215,6 +228,7 @@ public class DescribeAlarmEventListRequest extends Request {
             this.dealed = request.dealed;
             this.from = request.from;
             this.groupId = request.groupId;
+            this.id = request.id;
             this.lang = request.lang;
             this.levels = request.levels;
             this.operateErrorCodeList = request.operateErrorCodeList;
@@ -275,6 +289,15 @@ public class DescribeAlarmEventListRequest extends Request {
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
             this.groupId = groupId;
+            return this;
+        }
+
+        /**
+         * Id.
+         */
+        public Builder id(Long id) {
+            this.putQueryParameter("Id", id);
+            this.id = id;
             return this;
         }
 

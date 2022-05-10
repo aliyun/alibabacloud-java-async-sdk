@@ -233,9 +233,6 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
 
     }
     public static class Rules extends TeaModel {
-        @NameInMap("DefaultValue")
-        private Integer defaultValue;
-
         @NameInMap("Optional")
         private Integer optional;
 
@@ -249,7 +246,6 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
         private String ruleId;
 
         private Rules(Builder builder) {
-            this.defaultValue = builder.defaultValue;
             this.optional = builder.optional;
             this.paramList = builder.paramList;
             this.ruleDesc = builder.ruleDesc;
@@ -262,13 +258,6 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
 
         public static Rules create() {
             return builder().build();
-        }
-
-        /**
-         * @return defaultValue
-         */
-        public Integer getDefaultValue() {
-            return this.defaultValue;
         }
 
         /**
@@ -300,19 +289,10 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private Integer defaultValue; 
             private Integer optional; 
             private java.util.List < ParamList> paramList; 
             private String ruleDesc; 
             private String ruleId; 
-
-            /**
-             * DefaultValue.
-             */
-            public Builder defaultValue(Integer defaultValue) {
-                this.defaultValue = defaultValue;
-                return this;
-            }
 
             /**
              * Optional.

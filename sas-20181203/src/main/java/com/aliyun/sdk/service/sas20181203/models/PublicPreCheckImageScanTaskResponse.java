@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link StartImageVulScanResponse} extends {@link TeaModel}
+ * {@link PublicPreCheckImageScanTaskResponse} extends {@link TeaModel}
  *
- * <p>StartImageVulScanResponse</p>
+ * <p>PublicPreCheckImageScanTaskResponse</p>
  */
-public class StartImageVulScanResponse extends Response {
+public class PublicPreCheckImageScanTaskResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private StartImageVulScanResponseBody body;
+    private PublicPreCheckImageScanTaskResponseBody body;
 
-    private StartImageVulScanResponse(BuilderImpl builder) {
+    private PublicPreCheckImageScanTaskResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static StartImageVulScanResponse create() {
+    public static PublicPreCheckImageScanTaskResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class StartImageVulScanResponse extends Response {
     /**
      * @return body
      */
-    public StartImageVulScanResponseBody getBody() {
+    public PublicPreCheckImageScanTaskResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<StartImageVulScanResponse, Builder> {
+    public interface Builder extends Response.Builder<PublicPreCheckImageScanTaskResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(StartImageVulScanResponseBody body);
+        Builder body(PublicPreCheckImageScanTaskResponseBody body);
 
         @Override
-        StartImageVulScanResponse build();
+        PublicPreCheckImageScanTaskResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<StartImageVulScanResponse, Builder>
+            extends Response.BuilderImpl<PublicPreCheckImageScanTaskResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private StartImageVulScanResponseBody body; 
+        private PublicPreCheckImageScanTaskResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(StartImageVulScanResponse response) {
+        private BuilderImpl(PublicPreCheckImageScanTaskResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class StartImageVulScanResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(StartImageVulScanResponseBody body) {
+        public Builder body(PublicPreCheckImageScanTaskResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public StartImageVulScanResponse build() {
-            return new StartImageVulScanResponse(this);
+        public PublicPreCheckImageScanTaskResponse build() {
+            return new PublicPreCheckImageScanTaskResponse(this);
         } 
 
     } 

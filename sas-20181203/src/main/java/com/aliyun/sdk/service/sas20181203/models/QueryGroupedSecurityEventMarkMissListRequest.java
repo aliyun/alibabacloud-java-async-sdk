@@ -29,10 +29,6 @@ public class QueryGroupedSecurityEventMarkMissListRequest extends Request {
     private String lang;
 
     @Body
-    @NameInMap("MaxId")
-    private Long maxId;
-
-    @Body
     @NameInMap("PageSize")
     private Integer pageSize;
 
@@ -50,7 +46,6 @@ public class QueryGroupedSecurityEventMarkMissListRequest extends Request {
         this.eventName = builder.eventName;
         this.from = builder.from;
         this.lang = builder.lang;
-        this.maxId = builder.maxId;
         this.pageSize = builder.pageSize;
         this.remark = builder.remark;
         this.sourceIp = builder.sourceIp;
@@ -98,13 +93,6 @@ public class QueryGroupedSecurityEventMarkMissListRequest extends Request {
     }
 
     /**
-     * @return maxId
-     */
-    public Long getMaxId() {
-        return this.maxId;
-    }
-
-    /**
      * @return pageSize
      */
     public Integer getPageSize() {
@@ -130,7 +118,6 @@ public class QueryGroupedSecurityEventMarkMissListRequest extends Request {
         private String eventName; 
         private String from; 
         private String lang; 
-        private Long maxId; 
         private Integer pageSize; 
         private String remark; 
         private String sourceIp; 
@@ -145,7 +132,6 @@ public class QueryGroupedSecurityEventMarkMissListRequest extends Request {
             this.eventName = request.eventName;
             this.from = request.from;
             this.lang = request.lang;
-            this.maxId = request.maxId;
             this.pageSize = request.pageSize;
             this.remark = request.remark;
             this.sourceIp = request.sourceIp;
@@ -184,15 +170,6 @@ public class QueryGroupedSecurityEventMarkMissListRequest extends Request {
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
             this.lang = lang;
-            return this;
-        }
-
-        /**
-         * MaxId.
-         */
-        public Builder maxId(Long maxId) {
-            this.putBodyParameter("MaxId", maxId);
-            this.maxId = maxId;
             return this;
         }
 

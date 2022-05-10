@@ -49,6 +49,10 @@ public class DescribeSuspEventsRequest extends Request {
     private Long groupId;
 
     @Query
+    @NameInMap("Id")
+    private Long id;
+
+    @Query
     @NameInMap("Lang")
     private String lang;
 
@@ -115,6 +119,7 @@ public class DescribeSuspEventsRequest extends Request {
         this.eventNames = builder.eventNames;
         this.from = builder.from;
         this.groupId = builder.groupId;
+        this.id = builder.id;
         this.lang = builder.lang;
         this.levels = builder.levels;
         this.name = builder.name;
@@ -205,6 +210,13 @@ public class DescribeSuspEventsRequest extends Request {
      */
     public Long getGroupId() {
         return this.groupId;
+    }
+
+    /**
+     * @return id
+     */
+    public Long getId() {
+        return this.id;
     }
 
     /**
@@ -315,6 +327,7 @@ public class DescribeSuspEventsRequest extends Request {
         private String eventNames; 
         private String from; 
         private Long groupId; 
+        private Long id; 
         private String lang; 
         private String levels; 
         private String name; 
@@ -345,6 +358,7 @@ public class DescribeSuspEventsRequest extends Request {
             this.eventNames = request.eventNames;
             this.from = request.from;
             this.groupId = request.groupId;
+            this.id = request.id;
             this.lang = request.lang;
             this.levels = request.levels;
             this.name = request.name;
@@ -439,6 +453,15 @@ public class DescribeSuspEventsRequest extends Request {
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
             this.groupId = groupId;
+            return this;
+        }
+
+        /**
+         * Id.
+         */
+        public Builder id(Long id) {
+            this.putQueryParameter("Id", id);
+            this.id = id;
             return this;
         }
 

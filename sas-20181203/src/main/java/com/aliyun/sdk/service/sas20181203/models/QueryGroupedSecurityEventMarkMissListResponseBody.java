@@ -15,9 +15,6 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
     @NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
-    private Integer httpStatusCode;
-
     @NameInMap("List")
     private java.util.List < List> list;
 
@@ -33,18 +30,13 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
     @NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TimeCost")
-    private Long timeCost;
-
     private QueryGroupedSecurityEventMarkMissListResponseBody(Builder builder) {
         this.code = builder.code;
-        this.httpStatusCode = builder.httpStatusCode;
         this.list = builder.list;
         this.message = builder.message;
         this.pageInfo = builder.pageInfo;
         this.requestId = builder.requestId;
         this.success = builder.success;
-        this.timeCost = builder.timeCost;
     }
 
     public static Builder builder() {
@@ -60,13 +52,6 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
      */
     public String getCode() {
         return this.code;
-    }
-
-    /**
-     * @return httpStatusCode
-     */
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
     }
 
     /**
@@ -104,36 +89,19 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
         return this.success;
     }
 
-    /**
-     * @return timeCost
-     */
-    public Long getTimeCost() {
-        return this.timeCost;
-    }
-
     public static final class Builder {
         private String code; 
-        private Integer httpStatusCode; 
         private java.util.List < List> list; 
         private String message; 
         private PageInfo pageInfo; 
         private String requestId; 
         private Boolean success; 
-        private Long timeCost; 
 
         /**
          * Code.
          */
         public Builder code(String code) {
             this.code = code;
-            return this;
-        }
-
-        /**
-         * HttpStatusCode.
-         */
-        public Builder httpStatusCode(Integer httpStatusCode) {
-            this.httpStatusCode = httpStatusCode;
             return this;
         }
 
@@ -177,14 +145,6 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
             return this;
         }
 
-        /**
-         * TimeCost.
-         */
-        public Builder timeCost(Long timeCost) {
-            this.timeCost = timeCost;
-            return this;
-        }
-
         public QueryGroupedSecurityEventMarkMissListResponseBody build() {
             return new QueryGroupedSecurityEventMarkMissListResponseBody(this);
         } 
@@ -216,12 +176,6 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
         @NameInMap("FiledAliasName")
         private String filedAliasName;
 
-        @NameInMap("GmtCreate")
-        private Long gmtCreate;
-
-        @NameInMap("GmtModified")
-        private Long gmtModified;
-
         @NameInMap("Operate")
         private String operate;
 
@@ -237,8 +191,6 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
             this.field = builder.field;
             this.fieldValue = builder.fieldValue;
             this.filedAliasName = builder.filedAliasName;
-            this.gmtCreate = builder.gmtCreate;
-            this.gmtModified = builder.gmtModified;
             this.operate = builder.operate;
             this.uuids = builder.uuids;
         }
@@ -308,20 +260,6 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
         }
 
         /**
-         * @return gmtCreate
-         */
-        public Long getGmtCreate() {
-            return this.gmtCreate;
-        }
-
-        /**
-         * @return gmtModified
-         */
-        public Long getGmtModified() {
-            return this.gmtModified;
-        }
-
-        /**
          * @return operate
          */
         public String getOperate() {
@@ -344,8 +282,6 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
             private String field; 
             private String fieldValue; 
             private String filedAliasName; 
-            private Long gmtCreate; 
-            private Long gmtModified; 
             private String operate; 
             private String uuids; 
 
@@ -410,22 +346,6 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
              */
             public Builder filedAliasName(String filedAliasName) {
                 this.filedAliasName = filedAliasName;
-                return this;
-            }
-
-            /**
-             * 创建时间
-             */
-            public Builder gmtCreate(Long gmtCreate) {
-                this.gmtCreate = gmtCreate;
-                return this;
-            }
-
-            /**
-             * 修改时间
-             */
-            public Builder gmtModified(Long gmtModified) {
-                this.gmtModified = gmtModified;
                 return this;
             }
 

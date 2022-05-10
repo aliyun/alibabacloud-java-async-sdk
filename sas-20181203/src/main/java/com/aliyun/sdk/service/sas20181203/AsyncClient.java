@@ -374,6 +374,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<PauseClientResponse> pauseClient(PauseClientRequest request);
 
+    CompletableFuture<PublicCreateImageScanTaskResponse> publicCreateImageScanTask(PublicCreateImageScanTaskRequest request);
+
+    CompletableFuture<PublicPreCheckImageScanTaskResponse> publicPreCheckImageScanTask(PublicPreCheckImageScanTaskRequest request);
+
+    CompletableFuture<PublicSyncAndCreateImageScanTaskResponse> publicSyncAndCreateImageScanTask(PublicSyncAndCreateImageScanTaskRequest request);
+
     CompletableFuture<QueryGroupIdByGroupNameResponse> queryGroupIdByGroupName(QueryGroupIdByGroupNameRequest request);
 
     CompletableFuture<QueryGroupedSecurityEventMarkMissListResponse> queryGroupedSecurityEventMarkMissList(QueryGroupedSecurityEventMarkMissListRequest request);
@@ -387,8 +393,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SasInstallCodeResponse> sasInstallCode(SasInstallCodeRequest request);
 
     CompletableFuture<StartBaselineSecurityCheckResponse> startBaselineSecurityCheck(StartBaselineSecurityCheckRequest request);
-
-    CompletableFuture<StartImageVulScanResponse> startImageVulScan(StartImageVulScanRequest request);
 
     CompletableFuture<StartVirusScanTaskResponse> startVirusScanTask(StartVirusScanTaskRequest request);
 
