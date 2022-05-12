@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeEmgVulItemRequest extends Request {
     @Query
+    @NameInMap("CheckType")
+    private Integer checkType;
+
+    @Query
     @NameInMap("CurrentPage")
     private Integer currentPage;
 
@@ -38,6 +42,7 @@ public class DescribeEmgVulItemRequest extends Request {
 
     private DescribeEmgVulItemRequest(Builder builder) {
         super(builder);
+        this.checkType = builder.checkType;
         this.currentPage = builder.currentPage;
         this.lang = builder.lang;
         this.pageSize = builder.pageSize;
@@ -57,6 +62,13 @@ public class DescribeEmgVulItemRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return checkType
+     */
+    public Integer getCheckType() {
+        return this.checkType;
     }
 
     /**
@@ -102,6 +114,7 @@ public class DescribeEmgVulItemRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeEmgVulItemRequest, Builder> {
+        private Integer checkType; 
         private Integer currentPage; 
         private String lang; 
         private Integer pageSize; 
@@ -115,6 +128,7 @@ public class DescribeEmgVulItemRequest extends Request {
 
         private Builder(DescribeEmgVulItemRequest request) {
             super(request);
+            this.checkType = request.checkType;
             this.currentPage = request.currentPage;
             this.lang = request.lang;
             this.pageSize = request.pageSize;
@@ -122,6 +136,15 @@ public class DescribeEmgVulItemRequest extends Request {
             this.scanType = request.scanType;
             this.vulName = request.vulName;
         } 
+
+        /**
+         * 检测方式
+         */
+        public Builder checkType(Integer checkType) {
+            this.putQueryParameter("CheckType", checkType);
+            this.checkType = checkType;
+            return this;
+        }
 
         /**
          * CurrentPage.
