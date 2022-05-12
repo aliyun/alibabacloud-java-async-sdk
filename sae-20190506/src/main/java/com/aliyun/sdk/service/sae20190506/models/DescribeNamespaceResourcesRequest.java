@@ -48,9 +48,9 @@ public class DescribeNamespaceResourcesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeNamespaceResourcesRequest response) {
-            super(response);
-            this.namespaceId = response.namespaceId;
+        private Builder(DescribeNamespaceResourcesRequest request) {
+            super(request);
+            this.namespaceId = request.namespaceId;
         } 
 
         /**

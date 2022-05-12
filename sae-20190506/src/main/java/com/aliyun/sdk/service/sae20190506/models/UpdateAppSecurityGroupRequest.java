@@ -63,10 +63,10 @@ public class UpdateAppSecurityGroupRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateAppSecurityGroupRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.securityGroupId = response.securityGroupId;
+        private Builder(UpdateAppSecurityGroupRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.securityGroupId = request.securityGroupId;
         } 
 
         /**

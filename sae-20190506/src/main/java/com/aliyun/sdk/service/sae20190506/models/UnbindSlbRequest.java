@@ -75,11 +75,11 @@ public class UnbindSlbRequest extends Request {
             super();
         } 
 
-        private Builder(UnbindSlbRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.internet = response.internet;
-            this.intranet = response.intranet;
+        private Builder(UnbindSlbRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.internet = request.internet;
+            this.intranet = request.intranet;
         } 
 
         /**

@@ -114,14 +114,14 @@ public class ListChangeOrdersRequest extends Request {
             super();
         } 
 
-        private Builder(ListChangeOrdersRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.coStatus = response.coStatus;
-            this.coType = response.coType;
-            this.currentPage = response.currentPage;
-            this.key = response.key;
-            this.pageSize = response.pageSize;
+        private Builder(ListChangeOrdersRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.coStatus = request.coStatus;
+            this.coType = request.coType;
+            this.currentPage = request.currentPage;
+            this.key = request.key;
+            this.pageSize = request.pageSize;
         } 
 
         /**

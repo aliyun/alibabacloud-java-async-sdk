@@ -49,9 +49,9 @@ public class ListGreyTagRouteRequest extends Request {
             super();
         } 
 
-        private Builder(ListGreyTagRouteRequest response) {
-            super(response);
-            this.appId = response.appId;
+        private Builder(ListGreyTagRouteRequest request) {
+            super(request);
+            this.appId = request.appId;
         } 
 
         /**

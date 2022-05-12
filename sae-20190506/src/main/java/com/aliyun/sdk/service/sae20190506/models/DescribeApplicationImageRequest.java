@@ -63,10 +63,10 @@ public class DescribeApplicationImageRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeApplicationImageRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.imageUrl = response.imageUrl;
+        private Builder(DescribeApplicationImageRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.imageUrl = request.imageUrl;
         } 
 
         /**

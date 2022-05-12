@@ -49,9 +49,9 @@ public class QueryResourceStaticsRequest extends Request {
             super();
         } 
 
-        private Builder(QueryResourceStaticsRequest response) {
-            super(response);
-            this.appId = response.appId;
+        private Builder(QueryResourceStaticsRequest request) {
+            super(request);
+            this.appId = request.appId;
         } 
 
         /**

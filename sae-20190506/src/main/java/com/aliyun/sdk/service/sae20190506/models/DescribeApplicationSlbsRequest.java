@@ -49,9 +49,9 @@ public class DescribeApplicationSlbsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeApplicationSlbsRequest response) {
-            super(response);
-            this.appId = response.appId;
+        private Builder(DescribeApplicationSlbsRequest request) {
+            super(request);
+            this.appId = request.appId;
         } 
 
         /**

@@ -63,10 +63,10 @@ public class DescribeApplicationScalingRuleRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeApplicationScalingRuleRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.scalingRuleName = response.scalingRuleName;
+        private Builder(DescribeApplicationScalingRuleRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.scalingRuleName = request.scalingRuleName;
         } 
 
         /**

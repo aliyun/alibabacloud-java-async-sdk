@@ -18,6 +18,7 @@ public class CreateIngressRequest extends Request {
 
     @Query
     @NameInMap("DefaultRule")
+    @Validation(required = true)
     private String defaultRule;
 
     @Query
@@ -28,6 +29,14 @@ public class CreateIngressRequest extends Request {
     @NameInMap("ListenerPort")
     @Validation(required = true)
     private Integer listenerPort;
+
+    @Query
+    @NameInMap("ListenerProtocol")
+    private String listenerProtocol;
+
+    @Query
+    @NameInMap("LoadBalanceType")
+    private String loadBalanceType;
 
     @Query
     @NameInMap("NamespaceId")
@@ -50,6 +59,8 @@ public class CreateIngressRequest extends Request {
         this.defaultRule = builder.defaultRule;
         this.description = builder.description;
         this.listenerPort = builder.listenerPort;
+        this.listenerProtocol = builder.listenerProtocol;
+        this.loadBalanceType = builder.loadBalanceType;
         this.namespaceId = builder.namespaceId;
         this.rules = builder.rules;
         this.slbId = builder.slbId;
@@ -97,6 +108,20 @@ public class CreateIngressRequest extends Request {
     }
 
     /**
+     * @return listenerProtocol
+     */
+    public String getListenerProtocol() {
+        return this.listenerProtocol;
+    }
+
+    /**
+     * @return loadBalanceType
+     */
+    public String getLoadBalanceType() {
+        return this.loadBalanceType;
+    }
+
+    /**
      * @return namespaceId
      */
     public String getNamespaceId() {
@@ -122,6 +147,8 @@ public class CreateIngressRequest extends Request {
         private String defaultRule; 
         private String description; 
         private Integer listenerPort; 
+        private String listenerProtocol; 
+        private String loadBalanceType; 
         private String namespaceId; 
         private String rules; 
         private String slbId; 
@@ -130,15 +157,17 @@ public class CreateIngressRequest extends Request {
             super();
         } 
 
-        private Builder(CreateIngressRequest response) {
-            super(response);
-            this.certId = response.certId;
-            this.defaultRule = response.defaultRule;
-            this.description = response.description;
-            this.listenerPort = response.listenerPort;
-            this.namespaceId = response.namespaceId;
-            this.rules = response.rules;
-            this.slbId = response.slbId;
+        private Builder(CreateIngressRequest request) {
+            super(request);
+            this.certId = request.certId;
+            this.defaultRule = request.defaultRule;
+            this.description = request.description;
+            this.listenerPort = request.listenerPort;
+            this.listenerProtocol = request.listenerProtocol;
+            this.loadBalanceType = request.loadBalanceType;
+            this.namespaceId = request.namespaceId;
+            this.rules = request.rules;
+            this.slbId = request.slbId;
         } 
 
         /**
@@ -174,6 +203,24 @@ public class CreateIngressRequest extends Request {
         public Builder listenerPort(Integer listenerPort) {
             this.putQueryParameter("ListenerPort", listenerPort);
             this.listenerPort = listenerPort;
+            return this;
+        }
+
+        /**
+         * ListenerProtocol.
+         */
+        public Builder listenerProtocol(String listenerProtocol) {
+            this.putQueryParameter("ListenerProtocol", listenerProtocol);
+            this.listenerProtocol = listenerProtocol;
+            return this;
+        }
+
+        /**
+         * LoadBalanceType.
+         */
+        public Builder loadBalanceType(String loadBalanceType) {
+            this.putQueryParameter("LoadBalanceType", loadBalanceType);
+            this.loadBalanceType = loadBalanceType;
             return this;
         }
 

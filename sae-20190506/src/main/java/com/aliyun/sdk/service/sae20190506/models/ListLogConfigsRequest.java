@@ -77,11 +77,11 @@ public class ListLogConfigsRequest extends Request {
             super();
         } 
 
-        private Builder(ListLogConfigsRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.currentPage = response.currentPage;
-            this.pageSize = response.pageSize;
+        private Builder(ListLogConfigsRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.currentPage = request.currentPage;
+            this.pageSize = request.pageSize;
         } 
 
         /**

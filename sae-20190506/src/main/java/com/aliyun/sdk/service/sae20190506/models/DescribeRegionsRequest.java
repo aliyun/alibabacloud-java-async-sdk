@@ -35,8 +35,8 @@ public class DescribeRegionsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeRegionsRequest response) {
-            super(response);
+        private Builder(DescribeRegionsRequest request) {
+            super(request);
         } 
 
         @Override

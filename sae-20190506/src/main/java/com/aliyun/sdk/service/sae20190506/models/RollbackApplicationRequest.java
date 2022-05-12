@@ -128,15 +128,15 @@ public class RollbackApplicationRequest extends Request {
             super();
         } 
 
-        private Builder(RollbackApplicationRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.autoEnableApplicationScalingRule = response.autoEnableApplicationScalingRule;
-            this.batchWaitTime = response.batchWaitTime;
-            this.minReadyInstanceRatio = response.minReadyInstanceRatio;
-            this.minReadyInstances = response.minReadyInstances;
-            this.updateStrategy = response.updateStrategy;
-            this.versionId = response.versionId;
+        private Builder(RollbackApplicationRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.autoEnableApplicationScalingRule = request.autoEnableApplicationScalingRule;
+            this.batchWaitTime = request.batchWaitTime;
+            this.minReadyInstanceRatio = request.minReadyInstanceRatio;
+            this.minReadyInstances = request.minReadyInstances;
+            this.updateStrategy = request.updateStrategy;
+            this.versionId = request.versionId;
         } 
 
         /**

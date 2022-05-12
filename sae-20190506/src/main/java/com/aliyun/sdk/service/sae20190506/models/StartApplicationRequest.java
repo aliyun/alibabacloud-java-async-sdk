@@ -49,9 +49,9 @@ public class StartApplicationRequest extends Request {
             super();
         } 
 
-        private Builder(StartApplicationRequest response) {
-            super(response);
-            this.appId = response.appId;
+        private Builder(StartApplicationRequest request) {
+            super(request);
+            this.appId = request.appId;
         } 
 
         /**

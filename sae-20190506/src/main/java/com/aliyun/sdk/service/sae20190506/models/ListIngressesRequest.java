@@ -62,10 +62,10 @@ public class ListIngressesRequest extends Request {
             super();
         } 
 
-        private Builder(ListIngressesRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.namespaceId = response.namespaceId;
+        private Builder(ListIngressesRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.namespaceId = request.namespaceId;
         } 
 
         /**

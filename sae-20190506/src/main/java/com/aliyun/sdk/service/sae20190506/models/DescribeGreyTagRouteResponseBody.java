@@ -716,6 +716,9 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
+        @NameInMap("AppId")
+        private String appId;
+
         @NameInMap("CreateTime")
         private Long createTime;
 
@@ -738,6 +741,7 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
         private Long updateTime;
 
         private Data(Builder builder) {
+            this.appId = builder.appId;
             this.createTime = builder.createTime;
             this.description = builder.description;
             this.dubboRules = builder.dubboRules;
@@ -753,6 +757,13 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return appId
+         */
+        public String getAppId() {
+            return this.appId;
         }
 
         /**
@@ -805,6 +816,7 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String appId; 
             private Long createTime; 
             private String description; 
             private java.util.List < DubboRules> dubboRules; 
@@ -812,6 +824,14 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
             private String name; 
             private java.util.List < ScRules> scRules; 
             private Long updateTime; 
+
+            /**
+             * AppId.
+             */
+            public Builder appId(String appId) {
+                this.appId = appId;
+                return this;
+            }
 
             /**
              * CreateTime.

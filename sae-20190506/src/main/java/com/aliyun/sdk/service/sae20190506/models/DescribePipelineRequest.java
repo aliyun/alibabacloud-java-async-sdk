@@ -49,9 +49,9 @@ public class DescribePipelineRequest extends Request {
             super();
         } 
 
-        private Builder(DescribePipelineRequest response) {
-            super(response);
-            this.pipelineId = response.pipelineId;
+        private Builder(DescribePipelineRequest request) {
+            super(request);
+            this.pipelineId = request.pipelineId;
         } 
 
         /**

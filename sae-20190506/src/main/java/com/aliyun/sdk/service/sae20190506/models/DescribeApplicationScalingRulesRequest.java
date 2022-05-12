@@ -49,9 +49,9 @@ public class DescribeApplicationScalingRulesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeApplicationScalingRulesRequest response) {
-            super(response);
-            this.appId = response.appId;
+        private Builder(DescribeApplicationScalingRulesRequest request) {
+            super(request);
+            this.appId = request.appId;
         } 
 
         /**

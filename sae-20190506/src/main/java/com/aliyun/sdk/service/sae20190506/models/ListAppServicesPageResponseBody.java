@@ -172,17 +172,11 @@ public class ListAppServicesPageResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("ClusterName")
-        private String clusterName;
-
         @NameInMap("EdasAppId")
         private String edasAppId;
 
         @NameInMap("EdasAppName")
         private String edasAppName;
-
-        @NameInMap("GmtModifyTime")
-        private String gmtModifyTime;
 
         @NameInMap("Group")
         private String group;
@@ -197,10 +191,8 @@ public class ListAppServicesPageResponseBody extends TeaModel {
         private String version;
 
         private Result(Builder builder) {
-            this.clusterName = builder.clusterName;
             this.edasAppId = builder.edasAppId;
             this.edasAppName = builder.edasAppName;
-            this.gmtModifyTime = builder.gmtModifyTime;
             this.group = builder.group;
             this.instanceNum = builder.instanceNum;
             this.serviceName = builder.serviceName;
@@ -216,13 +208,6 @@ public class ListAppServicesPageResponseBody extends TeaModel {
         }
 
         /**
-         * @return clusterName
-         */
-        public String getClusterName() {
-            return this.clusterName;
-        }
-
-        /**
          * @return edasAppId
          */
         public String getEdasAppId() {
@@ -234,13 +219,6 @@ public class ListAppServicesPageResponseBody extends TeaModel {
          */
         public String getEdasAppName() {
             return this.edasAppName;
-        }
-
-        /**
-         * @return gmtModifyTime
-         */
-        public String getGmtModifyTime() {
-            return this.gmtModifyTime;
         }
 
         /**
@@ -272,22 +250,12 @@ public class ListAppServicesPageResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private String clusterName; 
             private String edasAppId; 
             private String edasAppName; 
-            private String gmtModifyTime; 
             private String group; 
             private Long instanceNum; 
             private String serviceName; 
             private String version; 
-
-            /**
-             * ClusterName.
-             */
-            public Builder clusterName(String clusterName) {
-                this.clusterName = clusterName;
-                return this;
-            }
 
             /**
              * EdasAppId.
@@ -302,14 +270,6 @@ public class ListAppServicesPageResponseBody extends TeaModel {
              */
             public Builder edasAppName(String edasAppName) {
                 this.edasAppName = edasAppName;
-                return this;
-            }
-
-            /**
-             * GmtModifyTime.
-             */
-            public Builder gmtModifyTime(String gmtModifyTime) {
-                this.gmtModifyTime = gmtModifyTime;
                 return this;
             }
 

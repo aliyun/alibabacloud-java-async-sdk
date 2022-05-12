@@ -389,6 +389,12 @@ public class DescribeIngressResponseBody extends TeaModel {
         @NameInMap("ListenerPort")
         private Integer listenerPort;
 
+        @NameInMap("ListenerProtocol")
+        private String listenerProtocol;
+
+        @NameInMap("LoadBalanceType")
+        private String loadBalanceType;
+
         @NameInMap("Name")
         private String name;
 
@@ -410,6 +416,8 @@ public class DescribeIngressResponseBody extends TeaModel {
             this.description = builder.description;
             this.id = builder.id;
             this.listenerPort = builder.listenerPort;
+            this.listenerProtocol = builder.listenerProtocol;
+            this.loadBalanceType = builder.loadBalanceType;
             this.name = builder.name;
             this.namespaceId = builder.namespaceId;
             this.rules = builder.rules;
@@ -461,6 +469,20 @@ public class DescribeIngressResponseBody extends TeaModel {
         }
 
         /**
+         * @return listenerProtocol
+         */
+        public String getListenerProtocol() {
+            return this.listenerProtocol;
+        }
+
+        /**
+         * @return loadBalanceType
+         */
+        public String getLoadBalanceType() {
+            return this.loadBalanceType;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -501,6 +523,8 @@ public class DescribeIngressResponseBody extends TeaModel {
             private String description; 
             private Long id; 
             private Integer listenerPort; 
+            private String listenerProtocol; 
+            private String loadBalanceType; 
             private String name; 
             private String namespaceId; 
             private java.util.List < Rules> rules; 
@@ -544,6 +568,22 @@ public class DescribeIngressResponseBody extends TeaModel {
              */
             public Builder listenerPort(Integer listenerPort) {
                 this.listenerPort = listenerPort;
+                return this;
+            }
+
+            /**
+             * ListenerProtocol.
+             */
+            public Builder listenerProtocol(String listenerProtocol) {
+                this.listenerProtocol = listenerProtocol;
+                return this;
+            }
+
+            /**
+             * LoadBalanceType.
+             */
+            public Builder loadBalanceType(String loadBalanceType) {
+                this.loadBalanceType = loadBalanceType;
                 return this;
             }
 

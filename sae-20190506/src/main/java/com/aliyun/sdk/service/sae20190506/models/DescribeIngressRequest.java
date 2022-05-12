@@ -49,9 +49,9 @@ public class DescribeIngressRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeIngressRequest response) {
-            super(response);
-            this.ingressId = response.ingressId;
+        private Builder(DescribeIngressRequest request) {
+            super(request);
+            this.ingressId = request.ingressId;
         } 
 
         /**

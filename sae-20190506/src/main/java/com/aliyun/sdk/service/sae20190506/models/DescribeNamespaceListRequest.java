@@ -61,10 +61,10 @@ public class DescribeNamespaceListRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeNamespaceListRequest response) {
-            super(response);
-            this.containCustom = response.containCustom;
-            this.hybridCloudExclude = response.hybridCloudExclude;
+        private Builder(DescribeNamespaceListRequest request) {
+            super(request);
+            this.containCustom = request.containCustom;
+            this.hybridCloudExclude = request.hybridCloudExclude;
         } 
 
         /**

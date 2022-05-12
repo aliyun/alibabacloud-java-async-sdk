@@ -333,6 +333,9 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
+        @NameInMap("AppId")
+        private String appId;
+
         @NameInMap("AppName")
         private String appName;
 
@@ -385,6 +388,7 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
         private Boolean supportRollback;
 
         private Data(Builder builder) {
+            this.appId = builder.appId;
             this.appName = builder.appName;
             this.approvalId = builder.approvalId;
             this.auto = builder.auto;
@@ -410,6 +414,13 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return appId
+         */
+        public String getAppId() {
+            return this.appId;
         }
 
         /**
@@ -532,6 +543,7 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String appId; 
             private String appName; 
             private String approvalId; 
             private Boolean auto; 
@@ -549,6 +561,14 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
             private Integer status; 
             private Integer subStatus; 
             private Boolean supportRollback; 
+
+            /**
+             * AppId.
+             */
+            public Builder appId(String appId) {
+                this.appId = appId;
+                return this;
+            }
 
             /**
              * AppName.

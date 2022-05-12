@@ -49,9 +49,9 @@ public class DeleteConfigMapRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteConfigMapRequest response) {
-            super(response);
-            this.configMapId = response.configMapId;
+        private Builder(DeleteConfigMapRequest request) {
+            super(request);
+            this.configMapId = request.configMapId;
         } 
 
         /**

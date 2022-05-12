@@ -49,9 +49,9 @@ public class AbortAndRollbackChangeOrderRequest extends Request {
             super();
         } 
 
-        private Builder(AbortAndRollbackChangeOrderRequest response) {
-            super(response);
-            this.changeOrderId = response.changeOrderId;
+        private Builder(AbortAndRollbackChangeOrderRequest request) {
+            super(request);
+            this.changeOrderId = request.changeOrderId;
         } 
 
         /**

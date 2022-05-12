@@ -102,13 +102,13 @@ public class CreateGreyTagRouteRequest extends Request {
             super();
         } 
 
-        private Builder(CreateGreyTagRouteRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.description = response.description;
-            this.dubboRules = response.dubboRules;
-            this.name = response.name;
-            this.scRules = response.scRules;
+        private Builder(CreateGreyTagRouteRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.description = request.description;
+            this.dubboRules = request.dubboRules;
+            this.name = request.name;
+            this.scRules = request.scRules;
         } 
 
         /**

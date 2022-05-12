@@ -90,6 +90,22 @@ public class DeployApplicationRequest extends Request {
     private String jdk;
 
     @Query
+    @NameInMap("KafkaConfigs")
+    private String kafkaConfigs;
+
+    @Query
+    @NameInMap("KafkaEndpoint")
+    private String kafkaEndpoint;
+
+    @Query
+    @NameInMap("KafkaInstanceId")
+    private String kafkaInstanceId;
+
+    @Query
+    @NameInMap("KafkaLogfileConfig")
+    private String kafkaLogfileConfig;
+
+    @Query
     @NameInMap("Liveness")
     private String liveness;
 
@@ -112,6 +128,10 @@ public class DeployApplicationRequest extends Request {
     @Query
     @NameInMap("NasId")
     private String nasId;
+
+    @Query
+    @NameInMap("OpenCollectToKafka")
+    private Boolean openCollectToKafka;
 
     @Body
     @NameInMap("OssAkId")
@@ -207,12 +227,17 @@ public class DeployApplicationRequest extends Request {
         this.jarStartArgs = builder.jarStartArgs;
         this.jarStartOptions = builder.jarStartOptions;
         this.jdk = builder.jdk;
+        this.kafkaConfigs = builder.kafkaConfigs;
+        this.kafkaEndpoint = builder.kafkaEndpoint;
+        this.kafkaInstanceId = builder.kafkaInstanceId;
+        this.kafkaLogfileConfig = builder.kafkaLogfileConfig;
         this.liveness = builder.liveness;
         this.minReadyInstanceRatio = builder.minReadyInstanceRatio;
         this.minReadyInstances = builder.minReadyInstances;
         this.mountDesc = builder.mountDesc;
         this.mountHost = builder.mountHost;
         this.nasId = builder.nasId;
+        this.openCollectToKafka = builder.openCollectToKafka;
         this.ossAkId = builder.ossAkId;
         this.ossAkSecret = builder.ossAkSecret;
         this.ossMountDescs = builder.ossMountDescs;
@@ -380,6 +405,34 @@ public class DeployApplicationRequest extends Request {
     }
 
     /**
+     * @return kafkaConfigs
+     */
+    public String getKafkaConfigs() {
+        return this.kafkaConfigs;
+    }
+
+    /**
+     * @return kafkaEndpoint
+     */
+    public String getKafkaEndpoint() {
+        return this.kafkaEndpoint;
+    }
+
+    /**
+     * @return kafkaInstanceId
+     */
+    public String getKafkaInstanceId() {
+        return this.kafkaInstanceId;
+    }
+
+    /**
+     * @return kafkaLogfileConfig
+     */
+    public String getKafkaLogfileConfig() {
+        return this.kafkaLogfileConfig;
+    }
+
+    /**
      * @return liveness
      */
     public String getLiveness() {
@@ -419,6 +472,13 @@ public class DeployApplicationRequest extends Request {
      */
     public String getNasId() {
         return this.nasId;
+    }
+
+    /**
+     * @return openCollectToKafka
+     */
+    public Boolean getOpenCollectToKafka() {
+        return this.openCollectToKafka;
     }
 
     /**
@@ -567,12 +627,17 @@ public class DeployApplicationRequest extends Request {
         private String jarStartArgs; 
         private String jarStartOptions; 
         private String jdk; 
+        private String kafkaConfigs; 
+        private String kafkaEndpoint; 
+        private String kafkaInstanceId; 
+        private String kafkaLogfileConfig; 
         private String liveness; 
         private Integer minReadyInstanceRatio; 
         private Integer minReadyInstances; 
         private String mountDesc; 
         private String mountHost; 
         private String nasId; 
+        private Boolean openCollectToKafka; 
         private String ossAkId; 
         private String ossAkSecret; 
         private String ossMountDescs; 
@@ -596,51 +661,56 @@ public class DeployApplicationRequest extends Request {
             super();
         } 
 
-        private Builder(DeployApplicationRequest response) {
-            super(response);
-            this.acrAssumeRoleArn = response.acrAssumeRoleArn;
-            this.acrInstanceId = response.acrInstanceId;
-            this.appId = response.appId;
-            this.associateEip = response.associateEip;
-            this.autoEnableApplicationScalingRule = response.autoEnableApplicationScalingRule;
-            this.batchWaitTime = response.batchWaitTime;
-            this.changeOrderDesc = response.changeOrderDesc;
-            this.command = response.command;
-            this.commandArgs = response.commandArgs;
-            this.configMapMountDesc = response.configMapMountDesc;
-            this.customHostAlias = response.customHostAlias;
-            this.edasContainerVersion = response.edasContainerVersion;
-            this.enableAhas = response.enableAhas;
-            this.enableGreyTagRoute = response.enableGreyTagRoute;
-            this.envs = response.envs;
-            this.imageUrl = response.imageUrl;
-            this.jarStartArgs = response.jarStartArgs;
-            this.jarStartOptions = response.jarStartOptions;
-            this.jdk = response.jdk;
-            this.liveness = response.liveness;
-            this.minReadyInstanceRatio = response.minReadyInstanceRatio;
-            this.minReadyInstances = response.minReadyInstances;
-            this.mountDesc = response.mountDesc;
-            this.mountHost = response.mountHost;
-            this.nasId = response.nasId;
-            this.ossAkId = response.ossAkId;
-            this.ossAkSecret = response.ossAkSecret;
-            this.ossMountDescs = response.ossMountDescs;
-            this.packageUrl = response.packageUrl;
-            this.packageVersion = response.packageVersion;
-            this.phpArmsConfigLocation = response.phpArmsConfigLocation;
-            this.phpConfig = response.phpConfig;
-            this.phpConfigLocation = response.phpConfigLocation;
-            this.postStart = response.postStart;
-            this.preStop = response.preStop;
-            this.readiness = response.readiness;
-            this.slsConfigs = response.slsConfigs;
-            this.terminationGracePeriodSeconds = response.terminationGracePeriodSeconds;
-            this.timezone = response.timezone;
-            this.tomcatConfig = response.tomcatConfig;
-            this.updateStrategy = response.updateStrategy;
-            this.warStartOptions = response.warStartOptions;
-            this.webContainer = response.webContainer;
+        private Builder(DeployApplicationRequest request) {
+            super(request);
+            this.acrAssumeRoleArn = request.acrAssumeRoleArn;
+            this.acrInstanceId = request.acrInstanceId;
+            this.appId = request.appId;
+            this.associateEip = request.associateEip;
+            this.autoEnableApplicationScalingRule = request.autoEnableApplicationScalingRule;
+            this.batchWaitTime = request.batchWaitTime;
+            this.changeOrderDesc = request.changeOrderDesc;
+            this.command = request.command;
+            this.commandArgs = request.commandArgs;
+            this.configMapMountDesc = request.configMapMountDesc;
+            this.customHostAlias = request.customHostAlias;
+            this.edasContainerVersion = request.edasContainerVersion;
+            this.enableAhas = request.enableAhas;
+            this.enableGreyTagRoute = request.enableGreyTagRoute;
+            this.envs = request.envs;
+            this.imageUrl = request.imageUrl;
+            this.jarStartArgs = request.jarStartArgs;
+            this.jarStartOptions = request.jarStartOptions;
+            this.jdk = request.jdk;
+            this.kafkaConfigs = request.kafkaConfigs;
+            this.kafkaEndpoint = request.kafkaEndpoint;
+            this.kafkaInstanceId = request.kafkaInstanceId;
+            this.kafkaLogfileConfig = request.kafkaLogfileConfig;
+            this.liveness = request.liveness;
+            this.minReadyInstanceRatio = request.minReadyInstanceRatio;
+            this.minReadyInstances = request.minReadyInstances;
+            this.mountDesc = request.mountDesc;
+            this.mountHost = request.mountHost;
+            this.nasId = request.nasId;
+            this.openCollectToKafka = request.openCollectToKafka;
+            this.ossAkId = request.ossAkId;
+            this.ossAkSecret = request.ossAkSecret;
+            this.ossMountDescs = request.ossMountDescs;
+            this.packageUrl = request.packageUrl;
+            this.packageVersion = request.packageVersion;
+            this.phpArmsConfigLocation = request.phpArmsConfigLocation;
+            this.phpConfig = request.phpConfig;
+            this.phpConfigLocation = request.phpConfigLocation;
+            this.postStart = request.postStart;
+            this.preStop = request.preStop;
+            this.readiness = request.readiness;
+            this.slsConfigs = request.slsConfigs;
+            this.terminationGracePeriodSeconds = request.terminationGracePeriodSeconds;
+            this.timezone = request.timezone;
+            this.tomcatConfig = request.tomcatConfig;
+            this.updateStrategy = request.updateStrategy;
+            this.warStartOptions = request.warStartOptions;
+            this.webContainer = request.webContainer;
         } 
 
         /**
@@ -815,6 +885,42 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
+         * KafkaConfigs.
+         */
+        public Builder kafkaConfigs(String kafkaConfigs) {
+            this.putQueryParameter("KafkaConfigs", kafkaConfigs);
+            this.kafkaConfigs = kafkaConfigs;
+            return this;
+        }
+
+        /**
+         * KafkaEndpoint.
+         */
+        public Builder kafkaEndpoint(String kafkaEndpoint) {
+            this.putQueryParameter("KafkaEndpoint", kafkaEndpoint);
+            this.kafkaEndpoint = kafkaEndpoint;
+            return this;
+        }
+
+        /**
+         * KafkaInstanceId.
+         */
+        public Builder kafkaInstanceId(String kafkaInstanceId) {
+            this.putQueryParameter("KafkaInstanceId", kafkaInstanceId);
+            this.kafkaInstanceId = kafkaInstanceId;
+            return this;
+        }
+
+        /**
+         * KafkaLogfileConfig.
+         */
+        public Builder kafkaLogfileConfig(String kafkaLogfileConfig) {
+            this.putQueryParameter("KafkaLogfileConfig", kafkaLogfileConfig);
+            this.kafkaLogfileConfig = kafkaLogfileConfig;
+            return this;
+        }
+
+        /**
          * Liveness.
          */
         public Builder liveness(String liveness) {
@@ -865,6 +971,15 @@ public class DeployApplicationRequest extends Request {
         public Builder nasId(String nasId) {
             this.putQueryParameter("NasId", nasId);
             this.nasId = nasId;
+            return this;
+        }
+
+        /**
+         * OpenCollectToKafka.
+         */
+        public Builder openCollectToKafka(Boolean openCollectToKafka) {
+            this.putQueryParameter("OpenCollectToKafka", openCollectToKafka);
+            this.openCollectToKafka = openCollectToKafka;
             return this;
         }
 

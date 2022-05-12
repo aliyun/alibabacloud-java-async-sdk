@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link UploadFilesResponse} extends {@link TeaModel}
+ * {@link UpdateApplicationVswitchesResponse} extends {@link TeaModel}
  *
- * <p>UploadFilesResponse</p>
+ * <p>UpdateApplicationVswitchesResponse</p>
  */
-public class UploadFilesResponse extends Response {
+public class UpdateApplicationVswitchesResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private UploadFilesResponseBody body;
+    private UpdateApplicationVswitchesResponseBody body;
 
-    private UploadFilesResponse(BuilderImpl builder) {
+    private UpdateApplicationVswitchesResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static UploadFilesResponse create() {
+    public static UpdateApplicationVswitchesResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class UploadFilesResponse extends Response {
     /**
      * @return body
      */
-    public UploadFilesResponseBody getBody() {
+    public UpdateApplicationVswitchesResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<UploadFilesResponse, Builder> {
+    public interface Builder extends Response.Builder<UpdateApplicationVswitchesResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(UploadFilesResponseBody body);
+        Builder body(UpdateApplicationVswitchesResponseBody body);
 
         @Override
-        UploadFilesResponse build();
+        UpdateApplicationVswitchesResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<UploadFilesResponse, Builder>
+            extends Response.BuilderImpl<UpdateApplicationVswitchesResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private UploadFilesResponseBody body; 
+        private UpdateApplicationVswitchesResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(UploadFilesResponse response) {
+        private BuilderImpl(UpdateApplicationVswitchesResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class UploadFilesResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(UploadFilesResponseBody body) {
+        public Builder body(UpdateApplicationVswitchesResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public UploadFilesResponse build() {
-            return new UploadFilesResponse(this);
+        public UpdateApplicationVswitchesResponse build() {
+            return new UpdateApplicationVswitchesResponse(this);
         } 
 
     } 

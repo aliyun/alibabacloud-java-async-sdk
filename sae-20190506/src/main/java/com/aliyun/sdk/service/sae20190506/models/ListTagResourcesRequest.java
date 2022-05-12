@@ -102,13 +102,13 @@ public class ListTagResourcesRequest extends Request {
             super();
         } 
 
-        private Builder(ListTagResourcesRequest response) {
-            super(response);
-            this.nextToken = response.nextToken;
-            this.regionId = response.regionId;
-            this.resourceIds = response.resourceIds;
-            this.resourceType = response.resourceType;
-            this.tags = response.tags;
+        private Builder(ListTagResourcesRequest request) {
+            super(request);
+            this.nextToken = request.nextToken;
+            this.regionId = request.regionId;
+            this.resourceIds = request.resourceIds;
+            this.resourceType = request.resourceType;
+            this.tags = request.tags;
         } 
 
         /**

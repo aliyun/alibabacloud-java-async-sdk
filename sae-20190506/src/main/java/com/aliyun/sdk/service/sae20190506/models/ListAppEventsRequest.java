@@ -140,16 +140,16 @@ public class ListAppEventsRequest extends Request {
             super();
         } 
 
-        private Builder(ListAppEventsRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.currentPage = response.currentPage;
-            this.eventType = response.eventType;
-            this.namespace = response.namespace;
-            this.objectKind = response.objectKind;
-            this.objectName = response.objectName;
-            this.pageSize = response.pageSize;
-            this.reason = response.reason;
+        private Builder(ListAppEventsRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.currentPage = request.currentPage;
+            this.eventType = request.eventType;
+            this.namespace = request.namespace;
+            this.objectKind = request.objectKind;
+            this.objectName = request.objectName;
+            this.pageSize = request.pageSize;
+            this.reason = request.reason;
         } 
 
         /**

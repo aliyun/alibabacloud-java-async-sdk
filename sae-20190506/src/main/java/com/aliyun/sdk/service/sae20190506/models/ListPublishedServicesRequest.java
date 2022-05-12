@@ -49,9 +49,9 @@ public class ListPublishedServicesRequest extends Request {
             super();
         } 
 
-        private Builder(ListPublishedServicesRequest response) {
-            super(response);
-            this.appId = response.appId;
+        private Builder(ListPublishedServicesRequest request) {
+            super(request);
+            this.appId = request.appId;
         } 
 
         /**

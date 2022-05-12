@@ -77,11 +77,11 @@ public class RescaleApplicationVerticallyRequest extends Request {
             super();
         } 
 
-        private Builder(RescaleApplicationVerticallyRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.cpu = response.cpu;
-            this.memory = response.memory;
+        private Builder(RescaleApplicationVerticallyRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.cpu = request.cpu;
+            this.memory = request.memory;
         } 
 
         /**

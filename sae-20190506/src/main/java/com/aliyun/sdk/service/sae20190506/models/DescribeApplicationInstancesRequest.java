@@ -102,13 +102,13 @@ public class DescribeApplicationInstancesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeApplicationInstancesRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.currentPage = response.currentPage;
-            this.groupId = response.groupId;
-            this.pageSize = response.pageSize;
-            this.reverse = response.reverse;
+        private Builder(DescribeApplicationInstancesRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.currentPage = request.currentPage;
+            this.groupId = request.groupId;
+            this.pageSize = request.pageSize;
+            this.reverse = request.reverse;
         } 
 
         /**

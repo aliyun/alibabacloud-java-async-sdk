@@ -63,10 +63,10 @@ public class ReduceApplicationCapacityByInstanceIdsRequest extends Request {
             super();
         } 
 
-        private Builder(ReduceApplicationCapacityByInstanceIdsRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.instanceIds = response.instanceIds;
+        private Builder(ReduceApplicationCapacityByInstanceIdsRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.instanceIds = request.instanceIds;
         } 
 
         /**

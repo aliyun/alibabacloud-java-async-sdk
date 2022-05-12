@@ -63,10 +63,10 @@ public class DescribeConfigurationPriceRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeConfigurationPriceRequest response) {
-            super(response);
-            this.cpu = response.cpu;
-            this.memory = response.memory;
+        private Builder(DescribeConfigurationPriceRequest request) {
+            super(request);
+            this.cpu = request.cpu;
+            this.memory = request.memory;
         } 
 
         /**

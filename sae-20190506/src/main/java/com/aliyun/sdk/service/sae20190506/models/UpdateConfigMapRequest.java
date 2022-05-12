@@ -17,11 +17,6 @@ public class UpdateConfigMapRequest extends Request {
     @Validation(required = true)
     private Long configMapId;
 
-    @Body
-    @NameInMap("Data")
-    @Validation(required = true)
-    private String data;
-
     @Query
     @NameInMap("Description")
     private String description;
@@ -29,7 +24,6 @@ public class UpdateConfigMapRequest extends Request {
     private UpdateConfigMapRequest(Builder builder) {
         super(builder);
         this.configMapId = builder.configMapId;
-        this.data = builder.data;
         this.description = builder.description;
     }
 
@@ -54,13 +48,6 @@ public class UpdateConfigMapRequest extends Request {
     }
 
     /**
-     * @return data
-     */
-    public String getData() {
-        return this.data;
-    }
-
-    /**
      * @return description
      */
     public String getDescription() {
@@ -69,18 +56,16 @@ public class UpdateConfigMapRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateConfigMapRequest, Builder> {
         private Long configMapId; 
-        private String data; 
         private String description; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateConfigMapRequest response) {
-            super(response);
-            this.configMapId = response.configMapId;
-            this.data = response.data;
-            this.description = response.description;
+        private Builder(UpdateConfigMapRequest request) {
+            super(request);
+            this.configMapId = request.configMapId;
+            this.description = request.description;
         } 
 
         /**
@@ -89,15 +74,6 @@ public class UpdateConfigMapRequest extends Request {
         public Builder configMapId(Long configMapId) {
             this.putQueryParameter("ConfigMapId", configMapId);
             this.configMapId = configMapId;
-            return this;
-        }
-
-        /**
-         * Data.
-         */
-        public Builder data(String data) {
-            this.putBodyParameter("Data", data);
-            this.data = data;
             return this;
         }
 

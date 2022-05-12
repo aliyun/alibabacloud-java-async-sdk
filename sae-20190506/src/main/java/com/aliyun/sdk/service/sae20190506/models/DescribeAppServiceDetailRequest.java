@@ -100,13 +100,13 @@ public class DescribeAppServiceDetailRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAppServiceDetailRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.serviceGroup = response.serviceGroup;
-            this.serviceName = response.serviceName;
-            this.serviceType = response.serviceType;
-            this.serviceVersion = response.serviceVersion;
+        private Builder(DescribeAppServiceDetailRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.serviceGroup = request.serviceGroup;
+            this.serviceName = request.serviceName;
+            this.serviceType = request.serviceType;
+            this.serviceVersion = request.serviceVersion;
         } 
 
         /**

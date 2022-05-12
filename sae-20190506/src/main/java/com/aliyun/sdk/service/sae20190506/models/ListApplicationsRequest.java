@@ -152,17 +152,17 @@ public class ListApplicationsRequest extends Request {
             super();
         } 
 
-        private Builder(ListApplicationsRequest response) {
-            super(response);
-            this.appName = response.appName;
-            this.currentPage = response.currentPage;
-            this.fieldType = response.fieldType;
-            this.fieldValue = response.fieldValue;
-            this.namespaceId = response.namespaceId;
-            this.orderBy = response.orderBy;
-            this.pageSize = response.pageSize;
-            this.reverse = response.reverse;
-            this.tags = response.tags;
+        private Builder(ListApplicationsRequest request) {
+            super(request);
+            this.appName = request.appName;
+            this.currentPage = request.currentPage;
+            this.fieldType = request.fieldType;
+            this.fieldValue = request.fieldValue;
+            this.namespaceId = request.namespaceId;
+            this.orderBy = request.orderBy;
+            this.pageSize = request.pageSize;
+            this.reverse = request.reverse;
+            this.tags = request.tags;
         } 
 
         /**

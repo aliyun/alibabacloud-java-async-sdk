@@ -49,9 +49,9 @@ public class StopApplicationRequest extends Request {
             super();
         } 
 
-        private Builder(StopApplicationRequest response) {
-            super(response);
-            this.appId = response.appId;
+        private Builder(StopApplicationRequest request) {
+            super(request);
+            this.appId = request.appId;
         } 
 
         /**

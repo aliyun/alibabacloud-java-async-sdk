@@ -62,10 +62,10 @@ public class DescribeApplicationConfigRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeApplicationConfigRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.versionId = response.versionId;
+        private Builder(DescribeApplicationConfigRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.versionId = request.versionId;
         } 
 
         /**

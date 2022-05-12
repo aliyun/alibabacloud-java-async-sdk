@@ -7,16 +7,13 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DownloadFilesResponseBody} extends {@link TeaModel}
+ * {@link UpdateApplicationDescriptionResponseBody} extends {@link TeaModel}
  *
- * <p>DownloadFilesResponseBody</p>
+ * <p>UpdateApplicationDescriptionResponseBody</p>
  */
-public class DownloadFilesResponseBody extends TeaModel {
+public class UpdateApplicationDescriptionResponseBody extends TeaModel {
     @NameInMap("Code")
     private String code;
-
-    @NameInMap("Data")
-    private String data;
 
     @NameInMap("ErrorCode")
     private String errorCode;
@@ -33,9 +30,8 @@ public class DownloadFilesResponseBody extends TeaModel {
     @NameInMap("TraceId")
     private String traceId;
 
-    private DownloadFilesResponseBody(Builder builder) {
+    private UpdateApplicationDescriptionResponseBody(Builder builder) {
         this.code = builder.code;
-        this.data = builder.data;
         this.errorCode = builder.errorCode;
         this.message = builder.message;
         this.requestId = builder.requestId;
@@ -47,7 +43,7 @@ public class DownloadFilesResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static DownloadFilesResponseBody create() {
+    public static UpdateApplicationDescriptionResponseBody create() {
         return builder().build();
     }
 
@@ -56,13 +52,6 @@ public class DownloadFilesResponseBody extends TeaModel {
      */
     public String getCode() {
         return this.code;
-    }
-
-    /**
-     * @return data
-     */
-    public String getData() {
-        return this.data;
     }
 
     /**
@@ -102,7 +91,6 @@ public class DownloadFilesResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private String data; 
         private String errorCode; 
         private String message; 
         private String requestId; 
@@ -114,14 +102,6 @@ public class DownloadFilesResponseBody extends TeaModel {
          */
         public Builder code(String code) {
             this.code = code;
-            return this;
-        }
-
-        /**
-         * Data.
-         */
-        public Builder data(String data) {
-            this.data = data;
             return this;
         }
 
@@ -165,8 +145,8 @@ public class DownloadFilesResponseBody extends TeaModel {
             return this;
         }
 
-        public DownloadFilesResponseBody build() {
-            return new DownloadFilesResponseBody(this);
+        public UpdateApplicationDescriptionResponseBody build() {
+            return new UpdateApplicationDescriptionResponseBody(this);
         } 
 
     } 

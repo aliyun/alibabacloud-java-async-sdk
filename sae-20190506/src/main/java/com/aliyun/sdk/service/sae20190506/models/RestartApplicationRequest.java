@@ -75,11 +75,11 @@ public class RestartApplicationRequest extends Request {
             super();
         } 
 
-        private Builder(RestartApplicationRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.minReadyInstanceRatio = response.minReadyInstanceRatio;
-            this.minReadyInstances = response.minReadyInstances;
+        private Builder(RestartApplicationRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.minReadyInstanceRatio = request.minReadyInstanceRatio;
+            this.minReadyInstances = request.minReadyInstances;
         } 
 
         /**

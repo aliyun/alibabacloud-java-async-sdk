@@ -49,9 +49,9 @@ public class ListNamespacedConfigMapsRequest extends Request {
             super();
         } 
 
-        private Builder(ListNamespacedConfigMapsRequest response) {
-            super(response);
-            this.namespaceId = response.namespaceId;
+        private Builder(ListNamespacedConfigMapsRequest request) {
+            super(request);
+            this.namespaceId = request.namespaceId;
         } 
 
         /**

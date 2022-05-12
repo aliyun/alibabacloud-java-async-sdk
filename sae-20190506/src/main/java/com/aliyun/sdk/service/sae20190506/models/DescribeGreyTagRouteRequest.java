@@ -49,9 +49,9 @@ public class DescribeGreyTagRouteRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeGreyTagRouteRequest response) {
-            super(response);
-            this.greyTagRouteId = response.greyTagRouteId;
+        private Builder(DescribeGreyTagRouteRequest request) {
+            super(request);
+            this.greyTagRouteId = request.greyTagRouteId;
         } 
 
         /**

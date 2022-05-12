@@ -35,8 +35,8 @@ public class DescribeInstanceSpecificationsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeInstanceSpecificationsRequest response) {
-            super(response);
+        private Builder(DescribeInstanceSpecificationsRequest request) {
+            super(request);
         } 
 
         @Override

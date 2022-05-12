@@ -75,11 +75,11 @@ public class DescribeApplicationGroupsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeApplicationGroupsRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.currentPage = response.currentPage;
-            this.pageSize = response.pageSize;
+        private Builder(DescribeApplicationGroupsRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.currentPage = request.currentPage;
+            this.pageSize = request.pageSize;
         } 
 
         /**

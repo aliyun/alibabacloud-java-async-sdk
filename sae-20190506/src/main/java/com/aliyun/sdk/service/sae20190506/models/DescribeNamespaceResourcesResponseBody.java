@@ -181,6 +181,12 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
         @NameInMap("Description")
         private String description;
 
+        @NameInMap("JumpServerAppId")
+        private String jumpServerAppId;
+
+        @NameInMap("JumpServerIp")
+        private String jumpServerIp;
+
         @NameInMap("LastChangeOrderId")
         private String lastChangeOrderId;
 
@@ -224,6 +230,8 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
             this.appCount = builder.appCount;
             this.belongRegion = builder.belongRegion;
             this.description = builder.description;
+            this.jumpServerAppId = builder.jumpServerAppId;
+            this.jumpServerIp = builder.jumpServerIp;
             this.lastChangeOrderId = builder.lastChangeOrderId;
             this.lastChangeOrderRunning = builder.lastChangeOrderRunning;
             this.lastChangeOrderStatus = builder.lastChangeOrderStatus;
@@ -266,6 +274,20 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return jumpServerAppId
+         */
+        public String getJumpServerAppId() {
+            return this.jumpServerAppId;
+        }
+
+        /**
+         * @return jumpServerIp
+         */
+        public String getJumpServerIp() {
+            return this.jumpServerIp;
         }
 
         /**
@@ -363,6 +385,8 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
             private Long appCount; 
             private String belongRegion; 
             private String description; 
+            private String jumpServerAppId; 
+            private String jumpServerIp; 
             private String lastChangeOrderId; 
             private Boolean lastChangeOrderRunning; 
             private String lastChangeOrderStatus; 
@@ -398,6 +422,22 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * JumpServerAppId.
+             */
+            public Builder jumpServerAppId(String jumpServerAppId) {
+                this.jumpServerAppId = jumpServerAppId;
+                return this;
+            }
+
+            /**
+             * JumpServerIp.
+             */
+            public Builder jumpServerIp(String jumpServerIp) {
+                this.jumpServerIp = jumpServerIp;
                 return this;
             }
 

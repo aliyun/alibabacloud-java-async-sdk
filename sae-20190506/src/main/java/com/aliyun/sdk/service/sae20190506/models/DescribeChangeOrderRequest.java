@@ -49,9 +49,9 @@ public class DescribeChangeOrderRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeChangeOrderRequest response) {
-            super(response);
-            this.changeOrderId = response.changeOrderId;
+        private Builder(DescribeChangeOrderRequest request) {
+            super(request);
+            this.changeOrderId = request.changeOrderId;
         } 
 
         /**

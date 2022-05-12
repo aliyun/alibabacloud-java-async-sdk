@@ -62,10 +62,10 @@ public class BatchStopApplicationsRequest extends Request {
             super();
         } 
 
-        private Builder(BatchStopApplicationsRequest response) {
-            super(response);
-            this.appIds = response.appIds;
-            this.namespaceId = response.namespaceId;
+        private Builder(BatchStopApplicationsRequest request) {
+            super(request);
+            this.appIds = request.appIds;
+            this.namespaceId = request.namespaceId;
         } 
 
         /**

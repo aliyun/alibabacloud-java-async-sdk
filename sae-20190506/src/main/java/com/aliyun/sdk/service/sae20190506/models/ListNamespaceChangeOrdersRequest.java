@@ -114,14 +114,14 @@ public class ListNamespaceChangeOrdersRequest extends Request {
             super();
         } 
 
-        private Builder(ListNamespaceChangeOrdersRequest response) {
-            super(response);
-            this.coStatus = response.coStatus;
-            this.coType = response.coType;
-            this.currentPage = response.currentPage;
-            this.key = response.key;
-            this.namespaceId = response.namespaceId;
-            this.pageSize = response.pageSize;
+        private Builder(ListNamespaceChangeOrdersRequest request) {
+            super(request);
+            this.coStatus = request.coStatus;
+            this.coType = request.coType;
+            this.currentPage = request.currentPage;
+            this.key = request.key;
+            this.namespaceId = request.namespaceId;
+            this.pageSize = request.pageSize;
         } 
 
         /**

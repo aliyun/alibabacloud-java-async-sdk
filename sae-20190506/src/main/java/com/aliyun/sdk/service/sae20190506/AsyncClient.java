@@ -106,11 +106,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DisableApplicationScalingRuleResponse> disableApplicationScalingRule(DisableApplicationScalingRuleRequest request);
 
-    CompletableFuture<DownloadFilesResponse> downloadFiles(DownloadFilesRequest request);
-
     CompletableFuture<EnableApplicationScalingRuleResponse> enableApplicationScalingRule(EnableApplicationScalingRuleRequest request);
-
-    CompletableFuture<GetAppServiceListPageResponse> getAppServiceListPage(GetAppServiceListPageRequest request);
 
     CompletableFuture<ListAppEventsResponse> listAppEvents(ListAppEventsRequest request);
 
@@ -166,7 +162,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UpdateAppSecurityGroupResponse> updateAppSecurityGroup(UpdateAppSecurityGroupRequest request);
 
+    CompletableFuture<UpdateApplicationDescriptionResponse> updateApplicationDescription(UpdateApplicationDescriptionRequest request);
+
     CompletableFuture<UpdateApplicationScalingRuleResponse> updateApplicationScalingRule(UpdateApplicationScalingRuleRequest request);
+
+    CompletableFuture<UpdateApplicationVswitchesResponse> updateApplicationVswitches(UpdateApplicationVswitchesRequest request);
 
     CompletableFuture<UpdateConfigMapResponse> updateConfigMap(UpdateConfigMapRequest request);
 
@@ -177,7 +177,5 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateNamespaceResponse> updateNamespace(UpdateNamespaceRequest request);
 
     CompletableFuture<UpdateNamespaceVpcResponse> updateNamespaceVpc(UpdateNamespaceVpcRequest request);
-
-    CompletableFuture<UploadFilesResponse> uploadFiles(UploadFilesRequest request);
 
 }

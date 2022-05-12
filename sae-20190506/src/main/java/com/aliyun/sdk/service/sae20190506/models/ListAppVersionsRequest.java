@@ -48,9 +48,9 @@ public class ListAppVersionsRequest extends Request {
             super();
         } 
 
-        private Builder(ListAppVersionsRequest response) {
-            super(response);
-            this.appId = response.appId;
+        private Builder(ListAppVersionsRequest request) {
+            super(request);
+            this.appId = request.appId;
         } 
 
         /**

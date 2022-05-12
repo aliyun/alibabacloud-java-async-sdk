@@ -7,32 +7,32 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteApplicationScalingRuleRequest} extends {@link RequestModel}
+ * {@link UpdateApplicationVswitchesRequest} extends {@link RequestModel}
  *
- * <p>DeleteApplicationScalingRuleRequest</p>
+ * <p>UpdateApplicationVswitchesRequest</p>
  */
-public class DeleteApplicationScalingRuleRequest extends Request {
+public class UpdateApplicationVswitchesRequest extends Request {
     @Query
     @NameInMap("AppId")
     @Validation(required = true)
     private String appId;
 
     @Query
-    @NameInMap("ScalingRuleName")
+    @NameInMap("VSwitchId")
     @Validation(required = true)
-    private String scalingRuleName;
+    private String vSwitchId;
 
-    private DeleteApplicationScalingRuleRequest(Builder builder) {
+    private UpdateApplicationVswitchesRequest(Builder builder) {
         super(builder);
         this.appId = builder.appId;
-        this.scalingRuleName = builder.scalingRuleName;
+        this.vSwitchId = builder.vSwitchId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DeleteApplicationScalingRuleRequest create() {
+    public static UpdateApplicationVswitchesRequest create() {
         return builder().build();
     }
 
@@ -49,24 +49,24 @@ public class DeleteApplicationScalingRuleRequest extends Request {
     }
 
     /**
-     * @return scalingRuleName
+     * @return vSwitchId
      */
-    public String getScalingRuleName() {
-        return this.scalingRuleName;
+    public String getVSwitchId() {
+        return this.vSwitchId;
     }
 
-    public static final class Builder extends Request.Builder<DeleteApplicationScalingRuleRequest, Builder> {
+    public static final class Builder extends Request.Builder<UpdateApplicationVswitchesRequest, Builder> {
         private String appId; 
-        private String scalingRuleName; 
+        private String vSwitchId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteApplicationScalingRuleRequest request) {
+        private Builder(UpdateApplicationVswitchesRequest request) {
             super(request);
             this.appId = request.appId;
-            this.scalingRuleName = request.scalingRuleName;
+            this.vSwitchId = request.vSwitchId;
         } 
 
         /**
@@ -79,17 +79,17 @@ public class DeleteApplicationScalingRuleRequest extends Request {
         }
 
         /**
-         * ScalingRuleName.
+         * VSwitchId.
          */
-        public Builder scalingRuleName(String scalingRuleName) {
-            this.putQueryParameter("ScalingRuleName", scalingRuleName);
-            this.scalingRuleName = scalingRuleName;
+        public Builder vSwitchId(String vSwitchId) {
+            this.putQueryParameter("VSwitchId", vSwitchId);
+            this.vSwitchId = vSwitchId;
             return this;
         }
 
         @Override
-        public DeleteApplicationScalingRuleRequest build() {
-            return new DeleteApplicationScalingRuleRequest(this);
+        public UpdateApplicationVswitchesRequest build() {
+            return new UpdateApplicationVswitchesRequest(this);
         } 
 
     } 

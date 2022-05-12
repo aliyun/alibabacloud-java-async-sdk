@@ -102,13 +102,13 @@ public class RescaleApplicationRequest extends Request {
             super();
         } 
 
-        private Builder(RescaleApplicationRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.autoEnableApplicationScalingRule = response.autoEnableApplicationScalingRule;
-            this.minReadyInstanceRatio = response.minReadyInstanceRatio;
-            this.minReadyInstances = response.minReadyInstances;
-            this.replicas = response.replicas;
+        private Builder(RescaleApplicationRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.autoEnableApplicationScalingRule = request.autoEnableApplicationScalingRule;
+            this.minReadyInstanceRatio = request.minReadyInstanceRatio;
+            this.minReadyInstances = request.minReadyInstances;
+            this.replicas = request.replicas;
         } 
 
         /**

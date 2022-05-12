@@ -49,9 +49,9 @@ public class AbortChangeOrderRequest extends Request {
             super();
         } 
 
-        private Builder(AbortChangeOrderRequest response) {
-            super(response);
-            this.changeOrderId = response.changeOrderId;
+        private Builder(AbortChangeOrderRequest request) {
+            super(request);
+            this.changeOrderId = request.changeOrderId;
         } 
 
         /**

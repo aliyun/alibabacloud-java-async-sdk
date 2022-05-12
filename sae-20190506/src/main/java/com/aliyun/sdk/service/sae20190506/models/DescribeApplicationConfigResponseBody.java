@@ -499,6 +499,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("AcrAssumeRoleArn")
         private String acrAssumeRoleArn;
 
+        @NameInMap("AcrInstanceId")
+        private String acrInstanceId;
+
         @NameInMap("AppDescription")
         private String appDescription;
 
@@ -552,6 +555,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
 
         @NameInMap("Jdk")
         private String jdk;
+
+        @NameInMap("KafkaConfigs")
+        private String kafkaConfigs;
 
         @NameInMap("Liveness")
         private String liveness;
@@ -613,6 +619,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("PreStop")
         private String preStop;
 
+        @NameInMap("ProgrammingLanguage")
+        private String programmingLanguage;
+
         @NameInMap("Readiness")
         private String readiness;
 
@@ -657,6 +666,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
 
         private Data(Builder builder) {
             this.acrAssumeRoleArn = builder.acrAssumeRoleArn;
+            this.acrInstanceId = builder.acrInstanceId;
             this.appDescription = builder.appDescription;
             this.appId = builder.appId;
             this.appName = builder.appName;
@@ -675,6 +685,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             this.jarStartArgs = builder.jarStartArgs;
             this.jarStartOptions = builder.jarStartOptions;
             this.jdk = builder.jdk;
+            this.kafkaConfigs = builder.kafkaConfigs;
             this.liveness = builder.liveness;
             this.memory = builder.memory;
             this.minReadyInstanceRatio = builder.minReadyInstanceRatio;
@@ -695,6 +706,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             this.phpConfigLocation = builder.phpConfigLocation;
             this.postStart = builder.postStart;
             this.preStop = builder.preStop;
+            this.programmingLanguage = builder.programmingLanguage;
             this.readiness = builder.readiness;
             this.regionId = builder.regionId;
             this.replicas = builder.replicas;
@@ -724,6 +736,13 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
          */
         public String getAcrAssumeRoleArn() {
             return this.acrAssumeRoleArn;
+        }
+
+        /**
+         * @return acrInstanceId
+         */
+        public String getAcrInstanceId() {
+            return this.acrInstanceId;
         }
 
         /**
@@ -850,6 +869,13 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
          */
         public String getJdk() {
             return this.jdk;
+        }
+
+        /**
+         * @return kafkaConfigs
+         */
+        public String getKafkaConfigs() {
+            return this.kafkaConfigs;
         }
 
         /**
@@ -993,6 +1019,13 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return programmingLanguage
+         */
+        public String getProgrammingLanguage() {
+            return this.programmingLanguage;
+        }
+
+        /**
          * @return readiness
          */
         public String getReadiness() {
@@ -1092,6 +1125,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
 
         public static final class Builder {
             private String acrAssumeRoleArn; 
+            private String acrInstanceId; 
             private String appDescription; 
             private String appId; 
             private String appName; 
@@ -1110,6 +1144,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private String jarStartArgs; 
             private String jarStartOptions; 
             private String jdk; 
+            private String kafkaConfigs; 
             private String liveness; 
             private Integer memory; 
             private Integer minReadyInstanceRatio; 
@@ -1130,6 +1165,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private String phpConfigLocation; 
             private String postStart; 
             private String preStop; 
+            private String programmingLanguage; 
             private String readiness; 
             private String regionId; 
             private Integer replicas; 
@@ -1150,6 +1186,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
              */
             public Builder acrAssumeRoleArn(String acrAssumeRoleArn) {
                 this.acrAssumeRoleArn = acrAssumeRoleArn;
+                return this;
+            }
+
+            /**
+             * ACR 企业版实例 ID
+             */
+            public Builder acrInstanceId(String acrInstanceId) {
+                this.acrInstanceId = acrInstanceId;
                 return this;
             }
 
@@ -1294,6 +1338,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
              */
             public Builder jdk(String jdk) {
                 this.jdk = jdk;
+                return this;
+            }
+
+            /**
+             * KafkaConfigs.
+             */
+            public Builder kafkaConfigs(String kafkaConfigs) {
+                this.kafkaConfigs = kafkaConfigs;
                 return this;
             }
 
@@ -1454,6 +1506,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
              */
             public Builder preStop(String preStop) {
                 this.preStop = preStop;
+                return this;
+            }
+
+            /**
+             * ProgrammingLanguage.
+             */
+            public Builder programmingLanguage(String programmingLanguage) {
+                this.programmingLanguage = programmingLanguage;
                 return this;
             }
 

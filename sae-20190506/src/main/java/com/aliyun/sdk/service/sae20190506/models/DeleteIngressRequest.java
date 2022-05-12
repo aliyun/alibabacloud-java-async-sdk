@@ -49,9 +49,9 @@ public class DeleteIngressRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteIngressRequest response) {
-            super(response);
-            this.ingressId = response.ingressId;
+        private Builder(DeleteIngressRequest request) {
+            super(request);
+            this.ingressId = request.ingressId;
         } 
 
         /**

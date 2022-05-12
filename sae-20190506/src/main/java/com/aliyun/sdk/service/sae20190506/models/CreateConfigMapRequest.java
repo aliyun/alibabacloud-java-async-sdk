@@ -12,11 +12,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateConfigMapRequest</p>
  */
 public class CreateConfigMapRequest extends Request {
-    @Body
-    @NameInMap("Data")
-    @Validation(required = true)
-    private String data;
-
     @Query
     @NameInMap("Description")
     private String description;
@@ -33,7 +28,6 @@ public class CreateConfigMapRequest extends Request {
 
     private CreateConfigMapRequest(Builder builder) {
         super(builder);
-        this.data = builder.data;
         this.description = builder.description;
         this.name = builder.name;
         this.namespaceId = builder.namespaceId;
@@ -50,13 +44,6 @@ public class CreateConfigMapRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return data
-     */
-    public String getData() {
-        return this.data;
     }
 
     /**
@@ -81,7 +68,6 @@ public class CreateConfigMapRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateConfigMapRequest, Builder> {
-        private String data; 
         private String description; 
         private String name; 
         private String namespaceId; 
@@ -90,22 +76,12 @@ public class CreateConfigMapRequest extends Request {
             super();
         } 
 
-        private Builder(CreateConfigMapRequest response) {
-            super(response);
-            this.data = response.data;
-            this.description = response.description;
-            this.name = response.name;
-            this.namespaceId = response.namespaceId;
+        private Builder(CreateConfigMapRequest request) {
+            super(request);
+            this.description = request.description;
+            this.name = request.name;
+            this.namespaceId = request.namespaceId;
         } 
-
-        /**
-         * Data.
-         */
-        public Builder data(String data) {
-            this.putBodyParameter("Data", data);
-            this.data = data;
-            return this;
-        }
 
         /**
          * Description.

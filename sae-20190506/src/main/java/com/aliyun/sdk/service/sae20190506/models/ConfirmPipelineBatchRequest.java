@@ -63,10 +63,10 @@ public class ConfirmPipelineBatchRequest extends Request {
             super();
         } 
 
-        private Builder(ConfirmPipelineBatchRequest response) {
-            super(response);
-            this.confirm = response.confirm;
-            this.pipelineId = response.pipelineId;
+        private Builder(ConfirmPipelineBatchRequest request) {
+            super(request);
+            this.confirm = request.confirm;
+            this.pipelineId = request.pipelineId;
         } 
 
         /**

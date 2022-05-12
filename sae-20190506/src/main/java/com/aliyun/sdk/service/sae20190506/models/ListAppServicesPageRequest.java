@@ -87,12 +87,12 @@ public class ListAppServicesPageRequest extends Request {
             super();
         } 
 
-        private Builder(ListAppServicesPageRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.serviceType = response.serviceType;
+        private Builder(ListAppServicesPageRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.serviceType = request.serviceType;
         } 
 
         /**

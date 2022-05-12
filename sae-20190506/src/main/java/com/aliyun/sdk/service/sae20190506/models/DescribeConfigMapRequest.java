@@ -49,9 +49,9 @@ public class DescribeConfigMapRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeConfigMapRequest response) {
-            super(response);
-            this.configMapId = response.configMapId;
+        private Builder(DescribeConfigMapRequest request) {
+            super(request);
+            this.configMapId = request.configMapId;
         } 
 
         /**

@@ -63,10 +63,10 @@ public class UpdateNamespaceVpcRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateNamespaceVpcRequest response) {
-            super(response);
-            this.namespaceId = response.namespaceId;
-            this.vpcId = response.vpcId;
+        private Builder(UpdateNamespaceVpcRequest request) {
+            super(request);
+            this.namespaceId = request.namespaceId;
+            this.vpcId = request.vpcId;
         } 
 
         /**

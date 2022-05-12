@@ -35,8 +35,8 @@ public class OpenSaeServiceRequest extends Request {
             super();
         } 
 
-        private Builder(OpenSaeServiceRequest response) {
-            super(response);
+        private Builder(OpenSaeServiceRequest request) {
+            super(request);
         } 
 
         @Override

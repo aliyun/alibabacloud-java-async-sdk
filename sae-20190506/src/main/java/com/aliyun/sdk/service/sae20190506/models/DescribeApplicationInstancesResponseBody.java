@@ -178,6 +178,9 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
         @NameInMap("Eip")
         private String eip;
 
+        @NameInMap("FinishTimeStamp")
+        private Long finishTimeStamp;
+
         @NameInMap("GroupId")
         private String groupId;
 
@@ -208,6 +211,7 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
         private Instances(Builder builder) {
             this.createTimeStamp = builder.createTimeStamp;
             this.eip = builder.eip;
+            this.finishTimeStamp = builder.finishTimeStamp;
             this.groupId = builder.groupId;
             this.imageUrl = builder.imageUrl;
             this.instanceContainerIp = builder.instanceContainerIp;
@@ -239,6 +243,13 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
          */
         public String getEip() {
             return this.eip;
+        }
+
+        /**
+         * @return finishTimeStamp
+         */
+        public Long getFinishTimeStamp() {
+            return this.finishTimeStamp;
         }
 
         /**
@@ -307,6 +318,7 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private Long createTimeStamp; 
             private String eip; 
+            private Long finishTimeStamp; 
             private String groupId; 
             private String imageUrl; 
             private String instanceContainerIp; 
@@ -330,6 +342,14 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
              */
             public Builder eip(String eip) {
                 this.eip = eip;
+                return this;
+            }
+
+            /**
+             * FinishTimeStamp.
+             */
+            public Builder finishTimeStamp(Long finishTimeStamp) {
+                this.finishTimeStamp = finishTimeStamp;
                 return this;
             }
 

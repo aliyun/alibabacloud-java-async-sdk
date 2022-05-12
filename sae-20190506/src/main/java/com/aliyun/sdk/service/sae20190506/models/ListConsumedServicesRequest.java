@@ -49,9 +49,9 @@ public class ListConsumedServicesRequest extends Request {
             super();
         } 
 
-        private Builder(ListConsumedServicesRequest response) {
-            super(response);
-            this.appId = response.appId;
+        private Builder(ListConsumedServicesRequest request) {
+            super(request);
+            this.appId = request.appId;
         } 
 
         /**

@@ -63,10 +63,10 @@ public class RestartInstancesRequest extends Request {
             super();
         } 
 
-        private Builder(RestartInstancesRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.instanceIds = response.instanceIds;
+        private Builder(RestartInstancesRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.instanceIds = request.instanceIds;
         } 
 
         /**

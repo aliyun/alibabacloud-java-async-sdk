@@ -62,10 +62,10 @@ public class DescribeComponentsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeComponentsRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.type = response.type;
+        private Builder(DescribeComponentsRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.type = request.type;
         } 
 
         /**

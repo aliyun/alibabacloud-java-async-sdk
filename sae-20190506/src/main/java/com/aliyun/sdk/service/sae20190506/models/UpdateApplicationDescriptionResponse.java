@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetAppServiceListPageResponse} extends {@link TeaModel}
+ * {@link UpdateApplicationDescriptionResponse} extends {@link TeaModel}
  *
- * <p>GetAppServiceListPageResponse</p>
+ * <p>UpdateApplicationDescriptionResponse</p>
  */
-public class GetAppServiceListPageResponse extends Response {
+public class UpdateApplicationDescriptionResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private GetAppServiceListPageResponseBody body;
+    private UpdateApplicationDescriptionResponseBody body;
 
-    private GetAppServiceListPageResponse(BuilderImpl builder) {
+    private UpdateApplicationDescriptionResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static GetAppServiceListPageResponse create() {
+    public static UpdateApplicationDescriptionResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class GetAppServiceListPageResponse extends Response {
     /**
      * @return body
      */
-    public GetAppServiceListPageResponseBody getBody() {
+    public UpdateApplicationDescriptionResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetAppServiceListPageResponse, Builder> {
+    public interface Builder extends Response.Builder<UpdateApplicationDescriptionResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(GetAppServiceListPageResponseBody body);
+        Builder body(UpdateApplicationDescriptionResponseBody body);
 
         @Override
-        GetAppServiceListPageResponse build();
+        UpdateApplicationDescriptionResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetAppServiceListPageResponse, Builder>
+            extends Response.BuilderImpl<UpdateApplicationDescriptionResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private GetAppServiceListPageResponseBody body; 
+        private UpdateApplicationDescriptionResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetAppServiceListPageResponse response) {
+        private BuilderImpl(UpdateApplicationDescriptionResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class GetAppServiceListPageResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetAppServiceListPageResponseBody body) {
+        public Builder body(UpdateApplicationDescriptionResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetAppServiceListPageResponse build() {
-            return new GetAppServiceListPageResponse(this);
+        public UpdateApplicationDescriptionResponse build() {
+            return new UpdateApplicationDescriptionResponse(this);
         } 
 
     } 

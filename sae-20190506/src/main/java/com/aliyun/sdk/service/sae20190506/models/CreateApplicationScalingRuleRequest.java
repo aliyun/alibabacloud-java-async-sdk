@@ -142,16 +142,16 @@ public class CreateApplicationScalingRuleRequest extends Request {
             super();
         } 
 
-        private Builder(CreateApplicationScalingRuleRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.minReadyInstanceRatio = response.minReadyInstanceRatio;
-            this.minReadyInstances = response.minReadyInstances;
-            this.scalingRuleEnable = response.scalingRuleEnable;
-            this.scalingRuleMetric = response.scalingRuleMetric;
-            this.scalingRuleName = response.scalingRuleName;
-            this.scalingRuleTimer = response.scalingRuleTimer;
-            this.scalingRuleType = response.scalingRuleType;
+        private Builder(CreateApplicationScalingRuleRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.minReadyInstanceRatio = request.minReadyInstanceRatio;
+            this.minReadyInstances = request.minReadyInstances;
+            this.scalingRuleEnable = request.scalingRuleEnable;
+            this.scalingRuleMetric = request.scalingRuleMetric;
+            this.scalingRuleName = request.scalingRuleName;
+            this.scalingRuleTimer = request.scalingRuleTimer;
+            this.scalingRuleType = request.scalingRuleType;
         } 
 
         /**

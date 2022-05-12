@@ -63,10 +63,10 @@ public class DisableApplicationScalingRuleRequest extends Request {
             super();
         } 
 
-        private Builder(DisableApplicationScalingRuleRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.scalingRuleName = response.scalingRuleName;
+        private Builder(DisableApplicationScalingRuleRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.scalingRuleName = request.scalingRuleName;
         } 
 
         /**

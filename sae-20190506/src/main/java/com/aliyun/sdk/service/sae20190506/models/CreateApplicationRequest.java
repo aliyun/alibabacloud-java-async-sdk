@@ -86,6 +86,22 @@ public class CreateApplicationRequest extends Request {
     private String jdk;
 
     @Query
+    @NameInMap("KafkaConfigs")
+    private String kafkaConfigs;
+
+    @Query
+    @NameInMap("KafkaEndpoint")
+    private String kafkaEndpoint;
+
+    @Query
+    @NameInMap("KafkaInstanceId")
+    private String kafkaInstanceId;
+
+    @Query
+    @NameInMap("KafkaLogfileConfig")
+    private String kafkaLogfileConfig;
+
+    @Query
     @NameInMap("Liveness")
     private String liveness;
 
@@ -108,6 +124,10 @@ public class CreateApplicationRequest extends Request {
     @Query
     @NameInMap("NasId")
     private String nasId;
+
+    @Query
+    @NameInMap("OpenCollectToKafka")
+    private Boolean openCollectToKafka;
 
     @Body
     @NameInMap("OssAkId")
@@ -153,6 +173,10 @@ public class CreateApplicationRequest extends Request {
     @Query
     @NameInMap("PreStop")
     private String preStop;
+
+    @Query
+    @NameInMap("ProgrammingLanguage")
+    private String programmingLanguage;
 
     @Query
     @NameInMap("Readiness")
@@ -220,12 +244,17 @@ public class CreateApplicationRequest extends Request {
         this.jarStartArgs = builder.jarStartArgs;
         this.jarStartOptions = builder.jarStartOptions;
         this.jdk = builder.jdk;
+        this.kafkaConfigs = builder.kafkaConfigs;
+        this.kafkaEndpoint = builder.kafkaEndpoint;
+        this.kafkaInstanceId = builder.kafkaInstanceId;
+        this.kafkaLogfileConfig = builder.kafkaLogfileConfig;
         this.liveness = builder.liveness;
         this.memory = builder.memory;
         this.mountDesc = builder.mountDesc;
         this.mountHost = builder.mountHost;
         this.namespaceId = builder.namespaceId;
         this.nasId = builder.nasId;
+        this.openCollectToKafka = builder.openCollectToKafka;
         this.ossAkId = builder.ossAkId;
         this.ossAkSecret = builder.ossAkSecret;
         this.ossMountDescs = builder.ossMountDescs;
@@ -237,6 +266,7 @@ public class CreateApplicationRequest extends Request {
         this.phpConfigLocation = builder.phpConfigLocation;
         this.postStart = builder.postStart;
         this.preStop = builder.preStop;
+        this.programmingLanguage = builder.programmingLanguage;
         this.readiness = builder.readiness;
         this.replicas = builder.replicas;
         this.securityGroupId = builder.securityGroupId;
@@ -390,6 +420,34 @@ public class CreateApplicationRequest extends Request {
     }
 
     /**
+     * @return kafkaConfigs
+     */
+    public String getKafkaConfigs() {
+        return this.kafkaConfigs;
+    }
+
+    /**
+     * @return kafkaEndpoint
+     */
+    public String getKafkaEndpoint() {
+        return this.kafkaEndpoint;
+    }
+
+    /**
+     * @return kafkaInstanceId
+     */
+    public String getKafkaInstanceId() {
+        return this.kafkaInstanceId;
+    }
+
+    /**
+     * @return kafkaLogfileConfig
+     */
+    public String getKafkaLogfileConfig() {
+        return this.kafkaLogfileConfig;
+    }
+
+    /**
      * @return liveness
      */
     public String getLiveness() {
@@ -429,6 +487,13 @@ public class CreateApplicationRequest extends Request {
      */
     public String getNasId() {
         return this.nasId;
+    }
+
+    /**
+     * @return openCollectToKafka
+     */
+    public Boolean getOpenCollectToKafka() {
+        return this.openCollectToKafka;
     }
 
     /**
@@ -506,6 +571,13 @@ public class CreateApplicationRequest extends Request {
      */
     public String getPreStop() {
         return this.preStop;
+    }
+
+    /**
+     * @return programmingLanguage
+     */
+    public String getProgrammingLanguage() {
+        return this.programmingLanguage;
     }
 
     /**
@@ -604,12 +676,17 @@ public class CreateApplicationRequest extends Request {
         private String jarStartArgs; 
         private String jarStartOptions; 
         private String jdk; 
+        private String kafkaConfigs; 
+        private String kafkaEndpoint; 
+        private String kafkaInstanceId; 
+        private String kafkaLogfileConfig; 
         private String liveness; 
         private Integer memory; 
         private String mountDesc; 
         private String mountHost; 
         private String namespaceId; 
         private String nasId; 
+        private Boolean openCollectToKafka; 
         private String ossAkId; 
         private String ossAkSecret; 
         private String ossMountDescs; 
@@ -621,6 +698,7 @@ public class CreateApplicationRequest extends Request {
         private String phpConfigLocation; 
         private String postStart; 
         private String preStop; 
+        private String programmingLanguage; 
         private String readiness; 
         private Integer replicas; 
         private String securityGroupId; 
@@ -637,54 +715,60 @@ public class CreateApplicationRequest extends Request {
             super();
         } 
 
-        private Builder(CreateApplicationRequest response) {
-            super(response);
-            this.acrAssumeRoleArn = response.acrAssumeRoleArn;
-            this.acrInstanceId = response.acrInstanceId;
-            this.appDescription = response.appDescription;
-            this.appName = response.appName;
-            this.associateEip = response.associateEip;
-            this.autoConfig = response.autoConfig;
-            this.command = response.command;
-            this.commandArgs = response.commandArgs;
-            this.configMapMountDesc = response.configMapMountDesc;
-            this.cpu = response.cpu;
-            this.customHostAlias = response.customHostAlias;
-            this.deploy = response.deploy;
-            this.edasContainerVersion = response.edasContainerVersion;
-            this.envs = response.envs;
-            this.imageUrl = response.imageUrl;
-            this.jarStartArgs = response.jarStartArgs;
-            this.jarStartOptions = response.jarStartOptions;
-            this.jdk = response.jdk;
-            this.liveness = response.liveness;
-            this.memory = response.memory;
-            this.mountDesc = response.mountDesc;
-            this.mountHost = response.mountHost;
-            this.namespaceId = response.namespaceId;
-            this.nasId = response.nasId;
-            this.ossAkId = response.ossAkId;
-            this.ossAkSecret = response.ossAkSecret;
-            this.ossMountDescs = response.ossMountDescs;
-            this.packageType = response.packageType;
-            this.packageUrl = response.packageUrl;
-            this.packageVersion = response.packageVersion;
-            this.phpArmsConfigLocation = response.phpArmsConfigLocation;
-            this.phpConfig = response.phpConfig;
-            this.phpConfigLocation = response.phpConfigLocation;
-            this.postStart = response.postStart;
-            this.preStop = response.preStop;
-            this.readiness = response.readiness;
-            this.replicas = response.replicas;
-            this.securityGroupId = response.securityGroupId;
-            this.slsConfigs = response.slsConfigs;
-            this.terminationGracePeriodSeconds = response.terminationGracePeriodSeconds;
-            this.timezone = response.timezone;
-            this.tomcatConfig = response.tomcatConfig;
-            this.vSwitchId = response.vSwitchId;
-            this.vpcId = response.vpcId;
-            this.warStartOptions = response.warStartOptions;
-            this.webContainer = response.webContainer;
+        private Builder(CreateApplicationRequest request) {
+            super(request);
+            this.acrAssumeRoleArn = request.acrAssumeRoleArn;
+            this.acrInstanceId = request.acrInstanceId;
+            this.appDescription = request.appDescription;
+            this.appName = request.appName;
+            this.associateEip = request.associateEip;
+            this.autoConfig = request.autoConfig;
+            this.command = request.command;
+            this.commandArgs = request.commandArgs;
+            this.configMapMountDesc = request.configMapMountDesc;
+            this.cpu = request.cpu;
+            this.customHostAlias = request.customHostAlias;
+            this.deploy = request.deploy;
+            this.edasContainerVersion = request.edasContainerVersion;
+            this.envs = request.envs;
+            this.imageUrl = request.imageUrl;
+            this.jarStartArgs = request.jarStartArgs;
+            this.jarStartOptions = request.jarStartOptions;
+            this.jdk = request.jdk;
+            this.kafkaConfigs = request.kafkaConfigs;
+            this.kafkaEndpoint = request.kafkaEndpoint;
+            this.kafkaInstanceId = request.kafkaInstanceId;
+            this.kafkaLogfileConfig = request.kafkaLogfileConfig;
+            this.liveness = request.liveness;
+            this.memory = request.memory;
+            this.mountDesc = request.mountDesc;
+            this.mountHost = request.mountHost;
+            this.namespaceId = request.namespaceId;
+            this.nasId = request.nasId;
+            this.openCollectToKafka = request.openCollectToKafka;
+            this.ossAkId = request.ossAkId;
+            this.ossAkSecret = request.ossAkSecret;
+            this.ossMountDescs = request.ossMountDescs;
+            this.packageType = request.packageType;
+            this.packageUrl = request.packageUrl;
+            this.packageVersion = request.packageVersion;
+            this.phpArmsConfigLocation = request.phpArmsConfigLocation;
+            this.phpConfig = request.phpConfig;
+            this.phpConfigLocation = request.phpConfigLocation;
+            this.postStart = request.postStart;
+            this.preStop = request.preStop;
+            this.programmingLanguage = request.programmingLanguage;
+            this.readiness = request.readiness;
+            this.replicas = request.replicas;
+            this.securityGroupId = request.securityGroupId;
+            this.slsConfigs = request.slsConfigs;
+            this.terminationGracePeriodSeconds = request.terminationGracePeriodSeconds;
+            this.timezone = request.timezone;
+            this.tomcatConfig = request.tomcatConfig;
+            this.vSwitchId = request.vSwitchId;
+            this.vpcId = request.vpcId;
+            this.warStartOptions = request.warStartOptions;
+            this.webContainer = request.webContainer;
         } 
 
         /**
@@ -850,6 +934,42 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
+         * KafkaConfigs.
+         */
+        public Builder kafkaConfigs(String kafkaConfigs) {
+            this.putQueryParameter("KafkaConfigs", kafkaConfigs);
+            this.kafkaConfigs = kafkaConfigs;
+            return this;
+        }
+
+        /**
+         * KafkaEndpoint.
+         */
+        public Builder kafkaEndpoint(String kafkaEndpoint) {
+            this.putQueryParameter("KafkaEndpoint", kafkaEndpoint);
+            this.kafkaEndpoint = kafkaEndpoint;
+            return this;
+        }
+
+        /**
+         * KafkaInstanceId.
+         */
+        public Builder kafkaInstanceId(String kafkaInstanceId) {
+            this.putQueryParameter("KafkaInstanceId", kafkaInstanceId);
+            this.kafkaInstanceId = kafkaInstanceId;
+            return this;
+        }
+
+        /**
+         * KafkaLogfileConfig.
+         */
+        public Builder kafkaLogfileConfig(String kafkaLogfileConfig) {
+            this.putQueryParameter("KafkaLogfileConfig", kafkaLogfileConfig);
+            this.kafkaLogfileConfig = kafkaLogfileConfig;
+            return this;
+        }
+
+        /**
          * Liveness.
          */
         public Builder liveness(String liveness) {
@@ -900,6 +1020,15 @@ public class CreateApplicationRequest extends Request {
         public Builder nasId(String nasId) {
             this.putQueryParameter("NasId", nasId);
             this.nasId = nasId;
+            return this;
+        }
+
+        /**
+         * OpenCollectToKafka.
+         */
+        public Builder openCollectToKafka(Boolean openCollectToKafka) {
+            this.putQueryParameter("OpenCollectToKafka", openCollectToKafka);
+            this.openCollectToKafka = openCollectToKafka;
             return this;
         }
 
@@ -999,6 +1128,15 @@ public class CreateApplicationRequest extends Request {
         public Builder preStop(String preStop) {
             this.putQueryParameter("PreStop", preStop);
             this.preStop = preStop;
+            return this;
+        }
+
+        /**
+         * ProgrammingLanguage.
+         */
+        public Builder programmingLanguage(String programmingLanguage) {
+            this.putQueryParameter("ProgrammingLanguage", programmingLanguage);
+            this.programmingLanguage = programmingLanguage;
             return this;
         }
 

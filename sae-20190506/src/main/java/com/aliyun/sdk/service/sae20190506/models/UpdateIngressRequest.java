@@ -33,6 +33,14 @@ public class UpdateIngressRequest extends Request {
     @NameInMap("ListenerPort")
     private String listenerPort;
 
+    @Query
+    @NameInMap("ListenerProtocol")
+    private String listenerProtocol;
+
+    @Query
+    @NameInMap("LoadBalanceType")
+    private String loadBalanceType;
+
     @Body
     @NameInMap("Rules")
     private String rules;
@@ -44,6 +52,8 @@ public class UpdateIngressRequest extends Request {
         this.description = builder.description;
         this.ingressId = builder.ingressId;
         this.listenerPort = builder.listenerPort;
+        this.listenerProtocol = builder.listenerProtocol;
+        this.loadBalanceType = builder.loadBalanceType;
         this.rules = builder.rules;
     }
 
@@ -96,6 +106,20 @@ public class UpdateIngressRequest extends Request {
     }
 
     /**
+     * @return listenerProtocol
+     */
+    public String getListenerProtocol() {
+        return this.listenerProtocol;
+    }
+
+    /**
+     * @return loadBalanceType
+     */
+    public String getLoadBalanceType() {
+        return this.loadBalanceType;
+    }
+
+    /**
      * @return rules
      */
     public String getRules() {
@@ -108,20 +132,24 @@ public class UpdateIngressRequest extends Request {
         private String description; 
         private Long ingressId; 
         private String listenerPort; 
+        private String listenerProtocol; 
+        private String loadBalanceType; 
         private String rules; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateIngressRequest response) {
-            super(response);
-            this.certId = response.certId;
-            this.defaultRule = response.defaultRule;
-            this.description = response.description;
-            this.ingressId = response.ingressId;
-            this.listenerPort = response.listenerPort;
-            this.rules = response.rules;
+        private Builder(UpdateIngressRequest request) {
+            super(request);
+            this.certId = request.certId;
+            this.defaultRule = request.defaultRule;
+            this.description = request.description;
+            this.ingressId = request.ingressId;
+            this.listenerPort = request.listenerPort;
+            this.listenerProtocol = request.listenerProtocol;
+            this.loadBalanceType = request.loadBalanceType;
+            this.rules = request.rules;
         } 
 
         /**
@@ -166,6 +194,24 @@ public class UpdateIngressRequest extends Request {
         public Builder listenerPort(String listenerPort) {
             this.putQueryParameter("ListenerPort", listenerPort);
             this.listenerPort = listenerPort;
+            return this;
+        }
+
+        /**
+         * ListenerProtocol.
+         */
+        public Builder listenerProtocol(String listenerProtocol) {
+            this.putQueryParameter("ListenerProtocol", listenerProtocol);
+            this.listenerProtocol = listenerProtocol;
+            return this;
+        }
+
+        /**
+         * LoadBalanceType.
+         */
+        public Builder loadBalanceType(String loadBalanceType) {
+            this.putQueryParameter("LoadBalanceType", loadBalanceType);
+            this.loadBalanceType = loadBalanceType;
             return this;
         }
 

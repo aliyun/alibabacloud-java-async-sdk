@@ -23,6 +23,7 @@ public class UpdateNamespaceRequest extends Request {
 
     @Query
     @NameInMap("NamespaceName")
+    @Validation(required = true)
     private String namespaceName;
 
     private UpdateNamespaceRequest(Builder builder) {
@@ -75,11 +76,11 @@ public class UpdateNamespaceRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateNamespaceRequest response) {
-            super(response);
-            this.namespaceDescription = response.namespaceDescription;
-            this.namespaceId = response.namespaceId;
-            this.namespaceName = response.namespaceName;
+        private Builder(UpdateNamespaceRequest request) {
+            super(request);
+            this.namespaceDescription = request.namespaceDescription;
+            this.namespaceId = request.namespaceId;
+            this.namespaceName = request.namespaceName;
         } 
 
         /**

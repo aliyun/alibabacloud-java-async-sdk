@@ -35,8 +35,8 @@ public class DescribeEdasContainersRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeEdasContainersRequest response) {
-            super(response);
+        private Builder(DescribeEdasContainersRequest request) {
+            super(request);
         } 
 
         @Override

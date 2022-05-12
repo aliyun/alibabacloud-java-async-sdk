@@ -87,12 +87,12 @@ public class TagResourcesRequest extends Request {
             super();
         } 
 
-        private Builder(TagResourcesRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.resourceIds = response.resourceIds;
-            this.resourceType = response.resourceType;
-            this.tags = response.tags;
+        private Builder(TagResourcesRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.resourceIds = request.resourceIds;
+            this.resourceType = request.resourceType;
+            this.tags = request.tags;
         } 
 
         /**

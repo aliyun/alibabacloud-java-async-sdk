@@ -115,14 +115,14 @@ public class UpdateApplicationScalingRuleRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateApplicationScalingRuleRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.minReadyInstanceRatio = response.minReadyInstanceRatio;
-            this.minReadyInstances = response.minReadyInstances;
-            this.scalingRuleMetric = response.scalingRuleMetric;
-            this.scalingRuleName = response.scalingRuleName;
-            this.scalingRuleTimer = response.scalingRuleTimer;
+        private Builder(UpdateApplicationScalingRuleRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.minReadyInstanceRatio = request.minReadyInstanceRatio;
+            this.minReadyInstances = request.minReadyInstances;
+            this.scalingRuleMetric = request.scalingRuleMetric;
+            this.scalingRuleName = request.scalingRuleName;
+            this.scalingRuleTimer = request.scalingRuleTimer;
         } 
 
         /**

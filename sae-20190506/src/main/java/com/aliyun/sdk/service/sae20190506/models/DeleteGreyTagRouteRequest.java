@@ -49,9 +49,9 @@ public class DeleteGreyTagRouteRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteGreyTagRouteRequest response) {
-            super(response);
-            this.greyTagRouteId = response.greyTagRouteId;
+        private Builder(DeleteGreyTagRouteRequest request) {
+            super(request);
+            this.greyTagRouteId = request.greyTagRouteId;
         } 
 
         /**

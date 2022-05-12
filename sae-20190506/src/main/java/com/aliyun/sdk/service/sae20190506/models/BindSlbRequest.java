@@ -101,13 +101,13 @@ public class BindSlbRequest extends Request {
             super();
         } 
 
-        private Builder(BindSlbRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.internet = response.internet;
-            this.internetSlbId = response.internetSlbId;
-            this.intranet = response.intranet;
-            this.intranetSlbId = response.intranetSlbId;
+        private Builder(BindSlbRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.internet = request.internet;
+            this.internetSlbId = request.internetSlbId;
+            this.intranet = request.intranet;
+            this.intranetSlbId = request.intranetSlbId;
         } 
 
         /**

@@ -49,9 +49,9 @@ public class DescribeApplicationStatusRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeApplicationStatusRequest response) {
-            super(response);
-            this.appId = response.appId;
+        private Builder(DescribeApplicationStatusRequest request) {
+            super(request);
+            this.appId = request.appId;
         } 
 
         /**
