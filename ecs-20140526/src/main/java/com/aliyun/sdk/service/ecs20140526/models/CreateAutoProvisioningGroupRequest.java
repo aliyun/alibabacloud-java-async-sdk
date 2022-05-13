@@ -761,6 +761,87 @@ public class CreateAutoProvisioningGroupRequest extends Request {
 
     } 
 
+    public static class Arn extends TeaModel {
+        @NameInMap("AssumeRoleFor")
+        private Long assumeRoleFor;
+
+        @NameInMap("RoleType")
+        private String roleType;
+
+        @NameInMap("Rolearn")
+        private String rolearn;
+
+        private Arn(Builder builder) {
+            this.assumeRoleFor = builder.assumeRoleFor;
+            this.roleType = builder.roleType;
+            this.rolearn = builder.rolearn;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Arn create() {
+            return builder().build();
+        }
+
+        /**
+         * @return assumeRoleFor
+         */
+        public Long getAssumeRoleFor() {
+            return this.assumeRoleFor;
+        }
+
+        /**
+         * @return roleType
+         */
+        public String getRoleType() {
+            return this.roleType;
+        }
+
+        /**
+         * @return rolearn
+         */
+        public String getRolearn() {
+            return this.rolearn;
+        }
+
+        public static final class Builder {
+            private Long assumeRoleFor; 
+            private String roleType; 
+            private String rolearn; 
+
+            /**
+             * AssumeRoleFor.
+             */
+            public Builder assumeRoleFor(Long assumeRoleFor) {
+                this.assumeRoleFor = assumeRoleFor;
+                return this;
+            }
+
+            /**
+             * RoleType.
+             */
+            public Builder roleType(String roleType) {
+                this.roleType = roleType;
+                return this;
+            }
+
+            /**
+             * Rolearn.
+             */
+            public Builder rolearn(String rolearn) {
+                this.rolearn = rolearn;
+                return this;
+            }
+
+            public Arn build() {
+                return new Arn(this);
+            } 
+
+        } 
+
+    }
     public static class DataDisk extends TeaModel {
         @NameInMap("Category")
         private String category;
@@ -982,6 +1063,87 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         } 
 
     }
+    public static class SystemDisk extends TeaModel {
+        @NameInMap("EncryptAlgorithm")
+        private String encryptAlgorithm;
+
+        @NameInMap("Encrypted")
+        private String encrypted;
+
+        @NameInMap("KMSKeyId")
+        private String KMSKeyId;
+
+        private SystemDisk(Builder builder) {
+            this.encryptAlgorithm = builder.encryptAlgorithm;
+            this.encrypted = builder.encrypted;
+            this.KMSKeyId = builder.KMSKeyId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SystemDisk create() {
+            return builder().build();
+        }
+
+        /**
+         * @return encryptAlgorithm
+         */
+        public String getEncryptAlgorithm() {
+            return this.encryptAlgorithm;
+        }
+
+        /**
+         * @return encrypted
+         */
+        public String getEncrypted() {
+            return this.encrypted;
+        }
+
+        /**
+         * @return KMSKeyId
+         */
+        public String getKMSKeyId() {
+            return this.KMSKeyId;
+        }
+
+        public static final class Builder {
+            private String encryptAlgorithm; 
+            private String encrypted; 
+            private String KMSKeyId; 
+
+            /**
+             * EncryptAlgorithm.
+             */
+            public Builder encryptAlgorithm(String encryptAlgorithm) {
+                this.encryptAlgorithm = encryptAlgorithm;
+                return this;
+            }
+
+            /**
+             * Encrypted.
+             */
+            public Builder encrypted(String encrypted) {
+                this.encrypted = encrypted;
+                return this;
+            }
+
+            /**
+             * KMSKeyId.
+             */
+            public Builder KMSKeyId(String KMSKeyId) {
+                this.KMSKeyId = KMSKeyId;
+                return this;
+            }
+
+            public SystemDisk build() {
+                return new SystemDisk(this);
+            } 
+
+        } 
+
+    }
     public static class Tag extends TeaModel {
         @NameInMap("Key")
         private String key;
@@ -1044,6 +1206,9 @@ public class CreateAutoProvisioningGroupRequest extends Request {
 
     }
     public static class LaunchConfiguration extends TeaModel {
+        @NameInMap("Arn")
+        private java.util.List < Arn> arn;
+
         @NameInMap("CreditSpecification")
         private String creditSpecification;
 
@@ -1104,6 +1269,9 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         @NameInMap("SecurityGroupIds")
         private java.util.List < String > securityGroupIds;
 
+        @NameInMap("SystemDisk")
+        private SystemDisk systemDisk;
+
         @NameInMap("SystemDiskCategory")
         private String systemDiskCategory;
 
@@ -1126,6 +1294,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         private String userData;
 
         private LaunchConfiguration(Builder builder) {
+            this.arn = builder.arn;
             this.creditSpecification = builder.creditSpecification;
             this.dataDisk = builder.dataDisk;
             this.deploymentSetId = builder.deploymentSetId;
@@ -1146,6 +1315,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             this.securityEnhancementStrategy = builder.securityEnhancementStrategy;
             this.securityGroupId = builder.securityGroupId;
             this.securityGroupIds = builder.securityGroupIds;
+            this.systemDisk = builder.systemDisk;
             this.systemDiskCategory = builder.systemDiskCategory;
             this.systemDiskDescription = builder.systemDiskDescription;
             this.systemDiskName = builder.systemDiskName;
@@ -1161,6 +1331,13 @@ public class CreateAutoProvisioningGroupRequest extends Request {
 
         public static LaunchConfiguration create() {
             return builder().build();
+        }
+
+        /**
+         * @return arn
+         */
+        public java.util.List < Arn> getArn() {
+            return this.arn;
         }
 
         /**
@@ -1304,6 +1481,13 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         /**
+         * @return systemDisk
+         */
+        public SystemDisk getSystemDisk() {
+            return this.systemDisk;
+        }
+
+        /**
          * @return systemDiskCategory
          */
         public String getSystemDiskCategory() {
@@ -1353,6 +1537,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         public static final class Builder {
+            private java.util.List < Arn> arn; 
             private String creditSpecification; 
             private java.util.List < DataDisk> dataDisk; 
             private String deploymentSetId; 
@@ -1373,6 +1558,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             private String securityEnhancementStrategy; 
             private String securityGroupId; 
             private java.util.List < String > securityGroupIds; 
+            private SystemDisk systemDisk; 
             private String systemDiskCategory; 
             private String systemDiskDescription; 
             private String systemDiskName; 
@@ -1380,6 +1566,14 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             private Integer systemDiskSize; 
             private java.util.List < Tag> tag; 
             private String userData; 
+
+            /**
+             * Arn.
+             */
+            public Builder arn(java.util.List < Arn> arn) {
+                this.arn = arn;
+                return this;
+            }
 
             /**
              * CreditSpecification.
@@ -1538,6 +1732,14 @@ public class CreateAutoProvisioningGroupRequest extends Request {
              */
             public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
+                return this;
+            }
+
+            /**
+             * SystemDisk.
+             */
+            public Builder systemDisk(SystemDisk systemDisk) {
+                this.systemDisk = systemDisk;
                 return this;
             }
 

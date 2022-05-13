@@ -32,8 +32,8 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.endpointRule = "regional";
         this.endpointMap = CommonUtil.buildMap(
             new TeaPair("cn-hangzhou", "ecs-cn-hangzhou.aliyuncs.com"),
-            new TeaPair("us-east-1", "ecs.aliyuncs.com"),
             new TeaPair("us-west-1", "ecs.aliyuncs.com"),
+            new TeaPair("us-east-1", "ecs.aliyuncs.com"),
             new TeaPair("cn-shanghai-finance-1", "ecs-cn-hangzhou.aliyuncs.com"),
             new TeaPair("cn-shenzhen-finance-1", "ecs-cn-hangzhou.aliyuncs.com"),
             new TeaPair("cn-north-2-gov-1", "ecs.aliyuncs.com"),

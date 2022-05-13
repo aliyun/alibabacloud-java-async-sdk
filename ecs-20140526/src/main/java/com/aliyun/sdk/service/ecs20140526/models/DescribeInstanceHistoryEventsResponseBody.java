@@ -478,6 +478,9 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         @NameInMap("OnlineRepairPolicy")
         private String onlineRepairPolicy;
 
+        @NameInMap("Rack")
+        private String rack;
+
         private ExtendedAttribute(Builder builder) {
             this.device = builder.device;
             this.diskId = builder.diskId;
@@ -486,6 +489,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             this.inactiveDisks = builder.inactiveDisks;
             this.migrationOptions = builder.migrationOptions;
             this.onlineRepairPolicy = builder.onlineRepairPolicy;
+            this.rack = builder.rack;
         }
 
         public static Builder builder() {
@@ -545,6 +549,13 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             return this.onlineRepairPolicy;
         }
 
+        /**
+         * @return rack
+         */
+        public String getRack() {
+            return this.rack;
+        }
+
         public static final class Builder {
             private String device; 
             private String diskId; 
@@ -553,6 +564,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             private InactiveDisks inactiveDisks; 
             private MigrationOptions migrationOptions; 
             private String onlineRepairPolicy; 
+            private String rack; 
 
             /**
              * Device.
@@ -607,6 +619,14 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
              */
             public Builder onlineRepairPolicy(String onlineRepairPolicy) {
                 this.onlineRepairPolicy = onlineRepairPolicy;
+                return this;
+            }
+
+            /**
+             * Rack.
+             */
+            public Builder rack(String rack) {
+                this.rack = rack;
                 return this;
             }
 
