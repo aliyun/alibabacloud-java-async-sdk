@@ -397,6 +397,9 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         @NameInMap("AliasName")
         private String aliasName;
 
+        @NameInMap("CanFix")
+        private String canFix;
+
         @NameInMap("CanUpdate")
         private Boolean canUpdate;
 
@@ -450,6 +453,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
 
         private VulRecords(Builder builder) {
             this.aliasName = builder.aliasName;
+            this.canFix = builder.canFix;
             this.canUpdate = builder.canUpdate;
             this.extendContentJson = builder.extendContentJson;
             this.firstTs = builder.firstTs;
@@ -482,6 +486,13 @@ public class DescribeImageVulListResponseBody extends TeaModel {
          */
         public String getAliasName() {
             return this.aliasName;
+        }
+
+        /**
+         * @return canFix
+         */
+        public String getCanFix() {
+            return this.canFix;
         }
 
         /**
@@ -605,6 +616,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
 
         public static final class Builder {
             private String aliasName; 
+            private String canFix; 
             private Boolean canUpdate; 
             private ExtendContentJson extendContentJson; 
             private Long firstTs; 
@@ -628,6 +640,14 @@ public class DescribeImageVulListResponseBody extends TeaModel {
              */
             public Builder aliasName(String aliasName) {
                 this.aliasName = aliasName;
+                return this;
+            }
+
+            /**
+             * CanFix.
+             */
+            public Builder canFix(String canFix) {
+                this.canFix = canFix;
                 return this;
             }
 
