@@ -32,6 +32,7 @@ public class CreateAppTemplateRequest extends Request {
 
     @Body
     @NameInMap("Scene")
+    @Validation(required = true)
     private String scene;
 
     private CreateAppTemplateRequest(Builder builder) {

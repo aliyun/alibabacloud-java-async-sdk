@@ -70,6 +70,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteSensitiveWordResponse> deleteSensitiveWord(DeleteSensitiveWordRequest request);
 
+    CompletableFuture<DescribeMeterImpPlayBackTimeByLiveIdResponse> describeMeterImpPlayBackTimeByLiveId(DescribeMeterImpPlayBackTimeByLiveIdRequest request);
+
+    CompletableFuture<DescribeMeterImpWatchLiveTimeByLiveIdResponse> describeMeterImpWatchLiveTimeByLiveId(DescribeMeterImpWatchLiveTimeByLiveIdRequest request);
+
     CompletableFuture<GetAppResponse> getApp(GetAppRequest request);
 
     CompletableFuture<GetAppTemplateResponse> getAppTemplate(GetAppTemplateRequest request);
