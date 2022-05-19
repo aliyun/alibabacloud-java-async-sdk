@@ -168,6 +168,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RefundInstanceResponse> refundInstance(RefundInstanceRequest request);
 
+    CompletableFuture<ReleaseInstanceResponse> releaseInstance(ReleaseInstanceRequest request);
+
     CompletableFuture<RelieveAccountRelationResponse> relieveAccountRelation(RelieveAccountRelationRequest request);
 
     CompletableFuture<RenewInstanceResponse> renewInstance(RenewInstanceRequest request);

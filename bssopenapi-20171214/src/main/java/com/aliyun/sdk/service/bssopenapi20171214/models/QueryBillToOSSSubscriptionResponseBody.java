@@ -135,6 +135,9 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
         @NameInMap("BucketOwnerId")
         private Long bucketOwnerId;
 
+        @NameInMap("BucketPath")
+        private String bucketPath;
+
         @NameInMap("SubscribeBucket")
         private String subscribeBucket;
 
@@ -149,6 +152,7 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
 
         private Item(Builder builder) {
             this.bucketOwnerId = builder.bucketOwnerId;
+            this.bucketPath = builder.bucketPath;
             this.subscribeBucket = builder.subscribeBucket;
             this.subscribeLanguage = builder.subscribeLanguage;
             this.subscribeTime = builder.subscribeTime;
@@ -168,6 +172,13 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
          */
         public Long getBucketOwnerId() {
             return this.bucketOwnerId;
+        }
+
+        /**
+         * @return bucketPath
+         */
+        public String getBucketPath() {
+            return this.bucketPath;
         }
 
         /**
@@ -200,6 +211,7 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long bucketOwnerId; 
+            private String bucketPath; 
             private String subscribeBucket; 
             private String subscribeLanguage; 
             private String subscribeTime; 
@@ -210,6 +222,14 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
              */
             public Builder bucketOwnerId(Long bucketOwnerId) {
                 this.bucketOwnerId = bucketOwnerId;
+                return this;
+            }
+
+            /**
+             * BucketPath.
+             */
+            public Builder bucketPath(String bucketPath) {
+                this.bucketPath = bucketPath;
                 return this;
             }
 

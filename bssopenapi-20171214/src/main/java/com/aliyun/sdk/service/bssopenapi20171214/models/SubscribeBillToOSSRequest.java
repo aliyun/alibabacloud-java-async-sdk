@@ -21,6 +21,10 @@ public class SubscribeBillToOSSRequest extends Request {
     private Long bucketOwnerId;
 
     @Query
+    @NameInMap("BucketPath")
+    private String bucketPath;
+
+    @Query
     @NameInMap("MultAccountRelSubscribe")
     private String multAccountRelSubscribe;
 
@@ -37,6 +41,7 @@ public class SubscribeBillToOSSRequest extends Request {
         super(builder);
         this.beginBillingCycle = builder.beginBillingCycle;
         this.bucketOwnerId = builder.bucketOwnerId;
+        this.bucketPath = builder.bucketPath;
         this.multAccountRelSubscribe = builder.multAccountRelSubscribe;
         this.subscribeBucket = builder.subscribeBucket;
         this.subscribeType = builder.subscribeType;
@@ -70,6 +75,13 @@ public class SubscribeBillToOSSRequest extends Request {
     }
 
     /**
+     * @return bucketPath
+     */
+    public String getBucketPath() {
+        return this.bucketPath;
+    }
+
+    /**
      * @return multAccountRelSubscribe
      */
     public String getMultAccountRelSubscribe() {
@@ -93,6 +105,7 @@ public class SubscribeBillToOSSRequest extends Request {
     public static final class Builder extends Request.Builder<SubscribeBillToOSSRequest, Builder> {
         private String beginBillingCycle; 
         private Long bucketOwnerId; 
+        private String bucketPath; 
         private String multAccountRelSubscribe; 
         private String subscribeBucket; 
         private String subscribeType; 
@@ -105,6 +118,7 @@ public class SubscribeBillToOSSRequest extends Request {
             super(request);
             this.beginBillingCycle = request.beginBillingCycle;
             this.bucketOwnerId = request.bucketOwnerId;
+            this.bucketPath = request.bucketPath;
             this.multAccountRelSubscribe = request.multAccountRelSubscribe;
             this.subscribeBucket = request.subscribeBucket;
             this.subscribeType = request.subscribeType;
@@ -125,6 +139,15 @@ public class SubscribeBillToOSSRequest extends Request {
         public Builder bucketOwnerId(Long bucketOwnerId) {
             this.putQueryParameter("BucketOwnerId", bucketOwnerId);
             this.bucketOwnerId = bucketOwnerId;
+            return this;
+        }
+
+        /**
+         * OSS Bucket存储路径
+         */
+        public Builder bucketPath(String bucketPath) {
+            this.putQueryParameter("BucketPath", bucketPath);
+            this.bucketPath = bucketPath;
             return this;
         }
 
