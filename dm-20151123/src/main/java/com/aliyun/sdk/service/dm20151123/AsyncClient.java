@@ -18,6 +18,8 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    CompletableFuture<AddIpfilterResponse> addIpfilter(AddIpfilterRequest request);
+
     CompletableFuture<ApproveReplyMailAddressResponse> approveReplyMailAddress(ApproveReplyMailAddressRequest request);
 
     CompletableFuture<BatchSendMailResponse> batchSendMail(BatchSendMailRequest request);
@@ -36,6 +38,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteDomainResponse> deleteDomain(DeleteDomainRequest request);
 
+    CompletableFuture<DeleteIpfilterByEdmIdResponse> deleteIpfilterByEdmId(DeleteIpfilterByEdmIdRequest request);
+
     CompletableFuture<DeleteMailAddressResponse> deleteMailAddress(DeleteMailAddressRequest request);
 
     CompletableFuture<DeleteReceiverResponse> deleteReceiver(DeleteReceiverRequest request);
@@ -47,6 +51,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescAccountSummaryResponse> descAccountSummary(DescAccountSummaryRequest request);
 
     CompletableFuture<DescDomainResponse> descDomain(DescDomainRequest request);
+
+    CompletableFuture<GetIpProtectionResponse> getIpProtection(GetIpProtectionRequest request);
+
+    CompletableFuture<GetIpfilterListResponse> getIpfilterList(GetIpfilterListRequest request);
 
     CompletableFuture<GetTrackListResponse> getTrackList(GetTrackListRequest request);
 
@@ -81,6 +89,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SenderStatisticsDetailByParamResponse> senderStatisticsDetailByParam(SenderStatisticsDetailByParamRequest request);
 
     CompletableFuture<SingleSendMailResponse> singleSendMail(SingleSendMailRequest request);
+
+    CompletableFuture<UpdateIpProtectionResponse> updateIpProtection(UpdateIpProtectionRequest request);
 
     CompletableFuture<UpdateMailAddressMsgCallBackUrlResponse> updateMailAddressMsgCallBackUrl(UpdateMailAddressMsgCallBackUrlRequest request);
 
