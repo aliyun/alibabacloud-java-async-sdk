@@ -24,12 +24,10 @@ public class RevokeTokenRequest extends Request {
 
     @Query
     @NameInMap("client_id")
-    @Validation(required = true)
     private String clientId;
 
     @Query
     @NameInMap("client_secret")
-    @Validation(required = true)
     private String clientSecret;
 
     @Host

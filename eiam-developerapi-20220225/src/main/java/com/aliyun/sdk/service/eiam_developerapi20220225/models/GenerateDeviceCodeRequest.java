@@ -22,10 +22,6 @@ public class GenerateDeviceCodeRequest extends Request {
     @Validation(required = true)
     private String applicationId;
 
-    @Query
-    @NameInMap("client_id")
-    private String clientId;
-
     @Host
     @NameInMap("regionId")
     private String regionId;
@@ -38,7 +34,6 @@ public class GenerateDeviceCodeRequest extends Request {
         super(builder);
         this.instanceId = builder.instanceId;
         this.applicationId = builder.applicationId;
-        this.clientId = builder.clientId;
         this.regionId = builder.regionId;
         this.scope = builder.scope;
     }
@@ -71,13 +66,6 @@ public class GenerateDeviceCodeRequest extends Request {
     }
 
     /**
-     * @return clientId
-     */
-    public String getClientId() {
-        return this.clientId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -94,7 +82,6 @@ public class GenerateDeviceCodeRequest extends Request {
     public static final class Builder extends Request.Builder<GenerateDeviceCodeRequest, Builder> {
         private String instanceId; 
         private String applicationId; 
-        private String clientId; 
         private String regionId; 
         private String scope; 
 
@@ -106,7 +93,6 @@ public class GenerateDeviceCodeRequest extends Request {
             super(request);
             this.instanceId = request.instanceId;
             this.applicationId = request.applicationId;
-            this.clientId = request.clientId;
             this.regionId = request.regionId;
             this.scope = request.scope;
         } 
@@ -126,15 +112,6 @@ public class GenerateDeviceCodeRequest extends Request {
         public Builder applicationId(String applicationId) {
             this.putPathParameter("applicationId", applicationId);
             this.applicationId = applicationId;
-            return this;
-        }
-
-        /**
-         * 客户端ID
-         */
-        public Builder clientId(String clientId) {
-            this.putQueryParameter("client_id", clientId);
-            this.clientId = clientId;
             return this;
         }
 
