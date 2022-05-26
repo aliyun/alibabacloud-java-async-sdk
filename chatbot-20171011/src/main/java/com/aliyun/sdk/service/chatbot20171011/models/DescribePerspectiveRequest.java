@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribePerspectiveRequest extends Request {
     @Query
+    @NameInMap("AgentKey")
+    private String agentKey;
+
+    @Query
     @NameInMap("PerspectiveId")
     @Validation(required = true)
     private String perspectiveId;
@@ -23,6 +27,7 @@ public class DescribePerspectiveRequest extends Request {
 
     private DescribePerspectiveRequest(Builder builder) {
         super(builder);
+        this.agentKey = builder.agentKey;
         this.perspectiveId = builder.perspectiveId;
         this.regionId = builder.regionId;
     }
@@ -41,6 +46,13 @@ public class DescribePerspectiveRequest extends Request {
     }
 
     /**
+     * @return agentKey
+     */
+    public String getAgentKey() {
+        return this.agentKey;
+    }
+
+    /**
      * @return perspectiveId
      */
     public String getPerspectiveId() {
@@ -55,6 +67,7 @@ public class DescribePerspectiveRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribePerspectiveRequest, Builder> {
+        private String agentKey; 
         private String perspectiveId; 
         private String regionId; 
 
@@ -62,11 +75,21 @@ public class DescribePerspectiveRequest extends Request {
             super();
         } 
 
-        private Builder(DescribePerspectiveRequest response) {
-            super(response);
-            this.perspectiveId = response.perspectiveId;
-            this.regionId = response.regionId;
+        private Builder(DescribePerspectiveRequest request) {
+            super(request);
+            this.agentKey = request.agentKey;
+            this.perspectiveId = request.perspectiveId;
+            this.regionId = request.regionId;
         } 
+
+        /**
+         * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
+         */
+        public Builder agentKey(String agentKey) {
+            this.putQueryParameter("AgentKey", agentKey);
+            this.agentKey = agentKey;
+            return this;
+        }
 
         /**
          * PerspectiveId.

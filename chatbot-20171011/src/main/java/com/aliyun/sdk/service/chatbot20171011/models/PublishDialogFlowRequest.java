@@ -13,12 +13,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class PublishDialogFlowRequest extends Request {
     @Query
+    @NameInMap("AgentKey")
+    private String agentKey;
+
+    @Query
     @NameInMap("DialogId")
     @Validation(required = true)
     private Long dialogId;
 
     private PublishDialogFlowRequest(Builder builder) {
         super(builder);
+        this.agentKey = builder.agentKey;
         this.dialogId = builder.dialogId;
     }
 
@@ -36,6 +41,13 @@ public class PublishDialogFlowRequest extends Request {
     }
 
     /**
+     * @return agentKey
+     */
+    public String getAgentKey() {
+        return this.agentKey;
+    }
+
+    /**
      * @return dialogId
      */
     public Long getDialogId() {
@@ -43,16 +55,27 @@ public class PublishDialogFlowRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<PublishDialogFlowRequest, Builder> {
+        private String agentKey; 
         private Long dialogId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(PublishDialogFlowRequest response) {
-            super(response);
-            this.dialogId = response.dialogId;
+        private Builder(PublishDialogFlowRequest request) {
+            super(request);
+            this.agentKey = request.agentKey;
+            this.dialogId = request.dialogId;
         } 
+
+        /**
+         * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
+         */
+        public Builder agentKey(String agentKey) {
+            this.putQueryParameter("AgentKey", agentKey);
+            this.agentKey = agentKey;
+            return this;
+        }
 
         /**
          * DialogId.

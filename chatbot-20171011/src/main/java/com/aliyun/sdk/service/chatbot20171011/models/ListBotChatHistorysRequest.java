@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListBotChatHistorysRequest extends Request {
     @Query
+    @NameInMap("AgentKey")
+    private String agentKey;
+
+    @Query
     @NameInMap("EndTime")
     @Validation(required = true)
     private String endTime;
@@ -33,6 +37,7 @@ public class ListBotChatHistorysRequest extends Request {
 
     private ListBotChatHistorysRequest(Builder builder) {
         super(builder);
+        this.agentKey = builder.agentKey;
         this.endTime = builder.endTime;
         this.limit = builder.limit;
         this.robotInstanceId = builder.robotInstanceId;
@@ -50,6 +55,13 @@ public class ListBotChatHistorysRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return agentKey
+     */
+    public String getAgentKey() {
+        return this.agentKey;
     }
 
     /**
@@ -81,6 +93,7 @@ public class ListBotChatHistorysRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListBotChatHistorysRequest, Builder> {
+        private String agentKey; 
         private String endTime; 
         private Integer limit; 
         private String robotInstanceId; 
@@ -90,13 +103,23 @@ public class ListBotChatHistorysRequest extends Request {
             super();
         } 
 
-        private Builder(ListBotChatHistorysRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.limit = response.limit;
-            this.robotInstanceId = response.robotInstanceId;
-            this.startTime = response.startTime;
+        private Builder(ListBotChatHistorysRequest request) {
+            super(request);
+            this.agentKey = request.agentKey;
+            this.endTime = request.endTime;
+            this.limit = request.limit;
+            this.robotInstanceId = request.robotInstanceId;
+            this.startTime = request.startTime;
         } 
+
+        /**
+         * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
+         */
+        public Builder agentKey(String agentKey) {
+            this.putQueryParameter("AgentKey", agentKey);
+            this.agentKey = agentKey;
+            return this;
+        }
 
         /**
          * EndTime.

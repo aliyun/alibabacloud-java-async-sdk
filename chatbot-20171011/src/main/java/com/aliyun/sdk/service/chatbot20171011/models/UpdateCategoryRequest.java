@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateCategoryRequest extends Request {
     @Query
+    @NameInMap("AgentKey")
+    private String agentKey;
+
+    @Query
     @NameInMap("CategoryId")
     @Validation(required = true)
     private Long categoryId;
@@ -23,6 +27,7 @@ public class UpdateCategoryRequest extends Request {
 
     private UpdateCategoryRequest(Builder builder) {
         super(builder);
+        this.agentKey = builder.agentKey;
         this.categoryId = builder.categoryId;
         this.name = builder.name;
     }
@@ -41,6 +46,13 @@ public class UpdateCategoryRequest extends Request {
     }
 
     /**
+     * @return agentKey
+     */
+    public String getAgentKey() {
+        return this.agentKey;
+    }
+
+    /**
      * @return categoryId
      */
     public Long getCategoryId() {
@@ -55,6 +67,7 @@ public class UpdateCategoryRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateCategoryRequest, Builder> {
+        private String agentKey; 
         private Long categoryId; 
         private String name; 
 
@@ -62,11 +75,21 @@ public class UpdateCategoryRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateCategoryRequest response) {
-            super(response);
-            this.categoryId = response.categoryId;
-            this.name = response.name;
+        private Builder(UpdateCategoryRequest request) {
+            super(request);
+            this.agentKey = request.agentKey;
+            this.categoryId = request.categoryId;
+            this.name = request.name;
         } 
+
+        /**
+         * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
+         */
+        public Builder agentKey(String agentKey) {
+            this.putQueryParameter("AgentKey", agentKey);
+            this.agentKey = agentKey;
+            return this;
+        }
 
         /**
          * CategoryId.

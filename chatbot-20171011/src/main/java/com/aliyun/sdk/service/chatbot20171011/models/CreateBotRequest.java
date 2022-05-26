@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateBotRequest extends Request {
     @Query
+    @NameInMap("AgentKey")
+    private String agentKey;
+
+    @Query
     @NameInMap("Avatar")
     private String avatar;
 
@@ -40,6 +44,7 @@ public class CreateBotRequest extends Request {
 
     private CreateBotRequest(Builder builder) {
         super(builder);
+        this.agentKey = builder.agentKey;
         this.avatar = builder.avatar;
         this.introduction = builder.introduction;
         this.languageCode = builder.languageCode;
@@ -59,6 +64,13 @@ public class CreateBotRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return agentKey
+     */
+    public String getAgentKey() {
+        return this.agentKey;
     }
 
     /**
@@ -104,6 +116,7 @@ public class CreateBotRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateBotRequest, Builder> {
+        private String agentKey; 
         private String avatar; 
         private String introduction; 
         private String languageCode; 
@@ -115,15 +128,25 @@ public class CreateBotRequest extends Request {
             super();
         } 
 
-        private Builder(CreateBotRequest response) {
-            super(response);
-            this.avatar = response.avatar;
-            this.introduction = response.introduction;
-            this.languageCode = response.languageCode;
-            this.name = response.name;
-            this.regionId = response.regionId;
-            this.robotType = response.robotType;
+        private Builder(CreateBotRequest request) {
+            super(request);
+            this.agentKey = request.agentKey;
+            this.avatar = request.avatar;
+            this.introduction = request.introduction;
+            this.languageCode = request.languageCode;
+            this.name = request.name;
+            this.regionId = request.regionId;
+            this.robotType = request.robotType;
         } 
+
+        /**
+         * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
+         */
+        public Builder agentKey(String agentKey) {
+            this.putQueryParameter("AgentKey", agentKey);
+            this.agentKey = agentKey;
+            return this;
+        }
 
         /**
          * Avatar.

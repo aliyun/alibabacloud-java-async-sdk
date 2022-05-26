@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdatePerspectiveRequest extends Request {
     @Query
+    @NameInMap("AgentKey")
+    private String agentKey;
+
+    @Query
     @NameInMap("Name")
     @Validation(required = true)
     private String name;
@@ -28,6 +32,7 @@ public class UpdatePerspectiveRequest extends Request {
 
     private UpdatePerspectiveRequest(Builder builder) {
         super(builder);
+        this.agentKey = builder.agentKey;
         this.name = builder.name;
         this.perspectiveId = builder.perspectiveId;
         this.regionId = builder.regionId;
@@ -44,6 +49,13 @@ public class UpdatePerspectiveRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return agentKey
+     */
+    public String getAgentKey() {
+        return this.agentKey;
     }
 
     /**
@@ -68,6 +80,7 @@ public class UpdatePerspectiveRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdatePerspectiveRequest, Builder> {
+        private String agentKey; 
         private String name; 
         private String perspectiveId; 
         private String regionId; 
@@ -76,12 +89,22 @@ public class UpdatePerspectiveRequest extends Request {
             super();
         } 
 
-        private Builder(UpdatePerspectiveRequest response) {
-            super(response);
-            this.name = response.name;
-            this.perspectiveId = response.perspectiveId;
-            this.regionId = response.regionId;
+        private Builder(UpdatePerspectiveRequest request) {
+            super(request);
+            this.agentKey = request.agentKey;
+            this.name = request.name;
+            this.perspectiveId = request.perspectiveId;
+            this.regionId = request.regionId;
         } 
+
+        /**
+         * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
+         */
+        public Builder agentKey(String agentKey) {
+            this.putQueryParameter("AgentKey", agentKey);
+            this.agentKey = agentKey;
+            return this;
+        }
 
         /**
          * Name.

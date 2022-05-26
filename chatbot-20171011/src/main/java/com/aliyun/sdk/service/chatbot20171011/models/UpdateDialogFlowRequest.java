@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateDialogFlowRequest extends Request {
     @Query
+    @NameInMap("AgentKey")
+    private String agentKey;
+
+    @Query
     @NameInMap("DialogId")
     @Validation(required = true)
     private Long dialogId;
@@ -24,6 +28,7 @@ public class UpdateDialogFlowRequest extends Request {
 
     private UpdateDialogFlowRequest(Builder builder) {
         super(builder);
+        this.agentKey = builder.agentKey;
         this.dialogId = builder.dialogId;
         this.moduleDefinition = builder.moduleDefinition;
     }
@@ -42,6 +47,13 @@ public class UpdateDialogFlowRequest extends Request {
     }
 
     /**
+     * @return agentKey
+     */
+    public String getAgentKey() {
+        return this.agentKey;
+    }
+
+    /**
      * @return dialogId
      */
     public Long getDialogId() {
@@ -56,6 +68,7 @@ public class UpdateDialogFlowRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateDialogFlowRequest, Builder> {
+        private String agentKey; 
         private Long dialogId; 
         private ModuleDefinition moduleDefinition; 
 
@@ -63,11 +76,21 @@ public class UpdateDialogFlowRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateDialogFlowRequest response) {
-            super(response);
-            this.dialogId = response.dialogId;
-            this.moduleDefinition = response.moduleDefinition;
+        private Builder(UpdateDialogFlowRequest request) {
+            super(request);
+            this.agentKey = request.agentKey;
+            this.dialogId = request.dialogId;
+            this.moduleDefinition = request.moduleDefinition;
         } 
+
+        /**
+         * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
+         */
+        public Builder agentKey(String agentKey) {
+            this.putQueryParameter("AgentKey", agentKey);
+            this.agentKey = agentKey;
+            return this;
+        }
 
         /**
          * DialogId.
@@ -82,7 +105,8 @@ public class UpdateDialogFlowRequest extends Request {
          * ModuleDefinition.
          */
         public Builder moduleDefinition(ModuleDefinition moduleDefinition) {
-            this.putBodyParameter("ModuleDefinition", moduleDefinition);
+            String moduleDefinitionShrink = shrink(moduleDefinition, "ModuleDefinition", "json");
+            this.putBodyParameter("ModuleDefinition", moduleDefinitionShrink);
             this.moduleDefinition = moduleDefinition;
             return this;
         }

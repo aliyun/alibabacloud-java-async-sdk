@@ -13,12 +13,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateCoreWordRequest extends Request {
     @Query
+    @NameInMap("AgentKey")
+    private String agentKey;
+
+    @Query
     @NameInMap("CoreWordName")
     @Validation(required = true)
     private String coreWordName;
 
     private CreateCoreWordRequest(Builder builder) {
         super(builder);
+        this.agentKey = builder.agentKey;
         this.coreWordName = builder.coreWordName;
     }
 
@@ -36,6 +41,13 @@ public class CreateCoreWordRequest extends Request {
     }
 
     /**
+     * @return agentKey
+     */
+    public String getAgentKey() {
+        return this.agentKey;
+    }
+
+    /**
      * @return coreWordName
      */
     public String getCoreWordName() {
@@ -43,16 +55,27 @@ public class CreateCoreWordRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateCoreWordRequest, Builder> {
+        private String agentKey; 
         private String coreWordName; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateCoreWordRequest response) {
-            super(response);
-            this.coreWordName = response.coreWordName;
+        private Builder(CreateCoreWordRequest request) {
+            super(request);
+            this.agentKey = request.agentKey;
+            this.coreWordName = request.coreWordName;
         } 
+
+        /**
+         * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
+         */
+        public Builder agentKey(String agentKey) {
+            this.putQueryParameter("AgentKey", agentKey);
+            this.agentKey = agentKey;
+            return this;
+        }
 
         /**
          * CoreWordName.

@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateCategoryRequest extends Request {
     @Query
+    @NameInMap("AgentKey")
+    private String agentKey;
+
+    @Query
     @NameInMap("BizCode")
     private String bizCode;
 
@@ -31,6 +35,7 @@ public class CreateCategoryRequest extends Request {
 
     private CreateCategoryRequest(Builder builder) {
         super(builder);
+        this.agentKey = builder.agentKey;
         this.bizCode = builder.bizCode;
         this.knowledgeType = builder.knowledgeType;
         this.name = builder.name;
@@ -48,6 +53,13 @@ public class CreateCategoryRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return agentKey
+     */
+    public String getAgentKey() {
+        return this.agentKey;
     }
 
     /**
@@ -79,6 +91,7 @@ public class CreateCategoryRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateCategoryRequest, Builder> {
+        private String agentKey; 
         private String bizCode; 
         private Integer knowledgeType; 
         private String name; 
@@ -88,13 +101,23 @@ public class CreateCategoryRequest extends Request {
             super();
         } 
 
-        private Builder(CreateCategoryRequest response) {
-            super(response);
-            this.bizCode = response.bizCode;
-            this.knowledgeType = response.knowledgeType;
-            this.name = response.name;
-            this.parentCategoryId = response.parentCategoryId;
+        private Builder(CreateCategoryRequest request) {
+            super(request);
+            this.agentKey = request.agentKey;
+            this.bizCode = request.bizCode;
+            this.knowledgeType = request.knowledgeType;
+            this.name = request.name;
+            this.parentCategoryId = request.parentCategoryId;
         } 
+
+        /**
+         * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
+         */
+        public Builder agentKey(String agentKey) {
+            this.putQueryParameter("AgentKey", agentKey);
+            this.agentKey = agentKey;
+            return this;
+        }
 
         /**
          * BizCode.

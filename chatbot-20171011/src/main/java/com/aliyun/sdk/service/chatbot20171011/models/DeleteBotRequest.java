@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DeleteBotRequest extends Request {
     @Query
+    @NameInMap("AgentKey")
+    private String agentKey;
+
+    @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
@@ -23,6 +27,7 @@ public class DeleteBotRequest extends Request {
 
     private DeleteBotRequest(Builder builder) {
         super(builder);
+        this.agentKey = builder.agentKey;
         this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
     }
@@ -41,6 +46,13 @@ public class DeleteBotRequest extends Request {
     }
 
     /**
+     * @return agentKey
+     */
+    public String getAgentKey() {
+        return this.agentKey;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -55,6 +67,7 @@ public class DeleteBotRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteBotRequest, Builder> {
+        private String agentKey; 
         private String instanceId; 
         private String regionId; 
 
@@ -62,11 +75,21 @@ public class DeleteBotRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteBotRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
+        private Builder(DeleteBotRequest request) {
+            super(request);
+            this.agentKey = request.agentKey;
+            this.instanceId = request.instanceId;
+            this.regionId = request.regionId;
         } 
+
+        /**
+         * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
+         */
+        public Builder agentKey(String agentKey) {
+            this.putQueryParameter("AgentKey", agentKey);
+            this.agentKey = agentKey;
+            return this;
+        }
 
         /**
          * InstanceId.

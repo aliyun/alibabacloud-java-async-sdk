@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateDialogRequest extends Request {
     @Query
+    @NameInMap("AgentKey")
+    private String agentKey;
+
+    @Query
     @NameInMap("Description")
     private String description;
 
@@ -28,6 +32,7 @@ public class CreateDialogRequest extends Request {
 
     private CreateDialogRequest(Builder builder) {
         super(builder);
+        this.agentKey = builder.agentKey;
         this.description = builder.description;
         this.dialogName = builder.dialogName;
         this.instanceId = builder.instanceId;
@@ -44,6 +49,13 @@ public class CreateDialogRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return agentKey
+     */
+    public String getAgentKey() {
+        return this.agentKey;
     }
 
     /**
@@ -68,6 +80,7 @@ public class CreateDialogRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateDialogRequest, Builder> {
+        private String agentKey; 
         private String description; 
         private String dialogName; 
         private String instanceId; 
@@ -76,12 +89,22 @@ public class CreateDialogRequest extends Request {
             super();
         } 
 
-        private Builder(CreateDialogRequest response) {
-            super(response);
-            this.description = response.description;
-            this.dialogName = response.dialogName;
-            this.instanceId = response.instanceId;
+        private Builder(CreateDialogRequest request) {
+            super(request);
+            this.agentKey = request.agentKey;
+            this.description = request.description;
+            this.dialogName = request.dialogName;
+            this.instanceId = request.instanceId;
         } 
+
+        /**
+         * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
+         */
+        public Builder agentKey(String agentKey) {
+            this.putQueryParameter("AgentKey", agentKey);
+            this.agentKey = agentKey;
+            return this;
+        }
 
         /**
          * Description.

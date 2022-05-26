@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetConversationListRequest extends Request {
     @Query
+    @NameInMap("AgentKey")
+    private String agentKey;
+
+    @Query
     @NameInMap("EndDate")
     private String endDate;
 
@@ -43,6 +47,7 @@ public class GetConversationListRequest extends Request {
 
     private GetConversationListRequest(Builder builder) {
         super(builder);
+        this.agentKey = builder.agentKey;
         this.endDate = builder.endDate;
         this.instanceId = builder.instanceId;
         this.pageNumber = builder.pageNumber;
@@ -63,6 +68,13 @@ public class GetConversationListRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return agentKey
+     */
+    public String getAgentKey() {
+        return this.agentKey;
     }
 
     /**
@@ -115,6 +127,7 @@ public class GetConversationListRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetConversationListRequest, Builder> {
+        private String agentKey; 
         private String endDate; 
         private String instanceId; 
         private String pageNumber; 
@@ -127,16 +140,26 @@ public class GetConversationListRequest extends Request {
             super();
         } 
 
-        private Builder(GetConversationListRequest response) {
-            super(response);
-            this.endDate = response.endDate;
-            this.instanceId = response.instanceId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.senderId = response.senderId;
-            this.sessionId = response.sessionId;
-            this.startDate = response.startDate;
+        private Builder(GetConversationListRequest request) {
+            super(request);
+            this.agentKey = request.agentKey;
+            this.endDate = request.endDate;
+            this.instanceId = request.instanceId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.senderId = request.senderId;
+            this.sessionId = request.sessionId;
+            this.startDate = request.startDate;
         } 
+
+        /**
+         * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
+         */
+        public Builder agentKey(String agentKey) {
+            this.putQueryParameter("AgentKey", agentKey);
+            this.agentKey = agentKey;
+            return this;
+        }
 
         /**
          * EndDate.

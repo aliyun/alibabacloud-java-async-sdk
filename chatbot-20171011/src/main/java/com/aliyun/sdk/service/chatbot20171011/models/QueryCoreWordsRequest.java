@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class QueryCoreWordsRequest extends Request {
     @Query
+    @NameInMap("AgentKey")
+    private String agentKey;
+
+    @Query
     @NameInMap("CoreWordName")
     private String coreWordName;
 
@@ -30,6 +34,7 @@ public class QueryCoreWordsRequest extends Request {
 
     private QueryCoreWordsRequest(Builder builder) {
         super(builder);
+        this.agentKey = builder.agentKey;
         this.coreWordName = builder.coreWordName;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -47,6 +52,13 @@ public class QueryCoreWordsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return agentKey
+     */
+    public String getAgentKey() {
+        return this.agentKey;
     }
 
     /**
@@ -78,6 +90,7 @@ public class QueryCoreWordsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<QueryCoreWordsRequest, Builder> {
+        private String agentKey; 
         private String coreWordName; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -87,13 +100,23 @@ public class QueryCoreWordsRequest extends Request {
             super();
         } 
 
-        private Builder(QueryCoreWordsRequest response) {
-            super(response);
-            this.coreWordName = response.coreWordName;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.synonym = response.synonym;
+        private Builder(QueryCoreWordsRequest request) {
+            super(request);
+            this.agentKey = request.agentKey;
+            this.coreWordName = request.coreWordName;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.synonym = request.synonym;
         } 
+
+        /**
+         * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
+         */
+        public Builder agentKey(String agentKey) {
+            this.putQueryParameter("AgentKey", agentKey);
+            this.agentKey = agentKey;
+            return this;
+        }
 
         /**
          * CoreWordName.

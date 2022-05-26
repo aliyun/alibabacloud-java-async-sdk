@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ChatRequest extends Request {
     @Query
+    @NameInMap("AgentKey")
+    private String agentKey;
+
+    @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
@@ -28,10 +32,6 @@ public class ChatRequest extends Request {
     @Query
     @NameInMap("Perspective")
     private java.util.List < String > perspective;
-
-    @Query
-    @NameInMap("Recommend")
-    private Boolean recommend;
 
     @Query
     @NameInMap("SenderId")
@@ -60,11 +60,11 @@ public class ChatRequest extends Request {
 
     private ChatRequest(Builder builder) {
         super(builder);
+        this.agentKey = builder.agentKey;
         this.instanceId = builder.instanceId;
         this.intentName = builder.intentName;
         this.knowledgeId = builder.knowledgeId;
         this.perspective = builder.perspective;
-        this.recommend = builder.recommend;
         this.senderId = builder.senderId;
         this.senderNick = builder.senderNick;
         this.sessionId = builder.sessionId;
@@ -84,6 +84,13 @@ public class ChatRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return agentKey
+     */
+    public String getAgentKey() {
+        return this.agentKey;
     }
 
     /**
@@ -112,13 +119,6 @@ public class ChatRequest extends Request {
      */
     public java.util.List < String > getPerspective() {
         return this.perspective;
-    }
-
-    /**
-     * @return recommend
-     */
-    public Boolean getRecommend() {
-        return this.recommend;
     }
 
     /**
@@ -164,11 +164,11 @@ public class ChatRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ChatRequest, Builder> {
+        private String agentKey; 
         private String instanceId; 
         private String intentName; 
         private String knowledgeId; 
         private java.util.List < String > perspective; 
-        private Boolean recommend; 
         private String senderId; 
         private String senderNick; 
         private String sessionId; 
@@ -180,20 +180,29 @@ public class ChatRequest extends Request {
             super();
         } 
 
-        private Builder(ChatRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.intentName = response.intentName;
-            this.knowledgeId = response.knowledgeId;
-            this.perspective = response.perspective;
-            this.recommend = response.recommend;
-            this.senderId = response.senderId;
-            this.senderNick = response.senderNick;
-            this.sessionId = response.sessionId;
-            this.tag = response.tag;
-            this.utterance = response.utterance;
-            this.vendorParam = response.vendorParam;
+        private Builder(ChatRequest request) {
+            super(request);
+            this.agentKey = request.agentKey;
+            this.instanceId = request.instanceId;
+            this.intentName = request.intentName;
+            this.knowledgeId = request.knowledgeId;
+            this.perspective = request.perspective;
+            this.senderId = request.senderId;
+            this.senderNick = request.senderNick;
+            this.sessionId = request.sessionId;
+            this.tag = request.tag;
+            this.utterance = request.utterance;
+            this.vendorParam = request.vendorParam;
         } 
+
+        /**
+         * AgentKey.
+         */
+        public Builder agentKey(String agentKey) {
+            this.putQueryParameter("AgentKey", agentKey);
+            this.agentKey = agentKey;
+            return this;
+        }
 
         /**
          * InstanceId.
@@ -228,15 +237,6 @@ public class ChatRequest extends Request {
         public Builder perspective(java.util.List < String > perspective) {
             this.putQueryParameter("Perspective", perspective);
             this.perspective = perspective;
-            return this;
-        }
-
-        /**
-         * Recommend.
-         */
-        public Builder recommend(Boolean recommend) {
-            this.putQueryParameter("Recommend", recommend);
-            this.recommend = recommend;
             return this;
         }
 

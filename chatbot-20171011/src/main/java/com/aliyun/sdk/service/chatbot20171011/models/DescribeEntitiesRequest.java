@@ -13,12 +13,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeEntitiesRequest extends Request {
     @Query
+    @NameInMap("AgentKey")
+    private String agentKey;
+
+    @Query
     @NameInMap("EntityId")
     @Validation(required = true)
     private Long entityId;
 
     private DescribeEntitiesRequest(Builder builder) {
         super(builder);
+        this.agentKey = builder.agentKey;
         this.entityId = builder.entityId;
     }
 
@@ -36,6 +41,13 @@ public class DescribeEntitiesRequest extends Request {
     }
 
     /**
+     * @return agentKey
+     */
+    public String getAgentKey() {
+        return this.agentKey;
+    }
+
+    /**
      * @return entityId
      */
     public Long getEntityId() {
@@ -43,16 +55,27 @@ public class DescribeEntitiesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeEntitiesRequest, Builder> {
+        private String agentKey; 
         private Long entityId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeEntitiesRequest response) {
-            super(response);
-            this.entityId = response.entityId;
+        private Builder(DescribeEntitiesRequest request) {
+            super(request);
+            this.agentKey = request.agentKey;
+            this.entityId = request.entityId;
         } 
+
+        /**
+         * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
+         */
+        public Builder agentKey(String agentKey) {
+            this.putQueryParameter("AgentKey", agentKey);
+            this.agentKey = agentKey;
+            return this;
+        }
 
         /**
          * EntityId.

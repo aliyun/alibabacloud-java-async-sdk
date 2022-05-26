@@ -7,28 +7,28 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeBotRequest} extends {@link RequestModel}
+ * {@link DeletePerspectiveRequest} extends {@link RequestModel}
  *
- * <p>DescribeBotRequest</p>
+ * <p>DeletePerspectiveRequest</p>
  */
-public class DescribeBotRequest extends Request {
+public class DeletePerspectiveRequest extends Request {
     @Query
     @NameInMap("AgentKey")
     private String agentKey;
 
     @Query
-    @NameInMap("InstanceId")
+    @NameInMap("PerspectiveId")
     @Validation(required = true)
-    private String instanceId;
+    private String perspectiveId;
 
     @Host
     @NameInMap("RegionId")
     private String regionId;
 
-    private DescribeBotRequest(Builder builder) {
+    private DeletePerspectiveRequest(Builder builder) {
         super(builder);
         this.agentKey = builder.agentKey;
-        this.instanceId = builder.instanceId;
+        this.perspectiveId = builder.perspectiveId;
         this.regionId = builder.regionId;
     }
 
@@ -36,7 +36,7 @@ public class DescribeBotRequest extends Request {
         return new Builder();
     }
 
-    public static DescribeBotRequest create() {
+    public static DeletePerspectiveRequest create() {
         return builder().build();
     }
 
@@ -53,10 +53,10 @@ public class DescribeBotRequest extends Request {
     }
 
     /**
-     * @return instanceId
+     * @return perspectiveId
      */
-    public String getInstanceId() {
-        return this.instanceId;
+    public String getPerspectiveId() {
+        return this.perspectiveId;
     }
 
     /**
@@ -66,19 +66,19 @@ public class DescribeBotRequest extends Request {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder<DescribeBotRequest, Builder> {
+    public static final class Builder extends Request.Builder<DeletePerspectiveRequest, Builder> {
         private String agentKey; 
-        private String instanceId; 
+        private String perspectiveId; 
         private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeBotRequest request) {
+        private Builder(DeletePerspectiveRequest request) {
             super(request);
             this.agentKey = request.agentKey;
-            this.instanceId = request.instanceId;
+            this.perspectiveId = request.perspectiveId;
             this.regionId = request.regionId;
         } 
 
@@ -92,11 +92,11 @@ public class DescribeBotRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * PerspectiveId.
          */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
+        public Builder perspectiveId(String perspectiveId) {
+            this.putQueryParameter("PerspectiveId", perspectiveId);
+            this.perspectiveId = perspectiveId;
             return this;
         }
 
@@ -110,8 +110,8 @@ public class DescribeBotRequest extends Request {
         }
 
         @Override
-        public DescribeBotRequest build() {
-            return new DescribeBotRequest(this);
+        public DeletePerspectiveRequest build() {
+            return new DeletePerspectiveRequest(this);
         } 
 
     } 

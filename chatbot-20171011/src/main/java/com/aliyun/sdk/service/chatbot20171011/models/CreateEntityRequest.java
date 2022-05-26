@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateEntityRequest extends Request {
     @Query
+    @NameInMap("AgentKey")
+    private String agentKey;
+
+    @Query
     @NameInMap("DialogId")
     @Validation(required = true)
     private Long dialogId;
@@ -37,6 +41,7 @@ public class CreateEntityRequest extends Request {
 
     private CreateEntityRequest(Builder builder) {
         super(builder);
+        this.agentKey = builder.agentKey;
         this.dialogId = builder.dialogId;
         this.entityName = builder.entityName;
         this.entityType = builder.entityType;
@@ -55,6 +60,13 @@ public class CreateEntityRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return agentKey
+     */
+    public String getAgentKey() {
+        return this.agentKey;
     }
 
     /**
@@ -93,6 +105,7 @@ public class CreateEntityRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateEntityRequest, Builder> {
+        private String agentKey; 
         private Long dialogId; 
         private String entityName; 
         private String entityType; 
@@ -103,14 +116,24 @@ public class CreateEntityRequest extends Request {
             super();
         } 
 
-        private Builder(CreateEntityRequest response) {
-            super(response);
-            this.dialogId = response.dialogId;
-            this.entityName = response.entityName;
-            this.entityType = response.entityType;
-            this.members = response.members;
-            this.regex = response.regex;
+        private Builder(CreateEntityRequest request) {
+            super(request);
+            this.agentKey = request.agentKey;
+            this.dialogId = request.dialogId;
+            this.entityName = request.entityName;
+            this.entityType = request.entityType;
+            this.members = request.members;
+            this.regex = request.regex;
         } 
+
+        /**
+         * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
+         */
+        public Builder agentKey(String agentKey) {
+            this.putQueryParameter("AgentKey", agentKey);
+            this.agentKey = agentKey;
+            return this;
+        }
 
         /**
          * DialogId.
@@ -143,7 +166,8 @@ public class CreateEntityRequest extends Request {
          * Members.
          */
         public Builder members(java.util.List < Members> members) {
-            this.putQueryParameter("Members", members);
+            String membersShrink = shrink(members, "Members", "json");
+            this.putQueryParameter("Members", membersShrink);
             this.members = members;
             return this;
         }

@@ -13,9 +13,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class QueryIntentsRequest extends Request {
     @Query
+    @NameInMap("AgentKey")
+    private String agentKey;
+
+    @Query
     @NameInMap("DialogId")
-    @Validation(required = true)
     private Long dialogId;
+
+    @Query
+    @NameInMap("InstanceId")
+    private String instanceId;
 
     @Query
     @NameInMap("IntentName")
@@ -31,7 +38,9 @@ public class QueryIntentsRequest extends Request {
 
     private QueryIntentsRequest(Builder builder) {
         super(builder);
+        this.agentKey = builder.agentKey;
         this.dialogId = builder.dialogId;
+        this.instanceId = builder.instanceId;
         this.intentName = builder.intentName;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -51,10 +60,24 @@ public class QueryIntentsRequest extends Request {
     }
 
     /**
+     * @return agentKey
+     */
+    public String getAgentKey() {
+        return this.agentKey;
+    }
+
+    /**
      * @return dialogId
      */
     public Long getDialogId() {
         return this.dialogId;
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     /**
@@ -79,7 +102,9 @@ public class QueryIntentsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<QueryIntentsRequest, Builder> {
+        private String agentKey; 
         private Long dialogId; 
+        private String instanceId; 
         private String intentName; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -88,13 +113,24 @@ public class QueryIntentsRequest extends Request {
             super();
         } 
 
-        private Builder(QueryIntentsRequest response) {
-            super(response);
-            this.dialogId = response.dialogId;
-            this.intentName = response.intentName;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(QueryIntentsRequest request) {
+            super(request);
+            this.agentKey = request.agentKey;
+            this.dialogId = request.dialogId;
+            this.instanceId = request.instanceId;
+            this.intentName = request.intentName;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
+
+        /**
+         * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
+         */
+        public Builder agentKey(String agentKey) {
+            this.putQueryParameter("AgentKey", agentKey);
+            this.agentKey = agentKey;
+            return this;
+        }
 
         /**
          * DialogId.
@@ -102,6 +138,15 @@ public class QueryIntentsRequest extends Request {
         public Builder dialogId(Long dialogId) {
             this.putQueryParameter("DialogId", dialogId);
             this.dialogId = dialogId;
+            return this;
+        }
+
+        /**
+         * 机器人实例 ID
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
             return this;
         }
 

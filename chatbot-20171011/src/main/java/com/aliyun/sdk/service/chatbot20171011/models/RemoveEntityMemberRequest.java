@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class RemoveEntityMemberRequest extends Request {
     @Query
+    @NameInMap("AgentKey")
+    private String agentKey;
+
+    @Query
     @NameInMap("EntityId")
     @Validation(required = true)
     private Long entityId;
@@ -29,6 +33,7 @@ public class RemoveEntityMemberRequest extends Request {
 
     private RemoveEntityMemberRequest(Builder builder) {
         super(builder);
+        this.agentKey = builder.agentKey;
         this.entityId = builder.entityId;
         this.member = builder.member;
         this.removeType = builder.removeType;
@@ -45,6 +50,13 @@ public class RemoveEntityMemberRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return agentKey
+     */
+    public String getAgentKey() {
+        return this.agentKey;
     }
 
     /**
@@ -69,6 +81,7 @@ public class RemoveEntityMemberRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<RemoveEntityMemberRequest, Builder> {
+        private String agentKey; 
         private Long entityId; 
         private Member member; 
         private String removeType; 
@@ -77,12 +90,22 @@ public class RemoveEntityMemberRequest extends Request {
             super();
         } 
 
-        private Builder(RemoveEntityMemberRequest response) {
-            super(response);
-            this.entityId = response.entityId;
-            this.member = response.member;
-            this.removeType = response.removeType;
+        private Builder(RemoveEntityMemberRequest request) {
+            super(request);
+            this.agentKey = request.agentKey;
+            this.entityId = request.entityId;
+            this.member = request.member;
+            this.removeType = request.removeType;
         } 
+
+        /**
+         * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
+         */
+        public Builder agentKey(String agentKey) {
+            this.putQueryParameter("AgentKey", agentKey);
+            this.agentKey = agentKey;
+            return this;
+        }
 
         /**
          * EntityId.
@@ -97,7 +120,8 @@ public class RemoveEntityMemberRequest extends Request {
          * Member.
          */
         public Builder member(Member member) {
-            this.putQueryParameter("Member", member);
+            String memberShrink = shrink(member, "Member", "json");
+            this.putQueryParameter("Member", memberShrink);
             this.member = member;
             return this;
         }

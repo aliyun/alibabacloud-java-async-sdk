@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link QueryLoopResultResponse} extends {@link TeaModel}
+ * {@link DeletePerspectiveResponse} extends {@link TeaModel}
  *
- * <p>QueryLoopResultResponse</p>
+ * <p>DeletePerspectiveResponse</p>
  */
-public class QueryLoopResultResponse extends Response {
+public class DeletePerspectiveResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private QueryLoopResultResponseBody body;
+    private DeletePerspectiveResponseBody body;
 
-    private QueryLoopResultResponse(BuilderImpl builder) {
+    private DeletePerspectiveResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static QueryLoopResultResponse create() {
+    public static DeletePerspectiveResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class QueryLoopResultResponse extends Response {
     /**
      * @return body
      */
-    public QueryLoopResultResponseBody getBody() {
+    public DeletePerspectiveResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<QueryLoopResultResponse, Builder> {
+    public interface Builder extends Response.Builder<DeletePerspectiveResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(QueryLoopResultResponseBody body);
+        Builder body(DeletePerspectiveResponseBody body);
 
         @Override
-        QueryLoopResultResponse build();
+        DeletePerspectiveResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<QueryLoopResultResponse, Builder>
+            extends Response.BuilderImpl<DeletePerspectiveResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private QueryLoopResultResponseBody body; 
+        private DeletePerspectiveResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(QueryLoopResultResponse response) {
+        private BuilderImpl(DeletePerspectiveResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class QueryLoopResultResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(QueryLoopResultResponseBody body) {
+        public Builder body(DeletePerspectiveResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public QueryLoopResultResponse build() {
-            return new QueryLoopResultResponse(this);
+        public DeletePerspectiveResponse build() {
+            return new DeletePerspectiveResponse(this);
         } 
 
     } 

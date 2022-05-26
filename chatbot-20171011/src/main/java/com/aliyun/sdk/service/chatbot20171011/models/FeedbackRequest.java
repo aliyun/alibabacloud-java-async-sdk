@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class FeedbackRequest extends Request {
     @Query
+    @NameInMap("AgentKey")
+    private String agentKey;
+
+    @Query
     @NameInMap("Feedback")
     @Validation(required = true)
     private String feedback;
@@ -32,6 +36,7 @@ public class FeedbackRequest extends Request {
 
     private FeedbackRequest(Builder builder) {
         super(builder);
+        this.agentKey = builder.agentKey;
         this.feedback = builder.feedback;
         this.instanceId = builder.instanceId;
         this.messageId = builder.messageId;
@@ -49,6 +54,13 @@ public class FeedbackRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return agentKey
+     */
+    public String getAgentKey() {
+        return this.agentKey;
     }
 
     /**
@@ -80,6 +92,7 @@ public class FeedbackRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<FeedbackRequest, Builder> {
+        private String agentKey; 
         private String feedback; 
         private String instanceId; 
         private String messageId; 
@@ -89,13 +102,23 @@ public class FeedbackRequest extends Request {
             super();
         } 
 
-        private Builder(FeedbackRequest response) {
-            super(response);
-            this.feedback = response.feedback;
-            this.instanceId = response.instanceId;
-            this.messageId = response.messageId;
-            this.sessionId = response.sessionId;
+        private Builder(FeedbackRequest request) {
+            super(request);
+            this.agentKey = request.agentKey;
+            this.feedback = request.feedback;
+            this.instanceId = request.instanceId;
+            this.messageId = request.messageId;
+            this.sessionId = request.sessionId;
         } 
+
+        /**
+         * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
+         */
+        public Builder agentKey(String agentKey) {
+            this.putQueryParameter("AgentKey", agentKey);
+            this.agentKey = agentKey;
+            return this;
+        }
 
         /**
          * Feedback.

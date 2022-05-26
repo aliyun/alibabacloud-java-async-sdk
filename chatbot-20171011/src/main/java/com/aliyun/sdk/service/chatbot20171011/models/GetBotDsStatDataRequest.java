@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetBotDsStatDataRequest extends Request {
     @Query
+    @NameInMap("AgentKey")
+    private String agentKey;
+
+    @Query
     @NameInMap("EndTime")
     @Validation(required = true)
     private String endTime;
@@ -29,6 +33,7 @@ public class GetBotDsStatDataRequest extends Request {
 
     private GetBotDsStatDataRequest(Builder builder) {
         super(builder);
+        this.agentKey = builder.agentKey;
         this.endTime = builder.endTime;
         this.robotInstanceId = builder.robotInstanceId;
         this.startTime = builder.startTime;
@@ -45,6 +50,13 @@ public class GetBotDsStatDataRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return agentKey
+     */
+    public String getAgentKey() {
+        return this.agentKey;
     }
 
     /**
@@ -69,6 +81,7 @@ public class GetBotDsStatDataRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetBotDsStatDataRequest, Builder> {
+        private String agentKey; 
         private String endTime; 
         private String robotInstanceId; 
         private String startTime; 
@@ -77,12 +90,22 @@ public class GetBotDsStatDataRequest extends Request {
             super();
         } 
 
-        private Builder(GetBotDsStatDataRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.robotInstanceId = response.robotInstanceId;
-            this.startTime = response.startTime;
+        private Builder(GetBotDsStatDataRequest request) {
+            super(request);
+            this.agentKey = request.agentKey;
+            this.endTime = request.endTime;
+            this.robotInstanceId = request.robotInstanceId;
+            this.startTime = request.startTime;
         } 
+
+        /**
+         * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
+         */
+        public Builder agentKey(String agentKey) {
+            this.putQueryParameter("AgentKey", agentKey);
+            this.agentKey = agentKey;
+            return this;
+        }
 
         /**
          * EndTime.

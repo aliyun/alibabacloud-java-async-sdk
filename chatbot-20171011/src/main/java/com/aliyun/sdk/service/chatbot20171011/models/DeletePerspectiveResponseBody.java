@@ -7,23 +7,27 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link TestGrayResponseBody} extends {@link TeaModel}
+ * {@link DeletePerspectiveResponseBody} extends {@link TeaModel}
  *
- * <p>TestGrayResponseBody</p>
+ * <p>DeletePerspectiveResponseBody</p>
  */
-public class TestGrayResponseBody extends TeaModel {
+public class DeletePerspectiveResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private TestGrayResponseBody(Builder builder) {
+    @NameInMap("Result")
+    private Boolean result;
+
+    private DeletePerspectiveResponseBody(Builder builder) {
         this.requestId = builder.requestId;
+        this.result = builder.result;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static TestGrayResponseBody create() {
+    public static DeletePerspectiveResponseBody create() {
         return builder().build();
     }
 
@@ -34,8 +38,16 @@ public class TestGrayResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return result
+     */
+    public Boolean getResult() {
+        return this.result;
+    }
+
     public static final class Builder {
         private String requestId; 
+        private Boolean result; 
 
         /**
          * RequestId.
@@ -45,8 +57,16 @@ public class TestGrayResponseBody extends TeaModel {
             return this;
         }
 
-        public TestGrayResponseBody build() {
-            return new TestGrayResponseBody(this);
+        /**
+         * Result.
+         */
+        public Builder result(Boolean result) {
+            this.result = result;
+            return this;
+        }
+
+        public DeletePerspectiveResponseBody build() {
+            return new DeletePerspectiveResponseBody(this);
         } 
 
     } 

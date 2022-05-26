@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateKnowledgeRequest</p>
  */
 public class CreateKnowledgeRequest extends Request {
+    @Query
+    @NameInMap("AgentKey")
+    private String agentKey;
+
     @Body
     @NameInMap("Knowledge")
     @Validation(required = true)
@@ -19,6 +23,7 @@ public class CreateKnowledgeRequest extends Request {
 
     private CreateKnowledgeRequest(Builder builder) {
         super(builder);
+        this.agentKey = builder.agentKey;
         this.knowledge = builder.knowledge;
     }
 
@@ -36,6 +41,13 @@ public class CreateKnowledgeRequest extends Request {
     }
 
     /**
+     * @return agentKey
+     */
+    public String getAgentKey() {
+        return this.agentKey;
+    }
+
+    /**
      * @return knowledge
      */
     public Knowledge getKnowledge() {
@@ -43,22 +55,34 @@ public class CreateKnowledgeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateKnowledgeRequest, Builder> {
+        private String agentKey; 
         private Knowledge knowledge; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateKnowledgeRequest response) {
-            super(response);
-            this.knowledge = response.knowledge;
+        private Builder(CreateKnowledgeRequest request) {
+            super(request);
+            this.agentKey = request.agentKey;
+            this.knowledge = request.knowledge;
         } 
+
+        /**
+         * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
+         */
+        public Builder agentKey(String agentKey) {
+            this.putQueryParameter("AgentKey", agentKey);
+            this.agentKey = agentKey;
+            return this;
+        }
 
         /**
          * Knowledge.
          */
         public Builder knowledge(Knowledge knowledge) {
-            this.putBodyParameter("Knowledge", knowledge);
+            String knowledgeShrink = shrink(knowledge, "Knowledge", "json");
+            this.putBodyParameter("Knowledge", knowledgeShrink);
             this.knowledge = knowledge;
             return this;
         }
@@ -74,11 +98,15 @@ public class CreateKnowledgeRequest extends Request {
         @NameInMap("KnowledgeId")
         private Long knowledgeId;
 
+        @NameInMap("OutlineId")
+        private Long outlineId;
+
         @NameInMap("Title")
         private String title;
 
         private Outlines(Builder builder) {
             this.knowledgeId = builder.knowledgeId;
+            this.outlineId = builder.outlineId;
             this.title = builder.title;
         }
 
@@ -98,6 +126,13 @@ public class CreateKnowledgeRequest extends Request {
         }
 
         /**
+         * @return outlineId
+         */
+        public Long getOutlineId() {
+            return this.outlineId;
+        }
+
+        /**
          * @return title
          */
         public String getTitle() {
@@ -106,6 +141,7 @@ public class CreateKnowledgeRequest extends Request {
 
         public static final class Builder {
             private Long knowledgeId; 
+            private Long outlineId; 
             private String title; 
 
             /**
@@ -113,6 +149,14 @@ public class CreateKnowledgeRequest extends Request {
              */
             public Builder knowledgeId(Long knowledgeId) {
                 this.knowledgeId = knowledgeId;
+                return this;
+            }
+
+            /**
+             * OutlineId.
+             */
+            public Builder outlineId(Long outlineId) {
+                this.outlineId = outlineId;
                 return this;
             }
 

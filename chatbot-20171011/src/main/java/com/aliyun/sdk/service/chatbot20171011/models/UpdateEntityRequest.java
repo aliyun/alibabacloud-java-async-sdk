@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateEntityRequest extends Request {
     @Query
+    @NameInMap("AgentKey")
+    private String agentKey;
+
+    @Query
     @NameInMap("EntityId")
     @Validation(required = true)
     private Long entityId;
@@ -37,6 +41,7 @@ public class UpdateEntityRequest extends Request {
 
     private UpdateEntityRequest(Builder builder) {
         super(builder);
+        this.agentKey = builder.agentKey;
         this.entityId = builder.entityId;
         this.entityName = builder.entityName;
         this.entityType = builder.entityType;
@@ -55,6 +60,13 @@ public class UpdateEntityRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return agentKey
+     */
+    public String getAgentKey() {
+        return this.agentKey;
     }
 
     /**
@@ -93,6 +105,7 @@ public class UpdateEntityRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateEntityRequest, Builder> {
+        private String agentKey; 
         private Long entityId; 
         private String entityName; 
         private String entityType; 
@@ -103,14 +116,24 @@ public class UpdateEntityRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateEntityRequest response) {
-            super(response);
-            this.entityId = response.entityId;
-            this.entityName = response.entityName;
-            this.entityType = response.entityType;
-            this.members = response.members;
-            this.regex = response.regex;
+        private Builder(UpdateEntityRequest request) {
+            super(request);
+            this.agentKey = request.agentKey;
+            this.entityId = request.entityId;
+            this.entityName = request.entityName;
+            this.entityType = request.entityType;
+            this.members = request.members;
+            this.regex = request.regex;
         } 
+
+        /**
+         * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
+         */
+        public Builder agentKey(String agentKey) {
+            this.putQueryParameter("AgentKey", agentKey);
+            this.agentKey = agentKey;
+            return this;
+        }
 
         /**
          * EntityId.
@@ -143,7 +166,8 @@ public class UpdateEntityRequest extends Request {
          * Members.
          */
         public Builder members(java.util.List < Members> members) {
-            this.putBodyParameter("Members", members);
+            String membersShrink = shrink(members, "Members", "json");
+            this.putBodyParameter("Members", membersShrink);
             this.members = members;
             return this;
         }

@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateIntentRequest extends Request {
     @Query
+    @NameInMap("AgentKey")
+    private String agentKey;
+
+    @Query
     @NameInMap("IntentDefinition")
     @Validation(required = true)
     private IntentCreateDTO intentDefinition;
@@ -24,6 +28,7 @@ public class UpdateIntentRequest extends Request {
 
     private UpdateIntentRequest(Builder builder) {
         super(builder);
+        this.agentKey = builder.agentKey;
         this.intentDefinition = builder.intentDefinition;
         this.intentId = builder.intentId;
     }
@@ -42,6 +47,13 @@ public class UpdateIntentRequest extends Request {
     }
 
     /**
+     * @return agentKey
+     */
+    public String getAgentKey() {
+        return this.agentKey;
+    }
+
+    /**
      * @return intentDefinition
      */
     public IntentCreateDTO getIntentDefinition() {
@@ -56,6 +68,7 @@ public class UpdateIntentRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateIntentRequest, Builder> {
+        private String agentKey; 
         private IntentCreateDTO intentDefinition; 
         private Long intentId; 
 
@@ -63,17 +76,28 @@ public class UpdateIntentRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateIntentRequest response) {
-            super(response);
-            this.intentDefinition = response.intentDefinition;
-            this.intentId = response.intentId;
+        private Builder(UpdateIntentRequest request) {
+            super(request);
+            this.agentKey = request.agentKey;
+            this.intentDefinition = request.intentDefinition;
+            this.intentId = request.intentId;
         } 
+
+        /**
+         * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
+         */
+        public Builder agentKey(String agentKey) {
+            this.putQueryParameter("AgentKey", agentKey);
+            this.agentKey = agentKey;
+            return this;
+        }
 
         /**
          * IntentDefinition.
          */
         public Builder intentDefinition(IntentCreateDTO intentDefinition) {
-            this.putQueryParameter("IntentDefinition", intentDefinition);
+            String intentDefinitionShrink = shrink(intentDefinition, "IntentDefinition", "json");
+            this.putQueryParameter("IntentDefinition", intentDefinitionShrink);
             this.intentDefinition = intentDefinition;
             return this;
         }

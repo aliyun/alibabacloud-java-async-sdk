@@ -417,31 +417,19 @@ public class ChatResponseBody extends TeaModel {
         @NameInMap("AnswerSource")
         private String answerSource;
 
-        @NameInMap("Category")
-        private String category;
-
-        @NameInMap("Content")
-        private String content;
-
         @NameInMap("KnowledgeId")
         private String knowledgeId;
 
         @NameInMap("Score")
         private Double score;
 
-        @NameInMap("Summary")
-        private String summary;
-
         @NameInMap("Title")
         private String title;
 
         private Recommends(Builder builder) {
             this.answerSource = builder.answerSource;
-            this.category = builder.category;
-            this.content = builder.content;
             this.knowledgeId = builder.knowledgeId;
             this.score = builder.score;
-            this.summary = builder.summary;
             this.title = builder.title;
         }
 
@@ -461,20 +449,6 @@ public class ChatResponseBody extends TeaModel {
         }
 
         /**
-         * @return category
-         */
-        public String getCategory() {
-            return this.category;
-        }
-
-        /**
-         * @return content
-         */
-        public String getContent() {
-            return this.content;
-        }
-
-        /**
          * @return knowledgeId
          */
         public String getKnowledgeId() {
@@ -489,13 +463,6 @@ public class ChatResponseBody extends TeaModel {
         }
 
         /**
-         * @return summary
-         */
-        public String getSummary() {
-            return this.summary;
-        }
-
-        /**
          * @return title
          */
         public String getTitle() {
@@ -504,11 +471,8 @@ public class ChatResponseBody extends TeaModel {
 
         public static final class Builder {
             private String answerSource; 
-            private String category; 
-            private String content; 
             private String knowledgeId; 
             private Double score; 
-            private String summary; 
             private String title; 
 
             /**
@@ -516,22 +480,6 @@ public class ChatResponseBody extends TeaModel {
              */
             public Builder answerSource(String answerSource) {
                 this.answerSource = answerSource;
-                return this;
-            }
-
-            /**
-             * Category.
-             */
-            public Builder category(String category) {
-                this.category = category;
-                return this;
-            }
-
-            /**
-             * Content.
-             */
-            public Builder content(String content) {
-                this.content = content;
                 return this;
             }
 
@@ -548,14 +496,6 @@ public class ChatResponseBody extends TeaModel {
              */
             public Builder score(Double score) {
                 this.score = score;
-                return this;
-            }
-
-            /**
-             * Summary.
-             */
-            public Builder summary(String summary) {
-                this.summary = summary;
                 return this;
             }
 
@@ -682,6 +622,9 @@ public class ChatResponseBody extends TeaModel {
         @NameInMap("ArticleTitle")
         private String articleTitle;
 
+        @NameInMap("Commands")
+        private java.util.Map < String, ? > commands;
+
         @NameInMap("Content")
         private String content;
 
@@ -724,6 +667,7 @@ public class ChatResponseBody extends TeaModel {
         private Text(Builder builder) {
             this.answerSource = builder.answerSource;
             this.articleTitle = builder.articleTitle;
+            this.commands = builder.commands;
             this.content = builder.content;
             this.contentType = builder.contentType;
             this.dialogName = builder.dialogName;
@@ -759,6 +703,13 @@ public class ChatResponseBody extends TeaModel {
          */
         public String getArticleTitle() {
             return this.articleTitle;
+        }
+
+        /**
+         * @return commands
+         */
+        public java.util.Map < String, ? > getCommands() {
+            return this.commands;
         }
 
         /**
@@ -855,6 +806,7 @@ public class ChatResponseBody extends TeaModel {
         public static final class Builder {
             private String answerSource; 
             private String articleTitle; 
+            private java.util.Map < String, ? > commands; 
             private String content; 
             private String contentType; 
             private String dialogName; 
@@ -882,6 +834,14 @@ public class ChatResponseBody extends TeaModel {
              */
             public Builder articleTitle(String articleTitle) {
                 this.articleTitle = articleTitle;
+                return this;
+            }
+
+            /**
+             * Commands.
+             */
+            public Builder commands(java.util.Map < String, ? > commands) {
+                this.commands = commands;
                 return this;
             }
 
@@ -1012,8 +972,14 @@ public class ChatResponseBody extends TeaModel {
         @NameInMap("Text")
         private Text text;
 
+        @NameInMap("Title")
+        private String title;
+
         @NameInMap("Type")
         private String type;
+
+        @NameInMap("VoiceTitle")
+        private String voiceTitle;
 
         private Messages(Builder builder) {
             this.answerSource = builder.answerSource;
@@ -1021,7 +987,9 @@ public class ChatResponseBody extends TeaModel {
             this.knowledge = builder.knowledge;
             this.recommends = builder.recommends;
             this.text = builder.text;
+            this.title = builder.title;
             this.type = builder.type;
+            this.voiceTitle = builder.voiceTitle;
         }
 
         public static Builder builder() {
@@ -1068,10 +1036,24 @@ public class ChatResponseBody extends TeaModel {
         }
 
         /**
+         * @return title
+         */
+        public String getTitle() {
+            return this.title;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
             return this.type;
+        }
+
+        /**
+         * @return voiceTitle
+         */
+        public String getVoiceTitle() {
+            return this.voiceTitle;
         }
 
         public static final class Builder {
@@ -1080,7 +1062,9 @@ public class ChatResponseBody extends TeaModel {
             private Knowledge knowledge; 
             private java.util.List < Recommends> recommends; 
             private Text text; 
+            private String title; 
             private String type; 
+            private String voiceTitle; 
 
             /**
              * AnswerSource.
@@ -1123,10 +1107,26 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
+             * 在线场景，反问标题
+             */
+            public Builder title(String title) {
+                this.title = title;
+                return this;
+            }
+
+            /**
              * Type.
              */
             public Builder type(String type) {
                 this.type = type;
+                return this;
+            }
+
+            /**
+             * 语音场景，澄清内容
+             */
+            public Builder voiceTitle(String voiceTitle) {
+                this.voiceTitle = voiceTitle;
                 return this;
             }
 

@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class QueryCategoriesRequest extends Request {
     @Query
+    @NameInMap("AgentKey")
+    private String agentKey;
+
+    @Query
     @NameInMap("KnowledgeType")
     private Long knowledgeType;
 
@@ -26,6 +30,7 @@ public class QueryCategoriesRequest extends Request {
 
     private QueryCategoriesRequest(Builder builder) {
         super(builder);
+        this.agentKey = builder.agentKey;
         this.knowledgeType = builder.knowledgeType;
         this.parentCategoryId = builder.parentCategoryId;
         this.showChildrens = builder.showChildrens;
@@ -42,6 +47,13 @@ public class QueryCategoriesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return agentKey
+     */
+    public String getAgentKey() {
+        return this.agentKey;
     }
 
     /**
@@ -66,6 +78,7 @@ public class QueryCategoriesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<QueryCategoriesRequest, Builder> {
+        private String agentKey; 
         private Long knowledgeType; 
         private Long parentCategoryId; 
         private Boolean showChildrens; 
@@ -74,12 +87,22 @@ public class QueryCategoriesRequest extends Request {
             super();
         } 
 
-        private Builder(QueryCategoriesRequest response) {
-            super(response);
-            this.knowledgeType = response.knowledgeType;
-            this.parentCategoryId = response.parentCategoryId;
-            this.showChildrens = response.showChildrens;
+        private Builder(QueryCategoriesRequest request) {
+            super(request);
+            this.agentKey = request.agentKey;
+            this.knowledgeType = request.knowledgeType;
+            this.parentCategoryId = request.parentCategoryId;
+            this.showChildrens = request.showChildrens;
         } 
+
+        /**
+         * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
+         */
+        public Builder agentKey(String agentKey) {
+            this.putQueryParameter("AgentKey", agentKey);
+            this.agentKey = agentKey;
+            return this;
+        }
 
         /**
          * KnowledgeType.

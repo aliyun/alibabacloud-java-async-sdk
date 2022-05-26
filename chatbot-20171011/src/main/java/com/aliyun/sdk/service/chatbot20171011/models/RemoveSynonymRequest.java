@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class RemoveSynonymRequest extends Request {
     @Query
+    @NameInMap("AgentKey")
+    private String agentKey;
+
+    @Query
     @NameInMap("CoreWordName")
     @Validation(required = true)
     private String coreWordName;
@@ -24,6 +28,7 @@ public class RemoveSynonymRequest extends Request {
 
     private RemoveSynonymRequest(Builder builder) {
         super(builder);
+        this.agentKey = builder.agentKey;
         this.coreWordName = builder.coreWordName;
         this.synonym = builder.synonym;
     }
@@ -42,6 +47,13 @@ public class RemoveSynonymRequest extends Request {
     }
 
     /**
+     * @return agentKey
+     */
+    public String getAgentKey() {
+        return this.agentKey;
+    }
+
+    /**
      * @return coreWordName
      */
     public String getCoreWordName() {
@@ -56,6 +68,7 @@ public class RemoveSynonymRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<RemoveSynonymRequest, Builder> {
+        private String agentKey; 
         private String coreWordName; 
         private String synonym; 
 
@@ -63,11 +76,21 @@ public class RemoveSynonymRequest extends Request {
             super();
         } 
 
-        private Builder(RemoveSynonymRequest response) {
-            super(response);
-            this.coreWordName = response.coreWordName;
-            this.synonym = response.synonym;
+        private Builder(RemoveSynonymRequest request) {
+            super(request);
+            this.agentKey = request.agentKey;
+            this.coreWordName = request.coreWordName;
+            this.synonym = request.synonym;
         } 
+
+        /**
+         * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
+         */
+        public Builder agentKey(String agentKey) {
+            this.putQueryParameter("AgentKey", agentKey);
+            this.agentKey = agentKey;
+            return this;
+        }
 
         /**
          * CoreWordName.

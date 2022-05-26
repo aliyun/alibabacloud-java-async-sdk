@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class AppendEntityMemberRequest extends Request {
     @Query
+    @NameInMap("AgentKey")
+    private String agentKey;
+
+    @Query
     @NameInMap("ApplyType")
     @Validation(required = true)
     private String applyType;
@@ -29,6 +33,7 @@ public class AppendEntityMemberRequest extends Request {
 
     private AppendEntityMemberRequest(Builder builder) {
         super(builder);
+        this.agentKey = builder.agentKey;
         this.applyType = builder.applyType;
         this.entityId = builder.entityId;
         this.member = builder.member;
@@ -45,6 +50,13 @@ public class AppendEntityMemberRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return agentKey
+     */
+    public String getAgentKey() {
+        return this.agentKey;
     }
 
     /**
@@ -69,6 +81,7 @@ public class AppendEntityMemberRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AppendEntityMemberRequest, Builder> {
+        private String agentKey; 
         private String applyType; 
         private Long entityId; 
         private Member member; 
@@ -77,12 +90,22 @@ public class AppendEntityMemberRequest extends Request {
             super();
         } 
 
-        private Builder(AppendEntityMemberRequest response) {
-            super(response);
-            this.applyType = response.applyType;
-            this.entityId = response.entityId;
-            this.member = response.member;
+        private Builder(AppendEntityMemberRequest request) {
+            super(request);
+            this.agentKey = request.agentKey;
+            this.applyType = request.applyType;
+            this.entityId = request.entityId;
+            this.member = request.member;
         } 
+
+        /**
+         * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
+         */
+        public Builder agentKey(String agentKey) {
+            this.putQueryParameter("AgentKey", agentKey);
+            this.agentKey = agentKey;
+            return this;
+        }
 
         /**
          * ApplyType.
@@ -106,7 +129,8 @@ public class AppendEntityMemberRequest extends Request {
          * Member.
          */
         public Builder member(Member member) {
-            this.putQueryParameter("Member", member);
+            String memberShrink = shrink(member, "Member", "json");
+            this.putQueryParameter("Member", memberShrink);
             this.member = member;
             return this;
         }

@@ -28,13 +28,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ChatResponse> chat(ChatRequest request);
 
-    CompletableFuture<CreateBizDataRangeResponse> createBizDataRange(CreateBizDataRangeRequest request);
-
     CompletableFuture<CreateBotResponse> createBot(CreateBotRequest request);
 
     CompletableFuture<CreateCategoryResponse> createCategory(CreateCategoryRequest request);
-
-    CompletableFuture<CreateClusterLoopResponse> createClusterLoop(CreateClusterLoopRequest request);
 
     CompletableFuture<CreateCoreWordResponse> createCoreWord(CreateCoreWordRequest request);
 
@@ -47,10 +43,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateKnowledgeResponse> createKnowledge(CreateKnowledgeRequest request);
 
     CompletableFuture<CreatePerspectiveResponse> createPerspective(CreatePerspectiveRequest request);
-
-    CompletableFuture<CreateSimilarityLoopResponse> createSimilarityLoop(CreateSimilarityLoopRequest request);
-
-    CompletableFuture<DeleteBizDataRangeResponse> deleteBizDataRange(DeleteBizDataRangeRequest request);
 
     CompletableFuture<DeleteBotResponse> deleteBot(DeleteBotRequest request);
 
@@ -66,7 +58,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteKnowledgeResponse> deleteKnowledge(DeleteKnowledgeRequest request);
 
-    CompletableFuture<DescribeBizDataRangeResponse> describeBizDataRange(DescribeBizDataRangeRequest request);
+    CompletableFuture<DeletePerspectiveResponse> deletePerspective(DeletePerspectiveRequest request);
 
     CompletableFuture<DescribeBotResponse> describeBot(DescribeBotRequest request);
 
@@ -128,8 +120,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<PublishKnowledgeResponse> publishKnowledge(PublishKnowledgeRequest request);
 
-    CompletableFuture<QueryBizDataRangesResponse> queryBizDataRanges(QueryBizDataRangesRequest request);
-
     CompletableFuture<QueryBotsResponse> queryBots(QueryBotsRequest request);
 
     CompletableFuture<QueryCategoriesResponse> queryCategories(QueryCategoriesRequest request);
@@ -144,12 +134,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<QueryKnowledgesResponse> queryKnowledges(QueryKnowledgesRequest request);
 
-    CompletableFuture<QueryLoopListResponse> queryLoopList(QueryLoopListRequest request);
-
-    CompletableFuture<QueryLoopResultResponse> queryLoopResult(QueryLoopResultRequest request);
-
-    CompletableFuture<QueryLoopStatusResponse> queryLoopStatus(QueryLoopStatusRequest request);
-
     CompletableFuture<QueryPerspectivesResponse> queryPerspectives(QueryPerspectivesRequest request);
 
     CompletableFuture<QuerySystemEntitiesResponse> querySystemEntities(QuerySystemEntitiesRequest request);
@@ -158,13 +142,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RemoveSynonymResponse> removeSynonym(RemoveSynonymRequest request);
 
-    CompletableFuture<SearchQaResponse> searchQa(SearchQaRequest request);
-
     CompletableFuture<TestDialogFlowResponse> testDialogFlow(TestDialogFlowRequest request);
-
-    CompletableFuture<TestGrayResponse> testGray(TestGrayRequest request);
-
-    CompletableFuture<UpdateBizDataRangeResponse> updateBizDataRange(UpdateBizDataRangeRequest request);
 
     CompletableFuture<UpdateCategoryResponse> updateCategory(UpdateCategoryRequest request);
 

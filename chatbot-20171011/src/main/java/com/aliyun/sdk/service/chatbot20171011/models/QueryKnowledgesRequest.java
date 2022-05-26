@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class QueryKnowledgesRequest extends Request {
     @Query
+    @NameInMap("AgentKey")
+    private String agentKey;
+
+    @Query
     @NameInMap("CategoryId")
     private Long categoryId;
 
@@ -34,6 +38,7 @@ public class QueryKnowledgesRequest extends Request {
 
     private QueryKnowledgesRequest(Builder builder) {
         super(builder);
+        this.agentKey = builder.agentKey;
         this.categoryId = builder.categoryId;
         this.coreWordName = builder.coreWordName;
         this.knowledgeTitle = builder.knowledgeTitle;
@@ -52,6 +57,13 @@ public class QueryKnowledgesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return agentKey
+     */
+    public String getAgentKey() {
+        return this.agentKey;
     }
 
     /**
@@ -90,6 +102,7 @@ public class QueryKnowledgesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<QueryKnowledgesRequest, Builder> {
+        private String agentKey; 
         private Long categoryId; 
         private String coreWordName; 
         private String knowledgeTitle; 
@@ -100,14 +113,24 @@ public class QueryKnowledgesRequest extends Request {
             super();
         } 
 
-        private Builder(QueryKnowledgesRequest response) {
-            super(response);
-            this.categoryId = response.categoryId;
-            this.coreWordName = response.coreWordName;
-            this.knowledgeTitle = response.knowledgeTitle;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(QueryKnowledgesRequest request) {
+            super(request);
+            this.agentKey = request.agentKey;
+            this.categoryId = request.categoryId;
+            this.coreWordName = request.coreWordName;
+            this.knowledgeTitle = request.knowledgeTitle;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
+
+        /**
+         * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
+         */
+        public Builder agentKey(String agentKey) {
+            this.putQueryParameter("AgentKey", agentKey);
+            this.agentKey = agentKey;
+            return this;
+        }
 
         /**
          * CategoryId.

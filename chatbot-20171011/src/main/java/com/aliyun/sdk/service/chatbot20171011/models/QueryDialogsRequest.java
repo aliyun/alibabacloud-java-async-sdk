@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class QueryDialogsRequest extends Request {
     @Query
+    @NameInMap("AgentKey")
+    private String agentKey;
+
+    @Query
     @NameInMap("DialogName")
     private String dialogName;
 
@@ -31,6 +35,7 @@ public class QueryDialogsRequest extends Request {
 
     private QueryDialogsRequest(Builder builder) {
         super(builder);
+        this.agentKey = builder.agentKey;
         this.dialogName = builder.dialogName;
         this.instanceId = builder.instanceId;
         this.pageNumber = builder.pageNumber;
@@ -48,6 +53,13 @@ public class QueryDialogsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return agentKey
+     */
+    public String getAgentKey() {
+        return this.agentKey;
     }
 
     /**
@@ -79,6 +91,7 @@ public class QueryDialogsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<QueryDialogsRequest, Builder> {
+        private String agentKey; 
         private String dialogName; 
         private String instanceId; 
         private Integer pageNumber; 
@@ -88,13 +101,23 @@ public class QueryDialogsRequest extends Request {
             super();
         } 
 
-        private Builder(QueryDialogsRequest response) {
-            super(response);
-            this.dialogName = response.dialogName;
-            this.instanceId = response.instanceId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(QueryDialogsRequest request) {
+            super(request);
+            this.agentKey = request.agentKey;
+            this.dialogName = request.dialogName;
+            this.instanceId = request.instanceId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
+
+        /**
+         * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
+         */
+        public Builder agentKey(String agentKey) {
+            this.putQueryParameter("AgentKey", agentKey);
+            this.agentKey = agentKey;
+            return this;
+        }
 
         /**
          * DialogName.

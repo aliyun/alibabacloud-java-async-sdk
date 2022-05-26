@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateKnowledgeRequest</p>
  */
 public class UpdateKnowledgeRequest extends Request {
+    @Query
+    @NameInMap("AgentKey")
+    private String agentKey;
+
     @Body
     @NameInMap("Knowledge")
     @Validation(required = true)
@@ -19,6 +23,7 @@ public class UpdateKnowledgeRequest extends Request {
 
     private UpdateKnowledgeRequest(Builder builder) {
         super(builder);
+        this.agentKey = builder.agentKey;
         this.knowledge = builder.knowledge;
     }
 
@@ -36,6 +41,13 @@ public class UpdateKnowledgeRequest extends Request {
     }
 
     /**
+     * @return agentKey
+     */
+    public String getAgentKey() {
+        return this.agentKey;
+    }
+
+    /**
      * @return knowledge
      */
     public Knowledge getKnowledge() {
@@ -43,22 +55,34 @@ public class UpdateKnowledgeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateKnowledgeRequest, Builder> {
+        private String agentKey; 
         private Knowledge knowledge; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateKnowledgeRequest response) {
-            super(response);
-            this.knowledge = response.knowledge;
+        private Builder(UpdateKnowledgeRequest request) {
+            super(request);
+            this.agentKey = request.agentKey;
+            this.knowledge = request.knowledge;
         } 
+
+        /**
+         * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
+         */
+        public Builder agentKey(String agentKey) {
+            this.putQueryParameter("AgentKey", agentKey);
+            this.agentKey = agentKey;
+            return this;
+        }
 
         /**
          * Knowledge.
          */
         public Builder knowledge(Knowledge knowledge) {
-            this.putBodyParameter("Knowledge", knowledge);
+            String knowledgeShrink = shrink(knowledge, "Knowledge", "json");
+            this.putBodyParameter("Knowledge", knowledgeShrink);
             this.knowledge = knowledge;
             return this;
         }

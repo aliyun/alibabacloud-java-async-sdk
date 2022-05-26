@@ -13,12 +13,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeCategoryRequest extends Request {
     @Query
+    @NameInMap("AgentKey")
+    private String agentKey;
+
+    @Query
     @NameInMap("CategoryId")
     @Validation(required = true)
     private Long categoryId;
 
     private DescribeCategoryRequest(Builder builder) {
         super(builder);
+        this.agentKey = builder.agentKey;
         this.categoryId = builder.categoryId;
     }
 
@@ -36,6 +41,13 @@ public class DescribeCategoryRequest extends Request {
     }
 
     /**
+     * @return agentKey
+     */
+    public String getAgentKey() {
+        return this.agentKey;
+    }
+
+    /**
      * @return categoryId
      */
     public Long getCategoryId() {
@@ -43,16 +55,27 @@ public class DescribeCategoryRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeCategoryRequest, Builder> {
+        private String agentKey; 
         private Long categoryId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeCategoryRequest response) {
-            super(response);
-            this.categoryId = response.categoryId;
+        private Builder(DescribeCategoryRequest request) {
+            super(request);
+            this.agentKey = request.agentKey;
+            this.categoryId = request.categoryId;
         } 
+
+        /**
+         * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
+         */
+        public Builder agentKey(String agentKey) {
+            this.putQueryParameter("AgentKey", agentKey);
+            this.agentKey = agentKey;
+            return this;
+        }
 
         /**
          * CategoryId.

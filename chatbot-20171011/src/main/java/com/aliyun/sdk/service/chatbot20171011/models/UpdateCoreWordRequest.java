@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateCoreWordRequest extends Request {
     @Query
+    @NameInMap("AgentKey")
+    private String agentKey;
+
+    @Query
     @NameInMap("CoreWordCode")
     @Validation(required = true)
     private String coreWordCode;
@@ -24,6 +28,7 @@ public class UpdateCoreWordRequest extends Request {
 
     private UpdateCoreWordRequest(Builder builder) {
         super(builder);
+        this.agentKey = builder.agentKey;
         this.coreWordCode = builder.coreWordCode;
         this.coreWordName = builder.coreWordName;
     }
@@ -42,6 +47,13 @@ public class UpdateCoreWordRequest extends Request {
     }
 
     /**
+     * @return agentKey
+     */
+    public String getAgentKey() {
+        return this.agentKey;
+    }
+
+    /**
      * @return coreWordCode
      */
     public String getCoreWordCode() {
@@ -56,6 +68,7 @@ public class UpdateCoreWordRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateCoreWordRequest, Builder> {
+        private String agentKey; 
         private String coreWordCode; 
         private String coreWordName; 
 
@@ -63,11 +76,21 @@ public class UpdateCoreWordRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateCoreWordRequest response) {
-            super(response);
-            this.coreWordCode = response.coreWordCode;
-            this.coreWordName = response.coreWordName;
+        private Builder(UpdateCoreWordRequest request) {
+            super(request);
+            this.agentKey = request.agentKey;
+            this.coreWordCode = request.coreWordCode;
+            this.coreWordName = request.coreWordName;
         } 
+
+        /**
+         * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
+         */
+        public Builder agentKey(String agentKey) {
+            this.putQueryParameter("AgentKey", agentKey);
+            this.agentKey = agentKey;
+            return this;
+        }
 
         /**
          * CoreWordCode.

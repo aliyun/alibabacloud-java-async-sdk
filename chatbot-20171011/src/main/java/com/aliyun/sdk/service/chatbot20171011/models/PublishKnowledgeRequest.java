@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class PublishKnowledgeRequest extends Request {
     @Query
+    @NameInMap("AgentKey")
+    private String agentKey;
+
+    @Query
     @NameInMap("Async")
     private Boolean async;
 
@@ -23,6 +27,7 @@ public class PublishKnowledgeRequest extends Request {
 
     private PublishKnowledgeRequest(Builder builder) {
         super(builder);
+        this.agentKey = builder.agentKey;
         this.async = builder.async;
         this.knowledgeId = builder.knowledgeId;
     }
@@ -41,6 +46,13 @@ public class PublishKnowledgeRequest extends Request {
     }
 
     /**
+     * @return agentKey
+     */
+    public String getAgentKey() {
+        return this.agentKey;
+    }
+
+    /**
      * @return async
      */
     public Boolean getAsync() {
@@ -55,6 +67,7 @@ public class PublishKnowledgeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<PublishKnowledgeRequest, Builder> {
+        private String agentKey; 
         private Boolean async; 
         private Long knowledgeId; 
 
@@ -62,11 +75,21 @@ public class PublishKnowledgeRequest extends Request {
             super();
         } 
 
-        private Builder(PublishKnowledgeRequest response) {
-            super(response);
-            this.async = response.async;
-            this.knowledgeId = response.knowledgeId;
+        private Builder(PublishKnowledgeRequest request) {
+            super(request);
+            this.agentKey = request.agentKey;
+            this.async = request.async;
+            this.knowledgeId = request.knowledgeId;
         } 
+
+        /**
+         * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
+         */
+        public Builder agentKey(String agentKey) {
+            this.putQueryParameter("AgentKey", agentKey);
+            this.agentKey = agentKey;
+            return this;
+        }
 
         /**
          * Async.

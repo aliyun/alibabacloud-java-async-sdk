@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class AssociateRequest extends Request {
     @Query
+    @NameInMap("AgentKey")
+    private String agentKey;
+
+    @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
@@ -40,6 +44,7 @@ public class AssociateRequest extends Request {
 
     private AssociateRequest(Builder builder) {
         super(builder);
+        this.agentKey = builder.agentKey;
         this.instanceId = builder.instanceId;
         this.perspective = builder.perspective;
         this.recommendNum = builder.recommendNum;
@@ -59,6 +64,13 @@ public class AssociateRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return agentKey
+     */
+    public String getAgentKey() {
+        return this.agentKey;
     }
 
     /**
@@ -104,6 +116,7 @@ public class AssociateRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AssociateRequest, Builder> {
+        private String agentKey; 
         private String instanceId; 
         private java.util.List < String > perspective; 
         private Integer recommendNum; 
@@ -115,15 +128,25 @@ public class AssociateRequest extends Request {
             super();
         } 
 
-        private Builder(AssociateRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.perspective = response.perspective;
-            this.recommendNum = response.recommendNum;
-            this.regionId = response.regionId;
-            this.sessionId = response.sessionId;
-            this.utterance = response.utterance;
+        private Builder(AssociateRequest request) {
+            super(request);
+            this.agentKey = request.agentKey;
+            this.instanceId = request.instanceId;
+            this.perspective = request.perspective;
+            this.recommendNum = request.recommendNum;
+            this.regionId = request.regionId;
+            this.sessionId = request.sessionId;
+            this.utterance = request.utterance;
         } 
+
+        /**
+         * AgentKey.
+         */
+        public Builder agentKey(String agentKey) {
+            this.putQueryParameter("AgentKey", agentKey);
+            this.agentKey = agentKey;
+            return this;
+        }
 
         /**
          * InstanceId.
