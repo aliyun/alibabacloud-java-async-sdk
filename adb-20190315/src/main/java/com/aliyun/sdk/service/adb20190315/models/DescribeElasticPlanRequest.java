@@ -140,16 +140,16 @@ public class DescribeElasticPlanRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeElasticPlanRequest response) {
-            super(response);
-            this.DBClusterId = response.DBClusterId;
-            this.elasticPlanEnable = response.elasticPlanEnable;
-            this.elasticPlanName = response.elasticPlanName;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.resourcePoolName = response.resourcePoolName;
+        private Builder(DescribeElasticPlanRequest request) {
+            super(request);
+            this.DBClusterId = request.DBClusterId;
+            this.elasticPlanEnable = request.elasticPlanEnable;
+            this.elasticPlanName = request.elasticPlanName;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.resourcePoolName = request.resourcePoolName;
         } 
 
         /**

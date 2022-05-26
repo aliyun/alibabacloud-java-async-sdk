@@ -20,11 +20,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AllocateClusterPublicConnectionResponse> allocateClusterPublicConnection(AllocateClusterPublicConnectionRequest request);
 
+    CompletableFuture<BindDBResourceGroupWithUserResponse> bindDBResourceGroupWithUser(BindDBResourceGroupWithUserRequest request);
+
     CompletableFuture<BindDBResourcePoolWithUserResponse> bindDBResourcePoolWithUser(BindDBResourcePoolWithUserRequest request);
 
     CompletableFuture<CreateAccountResponse> createAccount(CreateAccountRequest request);
 
     CompletableFuture<CreateDBClusterResponse> createDBCluster(CreateDBClusterRequest request);
+
+    CompletableFuture<CreateDBResourceGroupResponse> createDBResourceGroup(CreateDBResourceGroupRequest request);
 
     CompletableFuture<CreateDBResourcePoolResponse> createDBResourcePool(CreateDBResourcePoolRequest request);
 
@@ -33,6 +37,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteAccountResponse> deleteAccount(DeleteAccountRequest request);
 
     CompletableFuture<DeleteDBClusterResponse> deleteDBCluster(DeleteDBClusterRequest request);
+
+    CompletableFuture<DeleteDBResourceGroupResponse> deleteDBResourceGroup(DeleteDBResourceGroupRequest request);
 
     CompletableFuture<DeleteDBResourcePoolResponse> deleteDBResourcePool(DeleteDBResourcePoolRequest request);
 
@@ -75,6 +81,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDBClusterResourcePoolPerformanceResponse> describeDBClusterResourcePoolPerformance(DescribeDBClusterResourcePoolPerformanceRequest request);
 
     CompletableFuture<DescribeDBClustersResponse> describeDBClusters(DescribeDBClustersRequest request);
+
+    CompletableFuture<DescribeDBResourceGroupResponse> describeDBResourceGroup(DescribeDBResourceGroupRequest request);
 
     CompletableFuture<DescribeDBResourcePoolResponse> describeDBResourcePool(DescribeDBResourcePoolRequest request);
 
@@ -156,7 +164,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ModifyDBClusterMaintainTimeResponse> modifyDBClusterMaintainTime(ModifyDBClusterMaintainTimeRequest request);
 
+    CompletableFuture<ModifyDBClusterPayTypeResponse> modifyDBClusterPayType(ModifyDBClusterPayTypeRequest request);
+
     CompletableFuture<ModifyDBClusterResourceGroupResponse> modifyDBClusterResourceGroup(ModifyDBClusterResourceGroupRequest request);
+
+    CompletableFuture<ModifyDBResourceGroupResponse> modifyDBResourceGroup(ModifyDBResourceGroupRequest request);
 
     CompletableFuture<ModifyDBResourcePoolResponse> modifyDBResourcePool(ModifyDBResourcePoolRequest request);
 
@@ -173,6 +185,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RevokeOperatorPermissionResponse> revokeOperatorPermission(RevokeOperatorPermissionRequest request);
 
     CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
+
+    CompletableFuture<UnbindDBResourceGroupWithUserResponse> unbindDBResourceGroupWithUser(UnbindDBResourceGroupWithUserRequest request);
 
     CompletableFuture<UnbindDBResourcePoolWithUserResponse> unbindDBResourcePoolWithUser(UnbindDBResourcePoolWithUserRequest request);
 

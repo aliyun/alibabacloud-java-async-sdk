@@ -156,17 +156,17 @@ public class DescribeInclinedTablesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeInclinedTablesRequest response) {
-            super(response);
-            this.DBClusterId = response.DBClusterId;
-            this.order = response.order;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.tableType = response.tableType;
+        private Builder(DescribeInclinedTablesRequest request) {
+            super(request);
+            this.DBClusterId = request.DBClusterId;
+            this.order = request.order;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.tableType = request.tableType;
         } 
 
         /**

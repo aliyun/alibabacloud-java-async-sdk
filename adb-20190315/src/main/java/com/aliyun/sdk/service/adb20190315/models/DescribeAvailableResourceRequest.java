@@ -140,16 +140,16 @@ public class DescribeAvailableResourceRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAvailableResourceRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.chargeType = response.chargeType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.zoneId = response.zoneId;
+        private Builder(DescribeAvailableResourceRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.chargeType = request.chargeType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.zoneId = request.zoneId;
         } 
 
         /**

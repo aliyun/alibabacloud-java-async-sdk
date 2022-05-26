@@ -114,14 +114,14 @@ public class AllocateClusterPublicConnectionRequest extends Request {
             super();
         } 
 
-        private Builder(AllocateClusterPublicConnectionRequest response) {
-            super(response);
-            this.connectionStringPrefix = response.connectionStringPrefix;
-            this.DBClusterId = response.DBClusterId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(AllocateClusterPublicConnectionRequest request) {
+            super(request);
+            this.connectionStringPrefix = request.connectionStringPrefix;
+            this.DBClusterId = request.DBClusterId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

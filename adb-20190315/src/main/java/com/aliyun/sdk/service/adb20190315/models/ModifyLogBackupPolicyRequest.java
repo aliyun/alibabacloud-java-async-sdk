@@ -128,15 +128,15 @@ public class ModifyLogBackupPolicyRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyLogBackupPolicyRequest response) {
-            super(response);
-            this.DBClusterId = response.DBClusterId;
-            this.enableBackupLog = response.enableBackupLog;
-            this.logBackupRetentionPeriod = response.logBackupRetentionPeriod;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyLogBackupPolicyRequest request) {
+            super(request);
+            this.DBClusterId = request.DBClusterId;
+            this.enableBackupLog = request.enableBackupLog;
+            this.logBackupRetentionPeriod = request.logBackupRetentionPeriod;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

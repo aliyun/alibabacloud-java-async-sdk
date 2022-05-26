@@ -430,38 +430,38 @@ public class CreateDBClusterRequest extends Request {
             super();
         } 
 
-        private Builder(CreateDBClusterRequest response) {
-            super(response);
-            this.backupSetID = response.backupSetID;
-            this.clientToken = response.clientToken;
-            this.computeResource = response.computeResource;
-            this.DBClusterCategory = response.DBClusterCategory;
-            this.DBClusterClass = response.DBClusterClass;
-            this.DBClusterDescription = response.DBClusterDescription;
-            this.DBClusterNetworkType = response.DBClusterNetworkType;
-            this.DBClusterVersion = response.DBClusterVersion;
-            this.DBNodeGroupCount = response.DBNodeGroupCount;
-            this.DBNodeStorage = response.DBNodeStorage;
-            this.elasticIOResource = response.elasticIOResource;
-            this.executorCount = response.executorCount;
-            this.mode = response.mode;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.payType = response.payType;
-            this.period = response.period;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.restoreTime = response.restoreTime;
-            this.restoreType = response.restoreType;
-            this.sourceDBInstanceName = response.sourceDBInstanceName;
-            this.storageResource = response.storageResource;
-            this.storageType = response.storageType;
-            this.usedTime = response.usedTime;
-            this.VPCId = response.VPCId;
-            this.vSwitchId = response.vSwitchId;
-            this.zoneId = response.zoneId;
+        private Builder(CreateDBClusterRequest request) {
+            super(request);
+            this.backupSetID = request.backupSetID;
+            this.clientToken = request.clientToken;
+            this.computeResource = request.computeResource;
+            this.DBClusterCategory = request.DBClusterCategory;
+            this.DBClusterClass = request.DBClusterClass;
+            this.DBClusterDescription = request.DBClusterDescription;
+            this.DBClusterNetworkType = request.DBClusterNetworkType;
+            this.DBClusterVersion = request.DBClusterVersion;
+            this.DBNodeGroupCount = request.DBNodeGroupCount;
+            this.DBNodeStorage = request.DBNodeStorage;
+            this.elasticIOResource = request.elasticIOResource;
+            this.executorCount = request.executorCount;
+            this.mode = request.mode;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.payType = request.payType;
+            this.period = request.period;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.restoreTime = request.restoreTime;
+            this.restoreType = request.restoreType;
+            this.sourceDBInstanceName = request.sourceDBInstanceName;
+            this.storageResource = request.storageResource;
+            this.storageType = request.storageType;
+            this.usedTime = request.usedTime;
+            this.VPCId = request.VPCId;
+            this.vSwitchId = request.vSwitchId;
+            this.zoneId = request.zoneId;
         } 
 
         /**

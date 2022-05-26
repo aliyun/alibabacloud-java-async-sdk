@@ -153,17 +153,17 @@ public class DescribeAutoRenewAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAutoRenewAttributeRequest response) {
-            super(response);
-            this.DBClusterIds = response.DBClusterIds;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeAutoRenewAttributeRequest request) {
+            super(request);
+            this.DBClusterIds = request.DBClusterIds;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

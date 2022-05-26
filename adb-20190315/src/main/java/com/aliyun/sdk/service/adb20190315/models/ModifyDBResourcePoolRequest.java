@@ -142,16 +142,16 @@ public class ModifyDBResourcePoolRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDBResourcePoolRequest response) {
-            super(response);
-            this.DBClusterId = response.DBClusterId;
-            this.nodeNum = response.nodeNum;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.poolName = response.poolName;
-            this.queryType = response.queryType;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyDBResourcePoolRequest request) {
+            super(request);
+            this.DBClusterId = request.DBClusterId;
+            this.nodeNum = request.nodeNum;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.poolName = request.poolName;
+            this.queryType = request.queryType;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

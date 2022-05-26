@@ -129,15 +129,15 @@ public class DescribeTableAccessCountRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeTableAccessCountRequest response) {
-            super(response);
-            this.DBClusterId = response.DBClusterId;
-            this.order = response.order;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.startTime = response.startTime;
-            this.tableName = response.tableName;
+        private Builder(DescribeTableAccessCountRequest request) {
+            super(request);
+            this.DBClusterId = request.DBClusterId;
+            this.order = request.order;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.startTime = request.startTime;
+            this.tableName = request.tableName;
         } 
 
         /**

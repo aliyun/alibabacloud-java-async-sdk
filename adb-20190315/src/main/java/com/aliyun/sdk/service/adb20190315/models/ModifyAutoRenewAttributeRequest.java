@@ -154,17 +154,17 @@ public class ModifyAutoRenewAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyAutoRenewAttributeRequest response) {
-            super(response);
-            this.DBClusterId = response.DBClusterId;
-            this.duration = response.duration;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.periodUnit = response.periodUnit;
-            this.regionId = response.regionId;
-            this.renewalStatus = response.renewalStatus;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyAutoRenewAttributeRequest request) {
+            super(request);
+            this.DBClusterId = request.DBClusterId;
+            this.duration = request.duration;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.periodUnit = request.periodUnit;
+            this.regionId = request.regionId;
+            this.renewalStatus = request.renewalStatus;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

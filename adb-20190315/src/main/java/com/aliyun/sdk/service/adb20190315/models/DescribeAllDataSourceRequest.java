@@ -129,15 +129,15 @@ public class DescribeAllDataSourceRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAllDataSourceRequest response) {
-            super(response);
-            this.DBClusterId = response.DBClusterId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.schemaName = response.schemaName;
-            this.tableName = response.tableName;
+        private Builder(DescribeAllDataSourceRequest request) {
+            super(request);
+            this.DBClusterId = request.DBClusterId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.schemaName = request.schemaName;
+            this.tableName = request.tableName;
         } 
 
         /**

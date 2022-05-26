@@ -222,22 +222,22 @@ public class DescribeSlowLogRecordsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeSlowLogRecordsRequest response) {
-            super(response);
-            this.DBClusterId = response.DBClusterId;
-            this.DBName = response.DBName;
-            this.endTime = response.endTime;
-            this.order = response.order;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.processID = response.processID;
-            this.range = response.range;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.startTime = response.startTime;
-            this.state = response.state;
+        private Builder(DescribeSlowLogRecordsRequest request) {
+            super(request);
+            this.DBClusterId = request.DBClusterId;
+            this.DBName = request.DBName;
+            this.endTime = request.endTime;
+            this.order = request.order;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.processID = request.processID;
+            this.range = request.range;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.startTime = request.startTime;
+            this.state = request.state;
         } 
 
         /**

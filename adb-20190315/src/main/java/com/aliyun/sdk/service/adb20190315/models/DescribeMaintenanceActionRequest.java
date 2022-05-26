@@ -168,18 +168,18 @@ public class DescribeMaintenanceActionRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeMaintenanceActionRequest response) {
-            super(response);
-            this.isHistory = response.isHistory;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.region = response.region;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.taskType = response.taskType;
+        private Builder(DescribeMaintenanceActionRequest request) {
+            super(request);
+            this.isHistory = request.isHistory;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.region = request.region;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.taskType = request.taskType;
         } 
 
         /**

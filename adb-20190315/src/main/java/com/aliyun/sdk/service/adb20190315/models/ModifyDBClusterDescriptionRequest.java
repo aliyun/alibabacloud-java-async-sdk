@@ -115,14 +115,14 @@ public class ModifyDBClusterDescriptionRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDBClusterDescriptionRequest response) {
-            super(response);
-            this.DBClusterDescription = response.DBClusterDescription;
-            this.DBClusterId = response.DBClusterId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyDBClusterDescriptionRequest request) {
+            super(request);
+            this.DBClusterDescription = request.DBClusterDescription;
+            this.DBClusterId = request.DBClusterId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

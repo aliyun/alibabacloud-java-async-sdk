@@ -142,16 +142,16 @@ public class DescribeSlowLogTrendRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeSlowLogTrendRequest response) {
-            super(response);
-            this.DBClusterId = response.DBClusterId;
-            this.DBName = response.DBName;
-            this.endTime = response.endTime;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.startTime = response.startTime;
+        private Builder(DescribeSlowLogTrendRequest request) {
+            super(request);
+            this.DBClusterId = request.DBClusterId;
+            this.DBName = request.DBName;
+            this.endTime = request.endTime;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.startTime = request.startTime;
         } 
 
         /**

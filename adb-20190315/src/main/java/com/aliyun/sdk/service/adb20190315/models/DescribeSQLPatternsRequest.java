@@ -157,17 +157,17 @@ public class DescribeSQLPatternsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeSQLPatternsRequest response) {
-            super(response);
-            this.DBClusterId = response.DBClusterId;
-            this.endTime = response.endTime;
-            this.keyword = response.keyword;
-            this.lang = response.lang;
-            this.order = response.order;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.startTime = response.startTime;
+        private Builder(DescribeSQLPatternsRequest request) {
+            super(request);
+            this.DBClusterId = request.DBClusterId;
+            this.endTime = request.endTime;
+            this.keyword = request.keyword;
+            this.lang = request.lang;
+            this.order = request.order;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.startTime = request.startTime;
         } 
 
         /**

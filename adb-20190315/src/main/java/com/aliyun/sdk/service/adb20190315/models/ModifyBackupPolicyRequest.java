@@ -169,18 +169,18 @@ public class ModifyBackupPolicyRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyBackupPolicyRequest response) {
-            super(response);
-            this.backupRetentionPeriod = response.backupRetentionPeriod;
-            this.DBClusterId = response.DBClusterId;
-            this.enableBackupLog = response.enableBackupLog;
-            this.logBackupRetentionPeriod = response.logBackupRetentionPeriod;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.preferredBackupPeriod = response.preferredBackupPeriod;
-            this.preferredBackupTime = response.preferredBackupTime;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyBackupPolicyRequest request) {
+            super(request);
+            this.backupRetentionPeriod = request.backupRetentionPeriod;
+            this.DBClusterId = request.DBClusterId;
+            this.enableBackupLog = request.enableBackupLog;
+            this.logBackupRetentionPeriod = request.logBackupRetentionPeriod;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.preferredBackupPeriod = request.preferredBackupPeriod;
+            this.preferredBackupTime = request.preferredBackupTime;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

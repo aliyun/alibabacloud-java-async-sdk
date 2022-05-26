@@ -129,15 +129,15 @@ public class GrantOperatorPermissionRequest extends Request {
             super();
         } 
 
-        private Builder(GrantOperatorPermissionRequest response) {
-            super(response);
-            this.DBClusterId = response.DBClusterId;
-            this.expiredTime = response.expiredTime;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.privileges = response.privileges;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(GrantOperatorPermissionRequest request) {
+            super(request);
+            this.DBClusterId = request.DBClusterId;
+            this.expiredTime = request.expiredTime;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.privileges = request.privileges;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

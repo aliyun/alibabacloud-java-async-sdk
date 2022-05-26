@@ -136,7 +136,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
         private String command;
 
         @NameInMap("DB")
-        private String DB;
+        private String db;
 
         @NameInMap("Host")
         private String host;
@@ -161,7 +161,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
 
         private Process(Builder builder) {
             this.command = builder.command;
-            this.DB = builder.DB;
+            this.db = builder.db;
             this.host = builder.host;
             this.id = builder.id;
             this.info = builder.info;
@@ -187,10 +187,10 @@ public class DescribeProcessListResponseBody extends TeaModel {
         }
 
         /**
-         * @return DB
+         * @return db
          */
-        public String getDB() {
-            return this.DB;
+        public String getDb() {
+            return this.db;
         }
 
         /**
@@ -244,7 +244,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
 
         public static final class Builder {
             private String command; 
-            private String DB; 
+            private String db; 
             private String host; 
             private Integer id; 
             private String info; 
@@ -264,8 +264,8 @@ public class DescribeProcessListResponseBody extends TeaModel {
             /**
              * DB.
              */
-            public Builder DB(String DB) {
-                this.DB = DB;
+            public Builder db(String db) {
+                this.db = db;
                 return this;
             }
 

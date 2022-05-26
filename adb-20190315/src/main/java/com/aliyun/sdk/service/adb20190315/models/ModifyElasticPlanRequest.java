@@ -221,22 +221,22 @@ public class ModifyElasticPlanRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyElasticPlanRequest response) {
-            super(response);
-            this.DBClusterId = response.DBClusterId;
-            this.elasticPlanEnable = response.elasticPlanEnable;
-            this.elasticPlanEndDay = response.elasticPlanEndDay;
-            this.elasticPlanName = response.elasticPlanName;
-            this.elasticPlanNodeNum = response.elasticPlanNodeNum;
-            this.elasticPlanStartDay = response.elasticPlanStartDay;
-            this.elasticPlanTimeEnd = response.elasticPlanTimeEnd;
-            this.elasticPlanTimeStart = response.elasticPlanTimeStart;
-            this.elasticPlanWeeklyRepeat = response.elasticPlanWeeklyRepeat;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.resourcePoolName = response.resourcePoolName;
+        private Builder(ModifyElasticPlanRequest request) {
+            super(request);
+            this.DBClusterId = request.DBClusterId;
+            this.elasticPlanEnable = request.elasticPlanEnable;
+            this.elasticPlanEndDay = request.elasticPlanEndDay;
+            this.elasticPlanName = request.elasticPlanName;
+            this.elasticPlanNodeNum = request.elasticPlanNodeNum;
+            this.elasticPlanStartDay = request.elasticPlanStartDay;
+            this.elasticPlanTimeEnd = request.elasticPlanTimeEnd;
+            this.elasticPlanTimeStart = request.elasticPlanTimeStart;
+            this.elasticPlanWeeklyRepeat = request.elasticPlanWeeklyRepeat;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.resourcePoolName = request.resourcePoolName;
         } 
 
         /**

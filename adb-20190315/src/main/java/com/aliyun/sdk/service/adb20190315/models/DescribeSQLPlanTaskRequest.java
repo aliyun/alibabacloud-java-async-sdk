@@ -129,15 +129,15 @@ public class DescribeSQLPlanTaskRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeSQLPlanTaskRequest response) {
-            super(response);
-            this.DBClusterId = response.DBClusterId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.processId = response.processId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.stageId = response.stageId;
+        private Builder(DescribeSQLPlanTaskRequest request) {
+            super(request);
+            this.DBClusterId = request.DBClusterId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.processId = request.processId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.stageId = request.stageId;
         } 
 
         /**

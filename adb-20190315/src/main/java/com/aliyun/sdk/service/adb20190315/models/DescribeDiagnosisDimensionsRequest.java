@@ -117,14 +117,14 @@ public class DescribeDiagnosisDimensionsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDiagnosisDimensionsRequest response) {
-            super(response);
-            this.DBClusterId = response.DBClusterId;
-            this.endTime = response.endTime;
-            this.lang = response.lang;
-            this.queryCondition = response.queryCondition;
-            this.regionId = response.regionId;
-            this.startTime = response.startTime;
+        private Builder(DescribeDiagnosisDimensionsRequest request) {
+            super(request);
+            this.DBClusterId = request.DBClusterId;
+            this.endTime = request.endTime;
+            this.lang = request.lang;
+            this.queryCondition = request.queryCondition;
+            this.regionId = request.regionId;
+            this.startTime = request.startTime;
         } 
 
         /**

@@ -75,11 +75,11 @@ public class DescribeDownloadRecordsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDownloadRecordsRequest response) {
-            super(response);
-            this.DBClusterId = response.DBClusterId;
-            this.lang = response.lang;
-            this.regionId = response.regionId;
+        private Builder(DescribeDownloadRecordsRequest request) {
+            super(request);
+            this.DBClusterId = request.DBClusterId;
+            this.lang = request.lang;
+            this.regionId = request.regionId;
         } 
 
         /**

@@ -245,24 +245,24 @@ public class ModifyDBClusterRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDBClusterRequest response) {
-            super(response);
-            this.computeResource = response.computeResource;
-            this.DBClusterCategory = response.DBClusterCategory;
-            this.DBClusterId = response.DBClusterId;
-            this.DBNodeClass = response.DBNodeClass;
-            this.DBNodeGroupCount = response.DBNodeGroupCount;
-            this.DBNodeStorage = response.DBNodeStorage;
-            this.elasticIOResource = response.elasticIOResource;
-            this.executorCount = response.executorCount;
-            this.mode = response.mode;
-            this.modifyType = response.modifyType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.storageResource = response.storageResource;
+        private Builder(ModifyDBClusterRequest request) {
+            super(request);
+            this.computeResource = request.computeResource;
+            this.DBClusterCategory = request.DBClusterCategory;
+            this.DBClusterId = request.DBClusterId;
+            this.DBNodeClass = request.DBNodeClass;
+            this.DBNodeGroupCount = request.DBNodeGroupCount;
+            this.DBNodeStorage = request.DBNodeStorage;
+            this.elasticIOResource = request.elasticIOResource;
+            this.executorCount = request.executorCount;
+            this.mode = request.mode;
+            this.modifyType = request.modifyType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.storageResource = request.storageResource;
         } 
 
         /**

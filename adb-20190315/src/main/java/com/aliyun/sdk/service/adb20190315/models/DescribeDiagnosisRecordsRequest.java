@@ -286,27 +286,27 @@ public class DescribeDiagnosisRecordsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDiagnosisRecordsRequest response) {
-            super(response);
-            this.clientIp = response.clientIp;
-            this.DBClusterId = response.DBClusterId;
-            this.database = response.database;
-            this.endTime = response.endTime;
-            this.keyword = response.keyword;
-            this.lang = response.lang;
-            this.maxPeakMemory = response.maxPeakMemory;
-            this.maxScanSize = response.maxScanSize;
-            this.minPeakMemory = response.minPeakMemory;
-            this.minScanSize = response.minScanSize;
-            this.order = response.order;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.patternId = response.patternId;
-            this.queryCondition = response.queryCondition;
-            this.regionId = response.regionId;
-            this.resourceGroup = response.resourceGroup;
-            this.startTime = response.startTime;
-            this.userName = response.userName;
+        private Builder(DescribeDiagnosisRecordsRequest request) {
+            super(request);
+            this.clientIp = request.clientIp;
+            this.DBClusterId = request.DBClusterId;
+            this.database = request.database;
+            this.endTime = request.endTime;
+            this.keyword = request.keyword;
+            this.lang = request.lang;
+            this.maxPeakMemory = request.maxPeakMemory;
+            this.maxScanSize = request.maxScanSize;
+            this.minPeakMemory = request.minPeakMemory;
+            this.minScanSize = request.minScanSize;
+            this.order = request.order;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.patternId = request.patternId;
+            this.queryCondition = request.queryCondition;
+            this.regionId = request.regionId;
+            this.resourceGroup = request.resourceGroup;
+            this.startTime = request.startTime;
+            this.userName = request.userName;
         } 
 
         /**

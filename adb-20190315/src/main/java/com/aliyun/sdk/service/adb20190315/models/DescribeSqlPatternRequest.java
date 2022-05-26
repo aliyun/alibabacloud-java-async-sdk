@@ -142,16 +142,16 @@ public class DescribeSqlPatternRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeSqlPatternRequest response) {
-            super(response);
-            this.DBClusterId = response.DBClusterId;
-            this.order = response.order;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.sqlPattern = response.sqlPattern;
-            this.startTime = response.startTime;
-            this.type = response.type;
+        private Builder(DescribeSqlPatternRequest request) {
+            super(request);
+            this.DBClusterId = request.DBClusterId;
+            this.order = request.order;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.sqlPattern = request.sqlPattern;
+            this.startTime = request.startTime;
+            this.type = request.type;
         } 
 
         /**

@@ -275,26 +275,26 @@ public class DescribeAuditLogRecordsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAuditLogRecordsRequest response) {
-            super(response);
-            this.DBClusterId = response.DBClusterId;
-            this.DBName = response.DBName;
-            this.endTime = response.endTime;
-            this.hostAddress = response.hostAddress;
-            this.order = response.order;
-            this.orderType = response.orderType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.queryKeyword = response.queryKeyword;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sqlType = response.sqlType;
-            this.startTime = response.startTime;
-            this.succeed = response.succeed;
-            this.user = response.user;
+        private Builder(DescribeAuditLogRecordsRequest request) {
+            super(request);
+            this.DBClusterId = request.DBClusterId;
+            this.DBName = request.DBName;
+            this.endTime = request.endTime;
+            this.hostAddress = request.hostAddress;
+            this.order = request.order;
+            this.orderType = request.orderType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.queryKeyword = request.queryKeyword;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sqlType = request.sqlType;
+            this.startTime = request.startTime;
+            this.succeed = request.succeed;
+            this.user = request.user;
         } 
 
         /**

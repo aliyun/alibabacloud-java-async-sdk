@@ -77,11 +77,11 @@ public class DescribeDBClusterHealthReportRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDBClusterHealthReportRequest response) {
-            super(response);
-            this.DBClusterId = response.DBClusterId;
-            this.regionId = response.regionId;
-            this.startTime = response.startTime;
+        private Builder(DescribeDBClusterHealthReportRequest request) {
+            super(request);
+            this.DBClusterId = request.DBClusterId;
+            this.regionId = request.regionId;
+            this.startTime = request.startTime;
         } 
 
         /**

@@ -115,14 +115,14 @@ public class DeleteElasticPlanRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteElasticPlanRequest response) {
-            super(response);
-            this.DBClusterId = response.DBClusterId;
-            this.elasticPlanName = response.elasticPlanName;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DeleteElasticPlanRequest request) {
+            super(request);
+            this.DBClusterId = request.DBClusterId;
+            this.elasticPlanName = request.elasticPlanName;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

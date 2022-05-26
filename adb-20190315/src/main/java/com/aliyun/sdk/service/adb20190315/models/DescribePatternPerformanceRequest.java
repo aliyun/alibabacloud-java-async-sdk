@@ -105,13 +105,13 @@ public class DescribePatternPerformanceRequest extends Request {
             super();
         } 
 
-        private Builder(DescribePatternPerformanceRequest response) {
-            super(response);
-            this.DBClusterId = response.DBClusterId;
-            this.endTime = response.endTime;
-            this.patternId = response.patternId;
-            this.regionId = response.regionId;
-            this.startTime = response.startTime;
+        private Builder(DescribePatternPerformanceRequest request) {
+            super(request);
+            this.DBClusterId = request.DBClusterId;
+            this.endTime = request.endTime;
+            this.patternId = request.patternId;
+            this.regionId = request.regionId;
+            this.startTime = request.startTime;
         } 
 
         /**

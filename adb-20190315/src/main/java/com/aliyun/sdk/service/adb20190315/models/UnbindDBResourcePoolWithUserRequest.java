@@ -129,15 +129,15 @@ public class UnbindDBResourcePoolWithUserRequest extends Request {
             super();
         } 
 
-        private Builder(UnbindDBResourcePoolWithUserRequest response) {
-            super(response);
-            this.DBClusterId = response.DBClusterId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.poolName = response.poolName;
-            this.poolUser = response.poolUser;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(UnbindDBResourcePoolWithUserRequest request) {
+            super(request);
+            this.DBClusterId = request.DBClusterId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.poolName = request.poolName;
+            this.poolUser = request.poolUser;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

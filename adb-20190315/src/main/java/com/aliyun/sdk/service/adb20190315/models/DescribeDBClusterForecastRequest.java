@@ -90,12 +90,12 @@ public class DescribeDBClusterForecastRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDBClusterForecastRequest response) {
-            super(response);
-            this.DBClusterId = response.DBClusterId;
-            this.metricType = response.metricType;
-            this.regionId = response.regionId;
-            this.startTime = response.startTime;
+        private Builder(DescribeDBClusterForecastRequest request) {
+            super(request);
+            this.DBClusterId = request.DBClusterId;
+            this.metricType = request.metricType;
+            this.regionId = request.regionId;
+            this.startTime = request.startTime;
         } 
 
         /**
