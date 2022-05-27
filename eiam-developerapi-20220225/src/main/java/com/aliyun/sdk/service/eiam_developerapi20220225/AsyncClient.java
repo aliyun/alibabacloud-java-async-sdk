@@ -34,11 +34,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetOrganizationalUnitResponse> getOrganizationalUnit(GetOrganizationalUnitRequest request);
 
-    CompletableFuture<GetOrganizationalUnitIdByExternalIdResponse> getOrganizationalUnitIdByExternalId(GetOrganizationalUnitIdByExternalIdRequest request);
-
     CompletableFuture<GetUserResponse> getUser(GetUserRequest request);
-
-    CompletableFuture<GetUserIdByExternalIdResponse> getUserIdByExternalId(GetUserIdByExternalIdRequest request);
 
     CompletableFuture<GetUserInfoResponse> getUserInfo(GetUserInfoRequest request);
 
