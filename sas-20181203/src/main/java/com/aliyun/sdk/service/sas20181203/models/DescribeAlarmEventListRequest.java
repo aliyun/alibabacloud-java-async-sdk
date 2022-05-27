@@ -71,6 +71,10 @@ public class DescribeAlarmEventListRequest extends Request {
     @NameInMap("TacticId")
     private String tacticId;
 
+    @Query
+    @NameInMap("UniqueInfo")
+    private String uniqueInfo;
+
     private DescribeAlarmEventListRequest(Builder builder) {
         super(builder);
         this.alarmEventName = builder.alarmEventName;
@@ -87,6 +91,7 @@ public class DescribeAlarmEventListRequest extends Request {
         this.remark = builder.remark;
         this.sourceIp = builder.sourceIp;
         this.tacticId = builder.tacticId;
+        this.uniqueInfo = builder.uniqueInfo;
     }
 
     public static Builder builder() {
@@ -200,6 +205,13 @@ public class DescribeAlarmEventListRequest extends Request {
         return this.tacticId;
     }
 
+    /**
+     * @return uniqueInfo
+     */
+    public String getUniqueInfo() {
+        return this.uniqueInfo;
+    }
+
     public static final class Builder extends Request.Builder<DescribeAlarmEventListRequest, Builder> {
         private String alarmEventName; 
         private String alarmEventType; 
@@ -215,6 +227,7 @@ public class DescribeAlarmEventListRequest extends Request {
         private String remark; 
         private String sourceIp; 
         private String tacticId; 
+        private String uniqueInfo; 
 
         private Builder() {
             super();
@@ -236,6 +249,7 @@ public class DescribeAlarmEventListRequest extends Request {
             this.remark = request.remark;
             this.sourceIp = request.sourceIp;
             this.tacticId = request.tacticId;
+            this.uniqueInfo = request.uniqueInfo;
         } 
 
         /**
@@ -361,6 +375,15 @@ public class DescribeAlarmEventListRequest extends Request {
         public Builder tacticId(String tacticId) {
             this.putQueryParameter("TacticId", tacticId);
             this.tacticId = tacticId;
+            return this;
+        }
+
+        /**
+         * UniqueInfo.
+         */
+        public Builder uniqueInfo(String uniqueInfo) {
+            this.putQueryParameter("UniqueInfo", uniqueInfo);
+            this.uniqueInfo = uniqueInfo;
             return this;
         }
 

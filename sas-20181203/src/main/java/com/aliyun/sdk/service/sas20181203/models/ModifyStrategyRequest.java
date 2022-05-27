@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ModifyStrategyRequest extends Request {
     @Query
     @NameInMap("CustomType")
+    @Validation(required = true)
     private String customType;
 
     @Query
@@ -30,14 +31,17 @@ public class ModifyStrategyRequest extends Request {
 
     @Query
     @NameInMap("Name")
+    @Validation(required = true)
     private String name;
 
     @Query
     @NameInMap("RiskCustomParams")
+    @Validation(required = true)
     private String riskCustomParams;
 
     @Query
     @NameInMap("RiskSubTypeName")
+    @Validation(required = true)
     private String riskSubTypeName;
 
     @Query

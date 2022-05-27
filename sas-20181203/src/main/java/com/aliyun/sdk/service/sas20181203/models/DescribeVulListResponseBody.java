@@ -798,6 +798,12 @@ public class DescribeVulListResponseBody extends TeaModel {
         @NameInMap("AliasName")
         private String aliasName;
 
+        @NameInMap("AuthVersion")
+        private String authVersion;
+
+        @NameInMap("Bind")
+        private Boolean bind;
+
         @NameInMap("ExtendContentJson")
         private ExtendContentJson extendContentJson;
 
@@ -834,6 +840,9 @@ public class DescribeVulListResponseBody extends TeaModel {
         @NameInMap("Online")
         private Boolean online;
 
+        @NameInMap("OsName")
+        private String osName;
+
         @NameInMap("OsVersion")
         private String osVersion;
 
@@ -869,6 +878,8 @@ public class DescribeVulListResponseBody extends TeaModel {
 
         private VulRecords(Builder builder) {
             this.aliasName = builder.aliasName;
+            this.authVersion = builder.authVersion;
+            this.bind = builder.bind;
             this.extendContentJson = builder.extendContentJson;
             this.firstTs = builder.firstTs;
             this.groupId = builder.groupId;
@@ -881,6 +892,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             this.name = builder.name;
             this.necessity = builder.necessity;
             this.online = builder.online;
+            this.osName = builder.osName;
             this.osVersion = builder.osVersion;
             this.primaryId = builder.primaryId;
             this.regionId = builder.regionId;
@@ -907,6 +919,20 @@ public class DescribeVulListResponseBody extends TeaModel {
          */
         public String getAliasName() {
             return this.aliasName;
+        }
+
+        /**
+         * @return authVersion
+         */
+        public String getAuthVersion() {
+            return this.authVersion;
+        }
+
+        /**
+         * @return bind
+         */
+        public Boolean getBind() {
+            return this.bind;
         }
 
         /**
@@ -994,6 +1020,13 @@ public class DescribeVulListResponseBody extends TeaModel {
         }
 
         /**
+         * @return osName
+         */
+        public String getOsName() {
+            return this.osName;
+        }
+
+        /**
          * @return osVersion
          */
         public String getOsVersion() {
@@ -1072,6 +1105,8 @@ public class DescribeVulListResponseBody extends TeaModel {
 
         public static final class Builder {
             private String aliasName; 
+            private String authVersion; 
+            private Boolean bind; 
             private ExtendContentJson extendContentJson; 
             private Long firstTs; 
             private Integer groupId; 
@@ -1084,6 +1119,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             private String name; 
             private String necessity; 
             private Boolean online; 
+            private String osName; 
             private String osVersion; 
             private Long primaryId; 
             private String regionId; 
@@ -1101,6 +1137,22 @@ public class DescribeVulListResponseBody extends TeaModel {
              */
             public Builder aliasName(String aliasName) {
                 this.aliasName = aliasName;
+                return this;
+            }
+
+            /**
+             * AuthVersion.
+             */
+            public Builder authVersion(String authVersion) {
+                this.authVersion = authVersion;
+                return this;
+            }
+
+            /**
+             * Bind.
+             */
+            public Builder bind(Boolean bind) {
+                this.bind = bind;
                 return this;
             }
 
@@ -1197,6 +1249,14 @@ public class DescribeVulListResponseBody extends TeaModel {
              */
             public Builder online(Boolean online) {
                 this.online = online;
+                return this;
+            }
+
+            /**
+             * OsName.
+             */
+            public Builder osName(String osName) {
+                this.osName = osName;
                 return this;
             }
 
