@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyDBInstanceConnectionStringRequest extends Request {
     @Query
+    @NameInMap("BabelfishPort")
+    private String babelfishPort;
+
+    @Query
     @NameInMap("ConnectionStringPrefix")
     @Validation(required = true)
     private String connectionStringPrefix;
@@ -54,6 +58,7 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
 
     private ModifyDBInstanceConnectionStringRequest(Builder builder) {
         super(builder);
+        this.babelfishPort = builder.babelfishPort;
         this.connectionStringPrefix = builder.connectionStringPrefix;
         this.currentConnectionString = builder.currentConnectionString;
         this.DBInstanceId = builder.DBInstanceId;
@@ -76,6 +81,13 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return babelfishPort
+     */
+    public String getBabelfishPort() {
+        return this.babelfishPort;
     }
 
     /**
@@ -142,6 +154,7 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyDBInstanceConnectionStringRequest, Builder> {
+        private String babelfishPort; 
         private String connectionStringPrefix; 
         private String currentConnectionString; 
         private String DBInstanceId; 
@@ -158,6 +171,7 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
 
         private Builder(ModifyDBInstanceConnectionStringRequest request) {
             super(request);
+            this.babelfishPort = request.babelfishPort;
             this.connectionStringPrefix = request.connectionStringPrefix;
             this.currentConnectionString = request.currentConnectionString;
             this.DBInstanceId = request.DBInstanceId;
@@ -168,6 +182,15 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
+
+        /**
+         * BabelfishPort.
+         */
+        public Builder babelfishPort(String babelfishPort) {
+            this.putQueryParameter("BabelfishPort", babelfishPort);
+            this.babelfishPort = babelfishPort;
+            return this;
+        }
 
         /**
          * ConnectionStringPrefix.

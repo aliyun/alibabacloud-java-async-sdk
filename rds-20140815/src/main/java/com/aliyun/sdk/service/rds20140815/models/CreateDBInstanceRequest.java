@@ -21,6 +21,10 @@ public class CreateDBInstanceRequest extends Request {
     private String autoRenew;
 
     @Query
+    @NameInMap("BabelfishConfig")
+    private String babelfishConfig;
+
+    @Query
     @NameInMap("BusinessInfo")
     private String businessInfo;
 
@@ -141,6 +145,10 @@ public class CreateDBInstanceRequest extends Request {
     private String securityIPList;
 
     @Query
+    @NameInMap("ServerlessConfig")
+    private ServerlessConfig serverlessConfig;
+
+    @Query
     @NameInMap("StorageAutoScale")
     private String storageAutoScale;
 
@@ -208,6 +216,7 @@ public class CreateDBInstanceRequest extends Request {
         super(builder);
         this.amount = builder.amount;
         this.autoRenew = builder.autoRenew;
+        this.babelfishConfig = builder.babelfishConfig;
         this.businessInfo = builder.businessInfo;
         this.category = builder.category;
         this.clientToken = builder.clientToken;
@@ -236,6 +245,7 @@ public class CreateDBInstanceRequest extends Request {
         this.resourceOwnerId = builder.resourceOwnerId;
         this.roleARN = builder.roleARN;
         this.securityIPList = builder.securityIPList;
+        this.serverlessConfig = builder.serverlessConfig;
         this.storageAutoScale = builder.storageAutoScale;
         this.storageThreshold = builder.storageThreshold;
         this.storageUpperBound = builder.storageUpperBound;
@@ -279,6 +289,13 @@ public class CreateDBInstanceRequest extends Request {
      */
     public String getAutoRenew() {
         return this.autoRenew;
+    }
+
+    /**
+     * @return babelfishConfig
+     */
+    public String getBabelfishConfig() {
+        return this.babelfishConfig;
     }
 
     /**
@@ -478,6 +495,13 @@ public class CreateDBInstanceRequest extends Request {
     }
 
     /**
+     * @return serverlessConfig
+     */
+    public ServerlessConfig getServerlessConfig() {
+        return this.serverlessConfig;
+    }
+
+    /**
      * @return storageAutoScale
      */
     public String getStorageAutoScale() {
@@ -592,6 +616,7 @@ public class CreateDBInstanceRequest extends Request {
     public static final class Builder extends Request.Builder<CreateDBInstanceRequest, Builder> {
         private Integer amount; 
         private String autoRenew; 
+        private String babelfishConfig; 
         private String businessInfo; 
         private String category; 
         private String clientToken; 
@@ -620,6 +645,7 @@ public class CreateDBInstanceRequest extends Request {
         private Long resourceOwnerId; 
         private String roleARN; 
         private String securityIPList; 
+        private ServerlessConfig serverlessConfig; 
         private String storageAutoScale; 
         private Integer storageThreshold; 
         private Integer storageUpperBound; 
@@ -645,6 +671,7 @@ public class CreateDBInstanceRequest extends Request {
             super(request);
             this.amount = request.amount;
             this.autoRenew = request.autoRenew;
+            this.babelfishConfig = request.babelfishConfig;
             this.businessInfo = request.businessInfo;
             this.category = request.category;
             this.clientToken = request.clientToken;
@@ -673,6 +700,7 @@ public class CreateDBInstanceRequest extends Request {
             this.resourceOwnerId = request.resourceOwnerId;
             this.roleARN = request.roleARN;
             this.securityIPList = request.securityIPList;
+            this.serverlessConfig = request.serverlessConfig;
             this.storageAutoScale = request.storageAutoScale;
             this.storageThreshold = request.storageThreshold;
             this.storageUpperBound = request.storageUpperBound;
@@ -706,6 +734,15 @@ public class CreateDBInstanceRequest extends Request {
         public Builder autoRenew(String autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
             this.autoRenew = autoRenew;
+            return this;
+        }
+
+        /**
+         * BabelfishConfig.
+         */
+        public Builder babelfishConfig(String babelfishConfig) {
+            this.putQueryParameter("BabelfishConfig", babelfishConfig);
+            this.babelfishConfig = babelfishConfig;
             return this;
         }
 
@@ -962,6 +999,16 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
+         * ServerlessConfig.
+         */
+        public Builder serverlessConfig(ServerlessConfig serverlessConfig) {
+            String serverlessConfigShrink = shrink(serverlessConfig, "ServerlessConfig", "json");
+            this.putQueryParameter("ServerlessConfig", serverlessConfigShrink);
+            this.serverlessConfig = serverlessConfig;
+            return this;
+        }
+
+        /**
          * StorageAutoScale.
          */
         public Builder storageAutoScale(String storageAutoScale) {
@@ -1112,6 +1159,67 @@ public class CreateDBInstanceRequest extends Request {
 
     } 
 
+    public static class ServerlessConfig extends TeaModel {
+        @NameInMap("MaxCapacity")
+        private Double maxCapacity;
+
+        @NameInMap("MinCapacity")
+        private Double minCapacity;
+
+        private ServerlessConfig(Builder builder) {
+            this.maxCapacity = builder.maxCapacity;
+            this.minCapacity = builder.minCapacity;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ServerlessConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return maxCapacity
+         */
+        public Double getMaxCapacity() {
+            return this.maxCapacity;
+        }
+
+        /**
+         * @return minCapacity
+         */
+        public Double getMinCapacity() {
+            return this.minCapacity;
+        }
+
+        public static final class Builder {
+            private Double maxCapacity; 
+            private Double minCapacity; 
+
+            /**
+             * MaxCapacity.
+             */
+            public Builder maxCapacity(Double maxCapacity) {
+                this.maxCapacity = maxCapacity;
+                return this;
+            }
+
+            /**
+             * MinCapacity.
+             */
+            public Builder minCapacity(Double minCapacity) {
+                this.minCapacity = minCapacity;
+                return this;
+            }
+
+            public ServerlessConfig build() {
+                return new ServerlessConfig(this);
+            } 
+
+        } 
+
+    }
     public static class Tag extends TeaModel {
         @NameInMap("Key")
         private String key;

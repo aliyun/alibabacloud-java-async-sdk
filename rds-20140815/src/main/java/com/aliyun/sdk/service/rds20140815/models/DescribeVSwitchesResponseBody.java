@@ -13,16 +13,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeVSwitchesResponseBody extends TeaModel {
     @NameInMap("PageNumber")
-    private Long pageNumber;
+    private Integer pageNumber;
 
     @NameInMap("PageSize")
-    private Long pageSize;
+    private Integer pageSize;
 
     @NameInMap("RequestId")
     private String requestId;
 
     @NameInMap("TotalCount")
-    private Long totalCount;
+    private Integer totalCount;
 
     @NameInMap("VSwitchs")
     private java.util.List < VSwitchs> vSwitchs;
@@ -46,14 +46,14 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
     /**
      * @return pageNumber
      */
-    public Long getPageNumber() {
+    public Integer getPageNumber() {
         return this.pageNumber;
     }
 
     /**
      * @return pageSize
      */
-    public Long getPageSize() {
+    public Integer getPageSize() {
         return this.pageSize;
     }
 
@@ -67,7 +67,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
     /**
      * @return totalCount
      */
-    public Long getTotalCount() {
+    public Integer getTotalCount() {
         return this.totalCount;
     }
 
@@ -79,16 +79,16 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private Long pageNumber; 
-        private Long pageSize; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
         private String requestId; 
-        private Long totalCount; 
+        private Integer totalCount; 
         private java.util.List < VSwitchs> vSwitchs; 
 
         /**
          * PageNumber.
          */
-        public Builder pageNumber(Long pageNumber) {
+        public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
             return this;
         }
@@ -96,7 +96,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         /**
          * PageSize.
          */
-        public Builder pageSize(Long pageSize) {
+        public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
             return this;
         }
@@ -112,7 +112,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         /**
          * TotalCount.
          */
-        public Builder totalCount(Long totalCount) {
+        public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
             return this;
         }
@@ -132,32 +132,17 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
     } 
 
     public static class VSwitchs extends TeaModel {
-        @NameInMap("AliUid")
-        private String aliUid;
-
-        @NameInMap("Bid")
-        private String bid;
-
         @NameInMap("CidrBlock")
         private String cidrBlock;
 
         @NameInMap("Description")
         private String description;
 
-        @NameInMap("GmtCreate")
-        private String gmtCreate;
-
-        @NameInMap("GmtModified")
-        private String gmtModified;
-
         @NameInMap("IsDefault")
         private Boolean isDefault;
 
         @NameInMap("IzNo")
         private String izNo;
-
-        @NameInMap("RegionNo")
-        private String regionNo;
 
         @NameInMap("Status")
         private String status;
@@ -169,15 +154,10 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         private String vSwitchName;
 
         private VSwitchs(Builder builder) {
-            this.aliUid = builder.aliUid;
-            this.bid = builder.bid;
             this.cidrBlock = builder.cidrBlock;
             this.description = builder.description;
-            this.gmtCreate = builder.gmtCreate;
-            this.gmtModified = builder.gmtModified;
             this.isDefault = builder.isDefault;
             this.izNo = builder.izNo;
-            this.regionNo = builder.regionNo;
             this.status = builder.status;
             this.vSwitchId = builder.vSwitchId;
             this.vSwitchName = builder.vSwitchName;
@@ -189,20 +169,6 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
 
         public static VSwitchs create() {
             return builder().build();
-        }
-
-        /**
-         * @return aliUid
-         */
-        public String getAliUid() {
-            return this.aliUid;
-        }
-
-        /**
-         * @return bid
-         */
-        public String getBid() {
-            return this.bid;
         }
 
         /**
@@ -220,20 +186,6 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         }
 
         /**
-         * @return gmtCreate
-         */
-        public String getGmtCreate() {
-            return this.gmtCreate;
-        }
-
-        /**
-         * @return gmtModified
-         */
-        public String getGmtModified() {
-            return this.gmtModified;
-        }
-
-        /**
          * @return isDefault
          */
         public Boolean getIsDefault() {
@@ -245,13 +197,6 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
          */
         public String getIzNo() {
             return this.izNo;
-        }
-
-        /**
-         * @return regionNo
-         */
-        public String getRegionNo() {
-            return this.regionNo;
         }
 
         /**
@@ -276,34 +221,13 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private String aliUid; 
-            private String bid; 
             private String cidrBlock; 
             private String description; 
-            private String gmtCreate; 
-            private String gmtModified; 
             private Boolean isDefault; 
             private String izNo; 
-            private String regionNo; 
             private String status; 
             private String vSwitchId; 
             private String vSwitchName; 
-
-            /**
-             * AliUid.
-             */
-            public Builder aliUid(String aliUid) {
-                this.aliUid = aliUid;
-                return this;
-            }
-
-            /**
-             * Bid.
-             */
-            public Builder bid(String bid) {
-                this.bid = bid;
-                return this;
-            }
 
             /**
              * CidrBlock.
@@ -322,22 +246,6 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
-             */
-            public Builder gmtCreate(String gmtCreate) {
-                this.gmtCreate = gmtCreate;
-                return this;
-            }
-
-            /**
-             * GmtModified.
-             */
-            public Builder gmtModified(String gmtModified) {
-                this.gmtModified = gmtModified;
-                return this;
-            }
-
-            /**
              * IsDefault.
              */
             public Builder isDefault(Boolean isDefault) {
@@ -350,14 +258,6 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
              */
             public Builder izNo(String izNo) {
                 this.izNo = izNo;
-                return this;
-            }
-
-            /**
-             * RegionNo.
-             */
-            public Builder regionNo(String regionNo) {
-                this.regionNo = regionNo;
                 return this;
             }
 

@@ -74,8 +74,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateMigrateTaskResponse> createMigrateTask(CreateMigrateTaskRequest request);
 
-    CompletableFuture<CreateNotifyResponse> createNotify(CreateNotifyRequest request);
-
     CompletableFuture<CreateOnlineDatabaseTaskResponse> createOnlineDatabaseTask(CreateOnlineDatabaseTaskRequest request);
 
     CompletableFuture<CreateParameterGroupResponse> createParameterGroup(CreateParameterGroupRequest request);
@@ -113,8 +111,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeAvailableClassesResponse> describeAvailableClasses(DescribeAvailableClassesRequest request);
 
     CompletableFuture<DescribeAvailableCrossRegionResponse> describeAvailableCrossRegion(DescribeAvailableCrossRegionRequest request);
-
-    CompletableFuture<DescribeAvailableDedicatedHostClassesResponse> describeAvailableDedicatedHostClasses(DescribeAvailableDedicatedHostClassesRequest request);
 
     CompletableFuture<DescribeAvailableMetricsResponse> describeAvailableMetrics(DescribeAvailableMetricsRequest request);
 

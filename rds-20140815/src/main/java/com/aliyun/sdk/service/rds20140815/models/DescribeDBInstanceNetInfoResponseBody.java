@@ -376,6 +376,9 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
 
     }
     public static class DBInstanceNetInfo extends TeaModel {
+        @NameInMap("BabelfishPort")
+        private String babelfishPort;
+
         @NameInMap("ConnectionString")
         private String connectionString;
 
@@ -416,6 +419,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         private String vSwitchId;
 
         private DBInstanceNetInfo(Builder builder) {
+            this.babelfishPort = builder.babelfishPort;
             this.connectionString = builder.connectionString;
             this.connectionStringType = builder.connectionStringType;
             this.DBInstanceWeights = builder.DBInstanceWeights;
@@ -437,6 +441,13 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
 
         public static DBInstanceNetInfo create() {
             return builder().build();
+        }
+
+        /**
+         * @return babelfishPort
+         */
+        public String getBabelfishPort() {
+            return this.babelfishPort;
         }
 
         /**
@@ -531,6 +542,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String babelfishPort; 
             private String connectionString; 
             private String connectionStringType; 
             private DBInstanceWeights DBInstanceWeights; 
@@ -544,6 +556,14 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             private String upgradeable; 
             private String VPCId; 
             private String vSwitchId; 
+
+            /**
+             * BabelfishPort.
+             */
+            public Builder babelfishPort(String babelfishPort) {
+                this.babelfishPort = babelfishPort;
+                return this;
+            }
 
             /**
              * ConnectionString.

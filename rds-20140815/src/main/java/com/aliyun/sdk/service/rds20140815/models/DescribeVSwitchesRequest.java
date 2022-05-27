@@ -26,11 +26,11 @@ public class DescribeVSwitchesRequest extends Request {
 
     @Query
     @NameInMap("PageNumber")
-    private Long pageNumber;
+    private Integer pageNumber;
 
     @Query
     @NameInMap("PageSize")
-    private Long pageSize;
+    private Integer pageSize;
 
     @Query
     @NameInMap("RegionId")
@@ -108,14 +108,14 @@ public class DescribeVSwitchesRequest extends Request {
     /**
      * @return pageNumber
      */
-    public Long getPageNumber() {
+    public Integer getPageNumber() {
         return this.pageNumber;
     }
 
     /**
      * @return pageSize
      */
-    public Long getPageSize() {
+    public Integer getPageSize() {
         return this.pageSize;
     }
 
@@ -165,8 +165,8 @@ public class DescribeVSwitchesRequest extends Request {
         private String dedicatedHostGroupId; 
         private String ownerAccount; 
         private Long ownerId; 
-        private Long pageNumber; 
-        private Long pageSize; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
@@ -223,7 +223,7 @@ public class DescribeVSwitchesRequest extends Request {
         /**
          * PageNumber.
          */
-        public Builder pageNumber(Long pageNumber) {
+        public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
             this.pageNumber = pageNumber;
             return this;
@@ -232,7 +232,7 @@ public class DescribeVSwitchesRequest extends Request {
         /**
          * PageSize.
          */
-        public Builder pageSize(Long pageSize) {
+        public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
             return this;

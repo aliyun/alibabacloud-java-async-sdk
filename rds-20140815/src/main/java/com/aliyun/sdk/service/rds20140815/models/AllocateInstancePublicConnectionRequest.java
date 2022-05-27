@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class AllocateInstancePublicConnectionRequest extends Request {
     @Query
+    @NameInMap("BabelfishPort")
+    private String babelfishPort;
+
+    @Query
     @NameInMap("ConnectionStringPrefix")
     @Validation(required = true)
     private String connectionStringPrefix;
@@ -49,6 +53,7 @@ public class AllocateInstancePublicConnectionRequest extends Request {
 
     private AllocateInstancePublicConnectionRequest(Builder builder) {
         super(builder);
+        this.babelfishPort = builder.babelfishPort;
         this.connectionStringPrefix = builder.connectionStringPrefix;
         this.DBInstanceId = builder.DBInstanceId;
         this.generalGroupName = builder.generalGroupName;
@@ -70,6 +75,13 @@ public class AllocateInstancePublicConnectionRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return babelfishPort
+     */
+    public String getBabelfishPort() {
+        return this.babelfishPort;
     }
 
     /**
@@ -129,6 +141,7 @@ public class AllocateInstancePublicConnectionRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AllocateInstancePublicConnectionRequest, Builder> {
+        private String babelfishPort; 
         private String connectionStringPrefix; 
         private String DBInstanceId; 
         private String generalGroupName; 
@@ -144,6 +157,7 @@ public class AllocateInstancePublicConnectionRequest extends Request {
 
         private Builder(AllocateInstancePublicConnectionRequest request) {
             super(request);
+            this.babelfishPort = request.babelfishPort;
             this.connectionStringPrefix = request.connectionStringPrefix;
             this.DBInstanceId = request.DBInstanceId;
             this.generalGroupName = request.generalGroupName;
@@ -153,6 +167,15 @@ public class AllocateInstancePublicConnectionRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
+
+        /**
+         * BabelfishPort.
+         */
+        public Builder babelfishPort(String babelfishPort) {
+            this.putQueryParameter("BabelfishPort", babelfishPort);
+            this.babelfishPort = babelfishPort;
+            return this;
+        }
 
         /**
          * ConnectionStringPrefix.

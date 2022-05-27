@@ -71,6 +71,67 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
     } 
 
+    public static class BabelfishConfig extends TeaModel {
+        @NameInMap("BabelfishEnabled")
+        private String babelfishEnabled;
+
+        @NameInMap("MigrationMode")
+        private String migrationMode;
+
+        private BabelfishConfig(Builder builder) {
+            this.babelfishEnabled = builder.babelfishEnabled;
+            this.migrationMode = builder.migrationMode;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BabelfishConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return babelfishEnabled
+         */
+        public String getBabelfishEnabled() {
+            return this.babelfishEnabled;
+        }
+
+        /**
+         * @return migrationMode
+         */
+        public String getMigrationMode() {
+            return this.migrationMode;
+        }
+
+        public static final class Builder {
+            private String babelfishEnabled; 
+            private String migrationMode; 
+
+            /**
+             * BabelfishEnabled.
+             */
+            public Builder babelfishEnabled(String babelfishEnabled) {
+                this.babelfishEnabled = babelfishEnabled;
+                return this;
+            }
+
+            /**
+             * MigrationMode.
+             */
+            public Builder migrationMode(String migrationMode) {
+                this.migrationMode = migrationMode;
+                return this;
+            }
+
+            public BabelfishConfig build() {
+                return new BabelfishConfig(this);
+            } 
+
+        } 
+
+    }
     public static class DBInstanceIds extends TeaModel {
         @NameInMap("DBInstanceId")
         private java.util.List < String > DBInstanceId;
@@ -391,6 +452,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("AvailabilityValue")
         private String availabilityValue;
 
+        @NameInMap("BabelfishConfig")
+        private BabelfishConfig babelfishConfig;
+
         @NameInMap("Category")
         private String category;
 
@@ -573,6 +637,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.advancedFeatures = builder.advancedFeatures;
             this.autoUpgradeMinorVersion = builder.autoUpgradeMinorVersion;
             this.availabilityValue = builder.availabilityValue;
+            this.babelfishConfig = builder.babelfishConfig;
             this.category = builder.category;
             this.collation = builder.collation;
             this.connectionMode = builder.connectionMode;
@@ -668,6 +733,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         public String getAvailabilityValue() {
             return this.availabilityValue;
+        }
+
+        /**
+         * @return babelfishConfig
+         */
+        public BabelfishConfig getBabelfishConfig() {
+            return this.babelfishConfig;
         }
 
         /**
@@ -1088,6 +1160,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String advancedFeatures; 
             private String autoUpgradeMinorVersion; 
             private String availabilityValue; 
+            private BabelfishConfig babelfishConfig; 
             private String category; 
             private String collation; 
             private String connectionMode; 
@@ -1177,6 +1250,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder availabilityValue(String availabilityValue) {
                 this.availabilityValue = availabilityValue;
+                return this;
+            }
+
+            /**
+             * BabelfishConfig.
+             */
+            public Builder babelfishConfig(BabelfishConfig babelfishConfig) {
+                this.babelfishConfig = babelfishConfig;
                 return this;
             }
 
