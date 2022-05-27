@@ -113,6 +113,9 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
         @NameInMap("DestinationZoneId")
         private String destinationZoneId;
 
+        @NameInMap("ExpiredTime")
+        private Long expiredTime;
+
         @NameInMap("LastRecoverPoint")
         private Long lastRecoverPoint;
 
@@ -169,6 +172,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
             this.destinationDiskId = builder.destinationDiskId;
             this.destinationRegion = builder.destinationRegion;
             this.destinationZoneId = builder.destinationZoneId;
+            this.expiredTime = builder.expiredTime;
             this.lastRecoverPoint = builder.lastRecoverPoint;
             this.pairName = builder.pairName;
             this.primaryRegion = builder.primaryRegion;
@@ -242,6 +246,13 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
          */
         public String getDestinationZoneId() {
             return this.destinationZoneId;
+        }
+
+        /**
+         * @return expiredTime
+         */
+        public Long getExpiredTime() {
+            return this.expiredTime;
         }
 
         /**
@@ -364,6 +375,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
             private String destinationDiskId; 
             private String destinationRegion; 
             private String destinationZoneId; 
+            private Long expiredTime; 
             private Long lastRecoverPoint; 
             private String pairName; 
             private String primaryRegion; 
@@ -382,7 +394,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
             private String statusMessage; 
 
             /**
-             * Bandwidth.
+             * 异步复制时使用的带宽。单位为Kbps。
              */
             public Builder bandwidth(Long bandwidth) {
                 this.bandwidth = bandwidth;
@@ -390,7 +402,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
             }
 
             /**
-             * ChargeType.
+             * 付费类型。PREPAY：预付费；POSTPAY：后付费。
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -398,7 +410,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间。1970年1月1日0点0分以来的毫秒数
+             * 创建时间。1970年1月1日0点0分以来的秒数。
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -430,7 +442,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationZoneId.
+             * 从盘所属的可用区。
              */
             public Builder destinationZoneId(String destinationZoneId) {
                 this.destinationZoneId = destinationZoneId;
@@ -438,7 +450,15 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
             }
 
             /**
-             * LastRecoverPoint.
+             * ExpiredTime.
+             */
+            public Builder expiredTime(Long expiredTime) {
+                this.expiredTime = expiredTime;
+                return this;
+            }
+
+            /**
+             * 最近一次异步复制操作完成的时间。该参数以时间戳的形式提供返回值。单位为秒。
              */
             public Builder lastRecoverPoint(Long lastRecoverPoint) {
                 this.lastRecoverPoint = lastRecoverPoint;
@@ -454,7 +474,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
             }
 
             /**
-             * pair的初始源地域
+             * 复制对的初始源地域。
              */
             public Builder primaryRegion(String primaryRegion) {
                 this.primaryRegion = primaryRegion;
@@ -462,7 +482,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
             }
 
             /**
-             * pair的初始源可用区
+             * 复制对的初始源可用区。
              */
             public Builder primaryZone(String primaryZone) {
                 this.primaryZone = primaryZone;
@@ -470,7 +490,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
             }
 
             /**
-             * RPO.
+             * 复制对的RPO值。单位为秒。
              */
             public Builder RPO(Long RPO) {
                 this.RPO = RPO;
@@ -478,7 +498,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
             }
 
             /**
-             * ReplicaGroupId.
+             * 所属复制组id。
              */
             public Builder replicaGroupId(String replicaGroupId) {
                 this.replicaGroupId = replicaGroupId;
@@ -486,7 +506,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
             }
 
             /**
-             * ReplicaGroupName.
+             * 所属复制组名称。
              */
             public Builder replicaGroupName(String replicaGroupName) {
                 this.replicaGroupName = replicaGroupName;
@@ -502,7 +522,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
             }
 
             /**
-             * pair信息的后端站点来源，production或backup
+             * 复制对信息的后端站点来源，production或backup。
              */
             public Builder site(String site) {
                 this.site = site;
@@ -526,7 +546,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceZoneId.
+             * 主盘所属的可用区。
              */
             public Builder sourceZoneId(String sourceZoneId) {
                 this.sourceZoneId = sourceZoneId;
@@ -534,7 +554,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
             }
 
             /**
-             * pair的初始目的地域
+             * 复制对的初始目的地域。
              */
             public Builder standbyRegion(String standbyRegion) {
                 this.standbyRegion = standbyRegion;
@@ -542,7 +562,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
             }
 
             /**
-             * pair的初始目的可用区
+             * 复制对的初始目的可用区。
              */
             public Builder standbyZone(String standbyZone) {
                 this.standbyZone = standbyZone;
@@ -550,7 +570,28 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * 异步复制关系的状态。可能值：
+             * <p>
+             * 
+             * - invalid：失效。该状态表示异步复制关系存在异常。
+             * - creating：创建中。
+             * - created：已创建。
+             * - create_failed：创建失败。
+             * - initial_syncing：初始同步中。异步复制在创建并启动后，主盘数据初次异步复制到从盘的过程中，将处于该状态。
+             * - syncing：同步中。主盘和从盘之间非第一次进行异步复制数据时，将处于该状态。
+             * - manual_syncing：单次同步中。单次同步，同步完成后恢复到stopped状态。如果是第一次单次同步，则同步中也显示为状态manual_syncing。
+             * - normal：正常。当异步复制的当前周期内数据复制完成时，将处于该状态。
+             * - stopping：停止中。
+             * - stopped：已停止。
+             * - stop_failed：停止失败。
+             * - failovering：故障切换中。
+             * - failovered：故障切换完成。
+             * - failover_failed：故障切换失败。
+             * - reprotecting：反向复制操作中。
+             * - reprotect_failed：反向复制失败。
+             * - deleting：删除中。
+             * - delete_failed：删除失败。
+             * - deleted：已删除。
              */
             public Builder status(String status) {
                 this.status = status;
@@ -558,7 +599,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
             }
 
             /**
-             * StatusMessage.
+             * 复制对的状态提示信息。比如invalid时，可能值：DeviceRemoved：主盘或者从盘被删除。DeviceKeyChanged：主盘或从盘的DeviceKey映射发生变化。
              */
             public Builder statusMessage(String statusMessage) {
                 this.statusMessage = statusMessage;
