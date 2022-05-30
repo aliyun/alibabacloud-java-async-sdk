@@ -18,6 +18,12 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    CompletableFuture<AddRepositoryMemberResponse> addRepositoryMember(AddRepositoryMemberRequest request);
+
+    CompletableFuture<AddWebhookResponse> addWebhook(AddWebhookRequest request);
+
+    CompletableFuture<CloneApiResponse> cloneApi(CloneApiRequest request);
+
     CompletableFuture<CreateFlowTagResponse> createFlowTag(CreateFlowTagRequest request);
 
     CompletableFuture<CreateFlowTagGroupResponse> createFlowTagGroup(CreateFlowTagGroupRequest request);
@@ -56,15 +62,17 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<FrozenWorkspaceResponse> frozenWorkspace(FrozenWorkspaceRequest request);
 
+    CompletableFuture<GetCodeupOrganizationResponse> getCodeupOrganization(GetCodeupOrganizationRequest request);
+
     CompletableFuture<GetCustomFieldOptionResponse> getCustomFieldOption(GetCustomFieldOptionRequest request);
+
+    CompletableFuture<GetFileLastCommitResponse> getFileLastCommit(GetFileLastCommitRequest request);
 
     CompletableFuture<GetFlowTagGroupResponse> getFlowTagGroup(GetFlowTagGroupRequest request);
 
     CompletableFuture<GetHostGroupResponse> getHostGroup(GetHostGroupRequest request);
 
     CompletableFuture<GetOrganizationMemberResponse> getOrganizationMember(GetOrganizationMemberRequest request);
-
-    CompletableFuture<GetOrganizationSettingTabsResponse> getOrganizationSettingTabs(GetOrganizationSettingTabsRequest request);
 
     CompletableFuture<GetPipelineResponse> getPipeline(GetPipelineRequest request);
 
@@ -74,13 +82,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetPipelineRunResponse> getPipelineRun(GetPipelineRunRequest request);
 
-    CompletableFuture<GetPipelineRunJobLogResponse> getPipelineRunJobLog(GetPipelineRunJobLogRequest request);
-
     CompletableFuture<GetPipelineScanReportUrlResponse> getPipelineScanReportUrl(GetPipelineScanReportUrlRequest request);
 
     CompletableFuture<GetProjectInfoResponse> getProjectInfo(GetProjectInfoRequest request);
 
-    CompletableFuture<GetProjextByIdResponse> getProjextById(GetProjextByIdRequest request);
+    CompletableFuture<GetProjectMemberResponse> getProjectMember(GetProjectMemberRequest request);
+
+    CompletableFuture<GetRepositoryResponse> getRepository(GetRepositoryRequest request);
 
     CompletableFuture<GetSprintInfoResponse> getSprintInfo(GetSprintInfoRequest request);
 
@@ -118,6 +126,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListProjectsResponse> listProjects(ListProjectsRequest request);
 
+    CompletableFuture<ListRepositoriesResponse> listRepositories(ListRepositoriesRequest request);
+
+    CompletableFuture<ListRepositoryMemberWithInheritedResponse> listRepositoryMemberWithInherited(ListRepositoryMemberWithInheritedRequest request);
+
+    CompletableFuture<ListRepositoryWebhookResponse> listRepositoryWebhook(ListRepositoryWebhookRequest request);
+
     CompletableFuture<ListResourceMembersResponse> listResourceMembers(ListResourceMembersRequest request);
 
     CompletableFuture<ListServiceConnectionsResponse> listServiceConnections(ListServiceConnectionsRequest request);
@@ -129,6 +143,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListWorkItemAllFieldsResponse> listWorkItemAllFields(ListWorkItemAllFieldsRequest request);
 
     CompletableFuture<ListWorkItemWorkFlowStatusResponse> listWorkItemWorkFlowStatus(ListWorkItemWorkFlowStatusRequest request);
+
+    CompletableFuture<ListWorkitemTimeResponse> listWorkitemTime(ListWorkitemTimeRequest request);
+
+    CompletableFuture<ListWorkitemsResponse> listWorkitems(ListWorkitemsRequest request);
 
     CompletableFuture<ListWorkspacesResponse> listWorkspaces(ListWorkspacesRequest request);
 
@@ -161,6 +179,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StopPipelineRunResponse> stopPipelineRun(StopPipelineRunRequest request);
 
     CompletableFuture<StopVMDeployOrderResponse> stopVMDeployOrder(StopVMDeployOrderRequest request);
+
+    CompletableFuture<TriggerRepositoryMirrorSyncResponse> triggerRepositoryMirrorSync(TriggerRepositoryMirrorSyncRequest request);
 
     CompletableFuture<UpdateFlowTagResponse> updateFlowTag(UpdateFlowTagRequest request);
 

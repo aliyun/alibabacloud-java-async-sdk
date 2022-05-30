@@ -77,11 +77,11 @@ public class ListProjectMembersRequest extends Request {
             super();
         } 
 
-        private Builder(ListProjectMembersRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
-            this.projectId = response.projectId;
-            this.targetType = response.targetType;
+        private Builder(ListProjectMembersRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.projectId = request.projectId;
+            this.targetType = request.targetType;
         } 
 
         /**

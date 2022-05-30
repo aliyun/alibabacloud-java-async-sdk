@@ -105,13 +105,13 @@ public class UpdateFlowTagRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateFlowTagRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
-            this.id = response.id;
-            this.color = response.color;
-            this.flowTagGroupId = response.flowTagGroupId;
-            this.name = response.name;
+        private Builder(UpdateFlowTagRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.id = request.id;
+            this.color = request.color;
+            this.flowTagGroupId = request.flowTagGroupId;
+            this.name = request.name;
         } 
 
         /**

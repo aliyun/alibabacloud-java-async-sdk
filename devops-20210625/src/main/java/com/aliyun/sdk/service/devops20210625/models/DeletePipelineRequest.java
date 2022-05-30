@@ -63,10 +63,10 @@ public class DeletePipelineRequest extends Request {
             super();
         } 
 
-        private Builder(DeletePipelineRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
-            this.pipelineId = response.pipelineId;
+        private Builder(DeletePipelineRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.pipelineId = request.pipelineId;
         } 
 
         /**

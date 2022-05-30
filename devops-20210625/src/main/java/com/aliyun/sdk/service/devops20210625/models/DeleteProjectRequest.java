@@ -19,6 +19,7 @@ public class DeleteProjectRequest extends Request {
 
     @Query
     @NameInMap("identifier")
+    @Validation(required = true)
     private String identifier;
 
     private DeleteProjectRequest(Builder builder) {
@@ -62,10 +63,10 @@ public class DeleteProjectRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteProjectRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
-            this.identifier = response.identifier;
+        private Builder(DeleteProjectRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.identifier = request.identifier;
         } 
 
         /**

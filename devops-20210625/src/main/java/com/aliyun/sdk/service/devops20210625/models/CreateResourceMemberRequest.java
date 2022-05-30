@@ -105,13 +105,13 @@ public class CreateResourceMemberRequest extends Request {
             super();
         } 
 
-        private Builder(CreateResourceMemberRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
-            this.resourceType = response.resourceType;
-            this.resourceId = response.resourceId;
-            this.accountId = response.accountId;
-            this.roleName = response.roleName;
+        private Builder(CreateResourceMemberRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.resourceType = request.resourceType;
+            this.resourceId = request.resourceId;
+            this.accountId = request.accountId;
+            this.roleName = request.roleName;
         } 
 
         /**

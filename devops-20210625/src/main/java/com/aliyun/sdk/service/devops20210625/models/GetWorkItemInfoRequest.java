@@ -63,10 +63,10 @@ public class GetWorkItemInfoRequest extends Request {
             super();
         } 
 
-        private Builder(GetWorkItemInfoRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
-            this.workitemId = response.workitemId;
+        private Builder(GetWorkItemInfoRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.workitemId = request.workitemId;
         } 
 
         /**
@@ -79,7 +79,7 @@ public class GetWorkItemInfoRequest extends Request {
         }
 
         /**
-         * 项目id
+         * 工作项id
          */
         public Builder workitemId(String workitemId) {
             this.putPathParameter("workitemId", workitemId);

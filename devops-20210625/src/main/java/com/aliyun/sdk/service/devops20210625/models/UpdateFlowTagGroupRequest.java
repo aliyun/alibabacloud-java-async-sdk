@@ -77,11 +77,11 @@ public class UpdateFlowTagGroupRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateFlowTagGroupRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
-            this.id = response.id;
-            this.name = response.name;
+        private Builder(UpdateFlowTagGroupRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.id = request.id;
+            this.name = request.name;
         } 
 
         /**

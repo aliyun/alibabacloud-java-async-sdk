@@ -77,11 +77,11 @@ public class StopVMDeployOrderRequest extends Request {
             super();
         } 
 
-        private Builder(StopVMDeployOrderRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
-            this.pipelineId = response.pipelineId;
-            this.deployOrderId = response.deployOrderId;
+        private Builder(StopVMDeployOrderRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.pipelineId = request.pipelineId;
+            this.deployOrderId = request.deployOrderId;
         } 
 
         /**

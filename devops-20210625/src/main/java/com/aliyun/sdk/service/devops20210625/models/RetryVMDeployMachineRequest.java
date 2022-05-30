@@ -91,12 +91,12 @@ public class RetryVMDeployMachineRequest extends Request {
             super();
         } 
 
-        private Builder(RetryVMDeployMachineRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
-            this.pipelineId = response.pipelineId;
-            this.deployOrderId = response.deployOrderId;
-            this.machineSn = response.machineSn;
+        private Builder(RetryVMDeployMachineRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.pipelineId = request.pipelineId;
+            this.deployOrderId = request.deployOrderId;
+            this.machineSn = request.machineSn;
         } 
 
         /**

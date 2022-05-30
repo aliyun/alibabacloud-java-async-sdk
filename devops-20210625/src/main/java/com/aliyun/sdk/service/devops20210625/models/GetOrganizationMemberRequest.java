@@ -63,10 +63,10 @@ public class GetOrganizationMemberRequest extends Request {
             super();
         } 
 
-        private Builder(GetOrganizationMemberRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
-            this.accountId = response.accountId;
+        private Builder(GetOrganizationMemberRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.accountId = request.accountId;
         } 
 
         /**

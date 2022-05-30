@@ -103,13 +103,13 @@ public class ListSprintsRequest extends Request {
             super();
         } 
 
-        private Builder(ListSprintsRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.spaceIdentifier = response.spaceIdentifier;
-            this.spaceType = response.spaceType;
+        private Builder(ListSprintsRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.spaceIdentifier = request.spaceIdentifier;
+            this.spaceType = request.spaceType;
         } 
 
         /**

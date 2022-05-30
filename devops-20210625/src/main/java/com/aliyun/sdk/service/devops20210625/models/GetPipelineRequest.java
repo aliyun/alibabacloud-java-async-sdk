@@ -63,10 +63,10 @@ public class GetPipelineRequest extends Request {
             super();
         } 
 
-        private Builder(GetPipelineRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
-            this.pipelineId = response.pipelineId;
+        private Builder(GetPipelineRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.pipelineId = request.pipelineId;
         } 
 
         /**

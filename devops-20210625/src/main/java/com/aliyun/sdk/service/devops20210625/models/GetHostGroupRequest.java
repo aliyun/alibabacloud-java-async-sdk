@@ -63,10 +63,10 @@ public class GetHostGroupRequest extends Request {
             super();
         } 
 
-        private Builder(GetHostGroupRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
-            this.id = response.id;
+        private Builder(GetHostGroupRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.id = request.id;
         } 
 
         /**

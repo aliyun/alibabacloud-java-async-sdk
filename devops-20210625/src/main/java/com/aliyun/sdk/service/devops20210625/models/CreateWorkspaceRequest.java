@@ -142,16 +142,16 @@ public class CreateWorkspaceRequest extends Request {
             super();
         } 
 
-        private Builder(CreateWorkspaceRequest response) {
-            super(response);
-            this.codeUrl = response.codeUrl;
-            this.codeVersion = response.codeVersion;
-            this.filePath = response.filePath;
-            this.name = response.name;
-            this.requestFrom = response.requestFrom;
-            this.resourceIdentifier = response.resourceIdentifier;
-            this.reuse = response.reuse;
-            this.workspaceTemplate = response.workspaceTemplate;
+        private Builder(CreateWorkspaceRequest request) {
+            super(request);
+            this.codeUrl = request.codeUrl;
+            this.codeVersion = request.codeVersion;
+            this.filePath = request.filePath;
+            this.name = request.name;
+            this.requestFrom = request.requestFrom;
+            this.resourceIdentifier = request.resourceIdentifier;
+            this.reuse = request.reuse;
+            this.workspaceTemplate = request.workspaceTemplate;
         } 
 
         /**

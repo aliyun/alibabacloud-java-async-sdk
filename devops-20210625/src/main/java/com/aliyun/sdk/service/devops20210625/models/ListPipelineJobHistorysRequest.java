@@ -118,14 +118,14 @@ public class ListPipelineJobHistorysRequest extends Request {
             super();
         } 
 
-        private Builder(ListPipelineJobHistorysRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
-            this.pipelineId = response.pipelineId;
-            this.category = response.category;
-            this.identifier = response.identifier;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
+        private Builder(ListPipelineJobHistorysRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.pipelineId = request.pipelineId;
+            this.category = request.category;
+            this.identifier = request.identifier;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
         } 
 
         /**

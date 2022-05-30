@@ -102,13 +102,13 @@ public class UpdatePipelineBaseInfoRequest extends Request {
             super();
         } 
 
-        private Builder(UpdatePipelineBaseInfoRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
-            this.pipelineId = response.pipelineId;
-            this.envId = response.envId;
-            this.pipelineName = response.pipelineName;
-            this.tagList = response.tagList;
+        private Builder(UpdatePipelineBaseInfoRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.pipelineId = request.pipelineId;
+            this.envId = request.envId;
+            this.pipelineName = request.pipelineName;
+            this.tagList = request.tagList;
         } 
 
         /**

@@ -1,0 +1,97 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.devops20210625.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link ListWorkitemTimeRequest} extends {@link RequestModel}
+ *
+ * <p>ListWorkitemTimeRequest</p>
+ */
+public class ListWorkitemTimeRequest extends Request {
+    @Path
+    @NameInMap("organizationId")
+    @Validation(required = true)
+    private String organizationId;
+
+    @Path
+    @NameInMap("workitemId")
+    @Validation(required = true)
+    private String workitemId;
+
+    private ListWorkitemTimeRequest(Builder builder) {
+        super(builder);
+        this.organizationId = builder.organizationId;
+        this.workitemId = builder.workitemId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static ListWorkitemTimeRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return organizationId
+     */
+    public String getOrganizationId() {
+        return this.organizationId;
+    }
+
+    /**
+     * @return workitemId
+     */
+    public String getWorkitemId() {
+        return this.workitemId;
+    }
+
+    public static final class Builder extends Request.Builder<ListWorkitemTimeRequest, Builder> {
+        private String organizationId; 
+        private String workitemId; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(ListWorkitemTimeRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.workitemId = request.workitemId;
+        } 
+
+        /**
+         * 企业id
+         */
+        public Builder organizationId(String organizationId) {
+            this.putPathParameter("organizationId", organizationId);
+            this.organizationId = organizationId;
+            return this;
+        }
+
+        /**
+         * 工作项唯一标识
+         */
+        public Builder workitemId(String workitemId) {
+            this.putPathParameter("workitemId", workitemId);
+            this.workitemId = workitemId;
+            return this;
+        }
+
+        @Override
+        public ListWorkitemTimeRequest build() {
+            return new ListWorkitemTimeRequest(this);
+        } 
+
+    } 
+
+}

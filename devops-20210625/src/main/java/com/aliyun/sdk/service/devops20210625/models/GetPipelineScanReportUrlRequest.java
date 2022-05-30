@@ -63,10 +63,10 @@ public class GetPipelineScanReportUrlRequest extends Request {
             super();
         } 
 
-        private Builder(GetPipelineScanReportUrlRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
-            this.reportPath = response.reportPath;
+        private Builder(GetPipelineScanReportUrlRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.reportPath = request.reportPath;
         } 
 
         /**

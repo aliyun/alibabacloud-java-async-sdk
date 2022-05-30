@@ -104,13 +104,13 @@ public class ListWorkItemWorkFlowStatusRequest extends Request {
             super();
         } 
 
-        private Builder(ListWorkItemWorkFlowStatusRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
-            this.spaceIdentifier = response.spaceIdentifier;
-            this.spaceType = response.spaceType;
-            this.workitemCategoryIdentifier = response.workitemCategoryIdentifier;
-            this.workitemTypeIdentifier = response.workitemTypeIdentifier;
+        private Builder(ListWorkItemWorkFlowStatusRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.spaceIdentifier = request.spaceIdentifier;
+            this.spaceType = request.spaceType;
+            this.workitemCategoryIdentifier = request.workitemCategoryIdentifier;
+            this.workitemTypeIdentifier = request.workitemTypeIdentifier;
         } 
 
         /**

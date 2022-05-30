@@ -87,12 +87,12 @@ public class ListWorkspacesRequest extends Request {
             super();
         } 
 
-        private Builder(ListWorkspacesRequest response) {
-            super(response);
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.statusList = response.statusList;
-            this.workspaceTemplateList = response.workspaceTemplateList;
+        private Builder(ListWorkspacesRequest request) {
+            super(request);
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.statusList = request.statusList;
+            this.workspaceTemplateList = request.workspaceTemplateList;
         } 
 
         /**
@@ -117,7 +117,8 @@ public class ListWorkspacesRequest extends Request {
          * 枚举值：CREATING-创建中, SUCCESS-运行中, FROZEN-冻结中, RECOVERING-恢复中
          */
         public Builder statusList(java.util.List < String > statusList) {
-            this.putQueryParameter("statusList", statusList);
+            String statusListShrink = shrink(statusList, "statusList", "simple");
+            this.putQueryParameter("statusList", statusListShrink);
             this.statusList = statusList;
             return this;
         }
@@ -126,7 +127,8 @@ public class ListWorkspacesRequest extends Request {
          * 空间模板列表
          */
         public Builder workspaceTemplateList(java.util.List < String > workspaceTemplateList) {
-            this.putQueryParameter("workspaceTemplateList", workspaceTemplateList);
+            String workspaceTemplateListShrink = shrink(workspaceTemplateList, "workspaceTemplateList", "simple");
+            this.putQueryParameter("workspaceTemplateList", workspaceTemplateListShrink);
             this.workspaceTemplateList = workspaceTemplateList;
             return this;
         }

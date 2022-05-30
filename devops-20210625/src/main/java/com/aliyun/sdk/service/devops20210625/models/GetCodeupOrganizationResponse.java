@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetPipelineRunJobLogResponse} extends {@link TeaModel}
+ * {@link GetCodeupOrganizationResponse} extends {@link TeaModel}
  *
- * <p>GetPipelineRunJobLogResponse</p>
+ * <p>GetCodeupOrganizationResponse</p>
  */
-public class GetPipelineRunJobLogResponse extends Response {
+public class GetCodeupOrganizationResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private GetPipelineRunJobLogResponseBody body;
+    private GetCodeupOrganizationResponseBody body;
 
-    private GetPipelineRunJobLogResponse(BuilderImpl builder) {
+    private GetCodeupOrganizationResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static GetPipelineRunJobLogResponse create() {
+    public static GetCodeupOrganizationResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class GetPipelineRunJobLogResponse extends Response {
     /**
      * @return body
      */
-    public GetPipelineRunJobLogResponseBody getBody() {
+    public GetCodeupOrganizationResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetPipelineRunJobLogResponse, Builder> {
+    public interface Builder extends Response.Builder<GetCodeupOrganizationResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(GetPipelineRunJobLogResponseBody body);
+        Builder body(GetCodeupOrganizationResponseBody body);
 
         @Override
-        GetPipelineRunJobLogResponse build();
+        GetCodeupOrganizationResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetPipelineRunJobLogResponse, Builder>
+            extends Response.BuilderImpl<GetCodeupOrganizationResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private GetPipelineRunJobLogResponseBody body; 
+        private GetCodeupOrganizationResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetPipelineRunJobLogResponse response) {
+        private BuilderImpl(GetCodeupOrganizationResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class GetPipelineRunJobLogResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetPipelineRunJobLogResponseBody body) {
+        public Builder body(GetCodeupOrganizationResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetPipelineRunJobLogResponse build() {
-            return new GetPipelineRunJobLogResponse(this);
+        public GetCodeupOrganizationResponse build() {
+            return new GetCodeupOrganizationResponse(this);
         } 
 
     } 

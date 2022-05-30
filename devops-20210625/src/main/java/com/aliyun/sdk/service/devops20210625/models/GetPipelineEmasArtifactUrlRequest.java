@@ -119,14 +119,14 @@ public class GetPipelineEmasArtifactUrlRequest extends Request {
             super();
         } 
 
-        private Builder(GetPipelineEmasArtifactUrlRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
-            this.emasJobInstanceId = response.emasJobInstanceId;
-            this.md5 = response.md5;
-            this.pipelineId = response.pipelineId;
-            this.pipelineRunId = response.pipelineRunId;
-            this.serviceConnectionId = response.serviceConnectionId;
+        private Builder(GetPipelineEmasArtifactUrlRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.emasJobInstanceId = request.emasJobInstanceId;
+            this.md5 = request.md5;
+            this.pipelineId = request.pipelineId;
+            this.pipelineRunId = request.pipelineRunId;
+            this.serviceConnectionId = request.serviceConnectionId;
         } 
 
         /**

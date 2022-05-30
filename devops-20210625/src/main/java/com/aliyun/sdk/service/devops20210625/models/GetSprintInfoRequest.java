@@ -63,10 +63,10 @@ public class GetSprintInfoRequest extends Request {
             super();
         } 
 
-        private Builder(GetSprintInfoRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
-            this.sprintId = response.sprintId;
+        private Builder(GetSprintInfoRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.sprintId = request.sprintId;
         } 
 
         /**

@@ -37,7 +37,12 @@ public class CreateWorkitemRequest extends Request {
 
     @Body
     @NameInMap("fieldValueList")
+    @Validation(required = true)
     private java.util.List < FieldValueList> fieldValueList;
+
+    @Body
+    @NameInMap("parent")
+    private String parent;
 
     @Body
     @NameInMap("participant")
@@ -88,6 +93,7 @@ public class CreateWorkitemRequest extends Request {
         this.description = builder.description;
         this.descriptionFormat = builder.descriptionFormat;
         this.fieldValueList = builder.fieldValueList;
+        this.parent = builder.parent;
         this.participant = builder.participant;
         this.space = builder.space;
         this.spaceIdentifier = builder.spaceIdentifier;
@@ -152,6 +158,13 @@ public class CreateWorkitemRequest extends Request {
      */
     public java.util.List < FieldValueList> getFieldValueList() {
         return this.fieldValueList;
+    }
+
+    /**
+     * @return parent
+     */
+    public String getParent() {
+        return this.parent;
     }
 
     /**
@@ -224,6 +237,7 @@ public class CreateWorkitemRequest extends Request {
         private String description; 
         private String descriptionFormat; 
         private java.util.List < FieldValueList> fieldValueList; 
+        private String parent; 
         private java.util.List < String > participant; 
         private String space; 
         private String spaceIdentifier; 
@@ -238,23 +252,24 @@ public class CreateWorkitemRequest extends Request {
             super();
         } 
 
-        private Builder(CreateWorkitemRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
-            this.assignedTo = response.assignedTo;
-            this.category = response.category;
-            this.description = response.description;
-            this.descriptionFormat = response.descriptionFormat;
-            this.fieldValueList = response.fieldValueList;
-            this.participant = response.participant;
-            this.space = response.space;
-            this.spaceIdentifier = response.spaceIdentifier;
-            this.spaceType = response.spaceType;
-            this.sprint = response.sprint;
-            this.subject = response.subject;
-            this.tracker = response.tracker;
-            this.verifier = response.verifier;
-            this.workitemType = response.workitemType;
+        private Builder(CreateWorkitemRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.assignedTo = request.assignedTo;
+            this.category = request.category;
+            this.description = request.description;
+            this.descriptionFormat = request.descriptionFormat;
+            this.fieldValueList = request.fieldValueList;
+            this.parent = request.parent;
+            this.participant = request.participant;
+            this.space = request.space;
+            this.spaceIdentifier = request.spaceIdentifier;
+            this.spaceType = request.spaceType;
+            this.sprint = request.sprint;
+            this.subject = request.subject;
+            this.tracker = request.tracker;
+            this.verifier = request.verifier;
+            this.workitemType = request.workitemType;
         } 
 
         /**
@@ -267,7 +282,7 @@ public class CreateWorkitemRequest extends Request {
         }
 
         /**
-         * 工作项负责人的id，或者企业中的用户名
+         * 工作项负责人的account id，或者企业中的用户名
          */
         public Builder assignedTo(String assignedTo) {
             this.putBodyParameter("assignedTo", assignedTo);
@@ -312,7 +327,16 @@ public class CreateWorkitemRequest extends Request {
         }
 
         /**
-         * 参与人id列表，或者企业名称列表
+         * 所属父工作项的唯一标识
+         */
+        public Builder parent(String parent) {
+            this.putBodyParameter("parent", parent);
+            this.parent = parent;
+            return this;
+        }
+
+        /**
+         * 参与人account id列表，或者企业名称列表
          */
         public Builder participant(java.util.List < String > participant) {
             this.putBodyParameter("participant", participant);
@@ -366,7 +390,7 @@ public class CreateWorkitemRequest extends Request {
         }
 
         /**
-         * 抄送人id列表
+         * 抄送人account id列表
          */
         public Builder tracker(java.util.List < String > tracker) {
             this.putBodyParameter("tracker", tracker);
@@ -375,7 +399,7 @@ public class CreateWorkitemRequest extends Request {
         }
 
         /**
-         * 验证者id列表，或者企业名称列表
+         * 验证者account id列表，或者企业名称列表
          */
         public Builder verifier(java.util.List < String > verifier) {
             this.putBodyParameter("verifier", verifier);
@@ -401,9 +425,11 @@ public class CreateWorkitemRequest extends Request {
 
     public static class FieldValueList extends TeaModel {
         @NameInMap("fieldIdentifier")
+        @Validation(required = true)
         private String fieldIdentifier;
 
         @NameInMap("value")
+        @Validation(required = true)
         private String value;
 
         @NameInMap("workitemIdentifier")

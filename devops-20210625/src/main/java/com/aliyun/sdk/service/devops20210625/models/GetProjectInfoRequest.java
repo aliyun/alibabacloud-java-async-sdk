@@ -63,10 +63,10 @@ public class GetProjectInfoRequest extends Request {
             super();
         } 
 
-        private Builder(GetProjectInfoRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
-            this.projectId = response.projectId;
+        private Builder(GetProjectInfoRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.projectId = request.projectId;
         } 
 
         /**

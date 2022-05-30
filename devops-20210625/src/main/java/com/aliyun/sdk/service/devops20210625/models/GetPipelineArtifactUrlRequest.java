@@ -77,11 +77,11 @@ public class GetPipelineArtifactUrlRequest extends Request {
             super();
         } 
 
-        private Builder(GetPipelineArtifactUrlRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
-            this.fileName = response.fileName;
-            this.filePath = response.filePath;
+        private Builder(GetPipelineArtifactUrlRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.fileName = request.fileName;
+            this.filePath = request.filePath;
         } 
 
         /**

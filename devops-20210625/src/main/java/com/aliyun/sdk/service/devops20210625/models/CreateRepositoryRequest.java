@@ -12,11 +12,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateRepositoryRequest</p>
  */
 public class CreateRepositoryRequest extends Request {
-    @Path
-    @NameInMap("organizationId")
-    @Validation(required = true)
-    private String organizationId;
-
     @Query
     @NameInMap("accessToken")
     private String accessToken;
@@ -30,8 +25,20 @@ public class CreateRepositoryRequest extends Request {
     private String description;
 
     @Body
+    @NameInMap("gitignoreType")
+    private String gitignoreType;
+
+    @Body
     @NameInMap("importAccount")
     private String importAccount;
+
+    @Body
+    @NameInMap("importDemoProject")
+    private Boolean importDemoProject;
+
+    @Body
+    @NameInMap("importRepoType")
+    private String importRepoType;
 
     @Body
     @NameInMap("importToken")
@@ -46,6 +53,18 @@ public class CreateRepositoryRequest extends Request {
     private String importUrl;
 
     @Body
+    @NameInMap("initStandardService")
+    private Boolean initStandardService;
+
+    @Body
+    @NameInMap("isCryptoEnabled")
+    private Boolean isCryptoEnabled;
+
+    @Body
+    @NameInMap("localImportUrl")
+    private String localImportUrl;
+
+    @Body
     @NameInMap("name")
     @Validation(required = true)
     private String name;
@@ -57,7 +76,6 @@ public class CreateRepositoryRequest extends Request {
 
     @Body
     @NameInMap("path")
-    @Validation(required = true)
     private String path;
 
     @Body
@@ -66,12 +84,16 @@ public class CreateRepositoryRequest extends Request {
 
     @Body
     @NameInMap("visibilityLevel")
-    @Validation(required = true)
-    private String visibilityLevel;
+    private Integer visibilityLevel;
 
     @Query
     @NameInMap("createParentPath")
     private Boolean createParentPath;
+
+    @Query
+    @NameInMap("organizationId")
+    @Validation(required = true)
+    private String organizationId;
 
     @Query
     @NameInMap("sync")
@@ -79,20 +101,26 @@ public class CreateRepositoryRequest extends Request {
 
     private CreateRepositoryRequest(Builder builder) {
         super(builder);
-        this.organizationId = builder.organizationId;
         this.accessToken = builder.accessToken;
         this.avatarUrl = builder.avatarUrl;
         this.description = builder.description;
+        this.gitignoreType = builder.gitignoreType;
         this.importAccount = builder.importAccount;
+        this.importDemoProject = builder.importDemoProject;
+        this.importRepoType = builder.importRepoType;
         this.importToken = builder.importToken;
         this.importTokenEncrypted = builder.importTokenEncrypted;
         this.importUrl = builder.importUrl;
+        this.initStandardService = builder.initStandardService;
+        this.isCryptoEnabled = builder.isCryptoEnabled;
+        this.localImportUrl = builder.localImportUrl;
         this.name = builder.name;
         this.namespaceId = builder.namespaceId;
         this.path = builder.path;
         this.readmeType = builder.readmeType;
         this.visibilityLevel = builder.visibilityLevel;
         this.createParentPath = builder.createParentPath;
+        this.organizationId = builder.organizationId;
         this.sync = builder.sync;
     }
 
@@ -107,13 +135,6 @@ public class CreateRepositoryRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return organizationId
-     */
-    public String getOrganizationId() {
-        return this.organizationId;
     }
 
     /**
@@ -138,10 +159,31 @@ public class CreateRepositoryRequest extends Request {
     }
 
     /**
+     * @return gitignoreType
+     */
+    public String getGitignoreType() {
+        return this.gitignoreType;
+    }
+
+    /**
      * @return importAccount
      */
     public String getImportAccount() {
         return this.importAccount;
+    }
+
+    /**
+     * @return importDemoProject
+     */
+    public Boolean getImportDemoProject() {
+        return this.importDemoProject;
+    }
+
+    /**
+     * @return importRepoType
+     */
+    public String getImportRepoType() {
+        return this.importRepoType;
     }
 
     /**
@@ -163,6 +205,27 @@ public class CreateRepositoryRequest extends Request {
      */
     public String getImportUrl() {
         return this.importUrl;
+    }
+
+    /**
+     * @return initStandardService
+     */
+    public Boolean getInitStandardService() {
+        return this.initStandardService;
+    }
+
+    /**
+     * @return isCryptoEnabled
+     */
+    public Boolean getIsCryptoEnabled() {
+        return this.isCryptoEnabled;
+    }
+
+    /**
+     * @return localImportUrl
+     */
+    public String getLocalImportUrl() {
+        return this.localImportUrl;
     }
 
     /**
@@ -196,7 +259,7 @@ public class CreateRepositoryRequest extends Request {
     /**
      * @return visibilityLevel
      */
-    public String getVisibilityLevel() {
+    public Integer getVisibilityLevel() {
         return this.visibilityLevel;
     }
 
@@ -208,6 +271,13 @@ public class CreateRepositoryRequest extends Request {
     }
 
     /**
+     * @return organizationId
+     */
+    public String getOrganizationId() {
+        return this.organizationId;
+    }
+
+    /**
      * @return sync
      */
     public Boolean getSync() {
@@ -215,56 +285,59 @@ public class CreateRepositoryRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateRepositoryRequest, Builder> {
-        private String organizationId; 
         private String accessToken; 
         private String avatarUrl; 
         private String description; 
+        private String gitignoreType; 
         private String importAccount; 
+        private Boolean importDemoProject; 
+        private String importRepoType; 
         private String importToken; 
         private String importTokenEncrypted; 
         private String importUrl; 
+        private Boolean initStandardService; 
+        private Boolean isCryptoEnabled; 
+        private String localImportUrl; 
         private String name; 
         private Long namespaceId; 
         private String path; 
         private String readmeType; 
-        private String visibilityLevel; 
+        private Integer visibilityLevel; 
         private Boolean createParentPath; 
+        private String organizationId; 
         private Boolean sync; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateRepositoryRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
-            this.accessToken = response.accessToken;
-            this.avatarUrl = response.avatarUrl;
-            this.description = response.description;
-            this.importAccount = response.importAccount;
-            this.importToken = response.importToken;
-            this.importTokenEncrypted = response.importTokenEncrypted;
-            this.importUrl = response.importUrl;
-            this.name = response.name;
-            this.namespaceId = response.namespaceId;
-            this.path = response.path;
-            this.readmeType = response.readmeType;
-            this.visibilityLevel = response.visibilityLevel;
-            this.createParentPath = response.createParentPath;
-            this.sync = response.sync;
+        private Builder(CreateRepositoryRequest request) {
+            super(request);
+            this.accessToken = request.accessToken;
+            this.avatarUrl = request.avatarUrl;
+            this.description = request.description;
+            this.gitignoreType = request.gitignoreType;
+            this.importAccount = request.importAccount;
+            this.importDemoProject = request.importDemoProject;
+            this.importRepoType = request.importRepoType;
+            this.importToken = request.importToken;
+            this.importTokenEncrypted = request.importTokenEncrypted;
+            this.importUrl = request.importUrl;
+            this.initStandardService = request.initStandardService;
+            this.isCryptoEnabled = request.isCryptoEnabled;
+            this.localImportUrl = request.localImportUrl;
+            this.name = request.name;
+            this.namespaceId = request.namespaceId;
+            this.path = request.path;
+            this.readmeType = request.readmeType;
+            this.visibilityLevel = request.visibilityLevel;
+            this.createParentPath = request.createParentPath;
+            this.organizationId = request.organizationId;
+            this.sync = request.sync;
         } 
 
         /**
-         * 企业ID
-         */
-        public Builder organizationId(String organizationId) {
-            this.putPathParameter("organizationId", organizationId);
-            this.organizationId = organizationId;
-            return this;
-        }
-
-        /**
-         * 个人访问令牌
+         * accessToken.
          */
         public Builder accessToken(String accessToken) {
             this.putQueryParameter("accessToken", accessToken);
@@ -273,7 +346,7 @@ public class CreateRepositoryRequest extends Request {
         }
 
         /**
-         * 头像地址
+         * 代码库头像地址
          */
         public Builder avatarUrl(String avatarUrl) {
             this.putBodyParameter("avatarUrl", avatarUrl);
@@ -282,7 +355,7 @@ public class CreateRepositoryRequest extends Request {
         }
 
         /**
-         * 描述
+         * 代码库描述
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -291,7 +364,16 @@ public class CreateRepositoryRequest extends Request {
         }
 
         /**
-         * 导入库使用的账号
+         * gitignore模板类型
+         */
+        public Builder gitignoreType(String gitignoreType) {
+            this.putBodyParameter("gitignoreType", gitignoreType);
+            this.gitignoreType = gitignoreType;
+            return this;
+        }
+
+        /**
+         * 导入时使用的账号
          */
         public Builder importAccount(String importAccount) {
             this.putBodyParameter("importAccount", importAccount);
@@ -300,7 +382,25 @@ public class CreateRepositoryRequest extends Request {
         }
 
         /**
-         * 导入库使用的Token
+         * 使用使用demo库内容进行初始化
+         */
+        public Builder importDemoProject(Boolean importDemoProject) {
+            this.putBodyParameter("importDemoProject", importDemoProject);
+            this.importDemoProject = importDemoProject;
+            return this;
+        }
+
+        /**
+         * 导入代码库类型 (GIT: Git库, SVN: SVN库)
+         */
+        public Builder importRepoType(String importRepoType) {
+            this.putBodyParameter("importRepoType", importRepoType);
+            this.importRepoType = importRepoType;
+            return this;
+        }
+
+        /**
+         * 导入时账号的token
          */
         public Builder importToken(String importToken) {
             this.putBodyParameter("importToken", importToken);
@@ -309,7 +409,7 @@ public class CreateRepositoryRequest extends Request {
         }
 
         /**
-         * importToken传输格式
+         * import_token字段的传输格式，使用明文或rsa加密
          */
         public Builder importTokenEncrypted(String importTokenEncrypted) {
             this.putBodyParameter("importTokenEncrypted", importTokenEncrypted);
@@ -318,11 +418,38 @@ public class CreateRepositoryRequest extends Request {
         }
 
         /**
-         * 库导入地址
+         * 导入地址（http协议地址）
          */
         public Builder importUrl(String importUrl) {
             this.putBodyParameter("importUrl", importUrl);
             this.importUrl = importUrl;
+            return this;
+        }
+
+        /**
+         * 初始化标准智能化服务
+         */
+        public Builder initStandardService(Boolean initStandardService) {
+            this.putBodyParameter("initStandardService", initStandardService);
+            this.initStandardService = initStandardService;
+            return this;
+        }
+
+        /**
+         * 是否启用加密
+         */
+        public Builder isCryptoEnabled(Boolean isCryptoEnabled) {
+            this.putBodyParameter("isCryptoEnabled", isCryptoEnabled);
+            this.isCryptoEnabled = isCryptoEnabled;
+            return this;
+        }
+
+        /**
+         * 本地导入代码库的远程地址
+         */
+        public Builder localImportUrl(String localImportUrl) {
+            this.putBodyParameter("localImportUrl", localImportUrl);
+            this.localImportUrl = localImportUrl;
             return this;
         }
 
@@ -336,7 +463,7 @@ public class CreateRepositoryRequest extends Request {
         }
 
         /**
-         * 父空间ID
+         * 代码库父路径id
          */
         public Builder namespaceId(Long namespaceId) {
             this.putBodyParameter("namespaceId", namespaceId);
@@ -354,7 +481,7 @@ public class CreateRepositoryRequest extends Request {
         }
 
         /**
-         * 内置README.md类型
+         * 自动创建readme类型 (EMPTY: 仅创建README.md, USER_GUIDE: 包含新手引导)
          */
         public Builder readmeType(String readmeType) {
             this.putBodyParameter("readmeType", readmeType);
@@ -363,16 +490,16 @@ public class CreateRepositoryRequest extends Request {
         }
 
         /**
-         * 代码库可见性
+         * visibilityLevel.
          */
-        public Builder visibilityLevel(String visibilityLevel) {
+        public Builder visibilityLevel(Integer visibilityLevel) {
             this.putBodyParameter("visibilityLevel", visibilityLevel);
             this.visibilityLevel = visibilityLevel;
             return this;
         }
 
         /**
-         * 自动创建父路径
+         * createParentPath.
          */
         public Builder createParentPath(Boolean createParentPath) {
             this.putQueryParameter("createParentPath", createParentPath);
@@ -381,7 +508,16 @@ public class CreateRepositoryRequest extends Request {
         }
 
         /**
-         * 是否采用同步调用
+         * organizationId.
+         */
+        public Builder organizationId(String organizationId) {
+            this.putQueryParameter("organizationId", organizationId);
+            this.organizationId = organizationId;
+            return this;
+        }
+
+        /**
+         * sync.
          */
         public Builder sync(Boolean sync) {
             this.putQueryParameter("sync", sync);

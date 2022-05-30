@@ -63,10 +63,10 @@ public class ListServiceConnectionsRequest extends Request {
             super();
         } 
 
-        private Builder(ListServiceConnectionsRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
-            this.sericeConnectionType = response.sericeConnectionType;
+        private Builder(ListServiceConnectionsRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.sericeConnectionType = request.sericeConnectionType;
         } 
 
         /**

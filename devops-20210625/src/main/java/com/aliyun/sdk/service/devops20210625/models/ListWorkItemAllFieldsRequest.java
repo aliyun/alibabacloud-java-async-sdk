@@ -91,12 +91,12 @@ public class ListWorkItemAllFieldsRequest extends Request {
             super();
         } 
 
-        private Builder(ListWorkItemAllFieldsRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
-            this.spaceIdentifier = response.spaceIdentifier;
-            this.spaceType = response.spaceType;
-            this.workitemTypeIdentifier = response.workitemTypeIdentifier;
+        private Builder(ListWorkItemAllFieldsRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.spaceIdentifier = request.spaceIdentifier;
+            this.spaceType = request.spaceType;
+            this.workitemTypeIdentifier = request.workitemTypeIdentifier;
         } 
 
         /**

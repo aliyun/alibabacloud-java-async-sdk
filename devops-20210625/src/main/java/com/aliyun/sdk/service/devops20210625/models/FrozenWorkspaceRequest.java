@@ -49,9 +49,9 @@ public class FrozenWorkspaceRequest extends Request {
             super();
         } 
 
-        private Builder(FrozenWorkspaceRequest response) {
-            super(response);
-            this.workspaceId = response.workspaceId;
+        private Builder(FrozenWorkspaceRequest request) {
+            super(request);
+            this.workspaceId = request.workspaceId;
         } 
 
         /**

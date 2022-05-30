@@ -77,11 +77,11 @@ public class ListPipelineJobsRequest extends Request {
             super();
         } 
 
-        private Builder(ListPipelineJobsRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
-            this.pipelineId = response.pipelineId;
-            this.category = response.category;
+        private Builder(ListPipelineJobsRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.pipelineId = request.pipelineId;
+            this.category = request.category;
         } 
 
         /**

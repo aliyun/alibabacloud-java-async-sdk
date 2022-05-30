@@ -76,11 +76,11 @@ public class StartPipelineRunRequest extends Request {
             super();
         } 
 
-        private Builder(StartPipelineRunRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
-            this.pipelineId = response.pipelineId;
-            this.params = response.params;
+        private Builder(StartPipelineRunRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.pipelineId = request.pipelineId;
+            this.params = request.params;
         } 
 
         /**

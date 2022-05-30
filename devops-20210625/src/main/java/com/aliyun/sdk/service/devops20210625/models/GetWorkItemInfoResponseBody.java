@@ -131,6 +131,328 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
 
     } 
 
+    public static class ValueList extends TeaModel {
+        @NameInMap("displayValue")
+        private String displayValue;
+
+        @NameInMap("identifier")
+        private String identifier;
+
+        @NameInMap("level")
+        private Long level;
+
+        @NameInMap("value")
+        private String value;
+
+        @NameInMap("valueEn")
+        private String valueEn;
+
+        private ValueList(Builder builder) {
+            this.displayValue = builder.displayValue;
+            this.identifier = builder.identifier;
+            this.level = builder.level;
+            this.value = builder.value;
+            this.valueEn = builder.valueEn;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ValueList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return displayValue
+         */
+        public String getDisplayValue() {
+            return this.displayValue;
+        }
+
+        /**
+         * @return identifier
+         */
+        public String getIdentifier() {
+            return this.identifier;
+        }
+
+        /**
+         * @return level
+         */
+        public Long getLevel() {
+            return this.level;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        /**
+         * @return valueEn
+         */
+        public String getValueEn() {
+            return this.valueEn;
+        }
+
+        public static final class Builder {
+            private String displayValue; 
+            private String identifier; 
+            private Long level; 
+            private String value; 
+            private String valueEn; 
+
+            /**
+             * 根据语言环境获取当前展示的值
+             */
+            public Builder displayValue(String displayValue) {
+                this.displayValue = displayValue;
+                return this;
+            }
+
+            /**
+             * 字段值为对象类型时，值所对应的对象的唯一标识 例如：option表中的id
+             */
+            public Builder identifier(String identifier) {
+                this.identifier = identifier;
+                return this;
+            }
+
+            /**
+             * 展示级别，数字范围1~9，数字越大，颜色越浅。
+             */
+            public Builder level(Long level) {
+                this.level = level;
+                return this;
+            }
+
+            /**
+             * 字段值
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            /**
+             * 字段英文值，目前只有列表类有英文值
+             */
+            public Builder valueEn(String valueEn) {
+                this.valueEn = valueEn;
+                return this;
+            }
+
+            public ValueList build() {
+                return new ValueList(this);
+            } 
+
+        } 
+
+    }
+    public static class CustomFields extends TeaModel {
+        @NameInMap("fieldClassName")
+        private String fieldClassName;
+
+        @NameInMap("fieldFormat")
+        private String fieldFormat;
+
+        @NameInMap("fieldIdentifier")
+        private String fieldIdentifier;
+
+        @NameInMap("level")
+        private Long level;
+
+        @NameInMap("objectValue")
+        private String objectValue;
+
+        @NameInMap("position")
+        private Long position;
+
+        @NameInMap("value")
+        private String value;
+
+        @NameInMap("valueList")
+        private java.util.List < ValueList> valueList;
+
+        @NameInMap("workitemIdentifier")
+        private String workitemIdentifier;
+
+        private CustomFields(Builder builder) {
+            this.fieldClassName = builder.fieldClassName;
+            this.fieldFormat = builder.fieldFormat;
+            this.fieldIdentifier = builder.fieldIdentifier;
+            this.level = builder.level;
+            this.objectValue = builder.objectValue;
+            this.position = builder.position;
+            this.value = builder.value;
+            this.valueList = builder.valueList;
+            this.workitemIdentifier = builder.workitemIdentifier;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CustomFields create() {
+            return builder().build();
+        }
+
+        /**
+         * @return fieldClassName
+         */
+        public String getFieldClassName() {
+            return this.fieldClassName;
+        }
+
+        /**
+         * @return fieldFormat
+         */
+        public String getFieldFormat() {
+            return this.fieldFormat;
+        }
+
+        /**
+         * @return fieldIdentifier
+         */
+        public String getFieldIdentifier() {
+            return this.fieldIdentifier;
+        }
+
+        /**
+         * @return level
+         */
+        public Long getLevel() {
+            return this.level;
+        }
+
+        /**
+         * @return objectValue
+         */
+        public String getObjectValue() {
+            return this.objectValue;
+        }
+
+        /**
+         * @return position
+         */
+        public Long getPosition() {
+            return this.position;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        /**
+         * @return valueList
+         */
+        public java.util.List < ValueList> getValueList() {
+            return this.valueList;
+        }
+
+        /**
+         * @return workitemIdentifier
+         */
+        public String getWorkitemIdentifier() {
+            return this.workitemIdentifier;
+        }
+
+        public static final class Builder {
+            private String fieldClassName; 
+            private String fieldFormat; 
+            private String fieldIdentifier; 
+            private Long level; 
+            private String objectValue; 
+            private Long position; 
+            private String value; 
+            private java.util.List < ValueList> valueList; 
+            private String workitemIdentifier; 
+
+            /**
+             * 字段的className，便于数据查询
+             */
+            public Builder fieldClassName(String fieldClassName) {
+                this.fieldClassName = fieldClassName;
+                return this;
+            }
+
+            /**
+             * 字段格式，便于查询数据
+             */
+            public Builder fieldFormat(String fieldFormat) {
+                this.fieldFormat = fieldFormat;
+                return this;
+            }
+
+            /**
+             * 字段的唯一标识
+             */
+            public Builder fieldIdentifier(String fieldIdentifier) {
+                this.fieldIdentifier = fieldIdentifier;
+                return this;
+            }
+
+            /**
+             * 展示级别，数字范围1~9，数字越大，颜色越浅。
+             */
+            public Builder level(Long level) {
+                this.level = level;
+                return this;
+            }
+
+            /**
+             * 值对象列表
+             */
+            public Builder objectValue(String objectValue) {
+                this.objectValue = objectValue;
+                return this;
+            }
+
+            /**
+             * 自定义字段值的position
+             */
+            public Builder position(Long position) {
+                this.position = position;
+                return this;
+            }
+
+            /**
+             * 字段值，写入时使用
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            /**
+             * 值对象列表，查询时使用
+             */
+            public Builder valueList(java.util.List < ValueList> valueList) {
+                this.valueList = valueList;
+                return this;
+            }
+
+            /**
+             * 工作项的唯一标识
+             */
+            public Builder workitemIdentifier(String workitemIdentifier) {
+                this.workitemIdentifier = workitemIdentifier;
+                return this;
+            }
+
+            public CustomFields build() {
+                return new CustomFields(this);
+            } 
+
+        } 
+
+    }
     public static class Workitem extends TeaModel {
         @NameInMap("assignedTo")
         private String assignedTo;
@@ -140,6 +462,9 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
 
         @NameInMap("creator")
         private String creator;
+
+        @NameInMap("customFields")
+        private java.util.List < CustomFields> customFields;
 
         @NameInMap("document")
         private String document;
@@ -162,6 +487,9 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
         @NameInMap("parentIdentifier")
         private String parentIdentifier;
 
+        @NameInMap("participant")
+        private java.util.List < String > participant;
+
         @NameInMap("serialNumber")
         private String serialNumber;
 
@@ -174,8 +502,14 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
         @NameInMap("spaceType")
         private String spaceType;
 
+        @NameInMap("sprint")
+        private java.util.List < String > sprint;
+
         @NameInMap("status")
         private String status;
+
+        @NameInMap("statusIdentifier")
+        private String statusIdentifier;
 
         @NameInMap("statusStageIdentifier")
         private String statusStageIdentifier;
@@ -183,8 +517,17 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
         @NameInMap("subject")
         private String subject;
 
+        @NameInMap("tag")
+        private java.util.List < String > tag;
+
+        @NameInMap("tracker")
+        private java.util.List < String > tracker;
+
         @NameInMap("updateStatusAt")
         private Long updateStatusAt;
+
+        @NameInMap("verifier")
+        private java.util.List < String > verifier;
 
         @NameInMap("workitemTypeIdentifier")
         private String workitemTypeIdentifier;
@@ -193,6 +536,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             this.assignedTo = builder.assignedTo;
             this.categoryIdentifier = builder.categoryIdentifier;
             this.creator = builder.creator;
+            this.customFields = builder.customFields;
             this.document = builder.document;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
@@ -200,14 +544,20 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             this.logicalStatus = builder.logicalStatus;
             this.modifier = builder.modifier;
             this.parentIdentifier = builder.parentIdentifier;
+            this.participant = builder.participant;
             this.serialNumber = builder.serialNumber;
             this.spaceIdentifier = builder.spaceIdentifier;
             this.spaceName = builder.spaceName;
             this.spaceType = builder.spaceType;
+            this.sprint = builder.sprint;
             this.status = builder.status;
+            this.statusIdentifier = builder.statusIdentifier;
             this.statusStageIdentifier = builder.statusStageIdentifier;
             this.subject = builder.subject;
+            this.tag = builder.tag;
+            this.tracker = builder.tracker;
             this.updateStatusAt = builder.updateStatusAt;
+            this.verifier = builder.verifier;
             this.workitemTypeIdentifier = builder.workitemTypeIdentifier;
         }
 
@@ -238,6 +588,13 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
          */
         public String getCreator() {
             return this.creator;
+        }
+
+        /**
+         * @return customFields
+         */
+        public java.util.List < CustomFields> getCustomFields() {
+            return this.customFields;
         }
 
         /**
@@ -290,6 +647,13 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return participant
+         */
+        public java.util.List < String > getParticipant() {
+            return this.participant;
+        }
+
+        /**
          * @return serialNumber
          */
         public String getSerialNumber() {
@@ -318,10 +682,24 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return sprint
+         */
+        public java.util.List < String > getSprint() {
+            return this.sprint;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
             return this.status;
+        }
+
+        /**
+         * @return statusIdentifier
+         */
+        public String getStatusIdentifier() {
+            return this.statusIdentifier;
         }
 
         /**
@@ -339,10 +717,31 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return tag
+         */
+        public java.util.List < String > getTag() {
+            return this.tag;
+        }
+
+        /**
+         * @return tracker
+         */
+        public java.util.List < String > getTracker() {
+            return this.tracker;
+        }
+
+        /**
          * @return updateStatusAt
          */
         public Long getUpdateStatusAt() {
             return this.updateStatusAt;
+        }
+
+        /**
+         * @return verifier
+         */
+        public java.util.List < String > getVerifier() {
+            return this.verifier;
         }
 
         /**
@@ -356,6 +755,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             private String assignedTo; 
             private String categoryIdentifier; 
             private String creator; 
+            private java.util.List < CustomFields> customFields; 
             private String document; 
             private Long gmtCreate; 
             private Long gmtModified; 
@@ -363,14 +763,20 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             private String logicalStatus; 
             private String modifier; 
             private String parentIdentifier; 
+            private java.util.List < String > participant; 
             private String serialNumber; 
             private String spaceIdentifier; 
             private String spaceName; 
             private String spaceType; 
+            private java.util.List < String > sprint; 
             private String status; 
+            private String statusIdentifier; 
             private String statusStageIdentifier; 
             private String subject; 
+            private java.util.List < String > tag; 
+            private java.util.List < String > tracker; 
             private Long updateStatusAt; 
+            private java.util.List < String > verifier; 
             private String workitemTypeIdentifier; 
 
             /**
@@ -394,6 +800,14 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
              */
             public Builder creator(String creator) {
                 this.creator = creator;
+                return this;
+            }
+
+            /**
+             * 自定义字段列表
+             */
+            public Builder customFields(java.util.List < CustomFields> customFields) {
+                this.customFields = customFields;
                 return this;
             }
 
@@ -454,6 +868,14 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             }
 
             /**
+             * 参与人account id列表
+             */
+            public Builder participant(java.util.List < String > participant) {
+                this.participant = participant;
+                return this;
+            }
+
+            /**
              * 编号
              */
             public Builder serialNumber(String serialNumber) {
@@ -486,10 +908,26 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             }
 
             /**
+             * 关联的迭代id
+             */
+            public Builder sprint(java.util.List < String > sprint) {
+                this.sprint = sprint;
+                return this;
+            }
+
+            /**
              * 状态名称
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * 状态id
+             */
+            public Builder statusIdentifier(String statusIdentifier) {
+                this.statusIdentifier = statusIdentifier;
                 return this;
             }
 
@@ -510,10 +948,34 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             }
 
             /**
+             * 标签id列表
+             */
+            public Builder tag(java.util.List < String > tag) {
+                this.tag = tag;
+                return this;
+            }
+
+            /**
+             * 抄送人的account id列表
+             */
+            public Builder tracker(java.util.List < String > tracker) {
+                this.tracker = tracker;
+                return this;
+            }
+
+            /**
              * 状态更新时间
              */
             public Builder updateStatusAt(Long updateStatusAt) {
                 this.updateStatusAt = updateStatusAt;
+                return this;
+            }
+
+            /**
+             * 验证者的account id列表
+             */
+            public Builder verifier(java.util.List < String > verifier) {
+                this.verifier = verifier;
                 return this;
             }
 

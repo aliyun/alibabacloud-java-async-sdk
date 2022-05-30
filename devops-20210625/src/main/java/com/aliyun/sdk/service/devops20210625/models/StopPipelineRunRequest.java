@@ -77,11 +77,11 @@ public class StopPipelineRunRequest extends Request {
             super();
         } 
 
-        private Builder(StopPipelineRunRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
-            this.pipelineId = response.pipelineId;
-            this.pipelineRunId = response.pipelineRunId;
+        private Builder(StopPipelineRunRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.pipelineId = request.pipelineId;
+            this.pipelineRunId = request.pipelineRunId;
         } 
 
         /**

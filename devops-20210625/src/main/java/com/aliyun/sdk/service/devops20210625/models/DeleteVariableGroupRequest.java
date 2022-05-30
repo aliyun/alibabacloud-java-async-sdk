@@ -63,10 +63,10 @@ public class DeleteVariableGroupRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteVariableGroupRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
-            this.id = response.id;
+        private Builder(DeleteVariableGroupRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.id = request.id;
         } 
 
         /**

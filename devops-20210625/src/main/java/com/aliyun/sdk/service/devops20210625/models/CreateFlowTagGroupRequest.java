@@ -63,10 +63,10 @@ public class CreateFlowTagGroupRequest extends Request {
             super();
         } 
 
-        private Builder(CreateFlowTagGroupRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
-            this.name = response.name;
+        private Builder(CreateFlowTagGroupRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.name = request.name;
         } 
 
         /**

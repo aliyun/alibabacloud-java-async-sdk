@@ -104,13 +104,13 @@ public class UpdateVariableGroupRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateVariableGroupRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
-            this.id = response.id;
-            this.description = response.description;
-            this.name = response.name;
-            this.variables = response.variables;
+        private Builder(UpdateVariableGroupRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.id = request.id;
+            this.description = request.description;
+            this.name = request.name;
+            this.variables = request.variables;
         } 
 
         /**

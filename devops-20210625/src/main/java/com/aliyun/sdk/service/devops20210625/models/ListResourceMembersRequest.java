@@ -76,11 +76,11 @@ public class ListResourceMembersRequest extends Request {
             super();
         } 
 
-        private Builder(ListResourceMembersRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
-            this.resourceType = response.resourceType;
-            this.resourceId = response.resourceId;
+        private Builder(ListResourceMembersRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.resourceType = request.resourceType;
+            this.resourceId = request.resourceId;
         } 
 
         /**

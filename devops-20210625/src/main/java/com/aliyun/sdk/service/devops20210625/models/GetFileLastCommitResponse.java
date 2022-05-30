@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetOrganizationSettingTabsResponse} extends {@link TeaModel}
+ * {@link GetFileLastCommitResponse} extends {@link TeaModel}
  *
- * <p>GetOrganizationSettingTabsResponse</p>
+ * <p>GetFileLastCommitResponse</p>
  */
-public class GetOrganizationSettingTabsResponse extends Response {
+public class GetFileLastCommitResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private GetOrganizationSettingTabsResponseBody body;
+    private GetFileLastCommitResponseBody body;
 
-    private GetOrganizationSettingTabsResponse(BuilderImpl builder) {
+    private GetFileLastCommitResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static GetOrganizationSettingTabsResponse create() {
+    public static GetFileLastCommitResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class GetOrganizationSettingTabsResponse extends Response {
     /**
      * @return body
      */
-    public GetOrganizationSettingTabsResponseBody getBody() {
+    public GetFileLastCommitResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetOrganizationSettingTabsResponse, Builder> {
+    public interface Builder extends Response.Builder<GetFileLastCommitResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(GetOrganizationSettingTabsResponseBody body);
+        Builder body(GetFileLastCommitResponseBody body);
 
         @Override
-        GetOrganizationSettingTabsResponse build();
+        GetFileLastCommitResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetOrganizationSettingTabsResponse, Builder>
+            extends Response.BuilderImpl<GetFileLastCommitResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private GetOrganizationSettingTabsResponseBody body; 
+        private GetFileLastCommitResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetOrganizationSettingTabsResponse response) {
+        private BuilderImpl(GetFileLastCommitResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class GetOrganizationSettingTabsResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetOrganizationSettingTabsResponseBody body) {
+        public Builder body(GetFileLastCommitResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetOrganizationSettingTabsResponse build() {
-            return new GetOrganizationSettingTabsResponse(this);
+        public GetFileLastCommitResponse build() {
+            return new GetFileLastCommitResponse(this);
         } 
 
     } 

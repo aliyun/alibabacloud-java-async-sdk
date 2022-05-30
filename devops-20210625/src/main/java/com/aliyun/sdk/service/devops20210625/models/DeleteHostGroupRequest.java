@@ -63,10 +63,10 @@ public class DeleteHostGroupRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteHostGroupRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
-            this.id = response.id;
+        private Builder(DeleteHostGroupRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.id = request.id;
         } 
 
         /**

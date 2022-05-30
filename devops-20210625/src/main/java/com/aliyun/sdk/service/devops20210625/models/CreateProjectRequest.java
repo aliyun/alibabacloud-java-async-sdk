@@ -105,13 +105,13 @@ public class CreateProjectRequest extends Request {
             super();
         } 
 
-        private Builder(CreateProjectRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
-            this.customCode = response.customCode;
-            this.name = response.name;
-            this.scope = response.scope;
-            this.templateIdentifier = response.templateIdentifier;
+        private Builder(CreateProjectRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.customCode = request.customCode;
+            this.name = request.name;
+            this.scope = request.scope;
+            this.templateIdentifier = request.templateIdentifier;
         } 
 
         /**

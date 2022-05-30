@@ -154,17 +154,17 @@ public class ListOrganizationMembersRequest extends Request {
             super();
         } 
 
-        private Builder(ListOrganizationMembersRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
-            this.externUid = response.externUid;
-            this.joinTimeFrom = response.joinTimeFrom;
-            this.joinTimeTo = response.joinTimeTo;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.organizationMemberName = response.organizationMemberName;
-            this.provider = response.provider;
-            this.state = response.state;
+        private Builder(ListOrganizationMembersRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.externUid = request.externUid;
+            this.joinTimeFrom = request.joinTimeFrom;
+            this.joinTimeTo = request.joinTimeTo;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.organizationMemberName = request.organizationMemberName;
+            this.provider = request.provider;
+            this.state = request.state;
         } 
 
         /**

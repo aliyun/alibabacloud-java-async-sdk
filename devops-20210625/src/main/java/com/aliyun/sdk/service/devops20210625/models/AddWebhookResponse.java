@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetProjextByIdResponse} extends {@link TeaModel}
+ * {@link AddWebhookResponse} extends {@link TeaModel}
  *
- * <p>GetProjextByIdResponse</p>
+ * <p>AddWebhookResponse</p>
  */
-public class GetProjextByIdResponse extends Response {
+public class AddWebhookResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private GetProjextByIdResponseBody body;
+    private AddWebhookResponseBody body;
 
-    private GetProjextByIdResponse(BuilderImpl builder) {
+    private AddWebhookResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static GetProjextByIdResponse create() {
+    public static AddWebhookResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class GetProjextByIdResponse extends Response {
     /**
      * @return body
      */
-    public GetProjextByIdResponseBody getBody() {
+    public AddWebhookResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetProjextByIdResponse, Builder> {
+    public interface Builder extends Response.Builder<AddWebhookResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(GetProjextByIdResponseBody body);
+        Builder body(AddWebhookResponseBody body);
 
         @Override
-        GetProjextByIdResponse build();
+        AddWebhookResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetProjextByIdResponse, Builder>
+            extends Response.BuilderImpl<AddWebhookResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private GetProjextByIdResponseBody body; 
+        private AddWebhookResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetProjextByIdResponse response) {
+        private BuilderImpl(AddWebhookResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class GetProjextByIdResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetProjextByIdResponseBody body) {
+        public Builder body(AddWebhookResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetProjextByIdResponse build() {
-            return new GetProjextByIdResponse(this);
+        public AddWebhookResponse build() {
+            return new AddWebhookResponse(this);
         } 
 
     } 

@@ -90,12 +90,12 @@ public class LogPipelineJobRunRequest extends Request {
             super();
         } 
 
-        private Builder(LogPipelineJobRunRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
-            this.pipelineId = response.pipelineId;
-            this.jobId = response.jobId;
-            this.pipelineRunId = response.pipelineRunId;
+        private Builder(LogPipelineJobRunRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.pipelineId = request.pipelineId;
+            this.jobId = request.jobId;
+            this.pipelineRunId = request.pipelineRunId;
         } 
 
         /**

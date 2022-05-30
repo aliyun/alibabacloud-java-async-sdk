@@ -49,9 +49,9 @@ public class GetWorkspaceRequest extends Request {
             super();
         } 
 
-        private Builder(GetWorkspaceRequest response) {
-            super(response);
-            this.workspaceId = response.workspaceId;
+        private Builder(GetWorkspaceRequest request) {
+            super(request);
+            this.workspaceId = request.workspaceId;
         } 
 
         /**

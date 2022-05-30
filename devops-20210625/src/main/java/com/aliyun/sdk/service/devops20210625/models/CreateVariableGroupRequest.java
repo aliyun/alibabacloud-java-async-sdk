@@ -90,12 +90,12 @@ public class CreateVariableGroupRequest extends Request {
             super();
         } 
 
-        private Builder(CreateVariableGroupRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
-            this.description = response.description;
-            this.name = response.name;
-            this.variables = response.variables;
+        private Builder(CreateVariableGroupRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.description = request.description;
+            this.name = request.name;
+            this.variables = request.variables;
         } 
 
         /**

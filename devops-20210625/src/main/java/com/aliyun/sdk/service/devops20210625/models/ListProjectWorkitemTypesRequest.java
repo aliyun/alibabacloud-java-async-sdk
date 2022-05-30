@@ -91,12 +91,12 @@ public class ListProjectWorkitemTypesRequest extends Request {
             super();
         } 
 
-        private Builder(ListProjectWorkitemTypesRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
-            this.projectId = response.projectId;
-            this.category = response.category;
-            this.spaceType = response.spaceType;
+        private Builder(ListProjectWorkitemTypesRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.projectId = request.projectId;
+            this.category = request.category;
+            this.spaceType = request.spaceType;
         } 
 
         /**

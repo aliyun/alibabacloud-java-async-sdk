@@ -19,26 +19,32 @@ public class UpdateProjectMemberRequest extends Request {
 
     @Path
     @NameInMap("projectId")
+    @Validation(required = true)
     private String projectId;
 
     @Body
     @NameInMap("roleIdentifier")
+    @Validation(required = true)
     private String roleIdentifier;
 
     @Body
     @NameInMap("targetIdentifier")
+    @Validation(required = true)
     private String targetIdentifier;
 
     @Body
     @NameInMap("targetType")
+    @Validation(required = true)
     private String targetType;
 
     @Body
     @NameInMap("userIdentifier")
+    @Validation(required = true)
     private String userIdentifier;
 
     @Body
     @NameInMap("userType")
+    @Validation(required = true)
     private String userType;
 
     private UpdateProjectMemberRequest(Builder builder) {
@@ -127,15 +133,15 @@ public class UpdateProjectMemberRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateProjectMemberRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
-            this.projectId = response.projectId;
-            this.roleIdentifier = response.roleIdentifier;
-            this.targetIdentifier = response.targetIdentifier;
-            this.targetType = response.targetType;
-            this.userIdentifier = response.userIdentifier;
-            this.userType = response.userType;
+        private Builder(UpdateProjectMemberRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.projectId = request.projectId;
+            this.roleIdentifier = request.roleIdentifier;
+            this.targetIdentifier = request.targetIdentifier;
+            this.targetType = request.targetType;
+            this.userIdentifier = request.userIdentifier;
+            this.userType = request.userType;
         } 
 
         /**

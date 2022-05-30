@@ -117,14 +117,14 @@ public class CreateSprintRequest extends Request {
             super();
         } 
 
-        private Builder(CreateSprintRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
-            this.endDate = response.endDate;
-            this.name = response.name;
-            this.spaceIdentifier = response.spaceIdentifier;
-            this.staffIds = response.staffIds;
-            this.startDate = response.startDate;
+        private Builder(CreateSprintRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.endDate = request.endDate;
+            this.name = request.name;
+            this.spaceIdentifier = request.spaceIdentifier;
+            this.staffIds = request.staffIds;
+            this.startDate = request.startDate;
         } 
 
         /**

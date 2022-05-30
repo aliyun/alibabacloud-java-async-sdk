@@ -101,13 +101,13 @@ public class ListVariableGroupsRequest extends Request {
             super();
         } 
 
-        private Builder(ListVariableGroupsRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.pageOrder = response.pageOrder;
-            this.pageSort = response.pageSort;
+        private Builder(ListVariableGroupsRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.pageOrder = request.pageOrder;
+            this.pageSort = request.pageSort;
         } 
 
         /**

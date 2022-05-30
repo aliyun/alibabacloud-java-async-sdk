@@ -105,13 +105,13 @@ public class GetCustomFieldOptionRequest extends Request {
             super();
         } 
 
-        private Builder(GetCustomFieldOptionRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
-            this.fieldId = response.fieldId;
-            this.spaceIdentifier = response.spaceIdentifier;
-            this.spaceType = response.spaceType;
-            this.workitemTypeIdentifier = response.workitemTypeIdentifier;
+        private Builder(GetCustomFieldOptionRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.fieldId = request.fieldId;
+            this.spaceIdentifier = request.spaceIdentifier;
+            this.spaceType = request.spaceType;
+            this.workitemTypeIdentifier = request.workitemTypeIdentifier;
         } 
 
         /**

@@ -166,18 +166,18 @@ public class ListHostGroupsRequest extends Request {
             super();
         } 
 
-        private Builder(ListHostGroupsRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
-            this.createEndTime = response.createEndTime;
-            this.createStartTime = response.createStartTime;
-            this.creatorAccountIds = response.creatorAccountIds;
-            this.ids = response.ids;
-            this.maxResults = response.maxResults;
-            this.name = response.name;
-            this.nextToken = response.nextToken;
-            this.pageOrder = response.pageOrder;
-            this.pageSort = response.pageSort;
+        private Builder(ListHostGroupsRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.createEndTime = request.createEndTime;
+            this.createStartTime = request.createStartTime;
+            this.creatorAccountIds = request.creatorAccountIds;
+            this.ids = request.ids;
+            this.maxResults = request.maxResults;
+            this.name = request.name;
+            this.nextToken = request.nextToken;
+            this.pageOrder = request.pageOrder;
+            this.pageSort = request.pageSort;
         } 
 
         /**

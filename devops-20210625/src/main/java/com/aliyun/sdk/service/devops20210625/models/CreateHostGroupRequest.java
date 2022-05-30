@@ -182,19 +182,19 @@ public class CreateHostGroupRequest extends Request {
             super();
         } 
 
-        private Builder(CreateHostGroupRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
-            this.aliyunRegion = response.aliyunRegion;
-            this.ecsLabelKey = response.ecsLabelKey;
-            this.ecsLabelValue = response.ecsLabelValue;
-            this.ecsType = response.ecsType;
-            this.envId = response.envId;
-            this.machineInfos = response.machineInfos;
-            this.name = response.name;
-            this.serviceConnectionId = response.serviceConnectionId;
-            this.tagIds = response.tagIds;
-            this.type = response.type;
+        private Builder(CreateHostGroupRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.aliyunRegion = request.aliyunRegion;
+            this.ecsLabelKey = request.ecsLabelKey;
+            this.ecsLabelValue = request.ecsLabelValue;
+            this.ecsType = request.ecsType;
+            this.envId = request.envId;
+            this.machineInfos = request.machineInfos;
+            this.name = request.name;
+            this.serviceConnectionId = request.serviceConnectionId;
+            this.tagIds = request.tagIds;
+            this.type = request.type;
         } 
 
         /**

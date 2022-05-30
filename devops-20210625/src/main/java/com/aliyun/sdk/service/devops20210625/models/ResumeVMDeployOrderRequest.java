@@ -77,11 +77,11 @@ public class ResumeVMDeployOrderRequest extends Request {
             super();
         } 
 
-        private Builder(ResumeVMDeployOrderRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
-            this.pipelineId = response.pipelineId;
-            this.deployOrderId = response.deployOrderId;
+        private Builder(ResumeVMDeployOrderRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.pipelineId = request.pipelineId;
+            this.deployOrderId = request.deployOrderId;
         } 
 
         /**

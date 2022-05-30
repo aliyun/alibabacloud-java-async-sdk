@@ -174,8 +174,14 @@ public class UpdateWorkItemResponseBody extends TeaModel {
         @NameInMap("spaceType")
         private String spaceType;
 
+        @NameInMap("sprintIdentifier")
+        private String sprintIdentifier;
+
         @NameInMap("status")
         private String status;
+
+        @NameInMap("statusIdentifier")
+        private String statusIdentifier;
 
         @NameInMap("statusStageIdentifier")
         private String statusStageIdentifier;
@@ -204,7 +210,9 @@ public class UpdateWorkItemResponseBody extends TeaModel {
             this.spaceIdentifier = builder.spaceIdentifier;
             this.spaceName = builder.spaceName;
             this.spaceType = builder.spaceType;
+            this.sprintIdentifier = builder.sprintIdentifier;
             this.status = builder.status;
+            this.statusIdentifier = builder.statusIdentifier;
             this.statusStageIdentifier = builder.statusStageIdentifier;
             this.subject = builder.subject;
             this.updateStatusAt = builder.updateStatusAt;
@@ -318,10 +326,24 @@ public class UpdateWorkItemResponseBody extends TeaModel {
         }
 
         /**
+         * @return sprintIdentifier
+         */
+        public String getSprintIdentifier() {
+            return this.sprintIdentifier;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
             return this.status;
+        }
+
+        /**
+         * @return statusIdentifier
+         */
+        public String getStatusIdentifier() {
+            return this.statusIdentifier;
         }
 
         /**
@@ -367,7 +389,9 @@ public class UpdateWorkItemResponseBody extends TeaModel {
             private String spaceIdentifier; 
             private String spaceName; 
             private String spaceType; 
+            private String sprintIdentifier; 
             private String status; 
+            private String statusIdentifier; 
             private String statusStageIdentifier; 
             private String subject; 
             private Long updateStatusAt; 
@@ -486,10 +510,26 @@ public class UpdateWorkItemResponseBody extends TeaModel {
             }
 
             /**
+             * 迭代id
+             */
+            public Builder sprintIdentifier(String sprintIdentifier) {
+                this.sprintIdentifier = sprintIdentifier;
+                return this;
+            }
+
+            /**
              * 状态名称
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * 状态id
+             */
+            public Builder statusIdentifier(String statusIdentifier) {
+                this.statusIdentifier = statusIdentifier;
                 return this;
             }
 

@@ -63,10 +63,10 @@ public class GetWorkItemActivityRequest extends Request {
             super();
         } 
 
-        private Builder(GetWorkItemActivityRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
-            this.workitemId = response.workitemId;
+        private Builder(GetWorkItemActivityRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.workitemId = request.workitemId;
         } 
 
         /**

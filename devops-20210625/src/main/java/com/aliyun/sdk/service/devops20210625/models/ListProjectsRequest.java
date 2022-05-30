@@ -128,15 +128,15 @@ public class ListProjectsRequest extends Request {
             super();
         } 
 
-        private Builder(ListProjectsRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
-            this.category = response.category;
-            this.conditions = response.conditions;
-            this.extraConditions = response.extraConditions;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.scope = response.scope;
+        private Builder(ListProjectsRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.category = request.category;
+            this.conditions = request.conditions;
+            this.extraConditions = request.extraConditions;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.scope = request.scope;
         } 
 
         /**

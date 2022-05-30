@@ -76,11 +76,11 @@ public class GetWorkItemWorkFlowInfoRequest extends Request {
             super();
         } 
 
-        private Builder(GetWorkItemWorkFlowInfoRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
-            this.workitemId = response.workitemId;
-            this.configurationId = response.configurationId;
+        private Builder(GetWorkItemWorkFlowInfoRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.workitemId = request.workitemId;
+            this.configurationId = request.configurationId;
         } 
 
         /**

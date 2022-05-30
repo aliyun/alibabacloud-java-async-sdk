@@ -141,16 +141,16 @@ public class ListPipelineRunsRequest extends Request {
             super();
         } 
 
-        private Builder(ListPipelineRunsRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
-            this.pipelineId = response.pipelineId;
-            this.endTime = response.endTime;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.startTime = response.startTime;
-            this.status = response.status;
-            this.triggerMode = response.triggerMode;
+        private Builder(ListPipelineRunsRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.pipelineId = request.pipelineId;
+            this.endTime = request.endTime;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.startTime = request.startTime;
+            this.status = request.status;
+            this.triggerMode = request.triggerMode;
         } 
 
         /**

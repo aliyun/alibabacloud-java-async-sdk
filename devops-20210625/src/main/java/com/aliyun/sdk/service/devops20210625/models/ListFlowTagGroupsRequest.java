@@ -49,9 +49,9 @@ public class ListFlowTagGroupsRequest extends Request {
             super();
         } 
 
-        private Builder(ListFlowTagGroupsRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
+        private Builder(ListFlowTagGroupsRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
         } 
 
         /**

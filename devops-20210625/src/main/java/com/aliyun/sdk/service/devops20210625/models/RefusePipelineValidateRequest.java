@@ -91,12 +91,12 @@ public class RefusePipelineValidateRequest extends Request {
             super();
         } 
 
-        private Builder(RefusePipelineValidateRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
-            this.pipelineId = response.pipelineId;
-            this.pipelineRunId = response.pipelineRunId;
-            this.jobId = response.jobId;
+        private Builder(RefusePipelineValidateRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.pipelineId = request.pipelineId;
+            this.pipelineRunId = request.pipelineRunId;
+            this.jobId = request.jobId;
         } 
 
         /**

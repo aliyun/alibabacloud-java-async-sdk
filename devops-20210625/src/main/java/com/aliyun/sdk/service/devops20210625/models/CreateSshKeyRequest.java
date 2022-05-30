@@ -49,9 +49,9 @@ public class CreateSshKeyRequest extends Request {
             super();
         } 
 
-        private Builder(CreateSshKeyRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
+        private Builder(CreateSshKeyRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
         } 
 
         /**

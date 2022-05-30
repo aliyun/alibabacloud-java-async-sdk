@@ -63,10 +63,10 @@ public class ListProjectTemplatesRequest extends Request {
             super();
         } 
 
-        private Builder(ListProjectTemplatesRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
-            this.category = response.category;
+        private Builder(ListProjectTemplatesRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.category = request.category;
         } 
 
         /**

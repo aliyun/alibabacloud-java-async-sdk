@@ -49,9 +49,9 @@ public class ResetSshKeyRequest extends Request {
             super();
         } 
 
-        private Builder(ResetSshKeyRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
+        private Builder(ResetSshKeyRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
         } 
 
         /**

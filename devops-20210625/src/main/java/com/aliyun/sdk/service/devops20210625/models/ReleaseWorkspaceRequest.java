@@ -49,9 +49,9 @@ public class ReleaseWorkspaceRequest extends Request {
             super();
         } 
 
-        private Builder(ReleaseWorkspaceRequest response) {
-            super(response);
-            this.workspaceId = response.workspaceId;
+        private Builder(ReleaseWorkspaceRequest request) {
+            super(request);
+            this.workspaceId = request.workspaceId;
         } 
 
         /**

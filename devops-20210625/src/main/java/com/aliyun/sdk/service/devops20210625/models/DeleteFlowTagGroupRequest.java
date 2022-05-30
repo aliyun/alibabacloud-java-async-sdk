@@ -63,10 +63,10 @@ public class DeleteFlowTagGroupRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteFlowTagGroupRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
-            this.id = response.id;
+        private Builder(DeleteFlowTagGroupRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.id = request.id;
         } 
 
         /**

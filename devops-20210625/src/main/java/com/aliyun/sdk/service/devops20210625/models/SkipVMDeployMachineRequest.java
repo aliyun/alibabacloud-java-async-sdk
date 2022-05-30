@@ -91,12 +91,12 @@ public class SkipVMDeployMachineRequest extends Request {
             super();
         } 
 
-        private Builder(SkipVMDeployMachineRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
-            this.pipelineId = response.pipelineId;
-            this.deployOrderId = response.deployOrderId;
-            this.machineSn = response.machineSn;
+        private Builder(SkipVMDeployMachineRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.pipelineId = request.pipelineId;
+            this.deployOrderId = request.deployOrderId;
+            this.machineSn = request.machineSn;
         } 
 
         /**

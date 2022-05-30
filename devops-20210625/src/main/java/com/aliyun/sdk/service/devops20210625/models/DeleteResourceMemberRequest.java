@@ -91,12 +91,12 @@ public class DeleteResourceMemberRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteResourceMemberRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
-            this.resourceType = response.resourceType;
-            this.resourceId = response.resourceId;
-            this.accountId = response.accountId;
+        private Builder(DeleteResourceMemberRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.resourceType = request.resourceType;
+            this.resourceId = request.resourceId;
+            this.accountId = request.accountId;
         } 
 
         /**

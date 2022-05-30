@@ -18,6 +18,11 @@ public class UpdateWorkItemRequest extends Request {
     private String organizationId;
 
     @Body
+    @NameInMap("fieldType")
+    @Validation(required = true)
+    private String fieldType;
+
+    @Body
     @NameInMap("identifier")
     @Validation(required = true)
     private String identifier;
@@ -29,11 +34,13 @@ public class UpdateWorkItemRequest extends Request {
 
     @Body
     @NameInMap("propertyValue")
+    @Validation(required = true)
     private String propertyValue;
 
     private UpdateWorkItemRequest(Builder builder) {
         super(builder);
         this.organizationId = builder.organizationId;
+        this.fieldType = builder.fieldType;
         this.identifier = builder.identifier;
         this.propertyKey = builder.propertyKey;
         this.propertyValue = builder.propertyValue;
@@ -60,6 +67,13 @@ public class UpdateWorkItemRequest extends Request {
     }
 
     /**
+     * @return fieldType
+     */
+    public String getFieldType() {
+        return this.fieldType;
+    }
+
+    /**
      * @return identifier
      */
     public String getIdentifier() {
@@ -82,6 +96,7 @@ public class UpdateWorkItemRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateWorkItemRequest, Builder> {
         private String organizationId; 
+        private String fieldType; 
         private String identifier; 
         private String propertyKey; 
         private String propertyValue; 
@@ -90,12 +105,13 @@ public class UpdateWorkItemRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateWorkItemRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
-            this.identifier = response.identifier;
-            this.propertyKey = response.propertyKey;
-            this.propertyValue = response.propertyValue;
+        private Builder(UpdateWorkItemRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.fieldType = request.fieldType;
+            this.identifier = request.identifier;
+            this.propertyKey = request.propertyKey;
+            this.propertyValue = request.propertyValue;
         } 
 
         /**
@@ -108,7 +124,16 @@ public class UpdateWorkItemRequest extends Request {
         }
 
         /**
-         * 工作项id
+         * 更新字段的类型，标题：subject/自定义字段：customField/状态：status/描述：document/基本字段：basic(包括负责人、迭代、参与人等)
+         */
+        public Builder fieldType(String fieldType) {
+            this.putBodyParameter("fieldType", fieldType);
+            this.fieldType = fieldType;
+            return this;
+        }
+
+        /**
+         * 工作项唯一标识id
          */
         public Builder identifier(String identifier) {
             this.putBodyParameter("identifier", identifier);

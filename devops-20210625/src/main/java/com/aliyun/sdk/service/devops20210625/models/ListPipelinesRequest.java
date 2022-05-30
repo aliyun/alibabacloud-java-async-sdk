@@ -179,19 +179,19 @@ public class ListPipelinesRequest extends Request {
             super();
         } 
 
-        private Builder(ListPipelinesRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
-            this.createEndTime = response.createEndTime;
-            this.createStartTime = response.createStartTime;
-            this.creatorAccountIds = response.creatorAccountIds;
-            this.executeAccountIds = response.executeAccountIds;
-            this.executeEndTime = response.executeEndTime;
-            this.executeStartTime = response.executeStartTime;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.pipelineName = response.pipelineName;
-            this.statusList = response.statusList;
+        private Builder(ListPipelinesRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.createEndTime = request.createEndTime;
+            this.createStartTime = request.createStartTime;
+            this.creatorAccountIds = request.creatorAccountIds;
+            this.executeAccountIds = request.executeAccountIds;
+            this.executeEndTime = request.executeEndTime;
+            this.executeStartTime = request.executeStartTime;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.pipelineName = request.pipelineName;
+            this.statusList = request.statusList;
         } 
 
         /**

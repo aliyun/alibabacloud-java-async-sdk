@@ -91,12 +91,12 @@ public class CreateFlowTagRequest extends Request {
             super();
         } 
 
-        private Builder(CreateFlowTagRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
-            this.color = response.color;
-            this.flowTagGroupId = response.flowTagGroupId;
-            this.name = response.name;
+        private Builder(CreateFlowTagRequest request) {
+            super(request);
+            this.organizationId = request.organizationId;
+            this.color = request.color;
+            this.flowTagGroupId = request.flowTagGroupId;
+            this.name = request.name;
         } 
 
         /**
