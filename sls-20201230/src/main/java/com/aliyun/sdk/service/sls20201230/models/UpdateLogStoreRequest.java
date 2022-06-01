@@ -34,6 +34,10 @@ public class UpdateLogStoreRequest extends Request {
     private EncryptConf encryptConf;
 
     @Body
+    @NameInMap("hot_ttl")
+    private Integer hotTtl;
+
+    @Body
     @NameInMap("logstoreName")
     @Validation(required = true)
     private String logstoreName;
@@ -44,8 +48,11 @@ public class UpdateLogStoreRequest extends Request {
 
     @Body
     @NameInMap("shardCount")
-    @Validation(required = true)
     private Integer shardCount;
+
+    @Body
+    @NameInMap("telemetryType")
+    private String telemetryType;
 
     @Body
     @NameInMap("ttl")
@@ -64,9 +71,11 @@ public class UpdateLogStoreRequest extends Request {
         this.autoSplit = builder.autoSplit;
         this.enableTracking = builder.enableTracking;
         this.encryptConf = builder.encryptConf;
+        this.hotTtl = builder.hotTtl;
         this.logstoreName = builder.logstoreName;
         this.maxSplitShard = builder.maxSplitShard;
         this.shardCount = builder.shardCount;
+        this.telemetryType = builder.telemetryType;
         this.ttl = builder.ttl;
         this.project = builder.project;
     }
@@ -120,6 +129,13 @@ public class UpdateLogStoreRequest extends Request {
     }
 
     /**
+     * @return hotTtl
+     */
+    public Integer getHotTtl() {
+        return this.hotTtl;
+    }
+
+    /**
      * @return logstoreName
      */
     public String getLogstoreName() {
@@ -138,6 +154,13 @@ public class UpdateLogStoreRequest extends Request {
      */
     public Integer getShardCount() {
         return this.shardCount;
+    }
+
+    /**
+     * @return telemetryType
+     */
+    public String getTelemetryType() {
+        return this.telemetryType;
     }
 
     /**
@@ -160,9 +183,11 @@ public class UpdateLogStoreRequest extends Request {
         private Boolean autoSplit; 
         private Boolean enableTracking; 
         private EncryptConf encryptConf; 
+        private Integer hotTtl; 
         private String logstoreName; 
         private Integer maxSplitShard; 
         private Integer shardCount; 
+        private String telemetryType; 
         private Integer ttl; 
         private String project; 
 
@@ -177,9 +202,11 @@ public class UpdateLogStoreRequest extends Request {
             this.autoSplit = request.autoSplit;
             this.enableTracking = request.enableTracking;
             this.encryptConf = request.encryptConf;
+            this.hotTtl = request.hotTtl;
             this.logstoreName = request.logstoreName;
             this.maxSplitShard = request.maxSplitShard;
             this.shardCount = request.shardCount;
+            this.telemetryType = request.telemetryType;
             this.ttl = request.ttl;
             this.project = request.project;
         } 
@@ -230,6 +257,15 @@ public class UpdateLogStoreRequest extends Request {
         }
 
         /**
+         * hot_ttl.
+         */
+        public Builder hotTtl(Integer hotTtl) {
+            this.putBodyParameter("hot_ttl", hotTtl);
+            this.hotTtl = hotTtl;
+            return this;
+        }
+
+        /**
          * logstoreName.
          */
         public Builder logstoreName(String logstoreName) {
@@ -253,6 +289,15 @@ public class UpdateLogStoreRequest extends Request {
         public Builder shardCount(Integer shardCount) {
             this.putBodyParameter("shardCount", shardCount);
             this.shardCount = shardCount;
+            return this;
+        }
+
+        /**
+         * telemetryType.
+         */
+        public Builder telemetryType(String telemetryType) {
+            this.putBodyParameter("telemetryType", telemetryType);
+            this.telemetryType = telemetryType;
             return this;
         }
 

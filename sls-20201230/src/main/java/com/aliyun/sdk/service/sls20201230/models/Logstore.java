@@ -27,10 +27,14 @@ public class Logstore extends TeaModel {
     @NameInMap("encrypt_conf")
     private EncryptConf encryptConf;
 
+    @NameInMap("hot_ttl")
+    private Integer hotTtl;
+
     @NameInMap("lastModifyTime")
     private Integer lastModifyTime;
 
     @NameInMap("logstoreName")
+    @Validation(required = true)
     private String logstoreName;
 
     @NameInMap("maxSplitShard")
@@ -43,6 +47,7 @@ public class Logstore extends TeaModel {
     private String telemetryType;
 
     @NameInMap("ttl")
+    @Validation(required = true)
     private Integer ttl;
 
     private Logstore(Builder builder) {
@@ -51,6 +56,7 @@ public class Logstore extends TeaModel {
         this.createTime = builder.createTime;
         this.enableTracking = builder.enableTracking;
         this.encryptConf = builder.encryptConf;
+        this.hotTtl = builder.hotTtl;
         this.lastModifyTime = builder.lastModifyTime;
         this.logstoreName = builder.logstoreName;
         this.maxSplitShard = builder.maxSplitShard;
@@ -103,6 +109,13 @@ public class Logstore extends TeaModel {
     }
 
     /**
+     * @return hotTtl
+     */
+    public Integer getHotTtl() {
+        return this.hotTtl;
+    }
+
+    /**
      * @return lastModifyTime
      */
     public Integer getLastModifyTime() {
@@ -150,6 +163,7 @@ public class Logstore extends TeaModel {
         private Integer createTime; 
         private Boolean enableTracking; 
         private EncryptConf encryptConf; 
+        private Integer hotTtl; 
         private Integer lastModifyTime; 
         private String logstoreName; 
         private Integer maxSplitShard; 
@@ -194,6 +208,14 @@ public class Logstore extends TeaModel {
          */
         public Builder encryptConf(EncryptConf encryptConf) {
             this.encryptConf = encryptConf;
+            return this;
+        }
+
+        /**
+         * hot ttl
+         */
+        public Builder hotTtl(Integer hotTtl) {
+            this.hotTtl = hotTtl;
             return this;
         }
 

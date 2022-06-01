@@ -36,6 +36,11 @@ public class CreateSavedSearchRequest extends Request {
     @NameInMap("topic")
     private String topic;
 
+    @Host
+    @NameInMap("project")
+    @Validation(required = true)
+    private String project;
+
     private CreateSavedSearchRequest(Builder builder) {
         super(builder);
         this.displayName = builder.displayName;
@@ -43,6 +48,7 @@ public class CreateSavedSearchRequest extends Request {
         this.savedsearchName = builder.savedsearchName;
         this.searchQuery = builder.searchQuery;
         this.topic = builder.topic;
+        this.project = builder.project;
     }
 
     public static Builder builder() {
@@ -93,12 +99,20 @@ public class CreateSavedSearchRequest extends Request {
         return this.topic;
     }
 
+    /**
+     * @return project
+     */
+    public String getProject() {
+        return this.project;
+    }
+
     public static final class Builder extends Request.Builder<CreateSavedSearchRequest, Builder> {
         private String displayName; 
         private String logstore; 
         private String savedsearchName; 
         private String searchQuery; 
         private String topic; 
+        private String project; 
 
         private Builder() {
             super();
@@ -111,6 +125,7 @@ public class CreateSavedSearchRequest extends Request {
             this.savedsearchName = request.savedsearchName;
             this.searchQuery = request.searchQuery;
             this.topic = request.topic;
+            this.project = request.project;
         } 
 
         /**
@@ -155,6 +170,15 @@ public class CreateSavedSearchRequest extends Request {
         public Builder topic(String topic) {
             this.putBodyParameter("topic", topic);
             this.topic = topic;
+            return this;
+        }
+
+        /**
+         * project.
+         */
+        public Builder project(String project) {
+            this.putHostParameter("project", project);
+            this.project = project;
             return this;
         }
 
