@@ -7,15 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link RecognizeHouseholdRequest} extends {@link RequestModel}
+ * {@link RecognizeSocialSecurityCardVersionIIRequest} extends {@link RequestModel}
  *
- * <p>RecognizeHouseholdRequest</p>
+ * <p>RecognizeSocialSecurityCardVersionIIRequest</p>
  */
-public class RecognizeHouseholdRequest extends Request {
-    @Query
-    @NameInMap("IsResidentPage")
-    private Boolean isResidentPage;
-
+public class RecognizeSocialSecurityCardVersionIIRequest extends Request {
     @Query
     @NameInMap("Url")
     private String url;
@@ -24,9 +20,8 @@ public class RecognizeHouseholdRequest extends Request {
     @NameInMap("body")
     private java.io.InputStream body;
 
-    private RecognizeHouseholdRequest(Builder builder) {
+    private RecognizeSocialSecurityCardVersionIIRequest(Builder builder) {
         super(builder);
-        this.isResidentPage = builder.isResidentPage;
         this.url = builder.url;
         this.body = builder.body;
     }
@@ -35,20 +30,13 @@ public class RecognizeHouseholdRequest extends Request {
         return new Builder();
     }
 
-    public static RecognizeHouseholdRequest create() {
+    public static RecognizeSocialSecurityCardVersionIIRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return isResidentPage
-     */
-    public Boolean getIsResidentPage() {
-        return this.isResidentPage;
     }
 
     /**
@@ -65,8 +53,7 @@ public class RecognizeHouseholdRequest extends Request {
         return this.body;
     }
 
-    public static final class Builder extends Request.Builder<RecognizeHouseholdRequest, Builder> {
-        private Boolean isResidentPage; 
+    public static final class Builder extends Request.Builder<RecognizeSocialSecurityCardVersionIIRequest, Builder> {
         private String url; 
         private java.io.InputStream body; 
 
@@ -74,21 +61,11 @@ public class RecognizeHouseholdRequest extends Request {
             super();
         } 
 
-        private Builder(RecognizeHouseholdRequest request) {
+        private Builder(RecognizeSocialSecurityCardVersionIIRequest request) {
             super(request);
-            this.isResidentPage = request.isResidentPage;
             this.url = request.url;
             this.body = request.body;
         } 
-
-        /**
-         * IsResidentPage.
-         */
-        public Builder isResidentPage(Boolean isResidentPage) {
-            this.putQueryParameter("IsResidentPage", isResidentPage);
-            this.isResidentPage = isResidentPage;
-            return this;
-        }
 
         /**
          * 图片链接（长度不超 2048，不支持 base64）
@@ -109,8 +86,8 @@ public class RecognizeHouseholdRequest extends Request {
         }
 
         @Override
-        public RecognizeHouseholdRequest build() {
-            return new RecognizeHouseholdRequest(this);
+        public RecognizeSocialSecurityCardVersionIIRequest build() {
+            return new RecognizeSocialSecurityCardVersionIIRequest(this);
         } 
 
     } 

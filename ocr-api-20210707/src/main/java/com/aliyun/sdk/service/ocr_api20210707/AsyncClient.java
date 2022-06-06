@@ -22,6 +22,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RecognizeAirItineraryResponse> recognizeAirItinerary(RecognizeAirItineraryRequest request);
 
+    CompletableFuture<RecognizeBankAcceptanceResponse> recognizeBankAcceptance(RecognizeBankAcceptanceRequest request);
+
     CompletableFuture<RecognizeBankAccountLicenseResponse> recognizeBankAccountLicense(RecognizeBankAccountLicenseRequest request);
 
     CompletableFuture<RecognizeBankCardResponse> recognizeBankCard(RecognizeBankCardRequest request);
@@ -47,6 +49,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RecognizeCommonPrintedInvoiceResponse> recognizeCommonPrintedInvoice(RecognizeCommonPrintedInvoiceRequest request);
 
     CompletableFuture<RecognizeCosmeticProduceLicenseResponse> recognizeCosmeticProduceLicense(RecognizeCosmeticProduceLicenseRequest request);
+
+    CompletableFuture<RecognizeCovidTestReportResponse> recognizeCovidTestReport(RecognizeCovidTestReportRequest request);
 
     CompletableFuture<RecognizeCtwoMedicalDeviceManageLicenseResponse> recognizeCtwoMedicalDeviceManageLicense(RecognizeCtwoMedicalDeviceManageLicenseRequest request);
 
@@ -126,7 +130,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RecognizeRussianResponse> recognizeRussian(RecognizeRussianRequest request);
 
+    CompletableFuture<RecognizeShoppingReceiptResponse> recognizeShoppingReceipt(RecognizeShoppingReceiptRequest request);
+
     CompletableFuture<RecognizeSocialSecurityCardResponse> recognizeSocialSecurityCard(RecognizeSocialSecurityCardRequest request);
+
+    CompletableFuture<RecognizeSocialSecurityCardVersionIIResponse> recognizeSocialSecurityCardVersionII(RecognizeSocialSecurityCardVersionIIRequest request);
 
     CompletableFuture<RecognizeTableOcrResponse> recognizeTableOcr(RecognizeTableOcrRequest request);
 
