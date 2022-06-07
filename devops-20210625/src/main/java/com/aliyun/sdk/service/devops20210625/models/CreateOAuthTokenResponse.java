@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CloneApiResponse} extends {@link TeaModel}
+ * {@link CreateOAuthTokenResponse} extends {@link TeaModel}
  *
- * <p>CloneApiResponse</p>
+ * <p>CreateOAuthTokenResponse</p>
  */
-public class CloneApiResponse extends Response {
+public class CreateOAuthTokenResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private CloneApiResponseBody body;
+    private CreateOAuthTokenResponseBody body;
 
-    private CloneApiResponse(BuilderImpl builder) {
+    private CreateOAuthTokenResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static CloneApiResponse create() {
+    public static CreateOAuthTokenResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class CloneApiResponse extends Response {
     /**
      * @return body
      */
-    public CloneApiResponseBody getBody() {
+    public CreateOAuthTokenResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<CloneApiResponse, Builder> {
+    public interface Builder extends Response.Builder<CreateOAuthTokenResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(CloneApiResponseBody body);
+        Builder body(CreateOAuthTokenResponseBody body);
 
         @Override
-        CloneApiResponse build();
+        CreateOAuthTokenResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<CloneApiResponse, Builder>
+            extends Response.BuilderImpl<CreateOAuthTokenResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private CloneApiResponseBody body; 
+        private CreateOAuthTokenResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(CloneApiResponse response) {
+        private BuilderImpl(CreateOAuthTokenResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class CloneApiResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(CloneApiResponseBody body) {
+        public Builder body(CreateOAuthTokenResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public CloneApiResponse build() {
-            return new CloneApiResponse(this);
+        public CreateOAuthTokenResponse build() {
+            return new CreateOAuthTokenResponse(this);
         } 
 
     } 

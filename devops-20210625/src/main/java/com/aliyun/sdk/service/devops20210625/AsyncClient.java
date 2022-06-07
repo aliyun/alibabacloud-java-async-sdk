@@ -22,13 +22,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AddWebhookResponse> addWebhook(AddWebhookRequest request);
 
-    CompletableFuture<CloneApiResponse> cloneApi(CloneApiRequest request);
-
     CompletableFuture<CreateFlowTagResponse> createFlowTag(CreateFlowTagRequest request);
 
     CompletableFuture<CreateFlowTagGroupResponse> createFlowTagGroup(CreateFlowTagGroupRequest request);
 
     CompletableFuture<CreateHostGroupResponse> createHostGroup(CreateHostGroupRequest request);
+
+    CompletableFuture<CreateOAuthTokenResponse> createOAuthToken(CreateOAuthTokenRequest request);
 
     CompletableFuture<CreateProjectResponse> createProject(CreateProjectRequest request);
 
