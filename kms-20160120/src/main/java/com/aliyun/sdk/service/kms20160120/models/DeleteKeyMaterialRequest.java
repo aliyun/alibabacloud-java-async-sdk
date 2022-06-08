@@ -49,9 +49,9 @@ public class DeleteKeyMaterialRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteKeyMaterialRequest response) {
-            super(response);
-            this.keyId = response.keyId;
+        private Builder(DeleteKeyMaterialRequest request) {
+            super(request);
+            this.keyId = request.keyId;
         } 
 
         /**

@@ -89,12 +89,12 @@ public class CreateCertificateRequest extends Request {
             super();
         } 
 
-        private Builder(CreateCertificateRequest response) {
-            super(response);
-            this.exportablePrivateKey = response.exportablePrivateKey;
-            this.keySpec = response.keySpec;
-            this.subject = response.subject;
-            this.subjectAlternativeNames = response.subjectAlternativeNames;
+        private Builder(CreateCertificateRequest request) {
+            super(request);
+            this.exportablePrivateKey = request.exportablePrivateKey;
+            this.keySpec = request.keySpec;
+            this.subject = request.subject;
+            this.subjectAlternativeNames = request.subjectAlternativeNames;
         } 
 
         /**
@@ -128,7 +128,8 @@ public class CreateCertificateRequest extends Request {
          * SubjectAlternativeNames.
          */
         public Builder subjectAlternativeNames(java.util.Map < String, ? > subjectAlternativeNames) {
-            this.putQueryParameter("SubjectAlternativeNames", subjectAlternativeNames);
+            String subjectAlternativeNamesShrink = shrink(subjectAlternativeNames, "SubjectAlternativeNames", "json");
+            this.putQueryParameter("SubjectAlternativeNames", subjectAlternativeNamesShrink);
             this.subjectAlternativeNames = subjectAlternativeNames;
             return this;
         }

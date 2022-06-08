@@ -62,10 +62,10 @@ public class DecryptRequest extends Request {
             super();
         } 
 
-        private Builder(DecryptRequest response) {
-            super(response);
-            this.ciphertextBlob = response.ciphertextBlob;
-            this.encryptionContext = response.encryptionContext;
+        private Builder(DecryptRequest request) {
+            super(request);
+            this.ciphertextBlob = request.ciphertextBlob;
+            this.encryptionContext = request.encryptionContext;
         } 
 
         /**
@@ -81,7 +81,8 @@ public class DecryptRequest extends Request {
          * EncryptionContext.
          */
         public Builder encryptionContext(java.util.Map < String, ? > encryptionContext) {
-            this.putQueryParameter("EncryptionContext", encryptionContext);
+            String encryptionContextShrink = shrink(encryptionContext, "EncryptionContext", "json");
+            this.putQueryParameter("EncryptionContext", encryptionContextShrink);
             this.encryptionContext = encryptionContext;
             return this;
         }

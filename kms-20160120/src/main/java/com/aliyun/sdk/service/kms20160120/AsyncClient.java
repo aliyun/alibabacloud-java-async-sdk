@@ -68,15 +68,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeSecretResponse> describeSecret(DescribeSecretRequest request);
 
-    CompletableFuture<DescribeServiceResponse> describeService(DescribeServiceRequest request);
-
     CompletableFuture<DisableKeyResponse> disableKey(DisableKeyRequest request);
 
     CompletableFuture<EnableKeyResponse> enableKey(EnableKeyRequest request);
 
     CompletableFuture<EncryptResponse> encrypt(EncryptRequest request);
-
-    CompletableFuture<ExportCertificateResponse> exportCertificate(ExportCertificateRequest request);
 
     CompletableFuture<ExportDataKeyResponse> exportDataKey(ExportDataKeyRequest request);
 
@@ -96,17 +92,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetSecretValueResponse> getSecretValue(GetSecretValueRequest request);
 
-    CompletableFuture<ImportCertificateResponse> importCertificate(ImportCertificateRequest request);
-
-    CompletableFuture<ImportEncryptionCertificateResponse> importEncryptionCertificate(ImportEncryptionCertificateRequest request);
-
     CompletableFuture<ImportKeyMaterialResponse> importKeyMaterial(ImportKeyMaterialRequest request);
 
     CompletableFuture<ListAliasesResponse> listAliases(ListAliasesRequest request);
 
     CompletableFuture<ListAliasesByKeyIdResponse> listAliasesByKeyId(ListAliasesByKeyIdRequest request);
-
-    CompletableFuture<ListCertificatesResponse> listCertificates(ListCertificatesRequest request);
 
     CompletableFuture<ListKeyVersionsResponse> listKeyVersions(ListKeyVersionsRequest request);
 

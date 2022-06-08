@@ -49,9 +49,9 @@ public class RestoreSecretRequest extends Request {
             super();
         } 
 
-        private Builder(RestoreSecretRequest response) {
-            super(response);
-            this.secretName = response.secretName;
+        private Builder(RestoreSecretRequest request) {
+            super(request);
+            this.secretName = request.secretName;
         } 
 
         /**

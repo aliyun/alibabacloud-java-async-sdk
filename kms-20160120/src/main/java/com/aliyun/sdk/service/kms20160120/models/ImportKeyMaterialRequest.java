@@ -91,12 +91,12 @@ public class ImportKeyMaterialRequest extends Request {
             super();
         } 
 
-        private Builder(ImportKeyMaterialRequest response) {
-            super(response);
-            this.encryptedKeyMaterial = response.encryptedKeyMaterial;
-            this.importToken = response.importToken;
-            this.keyId = response.keyId;
-            this.keyMaterialExpireUnix = response.keyMaterialExpireUnix;
+        private Builder(ImportKeyMaterialRequest request) {
+            super(request);
+            this.encryptedKeyMaterial = request.encryptedKeyMaterial;
+            this.importToken = request.importToken;
+            this.keyId = request.keyId;
+            this.keyMaterialExpireUnix = request.keyMaterialExpireUnix;
         } 
 
         /**

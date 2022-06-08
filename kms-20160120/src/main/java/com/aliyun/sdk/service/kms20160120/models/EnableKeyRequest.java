@@ -49,9 +49,9 @@ public class EnableKeyRequest extends Request {
             super();
         } 
 
-        private Builder(EnableKeyRequest response) {
-            super(response);
-            this.keyId = response.keyId;
+        private Builder(EnableKeyRequest request) {
+            super(request);
+            this.keyId = request.keyId;
         } 
 
         /**

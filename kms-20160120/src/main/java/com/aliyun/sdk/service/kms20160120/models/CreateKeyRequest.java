@@ -126,15 +126,15 @@ public class CreateKeyRequest extends Request {
             super();
         } 
 
-        private Builder(CreateKeyRequest response) {
-            super(response);
-            this.description = response.description;
-            this.enableAutomaticRotation = response.enableAutomaticRotation;
-            this.keySpec = response.keySpec;
-            this.keyUsage = response.keyUsage;
-            this.origin = response.origin;
-            this.protectionLevel = response.protectionLevel;
-            this.rotationInterval = response.rotationInterval;
+        private Builder(CreateKeyRequest request) {
+            super(request);
+            this.description = request.description;
+            this.enableAutomaticRotation = request.enableAutomaticRotation;
+            this.keySpec = request.keySpec;
+            this.keyUsage = request.keyUsage;
+            this.origin = request.origin;
+            this.protectionLevel = request.protectionLevel;
+            this.rotationInterval = request.rotationInterval;
         } 
 
         /**

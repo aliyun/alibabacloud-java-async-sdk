@@ -91,12 +91,12 @@ public class CertificatePrivateKeySignRequest extends Request {
             super();
         } 
 
-        private Builder(CertificatePrivateKeySignRequest response) {
-            super(response);
-            this.algorithm = response.algorithm;
-            this.certificateId = response.certificateId;
-            this.message = response.message;
-            this.messageType = response.messageType;
+        private Builder(CertificatePrivateKeySignRequest request) {
+            super(request);
+            this.algorithm = request.algorithm;
+            this.certificateId = request.certificateId;
+            this.message = request.message;
+            this.messageType = request.messageType;
         } 
 
         /**

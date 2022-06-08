@@ -88,12 +88,12 @@ public class ListSecretsRequest extends Request {
             super();
         } 
 
-        private Builder(ListSecretsRequest response) {
-            super(response);
-            this.fetchTags = response.fetchTags;
-            this.filters = response.filters;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(ListSecretsRequest request) {
+            super(request);
+            this.fetchTags = request.fetchTags;
+            this.filters = request.filters;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**

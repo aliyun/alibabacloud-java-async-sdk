@@ -35,8 +35,8 @@ public class OpenKmsServiceRequest extends Request {
             super();
         } 
 
-        private Builder(OpenKmsServiceRequest response) {
-            super(response);
+        private Builder(OpenKmsServiceRequest request) {
+            super(request);
         } 
 
         @Override

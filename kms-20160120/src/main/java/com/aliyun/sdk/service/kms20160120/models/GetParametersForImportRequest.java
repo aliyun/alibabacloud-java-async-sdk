@@ -77,11 +77,11 @@ public class GetParametersForImportRequest extends Request {
             super();
         } 
 
-        private Builder(GetParametersForImportRequest response) {
-            super(response);
-            this.keyId = response.keyId;
-            this.wrappingAlgorithm = response.wrappingAlgorithm;
-            this.wrappingKeySpec = response.wrappingKeySpec;
+        private Builder(GetParametersForImportRequest request) {
+            super(request);
+            this.keyId = request.keyId;
+            this.wrappingAlgorithm = request.wrappingAlgorithm;
+            this.wrappingKeySpec = request.wrappingKeySpec;
         } 
 
         /**

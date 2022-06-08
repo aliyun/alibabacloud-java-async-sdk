@@ -49,9 +49,9 @@ public class CreateKeyVersionRequest extends Request {
             super();
         } 
 
-        private Builder(CreateKeyVersionRequest response) {
-            super(response);
-            this.keyId = response.keyId;
+        private Builder(CreateKeyVersionRequest request) {
+            super(request);
+            this.keyId = request.keyId;
         } 
 
         /**

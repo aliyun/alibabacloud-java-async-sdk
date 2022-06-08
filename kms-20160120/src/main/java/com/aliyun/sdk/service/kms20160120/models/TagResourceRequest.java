@@ -88,12 +88,12 @@ public class TagResourceRequest extends Request {
             super();
         } 
 
-        private Builder(TagResourceRequest response) {
-            super(response);
-            this.certificateId = response.certificateId;
-            this.keyId = response.keyId;
-            this.secretName = response.secretName;
-            this.tags = response.tags;
+        private Builder(TagResourceRequest request) {
+            super(request);
+            this.certificateId = request.certificateId;
+            this.keyId = request.keyId;
+            this.secretName = request.secretName;
+            this.tags = request.tags;
         } 
 
         /**

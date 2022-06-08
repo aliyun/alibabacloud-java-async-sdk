@@ -76,11 +76,11 @@ public class UploadCertificateRequest extends Request {
             super();
         } 
 
-        private Builder(UploadCertificateRequest response) {
-            super(response);
-            this.certificate = response.certificate;
-            this.certificateChain = response.certificateChain;
-            this.certificateId = response.certificateId;
+        private Builder(UploadCertificateRequest request) {
+            super(request);
+            this.certificate = request.certificate;
+            this.certificateChain = request.certificateChain;
+            this.certificateId = request.certificateId;
         } 
 
         /**

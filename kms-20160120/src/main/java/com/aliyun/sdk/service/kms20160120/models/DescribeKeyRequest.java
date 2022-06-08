@@ -49,9 +49,9 @@ public class DescribeKeyRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeKeyRequest response) {
-            super(response);
-            this.keyId = response.keyId;
+        private Builder(DescribeKeyRequest request) {
+            super(request);
+            this.keyId = request.keyId;
         } 
 
         /**

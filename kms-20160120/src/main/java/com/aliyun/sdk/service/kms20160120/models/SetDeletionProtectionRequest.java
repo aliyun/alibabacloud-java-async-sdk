@@ -76,11 +76,11 @@ public class SetDeletionProtectionRequest extends Request {
             super();
         } 
 
-        private Builder(SetDeletionProtectionRequest response) {
-            super(response);
-            this.deletionProtectionDescription = response.deletionProtectionDescription;
-            this.enableDeletionProtection = response.enableDeletionProtection;
-            this.protectedResourceArn = response.protectedResourceArn;
+        private Builder(SetDeletionProtectionRequest request) {
+            super(request);
+            this.deletionProtectionDescription = request.deletionProtectionDescription;
+            this.enableDeletionProtection = request.enableDeletionProtection;
+            this.protectedResourceArn = request.protectedResourceArn;
         } 
 
         /**

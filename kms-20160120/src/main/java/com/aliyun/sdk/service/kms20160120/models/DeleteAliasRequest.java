@@ -49,9 +49,9 @@ public class DeleteAliasRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteAliasRequest response) {
-            super(response);
-            this.aliasName = response.aliasName;
+        private Builder(DeleteAliasRequest request) {
+            super(request);
+            this.aliasName = request.aliasName;
         } 
 
         /**

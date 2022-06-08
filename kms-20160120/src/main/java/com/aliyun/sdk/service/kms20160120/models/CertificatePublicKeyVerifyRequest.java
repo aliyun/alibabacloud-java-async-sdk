@@ -105,13 +105,13 @@ public class CertificatePublicKeyVerifyRequest extends Request {
             super();
         } 
 
-        private Builder(CertificatePublicKeyVerifyRequest response) {
-            super(response);
-            this.algorithm = response.algorithm;
-            this.certificateId = response.certificateId;
-            this.message = response.message;
-            this.messageType = response.messageType;
-            this.signatureValue = response.signatureValue;
+        private Builder(CertificatePublicKeyVerifyRequest request) {
+            super(request);
+            this.algorithm = request.algorithm;
+            this.certificateId = request.certificateId;
+            this.message = request.message;
+            this.messageType = request.messageType;
+            this.signatureValue = request.signatureValue;
         } 
 
         /**

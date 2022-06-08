@@ -88,12 +88,12 @@ public class GetSecretValueRequest extends Request {
             super();
         } 
 
-        private Builder(GetSecretValueRequest response) {
-            super(response);
-            this.fetchExtendedConfig = response.fetchExtendedConfig;
-            this.secretName = response.secretName;
-            this.versionId = response.versionId;
-            this.versionStage = response.versionStage;
+        private Builder(GetSecretValueRequest request) {
+            super(request);
+            this.fetchExtendedConfig = request.fetchExtendedConfig;
+            this.secretName = request.secretName;
+            this.versionId = request.versionId;
+            this.versionStage = request.versionStage;
         } 
 
         /**

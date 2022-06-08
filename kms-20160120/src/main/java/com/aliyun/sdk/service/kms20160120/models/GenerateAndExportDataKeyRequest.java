@@ -131,22 +131,23 @@ public class GenerateAndExportDataKeyRequest extends Request {
             super();
         } 
 
-        private Builder(GenerateAndExportDataKeyRequest response) {
-            super(response);
-            this.encryptionContext = response.encryptionContext;
-            this.keyId = response.keyId;
-            this.keySpec = response.keySpec;
-            this.numberOfBytes = response.numberOfBytes;
-            this.publicKeyBlob = response.publicKeyBlob;
-            this.wrappingAlgorithm = response.wrappingAlgorithm;
-            this.wrappingKeySpec = response.wrappingKeySpec;
+        private Builder(GenerateAndExportDataKeyRequest request) {
+            super(request);
+            this.encryptionContext = request.encryptionContext;
+            this.keyId = request.keyId;
+            this.keySpec = request.keySpec;
+            this.numberOfBytes = request.numberOfBytes;
+            this.publicKeyBlob = request.publicKeyBlob;
+            this.wrappingAlgorithm = request.wrappingAlgorithm;
+            this.wrappingKeySpec = request.wrappingKeySpec;
         } 
 
         /**
          * EncryptionContext.
          */
         public Builder encryptionContext(java.util.Map < String, ? > encryptionContext) {
-            this.putQueryParameter("EncryptionContext", encryptionContext);
+            String encryptionContextShrink = shrink(encryptionContext, "EncryptionContext", "json");
+            this.putQueryParameter("EncryptionContext", encryptionContextShrink);
             this.encryptionContext = encryptionContext;
             return this;
         }

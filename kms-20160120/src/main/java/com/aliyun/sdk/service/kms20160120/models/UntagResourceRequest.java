@@ -88,12 +88,12 @@ public class UntagResourceRequest extends Request {
             super();
         } 
 
-        private Builder(UntagResourceRequest response) {
-            super(response);
-            this.certificateId = response.certificateId;
-            this.keyId = response.keyId;
-            this.secretName = response.secretName;
-            this.tagKeys = response.tagKeys;
+        private Builder(UntagResourceRequest request) {
+            super(request);
+            this.certificateId = request.certificateId;
+            this.keyId = request.keyId;
+            this.secretName = request.secretName;
+            this.tagKeys = request.tagKeys;
         } 
 
         /**

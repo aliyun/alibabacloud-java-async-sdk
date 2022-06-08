@@ -61,10 +61,10 @@ public class ListAliasesRequest extends Request {
             super();
         } 
 
-        private Builder(ListAliasesRequest response) {
-            super(response);
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(ListAliasesRequest request) {
+            super(request);
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**

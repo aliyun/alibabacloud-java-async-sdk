@@ -63,10 +63,10 @@ public class CreateAliasRequest extends Request {
             super();
         } 
 
-        private Builder(CreateAliasRequest response) {
-            super(response);
-            this.aliasName = response.aliasName;
-            this.keyId = response.keyId;
+        private Builder(CreateAliasRequest request) {
+            super(request);
+            this.aliasName = request.aliasName;
+            this.keyId = request.keyId;
         } 
 
         /**

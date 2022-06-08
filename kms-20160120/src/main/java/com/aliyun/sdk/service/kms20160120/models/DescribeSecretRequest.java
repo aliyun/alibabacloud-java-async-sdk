@@ -62,10 +62,10 @@ public class DescribeSecretRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeSecretRequest response) {
-            super(response);
-            this.fetchTags = response.fetchTags;
-            this.secretName = response.secretName;
+        private Builder(DescribeSecretRequest request) {
+            super(request);
+            this.fetchTags = request.fetchTags;
+            this.secretName = request.secretName;
         } 
 
         /**

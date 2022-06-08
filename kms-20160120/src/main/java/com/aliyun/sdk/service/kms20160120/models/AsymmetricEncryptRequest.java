@@ -91,12 +91,12 @@ public class AsymmetricEncryptRequest extends Request {
             super();
         } 
 
-        private Builder(AsymmetricEncryptRequest response) {
-            super(response);
-            this.algorithm = response.algorithm;
-            this.keyId = response.keyId;
-            this.keyVersionId = response.keyVersionId;
-            this.plaintext = response.plaintext;
+        private Builder(AsymmetricEncryptRequest request) {
+            super(request);
+            this.algorithm = request.algorithm;
+            this.keyId = request.keyId;
+            this.keyVersionId = request.keyVersionId;
+            this.plaintext = request.plaintext;
         } 
 
         /**

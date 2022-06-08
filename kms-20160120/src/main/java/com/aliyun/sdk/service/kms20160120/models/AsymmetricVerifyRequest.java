@@ -105,13 +105,13 @@ public class AsymmetricVerifyRequest extends Request {
             super();
         } 
 
-        private Builder(AsymmetricVerifyRequest response) {
-            super(response);
-            this.algorithm = response.algorithm;
-            this.digest = response.digest;
-            this.keyId = response.keyId;
-            this.keyVersionId = response.keyVersionId;
-            this.value = response.value;
+        private Builder(AsymmetricVerifyRequest request) {
+            super(request);
+            this.algorithm = request.algorithm;
+            this.digest = request.digest;
+            this.keyId = request.keyId;
+            this.keyVersionId = request.keyVersionId;
+            this.value = request.value;
         } 
 
         /**

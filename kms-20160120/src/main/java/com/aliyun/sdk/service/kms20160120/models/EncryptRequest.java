@@ -76,18 +76,19 @@ public class EncryptRequest extends Request {
             super();
         } 
 
-        private Builder(EncryptRequest response) {
-            super(response);
-            this.encryptionContext = response.encryptionContext;
-            this.keyId = response.keyId;
-            this.plaintext = response.plaintext;
+        private Builder(EncryptRequest request) {
+            super(request);
+            this.encryptionContext = request.encryptionContext;
+            this.keyId = request.keyId;
+            this.plaintext = request.plaintext;
         } 
 
         /**
          * EncryptionContext.
          */
         public Builder encryptionContext(java.util.Map < String, ? > encryptionContext) {
-            this.putQueryParameter("EncryptionContext", encryptionContext);
+            String encryptionContextShrink = shrink(encryptionContext, "EncryptionContext", "json");
+            this.putQueryParameter("EncryptionContext", encryptionContextShrink);
             this.encryptionContext = encryptionContext;
             return this;
         }

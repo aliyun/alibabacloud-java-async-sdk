@@ -88,12 +88,12 @@ public class ListSecretVersionIdsRequest extends Request {
             super();
         } 
 
-        private Builder(ListSecretVersionIdsRequest response) {
-            super(response);
-            this.includeDeprecated = response.includeDeprecated;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.secretName = response.secretName;
+        private Builder(ListSecretVersionIdsRequest request) {
+            super(request);
+            this.includeDeprecated = request.includeDeprecated;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.secretName = request.secretName;
         } 
 
         /**

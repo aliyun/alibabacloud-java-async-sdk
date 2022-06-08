@@ -74,11 +74,11 @@ public class ListKeysRequest extends Request {
             super();
         } 
 
-        private Builder(ListKeysRequest response) {
-            super(response);
-            this.filters = response.filters;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(ListKeysRequest request) {
+            super(request);
+            this.filters = request.filters;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**

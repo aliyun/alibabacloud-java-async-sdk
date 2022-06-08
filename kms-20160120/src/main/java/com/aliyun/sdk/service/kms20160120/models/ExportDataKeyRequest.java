@@ -104,13 +104,13 @@ public class ExportDataKeyRequest extends Request {
             super();
         } 
 
-        private Builder(ExportDataKeyRequest response) {
-            super(response);
-            this.ciphertextBlob = response.ciphertextBlob;
-            this.encryptionContext = response.encryptionContext;
-            this.publicKeyBlob = response.publicKeyBlob;
-            this.wrappingAlgorithm = response.wrappingAlgorithm;
-            this.wrappingKeySpec = response.wrappingKeySpec;
+        private Builder(ExportDataKeyRequest request) {
+            super(request);
+            this.ciphertextBlob = request.ciphertextBlob;
+            this.encryptionContext = request.encryptionContext;
+            this.publicKeyBlob = request.publicKeyBlob;
+            this.wrappingAlgorithm = request.wrappingAlgorithm;
+            this.wrappingKeySpec = request.wrappingKeySpec;
         } 
 
         /**
@@ -126,7 +126,8 @@ public class ExportDataKeyRequest extends Request {
          * EncryptionContext.
          */
         public Builder encryptionContext(java.util.Map < String, ? > encryptionContext) {
-            this.putQueryParameter("EncryptionContext", encryptionContext);
+            String encryptionContextShrink = shrink(encryptionContext, "EncryptionContext", "json");
+            this.putQueryParameter("EncryptionContext", encryptionContextShrink);
             this.encryptionContext = encryptionContext;
             return this;
         }

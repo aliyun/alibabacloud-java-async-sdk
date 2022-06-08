@@ -63,10 +63,10 @@ public class UpdateKeyDescriptionRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateKeyDescriptionRequest response) {
-            super(response);
-            this.description = response.description;
-            this.keyId = response.keyId;
+        private Builder(UpdateKeyDescriptionRequest request) {
+            super(request);
+            this.description = request.description;
+            this.keyId = request.keyId;
         } 
 
         /**

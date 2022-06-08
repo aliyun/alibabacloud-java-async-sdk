@@ -35,8 +35,8 @@ public class DescribeAccountKmsStatusRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAccountKmsStatusRequest response) {
-            super(response);
+        private Builder(DescribeAccountKmsStatusRequest request) {
+            super(request);
         } 
 
         @Override

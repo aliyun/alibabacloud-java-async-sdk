@@ -128,15 +128,15 @@ public class ReEncryptRequest extends Request {
             super();
         } 
 
-        private Builder(ReEncryptRequest response) {
-            super(response);
-            this.ciphertextBlob = response.ciphertextBlob;
-            this.destinationEncryptionContext = response.destinationEncryptionContext;
-            this.destinationKeyId = response.destinationKeyId;
-            this.sourceEncryptionAlgorithm = response.sourceEncryptionAlgorithm;
-            this.sourceEncryptionContext = response.sourceEncryptionContext;
-            this.sourceKeyId = response.sourceKeyId;
-            this.sourceKeyVersionId = response.sourceKeyVersionId;
+        private Builder(ReEncryptRequest request) {
+            super(request);
+            this.ciphertextBlob = request.ciphertextBlob;
+            this.destinationEncryptionContext = request.destinationEncryptionContext;
+            this.destinationKeyId = request.destinationKeyId;
+            this.sourceEncryptionAlgorithm = request.sourceEncryptionAlgorithm;
+            this.sourceEncryptionContext = request.sourceEncryptionContext;
+            this.sourceKeyId = request.sourceKeyId;
+            this.sourceKeyVersionId = request.sourceKeyVersionId;
         } 
 
         /**
@@ -152,7 +152,8 @@ public class ReEncryptRequest extends Request {
          * DestinationEncryptionContext.
          */
         public Builder destinationEncryptionContext(java.util.Map < String, ? > destinationEncryptionContext) {
-            this.putQueryParameter("DestinationEncryptionContext", destinationEncryptionContext);
+            String destinationEncryptionContextShrink = shrink(destinationEncryptionContext, "DestinationEncryptionContext", "json");
+            this.putQueryParameter("DestinationEncryptionContext", destinationEncryptionContextShrink);
             this.destinationEncryptionContext = destinationEncryptionContext;
             return this;
         }
@@ -179,7 +180,8 @@ public class ReEncryptRequest extends Request {
          * SourceEncryptionContext.
          */
         public Builder sourceEncryptionContext(java.util.Map < String, ? > sourceEncryptionContext) {
-            this.putQueryParameter("SourceEncryptionContext", sourceEncryptionContext);
+            String sourceEncryptionContextShrink = shrink(sourceEncryptionContext, "SourceEncryptionContext", "json");
+            this.putQueryParameter("SourceEncryptionContext", sourceEncryptionContextShrink);
             this.sourceEncryptionContext = sourceEncryptionContext;
             return this;
         }

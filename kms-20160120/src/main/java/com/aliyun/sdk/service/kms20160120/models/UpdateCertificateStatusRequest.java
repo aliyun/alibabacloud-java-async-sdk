@@ -63,10 +63,10 @@ public class UpdateCertificateStatusRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateCertificateStatusRequest response) {
-            super(response);
-            this.certificateId = response.certificateId;
-            this.status = response.status;
+        private Builder(UpdateCertificateStatusRequest request) {
+            super(request);
+            this.certificateId = request.certificateId;
+            this.status = request.status;
         } 
 
         /**

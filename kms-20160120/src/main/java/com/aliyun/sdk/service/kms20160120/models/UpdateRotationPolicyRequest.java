@@ -76,11 +76,11 @@ public class UpdateRotationPolicyRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateRotationPolicyRequest response) {
-            super(response);
-            this.enableAutomaticRotation = response.enableAutomaticRotation;
-            this.keyId = response.keyId;
-            this.rotationInterval = response.rotationInterval;
+        private Builder(UpdateRotationPolicyRequest request) {
+            super(request);
+            this.enableAutomaticRotation = request.enableAutomaticRotation;
+            this.keyId = request.keyId;
+            this.rotationInterval = request.rotationInterval;
         } 
 
         /**

@@ -62,10 +62,10 @@ public class ScheduleKeyDeletionRequest extends Request {
             super();
         } 
 
-        private Builder(ScheduleKeyDeletionRequest response) {
-            super(response);
-            this.keyId = response.keyId;
-            this.pendingWindowInDays = response.pendingWindowInDays;
+        private Builder(ScheduleKeyDeletionRequest request) {
+            super(request);
+            this.keyId = request.keyId;
+            this.pendingWindowInDays = request.pendingWindowInDays;
         } 
 
         /**

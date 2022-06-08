@@ -49,9 +49,9 @@ public class ListResourceTagsRequest extends Request {
             super();
         } 
 
-        private Builder(ListResourceTagsRequest response) {
-            super(response);
-            this.keyId = response.keyId;
+        private Builder(ListResourceTagsRequest request) {
+            super(request);
+            this.keyId = request.keyId;
         } 
 
         /**

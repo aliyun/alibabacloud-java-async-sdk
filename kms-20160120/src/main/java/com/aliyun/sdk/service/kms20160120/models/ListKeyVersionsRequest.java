@@ -75,11 +75,11 @@ public class ListKeyVersionsRequest extends Request {
             super();
         } 
 
-        private Builder(ListKeyVersionsRequest response) {
-            super(response);
-            this.keyId = response.keyId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(ListKeyVersionsRequest request) {
+            super(request);
+            this.keyId = request.keyId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**

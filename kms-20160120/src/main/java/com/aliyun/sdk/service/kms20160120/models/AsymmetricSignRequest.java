@@ -91,12 +91,12 @@ public class AsymmetricSignRequest extends Request {
             super();
         } 
 
-        private Builder(AsymmetricSignRequest response) {
-            super(response);
-            this.algorithm = response.algorithm;
-            this.digest = response.digest;
-            this.keyId = response.keyId;
-            this.keyVersionId = response.keyVersionId;
+        private Builder(AsymmetricSignRequest request) {
+            super(request);
+            this.algorithm = request.algorithm;
+            this.digest = request.digest;
+            this.keyId = request.keyId;
+            this.keyVersionId = request.keyVersionId;
         } 
 
         /**

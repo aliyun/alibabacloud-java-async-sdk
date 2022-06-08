@@ -63,10 +63,10 @@ public class RotateSecretRequest extends Request {
             super();
         } 
 
-        private Builder(RotateSecretRequest response) {
-            super(response);
-            this.secretName = response.secretName;
-            this.versionId = response.versionId;
+        private Builder(RotateSecretRequest request) {
+            super(request);
+            this.secretName = request.secretName;
+            this.versionId = request.versionId;
         } 
 
         /**

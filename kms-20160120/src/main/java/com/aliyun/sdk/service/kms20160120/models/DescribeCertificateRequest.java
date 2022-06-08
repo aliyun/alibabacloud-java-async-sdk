@@ -49,9 +49,9 @@ public class DescribeCertificateRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeCertificateRequest response) {
-            super(response);
-            this.certificateId = response.certificateId;
+        private Builder(DescribeCertificateRequest request) {
+            super(request);
+            this.certificateId = request.certificateId;
         } 
 
         /**

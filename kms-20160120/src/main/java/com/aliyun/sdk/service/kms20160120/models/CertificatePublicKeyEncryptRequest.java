@@ -77,11 +77,11 @@ public class CertificatePublicKeyEncryptRequest extends Request {
             super();
         } 
 
-        private Builder(CertificatePublicKeyEncryptRequest response) {
-            super(response);
-            this.algorithm = response.algorithm;
-            this.certificateId = response.certificateId;
-            this.plaintext = response.plaintext;
+        private Builder(CertificatePublicKeyEncryptRequest request) {
+            super(request);
+            this.algorithm = request.algorithm;
+            this.certificateId = request.certificateId;
+            this.plaintext = request.plaintext;
         } 
 
         /**

@@ -103,13 +103,13 @@ public class PutSecretValueRequest extends Request {
             super();
         } 
 
-        private Builder(PutSecretValueRequest response) {
-            super(response);
-            this.secretData = response.secretData;
-            this.secretDataType = response.secretDataType;
-            this.secretName = response.secretName;
-            this.versionId = response.versionId;
-            this.versionStages = response.versionStages;
+        private Builder(PutSecretValueRequest request) {
+            super(request);
+            this.secretData = request.secretData;
+            this.secretDataType = request.secretDataType;
+            this.secretName = request.secretName;
+            this.versionId = request.versionId;
+            this.versionStages = request.versionStages;
         } 
 
         /**

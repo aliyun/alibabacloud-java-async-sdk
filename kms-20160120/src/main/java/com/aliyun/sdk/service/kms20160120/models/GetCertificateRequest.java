@@ -49,9 +49,9 @@ public class GetCertificateRequest extends Request {
             super();
         } 
 
-        private Builder(GetCertificateRequest response) {
-            super(response);
-            this.certificateId = response.certificateId;
+        private Builder(GetCertificateRequest request) {
+            super(request);
+            this.certificateId = request.certificateId;
         } 
 
         /**

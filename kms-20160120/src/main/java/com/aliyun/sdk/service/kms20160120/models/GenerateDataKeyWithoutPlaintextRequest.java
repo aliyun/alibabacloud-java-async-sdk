@@ -89,19 +89,20 @@ public class GenerateDataKeyWithoutPlaintextRequest extends Request {
             super();
         } 
 
-        private Builder(GenerateDataKeyWithoutPlaintextRequest response) {
-            super(response);
-            this.encryptionContext = response.encryptionContext;
-            this.keyId = response.keyId;
-            this.keySpec = response.keySpec;
-            this.numberOfBytes = response.numberOfBytes;
+        private Builder(GenerateDataKeyWithoutPlaintextRequest request) {
+            super(request);
+            this.encryptionContext = request.encryptionContext;
+            this.keyId = request.keyId;
+            this.keySpec = request.keySpec;
+            this.numberOfBytes = request.numberOfBytes;
         } 
 
         /**
          * EncryptionContext.
          */
         public Builder encryptionContext(java.util.Map < String, ? > encryptionContext) {
-            this.putQueryParameter("EncryptionContext", encryptionContext);
+            String encryptionContextShrink = shrink(encryptionContext, "EncryptionContext", "json");
+            this.putQueryParameter("EncryptionContext", encryptionContextShrink);
             this.encryptionContext = encryptionContext;
             return this;
         }

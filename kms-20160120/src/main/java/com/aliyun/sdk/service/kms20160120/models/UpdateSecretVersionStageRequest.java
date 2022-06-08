@@ -89,12 +89,12 @@ public class UpdateSecretVersionStageRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateSecretVersionStageRequest response) {
-            super(response);
-            this.moveToVersion = response.moveToVersion;
-            this.removeFromVersion = response.removeFromVersion;
-            this.secretName = response.secretName;
-            this.versionStage = response.versionStage;
+        private Builder(UpdateSecretVersionStageRequest request) {
+            super(request);
+            this.moveToVersion = request.moveToVersion;
+            this.removeFromVersion = request.removeFromVersion;
+            this.secretName = request.secretName;
+            this.versionStage = request.versionStage;
         } 
 
         /**

@@ -126,15 +126,15 @@ public class GetRandomPasswordRequest extends Request {
             super();
         } 
 
-        private Builder(GetRandomPasswordRequest response) {
-            super(response);
-            this.excludeCharacters = response.excludeCharacters;
-            this.excludeLowercase = response.excludeLowercase;
-            this.excludeNumbers = response.excludeNumbers;
-            this.excludePunctuation = response.excludePunctuation;
-            this.excludeUppercase = response.excludeUppercase;
-            this.passwordLength = response.passwordLength;
-            this.requireEachIncludedType = response.requireEachIncludedType;
+        private Builder(GetRandomPasswordRequest request) {
+            super(request);
+            this.excludeCharacters = request.excludeCharacters;
+            this.excludeLowercase = request.excludeLowercase;
+            this.excludeNumbers = request.excludeNumbers;
+            this.excludePunctuation = request.excludePunctuation;
+            this.excludeUppercase = request.excludeUppercase;
+            this.passwordLength = request.passwordLength;
+            this.requireEachIncludedType = request.requireEachIncludedType;
         } 
 
         /**

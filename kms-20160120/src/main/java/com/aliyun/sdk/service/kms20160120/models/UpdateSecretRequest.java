@@ -12,6 +12,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateSecretRequest</p>
  */
 public class UpdateSecretRequest extends Request {
+    @Query
     @NameInMap("ExtendedConfig")
     private ExtendedConfig extendedConfig;
 
@@ -74,17 +75,18 @@ public class UpdateSecretRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateSecretRequest response) {
-            super(response);
-            this.extendedConfig = response.extendedConfig;
-            this.description = response.description;
-            this.secretName = response.secretName;
+        private Builder(UpdateSecretRequest request) {
+            super(request);
+            this.extendedConfig = request.extendedConfig;
+            this.description = request.description;
+            this.secretName = request.secretName;
         } 
 
         /**
          * ExtendedConfig.
          */
         public Builder extendedConfig(ExtendedConfig extendedConfig) {
+            this.putQueryParameter("ExtendedConfig", extendedConfig);
             this.extendedConfig = extendedConfig;
             return this;
         }

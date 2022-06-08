@@ -49,9 +49,9 @@ public class CancelKeyDeletionRequest extends Request {
             super();
         } 
 
-        private Builder(CancelKeyDeletionRequest response) {
-            super(response);
-            this.keyId = response.keyId;
+        private Builder(CancelKeyDeletionRequest request) {
+            super(request);
+            this.keyId = request.keyId;
         } 
 
         /**

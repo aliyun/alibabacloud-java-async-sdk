@@ -76,11 +76,11 @@ public class UpdateSecretRotationPolicyRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateSecretRotationPolicyRequest response) {
-            super(response);
-            this.enableAutomaticRotation = response.enableAutomaticRotation;
-            this.rotationInterval = response.rotationInterval;
-            this.secretName = response.secretName;
+        private Builder(UpdateSecretRotationPolicyRequest request) {
+            super(request);
+            this.enableAutomaticRotation = request.enableAutomaticRotation;
+            this.rotationInterval = request.rotationInterval;
+            this.secretName = request.secretName;
         } 
 
         /**

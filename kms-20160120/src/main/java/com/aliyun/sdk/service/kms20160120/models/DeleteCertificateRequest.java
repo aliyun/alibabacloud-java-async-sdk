@@ -49,9 +49,9 @@ public class DeleteCertificateRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteCertificateRequest response) {
-            super(response);
-            this.certificateId = response.certificateId;
+        private Builder(DeleteCertificateRequest request) {
+            super(request);
+            this.certificateId = request.certificateId;
         } 
 
         /**

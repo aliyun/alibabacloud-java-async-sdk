@@ -63,10 +63,10 @@ public class GetPublicKeyRequest extends Request {
             super();
         } 
 
-        private Builder(GetPublicKeyRequest response) {
-            super(response);
-            this.keyId = response.keyId;
-            this.keyVersionId = response.keyVersionId;
+        private Builder(GetPublicKeyRequest request) {
+            super(request);
+            this.keyId = request.keyId;
+            this.keyVersionId = request.keyVersionId;
         } 
 
         /**

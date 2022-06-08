@@ -75,11 +75,11 @@ public class DeleteSecretRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteSecretRequest response) {
-            super(response);
-            this.forceDeleteWithoutRecovery = response.forceDeleteWithoutRecovery;
-            this.recoveryWindowInDays = response.recoveryWindowInDays;
-            this.secretName = response.secretName;
+        private Builder(DeleteSecretRequest request) {
+            super(request);
+            this.forceDeleteWithoutRecovery = request.forceDeleteWithoutRecovery;
+            this.recoveryWindowInDays = request.recoveryWindowInDays;
+            this.secretName = request.secretName;
         } 
 
         /**

@@ -181,19 +181,19 @@ public class CreateSecretRequest extends Request {
             super();
         } 
 
-        private Builder(CreateSecretRequest response) {
-            super(response);
-            this.description = response.description;
-            this.enableAutomaticRotation = response.enableAutomaticRotation;
-            this.encryptionKeyId = response.encryptionKeyId;
-            this.extendedConfig = response.extendedConfig;
-            this.rotationInterval = response.rotationInterval;
-            this.secretData = response.secretData;
-            this.secretDataType = response.secretDataType;
-            this.secretName = response.secretName;
-            this.secretType = response.secretType;
-            this.tags = response.tags;
-            this.versionId = response.versionId;
+        private Builder(CreateSecretRequest request) {
+            super(request);
+            this.description = request.description;
+            this.enableAutomaticRotation = request.enableAutomaticRotation;
+            this.encryptionKeyId = request.encryptionKeyId;
+            this.extendedConfig = request.extendedConfig;
+            this.rotationInterval = request.rotationInterval;
+            this.secretData = request.secretData;
+            this.secretDataType = request.secretDataType;
+            this.secretName = request.secretName;
+            this.secretType = request.secretType;
+            this.tags = request.tags;
+            this.versionId = request.versionId;
         } 
 
         /**
@@ -227,7 +227,8 @@ public class CreateSecretRequest extends Request {
          * ExtendedConfig.
          */
         public Builder extendedConfig(java.util.Map < String, ? > extendedConfig) {
-            this.putQueryParameter("ExtendedConfig", extendedConfig);
+            String extendedConfigShrink = shrink(extendedConfig, "ExtendedConfig", "json");
+            this.putQueryParameter("ExtendedConfig", extendedConfigShrink);
             this.extendedConfig = extendedConfig;
             return this;
         }

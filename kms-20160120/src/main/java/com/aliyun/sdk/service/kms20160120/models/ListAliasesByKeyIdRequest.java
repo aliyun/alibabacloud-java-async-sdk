@@ -75,11 +75,11 @@ public class ListAliasesByKeyIdRequest extends Request {
             super();
         } 
 
-        private Builder(ListAliasesByKeyIdRequest response) {
-            super(response);
-            this.keyId = response.keyId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(ListAliasesByKeyIdRequest request) {
+            super(request);
+            this.keyId = request.keyId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**
