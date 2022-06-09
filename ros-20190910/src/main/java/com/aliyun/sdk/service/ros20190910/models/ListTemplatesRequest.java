@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListTemplatesRequest extends Request {
     @Query
+    @NameInMap("IncludeTags")
+    private String includeTags;
+
+    @Query
     @NameInMap("PageNumber")
     private Long pageNumber;
 
@@ -38,6 +42,7 @@ public class ListTemplatesRequest extends Request {
 
     private ListTemplatesRequest(Builder builder) {
         super(builder);
+        this.includeTags = builder.includeTags;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.resourceGroupId = builder.resourceGroupId;
@@ -57,6 +62,13 @@ public class ListTemplatesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return includeTags
+     */
+    public String getIncludeTags() {
+        return this.includeTags;
     }
 
     /**
@@ -102,6 +114,7 @@ public class ListTemplatesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListTemplatesRequest, Builder> {
+        private String includeTags; 
         private Long pageNumber; 
         private Long pageSize; 
         private String resourceGroupId; 
@@ -115,6 +128,7 @@ public class ListTemplatesRequest extends Request {
 
         private Builder(ListTemplatesRequest request) {
             super(request);
+            this.includeTags = request.includeTags;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.resourceGroupId = request.resourceGroupId;
@@ -122,6 +136,15 @@ public class ListTemplatesRequest extends Request {
             this.tag = request.tag;
             this.templateName = request.templateName;
         } 
+
+        /**
+         * IncludeTags.
+         */
+        public Builder includeTags(String includeTags) {
+            this.putQueryParameter("IncludeTags", includeTags);
+            this.includeTags = includeTags;
+            return this;
+        }
 
         /**
          * PageNumber.

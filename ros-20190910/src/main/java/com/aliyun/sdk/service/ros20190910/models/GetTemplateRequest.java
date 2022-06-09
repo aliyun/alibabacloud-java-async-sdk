@@ -21,6 +21,10 @@ public class GetTemplateRequest extends Request {
     private String includePermission;
 
     @Query
+    @NameInMap("IncludeTags")
+    private String includeTags;
+
+    @Query
     @NameInMap("RegionId")
     private String regionId;
 
@@ -48,6 +52,7 @@ public class GetTemplateRequest extends Request {
         super(builder);
         this.changeSetId = builder.changeSetId;
         this.includePermission = builder.includePermission;
+        this.includeTags = builder.includeTags;
         this.regionId = builder.regionId;
         this.stackGroupName = builder.stackGroupName;
         this.stackId = builder.stackId;
@@ -81,6 +86,13 @@ public class GetTemplateRequest extends Request {
      */
     public String getIncludePermission() {
         return this.includePermission;
+    }
+
+    /**
+     * @return includeTags
+     */
+    public String getIncludeTags() {
+        return this.includeTags;
     }
 
     /**
@@ -128,6 +140,7 @@ public class GetTemplateRequest extends Request {
     public static final class Builder extends Request.Builder<GetTemplateRequest, Builder> {
         private String changeSetId; 
         private String includePermission; 
+        private String includeTags; 
         private String regionId; 
         private String stackGroupName; 
         private String stackId; 
@@ -143,6 +156,7 @@ public class GetTemplateRequest extends Request {
             super(request);
             this.changeSetId = request.changeSetId;
             this.includePermission = request.includePermission;
+            this.includeTags = request.includeTags;
             this.regionId = request.regionId;
             this.stackGroupName = request.stackGroupName;
             this.stackId = request.stackId;
@@ -166,6 +180,15 @@ public class GetTemplateRequest extends Request {
         public Builder includePermission(String includePermission) {
             this.putQueryParameter("IncludePermission", includePermission);
             this.includePermission = includePermission;
+            return this;
+        }
+
+        /**
+         * IncludeTags.
+         */
+        public Builder includeTags(String includeTags) {
+            this.putQueryParameter("IncludeTags", includeTags);
+            this.includeTags = includeTags;
             return this;
         }
 

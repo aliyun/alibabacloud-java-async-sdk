@@ -48,6 +48,9 @@ public class GetTemplateResponseBody extends TeaModel {
     @NameInMap("StackId")
     private String stackId;
 
+    @NameInMap("Tags")
+    private java.util.List < Tags> tags;
+
     @NameInMap("TemplateARN")
     private String templateARN;
 
@@ -79,6 +82,7 @@ public class GetTemplateResponseBody extends TeaModel {
         this.shareType = builder.shareType;
         this.stackGroupName = builder.stackGroupName;
         this.stackId = builder.stackId;
+        this.tags = builder.tags;
         this.templateARN = builder.templateARN;
         this.templateBody = builder.templateBody;
         this.templateId = builder.templateId;
@@ -180,6 +184,13 @@ public class GetTemplateResponseBody extends TeaModel {
     }
 
     /**
+     * @return tags
+     */
+    public java.util.List < Tags> getTags() {
+        return this.tags;
+    }
+
+    /**
      * @return templateARN
      */
     public String getTemplateARN() {
@@ -234,6 +245,7 @@ public class GetTemplateResponseBody extends TeaModel {
         private String shareType; 
         private String stackGroupName; 
         private String stackId; 
+        private java.util.List < Tags> tags; 
         private String templateARN; 
         private String templateBody; 
         private String templateId; 
@@ -334,6 +346,14 @@ public class GetTemplateResponseBody extends TeaModel {
          */
         public Builder stackId(String stackId) {
             this.stackId = stackId;
+            return this;
+        }
+
+        /**
+         * Tags.
+         */
+        public Builder tags(java.util.List < Tags> tags) {
+            this.tags = tags;
             return this;
         }
 
@@ -507,6 +527,67 @@ public class GetTemplateResponseBody extends TeaModel {
 
             public Permissions build() {
                 return new Permissions(this);
+            } 
+
+        } 
+
+    }
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
             } 
 
         } 

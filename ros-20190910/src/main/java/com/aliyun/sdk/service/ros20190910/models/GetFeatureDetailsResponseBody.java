@@ -15,6 +15,9 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("ResourceCleaner")
+    private ResourceCleaner resourceCleaner;
+
     @NameInMap("TemplateScratch")
     private TemplateScratch templateScratch;
 
@@ -23,6 +26,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
 
     private GetFeatureDetailsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
+        this.resourceCleaner = builder.resourceCleaner;
         this.templateScratch = builder.templateScratch;
         this.terraform = builder.terraform;
     }
@@ -43,6 +47,13 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
     }
 
     /**
+     * @return resourceCleaner
+     */
+    public ResourceCleaner getResourceCleaner() {
+        return this.resourceCleaner;
+    }
+
+    /**
      * @return templateScratch
      */
     public TemplateScratch getTemplateScratch() {
@@ -58,6 +69,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
+        private ResourceCleaner resourceCleaner; 
         private TemplateScratch templateScratch; 
         private Terraform terraform; 
 
@@ -66,6 +78,14 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * ResourceCleaner.
+         */
+        public Builder resourceCleaner(ResourceCleaner resourceCleaner) {
+            this.resourceCleaner = resourceCleaner;
             return this;
         }
 
@@ -95,6 +115,128 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         @NameInMap("ResourceType")
         private String resourceType;
 
+        @NameInMap("SideEffects")
+        private java.util.List < String > sideEffects;
+
+        @NameInMap("SupportedFilters")
+        private java.util.List < String > supportedFilters;
+
+        private SupportedResourceTypes(Builder builder) {
+            this.resourceType = builder.resourceType;
+            this.sideEffects = builder.sideEffects;
+            this.supportedFilters = builder.supportedFilters;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SupportedResourceTypes create() {
+            return builder().build();
+        }
+
+        /**
+         * @return resourceType
+         */
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        /**
+         * @return sideEffects
+         */
+        public java.util.List < String > getSideEffects() {
+            return this.sideEffects;
+        }
+
+        /**
+         * @return supportedFilters
+         */
+        public java.util.List < String > getSupportedFilters() {
+            return this.supportedFilters;
+        }
+
+        public static final class Builder {
+            private String resourceType; 
+            private java.util.List < String > sideEffects; 
+            private java.util.List < String > supportedFilters; 
+
+            /**
+             * ResourceType.
+             */
+            public Builder resourceType(String resourceType) {
+                this.resourceType = resourceType;
+                return this;
+            }
+
+            /**
+             * SideEffects.
+             */
+            public Builder sideEffects(java.util.List < String > sideEffects) {
+                this.sideEffects = sideEffects;
+                return this;
+            }
+
+            /**
+             * SupportedFilters.
+             */
+            public Builder supportedFilters(java.util.List < String > supportedFilters) {
+                this.supportedFilters = supportedFilters;
+                return this;
+            }
+
+            public SupportedResourceTypes build() {
+                return new SupportedResourceTypes(this);
+            } 
+
+        } 
+
+    }
+    public static class ResourceCleaner extends TeaModel {
+        @NameInMap("SupportedResourceTypes")
+        private java.util.List < SupportedResourceTypes> supportedResourceTypes;
+
+        private ResourceCleaner(Builder builder) {
+            this.supportedResourceTypes = builder.supportedResourceTypes;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResourceCleaner create() {
+            return builder().build();
+        }
+
+        /**
+         * @return supportedResourceTypes
+         */
+        public java.util.List < SupportedResourceTypes> getSupportedResourceTypes() {
+            return this.supportedResourceTypes;
+        }
+
+        public static final class Builder {
+            private java.util.List < SupportedResourceTypes> supportedResourceTypes; 
+
+            /**
+             * SupportedResourceTypes.
+             */
+            public Builder supportedResourceTypes(java.util.List < SupportedResourceTypes> supportedResourceTypes) {
+                this.supportedResourceTypes = supportedResourceTypes;
+                return this;
+            }
+
+            public ResourceCleaner build() {
+                return new ResourceCleaner(this);
+            } 
+
+        } 
+
+    }
+    public static class TemplateScratchSupportedResourceTypes extends TeaModel {
+        @NameInMap("ResourceType")
+        private String resourceType;
+
         @NameInMap("SourceResourceGroupSupported")
         private Boolean sourceResourceGroupSupported;
 
@@ -107,7 +249,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         @NameInMap("SourceTagSupported")
         private Boolean sourceTagSupported;
 
-        private SupportedResourceTypes(Builder builder) {
+        private TemplateScratchSupportedResourceTypes(Builder builder) {
             this.resourceType = builder.resourceType;
             this.sourceResourceGroupSupported = builder.sourceResourceGroupSupported;
             this.sourceResourcesSupported = builder.sourceResourcesSupported;
@@ -119,7 +261,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static SupportedResourceTypes create() {
+        public static TemplateScratchSupportedResourceTypes create() {
             return builder().build();
         }
 
@@ -205,8 +347,8 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
                 return this;
             }
 
-            public SupportedResourceTypes build() {
-                return new SupportedResourceTypes(this);
+            public TemplateScratchSupportedResourceTypes build() {
+                return new TemplateScratchSupportedResourceTypes(this);
             } 
 
         } 
@@ -214,7 +356,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
     }
     public static class TemplateScratch extends TeaModel {
         @NameInMap("SupportedResourceTypes")
-        private java.util.List < SupportedResourceTypes> supportedResourceTypes;
+        private java.util.List < TemplateScratchSupportedResourceTypes> supportedResourceTypes;
 
         private TemplateScratch(Builder builder) {
             this.supportedResourceTypes = builder.supportedResourceTypes;
@@ -231,17 +373,17 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         /**
          * @return supportedResourceTypes
          */
-        public java.util.List < SupportedResourceTypes> getSupportedResourceTypes() {
+        public java.util.List < TemplateScratchSupportedResourceTypes> getSupportedResourceTypes() {
             return this.supportedResourceTypes;
         }
 
         public static final class Builder {
-            private java.util.List < SupportedResourceTypes> supportedResourceTypes; 
+            private java.util.List < TemplateScratchSupportedResourceTypes> supportedResourceTypes; 
 
             /**
              * SupportedResourceTypes.
              */
-            public Builder supportedResourceTypes(java.util.List < SupportedResourceTypes> supportedResourceTypes) {
+            public Builder supportedResourceTypes(java.util.List < TemplateScratchSupportedResourceTypes> supportedResourceTypes) {
                 this.supportedResourceTypes = supportedResourceTypes;
                 return this;
             }
