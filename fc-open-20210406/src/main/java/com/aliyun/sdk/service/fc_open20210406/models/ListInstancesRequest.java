@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link RegisterEventSourceRequest} extends {@link RequestModel}
+ * {@link ListInstancesRequest} extends {@link RequestModel}
  *
- * <p>RegisterEventSourceRequest</p>
+ * <p>ListInstancesRequest</p>
  */
-public class RegisterEventSourceRequest extends Request {
+public class ListInstancesRequest extends Request {
     @Path
     @NameInMap("serviceName")
     @Validation(required = true)
@@ -24,33 +24,28 @@ public class RegisterEventSourceRequest extends Request {
 
     @Header
     @NameInMap("X-Fc-Account-Id")
+    @Validation(required = true)
     private String xFcAccountId;
 
-    @Header
-    @NameInMap("X-Fc-Date")
-    private String xFcDate;
+    @Query
+    @NameInMap("instanceIds")
+    private java.util.List < String > instanceIds;
 
-    @Header
-    @NameInMap("X-Fc-Trace-Id")
-    private String xFcTraceId;
-
-    @Body
-    @NameInMap("sourceArn")
-    @Validation(required = true)
-    private String sourceArn;
+    @Query
+    @NameInMap("limit")
+    private Integer limit;
 
     @Query
     @NameInMap("qualifier")
     private String qualifier;
 
-    private RegisterEventSourceRequest(Builder builder) {
+    private ListInstancesRequest(Builder builder) {
         super(builder);
         this.serviceName = builder.serviceName;
         this.functionName = builder.functionName;
         this.xFcAccountId = builder.xFcAccountId;
-        this.xFcDate = builder.xFcDate;
-        this.xFcTraceId = builder.xFcTraceId;
-        this.sourceArn = builder.sourceArn;
+        this.instanceIds = builder.instanceIds;
+        this.limit = builder.limit;
         this.qualifier = builder.qualifier;
     }
 
@@ -58,7 +53,7 @@ public class RegisterEventSourceRequest extends Request {
         return new Builder();
     }
 
-    public static RegisterEventSourceRequest create() {
+    public static ListInstancesRequest create() {
         return builder().build();
     }
 
@@ -89,24 +84,17 @@ public class RegisterEventSourceRequest extends Request {
     }
 
     /**
-     * @return xFcDate
+     * @return instanceIds
      */
-    public String getXFcDate() {
-        return this.xFcDate;
+    public java.util.List < String > getInstanceIds() {
+        return this.instanceIds;
     }
 
     /**
-     * @return xFcTraceId
+     * @return limit
      */
-    public String getXFcTraceId() {
-        return this.xFcTraceId;
-    }
-
-    /**
-     * @return sourceArn
-     */
-    public String getSourceArn() {
-        return this.sourceArn;
+    public Integer getLimit() {
+        return this.limit;
     }
 
     /**
@@ -116,32 +104,30 @@ public class RegisterEventSourceRequest extends Request {
         return this.qualifier;
     }
 
-    public static final class Builder extends Request.Builder<RegisterEventSourceRequest, Builder> {
+    public static final class Builder extends Request.Builder<ListInstancesRequest, Builder> {
         private String serviceName; 
         private String functionName; 
         private String xFcAccountId; 
-        private String xFcDate; 
-        private String xFcTraceId; 
-        private String sourceArn; 
+        private java.util.List < String > instanceIds; 
+        private Integer limit; 
         private String qualifier; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(RegisterEventSourceRequest request) {
+        private Builder(ListInstancesRequest request) {
             super(request);
             this.serviceName = request.serviceName;
             this.functionName = request.functionName;
             this.xFcAccountId = request.xFcAccountId;
-            this.xFcDate = request.xFcDate;
-            this.xFcTraceId = request.xFcTraceId;
-            this.sourceArn = request.sourceArn;
+            this.instanceIds = request.instanceIds;
+            this.limit = request.limit;
             this.qualifier = request.qualifier;
         } 
 
         /**
-         * 服务名称
+         * 服务的名称
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("serviceName", serviceName);
@@ -150,7 +136,7 @@ public class RegisterEventSourceRequest extends Request {
         }
 
         /**
-         * 函数名称
+         * 函数的名称
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -168,34 +154,31 @@ public class RegisterEventSourceRequest extends Request {
         }
 
         /**
-         * X-Fc-Date.
+         * 实例ID
          */
-        public Builder xFcDate(String xFcDate) {
-            this.putHeaderParameter("X-Fc-Date", xFcDate);
-            this.xFcDate = xFcDate;
+        public Builder instanceIds(java.util.List < String > instanceIds) {
+            this.putQueryParameter("instanceIds", instanceIds);
+            this.instanceIds = instanceIds;
             return this;
         }
 
         /**
-         * X-Fc-Trace-Id.
+         * 限定此次返回资源的数量，取值范围[0,1000]。
+         * <p>
+         * 
+         * 返回结果可以小于指定的数量，但不能多于指定的数量。
          */
-        public Builder xFcTraceId(String xFcTraceId) {
-            this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);
-            this.xFcTraceId = xFcTraceId;
+        public Builder limit(Integer limit) {
+            this.putQueryParameter("limit", limit);
+            this.limit = limit;
             return this;
         }
 
         /**
-         * 事件源资源标识符
-         */
-        public Builder sourceArn(String sourceArn) {
-            this.putBodyParameter("sourceArn", sourceArn);
-            this.sourceArn = sourceArn;
-            return this;
-        }
-
-        /**
-         * 别名或版本
+         * 服务的版本或别名。默认是LATEST。
+         * <p>
+         * 
+         * 此处的qualifier同InvokeFunction的qualifier含义一致，即调用ListInstances时指定qualifier=test查询出来的实例，就是调用InvokeFunction时qualifier=test链路上的实例。
          */
         public Builder qualifier(String qualifier) {
             this.putQueryParameter("qualifier", qualifier);
@@ -204,8 +187,8 @@ public class RegisterEventSourceRequest extends Request {
         }
 
         @Override
-        public RegisterEventSourceRequest build() {
-            return new RegisterEventSourceRequest(this);
+        public ListInstancesRequest build() {
+            return new ListInstancesRequest(this);
         } 
 
     } 

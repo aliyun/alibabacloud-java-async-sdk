@@ -40,7 +40,7 @@ public class ListTriggersRequest extends Request {
 
     @Query
     @NameInMap("nextToken")
-    private Integer nextToken;
+    private String nextToken;
 
     @Query
     @NameInMap("prefix")
@@ -121,7 +121,7 @@ public class ListTriggersRequest extends Request {
     /**
      * @return nextToken
      */
-    public Integer getNextToken() {
+    public String getNextToken() {
         return this.nextToken;
     }
 
@@ -146,7 +146,7 @@ public class ListTriggersRequest extends Request {
         private String xFcDate; 
         private String xFcTraceId; 
         private Integer limit; 
-        private Integer nextToken; 
+        private String nextToken; 
         private String prefix; 
         private String startKey; 
 
@@ -224,7 +224,7 @@ public class ListTriggersRequest extends Request {
         /**
          * 用来返回更多结果。第一次查询不需要提供这个参数，后续查询的token从返回结果中获取
          */
-        public Builder nextToken(Integer nextToken) {
+        public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
             this.nextToken = nextToken;
             return this;

@@ -34,6 +34,7 @@ public class GetFunctionOnDemandConfigRequest extends Request {
 
     @Query
     @NameInMap("qualifier")
+    @Validation(required = true)
     private String qualifier;
 
     private GetFunctionOnDemandConfigRequest(Builder builder) {

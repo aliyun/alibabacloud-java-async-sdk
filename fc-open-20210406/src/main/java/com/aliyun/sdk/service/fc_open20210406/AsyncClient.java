@@ -92,6 +92,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListFunctionsResponse> listFunctions(ListFunctionsRequest request);
 
+    CompletableFuture<ListInstancesResponse> listInstances(ListInstancesRequest request);
+
     CompletableFuture<ListLayerVersionsResponse> listLayerVersions(ListLayerVersionsRequest request);
 
     CompletableFuture<ListLayersResponse> listLayers(ListLayersRequest request);

@@ -105,6 +105,12 @@ public class ListTriggersResponseBody extends TeaModel {
         @NameInMap("triggerType")
         private String triggerType;
 
+        @NameInMap("urlInternet")
+        private String urlInternet;
+
+        @NameInMap("urlIntranet")
+        private String urlIntranet;
+
         private Triggers(Builder builder) {
             this.createdTime = builder.createdTime;
             this.description = builder.description;
@@ -117,6 +123,8 @@ public class ListTriggersResponseBody extends TeaModel {
             this.triggerId = builder.triggerId;
             this.triggerName = builder.triggerName;
             this.triggerType = builder.triggerType;
+            this.urlInternet = builder.urlInternet;
+            this.urlIntranet = builder.urlIntranet;
         }
 
         public static Builder builder() {
@@ -204,6 +212,20 @@ public class ListTriggersResponseBody extends TeaModel {
             return this.triggerType;
         }
 
+        /**
+         * @return urlInternet
+         */
+        public String getUrlInternet() {
+            return this.urlInternet;
+        }
+
+        /**
+         * @return urlIntranet
+         */
+        public String getUrlIntranet() {
+            return this.urlIntranet;
+        }
+
         public static final class Builder {
             private String createdTime; 
             private String description; 
@@ -216,6 +238,8 @@ public class ListTriggersResponseBody extends TeaModel {
             private String triggerId; 
             private String triggerName; 
             private String triggerType; 
+            private String urlInternet; 
+            private String urlIntranet; 
 
             /**
              * 创建时间
@@ -302,6 +326,22 @@ public class ListTriggersResponseBody extends TeaModel {
              */
             public Builder triggerType(String triggerType) {
                 this.triggerType = triggerType;
+                return this;
+            }
+
+            /**
+             * 公网域名地址。在互联网可以通过HTTP协议或者HTTPS协议访问HTTP Trigger。
+             */
+            public Builder urlInternet(String urlInternet) {
+                this.urlInternet = urlInternet;
+                return this;
+            }
+
+            /**
+             * 私网域名地址。在VPC可以通过HTTP协议或者HTTPS协议访问HTTP Trigger。
+             */
+            public Builder urlIntranet(String urlIntranet) {
+                this.urlIntranet = urlIntranet;
                 return this;
             }
 

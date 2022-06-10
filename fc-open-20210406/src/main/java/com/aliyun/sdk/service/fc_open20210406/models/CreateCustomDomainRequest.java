@@ -30,6 +30,7 @@ public class CreateCustomDomainRequest extends Request {
 
     @Body
     @NameInMap("domainName")
+    @Validation(required = true)
     private String domainName;
 
     @Body

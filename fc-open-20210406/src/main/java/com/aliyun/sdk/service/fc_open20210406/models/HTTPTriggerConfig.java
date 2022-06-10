@@ -50,7 +50,7 @@ public class HTTPTriggerConfig extends TeaModel {
         private java.util.List < String > methods; 
 
         /**
-         * authType
+         * 认证类型
          */
         public Builder authType(String authType) {
             this.authType = authType;
@@ -58,7 +58,7 @@ public class HTTPTriggerConfig extends TeaModel {
         }
 
         /**
-         * methods
+         * 允许的HTTP方法列表
          */
         public Builder methods(java.util.List < String > methods) {
             this.methods = methods;

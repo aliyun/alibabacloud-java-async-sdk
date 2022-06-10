@@ -15,8 +15,12 @@ public class GetAccountSettingsResponseBody extends TeaModel {
     @NameInMap("availableAZs")
     private java.util.List < String > availableAZs;
 
+    @NameInMap("defaultRole")
+    private String defaultRole;
+
     private GetAccountSettingsResponseBody(Builder builder) {
         this.availableAZs = builder.availableAZs;
+        this.defaultRole = builder.defaultRole;
     }
 
     public static Builder builder() {
@@ -34,14 +38,30 @@ public class GetAccountSettingsResponseBody extends TeaModel {
         return this.availableAZs;
     }
 
+    /**
+     * @return defaultRole
+     */
+    public String getDefaultRole() {
+        return this.defaultRole;
+    }
+
     public static final class Builder {
         private java.util.List < String > availableAZs; 
+        private String defaultRole; 
 
         /**
          * 可用区列表
          */
         public Builder availableAZs(java.util.List < String > availableAZs) {
             this.availableAZs = availableAZs;
+            return this;
+        }
+
+        /**
+         * 默认服务角色
+         */
+        public Builder defaultRole(String defaultRole) {
+            this.defaultRole = defaultRole;
             return this;
         }
 

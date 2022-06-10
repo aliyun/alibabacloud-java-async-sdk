@@ -38,10 +38,12 @@ public class PutFunctionOnDemandConfigRequest extends Request {
 
     @Body
     @NameInMap("maximumInstanceCount")
+    @Validation(required = true)
     private Long maximumInstanceCount;
 
     @Query
     @NameInMap("qualifier")
+    @Validation(required = true)
     private String qualifier;
 
     private PutFunctionOnDemandConfigRequest(Builder builder) {

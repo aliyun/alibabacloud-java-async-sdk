@@ -30,6 +30,7 @@ public class CreateVpcBindingRequest extends Request {
 
     @Body
     @NameInMap("vpcId")
+    @Validation(required = true)
     private String vpcId;
 
     private CreateVpcBindingRequest(Builder builder) {

@@ -38,6 +38,7 @@ public class DeleteFunctionOnDemandConfigRequest extends Request {
 
     @Query
     @NameInMap("qualifier")
+    @Validation(required = true)
     private String qualifier;
 
     private DeleteFunctionOnDemandConfigRequest(Builder builder) {
@@ -192,7 +193,7 @@ public class DeleteFunctionOnDemandConfigRequest extends Request {
         }
 
         /**
-         * qualifier.
+         * 服务别名或LATEST，不支持版本。
          */
         public Builder qualifier(String qualifier) {
             this.putQueryParameter("qualifier", qualifier);

@@ -100,6 +100,7 @@ public class CreateFunctionRequest extends Request {
 
     @Body
     @NameInMap("runtime")
+    @Validation(required = true)
     private String runtime;
 
     @Body

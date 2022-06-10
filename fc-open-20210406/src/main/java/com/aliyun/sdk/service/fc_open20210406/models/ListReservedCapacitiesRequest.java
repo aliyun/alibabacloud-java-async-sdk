@@ -137,7 +137,7 @@ public class ListReservedCapacitiesRequest extends Request {
         }
 
         /**
-         * limit.
+         * 一次返回的数量，取值范围[1, 100]
          */
         public Builder limit(String limit) {
             this.putQueryParameter("limit", limit);

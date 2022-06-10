@@ -24,11 +24,15 @@ public class CustomContainerConfig extends TeaModel {
     @NameInMap("image")
     private String image;
 
+    @NameInMap("instanceID")
+    private String instanceID;
+
     private CustomContainerConfig(Builder builder) {
         this.accelerationType = builder.accelerationType;
         this.args = builder.args;
         this.command = builder.command;
         this.image = builder.image;
+        this.instanceID = builder.instanceID;
     }
 
     public static Builder builder() {
@@ -67,14 +71,22 @@ public class CustomContainerConfig extends TeaModel {
         return this.image;
     }
 
+    /**
+     * @return instanceID
+     */
+    public String getInstanceID() {
+        return this.instanceID;
+    }
+
     public static final class Builder {
         private String accelerationType; 
         private String args; 
         private String command; 
         private String image; 
+        private String instanceID; 
 
         /**
-         * 镜像加速类型，取值Default为开启加速，None为关闭加速，默认关闭
+         * 镜像加速类型，取值Default为开启加速，None为关闭加速，默认开启
          */
         public Builder accelerationType(String accelerationType) {
             this.accelerationType = accelerationType;
@@ -102,6 +114,14 @@ public class CustomContainerConfig extends TeaModel {
          */
         public Builder image(String image) {
             this.image = image;
+            return this;
+        }
+
+        /**
+         * ACR企业版镜像仓库ID，使用ACR企业版镜像时须传入
+         */
+        public Builder instanceID(String instanceID) {
+            this.instanceID = instanceID;
             return this;
         }
 

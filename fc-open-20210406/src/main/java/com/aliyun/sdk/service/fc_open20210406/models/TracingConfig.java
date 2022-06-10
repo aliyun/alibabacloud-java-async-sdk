@@ -12,17 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>TracingConfig</p>
  */
 public class TracingConfig extends TeaModel {
-    @NameInMap("jaegerConfig")
-    private JaegerConfig jaegerConfig;
-
     @NameInMap("params")
+    @Validation(required = true)
     private java.util.Map < String, String > params;
 
     @NameInMap("type")
+    @Validation(required = true)
     private String type;
 
     private TracingConfig(Builder builder) {
-        this.jaegerConfig = builder.jaegerConfig;
         this.params = builder.params;
         this.type = builder.type;
     }
@@ -33,13 +31,6 @@ public class TracingConfig extends TeaModel {
 
     public static TracingConfig create() {
         return builder().build();
-    }
-
-    /**
-     * @return jaegerConfig
-     */
-    public JaegerConfig getJaegerConfig() {
-        return this.jaegerConfig;
     }
 
     /**
@@ -57,20 +48,11 @@ public class TracingConfig extends TeaModel {
     }
 
     public static final class Builder {
-        private JaegerConfig jaegerConfig; 
         private java.util.Map < String, String > params; 
         private String type; 
 
         /**
-         * jaegerConfig.
-         */
-        public Builder jaegerConfig(JaegerConfig jaegerConfig) {
-            this.jaegerConfig = jaegerConfig;
-            return this;
-        }
-
-        /**
-         * 链路追踪参数
+         * 链路追踪参数。当协议类型为 Jaeger 时，参数为 map[string]string，其中 key 为 "endpoint"，value 为您的链路追踪内网接入点。例如 endpoint: http://tracing-analysis-dc-hz.aliyuncs.com/adapt_xxx/api/otlp/traces
          */
         public Builder params(java.util.Map < String, String > params) {
             this.params = params;
@@ -78,7 +60,7 @@ public class TracingConfig extends TeaModel {
         }
 
         /**
-         * 链路追踪类型
+         * 链路追踪协议类型，目前只支持 Jaeger
          */
         public Builder type(String type) {
             this.type = type;

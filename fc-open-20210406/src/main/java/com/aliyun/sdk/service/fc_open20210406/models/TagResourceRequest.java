@@ -26,10 +26,12 @@ public class TagResourceRequest extends Request {
 
     @Body
     @NameInMap("resourceArn")
+    @Validation(required = true)
     private String resourceArn;
 
     @Body
     @NameInMap("tags")
+    @Validation(required = true)
     private java.util.Map < String, String > tags;
 
     private TagResourceRequest(Builder builder) {

@@ -16,12 +16,16 @@ public class TLSConfig extends TeaModel {
     @Validation(required = true)
     private java.util.List < String > cipherSuites;
 
+    @NameInMap("maxVersion")
+    private String maxVersion;
+
     @NameInMap("minVersion")
     @Validation(required = true)
     private String minVersion;
 
     private TLSConfig(Builder builder) {
         this.cipherSuites = builder.cipherSuites;
+        this.maxVersion = builder.maxVersion;
         this.minVersion = builder.minVersion;
     }
 
@@ -41,6 +45,13 @@ public class TLSConfig extends TeaModel {
     }
 
     /**
+     * @return maxVersion
+     */
+    public String getMaxVersion() {
+        return this.maxVersion;
+    }
+
+    /**
      * @return minVersion
      */
     public String getMinVersion() {
@@ -49,6 +60,7 @@ public class TLSConfig extends TeaModel {
 
     public static final class Builder {
         private java.util.List < String > cipherSuites; 
+        private String maxVersion; 
         private String minVersion; 
 
         /**
@@ -56,6 +68,14 @@ public class TLSConfig extends TeaModel {
          */
         public Builder cipherSuites(java.util.List < String > cipherSuites) {
             this.cipherSuites = cipherSuites;
+            return this;
+        }
+
+        /**
+         * TLS最大版本号
+         */
+        public Builder maxVersion(String maxVersion) {
+            this.maxVersion = maxVersion;
             return this;
         }
 
