@@ -7,42 +7,30 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeDiagnoseReportRequest} extends {@link RequestModel}
+ * {@link DescribeDynamicSettingsRequest} extends {@link RequestModel}
  *
- * <p>DescribeDiagnoseReportRequest</p>
+ * <p>DescribeDynamicSettingsRequest</p>
  */
-public class DescribeDiagnoseReportRequest extends Request {
+public class DescribeDynamicSettingsRequest extends Request {
     @Path
     @NameInMap("InstanceId")
-    @Validation(required = true)
     private String instanceId;
-
-    @Path
-    @NameInMap("ReportId")
-    @Validation(required = true)
-    private String reportId;
 
     @Body
     @NameInMap("body")
     private String body;
 
-    @Query
-    @NameInMap("lang")
-    private String lang;
-
-    private DescribeDiagnoseReportRequest(Builder builder) {
+    private DescribeDynamicSettingsRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
-        this.reportId = builder.reportId;
         this.body = builder.body;
-        this.lang = builder.lang;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DescribeDiagnoseReportRequest create() {
+    public static DescribeDynamicSettingsRequest create() {
         return builder().build();
     }
 
@@ -59,42 +47,24 @@ public class DescribeDiagnoseReportRequest extends Request {
     }
 
     /**
-     * @return reportId
-     */
-    public String getReportId() {
-        return this.reportId;
-    }
-
-    /**
      * @return body
      */
     public String getBody() {
         return this.body;
     }
 
-    /**
-     * @return lang
-     */
-    public String getLang() {
-        return this.lang;
-    }
-
-    public static final class Builder extends Request.Builder<DescribeDiagnoseReportRequest, Builder> {
+    public static final class Builder extends Request.Builder<DescribeDynamicSettingsRequest, Builder> {
         private String instanceId; 
-        private String reportId; 
         private String body; 
-        private String lang; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeDiagnoseReportRequest request) {
+        private Builder(DescribeDynamicSettingsRequest request) {
             super(request);
             this.instanceId = request.instanceId;
-            this.reportId = request.reportId;
             this.body = request.body;
-            this.lang = request.lang;
         } 
 
         /**
@@ -107,15 +77,6 @@ public class DescribeDiagnoseReportRequest extends Request {
         }
 
         /**
-         * ReportId.
-         */
-        public Builder reportId(String reportId) {
-            this.putPathParameter("ReportId", reportId);
-            this.reportId = reportId;
-            return this;
-        }
-
-        /**
          * body.
          */
         public Builder body(String body) {
@@ -124,18 +85,9 @@ public class DescribeDiagnoseReportRequest extends Request {
             return this;
         }
 
-        /**
-         * lang.
-         */
-        public Builder lang(String lang) {
-            this.putQueryParameter("lang", lang);
-            this.lang = lang;
-            return this;
-        }
-
         @Override
-        public DescribeDiagnoseReportRequest build() {
-            return new DescribeDiagnoseReportRequest(this);
+        public DescribeDynamicSettingsRequest build() {
+            return new DescribeDynamicSettingsRequest(this);
         } 
 
     } 

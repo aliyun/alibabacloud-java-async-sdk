@@ -7,19 +7,18 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListSearchLogRequest} extends {@link RequestModel}
+ * {@link ListActionRecordsRequest} extends {@link RequestModel}
  *
- * <p>ListSearchLogRequest</p>
+ * <p>ListActionRecordsRequest</p>
  */
-public class ListSearchLogRequest extends Request {
+public class ListActionRecordsRequest extends Request {
     @Path
     @NameInMap("InstanceId")
-    @Validation(required = true)
     private String instanceId;
 
     @Query
-    @NameInMap("beginTime")
-    private Long beginTime;
+    @NameInMap("actionNames")
+    private String actionNames;
 
     @Body
     @NameInMap("body")
@@ -30,41 +29,48 @@ public class ListSearchLogRequest extends Request {
     private Long endTime;
 
     @Query
+    @NameInMap("filter")
+    private String filter;
+
+    @Query
     @NameInMap("page")
     private Integer page;
 
     @Query
-    @NameInMap("query")
-    @Validation(required = true)
-    private String query;
+    @NameInMap("requestId")
+    private String requestId;
 
     @Query
     @NameInMap("size")
-    @Validation(maximum = 50, minimum = 1)
     private Integer size;
 
     @Query
-    @NameInMap("type")
-    @Validation(required = true)
-    private String type;
+    @NameInMap("startTime")
+    private Long startTime;
 
-    private ListSearchLogRequest(Builder builder) {
+    @Query
+    @NameInMap("userId")
+    private String userId;
+
+    private ListActionRecordsRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
-        this.beginTime = builder.beginTime;
+        this.actionNames = builder.actionNames;
         this.body = builder.body;
         this.endTime = builder.endTime;
+        this.filter = builder.filter;
         this.page = builder.page;
-        this.query = builder.query;
+        this.requestId = builder.requestId;
         this.size = builder.size;
-        this.type = builder.type;
+        this.startTime = builder.startTime;
+        this.userId = builder.userId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ListSearchLogRequest create() {
+    public static ListActionRecordsRequest create() {
         return builder().build();
     }
 
@@ -81,10 +87,10 @@ public class ListSearchLogRequest extends Request {
     }
 
     /**
-     * @return beginTime
+     * @return actionNames
      */
-    public Long getBeginTime() {
-        return this.beginTime;
+    public String getActionNames() {
+        return this.actionNames;
     }
 
     /**
@@ -102,6 +108,13 @@ public class ListSearchLogRequest extends Request {
     }
 
     /**
+     * @return filter
+     */
+    public String getFilter() {
+        return this.filter;
+    }
+
+    /**
      * @return page
      */
     public Integer getPage() {
@@ -109,10 +122,10 @@ public class ListSearchLogRequest extends Request {
     }
 
     /**
-     * @return query
+     * @return requestId
      */
-    public String getQuery() {
-        return this.query;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     /**
@@ -123,40 +136,51 @@ public class ListSearchLogRequest extends Request {
     }
 
     /**
-     * @return type
+     * @return startTime
      */
-    public String getType() {
-        return this.type;
+    public Long getStartTime() {
+        return this.startTime;
     }
 
-    public static final class Builder extends Request.Builder<ListSearchLogRequest, Builder> {
+    /**
+     * @return userId
+     */
+    public String getUserId() {
+        return this.userId;
+    }
+
+    public static final class Builder extends Request.Builder<ListActionRecordsRequest, Builder> {
         private String instanceId; 
-        private Long beginTime; 
+        private String actionNames; 
         private String body; 
         private Long endTime; 
+        private String filter; 
         private Integer page; 
-        private String query; 
+        private String requestId; 
         private Integer size; 
-        private String type; 
+        private Long startTime; 
+        private String userId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListSearchLogRequest request) {
+        private Builder(ListActionRecordsRequest request) {
             super(request);
             this.instanceId = request.instanceId;
-            this.beginTime = request.beginTime;
+            this.actionNames = request.actionNames;
             this.body = request.body;
             this.endTime = request.endTime;
+            this.filter = request.filter;
             this.page = request.page;
-            this.query = request.query;
+            this.requestId = request.requestId;
             this.size = request.size;
-            this.type = request.type;
+            this.startTime = request.startTime;
+            this.userId = request.userId;
         } 
 
         /**
-         * InstanceId.
+         * A short description of struct
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -165,11 +189,11 @@ public class ListSearchLogRequest extends Request {
         }
 
         /**
-         * beginTime.
+         * actionNames.
          */
-        public Builder beginTime(Long beginTime) {
-            this.putQueryParameter("beginTime", beginTime);
-            this.beginTime = beginTime;
+        public Builder actionNames(String actionNames) {
+            this.putQueryParameter("actionNames", actionNames);
+            this.actionNames = actionNames;
             return this;
         }
 
@@ -192,6 +216,15 @@ public class ListSearchLogRequest extends Request {
         }
 
         /**
+         * filter.
+         */
+        public Builder filter(String filter) {
+            this.putQueryParameter("filter", filter);
+            this.filter = filter;
+            return this;
+        }
+
+        /**
          * page.
          */
         public Builder page(Integer page) {
@@ -201,11 +234,11 @@ public class ListSearchLogRequest extends Request {
         }
 
         /**
-         * query.
+         * requestId.
          */
-        public Builder query(String query) {
-            this.putQueryParameter("query", query);
-            this.query = query;
+        public Builder requestId(String requestId) {
+            this.putQueryParameter("requestId", requestId);
+            this.requestId = requestId;
             return this;
         }
 
@@ -219,17 +252,26 @@ public class ListSearchLogRequest extends Request {
         }
 
         /**
-         * type.
+         * startTime.
          */
-        public Builder type(String type) {
-            this.putQueryParameter("type", type);
-            this.type = type;
+        public Builder startTime(Long startTime) {
+            this.putQueryParameter("startTime", startTime);
+            this.startTime = startTime;
+            return this;
+        }
+
+        /**
+         * userId.
+         */
+        public Builder userId(String userId) {
+            this.putQueryParameter("userId", userId);
+            this.userId = userId;
             return this;
         }
 
         @Override
-        public ListSearchLogRequest build() {
-            return new ListSearchLogRequest(this);
+        public ListActionRecordsRequest build() {
+            return new ListActionRecordsRequest(this);
         } 
 
     } 

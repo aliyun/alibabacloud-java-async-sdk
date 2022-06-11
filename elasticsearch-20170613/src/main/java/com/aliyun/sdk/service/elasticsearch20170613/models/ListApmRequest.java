@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListApmRequest</p>
  */
 public class ListApmRequest extends Request {
+    @Body
+    @NameInMap("body")
+    private String body;
+
     @Query
     @NameInMap("description")
     private String description;
@@ -34,6 +38,7 @@ public class ListApmRequest extends Request {
 
     private ListApmRequest(Builder builder) {
         super(builder);
+        this.body = builder.body;
         this.description = builder.description;
         this.instanceId = builder.instanceId;
         this.output = builder.output;
@@ -52,6 +57,13 @@ public class ListApmRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return body
+     */
+    public String getBody() {
+        return this.body;
     }
 
     /**
@@ -90,6 +102,7 @@ public class ListApmRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListApmRequest, Builder> {
+        private String body; 
         private String description; 
         private String instanceId; 
         private String output; 
@@ -100,14 +113,24 @@ public class ListApmRequest extends Request {
             super();
         } 
 
-        private Builder(ListApmRequest response) {
-            super(response);
-            this.description = response.description;
-            this.instanceId = response.instanceId;
-            this.output = response.output;
-            this.page = response.page;
-            this.size = response.size;
+        private Builder(ListApmRequest request) {
+            super(request);
+            this.body = request.body;
+            this.description = request.description;
+            this.instanceId = request.instanceId;
+            this.output = request.output;
+            this.page = request.page;
+            this.size = request.size;
         } 
+
+        /**
+         * body.
+         */
+        public Builder body(String body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
+            return this;
+        }
 
         /**
          * description.

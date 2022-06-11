@@ -114,14 +114,14 @@ public class UpdateApmRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateApmRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.description = response.description;
-            this.outputES = response.outputES;
-            this.outputESPassword = response.outputESPassword;
-            this.outputESUserName = response.outputESUserName;
-            this.token = response.token;
+        private Builder(UpdateApmRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.description = request.description;
+            this.outputES = request.outputES;
+            this.outputESPassword = request.outputESPassword;
+            this.outputESUserName = request.outputESUserName;
+            this.token = request.token;
         } 
 
         /**

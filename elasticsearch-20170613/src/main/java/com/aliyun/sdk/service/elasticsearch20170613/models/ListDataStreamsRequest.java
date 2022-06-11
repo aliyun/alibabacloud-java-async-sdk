@@ -17,6 +17,10 @@ public class ListDataStreamsRequest extends Request {
     @Validation(required = true)
     private String instanceId;
 
+    @Body
+    @NameInMap("body")
+    private String body;
+
     @Query
     @NameInMap("isManaged")
     private Boolean isManaged;
@@ -28,6 +32,7 @@ public class ListDataStreamsRequest extends Request {
     private ListDataStreamsRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.body = builder.body;
         this.isManaged = builder.isManaged;
         this.name = builder.name;
     }
@@ -53,6 +58,13 @@ public class ListDataStreamsRequest extends Request {
     }
 
     /**
+     * @return body
+     */
+    public String getBody() {
+        return this.body;
+    }
+
+    /**
      * @return isManaged
      */
     public Boolean getIsManaged() {
@@ -68,6 +80,7 @@ public class ListDataStreamsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListDataStreamsRequest, Builder> {
         private String instanceId; 
+        private String body; 
         private Boolean isManaged; 
         private String name; 
 
@@ -75,11 +88,12 @@ public class ListDataStreamsRequest extends Request {
             super();
         } 
 
-        private Builder(ListDataStreamsRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.isManaged = response.isManaged;
-            this.name = response.name;
+        private Builder(ListDataStreamsRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.body = request.body;
+            this.isManaged = request.isManaged;
+            this.name = request.name;
         } 
 
         /**
@@ -88,6 +102,15 @@ public class ListDataStreamsRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        public Builder body(String body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
             return this;
         }
 

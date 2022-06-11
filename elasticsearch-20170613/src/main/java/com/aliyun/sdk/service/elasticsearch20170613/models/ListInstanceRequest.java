@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListInstanceRequest</p>
  */
 public class ListInstanceRequest extends Request {
+    @Body
+    @NameInMap("body")
+    private String body;
+
     @Query
     @NameInMap("description")
     private String description;
@@ -58,6 +62,7 @@ public class ListInstanceRequest extends Request {
 
     private ListInstanceRequest(Builder builder) {
         super(builder);
+        this.body = builder.body;
         this.description = builder.description;
         this.esVersion = builder.esVersion;
         this.instanceCategory = builder.instanceCategory;
@@ -82,6 +87,13 @@ public class ListInstanceRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return body
+     */
+    public String getBody() {
+        return this.body;
     }
 
     /**
@@ -162,6 +174,7 @@ public class ListInstanceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListInstanceRequest, Builder> {
+        private String body; 
         private String description; 
         private String esVersion; 
         private String instanceCategory; 
@@ -178,20 +191,30 @@ public class ListInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(ListInstanceRequest response) {
-            super(response);
-            this.description = response.description;
-            this.esVersion = response.esVersion;
-            this.instanceCategory = response.instanceCategory;
-            this.instanceId = response.instanceId;
-            this.page = response.page;
-            this.paymentType = response.paymentType;
-            this.resourceGroupId = response.resourceGroupId;
-            this.size = response.size;
-            this.tags = response.tags;
-            this.vpcId = response.vpcId;
-            this.zoneId = response.zoneId;
+        private Builder(ListInstanceRequest request) {
+            super(request);
+            this.body = request.body;
+            this.description = request.description;
+            this.esVersion = request.esVersion;
+            this.instanceCategory = request.instanceCategory;
+            this.instanceId = request.instanceId;
+            this.page = request.page;
+            this.paymentType = request.paymentType;
+            this.resourceGroupId = request.resourceGroupId;
+            this.size = request.size;
+            this.tags = request.tags;
+            this.vpcId = request.vpcId;
+            this.zoneId = request.zoneId;
         } 
+
+        /**
+         * body.
+         */
+        public Builder body(String body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
+            return this;
+        }
 
         /**
          * description.

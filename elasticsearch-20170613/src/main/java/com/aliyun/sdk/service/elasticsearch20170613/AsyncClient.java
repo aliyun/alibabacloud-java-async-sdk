@@ -42,13 +42,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateComponentIndexResponse> createComponentIndex(CreateComponentIndexRequest request);
 
-    CompletableFuture<CreateDataSourceResponse> createDataSource(CreateDataSourceRequest request);
-
     CompletableFuture<CreateDataStreamResponse> createDataStream(CreateDataStreamRequest request);
 
     CompletableFuture<CreateDataTasksResponse> createDataTasks(CreateDataTasksRequest request);
-
-    CompletableFuture<CreateFlowResponse> createFlow(CreateFlowRequest request);
 
     CompletableFuture<CreateILMPolicyResponse> createILMPolicy(CreateILMPolicyRequest request);
 
@@ -56,17 +52,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateLogstashResponse> createLogstash(CreateLogstashRequest request);
 
-    CompletableFuture<CreatePipelineResponse> createPipeline(CreatePipelineRequest request);
-
-    CompletableFuture<CreatePipelineConfigurationResponse> createPipelineConfiguration(CreatePipelineConfigurationRequest request);
-
     CompletableFuture<CreatePipelinesResponse> createPipelines(CreatePipelinesRequest request);
 
-    CompletableFuture<CreateReleaseResponse> createRelease(CreateReleaseRequest request);
-
     CompletableFuture<CreateSnapshotResponse> createSnapshot(CreateSnapshotRequest request);
-
-    CompletableFuture<CreateTaskResponse> createTask(CreateTaskRequest request);
 
     CompletableFuture<CreateVpcEndpointResponse> createVpcEndpoint(CreateVpcEndpointRequest request);
 
@@ -77,8 +65,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteComponentIndexResponse> deleteComponentIndex(DeleteComponentIndexRequest request);
 
     CompletableFuture<DeleteConnectedClusterResponse> deleteConnectedCluster(DeleteConnectedClusterRequest request);
-
-    CompletableFuture<DeleteDataSourceResponse> deleteDataSource(DeleteDataSourceRequest request);
 
     CompletableFuture<DeleteDataStreamResponse> deleteDataStream(DeleteDataStreamRequest request);
 
@@ -94,15 +80,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteLogstashResponse> deleteLogstash(DeleteLogstashRequest request);
 
-    CompletableFuture<DeletePipelineResponse> deletePipeline(DeletePipelineRequest request);
-
-    CompletableFuture<DeletePipelineConfigurationResponse> deletePipelineConfiguration(DeletePipelineConfigurationRequest request);
-
     CompletableFuture<DeletePipelinesResponse> deletePipelines(DeletePipelinesRequest request);
 
     CompletableFuture<DeleteSnapshotRepoResponse> deleteSnapshotRepo(DeleteSnapshotRepoRequest request);
-
-    CompletableFuture<DeleteTaskResponse> deleteTask(DeleteTaskRequest request);
 
     CompletableFuture<DeleteVpcEndpointResponse> deleteVpcEndpoint(DeleteVpcEndpointRequest request);
 
@@ -116,13 +96,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeConnectableClustersResponse> describeConnectableClusters(DescribeConnectableClustersRequest request);
 
-    CompletableFuture<DescribeDataSourceResponse> describeDataSource(DescribeDataSourceRequest request);
-
     CompletableFuture<DescribeDeprecatedTemplateResponse> describeDeprecatedTemplate(DescribeDeprecatedTemplateRequest request);
 
     CompletableFuture<DescribeDiagnoseReportResponse> describeDiagnoseReport(DescribeDiagnoseReportRequest request);
 
     CompletableFuture<DescribeDiagnosisSettingsResponse> describeDiagnosisSettings(DescribeDiagnosisSettingsRequest request);
+
+    CompletableFuture<DescribeDynamicSettingsResponse> describeDynamicSettings(DescribeDynamicSettingsRequest request);
 
     CompletableFuture<DescribeElasticsearchHealthResponse> describeElasticsearchHealth(DescribeElasticsearchHealthRequest request);
 
@@ -140,8 +120,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribePipelineManagementConfigResponse> describePipelineManagementConfig(DescribePipelineManagementConfigRequest request);
 
-    CompletableFuture<DescribeProjectResponse> describeProject(DescribeProjectRequest request);
-
     CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request);
 
     CompletableFuture<DescribeSnapshotSettingResponse> describeSnapshotSetting(DescribeSnapshotSettingRequest request);
@@ -155,8 +133,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<EstimatedLogstashRestartTimeResponse> estimatedLogstashRestartTime(EstimatedLogstashRestartTimeRequest request);
 
     CompletableFuture<EstimatedRestartTimeResponse> estimatedRestartTime(EstimatedRestartTimeRequest request);
-
-    CompletableFuture<GetAvailableComputeUnitResponse> getAvailableComputeUnit(GetAvailableComputeUnitRequest request);
 
     CompletableFuture<GetClusterDataInformationResponse> getClusterDataInformation(GetClusterDataInformationRequest request);
 
@@ -173,8 +149,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetRegionConfigurationResponse> getRegionConfiguration(GetRegionConfigurationRequest request);
 
     CompletableFuture<GetSuggestShrinkableNodesResponse> getSuggestShrinkableNodes(GetSuggestShrinkableNodesRequest request);
-
-    CompletableFuture<GetTaskResponse> getTask(GetTaskRequest request);
 
     CompletableFuture<GetTransferableNodesResponse> getTransferableNodes(GetTransferableNodesRequest request);
 
@@ -198,6 +172,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListAckNamespacesResponse> listAckNamespaces(ListAckNamespacesRequest request);
 
+    CompletableFuture<ListActionRecordsResponse> listActionRecords(ListActionRecordsRequest request);
+
     CompletableFuture<ListAllNodeResponse> listAllNode(ListAllNodeRequest request);
 
     CompletableFuture<ListAlternativeSnapshotReposResponse> listAlternativeSnapshotRepos(ListAlternativeSnapshotReposRequest request);
@@ -211,8 +187,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListComponentIndicesResponse> listComponentIndices(ListComponentIndicesRequest request);
 
     CompletableFuture<ListConnectedClustersResponse> listConnectedClusters(ListConnectedClustersRequest request);
-
-    CompletableFuture<ListDataSourceResponse> listDataSource(ListDataSourceRequest request);
 
     CompletableFuture<ListDataStreamsResponse> listDataStreams(ListDataStreamsRequest request);
 
@@ -242,8 +216,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListInstanceResponse> listInstance(ListInstanceRequest request);
 
-    CompletableFuture<ListInstanceHistoryEventsResponse> listInstanceHistoryEvents(ListInstanceHistoryEventsRequest request);
-
     CompletableFuture<ListInstanceIndicesResponse> listInstanceIndices(ListInstanceIndicesRequest request);
 
     CompletableFuture<ListKibanaPluginsResponse> listKibanaPlugins(ListKibanaPluginsRequest request);
@@ -258,13 +230,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListPipelineResponse> listPipeline(ListPipelineRequest request);
 
-    CompletableFuture<ListPipelineConfigurationResponse> listPipelineConfiguration(ListPipelineConfigurationRequest request);
-
     CompletableFuture<ListPipelineIdsResponse> listPipelineIds(ListPipelineIdsRequest request);
 
     CompletableFuture<ListPluginsResponse> listPlugins(ListPluginsRequest request);
-
-    CompletableFuture<ListProjectResponse> listProject(ListProjectRequest request);
 
     CompletableFuture<ListSearchLogResponse> listSearchLog(ListSearchLogRequest request);
 
@@ -296,8 +264,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<PostEmonTryAlarmRuleResponse> postEmonTryAlarmRule(PostEmonTryAlarmRuleRequest request);
 
-    CompletableFuture<RebootInstanceNodeResponse> rebootInstanceNode(RebootInstanceNodeRequest request);
-
     CompletableFuture<RecommendTemplatesResponse> recommendTemplates(RecommendTemplatesRequest request);
 
     CompletableFuture<ReinstallCollectorResponse> reinstallCollector(ReinstallCollectorRequest request);
@@ -320,13 +286,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RolloverDataStreamResponse> rolloverDataStream(RolloverDataStreamRequest request);
 
-    CompletableFuture<RpcListInstanceResponse> rpcListInstance(RpcListInstanceRequest request);
-
-    CompletableFuture<RunPipelineResponse> runPipeline(RunPipelineRequest request);
-
     CompletableFuture<RunPipelinesResponse> runPipelines(RunPipelinesRequest request);
-
-    CompletableFuture<RunTaskResponse> runTask(RunTaskRequest request);
 
     CompletableFuture<ShrinkNodeResponse> shrinkNode(ShrinkNodeRequest request);
 
@@ -338,11 +298,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<StopCollectorResponse> stopCollector(StopCollectorRequest request);
 
-    CompletableFuture<StopPipelineResponse> stopPipeline(StopPipelineRequest request);
-
     CompletableFuture<StopPipelinesResponse> stopPipelines(StopPipelinesRequest request);
-
-    CompletableFuture<StopTaskResponse> stopTask(StopTaskRequest request);
 
     CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
 
@@ -374,13 +330,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UpdateComponentIndexResponse> updateComponentIndex(UpdateComponentIndexRequest request);
 
-    CompletableFuture<UpdateDataSourceResponse> updateDataSource(UpdateDataSourceRequest request);
-
     CompletableFuture<UpdateDescriptionResponse> updateDescription(UpdateDescriptionRequest request);
 
     CompletableFuture<UpdateDiagnosisSettingsResponse> updateDiagnosisSettings(UpdateDiagnosisSettingsRequest request);
 
     CompletableFuture<UpdateDictResponse> updateDict(UpdateDictRequest request);
+
+    CompletableFuture<UpdateDynamicSettingsResponse> updateDynamicSettings(UpdateDynamicSettingsRequest request);
 
     CompletableFuture<UpdateExtendConfigResponse> updateExtendConfig(UpdateExtendConfigRequest request);
 
@@ -409,8 +365,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateLogstashDescriptionResponse> updateLogstashDescription(UpdateLogstashDescriptionRequest request);
 
     CompletableFuture<UpdateLogstashSettingsResponse> updateLogstashSettings(UpdateLogstashSettingsRequest request);
-
-    CompletableFuture<UpdatePipelineConfigurationResponse> updatePipelineConfiguration(UpdatePipelineConfigurationRequest request);
 
     CompletableFuture<UpdatePipelineManagementConfigResponse> updatePipelineManagementConfig(UpdatePipelineManagementConfigRequest request);
 

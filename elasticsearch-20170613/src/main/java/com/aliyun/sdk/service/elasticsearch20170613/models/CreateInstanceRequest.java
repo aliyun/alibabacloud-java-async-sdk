@@ -12,12 +12,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateInstanceRequest</p>
  */
 public class CreateInstanceRequest extends Request {
+    @Body
+    @NameInMap("body")
+    private String body;
+
     @Query
     @NameInMap("clientToken")
     private String clientToken;
 
     private CreateInstanceRequest(Builder builder) {
         super(builder);
+        this.body = builder.body;
         this.clientToken = builder.clientToken;
     }
 
@@ -35,6 +40,13 @@ public class CreateInstanceRequest extends Request {
     }
 
     /**
+     * @return body
+     */
+    public String getBody() {
+        return this.body;
+    }
+
+    /**
      * @return clientToken
      */
     public String getClientToken() {
@@ -42,16 +54,27 @@ public class CreateInstanceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateInstanceRequest, Builder> {
+        private String body; 
         private String clientToken; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateInstanceRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
+        private Builder(CreateInstanceRequest request) {
+            super(request);
+            this.body = request.body;
+            this.clientToken = request.clientToken;
         } 
+
+        /**
+         * body.
+         */
+        public Builder body(String body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
+            return this;
+        }
 
         /**
          * clientToken.

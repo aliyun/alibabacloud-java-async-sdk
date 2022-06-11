@@ -17,6 +17,10 @@ public class EstimatedLogstashRestartTimeRequest extends Request {
     @Validation(required = true)
     private String instanceId;
 
+    @Body
+    @NameInMap("body")
+    private String body;
+
     @Query
     @NameInMap("force")
     private Boolean force;
@@ -24,6 +28,7 @@ public class EstimatedLogstashRestartTimeRequest extends Request {
     private EstimatedLogstashRestartTimeRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.body = builder.body;
         this.force = builder.force;
     }
 
@@ -48,6 +53,13 @@ public class EstimatedLogstashRestartTimeRequest extends Request {
     }
 
     /**
+     * @return body
+     */
+    public String getBody() {
+        return this.body;
+    }
+
+    /**
      * @return force
      */
     public Boolean getForce() {
@@ -56,16 +68,18 @@ public class EstimatedLogstashRestartTimeRequest extends Request {
 
     public static final class Builder extends Request.Builder<EstimatedLogstashRestartTimeRequest, Builder> {
         private String instanceId; 
+        private String body; 
         private Boolean force; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(EstimatedLogstashRestartTimeRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.force = response.force;
+        private Builder(EstimatedLogstashRestartTimeRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.body = request.body;
+            this.force = request.force;
         } 
 
         /**
@@ -74,6 +88,15 @@ public class EstimatedLogstashRestartTimeRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        public Builder body(String body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
             return this;
         }
 

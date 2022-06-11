@@ -21,6 +21,10 @@ public class ListInstanceIndicesRequest extends Request {
     @NameInMap("all")
     private Boolean all;
 
+    @Body
+    @NameInMap("body")
+    private String body;
+
     @Query
     @NameInMap("isManaged")
     private Boolean isManaged;
@@ -45,6 +49,7 @@ public class ListInstanceIndicesRequest extends Request {
         super(builder);
         this.instanceId = builder.instanceId;
         this.all = builder.all;
+        this.body = builder.body;
         this.isManaged = builder.isManaged;
         this.isOpenstore = builder.isOpenstore;
         this.name = builder.name;
@@ -77,6 +82,13 @@ public class ListInstanceIndicesRequest extends Request {
      */
     public Boolean getAll() {
         return this.all;
+    }
+
+    /**
+     * @return body
+     */
+    public String getBody() {
+        return this.body;
     }
 
     /**
@@ -117,6 +129,7 @@ public class ListInstanceIndicesRequest extends Request {
     public static final class Builder extends Request.Builder<ListInstanceIndicesRequest, Builder> {
         private String instanceId; 
         private Boolean all; 
+        private String body; 
         private Boolean isManaged; 
         private Boolean isOpenstore; 
         private String name; 
@@ -127,15 +140,16 @@ public class ListInstanceIndicesRequest extends Request {
             super();
         } 
 
-        private Builder(ListInstanceIndicesRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.all = response.all;
-            this.isManaged = response.isManaged;
-            this.isOpenstore = response.isOpenstore;
-            this.name = response.name;
-            this.page = response.page;
-            this.size = response.size;
+        private Builder(ListInstanceIndicesRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.all = request.all;
+            this.body = request.body;
+            this.isManaged = request.isManaged;
+            this.isOpenstore = request.isOpenstore;
+            this.name = request.name;
+            this.page = request.page;
+            this.size = request.size;
         } 
 
         /**
@@ -153,6 +167,15 @@ public class ListInstanceIndicesRequest extends Request {
         public Builder all(Boolean all) {
             this.putQueryParameter("all", all);
             this.all = all;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        public Builder body(String body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
             return this;
         }
 

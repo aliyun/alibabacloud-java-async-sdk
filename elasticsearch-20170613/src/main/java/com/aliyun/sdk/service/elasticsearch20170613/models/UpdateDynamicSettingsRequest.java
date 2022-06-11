@@ -7,37 +7,45 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateSnapshotRequest} extends {@link RequestModel}
+ * {@link UpdateDynamicSettingsRequest} extends {@link RequestModel}
  *
- * <p>CreateSnapshotRequest</p>
+ * <p>UpdateDynamicSettingsRequest</p>
  */
-public class CreateSnapshotRequest extends Request {
+public class UpdateDynamicSettingsRequest extends Request {
     @Path
     @NameInMap("InstanceId")
-    @Validation(required = true)
     private String instanceId;
 
     @Query
     @NameInMap("ClientToken")
-    @Validation(required = true)
     private String clientToken;
+
+    @Query
+    @NameInMap("RegionId")
+    private String regionId;
 
     @Body
     @NameInMap("body")
     private String body;
 
-    private CreateSnapshotRequest(Builder builder) {
+    @Query
+    @NameInMap("mode")
+    private String mode;
+
+    private UpdateDynamicSettingsRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
         this.clientToken = builder.clientToken;
+        this.regionId = builder.regionId;
         this.body = builder.body;
+        this.mode = builder.mode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static CreateSnapshotRequest create() {
+    public static UpdateDynamicSettingsRequest create() {
         return builder().build();
     }
 
@@ -61,26 +69,44 @@ public class CreateSnapshotRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return body
      */
     public String getBody() {
         return this.body;
     }
 
-    public static final class Builder extends Request.Builder<CreateSnapshotRequest, Builder> {
+    /**
+     * @return mode
+     */
+    public String getMode() {
+        return this.mode;
+    }
+
+    public static final class Builder extends Request.Builder<UpdateDynamicSettingsRequest, Builder> {
         private String instanceId; 
         private String clientToken; 
+        private String regionId; 
         private String body; 
+        private String mode; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateSnapshotRequest request) {
+        private Builder(UpdateDynamicSettingsRequest request) {
             super(request);
             this.instanceId = request.instanceId;
             this.clientToken = request.clientToken;
+            this.regionId = request.regionId;
             this.body = request.body;
+            this.mode = request.mode;
         } 
 
         /**
@@ -93,11 +119,20 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * 幂等参数
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
@@ -110,9 +145,18 @@ public class CreateSnapshotRequest extends Request {
             return this;
         }
 
+        /**
+         * mode.
+         */
+        public Builder mode(String mode) {
+            this.putQueryParameter("mode", mode);
+            this.mode = mode;
+            return this;
+        }
+
         @Override
-        public CreateSnapshotRequest build() {
-            return new CreateSnapshotRequest(this);
+        public UpdateDynamicSettingsRequest build() {
+            return new UpdateDynamicSettingsRequest(this);
         } 
 
     } 

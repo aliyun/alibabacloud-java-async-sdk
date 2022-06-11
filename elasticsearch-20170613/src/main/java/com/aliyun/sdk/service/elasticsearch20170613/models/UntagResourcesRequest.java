@@ -28,12 +28,17 @@ public class UntagResourcesRequest extends Request {
     @NameInMap("TagKeys")
     private String tagKeys;
 
+    @Body
+    @NameInMap("body")
+    private String body;
+
     private UntagResourcesRequest(Builder builder) {
         super(builder);
         this.all = builder.all;
         this.resourceIds = builder.resourceIds;
         this.resourceType = builder.resourceType;
         this.tagKeys = builder.tagKeys;
+        this.body = builder.body;
     }
 
     public static Builder builder() {
@@ -77,22 +82,31 @@ public class UntagResourcesRequest extends Request {
         return this.tagKeys;
     }
 
+    /**
+     * @return body
+     */
+    public String getBody() {
+        return this.body;
+    }
+
     public static final class Builder extends Request.Builder<UntagResourcesRequest, Builder> {
         private Boolean all; 
         private String resourceIds; 
         private String resourceType; 
         private String tagKeys; 
+        private String body; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UntagResourcesRequest response) {
-            super(response);
-            this.all = response.all;
-            this.resourceIds = response.resourceIds;
-            this.resourceType = response.resourceType;
-            this.tagKeys = response.tagKeys;
+        private Builder(UntagResourcesRequest request) {
+            super(request);
+            this.all = request.all;
+            this.resourceIds = request.resourceIds;
+            this.resourceType = request.resourceType;
+            this.tagKeys = request.tagKeys;
+            this.body = request.body;
         } 
 
         /**
@@ -128,6 +142,15 @@ public class UntagResourcesRequest extends Request {
         public Builder tagKeys(String tagKeys) {
             this.putQueryParameter("TagKeys", tagKeys);
             this.tagKeys = tagKeys;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        public Builder body(String body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
             return this;
         }
 

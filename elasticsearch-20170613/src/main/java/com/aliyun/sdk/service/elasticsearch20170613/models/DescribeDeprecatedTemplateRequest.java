@@ -20,10 +20,15 @@ public class DescribeDeprecatedTemplateRequest extends Request {
     @NameInMap("name")
     private String name;
 
+    @Body
+    @NameInMap("body")
+    private String body;
+
     private DescribeDeprecatedTemplateRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
         this.name = builder.name;
+        this.body = builder.body;
     }
 
     public static Builder builder() {
@@ -53,18 +58,27 @@ public class DescribeDeprecatedTemplateRequest extends Request {
         return this.name;
     }
 
+    /**
+     * @return body
+     */
+    public String getBody() {
+        return this.body;
+    }
+
     public static final class Builder extends Request.Builder<DescribeDeprecatedTemplateRequest, Builder> {
         private String instanceId; 
         private String name; 
+        private String body; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeDeprecatedTemplateRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.name = response.name;
+        private Builder(DescribeDeprecatedTemplateRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.name = request.name;
+            this.body = request.body;
         } 
 
         /**
@@ -82,6 +96,15 @@ public class DescribeDeprecatedTemplateRequest extends Request {
         public Builder name(String name) {
             this.putPathParameter("name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        public Builder body(String body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
             return this;
         }
 

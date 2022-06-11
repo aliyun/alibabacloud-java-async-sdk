@@ -17,6 +17,10 @@ public class CancelTaskRequest extends Request {
     @Validation(required = true)
     private String instanceId;
 
+    @Body
+    @NameInMap("body")
+    private String body;
+
     @Query
     @NameInMap("clientToken")
     private String clientToken;
@@ -29,6 +33,7 @@ public class CancelTaskRequest extends Request {
     private CancelTaskRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.body = builder.body;
         this.clientToken = builder.clientToken;
         this.taskType = builder.taskType;
     }
@@ -54,6 +59,13 @@ public class CancelTaskRequest extends Request {
     }
 
     /**
+     * @return body
+     */
+    public String getBody() {
+        return this.body;
+    }
+
+    /**
      * @return clientToken
      */
     public String getClientToken() {
@@ -69,6 +81,7 @@ public class CancelTaskRequest extends Request {
 
     public static final class Builder extends Request.Builder<CancelTaskRequest, Builder> {
         private String instanceId; 
+        private String body; 
         private String clientToken; 
         private String taskType; 
 
@@ -76,11 +89,12 @@ public class CancelTaskRequest extends Request {
             super();
         } 
 
-        private Builder(CancelTaskRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.clientToken = response.clientToken;
-            this.taskType = response.taskType;
+        private Builder(CancelTaskRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.body = request.body;
+            this.clientToken = request.clientToken;
+            this.taskType = request.taskType;
         } 
 
         /**
@@ -89,6 +103,15 @@ public class CancelTaskRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        public Builder body(String body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
             return this;
         }
 

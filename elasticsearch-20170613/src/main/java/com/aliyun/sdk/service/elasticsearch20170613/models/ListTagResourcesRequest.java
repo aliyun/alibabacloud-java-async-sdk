@@ -18,6 +18,7 @@ public class ListTagResourcesRequest extends Request {
 
     @Query
     @NameInMap("Page")
+    @Deprecated
     private Integer page;
 
     @Query
@@ -31,11 +32,16 @@ public class ListTagResourcesRequest extends Request {
 
     @Query
     @NameInMap("Size")
+    @Deprecated
     private Integer size;
 
     @Query
     @NameInMap("Tags")
     private String tags;
+
+    @Body
+    @NameInMap("body")
+    private String body;
 
     private ListTagResourcesRequest(Builder builder) {
         super(builder);
@@ -45,6 +51,7 @@ public class ListTagResourcesRequest extends Request {
         this.resourceType = builder.resourceType;
         this.size = builder.size;
         this.tags = builder.tags;
+        this.body = builder.body;
     }
 
     public static Builder builder() {
@@ -102,6 +109,13 @@ public class ListTagResourcesRequest extends Request {
         return this.tags;
     }
 
+    /**
+     * @return body
+     */
+    public String getBody() {
+        return this.body;
+    }
+
     public static final class Builder extends Request.Builder<ListTagResourcesRequest, Builder> {
         private String nextToken; 
         private Integer page; 
@@ -109,19 +123,21 @@ public class ListTagResourcesRequest extends Request {
         private String resourceType; 
         private Integer size; 
         private String tags; 
+        private String body; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListTagResourcesRequest response) {
-            super(response);
-            this.nextToken = response.nextToken;
-            this.page = response.page;
-            this.resourceIds = response.resourceIds;
-            this.resourceType = response.resourceType;
-            this.size = response.size;
-            this.tags = response.tags;
+        private Builder(ListTagResourcesRequest request) {
+            super(request);
+            this.nextToken = request.nextToken;
+            this.page = request.page;
+            this.resourceIds = request.resourceIds;
+            this.resourceType = request.resourceType;
+            this.size = request.size;
+            this.tags = request.tags;
+            this.body = request.body;
         } 
 
         /**
@@ -175,6 +191,15 @@ public class ListTagResourcesRequest extends Request {
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);
             this.tags = tags;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        public Builder body(String body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
             return this;
         }
 

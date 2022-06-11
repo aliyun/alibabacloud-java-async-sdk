@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListCollectorsRequest</p>
  */
 public class ListCollectorsRequest extends Request {
+    @Body
+    @NameInMap("body")
+    private String body;
+
     @Query
     @NameInMap("instanceId")
     private String instanceId;
@@ -40,6 +44,7 @@ public class ListCollectorsRequest extends Request {
 
     private ListCollectorsRequest(Builder builder) {
         super(builder);
+        this.body = builder.body;
         this.instanceId = builder.instanceId;
         this.name = builder.name;
         this.page = builder.page;
@@ -59,6 +64,13 @@ public class ListCollectorsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return body
+     */
+    public String getBody() {
+        return this.body;
     }
 
     /**
@@ -104,6 +116,7 @@ public class ListCollectorsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListCollectorsRequest, Builder> {
+        private String body; 
         private String instanceId; 
         private String name; 
         private Integer page; 
@@ -115,15 +128,25 @@ public class ListCollectorsRequest extends Request {
             super();
         } 
 
-        private Builder(ListCollectorsRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.name = response.name;
-            this.page = response.page;
-            this.resId = response.resId;
-            this.size = response.size;
-            this.sourceType = response.sourceType;
+        private Builder(ListCollectorsRequest request) {
+            super(request);
+            this.body = request.body;
+            this.instanceId = request.instanceId;
+            this.name = request.name;
+            this.page = request.page;
+            this.resId = request.resId;
+            this.size = request.size;
+            this.sourceType = request.sourceType;
         } 
+
+        /**
+         * body.
+         */
+        public Builder body(String body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
+            return this;
+        }
 
         /**
          * instanceId.

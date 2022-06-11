@@ -17,6 +17,10 @@ public class ListILMPoliciesRequest extends Request {
     @Validation(required = true)
     private String instanceId;
 
+    @Body
+    @NameInMap("body")
+    private String body;
+
     @Query
     @NameInMap("policyName")
     private String policyName;
@@ -24,6 +28,7 @@ public class ListILMPoliciesRequest extends Request {
     private ListILMPoliciesRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.body = builder.body;
         this.policyName = builder.policyName;
     }
 
@@ -48,6 +53,13 @@ public class ListILMPoliciesRequest extends Request {
     }
 
     /**
+     * @return body
+     */
+    public String getBody() {
+        return this.body;
+    }
+
+    /**
      * @return policyName
      */
     public String getPolicyName() {
@@ -56,16 +68,18 @@ public class ListILMPoliciesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListILMPoliciesRequest, Builder> {
         private String instanceId; 
+        private String body; 
         private String policyName; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListILMPoliciesRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.policyName = response.policyName;
+        private Builder(ListILMPoliciesRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.body = request.body;
+            this.policyName = request.policyName;
         } 
 
         /**
@@ -74,6 +88,15 @@ public class ListILMPoliciesRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        public Builder body(String body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
             return this;
         }
 

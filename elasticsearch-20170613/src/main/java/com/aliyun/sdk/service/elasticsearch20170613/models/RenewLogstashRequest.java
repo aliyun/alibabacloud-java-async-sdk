@@ -17,6 +17,10 @@ public class RenewLogstashRequest extends Request {
     @Validation(required = true)
     private String instanceId;
 
+    @Body
+    @NameInMap("body")
+    private String body;
+
     @Query
     @NameInMap("clientToken")
     private String clientToken;
@@ -24,6 +28,7 @@ public class RenewLogstashRequest extends Request {
     private RenewLogstashRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.body = builder.body;
         this.clientToken = builder.clientToken;
     }
 
@@ -48,6 +53,13 @@ public class RenewLogstashRequest extends Request {
     }
 
     /**
+     * @return body
+     */
+    public String getBody() {
+        return this.body;
+    }
+
+    /**
      * @return clientToken
      */
     public String getClientToken() {
@@ -56,16 +68,18 @@ public class RenewLogstashRequest extends Request {
 
     public static final class Builder extends Request.Builder<RenewLogstashRequest, Builder> {
         private String instanceId; 
+        private String body; 
         private String clientToken; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(RenewLogstashRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.clientToken = response.clientToken;
+        private Builder(RenewLogstashRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.body = request.body;
+            this.clientToken = request.clientToken;
         } 
 
         /**
@@ -74,6 +88,15 @@ public class RenewLogstashRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        public Builder body(String body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
             return this;
         }
 

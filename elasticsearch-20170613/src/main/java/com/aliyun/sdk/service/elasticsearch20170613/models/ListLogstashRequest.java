@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListLogstashRequest</p>
  */
 public class ListLogstashRequest extends Request {
+    @Body
+    @NameInMap("body")
+    private String body;
+
     @Query
     @NameInMap("description")
     private String description;
@@ -42,6 +46,7 @@ public class ListLogstashRequest extends Request {
 
     private ListLogstashRequest(Builder builder) {
         super(builder);
+        this.body = builder.body;
         this.description = builder.description;
         this.instanceId = builder.instanceId;
         this.ownerId = builder.ownerId;
@@ -62,6 +67,13 @@ public class ListLogstashRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return body
+     */
+    public String getBody() {
+        return this.body;
     }
 
     /**
@@ -114,6 +126,7 @@ public class ListLogstashRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListLogstashRequest, Builder> {
+        private String body; 
         private String description; 
         private String instanceId; 
         private String ownerId; 
@@ -126,16 +139,26 @@ public class ListLogstashRequest extends Request {
             super();
         } 
 
-        private Builder(ListLogstashRequest response) {
-            super(response);
-            this.description = response.description;
-            this.instanceId = response.instanceId;
-            this.ownerId = response.ownerId;
-            this.page = response.page;
-            this.resourceGroupId = response.resourceGroupId;
-            this.size = response.size;
-            this.version = response.version;
+        private Builder(ListLogstashRequest request) {
+            super(request);
+            this.body = request.body;
+            this.description = request.description;
+            this.instanceId = request.instanceId;
+            this.ownerId = request.ownerId;
+            this.page = request.page;
+            this.resourceGroupId = request.resourceGroupId;
+            this.size = request.size;
+            this.version = request.version;
         } 
+
+        /**
+         * body.
+         */
+        public Builder body(String body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
+            return this;
+        }
 
         /**
          * description.

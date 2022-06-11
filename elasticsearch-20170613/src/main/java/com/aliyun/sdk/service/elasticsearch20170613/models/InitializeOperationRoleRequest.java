@@ -16,9 +16,14 @@ public class InitializeOperationRoleRequest extends Request {
     @NameInMap("ClientToken")
     private String clientToken;
 
+    @Body
+    @NameInMap("body")
+    private String body;
+
     private InitializeOperationRoleRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
+        this.body = builder.body;
     }
 
     public static Builder builder() {
@@ -41,16 +46,25 @@ public class InitializeOperationRoleRequest extends Request {
         return this.clientToken;
     }
 
+    /**
+     * @return body
+     */
+    public String getBody() {
+        return this.body;
+    }
+
     public static final class Builder extends Request.Builder<InitializeOperationRoleRequest, Builder> {
         private String clientToken; 
+        private String body; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(InitializeOperationRoleRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
+        private Builder(InitializeOperationRoleRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.body = request.body;
         } 
 
         /**
@@ -59,6 +73,15 @@ public class InitializeOperationRoleRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        public Builder body(String body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
             return this;
         }
 

@@ -101,13 +101,13 @@ public class UpgradeEngineVersionRequest extends Request {
             super();
         } 
 
-        private Builder(UpgradeEngineVersionRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.type = response.type;
-            this.version = response.version;
+        private Builder(UpgradeEngineVersionRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.type = request.type;
+            this.version = request.version;
         } 
 
         /**

@@ -17,6 +17,10 @@ public class ListKibanaPluginsRequest extends Request {
     @Validation(required = true)
     private String instanceId;
 
+    @Body
+    @NameInMap("body")
+    private String body;
+
     @Query
     @NameInMap("page")
     private String page;
@@ -28,6 +32,7 @@ public class ListKibanaPluginsRequest extends Request {
     private ListKibanaPluginsRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.body = builder.body;
         this.page = builder.page;
         this.size = builder.size;
     }
@@ -53,6 +58,13 @@ public class ListKibanaPluginsRequest extends Request {
     }
 
     /**
+     * @return body
+     */
+    public String getBody() {
+        return this.body;
+    }
+
+    /**
      * @return page
      */
     public String getPage() {
@@ -68,6 +80,7 @@ public class ListKibanaPluginsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListKibanaPluginsRequest, Builder> {
         private String instanceId; 
+        private String body; 
         private String page; 
         private Integer size; 
 
@@ -75,11 +88,12 @@ public class ListKibanaPluginsRequest extends Request {
             super();
         } 
 
-        private Builder(ListKibanaPluginsRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.page = response.page;
-            this.size = response.size;
+        private Builder(ListKibanaPluginsRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.body = request.body;
+            this.page = request.page;
+            this.size = request.size;
         } 
 
         /**
@@ -88,6 +102,15 @@ public class ListKibanaPluginsRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        public Builder body(String body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
             return this;
         }
 

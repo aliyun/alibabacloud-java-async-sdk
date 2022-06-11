@@ -17,9 +17,14 @@ public class DescribeAckOperatorRequest extends Request {
     @Validation(required = true)
     private String clusterId;
 
+    @Body
+    @NameInMap("body")
+    private String body;
+
     private DescribeAckOperatorRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
+        this.body = builder.body;
     }
 
     public static Builder builder() {
@@ -42,16 +47,25 @@ public class DescribeAckOperatorRequest extends Request {
         return this.clusterId;
     }
 
+    /**
+     * @return body
+     */
+    public String getBody() {
+        return this.body;
+    }
+
     public static final class Builder extends Request.Builder<DescribeAckOperatorRequest, Builder> {
         private String clusterId; 
+        private String body; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeAckOperatorRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
+        private Builder(DescribeAckOperatorRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.body = request.body;
         } 
 
         /**
@@ -60,6 +74,15 @@ public class DescribeAckOperatorRequest extends Request {
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
             this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        public Builder body(String body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
             return this;
         }
 

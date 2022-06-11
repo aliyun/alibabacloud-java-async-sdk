@@ -139,16 +139,16 @@ public class CreateLogstashRequest extends Request {
             super();
         } 
 
-        private Builder(CreateLogstashRequest response) {
-            super(response);
-            this.description = response.description;
-            this.networkConfig = response.networkConfig;
-            this.nodeAmount = response.nodeAmount;
-            this.nodeSpec = response.nodeSpec;
-            this.paymentInfo = response.paymentInfo;
-            this.paymentType = response.paymentType;
-            this.version = response.version;
-            this.clientToken = response.clientToken;
+        private Builder(CreateLogstashRequest request) {
+            super(request);
+            this.description = request.description;
+            this.networkConfig = request.networkConfig;
+            this.nodeAmount = request.nodeAmount;
+            this.nodeSpec = request.nodeSpec;
+            this.paymentInfo = request.paymentInfo;
+            this.paymentType = request.paymentType;
+            this.version = request.version;
+            this.clientToken = request.clientToken;
         } 
 
         /**

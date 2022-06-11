@@ -7,23 +7,27 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link RunPipelineResponseBody} extends {@link TeaModel}
+ * {@link UpdateDynamicSettingsResponseBody} extends {@link TeaModel}
  *
- * <p>RunPipelineResponseBody</p>
+ * <p>UpdateDynamicSettingsResponseBody</p>
  */
-public class RunPipelineResponseBody extends TeaModel {
+public class UpdateDynamicSettingsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private RunPipelineResponseBody(Builder builder) {
+    @NameInMap("Result")
+    private Boolean result;
+
+    private UpdateDynamicSettingsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
+        this.result = builder.result;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static RunPipelineResponseBody create() {
+    public static UpdateDynamicSettingsResponseBody create() {
         return builder().build();
     }
 
@@ -34,8 +38,16 @@ public class RunPipelineResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return result
+     */
+    public Boolean getResult() {
+        return this.result;
+    }
+
     public static final class Builder {
         private String requestId; 
+        private Boolean result; 
 
         /**
          * RequestId.
@@ -45,8 +57,16 @@ public class RunPipelineResponseBody extends TeaModel {
             return this;
         }
 
-        public RunPipelineResponseBody build() {
-            return new RunPipelineResponseBody(this);
+        /**
+         * Result.
+         */
+        public Builder result(Boolean result) {
+            this.result = result;
+            return this;
+        }
+
+        public UpdateDynamicSettingsResponseBody build() {
+            return new UpdateDynamicSettingsResponseBody(this);
         } 
 
     } 

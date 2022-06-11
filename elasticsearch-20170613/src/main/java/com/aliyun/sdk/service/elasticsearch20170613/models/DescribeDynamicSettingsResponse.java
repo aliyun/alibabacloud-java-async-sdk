@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link RunPipelineResponse} extends {@link TeaModel}
+ * {@link DescribeDynamicSettingsResponse} extends {@link TeaModel}
  *
- * <p>RunPipelineResponse</p>
+ * <p>DescribeDynamicSettingsResponse</p>
  */
-public class RunPipelineResponse extends Response {
+public class DescribeDynamicSettingsResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private RunPipelineResponseBody body;
+    private DescribeDynamicSettingsResponseBody body;
 
-    private RunPipelineResponse(BuilderImpl builder) {
+    private DescribeDynamicSettingsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static RunPipelineResponse create() {
+    public static DescribeDynamicSettingsResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class RunPipelineResponse extends Response {
     /**
      * @return body
      */
-    public RunPipelineResponseBody getBody() {
+    public DescribeDynamicSettingsResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<RunPipelineResponse, Builder> {
+    public interface Builder extends Response.Builder<DescribeDynamicSettingsResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(RunPipelineResponseBody body);
+        Builder body(DescribeDynamicSettingsResponseBody body);
 
         @Override
-        RunPipelineResponse build();
+        DescribeDynamicSettingsResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<RunPipelineResponse, Builder>
+            extends Response.BuilderImpl<DescribeDynamicSettingsResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private RunPipelineResponseBody body; 
+        private DescribeDynamicSettingsResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(RunPipelineResponse response) {
+        private BuilderImpl(DescribeDynamicSettingsResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class RunPipelineResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(RunPipelineResponseBody body) {
+        public Builder body(DescribeDynamicSettingsResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public RunPipelineResponse build() {
-            return new RunPipelineResponse(this);
+        public DescribeDynamicSettingsResponse build() {
+            return new DescribeDynamicSettingsResponse(this);
         } 
 
     } 

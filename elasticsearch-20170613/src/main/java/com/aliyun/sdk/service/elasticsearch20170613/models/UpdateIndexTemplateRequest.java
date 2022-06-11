@@ -26,11 +26,16 @@ public class UpdateIndexTemplateRequest extends Request {
     @NameInMap("ClientToken")
     private String clientToken;
 
+    @Body
+    @NameInMap("body")
+    private String body;
+
     private UpdateIndexTemplateRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
         this.indexTemplate = builder.indexTemplate;
         this.clientToken = builder.clientToken;
+        this.body = builder.body;
     }
 
     public static Builder builder() {
@@ -67,20 +72,29 @@ public class UpdateIndexTemplateRequest extends Request {
         return this.clientToken;
     }
 
+    /**
+     * @return body
+     */
+    public String getBody() {
+        return this.body;
+    }
+
     public static final class Builder extends Request.Builder<UpdateIndexTemplateRequest, Builder> {
         private String instanceId; 
         private String indexTemplate; 
         private String clientToken; 
+        private String body; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateIndexTemplateRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.indexTemplate = response.indexTemplate;
-            this.clientToken = response.clientToken;
+        private Builder(UpdateIndexTemplateRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.indexTemplate = request.indexTemplate;
+            this.clientToken = request.clientToken;
+            this.body = request.body;
         } 
 
         /**
@@ -107,6 +121,15 @@ public class UpdateIndexTemplateRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        public Builder body(String body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
             return this;
         }
 

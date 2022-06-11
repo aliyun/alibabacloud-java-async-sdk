@@ -17,6 +17,10 @@ public class ListPipelineRequest extends Request {
     @Validation(required = true)
     private String instanceId;
 
+    @Body
+    @NameInMap("body")
+    private String body;
+
     @Query
     @NameInMap("page")
     @Validation(maximum = 200, minimum = 1)
@@ -34,6 +38,7 @@ public class ListPipelineRequest extends Request {
     private ListPipelineRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.body = builder.body;
         this.page = builder.page;
         this.pipelineId = builder.pipelineId;
         this.size = builder.size;
@@ -60,6 +65,13 @@ public class ListPipelineRequest extends Request {
     }
 
     /**
+     * @return body
+     */
+    public String getBody() {
+        return this.body;
+    }
+
+    /**
      * @return page
      */
     public Integer getPage() {
@@ -82,6 +94,7 @@ public class ListPipelineRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListPipelineRequest, Builder> {
         private String instanceId; 
+        private String body; 
         private Integer page; 
         private String pipelineId; 
         private Integer size; 
@@ -90,12 +103,13 @@ public class ListPipelineRequest extends Request {
             super();
         } 
 
-        private Builder(ListPipelineRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.page = response.page;
-            this.pipelineId = response.pipelineId;
-            this.size = response.size;
+        private Builder(ListPipelineRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.body = request.body;
+            this.page = request.page;
+            this.pipelineId = request.pipelineId;
+            this.size = request.size;
         } 
 
         /**
@@ -104,6 +118,15 @@ public class ListPipelineRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        public Builder body(String body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
             return this;
         }
 

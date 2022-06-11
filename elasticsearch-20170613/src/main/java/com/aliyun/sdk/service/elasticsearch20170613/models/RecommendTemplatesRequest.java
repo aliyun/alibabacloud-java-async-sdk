@@ -17,6 +17,10 @@ public class RecommendTemplatesRequest extends Request {
     @Validation(required = true)
     private String instanceId;
 
+    @Body
+    @NameInMap("body")
+    private String body;
+
     @Query
     @NameInMap("usageScenario")
     @Validation(required = true)
@@ -25,6 +29,7 @@ public class RecommendTemplatesRequest extends Request {
     private RecommendTemplatesRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.body = builder.body;
         this.usageScenario = builder.usageScenario;
     }
 
@@ -49,6 +54,13 @@ public class RecommendTemplatesRequest extends Request {
     }
 
     /**
+     * @return body
+     */
+    public String getBody() {
+        return this.body;
+    }
+
+    /**
      * @return usageScenario
      */
     public String getUsageScenario() {
@@ -57,16 +69,18 @@ public class RecommendTemplatesRequest extends Request {
 
     public static final class Builder extends Request.Builder<RecommendTemplatesRequest, Builder> {
         private String instanceId; 
+        private String body; 
         private String usageScenario; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(RecommendTemplatesRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.usageScenario = response.usageScenario;
+        private Builder(RecommendTemplatesRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.body = request.body;
+            this.usageScenario = request.usageScenario;
         } 
 
         /**
@@ -75,6 +89,15 @@ public class RecommendTemplatesRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        public Builder body(String body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
             return this;
         }
 

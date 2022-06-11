@@ -22,10 +22,15 @@ public class DescribeILMPolicyRequest extends Request {
     @Validation(required = true)
     private String policyName;
 
+    @Body
+    @NameInMap("body")
+    private String body;
+
     private DescribeILMPolicyRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
         this.policyName = builder.policyName;
+        this.body = builder.body;
     }
 
     public static Builder builder() {
@@ -55,18 +60,27 @@ public class DescribeILMPolicyRequest extends Request {
         return this.policyName;
     }
 
+    /**
+     * @return body
+     */
+    public String getBody() {
+        return this.body;
+    }
+
     public static final class Builder extends Request.Builder<DescribeILMPolicyRequest, Builder> {
         private String instanceId; 
         private String policyName; 
+        private String body; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeILMPolicyRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.policyName = response.policyName;
+        private Builder(DescribeILMPolicyRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.policyName = request.policyName;
+            this.body = request.body;
         } 
 
         /**
@@ -84,6 +98,15 @@ public class DescribeILMPolicyRequest extends Request {
         public Builder policyName(String policyName) {
             this.putPathParameter("PolicyName", policyName);
             this.policyName = policyName;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        public Builder body(String body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
             return this;
         }
 

@@ -21,10 +21,15 @@ public class UpdateReadWritePolicyRequest extends Request {
     @NameInMap("ClientToken")
     private String clientToken;
 
+    @Body
+    @NameInMap("body")
+    private String body;
+
     private UpdateReadWritePolicyRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
         this.clientToken = builder.clientToken;
+        this.body = builder.body;
     }
 
     public static Builder builder() {
@@ -54,18 +59,27 @@ public class UpdateReadWritePolicyRequest extends Request {
         return this.clientToken;
     }
 
+    /**
+     * @return body
+     */
+    public String getBody() {
+        return this.body;
+    }
+
     public static final class Builder extends Request.Builder<UpdateReadWritePolicyRequest, Builder> {
         private String instanceId; 
         private String clientToken; 
+        private String body; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateReadWritePolicyRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.clientToken = response.clientToken;
+        private Builder(UpdateReadWritePolicyRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.clientToken = request.clientToken;
+            this.body = request.body;
         } 
 
         /**
@@ -83,6 +97,15 @@ public class UpdateReadWritePolicyRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        public Builder body(String body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
             return this;
         }
 

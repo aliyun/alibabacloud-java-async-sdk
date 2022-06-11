@@ -17,6 +17,10 @@ public class DescribeDiagnosisSettingsRequest extends Request {
     @Validation(required = true)
     private String instanceId;
 
+    @Body
+    @NameInMap("body")
+    private String body;
+
     @Query
     @NameInMap("lang")
     private String lang;
@@ -24,6 +28,7 @@ public class DescribeDiagnosisSettingsRequest extends Request {
     private DescribeDiagnosisSettingsRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.body = builder.body;
         this.lang = builder.lang;
     }
 
@@ -48,6 +53,13 @@ public class DescribeDiagnosisSettingsRequest extends Request {
     }
 
     /**
+     * @return body
+     */
+    public String getBody() {
+        return this.body;
+    }
+
+    /**
      * @return lang
      */
     public String getLang() {
@@ -56,16 +68,18 @@ public class DescribeDiagnosisSettingsRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeDiagnosisSettingsRequest, Builder> {
         private String instanceId; 
+        private String body; 
         private String lang; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeDiagnosisSettingsRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.lang = response.lang;
+        private Builder(DescribeDiagnosisSettingsRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.body = request.body;
+            this.lang = request.lang;
         } 
 
         /**
@@ -74,6 +88,15 @@ public class DescribeDiagnosisSettingsRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        public Builder body(String body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
             return this;
         }
 

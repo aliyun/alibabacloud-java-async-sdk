@@ -22,6 +22,10 @@ public class ListDictsRequest extends Request {
     @Validation(required = true)
     private String analyzerType;
 
+    @Body
+    @NameInMap("body")
+    private String body;
+
     @Query
     @NameInMap("name")
     private String name;
@@ -30,6 +34,7 @@ public class ListDictsRequest extends Request {
         super(builder);
         this.instanceId = builder.instanceId;
         this.analyzerType = builder.analyzerType;
+        this.body = builder.body;
         this.name = builder.name;
     }
 
@@ -61,6 +66,13 @@ public class ListDictsRequest extends Request {
     }
 
     /**
+     * @return body
+     */
+    public String getBody() {
+        return this.body;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -70,17 +82,19 @@ public class ListDictsRequest extends Request {
     public static final class Builder extends Request.Builder<ListDictsRequest, Builder> {
         private String instanceId; 
         private String analyzerType; 
+        private String body; 
         private String name; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListDictsRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.analyzerType = response.analyzerType;
-            this.name = response.name;
+        private Builder(ListDictsRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.analyzerType = request.analyzerType;
+            this.body = request.body;
+            this.name = request.name;
         } 
 
         /**
@@ -98,6 +112,15 @@ public class ListDictsRequest extends Request {
         public Builder analyzerType(String analyzerType) {
             this.putQueryParameter("analyzerType", analyzerType);
             this.analyzerType = analyzerType;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        public Builder body(String body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
             return this;
         }
 

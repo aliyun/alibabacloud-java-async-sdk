@@ -89,12 +89,12 @@ public class TransferNodeRequest extends Request {
             super();
         } 
 
-        private Builder(TransferNodeRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.body = response.body;
-            this.clientToken = response.clientToken;
-            this.nodeType = response.nodeType;
+        private Builder(TransferNodeRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.body = request.body;
+            this.clientToken = request.clientToken;
+            this.nodeType = request.nodeType;
         } 
 
         /**

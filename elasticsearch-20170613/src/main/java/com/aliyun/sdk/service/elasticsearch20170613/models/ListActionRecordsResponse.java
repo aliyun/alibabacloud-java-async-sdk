@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateDataSourceResponse} extends {@link TeaModel}
+ * {@link ListActionRecordsResponse} extends {@link TeaModel}
  *
- * <p>CreateDataSourceResponse</p>
+ * <p>ListActionRecordsResponse</p>
  */
-public class CreateDataSourceResponse extends Response {
+public class ListActionRecordsResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private CreateDataSourceResponseBody body;
+    private ListActionRecordsResponseBody body;
 
-    private CreateDataSourceResponse(BuilderImpl builder) {
+    private ListActionRecordsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static CreateDataSourceResponse create() {
+    public static ListActionRecordsResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class CreateDataSourceResponse extends Response {
     /**
      * @return body
      */
-    public CreateDataSourceResponseBody getBody() {
+    public ListActionRecordsResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<CreateDataSourceResponse, Builder> {
+    public interface Builder extends Response.Builder<ListActionRecordsResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(CreateDataSourceResponseBody body);
+        Builder body(ListActionRecordsResponseBody body);
 
         @Override
-        CreateDataSourceResponse build();
+        ListActionRecordsResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<CreateDataSourceResponse, Builder>
+            extends Response.BuilderImpl<ListActionRecordsResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private CreateDataSourceResponseBody body; 
+        private ListActionRecordsResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(CreateDataSourceResponse response) {
+        private BuilderImpl(ListActionRecordsResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class CreateDataSourceResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(CreateDataSourceResponseBody body) {
+        public Builder body(ListActionRecordsResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public CreateDataSourceResponse build() {
-            return new CreateDataSourceResponse(this);
+        public ListActionRecordsResponse build() {
+            return new ListActionRecordsResponse(this);
         } 
 
     } 

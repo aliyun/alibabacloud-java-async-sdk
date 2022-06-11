@@ -102,13 +102,13 @@ public class ShrinkNodeRequest extends Request {
             super();
         } 
 
-        private Builder(ShrinkNodeRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.body = response.body;
-            this.clientToken = response.clientToken;
-            this.ignoreStatus = response.ignoreStatus;
-            this.nodeType = response.nodeType;
+        private Builder(ShrinkNodeRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.body = request.body;
+            this.clientToken = request.clientToken;
+            this.ignoreStatus = request.ignoreStatus;
+            this.nodeType = request.nodeType;
         } 
 
         /**

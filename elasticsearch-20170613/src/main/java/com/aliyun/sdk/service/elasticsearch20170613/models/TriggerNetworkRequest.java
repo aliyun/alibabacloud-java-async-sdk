@@ -101,13 +101,13 @@ public class TriggerNetworkRequest extends Request {
             super();
         } 
 
-        private Builder(TriggerNetworkRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.actionType = response.actionType;
-            this.networkType = response.networkType;
-            this.nodeType = response.nodeType;
-            this.clientToken = response.clientToken;
+        private Builder(TriggerNetworkRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.actionType = request.actionType;
+            this.networkType = request.networkType;
+            this.nodeType = request.nodeType;
+            this.clientToken = request.clientToken;
         } 
 
         /**

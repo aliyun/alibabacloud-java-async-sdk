@@ -17,6 +17,10 @@ public class UpdatePublicWhiteIpsRequest extends Request {
     @Validation(required = true)
     private String instanceId;
 
+    @Body
+    @NameInMap("body")
+    private String body;
+
     @Query
     @NameInMap("clientToken")
     private String clientToken;
@@ -28,6 +32,7 @@ public class UpdatePublicWhiteIpsRequest extends Request {
     private UpdatePublicWhiteIpsRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.body = builder.body;
         this.clientToken = builder.clientToken;
         this.modifyMode = builder.modifyMode;
     }
@@ -53,6 +58,13 @@ public class UpdatePublicWhiteIpsRequest extends Request {
     }
 
     /**
+     * @return body
+     */
+    public String getBody() {
+        return this.body;
+    }
+
+    /**
      * @return clientToken
      */
     public String getClientToken() {
@@ -68,6 +80,7 @@ public class UpdatePublicWhiteIpsRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdatePublicWhiteIpsRequest, Builder> {
         private String instanceId; 
+        private String body; 
         private String clientToken; 
         private String modifyMode; 
 
@@ -75,11 +88,12 @@ public class UpdatePublicWhiteIpsRequest extends Request {
             super();
         } 
 
-        private Builder(UpdatePublicWhiteIpsRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.clientToken = response.clientToken;
-            this.modifyMode = response.modifyMode;
+        private Builder(UpdatePublicWhiteIpsRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.body = request.body;
+            this.clientToken = request.clientToken;
+            this.modifyMode = request.modifyMode;
         } 
 
         /**
@@ -88,6 +102,15 @@ public class UpdatePublicWhiteIpsRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        public Builder body(String body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
             return this;
         }
 

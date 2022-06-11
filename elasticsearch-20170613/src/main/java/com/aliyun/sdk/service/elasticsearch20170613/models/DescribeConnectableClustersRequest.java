@@ -21,10 +21,15 @@ public class DescribeConnectableClustersRequest extends Request {
     @NameInMap("alreadySetItems")
     private Boolean alreadySetItems;
 
+    @Body
+    @NameInMap("body")
+    private String body;
+
     private DescribeConnectableClustersRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
         this.alreadySetItems = builder.alreadySetItems;
+        this.body = builder.body;
     }
 
     public static Builder builder() {
@@ -54,18 +59,27 @@ public class DescribeConnectableClustersRequest extends Request {
         return this.alreadySetItems;
     }
 
+    /**
+     * @return body
+     */
+    public String getBody() {
+        return this.body;
+    }
+
     public static final class Builder extends Request.Builder<DescribeConnectableClustersRequest, Builder> {
         private String instanceId; 
         private Boolean alreadySetItems; 
+        private String body; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeConnectableClustersRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.alreadySetItems = response.alreadySetItems;
+        private Builder(DescribeConnectableClustersRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.alreadySetItems = request.alreadySetItems;
+            this.body = request.body;
         } 
 
         /**
@@ -83,6 +97,15 @@ public class DescribeConnectableClustersRequest extends Request {
         public Builder alreadySetItems(Boolean alreadySetItems) {
             this.putQueryParameter("alreadySetItems", alreadySetItems);
             this.alreadySetItems = alreadySetItems;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        public Builder body(String body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
             return this;
         }
 

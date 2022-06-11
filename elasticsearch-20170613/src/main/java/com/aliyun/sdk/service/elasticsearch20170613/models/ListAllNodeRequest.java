@@ -17,6 +17,10 @@ public class ListAllNodeRequest extends Request {
     @Validation(required = true)
     private String instanceId;
 
+    @Body
+    @NameInMap("body")
+    private String body;
+
     @Query
     @NameInMap("extended")
     private Boolean extended;
@@ -24,6 +28,7 @@ public class ListAllNodeRequest extends Request {
     private ListAllNodeRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.body = builder.body;
         this.extended = builder.extended;
     }
 
@@ -48,6 +53,13 @@ public class ListAllNodeRequest extends Request {
     }
 
     /**
+     * @return body
+     */
+    public String getBody() {
+        return this.body;
+    }
+
+    /**
      * @return extended
      */
     public Boolean getExtended() {
@@ -56,16 +68,18 @@ public class ListAllNodeRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListAllNodeRequest, Builder> {
         private String instanceId; 
+        private String body; 
         private Boolean extended; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListAllNodeRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.extended = response.extended;
+        private Builder(ListAllNodeRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.body = request.body;
+            this.extended = request.extended;
         } 
 
         /**
@@ -74,6 +88,15 @@ public class ListAllNodeRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        public Builder body(String body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
             return this;
         }
 

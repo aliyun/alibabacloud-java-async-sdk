@@ -89,12 +89,12 @@ public class ValidateShrinkNodesRequest extends Request {
             super();
         } 
 
-        private Builder(ValidateShrinkNodesRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.body = response.body;
-            this.ignoreStatus = response.ignoreStatus;
-            this.nodeType = response.nodeType;
+        private Builder(ValidateShrinkNodesRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.body = request.body;
+            this.ignoreStatus = request.ignoreStatus;
+            this.nodeType = request.nodeType;
         } 
 
         /**

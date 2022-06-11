@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreatePipelineConfigurationResponse} extends {@link TeaModel}
+ * {@link UpdateDynamicSettingsResponse} extends {@link TeaModel}
  *
- * <p>CreatePipelineConfigurationResponse</p>
+ * <p>UpdateDynamicSettingsResponse</p>
  */
-public class CreatePipelineConfigurationResponse extends Response {
+public class UpdateDynamicSettingsResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private CreatePipelineConfigurationResponseBody body;
+    private UpdateDynamicSettingsResponseBody body;
 
-    private CreatePipelineConfigurationResponse(BuilderImpl builder) {
+    private UpdateDynamicSettingsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static CreatePipelineConfigurationResponse create() {
+    public static UpdateDynamicSettingsResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class CreatePipelineConfigurationResponse extends Response {
     /**
      * @return body
      */
-    public CreatePipelineConfigurationResponseBody getBody() {
+    public UpdateDynamicSettingsResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<CreatePipelineConfigurationResponse, Builder> {
+    public interface Builder extends Response.Builder<UpdateDynamicSettingsResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(CreatePipelineConfigurationResponseBody body);
+        Builder body(UpdateDynamicSettingsResponseBody body);
 
         @Override
-        CreatePipelineConfigurationResponse build();
+        UpdateDynamicSettingsResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<CreatePipelineConfigurationResponse, Builder>
+            extends Response.BuilderImpl<UpdateDynamicSettingsResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private CreatePipelineConfigurationResponseBody body; 
+        private UpdateDynamicSettingsResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(CreatePipelineConfigurationResponse response) {
+        private BuilderImpl(UpdateDynamicSettingsResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class CreatePipelineConfigurationResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(CreatePipelineConfigurationResponseBody body) {
+        public Builder body(UpdateDynamicSettingsResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public CreatePipelineConfigurationResponse build() {
-            return new CreatePipelineConfigurationResponse(this);
+        public UpdateDynamicSettingsResponse build() {
+            return new UpdateDynamicSettingsResponse(this);
         } 
 
     } 

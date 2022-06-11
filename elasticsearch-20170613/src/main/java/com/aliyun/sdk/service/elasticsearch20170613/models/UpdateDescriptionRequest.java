@@ -75,11 +75,11 @@ public class UpdateDescriptionRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateDescriptionRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.description = response.description;
-            this.clientToken = response.clientToken;
+        private Builder(UpdateDescriptionRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.description = request.description;
+            this.clientToken = request.clientToken;
         } 
 
         /**

@@ -17,13 +17,13 @@ public class UpdateInstanceRequest extends Request {
     @Validation(required = true)
     private String instanceId;
 
+    @Body
+    @NameInMap("body")
+    private String body;
+
     @Query
     @NameInMap("clientToken")
     private String clientToken;
-
-    @Query
-    @NameInMap("ignoreStatus")
-    private Boolean ignoreStatus;
 
     @Query
     @NameInMap("orderActionType")
@@ -32,8 +32,8 @@ public class UpdateInstanceRequest extends Request {
     private UpdateInstanceRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.body = builder.body;
         this.clientToken = builder.clientToken;
-        this.ignoreStatus = builder.ignoreStatus;
         this.orderActionType = builder.orderActionType;
     }
 
@@ -58,17 +58,17 @@ public class UpdateInstanceRequest extends Request {
     }
 
     /**
+     * @return body
+     */
+    public String getBody() {
+        return this.body;
+    }
+
+    /**
      * @return clientToken
      */
     public String getClientToken() {
         return this.clientToken;
-    }
-
-    /**
-     * @return ignoreStatus
-     */
-    public Boolean getIgnoreStatus() {
-        return this.ignoreStatus;
     }
 
     /**
@@ -80,20 +80,20 @@ public class UpdateInstanceRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateInstanceRequest, Builder> {
         private String instanceId; 
+        private String body; 
         private String clientToken; 
-        private Boolean ignoreStatus; 
         private String orderActionType; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateInstanceRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.clientToken = response.clientToken;
-            this.ignoreStatus = response.ignoreStatus;
-            this.orderActionType = response.orderActionType;
+        private Builder(UpdateInstanceRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.body = request.body;
+            this.clientToken = request.clientToken;
+            this.orderActionType = request.orderActionType;
         } 
 
         /**
@@ -106,20 +106,20 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
+         * body.
+         */
+        public Builder body(String body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
+            return this;
+        }
+
+        /**
          * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);
             this.clientToken = clientToken;
-            return this;
-        }
-
-        /**
-         * ignoreStatus.
-         */
-        public Builder ignoreStatus(Boolean ignoreStatus) {
-            this.putQueryParameter("ignoreStatus", ignoreStatus);
-            this.ignoreStatus = ignoreStatus;
             return this;
         }
 

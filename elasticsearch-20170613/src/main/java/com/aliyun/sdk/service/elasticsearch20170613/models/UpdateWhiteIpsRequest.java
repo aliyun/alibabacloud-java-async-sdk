@@ -101,13 +101,13 @@ public class UpdateWhiteIpsRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateWhiteIpsRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.esIPWhitelist = response.esIPWhitelist;
-            this.whiteIpGroup = response.whiteIpGroup;
-            this.clientToken = response.clientToken;
-            this.modifyMode = response.modifyMode;
+        private Builder(UpdateWhiteIpsRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.esIPWhitelist = request.esIPWhitelist;
+            this.whiteIpGroup = request.whiteIpGroup;
+            this.clientToken = request.clientToken;
+            this.modifyMode = request.modifyMode;
         } 
 
         /**

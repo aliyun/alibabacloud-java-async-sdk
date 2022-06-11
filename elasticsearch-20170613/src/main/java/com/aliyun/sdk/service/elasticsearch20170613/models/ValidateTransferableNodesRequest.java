@@ -76,11 +76,11 @@ public class ValidateTransferableNodesRequest extends Request {
             super();
         } 
 
-        private Builder(ValidateTransferableNodesRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.body = response.body;
-            this.nodeType = response.nodeType;
+        private Builder(ValidateTransferableNodesRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.body = request.body;
+            this.nodeType = request.nodeType;
         } 
 
         /**

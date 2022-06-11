@@ -12,12 +12,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateCollectorRequest</p>
  */
 public class CreateCollectorRequest extends Request {
+    @Body
+    @NameInMap("body")
+    private String body;
+
     @Query
     @NameInMap("clientToken")
     private String clientToken;
 
     private CreateCollectorRequest(Builder builder) {
         super(builder);
+        this.body = builder.body;
         this.clientToken = builder.clientToken;
     }
 
@@ -35,6 +40,13 @@ public class CreateCollectorRequest extends Request {
     }
 
     /**
+     * @return body
+     */
+    public String getBody() {
+        return this.body;
+    }
+
+    /**
      * @return clientToken
      */
     public String getClientToken() {
@@ -42,16 +54,27 @@ public class CreateCollectorRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateCollectorRequest, Builder> {
+        private String body; 
         private String clientToken; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateCollectorRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
+        private Builder(CreateCollectorRequest request) {
+            super(request);
+            this.body = request.body;
+            this.clientToken = request.clientToken;
         } 
+
+        /**
+         * body.
+         */
+        public Builder body(String body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
+            return this;
+        }
 
         /**
          * clientToken.

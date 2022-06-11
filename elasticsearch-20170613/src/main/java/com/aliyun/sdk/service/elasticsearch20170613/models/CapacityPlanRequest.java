@@ -87,12 +87,12 @@ public class CapacityPlanRequest extends Request {
             super();
         } 
 
-        private Builder(CapacityPlanRequest response) {
-            super(response);
-            this.complexQueryAvailable = response.complexQueryAvailable;
-            this.dataInfo = response.dataInfo;
-            this.metric = response.metric;
-            this.usageScenario = response.usageScenario;
+        private Builder(CapacityPlanRequest request) {
+            super(request);
+            this.complexQueryAvailable = request.complexQueryAvailable;
+            this.dataInfo = request.dataInfo;
+            this.metric = request.metric;
+            this.usageScenario = request.usageScenario;
         } 
 
         /**

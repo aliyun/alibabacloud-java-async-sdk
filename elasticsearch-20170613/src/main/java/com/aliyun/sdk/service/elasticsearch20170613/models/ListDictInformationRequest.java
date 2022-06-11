@@ -21,6 +21,10 @@ public class ListDictInformationRequest extends Request {
     @NameInMap("analyzerType")
     private String analyzerType;
 
+    @Body
+    @NameInMap("body")
+    private String body;
+
     @Query
     @NameInMap("bucketName")
     @Validation(required = true)
@@ -35,6 +39,7 @@ public class ListDictInformationRequest extends Request {
         super(builder);
         this.instanceId = builder.instanceId;
         this.analyzerType = builder.analyzerType;
+        this.body = builder.body;
         this.bucketName = builder.bucketName;
         this.key = builder.key;
     }
@@ -67,6 +72,13 @@ public class ListDictInformationRequest extends Request {
     }
 
     /**
+     * @return body
+     */
+    public String getBody() {
+        return this.body;
+    }
+
+    /**
      * @return bucketName
      */
     public String getBucketName() {
@@ -83,6 +95,7 @@ public class ListDictInformationRequest extends Request {
     public static final class Builder extends Request.Builder<ListDictInformationRequest, Builder> {
         private String instanceId; 
         private String analyzerType; 
+        private String body; 
         private String bucketName; 
         private String key; 
 
@@ -90,12 +103,13 @@ public class ListDictInformationRequest extends Request {
             super();
         } 
 
-        private Builder(ListDictInformationRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.analyzerType = response.analyzerType;
-            this.bucketName = response.bucketName;
-            this.key = response.key;
+        private Builder(ListDictInformationRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.analyzerType = request.analyzerType;
+            this.body = request.body;
+            this.bucketName = request.bucketName;
+            this.key = request.key;
         } 
 
         /**
@@ -113,6 +127,15 @@ public class ListDictInformationRequest extends Request {
         public Builder analyzerType(String analyzerType) {
             this.putQueryParameter("analyzerType", analyzerType);
             this.analyzerType = analyzerType;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        public Builder body(String body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
             return this;
         }
 

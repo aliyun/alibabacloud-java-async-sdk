@@ -101,13 +101,13 @@ public class CreateVpcEndpointRequest extends Request {
             super();
         } 
 
-        private Builder(CreateVpcEndpointRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.clientToken = response.clientToken;
-            this.serviceId = response.serviceId;
-            this.zoneId = response.zoneId;
-            this.dryRun = response.dryRun;
+        private Builder(CreateVpcEndpointRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.clientToken = request.clientToken;
+            this.serviceId = request.serviceId;
+            this.zoneId = request.zoneId;
+            this.dryRun = request.dryRun;
         } 
 
         /**

@@ -17,6 +17,10 @@ public class ListDiagnoseReportIdsRequest extends Request {
     @Validation(required = true)
     private String instanceId;
 
+    @Body
+    @NameInMap("body")
+    private String body;
+
     @Query
     @NameInMap("endTime")
     @Validation(required = true, maximum = 2000000000000D, minimum = 1000000000000D)
@@ -48,6 +52,7 @@ public class ListDiagnoseReportIdsRequest extends Request {
     private ListDiagnoseReportIdsRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.body = builder.body;
         this.endTime = builder.endTime;
         this.lang = builder.lang;
         this.page = builder.page;
@@ -74,6 +79,13 @@ public class ListDiagnoseReportIdsRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return body
+     */
+    public String getBody() {
+        return this.body;
     }
 
     /**
@@ -120,6 +132,7 @@ public class ListDiagnoseReportIdsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListDiagnoseReportIdsRequest, Builder> {
         private String instanceId; 
+        private String body; 
         private Long endTime; 
         private String lang; 
         private Integer page; 
@@ -131,15 +144,16 @@ public class ListDiagnoseReportIdsRequest extends Request {
             super();
         } 
 
-        private Builder(ListDiagnoseReportIdsRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.endTime = response.endTime;
-            this.lang = response.lang;
-            this.page = response.page;
-            this.size = response.size;
-            this.startTime = response.startTime;
-            this.trigger = response.trigger;
+        private Builder(ListDiagnoseReportIdsRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.body = request.body;
+            this.endTime = request.endTime;
+            this.lang = request.lang;
+            this.page = request.page;
+            this.size = request.size;
+            this.startTime = request.startTime;
+            this.trigger = request.trigger;
         } 
 
         /**
@@ -148,6 +162,15 @@ public class ListDiagnoseReportIdsRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        public Builder body(String body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
             return this;
         }
 

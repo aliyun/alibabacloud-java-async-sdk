@@ -22,6 +22,10 @@ public class DeleteDataTaskRequest extends Request {
     @Validation(required = true)
     private String clientToken;
 
+    @Body
+    @NameInMap("body")
+    private String body;
+
     @Query
     @NameInMap("taskId")
     @Validation(required = true)
@@ -31,6 +35,7 @@ public class DeleteDataTaskRequest extends Request {
         super(builder);
         this.instanceId = builder.instanceId;
         this.clientToken = builder.clientToken;
+        this.body = builder.body;
         this.taskId = builder.taskId;
     }
 
@@ -62,6 +67,13 @@ public class DeleteDataTaskRequest extends Request {
     }
 
     /**
+     * @return body
+     */
+    public String getBody() {
+        return this.body;
+    }
+
+    /**
      * @return taskId
      */
     public String getTaskId() {
@@ -71,17 +83,19 @@ public class DeleteDataTaskRequest extends Request {
     public static final class Builder extends Request.Builder<DeleteDataTaskRequest, Builder> {
         private String instanceId; 
         private String clientToken; 
+        private String body; 
         private String taskId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteDataTaskRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.clientToken = response.clientToken;
-            this.taskId = response.taskId;
+        private Builder(DeleteDataTaskRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.clientToken = request.clientToken;
+            this.body = request.body;
+            this.taskId = request.taskId;
         } 
 
         /**
@@ -99,6 +113,15 @@ public class DeleteDataTaskRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        public Builder body(String body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
             return this;
         }
 

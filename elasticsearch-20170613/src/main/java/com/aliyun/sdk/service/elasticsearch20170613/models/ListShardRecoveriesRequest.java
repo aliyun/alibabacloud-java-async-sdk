@@ -21,10 +21,15 @@ public class ListShardRecoveriesRequest extends Request {
     @NameInMap("activeOnly")
     private Boolean activeOnly;
 
+    @Body
+    @NameInMap("body")
+    private String body;
+
     private ListShardRecoveriesRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
         this.activeOnly = builder.activeOnly;
+        this.body = builder.body;
     }
 
     public static Builder builder() {
@@ -54,18 +59,27 @@ public class ListShardRecoveriesRequest extends Request {
         return this.activeOnly;
     }
 
+    /**
+     * @return body
+     */
+    public String getBody() {
+        return this.body;
+    }
+
     public static final class Builder extends Request.Builder<ListShardRecoveriesRequest, Builder> {
         private String instanceId; 
         private Boolean activeOnly; 
+        private String body; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListShardRecoveriesRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.activeOnly = response.activeOnly;
+        private Builder(ListShardRecoveriesRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.activeOnly = request.activeOnly;
+            this.body = request.body;
         } 
 
         /**
@@ -83,6 +97,15 @@ public class ListShardRecoveriesRequest extends Request {
         public Builder activeOnly(Boolean activeOnly) {
             this.putQueryParameter("activeOnly", activeOnly);
             this.activeOnly = activeOnly;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        public Builder body(String body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
             return this;
         }
 

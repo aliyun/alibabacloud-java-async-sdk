@@ -26,11 +26,16 @@ public class CloseManagedIndexRequest extends Request {
     @NameInMap("ClientToken")
     private String clientToken;
 
+    @Body
+    @NameInMap("body")
+    private String body;
+
     private CloseManagedIndexRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
         this.index = builder.index;
         this.clientToken = builder.clientToken;
+        this.body = builder.body;
     }
 
     public static Builder builder() {
@@ -67,20 +72,29 @@ public class CloseManagedIndexRequest extends Request {
         return this.clientToken;
     }
 
+    /**
+     * @return body
+     */
+    public String getBody() {
+        return this.body;
+    }
+
     public static final class Builder extends Request.Builder<CloseManagedIndexRequest, Builder> {
         private String instanceId; 
         private String index; 
         private String clientToken; 
+        private String body; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CloseManagedIndexRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.index = response.index;
-            this.clientToken = response.clientToken;
+        private Builder(CloseManagedIndexRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.index = request.index;
+            this.clientToken = request.clientToken;
+            this.body = request.body;
         } 
 
         /**
@@ -107,6 +121,15 @@ public class CloseManagedIndexRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        public Builder body(String body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
             return this;
         }
 

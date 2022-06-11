@@ -127,15 +127,15 @@ public class ModifyWhiteIpsRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyWhiteIpsRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.modifyMode = response.modifyMode;
-            this.networkType = response.networkType;
-            this.nodeType = response.nodeType;
-            this.whiteIpGroup = response.whiteIpGroup;
-            this.whiteIpList = response.whiteIpList;
-            this.clientToken = response.clientToken;
+        private Builder(ModifyWhiteIpsRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.modifyMode = request.modifyMode;
+            this.networkType = request.networkType;
+            this.nodeType = request.nodeType;
+            this.whiteIpGroup = request.whiteIpGroup;
+            this.whiteIpList = request.whiteIpList;
+            this.clientToken = request.clientToken;
         } 
 
         /**

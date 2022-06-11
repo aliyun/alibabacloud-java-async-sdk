@@ -7,18 +7,18 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link RebootInstanceNodeResponseBody} extends {@link TeaModel}
+ * {@link DescribeDynamicSettingsResponseBody} extends {@link TeaModel}
  *
- * <p>RebootInstanceNodeResponseBody</p>
+ * <p>DescribeDynamicSettingsResponseBody</p>
  */
-public class RebootInstanceNodeResponseBody extends TeaModel {
+public class DescribeDynamicSettingsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
     @NameInMap("Result")
-    private Boolean result;
+    private String result;
 
-    private RebootInstanceNodeResponseBody(Builder builder) {
+    private DescribeDynamicSettingsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
         this.result = builder.result;
     }
@@ -27,7 +27,7 @@ public class RebootInstanceNodeResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static RebootInstanceNodeResponseBody create() {
+    public static DescribeDynamicSettingsResponseBody create() {
         return builder().build();
     }
 
@@ -41,13 +41,13 @@ public class RebootInstanceNodeResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public Boolean getResult() {
+    public String getResult() {
         return this.result;
     }
 
     public static final class Builder {
         private String requestId; 
-        private Boolean result; 
+        private String result; 
 
         /**
          * RequestId.
@@ -58,15 +58,15 @@ public class RebootInstanceNodeResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * Id of the request
          */
-        public Builder result(Boolean result) {
+        public Builder result(String result) {
             this.result = result;
             return this;
         }
 
-        public RebootInstanceNodeResponseBody build() {
-            return new RebootInstanceNodeResponseBody(this);
+        public DescribeDynamicSettingsResponseBody build() {
+            return new DescribeDynamicSettingsResponseBody(this);
         } 
 
     } 

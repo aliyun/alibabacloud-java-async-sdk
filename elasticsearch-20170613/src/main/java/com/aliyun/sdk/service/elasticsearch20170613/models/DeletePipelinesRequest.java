@@ -21,6 +21,10 @@ public class DeletePipelinesRequest extends Request {
     @NameInMap("ClientToken")
     private String clientToken;
 
+    @Body
+    @NameInMap("body")
+    private String body;
+
     @Query
     @NameInMap("pipelineIds")
     private String pipelineIds;
@@ -29,6 +33,7 @@ public class DeletePipelinesRequest extends Request {
         super(builder);
         this.instanceId = builder.instanceId;
         this.clientToken = builder.clientToken;
+        this.body = builder.body;
         this.pipelineIds = builder.pipelineIds;
     }
 
@@ -60,6 +65,13 @@ public class DeletePipelinesRequest extends Request {
     }
 
     /**
+     * @return body
+     */
+    public String getBody() {
+        return this.body;
+    }
+
+    /**
      * @return pipelineIds
      */
     public String getPipelineIds() {
@@ -69,17 +81,19 @@ public class DeletePipelinesRequest extends Request {
     public static final class Builder extends Request.Builder<DeletePipelinesRequest, Builder> {
         private String instanceId; 
         private String clientToken; 
+        private String body; 
         private String pipelineIds; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeletePipelinesRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.clientToken = response.clientToken;
-            this.pipelineIds = response.pipelineIds;
+        private Builder(DeletePipelinesRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.clientToken = request.clientToken;
+            this.body = request.body;
+            this.pipelineIds = request.pipelineIds;
         } 
 
         /**
@@ -97,6 +111,15 @@ public class DeletePipelinesRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        public Builder body(String body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
             return this;
         }
 

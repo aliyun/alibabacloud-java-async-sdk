@@ -12,12 +12,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetRegionConfigurationRequest</p>
  */
 public class GetRegionConfigurationRequest extends Request {
+    @Body
+    @NameInMap("body")
+    private String body;
+
     @Query
     @NameInMap("zoneId")
     private String zoneId;
 
     private GetRegionConfigurationRequest(Builder builder) {
         super(builder);
+        this.body = builder.body;
         this.zoneId = builder.zoneId;
     }
 
@@ -35,6 +40,13 @@ public class GetRegionConfigurationRequest extends Request {
     }
 
     /**
+     * @return body
+     */
+    public String getBody() {
+        return this.body;
+    }
+
+    /**
      * @return zoneId
      */
     public String getZoneId() {
@@ -42,16 +54,27 @@ public class GetRegionConfigurationRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetRegionConfigurationRequest, Builder> {
+        private String body; 
         private String zoneId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetRegionConfigurationRequest response) {
-            super(response);
-            this.zoneId = response.zoneId;
+        private Builder(GetRegionConfigurationRequest request) {
+            super(request);
+            this.body = request.body;
+            this.zoneId = request.zoneId;
         } 
+
+        /**
+         * body.
+         */
+        public Builder body(String body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
+            return this;
+        }
 
         /**
          * zoneId.

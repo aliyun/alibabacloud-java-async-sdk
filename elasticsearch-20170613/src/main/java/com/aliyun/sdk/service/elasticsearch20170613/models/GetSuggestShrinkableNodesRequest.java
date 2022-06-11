@@ -17,6 +17,10 @@ public class GetSuggestShrinkableNodesRequest extends Request {
     @Validation(required = true)
     private String instanceId;
 
+    @Body
+    @NameInMap("body")
+    private String body;
+
     @Query
     @NameInMap("count")
     @Validation(required = true)
@@ -34,6 +38,7 @@ public class GetSuggestShrinkableNodesRequest extends Request {
     private GetSuggestShrinkableNodesRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.body = builder.body;
         this.count = builder.count;
         this.ignoreStatus = builder.ignoreStatus;
         this.nodeType = builder.nodeType;
@@ -60,6 +65,13 @@ public class GetSuggestShrinkableNodesRequest extends Request {
     }
 
     /**
+     * @return body
+     */
+    public String getBody() {
+        return this.body;
+    }
+
+    /**
      * @return count
      */
     public Integer getCount() {
@@ -82,6 +94,7 @@ public class GetSuggestShrinkableNodesRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetSuggestShrinkableNodesRequest, Builder> {
         private String instanceId; 
+        private String body; 
         private Integer count; 
         private Boolean ignoreStatus; 
         private String nodeType; 
@@ -90,12 +103,13 @@ public class GetSuggestShrinkableNodesRequest extends Request {
             super();
         } 
 
-        private Builder(GetSuggestShrinkableNodesRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.count = response.count;
-            this.ignoreStatus = response.ignoreStatus;
-            this.nodeType = response.nodeType;
+        private Builder(GetSuggestShrinkableNodesRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.body = request.body;
+            this.count = request.count;
+            this.ignoreStatus = request.ignoreStatus;
+            this.nodeType = request.nodeType;
         } 
 
         /**
@@ -104,6 +118,15 @@ public class GetSuggestShrinkableNodesRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        public Builder body(String body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
             return this;
         }
 

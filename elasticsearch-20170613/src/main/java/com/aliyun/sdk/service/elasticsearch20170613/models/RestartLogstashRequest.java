@@ -17,6 +17,10 @@ public class RestartLogstashRequest extends Request {
     @Validation(required = true)
     private String instanceId;
 
+    @Body
+    @NameInMap("body")
+    private String body;
+
     @Query
     @NameInMap("clientToken")
     private String clientToken;
@@ -28,6 +32,7 @@ public class RestartLogstashRequest extends Request {
     private RestartLogstashRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.body = builder.body;
         this.clientToken = builder.clientToken;
         this.force = builder.force;
     }
@@ -53,6 +58,13 @@ public class RestartLogstashRequest extends Request {
     }
 
     /**
+     * @return body
+     */
+    public String getBody() {
+        return this.body;
+    }
+
+    /**
      * @return clientToken
      */
     public String getClientToken() {
@@ -68,6 +80,7 @@ public class RestartLogstashRequest extends Request {
 
     public static final class Builder extends Request.Builder<RestartLogstashRequest, Builder> {
         private String instanceId; 
+        private String body; 
         private String clientToken; 
         private Boolean force; 
 
@@ -75,11 +88,12 @@ public class RestartLogstashRequest extends Request {
             super();
         } 
 
-        private Builder(RestartLogstashRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.clientToken = response.clientToken;
-            this.force = response.force;
+        private Builder(RestartLogstashRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.body = request.body;
+            this.clientToken = request.clientToken;
+            this.force = request.force;
         } 
 
         /**
@@ -88,6 +102,15 @@ public class RestartLogstashRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        public Builder body(String body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
             return this;
         }
 

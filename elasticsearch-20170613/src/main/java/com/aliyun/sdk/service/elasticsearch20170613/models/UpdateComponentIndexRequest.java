@@ -89,12 +89,12 @@ public class UpdateComponentIndexRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateComponentIndexRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.name = response.name;
-            this.meta = response.meta;
-            this.template = response.template;
+        private Builder(UpdateComponentIndexRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.name = request.name;
+            this.meta = request.meta;
+            this.template = request.template;
         } 
 
         /**

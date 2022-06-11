@@ -17,6 +17,10 @@ public class MigrateToOtherZoneRequest extends Request {
     @Validation(required = true)
     private String instanceId;
 
+    @Body
+    @NameInMap("body")
+    private String body;
+
     @Query
     @NameInMap("dryRun")
     @Validation(required = true)
@@ -25,6 +29,7 @@ public class MigrateToOtherZoneRequest extends Request {
     private MigrateToOtherZoneRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.body = builder.body;
         this.dryRun = builder.dryRun;
     }
 
@@ -49,6 +54,13 @@ public class MigrateToOtherZoneRequest extends Request {
     }
 
     /**
+     * @return body
+     */
+    public String getBody() {
+        return this.body;
+    }
+
+    /**
      * @return dryRun
      */
     public Boolean getDryRun() {
@@ -57,16 +69,18 @@ public class MigrateToOtherZoneRequest extends Request {
 
     public static final class Builder extends Request.Builder<MigrateToOtherZoneRequest, Builder> {
         private String instanceId; 
+        private String body; 
         private Boolean dryRun; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(MigrateToOtherZoneRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.dryRun = response.dryRun;
+        private Builder(MigrateToOtherZoneRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.body = request.body;
+            this.dryRun = request.dryRun;
         } 
 
         /**
@@ -75,6 +89,15 @@ public class MigrateToOtherZoneRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        public Builder body(String body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
             return this;
         }
 

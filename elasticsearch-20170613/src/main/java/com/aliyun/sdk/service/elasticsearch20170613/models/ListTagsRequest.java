@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTagsRequest</p>
  */
 public class ListTagsRequest extends Request {
+    @Body
+    @NameInMap("body")
+    private String body;
+
     @Query
     @NameInMap("pageSize")
     @Validation(maximum = 50, minimum = 1)
@@ -23,6 +27,7 @@ public class ListTagsRequest extends Request {
 
     private ListTagsRequest(Builder builder) {
         super(builder);
+        this.body = builder.body;
         this.pageSize = builder.pageSize;
         this.resourceType = builder.resourceType;
     }
@@ -41,6 +46,13 @@ public class ListTagsRequest extends Request {
     }
 
     /**
+     * @return body
+     */
+    public String getBody() {
+        return this.body;
+    }
+
+    /**
      * @return pageSize
      */
     public Integer getPageSize() {
@@ -55,6 +67,7 @@ public class ListTagsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListTagsRequest, Builder> {
+        private String body; 
         private Integer pageSize; 
         private String resourceType; 
 
@@ -62,11 +75,21 @@ public class ListTagsRequest extends Request {
             super();
         } 
 
-        private Builder(ListTagsRequest response) {
-            super(response);
-            this.pageSize = response.pageSize;
-            this.resourceType = response.resourceType;
+        private Builder(ListTagsRequest request) {
+            super(request);
+            this.body = request.body;
+            this.pageSize = request.pageSize;
+            this.resourceType = request.resourceType;
         } 
+
+        /**
+         * body.
+         */
+        public Builder body(String body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
+            return this;
+        }
 
         /**
          * pageSize.
