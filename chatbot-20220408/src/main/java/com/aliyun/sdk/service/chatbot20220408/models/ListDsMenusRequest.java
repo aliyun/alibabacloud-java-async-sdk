@@ -30,6 +30,10 @@ public class ListDsMenusRequest extends Request {
     private Integer robotEnv;
 
     @Query
+    @NameInMap("Source")
+    private Integer source;
+
+    @Query
     @NameInMap("Tags")
     private String tags;
 
@@ -39,6 +43,7 @@ public class ListDsMenusRequest extends Request {
         this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
         this.robotEnv = builder.robotEnv;
+        this.source = builder.source;
         this.tags = builder.tags;
     }
 
@@ -84,6 +89,13 @@ public class ListDsMenusRequest extends Request {
     }
 
     /**
+     * @return source
+     */
+    public Integer getSource() {
+        return this.source;
+    }
+
+    /**
      * @return tags
      */
     public String getTags() {
@@ -95,6 +107,7 @@ public class ListDsMenusRequest extends Request {
         private String instanceId; 
         private String regionId; 
         private Integer robotEnv; 
+        private Integer source; 
         private String tags; 
 
         private Builder() {
@@ -107,6 +120,7 @@ public class ListDsMenusRequest extends Request {
             this.instanceId = request.instanceId;
             this.regionId = request.regionId;
             this.robotEnv = request.robotEnv;
+            this.source = request.source;
             this.tags = request.tags;
         } 
 
@@ -143,6 +157,17 @@ public class ListDsMenusRequest extends Request {
         public Builder robotEnv(Integer robotEnv) {
             this.putQueryParameter("RobotEnv", robotEnv);
             this.robotEnv = robotEnv;
+            return this;
+        }
+
+        /**
+         * 业务来源标识：
+         * <p>
+         * 1-集团内部aliyun域名；2-外部使用4service域名（默认）
+         */
+        public Builder source(Integer source) {
+            this.putQueryParameter("Source", source);
+            this.source = source;
             return this;
         }
 
