@@ -38,6 +38,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateIoTCloudConnectorResponse> createIoTCloudConnector(CreateIoTCloudConnectorRequest request);
 
+    CompletableFuture<CreateIoTCloudConnectorBackhaulRouteResponse> createIoTCloudConnectorBackhaulRoute(CreateIoTCloudConnectorBackhaulRouteRequest request);
+
     CompletableFuture<CreateIoTCloudConnectorGroupResponse> createIoTCloudConnectorGroup(CreateIoTCloudConnectorGroupRequest request);
 
     CompletableFuture<CreateServiceResponse> createService(CreateServiceRequest request);
@@ -57,6 +59,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteIoTCloudConnectorResponse> deleteIoTCloudConnector(DeleteIoTCloudConnectorRequest request);
 
     CompletableFuture<DeleteIoTCloudConnectorGroupResponse> deleteIoTCloudConnectorGroup(DeleteIoTCloudConnectorGroupRequest request);
+
+    CompletableFuture<DeleteIoTCloudConnetorBackhaulRouteResponse> deleteIoTCloudConnetorBackhaulRoute(DeleteIoTCloudConnetorBackhaulRouteRequest request);
 
     CompletableFuture<DeleteServiceResponse> deleteService(DeleteServiceRequest request);
 
@@ -105,6 +109,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListIoTCloudConnectorGroupsResponse> listIoTCloudConnectorGroups(ListIoTCloudConnectorGroupsRequest request);
 
     CompletableFuture<ListIoTCloudConnectorsResponse> listIoTCloudConnectors(ListIoTCloudConnectorsRequest request);
+
+    CompletableFuture<ListIoTCoudConnectorBackhaulRouteResponse> listIoTCoudConnectorBackhaulRoute(ListIoTCoudConnectorBackhaulRouteRequest request);
 
     CompletableFuture<ListRegionsResponse> listRegions(ListRegionsRequest request);
 

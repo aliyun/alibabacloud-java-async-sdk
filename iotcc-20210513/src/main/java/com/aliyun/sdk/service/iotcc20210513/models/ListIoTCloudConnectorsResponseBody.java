@@ -159,11 +159,20 @@ public class ListIoTCloudConnectorsResponseBody extends TeaModel {
         @NameInMap("IoTCloudConnectorStatus")
         private String ioTCloudConnectorStatus;
 
+        @NameInMap("IpFeature")
+        private String ipFeature;
+
+        @NameInMap("Mode")
+        private String mode;
+
         @NameInMap("ModifyTime")
         private Long modifyTime;
 
         @NameInMap("RateLimit")
         private Long rateLimit;
+
+        @NameInMap("Type")
+        private String type;
 
         @NameInMap("VSwitchList")
         private java.util.List < String > vSwitchList;
@@ -184,8 +193,11 @@ public class ListIoTCloudConnectorsResponseBody extends TeaModel {
             this.ioTCloudConnectorId = builder.ioTCloudConnectorId;
             this.ioTCloudConnectorName = builder.ioTCloudConnectorName;
             this.ioTCloudConnectorStatus = builder.ioTCloudConnectorStatus;
+            this.ipFeature = builder.ipFeature;
+            this.mode = builder.mode;
             this.modifyTime = builder.modifyTime;
             this.rateLimit = builder.rateLimit;
+            this.type = builder.type;
             this.vSwitchList = builder.vSwitchList;
             this.vpcId = builder.vpcId;
             this.wildcardDomainEnabled = builder.wildcardDomainEnabled;
@@ -263,6 +275,20 @@ public class ListIoTCloudConnectorsResponseBody extends TeaModel {
         }
 
         /**
+         * @return ipFeature
+         */
+        public String getIpFeature() {
+            return this.ipFeature;
+        }
+
+        /**
+         * @return mode
+         */
+        public String getMode() {
+            return this.mode;
+        }
+
+        /**
          * @return modifyTime
          */
         public Long getModifyTime() {
@@ -274,6 +300,13 @@ public class ListIoTCloudConnectorsResponseBody extends TeaModel {
          */
         public Long getRateLimit() {
             return this.rateLimit;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
         }
 
         /**
@@ -307,8 +340,11 @@ public class ListIoTCloudConnectorsResponseBody extends TeaModel {
             private String ioTCloudConnectorId; 
             private String ioTCloudConnectorName; 
             private String ioTCloudConnectorStatus; 
+            private String ipFeature; 
+            private String mode; 
             private Long modifyTime; 
             private Long rateLimit; 
+            private String type; 
             private java.util.List < String > vSwitchList; 
             private String vpcId; 
             private Boolean wildcardDomainEnabled; 
@@ -386,6 +422,22 @@ public class ListIoTCloudConnectorsResponseBody extends TeaModel {
             }
 
             /**
+             * IpFeature.
+             */
+            public Builder ipFeature(String ipFeature) {
+                this.ipFeature = ipFeature;
+                return this;
+            }
+
+            /**
+             * Mode.
+             */
+            public Builder mode(String mode) {
+                this.mode = mode;
+                return this;
+            }
+
+            /**
              * ModifyTime.
              */
             public Builder modifyTime(Long modifyTime) {
@@ -398,6 +450,14 @@ public class ListIoTCloudConnectorsResponseBody extends TeaModel {
              */
             public Builder rateLimit(Long rateLimit) {
                 this.rateLimit = rateLimit;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
                 return this;
             }
 

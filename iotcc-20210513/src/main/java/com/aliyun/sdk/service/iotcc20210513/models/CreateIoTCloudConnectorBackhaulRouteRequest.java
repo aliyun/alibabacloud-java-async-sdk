@@ -7,51 +7,42 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateIoTCloudConnectorGroupRequest} extends {@link RequestModel}
+ * {@link CreateIoTCloudConnectorBackhaulRouteRequest} extends {@link RequestModel}
  *
- * <p>CreateIoTCloudConnectorGroupRequest</p>
+ * <p>CreateIoTCloudConnectorBackhaulRouteRequest</p>
  */
-public class CreateIoTCloudConnectorGroupRequest extends Request {
+public class CreateIoTCloudConnectorBackhaulRouteRequest extends Request {
     @Query
     @NameInMap("ClientToken")
     private String clientToken;
-
-    @Query
-    @NameInMap("Description")
-    private String description;
 
     @Query
     @NameInMap("DryRun")
     private Boolean dryRun;
 
     @Query
-    @NameInMap("Name")
-    private String name;
+    @NameInMap("IoTCloudConnectorId")
+    @Validation(required = true)
+    private String ioTCloudConnectorId;
 
     @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("Type")
-    private String type;
-
-    private CreateIoTCloudConnectorGroupRequest(Builder builder) {
+    private CreateIoTCloudConnectorBackhaulRouteRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
-        this.description = builder.description;
         this.dryRun = builder.dryRun;
-        this.name = builder.name;
+        this.ioTCloudConnectorId = builder.ioTCloudConnectorId;
         this.regionId = builder.regionId;
-        this.type = builder.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static CreateIoTCloudConnectorGroupRequest create() {
+    public static CreateIoTCloudConnectorBackhaulRouteRequest create() {
         return builder().build();
     }
 
@@ -68,13 +59,6 @@ public class CreateIoTCloudConnectorGroupRequest extends Request {
     }
 
     /**
-     * @return description
-     */
-    public String getDescription() {
-        return this.description;
-    }
-
-    /**
      * @return dryRun
      */
     public Boolean getDryRun() {
@@ -82,10 +66,10 @@ public class CreateIoTCloudConnectorGroupRequest extends Request {
     }
 
     /**
-     * @return name
+     * @return ioTCloudConnectorId
      */
-    public String getName() {
-        return this.name;
+    public String getIoTCloudConnectorId() {
+        return this.ioTCloudConnectorId;
     }
 
     /**
@@ -95,33 +79,22 @@ public class CreateIoTCloudConnectorGroupRequest extends Request {
         return this.regionId;
     }
 
-    /**
-     * @return type
-     */
-    public String getType() {
-        return this.type;
-    }
-
-    public static final class Builder extends Request.Builder<CreateIoTCloudConnectorGroupRequest, Builder> {
+    public static final class Builder extends Request.Builder<CreateIoTCloudConnectorBackhaulRouteRequest, Builder> {
         private String clientToken; 
-        private String description; 
         private Boolean dryRun; 
-        private String name; 
+        private String ioTCloudConnectorId; 
         private String regionId; 
-        private String type; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateIoTCloudConnectorGroupRequest request) {
+        private Builder(CreateIoTCloudConnectorBackhaulRouteRequest request) {
             super(request);
             this.clientToken = request.clientToken;
-            this.description = request.description;
             this.dryRun = request.dryRun;
-            this.name = request.name;
+            this.ioTCloudConnectorId = request.ioTCloudConnectorId;
             this.regionId = request.regionId;
-            this.type = request.type;
         } 
 
         /**
@@ -130,15 +103,6 @@ public class CreateIoTCloudConnectorGroupRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
-            return this;
-        }
-
-        /**
-         * Description.
-         */
-        public Builder description(String description) {
-            this.putQueryParameter("Description", description);
-            this.description = description;
             return this;
         }
 
@@ -152,11 +116,11 @@ public class CreateIoTCloudConnectorGroupRequest extends Request {
         }
 
         /**
-         * Name.
+         * IoTCloudConnectorId.
          */
-        public Builder name(String name) {
-            this.putQueryParameter("Name", name);
-            this.name = name;
+        public Builder ioTCloudConnectorId(String ioTCloudConnectorId) {
+            this.putQueryParameter("IoTCloudConnectorId", ioTCloudConnectorId);
+            this.ioTCloudConnectorId = ioTCloudConnectorId;
             return this;
         }
 
@@ -169,18 +133,9 @@ public class CreateIoTCloudConnectorGroupRequest extends Request {
             return this;
         }
 
-        /**
-         * Type.
-         */
-        public Builder type(String type) {
-            this.putQueryParameter("Type", type);
-            this.type = type;
-            return this;
-        }
-
         @Override
-        public CreateIoTCloudConnectorGroupRequest build() {
-            return new CreateIoTCloudConnectorGroupRequest(this);
+        public CreateIoTCloudConnectorBackhaulRouteRequest build() {
+            return new CreateIoTCloudConnectorBackhaulRouteRequest(this);
         } 
 
     } 

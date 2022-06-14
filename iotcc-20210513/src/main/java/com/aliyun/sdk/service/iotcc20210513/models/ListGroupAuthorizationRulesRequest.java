@@ -55,6 +55,10 @@ public class ListGroupAuthorizationRulesRequest extends Request {
     @Validation(required = true)
     private String regionId;
 
+    @Query
+    @NameInMap("Type")
+    private String type;
+
     private ListGroupAuthorizationRulesRequest(Builder builder) {
         super(builder);
         this.authorizationRuleIds = builder.authorizationRuleIds;
@@ -67,6 +71,7 @@ public class ListGroupAuthorizationRulesRequest extends Request {
         this.nextToken = builder.nextToken;
         this.policy = builder.policy;
         this.regionId = builder.regionId;
+        this.type = builder.type;
     }
 
     public static Builder builder() {
@@ -152,6 +157,13 @@ public class ListGroupAuthorizationRulesRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return type
+     */
+    public String getType() {
+        return this.type;
+    }
+
     public static final class Builder extends Request.Builder<ListGroupAuthorizationRulesRequest, Builder> {
         private java.util.List < String > authorizationRuleIds; 
         private java.util.List < String > authorizationRuleName; 
@@ -163,6 +175,7 @@ public class ListGroupAuthorizationRulesRequest extends Request {
         private String nextToken; 
         private java.util.List < String > policy; 
         private String regionId; 
+        private String type; 
 
         private Builder() {
             super();
@@ -180,6 +193,7 @@ public class ListGroupAuthorizationRulesRequest extends Request {
             this.nextToken = request.nextToken;
             this.policy = request.policy;
             this.regionId = request.regionId;
+            this.type = request.type;
         } 
 
         /**
@@ -269,6 +283,15 @@ public class ListGroupAuthorizationRulesRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Type.
+         */
+        public Builder type(String type) {
+            this.putQueryParameter("Type", type);
+            this.type = type;
             return this;
         }
 

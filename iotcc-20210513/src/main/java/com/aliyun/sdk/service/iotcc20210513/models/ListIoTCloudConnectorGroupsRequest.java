@@ -38,6 +38,10 @@ public class ListIoTCloudConnectorGroupsRequest extends Request {
     @Validation(required = true)
     private String regionId;
 
+    @Query
+    @NameInMap("Type")
+    private String type;
+
     private ListIoTCloudConnectorGroupsRequest(Builder builder) {
         super(builder);
         this.ioTCloudConnectorGroupIds = builder.ioTCloudConnectorGroupIds;
@@ -46,6 +50,7 @@ public class ListIoTCloudConnectorGroupsRequest extends Request {
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.regionId = builder.regionId;
+        this.type = builder.type;
     }
 
     public static Builder builder() {
@@ -103,6 +108,13 @@ public class ListIoTCloudConnectorGroupsRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return type
+     */
+    public String getType() {
+        return this.type;
+    }
+
     public static final class Builder extends Request.Builder<ListIoTCloudConnectorGroupsRequest, Builder> {
         private java.util.List < String > ioTCloudConnectorGroupIds; 
         private java.util.List < String > ioTCloudConnectorGroupName; 
@@ -110,6 +122,7 @@ public class ListIoTCloudConnectorGroupsRequest extends Request {
         private Integer maxResults; 
         private String nextToken; 
         private String regionId; 
+        private String type; 
 
         private Builder() {
             super();
@@ -123,6 +136,7 @@ public class ListIoTCloudConnectorGroupsRequest extends Request {
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.regionId = request.regionId;
+            this.type = request.type;
         } 
 
         /**
@@ -176,6 +190,15 @@ public class ListIoTCloudConnectorGroupsRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Type.
+         */
+        public Builder type(String type) {
+            this.putQueryParameter("Type", type);
+            this.type = type;
             return this;
         }
 

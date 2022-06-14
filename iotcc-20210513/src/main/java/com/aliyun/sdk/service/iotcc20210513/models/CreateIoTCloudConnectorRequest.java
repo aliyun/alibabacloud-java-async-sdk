@@ -47,6 +47,10 @@ public class CreateIoTCloudConnectorRequest extends Request {
     private Long resourceUid;
 
     @Query
+    @NameInMap("Type")
+    private String type;
+
+    @Query
     @NameInMap("WildcardDomainEnabled")
     private Boolean wildcardDomainEnabled;
 
@@ -60,6 +64,7 @@ public class CreateIoTCloudConnectorRequest extends Request {
         this.ioTCloudConnectorName = builder.ioTCloudConnectorName;
         this.regionId = builder.regionId;
         this.resourceUid = builder.resourceUid;
+        this.type = builder.type;
         this.wildcardDomainEnabled = builder.wildcardDomainEnabled;
     }
 
@@ -133,6 +138,13 @@ public class CreateIoTCloudConnectorRequest extends Request {
     }
 
     /**
+     * @return type
+     */
+    public String getType() {
+        return this.type;
+    }
+
+    /**
      * @return wildcardDomainEnabled
      */
     public Boolean getWildcardDomainEnabled() {
@@ -148,6 +160,7 @@ public class CreateIoTCloudConnectorRequest extends Request {
         private String ioTCloudConnectorName; 
         private String regionId; 
         private Long resourceUid; 
+        private String type; 
         private Boolean wildcardDomainEnabled; 
 
         private Builder() {
@@ -164,6 +177,7 @@ public class CreateIoTCloudConnectorRequest extends Request {
             this.ioTCloudConnectorName = request.ioTCloudConnectorName;
             this.regionId = request.regionId;
             this.resourceUid = request.resourceUid;
+            this.type = request.type;
             this.wildcardDomainEnabled = request.wildcardDomainEnabled;
         } 
 
@@ -236,6 +250,15 @@ public class CreateIoTCloudConnectorRequest extends Request {
         public Builder resourceUid(Long resourceUid) {
             this.putQueryParameter("ResourceUid", resourceUid);
             this.resourceUid = resourceUid;
+            return this;
+        }
+
+        /**
+         * Type.
+         */
+        public Builder type(String type) {
+            this.putQueryParameter("Type", type);
+            this.type = type;
             return this;
         }
 

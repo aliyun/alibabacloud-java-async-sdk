@@ -159,6 +159,9 @@ public class ListGroupAuthorizationRulesResponseBody extends TeaModel {
         @NameInMap("SourceCidrs")
         private java.util.List < String > sourceCidrs;
 
+        @NameInMap("Type")
+        private String type;
+
         private GroupAuthorizationRules(Builder builder) {
             this.authorizationRuleDescription = builder.authorizationRuleDescription;
             this.authorizationRuleId = builder.authorizationRuleId;
@@ -169,6 +172,7 @@ public class ListGroupAuthorizationRulesResponseBody extends TeaModel {
             this.ioTCloudConnectorGroupId = builder.ioTCloudConnectorGroupId;
             this.policy = builder.policy;
             this.sourceCidrs = builder.sourceCidrs;
+            this.type = builder.type;
         }
 
         public static Builder builder() {
@@ -242,6 +246,13 @@ public class ListGroupAuthorizationRulesResponseBody extends TeaModel {
             return this.sourceCidrs;
         }
 
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
         public static final class Builder {
             private String authorizationRuleDescription; 
             private String authorizationRuleId; 
@@ -252,6 +263,7 @@ public class ListGroupAuthorizationRulesResponseBody extends TeaModel {
             private String ioTCloudConnectorGroupId; 
             private String policy; 
             private java.util.List < String > sourceCidrs; 
+            private String type; 
 
             /**
              * AuthorizationRuleDescription.
@@ -322,6 +334,14 @@ public class ListGroupAuthorizationRulesResponseBody extends TeaModel {
              */
             public Builder sourceCidrs(java.util.List < String > sourceCidrs) {
                 this.sourceCidrs = sourceCidrs;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
                 return this;
             }
 
