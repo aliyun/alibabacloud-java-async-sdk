@@ -1,0 +1,104 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.retailcloud20180313.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link CreateEnvironmentResponse} extends {@link TeaModel}
+ *
+ * <p>CreateEnvironmentResponse</p>
+ */
+public class CreateEnvironmentResponse extends Response {
+    @NameInMap("headers")
+    @Validation(required = true)
+    private java.util.Map < String, String > headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    private CreateEnvironmentResponseBody body;
+
+    private CreateEnvironmentResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.body = builder.body;
+    }
+
+    public static CreateEnvironmentResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return body
+     */
+    public CreateEnvironmentResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<CreateEnvironmentResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder body(CreateEnvironmentResponseBody body);
+
+        @Override
+        CreateEnvironmentResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<CreateEnvironmentResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private CreateEnvironmentResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(CreateEnvironmentResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(CreateEnvironmentResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public CreateEnvironmentResponse build() {
+            return new CreateEnvironmentResponse(this);
+        } 
+
+    } 
+
+}
