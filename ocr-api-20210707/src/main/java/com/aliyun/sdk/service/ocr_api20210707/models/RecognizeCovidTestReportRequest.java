@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class RecognizeCovidTestReportRequest extends Request {
     @Query
+    @NameInMap("MultipleResult")
+    private Boolean multipleResult;
+
+    @Query
     @NameInMap("Url")
     private String url;
 
@@ -22,6 +26,7 @@ public class RecognizeCovidTestReportRequest extends Request {
 
     private RecognizeCovidTestReportRequest(Builder builder) {
         super(builder);
+        this.multipleResult = builder.multipleResult;
         this.url = builder.url;
         this.body = builder.body;
     }
@@ -40,6 +45,13 @@ public class RecognizeCovidTestReportRequest extends Request {
     }
 
     /**
+     * @return multipleResult
+     */
+    public Boolean getMultipleResult() {
+        return this.multipleResult;
+    }
+
+    /**
      * @return url
      */
     public String getUrl() {
@@ -54,6 +66,7 @@ public class RecognizeCovidTestReportRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<RecognizeCovidTestReportRequest, Builder> {
+        private Boolean multipleResult; 
         private String url; 
         private java.io.InputStream body; 
 
@@ -63,9 +76,19 @@ public class RecognizeCovidTestReportRequest extends Request {
 
         private Builder(RecognizeCovidTestReportRequest request) {
             super(request);
+            this.multipleResult = request.multipleResult;
             this.url = request.url;
             this.body = request.body;
         } 
+
+        /**
+         * MultipleResult.
+         */
+        public Builder multipleResult(Boolean multipleResult) {
+            this.putQueryParameter("MultipleResult", multipleResult);
+            this.multipleResult = multipleResult;
+            return this;
+        }
 
         /**
          * 图片链接（长度不超 2048，不支持 base64）
