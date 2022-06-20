@@ -114,8 +114,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListDSEntityValueResponse> listDSEntityValue(ListDSEntityValueRequest request);
 
-    CompletableFuture<ListDsMenusResponse> listDsMenus(ListDsMenusRequest request);
-
     CompletableFuture<ListInstanceResponse> listInstance(ListInstanceRequest request);
 
     CompletableFuture<ListIntentResponse> listIntent(ListIntentRequest request);

@@ -131,87 +131,6 @@ public class ChatResponseBody extends TeaModel {
 
     } 
 
-    public static class CardList extends TeaModel {
-        @NameInMap("AnswerSource")
-        private String answerSource;
-
-        @NameInMap("MsgType")
-        private String msgType;
-
-        @NameInMap("Platform")
-        private String platform;
-
-        private CardList(Builder builder) {
-            this.answerSource = builder.answerSource;
-            this.msgType = builder.msgType;
-            this.platform = builder.platform;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static CardList create() {
-            return builder().build();
-        }
-
-        /**
-         * @return answerSource
-         */
-        public String getAnswerSource() {
-            return this.answerSource;
-        }
-
-        /**
-         * @return msgType
-         */
-        public String getMsgType() {
-            return this.msgType;
-        }
-
-        /**
-         * @return platform
-         */
-        public String getPlatform() {
-            return this.platform;
-        }
-
-        public static final class Builder {
-            private String answerSource; 
-            private String msgType; 
-            private String platform; 
-
-            /**
-             * 区分答案类型：cardAnswer
-             */
-            public Builder answerSource(String answerSource) {
-                this.answerSource = answerSource;
-                return this;
-            }
-
-            /**
-             * 消息类型：card
-             */
-            public Builder msgType(String msgType) {
-                this.msgType = msgType;
-                return this;
-            }
-
-            /**
-             * 平台类型：beebot
-             */
-            public Builder platform(String platform) {
-                this.platform = platform;
-                return this;
-            }
-
-            public CardList build() {
-                return new CardList(this);
-            } 
-
-        } 
-
-    }
     public static class RelatedKnowledges extends TeaModel {
         @NameInMap("KnowledgeId")
         private String knowledgeId;
@@ -1050,9 +969,6 @@ public class ChatResponseBody extends TeaModel {
         @NameInMap("AnswerType")
         private String answerType;
 
-        @NameInMap("CardList")
-        private java.util.List < CardList> cardList;
-
         @NameInMap("Knowledge")
         private Knowledge knowledge;
 
@@ -1071,7 +987,6 @@ public class ChatResponseBody extends TeaModel {
         private Messages(Builder builder) {
             this.answerSource = builder.answerSource;
             this.answerType = builder.answerType;
-            this.cardList = builder.cardList;
             this.knowledge = builder.knowledge;
             this.recommends = builder.recommends;
             this.text = builder.text;
@@ -1099,13 +1014,6 @@ public class ChatResponseBody extends TeaModel {
          */
         public String getAnswerType() {
             return this.answerType;
-        }
-
-        /**
-         * @return cardList
-         */
-        public java.util.List < CardList> getCardList() {
-            return this.cardList;
         }
 
         /**
@@ -1146,7 +1054,6 @@ public class ChatResponseBody extends TeaModel {
         public static final class Builder {
             private String answerSource; 
             private String answerType; 
-            private java.util.List < CardList> cardList; 
             private Knowledge knowledge; 
             private java.util.List < Recommends> recommends; 
             private Text text; 
@@ -1166,14 +1073,6 @@ public class ChatResponseBody extends TeaModel {
              */
             public Builder answerType(String answerType) {
                 this.answerType = answerType;
-                return this;
-            }
-
-            /**
-             * 当AnswerType为CardAnswer时，此字段包含机器人返回的Card的列表
-             */
-            public Builder cardList(java.util.List < CardList> cardList) {
-                this.cardList = cardList;
                 return this;
             }
 

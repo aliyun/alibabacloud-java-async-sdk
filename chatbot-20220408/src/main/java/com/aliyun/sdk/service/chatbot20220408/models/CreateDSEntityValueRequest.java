@@ -35,7 +35,7 @@ public class CreateDSEntityValueRequest extends Request {
     @NameInMap("RegionId")
     private String regionId;
 
-    @Query
+    @Body
     @NameInMap("Synonyms")
     private java.util.List < String > synonyms;
 
@@ -175,7 +175,8 @@ public class CreateDSEntityValueRequest extends Request {
          * Synonyms.
          */
         public Builder synonyms(java.util.List < String > synonyms) {
-            this.putQueryParameter("Synonyms", synonyms);
+            String synonymsShrink = shrink(synonyms, "Synonyms", "json");
+            this.putBodyParameter("Synonyms", synonymsShrink);
             this.synonyms = synonyms;
             return this;
         }

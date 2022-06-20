@@ -25,6 +25,16 @@ public class ListIntentRequest extends Request {
     @NameInMap("IntentName")
     private String intentName;
 
+    @Query
+    @NameInMap("PageNumber")
+    @Validation(maximum = 999999, minimum = 1)
+    private Integer pageNumber;
+
+    @Query
+    @NameInMap("PageSize")
+    @Validation(maximum = 1000, minimum = 1)
+    private Integer pageSize;
+
     @Host
     @NameInMap("RegionId")
     private String regionId;
@@ -34,6 +44,8 @@ public class ListIntentRequest extends Request {
         this.agentKey = builder.agentKey;
         this.instanceId = builder.instanceId;
         this.intentName = builder.intentName;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
     }
 
@@ -72,6 +84,20 @@ public class ListIntentRequest extends Request {
     }
 
     /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -82,6 +108,8 @@ public class ListIntentRequest extends Request {
         private String agentKey; 
         private String instanceId; 
         private String intentName; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
         private String regionId; 
 
         private Builder() {
@@ -93,6 +121,8 @@ public class ListIntentRequest extends Request {
             this.agentKey = request.agentKey;
             this.instanceId = request.instanceId;
             this.intentName = request.intentName;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
             this.regionId = request.regionId;
         } 
 
@@ -120,6 +150,24 @@ public class ListIntentRequest extends Request {
         public Builder intentName(String intentName) {
             this.putQueryParameter("IntentName", intentName);
             this.intentName = intentName;
+            return this;
+        }
+
+        /**
+         * PageNumber.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
             return this;
         }
 
