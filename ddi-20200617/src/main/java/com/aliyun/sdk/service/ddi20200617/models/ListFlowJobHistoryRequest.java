@@ -7,26 +7,22 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListFlowJobsRequest} extends {@link RequestModel}
+ * {@link ListFlowJobHistoryRequest} extends {@link RequestModel}
  *
- * <p>ListFlowJobsRequest</p>
+ * <p>ListFlowJobHistoryRequest</p>
  */
-public class ListFlowJobsRequest extends Request {
-    @Query
-    @NameInMap("Adhoc")
-    private Boolean adhoc;
-
-    @Query
-    @NameInMap("ExactName")
-    private String exactName;
-
+public class ListFlowJobHistoryRequest extends Request {
     @Query
     @NameInMap("Id")
     private String id;
 
     @Query
-    @NameInMap("Name")
-    private String name;
+    @NameInMap("InstanceId")
+    private String instanceId;
+
+    @Query
+    @NameInMap("JobType")
+    private String jobType;
 
     @Query
     @NameInMap("PageNumber")
@@ -35,7 +31,7 @@ public class ListFlowJobsRequest extends Request {
 
     @Query
     @NameInMap("PageSize")
-    @Validation(maximum = 10000, minimum = 1)
+    @Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
     @Query
@@ -49,47 +45,37 @@ public class ListFlowJobsRequest extends Request {
     private String regionId;
 
     @Query
-    @NameInMap("Type")
-    private String type;
+    @NameInMap("StatusList")
+    private java.util.List < String > statusList;
 
-    private ListFlowJobsRequest(Builder builder) {
+    @Query
+    @NameInMap("TimeRange")
+    private String timeRange;
+
+    private ListFlowJobHistoryRequest(Builder builder) {
         super(builder);
-        this.adhoc = builder.adhoc;
-        this.exactName = builder.exactName;
         this.id = builder.id;
-        this.name = builder.name;
+        this.instanceId = builder.instanceId;
+        this.jobType = builder.jobType;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.projectId = builder.projectId;
         this.regionId = builder.regionId;
-        this.type = builder.type;
+        this.statusList = builder.statusList;
+        this.timeRange = builder.timeRange;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ListFlowJobsRequest create() {
+    public static ListFlowJobHistoryRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return adhoc
-     */
-    public Boolean getAdhoc() {
-        return this.adhoc;
-    }
-
-    /**
-     * @return exactName
-     */
-    public String getExactName() {
-        return this.exactName;
     }
 
     /**
@@ -100,10 +86,17 @@ public class ListFlowJobsRequest extends Request {
     }
 
     /**
-     * @return name
+     * @return instanceId
      */
-    public String getName() {
-        return this.name;
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    /**
+     * @return jobType
+     */
+    public String getJobType() {
+        return this.jobType;
     }
 
     /**
@@ -135,57 +128,46 @@ public class ListFlowJobsRequest extends Request {
     }
 
     /**
-     * @return type
+     * @return statusList
      */
-    public String getType() {
-        return this.type;
+    public java.util.List < String > getStatusList() {
+        return this.statusList;
     }
 
-    public static final class Builder extends Request.Builder<ListFlowJobsRequest, Builder> {
-        private Boolean adhoc; 
-        private String exactName; 
+    /**
+     * @return timeRange
+     */
+    public String getTimeRange() {
+        return this.timeRange;
+    }
+
+    public static final class Builder extends Request.Builder<ListFlowJobHistoryRequest, Builder> {
         private String id; 
-        private String name; 
+        private String instanceId; 
+        private String jobType; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String projectId; 
         private String regionId; 
-        private String type; 
+        private java.util.List < String > statusList; 
+        private String timeRange; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListFlowJobsRequest request) {
+        private Builder(ListFlowJobHistoryRequest request) {
             super(request);
-            this.adhoc = request.adhoc;
-            this.exactName = request.exactName;
             this.id = request.id;
-            this.name = request.name;
+            this.instanceId = request.instanceId;
+            this.jobType = request.jobType;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.projectId = request.projectId;
             this.regionId = request.regionId;
-            this.type = request.type;
+            this.statusList = request.statusList;
+            this.timeRange = request.timeRange;
         } 
-
-        /**
-         * 是否为临时查询。用于过滤作业。
-         */
-        public Builder adhoc(Boolean adhoc) {
-            this.putQueryParameter("Adhoc", adhoc);
-            this.adhoc = adhoc;
-            return this;
-        }
-
-        /**
-         * ExactName.
-         */
-        public Builder exactName(String exactName) {
-            this.putQueryParameter("ExactName", exactName);
-            this.exactName = exactName;
-            return this;
-        }
 
         /**
          * 作业ID。您可以调用ListFlowJob查看作业ID。
@@ -197,16 +179,25 @@ public class ListFlowJobsRequest extends Request {
         }
 
         /**
-         * 作业名称。
+         * 作业实例ID。您可以调用DescribeFlowJob查看作业实例ID。
          */
-        public Builder name(String name) {
-            this.putQueryParameter("Name", name);
-            this.name = name;
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
             return this;
         }
 
         /**
-         * 当前页数。
+         * 作业的类型，可能的取值有：SPARK，SPARK_STREAMING，ZEPPELIN
+         */
+        public Builder jobType(String jobType) {
+            this.putQueryParameter("JobType", jobType);
+            this.jobType = jobType;
+            return this;
+        }
+
+        /**
+         * 当前页码。
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -215,7 +206,7 @@ public class ListFlowJobsRequest extends Request {
         }
 
         /**
-         * 每页的作业数量。
+         * 分页查询时每页行数。
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -242,17 +233,26 @@ public class ListFlowJobsRequest extends Request {
         }
 
         /**
-         * 作业类型。用于过滤作业，支持的类型有：SPARK，SPARK_STREAMING，ZEPPELIN。
+         * 状态列表。取值如下：SUBMITTED, RUNNING, SUCCESS, FAILED, KILL_FAILED, KILL_SUCCESS
          */
-        public Builder type(String type) {
-            this.putQueryParameter("Type", type);
-            this.type = type;
+        public Builder statusList(java.util.List < String > statusList) {
+            this.putQueryParameter("StatusList", statusList);
+            this.statusList = statusList;
+            return this;
+        }
+
+        /**
+         * 查询的时间范围参数，参数列表：type: range，from: 开始时间（long型时间戳），to: 结束时间（long型时间戳）
+         */
+        public Builder timeRange(String timeRange) {
+            this.putQueryParameter("TimeRange", timeRange);
+            this.timeRange = timeRange;
             return this;
         }
 
         @Override
-        public ListFlowJobsRequest build() {
-            return new ListFlowJobsRequest(this);
+        public ListFlowJobHistoryRequest build() {
+            return new ListFlowJobHistoryRequest(this);
         } 
 
     } 

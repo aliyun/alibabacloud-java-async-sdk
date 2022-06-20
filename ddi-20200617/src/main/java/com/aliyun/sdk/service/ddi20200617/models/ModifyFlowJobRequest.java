@@ -285,27 +285,27 @@ public class ModifyFlowJobRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyFlowJobRequest response) {
-            super(response);
-            this.alertConf = response.alertConf;
-            this.clusterId = response.clusterId;
-            this.customVariables = response.customVariables;
-            this.description = response.description;
-            this.envConf = response.envConf;
-            this.failAct = response.failAct;
-            this.id = response.id;
-            this.knoxPassword = response.knoxPassword;
-            this.knoxUser = response.knoxUser;
-            this.mode = response.mode;
-            this.monitorConf = response.monitorConf;
-            this.name = response.name;
-            this.paramConf = response.paramConf;
-            this.params = response.params;
-            this.projectId = response.projectId;
-            this.regionId = response.regionId;
-            this.resourceList = response.resourceList;
-            this.retryPolicy = response.retryPolicy;
-            this.runConf = response.runConf;
+        private Builder(ModifyFlowJobRequest request) {
+            super(request);
+            this.alertConf = request.alertConf;
+            this.clusterId = request.clusterId;
+            this.customVariables = request.customVariables;
+            this.description = request.description;
+            this.envConf = request.envConf;
+            this.failAct = request.failAct;
+            this.id = request.id;
+            this.knoxPassword = request.knoxPassword;
+            this.knoxUser = request.knoxUser;
+            this.mode = request.mode;
+            this.monitorConf = request.monitorConf;
+            this.name = request.name;
+            this.paramConf = request.paramConf;
+            this.params = request.params;
+            this.projectId = request.projectId;
+            this.regionId = request.regionId;
+            this.resourceList = request.resourceList;
+            this.retryPolicy = request.retryPolicy;
+            this.runConf = request.runConf;
         } 
 
         /**

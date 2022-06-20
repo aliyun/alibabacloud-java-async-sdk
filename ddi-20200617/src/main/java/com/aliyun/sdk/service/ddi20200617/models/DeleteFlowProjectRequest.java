@@ -63,10 +63,10 @@ public class DeleteFlowProjectRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteFlowProjectRequest response) {
-            super(response);
-            this.projectId = response.projectId;
-            this.regionId = response.regionId;
+        private Builder(DeleteFlowProjectRequest request) {
+            super(request);
+            this.projectId = request.projectId;
+            this.regionId = request.regionId;
         } 
 
         /**

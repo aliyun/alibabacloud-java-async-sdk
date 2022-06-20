@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeFlowEntitySnapshotResponse} extends {@link TeaModel}
+ * {@link ModifyFlowForWebResponse} extends {@link TeaModel}
  *
- * <p>DescribeFlowEntitySnapshotResponse</p>
+ * <p>ModifyFlowForWebResponse</p>
  */
-public class DescribeFlowEntitySnapshotResponse extends Response {
+public class ModifyFlowForWebResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private DescribeFlowEntitySnapshotResponseBody body;
+    private ModifyFlowForWebResponseBody body;
 
-    private DescribeFlowEntitySnapshotResponse(BuilderImpl builder) {
+    private ModifyFlowForWebResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static DescribeFlowEntitySnapshotResponse create() {
+    public static ModifyFlowForWebResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class DescribeFlowEntitySnapshotResponse extends Response {
     /**
      * @return body
      */
-    public DescribeFlowEntitySnapshotResponseBody getBody() {
+    public ModifyFlowForWebResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribeFlowEntitySnapshotResponse, Builder> {
+    public interface Builder extends Response.Builder<ModifyFlowForWebResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(DescribeFlowEntitySnapshotResponseBody body);
+        Builder body(ModifyFlowForWebResponseBody body);
 
         @Override
-        DescribeFlowEntitySnapshotResponse build();
+        ModifyFlowForWebResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribeFlowEntitySnapshotResponse, Builder>
+            extends Response.BuilderImpl<ModifyFlowForWebResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private DescribeFlowEntitySnapshotResponseBody body; 
+        private ModifyFlowForWebResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribeFlowEntitySnapshotResponse response) {
+        private BuilderImpl(ModifyFlowForWebResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class DescribeFlowEntitySnapshotResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DescribeFlowEntitySnapshotResponseBody body) {
+        public Builder body(ModifyFlowForWebResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribeFlowEntitySnapshotResponse build() {
-            return new DescribeFlowEntitySnapshotResponse(this);
+        public ModifyFlowForWebResponse build() {
+            return new ModifyFlowForWebResponse(this);
         } 
 
     } 

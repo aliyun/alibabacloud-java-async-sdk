@@ -44,9 +44,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeFlowResponse> describeFlow(DescribeFlowRequest request);
 
-    CompletableFuture<DescribeFlowEntitySnapshotResponse> describeFlowEntitySnapshot(DescribeFlowEntitySnapshotRequest request);
+    CompletableFuture<DescribeFlowCategoryTreeResponse> describeFlowCategoryTree(DescribeFlowCategoryTreeRequest request);
 
     CompletableFuture<DescribeFlowJobResponse> describeFlowJob(DescribeFlowJobRequest request);
+
+    CompletableFuture<DescribeFlowNodeInstanceResponse> describeFlowNodeInstance(DescribeFlowNodeInstanceRequest request);
 
     CompletableFuture<DescribeFlowProjectResponse> describeFlowProject(DescribeFlowProjectRequest request);
 
@@ -56,11 +58,17 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListFlowResponse> listFlow(ListFlowRequest request);
 
+    CompletableFuture<ListFlowJobHistoryResponse> listFlowJobHistory(ListFlowJobHistoryRequest request);
+
     CompletableFuture<ListFlowJobsResponse> listFlowJobs(ListFlowJobsRequest request);
 
     CompletableFuture<ListFlowProjectUserResponse> listFlowProjectUser(ListFlowProjectUserRequest request);
 
     CompletableFuture<ListFlowProjectsResponse> listFlowProjects(ListFlowProjectsRequest request);
+
+    CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
+
+    CompletableFuture<ModifyFlowForWebResponse> modifyFlowForWeb(ModifyFlowForWebRequest request);
 
     CompletableFuture<ModifyFlowJobResponse> modifyFlowJob(ModifyFlowJobRequest request);
 
@@ -75,5 +83,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SubmitFlowResponse> submitFlow(SubmitFlowRequest request);
 
     CompletableFuture<SubmitFlowJobResponse> submitFlowJob(SubmitFlowJobRequest request);
+
+    CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
+
+    CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
 
 }

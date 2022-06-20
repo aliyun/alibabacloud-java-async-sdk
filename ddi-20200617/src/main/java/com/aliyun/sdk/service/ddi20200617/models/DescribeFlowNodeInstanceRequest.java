@@ -7,11 +7,16 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeFlowProjectRequest} extends {@link RequestModel}
+ * {@link DescribeFlowNodeInstanceRequest} extends {@link RequestModel}
  *
- * <p>DescribeFlowProjectRequest</p>
+ * <p>DescribeFlowNodeInstanceRequest</p>
  */
-public class DescribeFlowProjectRequest extends Request {
+public class DescribeFlowNodeInstanceRequest extends Request {
+    @Query
+    @NameInMap("Id")
+    @Validation(required = true)
+    private String id;
+
     @Query
     @NameInMap("ProjectId")
     @Validation(required = true)
@@ -22,8 +27,9 @@ public class DescribeFlowProjectRequest extends Request {
     @Validation(required = true)
     private String regionId;
 
-    private DescribeFlowProjectRequest(Builder builder) {
+    private DescribeFlowNodeInstanceRequest(Builder builder) {
         super(builder);
+        this.id = builder.id;
         this.projectId = builder.projectId;
         this.regionId = builder.regionId;
     }
@@ -32,13 +38,20 @@ public class DescribeFlowProjectRequest extends Request {
         return new Builder();
     }
 
-    public static DescribeFlowProjectRequest create() {
+    public static DescribeFlowNodeInstanceRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return id
+     */
+    public String getId() {
+        return this.id;
     }
 
     /**
@@ -55,7 +68,8 @@ public class DescribeFlowProjectRequest extends Request {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder<DescribeFlowProjectRequest, Builder> {
+    public static final class Builder extends Request.Builder<DescribeFlowNodeInstanceRequest, Builder> {
+        private String id; 
         private String projectId; 
         private String regionId; 
 
@@ -63,11 +77,21 @@ public class DescribeFlowProjectRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeFlowProjectRequest request) {
+        private Builder(DescribeFlowNodeInstanceRequest request) {
             super(request);
+            this.id = request.id;
             this.projectId = request.projectId;
             this.regionId = request.regionId;
         } 
+
+        /**
+         * Id.
+         */
+        public Builder id(String id) {
+            this.putQueryParameter("Id", id);
+            this.id = id;
+            return this;
+        }
 
         /**
          * ProjectId.
@@ -88,8 +112,8 @@ public class DescribeFlowProjectRequest extends Request {
         }
 
         @Override
-        public DescribeFlowProjectRequest build() {
-            return new DescribeFlowProjectRequest(this);
+        public DescribeFlowNodeInstanceRequest build() {
+            return new DescribeFlowNodeInstanceRequest(this);
         } 
 
     } 

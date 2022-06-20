@@ -90,12 +90,12 @@ public class CreateFlowProjectUserRequest extends Request {
             super();
         } 
 
-        private Builder(CreateFlowProjectUserRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.projectId = response.projectId;
-            this.regionId = response.regionId;
-            this.user = response.user;
+        private Builder(CreateFlowProjectUserRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.projectId = request.projectId;
+            this.regionId = request.regionId;
+            this.user = request.user;
         } 
 
         /**

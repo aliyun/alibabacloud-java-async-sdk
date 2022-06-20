@@ -7,23 +7,22 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateFlowCategoryRequest} extends {@link RequestModel}
+ * {@link DescribeFlowCategoryTreeRequest} extends {@link RequestModel}
  *
- * <p>CreateFlowCategoryRequest</p>
+ * <p>DescribeFlowCategoryTreeRequest</p>
  */
-public class CreateFlowCategoryRequest extends Request {
+public class DescribeFlowCategoryTreeRequest extends Request {
     @Query
-    @NameInMap("ClientToken")
-    private String clientToken;
+    @NameInMap("CategoryId")
+    private String categoryId;
 
     @Query
-    @NameInMap("Name")
-    @Validation(required = true)
-    private String name;
+    @NameInMap("Keyword")
+    private String keyword;
 
     @Query
-    @NameInMap("ParentId")
-    private String parentId;
+    @NameInMap("Mode")
+    private String mode;
 
     @Query
     @NameInMap("ProjectId")
@@ -40,11 +39,11 @@ public class CreateFlowCategoryRequest extends Request {
     @Validation(required = true)
     private String type;
 
-    private CreateFlowCategoryRequest(Builder builder) {
+    private DescribeFlowCategoryTreeRequest(Builder builder) {
         super(builder);
-        this.clientToken = builder.clientToken;
-        this.name = builder.name;
-        this.parentId = builder.parentId;
+        this.categoryId = builder.categoryId;
+        this.keyword = builder.keyword;
+        this.mode = builder.mode;
         this.projectId = builder.projectId;
         this.regionId = builder.regionId;
         this.type = builder.type;
@@ -54,7 +53,7 @@ public class CreateFlowCategoryRequest extends Request {
         return new Builder();
     }
 
-    public static CreateFlowCategoryRequest create() {
+    public static DescribeFlowCategoryTreeRequest create() {
         return builder().build();
     }
 
@@ -64,24 +63,24 @@ public class CreateFlowCategoryRequest extends Request {
     }
 
     /**
-     * @return clientToken
+     * @return categoryId
      */
-    public String getClientToken() {
-        return this.clientToken;
+    public String getCategoryId() {
+        return this.categoryId;
     }
 
     /**
-     * @return name
+     * @return keyword
      */
-    public String getName() {
-        return this.name;
+    public String getKeyword() {
+        return this.keyword;
     }
 
     /**
-     * @return parentId
+     * @return mode
      */
-    public String getParentId() {
-        return this.parentId;
+    public String getMode() {
+        return this.mode;
     }
 
     /**
@@ -105,10 +104,10 @@ public class CreateFlowCategoryRequest extends Request {
         return this.type;
     }
 
-    public static final class Builder extends Request.Builder<CreateFlowCategoryRequest, Builder> {
-        private String clientToken; 
-        private String name; 
-        private String parentId; 
+    public static final class Builder extends Request.Builder<DescribeFlowCategoryTreeRequest, Builder> {
+        private String categoryId; 
+        private String keyword; 
+        private String mode; 
         private String projectId; 
         private String regionId; 
         private String type; 
@@ -117,40 +116,40 @@ public class CreateFlowCategoryRequest extends Request {
             super();
         } 
 
-        private Builder(CreateFlowCategoryRequest request) {
+        private Builder(DescribeFlowCategoryTreeRequest request) {
             super(request);
-            this.clientToken = request.clientToken;
-            this.name = request.name;
-            this.parentId = request.parentId;
+            this.categoryId = request.categoryId;
+            this.keyword = request.keyword;
+            this.mode = request.mode;
             this.projectId = request.projectId;
             this.regionId = request.regionId;
             this.type = request.type;
         } 
 
         /**
-         * ClientToken.
+         * CategoryId.
          */
-        public Builder clientToken(String clientToken) {
-            this.putQueryParameter("ClientToken", clientToken);
-            this.clientToken = clientToken;
+        public Builder categoryId(String categoryId) {
+            this.putQueryParameter("CategoryId", categoryId);
+            this.categoryId = categoryId;
             return this;
         }
 
         /**
-         * Name.
+         * Keyword.
          */
-        public Builder name(String name) {
-            this.putQueryParameter("Name", name);
-            this.name = name;
+        public Builder keyword(String keyword) {
+            this.putQueryParameter("Keyword", keyword);
+            this.keyword = keyword;
             return this;
         }
 
         /**
-         * ParentId.
+         * Mode.
          */
-        public Builder parentId(String parentId) {
-            this.putQueryParameter("ParentId", parentId);
-            this.parentId = parentId;
+        public Builder mode(String mode) {
+            this.putQueryParameter("Mode", mode);
+            this.mode = mode;
             return this;
         }
 
@@ -182,8 +181,8 @@ public class CreateFlowCategoryRequest extends Request {
         }
 
         @Override
-        public CreateFlowCategoryRequest build() {
-            return new CreateFlowCategoryRequest(this);
+        public DescribeFlowCategoryTreeRequest build() {
+            return new DescribeFlowCategoryTreeRequest(this);
         } 
 
     } 

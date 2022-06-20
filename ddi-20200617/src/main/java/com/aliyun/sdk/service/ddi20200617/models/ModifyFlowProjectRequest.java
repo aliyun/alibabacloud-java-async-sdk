@@ -89,12 +89,12 @@ public class ModifyFlowProjectRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyFlowProjectRequest response) {
-            super(response);
-            this.description = response.description;
-            this.name = response.name;
-            this.projectId = response.projectId;
-            this.regionId = response.regionId;
+        private Builder(ModifyFlowProjectRequest request) {
+            super(request);
+            this.description = request.description;
+            this.name = request.name;
+            this.projectId = request.projectId;
+            this.regionId = request.regionId;
         } 
 
         /**

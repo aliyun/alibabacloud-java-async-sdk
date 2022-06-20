@@ -300,28 +300,28 @@ public class CreateFlowJobRequest extends Request {
             super();
         } 
 
-        private Builder(CreateFlowJobRequest response) {
-            super(response);
-            this.adhoc = response.adhoc;
-            this.alertConf = response.alertConf;
-            this.clientToken = response.clientToken;
-            this.clusterId = response.clusterId;
-            this.customVariables = response.customVariables;
-            this.description = response.description;
-            this.envConf = response.envConf;
-            this.failAct = response.failAct;
-            this.mode = response.mode;
-            this.monitorConf = response.monitorConf;
-            this.name = response.name;
-            this.paramConf = response.paramConf;
-            this.params = response.params;
-            this.parentCategory = response.parentCategory;
-            this.projectId = response.projectId;
-            this.regionId = response.regionId;
-            this.resourceList = response.resourceList;
-            this.retryPolicy = response.retryPolicy;
-            this.runConf = response.runConf;
-            this.type = response.type;
+        private Builder(CreateFlowJobRequest request) {
+            super(request);
+            this.adhoc = request.adhoc;
+            this.alertConf = request.alertConf;
+            this.clientToken = request.clientToken;
+            this.clusterId = request.clusterId;
+            this.customVariables = request.customVariables;
+            this.description = request.description;
+            this.envConf = request.envConf;
+            this.failAct = request.failAct;
+            this.mode = request.mode;
+            this.monitorConf = request.monitorConf;
+            this.name = request.name;
+            this.paramConf = request.paramConf;
+            this.params = request.params;
+            this.parentCategory = request.parentCategory;
+            this.projectId = request.projectId;
+            this.regionId = request.regionId;
+            this.resourceList = request.resourceList;
+            this.retryPolicy = request.retryPolicy;
+            this.runConf = request.runConf;
+            this.type = request.type;
         } 
 
         /**

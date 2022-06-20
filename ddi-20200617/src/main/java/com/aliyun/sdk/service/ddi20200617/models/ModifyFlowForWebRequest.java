@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateFlowRequest} extends {@link RequestModel}
+ * {@link ModifyFlowForWebRequest} extends {@link RequestModel}
  *
- * <p>CreateFlowRequest</p>
+ * <p>ModifyFlowForWebRequest</p>
  */
-public class CreateFlowRequest extends Request {
+public class ModifyFlowForWebRequest extends Request {
     @Query
     @NameInMap("AlertConf")
     private String alertConf;
@@ -25,41 +25,44 @@ public class CreateFlowRequest extends Request {
     private String alertUserGroupBizId;
 
     @Query
-    @NameInMap("Application")
-    private String application;
-
-    @Query
-    @NameInMap("ClientToken")
-    private String clientToken;
-
-    @Query
     @NameInMap("ClusterId")
+    @Validation(required = true)
     private String clusterId;
 
     @Query
     @NameInMap("CreateCluster")
+    @Validation(required = true)
     private Boolean createCluster;
 
     @Query
-    @NameInMap("CronExpression")
-    private String cronExpression;
+    @NameInMap("CronExpr")
+    private String cronExpr;
 
     @Query
     @NameInMap("Description")
-    @Validation(required = true)
     private String description;
 
     @Query
     @NameInMap("EndSchedule")
+    @Validation(minimum = 1)
     private Long endSchedule;
+
+    @Query
+    @NameInMap("Graph")
+    @Validation(required = true)
+    private String graph;
 
     @Query
     @NameInMap("HostName")
     private String hostName;
 
     @Query
-    @NameInMap("Name")
+    @NameInMap("Id")
     @Validation(required = true)
+    private String id;
+
+    @Query
+    @NameInMap("Name")
     private String name;
 
     @Query
@@ -75,6 +78,10 @@ public class CreateFlowRequest extends Request {
     private String parentFlowList;
 
     @Query
+    @NameInMap("Periodic")
+    private Boolean periodic;
+
+    @Query
     @NameInMap("ProjectId")
     @Validation(required = true)
     private String projectId;
@@ -86,35 +93,42 @@ public class CreateFlowRequest extends Request {
 
     @Query
     @NameInMap("StartSchedule")
+    @Validation(minimum = 1)
     private Long startSchedule;
 
-    private CreateFlowRequest(Builder builder) {
+    @Query
+    @NameInMap("Status")
+    private String status;
+
+    private ModifyFlowForWebRequest(Builder builder) {
         super(builder);
         this.alertConf = builder.alertConf;
         this.alertDingDingGroupBizId = builder.alertDingDingGroupBizId;
         this.alertUserGroupBizId = builder.alertUserGroupBizId;
-        this.application = builder.application;
-        this.clientToken = builder.clientToken;
         this.clusterId = builder.clusterId;
         this.createCluster = builder.createCluster;
-        this.cronExpression = builder.cronExpression;
+        this.cronExpr = builder.cronExpr;
         this.description = builder.description;
         this.endSchedule = builder.endSchedule;
+        this.graph = builder.graph;
         this.hostName = builder.hostName;
+        this.id = builder.id;
         this.name = builder.name;
         this.namespace = builder.namespace;
         this.parentCategory = builder.parentCategory;
         this.parentFlowList = builder.parentFlowList;
+        this.periodic = builder.periodic;
         this.projectId = builder.projectId;
         this.regionId = builder.regionId;
         this.startSchedule = builder.startSchedule;
+        this.status = builder.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static CreateFlowRequest create() {
+    public static ModifyFlowForWebRequest create() {
         return builder().build();
     }
 
@@ -145,20 +159,6 @@ public class CreateFlowRequest extends Request {
     }
 
     /**
-     * @return application
-     */
-    public String getApplication() {
-        return this.application;
-    }
-
-    /**
-     * @return clientToken
-     */
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    /**
      * @return clusterId
      */
     public String getClusterId() {
@@ -173,10 +173,10 @@ public class CreateFlowRequest extends Request {
     }
 
     /**
-     * @return cronExpression
+     * @return cronExpr
      */
-    public String getCronExpression() {
-        return this.cronExpression;
+    public String getCronExpr() {
+        return this.cronExpr;
     }
 
     /**
@@ -194,10 +194,24 @@ public class CreateFlowRequest extends Request {
     }
 
     /**
+     * @return graph
+     */
+    public String getGraph() {
+        return this.graph;
+    }
+
+    /**
      * @return hostName
      */
     public String getHostName() {
         return this.hostName;
+    }
+
+    /**
+     * @return id
+     */
+    public String getId() {
+        return this.id;
     }
 
     /**
@@ -229,6 +243,13 @@ public class CreateFlowRequest extends Request {
     }
 
     /**
+     * @return periodic
+     */
+    public Boolean getPeriodic() {
+        return this.periodic;
+    }
+
+    /**
      * @return projectId
      */
     public String getProjectId() {
@@ -249,50 +270,61 @@ public class CreateFlowRequest extends Request {
         return this.startSchedule;
     }
 
-    public static final class Builder extends Request.Builder<CreateFlowRequest, Builder> {
+    /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
+    public static final class Builder extends Request.Builder<ModifyFlowForWebRequest, Builder> {
         private String alertConf; 
         private String alertDingDingGroupBizId; 
         private String alertUserGroupBizId; 
-        private String application; 
-        private String clientToken; 
         private String clusterId; 
         private Boolean createCluster; 
-        private String cronExpression; 
+        private String cronExpr; 
         private String description; 
         private Long endSchedule; 
+        private String graph; 
         private String hostName; 
+        private String id; 
         private String name; 
         private String namespace; 
         private String parentCategory; 
         private String parentFlowList; 
+        private Boolean periodic; 
         private String projectId; 
         private String regionId; 
         private Long startSchedule; 
+        private String status; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateFlowRequest request) {
+        private Builder(ModifyFlowForWebRequest request) {
             super(request);
             this.alertConf = request.alertConf;
             this.alertDingDingGroupBizId = request.alertDingDingGroupBizId;
             this.alertUserGroupBizId = request.alertUserGroupBizId;
-            this.application = request.application;
-            this.clientToken = request.clientToken;
             this.clusterId = request.clusterId;
             this.createCluster = request.createCluster;
-            this.cronExpression = request.cronExpression;
+            this.cronExpr = request.cronExpr;
             this.description = request.description;
             this.endSchedule = request.endSchedule;
+            this.graph = request.graph;
             this.hostName = request.hostName;
+            this.id = request.id;
             this.name = request.name;
             this.namespace = request.namespace;
             this.parentCategory = request.parentCategory;
             this.parentFlowList = request.parentFlowList;
+            this.periodic = request.periodic;
             this.projectId = request.projectId;
             this.regionId = request.regionId;
             this.startSchedule = request.startSchedule;
+            this.status = request.status;
         } 
 
         /**
@@ -323,24 +355,6 @@ public class CreateFlowRequest extends Request {
         }
 
         /**
-         * Application.
-         */
-        public Builder application(String application) {
-            this.putQueryParameter("Application", application);
-            this.application = application;
-            return this;
-        }
-
-        /**
-         * ClientToken.
-         */
-        public Builder clientToken(String clientToken) {
-            this.putQueryParameter("ClientToken", clientToken);
-            this.clientToken = clientToken;
-            return this;
-        }
-
-        /**
          * ClusterId.
          */
         public Builder clusterId(String clusterId) {
@@ -359,11 +373,11 @@ public class CreateFlowRequest extends Request {
         }
 
         /**
-         * CronExpression.
+         * CronExpr.
          */
-        public Builder cronExpression(String cronExpression) {
-            this.putQueryParameter("CronExpression", cronExpression);
-            this.cronExpression = cronExpression;
+        public Builder cronExpr(String cronExpr) {
+            this.putQueryParameter("CronExpr", cronExpr);
+            this.cronExpr = cronExpr;
             return this;
         }
 
@@ -386,11 +400,29 @@ public class CreateFlowRequest extends Request {
         }
 
         /**
+         * Graph.
+         */
+        public Builder graph(String graph) {
+            this.putQueryParameter("Graph", graph);
+            this.graph = graph;
+            return this;
+        }
+
+        /**
          * HostName.
          */
         public Builder hostName(String hostName) {
             this.putQueryParameter("HostName", hostName);
             this.hostName = hostName;
+            return this;
+        }
+
+        /**
+         * Id.
+         */
+        public Builder id(String id) {
+            this.putQueryParameter("Id", id);
+            this.id = id;
             return this;
         }
 
@@ -431,6 +463,15 @@ public class CreateFlowRequest extends Request {
         }
 
         /**
+         * Periodic.
+         */
+        public Builder periodic(Boolean periodic) {
+            this.putQueryParameter("Periodic", periodic);
+            this.periodic = periodic;
+            return this;
+        }
+
+        /**
          * ProjectId.
          */
         public Builder projectId(String projectId) {
@@ -457,9 +498,18 @@ public class CreateFlowRequest extends Request {
             return this;
         }
 
+        /**
+         * Status.
+         */
+        public Builder status(String status) {
+            this.putQueryParameter("Status", status);
+            this.status = status;
+            return this;
+        }
+
         @Override
-        public CreateFlowRequest build() {
-            return new CreateFlowRequest(this);
+        public ModifyFlowForWebRequest build() {
+            return new ModifyFlowForWebRequest(this);
         } 
 
     } 

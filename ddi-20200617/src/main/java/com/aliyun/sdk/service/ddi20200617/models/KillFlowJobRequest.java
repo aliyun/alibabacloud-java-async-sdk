@@ -77,11 +77,11 @@ public class KillFlowJobRequest extends Request {
             super();
         } 
 
-        private Builder(KillFlowJobRequest response) {
-            super(response);
-            this.jobInstanceId = response.jobInstanceId;
-            this.projectId = response.projectId;
-            this.regionId = response.regionId;
+        private Builder(KillFlowJobRequest request) {
+            super(request);
+            this.jobInstanceId = request.jobInstanceId;
+            this.projectId = request.projectId;
+            this.regionId = request.regionId;
         } 
 
         /**

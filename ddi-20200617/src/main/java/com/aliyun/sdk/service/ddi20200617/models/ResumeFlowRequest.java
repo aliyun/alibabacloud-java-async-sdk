@@ -77,11 +77,11 @@ public class ResumeFlowRequest extends Request {
             super();
         } 
 
-        private Builder(ResumeFlowRequest response) {
-            super(response);
-            this.flowInstanceId = response.flowInstanceId;
-            this.projectId = response.projectId;
-            this.regionId = response.regionId;
+        private Builder(ResumeFlowRequest request) {
+            super(request);
+            this.flowInstanceId = request.flowInstanceId;
+            this.projectId = request.projectId;
+            this.regionId = request.regionId;
         } 
 
         /**
