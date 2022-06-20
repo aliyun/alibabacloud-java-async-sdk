@@ -16,6 +16,10 @@ public class QueryGroupedSecurityEventMarkMissListRequest extends Request {
     @NameInMap("CurrentPage")
     private Integer currentPage;
 
+    @Query
+    @NameInMap("DisposalWay")
+    private String disposalWay;
+
     @Body
     @NameInMap("EventName")
     private String eventName;
@@ -43,6 +47,7 @@ public class QueryGroupedSecurityEventMarkMissListRequest extends Request {
     private QueryGroupedSecurityEventMarkMissListRequest(Builder builder) {
         super(builder);
         this.currentPage = builder.currentPage;
+        this.disposalWay = builder.disposalWay;
         this.eventName = builder.eventName;
         this.from = builder.from;
         this.lang = builder.lang;
@@ -69,6 +74,13 @@ public class QueryGroupedSecurityEventMarkMissListRequest extends Request {
      */
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    /**
+     * @return disposalWay
+     */
+    public String getDisposalWay() {
+        return this.disposalWay;
     }
 
     /**
@@ -115,6 +127,7 @@ public class QueryGroupedSecurityEventMarkMissListRequest extends Request {
 
     public static final class Builder extends Request.Builder<QueryGroupedSecurityEventMarkMissListRequest, Builder> {
         private Integer currentPage; 
+        private String disposalWay; 
         private String eventName; 
         private String from; 
         private String lang; 
@@ -129,6 +142,7 @@ public class QueryGroupedSecurityEventMarkMissListRequest extends Request {
         private Builder(QueryGroupedSecurityEventMarkMissListRequest request) {
             super(request);
             this.currentPage = request.currentPage;
+            this.disposalWay = request.disposalWay;
             this.eventName = request.eventName;
             this.from = request.from;
             this.lang = request.lang;
@@ -143,6 +157,15 @@ public class QueryGroupedSecurityEventMarkMissListRequest extends Request {
         public Builder currentPage(Integer currentPage) {
             this.putBodyParameter("CurrentPage", currentPage);
             this.currentPage = currentPage;
+            return this;
+        }
+
+        /**
+         * 加白方式
+         */
+        public Builder disposalWay(String disposalWay) {
+            this.putQueryParameter("DisposalWay", disposalWay);
+            this.disposalWay = disposalWay;
             return this;
         }
 

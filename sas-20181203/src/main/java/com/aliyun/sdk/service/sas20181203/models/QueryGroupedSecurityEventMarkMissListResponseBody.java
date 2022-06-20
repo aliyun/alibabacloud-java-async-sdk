@@ -155,6 +155,9 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
         @NameInMap("AliUid")
         private Long aliUid;
 
+        @NameInMap("DisposalWay")
+        private String disposalWay;
+
         @NameInMap("EventName")
         private String eventName;
 
@@ -184,6 +187,7 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
 
         private List(Builder builder) {
             this.aliUid = builder.aliUid;
+            this.disposalWay = builder.disposalWay;
             this.eventName = builder.eventName;
             this.eventNameOriginal = builder.eventNameOriginal;
             this.eventType = builder.eventType;
@@ -208,6 +212,13 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
          */
         public Long getAliUid() {
             return this.aliUid;
+        }
+
+        /**
+         * @return disposalWay
+         */
+        public String getDisposalWay() {
+            return this.disposalWay;
         }
 
         /**
@@ -275,6 +286,7 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
 
         public static final class Builder {
             private Long aliUid; 
+            private String disposalWay; 
             private String eventName; 
             private String eventNameOriginal; 
             private String eventType; 
@@ -290,6 +302,14 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
+                return this;
+            }
+
+            /**
+             * 处置方式
+             */
+            public Builder disposalWay(String disposalWay) {
+                this.disposalWay = disposalWay;
                 return this;
             }
 

@@ -108,6 +108,9 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
         @NameInMap("Vul")
         private Integer vul;
 
+        @NameInMap("WeakPWNum")
+        private Integer weakPWNum;
+
         private Data(Builder builder) {
             this.account = builder.account;
             this.appNum = builder.appNum;
@@ -121,6 +124,7 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             this.trojan = builder.trojan;
             this.uuid = builder.uuid;
             this.vul = builder.vul;
+            this.weakPWNum = builder.weakPWNum;
         }
 
         public static Builder builder() {
@@ -215,6 +219,13 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             return this.vul;
         }
 
+        /**
+         * @return weakPWNum
+         */
+        public Integer getWeakPWNum() {
+            return this.weakPWNum;
+        }
+
         public static final class Builder {
             private Integer account; 
             private Integer appNum; 
@@ -228,6 +239,7 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             private Integer trojan; 
             private String uuid; 
             private Integer vul; 
+            private Integer weakPWNum; 
 
             /**
              * Account.
@@ -322,6 +334,14 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
              */
             public Builder vul(Integer vul) {
                 this.vul = vul;
+                return this;
+            }
+
+            /**
+             * WeakPWNum.
+             */
+            public Builder weakPWNum(Integer weakPWNum) {
+                this.weakPWNum = weakPWNum;
                 return this;
             }
 

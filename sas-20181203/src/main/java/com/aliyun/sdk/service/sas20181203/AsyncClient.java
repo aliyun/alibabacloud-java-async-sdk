@@ -376,6 +376,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<OperateVulsResponse> operateVuls(OperateVulsRequest request);
 
+    CompletableFuture<OperationCancelIgnoreSuspEventResponse> operationCancelIgnoreSuspEvent(OperationCancelIgnoreSuspEventRequest request);
+
     CompletableFuture<OperationSuspEventsResponse> operationSuspEvents(OperationSuspEventsRequest request);
 
     CompletableFuture<PauseClientResponse> pauseClient(PauseClientRequest request);
