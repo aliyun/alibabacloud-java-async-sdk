@@ -339,6 +339,9 @@ public class GetGatewayResponseBody extends TeaModel {
         @NameInMap("Status")
         private Integer status;
 
+        @NameInMap("StatusDesc")
+        private String statusDesc;
+
         @NameInMap("Vpc")
         private String vpc;
 
@@ -367,6 +370,7 @@ public class GetGatewayResponseBody extends TeaModel {
             this.securityGroup = builder.securityGroup;
             this.spec = builder.spec;
             this.status = builder.status;
+            this.statusDesc = builder.statusDesc;
             this.vpc = builder.vpc;
             this.vswitch = builder.vswitch;
             this.vswitch2 = builder.vswitch2;
@@ -487,6 +491,13 @@ public class GetGatewayResponseBody extends TeaModel {
         }
 
         /**
+         * @return statusDesc
+         */
+        public String getStatusDesc() {
+            return this.statusDesc;
+        }
+
+        /**
          * @return vpc
          */
         public String getVpc() {
@@ -530,6 +541,7 @@ public class GetGatewayResponseBody extends TeaModel {
             private String securityGroup; 
             private String spec; 
             private Integer status; 
+            private String statusDesc; 
             private String vpc; 
             private String vswitch; 
             private String vswitch2; 
@@ -652,6 +664,14 @@ public class GetGatewayResponseBody extends TeaModel {
              */
             public Builder status(Integer status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * StatusDesc.
+             */
+            public Builder statusDesc(String statusDesc) {
+                this.statusDesc = statusDesc;
                 return this;
             }
 

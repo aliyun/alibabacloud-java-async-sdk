@@ -153,6 +153,9 @@ public class QueryClusterDetailResponseBody extends TeaModel {
         @NameInMap("SingleTunnelVip")
         private String singleTunnelVip;
 
+        @NameInMap("Zone")
+        private String zone;
+
         private InstanceModels(Builder builder) {
             this.creationTimestamp = builder.creationTimestamp;
             this.healthStatus = builder.healthStatus;
@@ -161,6 +164,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             this.podName = builder.podName;
             this.role = builder.role;
             this.singleTunnelVip = builder.singleTunnelVip;
+            this.zone = builder.zone;
         }
 
         public static Builder builder() {
@@ -220,6 +224,13 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             return this.singleTunnelVip;
         }
 
+        /**
+         * @return zone
+         */
+        public String getZone() {
+            return this.zone;
+        }
+
         public static final class Builder {
             private String creationTimestamp; 
             private String healthStatus; 
@@ -228,6 +239,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             private String podName; 
             private String role; 
             private String singleTunnelVip; 
+            private String zone; 
 
             /**
              * CreationTimestamp.
@@ -282,6 +294,14 @@ public class QueryClusterDetailResponseBody extends TeaModel {
              */
             public Builder singleTunnelVip(String singleTunnelVip) {
                 this.singleTunnelVip = singleTunnelVip;
+                return this;
+            }
+
+            /**
+             * Zone.
+             */
+            public Builder zone(String zone) {
+                this.zone = zone;
                 return this;
             }
 
@@ -380,6 +400,9 @@ public class QueryClusterDetailResponseBody extends TeaModel {
         @NameInMap("NetType")
         private String netType;
 
+        @NameInMap("OrderClusterVersion")
+        private String orderClusterVersion;
+
         @NameInMap("PayInfo")
         private String payInfo;
 
@@ -425,6 +448,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             this.memoryCapacity = builder.memoryCapacity;
             this.mseVersion = builder.mseVersion;
             this.netType = builder.netType;
+            this.orderClusterVersion = builder.orderClusterVersion;
             this.payInfo = builder.payInfo;
             this.pubNetworkFlow = builder.pubNetworkFlow;
             this.regionId = builder.regionId;
@@ -644,6 +668,13 @@ public class QueryClusterDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return orderClusterVersion
+         */
+        public String getOrderClusterVersion() {
+            return this.orderClusterVersion;
+        }
+
+        /**
          * @return payInfo
          */
         public String getPayInfo() {
@@ -708,6 +739,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             private Long memoryCapacity; 
             private String mseVersion; 
             private String netType; 
+            private String orderClusterVersion; 
             private String payInfo; 
             private String pubNetworkFlow; 
             private String regionId; 
@@ -943,6 +975,14 @@ public class QueryClusterDetailResponseBody extends TeaModel {
              */
             public Builder netType(String netType) {
                 this.netType = netType;
+                return this;
+            }
+
+            /**
+             * OrderClusterVersion.
+             */
+            public Builder orderClusterVersion(String orderClusterVersion) {
+                this.orderClusterVersion = orderClusterVersion;
                 return this;
             }
 

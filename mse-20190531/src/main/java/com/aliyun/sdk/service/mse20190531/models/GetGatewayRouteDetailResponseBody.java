@@ -1485,6 +1485,9 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
+        @NameInMap("AhasStatus")
+        private Integer ahasStatus;
+
         @NameInMap("Cors")
         private Cors cors;
 
@@ -1567,6 +1570,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         private Timeout timeout;
 
         private Data(Builder builder) {
+            this.ahasStatus = builder.ahasStatus;
             this.cors = builder.cors;
             this.defaultServiceId = builder.defaultServiceId;
             this.defaultServiceName = builder.defaultServiceName;
@@ -1602,6 +1606,13 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return ahasStatus
+         */
+        public Integer getAhasStatus() {
+            return this.ahasStatus;
         }
 
         /**
@@ -1794,6 +1805,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer ahasStatus; 
             private Cors cors; 
             private Long defaultServiceId; 
             private String defaultServiceName; 
@@ -1821,6 +1833,14 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             private String services; 
             private Integer status; 
             private Timeout timeout; 
+
+            /**
+             * AhasStatus.
+             */
+            public Builder ahasStatus(Integer ahasStatus) {
+                this.ahasStatus = ahasStatus;
+                return this;
+            }
 
             /**
              * Cors.

@@ -98,7 +98,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * 后端状态码
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -138,7 +138,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * 是否成功
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +238,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
             private String region; 
 
             /**
-             * ClusterId.
+             * Kubernetes集群Id
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -246,7 +246,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterName.
+             * Kubernetes集群名
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -254,7 +254,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * K8sVersion.
+             * Kubernetes集群版本
              */
             public Builder k8sVersion(String k8sVersion) {
                 this.k8sVersion = k8sVersion;
@@ -262,7 +262,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * NamespaceInfos.
+             * Kubernetes集群命名空间信息（json格式）
              */
             public Builder namespaceInfos(String namespaceInfos) {
                 this.namespaceInfos = namespaceInfos;
@@ -270,7 +270,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * PilotStartTime.
+             * pilot启动时间
              */
             public Builder pilotStartTime(String pilotStartTime) {
                 this.pilotStartTime = pilotStartTime;
@@ -278,7 +278,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * Kubernetes集群所在的地域
              */
             public Builder region(String region) {
                 this.region = region;
@@ -355,7 +355,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
             private Integer totalSize; 
 
             /**
-             * PageNumber.
+             * 当前页码
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -363,7 +363,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * 页大小
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -379,7 +379,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * TotalSize.
+             * 页码总数
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

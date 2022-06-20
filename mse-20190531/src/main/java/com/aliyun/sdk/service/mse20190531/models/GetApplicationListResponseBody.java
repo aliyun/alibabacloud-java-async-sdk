@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetGovernanceKubernetesClusterListResponseBody} extends {@link TeaModel}
+ * {@link GetApplicationListResponseBody} extends {@link TeaModel}
  *
- * <p>GetGovernanceKubernetesClusterListResponseBody</p>
+ * <p>GetApplicationListResponseBody</p>
  */
-public class GetGovernanceKubernetesClusterListResponseBody extends TeaModel {
+public class GetApplicationListResponseBody extends TeaModel {
     @NameInMap("Code")
     private Integer code;
 
@@ -30,7 +30,7 @@ public class GetGovernanceKubernetesClusterListResponseBody extends TeaModel {
     @NameInMap("Success")
     private Boolean success;
 
-    private GetGovernanceKubernetesClusterListResponseBody(Builder builder) {
+    private GetApplicationListResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.httpStatusCode = builder.httpStatusCode;
@@ -43,7 +43,7 @@ public class GetGovernanceKubernetesClusterListResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static GetGovernanceKubernetesClusterListResponseBody create() {
+    public static GetApplicationListResponseBody create() {
         return builder().build();
     }
 
@@ -145,38 +145,54 @@ public class GetGovernanceKubernetesClusterListResponseBody extends TeaModel {
             return this;
         }
 
-        public GetGovernanceKubernetesClusterListResponseBody build() {
-            return new GetGovernanceKubernetesClusterListResponseBody(this);
+        public GetApplicationListResponseBody build() {
+            return new GetApplicationListResponseBody(this);
         } 
 
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("ClusterId")
-        private String clusterId;
+        @NameInMap("AppId")
+        private String appId;
 
-        @NameInMap("ClusterName")
-        private String clusterName;
+        @NameInMap("AppName")
+        private String appName;
 
-        @NameInMap("K8sVersion")
-        private String k8sVersion;
+        @NameInMap("ExtraInfo")
+        private String extraInfo;
 
-        @NameInMap("NamespaceInfos")
-        private String namespaceInfos;
+        @NameInMap("InstancesNumber")
+        private Integer instancesNumber;
 
-        @NameInMap("PilotStartTime")
-        private String pilotStartTime;
+        @NameInMap("Language")
+        private String language;
 
-        @NameInMap("Region")
-        private String region;
+        @NameInMap("LicenseKey")
+        private String licenseKey;
+
+        @NameInMap("RegionId")
+        private String regionId;
+
+        @NameInMap("Source")
+        private String source;
+
+        @NameInMap("Status")
+        private Long status;
+
+        @NameInMap("UserId")
+        private String userId;
 
         private Result(Builder builder) {
-            this.clusterId = builder.clusterId;
-            this.clusterName = builder.clusterName;
-            this.k8sVersion = builder.k8sVersion;
-            this.namespaceInfos = builder.namespaceInfos;
-            this.pilotStartTime = builder.pilotStartTime;
-            this.region = builder.region;
+            this.appId = builder.appId;
+            this.appName = builder.appName;
+            this.extraInfo = builder.extraInfo;
+            this.instancesNumber = builder.instancesNumber;
+            this.language = builder.language;
+            this.licenseKey = builder.licenseKey;
+            this.regionId = builder.regionId;
+            this.source = builder.source;
+            this.status = builder.status;
+            this.userId = builder.userId;
         }
 
         public static Builder builder() {
@@ -188,100 +204,164 @@ public class GetGovernanceKubernetesClusterListResponseBody extends TeaModel {
         }
 
         /**
-         * @return clusterId
+         * @return appId
          */
-        public String getClusterId() {
-            return this.clusterId;
+        public String getAppId() {
+            return this.appId;
         }
 
         /**
-         * @return clusterName
+         * @return appName
          */
-        public String getClusterName() {
-            return this.clusterName;
+        public String getAppName() {
+            return this.appName;
         }
 
         /**
-         * @return k8sVersion
+         * @return extraInfo
          */
-        public String getK8sVersion() {
-            return this.k8sVersion;
+        public String getExtraInfo() {
+            return this.extraInfo;
         }
 
         /**
-         * @return namespaceInfos
+         * @return instancesNumber
          */
-        public String getNamespaceInfos() {
-            return this.namespaceInfos;
+        public Integer getInstancesNumber() {
+            return this.instancesNumber;
         }
 
         /**
-         * @return pilotStartTime
+         * @return language
          */
-        public String getPilotStartTime() {
-            return this.pilotStartTime;
+        public String getLanguage() {
+            return this.language;
         }
 
         /**
-         * @return region
+         * @return licenseKey
          */
-        public String getRegion() {
-            return this.region;
+        public String getLicenseKey() {
+            return this.licenseKey;
+        }
+
+        /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        /**
+         * @return source
+         */
+        public String getSource() {
+            return this.source;
+        }
+
+        /**
+         * @return status
+         */
+        public Long getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return userId
+         */
+        public String getUserId() {
+            return this.userId;
         }
 
         public static final class Builder {
-            private String clusterId; 
-            private String clusterName; 
-            private String k8sVersion; 
-            private String namespaceInfos; 
-            private String pilotStartTime; 
-            private String region; 
+            private String appId; 
+            private String appName; 
+            private String extraInfo; 
+            private Integer instancesNumber; 
+            private String language; 
+            private String licenseKey; 
+            private String regionId; 
+            private String source; 
+            private Long status; 
+            private String userId; 
 
             /**
-             * ClusterId.
+             * AppId.
              */
-            public Builder clusterId(String clusterId) {
-                this.clusterId = clusterId;
+            public Builder appId(String appId) {
+                this.appId = appId;
                 return this;
             }
 
             /**
-             * ClusterName.
+             * AppName.
              */
-            public Builder clusterName(String clusterName) {
-                this.clusterName = clusterName;
+            public Builder appName(String appName) {
+                this.appName = appName;
                 return this;
             }
 
             /**
-             * K8sVersion.
+             * ExtraInfo.
              */
-            public Builder k8sVersion(String k8sVersion) {
-                this.k8sVersion = k8sVersion;
+            public Builder extraInfo(String extraInfo) {
+                this.extraInfo = extraInfo;
                 return this;
             }
 
             /**
-             * NamespaceInfos.
+             * InstancesNumber.
              */
-            public Builder namespaceInfos(String namespaceInfos) {
-                this.namespaceInfos = namespaceInfos;
+            public Builder instancesNumber(Integer instancesNumber) {
+                this.instancesNumber = instancesNumber;
                 return this;
             }
 
             /**
-             * PilotStartTime.
+             * Language.
              */
-            public Builder pilotStartTime(String pilotStartTime) {
-                this.pilotStartTime = pilotStartTime;
+            public Builder language(String language) {
+                this.language = language;
                 return this;
             }
 
             /**
-             * Region.
+             * LicenseKey.
              */
-            public Builder region(String region) {
-                this.region = region;
+            public Builder licenseKey(String licenseKey) {
+                this.licenseKey = licenseKey;
+                return this;
+            }
+
+            /**
+             * RegionId.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * Source.
+             */
+            public Builder source(String source) {
+                this.source = source;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(Long status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * UserId.
+             */
+            public Builder userId(String userId) {
+                this.userId = userId;
                 return this;
             }
 

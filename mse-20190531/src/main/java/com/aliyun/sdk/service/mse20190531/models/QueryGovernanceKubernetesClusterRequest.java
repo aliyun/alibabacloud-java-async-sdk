@@ -31,7 +31,7 @@ public class QueryGovernanceKubernetesClusterRequest extends Request {
 
     @Query
     @NameInMap("PageSize")
-    @Validation(required = true)
+    @Validation(required = true, maximum = 100, minimum = 5)
     private Integer pageSize;
 
     private QueryGovernanceKubernetesClusterRequest(Builder builder) {
@@ -121,7 +121,7 @@ public class QueryGovernanceKubernetesClusterRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * Kubernetes集群Id
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -130,7 +130,7 @@ public class QueryGovernanceKubernetesClusterRequest extends Request {
         }
 
         /**
-         * ClusterName.
+         * Kubernetes集群名
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -139,7 +139,7 @@ public class QueryGovernanceKubernetesClusterRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * 当前页码
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -148,7 +148,7 @@ public class QueryGovernanceKubernetesClusterRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * 每页元素数量
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

@@ -240,9 +240,13 @@ public class TrafficPolicy extends TeaModel {
         @NameInMap("LoadbalancerType")
         private String loadbalancerType;
 
+        @NameInMap("WarmupDuration")
+        private Long warmupDuration;
+
         private LoadBalancerSettings(Builder builder) {
             this.consistentHashLBConfig = builder.consistentHashLBConfig;
             this.loadbalancerType = builder.loadbalancerType;
+            this.warmupDuration = builder.warmupDuration;
         }
 
         public static Builder builder() {
@@ -267,9 +271,17 @@ public class TrafficPolicy extends TeaModel {
             return this.loadbalancerType;
         }
 
+        /**
+         * @return warmupDuration
+         */
+        public Long getWarmupDuration() {
+            return this.warmupDuration;
+        }
+
         public static final class Builder {
             private ConsistentHashLBConfig consistentHashLBConfig; 
             private String loadbalancerType; 
+            private Long warmupDuration; 
 
             /**
              * 一致性hash相关配置
@@ -284,6 +296,14 @@ public class TrafficPolicy extends TeaModel {
              */
             public Builder loadbalancerType(String loadbalancerType) {
                 this.loadbalancerType = loadbalancerType;
+                return this;
+            }
+
+            /**
+             * 预热时间(单位/s)
+             */
+            public Builder warmupDuration(Long warmupDuration) {
+                this.warmupDuration = warmupDuration;
                 return this;
             }
 

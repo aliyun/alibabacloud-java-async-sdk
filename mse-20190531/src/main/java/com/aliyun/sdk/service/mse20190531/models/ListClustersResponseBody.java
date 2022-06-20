@@ -257,6 +257,9 @@ public class ListClustersResponseBody extends TeaModel {
         @NameInMap("IntranetDomain")
         private String intranetDomain;
 
+        @NameInMap("MseVersion")
+        private String mseVersion;
+
         @NameInMap("VersionCode")
         private String versionCode;
 
@@ -276,6 +279,7 @@ public class ListClustersResponseBody extends TeaModel {
             this.internetDomain = builder.internetDomain;
             this.intranetAddress = builder.intranetAddress;
             this.intranetDomain = builder.intranetDomain;
+            this.mseVersion = builder.mseVersion;
             this.versionCode = builder.versionCode;
         }
 
@@ -393,6 +397,13 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
+         * @return mseVersion
+         */
+        public String getMseVersion() {
+            return this.mseVersion;
+        }
+
+        /**
          * @return versionCode
          */
         public String getVersionCode() {
@@ -415,6 +426,7 @@ public class ListClustersResponseBody extends TeaModel {
             private String internetDomain; 
             private String intranetAddress; 
             private String intranetDomain; 
+            private String mseVersion; 
             private String versionCode; 
 
             /**
@@ -534,6 +546,14 @@ public class ListClustersResponseBody extends TeaModel {
              */
             public Builder intranetDomain(String intranetDomain) {
                 this.intranetDomain = intranetDomain;
+                return this;
+            }
+
+            /**
+             * MseVersion.
+             */
+            public Builder mseVersion(String mseVersion) {
+                this.mseVersion = mseVersion;
                 return this;
             }
 

@@ -52,6 +52,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateEngineNamespaceResponse> createEngineNamespace(CreateEngineNamespaceRequest request);
 
+    CompletableFuture<CreateMseServiceApplicationResponse> createMseServiceApplication(CreateMseServiceApplicationRequest request);
+
     CompletableFuture<CreateNacosConfigResponse> createNacosConfig(CreateNacosConfigRequest request);
 
     CompletableFuture<CreateNacosInstanceResponse> createNacosInstance(CreateNacosInstanceRequest request);
@@ -104,6 +106,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetAppMessageQueueRouteResponse> getAppMessageQueueRoute(GetAppMessageQueueRouteRequest request);
 
+    CompletableFuture<GetApplicationListResponse> getApplicationList(GetApplicationListRequest request);
+
     CompletableFuture<GetBlackWhiteListResponse> getBlackWhiteList(GetBlackWhiteListRequest request);
 
     CompletableFuture<GetEngineNamepaceResponse> getEngineNamepace(GetEngineNamepaceRequest request);
@@ -119,8 +123,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetGatewayServiceDetailResponse> getGatewayServiceDetail(GetGatewayServiceDetailRequest request);
 
     CompletableFuture<GetGovernanceKubernetesClusterResponse> getGovernanceKubernetesCluster(GetGovernanceKubernetesClusterRequest request);
-
-    CompletableFuture<GetGovernanceKubernetesClusterListResponse> getGovernanceKubernetesClusterList(GetGovernanceKubernetesClusterListRequest request);
 
     CompletableFuture<GetImageResponse> getImage(GetImageRequest request);
 
@@ -244,6 +246,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UpdateClusterResponse> updateCluster(UpdateClusterRequest request);
 
+    CompletableFuture<UpdateClusterSpecResponse> updateClusterSpec(UpdateClusterSpecRequest request);
+
     CompletableFuture<UpdateConfigResponse> updateConfig(UpdateConfigRequest request);
 
     CompletableFuture<UpdateEngineNamespaceResponse> updateEngineNamespace(UpdateEngineNamespaceRequest request);
@@ -272,6 +276,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UpdateGatewayServiceVersionResponse> updateGatewayServiceVersion(UpdateGatewayServiceVersionRequest request);
 
+    CompletableFuture<UpdateGatewaySpecResponse> updateGatewaySpec(UpdateGatewaySpecRequest request);
+
     CompletableFuture<UpdateImageResponse> updateImage(UpdateImageRequest request);
 
     CompletableFuture<UpdateMessageQueueRouteResponse> updateMessageQueueRoute(UpdateMessageQueueRouteRequest request);
@@ -285,6 +291,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateNacosServiceResponse> updateNacosService(UpdateNacosServiceRequest request);
 
     CompletableFuture<UpdateSSLCertResponse> updateSSLCert(UpdateSSLCertRequest request);
+
+    CompletableFuture<UpdateServiceSourceResponse> updateServiceSource(UpdateServiceSourceRequest request);
 
     CompletableFuture<UpdateZnodeResponse> updateZnode(UpdateZnodeRequest request);
 

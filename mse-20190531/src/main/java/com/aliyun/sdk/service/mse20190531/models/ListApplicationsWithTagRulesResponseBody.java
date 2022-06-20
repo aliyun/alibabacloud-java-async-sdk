@@ -159,7 +159,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         private Boolean enable;
 
         @NameInMap("GmtModified")
-        private Long gmtModified;
+        private String gmtModified;
 
         @NameInMap("Id")
         private Long id;
@@ -224,7 +224,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         /**
          * @return gmtModified
          */
-        public Long getGmtModified() {
+        public String getGmtModified() {
             return this.gmtModified;
         }
 
@@ -287,7 +287,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean carryData; 
             private Boolean enable; 
-            private Long gmtModified; 
+            private String gmtModified; 
             private Long id; 
             private Integer instanceNum; 
             private String name; 
@@ -316,7 +316,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             /**
              * GmtModified.
              */
-            public Builder gmtModified(Long gmtModified) {
+            public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
                 return this;
             }

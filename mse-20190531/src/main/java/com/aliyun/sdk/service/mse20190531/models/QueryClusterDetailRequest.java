@@ -17,6 +17,10 @@ public class QueryClusterDetailRequest extends Request {
     private String acceptLanguage;
 
     @Query
+    @NameInMap("AclSwitch")
+    private Boolean aclSwitch;
+
+    @Query
     @NameInMap("InstanceId")
     private String instanceId;
 
@@ -27,6 +31,7 @@ public class QueryClusterDetailRequest extends Request {
     private QueryClusterDetailRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
+        this.aclSwitch = builder.aclSwitch;
         this.instanceId = builder.instanceId;
         this.orderId = builder.orderId;
     }
@@ -52,6 +57,13 @@ public class QueryClusterDetailRequest extends Request {
     }
 
     /**
+     * @return aclSwitch
+     */
+    public Boolean getAclSwitch() {
+        return this.aclSwitch;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -67,6 +79,7 @@ public class QueryClusterDetailRequest extends Request {
 
     public static final class Builder extends Request.Builder<QueryClusterDetailRequest, Builder> {
         private String acceptLanguage; 
+        private Boolean aclSwitch; 
         private String instanceId; 
         private String orderId; 
 
@@ -77,6 +90,7 @@ public class QueryClusterDetailRequest extends Request {
         private Builder(QueryClusterDetailRequest request) {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
+            this.aclSwitch = request.aclSwitch;
             this.instanceId = request.instanceId;
             this.orderId = request.orderId;
         } 
@@ -87,6 +101,15 @@ public class QueryClusterDetailRequest extends Request {
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
             this.acceptLanguage = acceptLanguage;
+            return this;
+        }
+
+        /**
+         * AclSwitch.
+         */
+        public Builder aclSwitch(Boolean aclSwitch) {
+            this.putQueryParameter("AclSwitch", aclSwitch);
+            this.aclSwitch = aclSwitch;
             return this;
         }
 

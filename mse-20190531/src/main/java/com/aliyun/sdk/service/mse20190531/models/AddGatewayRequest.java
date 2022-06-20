@@ -17,6 +17,18 @@ public class AddGatewayRequest extends Request {
     private String acceptLanguage;
 
     @Query
+    @NameInMap("EnableHardwareAcceleration")
+    private Boolean enableHardwareAcceleration;
+
+    @Query
+    @NameInMap("EnableSls")
+    private Boolean enableSls;
+
+    @Query
+    @NameInMap("EnableXtrace")
+    private Boolean enableXtrace;
+
+    @Query
     @NameInMap("EnterpriseSecurityGroup")
     private Boolean enterpriseSecurityGroup;
 
@@ -61,9 +73,16 @@ public class AddGatewayRequest extends Request {
     @Validation(required = true)
     private String vpc;
 
+    @Query
+    @NameInMap("XtraceRatio")
+    private String xtraceRatio;
+
     private AddGatewayRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
+        this.enableHardwareAcceleration = builder.enableHardwareAcceleration;
+        this.enableSls = builder.enableSls;
+        this.enableXtrace = builder.enableXtrace;
         this.enterpriseSecurityGroup = builder.enterpriseSecurityGroup;
         this.internetSlbSpec = builder.internetSlbSpec;
         this.name = builder.name;
@@ -74,6 +93,7 @@ public class AddGatewayRequest extends Request {
         this.vSwitchId = builder.vSwitchId;
         this.vSwitchId2 = builder.vSwitchId2;
         this.vpc = builder.vpc;
+        this.xtraceRatio = builder.xtraceRatio;
     }
 
     public static Builder builder() {
@@ -94,6 +114,27 @@ public class AddGatewayRequest extends Request {
      */
     public String getAcceptLanguage() {
         return this.acceptLanguage;
+    }
+
+    /**
+     * @return enableHardwareAcceleration
+     */
+    public Boolean getEnableHardwareAcceleration() {
+        return this.enableHardwareAcceleration;
+    }
+
+    /**
+     * @return enableSls
+     */
+    public Boolean getEnableSls() {
+        return this.enableSls;
+    }
+
+    /**
+     * @return enableXtrace
+     */
+    public Boolean getEnableXtrace() {
+        return this.enableXtrace;
     }
 
     /**
@@ -166,8 +207,18 @@ public class AddGatewayRequest extends Request {
         return this.vpc;
     }
 
+    /**
+     * @return xtraceRatio
+     */
+    public String getXtraceRatio() {
+        return this.xtraceRatio;
+    }
+
     public static final class Builder extends Request.Builder<AddGatewayRequest, Builder> {
         private String acceptLanguage; 
+        private Boolean enableHardwareAcceleration; 
+        private Boolean enableSls; 
+        private Boolean enableXtrace; 
         private Boolean enterpriseSecurityGroup; 
         private String internetSlbSpec; 
         private String name; 
@@ -178,6 +229,7 @@ public class AddGatewayRequest extends Request {
         private String vSwitchId; 
         private String vSwitchId2; 
         private String vpc; 
+        private String xtraceRatio; 
 
         private Builder() {
             super();
@@ -186,6 +238,9 @@ public class AddGatewayRequest extends Request {
         private Builder(AddGatewayRequest request) {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
+            this.enableHardwareAcceleration = request.enableHardwareAcceleration;
+            this.enableSls = request.enableSls;
+            this.enableXtrace = request.enableXtrace;
             this.enterpriseSecurityGroup = request.enterpriseSecurityGroup;
             this.internetSlbSpec = request.internetSlbSpec;
             this.name = request.name;
@@ -196,6 +251,7 @@ public class AddGatewayRequest extends Request {
             this.vSwitchId = request.vSwitchId;
             this.vSwitchId2 = request.vSwitchId2;
             this.vpc = request.vpc;
+            this.xtraceRatio = request.xtraceRatio;
         } 
 
         /**
@@ -204,6 +260,33 @@ public class AddGatewayRequest extends Request {
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
             this.acceptLanguage = acceptLanguage;
+            return this;
+        }
+
+        /**
+         * 是否开启硬件加速
+         */
+        public Builder enableHardwareAcceleration(Boolean enableHardwareAcceleration) {
+            this.putQueryParameter("EnableHardwareAcceleration", enableHardwareAcceleration);
+            this.enableHardwareAcceleration = enableHardwareAcceleration;
+            return this;
+        }
+
+        /**
+         * 是否开启SLS日志投递
+         */
+        public Builder enableSls(Boolean enableSls) {
+            this.putQueryParameter("EnableSls", enableSls);
+            this.enableSls = enableSls;
+            return this;
+        }
+
+        /**
+         * 是否开启xtrace
+         */
+        public Builder enableXtrace(Boolean enableXtrace) {
+            this.putQueryParameter("EnableXtrace", enableXtrace);
+            this.enableXtrace = enableXtrace;
             return this;
         }
 
@@ -294,6 +377,15 @@ public class AddGatewayRequest extends Request {
         public Builder vpc(String vpc) {
             this.putQueryParameter("Vpc", vpc);
             this.vpc = vpc;
+            return this;
+        }
+
+        /**
+         * xtrace采样率，取值[0,100]
+         */
+        public Builder xtraceRatio(String xtraceRatio) {
+            this.putQueryParameter("XtraceRatio", xtraceRatio);
+            this.xtraceRatio = xtraceRatio;
             return this;
         }
 

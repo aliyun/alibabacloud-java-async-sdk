@@ -218,9 +218,13 @@ public class ListListenersByConfigResponseBody extends TeaModel {
         @NameInMap("Md5")
         private String md5;
 
+        @NameInMap("Status")
+        private String status;
+
         private Listeners(Builder builder) {
             this.ip = builder.ip;
             this.md5 = builder.md5;
+            this.status = builder.status;
         }
 
         public static Builder builder() {
@@ -245,9 +249,17 @@ public class ListListenersByConfigResponseBody extends TeaModel {
             return this.md5;
         }
 
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
         public static final class Builder {
             private String ip; 
             private String md5; 
+            private String status; 
 
             /**
              * Ip.
@@ -262,6 +274,14 @@ public class ListListenersByConfigResponseBody extends TeaModel {
              */
             public Builder md5(String md5) {
                 this.md5 = md5;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
                 return this;
             }
 

@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetGovernanceKubernetesClusterListResponse} extends {@link TeaModel}
+ * {@link UpdateGatewaySpecResponse} extends {@link TeaModel}
  *
- * <p>GetGovernanceKubernetesClusterListResponse</p>
+ * <p>UpdateGatewaySpecResponse</p>
  */
-public class GetGovernanceKubernetesClusterListResponse extends Response {
+public class UpdateGatewaySpecResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private GetGovernanceKubernetesClusterListResponseBody body;
+    private UpdateGatewaySpecResponseBody body;
 
-    private GetGovernanceKubernetesClusterListResponse(BuilderImpl builder) {
+    private UpdateGatewaySpecResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static GetGovernanceKubernetesClusterListResponse create() {
+    public static UpdateGatewaySpecResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class GetGovernanceKubernetesClusterListResponse extends Response {
     /**
      * @return body
      */
-    public GetGovernanceKubernetesClusterListResponseBody getBody() {
+    public UpdateGatewaySpecResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetGovernanceKubernetesClusterListResponse, Builder> {
+    public interface Builder extends Response.Builder<UpdateGatewaySpecResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(GetGovernanceKubernetesClusterListResponseBody body);
+        Builder body(UpdateGatewaySpecResponseBody body);
 
         @Override
-        GetGovernanceKubernetesClusterListResponse build();
+        UpdateGatewaySpecResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetGovernanceKubernetesClusterListResponse, Builder>
+            extends Response.BuilderImpl<UpdateGatewaySpecResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private GetGovernanceKubernetesClusterListResponseBody body; 
+        private UpdateGatewaySpecResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetGovernanceKubernetesClusterListResponse response) {
+        private BuilderImpl(UpdateGatewaySpecResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class GetGovernanceKubernetesClusterListResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetGovernanceKubernetesClusterListResponseBody body) {
+        public Builder body(UpdateGatewaySpecResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetGovernanceKubernetesClusterListResponse build() {
-            return new GetGovernanceKubernetesClusterListResponse(this);
+        public UpdateGatewaySpecResponse build() {
+            return new UpdateGatewaySpecResponse(this);
         } 
 
     } 

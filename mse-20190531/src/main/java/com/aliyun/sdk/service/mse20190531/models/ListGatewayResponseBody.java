@@ -598,6 +598,9 @@ public class ListGatewayResponseBody extends TeaModel {
         @NameInMap("AhasOn")
         private Boolean ahasOn;
 
+        @NameInMap("AppVersion")
+        private String appVersion;
+
         @NameInMap("ArmsOn")
         private Boolean armsOn;
 
@@ -615,6 +618,9 @@ public class ListGatewayResponseBody extends TeaModel {
 
         @NameInMap("GatewayUniqueId")
         private String gatewayUniqueId;
+
+        @NameInMap("GatewayVersion")
+        private String gatewayVersion;
 
         @NameInMap("GmtCreate")
         private String gmtCreate;
@@ -652,6 +658,9 @@ public class ListGatewayResponseBody extends TeaModel {
         @NameInMap("Replica")
         private Integer replica;
 
+        @NameInMap("RollBack")
+        private Boolean rollBack;
+
         @NameInMap("Slb")
         private java.util.List < Slb> slb;
 
@@ -664,6 +673,9 @@ public class ListGatewayResponseBody extends TeaModel {
         @NameInMap("StatusDesc")
         private String statusDesc;
 
+        @NameInMap("SupportWasm")
+        private Boolean supportWasm;
+
         @NameInMap("Tag")
         private String tag;
 
@@ -675,12 +687,14 @@ public class ListGatewayResponseBody extends TeaModel {
 
         private Result(Builder builder) {
             this.ahasOn = builder.ahasOn;
+            this.appVersion = builder.appVersion;
             this.armsOn = builder.armsOn;
             this.chargeType = builder.chargeType;
             this.currentVersion = builder.currentVersion;
             this.endDate = builder.endDate;
             this.gatewayType = builder.gatewayType;
             this.gatewayUniqueId = builder.gatewayUniqueId;
+            this.gatewayVersion = builder.gatewayVersion;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
             this.id = builder.id;
@@ -693,10 +707,12 @@ public class ListGatewayResponseBody extends TeaModel {
             this.primaryUser = builder.primaryUser;
             this.region = builder.region;
             this.replica = builder.replica;
+            this.rollBack = builder.rollBack;
             this.slb = builder.slb;
             this.spec = builder.spec;
             this.status = builder.status;
             this.statusDesc = builder.statusDesc;
+            this.supportWasm = builder.supportWasm;
             this.tag = builder.tag;
             this.upgrade = builder.upgrade;
             this.vswitch2 = builder.vswitch2;
@@ -715,6 +731,13 @@ public class ListGatewayResponseBody extends TeaModel {
          */
         public Boolean getAhasOn() {
             return this.ahasOn;
+        }
+
+        /**
+         * @return appVersion
+         */
+        public String getAppVersion() {
+            return this.appVersion;
         }
 
         /**
@@ -757,6 +780,13 @@ public class ListGatewayResponseBody extends TeaModel {
          */
         public String getGatewayUniqueId() {
             return this.gatewayUniqueId;
+        }
+
+        /**
+         * @return gatewayVersion
+         */
+        public String getGatewayVersion() {
+            return this.gatewayVersion;
         }
 
         /**
@@ -844,6 +874,13 @@ public class ListGatewayResponseBody extends TeaModel {
         }
 
         /**
+         * @return rollBack
+         */
+        public Boolean getRollBack() {
+            return this.rollBack;
+        }
+
+        /**
          * @return slb
          */
         public java.util.List < Slb> getSlb() {
@@ -872,6 +909,13 @@ public class ListGatewayResponseBody extends TeaModel {
         }
 
         /**
+         * @return supportWasm
+         */
+        public Boolean getSupportWasm() {
+            return this.supportWasm;
+        }
+
+        /**
          * @return tag
          */
         public String getTag() {
@@ -894,12 +938,14 @@ public class ListGatewayResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean ahasOn; 
+            private String appVersion; 
             private Boolean armsOn; 
             private String chargeType; 
             private String currentVersion; 
             private String endDate; 
             private String gatewayType; 
             private String gatewayUniqueId; 
+            private String gatewayVersion; 
             private String gmtCreate; 
             private String gmtModified; 
             private Long id; 
@@ -912,10 +958,12 @@ public class ListGatewayResponseBody extends TeaModel {
             private String primaryUser; 
             private String region; 
             private Integer replica; 
+            private Boolean rollBack; 
             private java.util.List < Slb> slb; 
             private String spec; 
             private Integer status; 
             private String statusDesc; 
+            private Boolean supportWasm; 
             private String tag; 
             private Boolean upgrade; 
             private String vswitch2; 
@@ -925,6 +973,14 @@ public class ListGatewayResponseBody extends TeaModel {
              */
             public Builder ahasOn(Boolean ahasOn) {
                 this.ahasOn = ahasOn;
+                return this;
+            }
+
+            /**
+             * AppVersion.
+             */
+            public Builder appVersion(String appVersion) {
+                this.appVersion = appVersion;
                 return this;
             }
 
@@ -973,6 +1029,14 @@ public class ListGatewayResponseBody extends TeaModel {
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
+                return this;
+            }
+
+            /**
+             * GatewayVersion.
+             */
+            public Builder gatewayVersion(String gatewayVersion) {
+                this.gatewayVersion = gatewayVersion;
                 return this;
             }
 
@@ -1073,6 +1137,14 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
+             * RollBack.
+             */
+            public Builder rollBack(Boolean rollBack) {
+                this.rollBack = rollBack;
+                return this;
+            }
+
+            /**
              * Slb.
              */
             public Builder slb(java.util.List < Slb> slb) {
@@ -1101,6 +1173,14 @@ public class ListGatewayResponseBody extends TeaModel {
              */
             public Builder statusDesc(String statusDesc) {
                 this.statusDesc = statusDesc;
+                return this;
+            }
+
+            /**
+             * SupportWasm.
+             */
+            public Builder supportWasm(Boolean supportWasm) {
+                this.supportWasm = supportWasm;
                 return this;
             }
 
