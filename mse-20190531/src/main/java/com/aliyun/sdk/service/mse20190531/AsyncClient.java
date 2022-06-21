@@ -182,6 +182,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListGatewaySlbResponse> listGatewaySlb(ListGatewaySlbRequest request);
 
+    CompletableFuture<ListInstancesResponse> listInstances(ListInstancesRequest request);
+
     CompletableFuture<ListListenersByConfigResponse> listListenersByConfig(ListListenersByConfigRequest request);
 
     CompletableFuture<ListListenersByIpResponse> listListenersByIp(ListListenersByIpRequest request);
@@ -197,6 +199,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListSecurityGroupRuleResponse> listSecurityGroupRule(ListSecurityGroupRuleRequest request);
 
     CompletableFuture<ListServiceSourceResponse> listServiceSource(ListServiceSourceRequest request);
+
+    CompletableFuture<ListVgroupsResponse> listVgroups(ListVgroupsRequest request);
 
     CompletableFuture<ListZnodeChildrenResponse> listZnodeChildren(ListZnodeChildrenRequest request);
 
