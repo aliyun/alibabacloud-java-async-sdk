@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListInstancesResponseBody} extends {@link TeaModel}
+ * {@link ListUserInstancesResponseBody} extends {@link TeaModel}
  *
- * <p>ListInstancesResponseBody</p>
+ * <p>ListUserInstancesResponseBody</p>
  */
-public class ListInstancesResponseBody extends TeaModel {
+public class ListUserInstancesResponseBody extends TeaModel {
     @NameInMap("Code")
     private Integer code;
 
@@ -30,7 +30,7 @@ public class ListInstancesResponseBody extends TeaModel {
     @NameInMap("Success")
     private Boolean success;
 
-    private ListInstancesResponseBody(Builder builder) {
+    private ListUserInstancesResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.httpStatusCode = builder.httpStatusCode;
@@ -43,7 +43,7 @@ public class ListInstancesResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ListInstancesResponseBody create() {
+    public static ListUserInstancesResponseBody create() {
         return builder().build();
     }
 
@@ -145,8 +145,8 @@ public class ListInstancesResponseBody extends TeaModel {
             return this;
         }
 
-        public ListInstancesResponseBody build() {
-            return new ListInstancesResponseBody(this);
+        public ListUserInstancesResponseBody build() {
+            return new ListUserInstancesResponseBody(this);
         } 
 
     } 
@@ -191,9 +191,6 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("IsCreatedRedis")
         private Boolean isCreatedRedis;
 
-        @NameInMap("IsCreatedSlb")
-        private Boolean isCreatedSlb;
-
         @NameInMap("K8sResourceId")
         private Long k8sResourceId;
 
@@ -202,9 +199,6 @@ public class ListInstancesResponseBody extends TeaModel {
 
         @NameInMap("NameServer")
         private String nameServer;
-
-        @NameInMap("NameServerPublic")
-        private String nameServerPublic;
 
         @NameInMap("OrderId")
         private String orderId;
@@ -265,11 +259,9 @@ public class ListInstancesResponseBody extends TeaModel {
             this.imageVersion = builder.imageVersion;
             this.instanceId = builder.instanceId;
             this.isCreatedRedis = builder.isCreatedRedis;
-            this.isCreatedSlb = builder.isCreatedSlb;
             this.k8sResourceId = builder.k8sResourceId;
             this.name = builder.name;
             this.nameServer = builder.nameServer;
-            this.nameServerPublic = builder.nameServerPublic;
             this.orderId = builder.orderId;
             this.podCidr = builder.podCidr;
             this.primaryUser = builder.primaryUser;
@@ -387,13 +379,6 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * @return isCreatedSlb
-         */
-        public Boolean getIsCreatedSlb() {
-            return this.isCreatedSlb;
-        }
-
-        /**
          * @return k8sResourceId
          */
         public Long getK8sResourceId() {
@@ -412,13 +397,6 @@ public class ListInstancesResponseBody extends TeaModel {
          */
         public String getNameServer() {
             return this.nameServer;
-        }
-
-        /**
-         * @return nameServerPublic
-         */
-        public String getNameServerPublic() {
-            return this.nameServerPublic;
         }
 
         /**
@@ -540,11 +518,9 @@ public class ListInstancesResponseBody extends TeaModel {
             private String imageVersion; 
             private String instanceId; 
             private Boolean isCreatedRedis; 
-            private Boolean isCreatedSlb; 
             private Long k8sResourceId; 
             private String name; 
             private String nameServer; 
-            private String nameServerPublic; 
             private String orderId; 
             private String podCidr; 
             private String primaryUser; 
@@ -666,14 +642,6 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * IsCreatedSlb.
-             */
-            public Builder isCreatedSlb(Boolean isCreatedSlb) {
-                this.isCreatedSlb = isCreatedSlb;
-                return this;
-            }
-
-            /**
              * K8sResourceId.
              */
             public Builder k8sResourceId(Long k8sResourceId) {
@@ -694,14 +662,6 @@ public class ListInstancesResponseBody extends TeaModel {
              */
             public Builder nameServer(String nameServer) {
                 this.nameServer = nameServer;
-                return this;
-            }
-
-            /**
-             * NameServerPublic.
-             */
-            public Builder nameServerPublic(String nameServerPublic) {
-                this.nameServerPublic = nameServerPublic;
                 return this;
             }
 

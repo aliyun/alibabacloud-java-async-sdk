@@ -200,6 +200,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListServiceSourceResponse> listServiceSource(ListServiceSourceRequest request);
 
+    CompletableFuture<ListUserInstancesResponse> listUserInstances(ListUserInstancesRequest request);
+
     CompletableFuture<ListVgroupsResponse> listVgroups(ListVgroupsRequest request);
 
     CompletableFuture<ListZnodeChildrenResponse> listZnodeChildren(ListZnodeChildrenRequest request);
