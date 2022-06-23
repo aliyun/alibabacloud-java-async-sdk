@@ -69,6 +69,14 @@ public class DescribeSuspEventsRequest extends Request {
     private java.util.List < String > operateErrorCodeList;
 
     @Query
+    @NameInMap("OperateTimeEnd")
+    private Long operateTimeEnd;
+
+    @Query
+    @NameInMap("OperateTimeStart")
+    private Long operateTimeStart;
+
+    @Query
     @NameInMap("PageSize")
     private String pageSize;
 
@@ -124,6 +132,8 @@ public class DescribeSuspEventsRequest extends Request {
         this.levels = builder.levels;
         this.name = builder.name;
         this.operateErrorCodeList = builder.operateErrorCodeList;
+        this.operateTimeEnd = builder.operateTimeEnd;
+        this.operateTimeStart = builder.operateTimeStart;
         this.pageSize = builder.pageSize;
         this.parentEventTypes = builder.parentEventTypes;
         this.remark = builder.remark;
@@ -248,6 +258,20 @@ public class DescribeSuspEventsRequest extends Request {
     }
 
     /**
+     * @return operateTimeEnd
+     */
+    public Long getOperateTimeEnd() {
+        return this.operateTimeEnd;
+    }
+
+    /**
+     * @return operateTimeStart
+     */
+    public Long getOperateTimeStart() {
+        return this.operateTimeStart;
+    }
+
+    /**
      * @return pageSize
      */
     public String getPageSize() {
@@ -332,6 +356,8 @@ public class DescribeSuspEventsRequest extends Request {
         private String levels; 
         private String name; 
         private java.util.List < String > operateErrorCodeList; 
+        private Long operateTimeEnd; 
+        private Long operateTimeStart; 
         private String pageSize; 
         private String parentEventTypes; 
         private String remark; 
@@ -363,6 +389,8 @@ public class DescribeSuspEventsRequest extends Request {
             this.levels = request.levels;
             this.name = request.name;
             this.operateErrorCodeList = request.operateErrorCodeList;
+            this.operateTimeEnd = request.operateTimeEnd;
+            this.operateTimeStart = request.operateTimeStart;
             this.pageSize = request.pageSize;
             this.parentEventTypes = request.parentEventTypes;
             this.remark = request.remark;
@@ -498,6 +526,24 @@ public class DescribeSuspEventsRequest extends Request {
         public Builder operateErrorCodeList(java.util.List < String > operateErrorCodeList) {
             this.putQueryParameter("OperateErrorCodeList", operateErrorCodeList);
             this.operateErrorCodeList = operateErrorCodeList;
+            return this;
+        }
+
+        /**
+         * 处理时间结束时间
+         */
+        public Builder operateTimeEnd(Long operateTimeEnd) {
+            this.putQueryParameter("OperateTimeEnd", operateTimeEnd);
+            this.operateTimeEnd = operateTimeEnd;
+            return this;
+        }
+
+        /**
+         * 处理时间开始时间
+         */
+        public Builder operateTimeStart(Long operateTimeStart) {
+            this.putQueryParameter("OperateTimeStart", operateTimeStart);
+            this.operateTimeStart = operateTimeStart;
             return this;
         }
 

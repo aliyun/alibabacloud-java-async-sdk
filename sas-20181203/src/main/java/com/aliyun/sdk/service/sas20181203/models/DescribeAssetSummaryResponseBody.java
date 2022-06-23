@@ -72,10 +72,18 @@ public class DescribeAssetSummaryResponseBody extends TeaModel {
     } 
 
     public static class AssetsSummary extends TeaModel {
+        @NameInMap("TotalAssetAllRegion")
+        private Integer totalAssetAllRegion;
+
+        @NameInMap("TotalCoreAllRegion")
+        private Integer totalCoreAllRegion;
+
         @NameInMap("TotalCoreNum")
         private Integer totalCoreNum;
 
         private AssetsSummary(Builder builder) {
+            this.totalAssetAllRegion = builder.totalAssetAllRegion;
+            this.totalCoreAllRegion = builder.totalCoreAllRegion;
             this.totalCoreNum = builder.totalCoreNum;
         }
 
@@ -88,6 +96,20 @@ public class DescribeAssetSummaryResponseBody extends TeaModel {
         }
 
         /**
+         * @return totalAssetAllRegion
+         */
+        public Integer getTotalAssetAllRegion() {
+            return this.totalAssetAllRegion;
+        }
+
+        /**
+         * @return totalCoreAllRegion
+         */
+        public Integer getTotalCoreAllRegion() {
+            return this.totalCoreAllRegion;
+        }
+
+        /**
          * @return totalCoreNum
          */
         public Integer getTotalCoreNum() {
@@ -95,7 +117,25 @@ public class DescribeAssetSummaryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer totalAssetAllRegion; 
+            private Integer totalCoreAllRegion; 
             private Integer totalCoreNum; 
+
+            /**
+             * TotalAssetAllRegion.
+             */
+            public Builder totalAssetAllRegion(Integer totalAssetAllRegion) {
+                this.totalAssetAllRegion = totalAssetAllRegion;
+                return this;
+            }
+
+            /**
+             * TotalCoreAllRegion.
+             */
+            public Builder totalCoreAllRegion(Integer totalCoreAllRegion) {
+                this.totalCoreAllRegion = totalCoreAllRegion;
+                return this;
+            }
 
             /**
              * TotalCoreNum.

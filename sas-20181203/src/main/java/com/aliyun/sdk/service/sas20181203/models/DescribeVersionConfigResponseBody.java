@@ -36,6 +36,9 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     @NameInMap("InstanceId")
     private String instanceId;
 
+    @NameInMap("IsNewContainerVersion")
+    private Boolean isNewContainerVersion;
+
     @NameInMap("IsOverBalance")
     private Boolean isOverBalance;
 
@@ -50,6 +53,9 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
 
     @NameInMap("MVUnusedAuthCount")
     private Integer MVUnusedAuthCount;
+
+    @NameInMap("OpenTime")
+    private Long openTime;
 
     @NameInMap("ReleaseTime")
     private Long releaseTime;
@@ -90,11 +96,13 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         this.honeypotCapacity = builder.honeypotCapacity;
         this.imageScanCapacity = builder.imageScanCapacity;
         this.instanceId = builder.instanceId;
+        this.isNewContainerVersion = builder.isNewContainerVersion;
         this.isOverBalance = builder.isOverBalance;
         this.isTrialVersion = builder.isTrialVersion;
         this.lastTrailEndTime = builder.lastTrailEndTime;
         this.MVAuthCount = builder.MVAuthCount;
         this.MVUnusedAuthCount = builder.MVUnusedAuthCount;
+        this.openTime = builder.openTime;
         this.releaseTime = builder.releaseTime;
         this.requestId = builder.requestId;
         this.sasLog = builder.sasLog;
@@ -172,6 +180,13 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     }
 
     /**
+     * @return isNewContainerVersion
+     */
+    public Boolean getIsNewContainerVersion() {
+        return this.isNewContainerVersion;
+    }
+
+    /**
      * @return isOverBalance
      */
     public Boolean getIsOverBalance() {
@@ -204,6 +219,13 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
      */
     public Integer getMVUnusedAuthCount() {
         return this.MVUnusedAuthCount;
+    }
+
+    /**
+     * @return openTime
+     */
+    public Long getOpenTime() {
+        return this.openTime;
     }
 
     /**
@@ -285,11 +307,13 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         private Long honeypotCapacity; 
         private Long imageScanCapacity; 
         private String instanceId; 
+        private Boolean isNewContainerVersion; 
         private Boolean isOverBalance; 
         private Integer isTrialVersion; 
         private Long lastTrailEndTime; 
         private Integer MVAuthCount; 
         private Integer MVUnusedAuthCount; 
+        private Long openTime; 
         private Long releaseTime; 
         private String requestId; 
         private Integer sasLog; 
@@ -366,6 +390,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
+         * IsNewContainerVersion.
+         */
+        public Builder isNewContainerVersion(Boolean isNewContainerVersion) {
+            this.isNewContainerVersion = isNewContainerVersion;
+            return this;
+        }
+
+        /**
          * IsOverBalance.
          */
         public Builder isOverBalance(Boolean isOverBalance) {
@@ -402,6 +434,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
          */
         public Builder MVUnusedAuthCount(Integer MVUnusedAuthCount) {
             this.MVUnusedAuthCount = MVUnusedAuthCount;
+            return this;
+        }
+
+        /**
+         * OpenTime.
+         */
+        public Builder openTime(Long openTime) {
+            this.openTime = openTime;
             return this;
         }
 

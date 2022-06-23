@@ -75,6 +75,10 @@ public class DescribeAlarmEventListRequest extends Request {
     @NameInMap("UniqueInfo")
     private String uniqueInfo;
 
+    @Query
+    @NameInMap("Uuids")
+    private String uuids;
+
     private DescribeAlarmEventListRequest(Builder builder) {
         super(builder);
         this.alarmEventName = builder.alarmEventName;
@@ -92,6 +96,7 @@ public class DescribeAlarmEventListRequest extends Request {
         this.sourceIp = builder.sourceIp;
         this.tacticId = builder.tacticId;
         this.uniqueInfo = builder.uniqueInfo;
+        this.uuids = builder.uuids;
     }
 
     public static Builder builder() {
@@ -212,6 +217,13 @@ public class DescribeAlarmEventListRequest extends Request {
         return this.uniqueInfo;
     }
 
+    /**
+     * @return uuids
+     */
+    public String getUuids() {
+        return this.uuids;
+    }
+
     public static final class Builder extends Request.Builder<DescribeAlarmEventListRequest, Builder> {
         private String alarmEventName; 
         private String alarmEventType; 
@@ -228,6 +240,7 @@ public class DescribeAlarmEventListRequest extends Request {
         private String sourceIp; 
         private String tacticId; 
         private String uniqueInfo; 
+        private String uuids; 
 
         private Builder() {
             super();
@@ -250,6 +263,7 @@ public class DescribeAlarmEventListRequest extends Request {
             this.sourceIp = request.sourceIp;
             this.tacticId = request.tacticId;
             this.uniqueInfo = request.uniqueInfo;
+            this.uuids = request.uuids;
         } 
 
         /**
@@ -384,6 +398,15 @@ public class DescribeAlarmEventListRequest extends Request {
         public Builder uniqueInfo(String uniqueInfo) {
             this.putQueryParameter("UniqueInfo", uniqueInfo);
             this.uniqueInfo = uniqueInfo;
+            return this;
+        }
+
+        /**
+         * Uuids.
+         */
+        public Builder uuids(String uuids) {
+            this.putQueryParameter("Uuids", uuids);
+            this.uuids = uuids;
             return this;
         }
 
