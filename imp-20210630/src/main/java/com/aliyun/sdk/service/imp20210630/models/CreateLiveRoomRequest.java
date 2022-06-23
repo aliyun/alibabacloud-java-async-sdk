@@ -31,6 +31,10 @@ public class CreateLiveRoomRequest extends Request {
     private String coverUrl;
 
     @Body
+    @NameInMap("EnableLinkMic")
+    private Boolean enableLinkMic;
+
+    @Body
     @NameInMap("Extension")
     private java.util.Map < String, String > extension;
 
@@ -57,6 +61,7 @@ public class CreateLiveRoomRequest extends Request {
         this.anchorNick = builder.anchorNick;
         this.appId = builder.appId;
         this.coverUrl = builder.coverUrl;
+        this.enableLinkMic = builder.enableLinkMic;
         this.extension = builder.extension;
         this.notice = builder.notice;
         this.regionId = builder.regionId;
@@ -106,6 +111,13 @@ public class CreateLiveRoomRequest extends Request {
     }
 
     /**
+     * @return enableLinkMic
+     */
+    public Boolean getEnableLinkMic() {
+        return this.enableLinkMic;
+    }
+
+    /**
      * @return extension
      */
     public java.util.Map < String, String > getExtension() {
@@ -145,6 +157,7 @@ public class CreateLiveRoomRequest extends Request {
         private String anchorNick; 
         private String appId; 
         private String coverUrl; 
+        private Boolean enableLinkMic; 
         private java.util.Map < String, String > extension; 
         private String notice; 
         private String regionId; 
@@ -161,6 +174,7 @@ public class CreateLiveRoomRequest extends Request {
             this.anchorNick = request.anchorNick;
             this.appId = request.appId;
             this.coverUrl = request.coverUrl;
+            this.enableLinkMic = request.enableLinkMic;
             this.extension = request.extension;
             this.notice = request.notice;
             this.regionId = request.regionId;
@@ -201,6 +215,15 @@ public class CreateLiveRoomRequest extends Request {
         public Builder coverUrl(String coverUrl) {
             this.putBodyParameter("CoverUrl", coverUrl);
             this.coverUrl = coverUrl;
+            return this;
+        }
+
+        /**
+         * 是否开启连麦。
+         */
+        public Builder enableLinkMic(Boolean enableLinkMic) {
+            this.putBodyParameter("EnableLinkMic", enableLinkMic);
+            this.enableLinkMic = enableLinkMic;
             return this;
         }
 

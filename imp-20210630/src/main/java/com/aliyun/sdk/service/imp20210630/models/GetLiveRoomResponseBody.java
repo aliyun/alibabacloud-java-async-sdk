@@ -249,11 +249,17 @@ public class GetLiveRoomResponseBody extends TeaModel {
         @NameInMap("ChatId")
         private String chatId;
 
+        @NameInMap("ConfId")
+        private String confId;
+
         @NameInMap("CoverUrl")
         private String coverUrl;
 
         @NameInMap("CreateTime")
         private Long createTime;
+
+        @NameInMap("EnableLinkMic")
+        private Boolean enableLinkMic;
 
         @NameInMap("EndTime")
         private Long endTime;
@@ -321,8 +327,10 @@ public class GetLiveRoomResponseBody extends TeaModel {
             this.appId = builder.appId;
             this.artcInfo = builder.artcInfo;
             this.chatId = builder.chatId;
+            this.confId = builder.confId;
             this.coverUrl = builder.coverUrl;
             this.createTime = builder.createTime;
+            this.enableLinkMic = builder.enableLinkMic;
             this.endTime = builder.endTime;
             this.extension = builder.extension;
             this.hlsUrl = builder.hlsUrl;
@@ -389,6 +397,13 @@ public class GetLiveRoomResponseBody extends TeaModel {
         }
 
         /**
+         * @return confId
+         */
+        public String getConfId() {
+            return this.confId;
+        }
+
+        /**
          * @return coverUrl
          */
         public String getCoverUrl() {
@@ -400,6 +415,13 @@ public class GetLiveRoomResponseBody extends TeaModel {
          */
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return enableLinkMic
+         */
+        public Boolean getEnableLinkMic() {
+            return this.enableLinkMic;
         }
 
         /**
@@ -548,8 +570,10 @@ public class GetLiveRoomResponseBody extends TeaModel {
             private String appId; 
             private ArtcInfo artcInfo; 
             private String chatId; 
+            private String confId; 
             private String coverUrl; 
             private Long createTime; 
+            private Boolean enableLinkMic; 
             private Long endTime; 
             private java.util.Map < String, String > extension; 
             private String hlsUrl; 
@@ -612,6 +636,14 @@ public class GetLiveRoomResponseBody extends TeaModel {
             }
 
             /**
+             * 连麦会议唯一标识。
+             */
+            public Builder confId(String confId) {
+                this.confId = confId;
+                return this;
+            }
+
+            /**
              * 封面。
              */
             public Builder coverUrl(String coverUrl) {
@@ -624,6 +656,14 @@ public class GetLiveRoomResponseBody extends TeaModel {
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * 是否开启连麦。
+             */
+            public Builder enableLinkMic(Boolean enableLinkMic) {
+                this.enableLinkMic = enableLinkMic;
                 return this;
             }
 

@@ -72,10 +72,14 @@ public class ListSensitiveWordResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
+        @NameInMap("TotalCount")
+        private Integer totalCount;
+
         @NameInMap("WordList")
         private java.util.List < String > wordList;
 
         private Result(Builder builder) {
+            this.totalCount = builder.totalCount;
             this.wordList = builder.wordList;
         }
 
@@ -88,6 +92,13 @@ public class ListSensitiveWordResponseBody extends TeaModel {
         }
 
         /**
+         * @return totalCount
+         */
+        public Integer getTotalCount() {
+            return this.totalCount;
+        }
+
+        /**
          * @return wordList
          */
         public java.util.List < String > getWordList() {
@@ -95,7 +106,16 @@ public class ListSensitiveWordResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer totalCount; 
             private java.util.List < String > wordList; 
+
+            /**
+             * TotalCount.
+             */
+            public Builder totalCount(Integer totalCount) {
+                this.totalCount = totalCount;
+                return this;
+            }
 
             /**
              * WordList.
