@@ -62,10 +62,10 @@ public class ResetAppCodeRequest extends Request {
             super();
         } 
 
-        private Builder(ResetAppCodeRequest response) {
-            super(response);
-            this.appCode = response.appCode;
-            this.securityToken = response.securityToken;
+        private Builder(ResetAppCodeRequest request) {
+            super(request);
+            this.appCode = request.appCode;
+            this.securityToken = request.securityToken;
         } 
 
         /**

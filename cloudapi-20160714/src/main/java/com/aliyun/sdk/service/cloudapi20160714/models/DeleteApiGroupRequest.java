@@ -75,11 +75,11 @@ public class DeleteApiGroupRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteApiGroupRequest response) {
-            super(response);
-            this.groupId = response.groupId;
-            this.securityToken = response.securityToken;
-            this.tag = response.tag;
+        private Builder(DeleteApiGroupRequest request) {
+            super(request);
+            this.groupId = request.groupId;
+            this.securityToken = request.securityToken;
+            this.tag = request.tag;
         } 
 
         /**

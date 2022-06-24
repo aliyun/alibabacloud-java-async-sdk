@@ -74,11 +74,11 @@ public class DeleteLogConfigRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteLogConfigRequest response) {
-            super(response);
-            this.logType = response.logType;
-            this.regionId = response.regionId;
-            this.securityToken = response.securityToken;
+        private Builder(DeleteLogConfigRequest request) {
+            super(request);
+            this.logType = request.logType;
+            this.regionId = request.regionId;
+            this.securityToken = request.securityToken;
         } 
 
         /**

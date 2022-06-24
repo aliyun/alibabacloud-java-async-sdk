@@ -76,11 +76,11 @@ public class DeleteDomainRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteDomainRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.groupId = response.groupId;
-            this.securityToken = response.securityToken;
+        private Builder(DeleteDomainRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.groupId = request.groupId;
+            this.securityToken = request.securityToken;
         } 
 
         /**

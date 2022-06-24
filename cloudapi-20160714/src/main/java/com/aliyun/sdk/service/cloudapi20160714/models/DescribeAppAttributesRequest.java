@@ -166,18 +166,18 @@ public class DescribeAppAttributesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAppAttributesRequest response) {
-            super(response);
-            this.appCode = response.appCode;
-            this.appId = response.appId;
-            this.appKey = response.appKey;
-            this.appName = response.appName;
-            this.enableTagAuth = response.enableTagAuth;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.securityToken = response.securityToken;
-            this.sort = response.sort;
-            this.tag = response.tag;
+        private Builder(DescribeAppAttributesRequest request) {
+            super(request);
+            this.appCode = request.appCode;
+            this.appId = request.appId;
+            this.appKey = request.appKey;
+            this.appName = request.appName;
+            this.enableTagAuth = request.enableTagAuth;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.securityToken = request.securityToken;
+            this.sort = request.sort;
+            this.tag = request.tag;
         } 
 
         /**

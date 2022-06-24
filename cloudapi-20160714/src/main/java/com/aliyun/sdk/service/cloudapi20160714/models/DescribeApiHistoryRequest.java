@@ -103,13 +103,13 @@ public class DescribeApiHistoryRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeApiHistoryRequest response) {
-            super(response);
-            this.apiId = response.apiId;
-            this.groupId = response.groupId;
-            this.historyVersion = response.historyVersion;
-            this.securityToken = response.securityToken;
-            this.stageName = response.stageName;
+        private Builder(DescribeApiHistoryRequest request) {
+            super(request);
+            this.apiId = request.apiId;
+            this.groupId = request.groupId;
+            this.historyVersion = request.historyVersion;
+            this.securityToken = request.securityToken;
+            this.stageName = request.stageName;
         } 
 
         /**

@@ -156,6 +156,9 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
         @NameInMap("VpcId")
         private String vpcId;
 
+        @NameInMap("VpcTargetHostName")
+        private String vpcTargetHostName;
+
         private VpcAccessAttribute(Builder builder) {
             this.createdTime = builder.createdTime;
             this.description = builder.description;
@@ -165,6 +168,7 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
             this.regionId = builder.regionId;
             this.vpcAccessId = builder.vpcAccessId;
             this.vpcId = builder.vpcId;
+            this.vpcTargetHostName = builder.vpcTargetHostName;
         }
 
         public static Builder builder() {
@@ -231,6 +235,13 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
             return this.vpcId;
         }
 
+        /**
+         * @return vpcTargetHostName
+         */
+        public String getVpcTargetHostName() {
+            return this.vpcTargetHostName;
+        }
+
         public static final class Builder {
             private String createdTime; 
             private String description; 
@@ -240,6 +251,7 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
             private String regionId; 
             private String vpcAccessId; 
             private String vpcId; 
+            private String vpcTargetHostName; 
 
             /**
              * VPC授权的创建时间
@@ -302,6 +314,14 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
+                return this;
+            }
+
+            /**
+             * VpcTargetHostName.
+             */
+            public Builder vpcTargetHostName(String vpcTargetHostName) {
+                this.vpcTargetHostName = vpcTargetHostName;
                 return this;
             }
 

@@ -35,8 +35,8 @@ public class OpenApiGatewayServiceRequest extends Request {
             super();
         } 
 
-        private Builder(OpenApiGatewayServiceRequest response) {
-            super(response);
+        private Builder(OpenApiGatewayServiceRequest request) {
+            super(request);
         } 
 
         @Override

@@ -127,15 +127,15 @@ public class DescribePluginsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribePluginsRequest response) {
-            super(response);
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.pluginId = response.pluginId;
-            this.pluginName = response.pluginName;
-            this.pluginType = response.pluginType;
-            this.securityToken = response.securityToken;
-            this.tag = response.tag;
+        private Builder(DescribePluginsRequest request) {
+            super(request);
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.pluginId = request.pluginId;
+            this.pluginName = request.pluginName;
+            this.pluginType = request.pluginType;
+            this.securityToken = request.securityToken;
+            this.tag = request.tag;
         } 
 
         /**

@@ -103,13 +103,13 @@ public class ModifyBackendRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyBackendRequest response) {
-            super(response);
-            this.backendId = response.backendId;
-            this.backendName = response.backendName;
-            this.backendType = response.backendType;
-            this.description = response.description;
-            this.securityToken = response.securityToken;
+        private Builder(ModifyBackendRequest request) {
+            super(request);
+            this.backendId = request.backendId;
+            this.backendName = request.backendName;
+            this.backendType = request.backendType;
+            this.description = request.description;
+            this.securityToken = request.securityToken;
         } 
 
         /**

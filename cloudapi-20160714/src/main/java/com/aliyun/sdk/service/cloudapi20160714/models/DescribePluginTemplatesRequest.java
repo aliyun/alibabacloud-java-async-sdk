@@ -74,11 +74,11 @@ public class DescribePluginTemplatesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribePluginTemplatesRequest response) {
-            super(response);
-            this.language = response.language;
-            this.pluginName = response.pluginName;
-            this.securityToken = response.securityToken;
+        private Builder(DescribePluginTemplatesRequest request) {
+            super(request);
+            this.language = request.language;
+            this.pluginName = request.pluginName;
+            this.securityToken = request.securityToken;
         } 
 
         /**

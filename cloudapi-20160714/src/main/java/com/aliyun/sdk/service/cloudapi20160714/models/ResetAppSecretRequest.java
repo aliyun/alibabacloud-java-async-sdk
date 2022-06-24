@@ -62,10 +62,10 @@ public class ResetAppSecretRequest extends Request {
             super();
         } 
 
-        private Builder(ResetAppSecretRequest response) {
-            super(response);
-            this.appKey = response.appKey;
-            this.securityToken = response.securityToken;
+        private Builder(ResetAppSecretRequest request) {
+            super(request);
+            this.appKey = request.appKey;
+            this.securityToken = request.securityToken;
         } 
 
         /**

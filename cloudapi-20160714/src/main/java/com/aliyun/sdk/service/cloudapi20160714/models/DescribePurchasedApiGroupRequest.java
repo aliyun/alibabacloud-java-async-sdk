@@ -62,10 +62,10 @@ public class DescribePurchasedApiGroupRequest extends Request {
             super();
         } 
 
-        private Builder(DescribePurchasedApiGroupRequest response) {
-            super(response);
-            this.groupId = response.groupId;
-            this.securityToken = response.securityToken;
+        private Builder(DescribePurchasedApiGroupRequest request) {
+            super(request);
+            this.groupId = request.groupId;
+            this.securityToken = request.securityToken;
         } 
 
         /**

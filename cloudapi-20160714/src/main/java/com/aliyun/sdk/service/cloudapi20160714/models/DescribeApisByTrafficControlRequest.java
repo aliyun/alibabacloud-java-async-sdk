@@ -89,12 +89,12 @@ public class DescribeApisByTrafficControlRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeApisByTrafficControlRequest response) {
-            super(response);
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.securityToken = response.securityToken;
-            this.trafficControlId = response.trafficControlId;
+        private Builder(DescribeApisByTrafficControlRequest request) {
+            super(request);
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.securityToken = request.securityToken;
+            this.trafficControlId = request.trafficControlId;
         } 
 
         /**

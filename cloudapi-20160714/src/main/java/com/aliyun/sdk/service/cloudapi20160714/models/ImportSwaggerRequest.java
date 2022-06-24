@@ -130,15 +130,15 @@ public class ImportSwaggerRequest extends Request {
             super();
         } 
 
-        private Builder(ImportSwaggerRequest response) {
-            super(response);
-            this.data = response.data;
-            this.dataFormat = response.dataFormat;
-            this.dryRun = response.dryRun;
-            this.globalCondition = response.globalCondition;
-            this.groupId = response.groupId;
-            this.overwrite = response.overwrite;
-            this.securityToken = response.securityToken;
+        private Builder(ImportSwaggerRequest request) {
+            super(request);
+            this.data = request.data;
+            this.dataFormat = request.dataFormat;
+            this.dryRun = request.dryRun;
+            this.globalCondition = request.globalCondition;
+            this.groupId = request.groupId;
+            this.overwrite = request.overwrite;
+            this.securityToken = request.securityToken;
         } 
 
         /**
@@ -172,7 +172,8 @@ public class ImportSwaggerRequest extends Request {
          * GlobalCondition.
          */
         public Builder globalCondition(java.util.Map < String, ? > globalCondition) {
-            this.putQueryParameter("GlobalCondition", globalCondition);
+            String globalConditionShrink = shrink(globalCondition, "GlobalCondition", "json");
+            this.putQueryParameter("GlobalCondition", globalConditionShrink);
             this.globalCondition = globalCondition;
             return this;
         }

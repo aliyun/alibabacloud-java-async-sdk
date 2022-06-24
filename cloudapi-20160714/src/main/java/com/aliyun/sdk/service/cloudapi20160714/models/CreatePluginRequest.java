@@ -116,14 +116,14 @@ public class CreatePluginRequest extends Request {
             super();
         } 
 
-        private Builder(CreatePluginRequest response) {
-            super(response);
-            this.description = response.description;
-            this.pluginData = response.pluginData;
-            this.pluginName = response.pluginName;
-            this.pluginType = response.pluginType;
-            this.securityToken = response.securityToken;
-            this.tag = response.tag;
+        private Builder(CreatePluginRequest request) {
+            super(request);
+            this.description = request.description;
+            this.pluginData = request.pluginData;
+            this.pluginName = request.pluginName;
+            this.pluginType = request.pluginType;
+            this.securityToken = request.securityToken;
+            this.tag = request.tag;
         } 
 
         /**

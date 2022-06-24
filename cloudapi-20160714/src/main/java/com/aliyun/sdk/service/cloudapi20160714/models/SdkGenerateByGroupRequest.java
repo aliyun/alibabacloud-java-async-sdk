@@ -76,11 +76,11 @@ public class SdkGenerateByGroupRequest extends Request {
             super();
         } 
 
-        private Builder(SdkGenerateByGroupRequest response) {
-            super(response);
-            this.groupId = response.groupId;
-            this.language = response.language;
-            this.securityToken = response.securityToken;
+        private Builder(SdkGenerateByGroupRequest request) {
+            super(request);
+            this.groupId = request.groupId;
+            this.language = request.language;
+            this.securityToken = request.securityToken;
         } 
 
         /**

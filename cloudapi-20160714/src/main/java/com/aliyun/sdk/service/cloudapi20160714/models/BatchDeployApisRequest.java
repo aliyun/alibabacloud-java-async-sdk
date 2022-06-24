@@ -89,12 +89,12 @@ public class BatchDeployApisRequest extends Request {
             super();
         } 
 
-        private Builder(BatchDeployApisRequest response) {
-            super(response);
-            this.api = response.api;
-            this.description = response.description;
-            this.securityToken = response.securityToken;
-            this.stageName = response.stageName;
+        private Builder(BatchDeployApisRequest request) {
+            super(request);
+            this.api = request.api;
+            this.description = request.description;
+            this.securityToken = request.securityToken;
+            this.stageName = request.stageName;
         } 
 
         /**

@@ -62,10 +62,10 @@ public class BatchAbolishApisRequest extends Request {
             super();
         } 
 
-        private Builder(BatchAbolishApisRequest response) {
-            super(response);
-            this.api = response.api;
-            this.securityToken = response.securityToken;
+        private Builder(BatchAbolishApisRequest request) {
+            super(request);
+            this.api = request.api;
+            this.securityToken = request.securityToken;
         } 
 
         /**

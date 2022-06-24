@@ -104,13 +104,13 @@ public class AddTrafficSpecialControlRequest extends Request {
             super();
         } 
 
-        private Builder(AddTrafficSpecialControlRequest response) {
-            super(response);
-            this.securityToken = response.securityToken;
-            this.specialKey = response.specialKey;
-            this.specialType = response.specialType;
-            this.trafficControlId = response.trafficControlId;
-            this.trafficValue = response.trafficValue;
+        private Builder(AddTrafficSpecialControlRequest request) {
+            super(request);
+            this.securityToken = request.securityToken;
+            this.specialKey = request.specialKey;
+            this.specialType = request.specialType;
+            this.trafficControlId = request.trafficControlId;
+            this.trafficValue = request.trafficValue;
         } 
 
         /**

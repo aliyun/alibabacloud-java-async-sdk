@@ -62,10 +62,10 @@ public class DeleteIpControlRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteIpControlRequest response) {
-            super(response);
-            this.ipControlId = response.ipControlId;
-            this.securityToken = response.securityToken;
+        private Builder(DeleteIpControlRequest request) {
+            super(request);
+            this.ipControlId = request.ipControlId;
+            this.securityToken = request.securityToken;
         } 
 
         /**

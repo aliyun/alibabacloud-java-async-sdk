@@ -165,18 +165,18 @@ public class DescribeApisRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeApisRequest response) {
-            super(response);
-            this.apiId = response.apiId;
-            this.apiName = response.apiName;
-            this.catalogId = response.catalogId;
-            this.enableTagAuth = response.enableTagAuth;
-            this.groupId = response.groupId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.securityToken = response.securityToken;
-            this.tag = response.tag;
-            this.visibility = response.visibility;
+        private Builder(DescribeApisRequest request) {
+            super(request);
+            this.apiId = request.apiId;
+            this.apiName = request.apiName;
+            this.catalogId = request.catalogId;
+            this.enableTagAuth = request.enableTagAuth;
+            this.groupId = request.groupId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.securityToken = request.securityToken;
+            this.tag = request.tag;
+            this.visibility = request.visibility;
         } 
 
         /**

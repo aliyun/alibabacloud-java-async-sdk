@@ -87,12 +87,12 @@ public class DeleteBackendModelRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteBackendModelRequest response) {
-            super(response);
-            this.backendId = response.backendId;
-            this.backendModelId = response.backendModelId;
-            this.securityToken = response.securityToken;
-            this.stageName = response.stageName;
+        private Builder(DeleteBackendModelRequest request) {
+            super(request);
+            this.backendId = request.backendId;
+            this.backendModelId = request.backendModelId;
+            this.securityToken = request.securityToken;
+            this.stageName = request.stageName;
         } 
 
         /**

@@ -88,12 +88,12 @@ public class DescribeAuthorizedApisRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAuthorizedApisRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.securityToken = response.securityToken;
+        private Builder(DescribeAuthorizedApisRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.securityToken = request.securityToken;
         } 
 
         /**

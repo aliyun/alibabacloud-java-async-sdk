@@ -48,9 +48,9 @@ public class DescribeSystemParametersRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeSystemParametersRequest response) {
-            super(response);
-            this.securityToken = response.securityToken;
+        private Builder(DescribeSystemParametersRequest request) {
+            super(request);
+            this.securityToken = request.securityToken;
         } 
 
         /**

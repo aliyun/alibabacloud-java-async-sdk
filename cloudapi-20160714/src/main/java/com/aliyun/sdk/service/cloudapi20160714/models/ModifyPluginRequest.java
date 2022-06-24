@@ -114,14 +114,14 @@ public class ModifyPluginRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyPluginRequest response) {
-            super(response);
-            this.description = response.description;
-            this.pluginData = response.pluginData;
-            this.pluginId = response.pluginId;
-            this.pluginName = response.pluginName;
-            this.securityToken = response.securityToken;
-            this.tag = response.tag;
+        private Builder(ModifyPluginRequest request) {
+            super(request);
+            this.description = request.description;
+            this.pluginData = request.pluginData;
+            this.pluginId = request.pluginId;
+            this.pluginName = request.pluginName;
+            this.securityToken = request.securityToken;
+            this.tag = request.tag;
         } 
 
         /**

@@ -129,15 +129,15 @@ public class CreateApiStageVariableRequest extends Request {
             super();
         } 
 
-        private Builder(CreateApiStageVariableRequest response) {
-            super(response);
-            this.groupId = response.groupId;
-            this.securityToken = response.securityToken;
-            this.stageId = response.stageId;
-            this.stageRouteModel = response.stageRouteModel;
-            this.supportRoute = response.supportRoute;
-            this.variableName = response.variableName;
-            this.variableValue = response.variableValue;
+        private Builder(CreateApiStageVariableRequest request) {
+            super(request);
+            this.groupId = request.groupId;
+            this.securityToken = request.securityToken;
+            this.stageId = request.stageId;
+            this.stageRouteModel = request.stageRouteModel;
+            this.supportRoute = request.supportRoute;
+            this.variableName = request.variableName;
+            this.variableValue = request.variableValue;
         } 
 
         /**

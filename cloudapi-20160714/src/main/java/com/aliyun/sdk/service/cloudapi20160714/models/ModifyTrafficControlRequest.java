@@ -140,16 +140,16 @@ public class ModifyTrafficControlRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyTrafficControlRequest response) {
-            super(response);
-            this.apiDefault = response.apiDefault;
-            this.appDefault = response.appDefault;
-            this.description = response.description;
-            this.securityToken = response.securityToken;
-            this.trafficControlId = response.trafficControlId;
-            this.trafficControlName = response.trafficControlName;
-            this.trafficControlUnit = response.trafficControlUnit;
-            this.userDefault = response.userDefault;
+        private Builder(ModifyTrafficControlRequest request) {
+            super(request);
+            this.apiDefault = request.apiDefault;
+            this.appDefault = request.appDefault;
+            this.description = request.description;
+            this.securityToken = request.securityToken;
+            this.trafficControlId = request.trafficControlId;
+            this.trafficControlName = request.trafficControlName;
+            this.trafficControlUnit = request.trafficControlUnit;
+            this.userDefault = request.userDefault;
         } 
 
         /**

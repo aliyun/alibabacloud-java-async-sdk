@@ -61,10 +61,10 @@ public class DescribeBackendInfoRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeBackendInfoRequest response) {
-            super(response);
-            this.backendId = response.backendId;
-            this.securityToken = response.securityToken;
+        private Builder(DescribeBackendInfoRequest request) {
+            super(request);
+            this.backendId = request.backendId;
+            this.securityToken = request.securityToken;
         } 
 
         /**

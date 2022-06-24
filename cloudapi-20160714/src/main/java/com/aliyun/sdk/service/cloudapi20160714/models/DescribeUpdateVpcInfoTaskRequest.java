@@ -62,10 +62,10 @@ public class DescribeUpdateVpcInfoTaskRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeUpdateVpcInfoTaskRequest response) {
-            super(response);
-            this.operationUid = response.operationUid;
-            this.securityToken = response.securityToken;
+        private Builder(DescribeUpdateVpcInfoTaskRequest request) {
+            super(request);
+            this.operationUid = request.operationUid;
+            this.securityToken = request.securityToken;
         } 
 
         /**

@@ -90,12 +90,12 @@ public class SetDomainWebSocketStatusRequest extends Request {
             super();
         } 
 
-        private Builder(SetDomainWebSocketStatusRequest response) {
-            super(response);
-            this.actionValue = response.actionValue;
-            this.domainName = response.domainName;
-            this.groupId = response.groupId;
-            this.securityToken = response.securityToken;
+        private Builder(SetDomainWebSocketStatusRequest request) {
+            super(request);
+            this.actionValue = request.actionValue;
+            this.domainName = request.domainName;
+            this.groupId = request.groupId;
+            this.securityToken = request.securityToken;
         } 
 
         /**

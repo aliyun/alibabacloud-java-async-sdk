@@ -43,6 +43,10 @@ public class SetDomainCertificateRequest extends Request {
     @NameInMap("SecurityToken")
     private String securityToken;
 
+    @Query
+    @NameInMap("SslVerifyDepth")
+    private String sslVerifyDepth;
+
     private SetDomainCertificateRequest(Builder builder) {
         super(builder);
         this.caCertificateBody = builder.caCertificateBody;
@@ -52,6 +56,7 @@ public class SetDomainCertificateRequest extends Request {
         this.domainName = builder.domainName;
         this.groupId = builder.groupId;
         this.securityToken = builder.securityToken;
+        this.sslVerifyDepth = builder.sslVerifyDepth;
     }
 
     public static Builder builder() {
@@ -116,6 +121,13 @@ public class SetDomainCertificateRequest extends Request {
         return this.securityToken;
     }
 
+    /**
+     * @return sslVerifyDepth
+     */
+    public String getSslVerifyDepth() {
+        return this.sslVerifyDepth;
+    }
+
     public static final class Builder extends Request.Builder<SetDomainCertificateRequest, Builder> {
         private String caCertificateBody; 
         private String certificateBody; 
@@ -124,20 +136,22 @@ public class SetDomainCertificateRequest extends Request {
         private String domainName; 
         private String groupId; 
         private String securityToken; 
+        private String sslVerifyDepth; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(SetDomainCertificateRequest response) {
-            super(response);
-            this.caCertificateBody = response.caCertificateBody;
-            this.certificateBody = response.certificateBody;
-            this.certificateName = response.certificateName;
-            this.certificatePrivateKey = response.certificatePrivateKey;
-            this.domainName = response.domainName;
-            this.groupId = response.groupId;
-            this.securityToken = response.securityToken;
+        private Builder(SetDomainCertificateRequest request) {
+            super(request);
+            this.caCertificateBody = request.caCertificateBody;
+            this.certificateBody = request.certificateBody;
+            this.certificateName = request.certificateName;
+            this.certificatePrivateKey = request.certificatePrivateKey;
+            this.domainName = request.domainName;
+            this.groupId = request.groupId;
+            this.securityToken = request.securityToken;
+            this.sslVerifyDepth = request.sslVerifyDepth;
         } 
 
         /**
@@ -200,6 +214,15 @@ public class SetDomainCertificateRequest extends Request {
         public Builder securityToken(String securityToken) {
             this.putQueryParameter("SecurityToken", securityToken);
             this.securityToken = securityToken;
+            return this;
+        }
+
+        /**
+         * SslVerifyDepth.
+         */
+        public Builder sslVerifyDepth(String sslVerifyDepth) {
+            this.putQueryParameter("SslVerifyDepth", sslVerifyDepth);
+            this.sslVerifyDepth = sslVerifyDepth;
             return this;
         }
 

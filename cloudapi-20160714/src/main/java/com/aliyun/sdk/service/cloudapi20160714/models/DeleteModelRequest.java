@@ -63,10 +63,10 @@ public class DeleteModelRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteModelRequest response) {
-            super(response);
-            this.groupId = response.groupId;
-            this.modelName = response.modelName;
+        private Builder(DeleteModelRequest request) {
+            super(request);
+            this.groupId = request.groupId;
+            this.modelName = request.modelName;
         } 
 
         /**

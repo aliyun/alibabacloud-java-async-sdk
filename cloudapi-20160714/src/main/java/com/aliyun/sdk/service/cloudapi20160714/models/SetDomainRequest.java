@@ -102,13 +102,13 @@ public class SetDomainRequest extends Request {
             super();
         } 
 
-        private Builder(SetDomainRequest response) {
-            super(response);
-            this.bindStageName = response.bindStageName;
-            this.customDomainType = response.customDomainType;
-            this.domainName = response.domainName;
-            this.groupId = response.groupId;
-            this.isForce = response.isForce;
+        private Builder(SetDomainRequest request) {
+            super(request);
+            this.bindStageName = request.bindStageName;
+            this.customDomainType = request.customDomainType;
+            this.domainName = request.domainName;
+            this.groupId = request.groupId;
+            this.isForce = request.isForce;
         } 
 
         /**

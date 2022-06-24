@@ -89,12 +89,12 @@ public class CreateMonitorGroupRequest extends Request {
             super();
         } 
 
-        private Builder(CreateMonitorGroupRequest response) {
-            super(response);
-            this.auth = response.auth;
-            this.groupId = response.groupId;
-            this.rawMonitorGroupId = response.rawMonitorGroupId;
-            this.securityToken = response.securityToken;
+        private Builder(CreateMonitorGroupRequest request) {
+            super(request);
+            this.auth = request.auth;
+            this.groupId = request.groupId;
+            this.rawMonitorGroupId = request.rawMonitorGroupId;
+            this.securityToken = request.securityToken;
         } 
 
         /**

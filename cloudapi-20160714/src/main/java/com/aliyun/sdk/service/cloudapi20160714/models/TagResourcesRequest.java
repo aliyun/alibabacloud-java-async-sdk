@@ -90,12 +90,12 @@ public class TagResourcesRequest extends Request {
             super();
         } 
 
-        private Builder(TagResourcesRequest response) {
-            super(response);
-            this.resourceId = response.resourceId;
-            this.resourceType = response.resourceType;
-            this.securityToken = response.securityToken;
-            this.tag = response.tag;
+        private Builder(TagResourcesRequest request) {
+            super(request);
+            this.resourceId = request.resourceId;
+            this.resourceType = request.resourceType;
+            this.securityToken = request.securityToken;
+            this.tag = request.tag;
         } 
 
         /**

@@ -75,11 +75,11 @@ public class DescribeAppSecurityRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAppSecurityRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.securityToken = response.securityToken;
-            this.tag = response.tag;
+        private Builder(DescribeAppSecurityRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.securityToken = request.securityToken;
+            this.tag = request.tag;
         } 
 
         /**

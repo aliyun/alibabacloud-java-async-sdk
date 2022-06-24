@@ -89,12 +89,12 @@ public class AbolishApiRequest extends Request {
             super();
         } 
 
-        private Builder(AbolishApiRequest response) {
-            super(response);
-            this.apiId = response.apiId;
-            this.groupId = response.groupId;
-            this.securityToken = response.securityToken;
-            this.stageName = response.stageName;
+        private Builder(AbolishApiRequest request) {
+            super(request);
+            this.apiId = request.apiId;
+            this.groupId = request.groupId;
+            this.securityToken = request.securityToken;
+            this.stageName = request.stageName;
         } 
 
         /**

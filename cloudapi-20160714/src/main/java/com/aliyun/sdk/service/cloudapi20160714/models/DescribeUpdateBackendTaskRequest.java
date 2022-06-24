@@ -62,10 +62,10 @@ public class DescribeUpdateBackendTaskRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeUpdateBackendTaskRequest response) {
-            super(response);
-            this.operationUid = response.operationUid;
-            this.securityToken = response.securityToken;
+        private Builder(DescribeUpdateBackendTaskRequest request) {
+            super(request);
+            this.operationUid = request.operationUid;
+            this.securityToken = request.securityToken;
         } 
 
         /**

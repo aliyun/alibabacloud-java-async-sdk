@@ -2124,6 +2124,107 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
         } 
 
     }
+    public static class EventBridgeConfig extends TeaModel {
+        @NameInMap("EventBridgeRegionId")
+        private String eventBridgeRegionId;
+
+        @NameInMap("EventBus")
+        private String eventBus;
+
+        @NameInMap("EventSource")
+        private String eventSource;
+
+        @NameInMap("RoleArn")
+        private String roleArn;
+
+        private EventBridgeConfig(Builder builder) {
+            this.eventBridgeRegionId = builder.eventBridgeRegionId;
+            this.eventBus = builder.eventBus;
+            this.eventSource = builder.eventSource;
+            this.roleArn = builder.roleArn;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static EventBridgeConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return eventBridgeRegionId
+         */
+        public String getEventBridgeRegionId() {
+            return this.eventBridgeRegionId;
+        }
+
+        /**
+         * @return eventBus
+         */
+        public String getEventBus() {
+            return this.eventBus;
+        }
+
+        /**
+         * @return eventSource
+         */
+        public String getEventSource() {
+            return this.eventSource;
+        }
+
+        /**
+         * @return roleArn
+         */
+        public String getRoleArn() {
+            return this.roleArn;
+        }
+
+        public static final class Builder {
+            private String eventBridgeRegionId; 
+            private String eventBus; 
+            private String eventSource; 
+            private String roleArn; 
+
+            /**
+             * EventBridgeRegionId.
+             */
+            public Builder eventBridgeRegionId(String eventBridgeRegionId) {
+                this.eventBridgeRegionId = eventBridgeRegionId;
+                return this;
+            }
+
+            /**
+             * EventBus.
+             */
+            public Builder eventBus(String eventBus) {
+                this.eventBus = eventBus;
+                return this;
+            }
+
+            /**
+             * EventSource.
+             */
+            public Builder eventSource(String eventSource) {
+                this.eventSource = eventSource;
+                return this;
+            }
+
+            /**
+             * RoleArn.
+             */
+            public Builder roleArn(String roleArn) {
+                this.roleArn = roleArn;
+                return this;
+            }
+
+            public EventBridgeConfig build() {
+                return new EventBridgeConfig(this);
+            } 
+
+        } 
+
+    }
     public static class FunctionComputeConfig extends TeaModel {
         @NameInMap("ContentTypeCatagory")
         private String contentTypeCatagory;
@@ -2716,6 +2817,9 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
         @NameInMap("ContentTypeValue")
         private String contentTypeValue;
 
+        @NameInMap("EventBridgeConfig")
+        private EventBridgeConfig eventBridgeConfig;
+
         @NameInMap("FunctionComputeConfig")
         private FunctionComputeConfig functionComputeConfig;
 
@@ -2761,6 +2865,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
         private ServiceConfig(Builder builder) {
             this.contentTypeCatagory = builder.contentTypeCatagory;
             this.contentTypeValue = builder.contentTypeValue;
+            this.eventBridgeConfig = builder.eventBridgeConfig;
             this.functionComputeConfig = builder.functionComputeConfig;
             this.mock = builder.mock;
             this.mockHeaders = builder.mockHeaders;
@@ -2797,6 +2902,13 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
          */
         public String getContentTypeValue() {
             return this.contentTypeValue;
+        }
+
+        /**
+         * @return eventBridgeConfig
+         */
+        public EventBridgeConfig getEventBridgeConfig() {
+            return this.eventBridgeConfig;
         }
 
         /**
@@ -2900,6 +3012,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
         public static final class Builder {
             private String contentTypeCatagory; 
             private String contentTypeValue; 
+            private EventBridgeConfig eventBridgeConfig; 
             private FunctionComputeConfig functionComputeConfig; 
             private String mock; 
             private MockHeaders mockHeaders; 
@@ -2928,6 +3041,14 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
              */
             public Builder contentTypeValue(String contentTypeValue) {
                 this.contentTypeValue = contentTypeValue;
+                return this;
+            }
+
+            /**
+             * EventBridgeConfig.
+             */
+            public Builder eventBridgeConfig(EventBridgeConfig eventBridgeConfig) {
+                this.eventBridgeConfig = eventBridgeConfig;
                 return this;
             }
 

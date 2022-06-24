@@ -75,11 +75,11 @@ public class DeletePluginRequest extends Request {
             super();
         } 
 
-        private Builder(DeletePluginRequest response) {
-            super(response);
-            this.pluginId = response.pluginId;
-            this.securityToken = response.securityToken;
-            this.tag = response.tag;
+        private Builder(DeletePluginRequest request) {
+            super(request);
+            this.pluginId = request.pluginId;
+            this.securityToken = request.securityToken;
+            this.tag = request.tag;
         } 
 
         /**

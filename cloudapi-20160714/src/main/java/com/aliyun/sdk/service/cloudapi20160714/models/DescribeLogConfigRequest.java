@@ -74,11 +74,11 @@ public class DescribeLogConfigRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeLogConfigRequest response) {
-            super(response);
-            this.logType = response.logType;
-            this.regionId = response.regionId;
-            this.securityToken = response.securityToken;
+        private Builder(DescribeLogConfigRequest request) {
+            super(request);
+            this.logType = request.logType;
+            this.regionId = request.regionId;
+            this.securityToken = request.securityToken;
         } 
 
         /**

@@ -26,6 +26,10 @@ public class DescribeApisByAppRequest extends Request {
     private Long appId;
 
     @Query
+    @NameInMap("Description")
+    private String description;
+
+    @Query
     @NameInMap("Method")
     private String method;
 
@@ -50,6 +54,7 @@ public class DescribeApisByAppRequest extends Request {
         this.apiName = builder.apiName;
         this.apiUid = builder.apiUid;
         this.appId = builder.appId;
+        this.description = builder.description;
         this.method = builder.method;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -92,6 +97,13 @@ public class DescribeApisByAppRequest extends Request {
     }
 
     /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
      * @return method
      */
     public String getMethod() {
@@ -130,6 +142,7 @@ public class DescribeApisByAppRequest extends Request {
         private String apiName; 
         private String apiUid; 
         private Long appId; 
+        private String description; 
         private String method; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -140,16 +153,17 @@ public class DescribeApisByAppRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeApisByAppRequest response) {
-            super(response);
-            this.apiName = response.apiName;
-            this.apiUid = response.apiUid;
-            this.appId = response.appId;
-            this.method = response.method;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.path = response.path;
-            this.securityToken = response.securityToken;
+        private Builder(DescribeApisByAppRequest request) {
+            super(request);
+            this.apiName = request.apiName;
+            this.apiUid = request.apiUid;
+            this.appId = request.appId;
+            this.description = request.description;
+            this.method = request.method;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.path = request.path;
+            this.securityToken = request.securityToken;
         } 
 
         /**
@@ -176,6 +190,15 @@ public class DescribeApisByAppRequest extends Request {
         public Builder appId(Long appId) {
             this.putQueryParameter("AppId", appId);
             this.appId = appId;
+            return this;
+        }
+
+        /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
             return this;
         }
 

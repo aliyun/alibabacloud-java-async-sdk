@@ -102,13 +102,13 @@ public class ModifyModelRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyModelRequest response) {
-            super(response);
-            this.description = response.description;
-            this.groupId = response.groupId;
-            this.modelName = response.modelName;
-            this.newModelName = response.newModelName;
-            this.schema = response.schema;
+        private Builder(ModifyModelRequest request) {
+            super(request);
+            this.description = request.description;
+            this.groupId = request.groupId;
+            this.modelName = request.modelName;
+            this.newModelName = request.newModelName;
+            this.schema = request.schema;
         } 
 
         /**

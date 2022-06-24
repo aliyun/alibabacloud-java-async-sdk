@@ -117,14 +117,14 @@ public class SwitchApiRequest extends Request {
             super();
         } 
 
-        private Builder(SwitchApiRequest response) {
-            super(response);
-            this.apiId = response.apiId;
-            this.description = response.description;
-            this.groupId = response.groupId;
-            this.historyVersion = response.historyVersion;
-            this.securityToken = response.securityToken;
-            this.stageName = response.stageName;
+        private Builder(SwitchApiRequest request) {
+            super(request);
+            this.apiId = request.apiId;
+            this.description = request.description;
+            this.groupId = request.groupId;
+            this.historyVersion = request.historyVersion;
+            this.securityToken = request.securityToken;
+            this.stageName = request.stageName;
         } 
 
         /**

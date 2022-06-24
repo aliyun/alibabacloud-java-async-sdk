@@ -90,12 +90,12 @@ public class DeleteApiStageVariableRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteApiStageVariableRequest response) {
-            super(response);
-            this.groupId = response.groupId;
-            this.securityToken = response.securityToken;
-            this.stageId = response.stageId;
-            this.variableName = response.variableName;
+        private Builder(DeleteApiStageVariableRequest request) {
+            super(request);
+            this.groupId = request.groupId;
+            this.securityToken = request.securityToken;
+            this.stageId = request.stageId;
+            this.variableName = request.variableName;
         } 
 
         /**

@@ -62,10 +62,10 @@ public class DeleteSignatureRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteSignatureRequest response) {
-            super(response);
-            this.securityToken = response.securityToken;
-            this.signatureId = response.signatureId;
+        private Builder(DeleteSignatureRequest request) {
+            super(request);
+            this.securityToken = request.securityToken;
+            this.signatureId = request.signatureId;
         } 
 
         /**

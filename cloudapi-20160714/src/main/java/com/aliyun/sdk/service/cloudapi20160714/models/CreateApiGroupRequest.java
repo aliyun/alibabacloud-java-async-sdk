@@ -114,14 +114,14 @@ public class CreateApiGroupRequest extends Request {
             super();
         } 
 
-        private Builder(CreateApiGroupRequest response) {
-            super(response);
-            this.basePath = response.basePath;
-            this.description = response.description;
-            this.groupName = response.groupName;
-            this.instanceId = response.instanceId;
-            this.securityToken = response.securityToken;
-            this.tag = response.tag;
+        private Builder(CreateApiGroupRequest request) {
+            super(request);
+            this.basePath = request.basePath;
+            this.description = request.description;
+            this.groupName = request.groupName;
+            this.instanceId = request.instanceId;
+            this.securityToken = request.securityToken;
+            this.tag = request.tag;
         } 
 
         /**

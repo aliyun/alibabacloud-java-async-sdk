@@ -139,16 +139,16 @@ public class DescribeVpcAccessesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeVpcAccessesRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.name = response.name;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.port = response.port;
-            this.securityToken = response.securityToken;
-            this.vpcAccessId = response.vpcAccessId;
-            this.vpcId = response.vpcId;
+        private Builder(DescribeVpcAccessesRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.name = request.name;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.port = request.port;
+            this.securityToken = request.securityToken;
+            this.vpcAccessId = request.vpcAccessId;
+            this.vpcId = request.vpcId;
         } 
 
         /**

@@ -114,14 +114,14 @@ public class DescribeIpControlsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeIpControlsRequest response) {
-            super(response);
-            this.ipControlId = response.ipControlId;
-            this.ipControlName = response.ipControlName;
-            this.ipControlType = response.ipControlType;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.securityToken = response.securityToken;
+        private Builder(DescribeIpControlsRequest request) {
+            super(request);
+            this.ipControlId = request.ipControlId;
+            this.ipControlName = request.ipControlName;
+            this.ipControlType = request.ipControlType;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.securityToken = request.securityToken;
         } 
 
         /**

@@ -90,12 +90,12 @@ public class CreateSignatureRequest extends Request {
             super();
         } 
 
-        private Builder(CreateSignatureRequest response) {
-            super(response);
-            this.securityToken = response.securityToken;
-            this.signatureKey = response.signatureKey;
-            this.signatureName = response.signatureName;
-            this.signatureSecret = response.signatureSecret;
+        private Builder(CreateSignatureRequest request) {
+            super(request);
+            this.securityToken = request.securityToken;
+            this.signatureKey = request.signatureKey;
+            this.signatureName = request.signatureName;
+            this.signatureSecret = request.signatureSecret;
         } 
 
         /**

@@ -103,13 +103,13 @@ public class RemoveVpcAccessRequest extends Request {
             super();
         } 
 
-        private Builder(RemoveVpcAccessRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.needBatchWork = response.needBatchWork;
-            this.port = response.port;
-            this.securityToken = response.securityToken;
-            this.vpcId = response.vpcId;
+        private Builder(RemoveVpcAccessRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.needBatchWork = request.needBatchWork;
+            this.port = request.port;
+            this.securityToken = request.securityToken;
+            this.vpcId = request.vpcId;
         } 
 
         /**

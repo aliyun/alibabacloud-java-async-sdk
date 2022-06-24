@@ -115,14 +115,14 @@ public class AttachPluginRequest extends Request {
             super();
         } 
 
-        private Builder(AttachPluginRequest response) {
-            super(response);
-            this.apiId = response.apiId;
-            this.apiIds = response.apiIds;
-            this.groupId = response.groupId;
-            this.pluginId = response.pluginId;
-            this.securityToken = response.securityToken;
-            this.stageName = response.stageName;
+        private Builder(AttachPluginRequest request) {
+            super(request);
+            this.apiId = request.apiId;
+            this.apiIds = request.apiIds;
+            this.groupId = request.groupId;
+            this.pluginId = request.pluginId;
+            this.securityToken = request.securityToken;
+            this.stageName = request.stageName;
         } 
 
         /**

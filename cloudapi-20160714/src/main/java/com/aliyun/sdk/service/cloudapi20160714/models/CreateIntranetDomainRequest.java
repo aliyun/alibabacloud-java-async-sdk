@@ -62,10 +62,10 @@ public class CreateIntranetDomainRequest extends Request {
             super();
         } 
 
-        private Builder(CreateIntranetDomainRequest response) {
-            super(response);
-            this.groupId = response.groupId;
-            this.securityToken = response.securityToken;
+        private Builder(CreateIntranetDomainRequest request) {
+            super(request);
+            this.groupId = request.groupId;
+            this.securityToken = request.securityToken;
         } 
 
         /**

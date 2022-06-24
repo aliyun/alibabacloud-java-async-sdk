@@ -89,12 +89,12 @@ public class DescribeApisBySignatureRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeApisBySignatureRequest response) {
-            super(response);
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.securityToken = response.securityToken;
-            this.signatureId = response.signatureId;
+        private Builder(DescribeApisBySignatureRequest request) {
+            super(request);
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.securityToken = request.securityToken;
+            this.signatureId = request.signatureId;
         } 
 
         /**

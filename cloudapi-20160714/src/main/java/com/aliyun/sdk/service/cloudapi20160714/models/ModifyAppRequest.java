@@ -101,13 +101,13 @@ public class ModifyAppRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyAppRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.appName = response.appName;
-            this.description = response.description;
-            this.securityToken = response.securityToken;
-            this.tag = response.tag;
+        private Builder(ModifyAppRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.appName = request.appName;
+            this.description = request.description;
+            this.securityToken = request.securityToken;
+            this.tag = request.tag;
         } 
 
         /**

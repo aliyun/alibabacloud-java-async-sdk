@@ -75,11 +75,11 @@ public class DescribeApiGroupRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeApiGroupRequest response) {
-            super(response);
-            this.groupId = response.groupId;
-            this.securityToken = response.securityToken;
-            this.tag = response.tag;
+        private Builder(DescribeApiGroupRequest request) {
+            super(request);
+            this.groupId = request.groupId;
+            this.securityToken = request.securityToken;
+            this.tag = request.tag;
         } 
 
         /**

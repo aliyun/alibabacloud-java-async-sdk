@@ -90,12 +90,12 @@ public class ModifyInstanceSpecRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyInstanceSpecRequest response) {
-            super(response);
-            this.autoPay = response.autoPay;
-            this.instanceId = response.instanceId;
-            this.instanceSpec = response.instanceSpec;
-            this.token = response.token;
+        private Builder(ModifyInstanceSpecRequest request) {
+            super(request);
+            this.autoPay = request.autoPay;
+            this.instanceId = request.instanceId;
+            this.instanceSpec = request.instanceSpec;
+            this.token = request.token;
         } 
 
         /**

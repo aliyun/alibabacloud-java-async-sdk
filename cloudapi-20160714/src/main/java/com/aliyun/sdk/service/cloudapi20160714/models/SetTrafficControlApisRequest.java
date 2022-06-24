@@ -104,13 +104,13 @@ public class SetTrafficControlApisRequest extends Request {
             super();
         } 
 
-        private Builder(SetTrafficControlApisRequest response) {
-            super(response);
-            this.apiIds = response.apiIds;
-            this.groupId = response.groupId;
-            this.securityToken = response.securityToken;
-            this.stageName = response.stageName;
-            this.trafficControlId = response.trafficControlId;
+        private Builder(SetTrafficControlApisRequest request) {
+            super(request);
+            this.apiIds = request.apiIds;
+            this.groupId = request.groupId;
+            this.securityToken = request.securityToken;
+            this.stageName = request.stageName;
+            this.trafficControlId = request.trafficControlId;
         } 
 
         /**

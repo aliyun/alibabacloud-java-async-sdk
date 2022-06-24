@@ -88,12 +88,12 @@ public class DescribeApiDocRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeApiDocRequest response) {
-            super(response);
-            this.apiId = response.apiId;
-            this.groupId = response.groupId;
-            this.securityToken = response.securityToken;
-            this.stageName = response.stageName;
+        private Builder(DescribeApiDocRequest request) {
+            super(request);
+            this.apiId = request.apiId;
+            this.groupId = request.groupId;
+            this.securityToken = request.securityToken;
+            this.stageName = request.stageName;
         } 
 
         /**

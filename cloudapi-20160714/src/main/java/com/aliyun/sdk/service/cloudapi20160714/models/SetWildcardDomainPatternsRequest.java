@@ -89,12 +89,12 @@ public class SetWildcardDomainPatternsRequest extends Request {
             super();
         } 
 
-        private Builder(SetWildcardDomainPatternsRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.groupId = response.groupId;
-            this.securityToken = response.securityToken;
-            this.wildcardDomainPatterns = response.wildcardDomainPatterns;
+        private Builder(SetWildcardDomainPatternsRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.groupId = request.groupId;
+            this.securityToken = request.securityToken;
+            this.wildcardDomainPatterns = request.wildcardDomainPatterns;
         } 
 
         /**

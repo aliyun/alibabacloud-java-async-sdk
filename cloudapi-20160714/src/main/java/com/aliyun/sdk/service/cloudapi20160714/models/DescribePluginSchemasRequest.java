@@ -61,10 +61,10 @@ public class DescribePluginSchemasRequest extends Request {
             super();
         } 
 
-        private Builder(DescribePluginSchemasRequest response) {
-            super(response);
-            this.language = response.language;
-            this.securityToken = response.securityToken;
+        private Builder(DescribePluginSchemasRequest request) {
+            super(request);
+            this.language = request.language;
+            this.securityToken = request.securityToken;
         } 
 
         /**

@@ -90,12 +90,12 @@ public class CreateModelRequest extends Request {
             super();
         } 
 
-        private Builder(CreateModelRequest response) {
-            super(response);
-            this.description = response.description;
-            this.groupId = response.groupId;
-            this.modelName = response.modelName;
-            this.schema = response.schema;
+        private Builder(CreateModelRequest request) {
+            super(request);
+            this.description = request.description;
+            this.groupId = request.groupId;
+            this.modelName = request.modelName;
+            this.schema = request.schema;
         } 
 
         /**

@@ -61,10 +61,10 @@ public class DescribeAppRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAppRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.securityToken = response.securityToken;
+        private Builder(DescribeAppRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.securityToken = request.securityToken;
         } 
 
         /**

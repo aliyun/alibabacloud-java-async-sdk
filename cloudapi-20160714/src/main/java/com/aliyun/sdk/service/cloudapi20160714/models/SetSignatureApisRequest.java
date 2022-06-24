@@ -104,13 +104,13 @@ public class SetSignatureApisRequest extends Request {
             super();
         } 
 
-        private Builder(SetSignatureApisRequest response) {
-            super(response);
-            this.apiIds = response.apiIds;
-            this.groupId = response.groupId;
-            this.securityToken = response.securityToken;
-            this.signatureId = response.signatureId;
-            this.stageName = response.stageName;
+        private Builder(SetSignatureApisRequest request) {
+            super(request);
+            this.apiIds = request.apiIds;
+            this.groupId = request.groupId;
+            this.securityToken = request.securityToken;
+            this.signatureId = request.signatureId;
+            this.stageName = request.stageName;
         } 
 
         /**

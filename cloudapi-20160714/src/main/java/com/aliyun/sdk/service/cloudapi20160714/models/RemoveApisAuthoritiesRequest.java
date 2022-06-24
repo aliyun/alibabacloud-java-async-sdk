@@ -116,14 +116,14 @@ public class RemoveApisAuthoritiesRequest extends Request {
             super();
         } 
 
-        private Builder(RemoveApisAuthoritiesRequest response) {
-            super(response);
-            this.apiIds = response.apiIds;
-            this.appId = response.appId;
-            this.description = response.description;
-            this.groupId = response.groupId;
-            this.securityToken = response.securityToken;
-            this.stageName = response.stageName;
+        private Builder(RemoveApisAuthoritiesRequest request) {
+            super(request);
+            this.apiIds = request.apiIds;
+            this.appId = request.appId;
+            this.description = request.description;
+            this.groupId = request.groupId;
+            this.securityToken = request.securityToken;
+            this.stageName = request.stageName;
         } 
 
         /**

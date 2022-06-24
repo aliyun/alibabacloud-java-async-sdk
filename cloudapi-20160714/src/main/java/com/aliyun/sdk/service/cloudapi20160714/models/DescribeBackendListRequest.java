@@ -100,13 +100,13 @@ public class DescribeBackendListRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeBackendListRequest response) {
-            super(response);
-            this.backendName = response.backendName;
-            this.backendType = response.backendType;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.securityToken = response.securityToken;
+        private Builder(DescribeBackendListRequest request) {
+            super(request);
+            this.backendName = request.backendName;
+            this.backendType = request.backendType;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.securityToken = request.securityToken;
         } 
 
         /**

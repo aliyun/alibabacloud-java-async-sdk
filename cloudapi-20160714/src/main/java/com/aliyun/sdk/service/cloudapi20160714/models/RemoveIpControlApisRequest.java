@@ -103,13 +103,13 @@ public class RemoveIpControlApisRequest extends Request {
             super();
         } 
 
-        private Builder(RemoveIpControlApisRequest response) {
-            super(response);
-            this.apiIds = response.apiIds;
-            this.groupId = response.groupId;
-            this.ipControlId = response.ipControlId;
-            this.securityToken = response.securityToken;
-            this.stageName = response.stageName;
+        private Builder(RemoveIpControlApisRequest request) {
+            super(request);
+            this.apiIds = request.apiIds;
+            this.groupId = request.groupId;
+            this.ipControlId = request.ipControlId;
+            this.securityToken = request.securityToken;
+            this.stageName = request.stageName;
         } 
 
         /**

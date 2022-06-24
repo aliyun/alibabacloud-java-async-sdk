@@ -101,13 +101,13 @@ public class CreateAppRequest extends Request {
             super();
         } 
 
-        private Builder(CreateAppRequest response) {
-            super(response);
-            this.appName = response.appName;
-            this.description = response.description;
-            this.securityToken = response.securityToken;
-            this.source = response.source;
-            this.tag = response.tag;
+        private Builder(CreateAppRequest request) {
+            super(request);
+            this.appName = request.appName;
+            this.description = request.description;
+            this.securityToken = request.securityToken;
+            this.source = request.source;
+            this.tag = request.tag;
         } 
 
         /**

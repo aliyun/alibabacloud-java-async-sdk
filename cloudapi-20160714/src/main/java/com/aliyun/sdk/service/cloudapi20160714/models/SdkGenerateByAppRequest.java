@@ -76,11 +76,11 @@ public class SdkGenerateByAppRequest extends Request {
             super();
         } 
 
-        private Builder(SdkGenerateByAppRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.language = response.language;
-            this.securityToken = response.securityToken;
+        private Builder(SdkGenerateByAppRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.language = request.language;
+            this.securityToken = request.securityToken;
         } 
 
         /**

@@ -101,13 +101,13 @@ public class DescribeModelsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeModelsRequest response) {
-            super(response);
-            this.groupId = response.groupId;
-            this.modelId = response.modelId;
-            this.modelName = response.modelName;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(DescribeModelsRequest request) {
+            super(request);
+            this.groupId = request.groupId;
+            this.modelId = request.modelId;
+            this.modelName = request.modelName;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**

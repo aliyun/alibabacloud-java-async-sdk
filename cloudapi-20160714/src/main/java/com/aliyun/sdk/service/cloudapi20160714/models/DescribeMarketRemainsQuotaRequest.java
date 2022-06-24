@@ -62,10 +62,10 @@ public class DescribeMarketRemainsQuotaRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeMarketRemainsQuotaRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.securityToken = response.securityToken;
+        private Builder(DescribeMarketRemainsQuotaRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.securityToken = request.securityToken;
         } 
 
         /**

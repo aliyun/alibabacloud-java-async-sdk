@@ -152,17 +152,17 @@ public class DescribeApiGroupsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeApiGroupsRequest response) {
-            super(response);
-            this.enableTagAuth = response.enableTagAuth;
-            this.groupId = response.groupId;
-            this.groupName = response.groupName;
-            this.instanceId = response.instanceId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.securityToken = response.securityToken;
-            this.sort = response.sort;
-            this.tag = response.tag;
+        private Builder(DescribeApiGroupsRequest request) {
+            super(request);
+            this.enableTagAuth = request.enableTagAuth;
+            this.groupId = request.groupId;
+            this.groupName = request.groupName;
+            this.instanceId = request.instanceId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.securityToken = request.securityToken;
+            this.sort = request.sort;
+            this.tag = request.tag;
         } 
 
         /**

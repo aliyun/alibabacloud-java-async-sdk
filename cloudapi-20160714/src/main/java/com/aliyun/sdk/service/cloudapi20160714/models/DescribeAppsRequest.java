@@ -101,13 +101,13 @@ public class DescribeAppsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAppsRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.appOwner = response.appOwner;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.securityToken = response.securityToken;
+        private Builder(DescribeAppsRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.appOwner = request.appOwner;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.securityToken = request.securityToken;
         } 
 
         /**

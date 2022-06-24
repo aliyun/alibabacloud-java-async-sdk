@@ -126,15 +126,15 @@ public class ModifyBackendModelRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyBackendModelRequest response) {
-            super(response);
-            this.backendId = response.backendId;
-            this.backendModelData = response.backendModelData;
-            this.backendModelId = response.backendModelId;
-            this.backendType = response.backendType;
-            this.description = response.description;
-            this.securityToken = response.securityToken;
-            this.stageName = response.stageName;
+        private Builder(ModifyBackendModelRequest request) {
+            super(request);
+            this.backendId = request.backendId;
+            this.backendModelData = request.backendModelData;
+            this.backendModelId = request.backendModelId;
+            this.backendType = request.backendType;
+            this.description = request.description;
+            this.securityToken = request.securityToken;
+            this.stageName = request.stageName;
         } 
 
         /**

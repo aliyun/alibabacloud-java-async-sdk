@@ -76,11 +76,11 @@ public class ModifyApiGroupVpcWhitelistRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyApiGroupVpcWhitelistRequest response) {
-            super(response);
-            this.groupId = response.groupId;
-            this.securityToken = response.securityToken;
-            this.vpcIds = response.vpcIds;
+        private Builder(ModifyApiGroupVpcWhitelistRequest request) {
+            super(request);
+            this.groupId = request.groupId;
+            this.securityToken = request.securityToken;
+            this.vpcIds = request.vpcIds;
         } 
 
         /**

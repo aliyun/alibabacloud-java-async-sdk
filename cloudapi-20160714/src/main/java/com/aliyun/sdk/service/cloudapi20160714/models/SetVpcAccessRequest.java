@@ -40,6 +40,10 @@ public class SetVpcAccessRequest extends Request {
     @Validation(required = true)
     private String vpcId;
 
+    @Query
+    @NameInMap("VpcTargetHostName")
+    private String vpcTargetHostName;
+
     private SetVpcAccessRequest(Builder builder) {
         super(builder);
         this.description = builder.description;
@@ -48,6 +52,7 @@ public class SetVpcAccessRequest extends Request {
         this.port = builder.port;
         this.securityToken = builder.securityToken;
         this.vpcId = builder.vpcId;
+        this.vpcTargetHostName = builder.vpcTargetHostName;
     }
 
     public static Builder builder() {
@@ -105,6 +110,13 @@ public class SetVpcAccessRequest extends Request {
         return this.vpcId;
     }
 
+    /**
+     * @return vpcTargetHostName
+     */
+    public String getVpcTargetHostName() {
+        return this.vpcTargetHostName;
+    }
+
     public static final class Builder extends Request.Builder<SetVpcAccessRequest, Builder> {
         private String description; 
         private String instanceId; 
@@ -112,19 +124,21 @@ public class SetVpcAccessRequest extends Request {
         private Integer port; 
         private String securityToken; 
         private String vpcId; 
+        private String vpcTargetHostName; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(SetVpcAccessRequest response) {
-            super(response);
-            this.description = response.description;
-            this.instanceId = response.instanceId;
-            this.name = response.name;
-            this.port = response.port;
-            this.securityToken = response.securityToken;
-            this.vpcId = response.vpcId;
+        private Builder(SetVpcAccessRequest request) {
+            super(request);
+            this.description = request.description;
+            this.instanceId = request.instanceId;
+            this.name = request.name;
+            this.port = request.port;
+            this.securityToken = request.securityToken;
+            this.vpcId = request.vpcId;
+            this.vpcTargetHostName = request.vpcTargetHostName;
         } 
 
         /**
@@ -178,6 +192,15 @@ public class SetVpcAccessRequest extends Request {
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
             this.vpcId = vpcId;
+            return this;
+        }
+
+        /**
+         * VpcTargetHostName.
+         */
+        public Builder vpcTargetHostName(String vpcTargetHostName) {
+            this.putQueryParameter("VpcTargetHostName", vpcTargetHostName);
+            this.vpcTargetHostName = vpcTargetHostName;
             return this;
         }
 

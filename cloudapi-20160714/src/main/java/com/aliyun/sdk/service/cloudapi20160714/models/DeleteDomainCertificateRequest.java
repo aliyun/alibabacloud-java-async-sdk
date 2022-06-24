@@ -90,12 +90,12 @@ public class DeleteDomainCertificateRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteDomainCertificateRequest response) {
-            super(response);
-            this.certificateId = response.certificateId;
-            this.domainName = response.domainName;
-            this.groupId = response.groupId;
-            this.securityToken = response.securityToken;
+        private Builder(DeleteDomainCertificateRequest request) {
+            super(request);
+            this.certificateId = request.certificateId;
+            this.domainName = request.domainName;
+            this.groupId = request.groupId;
+            this.securityToken = request.securityToken;
         } 
 
         /**

@@ -62,10 +62,10 @@ public class DeleteAllTrafficSpecialControlRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteAllTrafficSpecialControlRequest response) {
-            super(response);
-            this.securityToken = response.securityToken;
-            this.trafficControlId = response.trafficControlId;
+        private Builder(DeleteAllTrafficSpecialControlRequest request) {
+            super(request);
+            this.securityToken = request.securityToken;
+            this.trafficControlId = request.trafficControlId;
         } 
 
         /**

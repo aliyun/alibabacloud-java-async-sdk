@@ -74,11 +74,11 @@ public class DescribePurchasedApiGroupsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribePurchasedApiGroupsRequest response) {
-            super(response);
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.securityToken = response.securityToken;
+        private Builder(DescribePurchasedApiGroupsRequest request) {
+            super(request);
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.securityToken = request.securityToken;
         } 
 
         /**

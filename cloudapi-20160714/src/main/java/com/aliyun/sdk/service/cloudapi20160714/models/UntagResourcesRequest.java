@@ -102,13 +102,13 @@ public class UntagResourcesRequest extends Request {
             super();
         } 
 
-        private Builder(UntagResourcesRequest response) {
-            super(response);
-            this.all = response.all;
-            this.resourceId = response.resourceId;
-            this.resourceType = response.resourceType;
-            this.securityToken = response.securityToken;
-            this.tagKey = response.tagKey;
+        private Builder(UntagResourcesRequest request) {
+            super(request);
+            this.all = request.all;
+            this.resourceId = request.resourceId;
+            this.resourceType = request.resourceType;
+            this.securityToken = request.securityToken;
+            this.tagKey = request.tagKey;
         } 
 
         /**

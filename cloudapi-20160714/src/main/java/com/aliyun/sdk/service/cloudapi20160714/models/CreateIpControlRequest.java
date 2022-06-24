@@ -102,13 +102,13 @@ public class CreateIpControlRequest extends Request {
             super();
         } 
 
-        private Builder(CreateIpControlRequest response) {
-            super(response);
-            this.description = response.description;
-            this.ipControlName = response.ipControlName;
-            this.ipControlPolicys = response.ipControlPolicys;
-            this.ipControlType = response.ipControlType;
-            this.securityToken = response.securityToken;
+        private Builder(CreateIpControlRequest request) {
+            super(request);
+            this.description = request.description;
+            this.ipControlName = request.ipControlName;
+            this.ipControlPolicys = request.ipControlPolicys;
+            this.ipControlType = request.ipControlType;
+            this.securityToken = request.securityToken;
         } 
 
         /**

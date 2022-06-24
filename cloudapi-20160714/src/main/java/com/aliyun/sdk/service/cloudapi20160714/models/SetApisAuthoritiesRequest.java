@@ -128,15 +128,15 @@ public class SetApisAuthoritiesRequest extends Request {
             super();
         } 
 
-        private Builder(SetApisAuthoritiesRequest response) {
-            super(response);
-            this.apiIds = response.apiIds;
-            this.appId = response.appId;
-            this.authValidTime = response.authValidTime;
-            this.description = response.description;
-            this.groupId = response.groupId;
-            this.securityToken = response.securityToken;
-            this.stageName = response.stageName;
+        private Builder(SetApisAuthoritiesRequest request) {
+            super(request);
+            this.apiIds = request.apiIds;
+            this.appId = request.appId;
+            this.authValidTime = request.authValidTime;
+            this.description = request.description;
+            this.groupId = request.groupId;
+            this.securityToken = request.securityToken;
+            this.stageName = request.stageName;
         } 
 
         /**

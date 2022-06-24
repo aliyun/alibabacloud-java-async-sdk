@@ -140,16 +140,16 @@ public class DescribeTrafficControlsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeTrafficControlsRequest response) {
-            super(response);
-            this.apiId = response.apiId;
-            this.groupId = response.groupId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.securityToken = response.securityToken;
-            this.stageName = response.stageName;
-            this.trafficControlId = response.trafficControlId;
-            this.trafficControlName = response.trafficControlName;
+        private Builder(DescribeTrafficControlsRequest request) {
+            super(request);
+            this.apiId = request.apiId;
+            this.groupId = request.groupId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.securityToken = request.securityToken;
+            this.stageName = request.stageName;
+            this.trafficControlId = request.trafficControlId;
+            this.trafficControlName = request.trafficControlName;
         } 
 
         /**

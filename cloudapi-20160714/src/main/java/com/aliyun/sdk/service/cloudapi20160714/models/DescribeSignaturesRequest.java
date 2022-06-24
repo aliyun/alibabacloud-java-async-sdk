@@ -100,13 +100,13 @@ public class DescribeSignaturesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeSignaturesRequest response) {
-            super(response);
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.securityToken = response.securityToken;
-            this.signatureId = response.signatureId;
-            this.signatureName = response.signatureName;
+        private Builder(DescribeSignaturesRequest request) {
+            super(request);
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.securityToken = request.securityToken;
+            this.signatureId = request.signatureId;
+            this.signatureName = request.signatureName;
         } 
 
         /**

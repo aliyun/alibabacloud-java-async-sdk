@@ -116,14 +116,14 @@ public class DescribeApiSignaturesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeApiSignaturesRequest response) {
-            super(response);
-            this.apiIds = response.apiIds;
-            this.groupId = response.groupId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.securityToken = response.securityToken;
-            this.stageName = response.stageName;
+        private Builder(DescribeApiSignaturesRequest request) {
+            super(request);
+            this.apiIds = request.apiIds;
+            this.groupId = request.groupId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.securityToken = request.securityToken;
+            this.stageName = request.stageName;
         } 
 
         /**

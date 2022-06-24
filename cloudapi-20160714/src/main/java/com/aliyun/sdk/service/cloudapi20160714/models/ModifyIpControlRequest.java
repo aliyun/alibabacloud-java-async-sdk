@@ -88,12 +88,12 @@ public class ModifyIpControlRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyIpControlRequest response) {
-            super(response);
-            this.description = response.description;
-            this.ipControlId = response.ipControlId;
-            this.ipControlName = response.ipControlName;
-            this.securityToken = response.securityToken;
+        private Builder(ModifyIpControlRequest request) {
+            super(request);
+            this.description = request.description;
+            this.ipControlId = request.ipControlId;
+            this.ipControlName = request.ipControlName;
+            this.securityToken = request.securityToken;
         } 
 
         /**

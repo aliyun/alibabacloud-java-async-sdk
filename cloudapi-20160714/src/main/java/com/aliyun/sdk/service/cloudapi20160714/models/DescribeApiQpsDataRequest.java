@@ -116,14 +116,14 @@ public class DescribeApiQpsDataRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeApiQpsDataRequest response) {
-            super(response);
-            this.apiId = response.apiId;
-            this.endTime = response.endTime;
-            this.groupId = response.groupId;
-            this.securityToken = response.securityToken;
-            this.stageName = response.stageName;
-            this.startTime = response.startTime;
+        private Builder(DescribeApiQpsDataRequest request) {
+            super(request);
+            this.apiId = request.apiId;
+            this.endTime = request.endTime;
+            this.groupId = request.groupId;
+            this.securityToken = request.securityToken;
+            this.stageName = request.stageName;
+            this.startTime = request.startTime;
         } 
 
         /**

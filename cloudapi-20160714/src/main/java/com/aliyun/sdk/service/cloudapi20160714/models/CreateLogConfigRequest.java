@@ -102,13 +102,13 @@ public class CreateLogConfigRequest extends Request {
             super();
         } 
 
-        private Builder(CreateLogConfigRequest response) {
-            super(response);
-            this.logType = response.logType;
-            this.regionId = response.regionId;
-            this.securityToken = response.securityToken;
-            this.slsLogStore = response.slsLogStore;
-            this.slsProject = response.slsProject;
+        private Builder(CreateLogConfigRequest request) {
+            super(request);
+            this.logType = request.logType;
+            this.regionId = request.regionId;
+            this.securityToken = request.securityToken;
+            this.slsLogStore = request.slsLogStore;
+            this.slsProject = request.slsProject;
         } 
 
         /**

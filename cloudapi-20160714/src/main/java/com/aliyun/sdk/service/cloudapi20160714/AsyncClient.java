@@ -20,6 +20,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AbolishApiResponse> abolishApi(AbolishApiRequest request);
 
+    CompletableFuture<AddAccessControlListEntryResponse> addAccessControlListEntry(AddAccessControlListEntryRequest request);
+
     CompletableFuture<AddIpControlPolicyItemResponse> addIpControlPolicyItem(AddIpControlPolicyItemRequest request);
 
     CompletableFuture<AddTrafficSpecialControlResponse> addTrafficSpecialControl(AddTrafficSpecialControlRequest request);
@@ -29,6 +31,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BatchAbolishApisResponse> batchAbolishApis(BatchAbolishApisRequest request);
 
     CompletableFuture<BatchDeployApisResponse> batchDeployApis(BatchDeployApisRequest request);
+
+    CompletableFuture<CreateAccessControlListResponse> createAccessControlList(CreateAccessControlListRequest request);
 
     CompletableFuture<CreateApiResponse> createApi(CreateApiRequest request);
 
@@ -60,6 +64,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateTrafficControlResponse> createTrafficControl(CreateTrafficControlRequest request);
 
+    CompletableFuture<DeleteAccessControlListResponse> deleteAccessControlList(DeleteAccessControlListRequest request);
+
     CompletableFuture<DeleteAllTrafficSpecialControlResponse> deleteAllTrafficSpecialControl(DeleteAllTrafficSpecialControlRequest request);
 
     CompletableFuture<DeleteApiResponse> deleteApi(DeleteApiRequest request);
@@ -86,6 +92,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteModelResponse> deleteModel(DeleteModelRequest request);
 
+    CompletableFuture<DeleteMonitorGroupResponse> deleteMonitorGroup(DeleteMonitorGroupRequest request);
+
     CompletableFuture<DeletePluginResponse> deletePlugin(DeletePluginRequest request);
 
     CompletableFuture<DeleteSignatureResponse> deleteSignature(DeleteSignatureRequest request);
@@ -97,6 +105,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeployApiResponse> deployApi(DeployApiRequest request);
 
     CompletableFuture<DescribeAbolishApiTaskResponse> describeAbolishApiTask(DescribeAbolishApiTaskRequest request);
+
+    CompletableFuture<DescribeAccessControlListAttributeResponse> describeAccessControlListAttribute(DescribeAccessControlListAttributeRequest request);
+
+    CompletableFuture<DescribeAccessControlListsResponse> describeAccessControlLists(DescribeAccessControlListsRequest request);
 
     CompletableFuture<DescribeApiResponse> describeApi(DescribeApiRequest request);
 
@@ -164,6 +176,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeHistoryApisResponse> describeHistoryApis(DescribeHistoryApisRequest request);
 
+    CompletableFuture<DescribeInstancesResponse> describeInstances(DescribeInstancesRequest request);
+
     CompletableFuture<DescribeIpControlPolicyItemsResponse> describeIpControlPolicyItems(DescribeIpControlPolicyItemsRequest request);
 
     CompletableFuture<DescribeIpControlsResponse> describeIpControls(DescribeIpControlsRequest request);
@@ -208,13 +222,21 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeZonesResponse> describeZones(DescribeZonesRequest request);
 
+    CompletableFuture<DetachPluginResponse> detachPlugin(DetachPluginRequest request);
+
+    CompletableFuture<DisableInstanceAccessControlResponse> disableInstanceAccessControl(DisableInstanceAccessControlRequest request);
+
     CompletableFuture<DryRunSwaggerResponse> dryRunSwagger(DryRunSwaggerRequest request);
+
+    CompletableFuture<EnableInstanceAccessControlResponse> enableInstanceAccessControl(EnableInstanceAccessControlRequest request);
 
     CompletableFuture<ImportSwaggerResponse> importSwagger(ImportSwaggerRequest request);
 
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
 
     CompletableFuture<ModifyApiResponse> modifyApi(ModifyApiRequest request);
+
+    CompletableFuture<ModifyApiConfigurationResponse> modifyApiConfiguration(ModifyApiConfigurationRequest request);
 
     CompletableFuture<ModifyApiGroupResponse> modifyApiGroup(ModifyApiGroupRequest request);
 
@@ -246,6 +268,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ReactivateDomainResponse> reactivateDomain(ReactivateDomainRequest request);
 
+    CompletableFuture<RemoveAccessControlListEntryResponse> removeAccessControlListEntry(RemoveAccessControlListEntryRequest request);
+
     CompletableFuture<RemoveApisAuthoritiesResponse> removeApisAuthorities(RemoveApisAuthoritiesRequest request);
 
     CompletableFuture<RemoveAppsAuthoritiesResponse> removeAppsAuthorities(RemoveAppsAuthoritiesRequest request);
@@ -267,6 +291,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ResetAppSecretResponse> resetAppSecret(ResetAppSecretRequest request);
 
     CompletableFuture<SdkGenerateByAppResponse> sdkGenerateByApp(SdkGenerateByAppRequest request);
+
+    CompletableFuture<SdkGenerateByAppForRegionResponse> sdkGenerateByAppForRegion(SdkGenerateByAppForRegionRequest request);
 
     CompletableFuture<SdkGenerateByGroupResponse> sdkGenerateByGroup(SdkGenerateByGroupRequest request);
 

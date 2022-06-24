@@ -101,13 +101,13 @@ public class DescribeIpControlPolicyItemsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeIpControlPolicyItemsRequest response) {
-            super(response);
-            this.ipControlId = response.ipControlId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.policyItemId = response.policyItemId;
-            this.securityToken = response.securityToken;
+        private Builder(DescribeIpControlPolicyItemsRequest request) {
+            super(request);
+            this.ipControlId = request.ipControlId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.policyItemId = request.policyItemId;
+            this.securityToken = request.securityToken;
         } 
 
         /**

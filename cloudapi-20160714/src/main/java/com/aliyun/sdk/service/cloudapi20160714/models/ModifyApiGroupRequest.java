@@ -205,21 +205,21 @@ public class ModifyApiGroupRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyApiGroupRequest response) {
-            super(response);
-            this.basePath = response.basePath;
-            this.compatibleFlags = response.compatibleFlags;
-            this.customTraceConfig = response.customTraceConfig;
-            this.customerConfigs = response.customerConfigs;
-            this.defaultDomain = response.defaultDomain;
-            this.description = response.description;
-            this.groupId = response.groupId;
-            this.groupName = response.groupName;
-            this.passthroughHeaders = response.passthroughHeaders;
-            this.rpcPattern = response.rpcPattern;
-            this.securityToken = response.securityToken;
-            this.tag = response.tag;
-            this.userLogConfig = response.userLogConfig;
+        private Builder(ModifyApiGroupRequest request) {
+            super(request);
+            this.basePath = request.basePath;
+            this.compatibleFlags = request.compatibleFlags;
+            this.customTraceConfig = request.customTraceConfig;
+            this.customerConfigs = request.customerConfigs;
+            this.defaultDomain = request.defaultDomain;
+            this.description = request.description;
+            this.groupId = request.groupId;
+            this.groupName = request.groupName;
+            this.passthroughHeaders = request.passthroughHeaders;
+            this.rpcPattern = request.rpcPattern;
+            this.securityToken = request.securityToken;
+            this.tag = request.tag;
+            this.userLogConfig = request.userLogConfig;
         } 
 
         /**

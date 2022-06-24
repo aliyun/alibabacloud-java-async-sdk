@@ -76,11 +76,11 @@ public class DescribeApiMarketAttributesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeApiMarketAttributesRequest response) {
-            super(response);
-            this.apiId = response.apiId;
-            this.groupId = response.groupId;
-            this.securityToken = response.securityToken;
+        private Builder(DescribeApiMarketAttributesRequest request) {
+            super(request);
+            this.apiId = request.apiId;
+            this.groupId = request.groupId;
+            this.securityToken = request.securityToken;
         } 
 
         /**

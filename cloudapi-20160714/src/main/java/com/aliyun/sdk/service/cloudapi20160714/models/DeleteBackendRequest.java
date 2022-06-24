@@ -61,10 +61,10 @@ public class DeleteBackendRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteBackendRequest response) {
-            super(response);
-            this.backendId = response.backendId;
-            this.securityToken = response.securityToken;
+        private Builder(DeleteBackendRequest request) {
+            super(request);
+            this.backendId = request.backendId;
+            this.securityToken = request.securityToken;
         } 
 
         /**

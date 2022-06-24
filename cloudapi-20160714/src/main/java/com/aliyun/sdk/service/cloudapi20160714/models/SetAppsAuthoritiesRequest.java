@@ -129,15 +129,15 @@ public class SetAppsAuthoritiesRequest extends Request {
             super();
         } 
 
-        private Builder(SetAppsAuthoritiesRequest response) {
-            super(response);
-            this.apiId = response.apiId;
-            this.appIds = response.appIds;
-            this.authValidTime = response.authValidTime;
-            this.description = response.description;
-            this.groupId = response.groupId;
-            this.securityToken = response.securityToken;
-            this.stageName = response.stageName;
+        private Builder(SetAppsAuthoritiesRequest request) {
+            super(request);
+            this.apiId = request.apiId;
+            this.appIds = request.appIds;
+            this.authValidTime = request.authValidTime;
+            this.description = request.description;
+            this.groupId = request.groupId;
+            this.securityToken = request.securityToken;
+            this.stageName = request.stageName;
         } 
 
         /**

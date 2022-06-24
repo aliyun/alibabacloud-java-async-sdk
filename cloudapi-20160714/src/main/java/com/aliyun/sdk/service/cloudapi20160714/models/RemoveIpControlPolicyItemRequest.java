@@ -76,11 +76,11 @@ public class RemoveIpControlPolicyItemRequest extends Request {
             super();
         } 
 
-        private Builder(RemoveIpControlPolicyItemRequest response) {
-            super(response);
-            this.ipControlId = response.ipControlId;
-            this.policyItemIds = response.policyItemIds;
-            this.securityToken = response.securityToken;
+        private Builder(RemoveIpControlPolicyItemRequest request) {
+            super(request);
+            this.ipControlId = request.ipControlId;
+            this.policyItemIds = request.policyItemIds;
+            this.securityToken = request.securityToken;
         } 
 
         /**

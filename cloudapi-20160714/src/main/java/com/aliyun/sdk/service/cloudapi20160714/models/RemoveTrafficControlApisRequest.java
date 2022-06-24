@@ -103,13 +103,13 @@ public class RemoveTrafficControlApisRequest extends Request {
             super();
         } 
 
-        private Builder(RemoveTrafficControlApisRequest response) {
-            super(response);
-            this.apiIds = response.apiIds;
-            this.groupId = response.groupId;
-            this.securityToken = response.securityToken;
-            this.stageName = response.stageName;
-            this.trafficControlId = response.trafficControlId;
+        private Builder(RemoveTrafficControlApisRequest request) {
+            super(request);
+            this.apiIds = request.apiIds;
+            this.groupId = request.groupId;
+            this.securityToken = request.securityToken;
+            this.stageName = request.stageName;
+            this.trafficControlId = request.trafficControlId;
         } 
 
         /**

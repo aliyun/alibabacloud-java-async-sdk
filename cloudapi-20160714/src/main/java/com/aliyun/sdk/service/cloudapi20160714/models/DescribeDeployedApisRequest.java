@@ -152,17 +152,17 @@ public class DescribeDeployedApisRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDeployedApisRequest response) {
-            super(response);
-            this.apiId = response.apiId;
-            this.apiName = response.apiName;
-            this.enableTagAuth = response.enableTagAuth;
-            this.groupId = response.groupId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.securityToken = response.securityToken;
-            this.stageName = response.stageName;
-            this.tag = response.tag;
+        private Builder(DescribeDeployedApisRequest request) {
+            super(request);
+            this.apiId = request.apiId;
+            this.apiName = request.apiName;
+            this.enableTagAuth = request.enableTagAuth;
+            this.groupId = request.groupId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.securityToken = request.securityToken;
+            this.stageName = request.stageName;
+            this.tag = request.tag;
         } 
 
         /**

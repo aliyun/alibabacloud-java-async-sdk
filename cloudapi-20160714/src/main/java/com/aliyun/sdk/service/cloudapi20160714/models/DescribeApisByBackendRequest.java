@@ -101,13 +101,13 @@ public class DescribeApisByBackendRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeApisByBackendRequest response) {
-            super(response);
-            this.backendId = response.backendId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.securityToken = response.securityToken;
-            this.stageName = response.stageName;
+        private Builder(DescribeApisByBackendRequest request) {
+            super(request);
+            this.backendId = request.backendId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.securityToken = request.securityToken;
+            this.stageName = request.stageName;
         } 
 
         /**

@@ -62,10 +62,10 @@ public class DescribeAbolishApiTaskRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAbolishApiTaskRequest response) {
-            super(response);
-            this.operationUid = response.operationUid;
-            this.securityToken = response.securityToken;
+        private Builder(DescribeAbolishApiTaskRequest request) {
+            super(request);
+            this.operationUid = request.operationUid;
+            this.securityToken = request.securityToken;
         } 
 
         /**

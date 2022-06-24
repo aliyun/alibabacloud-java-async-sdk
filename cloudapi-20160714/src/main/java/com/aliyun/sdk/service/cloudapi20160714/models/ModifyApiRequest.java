@@ -404,36 +404,36 @@ public class ModifyApiRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyApiRequest response) {
-            super(response);
-            this.allowSignatureMethod = response.allowSignatureMethod;
-            this.apiId = response.apiId;
-            this.apiName = response.apiName;
-            this.appCodeAuthType = response.appCodeAuthType;
-            this.authType = response.authType;
-            this.backendEnable = response.backendEnable;
-            this.backendId = response.backendId;
-            this.constantParameters = response.constantParameters;
-            this.description = response.description;
-            this.disableInternet = response.disableInternet;
-            this.errorCodeSamples = response.errorCodeSamples;
-            this.failResultSample = response.failResultSample;
-            this.forceNonceCheck = response.forceNonceCheck;
-            this.groupId = response.groupId;
-            this.openIdConnectConfig = response.openIdConnectConfig;
-            this.requestConfig = response.requestConfig;
-            this.requestParameters = response.requestParameters;
-            this.resultBodyModel = response.resultBodyModel;
-            this.resultDescriptions = response.resultDescriptions;
-            this.resultSample = response.resultSample;
-            this.resultType = response.resultType;
-            this.securityToken = response.securityToken;
-            this.serviceConfig = response.serviceConfig;
-            this.serviceParameters = response.serviceParameters;
-            this.serviceParametersMap = response.serviceParametersMap;
-            this.systemParameters = response.systemParameters;
-            this.visibility = response.visibility;
-            this.webSocketApiType = response.webSocketApiType;
+        private Builder(ModifyApiRequest request) {
+            super(request);
+            this.allowSignatureMethod = request.allowSignatureMethod;
+            this.apiId = request.apiId;
+            this.apiName = request.apiName;
+            this.appCodeAuthType = request.appCodeAuthType;
+            this.authType = request.authType;
+            this.backendEnable = request.backendEnable;
+            this.backendId = request.backendId;
+            this.constantParameters = request.constantParameters;
+            this.description = request.description;
+            this.disableInternet = request.disableInternet;
+            this.errorCodeSamples = request.errorCodeSamples;
+            this.failResultSample = request.failResultSample;
+            this.forceNonceCheck = request.forceNonceCheck;
+            this.groupId = request.groupId;
+            this.openIdConnectConfig = request.openIdConnectConfig;
+            this.requestConfig = request.requestConfig;
+            this.requestParameters = request.requestParameters;
+            this.resultBodyModel = request.resultBodyModel;
+            this.resultDescriptions = request.resultDescriptions;
+            this.resultSample = request.resultSample;
+            this.resultType = request.resultType;
+            this.securityToken = request.securityToken;
+            this.serviceConfig = request.serviceConfig;
+            this.serviceParameters = request.serviceParameters;
+            this.serviceParametersMap = request.serviceParametersMap;
+            this.systemParameters = request.systemParameters;
+            this.visibility = request.visibility;
+            this.webSocketApiType = request.webSocketApiType;
         } 
 
         /**

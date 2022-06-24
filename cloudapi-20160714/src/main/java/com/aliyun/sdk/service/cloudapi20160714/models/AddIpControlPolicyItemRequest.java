@@ -89,12 +89,12 @@ public class AddIpControlPolicyItemRequest extends Request {
             super();
         } 
 
-        private Builder(AddIpControlPolicyItemRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.cidrIp = response.cidrIp;
-            this.ipControlId = response.ipControlId;
-            this.securityToken = response.securityToken;
+        private Builder(AddIpControlPolicyItemRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.cidrIp = request.cidrIp;
+            this.ipControlId = request.ipControlId;
+            this.securityToken = request.securityToken;
         } 
 
         /**

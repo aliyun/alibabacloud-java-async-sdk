@@ -103,13 +103,13 @@ public class ModifyIpControlPolicyItemRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyIpControlPolicyItemRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.cidrIp = response.cidrIp;
-            this.ipControlId = response.ipControlId;
-            this.policyItemId = response.policyItemId;
-            this.securityToken = response.securityToken;
+        private Builder(ModifyIpControlPolicyItemRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.cidrIp = request.cidrIp;
+            this.ipControlId = request.ipControlId;
+            this.policyItemId = request.policyItemId;
+            this.securityToken = request.securityToken;
         } 
 
         /**

@@ -76,11 +76,11 @@ public class ReactivateDomainRequest extends Request {
             super();
         } 
 
-        private Builder(ReactivateDomainRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.groupId = response.groupId;
-            this.securityToken = response.securityToken;
+        private Builder(ReactivateDomainRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.groupId = request.groupId;
+            this.securityToken = request.securityToken;
         } 
 
         /**

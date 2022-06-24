@@ -101,13 +101,13 @@ public class ModifySignatureRequest extends Request {
             super();
         } 
 
-        private Builder(ModifySignatureRequest response) {
-            super(response);
-            this.securityToken = response.securityToken;
-            this.signatureId = response.signatureId;
-            this.signatureKey = response.signatureKey;
-            this.signatureName = response.signatureName;
-            this.signatureSecret = response.signatureSecret;
+        private Builder(ModifySignatureRequest request) {
+            super(request);
+            this.securityToken = request.securityToken;
+            this.signatureId = request.signatureId;
+            this.signatureKey = request.signatureKey;
+            this.signatureName = request.signatureName;
+            this.signatureSecret = request.signatureSecret;
         } 
 
         /**

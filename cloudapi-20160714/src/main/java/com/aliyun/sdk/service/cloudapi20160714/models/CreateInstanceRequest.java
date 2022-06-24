@@ -156,17 +156,17 @@ public class CreateInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(CreateInstanceRequest response) {
-            super(response);
-            this.autoPay = response.autoPay;
-            this.chargeType = response.chargeType;
-            this.duration = response.duration;
-            this.httpsPolicy = response.httpsPolicy;
-            this.instanceName = response.instanceName;
-            this.instanceSpec = response.instanceSpec;
-            this.pricingCycle = response.pricingCycle;
-            this.token = response.token;
-            this.zoneId = response.zoneId;
+        private Builder(CreateInstanceRequest request) {
+            super(request);
+            this.autoPay = request.autoPay;
+            this.chargeType = request.chargeType;
+            this.duration = request.duration;
+            this.httpsPolicy = request.httpsPolicy;
+            this.instanceName = request.instanceName;
+            this.instanceSpec = request.instanceSpec;
+            this.pricingCycle = request.pricingCycle;
+            this.token = request.token;
+            this.zoneId = request.zoneId;
         } 
 
         /**

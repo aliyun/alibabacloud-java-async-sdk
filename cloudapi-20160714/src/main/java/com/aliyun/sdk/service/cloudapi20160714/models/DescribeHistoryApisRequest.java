@@ -127,15 +127,15 @@ public class DescribeHistoryApisRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeHistoryApisRequest response) {
-            super(response);
-            this.apiId = response.apiId;
-            this.apiName = response.apiName;
-            this.groupId = response.groupId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.securityToken = response.securityToken;
-            this.stageName = response.stageName;
+        private Builder(DescribeHistoryApisRequest request) {
+            super(request);
+            this.apiId = request.apiId;
+            this.apiName = request.apiName;
+            this.groupId = request.groupId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.securityToken = request.securityToken;
+            this.stageName = request.stageName;
         } 
 
         /**
