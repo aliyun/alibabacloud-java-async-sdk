@@ -156,6 +156,9 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         private String instanceId;
 
+        @NameInMap("OwnerId")
+        private Long ownerId;
+
         @NameInMap("SavingsType")
         private String savingsType;
 
@@ -174,6 +177,7 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
             this.discountRate = builder.discountRate;
             this.endTime = builder.endTime;
             this.instanceId = builder.instanceId;
+            this.ownerId = builder.ownerId;
             this.savingsType = builder.savingsType;
             this.startTime = builder.startTime;
             this.userId = builder.userId;
@@ -244,6 +248,13 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
         }
 
         /**
+         * @return ownerId
+         */
+        public Long getOwnerId() {
+            return this.ownerId;
+        }
+
+        /**
          * @return savingsType
          */
         public String getSavingsType() {
@@ -273,6 +284,7 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
             private String discountRate; 
             private String endTime; 
             private String instanceId; 
+            private Long ownerId; 
             private String savingsType; 
             private String startTime; 
             private Long userId; 
@@ -338,6 +350,14 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * OwnerId.
+             */
+            public Builder ownerId(Long ownerId) {
+                this.ownerId = ownerId;
                 return this;
             }
 
