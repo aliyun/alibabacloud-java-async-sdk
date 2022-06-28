@@ -40,9 +40,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<OrderFreeFlowProductResponse> orderFreeFlowProduct(OrderFreeFlowProductRequest request);
 
+    CompletableFuture<OrderQosProductResponse> orderQosProduct(OrderQosProductRequest request);
+
     CompletableFuture<SaveApplicationInfoResponse> saveApplicationInfo(SaveApplicationInfoRequest request);
 
     CompletableFuture<SdkValidateStatusResponse> sdkValidateStatus(SdkValidateStatusRequest request);
+
+    CompletableFuture<ValidControllerAuthorResponse> validControllerAuthor(ValidControllerAuthorRequest request);
 
     CompletableFuture<ValidateStatusResponse> validateStatus(ValidateStatusRequest request);
 
