@@ -42,6 +42,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteFlowProjectUserResponse> deleteFlowProjectUser(DeleteFlowProjectUserRequest request);
 
+    CompletableFuture<DeleteLibrariesResponse> deleteLibraries(DeleteLibrariesRequest request);
+
     CompletableFuture<DescribeClusterV2Response> describeClusterV2(DescribeClusterV2Request request);
 
     CompletableFuture<DescribeFlowResponse> describeFlow(DescribeFlowRequest request);
@@ -58,6 +60,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeLibraryInstallTaskDetailResponse> describeLibraryInstallTaskDetail(DescribeLibraryInstallTaskDetailRequest request);
 
+    CompletableFuture<InstallLibrariesResponse> installLibraries(InstallLibrariesRequest request);
+
     CompletableFuture<KillFlowJobResponse> killFlowJob(KillFlowJobRequest request);
 
     CompletableFuture<ListClustersResponse> listClusters(ListClustersRequest request);
@@ -71,6 +75,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListFlowProjectUserResponse> listFlowProjectUser(ListFlowProjectUserRequest request);
 
     CompletableFuture<ListFlowProjectsResponse> listFlowProjects(ListFlowProjectsRequest request);
+
+    CompletableFuture<ListLibrariesResponse> listLibraries(ListLibrariesRequest request);
 
     CompletableFuture<ListLibraryInstallTasksResponse> listLibraryInstallTasks(ListLibraryInstallTasksRequest request);
 
@@ -95,6 +101,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SubmitFlowJobResponse> submitFlowJob(SubmitFlowJobRequest request);
 
     CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
+
+    CompletableFuture<UninstallLibrariesResponse> uninstallLibraries(UninstallLibrariesRequest request);
 
     CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
 
