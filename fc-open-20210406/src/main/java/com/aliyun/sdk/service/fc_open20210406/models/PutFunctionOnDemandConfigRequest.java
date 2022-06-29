@@ -14,10 +14,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class PutFunctionOnDemandConfigRequest extends Request {
     @Path
     @NameInMap("serviceName")
+    @Validation(required = true)
     private String serviceName;
 
     @Path
     @NameInMap("functionName")
+    @Validation(required = true)
     private String functionName;
 
     @Header
