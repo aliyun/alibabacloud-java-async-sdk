@@ -32,6 +32,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateFlowProjectUserResponse> createFlowProjectUser(CreateFlowProjectUserRequest request);
 
+    CompletableFuture<CreateLibraryResponse> createLibrary(CreateLibraryRequest request);
+
     CompletableFuture<DeleteFlowResponse> deleteFlow(DeleteFlowRequest request);
 
     CompletableFuture<DeleteFlowCategoryResponse> deleteFlowCategory(DeleteFlowCategoryRequest request);
@@ -52,6 +54,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeFlowProjectResponse> describeFlowProject(DescribeFlowProjectRequest request);
 
+    CompletableFuture<DescribeLibraryDetailResponse> describeLibraryDetail(DescribeLibraryDetailRequest request);
+
+    CompletableFuture<DescribeLibraryInstallTaskDetailResponse> describeLibraryInstallTaskDetail(DescribeLibraryInstallTaskDetailRequest request);
+
     CompletableFuture<KillFlowJobResponse> killFlowJob(KillFlowJobRequest request);
 
     CompletableFuture<ListClustersResponse> listClusters(ListClustersRequest request);
@@ -65,6 +71,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListFlowProjectUserResponse> listFlowProjectUser(ListFlowProjectUserRequest request);
 
     CompletableFuture<ListFlowProjectsResponse> listFlowProjects(ListFlowProjectsRequest request);
+
+    CompletableFuture<ListLibraryInstallTasksResponse> listLibraryInstallTasks(ListLibraryInstallTasksRequest request);
+
+    CompletableFuture<ListLibraryStatusResponse> listLibraryStatus(ListLibraryStatusRequest request);
 
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
 
@@ -87,5 +97,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
 
     CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
+
+    CompletableFuture<UpdateLibraryInstallTaskStatusResponse> updateLibraryInstallTaskStatus(UpdateLibraryInstallTaskStatusRequest request);
 
 }
