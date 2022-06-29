@@ -34,6 +34,10 @@ public class SetDomainRequest extends Request {
     @NameInMap("IsForce")
     private Boolean isForce;
 
+    @Query
+    @NameInMap("IsHttpRedirectToHttps")
+    private Boolean isHttpRedirectToHttps;
+
     private SetDomainRequest(Builder builder) {
         super(builder);
         this.bindStageName = builder.bindStageName;
@@ -41,6 +45,7 @@ public class SetDomainRequest extends Request {
         this.domainName = builder.domainName;
         this.groupId = builder.groupId;
         this.isForce = builder.isForce;
+        this.isHttpRedirectToHttps = builder.isHttpRedirectToHttps;
     }
 
     public static Builder builder() {
@@ -91,12 +96,20 @@ public class SetDomainRequest extends Request {
         return this.isForce;
     }
 
+    /**
+     * @return isHttpRedirectToHttps
+     */
+    public Boolean getIsHttpRedirectToHttps() {
+        return this.isHttpRedirectToHttps;
+    }
+
     public static final class Builder extends Request.Builder<SetDomainRequest, Builder> {
         private String bindStageName; 
         private String customDomainType; 
         private String domainName; 
         private String groupId; 
         private Boolean isForce; 
+        private Boolean isHttpRedirectToHttps; 
 
         private Builder() {
             super();
@@ -109,6 +122,7 @@ public class SetDomainRequest extends Request {
             this.domainName = request.domainName;
             this.groupId = request.groupId;
             this.isForce = request.isForce;
+            this.isHttpRedirectToHttps = request.isHttpRedirectToHttps;
         } 
 
         /**
@@ -153,6 +167,15 @@ public class SetDomainRequest extends Request {
         public Builder isForce(Boolean isForce) {
             this.putQueryParameter("IsForce", isForce);
             this.isForce = isForce;
+            return this;
+        }
+
+        /**
+         * IsHttpRedirectToHttps.
+         */
+        public Builder isHttpRedirectToHttps(Boolean isHttpRedirectToHttps) {
+            this.putQueryParameter("IsHttpRedirectToHttps", isHttpRedirectToHttps);
+            this.isHttpRedirectToHttps = isHttpRedirectToHttps;
             return this;
         }
 
