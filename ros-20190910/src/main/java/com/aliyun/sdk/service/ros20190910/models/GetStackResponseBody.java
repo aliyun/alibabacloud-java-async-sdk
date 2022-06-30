@@ -691,6 +691,128 @@ public class GetStackResponseBody extends TeaModel {
 
     } 
 
+    public static class Logs extends TeaModel {
+        @NameInMap("Content")
+        private String content;
+
+        @NameInMap("Keys")
+        private java.util.List < String > keys;
+
+        private Logs(Builder builder) {
+            this.content = builder.content;
+            this.keys = builder.keys;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Logs create() {
+            return builder().build();
+        }
+
+        /**
+         * @return content
+         */
+        public String getContent() {
+            return this.content;
+        }
+
+        /**
+         * @return keys
+         */
+        public java.util.List < String > getKeys() {
+            return this.keys;
+        }
+
+        public static final class Builder {
+            private String content; 
+            private java.util.List < String > keys; 
+
+            /**
+             * Content.
+             */
+            public Builder content(String content) {
+                this.content = content;
+                return this;
+            }
+
+            /**
+             * Keys.
+             */
+            public Builder keys(java.util.List < String > keys) {
+                this.keys = keys;
+                return this;
+            }
+
+            public Logs build() {
+                return new Logs(this);
+            } 
+
+        } 
+
+    }
+    public static class ResourceLogs extends TeaModel {
+        @NameInMap("Logs")
+        private java.util.List < Logs> logs;
+
+        @NameInMap("ResourceName")
+        private String resourceName;
+
+        private ResourceLogs(Builder builder) {
+            this.logs = builder.logs;
+            this.resourceName = builder.resourceName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResourceLogs create() {
+            return builder().build();
+        }
+
+        /**
+         * @return logs
+         */
+        public java.util.List < Logs> getLogs() {
+            return this.logs;
+        }
+
+        /**
+         * @return resourceName
+         */
+        public String getResourceName() {
+            return this.resourceName;
+        }
+
+        public static final class Builder {
+            private java.util.List < Logs> logs; 
+            private String resourceName; 
+
+            /**
+             * Logs.
+             */
+            public Builder logs(java.util.List < Logs> logs) {
+                this.logs = logs;
+                return this;
+            }
+
+            /**
+             * ResourceName.
+             */
+            public Builder resourceName(String resourceName) {
+                this.resourceName = resourceName;
+                return this;
+            }
+
+            public ResourceLogs build() {
+                return new ResourceLogs(this);
+            } 
+
+        } 
+
+    }
     public static class TerraformLogs extends TeaModel {
         @NameInMap("Command")
         private String command;
@@ -773,10 +895,14 @@ public class GetStackResponseBody extends TeaModel {
 
     }
     public static class Log extends TeaModel {
+        @NameInMap("ResourceLogs")
+        private java.util.List < ResourceLogs> resourceLogs;
+
         @NameInMap("TerraformLogs")
         private java.util.List < TerraformLogs> terraformLogs;
 
         private Log(Builder builder) {
+            this.resourceLogs = builder.resourceLogs;
             this.terraformLogs = builder.terraformLogs;
         }
 
@@ -789,6 +915,13 @@ public class GetStackResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceLogs
+         */
+        public java.util.List < ResourceLogs> getResourceLogs() {
+            return this.resourceLogs;
+        }
+
+        /**
          * @return terraformLogs
          */
         public java.util.List < TerraformLogs> getTerraformLogs() {
@@ -796,7 +929,16 @@ public class GetStackResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List < ResourceLogs> resourceLogs; 
             private java.util.List < TerraformLogs> terraformLogs; 
+
+            /**
+             * ResourceLogs.
+             */
+            public Builder resourceLogs(java.util.List < ResourceLogs> resourceLogs) {
+                this.resourceLogs = resourceLogs;
+                return this;
+            }
 
             /**
              * TerraformLogs.

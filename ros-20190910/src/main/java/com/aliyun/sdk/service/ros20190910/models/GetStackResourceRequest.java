@@ -27,6 +27,10 @@ public class GetStackResourceRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceAttributes")
+    private java.util.List < String > resourceAttributes;
+
+    @Query
     @NameInMap("ShowResourceAttributes")
     private Boolean showResourceAttributes;
 
@@ -40,6 +44,7 @@ public class GetStackResourceRequest extends Request {
         this.clientToken = builder.clientToken;
         this.logicalResourceId = builder.logicalResourceId;
         this.regionId = builder.regionId;
+        this.resourceAttributes = builder.resourceAttributes;
         this.showResourceAttributes = builder.showResourceAttributes;
         this.stackId = builder.stackId;
     }
@@ -79,6 +84,13 @@ public class GetStackResourceRequest extends Request {
     }
 
     /**
+     * @return resourceAttributes
+     */
+    public java.util.List < String > getResourceAttributes() {
+        return this.resourceAttributes;
+    }
+
+    /**
      * @return showResourceAttributes
      */
     public Boolean getShowResourceAttributes() {
@@ -96,6 +108,7 @@ public class GetStackResourceRequest extends Request {
         private String clientToken; 
         private String logicalResourceId; 
         private String regionId; 
+        private java.util.List < String > resourceAttributes; 
         private Boolean showResourceAttributes; 
         private String stackId; 
 
@@ -108,6 +121,7 @@ public class GetStackResourceRequest extends Request {
             this.clientToken = request.clientToken;
             this.logicalResourceId = request.logicalResourceId;
             this.regionId = request.regionId;
+            this.resourceAttributes = request.resourceAttributes;
             this.showResourceAttributes = request.showResourceAttributes;
             this.stackId = request.stackId;
         } 
@@ -136,6 +150,15 @@ public class GetStackResourceRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceAttributes.
+         */
+        public Builder resourceAttributes(java.util.List < String > resourceAttributes) {
+            this.putQueryParameter("ResourceAttributes", resourceAttributes);
+            this.resourceAttributes = resourceAttributes;
             return this;
         }
 

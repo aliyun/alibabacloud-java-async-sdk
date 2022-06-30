@@ -17,6 +17,10 @@ public class GetStackRequest extends Request {
     private String clientToken;
 
     @Query
+    @NameInMap("LogOption")
+    private String logOption;
+
+    @Query
     @NameInMap("OutputOption")
     private String outputOption;
 
@@ -37,6 +41,7 @@ public class GetStackRequest extends Request {
     private GetStackRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
+        this.logOption = builder.logOption;
         this.outputOption = builder.outputOption;
         this.regionId = builder.regionId;
         this.showResourceProgress = builder.showResourceProgress;
@@ -61,6 +66,13 @@ public class GetStackRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return logOption
+     */
+    public String getLogOption() {
+        return this.logOption;
     }
 
     /**
@@ -93,6 +105,7 @@ public class GetStackRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetStackRequest, Builder> {
         private String clientToken; 
+        private String logOption; 
         private String outputOption; 
         private String regionId; 
         private String showResourceProgress; 
@@ -105,6 +118,7 @@ public class GetStackRequest extends Request {
         private Builder(GetStackRequest request) {
             super(request);
             this.clientToken = request.clientToken;
+            this.logOption = request.logOption;
             this.outputOption = request.outputOption;
             this.regionId = request.regionId;
             this.showResourceProgress = request.showResourceProgress;
@@ -117,6 +131,15 @@ public class GetStackRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * LogOption.
+         */
+        public Builder logOption(String logOption) {
+            this.putQueryParameter("LogOption", logOption);
+            this.logOption = logOption;
             return this;
         }
 

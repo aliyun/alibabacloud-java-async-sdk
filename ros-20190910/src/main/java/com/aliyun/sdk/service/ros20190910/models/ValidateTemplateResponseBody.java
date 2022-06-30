@@ -24,11 +24,15 @@ public class ValidateTemplateResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("ResourceTypes")
+    private ResourceTypes resourceTypes;
+
     private ValidateTemplateResponseBody(Builder builder) {
         this.description = builder.description;
         this.outputs = builder.outputs;
         this.parameters = builder.parameters;
         this.requestId = builder.requestId;
+        this.resourceTypes = builder.resourceTypes;
     }
 
     public static Builder builder() {
@@ -67,11 +71,19 @@ public class ValidateTemplateResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return resourceTypes
+     */
+    public ResourceTypes getResourceTypes() {
+        return this.resourceTypes;
+    }
+
     public static final class Builder {
         private String description; 
         private java.util.List < Outputs> outputs; 
         private java.util.List < java.util.Map<String, ?>> parameters; 
         private String requestId; 
+        private ResourceTypes resourceTypes; 
 
         /**
          * Description.
@@ -102,6 +114,14 @@ public class ValidateTemplateResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * ResourceTypes.
+         */
+        public Builder resourceTypes(ResourceTypes resourceTypes) {
+            this.resourceTypes = resourceTypes;
             return this;
         }
 
@@ -167,6 +187,67 @@ public class ValidateTemplateResponseBody extends TeaModel {
 
             public Outputs build() {
                 return new Outputs(this);
+            } 
+
+        } 
+
+    }
+    public static class ResourceTypes extends TeaModel {
+        @NameInMap("DataSources")
+        private java.util.List < String > dataSources;
+
+        @NameInMap("Resources")
+        private java.util.List < String > resources;
+
+        private ResourceTypes(Builder builder) {
+            this.dataSources = builder.dataSources;
+            this.resources = builder.resources;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResourceTypes create() {
+            return builder().build();
+        }
+
+        /**
+         * @return dataSources
+         */
+        public java.util.List < String > getDataSources() {
+            return this.dataSources;
+        }
+
+        /**
+         * @return resources
+         */
+        public java.util.List < String > getResources() {
+            return this.resources;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > dataSources; 
+            private java.util.List < String > resources; 
+
+            /**
+             * DataSources.
+             */
+            public Builder dataSources(java.util.List < String > dataSources) {
+                this.dataSources = dataSources;
+                return this;
+            }
+
+            /**
+             * Resources.
+             */
+            public Builder resources(java.util.List < String > resources) {
+                this.resources = resources;
+                return this;
+            }
+
+            public ResourceTypes build() {
+                return new ResourceTypes(this);
             } 
 
         } 
