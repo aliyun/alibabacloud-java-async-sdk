@@ -50,7 +50,7 @@ public class GetFileDetectResultResponseBody extends TeaModel {
         private java.util.List < ResultList> resultList; 
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

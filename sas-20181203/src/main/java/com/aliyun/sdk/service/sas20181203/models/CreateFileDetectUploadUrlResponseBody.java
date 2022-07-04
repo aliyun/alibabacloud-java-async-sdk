@@ -50,7 +50,7 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
         private java.util.List < UploadUrlList> uploadUrlList; 
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
