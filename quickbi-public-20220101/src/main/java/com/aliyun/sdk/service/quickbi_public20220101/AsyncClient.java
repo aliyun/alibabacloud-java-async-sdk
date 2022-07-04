@@ -106,8 +106,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<QueryEmbeddedInfoResponse> queryEmbeddedInfo(QueryEmbeddedInfoRequest request);
 
-    CompletableFuture<QueryEmbeddedStausResponse> queryEmbeddedStaus(QueryEmbeddedStausRequest request);
-
     CompletableFuture<QueryOrganizationWorkspaceListResponse> queryOrganizationWorkspaceList(QueryOrganizationWorkspaceListRequest request);
 
     CompletableFuture<QueryReadableResourcesListByUserIdResponse> queryReadableResourcesListByUserId(QueryReadableResourcesListByUserIdRequest request);

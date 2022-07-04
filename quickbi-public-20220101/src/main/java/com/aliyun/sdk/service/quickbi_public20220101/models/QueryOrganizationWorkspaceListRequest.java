@@ -23,7 +23,7 @@ public class QueryOrganizationWorkspaceListRequest extends Request {
 
     @Query
     @NameInMap("PageSize")
-    @Validation(maximum = 1000, minimum = 10)
+    @Validation(maximum = 1000, minimum = 1)
     private Integer pageSize;
 
     @Query

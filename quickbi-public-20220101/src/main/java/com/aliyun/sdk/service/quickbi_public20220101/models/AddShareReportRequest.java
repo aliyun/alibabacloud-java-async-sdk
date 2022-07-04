@@ -19,7 +19,6 @@ public class AddShareReportRequest extends Request {
 
     @Query
     @NameInMap("ExpireDate")
-    @Validation(required = true, maximum = 33167973431000D)
     private Long expireDate;
 
     @Query
