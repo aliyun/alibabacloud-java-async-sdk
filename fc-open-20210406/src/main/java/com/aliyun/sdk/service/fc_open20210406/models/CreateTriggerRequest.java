@@ -52,7 +52,8 @@ public class CreateTriggerRequest extends Request {
 
     @Body
     @NameInMap("triggerConfig")
-    private Object triggerConfig;
+    @Validation(required = true)
+    private String triggerConfig;
 
     @Body
     @NameInMap("triggerName")
@@ -159,7 +160,7 @@ public class CreateTriggerRequest extends Request {
     /**
      * @return triggerConfig
      */
-    public Object getTriggerConfig() {
+    public String getTriggerConfig() {
         return this.triggerConfig;
     }
 
@@ -187,7 +188,7 @@ public class CreateTriggerRequest extends Request {
         private String invocationRole; 
         private String qualifier; 
         private String sourceArn; 
-        private Object triggerConfig; 
+        private String triggerConfig; 
         private String triggerName; 
         private String triggerType; 
 
@@ -293,9 +294,9 @@ public class CreateTriggerRequest extends Request {
         }
 
         /**
-         * triggerConfig.
+         * trigger配置，针对不同的trigger类型，trigger配置会有所不同
          */
-        public Builder triggerConfig(Object triggerConfig) {
+        public Builder triggerConfig(String triggerConfig) {
             this.putBodyParameter("triggerConfig", triggerConfig);
             this.triggerConfig = triggerConfig;
             return this;

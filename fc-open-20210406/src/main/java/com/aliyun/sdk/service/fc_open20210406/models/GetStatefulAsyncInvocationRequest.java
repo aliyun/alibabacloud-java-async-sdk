@@ -14,14 +14,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class GetStatefulAsyncInvocationRequest extends Request {
     @Path
     @NameInMap("serviceName")
+    @Validation(required = true)
     private String serviceName;
 
     @Path
     @NameInMap("functionName")
+    @Validation(required = true)
     private String functionName;
 
     @Path
     @NameInMap("invocationId")
+    @Validation(required = true)
     private String invocationId;
 
     @Host

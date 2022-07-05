@@ -48,7 +48,7 @@ public class InvokeFunctionRequest extends Request {
 
     @Body
     @NameInMap("body")
-    private Object body;
+    private byte[] body;
 
     @Query
     @NameInMap("qualifier")
@@ -140,7 +140,7 @@ public class InvokeFunctionRequest extends Request {
     /**
      * @return body
      */
-    public Object getBody() {
+    public byte[] getBody() {
         return this.body;
     }
 
@@ -160,7 +160,7 @@ public class InvokeFunctionRequest extends Request {
         private String xFcLogType; 
         private String xFcStatefulAsyncInvocationId; 
         private String xFcTraceId; 
-        private Object body; 
+        private byte[] body; 
         private String qualifier; 
 
         private Builder() {
@@ -254,9 +254,9 @@ public class InvokeFunctionRequest extends Request {
         }
 
         /**
-         * anything
+         * 事件（event），binary type。函数计算服务将event传递给用户function来处理
          */
-        public Builder body(Object body) {
+        public Builder body(byte[] body) {
             this.putBodyParameter("body", body);
             this.body = body;
             return this;
