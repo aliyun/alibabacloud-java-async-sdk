@@ -19,6 +19,7 @@ public class UpdateConsumerGroupRequest extends Request {
 
     @Path
     @NameInMap("consumerGroup")
+    @Validation(required = true)
     private String consumerGroup;
 
     @Body

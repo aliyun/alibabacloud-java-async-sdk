@@ -55,7 +55,7 @@ public class DeleteProjectRequest extends Request {
         } 
 
         /**
-         * project.
+         * projetc 名称。
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);

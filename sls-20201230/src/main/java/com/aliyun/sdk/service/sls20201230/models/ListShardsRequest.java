@@ -7,24 +7,24 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
- * {@link GetSavedSearchRequest} extends {@link RequestModel}
+ * {@link ListShardsRequest} extends {@link RequestModel}
  *
- * <p>GetSavedSearchRequest</p>
+ * <p>ListShardsRequest</p>
  */
-public class GetSavedSearchRequest extends Request {
+public class ListShardsRequest extends Request {
     @Path
-    @NameInMap("savedsearchName")
+    @NameInMap("logstore")
     @Validation(required = true)
-    private String savedsearchName;
+    private String logstore;
 
     @Host
     @NameInMap("project")
     @Validation(required = true)
     private String project;
 
-    private GetSavedSearchRequest(Builder builder) {
+    private ListShardsRequest(Builder builder) {
         super(builder);
-        this.savedsearchName = builder.savedsearchName;
+        this.logstore = builder.logstore;
         this.project = builder.project;
     }
 
@@ -32,7 +32,7 @@ public class GetSavedSearchRequest extends Request {
         return new Builder();
     }
 
-    public static GetSavedSearchRequest create() {
+    public static ListShardsRequest create() {
         return builder().build();
     }
 
@@ -42,10 +42,10 @@ public class GetSavedSearchRequest extends Request {
     }
 
     /**
-     * @return savedsearchName
+     * @return logstore
      */
-    public String getSavedsearchName() {
-        return this.savedsearchName;
+    public String getLogstore() {
+        return this.logstore;
     }
 
     /**
@@ -55,26 +55,26 @@ public class GetSavedSearchRequest extends Request {
         return this.project;
     }
 
-    public static final class Builder extends Request.Builder<GetSavedSearchRequest, Builder> {
-        private String savedsearchName; 
+    public static final class Builder extends Request.Builder<ListShardsRequest, Builder> {
+        private String logstore; 
         private String project; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetSavedSearchRequest request) {
+        private Builder(ListShardsRequest request) {
             super(request);
-            this.savedsearchName = request.savedsearchName;
+            this.logstore = request.logstore;
             this.project = request.project;
         } 
 
         /**
-         * savedsearchName.
+         * logstore 名称。
          */
-        public Builder savedsearchName(String savedsearchName) {
-            this.putPathParameter("savedsearchName", savedsearchName);
-            this.savedsearchName = savedsearchName;
+        public Builder logstore(String logstore) {
+            this.putPathParameter("logstore", logstore);
+            this.logstore = logstore;
             return this;
         }
 
@@ -88,8 +88,8 @@ public class GetSavedSearchRequest extends Request {
         }
 
         @Override
-        public GetSavedSearchRequest build() {
-            return new GetSavedSearchRequest(this);
+        public ListShardsRequest build() {
+            return new ListShardsRequest(this);
         } 
 
     } 

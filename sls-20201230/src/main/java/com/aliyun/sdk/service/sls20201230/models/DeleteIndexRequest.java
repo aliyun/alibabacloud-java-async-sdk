@@ -7,22 +7,24 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
- * {@link DeleteSavedSearchRequest} extends {@link RequestModel}
+ * {@link DeleteIndexRequest} extends {@link RequestModel}
  *
- * <p>DeleteSavedSearchRequest</p>
+ * <p>DeleteIndexRequest</p>
  */
-public class DeleteSavedSearchRequest extends Request {
+public class DeleteIndexRequest extends Request {
     @Path
-    @NameInMap("savedsearchName")
-    private String savedsearchName;
+    @NameInMap("logstore")
+    @Validation(required = true)
+    private String logstore;
 
     @Host
     @NameInMap("project")
+    @Validation(required = true)
     private String project;
 
-    private DeleteSavedSearchRequest(Builder builder) {
+    private DeleteIndexRequest(Builder builder) {
         super(builder);
-        this.savedsearchName = builder.savedsearchName;
+        this.logstore = builder.logstore;
         this.project = builder.project;
     }
 
@@ -30,7 +32,7 @@ public class DeleteSavedSearchRequest extends Request {
         return new Builder();
     }
 
-    public static DeleteSavedSearchRequest create() {
+    public static DeleteIndexRequest create() {
         return builder().build();
     }
 
@@ -40,10 +42,10 @@ public class DeleteSavedSearchRequest extends Request {
     }
 
     /**
-     * @return savedsearchName
+     * @return logstore
      */
-    public String getSavedsearchName() {
-        return this.savedsearchName;
+    public String getLogstore() {
+        return this.logstore;
     }
 
     /**
@@ -53,31 +55,31 @@ public class DeleteSavedSearchRequest extends Request {
         return this.project;
     }
 
-    public static final class Builder extends Request.Builder<DeleteSavedSearchRequest, Builder> {
-        private String savedsearchName; 
+    public static final class Builder extends Request.Builder<DeleteIndexRequest, Builder> {
+        private String logstore; 
         private String project; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteSavedSearchRequest request) {
+        private Builder(DeleteIndexRequest request) {
             super(request);
-            this.savedsearchName = request.savedsearchName;
+            this.logstore = request.logstore;
             this.project = request.project;
         } 
 
         /**
-         * savedsearchName.
+         * A short description of struct
          */
-        public Builder savedsearchName(String savedsearchName) {
-            this.putPathParameter("savedsearchName", savedsearchName);
-            this.savedsearchName = savedsearchName;
+        public Builder logstore(String logstore) {
+            this.putPathParameter("logstore", logstore);
+            this.logstore = logstore;
             return this;
         }
 
         /**
-         * A short description of struct
+         * project.
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -86,8 +88,8 @@ public class DeleteSavedSearchRequest extends Request {
         }
 
         @Override
-        public DeleteSavedSearchRequest build() {
-            return new DeleteSavedSearchRequest(this);
+        public DeleteIndexRequest build() {
+            return new DeleteIndexRequest(this);
         } 
 
     } 

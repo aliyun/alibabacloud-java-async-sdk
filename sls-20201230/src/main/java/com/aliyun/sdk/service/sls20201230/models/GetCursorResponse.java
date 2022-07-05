@@ -7,21 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
- * {@link DeleteSavedSearchResponse} extends {@link TeaModel}
+ * {@link GetCursorResponse} extends {@link TeaModel}
  *
- * <p>DeleteSavedSearchResponse</p>
+ * <p>GetCursorResponse</p>
  */
-public class DeleteSavedSearchResponse extends Response {
+public class GetCursorResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
-    private DeleteSavedSearchResponse(BuilderImpl builder) {
+    @NameInMap("body")
+    @Validation(required = true)
+    private GetCursorResponseBody body;
+
+    private GetCursorResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.body = builder.body;
     }
 
-    public static DeleteSavedSearchResponse create() {
+    public static GetCursorResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -37,27 +42,38 @@ public class DeleteSavedSearchResponse extends Response {
         return this.headers;
     }
 
-    public interface Builder extends Response.Builder<DeleteSavedSearchResponse, Builder> {
+    /**
+     * @return body
+     */
+    public GetCursorResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<GetCursorResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
+        Builder body(GetCursorResponseBody body);
+
         @Override
-        DeleteSavedSearchResponse build();
+        GetCursorResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DeleteSavedSearchResponse, Builder>
+            extends Response.BuilderImpl<GetCursorResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private GetCursorResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DeleteSavedSearchResponse response) {
+        private BuilderImpl(GetCursorResponse response) {
             super(response);
             this.headers = response.headers;
+            this.body = response.body;
         } 
 
         /**
@@ -69,9 +85,18 @@ public class DeleteSavedSearchResponse extends Response {
             return this;
         }
 
+        /**
+         * body.
+         */
         @Override
-        public DeleteSavedSearchResponse build() {
-            return new DeleteSavedSearchResponse(this);
+        public Builder body(GetCursorResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public GetCursorResponse build() {
+            return new GetCursorResponse(this);
         } 
 
     } 

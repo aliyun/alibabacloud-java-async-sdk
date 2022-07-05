@@ -17,7 +17,6 @@ public class EncryptConf extends TeaModel {
     private Boolean enable;
 
     @NameInMap("encrypt_type")
-    @Validation(required = true)
     private String encryptType;
 
     @NameInMap("user_cmk_info")
@@ -72,7 +71,7 @@ public class EncryptConf extends TeaModel {
         }
 
         /**
-         * encrypt_type
+         * 加密算法，只支持default和m4。当 enable 为 true 时，此项必选。
          */
         public Builder encryptType(String encryptType) {
             this.encryptType = encryptType;

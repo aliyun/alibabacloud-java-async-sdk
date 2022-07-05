@@ -20,6 +20,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateConsumerGroupResponse> createConsumerGroup(CreateConsumerGroupRequest request);
 
+    CompletableFuture<CreateIndexResponse> createIndex(CreateIndexRequest request);
+
     CompletableFuture<CreateLogStoreResponse> createLogStore(CreateLogStoreRequest request);
 
     CompletableFuture<CreateProjectResponse> createProject(CreateProjectRequest request);
@@ -28,13 +30,29 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteConsumerGroupResponse> deleteConsumerGroup(DeleteConsumerGroupRequest request);
 
+    CompletableFuture<DeleteIndexResponse> deleteIndex(DeleteIndexRequest request);
+
+    CompletableFuture<DeleteLogStoreResponse> deleteLogStore(DeleteLogStoreRequest request);
+
     CompletableFuture<DeleteProjectResponse> deleteProject(DeleteProjectRequest request);
 
-    CompletableFuture<DeleteSavedSearchResponse> deleteSavedSearch(DeleteSavedSearchRequest request);
+    CompletableFuture<GetContextLogsResponse> getContextLogs(GetContextLogsRequest request);
+
+    CompletableFuture<GetCursorResponse> getCursor(GetCursorRequest request);
+
+    CompletableFuture<GetCursorTimeResponse> getCursorTime(GetCursorTimeRequest request);
+
+    CompletableFuture<GetHistogramsResponse> getHistograms(GetHistogramsRequest request);
+
+    CompletableFuture<GetIndexResponse> getIndex(GetIndexRequest request);
 
     CompletableFuture<GetLogStoreResponse> getLogStore(GetLogStoreRequest request);
 
+    CompletableFuture<GetLogsResponse> getLogs(GetLogsRequest request);
+
     CompletableFuture<GetProjectResponse> getProject(GetProjectRequest request);
+
+    CompletableFuture<GetProjectLogsResponse> getProjectLogs(GetProjectLogsRequest request);
 
     CompletableFuture<GetSavedSearchResponse> getSavedSearch(GetSavedSearchRequest request);
 
@@ -46,10 +64,20 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListSavedSearchResponse> listSavedSearch(ListSavedSearchRequest request);
 
+    CompletableFuture<ListShardsResponse> listShards(ListShardsRequest request);
+
+    CompletableFuture<MergeShardsResponse> mergeShards(MergeShardsRequest request);
+
+    CompletableFuture<SplitShardResponse> splitShard(SplitShardRequest request);
+
     CompletableFuture<UpdateConsumerGroupResponse> updateConsumerGroup(UpdateConsumerGroupRequest request);
+
+    CompletableFuture<UpdateIndexResponse> updateIndex(UpdateIndexRequest request);
 
     CompletableFuture<UpdateLogStoreResponse> updateLogStore(UpdateLogStoreRequest request);
 
     CompletableFuture<UpdateProjectResponse> updateProject(UpdateProjectRequest request);
+
+    CompletableFuture<UpdateSavedSearchResponse> updateSavedSearch(UpdateSavedSearchRequest request);
 
 }

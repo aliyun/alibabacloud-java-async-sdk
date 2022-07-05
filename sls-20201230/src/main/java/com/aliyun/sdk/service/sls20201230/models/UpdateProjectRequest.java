@@ -14,10 +14,12 @@ import com.aliyun.sdk.gateway.sls.models.*;
 public class UpdateProjectRequest extends Request {
     @Body
     @NameInMap("description")
+    @Validation(required = true)
     private String description;
 
     @Host
     @NameInMap("project")
+    @Validation(required = true)
     private String project;
 
     private UpdateProjectRequest(Builder builder) {

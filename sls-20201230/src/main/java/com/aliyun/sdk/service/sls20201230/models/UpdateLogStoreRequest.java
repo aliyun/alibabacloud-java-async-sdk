@@ -48,6 +48,7 @@ public class UpdateLogStoreRequest extends Request {
 
     @Body
     @NameInMap("shardCount")
+    @Validation(required = true)
     private Integer shardCount;
 
     @Body
