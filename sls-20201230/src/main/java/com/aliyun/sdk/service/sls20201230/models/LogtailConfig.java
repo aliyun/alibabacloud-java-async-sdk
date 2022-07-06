@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
- * {@link Config} extends {@link TeaModel}
+ * {@link LogtailConfig} extends {@link TeaModel}
  *
- * <p>Config</p>
+ * <p>LogtailConfig</p>
  */
-public class Config extends TeaModel {
+public class LogtailConfig extends TeaModel {
     @NameInMap("configName")
     @Validation(required = true)
     private String configName;
@@ -41,7 +41,7 @@ public class Config extends TeaModel {
     @Validation(required = true)
     private String outputType;
 
-    private Config(Builder builder) {
+    private LogtailConfig(Builder builder) {
         this.configName = builder.configName;
         this.createTime = builder.createTime;
         this.inputDetail = builder.inputDetail;
@@ -56,7 +56,7 @@ public class Config extends TeaModel {
         return new Builder();
     }
 
-    public static Config create() {
+    public static LogtailConfig create() {
         return builder().build();
     }
 
@@ -190,8 +190,8 @@ public class Config extends TeaModel {
             return this;
         }
 
-        public Config build() {
-            return new Config(this);
+        public LogtailConfig build() {
+            return new LogtailConfig(this);
         } 
 
     } 
