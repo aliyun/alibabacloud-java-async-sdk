@@ -66,9 +66,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListShardsResponse> listShards(ListShardsRequest request);
 
+    CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
+
     CompletableFuture<MergeShardsResponse> mergeShards(MergeShardsRequest request);
 
     CompletableFuture<SplitShardResponse> splitShard(SplitShardRequest request);
+
+    CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
+
+    CompletableFuture<UnTagResourcesResponse> unTagResources(UnTagResourcesRequest request);
 
     CompletableFuture<UpdateConsumerGroupResponse> updateConsumerGroup(UpdateConsumerGroupRequest request);
 
