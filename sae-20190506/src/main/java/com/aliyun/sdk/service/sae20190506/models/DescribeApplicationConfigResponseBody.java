@@ -580,6 +580,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("MseApplicationId")
         private String mseApplicationId;
 
+        @NameInMap("MseFeatureConfig")
+        private String mseFeatureConfig;
+
         @NameInMap("NamespaceId")
         private String namespaceId;
 
@@ -693,6 +696,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             this.mountDesc = builder.mountDesc;
             this.mountHost = builder.mountHost;
             this.mseApplicationId = builder.mseApplicationId;
+            this.mseFeatureConfig = builder.mseFeatureConfig;
             this.namespaceId = builder.namespaceId;
             this.nasId = builder.nasId;
             this.ossAkId = builder.ossAkId;
@@ -928,6 +932,13 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return mseFeatureConfig
+         */
+        public String getMseFeatureConfig() {
+            return this.mseFeatureConfig;
+        }
+
+        /**
          * @return namespaceId
          */
         public String getNamespaceId() {
@@ -1152,6 +1163,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private java.util.List < MountDesc> mountDesc; 
             private String mountHost; 
             private String mseApplicationId; 
+            private String mseFeatureConfig; 
             private String namespaceId; 
             private String nasId; 
             private String ossAkId; 
@@ -1402,6 +1414,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
              */
             public Builder mseApplicationId(String mseApplicationId) {
                 this.mseApplicationId = mseApplicationId;
+                return this;
+            }
+
+            /**
+             * MseFeatureConfig.
+             */
+            public Builder mseFeatureConfig(String mseFeatureConfig) {
+                this.mseFeatureConfig = mseFeatureConfig;
                 return this;
             }
 

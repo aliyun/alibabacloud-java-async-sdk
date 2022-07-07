@@ -16,7 +16,7 @@ public class ExecJobResponseBody extends TeaModel {
     private String code;
 
     @NameInMap("Data")
-    private String data;
+    private Data data;
 
     @NameInMap("ErrorCode")
     private String errorCode;
@@ -61,7 +61,7 @@ public class ExecJobResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public String getData() {
+    public Data getData() {
         return this.data;
     }
 
@@ -102,7 +102,7 @@ public class ExecJobResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private String data; 
+        private Data data; 
         private String errorCode; 
         private String message; 
         private String requestId; 
@@ -120,7 +120,7 @@ public class ExecJobResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(String data) {
+        public Builder data(Data data) {
             this.data = data;
             return this;
         }
@@ -171,4 +171,105 @@ public class ExecJobResponseBody extends TeaModel {
 
     } 
 
+    public static class Data extends TeaModel {
+        @NameInMap("Code")
+        private String code;
+
+        @NameInMap("Data")
+        private String data;
+
+        @NameInMap("Msg")
+        private String msg;
+
+        @NameInMap("Success")
+        private String success;
+
+        private Data(Builder builder) {
+            this.code = builder.code;
+            this.data = builder.data;
+            this.msg = builder.msg;
+            this.success = builder.success;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Data create() {
+            return builder().build();
+        }
+
+        /**
+         * @return code
+         */
+        public String getCode() {
+            return this.code;
+        }
+
+        /**
+         * @return data
+         */
+        public String getData() {
+            return this.data;
+        }
+
+        /**
+         * @return msg
+         */
+        public String getMsg() {
+            return this.msg;
+        }
+
+        /**
+         * @return success
+         */
+        public String getSuccess() {
+            return this.success;
+        }
+
+        public static final class Builder {
+            private String code; 
+            private String data; 
+            private String msg; 
+            private String success; 
+
+            /**
+             * Code.
+             */
+            public Builder code(String code) {
+                this.code = code;
+                return this;
+            }
+
+            /**
+             * Data.
+             */
+            public Builder data(String data) {
+                this.data = data;
+                return this;
+            }
+
+            /**
+             * Msg.
+             */
+            public Builder msg(String msg) {
+                this.msg = msg;
+                return this;
+            }
+
+            /**
+             * Success.
+             */
+            public Builder success(String success) {
+                this.success = success;
+                return this;
+            }
+
+            public Data build() {
+                return new Data(this);
+            } 
+
+        } 
+
+    }
 }

@@ -224,6 +224,10 @@ public class CreateApplicationRequest extends Request {
     @NameInMap("WebContainer")
     private String webContainer;
 
+    @Query
+    @NameInMap("mseFeatureConfig")
+    private String mseFeatureConfig;
+
     private CreateApplicationRequest(Builder builder) {
         super(builder);
         this.acrAssumeRoleArn = builder.acrAssumeRoleArn;
@@ -278,6 +282,7 @@ public class CreateApplicationRequest extends Request {
         this.vpcId = builder.vpcId;
         this.warStartOptions = builder.warStartOptions;
         this.webContainer = builder.webContainer;
+        this.mseFeatureConfig = builder.mseFeatureConfig;
     }
 
     public static Builder builder() {
@@ -657,6 +662,13 @@ public class CreateApplicationRequest extends Request {
         return this.webContainer;
     }
 
+    /**
+     * @return mseFeatureConfig
+     */
+    public String getMseFeatureConfig() {
+        return this.mseFeatureConfig;
+    }
+
     public static final class Builder extends Request.Builder<CreateApplicationRequest, Builder> {
         private String acrAssumeRoleArn; 
         private String acrInstanceId; 
@@ -710,6 +722,7 @@ public class CreateApplicationRequest extends Request {
         private String vpcId; 
         private String warStartOptions; 
         private String webContainer; 
+        private String mseFeatureConfig; 
 
         private Builder() {
             super();
@@ -769,6 +782,7 @@ public class CreateApplicationRequest extends Request {
             this.vpcId = request.vpcId;
             this.warStartOptions = request.warStartOptions;
             this.webContainer = request.webContainer;
+            this.mseFeatureConfig = request.mseFeatureConfig;
         } 
 
         /**
@@ -1236,6 +1250,15 @@ public class CreateApplicationRequest extends Request {
         public Builder webContainer(String webContainer) {
             this.putQueryParameter("WebContainer", webContainer);
             this.webContainer = webContainer;
+            return this;
+        }
+
+        /**
+         * mseFeatureConfig.
+         */
+        public Builder mseFeatureConfig(String mseFeatureConfig) {
+            this.putQueryParameter("mseFeatureConfig", mseFeatureConfig);
+            this.mseFeatureConfig = mseFeatureConfig;
             return this;
         }
 

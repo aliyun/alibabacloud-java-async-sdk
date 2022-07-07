@@ -126,6 +126,10 @@ public class DeployApplicationRequest extends Request {
     private String mountHost;
 
     @Query
+    @NameInMap("MseFeatureConfig")
+    private String mseFeatureConfig;
+
+    @Query
     @NameInMap("NasId")
     private String nasId;
 
@@ -236,6 +240,7 @@ public class DeployApplicationRequest extends Request {
         this.minReadyInstances = builder.minReadyInstances;
         this.mountDesc = builder.mountDesc;
         this.mountHost = builder.mountHost;
+        this.mseFeatureConfig = builder.mseFeatureConfig;
         this.nasId = builder.nasId;
         this.openCollectToKafka = builder.openCollectToKafka;
         this.ossAkId = builder.ossAkId;
@@ -468,6 +473,13 @@ public class DeployApplicationRequest extends Request {
     }
 
     /**
+     * @return mseFeatureConfig
+     */
+    public String getMseFeatureConfig() {
+        return this.mseFeatureConfig;
+    }
+
+    /**
      * @return nasId
      */
     public String getNasId() {
@@ -636,6 +648,7 @@ public class DeployApplicationRequest extends Request {
         private Integer minReadyInstances; 
         private String mountDesc; 
         private String mountHost; 
+        private String mseFeatureConfig; 
         private String nasId; 
         private Boolean openCollectToKafka; 
         private String ossAkId; 
@@ -691,6 +704,7 @@ public class DeployApplicationRequest extends Request {
             this.minReadyInstances = request.minReadyInstances;
             this.mountDesc = request.mountDesc;
             this.mountHost = request.mountHost;
+            this.mseFeatureConfig = request.mseFeatureConfig;
             this.nasId = request.nasId;
             this.openCollectToKafka = request.openCollectToKafka;
             this.ossAkId = request.ossAkId;
@@ -962,6 +976,15 @@ public class DeployApplicationRequest extends Request {
         public Builder mountHost(String mountHost) {
             this.putQueryParameter("MountHost", mountHost);
             this.mountHost = mountHost;
+            return this;
+        }
+
+        /**
+         * MseFeatureConfig.
+         */
+        public Builder mseFeatureConfig(String mseFeatureConfig) {
+            this.putQueryParameter("MseFeatureConfig", mseFeatureConfig);
+            this.mseFeatureConfig = mseFeatureConfig;
             return this;
         }
 
