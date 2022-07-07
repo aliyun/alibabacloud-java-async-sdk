@@ -175,6 +175,9 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
         @NameInMap("CreateTimeStamp")
         private Long createTimeStamp;
 
+        @NameInMap("DebugStatus")
+        private Boolean debugStatus;
+
         @NameInMap("Eip")
         private String eip;
 
@@ -210,6 +213,7 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
 
         private Instances(Builder builder) {
             this.createTimeStamp = builder.createTimeStamp;
+            this.debugStatus = builder.debugStatus;
             this.eip = builder.eip;
             this.finishTimeStamp = builder.finishTimeStamp;
             this.groupId = builder.groupId;
@@ -236,6 +240,13 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
          */
         public Long getCreateTimeStamp() {
             return this.createTimeStamp;
+        }
+
+        /**
+         * @return debugStatus
+         */
+        public Boolean getDebugStatus() {
+            return this.debugStatus;
         }
 
         /**
@@ -317,6 +328,7 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long createTimeStamp; 
+            private Boolean debugStatus; 
             private String eip; 
             private Long finishTimeStamp; 
             private String groupId; 
@@ -334,6 +346,14 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
              */
             public Builder createTimeStamp(Long createTimeStamp) {
                 this.createTimeStamp = createTimeStamp;
+                return this;
+            }
+
+            /**
+             * DebugStatus.
+             */
+            public Builder debugStatus(Boolean debugStatus) {
+                this.debugStatus = debugStatus;
                 return this;
             }
 

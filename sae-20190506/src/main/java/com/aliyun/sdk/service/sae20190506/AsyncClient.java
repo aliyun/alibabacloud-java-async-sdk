@@ -108,6 +108,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<EnableApplicationScalingRuleResponse> enableApplicationScalingRule(EnableApplicationScalingRuleRequest request);
 
+    CompletableFuture<ExecJobResponse> execJob(ExecJobRequest request);
+
     CompletableFuture<ListAppEventsResponse> listAppEvents(ListAppEventsRequest request);
 
     CompletableFuture<ListAppServicesPageResponse> listAppServicesPage(ListAppServicesPageRequest request);

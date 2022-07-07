@@ -22,10 +22,15 @@ public class DescribeConfigurationPriceRequest extends Request {
     @Validation(required = true)
     private Integer memory;
 
+    @Query
+    @NameInMap("Workload")
+    private String workload;
+
     private DescribeConfigurationPriceRequest(Builder builder) {
         super(builder);
         this.cpu = builder.cpu;
         this.memory = builder.memory;
+        this.workload = builder.workload;
     }
 
     public static Builder builder() {
@@ -55,9 +60,17 @@ public class DescribeConfigurationPriceRequest extends Request {
         return this.memory;
     }
 
+    /**
+     * @return workload
+     */
+    public String getWorkload() {
+        return this.workload;
+    }
+
     public static final class Builder extends Request.Builder<DescribeConfigurationPriceRequest, Builder> {
         private Integer cpu; 
         private Integer memory; 
+        private String workload; 
 
         private Builder() {
             super();
@@ -67,6 +80,7 @@ public class DescribeConfigurationPriceRequest extends Request {
             super(request);
             this.cpu = request.cpu;
             this.memory = request.memory;
+            this.workload = request.workload;
         } 
 
         /**
@@ -84,6 +98,15 @@ public class DescribeConfigurationPriceRequest extends Request {
         public Builder memory(Integer memory) {
             this.putQueryParameter("Memory", memory);
             this.memory = memory;
+            return this;
+        }
+
+        /**
+         * Workload.
+         */
+        public Builder workload(String workload) {
+            this.putQueryParameter("Workload", workload);
+            this.workload = workload;
             return this;
         }
 
