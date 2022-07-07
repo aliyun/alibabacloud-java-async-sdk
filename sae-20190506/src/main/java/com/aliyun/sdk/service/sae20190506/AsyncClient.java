@@ -92,6 +92,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeInstanceSpecificationsResponse> describeInstanceSpecifications(DescribeInstanceSpecificationsRequest request);
 
+    CompletableFuture<DescribeJobStatusResponse> describeJobStatus(DescribeJobStatusRequest request);
+
     CompletableFuture<DescribeNamespaceResponse> describeNamespace(DescribeNamespaceRequest request);
 
     CompletableFuture<DescribeNamespaceListResponse> describeNamespaceList(DescribeNamespaceListRequest request);
