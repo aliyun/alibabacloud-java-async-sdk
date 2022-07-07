@@ -23,7 +23,7 @@ public class CreateCategoryRequest extends Request {
 
     @Body
     @NameInMap("ParentCategoryId")
-    @Validation(required = true)
+    @Validation()
     private Long parentCategoryId;
 
     @Host

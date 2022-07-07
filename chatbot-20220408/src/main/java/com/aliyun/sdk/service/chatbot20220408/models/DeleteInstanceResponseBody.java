@@ -31,7 +31,7 @@ public class DeleteInstanceResponseBody extends TeaModel {
     private Long id;
 
     @NameInMap("RequestId")
-    private byte[] requestId;
+    private String requestId;
 
     @NameInMap("Response")
     private Long response;
@@ -104,7 +104,7 @@ public class DeleteInstanceResponseBody extends TeaModel {
     /**
      * @return requestId
      */
-    public byte[] getRequestId() {
+    public String getRequestId() {
         return this.requestId;
     }
 
@@ -129,7 +129,7 @@ public class DeleteInstanceResponseBody extends TeaModel {
         private String createUserName; 
         private String error; 
         private Long id; 
-        private byte[] requestId; 
+        private String requestId; 
         private Long response; 
         private String status; 
 
@@ -184,7 +184,7 @@ public class DeleteInstanceResponseBody extends TeaModel {
         /**
          * 请求Id
          */
-        public Builder requestId(byte[] requestId) {
+        public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
