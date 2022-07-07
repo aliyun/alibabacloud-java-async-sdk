@@ -18,11 +18,19 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    CompletableFuture<ApplyConfigToMachineGroupResponse> applyConfigToMachineGroup(ApplyConfigToMachineGroupRequest request);
+
     CompletableFuture<CreateConsumerGroupResponse> createConsumerGroup(CreateConsumerGroupRequest request);
+
+    CompletableFuture<CreateDomainResponse> createDomain(CreateDomainRequest request);
 
     CompletableFuture<CreateIndexResponse> createIndex(CreateIndexRequest request);
 
     CompletableFuture<CreateLogStoreResponse> createLogStore(CreateLogStoreRequest request);
+
+    CompletableFuture<CreateLoggingResponse> createLogging(CreateLoggingRequest request);
+
+    CompletableFuture<CreateMachineGroupResponse> createMachineGroup(CreateMachineGroupRequest request);
 
     CompletableFuture<CreateProjectResponse> createProject(CreateProjectRequest request);
 
@@ -30,11 +38,21 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteConsumerGroupResponse> deleteConsumerGroup(DeleteConsumerGroupRequest request);
 
+    CompletableFuture<DeleteDomainResponse> deleteDomain(DeleteDomainRequest request);
+
     CompletableFuture<DeleteIndexResponse> deleteIndex(DeleteIndexRequest request);
 
     CompletableFuture<DeleteLogStoreResponse> deleteLogStore(DeleteLogStoreRequest request);
 
+    CompletableFuture<DeleteLoggingResponse> deleteLogging(DeleteLoggingRequest request);
+
+    CompletableFuture<DeleteMachineGroupResponse> deleteMachineGroup(DeleteMachineGroupRequest request);
+
     CompletableFuture<DeleteProjectResponse> deleteProject(DeleteProjectRequest request);
+
+    CompletableFuture<GetAppliedConfigsResponse> getAppliedConfigs(GetAppliedConfigsRequest request);
+
+    CompletableFuture<GetCheckPointResponse> getCheckPoint(GetCheckPointRequest request);
 
     CompletableFuture<GetContextLogsResponse> getContextLogs(GetContextLogsRequest request);
 
@@ -48,7 +66,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetLogStoreResponse> getLogStore(GetLogStoreRequest request);
 
+    CompletableFuture<GetLoggingResponse> getLogging(GetLoggingRequest request);
+
     CompletableFuture<GetLogsResponse> getLogs(GetLogsRequest request);
+
+    CompletableFuture<GetMachineGroupResponse> getMachineGroup(GetMachineGroupRequest request);
 
     CompletableFuture<GetProjectResponse> getProject(GetProjectRequest request);
 
@@ -58,7 +80,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListConsumerGroupResponse> listConsumerGroup(ListConsumerGroupRequest request);
 
+    CompletableFuture<ListDomainsResponse> listDomains(ListDomainsRequest request);
+
     CompletableFuture<ListLogStoresResponse> listLogStores(ListLogStoresRequest request);
+
+    CompletableFuture<ListMachineGroupResponse> listMachineGroup(ListMachineGroupRequest request);
+
+    CompletableFuture<ListMachinesResponse> listMachines(ListMachinesRequest request);
 
     CompletableFuture<ListProjectResponse> listProject(ListProjectRequest request);
 
@@ -70,17 +98,25 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<MergeShardsResponse> mergeShards(MergeShardsRequest request);
 
+    CompletableFuture<RemoveConfigFromMachineGroupResponse> removeConfigFromMachineGroup(RemoveConfigFromMachineGroupRequest request);
+
     CompletableFuture<SplitShardResponse> splitShard(SplitShardRequest request);
 
     CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
 
     CompletableFuture<UnTagResourcesResponse> unTagResources(UnTagResourcesRequest request);
 
+    CompletableFuture<UpdateCheckPointResponse> updateCheckPoint(UpdateCheckPointRequest request);
+
     CompletableFuture<UpdateConsumerGroupResponse> updateConsumerGroup(UpdateConsumerGroupRequest request);
 
     CompletableFuture<UpdateIndexResponse> updateIndex(UpdateIndexRequest request);
 
     CompletableFuture<UpdateLogStoreResponse> updateLogStore(UpdateLogStoreRequest request);
+
+    CompletableFuture<UpdateLoggingResponse> updateLogging(UpdateLoggingRequest request);
+
+    CompletableFuture<UpdateMachineGroupResponse> updateMachineGroup(UpdateMachineGroupRequest request);
 
     CompletableFuture<UpdateProjectResponse> updateProject(UpdateProjectRequest request);
 
