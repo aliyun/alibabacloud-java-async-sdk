@@ -70,11 +70,11 @@ public class DescribeSuspEventsRequest extends Request {
 
     @Query
     @NameInMap("OperateTimeEnd")
-    private Long operateTimeEnd;
+    private String operateTimeEnd;
 
     @Query
     @NameInMap("OperateTimeStart")
-    private Long operateTimeStart;
+    private String operateTimeStart;
 
     @Query
     @NameInMap("PageSize")
@@ -107,6 +107,14 @@ public class DescribeSuspEventsRequest extends Request {
     @Query
     @NameInMap("TargetType")
     private String targetType;
+
+    @Query
+    @NameInMap("TimeEnd")
+    private String timeEnd;
+
+    @Query
+    @NameInMap("TimeStart")
+    private String timeStart;
 
     @Query
     @NameInMap("UniqueInfo")
@@ -142,6 +150,8 @@ public class DescribeSuspEventsRequest extends Request {
         this.status = builder.status;
         this.tacticId = builder.tacticId;
         this.targetType = builder.targetType;
+        this.timeEnd = builder.timeEnd;
+        this.timeStart = builder.timeStart;
         this.uniqueInfo = builder.uniqueInfo;
         this.uuids = builder.uuids;
     }
@@ -260,14 +270,14 @@ public class DescribeSuspEventsRequest extends Request {
     /**
      * @return operateTimeEnd
      */
-    public Long getOperateTimeEnd() {
+    public String getOperateTimeEnd() {
         return this.operateTimeEnd;
     }
 
     /**
      * @return operateTimeStart
      */
-    public Long getOperateTimeStart() {
+    public String getOperateTimeStart() {
         return this.operateTimeStart;
     }
 
@@ -328,6 +338,20 @@ public class DescribeSuspEventsRequest extends Request {
     }
 
     /**
+     * @return timeEnd
+     */
+    public String getTimeEnd() {
+        return this.timeEnd;
+    }
+
+    /**
+     * @return timeStart
+     */
+    public String getTimeStart() {
+        return this.timeStart;
+    }
+
+    /**
      * @return uniqueInfo
      */
     public String getUniqueInfo() {
@@ -356,8 +380,8 @@ public class DescribeSuspEventsRequest extends Request {
         private String levels; 
         private String name; 
         private java.util.List < String > operateErrorCodeList; 
-        private Long operateTimeEnd; 
-        private Long operateTimeStart; 
+        private String operateTimeEnd; 
+        private String operateTimeStart; 
         private String pageSize; 
         private String parentEventTypes; 
         private String remark; 
@@ -366,6 +390,8 @@ public class DescribeSuspEventsRequest extends Request {
         private String status; 
         private String tacticId; 
         private String targetType; 
+        private String timeEnd; 
+        private String timeStart; 
         private String uniqueInfo; 
         private String uuids; 
 
@@ -399,6 +425,8 @@ public class DescribeSuspEventsRequest extends Request {
             this.status = request.status;
             this.tacticId = request.tacticId;
             this.targetType = request.targetType;
+            this.timeEnd = request.timeEnd;
+            this.timeStart = request.timeStart;
             this.uniqueInfo = request.uniqueInfo;
             this.uuids = request.uuids;
         } 
@@ -532,7 +560,7 @@ public class DescribeSuspEventsRequest extends Request {
         /**
          * 处理时间结束时间
          */
-        public Builder operateTimeEnd(Long operateTimeEnd) {
+        public Builder operateTimeEnd(String operateTimeEnd) {
             this.putQueryParameter("OperateTimeEnd", operateTimeEnd);
             this.operateTimeEnd = operateTimeEnd;
             return this;
@@ -541,7 +569,7 @@ public class DescribeSuspEventsRequest extends Request {
         /**
          * 处理时间开始时间
          */
-        public Builder operateTimeStart(Long operateTimeStart) {
+        public Builder operateTimeStart(String operateTimeStart) {
             this.putQueryParameter("OperateTimeStart", operateTimeStart);
             this.operateTimeStart = operateTimeStart;
             return this;
@@ -616,6 +644,24 @@ public class DescribeSuspEventsRequest extends Request {
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);
             this.targetType = targetType;
+            return this;
+        }
+
+        /**
+         * 最新发生结束时间
+         */
+        public Builder timeEnd(String timeEnd) {
+            this.putQueryParameter("TimeEnd", timeEnd);
+            this.timeEnd = timeEnd;
+            return this;
+        }
+
+        /**
+         * 最新发生开始时间
+         */
+        public Builder timeStart(String timeStart) {
+            this.putQueryParameter("TimeStart", timeStart);
+            this.timeStart = timeStart;
             return this;
         }
 

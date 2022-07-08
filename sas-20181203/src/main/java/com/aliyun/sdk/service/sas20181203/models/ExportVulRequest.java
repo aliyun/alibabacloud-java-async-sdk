@@ -42,6 +42,7 @@ public class ExportVulRequest extends Request {
 
     @Query
     @NameInMap("Type")
+    @Validation(required = true)
     private String type;
 
     @Query

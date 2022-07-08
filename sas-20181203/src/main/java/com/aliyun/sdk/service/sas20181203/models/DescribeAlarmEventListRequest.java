@@ -55,6 +55,14 @@ public class DescribeAlarmEventListRequest extends Request {
     private java.util.List < String > operateErrorCodeList;
 
     @Query
+    @NameInMap("OperateTimeEnd")
+    private String operateTimeEnd;
+
+    @Query
+    @NameInMap("OperateTimeStart")
+    private String operateTimeStart;
+
+    @Query
     @NameInMap("PageSize")
     @Validation(required = true)
     private String pageSize;
@@ -70,6 +78,14 @@ public class DescribeAlarmEventListRequest extends Request {
     @Query
     @NameInMap("TacticId")
     private String tacticId;
+
+    @Query
+    @NameInMap("TimeEnd")
+    private String timeEnd;
+
+    @Query
+    @NameInMap("TimeStart")
+    private String timeStart;
 
     @Query
     @NameInMap("UniqueInfo")
@@ -91,10 +107,14 @@ public class DescribeAlarmEventListRequest extends Request {
         this.lang = builder.lang;
         this.levels = builder.levels;
         this.operateErrorCodeList = builder.operateErrorCodeList;
+        this.operateTimeEnd = builder.operateTimeEnd;
+        this.operateTimeStart = builder.operateTimeStart;
         this.pageSize = builder.pageSize;
         this.remark = builder.remark;
         this.sourceIp = builder.sourceIp;
         this.tacticId = builder.tacticId;
+        this.timeEnd = builder.timeEnd;
+        this.timeStart = builder.timeStart;
         this.uniqueInfo = builder.uniqueInfo;
         this.uuids = builder.uuids;
     }
@@ -183,6 +203,20 @@ public class DescribeAlarmEventListRequest extends Request {
     }
 
     /**
+     * @return operateTimeEnd
+     */
+    public String getOperateTimeEnd() {
+        return this.operateTimeEnd;
+    }
+
+    /**
+     * @return operateTimeStart
+     */
+    public String getOperateTimeStart() {
+        return this.operateTimeStart;
+    }
+
+    /**
      * @return pageSize
      */
     public String getPageSize() {
@@ -211,6 +245,20 @@ public class DescribeAlarmEventListRequest extends Request {
     }
 
     /**
+     * @return timeEnd
+     */
+    public String getTimeEnd() {
+        return this.timeEnd;
+    }
+
+    /**
+     * @return timeStart
+     */
+    public String getTimeStart() {
+        return this.timeStart;
+    }
+
+    /**
      * @return uniqueInfo
      */
     public String getUniqueInfo() {
@@ -235,10 +283,14 @@ public class DescribeAlarmEventListRequest extends Request {
         private String lang; 
         private String levels; 
         private java.util.List < String > operateErrorCodeList; 
+        private String operateTimeEnd; 
+        private String operateTimeStart; 
         private String pageSize; 
         private String remark; 
         private String sourceIp; 
         private String tacticId; 
+        private String timeEnd; 
+        private String timeStart; 
         private String uniqueInfo; 
         private String uuids; 
 
@@ -258,10 +310,14 @@ public class DescribeAlarmEventListRequest extends Request {
             this.lang = request.lang;
             this.levels = request.levels;
             this.operateErrorCodeList = request.operateErrorCodeList;
+            this.operateTimeEnd = request.operateTimeEnd;
+            this.operateTimeStart = request.operateTimeStart;
             this.pageSize = request.pageSize;
             this.remark = request.remark;
             this.sourceIp = request.sourceIp;
             this.tacticId = request.tacticId;
+            this.timeEnd = request.timeEnd;
+            this.timeStart = request.timeStart;
             this.uniqueInfo = request.uniqueInfo;
             this.uuids = request.uuids;
         } 
@@ -357,6 +413,24 @@ public class DescribeAlarmEventListRequest extends Request {
         }
 
         /**
+         * OperateTimeEnd.
+         */
+        public Builder operateTimeEnd(String operateTimeEnd) {
+            this.putQueryParameter("OperateTimeEnd", operateTimeEnd);
+            this.operateTimeEnd = operateTimeEnd;
+            return this;
+        }
+
+        /**
+         * OperateTimeStart.
+         */
+        public Builder operateTimeStart(String operateTimeStart) {
+            this.putQueryParameter("OperateTimeStart", operateTimeStart);
+            this.operateTimeStart = operateTimeStart;
+            return this;
+        }
+
+        /**
          * PageSize.
          */
         public Builder pageSize(String pageSize) {
@@ -389,6 +463,24 @@ public class DescribeAlarmEventListRequest extends Request {
         public Builder tacticId(String tacticId) {
             this.putQueryParameter("TacticId", tacticId);
             this.tacticId = tacticId;
+            return this;
+        }
+
+        /**
+         * TimeEnd.
+         */
+        public Builder timeEnd(String timeEnd) {
+            this.putQueryParameter("TimeEnd", timeEnd);
+            this.timeEnd = timeEnd;
+            return this;
+        }
+
+        /**
+         * TimeStart.
+         */
+        public Builder timeStart(String timeStart) {
+            this.putQueryParameter("TimeStart", timeStart);
+            this.timeStart = timeStart;
             return this;
         }
 
