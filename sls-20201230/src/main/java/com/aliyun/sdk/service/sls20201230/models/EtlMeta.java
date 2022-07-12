@@ -28,7 +28,7 @@ public class EtlMeta extends TeaModel {
     private String etlMetaTag;
 
     @NameInMap("etlMetaValue")
-    private java.util.Map < String, String > etlMetaValue;
+    private String etlMetaValue;
 
     private EtlMeta(Builder builder) {
         this.enable = builder.enable;
@@ -77,7 +77,7 @@ public class EtlMeta extends TeaModel {
     /**
      * @return etlMetaValue
      */
-    public java.util.Map < String, String > getEtlMetaValue() {
+    public String getEtlMetaValue() {
         return this.etlMetaValue;
     }
 
@@ -86,7 +86,7 @@ public class EtlMeta extends TeaModel {
         private String etlMetaKey; 
         private String etlMetaName; 
         private String etlMetaTag; 
-        private java.util.Map < String, String > etlMetaValue; 
+        private String etlMetaValue; 
 
         /**
          * 是否启用
@@ -123,7 +123,7 @@ public class EtlMeta extends TeaModel {
         /**
          * value
          */
-        public Builder etlMetaValue(java.util.Map < String, String > etlMetaValue) {
+        public Builder etlMetaValue(String etlMetaValue) {
             this.etlMetaValue = etlMetaValue;
             return this;
         }

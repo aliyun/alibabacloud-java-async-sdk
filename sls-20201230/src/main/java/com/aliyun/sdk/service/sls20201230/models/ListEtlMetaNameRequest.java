@@ -7,15 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
- * {@link ListLogStoresRequest} extends {@link RequestModel}
+ * {@link ListEtlMetaNameRequest} extends {@link RequestModel}
  *
- * <p>ListLogStoresRequest</p>
+ * <p>ListEtlMetaNameRequest</p>
  */
-public class ListLogStoresRequest extends Request {
-    @Query
-    @NameInMap("logstoreName")
-    private String logstoreName;
-
+public class ListEtlMetaNameRequest extends Request {
     @Query
     @NameInMap("offset")
     private Integer offset;
@@ -29,37 +25,24 @@ public class ListLogStoresRequest extends Request {
     @NameInMap("size")
     private Integer size;
 
-    @Query
-    @NameInMap("telemetryType")
-    private String telemetryType;
-
-    private ListLogStoresRequest(Builder builder) {
+    private ListEtlMetaNameRequest(Builder builder) {
         super(builder);
-        this.logstoreName = builder.logstoreName;
         this.offset = builder.offset;
         this.project = builder.project;
         this.size = builder.size;
-        this.telemetryType = builder.telemetryType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ListLogStoresRequest create() {
+    public static ListEtlMetaNameRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return logstoreName
-     */
-    public String getLogstoreName() {
-        return this.logstoreName;
     }
 
     /**
@@ -83,44 +66,24 @@ public class ListLogStoresRequest extends Request {
         return this.size;
     }
 
-    /**
-     * @return telemetryType
-     */
-    public String getTelemetryType() {
-        return this.telemetryType;
-    }
-
-    public static final class Builder extends Request.Builder<ListLogStoresRequest, Builder> {
-        private String logstoreName; 
+    public static final class Builder extends Request.Builder<ListEtlMetaNameRequest, Builder> {
         private Integer offset; 
         private String project; 
         private Integer size; 
-        private String telemetryType; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListLogStoresRequest request) {
+        private Builder(ListEtlMetaNameRequest request) {
             super(request);
-            this.logstoreName = request.logstoreName;
             this.offset = request.offset;
             this.project = request.project;
             this.size = request.size;
-            this.telemetryType = request.telemetryType;
         } 
 
         /**
-         * logstoreName.
-         */
-        public Builder logstoreName(String logstoreName) {
-            this.putQueryParameter("logstoreName", logstoreName);
-            this.logstoreName = logstoreName;
-            return this;
-        }
-
-        /**
-         * offset.
+         * 默认值为 0。
          */
         public Builder offset(Integer offset) {
             this.putQueryParameter("offset", offset);
@@ -129,7 +92,7 @@ public class ListLogStoresRequest extends Request {
         }
 
         /**
-         * project.
+         * A short description of struct
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -138,7 +101,7 @@ public class ListLogStoresRequest extends Request {
         }
 
         /**
-         * 默认值为 500。
+         * 默认值 200。
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);
@@ -146,18 +109,9 @@ public class ListLogStoresRequest extends Request {
             return this;
         }
 
-        /**
-         * telemetryType.
-         */
-        public Builder telemetryType(String telemetryType) {
-            this.putQueryParameter("telemetryType", telemetryType);
-            this.telemetryType = telemetryType;
-            return this;
-        }
-
         @Override
-        public ListLogStoresRequest build() {
-            return new ListLogStoresRequest(this);
+        public ListEtlMetaNameRequest build() {
+            return new ListEtlMetaNameRequest(this);
         } 
 
     } 

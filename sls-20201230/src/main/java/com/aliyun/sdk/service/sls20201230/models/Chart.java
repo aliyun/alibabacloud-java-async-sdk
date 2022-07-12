@@ -13,7 +13,8 @@ import com.aliyun.sdk.gateway.sls.models.*;
  */
 public class Chart extends TeaModel {
     @NameInMap("action")
-    private java.util.Map < String, String > action;
+    @Validation(required = true)
+    private java.util.Map < String, ? > action;
 
     @NameInMap("display")
     @Validation(required = true)
@@ -50,7 +51,7 @@ public class Chart extends TeaModel {
     /**
      * @return action
      */
-    public java.util.Map < String, String > getAction() {
+    public java.util.Map < String, ? > getAction() {
         return this.action;
     }
 
@@ -83,7 +84,7 @@ public class Chart extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.Map < String, String > action; 
+        private java.util.Map < String, ? > action; 
         private Display display; 
         private Search search; 
         private String title; 
@@ -92,7 +93,7 @@ public class Chart extends TeaModel {
         /**
          * action
          */
-        public Builder action(java.util.Map < String, String > action) {
+        public Builder action(java.util.Map < String, ? > action) {
             this.action = action;
             return this;
         }
@@ -114,7 +115,7 @@ public class Chart extends TeaModel {
         }
 
         /**
-         * 图表标题
+         * 图表标题。支持大小写英文字母、数字、下划线_、连字符-，连字符与下划线不能作为名称开头与结尾，长度必须在[2,64] 之间。
          */
         public Builder title(String title) {
             this.title = title;
@@ -122,7 +123,7 @@ public class Chart extends TeaModel {
         }
 
         /**
-         * 图标类型
+         * 图表的类型。
          */
         public Builder type(String type) {
             this.type = type;

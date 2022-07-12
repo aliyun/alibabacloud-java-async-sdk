@@ -13,18 +13,14 @@ import com.aliyun.sdk.gateway.sls.models.*;
  */
 public class UpdateMachineGroupRequest extends Request {
     @Path
-    @NameInMap("machineGroup")
-    @Validation(required = true)
-    private String machineGroup;
-
-    @Body
-    @NameInMap("groupAttribute")
-    private GroupAttribute groupAttribute;
-
     @Body
     @NameInMap("groupName")
     @Validation(required = true)
     private String groupName;
+
+    @Body
+    @NameInMap("groupAttribute")
+    private GroupAttribute groupAttribute;
 
     @Body
     @NameInMap("groupType")
@@ -47,9 +43,8 @@ public class UpdateMachineGroupRequest extends Request {
 
     private UpdateMachineGroupRequest(Builder builder) {
         super(builder);
-        this.machineGroup = builder.machineGroup;
-        this.groupAttribute = builder.groupAttribute;
         this.groupName = builder.groupName;
+        this.groupAttribute = builder.groupAttribute;
         this.groupType = builder.groupType;
         this.machineIdentifyType = builder.machineIdentifyType;
         this.machineList = builder.machineList;
@@ -70,10 +65,10 @@ public class UpdateMachineGroupRequest extends Request {
     }
 
     /**
-     * @return machineGroup
+     * @return groupName
      */
-    public String getMachineGroup() {
-        return this.machineGroup;
+    public String getGroupName() {
+        return this.groupName;
     }
 
     /**
@@ -81,13 +76,6 @@ public class UpdateMachineGroupRequest extends Request {
      */
     public GroupAttribute getGroupAttribute() {
         return this.groupAttribute;
-    }
-
-    /**
-     * @return groupName
-     */
-    public String getGroupName() {
-        return this.groupName;
     }
 
     /**
@@ -119,9 +107,8 @@ public class UpdateMachineGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateMachineGroupRequest, Builder> {
-        private String machineGroup; 
-        private GroupAttribute groupAttribute; 
         private String groupName; 
+        private GroupAttribute groupAttribute; 
         private String groupType; 
         private String machineIdentifyType; 
         private java.util.List < String > machineList; 
@@ -133,9 +120,8 @@ public class UpdateMachineGroupRequest extends Request {
 
         private Builder(UpdateMachineGroupRequest request) {
             super(request);
-            this.machineGroup = request.machineGroup;
-            this.groupAttribute = request.groupAttribute;
             this.groupName = request.groupName;
+            this.groupAttribute = request.groupAttribute;
             this.groupType = request.groupType;
             this.machineIdentifyType = request.machineIdentifyType;
             this.machineList = request.machineList;
@@ -145,9 +131,10 @@ public class UpdateMachineGroupRequest extends Request {
         /**
          * 机器组名称。
          */
-        public Builder machineGroup(String machineGroup) {
-            this.putPathParameter("machineGroup", machineGroup);
-            this.machineGroup = machineGroup;
+        public Builder groupName(String groupName) {
+            this.putPathParameter("groupName", groupName);
+            this.putBodyParameter("groupName", groupName);
+            this.groupName = groupName;
             return this;
         }
 
@@ -157,15 +144,6 @@ public class UpdateMachineGroupRequest extends Request {
         public Builder groupAttribute(GroupAttribute groupAttribute) {
             this.putBodyParameter("groupAttribute", groupAttribute);
             this.groupAttribute = groupAttribute;
-            return this;
-        }
-
-        /**
-         * 机器组名称。
-         */
-        public Builder groupName(String groupName) {
-            this.putBodyParameter("groupName", groupName);
-            this.groupName = groupName;
             return this;
         }
 

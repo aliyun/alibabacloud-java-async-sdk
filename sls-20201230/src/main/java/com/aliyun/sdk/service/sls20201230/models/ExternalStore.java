@@ -18,7 +18,7 @@ public class ExternalStore extends TeaModel {
 
     @NameInMap("parameter")
     @Validation(required = true)
-    private Parameter parameter;
+    private java.util.Map < String, ? > parameter;
 
     @NameInMap("storeType")
     @Validation(required = true)
@@ -48,7 +48,7 @@ public class ExternalStore extends TeaModel {
     /**
      * @return parameter
      */
-    public Parameter getParameter() {
+    public java.util.Map < String, ? > getParameter() {
         return this.parameter;
     }
 
@@ -61,11 +61,11 @@ public class ExternalStore extends TeaModel {
 
     public static final class Builder {
         private String externalStoreName; 
-        private Parameter parameter; 
+        private java.util.Map < String, ? > parameter; 
         private String storeType; 
 
         /**
-         * 名称
+         * 外部存储的名称。
          */
         public Builder externalStoreName(String externalStoreName) {
             this.externalStoreName = externalStoreName;
@@ -75,13 +75,13 @@ public class ExternalStore extends TeaModel {
         /**
          * 参数
          */
-        public Builder parameter(Parameter parameter) {
+        public Builder parameter(java.util.Map < String, ? > parameter) {
             this.parameter = parameter;
             return this;
         }
 
         /**
-         * 类型
+         * 类型。可选 rds-vpc 或者 oss
          */
         public Builder storeType(String storeType) {
             this.storeType = storeType;
@@ -94,205 +94,4 @@ public class ExternalStore extends TeaModel {
 
     } 
 
-    public static class Parameter extends TeaModel {
-        @NameInMap("db")
-        private String db;
-
-        @NameInMap("host")
-        private String host;
-
-        @NameInMap("instance-id")
-        private String instanceId;
-
-        @NameInMap("password")
-        private String password;
-
-        @NameInMap("port")
-        private String port;
-
-        @NameInMap("region")
-        private String region;
-
-        @NameInMap("table")
-        private String table;
-
-        @NameInMap("username")
-        private String username;
-
-        @NameInMap("vpc-id")
-        private String vpcId;
-
-        private Parameter(Builder builder) {
-            this.db = builder.db;
-            this.host = builder.host;
-            this.instanceId = builder.instanceId;
-            this.password = builder.password;
-            this.port = builder.port;
-            this.region = builder.region;
-            this.table = builder.table;
-            this.username = builder.username;
-            this.vpcId = builder.vpcId;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Parameter create() {
-            return builder().build();
-        }
-
-        /**
-         * @return db
-         */
-        public String getDb() {
-            return this.db;
-        }
-
-        /**
-         * @return host
-         */
-        public String getHost() {
-            return this.host;
-        }
-
-        /**
-         * @return instanceId
-         */
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
-        /**
-         * @return password
-         */
-        public String getPassword() {
-            return this.password;
-        }
-
-        /**
-         * @return port
-         */
-        public String getPort() {
-            return this.port;
-        }
-
-        /**
-         * @return region
-         */
-        public String getRegion() {
-            return this.region;
-        }
-
-        /**
-         * @return table
-         */
-        public String getTable() {
-            return this.table;
-        }
-
-        /**
-         * @return username
-         */
-        public String getUsername() {
-            return this.username;
-        }
-
-        /**
-         * @return vpcId
-         */
-        public String getVpcId() {
-            return this.vpcId;
-        }
-
-        public static final class Builder {
-            private String db; 
-            private String host; 
-            private String instanceId; 
-            private String password; 
-            private String port; 
-            private String region; 
-            private String table; 
-            private String username; 
-            private String vpcId; 
-
-            /**
-             * meta
-             */
-            public Builder db(String db) {
-                this.db = db;
-                return this;
-            }
-
-            /**
-             * 192.168.XX.XX
-             */
-            public Builder host(String host) {
-                this.host = host;
-                return this;
-            }
-
-            /**
-             * RDS MySQL实例ID。
-             */
-            public Builder instanceId(String instanceId) {
-                this.instanceId = instanceId;
-                return this;
-            }
-
-            /**
-             * sfdsfldsfksfls****
-             */
-            public Builder password(String password) {
-                this.password = password;
-                return this;
-            }
-
-            /**
-             * 3306
-             */
-            public Builder port(String port) {
-                this.port = port;
-                return this;
-            }
-
-            /**
-             * cn-qingdao
-             */
-            public Builder region(String region) {
-                this.region = region;
-                return this;
-            }
-
-            /**
-             * join_meta
-             */
-            public Builder table(String table) {
-                this.table = table;
-                return this;
-            }
-
-            /**
-             * root
-             */
-            public Builder username(String username) {
-                this.username = username;
-                return this;
-            }
-
-            /**
-             * RDS MySQL实例所属的VPC ID。
-             */
-            public Builder vpcId(String vpcId) {
-                this.vpcId = vpcId;
-                return this;
-            }
-
-            public Parameter build() {
-                return new Parameter(this);
-            } 
-
-        } 
-
-    }
 }

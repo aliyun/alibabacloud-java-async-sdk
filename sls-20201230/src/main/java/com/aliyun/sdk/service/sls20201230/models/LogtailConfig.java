@@ -127,7 +127,7 @@ public class LogtailConfig extends TeaModel {
         private String outputType; 
 
         /**
-         * configName
+         * logtail 配置的名称。
          */
         public Builder configName(String configName) {
             this.configName = configName;
@@ -135,7 +135,7 @@ public class LogtailConfig extends TeaModel {
         }
 
         /**
-         * 创建时间
+         * 创建时间，unix 时间戳。
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -143,7 +143,7 @@ public class LogtailConfig extends TeaModel {
         }
 
         /**
-         * inputDetail
+         * logtail 输入的详细配置。
          */
         public Builder inputDetail(java.util.Map < String, ? > inputDetail) {
             this.inputDetail = inputDetail;
@@ -151,7 +151,7 @@ public class LogtailConfig extends TeaModel {
         }
 
         /**
-         * inputType
+         * logtail 读取日志的输入类型。
          */
         public Builder inputType(String inputType) {
             this.inputType = inputType;
@@ -159,7 +159,7 @@ public class LogtailConfig extends TeaModel {
         }
 
         /**
-         * 修改时间
+         * 最后一次修改时间，unix 时间戳。
          */
         public Builder lastModifyTime(Long lastModifyTime) {
             this.lastModifyTime = lastModifyTime;
@@ -167,7 +167,7 @@ public class LogtailConfig extends TeaModel {
         }
 
         /**
-         * 日志样例
+         * 日志样例，可以用于自动生成正则捕获字段。
          */
         public Builder logSample(String logSample) {
             this.logSample = logSample;
@@ -175,7 +175,7 @@ public class LogtailConfig extends TeaModel {
         }
 
         /**
-         * outputDetail
+         * logtail 输出的详细配置。
          */
         public Builder outputDetail(OutputDetail outputDetail) {
             this.outputDetail = outputDetail;
@@ -183,7 +183,7 @@ public class LogtailConfig extends TeaModel {
         }
 
         /**
-         * outputType
+         * logtail 输出的目标类型。这里固定选择 LogService。
          */
         public Builder outputType(String outputType) {
             this.outputType = outputType;
@@ -249,7 +249,7 @@ public class LogtailConfig extends TeaModel {
             private String region; 
 
             /**
-             * endpoint
+             * 日志项目的 endpoint。
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -257,7 +257,7 @@ public class LogtailConfig extends TeaModel {
             }
 
             /**
-             * logstoreName
+             * 输出的目标 logstore 名称。
              */
             public Builder logstoreName(String logstoreName) {
                 this.logstoreName = logstoreName;
@@ -265,7 +265,7 @@ public class LogtailConfig extends TeaModel {
             }
 
             /**
-             * 地域
+             * 地域。
              */
             public Builder region(String region) {
                 this.region = region;

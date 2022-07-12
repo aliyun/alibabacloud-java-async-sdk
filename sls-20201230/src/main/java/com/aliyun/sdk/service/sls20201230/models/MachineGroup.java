@@ -105,7 +105,7 @@ public class MachineGroup extends TeaModel {
         }
 
         /**
-         * 机器组种类。
+         * 机器组种类。目前固定为空字符串。
          */
         public Builder groupType(String groupType) {
             this.groupType = groupType;

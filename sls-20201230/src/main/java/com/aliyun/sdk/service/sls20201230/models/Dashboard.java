@@ -89,7 +89,7 @@ public class Dashboard extends TeaModel {
         private String displayName; 
 
         /**
-         * 属性值
+         * 属性值，可用于修改仪表盘的布局等属性，例如 "type": "free" 自由布局， "type":"grid" 网格布局。
          */
         public Builder attribute(java.util.Map < String, String > attribute) {
             this.attribute = attribute;
@@ -97,7 +97,7 @@ public class Dashboard extends TeaModel {
         }
 
         /**
-         * 包含的图表
+         * 仪表盘内包含的图表。
          */
         public Builder charts(java.util.List < Chart > charts) {
             this.charts = charts;
@@ -105,7 +105,7 @@ public class Dashboard extends TeaModel {
         }
 
         /**
-         * 内部名称
+         * 仪表盘ID。同一个Project下，仪表盘ID唯一，不可重复。
          */
         public Builder dashboardName(String dashboardName) {
             this.dashboardName = dashboardName;
@@ -113,7 +113,7 @@ public class Dashboard extends TeaModel {
         }
 
         /**
-         * 描述信息
+         * 描述信息。
          */
         public Builder description(String description) {
             this.description = description;
@@ -121,7 +121,7 @@ public class Dashboard extends TeaModel {
         }
 
         /**
-         * 展示名称
+         * 仪表盘的展示名称。
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;

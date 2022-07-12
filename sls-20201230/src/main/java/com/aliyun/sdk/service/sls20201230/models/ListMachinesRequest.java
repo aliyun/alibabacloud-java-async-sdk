@@ -125,7 +125,7 @@ public class ListMachinesRequest extends Request {
         }
 
         /**
-         * 分页查询时，设置的每页行数。默认值为100，最大值为500。
+         * 分页查询时，设置的每页行数。默认值为2000。
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);

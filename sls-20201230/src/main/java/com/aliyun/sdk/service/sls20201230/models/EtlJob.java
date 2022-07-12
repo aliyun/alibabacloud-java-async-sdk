@@ -17,6 +17,7 @@ public class EtlJob extends TeaModel {
     private Boolean enable;
 
     @NameInMap("etlJobName")
+    @Validation(required = true)
     private String etlJobName;
 
     @NameInMap("functionConfig")
@@ -25,13 +26,14 @@ public class EtlJob extends TeaModel {
 
     @NameInMap("functionParameter")
     @Validation(required = true)
-    private java.util.Map < String, String > functionParameter;
+    private java.util.Map < String, ? > functionParameter;
 
     @NameInMap("logConfig")
     @Validation(required = true)
     private LogConfig logConfig;
 
     @NameInMap("sourceConfig")
+    @Validation(required = true)
     private SourceConfig sourceConfig;
 
     @NameInMap("triggerConfig")
@@ -80,7 +82,7 @@ public class EtlJob extends TeaModel {
     /**
      * @return functionParameter
      */
-    public java.util.Map < String, String > getFunctionParameter() {
+    public java.util.Map < String, ? > getFunctionParameter() {
         return this.functionParameter;
     }
 
@@ -109,7 +111,7 @@ public class EtlJob extends TeaModel {
         private Boolean enable; 
         private String etlJobName; 
         private FunctionConfig functionConfig; 
-        private java.util.Map < String, String > functionParameter; 
+        private java.util.Map < String, ? > functionParameter; 
         private LogConfig logConfig; 
         private SourceConfig sourceConfig; 
         private TriggerConfig triggerConfig; 
@@ -141,7 +143,7 @@ public class EtlJob extends TeaModel {
         /**
          * 参数列表
          */
-        public Builder functionParameter(java.util.Map < String, String > functionParameter) {
+        public Builder functionParameter(java.util.Map < String, ? > functionParameter) {
             this.functionParameter = functionParameter;
             return this;
         }
@@ -300,7 +302,7 @@ public class EtlJob extends TeaModel {
             }
 
             /**
-             * 函数 provider
+             * 函数 provider，可选值为 FunctionCompute 、CloudProdLogDispatch。当值为 FunctionCompute 时，endpoint、accountid 、regionName 、serviceName 、functionName 必选。
              */
             public Builder functionProvider(String functionProvider) {
                 this.functionProvider = functionProvider;
@@ -474,7 +476,6 @@ public class EtlJob extends TeaModel {
         private String roleArn;
 
         @NameInMap("startingPosition")
-        @Validation(required = true)
         private String startingPosition;
 
         @NameInMap("startingUnixtime")
@@ -543,7 +544,7 @@ public class EtlJob extends TeaModel {
             private Integer triggerInterval; 
 
             /**
-             * 最大重试次数
+             * 最大重试次数，必须在[0,100] 之间
              */
             public Builder maxRetryTime(Integer maxRetryTime) {
                 this.maxRetryTime = maxRetryTime;
@@ -559,7 +560,7 @@ public class EtlJob extends TeaModel {
             }
 
             /**
-             * 开始位置
+             * 开始位置，可选 latest、at-unixtime， 默认 latest。
              */
             public Builder startingPosition(String startingPosition) {
                 this.startingPosition = startingPosition;
@@ -575,7 +576,7 @@ public class EtlJob extends TeaModel {
             }
 
             /**
-             * 触发间隔
+             * 触发间隔，单位为秒，必须在 [3,600] 之间
              */
             public Builder triggerInterval(Integer triggerInterval) {
                 this.triggerInterval = triggerInterval;

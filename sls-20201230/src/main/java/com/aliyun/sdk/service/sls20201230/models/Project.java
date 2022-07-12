@@ -16,6 +16,7 @@ public class Project extends TeaModel {
     private String createTime;
 
     @NameInMap("description")
+    @Validation(required = true)
     private String description;
 
     @NameInMap("lastModifyTime")
@@ -25,6 +26,7 @@ public class Project extends TeaModel {
     private String owner;
 
     @NameInMap("projectName")
+    @Validation(required = true)
     private String projectName;
 
     @NameInMap("region")

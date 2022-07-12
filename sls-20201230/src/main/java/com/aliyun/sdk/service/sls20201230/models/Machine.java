@@ -13,15 +13,12 @@ import com.aliyun.sdk.gateway.sls.models.*;
  */
 public class Machine extends TeaModel {
     @NameInMap("ip")
-    @Validation(required = true)
     private String ip;
 
     @NameInMap("lastHeartbeatTime")
-    @Validation(required = true)
     private Long lastHeartbeatTime;
 
     @NameInMap("machine-uniqueid")
-    @Validation(required = true)
     private String machineUniqueid;
 
     @NameInMap("userdefined-id")
@@ -77,7 +74,7 @@ public class Machine extends TeaModel {
         private String userdefinedId; 
 
         /**
-         * ip 地址
+         * 机器 ip 地址。
          */
         public Builder ip(String ip) {
             this.ip = ip;
@@ -85,7 +82,7 @@ public class Machine extends TeaModel {
         }
 
         /**
-         * 上次心跳时间
+         * 最后一次心跳时间。Unix时间戳格式，表示从1970-1-1 00:00:00 UTC计算起的秒数。
          */
         public Builder lastHeartbeatTime(Long lastHeartbeatTime) {
             this.lastHeartbeatTime = lastHeartbeatTime;
@@ -93,7 +90,7 @@ public class Machine extends TeaModel {
         }
 
         /**
-         * 机器的唯一标识
+         * 机器的唯一标识。
          */
         public Builder machineUniqueid(String machineUniqueid) {
             this.machineUniqueid = machineUniqueid;
@@ -101,7 +98,7 @@ public class Machine extends TeaModel {
         }
 
         /**
-         * 用户自定义标识
+         * 机器的用户自定义标识。
          */
         public Builder userdefinedId(String userdefinedId) {
             this.userdefinedId = userdefinedId;

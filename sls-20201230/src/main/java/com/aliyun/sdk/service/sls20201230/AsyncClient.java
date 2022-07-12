@@ -20,9 +20,17 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ApplyConfigToMachineGroupResponse> applyConfigToMachineGroup(ApplyConfigToMachineGroupRequest request);
 
+    CompletableFuture<BatchCreateEtlMetaResponse> batchCreateEtlMeta(BatchCreateEtlMetaRequest request);
+
+    CompletableFuture<BatchModifyEtlMetaStatusResponse> batchModifyEtlMetaStatus(BatchModifyEtlMetaStatusRequest request);
+
+    CompletableFuture<BatchUpdateEtlMetaResponse> batchUpdateEtlMeta(BatchUpdateEtlMetaRequest request);
+
     CompletableFuture<CreateConsumerGroupResponse> createConsumerGroup(CreateConsumerGroupRequest request);
 
     CompletableFuture<CreateDomainResponse> createDomain(CreateDomainRequest request);
+
+    CompletableFuture<CreateEtlMetaResponse> createEtlMeta(CreateEtlMetaRequest request);
 
     CompletableFuture<CreateIndexResponse> createIndex(CreateIndexRequest request);
 
@@ -40,6 +48,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteDomainResponse> deleteDomain(DeleteDomainRequest request);
 
+    CompletableFuture<DeleteEtlMetaResponse> deleteEtlMeta(DeleteEtlMetaRequest request);
+
     CompletableFuture<DeleteIndexResponse> deleteIndex(DeleteIndexRequest request);
 
     CompletableFuture<DeleteLogStoreResponse> deleteLogStore(DeleteLogStoreRequest request);
@@ -50,6 +60,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteProjectResponse> deleteProject(DeleteProjectRequest request);
 
+    CompletableFuture<DeleteSavedSearchResponse> deleteSavedSearch(DeleteSavedSearchRequest request);
+
     CompletableFuture<GetAppliedConfigsResponse> getAppliedConfigs(GetAppliedConfigsRequest request);
 
     CompletableFuture<GetCheckPointResponse> getCheckPoint(GetCheckPointRequest request);
@@ -59,6 +71,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetCursorResponse> getCursor(GetCursorRequest request);
 
     CompletableFuture<GetCursorTimeResponse> getCursorTime(GetCursorTimeRequest request);
+
+    CompletableFuture<GetEtlMetaResponse> getEtlMeta(GetEtlMetaRequest request);
 
     CompletableFuture<GetHistogramsResponse> getHistograms(GetHistogramsRequest request);
 
@@ -81,6 +95,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListConsumerGroupResponse> listConsumerGroup(ListConsumerGroupRequest request);
 
     CompletableFuture<ListDomainsResponse> listDomains(ListDomainsRequest request);
+
+    CompletableFuture<ListEtlMetaResponse> listEtlMeta(ListEtlMetaRequest request);
+
+    CompletableFuture<ListEtlMetaNameResponse> listEtlMetaName(ListEtlMetaNameRequest request);
 
     CompletableFuture<ListLogStoresResponse> listLogStores(ListLogStoresRequest request);
 
@@ -109,6 +127,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateCheckPointResponse> updateCheckPoint(UpdateCheckPointRequest request);
 
     CompletableFuture<UpdateConsumerGroupResponse> updateConsumerGroup(UpdateConsumerGroupRequest request);
+
+    CompletableFuture<UpdateEtlMetaResponse> updateEtlMeta(UpdateEtlMetaRequest request);
 
     CompletableFuture<UpdateIndexResponse> updateIndex(UpdateIndexRequest request);
 
