@@ -205,21 +205,21 @@ public class DescribeClientEventsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeClientEventsRequest response) {
-            super(response);
-            this.desktopId = response.desktopId;
-            this.desktopIp = response.desktopIp;
-            this.desktopName = response.desktopName;
-            this.directoryId = response.directoryId;
-            this.endTime = response.endTime;
-            this.endUserId = response.endUserId;
-            this.eventType = response.eventType;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.officeSiteId = response.officeSiteId;
-            this.officeSiteName = response.officeSiteName;
-            this.regionId = response.regionId;
-            this.startTime = response.startTime;
+        private Builder(DescribeClientEventsRequest request) {
+            super(request);
+            this.desktopId = request.desktopId;
+            this.desktopIp = request.desktopIp;
+            this.desktopName = request.desktopName;
+            this.directoryId = request.directoryId;
+            this.endTime = request.endTime;
+            this.endUserId = request.endUserId;
+            this.eventType = request.eventType;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.officeSiteId = request.officeSiteId;
+            this.officeSiteName = request.officeSiteName;
+            this.regionId = request.regionId;
+            this.startTime = request.startTime;
         } 
 
         /**

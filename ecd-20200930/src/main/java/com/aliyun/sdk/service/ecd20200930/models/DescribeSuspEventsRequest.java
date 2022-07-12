@@ -154,17 +154,17 @@ public class DescribeSuspEventsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeSuspEventsRequest response) {
-            super(response);
-            this.alarmUniqueInfo = response.alarmUniqueInfo;
-            this.currentPage = response.currentPage;
-            this.dealed = response.dealed;
-            this.lang = response.lang;
-            this.levels = response.levels;
-            this.officeSiteId = response.officeSiteId;
-            this.pageSize = response.pageSize;
-            this.parentEventType = response.parentEventType;
-            this.regionId = response.regionId;
+        private Builder(DescribeSuspEventsRequest request) {
+            super(request);
+            this.alarmUniqueInfo = request.alarmUniqueInfo;
+            this.currentPage = request.currentPage;
+            this.dealed = request.dealed;
+            this.lang = request.lang;
+            this.levels = request.levels;
+            this.officeSiteId = request.officeSiteId;
+            this.pageSize = request.pageSize;
+            this.parentEventType = request.parentEventType;
+            this.regionId = request.regionId;
         } 
 
         /**

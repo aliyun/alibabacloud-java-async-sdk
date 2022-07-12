@@ -133,15 +133,15 @@ public class DescribeFlowMetricRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeFlowMetricRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.instanceId = response.instanceId;
-            this.instanceType = response.instanceType;
-            this.metricType = response.metricType;
-            this.period = response.period;
-            this.regionId = response.regionId;
-            this.startTime = response.startTime;
+        private Builder(DescribeFlowMetricRequest request) {
+            super(request);
+            this.endTime = request.endTime;
+            this.instanceId = request.instanceId;
+            this.instanceType = request.instanceType;
+            this.metricType = request.metricType;
+            this.period = request.period;
+            this.regionId = request.regionId;
+            this.startTime = request.startTime;
         } 
 
         /**

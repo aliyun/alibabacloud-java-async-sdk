@@ -63,10 +63,10 @@ public class DetachCenRequest extends Request {
             super();
         } 
 
-        private Builder(DetachCenRequest response) {
-            super(response);
-            this.officeSiteId = response.officeSiteId;
-            this.regionId = response.regionId;
+        private Builder(DetachCenRequest request) {
+            super(request);
+            this.officeSiteId = request.officeSiteId;
+            this.regionId = request.regionId;
         } 
 
         /**

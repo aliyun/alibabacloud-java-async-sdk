@@ -75,11 +75,11 @@ public class GetSpMetadataRequest extends Request {
             super();
         } 
 
-        private Builder(GetSpMetadataRequest response) {
-            super(response);
-            this.directoryId = response.directoryId;
-            this.officeSiteId = response.officeSiteId;
-            this.regionId = response.regionId;
+        private Builder(GetSpMetadataRequest request) {
+            super(request);
+            this.directoryId = request.directoryId;
+            this.officeSiteId = request.officeSiteId;
+            this.regionId = request.regionId;
         } 
 
         /**

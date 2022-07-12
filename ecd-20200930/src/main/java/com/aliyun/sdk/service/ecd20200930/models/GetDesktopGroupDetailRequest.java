@@ -63,10 +63,10 @@ public class GetDesktopGroupDetailRequest extends Request {
             super();
         } 
 
-        private Builder(GetDesktopGroupDetailRequest response) {
-            super(response);
-            this.desktopGroupId = response.desktopGroupId;
-            this.regionId = response.regionId;
+        private Builder(GetDesktopGroupDetailRequest request) {
+            super(request);
+            this.desktopGroupId = request.desktopGroupId;
+            this.regionId = request.regionId;
         } 
 
         /**

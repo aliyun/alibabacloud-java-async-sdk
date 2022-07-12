@@ -101,6 +101,9 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         @NameInMap("NetworkInterfaceId")
         private String networkInterfaceId;
 
+        @NameInMap("Specification")
+        private String specification;
+
         @NameInMap("TrustKey")
         private String trustKey;
 
@@ -111,6 +114,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             this.ADConnectorAddress = builder.ADConnectorAddress;
             this.connectorStatus = builder.connectorStatus;
             this.networkInterfaceId = builder.networkInterfaceId;
+            this.specification = builder.specification;
             this.trustKey = builder.trustKey;
             this.vSwitchId = builder.vSwitchId;
         }
@@ -145,6 +149,13 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         }
 
         /**
+         * @return specification
+         */
+        public String getSpecification() {
+            return this.specification;
+        }
+
+        /**
          * @return trustKey
          */
         public String getTrustKey() {
@@ -162,6 +173,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             private String ADConnectorAddress; 
             private String connectorStatus; 
             private String networkInterfaceId; 
+            private String specification; 
             private String trustKey; 
             private String vSwitchId; 
 
@@ -186,6 +198,14 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
              */
             public Builder networkInterfaceId(String networkInterfaceId) {
                 this.networkInterfaceId = networkInterfaceId;
+                return this;
+            }
+
+            /**
+             * Specification.
+             */
+            public Builder specification(String specification) {
+                this.specification = specification;
                 return this;
             }
 
@@ -317,6 +337,9 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         @NameInMap("ADConnectors")
         private java.util.List < ADConnectors> ADConnectors;
 
+        @NameInMap("AdHostname")
+        private String adHostname;
+
         @NameInMap("Bandwidth")
         private Integer bandwidth;
 
@@ -398,6 +421,9 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         @NameInMap("OuName")
         private String ouName;
 
+        @NameInMap("ProtocolType")
+        private String protocolType;
+
         @NameInMap("SsoEnabled")
         private Boolean ssoEnabled;
 
@@ -422,8 +448,12 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         @NameInMap("VpcId")
         private String vpcId;
 
+        @NameInMap("VpcType")
+        private String vpcType;
+
         private OfficeSites(Builder builder) {
             this.ADConnectors = builder.ADConnectors;
+            this.adHostname = builder.adHostname;
             this.bandwidth = builder.bandwidth;
             this.cenId = builder.cenId;
             this.cidrBlock = builder.cidrBlock;
@@ -451,6 +481,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             this.officeSiteId = builder.officeSiteId;
             this.officeSiteType = builder.officeSiteType;
             this.ouName = builder.ouName;
+            this.protocolType = builder.protocolType;
             this.ssoEnabled = builder.ssoEnabled;
             this.ssoType = builder.ssoType;
             this.status = builder.status;
@@ -459,6 +490,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             this.trustPassword = builder.trustPassword;
             this.vSwitchIds = builder.vSwitchIds;
             this.vpcId = builder.vpcId;
+            this.vpcType = builder.vpcType;
         }
 
         public static Builder builder() {
@@ -474,6 +506,13 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
          */
         public java.util.List < ADConnectors> getADConnectors() {
             return this.ADConnectors;
+        }
+
+        /**
+         * @return adHostname
+         */
+        public String getAdHostname() {
+            return this.adHostname;
         }
 
         /**
@@ -666,6 +705,13 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         }
 
         /**
+         * @return protocolType
+         */
+        public String getProtocolType() {
+            return this.protocolType;
+        }
+
+        /**
          * @return ssoEnabled
          */
         public Boolean getSsoEnabled() {
@@ -721,8 +767,16 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             return this.vpcId;
         }
 
+        /**
+         * @return vpcType
+         */
+        public String getVpcType() {
+            return this.vpcType;
+        }
+
         public static final class Builder {
             private java.util.List < ADConnectors> ADConnectors; 
+            private String adHostname; 
             private Integer bandwidth; 
             private String cenId; 
             private String cidrBlock; 
@@ -750,6 +804,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             private String officeSiteId; 
             private String officeSiteType; 
             private String ouName; 
+            private String protocolType; 
             private Boolean ssoEnabled; 
             private String ssoType; 
             private String status; 
@@ -758,12 +813,21 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             private String trustPassword; 
             private java.util.List < String > vSwitchIds; 
             private String vpcId; 
+            private String vpcType; 
 
             /**
              * ADConnectors.
              */
             public Builder ADConnectors(java.util.List < ADConnectors> ADConnectors) {
                 this.ADConnectors = ADConnectors;
+                return this;
+            }
+
+            /**
+             * AdHostname.
+             */
+            public Builder adHostname(String adHostname) {
+                this.adHostname = adHostname;
                 return this;
             }
 
@@ -984,6 +1048,14 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
+             * ProtocolType.
+             */
+            public Builder protocolType(String protocolType) {
+                this.protocolType = protocolType;
+                return this;
+            }
+
+            /**
              * SsoEnabled.
              */
             public Builder ssoEnabled(Boolean ssoEnabled) {
@@ -1044,6 +1116,14 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
+                return this;
+            }
+
+            /**
+             * VpcType.
+             */
+            public Builder vpcType(String vpcType) {
+                this.vpcType = vpcType;
                 return this;
             }
 

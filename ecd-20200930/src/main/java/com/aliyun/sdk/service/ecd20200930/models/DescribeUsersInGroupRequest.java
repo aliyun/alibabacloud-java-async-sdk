@@ -26,12 +26,20 @@ public class DescribeUsersInGroupRequest extends Request {
     private String endUserId;
 
     @Query
+    @NameInMap("Filter")
+    private String filter;
+
+    @Query
     @NameInMap("MaxResults")
     private Integer maxResults;
 
     @Query
     @NameInMap("NextToken")
     private String nextToken;
+
+    @Query
+    @NameInMap("QueryUserDetail")
+    private Boolean queryUserDetail;
 
     @Query
     @NameInMap("RegionId")
@@ -43,8 +51,10 @@ public class DescribeUsersInGroupRequest extends Request {
         this.connectState = builder.connectState;
         this.desktopGroupId = builder.desktopGroupId;
         this.endUserId = builder.endUserId;
+        this.filter = builder.filter;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
+        this.queryUserDetail = builder.queryUserDetail;
         this.regionId = builder.regionId;
     }
 
@@ -83,6 +93,13 @@ public class DescribeUsersInGroupRequest extends Request {
     }
 
     /**
+     * @return filter
+     */
+    public String getFilter() {
+        return this.filter;
+    }
+
+    /**
      * @return maxResults
      */
     public Integer getMaxResults() {
@@ -97,6 +114,13 @@ public class DescribeUsersInGroupRequest extends Request {
     }
 
     /**
+     * @return queryUserDetail
+     */
+    public Boolean getQueryUserDetail() {
+        return this.queryUserDetail;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -107,22 +131,26 @@ public class DescribeUsersInGroupRequest extends Request {
         private Integer connectState; 
         private String desktopGroupId; 
         private String endUserId; 
+        private String filter; 
         private Integer maxResults; 
         private String nextToken; 
+        private Boolean queryUserDetail; 
         private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeUsersInGroupRequest response) {
-            super(response);
-            this.connectState = response.connectState;
-            this.desktopGroupId = response.desktopGroupId;
-            this.endUserId = response.endUserId;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.regionId = response.regionId;
+        private Builder(DescribeUsersInGroupRequest request) {
+            super(request);
+            this.connectState = request.connectState;
+            this.desktopGroupId = request.desktopGroupId;
+            this.endUserId = request.endUserId;
+            this.filter = request.filter;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.queryUserDetail = request.queryUserDetail;
+            this.regionId = request.regionId;
         } 
 
         /**
@@ -153,6 +181,15 @@ public class DescribeUsersInGroupRequest extends Request {
         }
 
         /**
+         * Filter.
+         */
+        public Builder filter(String filter) {
+            this.putQueryParameter("Filter", filter);
+            this.filter = filter;
+            return this;
+        }
+
+        /**
          * MaxResults.
          */
         public Builder maxResults(Integer maxResults) {
@@ -167,6 +204,15 @@ public class DescribeUsersInGroupRequest extends Request {
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
             this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * QueryUserDetail.
+         */
+        public Builder queryUserDetail(Boolean queryUserDetail) {
+            this.putQueryParameter("QueryUserDetail", queryUserDetail);
+            this.queryUserDetail = queryUserDetail;
             return this;
         }
 

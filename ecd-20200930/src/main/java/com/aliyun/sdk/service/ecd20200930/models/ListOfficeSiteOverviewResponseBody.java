@@ -122,6 +122,9 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
         @NameInMap("TotalEdsCountForGroup")
         private Integer totalEdsCountForGroup;
 
+        @NameInMap("VpcType")
+        private String vpcType;
+
         @NameInMap("WillExpiredEdsCount")
         private Integer willExpiredEdsCount;
 
@@ -139,6 +142,7 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
             this.runningEdsCountForGroup = builder.runningEdsCountForGroup;
             this.totalEdsCount = builder.totalEdsCount;
             this.totalEdsCountForGroup = builder.totalEdsCountForGroup;
+            this.vpcType = builder.vpcType;
             this.willExpiredEdsCount = builder.willExpiredEdsCount;
             this.willExpiredEdsCountForGroup = builder.willExpiredEdsCountForGroup;
         }
@@ -222,6 +226,13 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
         }
 
         /**
+         * @return vpcType
+         */
+        public String getVpcType() {
+            return this.vpcType;
+        }
+
+        /**
          * @return willExpiredEdsCount
          */
         public Integer getWillExpiredEdsCount() {
@@ -246,6 +257,7 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
             private Integer runningEdsCountForGroup; 
             private Integer totalEdsCount; 
             private Integer totalEdsCountForGroup; 
+            private String vpcType; 
             private Integer willExpiredEdsCount; 
             private Integer willExpiredEdsCountForGroup; 
 
@@ -326,6 +338,14 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
              */
             public Builder totalEdsCountForGroup(Integer totalEdsCountForGroup) {
                 this.totalEdsCountForGroup = totalEdsCountForGroup;
+                return this;
+            }
+
+            /**
+             * VpcType.
+             */
+            public Builder vpcType(String vpcType) {
+                this.vpcType = vpcType;
                 return this;
             }
 

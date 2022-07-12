@@ -103,13 +103,13 @@ public class ModifyNetworkPackageBandwidthRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyNetworkPackageBandwidthRequest response) {
-            super(response);
-            this.autoPay = response.autoPay;
-            this.bandwidth = response.bandwidth;
-            this.networkPackageId = response.networkPackageId;
-            this.promotionId = response.promotionId;
-            this.regionId = response.regionId;
+        private Builder(ModifyNetworkPackageBandwidthRequest request) {
+            super(request);
+            this.autoPay = request.autoPay;
+            this.bandwidth = request.bandwidth;
+            this.networkPackageId = request.networkPackageId;
+            this.promotionId = request.promotionId;
+            this.regionId = request.regionId;
         } 
 
         /**

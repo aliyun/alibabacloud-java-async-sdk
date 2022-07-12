@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyADConnectorOfficeSiteRequest extends Request {
     @Query
+    @NameInMap("AdHostname")
+    private String adHostname;
+
+    @Query
     @NameInMap("DnsAddress")
     private java.util.List < String > dnsAddress;
 
@@ -31,6 +35,10 @@ public class ModifyADConnectorOfficeSiteRequest extends Request {
     @Query
     @NameInMap("MfaEnabled")
     private Boolean mfaEnabled;
+
+    @Query
+    @NameInMap("OUName")
+    private String OUName;
 
     @Query
     @NameInMap("OfficeSiteId")
@@ -56,11 +64,13 @@ public class ModifyADConnectorOfficeSiteRequest extends Request {
 
     private ModifyADConnectorOfficeSiteRequest(Builder builder) {
         super(builder);
+        this.adHostname = builder.adHostname;
         this.dnsAddress = builder.dnsAddress;
         this.domainName = builder.domainName;
         this.domainPassword = builder.domainPassword;
         this.domainUserName = builder.domainUserName;
         this.mfaEnabled = builder.mfaEnabled;
+        this.OUName = builder.OUName;
         this.officeSiteId = builder.officeSiteId;
         this.officeSiteName = builder.officeSiteName;
         this.regionId = builder.regionId;
@@ -79,6 +89,13 @@ public class ModifyADConnectorOfficeSiteRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return adHostname
+     */
+    public String getAdHostname() {
+        return this.adHostname;
     }
 
     /**
@@ -117,6 +134,13 @@ public class ModifyADConnectorOfficeSiteRequest extends Request {
     }
 
     /**
+     * @return OUName
+     */
+    public String getOUName() {
+        return this.OUName;
+    }
+
+    /**
      * @return officeSiteId
      */
     public String getOfficeSiteId() {
@@ -152,11 +176,13 @@ public class ModifyADConnectorOfficeSiteRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyADConnectorOfficeSiteRequest, Builder> {
+        private String adHostname; 
         private java.util.List < String > dnsAddress; 
         private String domainName; 
         private String domainPassword; 
         private String domainUserName; 
         private Boolean mfaEnabled; 
+        private String OUName; 
         private String officeSiteId; 
         private String officeSiteName; 
         private String regionId; 
@@ -167,19 +193,30 @@ public class ModifyADConnectorOfficeSiteRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyADConnectorOfficeSiteRequest response) {
-            super(response);
-            this.dnsAddress = response.dnsAddress;
-            this.domainName = response.domainName;
-            this.domainPassword = response.domainPassword;
-            this.domainUserName = response.domainUserName;
-            this.mfaEnabled = response.mfaEnabled;
-            this.officeSiteId = response.officeSiteId;
-            this.officeSiteName = response.officeSiteName;
-            this.regionId = response.regionId;
-            this.subDomainDnsAddress = response.subDomainDnsAddress;
-            this.subDomainName = response.subDomainName;
+        private Builder(ModifyADConnectorOfficeSiteRequest request) {
+            super(request);
+            this.adHostname = request.adHostname;
+            this.dnsAddress = request.dnsAddress;
+            this.domainName = request.domainName;
+            this.domainPassword = request.domainPassword;
+            this.domainUserName = request.domainUserName;
+            this.mfaEnabled = request.mfaEnabled;
+            this.OUName = request.OUName;
+            this.officeSiteId = request.officeSiteId;
+            this.officeSiteName = request.officeSiteName;
+            this.regionId = request.regionId;
+            this.subDomainDnsAddress = request.subDomainDnsAddress;
+            this.subDomainName = request.subDomainName;
         } 
+
+        /**
+         * AdHostname.
+         */
+        public Builder adHostname(String adHostname) {
+            this.putQueryParameter("AdHostname", adHostname);
+            this.adHostname = adHostname;
+            return this;
+        }
 
         /**
          * DnsAddress.
@@ -223,6 +260,15 @@ public class ModifyADConnectorOfficeSiteRequest extends Request {
         public Builder mfaEnabled(Boolean mfaEnabled) {
             this.putQueryParameter("MfaEnabled", mfaEnabled);
             this.mfaEnabled = mfaEnabled;
+            return this;
+        }
+
+        /**
+         * OUName.
+         */
+        public Builder OUName(String OUName) {
+            this.putQueryParameter("OUName", OUName);
+            this.OUName = OUName;
             return this;
         }
 

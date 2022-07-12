@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDesktopTypesRequest extends Request {
     @Query
+    @NameInMap("AppliedScope")
+    private String appliedScope;
+
+    @Query
     @NameInMap("CpuCount")
     private Integer cpuCount;
 
@@ -47,6 +51,7 @@ public class DescribeDesktopTypesRequest extends Request {
 
     private DescribeDesktopTypesRequest(Builder builder) {
         super(builder);
+        this.appliedScope = builder.appliedScope;
         this.cpuCount = builder.cpuCount;
         this.desktopIdForModify = builder.desktopIdForModify;
         this.desktopTypeId = builder.desktopTypeId;
@@ -68,6 +73,13 @@ public class DescribeDesktopTypesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return appliedScope
+     */
+    public String getAppliedScope() {
+        return this.appliedScope;
     }
 
     /**
@@ -127,6 +139,7 @@ public class DescribeDesktopTypesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeDesktopTypesRequest, Builder> {
+        private String appliedScope; 
         private Integer cpuCount; 
         private String desktopIdForModify; 
         private String desktopTypeId; 
@@ -140,17 +153,27 @@ public class DescribeDesktopTypesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDesktopTypesRequest response) {
-            super(response);
-            this.cpuCount = response.cpuCount;
-            this.desktopIdForModify = response.desktopIdForModify;
-            this.desktopTypeId = response.desktopTypeId;
-            this.gpuCount = response.gpuCount;
-            this.instanceTypeFamily = response.instanceTypeFamily;
-            this.memorySize = response.memorySize;
-            this.orderType = response.orderType;
-            this.regionId = response.regionId;
+        private Builder(DescribeDesktopTypesRequest request) {
+            super(request);
+            this.appliedScope = request.appliedScope;
+            this.cpuCount = request.cpuCount;
+            this.desktopIdForModify = request.desktopIdForModify;
+            this.desktopTypeId = request.desktopTypeId;
+            this.gpuCount = request.gpuCount;
+            this.instanceTypeFamily = request.instanceTypeFamily;
+            this.memorySize = request.memorySize;
+            this.orderType = request.orderType;
+            this.regionId = request.regionId;
         } 
+
+        /**
+         * AppliedScope.
+         */
+        public Builder appliedScope(String appliedScope) {
+            this.putQueryParameter("AppliedScope", appliedScope);
+            this.appliedScope = appliedScope;
+            return this;
+        }
 
         /**
          * CpuCount.

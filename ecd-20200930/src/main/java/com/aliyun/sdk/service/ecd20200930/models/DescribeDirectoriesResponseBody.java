@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDirectoriesResponseBody</p>
  */
 public class DescribeDirectoriesResponseBody extends TeaModel {
+    @NameInMap("AdHostname")
+    private String adHostname;
+
     @NameInMap("Directories")
     private java.util.List < Directories> directories;
 
@@ -22,6 +25,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
     private String requestId;
 
     private DescribeDirectoriesResponseBody(Builder builder) {
+        this.adHostname = builder.adHostname;
         this.directories = builder.directories;
         this.nextToken = builder.nextToken;
         this.requestId = builder.requestId;
@@ -33,6 +37,13 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
 
     public static DescribeDirectoriesResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return adHostname
+     */
+    public String getAdHostname() {
+        return this.adHostname;
     }
 
     /**
@@ -57,9 +68,18 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String adHostname; 
         private java.util.List < Directories> directories; 
         private String nextToken; 
         private String requestId; 
+
+        /**
+         * AdHostname.
+         */
+        public Builder adHostname(String adHostname) {
+            this.adHostname = adHostname;
+            return this;
+        }
 
         /**
          * Directories.
@@ -101,6 +121,9 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         @NameInMap("NetworkInterfaceId")
         private String networkInterfaceId;
 
+        @NameInMap("Specification")
+        private String specification;
+
         @NameInMap("TrustKey")
         private String trustKey;
 
@@ -111,6 +134,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             this.ADConnectorAddress = builder.ADConnectorAddress;
             this.connectorStatus = builder.connectorStatus;
             this.networkInterfaceId = builder.networkInterfaceId;
+            this.specification = builder.specification;
             this.trustKey = builder.trustKey;
             this.vSwitchId = builder.vSwitchId;
         }
@@ -145,6 +169,13 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         }
 
         /**
+         * @return specification
+         */
+        public String getSpecification() {
+            return this.specification;
+        }
+
+        /**
          * @return trustKey
          */
         public String getTrustKey() {
@@ -162,6 +193,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             private String ADConnectorAddress; 
             private String connectorStatus; 
             private String networkInterfaceId; 
+            private String specification; 
             private String trustKey; 
             private String vSwitchId; 
 
@@ -186,6 +218,14 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
              */
             public Builder networkInterfaceId(String networkInterfaceId) {
                 this.networkInterfaceId = networkInterfaceId;
+                return this;
+            }
+
+            /**
+             * Specification.
+             */
+            public Builder specification(String specification) {
+                this.specification = specification;
                 return this;
             }
 

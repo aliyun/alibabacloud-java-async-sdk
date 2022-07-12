@@ -102,13 +102,13 @@ public class DescribeSuspEventQuaraFilesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeSuspEventQuaraFilesRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.officeSiteId = response.officeSiteId;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.status = response.status;
+        private Builder(DescribeSuspEventQuaraFilesRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.officeSiteId = request.officeSiteId;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.status = request.status;
         } 
 
         /**

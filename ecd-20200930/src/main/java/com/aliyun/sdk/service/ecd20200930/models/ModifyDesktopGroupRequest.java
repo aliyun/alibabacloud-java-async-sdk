@@ -23,6 +23,14 @@ public class ModifyDesktopGroupRequest extends Request {
     private Integer allowBufferCount;
 
     @Query
+    @NameInMap("BindAmount")
+    private Long bindAmount;
+
+    @Query
+    @NameInMap("Classify")
+    private String classify;
+
+    @Query
     @NameInMap("Comments")
     private String comments;
 
@@ -36,12 +44,20 @@ public class ModifyDesktopGroupRequest extends Request {
     private String desktopGroupName;
 
     @Query
+    @NameInMap("ImageId")
+    private String imageId;
+
+    @Query
     @NameInMap("KeepDuration")
     private Long keepDuration;
 
     @Query
+    @NameInMap("LoadPolicy")
+    private Long loadPolicy;
+
+    @Query
     @NameInMap("MaxDesktopsCount")
-    @Validation(maximum = 1000, minimum = 1)
+    @Validation(maximum = 1000)
     private Integer maxDesktopsCount;
 
     @Query
@@ -74,10 +90,14 @@ public class ModifyDesktopGroupRequest extends Request {
         super(builder);
         this.allowAutoSetup = builder.allowAutoSetup;
         this.allowBufferCount = builder.allowBufferCount;
+        this.bindAmount = builder.bindAmount;
+        this.classify = builder.classify;
         this.comments = builder.comments;
         this.desktopGroupId = builder.desktopGroupId;
         this.desktopGroupName = builder.desktopGroupName;
+        this.imageId = builder.imageId;
         this.keepDuration = builder.keepDuration;
+        this.loadPolicy = builder.loadPolicy;
         this.maxDesktopsCount = builder.maxDesktopsCount;
         this.minDesktopsCount = builder.minDesktopsCount;
         this.ownBundleId = builder.ownBundleId;
@@ -115,6 +135,20 @@ public class ModifyDesktopGroupRequest extends Request {
     }
 
     /**
+     * @return bindAmount
+     */
+    public Long getBindAmount() {
+        return this.bindAmount;
+    }
+
+    /**
+     * @return classify
+     */
+    public String getClassify() {
+        return this.classify;
+    }
+
+    /**
      * @return comments
      */
     public String getComments() {
@@ -136,10 +170,24 @@ public class ModifyDesktopGroupRequest extends Request {
     }
 
     /**
+     * @return imageId
+     */
+    public String getImageId() {
+        return this.imageId;
+    }
+
+    /**
      * @return keepDuration
      */
     public Long getKeepDuration() {
         return this.keepDuration;
+    }
+
+    /**
+     * @return loadPolicy
+     */
+    public Long getLoadPolicy() {
+        return this.loadPolicy;
     }
 
     /**
@@ -194,10 +242,14 @@ public class ModifyDesktopGroupRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyDesktopGroupRequest, Builder> {
         private Integer allowAutoSetup; 
         private Integer allowBufferCount; 
+        private Long bindAmount; 
+        private String classify; 
         private String comments; 
         private String desktopGroupId; 
         private String desktopGroupName; 
+        private String imageId; 
         private Long keepDuration; 
+        private Long loadPolicy; 
         private Integer maxDesktopsCount; 
         private Integer minDesktopsCount; 
         private String ownBundleId; 
@@ -210,21 +262,25 @@ public class ModifyDesktopGroupRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDesktopGroupRequest response) {
-            super(response);
-            this.allowAutoSetup = response.allowAutoSetup;
-            this.allowBufferCount = response.allowBufferCount;
-            this.comments = response.comments;
-            this.desktopGroupId = response.desktopGroupId;
-            this.desktopGroupName = response.desktopGroupName;
-            this.keepDuration = response.keepDuration;
-            this.maxDesktopsCount = response.maxDesktopsCount;
-            this.minDesktopsCount = response.minDesktopsCount;
-            this.ownBundleId = response.ownBundleId;
-            this.policyGroupId = response.policyGroupId;
-            this.regionId = response.regionId;
-            this.resetType = response.resetType;
-            this.scaleStrategyId = response.scaleStrategyId;
+        private Builder(ModifyDesktopGroupRequest request) {
+            super(request);
+            this.allowAutoSetup = request.allowAutoSetup;
+            this.allowBufferCount = request.allowBufferCount;
+            this.bindAmount = request.bindAmount;
+            this.classify = request.classify;
+            this.comments = request.comments;
+            this.desktopGroupId = request.desktopGroupId;
+            this.desktopGroupName = request.desktopGroupName;
+            this.imageId = request.imageId;
+            this.keepDuration = request.keepDuration;
+            this.loadPolicy = request.loadPolicy;
+            this.maxDesktopsCount = request.maxDesktopsCount;
+            this.minDesktopsCount = request.minDesktopsCount;
+            this.ownBundleId = request.ownBundleId;
+            this.policyGroupId = request.policyGroupId;
+            this.regionId = request.regionId;
+            this.resetType = request.resetType;
+            this.scaleStrategyId = request.scaleStrategyId;
         } 
 
         /**
@@ -242,6 +298,24 @@ public class ModifyDesktopGroupRequest extends Request {
         public Builder allowBufferCount(Integer allowBufferCount) {
             this.putQueryParameter("AllowBufferCount", allowBufferCount);
             this.allowBufferCount = allowBufferCount;
+            return this;
+        }
+
+        /**
+         * BindAmount.
+         */
+        public Builder bindAmount(Long bindAmount) {
+            this.putQueryParameter("BindAmount", bindAmount);
+            this.bindAmount = bindAmount;
+            return this;
+        }
+
+        /**
+         * Classify.
+         */
+        public Builder classify(String classify) {
+            this.putQueryParameter("Classify", classify);
+            this.classify = classify;
             return this;
         }
 
@@ -273,11 +347,29 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
+         * ImageId.
+         */
+        public Builder imageId(String imageId) {
+            this.putQueryParameter("ImageId", imageId);
+            this.imageId = imageId;
+            return this;
+        }
+
+        /**
          * KeepDuration.
          */
         public Builder keepDuration(Long keepDuration) {
             this.putQueryParameter("KeepDuration", keepDuration);
             this.keepDuration = keepDuration;
+            return this;
+        }
+
+        /**
+         * LoadPolicy.
+         */
+        public Builder loadPolicy(Long loadPolicy) {
+            this.putQueryParameter("LoadPolicy", loadPolicy);
+            this.loadPolicy = loadPolicy;
             return this;
         }
 

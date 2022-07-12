@@ -28,6 +28,7 @@ public class DescribeFrontVulPatchListRequest extends Request {
 
     @Query
     @NameInMap("VulInfo")
+    @Validation(required = true)
     private java.util.List < VulInfo> vulInfo;
 
     private DescribeFrontVulPatchListRequest(Builder builder) {
@@ -89,12 +90,12 @@ public class DescribeFrontVulPatchListRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeFrontVulPatchListRequest response) {
-            super(response);
-            this.operateType = response.operateType;
-            this.regionId = response.regionId;
-            this.type = response.type;
-            this.vulInfo = response.vulInfo;
+        private Builder(DescribeFrontVulPatchListRequest request) {
+            super(request);
+            this.operateType = request.operateType;
+            this.regionId = request.regionId;
+            this.type = request.type;
+            this.vulInfo = request.vulInfo;
         } 
 
         /**

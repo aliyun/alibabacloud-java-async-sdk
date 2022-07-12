@@ -155,17 +155,17 @@ public class CreateNetworkPackageRequest extends Request {
             super();
         } 
 
-        private Builder(CreateNetworkPackageRequest response) {
-            super(response);
-            this.autoPay = response.autoPay;
-            this.autoRenew = response.autoRenew;
-            this.bandwidth = response.bandwidth;
-            this.internetChargeType = response.internetChargeType;
-            this.officeSiteId = response.officeSiteId;
-            this.period = response.period;
-            this.periodUnit = response.periodUnit;
-            this.promotionId = response.promotionId;
-            this.regionId = response.regionId;
+        private Builder(CreateNetworkPackageRequest request) {
+            super(request);
+            this.autoPay = request.autoPay;
+            this.autoRenew = request.autoRenew;
+            this.bandwidth = request.bandwidth;
+            this.internetChargeType = request.internetChargeType;
+            this.officeSiteId = request.officeSiteId;
+            this.period = request.period;
+            this.periodUnit = request.periodUnit;
+            this.promotionId = request.promotionId;
+            this.regionId = request.regionId;
         } 
 
         /**

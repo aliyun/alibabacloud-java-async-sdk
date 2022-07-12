@@ -102,13 +102,13 @@ public class DescribeNASFileSystemsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeNASFileSystemsRequest response) {
-            super(response);
-            this.fileSystemId = response.fileSystemId;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.officeSiteId = response.officeSiteId;
-            this.regionId = response.regionId;
+        private Builder(DescribeNASFileSystemsRequest request) {
+            super(request);
+            this.fileSystemId = request.fileSystemId;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.officeSiteId = request.officeSiteId;
+            this.regionId = request.regionId;
         } 
 
         /**

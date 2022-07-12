@@ -63,10 +63,10 @@ public class DeleteDesktopGroupRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteDesktopGroupRequest response) {
-            super(response);
-            this.desktopGroupId = response.desktopGroupId;
-            this.regionId = response.regionId;
+        private Builder(DeleteDesktopGroupRequest request) {
+            super(request);
+            this.desktopGroupId = request.desktopGroupId;
+            this.regionId = request.regionId;
         } 
 
         /**

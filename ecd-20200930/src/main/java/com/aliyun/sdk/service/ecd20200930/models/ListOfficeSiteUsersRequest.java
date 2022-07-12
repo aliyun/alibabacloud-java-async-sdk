@@ -115,14 +115,14 @@ public class ListOfficeSiteUsersRequest extends Request {
             super();
         } 
 
-        private Builder(ListOfficeSiteUsersRequest response) {
-            super(response);
-            this.filter = response.filter;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.OUPath = response.OUPath;
-            this.officeSiteId = response.officeSiteId;
-            this.regionId = response.regionId;
+        private Builder(ListOfficeSiteUsersRequest request) {
+            super(request);
+            this.filter = request.filter;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.OUPath = request.OUPath;
+            this.officeSiteId = request.officeSiteId;
+            this.regionId = request.regionId;
         } 
 
         /**

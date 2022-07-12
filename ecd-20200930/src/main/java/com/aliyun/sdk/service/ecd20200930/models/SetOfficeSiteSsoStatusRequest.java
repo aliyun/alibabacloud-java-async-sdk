@@ -27,16 +27,11 @@ public class SetOfficeSiteSsoStatusRequest extends Request {
     @Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("SsoType")
-    private String ssoType;
-
     private SetOfficeSiteSsoStatusRequest(Builder builder) {
         super(builder);
         this.enableSso = builder.enableSso;
         this.officeSiteId = builder.officeSiteId;
         this.regionId = builder.regionId;
-        this.ssoType = builder.ssoType;
     }
 
     public static Builder builder() {
@@ -73,29 +68,20 @@ public class SetOfficeSiteSsoStatusRequest extends Request {
         return this.regionId;
     }
 
-    /**
-     * @return ssoType
-     */
-    public String getSsoType() {
-        return this.ssoType;
-    }
-
     public static final class Builder extends Request.Builder<SetOfficeSiteSsoStatusRequest, Builder> {
         private Boolean enableSso; 
         private String officeSiteId; 
         private String regionId; 
-        private String ssoType; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(SetOfficeSiteSsoStatusRequest response) {
-            super(response);
-            this.enableSso = response.enableSso;
-            this.officeSiteId = response.officeSiteId;
-            this.regionId = response.regionId;
-            this.ssoType = response.ssoType;
+        private Builder(SetOfficeSiteSsoStatusRequest request) {
+            super(request);
+            this.enableSso = request.enableSso;
+            this.officeSiteId = request.officeSiteId;
+            this.regionId = request.regionId;
         } 
 
         /**
@@ -122,15 +108,6 @@ public class SetOfficeSiteSsoStatusRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * SsoType.
-         */
-        public Builder ssoType(String ssoType) {
-            this.putQueryParameter("SsoType", ssoType);
-            this.ssoType = ssoType;
             return this;
         }
 

@@ -101,13 +101,13 @@ public class DescribeSnapshotsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeSnapshotsRequest response) {
-            super(response);
-            this.desktopId = response.desktopId;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.regionId = response.regionId;
-            this.snapshotId = response.snapshotId;
+        private Builder(DescribeSnapshotsRequest request) {
+            super(request);
+            this.desktopId = request.desktopId;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.regionId = request.regionId;
+            this.snapshotId = request.snapshotId;
         } 
 
         /**

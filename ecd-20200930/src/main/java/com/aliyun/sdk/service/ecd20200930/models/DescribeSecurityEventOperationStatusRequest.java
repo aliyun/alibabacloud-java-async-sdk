@@ -77,11 +77,11 @@ public class DescribeSecurityEventOperationStatusRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeSecurityEventOperationStatusRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.securityEventId = response.securityEventId;
-            this.taskId = response.taskId;
+        private Builder(DescribeSecurityEventOperationStatusRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.securityEventId = request.securityEventId;
+            this.taskId = request.taskId;
         } 
 
         /**

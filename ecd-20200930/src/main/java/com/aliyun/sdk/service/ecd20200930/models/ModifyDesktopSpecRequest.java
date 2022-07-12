@@ -143,16 +143,16 @@ public class ModifyDesktopSpecRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDesktopSpecRequest response) {
-            super(response);
-            this.autoPay = response.autoPay;
-            this.desktopId = response.desktopId;
-            this.desktopType = response.desktopType;
-            this.promotionId = response.promotionId;
-            this.regionId = response.regionId;
-            this.rootDiskSizeGib = response.rootDiskSizeGib;
-            this.userDiskPerformanceLevel = response.userDiskPerformanceLevel;
-            this.userDiskSizeGib = response.userDiskSizeGib;
+        private Builder(ModifyDesktopSpecRequest request) {
+            super(request);
+            this.autoPay = request.autoPay;
+            this.desktopId = request.desktopId;
+            this.desktopType = request.desktopType;
+            this.promotionId = request.promotionId;
+            this.regionId = request.regionId;
+            this.rootDiskSizeGib = request.rootDiskSizeGib;
+            this.userDiskPerformanceLevel = request.userDiskPerformanceLevel;
+            this.userDiskSizeGib = request.userDiskSizeGib;
         } 
 
         /**

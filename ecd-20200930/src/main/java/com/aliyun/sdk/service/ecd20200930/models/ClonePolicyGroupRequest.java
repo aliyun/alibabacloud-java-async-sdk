@@ -77,11 +77,11 @@ public class ClonePolicyGroupRequest extends Request {
             super();
         } 
 
-        private Builder(ClonePolicyGroupRequest response) {
-            super(response);
-            this.name = response.name;
-            this.policyGroupId = response.policyGroupId;
-            this.regionId = response.regionId;
+        private Builder(ClonePolicyGroupRequest request) {
+            super(request);
+            this.name = request.name;
+            this.policyGroupId = request.policyGroupId;
+            this.regionId = request.regionId;
         } 
 
         /**

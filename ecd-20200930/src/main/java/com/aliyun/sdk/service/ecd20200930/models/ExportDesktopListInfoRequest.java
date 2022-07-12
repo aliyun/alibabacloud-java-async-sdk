@@ -29,10 +29,6 @@ public class ExportDesktopListInfoRequest extends Request {
     private String desktopStatus;
 
     @Query
-    @NameInMap("DirectoryId")
-    private String directoryId;
-
-    @Query
     @NameInMap("EndUserId")
     private java.util.List < String > endUserId;
 
@@ -43,6 +39,10 @@ public class ExportDesktopListInfoRequest extends Request {
     @Query
     @NameInMap("GroupId")
     private String groupId;
+
+    @Query
+    @NameInMap("LangType")
+    private String langType;
 
     @Query
     @NameInMap("MaxResults")
@@ -66,6 +66,10 @@ public class ExportDesktopListInfoRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
+    @Query
     @NameInMap("UserName")
     private String userName;
 
@@ -75,15 +79,16 @@ public class ExportDesktopListInfoRequest extends Request {
         this.desktopId = builder.desktopId;
         this.desktopName = builder.desktopName;
         this.desktopStatus = builder.desktopStatus;
-        this.directoryId = builder.directoryId;
         this.endUserId = builder.endUserId;
         this.expiredTime = builder.expiredTime;
         this.groupId = builder.groupId;
+        this.langType = builder.langType;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.officeSiteId = builder.officeSiteId;
         this.policyGroupId = builder.policyGroupId;
         this.regionId = builder.regionId;
+        this.tag = builder.tag;
         this.userName = builder.userName;
     }
 
@@ -129,13 +134,6 @@ public class ExportDesktopListInfoRequest extends Request {
     }
 
     /**
-     * @return directoryId
-     */
-    public String getDirectoryId() {
-        return this.directoryId;
-    }
-
-    /**
      * @return endUserId
      */
     public java.util.List < String > getEndUserId() {
@@ -154,6 +152,13 @@ public class ExportDesktopListInfoRequest extends Request {
      */
     public String getGroupId() {
         return this.groupId;
+    }
+
+    /**
+     * @return langType
+     */
+    public String getLangType() {
+        return this.langType;
     }
 
     /**
@@ -192,6 +197,13 @@ public class ExportDesktopListInfoRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return userName
      */
     public String getUserName() {
@@ -203,37 +215,39 @@ public class ExportDesktopListInfoRequest extends Request {
         private java.util.List < String > desktopId; 
         private String desktopName; 
         private String desktopStatus; 
-        private String directoryId; 
         private java.util.List < String > endUserId; 
         private String expiredTime; 
         private String groupId; 
+        private String langType; 
         private Integer maxResults; 
         private String nextToken; 
         private String officeSiteId; 
         private String policyGroupId; 
         private String regionId; 
+        private java.util.List < Tag> tag; 
         private String userName; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ExportDesktopListInfoRequest response) {
-            super(response);
-            this.chargeType = response.chargeType;
-            this.desktopId = response.desktopId;
-            this.desktopName = response.desktopName;
-            this.desktopStatus = response.desktopStatus;
-            this.directoryId = response.directoryId;
-            this.endUserId = response.endUserId;
-            this.expiredTime = response.expiredTime;
-            this.groupId = response.groupId;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.officeSiteId = response.officeSiteId;
-            this.policyGroupId = response.policyGroupId;
-            this.regionId = response.regionId;
-            this.userName = response.userName;
+        private Builder(ExportDesktopListInfoRequest request) {
+            super(request);
+            this.chargeType = request.chargeType;
+            this.desktopId = request.desktopId;
+            this.desktopName = request.desktopName;
+            this.desktopStatus = request.desktopStatus;
+            this.endUserId = request.endUserId;
+            this.expiredTime = request.expiredTime;
+            this.groupId = request.groupId;
+            this.langType = request.langType;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.officeSiteId = request.officeSiteId;
+            this.policyGroupId = request.policyGroupId;
+            this.regionId = request.regionId;
+            this.tag = request.tag;
+            this.userName = request.userName;
         } 
 
         /**
@@ -273,15 +287,6 @@ public class ExportDesktopListInfoRequest extends Request {
         }
 
         /**
-         * DirectoryId.
-         */
-        public Builder directoryId(String directoryId) {
-            this.putQueryParameter("DirectoryId", directoryId);
-            this.directoryId = directoryId;
-            return this;
-        }
-
-        /**
          * EndUserId.
          */
         public Builder endUserId(java.util.List < String > endUserId) {
@@ -305,6 +310,15 @@ public class ExportDesktopListInfoRequest extends Request {
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
             this.groupId = groupId;
+            return this;
+        }
+
+        /**
+         * LangType.
+         */
+        public Builder langType(String langType) {
+            this.putQueryParameter("LangType", langType);
+            this.langType = langType;
             return this;
         }
 
@@ -354,6 +368,15 @@ public class ExportDesktopListInfoRequest extends Request {
         }
 
         /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
          * UserName.
          */
         public Builder userName(String userName) {
@@ -369,4 +392,65 @@ public class ExportDesktopListInfoRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

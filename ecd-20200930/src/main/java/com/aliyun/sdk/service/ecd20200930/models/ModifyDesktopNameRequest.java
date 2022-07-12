@@ -77,11 +77,11 @@ public class ModifyDesktopNameRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDesktopNameRequest response) {
-            super(response);
-            this.desktopId = response.desktopId;
-            this.newDesktopName = response.newDesktopName;
-            this.regionId = response.regionId;
+        private Builder(ModifyDesktopNameRequest request) {
+            super(request);
+            this.desktopId = request.desktopId;
+            this.newDesktopName = request.newDesktopName;
+            this.regionId = request.regionId;
         } 
 
         /**

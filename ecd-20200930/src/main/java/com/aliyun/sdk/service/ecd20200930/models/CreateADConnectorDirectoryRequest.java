@@ -54,6 +54,10 @@ public class CreateADConnectorDirectoryRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("Specification")
+    private Long specification;
+
+    @Query
     @NameInMap("SubDomainDnsAddress")
     private java.util.List < String > subDomainDnsAddress;
 
@@ -77,6 +81,7 @@ public class CreateADConnectorDirectoryRequest extends Request {
         this.enableAdminAccess = builder.enableAdminAccess;
         this.mfaEnabled = builder.mfaEnabled;
         this.regionId = builder.regionId;
+        this.specification = builder.specification;
         this.subDomainDnsAddress = builder.subDomainDnsAddress;
         this.subDomainName = builder.subDomainName;
         this.vSwitchId = builder.vSwitchId;
@@ -159,6 +164,13 @@ public class CreateADConnectorDirectoryRequest extends Request {
     }
 
     /**
+     * @return specification
+     */
+    public Long getSpecification() {
+        return this.specification;
+    }
+
+    /**
      * @return subDomainDnsAddress
      */
     public java.util.List < String > getSubDomainDnsAddress() {
@@ -189,6 +201,7 @@ public class CreateADConnectorDirectoryRequest extends Request {
         private Boolean enableAdminAccess; 
         private Boolean mfaEnabled; 
         private String regionId; 
+        private Long specification; 
         private java.util.List < String > subDomainDnsAddress; 
         private String subDomainName; 
         private java.util.List < String > vSwitchId; 
@@ -197,20 +210,21 @@ public class CreateADConnectorDirectoryRequest extends Request {
             super();
         } 
 
-        private Builder(CreateADConnectorDirectoryRequest response) {
-            super(response);
-            this.desktopAccessType = response.desktopAccessType;
-            this.directoryName = response.directoryName;
-            this.dnsAddress = response.dnsAddress;
-            this.domainName = response.domainName;
-            this.domainPassword = response.domainPassword;
-            this.domainUserName = response.domainUserName;
-            this.enableAdminAccess = response.enableAdminAccess;
-            this.mfaEnabled = response.mfaEnabled;
-            this.regionId = response.regionId;
-            this.subDomainDnsAddress = response.subDomainDnsAddress;
-            this.subDomainName = response.subDomainName;
-            this.vSwitchId = response.vSwitchId;
+        private Builder(CreateADConnectorDirectoryRequest request) {
+            super(request);
+            this.desktopAccessType = request.desktopAccessType;
+            this.directoryName = request.directoryName;
+            this.dnsAddress = request.dnsAddress;
+            this.domainName = request.domainName;
+            this.domainPassword = request.domainPassword;
+            this.domainUserName = request.domainUserName;
+            this.enableAdminAccess = request.enableAdminAccess;
+            this.mfaEnabled = request.mfaEnabled;
+            this.regionId = request.regionId;
+            this.specification = request.specification;
+            this.subDomainDnsAddress = request.subDomainDnsAddress;
+            this.subDomainName = request.subDomainName;
+            this.vSwitchId = request.vSwitchId;
         } 
 
         /**
@@ -291,6 +305,15 @@ public class CreateADConnectorDirectoryRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Specification.
+         */
+        public Builder specification(Long specification) {
+            this.putQueryParameter("Specification", specification);
+            this.specification = specification;
             return this;
         }
 

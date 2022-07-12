@@ -27,7 +27,6 @@ public class CreateDesktopsRequest extends Request {
 
     @Query
     @NameInMap("BundleId")
-    @Validation(required = true)
     private String bundleId;
 
     @Query
@@ -97,6 +96,14 @@ public class CreateDesktopsRequest extends Request {
     private String userName;
 
     @Query
+    @NameInMap("VolumeEncryptionEnabled")
+    private Boolean volumeEncryptionEnabled;
+
+    @Query
+    @NameInMap("VolumeEncryptionKey")
+    private String volumeEncryptionKey;
+
+    @Query
     @NameInMap("VpcId")
     private String vpcId;
 
@@ -122,6 +129,8 @@ public class CreateDesktopsRequest extends Request {
         this.tag = builder.tag;
         this.userAssignMode = builder.userAssignMode;
         this.userName = builder.userName;
+        this.volumeEncryptionEnabled = builder.volumeEncryptionEnabled;
+        this.volumeEncryptionKey = builder.volumeEncryptionKey;
         this.vpcId = builder.vpcId;
     }
 
@@ -279,6 +288,20 @@ public class CreateDesktopsRequest extends Request {
     }
 
     /**
+     * @return volumeEncryptionEnabled
+     */
+    public Boolean getVolumeEncryptionEnabled() {
+        return this.volumeEncryptionEnabled;
+    }
+
+    /**
+     * @return volumeEncryptionKey
+     */
+    public String getVolumeEncryptionKey() {
+        return this.volumeEncryptionKey;
+    }
+
+    /**
      * @return vpcId
      */
     public String getVpcId() {
@@ -306,35 +329,39 @@ public class CreateDesktopsRequest extends Request {
         private java.util.List < Tag> tag; 
         private String userAssignMode; 
         private String userName; 
+        private Boolean volumeEncryptionEnabled; 
+        private String volumeEncryptionKey; 
         private String vpcId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateDesktopsRequest response) {
-            super(response);
-            this.amount = response.amount;
-            this.autoPay = response.autoPay;
-            this.autoRenew = response.autoRenew;
-            this.bundleId = response.bundleId;
-            this.chargeType = response.chargeType;
-            this.desktopName = response.desktopName;
-            this.desktopNameSuffix = response.desktopNameSuffix;
-            this.directoryId = response.directoryId;
-            this.endUserId = response.endUserId;
-            this.groupId = response.groupId;
-            this.hostname = response.hostname;
-            this.officeSiteId = response.officeSiteId;
-            this.period = response.period;
-            this.periodUnit = response.periodUnit;
-            this.policyGroupId = response.policyGroupId;
-            this.promotionId = response.promotionId;
-            this.regionId = response.regionId;
-            this.tag = response.tag;
-            this.userAssignMode = response.userAssignMode;
-            this.userName = response.userName;
-            this.vpcId = response.vpcId;
+        private Builder(CreateDesktopsRequest request) {
+            super(request);
+            this.amount = request.amount;
+            this.autoPay = request.autoPay;
+            this.autoRenew = request.autoRenew;
+            this.bundleId = request.bundleId;
+            this.chargeType = request.chargeType;
+            this.desktopName = request.desktopName;
+            this.desktopNameSuffix = request.desktopNameSuffix;
+            this.directoryId = request.directoryId;
+            this.endUserId = request.endUserId;
+            this.groupId = request.groupId;
+            this.hostname = request.hostname;
+            this.officeSiteId = request.officeSiteId;
+            this.period = request.period;
+            this.periodUnit = request.periodUnit;
+            this.policyGroupId = request.policyGroupId;
+            this.promotionId = request.promotionId;
+            this.regionId = request.regionId;
+            this.tag = request.tag;
+            this.userAssignMode = request.userAssignMode;
+            this.userName = request.userName;
+            this.volumeEncryptionEnabled = request.volumeEncryptionEnabled;
+            this.volumeEncryptionKey = request.volumeEncryptionKey;
+            this.vpcId = request.vpcId;
         } 
 
         /**
@@ -514,6 +541,24 @@ public class CreateDesktopsRequest extends Request {
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);
             this.userName = userName;
+            return this;
+        }
+
+        /**
+         * VolumeEncryptionEnabled.
+         */
+        public Builder volumeEncryptionEnabled(Boolean volumeEncryptionEnabled) {
+            this.putQueryParameter("VolumeEncryptionEnabled", volumeEncryptionEnabled);
+            this.volumeEncryptionEnabled = volumeEncryptionEnabled;
+            return this;
+        }
+
+        /**
+         * VolumeEncryptionKey.
+         */
+        public Builder volumeEncryptionKey(String volumeEncryptionKey) {
+            this.putQueryParameter("VolumeEncryptionKey", volumeEncryptionKey);
+            this.volumeEncryptionKey = volumeEncryptionKey;
             return this;
         }
 

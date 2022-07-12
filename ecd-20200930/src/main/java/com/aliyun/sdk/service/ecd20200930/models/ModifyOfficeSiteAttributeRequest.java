@@ -115,14 +115,14 @@ public class ModifyOfficeSiteAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyOfficeSiteAttributeRequest response) {
-            super(response);
-            this.desktopAccessType = response.desktopAccessType;
-            this.needVerifyLoginRisk = response.needVerifyLoginRisk;
-            this.needVerifyZeroDevice = response.needVerifyZeroDevice;
-            this.officeSiteId = response.officeSiteId;
-            this.officeSiteName = response.officeSiteName;
-            this.regionId = response.regionId;
+        private Builder(ModifyOfficeSiteAttributeRequest request) {
+            super(request);
+            this.desktopAccessType = request.desktopAccessType;
+            this.needVerifyLoginRisk = request.needVerifyLoginRisk;
+            this.needVerifyZeroDevice = request.needVerifyZeroDevice;
+            this.officeSiteId = request.officeSiteId;
+            this.officeSiteName = request.officeSiteName;
+            this.regionId = request.regionId;
         } 
 
         /**

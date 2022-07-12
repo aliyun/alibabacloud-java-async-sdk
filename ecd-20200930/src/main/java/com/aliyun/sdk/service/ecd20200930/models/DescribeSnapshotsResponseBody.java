@@ -125,6 +125,12 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         @NameInMap("Status")
         private String status;
 
+        @NameInMap("VolumeEncryptionEnabled")
+        private Boolean volumeEncryptionEnabled;
+
+        @NameInMap("VolumeEncryptionKey")
+        private String volumeEncryptionKey;
+
         private Snapshots(Builder builder) {
             this.creationTime = builder.creationTime;
             this.description = builder.description;
@@ -137,6 +143,8 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             this.sourceDiskSize = builder.sourceDiskSize;
             this.sourceDiskType = builder.sourceDiskType;
             this.status = builder.status;
+            this.volumeEncryptionEnabled = builder.volumeEncryptionEnabled;
+            this.volumeEncryptionKey = builder.volumeEncryptionKey;
         }
 
         public static Builder builder() {
@@ -224,6 +232,20 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             return this.status;
         }
 
+        /**
+         * @return volumeEncryptionEnabled
+         */
+        public Boolean getVolumeEncryptionEnabled() {
+            return this.volumeEncryptionEnabled;
+        }
+
+        /**
+         * @return volumeEncryptionKey
+         */
+        public String getVolumeEncryptionKey() {
+            return this.volumeEncryptionKey;
+        }
+
         public static final class Builder {
             private String creationTime; 
             private String description; 
@@ -236,6 +258,8 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             private String sourceDiskSize; 
             private String sourceDiskType; 
             private String status; 
+            private Boolean volumeEncryptionEnabled; 
+            private String volumeEncryptionKey; 
 
             /**
              * CreationTime.
@@ -322,6 +346,22 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * VolumeEncryptionEnabled.
+             */
+            public Builder volumeEncryptionEnabled(Boolean volumeEncryptionEnabled) {
+                this.volumeEncryptionEnabled = volumeEncryptionEnabled;
+                return this;
+            }
+
+            /**
+             * VolumeEncryptionKey.
+             */
+            public Builder volumeEncryptionKey(String volumeEncryptionKey) {
+                this.volumeEncryptionKey = volumeEncryptionKey;
                 return this;
             }
 

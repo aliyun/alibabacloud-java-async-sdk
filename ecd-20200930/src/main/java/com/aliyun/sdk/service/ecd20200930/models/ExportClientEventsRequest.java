@@ -166,18 +166,18 @@ public class ExportClientEventsRequest extends Request {
             super();
         } 
 
-        private Builder(ExportClientEventsRequest response) {
-            super(response);
-            this.desktopId = response.desktopId;
-            this.desktopName = response.desktopName;
-            this.endTime = response.endTime;
-            this.endUserId = response.endUserId;
-            this.eventType = response.eventType;
-            this.maxResults = response.maxResults;
-            this.officeSiteId = response.officeSiteId;
-            this.officeSiteName = response.officeSiteName;
-            this.regionId = response.regionId;
-            this.startTime = response.startTime;
+        private Builder(ExportClientEventsRequest request) {
+            super(request);
+            this.desktopId = request.desktopId;
+            this.desktopName = request.desktopName;
+            this.endTime = request.endTime;
+            this.endUserId = request.endUserId;
+            this.eventType = request.eventType;
+            this.maxResults = request.maxResults;
+            this.officeSiteId = request.officeSiteId;
+            this.officeSiteName = request.officeSiteName;
+            this.regionId = request.regionId;
+            this.startTime = request.startTime;
         } 
 
         /**

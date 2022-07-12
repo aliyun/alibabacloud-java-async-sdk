@@ -77,11 +77,11 @@ public class ModifyOfficeSiteMfaEnabledRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyOfficeSiteMfaEnabledRequest response) {
-            super(response);
-            this.mfaEnabled = response.mfaEnabled;
-            this.officeSiteId = response.officeSiteId;
-            this.regionId = response.regionId;
+        private Builder(ModifyOfficeSiteMfaEnabledRequest request) {
+            super(request);
+            this.mfaEnabled = request.mfaEnabled;
+            this.officeSiteId = request.officeSiteId;
+            this.regionId = request.regionId;
         } 
 
         /**

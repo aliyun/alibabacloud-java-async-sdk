@@ -132,15 +132,15 @@ public class OperateVulsRequest extends Request {
             super();
         } 
 
-        private Builder(OperateVulsRequest response) {
-            super(response);
-            this.desktopId = response.desktopId;
-            this.operateType = response.operateType;
-            this.precondition = response.precondition;
-            this.reason = response.reason;
-            this.regionId = response.regionId;
-            this.type = response.type;
-            this.vulName = response.vulName;
+        private Builder(OperateVulsRequest request) {
+            super(request);
+            this.desktopId = request.desktopId;
+            this.operateType = request.operateType;
+            this.precondition = request.precondition;
+            this.reason = request.reason;
+            this.regionId = request.regionId;
+            this.type = request.type;
+            this.vulName = request.vulName;
         } 
 
         /**

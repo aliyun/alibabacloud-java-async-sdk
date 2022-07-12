@@ -63,10 +63,10 @@ public class ListUserAdOrganizationUnitsRequest extends Request {
             super();
         } 
 
-        private Builder(ListUserAdOrganizationUnitsRequest response) {
-            super(response);
-            this.officeSiteId = response.officeSiteId;
-            this.regionId = response.regionId;
+        private Builder(ListUserAdOrganizationUnitsRequest request) {
+            super(request);
+            this.officeSiteId = request.officeSiteId;
+            this.regionId = request.regionId;
         } 
 
         /**

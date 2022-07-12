@@ -63,10 +63,10 @@ public class DeleteOfficeSitesRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteOfficeSitesRequest response) {
-            super(response);
-            this.officeSiteId = response.officeSiteId;
-            this.regionId = response.regionId;
+        private Builder(DeleteOfficeSitesRequest request) {
+            super(request);
+            this.officeSiteId = request.officeSiteId;
+            this.regionId = request.regionId;
         } 
 
         /**

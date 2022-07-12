@@ -18,8 +18,11 @@ public class AddUserToDesktopGroupRequest extends Request {
 
     @Query
     @NameInMap("DesktopGroupId")
-    @Validation(required = true)
     private String desktopGroupId;
+
+    @Query
+    @NameInMap("DesktopGroupIds")
+    private java.util.List < String > desktopGroupIds;
 
     @Query
     @NameInMap("EndUserIds")
@@ -35,6 +38,7 @@ public class AddUserToDesktopGroupRequest extends Request {
         super(builder);
         this.clientToken = builder.clientToken;
         this.desktopGroupId = builder.desktopGroupId;
+        this.desktopGroupIds = builder.desktopGroupIds;
         this.endUserIds = builder.endUserIds;
         this.regionId = builder.regionId;
     }
@@ -67,6 +71,13 @@ public class AddUserToDesktopGroupRequest extends Request {
     }
 
     /**
+     * @return desktopGroupIds
+     */
+    public java.util.List < String > getDesktopGroupIds() {
+        return this.desktopGroupIds;
+    }
+
+    /**
      * @return endUserIds
      */
     public java.util.List < String > getEndUserIds() {
@@ -83,6 +94,7 @@ public class AddUserToDesktopGroupRequest extends Request {
     public static final class Builder extends Request.Builder<AddUserToDesktopGroupRequest, Builder> {
         private String clientToken; 
         private String desktopGroupId; 
+        private java.util.List < String > desktopGroupIds; 
         private java.util.List < String > endUserIds; 
         private String regionId; 
 
@@ -90,12 +102,13 @@ public class AddUserToDesktopGroupRequest extends Request {
             super();
         } 
 
-        private Builder(AddUserToDesktopGroupRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.desktopGroupId = response.desktopGroupId;
-            this.endUserIds = response.endUserIds;
-            this.regionId = response.regionId;
+        private Builder(AddUserToDesktopGroupRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.desktopGroupId = request.desktopGroupId;
+            this.desktopGroupIds = request.desktopGroupIds;
+            this.endUserIds = request.endUserIds;
+            this.regionId = request.regionId;
         } 
 
         /**
@@ -113,6 +126,15 @@ public class AddUserToDesktopGroupRequest extends Request {
         public Builder desktopGroupId(String desktopGroupId) {
             this.putQueryParameter("DesktopGroupId", desktopGroupId);
             this.desktopGroupId = desktopGroupId;
+            return this;
+        }
+
+        /**
+         * DesktopGroupIds.
+         */
+        public Builder desktopGroupIds(java.util.List < String > desktopGroupIds) {
+            this.putQueryParameter("DesktopGroupIds", desktopGroupIds);
+            this.desktopGroupIds = desktopGroupIds;
             return this;
         }
 

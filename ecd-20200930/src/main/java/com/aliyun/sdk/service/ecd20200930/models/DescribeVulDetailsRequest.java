@@ -103,13 +103,13 @@ public class DescribeVulDetailsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeVulDetailsRequest response) {
-            super(response);
-            this.aliasName = response.aliasName;
-            this.lang = response.lang;
-            this.name = response.name;
-            this.regionId = response.regionId;
-            this.type = response.type;
+        private Builder(DescribeVulDetailsRequest request) {
+            super(request);
+            this.aliasName = request.aliasName;
+            this.lang = request.lang;
+            this.name = request.name;
+            this.regionId = request.regionId;
+            this.type = request.type;
         } 
 
         /**

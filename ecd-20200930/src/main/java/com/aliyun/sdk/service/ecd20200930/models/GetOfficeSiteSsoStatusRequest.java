@@ -63,10 +63,10 @@ public class GetOfficeSiteSsoStatusRequest extends Request {
             super();
         } 
 
-        private Builder(GetOfficeSiteSsoStatusRequest response) {
-            super(response);
-            this.officeSiteId = response.officeSiteId;
-            this.regionId = response.regionId;
+        private Builder(GetOfficeSiteSsoStatusRequest request) {
+            super(request);
+            this.officeSiteId = request.officeSiteId;
+            this.regionId = request.regionId;
         } 
 
         /**

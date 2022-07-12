@@ -114,14 +114,14 @@ public class ListOfficeSiteOverviewRequest extends Request {
             super();
         } 
 
-        private Builder(ListOfficeSiteOverviewRequest response) {
-            super(response);
-            this.forceRefresh = response.forceRefresh;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.officeSiteId = response.officeSiteId;
-            this.queryRange = response.queryRange;
-            this.regionId = response.regionId;
+        private Builder(ListOfficeSiteOverviewRequest request) {
+            super(request);
+            this.forceRefresh = request.forceRefresh;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.officeSiteId = request.officeSiteId;
+            this.queryRange = request.queryRange;
+            this.regionId = request.regionId;
         } 
 
         /**

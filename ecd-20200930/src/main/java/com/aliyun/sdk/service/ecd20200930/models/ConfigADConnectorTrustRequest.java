@@ -77,11 +77,11 @@ public class ConfigADConnectorTrustRequest extends Request {
             super();
         } 
 
-        private Builder(ConfigADConnectorTrustRequest response) {
-            super(response);
-            this.officeSiteId = response.officeSiteId;
-            this.regionId = response.regionId;
-            this.trustKey = response.trustKey;
+        private Builder(ConfigADConnectorTrustRequest request) {
+            super(request);
+            this.officeSiteId = request.officeSiteId;
+            this.regionId = request.regionId;
+            this.trustKey = request.trustKey;
         } 
 
         /**

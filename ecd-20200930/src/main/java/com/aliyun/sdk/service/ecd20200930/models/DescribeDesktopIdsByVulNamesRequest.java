@@ -104,13 +104,13 @@ public class DescribeDesktopIdsByVulNamesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDesktopIdsByVulNamesRequest response) {
-            super(response);
-            this.necessity = response.necessity;
-            this.officeSiteId = response.officeSiteId;
-            this.regionId = response.regionId;
-            this.type = response.type;
-            this.vulName = response.vulName;
+        private Builder(DescribeDesktopIdsByVulNamesRequest request) {
+            super(request);
+            this.necessity = request.necessity;
+            this.officeSiteId = request.officeSiteId;
+            this.regionId = request.regionId;
+            this.type = request.type;
+            this.vulName = request.vulName;
         } 
 
         /**

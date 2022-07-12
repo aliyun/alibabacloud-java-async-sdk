@@ -76,11 +76,11 @@ public class ModifyNetworkPackageEnabledRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyNetworkPackageEnabledRequest response) {
-            super(response);
-            this.enabled = response.enabled;
-            this.networkPackageId = response.networkPackageId;
-            this.regionId = response.regionId;
+        private Builder(ModifyNetworkPackageEnabledRequest request) {
+            super(request);
+            this.enabled = request.enabled;
+            this.networkPackageId = request.networkPackageId;
+            this.regionId = request.regionId;
         } 
 
         /**

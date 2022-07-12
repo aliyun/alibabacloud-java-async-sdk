@@ -155,17 +155,17 @@ public class DescribeVulListRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeVulListRequest response) {
-            super(response);
-            this.aliasName = response.aliasName;
-            this.currentPage = response.currentPage;
-            this.dealed = response.dealed;
-            this.lang = response.lang;
-            this.necessity = response.necessity;
-            this.officeSiteId = response.officeSiteId;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.type = response.type;
+        private Builder(DescribeVulListRequest request) {
+            super(request);
+            this.aliasName = request.aliasName;
+            this.currentPage = request.currentPage;
+            this.dealed = request.dealed;
+            this.lang = request.lang;
+            this.necessity = request.necessity;
+            this.officeSiteId = request.officeSiteId;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.type = request.type;
         } 
 
         /**

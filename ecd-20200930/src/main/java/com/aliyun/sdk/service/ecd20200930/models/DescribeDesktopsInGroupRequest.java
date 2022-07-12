@@ -103,13 +103,13 @@ public class DescribeDesktopsInGroupRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDesktopsInGroupRequest response) {
-            super(response);
-            this.desktopGroupId = response.desktopGroupId;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.payType = response.payType;
-            this.regionId = response.regionId;
+        private Builder(DescribeDesktopsInGroupRequest request) {
+            super(request);
+            this.desktopGroupId = request.desktopGroupId;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.payType = request.payType;
+            this.regionId = request.regionId;
         } 
 
         /**

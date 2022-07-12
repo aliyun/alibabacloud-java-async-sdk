@@ -15,6 +15,9 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
     @NameInMap("NextToken")
     private String nextToken;
 
+    @NameInMap("OnlinePrePaidDesktopsCount")
+    private Integer onlinePrePaidDesktopsCount;
+
     @NameInMap("PaidDesktops")
     private java.util.List < PaidDesktops> paidDesktops;
 
@@ -33,14 +36,23 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("RunningPrePaidDesktopsCount")
+    private Integer runningPrePaidDesktopsCount;
+
+    @NameInMap("StopedPrePaidDesktopsCount")
+    private Integer stopedPrePaidDesktopsCount;
+
     private DescribeDesktopsInGroupResponseBody(Builder builder) {
         this.nextToken = builder.nextToken;
+        this.onlinePrePaidDesktopsCount = builder.onlinePrePaidDesktopsCount;
         this.paidDesktops = builder.paidDesktops;
         this.paidDesktopsCount = builder.paidDesktopsCount;
         this.postPaidDesktops = builder.postPaidDesktops;
         this.postPaidDesktopsCount = builder.postPaidDesktopsCount;
         this.postPaidDesktopsTotalAmount = builder.postPaidDesktopsTotalAmount;
         this.requestId = builder.requestId;
+        this.runningPrePaidDesktopsCount = builder.runningPrePaidDesktopsCount;
+        this.stopedPrePaidDesktopsCount = builder.stopedPrePaidDesktopsCount;
     }
 
     public static Builder builder() {
@@ -56,6 +68,13 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
      */
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    /**
+     * @return onlinePrePaidDesktopsCount
+     */
+    public Integer getOnlinePrePaidDesktopsCount() {
+        return this.onlinePrePaidDesktopsCount;
     }
 
     /**
@@ -100,20 +119,45 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return runningPrePaidDesktopsCount
+     */
+    public Integer getRunningPrePaidDesktopsCount() {
+        return this.runningPrePaidDesktopsCount;
+    }
+
+    /**
+     * @return stopedPrePaidDesktopsCount
+     */
+    public Integer getStopedPrePaidDesktopsCount() {
+        return this.stopedPrePaidDesktopsCount;
+    }
+
     public static final class Builder {
         private String nextToken; 
+        private Integer onlinePrePaidDesktopsCount; 
         private java.util.List < PaidDesktops> paidDesktops; 
         private Integer paidDesktopsCount; 
         private java.util.List < PostPaidDesktops> postPaidDesktops; 
         private Integer postPaidDesktopsCount; 
         private Integer postPaidDesktopsTotalAmount; 
         private String requestId; 
+        private Integer runningPrePaidDesktopsCount; 
+        private Integer stopedPrePaidDesktopsCount; 
 
         /**
          * NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * OnlinePrePaidDesktopsCount.
+         */
+        public Builder onlinePrePaidDesktopsCount(Integer onlinePrePaidDesktopsCount) {
+            this.onlinePrePaidDesktopsCount = onlinePrePaidDesktopsCount;
             return this;
         }
 
@@ -165,6 +209,22 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             return this;
         }
 
+        /**
+         * RunningPrePaidDesktopsCount.
+         */
+        public Builder runningPrePaidDesktopsCount(Integer runningPrePaidDesktopsCount) {
+            this.runningPrePaidDesktopsCount = runningPrePaidDesktopsCount;
+            return this;
+        }
+
+        /**
+         * StopedPrePaidDesktopsCount.
+         */
+        public Builder stopedPrePaidDesktopsCount(Integer stopedPrePaidDesktopsCount) {
+            this.stopedPrePaidDesktopsCount = stopedPrePaidDesktopsCount;
+            return this;
+        }
+
         public DescribeDesktopsInGroupResponseBody build() {
             return new DescribeDesktopsInGroupResponseBody(this);
         } 
@@ -184,23 +244,59 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         @NameInMap("DesktopStatus")
         private String desktopStatus;
 
+        @NameInMap("DiskType")
+        private String diskType;
+
         @NameInMap("EndUserId")
         private String endUserId;
+
+        @NameInMap("EndUserIds")
+        private java.util.List < String > endUserIds;
 
         @NameInMap("EndUserName")
         private String endUserName;
 
+        @NameInMap("EndUserNames")
+        private java.util.List < String > endUserNames;
+
+        @NameInMap("GpuDriverVersion")
+        private String gpuDriverVersion;
+
+        @NameInMap("ImageId")
+        private String imageId;
+
+        @NameInMap("ImageName")
+        private String imageName;
+
         @NameInMap("ManagementFlag")
         private String managementFlag;
+
+        @NameInMap("OsType")
+        private String osType;
+
+        @NameInMap("ResetTime")
+        private String resetTime;
+
+        @NameInMap("SystemDiskSize")
+        private Integer systemDiskSize;
 
         private PaidDesktops(Builder builder) {
             this.connectionStatus = builder.connectionStatus;
             this.desktopId = builder.desktopId;
             this.desktopName = builder.desktopName;
             this.desktopStatus = builder.desktopStatus;
+            this.diskType = builder.diskType;
             this.endUserId = builder.endUserId;
+            this.endUserIds = builder.endUserIds;
             this.endUserName = builder.endUserName;
+            this.endUserNames = builder.endUserNames;
+            this.gpuDriverVersion = builder.gpuDriverVersion;
+            this.imageId = builder.imageId;
+            this.imageName = builder.imageName;
             this.managementFlag = builder.managementFlag;
+            this.osType = builder.osType;
+            this.resetTime = builder.resetTime;
+            this.systemDiskSize = builder.systemDiskSize;
         }
 
         public static Builder builder() {
@@ -240,10 +336,24 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return diskType
+         */
+        public String getDiskType() {
+            return this.diskType;
+        }
+
+        /**
          * @return endUserId
          */
         public String getEndUserId() {
             return this.endUserId;
+        }
+
+        /**
+         * @return endUserIds
+         */
+        public java.util.List < String > getEndUserIds() {
+            return this.endUserIds;
         }
 
         /**
@@ -254,10 +364,59 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return endUserNames
+         */
+        public java.util.List < String > getEndUserNames() {
+            return this.endUserNames;
+        }
+
+        /**
+         * @return gpuDriverVersion
+         */
+        public String getGpuDriverVersion() {
+            return this.gpuDriverVersion;
+        }
+
+        /**
+         * @return imageId
+         */
+        public String getImageId() {
+            return this.imageId;
+        }
+
+        /**
+         * @return imageName
+         */
+        public String getImageName() {
+            return this.imageName;
+        }
+
+        /**
          * @return managementFlag
          */
         public String getManagementFlag() {
             return this.managementFlag;
+        }
+
+        /**
+         * @return osType
+         */
+        public String getOsType() {
+            return this.osType;
+        }
+
+        /**
+         * @return resetTime
+         */
+        public String getResetTime() {
+            return this.resetTime;
+        }
+
+        /**
+         * @return systemDiskSize
+         */
+        public Integer getSystemDiskSize() {
+            return this.systemDiskSize;
         }
 
         public static final class Builder {
@@ -265,9 +424,18 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             private String desktopId; 
             private String desktopName; 
             private String desktopStatus; 
+            private String diskType; 
             private String endUserId; 
+            private java.util.List < String > endUserIds; 
             private String endUserName; 
+            private java.util.List < String > endUserNames; 
+            private String gpuDriverVersion; 
+            private String imageId; 
+            private String imageName; 
             private String managementFlag; 
+            private String osType; 
+            private String resetTime; 
+            private Integer systemDiskSize; 
 
             /**
              * ConnectionStatus.
@@ -302,10 +470,26 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
+             * DiskType.
+             */
+            public Builder diskType(String diskType) {
+                this.diskType = diskType;
+                return this;
+            }
+
+            /**
              * EndUserId.
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
+                return this;
+            }
+
+            /**
+             * EndUserIds.
+             */
+            public Builder endUserIds(java.util.List < String > endUserIds) {
+                this.endUserIds = endUserIds;
                 return this;
             }
 
@@ -318,10 +502,66 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
+             * EndUserNames.
+             */
+            public Builder endUserNames(java.util.List < String > endUserNames) {
+                this.endUserNames = endUserNames;
+                return this;
+            }
+
+            /**
+             * GpuDriverVersion.
+             */
+            public Builder gpuDriverVersion(String gpuDriverVersion) {
+                this.gpuDriverVersion = gpuDriverVersion;
+                return this;
+            }
+
+            /**
+             * ImageId.
+             */
+            public Builder imageId(String imageId) {
+                this.imageId = imageId;
+                return this;
+            }
+
+            /**
+             * ImageName.
+             */
+            public Builder imageName(String imageName) {
+                this.imageName = imageName;
+                return this;
+            }
+
+            /**
              * ManagementFlag.
              */
             public Builder managementFlag(String managementFlag) {
                 this.managementFlag = managementFlag;
+                return this;
+            }
+
+            /**
+             * OsType.
+             */
+            public Builder osType(String osType) {
+                this.osType = osType;
+                return this;
+            }
+
+            /**
+             * ResetTime.
+             */
+            public Builder resetTime(String resetTime) {
+                this.resetTime = resetTime;
+                return this;
+            }
+
+            /**
+             * SystemDiskSize.
+             */
+            public Builder systemDiskSize(Integer systemDiskSize) {
+                this.systemDiskSize = systemDiskSize;
                 return this;
             }
 
@@ -351,17 +591,44 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         @NameInMap("DesktopStatus")
         private String desktopStatus;
 
+        @NameInMap("DiskType")
+        private String diskType;
+
         @NameInMap("EndUserId")
         private String endUserId;
+
+        @NameInMap("EndUserIds")
+        private java.util.List < String > endUserIds;
 
         @NameInMap("EndUserName")
         private String endUserName;
 
+        @NameInMap("EndUserNames")
+        private java.util.List < String > endUserNames;
+
+        @NameInMap("GpuDriverVersion")
+        private String gpuDriverVersion;
+
+        @NameInMap("ImageId")
+        private String imageId;
+
+        @NameInMap("ImageName")
+        private String imageName;
+
         @NameInMap("ManagementFlag")
         private String managementFlag;
 
+        @NameInMap("OsType")
+        private String osType;
+
         @NameInMap("ReleaseTime")
         private String releaseTime;
+
+        @NameInMap("ResetTime")
+        private String resetTime;
+
+        @NameInMap("SystemDiskSize")
+        private Integer systemDiskSize;
 
         private PostPaidDesktops(Builder builder) {
             this.connectionStatus = builder.connectionStatus;
@@ -370,10 +637,19 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             this.desktopId = builder.desktopId;
             this.desktopName = builder.desktopName;
             this.desktopStatus = builder.desktopStatus;
+            this.diskType = builder.diskType;
             this.endUserId = builder.endUserId;
+            this.endUserIds = builder.endUserIds;
             this.endUserName = builder.endUserName;
+            this.endUserNames = builder.endUserNames;
+            this.gpuDriverVersion = builder.gpuDriverVersion;
+            this.imageId = builder.imageId;
+            this.imageName = builder.imageName;
             this.managementFlag = builder.managementFlag;
+            this.osType = builder.osType;
             this.releaseTime = builder.releaseTime;
+            this.resetTime = builder.resetTime;
+            this.systemDiskSize = builder.systemDiskSize;
         }
 
         public static Builder builder() {
@@ -427,10 +703,24 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return diskType
+         */
+        public String getDiskType() {
+            return this.diskType;
+        }
+
+        /**
          * @return endUserId
          */
         public String getEndUserId() {
             return this.endUserId;
+        }
+
+        /**
+         * @return endUserIds
+         */
+        public java.util.List < String > getEndUserIds() {
+            return this.endUserIds;
         }
 
         /**
@@ -441,10 +731,45 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return endUserNames
+         */
+        public java.util.List < String > getEndUserNames() {
+            return this.endUserNames;
+        }
+
+        /**
+         * @return gpuDriverVersion
+         */
+        public String getGpuDriverVersion() {
+            return this.gpuDriverVersion;
+        }
+
+        /**
+         * @return imageId
+         */
+        public String getImageId() {
+            return this.imageId;
+        }
+
+        /**
+         * @return imageName
+         */
+        public String getImageName() {
+            return this.imageName;
+        }
+
+        /**
          * @return managementFlag
          */
         public String getManagementFlag() {
             return this.managementFlag;
+        }
+
+        /**
+         * @return osType
+         */
+        public String getOsType() {
+            return this.osType;
         }
 
         /**
@@ -454,6 +779,20 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             return this.releaseTime;
         }
 
+        /**
+         * @return resetTime
+         */
+        public String getResetTime() {
+            return this.resetTime;
+        }
+
+        /**
+         * @return systemDiskSize
+         */
+        public Integer getSystemDiskSize() {
+            return this.systemDiskSize;
+        }
+
         public static final class Builder {
             private String connectionStatus; 
             private String createDuration; 
@@ -461,10 +800,19 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             private String desktopId; 
             private String desktopName; 
             private String desktopStatus; 
+            private String diskType; 
             private String endUserId; 
+            private java.util.List < String > endUserIds; 
             private String endUserName; 
+            private java.util.List < String > endUserNames; 
+            private String gpuDriverVersion; 
+            private String imageId; 
+            private String imageName; 
             private String managementFlag; 
+            private String osType; 
             private String releaseTime; 
+            private String resetTime; 
+            private Integer systemDiskSize; 
 
             /**
              * ConnectionStatus.
@@ -515,10 +863,26 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
+             * DiskType.
+             */
+            public Builder diskType(String diskType) {
+                this.diskType = diskType;
+                return this;
+            }
+
+            /**
              * EndUserId.
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
+                return this;
+            }
+
+            /**
+             * EndUserIds.
+             */
+            public Builder endUserIds(java.util.List < String > endUserIds) {
+                this.endUserIds = endUserIds;
                 return this;
             }
 
@@ -531,6 +895,38 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
+             * EndUserNames.
+             */
+            public Builder endUserNames(java.util.List < String > endUserNames) {
+                this.endUserNames = endUserNames;
+                return this;
+            }
+
+            /**
+             * GpuDriverVersion.
+             */
+            public Builder gpuDriverVersion(String gpuDriverVersion) {
+                this.gpuDriverVersion = gpuDriverVersion;
+                return this;
+            }
+
+            /**
+             * ImageId.
+             */
+            public Builder imageId(String imageId) {
+                this.imageId = imageId;
+                return this;
+            }
+
+            /**
+             * ImageName.
+             */
+            public Builder imageName(String imageName) {
+                this.imageName = imageName;
+                return this;
+            }
+
+            /**
              * ManagementFlag.
              */
             public Builder managementFlag(String managementFlag) {
@@ -539,10 +935,34 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
+             * OsType.
+             */
+            public Builder osType(String osType) {
+                this.osType = osType;
+                return this;
+            }
+
+            /**
              * ReleaseTime.
              */
             public Builder releaseTime(String releaseTime) {
                 this.releaseTime = releaseTime;
+                return this;
+            }
+
+            /**
+             * ResetTime.
+             */
+            public Builder resetTime(String resetTime) {
+                this.resetTime = resetTime;
+                return this;
+            }
+
+            /**
+             * SystemDiskSize.
+             */
+            public Builder systemDiskSize(Integer systemDiskSize) {
+                this.systemDiskSize = systemDiskSize;
                 return this;
             }
 

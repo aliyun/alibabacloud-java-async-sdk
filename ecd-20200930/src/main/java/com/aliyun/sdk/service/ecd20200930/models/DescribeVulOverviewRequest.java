@@ -49,9 +49,9 @@ public class DescribeVulOverviewRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeVulOverviewRequest response) {
-            super(response);
-            this.regionId = response.regionId;
+        private Builder(DescribeVulOverviewRequest request) {
+            super(request);
+            this.regionId = request.regionId;
         } 
 
         /**

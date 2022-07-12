@@ -92,6 +92,9 @@ public class DescribeImagesResponseBody extends TeaModel {
     } 
 
     public static class Images extends TeaModel {
+        @NameInMap("AppVersion")
+        private String appVersion;
+
         @NameInMap("CreationTime")
         private String creationTime;
 
@@ -125,6 +128,12 @@ public class DescribeImagesResponseBody extends TeaModel {
         @NameInMap("ProtocolType")
         private String protocolType;
 
+        @NameInMap("SessionType")
+        private String sessionType;
+
+        @NameInMap("SharedCount")
+        private Integer sharedCount;
+
         @NameInMap("Size")
         private Integer size;
 
@@ -134,7 +143,14 @@ public class DescribeImagesResponseBody extends TeaModel {
         @NameInMap("SupportedLanguages")
         private java.util.List < String > supportedLanguages;
 
+        @NameInMap("VolumeEncryptionEnabled")
+        private Boolean volumeEncryptionEnabled;
+
+        @NameInMap("VolumeEncryptionKey")
+        private String volumeEncryptionKey;
+
         private Images(Builder builder) {
+            this.appVersion = builder.appVersion;
             this.creationTime = builder.creationTime;
             this.dataDiskSize = builder.dataDiskSize;
             this.description = builder.description;
@@ -146,9 +162,13 @@ public class DescribeImagesResponseBody extends TeaModel {
             this.osType = builder.osType;
             this.progress = builder.progress;
             this.protocolType = builder.protocolType;
+            this.sessionType = builder.sessionType;
+            this.sharedCount = builder.sharedCount;
             this.size = builder.size;
             this.status = builder.status;
             this.supportedLanguages = builder.supportedLanguages;
+            this.volumeEncryptionEnabled = builder.volumeEncryptionEnabled;
+            this.volumeEncryptionKey = builder.volumeEncryptionKey;
         }
 
         public static Builder builder() {
@@ -157,6 +177,13 @@ public class DescribeImagesResponseBody extends TeaModel {
 
         public static Images create() {
             return builder().build();
+        }
+
+        /**
+         * @return appVersion
+         */
+        public String getAppVersion() {
+            return this.appVersion;
         }
 
         /**
@@ -237,6 +264,20 @@ public class DescribeImagesResponseBody extends TeaModel {
         }
 
         /**
+         * @return sessionType
+         */
+        public String getSessionType() {
+            return this.sessionType;
+        }
+
+        /**
+         * @return sharedCount
+         */
+        public Integer getSharedCount() {
+            return this.sharedCount;
+        }
+
+        /**
          * @return size
          */
         public Integer getSize() {
@@ -257,7 +298,22 @@ public class DescribeImagesResponseBody extends TeaModel {
             return this.supportedLanguages;
         }
 
+        /**
+         * @return volumeEncryptionEnabled
+         */
+        public Boolean getVolumeEncryptionEnabled() {
+            return this.volumeEncryptionEnabled;
+        }
+
+        /**
+         * @return volumeEncryptionKey
+         */
+        public String getVolumeEncryptionKey() {
+            return this.volumeEncryptionKey;
+        }
+
         public static final class Builder {
+            private String appVersion; 
             private String creationTime; 
             private Integer dataDiskSize; 
             private String description; 
@@ -269,9 +325,21 @@ public class DescribeImagesResponseBody extends TeaModel {
             private String osType; 
             private String progress; 
             private String protocolType; 
+            private String sessionType; 
+            private Integer sharedCount; 
             private Integer size; 
             private String status; 
             private java.util.List < String > supportedLanguages; 
+            private Boolean volumeEncryptionEnabled; 
+            private String volumeEncryptionKey; 
+
+            /**
+             * AppVersion.
+             */
+            public Builder appVersion(String appVersion) {
+                this.appVersion = appVersion;
+                return this;
+            }
 
             /**
              * CreationTime.
@@ -362,6 +430,22 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
+             * SessionType.
+             */
+            public Builder sessionType(String sessionType) {
+                this.sessionType = sessionType;
+                return this;
+            }
+
+            /**
+             * SharedCount.
+             */
+            public Builder sharedCount(Integer sharedCount) {
+                this.sharedCount = sharedCount;
+                return this;
+            }
+
+            /**
              * Size.
              */
             public Builder size(Integer size) {
@@ -382,6 +466,22 @@ public class DescribeImagesResponseBody extends TeaModel {
              */
             public Builder supportedLanguages(java.util.List < String > supportedLanguages) {
                 this.supportedLanguages = supportedLanguages;
+                return this;
+            }
+
+            /**
+             * VolumeEncryptionEnabled.
+             */
+            public Builder volumeEncryptionEnabled(Boolean volumeEncryptionEnabled) {
+                this.volumeEncryptionEnabled = volumeEncryptionEnabled;
+                return this;
+            }
+
+            /**
+             * VolumeEncryptionKey.
+             */
+            public Builder volumeEncryptionKey(String volumeEncryptionKey) {
+                this.volumeEncryptionKey = volumeEncryptionKey;
                 return this;
             }
 

@@ -63,10 +63,10 @@ public class ResetNASDefaultMountTargetRequest extends Request {
             super();
         } 
 
-        private Builder(ResetNASDefaultMountTargetRequest response) {
-            super(response);
-            this.fileSystemId = response.fileSystemId;
-            this.regionId = response.regionId;
+        private Builder(ResetNASDefaultMountTargetRequest request) {
+            super(request);
+            this.fileSystemId = request.fileSystemId;
+            this.regionId = request.regionId;
         } 
 
         /**

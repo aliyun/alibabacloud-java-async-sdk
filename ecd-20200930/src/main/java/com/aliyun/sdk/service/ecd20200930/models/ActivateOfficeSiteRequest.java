@@ -63,10 +63,10 @@ public class ActivateOfficeSiteRequest extends Request {
             super();
         } 
 
-        private Builder(ActivateOfficeSiteRequest response) {
-            super(response);
-            this.officeSiteId = response.officeSiteId;
-            this.regionId = response.regionId;
+        private Builder(ActivateOfficeSiteRequest request) {
+            super(request);
+            this.officeSiteId = request.officeSiteId;
+            this.regionId = request.regionId;
         } 
 
         /**

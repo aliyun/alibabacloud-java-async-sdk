@@ -77,11 +77,11 @@ public class ModifyOfficeSiteCrossDesktopAccessRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyOfficeSiteCrossDesktopAccessRequest response) {
-            super(response);
-            this.enableCrossDesktopAccess = response.enableCrossDesktopAccess;
-            this.officeSiteId = response.officeSiteId;
-            this.regionId = response.regionId;
+        private Builder(ModifyOfficeSiteCrossDesktopAccessRequest request) {
+            super(request);
+            this.enableCrossDesktopAccess = request.enableCrossDesktopAccess;
+            this.officeSiteId = request.officeSiteId;
+            this.regionId = request.regionId;
         } 
 
         /**

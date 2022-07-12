@@ -542,6 +542,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("AuthorizeSecurityPolicyRules")
         private java.util.List < AuthorizeSecurityPolicyRules> authorizeSecurityPolicyRules;
 
+        @NameInMap("CameraRedirect")
+        private String cameraRedirect;
+
         @NameInMap("ClientTypes")
         private java.util.List < ClientTypes> clientTypes;
 
@@ -569,6 +572,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("Name")
         private String name;
 
+        @NameInMap("NetRedirect")
+        private String netRedirect;
+
         @NameInMap("PolicyGroupId")
         private String policyGroupId;
 
@@ -586,6 +592,18 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
 
         @NameInMap("PrinterRedirection")
         private String printerRedirection;
+
+        @NameInMap("Recording")
+        private String recording;
+
+        @NameInMap("RecordingEndTime")
+        private String recordingEndTime;
+
+        @NameInMap("RecordingFps")
+        private Long recordingFps;
+
+        @NameInMap("RecordingStartTime")
+        private String recordingStartTime;
 
         @NameInMap("UsbRedirect")
         private String usbRedirect;
@@ -611,6 +629,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         private DescribePolicyGroups(Builder builder) {
             this.authorizeAccessPolicyRules = builder.authorizeAccessPolicyRules;
             this.authorizeSecurityPolicyRules = builder.authorizeSecurityPolicyRules;
+            this.cameraRedirect = builder.cameraRedirect;
             this.clientTypes = builder.clientTypes;
             this.clipboard = builder.clipboard;
             this.domainList = builder.domainList;
@@ -620,12 +639,17 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             this.html5FileTransfer = builder.html5FileTransfer;
             this.localDrive = builder.localDrive;
             this.name = builder.name;
+            this.netRedirect = builder.netRedirect;
             this.policyGroupId = builder.policyGroupId;
             this.policyGroupType = builder.policyGroupType;
             this.policyStatus = builder.policyStatus;
             this.preemptLogin = builder.preemptLogin;
             this.preemptLoginUsers = builder.preemptLoginUsers;
             this.printerRedirection = builder.printerRedirection;
+            this.recording = builder.recording;
+            this.recordingEndTime = builder.recordingEndTime;
+            this.recordingFps = builder.recordingFps;
+            this.recordingStartTime = builder.recordingStartTime;
             this.usbRedirect = builder.usbRedirect;
             this.usbSupplyRedirectRule = builder.usbSupplyRedirectRule;
             this.visualQuality = builder.visualQuality;
@@ -655,6 +679,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          */
         public java.util.List < AuthorizeSecurityPolicyRules> getAuthorizeSecurityPolicyRules() {
             return this.authorizeSecurityPolicyRules;
+        }
+
+        /**
+         * @return cameraRedirect
+         */
+        public String getCameraRedirect() {
+            return this.cameraRedirect;
         }
 
         /**
@@ -721,6 +752,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return netRedirect
+         */
+        public String getNetRedirect() {
+            return this.netRedirect;
+        }
+
+        /**
          * @return policyGroupId
          */
         public String getPolicyGroupId() {
@@ -760,6 +798,34 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          */
         public String getPrinterRedirection() {
             return this.printerRedirection;
+        }
+
+        /**
+         * @return recording
+         */
+        public String getRecording() {
+            return this.recording;
+        }
+
+        /**
+         * @return recordingEndTime
+         */
+        public String getRecordingEndTime() {
+            return this.recordingEndTime;
+        }
+
+        /**
+         * @return recordingFps
+         */
+        public Long getRecordingFps() {
+            return this.recordingFps;
+        }
+
+        /**
+         * @return recordingStartTime
+         */
+        public String getRecordingStartTime() {
+            return this.recordingStartTime;
         }
 
         /**
@@ -814,6 +880,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List < AuthorizeAccessPolicyRules> authorizeAccessPolicyRules; 
             private java.util.List < AuthorizeSecurityPolicyRules> authorizeSecurityPolicyRules; 
+            private String cameraRedirect; 
             private java.util.List < ClientTypes> clientTypes; 
             private String clipboard; 
             private String domainList; 
@@ -823,12 +890,17 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private String html5FileTransfer; 
             private String localDrive; 
             private String name; 
+            private String netRedirect; 
             private String policyGroupId; 
             private String policyGroupType; 
             private String policyStatus; 
             private String preemptLogin; 
             private java.util.List < String > preemptLoginUsers; 
             private String printerRedirection; 
+            private String recording; 
+            private String recordingEndTime; 
+            private Long recordingFps; 
+            private String recordingStartTime; 
             private String usbRedirect; 
             private java.util.List < UsbSupplyRedirectRule> usbSupplyRedirectRule; 
             private String visualQuality; 
@@ -850,6 +922,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
              */
             public Builder authorizeSecurityPolicyRules(java.util.List < AuthorizeSecurityPolicyRules> authorizeSecurityPolicyRules) {
                 this.authorizeSecurityPolicyRules = authorizeSecurityPolicyRules;
+                return this;
+            }
+
+            /**
+             * CameraRedirect.
+             */
+            public Builder cameraRedirect(String cameraRedirect) {
+                this.cameraRedirect = cameraRedirect;
                 return this;
             }
 
@@ -926,6 +1006,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
+             * NetRedirect.
+             */
+            public Builder netRedirect(String netRedirect) {
+                this.netRedirect = netRedirect;
+                return this;
+            }
+
+            /**
              * PolicyGroupId.
              */
             public Builder policyGroupId(String policyGroupId) {
@@ -970,6 +1058,38 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
              */
             public Builder printerRedirection(String printerRedirection) {
                 this.printerRedirection = printerRedirection;
+                return this;
+            }
+
+            /**
+             * Recording.
+             */
+            public Builder recording(String recording) {
+                this.recording = recording;
+                return this;
+            }
+
+            /**
+             * RecordingEndTime.
+             */
+            public Builder recordingEndTime(String recordingEndTime) {
+                this.recordingEndTime = recordingEndTime;
+                return this;
+            }
+
+            /**
+             * RecordingFps.
+             */
+            public Builder recordingFps(Long recordingFps) {
+                this.recordingFps = recordingFps;
+                return this;
+            }
+
+            /**
+             * RecordingStartTime.
+             */
+            public Builder recordingStartTime(String recordingStartTime) {
+                this.recordingStartTime = recordingStartTime;
                 return this;
             }
 

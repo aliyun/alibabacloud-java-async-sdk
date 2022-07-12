@@ -117,14 +117,14 @@ public class RunCommandRequest extends Request {
             super();
         } 
 
-        private Builder(RunCommandRequest response) {
-            super(response);
-            this.commandContent = response.commandContent;
-            this.contentEncoding = response.contentEncoding;
-            this.desktopId = response.desktopId;
-            this.regionId = response.regionId;
-            this.timeout = response.timeout;
-            this.type = response.type;
+        private Builder(RunCommandRequest request) {
+            super(request);
+            this.commandContent = request.commandContent;
+            this.contentEncoding = request.contentEncoding;
+            this.desktopId = request.desktopId;
+            this.regionId = request.regionId;
+            this.timeout = request.timeout;
+            this.type = request.type;
         } 
 
         /**

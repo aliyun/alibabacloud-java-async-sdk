@@ -63,10 +63,10 @@ public class RebootDesktopsRequest extends Request {
             super();
         } 
 
-        private Builder(RebootDesktopsRequest response) {
-            super(response);
-            this.desktopId = response.desktopId;
-            this.regionId = response.regionId;
+        private Builder(RebootDesktopsRequest request) {
+            super(request);
+            this.desktopId = request.desktopId;
+            this.regionId = request.regionId;
         } 
 
         /**

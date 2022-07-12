@@ -76,11 +76,11 @@ public class ModifyEntitlementRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyEntitlementRequest response) {
-            super(response);
-            this.desktopId = response.desktopId;
-            this.endUserId = response.endUserId;
-            this.regionId = response.regionId;
+        private Builder(ModifyEntitlementRequest request) {
+            super(request);
+            this.desktopId = request.desktopId;
+            this.endUserId = request.endUserId;
+            this.regionId = request.regionId;
         } 
 
         /**

@@ -76,11 +76,11 @@ public class SendVerifyCodeRequest extends Request {
             super();
         } 
 
-        private Builder(SendVerifyCodeRequest response) {
-            super(response);
-            this.extraInfo = response.extraInfo;
-            this.regionId = response.regionId;
-            this.verifyCodeAction = response.verifyCodeAction;
+        private Builder(SendVerifyCodeRequest request) {
+            super(request);
+            this.extraInfo = request.extraInfo;
+            this.regionId = request.regionId;
+            this.verifyCodeAction = request.verifyCodeAction;
         } 
 
         /**

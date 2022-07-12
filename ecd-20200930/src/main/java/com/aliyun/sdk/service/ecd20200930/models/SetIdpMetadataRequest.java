@@ -89,12 +89,12 @@ public class SetIdpMetadataRequest extends Request {
             super();
         } 
 
-        private Builder(SetIdpMetadataRequest response) {
-            super(response);
-            this.directoryId = response.directoryId;
-            this.idpMetadata = response.idpMetadata;
-            this.officeSiteId = response.officeSiteId;
-            this.regionId = response.regionId;
+        private Builder(SetIdpMetadataRequest request) {
+            super(request);
+            this.directoryId = request.directoryId;
+            this.idpMetadata = request.idpMetadata;
+            this.officeSiteId = request.officeSiteId;
+            this.regionId = request.regionId;
         } 
 
         /**

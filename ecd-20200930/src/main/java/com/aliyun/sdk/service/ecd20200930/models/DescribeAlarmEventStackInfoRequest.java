@@ -104,13 +104,13 @@ public class DescribeAlarmEventStackInfoRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAlarmEventStackInfoRequest response) {
-            super(response);
-            this.desktopId = response.desktopId;
-            this.eventName = response.eventName;
-            this.lang = response.lang;
-            this.regionId = response.regionId;
-            this.uniqueInfo = response.uniqueInfo;
+        private Builder(DescribeAlarmEventStackInfoRequest request) {
+            super(request);
+            this.desktopId = request.desktopId;
+            this.eventName = request.eventName;
+            this.lang = request.lang;
+            this.regionId = request.regionId;
+            this.uniqueInfo = request.uniqueInfo;
         } 
 
         /**

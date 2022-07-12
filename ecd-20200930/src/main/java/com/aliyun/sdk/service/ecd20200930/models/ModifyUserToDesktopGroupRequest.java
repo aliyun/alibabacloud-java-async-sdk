@@ -91,12 +91,12 @@ public class ModifyUserToDesktopGroupRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyUserToDesktopGroupRequest response) {
-            super(response);
-            this.desktopGroupId = response.desktopGroupId;
-            this.newEndUserIds = response.newEndUserIds;
-            this.oldEndUserIds = response.oldEndUserIds;
-            this.regionId = response.regionId;
+        private Builder(ModifyUserToDesktopGroupRequest request) {
+            super(request);
+            this.desktopGroupId = request.desktopGroupId;
+            this.newEndUserIds = request.newEndUserIds;
+            this.oldEndUserIds = request.oldEndUserIds;
+            this.regionId = request.regionId;
         } 
 
         /**

@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateImageRequest extends Request {
     @Query
+    @NameInMap("AutoCleanUserdata")
+    private Boolean autoCleanUserdata;
+
+    @Query
     @NameInMap("Description")
     private String description;
 
@@ -20,6 +24,10 @@ public class CreateImageRequest extends Request {
     @NameInMap("DesktopId")
     @Validation(required = true)
     private String desktopId;
+
+    @Query
+    @NameInMap("DiskType")
+    private String diskType;
 
     @Query
     @NameInMap("ImageName")
@@ -44,8 +52,10 @@ public class CreateImageRequest extends Request {
 
     private CreateImageRequest(Builder builder) {
         super(builder);
+        this.autoCleanUserdata = builder.autoCleanUserdata;
         this.description = builder.description;
         this.desktopId = builder.desktopId;
+        this.diskType = builder.diskType;
         this.imageName = builder.imageName;
         this.imageResourceType = builder.imageResourceType;
         this.regionId = builder.regionId;
@@ -67,6 +77,13 @@ public class CreateImageRequest extends Request {
     }
 
     /**
+     * @return autoCleanUserdata
+     */
+    public Boolean getAutoCleanUserdata() {
+        return this.autoCleanUserdata;
+    }
+
+    /**
      * @return description
      */
     public String getDescription() {
@@ -78,6 +95,13 @@ public class CreateImageRequest extends Request {
      */
     public String getDesktopId() {
         return this.desktopId;
+    }
+
+    /**
+     * @return diskType
+     */
+    public String getDiskType() {
+        return this.diskType;
     }
 
     /**
@@ -116,8 +140,10 @@ public class CreateImageRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateImageRequest, Builder> {
+        private Boolean autoCleanUserdata; 
         private String description; 
         private String desktopId; 
+        private String diskType; 
         private String imageName; 
         private String imageResourceType; 
         private String regionId; 
@@ -128,16 +154,27 @@ public class CreateImageRequest extends Request {
             super();
         } 
 
-        private Builder(CreateImageRequest response) {
-            super(response);
-            this.description = response.description;
-            this.desktopId = response.desktopId;
-            this.imageName = response.imageName;
-            this.imageResourceType = response.imageResourceType;
-            this.regionId = response.regionId;
-            this.snapshotId = response.snapshotId;
-            this.snapshotIds = response.snapshotIds;
+        private Builder(CreateImageRequest request) {
+            super(request);
+            this.autoCleanUserdata = request.autoCleanUserdata;
+            this.description = request.description;
+            this.desktopId = request.desktopId;
+            this.diskType = request.diskType;
+            this.imageName = request.imageName;
+            this.imageResourceType = request.imageResourceType;
+            this.regionId = request.regionId;
+            this.snapshotId = request.snapshotId;
+            this.snapshotIds = request.snapshotIds;
         } 
+
+        /**
+         * AutoCleanUserdata.
+         */
+        public Builder autoCleanUserdata(Boolean autoCleanUserdata) {
+            this.putQueryParameter("AutoCleanUserdata", autoCleanUserdata);
+            this.autoCleanUserdata = autoCleanUserdata;
+            return this;
+        }
 
         /**
          * Description.
@@ -154,6 +191,15 @@ public class CreateImageRequest extends Request {
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
             this.desktopId = desktopId;
+            return this;
+        }
+
+        /**
+         * DiskType.
+         */
+        public Builder diskType(String diskType) {
+            this.putQueryParameter("DiskType", diskType);
+            this.diskType = diskType;
             return this;
         }
 

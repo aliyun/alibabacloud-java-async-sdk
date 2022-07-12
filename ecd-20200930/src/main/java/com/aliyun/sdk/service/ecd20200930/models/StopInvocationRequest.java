@@ -76,11 +76,11 @@ public class StopInvocationRequest extends Request {
             super();
         } 
 
-        private Builder(StopInvocationRequest response) {
-            super(response);
-            this.desktopId = response.desktopId;
-            this.invokeId = response.invokeId;
-            this.regionId = response.regionId;
+        private Builder(StopInvocationRequest request) {
+            super(request);
+            this.desktopId = request.desktopId;
+            this.invokeId = request.invokeId;
+            this.regionId = request.regionId;
         } 
 
         /**

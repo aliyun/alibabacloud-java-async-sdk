@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateADConnectorOfficeSiteRequest extends Request {
     @Query
+    @NameInMap("AdHostname")
+    private String adHostname;
+
+    @Query
     @NameInMap("Bandwidth")
     private Integer bandwidth;
 
@@ -69,9 +73,17 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
     private String officeSiteName;
 
     @Query
+    @NameInMap("ProtocolType")
+    private String protocolType;
+
+    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
+
+    @Query
+    @NameInMap("Specification")
+    private Long specification;
 
     @Query
     @NameInMap("SubDomainDnsAddress")
@@ -87,6 +99,7 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
 
     private CreateADConnectorOfficeSiteRequest(Builder builder) {
         super(builder);
+        this.adHostname = builder.adHostname;
         this.bandwidth = builder.bandwidth;
         this.cenId = builder.cenId;
         this.cenOwnerId = builder.cenOwnerId;
@@ -100,7 +113,9 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
         this.enableInternetAccess = builder.enableInternetAccess;
         this.mfaEnabled = builder.mfaEnabled;
         this.officeSiteName = builder.officeSiteName;
+        this.protocolType = builder.protocolType;
         this.regionId = builder.regionId;
+        this.specification = builder.specification;
         this.subDomainDnsAddress = builder.subDomainDnsAddress;
         this.subDomainName = builder.subDomainName;
         this.verifyCode = builder.verifyCode;
@@ -117,6 +132,13 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return adHostname
+     */
+    public String getAdHostname() {
+        return this.adHostname;
     }
 
     /**
@@ -211,10 +233,24 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
     }
 
     /**
+     * @return protocolType
+     */
+    public String getProtocolType() {
+        return this.protocolType;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return specification
+     */
+    public Long getSpecification() {
+        return this.specification;
     }
 
     /**
@@ -239,6 +275,7 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateADConnectorOfficeSiteRequest, Builder> {
+        private String adHostname; 
         private Integer bandwidth; 
         private String cenId; 
         private Long cenOwnerId; 
@@ -252,7 +289,9 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
         private Boolean enableInternetAccess; 
         private Boolean mfaEnabled; 
         private String officeSiteName; 
+        private String protocolType; 
         private String regionId; 
+        private Long specification; 
         private java.util.List < String > subDomainDnsAddress; 
         private String subDomainName; 
         private String verifyCode; 
@@ -261,26 +300,38 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
             super();
         } 
 
-        private Builder(CreateADConnectorOfficeSiteRequest response) {
-            super(response);
-            this.bandwidth = response.bandwidth;
-            this.cenId = response.cenId;
-            this.cenOwnerId = response.cenOwnerId;
-            this.cidrBlock = response.cidrBlock;
-            this.desktopAccessType = response.desktopAccessType;
-            this.dnsAddress = response.dnsAddress;
-            this.domainName = response.domainName;
-            this.domainPassword = response.domainPassword;
-            this.domainUserName = response.domainUserName;
-            this.enableAdminAccess = response.enableAdminAccess;
-            this.enableInternetAccess = response.enableInternetAccess;
-            this.mfaEnabled = response.mfaEnabled;
-            this.officeSiteName = response.officeSiteName;
-            this.regionId = response.regionId;
-            this.subDomainDnsAddress = response.subDomainDnsAddress;
-            this.subDomainName = response.subDomainName;
-            this.verifyCode = response.verifyCode;
+        private Builder(CreateADConnectorOfficeSiteRequest request) {
+            super(request);
+            this.adHostname = request.adHostname;
+            this.bandwidth = request.bandwidth;
+            this.cenId = request.cenId;
+            this.cenOwnerId = request.cenOwnerId;
+            this.cidrBlock = request.cidrBlock;
+            this.desktopAccessType = request.desktopAccessType;
+            this.dnsAddress = request.dnsAddress;
+            this.domainName = request.domainName;
+            this.domainPassword = request.domainPassword;
+            this.domainUserName = request.domainUserName;
+            this.enableAdminAccess = request.enableAdminAccess;
+            this.enableInternetAccess = request.enableInternetAccess;
+            this.mfaEnabled = request.mfaEnabled;
+            this.officeSiteName = request.officeSiteName;
+            this.protocolType = request.protocolType;
+            this.regionId = request.regionId;
+            this.specification = request.specification;
+            this.subDomainDnsAddress = request.subDomainDnsAddress;
+            this.subDomainName = request.subDomainName;
+            this.verifyCode = request.verifyCode;
         } 
+
+        /**
+         * AdHostname.
+         */
+        public Builder adHostname(String adHostname) {
+            this.putQueryParameter("AdHostname", adHostname);
+            this.adHostname = adHostname;
+            return this;
+        }
 
         /**
          * Bandwidth.
@@ -400,11 +451,29 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
+         * ProtocolType.
+         */
+        public Builder protocolType(String protocolType) {
+            this.putQueryParameter("ProtocolType", protocolType);
+            this.protocolType = protocolType;
+            return this;
+        }
+
+        /**
          * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Specification.
+         */
+        public Builder specification(Long specification) {
+            this.putQueryParameter("Specification", specification);
+            this.specification = specification;
             return this;
         }
 

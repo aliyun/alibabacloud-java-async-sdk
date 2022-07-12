@@ -28,6 +28,7 @@ public class HandleSecurityEventsRequest extends Request {
 
     @Query
     @NameInMap("SecurityEvent")
+    @Validation(required = true)
     private java.util.List < SecurityEvent> securityEvent;
 
     private HandleSecurityEventsRequest(Builder builder) {
@@ -89,12 +90,12 @@ public class HandleSecurityEventsRequest extends Request {
             super();
         } 
 
-        private Builder(HandleSecurityEventsRequest response) {
-            super(response);
-            this.operationCode = response.operationCode;
-            this.operationParams = response.operationParams;
-            this.regionId = response.regionId;
-            this.securityEvent = response.securityEvent;
+        private Builder(HandleSecurityEventsRequest request) {
+            super(request);
+            this.operationCode = request.operationCode;
+            this.operationParams = request.operationParams;
+            this.regionId = request.regionId;
+            this.securityEvent = request.securityEvent;
         } 
 
         /**

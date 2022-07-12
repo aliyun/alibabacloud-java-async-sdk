@@ -22,13 +22,17 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AddUserToDesktopGroupResponse> addUserToDesktopGroup(AddUserToDesktopGroupRequest request);
 
-    CompletableFuture<AddUserToSecurityCenterWhiteListResponse> addUserToSecurityCenterWhiteList(AddUserToSecurityCenterWhiteListRequest request);
+    CompletableFuture<ApplyCoordinationForMonitoringResponse> applyCoordinationForMonitoring(ApplyCoordinationForMonitoringRequest request);
+
+    CompletableFuture<ApproveFotaUpdateResponse> approveFotaUpdate(ApproveFotaUpdateRequest request);
+
+    CompletableFuture<AssociateNetworkPackageResponse> associateNetworkPackage(AssociateNetworkPackageRequest request);
 
     CompletableFuture<AttachCenResponse> attachCen(AttachCenRequest request);
 
-    CompletableFuture<CheckUserInSecurityCenterWhiteListResponse> checkUserInSecurityCenterWhiteList(CheckUserInSecurityCenterWhiteListRequest request);
+    CompletableFuture<CancelCoordinationForMonitoringResponse> cancelCoordinationForMonitoring(CancelCoordinationForMonitoringRequest request);
 
-    CompletableFuture<CheckUserTagsResponse> checkUserTags(CheckUserTagsRequest request);
+    CompletableFuture<CancelCopyImageResponse> cancelCopyImage(CancelCopyImageRequest request);
 
     CompletableFuture<ClonePolicyGroupResponse> clonePolicyGroup(ClonePolicyGroupRequest request);
 
@@ -36,21 +40,19 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ConfigADConnectorUserResponse> configADConnectorUser(ConfigADConnectorUserRequest request);
 
+    CompletableFuture<CopyImageResponse> copyImage(CopyImageRequest request);
+
     CompletableFuture<CreateADConnectorDirectoryResponse> createADConnectorDirectory(CreateADConnectorDirectoryRequest request);
 
     CompletableFuture<CreateADConnectorOfficeSiteResponse> createADConnectorOfficeSite(CreateADConnectorOfficeSiteRequest request);
 
-    CompletableFuture<CreateBandwidthResourcePackagesResponse> createBandwidthResourcePackages(CreateBandwidthResourcePackagesRequest request);
-
     CompletableFuture<CreateBundleResponse> createBundle(CreateBundleRequest request);
-
-    CompletableFuture<CreateCloudDriveServiceResponse> createCloudDriveService(CreateCloudDriveServiceRequest request);
 
     CompletableFuture<CreateDesktopGroupResponse> createDesktopGroup(CreateDesktopGroupRequest request);
 
     CompletableFuture<CreateDesktopsResponse> createDesktops(CreateDesktopsRequest request);
 
-    CompletableFuture<CreateDesktopsLiteResponse> createDesktopsLite(CreateDesktopsLiteRequest request);
+    CompletableFuture<CreateDiskEncryptionServiceResponse> createDiskEncryptionService(CreateDiskEncryptionServiceRequest request);
 
     CompletableFuture<CreateImageResponse> createImage(CreateImageRequest request);
 
@@ -58,23 +60,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateNetworkPackageResponse> createNetworkPackage(CreateNetworkPackageRequest request);
 
-    CompletableFuture<CreateOrderForHardwareResponse> createOrderForHardware(CreateOrderForHardwareRequest request);
-
     CompletableFuture<CreatePolicyGroupResponse> createPolicyGroup(CreatePolicyGroupRequest request);
 
     CompletableFuture<CreateRAMDirectoryResponse> createRAMDirectory(CreateRAMDirectoryRequest request);
-
-    CompletableFuture<CreateScaleStrategyResponse> createScaleStrategy(CreateScaleStrategyRequest request);
-
-    CompletableFuture<CreateServiceLinkedRoleResponse> createServiceLinkedRole(CreateServiceLinkedRoleRequest request);
 
     CompletableFuture<CreateSimpleOfficeSiteResponse> createSimpleOfficeSite(CreateSimpleOfficeSiteRequest request);
 
     CompletableFuture<CreateSnapshotResponse> createSnapshot(CreateSnapshotRequest request);
 
     CompletableFuture<DeleteBundlesResponse> deleteBundles(DeleteBundlesRequest request);
-
-    CompletableFuture<DeleteCloudDriveServicesResponse> deleteCloudDriveServices(DeleteCloudDriveServicesRequest request);
 
     CompletableFuture<DeleteDesktopGroupResponse> deleteDesktopGroup(DeleteDesktopGroupRequest request);
 
@@ -92,8 +86,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeletePolicyGroupsResponse> deletePolicyGroups(DeletePolicyGroupsRequest request);
 
-    CompletableFuture<DeleteScaleStrategyResponse> deleteScaleStrategy(DeleteScaleStrategyRequest request);
-
     CompletableFuture<DeleteSnapshotResponse> deleteSnapshot(DeleteSnapshotRequest request);
 
     CompletableFuture<DeleteVirtualMFADeviceResponse> deleteVirtualMFADevice(DeleteVirtualMFADeviceRequest request);
@@ -106,13 +98,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeClientEventsResponse> describeClientEvents(DescribeClientEventsRequest request);
 
-    CompletableFuture<DescribeCloudDriveServiceResponse> describeCloudDriveService(DescribeCloudDriveServiceRequest request);
-
     CompletableFuture<DescribeDesktopGroupsResponse> describeDesktopGroups(DescribeDesktopGroupsRequest request);
 
     CompletableFuture<DescribeDesktopIdsByVulNamesResponse> describeDesktopIdsByVulNames(DescribeDesktopIdsByVulNamesRequest request);
-
-    CompletableFuture<DescribeDesktopPolicysResponse> describeDesktopPolicys(DescribeDesktopPolicysRequest request);
 
     CompletableFuture<DescribeDesktopTypesResponse> describeDesktopTypes(DescribeDesktopTypesRequest request);
 
@@ -124,17 +112,25 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeFlowMetricResponse> describeFlowMetric(DescribeFlowMetricRequest request);
 
+    CompletableFuture<DescribeFlowStatisticResponse> describeFlowStatistic(DescribeFlowStatisticRequest request);
+
+    CompletableFuture<DescribeFotaPendingDesktopsResponse> describeFotaPendingDesktops(DescribeFotaPendingDesktopsRequest request);
+
+    CompletableFuture<DescribeFotaTasksResponse> describeFotaTasks(DescribeFotaTasksRequest request);
+
     CompletableFuture<DescribeFrontVulPatchListResponse> describeFrontVulPatchList(DescribeFrontVulPatchListRequest request);
 
     CompletableFuture<DescribeGroupedVulResponse> describeGroupedVul(DescribeGroupedVulRequest request);
 
-    CompletableFuture<DescribeHardwareTerminalsResponse> describeHardwareTerminals(DescribeHardwareTerminalsRequest request);
+    CompletableFuture<DescribeImageModifiedRecordsResponse> describeImageModifiedRecords(DescribeImageModifiedRecordsRequest request);
+
+    CompletableFuture<DescribeImagePermissionResponse> describeImagePermission(DescribeImagePermissionRequest request);
 
     CompletableFuture<DescribeImagesResponse> describeImages(DescribeImagesRequest request);
 
     CompletableFuture<DescribeInvocationsResponse> describeInvocations(DescribeInvocationsRequest request);
 
-    CompletableFuture<DescribeModificationPriceResponse> describeModificationPrice(DescribeModificationPriceRequest request);
+    CompletableFuture<DescribeKmsKeysResponse> describeKmsKeys(DescribeKmsKeysRequest request);
 
     CompletableFuture<DescribeNASFileSystemsResponse> describeNASFileSystems(DescribeNASFileSystemsRequest request);
 
@@ -144,17 +140,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribePolicyGroupsResponse> describePolicyGroups(DescribePolicyGroupsRequest request);
 
-    CompletableFuture<DescribePostPaidDesktopBillsResponse> describePostPaidDesktopBills(DescribePostPaidDesktopBillsRequest request);
-
-    CompletableFuture<DescribePriceResponse> describePrice(DescribePriceRequest request);
+    CompletableFuture<DescribeRecordingsResponse> describeRecordings(DescribeRecordingsRequest request);
 
     CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request);
-
-    CompletableFuture<DescribeRenewalPriceResponse> describeRenewalPrice(DescribeRenewalPriceRequest request);
-
-    CompletableFuture<DescribeResourcePackageQuotaResponse> describeResourcePackageQuota(DescribeResourcePackageQuotaRequest request);
-
-    CompletableFuture<DescribeScaleStrategysResponse> describeScaleStrategys(DescribeScaleStrategysRequest request);
 
     CompletableFuture<DescribeScanTaskProgressResponse> describeScanTaskProgress(DescribeScanTaskProgressRequest request);
 
@@ -186,11 +174,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DetachCenResponse> detachCen(DetachCenRequest request);
 
-    CompletableFuture<DoCheckResourceResponse> doCheckResource(DoCheckResourceRequest request);
+    CompletableFuture<DisableDesktopsInGroupResponse> disableDesktopsInGroup(DisableDesktopsInGroupRequest request);
 
-    CompletableFuture<DoLogicalDeleteResourceResponse> doLogicalDeleteResource(DoLogicalDeleteResourceRequest request);
-
-    CompletableFuture<DoPhysicalDeleteResourceResponse> doPhysicalDeleteResource(DoPhysicalDeleteResourceRequest request);
+    CompletableFuture<DissociateNetworkPackageResponse> dissociateNetworkPackage(DissociateNetworkPackageRequest request);
 
     CompletableFuture<ExportClientEventsResponse> exportClientEvents(ExportClientEventsRequest request);
 
@@ -201,8 +187,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetConnectionTicketResponse> getConnectionTicket(GetConnectionTicketRequest request);
 
     CompletableFuture<GetDesktopGroupDetailResponse> getDesktopGroupDetail(GetDesktopGroupDetailRequest request);
-
-    CompletableFuture<GetDirectorySsoStatusResponse> getDirectorySsoStatus(GetDirectorySsoStatusRequest request);
 
     CompletableFuture<GetOfficeSiteSsoStatusResponse> getOfficeSiteSsoStatus(GetOfficeSiteSsoStatusRequest request);
 
@@ -228,8 +212,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ModifyBundleResponse> modifyBundle(ModifyBundleRequest request);
 
-    CompletableFuture<ModifyCloudDriveServiceResponse> modifyCloudDriveService(ModifyCloudDriveServiceRequest request);
-
     CompletableFuture<ModifyDesktopChargeTypeResponse> modifyDesktopChargeType(ModifyDesktopChargeTypeRequest request);
 
     CompletableFuture<ModifyDesktopGroupResponse> modifyDesktopGroup(ModifyDesktopGroupRequest request);
@@ -238,19 +220,19 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ModifyDesktopNameResponse> modifyDesktopName(ModifyDesktopNameRequest request);
 
-    CompletableFuture<ModifyDesktopPolicysResponse> modifyDesktopPolicys(ModifyDesktopPolicysRequest request);
-
     CompletableFuture<ModifyDesktopSpecResponse> modifyDesktopSpec(ModifyDesktopSpecRequest request);
 
     CompletableFuture<ModifyDesktopsPolicyGroupResponse> modifyDesktopsPolicyGroup(ModifyDesktopsPolicyGroupRequest request);
+
+    CompletableFuture<ModifyDiskSpecResponse> modifyDiskSpec(ModifyDiskSpecRequest request);
 
     CompletableFuture<ModifyEntitlementResponse> modifyEntitlement(ModifyEntitlementRequest request);
 
     CompletableFuture<ModifyImageAttributeResponse> modifyImageAttribute(ModifyImageAttributeRequest request);
 
-    CompletableFuture<ModifyNASDefaultMountTargetResponse> modifyNASDefaultMountTarget(ModifyNASDefaultMountTargetRequest request);
+    CompletableFuture<ModifyImagePermissionResponse> modifyImagePermission(ModifyImagePermissionRequest request);
 
-    CompletableFuture<ModifyNetworkPackageResponse> modifyNetworkPackage(ModifyNetworkPackageRequest request);
+    CompletableFuture<ModifyNASDefaultMountTargetResponse> modifyNASDefaultMountTarget(ModifyNASDefaultMountTargetRequest request);
 
     CompletableFuture<ModifyNetworkPackageBandwidthResponse> modifyNetworkPackageBandwidth(ModifyNetworkPackageBandwidthRequest request);
 
@@ -266,29 +248,23 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ModifyPolicyGroupResponse> modifyPolicyGroup(ModifyPolicyGroupRequest request);
 
-    CompletableFuture<ModifyScaleStrategyResponse> modifyScaleStrategy(ModifyScaleStrategyRequest request);
-
     CompletableFuture<ModifyUserEntitlementResponse> modifyUserEntitlement(ModifyUserEntitlementRequest request);
 
     CompletableFuture<ModifyUserToDesktopGroupResponse> modifyUserToDesktopGroup(ModifyUserToDesktopGroupRequest request);
 
     CompletableFuture<OperateVulsResponse> operateVuls(OperateVulsRequest request);
 
-    CompletableFuture<PayOrderCallbackResponse> payOrderCallback(PayOrderCallbackRequest request);
-
     CompletableFuture<RebootDesktopsResponse> rebootDesktops(RebootDesktopsRequest request);
 
     CompletableFuture<RebuildDesktopsResponse> rebuildDesktops(RebuildDesktopsRequest request);
 
-    CompletableFuture<RecreateDesktopGroupResponse> recreateDesktopGroup(RecreateDesktopGroupRequest request);
-
     CompletableFuture<RemoveUserFromDesktopGroupResponse> removeUserFromDesktopGroup(RemoveUserFromDesktopGroupRequest request);
-
-    CompletableFuture<RenewDesktopGroupResponse> renewDesktopGroup(RenewDesktopGroupRequest request);
 
     CompletableFuture<RenewDesktopsResponse> renewDesktops(RenewDesktopsRequest request);
 
     CompletableFuture<RenewNetworkPackagesResponse> renewNetworkPackages(RenewNetworkPackagesRequest request);
+
+    CompletableFuture<ResetDesktopsResponse> resetDesktops(ResetDesktopsRequest request);
 
     CompletableFuture<ResetNASDefaultMountTargetResponse> resetNASDefaultMountTarget(ResetNASDefaultMountTargetRequest request);
 
@@ -299,8 +275,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RunCommandResponse> runCommand(RunCommandRequest request);
 
     CompletableFuture<SendVerifyCodeResponse> sendVerifyCode(SendVerifyCodeRequest request);
-
-    CompletableFuture<SetDirectorySsoStatusResponse> setDirectorySsoStatus(SetDirectorySsoStatusRequest request);
 
     CompletableFuture<SetIdpMetadataResponse> setIdpMetadata(SetIdpMetadataRequest request);
 
@@ -319,6 +293,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UnlockVirtualMFADeviceResponse> unlockVirtualMFADevice(UnlockVirtualMFADeviceRequest request);
 
     CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
+
+    CompletableFuture<UpdateFotaTaskResponse> updateFotaTask(UpdateFotaTaskRequest request);
+
+    CompletableFuture<UploadImageResponse> uploadImage(UploadImageRequest request);
 
     CompletableFuture<VerifyCenResponse> verifyCen(VerifyCenRequest request);
 

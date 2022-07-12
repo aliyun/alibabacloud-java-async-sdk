@@ -115,14 +115,14 @@ public class ListDirectoryUsersRequest extends Request {
             super();
         } 
 
-        private Builder(ListDirectoryUsersRequest response) {
-            super(response);
-            this.directoryId = response.directoryId;
-            this.filter = response.filter;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.OUPath = response.OUPath;
-            this.regionId = response.regionId;
+        private Builder(ListDirectoryUsersRequest request) {
+            super(request);
+            this.directoryId = request.directoryId;
+            this.filter = request.filter;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.OUPath = request.OUPath;
+            this.regionId = request.regionId;
         } 
 
         /**

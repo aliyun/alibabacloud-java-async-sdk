@@ -89,12 +89,12 @@ public class ModifyImageAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyImageAttributeRequest response) {
-            super(response);
-            this.description = response.description;
-            this.imageId = response.imageId;
-            this.name = response.name;
-            this.regionId = response.regionId;
+        private Builder(ModifyImageAttributeRequest request) {
+            super(request);
+            this.description = request.description;
+            this.imageId = request.imageId;
+            this.name = request.name;
+            this.regionId = request.regionId;
         } 
 
         /**

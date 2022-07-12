@@ -63,10 +63,10 @@ public class DeleteDirectoriesRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteDirectoriesRequest response) {
-            super(response);
-            this.directoryId = response.directoryId;
-            this.regionId = response.regionId;
+        private Builder(DeleteDirectoriesRequest request) {
+            super(request);
+            this.directoryId = request.directoryId;
+            this.regionId = request.regionId;
         } 
 
         /**

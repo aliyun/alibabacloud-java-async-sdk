@@ -26,8 +26,11 @@ public class CreateSimpleOfficeSiteRequest extends Request {
 
     @Query
     @NameInMap("CidrBlock")
-    @Validation(required = true)
     private String cidrBlock;
+
+    @Query
+    @NameInMap("CloudBoxOfficeSite")
+    private Boolean cloudBoxOfficeSite;
 
     @Query
     @NameInMap("DesktopAccessType")
@@ -55,6 +58,10 @@ public class CreateSimpleOfficeSiteRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("VSwitchId")
+    private java.util.List < String > vSwitchId;
+
+    @Query
     @NameInMap("VerifyCode")
     private String verifyCode;
 
@@ -64,12 +71,14 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         this.cenId = builder.cenId;
         this.cenOwnerId = builder.cenOwnerId;
         this.cidrBlock = builder.cidrBlock;
+        this.cloudBoxOfficeSite = builder.cloudBoxOfficeSite;
         this.desktopAccessType = builder.desktopAccessType;
         this.enableAdminAccess = builder.enableAdminAccess;
         this.enableInternetAccess = builder.enableInternetAccess;
         this.needVerifyZeroDevice = builder.needVerifyZeroDevice;
         this.officeSiteName = builder.officeSiteName;
         this.regionId = builder.regionId;
+        this.vSwitchId = builder.vSwitchId;
         this.verifyCode = builder.verifyCode;
     }
 
@@ -115,6 +124,13 @@ public class CreateSimpleOfficeSiteRequest extends Request {
     }
 
     /**
+     * @return cloudBoxOfficeSite
+     */
+    public Boolean getCloudBoxOfficeSite() {
+        return this.cloudBoxOfficeSite;
+    }
+
+    /**
      * @return desktopAccessType
      */
     public String getDesktopAccessType() {
@@ -157,6 +173,13 @@ public class CreateSimpleOfficeSiteRequest extends Request {
     }
 
     /**
+     * @return vSwitchId
+     */
+    public java.util.List < String > getVSwitchId() {
+        return this.vSwitchId;
+    }
+
+    /**
      * @return verifyCode
      */
     public String getVerifyCode() {
@@ -168,31 +191,35 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         private String cenId; 
         private Long cenOwnerId; 
         private String cidrBlock; 
+        private Boolean cloudBoxOfficeSite; 
         private String desktopAccessType; 
         private Boolean enableAdminAccess; 
         private Boolean enableInternetAccess; 
         private Boolean needVerifyZeroDevice; 
         private String officeSiteName; 
         private String regionId; 
+        private java.util.List < String > vSwitchId; 
         private String verifyCode; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateSimpleOfficeSiteRequest response) {
-            super(response);
-            this.bandwidth = response.bandwidth;
-            this.cenId = response.cenId;
-            this.cenOwnerId = response.cenOwnerId;
-            this.cidrBlock = response.cidrBlock;
-            this.desktopAccessType = response.desktopAccessType;
-            this.enableAdminAccess = response.enableAdminAccess;
-            this.enableInternetAccess = response.enableInternetAccess;
-            this.needVerifyZeroDevice = response.needVerifyZeroDevice;
-            this.officeSiteName = response.officeSiteName;
-            this.regionId = response.regionId;
-            this.verifyCode = response.verifyCode;
+        private Builder(CreateSimpleOfficeSiteRequest request) {
+            super(request);
+            this.bandwidth = request.bandwidth;
+            this.cenId = request.cenId;
+            this.cenOwnerId = request.cenOwnerId;
+            this.cidrBlock = request.cidrBlock;
+            this.cloudBoxOfficeSite = request.cloudBoxOfficeSite;
+            this.desktopAccessType = request.desktopAccessType;
+            this.enableAdminAccess = request.enableAdminAccess;
+            this.enableInternetAccess = request.enableInternetAccess;
+            this.needVerifyZeroDevice = request.needVerifyZeroDevice;
+            this.officeSiteName = request.officeSiteName;
+            this.regionId = request.regionId;
+            this.vSwitchId = request.vSwitchId;
+            this.verifyCode = request.verifyCode;
         } 
 
         /**
@@ -228,6 +255,15 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         public Builder cidrBlock(String cidrBlock) {
             this.putQueryParameter("CidrBlock", cidrBlock);
             this.cidrBlock = cidrBlock;
+            return this;
+        }
+
+        /**
+         * CloudBoxOfficeSite.
+         */
+        public Builder cloudBoxOfficeSite(Boolean cloudBoxOfficeSite) {
+            this.putQueryParameter("CloudBoxOfficeSite", cloudBoxOfficeSite);
+            this.cloudBoxOfficeSite = cloudBoxOfficeSite;
             return this;
         }
 
@@ -282,6 +318,15 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * VSwitchId.
+         */
+        public Builder vSwitchId(java.util.List < String > vSwitchId) {
+            this.putQueryParameter("VSwitchId", vSwitchId);
+            this.vSwitchId = vSwitchId;
             return this;
         }
 

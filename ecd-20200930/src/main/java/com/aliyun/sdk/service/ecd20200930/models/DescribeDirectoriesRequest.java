@@ -128,15 +128,15 @@ public class DescribeDirectoriesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDirectoriesRequest response) {
-            super(response);
-            this.directoryId = response.directoryId;
-            this.directoryStatus = response.directoryStatus;
-            this.directoryType = response.directoryType;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.regionId = response.regionId;
-            this.status = response.status;
+        private Builder(DescribeDirectoriesRequest request) {
+            super(request);
+            this.directoryId = request.directoryId;
+            this.directoryStatus = request.directoryStatus;
+            this.directoryType = request.directoryType;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.regionId = request.regionId;
+            this.status = request.status;
         } 
 
         /**

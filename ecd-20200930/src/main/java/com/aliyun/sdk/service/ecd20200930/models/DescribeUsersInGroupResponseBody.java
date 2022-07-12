@@ -131,6 +131,269 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
 
     } 
 
+    public static class ExternalInfo extends TeaModel {
+        @NameInMap("ExternalName")
+        private String externalName;
+
+        @NameInMap("JobNumber")
+        private String jobNumber;
+
+        private ExternalInfo(Builder builder) {
+            this.externalName = builder.externalName;
+            this.jobNumber = builder.jobNumber;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ExternalInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return externalName
+         */
+        public String getExternalName() {
+            return this.externalName;
+        }
+
+        /**
+         * @return jobNumber
+         */
+        public String getJobNumber() {
+            return this.jobNumber;
+        }
+
+        public static final class Builder {
+            private String externalName; 
+            private String jobNumber; 
+
+            /**
+             * ExternalName.
+             */
+            public Builder externalName(String externalName) {
+                this.externalName = externalName;
+                return this;
+            }
+
+            /**
+             * JobNumber.
+             */
+            public Builder jobNumber(String jobNumber) {
+                this.jobNumber = jobNumber;
+                return this;
+            }
+
+            public ExternalInfo build() {
+                return new ExternalInfo(this);
+            } 
+
+        } 
+
+    }
+    public static class PropertyValues extends TeaModel {
+        @NameInMap("PropertyValue")
+        private String propertyValue;
+
+        @NameInMap("PropertyValueId")
+        private Long propertyValueId;
+
+        private PropertyValues(Builder builder) {
+            this.propertyValue = builder.propertyValue;
+            this.propertyValueId = builder.propertyValueId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PropertyValues create() {
+            return builder().build();
+        }
+
+        /**
+         * @return propertyValue
+         */
+        public String getPropertyValue() {
+            return this.propertyValue;
+        }
+
+        /**
+         * @return propertyValueId
+         */
+        public Long getPropertyValueId() {
+            return this.propertyValueId;
+        }
+
+        public static final class Builder {
+            private String propertyValue; 
+            private Long propertyValueId; 
+
+            /**
+             * PropertyValue.
+             */
+            public Builder propertyValue(String propertyValue) {
+                this.propertyValue = propertyValue;
+                return this;
+            }
+
+            /**
+             * PropertyValueId.
+             */
+            public Builder propertyValueId(Long propertyValueId) {
+                this.propertyValueId = propertyValueId;
+                return this;
+            }
+
+            public PropertyValues build() {
+                return new PropertyValues(this);
+            } 
+
+        } 
+
+    }
+    public static class UserSetPropertiesModels extends TeaModel {
+        @NameInMap("PropertyId")
+        private Long propertyId;
+
+        @NameInMap("PropertyKey")
+        private String propertyKey;
+
+        @NameInMap("PropertyType")
+        private Integer propertyType;
+
+        @NameInMap("PropertyValues")
+        private java.util.List < PropertyValues> propertyValues;
+
+        @NameInMap("UserId")
+        private Long userId;
+
+        @NameInMap("UserName")
+        private String userName;
+
+        private UserSetPropertiesModels(Builder builder) {
+            this.propertyId = builder.propertyId;
+            this.propertyKey = builder.propertyKey;
+            this.propertyType = builder.propertyType;
+            this.propertyValues = builder.propertyValues;
+            this.userId = builder.userId;
+            this.userName = builder.userName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static UserSetPropertiesModels create() {
+            return builder().build();
+        }
+
+        /**
+         * @return propertyId
+         */
+        public Long getPropertyId() {
+            return this.propertyId;
+        }
+
+        /**
+         * @return propertyKey
+         */
+        public String getPropertyKey() {
+            return this.propertyKey;
+        }
+
+        /**
+         * @return propertyType
+         */
+        public Integer getPropertyType() {
+            return this.propertyType;
+        }
+
+        /**
+         * @return propertyValues
+         */
+        public java.util.List < PropertyValues> getPropertyValues() {
+            return this.propertyValues;
+        }
+
+        /**
+         * @return userId
+         */
+        public Long getUserId() {
+            return this.userId;
+        }
+
+        /**
+         * @return userName
+         */
+        public String getUserName() {
+            return this.userName;
+        }
+
+        public static final class Builder {
+            private Long propertyId; 
+            private String propertyKey; 
+            private Integer propertyType; 
+            private java.util.List < PropertyValues> propertyValues; 
+            private Long userId; 
+            private String userName; 
+
+            /**
+             * PropertyId.
+             */
+            public Builder propertyId(Long propertyId) {
+                this.propertyId = propertyId;
+                return this;
+            }
+
+            /**
+             * PropertyKey.
+             */
+            public Builder propertyKey(String propertyKey) {
+                this.propertyKey = propertyKey;
+                return this;
+            }
+
+            /**
+             * PropertyType.
+             */
+            public Builder propertyType(Integer propertyType) {
+                this.propertyType = propertyType;
+                return this;
+            }
+
+            /**
+             * PropertyValues.
+             */
+            public Builder propertyValues(java.util.List < PropertyValues> propertyValues) {
+                this.propertyValues = propertyValues;
+                return this;
+            }
+
+            /**
+             * UserId.
+             */
+            public Builder userId(Long userId) {
+                this.userId = userId;
+                return this;
+            }
+
+            /**
+             * UserName.
+             */
+            public Builder userName(String userName) {
+                this.userName = userName;
+                return this;
+            }
+
+            public UserSetPropertiesModels build() {
+                return new UserSetPropertiesModels(this);
+            } 
+
+        } 
+
+    }
     public static class EndUsers extends TeaModel {
         @NameInMap("ConnectionStatus")
         private String connectionStatus;
@@ -156,6 +419,12 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
         @NameInMap("EndUserType")
         private String endUserType;
 
+        @NameInMap("ExternalInfo")
+        private ExternalInfo externalInfo;
+
+        @NameInMap("UserSetPropertiesModels")
+        private java.util.List < UserSetPropertiesModels> userSetPropertiesModels;
+
         private EndUsers(Builder builder) {
             this.connectionStatus = builder.connectionStatus;
             this.desktopId = builder.desktopId;
@@ -165,6 +434,8 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             this.endUserName = builder.endUserName;
             this.endUserPhone = builder.endUserPhone;
             this.endUserType = builder.endUserType;
+            this.externalInfo = builder.externalInfo;
+            this.userSetPropertiesModels = builder.userSetPropertiesModels;
         }
 
         public static Builder builder() {
@@ -231,6 +502,20 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             return this.endUserType;
         }
 
+        /**
+         * @return externalInfo
+         */
+        public ExternalInfo getExternalInfo() {
+            return this.externalInfo;
+        }
+
+        /**
+         * @return userSetPropertiesModels
+         */
+        public java.util.List < UserSetPropertiesModels> getUserSetPropertiesModels() {
+            return this.userSetPropertiesModels;
+        }
+
         public static final class Builder {
             private String connectionStatus; 
             private String desktopId; 
@@ -240,6 +525,8 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             private String endUserName; 
             private String endUserPhone; 
             private String endUserType; 
+            private ExternalInfo externalInfo; 
+            private java.util.List < UserSetPropertiesModels> userSetPropertiesModels; 
 
             /**
              * ConnectionStatus.
@@ -302,6 +589,22 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
              */
             public Builder endUserType(String endUserType) {
                 this.endUserType = endUserType;
+                return this;
+            }
+
+            /**
+             * ExternalInfo.
+             */
+            public Builder externalInfo(ExternalInfo externalInfo) {
+                this.externalInfo = externalInfo;
+                return this;
+            }
+
+            /**
+             * UserSetPropertiesModels.
+             */
+            public Builder userSetPropertiesModels(java.util.List < UserSetPropertiesModels> userSetPropertiesModels) {
+                this.userSetPropertiesModels = userSetPropertiesModels;
                 return this;
             }
 

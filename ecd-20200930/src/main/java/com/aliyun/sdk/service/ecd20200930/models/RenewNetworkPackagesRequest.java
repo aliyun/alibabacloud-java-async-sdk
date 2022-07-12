@@ -115,14 +115,14 @@ public class RenewNetworkPackagesRequest extends Request {
             super();
         } 
 
-        private Builder(RenewNetworkPackagesRequest response) {
-            super(response);
-            this.autoPay = response.autoPay;
-            this.networkPackageId = response.networkPackageId;
-            this.period = response.period;
-            this.periodUnit = response.periodUnit;
-            this.promotionId = response.promotionId;
-            this.regionId = response.regionId;
+        private Builder(RenewNetworkPackagesRequest request) {
+            super(request);
+            this.autoPay = request.autoPay;
+            this.networkPackageId = request.networkPackageId;
+            this.period = request.period;
+            this.periodUnit = request.periodUnit;
+            this.promotionId = request.promotionId;
+            this.regionId = request.regionId;
         } 
 
         /**

@@ -77,11 +77,11 @@ public class ModifyNASDefaultMountTargetRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyNASDefaultMountTargetRequest response) {
-            super(response);
-            this.fileSystemId = response.fileSystemId;
-            this.mountTargetDomain = response.mountTargetDomain;
-            this.regionId = response.regionId;
+        private Builder(ModifyNASDefaultMountTargetRequest request) {
+            super(request);
+            this.fileSystemId = request.fileSystemId;
+            this.mountTargetDomain = request.mountTargetDomain;
+            this.regionId = request.regionId;
         } 
 
         /**

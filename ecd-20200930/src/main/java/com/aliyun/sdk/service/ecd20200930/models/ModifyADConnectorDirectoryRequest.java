@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyADConnectorDirectoryRequest extends Request {
     @Query
+    @NameInMap("AdHostname")
+    private String adHostname;
+
+    @Query
     @NameInMap("DirectoryId")
     @Validation(required = true)
     private String directoryId;
@@ -42,6 +46,10 @@ public class ModifyADConnectorDirectoryRequest extends Request {
     private Boolean mfaEnabled;
 
     @Query
+    @NameInMap("OUName")
+    private String OUName;
+
+    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
@@ -56,6 +64,7 @@ public class ModifyADConnectorDirectoryRequest extends Request {
 
     private ModifyADConnectorDirectoryRequest(Builder builder) {
         super(builder);
+        this.adHostname = builder.adHostname;
         this.directoryId = builder.directoryId;
         this.directoryName = builder.directoryName;
         this.dnsAddress = builder.dnsAddress;
@@ -63,6 +72,7 @@ public class ModifyADConnectorDirectoryRequest extends Request {
         this.domainPassword = builder.domainPassword;
         this.domainUserName = builder.domainUserName;
         this.mfaEnabled = builder.mfaEnabled;
+        this.OUName = builder.OUName;
         this.regionId = builder.regionId;
         this.subDomainDnsAddress = builder.subDomainDnsAddress;
         this.subDomainName = builder.subDomainName;
@@ -79,6 +89,13 @@ public class ModifyADConnectorDirectoryRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return adHostname
+     */
+    public String getAdHostname() {
+        return this.adHostname;
     }
 
     /**
@@ -131,6 +148,13 @@ public class ModifyADConnectorDirectoryRequest extends Request {
     }
 
     /**
+     * @return OUName
+     */
+    public String getOUName() {
+        return this.OUName;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -152,6 +176,7 @@ public class ModifyADConnectorDirectoryRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyADConnectorDirectoryRequest, Builder> {
+        private String adHostname; 
         private String directoryId; 
         private String directoryName; 
         private java.util.List < String > dnsAddress; 
@@ -159,6 +184,7 @@ public class ModifyADConnectorDirectoryRequest extends Request {
         private String domainPassword; 
         private String domainUserName; 
         private Boolean mfaEnabled; 
+        private String OUName; 
         private String regionId; 
         private java.util.List < String > subDomainDnsAddress; 
         private String subDomainName; 
@@ -167,19 +193,30 @@ public class ModifyADConnectorDirectoryRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyADConnectorDirectoryRequest response) {
-            super(response);
-            this.directoryId = response.directoryId;
-            this.directoryName = response.directoryName;
-            this.dnsAddress = response.dnsAddress;
-            this.domainName = response.domainName;
-            this.domainPassword = response.domainPassword;
-            this.domainUserName = response.domainUserName;
-            this.mfaEnabled = response.mfaEnabled;
-            this.regionId = response.regionId;
-            this.subDomainDnsAddress = response.subDomainDnsAddress;
-            this.subDomainName = response.subDomainName;
+        private Builder(ModifyADConnectorDirectoryRequest request) {
+            super(request);
+            this.adHostname = request.adHostname;
+            this.directoryId = request.directoryId;
+            this.directoryName = request.directoryName;
+            this.dnsAddress = request.dnsAddress;
+            this.domainName = request.domainName;
+            this.domainPassword = request.domainPassword;
+            this.domainUserName = request.domainUserName;
+            this.mfaEnabled = request.mfaEnabled;
+            this.OUName = request.OUName;
+            this.regionId = request.regionId;
+            this.subDomainDnsAddress = request.subDomainDnsAddress;
+            this.subDomainName = request.subDomainName;
         } 
+
+        /**
+         * AdHostname.
+         */
+        public Builder adHostname(String adHostname) {
+            this.putQueryParameter("AdHostname", adHostname);
+            this.adHostname = adHostname;
+            return this;
+        }
 
         /**
          * DirectoryId.
@@ -241,6 +278,15 @@ public class ModifyADConnectorDirectoryRequest extends Request {
         public Builder mfaEnabled(Boolean mfaEnabled) {
             this.putQueryParameter("MfaEnabled", mfaEnabled);
             this.mfaEnabled = mfaEnabled;
+            return this;
+        }
+
+        /**
+         * OUName.
+         */
+        public Builder OUName(String OUName) {
+            this.putQueryParameter("OUName", OUName);
+            this.OUName = OUName;
             return this;
         }
 

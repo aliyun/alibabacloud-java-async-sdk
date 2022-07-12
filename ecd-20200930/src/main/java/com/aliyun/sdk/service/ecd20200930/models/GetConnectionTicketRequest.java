@@ -45,6 +45,10 @@ public class GetConnectionTicketRequest extends Request {
     @NameInMap("TaskId")
     private String taskId;
 
+    @Query
+    @NameInMap("Uuid")
+    private String uuid;
+
     private GetConnectionTicketRequest(Builder builder) {
         super(builder);
         this.desktopId = builder.desktopId;
@@ -55,6 +59,7 @@ public class GetConnectionTicketRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.taskId = builder.taskId;
+        this.uuid = builder.uuid;
     }
 
     public static Builder builder() {
@@ -126,6 +131,13 @@ public class GetConnectionTicketRequest extends Request {
         return this.taskId;
     }
 
+    /**
+     * @return uuid
+     */
+    public String getUuid() {
+        return this.uuid;
+    }
+
     public static final class Builder extends Request.Builder<GetConnectionTicketRequest, Builder> {
         private String desktopId; 
         private String endUserId; 
@@ -135,21 +147,23 @@ public class GetConnectionTicketRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String taskId; 
+        private String uuid; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetConnectionTicketRequest response) {
-            super(response);
-            this.desktopId = response.desktopId;
-            this.endUserId = response.endUserId;
-            this.ownerId = response.ownerId;
-            this.password = response.password;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.taskId = response.taskId;
+        private Builder(GetConnectionTicketRequest request) {
+            super(request);
+            this.desktopId = request.desktopId;
+            this.endUserId = request.endUserId;
+            this.ownerId = request.ownerId;
+            this.password = request.password;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.taskId = request.taskId;
+            this.uuid = request.uuid;
         } 
 
         /**
@@ -221,6 +235,15 @@ public class GetConnectionTicketRequest extends Request {
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
             this.taskId = taskId;
+            return this;
+        }
+
+        /**
+         * Uuid.
+         */
+        public Builder uuid(String uuid) {
+            this.putQueryParameter("Uuid", uuid);
+            this.uuid = uuid;
             return this;
         }
 

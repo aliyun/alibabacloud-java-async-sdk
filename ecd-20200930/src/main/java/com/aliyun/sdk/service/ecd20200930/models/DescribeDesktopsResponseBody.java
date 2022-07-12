@@ -121,10 +121,14 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         @NameInMap("DiskType")
         private String diskType;
 
+        @NameInMap("PerformanceLevel")
+        private String performanceLevel;
+
         private Disks(Builder builder) {
             this.diskId = builder.diskId;
             this.diskSize = builder.diskSize;
             this.diskType = builder.diskType;
+            this.performanceLevel = builder.performanceLevel;
         }
 
         public static Builder builder() {
@@ -156,10 +160,18 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             return this.diskType;
         }
 
+        /**
+         * @return performanceLevel
+         */
+        public String getPerformanceLevel() {
+            return this.performanceLevel;
+        }
+
         public static final class Builder {
             private String diskId; 
             private Integer diskSize; 
             private String diskType; 
+            private String performanceLevel; 
 
             /**
              * DiskId.
@@ -185,8 +197,117 @@ public class DescribeDesktopsResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * PerformanceLevel.
+             */
+            public Builder performanceLevel(String performanceLevel) {
+                this.performanceLevel = performanceLevel;
+                return this;
+            }
+
             public Disks build() {
                 return new Disks(this);
+            } 
+
+        } 
+
+    }
+    public static class FotaUpdate extends TeaModel {
+        @NameInMap("CurrentAppVersion")
+        private String currentAppVersion;
+
+        @NameInMap("NewAppVersion")
+        private String newAppVersion;
+
+        @NameInMap("ReleaseNote")
+        private String releaseNote;
+
+        @NameInMap("Size")
+        private Long size;
+
+        private FotaUpdate(Builder builder) {
+            this.currentAppVersion = builder.currentAppVersion;
+            this.newAppVersion = builder.newAppVersion;
+            this.releaseNote = builder.releaseNote;
+            this.size = builder.size;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static FotaUpdate create() {
+            return builder().build();
+        }
+
+        /**
+         * @return currentAppVersion
+         */
+        public String getCurrentAppVersion() {
+            return this.currentAppVersion;
+        }
+
+        /**
+         * @return newAppVersion
+         */
+        public String getNewAppVersion() {
+            return this.newAppVersion;
+        }
+
+        /**
+         * @return releaseNote
+         */
+        public String getReleaseNote() {
+            return this.releaseNote;
+        }
+
+        /**
+         * @return size
+         */
+        public Long getSize() {
+            return this.size;
+        }
+
+        public static final class Builder {
+            private String currentAppVersion; 
+            private String newAppVersion; 
+            private String releaseNote; 
+            private Long size; 
+
+            /**
+             * CurrentAppVersion.
+             */
+            public Builder currentAppVersion(String currentAppVersion) {
+                this.currentAppVersion = currentAppVersion;
+                return this;
+            }
+
+            /**
+             * NewAppVersion.
+             */
+            public Builder newAppVersion(String newAppVersion) {
+                this.newAppVersion = newAppVersion;
+                return this;
+            }
+
+            /**
+             * ReleaseNote.
+             */
+            public Builder releaseNote(String releaseNote) {
+                this.releaseNote = releaseNote;
+                return this;
+            }
+
+            /**
+             * Size.
+             */
+            public Builder size(Long size) {
+                this.size = size;
+                return this;
+            }
+
+            public FotaUpdate build() {
+                return new FotaUpdate(this);
             } 
 
         } 
@@ -199,9 +320,13 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         @NameInMap("EstablishmentTime")
         private String establishmentTime;
 
+        @NameInMap("ExternalUserName")
+        private String externalUserName;
+
         private Sessions(Builder builder) {
             this.endUserId = builder.endUserId;
             this.establishmentTime = builder.establishmentTime;
+            this.externalUserName = builder.externalUserName;
         }
 
         public static Builder builder() {
@@ -226,9 +351,17 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             return this.establishmentTime;
         }
 
+        /**
+         * @return externalUserName
+         */
+        public String getExternalUserName() {
+            return this.externalUserName;
+        }
+
         public static final class Builder {
             private String endUserId; 
             private String establishmentTime; 
+            private String externalUserName; 
 
             /**
              * EndUserId.
@@ -243,6 +376,14 @@ public class DescribeDesktopsResponseBody extends TeaModel {
              */
             public Builder establishmentTime(String establishmentTime) {
                 this.establishmentTime = establishmentTime;
+                return this;
+            }
+
+            /**
+             * ExternalUserName.
+             */
+            public Builder externalUserName(String externalUserName) {
+                this.externalUserName = externalUserName;
                 return this;
             }
 
@@ -375,6 +516,9 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         @NameInMap("ExpiredTime")
         private String expiredTime;
 
+        @NameInMap("FotaUpdate")
+        private FotaUpdate fotaUpdate;
+
         @NameInMap("GpuCategory")
         private Long gpuCategory;
 
@@ -414,8 +558,14 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         @NameInMap("OfficeSiteType")
         private String officeSiteType;
 
+        @NameInMap("OfficeSiteVpcType")
+        private String officeSiteVpcType;
+
         @NameInMap("OsType")
         private String osType;
+
+        @NameInMap("Platform")
+        private String platform;
 
         @NameInMap("PolicyGroupId")
         private String policyGroupId;
@@ -428,6 +578,9 @@ public class DescribeDesktopsResponseBody extends TeaModel {
 
         @NameInMap("ProtocolType")
         private String protocolType;
+
+        @NameInMap("SessionType")
+        private String sessionType;
 
         @NameInMap("Sessions")
         private java.util.List < Sessions> sessions;
@@ -443,6 +596,15 @@ public class DescribeDesktopsResponseBody extends TeaModel {
 
         @NameInMap("Tags")
         private java.util.List < Tags> tags;
+
+        @NameInMap("VolumeEncryptionEnabled")
+        private Boolean volumeEncryptionEnabled;
+
+        @NameInMap("VolumeEncryptionKey")
+        private String volumeEncryptionKey;
+
+        @NameInMap("ZoneType")
+        private String zoneType;
 
         private Desktops(Builder builder) {
             this.bundleId = builder.bundleId;
@@ -465,6 +627,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             this.downgradedTimes = builder.downgradedTimes;
             this.endUserIds = builder.endUserIds;
             this.expiredTime = builder.expiredTime;
+            this.fotaUpdate = builder.fotaUpdate;
             this.gpuCategory = builder.gpuCategory;
             this.gpuCount = builder.gpuCount;
             this.gpuDriverVersion = builder.gpuDriverVersion;
@@ -478,16 +641,22 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             this.officeSiteId = builder.officeSiteId;
             this.officeSiteName = builder.officeSiteName;
             this.officeSiteType = builder.officeSiteType;
+            this.officeSiteVpcType = builder.officeSiteVpcType;
             this.osType = builder.osType;
+            this.platform = builder.platform;
             this.policyGroupId = builder.policyGroupId;
             this.policyGroupName = builder.policyGroupName;
             this.progress = builder.progress;
             this.protocolType = builder.protocolType;
+            this.sessionType = builder.sessionType;
             this.sessions = builder.sessions;
             this.startTime = builder.startTime;
             this.systemDiskCategory = builder.systemDiskCategory;
             this.systemDiskSize = builder.systemDiskSize;
             this.tags = builder.tags;
+            this.volumeEncryptionEnabled = builder.volumeEncryptionEnabled;
+            this.volumeEncryptionKey = builder.volumeEncryptionKey;
+            this.zoneType = builder.zoneType;
         }
 
         public static Builder builder() {
@@ -639,6 +808,13 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         }
 
         /**
+         * @return fotaUpdate
+         */
+        public FotaUpdate getFotaUpdate() {
+            return this.fotaUpdate;
+        }
+
+        /**
          * @return gpuCategory
          */
         public Long getGpuCategory() {
@@ -730,10 +906,24 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         }
 
         /**
+         * @return officeSiteVpcType
+         */
+        public String getOfficeSiteVpcType() {
+            return this.officeSiteVpcType;
+        }
+
+        /**
          * @return osType
          */
         public String getOsType() {
             return this.osType;
+        }
+
+        /**
+         * @return platform
+         */
+        public String getPlatform() {
+            return this.platform;
         }
 
         /**
@@ -762,6 +952,13 @@ public class DescribeDesktopsResponseBody extends TeaModel {
          */
         public String getProtocolType() {
             return this.protocolType;
+        }
+
+        /**
+         * @return sessionType
+         */
+        public String getSessionType() {
+            return this.sessionType;
         }
 
         /**
@@ -799,6 +996,27 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             return this.tags;
         }
 
+        /**
+         * @return volumeEncryptionEnabled
+         */
+        public Boolean getVolumeEncryptionEnabled() {
+            return this.volumeEncryptionEnabled;
+        }
+
+        /**
+         * @return volumeEncryptionKey
+         */
+        public String getVolumeEncryptionKey() {
+            return this.volumeEncryptionKey;
+        }
+
+        /**
+         * @return zoneType
+         */
+        public String getZoneType() {
+            return this.zoneType;
+        }
+
         public static final class Builder {
             private String bundleId; 
             private String bundleName; 
@@ -820,6 +1038,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             private Long downgradedTimes; 
             private java.util.List < String > endUserIds; 
             private String expiredTime; 
+            private FotaUpdate fotaUpdate; 
             private Long gpuCategory; 
             private Float gpuCount; 
             private String gpuDriverVersion; 
@@ -833,16 +1052,22 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             private String officeSiteId; 
             private String officeSiteName; 
             private String officeSiteType; 
+            private String officeSiteVpcType; 
             private String osType; 
+            private String platform; 
             private String policyGroupId; 
             private String policyGroupName; 
             private String progress; 
             private String protocolType; 
+            private String sessionType; 
             private java.util.List < Sessions> sessions; 
             private String startTime; 
             private String systemDiskCategory; 
             private Integer systemDiskSize; 
             private java.util.List < Tags> tags; 
+            private Boolean volumeEncryptionEnabled; 
+            private String volumeEncryptionKey; 
+            private String zoneType; 
 
             /**
              * BundleId.
@@ -1005,6 +1230,14 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
+             * FotaUpdate.
+             */
+            public Builder fotaUpdate(FotaUpdate fotaUpdate) {
+                this.fotaUpdate = fotaUpdate;
+                return this;
+            }
+
+            /**
              * GpuCategory.
              */
             public Builder gpuCategory(Long gpuCategory) {
@@ -1109,10 +1342,26 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
+             * OfficeSiteVpcType.
+             */
+            public Builder officeSiteVpcType(String officeSiteVpcType) {
+                this.officeSiteVpcType = officeSiteVpcType;
+                return this;
+            }
+
+            /**
              * OsType.
              */
             public Builder osType(String osType) {
                 this.osType = osType;
+                return this;
+            }
+
+            /**
+             * Platform.
+             */
+            public Builder platform(String platform) {
+                this.platform = platform;
                 return this;
             }
 
@@ -1145,6 +1394,14 @@ public class DescribeDesktopsResponseBody extends TeaModel {
              */
             public Builder protocolType(String protocolType) {
                 this.protocolType = protocolType;
+                return this;
+            }
+
+            /**
+             * SessionType.
+             */
+            public Builder sessionType(String sessionType) {
+                this.sessionType = sessionType;
                 return this;
             }
 
@@ -1185,6 +1442,30 @@ public class DescribeDesktopsResponseBody extends TeaModel {
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
+                return this;
+            }
+
+            /**
+             * VolumeEncryptionEnabled.
+             */
+            public Builder volumeEncryptionEnabled(Boolean volumeEncryptionEnabled) {
+                this.volumeEncryptionEnabled = volumeEncryptionEnabled;
+                return this;
+            }
+
+            /**
+             * VolumeEncryptionKey.
+             */
+            public Builder volumeEncryptionKey(String volumeEncryptionKey) {
+                this.volumeEncryptionKey = volumeEncryptionKey;
+                return this;
+            }
+
+            /**
+             * ZoneType.
+             */
+            public Builder zoneType(String zoneType) {
+                this.zoneType = zoneType;
                 return this;
             }
 

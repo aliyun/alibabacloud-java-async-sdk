@@ -382,6 +382,9 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         @NameInMap("CreationTime")
         private String creationTime;
 
+        @NameInMap("EndUserId")
+        private String endUserId;
+
         @NameInMap("InvocationStatus")
         private String invocationStatus;
 
@@ -395,6 +398,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             this.commandContent = builder.commandContent;
             this.commandType = builder.commandType;
             this.creationTime = builder.creationTime;
+            this.endUserId = builder.endUserId;
             this.invocationStatus = builder.invocationStatus;
             this.invokeDesktops = builder.invokeDesktops;
             this.invokeId = builder.invokeId;
@@ -430,6 +434,13 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return endUserId
+         */
+        public String getEndUserId() {
+            return this.endUserId;
+        }
+
+        /**
          * @return invocationStatus
          */
         public String getInvocationStatus() {
@@ -454,6 +465,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             private String commandContent; 
             private String commandType; 
             private String creationTime; 
+            private String endUserId; 
             private String invocationStatus; 
             private java.util.List < InvokeDesktops> invokeDesktops; 
             private String invokeId; 
@@ -479,6 +491,14 @@ public class DescribeInvocationsResponseBody extends TeaModel {
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
+                return this;
+            }
+
+            /**
+             * EndUserId.
+             */
+            public Builder endUserId(String endUserId) {
+                this.endUserId = endUserId;
                 return this;
             }
 

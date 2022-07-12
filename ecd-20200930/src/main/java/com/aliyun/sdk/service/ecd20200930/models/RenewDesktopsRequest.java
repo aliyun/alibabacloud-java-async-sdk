@@ -115,14 +115,14 @@ public class RenewDesktopsRequest extends Request {
             super();
         } 
 
-        private Builder(RenewDesktopsRequest response) {
-            super(response);
-            this.autoPay = response.autoPay;
-            this.desktopId = response.desktopId;
-            this.period = response.period;
-            this.periodUnit = response.periodUnit;
-            this.promotionId = response.promotionId;
-            this.regionId = response.regionId;
+        private Builder(RenewDesktopsRequest request) {
+            super(request);
+            this.autoPay = request.autoPay;
+            this.desktopId = request.desktopId;
+            this.period = request.period;
+            this.periodUnit = request.periodUnit;
+            this.promotionId = request.promotionId;
+            this.regionId = request.regionId;
         } 
 
         /**

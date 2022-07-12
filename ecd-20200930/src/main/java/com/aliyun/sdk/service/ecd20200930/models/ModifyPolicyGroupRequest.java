@@ -21,6 +21,10 @@ public class ModifyPolicyGroupRequest extends Request {
     private java.util.List < AuthorizeSecurityPolicyRule> authorizeSecurityPolicyRule;
 
     @Query
+    @NameInMap("CameraRedirect")
+    private String cameraRedirect;
+
+    @Query
     @NameInMap("ClientType")
     private java.util.List < ClientType> clientType;
 
@@ -53,6 +57,10 @@ public class ModifyPolicyGroupRequest extends Request {
     private String name;
 
     @Query
+    @NameInMap("NetRedirect")
+    private String netRedirect;
+
+    @Query
     @NameInMap("PolicyGroupId")
     @Validation(required = true)
     private String policyGroupId;
@@ -68,6 +76,22 @@ public class ModifyPolicyGroupRequest extends Request {
     @Query
     @NameInMap("PrinterRedirection")
     private String printerRedirection;
+
+    @Query
+    @NameInMap("Recording")
+    private String recording;
+
+    @Query
+    @NameInMap("RecordingEndTime")
+    private String recordingEndTime;
+
+    @Query
+    @NameInMap("RecordingFps")
+    private Long recordingFps;
+
+    @Query
+    @NameInMap("RecordingStartTime")
+    private String recordingStartTime;
 
     @Query
     @NameInMap("RegionId")
@@ -99,10 +123,6 @@ public class ModifyPolicyGroupRequest extends Request {
     private String watermark;
 
     @Query
-    @NameInMap("WatermarkCustomText")
-    private String watermarkCustomText;
-
-    @Query
     @NameInMap("WatermarkTransparency")
     private String watermarkTransparency;
 
@@ -114,6 +134,7 @@ public class ModifyPolicyGroupRequest extends Request {
         super(builder);
         this.authorizeAccessPolicyRule = builder.authorizeAccessPolicyRule;
         this.authorizeSecurityPolicyRule = builder.authorizeSecurityPolicyRule;
+        this.cameraRedirect = builder.cameraRedirect;
         this.clientType = builder.clientType;
         this.clipboard = builder.clipboard;
         this.domainList = builder.domainList;
@@ -122,10 +143,15 @@ public class ModifyPolicyGroupRequest extends Request {
         this.html5FileTransfer = builder.html5FileTransfer;
         this.localDrive = builder.localDrive;
         this.name = builder.name;
+        this.netRedirect = builder.netRedirect;
         this.policyGroupId = builder.policyGroupId;
         this.preemptLogin = builder.preemptLogin;
         this.preemptLoginUser = builder.preemptLoginUser;
         this.printerRedirection = builder.printerRedirection;
+        this.recording = builder.recording;
+        this.recordingEndTime = builder.recordingEndTime;
+        this.recordingFps = builder.recordingFps;
+        this.recordingStartTime = builder.recordingStartTime;
         this.regionId = builder.regionId;
         this.revokeAccessPolicyRule = builder.revokeAccessPolicyRule;
         this.revokeSecurityPolicyRule = builder.revokeSecurityPolicyRule;
@@ -133,7 +159,6 @@ public class ModifyPolicyGroupRequest extends Request {
         this.usbSupplyRedirectRule = builder.usbSupplyRedirectRule;
         this.visualQuality = builder.visualQuality;
         this.watermark = builder.watermark;
-        this.watermarkCustomText = builder.watermarkCustomText;
         this.watermarkTransparency = builder.watermarkTransparency;
         this.watermarkType = builder.watermarkType;
     }
@@ -163,6 +188,13 @@ public class ModifyPolicyGroupRequest extends Request {
      */
     public java.util.List < AuthorizeSecurityPolicyRule> getAuthorizeSecurityPolicyRule() {
         return this.authorizeSecurityPolicyRule;
+    }
+
+    /**
+     * @return cameraRedirect
+     */
+    public String getCameraRedirect() {
+        return this.cameraRedirect;
     }
 
     /**
@@ -222,6 +254,13 @@ public class ModifyPolicyGroupRequest extends Request {
     }
 
     /**
+     * @return netRedirect
+     */
+    public String getNetRedirect() {
+        return this.netRedirect;
+    }
+
+    /**
      * @return policyGroupId
      */
     public String getPolicyGroupId() {
@@ -247,6 +286,34 @@ public class ModifyPolicyGroupRequest extends Request {
      */
     public String getPrinterRedirection() {
         return this.printerRedirection;
+    }
+
+    /**
+     * @return recording
+     */
+    public String getRecording() {
+        return this.recording;
+    }
+
+    /**
+     * @return recordingEndTime
+     */
+    public String getRecordingEndTime() {
+        return this.recordingEndTime;
+    }
+
+    /**
+     * @return recordingFps
+     */
+    public Long getRecordingFps() {
+        return this.recordingFps;
+    }
+
+    /**
+     * @return recordingStartTime
+     */
+    public String getRecordingStartTime() {
+        return this.recordingStartTime;
     }
 
     /**
@@ -299,13 +366,6 @@ public class ModifyPolicyGroupRequest extends Request {
     }
 
     /**
-     * @return watermarkCustomText
-     */
-    public String getWatermarkCustomText() {
-        return this.watermarkCustomText;
-    }
-
-    /**
      * @return watermarkTransparency
      */
     public String getWatermarkTransparency() {
@@ -322,6 +382,7 @@ public class ModifyPolicyGroupRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyPolicyGroupRequest, Builder> {
         private java.util.List < AuthorizeAccessPolicyRule> authorizeAccessPolicyRule; 
         private java.util.List < AuthorizeSecurityPolicyRule> authorizeSecurityPolicyRule; 
+        private String cameraRedirect; 
         private java.util.List < ClientType> clientType; 
         private String clipboard; 
         private String domainList; 
@@ -330,10 +391,15 @@ public class ModifyPolicyGroupRequest extends Request {
         private String html5FileTransfer; 
         private String localDrive; 
         private String name; 
+        private String netRedirect; 
         private String policyGroupId; 
         private String preemptLogin; 
         private java.util.List < String > preemptLoginUser; 
         private String printerRedirection; 
+        private String recording; 
+        private String recordingEndTime; 
+        private Long recordingFps; 
+        private String recordingStartTime; 
         private String regionId; 
         private java.util.List < RevokeAccessPolicyRule> revokeAccessPolicyRule; 
         private java.util.List < RevokeSecurityPolicyRule> revokeSecurityPolicyRule; 
@@ -341,7 +407,6 @@ public class ModifyPolicyGroupRequest extends Request {
         private java.util.List < UsbSupplyRedirectRule> usbSupplyRedirectRule; 
         private String visualQuality; 
         private String watermark; 
-        private String watermarkCustomText; 
         private String watermarkTransparency; 
         private String watermarkType; 
 
@@ -349,32 +414,37 @@ public class ModifyPolicyGroupRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyPolicyGroupRequest response) {
-            super(response);
-            this.authorizeAccessPolicyRule = response.authorizeAccessPolicyRule;
-            this.authorizeSecurityPolicyRule = response.authorizeSecurityPolicyRule;
-            this.clientType = response.clientType;
-            this.clipboard = response.clipboard;
-            this.domainList = response.domainList;
-            this.gpuAcceleration = response.gpuAcceleration;
-            this.html5Access = response.html5Access;
-            this.html5FileTransfer = response.html5FileTransfer;
-            this.localDrive = response.localDrive;
-            this.name = response.name;
-            this.policyGroupId = response.policyGroupId;
-            this.preemptLogin = response.preemptLogin;
-            this.preemptLoginUser = response.preemptLoginUser;
-            this.printerRedirection = response.printerRedirection;
-            this.regionId = response.regionId;
-            this.revokeAccessPolicyRule = response.revokeAccessPolicyRule;
-            this.revokeSecurityPolicyRule = response.revokeSecurityPolicyRule;
-            this.usbRedirect = response.usbRedirect;
-            this.usbSupplyRedirectRule = response.usbSupplyRedirectRule;
-            this.visualQuality = response.visualQuality;
-            this.watermark = response.watermark;
-            this.watermarkCustomText = response.watermarkCustomText;
-            this.watermarkTransparency = response.watermarkTransparency;
-            this.watermarkType = response.watermarkType;
+        private Builder(ModifyPolicyGroupRequest request) {
+            super(request);
+            this.authorizeAccessPolicyRule = request.authorizeAccessPolicyRule;
+            this.authorizeSecurityPolicyRule = request.authorizeSecurityPolicyRule;
+            this.cameraRedirect = request.cameraRedirect;
+            this.clientType = request.clientType;
+            this.clipboard = request.clipboard;
+            this.domainList = request.domainList;
+            this.gpuAcceleration = request.gpuAcceleration;
+            this.html5Access = request.html5Access;
+            this.html5FileTransfer = request.html5FileTransfer;
+            this.localDrive = request.localDrive;
+            this.name = request.name;
+            this.netRedirect = request.netRedirect;
+            this.policyGroupId = request.policyGroupId;
+            this.preemptLogin = request.preemptLogin;
+            this.preemptLoginUser = request.preemptLoginUser;
+            this.printerRedirection = request.printerRedirection;
+            this.recording = request.recording;
+            this.recordingEndTime = request.recordingEndTime;
+            this.recordingFps = request.recordingFps;
+            this.recordingStartTime = request.recordingStartTime;
+            this.regionId = request.regionId;
+            this.revokeAccessPolicyRule = request.revokeAccessPolicyRule;
+            this.revokeSecurityPolicyRule = request.revokeSecurityPolicyRule;
+            this.usbRedirect = request.usbRedirect;
+            this.usbSupplyRedirectRule = request.usbSupplyRedirectRule;
+            this.visualQuality = request.visualQuality;
+            this.watermark = request.watermark;
+            this.watermarkTransparency = request.watermarkTransparency;
+            this.watermarkType = request.watermarkType;
         } 
 
         /**
@@ -392,6 +462,15 @@ public class ModifyPolicyGroupRequest extends Request {
         public Builder authorizeSecurityPolicyRule(java.util.List < AuthorizeSecurityPolicyRule> authorizeSecurityPolicyRule) {
             this.putQueryParameter("AuthorizeSecurityPolicyRule", authorizeSecurityPolicyRule);
             this.authorizeSecurityPolicyRule = authorizeSecurityPolicyRule;
+            return this;
+        }
+
+        /**
+         * CameraRedirect.
+         */
+        public Builder cameraRedirect(String cameraRedirect) {
+            this.putQueryParameter("CameraRedirect", cameraRedirect);
+            this.cameraRedirect = cameraRedirect;
             return this;
         }
 
@@ -468,6 +547,15 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
+         * NetRedirect.
+         */
+        public Builder netRedirect(String netRedirect) {
+            this.putQueryParameter("NetRedirect", netRedirect);
+            this.netRedirect = netRedirect;
+            return this;
+        }
+
+        /**
          * PolicyGroupId.
          */
         public Builder policyGroupId(String policyGroupId) {
@@ -500,6 +588,42 @@ public class ModifyPolicyGroupRequest extends Request {
         public Builder printerRedirection(String printerRedirection) {
             this.putQueryParameter("PrinterRedirection", printerRedirection);
             this.printerRedirection = printerRedirection;
+            return this;
+        }
+
+        /**
+         * Recording.
+         */
+        public Builder recording(String recording) {
+            this.putQueryParameter("Recording", recording);
+            this.recording = recording;
+            return this;
+        }
+
+        /**
+         * RecordingEndTime.
+         */
+        public Builder recordingEndTime(String recordingEndTime) {
+            this.putQueryParameter("RecordingEndTime", recordingEndTime);
+            this.recordingEndTime = recordingEndTime;
+            return this;
+        }
+
+        /**
+         * RecordingFps.
+         */
+        public Builder recordingFps(Long recordingFps) {
+            this.putQueryParameter("RecordingFps", recordingFps);
+            this.recordingFps = recordingFps;
+            return this;
+        }
+
+        /**
+         * RecordingStartTime.
+         */
+        public Builder recordingStartTime(String recordingStartTime) {
+            this.putQueryParameter("RecordingStartTime", recordingStartTime);
+            this.recordingStartTime = recordingStartTime;
             return this;
         }
 
@@ -563,15 +687,6 @@ public class ModifyPolicyGroupRequest extends Request {
         public Builder watermark(String watermark) {
             this.putQueryParameter("Watermark", watermark);
             this.watermark = watermark;
-            return this;
-        }
-
-        /**
-         * WatermarkCustomText.
-         */
-        public Builder watermarkCustomText(String watermarkCustomText) {
-            this.putQueryParameter("WatermarkCustomText", watermarkCustomText);
-            this.watermarkCustomText = watermarkCustomText;
             return this;
         }
 

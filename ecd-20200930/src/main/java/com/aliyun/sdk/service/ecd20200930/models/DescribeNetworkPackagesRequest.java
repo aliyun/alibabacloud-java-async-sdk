@@ -102,13 +102,13 @@ public class DescribeNetworkPackagesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeNetworkPackagesRequest response) {
-            super(response);
-            this.internetChargeType = response.internetChargeType;
-            this.maxResults = response.maxResults;
-            this.networkPackageId = response.networkPackageId;
-            this.nextToken = response.nextToken;
-            this.regionId = response.regionId;
+        private Builder(DescribeNetworkPackagesRequest request) {
+            super(request);
+            this.internetChargeType = request.internetChargeType;
+            this.maxResults = request.maxResults;
+            this.networkPackageId = request.networkPackageId;
+            this.nextToken = request.nextToken;
+            this.regionId = request.regionId;
         } 
 
         /**

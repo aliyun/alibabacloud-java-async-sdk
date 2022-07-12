@@ -63,10 +63,10 @@ public class DeleteNetworkPackagesRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteNetworkPackagesRequest response) {
-            super(response);
-            this.networkPackageId = response.networkPackageId;
-            this.regionId = response.regionId;
+        private Builder(DeleteNetworkPackagesRequest request) {
+            super(request);
+            this.networkPackageId = request.networkPackageId;
+            this.regionId = request.regionId;
         } 
 
         /**

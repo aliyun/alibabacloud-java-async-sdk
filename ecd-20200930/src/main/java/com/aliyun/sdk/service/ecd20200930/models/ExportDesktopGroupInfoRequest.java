@@ -25,16 +25,16 @@ public class ExportDesktopGroupInfoRequest extends Request {
     private String desktopGroupName;
 
     @Query
-    @NameInMap("DirectoryId")
-    private String directoryId;
-
-    @Query
     @NameInMap("EndUserId")
     private java.util.List < String > endUserId;
 
     @Query
     @NameInMap("ExpiredTime")
     private String expiredTime;
+
+    @Query
+    @NameInMap("LangType")
+    private String langType;
 
     @Query
     @NameInMap("MaxResults")
@@ -62,9 +62,9 @@ public class ExportDesktopGroupInfoRequest extends Request {
         this.chargeType = builder.chargeType;
         this.desktopGroupId = builder.desktopGroupId;
         this.desktopGroupName = builder.desktopGroupName;
-        this.directoryId = builder.directoryId;
         this.endUserId = builder.endUserId;
         this.expiredTime = builder.expiredTime;
+        this.langType = builder.langType;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.officeSiteId = builder.officeSiteId;
@@ -107,13 +107,6 @@ public class ExportDesktopGroupInfoRequest extends Request {
     }
 
     /**
-     * @return directoryId
-     */
-    public String getDirectoryId() {
-        return this.directoryId;
-    }
-
-    /**
      * @return endUserId
      */
     public java.util.List < String > getEndUserId() {
@@ -125,6 +118,13 @@ public class ExportDesktopGroupInfoRequest extends Request {
      */
     public String getExpiredTime() {
         return this.expiredTime;
+    }
+
+    /**
+     * @return langType
+     */
+    public String getLangType() {
+        return this.langType;
     }
 
     /**
@@ -166,9 +166,9 @@ public class ExportDesktopGroupInfoRequest extends Request {
         private String chargeType; 
         private java.util.List < String > desktopGroupId; 
         private String desktopGroupName; 
-        private String directoryId; 
         private java.util.List < String > endUserId; 
         private String expiredTime; 
+        private String langType; 
         private Integer maxResults; 
         private String nextToken; 
         private String officeSiteId; 
@@ -179,19 +179,19 @@ public class ExportDesktopGroupInfoRequest extends Request {
             super();
         } 
 
-        private Builder(ExportDesktopGroupInfoRequest response) {
-            super(response);
-            this.chargeType = response.chargeType;
-            this.desktopGroupId = response.desktopGroupId;
-            this.desktopGroupName = response.desktopGroupName;
-            this.directoryId = response.directoryId;
-            this.endUserId = response.endUserId;
-            this.expiredTime = response.expiredTime;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.officeSiteId = response.officeSiteId;
-            this.policyGroupId = response.policyGroupId;
-            this.regionId = response.regionId;
+        private Builder(ExportDesktopGroupInfoRequest request) {
+            super(request);
+            this.chargeType = request.chargeType;
+            this.desktopGroupId = request.desktopGroupId;
+            this.desktopGroupName = request.desktopGroupName;
+            this.endUserId = request.endUserId;
+            this.expiredTime = request.expiredTime;
+            this.langType = request.langType;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.officeSiteId = request.officeSiteId;
+            this.policyGroupId = request.policyGroupId;
+            this.regionId = request.regionId;
         } 
 
         /**
@@ -222,15 +222,6 @@ public class ExportDesktopGroupInfoRequest extends Request {
         }
 
         /**
-         * DirectoryId.
-         */
-        public Builder directoryId(String directoryId) {
-            this.putQueryParameter("DirectoryId", directoryId);
-            this.directoryId = directoryId;
-            return this;
-        }
-
-        /**
          * EndUserId.
          */
         public Builder endUserId(java.util.List < String > endUserId) {
@@ -245,6 +236,15 @@ public class ExportDesktopGroupInfoRequest extends Request {
         public Builder expiredTime(String expiredTime) {
             this.putQueryParameter("ExpiredTime", expiredTime);
             this.expiredTime = expiredTime;
+            return this;
+        }
+
+        /**
+         * LangType.
+         */
+        public Builder langType(String langType) {
+            this.putQueryParameter("LangType", langType);
+            this.langType = langType;
             return this;
         }
 

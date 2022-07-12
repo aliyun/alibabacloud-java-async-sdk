@@ -128,15 +128,15 @@ public class ModifyDesktopChargeTypeRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDesktopChargeTypeRequest response) {
-            super(response);
-            this.autoPay = response.autoPay;
-            this.chargeType = response.chargeType;
-            this.desktopId = response.desktopId;
-            this.period = response.period;
-            this.periodUnit = response.periodUnit;
-            this.promotionId = response.promotionId;
-            this.regionId = response.regionId;
+        private Builder(ModifyDesktopChargeTypeRequest request) {
+            super(request);
+            this.autoPay = request.autoPay;
+            this.chargeType = request.chargeType;
+            this.desktopId = request.desktopId;
+            this.period = request.period;
+            this.periodUnit = request.periodUnit;
+            this.promotionId = request.promotionId;
+            this.regionId = request.regionId;
         } 
 
         /**

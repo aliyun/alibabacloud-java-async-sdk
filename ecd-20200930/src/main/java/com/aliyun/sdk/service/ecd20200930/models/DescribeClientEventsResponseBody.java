@@ -110,6 +110,12 @@ public class DescribeClientEventsResponseBody extends TeaModel {
         @NameInMap("ClientVersion")
         private String clientVersion;
 
+        @NameInMap("DesktopGroupId")
+        private String desktopGroupId;
+
+        @NameInMap("DesktopGroupName")
+        private String desktopGroupName;
+
         @NameInMap("DesktopId")
         private String desktopId;
 
@@ -159,6 +165,8 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             this.clientIp = builder.clientIp;
             this.clientOS = builder.clientOS;
             this.clientVersion = builder.clientVersion;
+            this.desktopGroupId = builder.desktopGroupId;
+            this.desktopGroupName = builder.desktopGroupName;
             this.desktopId = builder.desktopId;
             this.desktopIp = builder.desktopIp;
             this.desktopName = builder.desktopName;
@@ -223,6 +231,20 @@ public class DescribeClientEventsResponseBody extends TeaModel {
          */
         public String getClientVersion() {
             return this.clientVersion;
+        }
+
+        /**
+         * @return desktopGroupId
+         */
+        public String getDesktopGroupId() {
+            return this.desktopGroupId;
+        }
+
+        /**
+         * @return desktopGroupName
+         */
+        public String getDesktopGroupName() {
+            return this.desktopGroupName;
         }
 
         /**
@@ -330,6 +352,8 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             private String clientIp; 
             private String clientOS; 
             private String clientVersion; 
+            private String desktopGroupId; 
+            private String desktopGroupName; 
             private String desktopId; 
             private String desktopIp; 
             private String desktopName; 
@@ -390,6 +414,22 @@ public class DescribeClientEventsResponseBody extends TeaModel {
              */
             public Builder clientVersion(String clientVersion) {
                 this.clientVersion = clientVersion;
+                return this;
+            }
+
+            /**
+             * DesktopGroupId.
+             */
+            public Builder desktopGroupId(String desktopGroupId) {
+                this.desktopGroupId = desktopGroupId;
+                return this;
+            }
+
+            /**
+             * DesktopGroupName.
+             */
+            public Builder desktopGroupName(String desktopGroupName) {
+                this.desktopGroupName = desktopGroupName;
                 return this;
             }
 

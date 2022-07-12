@@ -21,6 +21,14 @@ public class DescribeDesktopGroupsRequest extends Request {
     private String desktopGroupName;
 
     @Query
+    @NameInMap("EndUserIds")
+    private java.util.List < String > endUserIds;
+
+    @Query
+    @NameInMap("ExcludedEndUserIds")
+    private java.util.List < String > excludedEndUserIds;
+
+    @Query
     @NameInMap("MaxResults")
     private Integer maxResults;
 
@@ -31,6 +39,10 @@ public class DescribeDesktopGroupsRequest extends Request {
     @Query
     @NameInMap("OfficeSiteId")
     private String officeSiteId;
+
+    @Query
+    @NameInMap("OwnType")
+    private Long ownType;
 
     @Query
     @NameInMap("Period")
@@ -57,9 +69,12 @@ public class DescribeDesktopGroupsRequest extends Request {
         super(builder);
         this.desktopGroupId = builder.desktopGroupId;
         this.desktopGroupName = builder.desktopGroupName;
+        this.endUserIds = builder.endUserIds;
+        this.excludedEndUserIds = builder.excludedEndUserIds;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.officeSiteId = builder.officeSiteId;
+        this.ownType = builder.ownType;
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
         this.policyGroupId = builder.policyGroupId;
@@ -95,6 +110,20 @@ public class DescribeDesktopGroupsRequest extends Request {
     }
 
     /**
+     * @return endUserIds
+     */
+    public java.util.List < String > getEndUserIds() {
+        return this.endUserIds;
+    }
+
+    /**
+     * @return excludedEndUserIds
+     */
+    public java.util.List < String > getExcludedEndUserIds() {
+        return this.excludedEndUserIds;
+    }
+
+    /**
      * @return maxResults
      */
     public Integer getMaxResults() {
@@ -113,6 +142,13 @@ public class DescribeDesktopGroupsRequest extends Request {
      */
     public String getOfficeSiteId() {
         return this.officeSiteId;
+    }
+
+    /**
+     * @return ownType
+     */
+    public Long getOwnType() {
+        return this.ownType;
     }
 
     /**
@@ -153,9 +189,12 @@ public class DescribeDesktopGroupsRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeDesktopGroupsRequest, Builder> {
         private String desktopGroupId; 
         private String desktopGroupName; 
+        private java.util.List < String > endUserIds; 
+        private java.util.List < String > excludedEndUserIds; 
         private Integer maxResults; 
         private String nextToken; 
         private String officeSiteId; 
+        private Long ownType; 
         private Integer period; 
         private String periodUnit; 
         private String policyGroupId; 
@@ -166,18 +205,21 @@ public class DescribeDesktopGroupsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDesktopGroupsRequest response) {
-            super(response);
-            this.desktopGroupId = response.desktopGroupId;
-            this.desktopGroupName = response.desktopGroupName;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.officeSiteId = response.officeSiteId;
-            this.period = response.period;
-            this.periodUnit = response.periodUnit;
-            this.policyGroupId = response.policyGroupId;
-            this.regionId = response.regionId;
-            this.status = response.status;
+        private Builder(DescribeDesktopGroupsRequest request) {
+            super(request);
+            this.desktopGroupId = request.desktopGroupId;
+            this.desktopGroupName = request.desktopGroupName;
+            this.endUserIds = request.endUserIds;
+            this.excludedEndUserIds = request.excludedEndUserIds;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.officeSiteId = request.officeSiteId;
+            this.ownType = request.ownType;
+            this.period = request.period;
+            this.periodUnit = request.periodUnit;
+            this.policyGroupId = request.policyGroupId;
+            this.regionId = request.regionId;
+            this.status = request.status;
         } 
 
         /**
@@ -195,6 +237,24 @@ public class DescribeDesktopGroupsRequest extends Request {
         public Builder desktopGroupName(String desktopGroupName) {
             this.putQueryParameter("DesktopGroupName", desktopGroupName);
             this.desktopGroupName = desktopGroupName;
+            return this;
+        }
+
+        /**
+         * EndUserIds.
+         */
+        public Builder endUserIds(java.util.List < String > endUserIds) {
+            this.putQueryParameter("EndUserIds", endUserIds);
+            this.endUserIds = endUserIds;
+            return this;
+        }
+
+        /**
+         * ExcludedEndUserIds.
+         */
+        public Builder excludedEndUserIds(java.util.List < String > excludedEndUserIds) {
+            this.putQueryParameter("ExcludedEndUserIds", excludedEndUserIds);
+            this.excludedEndUserIds = excludedEndUserIds;
             return this;
         }
 
@@ -222,6 +282,15 @@ public class DescribeDesktopGroupsRequest extends Request {
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
             this.officeSiteId = officeSiteId;
+            return this;
+        }
+
+        /**
+         * OwnType.
+         */
+        public Builder ownType(Long ownType) {
+            this.putQueryParameter("OwnType", ownType);
+            this.ownType = ownType;
             return this;
         }
 

@@ -316,8 +316,17 @@ public class DescribeBundlesResponseBody extends TeaModel {
         @NameInMap("ProtocolType")
         private String protocolType;
 
+        @NameInMap("SessionType")
+        private String sessionType;
+
         @NameInMap("StockState")
         private String stockState;
+
+        @NameInMap("VolumeEncryptionEnabled")
+        private Boolean volumeEncryptionEnabled;
+
+        @NameInMap("VolumeEncryptionKey")
+        private String volumeEncryptionKey;
 
         private Bundles(Builder builder) {
             this.bundleId = builder.bundleId;
@@ -334,7 +343,10 @@ public class DescribeBundlesResponseBody extends TeaModel {
             this.language = builder.language;
             this.osType = builder.osType;
             this.protocolType = builder.protocolType;
+            this.sessionType = builder.sessionType;
             this.stockState = builder.stockState;
+            this.volumeEncryptionEnabled = builder.volumeEncryptionEnabled;
+            this.volumeEncryptionKey = builder.volumeEncryptionKey;
         }
 
         public static Builder builder() {
@@ -444,10 +456,31 @@ public class DescribeBundlesResponseBody extends TeaModel {
         }
 
         /**
+         * @return sessionType
+         */
+        public String getSessionType() {
+            return this.sessionType;
+        }
+
+        /**
          * @return stockState
          */
         public String getStockState() {
             return this.stockState;
+        }
+
+        /**
+         * @return volumeEncryptionEnabled
+         */
+        public Boolean getVolumeEncryptionEnabled() {
+            return this.volumeEncryptionEnabled;
+        }
+
+        /**
+         * @return volumeEncryptionKey
+         */
+        public String getVolumeEncryptionKey() {
+            return this.volumeEncryptionKey;
         }
 
         public static final class Builder {
@@ -465,7 +498,10 @@ public class DescribeBundlesResponseBody extends TeaModel {
             private String language; 
             private String osType; 
             private String protocolType; 
+            private String sessionType; 
             private String stockState; 
+            private Boolean volumeEncryptionEnabled; 
+            private String volumeEncryptionKey; 
 
             /**
              * BundleId.
@@ -580,10 +616,34 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
+             * SessionType.
+             */
+            public Builder sessionType(String sessionType) {
+                this.sessionType = sessionType;
+                return this;
+            }
+
+            /**
              * StockState.
              */
             public Builder stockState(String stockState) {
                 this.stockState = stockState;
+                return this;
+            }
+
+            /**
+             * VolumeEncryptionEnabled.
+             */
+            public Builder volumeEncryptionEnabled(Boolean volumeEncryptionEnabled) {
+                this.volumeEncryptionEnabled = volumeEncryptionEnabled;
+                return this;
+            }
+
+            /**
+             * VolumeEncryptionKey.
+             */
+            public Builder volumeEncryptionKey(String volumeEncryptionKey) {
+                this.volumeEncryptionKey = volumeEncryptionKey;
                 return this;
             }
 

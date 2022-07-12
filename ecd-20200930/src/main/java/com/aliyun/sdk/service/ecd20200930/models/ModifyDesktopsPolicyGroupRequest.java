@@ -77,11 +77,11 @@ public class ModifyDesktopsPolicyGroupRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDesktopsPolicyGroupRequest response) {
-            super(response);
-            this.desktopId = response.desktopId;
-            this.policyGroupId = response.policyGroupId;
-            this.regionId = response.regionId;
+        private Builder(ModifyDesktopsPolicyGroupRequest request) {
+            super(request);
+            this.desktopId = request.desktopId;
+            this.policyGroupId = request.policyGroupId;
+            this.regionId = request.regionId;
         } 
 
         /**

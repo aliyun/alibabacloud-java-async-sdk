@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateDesktopGroupRequest extends Request {
     @Query
+    @NameInMap("AllClassifyUsers")
+    private Boolean allClassifyUsers;
+
+    @Query
     @NameInMap("AllowAutoSetup")
     @Validation(maximum = 1)
     private Integer allowAutoSetup;
@@ -27,6 +31,10 @@ public class CreateDesktopGroupRequest extends Request {
     private Boolean autoPay;
 
     @Query
+    @NameInMap("BindAmount")
+    private Long bindAmount;
+
+    @Query
     @NameInMap("BundleId")
     @Validation(required = true)
     private String bundleId;
@@ -34,6 +42,10 @@ public class CreateDesktopGroupRequest extends Request {
     @Query
     @NameInMap("ChargeType")
     private String chargeType;
+
+    @Query
+    @NameInMap("Classify")
+    private String classify;
 
     @Query
     @NameInMap("ClientToken")
@@ -58,7 +70,6 @@ public class CreateDesktopGroupRequest extends Request {
 
     @Query
     @NameInMap("EndUserIds")
-    @Validation(required = true)
     private java.util.List < String > endUserIds;
 
     @Query
@@ -66,8 +77,12 @@ public class CreateDesktopGroupRequest extends Request {
     private Long keepDuration;
 
     @Query
+    @NameInMap("LoadPolicy")
+    private Long loadPolicy;
+
+    @Query
     @NameInMap("MaxDesktopsCount")
-    @Validation(maximum = 1000, minimum = 1)
+    @Validation(maximum = 1000)
     private Integer maxDesktopsCount;
 
     @Query
@@ -110,16 +125,27 @@ public class CreateDesktopGroupRequest extends Request {
     private String scaleStrategyId;
 
     @Query
+    @NameInMap("VolumeEncryptionEnabled")
+    private Boolean volumeEncryptionEnabled;
+
+    @Query
+    @NameInMap("VolumeEncryptionKey")
+    private String volumeEncryptionKey;
+
+    @Query
     @NameInMap("VpcId")
     private String vpcId;
 
     private CreateDesktopGroupRequest(Builder builder) {
         super(builder);
+        this.allClassifyUsers = builder.allClassifyUsers;
         this.allowAutoSetup = builder.allowAutoSetup;
         this.allowBufferCount = builder.allowBufferCount;
         this.autoPay = builder.autoPay;
+        this.bindAmount = builder.bindAmount;
         this.bundleId = builder.bundleId;
         this.chargeType = builder.chargeType;
+        this.classify = builder.classify;
         this.clientToken = builder.clientToken;
         this.comments = builder.comments;
         this.defaultInitDesktopCount = builder.defaultInitDesktopCount;
@@ -127,6 +153,7 @@ public class CreateDesktopGroupRequest extends Request {
         this.directoryId = builder.directoryId;
         this.endUserIds = builder.endUserIds;
         this.keepDuration = builder.keepDuration;
+        this.loadPolicy = builder.loadPolicy;
         this.maxDesktopsCount = builder.maxDesktopsCount;
         this.minDesktopsCount = builder.minDesktopsCount;
         this.officeSiteId = builder.officeSiteId;
@@ -137,6 +164,8 @@ public class CreateDesktopGroupRequest extends Request {
         this.regionId = builder.regionId;
         this.resetType = builder.resetType;
         this.scaleStrategyId = builder.scaleStrategyId;
+        this.volumeEncryptionEnabled = builder.volumeEncryptionEnabled;
+        this.volumeEncryptionKey = builder.volumeEncryptionKey;
         this.vpcId = builder.vpcId;
     }
 
@@ -151,6 +180,13 @@ public class CreateDesktopGroupRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return allClassifyUsers
+     */
+    public Boolean getAllClassifyUsers() {
+        return this.allClassifyUsers;
     }
 
     /**
@@ -175,6 +211,13 @@ public class CreateDesktopGroupRequest extends Request {
     }
 
     /**
+     * @return bindAmount
+     */
+    public Long getBindAmount() {
+        return this.bindAmount;
+    }
+
+    /**
      * @return bundleId
      */
     public String getBundleId() {
@@ -186,6 +229,13 @@ public class CreateDesktopGroupRequest extends Request {
      */
     public String getChargeType() {
         return this.chargeType;
+    }
+
+    /**
+     * @return classify
+     */
+    public String getClassify() {
+        return this.classify;
     }
 
     /**
@@ -235,6 +285,13 @@ public class CreateDesktopGroupRequest extends Request {
      */
     public Long getKeepDuration() {
         return this.keepDuration;
+    }
+
+    /**
+     * @return loadPolicy
+     */
+    public Long getLoadPolicy() {
+        return this.loadPolicy;
     }
 
     /**
@@ -308,6 +365,20 @@ public class CreateDesktopGroupRequest extends Request {
     }
 
     /**
+     * @return volumeEncryptionEnabled
+     */
+    public Boolean getVolumeEncryptionEnabled() {
+        return this.volumeEncryptionEnabled;
+    }
+
+    /**
+     * @return volumeEncryptionKey
+     */
+    public String getVolumeEncryptionKey() {
+        return this.volumeEncryptionKey;
+    }
+
+    /**
      * @return vpcId
      */
     public String getVpcId() {
@@ -315,11 +386,14 @@ public class CreateDesktopGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateDesktopGroupRequest, Builder> {
+        private Boolean allClassifyUsers; 
         private Integer allowAutoSetup; 
         private Integer allowBufferCount; 
         private Boolean autoPay; 
+        private Long bindAmount; 
         private String bundleId; 
         private String chargeType; 
+        private String classify; 
         private String clientToken; 
         private String comments; 
         private Integer defaultInitDesktopCount; 
@@ -327,6 +401,7 @@ public class CreateDesktopGroupRequest extends Request {
         private String directoryId; 
         private java.util.List < String > endUserIds; 
         private Long keepDuration; 
+        private Long loadPolicy; 
         private Integer maxDesktopsCount; 
         private Integer minDesktopsCount; 
         private String officeSiteId; 
@@ -337,38 +412,55 @@ public class CreateDesktopGroupRequest extends Request {
         private String regionId; 
         private Long resetType; 
         private String scaleStrategyId; 
+        private Boolean volumeEncryptionEnabled; 
+        private String volumeEncryptionKey; 
         private String vpcId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateDesktopGroupRequest response) {
-            super(response);
-            this.allowAutoSetup = response.allowAutoSetup;
-            this.allowBufferCount = response.allowBufferCount;
-            this.autoPay = response.autoPay;
-            this.bundleId = response.bundleId;
-            this.chargeType = response.chargeType;
-            this.clientToken = response.clientToken;
-            this.comments = response.comments;
-            this.defaultInitDesktopCount = response.defaultInitDesktopCount;
-            this.desktopGroupName = response.desktopGroupName;
-            this.directoryId = response.directoryId;
-            this.endUserIds = response.endUserIds;
-            this.keepDuration = response.keepDuration;
-            this.maxDesktopsCount = response.maxDesktopsCount;
-            this.minDesktopsCount = response.minDesktopsCount;
-            this.officeSiteId = response.officeSiteId;
-            this.ownType = response.ownType;
-            this.period = response.period;
-            this.periodUnit = response.periodUnit;
-            this.policyGroupId = response.policyGroupId;
-            this.regionId = response.regionId;
-            this.resetType = response.resetType;
-            this.scaleStrategyId = response.scaleStrategyId;
-            this.vpcId = response.vpcId;
+        private Builder(CreateDesktopGroupRequest request) {
+            super(request);
+            this.allClassifyUsers = request.allClassifyUsers;
+            this.allowAutoSetup = request.allowAutoSetup;
+            this.allowBufferCount = request.allowBufferCount;
+            this.autoPay = request.autoPay;
+            this.bindAmount = request.bindAmount;
+            this.bundleId = request.bundleId;
+            this.chargeType = request.chargeType;
+            this.classify = request.classify;
+            this.clientToken = request.clientToken;
+            this.comments = request.comments;
+            this.defaultInitDesktopCount = request.defaultInitDesktopCount;
+            this.desktopGroupName = request.desktopGroupName;
+            this.directoryId = request.directoryId;
+            this.endUserIds = request.endUserIds;
+            this.keepDuration = request.keepDuration;
+            this.loadPolicy = request.loadPolicy;
+            this.maxDesktopsCount = request.maxDesktopsCount;
+            this.minDesktopsCount = request.minDesktopsCount;
+            this.officeSiteId = request.officeSiteId;
+            this.ownType = request.ownType;
+            this.period = request.period;
+            this.periodUnit = request.periodUnit;
+            this.policyGroupId = request.policyGroupId;
+            this.regionId = request.regionId;
+            this.resetType = request.resetType;
+            this.scaleStrategyId = request.scaleStrategyId;
+            this.volumeEncryptionEnabled = request.volumeEncryptionEnabled;
+            this.volumeEncryptionKey = request.volumeEncryptionKey;
+            this.vpcId = request.vpcId;
         } 
+
+        /**
+         * AllClassifyUsers.
+         */
+        public Builder allClassifyUsers(Boolean allClassifyUsers) {
+            this.putQueryParameter("AllClassifyUsers", allClassifyUsers);
+            this.allClassifyUsers = allClassifyUsers;
+            return this;
+        }
 
         /**
          * AllowAutoSetup.
@@ -398,6 +490,15 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
+         * BindAmount.
+         */
+        public Builder bindAmount(Long bindAmount) {
+            this.putQueryParameter("BindAmount", bindAmount);
+            this.bindAmount = bindAmount;
+            return this;
+        }
+
+        /**
          * BundleId.
          */
         public Builder bundleId(String bundleId) {
@@ -412,6 +513,15 @@ public class CreateDesktopGroupRequest extends Request {
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
             this.chargeType = chargeType;
+            return this;
+        }
+
+        /**
+         * Classify.
+         */
+        public Builder classify(String classify) {
+            this.putQueryParameter("Classify", classify);
+            this.classify = classify;
             return this;
         }
 
@@ -475,6 +585,15 @@ public class CreateDesktopGroupRequest extends Request {
         public Builder keepDuration(Long keepDuration) {
             this.putQueryParameter("KeepDuration", keepDuration);
             this.keepDuration = keepDuration;
+            return this;
+        }
+
+        /**
+         * LoadPolicy.
+         */
+        public Builder loadPolicy(Long loadPolicy) {
+            this.putQueryParameter("LoadPolicy", loadPolicy);
+            this.loadPolicy = loadPolicy;
             return this;
         }
 
@@ -565,6 +684,24 @@ public class CreateDesktopGroupRequest extends Request {
         public Builder scaleStrategyId(String scaleStrategyId) {
             this.putQueryParameter("ScaleStrategyId", scaleStrategyId);
             this.scaleStrategyId = scaleStrategyId;
+            return this;
+        }
+
+        /**
+         * VolumeEncryptionEnabled.
+         */
+        public Builder volumeEncryptionEnabled(Boolean volumeEncryptionEnabled) {
+            this.putQueryParameter("VolumeEncryptionEnabled", volumeEncryptionEnabled);
+            this.volumeEncryptionEnabled = volumeEncryptionEnabled;
+            return this;
+        }
+
+        /**
+         * VolumeEncryptionKey.
+         */
+        public Builder volumeEncryptionKey(String volumeEncryptionKey) {
+            this.putQueryParameter("VolumeEncryptionKey", volumeEncryptionKey);
+            this.volumeEncryptionKey = volumeEncryptionKey;
             return this;
         }
 

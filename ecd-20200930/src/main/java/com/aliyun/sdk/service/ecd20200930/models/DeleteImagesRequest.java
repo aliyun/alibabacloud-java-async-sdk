@@ -63,10 +63,10 @@ public class DeleteImagesRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteImagesRequest response) {
-            super(response);
-            this.imageId = response.imageId;
-            this.regionId = response.regionId;
+        private Builder(DeleteImagesRequest request) {
+            super(request);
+            this.imageId = request.imageId;
+            this.regionId = request.regionId;
         } 
 
         /**

@@ -63,10 +63,10 @@ public class DeleteNASFileSystemsRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteNASFileSystemsRequest response) {
-            super(response);
-            this.fileSystemId = response.fileSystemId;
-            this.regionId = response.regionId;
+        private Builder(DeleteNASFileSystemsRequest request) {
+            super(request);
+            this.fileSystemId = request.fileSystemId;
+            this.regionId = request.regionId;
         } 
 
         /**

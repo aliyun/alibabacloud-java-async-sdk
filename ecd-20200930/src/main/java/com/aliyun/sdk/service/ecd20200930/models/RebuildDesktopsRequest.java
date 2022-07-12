@@ -76,11 +76,11 @@ public class RebuildDesktopsRequest extends Request {
             super();
         } 
 
-        private Builder(RebuildDesktopsRequest response) {
-            super(response);
-            this.desktopId = response.desktopId;
-            this.imageId = response.imageId;
-            this.regionId = response.regionId;
+        private Builder(RebuildDesktopsRequest request) {
+            super(request);
+            this.desktopId = request.desktopId;
+            this.imageId = request.imageId;
+            this.regionId = request.regionId;
         } 
 
         /**

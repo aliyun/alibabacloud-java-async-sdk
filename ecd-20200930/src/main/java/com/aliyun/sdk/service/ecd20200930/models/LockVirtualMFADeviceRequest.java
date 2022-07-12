@@ -63,10 +63,10 @@ public class LockVirtualMFADeviceRequest extends Request {
             super();
         } 
 
-        private Builder(LockVirtualMFADeviceRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.serialNumber = response.serialNumber;
+        private Builder(LockVirtualMFADeviceRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.serialNumber = request.serialNumber;
         } 
 
         /**

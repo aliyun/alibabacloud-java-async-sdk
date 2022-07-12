@@ -63,10 +63,10 @@ public class DeletePolicyGroupsRequest extends Request {
             super();
         } 
 
-        private Builder(DeletePolicyGroupsRequest response) {
-            super(response);
-            this.policyGroupId = response.policyGroupId;
-            this.regionId = response.regionId;
+        private Builder(DeletePolicyGroupsRequest request) {
+            super(request);
+            this.policyGroupId = request.policyGroupId;
+            this.regionId = request.regionId;
         } 
 
         /**

@@ -154,17 +154,17 @@ public class DescribeInvocationsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeInvocationsRequest response) {
-            super(response);
-            this.commandType = response.commandType;
-            this.contentEncoding = response.contentEncoding;
-            this.desktopId = response.desktopId;
-            this.includeOutput = response.includeOutput;
-            this.invokeId = response.invokeId;
-            this.invokeStatus = response.invokeStatus;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.regionId = response.regionId;
+        private Builder(DescribeInvocationsRequest request) {
+            super(request);
+            this.commandType = request.commandType;
+            this.contentEncoding = request.contentEncoding;
+            this.desktopId = request.desktopId;
+            this.includeOutput = request.includeOutput;
+            this.invokeId = request.invokeId;
+            this.invokeStatus = request.invokeStatus;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.regionId = request.regionId;
         } 
 
         /**

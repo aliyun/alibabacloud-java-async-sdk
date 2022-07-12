@@ -33,6 +33,7 @@ public class ModifyOperateVulRequest extends Request {
 
     @Query
     @NameInMap("VulInfo")
+    @Validation(required = true)
     private java.util.List < VulInfo> vulInfo;
 
     private ModifyOperateVulRequest(Builder builder) {
@@ -103,13 +104,13 @@ public class ModifyOperateVulRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyOperateVulRequest response) {
-            super(response);
-            this.operateType = response.operateType;
-            this.reason = response.reason;
-            this.regionId = response.regionId;
-            this.type = response.type;
-            this.vulInfo = response.vulInfo;
+        private Builder(ModifyOperateVulRequest request) {
+            super(request);
+            this.operateType = request.operateType;
+            this.reason = request.reason;
+            this.regionId = request.regionId;
+            this.type = request.type;
+            this.vulInfo = request.vulInfo;
         } 
 
         /**

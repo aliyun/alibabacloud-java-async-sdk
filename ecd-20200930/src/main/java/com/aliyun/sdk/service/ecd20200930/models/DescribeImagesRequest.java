@@ -17,6 +17,10 @@ public class DescribeImagesRequest extends Request {
     private String desktopInstanceType;
 
     @Query
+    @NameInMap("FotaChannel")
+    private String fotaChannel;
+
+    @Query
     @NameInMap("GpuCategory")
     private Boolean gpuCategory;
 
@@ -65,6 +69,7 @@ public class DescribeImagesRequest extends Request {
     private DescribeImagesRequest(Builder builder) {
         super(builder);
         this.desktopInstanceType = builder.desktopInstanceType;
+        this.fotaChannel = builder.fotaChannel;
         this.gpuCategory = builder.gpuCategory;
         this.gpuDriverVersion = builder.gpuDriverVersion;
         this.imageId = builder.imageId;
@@ -96,6 +101,13 @@ public class DescribeImagesRequest extends Request {
      */
     public String getDesktopInstanceType() {
         return this.desktopInstanceType;
+    }
+
+    /**
+     * @return fotaChannel
+     */
+    public String getFotaChannel() {
+        return this.fotaChannel;
     }
 
     /**
@@ -177,6 +189,7 @@ public class DescribeImagesRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeImagesRequest, Builder> {
         private String desktopInstanceType; 
+        private String fotaChannel; 
         private Boolean gpuCategory; 
         private String gpuDriverVersion; 
         private java.util.List < String > imageId; 
@@ -193,20 +206,21 @@ public class DescribeImagesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeImagesRequest response) {
-            super(response);
-            this.desktopInstanceType = response.desktopInstanceType;
-            this.gpuCategory = response.gpuCategory;
-            this.gpuDriverVersion = response.gpuDriverVersion;
-            this.imageId = response.imageId;
-            this.imageStatus = response.imageStatus;
-            this.imageType = response.imageType;
-            this.languageType = response.languageType;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.osType = response.osType;
-            this.protocolType = response.protocolType;
-            this.regionId = response.regionId;
+        private Builder(DescribeImagesRequest request) {
+            super(request);
+            this.desktopInstanceType = request.desktopInstanceType;
+            this.fotaChannel = request.fotaChannel;
+            this.gpuCategory = request.gpuCategory;
+            this.gpuDriverVersion = request.gpuDriverVersion;
+            this.imageId = request.imageId;
+            this.imageStatus = request.imageStatus;
+            this.imageType = request.imageType;
+            this.languageType = request.languageType;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.osType = request.osType;
+            this.protocolType = request.protocolType;
+            this.regionId = request.regionId;
         } 
 
         /**
@@ -215,6 +229,15 @@ public class DescribeImagesRequest extends Request {
         public Builder desktopInstanceType(String desktopInstanceType) {
             this.putQueryParameter("DesktopInstanceType", desktopInstanceType);
             this.desktopInstanceType = desktopInstanceType;
+            return this;
+        }
+
+        /**
+         * FotaChannel.
+         */
+        public Builder fotaChannel(String fotaChannel) {
+            this.putQueryParameter("FotaChannel", fotaChannel);
+            this.fotaChannel = fotaChannel;
             return this;
         }
 

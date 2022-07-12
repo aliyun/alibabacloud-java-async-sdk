@@ -76,11 +76,11 @@ public class StopDesktopsRequest extends Request {
             super();
         } 
 
-        private Builder(StopDesktopsRequest response) {
-            super(response);
-            this.desktopId = response.desktopId;
-            this.regionId = response.regionId;
-            this.stoppedMode = response.stoppedMode;
+        private Builder(StopDesktopsRequest request) {
+            super(request);
+            this.desktopId = request.desktopId;
+            this.regionId = request.regionId;
+            this.stoppedMode = request.stoppedMode;
         } 
 
         /**

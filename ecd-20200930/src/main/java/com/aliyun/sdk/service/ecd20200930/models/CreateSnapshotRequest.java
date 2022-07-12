@@ -104,13 +104,13 @@ public class CreateSnapshotRequest extends Request {
             super();
         } 
 
-        private Builder(CreateSnapshotRequest response) {
-            super(response);
-            this.description = response.description;
-            this.desktopId = response.desktopId;
-            this.regionId = response.regionId;
-            this.snapshotName = response.snapshotName;
-            this.sourceDiskType = response.sourceDiskType;
+        private Builder(CreateSnapshotRequest request) {
+            super(request);
+            this.description = request.description;
+            this.desktopId = request.desktopId;
+            this.regionId = request.regionId;
+            this.snapshotName = request.snapshotName;
+            this.sourceDiskType = request.sourceDiskType;
         } 
 
         /**

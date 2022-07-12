@@ -92,6 +92,9 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
     } 
 
     public static class DesktopGroups extends TeaModel {
+        @NameInMap("BindAmount")
+        private Long bindAmount;
+
         @NameInMap("Comments")
         private String comments;
 
@@ -116,12 +119,6 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         @NameInMap("DesktopGroupName")
         private String desktopGroupName;
 
-        @NameInMap("DirectoryId")
-        private String directoryId;
-
-        @NameInMap("DirectoryType")
-        private String directoryType;
-
         @NameInMap("EndUserCount")
         private Integer endUserCount;
 
@@ -134,8 +131,14 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         @NameInMap("GpuSpec")
         private String gpuSpec;
 
+        @NameInMap("ImageId")
+        private String imageId;
+
         @NameInMap("KeepDuration")
         private Long keepDuration;
+
+        @NameInMap("LoadPolicy")
+        private Long loadPolicy;
 
         @NameInMap("MaxDesktopsCount")
         private Integer maxDesktopsCount;
@@ -161,6 +164,9 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         @NameInMap("OwnBundleName")
         private String ownBundleName;
 
+        @NameInMap("OwnType")
+        private Long ownType;
+
         @NameInMap("PayType")
         private String payType;
 
@@ -182,7 +188,14 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         @NameInMap("SystemDiskSize")
         private Integer systemDiskSize;
 
+        @NameInMap("VolumeEncryptionEnabled")
+        private Boolean volumeEncryptionEnabled;
+
+        @NameInMap("VolumeEncryptionKey")
+        private String volumeEncryptionKey;
+
         private DesktopGroups(Builder builder) {
+            this.bindAmount = builder.bindAmount;
             this.comments = builder.comments;
             this.cpu = builder.cpu;
             this.createTime = builder.createTime;
@@ -191,13 +204,13 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             this.dataDiskSize = builder.dataDiskSize;
             this.desktopGroupId = builder.desktopGroupId;
             this.desktopGroupName = builder.desktopGroupName;
-            this.directoryId = builder.directoryId;
-            this.directoryType = builder.directoryType;
             this.endUserCount = builder.endUserCount;
             this.expiredTime = builder.expiredTime;
             this.gpuCount = builder.gpuCount;
             this.gpuSpec = builder.gpuSpec;
+            this.imageId = builder.imageId;
             this.keepDuration = builder.keepDuration;
+            this.loadPolicy = builder.loadPolicy;
             this.maxDesktopsCount = builder.maxDesktopsCount;
             this.memory = builder.memory;
             this.minDesktopsCount = builder.minDesktopsCount;
@@ -206,6 +219,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             this.officeSiteType = builder.officeSiteType;
             this.ownBundleId = builder.ownBundleId;
             this.ownBundleName = builder.ownBundleName;
+            this.ownType = builder.ownType;
             this.payType = builder.payType;
             this.policyGroupId = builder.policyGroupId;
             this.policyGroupName = builder.policyGroupName;
@@ -213,6 +227,8 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             this.status = builder.status;
             this.systemDiskCategory = builder.systemDiskCategory;
             this.systemDiskSize = builder.systemDiskSize;
+            this.volumeEncryptionEnabled = builder.volumeEncryptionEnabled;
+            this.volumeEncryptionKey = builder.volumeEncryptionKey;
         }
 
         public static Builder builder() {
@@ -221,6 +237,13 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
 
         public static DesktopGroups create() {
             return builder().build();
+        }
+
+        /**
+         * @return bindAmount
+         */
+        public Long getBindAmount() {
+            return this.bindAmount;
         }
 
         /**
@@ -280,20 +303,6 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * @return directoryId
-         */
-        public String getDirectoryId() {
-            return this.directoryId;
-        }
-
-        /**
-         * @return directoryType
-         */
-        public String getDirectoryType() {
-            return this.directoryType;
-        }
-
-        /**
          * @return endUserCount
          */
         public Integer getEndUserCount() {
@@ -322,10 +331,24 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return imageId
+         */
+        public String getImageId() {
+            return this.imageId;
+        }
+
+        /**
          * @return keepDuration
          */
         public Long getKeepDuration() {
             return this.keepDuration;
+        }
+
+        /**
+         * @return loadPolicy
+         */
+        public Long getLoadPolicy() {
+            return this.loadPolicy;
         }
 
         /**
@@ -385,6 +408,13 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return ownType
+         */
+        public Long getOwnType() {
+            return this.ownType;
+        }
+
+        /**
          * @return payType
          */
         public String getPayType() {
@@ -433,7 +463,22 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             return this.systemDiskSize;
         }
 
+        /**
+         * @return volumeEncryptionEnabled
+         */
+        public Boolean getVolumeEncryptionEnabled() {
+            return this.volumeEncryptionEnabled;
+        }
+
+        /**
+         * @return volumeEncryptionKey
+         */
+        public String getVolumeEncryptionKey() {
+            return this.volumeEncryptionKey;
+        }
+
         public static final class Builder {
+            private Long bindAmount; 
             private String comments; 
             private Integer cpu; 
             private String createTime; 
@@ -442,13 +487,13 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             private String dataDiskSize; 
             private String desktopGroupId; 
             private String desktopGroupName; 
-            private String directoryId; 
-            private String directoryType; 
             private Integer endUserCount; 
             private String expiredTime; 
             private Float gpuCount; 
             private String gpuSpec; 
+            private String imageId; 
             private Long keepDuration; 
+            private Long loadPolicy; 
             private Integer maxDesktopsCount; 
             private Long memory; 
             private Integer minDesktopsCount; 
@@ -457,6 +502,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             private String officeSiteType; 
             private String ownBundleId; 
             private String ownBundleName; 
+            private Long ownType; 
             private String payType; 
             private String policyGroupId; 
             private String policyGroupName; 
@@ -464,6 +510,16 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             private Integer status; 
             private String systemDiskCategory; 
             private Integer systemDiskSize; 
+            private Boolean volumeEncryptionEnabled; 
+            private String volumeEncryptionKey; 
+
+            /**
+             * BindAmount.
+             */
+            public Builder bindAmount(Long bindAmount) {
+                this.bindAmount = bindAmount;
+                return this;
+            }
 
             /**
              * Comments.
@@ -530,22 +586,6 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * DirectoryId.
-             */
-            public Builder directoryId(String directoryId) {
-                this.directoryId = directoryId;
-                return this;
-            }
-
-            /**
-             * DirectoryType.
-             */
-            public Builder directoryType(String directoryType) {
-                this.directoryType = directoryType;
-                return this;
-            }
-
-            /**
              * EndUserCount.
              */
             public Builder endUserCount(Integer endUserCount) {
@@ -578,10 +618,26 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
+             * ImageId.
+             */
+            public Builder imageId(String imageId) {
+                this.imageId = imageId;
+                return this;
+            }
+
+            /**
              * KeepDuration.
              */
             public Builder keepDuration(Long keepDuration) {
                 this.keepDuration = keepDuration;
+                return this;
+            }
+
+            /**
+             * LoadPolicy.
+             */
+            public Builder loadPolicy(Long loadPolicy) {
+                this.loadPolicy = loadPolicy;
                 return this;
             }
 
@@ -650,6 +706,14 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
+             * OwnType.
+             */
+            public Builder ownType(Long ownType) {
+                this.ownType = ownType;
+                return this;
+            }
+
+            /**
              * PayType.
              */
             public Builder payType(String payType) {
@@ -702,6 +766,22 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
              */
             public Builder systemDiskSize(Integer systemDiskSize) {
                 this.systemDiskSize = systemDiskSize;
+                return this;
+            }
+
+            /**
+             * VolumeEncryptionEnabled.
+             */
+            public Builder volumeEncryptionEnabled(Boolean volumeEncryptionEnabled) {
+                this.volumeEncryptionEnabled = volumeEncryptionEnabled;
+                return this;
+            }
+
+            /**
+             * VolumeEncryptionKey.
+             */
+            public Builder volumeEncryptionKey(String volumeEncryptionKey) {
+                this.volumeEncryptionKey = volumeEncryptionKey;
                 return this;
             }
 

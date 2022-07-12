@@ -63,10 +63,10 @@ public class ResetSnapshotRequest extends Request {
             super();
         } 
 
-        private Builder(ResetSnapshotRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.snapshotId = response.snapshotId;
+        private Builder(ResetSnapshotRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.snapshotId = request.snapshotId;
         } 
 
         /**

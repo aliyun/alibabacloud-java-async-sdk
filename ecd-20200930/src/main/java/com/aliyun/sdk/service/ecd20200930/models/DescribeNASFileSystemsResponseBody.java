@@ -101,6 +101,9 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         @NameInMap("Description")
         private String description;
 
+        @NameInMap("EncryptionEnabled")
+        private Boolean encryptionEnabled;
+
         @NameInMap("FileSystemId")
         private String fileSystemId;
 
@@ -144,6 +147,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             this.capacity = builder.capacity;
             this.createTime = builder.createTime;
             this.description = builder.description;
+            this.encryptionEnabled = builder.encryptionEnabled;
             this.fileSystemId = builder.fileSystemId;
             this.fileSystemName = builder.fileSystemName;
             this.fileSystemStatus = builder.fileSystemStatus;
@@ -186,6 +190,13 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return encryptionEnabled
+         */
+        public Boolean getEncryptionEnabled() {
+            return this.encryptionEnabled;
         }
 
         /**
@@ -283,6 +294,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             private Long capacity; 
             private String createTime; 
             private String description; 
+            private Boolean encryptionEnabled; 
             private String fileSystemId; 
             private String fileSystemName; 
             private String fileSystemStatus; 
@@ -318,6 +330,14 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * EncryptionEnabled.
+             */
+            public Builder encryptionEnabled(Boolean encryptionEnabled) {
+                this.encryptionEnabled = encryptionEnabled;
                 return this;
             }
 

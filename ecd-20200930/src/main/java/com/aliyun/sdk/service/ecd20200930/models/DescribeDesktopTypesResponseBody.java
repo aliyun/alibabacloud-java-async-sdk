@@ -71,91 +71,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
 
     } 
 
-    public static class AllowDiskSize extends TeaModel {
-        @NameInMap("DataDiskSize")
-        private Integer dataDiskSize;
-
-        @NameInMap("DefaultDataDiskSize")
-        private Integer defaultDataDiskSize;
-
-        @NameInMap("SystemDiskSize")
-        private Integer systemDiskSize;
-
-        private AllowDiskSize(Builder builder) {
-            this.dataDiskSize = builder.dataDiskSize;
-            this.defaultDataDiskSize = builder.defaultDataDiskSize;
-            this.systemDiskSize = builder.systemDiskSize;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static AllowDiskSize create() {
-            return builder().build();
-        }
-
-        /**
-         * @return dataDiskSize
-         */
-        public Integer getDataDiskSize() {
-            return this.dataDiskSize;
-        }
-
-        /**
-         * @return defaultDataDiskSize
-         */
-        public Integer getDefaultDataDiskSize() {
-            return this.defaultDataDiskSize;
-        }
-
-        /**
-         * @return systemDiskSize
-         */
-        public Integer getSystemDiskSize() {
-            return this.systemDiskSize;
-        }
-
-        public static final class Builder {
-            private Integer dataDiskSize; 
-            private Integer defaultDataDiskSize; 
-            private Integer systemDiskSize; 
-
-            /**
-             * DataDiskSize.
-             */
-            public Builder dataDiskSize(Integer dataDiskSize) {
-                this.dataDiskSize = dataDiskSize;
-                return this;
-            }
-
-            /**
-             * DefaultDataDiskSize.
-             */
-            public Builder defaultDataDiskSize(Integer defaultDataDiskSize) {
-                this.defaultDataDiskSize = defaultDataDiskSize;
-                return this;
-            }
-
-            /**
-             * SystemDiskSize.
-             */
-            public Builder systemDiskSize(Integer systemDiskSize) {
-                this.systemDiskSize = systemDiskSize;
-                return this;
-            }
-
-            public AllowDiskSize build() {
-                return new AllowDiskSize(this);
-            } 
-
-        } 
-
-    }
     public static class DesktopTypes extends TeaModel {
-        @NameInMap("AllowDiskSize")
-        private java.util.List < AllowDiskSize> allowDiskSize;
-
         @NameInMap("CpuCount")
         private String cpuCount;
 
@@ -184,7 +100,6 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         private String systemDiskSize;
 
         private DesktopTypes(Builder builder) {
-            this.allowDiskSize = builder.allowDiskSize;
             this.cpuCount = builder.cpuCount;
             this.dataDiskSize = builder.dataDiskSize;
             this.desktopTypeId = builder.desktopTypeId;
@@ -202,13 +117,6 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
 
         public static DesktopTypes create() {
             return builder().build();
-        }
-
-        /**
-         * @return allowDiskSize
-         */
-        public java.util.List < AllowDiskSize> getAllowDiskSize() {
-            return this.allowDiskSize;
         }
 
         /**
@@ -275,7 +183,6 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AllowDiskSize> allowDiskSize; 
             private String cpuCount; 
             private String dataDiskSize; 
             private String desktopTypeId; 
@@ -285,14 +192,6 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
             private String instanceTypeFamily; 
             private String memorySize; 
             private String systemDiskSize; 
-
-            /**
-             * AllowDiskSize.
-             */
-            public Builder allowDiskSize(java.util.List < AllowDiskSize> allowDiskSize) {
-                this.allowDiskSize = allowDiskSize;
-                return this;
-            }
 
             /**
              * CpuCount.

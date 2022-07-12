@@ -49,9 +49,9 @@ public class DescribeSuspEventOverviewRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeSuspEventOverviewRequest response) {
-            super(response);
-            this.regionId = response.regionId;
+        private Builder(DescribeSuspEventOverviewRequest request) {
+            super(request);
+            this.regionId = request.regionId;
         } 
 
         /**

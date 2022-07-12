@@ -75,11 +75,11 @@ public class StartVirusScanTaskRequest extends Request {
             super();
         } 
 
-        private Builder(StartVirusScanTaskRequest response) {
-            super(response);
-            this.desktopId = response.desktopId;
-            this.officeSiteId = response.officeSiteId;
-            this.regionId = response.regionId;
+        private Builder(StartVirusScanTaskRequest request) {
+            super(request);
+            this.desktopId = request.desktopId;
+            this.officeSiteId = request.officeSiteId;
+            this.regionId = request.regionId;
         } 
 
         /**

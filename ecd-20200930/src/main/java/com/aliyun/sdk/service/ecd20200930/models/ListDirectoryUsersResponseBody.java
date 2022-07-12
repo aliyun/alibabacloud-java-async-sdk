@@ -92,10 +92,14 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
     } 
 
     public static class Users extends TeaModel {
+        @NameInMap("DisplayName")
+        private String displayName;
+
         @NameInMap("EndUser")
         private String endUser;
 
         private Users(Builder builder) {
+            this.displayName = builder.displayName;
             this.endUser = builder.endUser;
         }
 
@@ -108,6 +112,13 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
         }
 
         /**
+         * @return displayName
+         */
+        public String getDisplayName() {
+            return this.displayName;
+        }
+
+        /**
          * @return endUser
          */
         public String getEndUser() {
@@ -115,7 +126,16 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String displayName; 
             private String endUser; 
+
+            /**
+             * DisplayName.
+             */
+            public Builder displayName(String displayName) {
+                this.displayName = displayName;
+                return this;
+            }
 
             /**
              * EndUser.

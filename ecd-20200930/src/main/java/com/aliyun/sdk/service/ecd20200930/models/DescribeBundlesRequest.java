@@ -33,6 +33,10 @@ public class DescribeBundlesRequest extends Request {
     private String desktopTypeFamily;
 
     @Query
+    @NameInMap("FotaChannel")
+    private String fotaChannel;
+
+    @Query
     @NameInMap("FromDesktopGroup")
     private Boolean fromDesktopGroup;
 
@@ -62,6 +66,14 @@ public class DescribeBundlesRequest extends Request {
     @Validation(required = true)
     private String regionId;
 
+    @Query
+    @NameInMap("SupportMultiSession")
+    private Boolean supportMultiSession;
+
+    @Query
+    @NameInMap("VolumeEncryptionEnabled")
+    private Boolean volumeEncryptionEnabled;
+
     private DescribeBundlesRequest(Builder builder) {
         super(builder);
         this.bundleId = builder.bundleId;
@@ -69,6 +81,7 @@ public class DescribeBundlesRequest extends Request {
         this.checkStock = builder.checkStock;
         this.cpuCount = builder.cpuCount;
         this.desktopTypeFamily = builder.desktopTypeFamily;
+        this.fotaChannel = builder.fotaChannel;
         this.fromDesktopGroup = builder.fromDesktopGroup;
         this.gpuCount = builder.gpuCount;
         this.maxResults = builder.maxResults;
@@ -76,6 +89,8 @@ public class DescribeBundlesRequest extends Request {
         this.nextToken = builder.nextToken;
         this.protocolType = builder.protocolType;
         this.regionId = builder.regionId;
+        this.supportMultiSession = builder.supportMultiSession;
+        this.volumeEncryptionEnabled = builder.volumeEncryptionEnabled;
     }
 
     public static Builder builder() {
@@ -127,6 +142,13 @@ public class DescribeBundlesRequest extends Request {
     }
 
     /**
+     * @return fotaChannel
+     */
+    public String getFotaChannel() {
+        return this.fotaChannel;
+    }
+
+    /**
      * @return fromDesktopGroup
      */
     public Boolean getFromDesktopGroup() {
@@ -175,12 +197,27 @@ public class DescribeBundlesRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return supportMultiSession
+     */
+    public Boolean getSupportMultiSession() {
+        return this.supportMultiSession;
+    }
+
+    /**
+     * @return volumeEncryptionEnabled
+     */
+    public Boolean getVolumeEncryptionEnabled() {
+        return this.volumeEncryptionEnabled;
+    }
+
     public static final class Builder extends Request.Builder<DescribeBundlesRequest, Builder> {
         private java.util.List < String > bundleId; 
         private String bundleType; 
         private Boolean checkStock; 
         private Integer cpuCount; 
         private String desktopTypeFamily; 
+        private String fotaChannel; 
         private Boolean fromDesktopGroup; 
         private Float gpuCount; 
         private Integer maxResults; 
@@ -188,25 +225,30 @@ public class DescribeBundlesRequest extends Request {
         private String nextToken; 
         private String protocolType; 
         private String regionId; 
+        private Boolean supportMultiSession; 
+        private Boolean volumeEncryptionEnabled; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeBundlesRequest response) {
-            super(response);
-            this.bundleId = response.bundleId;
-            this.bundleType = response.bundleType;
-            this.checkStock = response.checkStock;
-            this.cpuCount = response.cpuCount;
-            this.desktopTypeFamily = response.desktopTypeFamily;
-            this.fromDesktopGroup = response.fromDesktopGroup;
-            this.gpuCount = response.gpuCount;
-            this.maxResults = response.maxResults;
-            this.memorySize = response.memorySize;
-            this.nextToken = response.nextToken;
-            this.protocolType = response.protocolType;
-            this.regionId = response.regionId;
+        private Builder(DescribeBundlesRequest request) {
+            super(request);
+            this.bundleId = request.bundleId;
+            this.bundleType = request.bundleType;
+            this.checkStock = request.checkStock;
+            this.cpuCount = request.cpuCount;
+            this.desktopTypeFamily = request.desktopTypeFamily;
+            this.fotaChannel = request.fotaChannel;
+            this.fromDesktopGroup = request.fromDesktopGroup;
+            this.gpuCount = request.gpuCount;
+            this.maxResults = request.maxResults;
+            this.memorySize = request.memorySize;
+            this.nextToken = request.nextToken;
+            this.protocolType = request.protocolType;
+            this.regionId = request.regionId;
+            this.supportMultiSession = request.supportMultiSession;
+            this.volumeEncryptionEnabled = request.volumeEncryptionEnabled;
         } 
 
         /**
@@ -251,6 +293,15 @@ public class DescribeBundlesRequest extends Request {
         public Builder desktopTypeFamily(String desktopTypeFamily) {
             this.putQueryParameter("DesktopTypeFamily", desktopTypeFamily);
             this.desktopTypeFamily = desktopTypeFamily;
+            return this;
+        }
+
+        /**
+         * FotaChannel.
+         */
+        public Builder fotaChannel(String fotaChannel) {
+            this.putQueryParameter("FotaChannel", fotaChannel);
+            this.fotaChannel = fotaChannel;
             return this;
         }
 
@@ -314,6 +365,24 @@ public class DescribeBundlesRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * SupportMultiSession.
+         */
+        public Builder supportMultiSession(Boolean supportMultiSession) {
+            this.putQueryParameter("SupportMultiSession", supportMultiSession);
+            this.supportMultiSession = supportMultiSession;
+            return this;
+        }
+
+        /**
+         * VolumeEncryptionEnabled.
+         */
+        public Builder volumeEncryptionEnabled(Boolean volumeEncryptionEnabled) {
+            this.putQueryParameter("VolumeEncryptionEnabled", volumeEncryptionEnabled);
+            this.volumeEncryptionEnabled = volumeEncryptionEnabled;
             return this;
         }
 

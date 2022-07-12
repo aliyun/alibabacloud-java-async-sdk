@@ -53,6 +53,10 @@ public class DescribeDesktopsRequest extends Request {
     private String groupId;
 
     @Query
+    @NameInMap("ManagementFlag")
+    private String managementFlag;
+
+    @Query
     @NameInMap("MaxResults")
     private Integer maxResults;
 
@@ -77,9 +81,17 @@ public class DescribeDesktopsRequest extends Request {
     private String protocolType;
 
     @Query
+    @NameInMap("QueryFotaUpdate")
+    private Boolean queryFotaUpdate;
+
+    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
+
+    @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
 
     @Query
     @NameInMap("UserName")
@@ -97,13 +109,16 @@ public class DescribeDesktopsRequest extends Request {
         this.expiredTime = builder.expiredTime;
         this.filterDesktopGroup = builder.filterDesktopGroup;
         this.groupId = builder.groupId;
+        this.managementFlag = builder.managementFlag;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.officeSiteId = builder.officeSiteId;
         this.officeSiteName = builder.officeSiteName;
         this.policyGroupId = builder.policyGroupId;
         this.protocolType = builder.protocolType;
+        this.queryFotaUpdate = builder.queryFotaUpdate;
         this.regionId = builder.regionId;
+        this.tag = builder.tag;
         this.userName = builder.userName;
     }
 
@@ -191,6 +206,13 @@ public class DescribeDesktopsRequest extends Request {
     }
 
     /**
+     * @return managementFlag
+     */
+    public String getManagementFlag() {
+        return this.managementFlag;
+    }
+
+    /**
      * @return maxResults
      */
     public Integer getMaxResults() {
@@ -233,10 +255,24 @@ public class DescribeDesktopsRequest extends Request {
     }
 
     /**
+     * @return queryFotaUpdate
+     */
+    public Boolean getQueryFotaUpdate() {
+        return this.queryFotaUpdate;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
     }
 
     /**
@@ -257,39 +293,45 @@ public class DescribeDesktopsRequest extends Request {
         private String expiredTime; 
         private Boolean filterDesktopGroup; 
         private String groupId; 
+        private String managementFlag; 
         private Integer maxResults; 
         private String nextToken; 
         private String officeSiteId; 
         private String officeSiteName; 
         private String policyGroupId; 
         private String protocolType; 
+        private Boolean queryFotaUpdate; 
         private String regionId; 
+        private java.util.List < Tag> tag; 
         private String userName; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeDesktopsRequest response) {
-            super(response);
-            this.chargeType = response.chargeType;
-            this.desktopId = response.desktopId;
-            this.desktopName = response.desktopName;
-            this.desktopStatus = response.desktopStatus;
-            this.directoryId = response.directoryId;
-            this.endUserId = response.endUserId;
-            this.excludedEndUserId = response.excludedEndUserId;
-            this.expiredTime = response.expiredTime;
-            this.filterDesktopGroup = response.filterDesktopGroup;
-            this.groupId = response.groupId;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.officeSiteId = response.officeSiteId;
-            this.officeSiteName = response.officeSiteName;
-            this.policyGroupId = response.policyGroupId;
-            this.protocolType = response.protocolType;
-            this.regionId = response.regionId;
-            this.userName = response.userName;
+        private Builder(DescribeDesktopsRequest request) {
+            super(request);
+            this.chargeType = request.chargeType;
+            this.desktopId = request.desktopId;
+            this.desktopName = request.desktopName;
+            this.desktopStatus = request.desktopStatus;
+            this.directoryId = request.directoryId;
+            this.endUserId = request.endUserId;
+            this.excludedEndUserId = request.excludedEndUserId;
+            this.expiredTime = request.expiredTime;
+            this.filterDesktopGroup = request.filterDesktopGroup;
+            this.groupId = request.groupId;
+            this.managementFlag = request.managementFlag;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.officeSiteId = request.officeSiteId;
+            this.officeSiteName = request.officeSiteName;
+            this.policyGroupId = request.policyGroupId;
+            this.protocolType = request.protocolType;
+            this.queryFotaUpdate = request.queryFotaUpdate;
+            this.regionId = request.regionId;
+            this.tag = request.tag;
+            this.userName = request.userName;
         } 
 
         /**
@@ -383,6 +425,15 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
+         * ManagementFlag.
+         */
+        public Builder managementFlag(String managementFlag) {
+            this.putQueryParameter("ManagementFlag", managementFlag);
+            this.managementFlag = managementFlag;
+            return this;
+        }
+
+        /**
          * MaxResults.
          */
         public Builder maxResults(Integer maxResults) {
@@ -437,11 +488,29 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
+         * QueryFotaUpdate.
+         */
+        public Builder queryFotaUpdate(Boolean queryFotaUpdate) {
+            this.putQueryParameter("QueryFotaUpdate", queryFotaUpdate);
+            this.queryFotaUpdate = queryFotaUpdate;
+            return this;
+        }
+
+        /**
          * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
             return this;
         }
 
@@ -461,4 +530,65 @@ public class DescribeDesktopsRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

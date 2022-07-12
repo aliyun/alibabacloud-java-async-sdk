@@ -170,18 +170,18 @@ public class CreateBundleRequest extends Request {
             super();
         } 
 
-        private Builder(CreateBundleRequest response) {
-            super(response);
-            this.bundleName = response.bundleName;
-            this.description = response.description;
-            this.desktopType = response.desktopType;
-            this.imageId = response.imageId;
-            this.language = response.language;
-            this.regionId = response.regionId;
-            this.rootDiskPerformanceLevel = response.rootDiskPerformanceLevel;
-            this.rootDiskSizeGib = response.rootDiskSizeGib;
-            this.userDiskPerformanceLevel = response.userDiskPerformanceLevel;
-            this.userDiskSizeGib = response.userDiskSizeGib;
+        private Builder(CreateBundleRequest request) {
+            super(request);
+            this.bundleName = request.bundleName;
+            this.description = request.description;
+            this.desktopType = request.desktopType;
+            this.imageId = request.imageId;
+            this.language = request.language;
+            this.regionId = request.regionId;
+            this.rootDiskPerformanceLevel = request.rootDiskPerformanceLevel;
+            this.rootDiskSizeGib = request.rootDiskSizeGib;
+            this.userDiskPerformanceLevel = request.userDiskPerformanceLevel;
+            this.userDiskSizeGib = request.userDiskSizeGib;
         } 
 
         /**

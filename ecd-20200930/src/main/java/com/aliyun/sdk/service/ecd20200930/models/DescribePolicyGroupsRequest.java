@@ -89,12 +89,12 @@ public class DescribePolicyGroupsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribePolicyGroupsRequest response) {
-            super(response);
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.policyGroupId = response.policyGroupId;
-            this.regionId = response.regionId;
+        private Builder(DescribePolicyGroupsRequest request) {
+            super(request);
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.policyGroupId = request.policyGroupId;
+            this.regionId = request.regionId;
         } 
 
         /**

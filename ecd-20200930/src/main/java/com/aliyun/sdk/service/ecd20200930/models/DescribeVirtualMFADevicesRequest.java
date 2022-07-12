@@ -13,10 +13,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeVirtualMFADevicesRequest extends Request {
     @Query
-    @NameInMap("DirectoryId")
-    private String directoryId;
-
-    @Query
     @NameInMap("EndUserId")
     private java.util.List < String > endUserId;
 
@@ -40,7 +36,6 @@ public class DescribeVirtualMFADevicesRequest extends Request {
 
     private DescribeVirtualMFADevicesRequest(Builder builder) {
         super(builder);
-        this.directoryId = builder.directoryId;
         this.endUserId = builder.endUserId;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
@@ -59,13 +54,6 @@ public class DescribeVirtualMFADevicesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return directoryId
-     */
-    public String getDirectoryId() {
-        return this.directoryId;
     }
 
     /**
@@ -104,7 +92,6 @@ public class DescribeVirtualMFADevicesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeVirtualMFADevicesRequest, Builder> {
-        private String directoryId; 
         private java.util.List < String > endUserId; 
         private Integer maxResults; 
         private String nextToken; 
@@ -115,24 +102,14 @@ public class DescribeVirtualMFADevicesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeVirtualMFADevicesRequest response) {
-            super(response);
-            this.directoryId = response.directoryId;
-            this.endUserId = response.endUserId;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.officeSiteId = response.officeSiteId;
-            this.regionId = response.regionId;
+        private Builder(DescribeVirtualMFADevicesRequest request) {
+            super(request);
+            this.endUserId = request.endUserId;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.officeSiteId = request.officeSiteId;
+            this.regionId = request.regionId;
         } 
-
-        /**
-         * DirectoryId.
-         */
-        public Builder directoryId(String directoryId) {
-            this.putQueryParameter("DirectoryId", directoryId);
-            this.directoryId = directoryId;
-            return this;
-        }
 
         /**
          * EndUserId.

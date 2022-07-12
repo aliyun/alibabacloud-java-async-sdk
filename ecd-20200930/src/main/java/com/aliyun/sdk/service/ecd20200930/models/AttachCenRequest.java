@@ -103,13 +103,13 @@ public class AttachCenRequest extends Request {
             super();
         } 
 
-        private Builder(AttachCenRequest response) {
-            super(response);
-            this.cenId = response.cenId;
-            this.cenOwnerId = response.cenOwnerId;
-            this.officeSiteId = response.officeSiteId;
-            this.regionId = response.regionId;
-            this.verifyCode = response.verifyCode;
+        private Builder(AttachCenRequest request) {
+            super(request);
+            this.cenId = request.cenId;
+            this.cenOwnerId = request.cenOwnerId;
+            this.officeSiteId = request.officeSiteId;
+            this.regionId = request.regionId;
+            this.verifyCode = request.verifyCode;
         } 
 
         /**

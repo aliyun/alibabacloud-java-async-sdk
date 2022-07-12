@@ -103,13 +103,13 @@ public class VerifyCenRequest extends Request {
             super();
         } 
 
-        private Builder(VerifyCenRequest response) {
-            super(response);
-            this.cenId = response.cenId;
-            this.cenOwnerId = response.cenOwnerId;
-            this.cidrBlock = response.cidrBlock;
-            this.regionId = response.regionId;
-            this.verifyCode = response.verifyCode;
+        private Builder(VerifyCenRequest request) {
+            super(request);
+            this.cenId = request.cenId;
+            this.cenOwnerId = request.cenOwnerId;
+            this.cidrBlock = request.cidrBlock;
+            this.regionId = request.regionId;
+            this.verifyCode = request.verifyCode;
         } 
 
         /**

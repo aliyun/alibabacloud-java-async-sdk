@@ -115,14 +115,14 @@ public class ModifyBundleRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyBundleRequest response) {
-            super(response);
-            this.bundleId = response.bundleId;
-            this.bundleName = response.bundleName;
-            this.description = response.description;
-            this.imageId = response.imageId;
-            this.language = response.language;
-            this.regionId = response.regionId;
+        private Builder(ModifyBundleRequest request) {
+            super(request);
+            this.bundleId = request.bundleId;
+            this.bundleName = request.bundleName;
+            this.description = request.description;
+            this.imageId = request.imageId;
+            this.language = request.language;
+            this.regionId = request.regionId;
         } 
 
         /**

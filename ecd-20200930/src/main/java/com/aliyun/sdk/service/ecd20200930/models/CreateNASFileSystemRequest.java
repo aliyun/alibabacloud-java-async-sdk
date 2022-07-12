@@ -17,6 +17,10 @@ public class CreateNASFileSystemRequest extends Request {
     private String description;
 
     @Query
+    @NameInMap("EncryptType")
+    private String encryptType;
+
+    @Query
     @NameInMap("Name")
     private String name;
 
@@ -37,6 +41,7 @@ public class CreateNASFileSystemRequest extends Request {
     private CreateNASFileSystemRequest(Builder builder) {
         super(builder);
         this.description = builder.description;
+        this.encryptType = builder.encryptType;
         this.name = builder.name;
         this.officeSiteId = builder.officeSiteId;
         this.regionId = builder.regionId;
@@ -61,6 +66,13 @@ public class CreateNASFileSystemRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return encryptType
+     */
+    public String getEncryptType() {
+        return this.encryptType;
     }
 
     /**
@@ -93,6 +105,7 @@ public class CreateNASFileSystemRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateNASFileSystemRequest, Builder> {
         private String description; 
+        private String encryptType; 
         private String name; 
         private String officeSiteId; 
         private String regionId; 
@@ -102,13 +115,14 @@ public class CreateNASFileSystemRequest extends Request {
             super();
         } 
 
-        private Builder(CreateNASFileSystemRequest response) {
-            super(response);
-            this.description = response.description;
-            this.name = response.name;
-            this.officeSiteId = response.officeSiteId;
-            this.regionId = response.regionId;
-            this.storageType = response.storageType;
+        private Builder(CreateNASFileSystemRequest request) {
+            super(request);
+            this.description = request.description;
+            this.encryptType = request.encryptType;
+            this.name = request.name;
+            this.officeSiteId = request.officeSiteId;
+            this.regionId = request.regionId;
+            this.storageType = request.storageType;
         } 
 
         /**
@@ -117,6 +131,15 @@ public class CreateNASFileSystemRequest extends Request {
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * EncryptType.
+         */
+        public Builder encryptType(String encryptType) {
+            this.putQueryParameter("EncryptType", encryptType);
+            this.encryptType = encryptType;
             return this;
         }
 

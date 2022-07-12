@@ -115,14 +115,14 @@ public class DescribeOfficeSitesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeOfficeSitesRequest response) {
-            super(response);
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.officeSiteId = response.officeSiteId;
-            this.officeSiteType = response.officeSiteType;
-            this.regionId = response.regionId;
-            this.status = response.status;
+        private Builder(DescribeOfficeSitesRequest request) {
+            super(request);
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.officeSiteId = request.officeSiteId;
+            this.officeSiteType = request.officeSiteType;
+            this.regionId = request.regionId;
+            this.status = request.status;
         } 
 
         /**

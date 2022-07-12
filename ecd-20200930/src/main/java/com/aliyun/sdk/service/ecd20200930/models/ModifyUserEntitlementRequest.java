@@ -88,12 +88,12 @@ public class ModifyUserEntitlementRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyUserEntitlementRequest response) {
-            super(response);
-            this.authorizeDesktopId = response.authorizeDesktopId;
-            this.endUserId = response.endUserId;
-            this.regionId = response.regionId;
-            this.revokeDesktopId = response.revokeDesktopId;
+        private Builder(ModifyUserEntitlementRequest request) {
+            super(request);
+            this.authorizeDesktopId = request.authorizeDesktopId;
+            this.endUserId = request.endUserId;
+            this.regionId = request.regionId;
+            this.revokeDesktopId = request.revokeDesktopId;
         } 
 
         /**

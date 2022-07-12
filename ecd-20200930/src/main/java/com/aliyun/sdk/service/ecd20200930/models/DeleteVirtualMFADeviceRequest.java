@@ -63,10 +63,10 @@ public class DeleteVirtualMFADeviceRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteVirtualMFADeviceRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.serialNumber = response.serialNumber;
+        private Builder(DeleteVirtualMFADeviceRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.serialNumber = request.serialNumber;
         } 
 
         /**

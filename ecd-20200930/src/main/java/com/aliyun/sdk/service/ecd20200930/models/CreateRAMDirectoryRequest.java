@@ -115,14 +115,14 @@ public class CreateRAMDirectoryRequest extends Request {
             super();
         } 
 
-        private Builder(CreateRAMDirectoryRequest response) {
-            super(response);
-            this.desktopAccessType = response.desktopAccessType;
-            this.directoryName = response.directoryName;
-            this.enableAdminAccess = response.enableAdminAccess;
-            this.enableInternetAccess = response.enableInternetAccess;
-            this.regionId = response.regionId;
-            this.vSwitchId = response.vSwitchId;
+        private Builder(CreateRAMDirectoryRequest request) {
+            super(request);
+            this.desktopAccessType = request.desktopAccessType;
+            this.directoryName = request.directoryName;
+            this.enableAdminAccess = request.enableAdminAccess;
+            this.enableInternetAccess = request.enableInternetAccess;
+            this.regionId = request.regionId;
+            this.vSwitchId = request.vSwitchId;
         } 
 
         /**

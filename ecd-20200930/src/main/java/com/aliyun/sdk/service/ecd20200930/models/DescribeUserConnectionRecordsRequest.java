@@ -13,9 +13,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeUserConnectionRecordsRequest extends Request {
     @Query
+    @NameInMap("ConnectDurationFrom")
+    private Long connectDurationFrom;
+
+    @Query
+    @NameInMap("ConnectDurationTo")
+    private Long connectDurationTo;
+
+    @Query
+    @NameInMap("ConnectEndTimeFrom")
+    private Long connectEndTimeFrom;
+
+    @Query
+    @NameInMap("ConnectEndTimeTo")
+    private Long connectEndTimeTo;
+
+    @Query
+    @NameInMap("ConnectStartTimeFrom")
+    private Long connectStartTimeFrom;
+
+    @Query
+    @NameInMap("ConnectStartTimeTo")
+    private Long connectStartTimeTo;
+
+    @Query
     @NameInMap("DesktopGroupId")
     @Validation(required = true)
     private String desktopGroupId;
+
+    @Query
+    @NameInMap("DesktopId")
+    private String desktopId;
 
     @Query
     @NameInMap("EndUserId")
@@ -41,7 +69,14 @@ public class DescribeUserConnectionRecordsRequest extends Request {
 
     private DescribeUserConnectionRecordsRequest(Builder builder) {
         super(builder);
+        this.connectDurationFrom = builder.connectDurationFrom;
+        this.connectDurationTo = builder.connectDurationTo;
+        this.connectEndTimeFrom = builder.connectEndTimeFrom;
+        this.connectEndTimeTo = builder.connectEndTimeTo;
+        this.connectStartTimeFrom = builder.connectStartTimeFrom;
+        this.connectStartTimeTo = builder.connectStartTimeTo;
         this.desktopGroupId = builder.desktopGroupId;
+        this.desktopId = builder.desktopId;
         this.endUserId = builder.endUserId;
         this.endUserType = builder.endUserType;
         this.maxResults = builder.maxResults;
@@ -63,10 +98,59 @@ public class DescribeUserConnectionRecordsRequest extends Request {
     }
 
     /**
+     * @return connectDurationFrom
+     */
+    public Long getConnectDurationFrom() {
+        return this.connectDurationFrom;
+    }
+
+    /**
+     * @return connectDurationTo
+     */
+    public Long getConnectDurationTo() {
+        return this.connectDurationTo;
+    }
+
+    /**
+     * @return connectEndTimeFrom
+     */
+    public Long getConnectEndTimeFrom() {
+        return this.connectEndTimeFrom;
+    }
+
+    /**
+     * @return connectEndTimeTo
+     */
+    public Long getConnectEndTimeTo() {
+        return this.connectEndTimeTo;
+    }
+
+    /**
+     * @return connectStartTimeFrom
+     */
+    public Long getConnectStartTimeFrom() {
+        return this.connectStartTimeFrom;
+    }
+
+    /**
+     * @return connectStartTimeTo
+     */
+    public Long getConnectStartTimeTo() {
+        return this.connectStartTimeTo;
+    }
+
+    /**
      * @return desktopGroupId
      */
     public String getDesktopGroupId() {
         return this.desktopGroupId;
+    }
+
+    /**
+     * @return desktopId
+     */
+    public String getDesktopId() {
+        return this.desktopId;
     }
 
     /**
@@ -105,7 +189,14 @@ public class DescribeUserConnectionRecordsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeUserConnectionRecordsRequest, Builder> {
+        private Long connectDurationFrom; 
+        private Long connectDurationTo; 
+        private Long connectEndTimeFrom; 
+        private Long connectEndTimeTo; 
+        private Long connectStartTimeFrom; 
+        private Long connectStartTimeTo; 
         private String desktopGroupId; 
+        private String desktopId; 
         private String endUserId; 
         private String endUserType; 
         private Integer maxResults; 
@@ -116,15 +207,76 @@ public class DescribeUserConnectionRecordsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeUserConnectionRecordsRequest response) {
-            super(response);
-            this.desktopGroupId = response.desktopGroupId;
-            this.endUserId = response.endUserId;
-            this.endUserType = response.endUserType;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.regionId = response.regionId;
+        private Builder(DescribeUserConnectionRecordsRequest request) {
+            super(request);
+            this.connectDurationFrom = request.connectDurationFrom;
+            this.connectDurationTo = request.connectDurationTo;
+            this.connectEndTimeFrom = request.connectEndTimeFrom;
+            this.connectEndTimeTo = request.connectEndTimeTo;
+            this.connectStartTimeFrom = request.connectStartTimeFrom;
+            this.connectStartTimeTo = request.connectStartTimeTo;
+            this.desktopGroupId = request.desktopGroupId;
+            this.desktopId = request.desktopId;
+            this.endUserId = request.endUserId;
+            this.endUserType = request.endUserType;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.regionId = request.regionId;
         } 
+
+        /**
+         * ConnectDurationFrom.
+         */
+        public Builder connectDurationFrom(Long connectDurationFrom) {
+            this.putQueryParameter("ConnectDurationFrom", connectDurationFrom);
+            this.connectDurationFrom = connectDurationFrom;
+            return this;
+        }
+
+        /**
+         * ConnectDurationTo.
+         */
+        public Builder connectDurationTo(Long connectDurationTo) {
+            this.putQueryParameter("ConnectDurationTo", connectDurationTo);
+            this.connectDurationTo = connectDurationTo;
+            return this;
+        }
+
+        /**
+         * ConnectEndTimeFrom.
+         */
+        public Builder connectEndTimeFrom(Long connectEndTimeFrom) {
+            this.putQueryParameter("ConnectEndTimeFrom", connectEndTimeFrom);
+            this.connectEndTimeFrom = connectEndTimeFrom;
+            return this;
+        }
+
+        /**
+         * ConnectEndTimeTo.
+         */
+        public Builder connectEndTimeTo(Long connectEndTimeTo) {
+            this.putQueryParameter("ConnectEndTimeTo", connectEndTimeTo);
+            this.connectEndTimeTo = connectEndTimeTo;
+            return this;
+        }
+
+        /**
+         * ConnectStartTimeFrom.
+         */
+        public Builder connectStartTimeFrom(Long connectStartTimeFrom) {
+            this.putQueryParameter("ConnectStartTimeFrom", connectStartTimeFrom);
+            this.connectStartTimeFrom = connectStartTimeFrom;
+            return this;
+        }
+
+        /**
+         * ConnectStartTimeTo.
+         */
+        public Builder connectStartTimeTo(Long connectStartTimeTo) {
+            this.putQueryParameter("ConnectStartTimeTo", connectStartTimeTo);
+            this.connectStartTimeTo = connectStartTimeTo;
+            return this;
+        }
 
         /**
          * DesktopGroupId.
@@ -132,6 +284,15 @@ public class DescribeUserConnectionRecordsRequest extends Request {
         public Builder desktopGroupId(String desktopGroupId) {
             this.putQueryParameter("DesktopGroupId", desktopGroupId);
             this.desktopGroupId = desktopGroupId;
+            return this;
+        }
+
+        /**
+         * DesktopId.
+         */
+        public Builder desktopId(String desktopId) {
+            this.putQueryParameter("DesktopId", desktopId);
+            this.desktopId = desktopId;
             return this;
         }
 

@@ -63,10 +63,10 @@ public class DeleteBundlesRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteBundlesRequest response) {
-            super(response);
-            this.bundleId = response.bundleId;
-            this.regionId = response.regionId;
+        private Builder(DeleteBundlesRequest request) {
+            super(request);
+            this.bundleId = request.bundleId;
+            this.regionId = request.regionId;
         } 
 
         /**

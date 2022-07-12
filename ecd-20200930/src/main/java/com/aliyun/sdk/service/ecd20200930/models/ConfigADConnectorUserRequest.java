@@ -24,7 +24,6 @@ public class ConfigADConnectorUserRequest extends Request {
 
     @Query
     @NameInMap("OUName")
-    @Validation(required = true)
     private String OUName;
 
     @Query
@@ -105,13 +104,13 @@ public class ConfigADConnectorUserRequest extends Request {
             super();
         } 
 
-        private Builder(ConfigADConnectorUserRequest response) {
-            super(response);
-            this.domainPassword = response.domainPassword;
-            this.domainUserName = response.domainUserName;
-            this.OUName = response.OUName;
-            this.officeSiteId = response.officeSiteId;
-            this.regionId = response.regionId;
+        private Builder(ConfigADConnectorUserRequest request) {
+            super(request);
+            this.domainPassword = request.domainPassword;
+            this.domainUserName = request.domainUserName;
+            this.OUName = request.OUName;
+            this.officeSiteId = request.officeSiteId;
+            this.regionId = request.regionId;
         } 
 
         /**

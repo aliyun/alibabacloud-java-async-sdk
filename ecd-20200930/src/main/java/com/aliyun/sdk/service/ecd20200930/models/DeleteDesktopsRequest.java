@@ -63,10 +63,10 @@ public class DeleteDesktopsRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteDesktopsRequest response) {
-            super(response);
-            this.desktopId = response.desktopId;
-            this.regionId = response.regionId;
+        private Builder(DeleteDesktopsRequest request) {
+            super(request);
+            this.desktopId = request.desktopId;
+            this.regionId = request.regionId;
         } 
 
         /**

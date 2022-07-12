@@ -63,10 +63,10 @@ public class DescribeSecurityEventOperationsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeSecurityEventOperationsRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.securityEventId = response.securityEventId;
+        private Builder(DescribeSecurityEventOperationsRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.securityEventId = request.securityEventId;
         } 
 
         /**
