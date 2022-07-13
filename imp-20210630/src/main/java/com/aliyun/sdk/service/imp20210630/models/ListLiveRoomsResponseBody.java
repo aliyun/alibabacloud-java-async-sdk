@@ -87,6 +87,12 @@ public class ListLiveRoomsResponseBody extends TeaModel {
         @NameInMap("CoverUrl")
         private String coverUrl;
 
+        @NameInMap("CreateTime")
+        private Long createTime;
+
+        @NameInMap("EndTime")
+        private Long endTime;
+
         @NameInMap("Extension")
         private java.util.Map < String, String > extension;
 
@@ -105,6 +111,9 @@ public class ListLiveRoomsResponseBody extends TeaModel {
         @NameInMap("RoomId")
         private String roomId;
 
+        @NameInMap("StartTime")
+        private Long startTime;
+
         @NameInMap("Status")
         private Integer status;
 
@@ -120,12 +129,15 @@ public class ListLiveRoomsResponseBody extends TeaModel {
             this.appId = builder.appId;
             this.chatId = builder.chatId;
             this.coverUrl = builder.coverUrl;
+            this.createTime = builder.createTime;
+            this.endTime = builder.endTime;
             this.extension = builder.extension;
             this.liveId = builder.liveId;
             this.notice = builder.notice;
             this.onlineCount = builder.onlineCount;
             this.pv = builder.pv;
             this.roomId = builder.roomId;
+            this.startTime = builder.startTime;
             this.status = builder.status;
             this.title = builder.title;
             this.uv = builder.uv;
@@ -175,6 +187,20 @@ public class ListLiveRoomsResponseBody extends TeaModel {
         }
 
         /**
+         * @return createTime
+         */
+        public Long getCreateTime() {
+            return this.createTime;
+        }
+
+        /**
+         * @return endTime
+         */
+        public Long getEndTime() {
+            return this.endTime;
+        }
+
+        /**
          * @return extension
          */
         public java.util.Map < String, String > getExtension() {
@@ -217,6 +243,13 @@ public class ListLiveRoomsResponseBody extends TeaModel {
         }
 
         /**
+         * @return startTime
+         */
+        public Long getStartTime() {
+            return this.startTime;
+        }
+
+        /**
          * @return status
          */
         public Integer getStatus() {
@@ -243,12 +276,15 @@ public class ListLiveRoomsResponseBody extends TeaModel {
             private String appId; 
             private String chatId; 
             private String coverUrl; 
+            private Long createTime; 
+            private Long endTime; 
             private java.util.Map < String, String > extension; 
             private String liveId; 
             private String notice; 
             private Long onlineCount; 
             private Long pv; 
             private String roomId; 
+            private Long startTime; 
             private Integer status; 
             private String title; 
             private Long uv; 
@@ -290,6 +326,22 @@ public class ListLiveRoomsResponseBody extends TeaModel {
              */
             public Builder coverUrl(String coverUrl) {
                 this.coverUrl = coverUrl;
+                return this;
+            }
+
+            /**
+             * 直播的创建时间。单位为ms。
+             */
+            public Builder createTime(Long createTime) {
+                this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * 直播的结束时间。单位为ms。
+             */
+            public Builder endTime(Long endTime) {
+                this.endTime = endTime;
                 return this;
             }
 
@@ -338,6 +390,14 @@ public class ListLiveRoomsResponseBody extends TeaModel {
              */
             public Builder roomId(String roomId) {
                 this.roomId = roomId;
+                return this;
+            }
+
+            /**
+             * 直播的开始时间。单位为ms。
+             */
+            public Builder startTime(Long startTime) {
+                this.startTime = startTime;
                 return this;
             }
 

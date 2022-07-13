@@ -32,6 +32,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateLiveResponse> createLive(CreateLiveRequest request);
 
+    CompletableFuture<CreateLiveRecordSliceFileResponse> createLiveRecordSliceFile(CreateLiveRecordSliceFileRequest request);
+
     CompletableFuture<CreateLiveRoomResponse> createLiveRoom(CreateLiveRoomRequest request);
 
     CompletableFuture<CreateRoomResponse> createRoom(CreateRoomRequest request);
@@ -42,11 +44,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteCommentResponse> deleteComment(DeleteCommentRequest request);
 
+    CompletableFuture<DeleteCommentByCreatorIdResponse> deleteCommentByCreatorId(DeleteCommentByCreatorIdRequest request);
+
     CompletableFuture<DeleteConferenceResponse> deleteConference(DeleteConferenceRequest request);
 
     CompletableFuture<DeleteLiveResponse> deleteLive(DeleteLiveRequest request);
 
     CompletableFuture<DeleteLiveRoomResponse> deleteLiveRoom(DeleteLiveRoomRequest request);
+
+    CompletableFuture<DeleteRecordFileInfoResponse> deleteRecordFileInfo(DeleteRecordFileInfoRequest request);
 
     CompletableFuture<DeleteRoomResponse> deleteRoom(DeleteRoomRequest request);
 
@@ -74,6 +80,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetLiveRoomUserStatisticsResponse> getLiveRoomUserStatistics(GetLiveRoomUserStatisticsRequest request);
 
+    CompletableFuture<GetRecordFileInfoResponse> getRecordFileInfo(GetRecordFileInfoRequest request);
+
     CompletableFuture<GetRoomResponse> getRoom(GetRoomRequest request);
 
     CompletableFuture<GetStandardRoomJumpUrlResponse> getStandardRoomJumpUrl(GetStandardRoomJumpUrlRequest request);
@@ -85,6 +93,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListCommentsResponse> listComments(ListCommentsRequest request);
 
     CompletableFuture<ListConferenceUsersResponse> listConferenceUsers(ListConferenceUsersRequest request);
+
+    CompletableFuture<ListLiveFilesResponse> listLiveFiles(ListLiveFilesRequest request);
 
     CompletableFuture<ListLiveRoomsResponse> listLiveRooms(ListLiveRoomsRequest request);
 

@@ -18,6 +18,10 @@ public class ListCommentsRequest extends Request {
     private String appId;
 
     @Body
+    @NameInMap("CreatorId")
+    private String creatorId;
+
+    @Body
     @NameInMap("PageNum")
     @Validation(required = true)
     private Integer pageNum;
@@ -48,6 +52,7 @@ public class ListCommentsRequest extends Request {
     private ListCommentsRequest(Builder builder) {
         super(builder);
         this.appId = builder.appId;
+        this.creatorId = builder.creatorId;
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
@@ -74,6 +79,13 @@ public class ListCommentsRequest extends Request {
      */
     public String getAppId() {
         return this.appId;
+    }
+
+    /**
+     * @return creatorId
+     */
+    public String getCreatorId() {
+        return this.creatorId;
     }
 
     /**
@@ -120,6 +132,7 @@ public class ListCommentsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListCommentsRequest, Builder> {
         private String appId; 
+        private String creatorId; 
         private Integer pageNum; 
         private Integer pageSize; 
         private String regionId; 
@@ -134,6 +147,7 @@ public class ListCommentsRequest extends Request {
         private Builder(ListCommentsRequest request) {
             super(request);
             this.appId = request.appId;
+            this.creatorId = request.creatorId;
             this.pageNum = request.pageNum;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
@@ -148,6 +162,15 @@ public class ListCommentsRequest extends Request {
         public Builder appId(String appId) {
             this.putBodyParameter("AppId", appId);
             this.appId = appId;
+            return this;
+        }
+
+        /**
+         * 弹幕创建者ID。
+         */
+        public Builder creatorId(String creatorId) {
+            this.putBodyParameter("CreatorId", creatorId);
+            this.creatorId = creatorId;
             return this;
         }
 

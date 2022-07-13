@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteCommentRequest} extends {@link RequestModel}
+ * {@link DeleteCommentByCreatorIdRequest} extends {@link RequestModel}
  *
- * <p>DeleteCommentRequest</p>
+ * <p>DeleteCommentByCreatorIdRequest</p>
  */
-public class DeleteCommentRequest extends Request {
+public class DeleteCommentByCreatorIdRequest extends Request {
     @Body
     @NameInMap("AppId")
     @Validation(required = true)
@@ -19,11 +19,11 @@ public class DeleteCommentRequest extends Request {
 
     @Body
     @NameInMap("CommentIdList")
-    @Validation(required = true)
     private java.util.List < String > commentIdList;
 
     @Body
     @NameInMap("CreatorId")
+    @Validation(required = true)
     private String creatorId;
 
     @Host
@@ -40,7 +40,7 @@ public class DeleteCommentRequest extends Request {
     @Validation(required = true)
     private String userId;
 
-    private DeleteCommentRequest(Builder builder) {
+    private DeleteCommentByCreatorIdRequest(Builder builder) {
         super(builder);
         this.appId = builder.appId;
         this.commentIdList = builder.commentIdList;
@@ -54,7 +54,7 @@ public class DeleteCommentRequest extends Request {
         return new Builder();
     }
 
-    public static DeleteCommentRequest create() {
+    public static DeleteCommentByCreatorIdRequest create() {
         return builder().build();
     }
 
@@ -105,7 +105,7 @@ public class DeleteCommentRequest extends Request {
         return this.userId;
     }
 
-    public static final class Builder extends Request.Builder<DeleteCommentRequest, Builder> {
+    public static final class Builder extends Request.Builder<DeleteCommentByCreatorIdRequest, Builder> {
         private String appId; 
         private java.util.List < String > commentIdList; 
         private String creatorId; 
@@ -117,7 +117,7 @@ public class DeleteCommentRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteCommentRequest request) {
+        private Builder(DeleteCommentByCreatorIdRequest request) {
             super(request);
             this.appId = request.appId;
             this.commentIdList = request.commentIdList;
@@ -182,8 +182,8 @@ public class DeleteCommentRequest extends Request {
         }
 
         @Override
-        public DeleteCommentRequest build() {
-            return new DeleteCommentRequest(this);
+        public DeleteCommentByCreatorIdRequest build() {
+            return new DeleteCommentByCreatorIdRequest(this);
         } 
 
     } 
