@@ -255,6 +255,9 @@ public class PreviewStackResponseBody extends TeaModel {
 
     }
     public static class Resources extends TeaModel {
+        @NameInMap("Action")
+        private String action;
+
         @NameInMap("Description")
         private String description;
 
@@ -263,6 +266,9 @@ public class PreviewStackResponseBody extends TeaModel {
 
         @NameInMap("Properties")
         private java.util.Map < String, ? > properties;
+
+        @NameInMap("Replacement")
+        private String replacement;
 
         @NameInMap("RequiredBy")
         private java.util.List < String > requiredBy;
@@ -274,9 +280,11 @@ public class PreviewStackResponseBody extends TeaModel {
         private java.util.Map < String, ? > stack;
 
         private Resources(Builder builder) {
+            this.action = builder.action;
             this.description = builder.description;
             this.logicalResourceId = builder.logicalResourceId;
             this.properties = builder.properties;
+            this.replacement = builder.replacement;
             this.requiredBy = builder.requiredBy;
             this.resourceType = builder.resourceType;
             this.stack = builder.stack;
@@ -288,6 +296,13 @@ public class PreviewStackResponseBody extends TeaModel {
 
         public static Resources create() {
             return builder().build();
+        }
+
+        /**
+         * @return action
+         */
+        public String getAction() {
+            return this.action;
         }
 
         /**
@@ -312,6 +327,13 @@ public class PreviewStackResponseBody extends TeaModel {
         }
 
         /**
+         * @return replacement
+         */
+        public String getReplacement() {
+            return this.replacement;
+        }
+
+        /**
          * @return requiredBy
          */
         public java.util.List < String > getRequiredBy() {
@@ -333,12 +355,22 @@ public class PreviewStackResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String action; 
             private String description; 
             private String logicalResourceId; 
             private java.util.Map < String, ? > properties; 
+            private String replacement; 
             private java.util.List < String > requiredBy; 
             private String resourceType; 
             private java.util.Map < String, ? > stack; 
+
+            /**
+             * Action.
+             */
+            public Builder action(String action) {
+                this.action = action;
+                return this;
+            }
 
             /**
              * Description.
@@ -361,6 +393,14 @@ public class PreviewStackResponseBody extends TeaModel {
              */
             public Builder properties(java.util.Map < String, ? > properties) {
                 this.properties = properties;
+                return this;
+            }
+
+            /**
+             * Replacement.
+             */
+            public Builder replacement(String replacement) {
+                this.replacement = replacement;
                 return this;
             }
 

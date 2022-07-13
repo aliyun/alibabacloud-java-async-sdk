@@ -34,8 +34,11 @@ public class PreviewStackRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("StackId")
+    private String stackId;
+
+    @Query
     @NameInMap("StackName")
-    @Validation(required = true)
     private String stackName;
 
     @Query
@@ -81,6 +84,7 @@ public class PreviewStackRequest extends Request {
         this.parallelism = builder.parallelism;
         this.parameters = builder.parameters;
         this.regionId = builder.regionId;
+        this.stackId = builder.stackId;
         this.stackName = builder.stackName;
         this.stackPolicyBody = builder.stackPolicyBody;
         this.stackPolicyURL = builder.stackPolicyURL;
@@ -139,6 +143,13 @@ public class PreviewStackRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return stackId
+     */
+    public String getStackId() {
+        return this.stackId;
     }
 
     /**
@@ -217,6 +228,7 @@ public class PreviewStackRequest extends Request {
         private Long parallelism; 
         private java.util.List < Parameters> parameters; 
         private String regionId; 
+        private String stackId; 
         private String stackName; 
         private String stackPolicyBody; 
         private String stackPolicyURL; 
@@ -239,6 +251,7 @@ public class PreviewStackRequest extends Request {
             this.parallelism = request.parallelism;
             this.parameters = request.parameters;
             this.regionId = request.regionId;
+            this.stackId = request.stackId;
             this.stackName = request.stackName;
             this.stackPolicyBody = request.stackPolicyBody;
             this.stackPolicyURL = request.stackPolicyURL;
@@ -293,6 +306,15 @@ public class PreviewStackRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * StackId.
+         */
+        public Builder stackId(String stackId) {
+            this.putQueryParameter("StackId", stackId);
+            this.stackId = stackId;
             return this;
         }
 
