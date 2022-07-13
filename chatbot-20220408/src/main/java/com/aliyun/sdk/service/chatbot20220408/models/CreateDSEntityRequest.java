@@ -23,6 +23,7 @@ public class CreateDSEntityRequest extends Request {
 
     @Query
     @NameInMap("EntityType")
+    @Validation(required = true)
     private String entityType;
 
     @Query

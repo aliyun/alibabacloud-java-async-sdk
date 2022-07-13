@@ -96,6 +96,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<FeedbackResponse> feedback(FeedbackRequest request);
 
+    CompletableFuture<GenerateUserAccessTokenResponse> generateUserAccessToken(GenerateUserAccessTokenRequest request);
+
     CompletableFuture<GetAsyncResultResponse> getAsyncResult(GetAsyncResultRequest request);
 
     CompletableFuture<GetInstancePublishTaskStateResponse> getInstancePublishTaskState(GetInstancePublishTaskStateRequest request);
