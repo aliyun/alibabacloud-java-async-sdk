@@ -72,6 +72,9 @@ public class DescribeCriteriaResponseBody extends TeaModel {
     } 
 
     public static class CriteriaList extends TeaModel {
+        @NameInMap("MultiValues")
+        private String multiValues;
+
         @NameInMap("Name")
         private String name;
 
@@ -82,6 +85,7 @@ public class DescribeCriteriaResponseBody extends TeaModel {
         private String values;
 
         private CriteriaList(Builder builder) {
+            this.multiValues = builder.multiValues;
             this.name = builder.name;
             this.type = builder.type;
             this.values = builder.values;
@@ -93,6 +97,13 @@ public class DescribeCriteriaResponseBody extends TeaModel {
 
         public static CriteriaList create() {
             return builder().build();
+        }
+
+        /**
+         * @return multiValues
+         */
+        public String getMultiValues() {
+            return this.multiValues;
         }
 
         /**
@@ -117,9 +128,18 @@ public class DescribeCriteriaResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String multiValues; 
             private String name; 
             private String type; 
             private String values; 
+
+            /**
+             * MultiValues.
+             */
+            public Builder multiValues(String multiValues) {
+                this.multiValues = multiValues;
+                return this;
+            }
 
             /**
              * Name.

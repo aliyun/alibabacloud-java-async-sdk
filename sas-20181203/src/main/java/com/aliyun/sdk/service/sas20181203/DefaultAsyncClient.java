@@ -32,62 +32,62 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.endpointRule = "regional";
         this.endpointMap = CommonUtil.buildMap(
             new TeaPair("cn-hangzhou", "tds.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "tds.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "tds.aliyuncs.com"),
-            new TeaPair("ap-northeast-2-pop", "tds.aliyuncs.com"),
-            new TeaPair("ap-south-1", "tds.aliyuncs.com"),
             new TeaPair("ap-southeast-1", "tds.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-southeast-2", "tds.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "tds.aliyuncs.com"),
-            new TeaPair("cn-beijing", "tds.aliyuncs.com"),
-            new TeaPair("cn-beijing-finance-1", "tds.aliyuncs.com"),
-            new TeaPair("cn-beijing-finance-pop", "tds.aliyuncs.com"),
-            new TeaPair("cn-beijing-gov-1", "tds.aliyuncs.com"),
-            new TeaPair("cn-beijing-nu16-b01", "tds.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "tds.aliyuncs.com"),
-            new TeaPair("cn-edge-1", "tds.aliyuncs.com"),
-            new TeaPair("cn-fujian", "tds.aliyuncs.com"),
-            new TeaPair("cn-haidian-cm12-c01", "tds.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-bj-b01", "tds.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-finance", "tds.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-internal-prod-1", "tds.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-internal-test-1", "tds.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-internal-test-2", "tds.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-internal-test-3", "tds.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-test-306", "tds.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "tds.aliyuncs.com"),
-            new TeaPair("cn-hongkong-finance-pop", "tds.aliyuncs.com"),
-            new TeaPair("cn-huhehaote", "tds.aliyuncs.com"),
-            new TeaPair("cn-huhehaote-nebula-1", "tds.aliyuncs.com"),
-            new TeaPair("cn-north-2-gov-1", "tds.aliyuncs.com"),
-            new TeaPair("cn-qingdao", "tds.aliyuncs.com"),
-            new TeaPair("cn-qingdao-nebula", "tds.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "tds.aliyuncs.com"),
-            new TeaPair("cn-shanghai-et15-b01", "tds.aliyuncs.com"),
-            new TeaPair("cn-shanghai-et2-b01", "tds.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "tds.aliyuncs.com"),
-            new TeaPair("cn-shanghai-inner", "tds.aliyuncs.com"),
-            new TeaPair("cn-shanghai-internal-test-1", "tds.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "tds.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-finance-1", "tds.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-inner", "tds.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-st4-d01", "tds.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-su18-b01", "tds.aliyuncs.com"),
-            new TeaPair("cn-wuhan", "tds.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "tds.aliyuncs.com"),
-            new TeaPair("cn-yushanfang", "tds.aliyuncs.com"),
-            new TeaPair("cn-zhangbei", "tds.aliyuncs.com"),
-            new TeaPair("cn-zhangbei-na61-b01", "tds.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "tds.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou-na62-a01", "tds.aliyuncs.com"),
-            new TeaPair("cn-zhengzhou-nebula-1", "tds.aliyuncs.com"),
-            new TeaPair("eu-central-1", "tds.aliyuncs.com"),
-            new TeaPair("eu-west-1", "tds.aliyuncs.com"),
-            new TeaPair("eu-west-1-oxs", "tds.aliyuncs.com"),
-            new TeaPair("me-east-1", "tds.aliyuncs.com"),
-            new TeaPair("rus-west-1-pop", "tds.aliyuncs.com"),
-            new TeaPair("us-east-1", "tds.aliyuncs.com"),
-            new TeaPair("us-west-1", "tds.aliyuncs.com")
+            new TeaPair("ap-southeast-3", "tds.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "sas.aliyuncs.com"),
+            new TeaPair("ap-northeast-2-pop", "sas.aliyuncs.com"),
+            new TeaPair("ap-south-1", "sas.aliyuncs.com"),
+            new TeaPair("ap-southeast-2", "sas.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "sas.aliyuncs.com"),
+            new TeaPair("cn-beijing", "sas.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-1", "sas.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-pop", "sas.aliyuncs.com"),
+            new TeaPair("cn-beijing-gov-1", "sas.aliyuncs.com"),
+            new TeaPair("cn-beijing-nu16-b01", "sas.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "sas.aliyuncs.com"),
+            new TeaPair("cn-edge-1", "sas.aliyuncs.com"),
+            new TeaPair("cn-fujian", "sas.aliyuncs.com"),
+            new TeaPair("cn-haidian-cm12-c01", "sas.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-bj-b01", "sas.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-finance", "sas.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-prod-1", "sas.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-test-1", "sas.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-test-2", "sas.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-test-3", "sas.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-test-306", "sas.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "sas.aliyuncs.com"),
+            new TeaPair("cn-hongkong-finance-pop", "sas.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "sas.aliyuncs.com"),
+            new TeaPair("cn-huhehaote-nebula-1", "sas.aliyuncs.com"),
+            new TeaPair("cn-north-2-gov-1", "sas.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "sas.aliyuncs.com"),
+            new TeaPair("cn-qingdao-nebula", "sas.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "sas.aliyuncs.com"),
+            new TeaPair("cn-shanghai-et15-b01", "sas.aliyuncs.com"),
+            new TeaPair("cn-shanghai-et2-b01", "sas.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "sas.aliyuncs.com"),
+            new TeaPair("cn-shanghai-inner", "sas.aliyuncs.com"),
+            new TeaPair("cn-shanghai-internal-test-1", "sas.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "sas.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-finance-1", "sas.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-inner", "sas.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-st4-d01", "sas.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-su18-b01", "sas.aliyuncs.com"),
+            new TeaPair("cn-wuhan", "sas.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "sas.aliyuncs.com"),
+            new TeaPair("cn-yushanfang", "sas.aliyuncs.com"),
+            new TeaPair("cn-zhangbei", "sas.aliyuncs.com"),
+            new TeaPair("cn-zhangbei-na61-b01", "sas.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "sas.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou-na62-a01", "sas.aliyuncs.com"),
+            new TeaPair("cn-zhengzhou-nebula-1", "sas.aliyuncs.com"),
+            new TeaPair("eu-central-1", "sas.aliyuncs.com"),
+            new TeaPair("eu-west-1", "sas.aliyuncs.com"),
+            new TeaPair("eu-west-1-oxs", "sas.aliyuncs.com"),
+            new TeaPair("me-east-1", "sas.aliyuncs.com"),
+            new TeaPair("rus-west-1-pop", "sas.aliyuncs.com"),
+            new TeaPair("us-east-1", "sas.aliyuncs.com"),
+            new TeaPair("us-west-1", "sas.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -1170,6 +1170,20 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeInstanceAntiBruteForceRulesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<DescribeInstanceRebootStatusResponse> describeInstanceRebootStatus(DescribeInstanceRebootStatusRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeInstanceRebootStatus").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeInstanceRebootStatusResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeInstanceRebootStatusResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2766,6 +2780,20 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<QueryGroupedSecurityEventMarkMissListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<RebootMachineResponse> rebootMachine(RebootMachineRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RebootMachine").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RebootMachineResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RebootMachineResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

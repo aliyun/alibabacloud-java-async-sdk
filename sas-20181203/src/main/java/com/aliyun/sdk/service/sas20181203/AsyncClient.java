@@ -172,6 +172,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeInstanceAntiBruteForceRulesResponse> describeInstanceAntiBruteForceRules(DescribeInstanceAntiBruteForceRulesRequest request);
 
+    CompletableFuture<DescribeInstanceRebootStatusResponse> describeInstanceRebootStatus(DescribeInstanceRebootStatusRequest request);
+
     CompletableFuture<DescribeInstanceStatisticsResponse> describeInstanceStatistics(DescribeInstanceStatisticsRequest request);
 
     CompletableFuture<DescribeLoginBaseConfigsResponse> describeLoginBaseConfigs(DescribeLoginBaseConfigsRequest request);
@@ -399,6 +401,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryGroupIdByGroupNameResponse> queryGroupIdByGroupName(QueryGroupIdByGroupNameRequest request);
 
     CompletableFuture<QueryGroupedSecurityEventMarkMissListResponse> queryGroupedSecurityEventMarkMissList(QueryGroupedSecurityEventMarkMissListRequest request);
+
+    CompletableFuture<RebootMachineResponse> rebootMachine(RebootMachineRequest request);
 
     CompletableFuture<RefreshAssetsResponse> refreshAssets(RefreshAssetsRequest request);
 

@@ -73,7 +73,7 @@ public class DescribeRiskCheckItemResultResponseBody extends TeaModel {
 
     public static class PageContentResource extends TeaModel {
         @NameInMap("ContentResource")
-        private String contentResource;
+        private java.util.Map < String, ? > contentResource;
 
         @NameInMap("Count")
         private Integer count;
@@ -110,7 +110,7 @@ public class DescribeRiskCheckItemResultResponseBody extends TeaModel {
         /**
          * @return contentResource
          */
-        public String getContentResource() {
+        public java.util.Map < String, ? > getContentResource() {
             return this.contentResource;
         }
 
@@ -150,7 +150,7 @@ public class DescribeRiskCheckItemResultResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private String contentResource; 
+            private java.util.Map < String, ? > contentResource; 
             private Integer count; 
             private Integer currentPage; 
             private Integer pageCount; 
@@ -160,7 +160,7 @@ public class DescribeRiskCheckItemResultResponseBody extends TeaModel {
             /**
              * ContentResource.
              */
-            public Builder contentResource(String contentResource) {
+            public Builder contentResource(java.util.Map < String, ? > contentResource) {
                 this.contentResource = contentResource;
                 return this;
             }
