@@ -77,11 +77,11 @@ public class ModifyNetworkAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyNetworkAttributeRequest response) {
-            super(response);
-            this.description = response.description;
-            this.networkId = response.networkId;
-            this.networkName = response.networkName;
+        private Builder(ModifyNetworkAttributeRequest request) {
+            super(request);
+            this.description = request.description;
+            this.networkId = request.networkId;
+            this.networkName = request.networkName;
         } 
 
         /**

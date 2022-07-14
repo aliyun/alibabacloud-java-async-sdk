@@ -88,12 +88,12 @@ public class DescribeApplicationRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeApplicationRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.appVersions = response.appVersions;
-            this.level = response.level;
-            this.outDetailStatParams = response.outDetailStatParams;
+        private Builder(DescribeApplicationRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.appVersions = request.appVersions;
+            this.level = request.level;
+            this.outDetailStatParams = request.outDetailStatParams;
         } 
 
         /**

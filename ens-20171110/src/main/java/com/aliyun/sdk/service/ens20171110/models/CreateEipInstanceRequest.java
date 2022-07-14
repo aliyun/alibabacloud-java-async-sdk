@@ -117,14 +117,14 @@ public class CreateEipInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(CreateEipInstanceRequest response) {
-            super(response);
-            this.bandwidth = response.bandwidth;
-            this.ensRegionId = response.ensRegionId;
-            this.instanceChargeType = response.instanceChargeType;
-            this.internetChargeType = response.internetChargeType;
-            this.isp = response.isp;
-            this.name = response.name;
+        private Builder(CreateEipInstanceRequest request) {
+            super(request);
+            this.bandwidth = request.bandwidth;
+            this.ensRegionId = request.ensRegionId;
+            this.instanceChargeType = request.instanceChargeType;
+            this.internetChargeType = request.internetChargeType;
+            this.isp = request.isp;
+            this.name = request.name;
         } 
 
         /**

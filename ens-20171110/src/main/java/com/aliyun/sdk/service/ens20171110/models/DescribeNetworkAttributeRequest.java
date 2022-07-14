@@ -49,9 +49,9 @@ public class DescribeNetworkAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeNetworkAttributeRequest response) {
-            super(response);
-            this.networkId = response.networkId;
+        private Builder(DescribeNetworkAttributeRequest request) {
+            super(request);
+            this.networkId = request.networkId;
         } 
 
         /**

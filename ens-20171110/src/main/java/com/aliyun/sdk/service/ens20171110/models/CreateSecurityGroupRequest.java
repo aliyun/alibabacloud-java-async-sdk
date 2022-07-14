@@ -75,11 +75,11 @@ public class CreateSecurityGroupRequest extends Request {
             super();
         } 
 
-        private Builder(CreateSecurityGroupRequest response) {
-            super(response);
-            this.description = response.description;
-            this.securityGroupName = response.securityGroupName;
-            this.version = response.version;
+        private Builder(CreateSecurityGroupRequest request) {
+            super(request);
+            this.description = request.description;
+            this.securityGroupName = request.securityGroupName;
+            this.version = request.version;
         } 
 
         /**

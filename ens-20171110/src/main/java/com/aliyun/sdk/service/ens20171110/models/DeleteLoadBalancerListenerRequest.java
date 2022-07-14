@@ -18,6 +18,10 @@ public class DeleteLoadBalancerListenerRequest extends Request {
     private Integer listenerPort;
 
     @Query
+    @NameInMap("ListenerProtocol")
+    private String listenerProtocol;
+
+    @Query
     @NameInMap("LoadBalancerId")
     @Validation(required = true)
     private String loadBalancerId;
@@ -25,6 +29,7 @@ public class DeleteLoadBalancerListenerRequest extends Request {
     private DeleteLoadBalancerListenerRequest(Builder builder) {
         super(builder);
         this.listenerPort = builder.listenerPort;
+        this.listenerProtocol = builder.listenerProtocol;
         this.loadBalancerId = builder.loadBalancerId;
     }
 
@@ -49,6 +54,13 @@ public class DeleteLoadBalancerListenerRequest extends Request {
     }
 
     /**
+     * @return listenerProtocol
+     */
+    public String getListenerProtocol() {
+        return this.listenerProtocol;
+    }
+
+    /**
      * @return loadBalancerId
      */
     public String getLoadBalancerId() {
@@ -57,16 +69,18 @@ public class DeleteLoadBalancerListenerRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteLoadBalancerListenerRequest, Builder> {
         private Integer listenerPort; 
+        private String listenerProtocol; 
         private String loadBalancerId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteLoadBalancerListenerRequest response) {
-            super(response);
-            this.listenerPort = response.listenerPort;
-            this.loadBalancerId = response.loadBalancerId;
+        private Builder(DeleteLoadBalancerListenerRequest request) {
+            super(request);
+            this.listenerPort = request.listenerPort;
+            this.listenerProtocol = request.listenerProtocol;
+            this.loadBalancerId = request.loadBalancerId;
         } 
 
         /**
@@ -75,6 +89,15 @@ public class DeleteLoadBalancerListenerRequest extends Request {
         public Builder listenerPort(Integer listenerPort) {
             this.putQueryParameter("ListenerPort", listenerPort);
             this.listenerPort = listenerPort;
+            return this;
+        }
+
+        /**
+         * ListenerProtocol.
+         */
+        public Builder listenerProtocol(String listenerProtocol) {
+            this.putQueryParameter("ListenerProtocol", listenerProtocol);
+            this.listenerProtocol = listenerProtocol;
             return this;
         }
 

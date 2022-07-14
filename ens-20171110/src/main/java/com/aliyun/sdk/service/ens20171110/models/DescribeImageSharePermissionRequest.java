@@ -89,12 +89,12 @@ public class DescribeImageSharePermissionRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeImageSharePermissionRequest response) {
-            super(response);
-            this.aliyunId = response.aliyunId;
-            this.imageId = response.imageId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(DescribeImageSharePermissionRequest request) {
+            super(request);
+            this.aliyunId = request.aliyunId;
+            this.imageId = request.imageId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**

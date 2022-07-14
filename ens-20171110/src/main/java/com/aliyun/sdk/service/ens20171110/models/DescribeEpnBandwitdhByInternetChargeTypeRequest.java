@@ -116,14 +116,14 @@ public class DescribeEpnBandwitdhByInternetChargeTypeRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeEpnBandwitdhByInternetChargeTypeRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.ensRegionId = response.ensRegionId;
-            this.isp = response.isp;
-            this.networkingModel = response.networkingModel;
-            this.startTime = response.startTime;
-            this.version = response.version;
+        private Builder(DescribeEpnBandwitdhByInternetChargeTypeRequest request) {
+            super(request);
+            this.endTime = request.endTime;
+            this.ensRegionId = request.ensRegionId;
+            this.isp = request.isp;
+            this.networkingModel = request.networkingModel;
+            this.startTime = request.startTime;
+            this.version = request.version;
         } 
 
         /**

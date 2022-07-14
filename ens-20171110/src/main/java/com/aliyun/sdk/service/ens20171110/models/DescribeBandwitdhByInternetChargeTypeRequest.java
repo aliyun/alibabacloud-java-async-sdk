@@ -103,13 +103,13 @@ public class DescribeBandwitdhByInternetChargeTypeRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeBandwitdhByInternetChargeTypeRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.ensRegionId = response.ensRegionId;
-            this.isp = response.isp;
-            this.startTime = response.startTime;
-            this.version = response.version;
+        private Builder(DescribeBandwitdhByInternetChargeTypeRequest request) {
+            super(request);
+            this.endTime = request.endTime;
+            this.ensRegionId = request.ensRegionId;
+            this.isp = request.isp;
+            this.startTime = request.startTime;
+            this.version = request.version;
         } 
 
         /**

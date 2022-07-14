@@ -101,13 +101,13 @@ public class DescribeInstanceMonitorDataRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeInstanceMonitorDataRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.instanceId = response.instanceId;
-            this.period = response.period;
-            this.startTime = response.startTime;
-            this.version = response.version;
+        private Builder(DescribeInstanceMonitorDataRequest request) {
+            super(request);
+            this.endTime = request.endTime;
+            this.instanceId = request.instanceId;
+            this.period = request.period;
+            this.startTime = request.startTime;
+            this.version = request.version;
         } 
 
         /**

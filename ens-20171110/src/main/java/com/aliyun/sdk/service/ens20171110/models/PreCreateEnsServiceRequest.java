@@ -77,11 +77,6 @@ public class PreCreateEnsServiceRequest extends Request {
     @NameInMap("UserData")
     private String userData;
 
-    @Query
-    @NameInMap("Version")
-    @Validation(required = true)
-    private String version;
-
     private PreCreateEnsServiceRequest(Builder builder) {
         super(builder);
         this.bandwidthType = builder.bandwidthType;
@@ -98,7 +93,6 @@ public class PreCreateEnsServiceRequest extends Request {
         this.schedulingStrategy = builder.schedulingStrategy;
         this.systemDiskSize = builder.systemDiskSize;
         this.userData = builder.userData;
-        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -212,13 +206,6 @@ public class PreCreateEnsServiceRequest extends Request {
         return this.userData;
     }
 
-    /**
-     * @return version
-     */
-    public String getVersion() {
-        return this.version;
-    }
-
     public static final class Builder extends Request.Builder<PreCreateEnsServiceRequest, Builder> {
         private String bandwidthType; 
         private String buyResourcesDetail; 
@@ -234,29 +221,27 @@ public class PreCreateEnsServiceRequest extends Request {
         private String schedulingStrategy; 
         private String systemDiskSize; 
         private String userData; 
-        private String version; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(PreCreateEnsServiceRequest response) {
-            super(response);
-            this.bandwidthType = response.bandwidthType;
-            this.buyResourcesDetail = response.buyResourcesDetail;
-            this.dataDiskSize = response.dataDiskSize;
-            this.ensServiceName = response.ensServiceName;
-            this.imageId = response.imageId;
-            this.instanceBandwithdLimit = response.instanceBandwithdLimit;
-            this.instanceSpec = response.instanceSpec;
-            this.keyPairName = response.keyPairName;
-            this.netLevel = response.netLevel;
-            this.password = response.password;
-            this.schedulingPriceStrategy = response.schedulingPriceStrategy;
-            this.schedulingStrategy = response.schedulingStrategy;
-            this.systemDiskSize = response.systemDiskSize;
-            this.userData = response.userData;
-            this.version = response.version;
+        private Builder(PreCreateEnsServiceRequest request) {
+            super(request);
+            this.bandwidthType = request.bandwidthType;
+            this.buyResourcesDetail = request.buyResourcesDetail;
+            this.dataDiskSize = request.dataDiskSize;
+            this.ensServiceName = request.ensServiceName;
+            this.imageId = request.imageId;
+            this.instanceBandwithdLimit = request.instanceBandwithdLimit;
+            this.instanceSpec = request.instanceSpec;
+            this.keyPairName = request.keyPairName;
+            this.netLevel = request.netLevel;
+            this.password = request.password;
+            this.schedulingPriceStrategy = request.schedulingPriceStrategy;
+            this.schedulingStrategy = request.schedulingStrategy;
+            this.systemDiskSize = request.systemDiskSize;
+            this.userData = request.userData;
         } 
 
         /**
@@ -382,15 +367,6 @@ public class PreCreateEnsServiceRequest extends Request {
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);
             this.userData = userData;
-            return this;
-        }
-
-        /**
-         * Version.
-         */
-        public Builder version(String version) {
-            this.putQueryParameter("Version", version);
-            this.version = version;
             return this;
         }
 

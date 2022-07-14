@@ -116,14 +116,14 @@ public class RescaleApplicationRequest extends Request {
             super();
         } 
 
-        private Builder(RescaleApplicationRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.rescaleLevel = response.rescaleLevel;
-            this.rescaleType = response.rescaleType;
-            this.resourceSelector = response.resourceSelector;
-            this.timeout = response.timeout;
-            this.toAppVersion = response.toAppVersion;
+        private Builder(RescaleApplicationRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.rescaleLevel = request.rescaleLevel;
+            this.rescaleType = request.rescaleType;
+            this.resourceSelector = request.resourceSelector;
+            this.timeout = request.timeout;
+            this.toAppVersion = request.toAppVersion;
         } 
 
         /**

@@ -12,11 +12,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePriceRequest</p>
  */
 public class DescribePriceRequest extends Request {
+    @Query
     @NameInMap("DataDisk")
     private java.util.List < DataDisk> dataDisk;
 
+    @Query
     @NameInMap("SystemDisk")
     private SystemDisk systemDisk;
+
+    @Query
+    @NameInMap("DataDisks")
+    private java.util.List < DataDisks> dataDisks;
 
     @Query
     @NameInMap("EnsRegionId")
@@ -39,25 +45,25 @@ public class DescribePriceRequest extends Request {
     private Integer period;
 
     @Query
+    @NameInMap("PeriodUnit")
+    private String periodUnit;
+
+    @Query
     @NameInMap("Quantity")
     @Validation(required = true)
     private Integer quantity;
-
-    @Query
-    @NameInMap("Version")
-    @Validation(required = true)
-    private String version;
 
     private DescribePriceRequest(Builder builder) {
         super(builder);
         this.dataDisk = builder.dataDisk;
         this.systemDisk = builder.systemDisk;
+        this.dataDisks = builder.dataDisks;
         this.ensRegionId = builder.ensRegionId;
         this.instanceType = builder.instanceType;
         this.internetChargeType = builder.internetChargeType;
         this.period = builder.period;
+        this.periodUnit = builder.periodUnit;
         this.quantity = builder.quantity;
-        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -85,6 +91,13 @@ public class DescribePriceRequest extends Request {
      */
     public SystemDisk getSystemDisk() {
         return this.systemDisk;
+    }
+
+    /**
+     * @return dataDisks
+     */
+    public java.util.List < DataDisks> getDataDisks() {
+        return this.dataDisks;
     }
 
     /**
@@ -116,49 +129,52 @@ public class DescribePriceRequest extends Request {
     }
 
     /**
+     * @return periodUnit
+     */
+    public String getPeriodUnit() {
+        return this.periodUnit;
+    }
+
+    /**
      * @return quantity
      */
     public Integer getQuantity() {
         return this.quantity;
     }
 
-    /**
-     * @return version
-     */
-    public String getVersion() {
-        return this.version;
-    }
-
     public static final class Builder extends Request.Builder<DescribePriceRequest, Builder> {
         private java.util.List < DataDisk> dataDisk; 
         private SystemDisk systemDisk; 
+        private java.util.List < DataDisks> dataDisks; 
         private String ensRegionId; 
         private String instanceType; 
         private String internetChargeType; 
         private Integer period; 
+        private String periodUnit; 
         private Integer quantity; 
-        private String version; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribePriceRequest response) {
-            super(response);
-            this.dataDisk = response.dataDisk;
-            this.systemDisk = response.systemDisk;
-            this.ensRegionId = response.ensRegionId;
-            this.instanceType = response.instanceType;
-            this.internetChargeType = response.internetChargeType;
-            this.period = response.period;
-            this.quantity = response.quantity;
-            this.version = response.version;
+        private Builder(DescribePriceRequest request) {
+            super(request);
+            this.dataDisk = request.dataDisk;
+            this.systemDisk = request.systemDisk;
+            this.dataDisks = request.dataDisks;
+            this.ensRegionId = request.ensRegionId;
+            this.instanceType = request.instanceType;
+            this.internetChargeType = request.internetChargeType;
+            this.period = request.period;
+            this.periodUnit = request.periodUnit;
+            this.quantity = request.quantity;
         } 
 
         /**
          * DataDisk.
          */
         public Builder dataDisk(java.util.List < DataDisk> dataDisk) {
+            this.putQueryParameter("DataDisk", dataDisk);
             this.dataDisk = dataDisk;
             return this;
         }
@@ -167,12 +183,23 @@ public class DescribePriceRequest extends Request {
          * SystemDisk.
          */
         public Builder systemDisk(SystemDisk systemDisk) {
+            this.putQueryParameter("SystemDisk", systemDisk);
             this.systemDisk = systemDisk;
             return this;
         }
 
         /**
-         * EnsRegionId.
+         * 如果DataDisk.1.Size为空且此字段不为空时的则以此字段为准
+         */
+        public Builder dataDisks(java.util.List < DataDisks> dataDisks) {
+            String dataDisksShrink = shrink(dataDisks, "DataDisks", "json");
+            this.putQueryParameter("DataDisks", dataDisksShrink);
+            this.dataDisks = dataDisks;
+            return this;
+        }
+
+        /**
+         * 节点ID。
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -181,7 +208,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * 实列规格。
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -190,7 +217,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * InternetChargeType.
+         * 带宽计费方式
          */
         public Builder internetChargeType(String internetChargeType) {
             this.putQueryParameter("InternetChargeType", internetChargeType);
@@ -199,7 +226,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * Period.
+         * 购买资源的时长，如果不指定PeriodUnit，则默认按月购买。目前只支持按Days和Month。如果PeriodUnit=Day时，Period仅可以3。如果PeriodUnit=Monthc时，则Period可以为1-9,12。
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -208,20 +235,23 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * Quantity.
+         * 查询云服务器ENS不同计费周期的价格。取值范围：
+         * <p>
+         * Month（默认）：按月计费的价格单位。
+         * Day：按天计费的价格单位。
          */
-        public Builder quantity(Integer quantity) {
-            this.putQueryParameter("Quantity", quantity);
-            this.quantity = quantity;
+        public Builder periodUnit(String periodUnit) {
+            this.putQueryParameter("PeriodUnit", periodUnit);
+            this.periodUnit = periodUnit;
             return this;
         }
 
         /**
-         * Version.
+         * 数量。
          */
-        public Builder version(String version) {
-            this.putQueryParameter("Version", version);
-            this.version = version;
+        public Builder quantity(Integer quantity) {
+            this.putQueryParameter("Quantity", quantity);
+            this.quantity = quantity;
             return this;
         }
 
@@ -234,7 +264,6 @@ public class DescribePriceRequest extends Request {
 
     public static class DataDisk extends TeaModel {
         @NameInMap("Size")
-        @Validation(required = true)
         private Integer size;
 
         private DataDisk(Builder builder) {
@@ -260,7 +289,7 @@ public class DescribePriceRequest extends Request {
             private Integer size; 
 
             /**
-             * Size.
+             * 数据盘大小，单位GB。如果此字段不为空，则以此段为准。
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -302,7 +331,7 @@ public class DescribePriceRequest extends Request {
             private Integer size; 
 
             /**
-             * Size.
+             * 系统盘大小，单位：GB
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -311,6 +340,67 @@ public class DescribePriceRequest extends Request {
 
             public SystemDisk build() {
                 return new SystemDisk(this);
+            } 
+
+        } 
+
+    }
+    public static class DataDisks extends TeaModel {
+        @NameInMap("Category")
+        private String category;
+
+        @NameInMap("Size")
+        private Long size;
+
+        private DataDisks(Builder builder) {
+            this.category = builder.category;
+            this.size = builder.size;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DataDisks create() {
+            return builder().build();
+        }
+
+        /**
+         * @return category
+         */
+        public String getCategory() {
+            return this.category;
+        }
+
+        /**
+         * @return size
+         */
+        public Long getSize() {
+            return this.size;
+        }
+
+        public static final class Builder {
+            private String category; 
+            private Long size; 
+
+            /**
+             * 磁盘类型
+             */
+            public Builder category(String category) {
+                this.category = category;
+                return this;
+            }
+
+            /**
+             * 系统盘大小，单位：GB
+             */
+            public Builder size(Long size) {
+                this.size = size;
+                return this;
+            }
+
+            public DataDisks build() {
+                return new DataDisks(this);
             } 
 
         } 

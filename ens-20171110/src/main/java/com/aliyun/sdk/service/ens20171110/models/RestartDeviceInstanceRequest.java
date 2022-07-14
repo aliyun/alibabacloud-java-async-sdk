@@ -63,10 +63,10 @@ public class RestartDeviceInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(RestartDeviceInstanceRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.instanceId = response.instanceId;
+        private Builder(RestartDeviceInstanceRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.instanceId = request.instanceId;
         } 
 
         /**

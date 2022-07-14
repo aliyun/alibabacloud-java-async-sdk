@@ -63,10 +63,10 @@ public class ModifyLoadBalancerAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyLoadBalancerAttributeRequest response) {
-            super(response);
-            this.loadBalancerId = response.loadBalancerId;
-            this.loadBalancerName = response.loadBalancerName;
+        private Builder(ModifyLoadBalancerAttributeRequest request) {
+            super(request);
+            this.loadBalancerId = request.loadBalancerId;
+            this.loadBalancerName = request.loadBalancerName;
         } 
 
         /**

@@ -76,11 +76,6 @@ public class DescribeInstancesRequest extends Request {
     @NameInMap("VSwitchId")
     private String vSwitchId;
 
-    @Query
-    @NameInMap("Version")
-    @Validation(required = true)
-    private String version;
-
     private DescribeInstancesRequest(Builder builder) {
         super(builder);
         this.ensRegionId = builder.ensRegionId;
@@ -99,7 +94,6 @@ public class DescribeInstancesRequest extends Request {
         this.securityGroupId = builder.securityGroupId;
         this.status = builder.status;
         this.vSwitchId = builder.vSwitchId;
-        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -227,13 +221,6 @@ public class DescribeInstancesRequest extends Request {
         return this.vSwitchId;
     }
 
-    /**
-     * @return version
-     */
-    public String getVersion() {
-        return this.version;
-    }
-
     public static final class Builder extends Request.Builder<DescribeInstancesRequest, Builder> {
         private String ensRegionId; 
         private String ensRegionIds; 
@@ -251,31 +238,29 @@ public class DescribeInstancesRequest extends Request {
         private String securityGroupId; 
         private String status; 
         private String vSwitchId; 
-        private String version; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeInstancesRequest response) {
-            super(response);
-            this.ensRegionId = response.ensRegionId;
-            this.ensRegionIds = response.ensRegionIds;
-            this.ensServiceId = response.ensServiceId;
-            this.imageId = response.imageId;
-            this.instanceId = response.instanceId;
-            this.instanceIds = response.instanceIds;
-            this.instanceName = response.instanceName;
-            this.instanceResourceType = response.instanceResourceType;
-            this.networkId = response.networkId;
-            this.orderByParams = response.orderByParams;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.searchKey = response.searchKey;
-            this.securityGroupId = response.securityGroupId;
-            this.status = response.status;
-            this.vSwitchId = response.vSwitchId;
-            this.version = response.version;
+        private Builder(DescribeInstancesRequest request) {
+            super(request);
+            this.ensRegionId = request.ensRegionId;
+            this.ensRegionIds = request.ensRegionIds;
+            this.ensServiceId = request.ensServiceId;
+            this.imageId = request.imageId;
+            this.instanceId = request.instanceId;
+            this.instanceIds = request.instanceIds;
+            this.instanceName = request.instanceName;
+            this.instanceResourceType = request.instanceResourceType;
+            this.networkId = request.networkId;
+            this.orderByParams = request.orderByParams;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.searchKey = request.searchKey;
+            this.securityGroupId = request.securityGroupId;
+            this.status = request.status;
+            this.vSwitchId = request.vSwitchId;
         } 
 
         /**
@@ -419,15 +404,6 @@ public class DescribeInstancesRequest extends Request {
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
             this.vSwitchId = vSwitchId;
-            return this;
-        }
-
-        /**
-         * Version.
-         */
-        public Builder version(String version) {
-            this.putQueryParameter("Version", version);
-            this.version = version;
             return this;
         }
 

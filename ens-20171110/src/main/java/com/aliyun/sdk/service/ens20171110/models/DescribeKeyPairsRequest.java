@@ -88,12 +88,12 @@ public class DescribeKeyPairsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeKeyPairsRequest response) {
-            super(response);
-            this.keyPairName = response.keyPairName;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.version = response.version;
+        private Builder(DescribeKeyPairsRequest request) {
+            super(request);
+            this.keyPairName = request.keyPairName;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.version = request.version;
         } 
 
         /**

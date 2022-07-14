@@ -63,10 +63,10 @@ public class DeleteVSwitchRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteVSwitchRequest response) {
-            super(response);
-            this.vSwitchId = response.vSwitchId;
-            this.version = response.version;
+        private Builder(DeleteVSwitchRequest request) {
+            super(request);
+            this.vSwitchId = request.vSwitchId;
+            this.version = request.version;
         } 
 
         /**

@@ -48,9 +48,9 @@ public class DescribeRegionIspsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeRegionIspsRequest response) {
-            super(response);
-            this.ensRegionId = response.ensRegionId;
+        private Builder(DescribeRegionIspsRequest request) {
+            super(request);
+            this.ensRegionId = request.ensRegionId;
         } 
 
         /**

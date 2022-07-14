@@ -268,25 +268,25 @@ public class SetLoadBalancerHTTPSListenerAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(SetLoadBalancerHTTPSListenerAttributeRequest response) {
-            super(response);
-            this.description = response.description;
-            this.healthCheck = response.healthCheck;
-            this.healthCheckConnectPort = response.healthCheckConnectPort;
-            this.healthCheckDomain = response.healthCheckDomain;
-            this.healthCheckHttpCode = response.healthCheckHttpCode;
-            this.healthCheckInterval = response.healthCheckInterval;
-            this.healthCheckMethod = response.healthCheckMethod;
-            this.healthCheckTimeout = response.healthCheckTimeout;
-            this.healthCheckURI = response.healthCheckURI;
-            this.healthyThreshold = response.healthyThreshold;
-            this.idleTimeout = response.idleTimeout;
-            this.listenerPort = response.listenerPort;
-            this.loadBalancerId = response.loadBalancerId;
-            this.requestTimeout = response.requestTimeout;
-            this.scheduler = response.scheduler;
-            this.serverCertificateId = response.serverCertificateId;
-            this.unhealthyThreshold = response.unhealthyThreshold;
+        private Builder(SetLoadBalancerHTTPSListenerAttributeRequest request) {
+            super(request);
+            this.description = request.description;
+            this.healthCheck = request.healthCheck;
+            this.healthCheckConnectPort = request.healthCheckConnectPort;
+            this.healthCheckDomain = request.healthCheckDomain;
+            this.healthCheckHttpCode = request.healthCheckHttpCode;
+            this.healthCheckInterval = request.healthCheckInterval;
+            this.healthCheckMethod = request.healthCheckMethod;
+            this.healthCheckTimeout = request.healthCheckTimeout;
+            this.healthCheckURI = request.healthCheckURI;
+            this.healthyThreshold = request.healthyThreshold;
+            this.idleTimeout = request.idleTimeout;
+            this.listenerPort = request.listenerPort;
+            this.loadBalancerId = request.loadBalancerId;
+            this.requestTimeout = request.requestTimeout;
+            this.scheduler = request.scheduler;
+            this.serverCertificateId = request.serverCertificateId;
+            this.unhealthyThreshold = request.unhealthyThreshold;
         } 
 
         /**

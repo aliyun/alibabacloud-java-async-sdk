@@ -168,18 +168,18 @@ public class RescaleDeviceServiceRequest extends Request {
             super();
         } 
 
-        private Builder(RescaleDeviceServiceRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.imageId = response.imageId;
-            this.ipType = response.ipType;
-            this.rescaleLevel = response.rescaleLevel;
-            this.rescaleType = response.rescaleType;
-            this.resourceInfo = response.resourceInfo;
-            this.resourceSelector = response.resourceSelector;
-            this.resourceSpec = response.resourceSpec;
-            this.serviceId = response.serviceId;
-            this.timeout = response.timeout;
+        private Builder(RescaleDeviceServiceRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.imageId = request.imageId;
+            this.ipType = request.ipType;
+            this.rescaleLevel = request.rescaleLevel;
+            this.rescaleType = request.rescaleType;
+            this.resourceInfo = request.resourceInfo;
+            this.resourceSelector = request.resourceSelector;
+            this.resourceSpec = request.resourceSpec;
+            this.serviceId = request.serviceId;
+            this.timeout = request.timeout;
         } 
 
         /**

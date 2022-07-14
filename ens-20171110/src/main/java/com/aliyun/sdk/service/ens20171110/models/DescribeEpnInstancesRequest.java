@@ -87,12 +87,12 @@ public class DescribeEpnInstancesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeEpnInstancesRequest response) {
-            super(response);
-            this.EPNInstanceId = response.EPNInstanceId;
-            this.EPNInstanceName = response.EPNInstanceName;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(DescribeEpnInstancesRequest request) {
+            super(request);
+            this.EPNInstanceId = request.EPNInstanceId;
+            this.EPNInstanceName = request.EPNInstanceName;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**

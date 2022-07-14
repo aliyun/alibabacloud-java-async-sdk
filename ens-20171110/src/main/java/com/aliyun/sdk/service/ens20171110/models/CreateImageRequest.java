@@ -89,12 +89,12 @@ public class CreateImageRequest extends Request {
             super();
         } 
 
-        private Builder(CreateImageRequest response) {
-            super(response);
-            this.deleteAfterImageUpload = response.deleteAfterImageUpload;
-            this.imageName = response.imageName;
-            this.instanceId = response.instanceId;
-            this.product = response.product;
+        private Builder(CreateImageRequest request) {
+            super(request);
+            this.deleteAfterImageUpload = request.deleteAfterImageUpload;
+            this.imageName = request.imageName;
+            this.instanceId = request.instanceId;
+            this.product = request.product;
         } 
 
         /**

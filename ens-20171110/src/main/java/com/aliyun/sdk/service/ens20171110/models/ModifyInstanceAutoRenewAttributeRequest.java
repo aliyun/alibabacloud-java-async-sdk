@@ -102,13 +102,13 @@ public class ModifyInstanceAutoRenewAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyInstanceAutoRenewAttributeRequest response) {
-            super(response);
-            this.autoRenew = response.autoRenew;
-            this.duration = response.duration;
-            this.instanceIds = response.instanceIds;
-            this.ownerId = response.ownerId;
-            this.renewalStatus = response.renewalStatus;
+        private Builder(ModifyInstanceAutoRenewAttributeRequest request) {
+            super(request);
+            this.autoRenew = request.autoRenew;
+            this.duration = request.duration;
+            this.instanceIds = request.instanceIds;
+            this.ownerId = request.ownerId;
+            this.renewalStatus = request.renewalStatus;
         } 
 
         /**

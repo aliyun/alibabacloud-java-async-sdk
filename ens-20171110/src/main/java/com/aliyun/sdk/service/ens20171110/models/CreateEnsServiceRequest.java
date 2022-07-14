@@ -77,11 +77,11 @@ public class CreateEnsServiceRequest extends Request {
             super();
         } 
 
-        private Builder(CreateEnsServiceRequest response) {
-            super(response);
-            this.ensServiceId = response.ensServiceId;
-            this.orderType = response.orderType;
-            this.version = response.version;
+        private Builder(CreateEnsServiceRequest request) {
+            super(request);
+            this.ensServiceId = request.ensServiceId;
+            this.orderType = request.orderType;
+            this.version = request.version;
         } 
 
         /**

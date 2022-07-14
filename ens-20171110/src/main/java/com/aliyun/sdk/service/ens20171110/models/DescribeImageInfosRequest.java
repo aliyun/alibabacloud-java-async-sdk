@@ -62,10 +62,10 @@ public class DescribeImageInfosRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeImageInfosRequest response) {
-            super(response);
-            this.osType = response.osType;
-            this.version = response.version;
+        private Builder(DescribeImageInfosRequest request) {
+            super(request);
+            this.osType = request.osType;
+            this.version = request.version;
         } 
 
         /**

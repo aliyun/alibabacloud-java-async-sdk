@@ -50,7 +50,7 @@ public class ExportBillDetailDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * FilePath.
+         * 文件下载地址
          */
         public Builder filePath(String filePath) {
             this.filePath = filePath;
@@ -58,7 +58,7 @@ public class ExportBillDetailDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * 请求ID，公共字段
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -89,12 +89,12 @@ public class RollbackApplicationRequest extends Request {
             super();
         } 
 
-        private Builder(RollbackApplicationRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.fromAppVersion = response.fromAppVersion;
-            this.timeout = response.timeout;
-            this.toAppVersion = response.toAppVersion;
+        private Builder(RollbackApplicationRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.fromAppVersion = request.fromAppVersion;
+            this.timeout = request.timeout;
+            this.toAppVersion = request.toAppVersion;
         } 
 
         /**

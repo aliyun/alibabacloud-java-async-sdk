@@ -140,16 +140,16 @@ public class DescribeImagesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeImagesRequest response) {
-            super(response);
-            this.ensRegionId = response.ensRegionId;
-            this.imageId = response.imageId;
-            this.imageName = response.imageName;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.status = response.status;
-            this.version = response.version;
-            this.product = response.product;
+        private Builder(DescribeImagesRequest request) {
+            super(request);
+            this.ensRegionId = request.ensRegionId;
+            this.imageId = request.imageId;
+            this.imageName = request.imageName;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.status = request.status;
+            this.version = request.version;
+            this.product = request.product;
         } 
 
         /**

@@ -48,9 +48,9 @@ public class DescribeCloudDiskTypesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeCloudDiskTypesRequest response) {
-            super(response);
-            this.ensRegionId = response.ensRegionId;
+        private Builder(DescribeCloudDiskTypesRequest request) {
+            super(request);
+            this.ensRegionId = request.ensRegionId;
         } 
 
         /**

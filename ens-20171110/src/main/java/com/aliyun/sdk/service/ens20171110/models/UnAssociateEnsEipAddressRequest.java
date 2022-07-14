@@ -49,9 +49,9 @@ public class UnAssociateEnsEipAddressRequest extends Request {
             super();
         } 
 
-        private Builder(UnAssociateEnsEipAddressRequest response) {
-            super(response);
-            this.allocationId = response.allocationId;
+        private Builder(UnAssociateEnsEipAddressRequest request) {
+            super(request);
+            this.allocationId = request.allocationId;
         } 
 
         /**

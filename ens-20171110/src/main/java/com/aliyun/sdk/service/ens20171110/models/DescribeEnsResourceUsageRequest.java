@@ -61,10 +61,10 @@ public class DescribeEnsResourceUsageRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeEnsResourceUsageRequest response) {
-            super(response);
-            this.expiredEndTime = response.expiredEndTime;
-            this.expiredStartTime = response.expiredStartTime;
+        private Builder(DescribeEnsResourceUsageRequest request) {
+            super(request);
+            this.expiredEndTime = request.expiredEndTime;
+            this.expiredStartTime = request.expiredStartTime;
         } 
 
         /**

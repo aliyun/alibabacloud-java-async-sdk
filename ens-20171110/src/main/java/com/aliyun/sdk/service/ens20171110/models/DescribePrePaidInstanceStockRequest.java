@@ -105,13 +105,13 @@ public class DescribePrePaidInstanceStockRequest extends Request {
             super();
         } 
 
-        private Builder(DescribePrePaidInstanceStockRequest response) {
-            super(response);
-            this.dataDiskSize = response.dataDiskSize;
-            this.ensRegionId = response.ensRegionId;
-            this.instanceSpec = response.instanceSpec;
-            this.systemDiskSize = response.systemDiskSize;
-            this.version = response.version;
+        private Builder(DescribePrePaidInstanceStockRequest request) {
+            super(request);
+            this.dataDiskSize = request.dataDiskSize;
+            this.ensRegionId = request.ensRegionId;
+            this.instanceSpec = request.instanceSpec;
+            this.systemDiskSize = request.systemDiskSize;
+            this.version = request.version;
         } 
 
         /**

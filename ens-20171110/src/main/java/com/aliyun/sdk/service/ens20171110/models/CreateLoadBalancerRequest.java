@@ -118,14 +118,14 @@ public class CreateLoadBalancerRequest extends Request {
             super();
         } 
 
-        private Builder(CreateLoadBalancerRequest response) {
-            super(response);
-            this.ensRegionId = response.ensRegionId;
-            this.loadBalancerName = response.loadBalancerName;
-            this.loadBalancerSpec = response.loadBalancerSpec;
-            this.networkId = response.networkId;
-            this.payType = response.payType;
-            this.vSwitchId = response.vSwitchId;
+        private Builder(CreateLoadBalancerRequest request) {
+            super(request);
+            this.ensRegionId = request.ensRegionId;
+            this.loadBalancerName = request.loadBalancerName;
+            this.loadBalancerSpec = request.loadBalancerSpec;
+            this.networkId = request.networkId;
+            this.payType = request.payType;
+            this.vSwitchId = request.vSwitchId;
         } 
 
         /**

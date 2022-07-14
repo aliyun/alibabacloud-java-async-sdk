@@ -24,9 +24,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AddNetworkInterfaceToInstanceResponse> addNetworkInterfaceToInstance(AddNetworkInterfaceToInstanceRequest request);
 
-    CompletableFuture<AllocateEipAddressResponse> allocateEipAddress(AllocateEipAddressRequest request);
-
-    CompletableFuture<AssociateEipAddressResponse> associateEipAddress(AssociateEipAddressRequest request);
+    CompletableFuture<AssignPrivateIpAddressesResponse> assignPrivateIpAddresses(AssignPrivateIpAddressesRequest request);
 
     CompletableFuture<AssociateEnsEipAddressResponse> associateEnsEipAddress(AssociateEnsEipAddressRequest request);
 
@@ -38,25 +36,23 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AuthorizeSecurityGroupEgressResponse> authorizeSecurityGroupEgress(AuthorizeSecurityGroupEgressRequest request);
 
-    CompletableFuture<CheckQuotaResponse> checkQuota(CheckQuotaRequest request);
-
-    CompletableFuture<ConfigureSecurityGroupPermissionsResponse> configureSecurityGroupPermissions(ConfigureSecurityGroupPermissionsRequest request);
+    CompletableFuture<CreateARMServerInstancesResponse> createARMServerInstances(CreateARMServerInstancesRequest request);
 
     CompletableFuture<CreateApplicationResponse> createApplication(CreateApplicationRequest request);
 
+    CompletableFuture<CreateClassicNetworkResponse> createClassicNetwork(CreateClassicNetworkRequest request);
+
     CompletableFuture<CreateDiskResponse> createDisk(CreateDiskRequest request);
-
-    CompletableFuture<CreateDiskBuyOrderResponse> createDiskBuyOrder(CreateDiskBuyOrderRequest request);
-
-    CompletableFuture<CreateEPInstanceResponse> createEPInstance(CreateEPInstanceRequest request);
 
     CompletableFuture<CreateEipInstanceResponse> createEipInstance(CreateEipInstanceRequest request);
 
-    CompletableFuture<CreateElbBuyOrderResponse> createElbBuyOrder(CreateElbBuyOrderRequest request);
+    CompletableFuture<CreateEnsRouteEntryResponse> createEnsRouteEntry(CreateEnsRouteEntryRequest request);
 
     CompletableFuture<CreateEnsServiceResponse> createEnsService(CreateEnsServiceRequest request);
 
     CompletableFuture<CreateEpnInstanceResponse> createEpnInstance(CreateEpnInstanceRequest request);
+
+    CompletableFuture<CreateForwardEntryResponse> createForwardEntry(CreateForwardEntryRequest request);
 
     CompletableFuture<CreateImageResponse> createImage(CreateImageRequest request);
 
@@ -74,31 +70,41 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateLoadBalancerUDPListenerResponse> createLoadBalancerUDPListener(CreateLoadBalancerUDPListenerRequest request);
 
+    CompletableFuture<CreateNatGatewayResponse> createNatGateway(CreateNatGatewayRequest request);
+
     CompletableFuture<CreateNetworkResponse> createNetwork(CreateNetworkRequest request);
 
     CompletableFuture<CreateSecurityGroupResponse> createSecurityGroup(CreateSecurityGroupRequest request);
 
-    CompletableFuture<CreateVSwitchResponse> createVSwitch(CreateVSwitchRequest request);
+    CompletableFuture<CreateSnatEntryResponse> createSnatEntry(CreateSnatEntryRequest request);
 
-    CompletableFuture<CreateVmAndSaveStockResponse> createVmAndSaveStock(CreateVmAndSaveStockRequest request);
+    CompletableFuture<CreateVSwitchResponse> createVSwitch(CreateVSwitchRequest request);
 
     CompletableFuture<DeleteApplicationResponse> deleteApplication(DeleteApplicationRequest request);
 
     CompletableFuture<DeleteDeviceInternetPortResponse> deleteDeviceInternetPort(DeleteDeviceInternetPortRequest request);
 
+    CompletableFuture<DeleteEnsRouteEntryResponse> deleteEnsRouteEntry(DeleteEnsRouteEntryRequest request);
+
     CompletableFuture<DeleteEpnInstanceResponse> deleteEpnInstance(DeleteEpnInstanceRequest request);
+
+    CompletableFuture<DeleteForwardEntryResponse> deleteForwardEntry(DeleteForwardEntryRequest request);
+
+    CompletableFuture<DeleteImageResponse> deleteImage(DeleteImageRequest request);
 
     CompletableFuture<DeleteKeyPairsResponse> deleteKeyPairs(DeleteKeyPairsRequest request);
 
     CompletableFuture<DeleteLoadBalancerListenerResponse> deleteLoadBalancerListener(DeleteLoadBalancerListenerRequest request);
 
+    CompletableFuture<DeleteNatGatewayResponse> deleteNatGateway(DeleteNatGatewayRequest request);
+
     CompletableFuture<DeleteNetworkResponse> deleteNetwork(DeleteNetworkRequest request);
 
     CompletableFuture<DeleteSecurityGroupResponse> deleteSecurityGroup(DeleteSecurityGroupRequest request);
 
-    CompletableFuture<DeleteVSwitchResponse> deleteVSwitch(DeleteVSwitchRequest request);
+    CompletableFuture<DeleteSnatEntryResponse> deleteSnatEntry(DeleteSnatEntryRequest request);
 
-    CompletableFuture<DeleteVmResponse> deleteVm(DeleteVmRequest request);
+    CompletableFuture<DeleteVSwitchResponse> deleteVSwitch(DeleteVSwitchRequest request);
 
     CompletableFuture<DescribeApplicationResponse> describeApplication(DescribeApplicationRequest request);
 
@@ -148,6 +154,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeEnsResourceUsageResponse> describeEnsResourceUsage(DescribeEnsResourceUsageRequest request);
 
+    CompletableFuture<DescribeEnsRouteEntryListResponse> describeEnsRouteEntryList(DescribeEnsRouteEntryListRequest request);
+
     CompletableFuture<DescribeEpnBandWidthDataResponse> describeEpnBandWidthData(DescribeEpnBandWidthDataRequest request);
 
     CompletableFuture<DescribeEpnBandwitdhByInternetChargeTypeResponse> describeEpnBandwitdhByInternetChargeType(DescribeEpnBandwitdhByInternetChargeTypeRequest request);
@@ -161,6 +169,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeExportImageInfoResponse> describeExportImageInfo(DescribeExportImageInfoRequest request);
 
     CompletableFuture<DescribeExportImageStatusResponse> describeExportImageStatus(DescribeExportImageStatusRequest request);
+
+    CompletableFuture<DescribeForwardTableEntriesResponse> describeForwardTableEntries(DescribeForwardTableEntriesRequest request);
 
     CompletableFuture<DescribeImageInfosResponse> describeImageInfos(DescribeImageInfosRequest request);
 
@@ -198,6 +208,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeMeasurementDataResponse> describeMeasurementData(DescribeMeasurementDataRequest request);
 
+    CompletableFuture<DescribeNatGatewaysResponse> describeNatGateways(DescribeNatGatewaysRequest request);
+
     CompletableFuture<DescribeNetworkAttributeResponse> describeNetworkAttribute(DescribeNetworkAttributeRequest request);
 
     CompletableFuture<DescribeNetworkInterfacesResponse> describeNetworkInterfaces(DescribeNetworkInterfacesRequest request);
@@ -218,6 +230,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeServcieScheduleResponse> describeServcieSchedule(DescribeServcieScheduleRequest request);
 
+    CompletableFuture<DescribeSnatTableEntriesResponse> describeSnatTableEntries(DescribeSnatTableEntriesRequest request);
+
     CompletableFuture<DescribeUserBandWidthDataResponse> describeUserBandWidthData(DescribeUserBandWidthDataRequest request);
 
     CompletableFuture<DescribeVSwitchesResponse> describeVSwitches(DescribeVSwitchesRequest request);
@@ -234,8 +248,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetDeviceInternetPortResponse> getDeviceInternetPort(GetDeviceInternetPortRequest request);
 
-    CompletableFuture<GetVmListResponse> getVmList(GetVmListRequest request);
-
     CompletableFuture<ImportKeyPairResponse> importKeyPair(ImportKeyPairRequest request);
 
     CompletableFuture<JoinPublicIpsToEpnInstanceResponse> joinPublicIpsToEpnInstance(JoinPublicIpsToEpnInstanceRequest request);
@@ -247,8 +259,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<LeaveSecurityGroupResponse> leaveSecurityGroup(LeaveSecurityGroupRequest request);
 
     CompletableFuture<ListApplicationsResponse> listApplications(ListApplicationsRequest request);
-
-    CompletableFuture<MigrateVmResponse> migrateVm(MigrateVmRequest request);
 
     CompletableFuture<ModifyEnsEipAddressAttributeResponse> modifyEnsEipAddressAttribute(ModifyEnsEipAddressAttributeRequest request);
 
@@ -266,6 +276,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ModifyNetworkAttributeResponse> modifyNetworkAttribute(ModifyNetworkAttributeRequest request);
 
+    CompletableFuture<ModifyPrepayInstanceSpecResponse> modifyPrepayInstanceSpec(ModifyPrepayInstanceSpecRequest request);
+
     CompletableFuture<ModifySecurityGroupAttributeResponse> modifySecurityGroupAttribute(ModifySecurityGroupAttributeRequest request);
 
     CompletableFuture<ModifyVSwitchAttributeResponse> modifyVSwitchAttribute(ModifyVSwitchAttributeRequest request);
@@ -278,7 +290,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RebootInstanceResponse> rebootInstance(RebootInstanceRequest request);
 
-    CompletableFuture<ReleaseEipAddressResponse> releaseEipAddress(ReleaseEipAddressRequest request);
+    CompletableFuture<ReleaseARMServerInstanceResponse> releaseARMServerInstance(ReleaseARMServerInstanceRequest request);
 
     CompletableFuture<ReleaseInstanceResponse> releaseInstance(ReleaseInstanceRequest request);
 
@@ -291,6 +303,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RemovePublicIpsFromEpnInstanceResponse> removePublicIpsFromEpnInstance(RemovePublicIpsFromEpnInstanceRequest request);
 
     CompletableFuture<RemoveVSwitchesFromEpnInstanceResponse> removeVSwitchesFromEpnInstance(RemoveVSwitchesFromEpnInstanceRequest request);
+
+    CompletableFuture<RenewARMServerInstanceResponse> renewARMServerInstance(RenewARMServerInstanceRequest request);
 
     CompletableFuture<RenewInstanceResponse> renewInstance(RenewInstanceRequest request);
 
@@ -311,8 +325,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RunInstancesResponse> runInstances(RunInstancesRequest request);
 
     CompletableFuture<RunServiceScheduleResponse> runServiceSchedule(RunServiceScheduleRequest request);
-
-    CompletableFuture<SchedulePodResponse> schedulePod(SchedulePodRequest request);
 
     CompletableFuture<SetBackendServersResponse> setBackendServers(SetBackendServersRequest request);
 
@@ -340,7 +352,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UnAssociateEnsEipAddressResponse> unAssociateEnsEipAddress(UnAssociateEnsEipAddressRequest request);
 
-    CompletableFuture<UnassociateEipAddressResponse> unassociateEipAddress(UnassociateEipAddressRequest request);
+    CompletableFuture<UnassignPrivateIpAddressesResponse> unassignPrivateIpAddresses(UnassignPrivateIpAddressesRequest request);
 
     CompletableFuture<UpgradeApplicationResponse> upgradeApplication(UpgradeApplicationRequest request);
 

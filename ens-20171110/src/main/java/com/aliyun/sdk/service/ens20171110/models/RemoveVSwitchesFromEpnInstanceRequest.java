@@ -63,10 +63,10 @@ public class RemoveVSwitchesFromEpnInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(RemoveVSwitchesFromEpnInstanceRequest response) {
-            super(response);
-            this.EPNInstanceId = response.EPNInstanceId;
-            this.vSwitchesInfo = response.vSwitchesInfo;
+        private Builder(RemoveVSwitchesFromEpnInstanceRequest request) {
+            super(request);
+            this.EPNInstanceId = request.EPNInstanceId;
+            this.vSwitchesInfo = request.vSwitchesInfo;
         } 
 
         /**

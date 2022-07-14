@@ -139,16 +139,16 @@ public class ListApplicationsRequest extends Request {
             super();
         } 
 
-        private Builder(ListApplicationsRequest response) {
-            super(response);
-            this.appVersions = response.appVersions;
-            this.clusterNames = response.clusterNames;
-            this.level = response.level;
-            this.maxDate = response.maxDate;
-            this.minDate = response.minDate;
-            this.outAppInfoParams = response.outAppInfoParams;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(ListApplicationsRequest request) {
+            super(request);
+            this.appVersions = request.appVersions;
+            this.clusterNames = request.clusterNames;
+            this.level = request.level;
+            this.maxDate = request.maxDate;
+            this.minDate = request.minDate;
+            this.outAppInfoParams = request.outAppInfoParams;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**

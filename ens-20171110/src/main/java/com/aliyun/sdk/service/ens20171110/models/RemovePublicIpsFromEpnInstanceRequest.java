@@ -63,10 +63,10 @@ public class RemovePublicIpsFromEpnInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(RemovePublicIpsFromEpnInstanceRequest response) {
-            super(response);
-            this.EPNInstanceId = response.EPNInstanceId;
-            this.instanceInfos = response.instanceInfos;
+        private Builder(RemovePublicIpsFromEpnInstanceRequest request) {
+            super(request);
+            this.EPNInstanceId = request.EPNInstanceId;
+            this.instanceInfos = request.instanceInfos;
         } 
 
         /**

@@ -49,9 +49,9 @@ public class DescribeEnsNetLevelRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeEnsNetLevelRequest response) {
-            super(response);
-            this.version = response.version;
+        private Builder(DescribeEnsNetLevelRequest request) {
+            super(request);
+            this.version = request.version;
         } 
 
         /**

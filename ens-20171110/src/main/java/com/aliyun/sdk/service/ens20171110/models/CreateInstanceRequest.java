@@ -12,9 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateInstanceRequest</p>
  */
 public class CreateInstanceRequest extends Request {
+    @Query
     @NameInMap("DataDisk")
     private java.util.List < DataDisk> dataDisk;
 
+    @Query
     @NameInMap("SystemDisk")
     private SystemDisk systemDisk;
 
@@ -70,6 +72,10 @@ public class CreateInstanceRequest extends Request {
     private String password;
 
     @Query
+    @NameInMap("PasswordInherit")
+    private Boolean passwordInherit;
+
+    @Query
     @NameInMap("PaymentType")
     private String paymentType;
 
@@ -119,6 +125,7 @@ public class CreateInstanceRequest extends Request {
         this.keyPairName = builder.keyPairName;
         this.ownerId = builder.ownerId;
         this.password = builder.password;
+        this.passwordInherit = builder.passwordInherit;
         this.paymentType = builder.paymentType;
         this.period = builder.period;
         this.privateIpAddress = builder.privateIpAddress;
@@ -241,6 +248,13 @@ public class CreateInstanceRequest extends Request {
     }
 
     /**
+     * @return passwordInherit
+     */
+    public Boolean getPasswordInherit() {
+        return this.passwordInherit;
+    }
+
+    /**
      * @return paymentType
      */
     public String getPaymentType() {
@@ -311,6 +325,7 @@ public class CreateInstanceRequest extends Request {
         private String keyPairName; 
         private Long ownerId; 
         private String password; 
+        private Boolean passwordInherit; 
         private String paymentType; 
         private String period; 
         private String privateIpAddress; 
@@ -324,36 +339,38 @@ public class CreateInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(CreateInstanceRequest response) {
-            super(response);
-            this.dataDisk = response.dataDisk;
-            this.systemDisk = response.systemDisk;
-            this.autoRenew = response.autoRenew;
-            this.autoRenewPeriod = response.autoRenewPeriod;
-            this.ensRegionId = response.ensRegionId;
-            this.hostName = response.hostName;
-            this.imageId = response.imageId;
-            this.instanceName = response.instanceName;
-            this.instanceType = response.instanceType;
-            this.internetChargeType = response.internetChargeType;
-            this.ipType = response.ipType;
-            this.keyPairName = response.keyPairName;
-            this.ownerId = response.ownerId;
-            this.password = response.password;
-            this.paymentType = response.paymentType;
-            this.period = response.period;
-            this.privateIpAddress = response.privateIpAddress;
-            this.publicIpIdentification = response.publicIpIdentification;
-            this.quantity = response.quantity;
-            this.uniqueSuffix = response.uniqueSuffix;
-            this.userData = response.userData;
-            this.vSwitchId = response.vSwitchId;
+        private Builder(CreateInstanceRequest request) {
+            super(request);
+            this.dataDisk = request.dataDisk;
+            this.systemDisk = request.systemDisk;
+            this.autoRenew = request.autoRenew;
+            this.autoRenewPeriod = request.autoRenewPeriod;
+            this.ensRegionId = request.ensRegionId;
+            this.hostName = request.hostName;
+            this.imageId = request.imageId;
+            this.instanceName = request.instanceName;
+            this.instanceType = request.instanceType;
+            this.internetChargeType = request.internetChargeType;
+            this.ipType = request.ipType;
+            this.keyPairName = request.keyPairName;
+            this.ownerId = request.ownerId;
+            this.password = request.password;
+            this.passwordInherit = request.passwordInherit;
+            this.paymentType = request.paymentType;
+            this.period = request.period;
+            this.privateIpAddress = request.privateIpAddress;
+            this.publicIpIdentification = request.publicIpIdentification;
+            this.quantity = request.quantity;
+            this.uniqueSuffix = request.uniqueSuffix;
+            this.userData = request.userData;
+            this.vSwitchId = request.vSwitchId;
         } 
 
         /**
          * DataDisk.
          */
         public Builder dataDisk(java.util.List < DataDisk> dataDisk) {
+            this.putQueryParameter("DataDisk", dataDisk);
             this.dataDisk = dataDisk;
             return this;
         }
@@ -362,6 +379,7 @@ public class CreateInstanceRequest extends Request {
          * SystemDisk.
          */
         public Builder systemDisk(SystemDisk systemDisk) {
+            this.putQueryParameter("SystemDisk", systemDisk);
             this.systemDisk = systemDisk;
             return this;
         }
@@ -471,6 +489,15 @@ public class CreateInstanceRequest extends Request {
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
             this.password = password;
+            return this;
+        }
+
+        /**
+         * 是否使用镜像预设的密码。使用该参数时，Password参数必须为空，同时您需要确保使用的镜像已经设置了密码。
+         */
+        public Builder passwordInherit(Boolean passwordInherit) {
+            this.putQueryParameter("PasswordInherit", passwordInherit);
+            this.passwordInherit = passwordInherit;
             return this;
         }
 

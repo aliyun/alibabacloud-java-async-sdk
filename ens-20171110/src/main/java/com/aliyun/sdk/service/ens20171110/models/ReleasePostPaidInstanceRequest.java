@@ -63,10 +63,10 @@ public class ReleasePostPaidInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(ReleasePostPaidInstanceRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.version = response.version;
+        private Builder(ReleasePostPaidInstanceRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.version = request.version;
         } 
 
         /**

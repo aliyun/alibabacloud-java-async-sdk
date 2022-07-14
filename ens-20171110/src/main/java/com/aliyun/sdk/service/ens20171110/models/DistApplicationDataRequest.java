@@ -76,11 +76,11 @@ public class DistApplicationDataRequest extends Request {
             super();
         } 
 
-        private Builder(DistApplicationDataRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.data = response.data;
-            this.distStrategy = response.distStrategy;
+        private Builder(DistApplicationDataRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.data = request.data;
+            this.distStrategy = request.distStrategy;
         } 
 
         /**

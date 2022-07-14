@@ -35,11 +35,6 @@ public class ExportImageRequest extends Request {
     @NameInMap("RoleName")
     private String roleName;
 
-    @Query
-    @NameInMap("Version")
-    @Validation(required = true)
-    private String version;
-
     private ExportImageRequest(Builder builder) {
         super(builder);
         this.imageId = builder.imageId;
@@ -47,7 +42,6 @@ public class ExportImageRequest extends Request {
         this.OSSPrefix = builder.OSSPrefix;
         this.OSSRegionId = builder.OSSRegionId;
         this.roleName = builder.roleName;
-        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -98,33 +92,24 @@ public class ExportImageRequest extends Request {
         return this.roleName;
     }
 
-    /**
-     * @return version
-     */
-    public String getVersion() {
-        return this.version;
-    }
-
     public static final class Builder extends Request.Builder<ExportImageRequest, Builder> {
         private String imageId; 
         private String OSSBucket; 
         private String OSSPrefix; 
         private String OSSRegionId; 
         private String roleName; 
-        private String version; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ExportImageRequest response) {
-            super(response);
-            this.imageId = response.imageId;
-            this.OSSBucket = response.OSSBucket;
-            this.OSSPrefix = response.OSSPrefix;
-            this.OSSRegionId = response.OSSRegionId;
-            this.roleName = response.roleName;
-            this.version = response.version;
+        private Builder(ExportImageRequest request) {
+            super(request);
+            this.imageId = request.imageId;
+            this.OSSBucket = request.OSSBucket;
+            this.OSSPrefix = request.OSSPrefix;
+            this.OSSRegionId = request.OSSRegionId;
+            this.roleName = request.roleName;
         } 
 
         /**
@@ -169,15 +154,6 @@ public class ExportImageRequest extends Request {
         public Builder roleName(String roleName) {
             this.putQueryParameter("RoleName", roleName);
             this.roleName = roleName;
-            return this;
-        }
-
-        /**
-         * Version.
-         */
-        public Builder version(String version) {
-            this.putQueryParameter("Version", version);
-            this.version = version;
             return this;
         }
 

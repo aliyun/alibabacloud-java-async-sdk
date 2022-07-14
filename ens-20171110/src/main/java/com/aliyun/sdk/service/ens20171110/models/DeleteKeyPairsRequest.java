@@ -63,10 +63,10 @@ public class DeleteKeyPairsRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteKeyPairsRequest response) {
-            super(response);
-            this.keyPairName = response.keyPairName;
-            this.version = response.version;
+        private Builder(DeleteKeyPairsRequest request) {
+            super(request);
+            this.keyPairName = request.keyPairName;
+            this.version = request.version;
         } 
 
         /**

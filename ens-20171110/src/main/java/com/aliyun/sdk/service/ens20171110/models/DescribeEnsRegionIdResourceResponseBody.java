@@ -157,7 +157,7 @@ public class DescribeEnsRegionIdResourceResponseBody extends TeaModel {
         private String isp;
 
         @NameInMap("VCpu")
-        private Integer VCpu;
+        private Integer vCpu;
 
         private EnsRegionIdResource(Builder builder) {
             this.area = builder.area;
@@ -168,7 +168,7 @@ public class DescribeEnsRegionIdResourceResponseBody extends TeaModel {
             this.instanceCount = builder.instanceCount;
             this.internetBandwidth = builder.internetBandwidth;
             this.isp = builder.isp;
-            this.VCpu = builder.VCpu;
+            this.vCpu = builder.vCpu;
         }
 
         public static Builder builder() {
@@ -236,10 +236,10 @@ public class DescribeEnsRegionIdResourceResponseBody extends TeaModel {
         }
 
         /**
-         * @return VCpu
+         * @return vCpu
          */
         public Integer getVCpu() {
-            return this.VCpu;
+            return this.vCpu;
         }
 
         public static final class Builder {
@@ -251,7 +251,7 @@ public class DescribeEnsRegionIdResourceResponseBody extends TeaModel {
             private Integer instanceCount; 
             private Long internetBandwidth; 
             private String isp; 
-            private Integer VCpu; 
+            private Integer vCpu; 
 
             /**
              * Area.
@@ -320,8 +320,8 @@ public class DescribeEnsRegionIdResourceResponseBody extends TeaModel {
             /**
              * VCpu.
              */
-            public Builder VCpu(Integer VCpu) {
-                this.VCpu = VCpu;
+            public Builder vCpu(Integer vCpu) {
+                this.vCpu = vCpu;
                 return this;
             }
 

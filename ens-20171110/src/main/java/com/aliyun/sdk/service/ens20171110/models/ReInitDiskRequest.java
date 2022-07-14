@@ -77,11 +77,11 @@ public class ReInitDiskRequest extends Request {
             super();
         } 
 
-        private Builder(ReInitDiskRequest response) {
-            super(response);
-            this.diskId = response.diskId;
-            this.imageId = response.imageId;
-            this.version = response.version;
+        private Builder(ReInitDiskRequest request) {
+            super(request);
+            this.diskId = request.diskId;
+            this.imageId = request.imageId;
+            this.version = request.version;
         } 
 
         /**

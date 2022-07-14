@@ -77,11 +77,11 @@ public class ModifyVSwitchAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyVSwitchAttributeRequest response) {
-            super(response);
-            this.description = response.description;
-            this.vSwitchId = response.vSwitchId;
-            this.vSwitchName = response.vSwitchName;
+        private Builder(ModifyVSwitchAttributeRequest request) {
+            super(request);
+            this.description = request.description;
+            this.vSwitchId = request.vSwitchId;
+            this.vSwitchName = request.vSwitchName;
         } 
 
         /**

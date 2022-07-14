@@ -63,10 +63,10 @@ public class SetLoadBalancerStatusRequest extends Request {
             super();
         } 
 
-        private Builder(SetLoadBalancerStatusRequest response) {
-            super(response);
-            this.loadBalancerId = response.loadBalancerId;
-            this.loadBalancerStatus = response.loadBalancerStatus;
+        private Builder(SetLoadBalancerStatusRequest request) {
+            super(request);
+            this.loadBalancerId = request.loadBalancerId;
+            this.loadBalancerStatus = request.loadBalancerStatus;
         } 
 
         /**

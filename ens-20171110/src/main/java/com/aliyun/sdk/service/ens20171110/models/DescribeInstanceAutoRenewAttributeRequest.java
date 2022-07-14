@@ -76,11 +76,11 @@ public class DescribeInstanceAutoRenewAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeInstanceAutoRenewAttributeRequest response) {
-            super(response);
-            this.instanceIds = response.instanceIds;
-            this.ownerId = response.ownerId;
-            this.version = response.version;
+        private Builder(DescribeInstanceAutoRenewAttributeRequest request) {
+            super(request);
+            this.instanceIds = request.instanceIds;
+            this.ownerId = request.ownerId;
+            this.version = request.version;
         } 
 
         /**

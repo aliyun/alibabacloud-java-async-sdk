@@ -63,10 +63,10 @@ public class DescribeLoadBalancerTCPListenerAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeLoadBalancerTCPListenerAttributeRequest response) {
-            super(response);
-            this.listenerPort = response.listenerPort;
-            this.loadBalancerId = response.loadBalancerId;
+        private Builder(DescribeLoadBalancerTCPListenerAttributeRequest request) {
+            super(request);
+            this.listenerPort = request.listenerPort;
+            this.loadBalancerId = request.loadBalancerId;
         } 
 
         /**

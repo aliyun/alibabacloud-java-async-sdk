@@ -88,12 +88,12 @@ public class ModifyEpnInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyEpnInstanceRequest response) {
-            super(response);
-            this.EPNInstanceId = response.EPNInstanceId;
-            this.EPNInstanceName = response.EPNInstanceName;
-            this.internetMaxBandwidthOut = response.internetMaxBandwidthOut;
-            this.networkingModel = response.networkingModel;
+        private Builder(ModifyEpnInstanceRequest request) {
+            super(request);
+            this.EPNInstanceId = request.EPNInstanceId;
+            this.EPNInstanceName = request.EPNInstanceName;
+            this.internetMaxBandwidthOut = request.internetMaxBandwidthOut;
+            this.networkingModel = request.networkingModel;
         } 
 
         /**

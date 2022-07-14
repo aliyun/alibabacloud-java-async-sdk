@@ -88,12 +88,12 @@ public class DescribeExportImageInfoRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeExportImageInfoRequest response) {
-            super(response);
-            this.imageId = response.imageId;
-            this.imageName = response.imageName;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(DescribeExportImageInfoRequest request) {
+            super(request);
+            this.imageId = request.imageId;
+            this.imageName = request.imageName;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**

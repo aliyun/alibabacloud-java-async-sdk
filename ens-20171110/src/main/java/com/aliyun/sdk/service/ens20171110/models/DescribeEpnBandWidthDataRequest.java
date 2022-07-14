@@ -156,17 +156,17 @@ public class DescribeEpnBandWidthDataRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeEpnBandWidthDataRequest response) {
-            super(response);
-            this.EPNInstanceId = response.EPNInstanceId;
-            this.endTime = response.endTime;
-            this.ensRegionId = response.ensRegionId;
-            this.instanceId = response.instanceId;
-            this.isp = response.isp;
-            this.networkingModel = response.networkingModel;
-            this.period = response.period;
-            this.startTime = response.startTime;
-            this.version = response.version;
+        private Builder(DescribeEpnBandWidthDataRequest request) {
+            super(request);
+            this.EPNInstanceId = request.EPNInstanceId;
+            this.endTime = request.endTime;
+            this.ensRegionId = request.ensRegionId;
+            this.instanceId = request.instanceId;
+            this.isp = request.isp;
+            this.networkingModel = request.networkingModel;
+            this.period = request.period;
+            this.startTime = request.startTime;
+            this.version = request.version;
         } 
 
         /**

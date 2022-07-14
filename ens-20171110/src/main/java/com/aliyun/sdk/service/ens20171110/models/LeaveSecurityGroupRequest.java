@@ -77,11 +77,11 @@ public class LeaveSecurityGroupRequest extends Request {
             super();
         } 
 
-        private Builder(LeaveSecurityGroupRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.securityGroupId = response.securityGroupId;
-            this.version = response.version;
+        private Builder(LeaveSecurityGroupRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.securityGroupId = request.securityGroupId;
+            this.version = request.version;
         } 
 
         /**

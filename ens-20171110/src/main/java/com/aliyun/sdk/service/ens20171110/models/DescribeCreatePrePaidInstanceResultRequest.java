@@ -63,10 +63,10 @@ public class DescribeCreatePrePaidInstanceResultRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeCreatePrePaidInstanceResultRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.version = response.version;
+        private Builder(DescribeCreatePrePaidInstanceResultRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.version = request.version;
         } 
 
         /**

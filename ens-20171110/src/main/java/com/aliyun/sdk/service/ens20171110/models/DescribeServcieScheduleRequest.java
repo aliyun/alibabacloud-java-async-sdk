@@ -76,11 +76,11 @@ public class DescribeServcieScheduleRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeServcieScheduleRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.podConfigName = response.podConfigName;
-            this.uuid = response.uuid;
+        private Builder(DescribeServcieScheduleRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.podConfigName = request.podConfigName;
+            this.uuid = request.uuid;
         } 
 
         /**

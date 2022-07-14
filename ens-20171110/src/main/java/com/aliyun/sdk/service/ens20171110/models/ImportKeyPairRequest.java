@@ -77,11 +77,11 @@ public class ImportKeyPairRequest extends Request {
             super();
         } 
 
-        private Builder(ImportKeyPairRequest response) {
-            super(response);
-            this.keyPairName = response.keyPairName;
-            this.publicKeyBody = response.publicKeyBody;
-            this.version = response.version;
+        private Builder(ImportKeyPairRequest request) {
+            super(request);
+            this.keyPairName = request.keyPairName;
+            this.publicKeyBody = request.publicKeyBody;
+            this.version = request.version;
         } 
 
         /**

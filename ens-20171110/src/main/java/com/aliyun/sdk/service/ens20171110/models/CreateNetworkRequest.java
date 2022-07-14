@@ -91,12 +91,12 @@ public class CreateNetworkRequest extends Request {
             super();
         } 
 
-        private Builder(CreateNetworkRequest response) {
-            super(response);
-            this.cidrBlock = response.cidrBlock;
-            this.description = response.description;
-            this.ensRegionId = response.ensRegionId;
-            this.networkName = response.networkName;
+        private Builder(CreateNetworkRequest request) {
+            super(request);
+            this.cidrBlock = request.cidrBlock;
+            this.description = request.description;
+            this.ensRegionId = request.ensRegionId;
+            this.networkName = request.networkName;
         } 
 
         /**

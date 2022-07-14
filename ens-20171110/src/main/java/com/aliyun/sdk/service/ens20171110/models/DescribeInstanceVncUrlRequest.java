@@ -49,9 +49,9 @@ public class DescribeInstanceVncUrlRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeInstanceVncUrlRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
+        private Builder(DescribeInstanceVncUrlRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
         } 
 
         /**

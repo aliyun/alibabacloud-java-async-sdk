@@ -61,10 +61,10 @@ public class DescribeApplicationResourceSummaryRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeApplicationResourceSummaryRequest response) {
-            super(response);
-            this.level = response.level;
-            this.resourceType = response.resourceType;
+        private Builder(DescribeApplicationResourceSummaryRequest request) {
+            super(request);
+            this.level = request.level;
+            this.resourceType = request.resourceType;
         } 
 
         /**

@@ -35,8 +35,8 @@ public class DescribeElbAvailableResourceInfoRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeElbAvailableResourceInfoRequest response) {
-            super(response);
+        private Builder(DescribeElbAvailableResourceInfoRequest request) {
+            super(request);
         } 
 
         @Override

@@ -63,10 +63,10 @@ public class StartInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(StartInstanceRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.version = response.version;
+        private Builder(StartInstanceRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.version = request.version;
         } 
 
         /**

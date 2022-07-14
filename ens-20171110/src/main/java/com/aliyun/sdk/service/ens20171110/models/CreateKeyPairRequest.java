@@ -63,10 +63,10 @@ public class CreateKeyPairRequest extends Request {
             super();
         } 
 
-        private Builder(CreateKeyPairRequest response) {
-            super(response);
-            this.keyPairName = response.keyPairName;
-            this.version = response.version;
+        private Builder(CreateKeyPairRequest request) {
+            super(request);
+            this.keyPairName = request.keyPairName;
+            this.version = request.version;
         } 
 
         /**

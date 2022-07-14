@@ -49,9 +49,9 @@ public class DescribeInstanceSpecRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeInstanceSpecRequest response) {
-            super(response);
-            this.version = response.version;
+        private Builder(DescribeInstanceSpecRequest request) {
+            super(request);
+            this.version = request.version;
         } 
 
         /**

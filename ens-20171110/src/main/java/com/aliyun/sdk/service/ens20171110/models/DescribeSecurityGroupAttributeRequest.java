@@ -49,9 +49,9 @@ public class DescribeSecurityGroupAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeSecurityGroupAttributeRequest response) {
-            super(response);
-            this.securityGroupId = response.securityGroupId;
+        private Builder(DescribeSecurityGroupAttributeRequest request) {
+            super(request);
+            this.securityGroupId = request.securityGroupId;
         } 
 
         /**

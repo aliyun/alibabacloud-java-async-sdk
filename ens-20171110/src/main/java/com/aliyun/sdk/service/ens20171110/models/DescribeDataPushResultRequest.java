@@ -140,16 +140,16 @@ public class DescribeDataPushResultRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDataPushResultRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.dataNames = response.dataNames;
-            this.dataVersions = response.dataVersions;
-            this.maxDate = response.maxDate;
-            this.minDate = response.minDate;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionIds = response.regionIds;
+        private Builder(DescribeDataPushResultRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.dataNames = request.dataNames;
+            this.dataVersions = request.dataVersions;
+            this.maxDate = request.maxDate;
+            this.minDate = request.minDate;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionIds = request.regionIds;
         } 
 
         /**

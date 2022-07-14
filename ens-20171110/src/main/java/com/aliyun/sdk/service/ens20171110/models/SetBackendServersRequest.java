@@ -63,17 +63,18 @@ public class SetBackendServersRequest extends Request {
             super();
         } 
 
-        private Builder(SetBackendServersRequest response) {
-            super(response);
-            this.backendServers = response.backendServers;
-            this.loadBalancerId = response.loadBalancerId;
+        private Builder(SetBackendServersRequest request) {
+            super(request);
+            this.backendServers = request.backendServers;
+            this.loadBalancerId = request.loadBalancerId;
         } 
 
         /**
          * BackendServers.
          */
         public Builder backendServers(java.util.List < BackendServers> backendServers) {
-            this.putQueryParameter("BackendServers", backendServers);
+            String backendServersShrink = shrink(backendServers, "BackendServers", "json");
+            this.putQueryParameter("BackendServers", backendServersShrink);
             this.backendServers = backendServers;
             return this;
         }

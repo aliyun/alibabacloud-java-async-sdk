@@ -49,9 +49,9 @@ public class DescribeAvailableResourceRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAvailableResourceRequest response) {
-            super(response);
-            this.version = response.version;
+        private Builder(DescribeAvailableResourceRequest request) {
+            super(request);
+            this.version = request.version;
         } 
 
         /**

@@ -75,11 +75,11 @@ public class ModifyImageSharePermissionRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyImageSharePermissionRequest response) {
-            super(response);
-            this.addAccounts = response.addAccounts;
-            this.imageId = response.imageId;
-            this.removeAccounts = response.removeAccounts;
+        private Builder(ModifyImageSharePermissionRequest request) {
+            super(request);
+            this.addAccounts = request.addAccounts;
+            this.imageId = request.imageId;
+            this.removeAccounts = request.removeAccounts;
         } 
 
         /**

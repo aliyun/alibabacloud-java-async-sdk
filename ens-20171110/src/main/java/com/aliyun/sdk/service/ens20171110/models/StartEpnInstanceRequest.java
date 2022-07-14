@@ -49,9 +49,9 @@ public class StartEpnInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(StartEpnInstanceRequest response) {
-            super(response);
-            this.EPNInstanceId = response.EPNInstanceId;
+        private Builder(StartEpnInstanceRequest request) {
+            super(request);
+            this.EPNInstanceId = request.EPNInstanceId;
         } 
 
         /**

@@ -145,16 +145,16 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
             super();
         } 
 
-        private Builder(AuthorizeSecurityGroupEgressRequest response) {
-            super(response);
-            this.destCidrIp = response.destCidrIp;
-            this.ipProtocol = response.ipProtocol;
-            this.policy = response.policy;
-            this.portRange = response.portRange;
-            this.priority = response.priority;
-            this.securityGroupId = response.securityGroupId;
-            this.sourcePortRange = response.sourcePortRange;
-            this.version = response.version;
+        private Builder(AuthorizeSecurityGroupEgressRequest request) {
+            super(request);
+            this.destCidrIp = request.destCidrIp;
+            this.ipProtocol = request.ipProtocol;
+            this.policy = request.policy;
+            this.portRange = request.portRange;
+            this.priority = request.priority;
+            this.securityGroupId = request.securityGroupId;
+            this.sourcePortRange = request.sourcePortRange;
+            this.version = request.version;
         } 
 
         /**

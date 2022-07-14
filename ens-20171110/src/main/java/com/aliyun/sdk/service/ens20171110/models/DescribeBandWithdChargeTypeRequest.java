@@ -49,9 +49,9 @@ public class DescribeBandWithdChargeTypeRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeBandWithdChargeTypeRequest response) {
-            super(response);
-            this.version = response.version;
+        private Builder(DescribeBandWithdChargeTypeRequest request) {
+            super(request);
+            this.version = request.version;
         } 
 
         /**

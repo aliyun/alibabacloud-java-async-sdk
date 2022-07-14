@@ -48,9 +48,9 @@ public class DescribeLoadBalancerSpecRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeLoadBalancerSpecRequest response) {
-            super(response);
-            this.loadBalancerSpec = response.loadBalancerSpec;
+        private Builder(DescribeLoadBalancerSpecRequest request) {
+            super(request);
+            this.loadBalancerSpec = request.loadBalancerSpec;
         } 
 
         /**

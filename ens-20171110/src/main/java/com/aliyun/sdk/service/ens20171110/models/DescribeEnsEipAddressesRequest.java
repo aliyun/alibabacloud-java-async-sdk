@@ -29,6 +29,10 @@ public class DescribeEnsEipAddressesRequest extends Request {
     private String eipAddress;
 
     @Query
+    @NameInMap("EnsRegionId")
+    private String ensRegionId;
+
+    @Query
     @NameInMap("PageNumber")
     private Integer pageNumber;
 
@@ -43,6 +47,7 @@ public class DescribeEnsEipAddressesRequest extends Request {
         this.associatedInstanceId = builder.associatedInstanceId;
         this.associatedInstanceType = builder.associatedInstanceType;
         this.eipAddress = builder.eipAddress;
+        this.ensRegionId = builder.ensRegionId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
     }
@@ -89,6 +94,13 @@ public class DescribeEnsEipAddressesRequest extends Request {
     }
 
     /**
+     * @return ensRegionId
+     */
+    public String getEnsRegionId() {
+        return this.ensRegionId;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -107,6 +119,7 @@ public class DescribeEnsEipAddressesRequest extends Request {
         private String associatedInstanceId; 
         private String associatedInstanceType; 
         private String eipAddress; 
+        private String ensRegionId; 
         private Integer pageNumber; 
         private Integer pageSize; 
 
@@ -114,14 +127,15 @@ public class DescribeEnsEipAddressesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeEnsEipAddressesRequest response) {
-            super(response);
-            this.allocationId = response.allocationId;
-            this.associatedInstanceId = response.associatedInstanceId;
-            this.associatedInstanceType = response.associatedInstanceType;
-            this.eipAddress = response.eipAddress;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(DescribeEnsEipAddressesRequest request) {
+            super(request);
+            this.allocationId = request.allocationId;
+            this.associatedInstanceId = request.associatedInstanceId;
+            this.associatedInstanceType = request.associatedInstanceType;
+            this.eipAddress = request.eipAddress;
+            this.ensRegionId = request.ensRegionId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**
@@ -157,6 +171,15 @@ public class DescribeEnsEipAddressesRequest extends Request {
         public Builder eipAddress(String eipAddress) {
             this.putQueryParameter("EipAddress", eipAddress);
             this.eipAddress = eipAddress;
+            return this;
+        }
+
+        /**
+         * ENS节点ID
+         */
+        public Builder ensRegionId(String ensRegionId) {
+            this.putQueryParameter("EnsRegionId", ensRegionId);
+            this.ensRegionId = ensRegionId;
             return this;
         }
 

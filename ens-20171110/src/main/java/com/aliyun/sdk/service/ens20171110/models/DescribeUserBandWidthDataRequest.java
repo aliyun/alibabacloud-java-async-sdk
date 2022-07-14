@@ -130,15 +130,15 @@ public class DescribeUserBandWidthDataRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeUserBandWidthDataRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.ensRegionId = response.ensRegionId;
-            this.instanceId = response.instanceId;
-            this.isp = response.isp;
-            this.period = response.period;
-            this.startTime = response.startTime;
-            this.version = response.version;
+        private Builder(DescribeUserBandWidthDataRequest request) {
+            super(request);
+            this.endTime = request.endTime;
+            this.ensRegionId = request.ensRegionId;
+            this.instanceId = request.instanceId;
+            this.isp = request.isp;
+            this.period = request.period;
+            this.startTime = request.startTime;
+            this.version = request.version;
         } 
 
         /**

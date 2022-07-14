@@ -103,13 +103,13 @@ public class DescribeDataDownloadURLRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDataDownloadURLRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.dataName = response.dataName;
-            this.dataVersion = response.dataVersion;
-            this.expireTimeout = response.expireTimeout;
-            this.serverFilterStrategy = response.serverFilterStrategy;
+        private Builder(DescribeDataDownloadURLRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.dataName = request.dataName;
+            this.dataVersion = request.dataVersion;
+            this.expireTimeout = request.expireTimeout;
+            this.serverFilterStrategy = request.serverFilterStrategy;
         } 
 
         /**

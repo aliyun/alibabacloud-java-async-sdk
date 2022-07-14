@@ -49,9 +49,9 @@ public class StopEpnInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(StopEpnInstanceRequest response) {
-            super(response);
-            this.EPNInstanceId = response.EPNInstanceId;
+        private Builder(StopEpnInstanceRequest request) {
+            super(request);
+            this.EPNInstanceId = request.EPNInstanceId;
         } 
 
         /**

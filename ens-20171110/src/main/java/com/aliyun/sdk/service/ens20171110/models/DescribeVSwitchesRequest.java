@@ -141,16 +141,16 @@ public class DescribeVSwitchesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeVSwitchesRequest response) {
-            super(response);
-            this.ensRegionId = response.ensRegionId;
-            this.networkId = response.networkId;
-            this.orderByParams = response.orderByParams;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.vSwitchId = response.vSwitchId;
-            this.vSwitchName = response.vSwitchName;
-            this.version = response.version;
+        private Builder(DescribeVSwitchesRequest request) {
+            super(request);
+            this.ensRegionId = request.ensRegionId;
+            this.networkId = request.networkId;
+            this.orderByParams = request.orderByParams;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.vSwitchId = request.vSwitchId;
+            this.vSwitchName = request.vSwitchName;
+            this.version = request.version;
         } 
 
         /**

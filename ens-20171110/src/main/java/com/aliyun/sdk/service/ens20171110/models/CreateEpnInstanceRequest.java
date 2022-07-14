@@ -104,13 +104,13 @@ public class CreateEpnInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(CreateEpnInstanceRequest response) {
-            super(response);
-            this.EPNInstanceName = response.EPNInstanceName;
-            this.EPNInstanceType = response.EPNInstanceType;
-            this.internetChargeType = response.internetChargeType;
-            this.internetMaxBandwidthOut = response.internetMaxBandwidthOut;
-            this.networkingModel = response.networkingModel;
+        private Builder(CreateEpnInstanceRequest request) {
+            super(request);
+            this.EPNInstanceName = request.EPNInstanceName;
+            this.EPNInstanceType = request.EPNInstanceType;
+            this.internetChargeType = request.internetChargeType;
+            this.internetMaxBandwidthOut = request.internetMaxBandwidthOut;
+            this.networkingModel = request.networkingModel;
         } 
 
         /**

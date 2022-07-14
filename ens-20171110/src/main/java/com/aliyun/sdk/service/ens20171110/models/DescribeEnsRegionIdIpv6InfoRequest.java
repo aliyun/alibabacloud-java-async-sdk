@@ -63,10 +63,10 @@ public class DescribeEnsRegionIdIpv6InfoRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeEnsRegionIdIpv6InfoRequest response) {
-            super(response);
-            this.ensRegionId = response.ensRegionId;
-            this.version = response.version;
+        private Builder(DescribeEnsRegionIdIpv6InfoRequest request) {
+            super(request);
+            this.ensRegionId = request.ensRegionId;
+            this.version = request.version;
         } 
 
         /**

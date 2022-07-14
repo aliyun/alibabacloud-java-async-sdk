@@ -102,13 +102,13 @@ public class DescribeSecurityGroupsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeSecurityGroupsRequest response) {
-            super(response);
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.securityGroupId = response.securityGroupId;
-            this.securityGroupName = response.securityGroupName;
-            this.version = response.version;
+        private Builder(DescribeSecurityGroupsRequest request) {
+            super(request);
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.securityGroupId = request.securityGroupId;
+            this.securityGroupName = request.securityGroupName;
+            this.version = request.version;
         } 
 
         /**

@@ -131,6 +131,108 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
 
     } 
 
+    public static class PrivateIpSet extends TeaModel {
+        @NameInMap("Primary")
+        private Boolean primary;
+
+        @NameInMap("PrivateIpAddress")
+        private String privateIpAddress;
+
+        private PrivateIpSet(Builder builder) {
+            this.primary = builder.primary;
+            this.privateIpAddress = builder.privateIpAddress;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PrivateIpSet create() {
+            return builder().build();
+        }
+
+        /**
+         * @return primary
+         */
+        public Boolean getPrimary() {
+            return this.primary;
+        }
+
+        /**
+         * @return privateIpAddress
+         */
+        public String getPrivateIpAddress() {
+            return this.privateIpAddress;
+        }
+
+        public static final class Builder {
+            private Boolean primary; 
+            private String privateIpAddress; 
+
+            /**
+             * Primary.
+             */
+            public Builder primary(Boolean primary) {
+                this.primary = primary;
+                return this;
+            }
+
+            /**
+             * PrivateIpAddress.
+             */
+            public Builder privateIpAddress(String privateIpAddress) {
+                this.privateIpAddress = privateIpAddress;
+                return this;
+            }
+
+            public PrivateIpSet build() {
+                return new PrivateIpSet(this);
+            } 
+
+        } 
+
+    }
+    public static class PrivateIpSets extends TeaModel {
+        @NameInMap("PrivateIpSet")
+        private java.util.List < PrivateIpSet> privateIpSet;
+
+        private PrivateIpSets(Builder builder) {
+            this.privateIpSet = builder.privateIpSet;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PrivateIpSets create() {
+            return builder().build();
+        }
+
+        /**
+         * @return privateIpSet
+         */
+        public java.util.List < PrivateIpSet> getPrivateIpSet() {
+            return this.privateIpSet;
+        }
+
+        public static final class Builder {
+            private java.util.List < PrivateIpSet> privateIpSet; 
+
+            /**
+             * PrivateIpSet.
+             */
+            public Builder privateIpSet(java.util.List < PrivateIpSet> privateIpSet) {
+                this.privateIpSet = privateIpSet;
+                return this;
+            }
+
+            public PrivateIpSets build() {
+                return new PrivateIpSets(this);
+            } 
+
+        } 
+
+    }
     public static class NetworkInterfaceSet extends TeaModel {
         @NameInMap("CreationTime")
         private String creationTime;
@@ -153,6 +255,9 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         @NameInMap("PrimaryIpType")
         private String primaryIpType;
 
+        @NameInMap("PrivateIpSets")
+        private PrivateIpSets privateIpSets;
+
         @NameInMap("Status")
         private String status;
 
@@ -167,6 +272,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             this.networkInterfaceId = builder.networkInterfaceId;
             this.primaryIp = builder.primaryIp;
             this.primaryIpType = builder.primaryIpType;
+            this.privateIpSets = builder.privateIpSets;
             this.status = builder.status;
             this.vSwitchId = builder.vSwitchId;
         }
@@ -229,6 +335,13 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         }
 
         /**
+         * @return privateIpSets
+         */
+        public PrivateIpSets getPrivateIpSets() {
+            return this.privateIpSets;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -250,6 +363,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             private String networkInterfaceId; 
             private String primaryIp; 
             private String primaryIpType; 
+            private PrivateIpSets privateIpSets; 
             private String status; 
             private String vSwitchId; 
 
@@ -306,6 +420,14 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
              */
             public Builder primaryIpType(String primaryIpType) {
                 this.primaryIpType = primaryIpType;
+                return this;
+            }
+
+            /**
+             * PrivateIpSets.
+             */
+            public Builder privateIpSets(PrivateIpSets privateIpSets) {
+                this.privateIpSets = privateIpSets;
                 return this;
             }
 

@@ -113,10 +113,10 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
 
     public static class ResourceDetailInfos extends TeaModel {
         @NameInMap("ID")
-        private String ID;
+        private String id;
 
         @NameInMap("IP")
-        private String IP;
+        private String ip;
 
         @NameInMap("ISP")
         private String ISP;
@@ -137,8 +137,8 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
         private String type;
 
         private ResourceDetailInfos(Builder builder) {
-            this.ID = builder.ID;
-            this.IP = builder.IP;
+            this.id = builder.id;
+            this.ip = builder.ip;
             this.ISP = builder.ISP;
             this.mac = builder.mac;
             this.regionID = builder.regionID;
@@ -156,17 +156,17 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
         }
 
         /**
-         * @return ID
+         * @return id
          */
-        public String getID() {
-            return this.ID;
+        public String getId() {
+            return this.id;
         }
 
         /**
-         * @return IP
+         * @return ip
          */
-        public String getIP() {
-            return this.IP;
+        public String getIp() {
+            return this.ip;
         }
 
         /**
@@ -212,8 +212,8 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private String ID; 
-            private String IP; 
+            private String id; 
+            private String ip; 
             private String ISP; 
             private String mac; 
             private String regionID; 
@@ -224,16 +224,16 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
             /**
              * ID.
              */
-            public Builder ID(String ID) {
-                this.ID = ID;
+            public Builder id(String id) {
+                this.id = id;
                 return this;
             }
 
             /**
              * IP.
              */
-            public Builder IP(String IP) {
-                this.IP = IP;
+            public Builder ip(String ip) {
+                this.ip = ip;
                 return this;
             }
 

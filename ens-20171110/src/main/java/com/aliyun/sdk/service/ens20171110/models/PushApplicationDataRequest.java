@@ -89,12 +89,12 @@ public class PushApplicationDataRequest extends Request {
             super();
         } 
 
-        private Builder(PushApplicationDataRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.data = response.data;
-            this.pushStrategy = response.pushStrategy;
-            this.timeout = response.timeout;
+        private Builder(PushApplicationDataRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.data = request.data;
+            this.pushStrategy = request.pushStrategy;
+            this.timeout = request.timeout;
         } 
 
         /**

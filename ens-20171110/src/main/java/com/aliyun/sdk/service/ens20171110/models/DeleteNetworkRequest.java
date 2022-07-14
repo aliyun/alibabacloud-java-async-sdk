@@ -49,9 +49,9 @@ public class DeleteNetworkRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteNetworkRequest response) {
-            super(response);
-            this.networkId = response.networkId;
+        private Builder(DeleteNetworkRequest request) {
+            super(request);
+            this.networkId = request.networkId;
         } 
 
         /**

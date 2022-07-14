@@ -63,10 +63,10 @@ public class DescribeExportImageStatusRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeExportImageStatusRequest response) {
-            super(response);
-            this.imageId = response.imageId;
-            this.version = response.version;
+        private Builder(DescribeExportImageStatusRequest request) {
+            super(request);
+            this.imageId = request.imageId;
+            this.version = request.version;
         } 
 
         /**

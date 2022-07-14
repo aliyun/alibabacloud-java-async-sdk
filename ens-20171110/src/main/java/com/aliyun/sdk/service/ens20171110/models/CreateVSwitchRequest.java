@@ -34,11 +34,6 @@ public class CreateVSwitchRequest extends Request {
     @NameInMap("VSwitchName")
     private String vSwitchName;
 
-    @Query
-    @NameInMap("Version")
-    @Validation(required = true)
-    private String version;
-
     private CreateVSwitchRequest(Builder builder) {
         super(builder);
         this.cidrBlock = builder.cidrBlock;
@@ -46,7 +41,6 @@ public class CreateVSwitchRequest extends Request {
         this.ensRegionId = builder.ensRegionId;
         this.networkId = builder.networkId;
         this.vSwitchName = builder.vSwitchName;
-        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -97,33 +91,24 @@ public class CreateVSwitchRequest extends Request {
         return this.vSwitchName;
     }
 
-    /**
-     * @return version
-     */
-    public String getVersion() {
-        return this.version;
-    }
-
     public static final class Builder extends Request.Builder<CreateVSwitchRequest, Builder> {
         private String cidrBlock; 
         private String description; 
         private String ensRegionId; 
         private String networkId; 
         private String vSwitchName; 
-        private String version; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateVSwitchRequest response) {
-            super(response);
-            this.cidrBlock = response.cidrBlock;
-            this.description = response.description;
-            this.ensRegionId = response.ensRegionId;
-            this.networkId = response.networkId;
-            this.vSwitchName = response.vSwitchName;
-            this.version = response.version;
+        private Builder(CreateVSwitchRequest request) {
+            super(request);
+            this.cidrBlock = request.cidrBlock;
+            this.description = request.description;
+            this.ensRegionId = request.ensRegionId;
+            this.networkId = request.networkId;
+            this.vSwitchName = request.vSwitchName;
         } 
 
         /**
@@ -168,15 +153,6 @@ public class CreateVSwitchRequest extends Request {
         public Builder vSwitchName(String vSwitchName) {
             this.putQueryParameter("VSwitchName", vSwitchName);
             this.vSwitchName = vSwitchName;
-            return this;
-        }
-
-        /**
-         * Version.
-         */
-        public Builder version(String version) {
-            this.putQueryParameter("Version", version);
-            this.version = version;
             return this;
         }
 

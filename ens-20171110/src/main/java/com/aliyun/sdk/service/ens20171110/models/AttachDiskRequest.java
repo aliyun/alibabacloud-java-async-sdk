@@ -76,11 +76,11 @@ public class AttachDiskRequest extends Request {
             super();
         } 
 
-        private Builder(AttachDiskRequest response) {
-            super(response);
-            this.deleteWithInstance = response.deleteWithInstance;
-            this.diskId = response.diskId;
-            this.instanceId = response.instanceId;
+        private Builder(AttachDiskRequest request) {
+            super(request);
+            this.deleteWithInstance = request.deleteWithInstance;
+            this.diskId = request.diskId;
+            this.instanceId = request.instanceId;
         } 
 
         /**

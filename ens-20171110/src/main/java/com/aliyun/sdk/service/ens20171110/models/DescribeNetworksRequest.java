@@ -100,13 +100,13 @@ public class DescribeNetworksRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeNetworksRequest response) {
-            super(response);
-            this.ensRegionId = response.ensRegionId;
-            this.networkId = response.networkId;
-            this.networkName = response.networkName;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(DescribeNetworksRequest request) {
+            super(request);
+            this.ensRegionId = request.ensRegionId;
+            this.networkId = request.networkId;
+            this.networkName = request.networkName;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**

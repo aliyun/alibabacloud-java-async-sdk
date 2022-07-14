@@ -63,10 +63,10 @@ public class DetachDiskRequest extends Request {
             super();
         } 
 
-        private Builder(DetachDiskRequest response) {
-            super(response);
-            this.diskId = response.diskId;
-            this.instanceId = response.instanceId;
+        private Builder(DetachDiskRequest request) {
+            super(request);
+            this.diskId = request.diskId;
+            this.instanceId = request.instanceId;
         } 
 
         /**

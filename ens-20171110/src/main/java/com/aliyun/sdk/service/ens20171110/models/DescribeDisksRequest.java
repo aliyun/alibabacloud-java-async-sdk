@@ -204,21 +204,21 @@ public class DescribeDisksRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDisksRequest response) {
-            super(response);
-            this.category = response.category;
-            this.diskChargeType = response.diskChargeType;
-            this.diskId = response.diskId;
-            this.diskIds = response.diskIds;
-            this.diskName = response.diskName;
-            this.diskType = response.diskType;
-            this.ensRegionId = response.ensRegionId;
-            this.ensRegionIds = response.ensRegionIds;
-            this.orderByParams = response.orderByParams;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.status = response.status;
-            this.type = response.type;
+        private Builder(DescribeDisksRequest request) {
+            super(request);
+            this.category = request.category;
+            this.diskChargeType = request.diskChargeType;
+            this.diskId = request.diskId;
+            this.diskIds = request.diskIds;
+            this.diskName = request.diskName;
+            this.diskType = request.diskType;
+            this.ensRegionId = request.ensRegionId;
+            this.ensRegionIds = request.ensRegionIds;
+            this.orderByParams = request.orderByParams;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.status = request.status;
+            this.type = request.type;
         } 
 
         /**

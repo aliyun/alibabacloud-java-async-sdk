@@ -156,17 +156,17 @@ public class RunServiceScheduleRequest extends Request {
             super();
         } 
 
-        private Builder(RunServiceScheduleRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.clientIp = response.clientIp;
-            this.directorys = response.directorys;
-            this.podConfigName = response.podConfigName;
-            this.preLockedTimeout = response.preLockedTimeout;
-            this.scheduleStrategy = response.scheduleStrategy;
-            this.serviceAction = response.serviceAction;
-            this.serviceCommands = response.serviceCommands;
-            this.uuid = response.uuid;
+        private Builder(RunServiceScheduleRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.clientIp = request.clientIp;
+            this.directorys = request.directorys;
+            this.podConfigName = request.podConfigName;
+            this.preLockedTimeout = request.preLockedTimeout;
+            this.scheduleStrategy = request.scheduleStrategy;
+            this.serviceAction = request.serviceAction;
+            this.serviceCommands = request.serviceCommands;
+            this.uuid = request.uuid;
         } 
 
         /**

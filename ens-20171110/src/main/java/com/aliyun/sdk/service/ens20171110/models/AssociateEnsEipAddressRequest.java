@@ -76,11 +76,11 @@ public class AssociateEnsEipAddressRequest extends Request {
             super();
         } 
 
-        private Builder(AssociateEnsEipAddressRequest response) {
-            super(response);
-            this.allocationId = response.allocationId;
-            this.instanceId = response.instanceId;
-            this.instanceType = response.instanceType;
+        private Builder(AssociateEnsEipAddressRequest request) {
+            super(request);
+            this.allocationId = request.allocationId;
+            this.instanceId = request.instanceId;
+            this.instanceType = request.instanceType;
         } 
 
         /**

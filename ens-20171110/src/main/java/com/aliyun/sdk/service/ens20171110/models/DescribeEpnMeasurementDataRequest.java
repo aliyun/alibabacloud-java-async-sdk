@@ -77,11 +77,11 @@ public class DescribeEpnMeasurementDataRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeEpnMeasurementDataRequest response) {
-            super(response);
-            this.endDate = response.endDate;
-            this.startDate = response.startDate;
-            this.version = response.version;
+        private Builder(DescribeEpnMeasurementDataRequest request) {
+            super(request);
+            this.endDate = request.endDate;
+            this.startDate = request.startDate;
+            this.version = request.version;
         } 
 
         /**

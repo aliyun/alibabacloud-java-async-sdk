@@ -378,10 +378,10 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
         private String deviceName;
 
         @NameInMap("ID")
-        private String ID;
+        private String id;
 
         @NameInMap("IP")
-        private String IP;
+        private String ip;
 
         @NameInMap("ISP")
         private String ISP;
@@ -406,8 +406,8 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
 
         private ResourceDetailInfos(Builder builder) {
             this.deviceName = builder.deviceName;
-            this.ID = builder.ID;
-            this.IP = builder.IP;
+            this.id = builder.id;
+            this.ip = builder.ip;
             this.ISP = builder.ISP;
             this.imageID = builder.imageID;
             this.mac = builder.mac;
@@ -433,17 +433,17 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
         }
 
         /**
-         * @return ID
+         * @return id
          */
-        public String getID() {
-            return this.ID;
+        public String getId() {
+            return this.id;
         }
 
         /**
-         * @return IP
+         * @return ip
          */
-        public String getIP() {
-            return this.IP;
+        public String getIp() {
+            return this.ip;
         }
 
         /**
@@ -497,8 +497,8 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
 
         public static final class Builder {
             private String deviceName; 
-            private String ID; 
-            private String IP; 
+            private String id; 
+            private String ip; 
             private String ISP; 
             private String imageID; 
             private String mac; 
@@ -518,16 +518,16 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             /**
              * ID.
              */
-            public Builder ID(String ID) {
-                this.ID = ID;
+            public Builder id(String id) {
+                this.id = id;
                 return this;
             }
 
             /**
              * IP.
              */
-            public Builder IP(String IP) {
-                this.IP = IP;
+            public Builder ip(String ip) {
+                this.ip = ip;
                 return this;
             }
 

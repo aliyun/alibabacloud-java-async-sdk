@@ -49,9 +49,9 @@ public class ReleaseInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(ReleaseInstanceRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
+        private Builder(ReleaseInstanceRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
         } 
 
         /**

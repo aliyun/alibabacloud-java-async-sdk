@@ -63,10 +63,10 @@ public class JoinVSwitchesToEpnInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(JoinVSwitchesToEpnInstanceRequest response) {
-            super(response);
-            this.EPNInstanceId = response.EPNInstanceId;
-            this.vSwitchesInfo = response.vSwitchesInfo;
+        private Builder(JoinVSwitchesToEpnInstanceRequest request) {
+            super(request);
+            this.EPNInstanceId = request.EPNInstanceId;
+            this.vSwitchesInfo = request.vSwitchesInfo;
         } 
 
         /**

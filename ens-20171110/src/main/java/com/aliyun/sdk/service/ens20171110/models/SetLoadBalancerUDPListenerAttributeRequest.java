@@ -201,20 +201,20 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(SetLoadBalancerUDPListenerAttributeRequest response) {
-            super(response);
-            this.description = response.description;
-            this.eipTransmit = response.eipTransmit;
-            this.healthCheckConnectPort = response.healthCheckConnectPort;
-            this.healthCheckConnectTimeout = response.healthCheckConnectTimeout;
-            this.healthCheckExp = response.healthCheckExp;
-            this.healthCheckInterval = response.healthCheckInterval;
-            this.healthCheckReq = response.healthCheckReq;
-            this.healthyThreshold = response.healthyThreshold;
-            this.listenerPort = response.listenerPort;
-            this.loadBalancerId = response.loadBalancerId;
-            this.scheduler = response.scheduler;
-            this.unhealthyThreshold = response.unhealthyThreshold;
+        private Builder(SetLoadBalancerUDPListenerAttributeRequest request) {
+            super(request);
+            this.description = request.description;
+            this.eipTransmit = request.eipTransmit;
+            this.healthCheckConnectPort = request.healthCheckConnectPort;
+            this.healthCheckConnectTimeout = request.healthCheckConnectTimeout;
+            this.healthCheckExp = request.healthCheckExp;
+            this.healthCheckInterval = request.healthCheckInterval;
+            this.healthCheckReq = request.healthCheckReq;
+            this.healthyThreshold = request.healthyThreshold;
+            this.listenerPort = request.listenerPort;
+            this.loadBalancerId = request.loadBalancerId;
+            this.scheduler = request.scheduler;
+            this.unhealthyThreshold = request.unhealthyThreshold;
         } 
 
         /**

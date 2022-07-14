@@ -35,8 +35,8 @@ public class DescribeCloudDiskAvailableResourceInfoRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeCloudDiskAvailableResourceInfoRequest response) {
-            super(response);
+        private Builder(DescribeCloudDiskAvailableResourceInfoRequest request) {
+            super(request);
         } 
 
         @Override

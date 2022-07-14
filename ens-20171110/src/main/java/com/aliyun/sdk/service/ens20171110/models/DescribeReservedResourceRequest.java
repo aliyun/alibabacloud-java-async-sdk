@@ -49,9 +49,9 @@ public class DescribeReservedResourceRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeReservedResourceRequest response) {
-            super(response);
-            this.version = response.version;
+        private Builder(DescribeReservedResourceRequest request) {
+            super(request);
+            this.version = request.version;
         } 
 
         /**

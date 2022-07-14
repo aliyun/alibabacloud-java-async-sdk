@@ -86,8 +86,16 @@ public class RunInstancesRequest extends Request {
     private Long period;
 
     @Query
+    @NameInMap("PeriodUnit")
+    private String periodUnit;
+
+    @Query
     @NameInMap("PrivateIpAddress")
     private String privateIpAddress;
+
+    @Query
+    @NameInMap("PublicIpIdentification")
+    private Boolean publicIpIdentification;
 
     @Query
     @NameInMap("ScheduleAreaLevel")
@@ -108,7 +116,6 @@ public class RunInstancesRequest extends Request {
 
     @Query
     @NameInMap("SystemDisk")
-    @Validation(required = true)
     private SystemDisk systemDisk;
 
     @Query
@@ -142,7 +149,9 @@ public class RunInstancesRequest extends Request {
         this.netWorkId = builder.netWorkId;
         this.password = builder.password;
         this.period = builder.period;
+        this.periodUnit = builder.periodUnit;
         this.privateIpAddress = builder.privateIpAddress;
+        this.publicIpIdentification = builder.publicIpIdentification;
         this.scheduleAreaLevel = builder.scheduleAreaLevel;
         this.schedulingPriceStrategy = builder.schedulingPriceStrategy;
         this.schedulingStrategy = builder.schedulingStrategy;
@@ -286,10 +295,24 @@ public class RunInstancesRequest extends Request {
     }
 
     /**
+     * @return periodUnit
+     */
+    public String getPeriodUnit() {
+        return this.periodUnit;
+    }
+
+    /**
      * @return privateIpAddress
      */
     public String getPrivateIpAddress() {
         return this.privateIpAddress;
+    }
+
+    /**
+     * @return publicIpIdentification
+     */
+    public Boolean getPublicIpIdentification() {
+        return this.publicIpIdentification;
     }
 
     /**
@@ -366,7 +389,9 @@ public class RunInstancesRequest extends Request {
         private String netWorkId; 
         private String password; 
         private Long period; 
+        private String periodUnit; 
         private String privateIpAddress; 
+        private Boolean publicIpIdentification; 
         private String scheduleAreaLevel; 
         private String schedulingPriceStrategy; 
         private String schedulingStrategy; 
@@ -380,34 +405,36 @@ public class RunInstancesRequest extends Request {
             super();
         } 
 
-        private Builder(RunInstancesRequest response) {
-            super(response);
-            this.amount = response.amount;
-            this.autoRenew = response.autoRenew;
-            this.carrier = response.carrier;
-            this.dataDisk = response.dataDisk;
-            this.ensRegionId = response.ensRegionId;
-            this.hostName = response.hostName;
-            this.imageId = response.imageId;
-            this.instanceChargeType = response.instanceChargeType;
-            this.instanceName = response.instanceName;
-            this.instanceType = response.instanceType;
-            this.internetChargeType = response.internetChargeType;
-            this.internetMaxBandwidthOut = response.internetMaxBandwidthOut;
-            this.keyPairName = response.keyPairName;
-            this.netDistrictCode = response.netDistrictCode;
-            this.netWorkId = response.netWorkId;
-            this.password = response.password;
-            this.period = response.period;
-            this.privateIpAddress = response.privateIpAddress;
-            this.scheduleAreaLevel = response.scheduleAreaLevel;
-            this.schedulingPriceStrategy = response.schedulingPriceStrategy;
-            this.schedulingStrategy = response.schedulingStrategy;
-            this.securityId = response.securityId;
-            this.systemDisk = response.systemDisk;
-            this.uniqueSuffix = response.uniqueSuffix;
-            this.userData = response.userData;
-            this.vSwitchId = response.vSwitchId;
+        private Builder(RunInstancesRequest request) {
+            super(request);
+            this.amount = request.amount;
+            this.autoRenew = request.autoRenew;
+            this.carrier = request.carrier;
+            this.dataDisk = request.dataDisk;
+            this.ensRegionId = request.ensRegionId;
+            this.hostName = request.hostName;
+            this.imageId = request.imageId;
+            this.instanceChargeType = request.instanceChargeType;
+            this.instanceName = request.instanceName;
+            this.instanceType = request.instanceType;
+            this.internetChargeType = request.internetChargeType;
+            this.internetMaxBandwidthOut = request.internetMaxBandwidthOut;
+            this.keyPairName = request.keyPairName;
+            this.netDistrictCode = request.netDistrictCode;
+            this.netWorkId = request.netWorkId;
+            this.password = request.password;
+            this.period = request.period;
+            this.periodUnit = request.periodUnit;
+            this.privateIpAddress = request.privateIpAddress;
+            this.publicIpIdentification = request.publicIpIdentification;
+            this.scheduleAreaLevel = request.scheduleAreaLevel;
+            this.schedulingPriceStrategy = request.schedulingPriceStrategy;
+            this.schedulingStrategy = request.schedulingStrategy;
+            this.securityId = request.securityId;
+            this.systemDisk = request.systemDisk;
+            this.uniqueSuffix = request.uniqueSuffix;
+            this.userData = request.userData;
+            this.vSwitchId = request.vSwitchId;
         } 
 
         /**
@@ -441,7 +468,8 @@ public class RunInstancesRequest extends Request {
          * 数据盘规格
          */
         public Builder dataDisk(java.util.List < DataDisk> dataDisk) {
-            this.putQueryParameter("DataDisk", dataDisk);
+            String dataDiskShrink = shrink(dataDisk, "DataDisk", "json");
+            this.putQueryParameter("DataDisk", dataDiskShrink);
             this.dataDisk = dataDisk;
             return this;
         }
@@ -564,11 +592,32 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
+         * 查询云服务器ENS不同计费周期的价格。取值范围：
+         * <p>
+         * Month（默认）：按月计费的价格单位。
+         * Day：按天计费的价格单位。
+         */
+        public Builder periodUnit(String periodUnit) {
+            this.putQueryParameter("PeriodUnit", periodUnit);
+            this.periodUnit = periodUnit;
+            return this;
+        }
+
+        /**
          * 私网ip
          */
         public Builder privateIpAddress(String privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
             this.privateIpAddress = privateIpAddress;
+            return this;
+        }
+
+        /**
+         * PublicIpIdentification.
+         */
+        public Builder publicIpIdentification(Boolean publicIpIdentification) {
+            this.putQueryParameter("PublicIpIdentification", publicIpIdentification);
+            this.publicIpIdentification = publicIpIdentification;
             return this;
         }
 
@@ -612,7 +661,8 @@ public class RunInstancesRequest extends Request {
          * 系统盘规格
          */
         public Builder systemDisk(SystemDisk systemDisk) {
-            this.putQueryParameter("SystemDisk", systemDisk);
+            String systemDiskShrink = shrink(systemDisk, "SystemDisk", "json");
+            this.putQueryParameter("SystemDisk", systemDiskShrink);
             this.systemDisk = systemDisk;
             return this;
         }
@@ -714,7 +764,6 @@ public class RunInstancesRequest extends Request {
     }
     public static class SystemDisk extends TeaModel {
         @NameInMap("Size")
-        @Validation(required = true)
         private Long size;
 
         private SystemDisk(Builder builder) {

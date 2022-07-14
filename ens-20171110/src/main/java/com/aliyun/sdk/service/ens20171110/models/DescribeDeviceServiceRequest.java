@@ -113,14 +113,14 @@ public class DescribeDeviceServiceRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDeviceServiceRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.ensRegionId = response.ensRegionId;
-            this.instanceId = response.instanceId;
-            this.orderId = response.orderId;
-            this.regionId = response.regionId;
-            this.serviceId = response.serviceId;
+        private Builder(DescribeDeviceServiceRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.ensRegionId = request.ensRegionId;
+            this.instanceId = request.instanceId;
+            this.orderId = request.orderId;
+            this.regionId = request.regionId;
+            this.serviceId = request.serviceId;
         } 
 
         /**

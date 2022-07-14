@@ -62,10 +62,10 @@ public class CreateApplicationRequest extends Request {
             super();
         } 
 
-        private Builder(CreateApplicationRequest response) {
-            super(response);
-            this.template = response.template;
-            this.timeout = response.timeout;
+        private Builder(CreateApplicationRequest request) {
+            super(request);
+            this.template = request.template;
+            this.timeout = request.timeout;
         } 
 
         /**

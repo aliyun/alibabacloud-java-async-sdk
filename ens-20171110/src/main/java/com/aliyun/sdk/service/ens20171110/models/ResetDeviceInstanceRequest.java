@@ -77,11 +77,11 @@ public class ResetDeviceInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(ResetDeviceInstanceRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.imageId = response.imageId;
-            this.instanceId = response.instanceId;
+        private Builder(ResetDeviceInstanceRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.imageId = request.imageId;
+            this.instanceId = request.instanceId;
         } 
 
         /**

@@ -63,10 +63,10 @@ public class JoinPublicIpsToEpnInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(JoinPublicIpsToEpnInstanceRequest response) {
-            super(response);
-            this.EPNInstanceId = response.EPNInstanceId;
-            this.instanceInfos = response.instanceInfos;
+        private Builder(JoinPublicIpsToEpnInstanceRequest request) {
+            super(request);
+            this.EPNInstanceId = request.EPNInstanceId;
+            this.instanceInfos = request.instanceInfos;
         } 
 
         /**

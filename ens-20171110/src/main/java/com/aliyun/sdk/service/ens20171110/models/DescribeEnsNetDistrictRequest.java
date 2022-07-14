@@ -76,11 +76,11 @@ public class DescribeEnsNetDistrictRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeEnsNetDistrictRequest response) {
-            super(response);
-            this.netDistrictCode = response.netDistrictCode;
-            this.netLevelCode = response.netLevelCode;
-            this.version = response.version;
+        private Builder(DescribeEnsNetDistrictRequest request) {
+            super(request);
+            this.netDistrictCode = request.netDistrictCode;
+            this.netLevelCode = request.netLevelCode;
+            this.version = request.version;
         } 
 
         /**

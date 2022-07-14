@@ -91,12 +91,12 @@ public class ModifyEnsEipAddressAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyEnsEipAddressAttributeRequest response) {
-            super(response);
-            this.allocationId = response.allocationId;
-            this.bandwidth = response.bandwidth;
-            this.description = response.description;
-            this.name = response.name;
+        private Builder(ModifyEnsEipAddressAttributeRequest request) {
+            super(request);
+            this.allocationId = request.allocationId;
+            this.bandwidth = request.bandwidth;
+            this.description = request.description;
+            this.name = request.name;
         } 
 
         /**

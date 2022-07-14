@@ -117,14 +117,14 @@ public class AddDeviceInternetPortRequest extends Request {
             super();
         } 
 
-        private Builder(AddDeviceInternetPortRequest response) {
-            super(response);
-            this.ISP = response.ISP;
-            this.instanceId = response.instanceId;
-            this.internalIp = response.internalIp;
-            this.internalPort = response.internalPort;
-            this.natType = response.natType;
-            this.regionId = response.regionId;
+        private Builder(AddDeviceInternetPortRequest request) {
+            super(request);
+            this.ISP = request.ISP;
+            this.instanceId = request.instanceId;
+            this.internalIp = request.internalIp;
+            this.internalPort = request.internalPort;
+            this.natType = request.natType;
+            this.regionId = request.regionId;
         } 
 
         /**

@@ -76,11 +76,11 @@ public class UpgradeApplicationRequest extends Request {
             super();
         } 
 
-        private Builder(UpgradeApplicationRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.template = response.template;
-            this.timeout = response.timeout;
+        private Builder(UpgradeApplicationRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.template = request.template;
+            this.timeout = request.timeout;
         } 
 
         /**

@@ -22,16 +22,10 @@ public class AttachEnsInstancesRequest extends Request {
     @Validation(required = true)
     private String scripts;
 
-    @Query
-    @NameInMap("Version")
-    @Validation(required = true)
-    private String version;
-
     private AttachEnsInstancesRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
         this.scripts = builder.scripts;
-        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -61,27 +55,18 @@ public class AttachEnsInstancesRequest extends Request {
         return this.scripts;
     }
 
-    /**
-     * @return version
-     */
-    public String getVersion() {
-        return this.version;
-    }
-
     public static final class Builder extends Request.Builder<AttachEnsInstancesRequest, Builder> {
         private String instanceId; 
         private String scripts; 
-        private String version; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(AttachEnsInstancesRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.scripts = response.scripts;
-            this.version = response.version;
+        private Builder(AttachEnsInstancesRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.scripts = request.scripts;
         } 
 
         /**
@@ -99,15 +84,6 @@ public class AttachEnsInstancesRequest extends Request {
         public Builder scripts(String scripts) {
             this.putQueryParameter("Scripts", scripts);
             this.scripts = scripts;
-            return this;
-        }
-
-        /**
-         * Version.
-         */
-        public Builder version(String version) {
-            this.putQueryParameter("Version", version);
-            this.version = version;
             return this;
         }
 

@@ -63,10 +63,10 @@ public class RenewInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(RenewInstanceRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.period = response.period;
+        private Builder(RenewInstanceRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.period = request.period;
         } 
 
         /**

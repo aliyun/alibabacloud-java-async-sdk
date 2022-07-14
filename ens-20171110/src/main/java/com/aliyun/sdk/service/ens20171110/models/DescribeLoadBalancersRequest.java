@@ -167,18 +167,18 @@ public class DescribeLoadBalancersRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeLoadBalancersRequest response) {
-            super(response);
-            this.address = response.address;
-            this.ensRegionId = response.ensRegionId;
-            this.loadBalancerId = response.loadBalancerId;
-            this.loadBalancerName = response.loadBalancerName;
-            this.loadBalancerStatus = response.loadBalancerStatus;
-            this.networkId = response.networkId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.serverId = response.serverId;
-            this.vSwitchId = response.vSwitchId;
+        private Builder(DescribeLoadBalancersRequest request) {
+            super(request);
+            this.address = request.address;
+            this.ensRegionId = request.ensRegionId;
+            this.loadBalancerId = request.loadBalancerId;
+            this.loadBalancerName = request.loadBalancerName;
+            this.loadBalancerStatus = request.loadBalancerStatus;
+            this.networkId = request.networkId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.serverId = request.serverId;
+            this.vSwitchId = request.vSwitchId;
         } 
 
         /**

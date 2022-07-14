@@ -49,9 +49,9 @@ public class DeleteEpnInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteEpnInstanceRequest response) {
-            super(response);
-            this.EPNInstanceId = response.EPNInstanceId;
+        private Builder(DeleteEpnInstanceRequest request) {
+            super(request);
+            this.EPNInstanceId = request.EPNInstanceId;
         } 
 
         /**

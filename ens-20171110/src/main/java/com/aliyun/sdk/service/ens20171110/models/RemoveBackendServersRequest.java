@@ -63,17 +63,18 @@ public class RemoveBackendServersRequest extends Request {
             super();
         } 
 
-        private Builder(RemoveBackendServersRequest response) {
-            super(response);
-            this.backendServers = response.backendServers;
-            this.loadBalancerId = response.loadBalancerId;
+        private Builder(RemoveBackendServersRequest request) {
+            super(request);
+            this.backendServers = request.backendServers;
+            this.loadBalancerId = request.loadBalancerId;
         } 
 
         /**
          * BackendServers.
          */
         public Builder backendServers(java.util.List < BackendServers> backendServers) {
-            this.putQueryParameter("BackendServers", backendServers);
+            String backendServersShrink = shrink(backendServers, "BackendServers", "json");
+            this.putQueryParameter("BackendServers", backendServersShrink);
             this.backendServers = backendServers;
             return this;
         }

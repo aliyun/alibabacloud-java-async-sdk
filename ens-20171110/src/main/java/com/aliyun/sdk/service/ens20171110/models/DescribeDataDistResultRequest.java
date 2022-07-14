@@ -140,16 +140,16 @@ public class DescribeDataDistResultRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDataDistResultRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.dataNames = response.dataNames;
-            this.dataVersions = response.dataVersions;
-            this.instanceIds = response.instanceIds;
-            this.maxDate = response.maxDate;
-            this.minDate = response.minDate;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(DescribeDataDistResultRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.dataNames = request.dataNames;
+            this.dataVersions = request.dataVersions;
+            this.instanceIds = request.instanceIds;
+            this.maxDate = request.maxDate;
+            this.minDate = request.minDate;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**

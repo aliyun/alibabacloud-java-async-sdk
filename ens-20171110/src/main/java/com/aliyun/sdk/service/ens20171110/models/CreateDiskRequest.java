@@ -91,12 +91,12 @@ public class CreateDiskRequest extends Request {
             super();
         } 
 
-        private Builder(CreateDiskRequest response) {
-            super(response);
-            this.category = response.category;
-            this.ensRegionId = response.ensRegionId;
-            this.instanceChargeType = response.instanceChargeType;
-            this.size = response.size;
+        private Builder(CreateDiskRequest request) {
+            super(request);
+            this.category = request.category;
+            this.ensRegionId = request.ensRegionId;
+            this.instanceChargeType = request.instanceChargeType;
+            this.size = request.size;
         } 
 
         /**

@@ -114,14 +114,14 @@ public class DescribeNetworkInterfacesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeNetworkInterfacesRequest response) {
-            super(response);
-            this.ensRegionId = response.ensRegionId;
-            this.instanceId = response.instanceId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.primaryIpAddress = response.primaryIpAddress;
-            this.vSwitchId = response.vSwitchId;
+        private Builder(DescribeNetworkInterfacesRequest request) {
+            super(request);
+            this.ensRegionId = request.ensRegionId;
+            this.instanceId = request.instanceId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.primaryIpAddress = request.primaryIpAddress;
+            this.vSwitchId = request.vSwitchId;
         } 
 
         /**

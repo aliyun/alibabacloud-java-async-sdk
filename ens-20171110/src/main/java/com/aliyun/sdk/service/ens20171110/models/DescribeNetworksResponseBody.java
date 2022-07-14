@@ -191,6 +191,9 @@ public class DescribeNetworksResponseBody extends TeaModel {
         @NameInMap("NetworkName")
         private String networkName;
 
+        @NameInMap("RouterTableId")
+        private String routerTableId;
+
         @NameInMap("Status")
         private String status;
 
@@ -204,6 +207,7 @@ public class DescribeNetworksResponseBody extends TeaModel {
             this.ensRegionId = builder.ensRegionId;
             this.networkId = builder.networkId;
             this.networkName = builder.networkName;
+            this.routerTableId = builder.routerTableId;
             this.status = builder.status;
             this.vSwitchIds = builder.vSwitchIds;
         }
@@ -259,6 +263,13 @@ public class DescribeNetworksResponseBody extends TeaModel {
         }
 
         /**
+         * @return routerTableId
+         */
+        public String getRouterTableId() {
+            return this.routerTableId;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -279,6 +290,7 @@ public class DescribeNetworksResponseBody extends TeaModel {
             private String ensRegionId; 
             private String networkId; 
             private String networkName; 
+            private String routerTableId; 
             private String status; 
             private VSwitchIds vSwitchIds; 
 
@@ -327,6 +339,14 @@ public class DescribeNetworksResponseBody extends TeaModel {
              */
             public Builder networkName(String networkName) {
                 this.networkName = networkName;
+                return this;
+            }
+
+            /**
+             * RouterTableId.
+             */
+            public Builder routerTableId(String routerTableId) {
+                this.routerTableId = routerTableId;
                 return this;
             }
 

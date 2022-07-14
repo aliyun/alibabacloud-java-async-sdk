@@ -77,11 +77,11 @@ public class ModifySecurityGroupAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(ModifySecurityGroupAttributeRequest response) {
-            super(response);
-            this.description = response.description;
-            this.securityGroupId = response.securityGroupId;
-            this.securityGroupName = response.securityGroupName;
+        private Builder(ModifySecurityGroupAttributeRequest request) {
+            super(request);
+            this.description = request.description;
+            this.securityGroupId = request.securityGroupId;
+            this.securityGroupName = request.securityGroupName;
         } 
 
         /**

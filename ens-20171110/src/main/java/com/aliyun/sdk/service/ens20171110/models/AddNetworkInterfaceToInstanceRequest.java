@@ -76,11 +76,11 @@ public class AddNetworkInterfaceToInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(AddNetworkInterfaceToInstanceRequest response) {
-            super(response);
-            this.autoStart = response.autoStart;
-            this.instanceId = response.instanceId;
-            this.networks = response.networks;
+        private Builder(AddNetworkInterfaceToInstanceRequest request) {
+            super(request);
+            this.autoStart = request.autoStart;
+            this.instanceId = request.instanceId;
+            this.networks = request.networks;
         } 
 
         /**

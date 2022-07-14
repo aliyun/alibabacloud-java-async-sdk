@@ -49,9 +49,9 @@ public class DescribeLoadBalancerAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeLoadBalancerAttributeRequest response) {
-            super(response);
-            this.loadBalancerId = response.loadBalancerId;
+        private Builder(DescribeLoadBalancerAttributeRequest request) {
+            super(request);
+            this.loadBalancerId = request.loadBalancerId;
         } 
 
         /**

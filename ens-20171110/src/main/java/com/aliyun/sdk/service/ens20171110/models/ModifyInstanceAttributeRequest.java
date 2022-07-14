@@ -89,12 +89,12 @@ public class ModifyInstanceAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyInstanceAttributeRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.instanceName = response.instanceName;
-            this.password = response.password;
-            this.version = response.version;
+        private Builder(ModifyInstanceAttributeRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.instanceName = request.instanceName;
+            this.password = request.password;
+            this.version = request.version;
         } 
 
         /**

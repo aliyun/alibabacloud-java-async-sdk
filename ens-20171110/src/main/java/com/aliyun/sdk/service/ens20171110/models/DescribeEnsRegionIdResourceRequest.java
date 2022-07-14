@@ -116,14 +116,14 @@ public class DescribeEnsRegionIdResourceRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeEnsRegionIdResourceRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.isp = response.isp;
-            this.orderByParams = response.orderByParams;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.startTime = response.startTime;
+        private Builder(DescribeEnsRegionIdResourceRequest request) {
+            super(request);
+            this.endTime = request.endTime;
+            this.isp = request.isp;
+            this.orderByParams = request.orderByParams;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.startTime = request.startTime;
         } 
 
         /**

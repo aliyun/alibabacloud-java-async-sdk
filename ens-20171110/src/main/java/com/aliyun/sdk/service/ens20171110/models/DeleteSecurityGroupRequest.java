@@ -63,10 +63,10 @@ public class DeleteSecurityGroupRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteSecurityGroupRequest response) {
-            super(response);
-            this.securityGroupId = response.securityGroupId;
-            this.version = response.version;
+        private Builder(DeleteSecurityGroupRequest request) {
+            super(request);
+            this.securityGroupId = request.securityGroupId;
+            this.version = request.version;
         } 
 
         /**

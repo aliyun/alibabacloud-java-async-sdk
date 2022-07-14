@@ -76,11 +76,11 @@ public class GetDeviceInternetPortRequest extends Request {
             super();
         } 
 
-        private Builder(GetDeviceInternetPortRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.natType = response.natType;
-            this.ruleId = response.ruleId;
+        private Builder(GetDeviceInternetPortRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.natType = request.natType;
+            this.ruleId = request.ruleId;
         } 
 
         /**

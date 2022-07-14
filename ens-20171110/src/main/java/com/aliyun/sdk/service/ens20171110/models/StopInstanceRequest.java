@@ -76,11 +76,11 @@ public class StopInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(StopInstanceRequest response) {
-            super(response);
-            this.forceStop = response.forceStop;
-            this.instanceId = response.instanceId;
-            this.version = response.version;
+        private Builder(StopInstanceRequest request) {
+            super(request);
+            this.forceStop = request.forceStop;
+            this.instanceId = request.instanceId;
+            this.version = request.version;
         } 
 
         /**

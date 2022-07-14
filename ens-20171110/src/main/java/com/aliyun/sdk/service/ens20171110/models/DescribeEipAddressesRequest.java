@@ -76,11 +76,11 @@ public class DescribeEipAddressesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeEipAddressesRequest response) {
-            super(response);
-            this.eips = response.eips;
-            this.ensRegionId = response.ensRegionId;
-            this.version = response.version;
+        private Builder(DescribeEipAddressesRequest request) {
+            super(request);
+            this.eips = request.eips;
+            this.ensRegionId = request.ensRegionId;
+            this.version = request.version;
         } 
 
         /**

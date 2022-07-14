@@ -49,9 +49,9 @@ public class DescribeEpnInstanceAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeEpnInstanceAttributeRequest response) {
-            super(response);
-            this.EPNInstanceId = response.EPNInstanceId;
+        private Builder(DescribeEpnInstanceAttributeRequest request) {
+            super(request);
+            this.EPNInstanceId = request.EPNInstanceId;
         } 
 
         /**

@@ -77,11 +77,11 @@ public class DescribeMeasurementDataRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeMeasurementDataRequest response) {
-            super(response);
-            this.endDate = response.endDate;
-            this.startDate = response.startDate;
-            this.version = response.version;
+        private Builder(DescribeMeasurementDataRequest request) {
+            super(request);
+            this.endDate = request.endDate;
+            this.startDate = request.startDate;
+            this.version = request.version;
         } 
 
         /**
