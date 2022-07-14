@@ -114,14 +114,14 @@ public class BindOutputBucketRequest extends Request {
             super();
         } 
 
-        private Builder(BindOutputBucketRequest response) {
-            super(response);
-            this.bucket = response.bucket;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.roleArn = response.roleArn;
+        private Builder(BindOutputBucketRequest request) {
+            super(request);
+            this.bucket = request.bucket;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.roleArn = request.roleArn;
         } 
 
         /**

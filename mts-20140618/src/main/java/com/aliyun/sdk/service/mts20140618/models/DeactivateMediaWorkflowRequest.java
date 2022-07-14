@@ -101,13 +101,13 @@ public class DeactivateMediaWorkflowRequest extends Request {
             super();
         } 
 
-        private Builder(DeactivateMediaWorkflowRequest response) {
-            super(response);
-            this.mediaWorkflowId = response.mediaWorkflowId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DeactivateMediaWorkflowRequest request) {
+            super(request);
+            this.mediaWorkflowId = request.mediaWorkflowId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

@@ -101,13 +101,13 @@ public class QueryAnalysisJobListRequest extends Request {
             super();
         } 
 
-        private Builder(QueryAnalysisJobListRequest response) {
-            super(response);
-            this.analysisJobIds = response.analysisJobIds;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(QueryAnalysisJobListRequest request) {
+            super(request);
+            this.analysisJobIds = request.analysisJobIds;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

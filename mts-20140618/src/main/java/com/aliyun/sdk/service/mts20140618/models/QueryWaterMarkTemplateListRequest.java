@@ -101,13 +101,13 @@ public class QueryWaterMarkTemplateListRequest extends Request {
             super();
         } 
 
-        private Builder(QueryWaterMarkTemplateListRequest response) {
-            super(response);
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.waterMarkTemplateIds = response.waterMarkTemplateIds;
+        private Builder(QueryWaterMarkTemplateListRequest request) {
+            super(request);
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.waterMarkTemplateIds = request.waterMarkTemplateIds;
         } 
 
         /**

@@ -153,17 +153,17 @@ public class AddPipelineRequest extends Request {
             super();
         } 
 
-        private Builder(AddPipelineRequest response) {
-            super(response);
-            this.name = response.name;
-            this.notifyConfig = response.notifyConfig;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.role = response.role;
-            this.speed = response.speed;
-            this.speedLevel = response.speedLevel;
+        private Builder(AddPipelineRequest request) {
+            super(request);
+            this.name = request.name;
+            this.notifyConfig = request.notifyConfig;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.role = request.role;
+            this.speed = request.speed;
+            this.speedLevel = request.speedLevel;
         } 
 
         /**

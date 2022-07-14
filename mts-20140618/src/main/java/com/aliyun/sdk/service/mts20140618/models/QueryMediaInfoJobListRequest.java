@@ -101,13 +101,13 @@ public class QueryMediaInfoJobListRequest extends Request {
             super();
         } 
 
-        private Builder(QueryMediaInfoJobListRequest response) {
-            super(response);
-            this.mediaInfoJobIds = response.mediaInfoJobIds;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(QueryMediaInfoJobListRequest request) {
+            super(request);
+            this.mediaInfoJobIds = request.mediaInfoJobIds;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

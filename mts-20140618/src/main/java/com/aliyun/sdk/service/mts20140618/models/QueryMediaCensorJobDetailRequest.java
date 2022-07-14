@@ -127,15 +127,15 @@ public class QueryMediaCensorJobDetailRequest extends Request {
             super();
         } 
 
-        private Builder(QueryMediaCensorJobDetailRequest response) {
-            super(response);
-            this.jobId = response.jobId;
-            this.maximumPageSize = response.maximumPageSize;
-            this.nextPageToken = response.nextPageToken;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(QueryMediaCensorJobDetailRequest request) {
+            super(request);
+            this.jobId = request.jobId;
+            this.maximumPageSize = request.maximumPageSize;
+            this.nextPageToken = request.nextPageToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

@@ -140,16 +140,16 @@ public class CreateFpShotDBRequest extends Request {
             super();
         } 
 
-        private Builder(CreateFpShotDBRequest response) {
-            super(response);
-            this.config = response.config;
-            this.description = response.description;
-            this.modelId = response.modelId;
-            this.name = response.name;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(CreateFpShotDBRequest request) {
+            super(request);
+            this.config = request.config;
+            this.description = request.description;
+            this.modelId = request.modelId;
+            this.name = request.name;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

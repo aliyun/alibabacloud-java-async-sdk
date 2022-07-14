@@ -114,14 +114,14 @@ public class DeleteMediaTagRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteMediaTagRequest response) {
-            super(response);
-            this.mediaId = response.mediaId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.tag = response.tag;
+        private Builder(DeleteMediaTagRequest request) {
+            super(request);
+            this.mediaId = request.mediaId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.tag = request.tag;
         } 
 
         /**

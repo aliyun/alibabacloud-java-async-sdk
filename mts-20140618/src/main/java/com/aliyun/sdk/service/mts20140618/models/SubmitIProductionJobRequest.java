@@ -205,21 +205,21 @@ public class SubmitIProductionJobRequest extends Request {
             super();
         } 
 
-        private Builder(SubmitIProductionJobRequest response) {
-            super(response);
-            this.functionName = response.functionName;
-            this.input = response.input;
-            this.jobParams = response.jobParams;
-            this.modelId = response.modelId;
-            this.notifyUrl = response.notifyUrl;
-            this.output = response.output;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pipelineId = response.pipelineId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.scheduleParams = response.scheduleParams;
-            this.userData = response.userData;
+        private Builder(SubmitIProductionJobRequest request) {
+            super(request);
+            this.functionName = request.functionName;
+            this.input = request.input;
+            this.jobParams = request.jobParams;
+            this.modelId = request.modelId;
+            this.notifyUrl = request.notifyUrl;
+            this.output = request.output;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pipelineId = request.pipelineId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.scheduleParams = request.scheduleParams;
+            this.userData = request.userData;
         } 
 
         /**

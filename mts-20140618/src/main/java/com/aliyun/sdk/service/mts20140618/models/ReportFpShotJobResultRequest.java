@@ -128,15 +128,15 @@ public class ReportFpShotJobResultRequest extends Request {
             super();
         } 
 
-        private Builder(ReportFpShotJobResultRequest response) {
-            super(response);
-            this.details = response.details;
-            this.jobId = response.jobId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.result = response.result;
+        private Builder(ReportFpShotJobResultRequest request) {
+            super(request);
+            this.details = request.details;
+            this.jobId = request.jobId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.result = request.result;
         } 
 
         /**

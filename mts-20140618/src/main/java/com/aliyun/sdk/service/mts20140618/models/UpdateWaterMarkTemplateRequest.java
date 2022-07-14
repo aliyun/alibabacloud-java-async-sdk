@@ -129,15 +129,15 @@ public class UpdateWaterMarkTemplateRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateWaterMarkTemplateRequest response) {
-            super(response);
-            this.config = response.config;
-            this.name = response.name;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.waterMarkTemplateId = response.waterMarkTemplateId;
+        private Builder(UpdateWaterMarkTemplateRequest request) {
+            super(request);
+            this.config = request.config;
+            this.name = request.name;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.waterMarkTemplateId = request.waterMarkTemplateId;
         } 
 
         /**

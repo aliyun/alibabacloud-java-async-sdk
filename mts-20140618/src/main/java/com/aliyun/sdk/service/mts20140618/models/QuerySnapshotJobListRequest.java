@@ -179,19 +179,19 @@ public class QuerySnapshotJobListRequest extends Request {
             super();
         } 
 
-        private Builder(QuerySnapshotJobListRequest response) {
-            super(response);
-            this.endOfJobCreatedTimeRange = response.endOfJobCreatedTimeRange;
-            this.maximumPageSize = response.maximumPageSize;
-            this.nextPageToken = response.nextPageToken;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pipelineId = response.pipelineId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.snapshotJobIds = response.snapshotJobIds;
-            this.startOfJobCreatedTimeRange = response.startOfJobCreatedTimeRange;
-            this.state = response.state;
+        private Builder(QuerySnapshotJobListRequest request) {
+            super(request);
+            this.endOfJobCreatedTimeRange = request.endOfJobCreatedTimeRange;
+            this.maximumPageSize = request.maximumPageSize;
+            this.nextPageToken = request.nextPageToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pipelineId = request.pipelineId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.snapshotJobIds = request.snapshotJobIds;
+            this.startOfJobCreatedTimeRange = request.startOfJobCreatedTimeRange;
+            this.state = request.state;
         } 
 
         /**

@@ -191,20 +191,20 @@ public class SubmitEditingJobsRequest extends Request {
             super();
         } 
 
-        private Builder(SubmitEditingJobsRequest response) {
-            super(response);
-            this.editingInputs = response.editingInputs;
-            this.editingJobOssFileRoleArn = response.editingJobOssFileRoleArn;
-            this.editingJobOssFileUid = response.editingJobOssFileUid;
-            this.editingJobOutputs = response.editingJobOutputs;
-            this.editingJobURL = response.editingJobURL;
-            this.outputBucket = response.outputBucket;
-            this.outputLocation = response.outputLocation;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pipelineId = response.pipelineId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(SubmitEditingJobsRequest request) {
+            super(request);
+            this.editingInputs = request.editingInputs;
+            this.editingJobOssFileRoleArn = request.editingJobOssFileRoleArn;
+            this.editingJobOssFileUid = request.editingJobOssFileUid;
+            this.editingJobOutputs = request.editingJobOutputs;
+            this.editingJobURL = request.editingJobURL;
+            this.outputBucket = request.outputBucket;
+            this.outputLocation = request.outputLocation;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pipelineId = request.pipelineId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

@@ -153,17 +153,17 @@ public class ListMediaWorkflowExecutionsRequest extends Request {
             super();
         } 
 
-        private Builder(ListMediaWorkflowExecutionsRequest response) {
-            super(response);
-            this.inputFileURL = response.inputFileURL;
-            this.maximumPageSize = response.maximumPageSize;
-            this.mediaWorkflowId = response.mediaWorkflowId;
-            this.mediaWorkflowName = response.mediaWorkflowName;
-            this.nextPageToken = response.nextPageToken;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ListMediaWorkflowExecutionsRequest request) {
+            super(request);
+            this.inputFileURL = request.inputFileURL;
+            this.maximumPageSize = request.maximumPageSize;
+            this.mediaWorkflowId = request.mediaWorkflowId;
+            this.mediaWorkflowName = request.mediaWorkflowName;
+            this.nextPageToken = request.nextPageToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

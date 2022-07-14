@@ -154,17 +154,17 @@ public class SubmitAnalysisJobRequest extends Request {
             super();
         } 
 
-        private Builder(SubmitAnalysisJobRequest response) {
-            super(response);
-            this.analysisConfig = response.analysisConfig;
-            this.input = response.input;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pipelineId = response.pipelineId;
-            this.priority = response.priority;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.userData = response.userData;
+        private Builder(SubmitAnalysisJobRequest request) {
+            super(request);
+            this.analysisConfig = request.analysisConfig;
+            this.input = request.input;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pipelineId = request.pipelineId;
+            this.priority = request.priority;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.userData = request.userData;
         } 
 
         /**

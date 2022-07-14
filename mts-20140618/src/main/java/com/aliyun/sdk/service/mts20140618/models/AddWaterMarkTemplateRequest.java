@@ -115,14 +115,14 @@ public class AddWaterMarkTemplateRequest extends Request {
             super();
         } 
 
-        private Builder(AddWaterMarkTemplateRequest response) {
-            super(response);
-            this.config = response.config;
-            this.name = response.name;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(AddWaterMarkTemplateRequest request) {
+            super(request);
+            this.config = request.config;
+            this.name = request.name;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

@@ -219,22 +219,22 @@ public class SubmitSmarttagJobRequest extends Request {
             super();
         } 
 
-        private Builder(SubmitSmarttagJobRequest response) {
-            super(response);
-            this.content = response.content;
-            this.contentAddr = response.contentAddr;
-            this.contentType = response.contentType;
-            this.input = response.input;
-            this.notifyUrl = response.notifyUrl;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.params = response.params;
-            this.pipelineId = response.pipelineId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.templateId = response.templateId;
-            this.title = response.title;
-            this.userData = response.userData;
+        private Builder(SubmitSmarttagJobRequest request) {
+            super(request);
+            this.content = request.content;
+            this.contentAddr = request.contentAddr;
+            this.contentType = request.contentType;
+            this.input = request.input;
+            this.notifyUrl = request.notifyUrl;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.params = request.params;
+            this.pipelineId = request.pipelineId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.templateId = request.templateId;
+            this.title = request.title;
+            this.userData = request.userData;
         } 
 
         /**

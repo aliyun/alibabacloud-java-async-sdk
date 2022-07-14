@@ -180,19 +180,19 @@ public class UpdateTemplateRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateTemplateRequest response) {
-            super(response);
-            this.audio = response.audio;
-            this.container = response.container;
-            this.muxConfig = response.muxConfig;
-            this.name = response.name;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.templateId = response.templateId;
-            this.transConfig = response.transConfig;
-            this.video = response.video;
+        private Builder(UpdateTemplateRequest request) {
+            super(request);
+            this.audio = request.audio;
+            this.container = request.container;
+            this.muxConfig = request.muxConfig;
+            this.name = request.name;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.templateId = request.templateId;
+            this.transConfig = request.transConfig;
+            this.video = request.video;
         } 
 
         /**

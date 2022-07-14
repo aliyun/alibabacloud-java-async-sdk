@@ -100,13 +100,13 @@ public class QueryEditingJobListRequest extends Request {
             super();
         } 
 
-        private Builder(QueryEditingJobListRequest response) {
-            super(response);
-            this.jobIds = response.jobIds;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(QueryEditingJobListRequest request) {
+            super(request);
+            this.jobIds = request.jobIds;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

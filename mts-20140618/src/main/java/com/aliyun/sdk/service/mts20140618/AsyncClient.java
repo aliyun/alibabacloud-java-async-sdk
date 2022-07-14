@@ -20,8 +20,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ActivateMediaWorkflowResponse> activateMediaWorkflow(ActivateMediaWorkflowRequest request);
 
-    CompletableFuture<AddCensorPipelineResponse> addCensorPipeline(AddCensorPipelineRequest request);
-
     CompletableFuture<AddMediaResponse> addMedia(AddMediaRequest request);
 
     CompletableFuture<AddMediaTagResponse> addMediaTag(AddMediaTagRequest request);
@@ -42,13 +40,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CancelJobResponse> cancelJob(CancelJobRequest request);
 
-    CompletableFuture<CategoryTreeResponse> categoryTree(CategoryTreeRequest request);
-
     CompletableFuture<CreateFpShotDBResponse> createFpShotDB(CreateFpShotDBRequest request);
 
     CompletableFuture<DeactivateMediaWorkflowResponse> deactivateMediaWorkflow(DeactivateMediaWorkflowRequest request);
-
-    CompletableFuture<DeleteCategoryResponse> deleteCategory(DeleteCategoryRequest request);
 
     CompletableFuture<DeleteMediaResponse> deleteMedia(DeleteMediaRequest request);
 
@@ -64,21 +58,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteWaterMarkTemplateResponse> deleteWaterMarkTemplate(DeleteWaterMarkTemplateRequest request);
 
-    CompletableFuture<DescribeMtsUserResourcePackageResponse> describeMtsUserResourcePackage(DescribeMtsUserResourcePackageRequest request);
-
-    CompletableFuture<DetectImageSyncResponse> detectImageSync(DetectImageSyncRequest request);
-
-    CompletableFuture<GetJobInfoResponse> getJobInfo(GetJobInfoRequest request);
-
     CompletableFuture<ImAuditResponse> imAudit(ImAuditRequest request);
 
     CompletableFuture<ImportFpShotJobResponse> importFpShotJob(ImportFpShotJobRequest request);
 
-    CompletableFuture<ListAllCategoryResponse> listAllCategory(ListAllCategoryRequest request);
-
     CompletableFuture<ListAllMediaBucketResponse> listAllMediaBucket(ListAllMediaBucketRequest request);
-
-    CompletableFuture<ListCensorPipelineResponse> listCensorPipeline(ListCensorPipelineRequest request);
 
     CompletableFuture<ListCustomPersonsResponse> listCustomPersons(ListCustomPersonsRequest request);
 
@@ -86,29 +70,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListFpShotFilesResponse> listFpShotFiles(ListFpShotFilesRequest request);
 
-    CompletableFuture<ListJobResponse> listJob(ListJobRequest request);
+    CompletableFuture<ListFpShotImportJobResponse> listFpShotImportJob(ListFpShotImportJobRequest request);
 
-    CompletableFuture<ListMediaResponse> listMedia(ListMediaRequest request);
+    CompletableFuture<ListJobResponse> listJob(ListJobRequest request);
 
     CompletableFuture<ListMediaWorkflowExecutionsResponse> listMediaWorkflowExecutions(ListMediaWorkflowExecutionsRequest request);
 
-    CompletableFuture<LogicalDeleteResourceResponse> logicalDeleteResource(LogicalDeleteResourceRequest request);
-
-    CompletableFuture<PhysicalDeleteResourceResponse> physicalDeleteResource(PhysicalDeleteResourceRequest request);
-
-    CompletableFuture<PlayInfoResponse> playInfo(PlayInfoRequest request);
-
-    CompletableFuture<PlayerAuthResponse> playerAuth(PlayerAuthRequest request);
-
     CompletableFuture<QueryAnalysisJobListResponse> queryAnalysisJobList(QueryAnalysisJobListRequest request);
-
-    CompletableFuture<QueryAuthConfigResponse> queryAuthConfig(QueryAuthConfigRequest request);
-
-    CompletableFuture<QueryCensorJobListResponse> queryCensorJobList(QueryCensorJobListRequest request);
-
-    CompletableFuture<QueryCensorPipelineListResponse> queryCensorPipelineList(QueryCensorPipelineListRequest request);
-
-    CompletableFuture<QueryComplexJobListResponse> queryComplexJobList(QueryComplexJobListRequest request);
 
     CompletableFuture<QueryEditingJobListResponse> queryEditingJobList(QueryEditingJobListRequest request);
 
@@ -119,8 +87,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryFpShotJobListResponse> queryFpShotJobList(QueryFpShotJobListRequest request);
 
     CompletableFuture<QueryIProductionJobResponse> queryIProductionJob(QueryIProductionJobRequest request);
-
-    CompletableFuture<QueryInnerJobResponse> queryInnerJob(QueryInnerJobRequest request);
 
     CompletableFuture<QueryJobListResponse> queryJobList(QueryJobListRequest request);
 
@@ -146,23 +112,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<QuerySnapshotJobListResponse> querySnapshotJobList(QuerySnapshotJobListRequest request);
 
-    CompletableFuture<QuerySubtitleJobListResponse> querySubtitleJobList(QuerySubtitleJobListRequest request);
-
     CompletableFuture<QueryTemplateListResponse> queryTemplateList(QueryTemplateListRequest request);
 
     CompletableFuture<QueryVideoQualityJobResponse> queryVideoQualityJob(QueryVideoQualityJobRequest request);
 
     CompletableFuture<QueryWaterMarkTemplateListResponse> queryWaterMarkTemplateList(QueryWaterMarkTemplateListRequest request);
 
-    CompletableFuture<RefreshCdnDomainConfigsCacheResponse> refreshCdnDomainConfigsCache(RefreshCdnDomainConfigsCacheRequest request);
-
     CompletableFuture<RegisterCustomFaceResponse> registerCustomFace(RegisterCustomFaceRequest request);
 
-    CompletableFuture<ReportCensorJobResultResponse> reportCensorJobResult(ReportCensorJobResultRequest request);
-
     CompletableFuture<ReportFpShotJobResultResponse> reportFpShotJobResult(ReportFpShotJobResultRequest request);
-
-    CompletableFuture<SearchMediaResponse> searchMedia(SearchMediaRequest request);
 
     CompletableFuture<SearchMediaWorkflowResponse> searchMediaWorkflow(SearchMediaWorkflowRequest request);
 
@@ -172,11 +130,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<SearchWaterMarkTemplateResponse> searchWaterMarkTemplate(SearchWaterMarkTemplateRequest request);
 
-    CompletableFuture<SetAuthConfigResponse> setAuthConfig(SetAuthConfigRequest request);
-
     CompletableFuture<SubmitAnalysisJobResponse> submitAnalysisJob(SubmitAnalysisJobRequest request);
-
-    CompletableFuture<SubmitComplexJobResponse> submitComplexJob(SubmitComplexJobRequest request);
 
     CompletableFuture<SubmitEditingJobsResponse> submitEditingJobs(SubmitEditingJobsRequest request);
 
@@ -188,25 +142,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<SubmitIProductionJobResponse> submitIProductionJob(SubmitIProductionJobRequest request);
 
-    CompletableFuture<SubmitInnerJobResponse> submitInnerJob(SubmitInnerJobRequest request);
-
     CompletableFuture<SubmitJobsResponse> submitJobs(SubmitJobsRequest request);
 
     CompletableFuture<SubmitMediaCensorJobResponse> submitMediaCensorJob(SubmitMediaCensorJobRequest request);
 
     CompletableFuture<SubmitMediaInfoJobResponse> submitMediaInfoJob(SubmitMediaInfoJobRequest request);
 
-    CompletableFuture<SubmitOssFileCopyJobResponse> submitOssFileCopyJob(SubmitOssFileCopyJobRequest request);
-
-    CompletableFuture<SubmitPornJobResponse> submitPornJob(SubmitPornJobRequest request);
-
     CompletableFuture<SubmitSmarttagJobResponse> submitSmarttagJob(SubmitSmarttagJobRequest request);
 
     CompletableFuture<SubmitSnapshotJobResponse> submitSnapshotJob(SubmitSnapshotJobRequest request);
-
-    CompletableFuture<SubmitSubtitleJobResponse> submitSubtitleJob(SubmitSubtitleJobRequest request);
-
-    CompletableFuture<SubmitURLUploadJobResponse> submitURLUploadJob(SubmitURLUploadJobRequest request);
 
     CompletableFuture<SubmitVideoQualityJobResponse> submitVideoQualityJob(SubmitVideoQualityJobRequest request);
 
@@ -217,10 +161,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UnbindOutputBucketResponse> unbindOutputBucket(UnbindOutputBucketRequest request);
 
     CompletableFuture<UnregisterCustomFaceResponse> unregisterCustomFace(UnregisterCustomFaceRequest request);
-
-    CompletableFuture<UpdateCategoryNameResponse> updateCategoryName(UpdateCategoryNameRequest request);
-
-    CompletableFuture<UpdateCensorPipelineResponse> updateCensorPipeline(UpdateCensorPipelineRequest request);
 
     CompletableFuture<UpdateMediaResponse> updateMedia(UpdateMediaRequest request);
 

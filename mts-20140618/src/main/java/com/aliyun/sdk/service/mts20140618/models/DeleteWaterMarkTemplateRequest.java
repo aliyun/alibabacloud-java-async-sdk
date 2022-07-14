@@ -101,13 +101,13 @@ public class DeleteWaterMarkTemplateRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteWaterMarkTemplateRequest response) {
-            super(response);
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.waterMarkTemplateId = response.waterMarkTemplateId;
+        private Builder(DeleteWaterMarkTemplateRequest request) {
+            super(request);
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.waterMarkTemplateId = request.waterMarkTemplateId;
         } 
 
         /**

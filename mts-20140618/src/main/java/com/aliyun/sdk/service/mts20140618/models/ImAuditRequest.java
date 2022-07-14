@@ -127,15 +127,15 @@ public class ImAuditRequest extends Request {
             super();
         } 
 
-        private Builder(ImAuditRequest response) {
-            super(response);
-            this.bizType = response.bizType;
-            this.contents = response.contents;
-            this.images = response.images;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.scenes = response.scenes;
+        private Builder(ImAuditRequest request) {
+            super(request);
+            this.bizType = request.bizType;
+            this.contents = request.contents;
+            this.images = request.images;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.scenes = request.scenes;
         } 
 
         /**

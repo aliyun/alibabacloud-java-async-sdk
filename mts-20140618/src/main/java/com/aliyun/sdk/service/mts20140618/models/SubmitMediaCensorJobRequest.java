@@ -205,21 +205,21 @@ public class SubmitMediaCensorJobRequest extends Request {
             super();
         } 
 
-        private Builder(SubmitMediaCensorJobRequest response) {
-            super(response);
-            this.barrages = response.barrages;
-            this.coverImages = response.coverImages;
-            this.description = response.description;
-            this.externalUrl = response.externalUrl;
-            this.input = response.input;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pipelineId = response.pipelineId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.title = response.title;
-            this.userData = response.userData;
-            this.videoCensorConfig = response.videoCensorConfig;
+        private Builder(SubmitMediaCensorJobRequest request) {
+            super(request);
+            this.barrages = request.barrages;
+            this.coverImages = request.coverImages;
+            this.description = request.description;
+            this.externalUrl = request.externalUrl;
+            this.input = request.input;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pipelineId = request.pipelineId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.title = request.title;
+            this.userData = request.userData;
+            this.videoCensorConfig = request.videoCensorConfig;
         } 
 
         /**

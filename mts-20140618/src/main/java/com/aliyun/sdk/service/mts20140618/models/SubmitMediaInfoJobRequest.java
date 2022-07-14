@@ -140,16 +140,16 @@ public class SubmitMediaInfoJobRequest extends Request {
             super();
         } 
 
-        private Builder(SubmitMediaInfoJobRequest response) {
-            super(response);
-            this.async = response.async;
-            this.input = response.input;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pipelineId = response.pipelineId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.userData = response.userData;
+        private Builder(SubmitMediaInfoJobRequest request) {
+            super(request);
+            this.async = request.async;
+            this.input = request.input;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pipelineId = request.pipelineId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.userData = request.userData;
         } 
 
         /**

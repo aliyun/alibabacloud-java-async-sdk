@@ -141,16 +141,16 @@ public class SubmitFpShotJobRequest extends Request {
             super();
         } 
 
-        private Builder(SubmitFpShotJobRequest response) {
-            super(response);
-            this.fpShotConfig = response.fpShotConfig;
-            this.input = response.input;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pipelineId = response.pipelineId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.userData = response.userData;
+        private Builder(SubmitFpShotJobRequest request) {
+            super(request);
+            this.fpShotConfig = request.fpShotConfig;
+            this.input = request.input;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pipelineId = request.pipelineId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.userData = request.userData;
         } 
 
         /**

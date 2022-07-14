@@ -128,15 +128,15 @@ public class AddMediaWorkflowRequest extends Request {
             super();
         } 
 
-        private Builder(AddMediaWorkflowRequest response) {
-            super(response);
-            this.name = response.name;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.topology = response.topology;
-            this.triggerMode = response.triggerMode;
+        private Builder(AddMediaWorkflowRequest request) {
+            super(request);
+            this.name = request.name;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.topology = request.topology;
+            this.triggerMode = request.triggerMode;
         } 
 
         /**

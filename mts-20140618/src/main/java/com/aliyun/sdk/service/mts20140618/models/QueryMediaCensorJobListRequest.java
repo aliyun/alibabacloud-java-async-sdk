@@ -179,19 +179,19 @@ public class QueryMediaCensorJobListRequest extends Request {
             super();
         } 
 
-        private Builder(QueryMediaCensorJobListRequest response) {
-            super(response);
-            this.endOfJobCreatedTimeRange = response.endOfJobCreatedTimeRange;
-            this.jobId = response.jobId;
-            this.maximumPageSize = response.maximumPageSize;
-            this.nextPageToken = response.nextPageToken;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pipelineId = response.pipelineId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.startOfJobCreatedTimeRange = response.startOfJobCreatedTimeRange;
-            this.state = response.state;
+        private Builder(QueryMediaCensorJobListRequest request) {
+            super(request);
+            this.endOfJobCreatedTimeRange = request.endOfJobCreatedTimeRange;
+            this.jobId = request.jobId;
+            this.maximumPageSize = request.maximumPageSize;
+            this.nextPageToken = request.nextPageToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pipelineId = request.pipelineId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.startOfJobCreatedTimeRange = request.startOfJobCreatedTimeRange;
+            this.state = request.state;
         } 
 
         /**

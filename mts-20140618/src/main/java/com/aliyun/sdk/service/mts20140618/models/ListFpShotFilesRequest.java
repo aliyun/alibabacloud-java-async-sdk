@@ -128,15 +128,15 @@ public class ListFpShotFilesRequest extends Request {
             super();
         } 
 
-        private Builder(ListFpShotFilesRequest response) {
-            super(response);
-            this.fpDBId = response.fpDBId;
-            this.nextPageToken = response.nextPageToken;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageSize = response.pageSize;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ListFpShotFilesRequest request) {
+            super(request);
+            this.fpDBId = request.fpDBId;
+            this.nextPageToken = request.nextPageToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageSize = request.pageSize;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

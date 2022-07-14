@@ -114,14 +114,14 @@ public class UpdateMediaPublishStateRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateMediaPublishStateRequest response) {
-            super(response);
-            this.mediaId = response.mediaId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.publish = response.publish;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(UpdateMediaPublishStateRequest request) {
+            super(request);
+            this.mediaId = request.mediaId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.publish = request.publish;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

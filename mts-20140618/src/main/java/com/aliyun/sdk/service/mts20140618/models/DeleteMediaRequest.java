@@ -101,13 +101,13 @@ public class DeleteMediaRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteMediaRequest response) {
-            super(response);
-            this.mediaIds = response.mediaIds;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DeleteMediaRequest request) {
+            super(request);
+            this.mediaIds = request.mediaIds;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

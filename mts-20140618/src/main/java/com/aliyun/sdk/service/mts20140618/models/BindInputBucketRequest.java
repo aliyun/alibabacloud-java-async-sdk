@@ -127,15 +127,15 @@ public class BindInputBucketRequest extends Request {
             super();
         } 
 
-        private Builder(BindInputBucketRequest response) {
-            super(response);
-            this.bucket = response.bucket;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.referer = response.referer;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.roleArn = response.roleArn;
+        private Builder(BindInputBucketRequest request) {
+            super(request);
+            this.bucket = request.bucket;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.referer = request.referer;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.roleArn = request.roleArn;
         } 
 
         /**

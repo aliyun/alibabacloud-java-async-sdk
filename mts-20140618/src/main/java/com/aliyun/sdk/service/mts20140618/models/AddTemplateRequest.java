@@ -166,18 +166,18 @@ public class AddTemplateRequest extends Request {
             super();
         } 
 
-        private Builder(AddTemplateRequest response) {
-            super(response);
-            this.audio = response.audio;
-            this.container = response.container;
-            this.muxConfig = response.muxConfig;
-            this.name = response.name;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.transConfig = response.transConfig;
-            this.video = response.video;
+        private Builder(AddTemplateRequest request) {
+            super(request);
+            this.audio = request.audio;
+            this.container = request.container;
+            this.muxConfig = request.muxConfig;
+            this.name = request.name;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.transConfig = request.transConfig;
+            this.video = request.video;
         } 
 
         /**

@@ -244,24 +244,24 @@ public class UpdateSmarttagTemplateRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateSmarttagTemplateRequest response) {
-            super(response);
-            this.analyseTypes = response.analyseTypes;
-            this.faceCategoryIds = response.faceCategoryIds;
-            this.faceCustomParamsConfig = response.faceCustomParamsConfig;
-            this.industry = response.industry;
-            this.isDefault = response.isDefault;
-            this.keywordConfig = response.keywordConfig;
-            this.knowledgeConfig = response.knowledgeConfig;
-            this.labelType = response.labelType;
-            this.labelVersion = response.labelVersion;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.scene = response.scene;
-            this.templateId = response.templateId;
-            this.templateName = response.templateName;
+        private Builder(UpdateSmarttagTemplateRequest request) {
+            super(request);
+            this.analyseTypes = request.analyseTypes;
+            this.faceCategoryIds = request.faceCategoryIds;
+            this.faceCustomParamsConfig = request.faceCustomParamsConfig;
+            this.industry = request.industry;
+            this.isDefault = request.isDefault;
+            this.keywordConfig = request.keywordConfig;
+            this.knowledgeConfig = request.knowledgeConfig;
+            this.labelType = request.labelType;
+            this.labelVersion = request.labelVersion;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.scene = request.scene;
+            this.templateId = request.templateId;
+            this.templateName = request.templateName;
         } 
 
         /**

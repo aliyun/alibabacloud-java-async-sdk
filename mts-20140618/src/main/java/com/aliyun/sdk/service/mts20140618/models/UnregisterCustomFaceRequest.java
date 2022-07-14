@@ -129,15 +129,15 @@ public class UnregisterCustomFaceRequest extends Request {
             super();
         } 
 
-        private Builder(UnregisterCustomFaceRequest response) {
-            super(response);
-            this.categoryId = response.categoryId;
-            this.faceId = response.faceId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.personId = response.personId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(UnregisterCustomFaceRequest request) {
+            super(request);
+            this.categoryId = request.categoryId;
+            this.faceId = request.faceId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.personId = request.personId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

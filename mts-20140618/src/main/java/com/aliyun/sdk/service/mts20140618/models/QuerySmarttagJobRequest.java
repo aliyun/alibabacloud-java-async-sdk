@@ -114,14 +114,14 @@ public class QuerySmarttagJobRequest extends Request {
             super();
         } 
 
-        private Builder(QuerySmarttagJobRequest response) {
-            super(response);
-            this.jobId = response.jobId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.params = response.params;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(QuerySmarttagJobRequest request) {
+            super(request);
+            this.jobId = request.jobId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.params = request.params;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

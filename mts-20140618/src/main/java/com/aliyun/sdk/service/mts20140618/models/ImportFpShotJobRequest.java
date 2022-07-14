@@ -14,10 +14,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ImportFpShotJobRequest extends Request {
     @Query
     @NameInMap("FpDBId")
+    @Validation(required = true)
     private String fpDBId;
 
     @Query
     @NameInMap("FpImportConfig")
+    @Validation(required = true)
     private String fpImportConfig;
 
     @Query
@@ -153,17 +155,17 @@ public class ImportFpShotJobRequest extends Request {
             super();
         } 
 
-        private Builder(ImportFpShotJobRequest response) {
-            super(response);
-            this.fpDBId = response.fpDBId;
-            this.fpImportConfig = response.fpImportConfig;
-            this.input = response.input;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pipelineId = response.pipelineId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.userData = response.userData;
+        private Builder(ImportFpShotJobRequest request) {
+            super(request);
+            this.fpDBId = request.fpDBId;
+            this.fpImportConfig = request.fpImportConfig;
+            this.input = request.input;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pipelineId = request.pipelineId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.userData = request.userData;
         } 
 
         /**

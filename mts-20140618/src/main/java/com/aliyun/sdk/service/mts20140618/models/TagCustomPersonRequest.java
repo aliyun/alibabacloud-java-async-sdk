@@ -165,18 +165,18 @@ public class TagCustomPersonRequest extends Request {
             super();
         } 
 
-        private Builder(TagCustomPersonRequest response) {
-            super(response);
-            this.categoryDescription = response.categoryDescription;
-            this.categoryId = response.categoryId;
-            this.categoryName = response.categoryName;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.personDescription = response.personDescription;
-            this.personId = response.personId;
-            this.personName = response.personName;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(TagCustomPersonRequest request) {
+            super(request);
+            this.categoryDescription = request.categoryDescription;
+            this.categoryId = request.categoryId;
+            this.categoryName = request.categoryName;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.personDescription = request.personDescription;
+            this.personId = request.personId;
+            this.personName = request.personName;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

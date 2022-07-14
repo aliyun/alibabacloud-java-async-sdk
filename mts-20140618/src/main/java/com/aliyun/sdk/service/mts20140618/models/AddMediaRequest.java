@@ -218,22 +218,22 @@ public class AddMediaRequest extends Request {
             super();
         } 
 
-        private Builder(AddMediaRequest response) {
-            super(response);
-            this.cateId = response.cateId;
-            this.coverURL = response.coverURL;
-            this.description = response.description;
-            this.fileURL = response.fileURL;
-            this.inputUnbind = response.inputUnbind;
-            this.mediaWorkflowId = response.mediaWorkflowId;
-            this.mediaWorkflowUserData = response.mediaWorkflowUserData;
-            this.overrideParams = response.overrideParams;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.tags = response.tags;
-            this.title = response.title;
+        private Builder(AddMediaRequest request) {
+            super(request);
+            this.cateId = request.cateId;
+            this.coverURL = request.coverURL;
+            this.description = request.description;
+            this.fileURL = request.fileURL;
+            this.inputUnbind = request.inputUnbind;
+            this.mediaWorkflowId = request.mediaWorkflowId;
+            this.mediaWorkflowUserData = request.mediaWorkflowUserData;
+            this.overrideParams = request.overrideParams;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.tags = request.tags;
+            this.title = request.title;
         } 
 
         /**

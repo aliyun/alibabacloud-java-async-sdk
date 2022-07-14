@@ -129,15 +129,15 @@ public class RegisterCustomFaceRequest extends Request {
             super();
         } 
 
-        private Builder(RegisterCustomFaceRequest response) {
-            super(response);
-            this.categoryId = response.categoryId;
-            this.imageUrl = response.imageUrl;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.personId = response.personId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(RegisterCustomFaceRequest request) {
+            super(request);
+            this.categoryId = request.categoryId;
+            this.imageUrl = request.imageUrl;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.personId = request.personId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

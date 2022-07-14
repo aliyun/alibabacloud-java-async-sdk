@@ -101,13 +101,13 @@ public class QueryMediaWorkflowExecutionListRequest extends Request {
             super();
         } 
 
-        private Builder(QueryMediaWorkflowExecutionListRequest response) {
-            super(response);
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.runIds = response.runIds;
+        private Builder(QueryMediaWorkflowExecutionListRequest request) {
+            super(request);
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.runIds = request.runIds;
         } 
 
         /**

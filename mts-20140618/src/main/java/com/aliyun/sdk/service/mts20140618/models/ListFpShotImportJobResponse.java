@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link SubmitPornJobResponse} extends {@link TeaModel}
+ * {@link ListFpShotImportJobResponse} extends {@link TeaModel}
  *
- * <p>SubmitPornJobResponse</p>
+ * <p>ListFpShotImportJobResponse</p>
  */
-public class SubmitPornJobResponse extends Response {
+public class ListFpShotImportJobResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private SubmitPornJobResponseBody body;
+    private ListFpShotImportJobResponseBody body;
 
-    private SubmitPornJobResponse(BuilderImpl builder) {
+    private ListFpShotImportJobResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static SubmitPornJobResponse create() {
+    public static ListFpShotImportJobResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class SubmitPornJobResponse extends Response {
     /**
      * @return body
      */
-    public SubmitPornJobResponseBody getBody() {
+    public ListFpShotImportJobResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<SubmitPornJobResponse, Builder> {
+    public interface Builder extends Response.Builder<ListFpShotImportJobResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(SubmitPornJobResponseBody body);
+        Builder body(ListFpShotImportJobResponseBody body);
 
         @Override
-        SubmitPornJobResponse build();
+        ListFpShotImportJobResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<SubmitPornJobResponse, Builder>
+            extends Response.BuilderImpl<ListFpShotImportJobResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private SubmitPornJobResponseBody body; 
+        private ListFpShotImportJobResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(SubmitPornJobResponse response) {
+        private BuilderImpl(ListFpShotImportJobResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class SubmitPornJobResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(SubmitPornJobResponseBody body) {
+        public Builder body(ListFpShotImportJobResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public SubmitPornJobResponse build() {
-            return new SubmitPornJobResponse(this);
+        public ListFpShotImportJobResponse build() {
+            return new ListFpShotImportJobResponse(this);
         } 
 
     } 

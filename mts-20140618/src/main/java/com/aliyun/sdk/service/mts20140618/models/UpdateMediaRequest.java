@@ -166,18 +166,18 @@ public class UpdateMediaRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateMediaRequest response) {
-            super(response);
-            this.cateId = response.cateId;
-            this.coverURL = response.coverURL;
-            this.description = response.description;
-            this.mediaId = response.mediaId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.tags = response.tags;
-            this.title = response.title;
+        private Builder(UpdateMediaRequest request) {
+            super(request);
+            this.cateId = request.cateId;
+            this.coverURL = request.coverURL;
+            this.description = request.description;
+            this.mediaId = request.mediaId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.tags = request.tags;
+            this.title = request.title;
         } 
 
         /**

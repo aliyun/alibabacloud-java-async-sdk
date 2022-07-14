@@ -169,18 +169,18 @@ public class SubmitVideoQualityJobRequest extends Request {
             super();
         } 
 
-        private Builder(SubmitVideoQualityJobRequest response) {
-            super(response);
-            this.input = response.input;
-            this.jobParams = response.jobParams;
-            this.modelId = response.modelId;
-            this.notifyUrl = response.notifyUrl;
-            this.output = response.output;
-            this.pipelineId = response.pipelineId;
-            this.scheduleParams = response.scheduleParams;
-            this.sourceType = response.sourceType;
-            this.userData = response.userData;
-            this.userId = response.userId;
+        private Builder(SubmitVideoQualityJobRequest request) {
+            super(request);
+            this.input = request.input;
+            this.jobParams = request.jobParams;
+            this.modelId = request.modelId;
+            this.notifyUrl = request.notifyUrl;
+            this.output = request.output;
+            this.pipelineId = request.pipelineId;
+            this.scheduleParams = request.scheduleParams;
+            this.sourceType = request.sourceType;
+            this.userData = request.userData;
+            this.userId = request.userId;
         } 
 
         /**

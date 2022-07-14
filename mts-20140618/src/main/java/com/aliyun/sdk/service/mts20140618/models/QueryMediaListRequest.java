@@ -153,17 +153,17 @@ public class QueryMediaListRequest extends Request {
             super();
         } 
 
-        private Builder(QueryMediaListRequest response) {
-            super(response);
-            this.includeMediaInfo = response.includeMediaInfo;
-            this.includePlayList = response.includePlayList;
-            this.includeSnapshotList = response.includeSnapshotList;
-            this.includeSummaryList = response.includeSummaryList;
-            this.mediaIds = response.mediaIds;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(QueryMediaListRequest request) {
+            super(request);
+            this.includeMediaInfo = request.includeMediaInfo;
+            this.includePlayList = request.includePlayList;
+            this.includeSnapshotList = request.includeSnapshotList;
+            this.includeSummaryList = request.includeSummaryList;
+            this.mediaIds = request.mediaIds;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

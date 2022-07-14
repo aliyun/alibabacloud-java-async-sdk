@@ -113,14 +113,14 @@ public class ListCustomPersonsRequest extends Request {
             super();
         } 
 
-        private Builder(ListCustomPersonsRequest response) {
-            super(response);
-            this.categoryId = response.categoryId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.personId = response.personId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ListCustomPersonsRequest request) {
+            super(request);
+            this.categoryId = request.categoryId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.personId = request.personId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

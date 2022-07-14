@@ -141,16 +141,16 @@ public class SubmitSnapshotJobRequest extends Request {
             super();
         } 
 
-        private Builder(SubmitSnapshotJobRequest response) {
-            super(response);
-            this.input = response.input;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pipelineId = response.pipelineId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.snapshotConfig = response.snapshotConfig;
-            this.userData = response.userData;
+        private Builder(SubmitSnapshotJobRequest request) {
+            super(request);
+            this.input = request.input;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pipelineId = request.pipelineId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.snapshotConfig = request.snapshotConfig;
+            this.userData = request.userData;
         } 
 
         /**

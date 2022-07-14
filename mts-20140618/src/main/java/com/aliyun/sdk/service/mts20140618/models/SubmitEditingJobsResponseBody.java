@@ -1894,14 +1894,14 @@ public class SubmitEditingJobsResponseBody extends TeaModel {
         } 
 
     }
-    public static class TS extends TeaModel {
+    public static class Ts extends TeaModel {
         @NameInMap("Md5Support")
         private Boolean md5Support;
 
         @NameInMap("SizeSupport")
         private Boolean sizeSupport;
 
-        private TS(Builder builder) {
+        private Ts(Builder builder) {
             this.md5Support = builder.md5Support;
             this.sizeSupport = builder.sizeSupport;
         }
@@ -1910,7 +1910,7 @@ public class SubmitEditingJobsResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static TS create() {
+        public static Ts create() {
             return builder().build();
         }
 
@@ -1948,8 +1948,8 @@ public class SubmitEditingJobsResponseBody extends TeaModel {
                 return this;
             }
 
-            public TS build() {
-                return new TS(this);
+            public Ts build() {
+                return new Ts(this);
             } 
 
         } 
@@ -1957,10 +1957,10 @@ public class SubmitEditingJobsResponseBody extends TeaModel {
     }
     public static class M3U8NonStandardSupport extends TeaModel {
         @NameInMap("TS")
-        private TS TS;
+        private Ts ts;
 
         private M3U8NonStandardSupport(Builder builder) {
-            this.TS = builder.TS;
+            this.ts = builder.ts;
         }
 
         public static Builder builder() {
@@ -1972,20 +1972,20 @@ public class SubmitEditingJobsResponseBody extends TeaModel {
         }
 
         /**
-         * @return TS
+         * @return ts
          */
-        public TS getTS() {
-            return this.TS;
+        public Ts getTs() {
+            return this.ts;
         }
 
         public static final class Builder {
-            private TS TS; 
+            private Ts ts; 
 
             /**
              * TS.
              */
-            public Builder TS(TS TS) {
-                this.TS = TS;
+            public Builder ts(Ts ts) {
+                this.ts = ts;
                 return this;
             }
 

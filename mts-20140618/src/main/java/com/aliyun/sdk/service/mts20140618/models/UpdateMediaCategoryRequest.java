@@ -114,14 +114,14 @@ public class UpdateMediaCategoryRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateMediaCategoryRequest response) {
-            super(response);
-            this.cateId = response.cateId;
-            this.mediaId = response.mediaId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(UpdateMediaCategoryRequest request) {
+            super(request);
+            this.cateId = request.cateId;
+            this.mediaId = request.mediaId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

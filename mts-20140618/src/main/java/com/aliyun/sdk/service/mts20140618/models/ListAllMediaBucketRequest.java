@@ -113,14 +113,14 @@ public class ListAllMediaBucketRequest extends Request {
             super();
         } 
 
-        private Builder(ListAllMediaBucketRequest response) {
-            super(response);
-            this.maximumPageSize = response.maximumPageSize;
-            this.nextPageToken = response.nextPageToken;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ListAllMediaBucketRequest request) {
+            super(request);
+            this.maximumPageSize = request.maximumPageSize;
+            this.nextPageToken = request.nextPageToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

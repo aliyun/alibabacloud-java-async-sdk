@@ -63,10 +63,10 @@ public class QueryVideoQualityJobRequest extends Request {
             super();
         } 
 
-        private Builder(QueryVideoQualityJobRequest response) {
-            super(response);
-            this.jobId = response.jobId;
-            this.userId = response.userId;
+        private Builder(QueryVideoQualityJobRequest request) {
+            super(request);
+            this.jobId = request.jobId;
+            this.userId = request.userId;
         } 
 
         /**

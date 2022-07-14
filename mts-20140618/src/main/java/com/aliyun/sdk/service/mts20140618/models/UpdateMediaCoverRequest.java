@@ -114,14 +114,14 @@ public class UpdateMediaCoverRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateMediaCoverRequest response) {
-            super(response);
-            this.coverURL = response.coverURL;
-            this.mediaId = response.mediaId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(UpdateMediaCoverRequest request) {
+            super(request);
+            this.coverURL = request.coverURL;
+            this.mediaId = request.mediaId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

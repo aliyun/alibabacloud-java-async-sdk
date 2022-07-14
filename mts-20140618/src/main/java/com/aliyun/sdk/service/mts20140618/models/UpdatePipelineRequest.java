@@ -155,17 +155,17 @@ public class UpdatePipelineRequest extends Request {
             super();
         } 
 
-        private Builder(UpdatePipelineRequest response) {
-            super(response);
-            this.name = response.name;
-            this.notifyConfig = response.notifyConfig;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pipelineId = response.pipelineId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.role = response.role;
-            this.state = response.state;
+        private Builder(UpdatePipelineRequest request) {
+            super(request);
+            this.name = request.name;
+            this.notifyConfig = request.notifyConfig;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pipelineId = request.pipelineId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.role = request.role;
+            this.state = request.state;
         } 
 
         /**

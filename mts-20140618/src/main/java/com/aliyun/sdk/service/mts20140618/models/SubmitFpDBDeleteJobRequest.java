@@ -140,16 +140,16 @@ public class SubmitFpDBDeleteJobRequest extends Request {
             super();
         } 
 
-        private Builder(SubmitFpDBDeleteJobRequest response) {
-            super(response);
-            this.delType = response.delType;
-            this.fpDBId = response.fpDBId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pipelineId = response.pipelineId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.userData = response.userData;
+        private Builder(SubmitFpDBDeleteJobRequest request) {
+            super(request);
+            this.delType = request.delType;
+            this.fpDBId = request.fpDBId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pipelineId = request.pipelineId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.userData = request.userData;
         } 
 
         /**
