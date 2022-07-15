@@ -1,0 +1,73 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.pai_dsw20220101.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link DeleteInstanceShutdownTimerRequest} extends {@link RequestModel}
+ *
+ * <p>DeleteInstanceShutdownTimerRequest</p>
+ */
+public class DeleteInstanceShutdownTimerRequest extends Request {
+    @Path
+    @NameInMap("InstanceId")
+    @Validation(required = true)
+    private String instanceId;
+
+    private DeleteInstanceShutdownTimerRequest(Builder builder) {
+        super(builder);
+        this.instanceId = builder.instanceId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static DeleteInstanceShutdownTimerRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public static final class Builder extends Request.Builder<DeleteInstanceShutdownTimerRequest, Builder> {
+        private String instanceId; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(DeleteInstanceShutdownTimerRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+        } 
+
+        /**
+         * 实例Id
+         */
+        public Builder instanceId(String instanceId) {
+            this.putPathParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        @Override
+        public DeleteInstanceShutdownTimerRequest build() {
+            return new DeleteInstanceShutdownTimerRequest(this);
+        } 
+
+    } 
+
+}
