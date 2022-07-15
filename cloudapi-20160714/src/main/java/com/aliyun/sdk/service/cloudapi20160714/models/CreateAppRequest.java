@@ -13,9 +13,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateAppRequest extends Request {
     @Query
+    @NameInMap("AppCode")
+    private String appCode;
+
+    @Query
+    @NameInMap("AppKey")
+    private String appKey;
+
+    @Query
     @NameInMap("AppName")
     @Validation(required = true)
     private String appName;
+
+    @Query
+    @NameInMap("AppSecret")
+    private String appSecret;
 
     @Query
     @NameInMap("Description")
@@ -35,7 +47,10 @@ public class CreateAppRequest extends Request {
 
     private CreateAppRequest(Builder builder) {
         super(builder);
+        this.appCode = builder.appCode;
+        this.appKey = builder.appKey;
         this.appName = builder.appName;
+        this.appSecret = builder.appSecret;
         this.description = builder.description;
         this.securityToken = builder.securityToken;
         this.source = builder.source;
@@ -56,10 +71,31 @@ public class CreateAppRequest extends Request {
     }
 
     /**
+     * @return appCode
+     */
+    public String getAppCode() {
+        return this.appCode;
+    }
+
+    /**
+     * @return appKey
+     */
+    public String getAppKey() {
+        return this.appKey;
+    }
+
+    /**
      * @return appName
      */
     public String getAppName() {
         return this.appName;
+    }
+
+    /**
+     * @return appSecret
+     */
+    public String getAppSecret() {
+        return this.appSecret;
     }
 
     /**
@@ -91,7 +127,10 @@ public class CreateAppRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateAppRequest, Builder> {
+        private String appCode; 
+        private String appKey; 
         private String appName; 
+        private String appSecret; 
         private String description; 
         private String securityToken; 
         private String source; 
@@ -103,7 +142,10 @@ public class CreateAppRequest extends Request {
 
         private Builder(CreateAppRequest request) {
             super(request);
+            this.appCode = request.appCode;
+            this.appKey = request.appKey;
             this.appName = request.appName;
+            this.appSecret = request.appSecret;
             this.description = request.description;
             this.securityToken = request.securityToken;
             this.source = request.source;
@@ -111,11 +153,38 @@ public class CreateAppRequest extends Request {
         } 
 
         /**
+         * AppCode.
+         */
+        public Builder appCode(String appCode) {
+            this.putQueryParameter("AppCode", appCode);
+            this.appCode = appCode;
+            return this;
+        }
+
+        /**
+         * AppKey.
+         */
+        public Builder appKey(String appKey) {
+            this.putQueryParameter("AppKey", appKey);
+            this.appKey = appKey;
+            return this;
+        }
+
+        /**
          * AppName.
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
             this.appName = appName;
+            return this;
+        }
+
+        /**
+         * AppSecret.
+         */
+        public Builder appSecret(String appSecret) {
+            this.putQueryParameter("AppSecret", appSecret);
+            this.appSecret = appSecret;
             return this;
         }
 

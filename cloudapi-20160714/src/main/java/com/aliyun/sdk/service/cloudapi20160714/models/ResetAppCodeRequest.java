@@ -18,12 +18,17 @@ public class ResetAppCodeRequest extends Request {
     private String appCode;
 
     @Query
+    @NameInMap("NewAppCode")
+    private String newAppCode;
+
+    @Query
     @NameInMap("SecurityToken")
     private String securityToken;
 
     private ResetAppCodeRequest(Builder builder) {
         super(builder);
         this.appCode = builder.appCode;
+        this.newAppCode = builder.newAppCode;
         this.securityToken = builder.securityToken;
     }
 
@@ -48,6 +53,13 @@ public class ResetAppCodeRequest extends Request {
     }
 
     /**
+     * @return newAppCode
+     */
+    public String getNewAppCode() {
+        return this.newAppCode;
+    }
+
+    /**
      * @return securityToken
      */
     public String getSecurityToken() {
@@ -56,6 +68,7 @@ public class ResetAppCodeRequest extends Request {
 
     public static final class Builder extends Request.Builder<ResetAppCodeRequest, Builder> {
         private String appCode; 
+        private String newAppCode; 
         private String securityToken; 
 
         private Builder() {
@@ -65,6 +78,7 @@ public class ResetAppCodeRequest extends Request {
         private Builder(ResetAppCodeRequest request) {
             super(request);
             this.appCode = request.appCode;
+            this.newAppCode = request.newAppCode;
             this.securityToken = request.securityToken;
         } 
 
@@ -74,6 +88,15 @@ public class ResetAppCodeRequest extends Request {
         public Builder appCode(String appCode) {
             this.putQueryParameter("AppCode", appCode);
             this.appCode = appCode;
+            return this;
+        }
+
+        /**
+         * NewAppCode.
+         */
+        public Builder newAppCode(String newAppCode) {
+            this.putQueryParameter("NewAppCode", newAppCode);
+            this.newAppCode = newAppCode;
             return this;
         }
 

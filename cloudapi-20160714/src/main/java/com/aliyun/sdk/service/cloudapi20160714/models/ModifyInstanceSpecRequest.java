@@ -27,6 +27,10 @@ public class ModifyInstanceSpecRequest extends Request {
     private String instanceSpec;
 
     @Query
+    @NameInMap("ModifyAction")
+    private String modifyAction;
+
+    @Query
     @NameInMap("Token")
     @Validation(required = true)
     private String token;
@@ -36,6 +40,7 @@ public class ModifyInstanceSpecRequest extends Request {
         this.autoPay = builder.autoPay;
         this.instanceId = builder.instanceId;
         this.instanceSpec = builder.instanceSpec;
+        this.modifyAction = builder.modifyAction;
         this.token = builder.token;
     }
 
@@ -74,6 +79,13 @@ public class ModifyInstanceSpecRequest extends Request {
     }
 
     /**
+     * @return modifyAction
+     */
+    public String getModifyAction() {
+        return this.modifyAction;
+    }
+
+    /**
      * @return token
      */
     public String getToken() {
@@ -84,6 +96,7 @@ public class ModifyInstanceSpecRequest extends Request {
         private Boolean autoPay; 
         private String instanceId; 
         private String instanceSpec; 
+        private String modifyAction; 
         private String token; 
 
         private Builder() {
@@ -95,6 +108,7 @@ public class ModifyInstanceSpecRequest extends Request {
             this.autoPay = request.autoPay;
             this.instanceId = request.instanceId;
             this.instanceSpec = request.instanceSpec;
+            this.modifyAction = request.modifyAction;
             this.token = request.token;
         } 
 
@@ -122,6 +136,15 @@ public class ModifyInstanceSpecRequest extends Request {
         public Builder instanceSpec(String instanceSpec) {
             this.putQueryParameter("InstanceSpec", instanceSpec);
             this.instanceSpec = instanceSpec;
+            return this;
+        }
+
+        /**
+         * ModifyAction.
+         */
+        public Builder modifyAction(String modifyAction) {
+            this.putQueryParameter("ModifyAction", modifyAction);
+            this.modifyAction = modifyAction;
             return this;
         }
 

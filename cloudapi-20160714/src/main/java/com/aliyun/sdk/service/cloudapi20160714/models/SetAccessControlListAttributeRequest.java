@@ -7,28 +7,29 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ResetAppSecretRequest} extends {@link RequestModel}
+ * {@link SetAccessControlListAttributeRequest} extends {@link RequestModel}
  *
- * <p>ResetAppSecretRequest</p>
+ * <p>SetAccessControlListAttributeRequest</p>
  */
-public class ResetAppSecretRequest extends Request {
+public class SetAccessControlListAttributeRequest extends Request {
     @Query
-    @NameInMap("AppKey")
+    @NameInMap("AclId")
     @Validation(required = true)
-    private String appKey;
+    private String aclId;
 
     @Query
-    @NameInMap("NewAppSecret")
-    private String newAppSecret;
+    @NameInMap("AclName")
+    @Validation(required = true)
+    private String aclName;
 
     @Query
     @NameInMap("SecurityToken")
     private String securityToken;
 
-    private ResetAppSecretRequest(Builder builder) {
+    private SetAccessControlListAttributeRequest(Builder builder) {
         super(builder);
-        this.appKey = builder.appKey;
-        this.newAppSecret = builder.newAppSecret;
+        this.aclId = builder.aclId;
+        this.aclName = builder.aclName;
         this.securityToken = builder.securityToken;
     }
 
@@ -36,7 +37,7 @@ public class ResetAppSecretRequest extends Request {
         return new Builder();
     }
 
-    public static ResetAppSecretRequest create() {
+    public static SetAccessControlListAttributeRequest create() {
         return builder().build();
     }
 
@@ -46,17 +47,17 @@ public class ResetAppSecretRequest extends Request {
     }
 
     /**
-     * @return appKey
+     * @return aclId
      */
-    public String getAppKey() {
-        return this.appKey;
+    public String getAclId() {
+        return this.aclId;
     }
 
     /**
-     * @return newAppSecret
+     * @return aclName
      */
-    public String getNewAppSecret() {
-        return this.newAppSecret;
+    public String getAclName() {
+        return this.aclName;
     }
 
     /**
@@ -66,37 +67,37 @@ public class ResetAppSecretRequest extends Request {
         return this.securityToken;
     }
 
-    public static final class Builder extends Request.Builder<ResetAppSecretRequest, Builder> {
-        private String appKey; 
-        private String newAppSecret; 
+    public static final class Builder extends Request.Builder<SetAccessControlListAttributeRequest, Builder> {
+        private String aclId; 
+        private String aclName; 
         private String securityToken; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ResetAppSecretRequest request) {
+        private Builder(SetAccessControlListAttributeRequest request) {
             super(request);
-            this.appKey = request.appKey;
-            this.newAppSecret = request.newAppSecret;
+            this.aclId = request.aclId;
+            this.aclName = request.aclName;
             this.securityToken = request.securityToken;
         } 
 
         /**
-         * AppKey.
+         * AclId.
          */
-        public Builder appKey(String appKey) {
-            this.putQueryParameter("AppKey", appKey);
-            this.appKey = appKey;
+        public Builder aclId(String aclId) {
+            this.putQueryParameter("AclId", aclId);
+            this.aclId = aclId;
             return this;
         }
 
         /**
-         * NewAppSecret.
+         * AclName.
          */
-        public Builder newAppSecret(String newAppSecret) {
-            this.putQueryParameter("NewAppSecret", newAppSecret);
-            this.newAppSecret = newAppSecret;
+        public Builder aclName(String aclName) {
+            this.putQueryParameter("AclName", aclName);
+            this.aclName = aclName;
             return this;
         }
 
@@ -110,8 +111,8 @@ public class ResetAppSecretRequest extends Request {
         }
 
         @Override
-        public ResetAppSecretRequest build() {
-            return new ResetAppSecretRequest(this);
+        public SetAccessControlListAttributeRequest build() {
+            return new SetAccessControlListAttributeRequest(this);
         } 
 
     } 
