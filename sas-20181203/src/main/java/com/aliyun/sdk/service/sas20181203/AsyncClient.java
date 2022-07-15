@@ -322,6 +322,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<InstallCloudMonitorResponse> installCloudMonitor(InstallCloudMonitorRequest request);
 
+    CompletableFuture<ListCheckResultResponse> listCheckResult(ListCheckResultRequest request);
+
     CompletableFuture<ListVulAutoRepairConfigResponse> listVulAutoRepairConfig(ListVulAutoRepairConfigRequest request);
 
     CompletableFuture<ModifyAntiBruteForceRuleResponse> modifyAntiBruteForceRule(ModifyAntiBruteForceRuleRequest request);
