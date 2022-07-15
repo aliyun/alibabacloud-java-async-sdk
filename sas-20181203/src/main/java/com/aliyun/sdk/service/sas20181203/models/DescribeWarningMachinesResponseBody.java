@@ -152,6 +152,12 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
     } 
 
     public static class WarningMachines extends TeaModel {
+        @NameInMap("AuthVersion")
+        private Integer authVersion;
+
+        @NameInMap("Bind")
+        private Boolean bind;
+
         @NameInMap("HighWarningCount")
         private Integer highWarningCount;
 
@@ -189,6 +195,8 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
         private String uuid;
 
         private WarningMachines(Builder builder) {
+            this.authVersion = builder.authVersion;
+            this.bind = builder.bind;
             this.highWarningCount = builder.highWarningCount;
             this.instanceId = builder.instanceId;
             this.instanceName = builder.instanceName;
@@ -209,6 +217,20 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
 
         public static WarningMachines create() {
             return builder().build();
+        }
+
+        /**
+         * @return authVersion
+         */
+        public Integer getAuthVersion() {
+            return this.authVersion;
+        }
+
+        /**
+         * @return bind
+         */
+        public Boolean getBind() {
+            return this.bind;
         }
 
         /**
@@ -296,6 +318,8 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer authVersion; 
+            private Boolean bind; 
             private Integer highWarningCount; 
             private String instanceId; 
             private String instanceName; 
@@ -308,6 +332,22 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
             private String regionId; 
             private Integer status; 
             private String uuid; 
+
+            /**
+             * AuthVersion.
+             */
+            public Builder authVersion(Integer authVersion) {
+                this.authVersion = authVersion;
+                return this;
+            }
+
+            /**
+             * Bind.
+             */
+            public Builder bind(Boolean bind) {
+                this.bind = bind;
+                return this;
+            }
 
             /**
              * HighWarningCount.

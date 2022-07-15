@@ -158,11 +158,17 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
         @NameInMap("CheckWarningId")
         private Long checkWarningId;
 
+        @NameInMap("FixStatus")
+        private Integer fixStatus;
+
         @NameInMap("Item")
         private String item;
 
         @NameInMap("Level")
         private String level;
+
+        @NameInMap("Reason")
+        private String reason;
 
         @NameInMap("Status")
         private Integer status;
@@ -176,8 +182,10 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
         private CheckWarnings(Builder builder) {
             this.checkId = builder.checkId;
             this.checkWarningId = builder.checkWarningId;
+            this.fixStatus = builder.fixStatus;
             this.item = builder.item;
             this.level = builder.level;
+            this.reason = builder.reason;
             this.status = builder.status;
             this.type = builder.type;
             this.uuid = builder.uuid;
@@ -206,6 +214,13 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
         }
 
         /**
+         * @return fixStatus
+         */
+        public Integer getFixStatus() {
+            return this.fixStatus;
+        }
+
+        /**
          * @return item
          */
         public String getItem() {
@@ -217,6 +232,13 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
          */
         public String getLevel() {
             return this.level;
+        }
+
+        /**
+         * @return reason
+         */
+        public String getReason() {
+            return this.reason;
         }
 
         /**
@@ -243,8 +265,10 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
         public static final class Builder {
             private Long checkId; 
             private Long checkWarningId; 
+            private Integer fixStatus; 
             private String item; 
             private String level; 
+            private String reason; 
             private Integer status; 
             private String type; 
             private String uuid; 
@@ -266,6 +290,14 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
             }
 
             /**
+             * FixStatus.
+             */
+            public Builder fixStatus(Integer fixStatus) {
+                this.fixStatus = fixStatus;
+                return this;
+            }
+
+            /**
              * Item.
              */
             public Builder item(String item) {
@@ -278,6 +310,14 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
              */
             public Builder level(String level) {
                 this.level = level;
+                return this;
+            }
+
+            /**
+             * Reason.
+             */
+            public Builder reason(String reason) {
+                this.reason = reason;
                 return this;
             }
 

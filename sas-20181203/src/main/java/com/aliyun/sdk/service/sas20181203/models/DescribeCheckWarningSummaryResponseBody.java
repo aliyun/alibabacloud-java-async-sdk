@@ -155,6 +155,12 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
         @NameInMap("CheckCount")
         private Integer checkCount;
 
+        @NameInMap("CheckExploit")
+        private Boolean checkExploit;
+
+        @NameInMap("DatabaseRisk")
+        private Boolean databaseRisk;
+
         @NameInMap("HighWarningCount")
         private Integer highWarningCount;
 
@@ -187,6 +193,8 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
 
         private WarningSummarys(Builder builder) {
             this.checkCount = builder.checkCount;
+            this.checkExploit = builder.checkExploit;
+            this.databaseRisk = builder.databaseRisk;
             this.highWarningCount = builder.highWarningCount;
             this.lastFoundTime = builder.lastFoundTime;
             this.level = builder.level;
@@ -212,6 +220,20 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
          */
         public Integer getCheckCount() {
             return this.checkCount;
+        }
+
+        /**
+         * @return checkExploit
+         */
+        public Boolean getCheckExploit() {
+            return this.checkExploit;
+        }
+
+        /**
+         * @return databaseRisk
+         */
+        public Boolean getDatabaseRisk() {
+            return this.databaseRisk;
         }
 
         /**
@@ -286,6 +308,8 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer checkCount; 
+            private Boolean checkExploit; 
+            private Boolean databaseRisk; 
             private Integer highWarningCount; 
             private String lastFoundTime; 
             private String level; 
@@ -302,6 +326,22 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
              */
             public Builder checkCount(Integer checkCount) {
                 this.checkCount = checkCount;
+                return this;
+            }
+
+            /**
+             * CheckExploit.
+             */
+            public Builder checkExploit(Boolean checkExploit) {
+                this.checkExploit = checkExploit;
+                return this;
+            }
+
+            /**
+             * DatabaseRisk.
+             */
+            public Builder databaseRisk(Boolean databaseRisk) {
+                this.databaseRisk = databaseRisk;
                 return this;
             }
 

@@ -17,6 +17,10 @@ public class DescribeCheckWarningsRequest extends Request {
     private Long checkId;
 
     @Query
+    @NameInMap("CheckType")
+    private String checkType;
+
+    @Query
     @NameInMap("CurrentPage")
     private Integer currentPage;
 
@@ -45,6 +49,7 @@ public class DescribeCheckWarningsRequest extends Request {
     private DescribeCheckWarningsRequest(Builder builder) {
         super(builder);
         this.checkId = builder.checkId;
+        this.checkType = builder.checkType;
         this.currentPage = builder.currentPage;
         this.lang = builder.lang;
         this.pageSize = builder.pageSize;
@@ -71,6 +76,13 @@ public class DescribeCheckWarningsRequest extends Request {
      */
     public Long getCheckId() {
         return this.checkId;
+    }
+
+    /**
+     * @return checkType
+     */
+    public String getCheckType() {
+        return this.checkType;
     }
 
     /**
@@ -117,6 +129,7 @@ public class DescribeCheckWarningsRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeCheckWarningsRequest, Builder> {
         private Long checkId; 
+        private String checkType; 
         private Integer currentPage; 
         private String lang; 
         private Integer pageSize; 
@@ -131,6 +144,7 @@ public class DescribeCheckWarningsRequest extends Request {
         private Builder(DescribeCheckWarningsRequest request) {
             super(request);
             this.checkId = request.checkId;
+            this.checkType = request.checkType;
             this.currentPage = request.currentPage;
             this.lang = request.lang;
             this.pageSize = request.pageSize;
@@ -145,6 +159,15 @@ public class DescribeCheckWarningsRequest extends Request {
         public Builder checkId(Long checkId) {
             this.putQueryParameter("CheckId", checkId);
             this.checkId = checkId;
+            return this;
+        }
+
+        /**
+         * CheckType.
+         */
+        public Builder checkType(String checkType) {
+            this.putQueryParameter("CheckType", checkType);
+            this.checkType = checkType;
             return this;
         }
 
