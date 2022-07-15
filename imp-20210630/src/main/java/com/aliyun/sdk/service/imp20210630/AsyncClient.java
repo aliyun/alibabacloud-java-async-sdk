@@ -52,8 +52,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteLiveRoomResponse> deleteLiveRoom(DeleteLiveRoomRequest request);
 
-    CompletableFuture<DeleteRecordFileInfoResponse> deleteRecordFileInfo(DeleteRecordFileInfoRequest request);
-
     CompletableFuture<DeleteRoomResponse> deleteRoom(DeleteRoomRequest request);
 
     CompletableFuture<DeleteSensitiveWordResponse> deleteSensitiveWord(DeleteSensitiveWordRequest request);
@@ -80,8 +78,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetLiveRoomUserStatisticsResponse> getLiveRoomUserStatistics(GetLiveRoomUserStatisticsRequest request);
 
-    CompletableFuture<GetRecordFileInfoResponse> getRecordFileInfo(GetRecordFileInfoRequest request);
-
     CompletableFuture<GetRoomResponse> getRoom(GetRoomRequest request);
 
     CompletableFuture<GetStandardRoomJumpUrlResponse> getStandardRoomJumpUrl(GetStandardRoomJumpUrlRequest request);
@@ -93,8 +89,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListCommentsResponse> listComments(ListCommentsRequest request);
 
     CompletableFuture<ListConferenceUsersResponse> listConferenceUsers(ListConferenceUsersRequest request);
-
-    CompletableFuture<ListLiveFilesResponse> listLiveFiles(ListLiveFilesRequest request);
 
     CompletableFuture<ListLiveRoomsResponse> listLiveRooms(ListLiveRoomsRequest request);
 

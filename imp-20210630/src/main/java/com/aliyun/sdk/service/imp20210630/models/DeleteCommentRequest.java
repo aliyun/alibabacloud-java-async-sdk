@@ -22,10 +22,6 @@ public class DeleteCommentRequest extends Request {
     @Validation(required = true)
     private java.util.List < String > commentIdList;
 
-    @Body
-    @NameInMap("CreatorId")
-    private String creatorId;
-
     @Host
     @NameInMap("RegionId")
     private String regionId;
@@ -44,7 +40,6 @@ public class DeleteCommentRequest extends Request {
         super(builder);
         this.appId = builder.appId;
         this.commentIdList = builder.commentIdList;
-        this.creatorId = builder.creatorId;
         this.regionId = builder.regionId;
         this.roomId = builder.roomId;
         this.userId = builder.userId;
@@ -78,13 +73,6 @@ public class DeleteCommentRequest extends Request {
     }
 
     /**
-     * @return creatorId
-     */
-    public String getCreatorId() {
-        return this.creatorId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -108,7 +96,6 @@ public class DeleteCommentRequest extends Request {
     public static final class Builder extends Request.Builder<DeleteCommentRequest, Builder> {
         private String appId; 
         private java.util.List < String > commentIdList; 
-        private String creatorId; 
         private String regionId; 
         private String roomId; 
         private String userId; 
@@ -121,7 +108,6 @@ public class DeleteCommentRequest extends Request {
             super(request);
             this.appId = request.appId;
             this.commentIdList = request.commentIdList;
-            this.creatorId = request.creatorId;
             this.regionId = request.regionId;
             this.roomId = request.roomId;
             this.userId = request.userId;
@@ -142,15 +128,6 @@ public class DeleteCommentRequest extends Request {
         public Builder commentIdList(java.util.List < String > commentIdList) {
             this.putBodyParameter("CommentIdList", commentIdList);
             this.commentIdList = commentIdList;
-            return this;
-        }
-
-        /**
-         * 弹幕的创建者ID。
-         */
-        public Builder creatorId(String creatorId) {
-            this.putBodyParameter("CreatorId", creatorId);
-            this.creatorId = creatorId;
             return this;
         }
 
