@@ -26,21 +26,11 @@ public class ReprotectDiskReplicaGroupRequest extends Request {
     @Validation(required = true)
     private String replicaGroupId;
 
-    @Query
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
-    @Query
-    @NameInMap("SourceZoneId")
-    private String sourceZoneId;
-
     private ReprotectDiskReplicaGroupRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
         this.regionId = builder.regionId;
         this.replicaGroupId = builder.replicaGroupId;
-        this.sourceRegionId = builder.sourceRegionId;
-        this.sourceZoneId = builder.sourceZoneId;
     }
 
     public static Builder builder() {
@@ -77,26 +67,10 @@ public class ReprotectDiskReplicaGroupRequest extends Request {
         return this.replicaGroupId;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
-     * @return sourceZoneId
-     */
-    public String getSourceZoneId() {
-        return this.sourceZoneId;
-    }
-
     public static final class Builder extends Request.Builder<ReprotectDiskReplicaGroupRequest, Builder> {
         private String clientToken; 
         private String regionId; 
         private String replicaGroupId; 
-        private String sourceRegionId; 
-        private String sourceZoneId; 
 
         private Builder() {
             super();
@@ -107,8 +81,6 @@ public class ReprotectDiskReplicaGroupRequest extends Request {
             this.clientToken = request.clientToken;
             this.regionId = request.regionId;
             this.replicaGroupId = request.replicaGroupId;
-            this.sourceRegionId = request.sourceRegionId;
-            this.sourceZoneId = request.sourceZoneId;
         } 
 
         /**
@@ -135,24 +107,6 @@ public class ReprotectDiskReplicaGroupRequest extends Request {
         public Builder replicaGroupId(String replicaGroupId) {
             this.putQueryParameter("ReplicaGroupId", replicaGroupId);
             this.replicaGroupId = replicaGroupId;
-            return this;
-        }
-
-        /**
-         * 用户选择的新生产Region，必须与SourceZoneId成对出现。不指定则默认是反向。
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putQueryParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
-            return this;
-        }
-
-        /**
-         * 用户选择的新生产可用区，必须与SourceRegionId成对出现。不指定则默认是反向。
-         */
-        public Builder sourceZoneId(String sourceZoneId) {
-            this.putQueryParameter("SourceZoneId", sourceZoneId);
-            this.sourceZoneId = sourceZoneId;
             return this;
         }
 

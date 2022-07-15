@@ -113,6 +113,12 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         @NameInMap("PairNumber")
         private Long pairNumber;
 
+        @NameInMap("PrimaryRegion")
+        private String primaryRegion;
+
+        @NameInMap("PrimaryZone")
+        private String primaryZone;
+
         @NameInMap("RPO")
         private Long RPO;
 
@@ -128,6 +134,12 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         @NameInMap("SourceZoneId")
         private String sourceZoneId;
 
+        @NameInMap("StandbyRegion")
+        private String standbyRegion;
+
+        @NameInMap("StandbyZone")
+        private String standbyZone;
+
         @NameInMap("Status")
         private String status;
 
@@ -139,11 +151,15 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
             this.lastRecoverPoint = builder.lastRecoverPoint;
             this.pairIds = builder.pairIds;
             this.pairNumber = builder.pairNumber;
+            this.primaryRegion = builder.primaryRegion;
+            this.primaryZone = builder.primaryZone;
             this.RPO = builder.RPO;
             this.replicaGroupId = builder.replicaGroupId;
             this.site = builder.site;
             this.sourceRegionId = builder.sourceRegionId;
             this.sourceZoneId = builder.sourceZoneId;
+            this.standbyRegion = builder.standbyRegion;
+            this.standbyZone = builder.standbyZone;
             this.status = builder.status;
         }
 
@@ -205,6 +221,20 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return primaryRegion
+         */
+        public String getPrimaryRegion() {
+            return this.primaryRegion;
+        }
+
+        /**
+         * @return primaryZone
+         */
+        public String getPrimaryZone() {
+            return this.primaryZone;
+        }
+
+        /**
          * @return RPO
          */
         public Long getRPO() {
@@ -240,6 +270,20 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return standbyRegion
+         */
+        public String getStandbyRegion() {
+            return this.standbyRegion;
+        }
+
+        /**
+         * @return standbyZone
+         */
+        public String getStandbyZone() {
+            return this.standbyZone;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -254,11 +298,15 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
             private Long lastRecoverPoint; 
             private java.util.List < byte[] > pairIds; 
             private Long pairNumber; 
+            private String primaryRegion; 
+            private String primaryZone; 
             private Long RPO; 
             private String replicaGroupId; 
             private String site; 
             private String sourceRegionId; 
             private String sourceZoneId; 
+            private String standbyRegion; 
+            private String standbyZone; 
             private String status; 
 
             /**
@@ -318,6 +366,22 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
             }
 
             /**
+             * 复制组的初始源地域。
+             */
+            public Builder primaryRegion(String primaryRegion) {
+                this.primaryRegion = primaryRegion;
+                return this;
+            }
+
+            /**
+             * 复制组的初始源可用区。
+             */
+            public Builder primaryZone(String primaryZone) {
+                this.primaryZone = primaryZone;
+                return this;
+            }
+
+            /**
              * RPO.
              */
             public Builder RPO(Long RPO) {
@@ -354,6 +418,22 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
              */
             public Builder sourceZoneId(String sourceZoneId) {
                 this.sourceZoneId = sourceZoneId;
+                return this;
+            }
+
+            /**
+             * 复制组的初始目的地域。
+             */
+            public Builder standbyRegion(String standbyRegion) {
+                this.standbyRegion = standbyRegion;
+                return this;
+            }
+
+            /**
+             * 复制组的初始目的可用区。
+             */
+            public Builder standbyZone(String standbyZone) {
+                this.standbyZone = standbyZone;
                 return this;
             }
 
