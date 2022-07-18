@@ -21,6 +21,14 @@ public class DescribeDiskReplicaPairsRequest extends Request {
     private String nextToken;
 
     @Query
+    @NameInMap("PageNumber")
+    private Integer pageNumber;
+
+    @Query
+    @NameInMap("PageSize")
+    private Integer pageSize;
+
+    @Query
     @NameInMap("PairIds")
     private String pairIds;
 
@@ -41,6 +49,8 @@ public class DescribeDiskReplicaPairsRequest extends Request {
         super(builder);
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
         this.pairIds = builder.pairIds;
         this.regionId = builder.regionId;
         this.replicaGroupId = builder.replicaGroupId;
@@ -75,6 +85,20 @@ public class DescribeDiskReplicaPairsRequest extends Request {
     }
 
     /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
      * @return pairIds
      */
     public String getPairIds() {
@@ -105,6 +129,8 @@ public class DescribeDiskReplicaPairsRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeDiskReplicaPairsRequest, Builder> {
         private Long maxResults; 
         private String nextToken; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
         private String pairIds; 
         private String regionId; 
         private String replicaGroupId; 
@@ -118,6 +144,8 @@ public class DescribeDiskReplicaPairsRequest extends Request {
             super(request);
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
             this.pairIds = request.pairIds;
             this.regionId = request.regionId;
             this.replicaGroupId = request.replicaGroupId;
@@ -137,11 +165,29 @@ public class DescribeDiskReplicaPairsRequest extends Request {
         }
 
         /**
-         * 查询凭证（Token）。取值为上一次调用该接口返回的NextToken参数值，初次调用接口时无需设置该参数。
+         * 查询凭证（Token）。取值为上一次调用该接口返回的NextToken参数值，初次调用接口时无需设置该参数。如果设置了NextToken，则请求参数PageSize和PageNumber将失效，且返回数据中的TotalCount无效。
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
             this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * 分页查询时的页码。
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * 分页查询时设置的每页行数。
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
             return this;
         }
 
@@ -176,7 +222,7 @@ public class DescribeDiskReplicaPairsRequest extends Request {
         }
 
         /**
-         * production或backup，表示获取本地为主站点或备站点的复制对数据，默认为production。
+         * production或backup，表示获取本地为生产站点或灾备站点的复制对数据，默认为production。
          */
         public Builder site(String site) {
             this.putQueryParameter("Site", site);

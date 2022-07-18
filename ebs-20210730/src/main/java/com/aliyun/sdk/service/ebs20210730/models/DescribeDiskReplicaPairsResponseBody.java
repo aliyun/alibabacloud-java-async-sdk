@@ -15,16 +15,28 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
     @NameInMap("NextToken")
     private String nextToken;
 
+    @NameInMap("PageNumber")
+    private Integer pageNumber;
+
+    @NameInMap("PageSize")
+    private Integer pageSize;
+
     @NameInMap("ReplicaPairs")
     private java.util.List < ReplicaPairs> replicaPairs;
 
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("TotalCount")
+    private Long totalCount;
+
     private DescribeDiskReplicaPairsResponseBody(Builder builder) {
         this.nextToken = builder.nextToken;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
         this.replicaPairs = builder.replicaPairs;
         this.requestId = builder.requestId;
+        this.totalCount = builder.totalCount;
     }
 
     public static Builder builder() {
@@ -43,6 +55,20 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
     }
 
     /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
      * @return replicaPairs
      */
     public java.util.List < ReplicaPairs> getReplicaPairs() {
@@ -56,16 +82,42 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return totalCount
+     */
+    public Long getTotalCount() {
+        return this.totalCount;
+    }
+
     public static final class Builder {
         private String nextToken; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
         private java.util.List < ReplicaPairs> replicaPairs; 
         private String requestId; 
+        private Long totalCount; 
 
         /**
-         * NextToken.
+         * 查询凭证（Token）。取值为上一次调用该接口返回的NextToken参数值，初次调用接口时无需设置该参数。如果设置了NextToken，则请求参数PageSize和PageNumber将失效，且返回数据中的TotalCount无效。
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * 参数页码。
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * 参数页行数。
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.pageSize = pageSize;
             return this;
         }
 
@@ -82,6 +134,14 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * 分页查询时的结果总条数。
+         */
+        public Builder totalCount(Long totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
