@@ -25,10 +25,6 @@ public class ListCheckResultRequest extends Request {
     private java.util.List < String > instanceIds;
 
     @Query
-    @NameInMap("InstanceSubTypes")
-    private java.util.List < String > instanceSubTypes;
-
-    @Query
     @NameInMap("InstanceTypes")
     private java.util.List < String > instanceTypes;
 
@@ -69,7 +65,6 @@ public class ListCheckResultRequest extends Request {
         this.checkKey = builder.checkKey;
         this.currentPage = builder.currentPage;
         this.instanceIds = builder.instanceIds;
-        this.instanceSubTypes = builder.instanceSubTypes;
         this.instanceTypes = builder.instanceTypes;
         this.lang = builder.lang;
         this.pageSize = builder.pageSize;
@@ -113,13 +108,6 @@ public class ListCheckResultRequest extends Request {
      */
     public java.util.List < String > getInstanceIds() {
         return this.instanceIds;
-    }
-
-    /**
-     * @return instanceSubTypes
-     */
-    public java.util.List < String > getInstanceSubTypes() {
-        return this.instanceSubTypes;
     }
 
     /**
@@ -189,7 +177,6 @@ public class ListCheckResultRequest extends Request {
         private String checkKey; 
         private Integer currentPage; 
         private java.util.List < String > instanceIds; 
-        private java.util.List < String > instanceSubTypes; 
         private java.util.List < String > instanceTypes; 
         private String lang; 
         private Integer pageSize; 
@@ -209,7 +196,6 @@ public class ListCheckResultRequest extends Request {
             this.checkKey = request.checkKey;
             this.currentPage = request.currentPage;
             this.instanceIds = request.instanceIds;
-            this.instanceSubTypes = request.instanceSubTypes;
             this.instanceTypes = request.instanceTypes;
             this.lang = request.lang;
             this.pageSize = request.pageSize;
@@ -245,15 +231,6 @@ public class ListCheckResultRequest extends Request {
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
             this.instanceIds = instanceIds;
-            return this;
-        }
-
-        /**
-         * InstanceSubTypes.
-         */
-        public Builder instanceSubTypes(java.util.List < String > instanceSubTypes) {
-            this.putQueryParameter("InstanceSubTypes", instanceSubTypes);
-            this.instanceSubTypes = instanceSubTypes;
             return this;
         }
 
