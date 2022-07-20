@@ -18,6 +18,9 @@ public class GetDeliveryHistoryJobResponseBody extends TeaModel {
     @NameInMap("EndTime")
     private String endTime;
 
+    @NameInMap("HomeRegion")
+    private String homeRegion;
+
     @NameInMap("JobId")
     private Long jobId;
 
@@ -42,6 +45,7 @@ public class GetDeliveryHistoryJobResponseBody extends TeaModel {
     private GetDeliveryHistoryJobResponseBody(Builder builder) {
         this.createdTime = builder.createdTime;
         this.endTime = builder.endTime;
+        this.homeRegion = builder.homeRegion;
         this.jobId = builder.jobId;
         this.jobStatus = builder.jobStatus;
         this.requestId = builder.requestId;
@@ -71,6 +75,13 @@ public class GetDeliveryHistoryJobResponseBody extends TeaModel {
      */
     public String getEndTime() {
         return this.endTime;
+    }
+
+    /**
+     * @return homeRegion
+     */
+    public String getHomeRegion() {
+        return this.homeRegion;
     }
 
     /**
@@ -125,6 +136,7 @@ public class GetDeliveryHistoryJobResponseBody extends TeaModel {
     public static final class Builder {
         private String createdTime; 
         private String endTime; 
+        private String homeRegion; 
         private Long jobId; 
         private Integer jobStatus; 
         private String requestId; 
@@ -146,6 +158,14 @@ public class GetDeliveryHistoryJobResponseBody extends TeaModel {
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * HomeRegion.
+         */
+        public Builder homeRegion(String homeRegion) {
+            this.homeRegion = homeRegion;
             return this;
         }
 

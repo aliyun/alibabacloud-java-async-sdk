@@ -30,6 +30,16 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeTrailsResponse> describeTrails(DescribeTrailsRequest request);
 
+    CompletableFuture<GetAccessKeyLastUsedEventsResponse> getAccessKeyLastUsedEvents(GetAccessKeyLastUsedEventsRequest request);
+
+    CompletableFuture<GetAccessKeyLastUsedInfoResponse> getAccessKeyLastUsedInfo(GetAccessKeyLastUsedInfoRequest request);
+
+    CompletableFuture<GetAccessKeyLastUsedIpsResponse> getAccessKeyLastUsedIps(GetAccessKeyLastUsedIpsRequest request);
+
+    CompletableFuture<GetAccessKeyLastUsedProductsResponse> getAccessKeyLastUsedProducts(GetAccessKeyLastUsedProductsRequest request);
+
+    CompletableFuture<GetAccessKeyLastUsedResourcesResponse> getAccessKeyLastUsedResources(GetAccessKeyLastUsedResourcesRequest request);
+
     CompletableFuture<GetDeliveryHistoryJobResponse> getDeliveryHistoryJob(GetDeliveryHistoryJobRequest request);
 
     CompletableFuture<GetTrailStatusResponse> getTrailStatus(GetTrailStatusRequest request);

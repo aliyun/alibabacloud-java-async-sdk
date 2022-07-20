@@ -49,9 +49,9 @@ public class StartLoggingRequest extends Request {
             super();
         } 
 
-        private Builder(StartLoggingRequest response) {
-            super(response);
-            this.name = response.name;
+        private Builder(StartLoggingRequest request) {
+            super(request);
+            this.name = request.name;
         } 
 
         /**

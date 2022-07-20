@@ -62,10 +62,10 @@ public class GetTrailStatusRequest extends Request {
             super();
         } 
 
-        private Builder(GetTrailStatusRequest response) {
-            super(response);
-            this.isOrganizationTrail = response.isOrganizationTrail;
-            this.name = response.name;
+        private Builder(GetTrailStatusRequest request) {
+            super(request);
+            this.isOrganizationTrail = request.isOrganizationTrail;
+            this.name = request.name;
         } 
 
         /**

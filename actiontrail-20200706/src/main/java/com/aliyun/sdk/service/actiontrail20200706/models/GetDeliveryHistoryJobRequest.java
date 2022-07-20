@@ -49,9 +49,9 @@ public class GetDeliveryHistoryJobRequest extends Request {
             super();
         } 
 
-        private Builder(GetDeliveryHistoryJobRequest response) {
-            super(response);
-            this.jobId = response.jobId;
+        private Builder(GetDeliveryHistoryJobRequest request) {
+            super(request);
+            this.jobId = request.jobId;
         } 
 
         /**

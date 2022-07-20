@@ -153,17 +153,17 @@ public class CreateTrailRequest extends Request {
             super();
         } 
 
-        private Builder(CreateTrailRequest response) {
-            super(response);
-            this.eventRW = response.eventRW;
-            this.isOrganizationTrail = response.isOrganizationTrail;
-            this.name = response.name;
-            this.ossBucketName = response.ossBucketName;
-            this.ossKeyPrefix = response.ossKeyPrefix;
-            this.ossWriteRoleArn = response.ossWriteRoleArn;
-            this.slsProjectArn = response.slsProjectArn;
-            this.slsWriteRoleArn = response.slsWriteRoleArn;
-            this.trailRegion = response.trailRegion;
+        private Builder(CreateTrailRequest request) {
+            super(request);
+            this.eventRW = request.eventRW;
+            this.isOrganizationTrail = request.isOrganizationTrail;
+            this.name = request.name;
+            this.ossBucketName = request.ossBucketName;
+            this.ossKeyPrefix = request.ossKeyPrefix;
+            this.ossWriteRoleArn = request.ossWriteRoleArn;
+            this.slsProjectArn = request.slsProjectArn;
+            this.slsWriteRoleArn = request.slsWriteRoleArn;
+            this.trailRegion = request.trailRegion;
         } 
 
         /**

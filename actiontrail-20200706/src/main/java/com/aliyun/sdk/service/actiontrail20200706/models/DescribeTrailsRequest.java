@@ -74,11 +74,11 @@ public class DescribeTrailsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeTrailsRequest response) {
-            super(response);
-            this.includeOrganizationTrail = response.includeOrganizationTrail;
-            this.includeShadowTrails = response.includeShadowTrails;
-            this.nameList = response.nameList;
+        private Builder(DescribeTrailsRequest request) {
+            super(request);
+            this.includeOrganizationTrail = request.includeOrganizationTrail;
+            this.includeShadowTrails = request.includeShadowTrails;
+            this.nameList = request.nameList;
         } 
 
         /**

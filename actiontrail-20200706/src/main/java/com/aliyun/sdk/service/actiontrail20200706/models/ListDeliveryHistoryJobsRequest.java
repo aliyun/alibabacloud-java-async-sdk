@@ -63,10 +63,10 @@ public class ListDeliveryHistoryJobsRequest extends Request {
             super();
         } 
 
-        private Builder(ListDeliveryHistoryJobsRequest response) {
-            super(response);
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(ListDeliveryHistoryJobsRequest request) {
+            super(request);
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**

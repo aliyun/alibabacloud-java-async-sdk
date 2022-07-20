@@ -49,9 +49,9 @@ public class DeleteDeliveryHistoryJobRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteDeliveryHistoryJobRequest response) {
-            super(response);
-            this.jobId = response.jobId;
+        private Builder(DeleteDeliveryHistoryJobRequest request) {
+            super(request);
+            this.jobId = request.jobId;
         } 
 
         /**

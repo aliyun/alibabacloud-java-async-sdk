@@ -140,16 +140,16 @@ public class UpdateTrailRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateTrailRequest response) {
-            super(response);
-            this.eventRW = response.eventRW;
-            this.name = response.name;
-            this.ossBucketName = response.ossBucketName;
-            this.ossKeyPrefix = response.ossKeyPrefix;
-            this.ossWriteRoleArn = response.ossWriteRoleArn;
-            this.slsProjectArn = response.slsProjectArn;
-            this.slsWriteRoleArn = response.slsWriteRoleArn;
-            this.trailRegion = response.trailRegion;
+        private Builder(UpdateTrailRequest request) {
+            super(request);
+            this.eventRW = request.eventRW;
+            this.name = request.name;
+            this.ossBucketName = request.ossBucketName;
+            this.ossKeyPrefix = request.ossKeyPrefix;
+            this.ossWriteRoleArn = request.ossWriteRoleArn;
+            this.slsProjectArn = request.slsProjectArn;
+            this.slsWriteRoleArn = request.slsWriteRoleArn;
+            this.trailRegion = request.trailRegion;
         } 
 
         /**

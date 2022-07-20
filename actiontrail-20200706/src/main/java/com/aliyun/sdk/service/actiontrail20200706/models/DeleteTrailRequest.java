@@ -49,9 +49,9 @@ public class DeleteTrailRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteTrailRequest response) {
-            super(response);
-            this.name = response.name;
+        private Builder(DeleteTrailRequest request) {
+            super(request);
+            this.name = request.name;
         } 
 
         /**

@@ -113,14 +113,14 @@ public class LookupEventsRequest extends Request {
             super();
         } 
 
-        private Builder(LookupEventsRequest response) {
-            super(response);
-            this.direction = response.direction;
-            this.endTime = response.endTime;
-            this.lookupAttribute = response.lookupAttribute;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.startTime = response.startTime;
+        private Builder(LookupEventsRequest request) {
+            super(request);
+            this.direction = request.direction;
+            this.endTime = request.endTime;
+            this.lookupAttribute = request.lookupAttribute;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.startTime = request.startTime;
         } 
 
         /**

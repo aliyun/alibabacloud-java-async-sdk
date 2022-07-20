@@ -49,9 +49,9 @@ public class StopLoggingRequest extends Request {
             super();
         } 
 
-        private Builder(StopLoggingRequest response) {
-            super(response);
-            this.name = response.name;
+        private Builder(StopLoggingRequest request) {
+            super(request);
+            this.name = request.name;
         } 
 
         /**

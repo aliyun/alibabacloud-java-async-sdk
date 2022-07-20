@@ -62,10 +62,10 @@ public class CreateDeliveryHistoryJobRequest extends Request {
             super();
         } 
 
-        private Builder(CreateDeliveryHistoryJobRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.trailName = response.trailName;
+        private Builder(CreateDeliveryHistoryJobRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.trailName = request.trailName;
         } 
 
         /**
