@@ -122,10 +122,18 @@ public class GetFileDetectResultResponseBody extends TeaModel {
         @NameInMap("Result")
         private Integer result;
 
+        @NameInMap("Score")
+        private Integer score;
+
+        @NameInMap("VirusType")
+        private String virusType;
+
         private ResultList(Builder builder) {
             this.ext = builder.ext;
             this.hashKey = builder.hashKey;
             this.result = builder.result;
+            this.score = builder.score;
+            this.virusType = builder.virusType;
         }
 
         public static Builder builder() {
@@ -157,10 +165,26 @@ public class GetFileDetectResultResponseBody extends TeaModel {
             return this.result;
         }
 
+        /**
+         * @return score
+         */
+        public Integer getScore() {
+            return this.score;
+        }
+
+        /**
+         * @return virusType
+         */
+        public String getVirusType() {
+            return this.virusType;
+        }
+
         public static final class Builder {
             private Ext ext; 
             private String hashKey; 
             private Integer result; 
+            private Integer score; 
+            private String virusType; 
 
             /**
              * Ext.
@@ -183,6 +207,22 @@ public class GetFileDetectResultResponseBody extends TeaModel {
              */
             public Builder result(Integer result) {
                 this.result = result;
+                return this;
+            }
+
+            /**
+             * Score.
+             */
+            public Builder score(Integer score) {
+                this.score = score;
+                return this;
+            }
+
+            /**
+             * VirusType.
+             */
+            public Builder virusType(String virusType) {
+                this.virusType = virusType;
                 return this;
             }
 
