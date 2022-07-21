@@ -42,6 +42,9 @@ public class UpdateServiceResponseBody extends TeaModel {
     @NameInMap("tracingConfig")
     private TracingConfig tracingConfig;
 
+    @NameInMap("vendorConfig")
+    private VendorConfig vendorConfig;
+
     @NameInMap("vpcConfig")
     private VPCConfig vpcConfig;
 
@@ -56,6 +59,7 @@ public class UpdateServiceResponseBody extends TeaModel {
         this.serviceId = builder.serviceId;
         this.serviceName = builder.serviceName;
         this.tracingConfig = builder.tracingConfig;
+        this.vendorConfig = builder.vendorConfig;
         this.vpcConfig = builder.vpcConfig;
     }
 
@@ -138,6 +142,13 @@ public class UpdateServiceResponseBody extends TeaModel {
     }
 
     /**
+     * @return vendorConfig
+     */
+    public VendorConfig getVendorConfig() {
+        return this.vendorConfig;
+    }
+
+    /**
      * @return vpcConfig
      */
     public VPCConfig getVpcConfig() {
@@ -155,6 +166,7 @@ public class UpdateServiceResponseBody extends TeaModel {
         private String serviceId; 
         private String serviceName; 
         private TracingConfig tracingConfig; 
+        private VendorConfig vendorConfig; 
         private VPCConfig vpcConfig; 
 
         /**
@@ -234,6 +246,14 @@ public class UpdateServiceResponseBody extends TeaModel {
          */
         public Builder tracingConfig(TracingConfig tracingConfig) {
             this.tracingConfig = tracingConfig;
+            return this;
+        }
+
+        /**
+         * vendorConfig.
+         */
+        public Builder vendorConfig(VendorConfig vendorConfig) {
+            this.vendorConfig = vendorConfig;
             return this;
         }
 

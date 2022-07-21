@@ -60,6 +60,9 @@ public class GetFunctionResponseBody extends TeaModel {
     @NameInMap("instanceLifecycleConfig")
     private InstanceLifecycleConfig instanceLifecycleConfig;
 
+    @NameInMap("instanceSoftConcurrency")
+    private Integer instanceSoftConcurrency;
+
     @NameInMap("instanceType")
     private String instanceType;
 
@@ -95,6 +98,7 @@ public class GetFunctionResponseBody extends TeaModel {
         this.initializer = builder.initializer;
         this.instanceConcurrency = builder.instanceConcurrency;
         this.instanceLifecycleConfig = builder.instanceLifecycleConfig;
+        this.instanceSoftConcurrency = builder.instanceSoftConcurrency;
         this.instanceType = builder.instanceType;
         this.lastModifiedTime = builder.lastModifiedTime;
         this.layers = builder.layers;
@@ -224,6 +228,13 @@ public class GetFunctionResponseBody extends TeaModel {
     }
 
     /**
+     * @return instanceSoftConcurrency
+     */
+    public Integer getInstanceSoftConcurrency() {
+        return this.instanceSoftConcurrency;
+    }
+
+    /**
      * @return instanceType
      */
     public String getInstanceType() {
@@ -282,6 +293,7 @@ public class GetFunctionResponseBody extends TeaModel {
         private String initializer; 
         private Integer instanceConcurrency; 
         private InstanceLifecycleConfig instanceLifecycleConfig; 
+        private Integer instanceSoftConcurrency; 
         private String instanceType; 
         private String lastModifiedTime; 
         private java.util.List < String > layers; 
@@ -414,6 +426,14 @@ public class GetFunctionResponseBody extends TeaModel {
          */
         public Builder instanceLifecycleConfig(InstanceLifecycleConfig instanceLifecycleConfig) {
             this.instanceLifecycleConfig = instanceLifecycleConfig;
+            return this;
+        }
+
+        /**
+         * instanceSoftConcurrency.
+         */
+        public Builder instanceSoftConcurrency(Integer instanceSoftConcurrency) {
+            this.instanceSoftConcurrency = instanceSoftConcurrency;
             return this;
         }
 

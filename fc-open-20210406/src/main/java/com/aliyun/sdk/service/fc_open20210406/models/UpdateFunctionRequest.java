@@ -89,6 +89,10 @@ public class UpdateFunctionRequest extends Request {
     private InstanceLifecycleConfig instanceLifecycleConfig;
 
     @Body
+    @NameInMap("instanceSoftConcurrency")
+    private Integer instanceSoftConcurrency;
+
+    @Body
     @NameInMap("instanceType")
     private String instanceType;
 
@@ -129,6 +133,7 @@ public class UpdateFunctionRequest extends Request {
         this.initializationTimeout = builder.initializationTimeout;
         this.initializer = builder.initializer;
         this.instanceLifecycleConfig = builder.instanceLifecycleConfig;
+        this.instanceSoftConcurrency = builder.instanceSoftConcurrency;
         this.instanceType = builder.instanceType;
         this.layers = builder.layers;
         this.memorySize = builder.memorySize;
@@ -283,6 +288,13 @@ public class UpdateFunctionRequest extends Request {
     }
 
     /**
+     * @return instanceSoftConcurrency
+     */
+    public Integer getInstanceSoftConcurrency() {
+        return this.instanceSoftConcurrency;
+    }
+
+    /**
      * @return instanceType
      */
     public String getInstanceType() {
@@ -337,6 +349,7 @@ public class UpdateFunctionRequest extends Request {
         private Integer initializationTimeout; 
         private String initializer; 
         private InstanceLifecycleConfig instanceLifecycleConfig; 
+        private Integer instanceSoftConcurrency; 
         private String instanceType; 
         private java.util.List < String > layers; 
         private Integer memorySize; 
@@ -368,6 +381,7 @@ public class UpdateFunctionRequest extends Request {
             this.initializationTimeout = request.initializationTimeout;
             this.initializer = request.initializer;
             this.instanceLifecycleConfig = request.instanceLifecycleConfig;
+            this.instanceSoftConcurrency = request.instanceSoftConcurrency;
             this.instanceType = request.instanceType;
             this.layers = request.layers;
             this.memorySize = request.memorySize;
@@ -543,6 +557,15 @@ public class UpdateFunctionRequest extends Request {
         public Builder instanceLifecycleConfig(InstanceLifecycleConfig instanceLifecycleConfig) {
             this.putBodyParameter("instanceLifecycleConfig", instanceLifecycleConfig);
             this.instanceLifecycleConfig = instanceLifecycleConfig;
+            return this;
+        }
+
+        /**
+         * instanceSoftConcurrency.
+         */
+        public Builder instanceSoftConcurrency(Integer instanceSoftConcurrency) {
+            this.putBodyParameter("instanceSoftConcurrency", instanceSoftConcurrency);
+            this.instanceSoftConcurrency = instanceSoftConcurrency;
             return this;
         }
 

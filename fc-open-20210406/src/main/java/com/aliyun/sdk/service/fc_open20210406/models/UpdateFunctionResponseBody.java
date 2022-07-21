@@ -57,6 +57,9 @@ public class UpdateFunctionResponseBody extends TeaModel {
     @NameInMap("instanceLifecycleConfig")
     private InstanceLifecycleConfig instanceLifecycleConfig;
 
+    @NameInMap("instanceSoftConcurrency")
+    private Integer instanceSoftConcurrency;
+
     @NameInMap("instanceType")
     private String instanceType;
 
@@ -91,6 +94,7 @@ public class UpdateFunctionResponseBody extends TeaModel {
         this.initializationTimeout = builder.initializationTimeout;
         this.initializer = builder.initializer;
         this.instanceLifecycleConfig = builder.instanceLifecycleConfig;
+        this.instanceSoftConcurrency = builder.instanceSoftConcurrency;
         this.instanceType = builder.instanceType;
         this.lastModifiedTime = builder.lastModifiedTime;
         this.layers = builder.layers;
@@ -213,6 +217,13 @@ public class UpdateFunctionResponseBody extends TeaModel {
     }
 
     /**
+     * @return instanceSoftConcurrency
+     */
+    public Integer getInstanceSoftConcurrency() {
+        return this.instanceSoftConcurrency;
+    }
+
+    /**
      * @return instanceType
      */
     public String getInstanceType() {
@@ -270,6 +281,7 @@ public class UpdateFunctionResponseBody extends TeaModel {
         private Integer initializationTimeout; 
         private String initializer; 
         private InstanceLifecycleConfig instanceLifecycleConfig; 
+        private Integer instanceSoftConcurrency; 
         private String instanceType; 
         private String lastModifiedTime; 
         private java.util.List < String > layers; 
@@ -394,6 +406,14 @@ public class UpdateFunctionResponseBody extends TeaModel {
          */
         public Builder instanceLifecycleConfig(InstanceLifecycleConfig instanceLifecycleConfig) {
             this.instanceLifecycleConfig = instanceLifecycleConfig;
+            return this;
+        }
+
+        /**
+         * instanceSoftConcurrency.
+         */
+        public Builder instanceSoftConcurrency(Integer instanceSoftConcurrency) {
+            this.instanceSoftConcurrency = instanceSoftConcurrency;
             return this;
         }
 
