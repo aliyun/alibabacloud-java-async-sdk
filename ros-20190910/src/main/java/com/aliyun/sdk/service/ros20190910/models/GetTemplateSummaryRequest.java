@@ -17,6 +17,14 @@ public class GetTemplateSummaryRequest extends Request {
     private String changeSetId;
 
     @Query
+    @NameInMap("ClientToken")
+    private String clientToken;
+
+    @Query
+    @NameInMap("Parameters")
+    private java.util.List < Parameters> parameters;
+
+    @Query
     @NameInMap("RegionId")
     private String regionId;
 
@@ -47,6 +55,8 @@ public class GetTemplateSummaryRequest extends Request {
     private GetTemplateSummaryRequest(Builder builder) {
         super(builder);
         this.changeSetId = builder.changeSetId;
+        this.clientToken = builder.clientToken;
+        this.parameters = builder.parameters;
         this.regionId = builder.regionId;
         this.stackGroupName = builder.stackGroupName;
         this.stackId = builder.stackId;
@@ -74,6 +84,20 @@ public class GetTemplateSummaryRequest extends Request {
      */
     public String getChangeSetId() {
         return this.changeSetId;
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
+     * @return parameters
+     */
+    public java.util.List < Parameters> getParameters() {
+        return this.parameters;
     }
 
     /**
@@ -127,6 +151,8 @@ public class GetTemplateSummaryRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetTemplateSummaryRequest, Builder> {
         private String changeSetId; 
+        private String clientToken; 
+        private java.util.List < Parameters> parameters; 
         private String regionId; 
         private String stackGroupName; 
         private String stackId; 
@@ -142,6 +168,8 @@ public class GetTemplateSummaryRequest extends Request {
         private Builder(GetTemplateSummaryRequest request) {
             super(request);
             this.changeSetId = request.changeSetId;
+            this.clientToken = request.clientToken;
+            this.parameters = request.parameters;
             this.regionId = request.regionId;
             this.stackGroupName = request.stackGroupName;
             this.stackId = request.stackId;
@@ -157,6 +185,24 @@ public class GetTemplateSummaryRequest extends Request {
         public Builder changeSetId(String changeSetId) {
             this.putQueryParameter("ChangeSetId", changeSetId);
             this.changeSetId = changeSetId;
+            return this;
+        }
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * Parameters.
+         */
+        public Builder parameters(java.util.List < Parameters> parameters) {
+            this.putQueryParameter("Parameters", parameters);
+            this.parameters = parameters;
             return this;
         }
 
@@ -230,4 +276,65 @@ public class GetTemplateSummaryRequest extends Request {
 
     } 
 
+    public static class Parameters extends TeaModel {
+        @NameInMap("ParameterKey")
+        private String parameterKey;
+
+        @NameInMap("ParameterValue")
+        private String parameterValue;
+
+        private Parameters(Builder builder) {
+            this.parameterKey = builder.parameterKey;
+            this.parameterValue = builder.parameterValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Parameters create() {
+            return builder().build();
+        }
+
+        /**
+         * @return parameterKey
+         */
+        public String getParameterKey() {
+            return this.parameterKey;
+        }
+
+        /**
+         * @return parameterValue
+         */
+        public String getParameterValue() {
+            return this.parameterValue;
+        }
+
+        public static final class Builder {
+            private String parameterKey; 
+            private String parameterValue; 
+
+            /**
+             * ParameterKey.
+             */
+            public Builder parameterKey(String parameterKey) {
+                this.parameterKey = parameterKey;
+                return this;
+            }
+
+            /**
+             * ParameterValue.
+             */
+            public Builder parameterValue(String parameterValue) {
+                this.parameterValue = parameterValue;
+                return this;
+            }
+
+            public Parameters build() {
+                return new Parameters(this);
+            } 
+
+        } 
+
+    }
 }
