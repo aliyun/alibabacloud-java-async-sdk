@@ -1,0 +1,119 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.pai_dlc20201203.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link GetTensorboardRequest} extends {@link RequestModel}
+ *
+ * <p>GetTensorboardRequest</p>
+ */
+public class GetTensorboardRequest extends Request {
+    @Path
+    @NameInMap("TensorboardId")
+    @Validation(required = true, maxLength = 256, minLength = 1)
+    private String tensorboardId;
+
+    @Query
+    @NameInMap("JodId")
+    private String jodId;
+
+    @Query
+    @NameInMap("WorkspaceId")
+    private String workspaceId;
+
+    private GetTensorboardRequest(Builder builder) {
+        super(builder);
+        this.tensorboardId = builder.tensorboardId;
+        this.jodId = builder.jodId;
+        this.workspaceId = builder.workspaceId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static GetTensorboardRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return tensorboardId
+     */
+    public String getTensorboardId() {
+        return this.tensorboardId;
+    }
+
+    /**
+     * @return jodId
+     */
+    public String getJodId() {
+        return this.jodId;
+    }
+
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
+    public static final class Builder extends Request.Builder<GetTensorboardRequest, Builder> {
+        private String tensorboardId; 
+        private String jodId; 
+        private String workspaceId; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(GetTensorboardRequest request) {
+            super(request);
+            this.tensorboardId = request.tensorboardId;
+            this.jodId = request.jodId;
+            this.workspaceId = request.workspaceId;
+        } 
+
+        /**
+         * TensorboardId Id
+         */
+        public Builder tensorboardId(String tensorboardId) {
+            this.putPathParameter("TensorboardId", tensorboardId);
+            this.tensorboardId = tensorboardId;
+            return this;
+        }
+
+        /**
+         * JodId
+         */
+        public Builder jodId(String jodId) {
+            this.putQueryParameter("JodId", jodId);
+            this.jodId = jodId;
+            return this;
+        }
+
+        /**
+         * 工作空间ID
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.putQueryParameter("WorkspaceId", workspaceId);
+            this.workspaceId = workspaceId;
+            return this;
+        }
+
+        @Override
+        public GetTensorboardRequest build() {
+            return new GetTensorboardRequest(this);
+        } 
+
+    } 
+
+}

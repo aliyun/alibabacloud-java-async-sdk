@@ -1,0 +1,174 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.pai_dlc20201203.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link ContainerSpec} extends {@link TeaModel}
+ *
+ * <p>ContainerSpec</p>
+ */
+public class ContainerSpec extends TeaModel {
+    @NameInMap("Args")
+    private java.util.List < String > args;
+
+    @NameInMap("Command")
+    private java.util.List < String > command;
+
+    @NameInMap("Env")
+    private java.util.List < EnvVar > env;
+
+    @NameInMap("Image")
+    private String image;
+
+    @NameInMap("Name")
+    private String name;
+
+    @NameInMap("Resources")
+    private ResourceRequirements resources;
+
+    @NameInMap("WorkingDir")
+    private String workingDir;
+
+    private ContainerSpec(Builder builder) {
+        this.args = builder.args;
+        this.command = builder.command;
+        this.env = builder.env;
+        this.image = builder.image;
+        this.name = builder.name;
+        this.resources = builder.resources;
+        this.workingDir = builder.workingDir;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static ContainerSpec create() {
+        return builder().build();
+    }
+
+    /**
+     * @return args
+     */
+    public java.util.List < String > getArgs() {
+        return this.args;
+    }
+
+    /**
+     * @return command
+     */
+    public java.util.List < String > getCommand() {
+        return this.command;
+    }
+
+    /**
+     * @return env
+     */
+    public java.util.List < EnvVar > getEnv() {
+        return this.env;
+    }
+
+    /**
+     * @return image
+     */
+    public String getImage() {
+        return this.image;
+    }
+
+    /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
+    }
+
+    /**
+     * @return resources
+     */
+    public ResourceRequirements getResources() {
+        return this.resources;
+    }
+
+    /**
+     * @return workingDir
+     */
+    public String getWorkingDir() {
+        return this.workingDir;
+    }
+
+    public static final class Builder {
+        private java.util.List < String > args; 
+        private java.util.List < String > command; 
+        private java.util.List < EnvVar > env; 
+        private String image; 
+        private String name; 
+        private ResourceRequirements resources; 
+        private String workingDir; 
+
+        /**
+         * 命令参数
+         */
+        public Builder args(java.util.List < String > args) {
+            this.args = args;
+            return this;
+        }
+
+        /**
+         * 用户命令
+         */
+        public Builder command(java.util.List < String > command) {
+            this.command = command;
+            return this;
+        }
+
+        /**
+         * 环境变量
+         */
+        public Builder env(java.util.List < EnvVar > env) {
+            this.env = env;
+            return this;
+        }
+
+        /**
+         * 容器镜像地址
+         */
+        public Builder image(String image) {
+            this.image = image;
+            return this;
+        }
+
+        /**
+         * 容器名称
+         */
+        public Builder name(String name) {
+            this.name = name;
+            return this;
+        }
+
+        /**
+         * 容器资源
+         */
+        public Builder resources(ResourceRequirements resources) {
+            this.resources = resources;
+            return this;
+        }
+
+        /**
+         * 容器内工作目录
+         */
+        public Builder workingDir(String workingDir) {
+            this.workingDir = workingDir;
+            return this;
+        }
+
+        public ContainerSpec build() {
+            return new ContainerSpec(this);
+        } 
+
+    } 
+
+}
