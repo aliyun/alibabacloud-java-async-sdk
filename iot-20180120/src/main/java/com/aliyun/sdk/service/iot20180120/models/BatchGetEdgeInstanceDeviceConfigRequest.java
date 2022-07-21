@@ -76,11 +76,11 @@ public class BatchGetEdgeInstanceDeviceConfigRequest extends Request {
             super();
         } 
 
-        private Builder(BatchGetEdgeInstanceDeviceConfigRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.iotIds = response.iotIds;
-            this.iotInstanceId = response.iotInstanceId;
+        private Builder(BatchGetEdgeInstanceDeviceConfigRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.iotIds = request.iotIds;
+            this.iotInstanceId = request.iotInstanceId;
         } 
 
         /**

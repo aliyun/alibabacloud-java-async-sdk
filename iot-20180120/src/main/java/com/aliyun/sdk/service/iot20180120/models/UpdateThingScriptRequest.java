@@ -90,12 +90,12 @@ public class UpdateThingScriptRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateThingScriptRequest response) {
-            super(response);
-            this.iotInstanceId = response.iotInstanceId;
-            this.productKey = response.productKey;
-            this.scriptContent = response.scriptContent;
-            this.scriptType = response.scriptType;
+        private Builder(UpdateThingScriptRequest request) {
+            super(request);
+            this.iotInstanceId = request.iotInstanceId;
+            this.productKey = request.productKey;
+            this.scriptContent = request.scriptContent;
+            this.scriptType = request.scriptType;
         } 
 
         /**

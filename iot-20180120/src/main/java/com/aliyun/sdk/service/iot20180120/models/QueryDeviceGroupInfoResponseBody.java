@@ -141,6 +141,9 @@ public class QueryDeviceGroupInfoResponseBody extends TeaModel {
         @NameInMap("DeviceOnline")
         private Integer deviceOnline;
 
+        @NameInMap("DynamicGroupExpression")
+        private String dynamicGroupExpression;
+
         @NameInMap("GroupDesc")
         private String groupDesc;
 
@@ -157,6 +160,7 @@ public class QueryDeviceGroupInfoResponseBody extends TeaModel {
             this.deviceActive = builder.deviceActive;
             this.deviceCount = builder.deviceCount;
             this.deviceOnline = builder.deviceOnline;
+            this.dynamicGroupExpression = builder.dynamicGroupExpression;
             this.groupDesc = builder.groupDesc;
             this.groupId = builder.groupId;
             this.groupName = builder.groupName;
@@ -193,6 +197,13 @@ public class QueryDeviceGroupInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return dynamicGroupExpression
+         */
+        public String getDynamicGroupExpression() {
+            return this.dynamicGroupExpression;
+        }
+
+        /**
          * @return groupDesc
          */
         public String getGroupDesc() {
@@ -224,6 +235,7 @@ public class QueryDeviceGroupInfoResponseBody extends TeaModel {
             private Integer deviceActive; 
             private Integer deviceCount; 
             private Integer deviceOnline; 
+            private String dynamicGroupExpression; 
             private String groupDesc; 
             private String groupId; 
             private String groupName; 
@@ -250,6 +262,14 @@ public class QueryDeviceGroupInfoResponseBody extends TeaModel {
              */
             public Builder deviceOnline(Integer deviceOnline) {
                 this.deviceOnline = deviceOnline;
+                return this;
+            }
+
+            /**
+             * DynamicGroupExpression.
+             */
+            public Builder dynamicGroupExpression(String dynamicGroupExpression) {
+                this.dynamicGroupExpression = dynamicGroupExpression;
                 return this;
             }
 

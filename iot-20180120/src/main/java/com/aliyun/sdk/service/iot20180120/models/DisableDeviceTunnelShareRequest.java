@@ -76,11 +76,11 @@ public class DisableDeviceTunnelShareRequest extends Request {
             super();
         } 
 
-        private Builder(DisableDeviceTunnelShareRequest response) {
-            super(response);
-            this.deviceName = response.deviceName;
-            this.iotInstanceId = response.iotInstanceId;
-            this.productKey = response.productKey;
+        private Builder(DisableDeviceTunnelShareRequest request) {
+            super(request);
+            this.deviceName = request.deviceName;
+            this.iotInstanceId = request.iotInstanceId;
+            this.productKey = request.productKey;
         } 
 
         /**

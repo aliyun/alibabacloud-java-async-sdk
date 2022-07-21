@@ -30,6 +30,10 @@ public class ListDeviceDistributeJobRequest extends Request {
     private Integer pageSize;
 
     @Query
+    @NameInMap("ProductKey")
+    private String productKey;
+
+    @Query
     @NameInMap("Status")
     private Integer status;
 
@@ -43,6 +47,7 @@ public class ListDeviceDistributeJobRequest extends Request {
         this.jobId = builder.jobId;
         this.nextToken = builder.nextToken;
         this.pageSize = builder.pageSize;
+        this.productKey = builder.productKey;
         this.status = builder.status;
         this.targetUid = builder.targetUid;
     }
@@ -89,6 +94,13 @@ public class ListDeviceDistributeJobRequest extends Request {
     }
 
     /**
+     * @return productKey
+     */
+    public String getProductKey() {
+        return this.productKey;
+    }
+
+    /**
      * @return status
      */
     public Integer getStatus() {
@@ -107,6 +119,7 @@ public class ListDeviceDistributeJobRequest extends Request {
         private String jobId; 
         private String nextToken; 
         private Integer pageSize; 
+        private String productKey; 
         private Integer status; 
         private String targetUid; 
 
@@ -114,14 +127,15 @@ public class ListDeviceDistributeJobRequest extends Request {
             super();
         } 
 
-        private Builder(ListDeviceDistributeJobRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.jobId = response.jobId;
-            this.nextToken = response.nextToken;
-            this.pageSize = response.pageSize;
-            this.status = response.status;
-            this.targetUid = response.targetUid;
+        private Builder(ListDeviceDistributeJobRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.jobId = request.jobId;
+            this.nextToken = request.nextToken;
+            this.pageSize = request.pageSize;
+            this.productKey = request.productKey;
+            this.status = request.status;
+            this.targetUid = request.targetUid;
         } 
 
         /**
@@ -157,6 +171,15 @@ public class ListDeviceDistributeJobRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * ProductKey.
+         */
+        public Builder productKey(String productKey) {
+            this.putQueryParameter("ProductKey", productKey);
+            this.productKey = productKey;
             return this;
         }
 

@@ -62,10 +62,10 @@ public class QueryJobRequest extends Request {
             super();
         } 
 
-        private Builder(QueryJobRequest response) {
-            super(response);
-            this.iotInstanceId = response.iotInstanceId;
-            this.jobId = response.jobId;
+        private Builder(QueryJobRequest request) {
+            super(request);
+            this.iotInstanceId = request.iotInstanceId;
+            this.jobId = request.jobId;
         } 
 
         /**

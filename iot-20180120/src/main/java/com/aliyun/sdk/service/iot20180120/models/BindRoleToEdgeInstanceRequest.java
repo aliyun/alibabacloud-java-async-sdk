@@ -90,12 +90,12 @@ public class BindRoleToEdgeInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(BindRoleToEdgeInstanceRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.roleArn = response.roleArn;
-            this.roleName = response.roleName;
+        private Builder(BindRoleToEdgeInstanceRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.roleArn = request.roleArn;
+            this.roleName = request.roleName;
         } 
 
         /**

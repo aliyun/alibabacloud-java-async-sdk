@@ -61,10 +61,10 @@ public class GenerateOTAUploadURLRequest extends Request {
             super();
         } 
 
-        private Builder(GenerateOTAUploadURLRequest response) {
-            super(response);
-            this.fileSuffix = response.fileSuffix;
-            this.iotInstanceId = response.iotInstanceId;
+        private Builder(GenerateOTAUploadURLRequest request) {
+            super(request);
+            this.fileSuffix = request.fileSuffix;
+            this.iotInstanceId = request.iotInstanceId;
         } 
 
         /**

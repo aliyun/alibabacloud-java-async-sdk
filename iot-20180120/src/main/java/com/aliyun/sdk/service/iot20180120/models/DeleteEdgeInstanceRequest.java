@@ -62,10 +62,10 @@ public class DeleteEdgeInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteEdgeInstanceRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.iotInstanceId = response.iotInstanceId;
+        private Builder(DeleteEdgeInstanceRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.iotInstanceId = request.iotInstanceId;
         } 
 
         /**

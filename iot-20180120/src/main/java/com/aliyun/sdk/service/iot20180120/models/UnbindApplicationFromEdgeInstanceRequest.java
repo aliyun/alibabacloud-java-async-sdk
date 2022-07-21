@@ -76,11 +76,11 @@ public class UnbindApplicationFromEdgeInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(UnbindApplicationFromEdgeInstanceRequest response) {
-            super(response);
-            this.applicationId = response.applicationId;
-            this.instanceId = response.instanceId;
-            this.iotInstanceId = response.iotInstanceId;
+        private Builder(UnbindApplicationFromEdgeInstanceRequest request) {
+            super(request);
+            this.applicationId = request.applicationId;
+            this.instanceId = request.instanceId;
+            this.iotInstanceId = request.iotInstanceId;
         } 
 
         /**

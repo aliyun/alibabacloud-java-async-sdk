@@ -62,10 +62,10 @@ public class CreateConsumerGroupRequest extends Request {
             super();
         } 
 
-        private Builder(CreateConsumerGroupRequest response) {
-            super(response);
-            this.groupName = response.groupName;
-            this.iotInstanceId = response.iotInstanceId;
+        private Builder(CreateConsumerGroupRequest request) {
+            super(request);
+            this.groupName = request.groupName;
+            this.iotInstanceId = request.iotInstanceId;
         } 
 
         /**

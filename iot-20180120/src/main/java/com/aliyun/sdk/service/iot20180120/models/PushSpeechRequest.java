@@ -142,16 +142,16 @@ public class PushSpeechRequest extends Request {
             super();
         } 
 
-        private Builder(PushSpeechRequest response) {
-            super(response);
-            this.deviceName = response.deviceName;
-            this.groupId = response.groupId;
-            this.iotId = response.iotId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.productKey = response.productKey;
-            this.projectCode = response.projectCode;
-            this.pushMode = response.pushMode;
-            this.speechCodeList = response.speechCodeList;
+        private Builder(PushSpeechRequest request) {
+            super(request);
+            this.deviceName = request.deviceName;
+            this.groupId = request.groupId;
+            this.iotId = request.iotId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.productKey = request.productKey;
+            this.projectCode = request.projectCode;
+            this.pushMode = request.pushMode;
+            this.speechCodeList = request.speechCodeList;
         } 
 
         /**

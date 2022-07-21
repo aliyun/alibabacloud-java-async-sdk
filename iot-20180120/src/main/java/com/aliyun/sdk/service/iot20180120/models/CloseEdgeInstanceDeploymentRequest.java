@@ -62,10 +62,10 @@ public class CloseEdgeInstanceDeploymentRequest extends Request {
             super();
         } 
 
-        private Builder(CloseEdgeInstanceDeploymentRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.iotInstanceId = response.iotInstanceId;
+        private Builder(CloseEdgeInstanceDeploymentRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.iotInstanceId = request.iotInstanceId;
         } 
 
         /**

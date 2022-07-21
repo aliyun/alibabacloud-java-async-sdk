@@ -114,14 +114,14 @@ public class ListOTATaskByJobRequest extends Request {
             super();
         } 
 
-        private Builder(ListOTATaskByJobRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.deviceNames = response.deviceNames;
-            this.iotInstanceId = response.iotInstanceId;
-            this.jobId = response.jobId;
-            this.pageSize = response.pageSize;
-            this.taskStatus = response.taskStatus;
+        private Builder(ListOTATaskByJobRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.deviceNames = request.deviceNames;
+            this.iotInstanceId = request.iotInstanceId;
+            this.jobId = request.jobId;
+            this.pageSize = request.pageSize;
+            this.taskStatus = request.taskStatus;
         } 
 
         /**

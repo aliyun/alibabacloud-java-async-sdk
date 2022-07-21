@@ -101,13 +101,13 @@ public class BindGatewayToEdgeInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(BindGatewayToEdgeInstanceRequest response) {
-            super(response);
-            this.deviceName = response.deviceName;
-            this.instanceId = response.instanceId;
-            this.iotId = response.iotId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.productKey = response.productKey;
+        private Builder(BindGatewayToEdgeInstanceRequest request) {
+            super(request);
+            this.deviceName = request.deviceName;
+            this.instanceId = request.instanceId;
+            this.iotId = request.iotId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.productKey = request.productKey;
         } 
 
         /**

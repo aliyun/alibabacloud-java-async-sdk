@@ -62,10 +62,10 @@ public class DeleteOTAFirmwareRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteOTAFirmwareRequest response) {
-            super(response);
-            this.firmwareId = response.firmwareId;
-            this.iotInstanceId = response.iotInstanceId;
+        private Builder(DeleteOTAFirmwareRequest request) {
+            super(request);
+            this.firmwareId = request.firmwareId;
+            this.iotInstanceId = request.iotInstanceId;
         } 
 
         /**

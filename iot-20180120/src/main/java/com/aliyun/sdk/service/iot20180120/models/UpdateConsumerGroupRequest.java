@@ -76,11 +76,11 @@ public class UpdateConsumerGroupRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateConsumerGroupRequest response) {
-            super(response);
-            this.groupId = response.groupId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.newGroupName = response.newGroupName;
+        private Builder(UpdateConsumerGroupRequest request) {
+            super(request);
+            this.groupId = request.groupId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.newGroupName = request.newGroupName;
         } 
 
         /**

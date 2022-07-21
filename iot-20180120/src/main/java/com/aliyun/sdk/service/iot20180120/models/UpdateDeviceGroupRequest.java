@@ -22,6 +22,10 @@ public class UpdateDeviceGroupRequest extends Request {
     private String groupId;
 
     @Query
+    @NameInMap("GroupType")
+    private String groupType;
+
+    @Query
     @NameInMap("IotInstanceId")
     private String iotInstanceId;
 
@@ -29,6 +33,7 @@ public class UpdateDeviceGroupRequest extends Request {
         super(builder);
         this.groupDesc = builder.groupDesc;
         this.groupId = builder.groupId;
+        this.groupType = builder.groupType;
         this.iotInstanceId = builder.iotInstanceId;
     }
 
@@ -60,6 +65,13 @@ public class UpdateDeviceGroupRequest extends Request {
     }
 
     /**
+     * @return groupType
+     */
+    public String getGroupType() {
+        return this.groupType;
+    }
+
+    /**
      * @return iotInstanceId
      */
     public String getIotInstanceId() {
@@ -69,17 +81,19 @@ public class UpdateDeviceGroupRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateDeviceGroupRequest, Builder> {
         private String groupDesc; 
         private String groupId; 
+        private String groupType; 
         private String iotInstanceId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateDeviceGroupRequest response) {
-            super(response);
-            this.groupDesc = response.groupDesc;
-            this.groupId = response.groupId;
-            this.iotInstanceId = response.iotInstanceId;
+        private Builder(UpdateDeviceGroupRequest request) {
+            super(request);
+            this.groupDesc = request.groupDesc;
+            this.groupId = request.groupId;
+            this.groupType = request.groupType;
+            this.iotInstanceId = request.iotInstanceId;
         } 
 
         /**
@@ -97,6 +111,15 @@ public class UpdateDeviceGroupRequest extends Request {
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
             this.groupId = groupId;
+            return this;
+        }
+
+        /**
+         * GroupType.
+         */
+        public Builder groupType(String groupType) {
+            this.putQueryParameter("GroupType", groupType);
+            this.groupType = groupType;
             return this;
         }
 

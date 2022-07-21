@@ -104,13 +104,13 @@ public class CreateEdgeInstanceChannelRequest extends Request {
             super();
         } 
 
-        private Builder(CreateEdgeInstanceChannelRequest response) {
-            super(response);
-            this.channelName = response.channelName;
-            this.configs = response.configs;
-            this.driverId = response.driverId;
-            this.instanceId = response.instanceId;
-            this.iotInstanceId = response.iotInstanceId;
+        private Builder(CreateEdgeInstanceChannelRequest request) {
+            super(request);
+            this.channelName = request.channelName;
+            this.configs = request.configs;
+            this.driverId = request.driverId;
+            this.instanceId = request.instanceId;
+            this.iotInstanceId = request.iotInstanceId;
         } 
 
         /**

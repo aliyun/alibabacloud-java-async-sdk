@@ -62,10 +62,10 @@ public class QueryTaskRequest extends Request {
             super();
         } 
 
-        private Builder(QueryTaskRequest response) {
-            super(response);
-            this.iotInstanceId = response.iotInstanceId;
-            this.taskId = response.taskId;
+        private Builder(QueryTaskRequest request) {
+            super(request);
+            this.iotInstanceId = request.iotInstanceId;
+            this.taskId = request.taskId;
         } 
 
         /**

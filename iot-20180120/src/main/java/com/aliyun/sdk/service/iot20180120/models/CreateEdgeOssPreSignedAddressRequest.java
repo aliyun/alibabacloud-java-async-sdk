@@ -117,14 +117,14 @@ public class CreateEdgeOssPreSignedAddressRequest extends Request {
             super();
         } 
 
-        private Builder(CreateEdgeOssPreSignedAddressRequest response) {
-            super(response);
-            this.fileName = response.fileName;
-            this.instanceId = response.instanceId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.resourceId = response.resourceId;
-            this.resourceVersion = response.resourceVersion;
-            this.type = response.type;
+        private Builder(CreateEdgeOssPreSignedAddressRequest request) {
+            super(request);
+            this.fileName = request.fileName;
+            this.instanceId = request.instanceId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.resourceId = request.resourceId;
+            this.resourceVersion = request.resourceVersion;
+            this.type = request.type;
         } 
 
         /**

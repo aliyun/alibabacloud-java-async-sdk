@@ -13,15 +13,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class QuerySpeechListRequest extends Request {
     @Body
+    @NameInMap("AudioFormat")
+    private String audioFormat;
+
+    @Body
     @NameInMap("IotInstanceId")
     private String iotInstanceId;
 
     @Body
     @NameInMap("PageId")
+    @Validation(maximum = 10000, minimum = 1)
     private Integer pageId;
 
     @Body
     @NameInMap("PageSize")
+    @Validation(maximum = 50, minimum = 1)
     private Integer pageSize;
 
     @Body
@@ -31,6 +37,7 @@ public class QuerySpeechListRequest extends Request {
 
     private QuerySpeechListRequest(Builder builder) {
         super(builder);
+        this.audioFormat = builder.audioFormat;
         this.iotInstanceId = builder.iotInstanceId;
         this.pageId = builder.pageId;
         this.pageSize = builder.pageSize;
@@ -48,6 +55,13 @@ public class QuerySpeechListRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return audioFormat
+     */
+    public String getAudioFormat() {
+        return this.audioFormat;
     }
 
     /**
@@ -79,6 +93,7 @@ public class QuerySpeechListRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<QuerySpeechListRequest, Builder> {
+        private String audioFormat; 
         private String iotInstanceId; 
         private Integer pageId; 
         private Integer pageSize; 
@@ -88,13 +103,23 @@ public class QuerySpeechListRequest extends Request {
             super();
         } 
 
-        private Builder(QuerySpeechListRequest response) {
-            super(response);
-            this.iotInstanceId = response.iotInstanceId;
-            this.pageId = response.pageId;
-            this.pageSize = response.pageSize;
-            this.projectCode = response.projectCode;
+        private Builder(QuerySpeechListRequest request) {
+            super(request);
+            this.audioFormat = request.audioFormat;
+            this.iotInstanceId = request.iotInstanceId;
+            this.pageId = request.pageId;
+            this.pageSize = request.pageSize;
+            this.projectCode = request.projectCode;
         } 
+
+        /**
+         * AudioFormat.
+         */
+        public Builder audioFormat(String audioFormat) {
+            this.putBodyParameter("AudioFormat", audioFormat);
+            this.audioFormat = audioFormat;
+            return this;
+        }
 
         /**
          * IotInstanceId.

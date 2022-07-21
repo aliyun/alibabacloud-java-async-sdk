@@ -74,11 +74,11 @@ public class GetThingTemplateRequest extends Request {
             super();
         } 
 
-        private Builder(GetThingTemplateRequest response) {
-            super(response);
-            this.categoryKey = response.categoryKey;
-            this.iotInstanceId = response.iotInstanceId;
-            this.resourceGroupId = response.resourceGroupId;
+        private Builder(GetThingTemplateRequest request) {
+            super(request);
+            this.categoryKey = request.categoryKey;
+            this.iotInstanceId = request.iotInstanceId;
+            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**

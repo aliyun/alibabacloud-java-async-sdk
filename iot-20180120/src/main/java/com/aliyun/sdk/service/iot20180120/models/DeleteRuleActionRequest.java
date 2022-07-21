@@ -62,10 +62,10 @@ public class DeleteRuleActionRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteRuleActionRequest response) {
-            super(response);
-            this.actionId = response.actionId;
-            this.iotInstanceId = response.iotInstanceId;
+        private Builder(DeleteRuleActionRequest request) {
+            super(request);
+            this.actionId = request.actionId;
+            this.iotInstanceId = request.iotInstanceId;
         } 
 
         /**

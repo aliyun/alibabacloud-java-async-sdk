@@ -75,11 +75,11 @@ public class BatchAddDeviceGroupRelationsRequest extends Request {
             super();
         } 
 
-        private Builder(BatchAddDeviceGroupRelationsRequest response) {
-            super(response);
-            this.device = response.device;
-            this.groupId = response.groupId;
-            this.iotInstanceId = response.iotInstanceId;
+        private Builder(BatchAddDeviceGroupRelationsRequest request) {
+            super(request);
+            this.device = request.device;
+            this.groupId = request.groupId;
+            this.iotInstanceId = request.iotInstanceId;
         } 
 
         /**

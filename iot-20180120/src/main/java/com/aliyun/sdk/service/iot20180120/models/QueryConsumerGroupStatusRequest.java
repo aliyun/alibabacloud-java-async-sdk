@@ -62,10 +62,10 @@ public class QueryConsumerGroupStatusRequest extends Request {
             super();
         } 
 
-        private Builder(QueryConsumerGroupStatusRequest response) {
-            super(response);
-            this.groupId = response.groupId;
-            this.iotInstanceId = response.iotInstanceId;
+        private Builder(QueryConsumerGroupStatusRequest request) {
+            super(request);
+            this.groupId = request.groupId;
+            this.iotInstanceId = request.iotInstanceId;
         } 
 
         /**

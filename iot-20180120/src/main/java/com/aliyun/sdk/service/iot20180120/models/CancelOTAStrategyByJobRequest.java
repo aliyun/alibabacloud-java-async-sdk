@@ -62,10 +62,10 @@ public class CancelOTAStrategyByJobRequest extends Request {
             super();
         } 
 
-        private Builder(CancelOTAStrategyByJobRequest response) {
-            super(response);
-            this.iotInstanceId = response.iotInstanceId;
-            this.jobId = response.jobId;
+        private Builder(CancelOTAStrategyByJobRequest request) {
+            super(request);
+            this.iotInstanceId = request.iotInstanceId;
+            this.jobId = request.jobId;
         } 
 
         /**

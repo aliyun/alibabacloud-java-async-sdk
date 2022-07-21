@@ -114,14 +114,14 @@ public class ListOTAUnfinishedTaskByDeviceRequest extends Request {
             super();
         } 
 
-        private Builder(ListOTAUnfinishedTaskByDeviceRequest response) {
-            super(response);
-            this.deviceName = response.deviceName;
-            this.iotId = response.iotId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.moduleName = response.moduleName;
-            this.productKey = response.productKey;
-            this.taskStatus = response.taskStatus;
+        private Builder(ListOTAUnfinishedTaskByDeviceRequest request) {
+            super(request);
+            this.deviceName = request.deviceName;
+            this.iotId = request.iotId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.moduleName = request.moduleName;
+            this.productKey = request.productKey;
+            this.taskStatus = request.taskStatus;
         } 
 
         /**

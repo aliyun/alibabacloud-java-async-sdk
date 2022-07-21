@@ -116,14 +116,14 @@ public class QueryEdgeDriverVersionRequest extends Request {
             super();
         } 
 
-        private Builder(QueryEdgeDriverVersionRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.driverId = response.driverId;
-            this.driverVersion = response.driverVersion;
-            this.iotInstanceId = response.iotInstanceId;
-            this.pageSize = response.pageSize;
-            this.versionState = response.versionState;
+        private Builder(QueryEdgeDriverVersionRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.driverId = request.driverId;
+            this.driverVersion = request.driverVersion;
+            this.iotInstanceId = request.iotInstanceId;
+            this.pageSize = request.pageSize;
+            this.versionState = request.versionState;
         } 
 
         /**

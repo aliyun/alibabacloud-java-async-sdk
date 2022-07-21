@@ -131,12 +131,79 @@ public class QuerySpeechResponseBody extends TeaModel {
 
     } 
 
+    public static class SoundCodeConfig extends TeaModel {
+        @NameInMap("AdditionalDuration")
+        private Integer additionalDuration;
+
+        @NameInMap("SoundCodeContent")
+        private String soundCodeContent;
+
+        private SoundCodeConfig(Builder builder) {
+            this.additionalDuration = builder.additionalDuration;
+            this.soundCodeContent = builder.soundCodeContent;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SoundCodeConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return additionalDuration
+         */
+        public Integer getAdditionalDuration() {
+            return this.additionalDuration;
+        }
+
+        /**
+         * @return soundCodeContent
+         */
+        public String getSoundCodeContent() {
+            return this.soundCodeContent;
+        }
+
+        public static final class Builder {
+            private Integer additionalDuration; 
+            private String soundCodeContent; 
+
+            /**
+             * AdditionalDuration.
+             */
+            public Builder additionalDuration(Integer additionalDuration) {
+                this.additionalDuration = additionalDuration;
+                return this;
+            }
+
+            /**
+             * SoundCodeContent.
+             */
+            public Builder soundCodeContent(String soundCodeContent) {
+                this.soundCodeContent = soundCodeContent;
+                return this;
+            }
+
+            public SoundCodeConfig build() {
+                return new SoundCodeConfig(this);
+            } 
+
+        } 
+
+    }
     public static class Data extends TeaModel {
         @NameInMap("AudioFormat")
         private String audioFormat;
 
         @NameInMap("BizCode")
         private String bizCode;
+
+        @NameInMap("EnableSoundCode")
+        private Boolean enableSoundCode;
+
+        @NameInMap("SoundCodeConfig")
+        private SoundCodeConfig soundCodeConfig;
 
         @NameInMap("SpeechCode")
         private String speechCode;
@@ -159,6 +226,8 @@ public class QuerySpeechResponseBody extends TeaModel {
         private Data(Builder builder) {
             this.audioFormat = builder.audioFormat;
             this.bizCode = builder.bizCode;
+            this.enableSoundCode = builder.enableSoundCode;
+            this.soundCodeConfig = builder.soundCodeConfig;
             this.speechCode = builder.speechCode;
             this.speechRate = builder.speechRate;
             this.speechType = builder.speechType;
@@ -187,6 +256,20 @@ public class QuerySpeechResponseBody extends TeaModel {
          */
         public String getBizCode() {
             return this.bizCode;
+        }
+
+        /**
+         * @return enableSoundCode
+         */
+        public Boolean getEnableSoundCode() {
+            return this.enableSoundCode;
+        }
+
+        /**
+         * @return soundCodeConfig
+         */
+        public SoundCodeConfig getSoundCodeConfig() {
+            return this.soundCodeConfig;
         }
 
         /**
@@ -234,6 +317,8 @@ public class QuerySpeechResponseBody extends TeaModel {
         public static final class Builder {
             private String audioFormat; 
             private String bizCode; 
+            private Boolean enableSoundCode; 
+            private SoundCodeConfig soundCodeConfig; 
             private String speechCode; 
             private Integer speechRate; 
             private String speechType; 
@@ -254,6 +339,22 @@ public class QuerySpeechResponseBody extends TeaModel {
              */
             public Builder bizCode(String bizCode) {
                 this.bizCode = bizCode;
+                return this;
+            }
+
+            /**
+             * EnableSoundCode.
+             */
+            public Builder enableSoundCode(Boolean enableSoundCode) {
+                this.enableSoundCode = enableSoundCode;
+                return this;
+            }
+
+            /**
+             * SoundCodeConfig.
+             */
+            public Builder soundCodeConfig(SoundCodeConfig soundCodeConfig) {
+                this.soundCodeConfig = soundCodeConfig;
                 return this;
             }
 

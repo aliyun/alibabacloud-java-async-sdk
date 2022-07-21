@@ -101,13 +101,13 @@ public class QueryDeviceRequest extends Request {
             super();
         } 
 
-        private Builder(QueryDeviceRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.iotInstanceId = response.iotInstanceId;
-            this.nextToken = response.nextToken;
-            this.pageSize = response.pageSize;
-            this.productKey = response.productKey;
+        private Builder(QueryDeviceRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.iotInstanceId = request.iotInstanceId;
+            this.nextToken = request.nextToken;
+            this.pageSize = request.pageSize;
+            this.productKey = request.productKey;
         } 
 
         /**

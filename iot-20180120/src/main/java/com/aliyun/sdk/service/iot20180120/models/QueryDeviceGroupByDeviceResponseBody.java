@@ -141,6 +141,9 @@ public class QueryDeviceGroupByDeviceResponseBody extends TeaModel {
         @NameInMap("GroupName")
         private String groupName;
 
+        @NameInMap("GroupType")
+        private String groupType;
+
         @NameInMap("UtcCreate")
         private String utcCreate;
 
@@ -148,6 +151,7 @@ public class QueryDeviceGroupByDeviceResponseBody extends TeaModel {
             this.groupDesc = builder.groupDesc;
             this.groupId = builder.groupId;
             this.groupName = builder.groupName;
+            this.groupType = builder.groupType;
             this.utcCreate = builder.utcCreate;
         }
 
@@ -181,6 +185,13 @@ public class QueryDeviceGroupByDeviceResponseBody extends TeaModel {
         }
 
         /**
+         * @return groupType
+         */
+        public String getGroupType() {
+            return this.groupType;
+        }
+
+        /**
          * @return utcCreate
          */
         public String getUtcCreate() {
@@ -191,6 +202,7 @@ public class QueryDeviceGroupByDeviceResponseBody extends TeaModel {
             private String groupDesc; 
             private String groupId; 
             private String groupName; 
+            private String groupType; 
             private String utcCreate; 
 
             /**
@@ -214,6 +226,14 @@ public class QueryDeviceGroupByDeviceResponseBody extends TeaModel {
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
+                return this;
+            }
+
+            /**
+             * GroupType.
+             */
+            public Builder groupType(String groupType) {
+                this.groupType = groupType;
                 return this;
             }
 

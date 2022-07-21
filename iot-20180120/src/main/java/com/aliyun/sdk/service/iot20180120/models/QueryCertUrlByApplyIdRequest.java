@@ -62,10 +62,10 @@ public class QueryCertUrlByApplyIdRequest extends Request {
             super();
         } 
 
-        private Builder(QueryCertUrlByApplyIdRequest response) {
-            super(response);
-            this.applyId = response.applyId;
-            this.iotInstanceId = response.iotInstanceId;
+        private Builder(QueryCertUrlByApplyIdRequest request) {
+            super(request);
+            this.applyId = request.applyId;
+            this.iotInstanceId = request.iotInstanceId;
         } 
 
         /**

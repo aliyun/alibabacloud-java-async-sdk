@@ -133,7 +133,7 @@ public class QueryTopicRouteTableResponseBody extends TeaModel {
 
     public static class DstTopics extends TeaModel {
         @NameInMap("Topic")
-        private java.util.List < java.util.Map<String, String>> topic;
+        private java.util.List < java.util.Map<String, ?>> topic;
 
         private DstTopics(Builder builder) {
             this.topic = builder.topic;
@@ -150,17 +150,17 @@ public class QueryTopicRouteTableResponseBody extends TeaModel {
         /**
          * @return topic
          */
-        public java.util.List < java.util.Map<String, String>> getTopic() {
+        public java.util.List < java.util.Map<String, ?>> getTopic() {
             return this.topic;
         }
 
         public static final class Builder {
-            private java.util.List < java.util.Map<String, String>> topic; 
+            private java.util.List < java.util.Map<String, ?>> topic; 
 
             /**
              * Topic.
              */
-            public Builder topic(java.util.List < java.util.Map<String, String>> topic) {
+            public Builder topic(java.util.List < java.util.Map<String, ?>> topic) {
                 this.topic = topic;
                 return this;
             }

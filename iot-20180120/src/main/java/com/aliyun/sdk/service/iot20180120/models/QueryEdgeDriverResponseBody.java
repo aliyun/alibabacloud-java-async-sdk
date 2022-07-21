@@ -150,6 +150,9 @@ public class QueryEdgeDriverResponseBody extends TeaModel {
         @NameInMap("GmtModifiedTimestamp")
         private Long gmtModifiedTimestamp;
 
+        @NameInMap("IsApply")
+        private Boolean isApply;
+
         @NameInMap("IsBuiltIn")
         private Boolean isBuiltIn;
 
@@ -166,6 +169,7 @@ public class QueryEdgeDriverResponseBody extends TeaModel {
             this.driverProtocol = builder.driverProtocol;
             this.gmtCreateTimestamp = builder.gmtCreateTimestamp;
             this.gmtModifiedTimestamp = builder.gmtModifiedTimestamp;
+            this.isApply = builder.isApply;
             this.isBuiltIn = builder.isBuiltIn;
             this.runtime = builder.runtime;
             this.type = builder.type;
@@ -222,6 +226,13 @@ public class QueryEdgeDriverResponseBody extends TeaModel {
         }
 
         /**
+         * @return isApply
+         */
+        public Boolean getIsApply() {
+            return this.isApply;
+        }
+
+        /**
          * @return isBuiltIn
          */
         public Boolean getIsBuiltIn() {
@@ -249,6 +260,7 @@ public class QueryEdgeDriverResponseBody extends TeaModel {
             private String driverProtocol; 
             private Long gmtCreateTimestamp; 
             private Long gmtModifiedTimestamp; 
+            private Boolean isApply; 
             private Boolean isBuiltIn; 
             private String runtime; 
             private Integer type; 
@@ -298,6 +310,14 @@ public class QueryEdgeDriverResponseBody extends TeaModel {
              */
             public Builder gmtModifiedTimestamp(Long gmtModifiedTimestamp) {
                 this.gmtModifiedTimestamp = gmtModifiedTimestamp;
+                return this;
+            }
+
+            /**
+             * IsApply.
+             */
+            public Builder isApply(Boolean isApply) {
+                this.isApply = isApply;
                 return this;
             }
 

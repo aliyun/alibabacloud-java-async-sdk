@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class SpeechByCombinationRequest extends Request {
     @Body
+    @NameInMap("AudioFormat")
+    private String audioFormat;
+
+    @Body
     @NameInMap("CombinationList")
     @Validation(required = true)
     private java.util.List < String > combinationList;
@@ -33,13 +37,19 @@ public class SpeechByCombinationRequest extends Request {
     @NameInMap("ProductKey")
     private String productKey;
 
+    @Body
+    @NameInMap("SpeechId")
+    private String speechId;
+
     private SpeechByCombinationRequest(Builder builder) {
         super(builder);
+        this.audioFormat = builder.audioFormat;
         this.combinationList = builder.combinationList;
         this.deviceName = builder.deviceName;
         this.iotId = builder.iotId;
         this.iotInstanceId = builder.iotInstanceId;
         this.productKey = builder.productKey;
+        this.speechId = builder.speechId;
     }
 
     public static Builder builder() {
@@ -53,6 +63,13 @@ public class SpeechByCombinationRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return audioFormat
+     */
+    public String getAudioFormat() {
+        return this.audioFormat;
     }
 
     /**
@@ -90,25 +107,45 @@ public class SpeechByCombinationRequest extends Request {
         return this.productKey;
     }
 
+    /**
+     * @return speechId
+     */
+    public String getSpeechId() {
+        return this.speechId;
+    }
+
     public static final class Builder extends Request.Builder<SpeechByCombinationRequest, Builder> {
+        private String audioFormat; 
         private java.util.List < String > combinationList; 
         private String deviceName; 
         private String iotId; 
         private String iotInstanceId; 
         private String productKey; 
+        private String speechId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(SpeechByCombinationRequest response) {
-            super(response);
-            this.combinationList = response.combinationList;
-            this.deviceName = response.deviceName;
-            this.iotId = response.iotId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.productKey = response.productKey;
+        private Builder(SpeechByCombinationRequest request) {
+            super(request);
+            this.audioFormat = request.audioFormat;
+            this.combinationList = request.combinationList;
+            this.deviceName = request.deviceName;
+            this.iotId = request.iotId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.productKey = request.productKey;
+            this.speechId = request.speechId;
         } 
+
+        /**
+         * AudioFormat.
+         */
+        public Builder audioFormat(String audioFormat) {
+            this.putBodyParameter("AudioFormat", audioFormat);
+            this.audioFormat = audioFormat;
+            return this;
+        }
 
         /**
          * CombinationList.
@@ -152,6 +189,15 @@ public class SpeechByCombinationRequest extends Request {
         public Builder productKey(String productKey) {
             this.putBodyParameter("ProductKey", productKey);
             this.productKey = productKey;
+            return this;
+        }
+
+        /**
+         * SpeechId.
+         */
+        public Builder speechId(String speechId) {
+            this.putBodyParameter("SpeechId", speechId);
+            this.speechId = speechId;
             return this;
         }
 

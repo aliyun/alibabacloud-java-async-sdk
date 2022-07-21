@@ -48,9 +48,9 @@ public class OpenIotServiceRequest extends Request {
             super();
         } 
 
-        private Builder(OpenIotServiceRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
+        private Builder(OpenIotServiceRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
         } 
 
         /**

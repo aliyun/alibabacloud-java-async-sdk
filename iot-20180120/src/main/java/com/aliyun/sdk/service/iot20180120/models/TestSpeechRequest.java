@@ -13,6 +13,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class TestSpeechRequest extends Request {
     @Body
+    @NameInMap("AudioFormat")
+    private String audioFormat;
+
+    @Body
+    @NameInMap("EnableSoundCode")
+    private Boolean enableSoundCode;
+
+    @Body
     @NameInMap("IotInstanceId")
     private String iotInstanceId;
 
@@ -22,7 +30,12 @@ public class TestSpeechRequest extends Request {
     private String projectCode;
 
     @Body
+    @NameInMap("SoundCodeConfig")
+    private java.util.Map < String, ? > soundCodeConfig;
+
+    @Body
     @NameInMap("SpeechRate")
+    @Validation(maximum = 500)
     private Integer speechRate;
 
     @Body
@@ -40,12 +53,16 @@ public class TestSpeechRequest extends Request {
 
     @Body
     @NameInMap("Volume")
+    @Validation(maximum = 100)
     private Integer volume;
 
     private TestSpeechRequest(Builder builder) {
         super(builder);
+        this.audioFormat = builder.audioFormat;
+        this.enableSoundCode = builder.enableSoundCode;
         this.iotInstanceId = builder.iotInstanceId;
         this.projectCode = builder.projectCode;
+        this.soundCodeConfig = builder.soundCodeConfig;
         this.speechRate = builder.speechRate;
         this.speechType = builder.speechType;
         this.text = builder.text;
@@ -67,6 +84,20 @@ public class TestSpeechRequest extends Request {
     }
 
     /**
+     * @return audioFormat
+     */
+    public String getAudioFormat() {
+        return this.audioFormat;
+    }
+
+    /**
+     * @return enableSoundCode
+     */
+    public Boolean getEnableSoundCode() {
+        return this.enableSoundCode;
+    }
+
+    /**
      * @return iotInstanceId
      */
     public String getIotInstanceId() {
@@ -78,6 +109,13 @@ public class TestSpeechRequest extends Request {
      */
     public String getProjectCode() {
         return this.projectCode;
+    }
+
+    /**
+     * @return soundCodeConfig
+     */
+    public java.util.Map < String, ? > getSoundCodeConfig() {
+        return this.soundCodeConfig;
     }
 
     /**
@@ -116,8 +154,11 @@ public class TestSpeechRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<TestSpeechRequest, Builder> {
+        private String audioFormat; 
+        private Boolean enableSoundCode; 
         private String iotInstanceId; 
         private String projectCode; 
+        private java.util.Map < String, ? > soundCodeConfig; 
         private Integer speechRate; 
         private String speechType; 
         private String text; 
@@ -128,16 +169,37 @@ public class TestSpeechRequest extends Request {
             super();
         } 
 
-        private Builder(TestSpeechRequest response) {
-            super(response);
-            this.iotInstanceId = response.iotInstanceId;
-            this.projectCode = response.projectCode;
-            this.speechRate = response.speechRate;
-            this.speechType = response.speechType;
-            this.text = response.text;
-            this.voice = response.voice;
-            this.volume = response.volume;
+        private Builder(TestSpeechRequest request) {
+            super(request);
+            this.audioFormat = request.audioFormat;
+            this.enableSoundCode = request.enableSoundCode;
+            this.iotInstanceId = request.iotInstanceId;
+            this.projectCode = request.projectCode;
+            this.soundCodeConfig = request.soundCodeConfig;
+            this.speechRate = request.speechRate;
+            this.speechType = request.speechType;
+            this.text = request.text;
+            this.voice = request.voice;
+            this.volume = request.volume;
         } 
+
+        /**
+         * AudioFormat.
+         */
+        public Builder audioFormat(String audioFormat) {
+            this.putBodyParameter("AudioFormat", audioFormat);
+            this.audioFormat = audioFormat;
+            return this;
+        }
+
+        /**
+         * EnableSoundCode.
+         */
+        public Builder enableSoundCode(Boolean enableSoundCode) {
+            this.putBodyParameter("EnableSoundCode", enableSoundCode);
+            this.enableSoundCode = enableSoundCode;
+            return this;
+        }
 
         /**
          * IotInstanceId.
@@ -154,6 +216,16 @@ public class TestSpeechRequest extends Request {
         public Builder projectCode(String projectCode) {
             this.putBodyParameter("ProjectCode", projectCode);
             this.projectCode = projectCode;
+            return this;
+        }
+
+        /**
+         * SoundCodeConfig.
+         */
+        public Builder soundCodeConfig(java.util.Map < String, ? > soundCodeConfig) {
+            String soundCodeConfigShrink = shrink(soundCodeConfig, "SoundCodeConfig", "json");
+            this.putBodyParameter("SoundCodeConfig", soundCodeConfigShrink);
+            this.soundCodeConfig = soundCodeConfig;
             return this;
         }
 

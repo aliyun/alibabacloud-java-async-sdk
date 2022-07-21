@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateOTAVerifyJobRequest extends Request {
     @Query
+    @NameInMap("DownloadProtocol")
+    private String downloadProtocol;
+
+    @Query
     @NameInMap("FirmwareId")
     @Validation(required = true)
     private String firmwareId;
@@ -35,6 +39,10 @@ public class CreateOTAVerifyJobRequest extends Request {
     private String productKey;
 
     @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
+    @Query
     @NameInMap("TargetDeviceName")
     @Validation(required = true)
     private java.util.List < String > targetDeviceName;
@@ -45,11 +53,13 @@ public class CreateOTAVerifyJobRequest extends Request {
 
     private CreateOTAVerifyJobRequest(Builder builder) {
         super(builder);
+        this.downloadProtocol = builder.downloadProtocol;
         this.firmwareId = builder.firmwareId;
         this.iotInstanceId = builder.iotInstanceId;
         this.needConfirm = builder.needConfirm;
         this.needPush = builder.needPush;
         this.productKey = builder.productKey;
+        this.tag = builder.tag;
         this.targetDeviceName = builder.targetDeviceName;
         this.timeoutInMinutes = builder.timeoutInMinutes;
     }
@@ -65,6 +75,13 @@ public class CreateOTAVerifyJobRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return downloadProtocol
+     */
+    public String getDownloadProtocol() {
+        return this.downloadProtocol;
     }
 
     /**
@@ -103,6 +120,13 @@ public class CreateOTAVerifyJobRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return targetDeviceName
      */
     public java.util.List < String > getTargetDeviceName() {
@@ -117,11 +141,13 @@ public class CreateOTAVerifyJobRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateOTAVerifyJobRequest, Builder> {
+        private String downloadProtocol; 
         private String firmwareId; 
         private String iotInstanceId; 
         private Boolean needConfirm; 
         private Boolean needPush; 
         private String productKey; 
+        private java.util.List < Tag> tag; 
         private java.util.List < String > targetDeviceName; 
         private Integer timeoutInMinutes; 
 
@@ -129,16 +155,27 @@ public class CreateOTAVerifyJobRequest extends Request {
             super();
         } 
 
-        private Builder(CreateOTAVerifyJobRequest response) {
-            super(response);
-            this.firmwareId = response.firmwareId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.needConfirm = response.needConfirm;
-            this.needPush = response.needPush;
-            this.productKey = response.productKey;
-            this.targetDeviceName = response.targetDeviceName;
-            this.timeoutInMinutes = response.timeoutInMinutes;
+        private Builder(CreateOTAVerifyJobRequest request) {
+            super(request);
+            this.downloadProtocol = request.downloadProtocol;
+            this.firmwareId = request.firmwareId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.needConfirm = request.needConfirm;
+            this.needPush = request.needPush;
+            this.productKey = request.productKey;
+            this.tag = request.tag;
+            this.targetDeviceName = request.targetDeviceName;
+            this.timeoutInMinutes = request.timeoutInMinutes;
         } 
+
+        /**
+         * DownloadProtocol.
+         */
+        public Builder downloadProtocol(String downloadProtocol) {
+            this.putQueryParameter("DownloadProtocol", downloadProtocol);
+            this.downloadProtocol = downloadProtocol;
+            return this;
+        }
 
         /**
          * FirmwareId.
@@ -186,6 +223,15 @@ public class CreateOTAVerifyJobRequest extends Request {
         }
 
         /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
          * TargetDeviceName.
          */
         public Builder targetDeviceName(java.util.List < String > targetDeviceName) {
@@ -210,4 +256,67 @@ public class CreateOTAVerifyJobRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        @Validation(required = true)
+        private String key;
+
+        @NameInMap("Value")
+        @Validation(required = true)
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

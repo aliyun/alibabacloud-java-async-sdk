@@ -76,11 +76,11 @@ public class RefreshDeviceTunnelSharePasswordRequest extends Request {
             super();
         } 
 
-        private Builder(RefreshDeviceTunnelSharePasswordRequest response) {
-            super(response);
-            this.deviceName = response.deviceName;
-            this.iotInstanceId = response.iotInstanceId;
-            this.productKey = response.productKey;
+        private Builder(RefreshDeviceTunnelSharePasswordRequest request) {
+            super(request);
+            this.deviceName = request.deviceName;
+            this.iotInstanceId = request.iotInstanceId;
+            this.productKey = request.productKey;
         } 
 
         /**

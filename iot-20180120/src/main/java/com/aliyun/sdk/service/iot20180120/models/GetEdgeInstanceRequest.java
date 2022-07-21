@@ -62,10 +62,10 @@ public class GetEdgeInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(GetEdgeInstanceRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.iotInstanceId = response.iotInstanceId;
+        private Builder(GetEdgeInstanceRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.iotInstanceId = request.iotInstanceId;
         } 
 
         /**

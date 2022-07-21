@@ -88,12 +88,12 @@ public class CreateDeviceGroupRequest extends Request {
             super();
         } 
 
-        private Builder(CreateDeviceGroupRequest response) {
-            super(response);
-            this.groupDesc = response.groupDesc;
-            this.groupName = response.groupName;
-            this.iotInstanceId = response.iotInstanceId;
-            this.superGroupId = response.superGroupId;
+        private Builder(CreateDeviceGroupRequest request) {
+            super(request);
+            this.groupDesc = request.groupDesc;
+            this.groupName = request.groupName;
+            this.iotInstanceId = request.iotInstanceId;
+            this.superGroupId = request.superGroupId;
         } 
 
         /**

@@ -115,14 +115,14 @@ public class UpdateEdgeInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateEdgeInstanceRequest response) {
-            super(response);
-            this.bizEnable = response.bizEnable;
-            this.instanceId = response.instanceId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.name = response.name;
-            this.spec = response.spec;
-            this.tags = response.tags;
+        private Builder(UpdateEdgeInstanceRequest request) {
+            super(request);
+            this.bizEnable = request.bizEnable;
+            this.instanceId = request.instanceId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.name = request.name;
+            this.spec = request.spec;
+            this.tags = request.tags;
         } 
 
         /**

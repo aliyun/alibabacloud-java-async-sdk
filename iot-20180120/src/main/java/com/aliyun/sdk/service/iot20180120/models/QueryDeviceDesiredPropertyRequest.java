@@ -113,14 +113,14 @@ public class QueryDeviceDesiredPropertyRequest extends Request {
             super();
         } 
 
-        private Builder(QueryDeviceDesiredPropertyRequest response) {
-            super(response);
-            this.deviceName = response.deviceName;
-            this.functionBlockId = response.functionBlockId;
-            this.identifier = response.identifier;
-            this.iotId = response.iotId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.productKey = response.productKey;
+        private Builder(QueryDeviceDesiredPropertyRequest request) {
+            super(request);
+            this.deviceName = request.deviceName;
+            this.functionBlockId = request.functionBlockId;
+            this.identifier = request.identifier;
+            this.iotId = request.iotId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.productKey = request.productKey;
         } 
 
         /**

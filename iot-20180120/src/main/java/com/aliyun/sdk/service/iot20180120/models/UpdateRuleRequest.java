@@ -166,18 +166,18 @@ public class UpdateRuleRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateRuleRequest response) {
-            super(response);
-            this.iotInstanceId = response.iotInstanceId;
-            this.name = response.name;
-            this.productKey = response.productKey;
-            this.ruleDesc = response.ruleDesc;
-            this.ruleId = response.ruleId;
-            this.select = response.select;
-            this.shortTopic = response.shortTopic;
-            this.topic = response.topic;
-            this.topicType = response.topicType;
-            this.where = response.where;
+        private Builder(UpdateRuleRequest request) {
+            super(request);
+            this.iotInstanceId = request.iotInstanceId;
+            this.name = request.name;
+            this.productKey = request.productKey;
+            this.ruleDesc = request.ruleDesc;
+            this.ruleId = request.ruleId;
+            this.select = request.select;
+            this.shortTopic = request.shortTopic;
+            this.topic = request.topic;
+            this.topicType = request.topicType;
+            this.where = request.where;
         } 
 
         /**

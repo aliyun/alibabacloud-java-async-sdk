@@ -62,10 +62,10 @@ public class GetDataAPIServiceDetailRequest extends Request {
             super();
         } 
 
-        private Builder(GetDataAPIServiceDetailRequest response) {
-            super(response);
-            this.apiSrn = response.apiSrn;
-            this.iotInstanceId = response.iotInstanceId;
+        private Builder(GetDataAPIServiceDetailRequest request) {
+            super(request);
+            this.apiSrn = request.apiSrn;
+            this.iotInstanceId = request.iotInstanceId;
         } 
 
         /**

@@ -116,14 +116,14 @@ public class CreateEdgeDriverRequest extends Request {
             super();
         } 
 
-        private Builder(CreateEdgeDriverRequest response) {
-            super(response);
-            this.cpuArch = response.cpuArch;
-            this.driverName = response.driverName;
-            this.driverProtocol = response.driverProtocol;
-            this.iotInstanceId = response.iotInstanceId;
-            this.isBuiltIn = response.isBuiltIn;
-            this.runtime = response.runtime;
+        private Builder(CreateEdgeDriverRequest request) {
+            super(request);
+            this.cpuArch = request.cpuArch;
+            this.driverName = request.driverName;
+            this.driverProtocol = request.driverProtocol;
+            this.iotInstanceId = request.iotInstanceId;
+            this.isBuiltIn = request.isBuiltIn;
+            this.runtime = request.runtime;
         } 
 
         /**

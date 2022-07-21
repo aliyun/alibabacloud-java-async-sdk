@@ -115,14 +115,14 @@ public class QueryStudioAppListRequest extends Request {
             super();
         } 
 
-        private Builder(QueryStudioAppListRequest response) {
-            super(response);
-            this.fuzzyName = response.fuzzyName;
-            this.iotInstanceId = response.iotInstanceId;
-            this.pageNo = response.pageNo;
-            this.pageSize = response.pageSize;
-            this.projectId = response.projectId;
-            this.types = response.types;
+        private Builder(QueryStudioAppListRequest request) {
+            super(request);
+            this.fuzzyName = request.fuzzyName;
+            this.iotInstanceId = request.iotInstanceId;
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
+            this.projectId = request.projectId;
+            this.types = request.types;
         } 
 
         /**

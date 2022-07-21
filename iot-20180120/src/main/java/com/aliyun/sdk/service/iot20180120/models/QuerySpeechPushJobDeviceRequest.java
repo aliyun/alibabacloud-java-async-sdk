@@ -27,10 +27,12 @@ public class QuerySpeechPushJobDeviceRequest extends Request {
 
     @Body
     @NameInMap("PageId")
+    @Validation(maximum = 10000, minimum = 1)
     private Integer pageId;
 
     @Body
     @NameInMap("PageSize")
+    @Validation(maximum = 50, minimum = 1)
     private Integer pageSize;
 
     @Body
@@ -114,14 +116,14 @@ public class QuerySpeechPushJobDeviceRequest extends Request {
             super();
         } 
 
-        private Builder(QuerySpeechPushJobDeviceRequest response) {
-            super(response);
-            this.deviceName = response.deviceName;
-            this.iotInstanceId = response.iotInstanceId;
-            this.jobCode = response.jobCode;
-            this.pageId = response.pageId;
-            this.pageSize = response.pageSize;
-            this.status = response.status;
+        private Builder(QuerySpeechPushJobDeviceRequest request) {
+            super(request);
+            this.deviceName = request.deviceName;
+            this.iotInstanceId = request.iotInstanceId;
+            this.jobCode = request.jobCode;
+            this.pageId = request.pageId;
+            this.pageSize = request.pageSize;
+            this.status = request.status;
         } 
 
         /**

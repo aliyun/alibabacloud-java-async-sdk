@@ -174,7 +174,7 @@ public class InvokeDataAPIServiceResponseBody extends TeaModel {
     }
     public static class ResultList extends TeaModel {
         @NameInMap("ResultList")
-        private java.util.List < java.util.Map<String, String>> resultList;
+        private java.util.List < java.util.Map<String, ?>> resultList;
 
         private ResultList(Builder builder) {
             this.resultList = builder.resultList;
@@ -191,17 +191,17 @@ public class InvokeDataAPIServiceResponseBody extends TeaModel {
         /**
          * @return resultList
          */
-        public java.util.List < java.util.Map<String, String>> getResultList() {
+        public java.util.List < java.util.Map<String, ?>> getResultList() {
             return this.resultList;
         }
 
         public static final class Builder {
-            private java.util.List < java.util.Map<String, String>> resultList; 
+            private java.util.List < java.util.Map<String, ?>> resultList; 
 
             /**
              * ResultList.
              */
-            public Builder resultList(java.util.List < java.util.Map<String, String>> resultList) {
+            public Builder resultList(java.util.List < java.util.Map<String, ?>> resultList) {
                 this.resultList = resultList;
                 return this;
             }
@@ -229,12 +229,16 @@ public class InvokeDataAPIServiceResponseBody extends TeaModel {
         @NameInMap("ResultList")
         private ResultList resultList;
 
+        @NameInMap("TotalSize")
+        private Integer totalSize;
+
         private Data(Builder builder) {
             this.apiSrn = builder.apiSrn;
             this.fieldNameList = builder.fieldNameList;
             this.pageNo = builder.pageNo;
             this.pageSize = builder.pageSize;
             this.resultList = builder.resultList;
+            this.totalSize = builder.totalSize;
         }
 
         public static Builder builder() {
@@ -280,12 +284,20 @@ public class InvokeDataAPIServiceResponseBody extends TeaModel {
             return this.resultList;
         }
 
+        /**
+         * @return totalSize
+         */
+        public Integer getTotalSize() {
+            return this.totalSize;
+        }
+
         public static final class Builder {
             private String apiSrn; 
             private FieldNameList fieldNameList; 
             private Integer pageNo; 
             private Integer pageSize; 
             private ResultList resultList; 
+            private Integer totalSize; 
 
             /**
              * ApiSrn.
@@ -324,6 +336,14 @@ public class InvokeDataAPIServiceResponseBody extends TeaModel {
              */
             public Builder resultList(ResultList resultList) {
                 this.resultList = resultList;
+                return this;
+            }
+
+            /**
+             * TotalSize.
+             */
+            public Builder totalSize(Integer totalSize) {
+                this.totalSize = totalSize;
                 return this;
             }
 

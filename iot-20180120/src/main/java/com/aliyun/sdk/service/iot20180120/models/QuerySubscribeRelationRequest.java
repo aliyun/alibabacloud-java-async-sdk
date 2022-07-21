@@ -76,11 +76,11 @@ public class QuerySubscribeRelationRequest extends Request {
             super();
         } 
 
-        private Builder(QuerySubscribeRelationRequest response) {
-            super(response);
-            this.iotInstanceId = response.iotInstanceId;
-            this.productKey = response.productKey;
-            this.type = response.type;
+        private Builder(QuerySubscribeRelationRequest request) {
+            super(request);
+            this.iotInstanceId = request.iotInstanceId;
+            this.productKey = request.productKey;
+            this.type = request.type;
         } 
 
         /**

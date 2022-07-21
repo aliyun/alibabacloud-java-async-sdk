@@ -155,17 +155,17 @@ public class CreateEdgeInstanceMessageRoutingRequest extends Request {
             super();
         } 
 
-        private Builder(CreateEdgeInstanceMessageRoutingRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.name = response.name;
-            this.sourceData = response.sourceData;
-            this.sourceType = response.sourceType;
-            this.targetData = response.targetData;
-            this.targetIotHubQos = response.targetIotHubQos;
-            this.targetType = response.targetType;
-            this.topicFilter = response.topicFilter;
+        private Builder(CreateEdgeInstanceMessageRoutingRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.name = request.name;
+            this.sourceData = request.sourceData;
+            this.sourceType = request.sourceType;
+            this.targetData = request.targetData;
+            this.targetIotHubQos = request.targetIotHubQos;
+            this.targetType = request.targetType;
+            this.topicFilter = request.topicFilter;
         } 
 
         /**

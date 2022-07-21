@@ -89,12 +89,12 @@ public class QuerySceneRuleRequest extends Request {
             super();
         } 
 
-        private Builder(QuerySceneRuleRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.iotInstanceId = response.iotInstanceId;
-            this.pageSize = response.pageSize;
-            this.ruleName = response.ruleName;
+        private Builder(QuerySceneRuleRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.iotInstanceId = request.iotInstanceId;
+            this.pageSize = request.pageSize;
+            this.ruleName = request.ruleName;
         } 
 
         /**

@@ -62,10 +62,10 @@ public class ConfirmOTATaskRequest extends Request {
             super();
         } 
 
-        private Builder(ConfirmOTATaskRequest response) {
-            super(response);
-            this.iotInstanceId = response.iotInstanceId;
-            this.taskId = response.taskId;
+        private Builder(ConfirmOTATaskRequest request) {
+            super(request);
+            this.iotInstanceId = request.iotInstanceId;
+            this.taskId = request.taskId;
         } 
 
         /**

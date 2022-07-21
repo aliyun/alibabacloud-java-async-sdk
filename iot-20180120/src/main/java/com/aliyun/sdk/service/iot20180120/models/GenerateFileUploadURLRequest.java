@@ -89,12 +89,12 @@ public class GenerateFileUploadURLRequest extends Request {
             super();
         } 
 
-        private Builder(GenerateFileUploadURLRequest response) {
-            super(response);
-            this.bizCode = response.bizCode;
-            this.fileName = response.fileName;
-            this.fileSuffix = response.fileSuffix;
-            this.iotInstanceId = response.iotInstanceId;
+        private Builder(GenerateFileUploadURLRequest request) {
+            super(request);
+            this.bizCode = request.bizCode;
+            this.fileName = request.fileName;
+            this.fileSuffix = request.fileSuffix;
+            this.iotInstanceId = request.iotInstanceId;
         } 
 
         /**

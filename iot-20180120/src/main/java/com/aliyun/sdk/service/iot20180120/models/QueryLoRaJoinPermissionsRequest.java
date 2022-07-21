@@ -48,9 +48,9 @@ public class QueryLoRaJoinPermissionsRequest extends Request {
             super();
         } 
 
-        private Builder(QueryLoRaJoinPermissionsRequest response) {
-            super(response);
-            this.iotInstanceId = response.iotInstanceId;
+        private Builder(QueryLoRaJoinPermissionsRequest request) {
+            super(request);
+            this.iotInstanceId = request.iotInstanceId;
         } 
 
         /**

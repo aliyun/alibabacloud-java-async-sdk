@@ -100,13 +100,13 @@ public class NotifyAddThingTopoRequest extends Request {
             super();
         } 
 
-        private Builder(NotifyAddThingTopoRequest response) {
-            super(response);
-            this.deviceListStr = response.deviceListStr;
-            this.gwDeviceName = response.gwDeviceName;
-            this.gwIotId = response.gwIotId;
-            this.gwProductKey = response.gwProductKey;
-            this.iotInstanceId = response.iotInstanceId;
+        private Builder(NotifyAddThingTopoRequest request) {
+            super(request);
+            this.deviceListStr = request.deviceListStr;
+            this.gwDeviceName = request.gwDeviceName;
+            this.gwIotId = request.gwIotId;
+            this.gwProductKey = request.gwProductKey;
+            this.iotInstanceId = request.iotInstanceId;
         } 
 
         /**

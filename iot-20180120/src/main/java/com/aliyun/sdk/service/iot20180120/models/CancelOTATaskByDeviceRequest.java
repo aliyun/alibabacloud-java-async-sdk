@@ -103,13 +103,13 @@ public class CancelOTATaskByDeviceRequest extends Request {
             super();
         } 
 
-        private Builder(CancelOTATaskByDeviceRequest response) {
-            super(response);
-            this.deviceName = response.deviceName;
-            this.firmwareId = response.firmwareId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.jobId = response.jobId;
-            this.productKey = response.productKey;
+        private Builder(CancelOTATaskByDeviceRequest request) {
+            super(request);
+            this.deviceName = request.deviceName;
+            this.firmwareId = request.firmwareId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.jobId = request.jobId;
+            this.productKey = request.productKey;
         } 
 
         /**

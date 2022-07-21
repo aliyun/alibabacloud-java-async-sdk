@@ -62,10 +62,10 @@ public class DeleteJobRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteJobRequest response) {
-            super(response);
-            this.iotInstanceId = response.iotInstanceId;
-            this.jobId = response.jobId;
+        private Builder(DeleteJobRequest request) {
+            super(request);
+            this.iotInstanceId = request.iotInstanceId;
+            this.jobId = request.jobId;
         } 
 
         /**

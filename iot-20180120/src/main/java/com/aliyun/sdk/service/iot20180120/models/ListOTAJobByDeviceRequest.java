@@ -118,14 +118,14 @@ public class ListOTAJobByDeviceRequest extends Request {
             super();
         } 
 
-        private Builder(ListOTAJobByDeviceRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.deviceName = response.deviceName;
-            this.firmwareId = response.firmwareId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.pageSize = response.pageSize;
-            this.productKey = response.productKey;
+        private Builder(ListOTAJobByDeviceRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.deviceName = request.deviceName;
+            this.firmwareId = request.firmwareId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.pageSize = request.pageSize;
+            this.productKey = request.productKey;
         } 
 
         /**

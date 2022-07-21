@@ -76,11 +76,11 @@ public class DeleteEdgeDriverVersionRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteEdgeDriverVersionRequest response) {
-            super(response);
-            this.driverId = response.driverId;
-            this.driverVersion = response.driverVersion;
-            this.iotInstanceId = response.iotInstanceId;
+        private Builder(DeleteEdgeDriverVersionRequest request) {
+            super(request);
+            this.driverId = request.driverId;
+            this.driverVersion = request.driverVersion;
+            this.iotInstanceId = request.iotInstanceId;
         } 
 
         /**

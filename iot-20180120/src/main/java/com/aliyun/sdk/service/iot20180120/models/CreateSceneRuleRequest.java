@@ -88,12 +88,12 @@ public class CreateSceneRuleRequest extends Request {
             super();
         } 
 
-        private Builder(CreateSceneRuleRequest response) {
-            super(response);
-            this.iotInstanceId = response.iotInstanceId;
-            this.ruleContent = response.ruleContent;
-            this.ruleDescription = response.ruleDescription;
-            this.ruleName = response.ruleName;
+        private Builder(CreateSceneRuleRequest request) {
+            super(request);
+            this.iotInstanceId = request.iotInstanceId;
+            this.ruleContent = request.ruleContent;
+            this.ruleDescription = request.ruleDescription;
+            this.ruleName = request.ruleName;
         } 
 
         /**

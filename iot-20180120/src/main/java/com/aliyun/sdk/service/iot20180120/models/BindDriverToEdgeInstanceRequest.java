@@ -102,13 +102,13 @@ public class BindDriverToEdgeInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(BindDriverToEdgeInstanceRequest response) {
-            super(response);
-            this.driverId = response.driverId;
-            this.driverVersion = response.driverVersion;
-            this.instanceId = response.instanceId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.orderId = response.orderId;
+        private Builder(BindDriverToEdgeInstanceRequest request) {
+            super(request);
+            this.driverId = request.driverId;
+            this.driverVersion = request.driverVersion;
+            this.instanceId = request.instanceId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.orderId = request.orderId;
         } 
 
         /**

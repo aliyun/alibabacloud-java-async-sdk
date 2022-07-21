@@ -26,6 +26,7 @@ public class QueryStudioProjectListRequest extends Request {
 
     @Body
     @NameInMap("PageSize")
+    @Validation(maximum = 50, minimum = 1)
     private Integer pageSize;
 
     private QueryStudioProjectListRequest(Builder builder) {
@@ -87,12 +88,12 @@ public class QueryStudioProjectListRequest extends Request {
             super();
         } 
 
-        private Builder(QueryStudioProjectListRequest response) {
-            super(response);
-            this.iotInstanceId = response.iotInstanceId;
-            this.name = response.name;
-            this.pageNo = response.pageNo;
-            this.pageSize = response.pageSize;
+        private Builder(QueryStudioProjectListRequest request) {
+            super(request);
+            this.iotInstanceId = request.iotInstanceId;
+            this.name = request.name;
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
         } 
 
         /**

@@ -62,10 +62,10 @@ public class DeleteProductRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteProductRequest response) {
-            super(response);
-            this.iotInstanceId = response.iotInstanceId;
-            this.productKey = response.productKey;
+        private Builder(DeleteProductRequest request) {
+            super(request);
+            this.iotInstanceId = request.iotInstanceId;
+            this.productKey = request.productKey;
         } 
 
         /**

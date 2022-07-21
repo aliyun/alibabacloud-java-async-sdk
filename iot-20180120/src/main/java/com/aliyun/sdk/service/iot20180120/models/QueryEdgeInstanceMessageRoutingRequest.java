@@ -14,7 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class QueryEdgeInstanceMessageRoutingRequest extends Request {
     @Query
     @NameInMap("CurrentPage")
-    @Validation(required = true)
+    @Validation(required = true, maximum = 100000, minimum = 1)
     private Integer currentPage;
 
     @Query
@@ -28,7 +28,7 @@ public class QueryEdgeInstanceMessageRoutingRequest extends Request {
 
     @Query
     @NameInMap("PageSize")
-    @Validation(required = true)
+    @Validation(required = true, maximum = 100, minimum = 1)
     private Integer pageSize;
 
     private QueryEdgeInstanceMessageRoutingRequest(Builder builder) {
@@ -90,12 +90,12 @@ public class QueryEdgeInstanceMessageRoutingRequest extends Request {
             super();
         } 
 
-        private Builder(QueryEdgeInstanceMessageRoutingRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.instanceId = response.instanceId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.pageSize = response.pageSize;
+        private Builder(QueryEdgeInstanceMessageRoutingRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.instanceId = request.instanceId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.pageSize = request.pageSize;
         } 
 
         /**

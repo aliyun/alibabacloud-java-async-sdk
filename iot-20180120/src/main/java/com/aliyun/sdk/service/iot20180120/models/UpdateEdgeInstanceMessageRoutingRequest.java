@@ -169,18 +169,18 @@ public class UpdateEdgeInstanceMessageRoutingRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateEdgeInstanceMessageRoutingRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.name = response.name;
-            this.routeId = response.routeId;
-            this.sourceData = response.sourceData;
-            this.sourceType = response.sourceType;
-            this.targetData = response.targetData;
-            this.targetIotHubQos = response.targetIotHubQos;
-            this.targetType = response.targetType;
-            this.topicFilter = response.topicFilter;
+        private Builder(UpdateEdgeInstanceMessageRoutingRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.name = request.name;
+            this.routeId = request.routeId;
+            this.sourceData = request.sourceData;
+            this.sourceType = request.sourceType;
+            this.targetData = request.targetData;
+            this.targetIotHubQos = request.targetIotHubQos;
+            this.targetType = request.targetType;
+            this.topicFilter = request.topicFilter;
         } 
 
         /**

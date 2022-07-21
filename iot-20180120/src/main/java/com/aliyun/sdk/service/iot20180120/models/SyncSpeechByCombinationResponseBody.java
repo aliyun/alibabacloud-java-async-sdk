@@ -132,6 +132,9 @@ public class SyncSpeechByCombinationResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
+        @NameInMap("Detail")
+        private String detail;
+
         @NameInMap("DeviceErrorCode")
         private String deviceErrorCode;
 
@@ -151,6 +154,7 @@ public class SyncSpeechByCombinationResponseBody extends TeaModel {
         private Boolean success;
 
         private Data(Builder builder) {
+            this.detail = builder.detail;
             this.deviceErrorCode = builder.deviceErrorCode;
             this.deviceErrorMessage = builder.deviceErrorMessage;
             this.id = builder.id;
@@ -165,6 +169,13 @@ public class SyncSpeechByCombinationResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return detail
+         */
+        public String getDetail() {
+            return this.detail;
         }
 
         /**
@@ -210,12 +221,21 @@ public class SyncSpeechByCombinationResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String detail; 
             private String deviceErrorCode; 
             private String deviceErrorMessage; 
             private String id; 
             private Integer maxRetryCount; 
             private Integer retryCount; 
             private Boolean success; 
+
+            /**
+             * Detail.
+             */
+            public Builder detail(String detail) {
+                this.detail = detail;
+                return this;
+            }
 
             /**
              * DeviceErrorCode.

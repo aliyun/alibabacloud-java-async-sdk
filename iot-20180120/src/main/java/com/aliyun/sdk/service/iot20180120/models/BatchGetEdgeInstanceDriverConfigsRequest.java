@@ -76,11 +76,11 @@ public class BatchGetEdgeInstanceDriverConfigsRequest extends Request {
             super();
         } 
 
-        private Builder(BatchGetEdgeInstanceDriverConfigsRequest response) {
-            super(response);
-            this.driverIds = response.driverIds;
-            this.instanceId = response.instanceId;
-            this.iotInstanceId = response.iotInstanceId;
+        private Builder(BatchGetEdgeInstanceDriverConfigsRequest request) {
+            super(request);
+            this.driverIds = request.driverIds;
+            this.instanceId = request.instanceId;
+            this.iotInstanceId = request.iotInstanceId;
         } 
 
         /**

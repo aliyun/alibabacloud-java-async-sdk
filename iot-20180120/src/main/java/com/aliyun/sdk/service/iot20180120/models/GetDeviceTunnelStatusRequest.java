@@ -76,11 +76,11 @@ public class GetDeviceTunnelStatusRequest extends Request {
             super();
         } 
 
-        private Builder(GetDeviceTunnelStatusRequest response) {
-            super(response);
-            this.deviceName = response.deviceName;
-            this.iotInstanceId = response.iotInstanceId;
-            this.productKey = response.productKey;
+        private Builder(GetDeviceTunnelStatusRequest request) {
+            super(request);
+            this.deviceName = request.deviceName;
+            this.iotInstanceId = request.iotInstanceId;
+            this.productKey = request.productKey;
         } 
 
         /**

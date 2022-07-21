@@ -88,12 +88,12 @@ public class QueryPageByApplyIdRequest extends Request {
             super();
         } 
 
-        private Builder(QueryPageByApplyIdRequest response) {
-            super(response);
-            this.applyId = response.applyId;
-            this.currentPage = response.currentPage;
-            this.iotInstanceId = response.iotInstanceId;
-            this.pageSize = response.pageSize;
+        private Builder(QueryPageByApplyIdRequest request) {
+            super(request);
+            this.applyId = request.applyId;
+            this.currentPage = request.currentPage;
+            this.iotInstanceId = request.iotInstanceId;
+            this.pageSize = request.pageSize;
         } 
 
         /**

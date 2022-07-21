@@ -48,9 +48,9 @@ public class ListThingTemplatesRequest extends Request {
             super();
         } 
 
-        private Builder(ListThingTemplatesRequest response) {
-            super(response);
-            this.iotInstanceId = response.iotInstanceId;
+        private Builder(ListThingTemplatesRequest request) {
+            super(request);
+            this.iotInstanceId = request.iotInstanceId;
         } 
 
         /**

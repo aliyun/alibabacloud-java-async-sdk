@@ -153,17 +153,17 @@ public class RegisterDeviceRequest extends Request {
             super();
         } 
 
-        private Builder(RegisterDeviceRequest response) {
-            super(response);
-            this.appKey = response.appKey;
-            this.devEui = response.devEui;
-            this.deviceName = response.deviceName;
-            this.iotInstanceId = response.iotInstanceId;
-            this.joinEui = response.joinEui;
-            this.loraNodeType = response.loraNodeType;
-            this.nickname = response.nickname;
-            this.pinCode = response.pinCode;
-            this.productKey = response.productKey;
+        private Builder(RegisterDeviceRequest request) {
+            super(request);
+            this.appKey = request.appKey;
+            this.devEui = request.devEui;
+            this.deviceName = request.deviceName;
+            this.iotInstanceId = request.iotInstanceId;
+            this.joinEui = request.joinEui;
+            this.loraNodeType = request.loraNodeType;
+            this.nickname = request.nickname;
+            this.pinCode = request.pinCode;
+            this.productKey = request.productKey;
         } 
 
         /**

@@ -76,11 +76,11 @@ public class BindSceneRuleToEdgeInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(BindSceneRuleToEdgeInstanceRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.ruleId = response.ruleId;
+        private Builder(BindSceneRuleToEdgeInstanceRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.ruleId = request.ruleId;
         } 
 
         /**

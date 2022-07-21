@@ -103,13 +103,13 @@ public class QueryEdgeDriverRequest extends Request {
             super();
         } 
 
-        private Builder(QueryEdgeDriverRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.driverName = response.driverName;
-            this.iotInstanceId = response.iotInstanceId;
-            this.pageSize = response.pageSize;
-            this.type = response.type;
+        private Builder(QueryEdgeDriverRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.driverName = request.driverName;
+            this.iotInstanceId = request.iotInstanceId;
+            this.pageSize = request.pageSize;
+            this.type = request.type;
         } 
 
         /**

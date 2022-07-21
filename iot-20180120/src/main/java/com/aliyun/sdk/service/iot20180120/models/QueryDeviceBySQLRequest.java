@@ -62,10 +62,10 @@ public class QueryDeviceBySQLRequest extends Request {
             super();
         } 
 
-        private Builder(QueryDeviceBySQLRequest response) {
-            super(response);
-            this.iotInstanceId = response.iotInstanceId;
-            this.SQL = response.SQL;
+        private Builder(QueryDeviceBySQLRequest request) {
+            super(request);
+            this.iotInstanceId = request.iotInstanceId;
+            this.SQL = request.SQL;
         } 
 
         /**

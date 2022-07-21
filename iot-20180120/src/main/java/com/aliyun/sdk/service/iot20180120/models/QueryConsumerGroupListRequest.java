@@ -102,13 +102,13 @@ public class QueryConsumerGroupListRequest extends Request {
             super();
         } 
 
-        private Builder(QueryConsumerGroupListRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.fuzzy = response.fuzzy;
-            this.groupName = response.groupName;
-            this.iotInstanceId = response.iotInstanceId;
-            this.pageSize = response.pageSize;
+        private Builder(QueryConsumerGroupListRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.fuzzy = request.fuzzy;
+            this.groupName = request.groupName;
+            this.iotInstanceId = request.iotInstanceId;
+            this.pageSize = request.pageSize;
         } 
 
         /**

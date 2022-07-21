@@ -76,11 +76,11 @@ public class DeleteConsumerGroupSubscribeRelationRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteConsumerGroupSubscribeRelationRequest response) {
-            super(response);
-            this.consumerGroupId = response.consumerGroupId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.productKey = response.productKey;
+        private Builder(DeleteConsumerGroupSubscribeRelationRequest request) {
+            super(request);
+            this.consumerGroupId = request.consumerGroupId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.productKey = request.productKey;
         } 
 
         /**

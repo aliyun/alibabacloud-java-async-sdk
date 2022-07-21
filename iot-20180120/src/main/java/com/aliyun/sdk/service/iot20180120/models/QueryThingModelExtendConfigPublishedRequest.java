@@ -88,12 +88,12 @@ public class QueryThingModelExtendConfigPublishedRequest extends Request {
             super();
         } 
 
-        private Builder(QueryThingModelExtendConfigPublishedRequest response) {
-            super(response);
-            this.functionBlockId = response.functionBlockId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.modelVersion = response.modelVersion;
-            this.productKey = response.productKey;
+        private Builder(QueryThingModelExtendConfigPublishedRequest request) {
+            super(request);
+            this.functionBlockId = request.functionBlockId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.modelVersion = request.modelVersion;
+            this.productKey = request.productKey;
         } 
 
         /**

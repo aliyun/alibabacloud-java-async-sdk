@@ -62,10 +62,10 @@ public class QueryProductTopicRequest extends Request {
             super();
         } 
 
-        private Builder(QueryProductTopicRequest response) {
-            super(response);
-            this.iotInstanceId = response.iotInstanceId;
-            this.productKey = response.productKey;
+        private Builder(QueryProductTopicRequest request) {
+            super(request);
+            this.iotInstanceId = request.iotInstanceId;
+            this.productKey = request.productKey;
         } 
 
         /**

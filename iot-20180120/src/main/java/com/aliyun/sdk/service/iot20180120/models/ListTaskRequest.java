@@ -14,7 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListTaskRequest extends Request {
     @Query
     @NameInMap("Device")
-    private String device;
+    private java.util.Map < String, ? > device;
 
     @Query
     @NameInMap("IotInstanceId")
@@ -26,7 +26,7 @@ public class ListTaskRequest extends Request {
 
     @Query
     @NameInMap("Limit")
-    @Validation(required = true)
+    @Validation(required = true, maximum = 50, minimum = 1)
     private Integer limit;
 
     @Query
@@ -63,7 +63,7 @@ public class ListTaskRequest extends Request {
     /**
      * @return device
      */
-    public String getDevice() {
+    public java.util.Map < String, ? > getDevice() {
         return this.device;
     }
 
@@ -103,7 +103,7 @@ public class ListTaskRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListTaskRequest, Builder> {
-        private String device; 
+        private java.util.Map < String, ? > device; 
         private String iotInstanceId; 
         private String jobId; 
         private Integer limit; 
@@ -114,21 +114,22 @@ public class ListTaskRequest extends Request {
             super();
         } 
 
-        private Builder(ListTaskRequest response) {
-            super(response);
-            this.device = response.device;
-            this.iotInstanceId = response.iotInstanceId;
-            this.jobId = response.jobId;
-            this.limit = response.limit;
-            this.nextToken = response.nextToken;
-            this.status = response.status;
+        private Builder(ListTaskRequest request) {
+            super(request);
+            this.device = request.device;
+            this.iotInstanceId = request.iotInstanceId;
+            this.jobId = request.jobId;
+            this.limit = request.limit;
+            this.nextToken = request.nextToken;
+            this.status = request.status;
         } 
 
         /**
          * Device.
          */
-        public Builder device(String device) {
-            this.putQueryParameter("Device", device);
+        public Builder device(java.util.Map < String, ? > device) {
+            String deviceShrink = shrink(device, "Device", "json");
+            this.putQueryParameter("Device", deviceShrink);
             this.device = device;
             return this;
         }

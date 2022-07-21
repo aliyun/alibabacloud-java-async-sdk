@@ -90,12 +90,12 @@ public class UpdateProductFilterConfigRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateProductFilterConfigRequest response) {
-            super(response);
-            this.iotInstanceId = response.iotInstanceId;
-            this.productKey = response.productKey;
-            this.propertyTimestampFilter = response.propertyTimestampFilter;
-            this.propertyValueFilter = response.propertyValueFilter;
+        private Builder(UpdateProductFilterConfigRequest request) {
+            super(request);
+            this.iotInstanceId = request.iotInstanceId;
+            this.productKey = request.productKey;
+            this.propertyTimestampFilter = request.propertyTimestampFilter;
+            this.propertyValueFilter = request.propertyValueFilter;
         } 
 
         /**

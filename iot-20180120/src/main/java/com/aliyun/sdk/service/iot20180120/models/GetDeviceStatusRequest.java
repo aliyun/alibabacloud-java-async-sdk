@@ -87,12 +87,12 @@ public class GetDeviceStatusRequest extends Request {
             super();
         } 
 
-        private Builder(GetDeviceStatusRequest response) {
-            super(response);
-            this.deviceName = response.deviceName;
-            this.iotId = response.iotId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.productKey = response.productKey;
+        private Builder(GetDeviceStatusRequest request) {
+            super(request);
+            this.deviceName = request.deviceName;
+            this.iotId = request.iotId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.productKey = request.productKey;
         } 
 
         /**

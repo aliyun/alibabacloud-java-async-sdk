@@ -115,14 +115,14 @@ public class ListOTAModuleVersionsByDeviceRequest extends Request {
             super();
         } 
 
-        private Builder(ListOTAModuleVersionsByDeviceRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.deviceName = response.deviceName;
-            this.iotId = response.iotId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.pageSize = response.pageSize;
-            this.productKey = response.productKey;
+        private Builder(ListOTAModuleVersionsByDeviceRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.deviceName = request.deviceName;
+            this.iotId = request.iotId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.pageSize = request.pageSize;
+            this.productKey = request.productKey;
         } 
 
         /**

@@ -103,13 +103,13 @@ public class UpdateProductTopicRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateProductTopicRequest response) {
-            super(response);
-            this.desc = response.desc;
-            this.iotInstanceId = response.iotInstanceId;
-            this.operation = response.operation;
-            this.topicId = response.topicId;
-            this.topicShortName = response.topicShortName;
+        private Builder(UpdateProductTopicRequest request) {
+            super(request);
+            this.desc = request.desc;
+            this.iotInstanceId = request.iotInstanceId;
+            this.operation = request.operation;
+            this.topicId = request.topicId;
+            this.topicShortName = request.topicShortName;
         } 
 
         /**

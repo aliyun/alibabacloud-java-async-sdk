@@ -90,12 +90,12 @@ public class SetDevicesPropertyRequest extends Request {
             super();
         } 
 
-        private Builder(SetDevicesPropertyRequest response) {
-            super(response);
-            this.deviceName = response.deviceName;
-            this.iotInstanceId = response.iotInstanceId;
-            this.items = response.items;
-            this.productKey = response.productKey;
+        private Builder(SetDevicesPropertyRequest request) {
+            super(request);
+            this.deviceName = request.deviceName;
+            this.iotInstanceId = request.iotInstanceId;
+            this.items = request.items;
+            this.productKey = request.productKey;
         } 
 
         /**

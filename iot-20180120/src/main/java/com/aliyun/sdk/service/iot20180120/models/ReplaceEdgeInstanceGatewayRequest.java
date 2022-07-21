@@ -90,12 +90,12 @@ public class ReplaceEdgeInstanceGatewayRequest extends Request {
             super();
         } 
 
-        private Builder(ReplaceEdgeInstanceGatewayRequest response) {
-            super(response);
-            this.currentGatewayId = response.currentGatewayId;
-            this.instanceId = response.instanceId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.newGatewayId = response.newGatewayId;
+        private Builder(ReplaceEdgeInstanceGatewayRequest request) {
+            super(request);
+            this.currentGatewayId = request.currentGatewayId;
+            this.instanceId = request.instanceId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.newGatewayId = request.newGatewayId;
         } 
 
         /**

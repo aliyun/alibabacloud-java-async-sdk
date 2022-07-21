@@ -90,12 +90,12 @@ public class QueryEdgeInstanceSceneRuleRequest extends Request {
             super();
         } 
 
-        private Builder(QueryEdgeInstanceSceneRuleRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.instanceId = response.instanceId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.pageSize = response.pageSize;
+        private Builder(QueryEdgeInstanceSceneRuleRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.instanceId = request.instanceId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.pageSize = request.pageSize;
         } 
 
         /**

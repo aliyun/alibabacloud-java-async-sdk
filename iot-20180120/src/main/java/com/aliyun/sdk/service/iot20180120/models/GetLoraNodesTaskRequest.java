@@ -62,10 +62,10 @@ public class GetLoraNodesTaskRequest extends Request {
             super();
         } 
 
-        private Builder(GetLoraNodesTaskRequest response) {
-            super(response);
-            this.iotInstanceId = response.iotInstanceId;
-            this.taskId = response.taskId;
+        private Builder(GetLoraNodesTaskRequest request) {
+            super(request);
+            this.iotInstanceId = request.iotInstanceId;
+            this.taskId = request.taskId;
         } 
 
         /**

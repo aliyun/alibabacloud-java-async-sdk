@@ -117,14 +117,14 @@ public class BatchPubRequest extends Request {
             super();
         } 
 
-        private Builder(BatchPubRequest response) {
-            super(response);
-            this.deviceName = response.deviceName;
-            this.iotInstanceId = response.iotInstanceId;
-            this.messageContent = response.messageContent;
-            this.productKey = response.productKey;
-            this.qos = response.qos;
-            this.topicShortName = response.topicShortName;
+        private Builder(BatchPubRequest request) {
+            super(request);
+            this.deviceName = request.deviceName;
+            this.iotInstanceId = request.iotInstanceId;
+            this.messageContent = request.messageContent;
+            this.productKey = request.productKey;
+            this.qos = request.qos;
+            this.topicShortName = request.topicShortName;
         } 
 
         /**

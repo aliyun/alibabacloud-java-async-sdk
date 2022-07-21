@@ -89,12 +89,12 @@ public class PublishStudioAppRequest extends Request {
             super();
         } 
 
-        private Builder(PublishStudioAppRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.description = response.description;
-            this.iotInstanceId = response.iotInstanceId;
-            this.projectId = response.projectId;
+        private Builder(PublishStudioAppRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.description = request.description;
+            this.iotInstanceId = request.iotInstanceId;
+            this.projectId = request.projectId;
         } 
 
         /**

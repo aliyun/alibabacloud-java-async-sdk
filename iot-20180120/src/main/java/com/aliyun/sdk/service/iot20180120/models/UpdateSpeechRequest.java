@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateSpeechRequest extends Request {
     @Body
+    @NameInMap("EnableSoundCode")
+    private Boolean enableSoundCode;
+
+    @Body
     @NameInMap("IotInstanceId")
     private String iotInstanceId;
 
@@ -22,12 +26,17 @@ public class UpdateSpeechRequest extends Request {
     private String projectCode;
 
     @Body
+    @NameInMap("SoundCodeConfig")
+    private java.util.Map < String, ? > soundCodeConfig;
+
+    @Body
     @NameInMap("SpeechCode")
     @Validation(required = true)
     private String speechCode;
 
     @Body
     @NameInMap("SpeechRate")
+    @Validation(maximum = 500)
     private Integer speechRate;
 
     @Body
@@ -37,12 +46,15 @@ public class UpdateSpeechRequest extends Request {
 
     @Body
     @NameInMap("Volume")
+    @Validation(maximum = 100)
     private Integer volume;
 
     private UpdateSpeechRequest(Builder builder) {
         super(builder);
+        this.enableSoundCode = builder.enableSoundCode;
         this.iotInstanceId = builder.iotInstanceId;
         this.projectCode = builder.projectCode;
+        this.soundCodeConfig = builder.soundCodeConfig;
         this.speechCode = builder.speechCode;
         this.speechRate = builder.speechRate;
         this.voice = builder.voice;
@@ -63,6 +75,13 @@ public class UpdateSpeechRequest extends Request {
     }
 
     /**
+     * @return enableSoundCode
+     */
+    public Boolean getEnableSoundCode() {
+        return this.enableSoundCode;
+    }
+
+    /**
      * @return iotInstanceId
      */
     public String getIotInstanceId() {
@@ -74,6 +93,13 @@ public class UpdateSpeechRequest extends Request {
      */
     public String getProjectCode() {
         return this.projectCode;
+    }
+
+    /**
+     * @return soundCodeConfig
+     */
+    public java.util.Map < String, ? > getSoundCodeConfig() {
+        return this.soundCodeConfig;
     }
 
     /**
@@ -105,8 +131,10 @@ public class UpdateSpeechRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateSpeechRequest, Builder> {
+        private Boolean enableSoundCode; 
         private String iotInstanceId; 
         private String projectCode; 
+        private java.util.Map < String, ? > soundCodeConfig; 
         private String speechCode; 
         private Integer speechRate; 
         private String voice; 
@@ -116,15 +144,26 @@ public class UpdateSpeechRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateSpeechRequest response) {
-            super(response);
-            this.iotInstanceId = response.iotInstanceId;
-            this.projectCode = response.projectCode;
-            this.speechCode = response.speechCode;
-            this.speechRate = response.speechRate;
-            this.voice = response.voice;
-            this.volume = response.volume;
+        private Builder(UpdateSpeechRequest request) {
+            super(request);
+            this.enableSoundCode = request.enableSoundCode;
+            this.iotInstanceId = request.iotInstanceId;
+            this.projectCode = request.projectCode;
+            this.soundCodeConfig = request.soundCodeConfig;
+            this.speechCode = request.speechCode;
+            this.speechRate = request.speechRate;
+            this.voice = request.voice;
+            this.volume = request.volume;
         } 
+
+        /**
+         * EnableSoundCode.
+         */
+        public Builder enableSoundCode(Boolean enableSoundCode) {
+            this.putBodyParameter("EnableSoundCode", enableSoundCode);
+            this.enableSoundCode = enableSoundCode;
+            return this;
+        }
 
         /**
          * IotInstanceId.
@@ -141,6 +180,16 @@ public class UpdateSpeechRequest extends Request {
         public Builder projectCode(String projectCode) {
             this.putBodyParameter("ProjectCode", projectCode);
             this.projectCode = projectCode;
+            return this;
+        }
+
+        /**
+         * SoundCodeConfig.
+         */
+        public Builder soundCodeConfig(java.util.Map < String, ? > soundCodeConfig) {
+            String soundCodeConfigShrink = shrink(soundCodeConfig, "SoundCodeConfig", "json");
+            this.putBodyParameter("SoundCodeConfig", soundCodeConfigShrink);
+            this.soundCodeConfig = soundCodeConfig;
             return this;
         }
 

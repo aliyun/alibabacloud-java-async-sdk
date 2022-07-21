@@ -76,11 +76,11 @@ public class BatchUnbindDeviceFromEdgeInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(BatchUnbindDeviceFromEdgeInstanceRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.iotIds = response.iotIds;
-            this.iotInstanceId = response.iotInstanceId;
+        private Builder(BatchUnbindDeviceFromEdgeInstanceRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.iotIds = request.iotIds;
+            this.iotInstanceId = request.iotInstanceId;
         } 
 
         /**

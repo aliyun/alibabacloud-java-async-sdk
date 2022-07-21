@@ -76,11 +76,11 @@ public class BatchRegisterDeviceWithApplyIdRequest extends Request {
             super();
         } 
 
-        private Builder(BatchRegisterDeviceWithApplyIdRequest response) {
-            super(response);
-            this.applyId = response.applyId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.productKey = response.productKey;
+        private Builder(BatchRegisterDeviceWithApplyIdRequest request) {
+            super(request);
+            this.applyId = request.applyId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.productKey = request.productKey;
         } 
 
         /**

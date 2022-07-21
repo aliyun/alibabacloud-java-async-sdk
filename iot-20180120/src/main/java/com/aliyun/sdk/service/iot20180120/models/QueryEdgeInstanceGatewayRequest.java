@@ -62,10 +62,10 @@ public class QueryEdgeInstanceGatewayRequest extends Request {
             super();
         } 
 
-        private Builder(QueryEdgeInstanceGatewayRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.iotInstanceId = response.iotInstanceId;
+        private Builder(QueryEdgeInstanceGatewayRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.iotInstanceId = request.iotInstanceId;
         } 
 
         /**

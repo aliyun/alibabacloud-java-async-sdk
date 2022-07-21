@@ -89,12 +89,12 @@ public class UpdateProductRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateProductRequest response) {
-            super(response);
-            this.description = response.description;
-            this.iotInstanceId = response.iotInstanceId;
-            this.productKey = response.productKey;
-            this.productName = response.productName;
+        private Builder(UpdateProductRequest request) {
+            super(request);
+            this.description = request.description;
+            this.iotInstanceId = request.iotInstanceId;
+            this.productKey = request.productKey;
+            this.productName = request.productName;
         } 
 
         /**

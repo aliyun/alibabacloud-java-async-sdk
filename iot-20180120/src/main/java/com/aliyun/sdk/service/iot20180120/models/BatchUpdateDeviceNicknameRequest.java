@@ -62,10 +62,10 @@ public class BatchUpdateDeviceNicknameRequest extends Request {
             super();
         } 
 
-        private Builder(BatchUpdateDeviceNicknameRequest response) {
-            super(response);
-            this.deviceNicknameInfo = response.deviceNicknameInfo;
-            this.iotInstanceId = response.iotInstanceId;
+        private Builder(BatchUpdateDeviceNicknameRequest request) {
+            super(request);
+            this.deviceNicknameInfo = request.deviceNicknameInfo;
+            this.iotInstanceId = request.iotInstanceId;
         } 
 
         /**

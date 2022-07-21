@@ -143,16 +143,16 @@ public class CreateDataAPIServiceRequest extends Request {
             super();
         } 
 
-        private Builder(CreateDataAPIServiceRequest response) {
-            super(response);
-            this.apiPath = response.apiPath;
-            this.desc = response.desc;
-            this.displayName = response.displayName;
-            this.iotInstanceId = response.iotInstanceId;
-            this.originSql = response.originSql;
-            this.requestParam = response.requestParam;
-            this.responseParam = response.responseParam;
-            this.templateSql = response.templateSql;
+        private Builder(CreateDataAPIServiceRequest request) {
+            super(request);
+            this.apiPath = request.apiPath;
+            this.desc = request.desc;
+            this.displayName = request.displayName;
+            this.iotInstanceId = request.iotInstanceId;
+            this.originSql = request.originSql;
+            this.requestParam = request.requestParam;
+            this.responseParam = request.responseParam;
+            this.templateSql = request.templateSql;
         } 
 
         /**

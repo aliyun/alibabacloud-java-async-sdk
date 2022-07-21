@@ -103,13 +103,13 @@ public class CreateProductDistributeJobRequest extends Request {
             super();
         } 
 
-        private Builder(CreateProductDistributeJobRequest response) {
-            super(response);
-            this.productKey = response.productKey;
-            this.sourceInstanceId = response.sourceInstanceId;
-            this.targetAliyunId = response.targetAliyunId;
-            this.targetInstanceId = response.targetInstanceId;
-            this.targetUid = response.targetUid;
+        private Builder(CreateProductDistributeJobRequest request) {
+            super(request);
+            this.productKey = request.productKey;
+            this.sourceInstanceId = request.sourceInstanceId;
+            this.targetAliyunId = request.targetAliyunId;
+            this.targetInstanceId = request.targetInstanceId;
+            this.targetUid = request.targetUid;
         } 
 
         /**

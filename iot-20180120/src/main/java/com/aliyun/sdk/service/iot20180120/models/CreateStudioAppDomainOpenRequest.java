@@ -104,13 +104,13 @@ public class CreateStudioAppDomainOpenRequest extends Request {
             super();
         } 
 
-        private Builder(CreateStudioAppDomainOpenRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.host = response.host;
-            this.iotInstanceId = response.iotInstanceId;
-            this.projectId = response.projectId;
-            this.protocol = response.protocol;
+        private Builder(CreateStudioAppDomainOpenRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.host = request.host;
+            this.iotInstanceId = request.iotInstanceId;
+            this.projectId = request.projectId;
+            this.protocol = request.protocol;
         } 
 
         /**

@@ -89,12 +89,12 @@ public class ListJobRequest extends Request {
             super();
         } 
 
-        private Builder(ListJobRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.iotInstanceId = response.iotInstanceId;
-            this.pageSize = response.pageSize;
-            this.status = response.status;
+        private Builder(ListJobRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.iotInstanceId = request.iotInstanceId;
+            this.pageSize = request.pageSize;
+            this.status = request.status;
         } 
 
         /**

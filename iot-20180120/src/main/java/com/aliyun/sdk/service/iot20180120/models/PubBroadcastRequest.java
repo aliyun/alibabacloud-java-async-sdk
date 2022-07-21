@@ -89,12 +89,12 @@ public class PubBroadcastRequest extends Request {
             super();
         } 
 
-        private Builder(PubBroadcastRequest response) {
-            super(response);
-            this.iotInstanceId = response.iotInstanceId;
-            this.messageContent = response.messageContent;
-            this.productKey = response.productKey;
-            this.topicFullName = response.topicFullName;
+        private Builder(PubBroadcastRequest request) {
+            super(request);
+            this.iotInstanceId = request.iotInstanceId;
+            this.messageContent = request.messageContent;
+            this.productKey = request.productKey;
+            this.topicFullName = request.topicFullName;
         } 
 
         /**

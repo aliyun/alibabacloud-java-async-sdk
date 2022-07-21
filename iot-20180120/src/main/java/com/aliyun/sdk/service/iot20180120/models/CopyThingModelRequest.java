@@ -102,13 +102,13 @@ public class CopyThingModelRequest extends Request {
             super();
         } 
 
-        private Builder(CopyThingModelRequest response) {
-            super(response);
-            this.iotInstanceId = response.iotInstanceId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.sourceModelVersion = response.sourceModelVersion;
-            this.sourceProductKey = response.sourceProductKey;
-            this.targetProductKey = response.targetProductKey;
+        private Builder(CopyThingModelRequest request) {
+            super(request);
+            this.iotInstanceId = request.iotInstanceId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.sourceModelVersion = request.sourceModelVersion;
+            this.sourceProductKey = request.sourceProductKey;
+            this.targetProductKey = request.targetProductKey;
         } 
 
         /**

@@ -76,11 +76,11 @@ public class ClearEdgeInstanceDriverConfigsRequest extends Request {
             super();
         } 
 
-        private Builder(ClearEdgeInstanceDriverConfigsRequest response) {
-            super(response);
-            this.driverId = response.driverId;
-            this.instanceId = response.instanceId;
-            this.iotInstanceId = response.iotInstanceId;
+        private Builder(ClearEdgeInstanceDriverConfigsRequest request) {
+            super(request);
+            this.driverId = request.driverId;
+            this.instanceId = request.instanceId;
+            this.iotInstanceId = request.iotInstanceId;
         } 
 
         /**

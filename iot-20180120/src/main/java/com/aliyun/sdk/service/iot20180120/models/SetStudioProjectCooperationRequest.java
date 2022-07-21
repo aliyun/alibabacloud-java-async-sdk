@@ -62,10 +62,10 @@ public class SetStudioProjectCooperationRequest extends Request {
             super();
         } 
 
-        private Builder(SetStudioProjectCooperationRequest response) {
-            super(response);
-            this.iotInstanceId = response.iotInstanceId;
-            this.status = response.status;
+        private Builder(SetStudioProjectCooperationRequest request) {
+            super(request);
+            this.iotInstanceId = request.iotInstanceId;
+            this.status = request.status;
         } 
 
         /**

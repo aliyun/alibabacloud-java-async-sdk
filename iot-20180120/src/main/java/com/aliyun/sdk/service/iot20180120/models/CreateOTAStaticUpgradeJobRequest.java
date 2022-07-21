@@ -17,6 +17,10 @@ public class CreateOTAStaticUpgradeJobRequest extends Request {
     private String dnListFileUrl;
 
     @Query
+    @NameInMap("DownloadProtocol")
+    private String downloadProtocol;
+
+    @Query
     @NameInMap("FirmwareId")
     @Validation(required = true)
     private String firmwareId;
@@ -26,12 +30,24 @@ public class CreateOTAStaticUpgradeJobRequest extends Request {
     private String grayPercent;
 
     @Query
+    @NameInMap("GroupId")
+    private String groupId;
+
+    @Query
+    @NameInMap("GroupType")
+    private String groupType;
+
+    @Query
     @NameInMap("IotInstanceId")
     private String iotInstanceId;
 
     @Query
     @NameInMap("MaximumPerMinute")
     private Integer maximumPerMinute;
+
+    @Query
+    @NameInMap("MultiModuleMode")
+    private Boolean multiModuleMode;
 
     @Query
     @NameInMap("NeedConfirm")
@@ -90,10 +106,14 @@ public class CreateOTAStaticUpgradeJobRequest extends Request {
     private CreateOTAStaticUpgradeJobRequest(Builder builder) {
         super(builder);
         this.dnListFileUrl = builder.dnListFileUrl;
+        this.downloadProtocol = builder.downloadProtocol;
         this.firmwareId = builder.firmwareId;
         this.grayPercent = builder.grayPercent;
+        this.groupId = builder.groupId;
+        this.groupType = builder.groupType;
         this.iotInstanceId = builder.iotInstanceId;
         this.maximumPerMinute = builder.maximumPerMinute;
+        this.multiModuleMode = builder.multiModuleMode;
         this.needConfirm = builder.needConfirm;
         this.needPush = builder.needPush;
         this.overwriteMode = builder.overwriteMode;
@@ -130,6 +150,13 @@ public class CreateOTAStaticUpgradeJobRequest extends Request {
     }
 
     /**
+     * @return downloadProtocol
+     */
+    public String getDownloadProtocol() {
+        return this.downloadProtocol;
+    }
+
+    /**
      * @return firmwareId
      */
     public String getFirmwareId() {
@@ -144,6 +171,20 @@ public class CreateOTAStaticUpgradeJobRequest extends Request {
     }
 
     /**
+     * @return groupId
+     */
+    public String getGroupId() {
+        return this.groupId;
+    }
+
+    /**
+     * @return groupType
+     */
+    public String getGroupType() {
+        return this.groupType;
+    }
+
+    /**
      * @return iotInstanceId
      */
     public String getIotInstanceId() {
@@ -155,6 +196,13 @@ public class CreateOTAStaticUpgradeJobRequest extends Request {
      */
     public Integer getMaximumPerMinute() {
         return this.maximumPerMinute;
+    }
+
+    /**
+     * @return multiModuleMode
+     */
+    public Boolean getMultiModuleMode() {
+        return this.multiModuleMode;
     }
 
     /**
@@ -250,10 +298,14 @@ public class CreateOTAStaticUpgradeJobRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateOTAStaticUpgradeJobRequest, Builder> {
         private String dnListFileUrl; 
+        private String downloadProtocol; 
         private String firmwareId; 
         private String grayPercent; 
+        private String groupId; 
+        private String groupType; 
         private String iotInstanceId; 
         private Integer maximumPerMinute; 
+        private Boolean multiModuleMode; 
         private Boolean needConfirm; 
         private Boolean needPush; 
         private Integer overwriteMode; 
@@ -272,26 +324,30 @@ public class CreateOTAStaticUpgradeJobRequest extends Request {
             super();
         } 
 
-        private Builder(CreateOTAStaticUpgradeJobRequest response) {
-            super(response);
-            this.dnListFileUrl = response.dnListFileUrl;
-            this.firmwareId = response.firmwareId;
-            this.grayPercent = response.grayPercent;
-            this.iotInstanceId = response.iotInstanceId;
-            this.maximumPerMinute = response.maximumPerMinute;
-            this.needConfirm = response.needConfirm;
-            this.needPush = response.needPush;
-            this.overwriteMode = response.overwriteMode;
-            this.productKey = response.productKey;
-            this.retryCount = response.retryCount;
-            this.retryInterval = response.retryInterval;
-            this.scheduleFinishTime = response.scheduleFinishTime;
-            this.scheduleTime = response.scheduleTime;
-            this.srcVersion = response.srcVersion;
-            this.tag = response.tag;
-            this.targetDeviceName = response.targetDeviceName;
-            this.targetSelection = response.targetSelection;
-            this.timeoutInMinutes = response.timeoutInMinutes;
+        private Builder(CreateOTAStaticUpgradeJobRequest request) {
+            super(request);
+            this.dnListFileUrl = request.dnListFileUrl;
+            this.downloadProtocol = request.downloadProtocol;
+            this.firmwareId = request.firmwareId;
+            this.grayPercent = request.grayPercent;
+            this.groupId = request.groupId;
+            this.groupType = request.groupType;
+            this.iotInstanceId = request.iotInstanceId;
+            this.maximumPerMinute = request.maximumPerMinute;
+            this.multiModuleMode = request.multiModuleMode;
+            this.needConfirm = request.needConfirm;
+            this.needPush = request.needPush;
+            this.overwriteMode = request.overwriteMode;
+            this.productKey = request.productKey;
+            this.retryCount = request.retryCount;
+            this.retryInterval = request.retryInterval;
+            this.scheduleFinishTime = request.scheduleFinishTime;
+            this.scheduleTime = request.scheduleTime;
+            this.srcVersion = request.srcVersion;
+            this.tag = request.tag;
+            this.targetDeviceName = request.targetDeviceName;
+            this.targetSelection = request.targetSelection;
+            this.timeoutInMinutes = request.timeoutInMinutes;
         } 
 
         /**
@@ -300,6 +356,15 @@ public class CreateOTAStaticUpgradeJobRequest extends Request {
         public Builder dnListFileUrl(String dnListFileUrl) {
             this.putQueryParameter("DnListFileUrl", dnListFileUrl);
             this.dnListFileUrl = dnListFileUrl;
+            return this;
+        }
+
+        /**
+         * DownloadProtocol.
+         */
+        public Builder downloadProtocol(String downloadProtocol) {
+            this.putQueryParameter("DownloadProtocol", downloadProtocol);
+            this.downloadProtocol = downloadProtocol;
             return this;
         }
 
@@ -322,6 +387,24 @@ public class CreateOTAStaticUpgradeJobRequest extends Request {
         }
 
         /**
+         * GroupId.
+         */
+        public Builder groupId(String groupId) {
+            this.putQueryParameter("GroupId", groupId);
+            this.groupId = groupId;
+            return this;
+        }
+
+        /**
+         * GroupType.
+         */
+        public Builder groupType(String groupType) {
+            this.putQueryParameter("GroupType", groupType);
+            this.groupType = groupType;
+            return this;
+        }
+
+        /**
          * IotInstanceId.
          */
         public Builder iotInstanceId(String iotInstanceId) {
@@ -336,6 +419,15 @@ public class CreateOTAStaticUpgradeJobRequest extends Request {
         public Builder maximumPerMinute(Integer maximumPerMinute) {
             this.putQueryParameter("MaximumPerMinute", maximumPerMinute);
             this.maximumPerMinute = maximumPerMinute;
+            return this;
+        }
+
+        /**
+         * MultiModuleMode.
+         */
+        public Builder multiModuleMode(Boolean multiModuleMode) {
+            this.putQueryParameter("MultiModuleMode", multiModuleMode);
+            this.multiModuleMode = multiModuleMode;
             return this;
         }
 

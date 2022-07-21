@@ -117,14 +117,14 @@ public class RRpcRequest extends Request {
             super();
         } 
 
-        private Builder(RRpcRequest response) {
-            super(response);
-            this.deviceName = response.deviceName;
-            this.iotInstanceId = response.iotInstanceId;
-            this.productKey = response.productKey;
-            this.requestBase64Byte = response.requestBase64Byte;
-            this.timeout = response.timeout;
-            this.topic = response.topic;
+        private Builder(RRpcRequest request) {
+            super(request);
+            this.deviceName = request.deviceName;
+            this.iotInstanceId = request.iotInstanceId;
+            this.productKey = request.productKey;
+            this.requestBase64Byte = request.requestBase64Byte;
+            this.timeout = request.timeout;
+            this.topic = request.topic;
         } 
 
         /**

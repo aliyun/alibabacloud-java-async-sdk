@@ -62,10 +62,10 @@ public class QueryMessageInfoRequest extends Request {
             super();
         } 
 
-        private Builder(QueryMessageInfoRequest response) {
-            super(response);
-            this.iotInstanceId = response.iotInstanceId;
-            this.uniMsgId = response.uniMsgId;
+        private Builder(QueryMessageInfoRequest request) {
+            super(request);
+            this.iotInstanceId = request.iotInstanceId;
+            this.uniMsgId = request.uniMsgId;
         } 
 
         /**

@@ -76,11 +76,11 @@ public class DeleteOTAModuleRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteOTAModuleRequest response) {
-            super(response);
-            this.iotInstanceId = response.iotInstanceId;
-            this.moduleName = response.moduleName;
-            this.productKey = response.productKey;
+        private Builder(DeleteOTAModuleRequest request) {
+            super(request);
+            this.iotInstanceId = request.iotInstanceId;
+            this.moduleName = request.moduleName;
+            this.productKey = request.productKey;
         } 
 
         /**

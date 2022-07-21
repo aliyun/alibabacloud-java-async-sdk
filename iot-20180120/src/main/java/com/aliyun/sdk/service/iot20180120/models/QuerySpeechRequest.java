@@ -62,10 +62,10 @@ public class QuerySpeechRequest extends Request {
             super();
         } 
 
-        private Builder(QuerySpeechRequest response) {
-            super(response);
-            this.iotInstanceId = response.iotInstanceId;
-            this.speechCode = response.speechCode;
+        private Builder(QuerySpeechRequest request) {
+            super(request);
+            this.iotInstanceId = request.iotInstanceId;
+            this.speechCode = request.speechCode;
         } 
 
         /**

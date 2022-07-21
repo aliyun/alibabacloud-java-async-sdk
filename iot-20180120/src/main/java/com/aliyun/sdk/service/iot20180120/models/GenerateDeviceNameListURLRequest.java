@@ -48,9 +48,9 @@ public class GenerateDeviceNameListURLRequest extends Request {
             super();
         } 
 
-        private Builder(GenerateDeviceNameListURLRequest response) {
-            super(response);
-            this.iotInstanceId = response.iotInstanceId;
+        private Builder(GenerateDeviceNameListURLRequest request) {
+            super(request);
+            this.iotInstanceId = request.iotInstanceId;
         } 
 
         /**

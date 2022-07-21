@@ -76,11 +76,11 @@ public class QueryDeviceGroupByDeviceRequest extends Request {
             super();
         } 
 
-        private Builder(QueryDeviceGroupByDeviceRequest response) {
-            super(response);
-            this.deviceName = response.deviceName;
-            this.iotInstanceId = response.iotInstanceId;
-            this.productKey = response.productKey;
+        private Builder(QueryDeviceGroupByDeviceRequest request) {
+            super(request);
+            this.deviceName = request.deviceName;
+            this.iotInstanceId = request.iotInstanceId;
+            this.productKey = request.productKey;
         } 
 
         /**

@@ -27,11 +27,11 @@ public class UpdateJobRequest extends Request {
 
     @Query
     @NameInMap("RolloutConfig")
-    private String rolloutConfig;
+    private java.util.Map < String, ? > rolloutConfig;
 
     @Query
     @NameInMap("TimeoutConfig")
-    private String timeoutConfig;
+    private java.util.Map < String, ? > timeoutConfig;
 
     private UpdateJobRequest(Builder builder) {
         super(builder);
@@ -79,14 +79,14 @@ public class UpdateJobRequest extends Request {
     /**
      * @return rolloutConfig
      */
-    public String getRolloutConfig() {
+    public java.util.Map < String, ? > getRolloutConfig() {
         return this.rolloutConfig;
     }
 
     /**
      * @return timeoutConfig
      */
-    public String getTimeoutConfig() {
+    public java.util.Map < String, ? > getTimeoutConfig() {
         return this.timeoutConfig;
     }
 
@@ -94,20 +94,20 @@ public class UpdateJobRequest extends Request {
         private String description; 
         private String iotInstanceId; 
         private String jobId; 
-        private String rolloutConfig; 
-        private String timeoutConfig; 
+        private java.util.Map < String, ? > rolloutConfig; 
+        private java.util.Map < String, ? > timeoutConfig; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateJobRequest response) {
-            super(response);
-            this.description = response.description;
-            this.iotInstanceId = response.iotInstanceId;
-            this.jobId = response.jobId;
-            this.rolloutConfig = response.rolloutConfig;
-            this.timeoutConfig = response.timeoutConfig;
+        private Builder(UpdateJobRequest request) {
+            super(request);
+            this.description = request.description;
+            this.iotInstanceId = request.iotInstanceId;
+            this.jobId = request.jobId;
+            this.rolloutConfig = request.rolloutConfig;
+            this.timeoutConfig = request.timeoutConfig;
         } 
 
         /**
@@ -140,8 +140,9 @@ public class UpdateJobRequest extends Request {
         /**
          * RolloutConfig.
          */
-        public Builder rolloutConfig(String rolloutConfig) {
-            this.putQueryParameter("RolloutConfig", rolloutConfig);
+        public Builder rolloutConfig(java.util.Map < String, ? > rolloutConfig) {
+            String rolloutConfigShrink = shrink(rolloutConfig, "RolloutConfig", "json");
+            this.putQueryParameter("RolloutConfig", rolloutConfigShrink);
             this.rolloutConfig = rolloutConfig;
             return this;
         }
@@ -149,8 +150,9 @@ public class UpdateJobRequest extends Request {
         /**
          * TimeoutConfig.
          */
-        public Builder timeoutConfig(String timeoutConfig) {
-            this.putQueryParameter("TimeoutConfig", timeoutConfig);
+        public Builder timeoutConfig(java.util.Map < String, ? > timeoutConfig) {
+            String timeoutConfigShrink = shrink(timeoutConfig, "TimeoutConfig", "json");
+            this.putQueryParameter("TimeoutConfig", timeoutConfigShrink);
             this.timeoutConfig = timeoutConfig;
             return this;
         }

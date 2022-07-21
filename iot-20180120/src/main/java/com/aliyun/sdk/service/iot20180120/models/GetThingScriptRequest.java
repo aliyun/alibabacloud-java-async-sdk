@@ -62,10 +62,10 @@ public class GetThingScriptRequest extends Request {
             super();
         } 
 
-        private Builder(GetThingScriptRequest response) {
-            super(response);
-            this.iotInstanceId = response.iotInstanceId;
-            this.productKey = response.productKey;
+        private Builder(GetThingScriptRequest request) {
+            super(request);
+            this.iotInstanceId = request.iotInstanceId;
+            this.productKey = request.productKey;
         } 
 
         /**

@@ -127,15 +127,15 @@ public class CancelOTATaskByJobRequest extends Request {
             super();
         } 
 
-        private Builder(CancelOTATaskByJobRequest response) {
-            super(response);
-            this.cancelInProgressTask = response.cancelInProgressTask;
-            this.cancelNotifiedTask = response.cancelNotifiedTask;
-            this.cancelQueuedTask = response.cancelQueuedTask;
-            this.cancelScheduledTask = response.cancelScheduledTask;
-            this.cancelUnconfirmedTask = response.cancelUnconfirmedTask;
-            this.iotInstanceId = response.iotInstanceId;
-            this.jobId = response.jobId;
+        private Builder(CancelOTATaskByJobRequest request) {
+            super(request);
+            this.cancelInProgressTask = request.cancelInProgressTask;
+            this.cancelNotifiedTask = request.cancelNotifiedTask;
+            this.cancelQueuedTask = request.cancelQueuedTask;
+            this.cancelScheduledTask = request.cancelScheduledTask;
+            this.cancelUnconfirmedTask = request.cancelUnconfirmedTask;
+            this.iotInstanceId = request.iotInstanceId;
+            this.jobId = request.jobId;
         } 
 
         /**

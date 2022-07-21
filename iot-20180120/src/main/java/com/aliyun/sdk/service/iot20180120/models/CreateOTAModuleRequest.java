@@ -102,13 +102,13 @@ public class CreateOTAModuleRequest extends Request {
             super();
         } 
 
-        private Builder(CreateOTAModuleRequest response) {
-            super(response);
-            this.aliasName = response.aliasName;
-            this.desc = response.desc;
-            this.iotInstanceId = response.iotInstanceId;
-            this.moduleName = response.moduleName;
-            this.productKey = response.productKey;
+        private Builder(CreateOTAModuleRequest request) {
+            super(request);
+            this.aliasName = request.aliasName;
+            this.desc = request.desc;
+            this.iotInstanceId = request.iotInstanceId;
+            this.moduleName = request.moduleName;
+            this.productKey = request.productKey;
         } 
 
         /**

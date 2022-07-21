@@ -88,12 +88,12 @@ public class QueryDeviceListByDeviceGroupRequest extends Request {
             super();
         } 
 
-        private Builder(QueryDeviceListByDeviceGroupRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.groupId = response.groupId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.pageSize = response.pageSize;
+        private Builder(QueryDeviceListByDeviceGroupRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.groupId = request.groupId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.pageSize = request.pageSize;
         } 
 
         /**

@@ -76,11 +76,11 @@ public class DeleteTopicRouteTableRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteTopicRouteTableRequest response) {
-            super(response);
-            this.dstTopic = response.dstTopic;
-            this.iotInstanceId = response.iotInstanceId;
-            this.srcTopic = response.srcTopic;
+        private Builder(DeleteTopicRouteTableRequest request) {
+            super(request);
+            this.dstTopic = request.dstTopic;
+            this.iotInstanceId = request.iotInstanceId;
+            this.srcTopic = request.srcTopic;
         } 
 
         /**

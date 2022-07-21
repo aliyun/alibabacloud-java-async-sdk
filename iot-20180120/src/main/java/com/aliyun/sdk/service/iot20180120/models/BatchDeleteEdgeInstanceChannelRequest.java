@@ -90,12 +90,12 @@ public class BatchDeleteEdgeInstanceChannelRequest extends Request {
             super();
         } 
 
-        private Builder(BatchDeleteEdgeInstanceChannelRequest response) {
-            super(response);
-            this.channelIds = response.channelIds;
-            this.driverId = response.driverId;
-            this.instanceId = response.instanceId;
-            this.iotInstanceId = response.iotInstanceId;
+        private Builder(BatchDeleteEdgeInstanceChannelRequest request) {
+            super(request);
+            this.channelIds = request.channelIds;
+            this.driverId = request.driverId;
+            this.instanceId = request.instanceId;
+            this.iotInstanceId = request.iotInstanceId;
         } 
 
         /**

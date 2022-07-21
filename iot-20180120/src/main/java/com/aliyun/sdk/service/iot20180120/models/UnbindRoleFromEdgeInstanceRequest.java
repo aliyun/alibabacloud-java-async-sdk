@@ -62,10 +62,10 @@ public class UnbindRoleFromEdgeInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(UnbindRoleFromEdgeInstanceRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.iotInstanceId = response.iotInstanceId;
+        private Builder(UnbindRoleFromEdgeInstanceRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.iotInstanceId = request.iotInstanceId;
         } 
 
         /**

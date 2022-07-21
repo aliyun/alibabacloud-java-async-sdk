@@ -274,6 +274,9 @@ public class QuerySpeechListResponseBody extends TeaModel {
 
     }
     public static class ListItems extends TeaModel {
+        @NameInMap("AudioFormat")
+        private String audioFormat;
+
         @NameInMap("BizCode")
         private String bizCode;
 
@@ -293,6 +296,7 @@ public class QuerySpeechListResponseBody extends TeaModel {
         private String voice;
 
         private ListItems(Builder builder) {
+            this.audioFormat = builder.audioFormat;
             this.bizCode = builder.bizCode;
             this.speechCode = builder.speechCode;
             this.speechList = builder.speechList;
@@ -307,6 +311,13 @@ public class QuerySpeechListResponseBody extends TeaModel {
 
         public static ListItems create() {
             return builder().build();
+        }
+
+        /**
+         * @return audioFormat
+         */
+        public String getAudioFormat() {
+            return this.audioFormat;
         }
 
         /**
@@ -352,12 +363,21 @@ public class QuerySpeechListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String audioFormat; 
             private String bizCode; 
             private String speechCode; 
             private SpeechList speechList; 
             private String speechType; 
             private String text; 
             private String voice; 
+
+            /**
+             * AudioFormat.
+             */
+            public Builder audioFormat(String audioFormat) {
+                this.audioFormat = audioFormat;
+                return this;
+            }
 
             /**
              * BizCode.

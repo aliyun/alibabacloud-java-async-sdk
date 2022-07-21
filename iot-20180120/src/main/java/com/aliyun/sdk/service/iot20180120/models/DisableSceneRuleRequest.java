@@ -62,10 +62,10 @@ public class DisableSceneRuleRequest extends Request {
             super();
         } 
 
-        private Builder(DisableSceneRuleRequest response) {
-            super(response);
-            this.iotInstanceId = response.iotInstanceId;
-            this.ruleId = response.ruleId;
+        private Builder(DisableSceneRuleRequest request) {
+            super(request);
+            this.iotInstanceId = request.iotInstanceId;
+            this.ruleId = request.ruleId;
         } 
 
         /**

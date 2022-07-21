@@ -26,7 +26,6 @@ public class QueryThingModelRequest extends Request {
 
     @Query
     @NameInMap("ProductKey")
-    @Validation(required = true)
     private String productKey;
 
     @Query
@@ -101,13 +100,13 @@ public class QueryThingModelRequest extends Request {
             super();
         } 
 
-        private Builder(QueryThingModelRequest response) {
-            super(response);
-            this.functionBlockId = response.functionBlockId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.modelVersion = response.modelVersion;
-            this.productKey = response.productKey;
-            this.resourceGroupId = response.resourceGroupId;
+        private Builder(QueryThingModelRequest request) {
+            super(request);
+            this.functionBlockId = request.functionBlockId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.modelVersion = request.modelVersion;
+            this.productKey = request.productKey;
+            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**

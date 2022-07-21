@@ -101,13 +101,13 @@ public class PublishThingModelRequest extends Request {
             super();
         } 
 
-        private Builder(PublishThingModelRequest response) {
-            super(response);
-            this.description = response.description;
-            this.iotInstanceId = response.iotInstanceId;
-            this.modelVersion = response.modelVersion;
-            this.productKey = response.productKey;
-            this.resourceGroupId = response.resourceGroupId;
+        private Builder(PublishThingModelRequest request) {
+            super(request);
+            this.description = request.description;
+            this.iotInstanceId = request.iotInstanceId;
+            this.modelVersion = request.modelVersion;
+            this.productKey = request.productKey;
+            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**

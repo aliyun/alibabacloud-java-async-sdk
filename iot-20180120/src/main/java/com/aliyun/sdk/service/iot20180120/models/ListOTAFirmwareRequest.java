@@ -102,13 +102,13 @@ public class ListOTAFirmwareRequest extends Request {
             super();
         } 
 
-        private Builder(ListOTAFirmwareRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.destVersion = response.destVersion;
-            this.iotInstanceId = response.iotInstanceId;
-            this.pageSize = response.pageSize;
-            this.productKey = response.productKey;
+        private Builder(ListOTAFirmwareRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.destVersion = request.destVersion;
+            this.iotInstanceId = request.iotInstanceId;
+            this.pageSize = request.pageSize;
+            this.productKey = request.productKey;
         } 
 
         /**

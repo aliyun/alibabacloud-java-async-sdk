@@ -62,10 +62,10 @@ public class RerunJobRequest extends Request {
             super();
         } 
 
-        private Builder(RerunJobRequest response) {
-            super(response);
-            this.iotInstanceId = response.iotInstanceId;
-            this.jobId = response.jobId;
+        private Builder(RerunJobRequest request) {
+            super(request);
+            this.iotInstanceId = request.iotInstanceId;
+            this.jobId = request.jobId;
         } 
 
         /**

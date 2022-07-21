@@ -115,14 +115,14 @@ public class InvokeThingServiceRequest extends Request {
             super();
         } 
 
-        private Builder(InvokeThingServiceRequest response) {
-            super(response);
-            this.args = response.args;
-            this.deviceName = response.deviceName;
-            this.identifier = response.identifier;
-            this.iotId = response.iotId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.productKey = response.productKey;
+        private Builder(InvokeThingServiceRequest request) {
+            super(request);
+            this.args = request.args;
+            this.deviceName = request.deviceName;
+            this.identifier = request.identifier;
+            this.iotId = request.iotId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.productKey = request.productKey;
         } 
 
         /**

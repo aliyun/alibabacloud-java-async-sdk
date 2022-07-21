@@ -90,12 +90,12 @@ public class BatchGetEdgeInstanceDeviceChannelRequest extends Request {
             super();
         } 
 
-        private Builder(BatchGetEdgeInstanceDeviceChannelRequest response) {
-            super(response);
-            this.driverId = response.driverId;
-            this.instanceId = response.instanceId;
-            this.iotIds = response.iotIds;
-            this.iotInstanceId = response.iotInstanceId;
+        private Builder(BatchGetEdgeInstanceDeviceChannelRequest request) {
+            super(request);
+            this.driverId = request.driverId;
+            this.instanceId = request.instanceId;
+            this.iotIds = request.iotIds;
+            this.iotInstanceId = request.iotInstanceId;
         } 
 
         /**

@@ -76,11 +76,11 @@ public class UnbindSceneRuleFromEdgeInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(UnbindSceneRuleFromEdgeInstanceRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.ruleId = response.ruleId;
+        private Builder(UnbindSceneRuleFromEdgeInstanceRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.ruleId = request.ruleId;
         } 
 
         /**

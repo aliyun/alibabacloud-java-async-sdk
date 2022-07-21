@@ -62,10 +62,10 @@ public class DeleteSpeechRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteSpeechRequest response) {
-            super(response);
-            this.iotInstanceId = response.iotInstanceId;
-            this.speechCodeList = response.speechCodeList;
+        private Builder(DeleteSpeechRequest request) {
+            super(request);
+            this.iotInstanceId = request.iotInstanceId;
+            this.speechCodeList = request.speechCodeList;
         } 
 
         /**

@@ -101,13 +101,13 @@ public class DeleteDevicePropRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteDevicePropRequest response) {
-            super(response);
-            this.deviceName = response.deviceName;
-            this.iotId = response.iotId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.productKey = response.productKey;
-            this.propKey = response.propKey;
+        private Builder(DeleteDevicePropRequest request) {
+            super(request);
+            this.deviceName = request.deviceName;
+            this.iotId = request.iotId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.productKey = request.productKey;
+            this.propKey = request.propKey;
         } 
 
         /**

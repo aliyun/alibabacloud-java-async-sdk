@@ -17,10 +17,14 @@ public class PubRequest extends Request {
     private String correlationData;
 
     @Query
+    @NameInMap("DeviceName")
+    private String deviceName;
+
+    @Query
     @NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
+    @Body
     @NameInMap("MessageContent")
     @Validation(required = true)
     private String messageContent;
@@ -50,6 +54,7 @@ public class PubRequest extends Request {
     private PubRequest(Builder builder) {
         super(builder);
         this.correlationData = builder.correlationData;
+        this.deviceName = builder.deviceName;
         this.iotInstanceId = builder.iotInstanceId;
         this.messageContent = builder.messageContent;
         this.productKey = builder.productKey;
@@ -77,6 +82,13 @@ public class PubRequest extends Request {
      */
     public String getCorrelationData() {
         return this.correlationData;
+    }
+
+    /**
+     * @return deviceName
+     */
+    public String getDeviceName() {
+        return this.deviceName;
     }
 
     /**
@@ -130,6 +142,7 @@ public class PubRequest extends Request {
 
     public static final class Builder extends Request.Builder<PubRequest, Builder> {
         private String correlationData; 
+        private String deviceName; 
         private String iotInstanceId; 
         private String messageContent; 
         private String productKey; 
@@ -142,16 +155,17 @@ public class PubRequest extends Request {
             super();
         } 
 
-        private Builder(PubRequest response) {
-            super(response);
-            this.correlationData = response.correlationData;
-            this.iotInstanceId = response.iotInstanceId;
-            this.messageContent = response.messageContent;
-            this.productKey = response.productKey;
-            this.qos = response.qos;
-            this.responseTopic = response.responseTopic;
-            this.topicFullName = response.topicFullName;
-            this.userProp = response.userProp;
+        private Builder(PubRequest request) {
+            super(request);
+            this.correlationData = request.correlationData;
+            this.deviceName = request.deviceName;
+            this.iotInstanceId = request.iotInstanceId;
+            this.messageContent = request.messageContent;
+            this.productKey = request.productKey;
+            this.qos = request.qos;
+            this.responseTopic = request.responseTopic;
+            this.topicFullName = request.topicFullName;
+            this.userProp = request.userProp;
         } 
 
         /**
@@ -160,6 +174,15 @@ public class PubRequest extends Request {
         public Builder correlationData(String correlationData) {
             this.putQueryParameter("CorrelationData", correlationData);
             this.correlationData = correlationData;
+            return this;
+        }
+
+        /**
+         * DeviceName.
+         */
+        public Builder deviceName(String deviceName) {
+            this.putQueryParameter("DeviceName", deviceName);
+            this.deviceName = deviceName;
             return this;
         }
 
@@ -176,7 +199,7 @@ public class PubRequest extends Request {
          * MessageContent.
          */
         public Builder messageContent(String messageContent) {
-            this.putQueryParameter("MessageContent", messageContent);
+            this.putBodyParameter("MessageContent", messageContent);
             this.messageContent = messageContent;
             return this;
         }

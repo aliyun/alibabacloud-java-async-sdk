@@ -49,9 +49,9 @@ public class QueryDeviceDistributeDetailRequest extends Request {
             super();
         } 
 
-        private Builder(QueryDeviceDistributeDetailRequest response) {
-            super(response);
-            this.jobId = response.jobId;
+        private Builder(QueryDeviceDistributeDetailRequest request) {
+            super(request);
+            this.jobId = request.jobId;
         } 
 
         /**

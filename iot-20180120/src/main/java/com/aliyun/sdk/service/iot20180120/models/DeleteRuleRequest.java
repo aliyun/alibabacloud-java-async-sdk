@@ -62,10 +62,10 @@ public class DeleteRuleRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteRuleRequest response) {
-            super(response);
-            this.iotInstanceId = response.iotInstanceId;
-            this.ruleId = response.ruleId;
+        private Builder(DeleteRuleRequest request) {
+            super(request);
+            this.iotInstanceId = request.iotInstanceId;
+            this.ruleId = request.ruleId;
         } 
 
         /**

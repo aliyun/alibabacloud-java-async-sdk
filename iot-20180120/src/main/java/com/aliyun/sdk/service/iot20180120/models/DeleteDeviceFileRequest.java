@@ -101,13 +101,13 @@ public class DeleteDeviceFileRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteDeviceFileRequest response) {
-            super(response);
-            this.deviceName = response.deviceName;
-            this.fileId = response.fileId;
-            this.iotId = response.iotId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.productKey = response.productKey;
+        private Builder(DeleteDeviceFileRequest request) {
+            super(request);
+            this.deviceName = request.deviceName;
+            this.fileId = request.fileId;
+            this.iotId = request.iotId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.productKey = request.productKey;
         } 
 
         /**

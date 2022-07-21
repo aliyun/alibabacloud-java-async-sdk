@@ -127,15 +127,15 @@ public class ImportThingModelTslRequest extends Request {
             super();
         } 
 
-        private Builder(ImportThingModelTslRequest response) {
-            super(response);
-            this.functionBlockId = response.functionBlockId;
-            this.functionBlockName = response.functionBlockName;
-            this.iotInstanceId = response.iotInstanceId;
-            this.productKey = response.productKey;
-            this.resourceGroupId = response.resourceGroupId;
-            this.tslStr = response.tslStr;
-            this.tslUrl = response.tslUrl;
+        private Builder(ImportThingModelTslRequest request) {
+            super(request);
+            this.functionBlockId = request.functionBlockId;
+            this.functionBlockName = request.functionBlockName;
+            this.iotInstanceId = request.iotInstanceId;
+            this.productKey = request.productKey;
+            this.resourceGroupId = request.resourceGroupId;
+            this.tslStr = request.tslStr;
+            this.tslUrl = request.tslUrl;
         } 
 
         /**

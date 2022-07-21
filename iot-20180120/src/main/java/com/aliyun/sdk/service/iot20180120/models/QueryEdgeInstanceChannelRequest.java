@@ -117,14 +117,14 @@ public class QueryEdgeInstanceChannelRequest extends Request {
             super();
         } 
 
-        private Builder(QueryEdgeInstanceChannelRequest response) {
-            super(response);
-            this.channelName = response.channelName;
-            this.currentPage = response.currentPage;
-            this.driverId = response.driverId;
-            this.instanceId = response.instanceId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.pageSize = response.pageSize;
+        private Builder(QueryEdgeInstanceChannelRequest request) {
+            super(request);
+            this.channelName = request.channelName;
+            this.currentPage = request.currentPage;
+            this.driverId = request.driverId;
+            this.instanceId = request.instanceId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.pageSize = request.pageSize;
         } 
 
         /**

@@ -88,12 +88,12 @@ public class ListProductByTagsRequest extends Request {
             super();
         } 
 
-        private Builder(ListProductByTagsRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.iotInstanceId = response.iotInstanceId;
-            this.pageSize = response.pageSize;
-            this.productTag = response.productTag;
+        private Builder(ListProductByTagsRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.iotInstanceId = request.iotInstanceId;
+            this.pageSize = request.pageSize;
+            this.productTag = request.productTag;
         } 
 
         /**

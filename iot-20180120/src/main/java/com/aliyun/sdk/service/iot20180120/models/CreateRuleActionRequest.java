@@ -103,13 +103,13 @@ public class CreateRuleActionRequest extends Request {
             super();
         } 
 
-        private Builder(CreateRuleActionRequest response) {
-            super(response);
-            this.configuration = response.configuration;
-            this.errorActionFlag = response.errorActionFlag;
-            this.iotInstanceId = response.iotInstanceId;
-            this.ruleId = response.ruleId;
-            this.type = response.type;
+        private Builder(CreateRuleActionRequest request) {
+            super(request);
+            this.configuration = request.configuration;
+            this.errorActionFlag = request.errorActionFlag;
+            this.iotInstanceId = request.iotInstanceId;
+            this.ruleId = request.ruleId;
+            this.type = request.type;
         } 
 
         /**

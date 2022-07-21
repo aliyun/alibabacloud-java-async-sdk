@@ -35,8 +35,8 @@ public class GetSpeechVoiceRequest extends Request {
             super();
         } 
 
-        private Builder(GetSpeechVoiceRequest response) {
-            super(response);
+        private Builder(GetSpeechVoiceRequest request) {
+            super(request);
         } 
 
         @Override

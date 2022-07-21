@@ -75,11 +75,11 @@ public class InvokeDataAPIServiceRequest extends Request {
             super();
         } 
 
-        private Builder(InvokeDataAPIServiceRequest response) {
-            super(response);
-            this.apiSrn = response.apiSrn;
-            this.iotInstanceId = response.iotInstanceId;
-            this.param = response.param;
+        private Builder(InvokeDataAPIServiceRequest request) {
+            super(request);
+            this.apiSrn = request.apiSrn;
+            this.iotInstanceId = request.iotInstanceId;
+            this.param = request.param;
         } 
 
         /**

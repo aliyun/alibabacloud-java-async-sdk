@@ -26,7 +26,6 @@ public class DeleteThingModelRequest extends Request {
 
     @Query
     @NameInMap("ProductKey")
-    @Validation(required = true)
     private String productKey;
 
     @Query
@@ -127,15 +126,15 @@ public class DeleteThingModelRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteThingModelRequest response) {
-            super(response);
-            this.eventIdentifier = response.eventIdentifier;
-            this.functionBlockId = response.functionBlockId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.productKey = response.productKey;
-            this.propertyIdentifier = response.propertyIdentifier;
-            this.resourceGroupId = response.resourceGroupId;
-            this.serviceIdentifier = response.serviceIdentifier;
+        private Builder(DeleteThingModelRequest request) {
+            super(request);
+            this.eventIdentifier = request.eventIdentifier;
+            this.functionBlockId = request.functionBlockId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.productKey = request.productKey;
+            this.propertyIdentifier = request.propertyIdentifier;
+            this.resourceGroupId = request.resourceGroupId;
+            this.serviceIdentifier = request.serviceIdentifier;
         } 
 
         /**

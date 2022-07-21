@@ -87,12 +87,12 @@ public class QueryDeviceGroupByTagsRequest extends Request {
             super();
         } 
 
-        private Builder(QueryDeviceGroupByTagsRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.iotInstanceId = response.iotInstanceId;
-            this.pageSize = response.pageSize;
-            this.tag = response.tag;
+        private Builder(QueryDeviceGroupByTagsRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.iotInstanceId = request.iotInstanceId;
+            this.pageSize = request.pageSize;
+            this.tag = request.tag;
         } 
 
         /**

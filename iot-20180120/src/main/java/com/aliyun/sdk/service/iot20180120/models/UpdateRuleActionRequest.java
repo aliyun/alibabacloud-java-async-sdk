@@ -90,12 +90,12 @@ public class UpdateRuleActionRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateRuleActionRequest response) {
-            super(response);
-            this.actionId = response.actionId;
-            this.configuration = response.configuration;
-            this.iotInstanceId = response.iotInstanceId;
-            this.type = response.type;
+        private Builder(UpdateRuleActionRequest request) {
+            super(request);
+            this.actionId = request.actionId;
+            this.configuration = request.configuration;
+            this.iotInstanceId = request.iotInstanceId;
+            this.type = request.type;
         } 
 
         /**

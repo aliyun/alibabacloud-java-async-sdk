@@ -62,10 +62,10 @@ public class QueryOTAJobRequest extends Request {
             super();
         } 
 
-        private Builder(QueryOTAJobRequest response) {
-            super(response);
-            this.iotInstanceId = response.iotInstanceId;
-            this.jobId = response.jobId;
+        private Builder(QueryOTAJobRequest request) {
+            super(request);
+            this.iotInstanceId = request.iotInstanceId;
+            this.jobId = request.jobId;
         } 
 
         /**

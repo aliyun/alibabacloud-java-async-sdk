@@ -49,9 +49,9 @@ public class DeleteDeviceDistributeJobRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteDeviceDistributeJobRequest response) {
-            super(response);
-            this.jobId = response.jobId;
+        private Builder(DeleteDeviceDistributeJobRequest request) {
+            super(request);
+            this.jobId = request.jobId;
         } 
 
         /**

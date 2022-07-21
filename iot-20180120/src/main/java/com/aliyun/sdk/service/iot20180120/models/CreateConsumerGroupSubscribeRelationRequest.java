@@ -76,11 +76,11 @@ public class CreateConsumerGroupSubscribeRelationRequest extends Request {
             super();
         } 
 
-        private Builder(CreateConsumerGroupSubscribeRelationRequest response) {
-            super(response);
-            this.consumerGroupId = response.consumerGroupId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.productKey = response.productKey;
+        private Builder(CreateConsumerGroupSubscribeRelationRequest request) {
+            super(request);
+            this.consumerGroupId = request.consumerGroupId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.productKey = request.productKey;
         } 
 
         /**

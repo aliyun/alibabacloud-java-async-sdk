@@ -88,12 +88,12 @@ public class BatchCheckDeviceNamesRequest extends Request {
             super();
         } 
 
-        private Builder(BatchCheckDeviceNamesRequest response) {
-            super(response);
-            this.deviceName = response.deviceName;
-            this.deviceNameList = response.deviceNameList;
-            this.iotInstanceId = response.iotInstanceId;
-            this.productKey = response.productKey;
+        private Builder(BatchCheckDeviceNamesRequest request) {
+            super(request);
+            this.deviceName = request.deviceName;
+            this.deviceNameList = request.deviceNameList;
+            this.iotInstanceId = request.iotInstanceId;
+            this.productKey = request.productKey;
         } 
 
         /**

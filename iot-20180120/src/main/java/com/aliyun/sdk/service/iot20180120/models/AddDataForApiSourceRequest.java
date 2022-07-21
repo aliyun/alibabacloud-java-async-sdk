@@ -77,11 +77,11 @@ public class AddDataForApiSourceRequest extends Request {
             super();
         } 
 
-        private Builder(AddDataForApiSourceRequest response) {
-            super(response);
-            this.apiId = response.apiId;
-            this.content = response.content;
-            this.iotInstanceId = response.iotInstanceId;
+        private Builder(AddDataForApiSourceRequest request) {
+            super(request);
+            this.apiId = request.apiId;
+            this.content = request.content;
+            this.iotInstanceId = request.iotInstanceId;
         } 
 
         /**

@@ -18,6 +18,9 @@ public class ResetThingResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     private String errorMessage;
 
+    @NameInMap("JobId")
+    private String jobId;
+
     @NameInMap("RequestId")
     private String requestId;
 
@@ -27,6 +30,7 @@ public class ResetThingResponseBody extends TeaModel {
     private ResetThingResponseBody(Builder builder) {
         this.code = builder.code;
         this.errorMessage = builder.errorMessage;
+        this.jobId = builder.jobId;
         this.requestId = builder.requestId;
         this.success = builder.success;
     }
@@ -54,6 +58,13 @@ public class ResetThingResponseBody extends TeaModel {
     }
 
     /**
+     * @return jobId
+     */
+    public String getJobId() {
+        return this.jobId;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -70,6 +81,7 @@ public class ResetThingResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private String errorMessage; 
+        private String jobId; 
         private String requestId; 
         private Boolean success; 
 
@@ -86,6 +98,14 @@ public class ResetThingResponseBody extends TeaModel {
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
+            return this;
+        }
+
+        /**
+         * JobId.
+         */
+        public Builder jobId(String jobId) {
+            this.jobId = jobId;
             return this;
         }
 

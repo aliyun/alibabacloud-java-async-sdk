@@ -115,14 +115,14 @@ public class GetThingTopoRequest extends Request {
             super();
         } 
 
-        private Builder(GetThingTopoRequest response) {
-            super(response);
-            this.deviceName = response.deviceName;
-            this.iotId = response.iotId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.pageNo = response.pageNo;
-            this.pageSize = response.pageSize;
-            this.productKey = response.productKey;
+        private Builder(GetThingTopoRequest request) {
+            super(request);
+            this.deviceName = request.deviceName;
+            this.iotId = request.iotId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
+            this.productKey = request.productKey;
         } 
 
         /**

@@ -62,10 +62,10 @@ public class CancelReleaseProductRequest extends Request {
             super();
         } 
 
-        private Builder(CancelReleaseProductRequest response) {
-            super(response);
-            this.iotInstanceId = response.iotInstanceId;
-            this.productKey = response.productKey;
+        private Builder(CancelReleaseProductRequest request) {
+            super(request);
+            this.iotInstanceId = request.iotInstanceId;
+            this.productKey = request.productKey;
         } 
 
         /**

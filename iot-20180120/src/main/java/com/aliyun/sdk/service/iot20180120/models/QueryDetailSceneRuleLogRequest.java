@@ -132,15 +132,15 @@ public class QueryDetailSceneRuleLogRequest extends Request {
             super();
         } 
 
-        private Builder(QueryDetailSceneRuleLogRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.endTime = response.endTime;
-            this.iotInstanceId = response.iotInstanceId;
-            this.pageSize = response.pageSize;
-            this.ruleId = response.ruleId;
-            this.startTime = response.startTime;
-            this.traceId = response.traceId;
+        private Builder(QueryDetailSceneRuleLogRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.endTime = request.endTime;
+            this.iotInstanceId = request.iotInstanceId;
+            this.pageSize = request.pageSize;
+            this.ruleId = request.ruleId;
+            this.startTime = request.startTime;
+            this.traceId = request.traceId;
         } 
 
         /**

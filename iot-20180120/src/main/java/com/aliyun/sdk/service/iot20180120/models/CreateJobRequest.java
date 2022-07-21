@@ -27,7 +27,7 @@ public class CreateJobRequest extends Request {
 
     @Query
     @NameInMap("JobFile")
-    private String jobFile;
+    private java.util.Map < String, ? > jobFile;
 
     @Query
     @NameInMap("JobName")
@@ -36,7 +36,7 @@ public class CreateJobRequest extends Request {
 
     @Query
     @NameInMap("RolloutConfig")
-    private String rolloutConfig;
+    private java.util.Map < String, ? > rolloutConfig;
 
     @Query
     @NameInMap("ScheduledTime")
@@ -45,11 +45,11 @@ public class CreateJobRequest extends Request {
     @Query
     @NameInMap("TargetConfig")
     @Validation(required = true)
-    private String targetConfig;
+    private java.util.Map < String, ? > targetConfig;
 
     @Query
     @NameInMap("TimeoutConfig")
-    private String timeoutConfig;
+    private java.util.Map < String, ? > timeoutConfig;
 
     @Query
     @NameInMap("Type")
@@ -107,7 +107,7 @@ public class CreateJobRequest extends Request {
     /**
      * @return jobFile
      */
-    public String getJobFile() {
+    public java.util.Map < String, ? > getJobFile() {
         return this.jobFile;
     }
 
@@ -121,7 +121,7 @@ public class CreateJobRequest extends Request {
     /**
      * @return rolloutConfig
      */
-    public String getRolloutConfig() {
+    public java.util.Map < String, ? > getRolloutConfig() {
         return this.rolloutConfig;
     }
 
@@ -135,14 +135,14 @@ public class CreateJobRequest extends Request {
     /**
      * @return targetConfig
      */
-    public String getTargetConfig() {
+    public java.util.Map < String, ? > getTargetConfig() {
         return this.targetConfig;
     }
 
     /**
      * @return timeoutConfig
      */
-    public String getTimeoutConfig() {
+    public java.util.Map < String, ? > getTimeoutConfig() {
         return this.timeoutConfig;
     }
 
@@ -157,30 +157,30 @@ public class CreateJobRequest extends Request {
         private String description; 
         private String iotInstanceId; 
         private String jobDocument; 
-        private String jobFile; 
+        private java.util.Map < String, ? > jobFile; 
         private String jobName; 
-        private String rolloutConfig; 
+        private java.util.Map < String, ? > rolloutConfig; 
         private Long scheduledTime; 
-        private String targetConfig; 
-        private String timeoutConfig; 
+        private java.util.Map < String, ? > targetConfig; 
+        private java.util.Map < String, ? > timeoutConfig; 
         private String type; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateJobRequest response) {
-            super(response);
-            this.description = response.description;
-            this.iotInstanceId = response.iotInstanceId;
-            this.jobDocument = response.jobDocument;
-            this.jobFile = response.jobFile;
-            this.jobName = response.jobName;
-            this.rolloutConfig = response.rolloutConfig;
-            this.scheduledTime = response.scheduledTime;
-            this.targetConfig = response.targetConfig;
-            this.timeoutConfig = response.timeoutConfig;
-            this.type = response.type;
+        private Builder(CreateJobRequest request) {
+            super(request);
+            this.description = request.description;
+            this.iotInstanceId = request.iotInstanceId;
+            this.jobDocument = request.jobDocument;
+            this.jobFile = request.jobFile;
+            this.jobName = request.jobName;
+            this.rolloutConfig = request.rolloutConfig;
+            this.scheduledTime = request.scheduledTime;
+            this.targetConfig = request.targetConfig;
+            this.timeoutConfig = request.timeoutConfig;
+            this.type = request.type;
         } 
 
         /**
@@ -213,8 +213,9 @@ public class CreateJobRequest extends Request {
         /**
          * JobFile.
          */
-        public Builder jobFile(String jobFile) {
-            this.putQueryParameter("JobFile", jobFile);
+        public Builder jobFile(java.util.Map < String, ? > jobFile) {
+            String jobFileShrink = shrink(jobFile, "JobFile", "json");
+            this.putQueryParameter("JobFile", jobFileShrink);
             this.jobFile = jobFile;
             return this;
         }
@@ -231,8 +232,9 @@ public class CreateJobRequest extends Request {
         /**
          * RolloutConfig.
          */
-        public Builder rolloutConfig(String rolloutConfig) {
-            this.putQueryParameter("RolloutConfig", rolloutConfig);
+        public Builder rolloutConfig(java.util.Map < String, ? > rolloutConfig) {
+            String rolloutConfigShrink = shrink(rolloutConfig, "RolloutConfig", "json");
+            this.putQueryParameter("RolloutConfig", rolloutConfigShrink);
             this.rolloutConfig = rolloutConfig;
             return this;
         }
@@ -249,8 +251,9 @@ public class CreateJobRequest extends Request {
         /**
          * TargetConfig.
          */
-        public Builder targetConfig(String targetConfig) {
-            this.putQueryParameter("TargetConfig", targetConfig);
+        public Builder targetConfig(java.util.Map < String, ? > targetConfig) {
+            String targetConfigShrink = shrink(targetConfig, "TargetConfig", "json");
+            this.putQueryParameter("TargetConfig", targetConfigShrink);
             this.targetConfig = targetConfig;
             return this;
         }
@@ -258,8 +261,9 @@ public class CreateJobRequest extends Request {
         /**
          * TimeoutConfig.
          */
-        public Builder timeoutConfig(String timeoutConfig) {
-            this.putQueryParameter("TimeoutConfig", timeoutConfig);
+        public Builder timeoutConfig(java.util.Map < String, ? > timeoutConfig) {
+            String timeoutConfigShrink = shrink(timeoutConfig, "TimeoutConfig", "json");
+            this.putQueryParameter("TimeoutConfig", timeoutConfigShrink);
             this.timeoutConfig = timeoutConfig;
             return this;
         }

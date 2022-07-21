@@ -14,12 +14,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListDistributedProductRequest extends Request {
     @Query
     @NameInMap("CurrentPage")
-    @Validation(required = true)
+    @Validation(required = true, minimum = 1)
     private Integer currentPage;
 
     @Query
     @NameInMap("PageSize")
-    @Validation(required = true)
+    @Validation(required = true, maximum = 200, minimum = 1)
     private Integer pageSize;
 
     @Query
@@ -115,14 +115,14 @@ public class ListDistributedProductRequest extends Request {
             super();
         } 
 
-        private Builder(ListDistributedProductRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.pageSize = response.pageSize;
-            this.productKey = response.productKey;
-            this.sourceInstanceId = response.sourceInstanceId;
-            this.targetInstanceId = response.targetInstanceId;
-            this.targetUid = response.targetUid;
+        private Builder(ListDistributedProductRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.pageSize = request.pageSize;
+            this.productKey = request.productKey;
+            this.sourceInstanceId = request.sourceInstanceId;
+            this.targetInstanceId = request.targetInstanceId;
+            this.targetUid = request.targetUid;
         } 
 
         /**

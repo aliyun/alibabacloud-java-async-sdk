@@ -14,7 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListDistributedDeviceRequest extends Request {
     @Query
     @NameInMap("CurrentPage")
-    @Validation(required = true)
+    @Validation(required = true, minimum = 1)
     private Integer currentPage;
 
     @Query
@@ -23,7 +23,7 @@ public class ListDistributedDeviceRequest extends Request {
 
     @Query
     @NameInMap("PageSize")
-    @Validation(required = true)
+    @Validation(required = true, maximum = 200, minimum = 1)
     private Integer pageSize;
 
     @Query
@@ -115,14 +115,14 @@ public class ListDistributedDeviceRequest extends Request {
             super();
         } 
 
-        private Builder(ListDistributedDeviceRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.deviceName = response.deviceName;
-            this.pageSize = response.pageSize;
-            this.productKey = response.productKey;
-            this.sourceInstanceId = response.sourceInstanceId;
-            this.targetUid = response.targetUid;
+        private Builder(ListDistributedDeviceRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.deviceName = request.deviceName;
+            this.pageSize = request.pageSize;
+            this.productKey = request.productKey;
+            this.sourceInstanceId = request.sourceInstanceId;
+            this.targetUid = request.targetUid;
         } 
 
         /**

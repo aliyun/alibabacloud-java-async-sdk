@@ -278,6 +278,9 @@ public class QueryOTAJobResponseBody extends TeaModel {
         @NameInMap("DestVersion")
         private String destVersion;
 
+        @NameInMap("DownloadProtocol")
+        private String downloadProtocol;
+
         @NameInMap("DynamicMode")
         private Integer dynamicMode;
 
@@ -286,6 +289,12 @@ public class QueryOTAJobResponseBody extends TeaModel {
 
         @NameInMap("GrayPercent")
         private String grayPercent;
+
+        @NameInMap("GroupId")
+        private String groupId;
+
+        @NameInMap("GroupName")
+        private String groupName;
 
         @NameInMap("JobDesc")
         private String jobDesc;
@@ -301,6 +310,9 @@ public class QueryOTAJobResponseBody extends TeaModel {
 
         @NameInMap("MaximumPerMinute")
         private Integer maximumPerMinute;
+
+        @NameInMap("MultiModuleMode")
+        private Boolean multiModuleMode;
 
         @NameInMap("Name")
         private String name;
@@ -358,14 +370,18 @@ public class QueryOTAJobResponseBody extends TeaModel {
 
         private Data(Builder builder) {
             this.destVersion = builder.destVersion;
+            this.downloadProtocol = builder.downloadProtocol;
             this.dynamicMode = builder.dynamicMode;
             this.firmwareId = builder.firmwareId;
             this.grayPercent = builder.grayPercent;
+            this.groupId = builder.groupId;
+            this.groupName = builder.groupName;
             this.jobDesc = builder.jobDesc;
             this.jobId = builder.jobId;
             this.jobStatus = builder.jobStatus;
             this.jobType = builder.jobType;
             this.maximumPerMinute = builder.maximumPerMinute;
+            this.multiModuleMode = builder.multiModuleMode;
             this.name = builder.name;
             this.needConfirm = builder.needConfirm;
             this.needPush = builder.needPush;
@@ -402,6 +418,13 @@ public class QueryOTAJobResponseBody extends TeaModel {
         }
 
         /**
+         * @return downloadProtocol
+         */
+        public String getDownloadProtocol() {
+            return this.downloadProtocol;
+        }
+
+        /**
          * @return dynamicMode
          */
         public Integer getDynamicMode() {
@@ -420,6 +443,20 @@ public class QueryOTAJobResponseBody extends TeaModel {
          */
         public String getGrayPercent() {
             return this.grayPercent;
+        }
+
+        /**
+         * @return groupId
+         */
+        public String getGroupId() {
+            return this.groupId;
+        }
+
+        /**
+         * @return groupName
+         */
+        public String getGroupName() {
+            return this.groupName;
         }
 
         /**
@@ -455,6 +492,13 @@ public class QueryOTAJobResponseBody extends TeaModel {
          */
         public Integer getMaximumPerMinute() {
             return this.maximumPerMinute;
+        }
+
+        /**
+         * @return multiModuleMode
+         */
+        public Boolean getMultiModuleMode() {
+            return this.multiModuleMode;
         }
 
         /**
@@ -585,14 +629,18 @@ public class QueryOTAJobResponseBody extends TeaModel {
 
         public static final class Builder {
             private String destVersion; 
+            private String downloadProtocol; 
             private Integer dynamicMode; 
             private String firmwareId; 
             private String grayPercent; 
+            private String groupId; 
+            private String groupName; 
             private String jobDesc; 
             private String jobId; 
             private String jobStatus; 
             private String jobType; 
             private Integer maximumPerMinute; 
+            private Boolean multiModuleMode; 
             private String name; 
             private Boolean needConfirm; 
             private Boolean needPush; 
@@ -621,6 +669,14 @@ public class QueryOTAJobResponseBody extends TeaModel {
             }
 
             /**
+             * DownloadProtocol.
+             */
+            public Builder downloadProtocol(String downloadProtocol) {
+                this.downloadProtocol = downloadProtocol;
+                return this;
+            }
+
+            /**
              * DynamicMode.
              */
             public Builder dynamicMode(Integer dynamicMode) {
@@ -641,6 +697,22 @@ public class QueryOTAJobResponseBody extends TeaModel {
              */
             public Builder grayPercent(String grayPercent) {
                 this.grayPercent = grayPercent;
+                return this;
+            }
+
+            /**
+             * GroupId.
+             */
+            public Builder groupId(String groupId) {
+                this.groupId = groupId;
+                return this;
+            }
+
+            /**
+             * GroupName.
+             */
+            public Builder groupName(String groupName) {
+                this.groupName = groupName;
                 return this;
             }
 
@@ -681,6 +753,14 @@ public class QueryOTAJobResponseBody extends TeaModel {
              */
             public Builder maximumPerMinute(Integer maximumPerMinute) {
                 this.maximumPerMinute = maximumPerMinute;
+                return this;
+            }
+
+            /**
+             * MultiModuleMode.
+             */
+            public Builder multiModuleMode(Boolean multiModuleMode) {
+                this.multiModuleMode = multiModuleMode;
                 return this;
             }
 

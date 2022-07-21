@@ -32,10 +32,12 @@ public class ListAnalyticsDataRequest extends Request {
 
     @Query
     @NameInMap("PageNum")
+    @Validation(maximum = 1000, minimum = 1)
     private Integer pageNum;
 
     @Query
     @NameInMap("PageSize")
+    @Validation(maximum = 20000, minimum = 1)
     private Integer pageSize;
 
     private ListAnalyticsDataRequest(Builder builder) {
@@ -115,14 +117,14 @@ public class ListAnalyticsDataRequest extends Request {
             super();
         } 
 
-        private Builder(ListAnalyticsDataRequest response) {
-            super(response);
-            this.apiPath = response.apiPath;
-            this.condition = response.condition;
-            this.iotInstanceId = response.iotInstanceId;
-            this.isoId = response.isoId;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
+        private Builder(ListAnalyticsDataRequest request) {
+            super(request);
+            this.apiPath = request.apiPath;
+            this.condition = request.condition;
+            this.iotInstanceId = request.iotInstanceId;
+            this.isoId = request.isoId;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
         } 
 
         /**

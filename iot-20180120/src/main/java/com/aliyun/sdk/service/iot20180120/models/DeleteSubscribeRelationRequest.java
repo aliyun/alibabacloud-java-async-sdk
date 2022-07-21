@@ -76,11 +76,11 @@ public class DeleteSubscribeRelationRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteSubscribeRelationRequest response) {
-            super(response);
-            this.iotInstanceId = response.iotInstanceId;
-            this.productKey = response.productKey;
-            this.type = response.type;
+        private Builder(DeleteSubscribeRelationRequest request) {
+            super(request);
+            this.iotInstanceId = request.iotInstanceId;
+            this.productKey = request.productKey;
+            this.type = request.type;
         } 
 
         /**

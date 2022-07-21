@@ -115,14 +115,14 @@ public class SetDeviceDesiredPropertyRequest extends Request {
             super();
         } 
 
-        private Builder(SetDeviceDesiredPropertyRequest response) {
-            super(response);
-            this.deviceName = response.deviceName;
-            this.iotId = response.iotId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.items = response.items;
-            this.productKey = response.productKey;
-            this.versions = response.versions;
+        private Builder(SetDeviceDesiredPropertyRequest request) {
+            super(request);
+            this.deviceName = request.deviceName;
+            this.iotId = request.iotId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.items = request.items;
+            this.productKey = request.productKey;
+            this.versions = request.versions;
         } 
 
         /**

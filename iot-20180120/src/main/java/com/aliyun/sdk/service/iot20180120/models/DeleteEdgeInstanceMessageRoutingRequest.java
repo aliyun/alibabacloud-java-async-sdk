@@ -76,11 +76,11 @@ public class DeleteEdgeInstanceMessageRoutingRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteEdgeInstanceMessageRoutingRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.routeId = response.routeId;
+        private Builder(DeleteEdgeInstanceMessageRoutingRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.routeId = request.routeId;
         } 
 
         /**

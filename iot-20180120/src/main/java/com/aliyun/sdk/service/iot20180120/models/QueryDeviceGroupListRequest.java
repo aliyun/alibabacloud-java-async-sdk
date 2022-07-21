@@ -21,6 +21,10 @@ public class QueryDeviceGroupListRequest extends Request {
     private String groupName;
 
     @Query
+    @NameInMap("GroupTypes")
+    private java.util.List < String > groupTypes;
+
+    @Query
     @NameInMap("IotInstanceId")
     private String iotInstanceId;
 
@@ -36,6 +40,7 @@ public class QueryDeviceGroupListRequest extends Request {
         super(builder);
         this.currentPage = builder.currentPage;
         this.groupName = builder.groupName;
+        this.groupTypes = builder.groupTypes;
         this.iotInstanceId = builder.iotInstanceId;
         this.pageSize = builder.pageSize;
         this.superGroupId = builder.superGroupId;
@@ -69,6 +74,13 @@ public class QueryDeviceGroupListRequest extends Request {
     }
 
     /**
+     * @return groupTypes
+     */
+    public java.util.List < String > getGroupTypes() {
+        return this.groupTypes;
+    }
+
+    /**
      * @return iotInstanceId
      */
     public String getIotInstanceId() {
@@ -92,6 +104,7 @@ public class QueryDeviceGroupListRequest extends Request {
     public static final class Builder extends Request.Builder<QueryDeviceGroupListRequest, Builder> {
         private Integer currentPage; 
         private String groupName; 
+        private java.util.List < String > groupTypes; 
         private String iotInstanceId; 
         private Integer pageSize; 
         private String superGroupId; 
@@ -100,13 +113,14 @@ public class QueryDeviceGroupListRequest extends Request {
             super();
         } 
 
-        private Builder(QueryDeviceGroupListRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.groupName = response.groupName;
-            this.iotInstanceId = response.iotInstanceId;
-            this.pageSize = response.pageSize;
-            this.superGroupId = response.superGroupId;
+        private Builder(QueryDeviceGroupListRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.groupName = request.groupName;
+            this.groupTypes = request.groupTypes;
+            this.iotInstanceId = request.iotInstanceId;
+            this.pageSize = request.pageSize;
+            this.superGroupId = request.superGroupId;
         } 
 
         /**
@@ -124,6 +138,15 @@ public class QueryDeviceGroupListRequest extends Request {
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
             this.groupName = groupName;
+            return this;
+        }
+
+        /**
+         * GroupTypes.
+         */
+        public Builder groupTypes(java.util.List < String > groupTypes) {
+            this.putQueryParameter("GroupTypes", groupTypes);
+            this.groupTypes = groupTypes;
             return this;
         }
 

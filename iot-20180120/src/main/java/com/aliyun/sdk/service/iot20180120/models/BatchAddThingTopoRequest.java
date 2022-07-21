@@ -90,12 +90,12 @@ public class BatchAddThingTopoRequest extends Request {
             super();
         } 
 
-        private Builder(BatchAddThingTopoRequest response) {
-            super(response);
-            this.gwDeviceName = response.gwDeviceName;
-            this.gwProductKey = response.gwProductKey;
-            this.iotInstanceId = response.iotInstanceId;
-            this.topoAddItem = response.topoAddItem;
+        private Builder(BatchAddThingTopoRequest request) {
+            super(request);
+            this.gwDeviceName = request.gwDeviceName;
+            this.gwProductKey = request.gwProductKey;
+            this.iotInstanceId = request.iotInstanceId;
+            this.topoAddItem = request.topoAddItem;
         } 
 
         /**

@@ -90,12 +90,12 @@ public class SetupStudioAppAuthModeOpenRequest extends Request {
             super();
         } 
 
-        private Builder(SetupStudioAppAuthModeOpenRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.authMode = response.authMode;
-            this.iotInstanceId = response.iotInstanceId;
-            this.projectId = response.projectId;
+        private Builder(SetupStudioAppAuthModeOpenRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.authMode = request.authMode;
+            this.iotInstanceId = request.iotInstanceId;
+            this.projectId = request.projectId;
         } 
 
         /**

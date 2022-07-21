@@ -103,13 +103,13 @@ public class UpdateDeviceShadowRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateDeviceShadowRequest response) {
-            super(response);
-            this.deltaUpdate = response.deltaUpdate;
-            this.deviceName = response.deviceName;
-            this.iotInstanceId = response.iotInstanceId;
-            this.productKey = response.productKey;
-            this.shadowMessage = response.shadowMessage;
+        private Builder(UpdateDeviceShadowRequest request) {
+            super(request);
+            this.deltaUpdate = request.deltaUpdate;
+            this.deviceName = request.deviceName;
+            this.iotInstanceId = request.iotInstanceId;
+            this.productKey = request.productKey;
+            this.shadowMessage = request.shadowMessage;
         } 
 
         /**

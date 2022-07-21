@@ -90,12 +90,12 @@ public class ListOTAJobByFirmwareRequest extends Request {
             super();
         } 
 
-        private Builder(ListOTAJobByFirmwareRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.firmwareId = response.firmwareId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.pageSize = response.pageSize;
+        private Builder(ListOTAJobByFirmwareRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.firmwareId = request.firmwareId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.pageSize = request.pageSize;
         } 
 
         /**

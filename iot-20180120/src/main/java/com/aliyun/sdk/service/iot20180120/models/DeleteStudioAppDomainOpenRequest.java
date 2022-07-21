@@ -19,7 +19,7 @@ public class DeleteStudioAppDomainOpenRequest extends Request {
 
     @Body
     @NameInMap("DomainId")
-    @Validation(required = true)
+    @Validation(required = true, minimum = 1)
     private Integer domainId;
 
     @Body
@@ -90,12 +90,12 @@ public class DeleteStudioAppDomainOpenRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteStudioAppDomainOpenRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.domainId = response.domainId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.projectId = response.projectId;
+        private Builder(DeleteStudioAppDomainOpenRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.domainId = request.domainId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.projectId = request.projectId;
         } 
 
         /**

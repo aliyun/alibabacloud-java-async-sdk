@@ -62,10 +62,10 @@ public class ListOTAModuleByProductRequest extends Request {
             super();
         } 
 
-        private Builder(ListOTAModuleByProductRequest response) {
-            super(response);
-            this.iotInstanceId = response.iotInstanceId;
-            this.productKey = response.productKey;
+        private Builder(ListOTAModuleByProductRequest request) {
+            super(request);
+            this.iotInstanceId = request.iotInstanceId;
+            this.productKey = request.productKey;
         } 
 
         /**

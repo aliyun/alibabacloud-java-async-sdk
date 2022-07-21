@@ -232,23 +232,23 @@ public class CreateProductRequest extends Request {
             super();
         } 
 
-        private Builder(CreateProductRequest response) {
-            super(response);
-            this.aliyunCommodityCode = response.aliyunCommodityCode;
-            this.authType = response.authType;
-            this.categoryKey = response.categoryKey;
-            this.dataFormat = response.dataFormat;
-            this.description = response.description;
-            this.id2 = response.id2;
-            this.iotInstanceId = response.iotInstanceId;
-            this.joinPermissionId = response.joinPermissionId;
-            this.netType = response.netType;
-            this.nodeType = response.nodeType;
-            this.productName = response.productName;
-            this.protocolType = response.protocolType;
-            this.publishAuto = response.publishAuto;
-            this.resourceGroupId = response.resourceGroupId;
-            this.validateType = response.validateType;
+        private Builder(CreateProductRequest request) {
+            super(request);
+            this.aliyunCommodityCode = request.aliyunCommodityCode;
+            this.authType = request.authType;
+            this.categoryKey = request.categoryKey;
+            this.dataFormat = request.dataFormat;
+            this.description = request.description;
+            this.id2 = request.id2;
+            this.iotInstanceId = request.iotInstanceId;
+            this.joinPermissionId = request.joinPermissionId;
+            this.netType = request.netType;
+            this.nodeType = request.nodeType;
+            this.productName = request.productName;
+            this.protocolType = request.protocolType;
+            this.publishAuto = request.publishAuto;
+            this.resourceGroupId = request.resourceGroupId;
+            this.validateType = request.validateType;
         } 
 
         /**

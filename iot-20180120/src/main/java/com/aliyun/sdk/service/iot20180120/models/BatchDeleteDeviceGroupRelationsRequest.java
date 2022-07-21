@@ -75,11 +75,11 @@ public class BatchDeleteDeviceGroupRelationsRequest extends Request {
             super();
         } 
 
-        private Builder(BatchDeleteDeviceGroupRelationsRequest response) {
-            super(response);
-            this.device = response.device;
-            this.groupId = response.groupId;
-            this.iotInstanceId = response.iotInstanceId;
+        private Builder(BatchDeleteDeviceGroupRelationsRequest request) {
+            super(request);
+            this.device = request.device;
+            this.groupId = request.groupId;
+            this.iotInstanceId = request.iotInstanceId;
         } 
 
         /**

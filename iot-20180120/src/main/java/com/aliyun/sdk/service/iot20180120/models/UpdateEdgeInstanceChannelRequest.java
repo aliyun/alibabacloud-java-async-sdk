@@ -118,14 +118,14 @@ public class UpdateEdgeInstanceChannelRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateEdgeInstanceChannelRequest response) {
-            super(response);
-            this.channelId = response.channelId;
-            this.channelName = response.channelName;
-            this.configs = response.configs;
-            this.driverId = response.driverId;
-            this.instanceId = response.instanceId;
-            this.iotInstanceId = response.iotInstanceId;
+        private Builder(UpdateEdgeInstanceChannelRequest request) {
+            super(request);
+            this.channelId = request.channelId;
+            this.channelName = request.channelName;
+            this.configs = request.configs;
+            this.driverId = request.driverId;
+            this.instanceId = request.instanceId;
+            this.iotInstanceId = request.iotInstanceId;
         } 
 
         /**

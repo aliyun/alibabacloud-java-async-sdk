@@ -128,15 +128,15 @@ public class QueryDeviceOriginalPropertyStatusRequest extends Request {
             super();
         } 
 
-        private Builder(QueryDeviceOriginalPropertyStatusRequest response) {
-            super(response);
-            this.asc = response.asc;
-            this.deviceName = response.deviceName;
-            this.iotId = response.iotId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.nextPageToken = response.nextPageToken;
-            this.pageSize = response.pageSize;
-            this.productKey = response.productKey;
+        private Builder(QueryDeviceOriginalPropertyStatusRequest request) {
+            super(request);
+            this.asc = request.asc;
+            this.deviceName = request.deviceName;
+            this.iotId = request.iotId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.nextPageToken = request.nextPageToken;
+            this.pageSize = request.pageSize;
+            this.productKey = request.productKey;
         } 
 
         /**

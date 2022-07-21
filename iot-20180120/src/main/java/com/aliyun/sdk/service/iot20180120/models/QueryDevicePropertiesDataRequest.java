@@ -19,7 +19,6 @@ public class QueryDevicePropertiesDataRequest extends Request {
 
     @Query
     @NameInMap("DeviceName")
-    @Validation(required = true)
     private String deviceName;
 
     @Query
@@ -47,7 +46,6 @@ public class QueryDevicePropertiesDataRequest extends Request {
 
     @Query
     @NameInMap("ProductKey")
-    @Validation(required = true)
     private String productKey;
 
     @Query
@@ -159,17 +157,17 @@ public class QueryDevicePropertiesDataRequest extends Request {
             super();
         } 
 
-        private Builder(QueryDevicePropertiesDataRequest response) {
-            super(response);
-            this.asc = response.asc;
-            this.deviceName = response.deviceName;
-            this.endTime = response.endTime;
-            this.identifier = response.identifier;
-            this.iotId = response.iotId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.pageSize = response.pageSize;
-            this.productKey = response.productKey;
-            this.startTime = response.startTime;
+        private Builder(QueryDevicePropertiesDataRequest request) {
+            super(request);
+            this.asc = request.asc;
+            this.deviceName = request.deviceName;
+            this.endTime = request.endTime;
+            this.identifier = request.identifier;
+            this.iotId = request.iotId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.pageSize = request.pageSize;
+            this.productKey = request.productKey;
+            this.startTime = request.startTime;
         } 
 
         /**

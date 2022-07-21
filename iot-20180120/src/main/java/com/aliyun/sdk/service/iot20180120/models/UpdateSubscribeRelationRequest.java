@@ -232,23 +232,23 @@ public class UpdateSubscribeRelationRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateSubscribeRelationRequest response) {
-            super(response);
-            this.consumerGroupIds = response.consumerGroupIds;
-            this.deviceDataFlag = response.deviceDataFlag;
-            this.deviceLifeCycleFlag = response.deviceLifeCycleFlag;
-            this.deviceStatusChangeFlag = response.deviceStatusChangeFlag;
-            this.deviceTagFlag = response.deviceTagFlag;
-            this.deviceTopoLifeCycleFlag = response.deviceTopoLifeCycleFlag;
-            this.foundDeviceListFlag = response.foundDeviceListFlag;
-            this.iotInstanceId = response.iotInstanceId;
-            this.mnsConfiguration = response.mnsConfiguration;
-            this.otaEventFlag = response.otaEventFlag;
-            this.otaJobFlag = response.otaJobFlag;
-            this.otaVersionFlag = response.otaVersionFlag;
-            this.productKey = response.productKey;
-            this.thingHistoryFlag = response.thingHistoryFlag;
-            this.type = response.type;
+        private Builder(UpdateSubscribeRelationRequest request) {
+            super(request);
+            this.consumerGroupIds = request.consumerGroupIds;
+            this.deviceDataFlag = request.deviceDataFlag;
+            this.deviceLifeCycleFlag = request.deviceLifeCycleFlag;
+            this.deviceStatusChangeFlag = request.deviceStatusChangeFlag;
+            this.deviceTagFlag = request.deviceTagFlag;
+            this.deviceTopoLifeCycleFlag = request.deviceTopoLifeCycleFlag;
+            this.foundDeviceListFlag = request.foundDeviceListFlag;
+            this.iotInstanceId = request.iotInstanceId;
+            this.mnsConfiguration = request.mnsConfiguration;
+            this.otaEventFlag = request.otaEventFlag;
+            this.otaJobFlag = request.otaJobFlag;
+            this.otaVersionFlag = request.otaVersionFlag;
+            this.productKey = request.productKey;
+            this.thingHistoryFlag = request.thingHistoryFlag;
+            this.type = request.type;
         } 
 
         /**

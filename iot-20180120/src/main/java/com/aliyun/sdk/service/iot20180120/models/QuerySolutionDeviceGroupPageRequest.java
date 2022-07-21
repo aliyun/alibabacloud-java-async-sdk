@@ -22,12 +22,12 @@ public class QuerySolutionDeviceGroupPageRequest extends Request {
 
     @Query
     @NameInMap("PageId")
-    @Validation(required = true)
+    @Validation(required = true, maximum = 10000, minimum = 1)
     private Integer pageId;
 
     @Query
     @NameInMap("PageSize")
-    @Validation(required = true)
+    @Validation(required = true, maximum = 100, minimum = 1)
     private Integer pageSize;
 
     @Query
@@ -103,13 +103,13 @@ public class QuerySolutionDeviceGroupPageRequest extends Request {
             super();
         } 
 
-        private Builder(QuerySolutionDeviceGroupPageRequest response) {
-            super(response);
-            this.fuzzyGroupName = response.fuzzyGroupName;
-            this.iotInstanceId = response.iotInstanceId;
-            this.pageId = response.pageId;
-            this.pageSize = response.pageSize;
-            this.projectCode = response.projectCode;
+        private Builder(QuerySolutionDeviceGroupPageRequest request) {
+            super(request);
+            this.fuzzyGroupName = request.fuzzyGroupName;
+            this.iotInstanceId = request.iotInstanceId;
+            this.pageId = request.pageId;
+            this.pageSize = request.pageSize;
+            this.projectCode = request.projectCode;
         } 
 
         /**

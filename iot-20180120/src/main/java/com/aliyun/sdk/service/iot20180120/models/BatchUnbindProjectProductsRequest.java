@@ -76,11 +76,11 @@ public class BatchUnbindProjectProductsRequest extends Request {
             super();
         } 
 
-        private Builder(BatchUnbindProjectProductsRequest response) {
-            super(response);
-            this.iotInstanceId = response.iotInstanceId;
-            this.productKeys = response.productKeys;
-            this.projectId = response.projectId;
+        private Builder(BatchUnbindProjectProductsRequest request) {
+            super(request);
+            this.iotInstanceId = request.iotInstanceId;
+            this.productKeys = request.productKeys;
+            this.projectId = request.projectId;
         } 
 
         /**

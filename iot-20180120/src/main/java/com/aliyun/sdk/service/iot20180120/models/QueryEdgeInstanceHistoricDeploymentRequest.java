@@ -116,14 +116,14 @@ public class QueryEdgeInstanceHistoricDeploymentRequest extends Request {
             super();
         } 
 
-        private Builder(QueryEdgeInstanceHistoricDeploymentRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.endTime = response.endTime;
-            this.instanceId = response.instanceId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.pageSize = response.pageSize;
-            this.startTime = response.startTime;
+        private Builder(QueryEdgeInstanceHistoricDeploymentRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.endTime = request.endTime;
+            this.instanceId = request.instanceId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.pageSize = request.pageSize;
+            this.startTime = request.startTime;
         } 
 
         /**

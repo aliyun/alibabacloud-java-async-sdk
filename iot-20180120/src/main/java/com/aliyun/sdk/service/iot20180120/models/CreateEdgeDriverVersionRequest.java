@@ -168,18 +168,18 @@ public class CreateEdgeDriverVersionRequest extends Request {
             super();
         } 
 
-        private Builder(CreateEdgeDriverVersionRequest response) {
-            super(response);
-            this.argument = response.argument;
-            this.configCheckRule = response.configCheckRule;
-            this.containerConfig = response.containerConfig;
-            this.description = response.description;
-            this.driverConfig = response.driverConfig;
-            this.driverId = response.driverId;
-            this.driverVersion = response.driverVersion;
-            this.edgeVersion = response.edgeVersion;
-            this.iotInstanceId = response.iotInstanceId;
-            this.sourceConfig = response.sourceConfig;
+        private Builder(CreateEdgeDriverVersionRequest request) {
+            super(request);
+            this.argument = request.argument;
+            this.configCheckRule = request.configCheckRule;
+            this.containerConfig = request.containerConfig;
+            this.description = request.description;
+            this.driverConfig = request.driverConfig;
+            this.driverId = request.driverId;
+            this.driverVersion = request.driverVersion;
+            this.edgeVersion = request.edgeVersion;
+            this.iotInstanceId = request.iotInstanceId;
+            this.sourceConfig = request.sourceConfig;
         } 
 
         /**

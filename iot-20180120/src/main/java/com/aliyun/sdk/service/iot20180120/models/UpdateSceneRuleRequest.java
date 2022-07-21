@@ -101,13 +101,13 @@ public class UpdateSceneRuleRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateSceneRuleRequest response) {
-            super(response);
-            this.iotInstanceId = response.iotInstanceId;
-            this.ruleContent = response.ruleContent;
-            this.ruleDescription = response.ruleDescription;
-            this.ruleId = response.ruleId;
-            this.ruleName = response.ruleName;
+        private Builder(UpdateSceneRuleRequest request) {
+            super(request);
+            this.iotInstanceId = request.iotInstanceId;
+            this.ruleContent = request.ruleContent;
+            this.ruleDescription = request.ruleDescription;
+            this.ruleId = request.ruleId;
+            this.ruleName = request.ruleName;
         } 
 
         /**

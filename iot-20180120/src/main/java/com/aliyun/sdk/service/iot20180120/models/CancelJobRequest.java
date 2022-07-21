@@ -62,10 +62,10 @@ public class CancelJobRequest extends Request {
             super();
         } 
 
-        private Builder(CancelJobRequest response) {
-            super(response);
-            this.iotInstanceId = response.iotInstanceId;
-            this.jobId = response.jobId;
+        private Builder(CancelJobRequest request) {
+            super(request);
+            this.iotInstanceId = request.iotInstanceId;
+            this.jobId = request.jobId;
         } 
 
         /**

@@ -101,13 +101,13 @@ public class QueryThingModelExtendConfigRequest extends Request {
             super();
         } 
 
-        private Builder(QueryThingModelExtendConfigRequest response) {
-            super(response);
-            this.functionBlockId = response.functionBlockId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.modelVersion = response.modelVersion;
-            this.productKey = response.productKey;
-            this.resourceGroupId = response.resourceGroupId;
+        private Builder(QueryThingModelExtendConfigRequest request) {
+            super(request);
+            this.functionBlockId = request.functionBlockId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.modelVersion = request.modelVersion;
+            this.productKey = request.productKey;
+            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**

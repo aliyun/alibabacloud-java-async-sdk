@@ -76,11 +76,11 @@ public class SetProductCertInfoRequest extends Request {
             super();
         } 
 
-        private Builder(SetProductCertInfoRequest response) {
-            super(response);
-            this.iotInstanceId = response.iotInstanceId;
-            this.issueModel = response.issueModel;
-            this.productKey = response.productKey;
+        private Builder(SetProductCertInfoRequest request) {
+            super(request);
+            this.iotInstanceId = request.iotInstanceId;
+            this.issueModel = request.issueModel;
+            this.productKey = request.productKey;
         } 
 
         /**

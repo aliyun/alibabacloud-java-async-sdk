@@ -89,12 +89,12 @@ public class QueryEdgeInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(QueryEdgeInstanceRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.iotInstanceId = response.iotInstanceId;
-            this.name = response.name;
-            this.pageSize = response.pageSize;
+        private Builder(QueryEdgeInstanceRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.iotInstanceId = request.iotInstanceId;
+            this.name = request.name;
+            this.pageSize = request.pageSize;
         } 
 
         /**

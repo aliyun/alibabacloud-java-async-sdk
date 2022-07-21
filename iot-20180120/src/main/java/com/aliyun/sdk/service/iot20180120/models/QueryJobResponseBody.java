@@ -216,8 +216,12 @@ public class QueryJobResponseBody extends TeaModel {
         @NameInMap("MaximumPerMinute")
         private Integer maximumPerMinute;
 
+        @NameInMap("MessageQoS")
+        private String messageQoS;
+
         private RolloutConfig(Builder builder) {
             this.maximumPerMinute = builder.maximumPerMinute;
+            this.messageQoS = builder.messageQoS;
         }
 
         public static Builder builder() {
@@ -235,14 +239,30 @@ public class QueryJobResponseBody extends TeaModel {
             return this.maximumPerMinute;
         }
 
+        /**
+         * @return messageQoS
+         */
+        public String getMessageQoS() {
+            return this.messageQoS;
+        }
+
         public static final class Builder {
             private Integer maximumPerMinute; 
+            private String messageQoS; 
 
             /**
              * MaximumPerMinute.
              */
             public Builder maximumPerMinute(Integer maximumPerMinute) {
                 this.maximumPerMinute = maximumPerMinute;
+                return this;
+            }
+
+            /**
+             * MessageQoS.
+             */
+            public Builder messageQoS(String messageQoS) {
+                this.messageQoS = messageQoS;
                 return this;
             }
 

@@ -90,12 +90,12 @@ public class SetEdgeInstanceDriverConfigsRequest extends Request {
             super();
         } 
 
-        private Builder(SetEdgeInstanceDriverConfigsRequest response) {
-            super(response);
-            this.configs = response.configs;
-            this.driverId = response.driverId;
-            this.instanceId = response.instanceId;
-            this.iotInstanceId = response.iotInstanceId;
+        private Builder(SetEdgeInstanceDriverConfigsRequest request) {
+            super(request);
+            this.configs = request.configs;
+            this.driverId = request.driverId;
+            this.instanceId = request.instanceId;
+            this.iotInstanceId = request.iotInstanceId;
         } 
 
         /**

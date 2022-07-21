@@ -62,10 +62,10 @@ public class QueryTopicRouteTableRequest extends Request {
             super();
         } 
 
-        private Builder(QueryTopicRouteTableRequest response) {
-            super(response);
-            this.iotInstanceId = response.iotInstanceId;
-            this.topic = response.topic;
+        private Builder(QueryTopicRouteTableRequest request) {
+            super(request);
+            this.iotInstanceId = request.iotInstanceId;
+            this.topic = request.topic;
         } 
 
         /**

@@ -88,12 +88,12 @@ public class CreateEdgeInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(CreateEdgeInstanceRequest response) {
-            super(response);
-            this.iotInstanceId = response.iotInstanceId;
-            this.name = response.name;
-            this.spec = response.spec;
-            this.tags = response.tags;
+        private Builder(CreateEdgeInstanceRequest request) {
+            super(request);
+            this.iotInstanceId = request.iotInstanceId;
+            this.name = request.name;
+            this.spec = request.spec;
+            this.tags = request.tags;
         } 
 
         /**

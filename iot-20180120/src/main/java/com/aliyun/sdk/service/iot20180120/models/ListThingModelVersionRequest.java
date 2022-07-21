@@ -62,10 +62,10 @@ public class ListThingModelVersionRequest extends Request {
             super();
         } 
 
-        private Builder(ListThingModelVersionRequest response) {
-            super(response);
-            this.iotInstanceId = response.iotInstanceId;
-            this.productKey = response.productKey;
+        private Builder(ListThingModelVersionRequest request) {
+            super(request);
+            this.iotInstanceId = request.iotInstanceId;
+            this.productKey = request.productKey;
         } 
 
         /**

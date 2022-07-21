@@ -75,11 +75,11 @@ public class QueryTopicReverseRouteTableRequest extends Request {
             super();
         } 
 
-        private Builder(QueryTopicReverseRouteTableRequest response) {
-            super(response);
-            this.iotInstanceId = response.iotInstanceId;
-            this.regionId = response.regionId;
-            this.topic = response.topic;
+        private Builder(QueryTopicReverseRouteTableRequest request) {
+            super(request);
+            this.iotInstanceId = request.iotInstanceId;
+            this.regionId = request.regionId;
+            this.topic = request.topic;
         } 
 
         /**

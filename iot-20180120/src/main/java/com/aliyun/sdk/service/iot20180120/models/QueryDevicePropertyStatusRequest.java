@@ -100,13 +100,13 @@ public class QueryDevicePropertyStatusRequest extends Request {
             super();
         } 
 
-        private Builder(QueryDevicePropertyStatusRequest response) {
-            super(response);
-            this.deviceName = response.deviceName;
-            this.functionBlockId = response.functionBlockId;
-            this.iotId = response.iotId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.productKey = response.productKey;
+        private Builder(QueryDevicePropertyStatusRequest request) {
+            super(request);
+            this.deviceName = request.deviceName;
+            this.functionBlockId = request.functionBlockId;
+            this.iotId = request.iotId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.productKey = request.productKey;
         } 
 
         /**

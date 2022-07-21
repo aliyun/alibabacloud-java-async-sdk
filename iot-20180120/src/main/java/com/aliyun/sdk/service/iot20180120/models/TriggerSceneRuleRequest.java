@@ -75,11 +75,11 @@ public class TriggerSceneRuleRequest extends Request {
             super();
         } 
 
-        private Builder(TriggerSceneRuleRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.ruleId = response.ruleId;
+        private Builder(TriggerSceneRuleRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.ruleId = request.ruleId;
         } 
 
         /**

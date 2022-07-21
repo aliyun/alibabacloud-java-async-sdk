@@ -76,11 +76,11 @@ public class GetEdgeInstanceDeploymentRequest extends Request {
             super();
         } 
 
-        private Builder(GetEdgeInstanceDeploymentRequest response) {
-            super(response);
-            this.deploymentId = response.deploymentId;
-            this.instanceId = response.instanceId;
-            this.iotInstanceId = response.iotInstanceId;
+        private Builder(GetEdgeInstanceDeploymentRequest request) {
+            super(request);
+            this.deploymentId = request.deploymentId;
+            this.instanceId = request.instanceId;
+            this.iotInstanceId = request.iotInstanceId;
         } 
 
         /**

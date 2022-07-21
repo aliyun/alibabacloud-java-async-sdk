@@ -131,15 +131,15 @@ public class CreateDeviceDistributeJobRequest extends Request {
             super();
         } 
 
-        private Builder(CreateDeviceDistributeJobRequest response) {
-            super(response);
-            this.deviceName = response.deviceName;
-            this.productKey = response.productKey;
-            this.sourceInstanceId = response.sourceInstanceId;
-            this.strategy = response.strategy;
-            this.targetAliyunId = response.targetAliyunId;
-            this.targetInstanceConfig = response.targetInstanceConfig;
-            this.targetUid = response.targetUid;
+        private Builder(CreateDeviceDistributeJobRequest request) {
+            super(request);
+            this.deviceName = request.deviceName;
+            this.productKey = request.productKey;
+            this.sourceInstanceId = request.sourceInstanceId;
+            this.strategy = request.strategy;
+            this.targetAliyunId = request.targetAliyunId;
+            this.targetInstanceConfig = request.targetInstanceConfig;
+            this.targetUid = request.targetUid;
         } 
 
         /**

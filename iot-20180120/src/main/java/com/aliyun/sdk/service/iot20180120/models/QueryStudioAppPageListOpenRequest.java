@@ -115,14 +115,14 @@ public class QueryStudioAppPageListOpenRequest extends Request {
             super();
         } 
 
-        private Builder(QueryStudioAppPageListOpenRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.isRelease = response.isRelease;
-            this.pageNo = response.pageNo;
-            this.pageSize = response.pageSize;
-            this.projectId = response.projectId;
+        private Builder(QueryStudioAppPageListOpenRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.isRelease = request.isRelease;
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
+            this.projectId = request.projectId;
         } 
 
         /**

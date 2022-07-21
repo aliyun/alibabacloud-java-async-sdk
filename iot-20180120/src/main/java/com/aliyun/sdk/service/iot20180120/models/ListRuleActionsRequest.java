@@ -62,10 +62,10 @@ public class ListRuleActionsRequest extends Request {
             super();
         } 
 
-        private Builder(ListRuleActionsRequest response) {
-            super(response);
-            this.iotInstanceId = response.iotInstanceId;
-            this.ruleId = response.ruleId;
+        private Builder(ListRuleActionsRequest request) {
+            super(request);
+            this.iotInstanceId = request.iotInstanceId;
+            this.ruleId = request.ruleId;
         } 
 
         /**

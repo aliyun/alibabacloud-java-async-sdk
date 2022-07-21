@@ -76,11 +76,11 @@ public class QueryStudioAppDomainListOpenRequest extends Request {
             super();
         } 
 
-        private Builder(QueryStudioAppDomainListOpenRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.projectId = response.projectId;
+        private Builder(QueryStudioAppDomainListOpenRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.projectId = request.projectId;
         } 
 
         /**

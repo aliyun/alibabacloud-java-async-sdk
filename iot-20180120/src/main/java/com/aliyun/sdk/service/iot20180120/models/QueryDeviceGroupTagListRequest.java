@@ -18,12 +18,17 @@ public class QueryDeviceGroupTagListRequest extends Request {
     private String groupId;
 
     @Query
+    @NameInMap("GroupType")
+    private String groupType;
+
+    @Query
     @NameInMap("IotInstanceId")
     private String iotInstanceId;
 
     private QueryDeviceGroupTagListRequest(Builder builder) {
         super(builder);
         this.groupId = builder.groupId;
+        this.groupType = builder.groupType;
         this.iotInstanceId = builder.iotInstanceId;
     }
 
@@ -48,6 +53,13 @@ public class QueryDeviceGroupTagListRequest extends Request {
     }
 
     /**
+     * @return groupType
+     */
+    public String getGroupType() {
+        return this.groupType;
+    }
+
+    /**
      * @return iotInstanceId
      */
     public String getIotInstanceId() {
@@ -56,16 +68,18 @@ public class QueryDeviceGroupTagListRequest extends Request {
 
     public static final class Builder extends Request.Builder<QueryDeviceGroupTagListRequest, Builder> {
         private String groupId; 
+        private String groupType; 
         private String iotInstanceId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(QueryDeviceGroupTagListRequest response) {
-            super(response);
-            this.groupId = response.groupId;
-            this.iotInstanceId = response.iotInstanceId;
+        private Builder(QueryDeviceGroupTagListRequest request) {
+            super(request);
+            this.groupId = request.groupId;
+            this.groupType = request.groupType;
+            this.iotInstanceId = request.iotInstanceId;
         } 
 
         /**
@@ -74,6 +88,15 @@ public class QueryDeviceGroupTagListRequest extends Request {
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
             this.groupId = groupId;
+            return this;
+        }
+
+        /**
+         * GroupType.
+         */
+        public Builder groupType(String groupType) {
+            this.putQueryParameter("GroupType", groupType);
+            this.groupType = groupType;
             return this;
         }
 

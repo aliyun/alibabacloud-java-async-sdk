@@ -179,19 +179,19 @@ public class CreateRuleRequest extends Request {
             super();
         } 
 
-        private Builder(CreateRuleRequest response) {
-            super(response);
-            this.dataType = response.dataType;
-            this.iotInstanceId = response.iotInstanceId;
-            this.name = response.name;
-            this.productKey = response.productKey;
-            this.resourceGroupId = response.resourceGroupId;
-            this.ruleDesc = response.ruleDesc;
-            this.select = response.select;
-            this.shortTopic = response.shortTopic;
-            this.topic = response.topic;
-            this.topicType = response.topicType;
-            this.where = response.where;
+        private Builder(CreateRuleRequest request) {
+            super(request);
+            this.dataType = request.dataType;
+            this.iotInstanceId = request.iotInstanceId;
+            this.name = request.name;
+            this.productKey = request.productKey;
+            this.resourceGroupId = request.resourceGroupId;
+            this.ruleDesc = request.ruleDesc;
+            this.select = request.select;
+            this.shortTopic = request.shortTopic;
+            this.topic = request.topic;
+            this.topicType = request.topicType;
+            this.where = request.where;
         } 
 
         /**

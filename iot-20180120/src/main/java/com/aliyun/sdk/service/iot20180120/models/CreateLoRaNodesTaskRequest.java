@@ -76,11 +76,11 @@ public class CreateLoRaNodesTaskRequest extends Request {
             super();
         } 
 
-        private Builder(CreateLoRaNodesTaskRequest response) {
-            super(response);
-            this.deviceInfo = response.deviceInfo;
-            this.iotInstanceId = response.iotInstanceId;
-            this.productKey = response.productKey;
+        private Builder(CreateLoRaNodesTaskRequest request) {
+            super(request);
+            this.deviceInfo = request.deviceInfo;
+            this.iotInstanceId = request.iotInstanceId;
+            this.productKey = request.productKey;
         } 
 
         /**

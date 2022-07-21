@@ -62,10 +62,10 @@ public class QueryOTAFirmwareRequest extends Request {
             super();
         } 
 
-        private Builder(QueryOTAFirmwareRequest response) {
-            super(response);
-            this.firmwareId = response.firmwareId;
-            this.iotInstanceId = response.iotInstanceId;
+        private Builder(QueryOTAFirmwareRequest request) {
+            super(request);
+            this.firmwareId = request.firmwareId;
+            this.iotInstanceId = request.iotInstanceId;
         } 
 
         /**

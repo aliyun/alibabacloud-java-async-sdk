@@ -76,11 +76,11 @@ public class RefreshStudioAppTokenOpenRequest extends Request {
             super();
         } 
 
-        private Builder(RefreshStudioAppTokenOpenRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.projectId = response.projectId;
+        private Builder(RefreshStudioAppTokenOpenRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.projectId = request.projectId;
         } 
 
         /**

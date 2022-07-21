@@ -114,14 +114,14 @@ public class UpdateThingModelRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateThingModelRequest response) {
-            super(response);
-            this.functionBlockId = response.functionBlockId;
-            this.functionBlockName = response.functionBlockName;
-            this.identifier = response.identifier;
-            this.iotInstanceId = response.iotInstanceId;
-            this.productKey = response.productKey;
-            this.thingModelJson = response.thingModelJson;
+        private Builder(UpdateThingModelRequest request) {
+            super(request);
+            this.functionBlockId = request.functionBlockId;
+            this.functionBlockName = request.functionBlockName;
+            this.identifier = request.identifier;
+            this.iotInstanceId = request.iotInstanceId;
+            this.productKey = request.productKey;
+            this.thingModelJson = request.thingModelJson;
         } 
 
         /**

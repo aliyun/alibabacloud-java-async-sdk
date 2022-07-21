@@ -76,11 +76,11 @@ public class StartCpuRequest extends Request {
             super();
         } 
 
-        private Builder(StartCpuRequest response) {
-            super(response);
-            this.iotId = response.iotId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.targetValue = response.targetValue;
+        private Builder(StartCpuRequest request) {
+            super(request);
+            this.iotId = request.iotId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.targetValue = request.targetValue;
         } 
 
         /**

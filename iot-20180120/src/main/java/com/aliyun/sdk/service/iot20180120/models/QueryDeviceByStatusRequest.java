@@ -34,6 +34,7 @@ public class QueryDeviceByStatusRequest extends Request {
 
     @Query
     @NameInMap("Status")
+    @Validation(required = true)
     private Integer status;
 
     private QueryDeviceByStatusRequest(Builder builder) {
@@ -113,14 +114,14 @@ public class QueryDeviceByStatusRequest extends Request {
             super();
         } 
 
-        private Builder(QueryDeviceByStatusRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.iotInstanceId = response.iotInstanceId;
-            this.pageSize = response.pageSize;
-            this.productKey = response.productKey;
-            this.resourceGroupId = response.resourceGroupId;
-            this.status = response.status;
+        private Builder(QueryDeviceByStatusRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.iotInstanceId = request.iotInstanceId;
+            this.pageSize = request.pageSize;
+            this.productKey = request.productKey;
+            this.resourceGroupId = request.resourceGroupId;
+            this.status = request.status;
         } 
 
         /**

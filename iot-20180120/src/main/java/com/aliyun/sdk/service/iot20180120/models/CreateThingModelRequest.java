@@ -101,13 +101,13 @@ public class CreateThingModelRequest extends Request {
             super();
         } 
 
-        private Builder(CreateThingModelRequest response) {
-            super(response);
-            this.functionBlockId = response.functionBlockId;
-            this.functionBlockName = response.functionBlockName;
-            this.iotInstanceId = response.iotInstanceId;
-            this.productKey = response.productKey;
-            this.thingModelJson = response.thingModelJson;
+        private Builder(CreateThingModelRequest request) {
+            super(request);
+            this.functionBlockId = request.functionBlockId;
+            this.functionBlockName = request.functionBlockName;
+            this.iotInstanceId = request.iotInstanceId;
+            this.productKey = request.productKey;
+            this.thingModelJson = request.thingModelJson;
         } 
 
         /**

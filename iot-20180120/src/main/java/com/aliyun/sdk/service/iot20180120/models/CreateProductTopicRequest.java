@@ -103,13 +103,13 @@ public class CreateProductTopicRequest extends Request {
             super();
         } 
 
-        private Builder(CreateProductTopicRequest response) {
-            super(response);
-            this.desc = response.desc;
-            this.iotInstanceId = response.iotInstanceId;
-            this.operation = response.operation;
-            this.productKey = response.productKey;
-            this.topicShortName = response.topicShortName;
+        private Builder(CreateProductTopicRequest request) {
+            super(request);
+            this.desc = request.desc;
+            this.iotInstanceId = request.iotInstanceId;
+            this.operation = request.operation;
+            this.productKey = request.productKey;
+            this.topicShortName = request.topicShortName;
         } 
 
         /**

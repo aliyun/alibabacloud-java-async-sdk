@@ -62,10 +62,10 @@ public class QuerySuperDeviceGroupRequest extends Request {
             super();
         } 
 
-        private Builder(QuerySuperDeviceGroupRequest response) {
-            super(response);
-            this.groupId = response.groupId;
-            this.iotInstanceId = response.iotInstanceId;
+        private Builder(QuerySuperDeviceGroupRequest request) {
+            super(request);
+            this.groupId = request.groupId;
+            this.iotInstanceId = request.iotInstanceId;
         } 
 
         /**

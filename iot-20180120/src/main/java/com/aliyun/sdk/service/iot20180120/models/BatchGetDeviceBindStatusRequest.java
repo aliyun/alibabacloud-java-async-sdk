@@ -62,10 +62,10 @@ public class BatchGetDeviceBindStatusRequest extends Request {
             super();
         } 
 
-        private Builder(BatchGetDeviceBindStatusRequest response) {
-            super(response);
-            this.iotIds = response.iotIds;
-            this.iotInstanceId = response.iotInstanceId;
+        private Builder(BatchGetDeviceBindStatusRequest request) {
+            super(request);
+            this.iotIds = request.iotIds;
+            this.iotInstanceId = request.iotInstanceId;
         } 
 
         /**

@@ -62,10 +62,10 @@ public class DeleteDeviceGroupRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteDeviceGroupRequest response) {
-            super(response);
-            this.groupId = response.groupId;
-            this.iotInstanceId = response.iotInstanceId;
+        private Builder(DeleteDeviceGroupRequest request) {
+            super(request);
+            this.groupId = request.groupId;
+            this.iotInstanceId = request.iotInstanceId;
         } 
 
         /**

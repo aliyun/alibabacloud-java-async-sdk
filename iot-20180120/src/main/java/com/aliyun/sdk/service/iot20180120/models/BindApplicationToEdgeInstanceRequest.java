@@ -90,12 +90,12 @@ public class BindApplicationToEdgeInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(BindApplicationToEdgeInstanceRequest response) {
-            super(response);
-            this.applicationId = response.applicationId;
-            this.applicationVersion = response.applicationVersion;
-            this.instanceId = response.instanceId;
-            this.iotInstanceId = response.iotInstanceId;
+        private Builder(BindApplicationToEdgeInstanceRequest request) {
+            super(request);
+            this.applicationId = request.applicationId;
+            this.applicationVersion = request.applicationVersion;
+            this.instanceId = request.instanceId;
+            this.iotInstanceId = request.iotInstanceId;
         } 
 
         /**

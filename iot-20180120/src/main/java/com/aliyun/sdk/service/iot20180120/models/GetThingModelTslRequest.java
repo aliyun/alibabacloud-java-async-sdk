@@ -26,7 +26,6 @@ public class GetThingModelTslRequest extends Request {
 
     @Query
     @NameInMap("ProductKey")
-    @Validation(required = true)
     private String productKey;
 
     @Query
@@ -101,13 +100,13 @@ public class GetThingModelTslRequest extends Request {
             super();
         } 
 
-        private Builder(GetThingModelTslRequest response) {
-            super(response);
-            this.functionBlockId = response.functionBlockId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.modelVersion = response.modelVersion;
-            this.productKey = response.productKey;
-            this.simple = response.simple;
+        private Builder(GetThingModelTslRequest request) {
+            super(request);
+            this.functionBlockId = request.functionBlockId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.modelVersion = request.modelVersion;
+            this.productKey = request.productKey;
+            this.simple = request.simple;
         } 
 
         /**

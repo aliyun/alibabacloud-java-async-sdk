@@ -89,12 +89,12 @@ public class ListRuleRequest extends Request {
             super();
         } 
 
-        private Builder(ListRuleRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.iotInstanceId = response.iotInstanceId;
-            this.pageSize = response.pageSize;
-            this.resourceGroupId = response.resourceGroupId;
+        private Builder(ListRuleRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.iotInstanceId = request.iotInstanceId;
+            this.pageSize = request.pageSize;
+            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**

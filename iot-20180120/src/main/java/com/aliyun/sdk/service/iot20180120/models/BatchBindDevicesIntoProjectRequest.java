@@ -76,11 +76,11 @@ public class BatchBindDevicesIntoProjectRequest extends Request {
             super();
         } 
 
-        private Builder(BatchBindDevicesIntoProjectRequest response) {
-            super(response);
-            this.devices = response.devices;
-            this.iotInstanceId = response.iotInstanceId;
-            this.projectId = response.projectId;
+        private Builder(BatchBindDevicesIntoProjectRequest request) {
+            super(request);
+            this.devices = request.devices;
+            this.iotInstanceId = request.iotInstanceId;
+            this.projectId = request.projectId;
         } 
 
         /**

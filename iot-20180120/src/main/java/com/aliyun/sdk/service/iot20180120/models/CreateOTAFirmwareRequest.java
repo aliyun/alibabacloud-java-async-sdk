@@ -36,7 +36,6 @@ public class CreateOTAFirmwareRequest extends Request {
 
     @Query
     @NameInMap("FirmwareUrl")
-    @Validation(required = true)
     private String firmwareUrl;
 
     @Query
@@ -46,6 +45,10 @@ public class CreateOTAFirmwareRequest extends Request {
     @Query
     @NameInMap("ModuleName")
     private String moduleName;
+
+    @Query
+    @NameInMap("MultiFiles")
+    private java.util.List < MultiFiles> multiFiles;
 
     @Query
     @NameInMap("NeedToVerify")
@@ -81,6 +84,7 @@ public class CreateOTAFirmwareRequest extends Request {
         this.firmwareUrl = builder.firmwareUrl;
         this.iotInstanceId = builder.iotInstanceId;
         this.moduleName = builder.moduleName;
+        this.multiFiles = builder.multiFiles;
         this.needToVerify = builder.needToVerify;
         this.productKey = builder.productKey;
         this.signMethod = builder.signMethod;
@@ -159,6 +163,13 @@ public class CreateOTAFirmwareRequest extends Request {
     }
 
     /**
+     * @return multiFiles
+     */
+    public java.util.List < MultiFiles> getMultiFiles() {
+        return this.multiFiles;
+    }
+
+    /**
      * @return needToVerify
      */
     public Boolean getNeedToVerify() {
@@ -209,6 +220,7 @@ public class CreateOTAFirmwareRequest extends Request {
         private String firmwareUrl; 
         private String iotInstanceId; 
         private String moduleName; 
+        private java.util.List < MultiFiles> multiFiles; 
         private Boolean needToVerify; 
         private String productKey; 
         private String signMethod; 
@@ -220,22 +232,23 @@ public class CreateOTAFirmwareRequest extends Request {
             super();
         } 
 
-        private Builder(CreateOTAFirmwareRequest response) {
-            super(response);
-            this.destVersion = response.destVersion;
-            this.firmwareDesc = response.firmwareDesc;
-            this.firmwareName = response.firmwareName;
-            this.firmwareSign = response.firmwareSign;
-            this.firmwareSize = response.firmwareSize;
-            this.firmwareUrl = response.firmwareUrl;
-            this.iotInstanceId = response.iotInstanceId;
-            this.moduleName = response.moduleName;
-            this.needToVerify = response.needToVerify;
-            this.productKey = response.productKey;
-            this.signMethod = response.signMethod;
-            this.srcVersion = response.srcVersion;
-            this.type = response.type;
-            this.udi = response.udi;
+        private Builder(CreateOTAFirmwareRequest request) {
+            super(request);
+            this.destVersion = request.destVersion;
+            this.firmwareDesc = request.firmwareDesc;
+            this.firmwareName = request.firmwareName;
+            this.firmwareSign = request.firmwareSign;
+            this.firmwareSize = request.firmwareSize;
+            this.firmwareUrl = request.firmwareUrl;
+            this.iotInstanceId = request.iotInstanceId;
+            this.moduleName = request.moduleName;
+            this.multiFiles = request.multiFiles;
+            this.needToVerify = request.needToVerify;
+            this.productKey = request.productKey;
+            this.signMethod = request.signMethod;
+            this.srcVersion = request.srcVersion;
+            this.type = request.type;
+            this.udi = request.udi;
         } 
 
         /**
@@ -311,6 +324,15 @@ public class CreateOTAFirmwareRequest extends Request {
         }
 
         /**
+         * MultiFiles.
+         */
+        public Builder multiFiles(java.util.List < MultiFiles> multiFiles) {
+            this.putQueryParameter("MultiFiles", multiFiles);
+            this.multiFiles = multiFiles;
+            return this;
+        }
+
+        /**
          * NeedToVerify.
          */
         public Builder needToVerify(Boolean needToVerify) {
@@ -371,4 +393,125 @@ public class CreateOTAFirmwareRequest extends Request {
 
     } 
 
+    public static class MultiFiles extends TeaModel {
+        @NameInMap("FileMd5")
+        private String fileMd5;
+
+        @NameInMap("Name")
+        private String name;
+
+        @NameInMap("SignValue")
+        private String signValue;
+
+        @NameInMap("Size")
+        private Integer size;
+
+        @NameInMap("Url")
+        private String url;
+
+        private MultiFiles(Builder builder) {
+            this.fileMd5 = builder.fileMd5;
+            this.name = builder.name;
+            this.signValue = builder.signValue;
+            this.size = builder.size;
+            this.url = builder.url;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MultiFiles create() {
+            return builder().build();
+        }
+
+        /**
+         * @return fileMd5
+         */
+        public String getFileMd5() {
+            return this.fileMd5;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return signValue
+         */
+        public String getSignValue() {
+            return this.signValue;
+        }
+
+        /**
+         * @return size
+         */
+        public Integer getSize() {
+            return this.size;
+        }
+
+        /**
+         * @return url
+         */
+        public String getUrl() {
+            return this.url;
+        }
+
+        public static final class Builder {
+            private String fileMd5; 
+            private String name; 
+            private String signValue; 
+            private Integer size; 
+            private String url; 
+
+            /**
+             * FileMd5.
+             */
+            public Builder fileMd5(String fileMd5) {
+                this.fileMd5 = fileMd5;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * SignValue.
+             */
+            public Builder signValue(String signValue) {
+                this.signValue = signValue;
+                return this;
+            }
+
+            /**
+             * Size.
+             */
+            public Builder size(Integer size) {
+                this.size = size;
+                return this;
+            }
+
+            /**
+             * Url.
+             */
+            public Builder url(String url) {
+                this.url = url;
+                return this;
+            }
+
+            public MultiFiles build() {
+                return new MultiFiles(this);
+            } 
+
+        } 
+
+    }
 }

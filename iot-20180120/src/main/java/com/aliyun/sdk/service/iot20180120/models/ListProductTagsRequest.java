@@ -62,10 +62,10 @@ public class ListProductTagsRequest extends Request {
             super();
         } 
 
-        private Builder(ListProductTagsRequest response) {
-            super(response);
-            this.iotInstanceId = response.iotInstanceId;
-            this.productKey = response.productKey;
+        private Builder(ListProductTagsRequest request) {
+            super(request);
+            this.iotInstanceId = request.iotInstanceId;
+            this.productKey = request.productKey;
         } 
 
         /**

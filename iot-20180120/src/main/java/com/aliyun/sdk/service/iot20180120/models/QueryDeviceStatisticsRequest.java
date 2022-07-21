@@ -74,11 +74,11 @@ public class QueryDeviceStatisticsRequest extends Request {
             super();
         } 
 
-        private Builder(QueryDeviceStatisticsRequest response) {
-            super(response);
-            this.groupId = response.groupId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.productKey = response.productKey;
+        private Builder(QueryDeviceStatisticsRequest request) {
+            super(request);
+            this.groupId = request.groupId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.productKey = request.productKey;
         } 
 
         /**

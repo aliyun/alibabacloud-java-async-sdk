@@ -131,6 +131,127 @@ public class QueryOTAFirmwareResponseBody extends TeaModel {
 
     } 
 
+    public static class MultiFiles extends TeaModel {
+        @NameInMap("FileMd5")
+        private String fileMd5;
+
+        @NameInMap("Name")
+        private String name;
+
+        @NameInMap("SignValue")
+        private String signValue;
+
+        @NameInMap("Size")
+        private Integer size;
+
+        @NameInMap("Url")
+        private String url;
+
+        private MultiFiles(Builder builder) {
+            this.fileMd5 = builder.fileMd5;
+            this.name = builder.name;
+            this.signValue = builder.signValue;
+            this.size = builder.size;
+            this.url = builder.url;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MultiFiles create() {
+            return builder().build();
+        }
+
+        /**
+         * @return fileMd5
+         */
+        public String getFileMd5() {
+            return this.fileMd5;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return signValue
+         */
+        public String getSignValue() {
+            return this.signValue;
+        }
+
+        /**
+         * @return size
+         */
+        public Integer getSize() {
+            return this.size;
+        }
+
+        /**
+         * @return url
+         */
+        public String getUrl() {
+            return this.url;
+        }
+
+        public static final class Builder {
+            private String fileMd5; 
+            private String name; 
+            private String signValue; 
+            private Integer size; 
+            private String url; 
+
+            /**
+             * FileMd5.
+             */
+            public Builder fileMd5(String fileMd5) {
+                this.fileMd5 = fileMd5;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * SignValue.
+             */
+            public Builder signValue(String signValue) {
+                this.signValue = signValue;
+                return this;
+            }
+
+            /**
+             * Size.
+             */
+            public Builder size(Integer size) {
+                this.size = size;
+                return this;
+            }
+
+            /**
+             * Url.
+             */
+            public Builder url(String url) {
+                this.url = url;
+                return this;
+            }
+
+            public MultiFiles build() {
+                return new MultiFiles(this);
+            } 
+
+        } 
+
+    }
     public static class FirmwareInfo extends TeaModel {
         @NameInMap("DestVersion")
         private String destVersion;
@@ -155,6 +276,9 @@ public class QueryOTAFirmwareResponseBody extends TeaModel {
 
         @NameInMap("ModuleName")
         private String moduleName;
+
+        @NameInMap("MultiFiles")
+        private java.util.List < MultiFiles> multiFiles;
 
         @NameInMap("ProductKey")
         private String productKey;
@@ -195,6 +319,7 @@ public class QueryOTAFirmwareResponseBody extends TeaModel {
             this.firmwareSize = builder.firmwareSize;
             this.firmwareUrl = builder.firmwareUrl;
             this.moduleName = builder.moduleName;
+            this.multiFiles = builder.multiFiles;
             this.productKey = builder.productKey;
             this.productName = builder.productName;
             this.signMethod = builder.signMethod;
@@ -269,6 +394,13 @@ public class QueryOTAFirmwareResponseBody extends TeaModel {
          */
         public String getModuleName() {
             return this.moduleName;
+        }
+
+        /**
+         * @return multiFiles
+         */
+        public java.util.List < MultiFiles> getMultiFiles() {
+            return this.multiFiles;
         }
 
         /**
@@ -350,6 +482,7 @@ public class QueryOTAFirmwareResponseBody extends TeaModel {
             private Integer firmwareSize; 
             private String firmwareUrl; 
             private String moduleName; 
+            private java.util.List < MultiFiles> multiFiles; 
             private String productKey; 
             private String productName; 
             private String signMethod; 
@@ -422,6 +555,14 @@ public class QueryOTAFirmwareResponseBody extends TeaModel {
              */
             public Builder moduleName(String moduleName) {
                 this.moduleName = moduleName;
+                return this;
+            }
+
+            /**
+             * MultiFiles.
+             */
+            public Builder multiFiles(java.util.List < MultiFiles> multiFiles) {
+                this.multiFiles = multiFiles;
                 return this;
             }
 
