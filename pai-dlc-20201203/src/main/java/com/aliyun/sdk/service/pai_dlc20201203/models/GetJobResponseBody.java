@@ -69,6 +69,9 @@ public class GetJobResponseBody extends TeaModel {
     @NameInMap("Pods")
     private java.util.List < Pods> pods;
 
+    @NameInMap("Priority")
+    private Integer priority;
+
     @NameInMap("ReasonCode")
     private String reasonCode;
 
@@ -128,6 +131,7 @@ public class GetJobResponseBody extends TeaModel {
         this.jobSpecs = builder.jobSpecs;
         this.jobType = builder.jobType;
         this.pods = builder.pods;
+        this.priority = builder.priority;
         this.reasonCode = builder.reasonCode;
         this.reasonMessage = builder.reasonMessage;
         this.requestId = builder.requestId;
@@ -285,6 +289,13 @@ public class GetJobResponseBody extends TeaModel {
     }
 
     /**
+     * @return priority
+     */
+    public Integer getPriority() {
+        return this.priority;
+    }
+
+    /**
      * @return reasonCode
      */
     public String getReasonCode() {
@@ -395,6 +406,7 @@ public class GetJobResponseBody extends TeaModel {
         private java.util.List < JobSpec > jobSpecs; 
         private String jobType; 
         private java.util.List < Pods> pods; 
+        private Integer priority; 
         private String reasonCode; 
         private String reasonMessage; 
         private String requestId; 
@@ -558,6 +570,14 @@ public class GetJobResponseBody extends TeaModel {
          */
         public Builder pods(java.util.List < Pods> pods) {
             this.pods = pods;
+            return this;
+        }
+
+        /**
+         * 任务的优先级
+         */
+        public Builder priority(Integer priority) {
+            this.priority = priority;
             return this;
         }
 
