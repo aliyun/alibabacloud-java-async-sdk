@@ -16,7 +16,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
     private java.util.List < BasicData> basicData;
 
     @NameInMap("Checks")
-    private java.util.Map < String, ? > checks;
+    private java.util.List < java.util.Map<String, ?>> checks;
 
     @NameInMap("Columns")
     private java.util.List < Columns> columns;
@@ -27,16 +27,12 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
-    private Integer totalCount;
-
     private ListCheckInstanceResultResponseBody(Builder builder) {
         this.basicData = builder.basicData;
         this.checks = builder.checks;
         this.columns = builder.columns;
         this.pageInfo = builder.pageInfo;
         this.requestId = builder.requestId;
-        this.totalCount = builder.totalCount;
     }
 
     public static Builder builder() {
@@ -57,7 +53,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
     /**
      * @return checks
      */
-    public java.util.Map < String, ? > getChecks() {
+    public java.util.List < java.util.Map<String, ?>> getChecks() {
         return this.checks;
     }
 
@@ -82,20 +78,12 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    /**
-     * @return totalCount
-     */
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
     public static final class Builder {
         private java.util.List < BasicData> basicData; 
-        private java.util.Map < String, ? > checks; 
+        private java.util.List < java.util.Map<String, ?>> checks; 
         private java.util.List < Columns> columns; 
         private PageInfo pageInfo; 
         private String requestId; 
-        private Integer totalCount; 
 
         /**
          * BasicData.
@@ -108,7 +96,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
         /**
          * Checks.
          */
-        public Builder checks(java.util.Map < String, ? > checks) {
+        public Builder checks(java.util.List < java.util.Map<String, ?>> checks) {
             this.checks = checks;
             return this;
         }
@@ -134,14 +122,6 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * TotalCount.
-         */
-        public Builder totalCount(Integer totalCount) {
-            this.totalCount = totalCount;
             return this;
         }
 
