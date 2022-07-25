@@ -1,0 +1,31 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.dbs20210101;
+
+import com.aliyun.core.utils.SdkAutoCloseable;
+import com.aliyun.sdk.service.dbs20210101.models.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+
+import java.util.concurrent.CompletableFuture;
+
+public interface AsyncClient extends SdkAutoCloseable {
+
+    static DefaultAsyncClientBuilder builder() {
+        return new DefaultAsyncClientBuilder();
+    }
+
+    static AsyncClient create() {
+        return builder().build();
+    }
+
+    CompletableFuture<CreateSandboxInstanceResponse> createSandboxInstance(CreateSandboxInstanceRequest request);
+
+    CompletableFuture<DeleteSandboxInstanceResponse> deleteSandboxInstance(DeleteSandboxInstanceRequest request);
+
+    CompletableFuture<DescribeSandboxBackupSetsResponse> describeSandboxBackupSets(DescribeSandboxBackupSetsRequest request);
+
+    CompletableFuture<DescribeSandboxInstancesResponse> describeSandboxInstances(DescribeSandboxInstancesRequest request);
+
+    CompletableFuture<DescribeSandboxRecoveryTimeResponse> describeSandboxRecoveryTime(DescribeSandboxRecoveryTimeRequest request);
+
+}
