@@ -113,14 +113,14 @@ public class GetHotspotTagRequest extends Request {
             super();
         } 
 
-        private Builder(GetHotspotTagRequest response) {
-            super(response);
-            this.domain = response.domain;
-            this.enabled = response.enabled;
-            this.previewToken = response.previewToken;
-            this.regionId = response.regionId;
-            this.subSceneUuid = response.subSceneUuid;
-            this.type = response.type;
+        private Builder(GetHotspotTagRequest request) {
+            super(request);
+            this.domain = request.domain;
+            this.enabled = request.enabled;
+            this.previewToken = request.previewToken;
+            this.regionId = request.regionId;
+            this.subSceneUuid = request.subSceneUuid;
+            this.type = request.type;
         } 
 
         /**

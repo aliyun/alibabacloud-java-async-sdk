@@ -63,10 +63,10 @@ public class UpdateSceneRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateSceneRequest response) {
-            super(response);
-            this.id = response.id;
-            this.name = response.name;
+        private Builder(UpdateSceneRequest request) {
+            super(request);
+            this.id = request.id;
+            this.name = request.name;
         } 
 
         /**

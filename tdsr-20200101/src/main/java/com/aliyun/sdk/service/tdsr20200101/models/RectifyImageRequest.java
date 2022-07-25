@@ -62,10 +62,10 @@ public class RectifyImageRequest extends Request {
             super();
         } 
 
-        private Builder(RectifyImageRequest response) {
-            super(response);
-            this.cameraHeight = response.cameraHeight;
-            this.url = response.url;
+        private Builder(RectifyImageRequest request) {
+            super(request);
+            this.cameraHeight = request.cameraHeight;
+            this.url = request.url;
         } 
 
         /**

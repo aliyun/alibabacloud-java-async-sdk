@@ -7,13 +7,16 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteProjectResponseBody} extends {@link TeaModel}
+ * {@link SaveModelConfigResponseBody} extends {@link TeaModel}
  *
- * <p>DeleteProjectResponseBody</p>
+ * <p>SaveModelConfigResponseBody</p>
  */
-public class DeleteProjectResponseBody extends TeaModel {
-    @NameInMap("ErrMessage")
-    private String errMessage;
+public class SaveModelConfigResponseBody extends TeaModel {
+    @NameInMap("Code")
+    private Long code;
+
+    @NameInMap("Message")
+    private String message;
 
     @NameInMap("RequestId")
     private String requestId;
@@ -21,8 +24,9 @@ public class DeleteProjectResponseBody extends TeaModel {
     @NameInMap("Success")
     private Boolean success;
 
-    private DeleteProjectResponseBody(Builder builder) {
-        this.errMessage = builder.errMessage;
+    private SaveModelConfigResponseBody(Builder builder) {
+        this.code = builder.code;
+        this.message = builder.message;
         this.requestId = builder.requestId;
         this.success = builder.success;
     }
@@ -31,15 +35,22 @@ public class DeleteProjectResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static DeleteProjectResponseBody create() {
+    public static SaveModelConfigResponseBody create() {
         return builder().build();
     }
 
     /**
-     * @return errMessage
+     * @return code
      */
-    public String getErrMessage() {
-        return this.errMessage;
+    public Long getCode() {
+        return this.code;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
     }
 
     /**
@@ -57,20 +68,29 @@ public class DeleteProjectResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String errMessage; 
+        private Long code; 
+        private String message; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * ErrMessage.
+         * 返回码
          */
-        public Builder errMessage(String errMessage) {
-            this.errMessage = errMessage;
+        public Builder code(Long code) {
+            this.code = code;
             return this;
         }
 
         /**
-         * RequestId.
+         * 错误消息
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
+
+        /**
+         * 请求ID，与入参requestId对应
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,15 +98,15 @@ public class DeleteProjectResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * 是否请求成功
          */
         public Builder success(Boolean success) {
             this.success = success;
             return this;
         }
 
-        public DeleteProjectResponseBody build() {
-            return new DeleteProjectResponseBody(this);
+        public SaveModelConfigResponseBody build() {
+            return new SaveModelConfigResponseBody(this);
         } 
 
     } 

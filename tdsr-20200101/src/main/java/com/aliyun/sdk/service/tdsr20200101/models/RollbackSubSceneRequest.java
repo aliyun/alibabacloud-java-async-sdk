@@ -49,9 +49,9 @@ public class RollbackSubSceneRequest extends Request {
             super();
         } 
 
-        private Builder(RollbackSubSceneRequest response) {
-            super(response);
-            this.id = response.id;
+        private Builder(RollbackSubSceneRequest request) {
+            super(request);
+            this.id = request.id;
         } 
 
         /**

@@ -76,11 +76,11 @@ public class ListProjectRequest extends Request {
             super();
         } 
 
-        private Builder(ListProjectRequest response) {
-            super(response);
-            this.name = response.name;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
+        private Builder(ListProjectRequest request) {
+            super(request);
+            this.name = request.name;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
         } 
 
         /**

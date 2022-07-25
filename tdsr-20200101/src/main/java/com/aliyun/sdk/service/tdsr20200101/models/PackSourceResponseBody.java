@@ -7,16 +7,19 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListScenesResponseBody} extends {@link TeaModel}
+ * {@link PackSourceResponseBody} extends {@link TeaModel}
  *
- * <p>ListScenesResponseBody</p>
+ * <p>PackSourceResponseBody</p>
  */
-public class ListScenesResponseBody extends TeaModel {
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+public class PackSourceResponseBody extends TeaModel {
+    @NameInMap("Code")
+    private Long code;
 
-    @NameInMap("ErrMessage")
-    private String errMessage;
+    @NameInMap("Data")
+    private Data data;
+
+    @NameInMap("Message")
+    private String message;
 
     @NameInMap("RequestId")
     private String requestId;
@@ -24,9 +27,10 @@ public class ListScenesResponseBody extends TeaModel {
     @NameInMap("Success")
     private Boolean success;
 
-    private ListScenesResponseBody(Builder builder) {
+    private PackSourceResponseBody(Builder builder) {
+        this.code = builder.code;
         this.data = builder.data;
-        this.errMessage = builder.errMessage;
+        this.message = builder.message;
         this.requestId = builder.requestId;
         this.success = builder.success;
     }
@@ -35,22 +39,29 @@ public class ListScenesResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ListScenesResponseBody create() {
+    public static PackSourceResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return code
+     */
+    public Long getCode() {
+        return this.code;
     }
 
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public Data getData() {
         return this.data;
     }
 
     /**
-     * @return errMessage
+     * @return message
      */
-    public String getErrMessage() {
-        return this.errMessage;
+    public String getMessage() {
+        return this.message;
     }
 
     /**
@@ -68,29 +79,38 @@ public class ListScenesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
-        private String errMessage; 
+        private Long code; 
+        private Data data; 
+        private String message; 
         private String requestId; 
         private Boolean success; 
 
         /**
+         * 返回码
+         */
+        public Builder code(Long code) {
+            this.code = code;
+            return this;
+        }
+
+        /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(Data data) {
             this.data = data;
             return this;
         }
 
         /**
-         * ErrMessage.
+         * 错误消息
          */
-        public Builder errMessage(String errMessage) {
-            this.errMessage = errMessage;
+        public Builder message(String message) {
+            this.message = message;
             return this;
         }
 
         /**
-         * RequestId.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,25 +118,25 @@ public class ListScenesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * 是否请求成功
          */
         public Builder success(Boolean success) {
             this.success = success;
             return this;
         }
 
-        public ListScenesResponseBody build() {
-            return new ListScenesResponseBody(this);
+        public PackSourceResponseBody build() {
+            return new PackSourceResponseBody(this);
         } 
 
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("SceneId")
-        private String sceneId;
+        @NameInMap("TaskId")
+        private String taskId;
 
         private Data(Builder builder) {
-            this.sceneId = builder.sceneId;
+            this.taskId = builder.taskId;
         }
 
         public static Builder builder() {
@@ -128,20 +148,20 @@ public class ListScenesResponseBody extends TeaModel {
         }
 
         /**
-         * @return sceneId
+         * @return taskId
          */
-        public String getSceneId() {
-            return this.sceneId;
+        public String getTaskId() {
+            return this.taskId;
         }
 
         public static final class Builder {
-            private String sceneId; 
+            private String taskId; 
 
             /**
-             * SceneId.
+             * 任务ID
              */
-            public Builder sceneId(String sceneId) {
-                this.sceneId = sceneId;
+            public Builder taskId(String taskId) {
+                this.taskId = taskId;
                 return this;
             }
 

@@ -49,9 +49,9 @@ public class AddRoomPlanRequest extends Request {
             super();
         } 
 
-        private Builder(AddRoomPlanRequest response) {
-            super(response);
-            this.sceneId = response.sceneId;
+        private Builder(AddRoomPlanRequest request) {
+            super(request);
+            this.sceneId = request.sceneId;
         } 
 
         /**

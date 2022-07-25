@@ -75,11 +75,11 @@ public class GetScenePreviewInfoRequest extends Request {
             super();
         } 
 
-        private Builder(GetScenePreviewInfoRequest response) {
-            super(response);
-            this.domain = response.domain;
-            this.enabled = response.enabled;
-            this.modelToken = response.modelToken;
+        private Builder(GetScenePreviewInfoRequest request) {
+            super(request);
+            this.domain = request.domain;
+            this.enabled = request.enabled;
+            this.modelToken = request.modelToken;
         } 
 
         /**

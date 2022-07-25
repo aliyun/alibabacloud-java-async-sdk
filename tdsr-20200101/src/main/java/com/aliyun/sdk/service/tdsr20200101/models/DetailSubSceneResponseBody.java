@@ -45,6 +45,9 @@ public class DetailSubSceneResponseBody extends TeaModel {
     @NameInMap("OriginUrl")
     private String originUrl;
 
+    @NameInMap("Position")
+    private String position;
+
     @NameInMap("RequestId")
     private String requestId;
 
@@ -75,6 +78,7 @@ public class DetailSubSceneResponseBody extends TeaModel {
         this.message = builder.message;
         this.name = builder.name;
         this.originUrl = builder.originUrl;
+        this.position = builder.position;
         this.requestId = builder.requestId;
         this.resourceId = builder.resourceId;
         this.status = builder.status;
@@ -169,6 +173,13 @@ public class DetailSubSceneResponseBody extends TeaModel {
     }
 
     /**
+     * @return position
+     */
+    public String getPosition() {
+        return this.position;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -222,6 +233,7 @@ public class DetailSubSceneResponseBody extends TeaModel {
         private String message; 
         private String name; 
         private String originUrl; 
+        private String position; 
         private String requestId; 
         private String resourceId; 
         private Long status; 
@@ -318,6 +330,14 @@ public class DetailSubSceneResponseBody extends TeaModel {
         }
 
         /**
+         * 视角
+         */
+        public Builder position(String position) {
+            this.position = position;
+            return this;
+        }
+
+        /**
          * 请求ID，与入参requestId对应
          */
         public Builder requestId(String requestId) {
@@ -350,7 +370,7 @@ public class DetailSubSceneResponseBody extends TeaModel {
         }
 
         /**
-         * 资源类型
+         * 资源类型，IMAGE：图片，VIDEO：视频
          */
         public Builder type(String type) {
             this.type = type;

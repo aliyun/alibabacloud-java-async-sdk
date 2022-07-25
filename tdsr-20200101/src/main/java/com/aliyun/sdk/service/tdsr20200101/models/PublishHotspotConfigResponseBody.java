@@ -7,19 +7,16 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateProjectResponseBody} extends {@link TeaModel}
+ * {@link PublishHotspotConfigResponseBody} extends {@link TeaModel}
  *
- * <p>CreateProjectResponseBody</p>
+ * <p>PublishHotspotConfigResponseBody</p>
  */
-public class CreateProjectResponseBody extends TeaModel {
-    @NameInMap("ErrMessage")
-    private String errMessage;
+public class PublishHotspotConfigResponseBody extends TeaModel {
+    @NameInMap("Code")
+    private Long code;
 
-    @NameInMap("Id")
-    private Long id;
-
-    @NameInMap("Name")
-    private String name;
+    @NameInMap("Message")
+    private String message;
 
     @NameInMap("RequestId")
     private String requestId;
@@ -27,10 +24,9 @@ public class CreateProjectResponseBody extends TeaModel {
     @NameInMap("Success")
     private Boolean success;
 
-    private CreateProjectResponseBody(Builder builder) {
-        this.errMessage = builder.errMessage;
-        this.id = builder.id;
-        this.name = builder.name;
+    private PublishHotspotConfigResponseBody(Builder builder) {
+        this.code = builder.code;
+        this.message = builder.message;
         this.requestId = builder.requestId;
         this.success = builder.success;
     }
@@ -39,29 +35,22 @@ public class CreateProjectResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static CreateProjectResponseBody create() {
+    public static PublishHotspotConfigResponseBody create() {
         return builder().build();
     }
 
     /**
-     * @return errMessage
+     * @return code
      */
-    public String getErrMessage() {
-        return this.errMessage;
+    public Long getCode() {
+        return this.code;
     }
 
     /**
-     * @return id
+     * @return message
      */
-    public Long getId() {
-        return this.id;
-    }
-
-    /**
-     * @return name
-     */
-    public String getName() {
-        return this.name;
+    public String getMessage() {
+        return this.message;
     }
 
     /**
@@ -79,38 +68,29 @@ public class CreateProjectResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String errMessage; 
-        private Long id; 
-        private String name; 
+        private Long code; 
+        private String message; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * ErrMessage.
+         * 返回码
          */
-        public Builder errMessage(String errMessage) {
-            this.errMessage = errMessage;
+        public Builder code(Long code) {
+            this.code = code;
             return this;
         }
 
         /**
-         * Id.
+         * 错误消息
          */
-        public Builder id(Long id) {
-            this.id = id;
+        public Builder message(String message) {
+            this.message = message;
             return this;
         }
 
         /**
-         * Name.
-         */
-        public Builder name(String name) {
-            this.name = name;
-            return this;
-        }
-
-        /**
-         * RequestId.
+         * 请求ID，与入参requestId对应
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,15 +98,15 @@ public class CreateProjectResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * 是否请求成功
          */
         public Builder success(Boolean success) {
             this.success = success;
             return this;
         }
 
-        public CreateProjectResponseBody build() {
-            return new CreateProjectResponseBody(this);
+        public PublishHotspotConfigResponseBody build() {
+            return new PublishHotspotConfigResponseBody(this);
         } 
 
     } 

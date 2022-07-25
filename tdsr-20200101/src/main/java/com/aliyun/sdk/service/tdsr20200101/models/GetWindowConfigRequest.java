@@ -61,10 +61,10 @@ public class GetWindowConfigRequest extends Request {
             super();
         } 
 
-        private Builder(GetWindowConfigRequest response) {
-            super(response);
-            this.previewToken = response.previewToken;
-            this.regionId = response.regionId;
+        private Builder(GetWindowConfigRequest request) {
+            super(request);
+            this.previewToken = request.previewToken;
+            this.regionId = request.regionId;
         } 
 
         /**

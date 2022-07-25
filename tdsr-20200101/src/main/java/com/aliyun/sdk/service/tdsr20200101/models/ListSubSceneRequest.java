@@ -31,12 +31,17 @@ public class ListSubSceneRequest extends Request {
     @NameInMap("ShowLayoutData")
     private Boolean showLayoutData;
 
+    @Query
+    @NameInMap("SortField")
+    private String sortField;
+
     private ListSubSceneRequest(Builder builder) {
         super(builder);
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
         this.sceneId = builder.sceneId;
         this.showLayoutData = builder.showLayoutData;
+        this.sortField = builder.sortField;
     }
 
     public static Builder builder() {
@@ -80,22 +85,31 @@ public class ListSubSceneRequest extends Request {
         return this.showLayoutData;
     }
 
+    /**
+     * @return sortField
+     */
+    public String getSortField() {
+        return this.sortField;
+    }
+
     public static final class Builder extends Request.Builder<ListSubSceneRequest, Builder> {
         private Long pageNum; 
         private Long pageSize; 
         private String sceneId; 
         private Boolean showLayoutData; 
+        private String sortField; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListSubSceneRequest response) {
-            super(response);
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.sceneId = response.sceneId;
-            this.showLayoutData = response.showLayoutData;
+        private Builder(ListSubSceneRequest request) {
+            super(request);
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.sceneId = request.sceneId;
+            this.showLayoutData = request.showLayoutData;
+            this.sortField = request.sortField;
         } 
 
         /**
@@ -131,6 +145,15 @@ public class ListSubSceneRequest extends Request {
         public Builder showLayoutData(Boolean showLayoutData) {
             this.putQueryParameter("ShowLayoutData", showLayoutData);
             this.showLayoutData = showLayoutData;
+            return this;
+        }
+
+        /**
+         * 排序字段，默认：NAME（名称），SEQUENCE（自定义排序）
+         */
+        public Builder sortField(String sortField) {
+            this.putQueryParameter("SortField", sortField);
+            this.sortField = sortField;
             return this;
         }
 

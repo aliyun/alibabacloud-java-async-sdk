@@ -63,10 +63,10 @@ public class UpdateConnDataRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateConnDataRequest response) {
-            super(response);
-            this.connData = response.connData;
-            this.sceneId = response.sceneId;
+        private Builder(UpdateConnDataRequest request) {
+            super(request);
+            this.connData = request.connData;
+            this.sceneId = request.sceneId;
         } 
 
         /**

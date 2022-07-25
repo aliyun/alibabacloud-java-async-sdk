@@ -49,9 +49,9 @@ public class GetLayoutDataRequest extends Request {
             super();
         } 
 
-        private Builder(GetLayoutDataRequest response) {
-            super(response);
-            this.subSceneId = response.subSceneId;
+        private Builder(GetLayoutDataRequest request) {
+            super(request);
+            this.subSceneId = request.subSceneId;
         } 
 
         /**

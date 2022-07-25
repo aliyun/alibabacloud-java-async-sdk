@@ -63,10 +63,10 @@ public class AddMosaicsRequest extends Request {
             super();
         } 
 
-        private Builder(AddMosaicsRequest response) {
-            super(response);
-            this.markPosition = response.markPosition;
-            this.subSceneId = response.subSceneId;
+        private Builder(AddMosaicsRequest request) {
+            super(request);
+            this.markPosition = request.markPosition;
+            this.subSceneId = request.subSceneId;
         } 
 
         /**

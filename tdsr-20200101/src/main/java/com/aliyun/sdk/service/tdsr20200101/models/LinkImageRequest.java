@@ -89,12 +89,12 @@ public class LinkImageRequest extends Request {
             super();
         } 
 
-        private Builder(LinkImageRequest response) {
-            super(response);
-            this.cameraHeight = response.cameraHeight;
-            this.fileName = response.fileName;
-            this.platform = response.platform;
-            this.subSceneId = response.subSceneId;
+        private Builder(LinkImageRequest request) {
+            super(request);
+            this.cameraHeight = request.cameraHeight;
+            this.fileName = request.fileName;
+            this.platform = request.platform;
+            this.subSceneId = request.subSceneId;
         } 
 
         /**

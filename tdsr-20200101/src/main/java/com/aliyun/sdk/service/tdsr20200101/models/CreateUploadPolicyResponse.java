@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CheckResourceResponse} extends {@link TeaModel}
+ * {@link CreateUploadPolicyResponse} extends {@link TeaModel}
  *
- * <p>CheckResourceResponse</p>
+ * <p>CreateUploadPolicyResponse</p>
  */
-public class CheckResourceResponse extends Response {
+public class CreateUploadPolicyResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private CheckResourceResponseBody body;
+    private CreateUploadPolicyResponseBody body;
 
-    private CheckResourceResponse(BuilderImpl builder) {
+    private CreateUploadPolicyResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static CheckResourceResponse create() {
+    public static CreateUploadPolicyResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class CheckResourceResponse extends Response {
     /**
      * @return body
      */
-    public CheckResourceResponseBody getBody() {
+    public CreateUploadPolicyResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<CheckResourceResponse, Builder> {
+    public interface Builder extends Response.Builder<CreateUploadPolicyResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(CheckResourceResponseBody body);
+        Builder body(CreateUploadPolicyResponseBody body);
 
         @Override
-        CheckResourceResponse build();
+        CreateUploadPolicyResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<CheckResourceResponse, Builder>
+            extends Response.BuilderImpl<CreateUploadPolicyResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private CheckResourceResponseBody body; 
+        private CreateUploadPolicyResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(CheckResourceResponse response) {
+        private BuilderImpl(CreateUploadPolicyResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class CheckResourceResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(CheckResourceResponseBody body) {
+        public Builder body(CreateUploadPolicyResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public CheckResourceResponse build() {
-            return new CheckResourceResponse(this);
+        public CreateUploadPolicyResponse build() {
+            return new CreateUploadPolicyResponse(this);
         } 
 
     } 

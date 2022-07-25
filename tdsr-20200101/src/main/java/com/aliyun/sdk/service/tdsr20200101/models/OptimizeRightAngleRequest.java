@@ -49,9 +49,9 @@ public class OptimizeRightAngleRequest extends Request {
             super();
         } 
 
-        private Builder(OptimizeRightAngleRequest response) {
-            super(response);
-            this.subSceneId = response.subSceneId;
+        private Builder(OptimizeRightAngleRequest request) {
+            super(request);
+            this.subSceneId = request.subSceneId;
         } 
 
         /**

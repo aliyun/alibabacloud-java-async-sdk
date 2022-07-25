@@ -49,9 +49,9 @@ public class GetRectifyImageRequest extends Request {
             super();
         } 
 
-        private Builder(GetRectifyImageRequest response) {
-            super(response);
-            this.subSceneId = response.subSceneId;
+        private Builder(GetRectifyImageRequest request) {
+            super(request);
+            this.subSceneId = request.subSceneId;
         } 
 
         /**

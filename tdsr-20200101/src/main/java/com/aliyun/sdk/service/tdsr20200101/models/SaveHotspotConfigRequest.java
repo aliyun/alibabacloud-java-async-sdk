@@ -74,11 +74,11 @@ public class SaveHotspotConfigRequest extends Request {
             super();
         } 
 
-        private Builder(SaveHotspotConfigRequest response) {
-            super(response);
-            this.paramTag = response.paramTag;
-            this.previewToken = response.previewToken;
-            this.regionId = response.regionId;
+        private Builder(SaveHotspotConfigRequest request) {
+            super(request);
+            this.paramTag = request.paramTag;
+            this.previewToken = request.previewToken;
+            this.regionId = request.regionId;
         } 
 
         /**

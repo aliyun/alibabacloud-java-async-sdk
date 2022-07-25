@@ -74,11 +74,11 @@ public class SaveHotspotTagRequest extends Request {
             super();
         } 
 
-        private Builder(SaveHotspotTagRequest response) {
-            super(response);
-            this.paramTag = response.paramTag;
-            this.regionId = response.regionId;
-            this.subSceneUuid = response.subSceneUuid;
+        private Builder(SaveHotspotTagRequest request) {
+            super(request);
+            this.paramTag = request.paramTag;
+            this.regionId = request.regionId;
+            this.subSceneUuid = request.subSceneUuid;
         } 
 
         /**

@@ -62,10 +62,10 @@ public class PredictionWallLineRequest extends Request {
             super();
         } 
 
-        private Builder(PredictionWallLineRequest response) {
-            super(response);
-            this.cameraHeight = response.cameraHeight;
-            this.url = response.url;
+        private Builder(PredictionWallLineRequest request) {
+            super(request);
+            this.cameraHeight = request.cameraHeight;
+            this.url = request.url;
         } 
 
         /**

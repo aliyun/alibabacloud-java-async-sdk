@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteProjectResponse} extends {@link TeaModel}
+ * {@link CopySceneResponse} extends {@link TeaModel}
  *
- * <p>DeleteProjectResponse</p>
+ * <p>CopySceneResponse</p>
  */
-public class DeleteProjectResponse extends Response {
+public class CopySceneResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private DeleteProjectResponseBody body;
+    private CopySceneResponseBody body;
 
-    private DeleteProjectResponse(BuilderImpl builder) {
+    private CopySceneResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static DeleteProjectResponse create() {
+    public static CopySceneResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class DeleteProjectResponse extends Response {
     /**
      * @return body
      */
-    public DeleteProjectResponseBody getBody() {
+    public CopySceneResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DeleteProjectResponse, Builder> {
+    public interface Builder extends Response.Builder<CopySceneResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(DeleteProjectResponseBody body);
+        Builder body(CopySceneResponseBody body);
 
         @Override
-        DeleteProjectResponse build();
+        CopySceneResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DeleteProjectResponse, Builder>
+            extends Response.BuilderImpl<CopySceneResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private DeleteProjectResponseBody body; 
+        private CopySceneResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DeleteProjectResponse response) {
+        private BuilderImpl(CopySceneResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class DeleteProjectResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DeleteProjectResponseBody body) {
+        public Builder body(CopySceneResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DeleteProjectResponse build() {
-            return new DeleteProjectResponse(this);
+        public CopySceneResponse build() {
+            return new CopySceneResponse(this);
         } 
 
     } 

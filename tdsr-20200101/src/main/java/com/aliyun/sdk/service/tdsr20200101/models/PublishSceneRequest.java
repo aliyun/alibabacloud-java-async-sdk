@@ -49,9 +49,9 @@ public class PublishSceneRequest extends Request {
             super();
         } 
 
-        private Builder(PublishSceneRequest response) {
-            super(response);
-            this.sceneId = response.sceneId;
+        private Builder(PublishSceneRequest request) {
+            super(request);
+            this.sceneId = request.sceneId;
         } 
 
         /**

@@ -49,9 +49,9 @@ public class DetailProjectRequest extends Request {
             super();
         } 
 
-        private Builder(DetailProjectRequest response) {
-            super(response);
-            this.id = response.id;
+        private Builder(DetailProjectRequest request) {
+            super(request);
+            this.id = request.id;
         } 
 
         /**

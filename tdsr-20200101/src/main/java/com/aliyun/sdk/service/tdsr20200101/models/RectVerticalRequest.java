@@ -89,12 +89,12 @@ public class RectVerticalRequest extends Request {
             super();
         } 
 
-        private Builder(RectVerticalRequest response) {
-            super(response);
-            this.countDetectDoor = response.countDetectDoor;
-            this.detectDoor = response.detectDoor;
-            this.subSceneId = response.subSceneId;
-            this.verticalRect = response.verticalRect;
+        private Builder(RectVerticalRequest request) {
+            super(request);
+            this.countDetectDoor = request.countDetectDoor;
+            this.detectDoor = request.detectDoor;
+            this.subSceneId = request.subSceneId;
+            this.verticalRect = request.verticalRect;
         } 
 
         /**

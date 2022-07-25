@@ -49,9 +49,9 @@ public class GetOriginLayoutDataRequest extends Request {
             super();
         } 
 
-        private Builder(GetOriginLayoutDataRequest response) {
-            super(response);
-            this.subSceneId = response.subSceneId;
+        private Builder(GetOriginLayoutDataRequest request) {
+            super(request);
+            this.subSceneId = request.subSceneId;
         } 
 
         /**

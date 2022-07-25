@@ -62,10 +62,10 @@ public class AddProjectRequest extends Request {
             super();
         } 
 
-        private Builder(AddProjectRequest response) {
-            super(response);
-            this.businessId = response.businessId;
-            this.name = response.name;
+        private Builder(AddProjectRequest request) {
+            super(request);
+            this.businessId = request.businessId;
+            this.name = request.name;
         } 
 
         /**

@@ -49,9 +49,9 @@ public class PublishStatusRequest extends Request {
             super();
         } 
 
-        private Builder(PublishStatusRequest response) {
-            super(response);
-            this.sceneId = response.sceneId;
+        private Builder(PublishStatusRequest request) {
+            super(request);
+            this.sceneId = request.sceneId;
         } 
 
         /**

@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateProjectResponse} extends {@link TeaModel}
+ * {@link SaveHotspotTagListResponse} extends {@link TeaModel}
  *
- * <p>CreateProjectResponse</p>
+ * <p>SaveHotspotTagListResponse</p>
  */
-public class CreateProjectResponse extends Response {
+public class SaveHotspotTagListResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private CreateProjectResponseBody body;
+    private SaveHotspotTagListResponseBody body;
 
-    private CreateProjectResponse(BuilderImpl builder) {
+    private SaveHotspotTagListResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static CreateProjectResponse create() {
+    public static SaveHotspotTagListResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class CreateProjectResponse extends Response {
     /**
      * @return body
      */
-    public CreateProjectResponseBody getBody() {
+    public SaveHotspotTagListResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<CreateProjectResponse, Builder> {
+    public interface Builder extends Response.Builder<SaveHotspotTagListResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(CreateProjectResponseBody body);
+        Builder body(SaveHotspotTagListResponseBody body);
 
         @Override
-        CreateProjectResponse build();
+        SaveHotspotTagListResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<CreateProjectResponse, Builder>
+            extends Response.BuilderImpl<SaveHotspotTagListResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private CreateProjectResponseBody body; 
+        private SaveHotspotTagListResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(CreateProjectResponse response) {
+        private BuilderImpl(SaveHotspotTagListResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class CreateProjectResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(CreateProjectResponseBody body) {
+        public Builder body(SaveHotspotTagListResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public CreateProjectResponse build() {
-            return new CreateProjectResponse(this);
+        public SaveHotspotTagListResponse build() {
+            return new SaveHotspotTagListResponse(this);
         } 
 
     } 

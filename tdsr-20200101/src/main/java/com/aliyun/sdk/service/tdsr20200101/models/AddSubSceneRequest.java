@@ -76,11 +76,11 @@ public class AddSubSceneRequest extends Request {
             super();
         } 
 
-        private Builder(AddSubSceneRequest response) {
-            super(response);
-            this.name = response.name;
-            this.sceneId = response.sceneId;
-            this.uploadType = response.uploadType;
+        private Builder(AddSubSceneRequest request) {
+            super(request);
+            this.name = request.name;
+            this.sceneId = request.sceneId;
+            this.uploadType = request.uploadType;
         } 
 
         /**

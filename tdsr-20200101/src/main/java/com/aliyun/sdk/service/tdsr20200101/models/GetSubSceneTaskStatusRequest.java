@@ -49,9 +49,9 @@ public class GetSubSceneTaskStatusRequest extends Request {
             super();
         } 
 
-        private Builder(GetSubSceneTaskStatusRequest response) {
-            super(response);
-            this.subSceneId = response.subSceneId;
+        private Builder(GetSubSceneTaskStatusRequest request) {
+            super(request);
+            this.subSceneId = request.subSceneId;
         } 
 
         /**

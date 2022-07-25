@@ -30,15 +30,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AddSubSceneResponse> addSubScene(AddSubSceneRequest request);
 
-    CompletableFuture<CheckResourceResponse> checkResource(CheckResourceRequest request);
+    CompletableFuture<CheckUserPropertyResponse> checkUserProperty(CheckUserPropertyRequest request);
 
-    CompletableFuture<CreateProjectResponse> createProject(CreateProjectRequest request);
+    CompletableFuture<CopySceneResponse> copyScene(CopySceneRequest request);
 
-    CompletableFuture<CreateSceneResponse> createScene(CreateSceneRequest request);
-
-    CompletableFuture<DeleteFileResponse> deleteFile(DeleteFileRequest request);
-
-    CompletableFuture<DeleteProjectResponse> deleteProject(DeleteProjectRequest request);
+    CompletableFuture<CreateUploadPolicyResponse> createUploadPolicy(CreateUploadPolicyRequest request);
 
     CompletableFuture<DetailProjectResponse> detailProject(DetailProjectRequest request);
 
@@ -54,6 +50,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetConnDataResponse> getConnData(GetConnDataRequest request);
 
+    CompletableFuture<GetCopySceneTaskStatusResponse> getCopySceneTaskStatus(GetCopySceneTaskStatusRequest request);
+
     CompletableFuture<GetHotspotConfigResponse> getHotspotConfig(GetHotspotConfigRequest request);
 
     CompletableFuture<GetHotspotSceneDataResponse> getHotspotSceneData(GetHotspotSceneDataRequest request);
@@ -66,17 +64,23 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetOssPolicyResponse> getOssPolicy(GetOssPolicyRequest request);
 
-    CompletableFuture<GetPolicyResponse> getPolicy(GetPolicyRequest request);
+    CompletableFuture<GetPackSceneTaskStatusResponse> getPackSceneTaskStatus(GetPackSceneTaskStatusRequest request);
 
     CompletableFuture<GetRectifyImageResponse> getRectifyImage(GetRectifyImageRequest request);
 
     CompletableFuture<GetSceneBuildTaskStatusResponse> getSceneBuildTaskStatus(GetSceneBuildTaskStatusRequest request);
 
+    CompletableFuture<GetScenePackUrlResponse> getScenePackUrl(GetScenePackUrlRequest request);
+
     CompletableFuture<GetScenePreviewDataResponse> getScenePreviewData(GetScenePreviewDataRequest request);
 
     CompletableFuture<GetScenePreviewInfoResponse> getScenePreviewInfo(GetScenePreviewInfoRequest request);
 
+    CompletableFuture<GetScenePreviewResourceResponse> getScenePreviewResource(GetScenePreviewResourceRequest request);
+
     CompletableFuture<GetSingleConnDataResponse> getSingleConnData(GetSingleConnDataRequest request);
+
+    CompletableFuture<GetSourcePackStatusResponse> getSourcePackStatus(GetSourcePackStatusRequest request);
 
     CompletableFuture<GetSubSceneTaskStatusResponse> getSubSceneTaskStatus(GetSubSceneTaskStatusRequest request);
 
@@ -92,17 +96,21 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListSceneResponse> listScene(ListSceneRequest request);
 
-    CompletableFuture<ListScenesResponse> listScenes(ListScenesRequest request);
-
     CompletableFuture<ListSubSceneResponse> listSubScene(ListSubSceneRequest request);
 
     CompletableFuture<OptimizeRightAngleResponse> optimizeRightAngle(OptimizeRightAngleRequest request);
+
+    CompletableFuture<PackSceneResponse> packScene(PackSceneRequest request);
+
+    CompletableFuture<PackSourceResponse> packSource(PackSourceRequest request);
 
     CompletableFuture<PredImageResponse> predImage(PredImageRequest request);
 
     CompletableFuture<PredictionWallLineResponse> predictionWallLine(PredictionWallLineRequest request);
 
     CompletableFuture<PublishHotspotResponse> publishHotspot(PublishHotspotRequest request);
+
+    CompletableFuture<PublishHotspotConfigResponse> publishHotspotConfig(PublishHotspotConfigRequest request);
 
     CompletableFuture<PublishSceneResponse> publishScene(PublishSceneRequest request);
 
@@ -120,6 +128,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<SaveHotspotTagResponse> saveHotspotTag(SaveHotspotTagRequest request);
 
+    CompletableFuture<SaveHotspotTagListResponse> saveHotspotTagList(SaveHotspotTagListRequest request);
+
+    CompletableFuture<SaveModelConfigResponse> saveModelConfig(SaveModelConfigRequest request);
+
     CompletableFuture<ScenePublishResponse> scenePublish(ScenePublishRequest request);
 
     CompletableFuture<TempPreviewResponse> tempPreview(TempPreviewRequest request);
@@ -135,5 +147,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateSceneResponse> updateScene(UpdateSceneRequest request);
 
     CompletableFuture<UpdateSubSceneResponse> updateSubScene(UpdateSubSceneRequest request);
+
+    CompletableFuture<UpdateSubSceneSeqResponse> updateSubSceneSeq(UpdateSubSceneSeqRequest request);
 
 }

@@ -49,9 +49,9 @@ public class GetSingleConnDataRequest extends Request {
             super();
         } 
 
-        private Builder(GetSingleConnDataRequest response) {
-            super(response);
-            this.subSceneId = response.subSceneId;
+        private Builder(GetSingleConnDataRequest request) {
+            super(request);
+            this.subSceneId = request.subSceneId;
         } 
 
         /**

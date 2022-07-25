@@ -90,12 +90,12 @@ public class PredImageRequest extends Request {
             super();
         } 
 
-        private Builder(PredImageRequest response) {
-            super(response);
-            this.correctVertical = response.correctVertical;
-            this.countDetectDoor = response.countDetectDoor;
-            this.detectDoor = response.detectDoor;
-            this.subSceneId = response.subSceneId;
+        private Builder(PredImageRequest request) {
+            super(request);
+            this.correctVertical = request.correctVertical;
+            this.countDetectDoor = request.countDetectDoor;
+            this.detectDoor = request.detectDoor;
+            this.subSceneId = request.subSceneId;
         } 
 
         /**

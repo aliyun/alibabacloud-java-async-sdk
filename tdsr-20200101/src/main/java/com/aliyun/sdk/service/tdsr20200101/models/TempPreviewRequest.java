@@ -49,9 +49,9 @@ public class TempPreviewRequest extends Request {
             super();
         } 
 
-        private Builder(TempPreviewRequest response) {
-            super(response);
-            this.sceneId = response.sceneId;
+        private Builder(TempPreviewRequest request) {
+            super(request);
+            this.sceneId = request.sceneId;
         } 
 
         /**

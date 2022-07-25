@@ -7,19 +7,19 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetPolicyResponseBody} extends {@link TeaModel}
+ * {@link CheckUserPropertyResponseBody} extends {@link TeaModel}
  *
- * <p>GetPolicyResponseBody</p>
+ * <p>CheckUserPropertyResponseBody</p>
  */
-public class GetPolicyResponseBody extends TeaModel {
-    @NameInMap("Data")
-    private java.util.Map < String, ? > data;
+public class CheckUserPropertyResponseBody extends TeaModel {
+    @NameInMap("Code")
+    private Long code;
 
-    @NameInMap("ErrMessage")
-    private String errMessage;
+    @NameInMap("Match")
+    private Boolean match;
 
-    @NameInMap("ObjectString")
-    private String objectString;
+    @NameInMap("Message")
+    private String message;
 
     @NameInMap("RequestId")
     private String requestId;
@@ -27,10 +27,10 @@ public class GetPolicyResponseBody extends TeaModel {
     @NameInMap("Success")
     private Boolean success;
 
-    private GetPolicyResponseBody(Builder builder) {
-        this.data = builder.data;
-        this.errMessage = builder.errMessage;
-        this.objectString = builder.objectString;
+    private CheckUserPropertyResponseBody(Builder builder) {
+        this.code = builder.code;
+        this.match = builder.match;
+        this.message = builder.message;
         this.requestId = builder.requestId;
         this.success = builder.success;
     }
@@ -39,29 +39,29 @@ public class GetPolicyResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static GetPolicyResponseBody create() {
+    public static CheckUserPropertyResponseBody create() {
         return builder().build();
     }
 
     /**
-     * @return data
+     * @return code
      */
-    public java.util.Map < String, ? > getData() {
-        return this.data;
+    public Long getCode() {
+        return this.code;
     }
 
     /**
-     * @return errMessage
+     * @return match
      */
-    public String getErrMessage() {
-        return this.errMessage;
+    public Boolean getMatch() {
+        return this.match;
     }
 
     /**
-     * @return objectString
+     * @return message
      */
-    public String getObjectString() {
-        return this.objectString;
+    public String getMessage() {
+        return this.message;
     }
 
     /**
@@ -79,38 +79,38 @@ public class GetPolicyResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.Map < String, ? > data; 
-        private String errMessage; 
-        private String objectString; 
+        private Long code; 
+        private Boolean match; 
+        private String message; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * Data.
+         * 返回码
          */
-        public Builder data(java.util.Map < String, ? > data) {
-            this.data = data;
+        public Builder code(Long code) {
+            this.code = code;
             return this;
         }
 
         /**
-         * ErrMessage.
+         * 用户属性是否匹配
          */
-        public Builder errMessage(String errMessage) {
-            this.errMessage = errMessage;
+        public Builder match(Boolean match) {
+            this.match = match;
             return this;
         }
 
         /**
-         * ObjectString.
+         * 错误消息
          */
-        public Builder objectString(String objectString) {
-            this.objectString = objectString;
+        public Builder message(String message) {
+            this.message = message;
             return this;
         }
 
         /**
-         * RequestId.
+         * 请求ID，与入参requestId对应
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,15 +118,15 @@ public class GetPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * 是否请求成功
          */
         public Builder success(Boolean success) {
             this.success = success;
             return this;
         }
 
-        public GetPolicyResponseBody build() {
-            return new GetPolicyResponseBody(this);
+        public CheckUserPropertyResponseBody build() {
+            return new CheckUserPropertyResponseBody(this);
         } 
 
     } 

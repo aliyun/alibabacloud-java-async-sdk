@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetPolicyResponse} extends {@link TeaModel}
+ * {@link GetPackSceneTaskStatusResponse} extends {@link TeaModel}
  *
- * <p>GetPolicyResponse</p>
+ * <p>GetPackSceneTaskStatusResponse</p>
  */
-public class GetPolicyResponse extends Response {
+public class GetPackSceneTaskStatusResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private GetPolicyResponseBody body;
+    private GetPackSceneTaskStatusResponseBody body;
 
-    private GetPolicyResponse(BuilderImpl builder) {
+    private GetPackSceneTaskStatusResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static GetPolicyResponse create() {
+    public static GetPackSceneTaskStatusResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class GetPolicyResponse extends Response {
     /**
      * @return body
      */
-    public GetPolicyResponseBody getBody() {
+    public GetPackSceneTaskStatusResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetPolicyResponse, Builder> {
+    public interface Builder extends Response.Builder<GetPackSceneTaskStatusResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(GetPolicyResponseBody body);
+        Builder body(GetPackSceneTaskStatusResponseBody body);
 
         @Override
-        GetPolicyResponse build();
+        GetPackSceneTaskStatusResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetPolicyResponse, Builder>
+            extends Response.BuilderImpl<GetPackSceneTaskStatusResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private GetPolicyResponseBody body; 
+        private GetPackSceneTaskStatusResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetPolicyResponse response) {
+        private BuilderImpl(GetPackSceneTaskStatusResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class GetPolicyResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetPolicyResponseBody body) {
+        public Builder body(GetPackSceneTaskStatusResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetPolicyResponse build() {
-            return new GetPolicyResponse(this);
+        public GetPackSceneTaskStatusResponse build() {
+            return new GetPackSceneTaskStatusResponse(this);
         } 
 
     } 

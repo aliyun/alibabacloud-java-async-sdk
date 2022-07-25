@@ -27,12 +27,16 @@ public class PublishStatusResponseBody extends TeaModel {
     @NameInMap("Success")
     private Boolean success;
 
+    @NameInMap("SyncStatus")
+    private String syncStatus;
+
     private PublishStatusResponseBody(Builder builder) {
         this.code = builder.code;
         this.message = builder.message;
         this.requestId = builder.requestId;
         this.status = builder.status;
         this.success = builder.success;
+        this.syncStatus = builder.syncStatus;
     }
 
     public static Builder builder() {
@@ -78,12 +82,20 @@ public class PublishStatusResponseBody extends TeaModel {
         return this.success;
     }
 
+    /**
+     * @return syncStatus
+     */
+    public String getSyncStatus() {
+        return this.syncStatus;
+    }
+
     public static final class Builder {
         private Long code; 
         private String message; 
         private String requestId; 
         private String status; 
         private Boolean success; 
+        private String syncStatus; 
 
         /**
          * 返回码
@@ -122,6 +134,14 @@ public class PublishStatusResponseBody extends TeaModel {
          */
         public Builder success(Boolean success) {
             this.success = success;
+            return this;
+        }
+
+        /**
+         * 文件同步状态
+         */
+        public Builder syncStatus(String syncStatus) {
+            this.syncStatus = syncStatus;
             return this;
         }
 

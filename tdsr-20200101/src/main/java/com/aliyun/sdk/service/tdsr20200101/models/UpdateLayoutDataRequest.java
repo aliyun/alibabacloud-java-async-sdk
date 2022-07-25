@@ -63,10 +63,10 @@ public class UpdateLayoutDataRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateLayoutDataRequest response) {
-            super(response);
-            this.layoutData = response.layoutData;
-            this.subSceneId = response.subSceneId;
+        private Builder(UpdateLayoutDataRequest request) {
+            super(request);
+            this.layoutData = request.layoutData;
+            this.subSceneId = request.subSceneId;
         } 
 
         /**

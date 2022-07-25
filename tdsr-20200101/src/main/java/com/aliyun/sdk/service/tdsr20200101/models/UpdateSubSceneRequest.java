@@ -19,13 +19,17 @@ public class UpdateSubSceneRequest extends Request {
 
     @Query
     @NameInMap("Name")
-    @Validation(required = true)
     private String name;
+
+    @Query
+    @NameInMap("ViewPoint")
+    private java.util.List < Double > viewPoint;
 
     private UpdateSubSceneRequest(Builder builder) {
         super(builder);
         this.id = builder.id;
         this.name = builder.name;
+        this.viewPoint = builder.viewPoint;
     }
 
     public static Builder builder() {
@@ -55,18 +59,27 @@ public class UpdateSubSceneRequest extends Request {
         return this.name;
     }
 
+    /**
+     * @return viewPoint
+     */
+    public java.util.List < Double > getViewPoint() {
+        return this.viewPoint;
+    }
+
     public static final class Builder extends Request.Builder<UpdateSubSceneRequest, Builder> {
         private String id; 
         private String name; 
+        private java.util.List < Double > viewPoint; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateSubSceneRequest response) {
-            super(response);
-            this.id = response.id;
-            this.name = response.name;
+        private Builder(UpdateSubSceneRequest request) {
+            super(request);
+            this.id = request.id;
+            this.name = request.name;
+            this.viewPoint = request.viewPoint;
         } 
 
         /**
@@ -84,6 +97,16 @@ public class UpdateSubSceneRequest extends Request {
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * 视角坐标，目前支持3元坐标，4元坐标，例如：[0.94005,0.13397,-0.3136,0.782992]
+         */
+        public Builder viewPoint(java.util.List < Double > viewPoint) {
+            String viewPointShrink = shrink(viewPoint, "ViewPoint", "json");
+            this.putQueryParameter("ViewPoint", viewPointShrink);
+            this.viewPoint = viewPoint;
             return this;
         }
 

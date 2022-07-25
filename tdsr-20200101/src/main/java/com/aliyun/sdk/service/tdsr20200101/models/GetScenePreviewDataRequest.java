@@ -88,12 +88,12 @@ public class GetScenePreviewDataRequest extends Request {
             super();
         } 
 
-        private Builder(GetScenePreviewDataRequest response) {
-            super(response);
-            this.domain = response.domain;
-            this.enabled = response.enabled;
-            this.previewToken = response.previewToken;
-            this.showTag = response.showTag;
+        private Builder(GetScenePreviewDataRequest request) {
+            super(request);
+            this.domain = request.domain;
+            this.enabled = request.enabled;
+            this.previewToken = request.previewToken;
+            this.showTag = request.showTag;
         } 
 
         /**

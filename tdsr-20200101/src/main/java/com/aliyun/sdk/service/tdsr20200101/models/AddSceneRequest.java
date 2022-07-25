@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class AddSceneRequest extends Request {
     @Query
+    @NameInMap("CustomerUid")
+    private String customerUid;
+
+    @Query
     @NameInMap("Name")
     @Validation(required = true)
     private String name;
@@ -29,6 +33,7 @@ public class AddSceneRequest extends Request {
 
     private AddSceneRequest(Builder builder) {
         super(builder);
+        this.customerUid = builder.customerUid;
         this.name = builder.name;
         this.projectId = builder.projectId;
         this.type = builder.type;
@@ -45,6 +50,13 @@ public class AddSceneRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return customerUid
+     */
+    public String getCustomerUid() {
+        return this.customerUid;
     }
 
     /**
@@ -69,6 +81,7 @@ public class AddSceneRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AddSceneRequest, Builder> {
+        private String customerUid; 
         private String name; 
         private String projectId; 
         private String type; 
@@ -77,12 +90,22 @@ public class AddSceneRequest extends Request {
             super();
         } 
 
-        private Builder(AddSceneRequest response) {
-            super(response);
-            this.name = response.name;
-            this.projectId = response.projectId;
-            this.type = response.type;
+        private Builder(AddSceneRequest request) {
+            super(request);
+            this.customerUid = request.customerUid;
+            this.name = request.name;
+            this.projectId = request.projectId;
+            this.type = request.type;
         } 
+
+        /**
+         * CustomerUid.
+         */
+        public Builder customerUid(String customerUid) {
+            this.putQueryParameter("CustomerUid", customerUid);
+            this.customerUid = customerUid;
+            return this;
+        }
 
         /**
          * 场景名称

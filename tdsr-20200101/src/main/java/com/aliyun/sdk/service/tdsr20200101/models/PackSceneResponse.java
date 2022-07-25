@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteFileResponse} extends {@link TeaModel}
+ * {@link PackSceneResponse} extends {@link TeaModel}
  *
- * <p>DeleteFileResponse</p>
+ * <p>PackSceneResponse</p>
  */
-public class DeleteFileResponse extends Response {
+public class PackSceneResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private DeleteFileResponseBody body;
+    private PackSceneResponseBody body;
 
-    private DeleteFileResponse(BuilderImpl builder) {
+    private PackSceneResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static DeleteFileResponse create() {
+    public static PackSceneResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class DeleteFileResponse extends Response {
     /**
      * @return body
      */
-    public DeleteFileResponseBody getBody() {
+    public PackSceneResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DeleteFileResponse, Builder> {
+    public interface Builder extends Response.Builder<PackSceneResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(DeleteFileResponseBody body);
+        Builder body(PackSceneResponseBody body);
 
         @Override
-        DeleteFileResponse build();
+        PackSceneResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DeleteFileResponse, Builder>
+            extends Response.BuilderImpl<PackSceneResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private DeleteFileResponseBody body; 
+        private PackSceneResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DeleteFileResponse response) {
+        private BuilderImpl(PackSceneResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class DeleteFileResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DeleteFileResponseBody body) {
+        public Builder body(PackSceneResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DeleteFileResponse build() {
-            return new DeleteFileResponse(this);
+        public PackSceneResponse build() {
+            return new PackSceneResponse(this);
         } 
 
     } 

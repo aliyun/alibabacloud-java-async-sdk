@@ -49,9 +49,9 @@ public class RecoveryOriginImageRequest extends Request {
             super();
         } 
 
-        private Builder(RecoveryOriginImageRequest response) {
-            super(response);
-            this.subSceneId = response.subSceneId;
+        private Builder(RecoveryOriginImageRequest request) {
+            super(request);
+            this.subSceneId = request.subSceneId;
         } 
 
         /**

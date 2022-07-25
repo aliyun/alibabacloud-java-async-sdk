@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListScenesResponse} extends {@link TeaModel}
+ * {@link GetSourcePackStatusResponse} extends {@link TeaModel}
  *
- * <p>ListScenesResponse</p>
+ * <p>GetSourcePackStatusResponse</p>
  */
-public class ListScenesResponse extends Response {
+public class GetSourcePackStatusResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private ListScenesResponseBody body;
+    private GetSourcePackStatusResponseBody body;
 
-    private ListScenesResponse(BuilderImpl builder) {
+    private GetSourcePackStatusResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static ListScenesResponse create() {
+    public static GetSourcePackStatusResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class ListScenesResponse extends Response {
     /**
      * @return body
      */
-    public ListScenesResponseBody getBody() {
+    public GetSourcePackStatusResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ListScenesResponse, Builder> {
+    public interface Builder extends Response.Builder<GetSourcePackStatusResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(ListScenesResponseBody body);
+        Builder body(GetSourcePackStatusResponseBody body);
 
         @Override
-        ListScenesResponse build();
+        GetSourcePackStatusResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ListScenesResponse, Builder>
+            extends Response.BuilderImpl<GetSourcePackStatusResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private ListScenesResponseBody body; 
+        private GetSourcePackStatusResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ListScenesResponse response) {
+        private BuilderImpl(GetSourcePackStatusResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class ListScenesResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ListScenesResponseBody body) {
+        public Builder body(GetSourcePackStatusResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ListScenesResponse build() {
-            return new ListScenesResponse(this);
+        public GetSourcePackStatusResponse build() {
+            return new GetSourcePackStatusResponse(this);
         } 
 
     } 

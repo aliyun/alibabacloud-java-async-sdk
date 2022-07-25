@@ -49,9 +49,9 @@ public class GetTaskStatusRequest extends Request {
             super();
         } 
 
-        private Builder(GetTaskStatusRequest response) {
-            super(response);
-            this.taskId = response.taskId;
+        private Builder(GetTaskStatusRequest request) {
+            super(request);
+            this.taskId = request.taskId;
         } 
 
         /**

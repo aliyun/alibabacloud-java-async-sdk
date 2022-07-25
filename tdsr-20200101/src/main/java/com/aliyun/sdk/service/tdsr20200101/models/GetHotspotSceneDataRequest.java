@@ -89,12 +89,12 @@ public class GetHotspotSceneDataRequest extends Request {
             super();
         } 
 
-        private Builder(GetHotspotSceneDataRequest response) {
-            super(response);
-            this.domain = response.domain;
-            this.enabled = response.enabled;
-            this.previewToken = response.previewToken;
-            this.type = response.type;
+        private Builder(GetHotspotSceneDataRequest request) {
+            super(request);
+            this.domain = request.domain;
+            this.enabled = request.enabled;
+            this.previewToken = request.previewToken;
+            this.type = request.type;
         } 
 
         /**

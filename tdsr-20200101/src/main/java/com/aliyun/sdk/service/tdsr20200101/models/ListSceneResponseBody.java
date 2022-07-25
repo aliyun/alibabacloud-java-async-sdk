@@ -212,6 +212,9 @@ public class ListSceneResponseBody extends TeaModel {
     } 
 
     public static class List extends TeaModel {
+        @NameInMap("CoverUrl")
+        private String coverUrl;
+
         @NameInMap("GmtCreate")
         private Long gmtCreate;
 
@@ -233,6 +236,12 @@ public class ListSceneResponseBody extends TeaModel {
         @NameInMap("SourceNum")
         private Long sourceNum;
 
+        @NameInMap("Status")
+        private String status;
+
+        @NameInMap("StatusName")
+        private String statusName;
+
         @NameInMap("SubSceneNum")
         private Long subSceneNum;
 
@@ -240,6 +249,7 @@ public class ListSceneResponseBody extends TeaModel {
         private String type;
 
         private List(Builder builder) {
+            this.coverUrl = builder.coverUrl;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
             this.id = builder.id;
@@ -247,6 +257,8 @@ public class ListSceneResponseBody extends TeaModel {
             this.previewToken = builder.previewToken;
             this.published = builder.published;
             this.sourceNum = builder.sourceNum;
+            this.status = builder.status;
+            this.statusName = builder.statusName;
             this.subSceneNum = builder.subSceneNum;
             this.type = builder.type;
         }
@@ -257,6 +269,13 @@ public class ListSceneResponseBody extends TeaModel {
 
         public static List create() {
             return builder().build();
+        }
+
+        /**
+         * @return coverUrl
+         */
+        public String getCoverUrl() {
+            return this.coverUrl;
         }
 
         /**
@@ -309,6 +328,20 @@ public class ListSceneResponseBody extends TeaModel {
         }
 
         /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return statusName
+         */
+        public String getStatusName() {
+            return this.statusName;
+        }
+
+        /**
          * @return subSceneNum
          */
         public Long getSubSceneNum() {
@@ -323,6 +356,7 @@ public class ListSceneResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String coverUrl; 
             private Long gmtCreate; 
             private Long gmtModified; 
             private String id; 
@@ -330,8 +364,18 @@ public class ListSceneResponseBody extends TeaModel {
             private String previewToken; 
             private Boolean published; 
             private Long sourceNum; 
+            private String status; 
+            private String statusName; 
             private Long subSceneNum; 
             private String type; 
+
+            /**
+             * 封面地址
+             */
+            public Builder coverUrl(String coverUrl) {
+                this.coverUrl = coverUrl;
+                return this;
+            }
 
             /**
              * 创建时间
@@ -386,6 +430,22 @@ public class ListSceneResponseBody extends TeaModel {
              */
             public Builder sourceNum(Long sourceNum) {
                 this.sourceNum = sourceNum;
+                return this;
+            }
+
+            /**
+             * 场景状态，init：初始化，published：已发布，publishing：发布中，copying：复制中，making：制作中，publishable：构建成功，makeFailed：制作失败
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * 状态名称
+             */
+            public Builder statusName(String statusName) {
+                this.statusName = statusName;
                 return this;
             }
 

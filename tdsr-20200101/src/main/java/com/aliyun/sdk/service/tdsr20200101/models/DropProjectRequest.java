@@ -49,9 +49,9 @@ public class DropProjectRequest extends Request {
             super();
         } 
 
-        private Builder(DropProjectRequest response) {
-            super(response);
-            this.projectId = response.projectId;
+        private Builder(DropProjectRequest request) {
+            super(request);
+            this.projectId = request.projectId;
         } 
 
         /**

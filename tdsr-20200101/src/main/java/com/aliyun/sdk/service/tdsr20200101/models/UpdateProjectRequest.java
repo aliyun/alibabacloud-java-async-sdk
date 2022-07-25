@@ -75,11 +75,11 @@ public class UpdateProjectRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateProjectRequest response) {
-            super(response);
-            this.businessId = response.businessId;
-            this.id = response.id;
-            this.name = response.name;
+        private Builder(UpdateProjectRequest request) {
+            super(request);
+            this.businessId = request.businessId;
+            this.id = request.id;
+            this.name = request.name;
         } 
 
         /**

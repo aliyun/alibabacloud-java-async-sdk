@@ -49,9 +49,9 @@ public class DetailSubSceneRequest extends Request {
             super();
         } 
 
-        private Builder(DetailSubSceneRequest response) {
-            super(response);
-            this.id = response.id;
+        private Builder(DetailSubSceneRequest request) {
+            super(request);
+            this.id = request.id;
         } 
 
         /**

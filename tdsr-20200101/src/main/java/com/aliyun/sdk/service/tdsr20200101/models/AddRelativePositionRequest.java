@@ -63,10 +63,10 @@ public class AddRelativePositionRequest extends Request {
             super();
         } 
 
-        private Builder(AddRelativePositionRequest response) {
-            super(response);
-            this.relativePosition = response.relativePosition;
-            this.sceneId = response.sceneId;
+        private Builder(AddRelativePositionRequest request) {
+            super(request);
+            this.relativePosition = request.relativePosition;
+            this.sceneId = request.sceneId;
         } 
 
         /**

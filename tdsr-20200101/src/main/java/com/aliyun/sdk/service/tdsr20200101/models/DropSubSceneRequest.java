@@ -49,9 +49,9 @@ public class DropSubSceneRequest extends Request {
             super();
         } 
 
-        private Builder(DropSubSceneRequest response) {
-            super(response);
-            this.id = response.id;
+        private Builder(DropSubSceneRequest request) {
+            super(request);
+            this.id = request.id;
         } 
 
         /**

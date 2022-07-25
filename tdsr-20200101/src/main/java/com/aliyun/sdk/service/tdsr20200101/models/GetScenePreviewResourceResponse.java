@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateSceneResponse} extends {@link TeaModel}
+ * {@link GetScenePreviewResourceResponse} extends {@link TeaModel}
  *
- * <p>CreateSceneResponse</p>
+ * <p>GetScenePreviewResourceResponse</p>
  */
-public class CreateSceneResponse extends Response {
+public class GetScenePreviewResourceResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private CreateSceneResponseBody body;
+    private GetScenePreviewResourceResponseBody body;
 
-    private CreateSceneResponse(BuilderImpl builder) {
+    private GetScenePreviewResourceResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static CreateSceneResponse create() {
+    public static GetScenePreviewResourceResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class CreateSceneResponse extends Response {
     /**
      * @return body
      */
-    public CreateSceneResponseBody getBody() {
+    public GetScenePreviewResourceResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<CreateSceneResponse, Builder> {
+    public interface Builder extends Response.Builder<GetScenePreviewResourceResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(CreateSceneResponseBody body);
+        Builder body(GetScenePreviewResourceResponseBody body);
 
         @Override
-        CreateSceneResponse build();
+        GetScenePreviewResourceResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<CreateSceneResponse, Builder>
+            extends Response.BuilderImpl<GetScenePreviewResourceResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private CreateSceneResponseBody body; 
+        private GetScenePreviewResourceResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(CreateSceneResponse response) {
+        private BuilderImpl(GetScenePreviewResourceResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class CreateSceneResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(CreateSceneResponseBody body) {
+        public Builder body(GetScenePreviewResourceResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public CreateSceneResponse build() {
-            return new CreateSceneResponse(this);
+        public GetScenePreviewResourceResponse build() {
+            return new GetScenePreviewResourceResponse(this);
         } 
 
     } 

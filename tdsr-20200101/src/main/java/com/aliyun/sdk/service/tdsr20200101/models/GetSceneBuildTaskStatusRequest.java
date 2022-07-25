@@ -49,9 +49,9 @@ public class GetSceneBuildTaskStatusRequest extends Request {
             super();
         } 
 
-        private Builder(GetSceneBuildTaskStatusRequest response) {
-            super(response);
-            this.sceneId = response.sceneId;
+        private Builder(GetSceneBuildTaskStatusRequest request) {
+            super(request);
+            this.sceneId = request.sceneId;
         } 
 
         /**

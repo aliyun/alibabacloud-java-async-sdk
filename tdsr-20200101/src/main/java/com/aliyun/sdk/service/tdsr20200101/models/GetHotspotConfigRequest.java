@@ -89,12 +89,12 @@ public class GetHotspotConfigRequest extends Request {
             super();
         } 
 
-        private Builder(GetHotspotConfigRequest response) {
-            super(response);
-            this.domain = response.domain;
-            this.enabled = response.enabled;
-            this.previewToken = response.previewToken;
-            this.type = response.type;
+        private Builder(GetHotspotConfigRequest request) {
+            super(request);
+            this.domain = request.domain;
+            this.enabled = request.enabled;
+            this.previewToken = request.previewToken;
+            this.type = request.type;
         } 
 
         /**

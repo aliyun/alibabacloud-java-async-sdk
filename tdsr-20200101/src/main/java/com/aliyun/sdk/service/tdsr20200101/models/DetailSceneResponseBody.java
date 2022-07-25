@@ -12,8 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DetailSceneResponseBody</p>
  */
 public class DetailSceneResponseBody extends TeaModel {
+    @NameInMap("Captures")
+    private java.util.List < Captures> captures;
+
     @NameInMap("Code")
     private Long code;
+
+    @NameInMap("CoverUrl")
+    private String coverUrl;
 
     @NameInMap("GmtCreate")
     private Long gmtCreate;
@@ -42,6 +48,12 @@ public class DetailSceneResponseBody extends TeaModel {
     @NameInMap("SourceNum")
     private Long sourceNum;
 
+    @NameInMap("Status")
+    private String status;
+
+    @NameInMap("StatusName")
+    private String statusName;
+
     @NameInMap("SubSceneNum")
     private Long subSceneNum;
 
@@ -52,7 +64,9 @@ public class DetailSceneResponseBody extends TeaModel {
     private String type;
 
     private DetailSceneResponseBody(Builder builder) {
+        this.captures = builder.captures;
         this.code = builder.code;
+        this.coverUrl = builder.coverUrl;
         this.gmtCreate = builder.gmtCreate;
         this.gmtModified = builder.gmtModified;
         this.id = builder.id;
@@ -62,6 +76,8 @@ public class DetailSceneResponseBody extends TeaModel {
         this.published = builder.published;
         this.requestId = builder.requestId;
         this.sourceNum = builder.sourceNum;
+        this.status = builder.status;
+        this.statusName = builder.statusName;
         this.subSceneNum = builder.subSceneNum;
         this.success = builder.success;
         this.type = builder.type;
@@ -76,10 +92,24 @@ public class DetailSceneResponseBody extends TeaModel {
     }
 
     /**
+     * @return captures
+     */
+    public java.util.List < Captures> getCaptures() {
+        return this.captures;
+    }
+
+    /**
      * @return code
      */
     public Long getCode() {
         return this.code;
+    }
+
+    /**
+     * @return coverUrl
+     */
+    public String getCoverUrl() {
+        return this.coverUrl;
     }
 
     /**
@@ -146,6 +176,20 @@ public class DetailSceneResponseBody extends TeaModel {
     }
 
     /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
+    /**
+     * @return statusName
+     */
+    public String getStatusName() {
+        return this.statusName;
+    }
+
+    /**
      * @return subSceneNum
      */
     public Long getSubSceneNum() {
@@ -167,7 +211,9 @@ public class DetailSceneResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private java.util.List < Captures> captures; 
         private Long code; 
+        private String coverUrl; 
         private Long gmtCreate; 
         private Long gmtModified; 
         private String id; 
@@ -177,15 +223,33 @@ public class DetailSceneResponseBody extends TeaModel {
         private Boolean published; 
         private String requestId; 
         private Long sourceNum; 
+        private String status; 
+        private String statusName; 
         private Long subSceneNum; 
         private Boolean success; 
         private String type; 
+
+        /**
+         * 实勘图列表
+         */
+        public Builder captures(java.util.List < Captures> captures) {
+            this.captures = captures;
+            return this;
+        }
 
         /**
          * 返回码
          */
         public Builder code(Long code) {
             this.code = code;
+            return this;
+        }
+
+        /**
+         * 封面地址
+         */
+        public Builder coverUrl(String coverUrl) {
+            this.coverUrl = coverUrl;
             return this;
         }
 
@@ -262,6 +326,22 @@ public class DetailSceneResponseBody extends TeaModel {
         }
 
         /**
+         * 场景状态，init：初始化，published：已发布，publishing：发布中，copying：复制中，making：制作中，publishable：构建成功，makeFailed：制作失败
+         */
+        public Builder status(String status) {
+            this.status = status;
+            return this;
+        }
+
+        /**
+         * 状态名称
+         */
+        public Builder statusName(String statusName) {
+            this.statusName = statusName;
+            return this;
+        }
+
+        /**
          * 子场景数
          */
         public Builder subSceneNum(Long subSceneNum) {
@@ -291,4 +371,65 @@ public class DetailSceneResponseBody extends TeaModel {
 
     } 
 
+    public static class Captures extends TeaModel {
+        @NameInMap("Title")
+        private String title;
+
+        @NameInMap("Url")
+        private String url;
+
+        private Captures(Builder builder) {
+            this.title = builder.title;
+            this.url = builder.url;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Captures create() {
+            return builder().build();
+        }
+
+        /**
+         * @return title
+         */
+        public String getTitle() {
+            return this.title;
+        }
+
+        /**
+         * @return url
+         */
+        public String getUrl() {
+            return this.url;
+        }
+
+        public static final class Builder {
+            private String title; 
+            private String url; 
+
+            /**
+             * 图片名称
+             */
+            public Builder title(String title) {
+                this.title = title;
+                return this;
+            }
+
+            /**
+             * 实勘图url
+             */
+            public Builder url(String url) {
+                this.url = url;
+                return this;
+            }
+
+            public Captures build() {
+                return new Captures(this);
+            } 
+
+        } 
+
+    }
 }

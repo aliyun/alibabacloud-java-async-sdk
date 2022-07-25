@@ -49,9 +49,9 @@ public class GetOssPolicyRequest extends Request {
             super();
         } 
 
-        private Builder(GetOssPolicyRequest response) {
-            super(response);
-            this.subSceneId = response.subSceneId;
+        private Builder(GetOssPolicyRequest request) {
+            super(request);
+            this.subSceneId = request.subSceneId;
         } 
 
         /**
