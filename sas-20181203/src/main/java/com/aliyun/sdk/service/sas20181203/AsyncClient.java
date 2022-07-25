@@ -306,6 +306,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetBackupStorageCountResponse> getBackupStorageCount(GetBackupStorageCountRequest request);
 
+    CompletableFuture<GetCheckDetailResponse> getCheckDetail(GetCheckDetailRequest request);
+
     CompletableFuture<GetFileDetectResultResponse> getFileDetectResult(GetFileDetectResultRequest request);
 
     CompletableFuture<GetSuspiciousStatisticsResponse> getSuspiciousStatistics(GetSuspiciousStatisticsRequest request);
@@ -321,6 +323,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<InstallBackupClientResponse> installBackupClient(InstallBackupClientRequest request);
 
     CompletableFuture<InstallCloudMonitorResponse> installCloudMonitor(InstallCloudMonitorRequest request);
+
+    CompletableFuture<ListCheckInstanceResultResponse> listCheckInstanceResult(ListCheckInstanceResultRequest request);
 
     CompletableFuture<ListCheckResultResponse> listCheckResult(ListCheckResultRequest request);
 

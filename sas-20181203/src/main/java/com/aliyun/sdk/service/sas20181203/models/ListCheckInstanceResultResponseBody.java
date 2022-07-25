@@ -1,0 +1,598 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.sas20181203.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link ListCheckInstanceResultResponseBody} extends {@link TeaModel}
+ *
+ * <p>ListCheckInstanceResultResponseBody</p>
+ */
+public class ListCheckInstanceResultResponseBody extends TeaModel {
+    @NameInMap("BasicData")
+    private java.util.List < BasicData> basicData;
+
+    @NameInMap("Checks")
+    private java.util.Map < String, ? > checks;
+
+    @NameInMap("Columns")
+    private java.util.List < Columns> columns;
+
+    @NameInMap("PageInfo")
+    private PageInfo pageInfo;
+
+    @NameInMap("RequestId")
+    private String requestId;
+
+    @NameInMap("TotalCount")
+    private Integer totalCount;
+
+    private ListCheckInstanceResultResponseBody(Builder builder) {
+        this.basicData = builder.basicData;
+        this.checks = builder.checks;
+        this.columns = builder.columns;
+        this.pageInfo = builder.pageInfo;
+        this.requestId = builder.requestId;
+        this.totalCount = builder.totalCount;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static ListCheckInstanceResultResponseBody create() {
+        return builder().build();
+    }
+
+    /**
+     * @return basicData
+     */
+    public java.util.List < BasicData> getBasicData() {
+        return this.basicData;
+    }
+
+    /**
+     * @return checks
+     */
+    public java.util.Map < String, ? > getChecks() {
+        return this.checks;
+    }
+
+    /**
+     * @return columns
+     */
+    public java.util.List < Columns> getColumns() {
+        return this.columns;
+    }
+
+    /**
+     * @return pageInfo
+     */
+    public PageInfo getPageInfo() {
+        return this.pageInfo;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
+     * @return totalCount
+     */
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public static final class Builder {
+        private java.util.List < BasicData> basicData; 
+        private java.util.Map < String, ? > checks; 
+        private java.util.List < Columns> columns; 
+        private PageInfo pageInfo; 
+        private String requestId; 
+        private Integer totalCount; 
+
+        /**
+         * BasicData.
+         */
+        public Builder basicData(java.util.List < BasicData> basicData) {
+            this.basicData = basicData;
+            return this;
+        }
+
+        /**
+         * Checks.
+         */
+        public Builder checks(java.util.Map < String, ? > checks) {
+            this.checks = checks;
+            return this;
+        }
+
+        /**
+         * Columns.
+         */
+        public Builder columns(java.util.List < Columns> columns) {
+            this.columns = columns;
+            return this;
+        }
+
+        /**
+         * PageInfo.
+         */
+        public Builder pageInfo(PageInfo pageInfo) {
+            this.pageInfo = pageInfo;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+
+        public ListCheckInstanceResultResponseBody build() {
+            return new ListCheckInstanceResultResponseBody(this);
+        } 
+
+    } 
+
+    public static class BasicData extends TeaModel {
+        @NameInMap("Id")
+        private Long id;
+
+        @NameInMap("InstanceId")
+        private String instanceId;
+
+        @NameInMap("InstanceName")
+        private String instanceName;
+
+        @NameInMap("RegionId")
+        private String regionId;
+
+        @NameInMap("Status")
+        private String status;
+
+        private BasicData(Builder builder) {
+            this.id = builder.id;
+            this.instanceId = builder.instanceId;
+            this.instanceName = builder.instanceName;
+            this.regionId = builder.regionId;
+            this.status = builder.status;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BasicData create() {
+            return builder().build();
+        }
+
+        /**
+         * @return id
+         */
+        public Long getId() {
+            return this.id;
+        }
+
+        /**
+         * @return instanceId
+         */
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        /**
+         * @return instanceName
+         */
+        public String getInstanceName() {
+            return this.instanceName;
+        }
+
+        /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        public static final class Builder {
+            private Long id; 
+            private String instanceId; 
+            private String instanceName; 
+            private String regionId; 
+            private String status; 
+
+            /**
+             * Id.
+             */
+            public Builder id(Long id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * InstanceId.
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * InstanceName.
+             */
+            public Builder instanceName(String instanceName) {
+                this.instanceName = instanceName;
+                return this;
+            }
+
+            /**
+             * RegionId.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            public BasicData build() {
+                return new BasicData(this);
+            } 
+
+        } 
+
+    }
+    public static class Grids extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("ShowName")
+        private String showName;
+
+        @NameInMap("Type")
+        private String type;
+
+        private Grids(Builder builder) {
+            this.key = builder.key;
+            this.showName = builder.showName;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Grids create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return showName
+         */
+        public String getShowName() {
+            return this.showName;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String showName; 
+            private String type; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * ShowName.
+             */
+            public Builder showName(String showName) {
+                this.showName = showName;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public Grids build() {
+                return new Grids(this);
+            } 
+
+        } 
+
+    }
+    public static class Columns extends TeaModel {
+        @NameInMap("Grids")
+        private java.util.List < Grids> grids;
+
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Search")
+        private Boolean search;
+
+        @NameInMap("SearchKey")
+        private String searchKey;
+
+        @NameInMap("ShowName")
+        private String showName;
+
+        @NameInMap("Type")
+        private String type;
+
+        private Columns(Builder builder) {
+            this.grids = builder.grids;
+            this.key = builder.key;
+            this.search = builder.search;
+            this.searchKey = builder.searchKey;
+            this.showName = builder.showName;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Columns create() {
+            return builder().build();
+        }
+
+        /**
+         * @return grids
+         */
+        public java.util.List < Grids> getGrids() {
+            return this.grids;
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return search
+         */
+        public Boolean getSearch() {
+            return this.search;
+        }
+
+        /**
+         * @return searchKey
+         */
+        public String getSearchKey() {
+            return this.searchKey;
+        }
+
+        /**
+         * @return showName
+         */
+        public String getShowName() {
+            return this.showName;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private java.util.List < Grids> grids; 
+            private String key; 
+            private Boolean search; 
+            private String searchKey; 
+            private String showName; 
+            private String type; 
+
+            /**
+             * Grids.
+             */
+            public Builder grids(java.util.List < Grids> grids) {
+                this.grids = grids;
+                return this;
+            }
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Search.
+             */
+            public Builder search(Boolean search) {
+                this.search = search;
+                return this;
+            }
+
+            /**
+             * SearchKey.
+             */
+            public Builder searchKey(String searchKey) {
+                this.searchKey = searchKey;
+                return this;
+            }
+
+            /**
+             * ShowName.
+             */
+            public Builder showName(String showName) {
+                this.showName = showName;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public Columns build() {
+                return new Columns(this);
+            } 
+
+        } 
+
+    }
+    public static class PageInfo extends TeaModel {
+        @NameInMap("Count")
+        private String count;
+
+        @NameInMap("CurrentPage")
+        private Integer currentPage;
+
+        @NameInMap("PageSize")
+        private Integer pageSize;
+
+        @NameInMap("TotalCount")
+        private Integer totalCount;
+
+        private PageInfo(Builder builder) {
+            this.count = builder.count;
+            this.currentPage = builder.currentPage;
+            this.pageSize = builder.pageSize;
+            this.totalCount = builder.totalCount;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PageInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return count
+         */
+        public String getCount() {
+            return this.count;
+        }
+
+        /**
+         * @return currentPage
+         */
+        public Integer getCurrentPage() {
+            return this.currentPage;
+        }
+
+        /**
+         * @return pageSize
+         */
+        public Integer getPageSize() {
+            return this.pageSize;
+        }
+
+        /**
+         * @return totalCount
+         */
+        public Integer getTotalCount() {
+            return this.totalCount;
+        }
+
+        public static final class Builder {
+            private String count; 
+            private Integer currentPage; 
+            private Integer pageSize; 
+            private Integer totalCount; 
+
+            /**
+             * Count.
+             */
+            public Builder count(String count) {
+                this.count = count;
+                return this;
+            }
+
+            /**
+             * CurrentPage.
+             */
+            public Builder currentPage(Integer currentPage) {
+                this.currentPage = currentPage;
+                return this;
+            }
+
+            /**
+             * PageSize.
+             */
+            public Builder pageSize(Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+            }
+
+            /**
+             * TotalCount.
+             */
+            public Builder totalCount(Integer totalCount) {
+                this.totalCount = totalCount;
+                return this;
+            }
+
+            public PageInfo build() {
+                return new PageInfo(this);
+            } 
+
+        } 
+
+    }
+}
