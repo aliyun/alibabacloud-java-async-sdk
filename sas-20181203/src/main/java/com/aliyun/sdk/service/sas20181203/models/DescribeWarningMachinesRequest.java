@@ -13,6 +13,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeWarningMachinesRequest extends Request {
     @Query
+    @NameInMap("ClusterId")
+    private String clusterId;
+
+    @Query
+    @NameInMap("ContainerFieldName")
+    private String containerFieldName;
+
+    @Query
+    @NameInMap("ContainerFieldValue")
+    private String containerFieldValue;
+
+    @Query
     @NameInMap("CurrentPage")
     private Integer currentPage;
 
@@ -42,11 +54,18 @@ public class DescribeWarningMachinesRequest extends Request {
     private Long strategyId;
 
     @Query
+    @NameInMap("TargetType")
+    private String targetType;
+
+    @Query
     @NameInMap("Uuids")
     private String uuids;
 
     private DescribeWarningMachinesRequest(Builder builder) {
         super(builder);
+        this.clusterId = builder.clusterId;
+        this.containerFieldName = builder.containerFieldName;
+        this.containerFieldValue = builder.containerFieldValue;
         this.currentPage = builder.currentPage;
         this.lang = builder.lang;
         this.machineName = builder.machineName;
@@ -54,6 +73,7 @@ public class DescribeWarningMachinesRequest extends Request {
         this.riskId = builder.riskId;
         this.sourceIp = builder.sourceIp;
         this.strategyId = builder.strategyId;
+        this.targetType = builder.targetType;
         this.uuids = builder.uuids;
     }
 
@@ -68,6 +88,27 @@ public class DescribeWarningMachinesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return clusterId
+     */
+    public String getClusterId() {
+        return this.clusterId;
+    }
+
+    /**
+     * @return containerFieldName
+     */
+    public String getContainerFieldName() {
+        return this.containerFieldName;
+    }
+
+    /**
+     * @return containerFieldValue
+     */
+    public String getContainerFieldValue() {
+        return this.containerFieldValue;
     }
 
     /**
@@ -120,6 +161,13 @@ public class DescribeWarningMachinesRequest extends Request {
     }
 
     /**
+     * @return targetType
+     */
+    public String getTargetType() {
+        return this.targetType;
+    }
+
+    /**
      * @return uuids
      */
     public String getUuids() {
@@ -127,6 +175,9 @@ public class DescribeWarningMachinesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeWarningMachinesRequest, Builder> {
+        private String clusterId; 
+        private String containerFieldName; 
+        private String containerFieldValue; 
         private Integer currentPage; 
         private String lang; 
         private String machineName; 
@@ -134,6 +185,7 @@ public class DescribeWarningMachinesRequest extends Request {
         private Long riskId; 
         private String sourceIp; 
         private Long strategyId; 
+        private String targetType; 
         private String uuids; 
 
         private Builder() {
@@ -142,6 +194,9 @@ public class DescribeWarningMachinesRequest extends Request {
 
         private Builder(DescribeWarningMachinesRequest request) {
             super(request);
+            this.clusterId = request.clusterId;
+            this.containerFieldName = request.containerFieldName;
+            this.containerFieldValue = request.containerFieldValue;
             this.currentPage = request.currentPage;
             this.lang = request.lang;
             this.machineName = request.machineName;
@@ -149,8 +204,36 @@ public class DescribeWarningMachinesRequest extends Request {
             this.riskId = request.riskId;
             this.sourceIp = request.sourceIp;
             this.strategyId = request.strategyId;
+            this.targetType = request.targetType;
             this.uuids = request.uuids;
         } 
+
+        /**
+         * ClusterId.
+         */
+        public Builder clusterId(String clusterId) {
+            this.putQueryParameter("ClusterId", clusterId);
+            this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * ContainerFieldName.
+         */
+        public Builder containerFieldName(String containerFieldName) {
+            this.putQueryParameter("ContainerFieldName", containerFieldName);
+            this.containerFieldName = containerFieldName;
+            return this;
+        }
+
+        /**
+         * ContainerFieldValue.
+         */
+        public Builder containerFieldValue(String containerFieldValue) {
+            this.putQueryParameter("ContainerFieldValue", containerFieldValue);
+            this.containerFieldValue = containerFieldValue;
+            return this;
+        }
 
         /**
          * CurrentPage.
@@ -212,6 +295,15 @@ public class DescribeWarningMachinesRequest extends Request {
         public Builder strategyId(Long strategyId) {
             this.putQueryParameter("StrategyId", strategyId);
             this.strategyId = strategyId;
+            return this;
+        }
+
+        /**
+         * TargetType.
+         */
+        public Builder targetType(String targetType) {
+            this.putQueryParameter("TargetType", targetType);
+            this.targetType = targetType;
             return this;
         }
 
