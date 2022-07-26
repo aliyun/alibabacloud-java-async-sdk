@@ -27,16 +27,15 @@ public class SaveApplicationInfoRequest extends Request {
 
     @Body
     @NameInMap("AppTypeList")
-    @Validation(required = true)
     private String appTypeList;
 
     @Body
     @NameInMap("AppingList")
-    @Validation(required = true)
     private String appingList;
 
     @Body
     @NameInMap("ItemCode")
+    @Validation(required = true)
     private String itemCode;
 
     private SaveApplicationInfoRequest(Builder builder) {

@@ -20,10 +20,15 @@ public class GetApplicationRequest extends Request {
     @NameInMap("AppCode")
     private String appCode;
 
+    @Query
+    @NameInMap("ItemCode")
+    private String itemCode;
+
     private GetApplicationRequest(Builder builder) {
         super(builder);
         this.aliUid = builder.aliUid;
         this.appCode = builder.appCode;
+        this.itemCode = builder.itemCode;
     }
 
     public static Builder builder() {
@@ -53,9 +58,17 @@ public class GetApplicationRequest extends Request {
         return this.appCode;
     }
 
+    /**
+     * @return itemCode
+     */
+    public String getItemCode() {
+        return this.itemCode;
+    }
+
     public static final class Builder extends Request.Builder<GetApplicationRequest, Builder> {
         private Long aliUid; 
         private String appCode; 
+        private String itemCode; 
 
         private Builder() {
             super();
@@ -65,6 +78,7 @@ public class GetApplicationRequest extends Request {
             super(request);
             this.aliUid = request.aliUid;
             this.appCode = request.appCode;
+            this.itemCode = request.itemCode;
         } 
 
         /**
@@ -82,6 +96,15 @@ public class GetApplicationRequest extends Request {
         public Builder appCode(String appCode) {
             this.putQueryParameter("AppCode", appCode);
             this.appCode = appCode;
+            return this;
+        }
+
+        /**
+         * ItemCode.
+         */
+        public Builder itemCode(String itemCode) {
+            this.putQueryParameter("ItemCode", itemCode);
+            this.itemCode = itemCode;
             return this;
         }
 
