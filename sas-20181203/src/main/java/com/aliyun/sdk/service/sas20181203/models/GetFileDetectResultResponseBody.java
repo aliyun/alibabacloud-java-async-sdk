@@ -71,50 +71,9 @@ public class GetFileDetectResultResponseBody extends TeaModel {
 
     } 
 
-    public static class Ext extends TeaModel {
-        @NameInMap("VirusName")
-        private String virusName;
-
-        private Ext(Builder builder) {
-            this.virusName = builder.virusName;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Ext create() {
-            return builder().build();
-        }
-
-        /**
-         * @return virusName
-         */
-        public String getVirusName() {
-            return this.virusName;
-        }
-
-        public static final class Builder {
-            private String virusName; 
-
-            /**
-             * VirusName.
-             */
-            public Builder virusName(String virusName) {
-                this.virusName = virusName;
-                return this;
-            }
-
-            public Ext build() {
-                return new Ext(this);
-            } 
-
-        } 
-
-    }
     public static class ResultList extends TeaModel {
         @NameInMap("Ext")
-        private Ext ext;
+        private String ext;
 
         @NameInMap("HashKey")
         private String hashKey;
@@ -147,7 +106,7 @@ public class GetFileDetectResultResponseBody extends TeaModel {
         /**
          * @return ext
          */
-        public Ext getExt() {
+        public String getExt() {
             return this.ext;
         }
 
@@ -180,7 +139,7 @@ public class GetFileDetectResultResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private Ext ext; 
+            private String ext; 
             private String hashKey; 
             private Integer result; 
             private Integer score; 
@@ -189,7 +148,7 @@ public class GetFileDetectResultResponseBody extends TeaModel {
             /**
              * Ext.
              */
-            public Builder ext(Ext ext) {
+            public Builder ext(String ext) {
                 this.ext = ext;
                 return this;
             }
