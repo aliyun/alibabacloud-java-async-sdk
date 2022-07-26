@@ -18,27 +18,13 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
-    CompletableFuture<CreateCodeSourceResponse> createCodeSource(CreateCodeSourceRequest request);
-
-    CompletableFuture<CreateDataSourceResponse> createDataSource(CreateDataSourceRequest request);
-
     CompletableFuture<CreateJobResponse> createJob(CreateJobRequest request);
 
     CompletableFuture<CreateTensorboardResponse> createTensorboard(CreateTensorboardRequest request);
 
-    CompletableFuture<DeleteCodeSourceResponse> deleteCodeSource(DeleteCodeSourceRequest request);
-
-    CompletableFuture<DeleteDataSourceResponse> deleteDataSource(DeleteDataSourceRequest request);
-
     CompletableFuture<DeleteJobResponse> deleteJob(DeleteJobRequest request);
 
-    CompletableFuture<DeleteJobsResponse> deleteJobs(DeleteJobsRequest request);
-
     CompletableFuture<DeleteTensorboardResponse> deleteTensorboard(DeleteTensorboardRequest request);
-
-    CompletableFuture<GetCodeSourceResponse> getCodeSource(GetCodeSourceRequest request);
-
-    CompletableFuture<GetDataSourceResponse> getDataSource(GetDataSourceRequest request);
 
     CompletableFuture<GetJobResponse> getJob(GetJobRequest request);
 
@@ -52,13 +38,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetTensorboardResponse> getTensorboard(GetTensorboardRequest request);
 
-    CompletableFuture<ListCodeSourcesResponse> listCodeSources(ListCodeSourcesRequest request);
-
-    CompletableFuture<ListDataSourcesResponse> listDataSources(ListDataSourcesRequest request);
-
     CompletableFuture<ListEcsSpecsResponse> listEcsSpecs(ListEcsSpecsRequest request);
-
-    CompletableFuture<ListImagesResponse> listImages(ListImagesRequest request);
 
     CompletableFuture<ListJobsResponse> listJobs(ListJobsRequest request);
 
@@ -67,8 +47,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StartTensorboardResponse> startTensorboard(StartTensorboardRequest request);
 
     CompletableFuture<StopJobResponse> stopJob(StopJobRequest request);
-
-    CompletableFuture<StopJobsResponse> stopJobs(StopJobsRequest request);
 
     CompletableFuture<StopTensorboardResponse> stopTensorboard(StopTensorboardRequest request);
 
