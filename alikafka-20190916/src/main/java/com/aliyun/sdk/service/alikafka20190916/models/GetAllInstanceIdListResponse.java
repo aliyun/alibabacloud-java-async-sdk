@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetMetaProductListResponse} extends {@link TeaModel}
+ * {@link GetAllInstanceIdListResponse} extends {@link TeaModel}
  *
- * <p>GetMetaProductListResponse</p>
+ * <p>GetAllInstanceIdListResponse</p>
  */
-public class GetMetaProductListResponse extends Response {
+public class GetAllInstanceIdListResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private GetMetaProductListResponseBody body;
+    private GetAllInstanceIdListResponseBody body;
 
-    private GetMetaProductListResponse(BuilderImpl builder) {
+    private GetAllInstanceIdListResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static GetMetaProductListResponse create() {
+    public static GetAllInstanceIdListResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class GetMetaProductListResponse extends Response {
     /**
      * @return body
      */
-    public GetMetaProductListResponseBody getBody() {
+    public GetAllInstanceIdListResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetMetaProductListResponse, Builder> {
+    public interface Builder extends Response.Builder<GetAllInstanceIdListResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(GetMetaProductListResponseBody body);
+        Builder body(GetAllInstanceIdListResponseBody body);
 
         @Override
-        GetMetaProductListResponse build();
+        GetAllInstanceIdListResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetMetaProductListResponse, Builder>
+            extends Response.BuilderImpl<GetAllInstanceIdListResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private GetMetaProductListResponseBody body; 
+        private GetAllInstanceIdListResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetMetaProductListResponse response) {
+        private BuilderImpl(GetAllInstanceIdListResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class GetMetaProductListResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetMetaProductListResponseBody body) {
+        public Builder body(GetAllInstanceIdListResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetMetaProductListResponse build() {
-            return new GetMetaProductListResponse(this);
+        public GetAllInstanceIdListResponse build() {
+            return new GetAllInstanceIdListResponse(this);
         } 
 
     } 

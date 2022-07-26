@@ -45,6 +45,10 @@ public class CreatePostPayOrderRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("SpecType")
     private String specType;
 
@@ -62,6 +66,7 @@ public class CreatePostPayOrderRequest extends Request {
         this.ioMax = builder.ioMax;
         this.ioMaxSpec = builder.ioMaxSpec;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.specType = builder.specType;
         this.topicQuota = builder.topicQuota;
     }
@@ -129,6 +134,13 @@ public class CreatePostPayOrderRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return specType
      */
     public String getSpecType() {
@@ -150,6 +162,7 @@ public class CreatePostPayOrderRequest extends Request {
         private Integer ioMax; 
         private String ioMaxSpec; 
         private String regionId; 
+        private String resourceGroupId; 
         private String specType; 
         private Integer topicQuota; 
 
@@ -157,17 +170,18 @@ public class CreatePostPayOrderRequest extends Request {
             super();
         } 
 
-        private Builder(CreatePostPayOrderRequest response) {
-            super(response);
-            this.deployType = response.deployType;
-            this.diskSize = response.diskSize;
-            this.diskType = response.diskType;
-            this.eipMax = response.eipMax;
-            this.ioMax = response.ioMax;
-            this.ioMaxSpec = response.ioMaxSpec;
-            this.regionId = response.regionId;
-            this.specType = response.specType;
-            this.topicQuota = response.topicQuota;
+        private Builder(CreatePostPayOrderRequest request) {
+            super(request);
+            this.deployType = request.deployType;
+            this.diskSize = request.diskSize;
+            this.diskType = request.diskType;
+            this.eipMax = request.eipMax;
+            this.ioMax = request.ioMax;
+            this.ioMaxSpec = request.ioMaxSpec;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.specType = request.specType;
+            this.topicQuota = request.topicQuota;
         } 
 
         /**
@@ -230,6 +244,15 @@ public class CreatePostPayOrderRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

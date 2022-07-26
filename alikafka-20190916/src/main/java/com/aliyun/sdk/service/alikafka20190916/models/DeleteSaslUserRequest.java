@@ -90,12 +90,12 @@ public class DeleteSaslUserRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteSaslUserRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
-            this.type = response.type;
-            this.username = response.username;
+        private Builder(DeleteSaslUserRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.regionId = request.regionId;
+            this.type = request.type;
+            this.username = request.username;
         } 
 
         /**

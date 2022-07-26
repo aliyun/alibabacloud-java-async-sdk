@@ -77,11 +77,11 @@ public class DeleteTopicRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteTopicRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
-            this.topic = response.topic;
+        private Builder(DeleteTopicRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.regionId = request.regionId;
+            this.topic = request.topic;
         } 
 
         /**

@@ -63,10 +63,10 @@ public class DescribeNodeStatusRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeNodeStatusRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
+        private Builder(DescribeNodeStatusRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.regionId = request.regionId;
         } 
 
         /**

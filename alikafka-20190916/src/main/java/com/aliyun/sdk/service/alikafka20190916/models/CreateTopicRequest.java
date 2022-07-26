@@ -171,18 +171,18 @@ public class CreateTopicRequest extends Request {
             super();
         } 
 
-        private Builder(CreateTopicRequest response) {
-            super(response);
-            this.compactTopic = response.compactTopic;
-            this.config = response.config;
-            this.instanceId = response.instanceId;
-            this.localTopic = response.localTopic;
-            this.minInsyncReplicas = response.minInsyncReplicas;
-            this.partitionNum = response.partitionNum;
-            this.regionId = response.regionId;
-            this.remark = response.remark;
-            this.replicationFactor = response.replicationFactor;
-            this.topic = response.topic;
+        private Builder(CreateTopicRequest request) {
+            super(request);
+            this.compactTopic = request.compactTopic;
+            this.config = request.config;
+            this.instanceId = request.instanceId;
+            this.localTopic = request.localTopic;
+            this.minInsyncReplicas = request.minInsyncReplicas;
+            this.partitionNum = request.partitionNum;
+            this.regionId = request.regionId;
+            this.remark = request.remark;
+            this.replicationFactor = request.replicationFactor;
+            this.topic = request.topic;
         } 
 
         /**
@@ -198,7 +198,8 @@ public class CreateTopicRequest extends Request {
          * Config.
          */
         public Builder config(java.util.Map < String, ? > config) {
-            this.putQueryParameter("Config", config);
+            String configShrink = shrink(config, "Config", "json");
+            this.putQueryParameter("Config", configShrink);
             this.config = config;
             return this;
         }

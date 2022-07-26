@@ -76,11 +76,11 @@ public class ReleaseInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(ReleaseInstanceRequest response) {
-            super(response);
-            this.forceDeleteInstance = response.forceDeleteInstance;
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
+        private Builder(ReleaseInstanceRequest request) {
+            super(request);
+            this.forceDeleteInstance = request.forceDeleteInstance;
+            this.instanceId = request.instanceId;
+            this.regionId = request.regionId;
         } 
 
         /**

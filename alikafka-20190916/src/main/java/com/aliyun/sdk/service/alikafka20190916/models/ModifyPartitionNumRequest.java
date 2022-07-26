@@ -91,12 +91,12 @@ public class ModifyPartitionNumRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyPartitionNumRequest response) {
-            super(response);
-            this.addPartitionNum = response.addPartitionNum;
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
-            this.topic = response.topic;
+        private Builder(ModifyPartitionNumRequest request) {
+            super(request);
+            this.addPartitionNum = request.addPartitionNum;
+            this.instanceId = request.instanceId;
+            this.regionId = request.regionId;
+            this.topic = request.topic;
         } 
 
         /**

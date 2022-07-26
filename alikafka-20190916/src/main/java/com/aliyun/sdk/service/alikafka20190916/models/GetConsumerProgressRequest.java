@@ -77,11 +77,11 @@ public class GetConsumerProgressRequest extends Request {
             super();
         } 
 
-        private Builder(GetConsumerProgressRequest response) {
-            super(response);
-            this.consumerId = response.consumerId;
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
+        private Builder(GetConsumerProgressRequest request) {
+            super(request);
+            this.consumerId = request.consumerId;
+            this.instanceId = request.instanceId;
+            this.regionId = request.regionId;
         } 
 
         /**

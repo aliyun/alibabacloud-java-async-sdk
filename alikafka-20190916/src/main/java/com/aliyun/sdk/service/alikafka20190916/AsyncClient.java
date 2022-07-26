@@ -18,6 +18,8 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request);
+
     CompletableFuture<ConvertPostPayOrderResponse> convertPostPayOrder(ConvertPostPayOrderRequest request);
 
     CompletableFuture<CreateAclResponse> createAcl(CreateAclRequest request);
@@ -48,6 +50,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeSaslUsersResponse> describeSaslUsers(DescribeSaslUsersRequest request);
 
+    CompletableFuture<GetAllInstanceIdListResponse> getAllInstanceIdList(GetAllInstanceIdListRequest request);
+
     CompletableFuture<GetAllowedIpListResponse> getAllowedIpList(GetAllowedIpListRequest request);
 
     CompletableFuture<GetConsumerListResponse> getConsumerList(GetConsumerListRequest request);
@@ -55,8 +59,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetConsumerProgressResponse> getConsumerProgress(GetConsumerProgressRequest request);
 
     CompletableFuture<GetInstanceListResponse> getInstanceList(GetInstanceListRequest request);
-
-    CompletableFuture<GetMetaProductListResponse> getMetaProductList(GetMetaProductListRequest request);
 
     CompletableFuture<GetTopicListResponse> getTopicList(GetTopicListRequest request);
 

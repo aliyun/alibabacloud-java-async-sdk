@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetConsumerListRequest extends Request {
     @Query
+    @NameInMap("ConsumerId")
+    private String consumerId;
+
+    @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
@@ -24,6 +28,7 @@ public class GetConsumerListRequest extends Request {
 
     private GetConsumerListRequest(Builder builder) {
         super(builder);
+        this.consumerId = builder.consumerId;
         this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
     }
@@ -42,6 +47,13 @@ public class GetConsumerListRequest extends Request {
     }
 
     /**
+     * @return consumerId
+     */
+    public String getConsumerId() {
+        return this.consumerId;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -56,6 +68,7 @@ public class GetConsumerListRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetConsumerListRequest, Builder> {
+        private String consumerId; 
         private String instanceId; 
         private String regionId; 
 
@@ -63,11 +76,21 @@ public class GetConsumerListRequest extends Request {
             super();
         } 
 
-        private Builder(GetConsumerListRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
+        private Builder(GetConsumerListRequest request) {
+            super(request);
+            this.consumerId = request.consumerId;
+            this.instanceId = request.instanceId;
+            this.regionId = request.regionId;
         } 
+
+        /**
+         * ConsumerId.
+         */
+        public Builder consumerId(String consumerId) {
+            this.putQueryParameter("ConsumerId", consumerId);
+            this.consumerId = consumerId;
+            return this;
+        }
 
         /**
          * InstanceId.

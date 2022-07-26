@@ -7,24 +7,17 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeSaslUsersRequest} extends {@link RequestModel}
+ * {@link GetAllInstanceIdListRequest} extends {@link RequestModel}
  *
- * <p>DescribeSaslUsersRequest</p>
+ * <p>GetAllInstanceIdListRequest</p>
  */
-public class DescribeSaslUsersRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
-    private String instanceId;
-
+public class GetAllInstanceIdListRequest extends Request {
     @Query
     @NameInMap("RegionId")
-    @Validation(required = true)
     private String regionId;
 
-    private DescribeSaslUsersRequest(Builder builder) {
+    private GetAllInstanceIdListRequest(Builder builder) {
         super(builder);
-        this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
     }
 
@@ -32,7 +25,7 @@ public class DescribeSaslUsersRequest extends Request {
         return new Builder();
     }
 
-    public static DescribeSaslUsersRequest create() {
+    public static GetAllInstanceIdListRequest create() {
         return builder().build();
     }
 
@@ -42,41 +35,23 @@ public class DescribeSaslUsersRequest extends Request {
     }
 
     /**
-     * @return instanceId
-     */
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder<DescribeSaslUsersRequest, Builder> {
-        private String instanceId; 
+    public static final class Builder extends Request.Builder<GetAllInstanceIdListRequest, Builder> {
         private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeSaslUsersRequest request) {
+        private Builder(GetAllInstanceIdListRequest request) {
             super(request);
-            this.instanceId = request.instanceId;
             this.regionId = request.regionId;
         } 
-
-        /**
-         * InstanceId.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -88,8 +63,8 @@ public class DescribeSaslUsersRequest extends Request {
         }
 
         @Override
-        public DescribeSaslUsersRequest build() {
-            return new DescribeSaslUsersRequest(this);
+        public GetAllInstanceIdListRequest build() {
+            return new GetAllInstanceIdListRequest(this);
         } 
 
     } 

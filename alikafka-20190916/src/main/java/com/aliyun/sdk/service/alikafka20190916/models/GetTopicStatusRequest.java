@@ -76,11 +76,11 @@ public class GetTopicStatusRequest extends Request {
             super();
         } 
 
-        private Builder(GetTopicStatusRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
-            this.topic = response.topic;
+        private Builder(GetTopicStatusRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.regionId = request.regionId;
+            this.topic = request.topic;
         } 
 
         /**

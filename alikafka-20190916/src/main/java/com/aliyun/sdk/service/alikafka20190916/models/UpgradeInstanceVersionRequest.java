@@ -77,11 +77,11 @@ public class UpgradeInstanceVersionRequest extends Request {
             super();
         } 
 
-        private Builder(UpgradeInstanceVersionRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
-            this.targetVersion = response.targetVersion;
+        private Builder(UpgradeInstanceVersionRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.regionId = request.regionId;
+            this.targetVersion = request.targetVersion;
         } 
 
         /**

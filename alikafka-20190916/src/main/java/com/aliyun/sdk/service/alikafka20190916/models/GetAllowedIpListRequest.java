@@ -63,10 +63,10 @@ public class GetAllowedIpListRequest extends Request {
             super();
         } 
 
-        private Builder(GetAllowedIpListRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
+        private Builder(GetAllowedIpListRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.regionId = request.regionId;
         } 
 
         /**

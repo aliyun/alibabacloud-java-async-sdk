@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class TagResourcesRequest extends Request {
     @Query
+    @NameInMap("InstanceId")
+    private String instanceId;
+
+    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
@@ -34,6 +38,7 @@ public class TagResourcesRequest extends Request {
 
     private TagResourcesRequest(Builder builder) {
         super(builder);
+        this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
         this.resourceId = builder.resourceId;
         this.resourceType = builder.resourceType;
@@ -51,6 +56,13 @@ public class TagResourcesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     /**
@@ -82,6 +94,7 @@ public class TagResourcesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<TagResourcesRequest, Builder> {
+        private String instanceId; 
         private String regionId; 
         private java.util.List < String > resourceId; 
         private String resourceType; 
@@ -91,13 +104,23 @@ public class TagResourcesRequest extends Request {
             super();
         } 
 
-        private Builder(TagResourcesRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.resourceId = response.resourceId;
-            this.resourceType = response.resourceType;
-            this.tag = response.tag;
+        private Builder(TagResourcesRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.regionId = request.regionId;
+            this.resourceId = request.resourceId;
+            this.resourceType = request.resourceType;
+            this.tag = request.tag;
         } 
+
+        /**
+         * InstanceId.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
 
         /**
          * RegionId.

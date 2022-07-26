@@ -101,13 +101,13 @@ public class GetTopicListRequest extends Request {
             super();
         } 
 
-        private Builder(GetTopicListRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.instanceId = response.instanceId;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.topic = response.topic;
+        private Builder(GetTopicListRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.instanceId = request.instanceId;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.topic = request.topic;
         } 
 
         /**

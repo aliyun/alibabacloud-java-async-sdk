@@ -133,15 +133,15 @@ public class CreateAclRequest extends Request {
             super();
         } 
 
-        private Builder(CreateAclRequest response) {
-            super(response);
-            this.aclOperationType = response.aclOperationType;
-            this.aclResourceName = response.aclResourceName;
-            this.aclResourcePatternType = response.aclResourcePatternType;
-            this.aclResourceType = response.aclResourceType;
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
-            this.username = response.username;
+        private Builder(CreateAclRequest request) {
+            super(request);
+            this.aclOperationType = request.aclOperationType;
+            this.aclResourceName = request.aclResourceName;
+            this.aclResourcePatternType = request.aclResourcePatternType;
+            this.aclResourceType = request.aclResourceType;
+            this.instanceId = request.instanceId;
+            this.regionId = request.regionId;
+            this.username = request.username;
         } 
 
         /**

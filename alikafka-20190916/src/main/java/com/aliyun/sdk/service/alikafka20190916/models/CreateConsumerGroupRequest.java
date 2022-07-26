@@ -90,12 +90,12 @@ public class CreateConsumerGroupRequest extends Request {
             super();
         } 
 
-        private Builder(CreateConsumerGroupRequest response) {
-            super(response);
-            this.consumerId = response.consumerId;
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
-            this.remark = response.remark;
+        private Builder(CreateConsumerGroupRequest request) {
+            super(request);
+            this.consumerId = request.consumerId;
+            this.instanceId = request.instanceId;
+            this.regionId = request.regionId;
+            this.remark = request.remark;
         } 
 
         /**

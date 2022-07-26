@@ -119,14 +119,14 @@ public class UpdateAllowedIpRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateAllowedIpRequest response) {
-            super(response);
-            this.allowedListIp = response.allowedListIp;
-            this.allowedListType = response.allowedListType;
-            this.instanceId = response.instanceId;
-            this.portRange = response.portRange;
-            this.regionId = response.regionId;
-            this.updateType = response.updateType;
+        private Builder(UpdateAllowedIpRequest request) {
+            super(request);
+            this.allowedListIp = request.allowedListIp;
+            this.allowedListType = request.allowedListType;
+            this.instanceId = request.instanceId;
+            this.portRange = request.portRange;
+            this.regionId = request.regionId;
+            this.updateType = request.updateType;
         } 
 
         /**

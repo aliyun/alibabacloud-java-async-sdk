@@ -90,12 +90,12 @@ public class ModifyTopicRemarkRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyTopicRemarkRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
-            this.remark = response.remark;
-            this.topic = response.topic;
+        private Builder(ModifyTopicRemarkRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.regionId = request.regionId;
+            this.remark = request.remark;
+            this.topic = request.topic;
         } 
 
         /**

@@ -77,11 +77,11 @@ public class ModifyInstanceNameRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyInstanceNameRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.instanceName = response.instanceName;
-            this.regionId = response.regionId;
+        private Builder(ModifyInstanceNameRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.instanceName = request.instanceName;
+            this.regionId = request.regionId;
         } 
 
         /**

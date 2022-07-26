@@ -77,11 +77,11 @@ public class DeleteConsumerGroupRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteConsumerGroupRequest response) {
-            super(response);
-            this.consumerId = response.consumerId;
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
+        private Builder(DeleteConsumerGroupRequest request) {
+            super(request);
+            this.consumerId = request.consumerId;
+            this.instanceId = request.instanceId;
+            this.regionId = request.regionId;
         } 
 
         /**

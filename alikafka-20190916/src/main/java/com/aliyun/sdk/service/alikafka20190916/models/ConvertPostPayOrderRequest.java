@@ -76,11 +76,11 @@ public class ConvertPostPayOrderRequest extends Request {
             super();
         } 
 
-        private Builder(ConvertPostPayOrderRequest response) {
-            super(response);
-            this.duration = response.duration;
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
+        private Builder(ConvertPostPayOrderRequest request) {
+            super(request);
+            this.duration = request.duration;
+            this.instanceId = request.instanceId;
+            this.regionId = request.regionId;
         } 
 
         /**

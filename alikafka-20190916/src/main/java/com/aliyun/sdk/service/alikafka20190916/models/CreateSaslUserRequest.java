@@ -104,13 +104,13 @@ public class CreateSaslUserRequest extends Request {
             super();
         } 
 
-        private Builder(CreateSaslUserRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.password = response.password;
-            this.regionId = response.regionId;
-            this.type = response.type;
-            this.username = response.username;
+        private Builder(CreateSaslUserRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.password = request.password;
+            this.regionId = request.regionId;
+            this.type = request.type;
+            this.username = request.username;
         } 
 
         /**

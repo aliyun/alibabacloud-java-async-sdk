@@ -118,14 +118,14 @@ public class DescribeAclsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAclsRequest response) {
-            super(response);
-            this.aclResourceName = response.aclResourceName;
-            this.aclResourcePatternType = response.aclResourcePatternType;
-            this.aclResourceType = response.aclResourceType;
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
-            this.username = response.username;
+        private Builder(DescribeAclsRequest request) {
+            super(request);
+            this.aclResourceName = request.aclResourceName;
+            this.aclResourcePatternType = request.aclResourcePatternType;
+            this.aclResourceType = request.aclResourceType;
+            this.instanceId = request.instanceId;
+            this.regionId = request.regionId;
+            this.username = request.username;
         } 
 
         /**

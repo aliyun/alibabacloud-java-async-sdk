@@ -320,6 +320,9 @@ public class GetInstanceListResponseBody extends TeaModel {
         @NameInMap("RegionId")
         private String regionId;
 
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @NameInMap("SaslDomainEndpoint")
         private String saslDomainEndpoint;
 
@@ -372,6 +375,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             this.name = builder.name;
             this.paidType = builder.paidType;
             this.regionId = builder.regionId;
+            this.resourceGroupId = builder.resourceGroupId;
             this.saslDomainEndpoint = builder.saslDomainEndpoint;
             this.securityGroup = builder.securityGroup;
             this.serviceStatus = builder.serviceStatus;
@@ -500,6 +504,13 @@ public class GetInstanceListResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return saslDomainEndpoint
          */
         public String getSaslDomainEndpoint() {
@@ -599,6 +610,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             private String name; 
             private Integer paidType; 
             private String regionId; 
+            private String resourceGroupId; 
             private String saslDomainEndpoint; 
             private String securityGroup; 
             private Integer serviceStatus; 
@@ -729,6 +741,14 @@ public class GetInstanceListResponseBody extends TeaModel {
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 

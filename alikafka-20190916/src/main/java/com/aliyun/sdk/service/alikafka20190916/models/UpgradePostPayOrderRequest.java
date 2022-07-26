@@ -156,17 +156,17 @@ public class UpgradePostPayOrderRequest extends Request {
             super();
         } 
 
-        private Builder(UpgradePostPayOrderRequest response) {
-            super(response);
-            this.diskSize = response.diskSize;
-            this.eipMax = response.eipMax;
-            this.eipModel = response.eipModel;
-            this.instanceId = response.instanceId;
-            this.ioMax = response.ioMax;
-            this.ioMaxSpec = response.ioMaxSpec;
-            this.regionId = response.regionId;
-            this.specType = response.specType;
-            this.topicQuota = response.topicQuota;
+        private Builder(UpgradePostPayOrderRequest request) {
+            super(request);
+            this.diskSize = request.diskSize;
+            this.eipMax = request.eipMax;
+            this.eipModel = request.eipModel;
+            this.instanceId = request.instanceId;
+            this.ioMax = request.ioMax;
+            this.ioMaxSpec = request.ioMaxSpec;
+            this.regionId = request.regionId;
+            this.specType = request.specType;
+            this.topicQuota = request.topicQuota;
         } 
 
         /**

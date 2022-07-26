@@ -77,11 +77,11 @@ public class UpdateInstanceConfigRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateInstanceConfigRequest response) {
-            super(response);
-            this.config = response.config;
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
+        private Builder(UpdateInstanceConfigRequest request) {
+            super(request);
+            this.config = request.config;
+            this.instanceId = request.instanceId;
+            this.regionId = request.regionId;
         } 
 
         /**

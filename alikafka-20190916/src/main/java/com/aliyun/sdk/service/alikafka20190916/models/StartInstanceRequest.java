@@ -30,6 +30,10 @@ public class StartInstanceRequest extends Request {
     private Boolean isEipInner;
 
     @Query
+    @NameInMap("IsForceSelectedZones")
+    private Boolean isForceSelectedZones;
+
+    @Query
     @NameInMap("IsSetUserAndPassword")
     private Boolean isSetUserAndPassword;
 
@@ -40,6 +44,10 @@ public class StartInstanceRequest extends Request {
     @Query
     @NameInMap("Name")
     private String name;
+
+    @Query
+    @NameInMap("Notifier")
+    private String notifier;
 
     @Query
     @NameInMap("Password")
@@ -55,8 +63,16 @@ public class StartInstanceRequest extends Request {
     private String securityGroup;
 
     @Query
+    @NameInMap("SelectedZones")
+    private String selectedZones;
+
+    @Query
     @NameInMap("ServiceVersion")
     private String serviceVersion;
+
+    @Query
+    @NameInMap("UserPhoneNum")
+    private String userPhoneNum;
 
     @Query
     @NameInMap("Username")
@@ -82,13 +98,17 @@ public class StartInstanceRequest extends Request {
         this.deployModule = builder.deployModule;
         this.instanceId = builder.instanceId;
         this.isEipInner = builder.isEipInner;
+        this.isForceSelectedZones = builder.isForceSelectedZones;
         this.isSetUserAndPassword = builder.isSetUserAndPassword;
         this.KMSKeyId = builder.KMSKeyId;
         this.name = builder.name;
+        this.notifier = builder.notifier;
         this.password = builder.password;
         this.regionId = builder.regionId;
         this.securityGroup = builder.securityGroup;
+        this.selectedZones = builder.selectedZones;
         this.serviceVersion = builder.serviceVersion;
+        this.userPhoneNum = builder.userPhoneNum;
         this.username = builder.username;
         this.vSwitchId = builder.vSwitchId;
         this.vpcId = builder.vpcId;
@@ -137,6 +157,13 @@ public class StartInstanceRequest extends Request {
     }
 
     /**
+     * @return isForceSelectedZones
+     */
+    public Boolean getIsForceSelectedZones() {
+        return this.isForceSelectedZones;
+    }
+
+    /**
      * @return isSetUserAndPassword
      */
     public Boolean getIsSetUserAndPassword() {
@@ -155,6 +182,13 @@ public class StartInstanceRequest extends Request {
      */
     public String getName() {
         return this.name;
+    }
+
+    /**
+     * @return notifier
+     */
+    public String getNotifier() {
+        return this.notifier;
     }
 
     /**
@@ -179,10 +213,24 @@ public class StartInstanceRequest extends Request {
     }
 
     /**
+     * @return selectedZones
+     */
+    public String getSelectedZones() {
+        return this.selectedZones;
+    }
+
+    /**
      * @return serviceVersion
      */
     public String getServiceVersion() {
         return this.serviceVersion;
+    }
+
+    /**
+     * @return userPhoneNum
+     */
+    public String getUserPhoneNum() {
+        return this.userPhoneNum;
     }
 
     /**
@@ -218,13 +266,17 @@ public class StartInstanceRequest extends Request {
         private String deployModule; 
         private String instanceId; 
         private Boolean isEipInner; 
+        private Boolean isForceSelectedZones; 
         private Boolean isSetUserAndPassword; 
         private String KMSKeyId; 
         private String name; 
+        private String notifier; 
         private String password; 
         private String regionId; 
         private String securityGroup; 
+        private String selectedZones; 
         private String serviceVersion; 
+        private String userPhoneNum; 
         private String username; 
         private String vSwitchId; 
         private String vpcId; 
@@ -234,23 +286,27 @@ public class StartInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(StartInstanceRequest response) {
-            super(response);
-            this.config = response.config;
-            this.deployModule = response.deployModule;
-            this.instanceId = response.instanceId;
-            this.isEipInner = response.isEipInner;
-            this.isSetUserAndPassword = response.isSetUserAndPassword;
-            this.KMSKeyId = response.KMSKeyId;
-            this.name = response.name;
-            this.password = response.password;
-            this.regionId = response.regionId;
-            this.securityGroup = response.securityGroup;
-            this.serviceVersion = response.serviceVersion;
-            this.username = response.username;
-            this.vSwitchId = response.vSwitchId;
-            this.vpcId = response.vpcId;
-            this.zoneId = response.zoneId;
+        private Builder(StartInstanceRequest request) {
+            super(request);
+            this.config = request.config;
+            this.deployModule = request.deployModule;
+            this.instanceId = request.instanceId;
+            this.isEipInner = request.isEipInner;
+            this.isForceSelectedZones = request.isForceSelectedZones;
+            this.isSetUserAndPassword = request.isSetUserAndPassword;
+            this.KMSKeyId = request.KMSKeyId;
+            this.name = request.name;
+            this.notifier = request.notifier;
+            this.password = request.password;
+            this.regionId = request.regionId;
+            this.securityGroup = request.securityGroup;
+            this.selectedZones = request.selectedZones;
+            this.serviceVersion = request.serviceVersion;
+            this.userPhoneNum = request.userPhoneNum;
+            this.username = request.username;
+            this.vSwitchId = request.vSwitchId;
+            this.vpcId = request.vpcId;
+            this.zoneId = request.zoneId;
         } 
 
         /**
@@ -290,6 +346,15 @@ public class StartInstanceRequest extends Request {
         }
 
         /**
+         * IsForceSelectedZones.
+         */
+        public Builder isForceSelectedZones(Boolean isForceSelectedZones) {
+            this.putQueryParameter("IsForceSelectedZones", isForceSelectedZones);
+            this.isForceSelectedZones = isForceSelectedZones;
+            return this;
+        }
+
+        /**
          * IsSetUserAndPassword.
          */
         public Builder isSetUserAndPassword(Boolean isSetUserAndPassword) {
@@ -313,6 +378,15 @@ public class StartInstanceRequest extends Request {
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * Notifier.
+         */
+        public Builder notifier(String notifier) {
+            this.putQueryParameter("Notifier", notifier);
+            this.notifier = notifier;
             return this;
         }
 
@@ -344,11 +418,29 @@ public class StartInstanceRequest extends Request {
         }
 
         /**
+         * SelectedZones.
+         */
+        public Builder selectedZones(String selectedZones) {
+            this.putQueryParameter("SelectedZones", selectedZones);
+            this.selectedZones = selectedZones;
+            return this;
+        }
+
+        /**
          * ServiceVersion.
          */
         public Builder serviceVersion(String serviceVersion) {
             this.putQueryParameter("ServiceVersion", serviceVersion);
             this.serviceVersion = serviceVersion;
+            return this;
+        }
+
+        /**
+         * UserPhoneNum.
+         */
+        public Builder userPhoneNum(String userPhoneNum) {
+            this.putQueryParameter("UserPhoneNum", userPhoneNum);
+            this.userPhoneNum = userPhoneNum;
             return this;
         }
 
