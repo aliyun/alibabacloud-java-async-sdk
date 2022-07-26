@@ -20,4 +20,90 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AccessTokenResponse> accessToken(AccessTokenRequest request);
 
+    CompletableFuture<AddressGetResponse> addressGet(AddressGetRequest request);
+
+    CompletableFuture<ApplyAddResponse> applyAdd(ApplyAddRequest request);
+
+    CompletableFuture<ApplyListQueryResponse> applyListQuery(ApplyListQueryRequest request);
+
+    CompletableFuture<ApplyModifyResponse> applyModify(ApplyModifyRequest request);
+
+    CompletableFuture<ApplyQueryResponse> applyQuery(ApplyQueryRequest request);
+
+    CompletableFuture<CarApplyAddResponse> carApplyAdd(CarApplyAddRequest request);
+
+    CompletableFuture<CarApplyModifyResponse> carApplyModify(CarApplyModifyRequest request);
+
+    CompletableFuture<CarApplyQueryResponse> carApplyQuery(CarApplyQueryRequest request);
+
+    CompletableFuture<CarBillSettlementQueryResponse> carBillSettlementQuery(CarBillSettlementQueryRequest request);
+
+    CompletableFuture<CarOrderListQueryResponse> carOrderListQuery(CarOrderListQueryRequest request);
+
+    CompletableFuture<CommonApplyQueryResponse> commonApplyQuery(CommonApplyQueryRequest request);
+
+    CompletableFuture<CommonApplySyncResponse> commonApplySync(CommonApplySyncRequest request);
+
+    CompletableFuture<CorpTokenResponse> corpToken(CorpTokenRequest request);
+
+    CompletableFuture<CostCenterDeleteResponse> costCenterDelete(CostCenterDeleteRequest request);
+
+    CompletableFuture<CostCenterModifyResponse> costCenterModify(CostCenterModifyRequest request);
+
+    CompletableFuture<CostCenterQueryResponse> costCenterQuery(CostCenterQueryRequest request);
+
+    CompletableFuture<CostCenterSaveResponse> costCenterSave(CostCenterSaveRequest request);
+
+    CompletableFuture<DepartmentSaveResponse> departmentSave(DepartmentSaveRequest request);
+
+    CompletableFuture<EntityAddResponse> entityAdd(EntityAddRequest request);
+
+    CompletableFuture<EntityDeleteResponse> entityDelete(EntityDeleteRequest request);
+
+    CompletableFuture<EntitySetResponse> entitySet(EntitySetRequest request);
+
+    CompletableFuture<ExceedApplySyncResponse> exceedApplySync(ExceedApplySyncRequest request);
+
+    CompletableFuture<FlightBillSettlementQueryResponse> flightBillSettlementQuery(FlightBillSettlementQueryRequest request);
+
+    CompletableFuture<FlightExceedApplyQueryResponse> flightExceedApplyQuery(FlightExceedApplyQueryRequest request);
+
+    CompletableFuture<FlightOrderListQueryResponse> flightOrderListQuery(FlightOrderListQueryRequest request);
+
+    CompletableFuture<FlightOrderQueryResponse> flightOrderQuery(FlightOrderQueryRequest request);
+
+    CompletableFuture<HotelBillSettlementQueryResponse> hotelBillSettlementQuery(HotelBillSettlementQueryRequest request);
+
+    CompletableFuture<HotelExceedApplyQueryResponse> hotelExceedApplyQuery(HotelExceedApplyQueryRequest request);
+
+    CompletableFuture<HotelOrderListQueryResponse> hotelOrderListQuery(HotelOrderListQueryRequest request);
+
+    CompletableFuture<InvoiceAddResponse> invoiceAdd(InvoiceAddRequest request);
+
+    CompletableFuture<InvoiceDeleteResponse> invoiceDelete(InvoiceDeleteRequest request);
+
+    CompletableFuture<InvoiceModifyResponse> invoiceModify(InvoiceModifyRequest request);
+
+    CompletableFuture<InvoiceRuleSaveResponse> invoiceRuleSave(InvoiceRuleSaveRequest request);
+
+    CompletableFuture<InvoiceSearchResponse> invoiceSearch(InvoiceSearchRequest request);
+
+    CompletableFuture<IsvUserSaveResponse> isvUserSave(IsvUserSaveRequest request);
+
+    CompletableFuture<MonthBillGetResponse> monthBillGet(MonthBillGetRequest request);
+
+    CompletableFuture<ProjectAddResponse> projectAdd(ProjectAddRequest request);
+
+    CompletableFuture<ProjectDeleteResponse> projectDelete(ProjectDeleteRequest request);
+
+    CompletableFuture<ProjectModifyResponse> projectModify(ProjectModifyRequest request);
+
+    CompletableFuture<TrainBillSettlementQueryResponse> trainBillSettlementQuery(TrainBillSettlementQueryRequest request);
+
+    CompletableFuture<TrainExceedApplyQueryResponse> trainExceedApplyQuery(TrainExceedApplyQueryRequest request);
+
+    CompletableFuture<TrainOrderListQueryResponse> trainOrderListQuery(TrainOrderListQueryRequest request);
+
+    CompletableFuture<TrainOrderQueryResponse> trainOrderQuery(TrainOrderQueryRequest request);
+
 }
