@@ -61,10 +61,10 @@ public class DescribeRegionsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeRegionsRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.regionId = response.regionId;
+        private Builder(DescribeRegionsRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.regionId = request.regionId;
         } 
 
         /**

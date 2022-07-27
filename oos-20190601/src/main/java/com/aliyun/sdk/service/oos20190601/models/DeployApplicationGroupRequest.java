@@ -90,12 +90,12 @@ public class DeployApplicationGroupRequest extends Request {
             super();
         } 
 
-        private Builder(DeployApplicationGroupRequest response) {
-            super(response);
-            this.applicationName = response.applicationName;
-            this.deployParameters = response.deployParameters;
-            this.name = response.name;
-            this.regionId = response.regionId;
+        private Builder(DeployApplicationGroupRequest request) {
+            super(request);
+            this.applicationName = request.applicationName;
+            this.deployParameters = request.deployParameters;
+            this.name = request.name;
+            this.regionId = request.regionId;
         } 
 
         /**

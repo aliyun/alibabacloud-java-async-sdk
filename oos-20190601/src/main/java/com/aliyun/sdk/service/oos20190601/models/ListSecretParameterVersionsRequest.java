@@ -115,14 +115,14 @@ public class ListSecretParameterVersionsRequest extends Request {
             super();
         } 
 
-        private Builder(ListSecretParameterVersionsRequest response) {
-            super(response);
-            this.maxResults = response.maxResults;
-            this.name = response.name;
-            this.nextToken = response.nextToken;
-            this.regionId = response.regionId;
-            this.shareType = response.shareType;
-            this.withDecryption = response.withDecryption;
+        private Builder(ListSecretParameterVersionsRequest request) {
+            super(request);
+            this.maxResults = request.maxResults;
+            this.name = request.name;
+            this.nextToken = request.nextToken;
+            this.regionId = request.regionId;
+            this.shareType = request.shareType;
+            this.withDecryption = request.withDecryption;
         } 
 
         /**

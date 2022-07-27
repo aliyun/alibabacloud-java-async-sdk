@@ -114,14 +114,14 @@ public class CreateApplicationRequest extends Request {
             super();
         } 
 
-        private Builder(CreateApplicationRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.description = response.description;
-            this.name = response.name;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.tags = response.tags;
+        private Builder(CreateApplicationRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.description = request.description;
+            this.name = request.name;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.tags = request.tags;
         } 
 
         /**
@@ -173,7 +173,8 @@ public class CreateApplicationRequest extends Request {
          * Tags.
          */
         public Builder tags(java.util.Map < String, ? > tags) {
-            this.putQueryParameter("Tags", tags);
+            String tagsShrink = shrink(tags, "Tags", "json");
+            this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;
             return this;
         }

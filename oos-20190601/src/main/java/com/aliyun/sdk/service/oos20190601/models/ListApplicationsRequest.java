@@ -17,6 +17,10 @@ public class ListApplicationsRequest extends Request {
     private Integer maxResults;
 
     @Query
+    @NameInMap("Name")
+    private String name;
+
+    @Query
     @NameInMap("Names")
     private String names;
 
@@ -35,6 +39,7 @@ public class ListApplicationsRequest extends Request {
     private ListApplicationsRequest(Builder builder) {
         super(builder);
         this.maxResults = builder.maxResults;
+        this.name = builder.name;
         this.names = builder.names;
         this.nextToken = builder.nextToken;
         this.regionId = builder.regionId;
@@ -59,6 +64,13 @@ public class ListApplicationsRequest extends Request {
      */
     public Integer getMaxResults() {
         return this.maxResults;
+    }
+
+    /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
     }
 
     /**
@@ -91,6 +103,7 @@ public class ListApplicationsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListApplicationsRequest, Builder> {
         private Integer maxResults; 
+        private String name; 
         private String names; 
         private String nextToken; 
         private String regionId; 
@@ -100,13 +113,14 @@ public class ListApplicationsRequest extends Request {
             super();
         } 
 
-        private Builder(ListApplicationsRequest response) {
-            super(response);
-            this.maxResults = response.maxResults;
-            this.names = response.names;
-            this.nextToken = response.nextToken;
-            this.regionId = response.regionId;
-            this.tags = response.tags;
+        private Builder(ListApplicationsRequest request) {
+            super(request);
+            this.maxResults = request.maxResults;
+            this.name = request.name;
+            this.names = request.names;
+            this.nextToken = request.nextToken;
+            this.regionId = request.regionId;
+            this.tags = request.tags;
         } 
 
         /**
@@ -115,6 +129,15 @@ public class ListApplicationsRequest extends Request {
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
             this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * Name.
+         */
+        public Builder name(String name) {
+            this.putQueryParameter("Name", name);
+            this.name = name;
             return this;
         }
 
@@ -149,7 +172,8 @@ public class ListApplicationsRequest extends Request {
          * Tags.
          */
         public Builder tags(java.util.Map < String, ? > tags) {
-            this.putQueryParameter("Tags", tags);
+            String tagsShrink = shrink(tags, "Tags", "json");
+            this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;
             return this;
         }

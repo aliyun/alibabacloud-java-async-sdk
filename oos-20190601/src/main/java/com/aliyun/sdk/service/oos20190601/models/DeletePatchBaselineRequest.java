@@ -62,10 +62,10 @@ public class DeletePatchBaselineRequest extends Request {
             super();
         } 
 
-        private Builder(DeletePatchBaselineRequest response) {
-            super(response);
-            this.name = response.name;
-            this.regionId = response.regionId;
+        private Builder(DeletePatchBaselineRequest request) {
+            super(request);
+            this.name = request.name;
+            this.regionId = request.regionId;
         } 
 
         /**

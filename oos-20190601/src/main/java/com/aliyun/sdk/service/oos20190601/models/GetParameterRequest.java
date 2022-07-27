@@ -88,12 +88,12 @@ public class GetParameterRequest extends Request {
             super();
         } 
 
-        private Builder(GetParameterRequest response) {
-            super(response);
-            this.name = response.name;
-            this.parameterVersion = response.parameterVersion;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
+        private Builder(GetParameterRequest request) {
+            super(request);
+            this.name = request.name;
+            this.parameterVersion = request.parameterVersion;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**

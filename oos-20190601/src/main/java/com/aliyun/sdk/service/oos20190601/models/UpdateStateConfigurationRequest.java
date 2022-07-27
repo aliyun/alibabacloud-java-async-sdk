@@ -179,19 +179,19 @@ public class UpdateStateConfigurationRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateStateConfigurationRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.configureMode = response.configureMode;
-            this.description = response.description;
-            this.parameters = response.parameters;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.scheduleExpression = response.scheduleExpression;
-            this.scheduleType = response.scheduleType;
-            this.stateConfigurationId = response.stateConfigurationId;
-            this.tags = response.tags;
-            this.targets = response.targets;
+        private Builder(UpdateStateConfigurationRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.configureMode = request.configureMode;
+            this.description = request.description;
+            this.parameters = request.parameters;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.scheduleExpression = request.scheduleExpression;
+            this.scheduleType = request.scheduleType;
+            this.stateConfigurationId = request.stateConfigurationId;
+            this.tags = request.tags;
+            this.targets = request.targets;
         } 
 
         /**
@@ -225,7 +225,8 @@ public class UpdateStateConfigurationRequest extends Request {
          * Parameters.
          */
         public Builder parameters(java.util.Map < String, ? > parameters) {
-            this.putQueryParameter("Parameters", parameters);
+            String parametersShrink = shrink(parameters, "Parameters", "json");
+            this.putQueryParameter("Parameters", parametersShrink);
             this.parameters = parameters;
             return this;
         }
@@ -279,7 +280,8 @@ public class UpdateStateConfigurationRequest extends Request {
          * Tags.
          */
         public Builder tags(java.util.Map < String, ? > tags) {
-            this.putQueryParameter("Tags", tags);
+            String tagsShrink = shrink(tags, "Tags", "json");
+            this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;
             return this;
         }

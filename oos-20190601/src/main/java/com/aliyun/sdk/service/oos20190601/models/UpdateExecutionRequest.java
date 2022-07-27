@@ -88,12 +88,12 @@ public class UpdateExecutionRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateExecutionRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.executionId = response.executionId;
-            this.parameters = response.parameters;
-            this.regionId = response.regionId;
+        private Builder(UpdateExecutionRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.executionId = request.executionId;
+            this.parameters = request.parameters;
+            this.regionId = request.regionId;
         } 
 
         /**

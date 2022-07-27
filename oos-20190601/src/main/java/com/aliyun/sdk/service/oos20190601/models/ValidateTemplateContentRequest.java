@@ -62,10 +62,10 @@ public class ValidateTemplateContentRequest extends Request {
             super();
         } 
 
-        private Builder(ValidateTemplateContentRequest response) {
-            super(response);
-            this.content = response.content;
-            this.regionId = response.regionId;
+        private Builder(ValidateTemplateContentRequest request) {
+            super(request);
+            this.content = request.content;
+            this.regionId = request.regionId;
         } 
 
         /**

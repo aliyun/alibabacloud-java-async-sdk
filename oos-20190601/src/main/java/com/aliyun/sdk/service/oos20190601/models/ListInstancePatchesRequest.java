@@ -100,13 +100,13 @@ public class ListInstancePatchesRequest extends Request {
             super();
         } 
 
-        private Builder(ListInstancePatchesRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.patchStatuses = response.patchStatuses;
-            this.regionId = response.regionId;
+        private Builder(ListInstancePatchesRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.patchStatuses = request.patchStatuses;
+            this.regionId = request.regionId;
         } 
 
         /**

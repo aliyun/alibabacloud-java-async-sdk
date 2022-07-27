@@ -102,13 +102,13 @@ public class ListParameterVersionsRequest extends Request {
             super();
         } 
 
-        private Builder(ListParameterVersionsRequest response) {
-            super(response);
-            this.maxResults = response.maxResults;
-            this.name = response.name;
-            this.nextToken = response.nextToken;
-            this.regionId = response.regionId;
-            this.shareType = response.shareType;
+        private Builder(ListParameterVersionsRequest request) {
+            super(request);
+            this.maxResults = request.maxResults;
+            this.name = request.name;
+            this.nextToken = request.nextToken;
+            this.regionId = request.regionId;
+            this.shareType = request.shareType;
         } 
 
         /**

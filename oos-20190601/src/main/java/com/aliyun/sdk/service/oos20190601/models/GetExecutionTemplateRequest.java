@@ -62,10 +62,10 @@ public class GetExecutionTemplateRequest extends Request {
             super();
         } 
 
-        private Builder(GetExecutionTemplateRequest response) {
-            super(response);
-            this.executionId = response.executionId;
-            this.regionId = response.regionId;
+        private Builder(GetExecutionTemplateRequest request) {
+            super(request);
+            this.executionId = request.executionId;
+            this.regionId = request.regionId;
         } 
 
         /**

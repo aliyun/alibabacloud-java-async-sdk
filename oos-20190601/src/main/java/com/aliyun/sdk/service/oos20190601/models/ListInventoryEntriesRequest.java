@@ -116,14 +116,14 @@ public class ListInventoryEntriesRequest extends Request {
             super();
         } 
 
-        private Builder(ListInventoryEntriesRequest response) {
-            super(response);
-            this.filter = response.filter;
-            this.instanceId = response.instanceId;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.regionId = response.regionId;
-            this.typeName = response.typeName;
+        private Builder(ListInventoryEntriesRequest request) {
+            super(request);
+            this.filter = request.filter;
+            this.instanceId = request.instanceId;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.regionId = request.regionId;
+            this.typeName = request.typeName;
         } 
 
         /**

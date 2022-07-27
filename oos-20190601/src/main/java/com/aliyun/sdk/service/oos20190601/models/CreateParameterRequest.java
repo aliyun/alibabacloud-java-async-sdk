@@ -155,17 +155,17 @@ public class CreateParameterRequest extends Request {
             super();
         } 
 
-        private Builder(CreateParameterRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.constraints = response.constraints;
-            this.description = response.description;
-            this.name = response.name;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.tags = response.tags;
-            this.type = response.type;
-            this.value = response.value;
+        private Builder(CreateParameterRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.constraints = request.constraints;
+            this.description = request.description;
+            this.name = request.name;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.tags = request.tags;
+            this.type = request.type;
+            this.value = request.value;
         } 
 
         /**
@@ -226,7 +226,8 @@ public class CreateParameterRequest extends Request {
          * Tags.
          */
         public Builder tags(java.util.Map < String, ? > tags) {
-            this.putQueryParameter("Tags", tags);
+            String tagsShrink = shrink(tags, "Tags", "json");
+            this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;
             return this;
         }

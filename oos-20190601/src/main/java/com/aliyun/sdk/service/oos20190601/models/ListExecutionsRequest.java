@@ -321,30 +321,30 @@ public class ListExecutionsRequest extends Request {
             super();
         } 
 
-        private Builder(ListExecutionsRequest response) {
-            super(response);
-            this.category = response.category;
-            this.endDateAfter = response.endDateAfter;
-            this.endDateBefore = response.endDateBefore;
-            this.executedBy = response.executedBy;
-            this.executionId = response.executionId;
-            this.includeChildExecution = response.includeChildExecution;
-            this.maxResults = response.maxResults;
-            this.mode = response.mode;
-            this.nextToken = response.nextToken;
-            this.parentExecutionId = response.parentExecutionId;
-            this.ramRole = response.ramRole;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceId = response.resourceId;
-            this.resourceTemplateName = response.resourceTemplateName;
-            this.sortField = response.sortField;
-            this.sortOrder = response.sortOrder;
-            this.startDateAfter = response.startDateAfter;
-            this.startDateBefore = response.startDateBefore;
-            this.status = response.status;
-            this.tags = response.tags;
-            this.templateName = response.templateName;
+        private Builder(ListExecutionsRequest request) {
+            super(request);
+            this.category = request.category;
+            this.endDateAfter = request.endDateAfter;
+            this.endDateBefore = request.endDateBefore;
+            this.executedBy = request.executedBy;
+            this.executionId = request.executionId;
+            this.includeChildExecution = request.includeChildExecution;
+            this.maxResults = request.maxResults;
+            this.mode = request.mode;
+            this.nextToken = request.nextToken;
+            this.parentExecutionId = request.parentExecutionId;
+            this.ramRole = request.ramRole;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceId = request.resourceId;
+            this.resourceTemplateName = request.resourceTemplateName;
+            this.sortField = request.sortField;
+            this.sortOrder = request.sortOrder;
+            this.startDateAfter = request.startDateAfter;
+            this.startDateBefore = request.startDateBefore;
+            this.status = request.status;
+            this.tags = request.tags;
+            this.templateName = request.templateName;
         } 
 
         /**
@@ -531,7 +531,8 @@ public class ListExecutionsRequest extends Request {
          * Tags.
          */
         public Builder tags(java.util.Map < String, ? > tags) {
-            this.putQueryParameter("Tags", tags);
+            String tagsShrink = shrink(tags, "Tags", "json");
+            this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;
             return this;
         }

@@ -115,14 +115,14 @@ public class UpdateSecretParameterRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateSecretParameterRequest response) {
-            super(response);
-            this.description = response.description;
-            this.name = response.name;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.tags = response.tags;
-            this.value = response.value;
+        private Builder(UpdateSecretParameterRequest request) {
+            super(request);
+            this.description = request.description;
+            this.name = request.name;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.tags = request.tags;
+            this.value = request.value;
         } 
 
         /**
@@ -165,7 +165,8 @@ public class UpdateSecretParameterRequest extends Request {
          * Tags.
          */
         public Builder tags(java.util.Map < String, ? > tags) {
-            this.putQueryParameter("Tags", tags);
+            String tagsShrink = shrink(tags, "Tags", "json");
+            this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;
             return this;
         }

@@ -101,13 +101,13 @@ public class ListTemplateVersionsRequest extends Request {
             super();
         } 
 
-        private Builder(ListTemplateVersionsRequest response) {
-            super(response);
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.regionId = response.regionId;
-            this.shareType = response.shareType;
-            this.templateName = response.templateName;
+        private Builder(ListTemplateVersionsRequest request) {
+            super(request);
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.regionId = request.regionId;
+            this.shareType = request.shareType;
+            this.templateName = request.templateName;
         } 
 
         /**

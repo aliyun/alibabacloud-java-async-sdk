@@ -75,11 +75,11 @@ public class DeleteStateConfigurationsRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteStateConfigurationsRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.regionId = response.regionId;
-            this.stateConfigurationIds = response.stateConfigurationIds;
+        private Builder(DeleteStateConfigurationsRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.regionId = request.regionId;
+            this.stateConfigurationIds = request.stateConfigurationIds;
         } 
 
         /**

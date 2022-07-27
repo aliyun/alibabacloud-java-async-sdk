@@ -114,14 +114,14 @@ public class ListExecutionLogsRequest extends Request {
             super();
         } 
 
-        private Builder(ListExecutionLogsRequest response) {
-            super(response);
-            this.executionId = response.executionId;
-            this.logType = response.logType;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.regionId = response.regionId;
-            this.taskExecutionId = response.taskExecutionId;
+        private Builder(ListExecutionLogsRequest request) {
+            super(request);
+            this.executionId = request.executionId;
+            this.logType = request.logType;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.regionId = request.regionId;
+            this.taskExecutionId = request.taskExecutionId;
         } 
 
         /**

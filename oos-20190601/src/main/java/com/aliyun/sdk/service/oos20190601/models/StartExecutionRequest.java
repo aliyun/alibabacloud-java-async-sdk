@@ -205,21 +205,21 @@ public class StartExecutionRequest extends Request {
             super();
         } 
 
-        private Builder(StartExecutionRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.description = response.description;
-            this.loopMode = response.loopMode;
-            this.mode = response.mode;
-            this.parameters = response.parameters;
-            this.parentExecutionId = response.parentExecutionId;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.safetyCheck = response.safetyCheck;
-            this.tags = response.tags;
-            this.templateContent = response.templateContent;
-            this.templateName = response.templateName;
-            this.templateVersion = response.templateVersion;
+        private Builder(StartExecutionRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.description = request.description;
+            this.loopMode = request.loopMode;
+            this.mode = request.mode;
+            this.parameters = request.parameters;
+            this.parentExecutionId = request.parentExecutionId;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.safetyCheck = request.safetyCheck;
+            this.tags = request.tags;
+            this.templateContent = request.templateContent;
+            this.templateName = request.templateName;
+            this.templateVersion = request.templateVersion;
         } 
 
         /**
@@ -307,7 +307,8 @@ public class StartExecutionRequest extends Request {
          * Tags.
          */
         public Builder tags(java.util.Map < String, ? > tags) {
-            this.putQueryParameter("Tags", tags);
+            String tagsShrink = shrink(tags, "Tags", "json");
+            this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;
             return this;
         }

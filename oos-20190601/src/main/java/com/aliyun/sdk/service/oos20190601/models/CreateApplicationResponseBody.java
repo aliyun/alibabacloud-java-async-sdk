@@ -82,7 +82,7 @@ public class CreateApplicationResponseBody extends TeaModel {
         private String name;
 
         @NameInMap("Tags")
-        private java.util.Map < String, ? > tags;
+        private java.util.Map < String, String > tags;
 
         @NameInMap("UpdateDate")
         private String updateDate;
@@ -127,7 +127,7 @@ public class CreateApplicationResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.Map < String, ? > getTags() {
+        public java.util.Map < String, String > getTags() {
             return this.tags;
         }
 
@@ -142,7 +142,7 @@ public class CreateApplicationResponseBody extends TeaModel {
             private String createDate; 
             private String description; 
             private String name; 
-            private java.util.Map < String, ? > tags; 
+            private java.util.Map < String, String > tags; 
             private String updateDate; 
 
             /**
@@ -172,7 +172,7 @@ public class CreateApplicationResponseBody extends TeaModel {
             /**
              * Tags.
              */
-            public Builder tags(java.util.Map < String, ? > tags) {
+            public Builder tags(java.util.Map < String, String > tags) {
                 this.tags = tags;
                 return this;
             }

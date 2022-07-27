@@ -62,10 +62,10 @@ public class CancelExecutionRequest extends Request {
             super();
         } 
 
-        private Builder(CancelExecutionRequest response) {
-            super(response);
-            this.executionId = response.executionId;
-            this.regionId = response.regionId;
+        private Builder(CancelExecutionRequest request) {
+            super(request);
+            this.executionId = request.executionId;
+            this.regionId = request.regionId;
         } 
 
         /**

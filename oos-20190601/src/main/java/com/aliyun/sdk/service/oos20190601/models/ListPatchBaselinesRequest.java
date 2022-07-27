@@ -113,14 +113,14 @@ public class ListPatchBaselinesRequest extends Request {
             super();
         } 
 
-        private Builder(ListPatchBaselinesRequest response) {
-            super(response);
-            this.maxResults = response.maxResults;
-            this.name = response.name;
-            this.nextToken = response.nextToken;
-            this.operationSystem = response.operationSystem;
-            this.regionId = response.regionId;
-            this.shareType = response.shareType;
+        private Builder(ListPatchBaselinesRequest request) {
+            super(request);
+            this.maxResults = request.maxResults;
+            this.name = request.name;
+            this.nextToken = request.nextToken;
+            this.operationSystem = request.operationSystem;
+            this.regionId = request.regionId;
+            this.shareType = request.shareType;
         } 
 
         /**

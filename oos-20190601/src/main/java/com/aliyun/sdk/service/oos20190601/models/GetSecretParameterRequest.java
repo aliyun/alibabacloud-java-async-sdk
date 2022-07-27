@@ -89,12 +89,12 @@ public class GetSecretParameterRequest extends Request {
             super();
         } 
 
-        private Builder(GetSecretParameterRequest response) {
-            super(response);
-            this.name = response.name;
-            this.parameterVersion = response.parameterVersion;
-            this.regionId = response.regionId;
-            this.withDecryption = response.withDecryption;
+        private Builder(GetSecretParameterRequest request) {
+            super(request);
+            this.name = request.name;
+            this.parameterVersion = request.parameterVersion;
+            this.regionId = request.regionId;
+            this.withDecryption = request.withDecryption;
         } 
 
         /**

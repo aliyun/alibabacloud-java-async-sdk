@@ -195,20 +195,20 @@ public class CreateStateConfigurationRequest extends Request {
             super();
         } 
 
-        private Builder(CreateStateConfigurationRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.configureMode = response.configureMode;
-            this.description = response.description;
-            this.parameters = response.parameters;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.scheduleExpression = response.scheduleExpression;
-            this.scheduleType = response.scheduleType;
-            this.tags = response.tags;
-            this.targets = response.targets;
-            this.templateName = response.templateName;
-            this.templateVersion = response.templateVersion;
+        private Builder(CreateStateConfigurationRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.configureMode = request.configureMode;
+            this.description = request.description;
+            this.parameters = request.parameters;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.scheduleExpression = request.scheduleExpression;
+            this.scheduleType = request.scheduleType;
+            this.tags = request.tags;
+            this.targets = request.targets;
+            this.templateName = request.templateName;
+            this.templateVersion = request.templateVersion;
         } 
 
         /**
@@ -287,7 +287,8 @@ public class CreateStateConfigurationRequest extends Request {
          * Tags.
          */
         public Builder tags(java.util.Map < String, ? > tags) {
-            this.putQueryParameter("Tags", tags);
+            String tagsShrink = shrink(tags, "Tags", "json");
+            this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;
             return this;
         }

@@ -116,14 +116,14 @@ public class CreatePatchBaselineRequest extends Request {
             super();
         } 
 
-        private Builder(CreatePatchBaselineRequest response) {
-            super(response);
-            this.approvalRules = response.approvalRules;
-            this.clientToken = response.clientToken;
-            this.description = response.description;
-            this.name = response.name;
-            this.operationSystem = response.operationSystem;
-            this.regionId = response.regionId;
+        private Builder(CreatePatchBaselineRequest request) {
+            super(request);
+            this.approvalRules = request.approvalRules;
+            this.clientToken = request.clientToken;
+            this.description = request.description;
+            this.name = request.name;
+            this.operationSystem = request.operationSystem;
+            this.regionId = request.regionId;
         } 
 
         /**

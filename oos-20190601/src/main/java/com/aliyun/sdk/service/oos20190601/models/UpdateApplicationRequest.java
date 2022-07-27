@@ -88,12 +88,12 @@ public class UpdateApplicationRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateApplicationRequest response) {
-            super(response);
-            this.description = response.description;
-            this.name = response.name;
-            this.regionId = response.regionId;
-            this.tags = response.tags;
+        private Builder(UpdateApplicationRequest request) {
+            super(request);
+            this.description = request.description;
+            this.name = request.name;
+            this.regionId = request.regionId;
+            this.tags = request.tags;
         } 
 
         /**
@@ -127,7 +127,8 @@ public class UpdateApplicationRequest extends Request {
          * Tags.
          */
         public Builder tags(java.util.Map < String, ? > tags) {
-            this.putQueryParameter("Tags", tags);
+            String tagsShrink = shrink(tags, "Tags", "json");
+            this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;
             return this;
         }

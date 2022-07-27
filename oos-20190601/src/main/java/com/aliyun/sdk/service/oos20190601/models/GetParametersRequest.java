@@ -62,10 +62,10 @@ public class GetParametersRequest extends Request {
             super();
         } 
 
-        private Builder(GetParametersRequest response) {
-            super(response);
-            this.names = response.names;
-            this.regionId = response.regionId;
+        private Builder(GetParametersRequest request) {
+            super(request);
+            this.names = request.names;
+            this.regionId = request.regionId;
         } 
 
         /**

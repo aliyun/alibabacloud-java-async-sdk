@@ -76,11 +76,11 @@ public class DeleteApplicationGroupRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteApplicationGroupRequest response) {
-            super(response);
-            this.applicationName = response.applicationName;
-            this.name = response.name;
-            this.regionId = response.regionId;
+        private Builder(DeleteApplicationGroupRequest request) {
+            super(request);
+            this.applicationName = request.applicationName;
+            this.name = request.name;
+            this.regionId = request.regionId;
         } 
 
         /**

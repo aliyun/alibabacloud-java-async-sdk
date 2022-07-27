@@ -22,6 +22,10 @@ public class CreateApplicationGroupRequest extends Request {
     private String clientToken;
 
     @Query
+    @NameInMap("CmsGroupId")
+    private String cmsGroupId;
+
+    @Query
     @NameInMap("DeployRegionId")
     @Validation(required = true)
     private String deployRegionId;
@@ -51,6 +55,7 @@ public class CreateApplicationGroupRequest extends Request {
         super(builder);
         this.applicationName = builder.applicationName;
         this.clientToken = builder.clientToken;
+        this.cmsGroupId = builder.cmsGroupId;
         this.deployRegionId = builder.deployRegionId;
         this.description = builder.description;
         this.importTagKey = builder.importTagKey;
@@ -84,6 +89,13 @@ public class CreateApplicationGroupRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return cmsGroupId
+     */
+    public String getCmsGroupId() {
+        return this.cmsGroupId;
     }
 
     /**
@@ -131,6 +143,7 @@ public class CreateApplicationGroupRequest extends Request {
     public static final class Builder extends Request.Builder<CreateApplicationGroupRequest, Builder> {
         private String applicationName; 
         private String clientToken; 
+        private String cmsGroupId; 
         private String deployRegionId; 
         private String description; 
         private String importTagKey; 
@@ -142,16 +155,17 @@ public class CreateApplicationGroupRequest extends Request {
             super();
         } 
 
-        private Builder(CreateApplicationGroupRequest response) {
-            super(response);
-            this.applicationName = response.applicationName;
-            this.clientToken = response.clientToken;
-            this.deployRegionId = response.deployRegionId;
-            this.description = response.description;
-            this.importTagKey = response.importTagKey;
-            this.importTagValue = response.importTagValue;
-            this.name = response.name;
-            this.regionId = response.regionId;
+        private Builder(CreateApplicationGroupRequest request) {
+            super(request);
+            this.applicationName = request.applicationName;
+            this.clientToken = request.clientToken;
+            this.cmsGroupId = request.cmsGroupId;
+            this.deployRegionId = request.deployRegionId;
+            this.description = request.description;
+            this.importTagKey = request.importTagKey;
+            this.importTagValue = request.importTagValue;
+            this.name = request.name;
+            this.regionId = request.regionId;
         } 
 
         /**
@@ -169,6 +183,15 @@ public class CreateApplicationGroupRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * CmsGroupId.
+         */
+        public Builder cmsGroupId(String cmsGroupId) {
+            this.putQueryParameter("CmsGroupId", cmsGroupId);
+            this.cmsGroupId = cmsGroupId;
             return this;
         }
 

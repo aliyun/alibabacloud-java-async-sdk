@@ -62,10 +62,10 @@ public class ListExecutionRiskyTasksRequest extends Request {
             super();
         } 
 
-        private Builder(ListExecutionRiskyTasksRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.templateName = response.templateName;
+        private Builder(ListExecutionRiskyTasksRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.templateName = request.templateName;
         } 
 
         /**

@@ -101,13 +101,13 @@ public class UpdatePatchBaselineRequest extends Request {
             super();
         } 
 
-        private Builder(UpdatePatchBaselineRequest response) {
-            super(response);
-            this.approvalRules = response.approvalRules;
-            this.clientToken = response.clientToken;
-            this.description = response.description;
-            this.name = response.name;
-            this.regionId = response.regionId;
+        private Builder(UpdatePatchBaselineRequest request) {
+            super(request);
+            this.approvalRules = request.approvalRules;
+            this.clientToken = request.clientToken;
+            this.description = request.description;
+            this.name = request.name;
+            this.regionId = request.regionId;
         } 
 
         /**

@@ -72,8 +72,8 @@ public class GetApplicationResponseBody extends TeaModel {
     } 
 
     public static class Application extends TeaModel {
-        @NameInMap("CreatedDate")
-        private String createdDate;
+        @NameInMap("CreateDate")
+        private String createDate;
 
         @NameInMap("Description")
         private String description;
@@ -87,16 +87,16 @@ public class GetApplicationResponseBody extends TeaModel {
         @NameInMap("Tags")
         private java.util.Map < String, ? > tags;
 
-        @NameInMap("UpdatedDate")
-        private String updatedDate;
+        @NameInMap("UpdateDate")
+        private String updateDate;
 
         private Application(Builder builder) {
-            this.createdDate = builder.createdDate;
+            this.createDate = builder.createDate;
             this.description = builder.description;
             this.name = builder.name;
             this.resourceGroupId = builder.resourceGroupId;
             this.tags = builder.tags;
-            this.updatedDate = builder.updatedDate;
+            this.updateDate = builder.updateDate;
         }
 
         public static Builder builder() {
@@ -108,10 +108,10 @@ public class GetApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * @return createdDate
+         * @return createDate
          */
-        public String getCreatedDate() {
-            return this.createdDate;
+        public String getCreateDate() {
+            return this.createDate;
         }
 
         /**
@@ -143,25 +143,25 @@ public class GetApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * @return updatedDate
+         * @return updateDate
          */
-        public String getUpdatedDate() {
-            return this.updatedDate;
+        public String getUpdateDate() {
+            return this.updateDate;
         }
 
         public static final class Builder {
-            private String createdDate; 
+            private String createDate; 
             private String description; 
             private String name; 
             private String resourceGroupId; 
             private java.util.Map < String, ? > tags; 
-            private String updatedDate; 
+            private String updateDate; 
 
             /**
-             * CreatedDate.
+             * CreateDate.
              */
-            public Builder createdDate(String createdDate) {
-                this.createdDate = createdDate;
+            public Builder createDate(String createDate) {
+                this.createDate = createDate;
                 return this;
             }
 
@@ -198,10 +198,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedDate.
+             * UpdateDate.
              */
-            public Builder updatedDate(String updatedDate) {
-                this.updatedDate = updatedDate;
+            public Builder updateDate(String updateDate) {
+                this.updateDate = updateDate;
                 return this;
             }
 

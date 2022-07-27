@@ -75,11 +75,11 @@ public class DeleteTemplatesRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteTemplatesRequest response) {
-            super(response);
-            this.autoDeleteExecutions = response.autoDeleteExecutions;
-            this.regionId = response.regionId;
-            this.templateNames = response.templateNames;
+        private Builder(DeleteTemplatesRequest request) {
+            super(request);
+            this.autoDeleteExecutions = request.autoDeleteExecutions;
+            this.regionId = request.regionId;
+            this.templateNames = request.templateNames;
         } 
 
         /**

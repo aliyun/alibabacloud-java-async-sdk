@@ -75,11 +75,11 @@ public class GetSecretParametersRequest extends Request {
             super();
         } 
 
-        private Builder(GetSecretParametersRequest response) {
-            super(response);
-            this.names = response.names;
-            this.regionId = response.regionId;
-            this.withDecryption = response.withDecryption;
+        private Builder(GetSecretParametersRequest request) {
+            super(request);
+            this.names = request.names;
+            this.regionId = request.regionId;
+            this.withDecryption = request.withDecryption;
         } 
 
         /**

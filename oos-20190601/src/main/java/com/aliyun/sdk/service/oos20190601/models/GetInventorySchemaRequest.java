@@ -101,13 +101,13 @@ public class GetInventorySchemaRequest extends Request {
             super();
         } 
 
-        private Builder(GetInventorySchemaRequest response) {
-            super(response);
-            this.aggregator = response.aggregator;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.regionId = response.regionId;
-            this.typeName = response.typeName;
+        private Builder(GetInventorySchemaRequest request) {
+            super(request);
+            this.aggregator = request.aggregator;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.regionId = request.regionId;
+            this.typeName = request.typeName;
         } 
 
         /**

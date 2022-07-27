@@ -101,13 +101,13 @@ public class ListApplicationGroupsRequest extends Request {
             super();
         } 
 
-        private Builder(ListApplicationGroupsRequest response) {
-            super(response);
-            this.applicationName = response.applicationName;
-            this.deployRegionId = response.deployRegionId;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.regionId = response.regionId;
+        private Builder(ListApplicationGroupsRequest request) {
+            super(request);
+            this.applicationName = request.applicationName;
+            this.deployRegionId = request.deployRegionId;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.regionId = request.regionId;
         } 
 
         /**

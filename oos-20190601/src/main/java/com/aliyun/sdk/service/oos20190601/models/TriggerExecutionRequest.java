@@ -103,13 +103,13 @@ public class TriggerExecutionRequest extends Request {
             super();
         } 
 
-        private Builder(TriggerExecutionRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.content = response.content;
-            this.executionId = response.executionId;
-            this.regionId = response.regionId;
-            this.type = response.type;
+        private Builder(TriggerExecutionRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.content = request.content;
+            this.executionId = request.executionId;
+            this.regionId = request.regionId;
+            this.type = request.type;
         } 
 
         /**

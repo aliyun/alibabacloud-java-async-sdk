@@ -166,18 +166,18 @@ public class ListSecretParametersRequest extends Request {
             super();
         } 
 
-        private Builder(ListSecretParametersRequest response) {
-            super(response);
-            this.maxResults = response.maxResults;
-            this.name = response.name;
-            this.nextToken = response.nextToken;
-            this.path = response.path;
-            this.recursive = response.recursive;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.sortField = response.sortField;
-            this.sortOrder = response.sortOrder;
-            this.tags = response.tags;
+        private Builder(ListSecretParametersRequest request) {
+            super(request);
+            this.maxResults = request.maxResults;
+            this.name = request.name;
+            this.nextToken = request.nextToken;
+            this.path = request.path;
+            this.recursive = request.recursive;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.sortField = request.sortField;
+            this.sortOrder = request.sortOrder;
+            this.tags = request.tags;
         } 
 
         /**
@@ -265,7 +265,8 @@ public class ListSecretParametersRequest extends Request {
          * Tags.
          */
         public Builder tags(java.util.Map < String, ? > tags) {
-            this.putQueryParameter("Tags", tags);
+            String tagsShrink = shrink(tags, "Tags", "json");
+            this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;
             return this;
         }

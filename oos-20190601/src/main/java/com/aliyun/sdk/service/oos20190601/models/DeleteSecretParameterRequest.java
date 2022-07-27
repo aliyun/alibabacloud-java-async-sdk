@@ -62,10 +62,10 @@ public class DeleteSecretParameterRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteSecretParameterRequest response) {
-            super(response);
-            this.name = response.name;
-            this.regionId = response.regionId;
+        private Builder(DeleteSecretParameterRequest request) {
+            super(request);
+            this.name = request.name;
+            this.regionId = request.regionId;
         } 
 
         /**

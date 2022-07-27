@@ -87,12 +87,12 @@ public class ListInstancePatchStatesRequest extends Request {
             super();
         } 
 
-        private Builder(ListInstancePatchStatesRequest response) {
-            super(response);
-            this.instanceIds = response.instanceIds;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.regionId = response.regionId;
+        private Builder(ListInstancePatchStatesRequest request) {
+            super(request);
+            this.instanceIds = request.instanceIds;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.regionId = request.regionId;
         } 
 
         /**

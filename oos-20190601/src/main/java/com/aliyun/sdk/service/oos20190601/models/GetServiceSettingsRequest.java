@@ -48,9 +48,9 @@ public class GetServiceSettingsRequest extends Request {
             super();
         } 
 
-        private Builder(GetServiceSettingsRequest response) {
-            super(response);
-            this.regionId = response.regionId;
+        private Builder(GetServiceSettingsRequest request) {
+            super(request);
+            this.regionId = request.regionId;
         } 
 
         /**

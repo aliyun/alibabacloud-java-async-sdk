@@ -102,13 +102,13 @@ public class GetParametersByPathRequest extends Request {
             super();
         } 
 
-        private Builder(GetParametersByPathRequest response) {
-            super(response);
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.path = response.path;
-            this.recursive = response.recursive;
-            this.regionId = response.regionId;
+        private Builder(GetParametersByPathRequest request) {
+            super(request);
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.path = request.path;
+            this.recursive = request.recursive;
+            this.regionId = request.regionId;
         } 
 
         /**

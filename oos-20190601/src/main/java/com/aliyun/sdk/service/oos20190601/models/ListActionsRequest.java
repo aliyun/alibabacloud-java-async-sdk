@@ -87,12 +87,12 @@ public class ListActionsRequest extends Request {
             super();
         } 
 
-        private Builder(ListActionsRequest response) {
-            super(response);
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.OOSActionName = response.OOSActionName;
-            this.regionId = response.regionId;
+        private Builder(ListActionsRequest request) {
+            super(request);
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.OOSActionName = request.OOSActionName;
+            this.regionId = request.regionId;
         } 
 
         /**

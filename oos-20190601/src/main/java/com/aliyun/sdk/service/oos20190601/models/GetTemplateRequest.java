@@ -75,11 +75,11 @@ public class GetTemplateRequest extends Request {
             super();
         } 
 
-        private Builder(GetTemplateRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.templateName = response.templateName;
-            this.templateVersion = response.templateVersion;
+        private Builder(GetTemplateRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.templateName = request.templateName;
+            this.templateVersion = request.templateVersion;
         } 
 
         /**

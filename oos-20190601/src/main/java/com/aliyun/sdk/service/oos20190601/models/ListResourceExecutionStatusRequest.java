@@ -89,12 +89,12 @@ public class ListResourceExecutionStatusRequest extends Request {
             super();
         } 
 
-        private Builder(ListResourceExecutionStatusRequest response) {
-            super(response);
-            this.executionId = response.executionId;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.regionId = response.regionId;
+        private Builder(ListResourceExecutionStatusRequest request) {
+            super(request);
+            this.executionId = request.executionId;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.regionId = request.regionId;
         } 
 
         /**

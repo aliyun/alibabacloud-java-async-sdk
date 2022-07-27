@@ -243,24 +243,24 @@ public class ListTemplatesRequest extends Request {
             super();
         } 
 
-        private Builder(ListTemplatesRequest response) {
-            super(response);
-            this.category = response.category;
-            this.createdBy = response.createdBy;
-            this.createdDateAfter = response.createdDateAfter;
-            this.createdDateBefore = response.createdDateBefore;
-            this.hasTrigger = response.hasTrigger;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.shareType = response.shareType;
-            this.sortField = response.sortField;
-            this.sortOrder = response.sortOrder;
-            this.tags = response.tags;
-            this.templateFormat = response.templateFormat;
-            this.templateName = response.templateName;
-            this.templateType = response.templateType;
+        private Builder(ListTemplatesRequest request) {
+            super(request);
+            this.category = request.category;
+            this.createdBy = request.createdBy;
+            this.createdDateAfter = request.createdDateAfter;
+            this.createdDateBefore = request.createdDateBefore;
+            this.hasTrigger = request.hasTrigger;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.shareType = request.shareType;
+            this.sortField = request.sortField;
+            this.sortOrder = request.sortOrder;
+            this.tags = request.tags;
+            this.templateFormat = request.templateFormat;
+            this.templateName = request.templateName;
+            this.templateType = request.templateType;
         } 
 
         /**
@@ -375,7 +375,8 @@ public class ListTemplatesRequest extends Request {
          * Tags.
          */
         public Builder tags(java.util.Map < String, ? > tags) {
-            this.putQueryParameter("Tags", tags);
+            String tagsShrink = shrink(tags, "Tags", "json");
+            this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;
             return this;
         }

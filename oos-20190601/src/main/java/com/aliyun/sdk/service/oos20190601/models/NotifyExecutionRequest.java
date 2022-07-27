@@ -167,18 +167,18 @@ public class NotifyExecutionRequest extends Request {
             super();
         } 
 
-        private Builder(NotifyExecutionRequest response) {
-            super(response);
-            this.executionId = response.executionId;
-            this.executionStatus = response.executionStatus;
-            this.loopItem = response.loopItem;
-            this.notifyNote = response.notifyNote;
-            this.notifyType = response.notifyType;
-            this.parameters = response.parameters;
-            this.regionId = response.regionId;
-            this.taskExecutionId = response.taskExecutionId;
-            this.taskExecutionIds = response.taskExecutionIds;
-            this.taskName = response.taskName;
+        private Builder(NotifyExecutionRequest request) {
+            super(request);
+            this.executionId = request.executionId;
+            this.executionStatus = request.executionStatus;
+            this.loopItem = request.loopItem;
+            this.notifyNote = request.notifyNote;
+            this.notifyType = request.notifyType;
+            this.parameters = request.parameters;
+            this.regionId = request.regionId;
+            this.taskExecutionId = request.taskExecutionId;
+            this.taskExecutionIds = request.taskExecutionIds;
+            this.taskName = request.taskName;
         } 
 
         /**

@@ -101,13 +101,13 @@ public class SearchInventoryRequest extends Request {
             super();
         } 
 
-        private Builder(SearchInventoryRequest response) {
-            super(response);
-            this.aggregator = response.aggregator;
-            this.filter = response.filter;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.regionId = response.regionId;
+        private Builder(SearchInventoryRequest request) {
+            super(request);
+            this.aggregator = request.aggregator;
+            this.filter = request.filter;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.regionId = request.regionId;
         } 
 
         /**

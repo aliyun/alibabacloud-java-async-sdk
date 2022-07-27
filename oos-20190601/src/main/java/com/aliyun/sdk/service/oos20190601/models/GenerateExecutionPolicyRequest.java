@@ -75,11 +75,11 @@ public class GenerateExecutionPolicyRequest extends Request {
             super();
         } 
 
-        private Builder(GenerateExecutionPolicyRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.templateName = response.templateName;
-            this.templateVersion = response.templateVersion;
+        private Builder(GenerateExecutionPolicyRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.templateName = request.templateName;
+            this.templateVersion = request.templateVersion;
         } 
 
         /**

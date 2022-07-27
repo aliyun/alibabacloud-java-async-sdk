@@ -115,14 +115,14 @@ public class GetSecretParametersByPathRequest extends Request {
             super();
         } 
 
-        private Builder(GetSecretParametersByPathRequest response) {
-            super(response);
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.path = response.path;
-            this.recursive = response.recursive;
-            this.regionId = response.regionId;
-            this.withDecryption = response.withDecryption;
+        private Builder(GetSecretParametersByPathRequest request) {
+            super(request);
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.path = request.path;
+            this.recursive = request.recursive;
+            this.regionId = request.regionId;
+            this.withDecryption = request.withDecryption;
         } 
 
         /**

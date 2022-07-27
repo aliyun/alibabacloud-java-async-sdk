@@ -103,13 +103,13 @@ public class UntagResourcesRequest extends Request {
             super();
         } 
 
-        private Builder(UntagResourcesRequest response) {
-            super(response);
-            this.all = response.all;
-            this.regionId = response.regionId;
-            this.resourceIds = response.resourceIds;
-            this.resourceType = response.resourceType;
-            this.tagKeys = response.tagKeys;
+        private Builder(UntagResourcesRequest request) {
+            super(request);
+            this.all = request.all;
+            this.regionId = request.regionId;
+            this.resourceIds = request.resourceIds;
+            this.resourceType = request.resourceType;
+            this.tagKeys = request.tagKeys;
         } 
 
         /**
@@ -134,7 +134,8 @@ public class UntagResourcesRequest extends Request {
          * ResourceIds.
          */
         public Builder resourceIds(java.util.Map < String, ? > resourceIds) {
-            this.putQueryParameter("ResourceIds", resourceIds);
+            String resourceIdsShrink = shrink(resourceIds, "ResourceIds", "json");
+            this.putQueryParameter("ResourceIds", resourceIdsShrink);
             this.resourceIds = resourceIds;
             return this;
         }
@@ -152,7 +153,8 @@ public class UntagResourcesRequest extends Request {
          * TagKeys.
          */
         public Builder tagKeys(java.util.Map < String, ? > tagKeys) {
-            this.putQueryParameter("TagKeys", tagKeys);
+            String tagKeysShrink = shrink(tagKeys, "TagKeys", "json");
+            this.putQueryParameter("TagKeys", tagKeysShrink);
             this.tagKeys = tagKeys;
             return this;
         }

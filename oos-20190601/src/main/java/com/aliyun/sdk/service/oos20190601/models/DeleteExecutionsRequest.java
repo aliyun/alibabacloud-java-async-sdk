@@ -62,10 +62,10 @@ public class DeleteExecutionsRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteExecutionsRequest response) {
-            super(response);
-            this.executionIds = response.executionIds;
-            this.regionId = response.regionId;
+        private Builder(DeleteExecutionsRequest request) {
+            super(request);
+            this.executionIds = request.executionIds;
+            this.regionId = request.regionId;
         } 
 
         /**

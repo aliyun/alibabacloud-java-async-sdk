@@ -243,24 +243,24 @@ public class ListTaskExecutionsRequest extends Request {
             super();
         } 
 
-        private Builder(ListTaskExecutionsRequest response) {
-            super(response);
-            this.endDateAfter = response.endDateAfter;
-            this.endDateBefore = response.endDateBefore;
-            this.executionId = response.executionId;
-            this.includeChildTaskExecution = response.includeChildTaskExecution;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.parentTaskExecutionId = response.parentTaskExecutionId;
-            this.regionId = response.regionId;
-            this.sortField = response.sortField;
-            this.sortOrder = response.sortOrder;
-            this.startDateAfter = response.startDateAfter;
-            this.startDateBefore = response.startDateBefore;
-            this.status = response.status;
-            this.taskAction = response.taskAction;
-            this.taskExecutionId = response.taskExecutionId;
-            this.taskName = response.taskName;
+        private Builder(ListTaskExecutionsRequest request) {
+            super(request);
+            this.endDateAfter = request.endDateAfter;
+            this.endDateBefore = request.endDateBefore;
+            this.executionId = request.executionId;
+            this.includeChildTaskExecution = request.includeChildTaskExecution;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.parentTaskExecutionId = request.parentTaskExecutionId;
+            this.regionId = request.regionId;
+            this.sortField = request.sortField;
+            this.sortOrder = request.sortOrder;
+            this.startDateAfter = request.startDateAfter;
+            this.startDateBefore = request.startDateBefore;
+            this.status = request.status;
+            this.taskAction = request.taskAction;
+            this.taskExecutionId = request.taskExecutionId;
+            this.taskName = request.taskName;
         } 
 
         /**

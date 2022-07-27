@@ -139,16 +139,16 @@ public class ListStateConfigurationsRequest extends Request {
             super();
         } 
 
-        private Builder(ListStateConfigurationsRequest response) {
-            super(response);
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.stateConfigurationIds = response.stateConfigurationIds;
-            this.tags = response.tags;
-            this.templateName = response.templateName;
-            this.templateVersion = response.templateVersion;
+        private Builder(ListStateConfigurationsRequest request) {
+            super(request);
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.stateConfigurationIds = request.stateConfigurationIds;
+            this.tags = request.tags;
+            this.templateName = request.templateName;
+            this.templateVersion = request.templateVersion;
         } 
 
         /**
@@ -200,7 +200,8 @@ public class ListStateConfigurationsRequest extends Request {
          * Tags.
          */
         public Builder tags(java.util.Map < String, ? > tags) {
-            this.putQueryParameter("Tags", tags);
+            String tagsShrink = shrink(tags, "Tags", "json");
+            this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;
             return this;
         }

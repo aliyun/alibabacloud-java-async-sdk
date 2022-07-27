@@ -62,10 +62,10 @@ public class GetApplicationRequest extends Request {
             super();
         } 
 
-        private Builder(GetApplicationRequest response) {
-            super(response);
-            this.name = response.name;
-            this.regionId = response.regionId;
+        private Builder(GetApplicationRequest request) {
+            super(request);
+            this.name = request.name;
+            this.regionId = request.regionId;
         } 
 
         /**

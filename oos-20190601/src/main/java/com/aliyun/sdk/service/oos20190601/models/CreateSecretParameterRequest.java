@@ -167,18 +167,18 @@ public class CreateSecretParameterRequest extends Request {
             super();
         } 
 
-        private Builder(CreateSecretParameterRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.constraints = response.constraints;
-            this.description = response.description;
-            this.keyId = response.keyId;
-            this.name = response.name;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.tags = response.tags;
-            this.type = response.type;
-            this.value = response.value;
+        private Builder(CreateSecretParameterRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.constraints = request.constraints;
+            this.description = request.description;
+            this.keyId = request.keyId;
+            this.name = request.name;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.tags = request.tags;
+            this.type = request.type;
+            this.value = request.value;
         } 
 
         /**

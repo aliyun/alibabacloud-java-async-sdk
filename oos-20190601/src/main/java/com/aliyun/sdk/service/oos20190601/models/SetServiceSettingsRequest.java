@@ -126,15 +126,15 @@ public class SetServiceSettingsRequest extends Request {
             super();
         } 
 
-        private Builder(SetServiceSettingsRequest response) {
-            super(response);
-            this.deliveryOssBucketName = response.deliveryOssBucketName;
-            this.deliveryOssEnabled = response.deliveryOssEnabled;
-            this.deliveryOssKeyPrefix = response.deliveryOssKeyPrefix;
-            this.deliverySlsEnabled = response.deliverySlsEnabled;
-            this.deliverySlsProjectName = response.deliverySlsProjectName;
-            this.rdcEnterpriseId = response.rdcEnterpriseId;
-            this.regionId = response.regionId;
+        private Builder(SetServiceSettingsRequest request) {
+            super(request);
+            this.deliveryOssBucketName = request.deliveryOssBucketName;
+            this.deliveryOssEnabled = request.deliveryOssEnabled;
+            this.deliveryOssKeyPrefix = request.deliveryOssKeyPrefix;
+            this.deliverySlsEnabled = request.deliverySlsEnabled;
+            this.deliverySlsProjectName = request.deliverySlsProjectName;
+            this.rdcEnterpriseId = request.rdcEnterpriseId;
+            this.regionId = request.regionId;
         } 
 
         /**

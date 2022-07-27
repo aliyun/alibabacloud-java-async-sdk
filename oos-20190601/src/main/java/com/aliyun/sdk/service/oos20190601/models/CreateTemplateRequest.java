@@ -115,14 +115,14 @@ public class CreateTemplateRequest extends Request {
             super();
         } 
 
-        private Builder(CreateTemplateRequest response) {
-            super(response);
-            this.content = response.content;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.tags = response.tags;
-            this.templateName = response.templateName;
-            this.versionName = response.versionName;
+        private Builder(CreateTemplateRequest request) {
+            super(request);
+            this.content = request.content;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.tags = request.tags;
+            this.templateName = request.templateName;
+            this.versionName = request.versionName;
         } 
 
         /**
@@ -156,7 +156,8 @@ public class CreateTemplateRequest extends Request {
          * Tags.
          */
         public Builder tags(java.util.Map < String, ? > tags) {
-            this.putQueryParameter("Tags", tags);
+            String tagsShrink = shrink(tags, "Tags", "json");
+            this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;
             return this;
         }

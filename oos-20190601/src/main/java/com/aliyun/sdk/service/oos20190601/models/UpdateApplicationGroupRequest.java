@@ -89,12 +89,12 @@ public class UpdateApplicationGroupRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateApplicationGroupRequest response) {
-            super(response);
-            this.applicationName = response.applicationName;
-            this.name = response.name;
-            this.newName = response.newName;
-            this.regionId = response.regionId;
+        private Builder(UpdateApplicationGroupRequest request) {
+            super(request);
+            this.applicationName = request.applicationName;
+            this.name = request.name;
+            this.newName = request.newName;
+            this.regionId = request.regionId;
         } 
 
         /**
