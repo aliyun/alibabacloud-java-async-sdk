@@ -12,14 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>EntityDeleteResponseBody</p>
  */
 public class EntityDeleteResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    private String requestId;
-
     @NameInMap("module")
     private Module module;
 
     @NameInMap("more_page")
     private Boolean morePage;
+
+    @NameInMap("requestId")
+    private String requestId;
 
     @NameInMap("result_code")
     private Integer resultCode;
@@ -34,9 +34,9 @@ public class EntityDeleteResponseBody extends TeaModel {
     private String traceId;
 
     private EntityDeleteResponseBody(Builder builder) {
-        this.requestId = builder.requestId;
         this.module = builder.module;
         this.morePage = builder.morePage;
+        this.requestId = builder.requestId;
         this.resultCode = builder.resultCode;
         this.resultMsg = builder.resultMsg;
         this.success = builder.success;
@@ -52,13 +52,6 @@ public class EntityDeleteResponseBody extends TeaModel {
     }
 
     /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    /**
      * @return module
      */
     public Module getModule() {
@@ -70,6 +63,13 @@ public class EntityDeleteResponseBody extends TeaModel {
      */
     public Boolean getMorePage() {
         return this.morePage;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
     }
 
     /**
@@ -101,21 +101,13 @@ public class EntityDeleteResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String requestId; 
         private Module module; 
         private Boolean morePage; 
+        private String requestId; 
         private Integer resultCode; 
         private String resultMsg; 
         private Boolean success; 
         private String traceId; 
-
-        /**
-         * RequestId.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
 
         /**
          * 返回值，服务端返回，没有结果或发生异常都返回空
@@ -130,6 +122,14 @@ public class EntityDeleteResponseBody extends TeaModel {
          */
         public Builder morePage(Boolean morePage) {
             this.morePage = morePage;
+            return this;
+        }
+
+        /**
+         * requestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 

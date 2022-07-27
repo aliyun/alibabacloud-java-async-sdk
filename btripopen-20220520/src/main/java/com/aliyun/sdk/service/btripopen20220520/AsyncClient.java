@@ -106,4 +106,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<TrainOrderQueryResponse> trainOrderQuery(TrainOrderQueryRequest request);
 
+    CompletableFuture<UserQueryResponse> userQuery(UserQueryRequest request);
+
 }

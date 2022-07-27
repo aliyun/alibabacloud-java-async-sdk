@@ -323,7 +323,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<EntityDeleteResponse> entityDelete(EntityDeleteRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("EntityDelete").setMethod(HttpMethod.DELETE).setPathRegex("/costcenter/v1/delete-entity").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("EntityDelete").setMethod(HttpMethod.POST).setPathRegex("/costcenter/v1/entity/action/delete").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EntityDeleteResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -650,6 +650,20 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<TrainOrderQueryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<UserQueryResponse> userQuery(UserQueryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UserQuery").setMethod(HttpMethod.GET).setPathRegex("/user/v1/user").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UserQueryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UserQueryResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

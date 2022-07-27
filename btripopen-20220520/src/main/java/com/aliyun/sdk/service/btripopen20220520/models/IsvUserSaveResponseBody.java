@@ -27,8 +27,8 @@ public class IsvUserSaveResponseBody extends TeaModel {
     @NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceid")
-    private String traceid;
+    @NameInMap("traceId")
+    private String traceId;
 
     private IsvUserSaveResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -36,7 +36,7 @@ public class IsvUserSaveResponseBody extends TeaModel {
         this.resultCode = builder.resultCode;
         this.resultMsg = builder.resultMsg;
         this.success = builder.success;
-        this.traceid = builder.traceid;
+        this.traceId = builder.traceId;
     }
 
     public static Builder builder() {
@@ -83,10 +83,10 @@ public class IsvUserSaveResponseBody extends TeaModel {
     }
 
     /**
-     * @return traceid
+     * @return traceId
      */
-    public String getTraceid() {
-        return this.traceid;
+    public String getTraceId() {
+        return this.traceId;
     }
 
     public static final class Builder {
@@ -95,7 +95,7 @@ public class IsvUserSaveResponseBody extends TeaModel {
         private Integer resultCode; 
         private String resultMsg; 
         private Boolean success; 
-        private String traceid; 
+        private String traceId; 
 
         /**
          * RequestId.
@@ -138,10 +138,10 @@ public class IsvUserSaveResponseBody extends TeaModel {
         }
 
         /**
-         * traceid.
+         * traceId.
          */
-        public Builder traceid(String traceid) {
-            this.traceid = traceid;
+        public Builder traceId(String traceId) {
+            this.traceId = traceId;
             return this;
         }
 
