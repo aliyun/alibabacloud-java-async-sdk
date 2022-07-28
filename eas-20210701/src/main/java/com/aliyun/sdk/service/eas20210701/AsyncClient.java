@@ -34,8 +34,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateServiceMirrorResponse> createServiceMirror(CreateServiceMirrorRequest request);
 
-    CompletableFuture<CreateStressResponse> createStress(CreateStressRequest request);
-
     CompletableFuture<DeleteBenchmarkTaskResponse> deleteBenchmarkTask(DeleteBenchmarkTaskRequest request);
 
     CompletableFuture<DeleteResourceResponse> deleteResource(DeleteResourceRequest request);
@@ -55,8 +53,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteServiceInstancesResponse> deleteServiceInstances(DeleteServiceInstancesRequest request);
 
     CompletableFuture<DeleteServiceMirrorResponse> deleteServiceMirror(DeleteServiceMirrorRequest request);
-
-    CompletableFuture<DeleteStressResponse> deleteStress(DeleteStressRequest request);
 
     CompletableFuture<DescribeBenchmarkTaskResponse> describeBenchmarkTask(DescribeBenchmarkTaskRequest request);
 
@@ -78,8 +74,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeServiceMirrorResponse> describeServiceMirror(DescribeServiceMirrorRequest request);
 
-    CompletableFuture<DescribeStressResponse> describeStress(DescribeStressRequest request);
-
     CompletableFuture<ListBenchmarkTaskResponse> listBenchmarkTask(ListBenchmarkTaskRequest request);
 
     CompletableFuture<ListResourceInstanceWorkerResponse> listResourceInstanceWorker(ListResourceInstanceWorkerRequest request);
@@ -94,23 +88,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListServicesResponse> listServices(ListServicesRequest request);
 
-    CompletableFuture<ListStressesResponse> listStresses(ListStressesRequest request);
-
     CompletableFuture<ReleaseServiceResponse> releaseService(ReleaseServiceRequest request);
-
-    CompletableFuture<ReportStressResponse> reportStress(ReportStressRequest request);
 
     CompletableFuture<StartBenchmarkTaskResponse> startBenchmarkTask(StartBenchmarkTaskRequest request);
 
     CompletableFuture<StartServiceResponse> startService(StartServiceRequest request);
 
-    CompletableFuture<StartStressResponse> startStress(StartStressRequest request);
-
     CompletableFuture<StopBenchmarkTaskResponse> stopBenchmarkTask(StopBenchmarkTaskRequest request);
 
     CompletableFuture<StopServiceResponse> stopService(StopServiceRequest request);
-
-    CompletableFuture<StopStressResponse> stopStress(StopStressRequest request);
 
     CompletableFuture<UpdateBenchmarkTaskResponse> updateBenchmarkTask(UpdateBenchmarkTaskRequest request);
 
@@ -127,7 +113,5 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateServiceMirrorResponse> updateServiceMirror(UpdateServiceMirrorRequest request);
 
     CompletableFuture<UpdateServiceVersionResponse> updateServiceVersion(UpdateServiceVersionRequest request);
-
-    CompletableFuture<UpdateStressResponse> updateStress(UpdateStressRequest request);
 
 }

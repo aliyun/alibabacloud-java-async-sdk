@@ -90,8 +90,8 @@ public class Service extends TeaModel {
     @NameInMap("TotalInstance")
     private Integer totalInstance;
 
-    @NameInMap("Updatetime")
-    private String updatetime;
+    @NameInMap("UpdateTime")
+    private String updateTime;
 
     @NameInMap("Weight")
     private Integer weight;
@@ -123,7 +123,7 @@ public class Service extends TeaModel {
         this.source = builder.source;
         this.status = builder.status;
         this.totalInstance = builder.totalInstance;
-        this.updatetime = builder.updatetime;
+        this.updateTime = builder.updateTime;
         this.weight = builder.weight;
     }
 
@@ -318,10 +318,10 @@ public class Service extends TeaModel {
     }
 
     /**
-     * @return updatetime
+     * @return updateTime
      */
-    public String getUpdatetime() {
-        return this.updatetime;
+    public String getUpdateTime() {
+        return this.updateTime;
     }
 
     /**
@@ -358,7 +358,7 @@ public class Service extends TeaModel {
         private String source; 
         private String status; 
         private Integer totalInstance; 
-        private String updatetime; 
+        private String updateTime; 
         private Integer weight; 
 
         /**
@@ -572,8 +572,8 @@ public class Service extends TeaModel {
         /**
          * 服务的更新时间
          */
-        public Builder updatetime(String updatetime) {
-            this.updatetime = updatetime;
+        public Builder updateTime(String updateTime) {
+            this.updateTime = updateTime;
             return this;
         }
 
