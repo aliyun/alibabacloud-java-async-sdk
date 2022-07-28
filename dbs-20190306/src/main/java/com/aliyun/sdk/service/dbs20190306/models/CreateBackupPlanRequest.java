@@ -64,6 +64,10 @@ public class CreateBackupPlanRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("StorageRegion")
     private String storageRegion;
 
@@ -89,6 +93,7 @@ public class CreateBackupPlanRequest extends Request {
         this.period = builder.period;
         this.region = builder.region;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.storageRegion = builder.storageRegion;
         this.storageType = builder.storageType;
         this.usedTime = builder.usedTime;
@@ -192,6 +197,13 @@ public class CreateBackupPlanRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return storageRegion
      */
     public String getStorageRegion() {
@@ -225,6 +237,7 @@ public class CreateBackupPlanRequest extends Request {
         private String period; 
         private String region; 
         private String regionId; 
+        private String resourceGroupId; 
         private String storageRegion; 
         private String storageType; 
         private Integer usedTime; 
@@ -233,23 +246,24 @@ public class CreateBackupPlanRequest extends Request {
             super();
         } 
 
-        private Builder(CreateBackupPlanRequest response) {
-            super(response);
-            this.backupMethod = response.backupMethod;
-            this.clientToken = response.clientToken;
-            this.databaseRegion = response.databaseRegion;
-            this.databaseType = response.databaseType;
-            this.fromApp = response.fromApp;
-            this.instanceClass = response.instanceClass;
-            this.instanceType = response.instanceType;
-            this.ownerId = response.ownerId;
-            this.payType = response.payType;
-            this.period = response.period;
-            this.region = response.region;
-            this.regionId = response.regionId;
-            this.storageRegion = response.storageRegion;
-            this.storageType = response.storageType;
-            this.usedTime = response.usedTime;
+        private Builder(CreateBackupPlanRequest request) {
+            super(request);
+            this.backupMethod = request.backupMethod;
+            this.clientToken = request.clientToken;
+            this.databaseRegion = request.databaseRegion;
+            this.databaseType = request.databaseType;
+            this.fromApp = request.fromApp;
+            this.instanceClass = request.instanceClass;
+            this.instanceType = request.instanceType;
+            this.ownerId = request.ownerId;
+            this.payType = request.payType;
+            this.period = request.period;
+            this.region = request.region;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.storageRegion = request.storageRegion;
+            this.storageType = request.storageType;
+            this.usedTime = request.usedTime;
         } 
 
         /**
@@ -357,6 +371,15 @@ public class CreateBackupPlanRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

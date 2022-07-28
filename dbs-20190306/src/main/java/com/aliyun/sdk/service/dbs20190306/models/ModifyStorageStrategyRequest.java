@@ -130,15 +130,15 @@ public class ModifyStorageStrategyRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyStorageStrategyRequest response) {
-            super(response);
-            this.backupPlanId = response.backupPlanId;
-            this.backupRetentionPeriod = response.backupRetentionPeriod;
-            this.clientToken = response.clientToken;
-            this.duplicationArchivePeriod = response.duplicationArchivePeriod;
-            this.duplicationInfrequentAccessPeriod = response.duplicationInfrequentAccessPeriod;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
+        private Builder(ModifyStorageStrategyRequest request) {
+            super(request);
+            this.backupPlanId = request.backupPlanId;
+            this.backupRetentionPeriod = request.backupRetentionPeriod;
+            this.clientToken = request.clientToken;
+            this.duplicationArchivePeriod = request.duplicationArchivePeriod;
+            this.duplicationInfrequentAccessPeriod = request.duplicationInfrequentAccessPeriod;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
         } 
 
         /**

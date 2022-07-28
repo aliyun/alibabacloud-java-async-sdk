@@ -116,14 +116,14 @@ public class RenewBackupPlanRequest extends Request {
             super();
         } 
 
-        private Builder(RenewBackupPlanRequest response) {
-            super(response);
-            this.backupPlanId = response.backupPlanId;
-            this.clientToken = response.clientToken;
-            this.ownerId = response.ownerId;
-            this.period = response.period;
-            this.regionId = response.regionId;
-            this.usedTime = response.usedTime;
+        private Builder(RenewBackupPlanRequest request) {
+            super(request);
+            this.backupPlanId = request.backupPlanId;
+            this.clientToken = request.clientToken;
+            this.ownerId = request.ownerId;
+            this.period = request.period;
+            this.regionId = request.regionId;
+            this.usedTime = request.usedTime;
         } 
 
         /**

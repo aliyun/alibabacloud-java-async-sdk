@@ -141,16 +141,16 @@ public class ModifyBackupStrategyRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyBackupStrategyRequest response) {
-            super(response);
-            this.backupLogIntervalSeconds = response.backupLogIntervalSeconds;
-            this.backupPeriod = response.backupPeriod;
-            this.backupPlanId = response.backupPlanId;
-            this.backupStartTime = response.backupStartTime;
-            this.backupStrategyType = response.backupStrategyType;
-            this.clientToken = response.clientToken;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
+        private Builder(ModifyBackupStrategyRequest request) {
+            super(request);
+            this.backupLogIntervalSeconds = request.backupLogIntervalSeconds;
+            this.backupPeriod = request.backupPeriod;
+            this.backupPlanId = request.backupPlanId;
+            this.backupStartTime = request.backupStartTime;
+            this.backupStrategyType = request.backupStrategyType;
+            this.clientToken = request.clientToken;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
         } 
 
         /**

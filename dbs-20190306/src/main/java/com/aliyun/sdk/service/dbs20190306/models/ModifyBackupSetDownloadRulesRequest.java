@@ -179,19 +179,19 @@ public class ModifyBackupSetDownloadRulesRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyBackupSetDownloadRulesRequest response) {
-            super(response);
-            this.backupGatewayId = response.backupGatewayId;
-            this.backupPlanId = response.backupPlanId;
-            this.backupSetDownloadDir = response.backupSetDownloadDir;
-            this.backupSetDownloadTargetType = response.backupSetDownloadTargetType;
-            this.backupSetDownloadTargetTypeLocation = response.backupSetDownloadTargetTypeLocation;
-            this.clientToken = response.clientToken;
-            this.fullDataFormat = response.fullDataFormat;
-            this.incrementDataFormat = response.incrementDataFormat;
-            this.openAutoDownload = response.openAutoDownload;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
+        private Builder(ModifyBackupSetDownloadRulesRequest request) {
+            super(request);
+            this.backupGatewayId = request.backupGatewayId;
+            this.backupPlanId = request.backupPlanId;
+            this.backupSetDownloadDir = request.backupSetDownloadDir;
+            this.backupSetDownloadTargetType = request.backupSetDownloadTargetType;
+            this.backupSetDownloadTargetTypeLocation = request.backupSetDownloadTargetTypeLocation;
+            this.clientToken = request.clientToken;
+            this.fullDataFormat = request.fullDataFormat;
+            this.incrementDataFormat = request.incrementDataFormat;
+            this.openAutoDownload = request.openAutoDownload;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
         } 
 
         /**

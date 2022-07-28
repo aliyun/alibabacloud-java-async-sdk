@@ -137,6 +137,10 @@ public class CreateAndStartBackupPlanRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("SourceEndpointDatabaseName")
     private String sourceEndpointDatabaseName;
 
@@ -217,6 +221,7 @@ public class CreateAndStartBackupPlanRequest extends Request {
         this.period = builder.period;
         this.region = builder.region;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.sourceEndpointDatabaseName = builder.sourceEndpointDatabaseName;
         this.sourceEndpointIP = builder.sourceEndpointIP;
         this.sourceEndpointInstanceID = builder.sourceEndpointInstanceID;
@@ -455,6 +460,13 @@ public class CreateAndStartBackupPlanRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return sourceEndpointDatabaseName
      */
     public String getSourceEndpointDatabaseName() {
@@ -569,6 +581,7 @@ public class CreateAndStartBackupPlanRequest extends Request {
         private String period; 
         private String region; 
         private String regionId; 
+        private String resourceGroupId; 
         private String sourceEndpointDatabaseName; 
         private String sourceEndpointIP; 
         private String sourceEndpointInstanceID; 
@@ -586,50 +599,51 @@ public class CreateAndStartBackupPlanRequest extends Request {
             super();
         } 
 
-        private Builder(CreateAndStartBackupPlanRequest response) {
-            super(response);
-            this.backupGatewayId = response.backupGatewayId;
-            this.backupLogIntervalSeconds = response.backupLogIntervalSeconds;
-            this.backupMethod = response.backupMethod;
-            this.backupObjects = response.backupObjects;
-            this.backupPeriod = response.backupPeriod;
-            this.backupPlanId = response.backupPlanId;
-            this.backupPlanName = response.backupPlanName;
-            this.backupRateLimit = response.backupRateLimit;
-            this.backupRetentionPeriod = response.backupRetentionPeriod;
-            this.backupSpeedLimit = response.backupSpeedLimit;
-            this.backupStartTime = response.backupStartTime;
-            this.backupStorageType = response.backupStorageType;
-            this.backupStrategyType = response.backupStrategyType;
-            this.clientToken = response.clientToken;
-            this.crossAliyunId = response.crossAliyunId;
-            this.crossRoleName = response.crossRoleName;
-            this.databaseRegion = response.databaseRegion;
-            this.databaseType = response.databaseType;
-            this.duplicationArchivePeriod = response.duplicationArchivePeriod;
-            this.duplicationInfrequentAccessPeriod = response.duplicationInfrequentAccessPeriod;
-            this.enableBackupLog = response.enableBackupLog;
-            this.fromApp = response.fromApp;
-            this.instanceClass = response.instanceClass;
-            this.instanceType = response.instanceType;
-            this.OSSBucketName = response.OSSBucketName;
-            this.ownerId = response.ownerId;
-            this.payType = response.payType;
-            this.period = response.period;
-            this.region = response.region;
-            this.regionId = response.regionId;
-            this.sourceEndpointDatabaseName = response.sourceEndpointDatabaseName;
-            this.sourceEndpointIP = response.sourceEndpointIP;
-            this.sourceEndpointInstanceID = response.sourceEndpointInstanceID;
-            this.sourceEndpointInstanceType = response.sourceEndpointInstanceType;
-            this.sourceEndpointOracleSID = response.sourceEndpointOracleSID;
-            this.sourceEndpointPassword = response.sourceEndpointPassword;
-            this.sourceEndpointPort = response.sourceEndpointPort;
-            this.sourceEndpointRegion = response.sourceEndpointRegion;
-            this.sourceEndpointUserName = response.sourceEndpointUserName;
-            this.storageRegion = response.storageRegion;
-            this.storageType = response.storageType;
-            this.usedTime = response.usedTime;
+        private Builder(CreateAndStartBackupPlanRequest request) {
+            super(request);
+            this.backupGatewayId = request.backupGatewayId;
+            this.backupLogIntervalSeconds = request.backupLogIntervalSeconds;
+            this.backupMethod = request.backupMethod;
+            this.backupObjects = request.backupObjects;
+            this.backupPeriod = request.backupPeriod;
+            this.backupPlanId = request.backupPlanId;
+            this.backupPlanName = request.backupPlanName;
+            this.backupRateLimit = request.backupRateLimit;
+            this.backupRetentionPeriod = request.backupRetentionPeriod;
+            this.backupSpeedLimit = request.backupSpeedLimit;
+            this.backupStartTime = request.backupStartTime;
+            this.backupStorageType = request.backupStorageType;
+            this.backupStrategyType = request.backupStrategyType;
+            this.clientToken = request.clientToken;
+            this.crossAliyunId = request.crossAliyunId;
+            this.crossRoleName = request.crossRoleName;
+            this.databaseRegion = request.databaseRegion;
+            this.databaseType = request.databaseType;
+            this.duplicationArchivePeriod = request.duplicationArchivePeriod;
+            this.duplicationInfrequentAccessPeriod = request.duplicationInfrequentAccessPeriod;
+            this.enableBackupLog = request.enableBackupLog;
+            this.fromApp = request.fromApp;
+            this.instanceClass = request.instanceClass;
+            this.instanceType = request.instanceType;
+            this.OSSBucketName = request.OSSBucketName;
+            this.ownerId = request.ownerId;
+            this.payType = request.payType;
+            this.period = request.period;
+            this.region = request.region;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.sourceEndpointDatabaseName = request.sourceEndpointDatabaseName;
+            this.sourceEndpointIP = request.sourceEndpointIP;
+            this.sourceEndpointInstanceID = request.sourceEndpointInstanceID;
+            this.sourceEndpointInstanceType = request.sourceEndpointInstanceType;
+            this.sourceEndpointOracleSID = request.sourceEndpointOracleSID;
+            this.sourceEndpointPassword = request.sourceEndpointPassword;
+            this.sourceEndpointPort = request.sourceEndpointPort;
+            this.sourceEndpointRegion = request.sourceEndpointRegion;
+            this.sourceEndpointUserName = request.sourceEndpointUserName;
+            this.storageRegion = request.storageRegion;
+            this.storageType = request.storageType;
+            this.usedTime = request.usedTime;
         } 
 
         /**
@@ -899,6 +913,15 @@ public class CreateAndStartBackupPlanRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

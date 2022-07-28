@@ -316,6 +316,9 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
         @NameInMap("OpenBackupSetAutoDownload")
         private Boolean openBackupSetAutoDownload;
 
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @NameInMap("SourceEndpointDatabaseName")
         private String sourceEndpointDatabaseName;
 
@@ -366,6 +369,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             this.OSSBucketName = builder.OSSBucketName;
             this.OSSBucketRegion = builder.OSSBucketRegion;
             this.openBackupSetAutoDownload = builder.openBackupSetAutoDownload;
+            this.resourceGroupId = builder.resourceGroupId;
             this.sourceEndpointDatabaseName = builder.sourceEndpointDatabaseName;
             this.sourceEndpointInstanceID = builder.sourceEndpointInstanceID;
             this.sourceEndpointInstanceType = builder.sourceEndpointInstanceType;
@@ -580,6 +584,13 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return sourceEndpointDatabaseName
          */
         public String getSourceEndpointDatabaseName() {
@@ -657,6 +668,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             private String OSSBucketName; 
             private String OSSBucketRegion; 
             private Boolean openBackupSetAutoDownload; 
+            private String resourceGroupId; 
             private String sourceEndpointDatabaseName; 
             private String sourceEndpointInstanceID; 
             private String sourceEndpointInstanceType; 
@@ -886,6 +898,14 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
              */
             public Builder openBackupSetAutoDownload(Boolean openBackupSetAutoDownload) {
                 this.openBackupSetAutoDownload = openBackupSetAutoDownload;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 

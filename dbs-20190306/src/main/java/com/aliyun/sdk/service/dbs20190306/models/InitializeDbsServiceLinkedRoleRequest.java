@@ -35,8 +35,8 @@ public class InitializeDbsServiceLinkedRoleRequest extends Request {
             super();
         } 
 
-        private Builder(InitializeDbsServiceLinkedRoleRequest response) {
-            super(response);
+        private Builder(InitializeDbsServiceLinkedRoleRequest request) {
+            super(request);
         } 
 
         @Override

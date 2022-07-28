@@ -337,31 +337,31 @@ public class CreateRestoreTaskRequest extends Request {
             super();
         } 
 
-        private Builder(CreateRestoreTaskRequest response) {
-            super(response);
-            this.backupGatewayId = response.backupGatewayId;
-            this.backupPlanId = response.backupPlanId;
-            this.backupSetId = response.backupSetId;
-            this.clientToken = response.clientToken;
-            this.crossAliyunId = response.crossAliyunId;
-            this.crossRoleName = response.crossRoleName;
-            this.destinationEndpointDatabaseName = response.destinationEndpointDatabaseName;
-            this.destinationEndpointIP = response.destinationEndpointIP;
-            this.destinationEndpointInstanceID = response.destinationEndpointInstanceID;
-            this.destinationEndpointInstanceType = response.destinationEndpointInstanceType;
-            this.destinationEndpointOracleSID = response.destinationEndpointOracleSID;
-            this.destinationEndpointPassword = response.destinationEndpointPassword;
-            this.destinationEndpointPort = response.destinationEndpointPort;
-            this.destinationEndpointRegion = response.destinationEndpointRegion;
-            this.destinationEndpointUserName = response.destinationEndpointUserName;
-            this.duplicateConflict = response.duplicateConflict;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.restoreDir = response.restoreDir;
-            this.restoreHome = response.restoreHome;
-            this.restoreObjects = response.restoreObjects;
-            this.restoreTaskName = response.restoreTaskName;
-            this.restoreTime = response.restoreTime;
+        private Builder(CreateRestoreTaskRequest request) {
+            super(request);
+            this.backupGatewayId = request.backupGatewayId;
+            this.backupPlanId = request.backupPlanId;
+            this.backupSetId = request.backupSetId;
+            this.clientToken = request.clientToken;
+            this.crossAliyunId = request.crossAliyunId;
+            this.crossRoleName = request.crossRoleName;
+            this.destinationEndpointDatabaseName = request.destinationEndpointDatabaseName;
+            this.destinationEndpointIP = request.destinationEndpointIP;
+            this.destinationEndpointInstanceID = request.destinationEndpointInstanceID;
+            this.destinationEndpointInstanceType = request.destinationEndpointInstanceType;
+            this.destinationEndpointOracleSID = request.destinationEndpointOracleSID;
+            this.destinationEndpointPassword = request.destinationEndpointPassword;
+            this.destinationEndpointPort = request.destinationEndpointPort;
+            this.destinationEndpointRegion = request.destinationEndpointRegion;
+            this.destinationEndpointUserName = request.destinationEndpointUserName;
+            this.duplicateConflict = request.duplicateConflict;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.restoreDir = request.restoreDir;
+            this.restoreHome = request.restoreHome;
+            this.restoreObjects = request.restoreObjects;
+            this.restoreTaskName = request.restoreTaskName;
+            this.restoreTime = request.restoreTime;
         } 
 
         /**

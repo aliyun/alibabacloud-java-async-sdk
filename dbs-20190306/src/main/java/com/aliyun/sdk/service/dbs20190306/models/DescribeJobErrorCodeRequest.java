@@ -101,13 +101,13 @@ public class DescribeJobErrorCodeRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeJobErrorCodeRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.language = response.language;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.taskId = response.taskId;
+        private Builder(DescribeJobErrorCodeRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.language = request.language;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.taskId = request.taskId;
         } 
 
         /**

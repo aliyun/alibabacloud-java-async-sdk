@@ -48,6 +48,10 @@ public class DescribeBackupPlanListRequest extends Request {
     @NameInMap("RegionId")
     private String regionId;
 
+    @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     private DescribeBackupPlanListRequest(Builder builder) {
         super(builder);
         this.backupPlanId = builder.backupPlanId;
@@ -59,6 +63,7 @@ public class DescribeBackupPlanListRequest extends Request {
         this.pageSize = builder.pageSize;
         this.region = builder.region;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
     }
 
     public static Builder builder() {
@@ -137,6 +142,13 @@ public class DescribeBackupPlanListRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public static final class Builder extends Request.Builder<DescribeBackupPlanListRequest, Builder> {
         private String backupPlanId; 
         private String backupPlanName; 
@@ -147,22 +159,24 @@ public class DescribeBackupPlanListRequest extends Request {
         private Integer pageSize; 
         private String region; 
         private String regionId; 
+        private String resourceGroupId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeBackupPlanListRequest response) {
-            super(response);
-            this.backupPlanId = response.backupPlanId;
-            this.backupPlanName = response.backupPlanName;
-            this.backupPlanStatus = response.backupPlanStatus;
-            this.clientToken = response.clientToken;
-            this.ownerId = response.ownerId;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.region = response.region;
-            this.regionId = response.regionId;
+        private Builder(DescribeBackupPlanListRequest request) {
+            super(request);
+            this.backupPlanId = request.backupPlanId;
+            this.backupPlanName = request.backupPlanName;
+            this.backupPlanStatus = request.backupPlanStatus;
+            this.clientToken = request.clientToken;
+            this.ownerId = request.ownerId;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.region = request.region;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**
@@ -243,6 +257,15 @@ public class DescribeBackupPlanListRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

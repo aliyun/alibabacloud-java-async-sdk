@@ -153,17 +153,17 @@ public class DescribeIncrementBackupListRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeIncrementBackupListRequest response) {
-            super(response);
-            this.backupPlanId = response.backupPlanId;
-            this.clientToken = response.clientToken;
-            this.endTimestamp = response.endTimestamp;
-            this.ownerId = response.ownerId;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.showStorageType = response.showStorageType;
-            this.startTimestamp = response.startTimestamp;
+        private Builder(DescribeIncrementBackupListRequest request) {
+            super(request);
+            this.backupPlanId = request.backupPlanId;
+            this.clientToken = request.clientToken;
+            this.endTimestamp = request.endTimestamp;
+            this.ownerId = request.ownerId;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.showStorageType = request.showStorageType;
+            this.startTimestamp = request.startTimestamp;
         } 
 
         /**

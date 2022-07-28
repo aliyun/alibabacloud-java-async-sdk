@@ -102,13 +102,13 @@ public class UpgradeBackupPlanRequest extends Request {
             super();
         } 
 
-        private Builder(UpgradeBackupPlanRequest response) {
-            super(response);
-            this.backupPlanId = response.backupPlanId;
-            this.clientToken = response.clientToken;
-            this.instanceClass = response.instanceClass;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
+        private Builder(UpgradeBackupPlanRequest request) {
+            super(request);
+            this.backupPlanId = request.backupPlanId;
+            this.clientToken = request.clientToken;
+            this.instanceClass = request.instanceClass;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
         } 
 
         /**

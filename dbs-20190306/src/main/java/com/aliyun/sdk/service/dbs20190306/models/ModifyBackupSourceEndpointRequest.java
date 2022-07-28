@@ -258,25 +258,25 @@ public class ModifyBackupSourceEndpointRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyBackupSourceEndpointRequest response) {
-            super(response);
-            this.backupGatewayId = response.backupGatewayId;
-            this.backupObjects = response.backupObjects;
-            this.backupPlanId = response.backupPlanId;
-            this.clientToken = response.clientToken;
-            this.crossAliyunId = response.crossAliyunId;
-            this.crossRoleName = response.crossRoleName;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.sourceEndpointDatabaseName = response.sourceEndpointDatabaseName;
-            this.sourceEndpointIP = response.sourceEndpointIP;
-            this.sourceEndpointInstanceID = response.sourceEndpointInstanceID;
-            this.sourceEndpointInstanceType = response.sourceEndpointInstanceType;
-            this.sourceEndpointOracleSID = response.sourceEndpointOracleSID;
-            this.sourceEndpointPassword = response.sourceEndpointPassword;
-            this.sourceEndpointPort = response.sourceEndpointPort;
-            this.sourceEndpointRegion = response.sourceEndpointRegion;
-            this.sourceEndpointUserName = response.sourceEndpointUserName;
+        private Builder(ModifyBackupSourceEndpointRequest request) {
+            super(request);
+            this.backupGatewayId = request.backupGatewayId;
+            this.backupObjects = request.backupObjects;
+            this.backupPlanId = request.backupPlanId;
+            this.clientToken = request.clientToken;
+            this.crossAliyunId = request.crossAliyunId;
+            this.crossRoleName = request.crossRoleName;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.sourceEndpointDatabaseName = request.sourceEndpointDatabaseName;
+            this.sourceEndpointIP = request.sourceEndpointIP;
+            this.sourceEndpointInstanceID = request.sourceEndpointInstanceID;
+            this.sourceEndpointInstanceType = request.sourceEndpointInstanceType;
+            this.sourceEndpointOracleSID = request.sourceEndpointOracleSID;
+            this.sourceEndpointPassword = request.sourceEndpointPassword;
+            this.sourceEndpointPort = request.sourceEndpointPort;
+            this.sourceEndpointRegion = request.sourceEndpointRegion;
+            this.sourceEndpointUserName = request.sourceEndpointUserName;
         } 
 
         /**

@@ -129,15 +129,15 @@ public class DescribeRestoreRangeInfoRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeRestoreRangeInfoRequest response) {
-            super(response);
-            this.backupPlanId = response.backupPlanId;
-            this.beginTimestampForRestore = response.beginTimestampForRestore;
-            this.clientToken = response.clientToken;
-            this.endTimestampForRestore = response.endTimestampForRestore;
-            this.ownerId = response.ownerId;
-            this.recentlyRestore = response.recentlyRestore;
-            this.regionId = response.regionId;
+        private Builder(DescribeRestoreRangeInfoRequest request) {
+            super(request);
+            this.backupPlanId = request.backupPlanId;
+            this.beginTimestampForRestore = request.beginTimestampForRestore;
+            this.clientToken = request.clientToken;
+            this.endTimestampForRestore = request.endTimestampForRestore;
+            this.ownerId = request.ownerId;
+            this.recentlyRestore = request.recentlyRestore;
+            this.regionId = request.regionId;
         } 
 
         /**

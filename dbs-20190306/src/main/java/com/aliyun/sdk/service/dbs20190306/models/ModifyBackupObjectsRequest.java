@@ -102,13 +102,13 @@ public class ModifyBackupObjectsRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyBackupObjectsRequest response) {
-            super(response);
-            this.backupObjects = response.backupObjects;
-            this.backupPlanId = response.backupPlanId;
-            this.clientToken = response.clientToken;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
+        private Builder(ModifyBackupObjectsRequest request) {
+            super(request);
+            this.backupObjects = request.backupObjects;
+            this.backupPlanId = request.backupPlanId;
+            this.clientToken = request.clientToken;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
         } 
 
         /**

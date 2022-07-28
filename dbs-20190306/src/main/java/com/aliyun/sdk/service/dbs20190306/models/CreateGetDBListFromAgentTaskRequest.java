@@ -139,16 +139,16 @@ public class CreateGetDBListFromAgentTaskRequest extends Request {
             super();
         } 
 
-        private Builder(CreateGetDBListFromAgentTaskRequest response) {
-            super(response);
-            this.backupGatewayId = response.backupGatewayId;
-            this.clientToken = response.clientToken;
-            this.databaseType = response.databaseType;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.sourceEndpointIP = response.sourceEndpointIP;
-            this.sourceEndpointPort = response.sourceEndpointPort;
-            this.sourceEndpointRegion = response.sourceEndpointRegion;
+        private Builder(CreateGetDBListFromAgentTaskRequest request) {
+            super(request);
+            this.backupGatewayId = request.backupGatewayId;
+            this.clientToken = request.clientToken;
+            this.databaseType = request.databaseType;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.sourceEndpointIP = request.sourceEndpointIP;
+            this.sourceEndpointPort = request.sourceEndpointPort;
+            this.sourceEndpointRegion = request.sourceEndpointRegion;
         } 
 
         /**

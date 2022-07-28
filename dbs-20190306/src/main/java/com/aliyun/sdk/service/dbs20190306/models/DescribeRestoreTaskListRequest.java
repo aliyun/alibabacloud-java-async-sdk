@@ -152,17 +152,17 @@ public class DescribeRestoreTaskListRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeRestoreTaskListRequest response) {
-            super(response);
-            this.backupPlanId = response.backupPlanId;
-            this.clientToken = response.clientToken;
-            this.endTimestamp = response.endTimestamp;
-            this.ownerId = response.ownerId;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.restoreTaskId = response.restoreTaskId;
-            this.startTimestamp = response.startTimestamp;
+        private Builder(DescribeRestoreTaskListRequest request) {
+            super(request);
+            this.backupPlanId = request.backupPlanId;
+            this.clientToken = request.clientToken;
+            this.endTimestamp = request.endTimestamp;
+            this.ownerId = request.ownerId;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.restoreTaskId = request.restoreTaskId;
+            this.startTimestamp = request.startTimestamp;
         } 
 
         /**

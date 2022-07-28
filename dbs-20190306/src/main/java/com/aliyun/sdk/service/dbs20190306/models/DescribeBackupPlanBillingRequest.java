@@ -101,13 +101,13 @@ public class DescribeBackupPlanBillingRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeBackupPlanBillingRequest response) {
-            super(response);
-            this.backupPlanId = response.backupPlanId;
-            this.clientToken = response.clientToken;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.showStorageType = response.showStorageType;
+        private Builder(DescribeBackupPlanBillingRequest request) {
+            super(request);
+            this.backupPlanId = request.backupPlanId;
+            this.clientToken = request.clientToken;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.showStorageType = request.showStorageType;
         } 
 
         /**

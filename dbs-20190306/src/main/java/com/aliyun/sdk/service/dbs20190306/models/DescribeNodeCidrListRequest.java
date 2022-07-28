@@ -88,12 +88,12 @@ public class DescribeNodeCidrListRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeNodeCidrListRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.ownerId = response.ownerId;
-            this.region = response.region;
-            this.regionId = response.regionId;
+        private Builder(DescribeNodeCidrListRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.ownerId = request.ownerId;
+            this.region = request.region;
+            this.regionId = request.regionId;
         } 
 
         /**

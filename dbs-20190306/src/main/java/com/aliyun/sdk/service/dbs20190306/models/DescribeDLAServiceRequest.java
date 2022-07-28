@@ -88,12 +88,12 @@ public class DescribeDLAServiceRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDLAServiceRequest response) {
-            super(response);
-            this.backupPlanId = response.backupPlanId;
-            this.clientToken = response.clientToken;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
+        private Builder(DescribeDLAServiceRequest request) {
+            super(request);
+            this.backupPlanId = request.backupPlanId;
+            this.clientToken = request.clientToken;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
         } 
 
         /**

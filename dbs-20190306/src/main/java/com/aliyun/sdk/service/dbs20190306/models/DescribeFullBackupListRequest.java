@@ -166,18 +166,18 @@ public class DescribeFullBackupListRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeFullBackupListRequest response) {
-            super(response);
-            this.backupPlanId = response.backupPlanId;
-            this.backupSetId = response.backupSetId;
-            this.clientToken = response.clientToken;
-            this.endTimestamp = response.endTimestamp;
-            this.ownerId = response.ownerId;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.showStorageType = response.showStorageType;
-            this.startTimestamp = response.startTimestamp;
+        private Builder(DescribeFullBackupListRequest request) {
+            super(request);
+            this.backupPlanId = request.backupPlanId;
+            this.backupSetId = request.backupSetId;
+            this.clientToken = request.clientToken;
+            this.endTimestamp = request.endTimestamp;
+            this.ownerId = request.ownerId;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.showStorageType = request.showStorageType;
+            this.startTimestamp = request.startTimestamp;
         } 
 
         /**

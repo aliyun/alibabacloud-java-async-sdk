@@ -113,14 +113,14 @@ public class GetDBListFromAgentRequest extends Request {
             super();
         } 
 
-        private Builder(GetDBListFromAgentRequest response) {
-            super(response);
-            this.backupGatewayId = response.backupGatewayId;
-            this.clientToken = response.clientToken;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.sourceEndpointRegion = response.sourceEndpointRegion;
-            this.taskId = response.taskId;
+        private Builder(GetDBListFromAgentRequest request) {
+            super(request);
+            this.backupGatewayId = request.backupGatewayId;
+            this.clientToken = request.clientToken;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.sourceEndpointRegion = request.sourceEndpointRegion;
+            this.taskId = request.taskId;
         } 
 
         /**

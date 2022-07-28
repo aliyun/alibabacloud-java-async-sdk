@@ -102,13 +102,13 @@ public class ModifyBackupPlanNameRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyBackupPlanNameRequest response) {
-            super(response);
-            this.backupPlanId = response.backupPlanId;
-            this.backupPlanName = response.backupPlanName;
-            this.clientToken = response.clientToken;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
+        private Builder(ModifyBackupPlanNameRequest request) {
+            super(request);
+            this.backupPlanId = request.backupPlanId;
+            this.backupPlanName = request.backupPlanName;
+            this.clientToken = request.clientToken;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
         } 
 
         /**

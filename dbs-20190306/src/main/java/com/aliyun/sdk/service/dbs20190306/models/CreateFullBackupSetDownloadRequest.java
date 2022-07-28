@@ -101,13 +101,13 @@ public class CreateFullBackupSetDownloadRequest extends Request {
             super();
         } 
 
-        private Builder(CreateFullBackupSetDownloadRequest response) {
-            super(response);
-            this.backupSetDataFormat = response.backupSetDataFormat;
-            this.backupSetId = response.backupSetId;
-            this.clientToken = response.clientToken;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
+        private Builder(CreateFullBackupSetDownloadRequest request) {
+            super(request);
+            this.backupSetDataFormat = request.backupSetDataFormat;
+            this.backupSetId = request.backupSetId;
+            this.clientToken = request.clientToken;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
         } 
 
         /**

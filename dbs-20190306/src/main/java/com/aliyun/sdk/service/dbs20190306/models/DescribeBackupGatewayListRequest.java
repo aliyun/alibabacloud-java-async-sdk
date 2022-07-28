@@ -127,15 +127,15 @@ public class DescribeBackupGatewayListRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeBackupGatewayListRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.identifier = response.identifier;
-            this.ownerId = response.ownerId;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.region = response.region;
-            this.regionId = response.regionId;
+        private Builder(DescribeBackupGatewayListRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.identifier = request.identifier;
+            this.ownerId = request.ownerId;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.region = request.region;
+            this.regionId = request.regionId;
         } 
 
         /**

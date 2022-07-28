@@ -115,14 +115,14 @@ public class CreateIncrementBackupSetDownloadRequest extends Request {
             super();
         } 
 
-        private Builder(CreateIncrementBackupSetDownloadRequest response) {
-            super(response);
-            this.backupSetDataFormat = response.backupSetDataFormat;
-            this.backupSetId = response.backupSetId;
-            this.backupSetName = response.backupSetName;
-            this.clientToken = response.clientToken;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
+        private Builder(CreateIncrementBackupSetDownloadRequest request) {
+            super(request);
+            this.backupSetDataFormat = request.backupSetDataFormat;
+            this.backupSetId = request.backupSetId;
+            this.backupSetName = request.backupSetName;
+            this.clientToken = request.clientToken;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
         } 
 
         /**

@@ -185,6 +185,9 @@ public class DescribeBackupPlanBillingResponseBody extends TeaModel {
         @NameInMap("QuotaStartTimestamp")
         private Long quotaStartTimestamp;
 
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @NameInMap("TotalFreeBytes")
         private Long totalFreeBytes;
 
@@ -206,6 +209,7 @@ public class DescribeBackupPlanBillingResponseBody extends TeaModel {
             this.paiedBytes = builder.paiedBytes;
             this.quotaEndTimestamp = builder.quotaEndTimestamp;
             this.quotaStartTimestamp = builder.quotaStartTimestamp;
+            this.resourceGroupId = builder.resourceGroupId;
             this.totalFreeBytes = builder.totalFreeBytes;
             this.usedFullBytes = builder.usedFullBytes;
             this.usedIncrementBytes = builder.usedIncrementBytes;
@@ -297,6 +301,13 @@ public class DescribeBackupPlanBillingResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return totalFreeBytes
          */
         public Long getTotalFreeBytes() {
@@ -329,6 +340,7 @@ public class DescribeBackupPlanBillingResponseBody extends TeaModel {
             private Long paiedBytes; 
             private Long quotaEndTimestamp; 
             private Long quotaStartTimestamp; 
+            private String resourceGroupId; 
             private Long totalFreeBytes; 
             private Long usedFullBytes; 
             private Long usedIncrementBytes; 
@@ -418,6 +430,14 @@ public class DescribeBackupPlanBillingResponseBody extends TeaModel {
              */
             public Builder quotaStartTimestamp(Long quotaStartTimestamp) {
                 this.quotaStartTimestamp = quotaStartTimestamp;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 

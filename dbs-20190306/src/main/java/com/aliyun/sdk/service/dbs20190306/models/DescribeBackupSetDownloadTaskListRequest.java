@@ -126,15 +126,15 @@ public class DescribeBackupSetDownloadTaskListRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeBackupSetDownloadTaskListRequest response) {
-            super(response);
-            this.backupPlanId = response.backupPlanId;
-            this.backupSetDownloadTaskId = response.backupSetDownloadTaskId;
-            this.clientToken = response.clientToken;
-            this.ownerId = response.ownerId;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
+        private Builder(DescribeBackupSetDownloadTaskListRequest request) {
+            super(request);
+            this.backupPlanId = request.backupPlanId;
+            this.backupSetDownloadTaskId = request.backupSetDownloadTaskId;
+            this.clientToken = request.clientToken;
+            this.ownerId = request.ownerId;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
         } 
 
         /**
