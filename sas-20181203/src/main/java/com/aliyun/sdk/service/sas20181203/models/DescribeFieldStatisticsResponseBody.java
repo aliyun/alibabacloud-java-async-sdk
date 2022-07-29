@@ -111,6 +111,9 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         @NameInMap("OfflineInstanceCount")
         private Integer offlineInstanceCount;
 
+        @NameInMap("OutMachineInstanceCount")
+        private Integer outMachineInstanceCount;
+
         @NameInMap("PauseInstanceCount")
         private Integer pauseInstanceCount;
 
@@ -146,6 +149,7 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             this.newInstanceCount = builder.newInstanceCount;
             this.notRunningStatusCount = builder.notRunningStatusCount;
             this.offlineInstanceCount = builder.offlineInstanceCount;
+            this.outMachineInstanceCount = builder.outMachineInstanceCount;
             this.pauseInstanceCount = builder.pauseInstanceCount;
             this.regionCount = builder.regionCount;
             this.riskInstanceCount = builder.riskInstanceCount;
@@ -255,6 +259,13 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         }
 
         /**
+         * @return outMachineInstanceCount
+         */
+        public Integer getOutMachineInstanceCount() {
+            return this.outMachineInstanceCount;
+        }
+
+        /**
          * @return pauseInstanceCount
          */
         public Integer getPauseInstanceCount() {
@@ -317,6 +328,7 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             private Integer newInstanceCount; 
             private Integer notRunningStatusCount; 
             private Integer offlineInstanceCount; 
+            private Integer outMachineInstanceCount; 
             private Integer pauseInstanceCount; 
             private Integer regionCount; 
             private Integer riskInstanceCount; 
@@ -426,6 +438,14 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
              */
             public Builder offlineInstanceCount(Integer offlineInstanceCount) {
                 this.offlineInstanceCount = offlineInstanceCount;
+                return this;
+            }
+
+            /**
+             * OutMachineInstanceCount.
+             */
+            public Builder outMachineInstanceCount(Integer outMachineInstanceCount) {
+                this.outMachineInstanceCount = outMachineInstanceCount;
                 return this;
             }
 
