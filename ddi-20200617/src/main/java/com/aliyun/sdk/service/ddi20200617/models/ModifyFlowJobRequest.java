@@ -50,6 +50,10 @@ public class ModifyFlowJobRequest extends Request {
     private String knoxUser;
 
     @Query
+    @NameInMap("MaxRetry")
+    private Integer maxRetry;
+
+    @Query
     @NameInMap("Mode")
     private String mode;
 
@@ -84,6 +88,10 @@ public class ModifyFlowJobRequest extends Request {
     private java.util.List < ResourceList> resourceList;
 
     @Query
+    @NameInMap("RetryInterval")
+    private Long retryInterval;
+
+    @Query
     @NameInMap("RetryPolicy")
     private String retryPolicy;
 
@@ -102,6 +110,7 @@ public class ModifyFlowJobRequest extends Request {
         this.id = builder.id;
         this.knoxPassword = builder.knoxPassword;
         this.knoxUser = builder.knoxUser;
+        this.maxRetry = builder.maxRetry;
         this.mode = builder.mode;
         this.monitorConf = builder.monitorConf;
         this.name = builder.name;
@@ -110,6 +119,7 @@ public class ModifyFlowJobRequest extends Request {
         this.projectId = builder.projectId;
         this.regionId = builder.regionId;
         this.resourceList = builder.resourceList;
+        this.retryInterval = builder.retryInterval;
         this.retryPolicy = builder.retryPolicy;
         this.runConf = builder.runConf;
     }
@@ -191,6 +201,13 @@ public class ModifyFlowJobRequest extends Request {
     }
 
     /**
+     * @return maxRetry
+     */
+    public Integer getMaxRetry() {
+        return this.maxRetry;
+    }
+
+    /**
      * @return mode
      */
     public String getMode() {
@@ -247,6 +264,13 @@ public class ModifyFlowJobRequest extends Request {
     }
 
     /**
+     * @return retryInterval
+     */
+    public Long getRetryInterval() {
+        return this.retryInterval;
+    }
+
+    /**
      * @return retryPolicy
      */
     public String getRetryPolicy() {
@@ -270,6 +294,7 @@ public class ModifyFlowJobRequest extends Request {
         private String id; 
         private String knoxPassword; 
         private String knoxUser; 
+        private Integer maxRetry; 
         private String mode; 
         private String monitorConf; 
         private String name; 
@@ -278,6 +303,7 @@ public class ModifyFlowJobRequest extends Request {
         private String projectId; 
         private String regionId; 
         private java.util.List < ResourceList> resourceList; 
+        private Long retryInterval; 
         private String retryPolicy; 
         private String runConf; 
 
@@ -296,6 +322,7 @@ public class ModifyFlowJobRequest extends Request {
             this.id = request.id;
             this.knoxPassword = request.knoxPassword;
             this.knoxUser = request.knoxUser;
+            this.maxRetry = request.maxRetry;
             this.mode = request.mode;
             this.monitorConf = request.monitorConf;
             this.name = request.name;
@@ -304,6 +331,7 @@ public class ModifyFlowJobRequest extends Request {
             this.projectId = request.projectId;
             this.regionId = request.regionId;
             this.resourceList = request.resourceList;
+            this.retryInterval = request.retryInterval;
             this.retryPolicy = request.retryPolicy;
             this.runConf = request.runConf;
         } 
@@ -390,6 +418,15 @@ public class ModifyFlowJobRequest extends Request {
         }
 
         /**
+         * MaxRetry.
+         */
+        public Builder maxRetry(Integer maxRetry) {
+            this.putQueryParameter("MaxRetry", maxRetry);
+            this.maxRetry = maxRetry;
+            return this;
+        }
+
+        /**
          * 模型模式，取值如下：  YARN：将作业包装成一个Launcher提交至YARN中执行，LOCAL：作业直接在机器上以进程方式运行。
          */
         public Builder mode(String mode) {
@@ -458,6 +495,15 @@ public class ModifyFlowJobRequest extends Request {
         public Builder resourceList(java.util.List < ResourceList> resourceList) {
             this.putQueryParameter("ResourceList", resourceList);
             this.resourceList = resourceList;
+            return this;
+        }
+
+        /**
+         * RetryInterval.
+         */
+        public Builder retryInterval(Long retryInterval) {
+            this.putQueryParameter("RetryInterval", retryInterval);
+            this.retryInterval = retryInterval;
             return this;
         }
 
