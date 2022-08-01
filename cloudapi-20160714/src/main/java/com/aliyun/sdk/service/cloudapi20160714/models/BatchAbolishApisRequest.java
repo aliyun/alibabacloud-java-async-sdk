@@ -103,13 +103,16 @@ public class BatchAbolishApisRequest extends Request {
         private String groupId;
 
         @NameInMap("StageId")
-        @Validation(required = true)
         private String stageId;
+
+        @NameInMap("StageName")
+        private String stageName;
 
         private Api(Builder builder) {
             this.apiUid = builder.apiUid;
             this.groupId = builder.groupId;
             this.stageId = builder.stageId;
+            this.stageName = builder.stageName;
         }
 
         public static Builder builder() {
@@ -141,10 +144,18 @@ public class BatchAbolishApisRequest extends Request {
             return this.stageId;
         }
 
+        /**
+         * @return stageName
+         */
+        public String getStageName() {
+            return this.stageName;
+        }
+
         public static final class Builder {
             private String apiUid; 
             private String groupId; 
             private String stageId; 
+            private String stageName; 
 
             /**
              * ApiUid.
@@ -167,6 +178,14 @@ public class BatchAbolishApisRequest extends Request {
              */
             public Builder stageId(String stageId) {
                 this.stageId = stageId;
+                return this;
+            }
+
+            /**
+             * StageName.
+             */
+            public Builder stageName(String stageName) {
+                this.stageName = stageName;
                 return this;
             }
 
