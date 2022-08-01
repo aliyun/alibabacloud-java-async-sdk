@@ -120,6 +120,7 @@ public class ListTagResourcesRequest extends Request {
 
     public static class Tags extends TeaModel {
         @NameInMap("key")
+        @Validation(required = true)
         private String key;
 
         @NameInMap("value")

@@ -40,7 +40,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateMachineGroupResponse> createMachineGroup(CreateMachineGroupRequest request);
 
+    CompletableFuture<CreateOdpsShipperResponse> createOdpsShipper(CreateOdpsShipperRequest request);
+
+    CompletableFuture<CreateOssExternalStoreResponse> createOssExternalStore(CreateOssExternalStoreRequest request);
+
+    CompletableFuture<CreateOssShipperResponse> createOssShipper(CreateOssShipperRequest request);
+
     CompletableFuture<CreateProjectResponse> createProject(CreateProjectRequest request);
+
+    CompletableFuture<CreateRdsExternalStoreResponse> createRdsExternalStore(CreateRdsExternalStoreRequest request);
 
     CompletableFuture<CreateSavedSearchResponse> createSavedSearch(CreateSavedSearchRequest request);
 
@@ -49,6 +57,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteDomainResponse> deleteDomain(DeleteDomainRequest request);
 
     CompletableFuture<DeleteEtlMetaResponse> deleteEtlMeta(DeleteEtlMetaRequest request);
+
+    CompletableFuture<DeleteExternalStoreResponse> deleteExternalStore(DeleteExternalStoreRequest request);
 
     CompletableFuture<DeleteIndexResponse> deleteIndex(DeleteIndexRequest request);
 
@@ -62,7 +72,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteSavedSearchResponse> deleteSavedSearch(DeleteSavedSearchRequest request);
 
+    CompletableFuture<DeleteShipperResponse> deleteShipper(DeleteShipperRequest request);
+
     CompletableFuture<GetAppliedConfigsResponse> getAppliedConfigs(GetAppliedConfigsRequest request);
+
+    CompletableFuture<GetAppliedMachineGroupsResponse> getAppliedMachineGroups(GetAppliedMachineGroupsRequest request);
 
     CompletableFuture<GetCheckPointResponse> getCheckPoint(GetCheckPointRequest request);
 
@@ -73,6 +87,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetCursorTimeResponse> getCursorTime(GetCursorTimeRequest request);
 
     CompletableFuture<GetEtlMetaResponse> getEtlMeta(GetEtlMetaRequest request);
+
+    CompletableFuture<GetExternalStoreResponse> getExternalStore(GetExternalStoreRequest request);
 
     CompletableFuture<GetHistogramsResponse> getHistograms(GetHistogramsRequest request);
 
@@ -92,6 +108,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetSavedSearchResponse> getSavedSearch(GetSavedSearchRequest request);
 
+    CompletableFuture<GetShipperConfigResponse> getShipperConfig(GetShipperConfigRequest request);
+
+    CompletableFuture<GetShipperStatusResponse> getShipperStatus(GetShipperStatusRequest request);
+
     CompletableFuture<ListConsumerGroupResponse> listConsumerGroup(ListConsumerGroupRequest request);
 
     CompletableFuture<ListDomainsResponse> listDomains(ListDomainsRequest request);
@@ -99,6 +119,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListEtlMetaResponse> listEtlMeta(ListEtlMetaRequest request);
 
     CompletableFuture<ListEtlMetaNameResponse> listEtlMetaName(ListEtlMetaNameRequest request);
+
+    CompletableFuture<ListExternalStoreResponse> listExternalStore(ListExternalStoreRequest request);
 
     CompletableFuture<ListLogStoresResponse> listLogStores(ListLogStoresRequest request);
 
@@ -111,6 +133,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListSavedSearchResponse> listSavedSearch(ListSavedSearchRequest request);
 
     CompletableFuture<ListShardsResponse> listShards(ListShardsRequest request);
+
+    CompletableFuture<ListShipperResponse> listShipper(ListShipperRequest request);
 
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
 
@@ -138,7 +162,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UpdateMachineGroupResponse> updateMachineGroup(UpdateMachineGroupRequest request);
 
+    CompletableFuture<UpdateOdpsShipperResponse> updateOdpsShipper(UpdateOdpsShipperRequest request);
+
+    CompletableFuture<UpdateOssExternalStoreResponse> updateOssExternalStore(UpdateOssExternalStoreRequest request);
+
+    CompletableFuture<UpdateOssShipperResponse> updateOssShipper(UpdateOssShipperRequest request);
+
     CompletableFuture<UpdateProjectResponse> updateProject(UpdateProjectRequest request);
+
+    CompletableFuture<UpdateRdsExternalStoreResponse> updateRdsExternalStore(UpdateRdsExternalStoreRequest request);
 
     CompletableFuture<UpdateSavedSearchResponse> updateSavedSearch(UpdateSavedSearchRequest request);
 
