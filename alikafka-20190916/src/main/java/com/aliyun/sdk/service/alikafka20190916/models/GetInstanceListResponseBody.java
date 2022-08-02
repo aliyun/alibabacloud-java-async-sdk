@@ -350,6 +350,15 @@ public class GetInstanceListResponseBody extends TeaModel {
         @NameInMap("UpgradeServiceDetailInfo")
         private UpgradeServiceDetailInfo upgradeServiceDetailInfo;
 
+        @NameInMap("UsedGroupCount")
+        private Integer usedGroupCount;
+
+        @NameInMap("UsedPartitionCount")
+        private Integer usedPartitionCount;
+
+        @NameInMap("UsedTopicCount")
+        private Integer usedTopicCount;
+
         @NameInMap("VSwitchId")
         private String vSwitchId;
 
@@ -385,6 +394,9 @@ public class GetInstanceListResponseBody extends TeaModel {
             this.tags = builder.tags;
             this.topicNumLimit = builder.topicNumLimit;
             this.upgradeServiceDetailInfo = builder.upgradeServiceDetailInfo;
+            this.usedGroupCount = builder.usedGroupCount;
+            this.usedPartitionCount = builder.usedPartitionCount;
+            this.usedTopicCount = builder.usedTopicCount;
             this.vSwitchId = builder.vSwitchId;
             this.vpcId = builder.vpcId;
             this.zoneId = builder.zoneId;
@@ -574,6 +586,27 @@ public class GetInstanceListResponseBody extends TeaModel {
         }
 
         /**
+         * @return usedGroupCount
+         */
+        public Integer getUsedGroupCount() {
+            return this.usedGroupCount;
+        }
+
+        /**
+         * @return usedPartitionCount
+         */
+        public Integer getUsedPartitionCount() {
+            return this.usedPartitionCount;
+        }
+
+        /**
+         * @return usedTopicCount
+         */
+        public Integer getUsedTopicCount() {
+            return this.usedTopicCount;
+        }
+
+        /**
          * @return vSwitchId
          */
         public String getVSwitchId() {
@@ -620,6 +653,9 @@ public class GetInstanceListResponseBody extends TeaModel {
             private Tags tags; 
             private Integer topicNumLimit; 
             private UpgradeServiceDetailInfo upgradeServiceDetailInfo; 
+            private Integer usedGroupCount; 
+            private Integer usedPartitionCount; 
+            private Integer usedTopicCount; 
             private String vSwitchId; 
             private String vpcId; 
             private String zoneId; 
@@ -821,6 +857,30 @@ public class GetInstanceListResponseBody extends TeaModel {
              */
             public Builder upgradeServiceDetailInfo(UpgradeServiceDetailInfo upgradeServiceDetailInfo) {
                 this.upgradeServiceDetailInfo = upgradeServiceDetailInfo;
+                return this;
+            }
+
+            /**
+             * UsedGroupCount.
+             */
+            public Builder usedGroupCount(Integer usedGroupCount) {
+                this.usedGroupCount = usedGroupCount;
+                return this;
+            }
+
+            /**
+             * UsedPartitionCount.
+             */
+            public Builder usedPartitionCount(Integer usedPartitionCount) {
+                this.usedPartitionCount = usedPartitionCount;
+                return this;
+            }
+
+            /**
+             * UsedTopicCount.
+             */
+            public Builder usedTopicCount(Integer usedTopicCount) {
+                this.usedTopicCount = usedTopicCount;
                 return this;
             }
 
