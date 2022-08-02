@@ -90,18 +90,6 @@ public class CreateApplicationRequest extends Request {
     private String kafkaConfigs;
 
     @Query
-    @NameInMap("KafkaEndpoint")
-    private String kafkaEndpoint;
-
-    @Query
-    @NameInMap("KafkaInstanceId")
-    private String kafkaInstanceId;
-
-    @Query
-    @NameInMap("KafkaLogfileConfig")
-    private String kafkaLogfileConfig;
-
-    @Query
     @NameInMap("Liveness")
     private String liveness;
 
@@ -124,10 +112,6 @@ public class CreateApplicationRequest extends Request {
     @Query
     @NameInMap("NasId")
     private String nasId;
-
-    @Query
-    @NameInMap("OpenCollectToKafka")
-    private Boolean openCollectToKafka;
 
     @Body
     @NameInMap("OssAkId")
@@ -224,10 +208,6 @@ public class CreateApplicationRequest extends Request {
     @NameInMap("WebContainer")
     private String webContainer;
 
-    @Query
-    @NameInMap("mseFeatureConfig")
-    private String mseFeatureConfig;
-
     private CreateApplicationRequest(Builder builder) {
         super(builder);
         this.acrAssumeRoleArn = builder.acrAssumeRoleArn;
@@ -249,16 +229,12 @@ public class CreateApplicationRequest extends Request {
         this.jarStartOptions = builder.jarStartOptions;
         this.jdk = builder.jdk;
         this.kafkaConfigs = builder.kafkaConfigs;
-        this.kafkaEndpoint = builder.kafkaEndpoint;
-        this.kafkaInstanceId = builder.kafkaInstanceId;
-        this.kafkaLogfileConfig = builder.kafkaLogfileConfig;
         this.liveness = builder.liveness;
         this.memory = builder.memory;
         this.mountDesc = builder.mountDesc;
         this.mountHost = builder.mountHost;
         this.namespaceId = builder.namespaceId;
         this.nasId = builder.nasId;
-        this.openCollectToKafka = builder.openCollectToKafka;
         this.ossAkId = builder.ossAkId;
         this.ossAkSecret = builder.ossAkSecret;
         this.ossMountDescs = builder.ossMountDescs;
@@ -282,7 +258,6 @@ public class CreateApplicationRequest extends Request {
         this.vpcId = builder.vpcId;
         this.warStartOptions = builder.warStartOptions;
         this.webContainer = builder.webContainer;
-        this.mseFeatureConfig = builder.mseFeatureConfig;
     }
 
     public static Builder builder() {
@@ -432,27 +407,6 @@ public class CreateApplicationRequest extends Request {
     }
 
     /**
-     * @return kafkaEndpoint
-     */
-    public String getKafkaEndpoint() {
-        return this.kafkaEndpoint;
-    }
-
-    /**
-     * @return kafkaInstanceId
-     */
-    public String getKafkaInstanceId() {
-        return this.kafkaInstanceId;
-    }
-
-    /**
-     * @return kafkaLogfileConfig
-     */
-    public String getKafkaLogfileConfig() {
-        return this.kafkaLogfileConfig;
-    }
-
-    /**
      * @return liveness
      */
     public String getLiveness() {
@@ -492,13 +446,6 @@ public class CreateApplicationRequest extends Request {
      */
     public String getNasId() {
         return this.nasId;
-    }
-
-    /**
-     * @return openCollectToKafka
-     */
-    public Boolean getOpenCollectToKafka() {
-        return this.openCollectToKafka;
     }
 
     /**
@@ -662,13 +609,6 @@ public class CreateApplicationRequest extends Request {
         return this.webContainer;
     }
 
-    /**
-     * @return mseFeatureConfig
-     */
-    public String getMseFeatureConfig() {
-        return this.mseFeatureConfig;
-    }
-
     public static final class Builder extends Request.Builder<CreateApplicationRequest, Builder> {
         private String acrAssumeRoleArn; 
         private String acrInstanceId; 
@@ -689,16 +629,12 @@ public class CreateApplicationRequest extends Request {
         private String jarStartOptions; 
         private String jdk; 
         private String kafkaConfigs; 
-        private String kafkaEndpoint; 
-        private String kafkaInstanceId; 
-        private String kafkaLogfileConfig; 
         private String liveness; 
         private Integer memory; 
         private String mountDesc; 
         private String mountHost; 
         private String namespaceId; 
         private String nasId; 
-        private Boolean openCollectToKafka; 
         private String ossAkId; 
         private String ossAkSecret; 
         private String ossMountDescs; 
@@ -722,7 +658,6 @@ public class CreateApplicationRequest extends Request {
         private String vpcId; 
         private String warStartOptions; 
         private String webContainer; 
-        private String mseFeatureConfig; 
 
         private Builder() {
             super();
@@ -749,16 +684,12 @@ public class CreateApplicationRequest extends Request {
             this.jarStartOptions = request.jarStartOptions;
             this.jdk = request.jdk;
             this.kafkaConfigs = request.kafkaConfigs;
-            this.kafkaEndpoint = request.kafkaEndpoint;
-            this.kafkaInstanceId = request.kafkaInstanceId;
-            this.kafkaLogfileConfig = request.kafkaLogfileConfig;
             this.liveness = request.liveness;
             this.memory = request.memory;
             this.mountDesc = request.mountDesc;
             this.mountHost = request.mountHost;
             this.namespaceId = request.namespaceId;
             this.nasId = request.nasId;
-            this.openCollectToKafka = request.openCollectToKafka;
             this.ossAkId = request.ossAkId;
             this.ossAkSecret = request.ossAkSecret;
             this.ossMountDescs = request.ossMountDescs;
@@ -782,7 +713,6 @@ public class CreateApplicationRequest extends Request {
             this.vpcId = request.vpcId;
             this.warStartOptions = request.warStartOptions;
             this.webContainer = request.webContainer;
-            this.mseFeatureConfig = request.mseFeatureConfig;
         } 
 
         /**
@@ -957,33 +887,6 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * KafkaEndpoint.
-         */
-        public Builder kafkaEndpoint(String kafkaEndpoint) {
-            this.putQueryParameter("KafkaEndpoint", kafkaEndpoint);
-            this.kafkaEndpoint = kafkaEndpoint;
-            return this;
-        }
-
-        /**
-         * KafkaInstanceId.
-         */
-        public Builder kafkaInstanceId(String kafkaInstanceId) {
-            this.putQueryParameter("KafkaInstanceId", kafkaInstanceId);
-            this.kafkaInstanceId = kafkaInstanceId;
-            return this;
-        }
-
-        /**
-         * KafkaLogfileConfig.
-         */
-        public Builder kafkaLogfileConfig(String kafkaLogfileConfig) {
-            this.putQueryParameter("KafkaLogfileConfig", kafkaLogfileConfig);
-            this.kafkaLogfileConfig = kafkaLogfileConfig;
-            return this;
-        }
-
-        /**
          * Liveness.
          */
         public Builder liveness(String liveness) {
@@ -1034,15 +937,6 @@ public class CreateApplicationRequest extends Request {
         public Builder nasId(String nasId) {
             this.putQueryParameter("NasId", nasId);
             this.nasId = nasId;
-            return this;
-        }
-
-        /**
-         * OpenCollectToKafka.
-         */
-        public Builder openCollectToKafka(Boolean openCollectToKafka) {
-            this.putQueryParameter("OpenCollectToKafka", openCollectToKafka);
-            this.openCollectToKafka = openCollectToKafka;
             return this;
         }
 
@@ -1250,15 +1144,6 @@ public class CreateApplicationRequest extends Request {
         public Builder webContainer(String webContainer) {
             this.putQueryParameter("WebContainer", webContainer);
             this.webContainer = webContainer;
-            return this;
-        }
-
-        /**
-         * mseFeatureConfig.
-         */
-        public Builder mseFeatureConfig(String mseFeatureConfig) {
-            this.putQueryParameter("mseFeatureConfig", mseFeatureConfig);
-            this.mseFeatureConfig = mseFeatureConfig;
             return this;
         }
 
