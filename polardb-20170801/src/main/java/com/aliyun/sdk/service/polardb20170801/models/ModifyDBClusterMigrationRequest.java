@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyDBClusterMigrationRequest extends Request {
     @Query
+    @NameInMap("ConnectionStrings")
+    private String connectionStrings;
+
+    @Query
     @NameInMap("DBClusterId")
     @Validation(required = true)
     private String DBClusterId;
@@ -57,6 +61,7 @@ public class ModifyDBClusterMigrationRequest extends Request {
 
     private ModifyDBClusterMigrationRequest(Builder builder) {
         super(builder);
+        this.connectionStrings = builder.connectionStrings;
         this.DBClusterId = builder.DBClusterId;
         this.newMasterInstanceId = builder.newMasterInstanceId;
         this.ownerAccount = builder.ownerAccount;
@@ -80,6 +85,13 @@ public class ModifyDBClusterMigrationRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return connectionStrings
+     */
+    public String getConnectionStrings() {
+        return this.connectionStrings;
     }
 
     /**
@@ -153,6 +165,7 @@ public class ModifyDBClusterMigrationRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyDBClusterMigrationRequest, Builder> {
+        private String connectionStrings; 
         private String DBClusterId; 
         private String newMasterInstanceId; 
         private String ownerAccount; 
@@ -170,6 +183,7 @@ public class ModifyDBClusterMigrationRequest extends Request {
 
         private Builder(ModifyDBClusterMigrationRequest request) {
             super(request);
+            this.connectionStrings = request.connectionStrings;
             this.DBClusterId = request.DBClusterId;
             this.newMasterInstanceId = request.newMasterInstanceId;
             this.ownerAccount = request.ownerAccount;
@@ -181,6 +195,15 @@ public class ModifyDBClusterMigrationRequest extends Request {
             this.sourceRDSDBInstanceId = request.sourceRDSDBInstanceId;
             this.swapConnectionString = request.swapConnectionString;
         } 
+
+        /**
+         * ConnectionStrings.
+         */
+        public Builder connectionStrings(String connectionStrings) {
+            this.putQueryParameter("ConnectionStrings", connectionStrings);
+            this.connectionStrings = connectionStrings;
+            return this;
+        }
 
         /**
          * DBClusterId.

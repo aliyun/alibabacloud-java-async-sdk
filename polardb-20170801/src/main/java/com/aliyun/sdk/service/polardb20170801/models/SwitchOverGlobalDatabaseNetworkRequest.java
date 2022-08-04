@@ -7,27 +7,20 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ModifyLogBackupPolicyRequest} extends {@link RequestModel}
+ * {@link SwitchOverGlobalDatabaseNetworkRequest} extends {@link RequestModel}
  *
- * <p>ModifyLogBackupPolicyRequest</p>
+ * <p>SwitchOverGlobalDatabaseNetworkRequest</p>
  */
-public class ModifyLogBackupPolicyRequest extends Request {
+public class SwitchOverGlobalDatabaseNetworkRequest extends Request {
     @Query
     @NameInMap("DBClusterId")
     @Validation(required = true)
     private String DBClusterId;
 
     @Query
-    @NameInMap("LogBackupAnotherRegionRegion")
-    private String logBackupAnotherRegionRegion;
-
-    @Query
-    @NameInMap("LogBackupAnotherRegionRetentionPeriod")
-    private String logBackupAnotherRegionRetentionPeriod;
-
-    @Query
-    @NameInMap("LogBackupRetentionPeriod")
-    private String logBackupRetentionPeriod;
+    @NameInMap("GDNId")
+    @Validation(required = true)
+    private String GDNId;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -38,6 +31,10 @@ public class ModifyLogBackupPolicyRequest extends Request {
     private Long ownerId;
 
     @Query
+    @NameInMap("RegionId")
+    private String regionId;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -45,23 +42,27 @@ public class ModifyLogBackupPolicyRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    private ModifyLogBackupPolicyRequest(Builder builder) {
+    @Query
+    @NameInMap("SecurityToken")
+    private String securityToken;
+
+    private SwitchOverGlobalDatabaseNetworkRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
-        this.logBackupAnotherRegionRegion = builder.logBackupAnotherRegionRegion;
-        this.logBackupAnotherRegionRetentionPeriod = builder.logBackupAnotherRegionRetentionPeriod;
-        this.logBackupRetentionPeriod = builder.logBackupRetentionPeriod;
+        this.GDNId = builder.GDNId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.securityToken = builder.securityToken;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ModifyLogBackupPolicyRequest create() {
+    public static SwitchOverGlobalDatabaseNetworkRequest create() {
         return builder().build();
     }
 
@@ -78,24 +79,10 @@ public class ModifyLogBackupPolicyRequest extends Request {
     }
 
     /**
-     * @return logBackupAnotherRegionRegion
+     * @return GDNId
      */
-    public String getLogBackupAnotherRegionRegion() {
-        return this.logBackupAnotherRegionRegion;
-    }
-
-    /**
-     * @return logBackupAnotherRegionRetentionPeriod
-     */
-    public String getLogBackupAnotherRegionRetentionPeriod() {
-        return this.logBackupAnotherRegionRetentionPeriod;
-    }
-
-    /**
-     * @return logBackupRetentionPeriod
-     */
-    public String getLogBackupRetentionPeriod() {
-        return this.logBackupRetentionPeriod;
+    public String getGDNId() {
+        return this.GDNId;
     }
 
     /**
@@ -113,6 +100,13 @@ public class ModifyLogBackupPolicyRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -126,30 +120,37 @@ public class ModifyLogBackupPolicyRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    public static final class Builder extends Request.Builder<ModifyLogBackupPolicyRequest, Builder> {
+    /**
+     * @return securityToken
+     */
+    public String getSecurityToken() {
+        return this.securityToken;
+    }
+
+    public static final class Builder extends Request.Builder<SwitchOverGlobalDatabaseNetworkRequest, Builder> {
         private String DBClusterId; 
-        private String logBackupAnotherRegionRegion; 
-        private String logBackupAnotherRegionRetentionPeriod; 
-        private String logBackupRetentionPeriod; 
+        private String GDNId; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String securityToken; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ModifyLogBackupPolicyRequest request) {
+        private Builder(SwitchOverGlobalDatabaseNetworkRequest request) {
             super(request);
             this.DBClusterId = request.DBClusterId;
-            this.logBackupAnotherRegionRegion = request.logBackupAnotherRegionRegion;
-            this.logBackupAnotherRegionRetentionPeriod = request.logBackupAnotherRegionRetentionPeriod;
-            this.logBackupRetentionPeriod = request.logBackupRetentionPeriod;
+            this.GDNId = request.GDNId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.securityToken = request.securityToken;
         } 
 
         /**
@@ -162,29 +163,11 @@ public class ModifyLogBackupPolicyRequest extends Request {
         }
 
         /**
-         * LogBackupAnotherRegionRegion.
+         * GDNId.
          */
-        public Builder logBackupAnotherRegionRegion(String logBackupAnotherRegionRegion) {
-            this.putQueryParameter("LogBackupAnotherRegionRegion", logBackupAnotherRegionRegion);
-            this.logBackupAnotherRegionRegion = logBackupAnotherRegionRegion;
-            return this;
-        }
-
-        /**
-         * LogBackupAnotherRegionRetentionPeriod.
-         */
-        public Builder logBackupAnotherRegionRetentionPeriod(String logBackupAnotherRegionRetentionPeriod) {
-            this.putQueryParameter("LogBackupAnotherRegionRetentionPeriod", logBackupAnotherRegionRetentionPeriod);
-            this.logBackupAnotherRegionRetentionPeriod = logBackupAnotherRegionRetentionPeriod;
-            return this;
-        }
-
-        /**
-         * LogBackupRetentionPeriod.
-         */
-        public Builder logBackupRetentionPeriod(String logBackupRetentionPeriod) {
-            this.putQueryParameter("LogBackupRetentionPeriod", logBackupRetentionPeriod);
-            this.logBackupRetentionPeriod = logBackupRetentionPeriod;
+        public Builder GDNId(String GDNId) {
+            this.putQueryParameter("GDNId", GDNId);
+            this.GDNId = GDNId;
             return this;
         }
 
@@ -207,6 +190,15 @@ public class ModifyLogBackupPolicyRequest extends Request {
         }
 
         /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
          * ResourceOwnerAccount.
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
@@ -224,9 +216,18 @@ public class ModifyLogBackupPolicyRequest extends Request {
             return this;
         }
 
+        /**
+         * SecurityToken.
+         */
+        public Builder securityToken(String securityToken) {
+            this.putQueryParameter("SecurityToken", securityToken);
+            this.securityToken = securityToken;
+            return this;
+        }
+
         @Override
-        public ModifyLogBackupPolicyRequest build() {
-            return new ModifyLogBackupPolicyRequest(this);
+        public SwitchOverGlobalDatabaseNetworkRequest build() {
+            return new SwitchOverGlobalDatabaseNetworkRequest(this);
         } 
 
     } 

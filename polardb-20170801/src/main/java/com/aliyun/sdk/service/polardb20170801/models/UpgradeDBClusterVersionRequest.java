@@ -46,6 +46,14 @@ public class UpgradeDBClusterVersionRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
+    @NameInMap("UpgradeLabel")
+    private String upgradeLabel;
+
+    @Query
+    @NameInMap("UpgradePolicy")
+    private String upgradePolicy;
+
+    @Query
     @NameInMap("UpgradeType")
     private String upgradeType;
 
@@ -59,6 +67,8 @@ public class UpgradeDBClusterVersionRequest extends Request {
         this.plannedStartTime = builder.plannedStartTime;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.upgradeLabel = builder.upgradeLabel;
+        this.upgradePolicy = builder.upgradePolicy;
         this.upgradeType = builder.upgradeType;
     }
 
@@ -132,6 +142,20 @@ public class UpgradeDBClusterVersionRequest extends Request {
     }
 
     /**
+     * @return upgradeLabel
+     */
+    public String getUpgradeLabel() {
+        return this.upgradeLabel;
+    }
+
+    /**
+     * @return upgradePolicy
+     */
+    public String getUpgradePolicy() {
+        return this.upgradePolicy;
+    }
+
+    /**
      * @return upgradeType
      */
     public String getUpgradeType() {
@@ -147,6 +171,8 @@ public class UpgradeDBClusterVersionRequest extends Request {
         private String plannedStartTime; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String upgradeLabel; 
+        private String upgradePolicy; 
         private String upgradeType; 
 
         private Builder() {
@@ -163,6 +189,8 @@ public class UpgradeDBClusterVersionRequest extends Request {
             this.plannedStartTime = request.plannedStartTime;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.upgradeLabel = request.upgradeLabel;
+            this.upgradePolicy = request.upgradePolicy;
             this.upgradeType = request.upgradeType;
         } 
 
@@ -235,6 +263,24 @@ public class UpgradeDBClusterVersionRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * UpgradeLabel.
+         */
+        public Builder upgradeLabel(String upgradeLabel) {
+            this.putQueryParameter("UpgradeLabel", upgradeLabel);
+            this.upgradeLabel = upgradeLabel;
+            return this;
+        }
+
+        /**
+         * UpgradePolicy.
+         */
+        public Builder upgradePolicy(String upgradePolicy) {
+            this.putQueryParameter("UpgradePolicy", upgradePolicy);
+            this.upgradePolicy = upgradePolicy;
             return this;
         }
 

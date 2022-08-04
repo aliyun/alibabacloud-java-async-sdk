@@ -17,6 +17,14 @@ public class DescribeGlobalDatabaseNetworksRequest extends Request {
     private String DBClusterId;
 
     @Query
+    @NameInMap("GDNDescription")
+    private String GDNDescription;
+
+    @Query
+    @NameInMap("GDNId")
+    private String GDNId;
+
+    @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -51,6 +59,8 @@ public class DescribeGlobalDatabaseNetworksRequest extends Request {
     private DescribeGlobalDatabaseNetworksRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
+        this.GDNDescription = builder.GDNDescription;
+        this.GDNId = builder.GDNId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
@@ -79,6 +89,20 @@ public class DescribeGlobalDatabaseNetworksRequest extends Request {
      */
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    /**
+     * @return GDNDescription
+     */
+    public String getGDNDescription() {
+        return this.GDNDescription;
+    }
+
+    /**
+     * @return GDNId
+     */
+    public String getGDNId() {
+        return this.GDNId;
     }
 
     /**
@@ -139,6 +163,8 @@ public class DescribeGlobalDatabaseNetworksRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeGlobalDatabaseNetworksRequest, Builder> {
         private String DBClusterId; 
+        private String GDNDescription; 
+        private String GDNId; 
         private String ownerAccount; 
         private Long ownerId; 
         private Integer pageNumber; 
@@ -155,6 +181,8 @@ public class DescribeGlobalDatabaseNetworksRequest extends Request {
         private Builder(DescribeGlobalDatabaseNetworksRequest request) {
             super(request);
             this.DBClusterId = request.DBClusterId;
+            this.GDNDescription = request.GDNDescription;
+            this.GDNId = request.GDNId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
@@ -171,6 +199,24 @@ public class DescribeGlobalDatabaseNetworksRequest extends Request {
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
             this.DBClusterId = DBClusterId;
+            return this;
+        }
+
+        /**
+         * GDNDescription.
+         */
+        public Builder GDNDescription(String GDNDescription) {
+            this.putQueryParameter("GDNDescription", GDNDescription);
+            this.GDNDescription = GDNDescription;
+            return this;
+        }
+
+        /**
+         * GDNId.
+         */
+        public Builder GDNId(String GDNId) {
+            this.putQueryParameter("GDNId", GDNId);
+            this.GDNId = GDNId;
             return this;
         }
 

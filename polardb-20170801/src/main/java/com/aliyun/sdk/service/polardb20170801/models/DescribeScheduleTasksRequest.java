@@ -41,6 +41,14 @@ public class DescribeScheduleTasksRequest extends Request {
     private Integer pageSize;
 
     @Query
+    @NameInMap("PlannedEndTime")
+    private String plannedEndTime;
+
+    @Query
+    @NameInMap("PlannedStartTime")
+    private String plannedStartTime;
+
+    @Query
     @NameInMap("RegionId")
     private String regionId;
 
@@ -69,6 +77,8 @@ public class DescribeScheduleTasksRequest extends Request {
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.plannedEndTime = builder.plannedEndTime;
+        this.plannedStartTime = builder.plannedStartTime;
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
@@ -139,6 +149,20 @@ public class DescribeScheduleTasksRequest extends Request {
     }
 
     /**
+     * @return plannedEndTime
+     */
+    public String getPlannedEndTime() {
+        return this.plannedEndTime;
+    }
+
+    /**
+     * @return plannedStartTime
+     */
+    public String getPlannedStartTime() {
+        return this.plannedStartTime;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -181,6 +205,8 @@ public class DescribeScheduleTasksRequest extends Request {
         private Long ownerId; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String plannedEndTime; 
+        private String plannedStartTime; 
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
@@ -200,6 +226,8 @@ public class DescribeScheduleTasksRequest extends Request {
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.plannedEndTime = request.plannedEndTime;
+            this.plannedStartTime = request.plannedStartTime;
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
@@ -267,6 +295,24 @@ public class DescribeScheduleTasksRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * PlannedEndTime.
+         */
+        public Builder plannedEndTime(String plannedEndTime) {
+            this.putQueryParameter("PlannedEndTime", plannedEndTime);
+            this.plannedEndTime = plannedEndTime;
+            return this;
+        }
+
+        /**
+         * PlannedStartTime.
+         */
+        public Builder plannedStartTime(String plannedStartTime) {
+            this.putQueryParameter("PlannedStartTime", plannedStartTime);
+            this.plannedStartTime = plannedStartTime;
             return this;
         }
 

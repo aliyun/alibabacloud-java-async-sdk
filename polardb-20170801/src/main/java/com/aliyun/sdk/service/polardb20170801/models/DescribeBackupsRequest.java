@@ -21,6 +21,10 @@ public class DescribeBackupsRequest extends Request {
     private String backupMode;
 
     @Query
+    @NameInMap("BackupRegion")
+    private String backupRegion;
+
+    @Query
     @NameInMap("BackupStatus")
     private String backupStatus;
 
@@ -69,6 +73,7 @@ public class DescribeBackupsRequest extends Request {
         super(builder);
         this.backupId = builder.backupId;
         this.backupMode = builder.backupMode;
+        this.backupRegion = builder.backupRegion;
         this.backupStatus = builder.backupStatus;
         this.DBClusterId = builder.DBClusterId;
         this.endTime = builder.endTime;
@@ -106,6 +111,13 @@ public class DescribeBackupsRequest extends Request {
      */
     public String getBackupMode() {
         return this.backupMode;
+    }
+
+    /**
+     * @return backupRegion
+     */
+    public String getBackupRegion() {
+        return this.backupRegion;
     }
 
     /**
@@ -181,6 +193,7 @@ public class DescribeBackupsRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeBackupsRequest, Builder> {
         private String backupId; 
         private String backupMode; 
+        private String backupRegion; 
         private String backupStatus; 
         private String DBClusterId; 
         private String endTime; 
@@ -200,6 +213,7 @@ public class DescribeBackupsRequest extends Request {
             super(request);
             this.backupId = request.backupId;
             this.backupMode = request.backupMode;
+            this.backupRegion = request.backupRegion;
             this.backupStatus = request.backupStatus;
             this.DBClusterId = request.DBClusterId;
             this.endTime = request.endTime;
@@ -227,6 +241,15 @@ public class DescribeBackupsRequest extends Request {
         public Builder backupMode(String backupMode) {
             this.putQueryParameter("BackupMode", backupMode);
             this.backupMode = backupMode;
+            return this;
+        }
+
+        /**
+         * BackupRegion.
+         */
+        public Builder backupRegion(String backupRegion) {
+            this.putQueryParameter("BackupRegion", backupRegion);
+            this.backupRegion = backupRegion;
             return this;
         }
 

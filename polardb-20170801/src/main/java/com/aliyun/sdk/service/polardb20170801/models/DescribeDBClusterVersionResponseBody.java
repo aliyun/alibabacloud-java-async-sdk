@@ -33,6 +33,9 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
     @NameInMap("IsLatestVersion")
     private String isLatestVersion;
 
+    @NameInMap("IsProxyLatestVersion")
+    private String isProxyLatestVersion;
+
     @NameInMap("ProxyLatestVersion")
     private String proxyLatestVersion;
 
@@ -53,6 +56,7 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
         this.DBVersion = builder.DBVersion;
         this.DBVersionStatus = builder.DBVersionStatus;
         this.isLatestVersion = builder.isLatestVersion;
+        this.isProxyLatestVersion = builder.isProxyLatestVersion;
         this.proxyLatestVersion = builder.proxyLatestVersion;
         this.proxyRevisionVersion = builder.proxyRevisionVersion;
         this.proxyVersionStatus = builder.proxyVersionStatus;
@@ -117,6 +121,13 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
     }
 
     /**
+     * @return isProxyLatestVersion
+     */
+    public String getIsProxyLatestVersion() {
+        return this.isProxyLatestVersion;
+    }
+
+    /**
      * @return proxyLatestVersion
      */
     public String getProxyLatestVersion() {
@@ -152,6 +163,7 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
         private String DBVersion; 
         private String DBVersionStatus; 
         private String isLatestVersion; 
+        private String isProxyLatestVersion; 
         private String proxyLatestVersion; 
         private String proxyRevisionVersion; 
         private String proxyVersionStatus; 
@@ -210,6 +222,14 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
          */
         public Builder isLatestVersion(String isLatestVersion) {
             this.isLatestVersion = isLatestVersion;
+            return this;
+        }
+
+        /**
+         * IsProxyLatestVersion.
+         */
+        public Builder isProxyLatestVersion(String isProxyLatestVersion) {
+            this.isProxyLatestVersion = isProxyLatestVersion;
             return this;
         }
 

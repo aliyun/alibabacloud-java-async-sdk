@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMetaListResponseBody</p>
  */
 public class DescribeMetaListResponseBody extends TeaModel {
+    @NameInMap("DBClusterId")
+    private String DBClusterId;
+
     @NameInMap("Items")
     private java.util.List < Items> items;
 
@@ -31,6 +34,7 @@ public class DescribeMetaListResponseBody extends TeaModel {
     private String totalRecordCount;
 
     private DescribeMetaListResponseBody(Builder builder) {
+        this.DBClusterId = builder.DBClusterId;
         this.items = builder.items;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -45,6 +49,13 @@ public class DescribeMetaListResponseBody extends TeaModel {
 
     public static DescribeMetaListResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return DBClusterId
+     */
+    public String getDBClusterId() {
+        return this.DBClusterId;
     }
 
     /**
@@ -90,12 +101,21 @@ public class DescribeMetaListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String DBClusterId; 
         private java.util.List < Items> items; 
         private String pageNumber; 
         private String pageSize; 
         private String requestId; 
         private String totalPageCount; 
         private String totalRecordCount; 
+
+        /**
+         * DBClusterId.
+         */
+        public Builder DBClusterId(String DBClusterId) {
+            this.DBClusterId = DBClusterId;
+            return this;
+        }
 
         /**
          * Items.

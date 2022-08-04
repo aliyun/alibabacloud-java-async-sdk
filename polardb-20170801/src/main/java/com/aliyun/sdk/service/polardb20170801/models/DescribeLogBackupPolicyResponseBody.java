@@ -15,6 +15,12 @@ public class DescribeLogBackupPolicyResponseBody extends TeaModel {
     @NameInMap("EnableBackupLog")
     private Integer enableBackupLog;
 
+    @NameInMap("LogBackupAnotherRegionRegion")
+    private String logBackupAnotherRegionRegion;
+
+    @NameInMap("LogBackupAnotherRegionRetentionPeriod")
+    private String logBackupAnotherRegionRetentionPeriod;
+
     @NameInMap("LogBackupRetentionPeriod")
     private Integer logBackupRetentionPeriod;
 
@@ -23,6 +29,8 @@ public class DescribeLogBackupPolicyResponseBody extends TeaModel {
 
     private DescribeLogBackupPolicyResponseBody(Builder builder) {
         this.enableBackupLog = builder.enableBackupLog;
+        this.logBackupAnotherRegionRegion = builder.logBackupAnotherRegionRegion;
+        this.logBackupAnotherRegionRetentionPeriod = builder.logBackupAnotherRegionRetentionPeriod;
         this.logBackupRetentionPeriod = builder.logBackupRetentionPeriod;
         this.requestId = builder.requestId;
     }
@@ -43,6 +51,20 @@ public class DescribeLogBackupPolicyResponseBody extends TeaModel {
     }
 
     /**
+     * @return logBackupAnotherRegionRegion
+     */
+    public String getLogBackupAnotherRegionRegion() {
+        return this.logBackupAnotherRegionRegion;
+    }
+
+    /**
+     * @return logBackupAnotherRegionRetentionPeriod
+     */
+    public String getLogBackupAnotherRegionRetentionPeriod() {
+        return this.logBackupAnotherRegionRetentionPeriod;
+    }
+
+    /**
      * @return logBackupRetentionPeriod
      */
     public Integer getLogBackupRetentionPeriod() {
@@ -58,6 +80,8 @@ public class DescribeLogBackupPolicyResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer enableBackupLog; 
+        private String logBackupAnotherRegionRegion; 
+        private String logBackupAnotherRegionRetentionPeriod; 
         private Integer logBackupRetentionPeriod; 
         private String requestId; 
 
@@ -66,6 +90,22 @@ public class DescribeLogBackupPolicyResponseBody extends TeaModel {
          */
         public Builder enableBackupLog(Integer enableBackupLog) {
             this.enableBackupLog = enableBackupLog;
+            return this;
+        }
+
+        /**
+         * LogBackupAnotherRegionRegion.
+         */
+        public Builder logBackupAnotherRegionRegion(String logBackupAnotherRegionRegion) {
+            this.logBackupAnotherRegionRegion = logBackupAnotherRegionRegion;
+            return this;
+        }
+
+        /**
+         * LogBackupAnotherRegionRetentionPeriod.
+         */
+        public Builder logBackupAnotherRegionRetentionPeriod(String logBackupAnotherRegionRetentionPeriod) {
+            this.logBackupAnotherRegionRetentionPeriod = logBackupAnotherRegionRetentionPeriod;
             return this;
         }
 

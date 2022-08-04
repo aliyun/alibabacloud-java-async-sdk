@@ -30,6 +30,12 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     @NameInMap("DataLevel1BackupTime")
     private String dataLevel1BackupTime;
 
+    @NameInMap("DataLevel2BackupAnotherRegionRegion")
+    private String dataLevel2BackupAnotherRegionRegion;
+
+    @NameInMap("DataLevel2BackupAnotherRegionRetentionPeriod")
+    private String dataLevel2BackupAnotherRegionRetentionPeriod;
+
     @NameInMap("DataLevel2BackupPeriod")
     private String dataLevel2BackupPeriod;
 
@@ -55,6 +61,8 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         this.dataLevel1BackupPeriod = builder.dataLevel1BackupPeriod;
         this.dataLevel1BackupRetentionPeriod = builder.dataLevel1BackupRetentionPeriod;
         this.dataLevel1BackupTime = builder.dataLevel1BackupTime;
+        this.dataLevel2BackupAnotherRegionRegion = builder.dataLevel2BackupAnotherRegionRegion;
+        this.dataLevel2BackupAnotherRegionRetentionPeriod = builder.dataLevel2BackupAnotherRegionRetentionPeriod;
         this.dataLevel2BackupPeriod = builder.dataLevel2BackupPeriod;
         this.dataLevel2BackupRetentionPeriod = builder.dataLevel2BackupRetentionPeriod;
         this.preferredBackupPeriod = builder.preferredBackupPeriod;
@@ -114,6 +122,20 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     }
 
     /**
+     * @return dataLevel2BackupAnotherRegionRegion
+     */
+    public String getDataLevel2BackupAnotherRegionRegion() {
+        return this.dataLevel2BackupAnotherRegionRegion;
+    }
+
+    /**
+     * @return dataLevel2BackupAnotherRegionRetentionPeriod
+     */
+    public String getDataLevel2BackupAnotherRegionRetentionPeriod() {
+        return this.dataLevel2BackupAnotherRegionRetentionPeriod;
+    }
+
+    /**
      * @return dataLevel2BackupPeriod
      */
     public String getDataLevel2BackupPeriod() {
@@ -162,6 +184,8 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         private String dataLevel1BackupPeriod; 
         private String dataLevel1BackupRetentionPeriod; 
         private String dataLevel1BackupTime; 
+        private String dataLevel2BackupAnotherRegionRegion; 
+        private String dataLevel2BackupAnotherRegionRetentionPeriod; 
         private String dataLevel2BackupPeriod; 
         private String dataLevel2BackupRetentionPeriod; 
         private String preferredBackupPeriod; 
@@ -214,6 +238,22 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
          */
         public Builder dataLevel1BackupTime(String dataLevel1BackupTime) {
             this.dataLevel1BackupTime = dataLevel1BackupTime;
+            return this;
+        }
+
+        /**
+         * DataLevel2BackupAnotherRegionRegion.
+         */
+        public Builder dataLevel2BackupAnotherRegionRegion(String dataLevel2BackupAnotherRegionRegion) {
+            this.dataLevel2BackupAnotherRegionRegion = dataLevel2BackupAnotherRegionRegion;
+            return this;
+        }
+
+        /**
+         * DataLevel2BackupAnotherRegionRetentionPeriod.
+         */
+        public Builder dataLevel2BackupAnotherRegionRetentionPeriod(String dataLevel2BackupAnotherRegionRetentionPeriod) {
+            this.dataLevel2BackupAnotherRegionRetentionPeriod = dataLevel2BackupAnotherRegionRetentionPeriod;
             return this;
         }
 

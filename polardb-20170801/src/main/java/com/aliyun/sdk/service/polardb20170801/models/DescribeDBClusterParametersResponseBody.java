@@ -141,6 +141,9 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
         @NameInMap("DefaultParameterValue")
         private String defaultParameterValue;
 
+        @NameInMap("Factor")
+        private String factor;
+
         @NameInMap("ForceRestart")
         private Boolean forceRestart;
 
@@ -169,6 +172,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             this.checkingCode = builder.checkingCode;
             this.dataType = builder.dataType;
             this.defaultParameterValue = builder.defaultParameterValue;
+            this.factor = builder.factor;
             this.forceRestart = builder.forceRestart;
             this.isModifiable = builder.isModifiable;
             this.isNodeAvailable = builder.isNodeAvailable;
@@ -206,6 +210,13 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
          */
         public String getDefaultParameterValue() {
             return this.defaultParameterValue;
+        }
+
+        /**
+         * @return factor
+         */
+        public String getFactor() {
+            return this.factor;
         }
 
         /**
@@ -268,6 +279,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             private String checkingCode; 
             private String dataType; 
             private String defaultParameterValue; 
+            private String factor; 
             private Boolean forceRestart; 
             private Boolean isModifiable; 
             private String isNodeAvailable; 
@@ -298,6 +310,14 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
              */
             public Builder defaultParameterValue(String defaultParameterValue) {
                 this.defaultParameterValue = defaultParameterValue;
+                return this;
+            }
+
+            /**
+             * Factor.
+             */
+            public Builder factor(String factor) {
+                this.factor = factor;
                 return this;
             }
 

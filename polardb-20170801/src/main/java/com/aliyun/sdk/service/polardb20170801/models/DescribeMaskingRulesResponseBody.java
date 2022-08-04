@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMaskingRulesResponseBody</p>
  */
 public class DescribeMaskingRulesResponseBody extends TeaModel {
+    @NameInMap("DBClusterId")
+    private String DBClusterId;
+
     @NameInMap("Data")
     private Data data;
 
@@ -25,6 +28,7 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
     private Boolean success;
 
     private DescribeMaskingRulesResponseBody(Builder builder) {
+        this.DBClusterId = builder.DBClusterId;
         this.data = builder.data;
         this.message = builder.message;
         this.requestId = builder.requestId;
@@ -37,6 +41,13 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
 
     public static DescribeMaskingRulesResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return DBClusterId
+     */
+    public String getDBClusterId() {
+        return this.DBClusterId;
     }
 
     /**
@@ -68,10 +79,19 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String DBClusterId; 
         private Data data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        /**
+         * DBClusterId.
+         */
+        public Builder DBClusterId(String DBClusterId) {
+            this.DBClusterId = DBClusterId;
+            return this;
+        }
 
         /**
          * Data.

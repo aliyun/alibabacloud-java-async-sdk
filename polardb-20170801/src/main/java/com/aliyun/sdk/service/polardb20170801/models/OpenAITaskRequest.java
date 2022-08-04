@@ -7,24 +7,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeBackupLogsRequest} extends {@link RequestModel}
+ * {@link OpenAITaskRequest} extends {@link RequestModel}
  *
- * <p>DescribeBackupLogsRequest</p>
+ * <p>OpenAITaskRequest</p>
  */
-public class DescribeBackupLogsRequest extends Request {
-    @Query
-    @NameInMap("BackupRegion")
-    private String backupRegion;
-
+public class OpenAITaskRequest extends Request {
     @Query
     @NameInMap("DBClusterId")
     @Validation(required = true)
     private String DBClusterId;
-
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
-    private String endTime;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -35,14 +26,13 @@ public class DescribeBackupLogsRequest extends Request {
     private Long ownerId;
 
     @Query
-    @NameInMap("PageNumber")
-    @Validation(maximum = 2147483647, minimum = 1)
-    private Integer pageNumber;
+    @NameInMap("Password")
+    private String password;
 
     @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 30)
-    private Integer pageSize;
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
 
     @Query
     @NameInMap("ResourceOwnerAccount")
@@ -53,29 +43,26 @@ public class DescribeBackupLogsRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
-    private String startTime;
+    @NameInMap("Username")
+    private String username;
 
-    private DescribeBackupLogsRequest(Builder builder) {
+    private OpenAITaskRequest(Builder builder) {
         super(builder);
-        this.backupRegion = builder.backupRegion;
         this.DBClusterId = builder.DBClusterId;
-        this.endTime = builder.endTime;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
-        this.pageNumber = builder.pageNumber;
-        this.pageSize = builder.pageSize;
+        this.password = builder.password;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.startTime = builder.startTime;
+        this.username = builder.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DescribeBackupLogsRequest create() {
+    public static OpenAITaskRequest create() {
         return builder().build();
     }
 
@@ -85,24 +72,10 @@ public class DescribeBackupLogsRequest extends Request {
     }
 
     /**
-     * @return backupRegion
-     */
-    public String getBackupRegion() {
-        return this.backupRegion;
-    }
-
-    /**
      * @return DBClusterId
      */
     public String getDBClusterId() {
         return this.DBClusterId;
-    }
-
-    /**
-     * @return endTime
-     */
-    public String getEndTime() {
-        return this.endTime;
     }
 
     /**
@@ -120,17 +93,17 @@ public class DescribeBackupLogsRequest extends Request {
     }
 
     /**
-     * @return pageNumber
+     * @return password
      */
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public String getPassword() {
+        return this.password;
     }
 
     /**
-     * @return pageSize
+     * @return regionId
      */
-    public Integer getPageSize() {
-        return this.pageSize;
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -148,50 +121,37 @@ public class DescribeBackupLogsRequest extends Request {
     }
 
     /**
-     * @return startTime
+     * @return username
      */
-    public String getStartTime() {
-        return this.startTime;
+    public String getUsername() {
+        return this.username;
     }
 
-    public static final class Builder extends Request.Builder<DescribeBackupLogsRequest, Builder> {
-        private String backupRegion; 
+    public static final class Builder extends Request.Builder<OpenAITaskRequest, Builder> {
         private String DBClusterId; 
-        private String endTime; 
         private String ownerAccount; 
         private Long ownerId; 
-        private Integer pageNumber; 
-        private Integer pageSize; 
+        private String password; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String startTime; 
+        private String username; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeBackupLogsRequest request) {
+        private Builder(OpenAITaskRequest request) {
             super(request);
-            this.backupRegion = request.backupRegion;
             this.DBClusterId = request.DBClusterId;
-            this.endTime = request.endTime;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
-            this.pageNumber = request.pageNumber;
-            this.pageSize = request.pageSize;
+            this.password = request.password;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.startTime = request.startTime;
+            this.username = request.username;
         } 
-
-        /**
-         * BackupRegion.
-         */
-        public Builder backupRegion(String backupRegion) {
-            this.putQueryParameter("BackupRegion", backupRegion);
-            this.backupRegion = backupRegion;
-            return this;
-        }
 
         /**
          * DBClusterId.
@@ -199,15 +159,6 @@ public class DescribeBackupLogsRequest extends Request {
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
             this.DBClusterId = DBClusterId;
-            return this;
-        }
-
-        /**
-         * EndTime.
-         */
-        public Builder endTime(String endTime) {
-            this.putQueryParameter("EndTime", endTime);
-            this.endTime = endTime;
             return this;
         }
 
@@ -230,20 +181,20 @@ public class DescribeBackupLogsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * Password.
          */
-        public Builder pageNumber(Integer pageNumber) {
-            this.putQueryParameter("PageNumber", pageNumber);
-            this.pageNumber = pageNumber;
+        public Builder password(String password) {
+            this.putQueryParameter("Password", password);
+            this.password = password;
             return this;
         }
 
         /**
-         * PageSize.
+         * RegionId.
          */
-        public Builder pageSize(Integer pageSize) {
-            this.putQueryParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
@@ -266,17 +217,17 @@ public class DescribeBackupLogsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * Username.
          */
-        public Builder startTime(String startTime) {
-            this.putQueryParameter("StartTime", startTime);
-            this.startTime = startTime;
+        public Builder username(String username) {
+            this.putQueryParameter("Username", username);
+            this.username = username;
             return this;
         }
 
         @Override
-        public DescribeBackupLogsRequest build() {
-            return new DescribeBackupLogsRequest(this);
+        public OpenAITaskRequest build() {
+            return new OpenAITaskRequest(this);
         } 
 
     } 

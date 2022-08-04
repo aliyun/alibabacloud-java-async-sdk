@@ -12,6 +12,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBClusterAttributeResponseBody</p>
  */
 public class DescribeDBClusterAttributeResponseBody extends TeaModel {
+    @NameInMap("BlktagTotal")
+    private Long blktagTotal;
+
+    @NameInMap("BlktagUsed")
+    private Long blktagUsed;
+
     @NameInMap("Category")
     private String category;
 
@@ -57,6 +63,12 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     @NameInMap("Expired")
     private String expired;
 
+    @NameInMap("InodeTotal")
+    private Long inodeTotal;
+
+    @NameInMap("InodeUsed")
+    private Long inodeUsed;
+
     @NameInMap("IsLatestVersion")
     private Boolean isLatestVersion;
 
@@ -99,6 +111,12 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     @NameInMap("StorageMax")
     private Long storageMax;
 
+    @NameInMap("StoragePayType")
+    private String storagePayType;
+
+    @NameInMap("StorageSpace")
+    private Long storageSpace;
+
     @NameInMap("StorageType")
     private String storageType;
 
@@ -121,6 +139,8 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     private String zoneIds;
 
     private DescribeDBClusterAttributeResponseBody(Builder builder) {
+        this.blktagTotal = builder.blktagTotal;
+        this.blktagUsed = builder.blktagUsed;
         this.category = builder.category;
         this.creationTime = builder.creationTime;
         this.DBClusterDescription = builder.DBClusterDescription;
@@ -136,6 +156,8 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         this.engine = builder.engine;
         this.expireTime = builder.expireTime;
         this.expired = builder.expired;
+        this.inodeTotal = builder.inodeTotal;
+        this.inodeUsed = builder.inodeUsed;
         this.isLatestVersion = builder.isLatestVersion;
         this.isProxyLatestVersion = builder.isProxyLatestVersion;
         this.lockMode = builder.lockMode;
@@ -150,6 +172,8 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         this.resourceGroupId = builder.resourceGroupId;
         this.SQLSize = builder.SQLSize;
         this.storageMax = builder.storageMax;
+        this.storagePayType = builder.storagePayType;
+        this.storageSpace = builder.storageSpace;
         this.storageType = builder.storageType;
         this.storageUsed = builder.storageUsed;
         this.subCategory = builder.subCategory;
@@ -165,6 +189,20 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
 
     public static DescribeDBClusterAttributeResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return blktagTotal
+     */
+    public Long getBlktagTotal() {
+        return this.blktagTotal;
+    }
+
+    /**
+     * @return blktagUsed
+     */
+    public Long getBlktagUsed() {
+        return this.blktagUsed;
     }
 
     /**
@@ -273,6 +311,20 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return inodeTotal
+     */
+    public Long getInodeTotal() {
+        return this.inodeTotal;
+    }
+
+    /**
+     * @return inodeUsed
+     */
+    public Long getInodeUsed() {
+        return this.inodeUsed;
+    }
+
+    /**
      * @return isLatestVersion
      */
     public Boolean getIsLatestVersion() {
@@ -371,6 +423,20 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return storagePayType
+     */
+    public String getStoragePayType() {
+        return this.storagePayType;
+    }
+
+    /**
+     * @return storageSpace
+     */
+    public Long getStorageSpace() {
+        return this.storageSpace;
+    }
+
+    /**
      * @return storageType
      */
     public String getStorageType() {
@@ -420,6 +486,8 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Long blktagTotal; 
+        private Long blktagUsed; 
         private String category; 
         private String creationTime; 
         private String DBClusterDescription; 
@@ -435,6 +503,8 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         private String engine; 
         private String expireTime; 
         private String expired; 
+        private Long inodeTotal; 
+        private Long inodeUsed; 
         private Boolean isLatestVersion; 
         private Boolean isProxyLatestVersion; 
         private String lockMode; 
@@ -449,6 +519,8 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         private String resourceGroupId; 
         private Long SQLSize; 
         private Long storageMax; 
+        private String storagePayType; 
+        private Long storageSpace; 
         private String storageType; 
         private Long storageUsed; 
         private String subCategory; 
@@ -456,6 +528,22 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         private String VPCId; 
         private String vSwitchId; 
         private String zoneIds; 
+
+        /**
+         * BlktagTotal.
+         */
+        public Builder blktagTotal(Long blktagTotal) {
+            this.blktagTotal = blktagTotal;
+            return this;
+        }
+
+        /**
+         * BlktagUsed.
+         */
+        public Builder blktagUsed(Long blktagUsed) {
+            this.blktagUsed = blktagUsed;
+            return this;
+        }
 
         /**
          * Category.
@@ -578,6 +666,22 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * InodeTotal.
+         */
+        public Builder inodeTotal(Long inodeTotal) {
+            this.inodeTotal = inodeTotal;
+            return this;
+        }
+
+        /**
+         * InodeUsed.
+         */
+        public Builder inodeUsed(Long inodeUsed) {
+            this.inodeUsed = inodeUsed;
+            return this;
+        }
+
+        /**
          * IsLatestVersion.
          */
         public Builder isLatestVersion(Boolean isLatestVersion) {
@@ -686,6 +790,22 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
          */
         public Builder storageMax(Long storageMax) {
             this.storageMax = storageMax;
+            return this;
+        }
+
+        /**
+         * StoragePayType.
+         */
+        public Builder storagePayType(String storagePayType) {
+            this.storagePayType = storagePayType;
+            return this;
+        }
+
+        /**
+         * StorageSpace.
+         */
+        public Builder storageSpace(Long storageSpace) {
+            this.storageSpace = storageSpace;
             return this;
         }
 

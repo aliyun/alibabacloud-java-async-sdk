@@ -7,27 +7,20 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ModifyLogBackupPolicyRequest} extends {@link RequestModel}
+ * {@link ModifyDBClusterResourceGroupRequest} extends {@link RequestModel}
  *
- * <p>ModifyLogBackupPolicyRequest</p>
+ * <p>ModifyDBClusterResourceGroupRequest</p>
  */
-public class ModifyLogBackupPolicyRequest extends Request {
+public class ModifyDBClusterResourceGroupRequest extends Request {
     @Query
     @NameInMap("DBClusterId")
     @Validation(required = true)
     private String DBClusterId;
 
     @Query
-    @NameInMap("LogBackupAnotherRegionRegion")
-    private String logBackupAnotherRegionRegion;
-
-    @Query
-    @NameInMap("LogBackupAnotherRegionRetentionPeriod")
-    private String logBackupAnotherRegionRetentionPeriod;
-
-    @Query
-    @NameInMap("LogBackupRetentionPeriod")
-    private String logBackupRetentionPeriod;
+    @NameInMap("NewResourceGroupId")
+    @Validation(required = true)
+    private String newResourceGroupId;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -38,6 +31,10 @@ public class ModifyLogBackupPolicyRequest extends Request {
     private Long ownerId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -45,14 +42,13 @@ public class ModifyLogBackupPolicyRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    private ModifyLogBackupPolicyRequest(Builder builder) {
+    private ModifyDBClusterResourceGroupRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
-        this.logBackupAnotherRegionRegion = builder.logBackupAnotherRegionRegion;
-        this.logBackupAnotherRegionRetentionPeriod = builder.logBackupAnotherRegionRetentionPeriod;
-        this.logBackupRetentionPeriod = builder.logBackupRetentionPeriod;
+        this.newResourceGroupId = builder.newResourceGroupId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
     }
@@ -61,7 +57,7 @@ public class ModifyLogBackupPolicyRequest extends Request {
         return new Builder();
     }
 
-    public static ModifyLogBackupPolicyRequest create() {
+    public static ModifyDBClusterResourceGroupRequest create() {
         return builder().build();
     }
 
@@ -78,24 +74,10 @@ public class ModifyLogBackupPolicyRequest extends Request {
     }
 
     /**
-     * @return logBackupAnotherRegionRegion
+     * @return newResourceGroupId
      */
-    public String getLogBackupAnotherRegionRegion() {
-        return this.logBackupAnotherRegionRegion;
-    }
-
-    /**
-     * @return logBackupAnotherRegionRetentionPeriod
-     */
-    public String getLogBackupAnotherRegionRetentionPeriod() {
-        return this.logBackupAnotherRegionRetentionPeriod;
-    }
-
-    /**
-     * @return logBackupRetentionPeriod
-     */
-    public String getLogBackupRetentionPeriod() {
-        return this.logBackupRetentionPeriod;
+    public String getNewResourceGroupId() {
+        return this.newResourceGroupId;
     }
 
     /**
@@ -113,6 +95,13 @@ public class ModifyLogBackupPolicyRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -126,13 +115,12 @@ public class ModifyLogBackupPolicyRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    public static final class Builder extends Request.Builder<ModifyLogBackupPolicyRequest, Builder> {
+    public static final class Builder extends Request.Builder<ModifyDBClusterResourceGroupRequest, Builder> {
         private String DBClusterId; 
-        private String logBackupAnotherRegionRegion; 
-        private String logBackupAnotherRegionRetentionPeriod; 
-        private String logBackupRetentionPeriod; 
+        private String newResourceGroupId; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
 
@@ -140,14 +128,13 @@ public class ModifyLogBackupPolicyRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyLogBackupPolicyRequest request) {
+        private Builder(ModifyDBClusterResourceGroupRequest request) {
             super(request);
             this.DBClusterId = request.DBClusterId;
-            this.logBackupAnotherRegionRegion = request.logBackupAnotherRegionRegion;
-            this.logBackupAnotherRegionRetentionPeriod = request.logBackupAnotherRegionRetentionPeriod;
-            this.logBackupRetentionPeriod = request.logBackupRetentionPeriod;
+            this.newResourceGroupId = request.newResourceGroupId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
@@ -162,29 +149,11 @@ public class ModifyLogBackupPolicyRequest extends Request {
         }
 
         /**
-         * LogBackupAnotherRegionRegion.
+         * NewResourceGroupId.
          */
-        public Builder logBackupAnotherRegionRegion(String logBackupAnotherRegionRegion) {
-            this.putQueryParameter("LogBackupAnotherRegionRegion", logBackupAnotherRegionRegion);
-            this.logBackupAnotherRegionRegion = logBackupAnotherRegionRegion;
-            return this;
-        }
-
-        /**
-         * LogBackupAnotherRegionRetentionPeriod.
-         */
-        public Builder logBackupAnotherRegionRetentionPeriod(String logBackupAnotherRegionRetentionPeriod) {
-            this.putQueryParameter("LogBackupAnotherRegionRetentionPeriod", logBackupAnotherRegionRetentionPeriod);
-            this.logBackupAnotherRegionRetentionPeriod = logBackupAnotherRegionRetentionPeriod;
-            return this;
-        }
-
-        /**
-         * LogBackupRetentionPeriod.
-         */
-        public Builder logBackupRetentionPeriod(String logBackupRetentionPeriod) {
-            this.putQueryParameter("LogBackupRetentionPeriod", logBackupRetentionPeriod);
-            this.logBackupRetentionPeriod = logBackupRetentionPeriod;
+        public Builder newResourceGroupId(String newResourceGroupId) {
+            this.putQueryParameter("NewResourceGroupId", newResourceGroupId);
+            this.newResourceGroupId = newResourceGroupId;
             return this;
         }
 
@@ -207,6 +176,15 @@ public class ModifyLogBackupPolicyRequest extends Request {
         }
 
         /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
          * ResourceOwnerAccount.
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
@@ -225,8 +203,8 @@ public class ModifyLogBackupPolicyRequest extends Request {
         }
 
         @Override
-        public ModifyLogBackupPolicyRequest build() {
-            return new ModifyLogBackupPolicyRequest(this);
+        public ModifyDBClusterResourceGroupRequest build() {
+            return new ModifyDBClusterResourceGroupRequest(this);
         } 
 
     } 

@@ -453,6 +453,12 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         @NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
+        @NameInMap("StoragePayType")
+        private String storagePayType;
+
+        @NameInMap("StorageSpace")
+        private Long storageSpace;
+
         @NameInMap("StorageUsed")
         private Long storageUsed;
 
@@ -485,6 +491,8 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             this.payType = builder.payType;
             this.regionId = builder.regionId;
             this.resourceGroupId = builder.resourceGroupId;
+            this.storagePayType = builder.storagePayType;
+            this.storageSpace = builder.storageSpace;
             this.storageUsed = builder.storageUsed;
             this.tags = builder.tags;
             this.vpcId = builder.vpcId;
@@ -633,6 +641,20 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         }
 
         /**
+         * @return storagePayType
+         */
+        public String getStoragePayType() {
+            return this.storagePayType;
+        }
+
+        /**
+         * @return storageSpace
+         */
+        public Long getStorageSpace() {
+            return this.storageSpace;
+        }
+
+        /**
          * @return storageUsed
          */
         public Long getStorageUsed() {
@@ -680,6 +702,8 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             private String payType; 
             private String regionId; 
             private String resourceGroupId; 
+            private String storagePayType; 
+            private Long storageSpace; 
             private Long storageUsed; 
             private Tags tags; 
             private String vpcId; 
@@ -834,6 +858,22 @@ public class DescribeDBClustersResponseBody extends TeaModel {
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * StoragePayType.
+             */
+            public Builder storagePayType(String storagePayType) {
+                this.storagePayType = storagePayType;
+                return this;
+            }
+
+            /**
+             * StorageSpace.
+             */
+            public Builder storageSpace(Long storageSpace) {
+                this.storageSpace = storageSpace;
                 return this;
             }
 

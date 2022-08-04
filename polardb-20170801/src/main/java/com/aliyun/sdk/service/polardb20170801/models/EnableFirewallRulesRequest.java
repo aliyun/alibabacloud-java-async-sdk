@@ -7,27 +7,19 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ModifyLogBackupPolicyRequest} extends {@link RequestModel}
+ * {@link EnableFirewallRulesRequest} extends {@link RequestModel}
  *
- * <p>ModifyLogBackupPolicyRequest</p>
+ * <p>EnableFirewallRulesRequest</p>
  */
-public class ModifyLogBackupPolicyRequest extends Request {
+public class EnableFirewallRulesRequest extends Request {
     @Query
     @NameInMap("DBClusterId")
     @Validation(required = true)
     private String DBClusterId;
 
     @Query
-    @NameInMap("LogBackupAnotherRegionRegion")
-    private String logBackupAnotherRegionRegion;
-
-    @Query
-    @NameInMap("LogBackupAnotherRegionRetentionPeriod")
-    private String logBackupAnotherRegionRetentionPeriod;
-
-    @Query
-    @NameInMap("LogBackupRetentionPeriod")
-    private String logBackupRetentionPeriod;
+    @NameInMap("Enable")
+    private Boolean enable;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -45,23 +37,27 @@ public class ModifyLogBackupPolicyRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    private ModifyLogBackupPolicyRequest(Builder builder) {
+    @Query
+    @NameInMap("RuleNameList")
+    @Validation(required = true)
+    private String ruleNameList;
+
+    private EnableFirewallRulesRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
-        this.logBackupAnotherRegionRegion = builder.logBackupAnotherRegionRegion;
-        this.logBackupAnotherRegionRetentionPeriod = builder.logBackupAnotherRegionRetentionPeriod;
-        this.logBackupRetentionPeriod = builder.logBackupRetentionPeriod;
+        this.enable = builder.enable;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.ruleNameList = builder.ruleNameList;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ModifyLogBackupPolicyRequest create() {
+    public static EnableFirewallRulesRequest create() {
         return builder().build();
     }
 
@@ -78,24 +74,10 @@ public class ModifyLogBackupPolicyRequest extends Request {
     }
 
     /**
-     * @return logBackupAnotherRegionRegion
+     * @return enable
      */
-    public String getLogBackupAnotherRegionRegion() {
-        return this.logBackupAnotherRegionRegion;
-    }
-
-    /**
-     * @return logBackupAnotherRegionRetentionPeriod
-     */
-    public String getLogBackupAnotherRegionRetentionPeriod() {
-        return this.logBackupAnotherRegionRetentionPeriod;
-    }
-
-    /**
-     * @return logBackupRetentionPeriod
-     */
-    public String getLogBackupRetentionPeriod() {
-        return this.logBackupRetentionPeriod;
+    public Boolean getEnable() {
+        return this.enable;
     }
 
     /**
@@ -126,30 +108,35 @@ public class ModifyLogBackupPolicyRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    public static final class Builder extends Request.Builder<ModifyLogBackupPolicyRequest, Builder> {
+    /**
+     * @return ruleNameList
+     */
+    public String getRuleNameList() {
+        return this.ruleNameList;
+    }
+
+    public static final class Builder extends Request.Builder<EnableFirewallRulesRequest, Builder> {
         private String DBClusterId; 
-        private String logBackupAnotherRegionRegion; 
-        private String logBackupAnotherRegionRetentionPeriod; 
-        private String logBackupRetentionPeriod; 
+        private Boolean enable; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String ruleNameList; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ModifyLogBackupPolicyRequest request) {
+        private Builder(EnableFirewallRulesRequest request) {
             super(request);
             this.DBClusterId = request.DBClusterId;
-            this.logBackupAnotherRegionRegion = request.logBackupAnotherRegionRegion;
-            this.logBackupAnotherRegionRetentionPeriod = request.logBackupAnotherRegionRetentionPeriod;
-            this.logBackupRetentionPeriod = request.logBackupRetentionPeriod;
+            this.enable = request.enable;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.ruleNameList = request.ruleNameList;
         } 
 
         /**
@@ -162,29 +149,11 @@ public class ModifyLogBackupPolicyRequest extends Request {
         }
 
         /**
-         * LogBackupAnotherRegionRegion.
+         * Enable.
          */
-        public Builder logBackupAnotherRegionRegion(String logBackupAnotherRegionRegion) {
-            this.putQueryParameter("LogBackupAnotherRegionRegion", logBackupAnotherRegionRegion);
-            this.logBackupAnotherRegionRegion = logBackupAnotherRegionRegion;
-            return this;
-        }
-
-        /**
-         * LogBackupAnotherRegionRetentionPeriod.
-         */
-        public Builder logBackupAnotherRegionRetentionPeriod(String logBackupAnotherRegionRetentionPeriod) {
-            this.putQueryParameter("LogBackupAnotherRegionRetentionPeriod", logBackupAnotherRegionRetentionPeriod);
-            this.logBackupAnotherRegionRetentionPeriod = logBackupAnotherRegionRetentionPeriod;
-            return this;
-        }
-
-        /**
-         * LogBackupRetentionPeriod.
-         */
-        public Builder logBackupRetentionPeriod(String logBackupRetentionPeriod) {
-            this.putQueryParameter("LogBackupRetentionPeriod", logBackupRetentionPeriod);
-            this.logBackupRetentionPeriod = logBackupRetentionPeriod;
+        public Builder enable(Boolean enable) {
+            this.putQueryParameter("Enable", enable);
+            this.enable = enable;
             return this;
         }
 
@@ -224,9 +193,18 @@ public class ModifyLogBackupPolicyRequest extends Request {
             return this;
         }
 
+        /**
+         * RuleNameList.
+         */
+        public Builder ruleNameList(String ruleNameList) {
+            this.putQueryParameter("RuleNameList", ruleNameList);
+            this.ruleNameList = ruleNameList;
+            return this;
+        }
+
         @Override
-        public ModifyLogBackupPolicyRequest build() {
-            return new ModifyLogBackupPolicyRequest(this);
+        public EnableFirewallRulesRequest build() {
+            return new EnableFirewallRulesRequest(this);
         } 
 
     } 

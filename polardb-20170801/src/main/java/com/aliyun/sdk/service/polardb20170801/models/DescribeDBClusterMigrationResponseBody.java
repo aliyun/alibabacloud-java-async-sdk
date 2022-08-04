@@ -27,6 +27,9 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
     @NameInMap("DelayedSeconds")
     private Integer delayedSeconds;
 
+    @NameInMap("DtsInstanceId")
+    private String dtsInstanceId;
+
     @NameInMap("ExpiredTime")
     private String expiredTime;
 
@@ -54,6 +57,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         this.DBClusterId = builder.DBClusterId;
         this.DBClusterReadWriteMode = builder.DBClusterReadWriteMode;
         this.delayedSeconds = builder.delayedSeconds;
+        this.dtsInstanceId = builder.dtsInstanceId;
         this.expiredTime = builder.expiredTime;
         this.migrationStatus = builder.migrationStatus;
         this.rdsEndpointList = builder.rdsEndpointList;
@@ -104,6 +108,13 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
      */
     public Integer getDelayedSeconds() {
         return this.delayedSeconds;
+    }
+
+    /**
+     * @return dtsInstanceId
+     */
+    public String getDtsInstanceId() {
+        return this.dtsInstanceId;
     }
 
     /**
@@ -161,6 +172,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         private String DBClusterId; 
         private String DBClusterReadWriteMode; 
         private Integer delayedSeconds; 
+        private String dtsInstanceId; 
         private String expiredTime; 
         private String migrationStatus; 
         private java.util.List < RdsEndpointList> rdsEndpointList; 
@@ -206,6 +218,14 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
          */
         public Builder delayedSeconds(Integer delayedSeconds) {
             this.delayedSeconds = delayedSeconds;
+            return this;
+        }
+
+        /**
+         * DtsInstanceId.
+         */
+        public Builder dtsInstanceId(String dtsInstanceId) {
+            this.dtsInstanceId = dtsInstanceId;
             return this;
         }
 

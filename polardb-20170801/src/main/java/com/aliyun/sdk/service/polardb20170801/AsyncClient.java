@@ -24,6 +24,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CheckDBNameResponse> checkDBName(CheckDBNameRequest request);
 
+    CompletableFuture<CloseAITaskResponse> closeAITask(CloseAITaskRequest request);
+
     CompletableFuture<CloseDBClusterMigrationResponse> closeDBClusterMigration(CloseDBClusterMigrationRequest request);
 
     CompletableFuture<CreateAccountResponse> createAccount(CreateAccountRequest request);
@@ -69,6 +71,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteMaskingRulesResponse> deleteMaskingRules(DeleteMaskingRulesRequest request);
 
     CompletableFuture<DeleteParameterGroupResponse> deleteParameterGroup(DeleteParameterGroupRequest request);
+
+    CompletableFuture<DescribeAITaskStatusResponse> describeAITaskStatus(DescribeAITaskStatusRequest request);
 
     CompletableFuture<DescribeAccountsResponse> describeAccounts(DescribeAccountsRequest request);
 
@@ -160,6 +164,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeTasksResponse> describeTasks(DescribeTasksRequest request);
 
+    CompletableFuture<EnableFirewallRulesResponse> enableFirewallRules(EnableFirewallRulesRequest request);
+
     CompletableFuture<FailoverDBClusterResponse> failoverDBCluster(FailoverDBClusterRequest request);
 
     CompletableFuture<GrantAccountPrivilegeResponse> grantAccountPrivilege(GrantAccountPrivilegeRequest request);
@@ -180,6 +186,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ModifyDBClusterAuditLogCollectorResponse> modifyDBClusterAuditLogCollector(ModifyDBClusterAuditLogCollectorRequest request);
 
+    CompletableFuture<ModifyDBClusterDeletionResponse> modifyDBClusterDeletion(ModifyDBClusterDeletionRequest request);
+
     CompletableFuture<ModifyDBClusterDescriptionResponse> modifyDBClusterDescription(ModifyDBClusterDescriptionRequest request);
 
     CompletableFuture<ModifyDBClusterEndpointResponse> modifyDBClusterEndpoint(ModifyDBClusterEndpointRequest request);
@@ -193,6 +201,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyDBClusterParametersResponse> modifyDBClusterParameters(ModifyDBClusterParametersRequest request);
 
     CompletableFuture<ModifyDBClusterPrimaryZoneResponse> modifyDBClusterPrimaryZone(ModifyDBClusterPrimaryZoneRequest request);
+
+    CompletableFuture<ModifyDBClusterResourceGroupResponse> modifyDBClusterResourceGroup(ModifyDBClusterResourceGroupRequest request);
 
     CompletableFuture<ModifyDBClusterSSLResponse> modifyDBClusterSSL(ModifyDBClusterSSLRequest request);
 
@@ -216,6 +226,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ModifyPendingMaintenanceActionResponse> modifyPendingMaintenanceAction(ModifyPendingMaintenanceActionRequest request);
 
+    CompletableFuture<OpenAITaskResponse> openAITask(OpenAITaskRequest request);
+
+    CompletableFuture<RefreshDBClusterStorageUsageResponse> refreshDBClusterStorageUsage(RefreshDBClusterStorageUsageRequest request);
+
     CompletableFuture<RemoveDBClusterFromGDNResponse> removeDBClusterFromGDN(RemoveDBClusterFromGDNRequest request);
 
     CompletableFuture<ResetAccountResponse> resetAccount(ResetAccountRequest request);
@@ -225,6 +239,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RestoreTableResponse> restoreTable(RestoreTableRequest request);
 
     CompletableFuture<RevokeAccountPrivilegeResponse> revokeAccountPrivilege(RevokeAccountPrivilegeRequest request);
+
+    CompletableFuture<SwitchOverGlobalDatabaseNetworkResponse> switchOverGlobalDatabaseNetwork(SwitchOverGlobalDatabaseNetworkRequest request);
 
     CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
 

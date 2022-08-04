@@ -7,31 +7,35 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribePolarSQLCollectorPolicyResponseBody} extends {@link TeaModel}
+ * {@link DescribeAITaskStatusResponseBody} extends {@link TeaModel}
  *
- * <p>DescribePolarSQLCollectorPolicyResponseBody</p>
+ * <p>DescribeAITaskStatusResponseBody</p>
  */
-public class DescribePolarSQLCollectorPolicyResponseBody extends TeaModel {
+public class DescribeAITaskStatusResponseBody extends TeaModel {
     @NameInMap("DBClusterId")
     private String DBClusterId;
 
     @NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SQLCollectorStatus")
-    private String SQLCollectorStatus;
+    @NameInMap("Status")
+    private String status;
 
-    private DescribePolarSQLCollectorPolicyResponseBody(Builder builder) {
+    @NameInMap("StatusName")
+    private String statusName;
+
+    private DescribeAITaskStatusResponseBody(Builder builder) {
         this.DBClusterId = builder.DBClusterId;
         this.requestId = builder.requestId;
-        this.SQLCollectorStatus = builder.SQLCollectorStatus;
+        this.status = builder.status;
+        this.statusName = builder.statusName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DescribePolarSQLCollectorPolicyResponseBody create() {
+    public static DescribeAITaskStatusResponseBody create() {
         return builder().build();
     }
 
@@ -50,16 +54,24 @@ public class DescribePolarSQLCollectorPolicyResponseBody extends TeaModel {
     }
 
     /**
-     * @return SQLCollectorStatus
+     * @return status
      */
-    public String getSQLCollectorStatus() {
-        return this.SQLCollectorStatus;
+    public String getStatus() {
+        return this.status;
+    }
+
+    /**
+     * @return statusName
+     */
+    public String getStatusName() {
+        return this.statusName;
     }
 
     public static final class Builder {
         private String DBClusterId; 
         private String requestId; 
-        private String SQLCollectorStatus; 
+        private String status; 
+        private String statusName; 
 
         /**
          * DBClusterId.
@@ -70,7 +82,7 @@ public class DescribePolarSQLCollectorPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,15 +90,23 @@ public class DescribePolarSQLCollectorPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * SQLCollectorStatus.
+         * Status.
          */
-        public Builder SQLCollectorStatus(String SQLCollectorStatus) {
-            this.SQLCollectorStatus = SQLCollectorStatus;
+        public Builder status(String status) {
+            this.status = status;
             return this;
         }
 
-        public DescribePolarSQLCollectorPolicyResponseBody build() {
-            return new DescribePolarSQLCollectorPolicyResponseBody(this);
+        /**
+         * StatusName.
+         */
+        public Builder statusName(String statusName) {
+            this.statusName = statusName;
+            return this;
+        }
+
+        public DescribeAITaskStatusResponseBody build() {
+            return new DescribeAITaskStatusResponseBody(this);
         } 
 
     } 
