@@ -23,17 +23,17 @@ public class UpdateServiceAutoScalerRequest extends Request {
     private String serviceName;
 
     @Body
-    @NameInMap("Max")
+    @NameInMap("max")
     @Validation(required = true)
     private Integer max;
 
     @Body
-    @NameInMap("Min")
+    @NameInMap("min")
     @Validation(required = true)
     private Integer min;
 
     @Body
-    @NameInMap("Strategies")
+    @NameInMap("strategies")
     @Validation(required = true)
     private Strategies strategies;
 
@@ -136,7 +136,7 @@ public class UpdateServiceAutoScalerRequest extends Request {
          * 最大 replica 数，需要大于MinReplica
          */
         public Builder max(Integer max) {
-            this.putBodyParameter("Max", max);
+            this.putBodyParameter("max", max);
             this.max = max;
             return this;
         }
@@ -145,7 +145,7 @@ public class UpdateServiceAutoScalerRequest extends Request {
          * 最小 replica 数，需要大于0
          */
         public Builder min(Integer min) {
-            this.putBodyParameter("Min", min);
+            this.putBodyParameter("min", min);
             this.min = min;
             return this;
         }
@@ -154,7 +154,7 @@ public class UpdateServiceAutoScalerRequest extends Request {
          * map 类型的策略定义
          */
         public Builder strategies(Strategies strategies) {
-            this.putBodyParameter("Strategies", strategies);
+            this.putBodyParameter("strategies", strategies);
             this.strategies = strategies;
             return this;
         }
@@ -167,10 +167,10 @@ public class UpdateServiceAutoScalerRequest extends Request {
     } 
 
     public static class Strategies extends TeaModel {
-        @NameInMap("Cpu")
+        @NameInMap("cpu")
         private Float cpu;
 
-        @NameInMap("Qps")
+        @NameInMap("qps")
         private Float qps;
 
         private Strategies(Builder builder) {

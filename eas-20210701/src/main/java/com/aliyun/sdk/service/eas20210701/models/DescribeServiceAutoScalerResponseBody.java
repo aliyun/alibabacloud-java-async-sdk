@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeServiceAutoScalerResponseBody</p>
  */
 public class DescribeServiceAutoScalerResponseBody extends TeaModel {
+    @NameInMap("Behavior")
+    private java.util.Map < String, ? > behavior;
+
     @NameInMap("CurrentValues")
     private java.util.Map < String, ? > currentValues;
 
@@ -31,6 +34,7 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
     private java.util.Map < String, ? > strategies;
 
     private DescribeServiceAutoScalerResponseBody(Builder builder) {
+        this.behavior = builder.behavior;
         this.currentValues = builder.currentValues;
         this.maxReplica = builder.maxReplica;
         this.minReplica = builder.minReplica;
@@ -45,6 +49,13 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
 
     public static DescribeServiceAutoScalerResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return behavior
+     */
+    public java.util.Map < String, ? > getBehavior() {
+        return this.behavior;
     }
 
     /**
@@ -90,12 +101,21 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private java.util.Map < String, ? > behavior; 
         private java.util.Map < String, ? > currentValues; 
         private Integer maxReplica; 
         private Integer minReplica; 
         private String requestId; 
         private String serviceName; 
         private java.util.Map < String, ? > strategies; 
+
+        /**
+         * Behavior.
+         */
+        public Builder behavior(java.util.Map < String, ? > behavior) {
+            this.behavior = behavior;
+            return this;
+        }
 
         /**
          * CurrentValues.
