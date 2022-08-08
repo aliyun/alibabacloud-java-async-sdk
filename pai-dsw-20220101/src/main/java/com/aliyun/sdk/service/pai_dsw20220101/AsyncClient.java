@@ -36,6 +36,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetInstanceSnapshotResponse> getInstanceSnapshot(GetInstanceSnapshotRequest request);
 
+    CompletableFuture<GetTokenResponse> getToken(GetTokenRequest request);
+
     CompletableFuture<GetUserConfigResponse> getUserConfig(GetUserConfigRequest request);
 
     CompletableFuture<ListDemoCategoriesResponse> listDemoCategories(ListDemoCategoriesRequest request);
