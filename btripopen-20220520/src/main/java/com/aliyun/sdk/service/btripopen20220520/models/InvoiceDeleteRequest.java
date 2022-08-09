@@ -17,14 +17,9 @@ public class InvoiceDeleteRequest extends Request {
     @Validation(required = true)
     private String thirdPartId;
 
-    @Body
-    @NameInMap("user_id")
-    private String userId;
-
     private InvoiceDeleteRequest(Builder builder) {
         super(builder);
         this.thirdPartId = builder.thirdPartId;
-        this.userId = builder.userId;
     }
 
     public static Builder builder() {
@@ -47,16 +42,8 @@ public class InvoiceDeleteRequest extends Request {
         return this.thirdPartId;
     }
 
-    /**
-     * @return userId
-     */
-    public String getUserId() {
-        return this.userId;
-    }
-
     public static final class Builder extends Request.Builder<InvoiceDeleteRequest, Builder> {
         private String thirdPartId; 
-        private String userId; 
 
         private Builder() {
             super();
@@ -65,7 +52,6 @@ public class InvoiceDeleteRequest extends Request {
         private Builder(InvoiceDeleteRequest request) {
             super(request);
             this.thirdPartId = request.thirdPartId;
-            this.userId = request.userId;
         } 
 
         /**
@@ -74,15 +60,6 @@ public class InvoiceDeleteRequest extends Request {
         public Builder thirdPartId(String thirdPartId) {
             this.putQueryParameter("third_part_id", thirdPartId);
             this.thirdPartId = thirdPartId;
-            return this;
-        }
-
-        /**
-         * 无userId时传缺省值superAdmin
-         */
-        public Builder userId(String userId) {
-            this.putBodyParameter("user_id", userId);
-            this.userId = userId;
             return this;
         }
 

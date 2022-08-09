@@ -25,11 +25,6 @@ public class InvoiceAddRequest extends Request {
     private String bankNo;
 
     @Body
-    @NameInMap("corp_id")
-    @Validation(required = true)
-    private String corpId;
-
-    @Body
     @NameInMap("tax_no")
     @Validation(required = true)
     private String taxNo;
@@ -53,22 +48,16 @@ public class InvoiceAddRequest extends Request {
     @Validation(required = true)
     private Integer type;
 
-    @Body
-    @NameInMap("user_id")
-    private String userId;
-
     private InvoiceAddRequest(Builder builder) {
         super(builder);
         this.address = builder.address;
         this.bankName = builder.bankName;
         this.bankNo = builder.bankNo;
-        this.corpId = builder.corpId;
         this.taxNo = builder.taxNo;
         this.tel = builder.tel;
         this.thirdPartId = builder.thirdPartId;
         this.title = builder.title;
         this.type = builder.type;
-        this.userId = builder.userId;
     }
 
     public static Builder builder() {
@@ -106,13 +95,6 @@ public class InvoiceAddRequest extends Request {
     }
 
     /**
-     * @return corpId
-     */
-    public String getCorpId() {
-        return this.corpId;
-    }
-
-    /**
      * @return taxNo
      */
     public String getTaxNo() {
@@ -147,24 +129,15 @@ public class InvoiceAddRequest extends Request {
         return this.type;
     }
 
-    /**
-     * @return userId
-     */
-    public String getUserId() {
-        return this.userId;
-    }
-
     public static final class Builder extends Request.Builder<InvoiceAddRequest, Builder> {
         private String address; 
         private String bankName; 
         private String bankNo; 
-        private String corpId; 
         private String taxNo; 
         private String tel; 
         private String thirdPartId; 
         private String title; 
         private Integer type; 
-        private String userId; 
 
         private Builder() {
             super();
@@ -175,13 +148,11 @@ public class InvoiceAddRequest extends Request {
             this.address = request.address;
             this.bankName = request.bankName;
             this.bankNo = request.bankNo;
-            this.corpId = request.corpId;
             this.taxNo = request.taxNo;
             this.tel = request.tel;
             this.thirdPartId = request.thirdPartId;
             this.title = request.title;
             this.type = request.type;
-            this.userId = request.userId;
         } 
 
         /**
@@ -208,15 +179,6 @@ public class InvoiceAddRequest extends Request {
         public Builder bankNo(String bankNo) {
             this.putBodyParameter("bank_no", bankNo);
             this.bankNo = bankNo;
-            return this;
-        }
-
-        /**
-         * corp_id.
-         */
-        public Builder corpId(String corpId) {
-            this.putBodyParameter("corp_id", corpId);
-            this.corpId = corpId;
             return this;
         }
 
@@ -262,15 +224,6 @@ public class InvoiceAddRequest extends Request {
         public Builder type(Integer type) {
             this.putBodyParameter("type", type);
             this.type = type;
-            return this;
-        }
-
-        /**
-         * 无userId时传缺省值superAdmin
-         */
-        public Builder userId(String userId) {
-            this.putBodyParameter("user_id", userId);
-            this.userId = userId;
             return this;
         }
 

@@ -13,10 +13,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CostCenterSaveRequest extends Request {
     @Body
-    @NameInMap("alipay_id")
-    private String alipayId;
-
-    @Body
     @NameInMap("alipay_no")
     private String alipayNo;
 
@@ -44,20 +40,14 @@ public class CostCenterSaveRequest extends Request {
     @Validation(required = true)
     private String title;
 
-    @Body
-    @NameInMap("user_id")
-    private String userId;
-
     private CostCenterSaveRequest(Builder builder) {
         super(builder);
-        this.alipayId = builder.alipayId;
         this.alipayNo = builder.alipayNo;
         this.corpId = builder.corpId;
         this.number = builder.number;
         this.scope = builder.scope;
         this.thirdpartId = builder.thirdpartId;
         this.title = builder.title;
-        this.userId = builder.userId;
     }
 
     public static Builder builder() {
@@ -71,13 +61,6 @@ public class CostCenterSaveRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return alipayId
-     */
-    public String getAlipayId() {
-        return this.alipayId;
     }
 
     /**
@@ -122,22 +105,13 @@ public class CostCenterSaveRequest extends Request {
         return this.title;
     }
 
-    /**
-     * @return userId
-     */
-    public String getUserId() {
-        return this.userId;
-    }
-
     public static final class Builder extends Request.Builder<CostCenterSaveRequest, Builder> {
-        private String alipayId; 
         private String alipayNo; 
         private String corpId; 
         private String number; 
         private Long scope; 
         private String thirdpartId; 
         private String title; 
-        private String userId; 
 
         private Builder() {
             super();
@@ -145,24 +119,13 @@ public class CostCenterSaveRequest extends Request {
 
         private Builder(CostCenterSaveRequest request) {
             super(request);
-            this.alipayId = request.alipayId;
             this.alipayNo = request.alipayNo;
             this.corpId = request.corpId;
             this.number = request.number;
             this.scope = request.scope;
             this.thirdpartId = request.thirdpartId;
             this.title = request.title;
-            this.userId = request.userId;
         } 
-
-        /**
-         * alipay_id.
-         */
-        public Builder alipayId(String alipayId) {
-            this.putBodyParameter("alipay_id", alipayId);
-            this.alipayId = alipayId;
-            return this;
-        }
 
         /**
          * 绑定支付宝账号
@@ -215,15 +178,6 @@ public class CostCenterSaveRequest extends Request {
         public Builder title(String title) {
             this.putBodyParameter("title", title);
             this.title = title;
-            return this;
-        }
-
-        /**
-         * 无userId时传缺省值superAdmin
-         */
-        public Builder userId(String userId) {
-            this.putBodyParameter("user_id", userId);
-            this.userId = userId;
             return this;
         }
 

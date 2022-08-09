@@ -16,14 +16,9 @@ public class DepartmentSaveRequest extends Request {
     @NameInMap("depart_list")
     private java.util.List < DepartList> departList;
 
-    @Body
-    @NameInMap("user_id")
-    private String userId;
-
     private DepartmentSaveRequest(Builder builder) {
         super(builder);
         this.departList = builder.departList;
-        this.userId = builder.userId;
     }
 
     public static Builder builder() {
@@ -46,16 +41,8 @@ public class DepartmentSaveRequest extends Request {
         return this.departList;
     }
 
-    /**
-     * @return userId
-     */
-    public String getUserId() {
-        return this.userId;
-    }
-
     public static final class Builder extends Request.Builder<DepartmentSaveRequest, Builder> {
         private java.util.List < DepartList> departList; 
-        private String userId; 
 
         private Builder() {
             super();
@@ -64,7 +51,6 @@ public class DepartmentSaveRequest extends Request {
         private Builder(DepartmentSaveRequest request) {
             super(request);
             this.departList = request.departList;
-            this.userId = request.userId;
         } 
 
         /**
@@ -74,15 +60,6 @@ public class DepartmentSaveRequest extends Request {
             String departListShrink = shrink(departList, "depart_list", "json");
             this.putBodyParameter("depart_list", departListShrink);
             this.departList = departList;
-            return this;
-        }
-
-        /**
-         * 无userId时传缺省值superAdmin
-         */
-        public Builder userId(String userId) {
-            this.putBodyParameter("user_id", userId);
-            this.userId = userId;
             return this;
         }
 

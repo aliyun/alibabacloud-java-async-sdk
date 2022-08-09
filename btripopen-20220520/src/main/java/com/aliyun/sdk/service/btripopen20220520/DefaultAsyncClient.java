@@ -477,7 +477,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<InvoiceDeleteResponse> invoiceDelete(InvoiceDeleteRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("InvoiceDelete").setMethod(HttpMethod.DELETE).setPathRegex("/invoice/v1/invoice").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("InvoiceDelete").setMethod(HttpMethod.DELETE).setPathRegex("/invoice/v1/invoice").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(InvoiceDeleteResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -519,7 +519,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<InvoiceSearchResponse> invoiceSearch(InvoiceSearchRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("InvoiceSearch").setMethod(HttpMethod.GET).setPathRegex("/invoice/v1/invoice").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("InvoiceSearch").setMethod(HttpMethod.GET).setPathRegex("/invoice/v1/invoice").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(InvoiceSearchResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {

@@ -35,10 +35,6 @@ public class CostCenterModifyRequest extends Request {
     @Validation(required = true)
     private String title;
 
-    @Body
-    @NameInMap("user_id")
-    private String userId;
-
     private CostCenterModifyRequest(Builder builder) {
         super(builder);
         this.alipayNo = builder.alipayNo;
@@ -46,7 +42,6 @@ public class CostCenterModifyRequest extends Request {
         this.scope = builder.scope;
         this.thirdpartId = builder.thirdpartId;
         this.title = builder.title;
-        this.userId = builder.userId;
     }
 
     public static Builder builder() {
@@ -97,20 +92,12 @@ public class CostCenterModifyRequest extends Request {
         return this.title;
     }
 
-    /**
-     * @return userId
-     */
-    public String getUserId() {
-        return this.userId;
-    }
-
     public static final class Builder extends Request.Builder<CostCenterModifyRequest, Builder> {
         private String alipayNo; 
         private String number; 
         private Long scope; 
         private String thirdpartId; 
         private String title; 
-        private String userId; 
 
         private Builder() {
             super();
@@ -123,7 +110,6 @@ public class CostCenterModifyRequest extends Request {
             this.scope = request.scope;
             this.thirdpartId = request.thirdpartId;
             this.title = request.title;
-            this.userId = request.userId;
         } 
 
         /**
@@ -168,15 +154,6 @@ public class CostCenterModifyRequest extends Request {
         public Builder title(String title) {
             this.putBodyParameter("title", title);
             this.title = title;
-            return this;
-        }
-
-        /**
-         * 无userId时传缺省值superAdmin
-         */
-        public Builder userId(String userId) {
-            this.putBodyParameter("user_id", userId);
-            this.userId = userId;
             return this;
         }
 

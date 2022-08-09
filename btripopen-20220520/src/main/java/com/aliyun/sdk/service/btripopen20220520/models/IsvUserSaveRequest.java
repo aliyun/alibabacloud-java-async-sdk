@@ -13,16 +13,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class IsvUserSaveRequest extends Request {
     @Body
-    @NameInMap("user_Id")
-    private String userId;
-
-    @Body
     @NameInMap("user_list")
     private java.util.List < UserList> userList;
 
     private IsvUserSaveRequest(Builder builder) {
         super(builder);
-        this.userId = builder.userId;
         this.userList = builder.userList;
     }
 
@@ -40,13 +35,6 @@ public class IsvUserSaveRequest extends Request {
     }
 
     /**
-     * @return userId
-     */
-    public String getUserId() {
-        return this.userId;
-    }
-
-    /**
      * @return userList
      */
     public java.util.List < UserList> getUserList() {
@@ -54,7 +42,6 @@ public class IsvUserSaveRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<IsvUserSaveRequest, Builder> {
-        private String userId; 
         private java.util.List < UserList> userList; 
 
         private Builder() {
@@ -63,18 +50,8 @@ public class IsvUserSaveRequest extends Request {
 
         private Builder(IsvUserSaveRequest request) {
             super(request);
-            this.userId = request.userId;
             this.userList = request.userList;
         } 
-
-        /**
-         * 无userId时传缺省值superAdmin
-         */
-        public Builder userId(String userId) {
-            this.putBodyParameter("user_Id", userId);
-            this.userId = userId;
-            return this;
-        }
 
         /**
          * user_list.

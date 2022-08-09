@@ -17,14 +17,9 @@ public class CostCenterDeleteRequest extends Request {
     @Validation(required = true)
     private String thirdpartId;
 
-    @Query
-    @NameInMap("user_id")
-    private String userId;
-
     private CostCenterDeleteRequest(Builder builder) {
         super(builder);
         this.thirdpartId = builder.thirdpartId;
-        this.userId = builder.userId;
     }
 
     public static Builder builder() {
@@ -47,16 +42,8 @@ public class CostCenterDeleteRequest extends Request {
         return this.thirdpartId;
     }
 
-    /**
-     * @return userId
-     */
-    public String getUserId() {
-        return this.userId;
-    }
-
     public static final class Builder extends Request.Builder<CostCenterDeleteRequest, Builder> {
         private String thirdpartId; 
-        private String userId; 
 
         private Builder() {
             super();
@@ -65,7 +52,6 @@ public class CostCenterDeleteRequest extends Request {
         private Builder(CostCenterDeleteRequest request) {
             super(request);
             this.thirdpartId = request.thirdpartId;
-            this.userId = request.userId;
         } 
 
         /**
@@ -74,15 +60,6 @@ public class CostCenterDeleteRequest extends Request {
         public Builder thirdpartId(String thirdpartId) {
             this.putQueryParameter("thirdpart_id", thirdpartId);
             this.thirdpartId = thirdpartId;
-            return this;
-        }
-
-        /**
-         * 无userId时传缺省值superAdmin
-         */
-        public Builder userId(String userId) {
-            this.putQueryParameter("user_id", userId);
-            this.userId = userId;
             return this;
         }
 

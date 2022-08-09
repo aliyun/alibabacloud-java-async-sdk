@@ -14,10 +14,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CorpTokenRequest extends Request {
     @Query
     @NameInMap("corp_id")
+    @Validation(required = true)
     private String corpId;
 
     @Query
     @NameInMap("type")
+    @Validation(required = true)
     private Integer type;
 
     private CorpTokenRequest(Builder builder) {

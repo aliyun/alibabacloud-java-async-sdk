@@ -18,11 +18,6 @@ public class InvoiceRuleSaveRequest extends Request {
     private Boolean allEmploye;
 
     @Body
-    @NameInMap("corp_id")
-    @Validation(required = true)
-    private String corpId;
-
-    @Body
     @NameInMap("entities")
     private java.util.List < Entities> entities;
 
@@ -31,17 +26,11 @@ public class InvoiceRuleSaveRequest extends Request {
     @Validation(required = true)
     private String thirdPartId;
 
-    @Body
-    @NameInMap("user_id")
-    private String userId;
-
     private InvoiceRuleSaveRequest(Builder builder) {
         super(builder);
         this.allEmploye = builder.allEmploye;
-        this.corpId = builder.corpId;
         this.entities = builder.entities;
         this.thirdPartId = builder.thirdPartId;
-        this.userId = builder.userId;
     }
 
     public static Builder builder() {
@@ -65,13 +54,6 @@ public class InvoiceRuleSaveRequest extends Request {
     }
 
     /**
-     * @return corpId
-     */
-    public String getCorpId() {
-        return this.corpId;
-    }
-
-    /**
      * @return entities
      */
     public java.util.List < Entities> getEntities() {
@@ -85,19 +67,10 @@ public class InvoiceRuleSaveRequest extends Request {
         return this.thirdPartId;
     }
 
-    /**
-     * @return userId
-     */
-    public String getUserId() {
-        return this.userId;
-    }
-
     public static final class Builder extends Request.Builder<InvoiceRuleSaveRequest, Builder> {
         private Boolean allEmploye; 
-        private String corpId; 
         private java.util.List < Entities> entities; 
         private String thirdPartId; 
-        private String userId; 
 
         private Builder() {
             super();
@@ -106,10 +79,8 @@ public class InvoiceRuleSaveRequest extends Request {
         private Builder(InvoiceRuleSaveRequest request) {
             super(request);
             this.allEmploye = request.allEmploye;
-            this.corpId = request.corpId;
             this.entities = request.entities;
             this.thirdPartId = request.thirdPartId;
-            this.userId = request.userId;
         } 
 
         /**
@@ -118,15 +89,6 @@ public class InvoiceRuleSaveRequest extends Request {
         public Builder allEmploye(Boolean allEmploye) {
             this.putBodyParameter("all_employe", allEmploye);
             this.allEmploye = allEmploye;
-            return this;
-        }
-
-        /**
-         * corp_id.
-         */
-        public Builder corpId(String corpId) {
-            this.putBodyParameter("corp_id", corpId);
-            this.corpId = corpId;
             return this;
         }
 
@@ -146,15 +108,6 @@ public class InvoiceRuleSaveRequest extends Request {
         public Builder thirdPartId(String thirdPartId) {
             this.putBodyParameter("third_part_id", thirdPartId);
             this.thirdPartId = thirdPartId;
-            return this;
-        }
-
-        /**
-         * 无userId时传缺省值superAdmin
-         */
-        public Builder userId(String userId) {
-            this.putBodyParameter("user_id", userId);
-            this.userId = userId;
             return this;
         }
 

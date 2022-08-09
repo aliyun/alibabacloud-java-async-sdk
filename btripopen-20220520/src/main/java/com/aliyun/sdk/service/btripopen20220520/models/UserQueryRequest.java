@@ -25,26 +25,11 @@ public class UserQueryRequest extends Request {
     @NameInMap("third_part_job_no")
     private String thirdPartJobNo;
 
-    @Query
-    @NameInMap("top_app_key_owner_id")
-    private String topAppKeyOwnerId;
-
-    @Query
-    @NameInMap("top_authorized_havana_id")
-    private String topAuthorizedHavanaId;
-
-    @Query
-    @NameInMap("top_authorized_user_nick")
-    private String topAuthorizedUserNick;
-
     private UserQueryRequest(Builder builder) {
         super(builder);
         this.modifiedTimeGreaterOrEqualThan = builder.modifiedTimeGreaterOrEqualThan;
         this.thirdPartCorpId = builder.thirdPartCorpId;
         this.thirdPartJobNo = builder.thirdPartJobNo;
-        this.topAppKeyOwnerId = builder.topAppKeyOwnerId;
-        this.topAuthorizedHavanaId = builder.topAuthorizedHavanaId;
-        this.topAuthorizedUserNick = builder.topAuthorizedUserNick;
     }
 
     public static Builder builder() {
@@ -81,34 +66,10 @@ public class UserQueryRequest extends Request {
         return this.thirdPartJobNo;
     }
 
-    /**
-     * @return topAppKeyOwnerId
-     */
-    public String getTopAppKeyOwnerId() {
-        return this.topAppKeyOwnerId;
-    }
-
-    /**
-     * @return topAuthorizedHavanaId
-     */
-    public String getTopAuthorizedHavanaId() {
-        return this.topAuthorizedHavanaId;
-    }
-
-    /**
-     * @return topAuthorizedUserNick
-     */
-    public String getTopAuthorizedUserNick() {
-        return this.topAuthorizedUserNick;
-    }
-
     public static final class Builder extends Request.Builder<UserQueryRequest, Builder> {
         private String modifiedTimeGreaterOrEqualThan; 
         private String thirdPartCorpId; 
         private String thirdPartJobNo; 
-        private String topAppKeyOwnerId; 
-        private String topAuthorizedHavanaId; 
-        private String topAuthorizedUserNick; 
 
         private Builder() {
             super();
@@ -119,9 +80,6 @@ public class UserQueryRequest extends Request {
             this.modifiedTimeGreaterOrEqualThan = request.modifiedTimeGreaterOrEqualThan;
             this.thirdPartCorpId = request.thirdPartCorpId;
             this.thirdPartJobNo = request.thirdPartJobNo;
-            this.topAppKeyOwnerId = request.topAppKeyOwnerId;
-            this.topAuthorizedHavanaId = request.topAuthorizedHavanaId;
-            this.topAuthorizedUserNick = request.topAuthorizedUserNick;
         } 
 
         /**
@@ -148,33 +106,6 @@ public class UserQueryRequest extends Request {
         public Builder thirdPartJobNo(String thirdPartJobNo) {
             this.putQueryParameter("third_part_job_no", thirdPartJobNo);
             this.thirdPartJobNo = thirdPartJobNo;
-            return this;
-        }
-
-        /**
-         * TOP系统参数：appkey拥有者淘宝用户id
-         */
-        public Builder topAppKeyOwnerId(String topAppKeyOwnerId) {
-            this.putQueryParameter("top_app_key_owner_id", topAppKeyOwnerId);
-            this.topAppKeyOwnerId = topAppKeyOwnerId;
-            return this;
-        }
-
-        /**
-         * TOP系统参数：授权(淘宝)用户id(Havana id)
-         */
-        public Builder topAuthorizedHavanaId(String topAuthorizedHavanaId) {
-            this.putQueryParameter("top_authorized_havana_id", topAuthorizedHavanaId);
-            this.topAuthorizedHavanaId = topAuthorizedHavanaId;
-            return this;
-        }
-
-        /**
-         * TOP系统参数：授权(淘宝)用户nick
-         */
-        public Builder topAuthorizedUserNick(String topAuthorizedUserNick) {
-            this.putQueryParameter("top_authorized_user_nick", topAuthorizedUserNick);
-            this.topAuthorizedUserNick = topAuthorizedUserNick;
             return this;
         }
 

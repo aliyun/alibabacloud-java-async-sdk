@@ -172,47 +172,15 @@ public class InvoiceRuleSaveResponseBody extends TeaModel {
     } 
 
     public static class Module extends TeaModel {
-        @NameInMap("account")
-        private String account;
-
         @NameInMap("add_num")
         private Integer addNum;
-
-        @NameInMap("havana_id")
-        private String havanaId;
 
         @NameInMap("remove_num")
         private Integer removeNum;
 
-        @NameInMap("selected_external_user_num")
-        private Integer selectedExternalUserNum;
-
-        @NameInMap("selected_user_num")
-        private Integer selectedUserNum;
-
-        @NameInMap("suite_key")
-        private String suiteKey;
-
-        @NameInMap("token_grant_type")
-        private Integer tokenGrantType;
-
-        @NameInMap("version")
-        private Integer version;
-
-        @NameInMap("without_authority")
-        private Boolean withoutAuthority;
-
         private Module(Builder builder) {
-            this.account = builder.account;
             this.addNum = builder.addNum;
-            this.havanaId = builder.havanaId;
             this.removeNum = builder.removeNum;
-            this.selectedExternalUserNum = builder.selectedExternalUserNum;
-            this.selectedUserNum = builder.selectedUserNum;
-            this.suiteKey = builder.suiteKey;
-            this.tokenGrantType = builder.tokenGrantType;
-            this.version = builder.version;
-            this.withoutAuthority = builder.withoutAuthority;
         }
 
         public static Builder builder() {
@@ -224,24 +192,10 @@ public class InvoiceRuleSaveResponseBody extends TeaModel {
         }
 
         /**
-         * @return account
-         */
-        public String getAccount() {
-            return this.account;
-        }
-
-        /**
          * @return addNum
          */
         public Integer getAddNum() {
             return this.addNum;
-        }
-
-        /**
-         * @return havanaId
-         */
-        public String getHavanaId() {
-            return this.havanaId;
         }
 
         /**
@@ -251,67 +205,9 @@ public class InvoiceRuleSaveResponseBody extends TeaModel {
             return this.removeNum;
         }
 
-        /**
-         * @return selectedExternalUserNum
-         */
-        public Integer getSelectedExternalUserNum() {
-            return this.selectedExternalUserNum;
-        }
-
-        /**
-         * @return selectedUserNum
-         */
-        public Integer getSelectedUserNum() {
-            return this.selectedUserNum;
-        }
-
-        /**
-         * @return suiteKey
-         */
-        public String getSuiteKey() {
-            return this.suiteKey;
-        }
-
-        /**
-         * @return tokenGrantType
-         */
-        public Integer getTokenGrantType() {
-            return this.tokenGrantType;
-        }
-
-        /**
-         * @return version
-         */
-        public Integer getVersion() {
-            return this.version;
-        }
-
-        /**
-         * @return withoutAuthority
-         */
-        public Boolean getWithoutAuthority() {
-            return this.withoutAuthority;
-        }
-
         public static final class Builder {
-            private String account; 
             private Integer addNum; 
-            private String havanaId; 
             private Integer removeNum; 
-            private Integer selectedExternalUserNum; 
-            private Integer selectedUserNum; 
-            private String suiteKey; 
-            private Integer tokenGrantType; 
-            private Integer version; 
-            private Boolean withoutAuthority; 
-
-            /**
-             * account.
-             */
-            public Builder account(String account) {
-                this.account = account;
-                return this;
-            }
 
             /**
              * add_num.
@@ -322,66 +218,10 @@ public class InvoiceRuleSaveResponseBody extends TeaModel {
             }
 
             /**
-             * havana_id.
-             */
-            public Builder havanaId(String havanaId) {
-                this.havanaId = havanaId;
-                return this;
-            }
-
-            /**
              * remove_num.
              */
             public Builder removeNum(Integer removeNum) {
                 this.removeNum = removeNum;
-                return this;
-            }
-
-            /**
-             * selected_external_user_num.
-             */
-            public Builder selectedExternalUserNum(Integer selectedExternalUserNum) {
-                this.selectedExternalUserNum = selectedExternalUserNum;
-                return this;
-            }
-
-            /**
-             * selected_user_num.
-             */
-            public Builder selectedUserNum(Integer selectedUserNum) {
-                this.selectedUserNum = selectedUserNum;
-                return this;
-            }
-
-            /**
-             * suite_key.
-             */
-            public Builder suiteKey(String suiteKey) {
-                this.suiteKey = suiteKey;
-                return this;
-            }
-
-            /**
-             * token_grant_type.
-             */
-            public Builder tokenGrantType(Integer tokenGrantType) {
-                this.tokenGrantType = tokenGrantType;
-                return this;
-            }
-
-            /**
-             * version.
-             */
-            public Builder version(Integer version) {
-                this.version = version;
-                return this;
-            }
-
-            /**
-             * without_authority.
-             */
-            public Builder withoutAuthority(Boolean withoutAuthority) {
-                this.withoutAuthority = withoutAuthority;
                 return this;
             }
 
