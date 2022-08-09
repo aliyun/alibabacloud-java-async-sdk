@@ -128,15 +128,15 @@ public class UpdateAnycastEipAddressAssociationsRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateAnycastEipAddressAssociationsRequest response) {
-            super(response);
-            this.anycastId = response.anycastId;
-            this.associationMode = response.associationMode;
-            this.bindInstanceId = response.bindInstanceId;
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.popLocationAddList = response.popLocationAddList;
-            this.popLocationDeleteList = response.popLocationDeleteList;
+        private Builder(UpdateAnycastEipAddressAssociationsRequest request) {
+            super(request);
+            this.anycastId = request.anycastId;
+            this.associationMode = request.associationMode;
+            this.bindInstanceId = request.bindInstanceId;
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.popLocationAddList = request.popLocationAddList;
+            this.popLocationDeleteList = request.popLocationDeleteList;
         } 
 
         /**

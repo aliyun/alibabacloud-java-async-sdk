@@ -75,11 +75,11 @@ public class ModifyAnycastEipAddressAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyAnycastEipAddressAttributeRequest response) {
-            super(response);
-            this.anycastId = response.anycastId;
-            this.description = response.description;
-            this.name = response.name;
+        private Builder(ModifyAnycastEipAddressAttributeRequest request) {
+            super(request);
+            this.anycastId = request.anycastId;
+            this.description = request.description;
+            this.name = request.name;
         } 
 
         /**

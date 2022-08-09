@@ -21,6 +21,10 @@ public class ListAnycastEipAddressesRequest extends Request {
     private String anycastId;
 
     @Query
+    @NameInMap("AnycastIds")
+    private java.util.List < String > anycastIds;
+
+    @Query
     @NameInMap("BindInstanceIds")
     private java.util.List < String > bindInstanceIds;
 
@@ -60,6 +64,7 @@ public class ListAnycastEipAddressesRequest extends Request {
         super(builder);
         this.anycastEipAddress = builder.anycastEipAddress;
         this.anycastId = builder.anycastId;
+        this.anycastIds = builder.anycastIds;
         this.bindInstanceIds = builder.bindInstanceIds;
         this.businessStatus = builder.businessStatus;
         this.instanceChargeType = builder.instanceChargeType;
@@ -96,6 +101,13 @@ public class ListAnycastEipAddressesRequest extends Request {
      */
     public String getAnycastId() {
         return this.anycastId;
+    }
+
+    /**
+     * @return anycastIds
+     */
+    public java.util.List < String > getAnycastIds() {
+        return this.anycastIds;
     }
 
     /**
@@ -164,6 +176,7 @@ public class ListAnycastEipAddressesRequest extends Request {
     public static final class Builder extends Request.Builder<ListAnycastEipAddressesRequest, Builder> {
         private String anycastEipAddress; 
         private String anycastId; 
+        private java.util.List < String > anycastIds; 
         private java.util.List < String > bindInstanceIds; 
         private String businessStatus; 
         private String instanceChargeType; 
@@ -178,19 +191,20 @@ public class ListAnycastEipAddressesRequest extends Request {
             super();
         } 
 
-        private Builder(ListAnycastEipAddressesRequest response) {
-            super(response);
-            this.anycastEipAddress = response.anycastEipAddress;
-            this.anycastId = response.anycastId;
-            this.bindInstanceIds = response.bindInstanceIds;
-            this.businessStatus = response.businessStatus;
-            this.instanceChargeType = response.instanceChargeType;
-            this.internetChargeType = response.internetChargeType;
-            this.maxResults = response.maxResults;
-            this.name = response.name;
-            this.nextToken = response.nextToken;
-            this.serviceLocation = response.serviceLocation;
-            this.status = response.status;
+        private Builder(ListAnycastEipAddressesRequest request) {
+            super(request);
+            this.anycastEipAddress = request.anycastEipAddress;
+            this.anycastId = request.anycastId;
+            this.anycastIds = request.anycastIds;
+            this.bindInstanceIds = request.bindInstanceIds;
+            this.businessStatus = request.businessStatus;
+            this.instanceChargeType = request.instanceChargeType;
+            this.internetChargeType = request.internetChargeType;
+            this.maxResults = request.maxResults;
+            this.name = request.name;
+            this.nextToken = request.nextToken;
+            this.serviceLocation = request.serviceLocation;
+            this.status = request.status;
         } 
 
         /**
@@ -208,6 +222,15 @@ public class ListAnycastEipAddressesRequest extends Request {
         public Builder anycastId(String anycastId) {
             this.putQueryParameter("AnycastId", anycastId);
             this.anycastId = anycastId;
+            return this;
+        }
+
+        /**
+         * AnycastIds.
+         */
+        public Builder anycastIds(java.util.List < String > anycastIds) {
+            this.putQueryParameter("AnycastIds", anycastIds);
+            this.anycastIds = anycastIds;
             return this;
         }
 

@@ -156,17 +156,17 @@ public class AssociateAnycastEipAddressRequest extends Request {
             super();
         } 
 
-        private Builder(AssociateAnycastEipAddressRequest response) {
-            super(response);
-            this.anycastId = response.anycastId;
-            this.associationMode = response.associationMode;
-            this.bindInstanceId = response.bindInstanceId;
-            this.bindInstanceRegionId = response.bindInstanceRegionId;
-            this.bindInstanceType = response.bindInstanceType;
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.popLocations = response.popLocations;
-            this.privateIpAddress = response.privateIpAddress;
+        private Builder(AssociateAnycastEipAddressRequest request) {
+            super(request);
+            this.anycastId = request.anycastId;
+            this.associationMode = request.associationMode;
+            this.bindInstanceId = request.bindInstanceId;
+            this.bindInstanceRegionId = request.bindInstanceRegionId;
+            this.bindInstanceType = request.bindInstanceType;
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.popLocations = request.popLocations;
+            this.privateIpAddress = request.privateIpAddress;
         } 
 
         /**

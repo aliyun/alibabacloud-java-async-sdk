@@ -74,11 +74,11 @@ public class DescribeAnycastEipAddressRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAnycastEipAddressRequest response) {
-            super(response);
-            this.anycastId = response.anycastId;
-            this.bindInstanceId = response.bindInstanceId;
-            this.ip = response.ip;
+        private Builder(DescribeAnycastEipAddressRequest request) {
+            super(request);
+            this.anycastId = request.anycastId;
+            this.bindInstanceId = request.bindInstanceId;
+            this.ip = request.ip;
         } 
 
         /**

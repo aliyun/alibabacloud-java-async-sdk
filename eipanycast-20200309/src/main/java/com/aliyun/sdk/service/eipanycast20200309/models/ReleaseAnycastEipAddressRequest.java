@@ -62,10 +62,10 @@ public class ReleaseAnycastEipAddressRequest extends Request {
             super();
         } 
 
-        private Builder(ReleaseAnycastEipAddressRequest response) {
-            super(response);
-            this.anycastId = response.anycastId;
-            this.clientToken = response.clientToken;
+        private Builder(ReleaseAnycastEipAddressRequest request) {
+            super(request);
+            this.anycastId = request.anycastId;
+            this.clientToken = request.clientToken;
         } 
 
         /**

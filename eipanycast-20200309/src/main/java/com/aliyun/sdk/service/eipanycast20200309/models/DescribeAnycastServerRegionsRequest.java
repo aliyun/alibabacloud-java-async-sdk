@@ -49,9 +49,9 @@ public class DescribeAnycastServerRegionsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAnycastServerRegionsRequest response) {
-            super(response);
-            this.serviceLocation = response.serviceLocation;
+        private Builder(DescribeAnycastServerRegionsRequest request) {
+            super(request);
+            this.serviceLocation = request.serviceLocation;
         } 
 
         /**

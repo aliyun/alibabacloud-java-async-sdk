@@ -225,9 +225,6 @@ public class ListAnycastEipAddressesResponseBody extends TeaModel {
         @NameInMap("Bandwidth")
         private Integer bandwidth;
 
-        @NameInMap("Bid")
-        private String bid;
-
         @NameInMap("BusinessStatus")
         private String businessStatus;
 
@@ -252,6 +249,9 @@ public class ListAnycastEipAddressesResponseBody extends TeaModel {
         @NameInMap("ServiceLocation")
         private String serviceLocation;
 
+        @NameInMap("ServiceManaged")
+        private Integer serviceManaged;
+
         @NameInMap("Status")
         private String status;
 
@@ -260,7 +260,6 @@ public class ListAnycastEipAddressesResponseBody extends TeaModel {
             this.anycastEipBindInfoList = builder.anycastEipBindInfoList;
             this.anycastId = builder.anycastId;
             this.bandwidth = builder.bandwidth;
-            this.bid = builder.bid;
             this.businessStatus = builder.businessStatus;
             this.createTime = builder.createTime;
             this.description = builder.description;
@@ -269,6 +268,7 @@ public class ListAnycastEipAddressesResponseBody extends TeaModel {
             this.ipAddress = builder.ipAddress;
             this.name = builder.name;
             this.serviceLocation = builder.serviceLocation;
+            this.serviceManaged = builder.serviceManaged;
             this.status = builder.status;
         }
 
@@ -306,13 +306,6 @@ public class ListAnycastEipAddressesResponseBody extends TeaModel {
          */
         public Integer getBandwidth() {
             return this.bandwidth;
-        }
-
-        /**
-         * @return bid
-         */
-        public String getBid() {
-            return this.bid;
         }
 
         /**
@@ -372,6 +365,13 @@ public class ListAnycastEipAddressesResponseBody extends TeaModel {
         }
 
         /**
+         * @return serviceManaged
+         */
+        public Integer getServiceManaged() {
+            return this.serviceManaged;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -383,7 +383,6 @@ public class ListAnycastEipAddressesResponseBody extends TeaModel {
             private java.util.List < AnycastEipBindInfoList> anycastEipBindInfoList; 
             private String anycastId; 
             private Integer bandwidth; 
-            private String bid; 
             private String businessStatus; 
             private String createTime; 
             private String description; 
@@ -392,6 +391,7 @@ public class ListAnycastEipAddressesResponseBody extends TeaModel {
             private String ipAddress; 
             private String name; 
             private String serviceLocation; 
+            private Integer serviceManaged; 
             private String status; 
 
             /**
@@ -423,14 +423,6 @@ public class ListAnycastEipAddressesResponseBody extends TeaModel {
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
-                return this;
-            }
-
-            /**
-             * Bid.
-             */
-            public Builder bid(String bid) {
-                this.bid = bid;
                 return this;
             }
 
@@ -495,6 +487,14 @@ public class ListAnycastEipAddressesResponseBody extends TeaModel {
              */
             public Builder serviceLocation(String serviceLocation) {
                 this.serviceLocation = serviceLocation;
+                return this;
+            }
+
+            /**
+             * ServiceManaged.
+             */
+            public Builder serviceManaged(Integer serviceManaged) {
+                this.serviceManaged = serviceManaged;
                 return this;
             }
 

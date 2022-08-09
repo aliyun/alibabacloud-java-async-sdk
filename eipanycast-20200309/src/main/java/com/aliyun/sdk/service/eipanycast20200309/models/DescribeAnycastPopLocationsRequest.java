@@ -48,9 +48,9 @@ public class DescribeAnycastPopLocationsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAnycastPopLocationsRequest response) {
-            super(response);
-            this.serviceLocation = response.serviceLocation;
+        private Builder(DescribeAnycastPopLocationsRequest request) {
+            super(request);
+            this.serviceLocation = request.serviceLocation;
         } 
 
         /**

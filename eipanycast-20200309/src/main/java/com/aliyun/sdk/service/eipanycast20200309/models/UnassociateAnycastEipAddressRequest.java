@@ -130,15 +130,15 @@ public class UnassociateAnycastEipAddressRequest extends Request {
             super();
         } 
 
-        private Builder(UnassociateAnycastEipAddressRequest response) {
-            super(response);
-            this.anycastId = response.anycastId;
-            this.bindInstanceId = response.bindInstanceId;
-            this.bindInstanceRegionId = response.bindInstanceRegionId;
-            this.bindInstanceType = response.bindInstanceType;
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.privateIpAddress = response.privateIpAddress;
+        private Builder(UnassociateAnycastEipAddressRequest request) {
+            super(request);
+            this.anycastId = request.anycastId;
+            this.bindInstanceId = request.bindInstanceId;
+            this.bindInstanceRegionId = request.bindInstanceRegionId;
+            this.bindInstanceType = request.bindInstanceType;
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.privateIpAddress = request.privateIpAddress;
         } 
 
         /**

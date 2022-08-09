@@ -63,10 +63,10 @@ public class ModifyAnycastEipAddressSpecRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyAnycastEipAddressSpecRequest response) {
-            super(response);
-            this.anycastId = response.anycastId;
-            this.bandwidth = response.bandwidth;
+        private Builder(ModifyAnycastEipAddressSpecRequest request) {
+            super(request);
+            this.anycastId = request.anycastId;
+            this.bandwidth = request.bandwidth;
         } 
 
         /**

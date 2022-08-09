@@ -127,15 +127,15 @@ public class AllocateAnycastEipAddressRequest extends Request {
             super();
         } 
 
-        private Builder(AllocateAnycastEipAddressRequest response) {
-            super(response);
-            this.bandwidth = response.bandwidth;
-            this.clientToken = response.clientToken;
-            this.description = response.description;
-            this.instanceChargeType = response.instanceChargeType;
-            this.internetChargeType = response.internetChargeType;
-            this.name = response.name;
-            this.serviceLocation = response.serviceLocation;
+        private Builder(AllocateAnycastEipAddressRequest request) {
+            super(request);
+            this.bandwidth = request.bandwidth;
+            this.clientToken = request.clientToken;
+            this.description = request.description;
+            this.instanceChargeType = request.instanceChargeType;
+            this.internetChargeType = request.internetChargeType;
+            this.name = request.name;
+            this.serviceLocation = request.serviceLocation;
         } 
 
         /**
