@@ -147,6 +147,9 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         @NameInMap("NetworkId")
         private String networkId;
 
+        @NameInMap("Spec")
+        private String spec;
+
         @NameInMap("VSwitchId")
         private String vSwitchId;
 
@@ -156,6 +159,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             this.name = builder.name;
             this.natGatewayId = builder.natGatewayId;
             this.networkId = builder.networkId;
+            this.spec = builder.spec;
             this.vSwitchId = builder.vSwitchId;
         }
 
@@ -203,6 +207,13 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         }
 
         /**
+         * @return spec
+         */
+        public String getSpec() {
+            return this.spec;
+        }
+
+        /**
          * @return vSwitchId
          */
         public String getVSwitchId() {
@@ -215,6 +226,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             private String name; 
             private String natGatewayId; 
             private String networkId; 
+            private String spec; 
             private String vSwitchId; 
 
             /**
@@ -254,6 +266,14 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
              */
             public Builder networkId(String networkId) {
                 this.networkId = networkId;
+                return this;
+            }
+
+            /**
+             * Spec.
+             */
+            public Builder spec(String spec) {
+                this.spec = spec;
                 return this;
             }
 

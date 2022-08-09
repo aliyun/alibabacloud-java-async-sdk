@@ -18,8 +18,12 @@ public class CreateNatGatewayRequest extends Request {
     private String ensRegionId;
 
     @Query
+    @NameInMap("InstanceType")
+    private String instanceType;
+
+    @Query
     @NameInMap("Name")
-    @Validation(maxLength = 128)
+    @Validation(maxLength = 128, minLength = 1)
     private String name;
 
     @Query
@@ -35,6 +39,7 @@ public class CreateNatGatewayRequest extends Request {
     private CreateNatGatewayRequest(Builder builder) {
         super(builder);
         this.ensRegionId = builder.ensRegionId;
+        this.instanceType = builder.instanceType;
         this.name = builder.name;
         this.networkId = builder.networkId;
         this.vSwitchId = builder.vSwitchId;
@@ -61,6 +66,13 @@ public class CreateNatGatewayRequest extends Request {
     }
 
     /**
+     * @return instanceType
+     */
+    public String getInstanceType() {
+        return this.instanceType;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -83,6 +95,7 @@ public class CreateNatGatewayRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateNatGatewayRequest, Builder> {
         private String ensRegionId; 
+        private String instanceType; 
         private String name; 
         private String networkId; 
         private String vSwitchId; 
@@ -94,6 +107,7 @@ public class CreateNatGatewayRequest extends Request {
         private Builder(CreateNatGatewayRequest request) {
             super(request);
             this.ensRegionId = request.ensRegionId;
+            this.instanceType = request.instanceType;
             this.name = request.name;
             this.networkId = request.networkId;
             this.vSwitchId = request.vSwitchId;
@@ -105,6 +119,15 @@ public class CreateNatGatewayRequest extends Request {
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
             this.ensRegionId = ensRegionId;
+            return this;
+        }
+
+        /**
+         * InstanceType.
+         */
+        public Builder instanceType(String instanceType) {
+            this.putQueryParameter("InstanceType", instanceType);
+            this.instanceType = instanceType;
             return this;
         }
 

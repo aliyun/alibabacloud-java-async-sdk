@@ -144,6 +144,9 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
         @NameInMap("ForwardEntryName")
         private String forwardEntryName;
 
+        @NameInMap("HealthCheckPort")
+        private String healthCheckPort;
+
         @NameInMap("InternalIp")
         private String internalIp;
 
@@ -164,6 +167,7 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
             this.externalPort = builder.externalPort;
             this.forwardEntryId = builder.forwardEntryId;
             this.forwardEntryName = builder.forwardEntryName;
+            this.healthCheckPort = builder.healthCheckPort;
             this.internalIp = builder.internalIp;
             this.internalPort = builder.internalPort;
             this.ipProtocol = builder.ipProtocol;
@@ -208,6 +212,13 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
         }
 
         /**
+         * @return healthCheckPort
+         */
+        public String getHealthCheckPort() {
+            return this.healthCheckPort;
+        }
+
+        /**
          * @return internalIp
          */
         public String getInternalIp() {
@@ -247,6 +258,7 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
             private String externalPort; 
             private String forwardEntryId; 
             private String forwardEntryName; 
+            private String healthCheckPort; 
             private String internalIp; 
             private String internalPort; 
             private String ipProtocol; 
@@ -282,6 +294,14 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
              */
             public Builder forwardEntryName(String forwardEntryName) {
                 this.forwardEntryName = forwardEntryName;
+                return this;
+            }
+
+            /**
+             * HealthCheckPort.
+             */
+            public Builder healthCheckPort(String healthCheckPort) {
+                this.healthCheckPort = healthCheckPort;
                 return this;
             }
 

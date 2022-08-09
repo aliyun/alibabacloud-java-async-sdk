@@ -17,15 +17,9 @@ public class ReleasePostPaidInstanceRequest extends Request {
     @Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Version")
-    @Validation(required = true)
-    private String version;
-
     private ReleasePostPaidInstanceRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
-        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -48,16 +42,8 @@ public class ReleasePostPaidInstanceRequest extends Request {
         return this.instanceId;
     }
 
-    /**
-     * @return version
-     */
-    public String getVersion() {
-        return this.version;
-    }
-
     public static final class Builder extends Request.Builder<ReleasePostPaidInstanceRequest, Builder> {
         private String instanceId; 
-        private String version; 
 
         private Builder() {
             super();
@@ -66,7 +52,6 @@ public class ReleasePostPaidInstanceRequest extends Request {
         private Builder(ReleasePostPaidInstanceRequest request) {
             super(request);
             this.instanceId = request.instanceId;
-            this.version = request.version;
         } 
 
         /**
@@ -75,15 +60,6 @@ public class ReleasePostPaidInstanceRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * Version.
-         */
-        public Builder version(String version) {
-            this.putQueryParameter("Version", version);
-            this.version = version;
             return this;
         }
 

@@ -39,7 +39,6 @@ public class RunInstancesRequest extends Request {
 
     @Query
     @NameInMap("ImageId")
-    @Validation(required = true)
     private String imageId;
 
     @Query

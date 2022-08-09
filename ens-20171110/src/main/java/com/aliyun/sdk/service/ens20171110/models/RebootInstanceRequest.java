@@ -21,16 +21,10 @@ public class RebootInstanceRequest extends Request {
     @Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Version")
-    @Validation(required = true)
-    private String version;
-
     private RebootInstanceRequest(Builder builder) {
         super(builder);
         this.forceStop = builder.forceStop;
         this.instanceId = builder.instanceId;
-        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -60,17 +54,9 @@ public class RebootInstanceRequest extends Request {
         return this.instanceId;
     }
 
-    /**
-     * @return version
-     */
-    public String getVersion() {
-        return this.version;
-    }
-
     public static final class Builder extends Request.Builder<RebootInstanceRequest, Builder> {
         private String forceStop; 
         private String instanceId; 
-        private String version; 
 
         private Builder() {
             super();
@@ -80,7 +66,6 @@ public class RebootInstanceRequest extends Request {
             super(request);
             this.forceStop = request.forceStop;
             this.instanceId = request.instanceId;
-            this.version = request.version;
         } 
 
         /**
@@ -98,15 +83,6 @@ public class RebootInstanceRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * Version.
-         */
-        public Builder version(String version) {
-            this.putQueryParameter("Version", version);
-            this.version = version;
             return this;
         }
 

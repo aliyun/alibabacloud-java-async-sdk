@@ -106,6 +106,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteVSwitchResponse> deleteVSwitch(DeleteVSwitchRequest request);
 
+    CompletableFuture<DescribeARMServerInstancesResponse> describeARMServerInstances(DescribeARMServerInstancesRequest request);
+
     CompletableFuture<DescribeApplicationResponse> describeApplication(DescribeApplicationRequest request);
 
     CompletableFuture<DescribeApplicationResourceSummaryResponse> describeApplicationResourceSummary(DescribeApplicationResourceSummaryRequest request);
@@ -248,6 +250,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetDeviceInternetPortResponse> getDeviceInternetPort(GetDeviceInternetPortRequest request);
 
+    CompletableFuture<GetOssStorageAndAccByBucketsResponse> getOssStorageAndAccByBuckets(GetOssStorageAndAccByBucketsRequest request);
+
     CompletableFuture<ImportKeyPairResponse> importKeyPair(ImportKeyPairRequest request);
 
     CompletableFuture<JoinPublicIpsToEpnInstanceResponse> joinPublicIpsToEpnInstance(JoinPublicIpsToEpnInstanceRequest request);
@@ -263,6 +267,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyEnsEipAddressAttributeResponse> modifyEnsEipAddressAttribute(ModifyEnsEipAddressAttributeRequest request);
 
     CompletableFuture<ModifyEpnInstanceResponse> modifyEpnInstance(ModifyEpnInstanceRequest request);
+
+    CompletableFuture<ModifyForwardEntryResponse> modifyForwardEntry(ModifyForwardEntryRequest request);
 
     CompletableFuture<ModifyImageAttributeResponse> modifyImageAttribute(ModifyImageAttributeRequest request);
 
@@ -288,7 +294,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ReInitDiskResponse> reInitDisk(ReInitDiskRequest request);
 
+    CompletableFuture<RebootAICInstanceResponse> rebootAICInstance(RebootAICInstanceRequest request);
+
+    CompletableFuture<RebootARMServerInstanceResponse> rebootARMServerInstance(RebootARMServerInstanceRequest request);
+
     CompletableFuture<RebootInstanceResponse> rebootInstance(RebootInstanceRequest request);
+
+    CompletableFuture<ReinitInstanceResponse> reinitInstance(ReinitInstanceRequest request);
 
     CompletableFuture<ReleaseARMServerInstanceResponse> releaseARMServerInstance(ReleaseARMServerInstanceRequest request);
 
@@ -311,6 +323,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RescaleApplicationResponse> rescaleApplication(RescaleApplicationRequest request);
 
     CompletableFuture<RescaleDeviceServiceResponse> rescaleDeviceService(RescaleDeviceServiceRequest request);
+
+    CompletableFuture<ResetAICInstanceResponse> resetAICInstance(ResetAICInstanceRequest request);
 
     CompletableFuture<ResetDeviceInstanceResponse> resetDeviceInstance(ResetDeviceInstanceRequest request);
 
@@ -353,6 +367,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UnAssociateEnsEipAddressResponse> unAssociateEnsEipAddress(UnAssociateEnsEipAddressRequest request);
 
     CompletableFuture<UnassignPrivateIpAddressesResponse> unassignPrivateIpAddresses(UnassignPrivateIpAddressesRequest request);
+
+    CompletableFuture<UpgradeAICInstanceImageResponse> upgradeAICInstanceImage(UpgradeAICInstanceImageRequest request);
 
     CompletableFuture<UpgradeApplicationResponse> upgradeApplication(UpgradeApplicationRequest request);
 

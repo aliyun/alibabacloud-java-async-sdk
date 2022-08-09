@@ -31,6 +31,10 @@ public class CreateSnatEntryRequest extends Request {
     private String sourceCIDR;
 
     @Query
+    @NameInMap("SourceNetworkId")
+    private String sourceNetworkId;
+
+    @Query
     @NameInMap("SourceVSwitchId")
     private String sourceVSwitchId;
 
@@ -40,6 +44,7 @@ public class CreateSnatEntryRequest extends Request {
         this.snatEntryName = builder.snatEntryName;
         this.snatIp = builder.snatIp;
         this.sourceCIDR = builder.sourceCIDR;
+        this.sourceNetworkId = builder.sourceNetworkId;
         this.sourceVSwitchId = builder.sourceVSwitchId;
     }
 
@@ -85,6 +90,13 @@ public class CreateSnatEntryRequest extends Request {
     }
 
     /**
+     * @return sourceNetworkId
+     */
+    public String getSourceNetworkId() {
+        return this.sourceNetworkId;
+    }
+
+    /**
      * @return sourceVSwitchId
      */
     public String getSourceVSwitchId() {
@@ -96,6 +108,7 @@ public class CreateSnatEntryRequest extends Request {
         private String snatEntryName; 
         private String snatIp; 
         private String sourceCIDR; 
+        private String sourceNetworkId; 
         private String sourceVSwitchId; 
 
         private Builder() {
@@ -108,6 +121,7 @@ public class CreateSnatEntryRequest extends Request {
             this.snatEntryName = request.snatEntryName;
             this.snatIp = request.snatIp;
             this.sourceCIDR = request.sourceCIDR;
+            this.sourceNetworkId = request.sourceNetworkId;
             this.sourceVSwitchId = request.sourceVSwitchId;
         } 
 
@@ -144,6 +158,15 @@ public class CreateSnatEntryRequest extends Request {
         public Builder sourceCIDR(String sourceCIDR) {
             this.putQueryParameter("SourceCIDR", sourceCIDR);
             this.sourceCIDR = sourceCIDR;
+            return this;
+        }
+
+        /**
+         * SourceNetworkId.
+         */
+        public Builder sourceNetworkId(String sourceNetworkId) {
+            this.putQueryParameter("SourceNetworkId", sourceNetworkId);
+            this.sourceNetworkId = sourceNetworkId;
             return this;
         }
 

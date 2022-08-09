@@ -7,26 +7,30 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link StartInstanceRequest} extends {@link RequestModel}
+ * {@link RebootAICInstanceRequest} extends {@link RequestModel}
  *
- * <p>StartInstanceRequest</p>
+ * <p>RebootAICInstanceRequest</p>
  */
-public class StartInstanceRequest extends Request {
+public class RebootAICInstanceRequest extends Request {
     @Query
     @NameInMap("InstanceId")
-    @Validation(required = true)
     private String instanceId;
 
-    private StartInstanceRequest(Builder builder) {
+    @Query
+    @NameInMap("ServerId")
+    private String serverId;
+
+    private RebootAICInstanceRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.serverId = builder.serverId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static StartInstanceRequest create() {
+    public static RebootAICInstanceRequest create() {
         return builder().build();
     }
 
@@ -42,16 +46,25 @@ public class StartInstanceRequest extends Request {
         return this.instanceId;
     }
 
-    public static final class Builder extends Request.Builder<StartInstanceRequest, Builder> {
+    /**
+     * @return serverId
+     */
+    public String getServerId() {
+        return this.serverId;
+    }
+
+    public static final class Builder extends Request.Builder<RebootAICInstanceRequest, Builder> {
         private String instanceId; 
+        private String serverId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(StartInstanceRequest request) {
+        private Builder(RebootAICInstanceRequest request) {
             super(request);
             this.instanceId = request.instanceId;
+            this.serverId = request.serverId;
         } 
 
         /**
@@ -63,9 +76,18 @@ public class StartInstanceRequest extends Request {
             return this;
         }
 
+        /**
+         * ServerId.
+         */
+        public Builder serverId(String serverId) {
+            this.putQueryParameter("ServerId", serverId);
+            this.serverId = serverId;
+            return this;
+        }
+
         @Override
-        public StartInstanceRequest build() {
-            return new StartInstanceRequest(this);
+        public RebootAICInstanceRequest build() {
+            return new RebootAICInstanceRequest(this);
         } 
 
     } 
