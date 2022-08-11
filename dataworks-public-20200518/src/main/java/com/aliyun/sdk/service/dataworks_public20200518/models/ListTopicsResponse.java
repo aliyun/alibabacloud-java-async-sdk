@@ -1,0 +1,104 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.dataworks_public20200518.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link ListTopicsResponse} extends {@link TeaModel}
+ *
+ * <p>ListTopicsResponse</p>
+ */
+public class ListTopicsResponse extends Response {
+    @NameInMap("headers")
+    @Validation(required = true)
+    private java.util.Map < String, String > headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    private ListTopicsResponseBody body;
+
+    private ListTopicsResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.body = builder.body;
+    }
+
+    public static ListTopicsResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return body
+     */
+    public ListTopicsResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<ListTopicsResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder body(ListTopicsResponseBody body);
+
+        @Override
+        ListTopicsResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<ListTopicsResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private ListTopicsResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(ListTopicsResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(ListTopicsResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public ListTopicsResponse build() {
+            return new ListTopicsResponse(this);
+        } 
+
+    } 
+
+}

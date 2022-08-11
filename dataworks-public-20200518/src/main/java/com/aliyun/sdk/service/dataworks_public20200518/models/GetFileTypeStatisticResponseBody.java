@@ -1,0 +1,135 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.dataworks_public20200518.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link GetFileTypeStatisticResponseBody} extends {@link TeaModel}
+ *
+ * <p>GetFileTypeStatisticResponseBody</p>
+ */
+public class GetFileTypeStatisticResponseBody extends TeaModel {
+    @NameInMap("ProgramTypeAndCounts")
+    private java.util.List < ProgramTypeAndCounts> programTypeAndCounts;
+
+    @NameInMap("RequestId")
+    private String requestId;
+
+    private GetFileTypeStatisticResponseBody(Builder builder) {
+        this.programTypeAndCounts = builder.programTypeAndCounts;
+        this.requestId = builder.requestId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static GetFileTypeStatisticResponseBody create() {
+        return builder().build();
+    }
+
+    /**
+     * @return programTypeAndCounts
+     */
+    public java.util.List < ProgramTypeAndCounts> getProgramTypeAndCounts() {
+        return this.programTypeAndCounts;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public static final class Builder {
+        private java.util.List < ProgramTypeAndCounts> programTypeAndCounts; 
+        private String requestId; 
+
+        /**
+         * ProgramTypeAndCounts.
+         */
+        public Builder programTypeAndCounts(java.util.List < ProgramTypeAndCounts> programTypeAndCounts) {
+            this.programTypeAndCounts = programTypeAndCounts;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        public GetFileTypeStatisticResponseBody build() {
+            return new GetFileTypeStatisticResponseBody(this);
+        } 
+
+    } 
+
+    public static class ProgramTypeAndCounts extends TeaModel {
+        @NameInMap("Count")
+        private Integer count;
+
+        @NameInMap("ProgramType")
+        private String programType;
+
+        private ProgramTypeAndCounts(Builder builder) {
+            this.count = builder.count;
+            this.programType = builder.programType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ProgramTypeAndCounts create() {
+            return builder().build();
+        }
+
+        /**
+         * @return count
+         */
+        public Integer getCount() {
+            return this.count;
+        }
+
+        /**
+         * @return programType
+         */
+        public String getProgramType() {
+            return this.programType;
+        }
+
+        public static final class Builder {
+            private Integer count; 
+            private String programType; 
+
+            /**
+             * Count.
+             */
+            public Builder count(Integer count) {
+                this.count = count;
+                return this;
+            }
+
+            /**
+             * ProgramType.
+             */
+            public Builder programType(String programType) {
+                this.programType = programType;
+                return this;
+            }
+
+            public ProgramTypeAndCounts build() {
+                return new ProgramTypeAndCounts(this);
+            } 
+
+        } 
+
+    }
+}

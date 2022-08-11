@@ -1,0 +1,104 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.dataworks_public20200518.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link GetBaselineStatusResponse} extends {@link TeaModel}
+ *
+ * <p>GetBaselineStatusResponse</p>
+ */
+public class GetBaselineStatusResponse extends Response {
+    @NameInMap("headers")
+    @Validation(required = true)
+    private java.util.Map < String, String > headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    private GetBaselineStatusResponseBody body;
+
+    private GetBaselineStatusResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.body = builder.body;
+    }
+
+    public static GetBaselineStatusResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return body
+     */
+    public GetBaselineStatusResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<GetBaselineStatusResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder body(GetBaselineStatusResponseBody body);
+
+        @Override
+        GetBaselineStatusResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<GetBaselineStatusResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private GetBaselineStatusResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(GetBaselineStatusResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(GetBaselineStatusResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public GetBaselineStatusResponse build() {
+            return new GetBaselineStatusResponse(this);
+        } 
+
+    } 
+
+}

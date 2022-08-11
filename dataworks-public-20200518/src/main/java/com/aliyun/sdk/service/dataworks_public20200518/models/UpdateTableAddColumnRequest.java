@@ -1,0 +1,224 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.dataworks_public20200518.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link UpdateTableAddColumnRequest} extends {@link RequestModel}
+ *
+ * <p>UpdateTableAddColumnRequest</p>
+ */
+public class UpdateTableAddColumnRequest extends Request {
+    @Body
+    @NameInMap("Column")
+    @Validation(required = true)
+    private java.util.List < Column> column;
+
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
+    @Query
+    @NameInMap("TableGuid")
+    @Validation(required = true)
+    private String tableGuid;
+
+    private UpdateTableAddColumnRequest(Builder builder) {
+        super(builder);
+        this.column = builder.column;
+        this.regionId = builder.regionId;
+        this.tableGuid = builder.tableGuid;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static UpdateTableAddColumnRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return column
+     */
+    public java.util.List < Column> getColumn() {
+        return this.column;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return tableGuid
+     */
+    public String getTableGuid() {
+        return this.tableGuid;
+    }
+
+    public static final class Builder extends Request.Builder<UpdateTableAddColumnRequest, Builder> {
+        private java.util.List < Column> column; 
+        private String regionId; 
+        private String tableGuid; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(UpdateTableAddColumnRequest request) {
+            super(request);
+            this.column = request.column;
+            this.regionId = request.regionId;
+            this.tableGuid = request.tableGuid;
+        } 
+
+        /**
+         * Column.
+         */
+        public Builder column(java.util.List < Column> column) {
+            this.putBodyParameter("Column", column);
+            this.column = column;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * TableGuid.
+         */
+        public Builder tableGuid(String tableGuid) {
+            this.putQueryParameter("TableGuid", tableGuid);
+            this.tableGuid = tableGuid;
+            return this;
+        }
+
+        @Override
+        public UpdateTableAddColumnRequest build() {
+            return new UpdateTableAddColumnRequest(this);
+        } 
+
+    } 
+
+    public static class Column extends TeaModel {
+        @NameInMap("ColumnName")
+        @Validation(required = true)
+        private String columnName;
+
+        @NameInMap("ColumnNameCn")
+        private String columnNameCn;
+
+        @NameInMap("ColumnType")
+        @Validation(required = true)
+        private String columnType;
+
+        @NameInMap("Comment")
+        private String comment;
+
+        private Column(Builder builder) {
+            this.columnName = builder.columnName;
+            this.columnNameCn = builder.columnNameCn;
+            this.columnType = builder.columnType;
+            this.comment = builder.comment;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Column create() {
+            return builder().build();
+        }
+
+        /**
+         * @return columnName
+         */
+        public String getColumnName() {
+            return this.columnName;
+        }
+
+        /**
+         * @return columnNameCn
+         */
+        public String getColumnNameCn() {
+            return this.columnNameCn;
+        }
+
+        /**
+         * @return columnType
+         */
+        public String getColumnType() {
+            return this.columnType;
+        }
+
+        /**
+         * @return comment
+         */
+        public String getComment() {
+            return this.comment;
+        }
+
+        public static final class Builder {
+            private String columnName; 
+            private String columnNameCn; 
+            private String columnType; 
+            private String comment; 
+
+            /**
+             * ColumnName.
+             */
+            public Builder columnName(String columnName) {
+                this.columnName = columnName;
+                return this;
+            }
+
+            /**
+             * ColumnNameCn.
+             */
+            public Builder columnNameCn(String columnNameCn) {
+                this.columnNameCn = columnNameCn;
+                return this;
+            }
+
+            /**
+             * ColumnType.
+             */
+            public Builder columnType(String columnType) {
+                this.columnType = columnType;
+                return this;
+            }
+
+            /**
+             * Comment.
+             */
+            public Builder comment(String comment) {
+                this.comment = comment;
+                return this;
+            }
+
+            public Column build() {
+                return new Column(this);
+            } 
+
+        } 
+
+    }
+}

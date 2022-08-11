@@ -1,0 +1,255 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.dataworks_public20200518.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link GetNodeOnBaselineResponseBody} extends {@link TeaModel}
+ *
+ * <p>GetNodeOnBaselineResponseBody</p>
+ */
+public class GetNodeOnBaselineResponseBody extends TeaModel {
+    @NameInMap("Data")
+    private java.util.List < Data> data;
+
+    @NameInMap("ErrorCode")
+    private String errorCode;
+
+    @NameInMap("ErrorMessage")
+    private String errorMessage;
+
+    @NameInMap("HttpStatusCode")
+    private Integer httpStatusCode;
+
+    @NameInMap("RequestId")
+    private String requestId;
+
+    @NameInMap("Success")
+    private String success;
+
+    private GetNodeOnBaselineResponseBody(Builder builder) {
+        this.data = builder.data;
+        this.errorCode = builder.errorCode;
+        this.errorMessage = builder.errorMessage;
+        this.httpStatusCode = builder.httpStatusCode;
+        this.requestId = builder.requestId;
+        this.success = builder.success;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static GetNodeOnBaselineResponseBody create() {
+        return builder().build();
+    }
+
+    /**
+     * @return data
+     */
+    public java.util.List < Data> getData() {
+        return this.data;
+    }
+
+    /**
+     * @return errorCode
+     */
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    /**
+     * @return errorMessage
+     */
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    /**
+     * @return httpStatusCode
+     */
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
+     * @return success
+     */
+    public String getSuccess() {
+        return this.success;
+    }
+
+    public static final class Builder {
+        private java.util.List < Data> data; 
+        private String errorCode; 
+        private String errorMessage; 
+        private Integer httpStatusCode; 
+        private String requestId; 
+        private String success; 
+
+        /**
+         * Data.
+         */
+        public Builder data(java.util.List < Data> data) {
+            this.data = data;
+            return this;
+        }
+
+        /**
+         * ErrorCode.
+         */
+        public Builder errorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+
+        /**
+         * ErrorMessage.
+         */
+        public Builder errorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+
+        /**
+         * HttpStatusCode.
+         */
+        public Builder httpStatusCode(Integer httpStatusCode) {
+            this.httpStatusCode = httpStatusCode;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * Success.
+         */
+        public Builder success(String success) {
+            this.success = success;
+            return this;
+        }
+
+        public GetNodeOnBaselineResponseBody build() {
+            return new GetNodeOnBaselineResponseBody(this);
+        } 
+
+    } 
+
+    public static class Data extends TeaModel {
+        @NameInMap("NodeId")
+        private Long nodeId;
+
+        @NameInMap("NodeName")
+        private String nodeName;
+
+        @NameInMap("Owner")
+        private String owner;
+
+        @NameInMap("ProjectId")
+        private Long projectId;
+
+        private Data(Builder builder) {
+            this.nodeId = builder.nodeId;
+            this.nodeName = builder.nodeName;
+            this.owner = builder.owner;
+            this.projectId = builder.projectId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Data create() {
+            return builder().build();
+        }
+
+        /**
+         * @return nodeId
+         */
+        public Long getNodeId() {
+            return this.nodeId;
+        }
+
+        /**
+         * @return nodeName
+         */
+        public String getNodeName() {
+            return this.nodeName;
+        }
+
+        /**
+         * @return owner
+         */
+        public String getOwner() {
+            return this.owner;
+        }
+
+        /**
+         * @return projectId
+         */
+        public Long getProjectId() {
+            return this.projectId;
+        }
+
+        public static final class Builder {
+            private Long nodeId; 
+            private String nodeName; 
+            private String owner; 
+            private Long projectId; 
+
+            /**
+             * NodeId.
+             */
+            public Builder nodeId(Long nodeId) {
+                this.nodeId = nodeId;
+                return this;
+            }
+
+            /**
+             * NodeName.
+             */
+            public Builder nodeName(String nodeName) {
+                this.nodeName = nodeName;
+                return this;
+            }
+
+            /**
+             * Owner.
+             */
+            public Builder owner(String owner) {
+                this.owner = owner;
+                return this;
+            }
+
+            /**
+             * ProjectId.
+             */
+            public Builder projectId(Long projectId) {
+                this.projectId = projectId;
+                return this;
+            }
+
+            public Data build() {
+                return new Data(this);
+            } 
+
+        } 
+
+    }
+}

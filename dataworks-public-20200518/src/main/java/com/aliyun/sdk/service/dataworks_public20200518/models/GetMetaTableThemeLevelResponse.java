@@ -1,0 +1,104 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.dataworks_public20200518.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link GetMetaTableThemeLevelResponse} extends {@link TeaModel}
+ *
+ * <p>GetMetaTableThemeLevelResponse</p>
+ */
+public class GetMetaTableThemeLevelResponse extends Response {
+    @NameInMap("headers")
+    @Validation(required = true)
+    private java.util.Map < String, String > headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    private GetMetaTableThemeLevelResponseBody body;
+
+    private GetMetaTableThemeLevelResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.body = builder.body;
+    }
+
+    public static GetMetaTableThemeLevelResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return body
+     */
+    public GetMetaTableThemeLevelResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<GetMetaTableThemeLevelResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder body(GetMetaTableThemeLevelResponseBody body);
+
+        @Override
+        GetMetaTableThemeLevelResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<GetMetaTableThemeLevelResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private GetMetaTableThemeLevelResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(GetMetaTableThemeLevelResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(GetMetaTableThemeLevelResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public GetMetaTableThemeLevelResponse build() {
+            return new GetMetaTableThemeLevelResponse(this);
+        } 
+
+    } 
+
+}

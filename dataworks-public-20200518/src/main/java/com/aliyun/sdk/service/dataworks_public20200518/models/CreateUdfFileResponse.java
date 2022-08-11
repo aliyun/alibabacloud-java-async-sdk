@@ -1,0 +1,104 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.dataworks_public20200518.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link CreateUdfFileResponse} extends {@link TeaModel}
+ *
+ * <p>CreateUdfFileResponse</p>
+ */
+public class CreateUdfFileResponse extends Response {
+    @NameInMap("headers")
+    @Validation(required = true)
+    private java.util.Map < String, String > headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    private CreateUdfFileResponseBody body;
+
+    private CreateUdfFileResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.body = builder.body;
+    }
+
+    public static CreateUdfFileResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return body
+     */
+    public CreateUdfFileResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<CreateUdfFileResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder body(CreateUdfFileResponseBody body);
+
+        @Override
+        CreateUdfFileResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<CreateUdfFileResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private CreateUdfFileResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(CreateUdfFileResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(CreateUdfFileResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public CreateUdfFileResponse build() {
+            return new CreateUdfFileResponse(this);
+        } 
+
+    } 
+
+}
