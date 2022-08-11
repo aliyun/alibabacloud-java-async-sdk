@@ -55,7 +55,7 @@ public class DescirbeWorkflowRequest extends Request {
         } 
 
         /**
-         * Workflow name
+         * 工作流名称
          */
         public Builder workflowName(String workflowName) {
             this.putPathParameter("workflowName", workflowName);

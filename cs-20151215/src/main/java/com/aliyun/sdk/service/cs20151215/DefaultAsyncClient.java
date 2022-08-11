@@ -118,6 +118,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<CancelTaskResponse> cancelTask(CancelTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CancelTask").setMethod(HttpMethod.POST).setPathRegex("/tasks/{task_id}/cancel").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CancelTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CancelTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
     public CompletableFuture<CancelWorkflowResponse> cancelWorkflow(CancelWorkflowRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -285,9 +299,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-     * >-removing a node involves Pod migration and may affect your business. -Unexpected risks may occur during operation. Please back up relevant data in advance. -During the operation, the background sets the current node to unschedulable. -Remove nodes only remove Worker nodes, not Master nodes.
-     */
     @Override
     public CompletableFuture<DeleteClusterNodesResponse> deleteClusterNodes(DeleteClusterNodesRequest request) {
         try {
@@ -499,6 +510,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<DescribeClusterEventsResponse> describeClusterEvents(DescribeClusterEventsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DescribeClusterEvents").setMethod(HttpMethod.GET).setPathRegex("/clusters/{ClusterId}/events").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeClusterEventsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeClusterEventsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
     public CompletableFuture<DescribeClusterLogsResponse> describeClusterLogs(DescribeClusterLogsRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -507,20 +532,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeClusterLogsResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<DescribeClusterNamespacesResponse> describeClusterNamespaces(DescribeClusterNamespacesRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DescribeClusterNamespaces").setMethod(HttpMethod.GET).setPathRegex("/k8s/{ClusterId}/namespaces").setBodyType(BodyType.ARRAY).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeClusterNamespacesResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DescribeClusterNamespacesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -583,6 +594,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<DescribeClusterTasksResponse> describeClusterTasks(DescribeClusterTasksRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DescribeClusterTasks").setMethod(HttpMethod.GET).setPathRegex("/clusters/{cluster_id}/tasks").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeClusterTasksResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeClusterTasksResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
     public CompletableFuture<DescribeClusterUserKubeconfigResponse> describeClusterUserKubeconfig(DescribeClusterUserKubeconfigRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -614,7 +639,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<DescribeClustersResponse> describeClusters(DescribeClustersRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DescribeClusters").setMethod(HttpMethod.GET).setPathRegex("/clusters").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DescribeClusters").setMethod(HttpMethod.GET).setPathRegex("/clusters").setBodyType(BodyType.ARRAY).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeClustersResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -708,9 +733,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-     * For more information about cluster access, see [register an external Kubernetes cluster](~~ 121053 ~~).
-     */
     @Override
     public CompletableFuture<DescribeExternalAgentResponse> describeExternalAgent(DescribeExternalAgentRequest request) {
         try {
@@ -734,6 +756,20 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeKubernetesVersionMetadataResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<DescribeNodePoolVulsResponse> describeNodePoolVuls(DescribeNodePoolVulsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DescribeNodePoolVuls").setMethod(HttpMethod.GET).setPathRegex("/clusters/{cluster_id}/nodepools/{nodepool_id}/vuls").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeNodePoolVulsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeNodePoolVulsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -922,6 +958,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<FixNodePoolVulsResponse> fixNodePoolVuls(FixNodePoolVulsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("FixNodePoolVuls").setMethod(HttpMethod.POST).setPathRegex("/clusters/{cluster_id}/nodepools/{nodepool_id}/vuls/fix").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(FixNodePoolVulsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<FixNodePoolVulsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
     public CompletableFuture<GetKubernetesTriggerResponse> getKubernetesTrigger(GetKubernetesTriggerRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -949,15 +999,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-     * **Precautions * *:
-    
-    -Make sure that the RAM user has been granted the read-only permission to the target cluster in the RAM console. Otherwise, the API returns the error code "ErrorRamPolicyConfig.
-    For more information about RAM authorization, see [custom RAM authorization policy](~~ 86485 ~~).
-    -If the account that calls this API is a RAM user account, make sure that the account has the permission to modify the authorization information of other RAM user clusters. Otherwise, the API returns "StatusForbidden" or "ForbiddenGrantPermissions" error codes. For more information, see [how do ram users grant RBAC permissions to other ram users](~~ 119035 ~~).
-    
-    -The full update of the cluster authorization information of a RAM user overwrites the existing cluster permissions of the target RAM user. The request must include all the permission configurations that you want to grant to the target RAM user.
-     */
     @Override
     public CompletableFuture<GrantPermissionsResponse> grantPermissions(GrantPermissionsRequest request) {
         try {
@@ -1004,7 +1045,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<MigrateClusterResponse> migrateCluster(MigrateClusterRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("MigrateCluster").setMethod(HttpMethod.POST).setPathRegex("/clusters/{cluster_id}/migrate").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("MigrateCluster").setMethod(HttpMethod.POST).setPathRegex("/clusters/{cluster_id}/migrate").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(MigrateClusterResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -1098,10 +1139,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-     * -Alibaba Cloud account (primary account) can activate container service ACK.
-    -RAM users (RAM users) who have AdministratorAccess permissions can activate services.
-     */
     @Override
     public CompletableFuture<OpenAckServiceResponse> openAckService(OpenAckServiceRequest request) {
         try {
@@ -1144,14 +1181,20 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-     * **Description * *
-    
-    -Removing a node involves Pod migration and may affect your business.
-    -Unexpected risks may occur during operation. Please back up relevant data in advance.
-    -During the operation, the background sets the current node to unschedulable.
-    -Remove nodes only remove Worker nodes, not Master nodes.
-     */
+    @Override
+    public CompletableFuture<PauseTaskResponse> pauseTask(PauseTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("PauseTask").setMethod(HttpMethod.POST).setPathRegex("/tasks/{task_id}/pause").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PauseTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<PauseTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
     @Override
     public CompletableFuture<RemoveClusterNodesResponse> removeClusterNodes(RemoveClusterNodesRequest request) {
         try {
@@ -1209,6 +1252,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<ResumeTaskResponse> resumeTask(ResumeTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ResumeTask").setMethod(HttpMethod.POST).setPathRegex("/tasks/{task_id}/resume").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ResumeTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ResumeTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
     public CompletableFuture<ResumeUpgradeClusterResponse> resumeUpgradeCluster(ResumeUpgradeClusterRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -1250,9 +1307,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-     * > currently, all node operations are integrated into the node pool. ACK no longer maintains ScaleOutCluster interfaces. Add Worker nodes to the cluster by expanding the node pool. For more information, see [expand node pool](~~ 184928 ~~).
-     */
     @Override
     public CompletableFuture<ScaleOutClusterResponse> scaleOutCluster(ScaleOutClusterRequest request) {
         try {
@@ -1268,20 +1322,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
-    public CompletableFuture<StartAlertResponse> startAlert(StartAlertRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("StartAlert").setMethod(HttpMethod.POST).setPathRegex("/alert/{ClusterId}/alert_rule/start").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StartAlertResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<StartAlertResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
     public CompletableFuture<StartWorkflowResponse> startWorkflow(StartWorkflowRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -1290,20 +1330,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<StartWorkflowResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<StopAlertResponse> stopAlert(StopAlertRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("StopAlert").setMethod(HttpMethod.POST).setPathRegex("/alert/{ClusterId}/alert_rule/stop").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StopAlertResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<StopAlertResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1365,10 +1391,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-     * > If the KubeConfig credential that you use on the cluster is revoked, the custom expiration time KubeConfig the cluster is reset. You need to call this operation to reset it.
-    
-     */
     @Override
     public CompletableFuture<UpdateK8sClusterUserConfigExpireResponse> updateK8sClusterUserConfigExpire(UpdateK8sClusterUserConfigExpireRequest request) {
         try {

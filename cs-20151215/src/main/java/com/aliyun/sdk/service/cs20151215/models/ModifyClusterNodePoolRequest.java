@@ -31,6 +31,14 @@ public class ModifyClusterNodePoolRequest extends Request {
     private KubernetesConfig kubernetesConfig;
 
     @Body
+    @NameInMap("management")
+    private Management management;
+
+    @Body
+    @NameInMap("node_config")
+    private NodeConfig nodeConfig;
+
+    @Body
     @NameInMap("nodepool_info")
     private NodepoolInfo nodepoolInfo;
 
@@ -43,10 +51,6 @@ public class ModifyClusterNodePoolRequest extends Request {
     private TeeConfig teeConfig;
 
     @Body
-    @NameInMap("management")
-    private Management management;
-
-    @Body
     @NameInMap("update_nodes")
     private Boolean updateNodes;
 
@@ -56,10 +60,11 @@ public class ModifyClusterNodePoolRequest extends Request {
         this.nodepoolId = builder.nodepoolId;
         this.autoScaling = builder.autoScaling;
         this.kubernetesConfig = builder.kubernetesConfig;
+        this.management = builder.management;
+        this.nodeConfig = builder.nodeConfig;
         this.nodepoolInfo = builder.nodepoolInfo;
         this.scalingGroup = builder.scalingGroup;
         this.teeConfig = builder.teeConfig;
-        this.management = builder.management;
         this.updateNodes = builder.updateNodes;
     }
 
@@ -105,6 +110,20 @@ public class ModifyClusterNodePoolRequest extends Request {
     }
 
     /**
+     * @return management
+     */
+    public Management getManagement() {
+        return this.management;
+    }
+
+    /**
+     * @return nodeConfig
+     */
+    public NodeConfig getNodeConfig() {
+        return this.nodeConfig;
+    }
+
+    /**
      * @return nodepoolInfo
      */
     public NodepoolInfo getNodepoolInfo() {
@@ -126,13 +145,6 @@ public class ModifyClusterNodePoolRequest extends Request {
     }
 
     /**
-     * @return management
-     */
-    public Management getManagement() {
-        return this.management;
-    }
-
-    /**
      * @return updateNodes
      */
     public Boolean getUpdateNodes() {
@@ -144,10 +156,11 @@ public class ModifyClusterNodePoolRequest extends Request {
         private String nodepoolId; 
         private AutoScaling autoScaling; 
         private KubernetesConfig kubernetesConfig; 
+        private Management management; 
+        private NodeConfig nodeConfig; 
         private NodepoolInfo nodepoolInfo; 
         private ScalingGroup scalingGroup; 
         private TeeConfig teeConfig; 
-        private Management management; 
         private Boolean updateNodes; 
 
         private Builder() {
@@ -160,15 +173,16 @@ public class ModifyClusterNodePoolRequest extends Request {
             this.nodepoolId = request.nodepoolId;
             this.autoScaling = request.autoScaling;
             this.kubernetesConfig = request.kubernetesConfig;
+            this.management = request.management;
+            this.nodeConfig = request.nodeConfig;
             this.nodepoolInfo = request.nodepoolInfo;
             this.scalingGroup = request.scalingGroup;
             this.teeConfig = request.teeConfig;
-            this.management = request.management;
             this.updateNodes = request.updateNodes;
         } 
 
         /**
-         * The ID of the cluster.
+         * 集群ID。
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -177,7 +191,7 @@ public class ModifyClusterNodePoolRequest extends Request {
         }
 
         /**
-         * The ID of the node pool.
+         * 节点池ID。
          */
         public Builder nodepoolId(String nodepoolId) {
             this.putPathParameter("NodepoolId", nodepoolId);
@@ -186,7 +200,7 @@ public class ModifyClusterNodePoolRequest extends Request {
         }
 
         /**
-         * Auto Scaling configuration.
+         * 自动伸缩节点池配置。
          */
         public Builder autoScaling(AutoScaling autoScaling) {
             this.putBodyParameter("auto_scaling", autoScaling);
@@ -195,7 +209,7 @@ public class ModifyClusterNodePoolRequest extends Request {
         }
 
         /**
-         * Cluster-related configurations.
+         * 集群配置。
          */
         public Builder kubernetesConfig(KubernetesConfig kubernetesConfig) {
             this.putBodyParameter("kubernetes_config", kubernetesConfig);
@@ -204,34 +218,7 @@ public class ModifyClusterNodePoolRequest extends Request {
         }
 
         /**
-         * Configure the node pool.
-         */
-        public Builder nodepoolInfo(NodepoolInfo nodepoolInfo) {
-            this.putBodyParameter("nodepool_info", nodepoolInfo);
-            this.nodepoolInfo = nodepoolInfo;
-            return this;
-        }
-
-        /**
-         * Configure the scaling group.
-         */
-        public Builder scalingGroup(ScalingGroup scalingGroup) {
-            this.putBodyParameter("scaling_group", scalingGroup);
-            this.scalingGroup = scalingGroup;
-            return this;
-        }
-
-        /**
-         * Configure the encrypted computing cluster.
-         */
-        public Builder teeConfig(TeeConfig teeConfig) {
-            this.putBodyParameter("tee_config", teeConfig);
-            this.teeConfig = teeConfig;
-            return this;
-        }
-
-        /**
-         * The configuration of the managed node pool.
+         * 托管版节点池配置。
          */
         public Builder management(Management management) {
             this.putBodyParameter("management", management);
@@ -240,7 +227,43 @@ public class ModifyClusterNodePoolRequest extends Request {
         }
 
         /**
-         * Update node labels and taints simultaneously.
+         * 节点配置。
+         */
+        public Builder nodeConfig(NodeConfig nodeConfig) {
+            this.putBodyParameter("node_config", nodeConfig);
+            this.nodeConfig = nodeConfig;
+            return this;
+        }
+
+        /**
+         * 节点池配置。
+         */
+        public Builder nodepoolInfo(NodepoolInfo nodepoolInfo) {
+            this.putBodyParameter("nodepool_info", nodepoolInfo);
+            this.nodepoolInfo = nodepoolInfo;
+            return this;
+        }
+
+        /**
+         * 扩容组配置。
+         */
+        public Builder scalingGroup(ScalingGroup scalingGroup) {
+            this.putBodyParameter("scaling_group", scalingGroup);
+            this.scalingGroup = scalingGroup;
+            return this;
+        }
+
+        /**
+         * 加密计算配置。
+         */
+        public Builder teeConfig(TeeConfig teeConfig) {
+            this.putBodyParameter("tee_config", teeConfig);
+            this.teeConfig = teeConfig;
+            return this;
+        }
+
+        /**
+         * 是否同步更新节点标签及污点。
          */
         public Builder updateNodes(Boolean updateNodes) {
             this.putBodyParameter("update_nodes", updateNodes);
@@ -354,7 +377,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             private String type; 
 
             /**
-             * The peak bandwidth of the EIP.
+             * 带宽峰值。
              */
             public Builder eipBandwidth(Long eipBandwidth) {
                 this.eipBandwidth = eipBandwidth;
@@ -362,13 +385,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * The billing method of the EIP. Valid values:
-             * <p>
-             * 
-             * -"PayByBandwidth": pay-by-bandwidth.
-             * -"PayByTraffic": pay by traffic.
-             * 
-             * Default value: "PayByBandwidth ".
+             * EIP计费类型。
              */
             public Builder eipInternetChargeType(String eipInternetChargeType) {
                 this.eipInternetChargeType = eipInternetChargeType;
@@ -376,13 +393,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable auto scaling. Valid values:
-             * <p>
-             * 
-             * -"true": enables auto scaling for the node pool.
-             * -"false": auto scaling is disabled. If the value is false, other configuration parameters in "auto_scaling "do not take effect.
-             * 
-             * Default value: "false ".
+             * 是否开启自动伸缩。
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -390,13 +401,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * Specifies whether to bind an EIP. Valid values:
-             * <p>
-             * 
-             * -"true": bind an EIP.
-             * -"false": does not bind an EIP.
-             * 
-             * Default value: "false ".
+             * 是否绑定EIP。
              */
             public Builder isBondEip(Boolean isBondEip) {
                 this.isBondEip = isBondEip;
@@ -404,7 +409,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * The maximum number of instances.
+             * 最大实例数。
              */
             public Builder maxInstances(Long maxInstances) {
                 this.maxInstances = maxInstances;
@@ -412,7 +417,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * The minimum number of instances.
+             * 最小实例数。
              */
             public Builder minInstances(Long minInstances) {
                 this.minInstances = minInstances;
@@ -420,15 +425,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * The auto scaling type, which is divided by auto scaling instance type. Valid values:
-             * <p>
-             * 
-             * -"cpu": normal instance type.
-             * -"gpu":GPU instance type.
-             * -"gpushare": shared GPU type.
-             * -"spot": preemptible instance type.
-             * 
-             * Default value: "cpu ".
+             * 自动伸缩节点类型。
              */
             public Builder type(String type) {
                 this.type = type;
@@ -541,13 +538,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             private String userData; 
 
             /**
-             * Whether to install cloudmonitor on the ECS node. After installation, you can view the monitoring information of the created ECS instance in the cloudmonitor console. We recommend that you enable cloudmonitor. Valid values:
-             * <p>
-             * 
-             * -"true": install cloudmonitor on ECS nodes.
-             * -"false": Do not install cloudmonitor on ECS nodes.
-             * 
-             * Default value: ""false "".
+             * 是否开启云监控。
              */
             public Builder cmsEnabled(Boolean cmsEnabled) {
                 this.cmsEnabled = cmsEnabled;
@@ -555,13 +546,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * The CPU management policy of the node. When the cluster version is 1.12.6 or later, the following two policies are supported:
-             * <p>
-             * 
-             * -"static": Allows you to enhance CPU affinity and exclusiveness for pods with certain resource characteristics on nodes.
-             * -"none": indicates that the existing default CPU affinity solution is enabled.
-             * 
-             * Default value: "none ".
+             * CPU管理策略。
              */
             public Builder cpuPolicy(String cpuPolicy) {
                 this.cpuPolicy = cpuPolicy;
@@ -569,11 +554,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * The label of the Kubernetes cluster node. Tag definition rules:
-             * <p>
-             * 
-             * -A tag consists of case-sensitive key-value pairs. You can set up to 20 tags.
-             * -The tag key cannot be repeated. It can be up to 64 characters in length. The tag value can be empty and can be up to 128 characters in length. The tag key and tag value cannot start with "aliyun", "acs:", "https://", or "http. For more information, see [Labels and Selectors](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set).
+             * 节点标签。
              */
             public Builder labels(java.util.List < Tag > labels) {
                 this.labels = labels;
@@ -581,7 +562,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * The name of the container runtime.
+             * 容器运行时。
              */
             public Builder runtime(String runtime) {
                 this.runtime = runtime;
@@ -589,7 +570,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * The runtime version of the container.
+             * 容器运行时版本。
              */
             public Builder runtimeVersion(String runtimeVersion) {
                 this.runtimeVersion = runtimeVersion;
@@ -597,7 +578,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * Configure tainted nodes.
+             * 污点配置。
              */
             public Builder taints(java.util.List < Taint > taints) {
                 this.taints = taints;
@@ -605,7 +586,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * The custom data of the node pool. For more information, see [generate instance Custom Data](~~ 49121 ~~).
+             * 实例自定义数据。
              */
             public Builder userData(String userData) {
                 this.userData = userData;
@@ -614,6 +595,571 @@ public class ModifyClusterNodePoolRequest extends Request {
 
             public KubernetesConfig build() {
                 return new KubernetesConfig(this);
+            } 
+
+        } 
+
+    }
+    public static class UpgradeConfig extends TeaModel {
+        @NameInMap("auto_upgrade")
+        private Boolean autoUpgrade;
+
+        @NameInMap("max_unavailable")
+        private Long maxUnavailable;
+
+        @NameInMap("surge")
+        private Long surge;
+
+        @NameInMap("surge_percentage")
+        private Long surgePercentage;
+
+        private UpgradeConfig(Builder builder) {
+            this.autoUpgrade = builder.autoUpgrade;
+            this.maxUnavailable = builder.maxUnavailable;
+            this.surge = builder.surge;
+            this.surgePercentage = builder.surgePercentage;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static UpgradeConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return autoUpgrade
+         */
+        public Boolean getAutoUpgrade() {
+            return this.autoUpgrade;
+        }
+
+        /**
+         * @return maxUnavailable
+         */
+        public Long getMaxUnavailable() {
+            return this.maxUnavailable;
+        }
+
+        /**
+         * @return surge
+         */
+        public Long getSurge() {
+            return this.surge;
+        }
+
+        /**
+         * @return surgePercentage
+         */
+        public Long getSurgePercentage() {
+            return this.surgePercentage;
+        }
+
+        public static final class Builder {
+            private Boolean autoUpgrade; 
+            private Long maxUnavailable; 
+            private Long surge; 
+            private Long surgePercentage; 
+
+            /**
+             * 是否启用自动升级，自修复。
+             */
+            public Builder autoUpgrade(Boolean autoUpgrade) {
+                this.autoUpgrade = autoUpgrade;
+                return this;
+            }
+
+            /**
+             * 最大不可用节点数量。
+             */
+            public Builder maxUnavailable(Long maxUnavailable) {
+                this.maxUnavailable = maxUnavailable;
+                return this;
+            }
+
+            /**
+             * 额外节点数量。
+             */
+            public Builder surge(Long surge) {
+                this.surge = surge;
+                return this;
+            }
+
+            /**
+             * 额外节点比例， 和surge 二选一。
+             */
+            public Builder surgePercentage(Long surgePercentage) {
+                this.surgePercentage = surgePercentage;
+                return this;
+            }
+
+            public UpgradeConfig build() {
+                return new UpgradeConfig(this);
+            } 
+
+        } 
+
+    }
+    public static class Management extends TeaModel {
+        @NameInMap("auto_repair")
+        private Boolean autoRepair;
+
+        @NameInMap("enable")
+        private Boolean enable;
+
+        @NameInMap("upgrade_config")
+        private UpgradeConfig upgradeConfig;
+
+        private Management(Builder builder) {
+            this.autoRepair = builder.autoRepair;
+            this.enable = builder.enable;
+            this.upgradeConfig = builder.upgradeConfig;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Management create() {
+            return builder().build();
+        }
+
+        /**
+         * @return autoRepair
+         */
+        public Boolean getAutoRepair() {
+            return this.autoRepair;
+        }
+
+        /**
+         * @return enable
+         */
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        /**
+         * @return upgradeConfig
+         */
+        public UpgradeConfig getUpgradeConfig() {
+            return this.upgradeConfig;
+        }
+
+        public static final class Builder {
+            private Boolean autoRepair; 
+            private Boolean enable; 
+            private UpgradeConfig upgradeConfig; 
+
+            /**
+             * 是否开启自动修复。
+             */
+            public Builder autoRepair(Boolean autoRepair) {
+                this.autoRepair = autoRepair;
+                return this;
+            }
+
+            /**
+             * 是否启用托管节点池。
+             */
+            public Builder enable(Boolean enable) {
+                this.enable = enable;
+                return this;
+            }
+
+            /**
+             * 自动升级配置。
+             */
+            public Builder upgradeConfig(UpgradeConfig upgradeConfig) {
+                this.upgradeConfig = upgradeConfig;
+                return this;
+            }
+
+            public Management build() {
+                return new Management(this);
+            } 
+
+        } 
+
+    }
+    public static class KubeletConfiguration extends TeaModel {
+        @NameInMap("cpuManagerPolicy")
+        private String cpuManagerPolicy;
+
+        @NameInMap("eventBurst")
+        private Long eventBurst;
+
+        @NameInMap("eventRecordQPS")
+        private Long eventRecordQPS;
+
+        @NameInMap("evictionHard")
+        private java.util.Map < String, ? > evictionHard;
+
+        @NameInMap("evictionSoft")
+        private java.util.Map < String, ? > evictionSoft;
+
+        @NameInMap("evictionSoftGracePeriod")
+        private java.util.Map < String, ? > evictionSoftGracePeriod;
+
+        @NameInMap("kubeAPIBurst")
+        private Long kubeAPIBurst;
+
+        @NameInMap("kubeAPIQPS")
+        private Long kubeAPIQPS;
+
+        @NameInMap("kubeReserved")
+        private java.util.Map < String, ? > kubeReserved;
+
+        @NameInMap("registryBurst")
+        private Long registryBurst;
+
+        @NameInMap("registryPullQPS")
+        private Long registryPullQPS;
+
+        @NameInMap("serializeImagePulls")
+        private Boolean serializeImagePulls;
+
+        @NameInMap("systemReserved")
+        private java.util.Map < String, ? > systemReserved;
+
+        private KubeletConfiguration(Builder builder) {
+            this.cpuManagerPolicy = builder.cpuManagerPolicy;
+            this.eventBurst = builder.eventBurst;
+            this.eventRecordQPS = builder.eventRecordQPS;
+            this.evictionHard = builder.evictionHard;
+            this.evictionSoft = builder.evictionSoft;
+            this.evictionSoftGracePeriod = builder.evictionSoftGracePeriod;
+            this.kubeAPIBurst = builder.kubeAPIBurst;
+            this.kubeAPIQPS = builder.kubeAPIQPS;
+            this.kubeReserved = builder.kubeReserved;
+            this.registryBurst = builder.registryBurst;
+            this.registryPullQPS = builder.registryPullQPS;
+            this.serializeImagePulls = builder.serializeImagePulls;
+            this.systemReserved = builder.systemReserved;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static KubeletConfiguration create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cpuManagerPolicy
+         */
+        public String getCpuManagerPolicy() {
+            return this.cpuManagerPolicy;
+        }
+
+        /**
+         * @return eventBurst
+         */
+        public Long getEventBurst() {
+            return this.eventBurst;
+        }
+
+        /**
+         * @return eventRecordQPS
+         */
+        public Long getEventRecordQPS() {
+            return this.eventRecordQPS;
+        }
+
+        /**
+         * @return evictionHard
+         */
+        public java.util.Map < String, ? > getEvictionHard() {
+            return this.evictionHard;
+        }
+
+        /**
+         * @return evictionSoft
+         */
+        public java.util.Map < String, ? > getEvictionSoft() {
+            return this.evictionSoft;
+        }
+
+        /**
+         * @return evictionSoftGracePeriod
+         */
+        public java.util.Map < String, ? > getEvictionSoftGracePeriod() {
+            return this.evictionSoftGracePeriod;
+        }
+
+        /**
+         * @return kubeAPIBurst
+         */
+        public Long getKubeAPIBurst() {
+            return this.kubeAPIBurst;
+        }
+
+        /**
+         * @return kubeAPIQPS
+         */
+        public Long getKubeAPIQPS() {
+            return this.kubeAPIQPS;
+        }
+
+        /**
+         * @return kubeReserved
+         */
+        public java.util.Map < String, ? > getKubeReserved() {
+            return this.kubeReserved;
+        }
+
+        /**
+         * @return registryBurst
+         */
+        public Long getRegistryBurst() {
+            return this.registryBurst;
+        }
+
+        /**
+         * @return registryPullQPS
+         */
+        public Long getRegistryPullQPS() {
+            return this.registryPullQPS;
+        }
+
+        /**
+         * @return serializeImagePulls
+         */
+        public Boolean getSerializeImagePulls() {
+            return this.serializeImagePulls;
+        }
+
+        /**
+         * @return systemReserved
+         */
+        public java.util.Map < String, ? > getSystemReserved() {
+            return this.systemReserved;
+        }
+
+        public static final class Builder {
+            private String cpuManagerPolicy; 
+            private Long eventBurst; 
+            private Long eventRecordQPS; 
+            private java.util.Map < String, ? > evictionHard; 
+            private java.util.Map < String, ? > evictionSoft; 
+            private java.util.Map < String, ? > evictionSoftGracePeriod; 
+            private Long kubeAPIBurst; 
+            private Long kubeAPIQPS; 
+            private java.util.Map < String, ? > kubeReserved; 
+            private Long registryBurst; 
+            private Long registryPullQPS; 
+            private Boolean serializeImagePulls; 
+            private java.util.Map < String, ? > systemReserved; 
+
+            /**
+             * CPU管理器策略。
+             */
+            public Builder cpuManagerPolicy(String cpuManagerPolicy) {
+                this.cpuManagerPolicy = cpuManagerPolicy;
+                return this;
+            }
+
+            /**
+             * 事件记录的个数的突发峰值上限。
+             */
+            public Builder eventBurst(Long eventBurst) {
+                this.eventBurst = eventBurst;
+                return this;
+            }
+
+            /**
+             * 每秒可生成的事件数量。
+             */
+            public Builder eventRecordQPS(Long eventRecordQPS) {
+                this.eventRecordQPS = eventRecordQPS;
+                return this;
+            }
+
+            /**
+             * 触发Pod驱逐操作的一组硬性门限。
+             */
+            public Builder evictionHard(java.util.Map < String, ? > evictionHard) {
+                this.evictionHard = evictionHard;
+                return this;
+            }
+
+            /**
+             * 设置一组驱逐阈值。
+             */
+            public Builder evictionSoft(java.util.Map < String, ? > evictionSoft) {
+                this.evictionSoft = evictionSoft;
+                return this;
+            }
+
+            /**
+             * 设置一组驱逐宽限期。
+             */
+            public Builder evictionSoftGracePeriod(java.util.Map < String, ? > evictionSoftGracePeriod) {
+                this.evictionSoftGracePeriod = evictionSoftGracePeriod;
+                return this;
+            }
+
+            /**
+             * 每秒发送到apiserver的突发请求数量上限。
+             */
+            public Builder kubeAPIBurst(Long kubeAPIBurst) {
+                this.kubeAPIBurst = kubeAPIBurst;
+                return this;
+            }
+
+            /**
+             * 与apiserver通信的每秒查询个数。
+             */
+            public Builder kubeAPIQPS(Long kubeAPIQPS) {
+                this.kubeAPIQPS = kubeAPIQPS;
+                return this;
+            }
+
+            /**
+             * kubernetes系统预留的资源配置。
+             */
+            public Builder kubeReserved(java.util.Map < String, ? > kubeReserved) {
+                this.kubeReserved = kubeReserved;
+                return this;
+            }
+
+            /**
+             * 突发性镜像拉取的个数上限。
+             */
+            public Builder registryBurst(Long registryBurst) {
+                this.registryBurst = registryBurst;
+                return this;
+            }
+
+            /**
+             * 镜像仓库的qps上限。
+             */
+            public Builder registryPullQPS(Long registryPullQPS) {
+                this.registryPullQPS = registryPullQPS;
+                return this;
+            }
+
+            /**
+             * 逐一拉取镜像。
+             */
+            public Builder serializeImagePulls(Boolean serializeImagePulls) {
+                this.serializeImagePulls = serializeImagePulls;
+                return this;
+            }
+
+            /**
+             * 系统预留的资源配置。
+             */
+            public Builder systemReserved(java.util.Map < String, ? > systemReserved) {
+                this.systemReserved = systemReserved;
+                return this;
+            }
+
+            public KubeletConfiguration build() {
+                return new KubeletConfiguration(this);
+            } 
+
+        } 
+
+    }
+    public static class RolloutPolicy extends TeaModel {
+        @NameInMap("max_unavailable")
+        private Long maxUnavailable;
+
+        private RolloutPolicy(Builder builder) {
+            this.maxUnavailable = builder.maxUnavailable;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RolloutPolicy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return maxUnavailable
+         */
+        public Long getMaxUnavailable() {
+            return this.maxUnavailable;
+        }
+
+        public static final class Builder {
+            private Long maxUnavailable; 
+
+            /**
+             * 最大不可用节点数。
+             */
+            public Builder maxUnavailable(Long maxUnavailable) {
+                this.maxUnavailable = maxUnavailable;
+                return this;
+            }
+
+            public RolloutPolicy build() {
+                return new RolloutPolicy(this);
+            } 
+
+        } 
+
+    }
+    public static class NodeConfig extends TeaModel {
+        @NameInMap("kubelet_configuration")
+        private KubeletConfiguration kubeletConfiguration;
+
+        @NameInMap("rollout_policy")
+        private RolloutPolicy rolloutPolicy;
+
+        private NodeConfig(Builder builder) {
+            this.kubeletConfiguration = builder.kubeletConfiguration;
+            this.rolloutPolicy = builder.rolloutPolicy;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NodeConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return kubeletConfiguration
+         */
+        public KubeletConfiguration getKubeletConfiguration() {
+            return this.kubeletConfiguration;
+        }
+
+        /**
+         * @return rolloutPolicy
+         */
+        public RolloutPolicy getRolloutPolicy() {
+            return this.rolloutPolicy;
+        }
+
+        public static final class Builder {
+            private KubeletConfiguration kubeletConfiguration; 
+            private RolloutPolicy rolloutPolicy; 
+
+            /**
+             * kubelet参数配置。
+             */
+            public Builder kubeletConfiguration(KubeletConfiguration kubeletConfiguration) {
+                this.kubeletConfiguration = kubeletConfiguration;
+                return this;
+            }
+
+            /**
+             * 轮转配置。
+             */
+            public Builder rolloutPolicy(RolloutPolicy rolloutPolicy) {
+                this.rolloutPolicy = rolloutPolicy;
+                return this;
+            }
+
+            public NodeConfig build() {
+                return new NodeConfig(this);
             } 
 
         } 
@@ -658,10 +1204,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             private String resourceGroupId; 
 
             /**
-             * The name of the node pool.
-             * <p>
-             * 
-             * Naming rule: the name must be 1 to 63 characters in length and cannot start with a hyphen (-). It must be 1 to 63 characters in length.
+             * 节点池名称。
              */
             public Builder name(String name) {
                 this.name = name;
@@ -669,7 +1212,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * The ID of the resource group.
+             * 资源组ID。
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -722,7 +1265,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             private String priceLimit; 
 
             /**
-             * The type of the preemptible instance.
+             * 抢占式实例规格
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -730,7 +1273,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * The maximum price per instance. Unit: CNY/hour.
+             * 单台实例上限价格，单位：元/小时。
              */
             public Builder priceLimit(String priceLimit) {
                 this.priceLimit = priceLimit;
@@ -745,65 +1288,41 @@ public class ModifyClusterNodePoolRequest extends Request {
 
     }
     public static class ScalingGroup extends TeaModel {
-        @NameInMap("data_disks")
-        private java.util.List < DataDisk > dataDisks;
-
-        @NameInMap("instance_charge_type")
-        private String instanceChargeType;
-
-        @NameInMap("period")
-        private Long period;
-
-        @NameInMap("period_unit")
-        private String periodUnit;
-
         @NameInMap("auto_renew")
         private Boolean autoRenew;
 
         @NameInMap("auto_renew_period")
         private Long autoRenewPeriod;
 
-        @NameInMap("platform")
-        private String platform;
+        @NameInMap("compensate_with_on_demand")
+        private Boolean compensateWithOnDemand;
+
+        @NameInMap("data_disks")
+        private java.util.List < DataDisk > dataDisks;
+
+        @NameInMap("desired_size")
+        private Long desiredSize;
 
         @NameInMap("image_id")
         private String imageId;
 
-        @NameInMap("spot_strategy")
-        private String spotStrategy;
-
-        @NameInMap("spot_price_limit")
-        private java.util.List < SpotPriceLimit> spotPriceLimit;
+        @NameInMap("instance_charge_type")
+        private String instanceChargeType;
 
         @NameInMap("instance_types")
         private java.util.List < String > instanceTypes;
+
+        @NameInMap("internet_charge_type")
+        private String internetChargeType;
+
+        @NameInMap("internet_max_bandwidth_out")
+        private Long internetMaxBandwidthOut;
 
         @NameInMap("key_pair")
         private String keyPair;
 
         @NameInMap("login_password")
         private String loginPassword;
-
-        @NameInMap("rds_instances")
-        private java.util.List < String > rdsInstances;
-
-        @NameInMap("scaling_policy")
-        private String scalingPolicy;
-
-        @NameInMap("system_disk_category")
-        private String systemDiskCategory;
-
-        @NameInMap("system_disk_size")
-        private Long systemDiskSize;
-
-        @NameInMap("system_disk_performance_level")
-        private String systemDiskPerformanceLevel;
-
-        @NameInMap("tags")
-        private java.util.List < Tag > tags;
-
-        @NameInMap("vswitch_ids")
-        private java.util.List < String > vswitchIds;
 
         @NameInMap("multi_az_policy")
         private String multiAzPolicy;
@@ -814,54 +1333,78 @@ public class ModifyClusterNodePoolRequest extends Request {
         @NameInMap("on_demand_percentage_above_base_capacity")
         private Long onDemandPercentageAboveBaseCapacity;
 
+        @NameInMap("period")
+        private Long period;
+
+        @NameInMap("period_unit")
+        private String periodUnit;
+
+        @NameInMap("platform")
+        private String platform;
+
+        @NameInMap("rds_instances")
+        private java.util.List < String > rdsInstances;
+
+        @NameInMap("scaling_policy")
+        private String scalingPolicy;
+
         @NameInMap("spot_instance_pools")
         private Long spotInstancePools;
 
         @NameInMap("spot_instance_remedy")
         private Boolean spotInstanceRemedy;
 
-        @NameInMap("compensate_with_on_demand")
-        private Boolean compensateWithOnDemand;
+        @NameInMap("spot_price_limit")
+        private java.util.List < SpotPriceLimit> spotPriceLimit;
 
-        @NameInMap("internet_charge_type")
-        private String internetChargeType;
+        @NameInMap("spot_strategy")
+        private String spotStrategy;
 
-        @NameInMap("internet_max_bandwidth_out")
-        private Long internetMaxBandwidthOut;
+        @NameInMap("system_disk_category")
+        private String systemDiskCategory;
 
-        @NameInMap("desired_size")
-        private Long desiredSize;
+        @NameInMap("system_disk_performance_level")
+        private String systemDiskPerformanceLevel;
+
+        @NameInMap("system_disk_size")
+        private Long systemDiskSize;
+
+        @NameInMap("tags")
+        private java.util.List < Tag > tags;
+
+        @NameInMap("vswitch_ids")
+        private java.util.List < String > vswitchIds;
 
         private ScalingGroup(Builder builder) {
-            this.dataDisks = builder.dataDisks;
-            this.instanceChargeType = builder.instanceChargeType;
-            this.period = builder.period;
-            this.periodUnit = builder.periodUnit;
             this.autoRenew = builder.autoRenew;
             this.autoRenewPeriod = builder.autoRenewPeriod;
-            this.platform = builder.platform;
+            this.compensateWithOnDemand = builder.compensateWithOnDemand;
+            this.dataDisks = builder.dataDisks;
+            this.desiredSize = builder.desiredSize;
             this.imageId = builder.imageId;
-            this.spotStrategy = builder.spotStrategy;
-            this.spotPriceLimit = builder.spotPriceLimit;
+            this.instanceChargeType = builder.instanceChargeType;
             this.instanceTypes = builder.instanceTypes;
+            this.internetChargeType = builder.internetChargeType;
+            this.internetMaxBandwidthOut = builder.internetMaxBandwidthOut;
             this.keyPair = builder.keyPair;
             this.loginPassword = builder.loginPassword;
-            this.rdsInstances = builder.rdsInstances;
-            this.scalingPolicy = builder.scalingPolicy;
-            this.systemDiskCategory = builder.systemDiskCategory;
-            this.systemDiskSize = builder.systemDiskSize;
-            this.systemDiskPerformanceLevel = builder.systemDiskPerformanceLevel;
-            this.tags = builder.tags;
-            this.vswitchIds = builder.vswitchIds;
             this.multiAzPolicy = builder.multiAzPolicy;
             this.onDemandBaseCapacity = builder.onDemandBaseCapacity;
             this.onDemandPercentageAboveBaseCapacity = builder.onDemandPercentageAboveBaseCapacity;
+            this.period = builder.period;
+            this.periodUnit = builder.periodUnit;
+            this.platform = builder.platform;
+            this.rdsInstances = builder.rdsInstances;
+            this.scalingPolicy = builder.scalingPolicy;
             this.spotInstancePools = builder.spotInstancePools;
             this.spotInstanceRemedy = builder.spotInstanceRemedy;
-            this.compensateWithOnDemand = builder.compensateWithOnDemand;
-            this.internetChargeType = builder.internetChargeType;
-            this.internetMaxBandwidthOut = builder.internetMaxBandwidthOut;
-            this.desiredSize = builder.desiredSize;
+            this.spotPriceLimit = builder.spotPriceLimit;
+            this.spotStrategy = builder.spotStrategy;
+            this.systemDiskCategory = builder.systemDiskCategory;
+            this.systemDiskPerformanceLevel = builder.systemDiskPerformanceLevel;
+            this.systemDiskSize = builder.systemDiskSize;
+            this.tags = builder.tags;
+            this.vswitchIds = builder.vswitchIds;
         }
 
         public static Builder builder() {
@@ -870,34 +1413,6 @@ public class ModifyClusterNodePoolRequest extends Request {
 
         public static ScalingGroup create() {
             return builder().build();
-        }
-
-        /**
-         * @return dataDisks
-         */
-        public java.util.List < DataDisk > getDataDisks() {
-            return this.dataDisks;
-        }
-
-        /**
-         * @return instanceChargeType
-         */
-        public String getInstanceChargeType() {
-            return this.instanceChargeType;
-        }
-
-        /**
-         * @return period
-         */
-        public Long getPeriod() {
-            return this.period;
-        }
-
-        /**
-         * @return periodUnit
-         */
-        public String getPeriodUnit() {
-            return this.periodUnit;
         }
 
         /**
@@ -915,10 +1430,24 @@ public class ModifyClusterNodePoolRequest extends Request {
         }
 
         /**
-         * @return platform
+         * @return compensateWithOnDemand
          */
-        public String getPlatform() {
-            return this.platform;
+        public Boolean getCompensateWithOnDemand() {
+            return this.compensateWithOnDemand;
+        }
+
+        /**
+         * @return dataDisks
+         */
+        public java.util.List < DataDisk > getDataDisks() {
+            return this.dataDisks;
+        }
+
+        /**
+         * @return desiredSize
+         */
+        public Long getDesiredSize() {
+            return this.desiredSize;
         }
 
         /**
@@ -929,17 +1458,10 @@ public class ModifyClusterNodePoolRequest extends Request {
         }
 
         /**
-         * @return spotStrategy
+         * @return instanceChargeType
          */
-        public String getSpotStrategy() {
-            return this.spotStrategy;
-        }
-
-        /**
-         * @return spotPriceLimit
-         */
-        public java.util.List < SpotPriceLimit> getSpotPriceLimit() {
-            return this.spotPriceLimit;
+        public String getInstanceChargeType() {
+            return this.instanceChargeType;
         }
 
         /**
@@ -947,6 +1469,20 @@ public class ModifyClusterNodePoolRequest extends Request {
          */
         public java.util.List < String > getInstanceTypes() {
             return this.instanceTypes;
+        }
+
+        /**
+         * @return internetChargeType
+         */
+        public String getInternetChargeType() {
+            return this.internetChargeType;
+        }
+
+        /**
+         * @return internetMaxBandwidthOut
+         */
+        public Long getInternetMaxBandwidthOut() {
+            return this.internetMaxBandwidthOut;
         }
 
         /**
@@ -961,55 +1497,6 @@ public class ModifyClusterNodePoolRequest extends Request {
          */
         public String getLoginPassword() {
             return this.loginPassword;
-        }
-
-        /**
-         * @return rdsInstances
-         */
-        public java.util.List < String > getRdsInstances() {
-            return this.rdsInstances;
-        }
-
-        /**
-         * @return scalingPolicy
-         */
-        public String getScalingPolicy() {
-            return this.scalingPolicy;
-        }
-
-        /**
-         * @return systemDiskCategory
-         */
-        public String getSystemDiskCategory() {
-            return this.systemDiskCategory;
-        }
-
-        /**
-         * @return systemDiskSize
-         */
-        public Long getSystemDiskSize() {
-            return this.systemDiskSize;
-        }
-
-        /**
-         * @return systemDiskPerformanceLevel
-         */
-        public String getSystemDiskPerformanceLevel() {
-            return this.systemDiskPerformanceLevel;
-        }
-
-        /**
-         * @return tags
-         */
-        public java.util.List < Tag > getTags() {
-            return this.tags;
-        }
-
-        /**
-         * @return vswitchIds
-         */
-        public java.util.List < String > getVswitchIds() {
-            return this.vswitchIds;
         }
 
         /**
@@ -1034,6 +1521,41 @@ public class ModifyClusterNodePoolRequest extends Request {
         }
 
         /**
+         * @return period
+         */
+        public Long getPeriod() {
+            return this.period;
+        }
+
+        /**
+         * @return periodUnit
+         */
+        public String getPeriodUnit() {
+            return this.periodUnit;
+        }
+
+        /**
+         * @return platform
+         */
+        public String getPlatform() {
+            return this.platform;
+        }
+
+        /**
+         * @return rdsInstances
+         */
+        public java.util.List < String > getRdsInstances() {
+            return this.rdsInstances;
+        }
+
+        /**
+         * @return scalingPolicy
+         */
+        public String getScalingPolicy() {
+            return this.scalingPolicy;
+        }
+
+        /**
          * @return spotInstancePools
          */
         public Long getSpotInstancePools() {
@@ -1048,118 +1570,87 @@ public class ModifyClusterNodePoolRequest extends Request {
         }
 
         /**
-         * @return compensateWithOnDemand
+         * @return spotPriceLimit
          */
-        public Boolean getCompensateWithOnDemand() {
-            return this.compensateWithOnDemand;
+        public java.util.List < SpotPriceLimit> getSpotPriceLimit() {
+            return this.spotPriceLimit;
         }
 
         /**
-         * @return internetChargeType
+         * @return spotStrategy
          */
-        public String getInternetChargeType() {
-            return this.internetChargeType;
+        public String getSpotStrategy() {
+            return this.spotStrategy;
         }
 
         /**
-         * @return internetMaxBandwidthOut
+         * @return systemDiskCategory
          */
-        public Long getInternetMaxBandwidthOut() {
-            return this.internetMaxBandwidthOut;
+        public String getSystemDiskCategory() {
+            return this.systemDiskCategory;
         }
 
         /**
-         * @return desiredSize
+         * @return systemDiskPerformanceLevel
          */
-        public Long getDesiredSize() {
-            return this.desiredSize;
+        public String getSystemDiskPerformanceLevel() {
+            return this.systemDiskPerformanceLevel;
+        }
+
+        /**
+         * @return systemDiskSize
+         */
+        public Long getSystemDiskSize() {
+            return this.systemDiskSize;
+        }
+
+        /**
+         * @return tags
+         */
+        public java.util.List < Tag > getTags() {
+            return this.tags;
+        }
+
+        /**
+         * @return vswitchIds
+         */
+        public java.util.List < String > getVswitchIds() {
+            return this.vswitchIds;
         }
 
         public static final class Builder {
-            private java.util.List < DataDisk > dataDisks; 
-            private String instanceChargeType; 
-            private Long period; 
-            private String periodUnit; 
             private Boolean autoRenew; 
             private Long autoRenewPeriod; 
-            private String platform; 
+            private Boolean compensateWithOnDemand; 
+            private java.util.List < DataDisk > dataDisks; 
+            private Long desiredSize; 
             private String imageId; 
-            private String spotStrategy; 
-            private java.util.List < SpotPriceLimit> spotPriceLimit; 
+            private String instanceChargeType; 
             private java.util.List < String > instanceTypes; 
+            private String internetChargeType; 
+            private Long internetMaxBandwidthOut; 
             private String keyPair; 
             private String loginPassword; 
-            private java.util.List < String > rdsInstances; 
-            private String scalingPolicy; 
-            private String systemDiskCategory; 
-            private Long systemDiskSize; 
-            private String systemDiskPerformanceLevel; 
-            private java.util.List < Tag > tags; 
-            private java.util.List < String > vswitchIds; 
             private String multiAzPolicy; 
             private Long onDemandBaseCapacity; 
             private Long onDemandPercentageAboveBaseCapacity; 
+            private Long period; 
+            private String periodUnit; 
+            private String platform; 
+            private java.util.List < String > rdsInstances; 
+            private String scalingPolicy; 
             private Long spotInstancePools; 
             private Boolean spotInstanceRemedy; 
-            private Boolean compensateWithOnDemand; 
-            private String internetChargeType; 
-            private Long internetMaxBandwidthOut; 
-            private Long desiredSize; 
+            private java.util.List < SpotPriceLimit> spotPriceLimit; 
+            private String spotStrategy; 
+            private String systemDiskCategory; 
+            private String systemDiskPerformanceLevel; 
+            private Long systemDiskSize; 
+            private java.util.List < Tag > tags; 
+            private java.util.List < String > vswitchIds; 
 
             /**
-             * The configuration of the node data disk. Valid values: 0 to 10. You can add up to 10 data disks.
-             */
-            public Builder dataDisks(java.util.List < DataDisk > dataDisks) {
-                this.dataDisks = dataDisks;
-                return this;
-            }
-
-            /**
-             * The billing method of the node pool. Valid values:
-             * <p>
-             * 
-             * -"PrePaid": Subscription
-             * -"PostPaid": pay-as-you-go
-             * 
-             * Default value: "PostPaid ".
-             */
-            public Builder instanceChargeType(String instanceChargeType) {
-                this.instanceChargeType = instanceChargeType;
-                return this;
-            }
-
-            /**
-             * Node annual commitment monthly length, when instance_charge_type "value for "prepaid" when entry into force and required value.
-             * <p>
-             * 
-             * When "periodunit = month" when value range:{1, 2 , 3, 6, 12, 24, 36, 48, 60}.
-             */
-            public Builder period(Long period) {
-                this.period = period;
-                return this;
-            }
-
-            /**
-             * The billing cycle of the node. If the value of "instance_charge_type" is "PrePaid", you must specify the cycle.
-             * <p>
-             * 
-             * Currently, only months are supported.
-             * 
-             * Default value: "Month ".
-             */
-            public Builder periodUnit(String periodUnit) {
-                this.periodUnit = periodUnit;
-                return this;
-            }
-
-            /**
-             * Specifies whether to enable automatic renewal for the node. This parameter takes effect only when the instance_charge_type parameter is set to prepaid. Valid values:
-             * <p>
-             * 
-             * -"true": auto renewal.
-             * -"false": does not automatically renew the instance.
-             * 
-             * Default value: "true ".
+             * 节点池节点是启用自动续费
              */
             public Builder autoRenew(Boolean autoRenew) {
                 this.autoRenew = autoRenew;
@@ -1167,10 +1658,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * The automatic renewal cycle of the node. This parameter takes effect only when "instance_charge_type" is set to "PrePaid" and is required.
-             * <p>
-             * 
-             * If "PeriodUnit = Month", the value range is {1, 2 , 3, 6, 12}.
+             * 节点池节点自动续费周期
              */
             public Builder autoRenewPeriod(Long autoRenewPeriod) {
                 this.autoRenewPeriod = autoRenewPeriod;
@@ -1178,215 +1666,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * The operating system platform. Valid values:
-             * <p>
-             * 
-             * -"AliyunLinux"
-             * -"CentOS"
-             * -"Windows"
-             * -"WindowsCore"
-             */
-            public Builder platform(String platform) {
-                this.platform = platform;
-                return this;
-            }
-
-            /**
-             * The ID of the custom image. You can call the "DescribeKubernetesVersionMetadata" operation to query the system images. The latest system images are used by default.
-             */
-            public Builder imageId(String imageId) {
-                this.imageId = imageId;
-                return this;
-            }
-
-            /**
-             * Preemptive instance type, value:
-             * <p>
-             * 
-             * -"NoSpot": Non-preemptible instance.
-             * -"spotwithpricelimit": Setting the preemption instance price limit.
-             * -"spotaspricego": System automatic bids, follow current actual market prices.
-             * 
-             * For more information, see [preemptible instances](~~ 157759 ~~).
-             */
-            public Builder spotStrategy(String spotStrategy) {
-                this.spotStrategy = spotStrategy;
-                return this;
-            }
-
-            /**
-             * The price range of the preemptible instance.
-             */
-            public Builder spotPriceLimit(java.util.List < SpotPriceLimit> spotPriceLimit) {
-                this.spotPriceLimit = spotPriceLimit;
-                return this;
-            }
-
-            /**
-             * Node instance specifications list, you can select multiple instance dimension as options, each node when created, from the first dimension began to try to buy until created successfully. Final purchase instance dimension may inventory changes.
-             */
-            public Builder instanceTypes(java.util.List < String > instanceTypes) {
-                this.instanceTypes = instanceTypes;
-                return this;
-            }
-
-            /**
-             * The name of the key pair, which must be either login_password or login_password. If the node pool is a managed node pool, only "key_pair" is supported ".
-             */
-            public Builder keyPair(String keyPair) {
-                this.keyPair = keyPair;
-                return this;
-            }
-
-            /**
-             * The SSH logon password. Select either the SSH logon password or the key_pair password. The password must be 8 to 30 characters in length and contain at least three characters (uppercase and lowercase letters, numbers, and special characters).
-             */
-            public Builder loginPassword(String loginPassword) {
-                this.loginPassword = loginPassword;
-                return this;
-            }
-
-            /**
-             * The list of RDS instances.
-             */
-            public Builder rdsInstances(java.util.List < String > rdsInstances) {
-                this.rdsInstances = rdsInstances;
-                return this;
-            }
-
-            /**
-             * The scaling group mode. Valid values:
-             * <p>
-             * 
-             * -"release": in standard mode, ECS instances are created and released based on the usage of the requested resource values.
-             * -"recycle": indicates the fast mode. You can create, stop, and start scaling to increase the speed of re-scaling (no fees are charged for computing resources when stopped, and only storage fees are charged, except for local disks).
-             */
-            public Builder scalingPolicy(String scalingPolicy) {
-                this.scalingPolicy = scalingPolicy;
-                return this;
-            }
-
-            /**
-             * The system disk type of the node. Valid values:
-             * <p>
-             * 
-             * -"Cloud_efficiency ": Ultra disk.
-             * -"Cloud_ssd ":SSD cloud disk.
-             * 
-             * Default value: cloud_ssd ".
-             */
-            public Builder systemDiskCategory(String systemDiskCategory) {
-                this.systemDiskCategory = systemDiskCategory;
-                return this;
-            }
-
-            /**
-             * The system disk size of the node. Unit: GiB.
-             * <p>
-             * 
-             * Value range:[20,500].
-             * 
-             * The value of this parameter must be greater than or equal to max{20, ImageSize}.
-             * 
-             * Default value: max{40, the size of the image corresponding to the parameter ImageId}.
-             */
-            public Builder systemDiskSize(Long systemDiskSize) {
-                this.systemDiskSize = systemDiskSize;
-                return this;
-            }
-
-            /**
-             * The disk performance level of the node system disk. This parameter takes effect only for ESSD disks. The disk performance level depends on the disk size. For more information, see [ESSD](~~ 122389 ~~)
-             */
-            public Builder systemDiskPerformanceLevel(String systemDiskPerformanceLevel) {
-                this.systemDiskPerformanceLevel = systemDiskPerformanceLevel;
-                return this;
-            }
-
-            /**
-             * Only ECS instance add labels.
-             * <p>
-             * 
-             * Tag key can"t repeat, the maximum length is 128 characters; Labels keys and label value can"t to "aliyun", "acs:" Beginning or contains "https://", "http://".
-             */
-            public Builder tags(java.util.List < Tag > tags) {
-                this.tags = tags;
-                return this;
-            }
-
-            /**
-             * The list of vSwitch ids. Valid values: 1 to 20.
-             * <p>
-             * 
-             * > to ensure high availability, we recommend that you select vswitches in different zones.
-             */
-            public Builder vswitchIds(java.util.List < String > vswitchIds) {
-                this.vswitchIds = vswitchIds;
-                return this;
-            }
-
-            /**
-             * The scaling policy for ECS instances in a multi-zone scaling group. Valid values:
-             * <p>
-             * 
-             * -"PRIORITY": scale in the vSwitch (VSwitchIds.N) based on your definition. When higher priority Virtual Switches available area cannot create ECS instance, automatically use the next priority virtual switch create the ECS instance.
-             * 
-             * -"Cost_optimized ": attempts to create a vCPU instance from low to high. When telescopic configuration settings. Preemptive billing way of multi-instance dimension when priority create corresponding preemptive instance. You can continue to pass "compensatewithondemand" parameter specifies when preemptive instance because inventory etc. reason cannot create when, whether to automatically try to quantity pay create.
-             * 
-             * > "cost_optimized "takes effect only when the scaling configuration has multiple instance types or preemptible instances are selected.
-             * 
-             * -"BALANCE": evenly allocate ECS instances among multiple zones specified by the scaling group. If the zones become unbalanced due to insufficient inventory, you can use the "RebalanceInstance" API to balance resources. For more information, see [RebalanceInstance](~~ 71516 ~~).
-             * 
-             * Default value: "PRIORITY ".
-             */
-            public Builder multiAzPolicy(String multiAzPolicy) {
-                this.multiAzPolicy = multiAzPolicy;
-                return this;
-            }
-
-            /**
-             * The minimum number of pay-as-you-go instances required by the scaling group. Valid values:[0,1000]. If the number of pay-as-you-go instances is less than this value, pay-as-you-go instances are created first.
-             */
-            public Builder onDemandBaseCapacity(Long onDemandBaseCapacity) {
-                this.onDemandBaseCapacity = onDemandBaseCapacity;
-                return this;
-            }
-
-            /**
-             * The proportion of pay-as-you-go instances in the scaling group that meet the minimum number of pay-as-you-go instances ("on_demand_base_capacity "). Value range:[0,100].
-             */
-            public Builder onDemandPercentageAboveBaseCapacity(Long onDemandPercentageAboveBaseCapacity) {
-                this.onDemandPercentageAboveBaseCapacity = onDemandPercentageAboveBaseCapacity;
-                return this;
-            }
-
-            /**
-             * The number of available instance types. The scaling group creates preemptible instances based on the lowest cost instance types. Valid values: 1 to 10.
-             */
-            public Builder spotInstancePools(Long spotInstancePools) {
-                this.spotInstancePools = spotInstancePools;
-                return this;
-            }
-
-            /**
-             * Specifies whether to enable preemptible instances. After this feature is enabled, when a system message is received that a preemptible instance will be reclaimed, the scaling group attempts to create a new instance and replaces the instance that will be reclaimed. Valid values:
-             * <p>
-             * 
-             * -"true": open completion preemptive instance.
-             * -"false": does not enable preemptible instances.
-             * 
-             */
-            public Builder spotInstanceRemedy(Boolean spotInstanceRemedy) {
-                this.spotInstanceRemedy = spotInstanceRemedy;
-                return this;
-            }
-
-            /**
-             * If the value of "multi_az_policy" is "cost_optimized "and sufficient preemptible instances cannot be created due to price or inventory, whether to automatically create pay-as-you-go instances to meet the number of ECS instances. Valid values:
-             * <p>
-             * 
-             * -"true": Allows you to automatically create pay-as-you-go instances to meet the number of ECS instances.
-             * -"false": you cannot automatically create pay-as-you-go instances to meet the number of ECS instances.
+             * 当MultiAZPolicy取值为COST_OPTIMIZED时，如果因价格、库存等原因无法创建足够的抢占式实例，是否允许自动尝试创建按量实例满足ECS实例数量要求。取值范围：true：允许。false：不允许。默认值：true
              */
             public Builder compensateWithOnDemand(Boolean compensateWithOnDemand) {
                 this.compensateWithOnDemand = compensateWithOnDemand;
@@ -1394,11 +1674,47 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * The billing method of the public IP address. Valid values:
-             * <p>
-             * 
-             * -"PayByBandwidth": pay-by-bandwidth.
-             * -"PayByTraffic": pay by traffic.
+             * 数据盘配置。
+             */
+            public Builder dataDisks(java.util.List < DataDisk > dataDisks) {
+                this.dataDisks = dataDisks;
+                return this;
+            }
+
+            /**
+             * 节点池期望节点数
+             */
+            public Builder desiredSize(Long desiredSize) {
+                this.desiredSize = desiredSize;
+                return this;
+            }
+
+            /**
+             * 自定义镜像
+             */
+            public Builder imageId(String imageId) {
+                this.imageId = imageId;
+                return this;
+            }
+
+            /**
+             * 节点付费类型。
+             */
+            public Builder instanceChargeType(String instanceChargeType) {
+                this.instanceChargeType = instanceChargeType;
+                return this;
+            }
+
+            /**
+             * 节点实例规格。
+             */
+            public Builder instanceTypes(java.util.List < String > instanceTypes) {
+                this.instanceTypes = instanceTypes;
+                return this;
+            }
+
+            /**
+             * 节点公网IP网络计费类型
              */
             public Builder internetChargeType(String internetChargeType) {
                 this.internetChargeType = internetChargeType;
@@ -1406,7 +1722,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * The maximum outbound bandwidth of the node public IP address. Unit: Mbit/s(Mega bit per second). Value range:[1,100].
+             * 节点公网IP出带宽最大值，单位为Mbps（Mega bit per second），取值范围：1~100
              */
             public Builder internetMaxBandwidthOut(Long internetMaxBandwidthOut) {
                 this.internetMaxBandwidthOut = internetMaxBandwidthOut;
@@ -1414,10 +1730,154 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * The expected number of nodes in the node pool.
+             * 密钥对名称，和login_password二选一。
              */
-            public Builder desiredSize(Long desiredSize) {
-                this.desiredSize = desiredSize;
+            public Builder keyPair(String keyPair) {
+                this.keyPair = keyPair;
+                return this;
+            }
+
+            /**
+             * SSH登录密码，和key_pari二选一。
+             */
+            public Builder loginPassword(String loginPassword) {
+                this.loginPassword = loginPassword;
+                return this;
+            }
+
+            /**
+             * 多可用区伸缩组ECS实例扩缩容策略
+             */
+            public Builder multiAzPolicy(String multiAzPolicy) {
+                this.multiAzPolicy = multiAzPolicy;
+                return this;
+            }
+
+            /**
+             * 伸缩组所需要按量实例个数的最小值，取值范围：0~1000。当按量实例个数少于该值时，将优先创建按量实例。
+             */
+            public Builder onDemandBaseCapacity(Long onDemandBaseCapacity) {
+                this.onDemandBaseCapacity = onDemandBaseCapacity;
+                return this;
+            }
+
+            /**
+             * 伸缩组满足最小按量实例数（OnDemandBaseCapacity）要求后，超出的实例中按量实例应占的比例，取值范围：0～100。
+             */
+            public Builder onDemandPercentageAboveBaseCapacity(Long onDemandPercentageAboveBaseCapacity) {
+                this.onDemandPercentageAboveBaseCapacity = onDemandPercentageAboveBaseCapacity;
+                return this;
+            }
+
+            /**
+             * 包年包月时长
+             */
+            public Builder period(Long period) {
+                this.period = period;
+                return this;
+            }
+
+            /**
+             * 付费周期
+             */
+            public Builder periodUnit(String periodUnit) {
+                this.periodUnit = periodUnit;
+                return this;
+            }
+
+            /**
+             * 操作系统发行版。
+             */
+            public Builder platform(String platform) {
+                this.platform = platform;
+                return this;
+            }
+
+            /**
+             * RDS实例列表。
+             */
+            public Builder rdsInstances(java.util.List < String > rdsInstances) {
+                this.rdsInstances = rdsInstances;
+                return this;
+            }
+
+            /**
+             * 扩容策略。
+             */
+            public Builder scalingPolicy(String scalingPolicy) {
+                this.scalingPolicy = scalingPolicy;
+                return this;
+            }
+
+            /**
+             * 指定可用实例规格的个数，伸缩组将按成本最低的多个规格均衡创建抢占式实例。取值范围：1~10。
+             */
+            public Builder spotInstancePools(Long spotInstancePools) {
+                this.spotInstancePools = spotInstancePools;
+                return this;
+            }
+
+            /**
+             * 是否开启补齐抢占式实例。开启后，当收到抢占式实例将被回收的系统消息时，伸缩组将尝试创建新的实例，替换掉将被回收的抢占式实例。
+             */
+            public Builder spotInstanceRemedy(Boolean spotInstanceRemedy) {
+                this.spotInstanceRemedy = spotInstanceRemedy;
+                return this;
+            }
+
+            /**
+             * 抢占实例价格上限配置
+             */
+            public Builder spotPriceLimit(java.util.List < SpotPriceLimit> spotPriceLimit) {
+                this.spotPriceLimit = spotPriceLimit;
+                return this;
+            }
+
+            /**
+             * 抢占式实例类型
+             */
+            public Builder spotStrategy(String spotStrategy) {
+                this.spotStrategy = spotStrategy;
+                return this;
+            }
+
+            /**
+             * 节点系统盘类型。
+             */
+            public Builder systemDiskCategory(String systemDiskCategory) {
+                this.systemDiskCategory = systemDiskCategory;
+                return this;
+            }
+
+            /**
+             * 节点系统盘磁盘性能，只针对ESSD磁盘生效
+             */
+            public Builder systemDiskPerformanceLevel(String systemDiskPerformanceLevel) {
+                this.systemDiskPerformanceLevel = systemDiskPerformanceLevel;
+                return this;
+            }
+
+            /**
+             * 节点系统盘大小。
+             */
+            public Builder systemDiskSize(Long systemDiskSize) {
+                this.systemDiskSize = systemDiskSize;
+                return this;
+            }
+
+            /**
+             * ECS标签。
+             */
+            public Builder tags(java.util.List < Tag > tags) {
+                this.tags = tags;
+                return this;
+            }
+
+            /**
+             * 节点使用的虚拟交换机ID。
+             */
+            public Builder vswitchIds(java.util.List < String > vswitchIds) {
+                this.vswitchIds = vswitchIds;
                 return this;
             }
 
@@ -1455,13 +1915,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             private Boolean teeEnable; 
 
             /**
-             * Specifies whether to enable encrypted computing clusters. Valid values:.
-             * <p>
-             * 
-             * -"true": enabled.
-             * -"false": disabled.
-             * 
-             * Default value: "false ".
+             * 是否为加密计算节点池。
              */
             public Builder teeEnable(Boolean teeEnable) {
                 this.teeEnable = teeEnable;
@@ -1470,214 +1924,6 @@ public class ModifyClusterNodePoolRequest extends Request {
 
             public TeeConfig build() {
                 return new TeeConfig(this);
-            } 
-
-        } 
-
-    }
-    public static class UpgradeConfig extends TeaModel {
-        @NameInMap("auto_upgrade")
-        private Boolean autoUpgrade;
-
-        @NameInMap("surge")
-        private Long surge;
-
-        @NameInMap("surge_percentage")
-        private Long surgePercentage;
-
-        @NameInMap("max_unavailable")
-        private Long maxUnavailable;
-
-        private UpgradeConfig(Builder builder) {
-            this.autoUpgrade = builder.autoUpgrade;
-            this.surge = builder.surge;
-            this.surgePercentage = builder.surgePercentage;
-            this.maxUnavailable = builder.maxUnavailable;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static UpgradeConfig create() {
-            return builder().build();
-        }
-
-        /**
-         * @return autoUpgrade
-         */
-        public Boolean getAutoUpgrade() {
-            return this.autoUpgrade;
-        }
-
-        /**
-         * @return surge
-         */
-        public Long getSurge() {
-            return this.surge;
-        }
-
-        /**
-         * @return surgePercentage
-         */
-        public Long getSurgePercentage() {
-            return this.surgePercentage;
-        }
-
-        /**
-         * @return maxUnavailable
-         */
-        public Long getMaxUnavailable() {
-            return this.maxUnavailable;
-        }
-
-        public static final class Builder {
-            private Boolean autoUpgrade; 
-            private Long surge; 
-            private Long surgePercentage; 
-            private Long maxUnavailable; 
-
-            /**
-             * Whether to enable automatic upgrade:
-             * <p>
-             * 
-             * -true: enabled.
-             * -false: disabled.
-             * 
-             * Default value: "true ".
-             */
-            public Builder autoUpgrade(Boolean autoUpgrade) {
-                this.autoUpgrade = autoUpgrade;
-                return this;
-            }
-
-            /**
-             * The number of additional nodes. Nodes are unavailable during upgrade. You can create additional nodes to compensate for the load on the cluster.
-             * <p>
-             * 
-             * > We recommend that you create a maximum of nodes.
-             */
-            public Builder surge(Long surge) {
-                this.surge = surge;
-                return this;
-            }
-
-            /**
-             * The ratio of additional nodes. You can select either surge" or surge.
-             */
-            public Builder surgePercentage(Long surgePercentage) {
-                this.surgePercentage = surgePercentage;
-                return this;
-            }
-
-            /**
-             * The maximum number of unavailable nodes.
-             * <p>
-             * 
-             * Valid values: 1 to 1000.
-             * 
-             * Default value: 1.
-             */
-            public Builder maxUnavailable(Long maxUnavailable) {
-                this.maxUnavailable = maxUnavailable;
-                return this;
-            }
-
-            public UpgradeConfig build() {
-                return new UpgradeConfig(this);
-            } 
-
-        } 
-
-    }
-    public static class Management extends TeaModel {
-        @NameInMap("enable")
-        private Boolean enable;
-
-        @NameInMap("auto_repair")
-        private Boolean autoRepair;
-
-        @NameInMap("upgrade_config")
-        private UpgradeConfig upgradeConfig;
-
-        private Management(Builder builder) {
-            this.enable = builder.enable;
-            this.autoRepair = builder.autoRepair;
-            this.upgradeConfig = builder.upgradeConfig;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Management create() {
-            return builder().build();
-        }
-
-        /**
-         * @return enable
-         */
-        public Boolean getEnable() {
-            return this.enable;
-        }
-
-        /**
-         * @return autoRepair
-         */
-        public Boolean getAutoRepair() {
-            return this.autoRepair;
-        }
-
-        /**
-         * @return upgradeConfig
-         */
-        public UpgradeConfig getUpgradeConfig() {
-            return this.upgradeConfig;
-        }
-
-        public static final class Builder {
-            private Boolean enable; 
-            private Boolean autoRepair; 
-            private UpgradeConfig upgradeConfig; 
-
-            /**
-             * Specifies whether to enable the managed node pool. Valid values:
-             * <p>
-             * 
-             * -"true": enable the managed node pool.
-             * -"false": the managed node pool is disabled. Other configurations take effect only when "enble = true.
-             * 
-             * Default value: "false ".
-             */
-            public Builder enable(Boolean enable) {
-                this.enable = enable;
-                return this;
-            }
-
-            /**
-             * Indicates whether to fix the problem automatically. This parameter takes effect only when "enble = true. Valid values:
-             * <p>
-             * 
-             * -"true": automatic repair.
-             * -"false": not automatically fixed.
-             * 
-             * Default value: "true ".
-             */
-            public Builder autoRepair(Boolean autoRepair) {
-                this.autoRepair = autoRepair;
-                return this;
-            }
-
-            /**
-             * The configuration is automatically upgraded. This parameter takes effect only when "enble = true.
-             */
-            public Builder upgradeConfig(UpgradeConfig upgradeConfig) {
-                this.upgradeConfig = upgradeConfig;
-                return this;
-            }
-
-            public Management build() {
-                return new Management(this);
             } 
 
         } 

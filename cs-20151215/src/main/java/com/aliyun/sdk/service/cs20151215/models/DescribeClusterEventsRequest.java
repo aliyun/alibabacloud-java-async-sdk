@@ -1,0 +1,142 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.cs20151215.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link DescribeClusterEventsRequest} extends {@link RequestModel}
+ *
+ * <p>DescribeClusterEventsRequest</p>
+ */
+public class DescribeClusterEventsRequest extends Request {
+    @Path
+    @NameInMap("ClusterId")
+    @Validation(required = true)
+    private String clusterId;
+
+    @Query
+    @NameInMap("page_number")
+    private Long pageNumber;
+
+    @Query
+    @NameInMap("page_size")
+    private Long pageSize;
+
+    @Query
+    @NameInMap("task_id")
+    private Long taskId;
+
+    private DescribeClusterEventsRequest(Builder builder) {
+        super(builder);
+        this.clusterId = builder.clusterId;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
+        this.taskId = builder.taskId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static DescribeClusterEventsRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return clusterId
+     */
+    public String getClusterId() {
+        return this.clusterId;
+    }
+
+    /**
+     * @return pageNumber
+     */
+    public Long getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Long getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
+     * @return taskId
+     */
+    public Long getTaskId() {
+        return this.taskId;
+    }
+
+    public static final class Builder extends Request.Builder<DescribeClusterEventsRequest, Builder> {
+        private String clusterId; 
+        private Long pageNumber; 
+        private Long pageSize; 
+        private Long taskId; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(DescribeClusterEventsRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.taskId = request.taskId;
+        } 
+
+        /**
+         * 集群ID。
+         */
+        public Builder clusterId(String clusterId) {
+            this.putPathParameter("ClusterId", clusterId);
+            this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * 分页页数。
+         */
+        public Builder pageNumber(Long pageNumber) {
+            this.putQueryParameter("page_number", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * 每页大小。
+         */
+        public Builder pageSize(Long pageSize) {
+            this.putQueryParameter("page_size", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * 查询的任务ID。
+         */
+        public Builder taskId(Long taskId) {
+            this.putQueryParameter("task_id", taskId);
+            this.taskId = taskId;
+            return this;
+        }
+
+        @Override
+        public DescribeClusterEventsRequest build() {
+            return new DescribeClusterEventsRequest(this);
+        } 
+
+    } 
+
+}

@@ -97,7 +97,7 @@ public class UpgradeClusterRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * 集群ID。
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -106,7 +106,7 @@ public class UpgradeClusterRequest extends Request {
         }
 
         /**
-         * The component name. Value: "k8s".
+         * 组件名称，集群升级时取值"k8s"。
          */
         public Builder componentName(String componentName) {
             this.putBodyParameter("component_name", componentName);
@@ -115,7 +115,7 @@ public class UpgradeClusterRequest extends Request {
         }
 
         /**
-         * You can upgrade the cluster version.
+         * 目标版本。
          */
         public Builder nextVersion(String nextVersion) {
             this.putBodyParameter("next_version", nextVersion);
@@ -124,7 +124,7 @@ public class UpgradeClusterRequest extends Request {
         }
 
         /**
-         * The current version of the cluster. For more information, see [cluster Version](~~ 185269 ~~).
+         * 当前版本。
          */
         public Builder version(String version) {
             this.putBodyParameter("version", version);

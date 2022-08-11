@@ -17,9 +17,19 @@ public class MigrateClusterRequest extends Request {
     @Validation(required = true)
     private String clusterId;
 
+    @Body
+    @NameInMap("oss_bucket_endpoint")
+    private String ossBucketEndpoint;
+
+    @Body
+    @NameInMap("oss_bucket_name")
+    private String ossBucketName;
+
     private MigrateClusterRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
+        this.ossBucketEndpoint = builder.ossBucketEndpoint;
+        this.ossBucketName = builder.ossBucketName;
     }
 
     public static Builder builder() {
@@ -42,8 +52,24 @@ public class MigrateClusterRequest extends Request {
         return this.clusterId;
     }
 
+    /**
+     * @return ossBucketEndpoint
+     */
+    public String getOssBucketEndpoint() {
+        return this.ossBucketEndpoint;
+    }
+
+    /**
+     * @return ossBucketName
+     */
+    public String getOssBucketName() {
+        return this.ossBucketName;
+    }
+
     public static final class Builder extends Request.Builder<MigrateClusterRequest, Builder> {
         private String clusterId; 
+        private String ossBucketEndpoint; 
+        private String ossBucketName; 
 
         private Builder() {
             super();
@@ -52,14 +78,34 @@ public class MigrateClusterRequest extends Request {
         private Builder(MigrateClusterRequest request) {
             super(request);
             this.clusterId = request.clusterId;
+            this.ossBucketEndpoint = request.ossBucketEndpoint;
+            this.ossBucketName = request.ossBucketName;
         } 
 
         /**
-         * The ID of the cluster.
+         * 集群ID
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
             this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * bucket访问端点。
+         */
+        public Builder ossBucketEndpoint(String ossBucketEndpoint) {
+            this.putBodyParameter("oss_bucket_endpoint", ossBucketEndpoint);
+            this.ossBucketEndpoint = ossBucketEndpoint;
+            return this;
+        }
+
+        /**
+         * bucket名称。
+         */
+        public Builder ossBucketName(String ossBucketName) {
+            this.putBodyParameter("oss_bucket_name", ossBucketName);
+            this.ossBucketName = ossBucketName;
             return this;
         }
 

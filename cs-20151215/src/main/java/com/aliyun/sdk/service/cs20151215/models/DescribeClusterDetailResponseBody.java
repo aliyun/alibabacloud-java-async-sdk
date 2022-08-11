@@ -15,20 +15,17 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     @NameInMap("cluster_id")
     private String clusterId;
 
+    @NameInMap("cluster_spec")
+    private String clusterSpec;
+
     @NameInMap("cluster_type")
     private String clusterType;
 
     @NameInMap("created")
     private String created;
 
-    @NameInMap("init_version")
-    private String initVersion;
-
     @NameInMap("current_version")
     private String currentVersion;
-
-    @NameInMap("next_version")
-    private String nextVersion;
 
     @NameInMap("deletion_protection")
     private Boolean deletionProtection;
@@ -39,6 +36,15 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     @NameInMap("external_loadbalancer_id")
     private String externalLoadbalancerId;
 
+    @NameInMap("init_version")
+    private String initVersion;
+
+    @NameInMap("maintenance_window")
+    private MaintenanceWindow maintenanceWindow;
+
+    @NameInMap("master_url")
+    private String masterUrl;
+
     @NameInMap("meta_data")
     private String metaData;
 
@@ -47,6 +53,15 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
 
     @NameInMap("network_mode")
     private String networkMode;
+
+    @NameInMap("next_version")
+    private String nextVersion;
+
+    @NameInMap("private_zone")
+    private Boolean privateZone;
+
+    @NameInMap("profile")
+    private String profile;
 
     @NameInMap("region_id")
     private String regionId;
@@ -63,6 +78,9 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     @NameInMap("state")
     private String state;
 
+    @NameInMap("subnet_cidr")
+    private String subnetCidr;
+
     @NameInMap("tags")
     private java.util.List < Tag > tags;
 
@@ -75,60 +93,42 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     @NameInMap("vswitch_id")
     private String vswitchId;
 
-    @NameInMap("subnet_cidr")
-    private String subnetCidr;
+    @NameInMap("worker_ram_role_name")
+    private String workerRamRoleName;
 
     @NameInMap("zone_id")
     private String zoneId;
 
-    @NameInMap("master_url")
-    private String masterUrl;
-
-    @NameInMap("private_zone")
-    private Boolean privateZone;
-
-    @NameInMap("profile")
-    private String profile;
-
-    @NameInMap("cluster_spec")
-    private String clusterSpec;
-
-    @NameInMap("worker_ram_role_name")
-    private String workerRamRoleName;
-
-    @NameInMap("maintenance_window")
-    private MaintenanceWindow maintenanceWindow;
-
     private DescribeClusterDetailResponseBody(Builder builder) {
         this.clusterId = builder.clusterId;
+        this.clusterSpec = builder.clusterSpec;
         this.clusterType = builder.clusterType;
         this.created = builder.created;
-        this.initVersion = builder.initVersion;
         this.currentVersion = builder.currentVersion;
-        this.nextVersion = builder.nextVersion;
         this.deletionProtection = builder.deletionProtection;
         this.dockerVersion = builder.dockerVersion;
         this.externalLoadbalancerId = builder.externalLoadbalancerId;
+        this.initVersion = builder.initVersion;
+        this.maintenanceWindow = builder.maintenanceWindow;
+        this.masterUrl = builder.masterUrl;
         this.metaData = builder.metaData;
         this.name = builder.name;
         this.networkMode = builder.networkMode;
+        this.nextVersion = builder.nextVersion;
+        this.privateZone = builder.privateZone;
+        this.profile = builder.profile;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.securityGroupId = builder.securityGroupId;
         this.size = builder.size;
         this.state = builder.state;
+        this.subnetCidr = builder.subnetCidr;
         this.tags = builder.tags;
         this.updated = builder.updated;
         this.vpcId = builder.vpcId;
         this.vswitchId = builder.vswitchId;
-        this.subnetCidr = builder.subnetCidr;
-        this.zoneId = builder.zoneId;
-        this.masterUrl = builder.masterUrl;
-        this.privateZone = builder.privateZone;
-        this.profile = builder.profile;
-        this.clusterSpec = builder.clusterSpec;
         this.workerRamRoleName = builder.workerRamRoleName;
-        this.maintenanceWindow = builder.maintenanceWindow;
+        this.zoneId = builder.zoneId;
     }
 
     public static Builder builder() {
@@ -147,6 +147,13 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     }
 
     /**
+     * @return clusterSpec
+     */
+    public String getClusterSpec() {
+        return this.clusterSpec;
+    }
+
+    /**
      * @return clusterType
      */
     public String getClusterType() {
@@ -161,24 +168,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     }
 
     /**
-     * @return initVersion
-     */
-    public String getInitVersion() {
-        return this.initVersion;
-    }
-
-    /**
      * @return currentVersion
      */
     public String getCurrentVersion() {
         return this.currentVersion;
-    }
-
-    /**
-     * @return nextVersion
-     */
-    public String getNextVersion() {
-        return this.nextVersion;
     }
 
     /**
@@ -203,6 +196,27 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     }
 
     /**
+     * @return initVersion
+     */
+    public String getInitVersion() {
+        return this.initVersion;
+    }
+
+    /**
+     * @return maintenanceWindow
+     */
+    public MaintenanceWindow getMaintenanceWindow() {
+        return this.maintenanceWindow;
+    }
+
+    /**
+     * @return masterUrl
+     */
+    public String getMasterUrl() {
+        return this.masterUrl;
+    }
+
+    /**
      * @return metaData
      */
     public String getMetaData() {
@@ -221,6 +235,27 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
      */
     public String getNetworkMode() {
         return this.networkMode;
+    }
+
+    /**
+     * @return nextVersion
+     */
+    public String getNextVersion() {
+        return this.nextVersion;
+    }
+
+    /**
+     * @return privateZone
+     */
+    public Boolean getPrivateZone() {
+        return this.privateZone;
+    }
+
+    /**
+     * @return profile
+     */
+    public String getProfile() {
+        return this.profile;
     }
 
     /**
@@ -259,6 +294,13 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     }
 
     /**
+     * @return subnetCidr
+     */
+    public String getSubnetCidr() {
+        return this.subnetCidr;
+    }
+
+    /**
      * @return tags
      */
     public java.util.List < Tag > getTags() {
@@ -287,10 +329,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     }
 
     /**
-     * @return subnetCidr
+     * @return workerRamRoleName
      */
-    public String getSubnetCidr() {
-        return this.subnetCidr;
+    public String getWorkerRamRoleName() {
+        return this.workerRamRoleName;
     }
 
     /**
@@ -300,81 +342,39 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         return this.zoneId;
     }
 
-    /**
-     * @return masterUrl
-     */
-    public String getMasterUrl() {
-        return this.masterUrl;
-    }
-
-    /**
-     * @return privateZone
-     */
-    public Boolean getPrivateZone() {
-        return this.privateZone;
-    }
-
-    /**
-     * @return profile
-     */
-    public String getProfile() {
-        return this.profile;
-    }
-
-    /**
-     * @return clusterSpec
-     */
-    public String getClusterSpec() {
-        return this.clusterSpec;
-    }
-
-    /**
-     * @return workerRamRoleName
-     */
-    public String getWorkerRamRoleName() {
-        return this.workerRamRoleName;
-    }
-
-    /**
-     * @return maintenanceWindow
-     */
-    public MaintenanceWindow getMaintenanceWindow() {
-        return this.maintenanceWindow;
-    }
-
     public static final class Builder {
         private String clusterId; 
+        private String clusterSpec; 
         private String clusterType; 
         private String created; 
-        private String initVersion; 
         private String currentVersion; 
-        private String nextVersion; 
         private Boolean deletionProtection; 
         private String dockerVersion; 
         private String externalLoadbalancerId; 
+        private String initVersion; 
+        private MaintenanceWindow maintenanceWindow; 
+        private String masterUrl; 
         private String metaData; 
         private String name; 
         private String networkMode; 
+        private String nextVersion; 
+        private Boolean privateZone; 
+        private String profile; 
         private String regionId; 
         private String resourceGroupId; 
         private String securityGroupId; 
         private Long size; 
         private String state; 
+        private String subnetCidr; 
         private java.util.List < Tag > tags; 
         private String updated; 
         private String vpcId; 
         private String vswitchId; 
-        private String subnetCidr; 
-        private String zoneId; 
-        private String masterUrl; 
-        private Boolean privateZone; 
-        private String profile; 
-        private String clusterSpec; 
         private String workerRamRoleName; 
-        private MaintenanceWindow maintenanceWindow; 
+        private String zoneId; 
 
         /**
-         * The ID of the cluster.
+         * 集群ID。
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -382,267 +382,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the cluster. Valid values:
-         * <p>
-         * 
-         * -"Kubernetes": dedicated cluster.
-         * -"ManagedKubernetes": managed cluster.
-         * -"Ask":Serverless cluster.
-         * -"ExternalKubernetes": registers a cluster.
-         */
-        public Builder clusterType(String clusterType) {
-            this.clusterType = clusterType;
-            return this;
-        }
-
-        /**
-         * The time when the cluster was created.
-         */
-        public Builder created(String created) {
-            this.created = created;
-            return this;
-        }
-
-        /**
-         * The initial version of the cluster.
-         */
-        public Builder initVersion(String initVersion) {
-            this.initVersion = initVersion;
-            return this;
-        }
-
-        /**
-         * The current version of the cluster. For more information about the Kubernetes versions supported by ACK, see [Kubernetes release overview](~~ 185269 ~~).
-         */
-        public Builder currentVersion(String currentVersion) {
-            this.currentVersion = currentVersion;
-            return this;
-        }
-
-        /**
-         * You can upgrade the cluster version.
-         */
-        public Builder nextVersion(String nextVersion) {
-            this.nextVersion = nextVersion;
-            return this;
-        }
-
-        /**
-         * Cluster deletion protection to prevent accidental deletion of clusters through the console or API. Valid values:
-         * <p>
-         * 
-         * -"true": if you enable cluster deletion protection, the cluster cannot be deleted through the console or API.
-         * -"false": if you do not enable cluster deletion protection, you can delete the cluster through the console or API.
-         * 
-         * 
-         */
-        public Builder deletionProtection(Boolean deletionProtection) {
-            this.deletionProtection = deletionProtection;
-            return this;
-        }
-
-        /**
-         * The Docker version in the cluster.
-         */
-        public Builder dockerVersion(String dockerVersion) {
-            this.dockerVersion = dockerVersion;
-            return this;
-        }
-
-        /**
-         * The ID of the cluster Ingress SLB instance.
-         */
-        public Builder externalLoadbalancerId(String externalLoadbalancerId) {
-            this.externalLoadbalancerId = externalLoadbalancerId;
-            return this;
-        }
-
-        /**
-         * The metadata of the cluster.
-         */
-        public Builder metaData(String metaData) {
-            this.metaData = metaData;
-            return this;
-        }
-
-        /**
-         * The name of the cluster.
-         * <p>
-         * 
-         * Naming rule: the name must be 1 to 63 characters in length and cannot start with a hyphen (-). It must be 1 to 63 characters in length.
-         */
-        public Builder name(String name) {
-            this.name = name;
-            return this;
-        }
-
-        /**
-         * The network mode of the cluster. Valid values:
-         * <p>
-         * 
-         * -"classic": classic network.
-         * -"vpc": vpc.
-         * -"overlay": superimposed network.
-         * -"calico":Calico network.
-         * 
-         * Default value: "vpc ".
-         */
-        public Builder networkMode(String networkMode) {
-            this.networkMode = networkMode;
-            return this;
-        }
-
-        /**
-         * The region ID of the cluster.
-         */
-        public Builder regionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The ID of the cluster resource group.
-         */
-        public Builder resourceGroupId(String resourceGroupId) {
-            this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-
-        /**
-         * The ID of the cluster security group.
-         */
-        public Builder securityGroupId(String securityGroupId) {
-            this.securityGroupId = securityGroupId;
-            return this;
-        }
-
-        /**
-         * The number of nodes in the cluster. Valid values: Master nodes and Worker nodes.
-         */
-        public Builder size(Long size) {
-            this.size = size;
-            return this;
-        }
-
-        /**
-         * The running status of the cluster. Valid values:
-         * <p>
-         * 
-         * -"initial": the cluster is being created.
-         * -"failed": cluster creation failed.
-         * -"running": the cluster is running.
-         * -"updating": the cluster is being upgraded.
-         * -"Updating_failed ": Cluster Upgrade failed.
-         * -"scaling": the cluster is scaling.
-         * -"stopped": the cluster has stopped running.
-         * -"deleting": the cluster is being deleted.
-         * -"deleted": the cluster has been deleted.
-         * -"Delete_failed ": the cluster failed to be deleted.
-         */
-        public Builder state(String state) {
-            this.state = state;
-            return this;
-        }
-
-        /**
-         * The tag of the cluster resource.
-         */
-        public Builder tags(java.util.List < Tag > tags) {
-            this.tags = tags;
-            return this;
-        }
-
-        /**
-         * The time when the cluster was updated.
-         */
-        public Builder updated(String updated) {
-            this.updated = updated;
-            return this;
-        }
-
-        /**
-         * The ID of the VPC. This parameter is required when you create a cluster.
-         */
-        public Builder vpcId(String vpcId) {
-            this.vpcId = vpcId;
-            return this;
-        }
-
-        /**
-         * The ID of the vSwitch. You can select one to three vswitches when creating a cluster. To ensure high availability of the cluster, we recommend that you select vswitches in different zones.
-         */
-        public Builder vswitchId(String vswitchId) {
-            this.vswitchId = vswitchId;
-            return this;
-        }
-
-        /**
-         * The Pod CIDR block, which must be a valid private CIDR block, namely the following CIDR blocks and their subnets:
-         * <p>
-         * -10.0.0.0/8
-         * -172.16-31.0.0/12-16
-         * -192.168.0.0/16
-         * 
-         * It cannot be the same as the CIDR block used by the VPC or the existing Kubernetes cluster in the VPC. After the cluster is created, it cannot be modified.
-         * 
-         * For more information about cluster network planning, see [Kubernetes CIDR block planning in VPC](~~ 186964 ~~).
-         */
-        public Builder subnetCidr(String subnetCidr) {
-            this.subnetCidr = subnetCidr;
-            return this;
-        }
-
-        /**
-         * The ID of the zone where the cluster resides.
-         */
-        public Builder zoneId(String zoneId) {
-            this.zoneId = zoneId;
-            return this;
-        }
-
-        /**
-         * The endpoint of the cluster. Valid values: intranet and internet.
-         */
-        public Builder masterUrl(String masterUrl) {
-            this.masterUrl = masterUrl;
-            return this;
-        }
-
-        /**
-         * Configure the cluster Private Zone.
-         * <p>
-         * 
-         * -"true": enables Private Zone.
-         * -"false": disable Private Zone.
-         * 
-         */
-        public Builder privateZone(Boolean privateZone) {
-            this.privateZone = privateZone;
-            return this;
-        }
-
-        /**
-         * Scenario-oriented cluster type:
-         * <p>
-         * 
-         * -"Default": non-edge cluster.
-         * -"Edge": edge scenario cluster.
-         * 
-         * 
-         */
-        public Builder profile(String profile) {
-            this.profile = profile;
-            return this;
-        }
-
-        /**
-         * The type of the managed cluster. Valid values:
-         * <p>
-         * 
-         * -"ack.pro.small": a professional managed cluster.
-         * -"ack.standard": Standard managed cluster.
-         * 
-         * 
+         * 托管版集群类型，面向托管集群。  ack.pro.small：专业托管集群。 ack.standard ：标准托管集群。
          */
         public Builder clusterSpec(String clusterSpec) {
             this.clusterSpec = clusterSpec;
@@ -650,7 +390,207 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Worker RAM role name to authorize the ECS instance to be a cluster Woker node.
+         * 集群类型。
+         */
+        public Builder clusterType(String clusterType) {
+            this.clusterType = clusterType;
+            return this;
+        }
+
+        /**
+         * 集群创建时间。
+         */
+        public Builder created(String created) {
+            this.created = created;
+            return this;
+        }
+
+        /**
+         * 集群当前版本。
+         */
+        public Builder currentVersion(String currentVersion) {
+            this.currentVersion = currentVersion;
+            return this;
+        }
+
+        /**
+         * 集群是否开启删除保护。
+         */
+        public Builder deletionProtection(Boolean deletionProtection) {
+            this.deletionProtection = deletionProtection;
+            return this;
+        }
+
+        /**
+         * 集群内Docker版本。
+         */
+        public Builder dockerVersion(String dockerVersion) {
+            this.dockerVersion = dockerVersion;
+            return this;
+        }
+
+        /**
+         * 集群Ingress LB实例ID。
+         */
+        public Builder externalLoadbalancerId(String externalLoadbalancerId) {
+            this.externalLoadbalancerId = externalLoadbalancerId;
+            return this;
+        }
+
+        /**
+         * 集群初始化版本。
+         */
+        public Builder initVersion(String initVersion) {
+            this.initVersion = initVersion;
+            return this;
+        }
+
+        /**
+         * maintenance_window.
+         */
+        public Builder maintenanceWindow(MaintenanceWindow maintenanceWindow) {
+            this.maintenanceWindow = maintenanceWindow;
+            return this;
+        }
+
+        /**
+         * 集群访问地址。
+         */
+        public Builder masterUrl(String masterUrl) {
+            this.masterUrl = masterUrl;
+            return this;
+        }
+
+        /**
+         * 集群元数据。
+         */
+        public Builder metaData(String metaData) {
+            this.metaData = metaData;
+            return this;
+        }
+
+        /**
+         * 集群名称。
+         */
+        public Builder name(String name) {
+            this.name = name;
+            return this;
+        }
+
+        /**
+         * 集群采用的网络类型，例如：VPC网络。
+         */
+        public Builder networkMode(String networkMode) {
+            this.networkMode = networkMode;
+            return this;
+        }
+
+        /**
+         * 集群可升级版本。
+         */
+        public Builder nextVersion(String nextVersion) {
+            this.nextVersion = nextVersion;
+            return this;
+        }
+
+        /**
+         * 集群是否启用用PrivateZone。  true：启用 false：不启用 默认值：false。
+         */
+        public Builder privateZone(Boolean privateZone) {
+            this.privateZone = privateZone;
+            return this;
+        }
+
+        /**
+         * 面向场景时的集群类型。  Default：非边缘场景集群。 Edge：边缘场景集群。
+         */
+        public Builder profile(String profile) {
+            this.profile = profile;
+            return this;
+        }
+
+        /**
+         * 集群所在地域ID。
+         */
+        public Builder regionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * 集群资源组ID。
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * 集群安全组ID。
+         */
+        public Builder securityGroupId(String securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+
+        /**
+         * 集群节点数量。
+         */
+        public Builder size(Long size) {
+            this.size = size;
+            return this;
+        }
+
+        /**
+         * 集群运行状态。
+         */
+        public Builder state(String state) {
+            this.state = state;
+            return this;
+        }
+
+        /**
+         * Pod网络地址段，必须是有效的私有网段，即以下网段及其子网：10.0.0.0/8，172.16-31.0.0/12-16，192.168.0.0/16。不能与 VPC 及VPC 内已有 Kubernetes 集群使用的网段重复，创建成功后不能修改。  有关集群网络规划，请参见：[VPC下 Kubernetes 的网络地址段规划](https://help.aliyun.com/document_detail/～～86500～～)。
+         */
+        public Builder subnetCidr(String subnetCidr) {
+            this.subnetCidr = subnetCidr;
+            return this;
+        }
+
+        /**
+         * 集群标签。
+         */
+        public Builder tags(java.util.List < Tag > tags) {
+            this.tags = tags;
+            return this;
+        }
+
+        /**
+         * 集群更新时间。
+         */
+        public Builder updated(String updated) {
+            this.updated = updated;
+            return this;
+        }
+
+        /**
+         * 集群使用的VPC ID。
+         */
+        public Builder vpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+
+        /**
+         * 集群节点使用的虚拟交换机列表。
+         */
+        public Builder vswitchId(String vswitchId) {
+            this.vswitchId = vswitchId;
+            return this;
+        }
+
+        /**
+         * Worker节点RAM角色名称。
          */
         public Builder workerRamRoleName(String workerRamRoleName) {
             this.workerRamRoleName = workerRamRoleName;
@@ -658,10 +598,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The cluster maintenance window configuration takes effect only in the professional managed version (that is, the ACK Pro version of the cluster).
+         * 集群所在地域内的可用区ID。
          */
-        public Builder maintenanceWindow(MaintenanceWindow maintenanceWindow) {
-            this.maintenanceWindow = maintenanceWindow;
+        public Builder zoneId(String zoneId) {
+            this.zoneId = zoneId;
             return this;
         }
 

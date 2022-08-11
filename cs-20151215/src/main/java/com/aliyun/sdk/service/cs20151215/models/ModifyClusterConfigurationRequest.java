@@ -69,7 +69,7 @@ public class ModifyClusterConfigurationRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * 集群ID。
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -78,7 +78,7 @@ public class ModifyClusterConfigurationRequest extends Request {
         }
 
         /**
-         * Custom configuration.
+         * 自定义配置。
          */
         public Builder customizeConfig(java.util.List < CustomizeConfig> customizeConfig) {
             this.putBodyParameter("customize_config", customizeConfig);
@@ -132,7 +132,7 @@ public class ModifyClusterConfigurationRequest extends Request {
             private String value; 
 
             /**
-             * The name of the configuration item.
+             * key值。
              */
             public Builder key(String key) {
                 this.key = key;
@@ -140,7 +140,7 @@ public class ModifyClusterConfigurationRequest extends Request {
             }
 
             /**
-             * The value of the configuration item.
+             * value值。
              */
             public Builder value(String value) {
                 this.value = value;
@@ -155,15 +155,15 @@ public class ModifyClusterConfigurationRequest extends Request {
 
     }
     public static class CustomizeConfig extends TeaModel {
-        @NameInMap("name")
-        private String name;
-
         @NameInMap("configs")
         private java.util.List < Configs> configs;
 
+        @NameInMap("name")
+        private String name;
+
         private CustomizeConfig(Builder builder) {
-            this.name = builder.name;
             this.configs = builder.configs;
+            this.name = builder.name;
         }
 
         public static Builder builder() {
@@ -175,36 +175,36 @@ public class ModifyClusterConfigurationRequest extends Request {
         }
 
         /**
-         * @return name
-         */
-        public String getName() {
-            return this.name;
-        }
-
-        /**
          * @return configs
          */
         public java.util.List < Configs> getConfigs() {
             return this.configs;
         }
 
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
         public static final class Builder {
-            private String name; 
             private java.util.List < Configs> configs; 
+            private String name; 
 
             /**
-             * The name of the component.
+             * 组件配置。
              */
-            public Builder name(String name) {
-                this.name = name;
+            public Builder configs(java.util.List < Configs> configs) {
+                this.configs = configs;
                 return this;
             }
 
             /**
-             * The custom configuration information.
+             * 组件名称。
              */
-            public Builder configs(java.util.List < Configs> configs) {
-                this.configs = configs;
+            public Builder name(String name) {
+                this.name = name;
                 return this;
             }
 

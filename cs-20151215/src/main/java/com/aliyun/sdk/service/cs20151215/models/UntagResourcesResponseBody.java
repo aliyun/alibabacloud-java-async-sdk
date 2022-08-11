@@ -38,7 +38,7 @@ public class UntagResourcesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The id of the request.
+         * 请求id。
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

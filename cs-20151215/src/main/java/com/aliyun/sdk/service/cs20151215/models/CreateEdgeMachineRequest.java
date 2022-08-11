@@ -18,20 +18,20 @@ public class CreateEdgeMachineRequest extends Request {
     private String hostname;
 
     @Body
-    @NameInMap("sn")
-    @Validation(required = true)
-    private String sn;
-
-    @Body
     @NameInMap("model")
     @Validation(required = true)
     private String model;
 
+    @Body
+    @NameInMap("sn")
+    @Validation(required = true)
+    private String sn;
+
     private CreateEdgeMachineRequest(Builder builder) {
         super(builder);
         this.hostname = builder.hostname;
-        this.sn = builder.sn;
         this.model = builder.model;
+        this.sn = builder.sn;
     }
 
     public static Builder builder() {
@@ -55,23 +55,23 @@ public class CreateEdgeMachineRequest extends Request {
     }
 
     /**
-     * @return sn
-     */
-    public String getSn() {
-        return this.sn;
-    }
-
-    /**
      * @return model
      */
     public String getModel() {
         return this.model;
     }
 
+    /**
+     * @return sn
+     */
+    public String getSn() {
+        return this.sn;
+    }
+
     public static final class Builder extends Request.Builder<CreateEdgeMachineRequest, Builder> {
         private String hostname; 
-        private String sn; 
         private String model; 
+        private String sn; 
 
         private Builder() {
             super();
@@ -80,15 +80,12 @@ public class CreateEdgeMachineRequest extends Request {
         private Builder(CreateEdgeMachineRequest request) {
             super(request);
             this.hostname = request.hostname;
-            this.sn = request.sn;
             this.model = request.model;
+            this.sn = request.sn;
         } 
 
         /**
-         * Cloud-native all-in-one machine "hostname ".
-         * <p>
-         * 
-         * > after the cloud-native all-in-one machine is activated, the "hostname" of the host is automatically modified. The "hostname" is prefixed with the product model, followed by a random string.
+         * hostname
          */
         public Builder hostname(String hostname) {
             this.putBodyParameter("hostname", hostname);
@@ -97,20 +94,20 @@ public class CreateEdgeMachineRequest extends Request {
         }
 
         /**
-         * SN serial number of cloud native all-in-one machine
-         */
-        public Builder sn(String sn) {
-            this.putBodyParameter("sn", sn);
-            this.sn = sn;
-            return this;
-        }
-
-        /**
-         * Cloud Native all-in-one machine model
+         * model
          */
         public Builder model(String model) {
             this.putBodyParameter("model", model);
             this.model = model;
+            return this;
+        }
+
+        /**
+         * sn
+         */
+        public Builder sn(String sn) {
+            this.putBodyParameter("sn", sn);
+            this.sn = sn;
             return this;
         }
 

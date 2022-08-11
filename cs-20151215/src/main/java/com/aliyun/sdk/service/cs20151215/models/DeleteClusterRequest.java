@@ -18,6 +18,10 @@ public class DeleteClusterRequest extends Request {
     private String clusterId;
 
     @Query
+    @NameInMap("keep_slb")
+    private Boolean keepSlb;
+
+    @Query
     @NameInMap("retain_all_resources")
     private Boolean retainAllResources;
 
@@ -25,16 +29,12 @@ public class DeleteClusterRequest extends Request {
     @NameInMap("retain_resources")
     private java.util.List < String > retainResources;
 
-    @Query
-    @NameInMap("keep_slb")
-    private Boolean keepSlb;
-
     private DeleteClusterRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
+        this.keepSlb = builder.keepSlb;
         this.retainAllResources = builder.retainAllResources;
         this.retainResources = builder.retainResources;
-        this.keepSlb = builder.keepSlb;
     }
 
     public static Builder builder() {
@@ -58,6 +58,13 @@ public class DeleteClusterRequest extends Request {
     }
 
     /**
+     * @return keepSlb
+     */
+    public Boolean getKeepSlb() {
+        return this.keepSlb;
+    }
+
+    /**
      * @return retainAllResources
      */
     public Boolean getRetainAllResources() {
@@ -71,18 +78,11 @@ public class DeleteClusterRequest extends Request {
         return this.retainResources;
     }
 
-    /**
-     * @return keepSlb
-     */
-    public Boolean getKeepSlb() {
-        return this.keepSlb;
-    }
-
     public static final class Builder extends Request.Builder<DeleteClusterRequest, Builder> {
         private String clusterId; 
+        private Boolean keepSlb; 
         private Boolean retainAllResources; 
         private java.util.List < String > retainResources; 
-        private Boolean keepSlb; 
 
         private Builder() {
             super();
@@ -91,13 +91,13 @@ public class DeleteClusterRequest extends Request {
         private Builder(DeleteClusterRequest request) {
             super(request);
             this.clusterId = request.clusterId;
+            this.keepSlb = request.keepSlb;
             this.retainAllResources = request.retainAllResources;
             this.retainResources = request.retainResources;
-            this.keepSlb = request.keepSlb;
         } 
 
         /**
-         * The ID of the cluster.
+         * 集群ID。
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -106,13 +106,16 @@ public class DeleteClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to retain all resources. If the value is set to "true", "retain_resource" is ignored ".
-         * <p>
-         * 
-         * -"true": retain all resources.
-         * -"false": does not retain all resources.
-         * 
-         * Default value: "false ".
+         * 是否保留SLB。  true：保留 false：不保留 默认值：false。
+         */
+        public Builder keepSlb(Boolean keepSlb) {
+            this.putQueryParameter("keep_slb", keepSlb);
+            this.keepSlb = keepSlb;
+            return this;
+        }
+
+        /**
+         * 是否保留所有资源,如果设置了该值，将会忽略retain_resources。  true：保留 false：不保留 默认值：fase。
          */
         public Builder retainAllResources(Boolean retainAllResources) {
             this.putQueryParameter("retain_all_resources", retainAllResources);
@@ -121,26 +124,12 @@ public class DeleteClusterRequest extends Request {
         }
 
         /**
-         * The list of resources. If you want to retain resources when deleting a cluster, you must provide the ID of the corresponding resource.
+         * 要保留的资源列表。
          */
         public Builder retainResources(java.util.List < String > retainResources) {
-            this.putQueryParameter("retain_resources", retainResources);
+            String retainResourcesShrink = shrink(retainResources, "retain_resources", "json");
+            this.putQueryParameter("retain_resources", retainResourcesShrink);
             this.retainResources = retainResources;
-            return this;
-        }
-
-        /**
-         * Specifies whether to retain the SLB instance. Valid values:
-         * <p>
-         * 
-         * -"true": retain the created SLB resources.
-         * -"false": the created SLB resources are not retained.
-         * 
-         * Default value: "false ".
-         */
-        public Builder keepSlb(Boolean keepSlb) {
-            this.putQueryParameter("keep_slb", keepSlb);
-            this.keepSlb = keepSlb;
             return this;
         }
 

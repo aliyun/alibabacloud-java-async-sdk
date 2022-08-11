@@ -13,24 +13,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeEdgeMachinesRequest extends Request {
     @Query
-    @NameInMap("model")
-    private String model;
-
-    @Query
-    @NameInMap("page_number")
-    private Long pageNumber;
-
-    @Query
     @NameInMap("hostname")
     private String hostname;
+
+    @Query
+    @NameInMap("life_state")
+    private String lifeState;
+
+    @Query
+    @NameInMap("model")
+    private String model;
 
     @Query
     @NameInMap("online_state")
     private String onlineState;
 
     @Query
-    @NameInMap("life_state")
-    private String lifeState;
+    @NameInMap("page_number")
+    private Long pageNumber;
 
     @Query
     @NameInMap("page_size")
@@ -38,11 +38,11 @@ public class DescribeEdgeMachinesRequest extends Request {
 
     private DescribeEdgeMachinesRequest(Builder builder) {
         super(builder);
-        this.model = builder.model;
-        this.pageNumber = builder.pageNumber;
         this.hostname = builder.hostname;
-        this.onlineState = builder.onlineState;
         this.lifeState = builder.lifeState;
+        this.model = builder.model;
+        this.onlineState = builder.onlineState;
+        this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
     }
 
@@ -60,31 +60,10 @@ public class DescribeEdgeMachinesRequest extends Request {
     }
 
     /**
-     * @return model
-     */
-    public String getModel() {
-        return this.model;
-    }
-
-    /**
-     * @return pageNumber
-     */
-    public Long getPageNumber() {
-        return this.pageNumber;
-    }
-
-    /**
      * @return hostname
      */
     public String getHostname() {
         return this.hostname;
-    }
-
-    /**
-     * @return onlineState
-     */
-    public String getOnlineState() {
-        return this.onlineState;
     }
 
     /**
@@ -95,6 +74,27 @@ public class DescribeEdgeMachinesRequest extends Request {
     }
 
     /**
+     * @return model
+     */
+    public String getModel() {
+        return this.model;
+    }
+
+    /**
+     * @return onlineState
+     */
+    public String getOnlineState() {
+        return this.onlineState;
+    }
+
+    /**
+     * @return pageNumber
+     */
+    public Long getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
      * @return pageSize
      */
     public Long getPageSize() {
@@ -102,11 +102,11 @@ public class DescribeEdgeMachinesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeEdgeMachinesRequest, Builder> {
-        private String model; 
-        private Long pageNumber; 
         private String hostname; 
-        private String onlineState; 
         private String lifeState; 
+        private String model; 
+        private String onlineState; 
+        private Long pageNumber; 
         private Long pageSize; 
 
         private Builder() {
@@ -115,34 +115,16 @@ public class DescribeEdgeMachinesRequest extends Request {
 
         private Builder(DescribeEdgeMachinesRequest request) {
             super(request);
-            this.model = request.model;
-            this.pageNumber = request.pageNumber;
             this.hostname = request.hostname;
-            this.onlineState = request.onlineState;
             this.lifeState = request.lifeState;
+            this.model = request.model;
+            this.onlineState = request.onlineState;
+            this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
         } 
 
         /**
-         * Cloud-native all-in-one machine type
-         */
-        public Builder model(String model) {
-            this.putQueryParameter("model", model);
-            this.model = model;
-            return this;
-        }
-
-        /**
-         * Current page number
-         */
-        public Builder pageNumber(Long pageNumber) {
-            this.putQueryParameter("page_number", pageNumber);
-            this.pageNumber = pageNumber;
-            return this;
-        }
-
-        /**
-         * Cloud-native all-in-one machine "hostname"
+         * host name
          */
         public Builder hostname(String hostname) {
             this.putQueryParameter("hostname", hostname);
@@ -151,21 +133,7 @@ public class DescribeEdgeMachinesRequest extends Request {
         }
 
         /**
-         * The online status of the cloud-native all-in-one machine. Valid values:
-         * <p>
-         * 
-         * -"offline": Offline
-         * 
-         * -"online": online
-         */
-        public Builder onlineState(String onlineState) {
-            this.putQueryParameter("online_state", onlineState);
-            this.onlineState = onlineState;
-            return this;
-        }
-
-        /**
-         * Lifecycle status
+         * life state
          */
         public Builder lifeState(String lifeState) {
             this.putQueryParameter("life_state", lifeState);
@@ -174,7 +142,34 @@ public class DescribeEdgeMachinesRequest extends Request {
         }
 
         /**
-         * Number of records displayed per page
+         * model
+         */
+        public Builder model(String model) {
+            this.putQueryParameter("model", model);
+            this.model = model;
+            return this;
+        }
+
+        /**
+         * online state
+         */
+        public Builder onlineState(String onlineState) {
+            this.putQueryParameter("online_state", onlineState);
+            this.onlineState = onlineState;
+            return this;
+        }
+
+        /**
+         * page number
+         */
+        public Builder pageNumber(Long pageNumber) {
+            this.putQueryParameter("page_number", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * page size
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("page_size", pageSize);

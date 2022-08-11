@@ -23,10 +23,6 @@ public class EdgeClusterAddEdgeMachineRequest extends Request {
     private String edgeMachineid;
 
     @Body
-    @NameInMap("options")
-    private String options;
-
-    @Body
     @NameInMap("expired")
     private Long expired;
 
@@ -35,13 +31,17 @@ public class EdgeClusterAddEdgeMachineRequest extends Request {
     @Validation(required = true)
     private String nodepoolId;
 
+    @Body
+    @NameInMap("options")
+    private String options;
+
     private EdgeClusterAddEdgeMachineRequest(Builder builder) {
         super(builder);
         this.clusterid = builder.clusterid;
         this.edgeMachineid = builder.edgeMachineid;
-        this.options = builder.options;
         this.expired = builder.expired;
         this.nodepoolId = builder.nodepoolId;
+        this.options = builder.options;
     }
 
     public static Builder builder() {
@@ -72,13 +72,6 @@ public class EdgeClusterAddEdgeMachineRequest extends Request {
     }
 
     /**
-     * @return options
-     */
-    public String getOptions() {
-        return this.options;
-    }
-
-    /**
      * @return expired
      */
     public Long getExpired() {
@@ -92,12 +85,19 @@ public class EdgeClusterAddEdgeMachineRequest extends Request {
         return this.nodepoolId;
     }
 
+    /**
+     * @return options
+     */
+    public String getOptions() {
+        return this.options;
+    }
+
     public static final class Builder extends Request.Builder<EdgeClusterAddEdgeMachineRequest, Builder> {
         private String clusterid; 
         private String edgeMachineid; 
-        private String options; 
         private Long expired; 
         private String nodepoolId; 
+        private String options; 
 
         private Builder() {
             super();
@@ -107,13 +107,13 @@ public class EdgeClusterAddEdgeMachineRequest extends Request {
             super(request);
             this.clusterid = request.clusterid;
             this.edgeMachineid = request.edgeMachineid;
-            this.options = request.options;
             this.expired = request.expired;
             this.nodepoolId = request.nodepoolId;
+            this.options = request.options;
         } 
 
         /**
-         * The ID of the cluster.
+         * cluster id
          */
         public Builder clusterid(String clusterid) {
             this.putPathParameter("clusterid", clusterid);
@@ -122,7 +122,7 @@ public class EdgeClusterAddEdgeMachineRequest extends Request {
         }
 
         /**
-         * The ID of the cloud-native all-in-one machine.
+         * edge machine id
          */
         public Builder edgeMachineid(String edgeMachineid) {
             this.putPathParameter("edge_machineid", edgeMachineid);
@@ -131,16 +131,7 @@ public class EdgeClusterAddEdgeMachineRequest extends Request {
         }
 
         /**
-         * Optional
-         */
-        public Builder options(String options) {
-            this.putBodyParameter("options", options);
-            this.options = options;
-            return this;
-        }
-
-        /**
-         * Timeout period
+         * expired
          */
         public Builder expired(Long expired) {
             this.putBodyParameter("expired", expired);
@@ -149,11 +140,20 @@ public class EdgeClusterAddEdgeMachineRequest extends Request {
         }
 
         /**
-         * The ID of the node pool.
+         * nodepool_id
          */
         public Builder nodepoolId(String nodepoolId) {
             this.putBodyParameter("nodepool_id", nodepoolId);
             this.nodepoolId = nodepoolId;
+            return this;
+        }
+
+        /**
+         * options
+         */
+        public Builder options(String options) {
+            this.putBodyParameter("options", options);
+            this.options = options;
             return this;
         }
 

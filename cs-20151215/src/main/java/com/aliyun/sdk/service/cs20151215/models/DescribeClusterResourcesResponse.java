@@ -120,6 +120,9 @@ public class DescribeClusterResourcesResponse extends Response {
         @NameInMap("state")
         private String state;
 
+        @NameInMap("auto_create")
+        private Long autoCreate;
+
         private DescribeClusterResourcesResponseBody(Builder builder) {
             this.clusterId = builder.clusterId;
             this.created = builder.created;
@@ -127,6 +130,7 @@ public class DescribeClusterResourcesResponse extends Response {
             this.resourceInfo = builder.resourceInfo;
             this.resourceType = builder.resourceType;
             this.state = builder.state;
+            this.autoCreate = builder.autoCreate;
         }
 
         public static Builder builder() {
@@ -179,6 +183,13 @@ public class DescribeClusterResourcesResponse extends Response {
             return this.state;
         }
 
+        /**
+         * @return autoCreate
+         */
+        public Long getAutoCreate() {
+            return this.autoCreate;
+        }
+
         public static final class Builder {
             private String clusterId; 
             private String created; 
@@ -186,6 +197,7 @@ public class DescribeClusterResourcesResponse extends Response {
             private String resourceInfo; 
             private String resourceType; 
             private String state; 
+            private Long autoCreate; 
 
             /**
              * 集群ID。
@@ -204,7 +216,7 @@ public class DescribeClusterResourcesResponse extends Response {
             }
 
             /**
-             * 资源ID。
+             * 资源实例ID。
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -212,7 +224,7 @@ public class DescribeClusterResourcesResponse extends Response {
             }
 
             /**
-             * 资源信息。关于资源的源信息，请参见[ListStackResources](~~133836~~)。
+             * 资源元信息。
              */
             public Builder resourceInfo(String resourceInfo) {
                 this.resourceInfo = resourceInfo;
@@ -228,20 +240,18 @@ public class DescribeClusterResourcesResponse extends Response {
             }
 
             /**
-             * 资源状态。可选值：
-             * <p>
-             * 
-             * - `CREATE_COMPLETE`：成功创建资源。
-             * - `CREATE_FAILED`：创建资源失败。
-             * - `CREATE_IN_PROGRESS`：创建资源中。
-             * - `DELETE_FAILED`：删除资源失败。
-             * - `DELETE_IN_PROGRESS`：删除资源中。
-             * - `ROLLBACK_COMPLETE`：成功回滚。
-             * - `ROLLBACK_FAILED`：回滚失败。
-             * - `ROLLBACK_IN_PROGRESS`：回滚中。
+             * 资源状态。
              */
             public Builder state(String state) {
                 this.state = state;
+                return this;
+            }
+
+            /**
+             * 是否为自动创建。
+             */
+            public Builder autoCreate(Long autoCreate) {
+                this.autoCreate = autoCreate;
                 return this;
             }
 

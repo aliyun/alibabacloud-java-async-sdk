@@ -18,6 +18,14 @@ public class DescribeClusterNodesRequest extends Request {
     private String clusterId;
 
     @Query
+    @NameInMap("instanceIds")
+    private String instanceIds;
+
+    @Query
+    @NameInMap("nodepool_id")
+    private String nodepoolId;
+
+    @Query
     @NameInMap("pageNumber")
     private String pageNumber;
 
@@ -26,25 +34,17 @@ public class DescribeClusterNodesRequest extends Request {
     private String pageSize;
 
     @Query
-    @NameInMap("nodepool_id")
-    private String nodepoolId;
-
-    @Query
     @NameInMap("state")
     private String state;
-
-    @Query
-    @NameInMap("instanceIds")
-    private String instanceIds;
 
     private DescribeClusterNodesRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
+        this.instanceIds = builder.instanceIds;
+        this.nodepoolId = builder.nodepoolId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.nodepoolId = builder.nodepoolId;
         this.state = builder.state;
-        this.instanceIds = builder.instanceIds;
     }
 
     public static Builder builder() {
@@ -68,6 +68,20 @@ public class DescribeClusterNodesRequest extends Request {
     }
 
     /**
+     * @return instanceIds
+     */
+    public String getInstanceIds() {
+        return this.instanceIds;
+    }
+
+    /**
+     * @return nodepoolId
+     */
+    public String getNodepoolId() {
+        return this.nodepoolId;
+    }
+
+    /**
      * @return pageNumber
      */
     public String getPageNumber() {
@@ -82,33 +96,19 @@ public class DescribeClusterNodesRequest extends Request {
     }
 
     /**
-     * @return nodepoolId
-     */
-    public String getNodepoolId() {
-        return this.nodepoolId;
-    }
-
-    /**
      * @return state
      */
     public String getState() {
         return this.state;
     }
 
-    /**
-     * @return instanceIds
-     */
-    public String getInstanceIds() {
-        return this.instanceIds;
-    }
-
     public static final class Builder extends Request.Builder<DescribeClusterNodesRequest, Builder> {
         private String clusterId; 
+        private String instanceIds; 
+        private String nodepoolId; 
         private String pageNumber; 
         private String pageSize; 
-        private String nodepoolId; 
         private String state; 
-        private String instanceIds; 
 
         private Builder() {
             super();
@@ -117,15 +117,15 @@ public class DescribeClusterNodesRequest extends Request {
         private Builder(DescribeClusterNodesRequest request) {
             super(request);
             this.clusterId = request.clusterId;
+            this.instanceIds = request.instanceIds;
+            this.nodepoolId = request.nodepoolId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
-            this.nodepoolId = request.nodepoolId;
             this.state = request.state;
-            this.instanceIds = request.instanceIds;
         } 
 
         /**
-         * The ID of the cluster.
+         * 集群ID。
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -134,31 +134,16 @@ public class DescribeClusterNodesRequest extends Request {
         }
 
         /**
-         * The page number.
-         * <p>
-         * 
-         * Default value: 1.
+         * 节点实例ID，按照实例ID进行过滤。  节点池ID不为空时会忽略此字段。多节点用逗号分割
          */
-        public Builder pageNumber(String pageNumber) {
-            this.putQueryParameter("pageNumber", pageNumber);
-            this.pageNumber = pageNumber;
+        public Builder instanceIds(String instanceIds) {
+            this.putQueryParameter("instanceIds", instanceIds);
+            this.instanceIds = instanceIds;
             return this;
         }
 
         /**
-         * The number of records displayed on each page. Valid values: 1 to 100.
-         * <p>
-         * 
-         * Default value: 10.
-         */
-        public Builder pageSize(String pageSize) {
-            this.putQueryParameter("pageSize", pageSize);
-            this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * The ID of the node pool.
+         * 节点池ID。
          */
         public Builder nodepoolId(String nodepoolId) {
             this.putQueryParameter("nodepool_id", nodepoolId);
@@ -167,29 +152,29 @@ public class DescribeClusterNodesRequest extends Request {
         }
 
         /**
-         * The status of the cluster node. Valid values:
-         * <p>
-         * 
-         * -"all": cluster nodes in the following four states.
-         * -"running": the running cluster node.
-         * -"removing": the cluster node that is being deleted.
-         * -"initial": the cluster node that is being initialized.
-         * -"failed": the cluster node fails to be created.
-         * 
-         * Default value: "all ".
+         * 分页数量
          */
-        public Builder state(String state) {
-            this.putQueryParameter("state", state);
-            this.state = state;
+        public Builder pageNumber(String pageNumber) {
+            this.putQueryParameter("pageNumber", pageNumber);
+            this.pageNumber = pageNumber;
             return this;
         }
 
         /**
-         * The list of node instance ids. Separate multiple node ids with commas (,).
+         * 每页大小。
          */
-        public Builder instanceIds(String instanceIds) {
-            this.putQueryParameter("instanceIds", instanceIds);
-            this.instanceIds = instanceIds;
+        public Builder pageSize(String pageSize) {
+            this.putQueryParameter("pageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * 节点状态。默认值：all。
+         */
+        public Builder state(String state) {
+            this.putQueryParameter("state", state);
+            this.state = state;
             return this;
         }
 

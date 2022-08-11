@@ -125,7 +125,7 @@ public class UpdateTemplateRequest extends Request {
         } 
 
         /**
-         * The ID of the template.
+         * 部署模板ID。
          */
         public Builder templateId(String templateId) {
             this.putPathParameter("TemplateId", templateId);
@@ -134,7 +134,7 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * The description of the deployment template.
+         * 部署模板描述信息。
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -143,7 +143,7 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * The name of the deployment template.
+         * 部署模板名称。
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -152,7 +152,7 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * The tag of the deployment template.
+         * 部署模板标签
          */
         public Builder tags(String tags) {
             this.putBodyParameter("tags", tags);
@@ -161,7 +161,7 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * The content of the YAML template.
+         * 部署模板yaml。
          */
         public Builder template(String template) {
             this.putBodyParameter("template", template);
@@ -170,13 +170,7 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * The type of the template. The value can be any value.
-         * <p>
-         * 
-         * -If the value is "kubernetes", the template is displayed on the orchestration Template page in the console.
-         * 
-         * -If the value is "compose", the template is displayed on the Swarm cluster page in the console (deprecated).
-         * 
+         * 部署模板类型。
          */
         public Builder templateType(String templateType) {
             this.putBodyParameter("template_type", templateType);

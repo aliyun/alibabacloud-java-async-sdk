@@ -83,10 +83,7 @@ public class DescribeTemplatesRequest extends Request {
         } 
 
         /**
-         * You can call this operation to process the query results by Page and specify the number of pages to return.
-         * <p>
-         * 
-         * Default value: 1.
+         * 对查询结果进行分页处理，指定返回第几页的数据。  默认值为 1
          */
         public Builder pageNum(Long pageNum) {
             this.putQueryParameter("page_num", pageNum);
@@ -95,10 +92,7 @@ public class DescribeTemplatesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
-         * 
-         * Default value: 10.
+         * 对查询结果进行分页处理，指定每页包含的数据条数。  默认值为 10
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("page_size", pageSize);
@@ -107,14 +101,7 @@ public class DescribeTemplatesRequest extends Request {
         }
 
         /**
-         * The type of the template. The value can be any value.
-         * <p>
-         * 
-         * -If the value is "kubernetes", the template is displayed on the orchestration Template page in the console.
-         * 
-         * -If the value is "compose", the template is not displayed on the orchestration Template page in the console.
-         * 
-         * Default value: "kubernetes ".
+         * 模板类型，部署模板类型，目前一共有2种类型，取值为：kubernetes或compose。
          */
         public Builder templateType(String templateType) {
             this.putQueryParameter("template_type", templateType);

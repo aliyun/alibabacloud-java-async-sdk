@@ -24,6 +24,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CancelComponentUpgradeResponse> cancelComponentUpgrade(CancelComponentUpgradeRequest request);
 
+    CompletableFuture<CancelTaskResponse> cancelTask(CancelTaskRequest request);
+
     CompletableFuture<CancelWorkflowResponse> cancelWorkflow(CancelWorkflowRequest request);
 
     CompletableFuture<CreateAutoscalingConfigResponse> createAutoscalingConfig(CreateAutoscalingConfigRequest request);
@@ -48,9 +50,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteClusterNodepoolResponse> deleteClusterNodepool(DeleteClusterNodepoolRequest request);
 
-    /**
-     * >-removing a node involves Pod migration and may affect your business. -Unexpected risks may occur during operation. Please back up relevant data in advance. -During the operation, the background sets the current node to unschedulable. -Remove nodes only remove Worker nodes, not Master nodes.
-     */
     CompletableFuture<DeleteClusterNodesResponse> deleteClusterNodes(DeleteClusterNodesRequest request);
 
     CompletableFuture<DeleteEdgeMachineResponse> deleteEdgeMachine(DeleteEdgeMachineRequest request);
@@ -81,9 +80,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeClusterDetailResponse> describeClusterDetail(DescribeClusterDetailRequest request);
 
-    CompletableFuture<DescribeClusterLogsResponse> describeClusterLogs(DescribeClusterLogsRequest request);
+    CompletableFuture<DescribeClusterEventsResponse> describeClusterEvents(DescribeClusterEventsRequest request);
 
-    CompletableFuture<DescribeClusterNamespacesResponse> describeClusterNamespaces(DescribeClusterNamespacesRequest request);
+    CompletableFuture<DescribeClusterLogsResponse> describeClusterLogs(DescribeClusterLogsRequest request);
 
     CompletableFuture<DescribeClusterNodePoolDetailResponse> describeClusterNodePoolDetail(DescribeClusterNodePoolDetailRequest request);
 
@@ -92,6 +91,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeClusterNodesResponse> describeClusterNodes(DescribeClusterNodesRequest request);
 
     CompletableFuture<DescribeClusterResourcesResponse> describeClusterResources(DescribeClusterResourcesRequest request);
+
+    CompletableFuture<DescribeClusterTasksResponse> describeClusterTasks(DescribeClusterTasksRequest request);
 
     CompletableFuture<DescribeClusterUserKubeconfigResponse> describeClusterUserKubeconfig(DescribeClusterUserKubeconfigRequest request);
 
@@ -111,12 +112,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeEventsResponse> describeEvents(DescribeEventsRequest request);
 
-    /**
-     * For more information about cluster access, see [register an external Kubernetes cluster](~~ 121053 ~~).
-     */
     CompletableFuture<DescribeExternalAgentResponse> describeExternalAgent(DescribeExternalAgentRequest request);
 
     CompletableFuture<DescribeKubernetesVersionMetadataResponse> describeKubernetesVersionMetadata(DescribeKubernetesVersionMetadataRequest request);
+
+    CompletableFuture<DescribeNodePoolVulsResponse> describeNodePoolVuls(DescribeNodePoolVulsRequest request);
 
     CompletableFuture<DescribePoliciesResponse> describePolicies(DescribePoliciesRequest request);
 
@@ -144,19 +144,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<EdgeClusterAddEdgeMachineResponse> edgeClusterAddEdgeMachine(EdgeClusterAddEdgeMachineRequest request);
 
+    CompletableFuture<FixNodePoolVulsResponse> fixNodePoolVuls(FixNodePoolVulsRequest request);
+
     CompletableFuture<GetKubernetesTriggerResponse> getKubernetesTrigger(GetKubernetesTriggerRequest request);
 
     CompletableFuture<GetUpgradeStatusResponse> getUpgradeStatus(GetUpgradeStatusRequest request);
 
-    /**
-     * **Precautions * *:
-    
-    -Make sure that the RAM user has been granted the read-only permission to the target cluster in the RAM console. Otherwise, the API returns the error code "ErrorRamPolicyConfig.
-    For more information about RAM authorization, see [custom RAM authorization policy](~~ 86485 ~~).
-    -If the account that calls this API is a RAM user account, make sure that the account has the permission to modify the authorization information of other RAM user clusters. Otherwise, the API returns "StatusForbidden" or "ForbiddenGrantPermissions" error codes. For more information, see [how do ram users grant RBAC permissions to other ram users](~~ 119035 ~~).
-    
-    -The full update of the cluster authorization information of a RAM user overwrites the existing cluster permissions of the target RAM user. The request must include all the permission configurations that you want to grant to the target RAM user.
-     */
     CompletableFuture<GrantPermissionsResponse> grantPermissions(GrantPermissionsRequest request);
 
     CompletableFuture<InstallClusterAddonsResponse> installClusterAddons(InstallClusterAddonsRequest request);
@@ -177,24 +170,14 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ModifyPolicyInstanceResponse> modifyPolicyInstance(ModifyPolicyInstanceRequest request);
 
-    /**
-     * -Alibaba Cloud account (primary account) can activate container service ACK.
-    -RAM users (RAM users) who have AdministratorAccess permissions can activate services.
-     */
     CompletableFuture<OpenAckServiceResponse> openAckService(OpenAckServiceRequest request);
 
     CompletableFuture<PauseClusterUpgradeResponse> pauseClusterUpgrade(PauseClusterUpgradeRequest request);
 
     CompletableFuture<PauseComponentUpgradeResponse> pauseComponentUpgrade(PauseComponentUpgradeRequest request);
 
-    /**
-     * **Description * *
-    
-    -Removing a node involves Pod migration and may affect your business.
-    -Unexpected risks may occur during operation. Please back up relevant data in advance.
-    -During the operation, the background sets the current node to unschedulable.
-    -Remove nodes only remove Worker nodes, not Master nodes.
-     */
+    CompletableFuture<PauseTaskResponse> pauseTask(PauseTaskRequest request);
+
     CompletableFuture<RemoveClusterNodesResponse> removeClusterNodes(RemoveClusterNodesRequest request);
 
     CompletableFuture<RemoveWorkflowResponse> removeWorkflow(RemoveWorkflowRequest request);
@@ -203,22 +186,17 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ResumeComponentUpgradeResponse> resumeComponentUpgrade(ResumeComponentUpgradeRequest request);
 
+    CompletableFuture<ResumeTaskResponse> resumeTask(ResumeTaskRequest request);
+
     CompletableFuture<ResumeUpgradeClusterResponse> resumeUpgradeCluster(ResumeUpgradeClusterRequest request);
 
     CompletableFuture<ScaleClusterResponse> scaleCluster(ScaleClusterRequest request);
 
     CompletableFuture<ScaleClusterNodePoolResponse> scaleClusterNodePool(ScaleClusterNodePoolRequest request);
 
-    /**
-     * > currently, all node operations are integrated into the node pool. ACK no longer maintains ScaleOutCluster interfaces. Add Worker nodes to the cluster by expanding the node pool. For more information, see [expand node pool](~~ 184928 ~~).
-     */
     CompletableFuture<ScaleOutClusterResponse> scaleOutCluster(ScaleOutClusterRequest request);
 
-    CompletableFuture<StartAlertResponse> startAlert(StartAlertRequest request);
-
     CompletableFuture<StartWorkflowResponse> startWorkflow(StartWorkflowRequest request);
-
-    CompletableFuture<StopAlertResponse> stopAlert(StopAlertRequest request);
 
     CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
 
@@ -228,10 +206,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UpdateContactGroupForAlertResponse> updateContactGroupForAlert(UpdateContactGroupForAlertRequest request);
 
-    /**
-     * > If the KubeConfig credential that you use on the cluster is revoked, the custom expiration time KubeConfig the cluster is reset. You need to call this operation to reset it.
-    
-     */
     CompletableFuture<UpdateK8sClusterUserConfigExpireResponse> updateK8sClusterUserConfigExpire(UpdateK8sClusterUserConfigExpireRequest request);
 
     CompletableFuture<UpdateTemplateResponse> updateTemplate(UpdateTemplateRequest request);

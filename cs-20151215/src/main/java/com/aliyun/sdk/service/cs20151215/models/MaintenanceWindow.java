@@ -12,22 +12,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>MaintenanceWindow</p>
  */
 public class MaintenanceWindow extends TeaModel {
+    @NameInMap("duration")
+    private String duration;
+
     @NameInMap("enable")
     private Boolean enable;
 
     @NameInMap("maintenance_time")
     private String maintenanceTime;
 
-    @NameInMap("duration")
-    private String duration;
-
     @NameInMap("weekly_period")
     private String weeklyPeriod;
 
     private MaintenanceWindow(Builder builder) {
+        this.duration = builder.duration;
         this.enable = builder.enable;
         this.maintenanceTime = builder.maintenanceTime;
-        this.duration = builder.duration;
         this.weeklyPeriod = builder.weeklyPeriod;
     }
 
@@ -37,6 +37,13 @@ public class MaintenanceWindow extends TeaModel {
 
     public static MaintenanceWindow create() {
         return builder().build();
+    }
+
+    /**
+     * @return duration
+     */
+    public String getDuration() {
+        return this.duration;
     }
 
     /**
@@ -54,13 +61,6 @@ public class MaintenanceWindow extends TeaModel {
     }
 
     /**
-     * @return duration
-     */
-    public String getDuration() {
-        return this.duration;
-    }
-
-    /**
      * @return weeklyPeriod
      */
     public String getWeeklyPeriod() {
@@ -68,29 +68,13 @@ public class MaintenanceWindow extends TeaModel {
     }
 
     public static final class Builder {
+        private String duration; 
         private Boolean enable; 
         private String maintenanceTime; 
-        private String duration; 
         private String weeklyPeriod; 
 
         /**
-         * Specifies whether to enable the maintenance window. Default value: false.
-         */
-        public Builder enable(Boolean enable) {
-            this.enable = enable;
-            return this;
-        }
-
-        /**
-         * The start time of maintenance. Golang standard time format "15:04:05Z".
-         */
-        public Builder maintenanceTime(String maintenanceTime) {
-            this.maintenanceTime = maintenanceTime;
-            return this;
-        }
-
-        /**
-         * The maintenance duration. Valid values: 1 to 24. Unit: hour. Default value: 3h.
+         * 维护时长。取值范围1～24，单位为小时。 默认值：3h。
          */
         public Builder duration(String duration) {
             this.duration = duration;
@@ -98,7 +82,23 @@ public class MaintenanceWindow extends TeaModel {
         }
 
         /**
-         * The maintenance cycle. Valid values: Monday to Sunday. Separate multiple values with commas (,). Default value: Thursday.
+         * 是否开启维护窗口。默认值false。
+         */
+        public Builder enable(Boolean enable) {
+            this.enable = enable;
+            return this;
+        }
+
+        /**
+         * 维护起始时间。Golang标准时间格式"15:04:05Z"。
+         */
+        public Builder maintenanceTime(String maintenanceTime) {
+            this.maintenanceTime = maintenanceTime;
+            return this;
+        }
+
+        /**
+         * 维护周期。取值范围为:Monday~Sunday，多个值用逗号分隔。 默认值：Thursday。
          */
         public Builder weeklyPeriod(String weeklyPeriod) {
             this.weeklyPeriod = weeklyPeriod;

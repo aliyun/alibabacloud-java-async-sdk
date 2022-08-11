@@ -50,7 +50,7 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
         private PageInfo pageInfo; 
 
         /**
-         * Cloud-native all-in-one machine List
+         * Id of the request
          */
         public Builder edgeMachines(java.util.List < EdgeMachines> edgeMachines) {
             this.edgeMachines = edgeMachines;
@@ -58,7 +58,7 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
         }
 
         /**
-         * Pagination information
+         * page info
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -72,47 +72,47 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
     } 
 
     public static class EdgeMachines extends TeaModel {
-        @NameInMap("edge_machine_id")
-        private String edgeMachineId;
+        @NameInMap("active_time")
+        private String activeTime;
 
         @NameInMap("created")
         private String created;
 
-        @NameInMap("updated")
-        private String updated;
-
-        @NameInMap("name")
-        private String name;
+        @NameInMap("edge_machine_id")
+        private String edgeMachineId;
 
         @NameInMap("hostname")
         private String hostname;
 
-        @NameInMap("sn")
-        private String sn;
+        @NameInMap("life_state")
+        private String lifeState;
 
         @NameInMap("model")
         private String model;
 
-        @NameInMap("life_state")
-        private String lifeState;
+        @NameInMap("name")
+        private String name;
 
         @NameInMap("online_state")
         private String onlineState;
 
-        @NameInMap("active_time")
-        private String activeTime;
+        @NameInMap("sn")
+        private String sn;
+
+        @NameInMap("updated")
+        private String updated;
 
         private EdgeMachines(Builder builder) {
-            this.edgeMachineId = builder.edgeMachineId;
-            this.created = builder.created;
-            this.updated = builder.updated;
-            this.name = builder.name;
-            this.hostname = builder.hostname;
-            this.sn = builder.sn;
-            this.model = builder.model;
-            this.lifeState = builder.lifeState;
-            this.onlineState = builder.onlineState;
             this.activeTime = builder.activeTime;
+            this.created = builder.created;
+            this.edgeMachineId = builder.edgeMachineId;
+            this.hostname = builder.hostname;
+            this.lifeState = builder.lifeState;
+            this.model = builder.model;
+            this.name = builder.name;
+            this.onlineState = builder.onlineState;
+            this.sn = builder.sn;
+            this.updated = builder.updated;
         }
 
         public static Builder builder() {
@@ -124,10 +124,10 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
         }
 
         /**
-         * @return edgeMachineId
+         * @return activeTime
          */
-        public String getEdgeMachineId() {
-            return this.edgeMachineId;
+        public String getActiveTime() {
+            return this.activeTime;
         }
 
         /**
@@ -138,17 +138,10 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
         }
 
         /**
-         * @return updated
+         * @return edgeMachineId
          */
-        public String getUpdated() {
-            return this.updated;
-        }
-
-        /**
-         * @return name
-         */
-        public String getName() {
-            return this.name;
+        public String getEdgeMachineId() {
+            return this.edgeMachineId;
         }
 
         /**
@@ -159,10 +152,10 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
         }
 
         /**
-         * @return sn
+         * @return lifeState
          */
-        public String getSn() {
-            return this.sn;
+        public String getLifeState() {
+            return this.lifeState;
         }
 
         /**
@@ -173,10 +166,10 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
         }
 
         /**
-         * @return lifeState
+         * @return name
          */
-        public String getLifeState() {
-            return this.lifeState;
+        public String getName() {
+            return this.name;
         }
 
         /**
@@ -187,34 +180,41 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
         }
 
         /**
-         * @return activeTime
+         * @return sn
          */
-        public String getActiveTime() {
-            return this.activeTime;
+        public String getSn() {
+            return this.sn;
+        }
+
+        /**
+         * @return updated
+         */
+        public String getUpdated() {
+            return this.updated;
         }
 
         public static final class Builder {
-            private String edgeMachineId; 
-            private String created; 
-            private String updated; 
-            private String name; 
-            private String hostname; 
-            private String sn; 
-            private String model; 
-            private String lifeState; 
-            private String onlineState; 
             private String activeTime; 
+            private String created; 
+            private String edgeMachineId; 
+            private String hostname; 
+            private String lifeState; 
+            private String model; 
+            private String name; 
+            private String onlineState; 
+            private String sn; 
+            private String updated; 
 
             /**
-             * Device ID
+             * actvite time
              */
-            public Builder edgeMachineId(String edgeMachineId) {
-                this.edgeMachineId = edgeMachineId;
+            public Builder activeTime(String activeTime) {
+                this.activeTime = activeTime;
                 return this;
             }
 
             /**
-             * Created
+             * created time
              */
             public Builder created(String created) {
                 this.created = created;
@@ -222,23 +222,15 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * Update Time
+             * edge machine id
              */
-            public Builder updated(String updated) {
-                this.updated = updated;
+            public Builder edgeMachineId(String edgeMachineId) {
+                this.edgeMachineId = edgeMachineId;
                 return this;
             }
 
             /**
-             * Machine name
-             */
-            public Builder name(String name) {
-                this.name = name;
-                return this;
-            }
-
-            /**
-             * Cloud-native all-in-one machine "hostname"
+             * hostname
              */
             public Builder hostname(String hostname) {
                 this.hostname = hostname;
@@ -246,23 +238,7 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * SN serial number
-             */
-            public Builder sn(String sn) {
-                this.sn = sn;
-                return this;
-            }
-
-            /**
-             * Cloud Native all-in-one model
-             */
-            public Builder model(String model) {
-                this.model = model;
-                return this;
-            }
-
-            /**
-             * Lifecycle
+             * life state
              */
             public Builder lifeState(String lifeState) {
                 this.lifeState = lifeState;
@@ -270,7 +246,23 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * Online Status
+             * model
+             */
+            public Builder model(String model) {
+                this.model = model;
+                return this;
+            }
+
+            /**
+             * name of edgemachine
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * online state
              */
             public Builder onlineState(String onlineState) {
                 this.onlineState = onlineState;
@@ -278,10 +270,18 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * Activation time
+             * sn
              */
-            public Builder activeTime(String activeTime) {
-                this.activeTime = activeTime;
+            public Builder sn(String sn) {
+                this.sn = sn;
+                return this;
+            }
+
+            /**
+             * update time
+             */
+            public Builder updated(String updated) {
+                this.updated = updated;
                 return this;
             }
 
@@ -343,10 +343,7 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The page number.
-             * <p>
-             * 
-             * Default value: 1.
+             * page number
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -354,10 +351,7 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of records displayed on each page.
-             * <p>
-             * 
-             * Default value: 10.
+             * page size
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -365,7 +359,7 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * Total
+             * total count
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

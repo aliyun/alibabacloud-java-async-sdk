@@ -7,17 +7,16 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeClusterNamespacesRequest} extends {@link RequestModel}
+ * {@link DescribeClusterTasksRequest} extends {@link RequestModel}
  *
- * <p>DescribeClusterNamespacesRequest</p>
+ * <p>DescribeClusterTasksRequest</p>
  */
-public class DescribeClusterNamespacesRequest extends Request {
+public class DescribeClusterTasksRequest extends Request {
     @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @NameInMap("cluster_id")
     private String clusterId;
 
-    private DescribeClusterNamespacesRequest(Builder builder) {
+    private DescribeClusterTasksRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
     }
@@ -26,7 +25,7 @@ public class DescribeClusterNamespacesRequest extends Request {
         return new Builder();
     }
 
-    public static DescribeClusterNamespacesRequest create() {
+    public static DescribeClusterTasksRequest create() {
         return builder().build();
     }
 
@@ -42,30 +41,30 @@ public class DescribeClusterNamespacesRequest extends Request {
         return this.clusterId;
     }
 
-    public static final class Builder extends Request.Builder<DescribeClusterNamespacesRequest, Builder> {
+    public static final class Builder extends Request.Builder<DescribeClusterTasksRequest, Builder> {
         private String clusterId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeClusterNamespacesRequest request) {
+        private Builder(DescribeClusterTasksRequest request) {
             super(request);
             this.clusterId = request.clusterId;
         } 
 
         /**
-         * The ID of the cluster.
+         * 集群id。
          */
         public Builder clusterId(String clusterId) {
-            this.putPathParameter("ClusterId", clusterId);
+            this.putPathParameter("cluster_id", clusterId);
             this.clusterId = clusterId;
             return this;
         }
 
         @Override
-        public DescribeClusterNamespacesRequest build() {
-            return new DescribeClusterNamespacesRequest(this);
+        public DescribeClusterTasksRequest build() {
+            return new DescribeClusterTasksRequest(this);
         } 
 
     } 

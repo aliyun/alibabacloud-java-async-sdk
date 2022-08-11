@@ -12,11 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateTriggerResponseBody</p>
  */
 public class CreateTriggerResponseBody extends TeaModel {
-    @NameInMap("id")
-    private String id;
+    @NameInMap("action")
+    private String action;
 
     @NameInMap("cluster_id")
     private String clusterId;
+
+    @NameInMap("id")
+    private String id;
 
     @NameInMap("project_id")
     private String projectId;
@@ -24,15 +27,12 @@ public class CreateTriggerResponseBody extends TeaModel {
     @NameInMap("type")
     private String type;
 
-    @NameInMap("action")
-    private String action;
-
     private CreateTriggerResponseBody(Builder builder) {
-        this.id = builder.id;
+        this.action = builder.action;
         this.clusterId = builder.clusterId;
+        this.id = builder.id;
         this.projectId = builder.projectId;
         this.type = builder.type;
-        this.action = builder.action;
     }
 
     public static Builder builder() {
@@ -44,10 +44,10 @@ public class CreateTriggerResponseBody extends TeaModel {
     }
 
     /**
-     * @return id
+     * @return action
      */
-    public String getId() {
-        return this.id;
+    public String getAction() {
+        return this.action;
     }
 
     /**
@@ -55,6 +55,13 @@ public class CreateTriggerResponseBody extends TeaModel {
      */
     public String getClusterId() {
         return this.clusterId;
+    }
+
+    /**
+     * @return id
+     */
+    public String getId() {
+        return this.id;
     }
 
     /**
@@ -71,30 +78,23 @@ public class CreateTriggerResponseBody extends TeaModel {
         return this.type;
     }
 
-    /**
-     * @return action
-     */
-    public String getAction() {
-        return this.action;
-    }
-
     public static final class Builder {
-        private String id; 
+        private String action; 
         private String clusterId; 
+        private String id; 
         private String projectId; 
         private String type; 
-        private String action; 
 
         /**
-         * The ID of the trigger.
+         * 触发器行为。
          */
-        public Builder id(String id) {
-            this.id = id;
+        public Builder action(String action) {
+            this.action = action;
             return this;
         }
 
         /**
-         * The ID of the cluster.
+         * 集群ID。
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -102,7 +102,15 @@ public class CreateTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the trigger project.
+         * 触发器ID。
+         */
+        public Builder id(String id) {
+            this.id = id;
+            return this;
+        }
+
+        /**
+         * 触发器项目名称。
          */
         public Builder projectId(String projectId) {
             this.projectId = projectId;
@@ -110,18 +118,10 @@ public class CreateTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the trigger. Default value: deployment.
+         * 触发器类型。默认值为 deployment 。
          */
         public Builder type(String type) {
             this.type = type;
-            return this;
-        }
-
-        /**
-         * The behavior of the trigger. For example, "redeploy": redeployment.
-         */
-        public Builder action(String action) {
-            this.action = action;
             return this;
         }
 

@@ -18,8 +18,8 @@ public class DescribeClusterAttachScriptsRequest extends Request {
     private String clusterId;
 
     @Body
-    @NameInMap("nodepool_id")
-    private String nodepoolId;
+    @NameInMap("arch")
+    private String arch;
 
     @Body
     @NameInMap("format_disk")
@@ -30,26 +30,26 @@ public class DescribeClusterAttachScriptsRequest extends Request {
     private Boolean keepInstanceName;
 
     @Body
-    @NameInMap("rds_instances")
-    private java.util.List < String > rdsInstances;
-
-    @Body
-    @NameInMap("arch")
-    private String arch;
+    @NameInMap("nodepool_id")
+    private String nodepoolId;
 
     @Body
     @NameInMap("options")
     private String options;
 
+    @Body
+    @NameInMap("rds_instances")
+    private java.util.List < String > rdsInstances;
+
     private DescribeClusterAttachScriptsRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
-        this.nodepoolId = builder.nodepoolId;
+        this.arch = builder.arch;
         this.formatDisk = builder.formatDisk;
         this.keepInstanceName = builder.keepInstanceName;
-        this.rdsInstances = builder.rdsInstances;
-        this.arch = builder.arch;
+        this.nodepoolId = builder.nodepoolId;
         this.options = builder.options;
+        this.rdsInstances = builder.rdsInstances;
     }
 
     public static Builder builder() {
@@ -73,10 +73,10 @@ public class DescribeClusterAttachScriptsRequest extends Request {
     }
 
     /**
-     * @return nodepoolId
+     * @return arch
      */
-    public String getNodepoolId() {
-        return this.nodepoolId;
+    public String getArch() {
+        return this.arch;
     }
 
     /**
@@ -94,17 +94,10 @@ public class DescribeClusterAttachScriptsRequest extends Request {
     }
 
     /**
-     * @return rdsInstances
+     * @return nodepoolId
      */
-    public java.util.List < String > getRdsInstances() {
-        return this.rdsInstances;
-    }
-
-    /**
-     * @return arch
-     */
-    public String getArch() {
-        return this.arch;
+    public String getNodepoolId() {
+        return this.nodepoolId;
     }
 
     /**
@@ -114,14 +107,21 @@ public class DescribeClusterAttachScriptsRequest extends Request {
         return this.options;
     }
 
+    /**
+     * @return rdsInstances
+     */
+    public java.util.List < String > getRdsInstances() {
+        return this.rdsInstances;
+    }
+
     public static final class Builder extends Request.Builder<DescribeClusterAttachScriptsRequest, Builder> {
         private String clusterId; 
-        private String nodepoolId; 
+        private String arch; 
         private Boolean formatDisk; 
         private Boolean keepInstanceName; 
-        private java.util.List < String > rdsInstances; 
-        private String arch; 
+        private String nodepoolId; 
         private String options; 
+        private java.util.List < String > rdsInstances; 
 
         private Builder() {
             super();
@@ -130,16 +130,16 @@ public class DescribeClusterAttachScriptsRequest extends Request {
         private Builder(DescribeClusterAttachScriptsRequest request) {
             super(request);
             this.clusterId = request.clusterId;
-            this.nodepoolId = request.nodepoolId;
+            this.arch = request.arch;
             this.formatDisk = request.formatDisk;
             this.keepInstanceName = request.keepInstanceName;
-            this.rdsInstances = request.rdsInstances;
-            this.arch = request.arch;
+            this.nodepoolId = request.nodepoolId;
             this.options = request.options;
+            this.rdsInstances = request.rdsInstances;
         } 
 
         /**
-         * The ID of the cluster.
+         * 集群ID。
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -148,70 +148,7 @@ public class DescribeClusterAttachScriptsRequest extends Request {
         }
 
         /**
-         * The ID of the node pool. When you add a node, you can add the node to the specified node pool.
-         * <p>
-         * 
-         * > If you do not specify the node pool ID, the node is added to the default node pool by default.
-         */
-        public Builder nodepoolId(String nodepoolId) {
-            this.putBodyParameter("nodepool_id", nodepoolId);
-            this.nodepoolId = nodepoolId;
-            return this;
-        }
-
-        /**
-         * Specifies whether to attach a data disk to an existing instance and store containers and images on the data disk when you manually add the instance to the cluster. Valid values:
-         * <p>
-         * 
-         * -"true": if you mount a data disk to an instance, the original data in the data disk will be lost. Note that you must back up the data.
-         * -"false": no data disk is attached to the instance.
-         * 
-         * Default value: "false ".
-         * 
-         * Data mount rules:
-         * 
-         * -If a data disk is attached to an ECS instance and the file system of the last data disk is not initialized, the system automatically formats the data disk as ext4 to store/var/lib/docker,/var/lib/kubelet.
-         * -If no data disk is attached to the ECS instance, no new data disk is attached.
-         * 
-         * 
-         */
-        public Builder formatDisk(Boolean formatDisk) {
-            this.putBodyParameter("format_disk", formatDisk);
-            this.formatDisk = formatDisk;
-            return this;
-        }
-
-        /**
-         * Specifies whether to retain the instance name when adding an existing cluster. If this parameter is not reserved, the instance name is in the format of "worker-k8s-for-cs-<clusterid>". Valid values:
-         * <p>
-         * 
-         * -"true": retain the instance name.
-         * -"false": the instance name is not retained and will be replaced by system rules.
-         * 
-         * Default value: "true ".
-         */
-        public Builder keepInstanceName(Boolean keepInstanceName) {
-            this.putBodyParameter("keep_instance_name", keepInstanceName);
-            this.keepInstanceName = keepInstanceName;
-            return this;
-        }
-
-        /**
-         * If the RDS instance list is specified, the cluster node ECS is automatically added to the RDS whitelist.
-         */
-        public Builder rdsInstances(java.util.List < String > rdsInstances) {
-            this.putBodyParameter("rds_instances", rdsInstances);
-            this.rdsInstances = rdsInstances;
-            return this;
-        }
-
-        /**
-         * The CPU architecture of the node. Supported CPU architectures include amd64", "arm", and "arm64 ".
-         * <p>
-         * 
-         * Default value: "amd64 ".
-         * 
-         * > This parameter is required when the cluster type is Edge managed.
+         * 节点CPU架构,支持amd64、arm、arm64。边缘托管集群专有字段。
          */
         public Builder arch(String arch) {
             this.putBodyParameter("arch", arch);
@@ -220,14 +157,47 @@ public class DescribeClusterAttachScriptsRequest extends Request {
         }
 
         /**
-         * The access configuration parameters of the node.
-         * <p>
-         * 
-         * > This parameter is required when the cluster type is Edge managed.
+         * 数据盘挂载
+         */
+        public Builder formatDisk(Boolean formatDisk) {
+            this.putBodyParameter("format_disk", formatDisk);
+            this.formatDisk = formatDisk;
+            return this;
+        }
+
+        /**
+         * 保留实例名称
+         */
+        public Builder keepInstanceName(Boolean keepInstanceName) {
+            this.putBodyParameter("keep_instance_name", keepInstanceName);
+            this.keepInstanceName = keepInstanceName;
+            return this;
+        }
+
+        /**
+         * 节点池ID。将节点加入指定节点池。
+         */
+        public Builder nodepoolId(String nodepoolId) {
+            this.putBodyParameter("nodepool_id", nodepoolId);
+            this.nodepoolId = nodepoolId;
+            return this;
+        }
+
+        /**
+         * 边缘托管版集群节点的接入配置。
          */
         public Builder options(String options) {
             this.putBodyParameter("options", options);
             this.options = options;
+            return this;
+        }
+
+        /**
+         * RDS白名单
+         */
+        public Builder rdsInstances(java.util.List < String > rdsInstances) {
+            this.putBodyParameter("rds_instances", rdsInstances);
+            this.rdsInstances = rdsInstances;
             return this;
         }
 

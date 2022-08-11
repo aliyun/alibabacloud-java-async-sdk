@@ -17,20 +17,20 @@ public class DeletePolicyInstanceRequest extends Request {
     @Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("instance_name")
-    private String instanceName;
-
     @Path
     @NameInMap("policy_name")
     @Validation(required = true)
     private String policyName;
 
+    @Query
+    @NameInMap("instance_name")
+    private String instanceName;
+
     private DeletePolicyInstanceRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
-        this.instanceName = builder.instanceName;
         this.policyName = builder.policyName;
+        this.instanceName = builder.instanceName;
     }
 
     public static Builder builder() {
@@ -54,23 +54,23 @@ public class DeletePolicyInstanceRequest extends Request {
     }
 
     /**
-     * @return instanceName
-     */
-    public String getInstanceName() {
-        return this.instanceName;
-    }
-
-    /**
      * @return policyName
      */
     public String getPolicyName() {
         return this.policyName;
     }
 
+    /**
+     * @return instanceName
+     */
+    public String getInstanceName() {
+        return this.instanceName;
+    }
+
     public static final class Builder extends Request.Builder<DeletePolicyInstanceRequest, Builder> {
         private String clusterId; 
-        private String instanceName; 
         private String policyName; 
+        private String instanceName; 
 
         private Builder() {
             super();
@@ -79,12 +79,12 @@ public class DeletePolicyInstanceRequest extends Request {
         private Builder(DeletePolicyInstanceRequest request) {
             super(request);
             this.clusterId = request.clusterId;
-            this.instanceName = request.instanceName;
             this.policyName = request.policyName;
+            this.instanceName = request.instanceName;
         } 
 
         /**
-         * The ID of the target cluster.
+         * 目标集群id
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
@@ -93,20 +93,20 @@ public class DeletePolicyInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the policy rule instance.
-         */
-        public Builder instanceName(String instanceName) {
-            this.putQueryParameter("instance_name", instanceName);
-            this.instanceName = instanceName;
-            return this;
-        }
-
-        /**
-         * Policy governance rule name
+         * 策略治理规则名称
          */
         public Builder policyName(String policyName) {
             this.putPathParameter("policy_name", policyName);
             this.policyName = policyName;
+            return this;
+        }
+
+        /**
+         * 策略规则实例id
+         */
+        public Builder instanceName(String instanceName) {
+            this.putQueryParameter("instance_name", instanceName);
+            this.instanceName = instanceName;
             return this;
         }
 

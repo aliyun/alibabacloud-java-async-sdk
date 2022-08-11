@@ -38,7 +38,7 @@ public class DeleteClusterNodepoolResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * 请求ID
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

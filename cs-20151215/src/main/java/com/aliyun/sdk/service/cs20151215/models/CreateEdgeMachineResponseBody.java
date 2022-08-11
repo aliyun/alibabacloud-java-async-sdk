@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateEdgeMachineResponseBody</p>
  */
 public class CreateEdgeMachineResponseBody extends TeaModel {
-    @NameInMap("request_id")
-    private String requestId;
-
     @NameInMap("edge_machine_id")
     private String edgeMachineId;
 
+    @NameInMap("request_id")
+    private String requestId;
+
     private CreateEdgeMachineResponseBody(Builder builder) {
-        this.requestId = builder.requestId;
         this.edgeMachineId = builder.edgeMachineId;
+        this.requestId = builder.requestId;
     }
 
     public static Builder builder() {
@@ -32,36 +32,36 @@ public class CreateEdgeMachineResponseBody extends TeaModel {
     }
 
     /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    /**
      * @return edgeMachineId
      */
     public String getEdgeMachineId() {
         return this.edgeMachineId;
     }
 
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static final class Builder {
-        private String requestId; 
         private String edgeMachineId; 
+        private String requestId; 
 
         /**
-         * The ID of the request.
+         * edge machine id
          */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
+        public Builder edgeMachineId(String edgeMachineId) {
+            this.edgeMachineId = edgeMachineId;
             return this;
         }
 
         /**
-         * The ID of the cloud-native all-in-one machine.
+         * Id of the request
          */
-        public Builder edgeMachineId(String edgeMachineId) {
-            this.edgeMachineId = edgeMachineId;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 

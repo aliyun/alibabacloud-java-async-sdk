@@ -12,19 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyClusterTagsRequest</p>
  */
 public class ModifyClusterTagsRequest extends Request {
-    @Body
-    @NameInMap("body")
-    private java.util.List < Tag > body;
-
     @Path
     @NameInMap("ClusterId")
     @Validation(required = true)
     private String clusterId;
 
+    @Body
+    @NameInMap("body")
+    private java.util.List < Tag > body;
+
     private ModifyClusterTagsRequest(Builder builder) {
         super(builder);
-        this.body = builder.body;
         this.clusterId = builder.clusterId;
+        this.body = builder.body;
     }
 
     public static Builder builder() {
@@ -41,22 +41,22 @@ public class ModifyClusterTagsRequest extends Request {
     }
 
     /**
-     * @return body
-     */
-    public java.util.List < Tag > getBody() {
-        return this.body;
-    }
-
-    /**
      * @return clusterId
      */
     public String getClusterId() {
         return this.clusterId;
     }
 
+    /**
+     * @return body
+     */
+    public java.util.List < Tag > getBody() {
+        return this.body;
+    }
+
     public static final class Builder extends Request.Builder<ModifyClusterTagsRequest, Builder> {
-        private java.util.List < Tag > body; 
         private String clusterId; 
+        private java.util.List < Tag > body; 
 
         private Builder() {
             super();
@@ -64,25 +64,25 @@ public class ModifyClusterTagsRequest extends Request {
 
         private Builder(ModifyClusterTagsRequest request) {
             super(request);
-            this.body = request.body;
             this.clusterId = request.clusterId;
+            this.body = request.body;
         } 
 
         /**
-         * Modify data.
-         */
-        public Builder body(java.util.List < Tag > body) {
-            this.putBodyParameter("body", body);
-            this.body = body;
-            return this;
-        }
-
-        /**
-         * The ID of the cluster.
+         * 汲取ID
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
             this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * 集群标签列表。
+         */
+        public Builder body(java.util.List < Tag > body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
             return this;
         }
 

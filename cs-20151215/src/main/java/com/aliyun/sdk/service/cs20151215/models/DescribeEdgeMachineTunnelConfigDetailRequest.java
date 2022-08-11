@@ -55,7 +55,7 @@ public class DescribeEdgeMachineTunnelConfigDetailRequest extends Request {
         } 
 
         /**
-         * The ID of the cloud-native all-in-one machine.
+         * edge machine id
          */
         public Builder edgeMachineid(String edgeMachineid) {
             this.putPathParameter("edge_machineid", edgeMachineid);

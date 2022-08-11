@@ -13,18 +13,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeAddonsRequest extends Request {
     @Query
+    @NameInMap("cluster_type")
+    private String clusterType;
+
+    @Query
     @NameInMap("region")
     @Validation(required = true)
     private String region;
 
-    @Query
-    @NameInMap("cluster_type")
-    private String clusterType;
-
     private DescribeAddonsRequest(Builder builder) {
         super(builder);
-        this.region = builder.region;
         this.clusterType = builder.clusterType;
+        this.region = builder.region;
     }
 
     public static Builder builder() {
@@ -41,22 +41,22 @@ public class DescribeAddonsRequest extends Request {
     }
 
     /**
-     * @return region
-     */
-    public String getRegion() {
-        return this.region;
-    }
-
-    /**
      * @return clusterType
      */
     public String getClusterType() {
         return this.clusterType;
     }
 
+    /**
+     * @return region
+     */
+    public String getRegion() {
+        return this.region;
+    }
+
     public static final class Builder extends Request.Builder<DescribeAddonsRequest, Builder> {
-        private String region; 
         private String clusterType; 
+        private String region; 
 
         private Builder() {
             super();
@@ -64,31 +64,25 @@ public class DescribeAddonsRequest extends Request {
 
         private Builder(DescribeAddonsRequest request) {
             super(request);
-            this.region = request.region;
             this.clusterType = request.clusterType;
+            this.region = request.region;
         } 
 
         /**
-         * The region ID of the cluster.
-         */
-        public Builder region(String region) {
-            this.putQueryParameter("region", region);
-            this.region = region;
-            return this;
-        }
-
-        /**
-         * The type of the cluster. Valid values:
-         * <p>
-         * 
-         * -"Kubernetes": dedicated cluster.
-         * -"ManagedKubernetes": managed cluster.
-         * -"Ask":Serverless cluster.
-         * -"ExternalKubernetes": registers a cluster.
+         * 集群类型。  - Kubernetes: 专有版集群。 - ManagedKubernetes：托管版集群。 - Ask：Serverless 集群。 - ExternalKubernetes：注册到ACK的外部集群。
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("cluster_type", clusterType);
             this.clusterType = clusterType;
+            return this;
+        }
+
+        /**
+         * 地域ID。
+         */
+        public Builder region(String region) {
+            this.putQueryParameter("region", region);
+            this.region = region;
             return this;
         }
 

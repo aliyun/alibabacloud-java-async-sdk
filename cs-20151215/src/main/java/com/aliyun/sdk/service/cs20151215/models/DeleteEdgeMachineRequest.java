@@ -69,7 +69,7 @@ public class DeleteEdgeMachineRequest extends Request {
         } 
 
         /**
-         * The ID of the cloud-native all-in-one machine.
+         * edge machine id
          */
         public Builder edgeMachineid(String edgeMachineid) {
             this.putPathParameter("edge_machineid", edgeMachineid);
@@ -78,14 +78,7 @@ public class DeleteEdgeMachineRequest extends Request {
         }
 
         /**
-         * Specifies whether to forcibly delete a cloud-native all-in-one machine. Valid values:
-         * <p>
-         * 
-         * -"true": forcibly deletes the cloud-native all-in-one machine.
-         * 
-         * -"false": indicates that the cloud-native all-in-one machine is not forcibly deleted.
-         * 
-         * Default value: "false ".
+         * whether force delete
          */
         public Builder force(String force) {
             this.putQueryParameter("force", force);

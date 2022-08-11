@@ -30,8 +30,8 @@ public class ModifyClusterRequest extends Request {
     private Boolean deletionProtection;
 
     @Body
-    @NameInMap("instance_deletion_protection")
-    private Boolean instanceDeletionProtection;
+    @NameInMap("enable_rrsa")
+    private Boolean enableRrsa;
 
     @Body
     @NameInMap("ingress_domain_rebinding")
@@ -42,16 +42,16 @@ public class ModifyClusterRequest extends Request {
     private String ingressLoadbalancerId;
 
     @Body
-    @NameInMap("resource_group_id")
-    private String resourceGroupId;
+    @NameInMap("instance_deletion_protection")
+    private Boolean instanceDeletionProtection;
 
     @Body
     @NameInMap("maintenance_window")
     private MaintenanceWindow maintenanceWindow;
 
     @Body
-    @NameInMap("enable_rrsa")
-    private Boolean enableRrsa;
+    @NameInMap("resource_group_id")
+    private String resourceGroupId;
 
     private ModifyClusterRequest(Builder builder) {
         super(builder);
@@ -59,12 +59,12 @@ public class ModifyClusterRequest extends Request {
         this.apiServerEip = builder.apiServerEip;
         this.apiServerEipId = builder.apiServerEipId;
         this.deletionProtection = builder.deletionProtection;
-        this.instanceDeletionProtection = builder.instanceDeletionProtection;
+        this.enableRrsa = builder.enableRrsa;
         this.ingressDomainRebinding = builder.ingressDomainRebinding;
         this.ingressLoadbalancerId = builder.ingressLoadbalancerId;
-        this.resourceGroupId = builder.resourceGroupId;
+        this.instanceDeletionProtection = builder.instanceDeletionProtection;
         this.maintenanceWindow = builder.maintenanceWindow;
-        this.enableRrsa = builder.enableRrsa;
+        this.resourceGroupId = builder.resourceGroupId;
     }
 
     public static Builder builder() {
@@ -109,10 +109,10 @@ public class ModifyClusterRequest extends Request {
     }
 
     /**
-     * @return instanceDeletionProtection
+     * @return enableRrsa
      */
-    public Boolean getInstanceDeletionProtection() {
-        return this.instanceDeletionProtection;
+    public Boolean getEnableRrsa() {
+        return this.enableRrsa;
     }
 
     /**
@@ -130,10 +130,10 @@ public class ModifyClusterRequest extends Request {
     }
 
     /**
-     * @return resourceGroupId
+     * @return instanceDeletionProtection
      */
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
+    public Boolean getInstanceDeletionProtection() {
+        return this.instanceDeletionProtection;
     }
 
     /**
@@ -144,10 +144,10 @@ public class ModifyClusterRequest extends Request {
     }
 
     /**
-     * @return enableRrsa
+     * @return resourceGroupId
      */
-    public Boolean getEnableRrsa() {
-        return this.enableRrsa;
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public static final class Builder extends Request.Builder<ModifyClusterRequest, Builder> {
@@ -155,12 +155,12 @@ public class ModifyClusterRequest extends Request {
         private Boolean apiServerEip; 
         private String apiServerEipId; 
         private Boolean deletionProtection; 
-        private Boolean instanceDeletionProtection; 
+        private Boolean enableRrsa; 
         private String ingressDomainRebinding; 
         private String ingressLoadbalancerId; 
-        private String resourceGroupId; 
+        private Boolean instanceDeletionProtection; 
         private MaintenanceWindow maintenanceWindow; 
-        private Boolean enableRrsa; 
+        private String resourceGroupId; 
 
         private Builder() {
             super();
@@ -172,19 +172,16 @@ public class ModifyClusterRequest extends Request {
             this.apiServerEip = request.apiServerEip;
             this.apiServerEipId = request.apiServerEipId;
             this.deletionProtection = request.deletionProtection;
-            this.instanceDeletionProtection = request.instanceDeletionProtection;
+            this.enableRrsa = request.enableRrsa;
             this.ingressDomainRebinding = request.ingressDomainRebinding;
             this.ingressLoadbalancerId = request.ingressLoadbalancerId;
-            this.resourceGroupId = request.resourceGroupId;
+            this.instanceDeletionProtection = request.instanceDeletionProtection;
             this.maintenanceWindow = request.maintenanceWindow;
-            this.enableRrsa = request.enableRrsa;
+            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**
-         * The ID of the cluster.
-         * <p>
-         * 
-         * 
+         * 集群ID。
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -193,11 +190,7 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * Indicates whether the cluster is associated with an EIP for internet access API Server. Valid values:
-         * <p>
-         * 
-         * -"true": the cluster is associated with an EIP.
-         * -"false": the cluster is not associated with an EIP.
+         * 集群是否绑定EIP，用于公网访问API Server。 true | false
          */
         public Builder apiServerEip(Boolean apiServerEip) {
             this.putBodyParameter("api_server_eip", apiServerEip);
@@ -206,7 +199,7 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * The ID of the EIP associated with the cluster API Server. This parameter takes effect only when the value of "api_server_eip "is "true.
+         * 集群API Server 公网连接端点。
          */
         public Builder apiServerEipId(String apiServerEipId) {
             this.putBodyParameter("api_server_eip_id", apiServerEipId);
@@ -215,13 +208,7 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * Cluster deletion protection to prevent accidental deletion of clusters through the console or API. Valid values:
-         * <p>
-         * 
-         * -"true": if you enable cluster deletion protection, the cluster cannot be deleted through the console or API.
-         * -"false": if you do not enable cluster deletion protection, you can delete the cluster through the console or API.
-         * 
-         * Default value: "false ".
+         * 集群是否开启删除保护。默认值false。
          */
         public Builder deletionProtection(Boolean deletionProtection) {
             this.putBodyParameter("deletion_protection", deletionProtection);
@@ -230,28 +217,16 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * Instance deletion protection to prevent accidental deletion and release of nodes through the console or API. Valid values:
-         * <p>
-         * 
-         * -"true": you cannot delete a cluster by using the console or API.
-         * -"false": you can delete a cluster by using the console or API.
-         * 
-         * Default value: "false ".
+         * 启用或禁用 RRSA 功能。true: 启用，false: 禁用
          */
-        public Builder instanceDeletionProtection(Boolean instanceDeletionProtection) {
-            this.putBodyParameter("instance_deletion_protection", instanceDeletionProtection);
-            this.instanceDeletionProtection = instanceDeletionProtection;
+        public Builder enableRrsa(Boolean enableRrsa) {
+            this.putBodyParameter("enable_rrsa", enableRrsa);
+            this.enableRrsa = enableRrsa;
             return this;
         }
 
         /**
-         * Re-bind the cluster test domain name. Valid values:
-         * <p>
-         * 
-         * -"true": re-bind the cluster test domain name.
-         * -"false": does not rebind the cluster test domain name.
-         * 
-         * Default value: "false ".
+         * 域名是否重新绑定到Ingress的SLB地址。
          */
         public Builder ingressDomainRebinding(String ingressDomainRebinding) {
             this.putBodyParameter("ingress_domain_rebinding", ingressDomainRebinding);
@@ -260,7 +235,7 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * The ID of the SLB instance of the modified cluster.
+         * 集群的Ingress SLB的ID。
          */
         public Builder ingressLoadbalancerId(String ingressLoadbalancerId) {
             this.putBodyParameter("ingress_loadbalancer_id", ingressLoadbalancerId);
@@ -269,16 +244,16 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * The ID of the cluster resource group.
+         * 实例删除保护，防止通过控制台或API误删除释放节点。
          */
-        public Builder resourceGroupId(String resourceGroupId) {
-            this.putBodyParameter("resource_group_id", resourceGroupId);
-            this.resourceGroupId = resourceGroupId;
+        public Builder instanceDeletionProtection(Boolean instanceDeletionProtection) {
+            this.putBodyParameter("instance_deletion_protection", instanceDeletionProtection);
+            this.instanceDeletionProtection = instanceDeletionProtection;
             return this;
         }
 
         /**
-         * Cluster maintenance window. This function only takes effect in Pro managed clusters.
+         * maintenance_window.
          */
         public Builder maintenanceWindow(MaintenanceWindow maintenanceWindow) {
             this.putBodyParameter("maintenance_window", maintenanceWindow);
@@ -287,16 +262,11 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * Enable or disable RRSA. Valid values:
-         * <p>
-         * 
-         * -"true": enabled.
-         * 
-         * -"false": disabled.
+         * 集群资源组ID。
          */
-        public Builder enableRrsa(Boolean enableRrsa) {
-            this.putBodyParameter("enable_rrsa", enableRrsa);
-            this.enableRrsa = enableRrsa;
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putBodyParameter("resource_group_id", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

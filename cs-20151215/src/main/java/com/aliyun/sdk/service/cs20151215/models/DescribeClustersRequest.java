@@ -13,17 +13,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeClustersRequest extends Request {
     @Query
-    @NameInMap("name")
-    private String name;
-
-    @Query
     @NameInMap("clusterType")
     private String clusterType;
 
+    @Query
+    @NameInMap("name")
+    private String name;
+
     private DescribeClustersRequest(Builder builder) {
         super(builder);
-        this.name = builder.name;
         this.clusterType = builder.clusterType;
+        this.name = builder.name;
     }
 
     public static Builder builder() {
@@ -40,22 +40,22 @@ public class DescribeClustersRequest extends Request {
     }
 
     /**
-     * @return name
-     */
-    public String getName() {
-        return this.name;
-    }
-
-    /**
      * @return clusterType
      */
     public String getClusterType() {
         return this.clusterType;
     }
 
+    /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
+    }
+
     public static final class Builder extends Request.Builder<DescribeClustersRequest, Builder> {
-        private String name; 
         private String clusterType; 
+        private String name; 
 
         private Builder() {
             super();
@@ -63,25 +63,25 @@ public class DescribeClustersRequest extends Request {
 
         private Builder(DescribeClustersRequest request) {
             super(request);
-            this.name = request.name;
             this.clusterType = request.clusterType;
+            this.name = request.name;
         } 
 
         /**
-         * Perform a fuzzy match query based on the cluster Name.
-         */
-        public Builder name(String name) {
-            this.putQueryParameter("name", name);
-            this.name = name;
-            return this;
-        }
-
-        /**
-         * The type of the cluster.
+         * 集群类型。
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("clusterType", clusterType);
             this.clusterType = clusterType;
+            return this;
+        }
+
+        /**
+         * 集群名称。
+         */
+        public Builder name(String name) {
+            this.putQueryParameter("name", name);
+            this.name = name;
             return this;
         }
 

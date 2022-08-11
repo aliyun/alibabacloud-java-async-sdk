@@ -86,7 +86,7 @@ public class GetUpgradeStatusResponseBody extends TeaModel {
         private UpgradeTask upgradeTask; 
 
         /**
-         * The error message during Cluster Upgrade.
+         * 错误信息描述。
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -94,7 +94,7 @@ public class GetUpgradeStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the precheck.
+         * 预检查返回ID。
          */
         public Builder precheckReportId(String precheckReportId) {
             this.precheckReportId = precheckReportId;
@@ -102,13 +102,7 @@ public class GetUpgradeStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the cluster upgrade. Valid values:
-         * <p>
-         * 
-         * -"success": the upgrade is successful.
-         * -"fail": the upgrade failed.
-         * -"pause": the upgrade is suspended.
-         * -"running": the upgrade is in progress.
+         * 升级状态。
          */
         public Builder status(String status) {
             this.status = status;
@@ -116,14 +110,7 @@ public class GetUpgradeStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The current upgrade stage of the cluster. Valid values:
-         * <p>
-         * 
-         * -"Not_start": not started yet.
-         * -"prechecking": precheck.
-         * -"Renewing": upgrading.
-         * -"pause": paused.
-         * -"success": the upgrade is successful.
+         * 升级任务执行到哪一步了。
          */
         public Builder upgradeStep(String upgradeStep) {
             this.upgradeStep = upgradeStep;
@@ -131,7 +118,7 @@ public class GetUpgradeStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the upgrade task.
+         * 升级任务详情。
          */
         public Builder upgradeTask(UpgradeTask upgradeTask) {
             this.upgradeTask = upgradeTask;
@@ -145,15 +132,15 @@ public class GetUpgradeStatusResponseBody extends TeaModel {
     } 
 
     public static class UpgradeTask extends TeaModel {
-        @NameInMap("status")
-        private String status;
-
         @NameInMap("message")
         private String message;
 
+        @NameInMap("status")
+        private String status;
+
         private UpgradeTask(Builder builder) {
-            this.status = builder.status;
             this.message = builder.message;
+            this.status = builder.status;
         }
 
         public static Builder builder() {
@@ -165,43 +152,36 @@ public class GetUpgradeStatusResponseBody extends TeaModel {
         }
 
         /**
-         * @return status
-         */
-        public String getStatus() {
-            return this.status;
-        }
-
-        /**
          * @return message
          */
         public String getMessage() {
             return this.message;
         }
 
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
         public static final class Builder {
-            private String status; 
             private String message; 
+            private String status; 
 
             /**
-             * The status of the upgrade task. Valid values:
-             * <p>
-             * 
-             * -"running": running.
-             * -"Success": successful execution.
-             * -"Failed": The execution failed.
-             * 
-             * 
+             * 任务描述信息。
              */
-            public Builder status(String status) {
-                this.status = status;
+            public Builder message(String message) {
+                this.message = message;
                 return this;
             }
 
             /**
-             * The description of the upgrade task.
+             * 任务状态：  emptry、running、success、failed
              */
-            public Builder message(String message) {
-                this.message = message;
+            public Builder status(String status) {
+                this.status = status;
                 return this;
             }
 

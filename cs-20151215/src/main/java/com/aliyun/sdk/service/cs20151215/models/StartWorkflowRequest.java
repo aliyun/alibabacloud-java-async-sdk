@@ -13,103 +13,103 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class StartWorkflowRequest extends Request {
     @Body
-    @NameInMap("workflow_type")
-    @Validation(required = true)
-    private String workflowType;
-
-    @Body
-    @NameInMap("service")
-    private String service;
-
-    @Body
-    @NameInMap("mapping_oss_region")
-    private String mappingOssRegion;
-
-    @Body
-    @NameInMap("mapping_fastq_first_filename")
-    private String mappingFastqFirstFilename;
-
-    @Body
-    @NameInMap("mapping_fastq_second_filename")
-    private String mappingFastqSecondFilename;
-
-    @Body
-    @NameInMap("mapping_bucket_name")
-    private String mappingBucketName;
-
-    @Body
-    @NameInMap("mapping_fastq_path")
-    private String mappingFastqPath;
-
-    @Body
-    @NameInMap("mapping_reference_path")
-    private String mappingReferencePath;
-
-    @Body
-    @NameInMap("mapping_is_mark_dup")
-    private String mappingIsMarkDup;
+    @NameInMap("mapping_bam_out_filename")
+    private String mappingBamOutFilename;
 
     @Body
     @NameInMap("mapping_bam_out_path")
     private String mappingBamOutPath;
 
     @Body
-    @NameInMap("mapping_bam_out_filename")
-    private String mappingBamOutFilename;
+    @NameInMap("mapping_bucket_name")
+    private String mappingBucketName;
 
     @Body
-    @NameInMap("wgs_oss_region")
-    private String wgsOssRegion;
+    @NameInMap("mapping_fastq_first_filename")
+    private String mappingFastqFirstFilename;
 
     @Body
-    @NameInMap("wgs_fastq_first_filename")
-    private String wgsFastqFirstFilename;
+    @NameInMap("mapping_fastq_path")
+    private String mappingFastqPath;
 
     @Body
-    @NameInMap("wgs_fastq_second_filename")
-    private String wgsFastqSecondFilename;
+    @NameInMap("mapping_fastq_second_filename")
+    private String mappingFastqSecondFilename;
+
+    @Body
+    @NameInMap("mapping_is_mark_dup")
+    private String mappingIsMarkDup;
+
+    @Body
+    @NameInMap("mapping_oss_region")
+    private String mappingOssRegion;
+
+    @Body
+    @NameInMap("mapping_reference_path")
+    private String mappingReferencePath;
+
+    @Body
+    @NameInMap("service")
+    private String service;
 
     @Body
     @NameInMap("wgs_bucket_name")
     private String wgsBucketName;
 
     @Body
+    @NameInMap("wgs_fastq_first_filename")
+    private String wgsFastqFirstFilename;
+
+    @Body
     @NameInMap("wgs_fastq_path")
     private String wgsFastqPath;
+
+    @Body
+    @NameInMap("wgs_fastq_second_filename")
+    private String wgsFastqSecondFilename;
+
+    @Body
+    @NameInMap("wgs_oss_region")
+    private String wgsOssRegion;
 
     @Body
     @NameInMap("wgs_reference_path")
     private String wgsReferencePath;
 
     @Body
+    @NameInMap("wgs_vcf_out_filename")
+    private String wgsVcfOutFilename;
+
+    @Body
     @NameInMap("wgs_vcf_out_path")
     private String wgsVcfOutPath;
 
     @Body
-    @NameInMap("wgs_vcf_out_filename")
-    private String wgsVcfOutFilename;
+    @NameInMap("workflow_type")
+    @Validation(required = true)
+    private String workflowType;
 
     private StartWorkflowRequest(Builder builder) {
         super(builder);
-        this.workflowType = builder.workflowType;
-        this.service = builder.service;
-        this.mappingOssRegion = builder.mappingOssRegion;
-        this.mappingFastqFirstFilename = builder.mappingFastqFirstFilename;
-        this.mappingFastqSecondFilename = builder.mappingFastqSecondFilename;
-        this.mappingBucketName = builder.mappingBucketName;
-        this.mappingFastqPath = builder.mappingFastqPath;
-        this.mappingReferencePath = builder.mappingReferencePath;
-        this.mappingIsMarkDup = builder.mappingIsMarkDup;
-        this.mappingBamOutPath = builder.mappingBamOutPath;
         this.mappingBamOutFilename = builder.mappingBamOutFilename;
-        this.wgsOssRegion = builder.wgsOssRegion;
-        this.wgsFastqFirstFilename = builder.wgsFastqFirstFilename;
-        this.wgsFastqSecondFilename = builder.wgsFastqSecondFilename;
+        this.mappingBamOutPath = builder.mappingBamOutPath;
+        this.mappingBucketName = builder.mappingBucketName;
+        this.mappingFastqFirstFilename = builder.mappingFastqFirstFilename;
+        this.mappingFastqPath = builder.mappingFastqPath;
+        this.mappingFastqSecondFilename = builder.mappingFastqSecondFilename;
+        this.mappingIsMarkDup = builder.mappingIsMarkDup;
+        this.mappingOssRegion = builder.mappingOssRegion;
+        this.mappingReferencePath = builder.mappingReferencePath;
+        this.service = builder.service;
         this.wgsBucketName = builder.wgsBucketName;
+        this.wgsFastqFirstFilename = builder.wgsFastqFirstFilename;
         this.wgsFastqPath = builder.wgsFastqPath;
+        this.wgsFastqSecondFilename = builder.wgsFastqSecondFilename;
+        this.wgsOssRegion = builder.wgsOssRegion;
         this.wgsReferencePath = builder.wgsReferencePath;
-        this.wgsVcfOutPath = builder.wgsVcfOutPath;
         this.wgsVcfOutFilename = builder.wgsVcfOutFilename;
+        this.wgsVcfOutPath = builder.wgsVcfOutPath;
+        this.workflowType = builder.workflowType;
     }
 
     public static Builder builder() {
@@ -126,66 +126,10 @@ public class StartWorkflowRequest extends Request {
     }
 
     /**
-     * @return workflowType
+     * @return mappingBamOutFilename
      */
-    public String getWorkflowType() {
-        return this.workflowType;
-    }
-
-    /**
-     * @return service
-     */
-    public String getService() {
-        return this.service;
-    }
-
-    /**
-     * @return mappingOssRegion
-     */
-    public String getMappingOssRegion() {
-        return this.mappingOssRegion;
-    }
-
-    /**
-     * @return mappingFastqFirstFilename
-     */
-    public String getMappingFastqFirstFilename() {
-        return this.mappingFastqFirstFilename;
-    }
-
-    /**
-     * @return mappingFastqSecondFilename
-     */
-    public String getMappingFastqSecondFilename() {
-        return this.mappingFastqSecondFilename;
-    }
-
-    /**
-     * @return mappingBucketName
-     */
-    public String getMappingBucketName() {
-        return this.mappingBucketName;
-    }
-
-    /**
-     * @return mappingFastqPath
-     */
-    public String getMappingFastqPath() {
-        return this.mappingFastqPath;
-    }
-
-    /**
-     * @return mappingReferencePath
-     */
-    public String getMappingReferencePath() {
-        return this.mappingReferencePath;
-    }
-
-    /**
-     * @return mappingIsMarkDup
-     */
-    public String getMappingIsMarkDup() {
-        return this.mappingIsMarkDup;
+    public String getMappingBamOutFilename() {
+        return this.mappingBamOutFilename;
     }
 
     /**
@@ -196,31 +140,59 @@ public class StartWorkflowRequest extends Request {
     }
 
     /**
-     * @return mappingBamOutFilename
+     * @return mappingBucketName
      */
-    public String getMappingBamOutFilename() {
-        return this.mappingBamOutFilename;
+    public String getMappingBucketName() {
+        return this.mappingBucketName;
     }
 
     /**
-     * @return wgsOssRegion
+     * @return mappingFastqFirstFilename
      */
-    public String getWgsOssRegion() {
-        return this.wgsOssRegion;
+    public String getMappingFastqFirstFilename() {
+        return this.mappingFastqFirstFilename;
     }
 
     /**
-     * @return wgsFastqFirstFilename
+     * @return mappingFastqPath
      */
-    public String getWgsFastqFirstFilename() {
-        return this.wgsFastqFirstFilename;
+    public String getMappingFastqPath() {
+        return this.mappingFastqPath;
     }
 
     /**
-     * @return wgsFastqSecondFilename
+     * @return mappingFastqSecondFilename
      */
-    public String getWgsFastqSecondFilename() {
-        return this.wgsFastqSecondFilename;
+    public String getMappingFastqSecondFilename() {
+        return this.mappingFastqSecondFilename;
+    }
+
+    /**
+     * @return mappingIsMarkDup
+     */
+    public String getMappingIsMarkDup() {
+        return this.mappingIsMarkDup;
+    }
+
+    /**
+     * @return mappingOssRegion
+     */
+    public String getMappingOssRegion() {
+        return this.mappingOssRegion;
+    }
+
+    /**
+     * @return mappingReferencePath
+     */
+    public String getMappingReferencePath() {
+        return this.mappingReferencePath;
+    }
+
+    /**
+     * @return service
+     */
+    public String getService() {
+        return this.service;
     }
 
     /**
@@ -231,10 +203,31 @@ public class StartWorkflowRequest extends Request {
     }
 
     /**
+     * @return wgsFastqFirstFilename
+     */
+    public String getWgsFastqFirstFilename() {
+        return this.wgsFastqFirstFilename;
+    }
+
+    /**
      * @return wgsFastqPath
      */
     public String getWgsFastqPath() {
         return this.wgsFastqPath;
+    }
+
+    /**
+     * @return wgsFastqSecondFilename
+     */
+    public String getWgsFastqSecondFilename() {
+        return this.wgsFastqSecondFilename;
+    }
+
+    /**
+     * @return wgsOssRegion
+     */
+    public String getWgsOssRegion() {
+        return this.wgsOssRegion;
     }
 
     /**
@@ -245,6 +238,13 @@ public class StartWorkflowRequest extends Request {
     }
 
     /**
+     * @return wgsVcfOutFilename
+     */
+    public String getWgsVcfOutFilename() {
+        return this.wgsVcfOutFilename;
+    }
+
+    /**
      * @return wgsVcfOutPath
      */
     public String getWgsVcfOutPath() {
@@ -252,32 +252,32 @@ public class StartWorkflowRequest extends Request {
     }
 
     /**
-     * @return wgsVcfOutFilename
+     * @return workflowType
      */
-    public String getWgsVcfOutFilename() {
-        return this.wgsVcfOutFilename;
+    public String getWorkflowType() {
+        return this.workflowType;
     }
 
     public static final class Builder extends Request.Builder<StartWorkflowRequest, Builder> {
-        private String workflowType; 
-        private String service; 
-        private String mappingOssRegion; 
-        private String mappingFastqFirstFilename; 
-        private String mappingFastqSecondFilename; 
-        private String mappingBucketName; 
-        private String mappingFastqPath; 
-        private String mappingReferencePath; 
-        private String mappingIsMarkDup; 
-        private String mappingBamOutPath; 
         private String mappingBamOutFilename; 
-        private String wgsOssRegion; 
-        private String wgsFastqFirstFilename; 
-        private String wgsFastqSecondFilename; 
+        private String mappingBamOutPath; 
+        private String mappingBucketName; 
+        private String mappingFastqFirstFilename; 
+        private String mappingFastqPath; 
+        private String mappingFastqSecondFilename; 
+        private String mappingIsMarkDup; 
+        private String mappingOssRegion; 
+        private String mappingReferencePath; 
+        private String service; 
         private String wgsBucketName; 
+        private String wgsFastqFirstFilename; 
         private String wgsFastqPath; 
+        private String wgsFastqSecondFilename; 
+        private String wgsOssRegion; 
         private String wgsReferencePath; 
-        private String wgsVcfOutPath; 
         private String wgsVcfOutFilename; 
+        private String wgsVcfOutPath; 
+        private String workflowType; 
 
         private Builder() {
             super();
@@ -285,124 +285,29 @@ public class StartWorkflowRequest extends Request {
 
         private Builder(StartWorkflowRequest request) {
             super(request);
-            this.workflowType = request.workflowType;
-            this.service = request.service;
-            this.mappingOssRegion = request.mappingOssRegion;
-            this.mappingFastqFirstFilename = request.mappingFastqFirstFilename;
-            this.mappingFastqSecondFilename = request.mappingFastqSecondFilename;
-            this.mappingBucketName = request.mappingBucketName;
-            this.mappingFastqPath = request.mappingFastqPath;
-            this.mappingReferencePath = request.mappingReferencePath;
-            this.mappingIsMarkDup = request.mappingIsMarkDup;
-            this.mappingBamOutPath = request.mappingBamOutPath;
             this.mappingBamOutFilename = request.mappingBamOutFilename;
-            this.wgsOssRegion = request.wgsOssRegion;
-            this.wgsFastqFirstFilename = request.wgsFastqFirstFilename;
-            this.wgsFastqSecondFilename = request.wgsFastqSecondFilename;
+            this.mappingBamOutPath = request.mappingBamOutPath;
+            this.mappingBucketName = request.mappingBucketName;
+            this.mappingFastqFirstFilename = request.mappingFastqFirstFilename;
+            this.mappingFastqPath = request.mappingFastqPath;
+            this.mappingFastqSecondFilename = request.mappingFastqSecondFilename;
+            this.mappingIsMarkDup = request.mappingIsMarkDup;
+            this.mappingOssRegion = request.mappingOssRegion;
+            this.mappingReferencePath = request.mappingReferencePath;
+            this.service = request.service;
             this.wgsBucketName = request.wgsBucketName;
+            this.wgsFastqFirstFilename = request.wgsFastqFirstFilename;
             this.wgsFastqPath = request.wgsFastqPath;
+            this.wgsFastqSecondFilename = request.wgsFastqSecondFilename;
+            this.wgsOssRegion = request.wgsOssRegion;
             this.wgsReferencePath = request.wgsReferencePath;
-            this.wgsVcfOutPath = request.wgsVcfOutPath;
             this.wgsVcfOutFilename = request.wgsVcfOutFilename;
+            this.wgsVcfOutPath = request.wgsVcfOutPath;
+            this.workflowType = request.workflowType;
         } 
 
         /**
-         * The type of the workflow. Valid values: wgs and mapping.
-         */
-        public Builder workflowType(String workflowType) {
-            this.putBodyParameter("workflow_type", workflowType);
-            this.workflowType = workflowType;
-            return this;
-        }
-
-        /**
-         * The SLA type. Valid values: s, g, and p.
-         * <p>
-         * 
-         * -Silver level (s): for the part exceeding 90 Gbp, calculate the increased time according to 1.5 Gbp/min.
-         * -Gold Level (g): for the part exceeding 90 Gbp, calculate the increased time according to 2 Gbp/min.
-         * -Platinum grade (p): for the part exceeding 90 Gbp, calculate the increased time according to 3 Gbp/min.
-         */
-        public Builder service(String service) {
-            this.putBodyParameter("service", service);
-            this.service = service;
-            return this;
-        }
-
-        /**
-         * The region where oss data is stored.
-         */
-        public Builder mappingOssRegion(String mappingOssRegion) {
-            this.putBodyParameter("mapping_oss_region", mappingOssRegion);
-            this.mappingOssRegion = mappingOssRegion;
-            return this;
-        }
-
-        /**
-         * The first fastq file name of the mapping.
-         */
-        public Builder mappingFastqFirstFilename(String mappingFastqFirstFilename) {
-            this.putBodyParameter("mapping_fastq_first_filename", mappingFastqFirstFilename);
-            this.mappingFastqFirstFilename = mappingFastqFirstFilename;
-            return this;
-        }
-
-        /**
-         * The second fastq file name of the mapping.
-         */
-        public Builder mappingFastqSecondFilename(String mappingFastqSecondFilename) {
-            this.putBodyParameter("mapping_fastq_second_filename", mappingFastqSecondFilename);
-            this.mappingFastqSecondFilename = mappingFastqSecondFilename;
-            return this;
-        }
-
-        /**
-         * The name of the bucket that stores the mapping.
-         */
-        public Builder mappingBucketName(String mappingBucketName) {
-            this.putBodyParameter("mapping_bucket_name", mappingBucketName);
-            this.mappingBucketName = mappingBucketName;
-            return this;
-        }
-
-        /**
-         * The path of the mapping fastq file.
-         */
-        public Builder mappingFastqPath(String mappingFastqPath) {
-            this.putBodyParameter("mapping_fastq_path", mappingFastqPath);
-            this.mappingFastqPath = mappingFastqPath;
-            return this;
-        }
-
-        /**
-         * The location of the mapping reference file.
-         */
-        public Builder mappingReferencePath(String mappingReferencePath) {
-            this.putBodyParameter("mapping_reference_path", mappingReferencePath);
-            this.mappingReferencePath = mappingReferencePath;
-            return this;
-        }
-
-        /**
-         * Specifies whether to enable dup.
-         */
-        public Builder mappingIsMarkDup(String mappingIsMarkDup) {
-            this.putBodyParameter("mapping_is_mark_dup", mappingIsMarkDup);
-            this.mappingIsMarkDup = mappingIsMarkDup;
-            return this;
-        }
-
-        /**
-         * The output path of the bam file.
-         */
-        public Builder mappingBamOutPath(String mappingBamOutPath) {
-            this.putBodyParameter("mapping_bam_out_path", mappingBamOutPath);
-            this.mappingBamOutPath = mappingBamOutPath;
-            return this;
-        }
-
-        /**
-         * The output name of the bam file.
+         * bam文件输出名称。
          */
         public Builder mappingBamOutFilename(String mappingBamOutFilename) {
             this.putBodyParameter("mapping_bam_out_filename", mappingBamOutFilename);
@@ -411,34 +316,88 @@ public class StartWorkflowRequest extends Request {
         }
 
         /**
-         * The region where wgs oss data is stored.
+         * bam文件输出路径。
          */
-        public Builder wgsOssRegion(String wgsOssRegion) {
-            this.putBodyParameter("wgs_oss_region", wgsOssRegion);
-            this.wgsOssRegion = wgsOssRegion;
+        public Builder mappingBamOutPath(String mappingBamOutPath) {
+            this.putBodyParameter("mapping_bam_out_path", mappingBamOutPath);
+            this.mappingBamOutPath = mappingBamOutPath;
             return this;
         }
 
         /**
-         * The first fastq file name of wgs.
+         * 存放mapping的bucket名称。
          */
-        public Builder wgsFastqFirstFilename(String wgsFastqFirstFilename) {
-            this.putBodyParameter("wgs_fastq_first_filename", wgsFastqFirstFilename);
-            this.wgsFastqFirstFilename = wgsFastqFirstFilename;
+        public Builder mappingBucketName(String mappingBucketName) {
+            this.putBodyParameter("mapping_bucket_name", mappingBucketName);
+            this.mappingBucketName = mappingBucketName;
             return this;
         }
 
         /**
-         * The second fastq file name of wgs.
+         * mapping的第一个fastq文件名。
          */
-        public Builder wgsFastqSecondFilename(String wgsFastqSecondFilename) {
-            this.putBodyParameter("wgs_fastq_second_filename", wgsFastqSecondFilename);
-            this.wgsFastqSecondFilename = wgsFastqSecondFilename;
+        public Builder mappingFastqFirstFilename(String mappingFastqFirstFilename) {
+            this.putBodyParameter("mapping_fastq_first_filename", mappingFastqFirstFilename);
+            this.mappingFastqFirstFilename = mappingFastqFirstFilename;
             return this;
         }
 
         /**
-         * The name of the bucket that stores wgs.
+         * mapping的fastq文件路径。
+         */
+        public Builder mappingFastqPath(String mappingFastqPath) {
+            this.putBodyParameter("mapping_fastq_path", mappingFastqPath);
+            this.mappingFastqPath = mappingFastqPath;
+            return this;
+        }
+
+        /**
+         * mapping的第二个fastq文件名。
+         */
+        public Builder mappingFastqSecondFilename(String mappingFastqSecondFilename) {
+            this.putBodyParameter("mapping_fastq_second_filename", mappingFastqSecondFilename);
+            this.mappingFastqSecondFilename = mappingFastqSecondFilename;
+            return this;
+        }
+
+        /**
+         * 是否进行dup。
+         */
+        public Builder mappingIsMarkDup(String mappingIsMarkDup) {
+            this.putBodyParameter("mapping_is_mark_dup", mappingIsMarkDup);
+            this.mappingIsMarkDup = mappingIsMarkDup;
+            return this;
+        }
+
+        /**
+         * mapping oss数据的存放region。
+         */
+        public Builder mappingOssRegion(String mappingOssRegion) {
+            this.putBodyParameter("mapping_oss_region", mappingOssRegion);
+            this.mappingOssRegion = mappingOssRegion;
+            return this;
+        }
+
+        /**
+         * mapping的reference文件位置。
+         */
+        public Builder mappingReferencePath(String mappingReferencePath) {
+            this.putBodyParameter("mapping_reference_path", mappingReferencePath);
+            this.mappingReferencePath = mappingReferencePath;
+            return this;
+        }
+
+        /**
+         * SLA类型，可选值：s、g、p。 白银级（s）：超过90 Gbp的部分，按1.5 Gbp/min计算增加的时间。 黄金级（g）：超过90 Gbp的部分，按2 Gbp/min计算增加的时间。 铂金级（p）：超过90 Gbp的部分，按3 Gbp/min计算增加的时间。
+         */
+        public Builder service(String service) {
+            this.putBodyParameter("service", service);
+            this.service = service;
+            return this;
+        }
+
+        /**
+         * 存放wgs的bucket名称。
          */
         public Builder wgsBucketName(String wgsBucketName) {
             this.putBodyParameter("wgs_bucket_name", wgsBucketName);
@@ -447,7 +406,16 @@ public class StartWorkflowRequest extends Request {
         }
 
         /**
-         * The fastq file path of wgs.
+         * wgs的第一个fastq文件名。
+         */
+        public Builder wgsFastqFirstFilename(String wgsFastqFirstFilename) {
+            this.putBodyParameter("wgs_fastq_first_filename", wgsFastqFirstFilename);
+            this.wgsFastqFirstFilename = wgsFastqFirstFilename;
+            return this;
+        }
+
+        /**
+         * wgs的fastq文件路径。
          */
         public Builder wgsFastqPath(String wgsFastqPath) {
             this.putBodyParameter("wgs_fastq_path", wgsFastqPath);
@@ -456,7 +424,25 @@ public class StartWorkflowRequest extends Request {
         }
 
         /**
-         * The path of the wgs reference file.
+         * wgs的第二个fastq文件名。
+         */
+        public Builder wgsFastqSecondFilename(String wgsFastqSecondFilename) {
+            this.putBodyParameter("wgs_fastq_second_filename", wgsFastqSecondFilename);
+            this.wgsFastqSecondFilename = wgsFastqSecondFilename;
+            return this;
+        }
+
+        /**
+         * wgs oss数据的存放region。
+         */
+        public Builder wgsOssRegion(String wgsOssRegion) {
+            this.putBodyParameter("wgs_oss_region", wgsOssRegion);
+            this.wgsOssRegion = wgsOssRegion;
+            return this;
+        }
+
+        /**
+         * wgs的reference文件路径。
          */
         public Builder wgsReferencePath(String wgsReferencePath) {
             this.putBodyParameter("wgs_reference_path", wgsReferencePath);
@@ -465,7 +451,16 @@ public class StartWorkflowRequest extends Request {
         }
 
         /**
-         * The vcf output path of wgs.
+         * wgs的vcf输出文件名称。
+         */
+        public Builder wgsVcfOutFilename(String wgsVcfOutFilename) {
+            this.putBodyParameter("wgs_vcf_out_filename", wgsVcfOutFilename);
+            this.wgsVcfOutFilename = wgsVcfOutFilename;
+            return this;
+        }
+
+        /**
+         * wgs的vcf输出路径。
          */
         public Builder wgsVcfOutPath(String wgsVcfOutPath) {
             this.putBodyParameter("wgs_vcf_out_path", wgsVcfOutPath);
@@ -474,11 +469,11 @@ public class StartWorkflowRequest extends Request {
         }
 
         /**
-         * The name of the vcf output file of wgs.
+         * 工作流类型，可选值：wgs或mapping。
          */
-        public Builder wgsVcfOutFilename(String wgsVcfOutFilename) {
-            this.putBodyParameter("wgs_vcf_out_filename", wgsVcfOutFilename);
-            this.wgsVcfOutFilename = wgsVcfOutFilename;
+        public Builder workflowType(String workflowType) {
+            this.putBodyParameter("workflow_type", workflowType);
+            this.workflowType = workflowType;
             return this;
         }
 

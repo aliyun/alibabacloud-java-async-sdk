@@ -12,19 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Taint</p>
  */
 public class Taint extends TeaModel {
+    @NameInMap("effect")
+    private String effect;
+
     @NameInMap("key")
     private String key;
 
     @NameInMap("value")
     private String value;
 
-    @NameInMap("effect")
-    private String effect;
-
     private Taint(Builder builder) {
+        this.effect = builder.effect;
         this.key = builder.key;
         this.value = builder.value;
-        this.effect = builder.effect;
     }
 
     public static Builder builder() {
@@ -33,6 +33,13 @@ public class Taint extends TeaModel {
 
     public static Taint create() {
         return builder().build();
+    }
+
+    /**
+     * @return effect
+     */
+    public String getEffect() {
+        return this.effect;
     }
 
     /**
@@ -49,20 +56,21 @@ public class Taint extends TeaModel {
         return this.value;
     }
 
-    /**
-     * @return effect
-     */
-    public String getEffect() {
-        return this.effect;
-    }
-
     public static final class Builder {
+        private String effect; 
         private String key; 
         private String value; 
-        private String effect; 
 
         /**
-         * The value of the key.
+         * 污点生效策略。
+         */
+        public Builder effect(String effect) {
+            this.effect = effect;
+            return this;
+        }
+
+        /**
+         * key值。
          */
         public Builder key(String key) {
             this.key = key;
@@ -70,18 +78,10 @@ public class Taint extends TeaModel {
         }
 
         /**
-         * value.
+         * value值。
          */
         public Builder value(String value) {
             this.value = value;
-            return this;
-        }
-
-        /**
-         * The taint policy.
-         */
-        public Builder effect(String effect) {
-            this.effect = effect;
             return this;
         }
 

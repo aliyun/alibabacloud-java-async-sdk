@@ -7,21 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link StopAlertResponse} extends {@link TeaModel}
+ * {@link DescribeNodePoolVulsResponse} extends {@link TeaModel}
  *
- * <p>StopAlertResponse</p>
+ * <p>DescribeNodePoolVulsResponse</p>
  */
-public class StopAlertResponse extends Response {
+public class DescribeNodePoolVulsResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
-    private StopAlertResponse(BuilderImpl builder) {
+    @NameInMap("body")
+    @Validation(required = true)
+    private DescribeNodePoolVulsResponseBody body;
+
+    private DescribeNodePoolVulsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.body = builder.body;
     }
 
-    public static StopAlertResponse create() {
+    public static DescribeNodePoolVulsResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -37,27 +42,38 @@ public class StopAlertResponse extends Response {
         return this.headers;
     }
 
-    public interface Builder extends Response.Builder<StopAlertResponse, Builder> {
+    /**
+     * @return body
+     */
+    public DescribeNodePoolVulsResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<DescribeNodePoolVulsResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
+        Builder body(DescribeNodePoolVulsResponseBody body);
+
         @Override
-        StopAlertResponse build();
+        DescribeNodePoolVulsResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<StopAlertResponse, Builder>
+            extends Response.BuilderImpl<DescribeNodePoolVulsResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private DescribeNodePoolVulsResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(StopAlertResponse response) {
+        private BuilderImpl(DescribeNodePoolVulsResponse response) {
             super(response);
             this.headers = response.headers;
+            this.body = response.body;
         } 
 
         /**
@@ -69,9 +85,18 @@ public class StopAlertResponse extends Response {
             return this;
         }
 
+        /**
+         * body.
+         */
         @Override
-        public StopAlertResponse build() {
-            return new StopAlertResponse(this);
+        public Builder body(DescribeNodePoolVulsResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public DescribeNodePoolVulsResponse build() {
+            return new DescribeNodePoolVulsResponse(this);
         } 
 
     } 

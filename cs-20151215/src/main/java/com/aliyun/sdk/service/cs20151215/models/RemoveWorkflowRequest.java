@@ -55,7 +55,7 @@ public class RemoveWorkflowRequest extends Request {
         } 
 
         /**
-         * The name of the workflow.
+         * 工作流名称。
          */
         public Builder workflowName(String workflowName) {
             this.putPathParameter("workflowName", workflowName);

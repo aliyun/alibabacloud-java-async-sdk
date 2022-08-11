@@ -17,16 +17,6 @@ public class UntagResourcesRequest extends Request {
     private Boolean all;
 
     @Query
-    @NameInMap("resource_type")
-    @Validation(required = true)
-    private String resourceType;
-
-    @Query
-    @NameInMap("tag_keys")
-    @Validation(required = true)
-    private java.util.List < String > tagKeys;
-
-    @Query
     @NameInMap("region_id")
     @Validation(required = true)
     private String regionId;
@@ -36,13 +26,23 @@ public class UntagResourcesRequest extends Request {
     @Validation(required = true)
     private java.util.List < String > resourceIds;
 
+    @Query
+    @NameInMap("resource_type")
+    @Validation(required = true)
+    private String resourceType;
+
+    @Query
+    @NameInMap("tag_keys")
+    @Validation(required = true)
+    private java.util.List < String > tagKeys;
+
     private UntagResourcesRequest(Builder builder) {
         super(builder);
         this.all = builder.all;
-        this.resourceType = builder.resourceType;
-        this.tagKeys = builder.tagKeys;
         this.regionId = builder.regionId;
         this.resourceIds = builder.resourceIds;
+        this.resourceType = builder.resourceType;
+        this.tagKeys = builder.tagKeys;
     }
 
     public static Builder builder() {
@@ -66,20 +66,6 @@ public class UntagResourcesRequest extends Request {
     }
 
     /**
-     * @return resourceType
-     */
-    public String getResourceType() {
-        return this.resourceType;
-    }
-
-    /**
-     * @return tagKeys
-     */
-    public java.util.List < String > getTagKeys() {
-        return this.tagKeys;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -93,12 +79,26 @@ public class UntagResourcesRequest extends Request {
         return this.resourceIds;
     }
 
+    /**
+     * @return resourceType
+     */
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
+    /**
+     * @return tagKeys
+     */
+    public java.util.List < String > getTagKeys() {
+        return this.tagKeys;
+    }
+
     public static final class Builder extends Request.Builder<UntagResourcesRequest, Builder> {
         private Boolean all; 
-        private String resourceType; 
-        private java.util.List < String > tagKeys; 
         private String regionId; 
         private java.util.List < String > resourceIds; 
+        private String resourceType; 
+        private java.util.List < String > tagKeys; 
 
         private Builder() {
             super();
@@ -107,14 +107,14 @@ public class UntagResourcesRequest extends Request {
         private Builder(UntagResourcesRequest request) {
             super(request);
             this.all = request.all;
-            this.resourceType = request.resourceType;
-            this.tagKeys = request.tagKeys;
             this.regionId = request.regionId;
             this.resourceIds = request.resourceIds;
+            this.resourceType = request.resourceType;
+            this.tagKeys = request.tagKeys;
         } 
 
         /**
-         * Specifies whether to delete all custom tags. This parameter takes effect only when "tag_key" is empty. Valid values:[true,false].
+         * 是否删除全部自定义标签，仅当tag_keys为空时生效，取值：[true,false]。
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("all", all);
@@ -123,25 +123,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The definition of the resource type. Valid values: only the resource type "CLUSTER" is supported.
-         */
-        public Builder resourceType(String resourceType) {
-            this.putQueryParameter("resource_type", resourceType);
-            this.resourceType = resourceType;
-            return this;
-        }
-
-        /**
-         * The list of resource tag keys.
-         */
-        public Builder tagKeys(java.util.List < String > tagKeys) {
-            this.putQueryParameter("tag_keys", tagKeys);
-            this.tagKeys = tagKeys;
-            return this;
-        }
-
-        /**
-         * The ID of the region to which the resource belongs.
+         * 资源所属的地域ID
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("region_id", regionId);
@@ -150,11 +132,29 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The list of resource ids.
+         * 资源ID。数组长度取值范围为：1~50
          */
         public Builder resourceIds(java.util.List < String > resourceIds) {
             this.putQueryParameter("resource_ids", resourceIds);
             this.resourceIds = resourceIds;
+            return this;
+        }
+
+        /**
+         * 资源类型定义。取值范围： 只支持CLUSTER这一种资源类型
+         */
+        public Builder resourceType(String resourceType) {
+            this.putQueryParameter("resource_type", resourceType);
+            this.resourceType = resourceType;
+            return this;
+        }
+
+        /**
+         * 资源的标签键。N的取值范围：1~20
+         */
+        public Builder tagKeys(java.util.List < String > tagKeys) {
+            this.putQueryParameter("tag_keys", tagKeys);
+            this.tagKeys = tagKeys;
             return this;
         }
 

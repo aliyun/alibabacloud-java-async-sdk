@@ -22,10 +22,15 @@ public class DeleteClusterNodepoolRequest extends Request {
     @Validation(required = true)
     private String nodepoolId;
 
+    @Query
+    @NameInMap("force")
+    private Boolean force;
+
     private DeleteClusterNodepoolRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
         this.nodepoolId = builder.nodepoolId;
+        this.force = builder.force;
     }
 
     public static Builder builder() {
@@ -55,9 +60,17 @@ public class DeleteClusterNodepoolRequest extends Request {
         return this.nodepoolId;
     }
 
+    /**
+     * @return force
+     */
+    public Boolean getForce() {
+        return this.force;
+    }
+
     public static final class Builder extends Request.Builder<DeleteClusterNodepoolRequest, Builder> {
         private String clusterId; 
         private String nodepoolId; 
+        private Boolean force; 
 
         private Builder() {
             super();
@@ -67,10 +80,11 @@ public class DeleteClusterNodepoolRequest extends Request {
             super(request);
             this.clusterId = request.clusterId;
             this.nodepoolId = request.nodepoolId;
+            this.force = request.force;
         } 
 
         /**
-         * The ID of the cluster.
+         * 集群ID
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -79,11 +93,20 @@ public class DeleteClusterNodepoolRequest extends Request {
         }
 
         /**
-         * The ID of the node pool.
+         * 节点池ID。
          */
         public Builder nodepoolId(String nodepoolId) {
             this.putPathParameter("NodepoolId", nodepoolId);
             this.nodepoolId = nodepoolId;
+            return this;
+        }
+
+        /**
+         * 是否强制删除。
+         */
+        public Builder force(Boolean force) {
+            this.putQueryParameter("force", force);
+            this.force = force;
             return this;
         }
 

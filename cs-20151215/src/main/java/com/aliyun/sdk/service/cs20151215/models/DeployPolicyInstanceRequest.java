@@ -112,7 +112,7 @@ public class DeployPolicyInstanceRequest extends Request {
         } 
 
         /**
-         * The ID of the target cluster.
+         * 目标集群id
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
@@ -121,7 +121,7 @@ public class DeployPolicyInstanceRequest extends Request {
         }
 
         /**
-         * Policy governance rule name
+         * 策略治理规则名称
          */
         public Builder policyName(String policyName) {
             this.putPathParameter("policy_name", policyName);
@@ -130,11 +130,7 @@ public class DeployPolicyInstanceRequest extends Request {
         }
 
         /**
-         * The rule governance action. Valid values:
-         * <p>
-         * 
-         * -"Denounced: intercepts illegal deployment.
-         * -"Ware": Alerts
+         * 规则治理动作
          */
         public Builder action(String action) {
             this.putBodyParameter("action", action);
@@ -143,7 +139,7 @@ public class DeployPolicyInstanceRequest extends Request {
         }
 
         /**
-         * The namespace used to restrict policy implementation. If this parameter is empty, all namespaces are used.
+         * 限制策略实施的命名空间，为空时表示所有命名空间
          */
         public Builder namespaces(java.util.List < String > namespaces) {
             this.putBodyParameter("namespaces", namespaces);
@@ -152,7 +148,7 @@ public class DeployPolicyInstanceRequest extends Request {
         }
 
         /**
-         * Configuration parameters of the current rule instance
+         * 当前规则实例的配置参数
          */
         public Builder parameters(java.util.Map < String, ? > parameters) {
             this.putBodyParameter("parameters", parameters);

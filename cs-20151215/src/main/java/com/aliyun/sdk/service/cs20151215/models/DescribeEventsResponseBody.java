@@ -50,7 +50,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         private PageInfo pageInfo; 
 
         /**
-         * The event details.
+         * events.
          */
         public Builder events(java.util.List < Events> events) {
             this.events = events;
@@ -58,7 +58,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The page information.
+         * page_info.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -75,16 +75,16 @@ public class DescribeEventsResponseBody extends TeaModel {
         @NameInMap("level")
         private String level;
 
-        @NameInMap("reason")
-        private String reason;
-
         @NameInMap("message")
         private String message;
 
+        @NameInMap("reason")
+        private String reason;
+
         private Data(Builder builder) {
             this.level = builder.level;
-            this.reason = builder.reason;
             this.message = builder.message;
+            this.reason = builder.reason;
         }
 
         public static Builder builder() {
@@ -103,26 +103,26 @@ public class DescribeEventsResponseBody extends TeaModel {
         }
 
         /**
-         * @return reason
-         */
-        public String getReason() {
-            return this.reason;
-        }
-
-        /**
          * @return message
          */
         public String getMessage() {
             return this.message;
         }
 
+        /**
+         * @return reason
+         */
+        public String getReason() {
+            return this.reason;
+        }
+
         public static final class Builder {
             private String level; 
-            private String reason; 
             private String message; 
+            private String reason; 
 
             /**
-             * The level of the event.
+             * 事件级别
              */
             public Builder level(String level) {
                 this.level = level;
@@ -130,18 +130,18 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the event.
+             * 事件详情
              */
-            public Builder reason(String reason) {
-                this.reason = reason;
+            public Builder message(String message) {
+                this.message = message;
                 return this;
             }
 
             /**
-             * The event details.
+             * 事件状态
              */
-            public Builder message(String message) {
-                this.message = message;
+            public Builder reason(String reason) {
+                this.reason = reason;
                 return this;
             }
 
@@ -153,11 +153,14 @@ public class DescribeEventsResponseBody extends TeaModel {
 
     }
     public static class Events extends TeaModel {
+        @NameInMap("cluster_id")
+        private String clusterId;
+
+        @NameInMap("data")
+        private Data data;
+
         @NameInMap("event_id")
         private String eventId;
-
-        @NameInMap("type")
-        private String type;
 
         @NameInMap("source")
         private String source;
@@ -168,20 +171,17 @@ public class DescribeEventsResponseBody extends TeaModel {
         @NameInMap("time")
         private String time;
 
-        @NameInMap("cluster_id")
-        private String clusterId;
-
-        @NameInMap("data")
-        private Data data;
+        @NameInMap("type")
+        private String type;
 
         private Events(Builder builder) {
+            this.clusterId = builder.clusterId;
+            this.data = builder.data;
             this.eventId = builder.eventId;
-            this.type = builder.type;
             this.source = builder.source;
             this.subject = builder.subject;
             this.time = builder.time;
-            this.clusterId = builder.clusterId;
-            this.data = builder.data;
+            this.type = builder.type;
         }
 
         public static Builder builder() {
@@ -193,17 +193,24 @@ public class DescribeEventsResponseBody extends TeaModel {
         }
 
         /**
+         * @return clusterId
+         */
+        public String getClusterId() {
+            return this.clusterId;
+        }
+
+        /**
+         * @return data
+         */
+        public Data getData() {
+            return this.data;
+        }
+
+        /**
          * @return eventId
          */
         public String getEventId() {
             return this.eventId;
-        }
-
-        /**
-         * @return type
-         */
-        public String getType() {
-            return this.type;
         }
 
         /**
@@ -228,87 +235,23 @@ public class DescribeEventsResponseBody extends TeaModel {
         }
 
         /**
-         * @return clusterId
+         * @return type
          */
-        public String getClusterId() {
-            return this.clusterId;
-        }
-
-        /**
-         * @return data
-         */
-        public Data getData() {
-            return this.data;
+        public String getType() {
+            return this.type;
         }
 
         public static final class Builder {
+            private String clusterId; 
+            private Data data; 
             private String eventId; 
-            private String type; 
             private String source; 
             private String subject; 
             private String time; 
-            private String clusterId; 
-            private Data data; 
+            private String type; 
 
             /**
-             * The ID of the event.
-             */
-            public Builder eventId(String eventId) {
-                this.eventId = eventId;
-                return this;
-            }
-
-            /**
-             * The type of the event. Valid values:
-             * <p>
-             * -"Cluster_create": Creates a cluster.
-             * -"Cluster_scaleout": scale out the cluster.
-             * -"Cluster_attach ": adds an existing node.
-             * -"Cluster_delete ": deletes a cluster.
-             * -"Cluster_upgrade ": upgrades the cluster.
-             * -"Cluster_migrate ": migrates the cluster.
-             * -"Cluster_node_delete ": removes a node.
-             * -"Cluster_node_drain ": clears the node.
-             * -"Cluster_modig": modifies the cluster.
-             * -"Cluster_configuration_modif": modifies the cluster control configuration.
-             * -"Cluster_addon_install ": install components.
-             * -"Cluster_addon_upgrade ": upgrades components.
-             * -"Cluster_addon_uninstall ": uninstall the component.
-             * -"Runtime_upgrade ": upgrades the runtime.
-             * -"Nodepool_upgrade ": upgrades the node pool.
-             * -"Nodepool_update": updates the node pool.
-             */
-            public Builder type(String type) {
-                this.type = type;
-                return this;
-            }
-
-            /**
-             * The source of the event.
-             */
-            public Builder source(String source) {
-                this.source = source;
-                return this;
-            }
-
-            /**
-             * The subject of the event.
-             */
-            public Builder subject(String subject) {
-                this.subject = subject;
-                return this;
-            }
-
-            /**
-             * The start time of the event.
-             */
-            public Builder time(String time) {
-                this.time = time;
-                return this;
-            }
-
-            /**
-             * The ID of the cluster.
+             * 集群ID
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -316,10 +259,50 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the event.
+             * 事件描述
              */
             public Builder data(Data data) {
                 this.data = data;
+                return this;
+            }
+
+            /**
+             * 事件ID
+             */
+            public Builder eventId(String eventId) {
+                this.eventId = eventId;
+                return this;
+            }
+
+            /**
+             * 事件源
+             */
+            public Builder source(String source) {
+                this.source = source;
+                return this;
+            }
+
+            /**
+             * 事件
+             */
+            public Builder subject(String subject) {
+                this.subject = subject;
+                return this;
+            }
+
+            /**
+             * 事件开始事件
+             */
+            public Builder time(String time) {
+                this.time = time;
+                return this;
+            }
+
+            /**
+             * 事件类型
+             */
+            public Builder type(String type) {
+                this.type = type;
                 return this;
             }
 
@@ -331,18 +314,18 @@ public class DescribeEventsResponseBody extends TeaModel {
 
     }
     public static class PageInfo extends TeaModel {
-        @NameInMap("page_size")
-        private Long pageSize;
-
         @NameInMap("page_number")
         private Long pageNumber;
+
+        @NameInMap("page_size")
+        private Long pageSize;
 
         @NameInMap("total_count")
         private Long totalCount;
 
         private PageInfo(Builder builder) {
-            this.pageSize = builder.pageSize;
             this.pageNumber = builder.pageNumber;
+            this.pageSize = builder.pageSize;
             this.totalCount = builder.totalCount;
         }
 
@@ -355,17 +338,17 @@ public class DescribeEventsResponseBody extends TeaModel {
         }
 
         /**
-         * @return pageSize
-         */
-        public Long getPageSize() {
-            return this.pageSize;
-        }
-
-        /**
          * @return pageNumber
          */
         public Long getPageNumber() {
             return this.pageNumber;
+        }
+
+        /**
+         * @return pageSize
+         */
+        public Long getPageSize() {
+            return this.pageSize;
         }
 
         /**
@@ -376,20 +359,12 @@ public class DescribeEventsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private Long pageSize; 
             private Long pageNumber; 
+            private Long pageSize; 
             private Long totalCount; 
 
             /**
-             * The number of entries to return on each page.
-             */
-            public Builder pageSize(Long pageSize) {
-                this.pageSize = pageSize;
-                return this;
-            }
-
-            /**
-             * The number of pages to return.
+             * 每页记录数量
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -397,7 +372,15 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of results.
+             * 页数
+             */
+            public Builder pageSize(Long pageSize) {
+                this.pageSize = pageSize;
+                return this;
+            }
+
+            /**
+             * 结果总数
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

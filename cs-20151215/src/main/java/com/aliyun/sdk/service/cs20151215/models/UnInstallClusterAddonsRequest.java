@@ -69,7 +69,7 @@ public class UnInstallClusterAddonsRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * 集群ID。
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -78,7 +78,7 @@ public class UnInstallClusterAddonsRequest extends Request {
         }
 
         /**
-         * The list of components. The structure is an array.
+         * 卸载组件列表。
          */
         public Builder addons(java.util.List < Addons> addons) {
             this.putBodyParameter("addons", addons);

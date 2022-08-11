@@ -13,13 +13,8 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListTagResourcesRequest extends Request {
     @Query
-    @NameInMap("resource_type")
-    @Validation(required = true)
-    private String resourceType;
-
-    @Query
-    @NameInMap("tags")
-    private java.util.List < Tag > tags;
+    @NameInMap("next_token")
+    private String nextToken;
 
     @Query
     @NameInMap("region_id")
@@ -32,16 +27,21 @@ public class ListTagResourcesRequest extends Request {
     private java.util.List < String > resourceIds;
 
     @Query
-    @NameInMap("next_token")
-    private String nextToken;
+    @NameInMap("resource_type")
+    @Validation(required = true)
+    private String resourceType;
+
+    @Query
+    @NameInMap("tags")
+    private java.util.List < Tag > tags;
 
     private ListTagResourcesRequest(Builder builder) {
         super(builder);
-        this.resourceType = builder.resourceType;
-        this.tags = builder.tags;
+        this.nextToken = builder.nextToken;
         this.regionId = builder.regionId;
         this.resourceIds = builder.resourceIds;
-        this.nextToken = builder.nextToken;
+        this.resourceType = builder.resourceType;
+        this.tags = builder.tags;
     }
 
     public static Builder builder() {
@@ -58,17 +58,10 @@ public class ListTagResourcesRequest extends Request {
     }
 
     /**
-     * @return resourceType
+     * @return nextToken
      */
-    public String getResourceType() {
-        return this.resourceType;
-    }
-
-    /**
-     * @return tags
-     */
-    public java.util.List < Tag > getTags() {
-        return this.tags;
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -86,18 +79,25 @@ public class ListTagResourcesRequest extends Request {
     }
 
     /**
-     * @return nextToken
+     * @return resourceType
      */
-    public String getNextToken() {
-        return this.nextToken;
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
+    /**
+     * @return tags
+     */
+    public java.util.List < Tag > getTags() {
+        return this.tags;
     }
 
     public static final class Builder extends Request.Builder<ListTagResourcesRequest, Builder> {
-        private String resourceType; 
-        private java.util.List < Tag > tags; 
+        private String nextToken; 
         private String regionId; 
         private java.util.List < String > resourceIds; 
-        private String nextToken; 
+        private String resourceType; 
+        private java.util.List < Tag > tags; 
 
         private Builder() {
             super();
@@ -105,36 +105,24 @@ public class ListTagResourcesRequest extends Request {
 
         private Builder(ListTagResourcesRequest request) {
             super(request);
-            this.resourceType = request.resourceType;
-            this.tags = request.tags;
+            this.nextToken = request.nextToken;
             this.regionId = request.regionId;
             this.resourceIds = request.resourceIds;
-            this.nextToken = request.nextToken;
+            this.resourceType = request.resourceType;
+            this.tags = request.tags;
         } 
 
         /**
-         * The type of the resource. Valid values: "CLUSTER ".
+         * 下一次查询Token。
          */
-        public Builder resourceType(String resourceType) {
-            this.putQueryParameter("resource_type", resourceType);
-            this.resourceType = resourceType;
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("next_token", nextToken);
+            this.nextToken = nextToken;
             return this;
         }
 
         /**
-         * The list of tags to be queried. A maximum of 20 sub-items can be queried.
-         * <p>
-         * 
-         * 
-         */
-        public Builder tags(java.util.List < Tag > tags) {
-            this.putQueryParameter("tags", tags);
-            this.tags = tags;
-            return this;
-        }
-
-        /**
-         * The ID of the region.
+         * 地域ID
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("region_id", regionId);
@@ -143,23 +131,31 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the cluster to be queried.
-         * <p>
-         * 
-         * 
+         * 集群ID列表。
          */
         public Builder resourceIds(java.util.List < String > resourceIds) {
-            this.putQueryParameter("resource_ids", resourceIds);
+            String resourceIdsShrink = shrink(resourceIds, "resource_ids", "json");
+            this.putQueryParameter("resource_ids", resourceIdsShrink);
             this.resourceIds = resourceIds;
             return this;
         }
 
         /**
-         * The token used to start the next query.
+         * 资源类型，只支持Cluster
          */
-        public Builder nextToken(String nextToken) {
-            this.putQueryParameter("next_token", nextToken);
-            this.nextToken = nextToken;
+        public Builder resourceType(String resourceType) {
+            this.putQueryParameter("resource_type", resourceType);
+            this.resourceType = resourceType;
+            return this;
+        }
+
+        /**
+         * 按标签查找。
+         */
+        public Builder tags(java.util.List < Tag > tags) {
+            String tagsShrink = shrink(tags, "tags", "json");
+            this.putQueryParameter("tags", tagsShrink);
+            this.tags = tags;
             return this;
         }
 

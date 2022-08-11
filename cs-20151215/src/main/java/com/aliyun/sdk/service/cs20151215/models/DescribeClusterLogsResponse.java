@@ -111,9 +111,6 @@ public class DescribeClusterLogsResponse extends Response {
         @NameInMap("cluster_log")
         private String clusterLog;
 
-        @NameInMap("log_level")
-        private String logLevel;
-
         @NameInMap("created")
         private String created;
 
@@ -124,7 +121,6 @@ public class DescribeClusterLogsResponse extends Response {
             this.id = builder.id;
             this.clusterId = builder.clusterId;
             this.clusterLog = builder.clusterLog;
-            this.logLevel = builder.logLevel;
             this.created = builder.created;
             this.updated = builder.updated;
         }
@@ -159,13 +155,6 @@ public class DescribeClusterLogsResponse extends Response {
         }
 
         /**
-         * @return logLevel
-         */
-        public String getLogLevel() {
-            return this.logLevel;
-        }
-
-        /**
          * @return created
          */
         public String getCreated() {
@@ -183,7 +172,6 @@ public class DescribeClusterLogsResponse extends Response {
             private Long id; 
             private String clusterId; 
             private String clusterLog; 
-            private String logLevel; 
             private String created; 
             private String updated; 
 
@@ -212,15 +200,7 @@ public class DescribeClusterLogsResponse extends Response {
             }
 
             /**
-             * 日志级别。
-             */
-            public Builder logLevel(String logLevel) {
-                this.logLevel = logLevel;
-                return this;
-            }
-
-            /**
-             * 日志产生时间。
+             * 日志创建时间。
              */
             public Builder created(String created) {
                 this.created = created;

@@ -13,6 +13,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class TagResourcesRequest extends Request {
     @Body
+    @NameInMap("region_id")
+    @Validation(required = true)
+    private String regionId;
+
+    @Body
     @NameInMap("resource_ids")
     @Validation(required = true)
     private java.util.List < String > resourceIds;
@@ -23,20 +28,15 @@ public class TagResourcesRequest extends Request {
     private String resourceType;
 
     @Body
-    @NameInMap("region_id")
-    @Validation(required = true)
-    private String regionId;
-
-    @Body
     @NameInMap("tags")
     @Validation(required = true)
     private java.util.List < Tag > tags;
 
     private TagResourcesRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.resourceIds = builder.resourceIds;
         this.resourceType = builder.resourceType;
-        this.regionId = builder.regionId;
         this.tags = builder.tags;
     }
 
@@ -54,6 +54,13 @@ public class TagResourcesRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return resourceIds
      */
     public java.util.List < String > getResourceIds() {
@@ -68,13 +75,6 @@ public class TagResourcesRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return tags
      */
     public java.util.List < Tag > getTags() {
@@ -82,9 +82,9 @@ public class TagResourcesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<TagResourcesRequest, Builder> {
+        private String regionId; 
         private java.util.List < String > resourceIds; 
         private String resourceType; 
-        private String regionId; 
         private java.util.List < Tag > tags; 
 
         private Builder() {
@@ -93,32 +93,14 @@ public class TagResourcesRequest extends Request {
 
         private Builder(TagResourcesRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.resourceIds = request.resourceIds;
             this.resourceType = request.resourceType;
-            this.regionId = request.regionId;
             this.tags = request.tags;
         } 
 
         /**
-         * The list of resource IDs.
-         */
-        public Builder resourceIds(java.util.List < String > resourceIds) {
-            this.putBodyParameter("resource_ids", resourceIds);
-            this.resourceIds = resourceIds;
-            return this;
-        }
-
-        /**
-         * The definition of the resource type. Valid values: only the resource type "CLUSTER" is supported.
-         */
-        public Builder resourceType(String resourceType) {
-            this.putBodyParameter("resource_type", resourceType);
-            this.resourceType = resourceType;
-            return this;
-        }
-
-        /**
-         * The ID of the region to which the resource belongs.
+         * 资源所属的地域ID
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("region_id", regionId);
@@ -127,12 +109,25 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The tag key-value pair of the resource. Array length:[1,20]. Note:
-         * <p>
-         * 
-         * -The value cannot be an empty string. It can be up to 128 characters in length.
-         * -Cannot start with "aliyun" or "acs.
-         * -Cannot contain "http:// "or "https://".
+         * 资源ID列表
+         */
+        public Builder resourceIds(java.util.List < String > resourceIds) {
+            this.putBodyParameter("resource_ids", resourceIds);
+            this.resourceIds = resourceIds;
+            return this;
+        }
+
+        /**
+         * 资源类型定义。取值范围：  只支持CLUSTER这一种资源类型
+         */
+        public Builder resourceType(String resourceType) {
+            this.putBodyParameter("resource_type", resourceType);
+            this.resourceType = resourceType;
+            return this;
+        }
+
+        /**
+         * 资源的标签键值对。数组长度范围：1~20。一旦传值，则不允许为空字符串。最多支持128个字符，不能以aliyun和acs:开头，不能包含http://或者https://。
          */
         public Builder tags(java.util.List < Tag > tags) {
             this.putBodyParameter("tags", tags);

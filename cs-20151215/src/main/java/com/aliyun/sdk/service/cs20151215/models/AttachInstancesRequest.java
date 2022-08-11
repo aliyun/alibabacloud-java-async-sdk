@@ -18,9 +18,29 @@ public class AttachInstancesRequest extends Request {
     private String clusterId;
 
     @Body
+    @NameInMap("cpu_policy")
+    private String cpuPolicy;
+
+    @Body
+    @NameInMap("format_disk")
+    private Boolean formatDisk;
+
+    @Body
+    @NameInMap("image_id")
+    private String imageId;
+
+    @Body
     @NameInMap("instances")
     @Validation(required = true)
     private java.util.List < String > instances;
+
+    @Body
+    @NameInMap("is_edge_worker")
+    private Boolean isEdgeWorker;
+
+    @Body
+    @NameInMap("keep_instance_name")
+    private Boolean keepInstanceName;
 
     @Body
     @NameInMap("key_pair")
@@ -28,37 +48,13 @@ public class AttachInstancesRequest extends Request {
     private String keyPair;
 
     @Body
-    @NameInMap("password")
-    @Validation(required = true)
-    private String password;
-
-    @Body
-    @NameInMap("format_disk")
-    private Boolean formatDisk;
-
-    @Body
-    @NameInMap("keep_instance_name")
-    private Boolean keepInstanceName;
-
-    @Body
-    @NameInMap("is_edge_worker")
-    private Boolean isEdgeWorker;
-
-    @Body
     @NameInMap("nodepool_id")
     private String nodepoolId;
 
     @Body
-    @NameInMap("image_id")
-    private String imageId;
-
-    @Body
-    @NameInMap("cpu_policy")
-    private String cpuPolicy;
-
-    @Body
-    @NameInMap("user_data")
-    private String userData;
+    @NameInMap("password")
+    @Validation(required = true)
+    private String password;
 
     @Body
     @NameInMap("rds_instances")
@@ -72,22 +68,26 @@ public class AttachInstancesRequest extends Request {
     @NameInMap("tags")
     private java.util.List < Tag > tags;
 
+    @Body
+    @NameInMap("user_data")
+    private String userData;
+
     private AttachInstancesRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
-        this.instances = builder.instances;
-        this.keyPair = builder.keyPair;
-        this.password = builder.password;
-        this.formatDisk = builder.formatDisk;
-        this.keepInstanceName = builder.keepInstanceName;
-        this.isEdgeWorker = builder.isEdgeWorker;
-        this.nodepoolId = builder.nodepoolId;
-        this.imageId = builder.imageId;
         this.cpuPolicy = builder.cpuPolicy;
-        this.userData = builder.userData;
+        this.formatDisk = builder.formatDisk;
+        this.imageId = builder.imageId;
+        this.instances = builder.instances;
+        this.isEdgeWorker = builder.isEdgeWorker;
+        this.keepInstanceName = builder.keepInstanceName;
+        this.keyPair = builder.keyPair;
+        this.nodepoolId = builder.nodepoolId;
+        this.password = builder.password;
         this.rdsInstances = builder.rdsInstances;
         this.runtime = builder.runtime;
         this.tags = builder.tags;
+        this.userData = builder.userData;
     }
 
     public static Builder builder() {
@@ -111,24 +111,10 @@ public class AttachInstancesRequest extends Request {
     }
 
     /**
-     * @return instances
+     * @return cpuPolicy
      */
-    public java.util.List < String > getInstances() {
-        return this.instances;
-    }
-
-    /**
-     * @return keyPair
-     */
-    public String getKeyPair() {
-        return this.keyPair;
-    }
-
-    /**
-     * @return password
-     */
-    public String getPassword() {
-        return this.password;
+    public String getCpuPolicy() {
+        return this.cpuPolicy;
     }
 
     /**
@@ -139,10 +125,17 @@ public class AttachInstancesRequest extends Request {
     }
 
     /**
-     * @return keepInstanceName
+     * @return imageId
      */
-    public Boolean getKeepInstanceName() {
-        return this.keepInstanceName;
+    public String getImageId() {
+        return this.imageId;
+    }
+
+    /**
+     * @return instances
+     */
+    public java.util.List < String > getInstances() {
+        return this.instances;
     }
 
     /**
@@ -153,6 +146,20 @@ public class AttachInstancesRequest extends Request {
     }
 
     /**
+     * @return keepInstanceName
+     */
+    public Boolean getKeepInstanceName() {
+        return this.keepInstanceName;
+    }
+
+    /**
+     * @return keyPair
+     */
+    public String getKeyPair() {
+        return this.keyPair;
+    }
+
+    /**
      * @return nodepoolId
      */
     public String getNodepoolId() {
@@ -160,24 +167,10 @@ public class AttachInstancesRequest extends Request {
     }
 
     /**
-     * @return imageId
+     * @return password
      */
-    public String getImageId() {
-        return this.imageId;
-    }
-
-    /**
-     * @return cpuPolicy
-     */
-    public String getCpuPolicy() {
-        return this.cpuPolicy;
-    }
-
-    /**
-     * @return userData
-     */
-    public String getUserData() {
-        return this.userData;
+    public String getPassword() {
+        return this.password;
     }
 
     /**
@@ -201,21 +194,28 @@ public class AttachInstancesRequest extends Request {
         return this.tags;
     }
 
+    /**
+     * @return userData
+     */
+    public String getUserData() {
+        return this.userData;
+    }
+
     public static final class Builder extends Request.Builder<AttachInstancesRequest, Builder> {
         private String clusterId; 
-        private java.util.List < String > instances; 
-        private String keyPair; 
-        private String password; 
-        private Boolean formatDisk; 
-        private Boolean keepInstanceName; 
-        private Boolean isEdgeWorker; 
-        private String nodepoolId; 
-        private String imageId; 
         private String cpuPolicy; 
-        private String userData; 
+        private Boolean formatDisk; 
+        private String imageId; 
+        private java.util.List < String > instances; 
+        private Boolean isEdgeWorker; 
+        private Boolean keepInstanceName; 
+        private String keyPair; 
+        private String nodepoolId; 
+        private String password; 
         private java.util.List < String > rdsInstances; 
         private Runtime runtime; 
         private java.util.List < Tag > tags; 
+        private String userData; 
 
         private Builder() {
             super();
@@ -224,23 +224,23 @@ public class AttachInstancesRequest extends Request {
         private Builder(AttachInstancesRequest request) {
             super(request);
             this.clusterId = request.clusterId;
-            this.instances = request.instances;
-            this.keyPair = request.keyPair;
-            this.password = request.password;
-            this.formatDisk = request.formatDisk;
-            this.keepInstanceName = request.keepInstanceName;
-            this.isEdgeWorker = request.isEdgeWorker;
-            this.nodepoolId = request.nodepoolId;
-            this.imageId = request.imageId;
             this.cpuPolicy = request.cpuPolicy;
-            this.userData = request.userData;
+            this.formatDisk = request.formatDisk;
+            this.imageId = request.imageId;
+            this.instances = request.instances;
+            this.isEdgeWorker = request.isEdgeWorker;
+            this.keepInstanceName = request.keepInstanceName;
+            this.keyPair = request.keyPair;
+            this.nodepoolId = request.nodepoolId;
+            this.password = request.password;
             this.rdsInstances = request.rdsInstances;
             this.runtime = request.runtime;
             this.tags = request.tags;
+            this.userData = request.userData;
         } 
 
         /**
-         * The ID of the cluster.
+         * 集群ID。
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -249,128 +249,7 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * The list of instances to be added.
-         */
-        public Builder instances(java.util.List < String > instances) {
-            this.putBodyParameter("instances", instances);
-            this.instances = instances;
-            return this;
-        }
-
-        /**
-         * The name of the key pair of the instance to be added. Select either login_password or login_password.
-         * <p>
-         * 
-         * > this parameter is not supported when "nodepool_id" is specified.
-         */
-        public Builder keyPair(String keyPair) {
-            this.putBodyParameter("key_pair", keyPair);
-            this.keyPair = keyPair;
-            return this;
-        }
-
-        /**
-         * The SSH logon password of the instance to be added. Select either the SSH logon password or the key_pair password. The password must be 8 to 30 characters in length and contain at least three characters (uppercase and lowercase letters, numbers, and special characters). It cannot contain backslashes () and half-width double quotation marks (").
-         * <p>
-         * 
-         * For security reasons, password transmission is encrypted.
-         */
-        public Builder password(String password) {
-            this.putBodyParameter("password", password);
-            this.password = password;
-            return this;
-        }
-
-        /**
-         * Specifies whether to store container data and images in a data disk. Valid values:
-         * <p>
-         * 
-         * -"true": stores container data and images on data disks.
-         * 
-         * -"false": container data and images are not stored on data disks.
-         * 
-         * Default value: "false ".
-         * 
-         * 
-         * Data disk Mount rules:
-         * 
-         * -If a data disk is attached to an ECS instance and the file system of the last data disk is not initialized, the system automatically formats the data disk as EXT4 to store/var/lib/docker,/var/lib/kubelet.
-         * -If no data disk is attached to the ECS instance, no new data disk is attached.
-         * > if you select to store data to a data disk and the ECS instance is attached to the data disk, the original data in the data disk will be lost.
-         */
-        public Builder formatDisk(Boolean formatDisk) {
-            this.putBodyParameter("format_disk", formatDisk);
-            this.formatDisk = formatDisk;
-            return this;
-        }
-
-        /**
-         * Specifies whether to retain the original instance name. Valid values:
-         * <p>
-         * 
-         * -"true": retain the instance name.
-         * 
-         * -"false": the instance name is not retained.
-         * 
-         * Default value: "true ".
-         */
-        public Builder keepInstanceName(Boolean keepInstanceName) {
-            this.putBodyParameter("keep_instance_name", keepInstanceName);
-            this.keepInstanceName = keepInstanceName;
-            return this;
-        }
-
-        /**
-         * Indicates whether the node is an edge node. Valid values:
-         * <p>
-         * 
-         * -"true": indicates that the added node is an edge node.
-         * 
-         * -"false": indicates whether the added node is an edge node.
-         * 
-         * Default value: "false ".
-         * 
-         * > If it is an edge node, the value must be "true", which is used to identify the node type as ENS node.
-         */
-        public Builder isEdgeWorker(Boolean isEdgeWorker) {
-            this.putBodyParameter("is_edge_worker", isEdgeWorker);
-            this.isEdgeWorker = isEdgeWorker;
-            return this;
-        }
-
-        /**
-         * The ID of the node pool. If this parameter is not specified, the node is added to the default node pool.
-         */
-        public Builder nodepoolId(String nodepoolId) {
-            this.putBodyParameter("nodepool_id", nodepoolId);
-            this.nodepoolId = nodepoolId;
-            return this;
-        }
-
-        /**
-         * The ID of the custom image. If you do not set this parameter, the default system image is used.
-         * <p>
-         * 
-         * >-the system disk image of the instance will be replaced with this image.
-         * -This parameter is not supported when "nodepool_id" is specified.
-         * 
-         */
-        public Builder imageId(String imageId) {
-            this.putBodyParameter("image_id", imageId);
-            this.imageId = imageId;
-            return this;
-        }
-
-        /**
-         * The CPU management policy of the node. When the cluster version is 1.12.6 or later, the following two policies are supported:
-         * <p>
-         * 
-         * -"static": allows you to enhance CPU affinity and exclusiveness for pods with certain resource characteristics on nodes.
-         * -"none": indicates that the existing default CPU affinity solution is enabled.
-         * 
-         * Default value: "none ".
-         * 
-         * > This parameter is not supported when "nodepool_id" is specified.
+         * CPU亲和策略。
          */
         public Builder cpuPolicy(String cpuPolicy) {
             this.putBodyParameter("cpu_policy", cpuPolicy);
@@ -379,21 +258,79 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * Custom node data. For more information, see [generate instance custom data](~~ 49121 ~~).
-         * <p>
-         * 
-         * > this parameter is not supported when "nodepool_id" is specified.
+         * 是否格式化数据盘。
          */
-        public Builder userData(String userData) {
-            this.putBodyParameter("user_data", userData);
-            this.userData = userData;
+        public Builder formatDisk(Boolean formatDisk) {
+            this.putBodyParameter("format_disk", formatDisk);
+            this.formatDisk = formatDisk;
             return this;
         }
 
         /**
-         * The list of RDS instances.
-         * <p>
-         * 
+         * 自定义镜像ID。
+         */
+        public Builder imageId(String imageId) {
+            this.putBodyParameter("image_id", imageId);
+            this.imageId = imageId;
+            return this;
+        }
+
+        /**
+         * 实例列表。
+         */
+        public Builder instances(java.util.List < String > instances) {
+            this.putBodyParameter("instances", instances);
+            this.instances = instances;
+            return this;
+        }
+
+        /**
+         * 是否为边缘节点。
+         */
+        public Builder isEdgeWorker(Boolean isEdgeWorker) {
+            this.putBodyParameter("is_edge_worker", isEdgeWorker);
+            this.isEdgeWorker = isEdgeWorker;
+            return this;
+        }
+
+        /**
+         * 是否保留实例名称。
+         */
+        public Builder keepInstanceName(Boolean keepInstanceName) {
+            this.putBodyParameter("keep_instance_name", keepInstanceName);
+            this.keepInstanceName = keepInstanceName;
+            return this;
+        }
+
+        /**
+         * key_pair名称，与login_password二选一
+         */
+        public Builder keyPair(String keyPair) {
+            this.putBodyParameter("key_pair", keyPair);
+            this.keyPair = keyPair;
+            return this;
+        }
+
+        /**
+         * 节点池ID，欲将节点添加到哪个节点池中。。
+         */
+        public Builder nodepoolId(String nodepoolId) {
+            this.putBodyParameter("nodepool_id", nodepoolId);
+            this.nodepoolId = nodepoolId;
+            return this;
+        }
+
+        /**
+         * password，与key_pair二选一。
+         */
+        public Builder password(String password) {
+            this.putBodyParameter("password", password);
+            this.password = password;
+            return this;
+        }
+
+        /**
+         * RDS实例列表。
          */
         public Builder rdsInstances(java.util.List < String > rdsInstances) {
             this.putBodyParameter("rds_instances", rdsInstances);
@@ -402,9 +339,7 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * Container Runtime.
-         * <p>
-         * > This parameter is not supported when "nodepool_id" is specified.
+         * runtime.
          */
         public Builder runtime(Runtime runtime) {
             this.putBodyParameter("runtime", runtime);
@@ -413,16 +348,20 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * The tag of the node. Tag definition rules:
-         * <p>
-         * 
-         * -A tag consists of case-sensitive key-value pairs. You can set up to 20 tags.
-         * -The tag key cannot be repeated. It can be up to 64 characters in length. The tag value can be empty and can be up to 128 characters in length. The tag key and tag value cannot start with "aliyun", "acs:", "https://", or "http. For more information, see [Labels and Selectors](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set).
-         * > This parameter is not supported when "nodepool_id" is specified.
+         * 节点标签。
          */
         public Builder tags(java.util.List < Tag > tags) {
             this.putBodyParameter("tags", tags);
             this.tags = tags;
+            return this;
+        }
+
+        /**
+         * 节点自定义数据。
+         */
+        public Builder userData(String userData) {
+            this.putBodyParameter("user_data", userData);
+            this.userData = userData;
             return this;
         }
 

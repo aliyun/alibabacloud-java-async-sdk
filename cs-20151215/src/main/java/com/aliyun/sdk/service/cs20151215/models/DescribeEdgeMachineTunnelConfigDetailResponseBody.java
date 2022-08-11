@@ -12,35 +12,35 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeEdgeMachineTunnelConfigDetailResponseBody</p>
  */
 public class DescribeEdgeMachineTunnelConfigDetailResponseBody extends TeaModel {
+    @NameInMap("device_name")
+    private String deviceName;
+
     @NameInMap("model")
     private String model;
-
-    @NameInMap("sn")
-    private String sn;
-
-    @NameInMap("tunnel_endpoint")
-    private String tunnelEndpoint;
-
-    @NameInMap("token")
-    private String token;
 
     @NameInMap("product_key")
     private String productKey;
 
-    @NameInMap("device_name")
-    private String deviceName;
-
     @NameInMap("request_id")
     private String requestId;
 
+    @NameInMap("sn")
+    private String sn;
+
+    @NameInMap("token")
+    private String token;
+
+    @NameInMap("tunnel_endpoint")
+    private String tunnelEndpoint;
+
     private DescribeEdgeMachineTunnelConfigDetailResponseBody(Builder builder) {
-        this.model = builder.model;
-        this.sn = builder.sn;
-        this.tunnelEndpoint = builder.tunnelEndpoint;
-        this.token = builder.token;
-        this.productKey = builder.productKey;
         this.deviceName = builder.deviceName;
+        this.model = builder.model;
+        this.productKey = builder.productKey;
         this.requestId = builder.requestId;
+        this.sn = builder.sn;
+        this.token = builder.token;
+        this.tunnelEndpoint = builder.tunnelEndpoint;
     }
 
     public static Builder builder() {
@@ -52,31 +52,17 @@ public class DescribeEdgeMachineTunnelConfigDetailResponseBody extends TeaModel 
     }
 
     /**
+     * @return deviceName
+     */
+    public String getDeviceName() {
+        return this.deviceName;
+    }
+
+    /**
      * @return model
      */
     public String getModel() {
         return this.model;
-    }
-
-    /**
-     * @return sn
-     */
-    public String getSn() {
-        return this.sn;
-    }
-
-    /**
-     * @return tunnelEndpoint
-     */
-    public String getTunnelEndpoint() {
-        return this.tunnelEndpoint;
-    }
-
-    /**
-     * @return token
-     */
-    public String getToken() {
-        return this.token;
     }
 
     /**
@@ -87,70 +73,44 @@ public class DescribeEdgeMachineTunnelConfigDetailResponseBody extends TeaModel 
     }
 
     /**
-     * @return deviceName
-     */
-    public String getDeviceName() {
-        return this.deviceName;
-    }
-
-    /**
      * @return requestId
      */
     public String getRequestId() {
         return this.requestId;
     }
 
+    /**
+     * @return sn
+     */
+    public String getSn() {
+        return this.sn;
+    }
+
+    /**
+     * @return token
+     */
+    public String getToken() {
+        return this.token;
+    }
+
+    /**
+     * @return tunnelEndpoint
+     */
+    public String getTunnelEndpoint() {
+        return this.tunnelEndpoint;
+    }
+
     public static final class Builder {
-        private String model; 
-        private String sn; 
-        private String tunnelEndpoint; 
-        private String token; 
-        private String productKey; 
         private String deviceName; 
+        private String model; 
+        private String productKey; 
         private String requestId; 
+        private String sn; 
+        private String token; 
+        private String tunnelEndpoint; 
 
         /**
-         * Cloud Native all-in-one model
-         */
-        public Builder model(String model) {
-            this.model = model;
-            return this;
-        }
-
-        /**
-         * SN serial number of cloud native all-in-one machine
-         */
-        public Builder sn(String sn) {
-            this.sn = sn;
-            return this;
-        }
-
-        /**
-         * Tunnel backend link
-         */
-        public Builder tunnelEndpoint(String tunnelEndpoint) {
-            this.tunnelEndpoint = tunnelEndpoint;
-            return this;
-        }
-
-        /**
-         * Token
-         */
-        public Builder token(String token) {
-            this.token = token;
-            return this;
-        }
-
-        /**
-         * Product Key
-         */
-        public Builder productKey(String productKey) {
-            this.productKey = productKey;
-            return this;
-        }
-
-        /**
-         * Device Name
+         * device name
          */
         public Builder deviceName(String deviceName) {
             this.deviceName = deviceName;
@@ -158,10 +118,50 @@ public class DescribeEdgeMachineTunnelConfigDetailResponseBody extends TeaModel 
         }
 
         /**
-         * Request ID
+         * Id of the request
+         */
+        public Builder model(String model) {
+            this.model = model;
+            return this;
+        }
+
+        /**
+         * product key
+         */
+        public Builder productKey(String productKey) {
+            this.productKey = productKey;
+            return this;
+        }
+
+        /**
+         * request id
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * sn
+         */
+        public Builder sn(String sn) {
+            this.sn = sn;
+            return this;
+        }
+
+        /**
+         * token
+         */
+        public Builder token(String token) {
+            this.token = token;
+            return this;
+        }
+
+        /**
+         * tunnel endpoint
+         */
+        public Builder tunnelEndpoint(String tunnelEndpoint) {
+            this.tunnelEndpoint = tunnelEndpoint;
             return this;
         }
 

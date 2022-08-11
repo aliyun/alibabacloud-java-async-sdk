@@ -7,21 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link StartAlertResponse} extends {@link TeaModel}
+ * {@link DescribeClusterEventsResponse} extends {@link TeaModel}
  *
- * <p>StartAlertResponse</p>
+ * <p>DescribeClusterEventsResponse</p>
  */
-public class StartAlertResponse extends Response {
+public class DescribeClusterEventsResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
-    private StartAlertResponse(BuilderImpl builder) {
+    @NameInMap("body")
+    @Validation(required = true)
+    private DescribeClusterEventsResponseBody body;
+
+    private DescribeClusterEventsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.body = builder.body;
     }
 
-    public static StartAlertResponse create() {
+    public static DescribeClusterEventsResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -37,27 +42,38 @@ public class StartAlertResponse extends Response {
         return this.headers;
     }
 
-    public interface Builder extends Response.Builder<StartAlertResponse, Builder> {
+    /**
+     * @return body
+     */
+    public DescribeClusterEventsResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<DescribeClusterEventsResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
+        Builder body(DescribeClusterEventsResponseBody body);
+
         @Override
-        StartAlertResponse build();
+        DescribeClusterEventsResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<StartAlertResponse, Builder>
+            extends Response.BuilderImpl<DescribeClusterEventsResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private DescribeClusterEventsResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(StartAlertResponse response) {
+        private BuilderImpl(DescribeClusterEventsResponse response) {
             super(response);
             this.headers = response.headers;
+            this.body = response.body;
         } 
 
         /**
@@ -69,9 +85,18 @@ public class StartAlertResponse extends Response {
             return this;
         }
 
+        /**
+         * body.
+         */
         @Override
-        public StartAlertResponse build() {
-            return new StartAlertResponse(this);
+        public Builder body(DescribeClusterEventsResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public DescribeClusterEventsResponse build() {
+            return new DescribeClusterEventsResponse(this);
         } 
 
     } 

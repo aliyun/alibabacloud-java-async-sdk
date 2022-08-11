@@ -69,7 +69,7 @@ public class UpgradeClusterAddonsRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * 集群ID
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -78,7 +78,7 @@ public class UpgradeClusterAddonsRequest extends Request {
         }
 
         /**
-         * The request parameters.
+         * Request body，类型是对象数组
          */
         public Builder body(java.util.List < UpgradeClusterAddonsRequestBody> body) {
             this.putBodyParameter("body", body);
@@ -98,6 +98,9 @@ public class UpgradeClusterAddonsRequest extends Request {
         @Validation(required = true)
         private String componentName;
 
+        @NameInMap("config")
+        private String config;
+
         @NameInMap("next_version")
         @Validation(required = true)
         private String nextVersion;
@@ -107,6 +110,7 @@ public class UpgradeClusterAddonsRequest extends Request {
 
         private UpgradeClusterAddonsRequestBody(Builder builder) {
             this.componentName = builder.componentName;
+            this.config = builder.config;
             this.nextVersion = builder.nextVersion;
             this.version = builder.version;
         }
@@ -127,6 +131,13 @@ public class UpgradeClusterAddonsRequest extends Request {
         }
 
         /**
+         * @return config
+         */
+        public String getConfig() {
+            return this.config;
+        }
+
+        /**
          * @return nextVersion
          */
         public String getNextVersion() {
@@ -142,11 +153,12 @@ public class UpgradeClusterAddonsRequest extends Request {
 
         public static final class Builder {
             private String componentName; 
+            private String config; 
             private String nextVersion; 
             private String version; 
 
             /**
-             * 组件名称。
+             * 组件名称
              */
             public Builder componentName(String componentName) {
                 this.componentName = componentName;
@@ -154,7 +166,15 @@ public class UpgradeClusterAddonsRequest extends Request {
             }
 
             /**
-             * 可升级版本。调用`DescribeClusterAddonsVersion`参数可以查看可以升级的版本。
+             * 组件自定义参数
+             */
+            public Builder config(String config) {
+                this.config = config;
+                return this;
+            }
+
+            /**
+             * 可升级版本
              */
             public Builder nextVersion(String nextVersion) {
                 this.nextVersion = nextVersion;
@@ -162,7 +182,7 @@ public class UpgradeClusterAddonsRequest extends Request {
             }
 
             /**
-             * 当前版本。
+             * 当前版本
              */
             public Builder version(String version) {
                 this.version = version;

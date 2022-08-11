@@ -12,19 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Addon</p>
  */
 public class Addon extends TeaModel {
-    @NameInMap("name")
-    private String name;
-
     @NameInMap("config")
     private String config;
 
     @NameInMap("disabled")
     private Boolean disabled;
 
+    @NameInMap("name")
+    private String name;
+
     private Addon(Builder builder) {
-        this.name = builder.name;
         this.config = builder.config;
         this.disabled = builder.disabled;
+        this.name = builder.name;
     }
 
     public static Builder builder() {
@@ -33,13 +33,6 @@ public class Addon extends TeaModel {
 
     public static Addon create() {
         return builder().build();
-    }
-
-    /**
-     * @return name
-     */
-    public String getName() {
-        return this.name;
     }
 
     /**
@@ -56,21 +49,20 @@ public class Addon extends TeaModel {
         return this.disabled;
     }
 
+    /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
+    }
+
     public static final class Builder {
-        private String name; 
         private String config; 
         private Boolean disabled; 
+        private String name; 
 
         /**
-         * The name of the plug-in.
-         */
-        public Builder name(String name) {
-            this.name = name;
-            return this;
-        }
-
-        /**
-         * The plug-in configuration parameters.
+         * 插件配置参数。
          */
         public Builder config(String config) {
             this.config = config;
@@ -78,10 +70,18 @@ public class Addon extends TeaModel {
         }
 
         /**
-         * Specifies whether to disable default installation. true | false.
+         * 是否禁止默认安装。true | false。
          */
         public Builder disabled(Boolean disabled) {
             this.disabled = disabled;
+            return this;
+        }
+
+        /**
+         * 插件名称。
+         */
+        public Builder name(String name) {
+            this.name = name;
             return this;
         }
 

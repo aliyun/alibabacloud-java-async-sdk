@@ -50,7 +50,7 @@ public class AttachInstancesResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * The list of node adding information.
+         * 节点信息列表。
          */
         public Builder list(java.util.List < List> list) {
             this.list = list;
@@ -58,7 +58,7 @@ public class AttachInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the task.
+         * 任务ID。
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -122,7 +122,7 @@ public class AttachInstancesResponseBody extends TeaModel {
             private String message; 
 
             /**
-             * The status code of the node.
+             * 状态码。
              */
             public Builder code(String code) {
                 this.code = code;
@@ -130,7 +130,7 @@ public class AttachInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * 实例ID。
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -138,7 +138,7 @@ public class AttachInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the node adding result.
+             * 添加结果描述。
              */
             public Builder message(String message) {
                 this.message = message;

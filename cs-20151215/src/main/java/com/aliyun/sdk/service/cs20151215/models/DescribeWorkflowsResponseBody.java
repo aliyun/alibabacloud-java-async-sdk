@@ -38,7 +38,7 @@ public class DescribeWorkflowsResponseBody extends TeaModel {
         private java.util.List < Jobs> jobs; 
 
         /**
-         * The list of jobs.
+         * job信息
          */
         public Builder jobs(java.util.List < Jobs> jobs) {
             this.jobs = jobs;
@@ -55,16 +55,16 @@ public class DescribeWorkflowsResponseBody extends TeaModel {
         @NameInMap("cluster_id")
         private String clusterId;
 
-        @NameInMap("job_name")
-        private String jobName;
-
         @NameInMap("create_time")
         private String createTime;
 
+        @NameInMap("job_name")
+        private String jobName;
+
         private Jobs(Builder builder) {
             this.clusterId = builder.clusterId;
-            this.jobName = builder.jobName;
             this.createTime = builder.createTime;
+            this.jobName = builder.jobName;
         }
 
         public static Builder builder() {
@@ -83,26 +83,26 @@ public class DescribeWorkflowsResponseBody extends TeaModel {
         }
 
         /**
-         * @return jobName
-         */
-        public String getJobName() {
-            return this.jobName;
-        }
-
-        /**
          * @return createTime
          */
         public String getCreateTime() {
             return this.createTime;
         }
 
+        /**
+         * @return jobName
+         */
+        public String getJobName() {
+            return this.jobName;
+        }
+
         public static final class Builder {
             private String clusterId; 
-            private String jobName; 
             private String createTime; 
+            private String jobName; 
 
             /**
-             * The ID of the cluster.
+             * 集群ID。
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -110,18 +110,18 @@ public class DescribeWorkflowsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the workflow.
+             * 工作流创建时间。
              */
-            public Builder jobName(String jobName) {
-                this.jobName = jobName;
+            public Builder createTime(String createTime) {
+                this.createTime = createTime;
                 return this;
             }
 
             /**
-             * The time when the workflow was created.
+             * 工作流名称。
              */
-            public Builder createTime(String createTime) {
-                this.createTime = createTime;
+            public Builder jobName(String jobName) {
+                this.jobName = jobName;
                 return this;
             }
 

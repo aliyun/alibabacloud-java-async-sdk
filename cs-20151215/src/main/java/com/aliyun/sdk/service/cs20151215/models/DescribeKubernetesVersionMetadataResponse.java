@@ -200,7 +200,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             private String imageCategory; 
 
             /**
-             * 镜像ID。
+             * 镜像ID。	
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -208,7 +208,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * 镜像名称。
+             * 镜像名称。	
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -216,12 +216,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * 操作系统平台。取值：
-             * <p>
-             * - `AliyunLinux`
-             * - `CentOS`
-             * - `Windows`
-             * - `WindowsCore`
+             * 操作系统发行版。取值范围： CentOS,AliyunLinux,Windows,WindowsCore。
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -237,11 +232,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * 镜像类型。例如：
-             * <p>
-             * 
-             * - `centos_7_7_20`
-             * - `aliyunlinux_2_64_20`
+             * 镜像类型。	
              */
             public Builder imageType(String imageType) {
                 this.imageType = imageType;
@@ -249,11 +240,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * 操作系统类型，例如：
-             * <p>
-             * 
-             * - `Windows`
-             * - `Linux`
+             * 操作系统发行版本号。
              */
             public Builder osType(String osType) {
                 this.osType = osType;
@@ -261,14 +248,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * 镜像分类，部分取值：
-             * <p>
-             * 
-             * - `system`：公共镜像。
-             * - `self`：您的自定义镜像。
-             * - `others`：其他用户的公开镜像。
-             * - `marketplace`：镜像市场镜像。
-             * 
+             * 镜像分类
              */
             public Builder imageCategory(String imageCategory) {
                 this.imageCategory = imageCategory;
@@ -369,7 +349,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             private String multiAz; 
 
             /**
-             * Kubernetes版本功能特性。
+             * Kubernetes版本特性。	
              */
             public Builder capabilities(java.util.Map < String, ? > capabilities) {
                 this.capabilities = capabilities;
@@ -377,7 +357,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * 系统镜像列表。	
+             * ECS系统镜像列表。	
              */
             public Builder images(java.util.List < Images> images) {
                 this.images = images;
@@ -393,7 +373,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * 容器运行时配置。	
+             * 容器运行时详情。	
              */
             public Builder runtimes(java.util.List < Runtime > runtimes) {
                 this.runtimes = runtimes;
@@ -401,7 +381,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * ACK发布的Kubernetes版本。更多版本信息，请参见[Kubernetes版本发布概览](~~185269~~)。
+             * Kubernetes版本。	
              */
             public Builder version(String version) {
                 this.version = version;
@@ -409,11 +389,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * 是否为多可用区：
-             * <p>
-             * 
-             * - `true`：是多可用区。
-             * - `false`：非多可用区。
+             * 是否为多可用区。
              */
             public Builder multiAz(String multiAz) {
                 this.multiAz = multiAz;

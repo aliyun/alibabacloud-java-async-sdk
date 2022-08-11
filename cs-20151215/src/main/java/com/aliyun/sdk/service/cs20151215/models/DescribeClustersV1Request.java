@@ -13,37 +13,42 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeClustersV1Request extends Request {
     @Query
-    @NameInMap("cluster_type")
-    private String clusterType;
+    @NameInMap("cluster_spec")
+    private String clusterSpec;
 
     @Query
-    @NameInMap("page_number")
-    private Long pageNumber;
+    @NameInMap("cluster_type")
+    private String clusterType;
 
     @Query
     @NameInMap("name")
     private String name;
 
     @Query
-    @NameInMap("profile")
-    private String profile;
+    @NameInMap("page_number")
+    private Long pageNumber;
 
     @Query
     @NameInMap("page_size")
     private Long pageSize;
 
     @Query
-    @NameInMap("cluster_spec")
-    private String clusterSpec;
+    @NameInMap("profile")
+    private String profile;
+
+    @Query
+    @NameInMap("region_id")
+    private String regionId;
 
     private DescribeClustersV1Request(Builder builder) {
         super(builder);
-        this.clusterType = builder.clusterType;
-        this.pageNumber = builder.pageNumber;
-        this.name = builder.name;
-        this.profile = builder.profile;
-        this.pageSize = builder.pageSize;
         this.clusterSpec = builder.clusterSpec;
+        this.clusterType = builder.clusterType;
+        this.name = builder.name;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
+        this.profile = builder.profile;
+        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -60,17 +65,17 @@ public class DescribeClustersV1Request extends Request {
     }
 
     /**
+     * @return clusterSpec
+     */
+    public String getClusterSpec() {
+        return this.clusterSpec;
+    }
+
+    /**
      * @return clusterType
      */
     public String getClusterType() {
         return this.clusterType;
-    }
-
-    /**
-     * @return pageNumber
-     */
-    public Long getPageNumber() {
-        return this.pageNumber;
     }
 
     /**
@@ -81,10 +86,10 @@ public class DescribeClustersV1Request extends Request {
     }
 
     /**
-     * @return profile
+     * @return pageNumber
      */
-    public String getProfile() {
-        return this.profile;
+    public Long getPageNumber() {
+        return this.pageNumber;
     }
 
     /**
@@ -95,19 +100,27 @@ public class DescribeClustersV1Request extends Request {
     }
 
     /**
-     * @return clusterSpec
+     * @return profile
      */
-    public String getClusterSpec() {
-        return this.clusterSpec;
+    public String getProfile() {
+        return this.profile;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public static final class Builder extends Request.Builder<DescribeClustersV1Request, Builder> {
-        private String clusterType; 
-        private Long pageNumber; 
-        private String name; 
-        private String profile; 
-        private Long pageSize; 
         private String clusterSpec; 
+        private String clusterType; 
+        private String name; 
+        private Long pageNumber; 
+        private Long pageSize; 
+        private String profile; 
+        private String regionId; 
 
         private Builder() {
             super();
@@ -115,24 +128,26 @@ public class DescribeClustersV1Request extends Request {
 
         private Builder(DescribeClustersV1Request request) {
             super(request);
-            this.clusterType = request.clusterType;
-            this.pageNumber = request.pageNumber;
-            this.name = request.name;
-            this.profile = request.profile;
-            this.pageSize = request.pageSize;
             this.clusterSpec = request.clusterSpec;
+            this.clusterType = request.clusterType;
+            this.name = request.name;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.profile = request.profile;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * The type of the cluster. Valid values:
-         * <p>
-         * -"Kubernetes": dedicated cluster.
-         * -"ManagedKubernetes": Includes managed clusters, Serverless clusters, and edge clusters.
-         * -"Ask":Serverless cluster.
-         * -"ExternalKubernetes": registers a cluster.
-         * 
-         * The value of the cluster type parameter when you query Serverless cluster depends on the value specified when you create Serverless cluster.
-         * 
+         * 集群规格。
+         */
+        public Builder clusterSpec(String clusterSpec) {
+            this.putQueryParameter("cluster_spec", clusterSpec);
+            this.clusterSpec = clusterSpec;
+            return this;
+        }
+
+        /**
+         * 集群类型。
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("cluster_type", clusterType);
@@ -141,19 +156,7 @@ public class DescribeClustersV1Request extends Request {
         }
 
         /**
-         * The current page number.
-         */
-        public Builder pageNumber(Long pageNumber) {
-            this.putQueryParameter("page_number", pageNumber);
-            this.pageNumber = pageNumber;
-            return this;
-        }
-
-        /**
-         * The name of the cluster.
-         * <p>
-         * 
-         * Naming rule: the name must be 1 to 63 characters in length and cannot start with a hyphen (-). It must be 1 to 63 characters in length.
+         * 通过集群名称进行模糊查询。
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -162,22 +165,16 @@ public class DescribeClustersV1Request extends Request {
         }
 
         /**
-         * The id of the cluster. When the cluster type is set to "ManagedKubernetes", the cluster type is distinguished by the cluster id. Valid values:
-         * <p>
-         * -"Default": managed cluster.
-         * -"Serverless":Serverless cluster.
-         * -"Edge": edge cluster.
-         * 
-         * The default value is null. The value can be null. If it is null, this field is not used for filtering.
+         * 分页数。
          */
-        public Builder profile(String profile) {
-            this.putQueryParameter("profile", profile);
-            this.profile = profile;
+        public Builder pageNumber(Long pageNumber) {
+            this.putQueryParameter("page_number", pageNumber);
+            this.pageNumber = pageNumber;
             return this;
         }
 
         /**
-         * The number of records displayed on each page.
+         * 单页大小。
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("page_size", pageSize);
@@ -186,16 +183,20 @@ public class DescribeClustersV1Request extends Request {
         }
 
         /**
-         * The cluster type. When the cluster type is set to "ManagedKubernetes", the cluster type is distinguished by the cluster type. Valid values:
-         * <p>
-         * -"ack.pro.small": a professional managed cluster, that is, a ACK Pro cluster.
-         * -"ack.standard": Standard managed cluster.
-         * 
-         * The default value is null. The value can be null. If it is null, this field is not used for filtering.
+         * 集群标识。
          */
-        public Builder clusterSpec(String clusterSpec) {
-            this.putQueryParameter("cluster_spec", clusterSpec);
-            this.clusterSpec = clusterSpec;
+        public Builder profile(String profile) {
+            this.putQueryParameter("profile", profile);
+            this.profile = profile;
+            return this;
+        }
+
+        /**
+         * 地域。
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("region_id", regionId);
+            this.regionId = regionId;
             return this;
         }
 

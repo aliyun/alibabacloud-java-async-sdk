@@ -38,7 +38,7 @@ public class ScaleClusterNodePoolResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * The ID of the task.
+         * 任务ID。
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

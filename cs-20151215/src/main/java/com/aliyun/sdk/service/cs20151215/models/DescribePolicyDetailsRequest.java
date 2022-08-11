@@ -55,7 +55,7 @@ public class DescribePolicyDetailsRequest extends Request {
         } 
 
         /**
-         * Policy governance rule name
+         * 策略治理规则名称
          */
         public Builder policyName(String policyName) {
             this.putPathParameter("policy_name", policyName);

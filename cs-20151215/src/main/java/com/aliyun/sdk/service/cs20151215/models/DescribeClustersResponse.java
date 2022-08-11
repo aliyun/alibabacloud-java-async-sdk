@@ -18,7 +18,7 @@ public class DescribeClustersResponse extends Response {
 
     @NameInMap("body")
     @Validation(required = true)
-    private DescribeClustersResponseBody body;
+    private java.util.List < DescribeClustersResponseBody> body;
 
     private DescribeClustersResponse(BuilderImpl builder) {
         super(builder);
@@ -45,7 +45,7 @@ public class DescribeClustersResponse extends Response {
     /**
      * @return body
      */
-    public DescribeClustersResponseBody getBody() {
+    public java.util.List < DescribeClustersResponseBody> getBody() {
         return this.body;
     }
 
@@ -53,7 +53,7 @@ public class DescribeClustersResponse extends Response {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(DescribeClustersResponseBody body);
+        Builder body(java.util.List < DescribeClustersResponseBody> body);
 
         @Override
         DescribeClustersResponse build();
@@ -64,7 +64,7 @@ public class DescribeClustersResponse extends Response {
             extends Response.BuilderImpl<DescribeClustersResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private DescribeClustersResponseBody body; 
+        private java.util.List < DescribeClustersResponseBody> body; 
 
         private BuilderImpl() {
             super();
@@ -89,7 +89,7 @@ public class DescribeClustersResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DescribeClustersResponseBody body) {
+        public Builder body(java.util.List < DescribeClustersResponseBody> body) {
             this.body = body;
             return this;
         }
@@ -101,4 +101,666 @@ public class DescribeClustersResponse extends Response {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @NameInMap("key")
+        private String key;
+
+        @NameInMap("value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * 标签名。
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * 标签值。
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    public static class DescribeClustersResponseBody extends TeaModel {
+        @NameInMap("cluster_id")
+        private String clusterId;
+
+        @NameInMap("cluster_type")
+        private String clusterType;
+
+        @NameInMap("created")
+        private String created;
+
+        @NameInMap("current_version")
+        private String currentVersion;
+
+        @NameInMap("data_disk_category")
+        private String dataDiskCategory;
+
+        @NameInMap("data_disk_size")
+        private Long dataDiskSize;
+
+        @NameInMap("deletion_protection")
+        private Boolean deletionProtection;
+
+        @NameInMap("docker_version")
+        private String dockerVersion;
+
+        @NameInMap("external_loadbalancer_id")
+        private String externalLoadbalancerId;
+
+        @NameInMap("init_version")
+        private String initVersion;
+
+        @NameInMap("master_url")
+        private String masterUrl;
+
+        @NameInMap("meta_data")
+        private String metaData;
+
+        @NameInMap("name")
+        private String name;
+
+        @NameInMap("network_mode")
+        private String networkMode;
+
+        @NameInMap("private_zone")
+        private Boolean privateZone;
+
+        @NameInMap("profile")
+        private String profile;
+
+        @NameInMap("region_id")
+        private String regionId;
+
+        @NameInMap("resource_group_id")
+        private String resourceGroupId;
+
+        @NameInMap("security_group_id")
+        private String securityGroupId;
+
+        @NameInMap("size")
+        private Long size;
+
+        @NameInMap("state")
+        private String state;
+
+        @NameInMap("subnet_cidr")
+        private String subnetCidr;
+
+        @NameInMap("tags")
+        private java.util.List < Tags> tags;
+
+        @NameInMap("updated")
+        private String updated;
+
+        @NameInMap("vpc_id")
+        private String vpcId;
+
+        @NameInMap("vswitch_cidr")
+        private String vswitchCidr;
+
+        @NameInMap("vswitch_id")
+        private String vswitchId;
+
+        @NameInMap("worker_ram_role_name")
+        private String workerRamRoleName;
+
+        @NameInMap("zone_id")
+        private String zoneId;
+
+        private DescribeClustersResponseBody(Builder builder) {
+            this.clusterId = builder.clusterId;
+            this.clusterType = builder.clusterType;
+            this.created = builder.created;
+            this.currentVersion = builder.currentVersion;
+            this.dataDiskCategory = builder.dataDiskCategory;
+            this.dataDiskSize = builder.dataDiskSize;
+            this.deletionProtection = builder.deletionProtection;
+            this.dockerVersion = builder.dockerVersion;
+            this.externalLoadbalancerId = builder.externalLoadbalancerId;
+            this.initVersion = builder.initVersion;
+            this.masterUrl = builder.masterUrl;
+            this.metaData = builder.metaData;
+            this.name = builder.name;
+            this.networkMode = builder.networkMode;
+            this.privateZone = builder.privateZone;
+            this.profile = builder.profile;
+            this.regionId = builder.regionId;
+            this.resourceGroupId = builder.resourceGroupId;
+            this.securityGroupId = builder.securityGroupId;
+            this.size = builder.size;
+            this.state = builder.state;
+            this.subnetCidr = builder.subnetCidr;
+            this.tags = builder.tags;
+            this.updated = builder.updated;
+            this.vpcId = builder.vpcId;
+            this.vswitchCidr = builder.vswitchCidr;
+            this.vswitchId = builder.vswitchId;
+            this.workerRamRoleName = builder.workerRamRoleName;
+            this.zoneId = builder.zoneId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DescribeClustersResponseBody create() {
+            return builder().build();
+        }
+
+        /**
+         * @return clusterId
+         */
+        public String getClusterId() {
+            return this.clusterId;
+        }
+
+        /**
+         * @return clusterType
+         */
+        public String getClusterType() {
+            return this.clusterType;
+        }
+
+        /**
+         * @return created
+         */
+        public String getCreated() {
+            return this.created;
+        }
+
+        /**
+         * @return currentVersion
+         */
+        public String getCurrentVersion() {
+            return this.currentVersion;
+        }
+
+        /**
+         * @return dataDiskCategory
+         */
+        public String getDataDiskCategory() {
+            return this.dataDiskCategory;
+        }
+
+        /**
+         * @return dataDiskSize
+         */
+        public Long getDataDiskSize() {
+            return this.dataDiskSize;
+        }
+
+        /**
+         * @return deletionProtection
+         */
+        public Boolean getDeletionProtection() {
+            return this.deletionProtection;
+        }
+
+        /**
+         * @return dockerVersion
+         */
+        public String getDockerVersion() {
+            return this.dockerVersion;
+        }
+
+        /**
+         * @return externalLoadbalancerId
+         */
+        public String getExternalLoadbalancerId() {
+            return this.externalLoadbalancerId;
+        }
+
+        /**
+         * @return initVersion
+         */
+        public String getInitVersion() {
+            return this.initVersion;
+        }
+
+        /**
+         * @return masterUrl
+         */
+        public String getMasterUrl() {
+            return this.masterUrl;
+        }
+
+        /**
+         * @return metaData
+         */
+        public String getMetaData() {
+            return this.metaData;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return networkMode
+         */
+        public String getNetworkMode() {
+            return this.networkMode;
+        }
+
+        /**
+         * @return privateZone
+         */
+        public Boolean getPrivateZone() {
+            return this.privateZone;
+        }
+
+        /**
+         * @return profile
+         */
+        public String getProfile() {
+            return this.profile;
+        }
+
+        /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
+         * @return securityGroupId
+         */
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        /**
+         * @return size
+         */
+        public Long getSize() {
+            return this.size;
+        }
+
+        /**
+         * @return state
+         */
+        public String getState() {
+            return this.state;
+        }
+
+        /**
+         * @return subnetCidr
+         */
+        public String getSubnetCidr() {
+            return this.subnetCidr;
+        }
+
+        /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
+        }
+
+        /**
+         * @return updated
+         */
+        public String getUpdated() {
+            return this.updated;
+        }
+
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        /**
+         * @return vswitchCidr
+         */
+        public String getVswitchCidr() {
+            return this.vswitchCidr;
+        }
+
+        /**
+         * @return vswitchId
+         */
+        public String getVswitchId() {
+            return this.vswitchId;
+        }
+
+        /**
+         * @return workerRamRoleName
+         */
+        public String getWorkerRamRoleName() {
+            return this.workerRamRoleName;
+        }
+
+        /**
+         * @return zoneId
+         */
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+        public static final class Builder {
+            private String clusterId; 
+            private String clusterType; 
+            private String created; 
+            private String currentVersion; 
+            private String dataDiskCategory; 
+            private Long dataDiskSize; 
+            private Boolean deletionProtection; 
+            private String dockerVersion; 
+            private String externalLoadbalancerId; 
+            private String initVersion; 
+            private String masterUrl; 
+            private String metaData; 
+            private String name; 
+            private String networkMode; 
+            private Boolean privateZone; 
+            private String profile; 
+            private String regionId; 
+            private String resourceGroupId; 
+            private String securityGroupId; 
+            private Long size; 
+            private String state; 
+            private String subnetCidr; 
+            private java.util.List < Tags> tags; 
+            private String updated; 
+            private String vpcId; 
+            private String vswitchCidr; 
+            private String vswitchId; 
+            private String workerRamRoleName; 
+            private String zoneId; 
+
+            /**
+             * 集群ID。
+             */
+            public Builder clusterId(String clusterId) {
+                this.clusterId = clusterId;
+                return this;
+            }
+
+            /**
+             * 集群类型。
+             */
+            public Builder clusterType(String clusterType) {
+                this.clusterType = clusterType;
+                return this;
+            }
+
+            /**
+             * 集群创建时间。
+             */
+            public Builder created(String created) {
+                this.created = created;
+                return this;
+            }
+
+            /**
+             * 集群当前版本。
+             */
+            public Builder currentVersion(String currentVersion) {
+                this.currentVersion = currentVersion;
+                return this;
+            }
+
+            /**
+             * 节点系统盘类型。
+             */
+            public Builder dataDiskCategory(String dataDiskCategory) {
+                this.dataDiskCategory = dataDiskCategory;
+                return this;
+            }
+
+            /**
+             * 节点系统盘大小。
+             */
+            public Builder dataDiskSize(Long dataDiskSize) {
+                this.dataDiskSize = dataDiskSize;
+                return this;
+            }
+
+            /**
+             * 集群是否开启删除保护。
+             */
+            public Builder deletionProtection(Boolean deletionProtection) {
+                this.deletionProtection = deletionProtection;
+                return this;
+            }
+
+            /**
+             * 容器运行时版本。
+             */
+            public Builder dockerVersion(String dockerVersion) {
+                this.dockerVersion = dockerVersion;
+                return this;
+            }
+
+            /**
+             * 集群Ingerss SLB实例的ID。
+             */
+            public Builder externalLoadbalancerId(String externalLoadbalancerId) {
+                this.externalLoadbalancerId = externalLoadbalancerId;
+                return this;
+            }
+
+            /**
+             * 集群创建时版本。
+             */
+            public Builder initVersion(String initVersion) {
+                this.initVersion = initVersion;
+                return this;
+            }
+
+            /**
+             * 集群的endpoint地址。
+             */
+            public Builder masterUrl(String masterUrl) {
+                this.masterUrl = masterUrl;
+                return this;
+            }
+
+            /**
+             * 集群元数据。
+             */
+            public Builder metaData(String metaData) {
+                this.metaData = metaData;
+                return this;
+            }
+
+            /**
+             * 集群名称。
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * 集群使用的网络类型。
+             */
+            public Builder networkMode(String networkMode) {
+                this.networkMode = networkMode;
+                return this;
+            }
+
+            /**
+             * 集群是否开启Private Zone，默认false。
+             */
+            public Builder privateZone(Boolean privateZone) {
+                this.privateZone = privateZone;
+                return this;
+            }
+
+            /**
+             * 集群标识，区分是否为边缘托管版。
+             */
+            public Builder profile(String profile) {
+                this.profile = profile;
+                return this;
+            }
+
+            /**
+             * 集群所在地域ID。
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * 集群资源组ID。
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * 集群安全组ID。
+             */
+            public Builder securityGroupId(String securityGroupId) {
+                this.securityGroupId = securityGroupId;
+                return this;
+            }
+
+            /**
+             * 集群内实例数量。
+             */
+            public Builder size(Long size) {
+                this.size = size;
+                return this;
+            }
+
+            /**
+             * 集群运行状态。
+             */
+            public Builder state(String state) {
+                this.state = state;
+                return this;
+            }
+
+            /**
+             * POD网络。
+             */
+            public Builder subnetCidr(String subnetCidr) {
+                this.subnetCidr = subnetCidr;
+                return this;
+            }
+
+            /**
+             * 集群标签。
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
+                return this;
+            }
+
+            /**
+             * 集群更新时间。
+             */
+            public Builder updated(String updated) {
+                this.updated = updated;
+                return this;
+            }
+
+            /**
+             * 集群使用的VPC ID。
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
+                return this;
+            }
+
+            /**
+             * 虚拟交换机网络ID。
+             */
+            public Builder vswitchCidr(String vswitchCidr) {
+                this.vswitchCidr = vswitchCidr;
+                return this;
+            }
+
+            /**
+             * 节点使用的Vswitch ID。
+             */
+            public Builder vswitchId(String vswitchId) {
+                this.vswitchId = vswitchId;
+                return this;
+            }
+
+            /**
+             * 集群Worker节点RAM角色名称。
+             */
+            public Builder workerRamRoleName(String workerRamRoleName) {
+                this.workerRamRoleName = workerRamRoleName;
+                return this;
+            }
+
+            /**
+             * 集群所在Region内的区域ID。
+             */
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
+                return this;
+            }
+
+            public DescribeClustersResponseBody build() {
+                return new DescribeClustersResponseBody(this);
+            } 
+
+        } 
+
+    }
 }

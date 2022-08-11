@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyClusterNodePoolResponseBody</p>
  */
 public class ModifyClusterNodePoolResponseBody extends TeaModel {
-    @NameInMap("task_id")
-    private String taskId;
-
     @NameInMap("nodepool_id")
     private String nodepoolId;
 
+    @NameInMap("task_id")
+    private String taskId;
+
     private ModifyClusterNodePoolResponseBody(Builder builder) {
-        this.taskId = builder.taskId;
         this.nodepoolId = builder.nodepoolId;
+        this.taskId = builder.taskId;
     }
 
     public static Builder builder() {
@@ -32,36 +32,36 @@ public class ModifyClusterNodePoolResponseBody extends TeaModel {
     }
 
     /**
-     * @return taskId
-     */
-    public String getTaskId() {
-        return this.taskId;
-    }
-
-    /**
      * @return nodepoolId
      */
     public String getNodepoolId() {
         return this.nodepoolId;
     }
 
+    /**
+     * @return taskId
+     */
+    public String getTaskId() {
+        return this.taskId;
+    }
+
     public static final class Builder {
-        private String taskId; 
         private String nodepoolId; 
+        private String taskId; 
 
         /**
-         * The ID of the task.
+         * 节点池ID。
          */
-        public Builder taskId(String taskId) {
-            this.taskId = taskId;
+        public Builder nodepoolId(String nodepoolId) {
+            this.nodepoolId = nodepoolId;
             return this;
         }
 
         /**
-         * The ID of the node pool.
+         * 任务ID。
          */
-        public Builder nodepoolId(String nodepoolId) {
-            this.nodepoolId = nodepoolId;
+        public Builder taskId(String taskId) {
+            this.taskId = taskId;
             return this;
         }
 

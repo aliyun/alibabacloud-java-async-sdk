@@ -84,7 +84,7 @@ public class ScaleClusterNodePoolRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * 集群ID
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -93,7 +93,7 @@ public class ScaleClusterNodePoolRequest extends Request {
         }
 
         /**
-         * The ID of the node pool.
+         * 节点池ID
          */
         public Builder nodepoolId(String nodepoolId) {
             this.putPathParameter("NodepoolId", nodepoolId);
@@ -102,7 +102,7 @@ public class ScaleClusterNodePoolRequest extends Request {
         }
 
         /**
-         * The number of nodes to be scaled out. Due to the current cluster node quota, you can scale up to 500 nodes in a single operation.
+         * 扩容节点数量
          */
         public Builder count(Long count) {
             this.putBodyParameter("count", count);

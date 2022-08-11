@@ -18,18 +18,18 @@ public class DescribePolicyInstancesRequest extends Request {
     private String clusterId;
 
     @Query
-    @NameInMap("policy_name")
-    private String policyName;
-
-    @Query
     @NameInMap("instance_name")
     private String instanceName;
+
+    @Query
+    @NameInMap("policy_name")
+    private String policyName;
 
     private DescribePolicyInstancesRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
-        this.policyName = builder.policyName;
         this.instanceName = builder.instanceName;
+        this.policyName = builder.policyName;
     }
 
     public static Builder builder() {
@@ -53,23 +53,23 @@ public class DescribePolicyInstancesRequest extends Request {
     }
 
     /**
-     * @return policyName
-     */
-    public String getPolicyName() {
-        return this.policyName;
-    }
-
-    /**
      * @return instanceName
      */
     public String getInstanceName() {
         return this.instanceName;
     }
 
+    /**
+     * @return policyName
+     */
+    public String getPolicyName() {
+        return this.policyName;
+    }
+
     public static final class Builder extends Request.Builder<DescribePolicyInstancesRequest, Builder> {
         private String clusterId; 
-        private String policyName; 
         private String instanceName; 
+        private String policyName; 
 
         private Builder() {
             super();
@@ -78,12 +78,12 @@ public class DescribePolicyInstancesRequest extends Request {
         private Builder(DescribePolicyInstancesRequest request) {
             super(request);
             this.clusterId = request.clusterId;
-            this.policyName = request.policyName;
             this.instanceName = request.instanceName;
+            this.policyName = request.policyName;
         } 
 
         /**
-         * The ID of the target cluster.
+         * 目标集群ID
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
@@ -92,20 +92,20 @@ public class DescribePolicyInstancesRequest extends Request {
         }
 
         /**
-         * Policy governance rule name
-         */
-        public Builder policyName(String policyName) {
-            this.putQueryParameter("policy_name", policyName);
-            this.policyName = policyName;
-            return this;
-        }
-
-        /**
-         * Policy instance name
+         * 策略实例名称
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("instance_name", instanceName);
             this.instanceName = instanceName;
+            return this;
+        }
+
+        /**
+         * 策略类型
+         */
+        public Builder policyName(String policyName) {
+            this.putQueryParameter("policy_name", policyName);
+            this.policyName = policyName;
             return this;
         }
 

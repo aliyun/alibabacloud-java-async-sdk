@@ -70,7 +70,7 @@ public class PauseComponentUpgradeRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * 集群ID。
          */
         public Builder clusterid(String clusterid) {
             this.putPathParameter("clusterid", clusterid);
@@ -79,7 +79,7 @@ public class PauseComponentUpgradeRequest extends Request {
         }
 
         /**
-         * The ID of the component.
+         * 组件ID。
          */
         public Builder componentid(String componentid) {
             this.putPathParameter("componentid", componentid);

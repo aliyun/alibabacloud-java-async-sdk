@@ -300,12 +300,7 @@ public class DescribePolicyInstancesResponse extends Response {
             }
 
             /**
-             * 策略实例实施范围：
-             * <p>
-             * 
-             * 默认"*"代表集群所有命名空间。
-             * 
-             * 否则返回作用Namespaces名称，多个Namespaces以逗号（,）分隔。
+             * 策略实例实施范围： 默认"*"代表集群所有ns 否则返回作用namespaces名称，多个namespaces以逗号分隔
              */
             public Builder policyScope(String policyScope) {
                 this.policyScope = policyScope;
@@ -313,12 +308,7 @@ public class DescribePolicyInstancesResponse extends Response {
             }
 
             /**
-             * 规则治理动作，取值：
-             * <p>
-             * 
-             * - `deny`：拦截违规部署
-             * 
-             * - `warn`：告警
+             * 规则治理动作  deny: 拦截违规部署  warn：告警
              */
             public Builder policyAction(String policyAction) {
                 this.policyAction = policyAction;

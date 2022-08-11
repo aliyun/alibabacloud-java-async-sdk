@@ -16,9 +16,14 @@ public class MigrateClusterResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("body")
+    @Validation(required = true)
+    private MigrateClusterResponseBody body;
+
     private MigrateClusterResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.body = builder.body;
     }
 
     public static MigrateClusterResponse create() {
@@ -37,9 +42,18 @@ public class MigrateClusterResponse extends Response {
         return this.headers;
     }
 
+    /**
+     * @return body
+     */
+    public MigrateClusterResponseBody getBody() {
+        return this.body;
+    }
+
     public interface Builder extends Response.Builder<MigrateClusterResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder body(MigrateClusterResponseBody body);
 
         @Override
         MigrateClusterResponse build();
@@ -50,6 +64,7 @@ public class MigrateClusterResponse extends Response {
             extends Response.BuilderImpl<MigrateClusterResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private MigrateClusterResponseBody body; 
 
         private BuilderImpl() {
             super();
@@ -58,6 +73,7 @@ public class MigrateClusterResponse extends Response {
         private BuilderImpl(MigrateClusterResponse response) {
             super(response);
             this.headers = response.headers;
+            this.body = response.body;
         } 
 
         /**
@@ -66,6 +82,15 @@ public class MigrateClusterResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(MigrateClusterResponseBody body) {
+            this.body = body;
             return this;
         }
 

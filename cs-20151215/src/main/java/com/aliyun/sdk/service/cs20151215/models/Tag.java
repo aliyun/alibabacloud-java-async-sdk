@@ -50,7 +50,7 @@ public class Tag extends TeaModel {
         private String value; 
 
         /**
-         * The value of the key.
+         * key值。
          */
         public Builder key(String key) {
             this.key = key;
@@ -58,7 +58,7 @@ public class Tag extends TeaModel {
         }
 
         /**
-         * value.
+         * value值。
          */
         public Builder value(String value) {
             this.value = value;

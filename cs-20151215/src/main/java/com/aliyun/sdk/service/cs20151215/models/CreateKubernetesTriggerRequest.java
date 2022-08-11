@@ -13,6 +13,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateKubernetesTriggerRequest extends Request {
     @Body
+    @NameInMap("action")
+    @Validation(required = true)
+    private String action;
+
+    @Body
     @NameInMap("cluster_id")
     @Validation(required = true)
     private String clusterId;
@@ -23,19 +28,14 @@ public class CreateKubernetesTriggerRequest extends Request {
     private String projectId;
 
     @Body
-    @NameInMap("action")
-    @Validation(required = true)
-    private String action;
-
-    @Body
     @NameInMap("type")
     private String type;
 
     private CreateKubernetesTriggerRequest(Builder builder) {
         super(builder);
+        this.action = builder.action;
         this.clusterId = builder.clusterId;
         this.projectId = builder.projectId;
-        this.action = builder.action;
         this.type = builder.type;
     }
 
@@ -53,6 +53,13 @@ public class CreateKubernetesTriggerRequest extends Request {
     }
 
     /**
+     * @return action
+     */
+    public String getAction() {
+        return this.action;
+    }
+
+    /**
      * @return clusterId
      */
     public String getClusterId() {
@@ -67,13 +74,6 @@ public class CreateKubernetesTriggerRequest extends Request {
     }
 
     /**
-     * @return action
-     */
-    public String getAction() {
-        return this.action;
-    }
-
-    /**
      * @return type
      */
     public String getType() {
@@ -81,9 +81,9 @@ public class CreateKubernetesTriggerRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateKubernetesTriggerRequest, Builder> {
+        private String action; 
         private String clusterId; 
         private String projectId; 
-        private String action; 
         private String type; 
 
         private Builder() {
@@ -92,40 +92,14 @@ public class CreateKubernetesTriggerRequest extends Request {
 
         private Builder(CreateKubernetesTriggerRequest request) {
             super(request);
+            this.action = request.action;
             this.clusterId = request.clusterId;
             this.projectId = request.projectId;
-            this.action = request.action;
             this.type = request.type;
         } 
 
         /**
-         * The ID of the cluster.
-         */
-        public Builder clusterId(String clusterId) {
-            this.putBodyParameter("cluster_id", clusterId);
-            this.clusterId = clusterId;
-            return this;
-        }
-
-        /**
-         * The name of the trigger project.
-         * <p>
-         * 
-         * The namespace and application name of the application. The format is "${namespace}/${name}".
-         * 
-         * Valid values: default/test-app ".
-         */
-        public Builder projectId(String projectId) {
-            this.putBodyParameter("project_id", projectId);
-            this.projectId = projectId;
-            return this;
-        }
-
-        /**
-         * The behavior of the trigger. Valid values:
-         * <p>
-         * 
-         * "redeploy": redeploys the resources defined in "project_id.
+         * 触发器行为
          */
         public Builder action(String action) {
             this.putBodyParameter("action", action);
@@ -134,14 +108,25 @@ public class CreateKubernetesTriggerRequest extends Request {
         }
 
         /**
-         * The type of the trigger. Valid values:
-         * <p>
-         * 
-         * -"deployment": triggers for stateless applications.
-         * 
-         * -"application": triggers for application center applications.
-         * 
-         * Default value: "deployment ".
+         * 集群ID。
+         */
+        public Builder clusterId(String clusterId) {
+            this.putBodyParameter("cluster_id", clusterId);
+            this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * 项目名称。
+         */
+        public Builder projectId(String projectId) {
+            this.putBodyParameter("project_id", projectId);
+            this.projectId = projectId;
+            return this;
+        }
+
+        /**
+         * 触发器类型。默认deployment。
          */
         public Builder type(String type) {
             this.putBodyParameter("type", type);

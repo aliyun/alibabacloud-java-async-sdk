@@ -13,14 +13,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyPolicyInstanceRequest extends Request {
     @Path
-    @NameInMap("policy_name")
-    @Validation(required = true)
-    private String policyName;
-
-    @Path
     @NameInMap("cluster_id")
     @Validation(required = true)
     private String clusterId;
+
+    @Path
+    @NameInMap("policy_name")
+    @Validation(required = true)
+    private String policyName;
 
     @Body
     @NameInMap("action")
@@ -31,8 +31,8 @@ public class ModifyPolicyInstanceRequest extends Request {
     private String instanceName;
 
     @Body
-    @NameInMap("namespace")
-    private String namespace;
+    @NameInMap("namespaces")
+    private java.util.List < String > namespaces;
 
     @Body
     @NameInMap("parameters")
@@ -40,11 +40,11 @@ public class ModifyPolicyInstanceRequest extends Request {
 
     private ModifyPolicyInstanceRequest(Builder builder) {
         super(builder);
-        this.policyName = builder.policyName;
         this.clusterId = builder.clusterId;
+        this.policyName = builder.policyName;
         this.action = builder.action;
         this.instanceName = builder.instanceName;
-        this.namespace = builder.namespace;
+        this.namespaces = builder.namespaces;
         this.parameters = builder.parameters;
     }
 
@@ -62,17 +62,17 @@ public class ModifyPolicyInstanceRequest extends Request {
     }
 
     /**
-     * @return policyName
-     */
-    public String getPolicyName() {
-        return this.policyName;
-    }
-
-    /**
      * @return clusterId
      */
     public String getClusterId() {
         return this.clusterId;
+    }
+
+    /**
+     * @return policyName
+     */
+    public String getPolicyName() {
+        return this.policyName;
     }
 
     /**
@@ -90,10 +90,10 @@ public class ModifyPolicyInstanceRequest extends Request {
     }
 
     /**
-     * @return namespace
+     * @return namespaces
      */
-    public String getNamespace() {
-        return this.namespace;
+    public java.util.List < String > getNamespaces() {
+        return this.namespaces;
     }
 
     /**
@@ -104,11 +104,11 @@ public class ModifyPolicyInstanceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyPolicyInstanceRequest, Builder> {
-        private String policyName; 
         private String clusterId; 
+        private String policyName; 
         private String action; 
         private String instanceName; 
-        private String namespace; 
+        private java.util.List < String > namespaces; 
         private java.util.Map < String, ? > parameters; 
 
         private Builder() {
@@ -117,25 +117,16 @@ public class ModifyPolicyInstanceRequest extends Request {
 
         private Builder(ModifyPolicyInstanceRequest request) {
             super(request);
-            this.policyName = request.policyName;
             this.clusterId = request.clusterId;
+            this.policyName = request.policyName;
             this.action = request.action;
             this.instanceName = request.instanceName;
-            this.namespace = request.namespace;
+            this.namespaces = request.namespaces;
             this.parameters = request.parameters;
         } 
 
         /**
-         * Policy governance rule name
-         */
-        public Builder policyName(String policyName) {
-            this.putPathParameter("policy_name", policyName);
-            this.policyName = policyName;
-            return this;
-        }
-
-        /**
-         * The ID of the target cluster.
+         * 目标集群id
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
@@ -144,11 +135,16 @@ public class ModifyPolicyInstanceRequest extends Request {
         }
 
         /**
-         * The rule governance action. Valid values:
-         * <p>
-         * 
-         * -"Denounced: intercepts illegal deployment.
-         * -"Ware": alerts
+         * 策略治理规则名称
+         */
+        public Builder policyName(String policyName) {
+            this.putPathParameter("policy_name", policyName);
+            this.policyName = policyName;
+            return this;
+        }
+
+        /**
+         * 规则治理动作
          */
         public Builder action(String action) {
             this.putBodyParameter("action", action);
@@ -157,7 +153,7 @@ public class ModifyPolicyInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the policy rule instance.
+         * 策略规则实例id
          */
         public Builder instanceName(String instanceName) {
             this.putBodyParameter("instance_name", instanceName);
@@ -166,18 +162,16 @@ public class ModifyPolicyInstanceRequest extends Request {
         }
 
         /**
-         * Policy instance implementation scope:
-         * <p>
-         * The default value "" indicates all namespaces in the cluster.
+         * 限制策略实施的命名空间，为空时表示所有命名空间
          */
-        public Builder namespace(String namespace) {
-            this.putBodyParameter("namespace", namespace);
-            this.namespace = namespace;
+        public Builder namespaces(java.util.List < String > namespaces) {
+            this.putBodyParameter("namespaces", namespaces);
+            this.namespaces = namespaces;
             return this;
         }
 
         /**
-         * Configuration parameters of the current rule instance
+         * 当前规则实例的配置参数
          */
         public Builder parameters(java.util.Map < String, ? > parameters) {
             this.putBodyParameter("parameters", parameters);

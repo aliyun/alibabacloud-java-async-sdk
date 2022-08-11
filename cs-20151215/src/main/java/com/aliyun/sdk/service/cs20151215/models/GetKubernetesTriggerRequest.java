@@ -18,30 +18,30 @@ public class GetKubernetesTriggerRequest extends Request {
     private String clusterId;
 
     @Query
-    @NameInMap("action")
-    private String action;
-
-    @Query
     @NameInMap("Name")
     @Validation(required = true)
     private String name;
-
-    @Query
-    @NameInMap("Type")
-    private String type;
 
     @Query
     @NameInMap("Namespace")
     @Validation(required = true)
     private String namespace;
 
+    @Query
+    @NameInMap("Type")
+    private String type;
+
+    @Query
+    @NameInMap("action")
+    private String action;
+
     private GetKubernetesTriggerRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
-        this.action = builder.action;
         this.name = builder.name;
-        this.type = builder.type;
         this.namespace = builder.namespace;
+        this.type = builder.type;
+        this.action = builder.action;
     }
 
     public static Builder builder() {
@@ -65,17 +65,17 @@ public class GetKubernetesTriggerRequest extends Request {
     }
 
     /**
-     * @return action
-     */
-    public String getAction() {
-        return this.action;
-    }
-
-    /**
      * @return name
      */
     public String getName() {
         return this.name;
+    }
+
+    /**
+     * @return namespace
+     */
+    public String getNamespace() {
+        return this.namespace;
     }
 
     /**
@@ -86,18 +86,18 @@ public class GetKubernetesTriggerRequest extends Request {
     }
 
     /**
-     * @return namespace
+     * @return action
      */
-    public String getNamespace() {
-        return this.namespace;
+    public String getAction() {
+        return this.action;
     }
 
     public static final class Builder extends Request.Builder<GetKubernetesTriggerRequest, Builder> {
         private String clusterId; 
-        private String action; 
         private String name; 
-        private String type; 
         private String namespace; 
+        private String type; 
+        private String action; 
 
         private Builder() {
             super();
@@ -106,14 +106,14 @@ public class GetKubernetesTriggerRequest extends Request {
         private Builder(GetKubernetesTriggerRequest request) {
             super(request);
             this.clusterId = request.clusterId;
-            this.action = request.action;
             this.name = request.name;
-            this.type = request.type;
             this.namespace = request.namespace;
+            this.type = request.type;
+            this.action = request.action;
         } 
 
         /**
-         * The ID of the cluster.
+         * 集群ID
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -122,21 +122,7 @@ public class GetKubernetesTriggerRequest extends Request {
         }
 
         /**
-         * The behavior of the trigger. Valid values:
-         * <p>
-         * 
-         * "redeploy": redeploys the resources defined in "project_id.
-         * 
-         * If the trigger behavior is not specified, the query results do not filter the trigger behavior.
-         */
-        public Builder action(String action) {
-            this.putQueryParameter("action", action);
-            this.action = action;
-            return this;
-        }
-
-        /**
-         * The name of the application.
+         * 应用名称。
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -145,16 +131,16 @@ public class GetKubernetesTriggerRequest extends Request {
         }
 
         /**
-         * The type of the trigger. Valid values:
-         * <p>
-         * 
-         * -"deployment": triggers for stateless applications.
-         * 
-         * -"application": triggers for application center applications.
-         * 
-         * Default value: "deployment ".
-         * 
-         * If the trigger type is not specified, the query result does not filter the trigger type.
+         * 应用所属命名空间。
+         */
+        public Builder namespace(String namespace) {
+            this.putQueryParameter("Namespace", namespace);
+            this.namespace = namespace;
+            return this;
+        }
+
+        /**
+         * 应用类型。
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -163,11 +149,11 @@ public class GetKubernetesTriggerRequest extends Request {
         }
 
         /**
-         * The name of the namespace.
+         * 触发器行为。
          */
-        public Builder namespace(String namespace) {
-            this.putQueryParameter("Namespace", namespace);
-            this.namespace = namespace;
+        public Builder action(String action) {
+            this.putQueryParameter("action", action);
+            this.action = action;
             return this;
         }
 

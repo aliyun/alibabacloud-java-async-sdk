@@ -12,6 +12,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeEdgeMachineActiveProcessResponseBody</p>
  */
 public class DescribeEdgeMachineActiveProcessResponseBody extends TeaModel {
+    @NameInMap("logs")
+    private String logs;
+
+    @NameInMap("progress")
+    private Long progress;
+
     @NameInMap("request_id")
     private String requestId;
 
@@ -21,18 +27,12 @@ public class DescribeEdgeMachineActiveProcessResponseBody extends TeaModel {
     @NameInMap("step")
     private String step;
 
-    @NameInMap("progress")
-    private Long progress;
-
-    @NameInMap("logs")
-    private String logs;
-
     private DescribeEdgeMachineActiveProcessResponseBody(Builder builder) {
+        this.logs = builder.logs;
+        this.progress = builder.progress;
         this.requestId = builder.requestId;
         this.state = builder.state;
         this.step = builder.step;
-        this.progress = builder.progress;
-        this.logs = builder.logs;
     }
 
     public static Builder builder() {
@@ -41,6 +41,20 @@ public class DescribeEdgeMachineActiveProcessResponseBody extends TeaModel {
 
     public static DescribeEdgeMachineActiveProcessResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return logs
+     */
+    public String getLogs() {
+        return this.logs;
+    }
+
+    /**
+     * @return progress
+     */
+    public Long getProgress() {
+        return this.progress;
     }
 
     /**
@@ -64,53 +78,23 @@ public class DescribeEdgeMachineActiveProcessResponseBody extends TeaModel {
         return this.step;
     }
 
-    /**
-     * @return progress
-     */
-    public Long getProgress() {
-        return this.progress;
-    }
-
-    /**
-     * @return logs
-     */
-    public String getLogs() {
-        return this.logs;
-    }
-
     public static final class Builder {
+        private String logs; 
+        private Long progress; 
         private String requestId; 
         private String state; 
         private String step; 
-        private Long progress; 
-        private String logs; 
 
         /**
-         * The ID of the request.
+         * logs of activate
          */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
+        public Builder logs(String logs) {
+            this.logs = logs;
             return this;
         }
 
         /**
-         * Active
-         */
-        public Builder state(String state) {
-            this.state = state;
-            return this;
-        }
-
-        /**
-         * Activation procedure
-         */
-        public Builder step(String step) {
-            this.step = step;
-            return this;
-        }
-
-        /**
-         * Activation Progress
+         * process of activate
          */
         public Builder progress(Long progress) {
             this.progress = progress;
@@ -118,10 +102,26 @@ public class DescribeEdgeMachineActiveProcessResponseBody extends TeaModel {
         }
 
         /**
-         * Activation Progress list
+         * Id of the request
          */
-        public Builder logs(String logs) {
-            this.logs = logs;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * state of activate
+         */
+        public Builder state(String state) {
+            this.state = state;
+            return this;
+        }
+
+        /**
+         * step of activate
+         */
+        public Builder step(String step) {
+            this.step = step;
             return this;
         }
 

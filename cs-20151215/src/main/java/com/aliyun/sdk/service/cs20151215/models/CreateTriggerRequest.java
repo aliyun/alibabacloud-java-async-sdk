@@ -19,14 +19,14 @@ public class CreateTriggerRequest extends Request {
     private String clusterId;
 
     @Body
-    @NameInMap("project_id")
-    @Validation(required = true)
-    private String projectId;
-
-    @Body
     @NameInMap("action")
     @Validation(required = true)
     private String action;
+
+    @Body
+    @NameInMap("project_id")
+    @Validation(required = true)
+    private String projectId;
 
     @Body
     @NameInMap("type")
@@ -35,8 +35,8 @@ public class CreateTriggerRequest extends Request {
     private CreateTriggerRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
-        this.projectId = builder.projectId;
         this.action = builder.action;
+        this.projectId = builder.projectId;
         this.type = builder.type;
     }
 
@@ -61,17 +61,17 @@ public class CreateTriggerRequest extends Request {
     }
 
     /**
-     * @return projectId
-     */
-    public String getProjectId() {
-        return this.projectId;
-    }
-
-    /**
      * @return action
      */
     public String getAction() {
         return this.action;
+    }
+
+    /**
+     * @return projectId
+     */
+    public String getProjectId() {
+        return this.projectId;
     }
 
     /**
@@ -83,8 +83,8 @@ public class CreateTriggerRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateTriggerRequest, Builder> {
         private String clusterId; 
-        private String projectId; 
         private String action; 
+        private String projectId; 
         private String type; 
 
         private Builder() {
@@ -94,13 +94,13 @@ public class CreateTriggerRequest extends Request {
         private Builder(CreateTriggerRequest request) {
             super(request);
             this.clusterId = request.clusterId;
-            this.projectId = request.projectId;
             this.action = request.action;
+            this.projectId = request.projectId;
             this.type = request.type;
         } 
 
         /**
-         * The ID of the cluster.
+         * 集群ID
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
@@ -110,24 +110,7 @@ public class CreateTriggerRequest extends Request {
         }
 
         /**
-         * The name of the trigger project.
-         * <p>
-         * 
-         * The namespace and application name of the application. The format is "${namespace}/${name}".
-         * 
-         * Valid values: default/test-app ".
-         */
-        public Builder projectId(String projectId) {
-            this.putBodyParameter("project_id", projectId);
-            this.projectId = projectId;
-            return this;
-        }
-
-        /**
-         * The behavior of the trigger. Valid values:
-         * <p>
-         * 
-         * "redeploy": redeploys the resources defined in "project_id.
+         * 触发器行为
          */
         public Builder action(String action) {
             this.putBodyParameter("action", action);
@@ -136,14 +119,16 @@ public class CreateTriggerRequest extends Request {
         }
 
         /**
-         * The type of the trigger. Valid values:
-         * <p>
-         * 
-         * -"deployment": triggers for stateless applications.
-         * 
-         * -"application": triggers for application center applications.
-         * 
-         * Default value: "deployment ".
+         * 项目名称。
+         */
+        public Builder projectId(String projectId) {
+            this.putBodyParameter("project_id", projectId);
+            this.projectId = projectId;
+            return this;
+        }
+
+        /**
+         * 触发器类型。默认deployment。
          */
         public Builder type(String type) {
             this.putBodyParameter("type", type);

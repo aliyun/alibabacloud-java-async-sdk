@@ -70,7 +70,7 @@ public class DescribeClusterNodePoolDetailRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * 集群ID。
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -79,7 +79,7 @@ public class DescribeClusterNodePoolDetailRequest extends Request {
         }
 
         /**
-         * The ID of the node pool.
+         * 节点池ID。
          */
         public Builder nodepoolId(String nodepoolId) {
             this.putPathParameter("NodepoolId", nodepoolId);

@@ -69,7 +69,7 @@ public class InstallClusterAddonsRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * 集群ID。
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -78,7 +78,7 @@ public class InstallClusterAddonsRequest extends Request {
         }
 
         /**
-         * The request body parameters.
+         * Addon列表。
          */
         public Builder body(java.util.List < InstallClusterAddonsRequestBody> body) {
             this.putBodyParameter("body", body);
@@ -94,6 +94,9 @@ public class InstallClusterAddonsRequest extends Request {
     } 
 
     public static class InstallClusterAddonsRequestBody extends TeaModel {
+        @NameInMap("config")
+        private String config;
+
         @NameInMap("name")
         @Validation(required = true)
         private String name;
@@ -102,13 +105,10 @@ public class InstallClusterAddonsRequest extends Request {
         @Validation(required = true)
         private String version;
 
-        @NameInMap("config")
-        private String config;
-
         private InstallClusterAddonsRequestBody(Builder builder) {
+            this.config = builder.config;
             this.name = builder.name;
             this.version = builder.version;
-            this.config = builder.config;
         }
 
         public static Builder builder() {
@@ -117,6 +117,13 @@ public class InstallClusterAddonsRequest extends Request {
 
         public static InstallClusterAddonsRequestBody create() {
             return builder().build();
+        }
+
+        /**
+         * @return config
+         */
+        public String getConfig() {
+            return this.config;
         }
 
         /**
@@ -133,17 +140,18 @@ public class InstallClusterAddonsRequest extends Request {
             return this.version;
         }
 
-        /**
-         * @return config
-         */
-        public String getConfig() {
-            return this.config;
-        }
-
         public static final class Builder {
+            private String config; 
             private String name; 
             private String version; 
-            private String config; 
+
+            /**
+             * 组件配置信息。
+             */
+            public Builder config(String config) {
+                this.config = config;
+                return this;
+            }
 
             /**
              * 组件名称。
@@ -154,21 +162,10 @@ public class InstallClusterAddonsRequest extends Request {
             }
 
             /**
-             * 组件版本。
-             * <p>
-             * 
-             * > 可以API接口[DescribeClusterAddonsVersion](~~197434~~)通过组件列表查询版本号。
+             * 组件版本号。
              */
             public Builder version(String version) {
                 this.version = version;
-                return this;
-            }
-
-            /**
-             * 组件配置信息。
-             */
-            public Builder config(String config) {
-                this.config = config;
                 return this;
             }
 

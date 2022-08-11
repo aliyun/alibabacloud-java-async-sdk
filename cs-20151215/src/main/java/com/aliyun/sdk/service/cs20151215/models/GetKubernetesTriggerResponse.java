@@ -216,7 +216,7 @@ public class GetKubernetesTriggerResponse extends Response {
             }
 
             /**
-             * 集群ID。
+             * 集群ID
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -224,10 +224,7 @@ public class GetKubernetesTriggerResponse extends Response {
             }
 
             /**
-             * 触发器项目名称。
-             * <p>
-             * 
-             * 由应用所在命名空间及应用名称组成，格式为`${namespace}/${name}`，取值示例：default/test-app。
+             * 触发器项目名称
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
@@ -236,15 +233,6 @@ public class GetKubernetesTriggerResponse extends Response {
 
             /**
              * 触发器类型。
-             * <p>
-             * 
-             * 取值：
-             * 
-             * - `deployment`：针对无状态应用的触发器。 
-             * 
-             * - `application`：针对应用中心应用的触发器。
-             * 
-             * 默认值：`deployment`。
              */
             public Builder type(String type) {
                 this.type = type;
@@ -252,10 +240,7 @@ public class GetKubernetesTriggerResponse extends Response {
             }
 
             /**
-             * 触发器行为，取值：
-             * <p>
-             * 
-             * `redeploy`: 重新部署project_id中定义的资源。
+             * 触发器行为
              */
             public Builder action(String action) {
                 this.action = action;

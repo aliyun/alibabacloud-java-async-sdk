@@ -55,7 +55,7 @@ public class DescribePolicyInstancesStatusRequest extends Request {
         } 
 
         /**
-         * The ID of the target cluster.
+         * 目标集群ID
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);

@@ -83,7 +83,7 @@ public class DescribeClusterUserKubeconfigRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * 集群ID。
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -92,12 +92,7 @@ public class DescribeClusterUserKubeconfigRequest extends Request {
         }
 
         /**
-         * Specifies whether to obtain the internal connection configuration. Valid values:
-         * <p>
-         * -"ture": obtains only the intranet connection credentials.
-         * -"false": obtains only the public connection credentials.
-         * 
-         * Default value: "false ".
+         * ApiServer是否为内网地址。
          */
         public Builder privateIpAddress(Boolean privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
@@ -106,9 +101,7 @@ public class DescribeClusterUserKubeconfigRequest extends Request {
         }
 
         /**
-         * The validity period of the temporary kubeconfig. Unit: minutes. Valid values: 15 to 4320(3 days).
-         * <p>
-         * > if this parameter is not set, the system automatically determines a longer validity period. The specific expiration time is determined by the value of the "expiration" field returned.
+         * 临时kubeconfig有效期，单位：分钟。  最小值：15（15分钟）  最大值：4320（3天）。
          */
         public Builder temporaryDurationMinutes(Long temporaryDurationMinutes) {
             this.putQueryParameter("TemporaryDurationMinutes", temporaryDurationMinutes);

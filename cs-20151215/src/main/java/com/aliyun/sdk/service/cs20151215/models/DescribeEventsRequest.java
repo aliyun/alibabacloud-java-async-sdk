@@ -17,6 +17,10 @@ public class DescribeEventsRequest extends Request {
     private String clusterId;
 
     @Query
+    @NameInMap("page_number")
+    private Long pageNumber;
+
+    @Query
     @NameInMap("page_size")
     private Long pageSize;
 
@@ -24,16 +28,12 @@ public class DescribeEventsRequest extends Request {
     @NameInMap("type")
     private String type;
 
-    @Query
-    @NameInMap("page_number")
-    private Long pageNumber;
-
     private DescribeEventsRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
+        this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.type = builder.type;
-        this.pageNumber = builder.pageNumber;
     }
 
     public static Builder builder() {
@@ -57,6 +57,13 @@ public class DescribeEventsRequest extends Request {
     }
 
     /**
+     * @return pageNumber
+     */
+    public Long getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
      * @return pageSize
      */
     public Long getPageSize() {
@@ -70,18 +77,11 @@ public class DescribeEventsRequest extends Request {
         return this.type;
     }
 
-    /**
-     * @return pageNumber
-     */
-    public Long getPageNumber() {
-        return this.pageNumber;
-    }
-
     public static final class Builder extends Request.Builder<DescribeEventsRequest, Builder> {
         private String clusterId; 
+        private Long pageNumber; 
         private Long pageSize; 
         private String type; 
-        private Long pageNumber; 
 
         private Builder() {
             super();
@@ -90,13 +90,13 @@ public class DescribeEventsRequest extends Request {
         private Builder(DescribeEventsRequest request) {
             super(request);
             this.clusterId = request.clusterId;
+            this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.type = request.type;
-            this.pageNumber = request.pageNumber;
         } 
 
         /**
-         * The ID of the cluster.
+         * 集群ID
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("cluster_id", clusterId);
@@ -105,7 +105,16 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * 没页记录数量
+         */
+        public Builder pageNumber(Long pageNumber) {
+            this.putQueryParameter("page_number", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * 页数
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("page_size", pageSize);
@@ -114,37 +123,11 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * The type of the event. Valid values:
-         * <p>
-         * -"Cluster_create": Creates a cluster.
-         * -"Cluster_scaleout": scale out the cluster.
-         * -"Cluster_attach ": adds an existing node.
-         * -"Cluster_delete ": deletes a cluster.
-         * -"Cluster_upgrade ": upgrades the cluster.
-         * -"Cluster_migrate ": migrates the cluster.
-         * -"Cluster_node_delete ": removes a node.
-         * -"Cluster_node_drain ": clears the node.
-         * -"Cluster_modig": modifies the cluster.
-         * -"Cluster_configuration_modif": modifies the cluster control configuration.
-         * -"Cluster_addon_install ": install components.
-         * -"Cluster_addon_upgrade ": upgrades components.
-         * -"Cluster_addon_uninstall ": uninstall the component.
-         * -"Runtime_upgrade ": upgrades the runtime.
-         * -"Nodepool_upgrade ": upgrades the node pool.
-         * -"Nodepool_update": updates the node pool.
+         * 事件类型
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);
             this.type = type;
-            return this;
-        }
-
-        /**
-         * The number of pages to return.
-         */
-        public Builder pageNumber(Long pageNumber) {
-            this.putQueryParameter("page_number", pageNumber);
-            this.pageNumber = pageNumber;
             return this;
         }
 

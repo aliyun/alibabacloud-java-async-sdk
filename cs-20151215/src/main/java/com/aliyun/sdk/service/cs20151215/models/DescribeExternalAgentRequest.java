@@ -69,7 +69,7 @@ public class DescribeExternalAgentRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * 集群ID。
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -78,13 +78,7 @@ public class DescribeExternalAgentRequest extends Request {
         }
 
         /**
-         * Specifies whether to obtain the intranet access credentials.
-         * <p>
-         * 
-         * -"true": obtains only the intranet connection credentials.
-         * -"false": obtains only the public connection credentials.
-         * 
-         * Default value: "false ".
+         * 是否获取内网访问凭据。  true：获取内网连接凭据 false：获取公网连接凭据 默认值：false。
          */
         public Builder privateIpAddress(String privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);

@@ -85,7 +85,7 @@ public class UpdateK8sClusterUserConfigExpireRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * 集群id
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -94,7 +94,7 @@ public class UpdateK8sClusterUserConfigExpireRequest extends Request {
         }
 
         /**
-         * The expiration time specified by the user. The unit is hours.
+         * kubeconfig过期小时
          */
         public Builder expireHour(Long expireHour) {
             this.putBodyParameter("expire_hour", expireHour);
@@ -103,7 +103,7 @@ public class UpdateK8sClusterUserConfigExpireRequest extends Request {
         }
 
         /**
-         * The user ID.
+         * 指定用户id
          */
         public Builder user(String user) {
             this.putBodyParameter("user", user);

@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePolicyGovernanceInClusterResponseBody</p>
  */
 public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
-    @NameInMap("on_state")
-    private java.util.List < OnState> onState;
-
     @NameInMap("admit_log")
     private AdmitLog admitLog;
+
+    @NameInMap("on_state")
+    private java.util.List < OnState> onState;
 
     @NameInMap("totalViolations")
     private TotalViolations totalViolations;
@@ -25,8 +25,8 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
     private Violations violations;
 
     private DescribePolicyGovernanceInClusterResponseBody(Builder builder) {
-        this.onState = builder.onState;
         this.admitLog = builder.admitLog;
+        this.onState = builder.onState;
         this.totalViolations = builder.totalViolations;
         this.violations = builder.violations;
     }
@@ -40,17 +40,17 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
     }
 
     /**
-     * @return onState
-     */
-    public java.util.List < OnState> getOnState() {
-        return this.onState;
-    }
-
-    /**
      * @return admitLog
      */
     public AdmitLog getAdmitLog() {
         return this.admitLog;
+    }
+
+    /**
+     * @return onState
+     */
+    public java.util.List < OnState> getOnState() {
+        return this.onState;
     }
 
     /**
@@ -68,21 +68,13 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < OnState> onState; 
         private AdmitLog admitLog; 
+        private java.util.List < OnState> onState; 
         private TotalViolations totalViolations; 
         private Violations violations; 
 
         /**
-         * Statistics of different levels of policies enabled in the current cluster
-         */
-        public Builder onState(java.util.List < OnState> onState) {
-            this.onState = onState;
-            return this;
-        }
-
-        /**
-         * Audit logs of current cluster policy governance
+         * 集群当前策略治理审计日志
          */
         public Builder admitLog(AdmitLog admitLog) {
             this.admitLog = admitLog;
@@ -90,7 +82,15 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The number of violations at different governance levels under the blocked and alerted processing types in the cluster.
+         * 当前集群中开启的不同等级策略计数统计
+         */
+        public Builder onState(java.util.List < OnState> onState) {
+            this.onState = onState;
+            return this;
+        }
+
+        /**
+         * 集群中当前被拦截和告警两种处理类型下不同治理等级的违规计数。
          */
         public Builder totalViolations(TotalViolations totalViolations) {
             this.totalViolations = totalViolations;
@@ -98,7 +98,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The list of audit count statistics for interception and alerts of different policy types in the cluster.
+         * 集群中针对不同策略类型的拦截和告警的审计计数统计列表
          */
         public Builder violations(Violations violations) {
             this.violations = violations;
@@ -111,20 +111,242 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
 
     } 
 
+    public static class Log extends TeaModel {
+        @NameInMap("cluster_id")
+        private String clusterId;
+
+        @NameInMap("constraint_kind")
+        private String constraintKind;
+
+        @NameInMap("msg")
+        private String msg;
+
+        @NameInMap("resource_kind")
+        private String resourceKind;
+
+        @NameInMap("resource_name")
+        private String resourceName;
+
+        @NameInMap("resource_namespace")
+        private String resourceNamespace;
+
+        private Log(Builder builder) {
+            this.clusterId = builder.clusterId;
+            this.constraintKind = builder.constraintKind;
+            this.msg = builder.msg;
+            this.resourceKind = builder.resourceKind;
+            this.resourceName = builder.resourceName;
+            this.resourceNamespace = builder.resourceNamespace;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Log create() {
+            return builder().build();
+        }
+
+        /**
+         * @return clusterId
+         */
+        public String getClusterId() {
+            return this.clusterId;
+        }
+
+        /**
+         * @return constraintKind
+         */
+        public String getConstraintKind() {
+            return this.constraintKind;
+        }
+
+        /**
+         * @return msg
+         */
+        public String getMsg() {
+            return this.msg;
+        }
+
+        /**
+         * @return resourceKind
+         */
+        public String getResourceKind() {
+            return this.resourceKind;
+        }
+
+        /**
+         * @return resourceName
+         */
+        public String getResourceName() {
+            return this.resourceName;
+        }
+
+        /**
+         * @return resourceNamespace
+         */
+        public String getResourceNamespace() {
+            return this.resourceNamespace;
+        }
+
+        public static final class Builder {
+            private String clusterId; 
+            private String constraintKind; 
+            private String msg; 
+            private String resourceKind; 
+            private String resourceName; 
+            private String resourceNamespace; 
+
+            /**
+             * 目标集群ID
+             */
+            public Builder clusterId(String clusterId) {
+                this.clusterId = clusterId;
+                return this;
+            }
+
+            /**
+             * 策略类型名称
+             */
+            public Builder constraintKind(String constraintKind) {
+                this.constraintKind = constraintKind;
+                return this;
+            }
+
+            /**
+             * 策略治理审计日志信息
+             */
+            public Builder msg(String msg) {
+                this.msg = msg;
+                return this;
+            }
+
+            /**
+             * 目标资源类型
+             */
+            public Builder resourceKind(String resourceKind) {
+                this.resourceKind = resourceKind;
+                return this;
+            }
+
+            /**
+             * 目标资源名称
+             */
+            public Builder resourceName(String resourceName) {
+                this.resourceName = resourceName;
+                return this;
+            }
+
+            /**
+             * 目标资源命名空间
+             */
+            public Builder resourceNamespace(String resourceNamespace) {
+                this.resourceNamespace = resourceNamespace;
+                return this;
+            }
+
+            public Log build() {
+                return new Log(this);
+            } 
+
+        } 
+
+    }
+    public static class AdmitLog extends TeaModel {
+        @NameInMap("count")
+        private Long count;
+
+        @NameInMap("log")
+        private Log log;
+
+        @NameInMap("progress")
+        private String progress;
+
+        private AdmitLog(Builder builder) {
+            this.count = builder.count;
+            this.log = builder.log;
+            this.progress = builder.progress;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AdmitLog create() {
+            return builder().build();
+        }
+
+        /**
+         * @return count
+         */
+        public Long getCount() {
+            return this.count;
+        }
+
+        /**
+         * @return log
+         */
+        public Log getLog() {
+            return this.log;
+        }
+
+        /**
+         * @return progress
+         */
+        public String getProgress() {
+            return this.progress;
+        }
+
+        public static final class Builder {
+            private Long count; 
+            private Log log; 
+            private String progress; 
+
+            /**
+             * 当前查询到的日志总数
+             */
+            public Builder count(Long count) {
+                this.count = count;
+                return this;
+            }
+
+            /**
+             * 策略治理审计日志内容
+             */
+            public Builder log(Log log) {
+                this.log = log;
+                return this;
+            }
+
+            /**
+             * 查询结果的状态
+             */
+            public Builder progress(String progress) {
+                this.progress = progress;
+                return this;
+            }
+
+            public AdmitLog build() {
+                return new AdmitLog(this);
+            } 
+
+        } 
+
+    }
     public static class OnState extends TeaModel {
         @NameInMap("enabled_count")
         private Integer enabledCount;
 
-        @NameInMap("total")
-        private Integer total;
-
         @NameInMap("severity")
         private String severity;
 
+        @NameInMap("total")
+        private Integer total;
+
         private OnState(Builder builder) {
             this.enabledCount = builder.enabledCount;
-            this.total = builder.total;
             this.severity = builder.severity;
+            this.total = builder.total;
         }
 
         public static Builder builder() {
@@ -143,26 +365,26 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         }
 
         /**
-         * @return total
-         */
-        public Integer getTotal() {
-            return this.total;
-        }
-
-        /**
          * @return severity
          */
         public String getSeverity() {
             return this.severity;
         }
 
+        /**
+         * @return total
+         */
+        public Integer getTotal() {
+            return this.total;
+        }
+
         public static final class Builder {
             private Integer enabledCount; 
-            private Integer total; 
             private String severity; 
+            private Integer total; 
 
             /**
-             * The number of currently enabled policy types.
+             * 当前开启的策略种类计数
              */
             public Builder enabledCount(Integer enabledCount) {
                 this.enabledCount = enabledCount;
@@ -170,245 +392,23 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of policy categories under this level.
-             */
-            public Builder total(Integer total) {
-                this.total = total;
-                return this;
-            }
-
-            /**
-             * Policy governance level
+             * 策略治理等级
              */
             public Builder severity(String severity) {
                 this.severity = severity;
                 return this;
             }
 
+            /**
+             * 该等级下策略种类总数
+             */
+            public Builder total(Integer total) {
+                this.total = total;
+                return this;
+            }
+
             public OnState build() {
                 return new OnState(this);
-            } 
-
-        } 
-
-    }
-    public static class Log extends TeaModel {
-        @NameInMap("msg")
-        private String msg;
-
-        @NameInMap("cluster_id")
-        private String clusterId;
-
-        @NameInMap("constraint_kind")
-        private String constraintKind;
-
-        @NameInMap("resource_name")
-        private String resourceName;
-
-        @NameInMap("resource_kind")
-        private String resourceKind;
-
-        @NameInMap("resource_namespace")
-        private String resourceNamespace;
-
-        private Log(Builder builder) {
-            this.msg = builder.msg;
-            this.clusterId = builder.clusterId;
-            this.constraintKind = builder.constraintKind;
-            this.resourceName = builder.resourceName;
-            this.resourceKind = builder.resourceKind;
-            this.resourceNamespace = builder.resourceNamespace;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Log create() {
-            return builder().build();
-        }
-
-        /**
-         * @return msg
-         */
-        public String getMsg() {
-            return this.msg;
-        }
-
-        /**
-         * @return clusterId
-         */
-        public String getClusterId() {
-            return this.clusterId;
-        }
-
-        /**
-         * @return constraintKind
-         */
-        public String getConstraintKind() {
-            return this.constraintKind;
-        }
-
-        /**
-         * @return resourceName
-         */
-        public String getResourceName() {
-            return this.resourceName;
-        }
-
-        /**
-         * @return resourceKind
-         */
-        public String getResourceKind() {
-            return this.resourceKind;
-        }
-
-        /**
-         * @return resourceNamespace
-         */
-        public String getResourceNamespace() {
-            return this.resourceNamespace;
-        }
-
-        public static final class Builder {
-            private String msg; 
-            private String clusterId; 
-            private String constraintKind; 
-            private String resourceName; 
-            private String resourceKind; 
-            private String resourceNamespace; 
-
-            /**
-             * Policy Governance Audit Logs
-             */
-            public Builder msg(String msg) {
-                this.msg = msg;
-                return this;
-            }
-
-            /**
-             * The ID of the target cluster.
-             */
-            public Builder clusterId(String clusterId) {
-                this.clusterId = clusterId;
-                return this;
-            }
-
-            /**
-             * Policy type name
-             */
-            public Builder constraintKind(String constraintKind) {
-                this.constraintKind = constraintKind;
-                return this;
-            }
-
-            /**
-             * Target resource name
-             */
-            public Builder resourceName(String resourceName) {
-                this.resourceName = resourceName;
-                return this;
-            }
-
-            /**
-             * Target resource type
-             */
-            public Builder resourceKind(String resourceKind) {
-                this.resourceKind = resourceKind;
-                return this;
-            }
-
-            /**
-             * Target resource namespace
-             */
-            public Builder resourceNamespace(String resourceNamespace) {
-                this.resourceNamespace = resourceNamespace;
-                return this;
-            }
-
-            public Log build() {
-                return new Log(this);
-            } 
-
-        } 
-
-    }
-    public static class AdmitLog extends TeaModel {
-        @NameInMap("progress")
-        private String progress;
-
-        @NameInMap("count")
-        private Long count;
-
-        @NameInMap("log")
-        private Log log;
-
-        private AdmitLog(Builder builder) {
-            this.progress = builder.progress;
-            this.count = builder.count;
-            this.log = builder.log;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static AdmitLog create() {
-            return builder().build();
-        }
-
-        /**
-         * @return progress
-         */
-        public String getProgress() {
-            return this.progress;
-        }
-
-        /**
-         * @return count
-         */
-        public Long getCount() {
-            return this.count;
-        }
-
-        /**
-         * @return log
-         */
-        public Log getLog() {
-            return this.log;
-        }
-
-        public static final class Builder {
-            private String progress; 
-            private Long count; 
-            private Log log; 
-
-            /**
-             * The status of the query result.
-             */
-            public Builder progress(String progress) {
-                this.progress = progress;
-                return this;
-            }
-
-            /**
-             * The total number of queried logs.
-             */
-            public Builder count(Long count) {
-                this.count = count;
-                return this;
-            }
-
-            /**
-             * Policy Governance Audit log content
-             */
-            public Builder log(Log log) {
-                this.log = log;
-                return this;
-            }
-
-            public AdmitLog build() {
-                return new AdmitLog(this);
             } 
 
         } 
@@ -453,7 +453,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             private Long violations; 
 
             /**
-             * Policy governance level
+             * 策略治理等级
              */
             public Builder severity(String severity) {
                 this.severity = severity;
@@ -461,7 +461,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Count of intercepted events
+             * 被拦截的事件计数
              */
             public Builder violations(Long violations) {
                 this.violations = violations;
@@ -514,7 +514,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             private Long violations; 
 
             /**
-             * Policy governance level
+             * 策略治理等级
              */
             public Builder severity(String severity) {
                 this.severity = severity;
@@ -522,7 +522,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The number of alert events.
+             * 告警的事件计数
              */
             public Builder violations(Long violations) {
                 this.violations = violations;
@@ -575,7 +575,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             private Warn warn; 
 
             /**
-             * Statistics of blocked violations at different governance levels
+             * 被拦截的不同治理等级的违规计数统计
              */
             public Builder deny(Deny deny) {
                 this.deny = deny;
@@ -583,7 +583,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Rule count statistics for different governance levels in alert mode
+             * 告警模式下不同治理等级的违规计数统计
              */
             public Builder warn(Warn warn) {
                 this.warn = warn;
@@ -598,23 +598,23 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
 
     }
     public static class ViolationsDeny extends TeaModel {
-        @NameInMap("policyName")
-        private String policyName;
-
         @NameInMap("policyDescription")
         private String policyDescription;
 
-        @NameInMap("violations")
-        private Long violations;
+        @NameInMap("policyName")
+        private String policyName;
 
         @NameInMap("severity")
         private String severity;
 
+        @NameInMap("violations")
+        private Long violations;
+
         private ViolationsDeny(Builder builder) {
-            this.policyName = builder.policyName;
             this.policyDescription = builder.policyDescription;
-            this.violations = builder.violations;
+            this.policyName = builder.policyName;
             this.severity = builder.severity;
+            this.violations = builder.violations;
         }
 
         public static Builder builder() {
@@ -626,13 +626,6 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         }
 
         /**
-         * @return policyName
-         */
-        public String getPolicyName() {
-            return this.policyName;
-        }
-
-        /**
          * @return policyDescription
          */
         public String getPolicyDescription() {
@@ -640,10 +633,10 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         }
 
         /**
-         * @return violations
+         * @return policyName
          */
-        public Long getViolations() {
-            return this.violations;
+        public String getPolicyName() {
+            return this.policyName;
         }
 
         /**
@@ -653,22 +646,21 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             return this.severity;
         }
 
+        /**
+         * @return violations
+         */
+        public Long getViolations() {
+            return this.violations;
+        }
+
         public static final class Builder {
-            private String policyName; 
             private String policyDescription; 
-            private Long violations; 
+            private String policyName; 
             private String severity; 
+            private Long violations; 
 
             /**
-             * Policy name
-             */
-            public Builder policyName(String policyName) {
-                this.policyName = policyName;
-                return this;
-            }
-
-            /**
-             * Policy description
+             * 策略描述
              */
             public Builder policyDescription(String policyDescription) {
                 this.policyDescription = policyDescription;
@@ -676,18 +668,26 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The number of blocked violations under the corresponding rule type in the cluster.
+             * 策略名称
              */
-            public Builder violations(Long violations) {
-                this.violations = violations;
+            public Builder policyName(String policyName) {
+                this.policyName = policyName;
                 return this;
             }
 
             /**
-             * Policy governance level
+             * 策略治理等级
              */
             public Builder severity(String severity) {
                 this.severity = severity;
+                return this;
+            }
+
+            /**
+             * 对应规则的事件计数
+             */
+            public Builder violations(Long violations) {
+                this.violations = violations;
                 return this;
             }
 
@@ -699,23 +699,23 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
 
     }
     public static class ViolationsWarn extends TeaModel {
-        @NameInMap("policyName")
-        private String policyName;
-
         @NameInMap("policyDescription")
         private String policyDescription;
 
-        @NameInMap("violations")
-        private Long violations;
+        @NameInMap("policyName")
+        private String policyName;
 
         @NameInMap("severity")
         private String severity;
 
+        @NameInMap("violations")
+        private Long violations;
+
         private ViolationsWarn(Builder builder) {
-            this.policyName = builder.policyName;
             this.policyDescription = builder.policyDescription;
-            this.violations = builder.violations;
+            this.policyName = builder.policyName;
             this.severity = builder.severity;
+            this.violations = builder.violations;
         }
 
         public static Builder builder() {
@@ -727,13 +727,6 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         }
 
         /**
-         * @return policyName
-         */
-        public String getPolicyName() {
-            return this.policyName;
-        }
-
-        /**
          * @return policyDescription
          */
         public String getPolicyDescription() {
@@ -741,10 +734,10 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         }
 
         /**
-         * @return violations
+         * @return policyName
          */
-        public Long getViolations() {
-            return this.violations;
+        public String getPolicyName() {
+            return this.policyName;
         }
 
         /**
@@ -754,22 +747,21 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             return this.severity;
         }
 
+        /**
+         * @return violations
+         */
+        public Long getViolations() {
+            return this.violations;
+        }
+
         public static final class Builder {
-            private String policyName; 
             private String policyDescription; 
-            private Long violations; 
+            private String policyName; 
             private String severity; 
+            private Long violations; 
 
             /**
-             * Policy name
-             */
-            public Builder policyName(String policyName) {
-                this.policyName = policyName;
-                return this;
-            }
-
-            /**
-             * Policy description
+             * 策略描述
              */
             public Builder policyDescription(String policyDescription) {
                 this.policyDescription = policyDescription;
@@ -777,18 +769,26 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The number of alert violations under the corresponding rule type in the cluster.
+             * 策略名称
              */
-            public Builder violations(Long violations) {
-                this.violations = violations;
+            public Builder policyName(String policyName) {
+                this.policyName = policyName;
                 return this;
             }
 
             /**
-             * Policy governance level
+             * 策略治理等级
              */
             public Builder severity(String severity) {
                 this.severity = severity;
+                return this;
+            }
+
+            /**
+             * 对应规则的事件计数
+             */
+            public Builder violations(Long violations) {
+                this.violations = violations;
                 return this;
             }
 
@@ -838,7 +838,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             private ViolationsWarn warn; 
 
             /**
-             * Audit count of different blocked policy types
+             * 被拦截的不同策略类型的审计计数
              */
             public Builder deny(ViolationsDeny deny) {
                 this.deny = deny;
@@ -846,7 +846,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Rule count statistics for different governance levels in alert mode
+             * 告警的不同策略类型审计计数
              */
             public Builder warn(ViolationsWarn warn) {
                 this.warn = warn;

@@ -12,8 +12,8 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePolicyDetailsResponseBody</p>
  */
 public class DescribePolicyDetailsResponseBody extends TeaModel {
-    @NameInMap("name")
-    private String name;
+    @NameInMap("action")
+    private String action;
 
     @NameInMap("category")
     private String category;
@@ -21,8 +21,14 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
     @NameInMap("description")
     private String description;
 
-    @NameInMap("action")
-    private String action;
+    @NameInMap("is_deleted")
+    private Integer isDeleted;
+
+    @NameInMap("name")
+    private String name;
+
+    @NameInMap("no_config")
+    private Integer noConfig;
 
     @NameInMap("severity")
     private String severity;
@@ -30,21 +36,15 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
     @NameInMap("template")
     private String template;
 
-    @NameInMap("no_config")
-    private Integer noConfig;
-
-    @NameInMap("is_deleted")
-    private Integer isDeleted;
-
     private DescribePolicyDetailsResponseBody(Builder builder) {
-        this.name = builder.name;
+        this.action = builder.action;
         this.category = builder.category;
         this.description = builder.description;
-        this.action = builder.action;
+        this.isDeleted = builder.isDeleted;
+        this.name = builder.name;
+        this.noConfig = builder.noConfig;
         this.severity = builder.severity;
         this.template = builder.template;
-        this.noConfig = builder.noConfig;
-        this.isDeleted = builder.isDeleted;
     }
 
     public static Builder builder() {
@@ -56,10 +56,10 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
     }
 
     /**
-     * @return name
+     * @return action
      */
-    public String getName() {
-        return this.name;
+    public String getAction() {
+        return this.action;
     }
 
     /**
@@ -77,10 +77,24 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
     }
 
     /**
-     * @return action
+     * @return isDeleted
      */
-    public String getAction() {
-        return this.action;
+    public Integer getIsDeleted() {
+        return this.isDeleted;
+    }
+
+    /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
+    }
+
+    /**
+     * @return noConfig
+     */
+    public Integer getNoConfig() {
+        return this.noConfig;
     }
 
     /**
@@ -97,59 +111,18 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
         return this.template;
     }
 
-    /**
-     * @return noConfig
-     */
-    public Integer getNoConfig() {
-        return this.noConfig;
-    }
-
-    /**
-     * @return isDeleted
-     */
-    public Integer getIsDeleted() {
-        return this.isDeleted;
-    }
-
     public static final class Builder {
-        private String name; 
+        private String action; 
         private String category; 
         private String description; 
-        private String action; 
+        private Integer isDeleted; 
+        private String name; 
+        private Integer noConfig; 
         private String severity; 
         private String template; 
-        private Integer noConfig; 
-        private Integer isDeleted; 
 
         /**
-         * Policy Governance rule name
-         */
-        public Builder name(String name) {
-            this.name = name;
-            return this;
-        }
-
-        /**
-         * Rule Template type
-         */
-        public Builder category(String category) {
-            this.category = category;
-            return this;
-        }
-
-        /**
-         * Rule template description
-         */
-        public Builder description(String description) {
-            this.description = description;
-            return this;
-        }
-
-        /**
-         * The rule governance action. Valid values:
-         * <p>
-         * -"enforce": intercepts illegal deployment.
-         * -"inform": Alerts
+         * 规则治理动作 ● enforce: 拦截违规部署 ● inform：告警
          */
         public Builder action(String action) {
             this.action = action;
@@ -157,26 +130,39 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Rule governance level
+         * 规则模板类型
          */
-        public Builder severity(String severity) {
-            this.severity = severity;
+        public Builder category(String category) {
+            this.category = category;
             return this;
         }
 
         /**
-         * Rule template details
+         * 规则模板描述
          */
-        public Builder template(String template) {
-            this.template = template;
+        public Builder description(String description) {
+            this.description = description;
             return this;
         }
 
         /**
-         * Specifies whether to configure a policy. Valid values:
-         * <p>
-         * -0: parameter configuration is required.
-         * -1: no parameter configuration is required.
+         * 软删除标志：0表示未删除 1表示删除
+         */
+        public Builder isDeleted(Integer isDeleted) {
+            this.isDeleted = isDeleted;
+            return this;
+        }
+
+        /**
+         * 策略治理规则名称
+         */
+        public Builder name(String name) {
+            this.name = name;
+            return this;
+        }
+
+        /**
+         * 是否需要配置策略： 0表示需要参数配置 1表示无需参数配置
          */
         public Builder noConfig(Integer noConfig) {
             this.noConfig = noConfig;
@@ -184,13 +170,18 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Specifies whether to delete the flag. Valid values:
-         * <p>
-         * -0: indicates that the instance has not been deleted.
-         * -1: indicates deletion.
+         * 规则治理等级
          */
-        public Builder isDeleted(Integer isDeleted) {
-            this.isDeleted = isDeleted;
+        public Builder severity(String severity) {
+            this.severity = severity;
+            return this;
+        }
+
+        /**
+         * 规则模板详情
+         */
+        public Builder template(String template) {
+            this.template = template;
             return this;
         }
 

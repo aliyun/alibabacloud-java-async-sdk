@@ -22,6 +22,22 @@ public class CreateAutoscalingConfigRequest extends Request {
     private String coolDownDuration;
 
     @Body
+    @NameInMap("expander")
+    private String expander;
+
+    @Body
+    @NameInMap("gpu_utilization_threshold")
+    private String gpuUtilizationThreshold;
+
+    @Body
+    @NameInMap("scale_down_enabled")
+    private Boolean scaleDownEnabled;
+
+    @Body
+    @NameInMap("scan_interval")
+    private String scanInterval;
+
+    @Body
     @NameInMap("unneeded_duration")
     private String unneededDuration;
 
@@ -29,22 +45,16 @@ public class CreateAutoscalingConfigRequest extends Request {
     @NameInMap("utilization_threshold")
     private String utilizationThreshold;
 
-    @Body
-    @NameInMap("gpu_utilization_threshold")
-    private String gpuUtilizationThreshold;
-
-    @Body
-    @NameInMap("scan_interval")
-    private String scanInterval;
-
     private CreateAutoscalingConfigRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
         this.coolDownDuration = builder.coolDownDuration;
+        this.expander = builder.expander;
+        this.gpuUtilizationThreshold = builder.gpuUtilizationThreshold;
+        this.scaleDownEnabled = builder.scaleDownEnabled;
+        this.scanInterval = builder.scanInterval;
         this.unneededDuration = builder.unneededDuration;
         this.utilizationThreshold = builder.utilizationThreshold;
-        this.gpuUtilizationThreshold = builder.gpuUtilizationThreshold;
-        this.scanInterval = builder.scanInterval;
     }
 
     public static Builder builder() {
@@ -75,6 +85,34 @@ public class CreateAutoscalingConfigRequest extends Request {
     }
 
     /**
+     * @return expander
+     */
+    public String getExpander() {
+        return this.expander;
+    }
+
+    /**
+     * @return gpuUtilizationThreshold
+     */
+    public String getGpuUtilizationThreshold() {
+        return this.gpuUtilizationThreshold;
+    }
+
+    /**
+     * @return scaleDownEnabled
+     */
+    public Boolean getScaleDownEnabled() {
+        return this.scaleDownEnabled;
+    }
+
+    /**
+     * @return scanInterval
+     */
+    public String getScanInterval() {
+        return this.scanInterval;
+    }
+
+    /**
      * @return unneededDuration
      */
     public String getUnneededDuration() {
@@ -88,27 +126,15 @@ public class CreateAutoscalingConfigRequest extends Request {
         return this.utilizationThreshold;
     }
 
-    /**
-     * @return gpuUtilizationThreshold
-     */
-    public String getGpuUtilizationThreshold() {
-        return this.gpuUtilizationThreshold;
-    }
-
-    /**
-     * @return scanInterval
-     */
-    public String getScanInterval() {
-        return this.scanInterval;
-    }
-
     public static final class Builder extends Request.Builder<CreateAutoscalingConfigRequest, Builder> {
         private String clusterId; 
         private String coolDownDuration; 
+        private String expander; 
+        private String gpuUtilizationThreshold; 
+        private Boolean scaleDownEnabled; 
+        private String scanInterval; 
         private String unneededDuration; 
         private String utilizationThreshold; 
-        private String gpuUtilizationThreshold; 
-        private String scanInterval; 
 
         private Builder() {
             super();
@@ -118,14 +144,16 @@ public class CreateAutoscalingConfigRequest extends Request {
             super(request);
             this.clusterId = request.clusterId;
             this.coolDownDuration = request.coolDownDuration;
+            this.expander = request.expander;
+            this.gpuUtilizationThreshold = request.gpuUtilizationThreshold;
+            this.scaleDownEnabled = request.scaleDownEnabled;
+            this.scanInterval = request.scanInterval;
             this.unneededDuration = request.unneededDuration;
             this.utilizationThreshold = request.utilizationThreshold;
-            this.gpuUtilizationThreshold = request.gpuUtilizationThreshold;
-            this.scanInterval = request.scanInterval;
         } 
 
         /**
-         * The ID of the cluster.
+         * 集群ID
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -134,7 +162,7 @@ public class CreateAutoscalingConfigRequest extends Request {
         }
 
         /**
-         * The silent time. After the silent time, the scale-in judgment can be entered.
+         * 静默时间，扩容出的节点，在静默时间过后，方可进入缩容判断
          */
         public Builder coolDownDuration(String coolDownDuration) {
             this.putBodyParameter("cool_down_duration", coolDownDuration);
@@ -143,25 +171,16 @@ public class CreateAutoscalingConfigRequest extends Request {
         }
 
         /**
-         * Scale in the trigger delay. When a node is scaled in, it must continuously meet the time set by the trigger delay.
+         * 节点池扩容顺序策略
          */
-        public Builder unneededDuration(String unneededDuration) {
-            this.putBodyParameter("unneeded_duration", unneededDuration);
-            this.unneededDuration = unneededDuration;
+        public Builder expander(String expander) {
+            this.putBodyParameter("expander", expander);
+            this.expander = expander;
             return this;
         }
 
         /**
-         * Scale-in threshold, the ratio of Request resources on the node to total resources
-         */
-        public Builder utilizationThreshold(String utilizationThreshold) {
-            this.putBodyParameter("utilization_threshold", utilizationThreshold);
-            this.utilizationThreshold = utilizationThreshold;
-            return this;
-        }
-
-        /**
-         * GPU scale-in threshold, ratio of Request resources on nodes to total resources
+         * GPU缩容阈值，节点上 Request 的资源与总资源量的比值
          */
         public Builder gpuUtilizationThreshold(String gpuUtilizationThreshold) {
             this.putBodyParameter("gpu_utilization_threshold", gpuUtilizationThreshold);
@@ -170,11 +189,38 @@ public class CreateAutoscalingConfigRequest extends Request {
         }
 
         /**
-         * Elastic sensitivity to determine the scaling interval
+         * 是否允许缩容
+         */
+        public Builder scaleDownEnabled(Boolean scaleDownEnabled) {
+            this.putBodyParameter("scale_down_enabled", scaleDownEnabled);
+            this.scaleDownEnabled = scaleDownEnabled;
+            return this;
+        }
+
+        /**
+         * 弹性灵敏度，判断伸缩的间隔时间
          */
         public Builder scanInterval(String scanInterval) {
             this.putBodyParameter("scan_interval", scanInterval);
             this.scanInterval = scanInterval;
+            return this;
+        }
+
+        /**
+         * 缩容触发时延，节点缩容时需要连续满足触发时延所设定的时间，方可进行缩容
+         */
+        public Builder unneededDuration(String unneededDuration) {
+            this.putBodyParameter("unneeded_duration", unneededDuration);
+            this.unneededDuration = unneededDuration;
+            return this;
+        }
+
+        /**
+         * 缩容阈值，节点上 Request 的资源与总资源量的比值
+         */
+        public Builder utilizationThreshold(String utilizationThreshold) {
+            this.putBodyParameter("utilization_threshold", utilizationThreshold);
+            this.utilizationThreshold = utilizationThreshold;
             return this;
         }
 

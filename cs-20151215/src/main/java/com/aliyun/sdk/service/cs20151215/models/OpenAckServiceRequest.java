@@ -54,12 +54,7 @@ public class OpenAckServiceRequest extends Request {
         } 
 
         /**
-         * The type of the service to be activated. Valid values:
-         * <p>
-         * 
-         * -"propayasgo": container service ACK Pro managed edition.
-         * -"edgepayasgo": edge container service.
-         * -"gspayasgo": gene computing service.
+         * 要开通的服务类型
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

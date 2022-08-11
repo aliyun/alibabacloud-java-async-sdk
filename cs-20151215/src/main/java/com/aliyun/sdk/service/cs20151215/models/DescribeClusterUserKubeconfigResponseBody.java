@@ -50,7 +50,7 @@ public class DescribeClusterUserKubeconfigResponseBody extends TeaModel {
         private String expiration; 
 
         /**
-         * The cluster access configuration. For more information about how to view cluster access configurations, see [configure cluster credentials](~~ 86494 ~~).
+         * kubeconfig内容。
          */
         public Builder config(String config) {
             this.config = config;
@@ -58,7 +58,7 @@ public class DescribeClusterUserKubeconfigResponseBody extends TeaModel {
         }
 
         /**
-         * The expiration time of kubeconfig. Format: UTC time in RFC3339 format.
+         * kubeconfig过期时间。格式：RFC3339 格式的 UTC 时间。
          */
         public Builder expiration(String expiration) {
             this.expiration = expiration;

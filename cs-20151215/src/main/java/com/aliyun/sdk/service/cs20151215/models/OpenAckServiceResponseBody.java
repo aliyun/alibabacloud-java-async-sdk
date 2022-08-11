@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>OpenAckServiceResponseBody</p>
  */
 public class OpenAckServiceResponseBody extends TeaModel {
-    @NameInMap("request_id")
-    private String requestId;
-
     @NameInMap("order_id")
     private String orderId;
 
+    @NameInMap("request_id")
+    private String requestId;
+
     private OpenAckServiceResponseBody(Builder builder) {
-        this.requestId = builder.requestId;
         this.orderId = builder.orderId;
+        this.requestId = builder.requestId;
     }
 
     public static Builder builder() {
@@ -32,36 +32,36 @@ public class OpenAckServiceResponseBody extends TeaModel {
     }
 
     /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    /**
      * @return orderId
      */
     public String getOrderId() {
         return this.orderId;
     }
 
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static final class Builder {
-        private String requestId; 
         private String orderId; 
+        private String requestId; 
 
         /**
-         * The ID of the request.
+         * 开通服务的订单号。
          */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
+        public Builder orderId(String orderId) {
+            this.orderId = orderId;
             return this;
         }
 
         /**
-         * The order number of the service.
+         * 请求ID
          */
-        public Builder orderId(String orderId) {
-            this.orderId = orderId;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 

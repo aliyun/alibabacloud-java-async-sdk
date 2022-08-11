@@ -69,7 +69,7 @@ public class DescribeTemplateAttributeRequest extends Request {
         } 
 
         /**
-         * The ID of the template.
+         * 模板ID。
          */
         public Builder templateId(String templateId) {
             this.putPathParameter("TemplateId", templateId);
@@ -78,17 +78,7 @@ public class DescribeTemplateAttributeRequest extends Request {
         }
 
         /**
-         * The type of the template. The value can be any value.
-         * <p>
-         * 
-         * -If the value is "kubernetes", the template is displayed on the orchestration Template page in the console.
-         * 
-         * -If the value is "compose", the template is displayed on the Swarm cluster page in the console (deprecated).
-         * 
-         * -If the value is not "kubernetes", the template is not displayed on the orchestration Template page in the console. We recommend that you use "kubernetes ".
-         * 
-         * Default value: "kubernetes ".
-         * 
+         * 模板类型，值为创建部署模板时指定的模板类型。
          */
         public Builder templateType(String templateType) {
             this.putQueryParameter("template_type", templateType);

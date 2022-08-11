@@ -102,7 +102,7 @@ public class StandardComponentsValue extends TeaModel {
         }
 
         /**
-         * 组件功能说明。
+         * 组件描述信息。
          */
         public Builder description(String description) {
             this.description = description;
@@ -110,13 +110,7 @@ public class StandardComponentsValue extends TeaModel {
         }
 
         /**
-         * 是否为集群必需组件。取值：
-         * <p>
-         * 
-         * - `true`：必需组件，集群创建时必须要安装的组件。
-         * 
-         * - `false`：非必需组件，集群创建完成后，可通过`组件管理`进行安装。
-         * 
+         * 是否为必需组件。
          */
         public Builder required(String required) {
             this.required = required;
@@ -124,11 +118,7 @@ public class StandardComponentsValue extends TeaModel {
         }
 
         /**
-         * 是否禁止默认安装，集群创建时除了安装集群所需的组件外，还会额外安装一些与日志或者路由相关的组件（例如：Ingress），如果您不想默认安装，可通过设置该字段禁止默认安装。取值：
-         * <p>
-         * 
-         * - `true`：禁止默认安装。
-         * - `false`：默认安装。
+         * 是否禁止默认安装。
          */
         public Builder disabled(Boolean disabled) {
             this.disabled = disabled;

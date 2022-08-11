@@ -12,20 +12,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CancelWorkflowRequest</p>
  */
 public class CancelWorkflowRequest extends Request {
-    @Body
-    @NameInMap("action")
-    @Validation(required = true)
-    private String action;
-
     @Path
     @NameInMap("workflowName")
     @Validation(required = true)
     private String workflowName;
 
+    @Body
+    @NameInMap("action")
+    @Validation(required = true)
+    private String action;
+
     private CancelWorkflowRequest(Builder builder) {
         super(builder);
-        this.action = builder.action;
         this.workflowName = builder.workflowName;
+        this.action = builder.action;
     }
 
     public static Builder builder() {
@@ -42,22 +42,22 @@ public class CancelWorkflowRequest extends Request {
     }
 
     /**
-     * @return action
-     */
-    public String getAction() {
-        return this.action;
-    }
-
-    /**
      * @return workflowName
      */
     public String getWorkflowName() {
         return this.workflowName;
     }
 
+    /**
+     * @return action
+     */
+    public String getAction() {
+        return this.action;
+    }
+
     public static final class Builder extends Request.Builder<CancelWorkflowRequest, Builder> {
-        private String action; 
         private String workflowName; 
+        private String action; 
 
         private Builder() {
             super();
@@ -65,25 +65,25 @@ public class CancelWorkflowRequest extends Request {
 
         private Builder(CancelWorkflowRequest request) {
             super(request);
-            this.action = request.action;
             this.workflowName = request.workflowName;
+            this.action = request.action;
         } 
 
         /**
-         * The operation that you want to perform. Currently, only cancel is supported.
-         */
-        public Builder action(String action) {
-            this.putBodyParameter("action", action);
-            this.action = action;
-            return this;
-        }
-
-        /**
-         * The name of the workflow.
+         * 工作流名称。
          */
         public Builder workflowName(String workflowName) {
             this.putPathParameter("workflowName", workflowName);
             this.workflowName = workflowName;
+            return this;
+        }
+
+        /**
+         * 执行的操作，目前只支持cancel。
+         */
+        public Builder action(String action) {
+            this.putBodyParameter("action", action);
+            this.action = action;
             return this;
         }
 

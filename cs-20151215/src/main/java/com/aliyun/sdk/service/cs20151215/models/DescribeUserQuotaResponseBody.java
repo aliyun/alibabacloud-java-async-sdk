@@ -86,7 +86,7 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
         private Long nodeQuota; 
 
         /**
-         * The quota of managed clusters. Default value: 20. If the default value is exceeded, you need to [open a ticket](https://selfservice.console.aliyun.com/ticket/category/cs/today) to apply for scale-out.
+         * 托管版集群配额。
          */
         public Builder amkClusterQuota(Long amkClusterQuota) {
             this.amkClusterQuota = amkClusterQuota;
@@ -94,7 +94,7 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * Serverless cluster quota. Default value: 20. If the default value is exceeded, you need to [open a ticket](https://selfservice.console.aliyun.com/ticket/category/cs/today) to apply for scale-out.
+         * Serverless集群配额。
          */
         public Builder askClusterQuota(Long askClusterQuota) {
             this.askClusterQuota = askClusterQuota;
@@ -102,7 +102,7 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * The quota of a single cluster node pool. Default value: 20. If the default value is exceeded, you need to [open a ticket](https://selfservice.console.aliyun.com/ticket/category/cs/today) to apply for scale-out.
+         * 集群节点池配额。
          */
         public Builder clusterNodepoolQuota(Long clusterNodepoolQuota) {
             this.clusterNodepoolQuota = clusterNodepoolQuota;
@@ -110,7 +110,7 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of clusters per account. Default value: 50. If the default value is exceeded, you need to [open a ticket](https://selfservice.console.aliyun.com/ticket/category/cs/today) to apply for scale-out.
+         * 专有版集群托管版集群的总配额。
          */
         public Builder clusterQuota(Long clusterQuota) {
             this.clusterQuota = clusterQuota;
@@ -118,7 +118,7 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * The number of nodes in a cluster. Default value: 100. If the default value is exceeded, you need to [open a ticket](https://selfservice.console.aliyun.com/ticket/category/cs/today) to apply for scale-out.
+         * 单集群的节点配额。
          */
         public Builder nodeQuota(Long nodeQuota) {
             this.nodeQuota = nodeQuota;

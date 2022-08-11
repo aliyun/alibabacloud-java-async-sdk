@@ -15,32 +15,32 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
     @NameInMap("cluster_id")
     private String clusterId;
 
-    @NameInMap("task_id")
-    private String taskId;
-
     @NameInMap("created")
     private String created;
-
-    @NameInMap("updated")
-    private String updated;
 
     @NameInMap("state")
     private String state;
 
-    @NameInMap("task_type")
-    private String taskType;
+    @NameInMap("task_id")
+    private String taskId;
 
     @NameInMap("task_result")
     private java.util.List < TaskResult> taskResult;
 
+    @NameInMap("task_type")
+    private String taskType;
+
+    @NameInMap("updated")
+    private String updated;
+
     private DescribeTaskInfoResponseBody(Builder builder) {
         this.clusterId = builder.clusterId;
-        this.taskId = builder.taskId;
         this.created = builder.created;
-        this.updated = builder.updated;
         this.state = builder.state;
-        this.taskType = builder.taskType;
+        this.taskId = builder.taskId;
         this.taskResult = builder.taskResult;
+        this.taskType = builder.taskType;
+        this.updated = builder.updated;
     }
 
     public static Builder builder() {
@@ -59,24 +59,10 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
     }
 
     /**
-     * @return taskId
-     */
-    public String getTaskId() {
-        return this.taskId;
-    }
-
-    /**
      * @return created
      */
     public String getCreated() {
         return this.created;
-    }
-
-    /**
-     * @return updated
-     */
-    public String getUpdated() {
-        return this.updated;
     }
 
     /**
@@ -87,10 +73,10 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
     }
 
     /**
-     * @return taskType
+     * @return taskId
      */
-    public String getTaskType() {
-        return this.taskType;
+    public String getTaskId() {
+        return this.taskId;
     }
 
     /**
@@ -100,17 +86,31 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         return this.taskResult;
     }
 
+    /**
+     * @return taskType
+     */
+    public String getTaskType() {
+        return this.taskType;
+    }
+
+    /**
+     * @return updated
+     */
+    public String getUpdated() {
+        return this.updated;
+    }
+
     public static final class Builder {
         private String clusterId; 
-        private String taskId; 
         private String created; 
-        private String updated; 
         private String state; 
-        private String taskType; 
+        private String taskId; 
         private java.util.List < TaskResult> taskResult; 
+        private String taskType; 
+        private String updated; 
 
         /**
-         * The ID of the cluster.
+         * 集群ID。
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -118,15 +118,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the task.
-         */
-        public Builder taskId(String taskId) {
-            this.taskId = taskId;
-            return this;
-        }
-
-        /**
-         * The time when the task was created.
+         * 任务创建时间。
          */
         public Builder created(String created) {
             this.created = created;
@@ -134,20 +126,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the task was updated.
-         */
-        public Builder updated(String updated) {
-            this.updated = updated;
-            return this;
-        }
-
-        /**
-         * Indicates the running status of the task. Valid values:
-         * <p>
-         * -"running": The task is running.
-         * -"fail": the task failed to run.
-         * -"success": The task is completed.
-         * 
+         * 任务当前状态。
          */
         public Builder state(String state) {
             this.state = state;
@@ -155,7 +134,23 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the task. The type of the scale-out task is cluster_scaleout ".
+         * 任务ID。
+         */
+        public Builder taskId(String taskId) {
+            this.taskId = taskId;
+            return this;
+        }
+
+        /**
+         * 任务执行详情。
+         */
+        public Builder taskResult(java.util.List < TaskResult> taskResult) {
+            this.taskResult = taskResult;
+            return this;
+        }
+
+        /**
+         * 当前任务类型。
          */
         public Builder taskType(String taskType) {
             this.taskType = taskType;
@@ -163,10 +158,10 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The task execution details.
+         * 任务更新时间。
          */
-        public Builder taskResult(java.util.List < TaskResult> taskResult) {
-            this.taskResult = taskResult;
+        public Builder updated(String updated) {
+            this.updated = updated;
             return this;
         }
 
@@ -215,7 +210,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The resource used for task operations. For example, if the resource used for operations during scale-out is an instance, the instance ID is displayed here.
+             * 操作的资源，例如：实例ID。
              */
             public Builder data(String data) {
                 this.data = data;
@@ -223,11 +218,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the resource expansion. Valid values:
-             * <p>
-             * -"success": Scale-Out succeeded.
-             * -"failed": Scale-out failed.
-             * -"initial": initializing.
+             * 资源的状态。
              */
             public Builder status(String status) {
                 this.status = status;
