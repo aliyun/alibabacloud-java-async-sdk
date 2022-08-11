@@ -34,6 +34,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetFreeFlowUsageStatisticResponse> getFreeFlowUsageStatistic(GetFreeFlowUsageStatisticRequest request);
 
+    CompletableFuture<GetItemListResponse> getItemList(GetItemListRequest request);
+
     CompletableFuture<GetOrderFreeFlowProductStatusResponse> getOrderFreeFlowProductStatus(GetOrderFreeFlowProductStatusRequest request);
 
     CompletableFuture<GetQosFlowUsageResponse> getQosFlowUsage(GetQosFlowUsageRequest request);
@@ -55,6 +57,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<OrderQosProductResponse> orderQosProduct(OrderQosProductRequest request);
 
     CompletableFuture<SaveApplicationInfoResponse> saveApplicationInfo(SaveApplicationInfoRequest request);
+
+    CompletableFuture<SdkOrderQosProductResponse> sdkOrderQosProduct(SdkOrderQosProductRequest request);
 
     CompletableFuture<SdkValidateStatusResponse> sdkValidateStatus(SdkValidateStatusRequest request);
 
