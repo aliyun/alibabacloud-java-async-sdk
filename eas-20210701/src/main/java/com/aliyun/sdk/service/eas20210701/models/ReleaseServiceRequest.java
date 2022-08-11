@@ -23,14 +23,18 @@ public class ReleaseServiceRequest extends Request {
     private String serviceName;
 
     @Body
+    @NameInMap("TrafficState")
+    private String trafficState;
+
+    @Body
     @NameInMap("Weight")
-    @Validation(required = true)
     private Integer weight;
 
     private ReleaseServiceRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
         this.serviceName = builder.serviceName;
+        this.trafficState = builder.trafficState;
         this.weight = builder.weight;
     }
 
@@ -62,6 +66,13 @@ public class ReleaseServiceRequest extends Request {
     }
 
     /**
+     * @return trafficState
+     */
+    public String getTrafficState() {
+        return this.trafficState;
+    }
+
+    /**
      * @return weight
      */
     public Integer getWeight() {
@@ -71,6 +82,7 @@ public class ReleaseServiceRequest extends Request {
     public static final class Builder extends Request.Builder<ReleaseServiceRequest, Builder> {
         private String clusterId; 
         private String serviceName; 
+        private String trafficState; 
         private Integer weight; 
 
         private Builder() {
@@ -81,6 +93,7 @@ public class ReleaseServiceRequest extends Request {
             super(request);
             this.clusterId = request.clusterId;
             this.serviceName = request.serviceName;
+            this.trafficState = request.trafficState;
             this.weight = request.weight;
         } 
 
@@ -99,6 +112,15 @@ public class ReleaseServiceRequest extends Request {
         public Builder serviceName(String serviceName) {
             this.putPathParameter("ServiceName", serviceName);
             this.serviceName = serviceName;
+            return this;
+        }
+
+        /**
+         * TrafficState.
+         */
+        public Builder trafficState(String trafficState) {
+            this.putBodyParameter("TrafficState", trafficState);
+            this.trafficState = trafficState;
             return this;
         }
 

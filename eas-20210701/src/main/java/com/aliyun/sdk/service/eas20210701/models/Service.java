@@ -27,6 +27,9 @@ public class Service extends TeaModel {
     @NameInMap("CurrentVersion")
     private Integer currentVersion;
 
+    @NameInMap("ExtraData")
+    private String extraData;
+
     @NameInMap("Gpu")
     private Integer gpu;
 
@@ -69,11 +72,17 @@ public class Service extends TeaModel {
     @NameInMap("Resource")
     private String resource;
 
+    @NameInMap("ResourceAlias")
+    private String resourceAlias;
+
     @NameInMap("RunningInstance")
     private Integer runningInstance;
 
     @NameInMap("ServiceConfig")
     private String serviceConfig;
+
+    @NameInMap("ServiceGroup")
+    private String serviceGroup;
 
     @NameInMap("ServiceId")
     private String serviceId;
@@ -102,6 +111,7 @@ public class Service extends TeaModel {
         this.cpu = builder.cpu;
         this.createTime = builder.createTime;
         this.currentVersion = builder.currentVersion;
+        this.extraData = builder.extraData;
         this.gpu = builder.gpu;
         this.image = builder.image;
         this.internetEndpoint = builder.internetEndpoint;
@@ -116,8 +126,10 @@ public class Service extends TeaModel {
         this.region = builder.region;
         this.requestId = builder.requestId;
         this.resource = builder.resource;
+        this.resourceAlias = builder.resourceAlias;
         this.runningInstance = builder.runningInstance;
         this.serviceConfig = builder.serviceConfig;
+        this.serviceGroup = builder.serviceGroup;
         this.serviceId = builder.serviceId;
         this.serviceName = builder.serviceName;
         this.source = builder.source;
@@ -168,6 +180,13 @@ public class Service extends TeaModel {
      */
     public Integer getCurrentVersion() {
         return this.currentVersion;
+    }
+
+    /**
+     * @return extraData
+     */
+    public String getExtraData() {
+        return this.extraData;
     }
 
     /**
@@ -269,6 +288,13 @@ public class Service extends TeaModel {
     }
 
     /**
+     * @return resourceAlias
+     */
+    public String getResourceAlias() {
+        return this.resourceAlias;
+    }
+
+    /**
      * @return runningInstance
      */
     public Integer getRunningInstance() {
@@ -280,6 +306,13 @@ public class Service extends TeaModel {
      */
     public String getServiceConfig() {
         return this.serviceConfig;
+    }
+
+    /**
+     * @return serviceGroup
+     */
+    public String getServiceGroup() {
+        return this.serviceGroup;
     }
 
     /**
@@ -337,6 +370,7 @@ public class Service extends TeaModel {
         private Integer cpu; 
         private String createTime; 
         private Integer currentVersion; 
+        private String extraData; 
         private Integer gpu; 
         private String image; 
         private String internetEndpoint; 
@@ -351,8 +385,10 @@ public class Service extends TeaModel {
         private String region; 
         private String requestId; 
         private String resource; 
+        private String resourceAlias; 
         private Integer runningInstance; 
         private String serviceConfig; 
+        private String serviceGroup; 
         private String serviceId; 
         private String serviceName; 
         private String source; 
@@ -398,6 +434,14 @@ public class Service extends TeaModel {
          */
         public Builder currentVersion(Integer currentVersion) {
             this.currentVersion = currentVersion;
+            return this;
+        }
+
+        /**
+         * 服务的额外信息
+         */
+        public Builder extraData(String extraData) {
+            this.extraData = extraData;
             return this;
         }
 
@@ -514,6 +558,14 @@ public class Service extends TeaModel {
         }
 
         /**
+         * 服务所在的资源组别名
+         */
+        public Builder resourceAlias(String resourceAlias) {
+            this.resourceAlias = resourceAlias;
+            return this;
+        }
+
+        /**
          * 正在运行的服务的实例个数
          */
         public Builder runningInstance(Integer runningInstance) {
@@ -526,6 +578,14 @@ public class Service extends TeaModel {
          */
         public Builder serviceConfig(String serviceConfig) {
             this.serviceConfig = serviceConfig;
+            return this;
+        }
+
+        /**
+         * 服务所在分组
+         */
+        public Builder serviceGroup(String serviceGroup) {
+            this.serviceGroup = serviceGroup;
             return this;
         }
 
