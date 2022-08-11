@@ -18,6 +18,9 @@ public class Layer extends TeaModel {
     @NameInMap("arn")
     private String arn;
 
+    @NameInMap("arnV2")
+    private String arnV2;
+
     @NameInMap("code")
     private LayerCode code;
 
@@ -39,12 +42,16 @@ public class Layer extends TeaModel {
     @NameInMap("layerName")
     private String layerName;
 
+    @NameInMap("license")
+    private String license;
+
     @NameInMap("version")
     private Integer version;
 
     private Layer(Builder builder) {
         this.acl = builder.acl;
         this.arn = builder.arn;
+        this.arnV2 = builder.arnV2;
         this.code = builder.code;
         this.codeChecksum = builder.codeChecksum;
         this.codeSize = builder.codeSize;
@@ -52,6 +59,7 @@ public class Layer extends TeaModel {
         this.createTime = builder.createTime;
         this.description = builder.description;
         this.layerName = builder.layerName;
+        this.license = builder.license;
         this.version = builder.version;
     }
 
@@ -75,6 +83,13 @@ public class Layer extends TeaModel {
      */
     public String getArn() {
         return this.arn;
+    }
+
+    /**
+     * @return arnV2
+     */
+    public String getArnV2() {
+        return this.arnV2;
     }
 
     /**
@@ -127,6 +142,13 @@ public class Layer extends TeaModel {
     }
 
     /**
+     * @return license
+     */
+    public String getLicense() {
+        return this.license;
+    }
+
+    /**
      * @return version
      */
     public Integer getVersion() {
@@ -136,6 +158,7 @@ public class Layer extends TeaModel {
     public static final class Builder {
         private Integer acl; 
         private String arn; 
+        private String arnV2; 
         private LayerCode code; 
         private String codeChecksum; 
         private Long codeSize; 
@@ -143,6 +166,7 @@ public class Layer extends TeaModel {
         private String createTime; 
         private String description; 
         private String layerName; 
+        private String license; 
         private Integer version; 
 
         /**
@@ -158,6 +182,14 @@ public class Layer extends TeaModel {
          */
         public Builder arn(String arn) {
             this.arn = arn;
+            return this;
+        }
+
+        /**
+         * arnV2
+         */
+        public Builder arnV2(String arnV2) {
+            this.arnV2 = arnV2;
             return this;
         }
 
@@ -214,6 +246,14 @@ public class Layer extends TeaModel {
          */
         public Builder layerName(String layerName) {
             this.layerName = layerName;
+            return this;
+        }
+
+        /**
+         * 许可协议
+         */
+        public Builder license(String license) {
+            this.license = license;
             return this;
         }
 

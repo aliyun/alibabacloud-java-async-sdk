@@ -124,6 +124,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<PutFunctionOnDemandConfigResponse> putFunctionOnDemandConfig(PutFunctionOnDemandConfigRequest request);
 
+    CompletableFuture<PutLayerACLResponse> putLayerACL(PutLayerACLRequest request);
+
     CompletableFuture<PutProvisionConfigResponse> putProvisionConfig(PutProvisionConfigRequest request);
 
     CompletableFuture<RegisterEventSourceResponse> registerEventSource(RegisterEventSourceRequest request);

@@ -87,6 +87,12 @@ public class ListAliasesResponseBody extends TeaModel {
         @NameInMap("lastModifiedTime")
         private String lastModifiedTime;
 
+        @NameInMap("resolvePolicy")
+        private String resolvePolicy;
+
+        @NameInMap("routePolicy")
+        private RoutePolicy routePolicy;
+
         @NameInMap("versionId")
         private String versionId;
 
@@ -96,6 +102,8 @@ public class ListAliasesResponseBody extends TeaModel {
             this.createdTime = builder.createdTime;
             this.description = builder.description;
             this.lastModifiedTime = builder.lastModifiedTime;
+            this.resolvePolicy = builder.resolvePolicy;
+            this.routePolicy = builder.routePolicy;
             this.versionId = builder.versionId;
         }
 
@@ -143,6 +151,20 @@ public class ListAliasesResponseBody extends TeaModel {
         }
 
         /**
+         * @return resolvePolicy
+         */
+        public String getResolvePolicy() {
+            return this.resolvePolicy;
+        }
+
+        /**
+         * @return routePolicy
+         */
+        public RoutePolicy getRoutePolicy() {
+            return this.routePolicy;
+        }
+
+        /**
          * @return versionId
          */
         public String getVersionId() {
@@ -155,6 +177,8 @@ public class ListAliasesResponseBody extends TeaModel {
             private String createdTime; 
             private String description; 
             private String lastModifiedTime; 
+            private String resolvePolicy; 
+            private RoutePolicy routePolicy; 
             private String versionId; 
 
             /**
@@ -194,6 +218,26 @@ public class ListAliasesResponseBody extends TeaModel {
              */
             public Builder lastModifiedTime(String lastModifiedTime) {
                 this.lastModifiedTime = lastModifiedTime;
+                return this;
+            }
+
+            /**
+             * 灰度方式：随机灰度或者规则灰度，默认值为随机灰度
+             * <p>
+             * 枚举值：
+             * Random
+             * Content
+             */
+            public Builder resolvePolicy(String resolvePolicy) {
+                this.resolvePolicy = resolvePolicy;
+                return this;
+            }
+
+            /**
+             * 灰度规则：满足灰度规则条件的流量，会被路由至灰度实例
+             */
+            public Builder routePolicy(RoutePolicy routePolicy) {
+                this.routePolicy = routePolicy;
                 return this;
             }
 

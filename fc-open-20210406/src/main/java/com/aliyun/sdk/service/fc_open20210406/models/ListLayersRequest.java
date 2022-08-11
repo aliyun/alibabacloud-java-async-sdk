@@ -33,8 +33,16 @@ public class ListLayersRequest extends Request {
     private String nextToken;
 
     @Query
+    @NameInMap("official")
+    private Boolean official;
+
+    @Query
     @NameInMap("prefix")
     private String prefix;
+
+    @Query
+    @NameInMap("public")
+    private Boolean _public;
 
     @Query
     @NameInMap("startKey")
@@ -47,7 +55,9 @@ public class ListLayersRequest extends Request {
         this.xFcTraceId = builder.xFcTraceId;
         this.limit = builder.limit;
         this.nextToken = builder.nextToken;
+        this.official = builder.official;
         this.prefix = builder.prefix;
+        this._public = builder._public;
         this.startKey = builder.startKey;
     }
 
@@ -100,10 +110,24 @@ public class ListLayersRequest extends Request {
     }
 
     /**
+     * @return official
+     */
+    public Boolean getOfficial() {
+        return this.official;
+    }
+
+    /**
      * @return prefix
      */
     public String getPrefix() {
         return this.prefix;
+    }
+
+    /**
+     * @return _public
+     */
+    public Boolean get_public() {
+        return this._public;
     }
 
     /**
@@ -119,7 +143,9 @@ public class ListLayersRequest extends Request {
         private String xFcTraceId; 
         private Integer limit; 
         private String nextToken; 
+        private Boolean official; 
         private String prefix; 
+        private Boolean _public; 
         private String startKey; 
 
         private Builder() {
@@ -133,7 +159,9 @@ public class ListLayersRequest extends Request {
             this.xFcTraceId = request.xFcTraceId;
             this.limit = request.limit;
             this.nextToken = request.nextToken;
+            this.official = request.official;
             this.prefix = request.prefix;
+            this._public = request._public;
             this.startKey = request.startKey;
         } 
 
@@ -183,11 +211,29 @@ public class ListLayersRequest extends Request {
         }
 
         /**
+         * official.
+         */
+        public Builder official(Boolean official) {
+            this.putQueryParameter("official", official);
+            this.official = official;
+            return this;
+        }
+
+        /**
          * 层名称前缀
          */
         public Builder prefix(String prefix) {
             this.putQueryParameter("prefix", prefix);
             this.prefix = prefix;
+            return this;
+        }
+
+        /**
+         * public.
+         */
+        public Builder _public(Boolean _public) {
+            this.putQueryParameter("public", _public);
+            this._public = _public;
             return this;
         }
 

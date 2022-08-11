@@ -47,6 +47,14 @@ public class UpdateAliasRequest extends Request {
     private String description;
 
     @Body
+    @NameInMap("resolvePolicy")
+    private String resolvePolicy;
+
+    @Body
+    @NameInMap("routePolicy")
+    private RoutePolicy routePolicy;
+
+    @Body
     @NameInMap("versionId")
     private String versionId;
 
@@ -60,6 +68,8 @@ public class UpdateAliasRequest extends Request {
         this.xFcTraceId = builder.xFcTraceId;
         this.additionalVersionWeight = builder.additionalVersionWeight;
         this.description = builder.description;
+        this.resolvePolicy = builder.resolvePolicy;
+        this.routePolicy = builder.routePolicy;
         this.versionId = builder.versionId;
     }
 
@@ -133,6 +143,20 @@ public class UpdateAliasRequest extends Request {
     }
 
     /**
+     * @return resolvePolicy
+     */
+    public String getResolvePolicy() {
+        return this.resolvePolicy;
+    }
+
+    /**
+     * @return routePolicy
+     */
+    public RoutePolicy getRoutePolicy() {
+        return this.routePolicy;
+    }
+
+    /**
      * @return versionId
      */
     public String getVersionId() {
@@ -148,6 +172,8 @@ public class UpdateAliasRequest extends Request {
         private String xFcTraceId; 
         private java.util.Map < String, Float > additionalVersionWeight; 
         private String description; 
+        private String resolvePolicy; 
+        private RoutePolicy routePolicy; 
         private String versionId; 
 
         private Builder() {
@@ -164,6 +190,8 @@ public class UpdateAliasRequest extends Request {
             this.xFcTraceId = request.xFcTraceId;
             this.additionalVersionWeight = request.additionalVersionWeight;
             this.description = request.description;
+            this.resolvePolicy = request.resolvePolicy;
+            this.routePolicy = request.routePolicy;
             this.versionId = request.versionId;
         } 
 
@@ -236,6 +264,28 @@ public class UpdateAliasRequest extends Request {
         public Builder description(String description) {
             this.putBodyParameter("description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * 灰度方式：随机灰度或者规则灰度，默认值为随机灰度
+         * <p>
+         * 枚举值：
+         * Random
+         * Content
+         */
+        public Builder resolvePolicy(String resolvePolicy) {
+            this.putBodyParameter("resolvePolicy", resolvePolicy);
+            this.resolvePolicy = resolvePolicy;
+            return this;
+        }
+
+        /**
+         * 灰度规则：满足灰度规则条件的流量，会被路由至灰度实例
+         */
+        public Builder routePolicy(RoutePolicy routePolicy) {
+            this.putBodyParameter("routePolicy", routePolicy);
+            this.routePolicy = routePolicy;
             return this;
         }
 
