@@ -18,18 +18,12 @@ public class TrainExceedApplyQueryRequest extends Request {
     private Long applyId;
 
     @Query
-    @NameInMap("corp_id")
-    @Validation(required = true)
-    private String corpId;
-
-    @Query
     @NameInMap("user_id")
     private String userId;
 
     private TrainExceedApplyQueryRequest(Builder builder) {
         super(builder);
         this.applyId = builder.applyId;
-        this.corpId = builder.corpId;
         this.userId = builder.userId;
     }
 
@@ -54,13 +48,6 @@ public class TrainExceedApplyQueryRequest extends Request {
     }
 
     /**
-     * @return corpId
-     */
-    public String getCorpId() {
-        return this.corpId;
-    }
-
-    /**
      * @return userId
      */
     public String getUserId() {
@@ -69,7 +56,6 @@ public class TrainExceedApplyQueryRequest extends Request {
 
     public static final class Builder extends Request.Builder<TrainExceedApplyQueryRequest, Builder> {
         private Long applyId; 
-        private String corpId; 
         private String userId; 
 
         private Builder() {
@@ -79,7 +65,6 @@ public class TrainExceedApplyQueryRequest extends Request {
         private Builder(TrainExceedApplyQueryRequest request) {
             super(request);
             this.applyId = request.applyId;
-            this.corpId = request.corpId;
             this.userId = request.userId;
         } 
 
@@ -89,15 +74,6 @@ public class TrainExceedApplyQueryRequest extends Request {
         public Builder applyId(Long applyId) {
             this.putQueryParameter("apply_id", applyId);
             this.applyId = applyId;
-            return this;
-        }
-
-        /**
-         * corp_id.
-         */
-        public Builder corpId(String corpId) {
-            this.putQueryParameter("corp_id", corpId);
-            this.corpId = corpId;
             return this;
         }
 

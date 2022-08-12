@@ -18,11 +18,6 @@ public class ProjectAddRequest extends Request {
     private String code;
 
     @Body
-    @NameInMap("corp_id")
-    @Validation(required = true)
-    private String corpId;
-
-    @Body
     @NameInMap("project_name")
     @Validation(required = true)
     private String projectName;
@@ -43,7 +38,6 @@ public class ProjectAddRequest extends Request {
     private ProjectAddRequest(Builder builder) {
         super(builder);
         this.code = builder.code;
-        this.corpId = builder.corpId;
         this.projectName = builder.projectName;
         this.thirdPartCostCenterId = builder.thirdPartCostCenterId;
         this.thirdPartId = builder.thirdPartId;
@@ -68,13 +62,6 @@ public class ProjectAddRequest extends Request {
      */
     public String getCode() {
         return this.code;
-    }
-
-    /**
-     * @return corpId
-     */
-    public String getCorpId() {
-        return this.corpId;
     }
 
     /**
@@ -107,7 +94,6 @@ public class ProjectAddRequest extends Request {
 
     public static final class Builder extends Request.Builder<ProjectAddRequest, Builder> {
         private String code; 
-        private String corpId; 
         private String projectName; 
         private String thirdPartCostCenterId; 
         private String thirdPartId; 
@@ -120,7 +106,6 @@ public class ProjectAddRequest extends Request {
         private Builder(ProjectAddRequest request) {
             super(request);
             this.code = request.code;
-            this.corpId = request.corpId;
             this.projectName = request.projectName;
             this.thirdPartCostCenterId = request.thirdPartCostCenterId;
             this.thirdPartId = request.thirdPartId;
@@ -133,15 +118,6 @@ public class ProjectAddRequest extends Request {
         public Builder code(String code) {
             this.putBodyParameter("code", code);
             this.code = code;
-            return this;
-        }
-
-        /**
-         * corp_id.
-         */
-        public Builder corpId(String corpId) {
-            this.putBodyParameter("corp_id", corpId);
-            this.corpId = corpId;
             return this;
         }
 

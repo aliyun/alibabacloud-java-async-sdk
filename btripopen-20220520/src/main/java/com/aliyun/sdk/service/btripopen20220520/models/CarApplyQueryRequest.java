@@ -13,11 +13,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CarApplyQueryRequest extends Request {
     @Query
-    @NameInMap("corp_id")
-    @Validation(required = true)
-    private String corpId;
-
-    @Query
     @NameInMap("created_end_at")
     private String createdEndAt;
 
@@ -43,7 +38,6 @@ public class CarApplyQueryRequest extends Request {
 
     private CarApplyQueryRequest(Builder builder) {
         super(builder);
-        this.corpId = builder.corpId;
         this.createdEndAt = builder.createdEndAt;
         this.createdStartAt = builder.createdStartAt;
         this.pageNumber = builder.pageNumber;
@@ -63,13 +57,6 @@ public class CarApplyQueryRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return corpId
-     */
-    public String getCorpId() {
-        return this.corpId;
     }
 
     /**
@@ -115,7 +102,6 @@ public class CarApplyQueryRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CarApplyQueryRequest, Builder> {
-        private String corpId; 
         private String createdEndAt; 
         private String createdStartAt; 
         private Integer pageNumber; 
@@ -129,7 +115,6 @@ public class CarApplyQueryRequest extends Request {
 
         private Builder(CarApplyQueryRequest request) {
             super(request);
-            this.corpId = request.corpId;
             this.createdEndAt = request.createdEndAt;
             this.createdStartAt = request.createdStartAt;
             this.pageNumber = request.pageNumber;
@@ -137,15 +122,6 @@ public class CarApplyQueryRequest extends Request {
             this.thirdPartApplyId = request.thirdPartApplyId;
             this.userId = request.userId;
         } 
-
-        /**
-         * corp_id.
-         */
-        public Builder corpId(String corpId) {
-            this.putQueryParameter("corp_id", corpId);
-            this.corpId = corpId;
-            return this;
-        }
 
         /**
          * created_end_at.

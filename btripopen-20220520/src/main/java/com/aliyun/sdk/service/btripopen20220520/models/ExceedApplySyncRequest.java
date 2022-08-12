@@ -22,11 +22,6 @@ public class ExceedApplySyncRequest extends Request {
     private Integer bizCategory;
 
     @Query
-    @NameInMap("corp_id")
-    @Validation(required = true)
-    private String corpId;
-
-    @Query
     @NameInMap("remark")
     private String remark;
 
@@ -48,7 +43,6 @@ public class ExceedApplySyncRequest extends Request {
         super(builder);
         this.applyId = builder.applyId;
         this.bizCategory = builder.bizCategory;
-        this.corpId = builder.corpId;
         this.remark = builder.remark;
         this.status = builder.status;
         this.thirdpartyFlowId = builder.thirdpartyFlowId;
@@ -83,13 +77,6 @@ public class ExceedApplySyncRequest extends Request {
     }
 
     /**
-     * @return corpId
-     */
-    public String getCorpId() {
-        return this.corpId;
-    }
-
-    /**
      * @return remark
      */
     public String getRemark() {
@@ -120,7 +107,6 @@ public class ExceedApplySyncRequest extends Request {
     public static final class Builder extends Request.Builder<ExceedApplySyncRequest, Builder> {
         private Long applyId; 
         private Integer bizCategory; 
-        private String corpId; 
         private String remark; 
         private Integer status; 
         private String thirdpartyFlowId; 
@@ -134,7 +120,6 @@ public class ExceedApplySyncRequest extends Request {
             super(request);
             this.applyId = request.applyId;
             this.bizCategory = request.bizCategory;
-            this.corpId = request.corpId;
             this.remark = request.remark;
             this.status = request.status;
             this.thirdpartyFlowId = request.thirdpartyFlowId;
@@ -156,15 +141,6 @@ public class ExceedApplySyncRequest extends Request {
         public Builder bizCategory(Integer bizCategory) {
             this.putQueryParameter("biz_category", bizCategory);
             this.bizCategory = bizCategory;
-            return this;
-        }
-
-        /**
-         * corp_id.
-         */
-        public Builder corpId(String corpId) {
-            this.putQueryParameter("corp_id", corpId);
-            this.corpId = corpId;
             return this;
         }
 

@@ -17,15 +17,9 @@ public class FlightExceedApplyQueryRequest extends Request {
     @Validation(required = true)
     private Long applyId;
 
-    @Query
-    @NameInMap("corp_id")
-    @Validation(required = true)
-    private String corpId;
-
     private FlightExceedApplyQueryRequest(Builder builder) {
         super(builder);
         this.applyId = builder.applyId;
-        this.corpId = builder.corpId;
     }
 
     public static Builder builder() {
@@ -48,16 +42,8 @@ public class FlightExceedApplyQueryRequest extends Request {
         return this.applyId;
     }
 
-    /**
-     * @return corpId
-     */
-    public String getCorpId() {
-        return this.corpId;
-    }
-
     public static final class Builder extends Request.Builder<FlightExceedApplyQueryRequest, Builder> {
         private Long applyId; 
-        private String corpId; 
 
         private Builder() {
             super();
@@ -66,7 +52,6 @@ public class FlightExceedApplyQueryRequest extends Request {
         private Builder(FlightExceedApplyQueryRequest request) {
             super(request);
             this.applyId = request.applyId;
-            this.corpId = request.corpId;
         } 
 
         /**
@@ -75,15 +60,6 @@ public class FlightExceedApplyQueryRequest extends Request {
         public Builder applyId(Long applyId) {
             this.putQueryParameter("apply_id", applyId);
             this.applyId = applyId;
-            return this;
-        }
-
-        /**
-         * corp_id.
-         */
-        public Builder corpId(String corpId) {
-            this.putQueryParameter("corp_id", corpId);
-            this.corpId = corpId;
             return this;
         }
 

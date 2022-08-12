@@ -12,11 +12,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CostCenterQueryRequest</p>
  */
 public class CostCenterQueryRequest extends Request {
-    @Query
-    @NameInMap("corp_id")
-    @Validation(required = true)
-    private String corpId;
-
     @Body
     @NameInMap("need_org_entity")
     private Boolean needOrgEntity;
@@ -35,7 +30,6 @@ public class CostCenterQueryRequest extends Request {
 
     private CostCenterQueryRequest(Builder builder) {
         super(builder);
-        this.corpId = builder.corpId;
         this.needOrgEntity = builder.needOrgEntity;
         this.thirdpartId = builder.thirdpartId;
         this.title = builder.title;
@@ -53,13 +47,6 @@ public class CostCenterQueryRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return corpId
-     */
-    public String getCorpId() {
-        return this.corpId;
     }
 
     /**
@@ -91,7 +78,6 @@ public class CostCenterQueryRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CostCenterQueryRequest, Builder> {
-        private String corpId; 
         private Boolean needOrgEntity; 
         private String thirdpartId; 
         private String title; 
@@ -103,21 +89,11 @@ public class CostCenterQueryRequest extends Request {
 
         private Builder(CostCenterQueryRequest request) {
             super(request);
-            this.corpId = request.corpId;
             this.needOrgEntity = request.needOrgEntity;
             this.thirdpartId = request.thirdpartId;
             this.title = request.title;
             this.userId = request.userId;
         } 
-
-        /**
-         * corp_id.
-         */
-        public Builder corpId(String corpId) {
-            this.putQueryParameter("corp_id", corpId);
-            this.corpId = corpId;
-            return this;
-        }
 
         /**
          * 是否需要展示成员信息，当成本中心为部分人员适用的时候有返回

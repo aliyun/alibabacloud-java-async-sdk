@@ -23,11 +23,6 @@ public class CommonApplyQueryRequest extends Request {
     private Integer bizCategory;
 
     @Query
-    @NameInMap("corp_id")
-    @Validation(required = true)
-    private String corpId;
-
-    @Query
     @NameInMap("user_id")
     private String userId;
 
@@ -35,7 +30,6 @@ public class CommonApplyQueryRequest extends Request {
         super(builder);
         this.applyId = builder.applyId;
         this.bizCategory = builder.bizCategory;
-        this.corpId = builder.corpId;
         this.userId = builder.userId;
     }
 
@@ -67,13 +61,6 @@ public class CommonApplyQueryRequest extends Request {
     }
 
     /**
-     * @return corpId
-     */
-    public String getCorpId() {
-        return this.corpId;
-    }
-
-    /**
      * @return userId
      */
     public String getUserId() {
@@ -83,7 +70,6 @@ public class CommonApplyQueryRequest extends Request {
     public static final class Builder extends Request.Builder<CommonApplyQueryRequest, Builder> {
         private Long applyId; 
         private Integer bizCategory; 
-        private String corpId; 
         private String userId; 
 
         private Builder() {
@@ -94,7 +80,6 @@ public class CommonApplyQueryRequest extends Request {
             super(request);
             this.applyId = request.applyId;
             this.bizCategory = request.bizCategory;
-            this.corpId = request.corpId;
             this.userId = request.userId;
         } 
 
@@ -113,15 +98,6 @@ public class CommonApplyQueryRequest extends Request {
         public Builder bizCategory(Integer bizCategory) {
             this.putQueryParameter("biz_category", bizCategory);
             this.bizCategory = bizCategory;
-            return this;
-        }
-
-        /**
-         * corp_id.
-         */
-        public Builder corpId(String corpId) {
-            this.putQueryParameter("corp_id", corpId);
-            this.corpId = corpId;
             return this;
         }
 

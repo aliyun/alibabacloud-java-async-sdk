@@ -17,18 +17,12 @@ public class UserQueryRequest extends Request {
     private String modifiedTimeGreaterOrEqualThan;
 
     @Query
-    @NameInMap("third_part_corp_id")
-    @Validation(required = true)
-    private String thirdPartCorpId;
-
-    @Query
     @NameInMap("third_part_job_no")
     private String thirdPartJobNo;
 
     private UserQueryRequest(Builder builder) {
         super(builder);
         this.modifiedTimeGreaterOrEqualThan = builder.modifiedTimeGreaterOrEqualThan;
-        this.thirdPartCorpId = builder.thirdPartCorpId;
         this.thirdPartJobNo = builder.thirdPartJobNo;
     }
 
@@ -53,13 +47,6 @@ public class UserQueryRequest extends Request {
     }
 
     /**
-     * @return thirdPartCorpId
-     */
-    public String getThirdPartCorpId() {
-        return this.thirdPartCorpId;
-    }
-
-    /**
      * @return thirdPartJobNo
      */
     public String getThirdPartJobNo() {
@@ -68,7 +55,6 @@ public class UserQueryRequest extends Request {
 
     public static final class Builder extends Request.Builder<UserQueryRequest, Builder> {
         private String modifiedTimeGreaterOrEqualThan; 
-        private String thirdPartCorpId; 
         private String thirdPartJobNo; 
 
         private Builder() {
@@ -78,7 +64,6 @@ public class UserQueryRequest extends Request {
         private Builder(UserQueryRequest request) {
             super(request);
             this.modifiedTimeGreaterOrEqualThan = request.modifiedTimeGreaterOrEqualThan;
-            this.thirdPartCorpId = request.thirdPartCorpId;
             this.thirdPartJobNo = request.thirdPartJobNo;
         } 
 
@@ -88,15 +73,6 @@ public class UserQueryRequest extends Request {
         public Builder modifiedTimeGreaterOrEqualThan(String modifiedTimeGreaterOrEqualThan) {
             this.putQueryParameter("modified_time_greater_or_equal_than", modifiedTimeGreaterOrEqualThan);
             this.modifiedTimeGreaterOrEqualThan = modifiedTimeGreaterOrEqualThan;
-            return this;
-        }
-
-        /**
-         * 第三方企业ID，isv_api_authority.corp_id
-         */
-        public Builder thirdPartCorpId(String thirdPartCorpId) {
-            this.putQueryParameter("third_part_corp_id", thirdPartCorpId);
-            this.thirdPartCorpId = thirdPartCorpId;
             return this;
         }
 
