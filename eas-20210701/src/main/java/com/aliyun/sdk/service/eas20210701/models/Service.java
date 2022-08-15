@@ -90,6 +90,9 @@ public class Service extends TeaModel {
     @NameInMap("ServiceName")
     private String serviceName;
 
+    @NameInMap("ServiceUid")
+    private String serviceUid;
+
     @NameInMap("Source")
     private String source;
 
@@ -132,6 +135,7 @@ public class Service extends TeaModel {
         this.serviceGroup = builder.serviceGroup;
         this.serviceId = builder.serviceId;
         this.serviceName = builder.serviceName;
+        this.serviceUid = builder.serviceUid;
         this.source = builder.source;
         this.status = builder.status;
         this.totalInstance = builder.totalInstance;
@@ -330,6 +334,13 @@ public class Service extends TeaModel {
     }
 
     /**
+     * @return serviceUid
+     */
+    public String getServiceUid() {
+        return this.serviceUid;
+    }
+
+    /**
      * @return source
      */
     public String getSource() {
@@ -391,6 +402,7 @@ public class Service extends TeaModel {
         private String serviceGroup; 
         private String serviceId; 
         private String serviceName; 
+        private String serviceUid; 
         private String source; 
         private String status; 
         private Integer totalInstance; 
@@ -602,6 +614,14 @@ public class Service extends TeaModel {
          */
         public Builder serviceName(String serviceName) {
             this.serviceName = serviceName;
+            return this;
+        }
+
+        /**
+         * 服务ID，同ServiceId
+         */
+        public Builder serviceUid(String serviceUid) {
+            this.serviceUid = serviceUid;
             return this;
         }
 
