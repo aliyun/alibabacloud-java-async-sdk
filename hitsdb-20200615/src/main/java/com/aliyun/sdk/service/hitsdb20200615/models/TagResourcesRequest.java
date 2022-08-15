@@ -21,7 +21,7 @@ public class TagResourcesRequest extends Request {
     @Validation(minimum = 1)
     private Long ownerId;
 
-    @Host
+    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
@@ -193,7 +193,7 @@ public class TagResourcesRequest extends Request {
          * RegionId.
          */
         public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
+            this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
             return this;
         }
@@ -261,6 +261,7 @@ public class TagResourcesRequest extends Request {
 
     public static class Tag extends TeaModel {
         @NameInMap("Key")
+        @Validation(required = true)
         private String key;
 
         @NameInMap("Value")

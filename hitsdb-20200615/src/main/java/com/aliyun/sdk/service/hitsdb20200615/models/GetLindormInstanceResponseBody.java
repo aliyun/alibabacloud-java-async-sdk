@@ -99,6 +99,9 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     @NameInMap("ServiceType")
     private String serviceType;
 
@@ -141,6 +144,7 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         this.payType = builder.payType;
         this.regionId = builder.regionId;
         this.requestId = builder.requestId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.serviceType = builder.serviceType;
         this.vpcId = builder.vpcId;
         this.vswitchId = builder.vswitchId;
@@ -359,6 +363,13 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return serviceType
      */
     public String getServiceType() {
@@ -416,6 +427,7 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         private String payType; 
         private String regionId; 
         private String requestId; 
+        private String resourceGroupId; 
         private String serviceType; 
         private String vpcId; 
         private String vswitchId; 
@@ -650,6 +662,14 @@ public class GetLindormInstanceResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

@@ -202,6 +202,9 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         private String createTime;
 
+        @NameInMap("EnableCompute")
+        private Boolean enableCompute;
+
         @NameInMap("EnableStream")
         private Boolean enableStream;
 
@@ -235,6 +238,9 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
         @NameInMap("RegionId")
         private String regionId;
 
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @NameInMap("ServiceType")
         private String serviceType;
 
@@ -251,6 +257,7 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             this.aliUid = builder.aliUid;
             this.createMilliseconds = builder.createMilliseconds;
             this.createTime = builder.createTime;
+            this.enableCompute = builder.enableCompute;
             this.enableStream = builder.enableStream;
             this.engineType = builder.engineType;
             this.expireTime = builder.expireTime;
@@ -262,6 +269,7 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             this.networkType = builder.networkType;
             this.payType = builder.payType;
             this.regionId = builder.regionId;
+            this.resourceGroupId = builder.resourceGroupId;
             this.serviceType = builder.serviceType;
             this.tags = builder.tags;
             this.vpcId = builder.vpcId;
@@ -295,6 +303,13 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
          */
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return enableCompute
+         */
+        public Boolean getEnableCompute() {
+            return this.enableCompute;
         }
 
         /**
@@ -375,6 +390,13 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return serviceType
          */
         public String getServiceType() {
@@ -406,6 +428,7 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             private Long aliUid; 
             private Long createMilliseconds; 
             private String createTime; 
+            private Boolean enableCompute; 
             private Boolean enableStream; 
             private String engineType; 
             private String expireTime; 
@@ -417,6 +440,7 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             private String networkType; 
             private String payType; 
             private String regionId; 
+            private String resourceGroupId; 
             private String serviceType; 
             private java.util.List < Tags> tags; 
             private String vpcId; 
@@ -443,6 +467,14 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * EnableCompute.
+             */
+            public Builder enableCompute(Boolean enableCompute) {
+                this.enableCompute = enableCompute;
                 return this;
             }
 
@@ -531,6 +563,14 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 

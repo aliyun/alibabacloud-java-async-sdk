@@ -26,7 +26,7 @@ public class GetLindormInstanceRequest extends Request {
     @Validation(minimum = 1)
     private Long ownerId;
 
-    @Query
+    @Host
     @NameInMap("RegionId")
     private String regionId;
 
@@ -171,7 +171,7 @@ public class GetLindormInstanceRequest extends Request {
          * RegionId.
          */
         public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
+            this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
             return this;
         }
