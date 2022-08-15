@@ -267,7 +267,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<CostCenterQueryResponse> costCenterQuery(CostCenterQueryRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CostCenterQuery").setMethod(HttpMethod.GET).setPathRegex("/costcenter/v1/costcenter").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CostCenterQuery").setMethod(HttpMethod.GET).setPathRegex("/costcenter/v1/costcenter").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CostCenterQueryResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {

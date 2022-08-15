@@ -12,19 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CostCenterQueryRequest</p>
  */
 public class CostCenterQueryRequest extends Request {
-    @Body
+    @Query
     @NameInMap("need_org_entity")
     private Boolean needOrgEntity;
 
-    @Body
+    @Query
     @NameInMap("thirdpart_id")
     private String thirdpartId;
 
-    @Body
+    @Query
     @NameInMap("title")
     private String title;
 
-    @Body
+    @Query
     @NameInMap("user_id")
     private String userId;
 
@@ -99,7 +99,7 @@ public class CostCenterQueryRequest extends Request {
          * 是否需要展示成员信息，当成本中心为部分人员适用的时候有返回
          */
         public Builder needOrgEntity(Boolean needOrgEntity) {
-            this.putBodyParameter("need_org_entity", needOrgEntity);
+            this.putQueryParameter("need_org_entity", needOrgEntity);
             this.needOrgEntity = needOrgEntity;
             return this;
         }
@@ -108,7 +108,7 @@ public class CostCenterQueryRequest extends Request {
          * 第三方成本中心id
          */
         public Builder thirdpartId(String thirdpartId) {
-            this.putBodyParameter("thirdpart_id", thirdpartId);
+            this.putQueryParameter("thirdpart_id", thirdpartId);
             this.thirdpartId = thirdpartId;
             return this;
         }
@@ -117,7 +117,7 @@ public class CostCenterQueryRequest extends Request {
          * 成本中心名称
          */
         public Builder title(String title) {
-            this.putBodyParameter("title", title);
+            this.putQueryParameter("title", title);
             this.title = title;
             return this;
         }
@@ -126,7 +126,7 @@ public class CostCenterQueryRequest extends Request {
          * 无userId时传缺省值superAdmin
          */
         public Builder userId(String userId) {
-            this.putBodyParameter("user_id", userId);
+            this.putQueryParameter("user_id", userId);
             this.userId = userId;
             return this;
         }
