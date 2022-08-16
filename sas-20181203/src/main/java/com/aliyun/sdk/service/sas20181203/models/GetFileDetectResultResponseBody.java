@@ -72,6 +72,12 @@ public class GetFileDetectResultResponseBody extends TeaModel {
     } 
 
     public static class ResultList extends TeaModel {
+        @NameInMap("ErrorCode")
+        private String errorCode;
+
+        @NameInMap("ErrorMessage")
+        private String errorMessage;
+
         @NameInMap("Ext")
         private String ext;
 
@@ -88,6 +94,8 @@ public class GetFileDetectResultResponseBody extends TeaModel {
         private String virusType;
 
         private ResultList(Builder builder) {
+            this.errorCode = builder.errorCode;
+            this.errorMessage = builder.errorMessage;
             this.ext = builder.ext;
             this.hashKey = builder.hashKey;
             this.result = builder.result;
@@ -101,6 +109,20 @@ public class GetFileDetectResultResponseBody extends TeaModel {
 
         public static ResultList create() {
             return builder().build();
+        }
+
+        /**
+         * @return errorCode
+         */
+        public String getErrorCode() {
+            return this.errorCode;
+        }
+
+        /**
+         * @return errorMessage
+         */
+        public String getErrorMessage() {
+            return this.errorMessage;
         }
 
         /**
@@ -139,11 +161,29 @@ public class GetFileDetectResultResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String errorCode; 
+            private String errorMessage; 
             private String ext; 
             private String hashKey; 
             private Integer result; 
             private Integer score; 
             private String virusType; 
+
+            /**
+             * ErrorCode.
+             */
+            public Builder errorCode(String errorCode) {
+                this.errorCode = errorCode;
+                return this;
+            }
+
+            /**
+             * ErrorMessage.
+             */
+            public Builder errorMessage(String errorMessage) {
+                this.errorMessage = errorMessage;
+                return this;
+            }
 
             /**
              * Ext.

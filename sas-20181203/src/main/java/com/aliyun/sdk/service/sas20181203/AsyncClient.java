@@ -34,6 +34,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateFileDetectUploadUrlResponse> createFileDetectUploadUrl(CreateFileDetectUploadUrlRequest request);
 
+    CompletableFuture<CreateHoneypotResponse> createHoneypot(CreateHoneypotRequest request);
+
+    CompletableFuture<CreateHoneypotNodeResponse> createHoneypotNode(CreateHoneypotNodeRequest request);
+
+    CompletableFuture<CreateHoneypotProbeResponse> createHoneypotProbe(CreateHoneypotProbeRequest request);
+
     CompletableFuture<CreateOrUpdateAssetGroupResponse> createOrUpdateAssetGroup(CreateOrUpdateAssetGroupRequest request);
 
     CompletableFuture<CreateServiceLinkedRoleResponse> createServiceLinkedRole(CreateServiceLinkedRoleRequest request);
@@ -304,6 +310,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeWebLockConfigListResponse> describeWebLockConfigList(DescribeWebLockConfigListRequest request);
 
+    CompletableFuture<DescribeWebLockFileEventsResponse> describeWebLockFileEvents(DescribeWebLockFileEventsRequest request);
+
     CompletableFuture<ExportRecordResponse> exportRecord(ExportRecordRequest request);
 
     CompletableFuture<ExportVulResponse> exportVul(ExportVulRequest request);
@@ -335,6 +343,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListCheckInstanceResultResponse> listCheckInstanceResult(ListCheckInstanceResultRequest request);
 
     CompletableFuture<ListCheckResultResponse> listCheckResult(ListCheckResultRequest request);
+
+    CompletableFuture<ListHoneypotResponse> listHoneypot(ListHoneypotRequest request);
+
+    CompletableFuture<ListHoneypotAlarmEventsResponse> listHoneypotAlarmEvents(ListHoneypotAlarmEventsRequest request);
+
+    CompletableFuture<ListHoneypotNodeResponse> listHoneypotNode(ListHoneypotNodeRequest request);
 
     CompletableFuture<ListVulAutoRepairConfigResponse> listVulAutoRepairConfig(ListVulAutoRepairConfigRequest request);
 

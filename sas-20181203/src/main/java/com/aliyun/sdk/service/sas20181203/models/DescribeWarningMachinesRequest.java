@@ -29,6 +29,10 @@ public class DescribeWarningMachinesRequest extends Request {
     private Integer currentPage;
 
     @Query
+    @NameInMap("HaveRisk")
+    private Integer haveRisk;
+
+    @Query
     @NameInMap("Lang")
     private String lang;
 
@@ -67,6 +71,7 @@ public class DescribeWarningMachinesRequest extends Request {
         this.containerFieldName = builder.containerFieldName;
         this.containerFieldValue = builder.containerFieldValue;
         this.currentPage = builder.currentPage;
+        this.haveRisk = builder.haveRisk;
         this.lang = builder.lang;
         this.machineName = builder.machineName;
         this.pageSize = builder.pageSize;
@@ -116,6 +121,13 @@ public class DescribeWarningMachinesRequest extends Request {
      */
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    /**
+     * @return haveRisk
+     */
+    public Integer getHaveRisk() {
+        return this.haveRisk;
     }
 
     /**
@@ -179,6 +191,7 @@ public class DescribeWarningMachinesRequest extends Request {
         private String containerFieldName; 
         private String containerFieldValue; 
         private Integer currentPage; 
+        private Integer haveRisk; 
         private String lang; 
         private String machineName; 
         private Integer pageSize; 
@@ -198,6 +211,7 @@ public class DescribeWarningMachinesRequest extends Request {
             this.containerFieldName = request.containerFieldName;
             this.containerFieldValue = request.containerFieldValue;
             this.currentPage = request.currentPage;
+            this.haveRisk = request.haveRisk;
             this.lang = request.lang;
             this.machineName = request.machineName;
             this.pageSize = request.pageSize;
@@ -241,6 +255,15 @@ public class DescribeWarningMachinesRequest extends Request {
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
             this.currentPage = currentPage;
+            return this;
+        }
+
+        /**
+         * HaveRisk.
+         */
+        public Builder haveRisk(Integer haveRisk) {
+            this.putQueryParameter("HaveRisk", haveRisk);
+            this.haveRisk = haveRisk;
             return this;
         }
 

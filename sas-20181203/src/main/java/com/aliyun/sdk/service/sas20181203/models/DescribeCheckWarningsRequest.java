@@ -38,6 +38,10 @@ public class DescribeCheckWarningsRequest extends Request {
     private Long riskId;
 
     @Query
+    @NameInMap("RiskStatus")
+    private Integer riskStatus;
+
+    @Query
     @NameInMap("SourceIp")
     private String sourceIp;
 
@@ -54,6 +58,7 @@ public class DescribeCheckWarningsRequest extends Request {
         this.lang = builder.lang;
         this.pageSize = builder.pageSize;
         this.riskId = builder.riskId;
+        this.riskStatus = builder.riskStatus;
         this.sourceIp = builder.sourceIp;
         this.uuid = builder.uuid;
     }
@@ -114,6 +119,13 @@ public class DescribeCheckWarningsRequest extends Request {
     }
 
     /**
+     * @return riskStatus
+     */
+    public Integer getRiskStatus() {
+        return this.riskStatus;
+    }
+
+    /**
      * @return sourceIp
      */
     public String getSourceIp() {
@@ -134,6 +146,7 @@ public class DescribeCheckWarningsRequest extends Request {
         private String lang; 
         private Integer pageSize; 
         private Long riskId; 
+        private Integer riskStatus; 
         private String sourceIp; 
         private String uuid; 
 
@@ -149,6 +162,7 @@ public class DescribeCheckWarningsRequest extends Request {
             this.lang = request.lang;
             this.pageSize = request.pageSize;
             this.riskId = request.riskId;
+            this.riskStatus = request.riskStatus;
             this.sourceIp = request.sourceIp;
             this.uuid = request.uuid;
         } 
@@ -204,6 +218,15 @@ public class DescribeCheckWarningsRequest extends Request {
         public Builder riskId(Long riskId) {
             this.putQueryParameter("RiskId", riskId);
             this.riskId = riskId;
+            return this;
+        }
+
+        /**
+         * RiskStatus.
+         */
+        public Builder riskStatus(Integer riskStatus) {
+            this.putQueryParameter("RiskStatus", riskStatus);
+            this.riskStatus = riskStatus;
             return this;
         }
 
