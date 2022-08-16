@@ -7,15 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetInstanceLogRequest} extends {@link RequestModel}
+ * {@link ListInstanceHistoryRequest} extends {@link RequestModel}
  *
- * <p>GetInstanceLogRequest</p>
+ * <p>ListInstanceHistoryRequest</p>
  */
-public class GetInstanceLogRequest extends Request {
-    @Body
-    @NameInMap("InstanceHistoryId")
-    private Long instanceHistoryId;
-
+public class ListInstanceHistoryRequest extends Request {
     @Body
     @NameInMap("InstanceId")
     @Validation(required = true)
@@ -23,7 +19,6 @@ public class GetInstanceLogRequest extends Request {
 
     @Body
     @NameInMap("ProjectEnv")
-    @Validation(required = true)
     private String projectEnv;
 
     @Host
@@ -31,9 +26,8 @@ public class GetInstanceLogRequest extends Request {
     @Validation(required = true)
     private String regionId;
 
-    private GetInstanceLogRequest(Builder builder) {
+    private ListInstanceHistoryRequest(Builder builder) {
         super(builder);
-        this.instanceHistoryId = builder.instanceHistoryId;
         this.instanceId = builder.instanceId;
         this.projectEnv = builder.projectEnv;
         this.regionId = builder.regionId;
@@ -43,20 +37,13 @@ public class GetInstanceLogRequest extends Request {
         return new Builder();
     }
 
-    public static GetInstanceLogRequest create() {
+    public static ListInstanceHistoryRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return instanceHistoryId
-     */
-    public Long getInstanceHistoryId() {
-        return this.instanceHistoryId;
     }
 
     /**
@@ -80,8 +67,7 @@ public class GetInstanceLogRequest extends Request {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder<GetInstanceLogRequest, Builder> {
-        private Long instanceHistoryId; 
+    public static final class Builder extends Request.Builder<ListInstanceHistoryRequest, Builder> {
         private Long instanceId; 
         private String projectEnv; 
         private String regionId; 
@@ -90,22 +76,12 @@ public class GetInstanceLogRequest extends Request {
             super();
         } 
 
-        private Builder(GetInstanceLogRequest request) {
+        private Builder(ListInstanceHistoryRequest request) {
             super(request);
-            this.instanceHistoryId = request.instanceHistoryId;
             this.instanceId = request.instanceId;
             this.projectEnv = request.projectEnv;
             this.regionId = request.regionId;
         } 
-
-        /**
-         * InstanceHistoryId.
-         */
-        public Builder instanceHistoryId(Long instanceHistoryId) {
-            this.putBodyParameter("InstanceHistoryId", instanceHistoryId);
-            this.instanceHistoryId = instanceHistoryId;
-            return this;
-        }
 
         /**
          * InstanceId.
@@ -135,8 +111,8 @@ public class GetInstanceLogRequest extends Request {
         }
 
         @Override
-        public GetInstanceLogRequest build() {
-            return new GetInstanceLogRequest(this);
+        public ListInstanceHistoryRequest build() {
+            return new ListInstanceHistoryRequest(this);
         } 
 
     } 

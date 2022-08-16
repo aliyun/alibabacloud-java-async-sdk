@@ -68,6 +68,10 @@ public class RunCycleDagNodesRequest extends Request {
     @Validation(required = true)
     private String startBizDate;
 
+    @Body
+    @NameInMap("StartFutureInstanceImmediately")
+    private Boolean startFutureInstanceImmediately;
+
     private RunCycleDagNodesRequest(Builder builder) {
         super(builder);
         this.bizBeginTime = builder.bizBeginTime;
@@ -82,6 +86,7 @@ public class RunCycleDagNodesRequest extends Request {
         this.regionId = builder.regionId;
         this.rootNodeId = builder.rootNodeId;
         this.startBizDate = builder.startBizDate;
+        this.startFutureInstanceImmediately = builder.startFutureInstanceImmediately;
     }
 
     public static Builder builder() {
@@ -181,6 +186,13 @@ public class RunCycleDagNodesRequest extends Request {
         return this.startBizDate;
     }
 
+    /**
+     * @return startFutureInstanceImmediately
+     */
+    public Boolean getStartFutureInstanceImmediately() {
+        return this.startFutureInstanceImmediately;
+    }
+
     public static final class Builder extends Request.Builder<RunCycleDagNodesRequest, Builder> {
         private String bizBeginTime; 
         private String bizEndTime; 
@@ -194,6 +206,7 @@ public class RunCycleDagNodesRequest extends Request {
         private String regionId; 
         private Long rootNodeId; 
         private String startBizDate; 
+        private Boolean startFutureInstanceImmediately; 
 
         private Builder() {
             super();
@@ -213,6 +226,7 @@ public class RunCycleDagNodesRequest extends Request {
             this.regionId = request.regionId;
             this.rootNodeId = request.rootNodeId;
             this.startBizDate = request.startBizDate;
+            this.startFutureInstanceImmediately = request.startFutureInstanceImmediately;
         } 
 
         /**
@@ -320,6 +334,15 @@ public class RunCycleDagNodesRequest extends Request {
         public Builder startBizDate(String startBizDate) {
             this.putBodyParameter("StartBizDate", startBizDate);
             this.startBizDate = startBizDate;
+            return this;
+        }
+
+        /**
+         * StartFutureInstanceImmediately.
+         */
+        public Builder startFutureInstanceImmediately(Boolean startFutureInstanceImmediately) {
+            this.putBodyParameter("StartFutureInstanceImmediately", startFutureInstanceImmediately);
+            this.startFutureInstanceImmediately = startFutureInstanceImmediately;
             return this;
         }
 

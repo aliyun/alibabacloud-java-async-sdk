@@ -324,7 +324,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListHistoryTasksForResourceGroupResponse> listHistoryTasksForResourceGroup(ListHistoryTasksForResourceGroupRequest request);
 
+    CompletableFuture<ListInnerNodesResponse> listInnerNodes(ListInnerNodesRequest request);
+
     CompletableFuture<ListInstanceAmountResponse> listInstanceAmount(ListInstanceAmountRequest request);
+
+    CompletableFuture<ListInstanceHistoryResponse> listInstanceHistory(ListInstanceHistoryRequest request);
 
     CompletableFuture<ListInstancesResponse> listInstances(ListInstancesRequest request);
 
