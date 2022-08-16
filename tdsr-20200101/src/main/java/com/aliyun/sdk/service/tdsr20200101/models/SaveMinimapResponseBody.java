@@ -7,16 +7,13 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link EncryptContentResponseBody} extends {@link TeaModel}
+ * {@link SaveMinimapResponseBody} extends {@link TeaModel}
  *
- * <p>EncryptContentResponseBody</p>
+ * <p>SaveMinimapResponseBody</p>
  */
-public class EncryptContentResponseBody extends TeaModel {
+public class SaveMinimapResponseBody extends TeaModel {
     @NameInMap("Code")
     private Long code;
-
-    @NameInMap("Content")
-    private String content;
 
     @NameInMap("Message")
     private String message;
@@ -27,9 +24,8 @@ public class EncryptContentResponseBody extends TeaModel {
     @NameInMap("Success")
     private Boolean success;
 
-    private EncryptContentResponseBody(Builder builder) {
+    private SaveMinimapResponseBody(Builder builder) {
         this.code = builder.code;
-        this.content = builder.content;
         this.message = builder.message;
         this.requestId = builder.requestId;
         this.success = builder.success;
@@ -39,7 +35,7 @@ public class EncryptContentResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static EncryptContentResponseBody create() {
+    public static SaveMinimapResponseBody create() {
         return builder().build();
     }
 
@@ -48,13 +44,6 @@ public class EncryptContentResponseBody extends TeaModel {
      */
     public Long getCode() {
         return this.code;
-    }
-
-    /**
-     * @return content
-     */
-    public String getContent() {
-        return this.content;
     }
 
     /**
@@ -80,7 +69,6 @@ public class EncryptContentResponseBody extends TeaModel {
 
     public static final class Builder {
         private Long code; 
-        private String content; 
         private String message; 
         private String requestId; 
         private Boolean success; 
@@ -90,14 +78,6 @@ public class EncryptContentResponseBody extends TeaModel {
          */
         public Builder code(Long code) {
             this.code = code;
-            return this;
-        }
-
-        /**
-         * 加密后的内容
-         */
-        public Builder content(String content) {
-            this.content = content;
             return this;
         }
 
@@ -125,8 +105,8 @@ public class EncryptContentResponseBody extends TeaModel {
             return this;
         }
 
-        public EncryptContentResponseBody build() {
-            return new EncryptContentResponseBody(this);
+        public SaveMinimapResponseBody build() {
+            return new SaveMinimapResponseBody(this);
         } 
 
     } 

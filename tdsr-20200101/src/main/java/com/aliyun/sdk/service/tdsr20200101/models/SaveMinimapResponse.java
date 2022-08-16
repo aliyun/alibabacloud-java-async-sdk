@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link EncryptContentResponse} extends {@link TeaModel}
+ * {@link SaveMinimapResponse} extends {@link TeaModel}
  *
- * <p>EncryptContentResponse</p>
+ * <p>SaveMinimapResponse</p>
  */
-public class EncryptContentResponse extends Response {
+public class SaveMinimapResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private EncryptContentResponseBody body;
+    private SaveMinimapResponseBody body;
 
-    private EncryptContentResponse(BuilderImpl builder) {
+    private SaveMinimapResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static EncryptContentResponse create() {
+    public static SaveMinimapResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class EncryptContentResponse extends Response {
     /**
      * @return body
      */
-    public EncryptContentResponseBody getBody() {
+    public SaveMinimapResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<EncryptContentResponse, Builder> {
+    public interface Builder extends Response.Builder<SaveMinimapResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(EncryptContentResponseBody body);
+        Builder body(SaveMinimapResponseBody body);
 
         @Override
-        EncryptContentResponse build();
+        SaveMinimapResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<EncryptContentResponse, Builder>
+            extends Response.BuilderImpl<SaveMinimapResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private EncryptContentResponseBody body; 
+        private SaveMinimapResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(EncryptContentResponse response) {
+        private BuilderImpl(SaveMinimapResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class EncryptContentResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(EncryptContentResponseBody body) {
+        public Builder body(SaveMinimapResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public EncryptContentResponse build() {
-            return new EncryptContentResponse(this);
+        public SaveMinimapResponse build() {
+            return new SaveMinimapResponse(this);
         } 
 
     } 

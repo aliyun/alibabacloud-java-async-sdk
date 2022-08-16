@@ -38,8 +38,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateUploadPolicyResponse> createUploadPolicy(CreateUploadPolicyRequest request);
 
-    CompletableFuture<DecryptContentResponse> decryptContent(DecryptContentRequest request);
-
     CompletableFuture<DetailProjectResponse> detailProject(DetailProjectRequest request);
 
     CompletableFuture<DetailSceneResponse> detailScene(DetailSceneRequest request);
@@ -51,8 +49,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DropSceneResponse> dropScene(DropSceneRequest request);
 
     CompletableFuture<DropSubSceneResponse> dropSubScene(DropSubSceneRequest request);
-
-    CompletableFuture<EncryptContentResponse> encryptContent(EncryptContentRequest request);
 
     CompletableFuture<GetConnDataResponse> getConnData(GetConnDataRequest request);
 
@@ -135,6 +131,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SaveHotspotTagResponse> saveHotspotTag(SaveHotspotTagRequest request);
 
     CompletableFuture<SaveHotspotTagListResponse> saveHotspotTagList(SaveHotspotTagListRequest request);
+
+    CompletableFuture<SaveMinimapResponse> saveMinimap(SaveMinimapRequest request);
 
     CompletableFuture<SaveModelConfigResponse> saveModelConfig(SaveModelConfigRequest request);
 
