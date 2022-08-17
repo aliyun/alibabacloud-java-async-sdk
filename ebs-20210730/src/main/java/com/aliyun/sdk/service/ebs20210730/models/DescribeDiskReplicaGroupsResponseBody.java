@@ -92,6 +92,9 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
     } 
 
     public static class ReplicaGroups extends TeaModel {
+        @NameInMap("Bandwidth")
+        private Long bandwidth;
+
         @NameInMap("Description")
         private String description;
 
@@ -144,6 +147,7 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         private String status;
 
         private ReplicaGroups(Builder builder) {
+            this.bandwidth = builder.bandwidth;
             this.description = builder.description;
             this.destinationRegionId = builder.destinationRegionId;
             this.destinationZoneId = builder.destinationZoneId;
@@ -169,6 +173,13 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
 
         public static ReplicaGroups create() {
             return builder().build();
+        }
+
+        /**
+         * @return bandwidth
+         */
+        public Long getBandwidth() {
+            return this.bandwidth;
         }
 
         /**
@@ -291,6 +302,7 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Long bandwidth; 
             private String description; 
             private String destinationRegionId; 
             private String destinationZoneId; 
@@ -308,6 +320,14 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
             private String standbyRegion; 
             private String standbyZone; 
             private String status; 
+
+            /**
+             * 带宽值，单位为Kbps。公共云暂不支持。
+             */
+            public Builder bandwidth(Long bandwidth) {
+                this.bandwidth = bandwidth;
+                return this;
+            }
 
             /**
              * Description.

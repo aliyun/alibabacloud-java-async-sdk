@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyDiskReplicaGroupRequest extends Request {
     @Query
+    @NameInMap("Bandwidth")
+    private Long bandwidth;
+
+    @Query
     @NameInMap("ClientToken")
     private String clientToken;
 
@@ -40,6 +44,7 @@ public class ModifyDiskReplicaGroupRequest extends Request {
 
     private ModifyDiskReplicaGroupRequest(Builder builder) {
         super(builder);
+        this.bandwidth = builder.bandwidth;
         this.clientToken = builder.clientToken;
         this.description = builder.description;
         this.groupName = builder.groupName;
@@ -59,6 +64,13 @@ public class ModifyDiskReplicaGroupRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return bandwidth
+     */
+    public Long getBandwidth() {
+        return this.bandwidth;
     }
 
     /**
@@ -104,6 +116,7 @@ public class ModifyDiskReplicaGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyDiskReplicaGroupRequest, Builder> {
+        private Long bandwidth; 
         private String clientToken; 
         private String description; 
         private String groupName; 
@@ -117,6 +130,7 @@ public class ModifyDiskReplicaGroupRequest extends Request {
 
         private Builder(ModifyDiskReplicaGroupRequest request) {
             super(request);
+            this.bandwidth = request.bandwidth;
             this.clientToken = request.clientToken;
             this.description = request.description;
             this.groupName = request.groupName;
@@ -124,6 +138,15 @@ public class ModifyDiskReplicaGroupRequest extends Request {
             this.regionId = request.regionId;
             this.replicaGroupId = request.replicaGroupId;
         } 
+
+        /**
+         * 带宽值，单位kbps。公共云暂不支持。
+         */
+        public Builder bandwidth(Long bandwidth) {
+            this.putQueryParameter("Bandwidth", bandwidth);
+            this.bandwidth = bandwidth;
+            return this;
+        }
 
         /**
          * ClientToken.

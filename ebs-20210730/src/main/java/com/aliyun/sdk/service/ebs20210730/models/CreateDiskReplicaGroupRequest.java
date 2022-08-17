@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateDiskReplicaGroupRequest extends Request {
     @Query
+    @NameInMap("Bandwidth")
+    private Long bandwidth;
+
+    @Query
     @NameInMap("ClientToken")
     private String clientToken;
 
@@ -51,6 +55,7 @@ public class CreateDiskReplicaGroupRequest extends Request {
 
     private CreateDiskReplicaGroupRequest(Builder builder) {
         super(builder);
+        this.bandwidth = builder.bandwidth;
         this.clientToken = builder.clientToken;
         this.description = builder.description;
         this.destinationRegionId = builder.destinationRegionId;
@@ -72,6 +77,13 @@ public class CreateDiskReplicaGroupRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return bandwidth
+     */
+    public Long getBandwidth() {
+        return this.bandwidth;
     }
 
     /**
@@ -131,6 +143,7 @@ public class CreateDiskReplicaGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateDiskReplicaGroupRequest, Builder> {
+        private Long bandwidth; 
         private String clientToken; 
         private String description; 
         private String destinationRegionId; 
@@ -146,6 +159,7 @@ public class CreateDiskReplicaGroupRequest extends Request {
 
         private Builder(CreateDiskReplicaGroupRequest request) {
             super(request);
+            this.bandwidth = request.bandwidth;
             this.clientToken = request.clientToken;
             this.description = request.description;
             this.destinationRegionId = request.destinationRegionId;
@@ -155,6 +169,15 @@ public class CreateDiskReplicaGroupRequest extends Request {
             this.regionId = request.regionId;
             this.sourceZoneId = request.sourceZoneId;
         } 
+
+        /**
+         * 带宽值，单位为Kbps。公共云暂不支持。
+         */
+        public Builder bandwidth(Long bandwidth) {
+            this.putQueryParameter("Bandwidth", bandwidth);
+            this.bandwidth = bandwidth;
+            return this;
+        }
 
         /**
          * ClientToken.
