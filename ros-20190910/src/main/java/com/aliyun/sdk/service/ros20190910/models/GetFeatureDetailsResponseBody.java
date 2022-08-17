@@ -395,6 +395,47 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         } 
 
     }
+    public static class StackOperationRisk extends TeaModel {
+        @NameInMap("DeleteStack")
+        private java.util.List < String > deleteStack;
+
+        private StackOperationRisk(Builder builder) {
+            this.deleteStack = builder.deleteStack;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static StackOperationRisk create() {
+            return builder().build();
+        }
+
+        /**
+         * @return deleteStack
+         */
+        public java.util.List < String > getDeleteStack() {
+            return this.deleteStack;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > deleteStack; 
+
+            /**
+             * DeleteStack.
+             */
+            public Builder deleteStack(java.util.List < String > deleteStack) {
+                this.deleteStack = deleteStack;
+                return this;
+            }
+
+            public StackOperationRisk build() {
+                return new StackOperationRisk(this);
+            } 
+
+        } 
+
+    }
     public static class TerraformSupportedResourceTypes extends TeaModel {
         @NameInMap("CustomTag")
         private java.util.List < String > customTag;
@@ -405,6 +446,9 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         @NameInMap("ResourceGroup")
         private java.util.List < String > resourceGroup;
 
+        @NameInMap("StackOperationRisk")
+        private StackOperationRisk stackOperationRisk;
+
         @NameInMap("SystemTag")
         private java.util.List < String > systemTag;
 
@@ -412,6 +456,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             this.customTag = builder.customTag;
             this.estimateCost = builder.estimateCost;
             this.resourceGroup = builder.resourceGroup;
+            this.stackOperationRisk = builder.stackOperationRisk;
             this.systemTag = builder.systemTag;
         }
 
@@ -445,6 +490,13 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         }
 
         /**
+         * @return stackOperationRisk
+         */
+        public StackOperationRisk getStackOperationRisk() {
+            return this.stackOperationRisk;
+        }
+
+        /**
          * @return systemTag
          */
         public java.util.List < String > getSystemTag() {
@@ -455,6 +507,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             private java.util.List < String > customTag; 
             private java.util.List < String > estimateCost; 
             private java.util.List < String > resourceGroup; 
+            private StackOperationRisk stackOperationRisk; 
             private java.util.List < String > systemTag; 
 
             /**
@@ -478,6 +531,14 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
              */
             public Builder resourceGroup(java.util.List < String > resourceGroup) {
                 this.resourceGroup = resourceGroup;
+                return this;
+            }
+
+            /**
+             * StackOperationRisk.
+             */
+            public Builder stackOperationRisk(StackOperationRisk stackOperationRisk) {
+                this.stackOperationRisk = stackOperationRisk;
                 return this;
             }
 
