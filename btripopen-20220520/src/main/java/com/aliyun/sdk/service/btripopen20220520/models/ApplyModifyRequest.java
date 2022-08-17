@@ -66,6 +66,7 @@ public class ApplyModifyRequest extends Request {
 
     @Body
     @NameInMap("thirdpart_apply_id")
+    @Validation(required = true)
     private String thirdpartApplyId;
 
     @Body
@@ -90,6 +91,7 @@ public class ApplyModifyRequest extends Request {
 
     @Body
     @NameInMap("trip_cause")
+    @Validation(required = true)
     private String tripCause;
 
     @Body
@@ -98,6 +100,7 @@ public class ApplyModifyRequest extends Request {
 
     @Body
     @NameInMap("trip_title")
+    @Validation(required = true)
     private String tripTitle;
 
     @Body
@@ -106,6 +109,7 @@ public class ApplyModifyRequest extends Request {
 
     @Body
     @NameInMap("user_id")
+    @Validation(required = true)
     private String userId;
 
     @Body
@@ -996,30 +1000,35 @@ public class ApplyModifyRequest extends Request {
     }
     public static class ItineraryList extends TeaModel {
         @NameInMap("arr_city")
+        @Validation(required = true)
         private String arrCity;
 
         @NameInMap("arr_city_code")
         private String arrCityCode;
 
         @NameInMap("arr_date")
+        @Validation(required = true)
         private String arrDate;
 
         @NameInMap("cost_center_id")
         private Long costCenterId;
 
         @NameInMap("dep_city")
+        @Validation(required = true)
         private String depCity;
 
         @NameInMap("dep_city_code")
         private String depCityCode;
 
         @NameInMap("dep_date")
+        @Validation(required = true)
         private String depDate;
 
         @NameInMap("invoice_id")
         private Long invoiceId;
 
         @NameInMap("itinerary_id")
+        @Validation(required = true)
         private String itineraryId;
 
         @NameInMap("need_hotel")
@@ -1041,9 +1050,11 @@ public class ApplyModifyRequest extends Request {
         private String thirdpartCostCenterId;
 
         @NameInMap("traffic_type")
+        @Validation(required = true)
         private Integer trafficType;
 
         @NameInMap("trip_way")
+        @Validation(required = true)
         private Integer tripWay;
 
         private ItineraryList(Builder builder) {

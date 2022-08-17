@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class EntityDeleteRequest extends Request {
     @Query
     @NameInMap("del_all")
+    @Validation(required = true)
     private Boolean delAll;
 
     @Body
@@ -22,6 +23,7 @@ public class EntityDeleteRequest extends Request {
 
     @Query
     @NameInMap("thirdpart_id")
+    @Validation(required = true)
     private String thirdpartId;
 
     private EntityDeleteRequest(Builder builder) {
@@ -118,9 +120,11 @@ public class EntityDeleteRequest extends Request {
 
     public static class EntityDOList extends TeaModel {
         @NameInMap("entity_id")
+        @Validation(required = true)
         private String entityId;
 
         @NameInMap("entity_type")
+        @Validation(required = true)
         private String entityType;
 
         private EntityDOList(Builder builder) {

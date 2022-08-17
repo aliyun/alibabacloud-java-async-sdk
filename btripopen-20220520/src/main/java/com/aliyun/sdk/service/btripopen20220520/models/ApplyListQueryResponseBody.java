@@ -692,6 +692,9 @@ public class ApplyListQueryResponseBody extends TeaModel {
         @NameInMap("itinerary_list")
         private java.util.List < ItineraryList> itineraryList;
 
+        @NameInMap("itinerary_rule")
+        private Integer itineraryRule;
+
         @NameInMap("status")
         private Integer status;
 
@@ -741,6 +744,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
             this.gmtModified = builder.gmtModified;
             this.id = builder.id;
             this.itineraryList = builder.itineraryList;
+            this.itineraryRule = builder.itineraryRule;
             this.status = builder.status;
             this.statusDesc = builder.statusDesc;
             this.thirdpartBusinessId = builder.thirdpartBusinessId;
@@ -848,6 +852,13 @@ public class ApplyListQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return itineraryRule
+         */
+        public Integer getItineraryRule() {
+            return this.itineraryRule;
+        }
+
+        /**
          * @return status
          */
         public Integer getStatus() {
@@ -944,6 +955,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
             private String gmtModified; 
             private Long id; 
             private java.util.List < ItineraryList> itineraryList; 
+            private Integer itineraryRule; 
             private Integer status; 
             private String statusDesc; 
             private String thirdpartBusinessId; 
@@ -1050,6 +1062,19 @@ public class ApplyListQueryResponseBody extends TeaModel {
              */
             public Builder itineraryList(java.util.List < ItineraryList> itineraryList) {
                 this.itineraryList = itineraryList;
+                return this;
+            }
+
+            /**
+             * 申请单城市规则：
+             * <p>
+             * 0出发&目的地一对一，按列表传行程 
+             * 1多选N个地点，城市集行程
+             * 当申请单城市规则为0，itinerary_list行程列表必填
+             * 当申请单城市规则为1，itinerary_set_list行程列表必填
+             */
+            public Builder itineraryRule(Integer itineraryRule) {
+                this.itineraryRule = itineraryRule;
                 return this;
             }
 

@@ -52,18 +52,13 @@ public class ApplyAddRequest extends Request {
     @NameInMap("hotel_share")
     private HotelShare hotelShare;
 
+    @Query
+    @NameInMap("international_flight_cabins")
+    private String internationalFlightCabins;
+
     @Body
     @NameInMap("itinerary_list")
-    @Validation(required = true)
     private java.util.List < ItineraryList> itineraryList;
-
-    @Body
-    @NameInMap("itinerary_rule")
-    private Integer itineraryRule;
-
-    @Body
-    @NameInMap("itinerary_set_list")
-    private java.util.List < ItinerarySetList> itinerarySetList;
 
     @Body
     @NameInMap("limit_traveler")
@@ -145,9 +140,8 @@ public class ApplyAddRequest extends Request {
         this.flightBudget = builder.flightBudget;
         this.hotelBudget = builder.hotelBudget;
         this.hotelShare = builder.hotelShare;
+        this.internationalFlightCabins = builder.internationalFlightCabins;
         this.itineraryList = builder.itineraryList;
-        this.itineraryRule = builder.itineraryRule;
-        this.itinerarySetList = builder.itinerarySetList;
         this.limitTraveler = builder.limitTraveler;
         this.status = builder.status;
         this.thirdpartApplyId = builder.thirdpartApplyId;
@@ -250,24 +244,17 @@ public class ApplyAddRequest extends Request {
     }
 
     /**
+     * @return internationalFlightCabins
+     */
+    public String getInternationalFlightCabins() {
+        return this.internationalFlightCabins;
+    }
+
+    /**
      * @return itineraryList
      */
     public java.util.List < ItineraryList> getItineraryList() {
         return this.itineraryList;
-    }
-
-    /**
-     * @return itineraryRule
-     */
-    public Integer getItineraryRule() {
-        return this.itineraryRule;
-    }
-
-    /**
-     * @return itinerarySetList
-     */
-    public java.util.List < ItinerarySetList> getItinerarySetList() {
-        return this.itinerarySetList;
     }
 
     /**
@@ -393,9 +380,8 @@ public class ApplyAddRequest extends Request {
         private Long flightBudget; 
         private Long hotelBudget; 
         private HotelShare hotelShare; 
+        private String internationalFlightCabins; 
         private java.util.List < ItineraryList> itineraryList; 
-        private Integer itineraryRule; 
-        private java.util.List < ItinerarySetList> itinerarySetList; 
         private Integer limitTraveler; 
         private Integer status; 
         private String thirdpartApplyId; 
@@ -429,9 +415,8 @@ public class ApplyAddRequest extends Request {
             this.flightBudget = request.flightBudget;
             this.hotelBudget = request.hotelBudget;
             this.hotelShare = request.hotelShare;
+            this.internationalFlightCabins = request.internationalFlightCabins;
             this.itineraryList = request.itineraryList;
-            this.itineraryRule = request.itineraryRule;
-            this.itinerarySetList = request.itinerarySetList;
             this.limitTraveler = request.limitTraveler;
             this.status = request.status;
             this.thirdpartApplyId = request.thirdpartApplyId;
@@ -544,38 +529,21 @@ public class ApplyAddRequest extends Request {
         }
 
         /**
+         * international_flight_cabins.
+         */
+        public Builder internationalFlightCabins(String internationalFlightCabins) {
+            this.putQueryParameter("international_flight_cabins", internationalFlightCabins);
+            this.internationalFlightCabins = internationalFlightCabins;
+            return this;
+        }
+
+        /**
          * itinerary_list.
          */
         public Builder itineraryList(java.util.List < ItineraryList> itineraryList) {
             String itineraryListShrink = shrink(itineraryList, "itinerary_list", "json");
             this.putBodyParameter("itinerary_list", itineraryListShrink);
             this.itineraryList = itineraryList;
-            return this;
-        }
-
-        /**
-         * 申请单城市规则：
-         * <p>
-         * 0出发&目的地一对一，按列表传行程 
-         * 1多选N个地点，城市集行程
-         * 不传默认为0
-         * 会根据此字段传入的值，校验行程传参是否正确
-         * 当申请单城市规则为0，itinerary_list行程列表必填
-         * 当申请单城市规则为1，itinerary_set_list行程列表必填
-         */
-        public Builder itineraryRule(Integer itineraryRule) {
-            this.putBodyParameter("itinerary_rule", itineraryRule);
-            this.itineraryRule = itineraryRule;
-            return this;
-        }
-
-        /**
-         * 城市集行程
-         */
-        public Builder itinerarySetList(java.util.List < ItinerarySetList> itinerarySetList) {
-            String itinerarySetListShrink = shrink(itinerarySetList, "itinerary_set_list", "json");
-            this.putBodyParameter("itinerary_set_list", itinerarySetListShrink);
-            this.itinerarySetList = itinerarySetList;
             return this;
         }
 
@@ -1099,6 +1067,7 @@ public class ApplyAddRequest extends Request {
         private String depCityCode;
 
         @NameInMap("dep_date")
+        @Validation(required = true)
         private String depDate;
 
         @NameInMap("invoice_id")
@@ -1438,272 +1407,6 @@ public class ApplyAddRequest extends Request {
 
             public ItineraryList build() {
                 return new ItineraryList(this);
-            } 
-
-        } 
-
-    }
-    public static class ItinerarySetList extends TeaModel {
-        @NameInMap("arr_date")
-        private String arrDate;
-
-        @NameInMap("city_code_set")
-        private String cityCodeSet;
-
-        @NameInMap("city_set")
-        private String citySet;
-
-        @NameInMap("cost_center_id")
-        private Long costCenterId;
-
-        @NameInMap("dep_date")
-        private String depDate;
-
-        @NameInMap("invoice_id")
-        private Long invoiceId;
-
-        @NameInMap("itinerary_id")
-        private String itineraryId;
-
-        @NameInMap("project_code")
-        private String projectCode;
-
-        @NameInMap("project_title")
-        private String projectTitle;
-
-        @NameInMap("third_part_invoice_id")
-        private String thirdPartInvoiceId;
-
-        @NameInMap("thirdpart_cost_center_id")
-        private String thirdpartCostCenterId;
-
-        @NameInMap("transport")
-        private Integer transport;
-
-        private ItinerarySetList(Builder builder) {
-            this.arrDate = builder.arrDate;
-            this.cityCodeSet = builder.cityCodeSet;
-            this.citySet = builder.citySet;
-            this.costCenterId = builder.costCenterId;
-            this.depDate = builder.depDate;
-            this.invoiceId = builder.invoiceId;
-            this.itineraryId = builder.itineraryId;
-            this.projectCode = builder.projectCode;
-            this.projectTitle = builder.projectTitle;
-            this.thirdPartInvoiceId = builder.thirdPartInvoiceId;
-            this.thirdpartCostCenterId = builder.thirdpartCostCenterId;
-            this.transport = builder.transport;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static ItinerarySetList create() {
-            return builder().build();
-        }
-
-        /**
-         * @return arrDate
-         */
-        public String getArrDate() {
-            return this.arrDate;
-        }
-
-        /**
-         * @return cityCodeSet
-         */
-        public String getCityCodeSet() {
-            return this.cityCodeSet;
-        }
-
-        /**
-         * @return citySet
-         */
-        public String getCitySet() {
-            return this.citySet;
-        }
-
-        /**
-         * @return costCenterId
-         */
-        public Long getCostCenterId() {
-            return this.costCenterId;
-        }
-
-        /**
-         * @return depDate
-         */
-        public String getDepDate() {
-            return this.depDate;
-        }
-
-        /**
-         * @return invoiceId
-         */
-        public Long getInvoiceId() {
-            return this.invoiceId;
-        }
-
-        /**
-         * @return itineraryId
-         */
-        public String getItineraryId() {
-            return this.itineraryId;
-        }
-
-        /**
-         * @return projectCode
-         */
-        public String getProjectCode() {
-            return this.projectCode;
-        }
-
-        /**
-         * @return projectTitle
-         */
-        public String getProjectTitle() {
-            return this.projectTitle;
-        }
-
-        /**
-         * @return thirdPartInvoiceId
-         */
-        public String getThirdPartInvoiceId() {
-            return this.thirdPartInvoiceId;
-        }
-
-        /**
-         * @return thirdpartCostCenterId
-         */
-        public String getThirdpartCostCenterId() {
-            return this.thirdpartCostCenterId;
-        }
-
-        /**
-         * @return transport
-         */
-        public Integer getTransport() {
-            return this.transport;
-        }
-
-        public static final class Builder {
-            private String arrDate; 
-            private String cityCodeSet; 
-            private String citySet; 
-            private Long costCenterId; 
-            private String depDate; 
-            private Long invoiceId; 
-            private String itineraryId; 
-            private String projectCode; 
-            private String projectTitle; 
-            private String thirdPartInvoiceId; 
-            private String thirdpartCostCenterId; 
-            private Integer transport; 
-
-            /**
-             * 到达日期
-             */
-            public Builder arrDate(String arrDate) {
-                this.arrDate = arrDate;
-                return this;
-            }
-
-            /**
-             * 离抵城市code，多个城市请用中文“，”隔开
-             * <p>
-             * 当允许预订的类目为0/2/3/5时，仅传行政区划citycode允许通过
-             * 当允许预订的类目为1/4时，仅传城市三字码允许通过
-             */
-            public Builder cityCodeSet(String cityCodeSet) {
-                this.cityCodeSet = cityCodeSet;
-                return this;
-            }
-
-            /**
-             * 离抵城市名称，多个城市请用中文“，”隔开
-             */
-            public Builder citySet(String citySet) {
-                this.citySet = citySet;
-                return this;
-            }
-
-            /**
-             * 商旅成本中心id，和第三方成本中心id二者选择其一即可
-             */
-            public Builder costCenterId(Long costCenterId) {
-                this.costCenterId = costCenterId;
-                return this;
-            }
-
-            /**
-             * 出发日期
-             */
-            public Builder depDate(String depDate) {
-                this.depDate = depDate;
-                return this;
-            }
-
-            /**
-             * 商旅发票id，和第三方发票Id二者选择其一即可
-             */
-            public Builder invoiceId(Long invoiceId) {
-                this.invoiceId = invoiceId;
-                return this;
-            }
-
-            /**
-             * 行程id
-             * <p>
-             * 
-             */
-            public Builder itineraryId(String itineraryId) {
-                this.itineraryId = itineraryId;
-                return this;
-            }
-
-            /**
-             * 项目编号
-             */
-            public Builder projectCode(String projectCode) {
-                this.projectCode = projectCode;
-                return this;
-            }
-
-            /**
-             * 项目名称
-             */
-            public Builder projectTitle(String projectTitle) {
-                this.projectTitle = projectTitle;
-                return this;
-            }
-
-            /**
-             * 第三方发票id，和商旅发票id二者选择其一即可
-             */
-            public Builder thirdPartInvoiceId(String thirdPartInvoiceId) {
-                this.thirdPartInvoiceId = thirdPartInvoiceId;
-                return this;
-            }
-
-            /**
-             * 第三方成本中心id，和商旅成本中心id二者选择其一即可
-             */
-            public Builder thirdpartCostCenterId(String thirdpartCostCenterId) {
-                this.thirdpartCostCenterId = thirdpartCostCenterId;
-                return this;
-            }
-
-            /**
-             * transport.
-             */
-            public Builder transport(Integer transport) {
-                this.transport = transport;
-                return this;
-            }
-
-            public ItinerarySetList build() {
-                return new ItinerarySetList(this);
             } 
 
         } 

@@ -933,9 +933,6 @@ public class TrainOrderQueryResponseBody extends TeaModel {
         @NameInMap("project_title")
         private String projectTitle;
 
-        @NameInMap("thirdpart_cost_center_id")
-        private String thirdpartCostCenterId;
-
         @NameInMap("thirdpart_project_id")
         private String thirdpartProjectId;
 
@@ -955,7 +952,6 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             this.projectCode = builder.projectCode;
             this.projectId = builder.projectId;
             this.projectTitle = builder.projectTitle;
-            this.thirdpartCostCenterId = builder.thirdpartCostCenterId;
             this.thirdpartProjectId = builder.thirdpartProjectId;
             this.userId = builder.userId;
             this.userName = builder.userName;
@@ -1013,13 +1009,6 @@ public class TrainOrderQueryResponseBody extends TeaModel {
         }
 
         /**
-         * @return thirdpartCostCenterId
-         */
-        public String getThirdpartCostCenterId() {
-            return this.thirdpartCostCenterId;
-        }
-
-        /**
          * @return thirdpartProjectId
          */
         public String getThirdpartProjectId() {
@@ -1054,7 +1043,6 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             private String projectCode; 
             private Long projectId; 
             private String projectTitle; 
-            private String thirdpartCostCenterId; 
             private String thirdpartProjectId; 
             private String userId; 
             private String userName; 
@@ -1105,14 +1093,6 @@ public class TrainOrderQueryResponseBody extends TeaModel {
              */
             public Builder projectTitle(String projectTitle) {
                 this.projectTitle = projectTitle;
-                return this;
-            }
-
-            /**
-             * 第三方成本中心id
-             */
-            public Builder thirdpartCostCenterId(String thirdpartCostCenterId) {
-                this.thirdpartCostCenterId = thirdpartCostCenterId;
                 return this;
             }
 

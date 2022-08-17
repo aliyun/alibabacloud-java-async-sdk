@@ -17,14 +17,9 @@ public class HotelExceedApplyQueryRequest extends Request {
     @Validation(required = true)
     private Long applyId;
 
-    @Query
-    @NameInMap("user_id")
-    private String userId;
-
     private HotelExceedApplyQueryRequest(Builder builder) {
         super(builder);
         this.applyId = builder.applyId;
-        this.userId = builder.userId;
     }
 
     public static Builder builder() {
@@ -47,16 +42,8 @@ public class HotelExceedApplyQueryRequest extends Request {
         return this.applyId;
     }
 
-    /**
-     * @return userId
-     */
-    public String getUserId() {
-        return this.userId;
-    }
-
     public static final class Builder extends Request.Builder<HotelExceedApplyQueryRequest, Builder> {
         private Long applyId; 
-        private String userId; 
 
         private Builder() {
             super();
@@ -65,7 +52,6 @@ public class HotelExceedApplyQueryRequest extends Request {
         private Builder(HotelExceedApplyQueryRequest request) {
             super(request);
             this.applyId = request.applyId;
-            this.userId = request.userId;
         } 
 
         /**
@@ -74,15 +60,6 @@ public class HotelExceedApplyQueryRequest extends Request {
         public Builder applyId(Long applyId) {
             this.putQueryParameter("apply_id", applyId);
             this.applyId = applyId;
-            return this;
-        }
-
-        /**
-         * 无userId时传缺省值superAdmin
-         */
-        public Builder userId(String userId) {
-            this.putQueryParameter("user_id", userId);
-            this.userId = userId;
             return this;
         }
 

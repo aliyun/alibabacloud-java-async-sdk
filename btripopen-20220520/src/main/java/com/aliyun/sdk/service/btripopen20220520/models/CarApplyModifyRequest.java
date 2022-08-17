@@ -13,11 +13,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CarApplyModifyRequest extends Request {
     @Body
-    @NameInMap("corp_id")
-    @Validation(required = true)
-    private String corpId;
-
-    @Body
     @NameInMap("operate_time")
     private String operateTime;
 
@@ -42,7 +37,6 @@ public class CarApplyModifyRequest extends Request {
 
     private CarApplyModifyRequest(Builder builder) {
         super(builder);
-        this.corpId = builder.corpId;
         this.operateTime = builder.operateTime;
         this.remark = builder.remark;
         this.status = builder.status;
@@ -61,13 +55,6 @@ public class CarApplyModifyRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return corpId
-     */
-    public String getCorpId() {
-        return this.corpId;
     }
 
     /**
@@ -106,7 +93,6 @@ public class CarApplyModifyRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CarApplyModifyRequest, Builder> {
-        private String corpId; 
         private String operateTime; 
         private String remark; 
         private Integer status; 
@@ -119,22 +105,12 @@ public class CarApplyModifyRequest extends Request {
 
         private Builder(CarApplyModifyRequest request) {
             super(request);
-            this.corpId = request.corpId;
             this.operateTime = request.operateTime;
             this.remark = request.remark;
             this.status = request.status;
             this.thirdPartApplyId = request.thirdPartApplyId;
             this.userId = request.userId;
         } 
-
-        /**
-         * 主企业Id
-         */
-        public Builder corpId(String corpId) {
-            this.putBodyParameter("corp_id", corpId);
-            this.corpId = corpId;
-            return this;
-        }
 
         /**
          * 审批时间

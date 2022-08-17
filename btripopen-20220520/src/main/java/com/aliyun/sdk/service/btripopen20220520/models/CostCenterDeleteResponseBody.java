@@ -15,12 +15,6 @@ public class CostCenterDeleteResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("module")
-    private java.util.Map < String, ? > module;
-
-    @NameInMap("more_page")
-    private Boolean morePage;
-
     @NameInMap("result_code")
     private Integer resultCode;
 
@@ -35,8 +29,6 @@ public class CostCenterDeleteResponseBody extends TeaModel {
 
     private CostCenterDeleteResponseBody(Builder builder) {
         this.requestId = builder.requestId;
-        this.module = builder.module;
-        this.morePage = builder.morePage;
         this.resultCode = builder.resultCode;
         this.resultMsg = builder.resultMsg;
         this.success = builder.success;
@@ -56,20 +48,6 @@ public class CostCenterDeleteResponseBody extends TeaModel {
      */
     public String getRequestId() {
         return this.requestId;
-    }
-
-    /**
-     * @return module
-     */
-    public java.util.Map < String, ? > getModule() {
-        return this.module;
-    }
-
-    /**
-     * @return morePage
-     */
-    public Boolean getMorePage() {
-        return this.morePage;
     }
 
     /**
@@ -102,8 +80,6 @@ public class CostCenterDeleteResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.Map < String, ? > module; 
-        private Boolean morePage; 
         private Integer resultCode; 
         private String resultMsg; 
         private Boolean success; 
@@ -114,22 +90,6 @@ public class CostCenterDeleteResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * 返回值，服务端返回，没有结果或发生异常都返回空
-         */
-        public Builder module(java.util.Map < String, ? > module) {
-            this.module = module;
-            return this;
-        }
-
-        /**
-         * 分页标识，由服务端设置，分页时是否有下一页更多数据。
-         */
-        public Builder morePage(Boolean morePage) {
-            this.morePage = morePage;
             return this;
         }
 

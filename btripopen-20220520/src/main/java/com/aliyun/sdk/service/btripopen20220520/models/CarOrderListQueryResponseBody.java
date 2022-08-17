@@ -178,6 +178,9 @@ public class CarOrderListQueryResponseBody extends TeaModel {
         @NameInMap("category_type")
         private Integer categoryType;
 
+        @NameInMap("gmt_create")
+        private String gmtCreate;
+
         @NameInMap("passenger_name")
         private String passengerName;
 
@@ -199,6 +202,7 @@ public class CarOrderListQueryResponseBody extends TeaModel {
         private PriceInfoList(Builder builder) {
             this.categoryCode = builder.categoryCode;
             this.categoryType = builder.categoryType;
+            this.gmtCreate = builder.gmtCreate;
             this.passengerName = builder.passengerName;
             this.payType = builder.payType;
             this.personPrice = builder.personPrice;
@@ -227,6 +231,13 @@ public class CarOrderListQueryResponseBody extends TeaModel {
          */
         public Integer getCategoryType() {
             return this.categoryType;
+        }
+
+        /**
+         * @return gmtCreate
+         */
+        public String getGmtCreate() {
+            return this.gmtCreate;
         }
 
         /**
@@ -274,6 +285,7 @@ public class CarOrderListQueryResponseBody extends TeaModel {
         public static final class Builder {
             private Integer categoryCode; 
             private Integer categoryType; 
+            private String gmtCreate; 
             private String passengerName; 
             private Integer payType; 
             private Double personPrice; 
@@ -294,6 +306,14 @@ public class CarOrderListQueryResponseBody extends TeaModel {
              */
             public Builder categoryType(Integer categoryType) {
                 this.categoryType = categoryType;
+                return this;
+            }
+
+            /**
+             * gmt_create.
+             */
+            public Builder gmtCreate(String gmtCreate) {
+                this.gmtCreate = gmtCreate;
                 return this;
             }
 
@@ -489,9 +509,6 @@ public class CarOrderListQueryResponseBody extends TeaModel {
         @NameInMap("memo")
         private String memo;
 
-        @NameInMap("order_id")
-        private String orderId;
-
         @NameInMap("order_status")
         private Integer orderStatus;
 
@@ -593,7 +610,6 @@ public class CarOrderListQueryResponseBody extends TeaModel {
             this.invoiceTitle = builder.invoiceTitle;
             this.isSpecial = builder.isSpecial;
             this.memo = builder.memo;
-            this.orderId = builder.orderId;
             this.orderStatus = builder.orderStatus;
             this.passengerName = builder.passengerName;
             this.payTime = builder.payTime;
@@ -805,13 +821,6 @@ public class CarOrderListQueryResponseBody extends TeaModel {
         }
 
         /**
-         * @return orderId
-         */
-        public String getOrderId() {
-            return this.orderId;
-        }
-
-        /**
          * @return orderStatus
          */
         public Integer getOrderStatus() {
@@ -1012,7 +1021,6 @@ public class CarOrderListQueryResponseBody extends TeaModel {
             private String invoiceTitle; 
             private Boolean isSpecial; 
             private String memo; 
-            private String orderId; 
             private Integer orderStatus; 
             private String passengerName; 
             private String payTime; 
@@ -1236,14 +1244,6 @@ public class CarOrderListQueryResponseBody extends TeaModel {
              */
             public Builder memo(String memo) {
                 this.memo = memo;
-                return this;
-            }
-
-            /**
-             * 主订单ID
-             */
-            public Builder orderId(String orderId) {
-                this.orderId = orderId;
                 return this;
             }
 

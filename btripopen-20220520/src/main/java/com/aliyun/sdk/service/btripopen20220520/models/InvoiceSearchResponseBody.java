@@ -18,9 +18,6 @@ public class InvoiceSearchResponseBody extends TeaModel {
     @NameInMap("module")
     private java.util.List < Module> module;
 
-    @NameInMap("more_page")
-    private Boolean morePage;
-
     @NameInMap("result_code")
     private Integer resultCode;
 
@@ -36,7 +33,6 @@ public class InvoiceSearchResponseBody extends TeaModel {
     private InvoiceSearchResponseBody(Builder builder) {
         this.requestId = builder.requestId;
         this.module = builder.module;
-        this.morePage = builder.morePage;
         this.resultCode = builder.resultCode;
         this.resultMsg = builder.resultMsg;
         this.success = builder.success;
@@ -63,13 +59,6 @@ public class InvoiceSearchResponseBody extends TeaModel {
      */
     public java.util.List < Module> getModule() {
         return this.module;
-    }
-
-    /**
-     * @return morePage
-     */
-    public Boolean getMorePage() {
-        return this.morePage;
     }
 
     /**
@@ -103,7 +92,6 @@ public class InvoiceSearchResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List < Module> module; 
-        private Boolean morePage; 
         private Integer resultCode; 
         private String resultMsg; 
         private Boolean success; 
@@ -122,14 +110,6 @@ public class InvoiceSearchResponseBody extends TeaModel {
          */
         public Builder module(java.util.List < Module> module) {
             this.module = module;
-            return this;
-        }
-
-        /**
-         * 分页标识，由服务端设置，分页时是否有下一页更多数据。
-         */
-        public Builder morePage(Boolean morePage) {
-            this.morePage = morePage;
             return this;
         }
 
