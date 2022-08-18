@@ -232,23 +232,23 @@ public class DescribeDomainRecordsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDomainRecordsRequest response) {
-            super(response);
-            this.direction = response.direction;
-            this.domainName = response.domainName;
-            this.groupId = response.groupId;
-            this.keyWord = response.keyWord;
-            this.lang = response.lang;
-            this.line = response.line;
-            this.orderBy = response.orderBy;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.RRKeyWord = response.RRKeyWord;
-            this.searchMode = response.searchMode;
-            this.status = response.status;
-            this.type = response.type;
-            this.typeKeyWord = response.typeKeyWord;
-            this.valueKeyWord = response.valueKeyWord;
+        private Builder(DescribeDomainRecordsRequest request) {
+            super(request);
+            this.direction = request.direction;
+            this.domainName = request.domainName;
+            this.groupId = request.groupId;
+            this.keyWord = request.keyWord;
+            this.lang = request.lang;
+            this.line = request.line;
+            this.orderBy = request.orderBy;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.RRKeyWord = request.RRKeyWord;
+            this.searchMode = request.searchMode;
+            this.status = request.status;
+            this.type = request.type;
+            this.typeKeyWord = request.typeKeyWord;
+            this.valueKeyWord = request.valueKeyWord;
         } 
 
         /**

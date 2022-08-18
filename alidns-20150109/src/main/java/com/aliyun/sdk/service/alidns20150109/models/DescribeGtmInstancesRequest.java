@@ -113,14 +113,14 @@ public class DescribeGtmInstancesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeGtmInstancesRequest response) {
-            super(response);
-            this.keyword = response.keyword;
-            this.lang = response.lang;
-            this.needDetailAttributes = response.needDetailAttributes;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.resourceGroupId = response.resourceGroupId;
+        private Builder(DescribeGtmInstancesRequest request) {
+            super(request);
+            this.keyword = request.keyword;
+            this.lang = request.lang;
+            this.needDetailAttributes = request.needDetailAttributes;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**

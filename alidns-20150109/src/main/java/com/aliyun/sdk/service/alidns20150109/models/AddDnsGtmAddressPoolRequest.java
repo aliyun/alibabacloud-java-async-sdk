@@ -212,21 +212,21 @@ public class AddDnsGtmAddressPoolRequest extends Request {
             super();
         } 
 
-        private Builder(AddDnsGtmAddressPoolRequest response) {
-            super(response);
-            this.addr = response.addr;
-            this.evaluationCount = response.evaluationCount;
-            this.instanceId = response.instanceId;
-            this.interval = response.interval;
-            this.ispCityNode = response.ispCityNode;
-            this.lang = response.lang;
-            this.lbaStrategy = response.lbaStrategy;
-            this.monitorExtendInfo = response.monitorExtendInfo;
-            this.monitorStatus = response.monitorStatus;
-            this.name = response.name;
-            this.protocolType = response.protocolType;
-            this.timeout = response.timeout;
-            this.type = response.type;
+        private Builder(AddDnsGtmAddressPoolRequest request) {
+            super(request);
+            this.addr = request.addr;
+            this.evaluationCount = request.evaluationCount;
+            this.instanceId = request.instanceId;
+            this.interval = request.interval;
+            this.ispCityNode = request.ispCityNode;
+            this.lang = request.lang;
+            this.lbaStrategy = request.lbaStrategy;
+            this.monitorExtendInfo = request.monitorExtendInfo;
+            this.monitorStatus = request.monitorStatus;
+            this.name = request.name;
+            this.protocolType = request.protocolType;
+            this.timeout = request.timeout;
+            this.type = request.type;
         } 
 
         /**

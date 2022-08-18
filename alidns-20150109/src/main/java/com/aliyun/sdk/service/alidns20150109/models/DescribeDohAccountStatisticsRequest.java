@@ -74,11 +74,11 @@ public class DescribeDohAccountStatisticsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDohAccountStatisticsRequest response) {
-            super(response);
-            this.endDate = response.endDate;
-            this.lang = response.lang;
-            this.startDate = response.startDate;
+        private Builder(DescribeDohAccountStatisticsRequest request) {
+            super(request);
+            this.endDate = request.endDate;
+            this.lang = request.lang;
+            this.startDate = request.startDate;
         } 
 
         /**

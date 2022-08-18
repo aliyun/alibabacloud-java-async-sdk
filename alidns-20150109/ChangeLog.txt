@@ -1,3 +1,6 @@
+2022-08-18 Version: 3.0.0
+- Bump version.
+
 2022-02-21 Version: 1.0.0
 - Generated java-async 2015-01-09 for Alidns.
 

@@ -76,11 +76,11 @@ public class UnbindInstanceDomainsRequest extends Request {
             super();
         } 
 
-        private Builder(UnbindInstanceDomainsRequest response) {
-            super(response);
-            this.domainNames = response.domainNames;
-            this.instanceId = response.instanceId;
-            this.lang = response.lang;
+        private Builder(UnbindInstanceDomainsRequest request) {
+            super(request);
+            this.domainNames = request.domainNames;
+            this.instanceId = request.instanceId;
+            this.lang = request.lang;
         } 
 
         /**

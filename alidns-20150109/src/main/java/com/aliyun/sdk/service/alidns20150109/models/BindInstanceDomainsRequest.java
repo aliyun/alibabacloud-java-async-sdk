@@ -76,11 +76,11 @@ public class BindInstanceDomainsRequest extends Request {
             super();
         } 
 
-        private Builder(BindInstanceDomainsRequest response) {
-            super(response);
-            this.domainNames = response.domainNames;
-            this.instanceId = response.instanceId;
-            this.lang = response.lang;
+        private Builder(BindInstanceDomainsRequest request) {
+            super(request);
+            this.domainNames = request.domainNames;
+            this.instanceId = request.instanceId;
+            this.lang = request.lang;
         } 
 
         /**

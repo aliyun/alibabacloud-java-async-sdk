@@ -88,12 +88,12 @@ public class UpdateCustomLineRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateCustomLineRequest response) {
-            super(response);
-            this.ipSegment = response.ipSegment;
-            this.lang = response.lang;
-            this.lineId = response.lineId;
-            this.lineName = response.lineName;
+        private Builder(UpdateCustomLineRequest request) {
+            super(request);
+            this.ipSegment = request.ipSegment;
+            this.lang = request.lang;
+            this.lineId = request.lineId;
+            this.lineName = request.lineName;
         } 
 
         /**

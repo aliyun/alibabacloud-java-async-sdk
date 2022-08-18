@@ -75,11 +75,11 @@ public class ChangeDomainGroupRequest extends Request {
             super();
         } 
 
-        private Builder(ChangeDomainGroupRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.groupId = response.groupId;
-            this.lang = response.lang;
+        private Builder(ChangeDomainGroupRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.groupId = request.groupId;
+            this.lang = request.lang;
         } 
 
         /**

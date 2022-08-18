@@ -62,10 +62,10 @@ public class DeleteGtmAddressPoolRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteGtmAddressPoolRequest response) {
-            super(response);
-            this.addrPoolId = response.addrPoolId;
-            this.lang = response.lang;
+        private Builder(DeleteGtmAddressPoolRequest request) {
+            super(request);
+            this.addrPoolId = request.addrPoolId;
+            this.lang = request.lang;
         } 
 
         /**

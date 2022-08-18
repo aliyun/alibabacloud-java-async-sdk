@@ -62,10 +62,10 @@ public class DescribeGtmMonitorConfigRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeGtmMonitorConfigRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.monitorConfigId = response.monitorConfigId;
+        private Builder(DescribeGtmMonitorConfigRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.monitorConfigId = request.monitorConfigId;
         } 
 
         /**

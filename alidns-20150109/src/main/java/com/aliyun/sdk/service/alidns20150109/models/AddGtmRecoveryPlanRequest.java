@@ -89,12 +89,12 @@ public class AddGtmRecoveryPlanRequest extends Request {
             super();
         } 
 
-        private Builder(AddGtmRecoveryPlanRequest response) {
-            super(response);
-            this.faultAddrPool = response.faultAddrPool;
-            this.lang = response.lang;
-            this.name = response.name;
-            this.remark = response.remark;
+        private Builder(AddGtmRecoveryPlanRequest request) {
+            super(request);
+            this.faultAddrPool = request.faultAddrPool;
+            this.lang = request.lang;
+            this.name = request.name;
+            this.remark = request.remark;
         } 
 
         /**

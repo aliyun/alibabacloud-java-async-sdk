@@ -62,10 +62,10 @@ public class ExecuteGtmRecoveryPlanRequest extends Request {
             super();
         } 
 
-        private Builder(ExecuteGtmRecoveryPlanRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.recoveryPlanId = response.recoveryPlanId;
+        private Builder(ExecuteGtmRecoveryPlanRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.recoveryPlanId = request.recoveryPlanId;
         } 
 
         /**

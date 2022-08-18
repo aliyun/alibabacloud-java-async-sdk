@@ -87,12 +87,12 @@ public class DescribeGtmRecoveryPlansRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeGtmRecoveryPlansRequest response) {
-            super(response);
-            this.keyword = response.keyword;
-            this.lang = response.lang;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(DescribeGtmRecoveryPlansRequest request) {
+            super(request);
+            this.keyword = request.keyword;
+            this.lang = request.lang;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**

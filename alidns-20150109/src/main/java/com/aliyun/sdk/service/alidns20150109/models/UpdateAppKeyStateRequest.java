@@ -74,11 +74,11 @@ public class UpdateAppKeyStateRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateAppKeyStateRequest response) {
-            super(response);
-            this.appKeyId = response.appKeyId;
-            this.lang = response.lang;
-            this.state = response.state;
+        private Builder(UpdateAppKeyStateRequest request) {
+            super(request);
+            this.appKeyId = request.appKeyId;
+            this.lang = request.lang;
+            this.state = request.state;
         } 
 
         /**

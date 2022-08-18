@@ -74,11 +74,11 @@ public class DescribePdnsAccountSummaryRequest extends Request {
             super();
         } 
 
-        private Builder(DescribePdnsAccountSummaryRequest response) {
-            super(response);
-            this.endDate = response.endDate;
-            this.lang = response.lang;
-            this.startDate = response.startDate;
+        private Builder(DescribePdnsAccountSummaryRequest request) {
+            super(request);
+            this.endDate = request.endDate;
+            this.lang = request.lang;
+            this.startDate = request.startDate;
         } 
 
         /**

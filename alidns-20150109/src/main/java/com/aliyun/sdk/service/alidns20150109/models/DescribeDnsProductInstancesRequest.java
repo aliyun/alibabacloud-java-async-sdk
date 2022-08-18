@@ -114,14 +114,14 @@ public class DescribeDnsProductInstancesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDnsProductInstancesRequest response) {
-            super(response);
-            this.domainType = response.domainType;
-            this.lang = response.lang;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.userClientIp = response.userClientIp;
-            this.versionCode = response.versionCode;
+        private Builder(DescribeDnsProductInstancesRequest request) {
+            super(request);
+            this.domainType = request.domainType;
+            this.lang = request.lang;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.userClientIp = request.userClientIp;
+            this.versionCode = request.versionCode;
         } 
 
         /**

@@ -61,10 +61,10 @@ public class RemovePdnsUdpIpSegmentRequest extends Request {
             super();
         } 
 
-        private Builder(RemovePdnsUdpIpSegmentRequest response) {
-            super(response);
-            this.ip = response.ip;
-            this.lang = response.lang;
+        private Builder(RemovePdnsUdpIpSegmentRequest request) {
+            super(request);
+            this.ip = request.ip;
+            this.lang = request.lang;
         } 
 
         /**

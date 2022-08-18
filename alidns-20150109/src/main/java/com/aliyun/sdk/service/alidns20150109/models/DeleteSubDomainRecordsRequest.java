@@ -24,7 +24,7 @@ public class DeleteSubDomainRecordsRequest extends Request {
     @Query
     @NameInMap("RR")
     @Validation(required = true)
-    private String RR;
+    private String rr;
 
     @Query
     @NameInMap("Type")
@@ -38,7 +38,7 @@ public class DeleteSubDomainRecordsRequest extends Request {
         super(builder);
         this.domainName = builder.domainName;
         this.lang = builder.lang;
-        this.RR = builder.RR;
+        this.rr = builder.rr;
         this.type = builder.type;
         this.userClientIp = builder.userClientIp;
     }
@@ -71,10 +71,10 @@ public class DeleteSubDomainRecordsRequest extends Request {
     }
 
     /**
-     * @return RR
+     * @return rr
      */
-    public String getRR() {
-        return this.RR;
+    public String getRr() {
+        return this.rr;
     }
 
     /**
@@ -94,7 +94,7 @@ public class DeleteSubDomainRecordsRequest extends Request {
     public static final class Builder extends Request.Builder<DeleteSubDomainRecordsRequest, Builder> {
         private String domainName; 
         private String lang; 
-        private String RR; 
+        private String rr; 
         private String type; 
         private String userClientIp; 
 
@@ -102,13 +102,13 @@ public class DeleteSubDomainRecordsRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteSubDomainRecordsRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.lang = response.lang;
-            this.RR = response.RR;
-            this.type = response.type;
-            this.userClientIp = response.userClientIp;
+        private Builder(DeleteSubDomainRecordsRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.lang = request.lang;
+            this.rr = request.rr;
+            this.type = request.type;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**
@@ -132,9 +132,9 @@ public class DeleteSubDomainRecordsRequest extends Request {
         /**
          * RR.
          */
-        public Builder RR(String RR) {
-            this.putQueryParameter("RR", RR);
-            this.RR = RR;
+        public Builder rr(String rr) {
+            this.putQueryParameter("RR", rr);
+            this.rr = rr;
             return this;
         }
 

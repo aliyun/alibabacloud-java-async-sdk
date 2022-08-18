@@ -102,13 +102,13 @@ public class DescribeDnsGtmInstancesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDnsGtmInstancesRequest response) {
-            super(response);
-            this.keyword = response.keyword;
-            this.lang = response.lang;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.resourceGroupId = response.resourceGroupId;
+        private Builder(DescribeDnsGtmInstancesRequest request) {
+            super(request);
+            this.keyword = request.keyword;
+            this.lang = request.lang;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**

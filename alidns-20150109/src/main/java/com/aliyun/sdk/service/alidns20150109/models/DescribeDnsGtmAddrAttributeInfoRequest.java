@@ -76,11 +76,11 @@ public class DescribeDnsGtmAddrAttributeInfoRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDnsGtmAddrAttributeInfoRequest response) {
-            super(response);
-            this.addrs = response.addrs;
-            this.lang = response.lang;
-            this.type = response.type;
+        private Builder(DescribeDnsGtmAddrAttributeInfoRequest request) {
+            super(request);
+            this.addrs = request.addrs;
+            this.lang = request.lang;
+            this.type = request.type;
         } 
 
         /**

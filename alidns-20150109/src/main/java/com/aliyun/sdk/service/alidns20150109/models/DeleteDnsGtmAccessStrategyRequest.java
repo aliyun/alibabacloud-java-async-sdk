@@ -62,10 +62,10 @@ public class DeleteDnsGtmAccessStrategyRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteDnsGtmAccessStrategyRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.strategyId = response.strategyId;
+        private Builder(DeleteDnsGtmAccessStrategyRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.strategyId = request.strategyId;
         } 
 
         /**

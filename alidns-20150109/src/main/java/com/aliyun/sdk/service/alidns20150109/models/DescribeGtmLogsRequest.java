@@ -127,15 +127,15 @@ public class DescribeGtmLogsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeGtmLogsRequest response) {
-            super(response);
-            this.endTimestamp = response.endTimestamp;
-            this.instanceId = response.instanceId;
-            this.keyword = response.keyword;
-            this.lang = response.lang;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.startTimestamp = response.startTimestamp;
+        private Builder(DescribeGtmLogsRequest request) {
+            super(request);
+            this.endTimestamp = request.endTimestamp;
+            this.instanceId = request.instanceId;
+            this.keyword = request.keyword;
+            this.lang = request.lang;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.startTimestamp = request.startTimestamp;
         } 
 
         /**

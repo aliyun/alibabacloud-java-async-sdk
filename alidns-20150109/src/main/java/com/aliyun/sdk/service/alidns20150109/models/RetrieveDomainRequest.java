@@ -62,10 +62,10 @@ public class RetrieveDomainRequest extends Request {
             super();
         } 
 
-        private Builder(RetrieveDomainRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.lang = response.lang;
+        private Builder(RetrieveDomainRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.lang = request.lang;
         } 
 
         /**

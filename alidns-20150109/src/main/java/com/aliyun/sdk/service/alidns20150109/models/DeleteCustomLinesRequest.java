@@ -62,10 +62,10 @@ public class DeleteCustomLinesRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteCustomLinesRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.lineIds = response.lineIds;
+        private Builder(DeleteCustomLinesRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.lineIds = request.lineIds;
         } 
 
         /**

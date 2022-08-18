@@ -88,12 +88,12 @@ public class DescribeDohSubDomainStatisticsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDohSubDomainStatisticsRequest response) {
-            super(response);
-            this.endDate = response.endDate;
-            this.lang = response.lang;
-            this.startDate = response.startDate;
-            this.subDomain = response.subDomain;
+        private Builder(DescribeDohSubDomainStatisticsRequest request) {
+            super(request);
+            this.endDate = request.endDate;
+            this.lang = request.lang;
+            this.startDate = request.startDate;
+            this.subDomain = request.subDomain;
         } 
 
         /**

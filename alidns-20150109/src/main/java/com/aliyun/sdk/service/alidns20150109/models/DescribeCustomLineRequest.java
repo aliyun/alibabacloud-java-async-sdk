@@ -61,10 +61,10 @@ public class DescribeCustomLineRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeCustomLineRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.lineId = response.lineId;
+        private Builder(DescribeCustomLineRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.lineId = request.lineId;
         } 
 
         /**

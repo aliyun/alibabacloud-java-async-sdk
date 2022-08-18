@@ -101,13 +101,13 @@ public class ChangeDomainOfDnsProductRequest extends Request {
             super();
         } 
 
-        private Builder(ChangeDomainOfDnsProductRequest response) {
-            super(response);
-            this.force = response.force;
-            this.instanceId = response.instanceId;
-            this.lang = response.lang;
-            this.newDomain = response.newDomain;
-            this.userClientIp = response.userClientIp;
+        private Builder(ChangeDomainOfDnsProductRequest request) {
+            super(request);
+            this.force = request.force;
+            this.instanceId = request.instanceId;
+            this.lang = request.lang;
+            this.newDomain = request.newDomain;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

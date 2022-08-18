@@ -62,10 +62,10 @@ public class DeleteDnsGtmAddressPoolRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteDnsGtmAddressPoolRequest response) {
-            super(response);
-            this.addrPoolId = response.addrPoolId;
-            this.lang = response.lang;
+        private Builder(DeleteDnsGtmAddressPoolRequest request) {
+            super(request);
+            this.addrPoolId = request.addrPoolId;
+            this.lang = request.lang;
         } 
 
         /**

@@ -126,15 +126,15 @@ public class DescribePdnsOperateLogsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribePdnsOperateLogsRequest response) {
-            super(response);
-            this.actionType = response.actionType;
-            this.endDate = response.endDate;
-            this.keyword = response.keyword;
-            this.lang = response.lang;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.startDate = response.startDate;
+        private Builder(DescribePdnsOperateLogsRequest request) {
+            super(request);
+            this.actionType = request.actionType;
+            this.endDate = request.endDate;
+            this.keyword = request.keyword;
+            this.lang = request.lang;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.startDate = request.startDate;
         } 
 
         /**

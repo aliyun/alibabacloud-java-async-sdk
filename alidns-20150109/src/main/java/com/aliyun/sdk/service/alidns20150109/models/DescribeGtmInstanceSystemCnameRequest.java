@@ -62,10 +62,10 @@ public class DescribeGtmInstanceSystemCnameRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeGtmInstanceSystemCnameRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.lang = response.lang;
+        private Builder(DescribeGtmInstanceSystemCnameRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.lang = request.lang;
         } 
 
         /**

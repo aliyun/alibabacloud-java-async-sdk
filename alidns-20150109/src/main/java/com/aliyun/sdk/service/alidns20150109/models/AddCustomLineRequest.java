@@ -90,12 +90,12 @@ public class AddCustomLineRequest extends Request {
             super();
         } 
 
-        private Builder(AddCustomLineRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.ipSegment = response.ipSegment;
-            this.lang = response.lang;
-            this.lineName = response.lineName;
+        private Builder(AddCustomLineRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.ipSegment = request.ipSegment;
+            this.lang = request.lang;
+            this.lineName = request.lineName;
         } 
 
         /**

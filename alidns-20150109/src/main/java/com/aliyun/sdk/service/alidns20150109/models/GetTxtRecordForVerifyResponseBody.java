@@ -16,7 +16,7 @@ public class GetTxtRecordForVerifyResponseBody extends TeaModel {
     private String domainName;
 
     @NameInMap("RR")
-    private String RR;
+    private String rr;
 
     @NameInMap("RequestId")
     private String requestId;
@@ -26,7 +26,7 @@ public class GetTxtRecordForVerifyResponseBody extends TeaModel {
 
     private GetTxtRecordForVerifyResponseBody(Builder builder) {
         this.domainName = builder.domainName;
-        this.RR = builder.RR;
+        this.rr = builder.rr;
         this.requestId = builder.requestId;
         this.value = builder.value;
     }
@@ -47,10 +47,10 @@ public class GetTxtRecordForVerifyResponseBody extends TeaModel {
     }
 
     /**
-     * @return RR
+     * @return rr
      */
-    public String getRR() {
-        return this.RR;
+    public String getRr() {
+        return this.rr;
     }
 
     /**
@@ -69,7 +69,7 @@ public class GetTxtRecordForVerifyResponseBody extends TeaModel {
 
     public static final class Builder {
         private String domainName; 
-        private String RR; 
+        private String rr; 
         private String requestId; 
         private String value; 
 
@@ -84,8 +84,8 @@ public class GetTxtRecordForVerifyResponseBody extends TeaModel {
         /**
          * RR.
          */
-        public Builder RR(String RR) {
-            this.RR = RR;
+        public Builder rr(String rr) {
+            this.rr = rr;
             return this;
         }
 

@@ -62,10 +62,10 @@ public class DescribeGtmAccessStrategyRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeGtmAccessStrategyRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.strategyId = response.strategyId;
+        private Builder(DescribeGtmAccessStrategyRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.strategyId = request.strategyId;
         } 
 
         /**

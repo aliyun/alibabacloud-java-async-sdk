@@ -48,9 +48,9 @@ public class DescribeGtmMonitorAvailableConfigRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeGtmMonitorAvailableConfigRequest response) {
-            super(response);
-            this.lang = response.lang;
+        private Builder(DescribeGtmMonitorAvailableConfigRequest request) {
+            super(request);
+            this.lang = request.lang;
         } 
 
         /**

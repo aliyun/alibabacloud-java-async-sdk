@@ -100,13 +100,13 @@ public class DescribePdnsRequestStatisticRequest extends Request {
             super();
         } 
 
-        private Builder(DescribePdnsRequestStatisticRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.endDate = response.endDate;
-            this.lang = response.lang;
-            this.startDate = response.startDate;
-            this.subDomain = response.subDomain;
+        private Builder(DescribePdnsRequestStatisticRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.endDate = request.endDate;
+            this.lang = request.lang;
+            this.startDate = request.startDate;
+            this.subDomain = request.subDomain;
         } 
 
         /**

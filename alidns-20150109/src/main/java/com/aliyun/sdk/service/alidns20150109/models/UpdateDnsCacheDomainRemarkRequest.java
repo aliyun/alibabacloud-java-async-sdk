@@ -75,11 +75,11 @@ public class UpdateDnsCacheDomainRemarkRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateDnsCacheDomainRemarkRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.lang = response.lang;
-            this.remark = response.remark;
+        private Builder(UpdateDnsCacheDomainRemarkRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.lang = request.lang;
+            this.remark = request.remark;
         } 
 
         /**

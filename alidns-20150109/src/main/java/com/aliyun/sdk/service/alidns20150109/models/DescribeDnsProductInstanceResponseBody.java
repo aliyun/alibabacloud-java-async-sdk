@@ -25,10 +25,10 @@ public class DescribeDnsProductInstanceResponseBody extends TeaModel {
     private Long bindUsedCount;
 
     @NameInMap("DDosDefendFlow")
-    private Long DDosDefendFlow;
+    private Long dDosDefendFlow;
 
     @NameInMap("DDosDefendQuery")
-    private Long DDosDefendQuery;
+    private Long dDosDefendQuery;
 
     @NameInMap("DnsSLBCount")
     private Long dnsSLBCount;
@@ -122,8 +122,8 @@ public class DescribeDnsProductInstanceResponseBody extends TeaModel {
         this.bindDomainCount = builder.bindDomainCount;
         this.bindDomainUsedCount = builder.bindDomainUsedCount;
         this.bindUsedCount = builder.bindUsedCount;
-        this.DDosDefendFlow = builder.DDosDefendFlow;
-        this.DDosDefendQuery = builder.DDosDefendQuery;
+        this.dDosDefendFlow = builder.dDosDefendFlow;
+        this.dDosDefendQuery = builder.dDosDefendQuery;
         this.dnsSLBCount = builder.dnsSLBCount;
         this.dnsSecurity = builder.dnsSecurity;
         this.dnsServers = builder.dnsServers;
@@ -192,17 +192,17 @@ public class DescribeDnsProductInstanceResponseBody extends TeaModel {
     }
 
     /**
-     * @return DDosDefendFlow
+     * @return dDosDefendFlow
      */
     public Long getDDosDefendFlow() {
-        return this.DDosDefendFlow;
+        return this.dDosDefendFlow;
     }
 
     /**
-     * @return DDosDefendQuery
+     * @return dDosDefendQuery
      */
     public Long getDDosDefendQuery() {
-        return this.DDosDefendQuery;
+        return this.dDosDefendQuery;
     }
 
     /**
@@ -413,8 +413,8 @@ public class DescribeDnsProductInstanceResponseBody extends TeaModel {
         private Long bindDomainCount; 
         private Long bindDomainUsedCount; 
         private Long bindUsedCount; 
-        private Long DDosDefendFlow; 
-        private Long DDosDefendQuery; 
+        private Long dDosDefendFlow; 
+        private Long dDosDefendQuery; 
         private Long dnsSLBCount; 
         private String dnsSecurity; 
         private DnsServers dnsServers; 
@@ -480,16 +480,16 @@ public class DescribeDnsProductInstanceResponseBody extends TeaModel {
         /**
          * DDosDefendFlow.
          */
-        public Builder DDosDefendFlow(Long DDosDefendFlow) {
-            this.DDosDefendFlow = DDosDefendFlow;
+        public Builder dDosDefendFlow(Long dDosDefendFlow) {
+            this.dDosDefendFlow = dDosDefendFlow;
             return this;
         }
 
         /**
          * DDosDefendQuery.
          */
-        public Builder DDosDefendQuery(Long DDosDefendQuery) {
-            this.DDosDefendQuery = DDosDefendQuery;
+        public Builder dDosDefendQuery(Long dDosDefendQuery) {
+            this.dDosDefendQuery = dDosDefendQuery;
             return this;
         }
 

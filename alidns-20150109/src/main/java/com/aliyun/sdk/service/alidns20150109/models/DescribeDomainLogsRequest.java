@@ -140,16 +140,16 @@ public class DescribeDomainLogsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDomainLogsRequest response) {
-            super(response);
-            this.groupId = response.groupId;
-            this.keyWord = response.keyWord;
-            this.lang = response.lang;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.startDate = response.startDate;
-            this.type = response.type;
-            this.endDate = response.endDate;
+        private Builder(DescribeDomainLogsRequest request) {
+            super(request);
+            this.groupId = request.groupId;
+            this.keyWord = request.keyWord;
+            this.lang = request.lang;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.startDate = request.startDate;
+            this.type = request.type;
+            this.endDate = request.endDate;
         } 
 
         /**

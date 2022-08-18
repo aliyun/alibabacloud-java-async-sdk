@@ -74,11 +74,11 @@ public class DescribeBatchResultCountRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeBatchResultCountRequest response) {
-            super(response);
-            this.batchType = response.batchType;
-            this.lang = response.lang;
-            this.taskId = response.taskId;
+        private Builder(DescribeBatchResultCountRequest request) {
+            super(request);
+            this.batchType = request.batchType;
+            this.lang = request.lang;
+            this.taskId = request.taskId;
         } 
 
         /**

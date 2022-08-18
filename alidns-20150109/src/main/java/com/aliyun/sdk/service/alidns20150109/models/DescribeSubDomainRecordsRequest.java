@@ -141,16 +141,16 @@ public class DescribeSubDomainRecordsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeSubDomainRecordsRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.lang = response.lang;
-            this.line = response.line;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.subDomain = response.subDomain;
-            this.type = response.type;
-            this.userClientIp = response.userClientIp;
+        private Builder(DescribeSubDomainRecordsRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.lang = request.lang;
+            this.line = request.line;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.subDomain = request.subDomain;
+            this.type = request.type;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

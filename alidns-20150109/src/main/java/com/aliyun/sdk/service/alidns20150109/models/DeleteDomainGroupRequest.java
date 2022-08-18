@@ -62,10 +62,10 @@ public class DeleteDomainGroupRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteDomainGroupRequest response) {
-            super(response);
-            this.groupId = response.groupId;
-            this.lang = response.lang;
+        private Builder(DeleteDomainGroupRequest request) {
+            super(request);
+            this.groupId = request.groupId;
+            this.lang = request.lang;
         } 
 
         /**

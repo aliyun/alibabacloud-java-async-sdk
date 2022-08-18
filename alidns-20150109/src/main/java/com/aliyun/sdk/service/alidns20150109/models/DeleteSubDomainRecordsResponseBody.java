@@ -13,7 +13,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DeleteSubDomainRecordsResponseBody extends TeaModel {
     @NameInMap("RR")
-    private String RR;
+    private String rr;
 
     @NameInMap("RequestId")
     private String requestId;
@@ -22,7 +22,7 @@ public class DeleteSubDomainRecordsResponseBody extends TeaModel {
     private String totalCount;
 
     private DeleteSubDomainRecordsResponseBody(Builder builder) {
-        this.RR = builder.RR;
+        this.rr = builder.rr;
         this.requestId = builder.requestId;
         this.totalCount = builder.totalCount;
     }
@@ -36,10 +36,10 @@ public class DeleteSubDomainRecordsResponseBody extends TeaModel {
     }
 
     /**
-     * @return RR
+     * @return rr
      */
-    public String getRR() {
-        return this.RR;
+    public String getRr() {
+        return this.rr;
     }
 
     /**
@@ -57,15 +57,15 @@ public class DeleteSubDomainRecordsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String RR; 
+        private String rr; 
         private String requestId; 
         private String totalCount; 
 
         /**
          * RR.
          */
-        public Builder RR(String RR) {
-            this.RR = RR;
+        public Builder rr(String rr) {
+            this.rr = rr;
             return this;
         }
 

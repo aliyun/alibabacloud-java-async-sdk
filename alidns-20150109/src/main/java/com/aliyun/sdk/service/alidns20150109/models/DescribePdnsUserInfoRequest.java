@@ -48,9 +48,9 @@ public class DescribePdnsUserInfoRequest extends Request {
             super();
         } 
 
-        private Builder(DescribePdnsUserInfoRequest response) {
-            super(response);
-            this.lang = response.lang;
+        private Builder(DescribePdnsUserInfoRequest request) {
+            super(request);
+            this.lang = request.lang;
         } 
 
         /**

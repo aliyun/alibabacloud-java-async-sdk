@@ -76,11 +76,11 @@ public class MoveDomainResourceGroupRequest extends Request {
             super();
         } 
 
-        private Builder(MoveDomainResourceGroupRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.newResourceGroupId = response.newResourceGroupId;
-            this.resourceId = response.resourceId;
+        private Builder(MoveDomainResourceGroupRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.newResourceGroupId = request.newResourceGroupId;
+            this.resourceId = request.resourceId;
         } 
 
         /**

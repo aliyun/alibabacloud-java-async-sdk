@@ -118,14 +118,14 @@ public class AddGtmAccessStrategyRequest extends Request {
             super();
         } 
 
-        private Builder(AddGtmAccessStrategyRequest response) {
-            super(response);
-            this.accessLines = response.accessLines;
-            this.defaultAddrPoolId = response.defaultAddrPoolId;
-            this.failoverAddrPoolId = response.failoverAddrPoolId;
-            this.instanceId = response.instanceId;
-            this.lang = response.lang;
-            this.strategyName = response.strategyName;
+        private Builder(AddGtmAccessStrategyRequest request) {
+            super(request);
+            this.accessLines = request.accessLines;
+            this.defaultAddrPoolId = request.defaultAddrPoolId;
+            this.failoverAddrPoolId = request.failoverAddrPoolId;
+            this.instanceId = request.instanceId;
+            this.lang = request.lang;
+            this.strategyName = request.strategyName;
         } 
 
         /**

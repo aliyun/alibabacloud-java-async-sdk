@@ -48,9 +48,9 @@ public class CreatePdnsAppKeyRequest extends Request {
             super();
         } 
 
-        private Builder(CreatePdnsAppKeyRequest response) {
-            super(response);
-            this.lang = response.lang;
+        private Builder(CreatePdnsAppKeyRequest request) {
+            super(request);
+            this.lang = request.lang;
         } 
 
         /**

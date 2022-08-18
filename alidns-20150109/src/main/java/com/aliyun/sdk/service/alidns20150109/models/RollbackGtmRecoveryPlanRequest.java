@@ -62,10 +62,10 @@ public class RollbackGtmRecoveryPlanRequest extends Request {
             super();
         } 
 
-        private Builder(RollbackGtmRecoveryPlanRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.recoveryPlanId = response.recoveryPlanId;
+        private Builder(RollbackGtmRecoveryPlanRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.recoveryPlanId = request.recoveryPlanId;
         } 
 
         /**

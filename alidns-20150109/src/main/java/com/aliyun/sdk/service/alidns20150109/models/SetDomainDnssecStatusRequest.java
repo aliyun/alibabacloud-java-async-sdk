@@ -76,11 +76,11 @@ public class SetDomainDnssecStatusRequest extends Request {
             super();
         } 
 
-        private Builder(SetDomainDnssecStatusRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.lang = response.lang;
-            this.status = response.status;
+        private Builder(SetDomainDnssecStatusRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.lang = request.lang;
+            this.status = request.status;
         } 
 
         /**

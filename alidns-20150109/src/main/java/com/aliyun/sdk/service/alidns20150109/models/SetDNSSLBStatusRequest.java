@@ -127,15 +127,15 @@ public class SetDNSSLBStatusRequest extends Request {
             super();
         } 
 
-        private Builder(SetDNSSLBStatusRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.lang = response.lang;
-            this.line = response.line;
-            this.open = response.open;
-            this.subDomain = response.subDomain;
-            this.type = response.type;
-            this.userClientIp = response.userClientIp;
+        private Builder(SetDNSSLBStatusRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.lang = request.lang;
+            this.line = request.line;
+            this.open = request.open;
+            this.subDomain = request.subDomain;
+            this.type = request.type;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

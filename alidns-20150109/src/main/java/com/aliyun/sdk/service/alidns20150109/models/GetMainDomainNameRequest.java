@@ -62,10 +62,10 @@ public class GetMainDomainNameRequest extends Request {
             super();
         } 
 
-        private Builder(GetMainDomainNameRequest response) {
-            super(response);
-            this.inputString = response.inputString;
-            this.lang = response.lang;
+        private Builder(GetMainDomainNameRequest request) {
+            super(request);
+            this.inputString = request.inputString;
+            this.lang = request.lang;
         } 
 
         /**

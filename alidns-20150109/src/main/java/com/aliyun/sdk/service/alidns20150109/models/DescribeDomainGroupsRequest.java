@@ -88,12 +88,12 @@ public class DescribeDomainGroupsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDomainGroupsRequest response) {
-            super(response);
-            this.keyWord = response.keyWord;
-            this.lang = response.lang;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(DescribeDomainGroupsRequest request) {
+            super(request);
+            this.keyWord = request.keyWord;
+            this.lang = request.lang;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**

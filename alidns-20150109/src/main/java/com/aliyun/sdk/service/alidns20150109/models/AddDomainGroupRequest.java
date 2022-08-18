@@ -62,10 +62,10 @@ public class AddDomainGroupRequest extends Request {
             super();
         } 
 
-        private Builder(AddDomainGroupRequest response) {
-            super(response);
-            this.groupName = response.groupName;
-            this.lang = response.lang;
+        private Builder(AddDomainGroupRequest request) {
+            super(request);
+            this.groupName = request.groupName;
+            this.lang = request.lang;
         } 
 
         /**

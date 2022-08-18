@@ -76,11 +76,11 @@ public class SwitchDnsGtmInstanceStrategyModeRequest extends Request {
             super();
         } 
 
-        private Builder(SwitchDnsGtmInstanceStrategyModeRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.lang = response.lang;
-            this.strategyMode = response.strategyMode;
+        private Builder(SwitchDnsGtmInstanceStrategyModeRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.lang = request.lang;
+            this.strategyMode = request.strategyMode;
         } 
 
         /**

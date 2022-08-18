@@ -159,17 +159,17 @@ public class AddDnsCacheDomainRequest extends Request {
             super();
         } 
 
-        private Builder(AddDnsCacheDomainRequest response) {
-            super(response);
-            this.cacheTtlMax = response.cacheTtlMax;
-            this.cacheTtlMin = response.cacheTtlMin;
-            this.domainName = response.domainName;
-            this.instanceId = response.instanceId;
-            this.lang = response.lang;
-            this.remark = response.remark;
-            this.sourceDnsServer = response.sourceDnsServer;
-            this.sourceEdns = response.sourceEdns;
-            this.sourceProtocol = response.sourceProtocol;
+        private Builder(AddDnsCacheDomainRequest request) {
+            super(request);
+            this.cacheTtlMax = request.cacheTtlMax;
+            this.cacheTtlMin = request.cacheTtlMin;
+            this.domainName = request.domainName;
+            this.instanceId = request.instanceId;
+            this.lang = request.lang;
+            this.remark = request.remark;
+            this.sourceDnsServer = request.sourceDnsServer;
+            this.sourceEdns = request.sourceEdns;
+            this.sourceProtocol = request.sourceProtocol;
         } 
 
         /**

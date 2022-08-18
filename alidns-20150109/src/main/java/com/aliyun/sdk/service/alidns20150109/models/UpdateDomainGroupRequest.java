@@ -76,11 +76,11 @@ public class UpdateDomainGroupRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateDomainGroupRequest response) {
-            super(response);
-            this.groupId = response.groupId;
-            this.groupName = response.groupName;
-            this.lang = response.lang;
+        private Builder(UpdateDomainGroupRequest request) {
+            super(request);
+            this.groupId = request.groupId;
+            this.groupName = request.groupName;
+            this.lang = request.lang;
         } 
 
         /**

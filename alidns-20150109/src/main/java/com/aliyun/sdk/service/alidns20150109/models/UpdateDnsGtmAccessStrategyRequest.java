@@ -264,25 +264,25 @@ public class UpdateDnsGtmAccessStrategyRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateDnsGtmAccessStrategyRequest response) {
-            super(response);
-            this.accessMode = response.accessMode;
-            this.defaultAddrPool = response.defaultAddrPool;
-            this.defaultAddrPoolType = response.defaultAddrPoolType;
-            this.defaultLatencyOptimization = response.defaultLatencyOptimization;
-            this.defaultLbaStrategy = response.defaultLbaStrategy;
-            this.defaultMaxReturnAddrNum = response.defaultMaxReturnAddrNum;
-            this.defaultMinAvailableAddrNum = response.defaultMinAvailableAddrNum;
-            this.failoverAddrPool = response.failoverAddrPool;
-            this.failoverAddrPoolType = response.failoverAddrPoolType;
-            this.failoverLatencyOptimization = response.failoverLatencyOptimization;
-            this.failoverLbaStrategy = response.failoverLbaStrategy;
-            this.failoverMaxReturnAddrNum = response.failoverMaxReturnAddrNum;
-            this.failoverMinAvailableAddrNum = response.failoverMinAvailableAddrNum;
-            this.lang = response.lang;
-            this.lines = response.lines;
-            this.strategyId = response.strategyId;
-            this.strategyName = response.strategyName;
+        private Builder(UpdateDnsGtmAccessStrategyRequest request) {
+            super(request);
+            this.accessMode = request.accessMode;
+            this.defaultAddrPool = request.defaultAddrPool;
+            this.defaultAddrPoolType = request.defaultAddrPoolType;
+            this.defaultLatencyOptimization = request.defaultLatencyOptimization;
+            this.defaultLbaStrategy = request.defaultLbaStrategy;
+            this.defaultMaxReturnAddrNum = request.defaultMaxReturnAddrNum;
+            this.defaultMinAvailableAddrNum = request.defaultMinAvailableAddrNum;
+            this.failoverAddrPool = request.failoverAddrPool;
+            this.failoverAddrPoolType = request.failoverAddrPoolType;
+            this.failoverLatencyOptimization = request.failoverLatencyOptimization;
+            this.failoverLbaStrategy = request.failoverLbaStrategy;
+            this.failoverMaxReturnAddrNum = request.failoverMaxReturnAddrNum;
+            this.failoverMinAvailableAddrNum = request.failoverMinAvailableAddrNum;
+            this.lang = request.lang;
+            this.lines = request.lines;
+            this.strategyId = request.strategyId;
+            this.strategyName = request.strategyName;
         } 
 
         /**

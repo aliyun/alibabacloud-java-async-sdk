@@ -328,8 +328,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UpdateIspFlushCacheInstanceConfigResponse> updateIspFlushCacheInstanceConfig(UpdateIspFlushCacheInstanceConfigRequest request);
 
-    CompletableFuture<ValidateDnsGtmAttributeInfoResponse> validateDnsGtmAttributeInfo(ValidateDnsGtmAttributeInfoRequest request);
-
     CompletableFuture<ValidateDnsGtmCnameRrCanUseResponse> validateDnsGtmCnameRrCanUse(ValidateDnsGtmCnameRrCanUseRequest request);
 
     CompletableFuture<ValidatePdnsUdpIpSegmentResponse> validatePdnsUdpIpSegment(ValidatePdnsUdpIpSegmentRequest request);

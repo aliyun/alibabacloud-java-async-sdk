@@ -61,10 +61,10 @@ public class DeleteGtmAccessStrategyRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteGtmAccessStrategyRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.strategyId = response.strategyId;
+        private Builder(DeleteGtmAccessStrategyRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.strategyId = request.strategyId;
         } 
 
         /**

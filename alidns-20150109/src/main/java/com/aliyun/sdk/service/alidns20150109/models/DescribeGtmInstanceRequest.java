@@ -75,11 +75,11 @@ public class DescribeGtmInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeGtmInstanceRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.lang = response.lang;
-            this.needDetailAttributes = response.needDetailAttributes;
+        private Builder(DescribeGtmInstanceRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.lang = request.lang;
+            this.needDetailAttributes = request.needDetailAttributes;
         } 
 
         /**

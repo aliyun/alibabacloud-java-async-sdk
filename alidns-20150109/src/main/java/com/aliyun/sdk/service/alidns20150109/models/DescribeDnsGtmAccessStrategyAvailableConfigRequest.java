@@ -76,11 +76,11 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigRequest extends Request 
             super();
         } 
 
-        private Builder(DescribeDnsGtmAccessStrategyAvailableConfigRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.lang = response.lang;
-            this.strategyMode = response.strategyMode;
+        private Builder(DescribeDnsGtmAccessStrategyAvailableConfigRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.lang = request.lang;
+            this.strategyMode = request.strategyMode;
         } 
 
         /**

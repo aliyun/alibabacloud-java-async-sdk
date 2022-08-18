@@ -75,11 +75,11 @@ public class DescribeDomainInfoRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDomainInfoRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.lang = response.lang;
-            this.needDetailAttributes = response.needDetailAttributes;
+        private Builder(DescribeDomainInfoRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.lang = request.lang;
+            this.needDetailAttributes = request.needDetailAttributes;
         } 
 
         /**

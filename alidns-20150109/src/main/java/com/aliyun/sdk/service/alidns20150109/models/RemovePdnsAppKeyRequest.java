@@ -61,10 +61,10 @@ public class RemovePdnsAppKeyRequest extends Request {
             super();
         } 
 
-        private Builder(RemovePdnsAppKeyRequest response) {
-            super(response);
-            this.appKeyId = response.appKeyId;
-            this.lang = response.lang;
+        private Builder(RemovePdnsAppKeyRequest request) {
+            super(request);
+            this.appKeyId = request.appKeyId;
+            this.lang = request.lang;
         } 
 
         /**

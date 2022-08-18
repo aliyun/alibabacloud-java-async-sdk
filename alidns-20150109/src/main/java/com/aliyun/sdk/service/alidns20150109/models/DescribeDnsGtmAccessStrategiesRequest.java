@@ -103,13 +103,13 @@ public class DescribeDnsGtmAccessStrategiesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDnsGtmAccessStrategiesRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.lang = response.lang;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.strategyMode = response.strategyMode;
+        private Builder(DescribeDnsGtmAccessStrategiesRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.lang = request.lang;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.strategyMode = request.strategyMode;
         } 
 
         /**

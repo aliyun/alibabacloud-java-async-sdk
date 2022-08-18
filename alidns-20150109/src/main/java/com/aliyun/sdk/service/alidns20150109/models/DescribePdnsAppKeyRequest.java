@@ -61,10 +61,10 @@ public class DescribePdnsAppKeyRequest extends Request {
             super();
         } 
 
-        private Builder(DescribePdnsAppKeyRequest response) {
-            super(response);
-            this.appKeyId = response.appKeyId;
-            this.lang = response.lang;
+        private Builder(DescribePdnsAppKeyRequest request) {
+            super(request);
+            this.appKeyId = request.appKeyId;
+            this.lang = request.lang;
         } 
 
         /**

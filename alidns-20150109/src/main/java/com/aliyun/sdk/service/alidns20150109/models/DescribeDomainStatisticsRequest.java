@@ -102,13 +102,13 @@ public class DescribeDomainStatisticsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDomainStatisticsRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.domainType = response.domainType;
-            this.endDate = response.endDate;
-            this.lang = response.lang;
-            this.startDate = response.startDate;
+        private Builder(DescribeDomainStatisticsRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.domainType = request.domainType;
+            this.endDate = request.endDate;
+            this.lang = request.lang;
+            this.startDate = request.startDate;
         } 
 
         /**

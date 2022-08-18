@@ -141,16 +141,16 @@ public class DescribeIspFlushCacheTasksRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeIspFlushCacheTasksRequest response) {
-            super(response);
-            this.direction = response.direction;
-            this.domainName = response.domainName;
-            this.instanceId = response.instanceId;
-            this.isp = response.isp;
-            this.lang = response.lang;
-            this.orderBy = response.orderBy;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(DescribeIspFlushCacheTasksRequest request) {
+            super(request);
+            this.direction = request.direction;
+            this.domainName = request.domainName;
+            this.instanceId = request.instanceId;
+            this.isp = request.isp;
+            this.lang = request.lang;
+            this.orderBy = request.orderBy;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**

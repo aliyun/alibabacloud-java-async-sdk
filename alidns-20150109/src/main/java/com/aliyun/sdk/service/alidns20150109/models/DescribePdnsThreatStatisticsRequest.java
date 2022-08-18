@@ -204,21 +204,21 @@ public class DescribePdnsThreatStatisticsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribePdnsThreatStatisticsRequest response) {
-            super(response);
-            this.direction = response.direction;
-            this.domainName = response.domainName;
-            this.endDate = response.endDate;
-            this.lang = response.lang;
-            this.orderBy = response.orderBy;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.startDate = response.startDate;
-            this.subDomain = response.subDomain;
-            this.threatLevel = response.threatLevel;
-            this.threatSourceIp = response.threatSourceIp;
-            this.threatType = response.threatType;
-            this.type = response.type;
+        private Builder(DescribePdnsThreatStatisticsRequest request) {
+            super(request);
+            this.direction = request.direction;
+            this.domainName = request.domainName;
+            this.endDate = request.endDate;
+            this.lang = request.lang;
+            this.orderBy = request.orderBy;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.startDate = request.startDate;
+            this.subDomain = request.subDomain;
+            this.threatLevel = request.threatLevel;
+            this.threatSourceIp = request.threatSourceIp;
+            this.threatType = request.threatType;
+            this.type = request.type;
         } 
 
         /**

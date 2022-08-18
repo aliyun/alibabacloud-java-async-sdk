@@ -76,11 +76,11 @@ public class OperateBatchDomainRequest extends Request {
             super();
         } 
 
-        private Builder(OperateBatchDomainRequest response) {
-            super(response);
-            this.domainRecordInfo = response.domainRecordInfo;
-            this.lang = response.lang;
-            this.type = response.type;
+        private Builder(OperateBatchDomainRequest request) {
+            super(request);
+            this.domainRecordInfo = request.domainRecordInfo;
+            this.lang = request.lang;
+            this.type = request.type;
         } 
 
         /**

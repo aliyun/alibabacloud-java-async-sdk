@@ -76,11 +76,11 @@ public class SetDnsGtmAccessModeRequest extends Request {
             super();
         } 
 
-        private Builder(SetDnsGtmAccessModeRequest response) {
-            super(response);
-            this.accessMode = response.accessMode;
-            this.lang = response.lang;
-            this.strategyId = response.strategyId;
+        private Builder(SetDnsGtmAccessModeRequest request) {
+            super(request);
+            this.accessMode = request.accessMode;
+            this.lang = request.lang;
+            this.strategyId = request.strategyId;
         } 
 
         /**

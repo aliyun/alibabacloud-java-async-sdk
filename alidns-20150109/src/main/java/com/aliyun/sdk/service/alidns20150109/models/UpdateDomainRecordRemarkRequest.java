@@ -88,12 +88,12 @@ public class UpdateDomainRecordRemarkRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateDomainRecordRemarkRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.recordId = response.recordId;
-            this.remark = response.remark;
-            this.userClientIp = response.userClientIp;
+        private Builder(UpdateDomainRecordRemarkRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.recordId = request.recordId;
+            this.remark = request.remark;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

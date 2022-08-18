@@ -76,11 +76,11 @@ public class AddDomainBackupRequest extends Request {
             super();
         } 
 
-        private Builder(AddDomainBackupRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.lang = response.lang;
-            this.periodType = response.periodType;
+        private Builder(AddDomainBackupRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.lang = request.lang;
+            this.periodType = request.periodType;
         } 
 
         /**

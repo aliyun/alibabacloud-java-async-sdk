@@ -153,17 +153,17 @@ public class UpdateGtmInstanceGlobalConfigRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateGtmInstanceGlobalConfigRequest response) {
-            super(response);
-            this.alertGroup = response.alertGroup;
-            this.cnameCustomDomainName = response.cnameCustomDomainName;
-            this.cnameMode = response.cnameMode;
-            this.instanceId = response.instanceId;
-            this.instanceName = response.instanceName;
-            this.lang = response.lang;
-            this.lbaStrategy = response.lbaStrategy;
-            this.ttl = response.ttl;
-            this.userDomainName = response.userDomainName;
+        private Builder(UpdateGtmInstanceGlobalConfigRequest request) {
+            super(request);
+            this.alertGroup = request.alertGroup;
+            this.cnameCustomDomainName = request.cnameCustomDomainName;
+            this.cnameMode = request.cnameMode;
+            this.instanceId = request.instanceId;
+            this.instanceName = request.instanceName;
+            this.lang = request.lang;
+            this.lbaStrategy = request.lbaStrategy;
+            this.ttl = request.ttl;
+            this.userDomainName = request.userDomainName;
         } 
 
         /**

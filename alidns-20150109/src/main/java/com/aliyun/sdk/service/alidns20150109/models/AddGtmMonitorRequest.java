@@ -146,16 +146,16 @@ public class AddGtmMonitorRequest extends Request {
             super();
         } 
 
-        private Builder(AddGtmMonitorRequest response) {
-            super(response);
-            this.addrPoolId = response.addrPoolId;
-            this.evaluationCount = response.evaluationCount;
-            this.interval = response.interval;
-            this.ispCityNode = response.ispCityNode;
-            this.lang = response.lang;
-            this.monitorExtendInfo = response.monitorExtendInfo;
-            this.protocolType = response.protocolType;
-            this.timeout = response.timeout;
+        private Builder(AddGtmMonitorRequest request) {
+            super(request);
+            this.addrPoolId = request.addrPoolId;
+            this.evaluationCount = request.evaluationCount;
+            this.interval = request.interval;
+            this.ispCityNode = request.ispCityNode;
+            this.lang = request.lang;
+            this.monitorExtendInfo = request.monitorExtendInfo;
+            this.protocolType = request.protocolType;
+            this.timeout = request.timeout;
         } 
 
         /**

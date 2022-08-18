@@ -62,10 +62,10 @@ public class DescribeDomainDnssecInfoRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDomainDnssecInfoRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.lang = response.lang;
+        private Builder(DescribeDomainDnssecInfoRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.lang = request.lang;
         } 
 
         /**

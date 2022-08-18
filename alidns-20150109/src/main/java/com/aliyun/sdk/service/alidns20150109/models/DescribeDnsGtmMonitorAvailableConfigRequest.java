@@ -48,9 +48,9 @@ public class DescribeDnsGtmMonitorAvailableConfigRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDnsGtmMonitorAvailableConfigRequest response) {
-            super(response);
-            this.lang = response.lang;
+        private Builder(DescribeDnsGtmMonitorAvailableConfigRequest request) {
+            super(request);
+            this.lang = request.lang;
         } 
 
         /**

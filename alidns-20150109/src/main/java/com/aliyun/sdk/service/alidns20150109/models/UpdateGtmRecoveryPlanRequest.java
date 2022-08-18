@@ -101,13 +101,13 @@ public class UpdateGtmRecoveryPlanRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateGtmRecoveryPlanRequest response) {
-            super(response);
-            this.faultAddrPool = response.faultAddrPool;
-            this.lang = response.lang;
-            this.name = response.name;
-            this.recoveryPlanId = response.recoveryPlanId;
-            this.remark = response.remark;
+        private Builder(UpdateGtmRecoveryPlanRequest request) {
+            super(request);
+            this.faultAddrPool = request.faultAddrPool;
+            this.lang = request.lang;
+            this.name = request.name;
+            this.recoveryPlanId = request.recoveryPlanId;
+            this.remark = request.remark;
         } 
 
         /**

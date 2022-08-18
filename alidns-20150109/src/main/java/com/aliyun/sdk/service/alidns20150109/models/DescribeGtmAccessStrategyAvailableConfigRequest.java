@@ -62,10 +62,10 @@ public class DescribeGtmAccessStrategyAvailableConfigRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeGtmAccessStrategyAvailableConfigRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.lang = response.lang;
+        private Builder(DescribeGtmAccessStrategyAvailableConfigRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.lang = request.lang;
         } 
 
         /**

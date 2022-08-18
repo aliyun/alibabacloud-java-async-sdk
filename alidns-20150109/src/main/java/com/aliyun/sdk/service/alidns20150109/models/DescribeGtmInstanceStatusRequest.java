@@ -62,10 +62,10 @@ public class DescribeGtmInstanceStatusRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeGtmInstanceStatusRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.lang = response.lang;
+        private Builder(DescribeGtmInstanceStatusRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.lang = request.lang;
         } 
 
         /**

@@ -61,10 +61,10 @@ public class ValidatePdnsUdpIpSegmentRequest extends Request {
             super();
         } 
 
-        private Builder(ValidatePdnsUdpIpSegmentRequest response) {
-            super(response);
-            this.ip = response.ip;
-            this.lang = response.lang;
+        private Builder(ValidatePdnsUdpIpSegmentRequest request) {
+            super(request);
+            this.ip = request.ip;
+            this.lang = request.lang;
         } 
 
         /**

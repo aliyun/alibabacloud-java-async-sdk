@@ -76,11 +76,11 @@ public class MoveGtmResourceGroupRequest extends Request {
             super();
         } 
 
-        private Builder(MoveGtmResourceGroupRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.newResourceGroupId = response.newResourceGroupId;
-            this.resourceId = response.resourceId;
+        private Builder(MoveGtmResourceGroupRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.newResourceGroupId = request.newResourceGroupId;
+            this.resourceId = request.resourceId;
         } 
 
         /**

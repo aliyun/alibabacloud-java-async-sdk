@@ -19,7 +19,7 @@ public class GetMainDomainNameResponseBody extends TeaModel {
     private String domainName;
 
     @NameInMap("RR")
-    private String RR;
+    private String rr;
 
     @NameInMap("RequestId")
     private String requestId;
@@ -27,7 +27,7 @@ public class GetMainDomainNameResponseBody extends TeaModel {
     private GetMainDomainNameResponseBody(Builder builder) {
         this.domainLevel = builder.domainLevel;
         this.domainName = builder.domainName;
-        this.RR = builder.RR;
+        this.rr = builder.rr;
         this.requestId = builder.requestId;
     }
 
@@ -54,10 +54,10 @@ public class GetMainDomainNameResponseBody extends TeaModel {
     }
 
     /**
-     * @return RR
+     * @return rr
      */
-    public String getRR() {
-        return this.RR;
+    public String getRr() {
+        return this.rr;
     }
 
     /**
@@ -70,7 +70,7 @@ public class GetMainDomainNameResponseBody extends TeaModel {
     public static final class Builder {
         private Long domainLevel; 
         private String domainName; 
-        private String RR; 
+        private String rr; 
         private String requestId; 
 
         /**
@@ -92,8 +92,8 @@ public class GetMainDomainNameResponseBody extends TeaModel {
         /**
          * RR.
          */
-        public Builder RR(String RR) {
-            this.RR = RR;
+        public Builder rr(String rr) {
+            this.rr = rr;
             return this;
         }
 

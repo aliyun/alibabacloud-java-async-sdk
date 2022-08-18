@@ -75,11 +75,11 @@ public class DeleteDomainRecordRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteDomainRecordRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.recordId = response.recordId;
-            this.userClientIp = response.userClientIp;
+        private Builder(DeleteDomainRecordRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.recordId = request.recordId;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

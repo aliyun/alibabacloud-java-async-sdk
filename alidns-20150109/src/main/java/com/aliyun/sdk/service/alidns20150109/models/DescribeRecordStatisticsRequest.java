@@ -116,14 +116,14 @@ public class DescribeRecordStatisticsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeRecordStatisticsRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.domainType = response.domainType;
-            this.endDate = response.endDate;
-            this.lang = response.lang;
-            this.rr = response.rr;
-            this.startDate = response.startDate;
+        private Builder(DescribeRecordStatisticsRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.domainType = request.domainType;
+            this.endDate = request.endDate;
+            this.lang = request.lang;
+            this.rr = request.rr;
+            this.startDate = request.startDate;
         } 
 
         /**

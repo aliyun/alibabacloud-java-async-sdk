@@ -89,12 +89,12 @@ public class UpdateDNSSLBWeightRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateDNSSLBWeightRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.recordId = response.recordId;
-            this.userClientIp = response.userClientIp;
-            this.weight = response.weight;
+        private Builder(UpdateDNSSLBWeightRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.recordId = request.recordId;
+            this.userClientIp = request.userClientIp;
+            this.weight = request.weight;
         } 
 
         /**

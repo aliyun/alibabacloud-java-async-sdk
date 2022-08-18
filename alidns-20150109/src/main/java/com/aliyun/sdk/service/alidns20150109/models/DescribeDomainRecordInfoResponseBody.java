@@ -37,7 +37,7 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
     private String punyCode;
 
     @NameInMap("RR")
-    private String RR;
+    private String rr;
 
     @NameInMap("RecordId")
     private String recordId;
@@ -66,7 +66,7 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         this.locked = builder.locked;
         this.priority = builder.priority;
         this.punyCode = builder.punyCode;
-        this.RR = builder.RR;
+        this.rr = builder.rr;
         this.recordId = builder.recordId;
         this.requestId = builder.requestId;
         this.status = builder.status;
@@ -140,10 +140,10 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
     }
 
     /**
-     * @return RR
+     * @return rr
      */
-    public String getRR() {
-        return this.RR;
+    public String getRr() {
+        return this.rr;
     }
 
     /**
@@ -197,7 +197,7 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         private Boolean locked; 
         private Long priority; 
         private String punyCode; 
-        private String RR; 
+        private String rr; 
         private String recordId; 
         private String requestId; 
         private String status; 
@@ -272,8 +272,8 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         /**
          * RR.
          */
-        public Builder RR(String RR) {
-            this.RR = RR;
+        public Builder rr(String rr) {
+            this.rr = rr;
             return this;
         }
 

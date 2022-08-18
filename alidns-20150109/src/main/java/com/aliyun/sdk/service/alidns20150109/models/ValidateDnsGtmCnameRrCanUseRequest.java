@@ -118,14 +118,14 @@ public class ValidateDnsGtmCnameRrCanUseRequest extends Request {
             super();
         } 
 
-        private Builder(ValidateDnsGtmCnameRrCanUseRequest response) {
-            super(response);
-            this.cnameMode = response.cnameMode;
-            this.cnameRr = response.cnameRr;
-            this.cnameType = response.cnameType;
-            this.cnameZone = response.cnameZone;
-            this.instanceId = response.instanceId;
-            this.lang = response.lang;
+        private Builder(ValidateDnsGtmCnameRrCanUseRequest request) {
+            super(request);
+            this.cnameMode = request.cnameMode;
+            this.cnameRr = request.cnameRr;
+            this.cnameType = request.cnameType;
+            this.cnameZone = request.cnameZone;
+            this.instanceId = request.instanceId;
+            this.lang = request.lang;
         } 
 
         /**

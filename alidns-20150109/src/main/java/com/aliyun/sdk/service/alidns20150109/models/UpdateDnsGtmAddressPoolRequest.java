@@ -103,13 +103,13 @@ public class UpdateDnsGtmAddressPoolRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateDnsGtmAddressPoolRequest response) {
-            super(response);
-            this.addr = response.addr;
-            this.addrPoolId = response.addrPoolId;
-            this.lang = response.lang;
-            this.lbaStrategy = response.lbaStrategy;
-            this.name = response.name;
+        private Builder(UpdateDnsGtmAddressPoolRequest request) {
+            super(request);
+            this.addr = request.addr;
+            this.addrPoolId = request.addrPoolId;
+            this.lang = request.lang;
+            this.lbaStrategy = request.lbaStrategy;
+            this.name = request.name;
         } 
 
         /**

@@ -142,16 +142,16 @@ public class UpdateDnsCacheDomainRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateDnsCacheDomainRequest response) {
-            super(response);
-            this.cacheTtlMax = response.cacheTtlMax;
-            this.cacheTtlMin = response.cacheTtlMin;
-            this.domainName = response.domainName;
-            this.instanceId = response.instanceId;
-            this.lang = response.lang;
-            this.sourceDnsServer = response.sourceDnsServer;
-            this.sourceEdns = response.sourceEdns;
-            this.sourceProtocol = response.sourceProtocol;
+        private Builder(UpdateDnsCacheDomainRequest request) {
+            super(request);
+            this.cacheTtlMax = request.cacheTtlMax;
+            this.cacheTtlMin = request.cacheTtlMin;
+            this.domainName = request.domainName;
+            this.instanceId = request.instanceId;
+            this.lang = request.lang;
+            this.sourceDnsServer = request.sourceDnsServer;
+            this.sourceEdns = request.sourceEdns;
+            this.sourceProtocol = request.sourceProtocol;
         } 
 
         /**

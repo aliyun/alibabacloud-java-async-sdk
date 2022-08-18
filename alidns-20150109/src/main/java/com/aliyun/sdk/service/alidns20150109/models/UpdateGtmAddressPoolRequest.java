@@ -116,14 +116,14 @@ public class UpdateGtmAddressPoolRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateGtmAddressPoolRequest response) {
-            super(response);
-            this.addr = response.addr;
-            this.addrPoolId = response.addrPoolId;
-            this.lang = response.lang;
-            this.minAvailableAddrNum = response.minAvailableAddrNum;
-            this.name = response.name;
-            this.type = response.type;
+        private Builder(UpdateGtmAddressPoolRequest request) {
+            super(request);
+            this.addr = request.addr;
+            this.addrPoolId = request.addrPoolId;
+            this.lang = request.lang;
+            this.minAvailableAddrNum = request.minAvailableAddrNum;
+            this.name = request.name;
+            this.type = request.type;
         } 
 
         /**

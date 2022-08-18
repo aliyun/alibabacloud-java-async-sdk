@@ -113,14 +113,14 @@ public class DescribeBatchResultDetailRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeBatchResultDetailRequest response) {
-            super(response);
-            this.batchType = response.batchType;
-            this.lang = response.lang;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.status = response.status;
-            this.taskId = response.taskId;
+        private Builder(DescribeBatchResultDetailRequest request) {
+            super(request);
+            this.batchType = request.batchType;
+            this.lang = request.lang;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.status = request.status;
+            this.taskId = request.taskId;
         } 
 
         /**

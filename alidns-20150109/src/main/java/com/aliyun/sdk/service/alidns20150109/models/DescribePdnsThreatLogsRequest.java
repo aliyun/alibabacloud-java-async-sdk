@@ -152,17 +152,17 @@ public class DescribePdnsThreatLogsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribePdnsThreatLogsRequest response) {
-            super(response);
-            this.endDate = response.endDate;
-            this.keyword = response.keyword;
-            this.lang = response.lang;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.startDate = response.startDate;
-            this.threatLevel = response.threatLevel;
-            this.threatSourceIp = response.threatSourceIp;
-            this.threatType = response.threatType;
+        private Builder(DescribePdnsThreatLogsRequest request) {
+            super(request);
+            this.endDate = request.endDate;
+            this.keyword = request.keyword;
+            this.lang = request.lang;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.startDate = request.startDate;
+            this.threatLevel = request.threatLevel;
+            this.threatSourceIp = request.threatSourceIp;
+            this.threatType = request.threatType;
         } 
 
         /**

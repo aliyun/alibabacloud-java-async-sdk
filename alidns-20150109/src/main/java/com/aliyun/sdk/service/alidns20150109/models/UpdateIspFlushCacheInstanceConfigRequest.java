@@ -76,11 +76,11 @@ public class UpdateIspFlushCacheInstanceConfigRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateIspFlushCacheInstanceConfigRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.instanceName = response.instanceName;
-            this.lang = response.lang;
+        private Builder(UpdateIspFlushCacheInstanceConfigRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.instanceName = request.instanceName;
+            this.lang = request.lang;
         } 
 
         /**

@@ -62,10 +62,10 @@ public class DescribeDnsGtmInstanceAddressPoolRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDnsGtmInstanceAddressPoolRequest response) {
-            super(response);
-            this.addrPoolId = response.addrPoolId;
-            this.lang = response.lang;
+        private Builder(DescribeDnsGtmInstanceAddressPoolRequest request) {
+            super(request);
+            this.addrPoolId = request.addrPoolId;
+            this.lang = request.lang;
         } 
 
         /**

@@ -76,11 +76,11 @@ public class SetGtmAccessModeRequest extends Request {
             super();
         } 
 
-        private Builder(SetGtmAccessModeRequest response) {
-            super(response);
-            this.accessMode = response.accessMode;
-            this.lang = response.lang;
-            this.strategyId = response.strategyId;
+        private Builder(SetGtmAccessModeRequest request) {
+            super(request);
+            this.accessMode = request.accessMode;
+            this.lang = request.lang;
+            this.strategyId = request.strategyId;
         } 
 
         /**

@@ -143,16 +143,16 @@ public class UpdateGtmMonitorRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateGtmMonitorRequest response) {
-            super(response);
-            this.evaluationCount = response.evaluationCount;
-            this.interval = response.interval;
-            this.ispCityNode = response.ispCityNode;
-            this.lang = response.lang;
-            this.monitorConfigId = response.monitorConfigId;
-            this.monitorExtendInfo = response.monitorExtendInfo;
-            this.protocolType = response.protocolType;
-            this.timeout = response.timeout;
+        private Builder(UpdateGtmMonitorRequest request) {
+            super(request);
+            this.evaluationCount = request.evaluationCount;
+            this.interval = request.interval;
+            this.ispCityNode = request.ispCityNode;
+            this.lang = request.lang;
+            this.monitorConfigId = request.monitorConfigId;
+            this.monitorExtendInfo = request.monitorExtendInfo;
+            this.protocolType = request.protocolType;
+            this.timeout = request.timeout;
         } 
 
         /**

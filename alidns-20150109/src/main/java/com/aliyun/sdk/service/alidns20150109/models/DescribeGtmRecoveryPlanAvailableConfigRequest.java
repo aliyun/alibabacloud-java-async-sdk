@@ -48,9 +48,9 @@ public class DescribeGtmRecoveryPlanAvailableConfigRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeGtmRecoveryPlanAvailableConfigRequest response) {
-            super(response);
-            this.lang = response.lang;
+        private Builder(DescribeGtmRecoveryPlanAvailableConfigRequest request) {
+            super(request);
+            this.lang = request.lang;
         } 
 
         /**

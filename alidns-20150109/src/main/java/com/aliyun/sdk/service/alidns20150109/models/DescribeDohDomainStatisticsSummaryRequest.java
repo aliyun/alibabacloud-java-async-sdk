@@ -114,14 +114,14 @@ public class DescribeDohDomainStatisticsSummaryRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDohDomainStatisticsSummaryRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.endDate = response.endDate;
-            this.lang = response.lang;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.startDate = response.startDate;
+        private Builder(DescribeDohDomainStatisticsSummaryRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.endDate = request.endDate;
+            this.lang = request.lang;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.startDate = request.startDate;
         } 
 
         /**

@@ -61,10 +61,10 @@ public class PausePdnsServiceRequest extends Request {
             super();
         } 
 
-        private Builder(PausePdnsServiceRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.serviceType = response.serviceType;
+        private Builder(PausePdnsServiceRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.serviceType = request.serviceType;
         } 
 
         /**

@@ -128,15 +128,15 @@ public class DescribeTransferDomainsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeTransferDomainsRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.fromUserId = response.fromUserId;
-            this.lang = response.lang;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.targetUserId = response.targetUserId;
-            this.transferType = response.transferType;
+        private Builder(DescribeTransferDomainsRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.fromUserId = request.fromUserId;
+            this.lang = request.lang;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.targetUserId = request.targetUserId;
+            this.transferType = request.transferType;
         } 
 
         /**

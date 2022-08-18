@@ -115,14 +115,14 @@ public class DescribeDNSSLBSubDomainsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDNSSLBSubDomainsRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.lang = response.lang;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.rr = response.rr;
-            this.userClientIp = response.userClientIp;
+        private Builder(DescribeDNSSLBSubDomainsRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.lang = request.lang;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.rr = request.rr;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

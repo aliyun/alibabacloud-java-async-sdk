@@ -62,10 +62,10 @@ public class DescribeDnsGtmInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDnsGtmInstanceRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.lang = response.lang;
+        private Builder(DescribeDnsGtmInstanceRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.lang = request.lang;
         } 
 
         /**

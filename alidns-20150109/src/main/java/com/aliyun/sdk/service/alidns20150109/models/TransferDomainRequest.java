@@ -89,12 +89,12 @@ public class TransferDomainRequest extends Request {
             super();
         } 
 
-        private Builder(TransferDomainRequest response) {
-            super(response);
-            this.domainNames = response.domainNames;
-            this.lang = response.lang;
-            this.remark = response.remark;
-            this.targetUserId = response.targetUserId;
+        private Builder(TransferDomainRequest request) {
+            super(request);
+            this.domainNames = request.domainNames;
+            this.lang = request.lang;
+            this.remark = request.remark;
+            this.targetUserId = request.targetUserId;
         } 
 
         /**

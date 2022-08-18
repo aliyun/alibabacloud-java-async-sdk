@@ -146,16 +146,16 @@ public class UpdateDnsGtmMonitorRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateDnsGtmMonitorRequest response) {
-            super(response);
-            this.evaluationCount = response.evaluationCount;
-            this.interval = response.interval;
-            this.ispCityNode = response.ispCityNode;
-            this.lang = response.lang;
-            this.monitorConfigId = response.monitorConfigId;
-            this.monitorExtendInfo = response.monitorExtendInfo;
-            this.protocolType = response.protocolType;
-            this.timeout = response.timeout;
+        private Builder(UpdateDnsGtmMonitorRequest request) {
+            super(request);
+            this.evaluationCount = request.evaluationCount;
+            this.interval = request.interval;
+            this.ispCityNode = request.ispCityNode;
+            this.lang = request.lang;
+            this.monitorConfigId = request.monitorConfigId;
+            this.monitorExtendInfo = request.monitorExtendInfo;
+            this.protocolType = request.protocolType;
+            this.timeout = request.timeout;
         } 
 
         /**

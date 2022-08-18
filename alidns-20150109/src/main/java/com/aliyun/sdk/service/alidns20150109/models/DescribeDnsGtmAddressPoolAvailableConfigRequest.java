@@ -62,10 +62,10 @@ public class DescribeDnsGtmAddressPoolAvailableConfigRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDnsGtmAddressPoolAvailableConfigRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.lang = response.lang;
+        private Builder(DescribeDnsGtmAddressPoolAvailableConfigRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.lang = request.lang;
         } 
 
         /**

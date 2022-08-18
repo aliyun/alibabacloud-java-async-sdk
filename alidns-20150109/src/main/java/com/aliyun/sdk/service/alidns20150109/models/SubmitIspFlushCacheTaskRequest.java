@@ -90,12 +90,12 @@ public class SubmitIspFlushCacheTaskRequest extends Request {
             super();
         } 
 
-        private Builder(SubmitIspFlushCacheTaskRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.domainName = response.domainName;
-            this.isp = response.isp;
-            this.lang = response.lang;
+        private Builder(SubmitIspFlushCacheTaskRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.domainName = request.domainName;
+            this.isp = request.isp;
+            this.lang = request.lang;
         } 
 
         /**

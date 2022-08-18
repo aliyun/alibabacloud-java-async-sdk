@@ -74,11 +74,11 @@ public class CreatePdnsUdpIpSegmentRequest extends Request {
             super();
         } 
 
-        private Builder(CreatePdnsUdpIpSegmentRequest response) {
-            super(response);
-            this.ip = response.ip;
-            this.lang = response.lang;
-            this.name = response.name;
+        private Builder(CreatePdnsUdpIpSegmentRequest request) {
+            super(request);
+            this.ip = request.ip;
+            this.lang = request.lang;
+            this.name = request.name;
         } 
 
         /**

@@ -90,12 +90,12 @@ public class CopyGtmConfigRequest extends Request {
             super();
         } 
 
-        private Builder(CopyGtmConfigRequest response) {
-            super(response);
-            this.copyType = response.copyType;
-            this.lang = response.lang;
-            this.sourceId = response.sourceId;
-            this.targetId = response.targetId;
+        private Builder(CopyGtmConfigRequest request) {
+            super(request);
+            this.copyType = request.copyType;
+            this.lang = request.lang;
+            this.sourceId = request.sourceId;
+            this.targetId = request.targetId;
         } 
 
         /**

@@ -75,11 +75,11 @@ public class GetTxtRecordForVerifyRequest extends Request {
             super();
         } 
 
-        private Builder(GetTxtRecordForVerifyRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.lang = response.lang;
-            this.type = response.type;
+        private Builder(GetTxtRecordForVerifyRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.lang = request.lang;
+            this.type = request.type;
         } 
 
         /**

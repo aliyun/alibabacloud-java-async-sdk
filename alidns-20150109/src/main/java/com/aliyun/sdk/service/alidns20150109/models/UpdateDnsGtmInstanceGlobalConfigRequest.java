@@ -193,20 +193,20 @@ public class UpdateDnsGtmInstanceGlobalConfigRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateDnsGtmInstanceGlobalConfigRequest response) {
-            super(response);
-            this.alertConfig = response.alertConfig;
-            this.alertGroup = response.alertGroup;
-            this.cnameType = response.cnameType;
-            this.forceUpdate = response.forceUpdate;
-            this.instanceId = response.instanceId;
-            this.instanceName = response.instanceName;
-            this.lang = response.lang;
-            this.publicCnameMode = response.publicCnameMode;
-            this.publicRr = response.publicRr;
-            this.publicUserDomainName = response.publicUserDomainName;
-            this.publicZoneName = response.publicZoneName;
-            this.ttl = response.ttl;
+        private Builder(UpdateDnsGtmInstanceGlobalConfigRequest request) {
+            super(request);
+            this.alertConfig = request.alertConfig;
+            this.alertGroup = request.alertGroup;
+            this.cnameType = request.cnameType;
+            this.forceUpdate = request.forceUpdate;
+            this.instanceId = request.instanceId;
+            this.instanceName = request.instanceName;
+            this.lang = request.lang;
+            this.publicCnameMode = request.publicCnameMode;
+            this.publicRr = request.publicRr;
+            this.publicUserDomainName = request.publicUserDomainName;
+            this.publicZoneName = request.publicZoneName;
+            this.ttl = request.ttl;
         } 
 
         /**

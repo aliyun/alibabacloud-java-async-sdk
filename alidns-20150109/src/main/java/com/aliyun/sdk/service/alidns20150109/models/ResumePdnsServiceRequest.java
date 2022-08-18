@@ -61,10 +61,10 @@ public class ResumePdnsServiceRequest extends Request {
             super();
         } 
 
-        private Builder(ResumePdnsServiceRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.serviceType = response.serviceType;
+        private Builder(ResumePdnsServiceRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.serviceType = request.serviceType;
         } 
 
         /**

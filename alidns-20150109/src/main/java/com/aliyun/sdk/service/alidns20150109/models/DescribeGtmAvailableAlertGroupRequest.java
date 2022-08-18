@@ -48,9 +48,9 @@ public class DescribeGtmAvailableAlertGroupRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeGtmAvailableAlertGroupRequest response) {
-            super(response);
-            this.lang = response.lang;
+        private Builder(DescribeGtmAvailableAlertGroupRequest request) {
+            super(request);
+            this.lang = request.lang;
         } 
 
         /**

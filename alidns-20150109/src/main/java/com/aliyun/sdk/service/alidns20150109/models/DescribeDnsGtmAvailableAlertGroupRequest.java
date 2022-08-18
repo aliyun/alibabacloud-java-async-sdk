@@ -48,9 +48,9 @@ public class DescribeDnsGtmAvailableAlertGroupRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDnsGtmAvailableAlertGroupRequest response) {
-            super(response);
-            this.lang = response.lang;
+        private Builder(DescribeDnsGtmAvailableAlertGroupRequest request) {
+            super(request);
+            this.lang = request.lang;
         } 
 
         /**

@@ -62,10 +62,10 @@ public class DescribeIspFlushCacheTaskRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeIspFlushCacheTaskRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.taskId = response.taskId;
+        private Builder(DescribeIspFlushCacheTaskRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.taskId = request.taskId;
         } 
 
         /**

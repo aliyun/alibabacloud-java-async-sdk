@@ -89,12 +89,12 @@ public class SetDomainRecordStatusRequest extends Request {
             super();
         } 
 
-        private Builder(SetDomainRecordStatusRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.recordId = response.recordId;
-            this.status = response.status;
-            this.userClientIp = response.userClientIp;
+        private Builder(SetDomainRecordStatusRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.recordId = request.recordId;
+            this.status = request.status;
+            this.userClientIp = request.userClientIp;
         } 
 
         /**

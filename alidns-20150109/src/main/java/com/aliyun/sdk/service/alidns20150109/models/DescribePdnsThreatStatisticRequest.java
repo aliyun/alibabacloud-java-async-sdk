@@ -87,12 +87,12 @@ public class DescribePdnsThreatStatisticRequest extends Request {
             super();
         } 
 
-        private Builder(DescribePdnsThreatStatisticRequest response) {
-            super(response);
-            this.endDate = response.endDate;
-            this.lang = response.lang;
-            this.startDate = response.startDate;
-            this.threatSourceIp = response.threatSourceIp;
+        private Builder(DescribePdnsThreatStatisticRequest request) {
+            super(request);
+            this.endDate = request.endDate;
+            this.lang = request.lang;
+            this.startDate = request.startDate;
+            this.threatSourceIp = request.threatSourceIp;
         } 
 
         /**

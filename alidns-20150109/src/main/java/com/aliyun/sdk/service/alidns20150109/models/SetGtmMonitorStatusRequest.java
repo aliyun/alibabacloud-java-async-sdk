@@ -76,11 +76,11 @@ public class SetGtmMonitorStatusRequest extends Request {
             super();
         } 
 
-        private Builder(SetGtmMonitorStatusRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.monitorConfigId = response.monitorConfigId;
-            this.status = response.status;
+        private Builder(SetGtmMonitorStatusRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.monitorConfigId = request.monitorConfigId;
+            this.status = request.status;
         } 
 
         /**

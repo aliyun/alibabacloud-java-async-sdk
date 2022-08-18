@@ -88,12 +88,12 @@ public class PreviewGtmRecoveryPlanRequest extends Request {
             super();
         } 
 
-        private Builder(PreviewGtmRecoveryPlanRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.recoveryPlanId = response.recoveryPlanId;
+        private Builder(PreviewGtmRecoveryPlanRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.recoveryPlanId = request.recoveryPlanId;
         } 
 
         /**

@@ -33,7 +33,7 @@ public class AddDomainRecordRequest extends Request {
     @Query
     @NameInMap("RR")
     @Validation(required = true)
-    private String RR;
+    private String rr;
 
     @Query
     @NameInMap("TTL")
@@ -60,7 +60,7 @@ public class AddDomainRecordRequest extends Request {
         this.lang = builder.lang;
         this.line = builder.line;
         this.priority = builder.priority;
-        this.RR = builder.RR;
+        this.rr = builder.rr;
         this.TTL = builder.TTL;
         this.type = builder.type;
         this.userClientIp = builder.userClientIp;
@@ -109,10 +109,10 @@ public class AddDomainRecordRequest extends Request {
     }
 
     /**
-     * @return RR
+     * @return rr
      */
-    public String getRR() {
-        return this.RR;
+    public String getRr() {
+        return this.rr;
     }
 
     /**
@@ -148,7 +148,7 @@ public class AddDomainRecordRequest extends Request {
         private String lang; 
         private String line; 
         private Long priority; 
-        private String RR; 
+        private String rr; 
         private Long TTL; 
         private String type; 
         private String userClientIp; 
@@ -158,17 +158,17 @@ public class AddDomainRecordRequest extends Request {
             super();
         } 
 
-        private Builder(AddDomainRecordRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.lang = response.lang;
-            this.line = response.line;
-            this.priority = response.priority;
-            this.RR = response.RR;
-            this.TTL = response.TTL;
-            this.type = response.type;
-            this.userClientIp = response.userClientIp;
-            this.value = response.value;
+        private Builder(AddDomainRecordRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.lang = request.lang;
+            this.line = request.line;
+            this.priority = request.priority;
+            this.rr = request.rr;
+            this.TTL = request.TTL;
+            this.type = request.type;
+            this.userClientIp = request.userClientIp;
+            this.value = request.value;
         } 
 
         /**
@@ -210,9 +210,9 @@ public class AddDomainRecordRequest extends Request {
         /**
          * RR.
          */
-        public Builder RR(String RR) {
-            this.putQueryParameter("RR", RR);
-            this.RR = RR;
+        public Builder rr(String rr) {
+            this.putQueryParameter("RR", rr);
+            this.rr = rr;
             return this;
         }
 

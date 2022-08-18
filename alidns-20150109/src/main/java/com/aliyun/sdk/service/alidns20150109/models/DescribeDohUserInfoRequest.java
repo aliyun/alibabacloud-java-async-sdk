@@ -74,11 +74,11 @@ public class DescribeDohUserInfoRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDohUserInfoRequest response) {
-            super(response);
-            this.endDate = response.endDate;
-            this.lang = response.lang;
-            this.startDate = response.startDate;
+        private Builder(DescribeDohUserInfoRequest request) {
+            super(request);
+            this.endDate = request.endDate;
+            this.lang = request.lang;
+            this.startDate = request.startDate;
         } 
 
         /**

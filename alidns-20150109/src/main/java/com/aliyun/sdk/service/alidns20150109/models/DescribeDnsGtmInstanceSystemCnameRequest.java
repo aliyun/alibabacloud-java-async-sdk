@@ -62,10 +62,10 @@ public class DescribeDnsGtmInstanceSystemCnameRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDnsGtmInstanceSystemCnameRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.lang = response.lang;
+        private Builder(DescribeDnsGtmInstanceSystemCnameRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.lang = request.lang;
         } 
 
         /**

@@ -141,16 +141,16 @@ public class DescribeRecordLogsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeRecordLogsRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.keyWord = response.keyWord;
-            this.lang = response.lang;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.startDate = response.startDate;
-            this.userClientIp = response.userClientIp;
-            this.endDate = response.endDate;
+        private Builder(DescribeRecordLogsRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.keyWord = request.keyWord;
+            this.lang = request.lang;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.startDate = request.startDate;
+            this.userClientIp = request.userClientIp;
+            this.endDate = request.endDate;
         } 
 
         /**

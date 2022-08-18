@@ -140,16 +140,16 @@ public class DescribeDomainsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDomainsRequest response) {
-            super(response);
-            this.groupId = response.groupId;
-            this.keyWord = response.keyWord;
-            this.lang = response.lang;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.resourceGroupId = response.resourceGroupId;
-            this.searchMode = response.searchMode;
-            this.starmark = response.starmark;
+        private Builder(DescribeDomainsRequest request) {
+            super(request);
+            this.groupId = request.groupId;
+            this.keyWord = request.keyWord;
+            this.lang = request.lang;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.resourceGroupId = request.resourceGroupId;
+            this.searchMode = request.searchMode;
+            this.starmark = request.starmark;
         } 
 
         /**

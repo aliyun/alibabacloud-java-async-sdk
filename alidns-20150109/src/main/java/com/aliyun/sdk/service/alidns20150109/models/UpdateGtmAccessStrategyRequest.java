@@ -114,14 +114,14 @@ public class UpdateGtmAccessStrategyRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateGtmAccessStrategyRequest response) {
-            super(response);
-            this.accessLines = response.accessLines;
-            this.defaultAddrPoolId = response.defaultAddrPoolId;
-            this.failoverAddrPoolId = response.failoverAddrPoolId;
-            this.lang = response.lang;
-            this.strategyId = response.strategyId;
-            this.strategyName = response.strategyName;
+        private Builder(UpdateGtmAccessStrategyRequest request) {
+            super(request);
+            this.accessLines = request.accessLines;
+            this.defaultAddrPoolId = request.defaultAddrPoolId;
+            this.failoverAddrPoolId = request.failoverAddrPoolId;
+            this.lang = request.lang;
+            this.strategyId = request.strategyId;
+            this.strategyName = request.strategyName;
         } 
 
         /**

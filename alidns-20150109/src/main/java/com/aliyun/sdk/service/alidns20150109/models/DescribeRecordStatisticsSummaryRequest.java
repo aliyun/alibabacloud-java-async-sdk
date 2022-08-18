@@ -168,18 +168,18 @@ public class DescribeRecordStatisticsSummaryRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeRecordStatisticsSummaryRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.domainType = response.domainType;
-            this.endDate = response.endDate;
-            this.keyword = response.keyword;
-            this.lang = response.lang;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.searchMode = response.searchMode;
-            this.startDate = response.startDate;
-            this.threshold = response.threshold;
+        private Builder(DescribeRecordStatisticsSummaryRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.domainType = request.domainType;
+            this.endDate = request.endDate;
+            this.keyword = request.keyword;
+            this.lang = request.lang;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.searchMode = request.searchMode;
+            this.startDate = request.startDate;
+            this.threshold = request.threshold;
         } 
 
         /**

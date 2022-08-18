@@ -48,9 +48,9 @@ public class DescribeIspFlushCacheRemainQuotaRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeIspFlushCacheRemainQuotaRequest response) {
-            super(response);
-            this.lang = response.lang;
+        private Builder(DescribeIspFlushCacheRemainQuotaRequest request) {
+            super(request);
+            this.lang = request.lang;
         } 
 
         /**

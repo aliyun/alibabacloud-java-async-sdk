@@ -75,11 +75,11 @@ public class UpdateDomainRemarkRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateDomainRemarkRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.lang = response.lang;
-            this.remark = response.remark;
+        private Builder(UpdateDomainRemarkRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.lang = request.lang;
+            this.remark = request.remark;
         } 
 
         /**

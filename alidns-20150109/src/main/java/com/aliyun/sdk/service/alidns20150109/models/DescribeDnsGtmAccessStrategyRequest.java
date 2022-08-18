@@ -62,10 +62,10 @@ public class DescribeDnsGtmAccessStrategyRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDnsGtmAccessStrategyRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.strategyId = response.strategyId;
+        private Builder(DescribeDnsGtmAccessStrategyRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.strategyId = request.strategyId;
         } 
 
         /**

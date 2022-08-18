@@ -62,10 +62,10 @@ public class DescribeDnsGtmMonitorConfigRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDnsGtmMonitorConfigRequest response) {
-            super(response);
-            this.lang = response.lang;
-            this.monitorConfigId = response.monitorConfigId;
+        private Builder(DescribeDnsGtmMonitorConfigRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.monitorConfigId = request.monitorConfigId;
         } 
 
         /**

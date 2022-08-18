@@ -88,12 +88,12 @@ public class DescribeDnsCacheDomainsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDnsCacheDomainsRequest response) {
-            super(response);
-            this.keyword = response.keyword;
-            this.lang = response.lang;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(DescribeDnsCacheDomainsRequest request) {
+            super(request);
+            this.keyword = request.keyword;
+            this.lang = request.lang;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**

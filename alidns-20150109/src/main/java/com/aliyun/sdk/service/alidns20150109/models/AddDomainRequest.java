@@ -88,12 +88,12 @@ public class AddDomainRequest extends Request {
             super();
         } 
 
-        private Builder(AddDomainRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.groupId = response.groupId;
-            this.lang = response.lang;
-            this.resourceGroupId = response.resourceGroupId;
+        private Builder(AddDomainRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.groupId = request.groupId;
+            this.lang = request.lang;
+            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**

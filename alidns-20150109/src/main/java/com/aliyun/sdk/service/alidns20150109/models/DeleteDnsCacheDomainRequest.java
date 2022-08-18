@@ -62,10 +62,10 @@ public class DeleteDnsCacheDomainRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteDnsCacheDomainRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.lang = response.lang;
+        private Builder(DeleteDnsCacheDomainRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.lang = request.lang;
         } 
 
         /**
