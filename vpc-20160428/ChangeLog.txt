@@ -1,3 +1,6 @@
+2022-08-19 Version: 1.0.2
+- Optimize DescribePublicIpAddress API.
+
 2022-08-19 Version: 1.0.1
 - Add DescribePublicIpAddress Interface.
 

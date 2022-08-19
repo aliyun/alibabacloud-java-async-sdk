@@ -15,9 +15,6 @@ public class DescribePublicIpAddressResponseBody extends TeaModel {
     @NameInMap("Code")
     private String code;
 
-    @NameInMap("IpRange")
-    private IpRange ipRange;
-
     @NameInMap("Message")
     private String message;
 
@@ -28,7 +25,7 @@ public class DescribePublicIpAddressResponseBody extends TeaModel {
     private Integer pageSize;
 
     @NameInMap("PublicIpAddress")
-    private String publicIpAddress;
+    private java.util.List < String > publicIpAddress;
 
     @NameInMap("RegionId")
     private String regionId;
@@ -44,7 +41,6 @@ public class DescribePublicIpAddressResponseBody extends TeaModel {
 
     private DescribePublicIpAddressResponseBody(Builder builder) {
         this.code = builder.code;
-        this.ipRange = builder.ipRange;
         this.message = builder.message;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -71,13 +67,6 @@ public class DescribePublicIpAddressResponseBody extends TeaModel {
     }
 
     /**
-     * @return ipRange
-     */
-    public IpRange getIpRange() {
-        return this.ipRange;
-    }
-
-    /**
      * @return message
      */
     public String getMessage() {
@@ -101,7 +90,7 @@ public class DescribePublicIpAddressResponseBody extends TeaModel {
     /**
      * @return publicIpAddress
      */
-    public String getPublicIpAddress() {
+    public java.util.List < String > getPublicIpAddress() {
         return this.publicIpAddress;
     }
 
@@ -135,11 +124,10 @@ public class DescribePublicIpAddressResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private IpRange ipRange; 
         private String message; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private String publicIpAddress; 
+        private java.util.List < String > publicIpAddress; 
         private String regionId; 
         private String requestId; 
         private Boolean success; 
@@ -150,14 +138,6 @@ public class DescribePublicIpAddressResponseBody extends TeaModel {
          */
         public Builder code(String code) {
             this.code = code;
-            return this;
-        }
-
-        /**
-         * IpRange.
-         */
-        public Builder ipRange(IpRange ipRange) {
-            this.ipRange = ipRange;
             return this;
         }
 
@@ -188,7 +168,7 @@ public class DescribePublicIpAddressResponseBody extends TeaModel {
         /**
          * PublicIpAddress.
          */
-        public Builder publicIpAddress(String publicIpAddress) {
+        public Builder publicIpAddress(java.util.List < String > publicIpAddress) {
             this.publicIpAddress = publicIpAddress;
             return this;
         }
@@ -231,45 +211,4 @@ public class DescribePublicIpAddressResponseBody extends TeaModel {
 
     } 
 
-    public static class IpRange extends TeaModel {
-        @NameInMap("IpRange")
-        private java.util.List < String > ipRange;
-
-        private IpRange(Builder builder) {
-            this.ipRange = builder.ipRange;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static IpRange create() {
-            return builder().build();
-        }
-
-        /**
-         * @return ipRange
-         */
-        public java.util.List < String > getIpRange() {
-            return this.ipRange;
-        }
-
-        public static final class Builder {
-            private java.util.List < String > ipRange; 
-
-            /**
-             * IpRange.
-             */
-            public Builder ipRange(java.util.List < String > ipRange) {
-                this.ipRange = ipRange;
-                return this;
-            }
-
-            public IpRange build() {
-                return new IpRange(this);
-            } 
-
-        } 
-
-    }
 }
