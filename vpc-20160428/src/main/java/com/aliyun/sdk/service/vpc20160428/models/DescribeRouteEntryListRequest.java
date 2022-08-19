@@ -233,23 +233,23 @@ public class DescribeRouteEntryListRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeRouteEntryListRequest response) {
-            super(response);
-            this.destinationCidrBlock = response.destinationCidrBlock;
-            this.ipVersion = response.ipVersion;
-            this.maxResult = response.maxResult;
-            this.nextHopId = response.nextHopId;
-            this.nextHopType = response.nextHopType;
-            this.nextToken = response.nextToken;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.routeEntryId = response.routeEntryId;
-            this.routeEntryName = response.routeEntryName;
-            this.routeEntryType = response.routeEntryType;
-            this.routeTableId = response.routeTableId;
+        private Builder(DescribeRouteEntryListRequest request) {
+            super(request);
+            this.destinationCidrBlock = request.destinationCidrBlock;
+            this.ipVersion = request.ipVersion;
+            this.maxResult = request.maxResult;
+            this.nextHopId = request.nextHopId;
+            this.nextHopType = request.nextHopType;
+            this.nextToken = request.nextToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.routeEntryId = request.routeEntryId;
+            this.routeEntryName = request.routeEntryName;
+            this.routeEntryType = request.routeEntryType;
+            this.routeTableId = request.routeTableId;
         } 
 
         /**

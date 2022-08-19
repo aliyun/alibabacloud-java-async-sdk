@@ -232,23 +232,23 @@ public class UpdateTrafficMirrorFilterRuleAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateTrafficMirrorFilterRuleAttributeRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.destinationCidrBlock = response.destinationCidrBlock;
-            this.destinationPortRange = response.destinationPortRange;
-            this.dryRun = response.dryRun;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.priority = response.priority;
-            this.protocol = response.protocol;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.ruleAction = response.ruleAction;
-            this.sourceCidrBlock = response.sourceCidrBlock;
-            this.sourcePortRange = response.sourcePortRange;
-            this.trafficMirrorFilterRuleId = response.trafficMirrorFilterRuleId;
+        private Builder(UpdateTrafficMirrorFilterRuleAttributeRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.destinationCidrBlock = request.destinationCidrBlock;
+            this.destinationPortRange = request.destinationPortRange;
+            this.dryRun = request.dryRun;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.priority = request.priority;
+            this.protocol = request.protocol;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.ruleAction = request.ruleAction;
+            this.sourceCidrBlock = request.sourceCidrBlock;
+            this.sourcePortRange = request.sourcePortRange;
+            this.trafficMirrorFilterRuleId = request.trafficMirrorFilterRuleId;
         } 
 
         /**

@@ -32,7 +32,7 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends Request {
     @Query
     @NameInMap("IPv4GatewayRouteTableId")
     @Validation(required = true)
-    private String IPv4GatewayRouteTableId;
+    private String iPv4GatewayRouteTableId;
 
     @Query
     @NameInMap("Name")
@@ -74,7 +74,7 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends Request {
         this.description = builder.description;
         this.destinationCidrBlock = builder.destinationCidrBlock;
         this.dryRun = builder.dryRun;
-        this.IPv4GatewayRouteTableId = builder.IPv4GatewayRouteTableId;
+        this.iPv4GatewayRouteTableId = builder.iPv4GatewayRouteTableId;
         this.name = builder.name;
         this.nextHopId = builder.nextHopId;
         this.nextHopType = builder.nextHopType;
@@ -127,10 +127,10 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends Request {
     }
 
     /**
-     * @return IPv4GatewayRouteTableId
+     * @return iPv4GatewayRouteTableId
      */
     public String getIPv4GatewayRouteTableId() {
-        return this.IPv4GatewayRouteTableId;
+        return this.iPv4GatewayRouteTableId;
     }
 
     /**
@@ -194,7 +194,7 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends Request {
         private String description; 
         private String destinationCidrBlock; 
         private Boolean dryRun; 
-        private String IPv4GatewayRouteTableId; 
+        private String iPv4GatewayRouteTableId; 
         private String name; 
         private String nextHopId; 
         private String nextHopType; 
@@ -208,21 +208,21 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateGatewayRouteTableEntryAttributeRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.description = response.description;
-            this.destinationCidrBlock = response.destinationCidrBlock;
-            this.dryRun = response.dryRun;
-            this.IPv4GatewayRouteTableId = response.IPv4GatewayRouteTableId;
-            this.name = response.name;
-            this.nextHopId = response.nextHopId;
-            this.nextHopType = response.nextHopType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(UpdateGatewayRouteTableEntryAttributeRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.description = request.description;
+            this.destinationCidrBlock = request.destinationCidrBlock;
+            this.dryRun = request.dryRun;
+            this.iPv4GatewayRouteTableId = request.iPv4GatewayRouteTableId;
+            this.name = request.name;
+            this.nextHopId = request.nextHopId;
+            this.nextHopType = request.nextHopType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
@@ -264,9 +264,9 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends Request {
         /**
          * IPv4GatewayRouteTableId.
          */
-        public Builder IPv4GatewayRouteTableId(String IPv4GatewayRouteTableId) {
-            this.putQueryParameter("IPv4GatewayRouteTableId", IPv4GatewayRouteTableId);
-            this.IPv4GatewayRouteTableId = IPv4GatewayRouteTableId;
+        public Builder iPv4GatewayRouteTableId(String iPv4GatewayRouteTableId) {
+            this.putQueryParameter("IPv4GatewayRouteTableId", iPv4GatewayRouteTableId);
+            this.iPv4GatewayRouteTableId = iPv4GatewayRouteTableId;
             return this;
         }
 

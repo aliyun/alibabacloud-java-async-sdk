@@ -143,16 +143,16 @@ public class DeletionProtectionRequest extends Request {
             super();
         } 
 
-        private Builder(DeletionProtectionRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.instanceId = response.instanceId;
-            this.ownerId = response.ownerId;
-            this.protectionEnable = response.protectionEnable;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.type = response.type;
+        private Builder(DeletionProtectionRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.instanceId = request.instanceId;
+            this.ownerId = request.ownerId;
+            this.protectionEnable = request.protectionEnable;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.type = request.type;
         } 
 
         /**

@@ -155,17 +155,17 @@ public class AddBgpNetworkRequest extends Request {
             super();
         } 
 
-        private Builder(AddBgpNetworkRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.dstCidrBlock = response.dstCidrBlock;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.routerId = response.routerId;
-            this.vpcId = response.vpcId;
+        private Builder(AddBgpNetworkRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.dstCidrBlock = request.dstCidrBlock;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.routerId = request.routerId;
+            this.vpcId = request.vpcId;
         } 
 
         /**

@@ -42,6 +42,10 @@ public class CreateVpnGatewayRequest extends Request {
     private String name;
 
     @Query
+    @NameInMap("NetworkType")
+    private String networkType;
+
+    @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -92,6 +96,7 @@ public class CreateVpnGatewayRequest extends Request {
         this.enableSsl = builder.enableSsl;
         this.instanceChargeType = builder.instanceChargeType;
         this.name = builder.name;
+        this.networkType = builder.networkType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.period = builder.period;
@@ -164,6 +169,13 @@ public class CreateVpnGatewayRequest extends Request {
      */
     public String getName() {
         return this.name;
+    }
+
+    /**
+     * @return networkType
+     */
+    public String getNetworkType() {
+        return this.networkType;
     }
 
     /**
@@ -244,6 +256,7 @@ public class CreateVpnGatewayRequest extends Request {
         private Boolean enableSsl; 
         private String instanceChargeType; 
         private String name; 
+        private String networkType; 
         private String ownerAccount; 
         private Long ownerId; 
         private Integer period; 
@@ -259,25 +272,26 @@ public class CreateVpnGatewayRequest extends Request {
             super();
         } 
 
-        private Builder(CreateVpnGatewayRequest response) {
-            super(response);
-            this.autoPay = response.autoPay;
-            this.bandwidth = response.bandwidth;
-            this.clientToken = response.clientToken;
-            this.enableIpsec = response.enableIpsec;
-            this.enableSsl = response.enableSsl;
-            this.instanceChargeType = response.instanceChargeType;
-            this.name = response.name;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.period = response.period;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sslConnections = response.sslConnections;
-            this.vSwitchId = response.vSwitchId;
-            this.vpcId = response.vpcId;
-            this.vpnType = response.vpnType;
+        private Builder(CreateVpnGatewayRequest request) {
+            super(request);
+            this.autoPay = request.autoPay;
+            this.bandwidth = request.bandwidth;
+            this.clientToken = request.clientToken;
+            this.enableIpsec = request.enableIpsec;
+            this.enableSsl = request.enableSsl;
+            this.instanceChargeType = request.instanceChargeType;
+            this.name = request.name;
+            this.networkType = request.networkType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.period = request.period;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sslConnections = request.sslConnections;
+            this.vSwitchId = request.vSwitchId;
+            this.vpcId = request.vpcId;
+            this.vpnType = request.vpnType;
         } 
 
         /**
@@ -340,6 +354,15 @@ public class CreateVpnGatewayRequest extends Request {
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * NetworkType.
+         */
+        public Builder networkType(String networkType) {
+            this.putQueryParameter("NetworkType", networkType);
+            this.networkType = networkType;
             return this;
         }
 

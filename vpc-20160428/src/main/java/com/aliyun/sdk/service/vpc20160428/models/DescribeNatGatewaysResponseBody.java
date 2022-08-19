@@ -214,6 +214,9 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
 
     }
     public static class IpList extends TeaModel {
+        @NameInMap("AllocationId")
+        private String allocationId;
+
         @NameInMap("IpAddress")
         private String ipAddress;
 
@@ -223,10 +226,15 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         @NameInMap("SnatEntryEnabled")
         private Boolean snatEntryEnabled;
 
+        @NameInMap("UsingStatus")
+        private String usingStatus;
+
         private IpList(Builder builder) {
+            this.allocationId = builder.allocationId;
             this.ipAddress = builder.ipAddress;
             this.privateIpAddress = builder.privateIpAddress;
             this.snatEntryEnabled = builder.snatEntryEnabled;
+            this.usingStatus = builder.usingStatus;
         }
 
         public static Builder builder() {
@@ -235,6 +243,13 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
 
         public static IpList create() {
             return builder().build();
+        }
+
+        /**
+         * @return allocationId
+         */
+        public String getAllocationId() {
+            return this.allocationId;
         }
 
         /**
@@ -258,10 +273,27 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             return this.snatEntryEnabled;
         }
 
+        /**
+         * @return usingStatus
+         */
+        public String getUsingStatus() {
+            return this.usingStatus;
+        }
+
         public static final class Builder {
+            private String allocationId; 
             private String ipAddress; 
             private String privateIpAddress; 
             private Boolean snatEntryEnabled; 
+            private String usingStatus; 
+
+            /**
+             * AllocationId.
+             */
+            public Builder allocationId(String allocationId) {
+                this.allocationId = allocationId;
+                return this;
+            }
 
             /**
              * IpAddress.
@@ -284,6 +316,14 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
              */
             public Builder snatEntryEnabled(Boolean snatEntryEnabled) {
                 this.snatEntryEnabled = snatEntryEnabled;
+                return this;
+            }
+
+            /**
+             * UsingStatus.
+             */
+            public Builder usingStatus(String usingStatus) {
+                this.usingStatus = usingStatus;
                 return this;
             }
 
@@ -348,6 +388,12 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         @NameInMap("MaxBandwidth")
         private Integer maxBandwidth;
 
+        @NameInMap("MaxSessionEstablishRate")
+        private Integer maxSessionEstablishRate;
+
+        @NameInMap("MaxSessionQuota")
+        private Integer maxSessionQuota;
+
         @NameInMap("PrivateIpAddress")
         private String privateIpAddress;
 
@@ -359,6 +405,8 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             this.eniType = builder.eniType;
             this.izNo = builder.izNo;
             this.maxBandwidth = builder.maxBandwidth;
+            this.maxSessionEstablishRate = builder.maxSessionEstablishRate;
+            this.maxSessionQuota = builder.maxSessionQuota;
             this.privateIpAddress = builder.privateIpAddress;
             this.vswitchId = builder.vswitchId;
         }
@@ -400,6 +448,20 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         }
 
         /**
+         * @return maxSessionEstablishRate
+         */
+        public Integer getMaxSessionEstablishRate() {
+            return this.maxSessionEstablishRate;
+        }
+
+        /**
+         * @return maxSessionQuota
+         */
+        public Integer getMaxSessionQuota() {
+            return this.maxSessionQuota;
+        }
+
+        /**
          * @return privateIpAddress
          */
         public String getPrivateIpAddress() {
@@ -418,6 +480,8 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             private String eniType; 
             private String izNo; 
             private Integer maxBandwidth; 
+            private Integer maxSessionEstablishRate; 
+            private Integer maxSessionQuota; 
             private String privateIpAddress; 
             private String vswitchId; 
 
@@ -450,6 +514,22 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
              */
             public Builder maxBandwidth(Integer maxBandwidth) {
                 this.maxBandwidth = maxBandwidth;
+                return this;
+            }
+
+            /**
+             * MaxSessionEstablishRate.
+             */
+            public Builder maxSessionEstablishRate(Integer maxSessionEstablishRate) {
+                this.maxSessionEstablishRate = maxSessionEstablishRate;
+                return this;
+            }
+
+            /**
+             * MaxSessionQuota.
+             */
+            public Builder maxSessionQuota(Integer maxSessionQuota) {
+                this.maxSessionQuota = maxSessionQuota;
                 return this;
             }
 
@@ -518,6 +598,9 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
 
     }
     public static class NatGateway extends TeaModel {
+        @NameInMap("AutoPay")
+        private Boolean autoPay;
+
         @NameInMap("BusinessStatus")
         private String businessStatus;
 
@@ -597,6 +680,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         private String vpcId;
 
         private NatGateway(Builder builder) {
+            this.autoPay = builder.autoPay;
             this.businessStatus = builder.businessStatus;
             this.creationTime = builder.creationTime;
             this.deletionProtection = builder.deletionProtection;
@@ -631,6 +715,13 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
 
         public static NatGateway create() {
             return builder().build();
+        }
+
+        /**
+         * @return autoPay
+         */
+        public Boolean getAutoPay() {
+            return this.autoPay;
         }
 
         /**
@@ -816,6 +907,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean autoPay; 
             private String businessStatus; 
             private String creationTime; 
             private Boolean deletionProtection; 
@@ -842,6 +934,14 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             private String spec; 
             private String status; 
             private String vpcId; 
+
+            /**
+             * AutoPay.
+             */
+            public Builder autoPay(Boolean autoPay) {
+                this.autoPay = autoPay;
+                return this;
+            }
 
             /**
              * BusinessStatus.

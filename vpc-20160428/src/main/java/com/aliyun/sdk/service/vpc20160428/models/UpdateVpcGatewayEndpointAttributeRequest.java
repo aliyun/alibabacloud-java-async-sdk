@@ -180,19 +180,19 @@ public class UpdateVpcGatewayEndpointAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateVpcGatewayEndpointAttributeRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.endpointDescription = response.endpointDescription;
-            this.endpointId = response.endpointId;
-            this.endpointName = response.endpointName;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.policyDocument = response.policyDocument;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(UpdateVpcGatewayEndpointAttributeRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.endpointDescription = request.endpointDescription;
+            this.endpointId = request.endpointId;
+            this.endpointName = request.endpointName;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.policyDocument = request.policyDocument;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

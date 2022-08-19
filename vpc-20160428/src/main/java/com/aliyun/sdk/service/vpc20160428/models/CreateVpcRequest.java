@@ -231,23 +231,23 @@ public class CreateVpcRequest extends Request {
             super();
         } 
 
-        private Builder(CreateVpcRequest response) {
-            super(response);
-            this.cidrBlock = response.cidrBlock;
-            this.clientToken = response.clientToken;
-            this.description = response.description;
-            this.dryRun = response.dryRun;
-            this.enableIpv6 = response.enableIpv6;
-            this.ipv6CidrBlock = response.ipv6CidrBlock;
-            this.ipv6Isp = response.ipv6Isp;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.userCidr = response.userCidr;
-            this.vpcName = response.vpcName;
+        private Builder(CreateVpcRequest request) {
+            super(request);
+            this.cidrBlock = request.cidrBlock;
+            this.clientToken = request.clientToken;
+            this.description = request.description;
+            this.dryRun = request.dryRun;
+            this.enableIpv6 = request.enableIpv6;
+            this.ipv6CidrBlock = request.ipv6CidrBlock;
+            this.ipv6Isp = request.ipv6Isp;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.userCidr = request.userCidr;
+            this.vpcName = request.vpcName;
         } 
 
         /**

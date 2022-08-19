@@ -207,21 +207,21 @@ public class CreateVSwitchRequest extends Request {
             super();
         } 
 
-        private Builder(CreateVSwitchRequest response) {
-            super(response);
-            this.cidrBlock = response.cidrBlock;
-            this.clientToken = response.clientToken;
-            this.description = response.description;
-            this.ipv6CidrBlock = response.ipv6CidrBlock;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.vSwitchName = response.vSwitchName;
-            this.vpcId = response.vpcId;
-            this.vpcIpv6CidrBlock = response.vpcIpv6CidrBlock;
-            this.zoneId = response.zoneId;
+        private Builder(CreateVSwitchRequest request) {
+            super(request);
+            this.cidrBlock = request.cidrBlock;
+            this.clientToken = request.clientToken;
+            this.description = request.description;
+            this.ipv6CidrBlock = request.ipv6CidrBlock;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.vSwitchName = request.vSwitchName;
+            this.vpcId = request.vpcId;
+            this.vpcIpv6CidrBlock = request.vpcIpv6CidrBlock;
+            this.zoneId = request.zoneId;
         } 
 
         /**

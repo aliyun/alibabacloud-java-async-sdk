@@ -115,14 +115,14 @@ public class GetNatGatewayConvertStatusRequest extends Request {
             super();
         } 
 
-        private Builder(GetNatGatewayConvertStatusRequest response) {
-            super(response);
-            this.natGatewayId = response.natGatewayId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(GetNatGatewayConvertStatusRequest request) {
+            super(request);
+            this.natGatewayId = request.natGatewayId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

@@ -141,16 +141,16 @@ public class CreateNetworkAclRequest extends Request {
             super();
         } 
 
-        private Builder(CreateNetworkAclRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.description = response.description;
-            this.networkAclName = response.networkAclName;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.vpcId = response.vpcId;
+        private Builder(CreateNetworkAclRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.description = request.description;
+            this.networkAclName = request.networkAclName;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.vpcId = request.vpcId;
         } 
 
         /**

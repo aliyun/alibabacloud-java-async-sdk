@@ -211,21 +211,21 @@ public class ModifyVpnPbrRouteEntryWeightRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyVpnPbrRouteEntryWeightRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.newWeight = response.newWeight;
-            this.nextHop = response.nextHop;
-            this.overlayMode = response.overlayMode;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.routeDest = response.routeDest;
-            this.routeSource = response.routeSource;
-            this.vpnGatewayId = response.vpnGatewayId;
-            this.weight = response.weight;
+        private Builder(ModifyVpnPbrRouteEntryWeightRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.newWeight = request.newWeight;
+            this.nextHop = request.nextHop;
+            this.overlayMode = request.overlayMode;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.routeDest = request.routeDest;
+            this.routeSource = request.routeSource;
+            this.vpnGatewayId = request.vpnGatewayId;
+            this.weight = request.weight;
         } 
 
         /**

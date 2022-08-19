@@ -219,22 +219,22 @@ public class DescribeVpcsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeVpcsRequest response) {
-            super(response);
-            this.dhcpOptionsSetId = response.dhcpOptionsSetId;
-            this.dryRun = response.dryRun;
-            this.isDefault = response.isDefault;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.vpcId = response.vpcId;
-            this.vpcName = response.vpcName;
-            this.vpcOwnerId = response.vpcOwnerId;
+        private Builder(DescribeVpcsRequest request) {
+            super(request);
+            this.dhcpOptionsSetId = request.dhcpOptionsSetId;
+            this.dryRun = request.dryRun;
+            this.isDefault = request.isDefault;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.vpcId = request.vpcId;
+            this.vpcName = request.vpcName;
+            this.vpcOwnerId = request.vpcOwnerId;
         } 
 
         /**

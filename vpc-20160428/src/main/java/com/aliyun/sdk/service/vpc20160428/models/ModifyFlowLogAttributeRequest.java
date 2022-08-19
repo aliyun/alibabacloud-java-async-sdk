@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyFlowLogAttributeRequest extends Request {
     @Query
+    @NameInMap("AggregationInterval")
+    private Integer aggregationInterval;
+
+    @Query
     @NameInMap("Description")
     private String description;
 
@@ -48,6 +52,7 @@ public class ModifyFlowLogAttributeRequest extends Request {
 
     private ModifyFlowLogAttributeRequest(Builder builder) {
         super(builder);
+        this.aggregationInterval = builder.aggregationInterval;
         this.description = builder.description;
         this.flowLogId = builder.flowLogId;
         this.flowLogName = builder.flowLogName;
@@ -69,6 +74,13 @@ public class ModifyFlowLogAttributeRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return aggregationInterval
+     */
+    public Integer getAggregationInterval() {
+        return this.aggregationInterval;
     }
 
     /**
@@ -128,6 +140,7 @@ public class ModifyFlowLogAttributeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyFlowLogAttributeRequest, Builder> {
+        private Integer aggregationInterval; 
         private String description; 
         private String flowLogId; 
         private String flowLogName; 
@@ -141,17 +154,27 @@ public class ModifyFlowLogAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyFlowLogAttributeRequest response) {
-            super(response);
-            this.description = response.description;
-            this.flowLogId = response.flowLogId;
-            this.flowLogName = response.flowLogName;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyFlowLogAttributeRequest request) {
+            super(request);
+            this.aggregationInterval = request.aggregationInterval;
+            this.description = request.description;
+            this.flowLogId = request.flowLogId;
+            this.flowLogName = request.flowLogName;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
+
+        /**
+         * AggregationInterval.
+         */
+        public Builder aggregationInterval(Integer aggregationInterval) {
+            this.putQueryParameter("AggregationInterval", aggregationInterval);
+            this.aggregationInterval = aggregationInterval;
+            return this;
+        }
 
         /**
          * Description.

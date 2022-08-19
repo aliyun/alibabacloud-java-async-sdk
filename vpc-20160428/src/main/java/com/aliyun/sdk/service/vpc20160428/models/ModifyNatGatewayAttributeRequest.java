@@ -154,17 +154,17 @@ public class ModifyNatGatewayAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyNatGatewayAttributeRequest response) {
-            super(response);
-            this.description = response.description;
-            this.icmpReplyEnabled = response.icmpReplyEnabled;
-            this.name = response.name;
-            this.natGatewayId = response.natGatewayId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyNatGatewayAttributeRequest request) {
+            super(request);
+            this.description = request.description;
+            this.icmpReplyEnabled = request.icmpReplyEnabled;
+            this.name = request.name;
+            this.natGatewayId = request.natGatewayId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

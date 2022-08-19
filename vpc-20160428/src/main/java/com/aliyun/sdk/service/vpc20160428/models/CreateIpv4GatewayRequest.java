@@ -167,18 +167,18 @@ public class CreateIpv4GatewayRequest extends Request {
             super();
         } 
 
-        private Builder(CreateIpv4GatewayRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.ipv4GatewayDescription = response.ipv4GatewayDescription;
-            this.ipv4GatewayName = response.ipv4GatewayName;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.vpcId = response.vpcId;
+        private Builder(CreateIpv4GatewayRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.ipv4GatewayDescription = request.ipv4GatewayDescription;
+            this.ipv4GatewayName = request.ipv4GatewayName;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.vpcId = request.vpcId;
         } 
 
         /**

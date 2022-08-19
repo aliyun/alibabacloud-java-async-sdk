@@ -155,17 +155,17 @@ public class DeleteFullNatEntryRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteFullNatEntryRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.fullNatEntryId = response.fullNatEntryId;
-            this.fullNatTableId = response.fullNatTableId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DeleteFullNatEntryRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.fullNatEntryId = request.fullNatEntryId;
+            this.fullNatTableId = request.fullNatTableId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

@@ -128,15 +128,15 @@ public class EnablePhysicalConnectionRequest extends Request {
             super();
         } 
 
-        private Builder(EnablePhysicalConnectionRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.physicalConnectionId = response.physicalConnectionId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(EnablePhysicalConnectionRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.physicalConnectionId = request.physicalConnectionId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

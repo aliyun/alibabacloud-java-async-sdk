@@ -167,18 +167,18 @@ public class ModifyVpnGatewayAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyVpnGatewayAttributeRequest response) {
-            super(response);
-            this.autoPropagate = response.autoPropagate;
-            this.clientToken = response.clientToken;
-            this.description = response.description;
-            this.name = response.name;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.vpnGatewayId = response.vpnGatewayId;
+        private Builder(ModifyVpnGatewayAttributeRequest request) {
+            super(request);
+            this.autoPropagate = request.autoPropagate;
+            this.clientToken = request.clientToken;
+            this.description = request.description;
+            this.name = request.name;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.vpnGatewayId = request.vpnGatewayId;
         } 
 
         /**

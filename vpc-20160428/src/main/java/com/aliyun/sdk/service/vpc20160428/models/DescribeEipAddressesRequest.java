@@ -12,6 +12,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeEipAddressesRequest</p>
  */
 public class DescribeEipAddressesRequest extends Request {
+    @Query
     @NameInMap("Filter")
     private java.util.List < Filter> filter;
 
@@ -73,6 +74,10 @@ public class DescribeEipAddressesRequest extends Request {
     private Integer pageSize;
 
     @Query
+    @NameInMap("PublicIpAddressPoolId")
+    private String publicIpAddressPoolId;
+
+    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
@@ -118,6 +123,7 @@ public class DescribeEipAddressesRequest extends Request {
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.publicIpAddressPoolId = builder.publicIpAddressPoolId;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -246,6 +252,13 @@ public class DescribeEipAddressesRequest extends Request {
     }
 
     /**
+     * @return publicIpAddressPoolId
+     */
+    public String getPublicIpAddressPoolId() {
+        return this.publicIpAddressPoolId;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -310,6 +323,7 @@ public class DescribeEipAddressesRequest extends Request {
         private Long ownerId; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String publicIpAddressPoolId; 
         private String regionId; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
@@ -322,36 +336,38 @@ public class DescribeEipAddressesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeEipAddressesRequest response) {
-            super(response);
-            this.filter = response.filter;
-            this.allocationId = response.allocationId;
-            this.associatedInstanceId = response.associatedInstanceId;
-            this.associatedInstanceType = response.associatedInstanceType;
-            this.chargeType = response.chargeType;
-            this.dryRun = response.dryRun;
-            this.eipAddress = response.eipAddress;
-            this.eipName = response.eipName;
-            this.ISP = response.ISP;
-            this.includeReservationData = response.includeReservationData;
-            this.lockReason = response.lockReason;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.securityProtectionEnabled = response.securityProtectionEnabled;
-            this.segmentInstanceId = response.segmentInstanceId;
-            this.status = response.status;
+        private Builder(DescribeEipAddressesRequest request) {
+            super(request);
+            this.filter = request.filter;
+            this.allocationId = request.allocationId;
+            this.associatedInstanceId = request.associatedInstanceId;
+            this.associatedInstanceType = request.associatedInstanceType;
+            this.chargeType = request.chargeType;
+            this.dryRun = request.dryRun;
+            this.eipAddress = request.eipAddress;
+            this.eipName = request.eipName;
+            this.ISP = request.ISP;
+            this.includeReservationData = request.includeReservationData;
+            this.lockReason = request.lockReason;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.publicIpAddressPoolId = request.publicIpAddressPoolId;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.securityProtectionEnabled = request.securityProtectionEnabled;
+            this.segmentInstanceId = request.segmentInstanceId;
+            this.status = request.status;
         } 
 
         /**
          * Filter.
          */
         public Builder filter(java.util.List < Filter> filter) {
+            this.putQueryParameter("Filter", filter);
             this.filter = filter;
             return this;
         }
@@ -479,6 +495,15 @@ public class DescribeEipAddressesRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * PublicIpAddressPoolId.
+         */
+        public Builder publicIpAddressPoolId(String publicIpAddressPoolId) {
+            this.putQueryParameter("PublicIpAddressPoolId", publicIpAddressPoolId);
+            this.publicIpAddressPoolId = publicIpAddressPoolId;
             return this;
         }
 

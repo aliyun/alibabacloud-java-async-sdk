@@ -665,10 +665,10 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         private String name;
 
         @NameInMap("PConnVbrChargeType")
-        private String PConnVbrChargeType;
+        private String pConnVbrChargeType;
 
         @NameInMap("PConnVbrExpireTime")
-        private String PConnVbrExpireTime;
+        private String pConnVbrExpireTime;
 
         @NameInMap("PeerGatewayIp")
         private String peerGatewayIp;
@@ -735,8 +735,8 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             this.minRxInterval = builder.minRxInterval;
             this.minTxInterval = builder.minTxInterval;
             this.name = builder.name;
-            this.PConnVbrChargeType = builder.PConnVbrChargeType;
-            this.PConnVbrExpireTime = builder.PConnVbrExpireTime;
+            this.pConnVbrChargeType = builder.pConnVbrChargeType;
+            this.pConnVbrExpireTime = builder.pConnVbrExpireTime;
             this.peerGatewayIp = builder.peerGatewayIp;
             this.peerIpv6GatewayIp = builder.peerIpv6GatewayIp;
             this.peeringIpv6SubnetMask = builder.peeringIpv6SubnetMask;
@@ -876,17 +876,17 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         }
 
         /**
-         * @return PConnVbrChargeType
+         * @return pConnVbrChargeType
          */
         public String getPConnVbrChargeType() {
-            return this.PConnVbrChargeType;
+            return this.pConnVbrChargeType;
         }
 
         /**
-         * @return PConnVbrExpireTime
+         * @return pConnVbrExpireTime
          */
         public String getPConnVbrExpireTime() {
-            return this.PConnVbrExpireTime;
+            return this.pConnVbrExpireTime;
         }
 
         /**
@@ -1018,8 +1018,8 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             private Long minRxInterval; 
             private Long minTxInterval; 
             private String name; 
-            private String PConnVbrChargeType; 
-            private String PConnVbrExpireTime; 
+            private String pConnVbrChargeType; 
+            private String pConnVbrExpireTime; 
             private String peerGatewayIp; 
             private String peerIpv6GatewayIp; 
             private String peeringIpv6SubnetMask; 
@@ -1168,16 +1168,16 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             /**
              * PConnVbrChargeType.
              */
-            public Builder PConnVbrChargeType(String PConnVbrChargeType) {
-                this.PConnVbrChargeType = PConnVbrChargeType;
+            public Builder pConnVbrChargeType(String pConnVbrChargeType) {
+                this.pConnVbrChargeType = pConnVbrChargeType;
                 return this;
             }
 
             /**
              * PConnVbrExpireTime.
              */
-            public Builder PConnVbrExpireTime(String PConnVbrExpireTime) {
-                this.PConnVbrExpireTime = PConnVbrExpireTime;
+            public Builder pConnVbrExpireTime(String pConnVbrExpireTime) {
+                this.pConnVbrExpireTime = pConnVbrExpireTime;
                 return this;
             }
 

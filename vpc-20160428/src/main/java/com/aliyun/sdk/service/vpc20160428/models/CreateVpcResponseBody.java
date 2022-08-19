@@ -22,7 +22,7 @@ public class CreateVpcResponseBody extends TeaModel {
     private String routeTableId;
 
     @NameInMap("VRouterId")
-    private String VRouterId;
+    private String vRouterId;
 
     @NameInMap("VpcId")
     private String vpcId;
@@ -31,7 +31,7 @@ public class CreateVpcResponseBody extends TeaModel {
         this.requestId = builder.requestId;
         this.resourceGroupId = builder.resourceGroupId;
         this.routeTableId = builder.routeTableId;
-        this.VRouterId = builder.VRouterId;
+        this.vRouterId = builder.vRouterId;
         this.vpcId = builder.vpcId;
     }
 
@@ -65,10 +65,10 @@ public class CreateVpcResponseBody extends TeaModel {
     }
 
     /**
-     * @return VRouterId
+     * @return vRouterId
      */
     public String getVRouterId() {
-        return this.VRouterId;
+        return this.vRouterId;
     }
 
     /**
@@ -82,7 +82,7 @@ public class CreateVpcResponseBody extends TeaModel {
         private String requestId; 
         private String resourceGroupId; 
         private String routeTableId; 
-        private String VRouterId; 
+        private String vRouterId; 
         private String vpcId; 
 
         /**
@@ -112,8 +112,8 @@ public class CreateVpcResponseBody extends TeaModel {
         /**
          * VRouterId.
          */
-        public Builder VRouterId(String VRouterId) {
-            this.VRouterId = VRouterId;
+        public Builder vRouterId(String vRouterId) {
+            this.vRouterId = vRouterId;
             return this;
         }
 

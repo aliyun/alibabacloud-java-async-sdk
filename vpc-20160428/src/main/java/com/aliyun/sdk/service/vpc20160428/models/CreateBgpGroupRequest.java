@@ -33,10 +33,6 @@ public class CreateBgpGroupRequest extends Request {
     private Boolean isFakeAsn;
 
     @Query
-    @NameInMap("LocalAsn")
-    private Long localAsn;
-
-    @Query
     @NameInMap("Name")
     private String name;
 
@@ -78,7 +74,6 @@ public class CreateBgpGroupRequest extends Request {
         this.description = builder.description;
         this.ipVersion = builder.ipVersion;
         this.isFakeAsn = builder.isFakeAsn;
-        this.localAsn = builder.localAsn;
         this.name = builder.name;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -135,13 +130,6 @@ public class CreateBgpGroupRequest extends Request {
      */
     public Boolean getIsFakeAsn() {
         return this.isFakeAsn;
-    }
-
-    /**
-     * @return localAsn
-     */
-    public Long getLocalAsn() {
-        return this.localAsn;
     }
 
     /**
@@ -206,7 +194,6 @@ public class CreateBgpGroupRequest extends Request {
         private String description; 
         private String ipVersion; 
         private Boolean isFakeAsn; 
-        private Long localAsn; 
         private String name; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -220,22 +207,21 @@ public class CreateBgpGroupRequest extends Request {
             super();
         } 
 
-        private Builder(CreateBgpGroupRequest response) {
-            super(response);
-            this.authKey = response.authKey;
-            this.clientToken = response.clientToken;
-            this.description = response.description;
-            this.ipVersion = response.ipVersion;
-            this.isFakeAsn = response.isFakeAsn;
-            this.localAsn = response.localAsn;
-            this.name = response.name;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.peerAsn = response.peerAsn;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.routerId = response.routerId;
+        private Builder(CreateBgpGroupRequest request) {
+            super(request);
+            this.authKey = request.authKey;
+            this.clientToken = request.clientToken;
+            this.description = request.description;
+            this.ipVersion = request.ipVersion;
+            this.isFakeAsn = request.isFakeAsn;
+            this.name = request.name;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.peerAsn = request.peerAsn;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.routerId = request.routerId;
         } 
 
         /**
@@ -280,15 +266,6 @@ public class CreateBgpGroupRequest extends Request {
         public Builder isFakeAsn(Boolean isFakeAsn) {
             this.putQueryParameter("IsFakeAsn", isFakeAsn);
             this.isFakeAsn = isFakeAsn;
-            return this;
-        }
-
-        /**
-         * LocalAsn.
-         */
-        public Builder localAsn(Long localAsn) {
-            this.putQueryParameter("LocalAsn", localAsn);
-            this.localAsn = localAsn;
             return this;
         }
 

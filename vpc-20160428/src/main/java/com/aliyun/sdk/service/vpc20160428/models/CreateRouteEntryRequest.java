@@ -206,21 +206,21 @@ public class CreateRouteEntryRequest extends Request {
             super();
         } 
 
-        private Builder(CreateRouteEntryRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.description = response.description;
-            this.destinationCidrBlock = response.destinationCidrBlock;
-            this.nextHopId = response.nextHopId;
-            this.nextHopList = response.nextHopList;
-            this.nextHopType = response.nextHopType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.routeEntryName = response.routeEntryName;
-            this.routeTableId = response.routeTableId;
+        private Builder(CreateRouteEntryRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.description = request.description;
+            this.destinationCidrBlock = request.destinationCidrBlock;
+            this.nextHopId = request.nextHopId;
+            this.nextHopList = request.nextHopList;
+            this.nextHopType = request.nextHopType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.routeEntryName = request.routeEntryName;
+            this.routeTableId = request.routeTableId;
         } 
 
         /**

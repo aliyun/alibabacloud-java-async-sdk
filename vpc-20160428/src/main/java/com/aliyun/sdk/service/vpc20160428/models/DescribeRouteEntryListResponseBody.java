@@ -361,6 +361,9 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
         @NameInMap("DestinationCidrBlock")
         private String destinationCidrBlock;
 
+        @NameInMap("GmtModified")
+        private String gmtModified;
+
         @NameInMap("IpVersion")
         private String ipVersion;
 
@@ -385,6 +388,7 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
         private RouteEntry(Builder builder) {
             this.description = builder.description;
             this.destinationCidrBlock = builder.destinationCidrBlock;
+            this.gmtModified = builder.gmtModified;
             this.ipVersion = builder.ipVersion;
             this.nextHops = builder.nextHops;
             this.routeEntryId = builder.routeEntryId;
@@ -414,6 +418,13 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
          */
         public String getDestinationCidrBlock() {
             return this.destinationCidrBlock;
+        }
+
+        /**
+         * @return gmtModified
+         */
+        public String getGmtModified() {
+            return this.gmtModified;
         }
 
         /**
@@ -468,6 +479,7 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
         public static final class Builder {
             private String description; 
             private String destinationCidrBlock; 
+            private String gmtModified; 
             private String ipVersion; 
             private NextHops nextHops; 
             private String routeEntryId; 
@@ -489,6 +501,14 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
              */
             public Builder destinationCidrBlock(String destinationCidrBlock) {
                 this.destinationCidrBlock = destinationCidrBlock;
+                return this;
+            }
+
+            /**
+             * GmtModified.
+             */
+            public Builder gmtModified(String gmtModified) {
+                this.gmtModified = gmtModified;
                 return this;
             }
 

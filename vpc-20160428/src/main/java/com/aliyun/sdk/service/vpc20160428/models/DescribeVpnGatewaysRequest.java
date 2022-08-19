@@ -205,21 +205,21 @@ public class DescribeVpnGatewaysRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeVpnGatewaysRequest response) {
-            super(response);
-            this.businessStatus = response.businessStatus;
-            this.includeReservationData = response.includeReservationData;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.status = response.status;
-            this.tag = response.tag;
-            this.vpcId = response.vpcId;
-            this.vpnGatewayId = response.vpnGatewayId;
+        private Builder(DescribeVpnGatewaysRequest request) {
+            super(request);
+            this.businessStatus = request.businessStatus;
+            this.includeReservationData = request.includeReservationData;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.status = request.status;
+            this.tag = request.tag;
+            this.vpcId = request.vpcId;
+            this.vpnGatewayId = request.vpnGatewayId;
         } 
 
         /**

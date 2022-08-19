@@ -141,6 +141,12 @@ public class ListPrefixListsResponseBody extends TeaModel {
         @NameInMap("IpVersion")
         private String ipVersion;
 
+        @NameInMap("MaxEntries")
+        private Integer maxEntries;
+
+        @NameInMap("OwnerId")
+        private String ownerId;
+
         @NameInMap("PrefixListDescription")
         private String prefixListDescription;
 
@@ -153,14 +159,24 @@ public class ListPrefixListsResponseBody extends TeaModel {
         @NameInMap("PrefixListStatus")
         private String prefixListStatus;
 
+        @NameInMap("ShareType")
+        private String shareType;
+
+        @NameInMap("Status")
+        private String status;
+
         private PrefixLists(Builder builder) {
             this.cidrBlocks = builder.cidrBlocks;
             this.creationTime = builder.creationTime;
             this.ipVersion = builder.ipVersion;
+            this.maxEntries = builder.maxEntries;
+            this.ownerId = builder.ownerId;
             this.prefixListDescription = builder.prefixListDescription;
             this.prefixListId = builder.prefixListId;
             this.prefixListName = builder.prefixListName;
             this.prefixListStatus = builder.prefixListStatus;
+            this.shareType = builder.shareType;
+            this.status = builder.status;
         }
 
         public static Builder builder() {
@@ -193,6 +209,20 @@ public class ListPrefixListsResponseBody extends TeaModel {
         }
 
         /**
+         * @return maxEntries
+         */
+        public Integer getMaxEntries() {
+            return this.maxEntries;
+        }
+
+        /**
+         * @return ownerId
+         */
+        public String getOwnerId() {
+            return this.ownerId;
+        }
+
+        /**
          * @return prefixListDescription
          */
         public String getPrefixListDescription() {
@@ -220,14 +250,32 @@ public class ListPrefixListsResponseBody extends TeaModel {
             return this.prefixListStatus;
         }
 
+        /**
+         * @return shareType
+         */
+        public String getShareType() {
+            return this.shareType;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
         public static final class Builder {
             private java.util.List < String > cidrBlocks; 
             private String creationTime; 
             private String ipVersion; 
+            private Integer maxEntries; 
+            private String ownerId; 
             private String prefixListDescription; 
             private String prefixListId; 
             private String prefixListName; 
             private String prefixListStatus; 
+            private String shareType; 
+            private String status; 
 
             /**
              * 前缀列表包含的网段
@@ -250,6 +298,22 @@ public class ListPrefixListsResponseBody extends TeaModel {
              */
             public Builder ipVersion(String ipVersion) {
                 this.ipVersion = ipVersion;
+                return this;
+            }
+
+            /**
+             * MaxEntries.
+             */
+            public Builder maxEntries(Integer maxEntries) {
+                this.maxEntries = maxEntries;
+                return this;
+            }
+
+            /**
+             * OwnerId.
+             */
+            public Builder ownerId(String ownerId) {
+                this.ownerId = ownerId;
                 return this;
             }
 
@@ -278,10 +342,26 @@ public class ListPrefixListsResponseBody extends TeaModel {
             }
 
             /**
-             * 状态
+             * PrefixListStatus.
              */
             public Builder prefixListStatus(String prefixListStatus) {
                 this.prefixListStatus = prefixListStatus;
+                return this;
+            }
+
+            /**
+             * ShareType.
+             */
+            public Builder shareType(String shareType) {
+                this.shareType = shareType;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
                 return this;
             }
 

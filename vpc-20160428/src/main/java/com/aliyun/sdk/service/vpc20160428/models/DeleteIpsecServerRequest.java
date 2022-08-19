@@ -89,12 +89,12 @@ public class DeleteIpsecServerRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteIpsecServerRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.ipsecServerId = response.ipsecServerId;
-            this.regionId = response.regionId;
+        private Builder(DeleteIpsecServerRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.ipsecServerId = request.ipsecServerId;
+            this.regionId = request.regionId;
         } 
 
         /**

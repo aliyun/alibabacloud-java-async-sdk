@@ -210,21 +210,21 @@ public class CreateVpnRouteEntryRequest extends Request {
             super();
         } 
 
-        private Builder(CreateVpnRouteEntryRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.description = response.description;
-            this.nextHop = response.nextHop;
-            this.overlayMode = response.overlayMode;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.publishVpc = response.publishVpc;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.routeDest = response.routeDest;
-            this.vpnGatewayId = response.vpnGatewayId;
-            this.weight = response.weight;
+        private Builder(CreateVpnRouteEntryRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.description = request.description;
+            this.nextHop = request.nextHop;
+            this.overlayMode = request.overlayMode;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.publishVpc = request.publishVpc;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.routeDest = request.routeDest;
+            this.vpnGatewayId = request.vpnGatewayId;
+            this.weight = request.weight;
         } 
 
         /**

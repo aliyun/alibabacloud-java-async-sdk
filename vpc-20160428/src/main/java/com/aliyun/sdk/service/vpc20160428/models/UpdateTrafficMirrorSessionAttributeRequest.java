@@ -245,24 +245,24 @@ public class UpdateTrafficMirrorSessionAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateTrafficMirrorSessionAttributeRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.enabled = response.enabled;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.priority = response.priority;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.trafficMirrorFilterId = response.trafficMirrorFilterId;
-            this.trafficMirrorSessionDescription = response.trafficMirrorSessionDescription;
-            this.trafficMirrorSessionId = response.trafficMirrorSessionId;
-            this.trafficMirrorSessionName = response.trafficMirrorSessionName;
-            this.trafficMirrorTargetId = response.trafficMirrorTargetId;
-            this.trafficMirrorTargetType = response.trafficMirrorTargetType;
-            this.virtualNetworkId = response.virtualNetworkId;
+        private Builder(UpdateTrafficMirrorSessionAttributeRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.enabled = request.enabled;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.priority = request.priority;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.trafficMirrorFilterId = request.trafficMirrorFilterId;
+            this.trafficMirrorSessionDescription = request.trafficMirrorSessionDescription;
+            this.trafficMirrorSessionId = request.trafficMirrorSessionId;
+            this.trafficMirrorSessionName = request.trafficMirrorSessionName;
+            this.trafficMirrorTargetId = request.trafficMirrorTargetId;
+            this.trafficMirrorTargetType = request.trafficMirrorTargetType;
+            this.virtualNetworkId = request.virtualNetworkId;
         } 
 
         /**

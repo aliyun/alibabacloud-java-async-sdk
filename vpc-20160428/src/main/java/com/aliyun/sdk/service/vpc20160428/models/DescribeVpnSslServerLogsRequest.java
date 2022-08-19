@@ -193,20 +193,20 @@ public class DescribeVpnSslServerLogsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeVpnSslServerLogsRequest response) {
-            super(response);
-            this.from = response.from;
-            this.minutePeriod = response.minutePeriod;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sslVpnClientCertId = response.sslVpnClientCertId;
-            this.to = response.to;
-            this.vpnSslServerId = response.vpnSslServerId;
+        private Builder(DescribeVpnSslServerLogsRequest request) {
+            super(request);
+            this.from = request.from;
+            this.minutePeriod = request.minutePeriod;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sslVpnClientCertId = request.sslVpnClientCertId;
+            this.to = request.to;
+            this.vpnSslServerId = request.vpnSslServerId;
         } 
 
         /**

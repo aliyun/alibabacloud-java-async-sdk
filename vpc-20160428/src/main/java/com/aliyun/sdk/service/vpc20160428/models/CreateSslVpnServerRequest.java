@@ -35,11 +35,11 @@ public class CreateSslVpnServerRequest extends Request {
 
     @Query
     @NameInMap("IDaaSInstanceId")
-    private String IDaaSInstanceId;
+    private String iDaaSInstanceId;
 
     @Query
     @NameInMap("IDaaSRegionId")
-    private String IDaaSRegionId;
+    private String iDaaSRegionId;
 
     @Query
     @NameInMap("LocalSubnet")
@@ -91,8 +91,8 @@ public class CreateSslVpnServerRequest extends Request {
         this.clientToken = builder.clientToken;
         this.compress = builder.compress;
         this.enableMultiFactorAuth = builder.enableMultiFactorAuth;
-        this.IDaaSInstanceId = builder.IDaaSInstanceId;
-        this.IDaaSRegionId = builder.IDaaSRegionId;
+        this.iDaaSInstanceId = builder.iDaaSInstanceId;
+        this.iDaaSRegionId = builder.iDaaSRegionId;
         this.localSubnet = builder.localSubnet;
         this.name = builder.name;
         this.ownerAccount = builder.ownerAccount;
@@ -154,17 +154,17 @@ public class CreateSslVpnServerRequest extends Request {
     }
 
     /**
-     * @return IDaaSInstanceId
+     * @return iDaaSInstanceId
      */
     public String getIDaaSInstanceId() {
-        return this.IDaaSInstanceId;
+        return this.iDaaSInstanceId;
     }
 
     /**
-     * @return IDaaSRegionId
+     * @return iDaaSRegionId
      */
     public String getIDaaSRegionId() {
-        return this.IDaaSRegionId;
+        return this.iDaaSRegionId;
     }
 
     /**
@@ -243,8 +243,8 @@ public class CreateSslVpnServerRequest extends Request {
         private String clientToken; 
         private Boolean compress; 
         private Boolean enableMultiFactorAuth; 
-        private String IDaaSInstanceId; 
-        private String IDaaSRegionId; 
+        private String iDaaSInstanceId; 
+        private String iDaaSRegionId; 
         private String localSubnet; 
         private String name; 
         private String ownerAccount; 
@@ -260,25 +260,25 @@ public class CreateSslVpnServerRequest extends Request {
             super();
         } 
 
-        private Builder(CreateSslVpnServerRequest response) {
-            super(response);
-            this.cipher = response.cipher;
-            this.clientIpPool = response.clientIpPool;
-            this.clientToken = response.clientToken;
-            this.compress = response.compress;
-            this.enableMultiFactorAuth = response.enableMultiFactorAuth;
-            this.IDaaSInstanceId = response.IDaaSInstanceId;
-            this.IDaaSRegionId = response.IDaaSRegionId;
-            this.localSubnet = response.localSubnet;
-            this.name = response.name;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.port = response.port;
-            this.proto = response.proto;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.vpnGatewayId = response.vpnGatewayId;
+        private Builder(CreateSslVpnServerRequest request) {
+            super(request);
+            this.cipher = request.cipher;
+            this.clientIpPool = request.clientIpPool;
+            this.clientToken = request.clientToken;
+            this.compress = request.compress;
+            this.enableMultiFactorAuth = request.enableMultiFactorAuth;
+            this.iDaaSInstanceId = request.iDaaSInstanceId;
+            this.iDaaSRegionId = request.iDaaSRegionId;
+            this.localSubnet = request.localSubnet;
+            this.name = request.name;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.port = request.port;
+            this.proto = request.proto;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.vpnGatewayId = request.vpnGatewayId;
         } 
 
         /**
@@ -329,18 +329,18 @@ public class CreateSslVpnServerRequest extends Request {
         /**
          * IDaaSInstanceId.
          */
-        public Builder IDaaSInstanceId(String IDaaSInstanceId) {
-            this.putQueryParameter("IDaaSInstanceId", IDaaSInstanceId);
-            this.IDaaSInstanceId = IDaaSInstanceId;
+        public Builder iDaaSInstanceId(String iDaaSInstanceId) {
+            this.putQueryParameter("IDaaSInstanceId", iDaaSInstanceId);
+            this.iDaaSInstanceId = iDaaSInstanceId;
             return this;
         }
 
         /**
          * IDaaSRegionId.
          */
-        public Builder IDaaSRegionId(String IDaaSRegionId) {
-            this.putQueryParameter("IDaaSRegionId", IDaaSRegionId);
-            this.IDaaSRegionId = IDaaSRegionId;
+        public Builder iDaaSRegionId(String iDaaSRegionId) {
+            this.putQueryParameter("IDaaSRegionId", iDaaSRegionId);
+            this.iDaaSRegionId = iDaaSRegionId;
             return this;
         }
 

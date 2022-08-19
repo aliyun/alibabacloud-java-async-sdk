@@ -295,6 +295,68 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         } 
 
     }
+    public static class Tag extends TeaModel {
+        private Tag(Builder builder) {
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        public static final class Builder {
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
+    public static class Tags extends TeaModel {
+        @NameInMap("Tag")
+        private java.util.List < Tag> tag;
+
+        private Tags(Builder builder) {
+            this.tag = builder.tag;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tag
+         */
+        public java.util.List < Tag> getTag() {
+            return this.tag;
+        }
+
+        public static final class Builder {
+            private java.util.List < Tag> tag; 
+
+            /**
+             * Tag.
+             */
+            public Builder tag(java.util.List < Tag> tag) {
+                this.tag = tag;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class EipAddress extends TeaModel {
         @NameInMap("AllocationId")
         private String allocationId;
@@ -328,9 +390,6 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
 
         @NameInMap("Description")
         private String description;
-
-        @NameInMap("Descritpion")
-        private String descritpion;
 
         @NameInMap("EipBandwidth")
         private String eipBandwidth;
@@ -371,6 +430,9 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         @NameInMap("OperationLocks")
         private OperationLocks operationLocks;
 
+        @NameInMap("PublicIpAddressPoolId")
+        private String publicIpAddressPoolId;
+
         @NameInMap("RegionId")
         private String regionId;
 
@@ -404,6 +466,9 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         @NameInMap("Status")
         private String status;
 
+        @NameInMap("Tags")
+        private Tags tags;
+
         private EipAddress(Builder builder) {
             this.allocationId = builder.allocationId;
             this.allocationTime = builder.allocationTime;
@@ -416,7 +481,6 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             this.chargeType = builder.chargeType;
             this.deletionProtection = builder.deletionProtection;
             this.description = builder.description;
-            this.descritpion = builder.descritpion;
             this.eipBandwidth = builder.eipBandwidth;
             this.expiredTime = builder.expiredTime;
             this.HDMonitorStatus = builder.HDMonitorStatus;
@@ -430,6 +494,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             this.name = builder.name;
             this.netmode = builder.netmode;
             this.operationLocks = builder.operationLocks;
+            this.publicIpAddressPoolId = builder.publicIpAddressPoolId;
             this.regionId = builder.regionId;
             this.reservationActiveTime = builder.reservationActiveTime;
             this.reservationBandwidth = builder.reservationBandwidth;
@@ -441,6 +506,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             this.segmentInstanceId = builder.segmentInstanceId;
             this.serviceManaged = builder.serviceManaged;
             this.status = builder.status;
+            this.tags = builder.tags;
         }
 
         public static Builder builder() {
@@ -526,13 +592,6 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
-        }
-
-        /**
-         * @return descritpion
-         */
-        public String getDescritpion() {
-            return this.descritpion;
         }
 
         /**
@@ -627,6 +686,13 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         }
 
         /**
+         * @return publicIpAddressPoolId
+         */
+        public String getPublicIpAddressPoolId() {
+            return this.publicIpAddressPoolId;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
@@ -703,6 +769,13 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             return this.status;
         }
 
+        /**
+         * @return tags
+         */
+        public Tags getTags() {
+            return this.tags;
+        }
+
         public static final class Builder {
             private String allocationId; 
             private String allocationTime; 
@@ -715,7 +788,6 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             private String chargeType; 
             private Boolean deletionProtection; 
             private String description; 
-            private String descritpion; 
             private String eipBandwidth; 
             private String expiredTime; 
             private String HDMonitorStatus; 
@@ -729,6 +801,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             private String name; 
             private String netmode; 
             private OperationLocks operationLocks; 
+            private String publicIpAddressPoolId; 
             private String regionId; 
             private String reservationActiveTime; 
             private String reservationBandwidth; 
@@ -740,6 +813,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             private String segmentInstanceId; 
             private Integer serviceManaged; 
             private String status; 
+            private Tags tags; 
 
             /**
              * AllocationId.
@@ -826,14 +900,6 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
-                return this;
-            }
-
-            /**
-             * Descritpion.
-             */
-            public Builder descritpion(String descritpion) {
-                this.descritpion = descritpion;
                 return this;
             }
 
@@ -942,6 +1008,14 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             }
 
             /**
+             * PublicIpAddressPoolId.
+             */
+            public Builder publicIpAddressPoolId(String publicIpAddressPoolId) {
+                this.publicIpAddressPoolId = publicIpAddressPoolId;
+                return this;
+            }
+
+            /**
              * RegionId.
              */
             public Builder regionId(String regionId) {
@@ -1026,6 +1100,14 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(Tags tags) {
+                this.tags = tags;
                 return this;
             }
 

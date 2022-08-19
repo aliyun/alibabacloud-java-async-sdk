@@ -154,17 +154,17 @@ public class CompletePhysicalConnectionLOARequest extends Request {
             super();
         } 
 
-        private Builder(CompletePhysicalConnectionLOARequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.instanceId = response.instanceId;
-            this.lineCode = response.lineCode;
-            this.lineLabel = response.lineLabel;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(CompletePhysicalConnectionLOARequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.instanceId = request.instanceId;
+            this.lineCode = request.lineCode;
+            this.lineLabel = request.lineLabel;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

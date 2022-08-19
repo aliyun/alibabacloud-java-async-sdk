@@ -44,7 +44,7 @@ public class DescribeVRoutersRequest extends Request {
 
     @Query
     @NameInMap("VRouterId")
-    private String VRouterId;
+    private String vRouterId;
 
     private DescribeVRoutersRequest(Builder builder) {
         super(builder);
@@ -55,7 +55,7 @@ public class DescribeVRoutersRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.VRouterId = builder.VRouterId;
+        this.vRouterId = builder.vRouterId;
     }
 
     public static Builder builder() {
@@ -121,10 +121,10 @@ public class DescribeVRoutersRequest extends Request {
     }
 
     /**
-     * @return VRouterId
+     * @return vRouterId
      */
     public String getVRouterId() {
-        return this.VRouterId;
+        return this.vRouterId;
     }
 
     public static final class Builder extends Request.Builder<DescribeVRoutersRequest, Builder> {
@@ -135,22 +135,22 @@ public class DescribeVRoutersRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String VRouterId; 
+        private String vRouterId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeVRoutersRequest response) {
-            super(response);
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.VRouterId = response.VRouterId;
+        private Builder(DescribeVRoutersRequest request) {
+            super(request);
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.vRouterId = request.vRouterId;
         } 
 
         /**
@@ -219,9 +219,9 @@ public class DescribeVRoutersRequest extends Request {
         /**
          * VRouterId.
          */
-        public Builder VRouterId(String VRouterId) {
-            this.putQueryParameter("VRouterId", VRouterId);
-            this.VRouterId = VRouterId;
+        public Builder vRouterId(String vRouterId) {
+            this.putQueryParameter("VRouterId", vRouterId);
+            this.vRouterId = vRouterId;
             return this;
         }
 

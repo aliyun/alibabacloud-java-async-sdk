@@ -155,17 +155,17 @@ public class ModifyIPv6TranslatorBandwidthRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyIPv6TranslatorBandwidthRequest response) {
-            super(response);
-            this.autoPay = response.autoPay;
-            this.bandwidth = response.bandwidth;
-            this.clientToken = response.clientToken;
-            this.ipv6TranslatorId = response.ipv6TranslatorId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyIPv6TranslatorBandwidthRequest request) {
+            super(request);
+            this.autoPay = request.autoPay;
+            this.bandwidth = request.bandwidth;
+            this.clientToken = request.clientToken;
+            this.ipv6TranslatorId = request.ipv6TranslatorId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

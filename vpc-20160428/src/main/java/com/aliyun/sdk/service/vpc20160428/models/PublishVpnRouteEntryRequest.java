@@ -184,19 +184,19 @@ public class PublishVpnRouteEntryRequest extends Request {
             super();
         } 
 
-        private Builder(PublishVpnRouteEntryRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.nextHop = response.nextHop;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.publishVpc = response.publishVpc;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.routeDest = response.routeDest;
-            this.routeType = response.routeType;
-            this.vpnGatewayId = response.vpnGatewayId;
+        private Builder(PublishVpnRouteEntryRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.nextHop = request.nextHop;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.publishVpc = request.publishVpc;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.routeDest = request.routeDest;
+            this.routeType = request.routeType;
+            this.vpnGatewayId = request.vpnGatewayId;
         } 
 
         /**

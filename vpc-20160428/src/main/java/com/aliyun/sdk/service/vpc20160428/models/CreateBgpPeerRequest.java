@@ -180,19 +180,19 @@ public class CreateBgpPeerRequest extends Request {
             super();
         } 
 
-        private Builder(CreateBgpPeerRequest response) {
-            super(response);
-            this.bfdMultiHop = response.bfdMultiHop;
-            this.bgpGroupId = response.bgpGroupId;
-            this.clientToken = response.clientToken;
-            this.enableBfd = response.enableBfd;
-            this.ipVersion = response.ipVersion;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.peerIpAddress = response.peerIpAddress;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(CreateBgpPeerRequest request) {
+            super(request);
+            this.bfdMultiHop = request.bfdMultiHop;
+            this.bgpGroupId = request.bgpGroupId;
+            this.clientToken = request.clientToken;
+            this.enableBfd = request.enableBfd;
+            this.ipVersion = request.ipVersion;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.peerIpAddress = request.peerIpAddress;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

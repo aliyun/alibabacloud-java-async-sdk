@@ -232,23 +232,23 @@ public class ModifyPhysicalConnectionAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyPhysicalConnectionAttributeRequest response) {
-            super(response);
-            this.circuitCode = response.circuitCode;
-            this.clientToken = response.clientToken;
-            this.description = response.description;
-            this.lineOperator = response.lineOperator;
-            this.name = response.name;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.peerLocation = response.peerLocation;
-            this.physicalConnectionId = response.physicalConnectionId;
-            this.portType = response.portType;
-            this.redundantPhysicalConnectionId = response.redundantPhysicalConnectionId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.bandwidth = response.bandwidth;
+        private Builder(ModifyPhysicalConnectionAttributeRequest request) {
+            super(request);
+            this.circuitCode = request.circuitCode;
+            this.clientToken = request.clientToken;
+            this.description = request.description;
+            this.lineOperator = request.lineOperator;
+            this.name = request.name;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.peerLocation = request.peerLocation;
+            this.physicalConnectionId = request.physicalConnectionId;
+            this.portType = request.portType;
+            this.redundantPhysicalConnectionId = request.redundantPhysicalConnectionId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.bandwidth = request.bandwidth;
         } 
 
         /**

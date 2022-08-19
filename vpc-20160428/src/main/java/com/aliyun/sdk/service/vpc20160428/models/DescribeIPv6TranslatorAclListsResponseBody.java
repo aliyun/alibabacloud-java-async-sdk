@@ -194,10 +194,10 @@ public class DescribeIPv6TranslatorAclListsResponseBody extends TeaModel {
     }
     public static class Ipv6TranslatorAcls extends TeaModel {
         @NameInMap("IPv6TranslatorAcl")
-        private java.util.List < IPv6TranslatorAcl> IPv6TranslatorAcl;
+        private java.util.List < IPv6TranslatorAcl> iPv6TranslatorAcl;
 
         private Ipv6TranslatorAcls(Builder builder) {
-            this.IPv6TranslatorAcl = builder.IPv6TranslatorAcl;
+            this.iPv6TranslatorAcl = builder.iPv6TranslatorAcl;
         }
 
         public static Builder builder() {
@@ -209,20 +209,20 @@ public class DescribeIPv6TranslatorAclListsResponseBody extends TeaModel {
         }
 
         /**
-         * @return IPv6TranslatorAcl
+         * @return iPv6TranslatorAcl
          */
         public java.util.List < IPv6TranslatorAcl> getIPv6TranslatorAcl() {
-            return this.IPv6TranslatorAcl;
+            return this.iPv6TranslatorAcl;
         }
 
         public static final class Builder {
-            private java.util.List < IPv6TranslatorAcl> IPv6TranslatorAcl; 
+            private java.util.List < IPv6TranslatorAcl> iPv6TranslatorAcl; 
 
             /**
              * IPv6TranslatorAcl.
              */
-            public Builder IPv6TranslatorAcl(java.util.List < IPv6TranslatorAcl> IPv6TranslatorAcl) {
-                this.IPv6TranslatorAcl = IPv6TranslatorAcl;
+            public Builder iPv6TranslatorAcl(java.util.List < IPv6TranslatorAcl> iPv6TranslatorAcl) {
+                this.iPv6TranslatorAcl = iPv6TranslatorAcl;
                 return this;
             }
 

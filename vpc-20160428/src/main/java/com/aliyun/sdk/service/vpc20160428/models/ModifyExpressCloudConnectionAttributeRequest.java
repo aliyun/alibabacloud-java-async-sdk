@@ -180,19 +180,19 @@ public class ModifyExpressCloudConnectionAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyExpressCloudConnectionAttributeRequest response) {
-            super(response);
-            this.bgpAs = response.bgpAs;
-            this.ceIp = response.ceIp;
-            this.description = response.description;
-            this.eccId = response.eccId;
-            this.name = response.name;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.peIp = response.peIp;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyExpressCloudConnectionAttributeRequest request) {
+            super(request);
+            this.bgpAs = request.bgpAs;
+            this.ceIp = request.ceIp;
+            this.description = request.description;
+            this.eccId = request.eccId;
+            this.name = request.name;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.peIp = request.peIp;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

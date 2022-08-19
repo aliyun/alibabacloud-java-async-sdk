@@ -366,33 +366,33 @@ public class CreateRouterInterfaceRequest extends Request {
             super();
         } 
 
-        private Builder(CreateRouterInterfaceRequest response) {
-            super(response);
-            this.accessPointId = response.accessPointId;
-            this.autoPay = response.autoPay;
-            this.clientToken = response.clientToken;
-            this.description = response.description;
-            this.healthCheckSourceIp = response.healthCheckSourceIp;
-            this.healthCheckTargetIp = response.healthCheckTargetIp;
-            this.instanceChargeType = response.instanceChargeType;
-            this.name = response.name;
-            this.oppositeAccessPointId = response.oppositeAccessPointId;
-            this.oppositeInterfaceId = response.oppositeInterfaceId;
-            this.oppositeInterfaceOwnerId = response.oppositeInterfaceOwnerId;
-            this.oppositeRegionId = response.oppositeRegionId;
-            this.oppositeRouterId = response.oppositeRouterId;
-            this.oppositeRouterType = response.oppositeRouterType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.period = response.period;
-            this.pricingCycle = response.pricingCycle;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.role = response.role;
-            this.routerId = response.routerId;
-            this.routerType = response.routerType;
-            this.spec = response.spec;
+        private Builder(CreateRouterInterfaceRequest request) {
+            super(request);
+            this.accessPointId = request.accessPointId;
+            this.autoPay = request.autoPay;
+            this.clientToken = request.clientToken;
+            this.description = request.description;
+            this.healthCheckSourceIp = request.healthCheckSourceIp;
+            this.healthCheckTargetIp = request.healthCheckTargetIp;
+            this.instanceChargeType = request.instanceChargeType;
+            this.name = request.name;
+            this.oppositeAccessPointId = request.oppositeAccessPointId;
+            this.oppositeInterfaceId = request.oppositeInterfaceId;
+            this.oppositeInterfaceOwnerId = request.oppositeInterfaceOwnerId;
+            this.oppositeRegionId = request.oppositeRegionId;
+            this.oppositeRouterId = request.oppositeRouterId;
+            this.oppositeRouterType = request.oppositeRouterType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.period = request.period;
+            this.pricingCycle = request.pricingCycle;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.role = request.role;
+            this.routerId = request.routerId;
+            this.routerType = request.routerType;
+            this.spec = request.spec;
         } 
 
         /**

@@ -128,15 +128,15 @@ public class DeleteIpv6EgressOnlyRuleRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteIpv6EgressOnlyRuleRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.ipv6EgressOnlyRuleId = response.ipv6EgressOnlyRuleId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DeleteIpv6EgressOnlyRuleRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.ipv6EgressOnlyRuleId = request.ipv6EgressOnlyRuleId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

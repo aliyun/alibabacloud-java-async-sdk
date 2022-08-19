@@ -300,28 +300,28 @@ public class CreateVpnConnectionRequest extends Request {
             super();
         } 
 
-        private Builder(CreateVpnConnectionRequest response) {
-            super(response);
-            this.autoConfigRoute = response.autoConfigRoute;
-            this.bgpConfig = response.bgpConfig;
-            this.clientToken = response.clientToken;
-            this.customerGatewayId = response.customerGatewayId;
-            this.effectImmediately = response.effectImmediately;
-            this.enableDpd = response.enableDpd;
-            this.enableNatTraversal = response.enableNatTraversal;
-            this.healthCheckConfig = response.healthCheckConfig;
-            this.ikeConfig = response.ikeConfig;
-            this.ipsecConfig = response.ipsecConfig;
-            this.localSubnet = response.localSubnet;
-            this.name = response.name;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.remoteCaCertificate = response.remoteCaCertificate;
-            this.remoteSubnet = response.remoteSubnet;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.vpnGatewayId = response.vpnGatewayId;
+        private Builder(CreateVpnConnectionRequest request) {
+            super(request);
+            this.autoConfigRoute = request.autoConfigRoute;
+            this.bgpConfig = request.bgpConfig;
+            this.clientToken = request.clientToken;
+            this.customerGatewayId = request.customerGatewayId;
+            this.effectImmediately = request.effectImmediately;
+            this.enableDpd = request.enableDpd;
+            this.enableNatTraversal = request.enableNatTraversal;
+            this.healthCheckConfig = request.healthCheckConfig;
+            this.ikeConfig = request.ikeConfig;
+            this.ipsecConfig = request.ipsecConfig;
+            this.localSubnet = request.localSubnet;
+            this.name = request.name;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.remoteCaCertificate = request.remoteCaCertificate;
+            this.remoteSubnet = request.remoteSubnet;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.vpnGatewayId = request.vpnGatewayId;
         } 
 
         /**

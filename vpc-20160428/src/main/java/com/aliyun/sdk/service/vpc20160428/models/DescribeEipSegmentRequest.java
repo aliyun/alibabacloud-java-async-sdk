@@ -154,17 +154,17 @@ public class DescribeEipSegmentRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeEipSegmentRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.segmentInstanceId = response.segmentInstanceId;
+        private Builder(DescribeEipSegmentRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.segmentInstanceId = request.segmentInstanceId;
         } 
 
         /**

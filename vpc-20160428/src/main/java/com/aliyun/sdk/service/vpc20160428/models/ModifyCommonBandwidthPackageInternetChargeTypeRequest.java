@@ -182,19 +182,19 @@ public class ModifyCommonBandwidthPackageInternetChargeTypeRequest extends Reque
             super();
         } 
 
-        private Builder(ModifyCommonBandwidthPackageInternetChargeTypeRequest response) {
-            super(response);
-            this.autoPay = response.autoPay;
-            this.bandwidth = response.bandwidth;
-            this.bandwidthPackageId = response.bandwidthPackageId;
-            this.instanceChargeType = response.instanceChargeType;
-            this.internetChargeType = response.internetChargeType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.ratio = response.ratio;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyCommonBandwidthPackageInternetChargeTypeRequest request) {
+            super(request);
+            this.autoPay = request.autoPay;
+            this.bandwidth = request.bandwidth;
+            this.bandwidthPackageId = request.bandwidthPackageId;
+            this.instanceChargeType = request.instanceChargeType;
+            this.internetChargeType = request.internetChargeType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.ratio = request.ratio;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

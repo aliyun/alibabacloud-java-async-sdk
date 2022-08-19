@@ -117,14 +117,14 @@ public class DissociateVpnGatewayWithCertificateRequest extends Request {
             super();
         } 
 
-        private Builder(DissociateVpnGatewayWithCertificateRequest response) {
-            super(response);
-            this.certificateId = response.certificateId;
-            this.certificateType = response.certificateType;
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.regionId = response.regionId;
-            this.vpnGatewayId = response.vpnGatewayId;
+        private Builder(DissociateVpnGatewayWithCertificateRequest request) {
+            super(request);
+            this.certificateId = request.certificateId;
+            this.certificateType = request.certificateType;
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.regionId = request.regionId;
+            this.vpnGatewayId = request.vpnGatewayId;
         } 
 
         /**

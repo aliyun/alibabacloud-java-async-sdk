@@ -141,16 +141,16 @@ public class ListVpcEndpointServicesByEndUserRequest extends Request {
             super();
         } 
 
-        private Builder(ListVpcEndpointServicesByEndUserRequest response) {
-            super(response);
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.serviceName = response.serviceName;
+        private Builder(ListVpcEndpointServicesByEndUserRequest request) {
+            super(request);
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.serviceName = request.serviceName;
         } 
 
         /**

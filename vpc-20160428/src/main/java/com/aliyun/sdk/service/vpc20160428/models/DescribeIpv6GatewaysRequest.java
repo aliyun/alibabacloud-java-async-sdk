@@ -167,18 +167,18 @@ public class DescribeIpv6GatewaysRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeIpv6GatewaysRequest response) {
-            super(response);
-            this.ipv6GatewayId = response.ipv6GatewayId;
-            this.name = response.name;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.vpcId = response.vpcId;
+        private Builder(DescribeIpv6GatewaysRequest request) {
+            super(request);
+            this.ipv6GatewayId = request.ipv6GatewayId;
+            this.name = request.name;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.vpcId = request.vpcId;
         } 
 
         /**

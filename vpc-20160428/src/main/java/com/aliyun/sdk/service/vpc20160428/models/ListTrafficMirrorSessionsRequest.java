@@ -232,23 +232,23 @@ public class ListTrafficMirrorSessionsRequest extends Request {
             super();
         } 
 
-        private Builder(ListTrafficMirrorSessionsRequest response) {
-            super(response);
-            this.enabled = response.enabled;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.priority = response.priority;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.trafficMirrorFilterId = response.trafficMirrorFilterId;
-            this.trafficMirrorSessionIds = response.trafficMirrorSessionIds;
-            this.trafficMirrorSessionName = response.trafficMirrorSessionName;
-            this.trafficMirrorSourceId = response.trafficMirrorSourceId;
-            this.trafficMirrorTargetId = response.trafficMirrorTargetId;
-            this.virtualNetworkId = response.virtualNetworkId;
+        private Builder(ListTrafficMirrorSessionsRequest request) {
+            super(request);
+            this.enabled = request.enabled;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.priority = request.priority;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.trafficMirrorFilterId = request.trafficMirrorFilterId;
+            this.trafficMirrorSessionIds = request.trafficMirrorSessionIds;
+            this.trafficMirrorSessionName = request.trafficMirrorSessionName;
+            this.trafficMirrorSourceId = request.trafficMirrorSourceId;
+            this.trafficMirrorTargetId = request.trafficMirrorTargetId;
+            this.virtualNetworkId = request.virtualNetworkId;
         } 
 
         /**

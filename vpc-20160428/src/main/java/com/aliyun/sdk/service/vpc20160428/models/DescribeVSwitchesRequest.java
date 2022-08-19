@@ -244,24 +244,24 @@ public class DescribeVSwitchesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeVSwitchesRequest response) {
-            super(response);
-            this.dryRun = response.dryRun;
-            this.isDefault = response.isDefault;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.routeTableId = response.routeTableId;
-            this.vSwitchId = response.vSwitchId;
-            this.vSwitchName = response.vSwitchName;
-            this.vSwitchOwnerId = response.vSwitchOwnerId;
-            this.vpcId = response.vpcId;
-            this.zoneId = response.zoneId;
+        private Builder(DescribeVSwitchesRequest request) {
+            super(request);
+            this.dryRun = request.dryRun;
+            this.isDefault = request.isDefault;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.routeTableId = request.routeTableId;
+            this.vSwitchId = request.vSwitchId;
+            this.vSwitchName = request.vSwitchName;
+            this.vSwitchOwnerId = request.vSwitchOwnerId;
+            this.vpcId = request.vpcId;
+            this.zoneId = request.zoneId;
         } 
 
         /**

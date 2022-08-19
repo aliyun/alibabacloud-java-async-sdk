@@ -245,24 +245,24 @@ public class ModifyRouterInterfaceAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyRouterInterfaceAttributeRequest response) {
-            super(response);
-            this.deleteHealthCheckIp = response.deleteHealthCheckIp;
-            this.description = response.description;
-            this.hcRate = response.hcRate;
-            this.hcThreshold = response.hcThreshold;
-            this.healthCheckSourceIp = response.healthCheckSourceIp;
-            this.healthCheckTargetIp = response.healthCheckTargetIp;
-            this.name = response.name;
-            this.oppositeInterfaceId = response.oppositeInterfaceId;
-            this.oppositeInterfaceOwnerId = response.oppositeInterfaceOwnerId;
-            this.oppositeRouterId = response.oppositeRouterId;
-            this.oppositeRouterType = response.oppositeRouterType;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.routerInterfaceId = response.routerInterfaceId;
+        private Builder(ModifyRouterInterfaceAttributeRequest request) {
+            super(request);
+            this.deleteHealthCheckIp = request.deleteHealthCheckIp;
+            this.description = request.description;
+            this.hcRate = request.hcRate;
+            this.hcThreshold = request.hcThreshold;
+            this.healthCheckSourceIp = request.healthCheckSourceIp;
+            this.healthCheckTargetIp = request.healthCheckTargetIp;
+            this.name = request.name;
+            this.oppositeInterfaceId = request.oppositeInterfaceId;
+            this.oppositeInterfaceOwnerId = request.oppositeInterfaceOwnerId;
+            this.oppositeRouterId = request.oppositeRouterId;
+            this.oppositeRouterType = request.oppositeRouterType;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.routerInterfaceId = request.routerInterfaceId;
         } 
 
         /**

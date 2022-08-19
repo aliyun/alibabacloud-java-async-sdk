@@ -232,23 +232,23 @@ public class DescribeGlobalAccelerationInstancesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeGlobalAccelerationInstancesRequest response) {
-            super(response);
-            this.bandwidthType = response.bandwidthType;
-            this.globalAccelerationInstanceId = response.globalAccelerationInstanceId;
-            this.includeReservationData = response.includeReservationData;
-            this.ipAddress = response.ipAddress;
-            this.name = response.name;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.serverId = response.serverId;
-            this.serviceLocation = response.serviceLocation;
-            this.status = response.status;
+        private Builder(DescribeGlobalAccelerationInstancesRequest request) {
+            super(request);
+            this.bandwidthType = request.bandwidthType;
+            this.globalAccelerationInstanceId = request.globalAccelerationInstanceId;
+            this.includeReservationData = request.includeReservationData;
+            this.ipAddress = request.ipAddress;
+            this.name = request.name;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.serverId = request.serverId;
+            this.serviceLocation = request.serviceLocation;
+            this.status = request.status;
         } 
 
         /**

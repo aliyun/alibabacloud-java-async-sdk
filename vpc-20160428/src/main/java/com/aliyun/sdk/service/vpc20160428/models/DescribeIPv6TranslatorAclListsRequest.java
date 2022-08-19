@@ -153,17 +153,17 @@ public class DescribeIPv6TranslatorAclListsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeIPv6TranslatorAclListsRequest response) {
-            super(response);
-            this.aclId = response.aclId;
-            this.aclName = response.aclName;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeIPv6TranslatorAclListsRequest request) {
+            super(request);
+            this.aclId = request.aclId;
+            this.aclName = request.aclName;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

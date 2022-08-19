@@ -181,19 +181,19 @@ public class CreateVbrHaRequest extends Request {
             super();
         } 
 
-        private Builder(CreateVbrHaRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.description = response.description;
-            this.dryRun = response.dryRun;
-            this.name = response.name;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.peerVbrId = response.peerVbrId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.vbrId = response.vbrId;
+        private Builder(CreateVbrHaRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.description = request.description;
+            this.dryRun = request.dryRun;
+            this.name = request.name;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.peerVbrId = request.peerVbrId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.vbrId = request.vbrId;
         } 
 
         /**

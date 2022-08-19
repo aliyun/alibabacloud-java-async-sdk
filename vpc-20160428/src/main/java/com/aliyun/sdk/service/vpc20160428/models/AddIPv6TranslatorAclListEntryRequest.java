@@ -142,16 +142,16 @@ public class AddIPv6TranslatorAclListEntryRequest extends Request {
             super();
         } 
 
-        private Builder(AddIPv6TranslatorAclListEntryRequest response) {
-            super(response);
-            this.aclEntryComment = response.aclEntryComment;
-            this.aclEntryIp = response.aclEntryIp;
-            this.aclId = response.aclId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(AddIPv6TranslatorAclListEntryRequest request) {
+            super(request);
+            this.aclEntryComment = request.aclEntryComment;
+            this.aclEntryIp = request.aclEntryIp;
+            this.aclId = request.aclId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

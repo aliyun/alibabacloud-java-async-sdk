@@ -167,18 +167,18 @@ public class CreateRouteTableRequest extends Request {
             super();
         } 
 
-        private Builder(CreateRouteTableRequest response) {
-            super(response);
-            this.associateType = response.associateType;
-            this.clientToken = response.clientToken;
-            this.description = response.description;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.routeTableName = response.routeTableName;
-            this.vpcId = response.vpcId;
+        private Builder(CreateRouteTableRequest request) {
+            super(request);
+            this.associateType = request.associateType;
+            this.clientToken = request.clientToken;
+            this.description = request.description;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.routeTableName = request.routeTableName;
+            this.vpcId = request.vpcId;
         } 
 
         /**

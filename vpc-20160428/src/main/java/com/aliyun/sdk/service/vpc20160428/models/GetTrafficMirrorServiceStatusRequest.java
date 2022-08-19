@@ -48,9 +48,9 @@ public class GetTrafficMirrorServiceStatusRequest extends Request {
             super();
         } 
 
-        private Builder(GetTrafficMirrorServiceStatusRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
+        private Builder(GetTrafficMirrorServiceStatusRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
         } 
 
         /**

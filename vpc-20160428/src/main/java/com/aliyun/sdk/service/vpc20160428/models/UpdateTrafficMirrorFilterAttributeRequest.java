@@ -167,18 +167,18 @@ public class UpdateTrafficMirrorFilterAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateTrafficMirrorFilterAttributeRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.trafficMirrorFilterDescription = response.trafficMirrorFilterDescription;
-            this.trafficMirrorFilterId = response.trafficMirrorFilterId;
-            this.trafficMirrorFilterName = response.trafficMirrorFilterName;
+        private Builder(UpdateTrafficMirrorFilterAttributeRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.trafficMirrorFilterDescription = request.trafficMirrorFilterDescription;
+            this.trafficMirrorFilterId = request.trafficMirrorFilterId;
+            this.trafficMirrorFilterName = request.trafficMirrorFilterName;
         } 
 
         /**

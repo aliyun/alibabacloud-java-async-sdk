@@ -596,7 +596,7 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
         private String status;
 
         @NameInMap("VRouterId")
-        private String VRouterId;
+        private String vRouterId;
 
         @NameInMap("VSwitchIds")
         private VSwitchIds vSwitchIds;
@@ -608,7 +608,7 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
             this.routeTableId = builder.routeTableId;
             this.routeTableType = builder.routeTableType;
             this.status = builder.status;
-            this.VRouterId = builder.VRouterId;
+            this.vRouterId = builder.vRouterId;
             this.vSwitchIds = builder.vSwitchIds;
         }
 
@@ -663,10 +663,10 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
         }
 
         /**
-         * @return VRouterId
+         * @return vRouterId
          */
         public String getVRouterId() {
-            return this.VRouterId;
+            return this.vRouterId;
         }
 
         /**
@@ -683,7 +683,7 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
             private String routeTableId; 
             private String routeTableType; 
             private String status; 
-            private String VRouterId; 
+            private String vRouterId; 
             private VSwitchIds vSwitchIds; 
 
             /**
@@ -737,8 +737,8 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
             /**
              * VRouterId.
              */
-            public Builder VRouterId(String VRouterId) {
-                this.VRouterId = VRouterId;
+            public Builder vRouterId(String vRouterId) {
+                this.vRouterId = vRouterId;
                 return this;
             }
 

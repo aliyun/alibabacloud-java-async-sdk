@@ -141,16 +141,16 @@ public class ModifySslVpnClientCertRequest extends Request {
             super();
         } 
 
-        private Builder(ModifySslVpnClientCertRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.name = response.name;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sslVpnClientCertId = response.sslVpnClientCertId;
+        private Builder(ModifySslVpnClientCertRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.name = request.name;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sslVpnClientCertId = request.sslVpnClientCertId;
         } 
 
         /**

@@ -116,14 +116,14 @@ public class UpdateVirtualPhysicalConnectionRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateVirtualPhysicalConnectionRequest response) {
-            super(response);
-            this.dryRun = response.dryRun;
-            this.expectSpec = response.expectSpec;
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
-            this.token = response.token;
-            this.vlanId = response.vlanId;
+        private Builder(UpdateVirtualPhysicalConnectionRequest request) {
+            super(request);
+            this.dryRun = request.dryRun;
+            this.expectSpec = request.expectSpec;
+            this.instanceId = request.instanceId;
+            this.regionId = request.regionId;
+            this.token = request.token;
+            this.vlanId = request.vlanId;
         } 
 
         /**

@@ -193,20 +193,20 @@ public class AssociateEipAddressRequest extends Request {
             super();
         } 
 
-        private Builder(AssociateEipAddressRequest response) {
-            super(response);
-            this.allocationId = response.allocationId;
-            this.clientToken = response.clientToken;
-            this.instanceId = response.instanceId;
-            this.instanceRegionId = response.instanceRegionId;
-            this.instanceType = response.instanceType;
-            this.mode = response.mode;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.privateIpAddress = response.privateIpAddress;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(AssociateEipAddressRequest request) {
+            super(request);
+            this.allocationId = request.allocationId;
+            this.clientToken = request.clientToken;
+            this.instanceId = request.instanceId;
+            this.instanceRegionId = request.instanceRegionId;
+            this.instanceType = request.instanceType;
+            this.mode = request.mode;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.privateIpAddress = request.privateIpAddress;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

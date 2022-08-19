@@ -17,6 +17,10 @@ public class CreateSnatEntryRequest extends Request {
     private String clientToken;
 
     @Query
+    @NameInMap("EipAffinity")
+    private Integer eipAffinity;
+
+    @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -62,6 +66,7 @@ public class CreateSnatEntryRequest extends Request {
     private CreateSnatEntryRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
+        this.eipAffinity = builder.eipAffinity;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
@@ -92,6 +97,13 @@ public class CreateSnatEntryRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return eipAffinity
+     */
+    public Integer getEipAffinity() {
+        return this.eipAffinity;
     }
 
     /**
@@ -166,6 +178,7 @@ public class CreateSnatEntryRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateSnatEntryRequest, Builder> {
         private String clientToken; 
+        private Integer eipAffinity; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
@@ -181,19 +194,20 @@ public class CreateSnatEntryRequest extends Request {
             super();
         } 
 
-        private Builder(CreateSnatEntryRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.snatEntryName = response.snatEntryName;
-            this.snatIp = response.snatIp;
-            this.snatTableId = response.snatTableId;
-            this.sourceCIDR = response.sourceCIDR;
-            this.sourceVSwitchId = response.sourceVSwitchId;
+        private Builder(CreateSnatEntryRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.eipAffinity = request.eipAffinity;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.snatEntryName = request.snatEntryName;
+            this.snatIp = request.snatIp;
+            this.snatTableId = request.snatTableId;
+            this.sourceCIDR = request.sourceCIDR;
+            this.sourceVSwitchId = request.sourceVSwitchId;
         } 
 
         /**
@@ -202,6 +216,15 @@ public class CreateSnatEntryRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * EipAffinity.
+         */
+        public Builder eipAffinity(Integer eipAffinity) {
+            this.putQueryParameter("EipAffinity", eipAffinity);
+            this.eipAffinity = eipAffinity;
             return this;
         }
 

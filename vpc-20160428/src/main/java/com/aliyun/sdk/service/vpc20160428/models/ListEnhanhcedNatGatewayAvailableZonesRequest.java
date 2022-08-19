@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListEnhanhcedNatGatewayAvailableZonesRequest extends Request {
     @Query
+    @NameInMap("AcceptLanguage")
+    private String acceptLanguage;
+
+    @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -35,6 +39,7 @@ public class ListEnhanhcedNatGatewayAvailableZonesRequest extends Request {
 
     private ListEnhanhcedNatGatewayAvailableZonesRequest(Builder builder) {
         super(builder);
+        this.acceptLanguage = builder.acceptLanguage;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
@@ -53,6 +58,13 @@ public class ListEnhanhcedNatGatewayAvailableZonesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return acceptLanguage
+     */
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     /**
@@ -91,6 +103,7 @@ public class ListEnhanhcedNatGatewayAvailableZonesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListEnhanhcedNatGatewayAvailableZonesRequest, Builder> {
+        private String acceptLanguage; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
@@ -101,14 +114,24 @@ public class ListEnhanhcedNatGatewayAvailableZonesRequest extends Request {
             super();
         } 
 
-        private Builder(ListEnhanhcedNatGatewayAvailableZonesRequest response) {
-            super(response);
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ListEnhanhcedNatGatewayAvailableZonesRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
+
+        /**
+         * AcceptLanguage.
+         */
+        public Builder acceptLanguage(String acceptLanguage) {
+            this.putQueryParameter("AcceptLanguage", acceptLanguage);
+            this.acceptLanguage = acceptLanguage;
+            return this;
+        }
 
         /**
          * OwnerAccount.

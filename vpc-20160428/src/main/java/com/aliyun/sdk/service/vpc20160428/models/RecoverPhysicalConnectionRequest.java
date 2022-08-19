@@ -89,12 +89,12 @@ public class RecoverPhysicalConnectionRequest extends Request {
             super();
         } 
 
-        private Builder(RecoverPhysicalConnectionRequest response) {
-            super(response);
-            this.dryRun = response.dryRun;
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
-            this.token = response.token;
+        private Builder(RecoverPhysicalConnectionRequest request) {
+            super(request);
+            this.dryRun = request.dryRun;
+            this.instanceId = request.instanceId;
+            this.regionId = request.regionId;
+            this.token = request.token;
         } 
 
         /**

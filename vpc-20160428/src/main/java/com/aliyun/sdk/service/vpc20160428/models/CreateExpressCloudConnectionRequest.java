@@ -247,24 +247,24 @@ public class CreateExpressCloudConnectionRequest extends Request {
             super();
         } 
 
-        private Builder(CreateExpressCloudConnectionRequest response) {
-            super(response);
-            this.bandwidth = response.bandwidth;
-            this.contactMail = response.contactMail;
-            this.contactTel = response.contactTel;
-            this.description = response.description;
-            this.IDCardNo = response.IDCardNo;
-            this.idcSP = response.idcSP;
-            this.name = response.name;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.peerCity = response.peerCity;
-            this.peerLocation = response.peerLocation;
-            this.portType = response.portType;
-            this.redundantEccId = response.redundantEccId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(CreateExpressCloudConnectionRequest request) {
+            super(request);
+            this.bandwidth = request.bandwidth;
+            this.contactMail = request.contactMail;
+            this.contactTel = request.contactTel;
+            this.description = request.description;
+            this.IDCardNo = request.IDCardNo;
+            this.idcSP = request.idcSP;
+            this.name = request.name;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.peerCity = request.peerCity;
+            this.peerLocation = request.peerLocation;
+            this.portType = request.portType;
+            this.redundantEccId = request.redundantEccId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

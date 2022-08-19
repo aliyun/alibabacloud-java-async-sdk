@@ -142,16 +142,16 @@ public class RemoveIPv6TranslatorAclListEntryRequest extends Request {
             super();
         } 
 
-        private Builder(RemoveIPv6TranslatorAclListEntryRequest response) {
-            super(response);
-            this.aclEntryId = response.aclEntryId;
-            this.aclId = response.aclId;
-            this.clientToken = response.clientToken;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(RemoveIPv6TranslatorAclListEntryRequest request) {
+            super(request);
+            this.aclEntryId = request.aclEntryId;
+            this.aclId = request.aclId;
+            this.clientToken = request.clientToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

@@ -115,14 +115,14 @@ public class DownloadVpnConnectionConfigRequest extends Request {
             super();
         } 
 
-        private Builder(DownloadVpnConnectionConfigRequest response) {
-            super(response);
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.vpnConnectionId = response.vpnConnectionId;
+        private Builder(DownloadVpnConnectionConfigRequest request) {
+            super(request);
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.vpnConnectionId = request.vpnConnectionId;
         } 
 
         /**

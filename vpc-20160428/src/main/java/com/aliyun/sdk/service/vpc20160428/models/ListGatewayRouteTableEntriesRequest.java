@@ -154,17 +154,17 @@ public class ListGatewayRouteTableEntriesRequest extends Request {
             super();
         } 
 
-        private Builder(ListGatewayRouteTableEntriesRequest response) {
-            super(response);
-            this.destinationCidrBlock = response.destinationCidrBlock;
-            this.gatewayRouteTableId = response.gatewayRouteTableId;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ListGatewayRouteTableEntriesRequest request) {
+            super(request);
+            this.destinationCidrBlock = request.destinationCidrBlock;
+            this.gatewayRouteTableId = request.gatewayRouteTableId;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

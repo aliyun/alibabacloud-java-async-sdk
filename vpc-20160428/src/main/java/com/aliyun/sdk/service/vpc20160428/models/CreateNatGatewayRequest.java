@@ -29,6 +29,10 @@ public class CreateNatGatewayRequest extends Request {
     private String duration;
 
     @Query
+    @NameInMap("EipBindMode")
+    private String eipBindMode;
+
+    @Query
     @NameInMap("IcmpReplyEnabled")
     private Boolean icmpReplyEnabled;
 
@@ -100,6 +104,7 @@ public class CreateNatGatewayRequest extends Request {
         this.clientToken = builder.clientToken;
         this.description = builder.description;
         this.duration = builder.duration;
+        this.eipBindMode = builder.eipBindMode;
         this.icmpReplyEnabled = builder.icmpReplyEnabled;
         this.instanceChargeType = builder.instanceChargeType;
         this.internetChargeType = builder.internetChargeType;
@@ -157,6 +162,13 @@ public class CreateNatGatewayRequest extends Request {
      */
     public String getDuration() {
         return this.duration;
+    }
+
+    /**
+     * @return eipBindMode
+     */
+    public String getEipBindMode() {
+        return this.eipBindMode;
     }
 
     /**
@@ -276,6 +288,7 @@ public class CreateNatGatewayRequest extends Request {
         private String clientToken; 
         private String description; 
         private String duration; 
+        private String eipBindMode; 
         private Boolean icmpReplyEnabled; 
         private String instanceChargeType; 
         private String internetChargeType; 
@@ -297,28 +310,29 @@ public class CreateNatGatewayRequest extends Request {
             super();
         } 
 
-        private Builder(CreateNatGatewayRequest response) {
-            super(response);
-            this.autoPay = response.autoPay;
-            this.clientToken = response.clientToken;
-            this.description = response.description;
-            this.duration = response.duration;
-            this.icmpReplyEnabled = response.icmpReplyEnabled;
-            this.instanceChargeType = response.instanceChargeType;
-            this.internetChargeType = response.internetChargeType;
-            this.name = response.name;
-            this.natType = response.natType;
-            this.networkType = response.networkType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pricingCycle = response.pricingCycle;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.securityProtectionEnabled = response.securityProtectionEnabled;
-            this.spec = response.spec;
-            this.vSwitchId = response.vSwitchId;
-            this.vpcId = response.vpcId;
+        private Builder(CreateNatGatewayRequest request) {
+            super(request);
+            this.autoPay = request.autoPay;
+            this.clientToken = request.clientToken;
+            this.description = request.description;
+            this.duration = request.duration;
+            this.eipBindMode = request.eipBindMode;
+            this.icmpReplyEnabled = request.icmpReplyEnabled;
+            this.instanceChargeType = request.instanceChargeType;
+            this.internetChargeType = request.internetChargeType;
+            this.name = request.name;
+            this.natType = request.natType;
+            this.networkType = request.networkType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pricingCycle = request.pricingCycle;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.securityProtectionEnabled = request.securityProtectionEnabled;
+            this.spec = request.spec;
+            this.vSwitchId = request.vSwitchId;
+            this.vpcId = request.vpcId;
         } 
 
         /**
@@ -354,6 +368,17 @@ public class CreateNatGatewayRequest extends Request {
         public Builder duration(String duration) {
             this.putQueryParameter("Duration", duration);
             this.duration = duration;
+            return this;
+        }
+
+        /**
+         * NAT：NAT模式，支持SNAT/访问DANT，最多支持绑定50个EIP，支持ingress routing;
+         * <p>
+         * MULTI_BINDED：多EIP网卡可见模式。
+         */
+        public Builder eipBindMode(String eipBindMode) {
+            this.putQueryParameter("EipBindMode", eipBindMode);
+            this.eipBindMode = eipBindMode;
             return this;
         }
 

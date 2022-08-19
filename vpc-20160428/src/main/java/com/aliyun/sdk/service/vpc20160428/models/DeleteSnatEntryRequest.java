@@ -142,16 +142,16 @@ public class DeleteSnatEntryRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteSnatEntryRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.snatEntryId = response.snatEntryId;
-            this.snatTableId = response.snatTableId;
+        private Builder(DeleteSnatEntryRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.snatEntryId = request.snatEntryId;
+            this.snatTableId = request.snatTableId;
         } 
 
         /**

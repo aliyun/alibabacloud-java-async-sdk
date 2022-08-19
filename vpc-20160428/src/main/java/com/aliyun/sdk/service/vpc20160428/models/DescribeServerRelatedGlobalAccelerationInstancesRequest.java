@@ -128,15 +128,15 @@ public class DescribeServerRelatedGlobalAccelerationInstancesRequest extends Req
             super();
         } 
 
-        private Builder(DescribeServerRelatedGlobalAccelerationInstancesRequest response) {
-            super(response);
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.serverId = response.serverId;
-            this.serverType = response.serverType;
+        private Builder(DescribeServerRelatedGlobalAccelerationInstancesRequest request) {
+            super(request);
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.serverId = request.serverId;
+            this.serverType = request.serverType;
         } 
 
         /**

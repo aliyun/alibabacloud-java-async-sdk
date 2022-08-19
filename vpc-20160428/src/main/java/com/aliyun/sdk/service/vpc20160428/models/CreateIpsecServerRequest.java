@@ -196,20 +196,20 @@ public class CreateIpsecServerRequest extends Request {
             super();
         } 
 
-        private Builder(CreateIpsecServerRequest response) {
-            super(response);
-            this.clientIpPool = response.clientIpPool;
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.effectImmediately = response.effectImmediately;
-            this.ikeConfig = response.ikeConfig;
-            this.ipSecServerName = response.ipSecServerName;
-            this.ipsecConfig = response.ipsecConfig;
-            this.localSubnet = response.localSubnet;
-            this.psk = response.psk;
-            this.pskEnabled = response.pskEnabled;
-            this.regionId = response.regionId;
-            this.vpnGatewayId = response.vpnGatewayId;
+        private Builder(CreateIpsecServerRequest request) {
+            super(request);
+            this.clientIpPool = request.clientIpPool;
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.effectImmediately = request.effectImmediately;
+            this.ikeConfig = request.ikeConfig;
+            this.ipSecServerName = request.ipSecServerName;
+            this.ipsecConfig = request.ipsecConfig;
+            this.localSubnet = request.localSubnet;
+            this.psk = request.psk;
+            this.pskEnabled = request.pskEnabled;
+            this.regionId = request.regionId;
+            this.vpnGatewayId = request.vpnGatewayId;
         } 
 
         /**

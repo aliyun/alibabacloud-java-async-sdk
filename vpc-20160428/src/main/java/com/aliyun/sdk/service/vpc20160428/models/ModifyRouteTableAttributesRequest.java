@@ -141,16 +141,16 @@ public class ModifyRouteTableAttributesRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyRouteTableAttributesRequest response) {
-            super(response);
-            this.description = response.description;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.routeTableId = response.routeTableId;
-            this.routeTableName = response.routeTableName;
+        private Builder(ModifyRouteTableAttributesRequest request) {
+            super(request);
+            this.description = request.description;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.routeTableId = request.routeTableId;
+            this.routeTableName = request.routeTableName;
         } 
 
         /**

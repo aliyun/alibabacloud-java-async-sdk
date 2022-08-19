@@ -171,18 +171,18 @@ public class CreateVirtualPhysicalConnectionRequest extends Request {
             super();
         } 
 
-        private Builder(CreateVirtualPhysicalConnectionRequest response) {
-            super(response);
-            this.description = response.description;
-            this.dryRun = response.dryRun;
-            this.name = response.name;
-            this.orderMode = response.orderMode;
-            this.physicalConnectionId = response.physicalConnectionId;
-            this.regionId = response.regionId;
-            this.spec = response.spec;
-            this.token = response.token;
-            this.vlanId = response.vlanId;
-            this.vpconnAliUid = response.vpconnAliUid;
+        private Builder(CreateVirtualPhysicalConnectionRequest request) {
+            super(request);
+            this.description = request.description;
+            this.dryRun = request.dryRun;
+            this.name = request.name;
+            this.orderMode = request.orderMode;
+            this.physicalConnectionId = request.physicalConnectionId;
+            this.regionId = request.regionId;
+            this.spec = request.spec;
+            this.token = request.token;
+            this.vlanId = request.vlanId;
+            this.vpconnAliUid = request.vpconnAliUid;
         } 
 
         /**

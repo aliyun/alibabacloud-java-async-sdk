@@ -115,14 +115,14 @@ public class ListIpsecServersRequest extends Request {
             super();
         } 
 
-        private Builder(ListIpsecServersRequest response) {
-            super(response);
-            this.ipsecServerId = response.ipsecServerId;
-            this.ipsecServerName = response.ipsecServerName;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.regionId = response.regionId;
-            this.vpnGatewayId = response.vpnGatewayId;
+        private Builder(ListIpsecServersRequest request) {
+            super(request);
+            this.ipsecServerId = request.ipsecServerId;
+            this.ipsecServerName = request.ipsecServerName;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.regionId = request.regionId;
+            this.vpnGatewayId = request.vpnGatewayId;
         } 
 
         /**

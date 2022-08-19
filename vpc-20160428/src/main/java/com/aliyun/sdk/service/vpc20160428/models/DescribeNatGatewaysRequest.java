@@ -271,26 +271,26 @@ public class DescribeNatGatewaysRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeNatGatewaysRequest response) {
-            super(response);
-            this.dryRun = response.dryRun;
-            this.instanceChargeType = response.instanceChargeType;
-            this.name = response.name;
-            this.natGatewayId = response.natGatewayId;
-            this.natType = response.natType;
-            this.networkType = response.networkType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.spec = response.spec;
-            this.status = response.status;
-            this.vpcId = response.vpcId;
-            this.zoneId = response.zoneId;
+        private Builder(DescribeNatGatewaysRequest request) {
+            super(request);
+            this.dryRun = request.dryRun;
+            this.instanceChargeType = request.instanceChargeType;
+            this.name = request.name;
+            this.natGatewayId = request.natGatewayId;
+            this.natType = request.natType;
+            this.networkType = request.networkType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.spec = request.spec;
+            this.status = request.status;
+            this.vpcId = request.vpcId;
+            this.zoneId = request.zoneId;
         } 
 
         /**

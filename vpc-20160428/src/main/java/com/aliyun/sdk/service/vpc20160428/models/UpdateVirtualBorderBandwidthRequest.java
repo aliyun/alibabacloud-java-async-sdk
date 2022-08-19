@@ -142,16 +142,16 @@ public class UpdateVirtualBorderBandwidthRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateVirtualBorderBandwidthRequest response) {
-            super(response);
-            this.bandwidth = response.bandwidth;
-            this.clientToken = response.clientToken;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.virtualBorderRouterId = response.virtualBorderRouterId;
+        private Builder(UpdateVirtualBorderBandwidthRequest request) {
+            super(request);
+            this.bandwidth = request.bandwidth;
+            this.clientToken = request.clientToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.virtualBorderRouterId = request.virtualBorderRouterId;
         } 
 
         /**

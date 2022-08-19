@@ -224,22 +224,22 @@ public class CreateForwardEntryRequest extends Request {
             super();
         } 
 
-        private Builder(CreateForwardEntryRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.externalIp = response.externalIp;
-            this.externalPort = response.externalPort;
-            this.forwardEntryName = response.forwardEntryName;
-            this.forwardTableId = response.forwardTableId;
-            this.internalIp = response.internalIp;
-            this.internalPort = response.internalPort;
-            this.ipProtocol = response.ipProtocol;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.portBreak = response.portBreak;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(CreateForwardEntryRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.externalIp = request.externalIp;
+            this.externalPort = request.externalPort;
+            this.forwardEntryName = request.forwardEntryName;
+            this.forwardTableId = request.forwardTableId;
+            this.internalIp = request.internalIp;
+            this.internalPort = request.internalPort;
+            this.ipProtocol = request.ipProtocol;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.portBreak = request.portBreak;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

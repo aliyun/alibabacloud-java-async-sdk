@@ -115,14 +115,14 @@ public class DeleteRouteTableRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteRouteTableRequest response) {
-            super(response);
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.routeTableId = response.routeTableId;
+        private Builder(DeleteRouteTableRequest request) {
+            super(request);
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.routeTableId = request.routeTableId;
         } 
 
         /**

@@ -257,25 +257,25 @@ public class DescribeFlowLogsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeFlowLogsRequest response) {
-            super(response);
-            this.description = response.description;
-            this.flowLogId = response.flowLogId;
-            this.flowLogName = response.flowLogName;
-            this.logStoreName = response.logStoreName;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.projectName = response.projectName;
-            this.regionId = response.regionId;
-            this.resourceId = response.resourceId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.resourceType = response.resourceType;
-            this.status = response.status;
-            this.trafficType = response.trafficType;
-            this.vpcId = response.vpcId;
+        private Builder(DescribeFlowLogsRequest request) {
+            super(request);
+            this.description = request.description;
+            this.flowLogId = request.flowLogId;
+            this.flowLogName = request.flowLogName;
+            this.logStoreName = request.logStoreName;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.projectName = request.projectName;
+            this.regionId = request.regionId;
+            this.resourceId = request.resourceId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.resourceType = request.resourceType;
+            this.status = request.status;
+            this.trafficType = request.trafficType;
+            this.vpcId = request.vpcId;
         } 
 
         /**

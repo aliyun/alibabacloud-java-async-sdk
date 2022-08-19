@@ -262,7 +262,7 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
         private PhysicalConnectionLOATypePMInfo PMInfo;
 
         @NameInMap("SI")
-        private String SI;
+        private String si;
 
         @NameInMap("Status")
         private String status;
@@ -277,7 +277,7 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             this.lineType = builder.lineType;
             this.loaUrl = builder.loaUrl;
             this.PMInfo = builder.PMInfo;
-            this.SI = builder.SI;
+            this.si = builder.si;
             this.status = builder.status;
         }
 
@@ -353,10 +353,10 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
         }
 
         /**
-         * @return SI
+         * @return si
          */
-        public String getSI() {
-            return this.SI;
+        public String getSi() {
+            return this.si;
         }
 
         /**
@@ -376,7 +376,7 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             private String lineType; 
             private String loaUrl; 
             private PhysicalConnectionLOATypePMInfo PMInfo; 
-            private String SI; 
+            private String si; 
             private String status; 
 
             /**
@@ -454,8 +454,8 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             /**
              * SI.
              */
-            public Builder SI(String SI) {
-                this.SI = SI;
+            public Builder si(String si) {
+                this.si = si;
                 return this;
             }
 

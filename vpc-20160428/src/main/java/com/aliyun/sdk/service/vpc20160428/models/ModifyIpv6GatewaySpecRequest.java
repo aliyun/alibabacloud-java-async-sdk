@@ -142,16 +142,16 @@ public class ModifyIpv6GatewaySpecRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyIpv6GatewaySpecRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.ipv6GatewayId = response.ipv6GatewayId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.spec = response.spec;
+        private Builder(ModifyIpv6GatewaySpecRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.ipv6GatewayId = request.ipv6GatewayId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.spec = request.spec;
         } 
 
         /**

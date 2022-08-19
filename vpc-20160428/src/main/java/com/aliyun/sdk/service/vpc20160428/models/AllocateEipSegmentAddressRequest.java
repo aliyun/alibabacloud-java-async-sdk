@@ -193,20 +193,20 @@ public class AllocateEipSegmentAddressRequest extends Request {
             super();
         } 
 
-        private Builder(AllocateEipSegmentAddressRequest response) {
-            super(response);
-            this.bandwidth = response.bandwidth;
-            this.clientToken = response.clientToken;
-            this.eipMask = response.eipMask;
-            this.internetChargeType = response.internetChargeType;
-            this.isp = response.isp;
-            this.netmode = response.netmode;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(AllocateEipSegmentAddressRequest request) {
+            super(request);
+            this.bandwidth = request.bandwidth;
+            this.clientToken = request.clientToken;
+            this.eipMask = request.eipMask;
+            this.internetChargeType = request.internetChargeType;
+            this.isp = request.isp;
+            this.netmode = request.netmode;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

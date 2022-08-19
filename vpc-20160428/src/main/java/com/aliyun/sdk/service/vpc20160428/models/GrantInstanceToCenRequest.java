@@ -170,18 +170,18 @@ public class GrantInstanceToCenRequest extends Request {
             super();
         } 
 
-        private Builder(GrantInstanceToCenRequest response) {
-            super(response);
-            this.cenId = response.cenId;
-            this.cenOwnerId = response.cenOwnerId;
-            this.clientToken = response.clientToken;
-            this.instanceId = response.instanceId;
-            this.instanceType = response.instanceType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(GrantInstanceToCenRequest request) {
+            super(request);
+            this.cenId = request.cenId;
+            this.cenOwnerId = request.cenOwnerId;
+            this.clientToken = request.clientToken;
+            this.instanceId = request.instanceId;
+            this.instanceType = request.instanceType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

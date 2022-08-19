@@ -114,14 +114,14 @@ public class DeleteVSwitchRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteVSwitchRequest response) {
-            super(response);
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.vSwitchId = response.vSwitchId;
+        private Builder(DeleteVSwitchRequest request) {
+            super(request);
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.vSwitchId = request.vSwitchId;
         } 
 
         /**

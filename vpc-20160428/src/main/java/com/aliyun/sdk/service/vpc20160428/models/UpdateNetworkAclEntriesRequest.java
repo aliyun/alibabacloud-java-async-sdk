@@ -167,18 +167,18 @@ public class UpdateNetworkAclEntriesRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateNetworkAclEntriesRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.egressAclEntries = response.egressAclEntries;
-            this.ingressAclEntries = response.ingressAclEntries;
-            this.networkAclId = response.networkAclId;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.updateEgressAclEntries = response.updateEgressAclEntries;
-            this.updateIngressAclEntries = response.updateIngressAclEntries;
+        private Builder(UpdateNetworkAclEntriesRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.egressAclEntries = request.egressAclEntries;
+            this.ingressAclEntries = request.ingressAclEntries;
+            this.networkAclId = request.networkAclId;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.updateEgressAclEntries = request.updateEgressAclEntries;
+            this.updateIngressAclEntries = request.updateIngressAclEntries;
         } 
 
         /**

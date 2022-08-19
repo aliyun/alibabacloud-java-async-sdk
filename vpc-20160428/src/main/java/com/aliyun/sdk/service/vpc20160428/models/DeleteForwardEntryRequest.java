@@ -142,16 +142,16 @@ public class DeleteForwardEntryRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteForwardEntryRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.forwardEntryId = response.forwardEntryId;
-            this.forwardTableId = response.forwardTableId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DeleteForwardEntryRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.forwardEntryId = request.forwardEntryId;
+            this.forwardTableId = request.forwardTableId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

@@ -142,16 +142,16 @@ public class CheckCanAllocateVpcPrivateIpAddressRequest extends Request {
             super();
         } 
 
-        private Builder(CheckCanAllocateVpcPrivateIpAddressRequest response) {
-            super(response);
-            this.ipVersion = response.ipVersion;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.privateIpAddress = response.privateIpAddress;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.vSwitchId = response.vSwitchId;
+        private Builder(CheckCanAllocateVpcPrivateIpAddressRequest request) {
+            super(request);
+            this.ipVersion = request.ipVersion;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.privateIpAddress = request.privateIpAddress;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.vSwitchId = request.vSwitchId;
         } 
 
         /**

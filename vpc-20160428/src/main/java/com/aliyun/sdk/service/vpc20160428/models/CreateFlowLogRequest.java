@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateFlowLogRequest extends Request {
     @Query
+    @NameInMap("AggregationInterval")
+    private Integer aggregationInterval;
+
+    @Query
     @NameInMap("Description")
     private String description;
 
@@ -68,6 +72,7 @@ public class CreateFlowLogRequest extends Request {
 
     private CreateFlowLogRequest(Builder builder) {
         super(builder);
+        this.aggregationInterval = builder.aggregationInterval;
         this.description = builder.description;
         this.flowLogName = builder.flowLogName;
         this.logStoreName = builder.logStoreName;
@@ -93,6 +98,13 @@ public class CreateFlowLogRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return aggregationInterval
+     */
+    public Integer getAggregationInterval() {
+        return this.aggregationInterval;
     }
 
     /**
@@ -180,6 +192,7 @@ public class CreateFlowLogRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateFlowLogRequest, Builder> {
+        private Integer aggregationInterval; 
         private String description; 
         private String flowLogName; 
         private String logStoreName; 
@@ -197,21 +210,31 @@ public class CreateFlowLogRequest extends Request {
             super();
         } 
 
-        private Builder(CreateFlowLogRequest response) {
-            super(response);
-            this.description = response.description;
-            this.flowLogName = response.flowLogName;
-            this.logStoreName = response.logStoreName;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.projectName = response.projectName;
-            this.regionId = response.regionId;
-            this.resourceId = response.resourceId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.resourceType = response.resourceType;
-            this.trafficType = response.trafficType;
+        private Builder(CreateFlowLogRequest request) {
+            super(request);
+            this.aggregationInterval = request.aggregationInterval;
+            this.description = request.description;
+            this.flowLogName = request.flowLogName;
+            this.logStoreName = request.logStoreName;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.projectName = request.projectName;
+            this.regionId = request.regionId;
+            this.resourceId = request.resourceId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.resourceType = request.resourceType;
+            this.trafficType = request.trafficType;
         } 
+
+        /**
+         * AggregationInterval.
+         */
+        public Builder aggregationInterval(Integer aggregationInterval) {
+            this.putQueryParameter("AggregationInterval", aggregationInterval);
+            this.aggregationInterval = aggregationInterval;
+            return this;
+        }
 
         /**
          * Description.

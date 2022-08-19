@@ -206,21 +206,21 @@ public class DescribeCommonBandwidthPackagesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeCommonBandwidthPackagesRequest response) {
-            super(response);
-            this.bandwidthPackageId = response.bandwidthPackageId;
-            this.dryRun = response.dryRun;
-            this.includeReservationData = response.includeReservationData;
-            this.name = response.name;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.securityProtectionEnabled = response.securityProtectionEnabled;
+        private Builder(DescribeCommonBandwidthPackagesRequest request) {
+            super(request);
+            this.bandwidthPackageId = request.bandwidthPackageId;
+            this.dryRun = request.dryRun;
+            this.includeReservationData = request.includeReservationData;
+            this.name = request.name;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.securityProtectionEnabled = request.securityProtectionEnabled;
         } 
 
         /**

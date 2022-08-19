@@ -128,15 +128,15 @@ public class DeleteIPv6TranslatorAclListRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteIPv6TranslatorAclListRequest response) {
-            super(response);
-            this.aclId = response.aclId;
-            this.clientToken = response.clientToken;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DeleteIPv6TranslatorAclListRequest request) {
+            super(request);
+            this.aclId = request.aclId;
+            this.clientToken = request.clientToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

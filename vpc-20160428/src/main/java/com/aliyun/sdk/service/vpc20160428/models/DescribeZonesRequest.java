@@ -127,15 +127,15 @@ public class DescribeZonesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeZonesRequest response) {
-            super(response);
-            this.acceptLanguage = response.acceptLanguage;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.zoneType = response.zoneType;
+        private Builder(DescribeZonesRequest request) {
+            super(request);
+            this.acceptLanguage = request.acceptLanguage;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.zoneType = request.zoneType;
         } 
 
         /**

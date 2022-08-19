@@ -143,16 +143,16 @@ public class MoveResourceGroupRequest extends Request {
             super();
         } 
 
-        private Builder(MoveResourceGroupRequest response) {
-            super(response);
-            this.newResourceGroupId = response.newResourceGroupId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceId = response.resourceId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.resourceType = response.resourceType;
+        private Builder(MoveResourceGroupRequest request) {
+            super(request);
+            this.newResourceGroupId = request.newResourceGroupId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceId = request.resourceId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.resourceType = request.resourceType;
         } 
 
         /**

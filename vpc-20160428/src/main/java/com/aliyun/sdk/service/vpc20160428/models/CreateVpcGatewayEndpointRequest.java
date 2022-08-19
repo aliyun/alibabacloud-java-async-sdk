@@ -194,20 +194,20 @@ public class CreateVpcGatewayEndpointRequest extends Request {
             super();
         } 
 
-        private Builder(CreateVpcGatewayEndpointRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.endpointDescription = response.endpointDescription;
-            this.endpointName = response.endpointName;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.policyDocument = response.policyDocument;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.serviceName = response.serviceName;
-            this.vpcId = response.vpcId;
+        private Builder(CreateVpcGatewayEndpointRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.endpointDescription = request.endpointDescription;
+            this.endpointName = request.endpointName;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.policyDocument = request.policyDocument;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.serviceName = request.serviceName;
+            this.vpcId = request.vpcId;
         } 
 
         /**

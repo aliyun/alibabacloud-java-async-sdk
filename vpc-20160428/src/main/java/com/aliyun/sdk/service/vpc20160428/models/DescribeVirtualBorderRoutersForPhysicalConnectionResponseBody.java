@@ -160,13 +160,13 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
         private String localIpv6GatewayIp;
 
         @NameInMap("PConnVbrBussinessStatus")
-        private String PConnVbrBussinessStatus;
+        private String pConnVbrBussinessStatus;
 
         @NameInMap("PConnVbrChargeType")
-        private String PConnVbrChargeType;
+        private String pConnVbrChargeType;
 
         @NameInMap("PConnVbrExpireTime")
-        private String PConnVbrExpireTime;
+        private String pConnVbrExpireTime;
 
         @NameInMap("PeerGatewayIp")
         private String peerGatewayIp;
@@ -211,9 +211,9 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
             this.enableIpv6 = builder.enableIpv6;
             this.localGatewayIp = builder.localGatewayIp;
             this.localIpv6GatewayIp = builder.localIpv6GatewayIp;
-            this.PConnVbrBussinessStatus = builder.PConnVbrBussinessStatus;
-            this.PConnVbrChargeType = builder.PConnVbrChargeType;
-            this.PConnVbrExpireTime = builder.PConnVbrExpireTime;
+            this.pConnVbrBussinessStatus = builder.pConnVbrBussinessStatus;
+            this.pConnVbrChargeType = builder.pConnVbrChargeType;
+            this.pConnVbrExpireTime = builder.pConnVbrExpireTime;
             this.peerGatewayIp = builder.peerGatewayIp;
             this.peerIpv6GatewayIp = builder.peerIpv6GatewayIp;
             this.peeringIpv6SubnetMask = builder.peeringIpv6SubnetMask;
@@ -299,24 +299,24 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
         }
 
         /**
-         * @return PConnVbrBussinessStatus
+         * @return pConnVbrBussinessStatus
          */
         public String getPConnVbrBussinessStatus() {
-            return this.PConnVbrBussinessStatus;
+            return this.pConnVbrBussinessStatus;
         }
 
         /**
-         * @return PConnVbrChargeType
+         * @return pConnVbrChargeType
          */
         public String getPConnVbrChargeType() {
-            return this.PConnVbrChargeType;
+            return this.pConnVbrChargeType;
         }
 
         /**
-         * @return PConnVbrExpireTime
+         * @return pConnVbrExpireTime
          */
         public String getPConnVbrExpireTime() {
-            return this.PConnVbrExpireTime;
+            return this.pConnVbrExpireTime;
         }
 
         /**
@@ -406,9 +406,9 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
             private Boolean enableIpv6; 
             private String localGatewayIp; 
             private String localIpv6GatewayIp; 
-            private String PConnVbrBussinessStatus; 
-            private String PConnVbrChargeType; 
-            private String PConnVbrExpireTime; 
+            private String pConnVbrBussinessStatus; 
+            private String pConnVbrChargeType; 
+            private String pConnVbrExpireTime; 
             private String peerGatewayIp; 
             private String peerIpv6GatewayIp; 
             private String peeringIpv6SubnetMask; 
@@ -496,24 +496,24 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
             /**
              * PConnVbrBussinessStatus.
              */
-            public Builder PConnVbrBussinessStatus(String PConnVbrBussinessStatus) {
-                this.PConnVbrBussinessStatus = PConnVbrBussinessStatus;
+            public Builder pConnVbrBussinessStatus(String pConnVbrBussinessStatus) {
+                this.pConnVbrBussinessStatus = pConnVbrBussinessStatus;
                 return this;
             }
 
             /**
              * PConnVbrChargeType.
              */
-            public Builder PConnVbrChargeType(String PConnVbrChargeType) {
-                this.PConnVbrChargeType = PConnVbrChargeType;
+            public Builder pConnVbrChargeType(String pConnVbrChargeType) {
+                this.pConnVbrChargeType = pConnVbrChargeType;
                 return this;
             }
 
             /**
              * PConnVbrExpireTime.
              */
-            public Builder PConnVbrExpireTime(String PConnVbrExpireTime) {
-                this.PConnVbrExpireTime = PConnVbrExpireTime;
+            public Builder pConnVbrExpireTime(String pConnVbrExpireTime) {
+                this.pConnVbrExpireTime = pConnVbrExpireTime;
                 return this;
             }
 

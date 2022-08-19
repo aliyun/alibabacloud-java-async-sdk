@@ -245,24 +245,24 @@ public class DescribeIpv6AddressesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeIpv6AddressesRequest response) {
-            super(response);
-            this.associatedInstanceId = response.associatedInstanceId;
-            this.associatedInstanceType = response.associatedInstanceType;
-            this.ipv6Address = response.ipv6Address;
-            this.ipv6AddressId = response.ipv6AddressId;
-            this.ipv6InternetBandwidthId = response.ipv6InternetBandwidthId;
-            this.name = response.name;
-            this.networkType = response.networkType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.vSwitchId = response.vSwitchId;
-            this.vpcId = response.vpcId;
+        private Builder(DescribeIpv6AddressesRequest request) {
+            super(request);
+            this.associatedInstanceId = request.associatedInstanceId;
+            this.associatedInstanceType = request.associatedInstanceType;
+            this.ipv6Address = request.ipv6Address;
+            this.ipv6AddressId = request.ipv6AddressId;
+            this.ipv6InternetBandwidthId = request.ipv6InternetBandwidthId;
+            this.name = request.name;
+            this.networkType = request.networkType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.vSwitchId = request.vSwitchId;
+            this.vpcId = request.vpcId;
         } 
 
         /**

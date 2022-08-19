@@ -179,19 +179,19 @@ public class ModifyVSwitchAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyVSwitchAttributeRequest response) {
-            super(response);
-            this.description = response.description;
-            this.enableIPv6 = response.enableIPv6;
-            this.ipv6CidrBlock = response.ipv6CidrBlock;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.vSwitchId = response.vSwitchId;
-            this.vSwitchName = response.vSwitchName;
-            this.vpcIpv6CidrBlock = response.vpcIpv6CidrBlock;
+        private Builder(ModifyVSwitchAttributeRequest request) {
+            super(request);
+            this.description = request.description;
+            this.enableIPv6 = request.enableIPv6;
+            this.ipv6CidrBlock = request.ipv6CidrBlock;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.vSwitchId = request.vSwitchId;
+            this.vSwitchName = request.vSwitchName;
+            this.vpcIpv6CidrBlock = request.vpcIpv6CidrBlock;
         } 
 
         /**

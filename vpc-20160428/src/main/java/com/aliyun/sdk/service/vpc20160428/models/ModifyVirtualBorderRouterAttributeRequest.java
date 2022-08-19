@@ -336,31 +336,31 @@ public class ModifyVirtualBorderRouterAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyVirtualBorderRouterAttributeRequest response) {
-            super(response);
-            this.associatedPhysicalConnections = response.associatedPhysicalConnections;
-            this.bandwidth = response.bandwidth;
-            this.circuitCode = response.circuitCode;
-            this.clientToken = response.clientToken;
-            this.description = response.description;
-            this.detectMultiplier = response.detectMultiplier;
-            this.enableIpv6 = response.enableIpv6;
-            this.localGatewayIp = response.localGatewayIp;
-            this.localIpv6GatewayIp = response.localIpv6GatewayIp;
-            this.minRxInterval = response.minRxInterval;
-            this.minTxInterval = response.minTxInterval;
-            this.name = response.name;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.peerGatewayIp = response.peerGatewayIp;
-            this.peerIpv6GatewayIp = response.peerIpv6GatewayIp;
-            this.peeringIpv6SubnetMask = response.peeringIpv6SubnetMask;
-            this.peeringSubnetMask = response.peeringSubnetMask;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.vbrId = response.vbrId;
-            this.vlanId = response.vlanId;
+        private Builder(ModifyVirtualBorderRouterAttributeRequest request) {
+            super(request);
+            this.associatedPhysicalConnections = request.associatedPhysicalConnections;
+            this.bandwidth = request.bandwidth;
+            this.circuitCode = request.circuitCode;
+            this.clientToken = request.clientToken;
+            this.description = request.description;
+            this.detectMultiplier = request.detectMultiplier;
+            this.enableIpv6 = request.enableIpv6;
+            this.localGatewayIp = request.localGatewayIp;
+            this.localIpv6GatewayIp = request.localIpv6GatewayIp;
+            this.minRxInterval = request.minRxInterval;
+            this.minTxInterval = request.minTxInterval;
+            this.name = request.name;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.peerGatewayIp = request.peerGatewayIp;
+            this.peerIpv6GatewayIp = request.peerIpv6GatewayIp;
+            this.peeringIpv6SubnetMask = request.peeringIpv6SubnetMask;
+            this.peeringSubnetMask = request.peeringSubnetMask;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.vbrId = request.vbrId;
+            this.vlanId = request.vlanId;
         } 
 
         /**

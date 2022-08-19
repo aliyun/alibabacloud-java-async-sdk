@@ -142,16 +142,16 @@ public class DeleteBgpNetworkRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteBgpNetworkRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.dstCidrBlock = response.dstCidrBlock;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.routerId = response.routerId;
+        private Builder(DeleteBgpNetworkRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.dstCidrBlock = request.dstCidrBlock;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.routerId = request.routerId;
         } 
 
         /**

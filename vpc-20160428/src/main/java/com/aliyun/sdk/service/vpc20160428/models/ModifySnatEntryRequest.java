@@ -168,18 +168,18 @@ public class ModifySnatEntryRequest extends Request {
             super();
         } 
 
-        private Builder(ModifySnatEntryRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.snatEntryId = response.snatEntryId;
-            this.snatEntryName = response.snatEntryName;
-            this.snatIp = response.snatIp;
-            this.snatTableId = response.snatTableId;
+        private Builder(ModifySnatEntryRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.snatEntryId = request.snatEntryId;
+            this.snatEntryName = request.snatEntryName;
+            this.snatIp = request.snatIp;
+            this.snatTableId = request.snatTableId;
         } 
 
         /**

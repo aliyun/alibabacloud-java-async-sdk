@@ -207,21 +207,21 @@ public class DescribeSnatTableEntriesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeSnatTableEntriesRequest response) {
-            super(response);
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.snatEntryId = response.snatEntryId;
-            this.snatEntryName = response.snatEntryName;
-            this.snatIp = response.snatIp;
-            this.snatTableId = response.snatTableId;
-            this.sourceCIDR = response.sourceCIDR;
-            this.sourceVSwitchId = response.sourceVSwitchId;
+        private Builder(DescribeSnatTableEntriesRequest request) {
+            super(request);
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.snatEntryId = request.snatEntryId;
+            this.snatEntryName = request.snatEntryName;
+            this.snatIp = request.snatIp;
+            this.snatTableId = request.snatTableId;
+            this.sourceCIDR = request.sourceCIDR;
+            this.sourceVSwitchId = request.sourceVSwitchId;
         } 
 
         /**

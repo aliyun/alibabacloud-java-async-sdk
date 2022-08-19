@@ -98,9 +98,17 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
         @NameInMap("DomainNameServers")
         private String domainNameServers;
 
+        @NameInMap("Ipv6LeaseTime")
+        private String ipv6LeaseTime;
+
+        @NameInMap("LeaseTime")
+        private String leaseTime;
+
         private DhcpOptions(Builder builder) {
             this.domainName = builder.domainName;
             this.domainNameServers = builder.domainNameServers;
+            this.ipv6LeaseTime = builder.ipv6LeaseTime;
+            this.leaseTime = builder.leaseTime;
         }
 
         public static Builder builder() {
@@ -125,9 +133,25 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
             return this.domainNameServers;
         }
 
+        /**
+         * @return ipv6LeaseTime
+         */
+        public String getIpv6LeaseTime() {
+            return this.ipv6LeaseTime;
+        }
+
+        /**
+         * @return leaseTime
+         */
+        public String getLeaseTime() {
+            return this.leaseTime;
+        }
+
         public static final class Builder {
             private String domainName; 
             private String domainNameServers; 
+            private String ipv6LeaseTime; 
+            private String leaseTime; 
 
             /**
              * DomainName.
@@ -142,6 +166,22 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
              */
             public Builder domainNameServers(String domainNameServers) {
                 this.domainNameServers = domainNameServers;
+                return this;
+            }
+
+            /**
+             * Ipv6LeaseTime.
+             */
+            public Builder ipv6LeaseTime(String ipv6LeaseTime) {
+                this.ipv6LeaseTime = ipv6LeaseTime;
+                return this;
+            }
+
+            /**
+             * LeaseTime.
+             */
+            public Builder leaseTime(String leaseTime) {
+                this.leaseTime = leaseTime;
                 return this;
             }
 

@@ -115,14 +115,14 @@ public class DeleteNetworkAclRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteNetworkAclRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.networkAclId = response.networkAclId;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DeleteNetworkAclRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.networkAclId = request.networkAclId;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

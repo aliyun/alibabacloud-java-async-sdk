@@ -25,14 +25,14 @@ public class DescribeVRoutersResponseBody extends TeaModel {
     private Integer totalCount;
 
     @NameInMap("VRouters")
-    private VRouters VRouters;
+    private VRouters vRouters;
 
     private DescribeVRoutersResponseBody(Builder builder) {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
         this.totalCount = builder.totalCount;
-        this.VRouters = builder.VRouters;
+        this.vRouters = builder.vRouters;
     }
 
     public static Builder builder() {
@@ -72,10 +72,10 @@ public class DescribeVRoutersResponseBody extends TeaModel {
     }
 
     /**
-     * @return VRouters
+     * @return vRouters
      */
     public VRouters getVRouters() {
-        return this.VRouters;
+        return this.vRouters;
     }
 
     public static final class Builder {
@@ -83,7 +83,7 @@ public class DescribeVRoutersResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
-        private VRouters VRouters; 
+        private VRouters vRouters; 
 
         /**
          * PageNumber.
@@ -120,8 +120,8 @@ public class DescribeVRoutersResponseBody extends TeaModel {
         /**
          * VRouters.
          */
-        public Builder VRouters(VRouters VRouters) {
-            this.VRouters = VRouters;
+        public Builder vRouters(VRouters vRouters) {
+            this.vRouters = vRouters;
             return this;
         }
 
@@ -186,10 +186,10 @@ public class DescribeVRoutersResponseBody extends TeaModel {
         private RouteTableIds routeTableIds;
 
         @NameInMap("VRouterId")
-        private String VRouterId;
+        private String vRouterId;
 
         @NameInMap("VRouterName")
-        private String VRouterName;
+        private String vRouterName;
 
         @NameInMap("VpcId")
         private String vpcId;
@@ -199,8 +199,8 @@ public class DescribeVRoutersResponseBody extends TeaModel {
             this.description = builder.description;
             this.regionId = builder.regionId;
             this.routeTableIds = builder.routeTableIds;
-            this.VRouterId = builder.VRouterId;
-            this.VRouterName = builder.VRouterName;
+            this.vRouterId = builder.vRouterId;
+            this.vRouterName = builder.vRouterName;
             this.vpcId = builder.vpcId;
         }
 
@@ -241,17 +241,17 @@ public class DescribeVRoutersResponseBody extends TeaModel {
         }
 
         /**
-         * @return VRouterId
+         * @return vRouterId
          */
         public String getVRouterId() {
-            return this.VRouterId;
+            return this.vRouterId;
         }
 
         /**
-         * @return VRouterName
+         * @return vRouterName
          */
         public String getVRouterName() {
-            return this.VRouterName;
+            return this.vRouterName;
         }
 
         /**
@@ -266,8 +266,8 @@ public class DescribeVRoutersResponseBody extends TeaModel {
             private String description; 
             private String regionId; 
             private RouteTableIds routeTableIds; 
-            private String VRouterId; 
-            private String VRouterName; 
+            private String vRouterId; 
+            private String vRouterName; 
             private String vpcId; 
 
             /**
@@ -305,16 +305,16 @@ public class DescribeVRoutersResponseBody extends TeaModel {
             /**
              * VRouterId.
              */
-            public Builder VRouterId(String VRouterId) {
-                this.VRouterId = VRouterId;
+            public Builder vRouterId(String vRouterId) {
+                this.vRouterId = vRouterId;
                 return this;
             }
 
             /**
              * VRouterName.
              */
-            public Builder VRouterName(String VRouterName) {
-                this.VRouterName = VRouterName;
+            public Builder vRouterName(String vRouterName) {
+                this.vRouterName = vRouterName;
                 return this;
             }
 
@@ -335,10 +335,10 @@ public class DescribeVRoutersResponseBody extends TeaModel {
     }
     public static class VRouters extends TeaModel {
         @NameInMap("VRouter")
-        private java.util.List < VRouter> VRouter;
+        private java.util.List < VRouter> vRouter;
 
         private VRouters(Builder builder) {
-            this.VRouter = builder.VRouter;
+            this.vRouter = builder.vRouter;
         }
 
         public static Builder builder() {
@@ -350,20 +350,20 @@ public class DescribeVRoutersResponseBody extends TeaModel {
         }
 
         /**
-         * @return VRouter
+         * @return vRouter
          */
         public java.util.List < VRouter> getVRouter() {
-            return this.VRouter;
+            return this.vRouter;
         }
 
         public static final class Builder {
-            private java.util.List < VRouter> VRouter; 
+            private java.util.List < VRouter> vRouter; 
 
             /**
              * VRouter.
              */
-            public Builder VRouter(java.util.List < VRouter> VRouter) {
-                this.VRouter = VRouter;
+            public Builder vRouter(java.util.List < VRouter> vRouter) {
+                this.vRouter = vRouter;
                 return this;
             }
 

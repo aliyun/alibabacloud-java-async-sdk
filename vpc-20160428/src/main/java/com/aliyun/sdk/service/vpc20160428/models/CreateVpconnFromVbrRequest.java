@@ -102,13 +102,13 @@ public class CreateVpconnFromVbrRequest extends Request {
             super();
         } 
 
-        private Builder(CreateVpconnFromVbrRequest response) {
-            super(response);
-            this.dryRun = response.dryRun;
-            this.orderMode = response.orderMode;
-            this.regionId = response.regionId;
-            this.token = response.token;
-            this.vbrId = response.vbrId;
+        private Builder(CreateVpconnFromVbrRequest request) {
+            super(request);
+            this.dryRun = request.dryRun;
+            this.orderMode = request.orderMode;
+            this.regionId = request.regionId;
+            this.token = request.token;
+            this.vbrId = request.vbrId;
         } 
 
         /**

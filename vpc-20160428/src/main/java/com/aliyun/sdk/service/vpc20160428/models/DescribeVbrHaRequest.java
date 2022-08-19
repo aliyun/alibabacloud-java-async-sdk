@@ -153,17 +153,17 @@ public class DescribeVbrHaRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeVbrHaRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.vbrHaId = response.vbrHaId;
-            this.vbrId = response.vbrId;
+        private Builder(DescribeVbrHaRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.vbrHaId = request.vbrHaId;
+            this.vbrId = request.vbrId;
         } 
 
         /**

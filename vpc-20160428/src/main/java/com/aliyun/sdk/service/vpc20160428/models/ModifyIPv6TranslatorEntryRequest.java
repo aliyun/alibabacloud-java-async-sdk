@@ -245,24 +245,24 @@ public class ModifyIPv6TranslatorEntryRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyIPv6TranslatorEntryRequest response) {
-            super(response);
-            this.aclId = response.aclId;
-            this.aclStatus = response.aclStatus;
-            this.aclType = response.aclType;
-            this.allocateIpv6Port = response.allocateIpv6Port;
-            this.backendIpv4Addr = response.backendIpv4Addr;
-            this.backendIpv4Port = response.backendIpv4Port;
-            this.entryBandwidth = response.entryBandwidth;
-            this.entryDescription = response.entryDescription;
-            this.entryName = response.entryName;
-            this.ipv6TranslatorEntryId = response.ipv6TranslatorEntryId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.transProtocol = response.transProtocol;
+        private Builder(ModifyIPv6TranslatorEntryRequest request) {
+            super(request);
+            this.aclId = request.aclId;
+            this.aclStatus = request.aclStatus;
+            this.aclType = request.aclType;
+            this.allocateIpv6Port = request.allocateIpv6Port;
+            this.backendIpv4Addr = request.backendIpv4Addr;
+            this.backendIpv4Port = request.backendIpv4Port;
+            this.entryBandwidth = request.entryBandwidth;
+            this.entryDescription = request.entryDescription;
+            this.entryName = request.entryName;
+            this.ipv6TranslatorEntryId = request.ipv6TranslatorEntryId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.transProtocol = request.transProtocol;
         } 
 
         /**

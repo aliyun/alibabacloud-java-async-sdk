@@ -168,18 +168,18 @@ public class UnassociateHaVipRequest extends Request {
             super();
         } 
 
-        private Builder(UnassociateHaVipRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.force = response.force;
-            this.haVipId = response.haVipId;
-            this.instanceId = response.instanceId;
-            this.instanceType = response.instanceType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(UnassociateHaVipRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.force = request.force;
+            this.haVipId = request.haVipId;
+            this.instanceId = request.instanceId;
+            this.instanceType = request.instanceType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

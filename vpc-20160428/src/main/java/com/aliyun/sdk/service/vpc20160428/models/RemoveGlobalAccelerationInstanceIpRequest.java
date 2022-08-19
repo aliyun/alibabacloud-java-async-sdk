@@ -129,15 +129,15 @@ public class RemoveGlobalAccelerationInstanceIpRequest extends Request {
             super();
         } 
 
-        private Builder(RemoveGlobalAccelerationInstanceIpRequest response) {
-            super(response);
-            this.globalAccelerationInstanceId = response.globalAccelerationInstanceId;
-            this.ipInstanceId = response.ipInstanceId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(RemoveGlobalAccelerationInstanceIpRequest request) {
+            super(request);
+            this.globalAccelerationInstanceId = request.globalAccelerationInstanceId;
+            this.ipInstanceId = request.ipInstanceId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

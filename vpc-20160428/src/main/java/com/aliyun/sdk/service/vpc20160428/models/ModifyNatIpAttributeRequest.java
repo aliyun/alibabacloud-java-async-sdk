@@ -167,18 +167,18 @@ public class ModifyNatIpAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyNatIpAttributeRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.natIpDescription = response.natIpDescription;
-            this.natIpId = response.natIpId;
-            this.natIpName = response.natIpName;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyNatIpAttributeRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.natIpDescription = request.natIpDescription;
+            this.natIpId = request.natIpId;
+            this.natIpName = request.natIpName;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

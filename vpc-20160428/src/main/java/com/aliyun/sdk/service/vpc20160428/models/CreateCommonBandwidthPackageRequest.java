@@ -233,23 +233,23 @@ public class CreateCommonBandwidthPackageRequest extends Request {
             super();
         } 
 
-        private Builder(CreateCommonBandwidthPackageRequest response) {
-            super(response);
-            this.bandwidth = response.bandwidth;
-            this.clientToken = response.clientToken;
-            this.description = response.description;
-            this.ISP = response.ISP;
-            this.internetChargeType = response.internetChargeType;
-            this.name = response.name;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.ratio = response.ratio;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.securityProtectionTypes = response.securityProtectionTypes;
-            this.zone = response.zone;
+        private Builder(CreateCommonBandwidthPackageRequest request) {
+            super(request);
+            this.bandwidth = request.bandwidth;
+            this.clientToken = request.clientToken;
+            this.description = request.description;
+            this.ISP = request.ISP;
+            this.internetChargeType = request.internetChargeType;
+            this.name = request.name;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.ratio = request.ratio;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.securityProtectionTypes = request.securityProtectionTypes;
+            this.zone = request.zone;
         } 
 
         /**

@@ -67,7 +67,7 @@ public class DescribeRouteTablesRequest extends Request {
 
     @Query
     @NameInMap("VRouterId")
-    private String VRouterId;
+    private String vRouterId;
 
     private DescribeRouteTablesRequest(Builder builder) {
         super(builder);
@@ -84,7 +84,7 @@ public class DescribeRouteTablesRequest extends Request {
         this.routerId = builder.routerId;
         this.routerType = builder.routerType;
         this.type = builder.type;
-        this.VRouterId = builder.VRouterId;
+        this.vRouterId = builder.vRouterId;
     }
 
     public static Builder builder() {
@@ -192,10 +192,10 @@ public class DescribeRouteTablesRequest extends Request {
     }
 
     /**
-     * @return VRouterId
+     * @return vRouterId
      */
     public String getVRouterId() {
-        return this.VRouterId;
+        return this.vRouterId;
     }
 
     public static final class Builder extends Request.Builder<DescribeRouteTablesRequest, Builder> {
@@ -212,28 +212,28 @@ public class DescribeRouteTablesRequest extends Request {
         private String routerId; 
         private String routerType; 
         private String type; 
-        private String VRouterId; 
+        private String vRouterId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeRouteTablesRequest response) {
-            super(response);
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.routeTableId = response.routeTableId;
-            this.routeTableName = response.routeTableName;
-            this.routerId = response.routerId;
-            this.routerType = response.routerType;
-            this.type = response.type;
-            this.VRouterId = response.VRouterId;
+        private Builder(DescribeRouteTablesRequest request) {
+            super(request);
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.routeTableId = request.routeTableId;
+            this.routeTableName = request.routeTableName;
+            this.routerId = request.routerId;
+            this.routerType = request.routerType;
+            this.type = request.type;
+            this.vRouterId = request.vRouterId;
         } 
 
         /**
@@ -356,9 +356,9 @@ public class DescribeRouteTablesRequest extends Request {
         /**
          * VRouterId.
          */
-        public Builder VRouterId(String VRouterId) {
-            this.putQueryParameter("VRouterId", VRouterId);
-            this.VRouterId = VRouterId;
+        public Builder vRouterId(String vRouterId) {
+            this.putQueryParameter("VRouterId", vRouterId);
+            this.vRouterId = vRouterId;
             return this;
         }
 

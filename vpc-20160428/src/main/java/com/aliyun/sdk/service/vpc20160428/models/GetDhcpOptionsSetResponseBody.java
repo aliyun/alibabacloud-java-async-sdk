@@ -262,6 +262,12 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
         @NameInMap("DomainNameServers")
         private String domainNameServers;
 
+        @NameInMap("Ipv6LeaseTime")
+        private String ipv6LeaseTime;
+
+        @NameInMap("LeaseTime")
+        private String leaseTime;
+
         @NameInMap("TFTPServerName")
         private String TFTPServerName;
 
@@ -269,6 +275,8 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
             this.bootFileName = builder.bootFileName;
             this.domainName = builder.domainName;
             this.domainNameServers = builder.domainNameServers;
+            this.ipv6LeaseTime = builder.ipv6LeaseTime;
+            this.leaseTime = builder.leaseTime;
             this.TFTPServerName = builder.TFTPServerName;
         }
 
@@ -302,6 +310,20 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
         }
 
         /**
+         * @return ipv6LeaseTime
+         */
+        public String getIpv6LeaseTime() {
+            return this.ipv6LeaseTime;
+        }
+
+        /**
+         * @return leaseTime
+         */
+        public String getLeaseTime() {
+            return this.leaseTime;
+        }
+
+        /**
          * @return TFTPServerName
          */
         public String getTFTPServerName() {
@@ -312,6 +334,8 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
             private String bootFileName; 
             private String domainName; 
             private String domainNameServers; 
+            private String ipv6LeaseTime; 
+            private String leaseTime; 
             private String TFTPServerName; 
 
             /**
@@ -335,6 +359,22 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
              */
             public Builder domainNameServers(String domainNameServers) {
                 this.domainNameServers = domainNameServers;
+                return this;
+            }
+
+            /**
+             * Ipv6LeaseTime.
+             */
+            public Builder ipv6LeaseTime(String ipv6LeaseTime) {
+                this.ipv6LeaseTime = ipv6LeaseTime;
+                return this;
+            }
+
+            /**
+             * LeaseTime.
+             */
+            public Builder leaseTime(String leaseTime) {
+                this.leaseTime = leaseTime;
                 return this;
             }
 

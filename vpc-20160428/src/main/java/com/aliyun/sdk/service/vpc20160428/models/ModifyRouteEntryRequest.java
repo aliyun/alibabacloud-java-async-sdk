@@ -141,16 +141,16 @@ public class ModifyRouteEntryRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyRouteEntryRequest response) {
-            super(response);
-            this.description = response.description;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.routeEntryId = response.routeEntryId;
-            this.routeEntryName = response.routeEntryName;
+        private Builder(ModifyRouteEntryRequest request) {
+            super(request);
+            this.description = request.description;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.routeEntryId = request.routeEntryId;
+            this.routeEntryName = request.routeEntryName;
         } 
 
         /**

@@ -143,16 +143,16 @@ public class ModifyCommonBandwidthPackageIpBandwidthRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyCommonBandwidthPackageIpBandwidthRequest response) {
-            super(response);
-            this.bandwidth = response.bandwidth;
-            this.bandwidthPackageId = response.bandwidthPackageId;
-            this.eipId = response.eipId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyCommonBandwidthPackageIpBandwidthRequest request) {
+            super(request);
+            this.bandwidth = request.bandwidth;
+            this.bandwidthPackageId = request.bandwidthPackageId;
+            this.eipId = request.eipId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

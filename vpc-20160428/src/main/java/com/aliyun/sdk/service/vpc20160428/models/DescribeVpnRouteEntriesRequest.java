@@ -154,17 +154,17 @@ public class DescribeVpnRouteEntriesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeVpnRouteEntriesRequest response) {
-            super(response);
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.routeEntryType = response.routeEntryType;
-            this.vpnGatewayId = response.vpnGatewayId;
+        private Builder(DescribeVpnRouteEntriesRequest request) {
+            super(request);
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.routeEntryType = request.routeEntryType;
+            this.vpnGatewayId = request.vpnGatewayId;
         } 
 
         /**

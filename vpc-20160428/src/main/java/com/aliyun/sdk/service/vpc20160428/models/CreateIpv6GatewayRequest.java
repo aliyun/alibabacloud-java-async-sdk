@@ -167,18 +167,18 @@ public class CreateIpv6GatewayRequest extends Request {
             super();
         } 
 
-        private Builder(CreateIpv6GatewayRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.description = response.description;
-            this.name = response.name;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.spec = response.spec;
-            this.vpcId = response.vpcId;
+        private Builder(CreateIpv6GatewayRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.description = request.description;
+            this.name = request.name;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.spec = request.spec;
+            this.vpcId = request.vpcId;
         } 
 
         /**

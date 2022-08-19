@@ -192,20 +192,20 @@ public class DescribeNetworkAclsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeNetworkAclsRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.networkAclId = response.networkAclId;
-            this.networkAclName = response.networkAclName;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceId = response.resourceId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.resourceType = response.resourceType;
-            this.vpcId = response.vpcId;
+        private Builder(DescribeNetworkAclsRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.networkAclId = request.networkAclId;
+            this.networkAclName = request.networkAclName;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceId = request.resourceId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.resourceType = request.resourceType;
+            this.vpcId = request.vpcId;
         } 
 
         /**

@@ -180,19 +180,19 @@ public class DescribeBgpPeersRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeBgpPeersRequest response) {
-            super(response);
-            this.bgpGroupId = response.bgpGroupId;
-            this.bgpPeerId = response.bgpPeerId;
-            this.isDefault = response.isDefault;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.routerId = response.routerId;
+        private Builder(DescribeBgpPeersRequest request) {
+            super(request);
+            this.bgpGroupId = request.bgpGroupId;
+            this.bgpPeerId = request.bgpPeerId;
+            this.isDefault = request.isDefault;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.routerId = request.routerId;
         } 
 
         /**

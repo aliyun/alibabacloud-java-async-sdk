@@ -167,18 +167,18 @@ public class UpdateIpv4GatewayAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateIpv4GatewayAttributeRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.ipv4GatewayDescription = response.ipv4GatewayDescription;
-            this.ipv4GatewayId = response.ipv4GatewayId;
-            this.ipv4GatewayName = response.ipv4GatewayName;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(UpdateIpv4GatewayAttributeRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.ipv4GatewayDescription = request.ipv4GatewayDescription;
+            this.ipv4GatewayId = request.ipv4GatewayId;
+            this.ipv4GatewayName = request.ipv4GatewayName;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

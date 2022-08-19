@@ -48,9 +48,9 @@ public class OpenTrafficMirrorServiceRequest extends Request {
             super();
         } 
 
-        private Builder(OpenTrafficMirrorServiceRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
+        private Builder(OpenTrafficMirrorServiceRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
         } 
 
         /**

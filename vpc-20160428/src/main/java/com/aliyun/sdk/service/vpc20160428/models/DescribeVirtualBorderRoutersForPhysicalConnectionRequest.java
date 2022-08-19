@@ -142,16 +142,16 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionRequest extends Re
             super();
         } 
 
-        private Builder(DescribeVirtualBorderRoutersForPhysicalConnectionRequest response) {
-            super(response);
-            this.filter = response.filter;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.physicalConnectionId = response.physicalConnectionId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeVirtualBorderRoutersForPhysicalConnectionRequest request) {
+            super(request);
+            this.filter = request.filter;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.physicalConnectionId = request.physicalConnectionId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

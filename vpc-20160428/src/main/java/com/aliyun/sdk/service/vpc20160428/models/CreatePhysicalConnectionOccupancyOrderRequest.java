@@ -180,19 +180,19 @@ public class CreatePhysicalConnectionOccupancyOrderRequest extends Request {
             super();
         } 
 
-        private Builder(CreatePhysicalConnectionOccupancyOrderRequest response) {
-            super(response);
-            this.autoPay = response.autoPay;
-            this.clientToken = response.clientToken;
-            this.instanceChargeType = response.instanceChargeType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.period = response.period;
-            this.physicalConnectionId = response.physicalConnectionId;
-            this.pricingCycle = response.pricingCycle;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(CreatePhysicalConnectionOccupancyOrderRequest request) {
+            super(request);
+            this.autoPay = request.autoPay;
+            this.clientToken = request.clientToken;
+            this.instanceChargeType = request.instanceChargeType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.period = request.period;
+            this.physicalConnectionId = request.physicalConnectionId;
+            this.pricingCycle = request.pricingCycle;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

@@ -205,21 +205,21 @@ public class CreateIPv6TranslatorRequest extends Request {
             super();
         } 
 
-        private Builder(CreateIPv6TranslatorRequest response) {
-            super(response);
-            this.autoPay = response.autoPay;
-            this.bandwidth = response.bandwidth;
-            this.clientToken = response.clientToken;
-            this.duration = response.duration;
-            this.name = response.name;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.payType = response.payType;
-            this.pricingCycle = response.pricingCycle;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.spec = response.spec;
+        private Builder(CreateIPv6TranslatorRequest request) {
+            super(request);
+            this.autoPay = request.autoPay;
+            this.bandwidth = request.bandwidth;
+            this.clientToken = request.clientToken;
+            this.duration = request.duration;
+            this.name = request.name;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.payType = request.payType;
+            this.pricingCycle = request.pricingCycle;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.spec = request.spec;
         } 
 
         /**

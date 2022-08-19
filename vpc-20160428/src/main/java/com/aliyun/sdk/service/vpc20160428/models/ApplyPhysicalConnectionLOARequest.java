@@ -223,22 +223,22 @@ public class ApplyPhysicalConnectionLOARequest extends Request {
             super();
         } 
 
-        private Builder(ApplyPhysicalConnectionLOARequest response) {
-            super(response);
-            this.bandwidth = response.bandwidth;
-            this.clientToken = response.clientToken;
-            this.companyName = response.companyName;
-            this.constructionTime = response.constructionTime;
-            this.instanceId = response.instanceId;
-            this.lineType = response.lineType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.PMInfo = response.PMInfo;
-            this.peerLocation = response.peerLocation;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.si = response.si;
+        private Builder(ApplyPhysicalConnectionLOARequest request) {
+            super(request);
+            this.bandwidth = request.bandwidth;
+            this.clientToken = request.clientToken;
+            this.companyName = request.companyName;
+            this.constructionTime = request.constructionTime;
+            this.instanceId = request.instanceId;
+            this.lineType = request.lineType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.PMInfo = request.PMInfo;
+            this.peerLocation = request.peerLocation;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.si = request.si;
         } 
 
         /**

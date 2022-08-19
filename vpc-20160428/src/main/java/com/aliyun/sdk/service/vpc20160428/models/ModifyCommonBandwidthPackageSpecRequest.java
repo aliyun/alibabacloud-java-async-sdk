@@ -129,15 +129,15 @@ public class ModifyCommonBandwidthPackageSpecRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyCommonBandwidthPackageSpecRequest response) {
-            super(response);
-            this.bandwidth = response.bandwidth;
-            this.bandwidthPackageId = response.bandwidthPackageId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyCommonBandwidthPackageSpecRequest request) {
+            super(request);
+            this.bandwidth = request.bandwidth;
+            this.bandwidthPackageId = request.bandwidthPackageId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

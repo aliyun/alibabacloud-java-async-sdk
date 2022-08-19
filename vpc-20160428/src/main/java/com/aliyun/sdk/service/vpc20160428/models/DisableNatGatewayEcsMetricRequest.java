@@ -76,11 +76,11 @@ public class DisableNatGatewayEcsMetricRequest extends Request {
             super();
         } 
 
-        private Builder(DisableNatGatewayEcsMetricRequest response) {
-            super(response);
-            this.dryRun = response.dryRun;
-            this.natGatewayId = response.natGatewayId;
-            this.regionId = response.regionId;
+        private Builder(DisableNatGatewayEcsMetricRequest request) {
+            super(request);
+            this.dryRun = request.dryRun;
+            this.natGatewayId = request.natGatewayId;
+            this.regionId = request.regionId;
         } 
 
         /**

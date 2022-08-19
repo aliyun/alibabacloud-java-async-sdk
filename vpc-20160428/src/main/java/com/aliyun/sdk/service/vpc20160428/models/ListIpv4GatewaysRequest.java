@@ -166,18 +166,18 @@ public class ListIpv4GatewaysRequest extends Request {
             super();
         } 
 
-        private Builder(ListIpv4GatewaysRequest response) {
-            super(response);
-            this.ipv4GatewayId = response.ipv4GatewayId;
-            this.ipv4GatewayName = response.ipv4GatewayName;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.vpcId = response.vpcId;
+        private Builder(ListIpv4GatewaysRequest request) {
+            super(request);
+            this.ipv4GatewayId = request.ipv4GatewayId;
+            this.ipv4GatewayName = request.ipv4GatewayName;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.vpcId = request.vpcId;
         } 
 
         /**

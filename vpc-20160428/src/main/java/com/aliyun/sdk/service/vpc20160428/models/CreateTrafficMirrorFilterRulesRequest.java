@@ -167,18 +167,18 @@ public class CreateTrafficMirrorFilterRulesRequest extends Request {
             super();
         } 
 
-        private Builder(CreateTrafficMirrorFilterRulesRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.egressRules = response.egressRules;
-            this.ingressRules = response.ingressRules;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.trafficMirrorFilterId = response.trafficMirrorFilterId;
+        private Builder(CreateTrafficMirrorFilterRulesRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.egressRules = request.egressRules;
+            this.ingressRules = request.ingressRules;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.trafficMirrorFilterId = request.trafficMirrorFilterId;
         } 
 
         /**

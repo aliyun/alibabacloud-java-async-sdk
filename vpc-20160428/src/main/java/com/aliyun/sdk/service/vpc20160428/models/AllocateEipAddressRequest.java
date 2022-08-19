@@ -69,6 +69,10 @@ public class AllocateEipAddressRequest extends Request {
     private String pricingCycle;
 
     @Query
+    @NameInMap("PublicIpAddressPoolId")
+    private String publicIpAddressPoolId;
+
+    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
@@ -105,6 +109,7 @@ public class AllocateEipAddressRequest extends Request {
         this.ownerId = builder.ownerId;
         this.period = builder.period;
         this.pricingCycle = builder.pricingCycle;
+        this.publicIpAddressPoolId = builder.publicIpAddressPoolId;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -224,6 +229,13 @@ public class AllocateEipAddressRequest extends Request {
     }
 
     /**
+     * @return publicIpAddressPoolId
+     */
+    public String getPublicIpAddressPoolId() {
+        return this.publicIpAddressPoolId;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -273,6 +285,7 @@ public class AllocateEipAddressRequest extends Request {
         private Long ownerId; 
         private Integer period; 
         private String pricingCycle; 
+        private String publicIpAddressPoolId; 
         private String regionId; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
@@ -283,27 +296,28 @@ public class AllocateEipAddressRequest extends Request {
             super();
         } 
 
-        private Builder(AllocateEipAddressRequest response) {
-            super(response);
-            this.activityId = response.activityId;
-            this.autoPay = response.autoPay;
-            this.bandwidth = response.bandwidth;
-            this.clientToken = response.clientToken;
-            this.description = response.description;
-            this.ISP = response.ISP;
-            this.instanceChargeType = response.instanceChargeType;
-            this.internetChargeType = response.internetChargeType;
-            this.name = response.name;
-            this.netmode = response.netmode;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.period = response.period;
-            this.pricingCycle = response.pricingCycle;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.securityProtectionTypes = response.securityProtectionTypes;
+        private Builder(AllocateEipAddressRequest request) {
+            super(request);
+            this.activityId = request.activityId;
+            this.autoPay = request.autoPay;
+            this.bandwidth = request.bandwidth;
+            this.clientToken = request.clientToken;
+            this.description = request.description;
+            this.ISP = request.ISP;
+            this.instanceChargeType = request.instanceChargeType;
+            this.internetChargeType = request.internetChargeType;
+            this.name = request.name;
+            this.netmode = request.netmode;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.period = request.period;
+            this.pricingCycle = request.pricingCycle;
+            this.publicIpAddressPoolId = request.publicIpAddressPoolId;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.securityProtectionTypes = request.securityProtectionTypes;
         } 
 
         /**
@@ -429,6 +443,15 @@ public class AllocateEipAddressRequest extends Request {
         public Builder pricingCycle(String pricingCycle) {
             this.putQueryParameter("PricingCycle", pricingCycle);
             this.pricingCycle = pricingCycle;
+            return this;
+        }
+
+        /**
+         * PublicIpAddressPoolId.
+         */
+        public Builder publicIpAddressPoolId(String publicIpAddressPoolId) {
+            this.putQueryParameter("PublicIpAddressPoolId", publicIpAddressPoolId);
+            this.publicIpAddressPoolId = publicIpAddressPoolId;
             return this;
         }
 

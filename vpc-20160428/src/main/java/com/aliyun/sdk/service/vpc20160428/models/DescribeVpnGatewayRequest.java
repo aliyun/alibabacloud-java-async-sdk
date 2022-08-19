@@ -128,15 +128,15 @@ public class DescribeVpnGatewayRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeVpnGatewayRequest response) {
-            super(response);
-            this.includeReservationData = response.includeReservationData;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.vpnGatewayId = response.vpnGatewayId;
+        private Builder(DescribeVpnGatewayRequest request) {
+            super(request);
+            this.includeReservationData = request.includeReservationData;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.vpnGatewayId = request.vpnGatewayId;
         } 
 
         /**

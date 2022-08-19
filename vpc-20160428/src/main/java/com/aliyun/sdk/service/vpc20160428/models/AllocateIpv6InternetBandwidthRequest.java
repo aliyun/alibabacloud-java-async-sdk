@@ -169,18 +169,18 @@ public class AllocateIpv6InternetBandwidthRequest extends Request {
             super();
         } 
 
-        private Builder(AllocateIpv6InternetBandwidthRequest response) {
-            super(response);
-            this.bandwidth = response.bandwidth;
-            this.clientToken = response.clientToken;
-            this.internetChargeType = response.internetChargeType;
-            this.ipv6AddressId = response.ipv6AddressId;
-            this.ipv6GatewayId = response.ipv6GatewayId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(AllocateIpv6InternetBandwidthRequest request) {
+            super(request);
+            this.bandwidth = request.bandwidth;
+            this.clientToken = request.clientToken;
+            this.internetChargeType = request.internetChargeType;
+            this.ipv6AddressId = request.ipv6AddressId;
+            this.ipv6GatewayId = request.ipv6GatewayId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

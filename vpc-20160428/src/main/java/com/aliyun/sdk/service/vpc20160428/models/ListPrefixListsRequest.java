@@ -34,6 +34,10 @@ public class ListPrefixListsRequest extends Request {
     private java.util.List < String > prefixListIds;
 
     @Query
+    @NameInMap("PrefixListName")
+    private String prefixListName;
+
+    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
@@ -53,6 +57,7 @@ public class ListPrefixListsRequest extends Request {
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.prefixListIds = builder.prefixListIds;
+        this.prefixListName = builder.prefixListName;
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
@@ -107,6 +112,13 @@ public class ListPrefixListsRequest extends Request {
     }
 
     /**
+     * @return prefixListName
+     */
+    public String getPrefixListName() {
+        return this.prefixListName;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -133,6 +145,7 @@ public class ListPrefixListsRequest extends Request {
         private String ownerAccount; 
         private Long ownerId; 
         private java.util.List < String > prefixListIds; 
+        private String prefixListName; 
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
@@ -141,16 +154,17 @@ public class ListPrefixListsRequest extends Request {
             super();
         } 
 
-        private Builder(ListPrefixListsRequest response) {
-            super(response);
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.prefixListIds = response.prefixListIds;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ListPrefixListsRequest request) {
+            super(request);
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.prefixListIds = request.prefixListIds;
+            this.prefixListName = request.prefixListName;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
@@ -195,6 +209,15 @@ public class ListPrefixListsRequest extends Request {
         public Builder prefixListIds(java.util.List < String > prefixListIds) {
             this.putQueryParameter("PrefixListIds", prefixListIds);
             this.prefixListIds = prefixListIds;
+            return this;
+        }
+
+        /**
+         * PrefixListName.
+         */
+        public Builder prefixListName(String prefixListName) {
+            this.putQueryParameter("PrefixListName", prefixListName);
+            this.prefixListName = prefixListName;
             return this;
         }
 

@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class AssociateVpcCidrBlockRequest extends Request {
     @Query
+    @NameInMap("IPv6CidrBlock")
+    private String iPv6CidrBlock;
+
+    @Query
     @NameInMap("IpVersion")
     private String ipVersion;
 
@@ -52,6 +56,7 @@ public class AssociateVpcCidrBlockRequest extends Request {
 
     private AssociateVpcCidrBlockRequest(Builder builder) {
         super(builder);
+        this.iPv6CidrBlock = builder.iPv6CidrBlock;
         this.ipVersion = builder.ipVersion;
         this.ipv6Isp = builder.ipv6Isp;
         this.ownerAccount = builder.ownerAccount;
@@ -74,6 +79,13 @@ public class AssociateVpcCidrBlockRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return iPv6CidrBlock
+     */
+    public String getIPv6CidrBlock() {
+        return this.iPv6CidrBlock;
     }
 
     /**
@@ -140,6 +152,7 @@ public class AssociateVpcCidrBlockRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AssociateVpcCidrBlockRequest, Builder> {
+        private String iPv6CidrBlock; 
         private String ipVersion; 
         private String ipv6Isp; 
         private String ownerAccount; 
@@ -154,18 +167,28 @@ public class AssociateVpcCidrBlockRequest extends Request {
             super();
         } 
 
-        private Builder(AssociateVpcCidrBlockRequest response) {
-            super(response);
-            this.ipVersion = response.ipVersion;
-            this.ipv6Isp = response.ipv6Isp;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.secondaryCidrBlock = response.secondaryCidrBlock;
-            this.vpcId = response.vpcId;
+        private Builder(AssociateVpcCidrBlockRequest request) {
+            super(request);
+            this.iPv6CidrBlock = request.iPv6CidrBlock;
+            this.ipVersion = request.ipVersion;
+            this.ipv6Isp = request.ipv6Isp;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.secondaryCidrBlock = request.secondaryCidrBlock;
+            this.vpcId = request.vpcId;
         } 
+
+        /**
+         * IPv6CidrBlock.
+         */
+        public Builder iPv6CidrBlock(String iPv6CidrBlock) {
+            this.putQueryParameter("IPv6CidrBlock", iPv6CidrBlock);
+            this.iPv6CidrBlock = iPv6CidrBlock;
+            return this;
+        }
 
         /**
          * IpVersion.

@@ -219,22 +219,22 @@ public class ListNatIpCidrsRequest extends Request {
             super();
         } 
 
-        private Builder(ListNatIpCidrsRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.maxResults = response.maxResults;
-            this.natGatewayId = response.natGatewayId;
-            this.natIpCidr = response.natIpCidr;
-            this.natIpCidrName = response.natIpCidrName;
-            this.natIpCidrStatus = response.natIpCidrStatus;
-            this.natIpCidrs = response.natIpCidrs;
-            this.nextToken = response.nextToken;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ListNatIpCidrsRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.maxResults = request.maxResults;
+            this.natGatewayId = request.natGatewayId;
+            this.natIpCidr = request.natIpCidr;
+            this.natIpCidrName = request.natIpCidrName;
+            this.natIpCidrStatus = request.natIpCidrStatus;
+            this.natIpCidrs = request.natIpCidrs;
+            this.nextToken = request.nextToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

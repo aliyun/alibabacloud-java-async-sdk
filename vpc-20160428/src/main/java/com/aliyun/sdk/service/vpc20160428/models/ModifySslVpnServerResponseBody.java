@@ -31,7 +31,7 @@ public class ModifySslVpnServerResponseBody extends TeaModel {
     private Boolean enableMultiFactorAuth;
 
     @NameInMap("IDaaSInstanceId")
-    private String IDaaSInstanceId;
+    private String iDaaSInstanceId;
 
     @NameInMap("InternetIp")
     private String internetIp;
@@ -70,7 +70,7 @@ public class ModifySslVpnServerResponseBody extends TeaModel {
         this.connections = builder.connections;
         this.createTime = builder.createTime;
         this.enableMultiFactorAuth = builder.enableMultiFactorAuth;
-        this.IDaaSInstanceId = builder.IDaaSInstanceId;
+        this.iDaaSInstanceId = builder.iDaaSInstanceId;
         this.internetIp = builder.internetIp;
         this.localSubnet = builder.localSubnet;
         this.maxConnections = builder.maxConnections;
@@ -134,10 +134,10 @@ public class ModifySslVpnServerResponseBody extends TeaModel {
     }
 
     /**
-     * @return IDaaSInstanceId
+     * @return iDaaSInstanceId
      */
     public String getIDaaSInstanceId() {
-        return this.IDaaSInstanceId;
+        return this.iDaaSInstanceId;
     }
 
     /**
@@ -217,7 +217,7 @@ public class ModifySslVpnServerResponseBody extends TeaModel {
         private Integer connections; 
         private Long createTime; 
         private Boolean enableMultiFactorAuth; 
-        private String IDaaSInstanceId; 
+        private String iDaaSInstanceId; 
         private String internetIp; 
         private String localSubnet; 
         private Integer maxConnections; 
@@ -280,8 +280,8 @@ public class ModifySslVpnServerResponseBody extends TeaModel {
         /**
          * IDaaSInstanceId.
          */
-        public Builder IDaaSInstanceId(String IDaaSInstanceId) {
-            this.IDaaSInstanceId = IDaaSInstanceId;
+        public Builder iDaaSInstanceId(String iDaaSInstanceId) {
+            this.iDaaSInstanceId = iDaaSInstanceId;
             return this;
         }
 

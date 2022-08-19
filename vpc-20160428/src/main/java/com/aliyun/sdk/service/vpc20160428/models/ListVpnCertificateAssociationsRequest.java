@@ -116,14 +116,14 @@ public class ListVpnCertificateAssociationsRequest extends Request {
             super();
         } 
 
-        private Builder(ListVpnCertificateAssociationsRequest response) {
-            super(response);
-            this.certificateId = response.certificateId;
-            this.certificateType = response.certificateType;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.regionId = response.regionId;
-            this.vpnGatewayId = response.vpnGatewayId;
+        private Builder(ListVpnCertificateAssociationsRequest request) {
+            super(request);
+            this.certificateId = request.certificateId;
+            this.certificateType = request.certificateType;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.regionId = request.regionId;
+            this.vpnGatewayId = request.vpnGatewayId;
         } 
 
         /**

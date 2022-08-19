@@ -192,20 +192,20 @@ public class ModifyVpcAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyVpcAttributeRequest response) {
-            super(response);
-            this.cidrBlock = response.cidrBlock;
-            this.description = response.description;
-            this.enableIPv6 = response.enableIPv6;
-            this.ipv6CidrBlock = response.ipv6CidrBlock;
-            this.ipv6Isp = response.ipv6Isp;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.vpcId = response.vpcId;
-            this.vpcName = response.vpcName;
+        private Builder(ModifyVpcAttributeRequest request) {
+            super(request);
+            this.cidrBlock = request.cidrBlock;
+            this.description = request.description;
+            this.enableIPv6 = request.enableIPv6;
+            this.ipv6CidrBlock = request.ipv6CidrBlock;
+            this.ipv6Isp = request.ipv6Isp;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.vpcId = request.vpcId;
+            this.vpcName = request.vpcName;
         } 
 
         /**

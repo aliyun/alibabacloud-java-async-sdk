@@ -142,16 +142,16 @@ public class ModifyIPv6TranslatorAclAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyIPv6TranslatorAclAttributeRequest response) {
-            super(response);
-            this.aclId = response.aclId;
-            this.aclName = response.aclName;
-            this.clientToken = response.clientToken;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyIPv6TranslatorAclAttributeRequest request) {
+            super(request);
+            this.aclId = request.aclId;
+            this.aclName = request.aclName;
+            this.clientToken = request.clientToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

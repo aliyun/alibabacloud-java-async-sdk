@@ -128,15 +128,15 @@ public class DeleteHaVipRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteHaVipRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.haVipId = response.haVipId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DeleteHaVipRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.haVipId = request.haVipId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

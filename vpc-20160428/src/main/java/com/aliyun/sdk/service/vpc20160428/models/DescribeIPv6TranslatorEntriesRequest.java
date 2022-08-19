@@ -283,27 +283,27 @@ public class DescribeIPv6TranslatorEntriesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeIPv6TranslatorEntriesRequest response) {
-            super(response);
-            this.aclId = response.aclId;
-            this.aclStatus = response.aclStatus;
-            this.aclType = response.aclType;
-            this.allocateIpv6Addr = response.allocateIpv6Addr;
-            this.allocateIpv6Port = response.allocateIpv6Port;
-            this.backendIpv4Addr = response.backendIpv4Addr;
-            this.backendIpv4Port = response.backendIpv4Port;
-            this.clientToken = response.clientToken;
-            this.entryName = response.entryName;
-            this.ipv6TranslatorEntryId = response.ipv6TranslatorEntryId;
-            this.ipv6TranslatorId = response.ipv6TranslatorId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.transProtocol = response.transProtocol;
+        private Builder(DescribeIPv6TranslatorEntriesRequest request) {
+            super(request);
+            this.aclId = request.aclId;
+            this.aclStatus = request.aclStatus;
+            this.aclType = request.aclType;
+            this.allocateIpv6Addr = request.allocateIpv6Addr;
+            this.allocateIpv6Port = request.allocateIpv6Port;
+            this.backendIpv4Addr = request.backendIpv4Addr;
+            this.backendIpv4Port = request.backendIpv4Port;
+            this.clientToken = request.clientToken;
+            this.entryName = request.entryName;
+            this.ipv6TranslatorEntryId = request.ipv6TranslatorEntryId;
+            this.ipv6TranslatorId = request.ipv6TranslatorId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.transProtocol = request.transProtocol;
         } 
 
         /**

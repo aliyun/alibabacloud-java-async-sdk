@@ -167,18 +167,18 @@ public class ListVpcGatewayEndpointsRequest extends Request {
             super();
         } 
 
-        private Builder(ListVpcGatewayEndpointsRequest response) {
-            super(response);
-            this.endpointId = response.endpointId;
-            this.endpointName = response.endpointName;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.serviceName = response.serviceName;
+        private Builder(ListVpcGatewayEndpointsRequest request) {
+            super(request);
+            this.endpointId = request.endpointId;
+            this.endpointName = request.endpointName;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.serviceName = request.serviceName;
         } 
 
         /**

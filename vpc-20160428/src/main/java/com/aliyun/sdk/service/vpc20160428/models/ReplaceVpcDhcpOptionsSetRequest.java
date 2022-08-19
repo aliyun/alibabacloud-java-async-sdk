@@ -155,17 +155,17 @@ public class ReplaceVpcDhcpOptionsSetRequest extends Request {
             super();
         } 
 
-        private Builder(ReplaceVpcDhcpOptionsSetRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.dhcpOptionsSetId = response.dhcpOptionsSetId;
-            this.dryRun = response.dryRun;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.vpcId = response.vpcId;
+        private Builder(ReplaceVpcDhcpOptionsSetRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.dhcpOptionsSetId = request.dhcpOptionsSetId;
+            this.dryRun = request.dryRun;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.vpcId = request.vpcId;
         } 
 
         /**

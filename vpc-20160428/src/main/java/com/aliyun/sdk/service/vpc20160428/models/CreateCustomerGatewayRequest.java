@@ -180,19 +180,19 @@ public class CreateCustomerGatewayRequest extends Request {
             super();
         } 
 
-        private Builder(CreateCustomerGatewayRequest response) {
-            super(response);
-            this.asn = response.asn;
-            this.authKey = response.authKey;
-            this.clientToken = response.clientToken;
-            this.description = response.description;
-            this.ipAddress = response.ipAddress;
-            this.name = response.name;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(CreateCustomerGatewayRequest request) {
+            super(request);
+            this.asn = request.asn;
+            this.authKey = request.authKey;
+            this.clientToken = request.clientToken;
+            this.description = request.description;
+            this.ipAddress = request.ipAddress;
+            this.name = request.name;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

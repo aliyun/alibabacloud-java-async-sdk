@@ -115,14 +115,14 @@ public class GetIpv4GatewayAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(GetIpv4GatewayAttributeRequest response) {
-            super(response);
-            this.ipv4GatewayId = response.ipv4GatewayId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(GetIpv4GatewayAttributeRequest request) {
+            super(request);
+            this.ipv4GatewayId = request.ipv4GatewayId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

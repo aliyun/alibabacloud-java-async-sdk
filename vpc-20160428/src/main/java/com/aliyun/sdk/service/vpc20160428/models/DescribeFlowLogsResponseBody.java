@@ -152,6 +152,12 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
     } 
 
     public static class FlowLog extends TeaModel {
+        @NameInMap("AggregationInterval")
+        private Integer aggregationInterval;
+
+        @NameInMap("BusinessStatus")
+        private String businessStatus;
+
         @NameInMap("CreationTime")
         private String creationTime;
 
@@ -186,6 +192,8 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         private String trafficType;
 
         private FlowLog(Builder builder) {
+            this.aggregationInterval = builder.aggregationInterval;
+            this.businessStatus = builder.businessStatus;
             this.creationTime = builder.creationTime;
             this.description = builder.description;
             this.flowLogId = builder.flowLogId;
@@ -205,6 +213,20 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
 
         public static FlowLog create() {
             return builder().build();
+        }
+
+        /**
+         * @return aggregationInterval
+         */
+        public Integer getAggregationInterval() {
+            return this.aggregationInterval;
+        }
+
+        /**
+         * @return businessStatus
+         */
+        public String getBusinessStatus() {
+            return this.businessStatus;
         }
 
         /**
@@ -285,6 +307,8 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer aggregationInterval; 
+            private String businessStatus; 
             private String creationTime; 
             private String description; 
             private String flowLogId; 
@@ -296,6 +320,22 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             private String resourceType; 
             private String status; 
             private String trafficType; 
+
+            /**
+             * AggregationInterval.
+             */
+            public Builder aggregationInterval(Integer aggregationInterval) {
+                this.aggregationInterval = aggregationInterval;
+                return this;
+            }
+
+            /**
+             * BusinessStatus.
+             */
+            public Builder businessStatus(String businessStatus) {
+                this.businessStatus = businessStatus;
+                return this;
+            }
 
             /**
              * CreationTime.

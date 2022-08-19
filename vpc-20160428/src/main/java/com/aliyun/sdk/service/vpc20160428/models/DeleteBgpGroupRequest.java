@@ -128,15 +128,15 @@ public class DeleteBgpGroupRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteBgpGroupRequest response) {
-            super(response);
-            this.bgpGroupId = response.bgpGroupId;
-            this.clientToken = response.clientToken;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DeleteBgpGroupRequest request) {
+            super(request);
+            this.bgpGroupId = request.bgpGroupId;
+            this.clientToken = request.clientToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

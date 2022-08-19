@@ -166,18 +166,18 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
             super();
         } 
 
-        private Builder(ListVirtualPhysicalConnectionsRequest response) {
-            super(response);
-            this.isConfirmed = response.isConfirmed;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.physicalConnectionId = response.physicalConnectionId;
-            this.regionId = response.regionId;
-            this.virtualPhysicalConnectionAliUids = response.virtualPhysicalConnectionAliUids;
-            this.virtualPhysicalConnectionBusinessStatus = response.virtualPhysicalConnectionBusinessStatus;
-            this.virtualPhysicalConnectionIds = response.virtualPhysicalConnectionIds;
-            this.virtualPhysicalConnectionStatuses = response.virtualPhysicalConnectionStatuses;
-            this.vlanIds = response.vlanIds;
+        private Builder(ListVirtualPhysicalConnectionsRequest request) {
+            super(request);
+            this.isConfirmed = request.isConfirmed;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.physicalConnectionId = request.physicalConnectionId;
+            this.regionId = request.regionId;
+            this.virtualPhysicalConnectionAliUids = request.virtualPhysicalConnectionAliUids;
+            this.virtualPhysicalConnectionBusinessStatus = request.virtualPhysicalConnectionBusinessStatus;
+            this.virtualPhysicalConnectionIds = request.virtualPhysicalConnectionIds;
+            this.virtualPhysicalConnectionStatuses = request.virtualPhysicalConnectionStatuses;
+            this.vlanIds = request.vlanIds;
         } 
 
         /**

@@ -128,15 +128,15 @@ public class UnassociateGlobalAccelerationInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(UnassociateGlobalAccelerationInstanceRequest response) {
-            super(response);
-            this.globalAccelerationInstanceId = response.globalAccelerationInstanceId;
-            this.instanceType = response.instanceType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(UnassociateGlobalAccelerationInstanceRequest request) {
+            super(request);
+            this.globalAccelerationInstanceId = request.globalAccelerationInstanceId;
+            this.instanceType = request.instanceType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

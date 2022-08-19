@@ -153,17 +153,17 @@ public class ModifyEipAddressAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyEipAddressAttributeRequest response) {
-            super(response);
-            this.allocationId = response.allocationId;
-            this.bandwidth = response.bandwidth;
-            this.description = response.description;
-            this.name = response.name;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyEipAddressAttributeRequest request) {
+            super(request);
+            this.allocationId = request.allocationId;
+            this.bandwidth = request.bandwidth;
+            this.description = request.description;
+            this.name = request.name;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

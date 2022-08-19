@@ -128,15 +128,15 @@ public class DeleteSslVpnServerRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteSslVpnServerRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sslVpnServerId = response.sslVpnServerId;
+        private Builder(DeleteSslVpnServerRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sslVpnServerId = request.sslVpnServerId;
         } 
 
         /**

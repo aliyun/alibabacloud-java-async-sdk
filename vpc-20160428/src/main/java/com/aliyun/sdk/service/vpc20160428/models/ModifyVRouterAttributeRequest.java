@@ -39,11 +39,11 @@ public class ModifyVRouterAttributeRequest extends Request {
     @Query
     @NameInMap("VRouterId")
     @Validation(required = true)
-    private String VRouterId;
+    private String vRouterId;
 
     @Query
     @NameInMap("VRouterName")
-    private String VRouterName;
+    private String vRouterName;
 
     private ModifyVRouterAttributeRequest(Builder builder) {
         super(builder);
@@ -53,8 +53,8 @@ public class ModifyVRouterAttributeRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.VRouterId = builder.VRouterId;
-        this.VRouterName = builder.VRouterName;
+        this.vRouterId = builder.vRouterId;
+        this.vRouterName = builder.vRouterName;
     }
 
     public static Builder builder() {
@@ -113,17 +113,17 @@ public class ModifyVRouterAttributeRequest extends Request {
     }
 
     /**
-     * @return VRouterId
+     * @return vRouterId
      */
     public String getVRouterId() {
-        return this.VRouterId;
+        return this.vRouterId;
     }
 
     /**
-     * @return VRouterName
+     * @return vRouterName
      */
     public String getVRouterName() {
-        return this.VRouterName;
+        return this.vRouterName;
     }
 
     public static final class Builder extends Request.Builder<ModifyVRouterAttributeRequest, Builder> {
@@ -133,23 +133,23 @@ public class ModifyVRouterAttributeRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String VRouterId; 
-        private String VRouterName; 
+        private String vRouterId; 
+        private String vRouterName; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ModifyVRouterAttributeRequest response) {
-            super(response);
-            this.description = response.description;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.VRouterId = response.VRouterId;
-            this.VRouterName = response.VRouterName;
+        private Builder(ModifyVRouterAttributeRequest request) {
+            super(request);
+            this.description = request.description;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.vRouterId = request.vRouterId;
+            this.vRouterName = request.vRouterName;
         } 
 
         /**
@@ -209,18 +209,18 @@ public class ModifyVRouterAttributeRequest extends Request {
         /**
          * VRouterId.
          */
-        public Builder VRouterId(String VRouterId) {
-            this.putQueryParameter("VRouterId", VRouterId);
-            this.VRouterId = VRouterId;
+        public Builder vRouterId(String vRouterId) {
+            this.putQueryParameter("VRouterId", vRouterId);
+            this.vRouterId = vRouterId;
             return this;
         }
 
         /**
          * VRouterName.
          */
-        public Builder VRouterName(String VRouterName) {
-            this.putQueryParameter("VRouterName", VRouterName);
-            this.VRouterName = VRouterName;
+        public Builder vRouterName(String vRouterName) {
+            this.putQueryParameter("VRouterName", vRouterName);
+            this.vRouterName = vRouterName;
             return this;
         }
 

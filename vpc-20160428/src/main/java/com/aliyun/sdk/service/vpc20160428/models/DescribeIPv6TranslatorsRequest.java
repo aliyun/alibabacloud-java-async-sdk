@@ -231,23 +231,23 @@ public class DescribeIPv6TranslatorsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeIPv6TranslatorsRequest response) {
-            super(response);
-            this.allocateIpv4Addr = response.allocateIpv4Addr;
-            this.allocateIpv6Addr = response.allocateIpv6Addr;
-            this.businessStatus = response.businessStatus;
-            this.ipv6TranslatorId = response.ipv6TranslatorId;
-            this.name = response.name;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.payType = response.payType;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.spec = response.spec;
-            this.status = response.status;
+        private Builder(DescribeIPv6TranslatorsRequest request) {
+            super(request);
+            this.allocateIpv4Addr = request.allocateIpv4Addr;
+            this.allocateIpv6Addr = request.allocateIpv6Addr;
+            this.businessStatus = request.businessStatus;
+            this.ipv6TranslatorId = request.ipv6TranslatorId;
+            this.name = request.name;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.payType = request.payType;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.spec = request.spec;
+            this.status = request.status;
         } 
 
         /**

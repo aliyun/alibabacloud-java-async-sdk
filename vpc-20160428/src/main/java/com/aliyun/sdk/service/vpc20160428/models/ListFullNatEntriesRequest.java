@@ -206,21 +206,21 @@ public class ListFullNatEntriesRequest extends Request {
             super();
         } 
 
-        private Builder(ListFullNatEntriesRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.fullNatEntryId = response.fullNatEntryId;
-            this.fullNatEntryNames = response.fullNatEntryNames;
-            this.fullNatTableId = response.fullNatTableId;
-            this.ipProtocol = response.ipProtocol;
-            this.maxResults = response.maxResults;
-            this.networkInterfaceIds = response.networkInterfaceIds;
-            this.nextToken = response.nextToken;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ListFullNatEntriesRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.fullNatEntryId = request.fullNatEntryId;
+            this.fullNatEntryNames = request.fullNatEntryNames;
+            this.fullNatTableId = request.fullNatTableId;
+            this.ipProtocol = request.ipProtocol;
+            this.maxResults = request.maxResults;
+            this.networkInterfaceIds = request.networkInterfaceIds;
+            this.nextToken = request.nextToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

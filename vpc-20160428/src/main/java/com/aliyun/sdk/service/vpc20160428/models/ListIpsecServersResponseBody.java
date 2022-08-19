@@ -424,7 +424,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
         private Boolean effectImmediately;
 
         @NameInMap("IDaaSInstanceId")
-        private String IDaaSInstanceId;
+        private String iDaaSInstanceId;
 
         @NameInMap("IkeConfig")
         private IkeConfig ikeConfig;
@@ -469,7 +469,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
             this.clientIpPool = builder.clientIpPool;
             this.creationTime = builder.creationTime;
             this.effectImmediately = builder.effectImmediately;
-            this.IDaaSInstanceId = builder.IDaaSInstanceId;
+            this.iDaaSInstanceId = builder.iDaaSInstanceId;
             this.ikeConfig = builder.ikeConfig;
             this.internetIp = builder.internetIp;
             this.ipsecConfig = builder.ipsecConfig;
@@ -515,10 +515,10 @@ public class ListIpsecServersResponseBody extends TeaModel {
         }
 
         /**
-         * @return IDaaSInstanceId
+         * @return iDaaSInstanceId
          */
         public String getIDaaSInstanceId() {
-            return this.IDaaSInstanceId;
+            return this.iDaaSInstanceId;
         }
 
         /**
@@ -616,7 +616,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
             private String clientIpPool; 
             private String creationTime; 
             private Boolean effectImmediately; 
-            private String IDaaSInstanceId; 
+            private String iDaaSInstanceId; 
             private IkeConfig ikeConfig; 
             private String internetIp; 
             private IpsecConfig ipsecConfig; 
@@ -658,8 +658,8 @@ public class ListIpsecServersResponseBody extends TeaModel {
             /**
              * IDaaSInstanceId.
              */
-            public Builder IDaaSInstanceId(String IDaaSInstanceId) {
-                this.IDaaSInstanceId = IDaaSInstanceId;
+            public Builder iDaaSInstanceId(String iDaaSInstanceId) {
+                this.iDaaSInstanceId = iDaaSInstanceId;
                 return this;
             }
 

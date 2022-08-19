@@ -166,18 +166,18 @@ public class DescribeSslVpnClientCertsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeSslVpnClientCertsRequest response) {
-            super(response);
-            this.name = response.name;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sslVpnClientCertId = response.sslVpnClientCertId;
-            this.sslVpnServerId = response.sslVpnServerId;
+        private Builder(DescribeSslVpnClientCertsRequest request) {
+            super(request);
+            this.name = request.name;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sslVpnClientCertId = request.sslVpnClientCertId;
+            this.sslVpnServerId = request.sslVpnServerId;
         } 
 
         /**

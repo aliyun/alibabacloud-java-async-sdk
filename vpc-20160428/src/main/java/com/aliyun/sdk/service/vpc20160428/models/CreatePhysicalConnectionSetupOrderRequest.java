@@ -181,19 +181,19 @@ public class CreatePhysicalConnectionSetupOrderRequest extends Request {
             super();
         } 
 
-        private Builder(CreatePhysicalConnectionSetupOrderRequest response) {
-            super(response);
-            this.accessPointId = response.accessPointId;
-            this.autoPay = response.autoPay;
-            this.clientToken = response.clientToken;
-            this.lineOperator = response.lineOperator;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.portType = response.portType;
-            this.redundantPhysicalConnectionId = response.redundantPhysicalConnectionId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(CreatePhysicalConnectionSetupOrderRequest request) {
+            super(request);
+            this.accessPointId = request.accessPointId;
+            this.autoPay = request.autoPay;
+            this.clientToken = request.clientToken;
+            this.lineOperator = request.lineOperator;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.portType = request.portType;
+            this.redundantPhysicalConnectionId = request.redundantPhysicalConnectionId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

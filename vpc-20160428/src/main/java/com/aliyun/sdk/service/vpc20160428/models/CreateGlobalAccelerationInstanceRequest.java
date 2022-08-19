@@ -181,19 +181,19 @@ public class CreateGlobalAccelerationInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(CreateGlobalAccelerationInstanceRequest response) {
-            super(response);
-            this.bandwidth = response.bandwidth;
-            this.bandwidthType = response.bandwidthType;
-            this.clientToken = response.clientToken;
-            this.description = response.description;
-            this.name = response.name;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.serviceLocation = response.serviceLocation;
+        private Builder(CreateGlobalAccelerationInstanceRequest request) {
+            super(request);
+            this.bandwidth = request.bandwidth;
+            this.bandwidthType = request.bandwidthType;
+            this.clientToken = request.clientToken;
+            this.description = request.description;
+            this.name = request.name;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.serviceLocation = request.serviceLocation;
         } 
 
         /**

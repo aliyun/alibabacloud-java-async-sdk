@@ -194,20 +194,20 @@ public class DescribeIpv6EgressOnlyRulesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeIpv6EgressOnlyRulesRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.instanceType = response.instanceType;
-            this.ipv6EgressOnlyRuleId = response.ipv6EgressOnlyRuleId;
-            this.ipv6GatewayId = response.ipv6GatewayId;
-            this.name = response.name;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeIpv6EgressOnlyRulesRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.instanceType = request.instanceType;
+            this.ipv6EgressOnlyRuleId = request.ipv6EgressOnlyRuleId;
+            this.ipv6GatewayId = request.ipv6GatewayId;
+            this.name = request.name;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

@@ -151,10 +151,10 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
         private Boolean enableMultiFactorAuth;
 
         @NameInMap("IDaaSInstanceId")
-        private String IDaaSInstanceId;
+        private String iDaaSInstanceId;
 
         @NameInMap("IDaaSRegionId")
-        private String IDaaSRegionId;
+        private String iDaaSRegionId;
 
         @NameInMap("InternetIp")
         private String internetIp;
@@ -190,8 +190,8 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
             this.connections = builder.connections;
             this.createTime = builder.createTime;
             this.enableMultiFactorAuth = builder.enableMultiFactorAuth;
-            this.IDaaSInstanceId = builder.IDaaSInstanceId;
-            this.IDaaSRegionId = builder.IDaaSRegionId;
+            this.iDaaSInstanceId = builder.iDaaSInstanceId;
+            this.iDaaSRegionId = builder.iDaaSRegionId;
             this.internetIp = builder.internetIp;
             this.localSubnet = builder.localSubnet;
             this.maxConnections = builder.maxConnections;
@@ -254,17 +254,17 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
         }
 
         /**
-         * @return IDaaSInstanceId
+         * @return iDaaSInstanceId
          */
         public String getIDaaSInstanceId() {
-            return this.IDaaSInstanceId;
+            return this.iDaaSInstanceId;
         }
 
         /**
-         * @return IDaaSRegionId
+         * @return iDaaSRegionId
          */
         public String getIDaaSRegionId() {
-            return this.IDaaSRegionId;
+            return this.iDaaSRegionId;
         }
 
         /**
@@ -337,8 +337,8 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
             private Integer connections; 
             private Long createTime; 
             private Boolean enableMultiFactorAuth; 
-            private String IDaaSInstanceId; 
-            private String IDaaSRegionId; 
+            private String iDaaSInstanceId; 
+            private String iDaaSRegionId; 
             private String internetIp; 
             private String localSubnet; 
             private Integer maxConnections; 
@@ -400,16 +400,16 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
             /**
              * IDaaSInstanceId.
              */
-            public Builder IDaaSInstanceId(String IDaaSInstanceId) {
-                this.IDaaSInstanceId = IDaaSInstanceId;
+            public Builder iDaaSInstanceId(String iDaaSInstanceId) {
+                this.iDaaSInstanceId = iDaaSInstanceId;
                 return this;
             }
 
             /**
              * IDaaSRegionId.
              */
-            public Builder IDaaSRegionId(String IDaaSRegionId) {
-                this.IDaaSRegionId = IDaaSRegionId;
+            public Builder iDaaSRegionId(String iDaaSRegionId) {
+                this.iDaaSRegionId = iDaaSRegionId;
                 return this;
             }
 

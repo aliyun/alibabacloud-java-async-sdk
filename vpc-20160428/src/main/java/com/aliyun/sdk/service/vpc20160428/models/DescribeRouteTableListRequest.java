@@ -205,21 +205,21 @@ public class DescribeRouteTableListRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeRouteTableListRequest response) {
-            super(response);
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.routeTableId = response.routeTableId;
-            this.routeTableName = response.routeTableName;
-            this.routerId = response.routerId;
-            this.routerType = response.routerType;
-            this.vpcId = response.vpcId;
+        private Builder(DescribeRouteTableListRequest request) {
+            super(request);
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.routeTableId = request.routeTableId;
+            this.routeTableName = request.routeTableName;
+            this.routerId = request.routerId;
+            this.routerType = request.routerType;
+            this.vpcId = request.vpcId;
         } 
 
         /**

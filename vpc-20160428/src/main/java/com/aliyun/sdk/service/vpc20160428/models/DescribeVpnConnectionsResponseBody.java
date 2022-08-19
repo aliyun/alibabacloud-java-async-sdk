@@ -443,6 +443,9 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         @NameInMap("Interval")
         private Integer interval;
 
+        @NameInMap("Policy")
+        private String policy;
+
         @NameInMap("Retry")
         private Integer retry;
 
@@ -456,6 +459,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             this.dip = builder.dip;
             this.enable = builder.enable;
             this.interval = builder.interval;
+            this.policy = builder.policy;
             this.retry = builder.retry;
             this.sip = builder.sip;
             this.status = builder.status;
@@ -491,6 +495,13 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         }
 
         /**
+         * @return policy
+         */
+        public String getPolicy() {
+            return this.policy;
+        }
+
+        /**
          * @return retry
          */
         public Integer getRetry() {
@@ -515,6 +526,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             private String dip; 
             private String enable; 
             private Integer interval; 
+            private String policy; 
             private Integer retry; 
             private String sip; 
             private String status; 
@@ -540,6 +552,14 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
              */
             public Builder interval(Integer interval) {
                 this.interval = interval;
+                return this;
+            }
+
+            /**
+             * Policy.
+             */
+            public Builder policy(String policy) {
+                this.policy = policy;
                 return this;
             }
 
@@ -736,8 +756,17 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
 
     }
     public static class VpnConnection extends TeaModel {
+        @NameInMap("AttachInstanceId")
+        private String attachInstanceId;
+
+        @NameInMap("AttachType")
+        private String attachType;
+
         @NameInMap("CreateTime")
         private Long createTime;
+
+        @NameInMap("CrossAccountAuthorized")
+        private Boolean crossAccountAuthorized;
 
         @NameInMap("CustomerGatewayId")
         private String customerGatewayId;
@@ -763,14 +792,29 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         @NameInMap("Name")
         private String name;
 
+        @NameInMap("NetworkType")
+        private String networkType;
+
         @NameInMap("RemoteCaCertificate")
         private String remoteCaCertificate;
 
         @NameInMap("RemoteSubnet")
         private String remoteSubnet;
 
+        @NameInMap("Spec")
+        private String spec;
+
+        @NameInMap("State")
+        private String state;
+
         @NameInMap("Status")
         private String status;
+
+        @NameInMap("TransitRouterId")
+        private String transitRouterId;
+
+        @NameInMap("TransitRouterName")
+        private String transitRouterName;
 
         @NameInMap("VcoHealthCheck")
         private VcoHealthCheck vcoHealthCheck;
@@ -785,7 +829,10 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         private String vpnGatewayId;
 
         private VpnConnection(Builder builder) {
+            this.attachInstanceId = builder.attachInstanceId;
+            this.attachType = builder.attachType;
             this.createTime = builder.createTime;
+            this.crossAccountAuthorized = builder.crossAccountAuthorized;
             this.customerGatewayId = builder.customerGatewayId;
             this.effectImmediately = builder.effectImmediately;
             this.enableDpd = builder.enableDpd;
@@ -794,9 +841,14 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             this.ipsecConfig = builder.ipsecConfig;
             this.localSubnet = builder.localSubnet;
             this.name = builder.name;
+            this.networkType = builder.networkType;
             this.remoteCaCertificate = builder.remoteCaCertificate;
             this.remoteSubnet = builder.remoteSubnet;
+            this.spec = builder.spec;
+            this.state = builder.state;
             this.status = builder.status;
+            this.transitRouterId = builder.transitRouterId;
+            this.transitRouterName = builder.transitRouterName;
             this.vcoHealthCheck = builder.vcoHealthCheck;
             this.vpnBgpConfig = builder.vpnBgpConfig;
             this.vpnConnectionId = builder.vpnConnectionId;
@@ -812,10 +864,31 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         }
 
         /**
+         * @return attachInstanceId
+         */
+        public String getAttachInstanceId() {
+            return this.attachInstanceId;
+        }
+
+        /**
+         * @return attachType
+         */
+        public String getAttachType() {
+            return this.attachType;
+        }
+
+        /**
          * @return createTime
          */
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return crossAccountAuthorized
+         */
+        public Boolean getCrossAccountAuthorized() {
+            return this.crossAccountAuthorized;
         }
 
         /**
@@ -875,6 +948,13 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         }
 
         /**
+         * @return networkType
+         */
+        public String getNetworkType() {
+            return this.networkType;
+        }
+
+        /**
          * @return remoteCaCertificate
          */
         public String getRemoteCaCertificate() {
@@ -889,10 +969,38 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         }
 
         /**
+         * @return spec
+         */
+        public String getSpec() {
+            return this.spec;
+        }
+
+        /**
+         * @return state
+         */
+        public String getState() {
+            return this.state;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
             return this.status;
+        }
+
+        /**
+         * @return transitRouterId
+         */
+        public String getTransitRouterId() {
+            return this.transitRouterId;
+        }
+
+        /**
+         * @return transitRouterName
+         */
+        public String getTransitRouterName() {
+            return this.transitRouterName;
         }
 
         /**
@@ -924,7 +1032,10 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String attachInstanceId; 
+            private String attachType; 
             private Long createTime; 
+            private Boolean crossAccountAuthorized; 
             private String customerGatewayId; 
             private Boolean effectImmediately; 
             private Boolean enableDpd; 
@@ -933,19 +1044,48 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             private IpsecConfig ipsecConfig; 
             private String localSubnet; 
             private String name; 
+            private String networkType; 
             private String remoteCaCertificate; 
             private String remoteSubnet; 
+            private String spec; 
+            private String state; 
             private String status; 
+            private String transitRouterId; 
+            private String transitRouterName; 
             private VcoHealthCheck vcoHealthCheck; 
             private VpnBgpConfig vpnBgpConfig; 
             private String vpnConnectionId; 
             private String vpnGatewayId; 
 
             /**
+             * AttachInstanceId.
+             */
+            public Builder attachInstanceId(String attachInstanceId) {
+                this.attachInstanceId = attachInstanceId;
+                return this;
+            }
+
+            /**
+             * AttachType.
+             */
+            public Builder attachType(String attachType) {
+                this.attachType = attachType;
+                return this;
+            }
+
+            /**
              * CreateTime.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * CrossAccountAuthorized.
+             */
+            public Builder crossAccountAuthorized(Boolean crossAccountAuthorized) {
+                this.crossAccountAuthorized = crossAccountAuthorized;
                 return this;
             }
 
@@ -1014,6 +1154,14 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
+             * NetworkType.
+             */
+            public Builder networkType(String networkType) {
+                this.networkType = networkType;
+                return this;
+            }
+
+            /**
              * RemoteCaCertificate.
              */
             public Builder remoteCaCertificate(String remoteCaCertificate) {
@@ -1030,10 +1178,42 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
+             * Spec.
+             */
+            public Builder spec(String spec) {
+                this.spec = spec;
+                return this;
+            }
+
+            /**
+             * State.
+             */
+            public Builder state(String state) {
+                this.state = state;
+                return this;
+            }
+
+            /**
              * Status.
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * TransitRouterId.
+             */
+            public Builder transitRouterId(String transitRouterId) {
+                this.transitRouterId = transitRouterId;
+                return this;
+            }
+
+            /**
+             * TransitRouterName.
+             */
+            public Builder transitRouterName(String transitRouterName) {
+                this.transitRouterName = transitRouterName;
                 return this;
             }
 

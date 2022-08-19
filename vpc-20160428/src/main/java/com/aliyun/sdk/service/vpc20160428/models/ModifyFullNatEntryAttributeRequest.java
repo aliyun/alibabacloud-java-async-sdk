@@ -259,25 +259,25 @@ public class ModifyFullNatEntryAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyFullNatEntryAttributeRequest response) {
-            super(response);
-            this.accessIp = response.accessIp;
-            this.accessPort = response.accessPort;
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.fullNatEntryDescription = response.fullNatEntryDescription;
-            this.fullNatEntryId = response.fullNatEntryId;
-            this.fullNatEntryName = response.fullNatEntryName;
-            this.fullNatTableId = response.fullNatTableId;
-            this.ipProtocol = response.ipProtocol;
-            this.natIp = response.natIp;
-            this.natIpPort = response.natIpPort;
-            this.networkInterfaceId = response.networkInterfaceId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyFullNatEntryAttributeRequest request) {
+            super(request);
+            this.accessIp = request.accessIp;
+            this.accessPort = request.accessPort;
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.fullNatEntryDescription = request.fullNatEntryDescription;
+            this.fullNatEntryId = request.fullNatEntryId;
+            this.fullNatEntryName = request.fullNatEntryName;
+            this.fullNatTableId = request.fullNatTableId;
+            this.ipProtocol = request.ipProtocol;
+            this.natIp = request.natIp;
+            this.natIpPort = request.natIpPort;
+            this.networkInterfaceId = request.networkInterfaceId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

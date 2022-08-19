@@ -103,13 +103,13 @@ public class AttachVbrToVpconnRequest extends Request {
             super();
         } 
 
-        private Builder(AttachVbrToVpconnRequest response) {
-            super(response);
-            this.dryRun = response.dryRun;
-            this.regionId = response.regionId;
-            this.token = response.token;
-            this.vbrId = response.vbrId;
-            this.vpconnId = response.vpconnId;
+        private Builder(AttachVbrToVpconnRequest request) {
+            super(request);
+            this.dryRun = request.dryRun;
+            this.regionId = request.regionId;
+            this.token = request.token;
+            this.vbrId = request.vbrId;
+            this.vpconnId = request.vpconnId;
         } 
 
         /**

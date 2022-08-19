@@ -194,20 +194,20 @@ public class UpdateIpsecServerRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateIpsecServerRequest response) {
-            super(response);
-            this.clientIpPool = response.clientIpPool;
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.effectImmediately = response.effectImmediately;
-            this.ikeConfig = response.ikeConfig;
-            this.ipsecConfig = response.ipsecConfig;
-            this.ipsecServerId = response.ipsecServerId;
-            this.ipsecServerName = response.ipsecServerName;
-            this.localSubnet = response.localSubnet;
-            this.psk = response.psk;
-            this.pskEnabled = response.pskEnabled;
-            this.regionId = response.regionId;
+        private Builder(UpdateIpsecServerRequest request) {
+            super(request);
+            this.clientIpPool = request.clientIpPool;
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.effectImmediately = request.effectImmediately;
+            this.ikeConfig = request.ikeConfig;
+            this.ipsecConfig = request.ipsecConfig;
+            this.ipsecServerId = request.ipsecServerId;
+            this.ipsecServerName = request.ipsecServerName;
+            this.localSubnet = request.localSubnet;
+            this.psk = request.psk;
+            this.pskEnabled = request.pskEnabled;
+            this.regionId = request.regionId;
         } 
 
         /**

@@ -181,19 +181,19 @@ public class ModifyNatIpCidrAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyNatIpCidrAttributeRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.natGatewayId = response.natGatewayId;
-            this.natIpCidr = response.natIpCidr;
-            this.natIpCidrDescription = response.natIpCidrDescription;
-            this.natIpCidrName = response.natIpCidrName;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyNatIpCidrAttributeRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.natGatewayId = request.natGatewayId;
+            this.natIpCidr = request.natIpCidr;
+            this.natIpCidrDescription = request.natIpCidrDescription;
+            this.natIpCidrName = request.natIpCidrName;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

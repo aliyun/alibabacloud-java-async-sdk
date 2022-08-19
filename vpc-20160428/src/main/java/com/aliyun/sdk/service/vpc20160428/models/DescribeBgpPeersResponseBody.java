@@ -132,6 +132,9 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
     } 
 
     public static class BgpPeer extends TeaModel {
+        @NameInMap("AdvertisedRouteCount")
+        private Integer advertisedRouteCount;
+
         @NameInMap("AuthKey")
         private String authKey;
 
@@ -153,6 +156,9 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
         @NameInMap("EnableBfd")
         private Boolean enableBfd;
 
+        @NameInMap("GmtModified")
+        private String gmtModified;
+
         @NameInMap("Hold")
         private String hold;
 
@@ -160,7 +166,7 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
         private String ipVersion;
 
         @NameInMap("IsFake")
-        private String isFake;
+        private Boolean isFake;
 
         @NameInMap("Keepalive")
         private String keepalive;
@@ -177,6 +183,9 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
         @NameInMap("PeerIpAddress")
         private String peerIpAddress;
 
+        @NameInMap("ReceivedRouteCount")
+        private Integer receivedRouteCount;
+
         @NameInMap("RegionId")
         private String regionId;
 
@@ -190,6 +199,7 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
         private String status;
 
         private BgpPeer(Builder builder) {
+            this.advertisedRouteCount = builder.advertisedRouteCount;
             this.authKey = builder.authKey;
             this.bfdMultiHop = builder.bfdMultiHop;
             this.bgpGroupId = builder.bgpGroupId;
@@ -197,6 +207,7 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
             this.bgpStatus = builder.bgpStatus;
             this.description = builder.description;
             this.enableBfd = builder.enableBfd;
+            this.gmtModified = builder.gmtModified;
             this.hold = builder.hold;
             this.ipVersion = builder.ipVersion;
             this.isFake = builder.isFake;
@@ -205,6 +216,7 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
             this.name = builder.name;
             this.peerAsn = builder.peerAsn;
             this.peerIpAddress = builder.peerIpAddress;
+            this.receivedRouteCount = builder.receivedRouteCount;
             this.regionId = builder.regionId;
             this.routeLimit = builder.routeLimit;
             this.routerId = builder.routerId;
@@ -217,6 +229,13 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
 
         public static BgpPeer create() {
             return builder().build();
+        }
+
+        /**
+         * @return advertisedRouteCount
+         */
+        public Integer getAdvertisedRouteCount() {
+            return this.advertisedRouteCount;
         }
 
         /**
@@ -269,6 +288,13 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
         }
 
         /**
+         * @return gmtModified
+         */
+        public String getGmtModified() {
+            return this.gmtModified;
+        }
+
+        /**
          * @return hold
          */
         public String getHold() {
@@ -285,7 +311,7 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
         /**
          * @return isFake
          */
-        public String getIsFake() {
+        public Boolean getIsFake() {
             return this.isFake;
         }
 
@@ -325,6 +351,13 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
         }
 
         /**
+         * @return receivedRouteCount
+         */
+        public Integer getReceivedRouteCount() {
+            return this.receivedRouteCount;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
@@ -353,6 +386,7 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer advertisedRouteCount; 
             private String authKey; 
             private Integer bfdMultiHop; 
             private String bgpGroupId; 
@@ -360,18 +394,28 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
             private String bgpStatus; 
             private String description; 
             private Boolean enableBfd; 
+            private String gmtModified; 
             private String hold; 
             private String ipVersion; 
-            private String isFake; 
+            private Boolean isFake; 
             private String keepalive; 
             private String localAsn; 
             private String name; 
             private String peerAsn; 
             private String peerIpAddress; 
+            private Integer receivedRouteCount; 
             private String regionId; 
             private String routeLimit; 
             private String routerId; 
             private String status; 
+
+            /**
+             * AdvertisedRouteCount.
+             */
+            public Builder advertisedRouteCount(Integer advertisedRouteCount) {
+                this.advertisedRouteCount = advertisedRouteCount;
+                return this;
+            }
 
             /**
              * AuthKey.
@@ -430,6 +474,14 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
             }
 
             /**
+             * GmtModified.
+             */
+            public Builder gmtModified(String gmtModified) {
+                this.gmtModified = gmtModified;
+                return this;
+            }
+
+            /**
              * Hold.
              */
             public Builder hold(String hold) {
@@ -448,7 +500,7 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
             /**
              * IsFake.
              */
-            public Builder isFake(String isFake) {
+            public Builder isFake(Boolean isFake) {
                 this.isFake = isFake;
                 return this;
             }
@@ -490,6 +542,14 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
              */
             public Builder peerIpAddress(String peerIpAddress) {
                 this.peerIpAddress = peerIpAddress;
+                return this;
+            }
+
+            /**
+             * ReceivedRouteCount.
+             */
+            public Builder receivedRouteCount(Integer receivedRouteCount) {
+                this.receivedRouteCount = receivedRouteCount;
                 return this;
             }
 

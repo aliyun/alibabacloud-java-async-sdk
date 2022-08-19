@@ -156,17 +156,17 @@ public class AssociateGlobalAccelerationInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(AssociateGlobalAccelerationInstanceRequest response) {
-            super(response);
-            this.backendServerId = response.backendServerId;
-            this.backendServerRegionId = response.backendServerRegionId;
-            this.backendServerType = response.backendServerType;
-            this.globalAccelerationInstanceId = response.globalAccelerationInstanceId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(AssociateGlobalAccelerationInstanceRequest request) {
+            super(request);
+            this.backendServerId = request.backendServerId;
+            this.backendServerRegionId = request.backendServerRegionId;
+            this.backendServerType = request.backendServerType;
+            this.globalAccelerationInstanceId = request.globalAccelerationInstanceId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

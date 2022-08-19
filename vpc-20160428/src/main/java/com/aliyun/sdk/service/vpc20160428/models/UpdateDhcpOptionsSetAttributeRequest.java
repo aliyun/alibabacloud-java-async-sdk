@@ -46,6 +46,14 @@ public class UpdateDhcpOptionsSetAttributeRequest extends Request {
     private Boolean dryRun;
 
     @Query
+    @NameInMap("Ipv6LeaseTime")
+    private String ipv6LeaseTime;
+
+    @Query
+    @NameInMap("LeaseTime")
+    private String leaseTime;
+
+    @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -80,6 +88,8 @@ public class UpdateDhcpOptionsSetAttributeRequest extends Request {
         this.domainName = builder.domainName;
         this.domainNameServers = builder.domainNameServers;
         this.dryRun = builder.dryRun;
+        this.ipv6LeaseTime = builder.ipv6LeaseTime;
+        this.leaseTime = builder.leaseTime;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
@@ -158,6 +168,20 @@ public class UpdateDhcpOptionsSetAttributeRequest extends Request {
     }
 
     /**
+     * @return ipv6LeaseTime
+     */
+    public String getIpv6LeaseTime() {
+        return this.ipv6LeaseTime;
+    }
+
+    /**
+     * @return leaseTime
+     */
+    public String getLeaseTime() {
+        return this.leaseTime;
+    }
+
+    /**
      * @return ownerAccount
      */
     public String getOwnerAccount() {
@@ -208,6 +232,8 @@ public class UpdateDhcpOptionsSetAttributeRequest extends Request {
         private String domainName; 
         private String domainNameServers; 
         private Boolean dryRun; 
+        private String ipv6LeaseTime; 
+        private String leaseTime; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
@@ -219,22 +245,24 @@ public class UpdateDhcpOptionsSetAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateDhcpOptionsSetAttributeRequest response) {
-            super(response);
-            this.bootFileName = response.bootFileName;
-            this.clientToken = response.clientToken;
-            this.dhcpOptionsSetDescription = response.dhcpOptionsSetDescription;
-            this.dhcpOptionsSetId = response.dhcpOptionsSetId;
-            this.dhcpOptionsSetName = response.dhcpOptionsSetName;
-            this.domainName = response.domainName;
-            this.domainNameServers = response.domainNameServers;
-            this.dryRun = response.dryRun;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.TFTPServerName = response.TFTPServerName;
+        private Builder(UpdateDhcpOptionsSetAttributeRequest request) {
+            super(request);
+            this.bootFileName = request.bootFileName;
+            this.clientToken = request.clientToken;
+            this.dhcpOptionsSetDescription = request.dhcpOptionsSetDescription;
+            this.dhcpOptionsSetId = request.dhcpOptionsSetId;
+            this.dhcpOptionsSetName = request.dhcpOptionsSetName;
+            this.domainName = request.domainName;
+            this.domainNameServers = request.domainNameServers;
+            this.dryRun = request.dryRun;
+            this.ipv6LeaseTime = request.ipv6LeaseTime;
+            this.leaseTime = request.leaseTime;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.TFTPServerName = request.TFTPServerName;
         } 
 
         /**
@@ -306,6 +334,24 @@ public class UpdateDhcpOptionsSetAttributeRequest extends Request {
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
             this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * Ipv6LeaseTime.
+         */
+        public Builder ipv6LeaseTime(String ipv6LeaseTime) {
+            this.putQueryParameter("Ipv6LeaseTime", ipv6LeaseTime);
+            this.ipv6LeaseTime = ipv6LeaseTime;
+            return this;
+        }
+
+        /**
+         * LeaseTime.
+         */
+        public Builder leaseTime(String leaseTime) {
+            this.putQueryParameter("LeaseTime", leaseTime);
+            this.leaseTime = leaseTime;
             return this;
         }
 

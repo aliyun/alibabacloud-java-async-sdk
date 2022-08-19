@@ -129,15 +129,15 @@ public class CancelCommonBandwidthPackageIpBandwidthRequest extends Request {
             super();
         } 
 
-        private Builder(CancelCommonBandwidthPackageIpBandwidthRequest response) {
-            super(response);
-            this.bandwidthPackageId = response.bandwidthPackageId;
-            this.eipId = response.eipId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(CancelCommonBandwidthPackageIpBandwidthRequest request) {
+            super(request);
+            this.bandwidthPackageId = request.bandwidthPackageId;
+            this.eipId = request.eipId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

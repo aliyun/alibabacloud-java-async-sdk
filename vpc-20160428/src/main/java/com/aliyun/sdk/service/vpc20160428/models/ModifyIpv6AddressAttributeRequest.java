@@ -141,16 +141,16 @@ public class ModifyIpv6AddressAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyIpv6AddressAttributeRequest response) {
-            super(response);
-            this.description = response.description;
-            this.ipv6AddressId = response.ipv6AddressId;
-            this.name = response.name;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyIpv6AddressAttributeRequest request) {
+            super(request);
+            this.description = request.description;
+            this.ipv6AddressId = request.ipv6AddressId;
+            this.name = request.name;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

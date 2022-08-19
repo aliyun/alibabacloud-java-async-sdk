@@ -141,16 +141,16 @@ public class DescribeVpcAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeVpcAttributeRequest response) {
-            super(response);
-            this.dryRun = response.dryRun;
-            this.isDefault = response.isDefault;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.vpcId = response.vpcId;
+        private Builder(DescribeVpcAttributeRequest request) {
+            super(request);
+            this.dryRun = request.dryRun;
+            this.isDefault = request.isDefault;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.vpcId = request.vpcId;
         } 
 
         /**

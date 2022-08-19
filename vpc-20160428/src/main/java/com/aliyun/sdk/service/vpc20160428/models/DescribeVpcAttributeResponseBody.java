@@ -73,7 +73,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
     private UserCidrs userCidrs;
 
     @NameInMap("VRouterId")
-    private String VRouterId;
+    private String vRouterId;
 
     @NameInMap("VSwitchIds")
     private VSwitchIds vSwitchIds;
@@ -105,7 +105,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         this.status = builder.status;
         this.supportIpv4Gateway = builder.supportIpv4Gateway;
         this.userCidrs = builder.userCidrs;
-        this.VRouterId = builder.VRouterId;
+        this.vRouterId = builder.vRouterId;
         this.vSwitchIds = builder.vSwitchIds;
         this.vpcId = builder.vpcId;
         this.vpcName = builder.vpcName;
@@ -260,10 +260,10 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
     }
 
     /**
-     * @return VRouterId
+     * @return vRouterId
      */
     public String getVRouterId() {
-        return this.VRouterId;
+        return this.vRouterId;
     }
 
     /**
@@ -308,7 +308,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         private String status; 
         private Boolean supportIpv4Gateway; 
         private UserCidrs userCidrs; 
-        private String VRouterId; 
+        private String vRouterId; 
         private VSwitchIds vSwitchIds; 
         private String vpcId; 
         private String vpcName; 
@@ -476,8 +476,8 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         /**
          * VRouterId.
          */
-        public Builder VRouterId(String VRouterId) {
-            this.VRouterId = VRouterId;
+        public Builder vRouterId(String vRouterId) {
+            this.vRouterId = vRouterId;
             return this;
         }
 

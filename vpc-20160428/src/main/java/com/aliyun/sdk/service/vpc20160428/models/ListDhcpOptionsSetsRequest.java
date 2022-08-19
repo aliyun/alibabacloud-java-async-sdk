@@ -167,18 +167,18 @@ public class ListDhcpOptionsSetsRequest extends Request {
             super();
         } 
 
-        private Builder(ListDhcpOptionsSetsRequest response) {
-            super(response);
-            this.dhcpOptionsSetId = response.dhcpOptionsSetId;
-            this.dhcpOptionsSetName = response.dhcpOptionsSetName;
-            this.domainName = response.domainName;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ListDhcpOptionsSetsRequest request) {
+            super(request);
+            this.dhcpOptionsSetId = request.dhcpOptionsSetId;
+            this.dhcpOptionsSetName = request.dhcpOptionsSetName;
+            this.domainName = request.domainName;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
