@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eiam.dev.models.*;
 
 /**
- * {@link GetUserPasswordPolicyResponse} extends {@link TeaModel}
+ * {@link GetUserIdByPhoneNumberResponse} extends {@link TeaModel}
  *
- * <p>GetUserPasswordPolicyResponse</p>
+ * <p>GetUserIdByPhoneNumberResponse</p>
  */
-public class GetUserPasswordPolicyResponse extends Response {
+public class GetUserIdByPhoneNumberResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private GetUserPasswordPolicyResponseBody body;
+    private GetUserIdByPhoneNumberResponseBody body;
 
-    private GetUserPasswordPolicyResponse(BuilderImpl builder) {
+    private GetUserIdByPhoneNumberResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static GetUserPasswordPolicyResponse create() {
+    public static GetUserIdByPhoneNumberResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class GetUserPasswordPolicyResponse extends Response {
     /**
      * @return body
      */
-    public GetUserPasswordPolicyResponseBody getBody() {
+    public GetUserIdByPhoneNumberResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetUserPasswordPolicyResponse, Builder> {
+    public interface Builder extends Response.Builder<GetUserIdByPhoneNumberResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(GetUserPasswordPolicyResponseBody body);
+        Builder body(GetUserIdByPhoneNumberResponseBody body);
 
         @Override
-        GetUserPasswordPolicyResponse build();
+        GetUserIdByPhoneNumberResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetUserPasswordPolicyResponse, Builder>
+            extends Response.BuilderImpl<GetUserIdByPhoneNumberResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private GetUserPasswordPolicyResponseBody body; 
+        private GetUserIdByPhoneNumberResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetUserPasswordPolicyResponse response) {
+        private BuilderImpl(GetUserIdByPhoneNumberResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class GetUserPasswordPolicyResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetUserPasswordPolicyResponseBody body) {
+        public Builder body(GetUserIdByPhoneNumberResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetUserPasswordPolicyResponse build() {
-            return new GetUserPasswordPolicyResponse(this);
+        public GetUserIdByPhoneNumberResponse build() {
+            return new GetUserIdByPhoneNumberResponse(this);
         } 
 
     } 

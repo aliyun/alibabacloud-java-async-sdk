@@ -39,9 +39,6 @@ public class GetUserResponseBody extends TeaModel {
     @NameInMap("organizationalUnits")
     private java.util.List < OrganizationalUnits> organizationalUnits;
 
-    @NameInMap("passwordSet")
-    private Boolean passwordSet;
-
     @NameInMap("phoneNumber")
     private String phoneNumber;
 
@@ -88,7 +85,6 @@ public class GetUserResponseBody extends TeaModel {
         this.instanceId = builder.instanceId;
         this.lockExpireTime = builder.lockExpireTime;
         this.organizationalUnits = builder.organizationalUnits;
-        this.passwordSet = builder.passwordSet;
         this.phoneNumber = builder.phoneNumber;
         this.phoneNumberVerified = builder.phoneNumberVerified;
         this.phoneRegion = builder.phoneRegion;
@@ -172,13 +168,6 @@ public class GetUserResponseBody extends TeaModel {
      */
     public java.util.List < OrganizationalUnits> getOrganizationalUnits() {
         return this.organizationalUnits;
-    }
-
-    /**
-     * @return passwordSet
-     */
-    public Boolean getPasswordSet() {
-        return this.passwordSet;
     }
 
     /**
@@ -275,7 +264,6 @@ public class GetUserResponseBody extends TeaModel {
         private String instanceId; 
         private Long lockExpireTime; 
         private java.util.List < OrganizationalUnits> organizationalUnits; 
-        private Boolean passwordSet; 
         private String phoneNumber; 
         private Boolean phoneNumberVerified; 
         private String phoneRegion; 
@@ -358,14 +346,6 @@ public class GetUserResponseBody extends TeaModel {
          */
         public Builder organizationalUnits(java.util.List < OrganizationalUnits> organizationalUnits) {
             this.organizationalUnits = organizationalUnits;
-            return this;
-        }
-
-        /**
-         * 密码是否已设置
-         */
-        public Builder passwordSet(Boolean passwordSet) {
-            this.passwordSet = passwordSet;
             return this;
         }
 

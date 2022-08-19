@@ -66,6 +66,7 @@ public class CreateUserRequest extends Request {
 
     @Body
     @NameInMap("userExternalId")
+    @Validation(maxLength = 64)
     private String userExternalId;
 
     @Body

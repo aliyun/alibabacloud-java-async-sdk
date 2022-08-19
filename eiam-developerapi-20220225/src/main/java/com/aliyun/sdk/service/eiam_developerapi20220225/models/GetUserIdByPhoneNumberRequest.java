@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eiam.dev.models.*;
 
 /**
- * {@link GetUserPasswordPolicyRequest} extends {@link RequestModel}
+ * {@link GetUserIdByPhoneNumberRequest} extends {@link RequestModel}
  *
- * <p>GetUserPasswordPolicyRequest</p>
+ * <p>GetUserIdByPhoneNumberRequest</p>
  */
-public class GetUserPasswordPolicyRequest extends Request {
+public class GetUserIdByPhoneNumberRequest extends Request {
     @Path
     @NameInMap("instanceId")
     @Validation(required = true)
@@ -27,15 +27,21 @@ public class GetUserPasswordPolicyRequest extends Request {
     @Validation(required = true)
     private String authorization;
 
+    @Body
+    @NameInMap("phoneNumber")
+    @Validation(required = true)
+    private String phoneNumber;
+
     @Host
     @NameInMap("regionId")
     private String regionId;
 
-    private GetUserPasswordPolicyRequest(Builder builder) {
+    private GetUserIdByPhoneNumberRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
         this.applicationId = builder.applicationId;
         this.authorization = builder.authorization;
+        this.phoneNumber = builder.phoneNumber;
         this.regionId = builder.regionId;
     }
 
@@ -43,7 +49,7 @@ public class GetUserPasswordPolicyRequest extends Request {
         return new Builder();
     }
 
-    public static GetUserPasswordPolicyRequest create() {
+    public static GetUserIdByPhoneNumberRequest create() {
         return builder().build();
     }
 
@@ -74,27 +80,36 @@ public class GetUserPasswordPolicyRequest extends Request {
     }
 
     /**
+     * @return phoneNumber
+     */
+    public String getPhoneNumber() {
+        return this.phoneNumber;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder<GetUserPasswordPolicyRequest, Builder> {
+    public static final class Builder extends Request.Builder<GetUserIdByPhoneNumberRequest, Builder> {
         private String instanceId; 
         private String applicationId; 
         private String authorization; 
+        private String phoneNumber; 
         private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetUserPasswordPolicyRequest request) {
+        private Builder(GetUserIdByPhoneNumberRequest request) {
             super(request);
             this.instanceId = request.instanceId;
             this.applicationId = request.applicationId;
             this.authorization = request.authorization;
+            this.phoneNumber = request.phoneNumber;
             this.regionId = request.regionId;
         } 
 
@@ -126,6 +141,15 @@ public class GetUserPasswordPolicyRequest extends Request {
         }
 
         /**
+         * 手机号
+         */
+        public Builder phoneNumber(String phoneNumber) {
+            this.putBodyParameter("phoneNumber", phoneNumber);
+            this.phoneNumber = phoneNumber;
+            return this;
+        }
+
+        /**
          * regionId.
          */
         public Builder regionId(String regionId) {
@@ -135,8 +159,8 @@ public class GetUserPasswordPolicyRequest extends Request {
         }
 
         @Override
-        public GetUserPasswordPolicyRequest build() {
-            return new GetUserPasswordPolicyRequest(this);
+        public GetUserIdByPhoneNumberRequest build() {
+            return new GetUserIdByPhoneNumberRequest(this);
         } 
 
     } 
