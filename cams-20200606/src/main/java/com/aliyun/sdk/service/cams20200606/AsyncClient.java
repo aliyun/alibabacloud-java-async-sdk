@@ -28,6 +28,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListChatappTemplateResponse> listChatappTemplate(ListChatappTemplateRequest request);
 
+    CompletableFuture<SendChatappMassMessageResponse> sendChatappMassMessage(SendChatappMassMessageRequest request);
+
     CompletableFuture<SendChatappMessageResponse> sendChatappMessage(SendChatappMessageRequest request);
 
 }

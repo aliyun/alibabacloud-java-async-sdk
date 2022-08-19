@@ -7,19 +7,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link SendChatappMessageRequest} extends {@link RequestModel}
+ * {@link SendChatappMassMessageRequest} extends {@link RequestModel}
  *
- * <p>SendChatappMessageRequest</p>
+ * <p>SendChatappMassMessageRequest</p>
  */
-public class SendChatappMessageRequest extends Request {
+public class SendChatappMassMessageRequest extends Request {
     @Body
     @NameInMap("ChannelType")
     @Validation(required = true)
     private String channelType;
-
-    @Query
-    @NameInMap("Content")
-    private String content;
 
     @Body
     @NameInMap("CustWabaId")
@@ -43,53 +39,36 @@ public class SendChatappMessageRequest extends Request {
     private String language;
 
     @Body
-    @NameInMap("MessageType")
-    private String messageType;
+    @NameInMap("SenderList")
+    @Validation(required = true)
+    private java.util.List < SenderList> senderList;
 
-    @Query
-    @NameInMap("Payload")
-    private java.util.List < String > payload;
+    @Body
+    @NameInMap("TaskId")
+    private String taskId;
 
     @Body
     @NameInMap("TemplateCode")
     private String templateCode;
 
-    @Body
-    @NameInMap("TemplateParams")
-    private java.util.Map < String, String > templateParams;
-
-    @Body
-    @NameInMap("To")
-    @Validation(required = true)
-    private String to;
-
-    @Body
-    @NameInMap("Type")
-    @Validation(required = true)
-    private String type;
-
-    private SendChatappMessageRequest(Builder builder) {
+    private SendChatappMassMessageRequest(Builder builder) {
         super(builder);
         this.channelType = builder.channelType;
-        this.content = builder.content;
         this.custWabaId = builder.custWabaId;
         this.fallBackContent = builder.fallBackContent;
         this.fallBackId = builder.fallBackId;
         this.from = builder.from;
         this.language = builder.language;
-        this.messageType = builder.messageType;
-        this.payload = builder.payload;
+        this.senderList = builder.senderList;
+        this.taskId = builder.taskId;
         this.templateCode = builder.templateCode;
-        this.templateParams = builder.templateParams;
-        this.to = builder.to;
-        this.type = builder.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static SendChatappMessageRequest create() {
+    public static SendChatappMassMessageRequest create() {
         return builder().build();
     }
 
@@ -103,13 +82,6 @@ public class SendChatappMessageRequest extends Request {
      */
     public String getChannelType() {
         return this.channelType;
-    }
-
-    /**
-     * @return content
-     */
-    public String getContent() {
-        return this.content;
     }
 
     /**
@@ -148,17 +120,17 @@ public class SendChatappMessageRequest extends Request {
     }
 
     /**
-     * @return messageType
+     * @return senderList
      */
-    public String getMessageType() {
-        return this.messageType;
+    public java.util.List < SenderList> getSenderList() {
+        return this.senderList;
     }
 
     /**
-     * @return payload
+     * @return taskId
      */
-    public java.util.List < String > getPayload() {
-        return this.payload;
+    public String getTaskId() {
+        return this.taskId;
     }
 
     /**
@@ -168,61 +140,32 @@ public class SendChatappMessageRequest extends Request {
         return this.templateCode;
     }
 
-    /**
-     * @return templateParams
-     */
-    public java.util.Map < String, String > getTemplateParams() {
-        return this.templateParams;
-    }
-
-    /**
-     * @return to
-     */
-    public String getTo() {
-        return this.to;
-    }
-
-    /**
-     * @return type
-     */
-    public String getType() {
-        return this.type;
-    }
-
-    public static final class Builder extends Request.Builder<SendChatappMessageRequest, Builder> {
+    public static final class Builder extends Request.Builder<SendChatappMassMessageRequest, Builder> {
         private String channelType; 
-        private String content; 
         private String custWabaId; 
         private String fallBackContent; 
         private String fallBackId; 
         private String from; 
         private String language; 
-        private String messageType; 
-        private java.util.List < String > payload; 
+        private java.util.List < SenderList> senderList; 
+        private String taskId; 
         private String templateCode; 
-        private java.util.Map < String, String > templateParams; 
-        private String to; 
-        private String type; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(SendChatappMessageRequest request) {
+        private Builder(SendChatappMassMessageRequest request) {
             super(request);
             this.channelType = request.channelType;
-            this.content = request.content;
             this.custWabaId = request.custWabaId;
             this.fallBackContent = request.fallBackContent;
             this.fallBackId = request.fallBackId;
             this.from = request.from;
             this.language = request.language;
-            this.messageType = request.messageType;
-            this.payload = request.payload;
+            this.senderList = request.senderList;
+            this.taskId = request.taskId;
             this.templateCode = request.templateCode;
-            this.templateParams = request.templateParams;
-            this.to = request.to;
-            this.type = request.type;
         } 
 
         /**
@@ -231,15 +174,6 @@ public class SendChatappMessageRequest extends Request {
         public Builder channelType(String channelType) {
             this.putBodyParameter("ChannelType", channelType);
             this.channelType = channelType;
-            return this;
-        }
-
-        /**
-         * 消息内容
-         */
-        public Builder content(String content) {
-            this.putQueryParameter("Content", content);
-            this.content = content;
             return this;
         }
 
@@ -289,21 +223,21 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * 消息类型
+         * SenderList.
          */
-        public Builder messageType(String messageType) {
-            this.putBodyParameter("MessageType", messageType);
-            this.messageType = messageType;
+        public Builder senderList(java.util.List < SenderList> senderList) {
+            String senderListShrink = shrink(senderList, "SenderList", "json");
+            this.putBodyParameter("SenderList", senderListShrink);
+            this.senderList = senderList;
             return this;
         }
 
         /**
-         * Payload.
+         * 任务ID
          */
-        public Builder payload(java.util.List < String > payload) {
-            String payloadShrink = shrink(payload, "Payload", "json");
-            this.putQueryParameter("Payload", payloadShrink);
-            this.payload = payload;
+        public Builder taskId(String taskId) {
+            this.putBodyParameter("TaskId", taskId);
+            this.taskId = taskId;
             return this;
         }
 
@@ -316,42 +250,93 @@ public class SendChatappMessageRequest extends Request {
             return this;
         }
 
-        /**
-         * TemplateParams.
-         */
-        public Builder templateParams(java.util.Map < String, String > templateParams) {
-            String templateParamsShrink = shrink(templateParams, "TemplateParams", "json");
-            this.putBodyParameter("TemplateParams", templateParamsShrink);
-            this.templateParams = templateParams;
-            return this;
-        }
-
-        /**
-         * 接收号码
-         */
-        public Builder to(String to) {
-            this.putBodyParameter("To", to);
-            this.to = to;
-            return this;
-        }
-
-        /**
-         * 消息大类
-         * <p>
-         * template--模板
-         * message--非模板
-         */
-        public Builder type(String type) {
-            this.putBodyParameter("Type", type);
-            this.type = type;
-            return this;
-        }
-
         @Override
-        public SendChatappMessageRequest build() {
-            return new SendChatappMessageRequest(this);
+        public SendChatappMassMessageRequest build() {
+            return new SendChatappMassMessageRequest(this);
         } 
 
     } 
 
+    public static class SenderList extends TeaModel {
+        @NameInMap("Payload")
+        private java.util.List < String > payload;
+
+        @NameInMap("TemplateParams")
+        private java.util.Map < String, String > templateParams;
+
+        @NameInMap("To")
+        @Validation(required = true)
+        private String to;
+
+        private SenderList(Builder builder) {
+            this.payload = builder.payload;
+            this.templateParams = builder.templateParams;
+            this.to = builder.to;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SenderList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return payload
+         */
+        public java.util.List < String > getPayload() {
+            return this.payload;
+        }
+
+        /**
+         * @return templateParams
+         */
+        public java.util.Map < String, String > getTemplateParams() {
+            return this.templateParams;
+        }
+
+        /**
+         * @return to
+         */
+        public String getTo() {
+            return this.to;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > payload; 
+            private java.util.Map < String, String > templateParams; 
+            private String to; 
+
+            /**
+             * payload
+             */
+            public Builder payload(java.util.List < String > payload) {
+                this.payload = payload;
+                return this;
+            }
+
+            /**
+             * 变量参数
+             */
+            public Builder templateParams(java.util.Map < String, String > templateParams) {
+                this.templateParams = templateParams;
+                return this;
+            }
+
+            /**
+             * 号码
+             */
+            public Builder to(String to) {
+                this.to = to;
+                return this;
+            }
+
+            public SenderList build() {
+                return new SenderList(this);
+            } 
+
+        } 
+
+    }
 }
