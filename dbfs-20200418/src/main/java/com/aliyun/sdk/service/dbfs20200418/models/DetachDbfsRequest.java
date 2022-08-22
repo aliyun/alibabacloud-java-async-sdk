@@ -77,11 +77,11 @@ public class DetachDbfsRequest extends Request {
             super();
         } 
 
-        private Builder(DetachDbfsRequest response) {
-            super(response);
-            this.ECSInstanceId = response.ECSInstanceId;
-            this.fsId = response.fsId;
-            this.regionId = response.regionId;
+        private Builder(DetachDbfsRequest request) {
+            super(request);
+            this.ECSInstanceId = request.ECSInstanceId;
+            this.fsId = request.fsId;
+            this.regionId = request.regionId;
         } 
 
         /**

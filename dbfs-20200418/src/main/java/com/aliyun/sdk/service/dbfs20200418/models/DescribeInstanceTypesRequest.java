@@ -49,9 +49,9 @@ public class DescribeInstanceTypesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeInstanceTypesRequest response) {
-            super(response);
-            this.regionId = response.regionId;
+        private Builder(DescribeInstanceTypesRequest request) {
+            super(request);
+            this.regionId = request.regionId;
         } 
 
         /**

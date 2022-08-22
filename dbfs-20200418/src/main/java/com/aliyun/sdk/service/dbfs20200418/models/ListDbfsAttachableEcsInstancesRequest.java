@@ -13,12 +13,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListDbfsAttachableEcsInstancesRequest extends Request {
     @Query
+    @NameInMap("PageNumber")
+    private Integer pageNumber;
+
+    @Query
+    @NameInMap("PageSize")
+    private Integer pageSize;
+
+    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
 
     private ListDbfsAttachableEcsInstancesRequest(Builder builder) {
         super(builder);
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
     }
 
@@ -36,6 +46,20 @@ public class ListDbfsAttachableEcsInstancesRequest extends Request {
     }
 
     /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -43,16 +67,38 @@ public class ListDbfsAttachableEcsInstancesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListDbfsAttachableEcsInstancesRequest, Builder> {
+        private Integer pageNumber; 
+        private Integer pageSize; 
         private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListDbfsAttachableEcsInstancesRequest response) {
-            super(response);
-            this.regionId = response.regionId;
+        private Builder(ListDbfsAttachableEcsInstancesRequest request) {
+            super(request);
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
         } 
+
+        /**
+         * PageNumber.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
 
         /**
          * RegionId.

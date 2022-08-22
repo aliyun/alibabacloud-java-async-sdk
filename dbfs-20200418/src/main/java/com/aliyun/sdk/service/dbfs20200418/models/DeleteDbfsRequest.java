@@ -63,10 +63,10 @@ public class DeleteDbfsRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteDbfsRequest response) {
-            super(response);
-            this.fsId = response.fsId;
-            this.regionId = response.regionId;
+        private Builder(DeleteDbfsRequest request) {
+            super(request);
+            this.fsId = request.fsId;
+            this.regionId = request.regionId;
         } 
 
         /**

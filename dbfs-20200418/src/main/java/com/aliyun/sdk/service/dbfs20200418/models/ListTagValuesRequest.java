@@ -63,10 +63,10 @@ public class ListTagValuesRequest extends Request {
             super();
         } 
 
-        private Builder(ListTagValuesRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.tagKey = response.tagKey;
+        private Builder(ListTagValuesRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.tagKey = request.tagKey;
         } 
 
         /**

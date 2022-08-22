@@ -19,7 +19,7 @@ public class ResizeDbfsRequest extends Request {
 
     @Query
     @NameInMap("NewSizeG")
-    @Validation(required = true, maximum = 32768, minimum = 20)
+    @Validation(required = true, minimum = 20)
     private Integer newSizeG;
 
     @Query
@@ -77,11 +77,11 @@ public class ResizeDbfsRequest extends Request {
             super();
         } 
 
-        private Builder(ResizeDbfsRequest response) {
-            super(response);
-            this.fsId = response.fsId;
-            this.newSizeG = response.newSizeG;
-            this.regionId = response.regionId;
+        private Builder(ResizeDbfsRequest request) {
+            super(request);
+            this.fsId = request.fsId;
+            this.newSizeG = request.newSizeG;
+            this.regionId = request.regionId;
         } 
 
         /**

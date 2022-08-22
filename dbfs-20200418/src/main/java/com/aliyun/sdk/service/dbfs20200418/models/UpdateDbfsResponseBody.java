@@ -7,15 +7,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link PublishUpgradeTaskResponseBody} extends {@link TeaModel}
+ * {@link UpdateDbfsResponseBody} extends {@link TeaModel}
  *
- * <p>PublishUpgradeTaskResponseBody</p>
+ * <p>UpdateDbfsResponseBody</p>
  */
-public class PublishUpgradeTaskResponseBody extends TeaModel {
+public class UpdateDbfsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private PublishUpgradeTaskResponseBody(Builder builder) {
+    private UpdateDbfsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -23,7 +23,7 @@ public class PublishUpgradeTaskResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static PublishUpgradeTaskResponseBody create() {
+    public static UpdateDbfsResponseBody create() {
         return builder().build();
     }
 
@@ -45,8 +45,8 @@ public class PublishUpgradeTaskResponseBody extends TeaModel {
             return this;
         }
 
-        public PublishUpgradeTaskResponseBody build() {
-            return new PublishUpgradeTaskResponseBody(this);
+        public UpdateDbfsResponseBody build() {
+            return new UpdateDbfsResponseBody(this);
         } 
 
     } 

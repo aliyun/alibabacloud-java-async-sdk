@@ -116,14 +116,14 @@ public class CreateSnapshotRequest extends Request {
             super();
         } 
 
-        private Builder(CreateSnapshotRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.description = response.description;
-            this.fsId = response.fsId;
-            this.regionId = response.regionId;
-            this.retentionDays = response.retentionDays;
-            this.snapshotName = response.snapshotName;
+        private Builder(CreateSnapshotRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.description = request.description;
+            this.fsId = request.fsId;
+            this.regionId = request.regionId;
+            this.retentionDays = request.retentionDays;
+            this.snapshotName = request.snapshotName;
         } 
 
         /**

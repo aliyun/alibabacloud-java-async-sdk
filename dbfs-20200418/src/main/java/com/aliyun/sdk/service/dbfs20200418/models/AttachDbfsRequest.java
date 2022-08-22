@@ -116,14 +116,14 @@ public class AttachDbfsRequest extends Request {
             super();
         } 
 
-        private Builder(AttachDbfsRequest response) {
-            super(response);
-            this.attachMode = response.attachMode;
-            this.attachPoint = response.attachPoint;
-            this.ECSInstanceId = response.ECSInstanceId;
-            this.fsId = response.fsId;
-            this.regionId = response.regionId;
-            this.serverUrl = response.serverUrl;
+        private Builder(AttachDbfsRequest request) {
+            super(request);
+            this.attachMode = request.attachMode;
+            this.attachPoint = request.attachPoint;
+            this.ECSInstanceId = request.ECSInstanceId;
+            this.fsId = request.fsId;
+            this.regionId = request.regionId;
+            this.serverUrl = request.serverUrl;
         } 
 
         /**

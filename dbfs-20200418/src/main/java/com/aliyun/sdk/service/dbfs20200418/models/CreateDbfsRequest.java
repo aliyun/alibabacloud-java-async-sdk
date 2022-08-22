@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateDbfsRequest extends Request {
     @Query
+    @NameInMap("AdvancedFeatures")
+    private String advancedFeatures;
+
+    @Query
     @NameInMap("Category")
     @Validation(required = true)
     private String category;
@@ -62,7 +66,7 @@ public class CreateDbfsRequest extends Request {
 
     @Query
     @NameInMap("SizeG")
-    @Validation(required = true, maximum = 32768, minimum = 20)
+    @Validation(required = true, minimum = 20)
     private Integer sizeG;
 
     @Query
@@ -80,6 +84,7 @@ public class CreateDbfsRequest extends Request {
 
     private CreateDbfsRequest(Builder builder) {
         super(builder);
+        this.advancedFeatures = builder.advancedFeatures;
         this.category = builder.category;
         this.clientToken = builder.clientToken;
         this.deleteSnapshot = builder.deleteSnapshot;
@@ -108,6 +113,13 @@ public class CreateDbfsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return advancedFeatures
+     */
+    public String getAdvancedFeatures() {
+        return this.advancedFeatures;
     }
 
     /**
@@ -216,6 +228,7 @@ public class CreateDbfsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateDbfsRequest, Builder> {
+        private String advancedFeatures; 
         private String category; 
         private String clientToken; 
         private Boolean deleteSnapshot; 
@@ -236,24 +249,34 @@ public class CreateDbfsRequest extends Request {
             super();
         } 
 
-        private Builder(CreateDbfsRequest response) {
-            super(response);
-            this.category = response.category;
-            this.clientToken = response.clientToken;
-            this.deleteSnapshot = response.deleteSnapshot;
-            this.enableRaid = response.enableRaid;
-            this.encryption = response.encryption;
-            this.fsName = response.fsName;
-            this.instanceType = response.instanceType;
-            this.KMSKeyId = response.KMSKeyId;
-            this.performanceLevel = response.performanceLevel;
-            this.raidStripeUnitNumber = response.raidStripeUnitNumber;
-            this.regionId = response.regionId;
-            this.sizeG = response.sizeG;
-            this.snapshotId = response.snapshotId;
-            this.usedScene = response.usedScene;
-            this.zoneId = response.zoneId;
+        private Builder(CreateDbfsRequest request) {
+            super(request);
+            this.advancedFeatures = request.advancedFeatures;
+            this.category = request.category;
+            this.clientToken = request.clientToken;
+            this.deleteSnapshot = request.deleteSnapshot;
+            this.enableRaid = request.enableRaid;
+            this.encryption = request.encryption;
+            this.fsName = request.fsName;
+            this.instanceType = request.instanceType;
+            this.KMSKeyId = request.KMSKeyId;
+            this.performanceLevel = request.performanceLevel;
+            this.raidStripeUnitNumber = request.raidStripeUnitNumber;
+            this.regionId = request.regionId;
+            this.sizeG = request.sizeG;
+            this.snapshotId = request.snapshotId;
+            this.usedScene = request.usedScene;
+            this.zoneId = request.zoneId;
         } 
+
+        /**
+         * AdvancedFeatures.
+         */
+        public Builder advancedFeatures(String advancedFeatures) {
+            this.putQueryParameter("AdvancedFeatures", advancedFeatures);
+            this.advancedFeatures = advancedFeatures;
+            return this;
+        }
 
         /**
          * Category.

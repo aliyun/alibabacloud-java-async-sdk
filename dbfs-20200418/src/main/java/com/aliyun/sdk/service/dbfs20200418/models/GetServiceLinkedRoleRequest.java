@@ -49,9 +49,9 @@ public class GetServiceLinkedRoleRequest extends Request {
             super();
         } 
 
-        private Builder(GetServiceLinkedRoleRequest response) {
-            super(response);
-            this.regionId = response.regionId;
+        private Builder(GetServiceLinkedRoleRequest request) {
+            super(request);
+            this.regionId = request.regionId;
         } 
 
         /**

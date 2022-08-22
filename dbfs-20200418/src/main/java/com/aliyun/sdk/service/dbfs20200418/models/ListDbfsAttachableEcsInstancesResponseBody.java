@@ -18,9 +18,13 @@ public class ListDbfsAttachableEcsInstancesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("TotalCount")
+    private Integer totalCount;
+
     private ListDbfsAttachableEcsInstancesResponseBody(Builder builder) {
         this.ecsLabelInfo = builder.ecsLabelInfo;
         this.requestId = builder.requestId;
+        this.totalCount = builder.totalCount;
     }
 
     public static Builder builder() {
@@ -45,9 +49,17 @@ public class ListDbfsAttachableEcsInstancesResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return totalCount
+     */
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static final class Builder {
         private java.util.List < EcsLabelInfo> ecsLabelInfo; 
         private String requestId; 
+        private Integer totalCount; 
 
         /**
          * EcsLabelInfo.
@@ -62,6 +74,14 @@ public class ListDbfsAttachableEcsInstancesResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 

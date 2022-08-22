@@ -63,10 +63,10 @@ public class ListDbfsAttachedEcsInstancesRequest extends Request {
             super();
         } 
 
-        private Builder(ListDbfsAttachedEcsInstancesRequest response) {
-            super(response);
-            this.fsId = response.fsId;
-            this.regionId = response.regionId;
+        private Builder(ListDbfsAttachedEcsInstancesRequest request) {
+            super(request);
+            this.fsId = request.fsId;
+            this.regionId = request.regionId;
         } 
 
         /**

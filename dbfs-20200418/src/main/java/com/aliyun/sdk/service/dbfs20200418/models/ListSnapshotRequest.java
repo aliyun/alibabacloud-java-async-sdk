@@ -194,20 +194,20 @@ public class ListSnapshotRequest extends Request {
             super();
         } 
 
-        private Builder(ListSnapshotRequest response) {
-            super(response);
-            this.filterKey = response.filterKey;
-            this.filterValue = response.filterValue;
-            this.fsId = response.fsId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.snapshotIds = response.snapshotIds;
-            this.snapshotName = response.snapshotName;
-            this.snapshotType = response.snapshotType;
-            this.sortKey = response.sortKey;
-            this.sortType = response.sortType;
-            this.status = response.status;
+        private Builder(ListSnapshotRequest request) {
+            super(request);
+            this.filterKey = request.filterKey;
+            this.filterValue = request.filterValue;
+            this.fsId = request.fsId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.snapshotIds = request.snapshotIds;
+            this.snapshotName = request.snapshotName;
+            this.snapshotType = request.snapshotType;
+            this.sortKey = request.sortKey;
+            this.sortType = request.sortType;
+            this.status = request.status;
         } 
 
         /**

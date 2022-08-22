@@ -77,11 +77,11 @@ public class RenameDbfsRequest extends Request {
             super();
         } 
 
-        private Builder(RenameDbfsRequest response) {
-            super(response);
-            this.fsId = response.fsId;
-            this.fsName = response.fsName;
-            this.regionId = response.regionId;
+        private Builder(RenameDbfsRequest request) {
+            super(request);
+            this.fsId = request.fsId;
+            this.fsName = request.fsName;
+            this.regionId = request.regionId;
         } 
 
         /**

@@ -77,11 +77,11 @@ public class DescribeDbfsSpecificationsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDbfsSpecificationsRequest response) {
-            super(response);
-            this.category = response.category;
-            this.ecsInstanceType = response.ecsInstanceType;
-            this.regionId = response.regionId;
+        private Builder(DescribeDbfsSpecificationsRequest request) {
+            super(request);
+            this.category = request.category;
+            this.ecsInstanceType = request.ecsInstanceType;
+            this.regionId = request.regionId;
         } 
 
         /**

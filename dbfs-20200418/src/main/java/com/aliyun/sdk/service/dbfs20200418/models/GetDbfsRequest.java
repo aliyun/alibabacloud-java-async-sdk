@@ -63,10 +63,10 @@ public class GetDbfsRequest extends Request {
             super();
         } 
 
-        private Builder(GetDbfsRequest response) {
-            super(response);
-            this.fsId = response.fsId;
-            this.regionId = response.regionId;
+        private Builder(GetDbfsRequest request) {
+            super(request);
+            this.fsId = request.fsId;
+            this.regionId = request.regionId;
         } 
 
         /**

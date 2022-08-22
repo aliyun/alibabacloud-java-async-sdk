@@ -142,16 +142,16 @@ public class ListDbfsRequest extends Request {
             super();
         } 
 
-        private Builder(ListDbfsRequest response) {
-            super(response);
-            this.filterKey = response.filterKey;
-            this.filterValue = response.filterValue;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.sortKey = response.sortKey;
-            this.sortType = response.sortType;
-            this.tags = response.tags;
+        private Builder(ListDbfsRequest request) {
+            super(request);
+            this.filterKey = request.filterKey;
+            this.filterValue = request.filterValue;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.sortKey = request.sortKey;
+            this.sortType = request.sortType;
+            this.tags = request.tags;
         } 
 
         /**

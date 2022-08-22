@@ -77,11 +77,11 @@ public class TagDbfsRequest extends Request {
             super();
         } 
 
-        private Builder(TagDbfsRequest response) {
-            super(response);
-            this.dbfsId = response.dbfsId;
-            this.regionId = response.regionId;
-            this.tags = response.tags;
+        private Builder(TagDbfsRequest request) {
+            super(request);
+            this.dbfsId = request.dbfsId;
+            this.regionId = request.regionId;
+            this.tags = request.tags;
         } 
 
         /**

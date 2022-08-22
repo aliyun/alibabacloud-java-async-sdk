@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DbfsRecordResponse} extends {@link TeaModel}
+ * {@link UpdateDbfsResponse} extends {@link TeaModel}
  *
- * <p>DbfsRecordResponse</p>
+ * <p>UpdateDbfsResponse</p>
  */
-public class DbfsRecordResponse extends Response {
+public class UpdateDbfsResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private DbfsRecordResponseBody body;
+    private UpdateDbfsResponseBody body;
 
-    private DbfsRecordResponse(BuilderImpl builder) {
+    private UpdateDbfsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static DbfsRecordResponse create() {
+    public static UpdateDbfsResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class DbfsRecordResponse extends Response {
     /**
      * @return body
      */
-    public DbfsRecordResponseBody getBody() {
+    public UpdateDbfsResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DbfsRecordResponse, Builder> {
+    public interface Builder extends Response.Builder<UpdateDbfsResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(DbfsRecordResponseBody body);
+        Builder body(UpdateDbfsResponseBody body);
 
         @Override
-        DbfsRecordResponse build();
+        UpdateDbfsResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DbfsRecordResponse, Builder>
+            extends Response.BuilderImpl<UpdateDbfsResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private DbfsRecordResponseBody body; 
+        private UpdateDbfsResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DbfsRecordResponse response) {
+        private BuilderImpl(UpdateDbfsResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class DbfsRecordResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DbfsRecordResponseBody body) {
+        public Builder body(UpdateDbfsResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DbfsRecordResponse build() {
-            return new DbfsRecordResponse(this);
+        public UpdateDbfsResponse build() {
+            return new UpdateDbfsResponse(this);
         } 
 
     } 

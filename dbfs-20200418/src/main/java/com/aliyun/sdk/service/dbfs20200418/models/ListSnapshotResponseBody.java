@@ -168,6 +168,9 @@ public class ListSnapshotResponseBody extends TeaModel {
         @NameInMap("SourceFsSize")
         private Integer sourceFsSize;
 
+        @NameInMap("SourceFsStripeWidth")
+        private Integer sourceFsStripeWidth;
+
         @NameInMap("Status")
         private String status;
 
@@ -184,6 +187,7 @@ public class ListSnapshotResponseBody extends TeaModel {
             this.snapshotType = builder.snapshotType;
             this.sourceFsId = builder.sourceFsId;
             this.sourceFsSize = builder.sourceFsSize;
+            this.sourceFsStripeWidth = builder.sourceFsStripeWidth;
             this.status = builder.status;
         }
 
@@ -280,6 +284,13 @@ public class ListSnapshotResponseBody extends TeaModel {
         }
 
         /**
+         * @return sourceFsStripeWidth
+         */
+        public Integer getSourceFsStripeWidth() {
+            return this.sourceFsStripeWidth;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -299,6 +310,7 @@ public class ListSnapshotResponseBody extends TeaModel {
             private String snapshotType; 
             private String sourceFsId; 
             private Integer sourceFsSize; 
+            private Integer sourceFsStripeWidth; 
             private String status; 
 
             /**
@@ -394,6 +406,14 @@ public class ListSnapshotResponseBody extends TeaModel {
              */
             public Builder sourceFsSize(Integer sourceFsSize) {
                 this.sourceFsSize = sourceFsSize;
+                return this;
+            }
+
+            /**
+             * SourceFsStripeWidth.
+             */
+            public Builder sourceFsStripeWidth(Integer sourceFsStripeWidth) {
+                this.sourceFsStripeWidth = sourceFsStripeWidth;
                 return this;
             }
 

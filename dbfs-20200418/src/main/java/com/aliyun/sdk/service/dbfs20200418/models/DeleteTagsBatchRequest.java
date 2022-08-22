@@ -77,11 +77,11 @@ public class DeleteTagsBatchRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteTagsBatchRequest response) {
-            super(response);
-            this.dbfsList = response.dbfsList;
-            this.regionId = response.regionId;
-            this.tags = response.tags;
+        private Builder(DeleteTagsBatchRequest request) {
+            super(request);
+            this.dbfsList = request.dbfsList;
+            this.regionId = request.regionId;
+            this.tags = request.tags;
         } 
 
         /**

@@ -90,12 +90,12 @@ public class AddTagsBatchRequest extends Request {
             super();
         } 
 
-        private Builder(AddTagsBatchRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.dbfsList = response.dbfsList;
-            this.regionId = response.regionId;
-            this.tags = response.tags;
+        private Builder(AddTagsBatchRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.dbfsList = request.dbfsList;
+            this.regionId = request.regionId;
+            this.tags = request.tags;
         } 
 
         /**

@@ -22,17 +22,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AttachDbfsResponse> attachDbfs(AttachDbfsRequest request);
 
-    CompletableFuture<CreateConstantsResponse> createConstants(CreateConstantsRequest request);
-
     CompletableFuture<CreateDbfsResponse> createDbfs(CreateDbfsRequest request);
 
     CompletableFuture<CreateServiceLinkedRoleResponse> createServiceLinkedRole(CreateServiceLinkedRoleRequest request);
 
     CompletableFuture<CreateSnapshotResponse> createSnapshot(CreateSnapshotRequest request);
-
-    CompletableFuture<DbfsRecordResponse> dbfsRecord(DbfsRecordRequest request);
-
-    CompletableFuture<DeleteConstantsResponse> deleteConstants(DeleteConstantsRequest request);
 
     CompletableFuture<DeleteDbfsResponse> deleteDbfs(DeleteDbfsRequest request);
 
@@ -46,17 +40,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DetachDbfsResponse> detachDbfs(DetachDbfsRequest request);
 
-    CompletableFuture<GenerateUpgradeRecordResponse> generateUpgradeRecord(GenerateUpgradeRecordRequest request);
-
     CompletableFuture<GetDbfsResponse> getDbfs(GetDbfsRequest request);
 
     CompletableFuture<GetServiceLinkedRoleResponse> getServiceLinkedRole(GetServiceLinkedRoleRequest request);
-
-    CompletableFuture<GetSynchronizConstantsResponse> getSynchronizConstants(GetSynchronizConstantsRequest request);
-
-    CompletableFuture<InsertSynchronizConstantsResponse> insertSynchronizConstants(InsertSynchronizConstantsRequest request);
-
-    CompletableFuture<ListConstantsResponse> listConstants(ListConstantsRequest request);
 
     CompletableFuture<ListDbfsResponse> listDbfs(ListDbfsRequest request);
 
@@ -70,22 +56,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListTagValuesResponse> listTagValues(ListTagValuesRequest request);
 
-    CompletableFuture<OpreateConstantsResponse> opreateConstants(OpreateConstantsRequest request);
-
-    CompletableFuture<PublishUpgradeTaskResponse> publishUpgradeTask(PublishUpgradeTaskRequest request);
-
     CompletableFuture<RenameDbfsResponse> renameDbfs(RenameDbfsRequest request);
-
-    CompletableFuture<ResetDbfsResponse> resetDbfs(ResetDbfsRequest request);
 
     CompletableFuture<ResizeDbfsResponse> resizeDbfs(ResizeDbfsRequest request);
 
-    CompletableFuture<StopUpgradeTaskResponse> stopUpgradeTask(StopUpgradeTaskRequest request);
-
-    CompletableFuture<SychDbfsRecordResponse> sychDbfsRecord(SychDbfsRecordRequest request);
-
     CompletableFuture<TagDbfsResponse> tagDbfs(TagDbfsRequest request);
 
-    CompletableFuture<UpdateConstantsResponse> updateConstants(UpdateConstantsRequest request);
+    CompletableFuture<UpdateDbfsResponse> updateDbfs(UpdateDbfsRequest request);
 
 }

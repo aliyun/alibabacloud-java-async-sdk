@@ -62,10 +62,10 @@ public class CreateServiceLinkedRoleRequest extends Request {
             super();
         } 
 
-        private Builder(CreateServiceLinkedRoleRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.regionId = response.regionId;
+        private Builder(CreateServiceLinkedRoleRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.regionId = request.regionId;
         } 
 
         /**
