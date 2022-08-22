@@ -100,6 +100,7 @@ public class ApplyAddRequest extends Request {
 
     @Body
     @NameInMap("trip_day")
+    @Validation(required = true)
     private Integer tripDay;
 
     @Body
