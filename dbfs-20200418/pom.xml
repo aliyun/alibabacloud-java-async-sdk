@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-dbfs20200418</artifactId>
-  <version>1.0.1</version>
+  <version>1.0.2</version>
   <packaging>jar</packaging>
   <name>alibabacloud-dbfs20200418</name>
   <description>Alibaba Cloud DBFS (20200418) Async SDK for Java

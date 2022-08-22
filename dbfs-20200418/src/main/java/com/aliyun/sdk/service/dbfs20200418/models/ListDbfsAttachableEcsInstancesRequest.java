@@ -13,6 +13,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListDbfsAttachableEcsInstancesRequest extends Request {
     @Query
+    @NameInMap("FilterKey")
+    private String filterKey;
+
+    @Query
+    @NameInMap("FilterValue")
+    private String filterValue;
+
+    @Query
     @NameInMap("PageNumber")
     private Integer pageNumber;
 
@@ -27,6 +35,8 @@ public class ListDbfsAttachableEcsInstancesRequest extends Request {
 
     private ListDbfsAttachableEcsInstancesRequest(Builder builder) {
         super(builder);
+        this.filterKey = builder.filterKey;
+        this.filterValue = builder.filterValue;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
@@ -43,6 +53,20 @@ public class ListDbfsAttachableEcsInstancesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return filterKey
+     */
+    public String getFilterKey() {
+        return this.filterKey;
+    }
+
+    /**
+     * @return filterValue
+     */
+    public String getFilterValue() {
+        return this.filterValue;
     }
 
     /**
@@ -67,6 +91,8 @@ public class ListDbfsAttachableEcsInstancesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListDbfsAttachableEcsInstancesRequest, Builder> {
+        private String filterKey; 
+        private String filterValue; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String regionId; 
@@ -77,10 +103,30 @@ public class ListDbfsAttachableEcsInstancesRequest extends Request {
 
         private Builder(ListDbfsAttachableEcsInstancesRequest request) {
             super(request);
+            this.filterKey = request.filterKey;
+            this.filterValue = request.filterValue;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
         } 
+
+        /**
+         * FilterKey.
+         */
+        public Builder filterKey(String filterKey) {
+            this.putQueryParameter("FilterKey", filterKey);
+            this.filterKey = filterKey;
+            return this;
+        }
+
+        /**
+         * FilterValue.
+         */
+        public Builder filterValue(String filterValue) {
+            this.putQueryParameter("FilterValue", filterValue);
+            this.filterValue = filterValue;
+            return this;
+        }
 
         /**
          * PageNumber.
