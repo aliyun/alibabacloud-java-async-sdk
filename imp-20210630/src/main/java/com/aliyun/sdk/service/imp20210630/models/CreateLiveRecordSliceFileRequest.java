@@ -138,7 +138,7 @@ public class CreateLiveRecordSliceFileRequest extends Request {
         }
 
         /**
-         * 片段结束时间，时间戳。
+         * 片段结束时间，时间戳，单位为毫秒。
          */
         public Builder endTime(Long endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -174,7 +174,7 @@ public class CreateLiveRecordSliceFileRequest extends Request {
         }
 
         /**
-         * 片段开始时间，时间戳。
+         * 片段开始时间，时间戳，单位为毫秒。
          */
         public Builder startTime(Long startTime) {
             this.putBodyParameter("StartTime", startTime);
