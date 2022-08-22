@@ -173,6 +173,9 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
 
     }
     public static class UploadUrlList extends TeaModel {
+        @NameInMap("Code")
+        private String code;
+
         @NameInMap("Context")
         private Context context;
 
@@ -188,15 +191,20 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
         @NameInMap("InternalUrl")
         private String internalUrl;
 
+        @NameInMap("Message")
+        private String message;
+
         @NameInMap("PublicUrl")
         private String publicUrl;
 
         private UploadUrlList(Builder builder) {
+            this.code = builder.code;
             this.context = builder.context;
             this.expire = builder.expire;
             this.fileExist = builder.fileExist;
             this.hashKey = builder.hashKey;
             this.internalUrl = builder.internalUrl;
+            this.message = builder.message;
             this.publicUrl = builder.publicUrl;
         }
 
@@ -206,6 +214,13 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
 
         public static UploadUrlList create() {
             return builder().build();
+        }
+
+        /**
+         * @return code
+         */
+        public String getCode() {
+            return this.code;
         }
 
         /**
@@ -244,6 +259,13 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
         }
 
         /**
+         * @return message
+         */
+        public String getMessage() {
+            return this.message;
+        }
+
+        /**
          * @return publicUrl
          */
         public String getPublicUrl() {
@@ -251,12 +273,22 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String code; 
             private Context context; 
             private String expire; 
             private Boolean fileExist; 
             private String hashKey; 
             private String internalUrl; 
+            private String message; 
             private String publicUrl; 
+
+            /**
+             * Code.
+             */
+            public Builder code(String code) {
+                this.code = code;
+                return this;
+            }
 
             /**
              * Context.
@@ -295,6 +327,14 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
              */
             public Builder internalUrl(String internalUrl) {
                 this.internalUrl = internalUrl;
+                return this;
+            }
+
+            /**
+             * Message.
+             */
+            public Builder message(String message) {
+                this.message = message;
                 return this;
             }
 

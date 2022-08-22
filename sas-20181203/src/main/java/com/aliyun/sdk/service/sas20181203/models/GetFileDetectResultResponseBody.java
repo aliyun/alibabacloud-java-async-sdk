@@ -72,17 +72,17 @@ public class GetFileDetectResultResponseBody extends TeaModel {
     } 
 
     public static class ResultList extends TeaModel {
-        @NameInMap("ErrorCode")
-        private String errorCode;
-
-        @NameInMap("ErrorMessage")
-        private String errorMessage;
+        @NameInMap("Code")
+        private String code;
 
         @NameInMap("Ext")
         private String ext;
 
         @NameInMap("HashKey")
         private String hashKey;
+
+        @NameInMap("Message")
+        private String message;
 
         @NameInMap("Result")
         private Integer result;
@@ -94,10 +94,10 @@ public class GetFileDetectResultResponseBody extends TeaModel {
         private String virusType;
 
         private ResultList(Builder builder) {
-            this.errorCode = builder.errorCode;
-            this.errorMessage = builder.errorMessage;
+            this.code = builder.code;
             this.ext = builder.ext;
             this.hashKey = builder.hashKey;
+            this.message = builder.message;
             this.result = builder.result;
             this.score = builder.score;
             this.virusType = builder.virusType;
@@ -112,17 +112,10 @@ public class GetFileDetectResultResponseBody extends TeaModel {
         }
 
         /**
-         * @return errorCode
+         * @return code
          */
-        public String getErrorCode() {
-            return this.errorCode;
-        }
-
-        /**
-         * @return errorMessage
-         */
-        public String getErrorMessage() {
-            return this.errorMessage;
+        public String getCode() {
+            return this.code;
         }
 
         /**
@@ -137,6 +130,13 @@ public class GetFileDetectResultResponseBody extends TeaModel {
          */
         public String getHashKey() {
             return this.hashKey;
+        }
+
+        /**
+         * @return message
+         */
+        public String getMessage() {
+            return this.message;
         }
 
         /**
@@ -161,27 +161,19 @@ public class GetFileDetectResultResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private String errorCode; 
-            private String errorMessage; 
+            private String code; 
             private String ext; 
             private String hashKey; 
+            private String message; 
             private Integer result; 
             private Integer score; 
             private String virusType; 
 
             /**
-             * ErrorCode.
+             * Code.
              */
-            public Builder errorCode(String errorCode) {
-                this.errorCode = errorCode;
-                return this;
-            }
-
-            /**
-             * ErrorMessage.
-             */
-            public Builder errorMessage(String errorMessage) {
-                this.errorMessage = errorMessage;
+            public Builder code(String code) {
+                this.code = code;
                 return this;
             }
 
@@ -198,6 +190,14 @@ public class GetFileDetectResultResponseBody extends TeaModel {
              */
             public Builder hashKey(String hashKey) {
                 this.hashKey = hashKey;
+                return this;
+            }
+
+            /**
+             * Message.
+             */
+            public Builder message(String message) {
+                this.message = message;
                 return this;
             }
 

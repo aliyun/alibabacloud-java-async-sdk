@@ -479,9 +479,6 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
         @NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("LastRowKey")
-        private String lastRowKey;
-
         @NameInMap("PageSize")
         private Integer pageSize;
 
@@ -491,7 +488,6 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
         private PageInfo(Builder builder) {
             this.count = builder.count;
             this.currentPage = builder.currentPage;
-            this.lastRowKey = builder.lastRowKey;
             this.pageSize = builder.pageSize;
             this.totalCount = builder.totalCount;
         }
@@ -519,13 +515,6 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
         }
 
         /**
-         * @return lastRowKey
-         */
-        public String getLastRowKey() {
-            return this.lastRowKey;
-        }
-
-        /**
          * @return pageSize
          */
         public Integer getPageSize() {
@@ -542,7 +531,6 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
         public static final class Builder {
             private Integer count; 
             private Integer currentPage; 
-            private String lastRowKey; 
             private Integer pageSize; 
             private Integer totalCount; 
 
@@ -559,14 +547,6 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
-                return this;
-            }
-
-            /**
-             * LastRowKey.
-             */
-            public Builder lastRowKey(String lastRowKey) {
-                this.lastRowKey = lastRowKey;
                 return this;
             }
 
