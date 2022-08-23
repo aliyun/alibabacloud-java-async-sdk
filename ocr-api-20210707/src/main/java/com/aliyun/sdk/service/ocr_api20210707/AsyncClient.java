@@ -30,8 +30,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RecognizeBasicResponse> recognizeBasic(RecognizeBasicRequest request);
 
-    CompletableFuture<RecognizeBatchRecognizeResponse> recognizeBatchRecognize(RecognizeBatchRecognizeRequest request);
-
     CompletableFuture<RecognizeBirthCertificationResponse> recognizeBirthCertification(RecognizeBirthCertificationRequest request);
 
     CompletableFuture<RecognizeBusShipTicketResponse> recognizeBusShipTicket(RecognizeBusShipTicketRequest request);
@@ -54,7 +52,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RecognizeCtwoMedicalDeviceManageLicenseResponse> recognizeCtwoMedicalDeviceManageLicense(RecognizeCtwoMedicalDeviceManageLicenseRequest request);
 
-    CompletableFuture<RecognizeDeleteExcelRecordResponse> recognizeDeleteExcelRecord(RecognizeDeleteExcelRecordRequest request);
+    CompletableFuture<RecognizeDocumentStructureResponse> recognizeDocumentStructure(RecognizeDocumentStructureRequest request);
 
     CompletableFuture<RecognizeDrivingLicenseResponse> recognizeDrivingLicense(RecognizeDrivingLicenseRequest request);
 
@@ -73,10 +71,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RecognizeEnglishResponse> recognizeEnglish(RecognizeEnglishRequest request);
 
     CompletableFuture<RecognizeEstateCertificationResponse> recognizeEstateCertification(RecognizeEstateCertificationRequest request);
-
-    CompletableFuture<RecognizeExcelExportResponse> recognizeExcelExport(RecognizeExcelExportRequest request);
-
-    CompletableFuture<RecognizeExcelRecordResponse> recognizeExcelRecord(RecognizeExcelRecordRequest request);
 
     CompletableFuture<RecognizeExitEntryPermitToHKResponse> recognizeExitEntryPermitToHK(RecognizeExitEntryPermitToHKRequest request);
 

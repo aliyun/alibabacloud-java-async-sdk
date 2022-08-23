@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link RecognizeExcelRecordResponseBody} extends {@link TeaModel}
+ * {@link RecognizeDocumentStructureResponseBody} extends {@link TeaModel}
  *
- * <p>RecognizeExcelRecordResponseBody</p>
+ * <p>RecognizeDocumentStructureResponseBody</p>
  */
-public class RecognizeExcelRecordResponseBody extends TeaModel {
+public class RecognizeDocumentStructureResponseBody extends TeaModel {
     @NameInMap("Code")
     private String code;
 
@@ -24,7 +24,7 @@ public class RecognizeExcelRecordResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private RecognizeExcelRecordResponseBody(Builder builder) {
+    private RecognizeDocumentStructureResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -35,7 +35,7 @@ public class RecognizeExcelRecordResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static RecognizeExcelRecordResponseBody create() {
+    public static RecognizeDocumentStructureResponseBody create() {
         return builder().build();
     }
 
@@ -105,8 +105,8 @@ public class RecognizeExcelRecordResponseBody extends TeaModel {
             return this;
         }
 
-        public RecognizeExcelRecordResponseBody build() {
-            return new RecognizeExcelRecordResponseBody(this);
+        public RecognizeDocumentStructureResponseBody build() {
+            return new RecognizeDocumentStructureResponseBody(this);
         } 
 
     } 

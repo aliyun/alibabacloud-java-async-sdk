@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link RecognizeExcelExportResponse} extends {@link TeaModel}
+ * {@link RecognizeDocumentStructureResponse} extends {@link TeaModel}
  *
- * <p>RecognizeExcelExportResponse</p>
+ * <p>RecognizeDocumentStructureResponse</p>
  */
-public class RecognizeExcelExportResponse extends Response {
+public class RecognizeDocumentStructureResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private RecognizeExcelExportResponseBody body;
+    private RecognizeDocumentStructureResponseBody body;
 
-    private RecognizeExcelExportResponse(BuilderImpl builder) {
+    private RecognizeDocumentStructureResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static RecognizeExcelExportResponse create() {
+    public static RecognizeDocumentStructureResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class RecognizeExcelExportResponse extends Response {
     /**
      * @return body
      */
-    public RecognizeExcelExportResponseBody getBody() {
+    public RecognizeDocumentStructureResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<RecognizeExcelExportResponse, Builder> {
+    public interface Builder extends Response.Builder<RecognizeDocumentStructureResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(RecognizeExcelExportResponseBody body);
+        Builder body(RecognizeDocumentStructureResponseBody body);
 
         @Override
-        RecognizeExcelExportResponse build();
+        RecognizeDocumentStructureResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<RecognizeExcelExportResponse, Builder>
+            extends Response.BuilderImpl<RecognizeDocumentStructureResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private RecognizeExcelExportResponseBody body; 
+        private RecognizeDocumentStructureResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(RecognizeExcelExportResponse response) {
+        private BuilderImpl(RecognizeDocumentStructureResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class RecognizeExcelExportResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(RecognizeExcelExportResponseBody body) {
+        public Builder body(RecognizeDocumentStructureResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public RecognizeExcelExportResponse build() {
-            return new RecognizeExcelExportResponse(this);
+        public RecognizeDocumentStructureResponse build() {
+            return new RecognizeDocumentStructureResponse(this);
         } 
 
     } 
