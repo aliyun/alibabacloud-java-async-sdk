@@ -594,6 +594,229 @@ public class ApplyListQueryResponseBody extends TeaModel {
         } 
 
     }
+    public static class ItinerarySetList extends TeaModel {
+        @NameInMap("arr_date")
+        private String arrDate;
+
+        @NameInMap("city_code_set")
+        private String cityCodeSet;
+
+        @NameInMap("city_set")
+        private String citySet;
+
+        @NameInMap("cost_center_name")
+        private String costCenterName;
+
+        @NameInMap("dep_date")
+        private String depDate;
+
+        @NameInMap("invoice_name")
+        private String invoiceName;
+
+        @NameInMap("itinerary_id")
+        private String itineraryId;
+
+        @NameInMap("project_code")
+        private String projectCode;
+
+        @NameInMap("project_title")
+        private String projectTitle;
+
+        @NameInMap("traffic_type")
+        private Integer trafficType;
+
+        private ItinerarySetList(Builder builder) {
+            this.arrDate = builder.arrDate;
+            this.cityCodeSet = builder.cityCodeSet;
+            this.citySet = builder.citySet;
+            this.costCenterName = builder.costCenterName;
+            this.depDate = builder.depDate;
+            this.invoiceName = builder.invoiceName;
+            this.itineraryId = builder.itineraryId;
+            this.projectCode = builder.projectCode;
+            this.projectTitle = builder.projectTitle;
+            this.trafficType = builder.trafficType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ItinerarySetList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return arrDate
+         */
+        public String getArrDate() {
+            return this.arrDate;
+        }
+
+        /**
+         * @return cityCodeSet
+         */
+        public String getCityCodeSet() {
+            return this.cityCodeSet;
+        }
+
+        /**
+         * @return citySet
+         */
+        public String getCitySet() {
+            return this.citySet;
+        }
+
+        /**
+         * @return costCenterName
+         */
+        public String getCostCenterName() {
+            return this.costCenterName;
+        }
+
+        /**
+         * @return depDate
+         */
+        public String getDepDate() {
+            return this.depDate;
+        }
+
+        /**
+         * @return invoiceName
+         */
+        public String getInvoiceName() {
+            return this.invoiceName;
+        }
+
+        /**
+         * @return itineraryId
+         */
+        public String getItineraryId() {
+            return this.itineraryId;
+        }
+
+        /**
+         * @return projectCode
+         */
+        public String getProjectCode() {
+            return this.projectCode;
+        }
+
+        /**
+         * @return projectTitle
+         */
+        public String getProjectTitle() {
+            return this.projectTitle;
+        }
+
+        /**
+         * @return trafficType
+         */
+        public Integer getTrafficType() {
+            return this.trafficType;
+        }
+
+        public static final class Builder {
+            private String arrDate; 
+            private String cityCodeSet; 
+            private String citySet; 
+            private String costCenterName; 
+            private String depDate; 
+            private String invoiceName; 
+            private String itineraryId; 
+            private String projectCode; 
+            private String projectTitle; 
+            private Integer trafficType; 
+
+            /**
+             * 到达日期
+             */
+            public Builder arrDate(String arrDate) {
+                this.arrDate = arrDate;
+                return this;
+            }
+
+            /**
+             * 离抵城市code，多个城市用中文“，”隔开
+             * <p>
+             * 
+             */
+            public Builder cityCodeSet(String cityCodeSet) {
+                this.cityCodeSet = cityCodeSet;
+                return this;
+            }
+
+            /**
+             * 离抵城市名称，多个城市用中文“，”隔开
+             */
+            public Builder citySet(String citySet) {
+                this.citySet = citySet;
+                return this;
+            }
+
+            /**
+             * 成本中心名称
+             */
+            public Builder costCenterName(String costCenterName) {
+                this.costCenterName = costCenterName;
+                return this;
+            }
+
+            /**
+             * 出发日期
+             */
+            public Builder depDate(String depDate) {
+                this.depDate = depDate;
+                return this;
+            }
+
+            /**
+             * 发票抬头
+             */
+            public Builder invoiceName(String invoiceName) {
+                this.invoiceName = invoiceName;
+                return this;
+            }
+
+            /**
+             * 行程id
+             */
+            public Builder itineraryId(String itineraryId) {
+                this.itineraryId = itineraryId;
+                return this;
+            }
+
+            /**
+             * 项目编号
+             */
+            public Builder projectCode(String projectCode) {
+                this.projectCode = projectCode;
+                return this;
+            }
+
+            /**
+             * 项目名称
+             */
+            public Builder projectTitle(String projectTitle) {
+                this.projectTitle = projectTitle;
+                return this;
+            }
+
+            /**
+             * 交通方式： 0 飞机、酒店,  1 火车、酒店,  2 汽车、酒店,  3 酒店，5 不限，6 飞机，7 火车，9 飞机、火车、酒店
+             */
+            public Builder trafficType(Integer trafficType) {
+                this.trafficType = trafficType;
+                return this;
+            }
+
+            public ItinerarySetList build() {
+                return new ItinerarySetList(this);
+            } 
+
+        } 
+
+    }
     public static class TravelerList extends TeaModel {
         @NameInMap("user_id")
         private String userId;
@@ -695,6 +918,9 @@ public class ApplyListQueryResponseBody extends TeaModel {
         @NameInMap("itinerary_rule")
         private Integer itineraryRule;
 
+        @NameInMap("itinerary_set_list")
+        private java.util.List < ItinerarySetList> itinerarySetList;
+
         @NameInMap("status")
         private Integer status;
 
@@ -745,6 +971,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
             this.id = builder.id;
             this.itineraryList = builder.itineraryList;
             this.itineraryRule = builder.itineraryRule;
+            this.itinerarySetList = builder.itinerarySetList;
             this.status = builder.status;
             this.statusDesc = builder.statusDesc;
             this.thirdpartBusinessId = builder.thirdpartBusinessId;
@@ -859,6 +1086,13 @@ public class ApplyListQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return itinerarySetList
+         */
+        public java.util.List < ItinerarySetList> getItinerarySetList() {
+            return this.itinerarySetList;
+        }
+
+        /**
          * @return status
          */
         public Integer getStatus() {
@@ -956,6 +1190,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
             private Long id; 
             private java.util.List < ItineraryList> itineraryList; 
             private Integer itineraryRule; 
+            private java.util.List < ItinerarySetList> itinerarySetList; 
             private Integer status; 
             private String statusDesc; 
             private String thirdpartBusinessId; 
@@ -1075,6 +1310,14 @@ public class ApplyListQueryResponseBody extends TeaModel {
              */
             public Builder itineraryRule(Integer itineraryRule) {
                 this.itineraryRule = itineraryRule;
+                return this;
+            }
+
+            /**
+             * 城市集行程列表
+             */
+            public Builder itinerarySetList(java.util.List < ItinerarySetList> itinerarySetList) {
+                this.itinerarySetList = itinerarySetList;
                 return this;
             }
 

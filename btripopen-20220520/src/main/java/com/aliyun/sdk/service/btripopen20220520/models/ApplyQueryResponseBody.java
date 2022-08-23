@@ -916,6 +916,227 @@ public class ApplyQueryResponseBody extends TeaModel {
         } 
 
     }
+    public static class ItinerarySetList extends TeaModel {
+        @NameInMap("arr_date")
+        private String arrDate;
+
+        @NameInMap("city_code_set")
+        private String cityCodeSet;
+
+        @NameInMap("city_set")
+        private String citySet;
+
+        @NameInMap("cost_center_name")
+        private String costCenterName;
+
+        @NameInMap("dep_date")
+        private String depDate;
+
+        @NameInMap("invoice_name")
+        private String invoiceName;
+
+        @NameInMap("itinerary_id")
+        private String itineraryId;
+
+        @NameInMap("project_code")
+        private String projectCode;
+
+        @NameInMap("project_title")
+        private String projectTitle;
+
+        @NameInMap("traffic_type")
+        private Integer trafficType;
+
+        private ItinerarySetList(Builder builder) {
+            this.arrDate = builder.arrDate;
+            this.cityCodeSet = builder.cityCodeSet;
+            this.citySet = builder.citySet;
+            this.costCenterName = builder.costCenterName;
+            this.depDate = builder.depDate;
+            this.invoiceName = builder.invoiceName;
+            this.itineraryId = builder.itineraryId;
+            this.projectCode = builder.projectCode;
+            this.projectTitle = builder.projectTitle;
+            this.trafficType = builder.trafficType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ItinerarySetList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return arrDate
+         */
+        public String getArrDate() {
+            return this.arrDate;
+        }
+
+        /**
+         * @return cityCodeSet
+         */
+        public String getCityCodeSet() {
+            return this.cityCodeSet;
+        }
+
+        /**
+         * @return citySet
+         */
+        public String getCitySet() {
+            return this.citySet;
+        }
+
+        /**
+         * @return costCenterName
+         */
+        public String getCostCenterName() {
+            return this.costCenterName;
+        }
+
+        /**
+         * @return depDate
+         */
+        public String getDepDate() {
+            return this.depDate;
+        }
+
+        /**
+         * @return invoiceName
+         */
+        public String getInvoiceName() {
+            return this.invoiceName;
+        }
+
+        /**
+         * @return itineraryId
+         */
+        public String getItineraryId() {
+            return this.itineraryId;
+        }
+
+        /**
+         * @return projectCode
+         */
+        public String getProjectCode() {
+            return this.projectCode;
+        }
+
+        /**
+         * @return projectTitle
+         */
+        public String getProjectTitle() {
+            return this.projectTitle;
+        }
+
+        /**
+         * @return trafficType
+         */
+        public Integer getTrafficType() {
+            return this.trafficType;
+        }
+
+        public static final class Builder {
+            private String arrDate; 
+            private String cityCodeSet; 
+            private String citySet; 
+            private String costCenterName; 
+            private String depDate; 
+            private String invoiceName; 
+            private String itineraryId; 
+            private String projectCode; 
+            private String projectTitle; 
+            private Integer trafficType; 
+
+            /**
+             * 到达日期
+             */
+            public Builder arrDate(String arrDate) {
+                this.arrDate = arrDate;
+                return this;
+            }
+
+            /**
+             * 离抵城市code，多个城市用中文“，”隔开
+             */
+            public Builder cityCodeSet(String cityCodeSet) {
+                this.cityCodeSet = cityCodeSet;
+                return this;
+            }
+
+            /**
+             * 离抵城市名称，多个城市用中文“，”隔开
+             */
+            public Builder citySet(String citySet) {
+                this.citySet = citySet;
+                return this;
+            }
+
+            /**
+             * 成本中心名称
+             */
+            public Builder costCenterName(String costCenterName) {
+                this.costCenterName = costCenterName;
+                return this;
+            }
+
+            /**
+             * 出发日期
+             */
+            public Builder depDate(String depDate) {
+                this.depDate = depDate;
+                return this;
+            }
+
+            /**
+             * 发票抬头
+             */
+            public Builder invoiceName(String invoiceName) {
+                this.invoiceName = invoiceName;
+                return this;
+            }
+
+            /**
+             * 行程id
+             */
+            public Builder itineraryId(String itineraryId) {
+                this.itineraryId = itineraryId;
+                return this;
+            }
+
+            /**
+             * 项目编号
+             */
+            public Builder projectCode(String projectCode) {
+                this.projectCode = projectCode;
+                return this;
+            }
+
+            /**
+             * 项目名称
+             */
+            public Builder projectTitle(String projectTitle) {
+                this.projectTitle = projectTitle;
+                return this;
+            }
+
+            /**
+             * 交通方式： 0 飞机、酒店,  1 火车、酒店,  2 汽车、酒店,  3 酒店，5 不限，6 飞机，7 火车，9 飞机、火车、酒店
+             */
+            public Builder trafficType(Integer trafficType) {
+                this.trafficType = trafficType;
+                return this;
+            }
+
+            public ItinerarySetList build() {
+                return new ItinerarySetList(this);
+            } 
+
+        } 
+
+    }
     public static class TravelerListHotelCitys extends TeaModel {
         @NameInMap("city_code")
         private String cityCode;
@@ -1250,6 +1471,9 @@ public class ApplyQueryResponseBody extends TeaModel {
         @NameInMap("itinerary_rule")
         private Integer itineraryRule;
 
+        @NameInMap("itinerary_set_list")
+        private java.util.List < ItinerarySetList> itinerarySetList;
+
         @NameInMap("limit_traveler")
         private Integer limitTraveler;
 
@@ -1316,6 +1540,7 @@ public class ApplyQueryResponseBody extends TeaModel {
             this.id = builder.id;
             this.itineraryList = builder.itineraryList;
             this.itineraryRule = builder.itineraryRule;
+            this.itinerarySetList = builder.itinerarySetList;
             this.limitTraveler = builder.limitTraveler;
             this.status = builder.status;
             this.statusDesc = builder.statusDesc;
@@ -1462,6 +1687,13 @@ public class ApplyQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return itinerarySetList
+         */
+        public java.util.List < ItinerarySetList> getItinerarySetList() {
+            return this.itinerarySetList;
+        }
+
+        /**
          * @return limitTraveler
          */
         public Integer getLimitTraveler() {
@@ -1591,6 +1823,7 @@ public class ApplyQueryResponseBody extends TeaModel {
             private Long id; 
             private java.util.List < ItineraryList> itineraryList; 
             private Integer itineraryRule; 
+            private java.util.List < ItinerarySetList> itinerarySetList; 
             private Integer limitTraveler; 
             private Integer status; 
             private String statusDesc; 
@@ -1741,12 +1974,24 @@ public class ApplyQueryResponseBody extends TeaModel {
              * <p>
              * 0出发&目的地一对一，按列表传行程 
              * 1多选N个地点，城市集行程
+             * 不传默认为0
+             * 会根据商旅管理后台-通用差旅设置-行程城市规则中的设置，校验申请单本字段的值是否正确
+             * 当行程城市规则中设置的是“1对1行程”时，必须传0
+             * 当行程城市规则中设置的是“多对多城市集行程”时，必须传1
              * 会根据此字段传入的值，校验行程传参是否正确
              * 当申请单城市规则为0，itinerary_list行程列表必填
-             * 当申请单城市规则为1，itinerary_set_list行程列表必填
+             * 当申请单城市规则为1，城市集行程必填
              */
             public Builder itineraryRule(Integer itineraryRule) {
                 this.itineraryRule = itineraryRule;
+                return this;
+            }
+
+            /**
+             * 城市集行程列表
+             */
+            public Builder itinerarySetList(java.util.List < ItinerarySetList> itinerarySetList) {
+                this.itinerarySetList = itinerarySetList;
                 return this;
             }
 
