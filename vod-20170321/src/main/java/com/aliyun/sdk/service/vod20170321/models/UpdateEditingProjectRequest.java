@@ -153,17 +153,17 @@ public class UpdateEditingProjectRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateEditingProjectRequest response) {
-            super(response);
-            this.coverURL = response.coverURL;
-            this.description = response.description;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.projectId = response.projectId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.timeline = response.timeline;
-            this.title = response.title;
+        private Builder(UpdateEditingProjectRequest request) {
+            super(request);
+            this.coverURL = request.coverURL;
+            this.description = request.description;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.projectId = request.projectId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.timeline = request.timeline;
+            this.title = request.title;
         } 
 
         /**

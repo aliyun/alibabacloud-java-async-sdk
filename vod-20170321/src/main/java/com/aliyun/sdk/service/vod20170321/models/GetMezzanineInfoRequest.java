@@ -88,12 +88,12 @@ public class GetMezzanineInfoRequest extends Request {
             super();
         } 
 
-        private Builder(GetMezzanineInfoRequest response) {
-            super(response);
-            this.additionType = response.additionType;
-            this.authTimeout = response.authTimeout;
-            this.outputType = response.outputType;
-            this.videoId = response.videoId;
+        private Builder(GetMezzanineInfoRequest request) {
+            super(request);
+            this.additionType = request.additionType;
+            this.authTimeout = request.authTimeout;
+            this.outputType = request.outputType;
+            this.videoId = request.videoId;
         } 
 
         /**

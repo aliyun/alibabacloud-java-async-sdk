@@ -114,14 +114,14 @@ public class GetMediaAuditAudioResultDetailRequest extends Request {
             super();
         } 
 
-        private Builder(GetMediaAuditAudioResultDetailRequest response) {
-            super(response);
-            this.mediaId = response.mediaId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNo = response.pageNo;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(GetMediaAuditAudioResultDetailRequest request) {
+            super(request);
+            this.mediaId = request.mediaId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNo = request.pageNo;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

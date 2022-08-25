@@ -75,11 +75,11 @@ public class GetImageInfoRequest extends Request {
             super();
         } 
 
-        private Builder(GetImageInfoRequest response) {
-            super(response);
-            this.authTimeout = response.authTimeout;
-            this.imageId = response.imageId;
-            this.outputType = response.outputType;
+        private Builder(GetImageInfoRequest request) {
+            super(request);
+            this.authTimeout = request.authTimeout;
+            this.imageId = request.imageId;
+            this.outputType = request.outputType;
         } 
 
         /**

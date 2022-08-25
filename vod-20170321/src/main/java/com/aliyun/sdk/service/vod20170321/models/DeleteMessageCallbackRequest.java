@@ -61,10 +61,10 @@ public class DeleteMessageCallbackRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteMessageCallbackRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.ownerAccount = response.ownerAccount;
+        private Builder(DeleteMessageCallbackRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.ownerAccount = request.ownerAccount;
         } 
 
         /**

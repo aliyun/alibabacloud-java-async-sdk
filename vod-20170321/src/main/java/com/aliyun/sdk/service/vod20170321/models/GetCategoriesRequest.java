@@ -100,13 +100,13 @@ public class GetCategoriesRequest extends Request {
             super();
         } 
 
-        private Builder(GetCategoriesRequest response) {
-            super(response);
-            this.cateId = response.cateId;
-            this.pageNo = response.pageNo;
-            this.pageSize = response.pageSize;
-            this.sortBy = response.sortBy;
-            this.type = response.type;
+        private Builder(GetCategoriesRequest request) {
+            super(request);
+            this.cateId = request.cateId;
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
+            this.sortBy = request.sortBy;
+            this.type = request.type;
         } 
 
         /**

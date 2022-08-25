@@ -89,12 +89,12 @@ public class DescribePlayTopVideosRequest extends Request {
             super();
         } 
 
-        private Builder(DescribePlayTopVideosRequest response) {
-            super(response);
-            this.bizDate = response.bizDate;
-            this.ownerId = response.ownerId;
-            this.pageNo = response.pageNo;
-            this.pageSize = response.pageSize;
+        private Builder(DescribePlayTopVideosRequest request) {
+            super(request);
+            this.bizDate = request.bizDate;
+            this.ownerId = request.ownerId;
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
         } 
 
         /**

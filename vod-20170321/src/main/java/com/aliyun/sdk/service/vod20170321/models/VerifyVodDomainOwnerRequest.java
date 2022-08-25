@@ -76,11 +76,11 @@ public class VerifyVodDomainOwnerRequest extends Request {
             super();
         } 
 
-        private Builder(VerifyVodDomainOwnerRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.ownerId = response.ownerId;
-            this.verifyType = response.verifyType;
+        private Builder(VerifyVodDomainOwnerRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.ownerId = request.ownerId;
+            this.verifyType = request.verifyType;
         } 
 
         /**

@@ -75,11 +75,11 @@ public class BatchStartVodDomainRequest extends Request {
             super();
         } 
 
-        private Builder(BatchStartVodDomainRequest response) {
-            super(response);
-            this.domainNames = response.domainNames;
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
+        private Builder(BatchStartVodDomainRequest request) {
+            super(request);
+            this.domainNames = request.domainNames;
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
         } 
 
         /**

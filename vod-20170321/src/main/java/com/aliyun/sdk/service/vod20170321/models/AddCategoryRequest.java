@@ -75,11 +75,11 @@ public class AddCategoryRequest extends Request {
             super();
         } 
 
-        private Builder(AddCategoryRequest response) {
-            super(response);
-            this.cateName = response.cateName;
-            this.parentId = response.parentId;
-            this.type = response.type;
+        private Builder(AddCategoryRequest request) {
+            super(request);
+            this.cateName = request.cateName;
+            this.parentId = request.parentId;
+            this.type = request.type;
         } 
 
         /**

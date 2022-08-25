@@ -128,15 +128,15 @@ public class SetVodDomainCertificateRequest extends Request {
             super();
         } 
 
-        private Builder(SetVodDomainCertificateRequest response) {
-            super(response);
-            this.certName = response.certName;
-            this.domainName = response.domainName;
-            this.ownerId = response.ownerId;
-            this.SSLPri = response.SSLPri;
-            this.SSLProtocol = response.SSLProtocol;
-            this.SSLPub = response.SSLPub;
-            this.securityToken = response.securityToken;
+        private Builder(SetVodDomainCertificateRequest request) {
+            super(request);
+            this.certName = request.certName;
+            this.domainName = request.domainName;
+            this.ownerId = request.ownerId;
+            this.SSLPri = request.SSLPri;
+            this.SSLProtocol = request.SSLProtocol;
+            this.SSLPub = request.SSLPub;
+            this.securityToken = request.securityToken;
         } 
 
         /**

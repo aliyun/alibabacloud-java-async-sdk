@@ -102,13 +102,13 @@ public class DescribeVodAIDataRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeVodAIDataRequest response) {
-            super(response);
-            this.AIType = response.AIType;
-            this.endTime = response.endTime;
-            this.ownerId = response.ownerId;
-            this.region = response.region;
-            this.startTime = response.startTime;
+        private Builder(DescribeVodAIDataRequest request) {
+            super(request);
+            this.AIType = request.AIType;
+            this.endTime = request.endTime;
+            this.ownerId = request.ownerId;
+            this.region = request.region;
+            this.startTime = request.startTime;
         } 
 
         /**

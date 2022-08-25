@@ -101,13 +101,13 @@ public class DeleteImageRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteImageRequest response) {
-            super(response);
-            this.deleteImageType = response.deleteImageType;
-            this.imageIds = response.imageIds;
-            this.imageType = response.imageType;
-            this.imageURLs = response.imageURLs;
-            this.videoId = response.videoId;
+        private Builder(DeleteImageRequest request) {
+            super(request);
+            this.deleteImageType = request.deleteImageType;
+            this.imageIds = request.imageIds;
+            this.imageType = request.imageType;
+            this.imageURLs = request.imageURLs;
+            this.videoId = request.videoId;
         } 
 
         /**

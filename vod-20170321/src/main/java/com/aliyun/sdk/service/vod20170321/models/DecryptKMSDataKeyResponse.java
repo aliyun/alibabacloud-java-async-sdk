@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateVodRealTimeLogDeliveryResponse} extends {@link TeaModel}
+ * {@link DecryptKMSDataKeyResponse} extends {@link TeaModel}
  *
- * <p>CreateVodRealTimeLogDeliveryResponse</p>
+ * <p>DecryptKMSDataKeyResponse</p>
  */
-public class CreateVodRealTimeLogDeliveryResponse extends Response {
+public class DecryptKMSDataKeyResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private CreateVodRealTimeLogDeliveryResponseBody body;
+    private DecryptKMSDataKeyResponseBody body;
 
-    private CreateVodRealTimeLogDeliveryResponse(BuilderImpl builder) {
+    private DecryptKMSDataKeyResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static CreateVodRealTimeLogDeliveryResponse create() {
+    public static DecryptKMSDataKeyResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class CreateVodRealTimeLogDeliveryResponse extends Response {
     /**
      * @return body
      */
-    public CreateVodRealTimeLogDeliveryResponseBody getBody() {
+    public DecryptKMSDataKeyResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<CreateVodRealTimeLogDeliveryResponse, Builder> {
+    public interface Builder extends Response.Builder<DecryptKMSDataKeyResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(CreateVodRealTimeLogDeliveryResponseBody body);
+        Builder body(DecryptKMSDataKeyResponseBody body);
 
         @Override
-        CreateVodRealTimeLogDeliveryResponse build();
+        DecryptKMSDataKeyResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<CreateVodRealTimeLogDeliveryResponse, Builder>
+            extends Response.BuilderImpl<DecryptKMSDataKeyResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private CreateVodRealTimeLogDeliveryResponseBody body; 
+        private DecryptKMSDataKeyResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(CreateVodRealTimeLogDeliveryResponse response) {
+        private BuilderImpl(DecryptKMSDataKeyResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class CreateVodRealTimeLogDeliveryResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(CreateVodRealTimeLogDeliveryResponseBody body) {
+        public Builder body(DecryptKMSDataKeyResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public CreateVodRealTimeLogDeliveryResponse build() {
-            return new CreateVodRealTimeLogDeliveryResponse(this);
+        public DecryptKMSDataKeyResponse build() {
+            return new DecryptKMSDataKeyResponse(this);
         } 
 
     } 

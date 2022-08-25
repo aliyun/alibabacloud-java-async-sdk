@@ -62,10 +62,10 @@ public class SubmitWorkflowJobRequest extends Request {
             super();
         } 
 
-        private Builder(SubmitWorkflowJobRequest response) {
-            super(response);
-            this.mediaId = response.mediaId;
-            this.workflowId = response.workflowId;
+        private Builder(SubmitWorkflowJobRequest request) {
+            super(request);
+            this.mediaId = request.mediaId;
+            this.workflowId = request.workflowId;
         } 
 
         /**

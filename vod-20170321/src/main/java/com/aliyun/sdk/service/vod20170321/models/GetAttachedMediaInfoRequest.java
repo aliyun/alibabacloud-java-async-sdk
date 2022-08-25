@@ -75,11 +75,11 @@ public class GetAttachedMediaInfoRequest extends Request {
             super();
         } 
 
-        private Builder(GetAttachedMediaInfoRequest response) {
-            super(response);
-            this.authTimeout = response.authTimeout;
-            this.mediaIds = response.mediaIds;
-            this.outputType = response.outputType;
+        private Builder(GetAttachedMediaInfoRequest request) {
+            super(request);
+            this.authTimeout = request.authTimeout;
+            this.mediaIds = request.mediaIds;
+            this.outputType = request.outputType;
         } 
 
         /**

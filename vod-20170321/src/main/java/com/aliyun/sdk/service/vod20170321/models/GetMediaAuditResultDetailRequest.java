@@ -63,10 +63,10 @@ public class GetMediaAuditResultDetailRequest extends Request {
             super();
         } 
 
-        private Builder(GetMediaAuditResultDetailRequest response) {
-            super(response);
-            this.mediaId = response.mediaId;
-            this.pageNo = response.pageNo;
+        private Builder(GetMediaAuditResultDetailRequest request) {
+            super(request);
+            this.mediaId = request.mediaId;
+            this.pageNo = request.pageNo;
         } 
 
         /**

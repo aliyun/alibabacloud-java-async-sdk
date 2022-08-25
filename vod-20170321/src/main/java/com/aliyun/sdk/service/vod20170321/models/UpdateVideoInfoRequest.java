@@ -114,14 +114,14 @@ public class UpdateVideoInfoRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateVideoInfoRequest response) {
-            super(response);
-            this.cateId = response.cateId;
-            this.coverURL = response.coverURL;
-            this.description = response.description;
-            this.tags = response.tags;
-            this.title = response.title;
-            this.videoId = response.videoId;
+        private Builder(UpdateVideoInfoRequest request) {
+            super(request);
+            this.cateId = request.cateId;
+            this.coverURL = request.coverURL;
+            this.description = request.description;
+            this.tags = request.tags;
+            this.title = request.title;
+            this.videoId = request.videoId;
         } 
 
         /**

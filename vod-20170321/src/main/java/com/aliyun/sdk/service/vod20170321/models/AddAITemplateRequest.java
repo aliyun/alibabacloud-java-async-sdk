@@ -77,11 +77,11 @@ public class AddAITemplateRequest extends Request {
             super();
         } 
 
-        private Builder(AddAITemplateRequest response) {
-            super(response);
-            this.templateConfig = response.templateConfig;
-            this.templateName = response.templateName;
-            this.templateType = response.templateType;
+        private Builder(AddAITemplateRequest request) {
+            super(request);
+            this.templateConfig = request.templateConfig;
+            this.templateName = request.templateName;
+            this.templateType = request.templateType;
         } 
 
         /**

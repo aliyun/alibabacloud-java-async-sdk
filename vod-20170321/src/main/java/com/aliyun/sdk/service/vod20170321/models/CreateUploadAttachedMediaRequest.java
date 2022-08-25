@@ -179,19 +179,19 @@ public class CreateUploadAttachedMediaRequest extends Request {
             super();
         } 
 
-        private Builder(CreateUploadAttachedMediaRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.businessType = response.businessType;
-            this.cateIds = response.cateIds;
-            this.description = response.description;
-            this.fileName = response.fileName;
-            this.fileSize = response.fileSize;
-            this.mediaExt = response.mediaExt;
-            this.storageLocation = response.storageLocation;
-            this.tags = response.tags;
-            this.title = response.title;
-            this.userData = response.userData;
+        private Builder(CreateUploadAttachedMediaRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.businessType = request.businessType;
+            this.cateIds = request.cateIds;
+            this.description = request.description;
+            this.fileName = request.fileName;
+            this.fileSize = request.fileSize;
+            this.mediaExt = request.mediaExt;
+            this.storageLocation = request.storageLocation;
+            this.tags = request.tags;
+            this.title = request.title;
+            this.userData = request.userData;
         } 
 
         /**

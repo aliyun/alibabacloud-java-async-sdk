@@ -49,9 +49,9 @@ public class GetMediaAuditResultTimelineRequest extends Request {
             super();
         } 
 
-        private Builder(GetMediaAuditResultTimelineRequest response) {
-            super(response);
-            this.mediaId = response.mediaId;
+        private Builder(GetMediaAuditResultTimelineRequest request) {
+            super(request);
+            this.mediaId = request.mediaId;
         } 
 
         /**

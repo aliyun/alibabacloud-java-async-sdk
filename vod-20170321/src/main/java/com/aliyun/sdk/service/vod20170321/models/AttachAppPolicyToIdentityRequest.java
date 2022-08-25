@@ -90,12 +90,12 @@ public class AttachAppPolicyToIdentityRequest extends Request {
             super();
         } 
 
-        private Builder(AttachAppPolicyToIdentityRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.identityName = response.identityName;
-            this.identityType = response.identityType;
-            this.policyNames = response.policyNames;
+        private Builder(AttachAppPolicyToIdentityRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.identityName = request.identityName;
+            this.identityType = request.identityType;
+            this.policyNames = request.policyNames;
         } 
 
         /**

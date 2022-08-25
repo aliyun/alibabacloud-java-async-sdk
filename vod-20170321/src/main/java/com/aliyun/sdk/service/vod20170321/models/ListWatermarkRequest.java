@@ -48,9 +48,9 @@ public class ListWatermarkRequest extends Request {
             super();
         } 
 
-        private Builder(ListWatermarkRequest response) {
-            super(response);
-            this.appId = response.appId;
+        private Builder(ListWatermarkRequest request) {
+            super(request);
+            this.appId = request.appId;
         } 
 
         /**

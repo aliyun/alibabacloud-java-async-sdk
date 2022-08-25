@@ -77,11 +77,11 @@ public class UpdateAITemplateRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateAITemplateRequest response) {
-            super(response);
-            this.templateConfig = response.templateConfig;
-            this.templateId = response.templateId;
-            this.templateName = response.templateName;
+        private Builder(UpdateAITemplateRequest request) {
+            super(request);
+            this.templateConfig = request.templateConfig;
+            this.templateId = request.templateId;
+            this.templateName = request.templateName;
         } 
 
         /**

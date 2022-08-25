@@ -7,16 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListMediaDNADeleteJobRequest} extends {@link RequestModel}
+ * {@link GenerateKMSDataKeyRequest} extends {@link RequestModel}
  *
- * <p>ListMediaDNADeleteJobRequest</p>
+ * <p>GenerateKMSDataKeyRequest</p>
  */
-public class ListMediaDNADeleteJobRequest extends Request {
-    @Query
-    @NameInMap("JobIds")
-    @Validation(required = true)
-    private String jobIds;
-
+public class GenerateKMSDataKeyRequest extends Request {
     @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
@@ -33,9 +28,8 @@ public class ListMediaDNADeleteJobRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private String resourceOwnerId;
 
-    private ListMediaDNADeleteJobRequest(Builder builder) {
+    private GenerateKMSDataKeyRequest(Builder builder) {
         super(builder);
-        this.jobIds = builder.jobIds;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -46,20 +40,13 @@ public class ListMediaDNADeleteJobRequest extends Request {
         return new Builder();
     }
 
-    public static ListMediaDNADeleteJobRequest create() {
+    public static GenerateKMSDataKeyRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return jobIds
-     */
-    public String getJobIds() {
-        return this.jobIds;
     }
 
     /**
@@ -90,8 +77,7 @@ public class ListMediaDNADeleteJobRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    public static final class Builder extends Request.Builder<ListMediaDNADeleteJobRequest, Builder> {
-        private String jobIds; 
+    public static final class Builder extends Request.Builder<GenerateKMSDataKeyRequest, Builder> {
         private String ownerAccount; 
         private String ownerId; 
         private String resourceOwnerAccount; 
@@ -101,23 +87,13 @@ public class ListMediaDNADeleteJobRequest extends Request {
             super();
         } 
 
-        private Builder(ListMediaDNADeleteJobRequest response) {
-            super(response);
-            this.jobIds = response.jobIds;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(GenerateKMSDataKeyRequest request) {
+            super(request);
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
-
-        /**
-         * JobIds.
-         */
-        public Builder jobIds(String jobIds) {
-            this.putQueryParameter("JobIds", jobIds);
-            this.jobIds = jobIds;
-            return this;
-        }
 
         /**
          * OwnerAccount.
@@ -156,8 +132,8 @@ public class ListMediaDNADeleteJobRequest extends Request {
         }
 
         @Override
-        public ListMediaDNADeleteJobRequest build() {
-            return new ListMediaDNADeleteJobRequest(this);
+        public GenerateKMSDataKeyRequest build() {
+            return new GenerateKMSDataKeyRequest(this);
         } 
 
     } 

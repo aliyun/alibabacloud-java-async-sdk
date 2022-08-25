@@ -127,15 +127,15 @@ public class SubmitTranscodeJobsRequest extends Request {
             super();
         } 
 
-        private Builder(SubmitTranscodeJobsRequest response) {
-            super(response);
-            this.encryptConfig = response.encryptConfig;
-            this.overrideParams = response.overrideParams;
-            this.pipelineId = response.pipelineId;
-            this.priority = response.priority;
-            this.templateGroupId = response.templateGroupId;
-            this.userData = response.userData;
-            this.videoId = response.videoId;
+        private Builder(SubmitTranscodeJobsRequest request) {
+            super(request);
+            this.encryptConfig = request.encryptConfig;
+            this.overrideParams = request.overrideParams;
+            this.pipelineId = request.pipelineId;
+            this.priority = request.priority;
+            this.templateGroupId = request.templateGroupId;
+            this.userData = request.userData;
+            this.videoId = request.videoId;
         } 
 
         /**

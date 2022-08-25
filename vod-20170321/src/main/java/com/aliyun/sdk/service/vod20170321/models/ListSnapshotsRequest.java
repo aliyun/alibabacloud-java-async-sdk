@@ -101,13 +101,13 @@ public class ListSnapshotsRequest extends Request {
             super();
         } 
 
-        private Builder(ListSnapshotsRequest response) {
-            super(response);
-            this.authTimeout = response.authTimeout;
-            this.pageNo = response.pageNo;
-            this.pageSize = response.pageSize;
-            this.snapshotType = response.snapshotType;
-            this.videoId = response.videoId;
+        private Builder(ListSnapshotsRequest request) {
+            super(request);
+            this.authTimeout = request.authTimeout;
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
+            this.snapshotType = request.snapshotType;
+            this.videoId = request.videoId;
         } 
 
         /**

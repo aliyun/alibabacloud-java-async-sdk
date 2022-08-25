@@ -76,11 +76,11 @@ public class SubmitDynamicImageJobRequest extends Request {
             super();
         } 
 
-        private Builder(SubmitDynamicImageJobRequest response) {
-            super(response);
-            this.dynamicImageTemplateId = response.dynamicImageTemplateId;
-            this.overrideParams = response.overrideParams;
-            this.videoId = response.videoId;
+        private Builder(SubmitDynamicImageJobRequest request) {
+            super(request);
+            this.dynamicImageTemplateId = request.dynamicImageTemplateId;
+            this.overrideParams = request.overrideParams;
+            this.videoId = request.videoId;
         } 
 
         /**

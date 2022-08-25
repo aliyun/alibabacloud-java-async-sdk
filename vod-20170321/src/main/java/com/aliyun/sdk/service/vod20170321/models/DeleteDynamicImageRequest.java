@@ -62,10 +62,10 @@ public class DeleteDynamicImageRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteDynamicImageRequest response) {
-            super(response);
-            this.dynamicImageIds = response.dynamicImageIds;
-            this.videoId = response.videoId;
+        private Builder(DeleteDynamicImageRequest request) {
+            super(request);
+            this.dynamicImageIds = request.dynamicImageIds;
+            this.videoId = request.videoId;
         } 
 
         /**

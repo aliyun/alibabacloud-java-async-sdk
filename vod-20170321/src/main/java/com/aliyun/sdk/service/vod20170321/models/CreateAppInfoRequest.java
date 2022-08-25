@@ -62,10 +62,10 @@ public class CreateAppInfoRequest extends Request {
             super();
         } 
 
-        private Builder(CreateAppInfoRequest response) {
-            super(response);
-            this.appName = response.appName;
-            this.description = response.description;
+        private Builder(CreateAppInfoRequest request) {
+            super(request);
+            this.appName = request.appName;
+            this.description = request.description;
         } 
 
         /**

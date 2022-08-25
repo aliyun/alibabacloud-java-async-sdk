@@ -49,9 +49,9 @@ public class DeleteAIImageInfosRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteAIImageInfosRequest response) {
-            super(response);
-            this.AIImageInfoIds = response.AIImageInfoIds;
+        private Builder(DeleteAIImageInfosRequest request) {
+            super(request);
+            this.AIImageInfoIds = request.AIImageInfoIds;
         } 
 
         /**

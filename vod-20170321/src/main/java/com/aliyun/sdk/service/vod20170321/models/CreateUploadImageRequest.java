@@ -153,17 +153,17 @@ public class CreateUploadImageRequest extends Request {
             super();
         } 
 
-        private Builder(CreateUploadImageRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.cateId = response.cateId;
-            this.description = response.description;
-            this.imageExt = response.imageExt;
-            this.imageType = response.imageType;
-            this.storageLocation = response.storageLocation;
-            this.tags = response.tags;
-            this.title = response.title;
-            this.userData = response.userData;
+        private Builder(CreateUploadImageRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.cateId = request.cateId;
+            this.description = request.description;
+            this.imageExt = request.imageExt;
+            this.imageType = request.imageType;
+            this.storageLocation = request.storageLocation;
+            this.tags = request.tags;
+            this.title = request.title;
+            this.userData = request.userData;
         } 
 
         /**

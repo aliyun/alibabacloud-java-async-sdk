@@ -49,9 +49,9 @@ public class ListDynamicImageRequest extends Request {
             super();
         } 
 
-        private Builder(ListDynamicImageRequest response) {
-            super(response);
-            this.videoId = response.videoId;
+        private Builder(ListDynamicImageRequest request) {
+            super(request);
+            this.videoId = request.videoId;
         } 
 
         /**

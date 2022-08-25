@@ -76,11 +76,11 @@ public class DescribePlayUserTotalRequest extends Request {
             super();
         } 
 
-        private Builder(DescribePlayUserTotalRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.ownerId = response.ownerId;
-            this.startTime = response.startTime;
+        private Builder(DescribePlayUserTotalRequest request) {
+            super(request);
+            this.endTime = request.endTime;
+            this.ownerId = request.ownerId;
+            this.startTime = request.startTime;
         } 
 
         /**

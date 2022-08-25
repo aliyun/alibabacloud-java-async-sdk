@@ -178,19 +178,19 @@ public class ProduceEditingProjectVideoRequest extends Request {
             super();
         } 
 
-        private Builder(ProduceEditingProjectVideoRequest response) {
-            super(response);
-            this.coverURL = response.coverURL;
-            this.description = response.description;
-            this.mediaMetadata = response.mediaMetadata;
-            this.ownerId = response.ownerId;
-            this.produceConfig = response.produceConfig;
-            this.projectId = response.projectId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.timeline = response.timeline;
-            this.title = response.title;
-            this.userData = response.userData;
+        private Builder(ProduceEditingProjectVideoRequest request) {
+            super(request);
+            this.coverURL = request.coverURL;
+            this.description = request.description;
+            this.mediaMetadata = request.mediaMetadata;
+            this.ownerId = request.ownerId;
+            this.produceConfig = request.produceConfig;
+            this.projectId = request.projectId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.timeline = request.timeline;
+            this.title = request.title;
+            this.userData = request.userData;
         } 
 
         /**

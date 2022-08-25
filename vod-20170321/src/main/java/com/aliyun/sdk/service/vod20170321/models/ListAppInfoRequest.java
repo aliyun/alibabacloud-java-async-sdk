@@ -74,11 +74,11 @@ public class ListAppInfoRequest extends Request {
             super();
         } 
 
-        private Builder(ListAppInfoRequest response) {
-            super(response);
-            this.pageNo = response.pageNo;
-            this.pageSize = response.pageSize;
-            this.status = response.status;
+        private Builder(ListAppInfoRequest request) {
+            super(request);
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
+            this.status = request.status;
         } 
 
         /**

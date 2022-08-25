@@ -101,13 +101,13 @@ public class UpdateVodDomainRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateVodDomainRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
-            this.sources = response.sources;
-            this.topLevelDomain = response.topLevelDomain;
+        private Builder(UpdateVodDomainRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
+            this.sources = request.sources;
+            this.topLevelDomain = request.topLevelDomain;
         } 
 
         /**

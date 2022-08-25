@@ -102,13 +102,13 @@ public class BatchSetVodDomainConfigsRequest extends Request {
             super();
         } 
 
-        private Builder(BatchSetVodDomainConfigsRequest response) {
-            super(response);
-            this.domainNames = response.domainNames;
-            this.functions = response.functions;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
+        private Builder(BatchSetVodDomainConfigsRequest request) {
+            super(request);
+            this.domainNames = request.domainNames;
+            this.functions = request.functions;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
         } 
 
         /**

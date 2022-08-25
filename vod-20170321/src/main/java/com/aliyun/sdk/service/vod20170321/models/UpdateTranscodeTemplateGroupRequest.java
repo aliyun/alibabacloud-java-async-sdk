@@ -88,12 +88,12 @@ public class UpdateTranscodeTemplateGroupRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateTranscodeTemplateGroupRequest response) {
-            super(response);
-            this.locked = response.locked;
-            this.name = response.name;
-            this.transcodeTemplateGroupId = response.transcodeTemplateGroupId;
-            this.transcodeTemplateList = response.transcodeTemplateList;
+        private Builder(UpdateTranscodeTemplateGroupRequest request) {
+            super(request);
+            this.locked = request.locked;
+            this.name = request.name;
+            this.transcodeTemplateGroupId = request.transcodeTemplateGroupId;
+            this.transcodeTemplateList = request.transcodeTemplateList;
         } 
 
         /**

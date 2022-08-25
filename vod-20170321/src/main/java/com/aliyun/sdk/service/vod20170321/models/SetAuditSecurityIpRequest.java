@@ -75,11 +75,11 @@ public class SetAuditSecurityIpRequest extends Request {
             super();
         } 
 
-        private Builder(SetAuditSecurityIpRequest response) {
-            super(response);
-            this.ips = response.ips;
-            this.operateMode = response.operateMode;
-            this.securityGroupName = response.securityGroupName;
+        private Builder(SetAuditSecurityIpRequest request) {
+            super(request);
+            this.ips = request.ips;
+            this.operateMode = request.operateMode;
+            this.securityGroupName = request.securityGroupName;
         } 
 
         /**

@@ -49,9 +49,9 @@ public class DeleteAITemplateRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteAITemplateRequest response) {
-            super(response);
-            this.templateId = response.templateId;
+        private Builder(DeleteAITemplateRequest request) {
+            super(request);
+            this.templateId = request.templateId;
         } 
 
         /**

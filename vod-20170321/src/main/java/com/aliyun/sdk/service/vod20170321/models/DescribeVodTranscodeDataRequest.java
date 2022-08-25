@@ -128,15 +128,15 @@ public class DescribeVodTranscodeDataRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeVodTranscodeDataRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.interval = response.interval;
-            this.ownerId = response.ownerId;
-            this.region = response.region;
-            this.specification = response.specification;
-            this.startTime = response.startTime;
-            this.storage = response.storage;
+        private Builder(DescribeVodTranscodeDataRequest request) {
+            super(request);
+            this.endTime = request.endTime;
+            this.interval = request.interval;
+            this.ownerId = request.ownerId;
+            this.region = request.region;
+            this.specification = request.specification;
+            this.startTime = request.startTime;
+            this.storage = request.storage;
         } 
 
         /**

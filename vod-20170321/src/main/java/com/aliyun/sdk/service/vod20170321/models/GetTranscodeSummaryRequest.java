@@ -49,9 +49,9 @@ public class GetTranscodeSummaryRequest extends Request {
             super();
         } 
 
-        private Builder(GetTranscodeSummaryRequest response) {
-            super(response);
-            this.videoIds = response.videoIds;
+        private Builder(GetTranscodeSummaryRequest request) {
+            super(request);
+            this.videoIds = request.videoIds;
         } 
 
         /**

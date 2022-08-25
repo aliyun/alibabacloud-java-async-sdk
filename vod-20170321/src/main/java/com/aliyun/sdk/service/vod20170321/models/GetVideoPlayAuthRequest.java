@@ -75,11 +75,11 @@ public class GetVideoPlayAuthRequest extends Request {
             super();
         } 
 
-        private Builder(GetVideoPlayAuthRequest response) {
-            super(response);
-            this.apiVersion = response.apiVersion;
-            this.authInfoTimeout = response.authInfoTimeout;
-            this.videoId = response.videoId;
+        private Builder(GetVideoPlayAuthRequest request) {
+            super(request);
+            this.apiVersion = request.apiVersion;
+            this.authInfoTimeout = request.authInfoTimeout;
+            this.videoId = request.videoId;
         } 
 
         /**

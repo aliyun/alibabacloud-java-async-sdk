@@ -48,9 +48,9 @@ public class ListTranscodeTemplateGroupRequest extends Request {
             super();
         } 
 
-        private Builder(ListTranscodeTemplateGroupRequest response) {
-            super(response);
-            this.appId = response.appId;
+        private Builder(ListTranscodeTemplateGroupRequest request) {
+            super(request);
+            this.appId = request.appId;
         } 
 
         /**

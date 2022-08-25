@@ -63,10 +63,10 @@ public class DeleteStreamRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteStreamRequest response) {
-            super(response);
-            this.jobIds = response.jobIds;
-            this.videoId = response.videoId;
+        private Builder(DeleteStreamRequest request) {
+            super(request);
+            this.jobIds = request.jobIds;
+            this.videoId = request.videoId;
         } 
 
         /**

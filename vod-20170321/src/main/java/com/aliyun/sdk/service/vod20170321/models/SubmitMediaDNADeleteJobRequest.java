@@ -101,13 +101,13 @@ public class SubmitMediaDNADeleteJobRequest extends Request {
             super();
         } 
 
-        private Builder(SubmitMediaDNADeleteJobRequest response) {
-            super(response);
-            this.mediaId = response.mediaId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(SubmitMediaDNADeleteJobRequest request) {
+            super(request);
+            this.mediaId = request.mediaId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

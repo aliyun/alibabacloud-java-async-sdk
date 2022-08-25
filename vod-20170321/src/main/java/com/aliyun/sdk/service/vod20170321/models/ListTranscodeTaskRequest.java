@@ -101,13 +101,13 @@ public class ListTranscodeTaskRequest extends Request {
             super();
         } 
 
-        private Builder(ListTranscodeTaskRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.pageNo = response.pageNo;
-            this.pageSize = response.pageSize;
-            this.startTime = response.startTime;
-            this.videoId = response.videoId;
+        private Builder(ListTranscodeTaskRequest request) {
+            super(request);
+            this.endTime = request.endTime;
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
+            this.startTime = request.startTime;
+            this.videoId = request.videoId;
         } 
 
         /**

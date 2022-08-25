@@ -49,9 +49,9 @@ public class UpdateImageInfosRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateImageInfosRequest response) {
-            super(response);
-            this.updateContent = response.updateContent;
+        private Builder(UpdateImageInfosRequest request) {
+            super(request);
+            this.updateContent = request.updateContent;
         } 
 
         /**

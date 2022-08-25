@@ -85,18 +85,18 @@ public class DescribePlayVideoStatisResponseBody extends TeaModel {
         private String title;
 
         @NameInMap("UV")
-        private String UV;
+        private String uv;
 
         @NameInMap("VV")
-        private String VV;
+        private String vv;
 
         private VideoPlayStatisDetail(Builder builder) {
             this.date = builder.date;
             this.playDuration = builder.playDuration;
             this.playRange = builder.playRange;
             this.title = builder.title;
-            this.UV = builder.UV;
-            this.VV = builder.VV;
+            this.uv = builder.uv;
+            this.vv = builder.vv;
         }
 
         public static Builder builder() {
@@ -136,17 +136,17 @@ public class DescribePlayVideoStatisResponseBody extends TeaModel {
         }
 
         /**
-         * @return UV
+         * @return uv
          */
-        public String getUV() {
-            return this.UV;
+        public String getUv() {
+            return this.uv;
         }
 
         /**
-         * @return VV
+         * @return vv
          */
-        public String getVV() {
-            return this.VV;
+        public String getVv() {
+            return this.vv;
         }
 
         public static final class Builder {
@@ -154,8 +154,8 @@ public class DescribePlayVideoStatisResponseBody extends TeaModel {
             private String playDuration; 
             private String playRange; 
             private String title; 
-            private String UV; 
-            private String VV; 
+            private String uv; 
+            private String vv; 
 
             /**
              * Date.
@@ -192,16 +192,16 @@ public class DescribePlayVideoStatisResponseBody extends TeaModel {
             /**
              * UV.
              */
-            public Builder UV(String UV) {
-                this.UV = UV;
+            public Builder uv(String uv) {
+                this.uv = uv;
                 return this;
             }
 
             /**
              * VV.
              */
-            public Builder VV(String VV) {
-                this.VV = VV;
+            public Builder vv(String vv) {
+                this.vv = vv;
                 return this;
             }
 

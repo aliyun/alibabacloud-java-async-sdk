@@ -89,12 +89,12 @@ public class DescribeVodDomainConfigsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeVodDomainConfigsRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.functionNames = response.functionNames;
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
+        private Builder(DescribeVodDomainConfigsRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.functionNames = request.functionNames;
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
         } 
 
         /**

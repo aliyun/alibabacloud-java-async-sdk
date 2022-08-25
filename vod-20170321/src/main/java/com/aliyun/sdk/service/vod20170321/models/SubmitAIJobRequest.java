@@ -139,16 +139,16 @@ public class SubmitAIJobRequest extends Request {
             super();
         } 
 
-        private Builder(SubmitAIJobRequest response) {
-            super(response);
-            this.config = response.config;
-            this.mediaId = response.mediaId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.types = response.types;
-            this.userData = response.userData;
+        private Builder(SubmitAIJobRequest request) {
+            super(request);
+            this.config = request.config;
+            this.mediaId = request.mediaId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.types = request.types;
+            this.userData = request.userData;
         } 
 
         /**

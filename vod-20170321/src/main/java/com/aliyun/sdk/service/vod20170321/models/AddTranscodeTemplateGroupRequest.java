@@ -87,12 +87,12 @@ public class AddTranscodeTemplateGroupRequest extends Request {
             super();
         } 
 
-        private Builder(AddTranscodeTemplateGroupRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.name = response.name;
-            this.transcodeTemplateGroupId = response.transcodeTemplateGroupId;
-            this.transcodeTemplateList = response.transcodeTemplateList;
+        private Builder(AddTranscodeTemplateGroupRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.name = request.name;
+            this.transcodeTemplateGroupId = request.transcodeTemplateGroupId;
+            this.transcodeTemplateList = request.transcodeTemplateList;
         } 
 
         /**

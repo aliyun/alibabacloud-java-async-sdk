@@ -49,9 +49,9 @@ public class DeleteWatermarkRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteWatermarkRequest response) {
-            super(response);
-            this.watermarkId = response.watermarkId;
+        private Builder(DeleteWatermarkRequest request) {
+            super(request);
+            this.watermarkId = request.watermarkId;
         } 
 
         /**

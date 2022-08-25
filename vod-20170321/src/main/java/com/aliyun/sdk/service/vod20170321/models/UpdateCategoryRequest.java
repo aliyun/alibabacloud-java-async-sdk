@@ -63,10 +63,10 @@ public class UpdateCategoryRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateCategoryRequest response) {
-            super(response);
-            this.cateId = response.cateId;
-            this.cateName = response.cateName;
+        private Builder(UpdateCategoryRequest request) {
+            super(request);
+            this.cateId = request.cateId;
+            this.cateName = request.cateName;
         } 
 
         /**

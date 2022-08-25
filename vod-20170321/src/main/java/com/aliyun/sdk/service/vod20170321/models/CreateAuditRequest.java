@@ -49,9 +49,9 @@ public class CreateAuditRequest extends Request {
             super();
         } 
 
-        private Builder(CreateAuditRequest response) {
-            super(response);
-            this.auditContent = response.auditContent;
+        private Builder(CreateAuditRequest request) {
+            super(request);
+            this.auditContent = request.auditContent;
         } 
 
         /**

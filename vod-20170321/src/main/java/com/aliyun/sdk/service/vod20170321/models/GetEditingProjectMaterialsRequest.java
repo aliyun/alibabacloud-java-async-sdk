@@ -127,15 +127,15 @@ public class GetEditingProjectMaterialsRequest extends Request {
             super();
         } 
 
-        private Builder(GetEditingProjectMaterialsRequest response) {
-            super(response);
-            this.materialType = response.materialType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.projectId = response.projectId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.type = response.type;
+        private Builder(GetEditingProjectMaterialsRequest request) {
+            super(request);
+            this.materialType = request.materialType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.projectId = request.projectId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.type = request.type;
         } 
 
         /**

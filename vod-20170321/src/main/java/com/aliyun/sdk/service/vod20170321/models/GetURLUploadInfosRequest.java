@@ -61,10 +61,10 @@ public class GetURLUploadInfosRequest extends Request {
             super();
         } 
 
-        private Builder(GetURLUploadInfosRequest response) {
-            super(response);
-            this.jobIds = response.jobIds;
-            this.uploadURLs = response.uploadURLs;
+        private Builder(GetURLUploadInfosRequest request) {
+            super(request);
+            this.jobIds = request.jobIds;
+            this.uploadURLs = request.uploadURLs;
         } 
 
         /**

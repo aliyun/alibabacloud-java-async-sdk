@@ -88,12 +88,12 @@ public class RefreshUploadVideoRequest extends Request {
             super();
         } 
 
-        private Builder(RefreshUploadVideoRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.videoId = response.videoId;
+        private Builder(RefreshUploadVideoRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.videoId = request.videoId;
         } 
 
         /**

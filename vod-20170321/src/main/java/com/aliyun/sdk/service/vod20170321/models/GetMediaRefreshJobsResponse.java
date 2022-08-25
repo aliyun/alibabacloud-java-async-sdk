@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link UpdateStreamInfoResponse} extends {@link TeaModel}
+ * {@link GetMediaRefreshJobsResponse} extends {@link TeaModel}
  *
- * <p>UpdateStreamInfoResponse</p>
+ * <p>GetMediaRefreshJobsResponse</p>
  */
-public class UpdateStreamInfoResponse extends Response {
+public class GetMediaRefreshJobsResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private UpdateStreamInfoResponseBody body;
+    private GetMediaRefreshJobsResponseBody body;
 
-    private UpdateStreamInfoResponse(BuilderImpl builder) {
+    private GetMediaRefreshJobsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static UpdateStreamInfoResponse create() {
+    public static GetMediaRefreshJobsResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class UpdateStreamInfoResponse extends Response {
     /**
      * @return body
      */
-    public UpdateStreamInfoResponseBody getBody() {
+    public GetMediaRefreshJobsResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<UpdateStreamInfoResponse, Builder> {
+    public interface Builder extends Response.Builder<GetMediaRefreshJobsResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(UpdateStreamInfoResponseBody body);
+        Builder body(GetMediaRefreshJobsResponseBody body);
 
         @Override
-        UpdateStreamInfoResponse build();
+        GetMediaRefreshJobsResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<UpdateStreamInfoResponse, Builder>
+            extends Response.BuilderImpl<GetMediaRefreshJobsResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private UpdateStreamInfoResponseBody body; 
+        private GetMediaRefreshJobsResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(UpdateStreamInfoResponse response) {
+        private BuilderImpl(GetMediaRefreshJobsResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class UpdateStreamInfoResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(UpdateStreamInfoResponseBody body) {
+        public Builder body(GetMediaRefreshJobsResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public UpdateStreamInfoResponse build() {
-            return new UpdateStreamInfoResponse(this);
+        public GetMediaRefreshJobsResponse build() {
+            return new GetMediaRefreshJobsResponse(this);
         } 
 
     } 

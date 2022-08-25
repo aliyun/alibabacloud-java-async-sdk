@@ -90,12 +90,12 @@ public class AddVodTemplateRequest extends Request {
             super();
         } 
 
-        private Builder(AddVodTemplateRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.name = response.name;
-            this.templateConfig = response.templateConfig;
-            this.templateType = response.templateType;
+        private Builder(AddVodTemplateRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.name = request.name;
+            this.templateConfig = request.templateConfig;
+            this.templateType = request.templateType;
         } 
 
         /**

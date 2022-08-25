@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeVodUserTagsResponse} extends {@link TeaModel}
+ * {@link RefreshMediaPlayUrlsResponse} extends {@link TeaModel}
  *
- * <p>DescribeVodUserTagsResponse</p>
+ * <p>RefreshMediaPlayUrlsResponse</p>
  */
-public class DescribeVodUserTagsResponse extends Response {
+public class RefreshMediaPlayUrlsResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private DescribeVodUserTagsResponseBody body;
+    private RefreshMediaPlayUrlsResponseBody body;
 
-    private DescribeVodUserTagsResponse(BuilderImpl builder) {
+    private RefreshMediaPlayUrlsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static DescribeVodUserTagsResponse create() {
+    public static RefreshMediaPlayUrlsResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class DescribeVodUserTagsResponse extends Response {
     /**
      * @return body
      */
-    public DescribeVodUserTagsResponseBody getBody() {
+    public RefreshMediaPlayUrlsResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribeVodUserTagsResponse, Builder> {
+    public interface Builder extends Response.Builder<RefreshMediaPlayUrlsResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(DescribeVodUserTagsResponseBody body);
+        Builder body(RefreshMediaPlayUrlsResponseBody body);
 
         @Override
-        DescribeVodUserTagsResponse build();
+        RefreshMediaPlayUrlsResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribeVodUserTagsResponse, Builder>
+            extends Response.BuilderImpl<RefreshMediaPlayUrlsResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private DescribeVodUserTagsResponseBody body; 
+        private RefreshMediaPlayUrlsResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribeVodUserTagsResponse response) {
+        private BuilderImpl(RefreshMediaPlayUrlsResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class DescribeVodUserTagsResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DescribeVodUserTagsResponseBody body) {
+        public Builder body(RefreshMediaPlayUrlsResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribeVodUserTagsResponse build() {
-            return new DescribeVodUserTagsResponse(this);
+        public RefreshMediaPlayUrlsResponse build() {
+            return new RefreshMediaPlayUrlsResponse(this);
         } 
 
     } 

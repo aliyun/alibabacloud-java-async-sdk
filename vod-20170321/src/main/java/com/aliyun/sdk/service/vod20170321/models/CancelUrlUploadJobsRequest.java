@@ -61,10 +61,10 @@ public class CancelUrlUploadJobsRequest extends Request {
             super();
         } 
 
-        private Builder(CancelUrlUploadJobsRequest response) {
-            super(response);
-            this.jobIds = response.jobIds;
-            this.uploadUrls = response.uploadUrls;
+        private Builder(CancelUrlUploadJobsRequest request) {
+            super(request);
+            this.jobIds = request.jobIds;
+            this.uploadUrls = request.uploadUrls;
         } 
 
         /**

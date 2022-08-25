@@ -127,15 +127,15 @@ public class UploadMediaByURLRequest extends Request {
             super();
         } 
 
-        private Builder(UploadMediaByURLRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.storageLocation = response.storageLocation;
-            this.templateGroupId = response.templateGroupId;
-            this.uploadMetadatas = response.uploadMetadatas;
-            this.uploadURLs = response.uploadURLs;
-            this.userData = response.userData;
-            this.workflowId = response.workflowId;
+        private Builder(UploadMediaByURLRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.storageLocation = request.storageLocation;
+            this.templateGroupId = request.templateGroupId;
+            this.uploadMetadatas = request.uploadMetadatas;
+            this.uploadURLs = request.uploadURLs;
+            this.userData = request.userData;
+            this.workflowId = request.workflowId;
         } 
 
         /**

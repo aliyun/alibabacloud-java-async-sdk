@@ -115,14 +115,14 @@ public class DescribeVodStorageDataRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeVodStorageDataRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.ownerId = response.ownerId;
-            this.region = response.region;
-            this.startTime = response.startTime;
-            this.storage = response.storage;
-            this.storageType = response.storageType;
+        private Builder(DescribeVodStorageDataRequest request) {
+            super(request);
+            this.endTime = request.endTime;
+            this.ownerId = request.ownerId;
+            this.region = request.region;
+            this.startTime = request.startTime;
+            this.storage = request.storage;
+            this.storageType = request.storageType;
         } 
 
         /**

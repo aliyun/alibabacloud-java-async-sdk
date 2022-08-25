@@ -88,12 +88,12 @@ public class GetAuditHistoryRequest extends Request {
             super();
         } 
 
-        private Builder(GetAuditHistoryRequest response) {
-            super(response);
-            this.pageNo = response.pageNo;
-            this.pageSize = response.pageSize;
-            this.sortBy = response.sortBy;
-            this.videoId = response.videoId;
+        private Builder(GetAuditHistoryRequest request) {
+            super(request);
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
+            this.sortBy = request.sortBy;
+            this.videoId = request.videoId;
         } 
 
         /**

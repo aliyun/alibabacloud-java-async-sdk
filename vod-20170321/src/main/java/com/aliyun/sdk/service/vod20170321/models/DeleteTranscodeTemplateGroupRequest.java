@@ -75,11 +75,11 @@ public class DeleteTranscodeTemplateGroupRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteTranscodeTemplateGroupRequest response) {
-            super(response);
-            this.forceDelGroup = response.forceDelGroup;
-            this.transcodeTemplateGroupId = response.transcodeTemplateGroupId;
-            this.transcodeTemplateIds = response.transcodeTemplateIds;
+        private Builder(DeleteTranscodeTemplateGroupRequest request) {
+            super(request);
+            this.forceDelGroup = request.forceDelGroup;
+            this.transcodeTemplateGroupId = request.transcodeTemplateGroupId;
+            this.transcodeTemplateIds = request.transcodeTemplateIds;
         } 
 
         /**

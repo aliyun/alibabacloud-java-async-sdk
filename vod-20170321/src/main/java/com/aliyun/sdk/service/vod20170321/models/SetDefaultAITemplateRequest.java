@@ -49,9 +49,9 @@ public class SetDefaultAITemplateRequest extends Request {
             super();
         } 
 
-        private Builder(SetDefaultAITemplateRequest response) {
-            super(response);
-            this.templateId = response.templateId;
+        private Builder(SetDefaultAITemplateRequest request) {
+            super(request);
+            this.templateId = request.templateId;
         } 
 
         /**

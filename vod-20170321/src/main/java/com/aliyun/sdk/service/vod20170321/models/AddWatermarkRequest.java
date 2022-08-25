@@ -103,13 +103,13 @@ public class AddWatermarkRequest extends Request {
             super();
         } 
 
-        private Builder(AddWatermarkRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.fileUrl = response.fileUrl;
-            this.name = response.name;
-            this.type = response.type;
-            this.watermarkConfig = response.watermarkConfig;
+        private Builder(AddWatermarkRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.fileUrl = request.fileUrl;
+            this.name = request.name;
+            this.type = request.type;
+            this.watermarkConfig = request.watermarkConfig;
         } 
 
         /**

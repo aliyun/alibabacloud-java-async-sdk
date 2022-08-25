@@ -49,9 +49,9 @@ public class ListAIImageInfoRequest extends Request {
             super();
         } 
 
-        private Builder(ListAIImageInfoRequest response) {
-            super(response);
-            this.videoId = response.videoId;
+        private Builder(ListAIImageInfoRequest request) {
+            super(request);
+            this.videoId = request.videoId;
         } 
 
         /**

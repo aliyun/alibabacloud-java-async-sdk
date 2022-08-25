@@ -62,10 +62,10 @@ public class DeleteMezzaninesRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteMezzaninesRequest response) {
-            super(response);
-            this.force = response.force;
-            this.videoIds = response.videoIds;
+        private Builder(DeleteMezzaninesRequest request) {
+            super(request);
+            this.force = request.force;
+            this.videoIds = request.videoIds;
         } 
 
         /**

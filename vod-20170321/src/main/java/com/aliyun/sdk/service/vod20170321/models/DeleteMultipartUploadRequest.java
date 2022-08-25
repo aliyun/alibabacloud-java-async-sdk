@@ -76,11 +76,11 @@ public class DeleteMultipartUploadRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteMultipartUploadRequest response) {
-            super(response);
-            this.mediaId = response.mediaId;
-            this.mediaType = response.mediaType;
-            this.ownerAccount = response.ownerAccount;
+        private Builder(DeleteMultipartUploadRequest request) {
+            super(request);
+            this.mediaId = request.mediaId;
+            this.mediaType = request.mediaType;
+            this.ownerAccount = request.ownerAccount;
         } 
 
         /**

@@ -77,11 +77,11 @@ public class MoveAppResourceRequest extends Request {
             super();
         } 
 
-        private Builder(MoveAppResourceRequest response) {
-            super(response);
-            this.resourceIds = response.resourceIds;
-            this.resourceType = response.resourceType;
-            this.targetAppId = response.targetAppId;
+        private Builder(MoveAppResourceRequest request) {
+            super(request);
+            this.resourceIds = request.resourceIds;
+            this.resourceType = request.resourceType;
+            this.targetAppId = request.targetAppId;
         } 
 
         /**

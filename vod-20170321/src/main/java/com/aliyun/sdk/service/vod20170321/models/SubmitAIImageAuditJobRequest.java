@@ -128,15 +128,15 @@ public class SubmitAIImageAuditJobRequest extends Request {
             super();
         } 
 
-        private Builder(SubmitAIImageAuditJobRequest response) {
-            super(response);
-            this.mediaAuditConfiguration = response.mediaAuditConfiguration;
-            this.mediaId = response.mediaId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.templateId = response.templateId;
+        private Builder(SubmitAIImageAuditJobRequest request) {
+            super(request);
+            this.mediaAuditConfiguration = request.mediaAuditConfiguration;
+            this.mediaId = request.mediaId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.templateId = request.templateId;
         } 
 
         /**

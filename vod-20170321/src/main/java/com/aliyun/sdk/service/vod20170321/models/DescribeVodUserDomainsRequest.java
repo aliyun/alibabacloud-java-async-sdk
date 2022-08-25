@@ -140,16 +140,16 @@ public class DescribeVodUserDomainsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeVodUserDomainsRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.domainSearchType = response.domainSearchType;
-            this.domainStatus = response.domainStatus;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.securityToken = response.securityToken;
-            this.tag = response.tag;
+        private Builder(DescribeVodUserDomainsRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.domainSearchType = request.domainSearchType;
+            this.domainStatus = request.domainStatus;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.securityToken = request.securityToken;
+            this.tag = request.tag;
         } 
 
         /**

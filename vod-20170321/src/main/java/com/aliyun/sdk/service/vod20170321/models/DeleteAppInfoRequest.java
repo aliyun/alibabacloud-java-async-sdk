@@ -49,9 +49,9 @@ public class DeleteAppInfoRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteAppInfoRequest response) {
-            super(response);
-            this.appId = response.appId;
+        private Builder(DeleteAppInfoRequest request) {
+            super(request);
+            this.appId = request.appId;
         } 
 
         /**

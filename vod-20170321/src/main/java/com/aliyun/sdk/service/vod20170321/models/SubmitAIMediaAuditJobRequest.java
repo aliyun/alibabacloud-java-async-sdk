@@ -101,13 +101,13 @@ public class SubmitAIMediaAuditJobRequest extends Request {
             super();
         } 
 
-        private Builder(SubmitAIMediaAuditJobRequest response) {
-            super(response);
-            this.mediaAuditConfiguration = response.mediaAuditConfiguration;
-            this.mediaId = response.mediaId;
-            this.mediaType = response.mediaType;
-            this.templateId = response.templateId;
-            this.userData = response.userData;
+        private Builder(SubmitAIMediaAuditJobRequest request) {
+            super(request);
+            this.mediaAuditConfiguration = request.mediaAuditConfiguration;
+            this.mediaId = request.mediaId;
+            this.mediaType = request.mediaType;
+            this.templateId = request.templateId;
+            this.userData = request.userData;
         } 
 
         /**

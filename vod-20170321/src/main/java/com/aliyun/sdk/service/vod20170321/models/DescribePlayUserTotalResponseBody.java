@@ -71,7 +71,7 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
 
     } 
 
-    public static class UV extends TeaModel {
+    public static class Uv extends TeaModel {
         @NameInMap("Android")
         private String android;
 
@@ -84,7 +84,7 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
         @NameInMap("iOS")
         private String iOS;
 
-        private UV(Builder builder) {
+        private Uv(Builder builder) {
             this.android = builder.android;
             this.flash = builder.flash;
             this.HTML5 = builder.HTML5;
@@ -95,7 +95,7 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static UV create() {
+        public static Uv create() {
             return builder().build();
         }
 
@@ -165,14 +165,14 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
                 return this;
             }
 
-            public UV build() {
-                return new UV(this);
+            public Uv build() {
+                return new Uv(this);
             } 
 
         } 
 
     }
-    public static class VV extends TeaModel {
+    public static class Vv extends TeaModel {
         @NameInMap("Android")
         private String android;
 
@@ -185,7 +185,7 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
         @NameInMap("iOS")
         private String iOS;
 
-        private VV(Builder builder) {
+        private Vv(Builder builder) {
             this.android = builder.android;
             this.flash = builder.flash;
             this.HTML5 = builder.HTML5;
@@ -196,7 +196,7 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static VV create() {
+        public static Vv create() {
             return builder().build();
         }
 
@@ -266,8 +266,8 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
                 return this;
             }
 
-            public VV build() {
-                return new VV(this);
+            public Vv build() {
+                return new Vv(this);
             } 
 
         } 
@@ -284,17 +284,17 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
         private String playRange;
 
         @NameInMap("UV")
-        private UV UV;
+        private Uv uv;
 
         @NameInMap("VV")
-        private VV VV;
+        private Vv vv;
 
         private UserPlayStatisTotal(Builder builder) {
             this.date = builder.date;
             this.playDuration = builder.playDuration;
             this.playRange = builder.playRange;
-            this.UV = builder.UV;
-            this.VV = builder.VV;
+            this.uv = builder.uv;
+            this.vv = builder.vv;
         }
 
         public static Builder builder() {
@@ -327,25 +327,25 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
         }
 
         /**
-         * @return UV
+         * @return uv
          */
-        public UV getUV() {
-            return this.UV;
+        public Uv getUv() {
+            return this.uv;
         }
 
         /**
-         * @return VV
+         * @return vv
          */
-        public VV getVV() {
-            return this.VV;
+        public Vv getVv() {
+            return this.vv;
         }
 
         public static final class Builder {
             private String date; 
             private String playDuration; 
             private String playRange; 
-            private UV UV; 
-            private VV VV; 
+            private Uv uv; 
+            private Vv vv; 
 
             /**
              * Date.
@@ -374,16 +374,16 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
             /**
              * UV.
              */
-            public Builder UV(UV UV) {
-                this.UV = UV;
+            public Builder uv(Uv uv) {
+                this.uv = uv;
                 return this;
             }
 
             /**
              * VV.
              */
-            public Builder VV(VV VV) {
-                this.VV = VV;
+            public Builder vv(Vv vv) {
+                this.vv = vv;
                 return this;
             }
 

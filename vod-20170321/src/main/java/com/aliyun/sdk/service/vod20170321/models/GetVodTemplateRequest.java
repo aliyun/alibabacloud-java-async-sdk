@@ -49,9 +49,9 @@ public class GetVodTemplateRequest extends Request {
             super();
         } 
 
-        private Builder(GetVodTemplateRequest response) {
-            super(response);
-            this.vodTemplateId = response.vodTemplateId;
+        private Builder(GetVodTemplateRequest request) {
+            super(request);
+            this.vodTemplateId = request.vodTemplateId;
         } 
 
         /**

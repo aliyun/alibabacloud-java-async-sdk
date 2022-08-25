@@ -76,11 +76,11 @@ public class UpdateWatermarkRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateWatermarkRequest response) {
-            super(response);
-            this.name = response.name;
-            this.watermarkConfig = response.watermarkConfig;
-            this.watermarkId = response.watermarkId;
+        private Builder(UpdateWatermarkRequest request) {
+            super(request);
+            this.name = request.name;
+            this.watermarkConfig = request.watermarkConfig;
+            this.watermarkId = request.watermarkId;
         } 
 
         /**

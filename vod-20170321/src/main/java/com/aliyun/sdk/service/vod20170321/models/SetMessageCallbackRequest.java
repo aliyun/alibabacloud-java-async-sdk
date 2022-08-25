@@ -152,17 +152,17 @@ public class SetMessageCallbackRequest extends Request {
             super();
         } 
 
-        private Builder(SetMessageCallbackRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.authKey = response.authKey;
-            this.authSwitch = response.authSwitch;
-            this.callbackType = response.callbackType;
-            this.callbackURL = response.callbackURL;
-            this.eventTypeList = response.eventTypeList;
-            this.mnsEndpoint = response.mnsEndpoint;
-            this.mnsQueueName = response.mnsQueueName;
-            this.ownerAccount = response.ownerAccount;
+        private Builder(SetMessageCallbackRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.authKey = request.authKey;
+            this.authSwitch = request.authSwitch;
+            this.callbackType = request.callbackType;
+            this.callbackURL = request.callbackURL;
+            this.eventTypeList = request.eventTypeList;
+            this.mnsEndpoint = request.mnsEndpoint;
+            this.mnsQueueName = request.mnsQueueName;
+            this.ownerAccount = request.ownerAccount;
         } 
 
         /**

@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DisableVodRealtimeLogDeliveryResponse} extends {@link TeaModel}
+ * {@link GetImageInfosResponse} extends {@link TeaModel}
  *
- * <p>DisableVodRealtimeLogDeliveryResponse</p>
+ * <p>GetImageInfosResponse</p>
  */
-public class DisableVodRealtimeLogDeliveryResponse extends Response {
+public class GetImageInfosResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private DisableVodRealtimeLogDeliveryResponseBody body;
+    private GetImageInfosResponseBody body;
 
-    private DisableVodRealtimeLogDeliveryResponse(BuilderImpl builder) {
+    private GetImageInfosResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static DisableVodRealtimeLogDeliveryResponse create() {
+    public static GetImageInfosResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class DisableVodRealtimeLogDeliveryResponse extends Response {
     /**
      * @return body
      */
-    public DisableVodRealtimeLogDeliveryResponseBody getBody() {
+    public GetImageInfosResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DisableVodRealtimeLogDeliveryResponse, Builder> {
+    public interface Builder extends Response.Builder<GetImageInfosResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(DisableVodRealtimeLogDeliveryResponseBody body);
+        Builder body(GetImageInfosResponseBody body);
 
         @Override
-        DisableVodRealtimeLogDeliveryResponse build();
+        GetImageInfosResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DisableVodRealtimeLogDeliveryResponse, Builder>
+            extends Response.BuilderImpl<GetImageInfosResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private DisableVodRealtimeLogDeliveryResponseBody body; 
+        private GetImageInfosResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DisableVodRealtimeLogDeliveryResponse response) {
+        private BuilderImpl(GetImageInfosResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class DisableVodRealtimeLogDeliveryResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DisableVodRealtimeLogDeliveryResponseBody body) {
+        public Builder body(GetImageInfosResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DisableVodRealtimeLogDeliveryResponse build() {
-            return new DisableVodRealtimeLogDeliveryResponse(this);
+        public GetImageInfosResponse build() {
+            return new GetImageInfosResponse(this);
         } 
 
     } 

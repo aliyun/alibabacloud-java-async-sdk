@@ -62,10 +62,10 @@ public class ListVodTemplateRequest extends Request {
             super();
         } 
 
-        private Builder(ListVodTemplateRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.templateType = response.templateType;
+        private Builder(ListVodTemplateRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.templateType = request.templateType;
         } 
 
         /**

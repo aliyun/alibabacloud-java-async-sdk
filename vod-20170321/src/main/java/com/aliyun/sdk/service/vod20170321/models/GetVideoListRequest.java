@@ -139,16 +139,16 @@ public class GetVideoListRequest extends Request {
             super();
         } 
 
-        private Builder(GetVideoListRequest response) {
-            super(response);
-            this.cateId = response.cateId;
-            this.endTime = response.endTime;
-            this.pageNo = response.pageNo;
-            this.pageSize = response.pageSize;
-            this.sortBy = response.sortBy;
-            this.startTime = response.startTime;
-            this.status = response.status;
-            this.storageLocation = response.storageLocation;
+        private Builder(GetVideoListRequest request) {
+            super(request);
+            this.cateId = request.cateId;
+            this.endTime = request.endTime;
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
+            this.sortBy = request.sortBy;
+            this.startTime = request.startTime;
+            this.status = request.status;
+            this.storageLocation = request.storageLocation;
         } 
 
         /**

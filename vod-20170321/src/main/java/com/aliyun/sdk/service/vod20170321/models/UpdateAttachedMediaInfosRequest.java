@@ -49,9 +49,9 @@ public class UpdateAttachedMediaInfosRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateAttachedMediaInfosRequest response) {
-            super(response);
-            this.updateContent = response.updateContent;
+        private Builder(UpdateAttachedMediaInfosRequest request) {
+            super(request);
+            this.updateContent = request.updateContent;
         } 
 
         /**

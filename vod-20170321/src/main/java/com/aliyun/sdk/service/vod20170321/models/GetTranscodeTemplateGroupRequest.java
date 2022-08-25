@@ -49,9 +49,9 @@ public class GetTranscodeTemplateGroupRequest extends Request {
             super();
         } 
 
-        private Builder(GetTranscodeTemplateGroupRequest response) {
-            super(response);
-            this.transcodeTemplateGroupId = response.transcodeTemplateGroupId;
+        private Builder(GetTranscodeTemplateGroupRequest request) {
+            super(request);
+            this.transcodeTemplateGroupId = request.transcodeTemplateGroupId;
         } 
 
         /**

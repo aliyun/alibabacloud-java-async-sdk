@@ -24,8 +24,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AddEditingProjectResponse> addEditingProject(AddEditingProjectRequest request);
 
-    CompletableFuture<AddFileInfoResponse> addFileInfo(AddFileInfoRequest request);
-
     CompletableFuture<AddTranscodeTemplateGroupResponse> addTranscodeTemplateGroup(AddTranscodeTemplateGroupRequest request);
 
     CompletableFuture<AddVodDomainResponse> addVodDomain(AddVodDomainRequest request);
@@ -54,7 +52,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateUploadVideoResponse> createUploadVideo(CreateUploadVideoRequest request);
 
-    CompletableFuture<CreateVodRealTimeLogDeliveryResponse> createVodRealTimeLogDelivery(CreateVodRealTimeLogDeliveryRequest request);
+    CompletableFuture<DecryptKMSDataKeyResponse> decryptKMSDataKey(DecryptKMSDataKeyRequest request);
 
     CompletableFuture<DeleteAIImageInfosResponse> deleteAIImageInfos(DeleteAIImageInfosRequest request);
 
@@ -72,8 +70,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteImageResponse> deleteImage(DeleteImageRequest request);
 
-    CompletableFuture<DeleteMediaInfoResponse> deleteMediaInfo(DeleteMediaInfoRequest request);
-
     CompletableFuture<DeleteMessageCallbackResponse> deleteMessageCallback(DeleteMessageCallbackRequest request);
 
     CompletableFuture<DeleteMezzaninesResponse> deleteMezzanines(DeleteMezzaninesRequest request);
@@ -87,8 +83,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteVideoResponse> deleteVideo(DeleteVideoRequest request);
 
     CompletableFuture<DeleteVodDomainResponse> deleteVodDomain(DeleteVodDomainRequest request);
-
-    CompletableFuture<DeleteVodRealtimeLogDeliveryResponse> deleteVodRealtimeLogDelivery(DeleteVodRealtimeLogDeliveryRequest request);
 
     CompletableFuture<DeleteVodSpecificConfigResponse> deleteVodSpecificConfig(DeleteVodSpecificConfigRequest request);
 
@@ -118,12 +112,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeVodDomainLogResponse> describeVodDomainLog(DescribeVodDomainLogRequest request);
 
-    CompletableFuture<DescribeVodDomainRealtimeLogDeliveryResponse> describeVodDomainRealtimeLogDelivery(DescribeVodDomainRealtimeLogDeliveryRequest request);
-
-    CompletableFuture<DescribeVodDomainSrcBpsDataResponse> describeVodDomainSrcBpsData(DescribeVodDomainSrcBpsDataRequest request);
-
-    CompletableFuture<DescribeVodDomainSrcTrafficDataResponse> describeVodDomainSrcTrafficData(DescribeVodDomainSrcTrafficDataRequest request);
-
     CompletableFuture<DescribeVodDomainTrafficDataResponse> describeVodDomainTrafficData(DescribeVodDomainTrafficDataRequest request);
 
     CompletableFuture<DescribeVodDomainUsageDataResponse> describeVodDomainUsageData(DescribeVodDomainUsageDataRequest request);
@@ -134,21 +122,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeVodStorageDataResponse> describeVodStorageData(DescribeVodStorageDataRequest request);
 
-    CompletableFuture<DescribeVodTagResourcesResponse> describeVodTagResources(DescribeVodTagResourcesRequest request);
-
     CompletableFuture<DescribeVodTranscodeDataResponse> describeVodTranscodeData(DescribeVodTranscodeDataRequest request);
 
     CompletableFuture<DescribeVodUserDomainsResponse> describeVodUserDomains(DescribeVodUserDomainsRequest request);
-
-    CompletableFuture<DescribeVodUserTagsResponse> describeVodUserTags(DescribeVodUserTagsRequest request);
 
     CompletableFuture<DescribeVodVerifyContentResponse> describeVodVerifyContent(DescribeVodVerifyContentRequest request);
 
     CompletableFuture<DetachAppPolicyFromIdentityResponse> detachAppPolicyFromIdentity(DetachAppPolicyFromIdentityRequest request);
 
-    CompletableFuture<DisableVodRealtimeLogDeliveryResponse> disableVodRealtimeLogDelivery(DisableVodRealtimeLogDeliveryRequest request);
-
-    CompletableFuture<EnableVodRealtimeLogDeliveryResponse> enableVodRealtimeLogDelivery(EnableVodRealtimeLogDeliveryRequest request);
+    CompletableFuture<GenerateKMSDataKeyResponse> generateKMSDataKey(GenerateKMSDataKeyRequest request);
 
     CompletableFuture<GetAIImageJobsResponse> getAIImageJobs(GetAIImageJobsRequest request);
 
@@ -174,6 +156,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetImageInfoResponse> getImageInfo(GetImageInfoRequest request);
 
+    CompletableFuture<GetImageInfosResponse> getImageInfos(GetImageInfosRequest request);
+
     CompletableFuture<GetMediaAuditAudioResultDetailResponse> getMediaAuditAudioResultDetail(GetMediaAuditAudioResultDetailRequest request);
 
     CompletableFuture<GetMediaAuditResultResponse> getMediaAuditResult(GetMediaAuditResultRequest request);
@@ -183,6 +167,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetMediaAuditResultTimelineResponse> getMediaAuditResultTimeline(GetMediaAuditResultTimelineRequest request);
 
     CompletableFuture<GetMediaDNAResultResponse> getMediaDNAResult(GetMediaDNAResultRequest request);
+
+    CompletableFuture<GetMediaRefreshJobsResponse> getMediaRefreshJobs(GetMediaRefreshJobsRequest request);
 
     CompletableFuture<GetMessageCallbackResponse> getMessageCallback(GetMessageCallbackRequest request);
 
@@ -228,29 +214,23 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListLiveRecordVideoResponse> listLiveRecordVideo(ListLiveRecordVideoRequest request);
 
-    CompletableFuture<ListMediaDNADeleteJobResponse> listMediaDNADeleteJob(ListMediaDNADeleteJobRequest request);
-
     CompletableFuture<ListSnapshotsResponse> listSnapshots(ListSnapshotsRequest request);
 
     CompletableFuture<ListTranscodeTaskResponse> listTranscodeTask(ListTranscodeTaskRequest request);
 
     CompletableFuture<ListTranscodeTemplateGroupResponse> listTranscodeTemplateGroup(ListTranscodeTemplateGroupRequest request);
 
-    CompletableFuture<ListVodRealtimeLogDeliveryDomainsResponse> listVodRealtimeLogDeliveryDomains(ListVodRealtimeLogDeliveryDomainsRequest request);
-
-    CompletableFuture<ListVodRealtimeLogDeliveryInfosResponse> listVodRealtimeLogDeliveryInfos(ListVodRealtimeLogDeliveryInfosRequest request);
-
     CompletableFuture<ListVodTemplateResponse> listVodTemplate(ListVodTemplateRequest request);
 
     CompletableFuture<ListWatermarkResponse> listWatermark(ListWatermarkRequest request);
-
-    CompletableFuture<ModifyMediaInfoResponse> modifyMediaInfo(ModifyMediaInfoRequest request);
 
     CompletableFuture<MoveAppResourceResponse> moveAppResource(MoveAppResourceRequest request);
 
     CompletableFuture<PreloadVodObjectCachesResponse> preloadVodObjectCaches(PreloadVodObjectCachesRequest request);
 
     CompletableFuture<ProduceEditingProjectVideoResponse> produceEditingProjectVideo(ProduceEditingProjectVideoRequest request);
+
+    CompletableFuture<RefreshMediaPlayUrlsResponse> refreshMediaPlayUrls(RefreshMediaPlayUrlsRequest request);
 
     CompletableFuture<RefreshUploadVideoResponse> refreshUploadVideo(RefreshUploadVideoRequest request);
 
@@ -288,8 +268,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<SubmitDynamicImageJobResponse> submitDynamicImageJob(SubmitDynamicImageJobRequest request);
 
-    CompletableFuture<SubmitLiveEditingResponse> submitLiveEditing(SubmitLiveEditingRequest request);
-
     CompletableFuture<SubmitMediaDNADeleteJobResponse> submitMediaDNADeleteJob(SubmitMediaDNADeleteJobRequest request);
 
     CompletableFuture<SubmitPreprocessJobsResponse> submitPreprocessJobs(SubmitPreprocessJobsRequest request);
@@ -299,10 +277,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SubmitTranscodeJobsResponse> submitTranscodeJobs(SubmitTranscodeJobsRequest request);
 
     CompletableFuture<SubmitWorkflowJobResponse> submitWorkflowJob(SubmitWorkflowJobRequest request);
-
-    CompletableFuture<TagVodResourcesResponse> tagVodResources(TagVodResourcesRequest request);
-
-    CompletableFuture<UnTagVodResourcesResponse> unTagVodResources(UnTagVodResourcesRequest request);
 
     CompletableFuture<UpdateAITemplateResponse> updateAITemplate(UpdateAITemplateRequest request);
 
@@ -315,8 +289,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateEditingProjectResponse> updateEditingProject(UpdateEditingProjectRequest request);
 
     CompletableFuture<UpdateImageInfosResponse> updateImageInfos(UpdateImageInfosRequest request);
-
-    CompletableFuture<UpdateStreamInfoResponse> updateStreamInfo(UpdateStreamInfoRequest request);
 
     CompletableFuture<UpdateTranscodeTemplateGroupResponse> updateTranscodeTemplateGroup(UpdateTranscodeTemplateGroupRequest request);
 

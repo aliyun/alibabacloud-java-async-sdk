@@ -61,10 +61,10 @@ public class GetMessageCallbackRequest extends Request {
             super();
         } 
 
-        private Builder(GetMessageCallbackRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.ownerAccount = response.ownerAccount;
+        private Builder(GetMessageCallbackRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.ownerAccount = request.ownerAccount;
         } 
 
         /**

@@ -49,9 +49,9 @@ public class GetVideoInfoRequest extends Request {
             super();
         } 
 
-        private Builder(GetVideoInfoRequest response) {
-            super(response);
-            this.videoId = response.videoId;
+        private Builder(GetVideoInfoRequest request) {
+            super(request);
+            this.videoId = request.videoId;
         } 
 
         /**

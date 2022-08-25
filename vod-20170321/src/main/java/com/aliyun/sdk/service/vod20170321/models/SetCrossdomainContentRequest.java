@@ -128,15 +128,15 @@ public class SetCrossdomainContentRequest extends Request {
             super();
         } 
 
-        private Builder(SetCrossdomainContentRequest response) {
-            super(response);
-            this.content = response.content;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.resourceRealOwnerId = response.resourceRealOwnerId;
-            this.storageLocation = response.storageLocation;
+        private Builder(SetCrossdomainContentRequest request) {
+            super(request);
+            this.content = request.content;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.resourceRealOwnerId = request.resourceRealOwnerId;
+            this.storageLocation = request.storageLocation;
         } 
 
         /**

@@ -116,14 +116,14 @@ public class UploadStreamByURLRequest extends Request {
             super();
         } 
 
-        private Builder(UploadStreamByURLRequest response) {
-            super(response);
-            this.definition = response.definition;
-            this.fileExtension = response.fileExtension;
-            this.HDRType = response.HDRType;
-            this.mediaId = response.mediaId;
-            this.streamURL = response.streamURL;
-            this.userData = response.userData;
+        private Builder(UploadStreamByURLRequest request) {
+            super(request);
+            this.definition = request.definition;
+            this.fileExtension = request.fileExtension;
+            this.HDRType = request.HDRType;
+            this.mediaId = request.mediaId;
+            this.streamURL = request.streamURL;
+            this.userData = request.userData;
         } 
 
         /**

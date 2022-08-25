@@ -139,16 +139,16 @@ public class ListLiveRecordVideoRequest extends Request {
             super();
         } 
 
-        private Builder(ListLiveRecordVideoRequest response) {
-            super(response);
-            this.appName = response.appName;
-            this.domainName = response.domainName;
-            this.endTime = response.endTime;
-            this.pageNo = response.pageNo;
-            this.pageSize = response.pageSize;
-            this.sortBy = response.sortBy;
-            this.startTime = response.startTime;
-            this.streamName = response.streamName;
+        private Builder(ListLiveRecordVideoRequest request) {
+            super(request);
+            this.appName = request.appName;
+            this.domainName = request.domainName;
+            this.endTime = request.endTime;
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
+            this.sortBy = request.sortBy;
+            this.startTime = request.startTime;
+            this.streamName = request.streamName;
         } 
 
         /**

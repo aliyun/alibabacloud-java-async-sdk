@@ -48,9 +48,9 @@ public class DeleteAttachedMediaRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteAttachedMediaRequest response) {
-            super(response);
-            this.mediaIds = response.mediaIds;
+        private Builder(DeleteAttachedMediaRequest request) {
+            super(request);
+            this.mediaIds = request.mediaIds;
         } 
 
         /**

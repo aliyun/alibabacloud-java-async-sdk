@@ -76,11 +76,11 @@ public class DescribePlayUserAvgRequest extends Request {
             super();
         } 
 
-        private Builder(DescribePlayUserAvgRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.ownerId = response.ownerId;
-            this.startTime = response.startTime;
+        private Builder(DescribePlayUserAvgRequest request) {
+            super(request);
+            this.endTime = request.endTime;
+            this.ownerId = request.ownerId;
+            this.startTime = request.startTime;
         } 
 
         /**

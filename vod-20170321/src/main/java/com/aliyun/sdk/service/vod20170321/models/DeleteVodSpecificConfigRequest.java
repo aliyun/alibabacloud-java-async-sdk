@@ -89,12 +89,12 @@ public class DeleteVodSpecificConfigRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteVodSpecificConfigRequest response) {
-            super(response);
-            this.configId = response.configId;
-            this.domainName = response.domainName;
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
+        private Builder(DeleteVodSpecificConfigRequest request) {
+            super(request);
+            this.configId = request.configId;
+            this.domainName = request.domainName;
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
         } 
 
         /**

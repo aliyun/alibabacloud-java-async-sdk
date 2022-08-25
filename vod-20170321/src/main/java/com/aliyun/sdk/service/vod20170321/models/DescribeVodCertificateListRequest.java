@@ -74,11 +74,11 @@ public class DescribeVodCertificateListRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeVodCertificateListRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
+        private Builder(DescribeVodCertificateListRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
         } 
 
         /**

@@ -49,9 +49,9 @@ public class GetTranscodeTaskRequest extends Request {
             super();
         } 
 
-        private Builder(GetTranscodeTaskRequest response) {
-            super(response);
-            this.transcodeTaskId = response.transcodeTaskId;
+        private Builder(GetTranscodeTaskRequest request) {
+            super(request);
+            this.transcodeTaskId = request.transcodeTaskId;
         } 
 
         /**

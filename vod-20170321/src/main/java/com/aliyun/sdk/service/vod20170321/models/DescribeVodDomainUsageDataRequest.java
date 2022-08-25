@@ -129,15 +129,15 @@ public class DescribeVodDomainUsageDataRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeVodDomainUsageDataRequest response) {
-            super(response);
-            this.area = response.area;
-            this.domainName = response.domainName;
-            this.endTime = response.endTime;
-            this.field = response.field;
-            this.ownerId = response.ownerId;
-            this.startTime = response.startTime;
-            this.type = response.type;
+        private Builder(DescribeVodDomainUsageDataRequest request) {
+            super(request);
+            this.area = request.area;
+            this.domainName = request.domainName;
+            this.endTime = request.endTime;
+            this.field = request.field;
+            this.ownerId = request.ownerId;
+            this.startTime = request.startTime;
+            this.type = request.type;
         } 
 
         /**

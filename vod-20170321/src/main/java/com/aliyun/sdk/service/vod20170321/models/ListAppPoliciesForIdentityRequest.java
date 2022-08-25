@@ -74,11 +74,11 @@ public class ListAppPoliciesForIdentityRequest extends Request {
             super();
         } 
 
-        private Builder(ListAppPoliciesForIdentityRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.identityName = response.identityName;
-            this.identityType = response.identityType;
+        private Builder(ListAppPoliciesForIdentityRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.identityName = request.identityName;
+            this.identityType = request.identityType;
         } 
 
         /**

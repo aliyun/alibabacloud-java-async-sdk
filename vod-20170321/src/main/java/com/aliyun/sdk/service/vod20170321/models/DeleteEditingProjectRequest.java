@@ -101,13 +101,13 @@ public class DeleteEditingProjectRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteEditingProjectRequest response) {
-            super(response);
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.projectIds = response.projectIds;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DeleteEditingProjectRequest request) {
+            super(request);
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.projectIds = request.projectIds;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

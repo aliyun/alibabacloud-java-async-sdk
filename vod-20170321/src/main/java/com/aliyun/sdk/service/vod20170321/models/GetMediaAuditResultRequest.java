@@ -49,9 +49,9 @@ public class GetMediaAuditResultRequest extends Request {
             super();
         } 
 
-        private Builder(GetMediaAuditResultRequest response) {
-            super(response);
-            this.mediaId = response.mediaId;
+        private Builder(GetMediaAuditResultRequest request) {
+            super(request);
+            this.mediaId = request.mediaId;
         } 
 
         /**

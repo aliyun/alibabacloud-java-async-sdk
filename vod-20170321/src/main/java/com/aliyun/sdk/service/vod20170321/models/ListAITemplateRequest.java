@@ -49,9 +49,9 @@ public class ListAITemplateRequest extends Request {
             super();
         } 
 
-        private Builder(ListAITemplateRequest response) {
-            super(response);
-            this.templateType = response.templateType;
+        private Builder(ListAITemplateRequest request) {
+            super(request);
+            this.templateType = request.templateType;
         } 
 
         /**

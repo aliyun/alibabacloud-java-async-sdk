@@ -62,10 +62,10 @@ public class DescribeVodDomainCertificateInfoRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeVodDomainCertificateInfoRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.ownerId = response.ownerId;
+        private Builder(DescribeVodDomainCertificateInfoRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.ownerId = request.ownerId;
         } 
 
         /**

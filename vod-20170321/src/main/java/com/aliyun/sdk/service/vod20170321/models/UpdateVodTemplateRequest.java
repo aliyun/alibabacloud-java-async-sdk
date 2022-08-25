@@ -75,11 +75,11 @@ public class UpdateVodTemplateRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateVodTemplateRequest response) {
-            super(response);
-            this.name = response.name;
-            this.templateConfig = response.templateConfig;
-            this.vodTemplateId = response.vodTemplateId;
+        private Builder(UpdateVodTemplateRequest request) {
+            super(request);
+            this.name = request.name;
+            this.templateConfig = request.templateConfig;
+            this.vodTemplateId = request.vodTemplateId;
         } 
 
         /**

@@ -178,19 +178,19 @@ public class SearchEditingProjectRequest extends Request {
             super();
         } 
 
-        private Builder(SearchEditingProjectRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNo = response.pageNo;
-            this.pageSize = response.pageSize;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sortBy = response.sortBy;
-            this.startTime = response.startTime;
-            this.status = response.status;
-            this.title = response.title;
+        private Builder(SearchEditingProjectRequest request) {
+            super(request);
+            this.endTime = request.endTime;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sortBy = request.sortBy;
+            this.startTime = request.startTime;
+            this.status = request.status;
+            this.title = request.title;
         } 
 
         /**

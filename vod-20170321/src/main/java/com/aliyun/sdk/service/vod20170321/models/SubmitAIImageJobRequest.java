@@ -141,16 +141,16 @@ public class SubmitAIImageJobRequest extends Request {
             super();
         } 
 
-        private Builder(SubmitAIImageJobRequest response) {
-            super(response);
-            this.AIPipelineId = response.AIPipelineId;
-            this.AITemplateId = response.AITemplateId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.userData = response.userData;
-            this.videoId = response.videoId;
+        private Builder(SubmitAIImageJobRequest request) {
+            super(request);
+            this.AIPipelineId = request.AIPipelineId;
+            this.AITemplateId = request.AITemplateId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.userData = request.userData;
+            this.videoId = request.videoId;
         } 
 
         /**

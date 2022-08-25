@@ -63,10 +63,10 @@ public class SubmitPreprocessJobsRequest extends Request {
             super();
         } 
 
-        private Builder(SubmitPreprocessJobsRequest response) {
-            super(response);
-            this.preprocessType = response.preprocessType;
-            this.videoId = response.videoId;
+        private Builder(SubmitPreprocessJobsRequest request) {
+            super(request);
+            this.preprocessType = request.preprocessType;
+            this.videoId = request.videoId;
         } 
 
         /**

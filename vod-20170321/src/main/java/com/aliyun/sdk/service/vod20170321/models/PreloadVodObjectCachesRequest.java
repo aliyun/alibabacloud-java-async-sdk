@@ -75,11 +75,11 @@ public class PreloadVodObjectCachesRequest extends Request {
             super();
         } 
 
-        private Builder(PreloadVodObjectCachesRequest response) {
-            super(response);
-            this.objectPath = response.objectPath;
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
+        private Builder(PreloadVodObjectCachesRequest request) {
+            super(request);
+            this.objectPath = request.objectPath;
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
         } 
 
         /**

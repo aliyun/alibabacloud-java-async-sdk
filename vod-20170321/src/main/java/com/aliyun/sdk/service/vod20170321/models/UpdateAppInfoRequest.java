@@ -88,12 +88,12 @@ public class UpdateAppInfoRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateAppInfoRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.appName = response.appName;
-            this.description = response.description;
-            this.status = response.status;
+        private Builder(UpdateAppInfoRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.appName = request.appName;
+            this.description = request.description;
+            this.status = request.status;
         } 
 
         /**

@@ -126,15 +126,15 @@ public class SearchMediaRequest extends Request {
             super();
         } 
 
-        private Builder(SearchMediaRequest response) {
-            super(response);
-            this.fields = response.fields;
-            this.match = response.match;
-            this.pageNo = response.pageNo;
-            this.pageSize = response.pageSize;
-            this.scrollToken = response.scrollToken;
-            this.searchType = response.searchType;
-            this.sortBy = response.sortBy;
+        private Builder(SearchMediaRequest request) {
+            super(request);
+            this.fields = request.fields;
+            this.match = request.match;
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
+            this.scrollToken = request.scrollToken;
+            this.searchType = request.searchType;
+            this.sortBy = request.sortBy;
         } 
 
         /**

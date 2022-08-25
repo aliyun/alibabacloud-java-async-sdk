@@ -49,9 +49,9 @@ public class GetWatermarkRequest extends Request {
             super();
         } 
 
-        private Builder(GetWatermarkRequest response) {
-            super(response);
-            this.watermarkId = response.watermarkId;
+        private Builder(GetWatermarkRequest request) {
+            super(request);
+            this.watermarkId = request.watermarkId;
         } 
 
         /**

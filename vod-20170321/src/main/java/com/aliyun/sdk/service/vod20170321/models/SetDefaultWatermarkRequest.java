@@ -49,9 +49,9 @@ public class SetDefaultWatermarkRequest extends Request {
             super();
         } 
 
-        private Builder(SetDefaultWatermarkRequest response) {
-            super(response);
-            this.watermarkId = response.watermarkId;
+        private Builder(SetDefaultWatermarkRequest request) {
+            super(request);
+            this.watermarkId = request.watermarkId;
         } 
 
         /**

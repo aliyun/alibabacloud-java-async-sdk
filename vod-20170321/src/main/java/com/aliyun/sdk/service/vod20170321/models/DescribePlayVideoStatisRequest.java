@@ -90,12 +90,12 @@ public class DescribePlayVideoStatisRequest extends Request {
             super();
         } 
 
-        private Builder(DescribePlayVideoStatisRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.ownerId = response.ownerId;
-            this.startTime = response.startTime;
-            this.videoId = response.videoId;
+        private Builder(DescribePlayVideoStatisRequest request) {
+            super(request);
+            this.endTime = request.endTime;
+            this.ownerId = request.ownerId;
+            this.startTime = request.startTime;
+            this.videoId = request.videoId;
         } 
 
         /**

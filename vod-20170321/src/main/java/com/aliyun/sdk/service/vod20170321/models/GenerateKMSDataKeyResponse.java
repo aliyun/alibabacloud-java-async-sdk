@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeVodDomainRealtimeLogDeliveryResponse} extends {@link TeaModel}
+ * {@link GenerateKMSDataKeyResponse} extends {@link TeaModel}
  *
- * <p>DescribeVodDomainRealtimeLogDeliveryResponse</p>
+ * <p>GenerateKMSDataKeyResponse</p>
  */
-public class DescribeVodDomainRealtimeLogDeliveryResponse extends Response {
+public class GenerateKMSDataKeyResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private DescribeVodDomainRealtimeLogDeliveryResponseBody body;
+    private GenerateKMSDataKeyResponseBody body;
 
-    private DescribeVodDomainRealtimeLogDeliveryResponse(BuilderImpl builder) {
+    private GenerateKMSDataKeyResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static DescribeVodDomainRealtimeLogDeliveryResponse create() {
+    public static GenerateKMSDataKeyResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class DescribeVodDomainRealtimeLogDeliveryResponse extends Response {
     /**
      * @return body
      */
-    public DescribeVodDomainRealtimeLogDeliveryResponseBody getBody() {
+    public GenerateKMSDataKeyResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribeVodDomainRealtimeLogDeliveryResponse, Builder> {
+    public interface Builder extends Response.Builder<GenerateKMSDataKeyResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(DescribeVodDomainRealtimeLogDeliveryResponseBody body);
+        Builder body(GenerateKMSDataKeyResponseBody body);
 
         @Override
-        DescribeVodDomainRealtimeLogDeliveryResponse build();
+        GenerateKMSDataKeyResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribeVodDomainRealtimeLogDeliveryResponse, Builder>
+            extends Response.BuilderImpl<GenerateKMSDataKeyResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private DescribeVodDomainRealtimeLogDeliveryResponseBody body; 
+        private GenerateKMSDataKeyResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribeVodDomainRealtimeLogDeliveryResponse response) {
+        private BuilderImpl(GenerateKMSDataKeyResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class DescribeVodDomainRealtimeLogDeliveryResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DescribeVodDomainRealtimeLogDeliveryResponseBody body) {
+        public Builder body(GenerateKMSDataKeyResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribeVodDomainRealtimeLogDeliveryResponse build() {
-            return new DescribeVodDomainRealtimeLogDeliveryResponse(this);
+        public GenerateKMSDataKeyResponse build() {
+            return new GenerateKMSDataKeyResponse(this);
         } 
 
     } 

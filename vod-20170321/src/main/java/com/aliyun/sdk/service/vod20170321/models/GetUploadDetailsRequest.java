@@ -62,10 +62,10 @@ public class GetUploadDetailsRequest extends Request {
             super();
         } 
 
-        private Builder(GetUploadDetailsRequest response) {
-            super(response);
-            this.mediaIds = response.mediaIds;
-            this.mediaType = response.mediaType;
+        private Builder(GetUploadDetailsRequest request) {
+            super(request);
+            this.mediaIds = request.mediaIds;
+            this.mediaType = request.mediaType;
         } 
 
         /**

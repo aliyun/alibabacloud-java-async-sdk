@@ -49,9 +49,9 @@ public class DeleteVideoRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteVideoRequest response) {
-            super(response);
-            this.videoIds = response.videoIds;
+        private Builder(DeleteVideoRequest request) {
+            super(request);
+            this.videoIds = request.videoIds;
         } 
 
         /**

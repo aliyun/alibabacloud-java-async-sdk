@@ -193,20 +193,20 @@ public class CreateUploadVideoRequest extends Request {
             super();
         } 
 
-        private Builder(CreateUploadVideoRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.cateId = response.cateId;
-            this.coverURL = response.coverURL;
-            this.description = response.description;
-            this.fileName = response.fileName;
-            this.fileSize = response.fileSize;
-            this.storageLocation = response.storageLocation;
-            this.tags = response.tags;
-            this.templateGroupId = response.templateGroupId;
-            this.title = response.title;
-            this.userData = response.userData;
-            this.workflowId = response.workflowId;
+        private Builder(CreateUploadVideoRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.cateId = request.cateId;
+            this.coverURL = request.coverURL;
+            this.description = request.description;
+            this.fileName = request.fileName;
+            this.fileSize = request.fileSize;
+            this.storageLocation = request.storageLocation;
+            this.tags = request.tags;
+            this.templateGroupId = request.templateGroupId;
+            this.title = request.title;
+            this.userData = request.userData;
+            this.workflowId = request.workflowId;
         } 
 
         /**

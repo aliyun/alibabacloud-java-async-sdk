@@ -49,9 +49,9 @@ public class GetDefaultAITemplateRequest extends Request {
             super();
         } 
 
-        private Builder(GetDefaultAITemplateRequest response) {
-            super(response);
-            this.templateType = response.templateType;
+        private Builder(GetDefaultAITemplateRequest request) {
+            super(request);
+            this.templateType = request.templateType;
         } 
 
         /**

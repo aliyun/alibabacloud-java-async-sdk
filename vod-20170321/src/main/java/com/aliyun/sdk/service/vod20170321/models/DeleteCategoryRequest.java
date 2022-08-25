@@ -49,9 +49,9 @@ public class DeleteCategoryRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteCategoryRequest response) {
-            super(response);
-            this.cateId = response.cateId;
+        private Builder(DeleteCategoryRequest request) {
+            super(request);
+            this.cateId = request.cateId;
         } 
 
         /**

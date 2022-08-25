@@ -88,12 +88,12 @@ public class RefreshVodObjectCachesRequest extends Request {
             super();
         } 
 
-        private Builder(RefreshVodObjectCachesRequest response) {
-            super(response);
-            this.objectPath = response.objectPath;
-            this.objectType = response.objectType;
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
+        private Builder(RefreshVodObjectCachesRequest request) {
+            super(request);
+            this.objectPath = request.objectPath;
+            this.objectType = request.objectType;
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
         } 
 
         /**

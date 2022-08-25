@@ -49,9 +49,9 @@ public class GetAIMediaAuditJobRequest extends Request {
             super();
         } 
 
-        private Builder(GetAIMediaAuditJobRequest response) {
-            super(response);
-            this.jobId = response.jobId;
+        private Builder(GetAIMediaAuditJobRequest request) {
+            super(request);
+            this.jobId = request.jobId;
         } 
 
         /**

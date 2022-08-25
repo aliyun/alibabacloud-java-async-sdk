@@ -62,10 +62,10 @@ public class DescribeVodVerifyContentRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeVodVerifyContentRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.ownerId = response.ownerId;
+        private Builder(DescribeVodVerifyContentRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.ownerId = request.ownerId;
         } 
 
         /**

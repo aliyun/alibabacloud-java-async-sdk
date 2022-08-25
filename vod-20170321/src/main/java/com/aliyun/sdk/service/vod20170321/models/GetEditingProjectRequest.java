@@ -101,13 +101,13 @@ public class GetEditingProjectRequest extends Request {
             super();
         } 
 
-        private Builder(GetEditingProjectRequest response) {
-            super(response);
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.projectId = response.projectId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(GetEditingProjectRequest request) {
+            super(request);
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.projectId = request.projectId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

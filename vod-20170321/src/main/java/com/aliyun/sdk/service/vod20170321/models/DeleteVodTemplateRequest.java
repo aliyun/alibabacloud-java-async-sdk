@@ -49,9 +49,9 @@ public class DeleteVodTemplateRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteVodTemplateRequest response) {
-            super(response);
-            this.vodTemplateId = response.vodTemplateId;
+        private Builder(DeleteVodTemplateRequest request) {
+            super(request);
+            this.vodTemplateId = request.vodTemplateId;
         } 
 
         /**

@@ -141,16 +141,16 @@ public class AddVodDomainRequest extends Request {
             super();
         } 
 
-        private Builder(AddVodDomainRequest response) {
-            super(response);
-            this.checkUrl = response.checkUrl;
-            this.domainName = response.domainName;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.scope = response.scope;
-            this.securityToken = response.securityToken;
-            this.sources = response.sources;
-            this.topLevelDomain = response.topLevelDomain;
+        private Builder(AddVodDomainRequest request) {
+            super(request);
+            this.checkUrl = request.checkUrl;
+            this.domainName = request.domainName;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.scope = request.scope;
+            this.securityToken = request.securityToken;
+            this.sources = request.sources;
+            this.topLevelDomain = request.topLevelDomain;
         } 
 
         /**

@@ -152,17 +152,17 @@ public class SubmitSnapshotJobRequest extends Request {
             super();
         } 
 
-        private Builder(SubmitSnapshotJobRequest response) {
-            super(response);
-            this.count = response.count;
-            this.height = response.height;
-            this.interval = response.interval;
-            this.snapshotTemplateId = response.snapshotTemplateId;
-            this.specifiedOffsetTime = response.specifiedOffsetTime;
-            this.spriteSnapshotConfig = response.spriteSnapshotConfig;
-            this.userData = response.userData;
-            this.videoId = response.videoId;
-            this.width = response.width;
+        private Builder(SubmitSnapshotJobRequest request) {
+            super(request);
+            this.count = request.count;
+            this.height = request.height;
+            this.interval = request.interval;
+            this.snapshotTemplateId = request.snapshotTemplateId;
+            this.specifiedOffsetTime = request.specifiedOffsetTime;
+            this.spriteSnapshotConfig = request.spriteSnapshotConfig;
+            this.userData = request.userData;
+            this.videoId = request.videoId;
+            this.width = request.width;
         } 
 
         /**

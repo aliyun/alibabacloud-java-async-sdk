@@ -48,9 +48,9 @@ public class ListAuditSecurityIpRequest extends Request {
             super();
         } 
 
-        private Builder(ListAuditSecurityIpRequest response) {
-            super(response);
-            this.securityGroupName = response.securityGroupName;
+        private Builder(ListAuditSecurityIpRequest request) {
+            super(request);
+            this.securityGroupName = request.securityGroupName;
         } 
 
         /**

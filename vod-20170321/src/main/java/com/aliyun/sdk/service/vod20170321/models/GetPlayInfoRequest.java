@@ -166,18 +166,18 @@ public class GetPlayInfoRequest extends Request {
             super();
         } 
 
-        private Builder(GetPlayInfoRequest response) {
-            super(response);
-            this.additionType = response.additionType;
-            this.authTimeout = response.authTimeout;
-            this.definition = response.definition;
-            this.formats = response.formats;
-            this.outputType = response.outputType;
-            this.playConfig = response.playConfig;
-            this.reAuthInfo = response.reAuthInfo;
-            this.resultType = response.resultType;
-            this.streamType = response.streamType;
-            this.videoId = response.videoId;
+        private Builder(GetPlayInfoRequest request) {
+            super(request);
+            this.additionType = request.additionType;
+            this.authTimeout = request.authTimeout;
+            this.definition = request.definition;
+            this.formats = request.formats;
+            this.outputType = request.outputType;
+            this.playConfig = request.playConfig;
+            this.reAuthInfo = request.reAuthInfo;
+            this.resultType = request.resultType;
+            this.streamType = request.streamType;
+            this.videoId = request.videoId;
         } 
 
         /**

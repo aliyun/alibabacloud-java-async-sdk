@@ -88,12 +88,12 @@ public class RegisterMediaRequest extends Request {
             super();
         } 
 
-        private Builder(RegisterMediaRequest response) {
-            super(response);
-            this.registerMetadatas = response.registerMetadatas;
-            this.templateGroupId = response.templateGroupId;
-            this.userData = response.userData;
-            this.workflowId = response.workflowId;
+        private Builder(RegisterMediaRequest request) {
+            super(request);
+            this.registerMetadatas = request.registerMetadatas;
+            this.templateGroupId = request.templateGroupId;
+            this.userData = request.userData;
+            this.workflowId = request.workflowId;
         } 
 
         /**
