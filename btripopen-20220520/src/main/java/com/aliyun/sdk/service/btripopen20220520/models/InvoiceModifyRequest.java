@@ -48,6 +48,11 @@ public class InvoiceModifyRequest extends Request {
     @Validation(required = true)
     private Integer type;
 
+    @Header
+    @NameInMap("x-acs-btrip-so-corp-token")
+    @Validation(required = true)
+    private String xAcsBtripSoCorpToken;
+
     private InvoiceModifyRequest(Builder builder) {
         super(builder);
         this.address = builder.address;
@@ -58,6 +63,7 @@ public class InvoiceModifyRequest extends Request {
         this.thirdPartId = builder.thirdPartId;
         this.title = builder.title;
         this.type = builder.type;
+        this.xAcsBtripSoCorpToken = builder.xAcsBtripSoCorpToken;
     }
 
     public static Builder builder() {
@@ -129,6 +135,13 @@ public class InvoiceModifyRequest extends Request {
         return this.type;
     }
 
+    /**
+     * @return xAcsBtripSoCorpToken
+     */
+    public String getXAcsBtripSoCorpToken() {
+        return this.xAcsBtripSoCorpToken;
+    }
+
     public static final class Builder extends Request.Builder<InvoiceModifyRequest, Builder> {
         private String address; 
         private String bankName; 
@@ -138,6 +151,7 @@ public class InvoiceModifyRequest extends Request {
         private String thirdPartId; 
         private String title; 
         private Integer type; 
+        private String xAcsBtripSoCorpToken; 
 
         private Builder() {
             super();
@@ -153,6 +167,7 @@ public class InvoiceModifyRequest extends Request {
             this.thirdPartId = request.thirdPartId;
             this.title = request.title;
             this.type = request.type;
+            this.xAcsBtripSoCorpToken = request.xAcsBtripSoCorpToken;
         } 
 
         /**
@@ -224,6 +239,15 @@ public class InvoiceModifyRequest extends Request {
         public Builder type(Integer type) {
             this.putBodyParameter("type", type);
             this.type = type;
+            return this;
+        }
+
+        /**
+         * x-acs-btrip-so-corp-token.
+         */
+        public Builder xAcsBtripSoCorpToken(String xAcsBtripSoCorpToken) {
+            this.putHeaderParameter("x-acs-btrip-so-corp-token", xAcsBtripSoCorpToken);
+            this.xAcsBtripSoCorpToken = xAcsBtripSoCorpToken;
             return this;
         }
 

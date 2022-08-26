@@ -34,6 +34,11 @@ public class ProjectModifyRequest extends Request {
     @NameInMap("third_part_invoice_id")
     private String thirdPartInvoiceId;
 
+    @Header
+    @NameInMap("x-acs-btrip-so-corp-token")
+    @Validation(required = true)
+    private String xAcsBtripSoCorpToken;
+
     private ProjectModifyRequest(Builder builder) {
         super(builder);
         this.code = builder.code;
@@ -41,6 +46,7 @@ public class ProjectModifyRequest extends Request {
         this.thirdPartCostCenterId = builder.thirdPartCostCenterId;
         this.thirdPartId = builder.thirdPartId;
         this.thirdPartInvoiceId = builder.thirdPartInvoiceId;
+        this.xAcsBtripSoCorpToken = builder.xAcsBtripSoCorpToken;
     }
 
     public static Builder builder() {
@@ -91,12 +97,20 @@ public class ProjectModifyRequest extends Request {
         return this.thirdPartInvoiceId;
     }
 
+    /**
+     * @return xAcsBtripSoCorpToken
+     */
+    public String getXAcsBtripSoCorpToken() {
+        return this.xAcsBtripSoCorpToken;
+    }
+
     public static final class Builder extends Request.Builder<ProjectModifyRequest, Builder> {
         private String code; 
         private String projectName; 
         private String thirdPartCostCenterId; 
         private String thirdPartId; 
         private String thirdPartInvoiceId; 
+        private String xAcsBtripSoCorpToken; 
 
         private Builder() {
             super();
@@ -109,6 +123,7 @@ public class ProjectModifyRequest extends Request {
             this.thirdPartCostCenterId = request.thirdPartCostCenterId;
             this.thirdPartId = request.thirdPartId;
             this.thirdPartInvoiceId = request.thirdPartInvoiceId;
+            this.xAcsBtripSoCorpToken = request.xAcsBtripSoCorpToken;
         } 
 
         /**
@@ -153,6 +168,15 @@ public class ProjectModifyRequest extends Request {
         public Builder thirdPartInvoiceId(String thirdPartInvoiceId) {
             this.putBodyParameter("third_part_invoice_id", thirdPartInvoiceId);
             this.thirdPartInvoiceId = thirdPartInvoiceId;
+            return this;
+        }
+
+        /**
+         * x-acs-btrip-so-corp-token.
+         */
+        public Builder xAcsBtripSoCorpToken(String xAcsBtripSoCorpToken) {
+            this.putHeaderParameter("x-acs-btrip-so-corp-token", xAcsBtripSoCorpToken);
+            this.xAcsBtripSoCorpToken = xAcsBtripSoCorpToken;
             return this;
         }
 

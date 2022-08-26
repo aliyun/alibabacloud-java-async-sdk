@@ -35,6 +35,11 @@ public class CostCenterSaveRequest extends Request {
     @Validation(required = true)
     private String title;
 
+    @Header
+    @NameInMap("x-acs-btrip-so-corp-token")
+    @Validation(required = true)
+    private String xAcsBtripSoCorpToken;
+
     private CostCenterSaveRequest(Builder builder) {
         super(builder);
         this.alipayNo = builder.alipayNo;
@@ -42,6 +47,7 @@ public class CostCenterSaveRequest extends Request {
         this.scope = builder.scope;
         this.thirdpartId = builder.thirdpartId;
         this.title = builder.title;
+        this.xAcsBtripSoCorpToken = builder.xAcsBtripSoCorpToken;
     }
 
     public static Builder builder() {
@@ -92,12 +98,20 @@ public class CostCenterSaveRequest extends Request {
         return this.title;
     }
 
+    /**
+     * @return xAcsBtripSoCorpToken
+     */
+    public String getXAcsBtripSoCorpToken() {
+        return this.xAcsBtripSoCorpToken;
+    }
+
     public static final class Builder extends Request.Builder<CostCenterSaveRequest, Builder> {
         private String alipayNo; 
         private String number; 
         private Long scope; 
         private String thirdpartId; 
         private String title; 
+        private String xAcsBtripSoCorpToken; 
 
         private Builder() {
             super();
@@ -110,6 +124,7 @@ public class CostCenterSaveRequest extends Request {
             this.scope = request.scope;
             this.thirdpartId = request.thirdpartId;
             this.title = request.title;
+            this.xAcsBtripSoCorpToken = request.xAcsBtripSoCorpToken;
         } 
 
         /**
@@ -154,6 +169,15 @@ public class CostCenterSaveRequest extends Request {
         public Builder title(String title) {
             this.putBodyParameter("title", title);
             this.title = title;
+            return this;
+        }
+
+        /**
+         * x-acs-btrip-so-corp-token.
+         */
+        public Builder xAcsBtripSoCorpToken(String xAcsBtripSoCorpToken) {
+            this.putHeaderParameter("x-acs-btrip-so-corp-token", xAcsBtripSoCorpToken);
+            this.xAcsBtripSoCorpToken = xAcsBtripSoCorpToken;
             return this;
         }
 

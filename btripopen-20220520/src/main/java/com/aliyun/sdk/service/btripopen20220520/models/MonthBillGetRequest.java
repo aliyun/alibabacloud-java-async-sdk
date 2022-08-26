@@ -16,9 +16,15 @@ public class MonthBillGetRequest extends Request {
     @NameInMap("bill_month")
     private String billMonth;
 
+    @Header
+    @NameInMap("x-acs-btrip-so-corp-token")
+    @Validation(required = true)
+    private String xAcsBtripSoCorpToken;
+
     private MonthBillGetRequest(Builder builder) {
         super(builder);
         this.billMonth = builder.billMonth;
+        this.xAcsBtripSoCorpToken = builder.xAcsBtripSoCorpToken;
     }
 
     public static Builder builder() {
@@ -41,8 +47,16 @@ public class MonthBillGetRequest extends Request {
         return this.billMonth;
     }
 
+    /**
+     * @return xAcsBtripSoCorpToken
+     */
+    public String getXAcsBtripSoCorpToken() {
+        return this.xAcsBtripSoCorpToken;
+    }
+
     public static final class Builder extends Request.Builder<MonthBillGetRequest, Builder> {
         private String billMonth; 
+        private String xAcsBtripSoCorpToken; 
 
         private Builder() {
             super();
@@ -51,6 +65,7 @@ public class MonthBillGetRequest extends Request {
         private Builder(MonthBillGetRequest request) {
             super(request);
             this.billMonth = request.billMonth;
+            this.xAcsBtripSoCorpToken = request.xAcsBtripSoCorpToken;
         } 
 
         /**
@@ -59,6 +74,15 @@ public class MonthBillGetRequest extends Request {
         public Builder billMonth(String billMonth) {
             this.putQueryParameter("bill_month", billMonth);
             this.billMonth = billMonth;
+            return this;
+        }
+
+        /**
+         * x-acs-btrip-so-corp-token.
+         */
+        public Builder xAcsBtripSoCorpToken(String xAcsBtripSoCorpToken) {
+            this.putHeaderParameter("x-acs-btrip-so-corp-token", xAcsBtripSoCorpToken);
+            this.xAcsBtripSoCorpToken = xAcsBtripSoCorpToken;
             return this;
         }
 

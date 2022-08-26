@@ -28,12 +28,18 @@ public class ApplyQueryRequest extends Request {
     @NameInMap("type")
     private Integer type;
 
+    @Header
+    @NameInMap("x-acs-btrip-so-corp-token")
+    @Validation(required = true)
+    private String xAcsBtripSoCorpToken;
+
     private ApplyQueryRequest(Builder builder) {
         super(builder);
         this.applyId = builder.applyId;
         this.applyShowId = builder.applyShowId;
         this.thirdpartApplyId = builder.thirdpartApplyId;
         this.type = builder.type;
+        this.xAcsBtripSoCorpToken = builder.xAcsBtripSoCorpToken;
     }
 
     public static Builder builder() {
@@ -77,11 +83,19 @@ public class ApplyQueryRequest extends Request {
         return this.type;
     }
 
+    /**
+     * @return xAcsBtripSoCorpToken
+     */
+    public String getXAcsBtripSoCorpToken() {
+        return this.xAcsBtripSoCorpToken;
+    }
+
     public static final class Builder extends Request.Builder<ApplyQueryRequest, Builder> {
         private Integer applyId; 
         private String applyShowId; 
         private String thirdpartApplyId; 
         private Integer type; 
+        private String xAcsBtripSoCorpToken; 
 
         private Builder() {
             super();
@@ -93,6 +107,7 @@ public class ApplyQueryRequest extends Request {
             this.applyShowId = request.applyShowId;
             this.thirdpartApplyId = request.thirdpartApplyId;
             this.type = request.type;
+            this.xAcsBtripSoCorpToken = request.xAcsBtripSoCorpToken;
         } 
 
         /**
@@ -128,6 +143,15 @@ public class ApplyQueryRequest extends Request {
         public Builder type(Integer type) {
             this.putQueryParameter("type", type);
             this.type = type;
+            return this;
+        }
+
+        /**
+         * x-acs-btrip-so-corp-token.
+         */
+        public Builder xAcsBtripSoCorpToken(String xAcsBtripSoCorpToken) {
+            this.putHeaderParameter("x-acs-btrip-so-corp-token", xAcsBtripSoCorpToken);
+            this.xAcsBtripSoCorpToken = xAcsBtripSoCorpToken;
             return this;
         }
 

@@ -22,10 +22,16 @@ public class CorpTokenRequest extends Request {
     @Validation(required = true)
     private Integer type;
 
+    @Header
+    @NameInMap("x-acs-btrip-access-token")
+    @Validation(required = true)
+    private String xAcsBtripAccessToken;
+
     private CorpTokenRequest(Builder builder) {
         super(builder);
         this.corpId = builder.corpId;
         this.type = builder.type;
+        this.xAcsBtripAccessToken = builder.xAcsBtripAccessToken;
     }
 
     public static Builder builder() {
@@ -55,9 +61,17 @@ public class CorpTokenRequest extends Request {
         return this.type;
     }
 
+    /**
+     * @return xAcsBtripAccessToken
+     */
+    public String getXAcsBtripAccessToken() {
+        return this.xAcsBtripAccessToken;
+    }
+
     public static final class Builder extends Request.Builder<CorpTokenRequest, Builder> {
         private String corpId; 
         private Integer type; 
+        private String xAcsBtripAccessToken; 
 
         private Builder() {
             super();
@@ -67,6 +81,7 @@ public class CorpTokenRequest extends Request {
             super(request);
             this.corpId = request.corpId;
             this.type = request.type;
+            this.xAcsBtripAccessToken = request.xAcsBtripAccessToken;
         } 
 
         /**
@@ -84,6 +99,15 @@ public class CorpTokenRequest extends Request {
         public Builder type(Integer type) {
             this.putQueryParameter("type", type);
             this.type = type;
+            return this;
+        }
+
+        /**
+         * x-acs-btrip-access-token.
+         */
+        public Builder xAcsBtripAccessToken(String xAcsBtripAccessToken) {
+            this.putHeaderParameter("x-acs-btrip-access-token", xAcsBtripAccessToken);
+            this.xAcsBtripAccessToken = xAcsBtripAccessToken;
             return this;
         }
 

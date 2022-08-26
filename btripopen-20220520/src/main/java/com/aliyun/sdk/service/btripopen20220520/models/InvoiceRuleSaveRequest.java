@@ -26,11 +26,17 @@ public class InvoiceRuleSaveRequest extends Request {
     @Validation(required = true)
     private String thirdPartId;
 
+    @Header
+    @NameInMap("x-acs-btrip-so-corp-token")
+    @Validation(required = true)
+    private String xAcsBtripSoCorpToken;
+
     private InvoiceRuleSaveRequest(Builder builder) {
         super(builder);
         this.allEmploye = builder.allEmploye;
         this.entities = builder.entities;
         this.thirdPartId = builder.thirdPartId;
+        this.xAcsBtripSoCorpToken = builder.xAcsBtripSoCorpToken;
     }
 
     public static Builder builder() {
@@ -67,10 +73,18 @@ public class InvoiceRuleSaveRequest extends Request {
         return this.thirdPartId;
     }
 
+    /**
+     * @return xAcsBtripSoCorpToken
+     */
+    public String getXAcsBtripSoCorpToken() {
+        return this.xAcsBtripSoCorpToken;
+    }
+
     public static final class Builder extends Request.Builder<InvoiceRuleSaveRequest, Builder> {
         private Boolean allEmploye; 
         private java.util.List < Entities> entities; 
         private String thirdPartId; 
+        private String xAcsBtripSoCorpToken; 
 
         private Builder() {
             super();
@@ -81,6 +95,7 @@ public class InvoiceRuleSaveRequest extends Request {
             this.allEmploye = request.allEmploye;
             this.entities = request.entities;
             this.thirdPartId = request.thirdPartId;
+            this.xAcsBtripSoCorpToken = request.xAcsBtripSoCorpToken;
         } 
 
         /**
@@ -108,6 +123,15 @@ public class InvoiceRuleSaveRequest extends Request {
         public Builder thirdPartId(String thirdPartId) {
             this.putBodyParameter("third_part_id", thirdPartId);
             this.thirdPartId = thirdPartId;
+            return this;
+        }
+
+        /**
+         * x-acs-btrip-so-corp-token.
+         */
+        public Builder xAcsBtripSoCorpToken(String xAcsBtripSoCorpToken) {
+            this.putHeaderParameter("x-acs-btrip-so-corp-token", xAcsBtripSoCorpToken);
+            this.xAcsBtripSoCorpToken = xAcsBtripSoCorpToken;
             return this;
         }
 

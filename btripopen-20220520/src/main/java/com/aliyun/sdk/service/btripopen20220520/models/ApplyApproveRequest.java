@@ -7,51 +7,52 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ExceedApplySyncRequest} extends {@link RequestModel}
+ * {@link ApplyApproveRequest} extends {@link RequestModel}
  *
- * <p>ExceedApplySyncRequest</p>
+ * <p>ApplyApproveRequest</p>
  */
-public class ExceedApplySyncRequest extends Request {
-    @Query
+public class ApplyApproveRequest extends Request {
+    @Body
     @NameInMap("apply_id")
     @Validation(required = true)
-    private Long applyId;
+    private String applyId;
 
-    @Query
-    @NameInMap("biz_category")
-    private Integer bizCategory;
+    @Body
+    @NameInMap("note")
+    private String note;
 
-    @Query
-    @NameInMap("remark")
-    private String remark;
+    @Body
+    @NameInMap("operate_time")
+    @Validation(required = true)
+    private String operateTime;
 
-    @Query
+    @Body
     @NameInMap("status")
     @Validation(required = true)
     private Integer status;
 
-    @Query
-    @NameInMap("thirdparty_flow_id")
-    private String thirdpartyFlowId;
-
-    @Query
+    @Body
     @NameInMap("user_id")
     @Validation(required = true)
     private String userId;
+
+    @Body
+    @NameInMap("user_name")
+    private String userName;
 
     @Header
     @NameInMap("x-acs-btrip-so-corp-token")
     @Validation(required = true)
     private String xAcsBtripSoCorpToken;
 
-    private ExceedApplySyncRequest(Builder builder) {
+    private ApplyApproveRequest(Builder builder) {
         super(builder);
         this.applyId = builder.applyId;
-        this.bizCategory = builder.bizCategory;
-        this.remark = builder.remark;
+        this.note = builder.note;
+        this.operateTime = builder.operateTime;
         this.status = builder.status;
-        this.thirdpartyFlowId = builder.thirdpartyFlowId;
         this.userId = builder.userId;
+        this.userName = builder.userName;
         this.xAcsBtripSoCorpToken = builder.xAcsBtripSoCorpToken;
     }
 
@@ -59,7 +60,7 @@ public class ExceedApplySyncRequest extends Request {
         return new Builder();
     }
 
-    public static ExceedApplySyncRequest create() {
+    public static ApplyApproveRequest create() {
         return builder().build();
     }
 
@@ -71,22 +72,22 @@ public class ExceedApplySyncRequest extends Request {
     /**
      * @return applyId
      */
-    public Long getApplyId() {
+    public String getApplyId() {
         return this.applyId;
     }
 
     /**
-     * @return bizCategory
+     * @return note
      */
-    public Integer getBizCategory() {
-        return this.bizCategory;
+    public String getNote() {
+        return this.note;
     }
 
     /**
-     * @return remark
+     * @return operateTime
      */
-    public String getRemark() {
-        return this.remark;
+    public String getOperateTime() {
+        return this.operateTime;
     }
 
     /**
@@ -97,17 +98,17 @@ public class ExceedApplySyncRequest extends Request {
     }
 
     /**
-     * @return thirdpartyFlowId
-     */
-    public String getThirdpartyFlowId() {
-        return this.thirdpartyFlowId;
-    }
-
-    /**
      * @return userId
      */
     public String getUserId() {
         return this.userId;
+    }
+
+    /**
+     * @return userName
+     */
+    public String getUserName() {
+        return this.userName;
     }
 
     /**
@@ -117,81 +118,81 @@ public class ExceedApplySyncRequest extends Request {
         return this.xAcsBtripSoCorpToken;
     }
 
-    public static final class Builder extends Request.Builder<ExceedApplySyncRequest, Builder> {
-        private Long applyId; 
-        private Integer bizCategory; 
-        private String remark; 
+    public static final class Builder extends Request.Builder<ApplyApproveRequest, Builder> {
+        private String applyId; 
+        private String note; 
+        private String operateTime; 
         private Integer status; 
-        private String thirdpartyFlowId; 
         private String userId; 
+        private String userName; 
         private String xAcsBtripSoCorpToken; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ExceedApplySyncRequest request) {
+        private Builder(ApplyApproveRequest request) {
             super(request);
             this.applyId = request.applyId;
-            this.bizCategory = request.bizCategory;
-            this.remark = request.remark;
+            this.note = request.note;
+            this.operateTime = request.operateTime;
             this.status = request.status;
-            this.thirdpartyFlowId = request.thirdpartyFlowId;
             this.userId = request.userId;
+            this.userName = request.userName;
             this.xAcsBtripSoCorpToken = request.xAcsBtripSoCorpToken;
         } 
 
         /**
-         * apply_id.
+         * 外部申请单id
          */
-        public Builder applyId(Long applyId) {
-            this.putQueryParameter("apply_id", applyId);
+        public Builder applyId(String applyId) {
+            this.putBodyParameter("apply_id", applyId);
             this.applyId = applyId;
             return this;
         }
 
         /**
-         * biz_category.
+         * 备注
          */
-        public Builder bizCategory(Integer bizCategory) {
-            this.putQueryParameter("biz_category", bizCategory);
-            this.bizCategory = bizCategory;
+        public Builder note(String note) {
+            this.putBodyParameter("note", note);
+            this.note = note;
             return this;
         }
 
         /**
-         * remark.
+         * 操作时间
          */
-        public Builder remark(String remark) {
-            this.putQueryParameter("remark", remark);
-            this.remark = remark;
+        public Builder operateTime(String operateTime) {
+            this.putBodyParameter("operate_time", operateTime);
+            this.operateTime = operateTime;
             return this;
         }
 
         /**
-         * status.
+         * 1已同意 2已拒绝 3已转交 4已取消
          */
         public Builder status(Integer status) {
-            this.putQueryParameter("status", status);
+            this.putBodyParameter("status", status);
             this.status = status;
             return this;
         }
 
         /**
-         * thirdparty_flow_id.
+         * 审批人id（第三方用户Id），无userId时传缺省值superAdmin
          */
-        public Builder thirdpartyFlowId(String thirdpartyFlowId) {
-            this.putQueryParameter("thirdparty_flow_id", thirdpartyFlowId);
-            this.thirdpartyFlowId = thirdpartyFlowId;
+        public Builder userId(String userId) {
+            this.putBodyParameter("user_id", userId);
+            this.userId = userId;
             return this;
         }
 
         /**
-         * 无userId时传缺省值superAdmin
+         * 审批人名字
          */
-        public Builder userId(String userId) {
-            this.putQueryParameter("user_id", userId);
-            this.userId = userId;
+        public Builder userName(String userName) {
+            this.putBodyParameter("user_name", userName);
+            this.userName = userName;
             return this;
         }
 
@@ -205,8 +206,8 @@ public class ExceedApplySyncRequest extends Request {
         }
 
         @Override
-        public ExceedApplySyncRequest build() {
-            return new ExceedApplySyncRequest(this);
+        public ApplyApproveRequest build() {
+            return new ApplyApproveRequest(this);
         } 
 
     } 

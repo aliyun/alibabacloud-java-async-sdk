@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link TrainBillSettlementQueryRequest} extends {@link RequestModel}
+ * {@link IeFlightBillSettlementQueryRequest} extends {@link RequestModel}
  *
- * <p>TrainBillSettlementQueryRequest</p>
+ * <p>IeFlightBillSettlementQueryRequest</p>
  */
-public class TrainBillSettlementQueryRequest extends Request {
+public class IeFlightBillSettlementQueryRequest extends Request {
     @Query
     @NameInMap("page_no")
     private Integer pageNo;
@@ -33,7 +33,7 @@ public class TrainBillSettlementQueryRequest extends Request {
     @Validation(required = true)
     private String xAcsBtripSoCorpToken;
 
-    private TrainBillSettlementQueryRequest(Builder builder) {
+    private IeFlightBillSettlementQueryRequest(Builder builder) {
         super(builder);
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
@@ -46,7 +46,7 @@ public class TrainBillSettlementQueryRequest extends Request {
         return new Builder();
     }
 
-    public static TrainBillSettlementQueryRequest create() {
+    public static IeFlightBillSettlementQueryRequest create() {
         return builder().build();
     }
 
@@ -90,7 +90,7 @@ public class TrainBillSettlementQueryRequest extends Request {
         return this.xAcsBtripSoCorpToken;
     }
 
-    public static final class Builder extends Request.Builder<TrainBillSettlementQueryRequest, Builder> {
+    public static final class Builder extends Request.Builder<IeFlightBillSettlementQueryRequest, Builder> {
         private Integer pageNo; 
         private Integer pageSize; 
         private String periodEnd; 
@@ -101,7 +101,7 @@ public class TrainBillSettlementQueryRequest extends Request {
             super();
         } 
 
-        private Builder(TrainBillSettlementQueryRequest request) {
+        private Builder(IeFlightBillSettlementQueryRequest request) {
             super(request);
             this.pageNo = request.pageNo;
             this.pageSize = request.pageSize;
@@ -156,8 +156,8 @@ public class TrainBillSettlementQueryRequest extends Request {
         }
 
         @Override
-        public TrainBillSettlementQueryRequest build() {
-            return new TrainBillSettlementQueryRequest(this);
+        public IeFlightBillSettlementQueryRequest build() {
+            return new IeFlightBillSettlementQueryRequest(this);
         } 
 
     } 

@@ -137,6 +137,11 @@ public class ApplyAddRequest extends Request {
     @NameInMap("vehicle_budget")
     private Long vehicleBudget;
 
+    @Header
+    @NameInMap("x-acs-btrip-so-corp-token")
+    @Validation(required = true)
+    private String xAcsBtripSoCorpToken;
+
     private ApplyAddRequest(Builder builder) {
         super(builder);
         this.budget = builder.budget;
@@ -169,6 +174,7 @@ public class ApplyAddRequest extends Request {
         this.userId = builder.userId;
         this.userName = builder.userName;
         this.vehicleBudget = builder.vehicleBudget;
+        this.xAcsBtripSoCorpToken = builder.xAcsBtripSoCorpToken;
     }
 
     public static Builder builder() {
@@ -394,6 +400,13 @@ public class ApplyAddRequest extends Request {
         return this.vehicleBudget;
     }
 
+    /**
+     * @return xAcsBtripSoCorpToken
+     */
+    public String getXAcsBtripSoCorpToken() {
+        return this.xAcsBtripSoCorpToken;
+    }
+
     public static final class Builder extends Request.Builder<ApplyAddRequest, Builder> {
         private Long budget; 
         private Integer budgetMerge; 
@@ -425,6 +438,7 @@ public class ApplyAddRequest extends Request {
         private String userId; 
         private String userName; 
         private Long vehicleBudget; 
+        private String xAcsBtripSoCorpToken; 
 
         private Builder() {
             super();
@@ -462,6 +476,7 @@ public class ApplyAddRequest extends Request {
             this.userId = request.userId;
             this.userName = request.userName;
             this.vehicleBudget = request.vehicleBudget;
+            this.xAcsBtripSoCorpToken = request.xAcsBtripSoCorpToken;
         } 
 
         /**
@@ -748,6 +763,15 @@ public class ApplyAddRequest extends Request {
         public Builder vehicleBudget(Long vehicleBudget) {
             this.putBodyParameter("vehicle_budget", vehicleBudget);
             this.vehicleBudget = vehicleBudget;
+            return this;
+        }
+
+        /**
+         * x-acs-btrip-so-corp-token.
+         */
+        public Builder xAcsBtripSoCorpToken(String xAcsBtripSoCorpToken) {
+            this.putHeaderParameter("x-acs-btrip-so-corp-token", xAcsBtripSoCorpToken);
+            this.xAcsBtripSoCorpToken = xAcsBtripSoCorpToken;
             return this;
         }
 

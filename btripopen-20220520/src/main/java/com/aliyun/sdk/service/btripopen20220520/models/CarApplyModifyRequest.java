@@ -35,6 +35,11 @@ public class CarApplyModifyRequest extends Request {
     @Validation(required = true)
     private String userId;
 
+    @Header
+    @NameInMap("x-acs-btrip-so-corp-token")
+    @Validation(required = true)
+    private String xAcsBtripSoCorpToken;
+
     private CarApplyModifyRequest(Builder builder) {
         super(builder);
         this.operateTime = builder.operateTime;
@@ -42,6 +47,7 @@ public class CarApplyModifyRequest extends Request {
         this.status = builder.status;
         this.thirdPartApplyId = builder.thirdPartApplyId;
         this.userId = builder.userId;
+        this.xAcsBtripSoCorpToken = builder.xAcsBtripSoCorpToken;
     }
 
     public static Builder builder() {
@@ -92,12 +98,20 @@ public class CarApplyModifyRequest extends Request {
         return this.userId;
     }
 
+    /**
+     * @return xAcsBtripSoCorpToken
+     */
+    public String getXAcsBtripSoCorpToken() {
+        return this.xAcsBtripSoCorpToken;
+    }
+
     public static final class Builder extends Request.Builder<CarApplyModifyRequest, Builder> {
         private String operateTime; 
         private String remark; 
         private Integer status; 
         private String thirdPartApplyId; 
         private String userId; 
+        private String xAcsBtripSoCorpToken; 
 
         private Builder() {
             super();
@@ -110,6 +124,7 @@ public class CarApplyModifyRequest extends Request {
             this.status = request.status;
             this.thirdPartApplyId = request.thirdPartApplyId;
             this.userId = request.userId;
+            this.xAcsBtripSoCorpToken = request.xAcsBtripSoCorpToken;
         } 
 
         /**
@@ -154,6 +169,15 @@ public class CarApplyModifyRequest extends Request {
         public Builder userId(String userId) {
             this.putBodyParameter("user_id", userId);
             this.userId = userId;
+            return this;
+        }
+
+        /**
+         * x-acs-btrip-so-corp-token.
+         */
+        public Builder xAcsBtripSoCorpToken(String xAcsBtripSoCorpToken) {
+            this.putHeaderParameter("x-acs-btrip-so-corp-token", xAcsBtripSoCorpToken);
+            this.xAcsBtripSoCorpToken = xAcsBtripSoCorpToken;
             return this;
         }
 

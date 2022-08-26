@@ -26,11 +26,17 @@ public class EntityDeleteRequest extends Request {
     @Validation(required = true)
     private String thirdpartId;
 
+    @Header
+    @NameInMap("x-acs-btrip-so-corp-token")
+    @Validation(required = true)
+    private String xAcsBtripSoCorpToken;
+
     private EntityDeleteRequest(Builder builder) {
         super(builder);
         this.delAll = builder.delAll;
         this.entityDOList = builder.entityDOList;
         this.thirdpartId = builder.thirdpartId;
+        this.xAcsBtripSoCorpToken = builder.xAcsBtripSoCorpToken;
     }
 
     public static Builder builder() {
@@ -67,10 +73,18 @@ public class EntityDeleteRequest extends Request {
         return this.thirdpartId;
     }
 
+    /**
+     * @return xAcsBtripSoCorpToken
+     */
+    public String getXAcsBtripSoCorpToken() {
+        return this.xAcsBtripSoCorpToken;
+    }
+
     public static final class Builder extends Request.Builder<EntityDeleteRequest, Builder> {
         private Boolean delAll; 
         private java.util.List < EntityDOList> entityDOList; 
         private String thirdpartId; 
+        private String xAcsBtripSoCorpToken; 
 
         private Builder() {
             super();
@@ -81,6 +95,7 @@ public class EntityDeleteRequest extends Request {
             this.delAll = request.delAll;
             this.entityDOList = request.entityDOList;
             this.thirdpartId = request.thirdpartId;
+            this.xAcsBtripSoCorpToken = request.xAcsBtripSoCorpToken;
         } 
 
         /**
@@ -108,6 +123,15 @@ public class EntityDeleteRequest extends Request {
         public Builder thirdpartId(String thirdpartId) {
             this.putQueryParameter("thirdpart_id", thirdpartId);
             this.thirdpartId = thirdpartId;
+            return this;
+        }
+
+        /**
+         * x-acs-btrip-so-corp-token.
+         */
+        public Builder xAcsBtripSoCorpToken(String xAcsBtripSoCorpToken) {
+            this.putHeaderParameter("x-acs-btrip-so-corp-token", xAcsBtripSoCorpToken);
+            this.xAcsBtripSoCorpToken = xAcsBtripSoCorpToken;
             return this;
         }
 

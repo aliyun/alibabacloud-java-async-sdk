@@ -22,7 +22,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AddressGetResponse> addressGet(AddressGetRequest request);
 
+    CompletableFuture<AirportSearchResponse> airportSearch(AirportSearchRequest request);
+
     CompletableFuture<ApplyAddResponse> applyAdd(ApplyAddRequest request);
+
+    CompletableFuture<ApplyApproveResponse> applyApprove(ApplyApproveRequest request);
 
     CompletableFuture<ApplyListQueryResponse> applyListQuery(ApplyListQueryRequest request);
 
@@ -39,6 +43,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CarBillSettlementQueryResponse> carBillSettlementQuery(CarBillSettlementQueryRequest request);
 
     CompletableFuture<CarOrderListQueryResponse> carOrderListQuery(CarOrderListQueryRequest request);
+
+    CompletableFuture<CitySearchResponse> citySearch(CitySearchRequest request);
 
     CompletableFuture<CommonApplyQueryResponse> commonApplyQuery(CommonApplyQueryRequest request);
 
@@ -78,6 +84,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<HotelOrderListQueryResponse> hotelOrderListQuery(HotelOrderListQueryRequest request);
 
+    CompletableFuture<IeFlightBillSettlementQueryResponse> ieFlightBillSettlementQuery(IeFlightBillSettlementQueryRequest request);
+
     CompletableFuture<InvoiceAddResponse> invoiceAdd(InvoiceAddRequest request);
 
     CompletableFuture<InvoiceDeleteResponse> invoiceDelete(InvoiceDeleteRequest request);
@@ -105,6 +113,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<TrainOrderListQueryResponse> trainOrderListQuery(TrainOrderListQueryRequest request);
 
     CompletableFuture<TrainOrderQueryResponse> trainOrderQuery(TrainOrderQueryRequest request);
+
+    CompletableFuture<TrainStationSearchResponse> trainStationSearch(TrainStationSearchRequest request);
 
     CompletableFuture<UserQueryResponse> userQuery(UserQueryRequest request);
 

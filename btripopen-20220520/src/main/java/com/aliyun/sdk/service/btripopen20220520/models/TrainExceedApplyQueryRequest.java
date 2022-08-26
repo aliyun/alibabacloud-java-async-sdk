@@ -17,9 +17,15 @@ public class TrainExceedApplyQueryRequest extends Request {
     @Validation(required = true)
     private Long applyId;
 
+    @Header
+    @NameInMap("x-acs-btrip-so-corp-token")
+    @Validation(required = true)
+    private String xAcsBtripSoCorpToken;
+
     private TrainExceedApplyQueryRequest(Builder builder) {
         super(builder);
         this.applyId = builder.applyId;
+        this.xAcsBtripSoCorpToken = builder.xAcsBtripSoCorpToken;
     }
 
     public static Builder builder() {
@@ -42,8 +48,16 @@ public class TrainExceedApplyQueryRequest extends Request {
         return this.applyId;
     }
 
+    /**
+     * @return xAcsBtripSoCorpToken
+     */
+    public String getXAcsBtripSoCorpToken() {
+        return this.xAcsBtripSoCorpToken;
+    }
+
     public static final class Builder extends Request.Builder<TrainExceedApplyQueryRequest, Builder> {
         private Long applyId; 
+        private String xAcsBtripSoCorpToken; 
 
         private Builder() {
             super();
@@ -52,6 +66,7 @@ public class TrainExceedApplyQueryRequest extends Request {
         private Builder(TrainExceedApplyQueryRequest request) {
             super(request);
             this.applyId = request.applyId;
+            this.xAcsBtripSoCorpToken = request.xAcsBtripSoCorpToken;
         } 
 
         /**
@@ -60,6 +75,15 @@ public class TrainExceedApplyQueryRequest extends Request {
         public Builder applyId(Long applyId) {
             this.putQueryParameter("apply_id", applyId);
             this.applyId = applyId;
+            return this;
+        }
+
+        /**
+         * x-acs-btrip-so-corp-token.
+         */
+        public Builder xAcsBtripSoCorpToken(String xAcsBtripSoCorpToken) {
+            this.putHeaderParameter("x-acs-btrip-so-corp-token", xAcsBtripSoCorpToken);
+            this.xAcsBtripSoCorpToken = xAcsBtripSoCorpToken;
             return this;
         }
 

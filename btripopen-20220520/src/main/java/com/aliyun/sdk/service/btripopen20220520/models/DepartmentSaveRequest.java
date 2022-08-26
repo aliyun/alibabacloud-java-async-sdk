@@ -16,9 +16,15 @@ public class DepartmentSaveRequest extends Request {
     @NameInMap("depart_list")
     private java.util.List < DepartList> departList;
 
+    @Header
+    @NameInMap("x-acs-btrip-so-corp-token")
+    @Validation(required = true)
+    private String xAcsBtripSoCorpToken;
+
     private DepartmentSaveRequest(Builder builder) {
         super(builder);
         this.departList = builder.departList;
+        this.xAcsBtripSoCorpToken = builder.xAcsBtripSoCorpToken;
     }
 
     public static Builder builder() {
@@ -41,8 +47,16 @@ public class DepartmentSaveRequest extends Request {
         return this.departList;
     }
 
+    /**
+     * @return xAcsBtripSoCorpToken
+     */
+    public String getXAcsBtripSoCorpToken() {
+        return this.xAcsBtripSoCorpToken;
+    }
+
     public static final class Builder extends Request.Builder<DepartmentSaveRequest, Builder> {
         private java.util.List < DepartList> departList; 
+        private String xAcsBtripSoCorpToken; 
 
         private Builder() {
             super();
@@ -51,6 +65,7 @@ public class DepartmentSaveRequest extends Request {
         private Builder(DepartmentSaveRequest request) {
             super(request);
             this.departList = request.departList;
+            this.xAcsBtripSoCorpToken = request.xAcsBtripSoCorpToken;
         } 
 
         /**
@@ -60,6 +75,15 @@ public class DepartmentSaveRequest extends Request {
             String departListShrink = shrink(departList, "depart_list", "json");
             this.putBodyParameter("depart_list", departListShrink);
             this.departList = departList;
+            return this;
+        }
+
+        /**
+         * x-acs-btrip-so-corp-token.
+         */
+        public Builder xAcsBtripSoCorpToken(String xAcsBtripSoCorpToken) {
+            this.putHeaderParameter("x-acs-btrip-so-corp-token", xAcsBtripSoCorpToken);
+            this.xAcsBtripSoCorpToken = xAcsBtripSoCorpToken;
             return this;
         }
 

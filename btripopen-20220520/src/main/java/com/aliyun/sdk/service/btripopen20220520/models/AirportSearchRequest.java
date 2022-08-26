@@ -7,24 +7,29 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CostCenterDeleteRequest} extends {@link RequestModel}
+ * {@link AirportSearchRequest} extends {@link RequestModel}
  *
- * <p>CostCenterDeleteRequest</p>
+ * <p>AirportSearchRequest</p>
  */
-public class CostCenterDeleteRequest extends Request {
+public class AirportSearchRequest extends Request {
     @Query
-    @NameInMap("thirdpart_id")
+    @NameInMap("keyword")
     @Validation(required = true)
-    private String thirdpartId;
+    private String keyword;
+
+    @Query
+    @NameInMap("type")
+    private Integer type;
 
     @Header
     @NameInMap("x-acs-btrip-so-corp-token")
     @Validation(required = true)
     private String xAcsBtripSoCorpToken;
 
-    private CostCenterDeleteRequest(Builder builder) {
+    private AirportSearchRequest(Builder builder) {
         super(builder);
-        this.thirdpartId = builder.thirdpartId;
+        this.keyword = builder.keyword;
+        this.type = builder.type;
         this.xAcsBtripSoCorpToken = builder.xAcsBtripSoCorpToken;
     }
 
@@ -32,7 +37,7 @@ public class CostCenterDeleteRequest extends Request {
         return new Builder();
     }
 
-    public static CostCenterDeleteRequest create() {
+    public static AirportSearchRequest create() {
         return builder().build();
     }
 
@@ -42,10 +47,17 @@ public class CostCenterDeleteRequest extends Request {
     }
 
     /**
-     * @return thirdpartId
+     * @return keyword
      */
-    public String getThirdpartId() {
-        return this.thirdpartId;
+    public String getKeyword() {
+        return this.keyword;
+    }
+
+    /**
+     * @return type
+     */
+    public Integer getType() {
+        return this.type;
     }
 
     /**
@@ -55,26 +67,37 @@ public class CostCenterDeleteRequest extends Request {
         return this.xAcsBtripSoCorpToken;
     }
 
-    public static final class Builder extends Request.Builder<CostCenterDeleteRequest, Builder> {
-        private String thirdpartId; 
+    public static final class Builder extends Request.Builder<AirportSearchRequest, Builder> {
+        private String keyword; 
+        private Integer type; 
         private String xAcsBtripSoCorpToken; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CostCenterDeleteRequest request) {
+        private Builder(AirportSearchRequest request) {
             super(request);
-            this.thirdpartId = request.thirdpartId;
+            this.keyword = request.keyword;
+            this.type = request.type;
             this.xAcsBtripSoCorpToken = request.xAcsBtripSoCorpToken;
         } 
 
         /**
-         * 第三方成本中心id
+         * 搜索关键字
          */
-        public Builder thirdpartId(String thirdpartId) {
-            this.putQueryParameter("thirdpart_id", thirdpartId);
-            this.thirdpartId = thirdpartId;
+        public Builder keyword(String keyword) {
+            this.putQueryParameter("keyword", keyword);
+            this.keyword = keyword;
+            return this;
+        }
+
+        /**
+         * 0国内机场，2国内机场+临近机场，3国际机场
+         */
+        public Builder type(Integer type) {
+            this.putQueryParameter("type", type);
+            this.type = type;
             return this;
         }
 
@@ -88,8 +111,8 @@ public class CostCenterDeleteRequest extends Request {
         }
 
         @Override
-        public CostCenterDeleteRequest build() {
-            return new CostCenterDeleteRequest(this);
+        public AirportSearchRequest build() {
+            return new AirportSearchRequest(this);
         } 
 
     } 

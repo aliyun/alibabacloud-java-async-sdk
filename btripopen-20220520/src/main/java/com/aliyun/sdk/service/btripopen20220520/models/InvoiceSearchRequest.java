@@ -20,10 +20,16 @@ public class InvoiceSearchRequest extends Request {
     @NameInMap("user_id")
     private String userId;
 
+    @Header
+    @NameInMap("x-acs-btrip-so-corp-token")
+    @Validation(required = true)
+    private String xAcsBtripSoCorpToken;
+
     private InvoiceSearchRequest(Builder builder) {
         super(builder);
         this.title = builder.title;
         this.userId = builder.userId;
+        this.xAcsBtripSoCorpToken = builder.xAcsBtripSoCorpToken;
     }
 
     public static Builder builder() {
@@ -53,9 +59,17 @@ public class InvoiceSearchRequest extends Request {
         return this.userId;
     }
 
+    /**
+     * @return xAcsBtripSoCorpToken
+     */
+    public String getXAcsBtripSoCorpToken() {
+        return this.xAcsBtripSoCorpToken;
+    }
+
     public static final class Builder extends Request.Builder<InvoiceSearchRequest, Builder> {
         private String title; 
         private String userId; 
+        private String xAcsBtripSoCorpToken; 
 
         private Builder() {
             super();
@@ -65,6 +79,7 @@ public class InvoiceSearchRequest extends Request {
             super(request);
             this.title = request.title;
             this.userId = request.userId;
+            this.xAcsBtripSoCorpToken = request.xAcsBtripSoCorpToken;
         } 
 
         /**
@@ -82,6 +97,15 @@ public class InvoiceSearchRequest extends Request {
         public Builder userId(String userId) {
             this.putQueryParameter("user_id", userId);
             this.userId = userId;
+            return this;
+        }
+
+        /**
+         * x-acs-btrip-so-corp-token.
+         */
+        public Builder xAcsBtripSoCorpToken(String xAcsBtripSoCorpToken) {
+            this.putHeaderParameter("x-acs-btrip-so-corp-token", xAcsBtripSoCorpToken);
+            this.xAcsBtripSoCorpToken = xAcsBtripSoCorpToken;
             return this;
         }
 

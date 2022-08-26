@@ -16,9 +16,15 @@ public class IsvUserSaveRequest extends Request {
     @NameInMap("user_list")
     private java.util.List < UserList> userList;
 
+    @Header
+    @NameInMap("x-acs-btrip-so-corp-token")
+    @Validation(required = true)
+    private String xAcsBtripSoCorpToken;
+
     private IsvUserSaveRequest(Builder builder) {
         super(builder);
         this.userList = builder.userList;
+        this.xAcsBtripSoCorpToken = builder.xAcsBtripSoCorpToken;
     }
 
     public static Builder builder() {
@@ -41,8 +47,16 @@ public class IsvUserSaveRequest extends Request {
         return this.userList;
     }
 
+    /**
+     * @return xAcsBtripSoCorpToken
+     */
+    public String getXAcsBtripSoCorpToken() {
+        return this.xAcsBtripSoCorpToken;
+    }
+
     public static final class Builder extends Request.Builder<IsvUserSaveRequest, Builder> {
         private java.util.List < UserList> userList; 
+        private String xAcsBtripSoCorpToken; 
 
         private Builder() {
             super();
@@ -51,6 +65,7 @@ public class IsvUserSaveRequest extends Request {
         private Builder(IsvUserSaveRequest request) {
             super(request);
             this.userList = request.userList;
+            this.xAcsBtripSoCorpToken = request.xAcsBtripSoCorpToken;
         } 
 
         /**
@@ -60,6 +75,15 @@ public class IsvUserSaveRequest extends Request {
             String userListShrink = shrink(userList, "user_list", "json");
             this.putBodyParameter("user_list", userListShrink);
             this.userList = userList;
+            return this;
+        }
+
+        /**
+         * x-acs-btrip-so-corp-token.
+         */
+        public Builder xAcsBtripSoCorpToken(String xAcsBtripSoCorpToken) {
+            this.putHeaderParameter("x-acs-btrip-so-corp-token", xAcsBtripSoCorpToken);
+            this.xAcsBtripSoCorpToken = xAcsBtripSoCorpToken;
             return this;
         }
 

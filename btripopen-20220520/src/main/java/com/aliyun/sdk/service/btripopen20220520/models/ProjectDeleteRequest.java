@@ -17,9 +17,15 @@ public class ProjectDeleteRequest extends Request {
     @Validation(required = true)
     private String thirdPartId;
 
+    @Header
+    @NameInMap("x-acs-btrip-so-corp-token")
+    @Validation(required = true)
+    private String xAcsBtripSoCorpToken;
+
     private ProjectDeleteRequest(Builder builder) {
         super(builder);
         this.thirdPartId = builder.thirdPartId;
+        this.xAcsBtripSoCorpToken = builder.xAcsBtripSoCorpToken;
     }
 
     public static Builder builder() {
@@ -42,8 +48,16 @@ public class ProjectDeleteRequest extends Request {
         return this.thirdPartId;
     }
 
+    /**
+     * @return xAcsBtripSoCorpToken
+     */
+    public String getXAcsBtripSoCorpToken() {
+        return this.xAcsBtripSoCorpToken;
+    }
+
     public static final class Builder extends Request.Builder<ProjectDeleteRequest, Builder> {
         private String thirdPartId; 
+        private String xAcsBtripSoCorpToken; 
 
         private Builder() {
             super();
@@ -52,6 +66,7 @@ public class ProjectDeleteRequest extends Request {
         private Builder(ProjectDeleteRequest request) {
             super(request);
             this.thirdPartId = request.thirdPartId;
+            this.xAcsBtripSoCorpToken = request.xAcsBtripSoCorpToken;
         } 
 
         /**
@@ -60,6 +75,15 @@ public class ProjectDeleteRequest extends Request {
         public Builder thirdPartId(String thirdPartId) {
             this.putQueryParameter("third_part_id", thirdPartId);
             this.thirdPartId = thirdPartId;
+            return this;
+        }
+
+        /**
+         * x-acs-btrip-so-corp-token.
+         */
+        public Builder xAcsBtripSoCorpToken(String xAcsBtripSoCorpToken) {
+            this.putHeaderParameter("x-acs-btrip-so-corp-token", xAcsBtripSoCorpToken);
+            this.xAcsBtripSoCorpToken = xAcsBtripSoCorpToken;
             return this;
         }
 

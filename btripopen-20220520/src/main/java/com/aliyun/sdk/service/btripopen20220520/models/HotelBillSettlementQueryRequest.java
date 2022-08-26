@@ -28,12 +28,18 @@ public class HotelBillSettlementQueryRequest extends Request {
     @NameInMap("period_start")
     private String periodStart;
 
+    @Header
+    @NameInMap("x-acs-btrip-so-corp-token")
+    @Validation(required = true)
+    private String xAcsBtripSoCorpToken;
+
     private HotelBillSettlementQueryRequest(Builder builder) {
         super(builder);
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
         this.periodEnd = builder.periodEnd;
         this.periodStart = builder.periodStart;
+        this.xAcsBtripSoCorpToken = builder.xAcsBtripSoCorpToken;
     }
 
     public static Builder builder() {
@@ -77,11 +83,19 @@ public class HotelBillSettlementQueryRequest extends Request {
         return this.periodStart;
     }
 
+    /**
+     * @return xAcsBtripSoCorpToken
+     */
+    public String getXAcsBtripSoCorpToken() {
+        return this.xAcsBtripSoCorpToken;
+    }
+
     public static final class Builder extends Request.Builder<HotelBillSettlementQueryRequest, Builder> {
         private Integer pageNo; 
         private Integer pageSize; 
         private String periodEnd; 
         private String periodStart; 
+        private String xAcsBtripSoCorpToken; 
 
         private Builder() {
             super();
@@ -93,6 +107,7 @@ public class HotelBillSettlementQueryRequest extends Request {
             this.pageSize = request.pageSize;
             this.periodEnd = request.periodEnd;
             this.periodStart = request.periodStart;
+            this.xAcsBtripSoCorpToken = request.xAcsBtripSoCorpToken;
         } 
 
         /**
@@ -128,6 +143,15 @@ public class HotelBillSettlementQueryRequest extends Request {
         public Builder periodStart(String periodStart) {
             this.putQueryParameter("period_start", periodStart);
             this.periodStart = periodStart;
+            return this;
+        }
+
+        /**
+         * x-acs-btrip-so-corp-token.
+         */
+        public Builder xAcsBtripSoCorpToken(String xAcsBtripSoCorpToken) {
+            this.putHeaderParameter("x-acs-btrip-so-corp-token", xAcsBtripSoCorpToken);
+            this.xAcsBtripSoCorpToken = xAcsBtripSoCorpToken;
             return this;
         }
 
