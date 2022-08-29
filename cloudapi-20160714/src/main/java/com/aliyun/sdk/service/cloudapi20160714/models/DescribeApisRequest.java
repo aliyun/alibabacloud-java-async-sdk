@@ -17,8 +17,16 @@ public class DescribeApisRequest extends Request {
     private String apiId;
 
     @Query
+    @NameInMap("ApiMethod")
+    private String apiMethod;
+
+    @Query
     @NameInMap("ApiName")
     private String apiName;
+
+    @Query
+    @NameInMap("ApiPath")
+    private String apiPath;
 
     @Query
     @NameInMap("CatalogId")
@@ -49,13 +57,19 @@ public class DescribeApisRequest extends Request {
     private java.util.List < Tag> tag;
 
     @Query
+    @NameInMap("UnDeployed")
+    private Boolean unDeployed;
+
+    @Query
     @NameInMap("Visibility")
     private String visibility;
 
     private DescribeApisRequest(Builder builder) {
         super(builder);
         this.apiId = builder.apiId;
+        this.apiMethod = builder.apiMethod;
         this.apiName = builder.apiName;
+        this.apiPath = builder.apiPath;
         this.catalogId = builder.catalogId;
         this.enableTagAuth = builder.enableTagAuth;
         this.groupId = builder.groupId;
@@ -63,6 +77,7 @@ public class DescribeApisRequest extends Request {
         this.pageSize = builder.pageSize;
         this.securityToken = builder.securityToken;
         this.tag = builder.tag;
+        this.unDeployed = builder.unDeployed;
         this.visibility = builder.visibility;
     }
 
@@ -87,10 +102,24 @@ public class DescribeApisRequest extends Request {
     }
 
     /**
+     * @return apiMethod
+     */
+    public String getApiMethod() {
+        return this.apiMethod;
+    }
+
+    /**
      * @return apiName
      */
     public String getApiName() {
         return this.apiName;
+    }
+
+    /**
+     * @return apiPath
+     */
+    public String getApiPath() {
+        return this.apiPath;
     }
 
     /**
@@ -143,6 +172,13 @@ public class DescribeApisRequest extends Request {
     }
 
     /**
+     * @return unDeployed
+     */
+    public Boolean getUnDeployed() {
+        return this.unDeployed;
+    }
+
+    /**
      * @return visibility
      */
     public String getVisibility() {
@@ -151,7 +187,9 @@ public class DescribeApisRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeApisRequest, Builder> {
         private String apiId; 
+        private String apiMethod; 
         private String apiName; 
+        private String apiPath; 
         private String catalogId; 
         private Boolean enableTagAuth; 
         private String groupId; 
@@ -159,6 +197,7 @@ public class DescribeApisRequest extends Request {
         private Integer pageSize; 
         private String securityToken; 
         private java.util.List < Tag> tag; 
+        private Boolean unDeployed; 
         private String visibility; 
 
         private Builder() {
@@ -168,7 +207,9 @@ public class DescribeApisRequest extends Request {
         private Builder(DescribeApisRequest request) {
             super(request);
             this.apiId = request.apiId;
+            this.apiMethod = request.apiMethod;
             this.apiName = request.apiName;
+            this.apiPath = request.apiPath;
             this.catalogId = request.catalogId;
             this.enableTagAuth = request.enableTagAuth;
             this.groupId = request.groupId;
@@ -176,6 +217,7 @@ public class DescribeApisRequest extends Request {
             this.pageSize = request.pageSize;
             this.securityToken = request.securityToken;
             this.tag = request.tag;
+            this.unDeployed = request.unDeployed;
             this.visibility = request.visibility;
         } 
 
@@ -189,11 +231,29 @@ public class DescribeApisRequest extends Request {
         }
 
         /**
+         * ApiMethod.
+         */
+        public Builder apiMethod(String apiMethod) {
+            this.putQueryParameter("ApiMethod", apiMethod);
+            this.apiMethod = apiMethod;
+            return this;
+        }
+
+        /**
          * ApiName.
          */
         public Builder apiName(String apiName) {
             this.putQueryParameter("ApiName", apiName);
             this.apiName = apiName;
+            return this;
+        }
+
+        /**
+         * ApiPath.
+         */
+        public Builder apiPath(String apiPath) {
+            this.putQueryParameter("ApiPath", apiPath);
+            this.apiPath = apiPath;
             return this;
         }
 
@@ -257,6 +317,15 @@ public class DescribeApisRequest extends Request {
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
+            return this;
+        }
+
+        /**
+         * UnDeployed.
+         */
+        public Builder unDeployed(Boolean unDeployed) {
+            this.putQueryParameter("UnDeployed", unDeployed);
+            this.unDeployed = unDeployed;
             return this;
         }
 

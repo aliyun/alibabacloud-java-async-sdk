@@ -135,8 +135,14 @@ public class DescribeDeployedApisResponseBody extends TeaModel {
         @NameInMap("ApiId")
         private String apiId;
 
+        @NameInMap("ApiMethod")
+        private String apiMethod;
+
         @NameInMap("ApiName")
         private String apiName;
+
+        @NameInMap("ApiPath")
+        private String apiPath;
 
         @NameInMap("DeployedTime")
         private String deployedTime;
@@ -161,7 +167,9 @@ public class DescribeDeployedApisResponseBody extends TeaModel {
 
         private DeployedApiItem(Builder builder) {
             this.apiId = builder.apiId;
+            this.apiMethod = builder.apiMethod;
             this.apiName = builder.apiName;
+            this.apiPath = builder.apiPath;
             this.deployedTime = builder.deployedTime;
             this.description = builder.description;
             this.groupId = builder.groupId;
@@ -187,10 +195,24 @@ public class DescribeDeployedApisResponseBody extends TeaModel {
         }
 
         /**
+         * @return apiMethod
+         */
+        public String getApiMethod() {
+            return this.apiMethod;
+        }
+
+        /**
          * @return apiName
          */
         public String getApiName() {
             return this.apiName;
+        }
+
+        /**
+         * @return apiPath
+         */
+        public String getApiPath() {
+            return this.apiPath;
         }
 
         /**
@@ -244,7 +266,9 @@ public class DescribeDeployedApisResponseBody extends TeaModel {
 
         public static final class Builder {
             private String apiId; 
+            private String apiMethod; 
             private String apiName; 
+            private String apiPath; 
             private String deployedTime; 
             private String description; 
             private String groupId; 
@@ -262,10 +286,26 @@ public class DescribeDeployedApisResponseBody extends TeaModel {
             }
 
             /**
+             * ApiMethod.
+             */
+            public Builder apiMethod(String apiMethod) {
+                this.apiMethod = apiMethod;
+                return this;
+            }
+
+            /**
              * ApiName.
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
+                return this;
+            }
+
+            /**
+             * ApiPath.
+             */
+            public Builder apiPath(String apiPath) {
+                this.apiPath = apiPath;
                 return this;
             }
 

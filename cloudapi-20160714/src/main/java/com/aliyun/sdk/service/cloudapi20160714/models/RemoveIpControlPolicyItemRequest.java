@@ -22,15 +22,10 @@ public class RemoveIpControlPolicyItemRequest extends Request {
     @Validation(required = true)
     private String policyItemIds;
 
-    @Query
-    @NameInMap("SecurityToken")
-    private String securityToken;
-
     private RemoveIpControlPolicyItemRequest(Builder builder) {
         super(builder);
         this.ipControlId = builder.ipControlId;
         this.policyItemIds = builder.policyItemIds;
-        this.securityToken = builder.securityToken;
     }
 
     public static Builder builder() {
@@ -60,17 +55,9 @@ public class RemoveIpControlPolicyItemRequest extends Request {
         return this.policyItemIds;
     }
 
-    /**
-     * @return securityToken
-     */
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
     public static final class Builder extends Request.Builder<RemoveIpControlPolicyItemRequest, Builder> {
         private String ipControlId; 
         private String policyItemIds; 
-        private String securityToken; 
 
         private Builder() {
             super();
@@ -80,7 +67,6 @@ public class RemoveIpControlPolicyItemRequest extends Request {
             super(request);
             this.ipControlId = request.ipControlId;
             this.policyItemIds = request.policyItemIds;
-            this.securityToken = request.securityToken;
         } 
 
         /**
@@ -98,15 +84,6 @@ public class RemoveIpControlPolicyItemRequest extends Request {
         public Builder policyItemIds(String policyItemIds) {
             this.putQueryParameter("PolicyItemIds", policyItemIds);
             this.policyItemIds = policyItemIds;
-            return this;
-        }
-
-        /**
-         * SecurityToken.
-         */
-        public Builder securityToken(String securityToken) {
-            this.putQueryParameter("SecurityToken", securityToken);
-            this.securityToken = securityToken;
             return this;
         }
 

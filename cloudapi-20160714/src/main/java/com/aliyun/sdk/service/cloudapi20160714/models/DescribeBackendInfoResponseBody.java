@@ -433,6 +433,9 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         @NameInMap("VpcScheme")
         private String vpcScheme;
 
+        @NameInMap("VpcTargetHostName")
+        private String vpcTargetHostName;
+
         private VpcConfig(Builder builder) {
             this.instanceId = builder.instanceId;
             this.name = builder.name;
@@ -440,6 +443,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             this.vpcAccessId = builder.vpcAccessId;
             this.vpcId = builder.vpcId;
             this.vpcScheme = builder.vpcScheme;
+            this.vpcTargetHostName = builder.vpcTargetHostName;
         }
 
         public static Builder builder() {
@@ -492,6 +496,13 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             return this.vpcScheme;
         }
 
+        /**
+         * @return vpcTargetHostName
+         */
+        public String getVpcTargetHostName() {
+            return this.vpcTargetHostName;
+        }
+
         public static final class Builder {
             private String instanceId; 
             private String name; 
@@ -499,6 +510,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             private String vpcAccessId; 
             private String vpcId; 
             private String vpcScheme; 
+            private String vpcTargetHostName; 
 
             /**
              * InstanceId.
@@ -545,6 +557,14 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
              */
             public Builder vpcScheme(String vpcScheme) {
                 this.vpcScheme = vpcScheme;
+                return this;
+            }
+
+            /**
+             * VpcTargetHostName.
+             */
+            public Builder vpcTargetHostName(String vpcTargetHostName) {
+                this.vpcTargetHostName = vpcTargetHostName;
                 return this;
             }
 

@@ -252,6 +252,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("CreatedTime")
         private String createdTime;
 
+        @NameInMap("EgressAddressChangeNotify")
+        private Boolean egressAddressChangeNotify;
+
         @NameInMap("EgressIpv6Enable")
         private Boolean egressIpv6Enable;
 
@@ -328,6 +331,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             this.aclType = builder.aclType;
             this.classicEgressAddress = builder.classicEgressAddress;
             this.createdTime = builder.createdTime;
+            this.egressAddressChangeNotify = builder.egressAddressChangeNotify;
             this.egressIpv6Enable = builder.egressIpv6Enable;
             this.expiredTime = builder.expiredTime;
             this.httpsPolicies = builder.httpsPolicies;
@@ -401,6 +405,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
          */
         public String getCreatedTime() {
             return this.createdTime;
+        }
+
+        /**
+         * @return egressAddressChangeNotify
+         */
+        public Boolean getEgressAddressChangeNotify() {
+            return this.egressAddressChangeNotify;
         }
 
         /**
@@ -571,6 +582,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String aclType; 
             private String classicEgressAddress; 
             private String createdTime; 
+            private Boolean egressAddressChangeNotify; 
             private Boolean egressIpv6Enable; 
             private String expiredTime; 
             private String httpsPolicies; 
@@ -640,6 +652,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
+                return this;
+            }
+
+            /**
+             * EgressAddressChangeNotify.
+             */
+            public Builder egressAddressChangeNotify(Boolean egressAddressChangeNotify) {
+                this.egressAddressChangeNotify = egressAddressChangeNotify;
                 return this;
             }
 

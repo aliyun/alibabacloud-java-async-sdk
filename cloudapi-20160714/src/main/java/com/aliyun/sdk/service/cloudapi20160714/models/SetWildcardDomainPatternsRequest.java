@@ -23,10 +23,6 @@ public class SetWildcardDomainPatternsRequest extends Request {
     private String groupId;
 
     @Query
-    @NameInMap("SecurityToken")
-    private String securityToken;
-
-    @Query
     @NameInMap("WildcardDomainPatterns")
     private String wildcardDomainPatterns;
 
@@ -34,7 +30,6 @@ public class SetWildcardDomainPatternsRequest extends Request {
         super(builder);
         this.domainName = builder.domainName;
         this.groupId = builder.groupId;
-        this.securityToken = builder.securityToken;
         this.wildcardDomainPatterns = builder.wildcardDomainPatterns;
     }
 
@@ -66,13 +61,6 @@ public class SetWildcardDomainPatternsRequest extends Request {
     }
 
     /**
-     * @return securityToken
-     */
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
-    /**
      * @return wildcardDomainPatterns
      */
     public String getWildcardDomainPatterns() {
@@ -82,7 +70,6 @@ public class SetWildcardDomainPatternsRequest extends Request {
     public static final class Builder extends Request.Builder<SetWildcardDomainPatternsRequest, Builder> {
         private String domainName; 
         private String groupId; 
-        private String securityToken; 
         private String wildcardDomainPatterns; 
 
         private Builder() {
@@ -93,7 +80,6 @@ public class SetWildcardDomainPatternsRequest extends Request {
             super(request);
             this.domainName = request.domainName;
             this.groupId = request.groupId;
-            this.securityToken = request.securityToken;
             this.wildcardDomainPatterns = request.wildcardDomainPatterns;
         } 
 
@@ -112,15 +98,6 @@ public class SetWildcardDomainPatternsRequest extends Request {
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
             this.groupId = groupId;
-            return this;
-        }
-
-        /**
-         * SecurityToken.
-         */
-        public Builder securityToken(String securityToken) {
-            this.putQueryParameter("SecurityToken", securityToken);
-            this.securityToken = securityToken;
             return this;
         }
 

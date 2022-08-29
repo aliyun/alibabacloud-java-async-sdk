@@ -26,16 +26,11 @@ public class EnableInstanceAccessControlRequest extends Request {
     @Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("SecurityToken")
-    private String securityToken;
-
     private EnableInstanceAccessControlRequest(Builder builder) {
         super(builder);
         this.aclId = builder.aclId;
         this.aclType = builder.aclType;
         this.instanceId = builder.instanceId;
-        this.securityToken = builder.securityToken;
     }
 
     public static Builder builder() {
@@ -72,18 +67,10 @@ public class EnableInstanceAccessControlRequest extends Request {
         return this.instanceId;
     }
 
-    /**
-     * @return securityToken
-     */
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
     public static final class Builder extends Request.Builder<EnableInstanceAccessControlRequest, Builder> {
         private String aclId; 
         private String aclType; 
         private String instanceId; 
-        private String securityToken; 
 
         private Builder() {
             super();
@@ -94,7 +81,6 @@ public class EnableInstanceAccessControlRequest extends Request {
             this.aclId = request.aclId;
             this.aclType = request.aclType;
             this.instanceId = request.instanceId;
-            this.securityToken = request.securityToken;
         } 
 
         /**
@@ -121,15 +107,6 @@ public class EnableInstanceAccessControlRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * SecurityToken.
-         */
-        public Builder securityToken(String securityToken) {
-            this.putQueryParameter("SecurityToken", securityToken);
-            this.securityToken = securityToken;
             return this;
         }
 

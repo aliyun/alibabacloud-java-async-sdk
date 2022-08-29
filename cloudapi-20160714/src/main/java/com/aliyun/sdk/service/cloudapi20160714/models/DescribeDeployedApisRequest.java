@@ -17,8 +17,16 @@ public class DescribeDeployedApisRequest extends Request {
     private String apiId;
 
     @Query
+    @NameInMap("ApiMethod")
+    private String apiMethod;
+
+    @Query
     @NameInMap("ApiName")
     private String apiName;
+
+    @Query
+    @NameInMap("ApiPath")
+    private String apiPath;
 
     @Query
     @NameInMap("EnableTagAuth")
@@ -51,7 +59,9 @@ public class DescribeDeployedApisRequest extends Request {
     private DescribeDeployedApisRequest(Builder builder) {
         super(builder);
         this.apiId = builder.apiId;
+        this.apiMethod = builder.apiMethod;
         this.apiName = builder.apiName;
+        this.apiPath = builder.apiPath;
         this.enableTagAuth = builder.enableTagAuth;
         this.groupId = builder.groupId;
         this.pageNumber = builder.pageNumber;
@@ -82,10 +92,24 @@ public class DescribeDeployedApisRequest extends Request {
     }
 
     /**
+     * @return apiMethod
+     */
+    public String getApiMethod() {
+        return this.apiMethod;
+    }
+
+    /**
      * @return apiName
      */
     public String getApiName() {
         return this.apiName;
+    }
+
+    /**
+     * @return apiPath
+     */
+    public String getApiPath() {
+        return this.apiPath;
     }
 
     /**
@@ -139,7 +163,9 @@ public class DescribeDeployedApisRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeDeployedApisRequest, Builder> {
         private String apiId; 
+        private String apiMethod; 
         private String apiName; 
+        private String apiPath; 
         private Boolean enableTagAuth; 
         private String groupId; 
         private Integer pageNumber; 
@@ -155,7 +181,9 @@ public class DescribeDeployedApisRequest extends Request {
         private Builder(DescribeDeployedApisRequest request) {
             super(request);
             this.apiId = request.apiId;
+            this.apiMethod = request.apiMethod;
             this.apiName = request.apiName;
+            this.apiPath = request.apiPath;
             this.enableTagAuth = request.enableTagAuth;
             this.groupId = request.groupId;
             this.pageNumber = request.pageNumber;
@@ -175,11 +203,29 @@ public class DescribeDeployedApisRequest extends Request {
         }
 
         /**
+         * ApiMethod.
+         */
+        public Builder apiMethod(String apiMethod) {
+            this.putQueryParameter("ApiMethod", apiMethod);
+            this.apiMethod = apiMethod;
+            return this;
+        }
+
+        /**
          * ApiName.
          */
         public Builder apiName(String apiName) {
             this.putQueryParameter("ApiName", apiName);
             this.apiName = apiName;
+            return this;
+        }
+
+        /**
+         * ApiPath.
+         */
+        public Builder apiPath(String apiPath) {
+            this.putQueryParameter("ApiPath", apiPath);
+            this.apiPath = apiPath;
             return this;
         }
 

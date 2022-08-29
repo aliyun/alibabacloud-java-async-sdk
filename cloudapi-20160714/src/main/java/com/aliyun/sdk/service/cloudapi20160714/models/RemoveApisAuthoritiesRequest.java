@@ -31,10 +31,6 @@ public class RemoveApisAuthoritiesRequest extends Request {
     private String groupId;
 
     @Query
-    @NameInMap("SecurityToken")
-    private String securityToken;
-
-    @Query
     @NameInMap("StageName")
     @Validation(required = true)
     private String stageName;
@@ -45,7 +41,6 @@ public class RemoveApisAuthoritiesRequest extends Request {
         this.appId = builder.appId;
         this.description = builder.description;
         this.groupId = builder.groupId;
-        this.securityToken = builder.securityToken;
         this.stageName = builder.stageName;
     }
 
@@ -91,13 +86,6 @@ public class RemoveApisAuthoritiesRequest extends Request {
     }
 
     /**
-     * @return securityToken
-     */
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
-    /**
      * @return stageName
      */
     public String getStageName() {
@@ -109,7 +97,6 @@ public class RemoveApisAuthoritiesRequest extends Request {
         private Long appId; 
         private String description; 
         private String groupId; 
-        private String securityToken; 
         private String stageName; 
 
         private Builder() {
@@ -122,7 +109,6 @@ public class RemoveApisAuthoritiesRequest extends Request {
             this.appId = request.appId;
             this.description = request.description;
             this.groupId = request.groupId;
-            this.securityToken = request.securityToken;
             this.stageName = request.stageName;
         } 
 
@@ -159,15 +145,6 @@ public class RemoveApisAuthoritiesRequest extends Request {
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
             this.groupId = groupId;
-            return this;
-        }
-
-        /**
-         * SecurityToken.
-         */
-        public Builder securityToken(String securityToken) {
-            this.putQueryParameter("SecurityToken", securityToken);
-            this.securityToken = securityToken;
             return this;
         }
 

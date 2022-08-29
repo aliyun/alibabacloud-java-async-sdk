@@ -22,15 +22,10 @@ public class ReactivateDomainRequest extends Request {
     @Validation(required = true)
     private String groupId;
 
-    @Query
-    @NameInMap("SecurityToken")
-    private String securityToken;
-
     private ReactivateDomainRequest(Builder builder) {
         super(builder);
         this.domainName = builder.domainName;
         this.groupId = builder.groupId;
-        this.securityToken = builder.securityToken;
     }
 
     public static Builder builder() {
@@ -60,17 +55,9 @@ public class ReactivateDomainRequest extends Request {
         return this.groupId;
     }
 
-    /**
-     * @return securityToken
-     */
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
     public static final class Builder extends Request.Builder<ReactivateDomainRequest, Builder> {
         private String domainName; 
         private String groupId; 
-        private String securityToken; 
 
         private Builder() {
             super();
@@ -80,7 +67,6 @@ public class ReactivateDomainRequest extends Request {
             super(request);
             this.domainName = request.domainName;
             this.groupId = request.groupId;
-            this.securityToken = request.securityToken;
         } 
 
         /**
@@ -98,15 +84,6 @@ public class ReactivateDomainRequest extends Request {
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
             this.groupId = groupId;
-            return this;
-        }
-
-        /**
-         * SecurityToken.
-         */
-        public Builder securityToken(String securityToken) {
-            this.putQueryParameter("SecurityToken", securityToken);
-            this.securityToken = securityToken;
             return this;
         }
 

@@ -17,14 +17,9 @@ public class DescribeUpdateBackendTaskRequest extends Request {
     @Validation(required = true)
     private String operationUid;
 
-    @Query
-    @NameInMap("SecurityToken")
-    private String securityToken;
-
     private DescribeUpdateBackendTaskRequest(Builder builder) {
         super(builder);
         this.operationUid = builder.operationUid;
-        this.securityToken = builder.securityToken;
     }
 
     public static Builder builder() {
@@ -47,16 +42,8 @@ public class DescribeUpdateBackendTaskRequest extends Request {
         return this.operationUid;
     }
 
-    /**
-     * @return securityToken
-     */
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
     public static final class Builder extends Request.Builder<DescribeUpdateBackendTaskRequest, Builder> {
         private String operationUid; 
-        private String securityToken; 
 
         private Builder() {
             super();
@@ -65,7 +52,6 @@ public class DescribeUpdateBackendTaskRequest extends Request {
         private Builder(DescribeUpdateBackendTaskRequest request) {
             super(request);
             this.operationUid = request.operationUid;
-            this.securityToken = request.securityToken;
         } 
 
         /**
@@ -74,15 +60,6 @@ public class DescribeUpdateBackendTaskRequest extends Request {
         public Builder operationUid(String operationUid) {
             this.putQueryParameter("OperationUid", operationUid);
             this.operationUid = operationUid;
-            return this;
-        }
-
-        /**
-         * SecurityToken.
-         */
-        public Builder securityToken(String securityToken) {
-            this.putQueryParameter("SecurityToken", securityToken);
-            this.securityToken = securityToken;
             return this;
         }
 

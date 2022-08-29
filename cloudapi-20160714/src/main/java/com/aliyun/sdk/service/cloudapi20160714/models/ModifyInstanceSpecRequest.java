@@ -31,6 +31,10 @@ public class ModifyInstanceSpecRequest extends Request {
     private String modifyAction;
 
     @Query
+    @NameInMap("SkipWaitSwitch")
+    private Boolean skipWaitSwitch;
+
+    @Query
     @NameInMap("Token")
     @Validation(required = true)
     private String token;
@@ -41,6 +45,7 @@ public class ModifyInstanceSpecRequest extends Request {
         this.instanceId = builder.instanceId;
         this.instanceSpec = builder.instanceSpec;
         this.modifyAction = builder.modifyAction;
+        this.skipWaitSwitch = builder.skipWaitSwitch;
         this.token = builder.token;
     }
 
@@ -86,6 +91,13 @@ public class ModifyInstanceSpecRequest extends Request {
     }
 
     /**
+     * @return skipWaitSwitch
+     */
+    public Boolean getSkipWaitSwitch() {
+        return this.skipWaitSwitch;
+    }
+
+    /**
      * @return token
      */
     public String getToken() {
@@ -97,6 +109,7 @@ public class ModifyInstanceSpecRequest extends Request {
         private String instanceId; 
         private String instanceSpec; 
         private String modifyAction; 
+        private Boolean skipWaitSwitch; 
         private String token; 
 
         private Builder() {
@@ -109,6 +122,7 @@ public class ModifyInstanceSpecRequest extends Request {
             this.instanceId = request.instanceId;
             this.instanceSpec = request.instanceSpec;
             this.modifyAction = request.modifyAction;
+            this.skipWaitSwitch = request.skipWaitSwitch;
             this.token = request.token;
         } 
 
@@ -145,6 +159,15 @@ public class ModifyInstanceSpecRequest extends Request {
         public Builder modifyAction(String modifyAction) {
             this.putQueryParameter("ModifyAction", modifyAction);
             this.modifyAction = modifyAction;
+            return this;
+        }
+
+        /**
+         * SkipWaitSwitch.
+         */
+        public Builder skipWaitSwitch(Boolean skipWaitSwitch) {
+            this.putQueryParameter("SkipWaitSwitch", skipWaitSwitch);
+            this.skipWaitSwitch = skipWaitSwitch;
             return this;
         }
 

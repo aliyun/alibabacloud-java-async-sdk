@@ -21,6 +21,9 @@ public class DescribeApiGroupResponseBody extends TeaModel {
     @NameInMap("ClassicVpcSubDomain")
     private String classicVpcSubDomain;
 
+    @NameInMap("CloudMarketCommodity")
+    private Boolean cloudMarketCommodity;
+
     @NameInMap("CmsMonitorGroup")
     private String cmsMonitorGroup;
 
@@ -109,6 +112,7 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         this.basePath = builder.basePath;
         this.billingStatus = builder.billingStatus;
         this.classicVpcSubDomain = builder.classicVpcSubDomain;
+        this.cloudMarketCommodity = builder.cloudMarketCommodity;
         this.cmsMonitorGroup = builder.cmsMonitorGroup;
         this.compatibleFlags = builder.compatibleFlags;
         this.createdTime = builder.createdTime;
@@ -166,6 +170,13 @@ public class DescribeApiGroupResponseBody extends TeaModel {
      */
     public String getClassicVpcSubDomain() {
         return this.classicVpcSubDomain;
+    }
+
+    /**
+     * @return cloudMarketCommodity
+     */
+    public Boolean getCloudMarketCommodity() {
+        return this.cloudMarketCommodity;
     }
 
     /**
@@ -368,6 +379,7 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         private String basePath; 
         private String billingStatus; 
         private String classicVpcSubDomain; 
+        private Boolean cloudMarketCommodity; 
         private String cmsMonitorGroup; 
         private String compatibleFlags; 
         private String createdTime; 
@@ -418,6 +430,14 @@ public class DescribeApiGroupResponseBody extends TeaModel {
          */
         public Builder classicVpcSubDomain(String classicVpcSubDomain) {
             this.classicVpcSubDomain = classicVpcSubDomain;
+            return this;
+        }
+
+        /**
+         * CloudMarketCommodity.
+         */
+        public Builder cloudMarketCommodity(Boolean cloudMarketCommodity) {
+            this.cloudMarketCommodity = cloudMarketCommodity;
             return this;
         }
 
