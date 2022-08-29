@@ -36,6 +36,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeDiskReplicaGroupsResponse> describeDiskReplicaGroups(DescribeDiskReplicaGroupsRequest request);
 
+    CompletableFuture<DescribeDiskReplicaPairProgressResponse> describeDiskReplicaPairProgress(DescribeDiskReplicaPairProgressRequest request);
+
     CompletableFuture<DescribeDiskReplicaPairsResponse> describeDiskReplicaPairs(DescribeDiskReplicaPairsRequest request);
 
     CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request);
