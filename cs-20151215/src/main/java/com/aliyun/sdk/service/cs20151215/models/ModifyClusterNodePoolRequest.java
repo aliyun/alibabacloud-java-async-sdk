@@ -35,10 +35,6 @@ public class ModifyClusterNodePoolRequest extends Request {
     private Management management;
 
     @Body
-    @NameInMap("node_config")
-    private NodeConfig nodeConfig;
-
-    @Body
     @NameInMap("nodepool_info")
     private NodepoolInfo nodepoolInfo;
 
@@ -61,7 +57,6 @@ public class ModifyClusterNodePoolRequest extends Request {
         this.autoScaling = builder.autoScaling;
         this.kubernetesConfig = builder.kubernetesConfig;
         this.management = builder.management;
-        this.nodeConfig = builder.nodeConfig;
         this.nodepoolInfo = builder.nodepoolInfo;
         this.scalingGroup = builder.scalingGroup;
         this.teeConfig = builder.teeConfig;
@@ -117,13 +112,6 @@ public class ModifyClusterNodePoolRequest extends Request {
     }
 
     /**
-     * @return nodeConfig
-     */
-    public NodeConfig getNodeConfig() {
-        return this.nodeConfig;
-    }
-
-    /**
      * @return nodepoolInfo
      */
     public NodepoolInfo getNodepoolInfo() {
@@ -157,7 +145,6 @@ public class ModifyClusterNodePoolRequest extends Request {
         private AutoScaling autoScaling; 
         private KubernetesConfig kubernetesConfig; 
         private Management management; 
-        private NodeConfig nodeConfig; 
         private NodepoolInfo nodepoolInfo; 
         private ScalingGroup scalingGroup; 
         private TeeConfig teeConfig; 
@@ -174,7 +161,6 @@ public class ModifyClusterNodePoolRequest extends Request {
             this.autoScaling = request.autoScaling;
             this.kubernetesConfig = request.kubernetesConfig;
             this.management = request.management;
-            this.nodeConfig = request.nodeConfig;
             this.nodepoolInfo = request.nodepoolInfo;
             this.scalingGroup = request.scalingGroup;
             this.teeConfig = request.teeConfig;
@@ -223,15 +209,6 @@ public class ModifyClusterNodePoolRequest extends Request {
         public Builder management(Management management) {
             this.putBodyParameter("management", management);
             this.management = management;
-            return this;
-        }
-
-        /**
-         * 节点配置。
-         */
-        public Builder nodeConfig(NodeConfig nodeConfig) {
-            this.putBodyParameter("node_config", nodeConfig);
-            this.nodeConfig = nodeConfig;
             return this;
         }
 
@@ -777,389 +754,6 @@ public class ModifyClusterNodePoolRequest extends Request {
 
             public Management build() {
                 return new Management(this);
-            } 
-
-        } 
-
-    }
-    public static class KubeletConfiguration extends TeaModel {
-        @NameInMap("cpuManagerPolicy")
-        private String cpuManagerPolicy;
-
-        @NameInMap("eventBurst")
-        private Long eventBurst;
-
-        @NameInMap("eventRecordQPS")
-        private Long eventRecordQPS;
-
-        @NameInMap("evictionHard")
-        private java.util.Map < String, ? > evictionHard;
-
-        @NameInMap("evictionSoft")
-        private java.util.Map < String, ? > evictionSoft;
-
-        @NameInMap("evictionSoftGracePeriod")
-        private java.util.Map < String, ? > evictionSoftGracePeriod;
-
-        @NameInMap("kubeAPIBurst")
-        private Long kubeAPIBurst;
-
-        @NameInMap("kubeAPIQPS")
-        private Long kubeAPIQPS;
-
-        @NameInMap("kubeReserved")
-        private java.util.Map < String, ? > kubeReserved;
-
-        @NameInMap("registryBurst")
-        private Long registryBurst;
-
-        @NameInMap("registryPullQPS")
-        private Long registryPullQPS;
-
-        @NameInMap("serializeImagePulls")
-        private Boolean serializeImagePulls;
-
-        @NameInMap("systemReserved")
-        private java.util.Map < String, ? > systemReserved;
-
-        private KubeletConfiguration(Builder builder) {
-            this.cpuManagerPolicy = builder.cpuManagerPolicy;
-            this.eventBurst = builder.eventBurst;
-            this.eventRecordQPS = builder.eventRecordQPS;
-            this.evictionHard = builder.evictionHard;
-            this.evictionSoft = builder.evictionSoft;
-            this.evictionSoftGracePeriod = builder.evictionSoftGracePeriod;
-            this.kubeAPIBurst = builder.kubeAPIBurst;
-            this.kubeAPIQPS = builder.kubeAPIQPS;
-            this.kubeReserved = builder.kubeReserved;
-            this.registryBurst = builder.registryBurst;
-            this.registryPullQPS = builder.registryPullQPS;
-            this.serializeImagePulls = builder.serializeImagePulls;
-            this.systemReserved = builder.systemReserved;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static KubeletConfiguration create() {
-            return builder().build();
-        }
-
-        /**
-         * @return cpuManagerPolicy
-         */
-        public String getCpuManagerPolicy() {
-            return this.cpuManagerPolicy;
-        }
-
-        /**
-         * @return eventBurst
-         */
-        public Long getEventBurst() {
-            return this.eventBurst;
-        }
-
-        /**
-         * @return eventRecordQPS
-         */
-        public Long getEventRecordQPS() {
-            return this.eventRecordQPS;
-        }
-
-        /**
-         * @return evictionHard
-         */
-        public java.util.Map < String, ? > getEvictionHard() {
-            return this.evictionHard;
-        }
-
-        /**
-         * @return evictionSoft
-         */
-        public java.util.Map < String, ? > getEvictionSoft() {
-            return this.evictionSoft;
-        }
-
-        /**
-         * @return evictionSoftGracePeriod
-         */
-        public java.util.Map < String, ? > getEvictionSoftGracePeriod() {
-            return this.evictionSoftGracePeriod;
-        }
-
-        /**
-         * @return kubeAPIBurst
-         */
-        public Long getKubeAPIBurst() {
-            return this.kubeAPIBurst;
-        }
-
-        /**
-         * @return kubeAPIQPS
-         */
-        public Long getKubeAPIQPS() {
-            return this.kubeAPIQPS;
-        }
-
-        /**
-         * @return kubeReserved
-         */
-        public java.util.Map < String, ? > getKubeReserved() {
-            return this.kubeReserved;
-        }
-
-        /**
-         * @return registryBurst
-         */
-        public Long getRegistryBurst() {
-            return this.registryBurst;
-        }
-
-        /**
-         * @return registryPullQPS
-         */
-        public Long getRegistryPullQPS() {
-            return this.registryPullQPS;
-        }
-
-        /**
-         * @return serializeImagePulls
-         */
-        public Boolean getSerializeImagePulls() {
-            return this.serializeImagePulls;
-        }
-
-        /**
-         * @return systemReserved
-         */
-        public java.util.Map < String, ? > getSystemReserved() {
-            return this.systemReserved;
-        }
-
-        public static final class Builder {
-            private String cpuManagerPolicy; 
-            private Long eventBurst; 
-            private Long eventRecordQPS; 
-            private java.util.Map < String, ? > evictionHard; 
-            private java.util.Map < String, ? > evictionSoft; 
-            private java.util.Map < String, ? > evictionSoftGracePeriod; 
-            private Long kubeAPIBurst; 
-            private Long kubeAPIQPS; 
-            private java.util.Map < String, ? > kubeReserved; 
-            private Long registryBurst; 
-            private Long registryPullQPS; 
-            private Boolean serializeImagePulls; 
-            private java.util.Map < String, ? > systemReserved; 
-
-            /**
-             * CPU管理器策略。
-             */
-            public Builder cpuManagerPolicy(String cpuManagerPolicy) {
-                this.cpuManagerPolicy = cpuManagerPolicy;
-                return this;
-            }
-
-            /**
-             * 事件记录的个数的突发峰值上限。
-             */
-            public Builder eventBurst(Long eventBurst) {
-                this.eventBurst = eventBurst;
-                return this;
-            }
-
-            /**
-             * 每秒可生成的事件数量。
-             */
-            public Builder eventRecordQPS(Long eventRecordQPS) {
-                this.eventRecordQPS = eventRecordQPS;
-                return this;
-            }
-
-            /**
-             * 触发Pod驱逐操作的一组硬性门限。
-             */
-            public Builder evictionHard(java.util.Map < String, ? > evictionHard) {
-                this.evictionHard = evictionHard;
-                return this;
-            }
-
-            /**
-             * 设置一组驱逐阈值。
-             */
-            public Builder evictionSoft(java.util.Map < String, ? > evictionSoft) {
-                this.evictionSoft = evictionSoft;
-                return this;
-            }
-
-            /**
-             * 设置一组驱逐宽限期。
-             */
-            public Builder evictionSoftGracePeriod(java.util.Map < String, ? > evictionSoftGracePeriod) {
-                this.evictionSoftGracePeriod = evictionSoftGracePeriod;
-                return this;
-            }
-
-            /**
-             * 每秒发送到apiserver的突发请求数量上限。
-             */
-            public Builder kubeAPIBurst(Long kubeAPIBurst) {
-                this.kubeAPIBurst = kubeAPIBurst;
-                return this;
-            }
-
-            /**
-             * 与apiserver通信的每秒查询个数。
-             */
-            public Builder kubeAPIQPS(Long kubeAPIQPS) {
-                this.kubeAPIQPS = kubeAPIQPS;
-                return this;
-            }
-
-            /**
-             * kubernetes系统预留的资源配置。
-             */
-            public Builder kubeReserved(java.util.Map < String, ? > kubeReserved) {
-                this.kubeReserved = kubeReserved;
-                return this;
-            }
-
-            /**
-             * 突发性镜像拉取的个数上限。
-             */
-            public Builder registryBurst(Long registryBurst) {
-                this.registryBurst = registryBurst;
-                return this;
-            }
-
-            /**
-             * 镜像仓库的qps上限。
-             */
-            public Builder registryPullQPS(Long registryPullQPS) {
-                this.registryPullQPS = registryPullQPS;
-                return this;
-            }
-
-            /**
-             * 逐一拉取镜像。
-             */
-            public Builder serializeImagePulls(Boolean serializeImagePulls) {
-                this.serializeImagePulls = serializeImagePulls;
-                return this;
-            }
-
-            /**
-             * 系统预留的资源配置。
-             */
-            public Builder systemReserved(java.util.Map < String, ? > systemReserved) {
-                this.systemReserved = systemReserved;
-                return this;
-            }
-
-            public KubeletConfiguration build() {
-                return new KubeletConfiguration(this);
-            } 
-
-        } 
-
-    }
-    public static class RolloutPolicy extends TeaModel {
-        @NameInMap("max_unavailable")
-        private Long maxUnavailable;
-
-        private RolloutPolicy(Builder builder) {
-            this.maxUnavailable = builder.maxUnavailable;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static RolloutPolicy create() {
-            return builder().build();
-        }
-
-        /**
-         * @return maxUnavailable
-         */
-        public Long getMaxUnavailable() {
-            return this.maxUnavailable;
-        }
-
-        public static final class Builder {
-            private Long maxUnavailable; 
-
-            /**
-             * 最大不可用节点数。
-             */
-            public Builder maxUnavailable(Long maxUnavailable) {
-                this.maxUnavailable = maxUnavailable;
-                return this;
-            }
-
-            public RolloutPolicy build() {
-                return new RolloutPolicy(this);
-            } 
-
-        } 
-
-    }
-    public static class NodeConfig extends TeaModel {
-        @NameInMap("kubelet_configuration")
-        private KubeletConfiguration kubeletConfiguration;
-
-        @NameInMap("rollout_policy")
-        private RolloutPolicy rolloutPolicy;
-
-        private NodeConfig(Builder builder) {
-            this.kubeletConfiguration = builder.kubeletConfiguration;
-            this.rolloutPolicy = builder.rolloutPolicy;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static NodeConfig create() {
-            return builder().build();
-        }
-
-        /**
-         * @return kubeletConfiguration
-         */
-        public KubeletConfiguration getKubeletConfiguration() {
-            return this.kubeletConfiguration;
-        }
-
-        /**
-         * @return rolloutPolicy
-         */
-        public RolloutPolicy getRolloutPolicy() {
-            return this.rolloutPolicy;
-        }
-
-        public static final class Builder {
-            private KubeletConfiguration kubeletConfiguration; 
-            private RolloutPolicy rolloutPolicy; 
-
-            /**
-             * kubelet参数配置。
-             */
-            public Builder kubeletConfiguration(KubeletConfiguration kubeletConfiguration) {
-                this.kubeletConfiguration = kubeletConfiguration;
-                return this;
-            }
-
-            /**
-             * 轮转配置。
-             */
-            public Builder rolloutPolicy(RolloutPolicy rolloutPolicy) {
-                this.rolloutPolicy = rolloutPolicy;
-                return this;
-            }
-
-            public NodeConfig build() {
-                return new NodeConfig(this);
             } 
 
         } 

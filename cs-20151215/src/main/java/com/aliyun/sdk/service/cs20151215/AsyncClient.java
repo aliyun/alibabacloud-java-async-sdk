@@ -168,6 +168,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ModifyClusterTagsResponse> modifyClusterTags(ModifyClusterTagsRequest request);
 
+    CompletableFuture<ModifyNodePoolNodeConfigResponse> modifyNodePoolNodeConfig(ModifyNodePoolNodeConfigRequest request);
+
     CompletableFuture<ModifyPolicyInstanceResponse> modifyPolicyInstance(ModifyPolicyInstanceRequest request);
 
     CompletableFuture<OpenAckServiceResponse> openAckService(OpenAckServiceRequest request);
