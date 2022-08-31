@@ -72,6 +72,10 @@ public class ListInstancesRequest extends Request {
     @Validation(required = true)
     private String regionId;
 
+    @Body
+    @NameInMap("Status")
+    private String status;
+
     private ListInstancesRequest(Builder builder) {
         super(builder);
         this.beginBizdate = builder.beginBizdate;
@@ -88,6 +92,7 @@ public class ListInstancesRequest extends Request {
         this.projectEnv = builder.projectEnv;
         this.projectId = builder.projectId;
         this.regionId = builder.regionId;
+        this.status = builder.status;
     }
 
     public static Builder builder() {
@@ -201,6 +206,13 @@ public class ListInstancesRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
     public static final class Builder extends Request.Builder<ListInstancesRequest, Builder> {
         private String beginBizdate; 
         private String bizName; 
@@ -216,6 +228,7 @@ public class ListInstancesRequest extends Request {
         private String projectEnv; 
         private Long projectId; 
         private String regionId; 
+        private String status; 
 
         private Builder() {
             super();
@@ -237,6 +250,7 @@ public class ListInstancesRequest extends Request {
             this.projectEnv = request.projectEnv;
             this.projectId = request.projectId;
             this.regionId = request.regionId;
+            this.status = request.status;
         } 
 
         /**
@@ -362,6 +376,15 @@ public class ListInstancesRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Status.
+         */
+        public Builder status(String status) {
+            this.putBodyParameter("Status", status);
+            this.status = status;
             return this;
         }
 

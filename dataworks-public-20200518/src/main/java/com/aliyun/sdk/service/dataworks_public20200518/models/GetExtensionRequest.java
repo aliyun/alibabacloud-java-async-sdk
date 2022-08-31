@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class GetExtensionRequest extends Request {
     @Query
     @NameInMap("ExtensionCode")
+    @Validation(required = true)
     private String extensionCode;
 
     @Host

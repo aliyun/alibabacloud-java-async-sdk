@@ -25,6 +25,10 @@ public class ListAlertMessagesRequest extends Request {
     private String alertUser;
 
     @Body
+    @NameInMap("BaselineId")
+    private Long baselineId;
+
+    @Body
     @NameInMap("BeginTime")
     @Validation(required = true)
     private String beginTime;
@@ -58,6 +62,7 @@ public class ListAlertMessagesRequest extends Request {
         this.alertMethods = builder.alertMethods;
         this.alertRuleTypes = builder.alertRuleTypes;
         this.alertUser = builder.alertUser;
+        this.baselineId = builder.baselineId;
         this.beginTime = builder.beginTime;
         this.endTime = builder.endTime;
         this.pageNumber = builder.pageNumber;
@@ -98,6 +103,13 @@ public class ListAlertMessagesRequest extends Request {
      */
     public String getAlertUser() {
         return this.alertUser;
+    }
+
+    /**
+     * @return baselineId
+     */
+    public Long getBaselineId() {
+        return this.baselineId;
     }
 
     /**
@@ -146,6 +158,7 @@ public class ListAlertMessagesRequest extends Request {
         private String alertMethods; 
         private String alertRuleTypes; 
         private String alertUser; 
+        private Long baselineId; 
         private String beginTime; 
         private String endTime; 
         private Integer pageNumber; 
@@ -162,6 +175,7 @@ public class ListAlertMessagesRequest extends Request {
             this.alertMethods = request.alertMethods;
             this.alertRuleTypes = request.alertRuleTypes;
             this.alertUser = request.alertUser;
+            this.baselineId = request.baselineId;
             this.beginTime = request.beginTime;
             this.endTime = request.endTime;
             this.pageNumber = request.pageNumber;
@@ -194,6 +208,15 @@ public class ListAlertMessagesRequest extends Request {
         public Builder alertUser(String alertUser) {
             this.putBodyParameter("AlertUser", alertUser);
             this.alertUser = alertUser;
+            return this;
+        }
+
+        /**
+         * 基线ID，当 alertRuleTypes 包含 GLOBAL 时生效，与 RemindId 互斥
+         */
+        public Builder baselineId(Long baselineId) {
+            this.putBodyParameter("BaselineId", baselineId);
+            this.baselineId = baselineId;
             return this;
         }
 
