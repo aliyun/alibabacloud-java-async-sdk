@@ -446,6 +446,9 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         @NameInMap("Details")
         private java.util.List < Details> details;
 
+        @NameInMap("DisplaySandboxResult")
+        private Boolean displaySandboxResult;
+
         @NameInMap("EventNotes")
         private java.util.List < EventNotes> eventNotes;
 
@@ -560,6 +563,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             this.dataSource = builder.dataSource;
             this.desc = builder.desc;
             this.details = builder.details;
+            this.displaySandboxResult = builder.displaySandboxResult;
             this.eventNotes = builder.eventNotes;
             this.eventStatus = builder.eventStatus;
             this.eventSubType = builder.eventSubType;
@@ -719,6 +723,13 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
          */
         public java.util.List < Details> getDetails() {
             return this.details;
+        }
+
+        /**
+         * @return displaySandboxResult
+         */
+        public Boolean getDisplaySandboxResult() {
+            return this.displaySandboxResult;
         }
 
         /**
@@ -963,6 +974,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             private String dataSource; 
             private String desc; 
             private java.util.List < Details> details; 
+            private Boolean displaySandboxResult; 
             private java.util.List < EventNotes> eventNotes; 
             private Integer eventStatus; 
             private String eventSubType; 
@@ -1129,6 +1141,14 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
              */
             public Builder details(java.util.List < Details> details) {
                 this.details = details;
+                return this;
+            }
+
+            /**
+             * DisplaySandboxResult.
+             */
+            public Builder displaySandboxResult(Boolean displaySandboxResult) {
+                this.displaySandboxResult = displaySandboxResult;
                 return this;
             }
 
