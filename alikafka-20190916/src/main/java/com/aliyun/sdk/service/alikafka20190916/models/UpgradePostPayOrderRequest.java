@@ -39,6 +39,10 @@ public class UpgradePostPayOrderRequest extends Request {
     private String ioMaxSpec;
 
     @Query
+    @NameInMap("PartitionNum")
+    private Integer partitionNum;
+
+    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
@@ -49,7 +53,6 @@ public class UpgradePostPayOrderRequest extends Request {
 
     @Query
     @NameInMap("TopicQuota")
-    @Validation(required = true)
     private Integer topicQuota;
 
     private UpgradePostPayOrderRequest(Builder builder) {
@@ -60,6 +63,7 @@ public class UpgradePostPayOrderRequest extends Request {
         this.instanceId = builder.instanceId;
         this.ioMax = builder.ioMax;
         this.ioMaxSpec = builder.ioMaxSpec;
+        this.partitionNum = builder.partitionNum;
         this.regionId = builder.regionId;
         this.specType = builder.specType;
         this.topicQuota = builder.topicQuota;
@@ -121,6 +125,13 @@ public class UpgradePostPayOrderRequest extends Request {
     }
 
     /**
+     * @return partitionNum
+     */
+    public Integer getPartitionNum() {
+        return this.partitionNum;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -148,6 +159,7 @@ public class UpgradePostPayOrderRequest extends Request {
         private String instanceId; 
         private Integer ioMax; 
         private String ioMaxSpec; 
+        private Integer partitionNum; 
         private String regionId; 
         private String specType; 
         private Integer topicQuota; 
@@ -164,6 +176,7 @@ public class UpgradePostPayOrderRequest extends Request {
             this.instanceId = request.instanceId;
             this.ioMax = request.ioMax;
             this.ioMaxSpec = request.ioMaxSpec;
+            this.partitionNum = request.partitionNum;
             this.regionId = request.regionId;
             this.specType = request.specType;
             this.topicQuota = request.topicQuota;
@@ -220,6 +233,15 @@ public class UpgradePostPayOrderRequest extends Request {
         public Builder ioMaxSpec(String ioMaxSpec) {
             this.putQueryParameter("IoMaxSpec", ioMaxSpec);
             this.ioMaxSpec = ioMaxSpec;
+            return this;
+        }
+
+        /**
+         * PartitionNum.
+         */
+        public Builder partitionNum(Integer partitionNum) {
+            this.putQueryParameter("PartitionNum", partitionNum);
+            this.partitionNum = partitionNum;
             return this;
         }
 

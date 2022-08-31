@@ -308,6 +308,9 @@ public class GetInstanceListResponseBody extends TeaModel {
         @NameInMap("IoMax")
         private Integer ioMax;
 
+        @NameInMap("KmsKeyId")
+        private String kmsKeyId;
+
         @NameInMap("MsgRetain")
         private Integer msgRetain;
 
@@ -380,6 +383,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             this.expiredTime = builder.expiredTime;
             this.instanceId = builder.instanceId;
             this.ioMax = builder.ioMax;
+            this.kmsKeyId = builder.kmsKeyId;
             this.msgRetain = builder.msgRetain;
             this.name = builder.name;
             this.paidType = builder.paidType;
@@ -485,6 +489,13 @@ public class GetInstanceListResponseBody extends TeaModel {
          */
         public Integer getIoMax() {
             return this.ioMax;
+        }
+
+        /**
+         * @return kmsKeyId
+         */
+        public String getKmsKeyId() {
+            return this.kmsKeyId;
         }
 
         /**
@@ -639,6 +650,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             private Long expiredTime; 
             private String instanceId; 
             private Integer ioMax; 
+            private String kmsKeyId; 
             private Integer msgRetain; 
             private String name; 
             private Integer paidType; 
@@ -745,6 +757,14 @@ public class GetInstanceListResponseBody extends TeaModel {
              */
             public Builder ioMax(Integer ioMax) {
                 this.ioMax = ioMax;
+                return this;
+            }
+
+            /**
+             * KmsKeyId.
+             */
+            public Builder kmsKeyId(String kmsKeyId) {
+                this.kmsKeyId = kmsKeyId;
                 return this;
             }
 

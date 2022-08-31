@@ -40,6 +40,10 @@ public class CreatePrePayOrderRequest extends Request {
     private String ioMaxSpec;
 
     @Query
+    @NameInMap("PartitionNum")
+    private Integer partitionNum;
+
+    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
@@ -54,7 +58,6 @@ public class CreatePrePayOrderRequest extends Request {
 
     @Query
     @NameInMap("TopicQuota")
-    @Validation(required = true)
     private Integer topicQuota;
 
     private CreatePrePayOrderRequest(Builder builder) {
@@ -65,6 +68,7 @@ public class CreatePrePayOrderRequest extends Request {
         this.eipMax = builder.eipMax;
         this.ioMax = builder.ioMax;
         this.ioMaxSpec = builder.ioMaxSpec;
+        this.partitionNum = builder.partitionNum;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.specType = builder.specType;
@@ -127,6 +131,13 @@ public class CreatePrePayOrderRequest extends Request {
     }
 
     /**
+     * @return partitionNum
+     */
+    public Integer getPartitionNum() {
+        return this.partitionNum;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -161,6 +172,7 @@ public class CreatePrePayOrderRequest extends Request {
         private Integer eipMax; 
         private Integer ioMax; 
         private String ioMaxSpec; 
+        private Integer partitionNum; 
         private String regionId; 
         private String resourceGroupId; 
         private String specType; 
@@ -178,6 +190,7 @@ public class CreatePrePayOrderRequest extends Request {
             this.eipMax = request.eipMax;
             this.ioMax = request.ioMax;
             this.ioMaxSpec = request.ioMaxSpec;
+            this.partitionNum = request.partitionNum;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.specType = request.specType;
@@ -235,6 +248,15 @@ public class CreatePrePayOrderRequest extends Request {
         public Builder ioMaxSpec(String ioMaxSpec) {
             this.putQueryParameter("IoMaxSpec", ioMaxSpec);
             this.ioMaxSpec = ioMaxSpec;
+            return this;
+        }
+
+        /**
+         * PartitionNum.
+         */
+        public Builder partitionNum(Integer partitionNum) {
+            this.putQueryParameter("PartitionNum", partitionNum);
+            this.partitionNum = partitionNum;
             return this;
         }
 
