@@ -48,9 +48,9 @@ public class ListSCIMServerCredentialsRequest extends Request {
             super();
         } 
 
-        private Builder(ListSCIMServerCredentialsRequest response) {
-            super(response);
-            this.directoryId = response.directoryId;
+        private Builder(ListSCIMServerCredentialsRequest request) {
+            super(request);
+            this.directoryId = request.directoryId;
         } 
 
         /**

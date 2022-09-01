@@ -70,6 +70,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetGroupResponse> getGroup(GetGroupRequest request);
 
+    CompletableFuture<GetMFAAuthenticationSettingsResponse> getMFAAuthenticationSettings(GetMFAAuthenticationSettingsRequest request);
+
     CompletableFuture<GetMFAAuthenticationStatusResponse> getMFAAuthenticationStatus(GetMFAAuthenticationStatusRequest request);
 
     CompletableFuture<GetSCIMSynchronizationStatusResponse> getSCIMSynchronizationStatus(GetSCIMSynchronizationStatusRequest request);
@@ -81,6 +83,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetTaskStatusResponse> getTaskStatus(GetTaskStatusRequest request);
 
     CompletableFuture<GetUserResponse> getUser(GetUserRequest request);
+
+    CompletableFuture<GetUserMFAAuthenticationSettingsResponse> getUserMFAAuthenticationSettings(GetUserMFAAuthenticationSettingsRequest request);
 
     CompletableFuture<ListAccessAssignmentsResponse> listAccessAssignments(ListAccessAssignmentsRequest request);
 
@@ -132,9 +136,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UpdateInlinePolicyForAccessConfigurationResponse> updateInlinePolicyForAccessConfiguration(UpdateInlinePolicyForAccessConfigurationRequest request);
 
+    CompletableFuture<UpdateMFAAuthenticationSettingsResponse> updateMFAAuthenticationSettings(UpdateMFAAuthenticationSettingsRequest request);
+
     CompletableFuture<UpdateSCIMServerCredentialStatusResponse> updateSCIMServerCredentialStatus(UpdateSCIMServerCredentialStatusRequest request);
 
     CompletableFuture<UpdateUserResponse> updateUser(UpdateUserRequest request);
+
+    CompletableFuture<UpdateUserMFAAuthenticationSettingsResponse> updateUserMFAAuthenticationSettings(UpdateUserMFAAuthenticationSettingsRequest request);
 
     CompletableFuture<UpdateUserStatusResponse> updateUserStatus(UpdateUserStatusRequest request);
 

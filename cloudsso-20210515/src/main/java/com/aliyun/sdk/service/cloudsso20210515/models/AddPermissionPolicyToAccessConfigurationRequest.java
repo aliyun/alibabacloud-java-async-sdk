@@ -100,13 +100,13 @@ public class AddPermissionPolicyToAccessConfigurationRequest extends Request {
             super();
         } 
 
-        private Builder(AddPermissionPolicyToAccessConfigurationRequest response) {
-            super(response);
-            this.accessConfigurationId = response.accessConfigurationId;
-            this.directoryId = response.directoryId;
-            this.inlinePolicyDocument = response.inlinePolicyDocument;
-            this.permissionPolicyName = response.permissionPolicyName;
-            this.permissionPolicyType = response.permissionPolicyType;
+        private Builder(AddPermissionPolicyToAccessConfigurationRequest request) {
+            super(request);
+            this.accessConfigurationId = request.accessConfigurationId;
+            this.directoryId = request.directoryId;
+            this.inlinePolicyDocument = request.inlinePolicyDocument;
+            this.permissionPolicyName = request.permissionPolicyName;
+            this.permissionPolicyType = request.permissionPolicyType;
         } 
 
         /**

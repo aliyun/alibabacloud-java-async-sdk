@@ -61,10 +61,10 @@ public class DeleteSCIMServerCredentialRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteSCIMServerCredentialRequest response) {
-            super(response);
-            this.credentialId = response.credentialId;
-            this.directoryId = response.directoryId;
+        private Builder(DeleteSCIMServerCredentialRequest request) {
+            super(request);
+            this.credentialId = request.credentialId;
+            this.directoryId = request.directoryId;
         } 
 
         /**

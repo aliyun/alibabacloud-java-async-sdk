@@ -48,9 +48,9 @@ public class ClearExternalSAMLIdentityProviderRequest extends Request {
             super();
         } 
 
-        private Builder(ClearExternalSAMLIdentityProviderRequest response) {
-            super(response);
-            this.directoryId = response.directoryId;
+        private Builder(ClearExternalSAMLIdentityProviderRequest request) {
+            super(request);
+            this.directoryId = request.directoryId;
         } 
 
         /**

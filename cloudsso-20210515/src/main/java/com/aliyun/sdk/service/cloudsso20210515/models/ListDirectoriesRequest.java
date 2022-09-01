@@ -35,8 +35,8 @@ public class ListDirectoriesRequest extends Request {
             super();
         } 
 
-        private Builder(ListDirectoriesRequest response) {
-            super(response);
+        private Builder(ListDirectoriesRequest request) {
+            super(request);
         } 
 
         @Override

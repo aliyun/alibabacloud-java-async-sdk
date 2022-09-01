@@ -178,19 +178,19 @@ public class ListTasksRequest extends Request {
             super();
         } 
 
-        private Builder(ListTasksRequest response) {
-            super(response);
-            this.accessConfigurationId = response.accessConfigurationId;
-            this.directoryId = response.directoryId;
-            this.filter = response.filter;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.principalId = response.principalId;
-            this.principalType = response.principalType;
-            this.status = response.status;
-            this.targetId = response.targetId;
-            this.targetType = response.targetType;
-            this.taskType = response.taskType;
+        private Builder(ListTasksRequest request) {
+            super(request);
+            this.accessConfigurationId = request.accessConfigurationId;
+            this.directoryId = request.directoryId;
+            this.filter = request.filter;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.principalId = request.principalId;
+            this.principalType = request.principalType;
+            this.status = request.status;
+            this.targetId = request.targetId;
+            this.targetType = request.targetType;
+            this.taskType = request.taskType;
         } 
 
         /**

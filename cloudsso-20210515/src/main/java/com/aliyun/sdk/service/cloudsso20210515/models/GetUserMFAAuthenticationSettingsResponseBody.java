@@ -1,0 +1,74 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.cloudsso20210515.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link GetUserMFAAuthenticationSettingsResponseBody} extends {@link TeaModel}
+ *
+ * <p>GetUserMFAAuthenticationSettingsResponseBody</p>
+ */
+public class GetUserMFAAuthenticationSettingsResponseBody extends TeaModel {
+    @NameInMap("RequestId")
+    private String requestId;
+
+    @NameInMap("UserMFAAuthenticationSettings")
+    private String userMFAAuthenticationSettings;
+
+    private GetUserMFAAuthenticationSettingsResponseBody(Builder builder) {
+        this.requestId = builder.requestId;
+        this.userMFAAuthenticationSettings = builder.userMFAAuthenticationSettings;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static GetUserMFAAuthenticationSettingsResponseBody create() {
+        return builder().build();
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
+     * @return userMFAAuthenticationSettings
+     */
+    public String getUserMFAAuthenticationSettings() {
+        return this.userMFAAuthenticationSettings;
+    }
+
+    public static final class Builder {
+        private String requestId; 
+        private String userMFAAuthenticationSettings; 
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * UserMFAAuthenticationSettings.
+         */
+        public Builder userMFAAuthenticationSettings(String userMFAAuthenticationSettings) {
+            this.userMFAAuthenticationSettings = userMFAAuthenticationSettings;
+            return this;
+        }
+
+        public GetUserMFAAuthenticationSettingsResponseBody build() {
+            return new GetUserMFAAuthenticationSettingsResponseBody(this);
+        } 
+
+    } 
+
+}

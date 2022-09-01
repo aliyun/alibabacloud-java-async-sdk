@@ -139,16 +139,16 @@ public class ListAccessAssignmentsRequest extends Request {
             super();
         } 
 
-        private Builder(ListAccessAssignmentsRequest response) {
-            super(response);
-            this.accessConfigurationId = response.accessConfigurationId;
-            this.directoryId = response.directoryId;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.principalId = response.principalId;
-            this.principalType = response.principalType;
-            this.targetId = response.targetId;
-            this.targetType = response.targetType;
+        private Builder(ListAccessAssignmentsRequest request) {
+            super(request);
+            this.accessConfigurationId = request.accessConfigurationId;
+            this.directoryId = request.directoryId;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.principalId = request.principalId;
+            this.principalType = request.principalType;
+            this.targetId = request.targetId;
+            this.targetType = request.targetType;
         } 
 
         /**

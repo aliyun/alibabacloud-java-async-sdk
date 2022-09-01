@@ -35,8 +35,8 @@ public class DisableServiceRequest extends Request {
             super();
         } 
 
-        private Builder(DisableServiceRequest response) {
-            super(response);
+        private Builder(DisableServiceRequest request) {
+            super(request);
         } 
 
         @Override

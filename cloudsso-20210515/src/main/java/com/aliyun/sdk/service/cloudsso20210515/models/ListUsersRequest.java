@@ -113,14 +113,14 @@ public class ListUsersRequest extends Request {
             super();
         } 
 
-        private Builder(ListUsersRequest response) {
-            super(response);
-            this.directoryId = response.directoryId;
-            this.filter = response.filter;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.provisionType = response.provisionType;
-            this.status = response.status;
+        private Builder(ListUsersRequest request) {
+            super(request);
+            this.directoryId = request.directoryId;
+            this.filter = request.filter;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.provisionType = request.provisionType;
+            this.status = request.status;
         } 
 
         /**

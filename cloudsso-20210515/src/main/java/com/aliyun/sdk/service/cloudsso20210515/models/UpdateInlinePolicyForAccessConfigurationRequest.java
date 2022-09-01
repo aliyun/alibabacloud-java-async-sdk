@@ -87,12 +87,12 @@ public class UpdateInlinePolicyForAccessConfigurationRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateInlinePolicyForAccessConfigurationRequest response) {
-            super(response);
-            this.accessConfigurationId = response.accessConfigurationId;
-            this.directoryId = response.directoryId;
-            this.inlinePolicyName = response.inlinePolicyName;
-            this.newInlinePolicyDocument = response.newInlinePolicyDocument;
+        private Builder(UpdateInlinePolicyForAccessConfigurationRequest request) {
+            super(request);
+            this.accessConfigurationId = request.accessConfigurationId;
+            this.directoryId = request.directoryId;
+            this.inlinePolicyName = request.inlinePolicyName;
+            this.newInlinePolicyDocument = request.newInlinePolicyDocument;
         } 
 
         /**

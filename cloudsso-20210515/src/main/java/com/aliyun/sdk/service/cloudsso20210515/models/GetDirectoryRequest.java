@@ -48,9 +48,9 @@ public class GetDirectoryRequest extends Request {
             super();
         } 
 
-        private Builder(GetDirectoryRequest response) {
-            super(response);
-            this.directoryId = response.directoryId;
+        private Builder(GetDirectoryRequest request) {
+            super(request);
+            this.directoryId = request.directoryId;
         } 
 
         /**

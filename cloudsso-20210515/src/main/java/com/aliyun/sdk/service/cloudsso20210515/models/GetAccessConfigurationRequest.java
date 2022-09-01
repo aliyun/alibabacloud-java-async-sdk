@@ -61,10 +61,10 @@ public class GetAccessConfigurationRequest extends Request {
             super();
         } 
 
-        private Builder(GetAccessConfigurationRequest response) {
-            super(response);
-            this.accessConfigurationId = response.accessConfigurationId;
-            this.directoryId = response.directoryId;
+        private Builder(GetAccessConfigurationRequest request) {
+            super(request);
+            this.accessConfigurationId = request.accessConfigurationId;
+            this.directoryId = request.directoryId;
         } 
 
         /**

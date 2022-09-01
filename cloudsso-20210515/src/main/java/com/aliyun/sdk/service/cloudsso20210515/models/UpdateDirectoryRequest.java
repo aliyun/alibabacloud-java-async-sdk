@@ -61,10 +61,10 @@ public class UpdateDirectoryRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateDirectoryRequest response) {
-            super(response);
-            this.directoryId = response.directoryId;
-            this.newDirectoryName = response.newDirectoryName;
+        private Builder(UpdateDirectoryRequest request) {
+            super(request);
+            this.directoryId = request.directoryId;
+            this.newDirectoryName = request.newDirectoryName;
         } 
 
         /**

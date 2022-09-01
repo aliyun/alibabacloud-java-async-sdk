@@ -48,9 +48,9 @@ public class CreateSCIMServerCredentialRequest extends Request {
             super();
         } 
 
-        private Builder(CreateSCIMServerCredentialRequest response) {
-            super(response);
-            this.directoryId = response.directoryId;
+        private Builder(CreateSCIMServerCredentialRequest request) {
+            super(request);
+            this.directoryId = request.directoryId;
         } 
 
         /**

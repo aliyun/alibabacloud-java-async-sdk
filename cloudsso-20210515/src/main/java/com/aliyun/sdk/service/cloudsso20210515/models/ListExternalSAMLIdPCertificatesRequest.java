@@ -48,9 +48,9 @@ public class ListExternalSAMLIdPCertificatesRequest extends Request {
             super();
         } 
 
-        private Builder(ListExternalSAMLIdPCertificatesRequest response) {
-            super(response);
-            this.directoryId = response.directoryId;
+        private Builder(ListExternalSAMLIdPCertificatesRequest request) {
+            super(request);
+            this.directoryId = request.directoryId;
         } 
 
         /**

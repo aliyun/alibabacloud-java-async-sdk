@@ -126,15 +126,15 @@ public class DeleteAccessAssignmentRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteAccessAssignmentRequest response) {
-            super(response);
-            this.accessConfigurationId = response.accessConfigurationId;
-            this.deprovisionStrategy = response.deprovisionStrategy;
-            this.directoryId = response.directoryId;
-            this.principalId = response.principalId;
-            this.principalType = response.principalType;
-            this.targetId = response.targetId;
-            this.targetType = response.targetType;
+        private Builder(DeleteAccessAssignmentRequest request) {
+            super(request);
+            this.accessConfigurationId = request.accessConfigurationId;
+            this.deprovisionStrategy = request.deprovisionStrategy;
+            this.directoryId = request.directoryId;
+            this.principalId = request.principalId;
+            this.principalType = request.principalType;
+            this.targetId = request.targetId;
+            this.targetType = request.targetType;
         } 
 
         /**

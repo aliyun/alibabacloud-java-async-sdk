@@ -74,11 +74,11 @@ public class UpdateSCIMServerCredentialStatusRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateSCIMServerCredentialStatusRequest response) {
-            super(response);
-            this.credentialId = response.credentialId;
-            this.directoryId = response.directoryId;
-            this.newStatus = response.newStatus;
+        private Builder(UpdateSCIMServerCredentialStatusRequest request) {
+            super(request);
+            this.credentialId = request.credentialId;
+            this.directoryId = request.directoryId;
+            this.newStatus = request.newStatus;
         } 
 
         /**

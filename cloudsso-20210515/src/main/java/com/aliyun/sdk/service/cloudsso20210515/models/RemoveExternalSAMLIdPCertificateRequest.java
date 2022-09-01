@@ -61,10 +61,10 @@ public class RemoveExternalSAMLIdPCertificateRequest extends Request {
             super();
         } 
 
-        private Builder(RemoveExternalSAMLIdPCertificateRequest response) {
-            super(response);
-            this.certificateId = response.certificateId;
-            this.directoryId = response.directoryId;
+        private Builder(RemoveExternalSAMLIdPCertificateRequest request) {
+            super(request);
+            this.certificateId = request.certificateId;
+            this.directoryId = request.directoryId;
         } 
 
         /**

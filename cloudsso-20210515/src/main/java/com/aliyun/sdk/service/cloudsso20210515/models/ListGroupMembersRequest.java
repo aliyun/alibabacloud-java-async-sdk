@@ -87,12 +87,12 @@ public class ListGroupMembersRequest extends Request {
             super();
         } 
 
-        private Builder(ListGroupMembersRequest response) {
-            super(response);
-            this.directoryId = response.directoryId;
-            this.groupId = response.groupId;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
+        private Builder(ListGroupMembersRequest request) {
+            super(request);
+            this.directoryId = request.directoryId;
+            this.groupId = request.groupId;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
         } 
 
         /**

@@ -126,15 +126,15 @@ public class SetExternalSAMLIdentityProviderRequest extends Request {
             super();
         } 
 
-        private Builder(SetExternalSAMLIdentityProviderRequest response) {
-            super(response);
-            this.directoryId = response.directoryId;
-            this.encodedMetadataDocument = response.encodedMetadataDocument;
-            this.entityId = response.entityId;
-            this.loginUrl = response.loginUrl;
-            this.SSOStatus = response.SSOStatus;
-            this.wantRequestSigned = response.wantRequestSigned;
-            this.x509Certificate = response.x509Certificate;
+        private Builder(SetExternalSAMLIdentityProviderRequest request) {
+            super(request);
+            this.directoryId = request.directoryId;
+            this.encodedMetadataDocument = request.encodedMetadataDocument;
+            this.entityId = request.entityId;
+            this.loginUrl = request.loginUrl;
+            this.SSOStatus = request.SSOStatus;
+            this.wantRequestSigned = request.wantRequestSigned;
+            this.x509Certificate = request.x509Certificate;
         } 
 
         /**

@@ -87,12 +87,12 @@ public class RemovePermissionPolicyFromAccessConfigurationRequest extends Reques
             super();
         } 
 
-        private Builder(RemovePermissionPolicyFromAccessConfigurationRequest response) {
-            super(response);
-            this.accessConfigurationId = response.accessConfigurationId;
-            this.directoryId = response.directoryId;
-            this.permissionPolicyName = response.permissionPolicyName;
-            this.permissionPolicyType = response.permissionPolicyType;
+        private Builder(RemovePermissionPolicyFromAccessConfigurationRequest request) {
+            super(request);
+            this.accessConfigurationId = request.accessConfigurationId;
+            this.directoryId = request.directoryId;
+            this.permissionPolicyName = request.permissionPolicyName;
+            this.permissionPolicyType = request.permissionPolicyType;
         } 
 
         /**

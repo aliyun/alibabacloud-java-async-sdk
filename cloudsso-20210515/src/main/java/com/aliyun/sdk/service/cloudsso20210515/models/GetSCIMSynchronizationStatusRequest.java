@@ -48,9 +48,9 @@ public class GetSCIMSynchronizationStatusRequest extends Request {
             super();
         } 
 
-        private Builder(GetSCIMSynchronizationStatusRequest response) {
-            super(response);
-            this.directoryId = response.directoryId;
+        private Builder(GetSCIMSynchronizationStatusRequest request) {
+            super(request);
+            this.directoryId = request.directoryId;
         } 
 
         /**

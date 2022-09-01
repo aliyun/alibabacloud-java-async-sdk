@@ -48,9 +48,9 @@ public class GetExternalSAMLIdentityProviderRequest extends Request {
             super();
         } 
 
-        private Builder(GetExternalSAMLIdentityProviderRequest response) {
-            super(response);
-            this.directoryId = response.directoryId;
+        private Builder(GetExternalSAMLIdentityProviderRequest request) {
+            super(request);
+            this.directoryId = request.directoryId;
         } 
 
         /**

@@ -61,10 +61,10 @@ public class GetGroupRequest extends Request {
             super();
         } 
 
-        private Builder(GetGroupRequest response) {
-            super(response);
-            this.directoryId = response.directoryId;
-            this.groupId = response.groupId;
+        private Builder(GetGroupRequest request) {
+            super(request);
+            this.directoryId = request.directoryId;
+            this.groupId = request.groupId;
         } 
 
         /**

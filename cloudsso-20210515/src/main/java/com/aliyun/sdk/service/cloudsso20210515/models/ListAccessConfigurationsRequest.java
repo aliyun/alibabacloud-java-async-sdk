@@ -100,13 +100,13 @@ public class ListAccessConfigurationsRequest extends Request {
             super();
         } 
 
-        private Builder(ListAccessConfigurationsRequest response) {
-            super(response);
-            this.directoryId = response.directoryId;
-            this.filter = response.filter;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.statusNotifications = response.statusNotifications;
+        private Builder(ListAccessConfigurationsRequest request) {
+            super(request);
+            this.directoryId = request.directoryId;
+            this.filter = request.filter;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.statusNotifications = request.statusNotifications;
         } 
 
         /**

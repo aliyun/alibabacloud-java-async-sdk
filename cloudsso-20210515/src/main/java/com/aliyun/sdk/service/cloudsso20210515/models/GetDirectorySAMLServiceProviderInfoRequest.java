@@ -48,9 +48,9 @@ public class GetDirectorySAMLServiceProviderInfoRequest extends Request {
             super();
         } 
 
-        private Builder(GetDirectorySAMLServiceProviderInfoRequest response) {
-            super(response);
-            this.directoryId = response.directoryId;
+        private Builder(GetDirectorySAMLServiceProviderInfoRequest request) {
+            super(request);
+            this.directoryId = request.directoryId;
         } 
 
         /**

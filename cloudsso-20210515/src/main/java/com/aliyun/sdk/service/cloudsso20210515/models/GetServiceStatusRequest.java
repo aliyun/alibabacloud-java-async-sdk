@@ -35,8 +35,8 @@ public class GetServiceStatusRequest extends Request {
             super();
         } 
 
-        private Builder(GetServiceStatusRequest response) {
-            super(response);
+        private Builder(GetServiceStatusRequest request) {
+            super(request);
         } 
 
         @Override

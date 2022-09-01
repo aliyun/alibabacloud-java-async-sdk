@@ -74,11 +74,11 @@ public class RemoveUserFromGroupRequest extends Request {
             super();
         } 
 
-        private Builder(RemoveUserFromGroupRequest response) {
-            super(response);
-            this.directoryId = response.directoryId;
-            this.groupId = response.groupId;
-            this.userId = response.userId;
+        private Builder(RemoveUserFromGroupRequest request) {
+            super(request);
+            this.directoryId = request.directoryId;
+            this.groupId = request.groupId;
+            this.userId = request.userId;
         } 
 
         /**

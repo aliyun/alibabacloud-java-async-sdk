@@ -100,13 +100,13 @@ public class ListGroupsRequest extends Request {
             super();
         } 
 
-        private Builder(ListGroupsRequest response) {
-            super(response);
-            this.directoryId = response.directoryId;
-            this.filter = response.filter;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.provisionType = response.provisionType;
+        private Builder(ListGroupsRequest request) {
+            super(request);
+            this.directoryId = request.directoryId;
+            this.filter = request.filter;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.provisionType = request.provisionType;
         } 
 
         /**

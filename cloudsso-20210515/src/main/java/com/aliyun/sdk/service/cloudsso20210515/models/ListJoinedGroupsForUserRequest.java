@@ -87,12 +87,12 @@ public class ListJoinedGroupsForUserRequest extends Request {
             super();
         } 
 
-        private Builder(ListJoinedGroupsForUserRequest response) {
-            super(response);
-            this.directoryId = response.directoryId;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.userId = response.userId;
+        private Builder(ListJoinedGroupsForUserRequest request) {
+            super(request);
+            this.directoryId = request.directoryId;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.userId = request.userId;
         } 
 
         /**

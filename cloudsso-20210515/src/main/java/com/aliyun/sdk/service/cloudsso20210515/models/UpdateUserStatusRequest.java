@@ -74,11 +74,11 @@ public class UpdateUserStatusRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateUserStatusRequest response) {
-            super(response);
-            this.directoryId = response.directoryId;
-            this.newStatus = response.newStatus;
-            this.userId = response.userId;
+        private Builder(UpdateUserStatusRequest request) {
+            super(request);
+            this.directoryId = request.directoryId;
+            this.newStatus = request.newStatus;
+            this.userId = request.userId;
         } 
 
         /**

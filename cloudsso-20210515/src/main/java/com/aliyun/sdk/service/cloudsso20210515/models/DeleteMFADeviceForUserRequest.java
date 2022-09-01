@@ -74,11 +74,11 @@ public class DeleteMFADeviceForUserRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteMFADeviceForUserRequest response) {
-            super(response);
-            this.directoryId = response.directoryId;
-            this.MFADeviceId = response.MFADeviceId;
-            this.userId = response.userId;
+        private Builder(DeleteMFADeviceForUserRequest request) {
+            super(request);
+            this.directoryId = request.directoryId;
+            this.MFADeviceId = request.MFADeviceId;
+            this.userId = request.userId;
         } 
 
         /**

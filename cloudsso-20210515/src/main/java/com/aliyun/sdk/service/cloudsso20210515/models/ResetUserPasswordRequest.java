@@ -100,13 +100,13 @@ public class ResetUserPasswordRequest extends Request {
             super();
         } 
 
-        private Builder(ResetUserPasswordRequest response) {
-            super(response);
-            this.directoryId = response.directoryId;
-            this.generateRandomPassword = response.generateRandomPassword;
-            this.password = response.password;
-            this.requirePasswordResetForNextLogin = response.requirePasswordResetForNextLogin;
-            this.userId = response.userId;
+        private Builder(ResetUserPasswordRequest request) {
+            super(request);
+            this.directoryId = request.directoryId;
+            this.generateRandomPassword = request.generateRandomPassword;
+            this.password = request.password;
+            this.requirePasswordResetForNextLogin = request.requirePasswordResetForNextLogin;
+            this.userId = request.userId;
         } 
 
         /**

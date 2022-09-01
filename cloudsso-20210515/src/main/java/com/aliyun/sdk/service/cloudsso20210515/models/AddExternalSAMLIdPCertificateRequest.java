@@ -61,10 +61,10 @@ public class AddExternalSAMLIdPCertificateRequest extends Request {
             super();
         } 
 
-        private Builder(AddExternalSAMLIdPCertificateRequest response) {
-            super(response);
-            this.directoryId = response.directoryId;
-            this.x509Certificate = response.x509Certificate;
+        private Builder(AddExternalSAMLIdPCertificateRequest request) {
+            super(request);
+            this.directoryId = request.directoryId;
+            this.x509Certificate = request.x509Certificate;
         } 
 
         /**

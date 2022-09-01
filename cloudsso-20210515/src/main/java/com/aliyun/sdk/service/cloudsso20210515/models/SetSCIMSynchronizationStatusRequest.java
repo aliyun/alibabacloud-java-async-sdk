@@ -61,10 +61,10 @@ public class SetSCIMSynchronizationStatusRequest extends Request {
             super();
         } 
 
-        private Builder(SetSCIMSynchronizationStatusRequest response) {
-            super(response);
-            this.directoryId = response.directoryId;
-            this.SCIMSynchronizationStatus = response.SCIMSynchronizationStatus;
+        private Builder(SetSCIMSynchronizationStatusRequest request) {
+            super(request);
+            this.directoryId = request.directoryId;
+            this.SCIMSynchronizationStatus = request.SCIMSynchronizationStatus;
         } 
 
         /**

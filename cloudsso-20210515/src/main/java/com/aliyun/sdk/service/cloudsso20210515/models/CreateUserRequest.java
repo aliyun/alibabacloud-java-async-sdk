@@ -139,16 +139,16 @@ public class CreateUserRequest extends Request {
             super();
         } 
 
-        private Builder(CreateUserRequest response) {
-            super(response);
-            this.description = response.description;
-            this.directoryId = response.directoryId;
-            this.displayName = response.displayName;
-            this.email = response.email;
-            this.firstName = response.firstName;
-            this.lastName = response.lastName;
-            this.status = response.status;
-            this.userName = response.userName;
+        private Builder(CreateUserRequest request) {
+            super(request);
+            this.description = request.description;
+            this.directoryId = request.directoryId;
+            this.displayName = request.displayName;
+            this.email = request.email;
+            this.firstName = request.firstName;
+            this.lastName = request.lastName;
+            this.status = request.status;
+            this.userName = request.userName;
         } 
 
         /**

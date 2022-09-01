@@ -74,11 +74,11 @@ public class ListPermissionPoliciesInAccessConfigurationRequest extends Request 
             super();
         } 
 
-        private Builder(ListPermissionPoliciesInAccessConfigurationRequest response) {
-            super(response);
-            this.accessConfigurationId = response.accessConfigurationId;
-            this.directoryId = response.directoryId;
-            this.permissionPolicyType = response.permissionPolicyType;
+        private Builder(ListPermissionPoliciesInAccessConfigurationRequest request) {
+            super(request);
+            this.accessConfigurationId = request.accessConfigurationId;
+            this.directoryId = request.directoryId;
+            this.permissionPolicyType = request.permissionPolicyType;
         } 
 
         /**

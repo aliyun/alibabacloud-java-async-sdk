@@ -74,11 +74,11 @@ public class DeleteAccessConfigurationRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteAccessConfigurationRequest response) {
-            super(response);
-            this.accessConfigurationId = response.accessConfigurationId;
-            this.directoryId = response.directoryId;
-            this.forceRemovePermissionPolicies = response.forceRemovePermissionPolicies;
+        private Builder(DeleteAccessConfigurationRequest request) {
+            super(request);
+            this.accessConfigurationId = request.accessConfigurationId;
+            this.directoryId = request.directoryId;
+            this.forceRemovePermissionPolicies = request.forceRemovePermissionPolicies;
         } 
 
         /**

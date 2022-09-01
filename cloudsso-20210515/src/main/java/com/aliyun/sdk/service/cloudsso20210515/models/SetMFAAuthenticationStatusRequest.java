@@ -61,10 +61,10 @@ public class SetMFAAuthenticationStatusRequest extends Request {
             super();
         } 
 
-        private Builder(SetMFAAuthenticationStatusRequest response) {
-            super(response);
-            this.directoryId = response.directoryId;
-            this.MFAAuthenticationStatus = response.MFAAuthenticationStatus;
+        private Builder(SetMFAAuthenticationStatusRequest request) {
+            super(request);
+            this.directoryId = request.directoryId;
+            this.MFAAuthenticationStatus = request.MFAAuthenticationStatus;
         } 
 
         /**

@@ -113,14 +113,14 @@ public class CreateAccessAssignmentRequest extends Request {
             super();
         } 
 
-        private Builder(CreateAccessAssignmentRequest response) {
-            super(response);
-            this.accessConfigurationId = response.accessConfigurationId;
-            this.directoryId = response.directoryId;
-            this.principalId = response.principalId;
-            this.principalType = response.principalType;
-            this.targetId = response.targetId;
-            this.targetType = response.targetType;
+        private Builder(CreateAccessAssignmentRequest request) {
+            super(request);
+            this.accessConfigurationId = request.accessConfigurationId;
+            this.directoryId = request.directoryId;
+            this.principalId = request.principalId;
+            this.principalType = request.principalType;
+            this.targetId = request.targetId;
+            this.targetType = request.targetType;
         } 
 
         /**

@@ -61,10 +61,10 @@ public class DeleteGroupRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteGroupRequest response) {
-            super(response);
-            this.directoryId = response.directoryId;
-            this.groupId = response.groupId;
+        private Builder(DeleteGroupRequest request) {
+            super(request);
+            this.directoryId = request.directoryId;
+            this.groupId = request.groupId;
         } 
 
         /**

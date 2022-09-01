@@ -74,11 +74,11 @@ public class AddUserToGroupRequest extends Request {
             super();
         } 
 
-        private Builder(AddUserToGroupRequest response) {
-            super(response);
-            this.directoryId = response.directoryId;
-            this.groupId = response.groupId;
-            this.userId = response.userId;
+        private Builder(AddUserToGroupRequest request) {
+            super(request);
+            this.directoryId = request.directoryId;
+            this.groupId = request.groupId;
+            this.userId = request.userId;
         } 
 
         /**

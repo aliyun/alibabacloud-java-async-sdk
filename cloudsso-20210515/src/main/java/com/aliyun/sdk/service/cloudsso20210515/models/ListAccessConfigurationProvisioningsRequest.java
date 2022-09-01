@@ -126,15 +126,15 @@ public class ListAccessConfigurationProvisioningsRequest extends Request {
             super();
         } 
 
-        private Builder(ListAccessConfigurationProvisioningsRequest response) {
-            super(response);
-            this.accessConfigurationId = response.accessConfigurationId;
-            this.directoryId = response.directoryId;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.provisioningStatus = response.provisioningStatus;
-            this.targetId = response.targetId;
-            this.targetType = response.targetType;
+        private Builder(ListAccessConfigurationProvisioningsRequest request) {
+            super(request);
+            this.accessConfigurationId = request.accessConfigurationId;
+            this.directoryId = request.directoryId;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.provisioningStatus = request.provisioningStatus;
+            this.targetId = request.targetId;
+            this.targetType = request.targetType;
         } 
 
         /**

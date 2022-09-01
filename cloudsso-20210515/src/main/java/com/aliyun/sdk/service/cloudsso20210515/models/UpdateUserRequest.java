@@ -126,15 +126,15 @@ public class UpdateUserRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateUserRequest response) {
-            super(response);
-            this.directoryId = response.directoryId;
-            this.newDescription = response.newDescription;
-            this.newDisplayName = response.newDisplayName;
-            this.newEmail = response.newEmail;
-            this.newFirstName = response.newFirstName;
-            this.newLastName = response.newLastName;
-            this.userId = response.userId;
+        private Builder(UpdateUserRequest request) {
+            super(request);
+            this.directoryId = request.directoryId;
+            this.newDescription = request.newDescription;
+            this.newDisplayName = request.newDisplayName;
+            this.newEmail = request.newEmail;
+            this.newFirstName = request.newFirstName;
+            this.newLastName = request.newLastName;
+            this.userId = request.userId;
         } 
 
         /**

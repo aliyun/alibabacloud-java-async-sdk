@@ -87,12 +87,12 @@ public class ProvisionAccessConfigurationRequest extends Request {
             super();
         } 
 
-        private Builder(ProvisionAccessConfigurationRequest response) {
-            super(response);
-            this.accessConfigurationId = response.accessConfigurationId;
-            this.directoryId = response.directoryId;
-            this.targetId = response.targetId;
-            this.targetType = response.targetType;
+        private Builder(ProvisionAccessConfigurationRequest request) {
+            super(request);
+            this.accessConfigurationId = request.accessConfigurationId;
+            this.directoryId = request.directoryId;
+            this.targetId = request.targetId;
+            this.targetType = request.targetType;
         } 
 
         /**

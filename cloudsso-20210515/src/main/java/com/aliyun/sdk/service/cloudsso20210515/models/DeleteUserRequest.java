@@ -61,10 +61,10 @@ public class DeleteUserRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteUserRequest response) {
-            super(response);
-            this.directoryId = response.directoryId;
-            this.userId = response.userId;
+        private Builder(DeleteUserRequest request) {
+            super(request);
+            this.directoryId = request.directoryId;
+            this.userId = request.userId;
         } 
 
         /**

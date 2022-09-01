@@ -48,9 +48,9 @@ public class GetMFAAuthenticationStatusRequest extends Request {
             super();
         } 
 
-        private Builder(GetMFAAuthenticationStatusRequest response) {
-            super(response);
-            this.directoryId = response.directoryId;
+        private Builder(GetMFAAuthenticationStatusRequest request) {
+            super(request);
+            this.directoryId = request.directoryId;
         } 
 
         /**

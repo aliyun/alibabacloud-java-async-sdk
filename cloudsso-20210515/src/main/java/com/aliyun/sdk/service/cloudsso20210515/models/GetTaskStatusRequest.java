@@ -61,10 +61,10 @@ public class GetTaskStatusRequest extends Request {
             super();
         } 
 
-        private Builder(GetTaskStatusRequest response) {
-            super(response);
-            this.directoryId = response.directoryId;
-            this.taskId = response.taskId;
+        private Builder(GetTaskStatusRequest request) {
+            super(request);
+            this.directoryId = request.directoryId;
+            this.taskId = request.taskId;
         } 
 
         /**

@@ -48,9 +48,9 @@ public class DeleteDirectoryRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteDirectoryRequest response) {
-            super(response);
-            this.directoryId = response.directoryId;
+        private Builder(DeleteDirectoryRequest request) {
+            super(request);
+            this.directoryId = request.directoryId;
         } 
 
         /**

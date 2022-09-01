@@ -100,13 +100,13 @@ public class UpdateAccessConfigurationRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateAccessConfigurationRequest response) {
-            super(response);
-            this.accessConfigurationId = response.accessConfigurationId;
-            this.directoryId = response.directoryId;
-            this.newDescription = response.newDescription;
-            this.newRelayState = response.newRelayState;
-            this.newSessionDuration = response.newSessionDuration;
+        private Builder(UpdateAccessConfigurationRequest request) {
+            super(request);
+            this.accessConfigurationId = request.accessConfigurationId;
+            this.directoryId = request.directoryId;
+            this.newDescription = request.newDescription;
+            this.newRelayState = request.newRelayState;
+            this.newSessionDuration = request.newSessionDuration;
         } 
 
         /**

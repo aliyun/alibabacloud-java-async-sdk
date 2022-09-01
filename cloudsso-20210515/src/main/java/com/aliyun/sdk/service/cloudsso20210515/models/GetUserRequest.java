@@ -61,10 +61,10 @@ public class GetUserRequest extends Request {
             super();
         } 
 
-        private Builder(GetUserRequest response) {
-            super(response);
-            this.directoryId = response.directoryId;
-            this.userId = response.userId;
+        private Builder(GetUserRequest request) {
+            super(request);
+            this.directoryId = request.directoryId;
+            this.userId = request.userId;
         } 
 
         /**
