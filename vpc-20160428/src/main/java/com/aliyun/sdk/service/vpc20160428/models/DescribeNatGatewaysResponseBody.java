@@ -718,6 +718,9 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         @NameInMap("EcsMetricEnabled")
         private Boolean ecsMetricEnabled;
 
+        @NameInMap("EipBindMode")
+        private String eipBindMode;
+
         @NameInMap("ExpiredTime")
         private String expiredTime;
 
@@ -791,6 +794,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             this.deletionProtection = builder.deletionProtection;
             this.description = builder.description;
             this.ecsMetricEnabled = builder.ecsMetricEnabled;
+            this.eipBindMode = builder.eipBindMode;
             this.expiredTime = builder.expiredTime;
             this.forwardTableIds = builder.forwardTableIds;
             this.fullNatTableIds = builder.fullNatTableIds;
@@ -863,6 +867,13 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
          */
         public Boolean getEcsMetricEnabled() {
             return this.ecsMetricEnabled;
+        }
+
+        /**
+         * @return eipBindMode
+         */
+        public String getEipBindMode() {
+            return this.eipBindMode;
         }
 
         /**
@@ -1026,6 +1037,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             private Boolean deletionProtection; 
             private String description; 
             private Boolean ecsMetricEnabled; 
+            private String eipBindMode; 
             private String expiredTime; 
             private ForwardTableIds forwardTableIds; 
             private FullNatTableIds fullNatTableIds; 
@@ -1094,6 +1106,19 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
              */
             public Builder ecsMetricEnabled(Boolean ecsMetricEnabled) {
                 this.ecsMetricEnabled = ecsMetricEnabled;
+                return this;
+            }
+
+            /**
+             * NAT网关的EIP绑定模式，取值：
+             * <p>
+             * 
+             * MULTI_BINDED：多EIP网卡可见模式。
+             * NAT：EIP普通模式，兼容IPv4网关。
+             * 说明 NAT网关的EIP绑定模式为EIP普通模式时，EIP将占用NAT网关所在交换机的一个私网IP，请确保NAT网关所在交换机内私网IP地址充足，如果NAT网关所在的交换机没有可用的空闲私网地址时，将无法绑定新的EIP。NAT网关的EIP绑定模式为EIP普通模式时，NAT网关支持绑定的EIP数量上限为50个。
+             */
+            public Builder eipBindMode(String eipBindMode) {
+                this.eipBindMode = eipBindMode;
                 return this;
             }
 

@@ -1,3 +1,6 @@
+2022-09-01 Version: 1.0.4
+- Support DescribeNatGateways return EipBindMode.
+
 2022-08-26 Version: 1.0.3
 - Support DescribeNatGateways return Tags.
 
