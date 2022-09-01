@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.eiam.dev.models.*;
  * <p>GetUserIdByUserExternalIdRequest</p>
  */
 public class GetUserIdByUserExternalIdRequest extends Request {
+    @Host
+    @NameInMap("regionId")
+    private String regionId;
+
     @Path
     @NameInMap("instanceId")
     @Validation(required = true)
@@ -42,19 +46,15 @@ public class GetUserIdByUserExternalIdRequest extends Request {
     @Validation(required = true)
     private String userSourceType;
 
-    @Host
-    @NameInMap("regionId")
-    private String regionId;
-
     private GetUserIdByUserExternalIdRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.applicationId = builder.applicationId;
         this.authorization = builder.authorization;
         this.userExternalId = builder.userExternalId;
         this.userSourceId = builder.userSourceId;
         this.userSourceType = builder.userSourceType;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -68,6 +68,13 @@ public class GetUserIdByUserExternalIdRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -112,21 +119,14 @@ public class GetUserIdByUserExternalIdRequest extends Request {
         return this.userSourceType;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<GetUserIdByUserExternalIdRequest, Builder> {
+        private String regionId; 
         private String instanceId; 
         private String applicationId; 
         private String authorization; 
         private String userExternalId; 
         private String userSourceId; 
         private String userSourceType; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -134,14 +134,23 @@ public class GetUserIdByUserExternalIdRequest extends Request {
 
         private Builder(GetUserIdByUserExternalIdRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.instanceId = request.instanceId;
             this.applicationId = request.applicationId;
             this.authorization = request.authorization;
             this.userExternalId = request.userExternalId;
             this.userSourceId = request.userSourceId;
             this.userSourceType = request.userSourceType;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * regionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("regionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 实例ID
@@ -194,15 +203,6 @@ public class GetUserIdByUserExternalIdRequest extends Request {
         public Builder userSourceType(String userSourceType) {
             this.putBodyParameter("userSourceType", userSourceType);
             this.userSourceType = userSourceType;
-            return this;
-        }
-
-        /**
-         * regionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("regionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

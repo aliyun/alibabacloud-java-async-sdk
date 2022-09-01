@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.eiam.dev.models.*;
  * <p>ListOrganizationalUnitParentIdsRequest</p>
  */
 public class ListOrganizationalUnitParentIdsRequest extends Request {
+    @Host
+    @NameInMap("regionId")
+    private String regionId;
+
     @Path
     @NameInMap("instanceId")
     @Validation(required = true)
@@ -32,17 +36,13 @@ public class ListOrganizationalUnitParentIdsRequest extends Request {
     @Validation(required = true)
     private String authorization;
 
-    @Host
-    @NameInMap("regionId")
-    private String regionId;
-
     private ListOrganizationalUnitParentIdsRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.applicationId = builder.applicationId;
         this.organizationalUnitId = builder.organizationalUnitId;
         this.authorization = builder.authorization;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -56,6 +56,13 @@ public class ListOrganizationalUnitParentIdsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -86,19 +93,12 @@ public class ListOrganizationalUnitParentIdsRequest extends Request {
         return this.authorization;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<ListOrganizationalUnitParentIdsRequest, Builder> {
+        private String regionId; 
         private String instanceId; 
         private String applicationId; 
         private String organizationalUnitId; 
         private String authorization; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -106,12 +106,21 @@ public class ListOrganizationalUnitParentIdsRequest extends Request {
 
         private Builder(ListOrganizationalUnitParentIdsRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.instanceId = request.instanceId;
             this.applicationId = request.applicationId;
             this.organizationalUnitId = request.organizationalUnitId;
             this.authorization = request.authorization;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * regionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("regionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 实例ID
@@ -146,15 +155,6 @@ public class ListOrganizationalUnitParentIdsRequest extends Request {
         public Builder authorization(String authorization) {
             this.putHeaderParameter("Authorization", authorization);
             this.authorization = authorization;
-            return this;
-        }
-
-        /**
-         * regionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("regionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

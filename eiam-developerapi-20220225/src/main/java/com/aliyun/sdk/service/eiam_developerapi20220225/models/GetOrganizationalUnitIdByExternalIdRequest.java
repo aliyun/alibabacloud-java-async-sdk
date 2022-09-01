@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.eiam.dev.models.*;
  * <p>GetOrganizationalUnitIdByExternalIdRequest</p>
  */
 public class GetOrganizationalUnitIdByExternalIdRequest extends Request {
+    @Host
+    @NameInMap("regionId")
+    private String regionId;
+
     @Path
     @NameInMap("instanceId")
     @Validation(required = true)
@@ -42,19 +46,15 @@ public class GetOrganizationalUnitIdByExternalIdRequest extends Request {
     @Validation(required = true)
     private String organizationalUnitSourceType;
 
-    @Host
-    @NameInMap("regionId")
-    private String regionId;
-
     private GetOrganizationalUnitIdByExternalIdRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.applicationId = builder.applicationId;
         this.authorization = builder.authorization;
         this.organizationalUnitExternalId = builder.organizationalUnitExternalId;
         this.organizationalUnitSourceId = builder.organizationalUnitSourceId;
         this.organizationalUnitSourceType = builder.organizationalUnitSourceType;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -68,6 +68,13 @@ public class GetOrganizationalUnitIdByExternalIdRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -112,21 +119,14 @@ public class GetOrganizationalUnitIdByExternalIdRequest extends Request {
         return this.organizationalUnitSourceType;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<GetOrganizationalUnitIdByExternalIdRequest, Builder> {
+        private String regionId; 
         private String instanceId; 
         private String applicationId; 
         private String authorization; 
         private String organizationalUnitExternalId; 
         private String organizationalUnitSourceId; 
         private String organizationalUnitSourceType; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -134,14 +134,23 @@ public class GetOrganizationalUnitIdByExternalIdRequest extends Request {
 
         private Builder(GetOrganizationalUnitIdByExternalIdRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.instanceId = request.instanceId;
             this.applicationId = request.applicationId;
             this.authorization = request.authorization;
             this.organizationalUnitExternalId = request.organizationalUnitExternalId;
             this.organizationalUnitSourceId = request.organizationalUnitSourceId;
             this.organizationalUnitSourceType = request.organizationalUnitSourceType;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * regionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("regionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 实例ID
@@ -194,15 +203,6 @@ public class GetOrganizationalUnitIdByExternalIdRequest extends Request {
         public Builder organizationalUnitSourceType(String organizationalUnitSourceType) {
             this.putBodyParameter("organizationalUnitSourceType", organizationalUnitSourceType);
             this.organizationalUnitSourceType = organizationalUnitSourceType;
-            return this;
-        }
-
-        /**
-         * regionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("regionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

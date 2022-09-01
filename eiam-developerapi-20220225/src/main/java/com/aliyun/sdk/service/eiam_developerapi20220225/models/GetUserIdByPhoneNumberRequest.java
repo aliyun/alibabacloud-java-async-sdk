@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.eiam.dev.models.*;
  * <p>GetUserIdByPhoneNumberRequest</p>
  */
 public class GetUserIdByPhoneNumberRequest extends Request {
+    @Host
+    @NameInMap("regionId")
+    private String regionId;
+
     @Path
     @NameInMap("instanceId")
     @Validation(required = true)
@@ -32,17 +36,13 @@ public class GetUserIdByPhoneNumberRequest extends Request {
     @Validation(required = true)
     private String phoneNumber;
 
-    @Host
-    @NameInMap("regionId")
-    private String regionId;
-
     private GetUserIdByPhoneNumberRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.applicationId = builder.applicationId;
         this.authorization = builder.authorization;
         this.phoneNumber = builder.phoneNumber;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -56,6 +56,13 @@ public class GetUserIdByPhoneNumberRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -86,19 +93,12 @@ public class GetUserIdByPhoneNumberRequest extends Request {
         return this.phoneNumber;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<GetUserIdByPhoneNumberRequest, Builder> {
+        private String regionId; 
         private String instanceId; 
         private String applicationId; 
         private String authorization; 
         private String phoneNumber; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -106,12 +106,21 @@ public class GetUserIdByPhoneNumberRequest extends Request {
 
         private Builder(GetUserIdByPhoneNumberRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.instanceId = request.instanceId;
             this.applicationId = request.applicationId;
             this.authorization = request.authorization;
             this.phoneNumber = request.phoneNumber;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * regionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("regionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 实例ID
@@ -146,15 +155,6 @@ public class GetUserIdByPhoneNumberRequest extends Request {
         public Builder phoneNumber(String phoneNumber) {
             this.putBodyParameter("phoneNumber", phoneNumber);
             this.phoneNumber = phoneNumber;
-            return this;
-        }
-
-        /**
-         * regionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("regionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

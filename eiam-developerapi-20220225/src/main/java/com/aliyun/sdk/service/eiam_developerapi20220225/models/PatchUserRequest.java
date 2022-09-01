@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.eiam.dev.models.*;
  * <p>PatchUserRequest</p>
  */
 public class PatchUserRequest extends Request {
+    @Host
+    @NameInMap("regionId")
+    private String regionId;
+
     @Path
     @NameInMap("instanceId")
     @Validation(required = true)
@@ -60,12 +64,9 @@ public class PatchUserRequest extends Request {
     @NameInMap("username")
     private String username;
 
-    @Host
-    @NameInMap("regionId")
-    private String regionId;
-
     private PatchUserRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.applicationId = builder.applicationId;
         this.userId = builder.userId;
@@ -77,7 +78,6 @@ public class PatchUserRequest extends Request {
         this.phoneNumberVerified = builder.phoneNumberVerified;
         this.phoneRegion = builder.phoneRegion;
         this.username = builder.username;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -91,6 +91,13 @@ public class PatchUserRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -170,14 +177,8 @@ public class PatchUserRequest extends Request {
         return this.username;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<PatchUserRequest, Builder> {
+        private String regionId; 
         private String instanceId; 
         private String applicationId; 
         private String userId; 
@@ -189,7 +190,6 @@ public class PatchUserRequest extends Request {
         private Boolean phoneNumberVerified; 
         private String phoneRegion; 
         private String username; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -197,6 +197,7 @@ public class PatchUserRequest extends Request {
 
         private Builder(PatchUserRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.instanceId = request.instanceId;
             this.applicationId = request.applicationId;
             this.userId = request.userId;
@@ -208,8 +209,16 @@ public class PatchUserRequest extends Request {
             this.phoneNumberVerified = request.phoneNumberVerified;
             this.phoneRegion = request.phoneRegion;
             this.username = request.username;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * regionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("regionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 实例ID
@@ -307,15 +316,6 @@ public class PatchUserRequest extends Request {
         public Builder username(String username) {
             this.putBodyParameter("username", username);
             this.username = username;
-            return this;
-        }
-
-        /**
-         * regionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("regionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

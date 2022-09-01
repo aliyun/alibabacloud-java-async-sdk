@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.eiam.dev.models.*;
  * <p>CreateUserRequest</p>
  */
 public class CreateUserRequest extends Request {
+    @Host
+    @NameInMap("regionId")
+    private String regionId;
+
     @Path
     @NameInMap("instanceId")
     @Validation(required = true)
@@ -74,12 +78,9 @@ public class CreateUserRequest extends Request {
     @Validation(required = true)
     private String username;
 
-    @Host
-    @NameInMap("regionId")
-    private String regionId;
-
     private CreateUserRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.applicationId = builder.applicationId;
         this.authorization = builder.authorization;
@@ -94,7 +95,6 @@ public class CreateUserRequest extends Request {
         this.primaryOrganizationalUnitId = builder.primaryOrganizationalUnitId;
         this.userExternalId = builder.userExternalId;
         this.username = builder.username;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -108,6 +108,13 @@ public class CreateUserRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -208,14 +215,8 @@ public class CreateUserRequest extends Request {
         return this.username;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<CreateUserRequest, Builder> {
+        private String regionId; 
         private String instanceId; 
         private String applicationId; 
         private String authorization; 
@@ -230,7 +231,6 @@ public class CreateUserRequest extends Request {
         private String primaryOrganizationalUnitId; 
         private String userExternalId; 
         private String username; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -238,6 +238,7 @@ public class CreateUserRequest extends Request {
 
         private Builder(CreateUserRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.instanceId = request.instanceId;
             this.applicationId = request.applicationId;
             this.authorization = request.authorization;
@@ -252,8 +253,16 @@ public class CreateUserRequest extends Request {
             this.primaryOrganizationalUnitId = request.primaryOrganizationalUnitId;
             this.userExternalId = request.userExternalId;
             this.username = request.username;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * regionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("regionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 实例ID
@@ -378,15 +387,6 @@ public class CreateUserRequest extends Request {
         public Builder username(String username) {
             this.putBodyParameter("username", username);
             this.username = username;
-            return this;
-        }
-
-        /**
-         * regionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("regionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

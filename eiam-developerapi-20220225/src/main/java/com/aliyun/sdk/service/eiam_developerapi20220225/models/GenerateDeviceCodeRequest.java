@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.eiam.dev.models.*;
  * <p>GenerateDeviceCodeRequest</p>
  */
 public class GenerateDeviceCodeRequest extends Request {
+    @Host
+    @NameInMap("regionId")
+    private String regionId;
+
     @Path
     @NameInMap("instanceId")
     @Validation(required = true)
@@ -22,19 +26,15 @@ public class GenerateDeviceCodeRequest extends Request {
     @Validation(required = true)
     private String applicationId;
 
-    @Host
-    @NameInMap("regionId")
-    private String regionId;
-
     @Query
     @NameInMap("scope")
     private String scope;
 
     private GenerateDeviceCodeRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.applicationId = builder.applicationId;
-        this.regionId = builder.regionId;
         this.scope = builder.scope;
     }
 
@@ -52,6 +52,13 @@ public class GenerateDeviceCodeRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -66,13 +73,6 @@ public class GenerateDeviceCodeRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return scope
      */
     public String getScope() {
@@ -80,9 +80,9 @@ public class GenerateDeviceCodeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GenerateDeviceCodeRequest, Builder> {
+        private String regionId; 
         private String instanceId; 
         private String applicationId; 
-        private String regionId; 
         private String scope; 
 
         private Builder() {
@@ -91,11 +91,20 @@ public class GenerateDeviceCodeRequest extends Request {
 
         private Builder(GenerateDeviceCodeRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.instanceId = request.instanceId;
             this.applicationId = request.applicationId;
-            this.regionId = request.regionId;
             this.scope = request.scope;
         } 
+
+        /**
+         * regionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("regionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 实例ID
@@ -112,15 +121,6 @@ public class GenerateDeviceCodeRequest extends Request {
         public Builder applicationId(String applicationId) {
             this.putPathParameter("applicationId", applicationId);
             this.applicationId = applicationId;
-            return this;
-        }
-
-        /**
-         * regionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("regionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

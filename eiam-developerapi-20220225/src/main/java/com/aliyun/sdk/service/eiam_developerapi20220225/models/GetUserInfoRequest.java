@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.eiam.dev.models.*;
  * <p>GetUserInfoRequest</p>
  */
 public class GetUserInfoRequest extends Request {
+    @Host
+    @NameInMap("regionId")
+    private String regionId;
+
     @Path
     @NameInMap("instanceId")
     @Validation(required = true)
@@ -27,16 +31,12 @@ public class GetUserInfoRequest extends Request {
     @Validation(required = true)
     private String authorization;
 
-    @Host
-    @NameInMap("regionId")
-    private String regionId;
-
     private GetUserInfoRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.applicationId = builder.applicationId;
         this.authorization = builder.authorization;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -50,6 +50,13 @@ public class GetUserInfoRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -73,18 +80,11 @@ public class GetUserInfoRequest extends Request {
         return this.authorization;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<GetUserInfoRequest, Builder> {
+        private String regionId; 
         private String instanceId; 
         private String applicationId; 
         private String authorization; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -92,11 +92,20 @@ public class GetUserInfoRequest extends Request {
 
         private Builder(GetUserInfoRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.instanceId = request.instanceId;
             this.applicationId = request.applicationId;
             this.authorization = request.authorization;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * regionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("regionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 实例ID
@@ -122,15 +131,6 @@ public class GetUserInfoRequest extends Request {
         public Builder authorization(String authorization) {
             this.putHeaderParameter("Authorization", authorization);
             this.authorization = authorization;
-            return this;
-        }
-
-        /**
-         * regionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("regionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

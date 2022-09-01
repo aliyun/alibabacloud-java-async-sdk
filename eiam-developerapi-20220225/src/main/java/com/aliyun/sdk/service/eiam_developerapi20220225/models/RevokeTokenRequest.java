@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.eiam.dev.models.*;
  * <p>RevokeTokenRequest</p>
  */
 public class RevokeTokenRequest extends Request {
+    @Host
+    @NameInMap("regionId")
+    private String regionId;
+
     @Path
     @NameInMap("instanceId")
     @Validation(required = true)
@@ -30,10 +34,6 @@ public class RevokeTokenRequest extends Request {
     @NameInMap("client_secret")
     private String clientSecret;
 
-    @Host
-    @NameInMap("regionId")
-    private String regionId;
-
     @Query
     @NameInMap("token")
     @Validation(required = true)
@@ -45,11 +45,11 @@ public class RevokeTokenRequest extends Request {
 
     private RevokeTokenRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.applicationId = builder.applicationId;
         this.clientId = builder.clientId;
         this.clientSecret = builder.clientSecret;
-        this.regionId = builder.regionId;
         this.token = builder.token;
         this.tokenTypeHint = builder.tokenTypeHint;
     }
@@ -65,6 +65,13 @@ public class RevokeTokenRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -96,13 +103,6 @@ public class RevokeTokenRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return token
      */
     public String getToken() {
@@ -117,11 +117,11 @@ public class RevokeTokenRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<RevokeTokenRequest, Builder> {
+        private String regionId; 
         private String instanceId; 
         private String applicationId; 
         private String clientId; 
         private String clientSecret; 
-        private String regionId; 
         private String token; 
         private String tokenTypeHint; 
 
@@ -131,14 +131,23 @@ public class RevokeTokenRequest extends Request {
 
         private Builder(RevokeTokenRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.instanceId = request.instanceId;
             this.applicationId = request.applicationId;
             this.clientId = request.clientId;
             this.clientSecret = request.clientSecret;
-            this.regionId = request.regionId;
             this.token = request.token;
             this.tokenTypeHint = request.tokenTypeHint;
         } 
+
+        /**
+         * regionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("regionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 实例ID
@@ -173,15 +182,6 @@ public class RevokeTokenRequest extends Request {
         public Builder clientSecret(String clientSecret) {
             this.putQueryParameter("client_secret", clientSecret);
             this.clientSecret = clientSecret;
-            return this;
-        }
-
-        /**
-         * regionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("regionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

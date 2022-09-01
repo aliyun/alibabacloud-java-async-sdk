@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.eiam.dev.models.*;
  * <p>GenerateTokenRequest</p>
  */
 public class GenerateTokenRequest extends Request {
+    @Host
+    @NameInMap("regionId")
+    private String regionId;
+
     @Path
     @NameInMap("instanceId")
     @Validation(required = true)
@@ -63,10 +67,6 @@ public class GenerateTokenRequest extends Request {
     @NameInMap("refresh_token")
     private String refreshToken;
 
-    @Host
-    @NameInMap("regionId")
-    private String regionId;
-
     @Query
     @NameInMap("scope")
     private String scope;
@@ -77,6 +77,7 @@ public class GenerateTokenRequest extends Request {
 
     private GenerateTokenRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.applicationId = builder.applicationId;
         this.clientId = builder.clientId;
@@ -89,7 +90,6 @@ public class GenerateTokenRequest extends Request {
         this.password = builder.password;
         this.redirectUri = builder.redirectUri;
         this.refreshToken = builder.refreshToken;
-        this.regionId = builder.regionId;
         this.scope = builder.scope;
         this.username = builder.username;
     }
@@ -105,6 +105,13 @@ public class GenerateTokenRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -192,13 +199,6 @@ public class GenerateTokenRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return scope
      */
     public String getScope() {
@@ -213,6 +213,7 @@ public class GenerateTokenRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GenerateTokenRequest, Builder> {
+        private String regionId; 
         private String instanceId; 
         private String applicationId; 
         private String clientId; 
@@ -225,7 +226,6 @@ public class GenerateTokenRequest extends Request {
         private String password; 
         private String redirectUri; 
         private String refreshToken; 
-        private String regionId; 
         private String scope; 
         private String username; 
 
@@ -235,6 +235,7 @@ public class GenerateTokenRequest extends Request {
 
         private Builder(GenerateTokenRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.instanceId = request.instanceId;
             this.applicationId = request.applicationId;
             this.clientId = request.clientId;
@@ -247,10 +248,18 @@ public class GenerateTokenRequest extends Request {
             this.password = request.password;
             this.redirectUri = request.redirectUri;
             this.refreshToken = request.refreshToken;
-            this.regionId = request.regionId;
             this.scope = request.scope;
             this.username = request.username;
         } 
+
+        /**
+         * regionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("regionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * 实例ID
@@ -357,15 +366,6 @@ public class GenerateTokenRequest extends Request {
         public Builder refreshToken(String refreshToken) {
             this.putQueryParameter("refresh_token", refreshToken);
             this.refreshToken = refreshToken;
-            return this;
-        }
-
-        /**
-         * regionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("regionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 
