@@ -15,8 +15,12 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
     @NameInMap("vul_records")
     private java.util.List < VulRecords> vulRecords;
 
+    @NameInMap("vuls_fix_service_purchased")
+    private Boolean vulsFixServicePurchased;
+
     private DescribeNodePoolVulsResponseBody(Builder builder) {
         this.vulRecords = builder.vulRecords;
+        this.vulsFixServicePurchased = builder.vulsFixServicePurchased;
     }
 
     public static Builder builder() {
@@ -34,14 +38,30 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
         return this.vulRecords;
     }
 
+    /**
+     * @return vulsFixServicePurchased
+     */
+    public Boolean getVulsFixServicePurchased() {
+        return this.vulsFixServicePurchased;
+    }
+
     public static final class Builder {
         private java.util.List < VulRecords> vulRecords; 
+        private Boolean vulsFixServicePurchased; 
 
         /**
          * vul_records.
          */
         public Builder vulRecords(java.util.List < VulRecords> vulRecords) {
             this.vulRecords = vulRecords;
+            return this;
+        }
+
+        /**
+         * 是否已购买云安全CVE修复服务
+         */
+        public Builder vulsFixServicePurchased(Boolean vulsFixServicePurchased) {
+            this.vulsFixServicePurchased = vulsFixServicePurchased;
             return this;
         }
 
