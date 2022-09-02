@@ -18,6 +18,8 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    CompletableFuture<ClaimGPUInstanceResponse> claimGPUInstance(ClaimGPUInstanceRequest request);
+
     CompletableFuture<CreateAliasResponse> createAlias(CreateAliasRequest request);
 
     CompletableFuture<CreateCustomDomainResponse> createCustomDomain(CreateCustomDomainRequest request);
@@ -129,6 +131,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PutProvisionConfigResponse> putProvisionConfig(PutProvisionConfigRequest request);
 
     CompletableFuture<RegisterEventSourceResponse> registerEventSource(RegisterEventSourceRequest request);
+
+    CompletableFuture<ReleaseGPUInstanceResponse> releaseGPUInstance(ReleaseGPUInstanceRequest request);
 
     CompletableFuture<StopStatefulAsyncInvocationResponse> stopStatefulAsyncInvocation(StopStatefulAsyncInvocationRequest request);
 

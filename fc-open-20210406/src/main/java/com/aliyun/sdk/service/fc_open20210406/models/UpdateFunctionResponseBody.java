@@ -30,6 +30,9 @@ public class UpdateFunctionResponseBody extends TeaModel {
     @NameInMap("customDNS")
     private CustomDNS customDNS;
 
+    @NameInMap("customHealthCheckConfig")
+    private CustomHealthCheckConfig customHealthCheckConfig;
+
     @NameInMap("customRuntimeConfig")
     private CustomRuntimeConfig customRuntimeConfig;
 
@@ -85,6 +88,7 @@ public class UpdateFunctionResponseBody extends TeaModel {
         this.createdTime = builder.createdTime;
         this.customContainerConfig = builder.customContainerConfig;
         this.customDNS = builder.customDNS;
+        this.customHealthCheckConfig = builder.customHealthCheckConfig;
         this.customRuntimeConfig = builder.customRuntimeConfig;
         this.description = builder.description;
         this.environmentVariables = builder.environmentVariables;
@@ -151,6 +155,13 @@ public class UpdateFunctionResponseBody extends TeaModel {
      */
     public CustomDNS getCustomDNS() {
         return this.customDNS;
+    }
+
+    /**
+     * @return customHealthCheckConfig
+     */
+    public CustomHealthCheckConfig getCustomHealthCheckConfig() {
+        return this.customHealthCheckConfig;
     }
 
     /**
@@ -272,6 +283,7 @@ public class UpdateFunctionResponseBody extends TeaModel {
         private String createdTime; 
         private CustomContainerConfig customContainerConfig; 
         private CustomDNS customDNS; 
+        private CustomHealthCheckConfig customHealthCheckConfig; 
         private CustomRuntimeConfig customRuntimeConfig; 
         private String description; 
         private java.util.Map < String, String > environmentVariables; 
@@ -334,6 +346,14 @@ public class UpdateFunctionResponseBody extends TeaModel {
          */
         public Builder customDNS(CustomDNS customDNS) {
             this.customDNS = customDNS;
+            return this;
+        }
+
+        /**
+         * 函数自定义健康检查配置，仅适用于Custom runtime/container
+         */
+        public Builder customHealthCheckConfig(CustomHealthCheckConfig customHealthCheckConfig) {
+            this.customHealthCheckConfig = customHealthCheckConfig;
             return this;
         }
 

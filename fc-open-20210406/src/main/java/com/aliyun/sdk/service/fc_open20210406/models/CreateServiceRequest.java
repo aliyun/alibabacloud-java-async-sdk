@@ -41,6 +41,10 @@ public class CreateServiceRequest extends Request {
     private NASConfig nasConfig;
 
     @Body
+    @NameInMap("ossMountConfig")
+    private OSSMountConfig ossMountConfig;
+
+    @Body
     @NameInMap("role")
     private String role;
 
@@ -66,6 +70,7 @@ public class CreateServiceRequest extends Request {
         this.internetAccess = builder.internetAccess;
         this.logConfig = builder.logConfig;
         this.nasConfig = builder.nasConfig;
+        this.ossMountConfig = builder.ossMountConfig;
         this.role = builder.role;
         this.serviceName = builder.serviceName;
         this.tracingConfig = builder.tracingConfig;
@@ -135,6 +140,13 @@ public class CreateServiceRequest extends Request {
     }
 
     /**
+     * @return ossMountConfig
+     */
+    public OSSMountConfig getOssMountConfig() {
+        return this.ossMountConfig;
+    }
+
+    /**
      * @return role
      */
     public String getRole() {
@@ -170,6 +182,7 @@ public class CreateServiceRequest extends Request {
         private Boolean internetAccess; 
         private LogConfig logConfig; 
         private NASConfig nasConfig; 
+        private OSSMountConfig ossMountConfig; 
         private String role; 
         private String serviceName; 
         private TracingConfig tracingConfig; 
@@ -188,6 +201,7 @@ public class CreateServiceRequest extends Request {
             this.internetAccess = request.internetAccess;
             this.logConfig = request.logConfig;
             this.nasConfig = request.nasConfig;
+            this.ossMountConfig = request.ossMountConfig;
             this.role = request.role;
             this.serviceName = request.serviceName;
             this.tracingConfig = request.tracingConfig;
@@ -254,6 +268,15 @@ public class CreateServiceRequest extends Request {
         public Builder nasConfig(NASConfig nasConfig) {
             this.putBodyParameter("nasConfig", nasConfig);
             this.nasConfig = nasConfig;
+            return this;
+        }
+
+        /**
+         * OSS挂载配置
+         */
+        public Builder ossMountConfig(OSSMountConfig ossMountConfig) {
+            this.putBodyParameter("ossMountConfig", ossMountConfig);
+            this.ossMountConfig = ossMountConfig;
             return this;
         }
 

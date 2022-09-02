@@ -49,6 +49,10 @@ public class CreateFunctionRequest extends Request {
     private CustomDNS customDNS;
 
     @Body
+    @NameInMap("customHealthCheckConfig")
+    private CustomHealthCheckConfig customHealthCheckConfig;
+
+    @Body
     @NameInMap("customRuntimeConfig")
     private CustomRuntimeConfig customRuntimeConfig;
 
@@ -122,6 +126,7 @@ public class CreateFunctionRequest extends Request {
         this.code = builder.code;
         this.customContainerConfig = builder.customContainerConfig;
         this.customDNS = builder.customDNS;
+        this.customHealthCheckConfig = builder.customHealthCheckConfig;
         this.customRuntimeConfig = builder.customRuntimeConfig;
         this.description = builder.description;
         this.environmentVariables = builder.environmentVariables;
@@ -213,6 +218,13 @@ public class CreateFunctionRequest extends Request {
      */
     public CustomDNS getCustomDNS() {
         return this.customDNS;
+    }
+
+    /**
+     * @return customHealthCheckConfig
+     */
+    public CustomHealthCheckConfig getCustomHealthCheckConfig() {
+        return this.customHealthCheckConfig;
     }
 
     /**
@@ -330,6 +342,7 @@ public class CreateFunctionRequest extends Request {
         private Code code; 
         private CustomContainerConfig customContainerConfig; 
         private CustomDNS customDNS; 
+        private CustomHealthCheckConfig customHealthCheckConfig; 
         private CustomRuntimeConfig customRuntimeConfig; 
         private String description; 
         private java.util.Map < String, String > environmentVariables; 
@@ -361,6 +374,7 @@ public class CreateFunctionRequest extends Request {
             this.code = request.code;
             this.customContainerConfig = request.customContainerConfig;
             this.customDNS = request.customDNS;
+            this.customHealthCheckConfig = request.customHealthCheckConfig;
             this.customRuntimeConfig = request.customRuntimeConfig;
             this.description = request.description;
             this.environmentVariables = request.environmentVariables;
@@ -456,6 +470,15 @@ public class CreateFunctionRequest extends Request {
         public Builder customDNS(CustomDNS customDNS) {
             this.putBodyParameter("customDNS", customDNS);
             this.customDNS = customDNS;
+            return this;
+        }
+
+        /**
+         * 函数自定义健康检查配置，仅适用于Custom runtime/container
+         */
+        public Builder customHealthCheckConfig(CustomHealthCheckConfig customHealthCheckConfig) {
+            this.putBodyParameter("customHealthCheckConfig", customHealthCheckConfig);
+            this.customHealthCheckConfig = customHealthCheckConfig;
             return this;
         }
 

@@ -30,6 +30,9 @@ public class CreateServiceResponseBody extends TeaModel {
     @NameInMap("nasConfig")
     private NASConfig nasConfig;
 
+    @NameInMap("ossMountConfig")
+    private OSSMountConfig ossMountConfig;
+
     @NameInMap("role")
     private String role;
 
@@ -52,6 +55,7 @@ public class CreateServiceResponseBody extends TeaModel {
         this.lastModifiedTime = builder.lastModifiedTime;
         this.logConfig = builder.logConfig;
         this.nasConfig = builder.nasConfig;
+        this.ossMountConfig = builder.ossMountConfig;
         this.role = builder.role;
         this.serviceId = builder.serviceId;
         this.serviceName = builder.serviceName;
@@ -110,6 +114,13 @@ public class CreateServiceResponseBody extends TeaModel {
     }
 
     /**
+     * @return ossMountConfig
+     */
+    public OSSMountConfig getOssMountConfig() {
+        return this.ossMountConfig;
+    }
+
+    /**
      * @return role
      */
     public String getRole() {
@@ -151,6 +162,7 @@ public class CreateServiceResponseBody extends TeaModel {
         private String lastModifiedTime; 
         private LogConfig logConfig; 
         private NASConfig nasConfig; 
+        private OSSMountConfig ossMountConfig; 
         private String role; 
         private String serviceId; 
         private String serviceName; 
@@ -202,6 +214,14 @@ public class CreateServiceResponseBody extends TeaModel {
          */
         public Builder nasConfig(NASConfig nasConfig) {
             this.nasConfig = nasConfig;
+            return this;
+        }
+
+        /**
+         * OSS挂载配置
+         */
+        public Builder ossMountConfig(OSSMountConfig ossMountConfig) {
+            this.ossMountConfig = ossMountConfig;
             return this;
         }
 

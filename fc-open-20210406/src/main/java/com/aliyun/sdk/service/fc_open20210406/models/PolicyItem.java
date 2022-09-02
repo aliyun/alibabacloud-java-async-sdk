@@ -78,7 +78,7 @@ public class PolicyItem extends TeaModel {
         private byte[] value; 
 
         /**
-         * key指定控制流量灰度的参数名。例如key为"x-test-uid"，则请求"x-test-uid" 的值将决定请求是否被路由到灰度版本上。
+         * key指定控制流量灰度的字段名。 例如key为"x-test-uid"，则请求中"x-test-uid" 字段的值将决定请求是否被路由到灰度版本上
          */
         public Builder key(byte[] key) {
             this.key = key;
@@ -86,7 +86,7 @@ public class PolicyItem extends TeaModel {
         }
 
         /**
-         * 运算符。 参数名key对应请求中的实际值，与设定的value值做运算符比较。取值：   ● >, <, >=, <=, = 和 != ，大小比较规则遵循字典序； ● in ：字符串包含关系； ●  percent: 百分比值（取值范围 (0,100] 的整数) 表示指定 key 的 value 值分布的特定百分比路由至灰度实例 。比如一条 { type=Header, key=uid, value=20, operator=percent } 的规则，表示取 http header 中 uid 的值分布的 20% 打到灰度实例。
+         * operator指定运算符。  将请求中由参数key指定的字段的实际值和参数 value 指定的值，按指定的运算符进行比较。  取值：    ● >, <, >=, <=, = 和 != ，大小比较规则遵循字典序；  ● in ：字符串包含关系；  ●  percent: 百分比值（取值范围 (0,100] 的整数)  表示根据请求中指定字段key对应的实际值分布，按百分比灰度。其中字段由参数key指定，百分比值由参数 value 指定 。 例如一条 { type=Header, key=uid, value=20, operator=percent } 的规则，表示根据请求 header 中字段 uid 的值的分布，其中 20% 的请求路由到灰度版本上。
          */
         public Builder operator(byte[] operator) {
             this.operator = operator;
@@ -102,7 +102,7 @@ public class PolicyItem extends TeaModel {
         }
 
         /**
-         * value指定控制流量灰度的参数值。参数名key对应请求中的实际值，与该值做运算符比较，决定请求是否被路由到灰度版本上。
+         * value指定控制流量灰度的字段值。 请求中由参数key指定的字段实际值会和参数value字段值，按指定的运算符进行比较，决定请求是否被路由到灰度版本上
          */
         public Builder value(byte[] value) {
             this.value = value;

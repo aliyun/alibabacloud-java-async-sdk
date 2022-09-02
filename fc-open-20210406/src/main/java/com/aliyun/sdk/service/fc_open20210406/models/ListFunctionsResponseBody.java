@@ -87,6 +87,9 @@ public class ListFunctionsResponseBody extends TeaModel {
         @NameInMap("customContainerConfig")
         private CustomContainerConfig customContainerConfig;
 
+        @NameInMap("customHealthCheckConfig")
+        private CustomHealthCheckConfig customHealthCheckConfig;
+
         @NameInMap("description")
         private String description;
 
@@ -141,6 +144,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             this.codeSize = builder.codeSize;
             this.createdTime = builder.createdTime;
             this.customContainerConfig = builder.customContainerConfig;
+            this.customHealthCheckConfig = builder.customHealthCheckConfig;
             this.description = builder.description;
             this.environmentVariables = builder.environmentVariables;
             this.functionId = builder.functionId;
@@ -200,6 +204,13 @@ public class ListFunctionsResponseBody extends TeaModel {
          */
         public CustomContainerConfig getCustomContainerConfig() {
             return this.customContainerConfig;
+        }
+
+        /**
+         * @return customHealthCheckConfig
+         */
+        public CustomHealthCheckConfig getCustomHealthCheckConfig() {
+            return this.customHealthCheckConfig;
         }
 
         /**
@@ -320,6 +331,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             private Long codeSize; 
             private String createdTime; 
             private CustomContainerConfig customContainerConfig; 
+            private CustomHealthCheckConfig customHealthCheckConfig; 
             private String description; 
             private java.util.Map < String, String > environmentVariables; 
             private String functionId; 
@@ -374,6 +386,14 @@ public class ListFunctionsResponseBody extends TeaModel {
              */
             public Builder customContainerConfig(CustomContainerConfig customContainerConfig) {
                 this.customContainerConfig = customContainerConfig;
+                return this;
+            }
+
+            /**
+             * customHealthCheckConfig.
+             */
+            public Builder customHealthCheckConfig(CustomHealthCheckConfig customHealthCheckConfig) {
+                this.customHealthCheckConfig = customHealthCheckConfig;
                 return this;
             }
 
