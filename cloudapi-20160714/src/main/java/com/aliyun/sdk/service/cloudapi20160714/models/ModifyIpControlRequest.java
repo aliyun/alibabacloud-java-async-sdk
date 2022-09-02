@@ -25,11 +25,16 @@ public class ModifyIpControlRequest extends Request {
     @NameInMap("IpControlName")
     private String ipControlName;
 
+    @Query
+    @NameInMap("SecurityToken")
+    private String securityToken;
+
     private ModifyIpControlRequest(Builder builder) {
         super(builder);
         this.description = builder.description;
         this.ipControlId = builder.ipControlId;
         this.ipControlName = builder.ipControlName;
+        this.securityToken = builder.securityToken;
     }
 
     public static Builder builder() {
@@ -66,10 +71,18 @@ public class ModifyIpControlRequest extends Request {
         return this.ipControlName;
     }
 
+    /**
+     * @return securityToken
+     */
+    public String getSecurityToken() {
+        return this.securityToken;
+    }
+
     public static final class Builder extends Request.Builder<ModifyIpControlRequest, Builder> {
         private String description; 
         private String ipControlId; 
         private String ipControlName; 
+        private String securityToken; 
 
         private Builder() {
             super();
@@ -80,6 +93,7 @@ public class ModifyIpControlRequest extends Request {
             this.description = request.description;
             this.ipControlId = request.ipControlId;
             this.ipControlName = request.ipControlName;
+            this.securityToken = request.securityToken;
         } 
 
         /**
@@ -106,6 +120,15 @@ public class ModifyIpControlRequest extends Request {
         public Builder ipControlName(String ipControlName) {
             this.putQueryParameter("IpControlName", ipControlName);
             this.ipControlName = ipControlName;
+            return this;
+        }
+
+        /**
+         * SecurityToken.
+         */
+        public Builder securityToken(String securityToken) {
+            this.putQueryParameter("SecurityToken", securityToken);
+            this.securityToken = securityToken;
             return this;
         }
 

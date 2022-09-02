@@ -22,6 +22,10 @@ public class RemoveSignatureApisRequest extends Request {
     private String groupId;
 
     @Query
+    @NameInMap("SecurityToken")
+    private String securityToken;
+
+    @Query
     @NameInMap("SignatureId")
     @Validation(required = true)
     private String signatureId;
@@ -35,6 +39,7 @@ public class RemoveSignatureApisRequest extends Request {
         super(builder);
         this.apiIds = builder.apiIds;
         this.groupId = builder.groupId;
+        this.securityToken = builder.securityToken;
         this.signatureId = builder.signatureId;
         this.stageName = builder.stageName;
     }
@@ -67,6 +72,13 @@ public class RemoveSignatureApisRequest extends Request {
     }
 
     /**
+     * @return securityToken
+     */
+    public String getSecurityToken() {
+        return this.securityToken;
+    }
+
+    /**
      * @return signatureId
      */
     public String getSignatureId() {
@@ -83,6 +95,7 @@ public class RemoveSignatureApisRequest extends Request {
     public static final class Builder extends Request.Builder<RemoveSignatureApisRequest, Builder> {
         private String apiIds; 
         private String groupId; 
+        private String securityToken; 
         private String signatureId; 
         private String stageName; 
 
@@ -94,6 +107,7 @@ public class RemoveSignatureApisRequest extends Request {
             super(request);
             this.apiIds = request.apiIds;
             this.groupId = request.groupId;
+            this.securityToken = request.securityToken;
             this.signatureId = request.signatureId;
             this.stageName = request.stageName;
         } 
@@ -113,6 +127,15 @@ public class RemoveSignatureApisRequest extends Request {
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
             this.groupId = groupId;
+            return this;
+        }
+
+        /**
+         * SecurityToken.
+         */
+        public Builder securityToken(String securityToken) {
+            this.putQueryParameter("SecurityToken", securityToken);
+            this.securityToken = securityToken;
             return this;
         }
 

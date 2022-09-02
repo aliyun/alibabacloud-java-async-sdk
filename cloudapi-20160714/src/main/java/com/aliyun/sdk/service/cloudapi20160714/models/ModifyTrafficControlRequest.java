@@ -25,6 +25,10 @@ public class ModifyTrafficControlRequest extends Request {
     private String description;
 
     @Query
+    @NameInMap("SecurityToken")
+    private String securityToken;
+
+    @Query
     @NameInMap("TrafficControlId")
     @Validation(required = true)
     private String trafficControlId;
@@ -46,6 +50,7 @@ public class ModifyTrafficControlRequest extends Request {
         this.apiDefault = builder.apiDefault;
         this.appDefault = builder.appDefault;
         this.description = builder.description;
+        this.securityToken = builder.securityToken;
         this.trafficControlId = builder.trafficControlId;
         this.trafficControlName = builder.trafficControlName;
         this.trafficControlUnit = builder.trafficControlUnit;
@@ -87,6 +92,13 @@ public class ModifyTrafficControlRequest extends Request {
     }
 
     /**
+     * @return securityToken
+     */
+    public String getSecurityToken() {
+        return this.securityToken;
+    }
+
+    /**
      * @return trafficControlId
      */
     public String getTrafficControlId() {
@@ -118,6 +130,7 @@ public class ModifyTrafficControlRequest extends Request {
         private Integer apiDefault; 
         private Integer appDefault; 
         private String description; 
+        private String securityToken; 
         private String trafficControlId; 
         private String trafficControlName; 
         private String trafficControlUnit; 
@@ -132,6 +145,7 @@ public class ModifyTrafficControlRequest extends Request {
             this.apiDefault = request.apiDefault;
             this.appDefault = request.appDefault;
             this.description = request.description;
+            this.securityToken = request.securityToken;
             this.trafficControlId = request.trafficControlId;
             this.trafficControlName = request.trafficControlName;
             this.trafficControlUnit = request.trafficControlUnit;
@@ -162,6 +176,15 @@ public class ModifyTrafficControlRequest extends Request {
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * SecurityToken.
+         */
+        public Builder securityToken(String securityToken) {
+            this.putQueryParameter("SecurityToken", securityToken);
+            this.securityToken = securityToken;
             return this;
         }
 

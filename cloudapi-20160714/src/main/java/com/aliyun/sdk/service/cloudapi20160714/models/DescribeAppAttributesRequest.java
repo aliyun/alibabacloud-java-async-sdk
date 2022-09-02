@@ -279,6 +279,7 @@ public class DescribeAppAttributesRequest extends Request {
 
     public static class Tag extends TeaModel {
         @NameInMap("Key")
+        @Validation(required = true)
         private String key;
 
         @NameInMap("Value")

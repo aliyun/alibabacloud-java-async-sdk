@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifySignatureRequest extends Request {
     @Query
+    @NameInMap("SecurityToken")
+    private String securityToken;
+
+    @Query
     @NameInMap("SignatureId")
     @Validation(required = true)
     private String signatureId;
@@ -31,6 +35,7 @@ public class ModifySignatureRequest extends Request {
 
     private ModifySignatureRequest(Builder builder) {
         super(builder);
+        this.securityToken = builder.securityToken;
         this.signatureId = builder.signatureId;
         this.signatureKey = builder.signatureKey;
         this.signatureName = builder.signatureName;
@@ -48,6 +53,13 @@ public class ModifySignatureRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return securityToken
+     */
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     /**
@@ -79,6 +91,7 @@ public class ModifySignatureRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifySignatureRequest, Builder> {
+        private String securityToken; 
         private String signatureId; 
         private String signatureKey; 
         private String signatureName; 
@@ -90,11 +103,21 @@ public class ModifySignatureRequest extends Request {
 
         private Builder(ModifySignatureRequest request) {
             super(request);
+            this.securityToken = request.securityToken;
             this.signatureId = request.signatureId;
             this.signatureKey = request.signatureKey;
             this.signatureName = request.signatureName;
             this.signatureSecret = request.signatureSecret;
         } 
+
+        /**
+         * SecurityToken.
+         */
+        public Builder securityToken(String securityToken) {
+            this.putQueryParameter("SecurityToken", securityToken);
+            this.securityToken = securityToken;
+            return this;
+        }
 
         /**
          * SignatureId.

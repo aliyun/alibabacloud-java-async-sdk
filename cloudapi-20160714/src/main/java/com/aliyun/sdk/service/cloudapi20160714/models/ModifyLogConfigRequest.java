@@ -12,13 +12,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyLogConfigRequest</p>
  */
 public class ModifyLogConfigRequest extends Request {
-    @Query
-    @NameInMap("LogType")
-    private String logType;
-
     @Host
     @NameInMap("RegionId")
     private String regionId;
+
+    @Query
+    @NameInMap("LogType")
+    private String logType;
 
     @Query
     @NameInMap("SecurityToken")
@@ -36,8 +36,8 @@ public class ModifyLogConfigRequest extends Request {
 
     private ModifyLogConfigRequest(Builder builder) {
         super(builder);
-        this.logType = builder.logType;
         this.regionId = builder.regionId;
+        this.logType = builder.logType;
         this.securityToken = builder.securityToken;
         this.slsLogStore = builder.slsLogStore;
         this.slsProject = builder.slsProject;
@@ -57,17 +57,17 @@ public class ModifyLogConfigRequest extends Request {
     }
 
     /**
-     * @return logType
-     */
-    public String getLogType() {
-        return this.logType;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return logType
+     */
+    public String getLogType() {
+        return this.logType;
     }
 
     /**
@@ -92,8 +92,8 @@ public class ModifyLogConfigRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyLogConfigRequest, Builder> {
-        private String logType; 
         private String regionId; 
+        private String logType; 
         private String securityToken; 
         private String slsLogStore; 
         private String slsProject; 
@@ -104,21 +104,12 @@ public class ModifyLogConfigRequest extends Request {
 
         private Builder(ModifyLogConfigRequest request) {
             super(request);
-            this.logType = request.logType;
             this.regionId = request.regionId;
+            this.logType = request.logType;
             this.securityToken = request.securityToken;
             this.slsLogStore = request.slsLogStore;
             this.slsProject = request.slsProject;
         } 
-
-        /**
-         * LogType.
-         */
-        public Builder logType(String logType) {
-            this.putQueryParameter("LogType", logType);
-            this.logType = logType;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -126,6 +117,15 @@ public class ModifyLogConfigRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * LogType.
+         */
+        public Builder logType(String logType) {
+            this.putQueryParameter("LogType", logType);
+            this.logType = logType;
             return this;
         }
 

@@ -23,6 +23,10 @@ public class SetTrafficControlApisRequest extends Request {
     private String groupId;
 
     @Query
+    @NameInMap("SecurityToken")
+    private String securityToken;
+
+    @Query
     @NameInMap("StageName")
     @Validation(required = true)
     private String stageName;
@@ -36,6 +40,7 @@ public class SetTrafficControlApisRequest extends Request {
         super(builder);
         this.apiIds = builder.apiIds;
         this.groupId = builder.groupId;
+        this.securityToken = builder.securityToken;
         this.stageName = builder.stageName;
         this.trafficControlId = builder.trafficControlId;
     }
@@ -68,6 +73,13 @@ public class SetTrafficControlApisRequest extends Request {
     }
 
     /**
+     * @return securityToken
+     */
+    public String getSecurityToken() {
+        return this.securityToken;
+    }
+
+    /**
      * @return stageName
      */
     public String getStageName() {
@@ -84,6 +96,7 @@ public class SetTrafficControlApisRequest extends Request {
     public static final class Builder extends Request.Builder<SetTrafficControlApisRequest, Builder> {
         private String apiIds; 
         private String groupId; 
+        private String securityToken; 
         private String stageName; 
         private String trafficControlId; 
 
@@ -95,6 +108,7 @@ public class SetTrafficControlApisRequest extends Request {
             super(request);
             this.apiIds = request.apiIds;
             this.groupId = request.groupId;
+            this.securityToken = request.securityToken;
             this.stageName = request.stageName;
             this.trafficControlId = request.trafficControlId;
         } 
@@ -114,6 +128,15 @@ public class SetTrafficControlApisRequest extends Request {
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
             this.groupId = groupId;
+            return this;
+        }
+
+        /**
+         * SecurityToken.
+         */
+        public Builder securityToken(String securityToken) {
+            this.putQueryParameter("SecurityToken", securityToken);
+            this.securityToken = securityToken;
             return this;
         }
 

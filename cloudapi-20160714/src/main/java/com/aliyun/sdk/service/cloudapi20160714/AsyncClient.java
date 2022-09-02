@@ -240,8 +240,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ModifyApiGroupResponse> modifyApiGroup(ModifyApiGroupRequest request);
 
-    CompletableFuture<ModifyApiGroupNetworkPolicyResponse> modifyApiGroupNetworkPolicy(ModifyApiGroupNetworkPolicyRequest request);
-
     CompletableFuture<ModifyApiGroupVpcWhitelistResponse> modifyApiGroupVpcWhitelist(ModifyApiGroupVpcWhitelistRequest request);
 
     CompletableFuture<ModifyAppResponse> modifyApp(ModifyAppRequest request);
@@ -265,6 +263,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifySignatureResponse> modifySignature(ModifySignatureRequest request);
 
     CompletableFuture<ModifyTrafficControlResponse> modifyTrafficControl(ModifyTrafficControlRequest request);
+
+    CompletableFuture<ModifyVpcAccessAndUpdateApisResponse> modifyVpcAccessAndUpdateApis(ModifyVpcAccessAndUpdateApisRequest request);
 
     CompletableFuture<OpenApiGatewayServiceResponse> openApiGatewayService(OpenApiGatewayServiceRequest request);
 

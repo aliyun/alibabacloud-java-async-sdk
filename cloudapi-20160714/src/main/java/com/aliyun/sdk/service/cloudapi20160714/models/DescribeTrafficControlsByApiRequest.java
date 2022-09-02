@@ -23,6 +23,10 @@ public class DescribeTrafficControlsByApiRequest extends Request {
     private String groupId;
 
     @Query
+    @NameInMap("SecurityToken")
+    private String securityToken;
+
+    @Query
     @NameInMap("StageName")
     @Validation(required = true)
     private String stageName;
@@ -31,6 +35,7 @@ public class DescribeTrafficControlsByApiRequest extends Request {
         super(builder);
         this.apiId = builder.apiId;
         this.groupId = builder.groupId;
+        this.securityToken = builder.securityToken;
         this.stageName = builder.stageName;
     }
 
@@ -62,6 +67,13 @@ public class DescribeTrafficControlsByApiRequest extends Request {
     }
 
     /**
+     * @return securityToken
+     */
+    public String getSecurityToken() {
+        return this.securityToken;
+    }
+
+    /**
      * @return stageName
      */
     public String getStageName() {
@@ -71,6 +83,7 @@ public class DescribeTrafficControlsByApiRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeTrafficControlsByApiRequest, Builder> {
         private String apiId; 
         private String groupId; 
+        private String securityToken; 
         private String stageName; 
 
         private Builder() {
@@ -81,6 +94,7 @@ public class DescribeTrafficControlsByApiRequest extends Request {
             super(request);
             this.apiId = request.apiId;
             this.groupId = request.groupId;
+            this.securityToken = request.securityToken;
             this.stageName = request.stageName;
         } 
 
@@ -99,6 +113,15 @@ public class DescribeTrafficControlsByApiRequest extends Request {
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
             this.groupId = groupId;
+            return this;
+        }
+
+        /**
+         * SecurityToken.
+         */
+        public Builder securityToken(String securityToken) {
+            this.putQueryParameter("SecurityToken", securityToken);
+            this.securityToken = securityToken;
             return this;
         }
 

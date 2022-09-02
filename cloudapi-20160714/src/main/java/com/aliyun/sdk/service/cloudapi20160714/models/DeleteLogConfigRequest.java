@@ -12,13 +12,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteLogConfigRequest</p>
  */
 public class DeleteLogConfigRequest extends Request {
-    @Query
-    @NameInMap("LogType")
-    private String logType;
-
     @Host
     @NameInMap("RegionId")
     private String regionId;
+
+    @Query
+    @NameInMap("LogType")
+    private String logType;
 
     @Query
     @NameInMap("SecurityToken")
@@ -26,8 +26,8 @@ public class DeleteLogConfigRequest extends Request {
 
     private DeleteLogConfigRequest(Builder builder) {
         super(builder);
-        this.logType = builder.logType;
         this.regionId = builder.regionId;
+        this.logType = builder.logType;
         this.securityToken = builder.securityToken;
     }
 
@@ -45,17 +45,17 @@ public class DeleteLogConfigRequest extends Request {
     }
 
     /**
-     * @return logType
-     */
-    public String getLogType() {
-        return this.logType;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return logType
+     */
+    public String getLogType() {
+        return this.logType;
     }
 
     /**
@@ -66,8 +66,8 @@ public class DeleteLogConfigRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteLogConfigRequest, Builder> {
-        private String logType; 
         private String regionId; 
+        private String logType; 
         private String securityToken; 
 
         private Builder() {
@@ -76,19 +76,10 @@ public class DeleteLogConfigRequest extends Request {
 
         private Builder(DeleteLogConfigRequest request) {
             super(request);
-            this.logType = request.logType;
             this.regionId = request.regionId;
+            this.logType = request.logType;
             this.securityToken = request.securityToken;
         } 
-
-        /**
-         * LogType.
-         */
-        public Builder logType(String logType) {
-            this.putQueryParameter("LogType", logType);
-            this.logType = logType;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -96,6 +87,15 @@ public class DeleteLogConfigRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * LogType.
+         */
+        public Builder logType(String logType) {
+            this.putQueryParameter("LogType", logType);
+            this.logType = logType;
             return this;
         }
 
